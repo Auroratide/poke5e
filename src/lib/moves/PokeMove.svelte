@@ -30,6 +30,11 @@
 
 <style lang="scss">
     .poke-move {
+        background-color: #fff;
+        border-radius: 2em;
+        padding: 1em;
+        box-shadow: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
+
         header {
             display: flex;
             align-items: center;

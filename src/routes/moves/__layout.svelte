@@ -16,6 +16,7 @@
 <script lang="ts">
     import type { Move } from '$lib/moves/types'
     import SortableTable from '$lib/design/SortableTable.svelte'
+    import Backdrop from '$lib/design/Backdrop.svelte'
 
     export let moves: Move[]
 </script>
@@ -24,6 +25,7 @@
     <title>Pokemon Moves | Pokemon 5e Tools</title>
 </svelte:head>
 
+<Backdrop />
 <div class="page">
     <main>
         <slot></slot>
@@ -55,6 +57,7 @@
 
         & > * {
             flex: 0 0 min(37.5rem, 100%);
+            padding: 0.5em;
         }
     }
 

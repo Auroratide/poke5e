@@ -56,10 +56,6 @@
     table {
         width: 100%;
         border-collapse: collapse;
-
-        :global(tr) {
-            border-bottom: 1px solid black;
-        }
     }
 
     th {

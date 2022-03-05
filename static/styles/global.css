@@ -6,4 +6,10 @@
 body {
     font-family: var(--font-reg);
     font-size: var(--font-sz-base);
+    background-image:
+        radial-gradient(circle at 5vw 70vh, hsla(321, 86%, 91%, 0.5), hsla(321, 86%, 91%, 0) 67%),
+        radial-gradient(circle at 50vw 5vh, hsla(120, 50%, 75%, 0.25), hsla(120, 50%, 75%, 0) 67%),
+        radial-gradient(circle at 80vw 95vh, hsla(45, 80%, 65%, 0.25), hsla(45, 50%, 65%, 0) 67%);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
 }
