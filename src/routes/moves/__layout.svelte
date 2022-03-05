@@ -24,31 +24,40 @@
     <title>Pokemon Moves | Pokemon 5e Tools</title>
 </svelte:head>
 
-<main>
-    <h1>Pokemon Moves</h1>
-    <div class="layout">
-        <section class="table">
-            <SortableTable let:item items={moves} headers={[ {
-                key: 'name', name: 'Name', sort: (l, r) => l.name.localeCompare(r.name),
-            }, {
-                key: 'type', name: 'Type', sort: (l, r) => l.type.localeCompare(r.type),
-            }, {
-                key: 'power', name: 'Power', sort: (l, r) => l.power.join(',').localeCompare(r.power.join(',')),
-            } ]}>
-                <tr class="row">
-                    <td><a href="/moves/{item.id}">{item.name}</a></td>
-                    <td>{item.type}</td>
-                    <td>{item.power.join(', ')}</td>
-                </tr>
-            </SortableTable>
-        </section>
-        <section class="content">
-            <slot></slot>
-        </section>
-    </div>
-</main>
+<div class="page">
+    <main>
+        <slot></slot>
+    </main>
+    <nav class="table" aria-label="Move List">
+        <SortableTable let:item items={moves} headers={[ {
+            key: 'name', name: 'Name', sort: (l, r) => l.name.localeCompare(r.name),
+        }, {
+            key: 'type', name: 'Type', sort: (l, r) => l.type.localeCompare(r.type),
+        }, {
+            key: 'power', name: 'Power', sort: (l, r) => l.power.join(',').localeCompare(r.power.join(',')),
+        } ]}>
+            <tr class="row">
+                <td><a href="/moves/{item.id}">{item.name}</a></td>
+                <td>{item.type}</td>
+                <td>{item.power.join(', ')}</td>
+            </tr>
+        </SortableTable>
+    </nav>
+</div>
 
 <style lang="scss">
+    .page {
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: center;
+        max-width: 75rem;
+
+        & > * {
+            flex: 0 0 min(37.5rem, 100%);
+        }
+    }
+
     .table {
         .row {
             position: relative;

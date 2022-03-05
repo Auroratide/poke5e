@@ -6,7 +6,7 @@
 
 <article class="poke-move">
     <header>
-        <h2>{move.name}</h2>
+        <h1>{move.name}</h1>
         <span class="type">{move.type}</span>
     </header>
     <dl>
