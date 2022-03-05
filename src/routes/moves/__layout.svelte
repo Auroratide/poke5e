@@ -2,7 +2,7 @@
     import type { Load } from '@sveltejs/kit'
 
     export const load: Load = async ({ fetch }) => {
-        const moves = await fetch('/moves.json')
+        const moves = await fetch('/data/moves.json')
             .then(res => res.json())
             .then(json => json.moves)
         
