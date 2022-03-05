@@ -26,18 +26,45 @@
 
 <main>
     <h1>Pokemon Moves</h1>
-    <SortableTable let:item items={moves} headers={[ {
-        name: 'Name', sort: (l, r) => l.name.localeCompare(r.name),
-    }, {
-        name: 'Type', sort: (l, r) => l.type.localeCompare(r.type),
-    }, {
-        name: 'Power', sort: (l, r) => l.power.join(',').localeCompare(r.power.join(',')),
-    } ]}>
-        <tr>
-            <td><a href="/moves/{item.id}">{item.name}</a></td>
-            <td>{item.type}</td>
-            <td>{item.power.join(', ')}</td>
-        </tr>
-    </SortableTable>
-    <slot></slot>
+    <div class="layout">
+        <section class="table">
+            <SortableTable let:item items={moves} headers={[ {
+                key: 'name', name: 'Name', sort: (l, r) => l.name.localeCompare(r.name),
+            }, {
+                key: 'type', name: 'Type', sort: (l, r) => l.type.localeCompare(r.type),
+            }, {
+                key: 'power', name: 'Power', sort: (l, r) => l.power.join(',').localeCompare(r.power.join(',')),
+            } ]}>
+                <tr class="row">
+                    <td><a href="/moves/{item.id}">{item.name}</a></td>
+                    <td>{item.type}</td>
+                    <td>{item.power.join(', ')}</td>
+                </tr>
+            </SortableTable>
+        </section>
+        <section class="content">
+            <slot></slot>
+        </section>
+    </div>
 </main>
+
+<style lang="scss">
+    .table {
+        .row {
+            position: relative;
+
+            a::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+            &:hover {
+                background-color: #eee;
+            }
+        }
+    }
+</style>

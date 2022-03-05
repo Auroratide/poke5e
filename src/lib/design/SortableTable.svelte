@@ -3,6 +3,7 @@
 
     export let items: any[]
     export let headers: {
+        key: string, // no spaces
         name: string,
         sort?: Sorter,
     }[]
@@ -31,12 +32,12 @@
 
 <table>
     <thead>
-        <tr>{#each headers as header}
-            <th>{#if header.sort !== undefined}
+        <tr>{#each headers as header (header.key)}
+            <th style="--alignment: var(--{header.key}-alignment);">{#if header.sort !== undefined}
                 <button on:click={toggle(header.sort)}>
                     <span>{header.name}</span>
                     {#if header.sort === currentSorter}
-                        <span>{@html arrow}</span>
+                        <span class="sort-arrow">{@html arrow}</span>
                     {/if}
                 </button>
             {:else}
@@ -50,3 +51,34 @@
         {/each}
     </tbody>
 </table>
+
+<style lang="scss">
+    table {
+        width: 100%;
+        border-collapse: collapse;
+
+        :global(tr) {
+            border-bottom: 1px solid black;
+        }
+    }
+
+    th {
+        text-align: var(--alignment, left);
+        font-weight: bold;
+
+        button {
+            border: none;
+            background: none;
+            padding: 0;
+            margin: 0;
+            font-weight: bold;
+            width: 100%;
+            text-align: inherit;
+            cursor: pointer;
+        }
+
+        .sort-arrow {
+            font-size: 0.75em;
+        }
+    }
+</style>
