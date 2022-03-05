@@ -15,7 +15,7 @@
 
 <script lang="ts">
     import type { Move } from '$lib/moves/types'
-    import PokeMove from '$lib/moves/PokeMove.svelte'
+    import SortableTable from '$lib/design/SortableTable.svelte'
 
     export let moves: Move[]
 </script>
@@ -26,23 +26,18 @@
 
 <main>
     <h1>Pokemon Moves</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Power</th>
-            </tr>
-        </thead>
-        <tbody>
-            {#each moves as move}
-                <tr>
-                    <td><a href="/moves/{move.id}">{move.name}</a></td>
-                    <td>{move.type}</td>
-                    <td>{move.power.join(', ')}</td>
-                </tr>
-            {/each}
-        </tbody>
-    </table>
+    <SortableTable let:item items={moves} headers={[ {
+        name: 'Name', sort: (l, r) => l.name.localeCompare(r.name),
+    }, {
+        name: 'Type', sort: (l, r) => l.type.localeCompare(r.type),
+    }, {
+        name: 'Power', sort: (l, r) => l.power.join(',').localeCompare(r.power.join(',')),
+    } ]}>
+        <tr>
+            <td><a href="/moves/{item.id}">{item.name}</a></td>
+            <td>{item.type}</td>
+            <td>{item.power.join(', ')}</td>
+        </tr>
+    </SortableTable>
     <slot></slot>
 </main>
