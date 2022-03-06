@@ -34,6 +34,8 @@
     --skin-dragon-bg: hsl(258, 85%, 60%);
     --skin-dark-bg: hsl(24, 22%, 36%);
     --skin-fairy-bg: hsl(347, 50%, 63%);
+    --skin-typeless-bg: hsl(0, 0%, 40%);
+    --skin-varies-bg: hsl(0, 0%, 40%);
 }
 
 body {
