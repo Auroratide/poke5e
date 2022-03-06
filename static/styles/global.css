@@ -1,6 +1,31 @@
 :root {
     --font-reg: 'Rubik', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
     --font-sz-base: clamp(1rem, 1.5vw, 1.125rem);
+
+    --elev-stratus: 0 0.15em 0.15em -0.1em rgba(0, 0, 0, 0.5);
+    --elev-cumulus: 0 0.25em 0.5em rgba(0, 0, 0, 0.15);
+    --elev-cirrus: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
+
+    --skin-bg-text: hsl(0, 0%, 100%);
+
+    --skin-normal-bg: hsl(60, 26%, 46%);
+    --skin-fighting-bg: hsl(3, 66%, 45%);
+    --skin-flying-bg: hsl(255, 76%, 70%);
+    --skin-poison-bg: hsl(300, 43%, 44%);
+    --skin-ground-bg: hsl(44, 58%, 43%);
+    --skin-rock-bg: hsl(49, 58%, 41%);
+    --skin-bug-bg: hsl(66, 72%, 35%);
+    --skin-ghost-bg: hsl(263, 27%, 47%);
+    --skin-steel-bg: hsl(240, 15%, 61%);
+    --skin-fire-bg: hsl(25, 84%, 50%);
+    --skin-water-bg: hsl(222, 82%, 65%);
+    --skin-grass-bg: hsl(100, 50%, 41%);
+    --skin-electrig-bg: hsl(48, 100%, 35%);
+    --skin-psychic-bg: hsl(342, 70%, 60%);
+    --skin-ice-bg: hsl(180, 50%, 42%);
+    --skin-dragon-bg: hsl(258, 85%, 60%);
+    --skin-dark-bg: hsl(24, 22%, 36%);
+    --skin-fairy-bg: hsl(347, 50%, 63%);
 }
 
 body {

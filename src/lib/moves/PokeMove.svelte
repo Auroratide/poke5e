@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Move } from './types'
+    import TypeTag from '../pokemon/TypeTag.svelte'
 
     export let move: Move
 </script>
@@ -7,7 +8,7 @@
 <article class="poke-move">
     <header>
         <h1>{move.name}</h1>
-        <span class="type">{move.type}</span>
+        <TypeTag type={move.type}></TypeTag>
     </header>
     <dl>
         <dt>Move Power</dt>
