@@ -9,9 +9,12 @@
     --elev-cirrus: 0 0.25em 0.75em rgba(0, 0, 0, 0.15);
 
     --skew-angle: -25deg;
+    --skew-undo: 25deg;
 
     --skin-bg: hsl(0, 0%, 20%);
     --skin-bg-text: hsl(0, 0%, 100%);
+    --skin-bg-dark: hsl(251, 13%, 17%);
+    --skin-bg-softtext: hsla(0, 0%, 100%, 0.667);
 
     --skin-content: hsl(0, 0%, 100%);
     --skin-content-text: hsl(0, 0%, 20%);

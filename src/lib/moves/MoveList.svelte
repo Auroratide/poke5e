@@ -1,15 +1,20 @@
 <script lang="ts">
     import type { Move } from './types'
     import SortableTable from '../design/SortableTable.svelte'
+    import SearchField from '../design/SearchField.svelte'
 
     export let moves: Move[]
+
+    let filterValue: string = ''
+    $: filteredMoves = moves.filter(it => it.name.toLowerCase().includes(filterValue.toLowerCase()))
 
     const byStringField = (field: (m: Move) => string) => (l: Move, r: Move) => field(l).localeCompare(field(r))
     const byNumericField = (field: (m: Move) => number) => (l: Move, r: Move) => field(l) - field(r)
     const byPowerField = byStringField(it => typeof it.power === 'string' ? it.power : it.power.join(','))
 </script>
 
-<SortableTable let:item items={moves} headers={[ {
+<SearchField id="filter-moves" label="Search" bind:value={filterValue} matched={filteredMoves.length} max={moves.length} />
+<SortableTable let:item items={filteredMoves} headers={[ {
     key: 'name', name: 'Name', sort: byStringField(it => it.name),
 }, {
     key: 'type', name: 'Type', sort: byStringField(it => it.type),
