@@ -39,7 +39,12 @@
         header {
             display: flex;
             align-items: center;
-            justify-content: space-between;    
+            justify-content: space-between;
+
+            h1 {
+                font-weight: 700;
+                font-size: var(--font-sz-neptune);
+            }
         }
 
         dl {
@@ -64,7 +69,7 @@
             text-transform: uppercase;
         }
 
-        .type, .duration, .range {
+        .duration, .range {
             text-transform: capitalize;
         }
     }

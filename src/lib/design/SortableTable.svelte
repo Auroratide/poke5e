@@ -55,7 +55,11 @@
 <style lang="scss">
     table {
         width: 100%;
-        border-collapse: collapse;
+        border-spacing: 0 0.25em;
+    }
+
+    :global(td), :global(th) {
+        padding: 0.125em 1em;
     }
 
     th {

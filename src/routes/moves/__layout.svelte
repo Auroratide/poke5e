@@ -27,9 +27,6 @@
 
 <Backdrop />
 <div class="page">
-    <main>
-        <slot></slot>
-    </main>
     <nav class="table" aria-label="Move List">
         <SortableTable let:item items={moves} headers={[ {
             key: 'name', name: 'Name', sort: (l, r) => l.name.localeCompare(r.name),
@@ -37,14 +34,20 @@
             key: 'type', name: 'Type', sort: (l, r) => l.type.localeCompare(r.type),
         }, {
             key: 'power', name: 'Power', sort: (l, r) => l.power.join(',').localeCompare(r.power.join(',')),
+        }, {
+            key: 'pp', name: 'PP', sort: (l, r) => l.pp - r.pp,
         } ]}>
-            <tr class="row">
-                <td><a href="/moves/{item.id}">{item.name}</a></td>
+            <tr class="row" style:--skin-local-bg="var(--skin-{item.type}-bg)">
+                <td class="name"><a href="/moves/{item.id}">{item.name}</a></td>
                 <td>{item.type}</td>
                 <td>{item.power.join(', ')}</td>
+                <td>{item.pp}</td>
             </tr>
         </SortableTable>
     </nav>
+    <main>
+        <slot></slot>
+    </main>
 </div>
 
 <style lang="scss">
@@ -64,6 +67,30 @@
     .table {
         .row {
             position: relative;
+            filter: drop-shadow(var(--elev-cumulus));
+
+            td {
+                background-color: var(--skin-content);
+                color: var(--skin-content-text);
+            }
+
+            td.name {
+                background-color: var(--skin-bg);
+                color: var(--skin-bg-text);
+
+                a {
+                    color: var(--skin-bg-text);
+                    text-decoration: none;
+                }
+            }
+
+            td:first-child {
+                border-radius: 1em 0 0 1em;
+            }
+
+            td:last-child {
+                border-radius: 0 1em 1em 0;
+            }
 
             a::before {
                 content: '';
@@ -75,7 +102,14 @@
             }
 
             &:hover {
-                background-color: #eee;
+                td {
+                    background-color: var(--skin-bg);
+                    color: var(--skin-bg-text);
+                }
+
+                td.name {
+                    background-color: var(--skin-local-bg);
+                }
             }
         }
     }

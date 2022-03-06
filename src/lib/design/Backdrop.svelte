@@ -14,12 +14,15 @@
     }
 
     .backdrop {
-        height: 100vh;
-        transform: skewX(-20deg);
+        position: absolute;
+        top: 0;
+        right: calc(50% + 8rem);
+        bottom: 0;
+        left: -1000rem;
+        transform: skewX(var(--skew-angle));
         border-left: 10rem solid #31aaa5;
         border-right: 10rem solid #31aaa5;
         background-color: #35c1c0;
-        width: 100%;
-        min-width: 50rem;
+        box-shadow: var(--elev-cirrus);
     }
 </style>
