@@ -6,9 +6,6 @@
     export let move: Move
 
     $: power = move.power === 'none' ? 'none' : move.power.join(', ')
-    $: {
-        console.log(renderHtml(move.description))
-    }
 </script>
 
 <article class="poke-move">
