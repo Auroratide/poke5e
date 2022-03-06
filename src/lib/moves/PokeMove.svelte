@@ -1,8 +1,14 @@
 <script lang="ts">
     import type { Move } from './types'
     import TypeTag from '../pokemon/TypeTag.svelte'
+    import { renderHtml } from '../rendering/render'
 
     export let move: Move
+
+    $: power = move.power === 'none' ? 'none' : move.power.join(', ')
+    $: {
+        console.log(renderHtml(move.description))
+    }
 </script>
 
 <article class="poke-move">
@@ -12,7 +18,7 @@
     </header>
     <dl>
         <dt>Move Power</dt>
-        <dd class="power">{move.power.join(', ')}</dd>
+        <dd class="power">{power}</dd>
         <dt>Move Time</dt>
         <dd>{move.time}</dd>
         <dt><abbr title="Power Points">PP</abbr></dt>
@@ -23,9 +29,10 @@
         <dd class="range">{move.range}</dd>
     </dl>
     <section>
-        {@html move.description}
-        <hr />
-        <p><strong>At Higher Levels: </strong>{move.higherLevels}</p>
+        {@html renderHtml(move.description)}
+        {#if move.higherLevels !== undefined}
+            <p><strong>At Higher Levels: </strong>{move.higherLevels}</p>
+        {/if}
     </section>
 </article>
 

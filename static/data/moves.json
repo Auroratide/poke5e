@@ -8,7 +8,7 @@
         "pp": 15,
         "duration": "instantaneous",
         "range": "melee",
-        "description": "You attempt to absorb some of the target's health. Make a melee attack. On a hit, the creature takes 1d4 + MOVE grass damage. Half the damage done is restored by the user.",
+        "description": ["You attempt to absorb some of the target's health. Make a melee attack. On a hit, the creature takes 1d4 + MOVE grass damage. Half the damage done is restored by the user."],
         "higherLevels": "The damage dice roll for this move changes to 2d4 at level 5, 1d12 at level 10, and 4d4 at level 17."
     }, {
         "id": "accelerock",
@@ -19,7 +19,7 @@
         "pp": 15,
         "duration": "instantaneous",
         "range": "melee",
-        "description": "You smash into a target at high speed. As a bonus action, you can immediately move up to 10ft and make a melee attack against a creature in range without taking an attack of opportunity, doing 1d4 rock damage on hit.",
+        "description": ["You smash into a target at high speed. As a bonus action, you can immediately move up to 10ft and make a melee attack against a creature in range without taking an attack of opportunity, doing 1d4 rock damage on hit."],
         "higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d10 at level 10, and 1d12 at level 17."
     }, {
         "id": "acid",
@@ -30,7 +30,31 @@
         "pp": 15,
         "duration": "instantaneous",
         "range": "self (30ft cone)",
-        "description": "You create a stream of hot acid in a 30 foot cone, centered on you. Creatures caught in the cone must make a DEX save, taking 1d6 + MOVE poison damage on a fail, and half as much on success.",
+        "description": ["You create a stream of hot acid in a 30 foot cone, centered on you. Creatures caught in the cone must make a DEX save, taking 1d6 + MOVE poison damage on a fail, and half as much on success."],
         "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
+    }, {
+        "id": "acupressure",
+        "name": "Acupressure",
+        "type": "normal",
+        "power": "none",
+        "time": "1 action",
+        "pp": 20,
+        "duration": "1 minute",
+        "range": "self",
+        "description": [
+            "You apply pressure to different stress points on your body, boosting a random ability for the duration. When activating this move, roll a d6 and gain the following boost based on the result. When activated on subsequent turns, any previous effect ends.",
+            {
+                "type": "table",
+                "headers": ["d6", "Effect"],
+                "rows": [
+                    ["1", "+1 to attack rolls"],
+                    ["2", "+2 to damage rolls"],
+                    ["3", "+10 temporary HP"],
+                    ["4", "+1 to saving throws"],
+                    ["5", "Critical Hit range +1"],
+                    ["6", "+1 to Armor Class"]
+                ]
+            }
+        ]
     } ]
 }

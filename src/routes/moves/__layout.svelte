@@ -40,7 +40,7 @@
             <tr class="row" style:--skin-local-bg="var(--skin-{item.type}-bg)">
                 <td class="name"><a href="/moves/{item.id}">{item.name}</a></td>
                 <td>{item.type}</td>
-                <td>{item.power.join(', ')}</td>
+                <td>{item.power === 'none' ? 'none' : item.power.join(', ')}</td>
                 <td>{item.pp}</td>
             </tr>
         </SortableTable>
