@@ -5,6 +5,7 @@
     export let headers: {
         key: string, // no spaces
         name: string,
+        ratio: number,
         sort?: Sorter,
     }[]
 
@@ -16,6 +17,7 @@
         .slice(0)
         .sort((l, r) => currentSorter(l, r) * (reversed ? -1 : 1))
     $: arrow = reversed ? '&#9650;' : '&#9660;'
+    $: columns = headers.map(it => `${it.ratio}fr`).join(' ')
 
     const toggle = (sort: Sorter) => () => {
         if (sort === currentSorter && !reversed) {
@@ -30,10 +32,11 @@
     }
 </script>
 
-<table>
-    <thead>
-        <tr>{#each headers as header (header.key)}
-            <th style="--alignment: var(--{header.key}-alignment);">{#if header.sort !== undefined}
+<!-- svelte-ignore a11y-no-redundant-roles -->
+<table role="table" style:--table-columns={columns}>
+    <thead role="rowgroup">
+        <tr role="row">{#each headers as header (header.key)}
+            <th role="columnheader" style="--alignment: var(--{header.key}-alignment);">{#if header.sort !== undefined}
                 <button on:click={toggle(header.sort)}>
                     <span>{header.name}</span>
                     {#if header.sort === currentSorter}
@@ -45,7 +48,7 @@
             {/if}</th>
         {/each}</tr>
     </thead>
-    <tbody>
+    <tbody role="rowgroup">
         {#each sorted as item}
             <slot {item}><tr></tr></slot>
         {/each}
@@ -55,7 +58,26 @@
 <style lang="scss">
     table {
         width: 100%;
-        border-spacing: 0 0.25em;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    thead, tbody {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    tbody {
+        height: calc(100% - 4em); // TODO what is this really?
+        overflow: auto;
+    }
+
+    :global(tr) {
+        display: grid;
+        grid-template-columns: var(--table-columns);
+        margin-bottom: 0.25em;
     }
 
     :global(td), :global(th) {

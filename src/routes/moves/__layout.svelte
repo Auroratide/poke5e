@@ -43,10 +43,12 @@
         margin: auto;
         justify-content: center;
         max-width: 75rem;
+        height: 100%;
 
         & > * {
-            flex: 0 0 min(37.5rem, 100%);
+            flex: 0 1 37.5rem;
             padding: 0.5em;
+            height: 100%;
         }
     }
 </style>

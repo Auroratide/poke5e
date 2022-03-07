@@ -14,28 +14,36 @@
     const byNumericField = (field: (m: Move) => number) => (l: Move, r: Move) => field(l) - field(r)
 </script>
 
-<SearchField id="filter-moves" label="Search" bind:value={filterValue} matched={filteredMoves.length} max={moves.length} />
+<div class="search-field">
+    <SearchField id="filter-moves" label="Search" bind:value={filterValue} matched={filteredMoves.length} max={moves.length} />
+</div>
+<!-- svelte-ignore a11y-no-redundant-roles -->
 <SortableTable let:item items={filteredMoves} headers={[ {
-    key: 'name', name: 'Name', sort: byStringField(it => it.name),
+    key: 'name', name: 'Name', ratio: 3, sort: byStringField(it => it.name),
 }, {
-    key: 'type', name: 'Type', sort: byStringField(it => it.type),
+    key: 'type', name: 'Type', ratio: 2, sort: byStringField(it => it.type),
 }, {
-    key: 'power', name: 'Power', sort: byStringField(it => powerAsString(it.power)),
+    key: 'power', name: 'Power', ratio: 2, sort: byStringField(it => powerAsString(it.power)),
 }, {
-    key: 'pp', name: 'PP', sort: byNumericField(it => it.pp),
+    key: 'pp', name: 'PP', ratio: 1, sort: byNumericField(it => it.pp),
 } ]}>
-    <tr class="row" style:--skin-local-bg="var(--skin-{item.type}-bg)">
-        <td class="name"><a href="/moves/{item.id}">{item.name}</a></td>
-        <td>{item.type}</td>
-        <td>{powerAsString(item.power)}</td>
-        <td>{item.pp}</td>
+    <tr role="row" class="row" style:--skin-local-bg="var(--skin-{item.type}-bg)">
+        <td role="cell" class="name"><a href="/moves/{item.id}">{item.name}</a></td>
+        <td role="cell">{item.type}</td>
+        <td role="cell">{powerAsString(item.power)}</td>
+        <td role="cell">{item.pp}</td>
     </tr>
 </SortableTable>
 
 <style lang="scss">
+    .search-field {
+        margin-bottom: 0.5em;
+    }
+
     .row {
         position: relative;
-        filter: drop-shadow(var(--elev-cumulus));
+        border-radius: 1em;
+        box-shadow: var(--elev-cumulus);
 
         td {
             background-color: var(--skin-content);
