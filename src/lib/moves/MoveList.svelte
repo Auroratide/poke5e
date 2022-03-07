@@ -2,6 +2,7 @@
     import type { Move } from './types'
     import SortableTable from '../design/SortableTable.svelte'
     import SearchField from '../design/SearchField.svelte'
+    import { powerAsString } from './string'
 
     export let moves: Move[]
 
@@ -10,7 +11,6 @@
 
     const byStringField = (field: (m: Move) => string) => (l: Move, r: Move) => field(l).localeCompare(field(r))
     const byNumericField = (field: (m: Move) => number) => (l: Move, r: Move) => field(l) - field(r)
-    const byPowerField = byStringField(it => typeof it.power === 'string' ? it.power : it.power.join(','))
 </script>
 
 <SearchField id="filter-moves" label="Search" bind:value={filterValue} matched={filteredMoves.length} max={moves.length} />
@@ -19,14 +19,14 @@
 }, {
     key: 'type', name: 'Type', sort: byStringField(it => it.type),
 }, {
-    key: 'power', name: 'Power', sort: byPowerField,
+    key: 'power', name: 'Power', sort: byStringField(it => powerAsString(it.power)),
 }, {
     key: 'pp', name: 'PP', sort: byNumericField(it => it.pp),
 } ]}>
     <tr class="row" style:--skin-local-bg="var(--skin-{item.type}-bg)">
         <td class="name"><a href="/moves/{item.id}">{item.name}</a></td>
         <td>{item.type}</td>
-        <td>{item.power === 'none' ? 'none' : item.power.join(', ')}</td>
+        <td>{powerAsString(item.power)}</td>
         <td>{item.pp}</td>
     </tr>
 </SortableTable>

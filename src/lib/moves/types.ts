@@ -2,11 +2,13 @@ import type { PokeType } from '../pokemon/types'
 import type { Attribute } from '../dnd/types'
 import type { BodyText } from '../rendering/types'
 
+export type Power = Attribute[] | 'none'
+
 export type Move = {
     id: string,
     name: string,
     type: PokeType,
-    power: Attribute[] | 'none',
+    power: Power,
     time: string,
     pp: number,
     duration: string,

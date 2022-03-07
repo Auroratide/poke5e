@@ -2,10 +2,9 @@
     import type { Move } from './types'
     import TypeTag from '../pokemon/TypeTag.svelte'
     import { renderHtml } from '../rendering/render'
+    import { powerAsString } from './string'
 
     export let move: Move
-
-    $: power = move.power === 'none' ? 'none' : move.power.join(', ')
 </script>
 
 <article class="poke-move">
@@ -15,7 +14,7 @@
     </header>
     <dl>
         <dt>Move Power</dt>
-        <dd class="power">{power}</dd>
+        <dd class="power">{powerAsString(move.power)}</dd>
         <dt>Move Time</dt>
         <dd>{move.time}</dd>
         <dt><abbr title="Power Points">PP</abbr></dt>
