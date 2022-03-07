@@ -2,23 +2,22 @@
     import type { Load } from '@sveltejs/kit'
 
     export const load: Load = async ({ fetch }) => {
-        const moves = await fetch('/data/moves.json')
+        const pokemons = await fetch('/data/pokemon.json')
             .then(res => res.json())
-            .then(json => json.moves)
+            .then(json => json.items)
         
         return {
-            props: { moves },
-            stuff: { moves },
+            props: { pokemons },
+            stuff: { pokemons },
         }
     }
 </script>
 
 <script lang="ts">
-    import type { Move } from '$lib/moves/types'
-    import MoveList from '$lib/moves/MoveList.svelte'
+    import type { Pokemon } from '$lib/creatures/types'
     import Backdrop from '$lib/design/Backdrop.svelte'
 
-    export let moves: Move[]
+    export let pokemons: Pokemon[]
 </script>
 
 <svelte:head>
@@ -27,8 +26,8 @@
 
 <Backdrop />
 <div class="page">
-    <nav class="table" aria-label="Move List">
-        <MoveList {moves} />
+    <nav class="table" aria-label="Pokemon List">
+        <p>LIST HERE</p>
     </nav>
     <main>
         <slot></slot>

@@ -8,5 +8,6 @@ declare namespace App {
 	// interface Session {}
 	interface Stuff {
 		moves: Move[],
+		pokemons: Pokemon[],
 	}
 }
