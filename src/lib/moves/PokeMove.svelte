@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { Move } from './types'
     import Card from '../design/Card.svelte'
+    import FlatDl from '../design/FlatDl.svelte'
     import TypeTag from '../pokemon/TypeTag.svelte'
     import { renderHtml } from '../rendering/render'
     import { powerAsString } from './string'
@@ -11,7 +12,7 @@
 <Card title={move.name}>
     <TypeTag slot="header-extra" type={move.type}></TypeTag>
     <section class="info">
-        <dl>
+        <FlatDl>
             <dt>Move Power</dt>
             <dd class="power">{powerAsString(move.power)}</dd>
             <dt>Move Time</dt>
@@ -22,7 +23,7 @@
             <dd class="duration">{move.duration}</dd>
             <dt>Range</dt>
             <dd class="range">{move.range}</dd>
-        </dl>
+        </FlatDl>
     </section>
     <section class="description">
         {@html renderHtml(move.description)}
@@ -33,26 +34,6 @@
 </Card>
 
 <style lang="scss">
-    dl {
-        display: grid;
-        grid-template-columns: auto 1fr;
-        column-gap: 0.5em;
-        font-size: var(--font-sz-venus);
-        line-height: 1.25;
-
-        dt {
-            font-weight: 700;
-
-            &::after {
-                content: ':';
-            }
-        }
-
-        dd {
-            margin: 0;
-        }
-    }
-
     .power {
         text-transform: uppercase;
     }
