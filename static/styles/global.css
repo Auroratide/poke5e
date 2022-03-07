@@ -1,6 +1,9 @@
 :root {
+    --container-width: 75rem;
+
     --font-reg: 'Rubik', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
     --font-sz-base: clamp(1rem, 1.5vw, 1.125rem);
+    --font-sz-mars: 0.75em;
     --font-sz-venus: 0.875em;
     --font-sz-earth: 1em;
     --font-sz-neptune: 1.25em;
@@ -19,6 +22,9 @@
 
     --skin-content: hsl(0, 0%, 100%);
     --skin-content-text: hsl(0, 0%, 20%);
+
+    --skin-footer: hsl(0, 0%, 0%);
+    --skin-footer-text: hsl(0, 0%, 100%);
 
     --skin-normal-bg: hsl(60, 26%, 46%);
     --skin-fighting-bg: hsl(3, 66%, 45%);
