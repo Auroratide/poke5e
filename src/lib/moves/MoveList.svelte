@@ -3,11 +3,12 @@
     import SortableTable from '../design/SortableTable.svelte'
     import SearchField from '../design/SearchField.svelte'
     import { powerAsString } from './string'
+    import { matchNameOrType } from './filter'
 
     export let moves: Move[]
 
     let filterValue: string = ''
-    $: filteredMoves = moves.filter(it => it.name.toLowerCase().includes(filterValue.toLowerCase()))
+    $: filteredMoves = moves.filter(matchNameOrType(filterValue))
 
     const byStringField = (field: (m: Move) => string) => (l: Move, r: Move) => field(l).localeCompare(field(r))
     const byNumericField = (field: (m: Move) => number) => (l: Move, r: Move) => field(l) - field(r)
