@@ -4162,9 +4162,7 @@
       "id": "hidden-power",
       "name": "Hidden Power",
       "type": "normal",
-      "power": [
-        "any"
-      ],
+      "power": "any",
       "time": "1 action",
       "pp": 10,
       "duration": "instantaneous",
@@ -5572,9 +5570,7 @@
       "id": "metronome",
       "name": "Metronome",
       "type": "normal",
-      "power": [
-        "varies"
-      ],
+      "power": "varies",
       "time": "1 action",
       "pp": 5,
       "duration": "varies",
@@ -5692,9 +5688,7 @@
       "id": "mirror-move",
       "name": "Mirror Move",
       "type": "flying",
-      "power": [
-        "varies"
-      ],
+      "power": "varies",
       "time": "1 action",
       "pp": 10,
       "duration": "instantaneous",
@@ -5978,9 +5972,7 @@
       "id": "nature-power",
       "name": "Nature Power",
       "type": "normal",
-      "power": [
-        "varies"
-      ],
+      "power": "varies",
       "time": "1 action",
       "pp": 10,
       "duration": "varies",
@@ -8375,9 +8367,7 @@
       "id": "sleep-talk",
       "name": "Sleep Talk",
       "type": "normal",
-      "power": [
-        "varies"
-      ],
+      "power": "varies",
       "time": "1 action",
       "pp": 5,
       "duration": "varies",
