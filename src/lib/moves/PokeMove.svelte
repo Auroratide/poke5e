@@ -67,6 +67,7 @@
             grid-template-columns: auto 1fr;
             column-gap: 0.5em;
             font-size: var(--font-sz-venus);
+            line-height: 1.25;
 
             dt {
                 font-weight: 700;
@@ -87,6 +88,10 @@
 
         .duration, .range {
             text-transform: capitalize;
+        }
+
+        .description {
+            line-height: 1.5;
         }
     }
 </style>
