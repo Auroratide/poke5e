@@ -3,16 +3,16 @@
 </script>
 
 <div class="page">
-    <Container>
-        <header>
+    <header>
+        <Container>
             <nav aria-label="Site Navigation">
                 <ul>
                     <li><a href="/pokemon">Pokemon</a></li>
                     <li><a href="/moves">Moves</a></li>
                 </ul>
             </nav>
-        </header>
-    </Container>
+        </Container>
+    </header>
     <div class="content">
         <slot></slot>
     </div>
@@ -31,12 +31,45 @@
         overflow: hidden;
     }
 
-    header {
-        background: var(--skin-bg);
+    nav {
+        text-align: right;
+        padding: 0.25em 0;
+
+        ul {
+            position: relative;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-flex;
+            padding: 0 2em;
+        }
+
+        ul::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -1000rem;
+            left: 0;
+            bottom: 0;
+            background: var(--skin-bg);
+            z-index: 1;
+            transform: skewX(var(--skew-angle));
+        }
+
+        li {
+            position: relative;
+            z-index: 2;
+        }
 
         a {
-            color: var(--skin-bg-text);
+            color: var(--skin-bg-softtext);
             text-decoration: none;
+            display: inline-block;
+            padding: 0.25em 1em;
+
+            &:hover {
+                color: #35c1c0;
+            }
         }
     }
 
@@ -54,11 +87,5 @@
             margin: 0;
             font-size: var(--font-sz-mars);
         }
-    }
-
-    nav ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
     }
 </style>
