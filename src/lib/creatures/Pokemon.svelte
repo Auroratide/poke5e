@@ -28,6 +28,7 @@
         </FlatDl>
         <p>{pokemon.description}</p>
     </section>
+    <hr />
     <section class="stats">
         <FlatDl>
             <dt>Armor Class</dt>
@@ -53,7 +54,19 @@
             <dd>{Array.from(immunities(pokemon.type)).join(', ')}</dd>
         </FlatDl>
     </section>
+    <hr />
+    <section class="abilities">
+        {#each pokemon.abilities as ability}
+            <p><strong>{ability.name}:</strong> {ability.description}</p>
+        {/each}
+    </section>
 </Card>
 
 <style lang="scss">
+    hr {
+        width: 33%;
+        border: none;
+        border-bottom: 0.0625em solid var(--skin-bg);
+        opacity: 0.5;
+    }
 </style>
