@@ -50,6 +50,14 @@
                     <dd>{asString.speed(speed)}</dd>
                 {/each}
             </div>
+            {#if pokemon.senses.length > 0}
+                <dt>Senses</dt>
+                <div>
+                    {#each pokemon.senses as sense}
+                        <dd>{asString.sense(sense)}</dd>
+                    {/each}
+                </div>
+            {/if}
         </FlatDl>
         <AttributeBlock attributes={pokemon.attributes} />
     </section>

@@ -34,6 +34,10 @@ export const speed = ({ type, value }: { type: string, value: number}): string =
     return `${value}ft. ${type}`
 }
 
+export const sense = ({ type, value }: { type: string, value: number}): string => {
+    return `${type} ${value}ft.`
+}
+
 /**
  * Pokemon can only have single- or dual-typing
  */
