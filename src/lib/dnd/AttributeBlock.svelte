@@ -35,14 +35,21 @@
         grid-template-rows: repeat(2, 1fr);
         grid-auto-flow: column;
         font-size: var(--font-sz-venus);
+        text-align: center;
 
         dt {
             font-weight: 700;
             text-transform: uppercase;
+            background-color: var(--skin-bg-dark);
+            color: var(--skin-bg-text);
+            padding: 0.25em 0;
         }
 
         dd {
             margin: 0;
+            background-color: var(--skin-bg);
+            color: var(--skin-bg-text);
+            padding-bottom: 0.25em;
         }
     }
 </style>
