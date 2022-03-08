@@ -2,12 +2,18 @@
     import type { Load } from '@sveltejs/kit'
 
     export const load: Load = async ({ fetch }) => {
-        const pokemons = await fetch('/data/pokemon.json')
+        const movesFetch = fetch('/data/moves.json')
+            .then(res => res.json())
+            .then(json => json.moves)
+
+        const pokemonsFetch = fetch('/data/pokemon.json')
             .then(res => res.json())
             .then(json => json.items)
+
+        const [ moves, pokemons ] = await Promise.all([movesFetch, pokemonsFetch])
         
         return {
-            props: { pokemons },
+            props: { pokemons, moves },
             stuff: { pokemons },
         }
     }
@@ -15,11 +21,16 @@
 
 <script lang="ts">
     import type { Pokemon } from '$lib/creatures/types'
+    import type { Move } from '$lib/moves/types'
     import Theme from '$lib/design/Theme.svelte'
     import PokemonList from '$lib/creatures/PokemonList.svelte'
     import Backdrop from '$lib/design/Backdrop.svelte'
+    import { setMoves } from '$lib/moves/context'
 
     export let pokemons: Pokemon[]
+    export let moves: Move[]
+
+    setMoves(moves)
 </script>
 
 <svelte:head>
