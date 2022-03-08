@@ -46,7 +46,7 @@ export type Pokemon = {
         level10: string[],
         level14: string[],
         level18: string[],
-        egg: string[],
+        egg?: string[],
         tm: number[],
     },
 }

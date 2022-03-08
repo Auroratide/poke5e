@@ -96,6 +96,14 @@
             <dt>Level 18</dt>
             <dd><InlineMoveLinks moves={pokemon.moves.level18} /></dd>
         </FlatDl>
+        <FlatDl>
+            {#if pokemon.moves.egg !== undefined}
+                <dt>Egg</dt>
+                <dd><InlineMoveLinks moves={pokemon.moves.egg} /></dd>
+            {/if}
+            <dt>TM</dt>
+            <dd>{pokemon.moves.tm.join(', ')}</dd>
+        </FlatDl>
     </section>
 </Card>
 
