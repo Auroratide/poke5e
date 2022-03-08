@@ -15,6 +15,7 @@
 
 <script lang="ts">
     import type { Pokemon } from '$lib/creatures/types'
+    import Theme from '$lib/design/Theme.svelte'
     import PokemonList from '$lib/creatures/PokemonList.svelte'
     import Backdrop from '$lib/design/Backdrop.svelte'
 
@@ -22,18 +23,20 @@
 </script>
 
 <svelte:head>
-    <title>Pokemon Moves | Pokemon 5e Tools</title>
+    <title>Pokemon | Pokemon 5e Tools</title>
 </svelte:head>
 
-<Backdrop />
-<div class="page">
-    <nav class="table" aria-label="Pokemon List">
-        <PokemonList {pokemons} />
-    </nav>
-    <main>
-        <slot></slot>
-    </main>
-</div>
+<Theme theme="red">
+    <Backdrop />
+    <div class="page">
+        <nav class="table" aria-label="Pokemon List">
+            <PokemonList {pokemons} />
+        </nav>
+        <main>
+            <slot></slot>
+        </main>
+    </div>
+</Theme>
 
 <style lang="scss">
     .page {

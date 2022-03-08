@@ -20,9 +20,9 @@
         bottom: 0;
         left: -1000rem;
         transform: skewX(var(--skew-angle));
-        border-left: 10rem solid #31aaa5;
-        border-right: 10rem solid #31aaa5;
-        background-color: #35c1c0;
+        border-left: 10rem solid var(--theme-dark);
+        border-right: 10rem solid var(--theme-dark);
+        background-color: var(--theme-main);
         box-shadow: var(--elev-cirrus);
     }
 </style>

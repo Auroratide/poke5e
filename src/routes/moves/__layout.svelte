@@ -15,6 +15,7 @@
 
 <script lang="ts">
     import type { Move } from '$lib/moves/types'
+    import Theme from '$lib/design/Theme.svelte'
     import MoveList from '$lib/moves/MoveList.svelte'
     import Backdrop from '$lib/design/Backdrop.svelte'
 
@@ -25,15 +26,17 @@
     <title>Pokemon Moves | Pokemon 5e Tools</title>
 </svelte:head>
 
-<Backdrop />
-<div class="page">
-    <nav class="table" aria-label="Move List">
-        <MoveList {moves} />
-    </nav>
-    <main>
-        <slot></slot>
-    </main>
-</div>
+<Theme theme="blue">
+    <Backdrop />
+    <div class="page">
+        <nav class="table" aria-label="Move List">
+            <MoveList {moves} />
+        </nav>
+        <main>
+            <slot></slot>
+        </main>
+    </div>
+</Theme>
 
 <style lang="scss">
     .page {

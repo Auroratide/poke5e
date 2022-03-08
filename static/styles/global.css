@@ -58,3 +58,11 @@ body {
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
+
+a {
+    color: var(--theme-text);
+}
+
+a:hover {
+    text-decoration: none;
+}
