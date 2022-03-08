@@ -1,12 +1,20 @@
 <script lang="ts">
     import type { Pokemon } from './types'
+    import type { PokeType } from '../pokemon/types'
     import Card from '../design/Card.svelte'
     import FlatDl from '../design/FlatDl.svelte'
     import AttributeBlock from '../dnd/AttributeBlock.svelte'
     import { vulnerabilities, resistances, immunities } from '../pokemon/type-interactions'
     import TypeTag from '../pokemon/TypeTag.svelte'
+    import * as asString from './string'
 
     export let pokemon: Pokemon
+
+    $: vul = Array.from(vulnerabilities(pokemon.type))
+    $: res = Array.from(resistances(pokemon.type))
+    $: imm = Array.from(immunities(pokemon.type))
+
+    const showTypeList = (list: PokeType[]) => list.length === 0 ? 'none' : list.join(', ')
 </script>
 
 <Card title={pokemon.name}>
@@ -16,13 +24,13 @@
             <dt>Size</dt>
             <dd>{pokemon.size}</dd>
             <dt><abbr title="Species Rating">SR</abbr></dt>
-            <dd>{pokemon.sr}</dd>
+            <dd>{asString.sr(pokemon.sr)}</dd>
             <dt>Min Level</dt>
             <dd>{pokemon.minLevel}</dd>
             <dt>Egg Group</dt>
             <dd>{pokemon.eggGroup.join(', ')}</dd>
             <dt>Gender</dt>
-            <dd>{pokemon.gender}</dd>
+            <dd>{asString.gender(pokemon.gender)}</dd>
             <dt>Evolution</dt>
             <dd>???</dd>
         </FlatDl>
@@ -36,7 +44,11 @@
             <dt>Hit Points</dt>
             <dd>{pokemon.hp} ({pokemon.hitDice})</dd>
             <dt>Speed</dt>
-            <dd>???</dd>
+            <div>
+                {#each pokemon.speed as speed}
+                    <dd>{asString.speed(speed)}</dd>
+                {/each}
+            </div>
         </FlatDl>
         <AttributeBlock attributes={pokemon.attributes} />
     </section>
@@ -47,11 +59,11 @@
             <dt>Saving Throws</dt>
             <dd>{pokemon.savingThrows.join(', ')}</dd>
             <dt>Vulnerabilities</dt>
-            <dd>{Array.from(vulnerabilities(pokemon.type)).join(', ')}</dd>
+            <dd>{showTypeList(vul)}</dd>
             <dt>Resistances</dt>
-            <dd>{Array.from(resistances(pokemon.type)).join(', ')}</dd>
+            <dd>{showTypeList(res)}</dd>
             <dt>Immunities</dt>
-            <dd>{Array.from(immunities(pokemon.type)).join(', ')}</dd>
+            <dd>{showTypeList(imm)}</dd>
         </FlatDl>
     </section>
     <hr />

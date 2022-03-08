@@ -2,6 +2,7 @@
     import type { Pokemon } from './types'
     import SortableTable from '../design/SortableTable.svelte'
     import SearchField from '../design/SearchField.svelte'
+    import * as asString from './string'
 
     export let pokemons: Pokemon[]
 
@@ -21,12 +22,12 @@
 }, {
     key: 'type', name: 'Type', ratio: 3, sort: byStringField(it => it.type.join(', ')),
 }, {
-    key: 'sr', name: 'SR', ratio: 1, sort: byStringField(it => it.sr),
+    key: 'sr', name: 'SR', ratio: 1, sort: byNumericField(it => it.sr),
 } ]}>
     <tr role="row" class="row" style:--skin-local-bg="var(--skin-{item.type[0]}-bg)">
         <td role="cell" class="name"><a href="/pokemon/{item.id}">{item.name}</a></td>
-        <td role="cell">{item.type.join(', ')}</td>
-        <td role="cell">{item.sr}</td>
+        <td role="cell">{asString.type(item.type)}</td>
+        <td role="cell">{asString.sr(item.sr)}</td>
     </tr>
 </SortableTable>
 

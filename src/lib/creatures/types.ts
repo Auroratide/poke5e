@@ -7,7 +7,7 @@ export type Pokemon = {
     number: number,
     type: PokeType[],
     size: CreatureSize,
-    sr: string,
+    sr: number,
     minLevel: number,
     eggGroup: string[],
     gender: string,
