@@ -20,19 +20,19 @@
 <Card title={pokemon.name}>
     <TypeTag slot="header-extra" type={pokemon.type} />
     <section class="info">
-        <FlatDl>
+        <FlatDl columns={2}>
+            <dt>Number</dt>
+            <dd>{asString.pokeIndex(pokemon.number)}</dd>
             <dt>Size</dt>
             <dd>{pokemon.size}</dd>
             <dt><abbr title="Species Rating">SR</abbr></dt>
             <dd>{asString.sr(pokemon.sr)}</dd>
-            <dt>Min Level</dt>
-            <dd>{pokemon.minLevel}</dd>
             <dt>Egg Group</dt>
             <dd>{pokemon.eggGroup.join(', ')}</dd>
+            <dt>Min Level</dt>
+            <dd>{pokemon.minLevel}</dd>
             <dt>Gender</dt>
             <dd>{asString.gender(pokemon.gender)}</dd>
-            <dt>Evolution</dt>
-            <dd>???</dd>
         </FlatDl>
         <p>{pokemon.description}</p>
     </section>

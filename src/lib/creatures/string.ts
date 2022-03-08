@@ -40,3 +40,6 @@ export const speed = ({ type, value }: { type: string, value: number}): string =
 export const type = (value: PokeType[]): string => {
     return value.join('/')
 }
+
+export const pokeIndex = (value: number): string =>
+    `#${value.toString().padStart(3, '0')}`
