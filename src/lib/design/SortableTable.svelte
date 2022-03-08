@@ -61,46 +61,46 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-    }
 
-    thead, tbody {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    tbody {
-        height: calc(100% - 4em); // TODO what is this really?
-        overflow: auto;
-    }
-
-    :global(tr) {
-        display: grid;
-        grid-template-columns: var(--table-columns);
-        margin-bottom: 0.25em;
-    }
-
-    :global(td), :global(th) {
-        padding: 0.125em 1em;
-    }
-
-    th {
-        text-align: var(--alignment, left);
-        font-weight: bold;
-
-        button {
-            border: none;
-            background: none;
-            padding: 0;
-            margin: 0;
-            font-weight: bold;
+        thead, tbody {
+            display: flex;
+            flex-direction: column;
             width: 100%;
-            text-align: inherit;
-            cursor: pointer;
         }
 
-        .sort-arrow {
-            font-size: 0.75em;
+        tbody {
+            height: calc(100% - 4em); // TODO what is this really?
+            overflow: auto;
+        }
+
+        :global(tr) {
+            display: grid;
+            grid-template-columns: var(--table-columns);
+            margin-bottom: 0.25em;
+        }
+
+        :global(td), :global(th) {
+            padding: 0.125em 1em;
+        }
+
+        th {
+            text-align: var(--alignment, left);
+            font-weight: bold;
+
+            button {
+                border: none;
+                background: none;
+                padding: 0;
+                margin: 0;
+                font-weight: bold;
+                width: 100%;
+                text-align: inherit;
+                cursor: pointer;
+            }
+
+            .sort-arrow {
+                font-size: 0.75em;
+            }
         }
     }
 </style>
