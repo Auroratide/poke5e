@@ -25,6 +25,8 @@
     import Theme from '$lib/design/Theme.svelte'
     import PokemonList from '$lib/creatures/PokemonList.svelte'
     import Backdrop from '$lib/design/Backdrop.svelte'
+    import IconShadow from '$lib/design/IconShadow.svelte'
+    import Pokeball from '$lib/design/icon/Pokeball.svelte'
     import { setMoves } from '$lib/moves/context'
 
     export let pokemons: Pokemon[]
@@ -34,6 +36,9 @@
 </script>
 
 <Theme theme="red">
+    <IconShadow>
+        <Pokeball />
+    </IconShadow>
     <Backdrop />
     <div class="page">
         <nav class="table" aria-label="Pokemon List">

@@ -17,12 +17,17 @@
     import type { Move } from '$lib/moves/types'
     import Theme from '$lib/design/Theme.svelte'
     import MoveList from '$lib/moves/MoveList.svelte'
+    import IconShadow from '$lib/design/IconShadow.svelte'
+    import Hit from '$lib/design/icon/Hit.svelte'
     import Backdrop from '$lib/design/Backdrop.svelte'
 
     export let moves: Move[]
 </script>
 
 <Theme theme="blue">
+    <IconShadow>
+        <Hit />
+    </IconShadow>
     <Backdrop />
     <div class="page">
         <nav class="table" aria-label="Move List">
