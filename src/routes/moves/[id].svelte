@@ -16,7 +16,7 @@
 </script>
 
 <svelte:head>
-    <title>{move.name} | Pokemon 5e Tools</title>
+    <title>{move.name} | Pokemon 5e Reference</title>
 </svelte:head>
 
 <PokeMove move={move} />

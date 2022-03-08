@@ -9,7 +9,7 @@
 <style>
     .stroke {
         fill: none;
-        stroke: var(--skin-content);
+        stroke: var(--skin-local-stroke);
         stroke-width: 8;
     }
 

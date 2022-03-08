@@ -16,7 +16,7 @@
 </script>
 
 <svelte:head>
-    <title>{pokemon.name} | Pokemon 5e Tools</title>
+    <title>{pokemon.name} | Pokemon 5e Reference</title>
 </svelte:head>
 
 <PokemonStatblock {pokemon} />

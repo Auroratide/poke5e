@@ -7,6 +7,8 @@
     --font-sz-venus: 0.875em;
     --font-sz-earth: 1em;
     --font-sz-neptune: 1.25em;
+    --font-sz-uranus: 1.5em;
+    --font-sz-jupiter: 3em;
 
     --elev-stratus: 0 0.15em 0.15em -0.1em rgba(0, 0, 0, 0.5);
     --elev-cumulus: 0 0.20em 0.25em rgba(0, 0, 0, 0.15);

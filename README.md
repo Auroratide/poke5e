@@ -1,4 +1,4 @@
-# Pokemon 5e Tools
+# Pokemon 5e Reference
 
 Kinda like [5e.tools](https://5e.tools), but for pokemon.
 
