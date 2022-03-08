@@ -1,5 +1,27 @@
+<script lang="ts" context="module">
+    import type { Load } from '@sveltejs/kit'
+
+    const getActiveSection = (url: URL) => {
+        const match = url.pathname.match(/^\/([^\/]*).*$/)
+        if (match)
+            return match[1]
+        else
+            return ''
+    }
+
+    export const load: Load = async ({ url }) => {
+        return {
+            props: {
+                activeSection: getActiveSection(url),
+            },
+        }
+    }
+</script>
+
 <script lang="ts">
     import Container from '$lib/design/Container.svelte'
+
+    export let activeSection: string = ''
 </script>
 
 <div class="page">
@@ -7,8 +29,8 @@
         <Container>
             <nav aria-label="Site Navigation">
                 <ul>
-                    <li><a href="/pokemon">Pokemon</a></li>
-                    <li><a href="/moves">Moves</a></li>
+                    <li class:active={activeSection === 'pokemon'} class="theme-red"><a href="/pokemon">Pokemon</a></li>
+                    <li class:active={activeSection === 'moves'} class="theme-blue"><a href="/moves">Moves</a></li>
                 </ul>
             </nav>
         </Container>
@@ -68,8 +90,12 @@
             padding: 0.25em 1em;
 
             &:hover {
-                color: #35c1c0;
+                color: var(--theme-light);
             }
+        }
+
+        .active a {
+            color: var(--skin-bg-text);
         }
     }
 
