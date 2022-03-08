@@ -33,10 +33,6 @@
     setMoves(moves)
 </script>
 
-<svelte:head>
-    <title>Pokemon | Pokemon 5e Tools</title>
-</svelte:head>
-
 <Theme theme="red">
     <Backdrop />
     <div class="page">

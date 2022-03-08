@@ -22,10 +22,6 @@
     export let moves: Move[]
 </script>
 
-<svelte:head>
-    <title>Pokemon Moves | Pokemon 5e Tools</title>
-</svelte:head>
-
 <Theme theme="blue">
     <Backdrop />
     <div class="page">
