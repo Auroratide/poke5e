@@ -15,6 +15,7 @@
 
 <script lang="ts">
     import type { Pokemon } from '$lib/creatures/types'
+    import PokemonList from '$lib/creatures/PokemonList.svelte'
     import Backdrop from '$lib/design/Backdrop.svelte'
 
     export let pokemons: Pokemon[]
@@ -27,7 +28,7 @@
 <Backdrop />
 <div class="page">
     <nav class="table" aria-label="Pokemon List">
-        <p>LIST HERE</p>
+        <PokemonList {pokemons} />
     </nav>
     <main>
         <slot></slot>
