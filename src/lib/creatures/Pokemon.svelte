@@ -77,7 +77,11 @@
         <hr />
         <section class="evolution">
             <p><strong>Evolution:</strong> {pokemon.evolution.stage} / {pokemon.evolution.maxStage}</p>
-            <p>{pokemon.evolution.description}</p>
+            {#if pokemon.evolution.description !== undefined}
+                <p>{pokemon.evolution.description}</p>
+            {:else}
+                <p>This pokemon is at its highest evolutionary state.</p>
+            {/if}
         </section>
     {/if}
     <hr />
@@ -85,24 +89,36 @@
         <FlatDl>
             <dt>Starting</dt>
             <dd><InlineMoveLinks moves={pokemon.moves.start} /></dd>
-            <dt>Level 2</dt>
-            <dd><InlineMoveLinks moves={pokemon.moves.level2} /></dd>
-            <dt>Level 6</dt>
-            <dd><InlineMoveLinks moves={pokemon.moves.level6} /></dd>
-            <dt>Level 10</dt>
-            <dd><InlineMoveLinks moves={pokemon.moves.level10} /></dd>
-            <dt>Level 14</dt>
-            <dd><InlineMoveLinks moves={pokemon.moves.level14} /></dd>
-            <dt>Level 18</dt>
-            <dd><InlineMoveLinks moves={pokemon.moves.level18} /></dd>
+            {#if pokemon.moves.level2 !== undefined}
+                <dt>Level 2</dt>
+                <dd><InlineMoveLinks moves={pokemon.moves.level2} /></dd>
+            {/if}
+            {#if pokemon.moves.level6 !== undefined}
+                <dt>Level 6</dt>
+                <dd><InlineMoveLinks moves={pokemon.moves.level6} /></dd>
+            {/if}
+            {#if pokemon.moves.level10 !== undefined}
+                <dt>Level 10</dt>
+                <dd><InlineMoveLinks moves={pokemon.moves.level10} /></dd>
+            {/if}
+            {#if pokemon.moves.level14 !== undefined}
+                <dt>Level 14</dt>
+                <dd><InlineMoveLinks moves={pokemon.moves.level14} /></dd>
+            {/if}
+            {#if pokemon.moves.level18 !== undefined}
+                <dt>Level 18</dt>
+                <dd><InlineMoveLinks moves={pokemon.moves.level18} /></dd>
+            {/if}
         </FlatDl>
         <FlatDl>
             {#if pokemon.moves.egg !== undefined}
                 <dt>Egg</dt>
                 <dd><InlineMoveLinks moves={pokemon.moves.egg} /></dd>
             {/if}
-            <dt>TM</dt>
-            <dd>{pokemon.moves.tm.join(', ')}</dd>
+            {#if pokemon.moves.tm !== undefined}
+                <dt>TM</dt>
+                <dd>{pokemon.moves.tm.join(', ')}</dd>
+            {/if}
         </FlatDl>
     </section>
 </Card>

@@ -29,6 +29,10 @@ export type Pokemon = {
     },
     skills: Skill[],
     savingThrows: Attribute[],
+    senses: {
+        type: string,
+        value: number,
+    }[],
     abilities: {
         name: string,
         description: string,
@@ -37,16 +41,16 @@ export type Pokemon = {
     evolution?: {
         stage: number,
         maxStage: number,
-        description: string,
+        description?: string,
     },
     moves: {
         start: string[],
-        level2: string[],
-        level6: string[],
-        level10: string[],
-        level14: string[],
-        level18: string[],
+        level2?: string[],
+        level6?: string[],
+        level10?: string[],
+        level14?: string[],
+        level18?: string[],
         egg?: string[],
-        tm: number[],
+        tm?: number[],
     },
 }
