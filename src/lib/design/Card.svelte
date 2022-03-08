@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { onMount, onDestroy } from 'svelte'
+    import { onMount, onDestroy, afterUpdate } from 'svelte'
 
     export let title: string
 
@@ -7,6 +7,8 @@
     let container: HTMLElement
     let scrollable: HTMLElement
     const setHeight = () => {
+        // reset otherwise scrollheight retains its height if the previously populated card was larger
+        scrollable.style.height = ''
         // The 3em accounts for the header and padding
         scrollable.style.height = `min(${scrollable.scrollHeight}px, calc(${container.clientHeight}px - 3em))`
     }
@@ -14,6 +16,10 @@
     onMount(() => {
         setHeight()
         window.addEventListener('resize', setHeight)
+    })
+
+    afterUpdate(() => {
+        setHeight()
     })
 
     onDestroy(() => {
