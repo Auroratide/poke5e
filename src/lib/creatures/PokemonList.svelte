@@ -3,11 +3,12 @@
     import SortableTable from '../design/SortableTable.svelte'
     import SearchField from '../design/SearchField.svelte'
     import * as asString from './string'
+    import { matchNameOrType } from './filter'
 
     export let pokemons: Pokemon[]
 
     let filterValue: string = ''
-    $: filtered = pokemons.filter(it => it.name.toLocaleLowerCase().includes(filterValue))
+    $: filtered = pokemons.filter(matchNameOrType(filterValue))
 
     const byStringField = (field: (m: Pokemon) => string) => (l: Pokemon, r: Pokemon) => field(l).localeCompare(field(r))
     const byNumericField = (field: (m: Pokemon) => number) => (l: Pokemon, r: Pokemon) => field(l) - field(r)
