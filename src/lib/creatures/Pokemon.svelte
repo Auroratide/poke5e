@@ -10,6 +10,7 @@
 </script>
 
 <Card title={pokemon.name}>
+    <TypeTag slot="header-extra" type={pokemon.type} />
     <section class="info">
         <FlatDl>
             <dt>Size</dt>

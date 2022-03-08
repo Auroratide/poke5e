@@ -10,7 +10,7 @@
 </script>
 
 <Card title={move.name}>
-    <TypeTag slot="header-extra" type={move.type}></TypeTag>
+    <TypeTag slot="header-extra" type={[move.type]}></TypeTag>
     <section class="info">
         <FlatDl>
             <dt>Move Power</dt>
