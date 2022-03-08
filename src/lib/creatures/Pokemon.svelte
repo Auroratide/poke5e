@@ -4,6 +4,7 @@
     import Card from '../design/Card.svelte'
     import FlatDl from '../design/FlatDl.svelte'
     import AttributeBlock from '../dnd/AttributeBlock.svelte'
+    import InlineMoveLinks from './InlineMoveLinks.svelte'
     import { vulnerabilities, resistances, immunities } from '../pokemon/type-interactions'
     import TypeTag from '../pokemon/TypeTag.svelte'
     import * as asString from './string'
@@ -72,6 +73,30 @@
             <p><strong>{ability.name}:</strong> {ability.description}</p>
         {/each}
     </section>
+    {#if pokemon.evolution !== undefined}
+        <hr />
+        <section class="evolution">
+            <p><strong>Evolution:</strong> {pokemon.evolution.stage} / {pokemon.evolution.maxStage}</p>
+            <p>{pokemon.evolution.description}</p>
+        </section>
+    {/if}
+    <hr />
+    <section class="moves">
+        <FlatDl>
+            <dt>Starting</dt>
+            <dd><InlineMoveLinks moves={pokemon.moves.start} /></dd>
+            <dt>Level 2</dt>
+            <dd><InlineMoveLinks moves={pokemon.moves.level2} /></dd>
+            <dt>Level 6</dt>
+            <dd><InlineMoveLinks moves={pokemon.moves.level6} /></dd>
+            <dt>Level 10</dt>
+            <dd><InlineMoveLinks moves={pokemon.moves.level10} /></dd>
+            <dt>Level 14</dt>
+            <dd><InlineMoveLinks moves={pokemon.moves.level14} /></dd>
+            <dt>Level 18</dt>
+            <dd><InlineMoveLinks moves={pokemon.moves.level18} /></dd>
+        </FlatDl>
+    </section>
 </Card>
 
 <style lang="scss">
@@ -80,5 +105,13 @@
         border: none;
         border-bottom: 0.0625em solid var(--skin-bg);
         opacity: 0.5;
+    }
+
+    p {
+        font-size: var(--font-sz-venus);
+    }
+
+    .evolution p:first-child {
+        margin-bottom: 0.125em;
     }
 </style>
