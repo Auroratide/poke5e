@@ -25,15 +25,15 @@
             <dt>Number</dt>
             <dd>{asString.pokeIndex(pokemon.number)}</dd>
             <dt>Size</dt>
-            <dd>{pokemon.size}</dd>
+            <dd class="cap">{pokemon.size}</dd>
             <dt><abbr title="Species Rating">SR</abbr></dt>
             <dd>{asString.sr(pokemon.sr)}</dd>
             <dt>Egg Group</dt>
-            <dd>{pokemon.eggGroup.join(', ')}</dd>
+            <dd class="cap">{pokemon.eggGroup.join(', ')}</dd>
             <dt>Min Level</dt>
             <dd>{pokemon.minLevel}</dd>
             <dt>Gender</dt>
-            <dd>{asString.gender(pokemon.gender)}</dd>
+            <dd class="cap">{asString.gender(pokemon.gender)}</dd>
         </FlatDl>
         <p>{pokemon.description}</p>
     </section>
@@ -52,7 +52,7 @@
             </div>
             {#if pokemon.senses.length > 0}
                 <dt>Senses</dt>
-                <div>
+                <div class="cap">
                     {#each pokemon.senses as sense}
                         <dd>{asString.sense(sense)}</dd>
                     {/each}
@@ -64,15 +64,15 @@
     <section class="skills">
         <FlatDl>
             <dt>Proficiencies</dt>
-            <dd>{pokemon.skills.join(', ')}</dd>
+            <dd class="cap">{pokemon.skills.join(', ')}</dd>
             <dt>Saving Throws</dt>
-            <dd>{pokemon.savingThrows.join(', ')}</dd>
+            <dd class="upper">{pokemon.savingThrows.join(', ')}</dd>
             <dt>Vulnerabilities</dt>
-            <dd>{showTypeList(vul)}</dd>
+            <dd class="cap">{showTypeList(vul)}</dd>
             <dt>Resistances</dt>
-            <dd>{showTypeList(res)}</dd>
+            <dd class="cap">{showTypeList(res)}</dd>
             <dt>Immunities</dt>
-            <dd>{showTypeList(imm)}</dd>
+            <dd class="cap">{showTypeList(imm)}</dd>
         </FlatDl>
     </section>
     <hr />
@@ -145,5 +145,13 @@
 
     .evolution p:first-child {
         margin-bottom: 0.125em;
+    }
+
+    .cap {
+        text-transform: capitalize,
+    }
+
+    .upper {
+        text-transform: uppercase;
     }
 </style>
