@@ -1,0 +1,1 @@
+{"id":"thunder-wave","name":"Thunder Wave","type":"electric","power":["str","dex"],"time":"1 action","pp":10,"duration":"instantaneous","range":"60ft","description":["You send a wave of electric energy that surrounds a creature in range. The target must make a CON save against your Move DC or become paralyzed."]}

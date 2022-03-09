@@ -1,0 +1,1 @@
+{"id":"sleep-powder","name":"Sleep Powder","type":"grass","power":["con"],"time":"1 action","pp":10,"duration":"instantaneous","range":"40ft","description":["You release a cluster of spores at a creature in range, attempting to put them to sleep. The target must make a CON saving throw against your Move DC or fall asleep."]}

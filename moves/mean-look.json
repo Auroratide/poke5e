@@ -1,0 +1,1 @@
+{"id":"mean-look","name":"Mean Look","type":"normal","power":["str","cha"],"time":"1 action","pp":3,"duration":"3 rounds","range":"50ft","description":["You flash an intimidating look at a target, attempting to freeze them in fear. Force a target in range to make a WIS save against your Move DC. On a fail, the target cannot flee or be switched out for 3 rounds."]}

@@ -1,0 +1,1 @@
+{"id":"spore","name":"Spore","type":"grass","power":["dex","con"],"time":"1 reaction","pp":3,"duration":"instantaneous","range":"melee","description":["When you are targeted by a melee attack, you can use your reaction to release a spore that attempts to put your attacker to sleep. The creature must make a CON save against your Move DC, falling asleep on a fail."]}

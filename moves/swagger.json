@@ -1,0 +1,1 @@
+{"id":"swagger","name":"Swagger","type":"normal","power":["wis","cha"],"time":"1 action","pp":10,"duration":"instantaneous","range":"40ft","description":["Force a target in range to make a WIS save against your Move DC. On a fail, the target is confused, but it adds +2 to its attack rolls while confused."]}

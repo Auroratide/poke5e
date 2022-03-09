@@ -1,0 +1,1 @@
+{"id":"attract","name":"Attract","type":"normal","power":["cha"],"time":"1 reaction","pp":5,"duration":"instantaneous","range":"self","description":["As a reaction, when dealt damage by an attack, you may force the attacker to make a CHA save against your Move DC. On a fail, the creature must roll the damage again and use the lower result."]}

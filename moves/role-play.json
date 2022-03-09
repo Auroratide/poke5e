@@ -1,0 +1,1 @@
+{"id":"role-play","name":"Role Play","type":"psychic","power":["wis"],"time":"1 action","pp":3,"duration":"1 minute","range":"50ft","description":["You attempt to copy a creature's abilities for the duration. Select a target in range and force them to make a WIS saving throw against your Move DC. On a failure, replace one of your own current abilities with one of theirs."]}

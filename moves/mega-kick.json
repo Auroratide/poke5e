@@ -1,0 +1,1 @@
+{"id":"mega-kick","name":"Mega Kick","type":"normal","power":["str"],"time":"1 action","pp":10,"duration":"instantaneous","range":"melee","description":["Make a melee attack against a target, doing 2d10 + MOVE normal damage on a hit."],"higherLevels":"The damage dice roll for this move changes to 3d8 at level 5, 4d10 at level 10, and 7d8 at level 17."}

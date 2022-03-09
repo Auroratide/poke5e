@@ -1,0 +1,1 @@
+{"id":"heal-order","name":"Heal Order","type":"bug","power":["con"],"time":"1 action","pp":5,"duration":"instantaneous","range":"self","description":["You summon forth your underlings to heal your wounds. Regain 4d4 + MOVE hit points."],"higherLevels":"The healing dice roll for this move changes to 3d6 at level 5, 5d6 at level 10, and 8d6 at level 17."}

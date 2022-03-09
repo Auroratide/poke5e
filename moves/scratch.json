@@ -1,0 +1,1 @@
+{"id":"scratch","name":"Scratch","type":"normal","power":["str","dex"],"time":"1 action","pp":20,"duration":"instantaneous","range":"melee","description":["You slash out at a creature in range. Make a melee attack, doing 1d6 + MOVE normal damage on a hit."],"higherLevels":"The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."}

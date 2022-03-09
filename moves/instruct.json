@@ -1,0 +1,1 @@
+{"id":"instruct","name":"Instruct","type":"psychic","power":["wis"],"time":"1 action","pp":10,"duration":"instantaneous","range":"60ft","description":["You instruct a creature to act again. As an action, choose a target in range. The target must immediately repeat the move they used in their last action or bonus action, without spending the PP."]}

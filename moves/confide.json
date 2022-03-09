@@ -1,0 +1,1 @@
+{"id":"confide","name":"Confide","type":"normal","power":["wis","cha"],"time":"1 action","pp":10,"duration":"instantaneous","range":"40ft","description":["You whisper an untold secret into the mind of a creature in range. The target must make a WIS save against your Move DC, becoming confused on a failure."]}

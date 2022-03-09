@@ -1,0 +1,1 @@
+{"id":"natures-madness","name":"Nature's Madness","type":"fairy","power":["wis","cha"],"time":"1 action","pp":3,"duration":"instantaneous","range":"40ft","description":["You harness all the power of nature and send it at a creature in range. The target must make a CON save against your Move DC. On a failed save, the target loses half their current HP (minimum of 1 damage)."]}

@@ -1,0 +1,1 @@
+{"id":"supersonic","name":"Supersonic","type":"normal","power":["dex","wis"],"time":"1 action","pp":10,"duration":"instantaneous","range":"40ft","description":["You emit a high pitched screech heard only by the target. Choose a target in range. The target must pass a WIS saving throw against your Move DC or become confused."],"optional":["Change range to 40ft line, 5ft wide."]}
