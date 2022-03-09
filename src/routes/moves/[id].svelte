@@ -1,17 +1,15 @@
 <script lang="ts" context="module">
     import type { Load } from '@sveltejs/kit'
 
-    export const load: Load = async ({ params, stuff }) => {
-        const move = stuff.moves.find(it => it.id === params.id)
-        if (move !== undefined) {
-            return {
-                props: { move },
-            }
-        } else {
-            return {
-                status: 404,
-            }
-        }
+    export const load: Load = async ({ fetch, params }) => {
+        return fetch(`/moves/${params.id}.json`).then(async res => {
+            if (res.status === 404)
+                return { status: 404 }
+            else
+                return {
+                    props: { move: await res.json() }
+                }
+            })
     }
 </script>
 

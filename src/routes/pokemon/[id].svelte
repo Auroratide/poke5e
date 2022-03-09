@@ -1,17 +1,15 @@
 <script lang="ts" context="module">
     import type { Load } from '@sveltejs/kit'
 
-    export const load: Load = async ({ params, stuff }) => {
-        const pokemon = stuff.pokemons.find(it => it.id === params.id)
-        if (pokemon !== undefined) {
-            return {
-                props: { pokemon },
-            }
-        } else {
-            return {
-                status: 404,
-            }
-        }
+    export const load: Load = async ({ fetch, params }) => {
+        return fetch(`/pokemon/${params.id}.json`).then(async res => {
+            if (res.status === 404)
+                return { status: 404 }
+            else
+                return {
+                    props: { pokemon: await res.json() }
+                }
+            })
     }
 </script>
 
