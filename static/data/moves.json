@@ -108,7 +108,24 @@
       "duration": "1 minute",
       "range": "self",
       "description": [
-        "You apply pressure to different stress points on your body, boosting a random ability for the duration. When activating this move, roll a d6 and gain the following boost based on the result. When activated on subsequent turns, any previous effect ends. d6 Effect 1 +1 to attack rolls 2 +2 to damage rolls 3 +10 temporary HP d6 Effect 4 +1 to saving throws 5 Critical Hit range +1 6 +1 to Armor Class"
+        "You apply pressure to different stress points on your body, boosting a random ability for the duration. When activating this move, roll a d6 and gain the following boost based on the result. When activated on subsequent turns, any previous effect ends.",
+        {
+          "type": "table",
+          "headers": ["d6", "Effect"],
+          "rows": [ [
+            "1", "+1 to attack rolls"
+          ], [
+            "2", "+2 to damage rolls"
+          ], [
+            "3", "+10 temporary HP"
+          ], [
+            "4", "+1 to saving throws"
+          ], [
+            "5", "Critical Hit range +1"
+          ], [
+            "6", "+1 to Armor Class"
+          ] ]
+        }
       ]
     },
     {
@@ -3144,7 +3161,24 @@
       "duration": "instantaneous",
       "range": "60ft",
       "description": [
-        "You sacrifice your held item to throw it a creature. Make a ranged attack. On a hit, the amount of dark damage dealt is equal to the price of the item in the manual, divided by 100 (rounded down), plus STAB (if applicable). In addition, certain items have additional effects on a successful hit with this move. After activating this move, on a hit or miss, the item disappears."
+        "You sacrifice your held item to throw it a creature. Make a ranged attack. On a hit, the amount of dark damage dealt is equal to the price of the item in the manual, divided by 100 (rounded down), plus STAB (if applicable). In addition, certain items have additional effects on a successful hit with this move. After activating this move, on a hit or miss, the item disappears.",
+        {
+          "type": "table",
+          "headers": ["Item", "Effect"],
+          "rows": [ [
+            "Flame Orb", "Burns"
+          ], [
+            "Toxic Orb", "Badly Poisons"
+          ], [
+            "Light Ball", "Paralyzes"
+          ], [
+            "King's Rock", "Flinches"
+          ], [
+            "Razor Fang", "Flinches"
+          ], [
+            "Poison Barb", "Poisons"
+          ] ]
+        }
       ]
     },
     {
@@ -4168,7 +4202,32 @@
       "duration": "instantaneous",
       "range": "30ft",
       "description": [
-        "You unleash a wave of force of unknown power at a creature in range. Make a ranged attack on a creature, doing 1d10 + MOVE damage of a random type. Roll a d20 to determine which type of damage is dealt. d20 Type d20 Type 1 Normal 11 Psychic 2 Fire 12 Bug 3 Water 13 Rock 4 Electric 14 Ghost 5 Grass 15 Dragon 6 Ice 16 Dark 7 Fighting 17 Steel 8 Poison 18 Fairy 9 Ground 19 Roll Again 10 Flying 20 Roll Again"
+        "You unleash a wave of force of unknown power at a creature in range. Make a ranged attack on a creature, doing 1d10 + MOVE damage of a random type. Roll a d20 to determine which type of damage is dealt.",
+        {
+          "type": "table",
+          "headers": ["d20", "Type", "d20", "Type"],
+          "rows": [ [
+            "1", "Normal", "11", "Psychic"
+          ], [
+            "2", "Fire", "12", "Bug"
+          ], [
+            "3", "Water", "13", "Rock"
+          ], [
+            "4", "Electric", "14", "Ghost"
+          ], [
+            "5", "Grass", "15", "Dragon"
+          ], [
+            "6", "Ice", "16", "Dark"
+          ], [
+            "7", "Fighting", "17", "Steel"
+          ], [
+            "8", "Poison", "18", "Fairy"
+          ], [
+            "9", "Ground", "19", "Typeless"
+          ], [
+            "10", "Flying", "20", "Your choice"
+          ] ]
+        }
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
@@ -5362,7 +5421,26 @@
       "duration": "instantaneous",
       "range": "self (30ft radius)",
       "description": [
-        "You shake the ground with an earth-shattering quake. All creature in range must make a DEX save against your Move DC, taking half damage on a success and full damage on a fail. Creatures in range that are burrowed or in the invulnerable stage of Dig take double damage from this move. Roll a d100 on the table below to determine damage. Raised creatures are immune to the effects and damage of this move. d100 Damage 01-05 1d4+MOVE 06-15 1d8+MOVE 16-35 1d10+MOVE 36-65 1d12+MOVE 66-85 2d6+MOVE 86-95 2d8+MOVE 96-100 2d12+MOVE"
+        "You shake the ground with an earth-shattering quake. All creature in range must make a DEX save against your Move DC, taking half damage on a success and full damage on a fail. Creatures in range that are burrowed or in the invulnerable stage of Dig take double damage from this move. Roll a d100 on the table below to determine damage. Raised creatures are immune to the effects and damage of this move.",
+        {
+          "type": "table",
+          "headers": ["d100", "Damage"],
+          "rows": [ [
+            "1-5", "1d4 + MOVE"
+          ], [
+            "6-15", "1d8 + MOVE"
+          ], [
+            "16-35", "1d10 + MOVE"
+          ], [
+            "36-65", "1d12 + MOVE"
+          ], [
+            "66-85", "2d6 + MOVE"
+          ], [
+            "86-95", "2d8 + MOVE"
+          ], [
+            "96-100", "2d12 + MOVE"
+          ] ]
+        }
       ],
       "higherLevels": "For damage rolls, use 2x Dice at level 5, 3x Dice at level 10, and 4x Dice at level 17."
     },
@@ -5964,7 +6042,30 @@
       "duration": "instantaneous",
       "range": "40ft",
       "description": [
-        "You draw in power from your held berry, releasing it into a ranged attack. Make a ranged attack, dealing 1d12 + MOVE damage on a hit. The type is dependant on what berry you are holding, according to the chart below:"
+        "You draw in power from your held berry, releasing it into a ranged attack. Make a ranged attack, dealing 1d12 + MOVE damage on a hit. The type is dependant on what berry you are holding, according to the chart below:",
+        {
+          "type": "table",
+          "headers": ["Type", "Berry", "Type", "Berry"],
+          "rows": [ [
+            "Normal", "Chilan", "Flying", "Lum, Coba"
+          ], [
+            "Fire", "Cherri, Occa", "Psychic", "Sitrus, Payapa"
+          ], [
+            "Water", "Chesto, Passho", "Bug", "Tanga"
+          ], [
+            "Electric", "Pecha, Waccan", "Rock", "Charti"
+          ], [
+            "Grass", "Rawst, Rindo", "Ghost", "Kasib"
+          ], [
+            "Ice", "Aspear, Yache", "Dragon", "Haban"
+          ], [
+            "Fighting", "Leppa, Chople", "Dark", "Colbur"
+          ], [
+            "Poison", "Oran, Kebia", "Steel", "Babiri, Razz"
+          ], [
+            "Ground", "Persim, Shucca", "Fairy", "Roseli"
+          ] ]
+        }
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
     },
@@ -5978,7 +6079,34 @@
       "duration": "varies",
       "range": "varies",
       "description": [
-        "You call upon the powers of nature nearby and activate a move based on the terrain. The DM gets final say on what move you activate, but here are example terrain types: Terrain Move Cities/Roads/Buildings Swift Sandy areas Earthquake Volcanoes/Lava areas Fire Blast Caves, Dark areas Shadow Ball Rocky terrain, Mountains Rock Slide Fields, Plains Stun Spore Forests, Tall Grasslands Razor Leaf Ponds/Swamps Bubble Beam At sea Surf Underwater Hydro Pump Snowy Blizzard"
+        "You call upon the powers of nature nearby and activate a move based on the terrain. The DM gets final say on what move you activate, but here are example terrain types:",
+        {
+          "type": "table",
+          "headers": ["Terrain", "Move"],
+          "rows": [ [
+            "Cities, Roads, Buildings", "Swift"
+          ], [
+            "Sandy areas", "Earthquake"
+          ], [
+            "Volcanos, Lava areas", "Fire Blast"
+          ], [
+            "Caves, Dark areas", "Shadow Ball"
+          ], [
+            "Rocky terrain, Mountains", "Rock Slide"
+          ], [
+            "Fields, Plains", "Stun Spore"
+          ], [
+            "Forests, Tall grasslands", "Razor Leaf"
+          ], [
+            "Ponds, Swamps", "Bubble Beam"
+          ], [
+            "At sea", "Surf"
+          ], [
+            "Underwater", "Hydro Pump"
+          ], [
+            "Snowy", "Blizzard"
+          ] ]
+        }
       ]
     },
     {
@@ -7377,7 +7505,20 @@
       "duration": "instantaneous",
       "range": "melee",
       "description": [
-        "You strike out at a target with an aggressive dance.  Make a melee attack, dealing 2d8 + MOVE damage on a hit. Revelation Dance deals damage with a different type depending on the style of Oricorio: Style Damage Type Baile Style Fire Pom-Pom Style Electric Pa’u Style Psychic Sensu Style Ghost"
+        "You strike out at a target with an aggressive dance.  Make a melee attack, dealing 2d8 + MOVE damage on a hit. Revelation Dance deals damage with a different type depending on the style of Oricorio:",
+        {
+          "type": "table",
+          "headers": ["Style", "Damage Type"],
+          "rows": [ [
+            "Baile Style", "Fire"
+          ], [
+            "Pom-Pom Style", "Electric"
+          ], [
+            "Pa'u Style", "Psychic"
+          ], [
+            "Sensu Style", "Ghost"
+          ] ]
+        }
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
     },
@@ -7855,7 +7996,24 @@
       "duration": "instantaneous",
       "range": "melee",
       "description": [
-        "You strike a target with unknown power. Make a melee attack roll against a creature, dealing 1d12 + MOVE normal damage on a hit. On a natural attack roll of 15 or higher, roll a d6 and cause the random effect. d6 Effect 1 Poison 2 Burn 3 Confusion 4 Frozen 5 Paralysis 6 Sleep"
+        "You strike a target with unknown power. Make a melee attack roll against a creature, dealing 1d12 + MOVE normal damage on a hit. On a natural attack roll of 15 or higher, roll a d6 and cause the random effect.",
+        {
+          "type": "table",
+          "headers": ["d6", "Effect"],
+          "rows": [ [
+            "1", "Poison"
+          ], [
+            "2", "Burn"
+          ], [
+            "3", "Confusion"
+          ], [
+            "4", "Frozen"
+          ], [
+            "5", "Paralysis"
+          ], [
+            "6", "Sleep"
+          ] ]
+        }
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
     },
@@ -10378,7 +10536,22 @@
       "duration": "instantaneous",
       "range": "30ft",
       "description": [
-        "You send a powerful ball of energy that changes type based on the surrounding weather, dealing 1d8 + MOVE damage of that type. Weather Type Harsh Sunlight Fire Rain Water Sandstorm Rock Hail or Snow Ice Foggy or Cloudy Normal"
+        "You send a powerful ball of energy that changes type based on the surrounding weather, dealing 1d8 + MOVE damage of that type.",
+        {
+          "type": "table",
+          "headers": ["Weather", "Type"],
+          "rows": [ [
+            "Harsh Sunlight", "Fire"
+          ], [
+            "Rain", "Water"
+          ], [
+            "Sandstorm", "Rock"
+          ], [
+            "Hail or Snow", "Ice"
+          ], [
+            "Foggy or Cloudy", "Normal"
+          ] ]
+        }
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17."
     },
