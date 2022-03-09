@@ -2,8 +2,15 @@
     import type { Load } from '@sveltejs/kit'
 
     export const load: Load = async ({ params, stuff }) => {
-        return {
-            props: { pokemon: stuff.pokemons.find(it => it.id === params.id) },
+        const pokemon = stuff.pokemons.find(it => it.id === params.id)
+        if (pokemon !== undefined) {
+            return {
+                props: { pokemon },
+            }
+        } else {
+            return {
+                status: 404,
+            }
         }
     }
 </script>

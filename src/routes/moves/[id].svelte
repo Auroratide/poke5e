@@ -2,8 +2,15 @@
     import type { Load } from '@sveltejs/kit'
 
     export const load: Load = async ({ params, stuff }) => {
-        return {
-            props: { move: stuff.moves.find(it => it.id === params.id) },
+        const move = stuff.moves.find(it => it.id === params.id)
+        if (move !== undefined) {
+            return {
+                props: { move },
+            }
+        } else {
+            return {
+                status: 404,
+            }
         }
     }
 </script>
