@@ -12,10 +12,14 @@ const subdivideIntoMoves = (subsections, line) => {
 
     return subsections
 }
+
+const asId = s => s.toLowerCase()
+    .replace(/[\s]/g, '-')
+    .replace(/[^a-z0-9\-]/g, '')
 const moveLinesToObject = (lines) => {
     const obj = {}
     const moveName = lines[0].substring(0, lines[0].length / 2)
-    obj.id = moveName.toLowerCase().replace(/[\s]/g, '-')
+    obj.id = asId(moveName)
     obj.name = moveName
 
     const type = lines[1].match(/Type: (.*)/)[1]

@@ -108,24 +108,7 @@
       "duration": "1 minute",
       "range": "self",
       "description": [
-        "You apply pressure to different stress points on your body, boosting a random ability for the duration. When activating this move, roll a d6 and gain the following boost based on the result. When activated on subsequent turns, any previous effect ends.",
-        {
-          "type": "table",
-          "headers": ["d6", "Effect"],
-          "rows": [ [
-            "1", "+1 to attack rolls"
-          ], [
-            "2", "+2 to damage rolls"
-          ], [
-            "3", "+10 temporary HP"
-          ], [
-            "4", "+1 to saving throws"
-          ], [
-            "5", "Critical Hit range +1"
-          ], [
-            "6", "+1 to Armor Class"
-          ] ]
-        }
+        "You apply pressure to different stress points on your body, boosting a random ability for the duration. When activating this move, roll a d6 and gain the following boost based on the result. When activated on subsequent turns, any previous effect ends. d6 Effect 1 +1 to attack rolls 2 +2 to damage rolls 3 +10 temporary HP d6 Effect 4 +1 to saving throws 5 Critical Hit range +1 6 +1 to Armor Class"
       ]
     },
     {
@@ -3320,7 +3303,7 @@
       ]
     },
     {
-      "id": "forest's-curse",
+      "id": "forests-curse",
       "name": "Forest's Curse",
       "type": "grass",
       "power": [
@@ -4856,7 +4839,7 @@
       ]
     },
     {
-      "id": "king's-shield",
+      "id": "kings-shield",
       "name": "King's Shield",
       "type": "steel",
       "power": "none",
@@ -4885,7 +4868,7 @@
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
     {
-      "id": "land's-wrath",
+      "id": "lands-wrath",
       "name": "Land's Wrath",
       "type": "ground",
       "power": [
@@ -5999,7 +5982,7 @@
       ]
     },
     {
-      "id": "nature's-madness",
+      "id": "natures-madness",
       "name": "Nature's Madness",
       "type": "fairy",
       "power": [
