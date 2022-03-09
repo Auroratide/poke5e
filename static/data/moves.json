@@ -717,7 +717,8 @@
       "description": [
         "You sink your teeth into a target creature. Make a melee attack roll, doing 1d10 + MOVE dark damage on a successful hit. On natural attack rolls of 19 or 20, the target flinches"
       ],
-      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
+      "optional": ["Instead of a natural roll of 19 or higher, the target must make a CON save against your MOVE DC. On failure, the target flinches."]
     },
     {
       "id": "blast-burn",
@@ -1409,7 +1410,8 @@
       "description": [
         "You attempt to enter the mind of a target and cause confusion. Make a ranged attack on a creature in range. On a hit, the target takes 1d8 + MOVE psychic damage. If the natural attack roll is 15 or more, the target becomes confused."
       ],
-      "higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17."
+      "higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
+      "optional": ["Instead of a roll of 15 or higher, the target must make a WIS save against your MOVE DC. On failure, the target becomes confused."]
     },
     {
       "id": "constrict",
@@ -1464,6 +1466,22 @@
       "range": "50ft",
       "description": [
         "You mimic a target that you can see, in range. When you activate this move, choose a target in range and fully execute the most recent move used by the creature, using your own ability scores, level, and typing for saving throw DC, attack, and damage."
+      ],
+      "optional": [
+        "This move may also copy a DnD spell. The pokemon's level determines the maximum spell level that can be copied.",
+        {
+          "type": "table",
+          "headers": ["Pokemon Level", "Spell Level"],
+          "rows": [ [
+            "1-4", "2"
+          ], [
+            "5-9", "3"
+          ], [
+            "10-16", "4"
+          ], [
+            "17-20", "5"
+          ] ]
+        }
       ]
     },
     {
@@ -1900,7 +1918,8 @@
       "description": [
         "You let out a charming cry, dealing emotional damage to any creature in range that can hear you. This move automatically hits for 1d4 + MOVE fairy damage unless a creature is in the invulnerable stages of Fly, Dig, Bounce, etc."
       ],
-      "higherLevels": "The damage dice roll for this move changes to 2d4 at level 5, 1d12 at level 10, and 4d4 at level 17."
+      "higherLevels": "The damage dice roll for this move changes to 2d4 at level 5, 1d12 at level 10, and 4d4 at level 17.",
+      "optional": ["Instead of automatically hitting, targets make a CHA save against your MOVE DC. On failure, they take full damage and have disadvantage on their next attack. On success, they take half damage."]
     },
     {
       "id": "discharge",
@@ -2515,7 +2534,8 @@
       "description": [
         "You hurl a ball of flame at a target within range. Make a ranged attack, doing 1d6 + Move fire damage on a successful hit. If the natural attack roll is 19 or 20, the target is burnt."
       ],
-      "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
+      "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17.",
+      "optional": ["Instead of a roll of 19 or higher, target makes a DEX save against your MOVE DC. On failure, the target is burnt."]
     },
     {
       "id": "encore",
@@ -5349,7 +5369,8 @@
       "description": [
         "You summon a sharp, magical leaf that strikes a creature. This move is guaranteed to hit for 1d6 + MOVE grass damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves."
       ],
-      "higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17."
+      "higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17.",
+      "optional": "The Shield spell blocks all damage from this attack."
     },
     {
       "id": "magma-storm",
@@ -5685,6 +5706,22 @@
       "range": "120ft",
       "description": [
         "You copy another creature's movements, learning its ways in battle. When used, this move is temporarily replaced by your choice of one of the target's moves. The target can be an ally. After one PP is subtracted to use this move, the replacement move will retain Mimic's remaining PP. The user can select any of the target's moves to copy for the duration."
+      ],
+      "optional": [
+        "This move may also copy a DnD spell. The pokemon's level determines the maximum spell level that can be copied. This cannot copy a spell that requires concentration.",
+        {
+          "type": "table",
+          "headers": ["Pokemon Level", "Spell Level"],
+          "rows": [ [
+            "1-4", "2"
+          ], [
+            "5-9", "3"
+          ], [
+            "10-16", "4"
+          ], [
+            "17-20", "5"
+          ] ]
+        }
       ]
     },
     {
@@ -6683,7 +6720,8 @@
       "range": "40ft",
       "description": [
         "You release a cluster of poisonous spores that burst into the air above a target. The creature must succeed on a CON save against your Move DC, becoming poisoned on a fail."
-      ]
+      ],
+      "optional": ["Instead of range 40ft, range is 5ft radius circle centered up to 40ft away."]
     },
     {
       "id": "poison-sting",
@@ -6700,7 +6738,8 @@
       "description": [
         "You strike out at a creature with a poisonous sting. Make a melee attack roll against a target, doing 1d4 + MOVE poison damage on a hit. If the natural attack roll is 18 or more, the creature is poisoned."
       ],
-      "higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d8 at level 10, and 2d6 at level 17."
+      "higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d8 at level 10, and 2d6 at level 17.",
+      "optional": ["Instead of natural roll of 18 or higher, target makes a CON save against your MOVE DC, becoming poisoned on failure."]
     },
     {
       "id": "poison-tail",
@@ -6783,7 +6822,8 @@
       "description": [
         "You send a blast of cold snow at a creature. Make a ranged attack roll on a creature, doing 1d6 + MOVE ice damage on a hit. If the natural attack roll is 18 or higher, the target is frozen."
       ],
-      "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
+      "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17.",
+      "optional": ["Instead of a natural roll of 18 or higher, target makes a CON save against your MOVE DC, becoming frozen on failure."]
     },
     {
       "id": "power-gem",
@@ -7871,7 +7911,8 @@
       "range": "30ft",
       "description": [
         "You kick up a cloud of sand in an attempt to blind a target in range. The target must make a CON save against your Move DC. On a fail, for the remainder of the encounter, they add -1 to all of their attack rolls. This move can be stacked for a maximum of -5 to attack rolls."
-      ]
+      ],
+      "optional": ["Instead of range 30ft, range is 5ft radius circle centered up to 30ft away."]
     },
     {
       "id": "sand-tomb",
@@ -8318,7 +8359,8 @@
       "description": [
         "A flashing beam strikes a creature in range. Make a ranged attack roll against a creature, dealing 1d12 + MOVE bug damage on a hit. On a natural attack roll of 19 or 20, the beam confuses the target."
       ],
-      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
+      "optional": ["Instead of natural roll of 19 or 20, target makes a WIS save against your MOVE DC, becoming confused on failure."]
     },
     {
       "id": "silver-wind",
@@ -9433,7 +9475,8 @@
       "range": "40ft",
       "description": [
         "You emit a high pitched screech heard only by the target. Choose a target in range. The target must pass a WIS saving throw against your Move DC or become confused."
-      ]
+      ],
+      "optional": ["Change range to 40ft line, 5ft wide."]
     },
     {
       "id": "surf",
@@ -9514,7 +9557,8 @@
       "range": "30ft",
       "description": [
         "You release a sweet smell directed at a target in range. The target must make a CHA save against your Move DC. On a fail, you have advantage on your next two attacks against that target."
-      ]
+      ],
+      "optional": ["Change range to 10ft radius circle centered up to 20ft away. All allies gain the benefit of having advantage against the targets."]
     },
     {
       "id": "swift",
