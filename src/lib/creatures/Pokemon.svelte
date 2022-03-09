@@ -77,6 +77,9 @@
     </section>
     <hr />
     <section class="abilities">
+        {#if pokemon.specialAbilityText !== undefined}
+            <p><strong>{pokemon.specialAbilityText}</strong></p>
+        {/if}
         {#each pokemon.abilities as ability}
             <p><strong>{ability.name}:</strong> {ability.description}</p>
         {/each}

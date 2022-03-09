@@ -38,6 +38,7 @@ export type Pokemon = {
         description: string,
         hidden?: boolean,
     }[],
+    specialAbilityText?: string,
     evolution?: {
         stage: number,
         maxStage: number,
