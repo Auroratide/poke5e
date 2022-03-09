@@ -1,16 +1,20 @@
 <script lang="ts">
-    import { getMoves } from '../moves/context'
+    import { moves as allMoves } from '../moves/store'
 
     export let moves: string[]
 
-    const names = getMoves().reduce((obj, it) => ({ ...obj, [it.id]: it.name}), {})
+    const name = (m: string) => $allMoves.find(it => it.id === m)?.name
 </script>
 
-<ul>
-    {#each moves as move}
-        <li><a href="/moves/{move}">{names[move]}</a></li>
-    {/each}
-</ul>
+{#if $allMoves !== undefined}
+    <ul>
+        {#each moves as move}
+            <li><a href="/moves/{move}">{name(move)}</a></li>
+        {/each}
+    </ul>
+{:else}
+    <span class="loading" aria-label="Loading">...</span>
+{/if}
 
 <style>
     ul {
@@ -30,5 +34,9 @@
 
     li:last-child::after {
         display: none;
+    }
+
+    .loading {
+        opacity: 0.5;
     }
 </style>

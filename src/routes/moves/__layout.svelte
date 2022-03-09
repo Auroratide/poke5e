@@ -1,27 +1,11 @@
-<script lang="ts" context="module">
-    import type { Load } from '@sveltejs/kit'
-
-    export const load: Load = async ({ fetch }) => {
-        const moves = await fetch('/data/moves.json')
-            .then(res => res.json())
-            .then(json => json.moves)
-        
-        return {
-            props: { moves },
-            stuff: { moves },
-        }
-    }
-</script>
-
 <script lang="ts">
-    import type { Move } from '$lib/moves/types'
     import Theme from '$lib/design/Theme.svelte'
     import MoveList from '$lib/moves/MoveList.svelte'
     import IconShadow from '$lib/design/IconShadow.svelte'
     import Hit from '$lib/design/icon/Hit.svelte'
     import Backdrop from '$lib/design/Backdrop.svelte'
-
-    export let moves: Move[]
+    import Loader from '$lib/design/Loader.svelte'
+    import { moves } from '$lib/moves/store'
 </script>
 
 <Theme theme="blue">
@@ -31,7 +15,11 @@
     <Backdrop />
     <div class="page">
         <nav class="table" aria-label="Move List">
-            <MoveList {moves} />
+            {#if $moves !== undefined}
+                <MoveList moves={$moves} />
+            {:else}
+                <Loader />
+            {/if}
         </nav>
         <main>
             <slot></slot>

@@ -1,38 +1,11 @@
-<script lang="ts" context="module">
-    import type { Load } from '@sveltejs/kit'
-
-    export const load: Load = async ({ fetch }) => {
-        const movesFetch = fetch('/data/moves.json')
-            .then(res => res.json())
-            .then(json => json.moves)
-
-        const pokemonsFetch = fetch('/data/pokemon.json')
-            .then(res => res.json())
-            .then(json => json.items)
-
-        const [ moves, pokemons ] = await Promise.all([movesFetch, pokemonsFetch])
-        
-        return {
-            props: { pokemons, moves },
-            stuff: { pokemons },
-        }
-    }
-</script>
-
 <script lang="ts">
-    import type { Pokemon } from '$lib/creatures/types'
-    import type { Move } from '$lib/moves/types'
     import Theme from '$lib/design/Theme.svelte'
     import PokemonList from '$lib/creatures/PokemonList.svelte'
     import Backdrop from '$lib/design/Backdrop.svelte'
     import IconShadow from '$lib/design/IconShadow.svelte'
     import Pokeball from '$lib/design/icon/Pokeball.svelte'
-    import { setMoves } from '$lib/moves/context'
-
-    export let pokemons: Pokemon[]
-    export let moves: Move[]
-
-    setMoves(moves)
+    import Loader from '$lib/design/Loader.svelte'
+    import { pokemon } from '$lib/creatures/store'
 </script>
 
 <Theme theme="red">
@@ -42,7 +15,11 @@
     <Backdrop />
     <div class="page">
         <nav class="table" aria-label="Pokemon List">
-            <PokemonList {pokemons} />
+            {#if $pokemon !== undefined}
+                <PokemonList pokemons={$pokemon} />
+            {:else}
+                <Loader />
+            {/if}
         </nav>
         <main>
             <slot></slot>
