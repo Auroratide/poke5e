@@ -15,4 +15,5 @@ export type Move = {
     range: string,
     description: BodyText,
     higherLevels?: string,
+    optional?: BodyText,
 }

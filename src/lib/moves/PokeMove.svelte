@@ -30,6 +30,10 @@
         {#if move.higherLevels !== undefined}
             <p><strong>At Higher Levels: </strong>{move.higherLevels}</p>
         {/if}
+        {#if move.optional !== undefined}
+            <p class="optional-heading"><strong>Optional Rules:</strong></p>
+            {@html renderHtml(move.optional)}
+        {/if}
     </section>
 </Card>
 
@@ -73,5 +77,9 @@
                 }
             }
         }
+    }
+
+    .optional-heading {
+        margin-bottom: 0.15em;
     }
 </style>
