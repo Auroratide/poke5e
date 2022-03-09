@@ -8,7 +8,7 @@ const multiline = (lines, index, stopWhen) => {
 
     return {
         nextIndex: index,
-        line: linesToConsolidate.join(' '),
+        line: linesToConsolidate.join(' ').replace('- ', '-'),
     }
 }
 
@@ -78,7 +78,7 @@ const linesToObject = (lines) => {
 
         // eggGroup
         const eggGroup = lines[lineIndex++].match(/Egg Group: (.*)/)[1].toLowerCase().trim()
-        obj.eggGroup = eggGroup.split(', ')
+        obj.eggGroup = eggGroup.split(/,\s?/g)
 
         // gender
         const gender = lines[lineIndex++].match(/Gender Rate: (.*)/)[1].toLowerCase().trim()
@@ -112,7 +112,7 @@ const linesToObject = (lines) => {
 
         // speed
         const speedsResult = multiline(lines, lineIndex, (l) => l.startsWith('STR'))
-        const speeds = speedsResult.line.match(/Speed: (.*)/)[1].toLowerCase().trim().split(', ')
+        const speeds = speedsResult.line.match(/Speed: (.*)/)[1].toLowerCase().trim().split(/,\s?/g)
         obj.speed = speeds.map(it => {
             const [ _, value, type ] = it.match(/(\d+)ft\.\s(.*)/)
             return {
@@ -131,11 +131,11 @@ const linesToObject = (lines) => {
         // skills
         const skillsResult = multiline(lines, lineIndex, (l) => /Saving Throws:/.test(l))
         lineIndex = skillsResult.nextIndex
-        const skills = skillsResult.line.match(/Proficient Skills: (.*)/)[1].toLowerCase().trim().split(', ')
+        const skills = skillsResult.line.match(/Proficient Skills: (.*)/)[1].toLowerCase().trim().split(/,\s?/g)
         obj.skills = skills
 
         // saves
-        const saves = lines[lineIndex++].match(/Saving Throws: (.*)/)[1].toLowerCase().trim().split(', ')
+        const saves = lines[lineIndex++].match(/Saving Throws: (.*)/)[1].toLowerCase().trim().split(/,\s?/g)
         obj.savingThrows = saves.map(it => it.substring(0, 3))
 
         // skip vul, res, imm
@@ -149,7 +149,7 @@ const linesToObject = (lines) => {
         // senses
         obj.senses = []
         if (/Senses:/.test(lines[lineIndex])) {
-            const senses = lines[lineIndex++].match(/Senses: (.*)/)[1].toLowerCase().trim().split(', ')
+            const senses = lines[lineIndex++].match(/Senses: (.*)/)[1].toLowerCase().trim().split(/,\s?/g)
             obj.senses = senses.map(it => {
                 const [ _, type, value ] = it.match(/(.*?)\s(\d+)ft/)
                 return {
@@ -205,7 +205,7 @@ const linesToObject = (lines) => {
             if (type === 'Starting Moves')
                 key = 'start'
 
-            obj.moves[key] = list.split(', ').map(it => asId(it.trim()))
+            obj.moves[key] = list.split(/,\s?/g).map(it => asId(it.trim()))
 
             lineIndex = result.nextIndex
         }
@@ -224,7 +224,7 @@ const linesToObject = (lines) => {
                 obj.moves.tm = Array.from(Array(100).keys(), n => n + 1)
             } else {
                 obj.moves.tm = numbers
-                    .split(', ')
+                    .split(/,\s?/g)
                     .map(it => parseInt(it))
                     .filter(it => !isNaN(it))
             }
@@ -235,7 +235,7 @@ const linesToObject = (lines) => {
         // egg moves
         if (isEggMoves(lines[lineIndex])) {
             const result = multiline(lines, lineIndex, (l) => false) // until the end of the lines
-            const moves = result.line.match(/Egg Moves: (.*)/)[1].trim().split(', ')
+            const moves = result.line.match(/Egg Moves: (.*)/)[1].trim().split(/,\s?/g)
             obj.moves.egg = moves.map(asId)
 
             lineIndex = result.nextIndex

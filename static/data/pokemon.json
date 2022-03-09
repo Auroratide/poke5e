@@ -519,7 +519,7 @@
         "maxStage": "3",
         "description": "Charmeleon can evolve into Charizard at level 14 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20)."
       },
-      "description": "The Flame Pokémon. Tough fights could excite this Pokémon. When excited, it may breathe out bluish- white flames.",
+      "description": "The Flame Pokémon. Tough fights could excite this Pokémon. When excited, it may breathe out bluish-white flames.",
       "ac": 14,
       "hp": 40,
       "hitDice": "d8",
@@ -592,7 +592,9 @@
           32,
           35,
           38,
+          39,
           40,
+          42,
           43,
           44,
           45,
@@ -727,6 +729,7 @@
           49,
           50,
           51,
+          52,
           56,
           58,
           59,
@@ -1849,6 +1852,7 @@
           6,
           10,
           11,
+          17,
           18,
           19,
           21,
@@ -2088,6 +2092,7 @@
           10,
           11,
           12,
+          13,
           14,
           17,
           18,
@@ -2840,7 +2845,7 @@
         },
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": true
         }
       ],
@@ -2957,7 +2962,7 @@
         },
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": true
         }
       ],
@@ -3120,6 +3125,7 @@
           75,
           78,
           80,
+          81,
           84,
           87,
           88,
@@ -3983,6 +3989,7 @@
         ],
         "tm": [
           5,
+          6,
           9,
           10,
           11,
@@ -5071,6 +5078,7 @@
           62,
           66,
           68,
+          76,
           87,
           88,
           89,
@@ -5183,6 +5191,8 @@
           32,
           36,
           42,
+          90,
+          96,
           99,
           100
         ],
@@ -5422,6 +5432,7 @@
           88,
           90,
           96,
+          99,
           100
         ]
       }
@@ -6360,6 +6371,8 @@
           66,
           77,
           85,
+          87,
+          88,
           89,
           90,
           100
@@ -6766,6 +6779,7 @@
         ],
         "tm": [
           3,
+          4,
           6,
           7,
           10,
@@ -7612,7 +7626,7 @@
         "stage": "3",
         "maxStage": "3"
       },
-      "description": "The Tadpole Pokémon. Swims powerfully using all the muscles in its body. It can even overtake world- class swimmers.",
+      "description": "The Tadpole Pokémon. Swims powerfully using all the muscles in its body. It can even overtake world-class swimmers.",
       "ac": 16,
       "hp": 97,
       "hitDice": "d12",
@@ -8369,6 +8383,7 @@
           45,
           46,
           47,
+          48,
           52,
           56,
           66,
@@ -8871,6 +8886,7 @@
           86,
           87,
           88,
+          90,
           96,
           100
         ]
@@ -8999,6 +9015,7 @@
           84,
           87,
           88,
+          90,
           94,
           98,
           99,
@@ -9251,6 +9268,7 @@
         ],
         "tm": [
           6,
+          10,
           11,
           17,
           21,
@@ -9275,6 +9293,7 @@
           78,
           80,
           87,
+          88,
           90,
           96,
           100
@@ -10208,8 +10227,10 @@
           77,
           87,
           88,
+          90,
           91,
-          93
+          93,
+          100
         ]
       }
     },
@@ -10321,6 +10342,7 @@
           27,
           32,
           33,
+          42,
           44,
           48,
           57,
@@ -10330,6 +10352,7 @@
           73,
           74,
           77,
+          87,
           88,
           90,
           91,
@@ -10457,6 +10480,8 @@
           77,
           84,
           87,
+          88,
+          89,
           90,
           100
         ],
@@ -11261,6 +11286,7 @@
           45,
           46,
           48,
+          52,
           56,
           64,
           66,
@@ -12612,6 +12638,7 @@
           31,
           32,
           39,
+          42,
           44,
           45,
           46,
@@ -12624,6 +12651,7 @@
           75,
           80,
           81,
+          87,
           88,
           90,
           94,
@@ -12678,7 +12706,7 @@
       "abilities": [
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": false
         },
         {
@@ -12798,7 +12826,7 @@
       "abilities": [
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": false
         },
         {
@@ -12984,6 +13012,7 @@
           86,
           87,
           88,
+          90,
           92,
           96,
           100
@@ -13109,6 +13138,7 @@
           77,
           83,
           85,
+          86,
           87,
           88,
           90,
@@ -13170,7 +13200,7 @@
         },
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -13312,7 +13342,7 @@
         },
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -13735,6 +13765,7 @@
           22,
           24,
           25,
+          26,
           27,
           30,
           31,
@@ -14075,7 +14106,7 @@
       "abilities": [
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -14117,7 +14148,7 @@
           "earthquake",
           "megahorn",
           "horn-drill",
-          "double--edge"
+          "double-edge"
         ],
         "tm": [
           5,
@@ -14234,7 +14265,7 @@
       "abilities": [
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -14433,6 +14464,7 @@
           24,
           25,
           26,
+          27,
           29,
           30,
           31,
@@ -14687,6 +14719,7 @@
         ],
         "tm": [
           1,
+          5,
           6,
           7,
           10,
@@ -15055,7 +15088,7 @@
         },
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": true
         }
       ],
@@ -15186,7 +15219,7 @@
         },
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": true
         }
       ],
@@ -15553,7 +15586,7 @@
       "abilities": [
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": false
         },
         {
@@ -16039,6 +16072,7 @@
           72,
           73,
           87,
+          88,
           90,
           93,
           100
@@ -17709,6 +17743,7 @@
           74,
           80,
           87,
+          88,
           90,
           94,
           98,
@@ -18106,6 +18141,7 @@
           37,
           38,
           39,
+          40,
           41,
           42,
           44,
@@ -18878,6 +18914,7 @@
           44,
           45,
           48,
+          59,
           73,
           82,
           87,
@@ -19002,6 +19039,7 @@
           37,
           38,
           39,
+          40,
           42,
           44,
           45,
@@ -19832,7 +19870,7 @@
           "covet",
           "crush-claw",
           "double-kick",
-          "double--edge",
+          "double-edge",
           "extrasensory",
           "flame-burst",
           "flare-blitz",
@@ -20599,7 +20637,7 @@
           "captivate",
           "charm",
           "covet",
-          "double--edge",
+          "double-edge",
           "focus-energy",
           "iron-tail",
           "last-resort",
@@ -21394,7 +21432,8 @@
           "psychic"
         ],
         "level18": [
-          "toxic-threadpoison-jab",
+          "toxic-thread",
+          "poison-jab",
           "cross-poison",
           "sticky-web"
         ],
@@ -22026,7 +22065,7 @@
         },
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": true
         }
       ],
@@ -26956,7 +26995,7 @@
         "stage": "2",
         "maxStage": "2"
       },
-      "description": "The Fairy Pokémon. Granbull has a particularly well- developed lower jaw. The enormous fangs are heavy, causing the Pokémon to tip its head back for balance. Unless it is startled, it will not try to bite indiscriminately.",
+      "description": "The Fairy Pokémon. Granbull has a particularly well-developed lower jaw. The enormous fangs are heavy, causing the Pokémon to tip its head back for balance. Unless it is startled, it will not try to bite indiscriminately.",
       "ac": 14,
       "hp": 45,
       "hitDice": "d12",
@@ -30730,7 +30769,7 @@
           "miracle-eye",
           "nasty-plot",
           "psych-up",
-          "wake--up-slap",
+          "wake-up-slap",
           "wish"
         ]
       }
@@ -37529,7 +37568,7 @@
       "abilities": [
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": false
         },
         {
@@ -37656,7 +37695,7 @@
       "abilities": [
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": false
         },
         {
@@ -37777,7 +37816,7 @@
       "abilities": [
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": false
         },
         {
@@ -39722,7 +39761,7 @@
         },
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -39853,7 +39892,7 @@
         },
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -39968,7 +40007,7 @@
         },
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": true
         }
       ],
@@ -43100,7 +43139,7 @@
         },
         {
           "name": "Toxic Boost",
-          "description": "When this Pokémon is hit by a poison- type attack, its next attack is rolled at advantage.",
+          "description": "When this Pokémon is hit by a poison-type attack, its next attack is rolled at advantage.",
           "hidden": true
         }
       ],
@@ -43653,7 +43692,7 @@
         },
         {
           "name": "Anticipation",
-          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed - only that there is such a move.",
+          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed -only that there is such a move.",
           "hidden": false
         },
         {
@@ -43787,7 +43826,7 @@
         },
         {
           "name": "Anticipation",
-          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed - only that there is such a move.",
+          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed -only that there is such a move.",
           "hidden": false
         },
         {
@@ -44460,7 +44499,7 @@
         },
         {
           "name": "Storm Drain",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": true
         }
       ],
@@ -44592,7 +44631,7 @@
         },
         {
           "name": "Storm Drain",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": true
         }
       ],
@@ -46750,7 +46789,7 @@
           "assurance",
           "baton-pass",
           "curse",
-          "double--edge",
+          "double-edge",
           "feint-attack",
           "hex",
           "magic-coat",
@@ -49720,7 +49759,7 @@
       "abilities": [
         {
           "name": "Air Lock",
-          "description": "While this Pokémon is in battle, weather- related abilities have no effect on the Pokémon that have them.",
+          "description": "While this Pokémon is in battle, weather-related abilities have no effect on the Pokémon that have them.",
           "hidden": false
         }
       ],
@@ -52939,7 +52978,7 @@
         },
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": true
         }
       ],
@@ -53008,7 +53047,7 @@
           "body-slam",
           "counter",
           "curse",
-          "double--edge",
+          "double-edge",
           "fissure",
           "focus-energy",
           "guard-split",
@@ -53075,7 +53114,7 @@
         },
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": true
         }
       ],
@@ -53282,7 +53321,7 @@
       "abilities": [
         {
           "name": "Anticipation",
-          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed - only that there is such a move.",
+          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed -only that there is such a move.",
           "hidden": false
         },
         {
@@ -53408,7 +53447,7 @@
       "abilities": [
         {
           "name": "Anticipation",
-          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed - only that there is such a move.",
+          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed -only that there is such a move.",
           "hidden": false
         },
         {
@@ -53534,7 +53573,7 @@
       "abilities": [
         {
           "name": "Anticipation",
-          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed - only that there is such a move.",
+          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed -only that there is such a move.",
           "hidden": false
         },
         {
@@ -54232,7 +54271,7 @@
         "stage": "2",
         "maxStage": "2"
       },
-      "description": "The Sea Weasel Pokémon. It floats using its well- developed flotation sac. It assists in the rescues of drowning people.",
+      "description": "The Sea Weasel Pokémon. It floats using its well-developed flotation sac. It assists in the rescues of drowning people.",
       "ac": 14,
       "hp": 55,
       "hitDice": "d10",
@@ -54629,7 +54668,7 @@
         },
         {
           "name": "Storm Drain",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -54766,7 +54805,7 @@
         },
         {
           "name": "Storm Drain",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -55368,7 +55407,7 @@
           "sweet-kiss",
           "switcheroo",
           "teeter-dance",
-          "thunder-punch-"
+          "thunder-punch"
         ]
       }
     },
@@ -55448,7 +55487,7 @@
           "return",
           "splash",
           "endure",
-          "baby--doll-eyes",
+          "baby-doll-eyes",
           "rototiller"
         ],
         "level6": [
@@ -56903,7 +56942,7 @@
       "abilities": [
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": false
         },
         {
@@ -58814,7 +58853,7 @@
       "abilities": [
         {
           "name": "Anticipation",
-          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed - only that there is such a move.",
+          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed -only that there is such a move.",
           "hidden": false
         },
         {
@@ -58973,7 +59012,7 @@
       "abilities": [
         {
           "name": "Anticipation",
-          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed - only that there is such a move.",
+          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed -only that there is such a move.",
           "hidden": false
         },
         {
@@ -59247,7 +59286,7 @@
         },
         {
           "name": "Storm Drain",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -59387,7 +59426,7 @@
         },
         {
           "name": "Storm Drain",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -59645,7 +59684,7 @@
         },
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": true
         }
       ],
@@ -59772,7 +59811,7 @@
         },
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": true
         }
       ],
@@ -60294,7 +60333,7 @@
       "abilities": [
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -64752,7 +64791,7 @@
       "abilities": [
         {
           "name": "Multitype",
-          "description": "This Pokémon's type and form change to match the type of Elemental Plate this Pokémon holds. The Plate cannot be effected by any item- removing ability or move.",
+          "description": "This Pokémon's type and form change to match the type of Elemental Plate this Pokémon holds. The Plate cannot be effected by any item-removing ability or move.",
           "hidden": false
         },
         {
@@ -65377,7 +65416,7 @@
         "maxStage": "3",
         "description": "Tepig can evolve into Pignite at level 6 and above. When it evolves, its health increases by double its level, and it gains 7 points to add to its ability scores (max 20)."
       },
-      "description": "The Fire Pig Pokémon. It blows fire through its nose. When it catches a cold, the fire becomes pitch- black smoke instead.",
+      "description": "The Fire Pig Pokémon. It blows fire through its nose. When it catches a cold, the fire becomes pitch-black smoke instead.",
       "ac": 12,
       "hp": 18,
       "hitDice": "d6",
@@ -68441,7 +68480,7 @@
       "abilities": [
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -68566,7 +68605,7 @@
       "abilities": [
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -72821,7 +72860,7 @@
         },
         {
           "name": "Storm Drain",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct water-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": true
         }
       ],
@@ -78288,7 +78327,7 @@
         },
         {
           "name": "Anticipation",
-          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed - only that there is such a move.",
+          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move does not have to be revealed -only that there is such a move.",
           "hidden": true
         }
       ],
@@ -80566,7 +80605,7 @@
         "stage": "2",
         "maxStage": "2"
       },
-      "description": "The Shell Out Pokémon. Having removed its heavy shell, it becomes very light and can fight with ninja- like movements.",
+      "description": "The Shell Out Pokémon. Having removed its heavy shell, it becomes very light and can fight with ninja-like movements.",
       "ac": 15,
       "hp": 72,
       "hitDice": "d10",
@@ -81812,7 +81851,7 @@
         },
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": true
         }
       ],
@@ -82418,7 +82457,7 @@
         "field"
       ],
       "gender": "1:1",
-      "description": "The Anteater Pokémon. Using their very hot, flame- covered tongues, they burn through Durant's steel bodies and consume their insides.",
+      "description": "The Anteater Pokémon. Using their very hot, flame-covered tongues, they burn through Durant's steel bodies and consume their insides.",
       "ac": 14,
       "hp": 60,
       "hitDice": "d10",
@@ -86114,7 +86153,7 @@
         "maxStage": "3",
         "description": "Frogadier can evolve into Greninja at level 14 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20)."
       },
-      "description": "The Bubble Frog Pokémon. It can throw bubble- covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
+      "description": "The Bubble Frog Pokémon. It can throw bubble-covered pebbles with precise control, hitting empty cans up to a hundred feet away.",
       "ac": 14,
       "hp": 47,
       "hitDice": "d8",
@@ -88484,7 +88523,7 @@
           "growl",
           "tackle",
           "sand-attack",
-          "baby--doll-eyes",
+          "baby-doll-eyes",
           "headbutt"
         ],
         "level6": [
@@ -91692,7 +91731,7 @@
           "tackle",
           "tail-whip",
           "sand-attack",
-          "baby--doll-eyes",
+          "baby-doll-eyes",
           "quick-attack"
         ],
         "level6": [
@@ -92373,7 +92412,7 @@
         "stage": "3",
         "maxStage": "3"
       },
-      "description": "The Dragon Pokémon. This very friendly Dragon- type Pokémon will hug its beloved Trainer, leaving that Trainer covered in sticky slime.",
+      "description": "The Dragon Pokémon. This very friendly Dragon-type Pokémon will hug its beloved Trainer, leaving that Trainer covered in sticky slime.",
       "ac": 18,
       "hp": 140,
       "hitDice": "d12",
@@ -93766,7 +93805,7 @@
       "abilities": [
         {
           "name": "Fairy Aura",
-          "description": "When this Pokémon is in battle, all fairy- type moves within 100 feet of you deal double their damage.",
+          "description": "When this Pokémon is in battle, all fairy-type moves within 100 feet of you deal double their damage.",
           "hidden": false
         }
       ],
@@ -93891,7 +93930,7 @@
       "abilities": [
         {
           "name": "Dark Aura",
-          "description": "When this Pokémon is in battle, all dark- type moves by allies or opponents within 100 feet deal double their damage.",
+          "description": "When this Pokémon is in battle, all dark-type moves by allies or opponents within 100 feet deal double their damage.",
           "hidden": false
         }
       ],
@@ -97152,7 +97191,7 @@
         },
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -97648,7 +97687,7 @@
         "maxStage": "3",
         "description": "Litten can evolve into Torracat at level 6 and above. When it evolves, its health increases by double its level, and it gains 6 points to add to its ability scores (max 20)."
       },
-      "description": "The Fire Cat Pokémon. If you try too hard to get close to it, it won’t open up to you. Even if you do grow close, giving it too much affection is still a no- no.",
+      "description": "The Fire Cat Pokémon. If you try too hard to get close to it, it won’t open up to you. Even if you do grow close, giving it too much affection is still a no-no.",
       "ac": 13,
       "hp": 16,
       "hitDice": "d6",
@@ -99448,6 +99487,7 @@
           45,
           46,
           48,
+          52,
           55,
           56,
           59,
@@ -99586,6 +99626,7 @@
           68,
           71,
           78,
+          79,
           80,
           87,
           88,
@@ -99769,7 +99810,7 @@
         },
         {
           "name": "Form Change",
-          "description": "This Pokémon's default form is Pom- Pom Style, but can change by giving it a certain kind of Nectar. Red Nectar changes it to Baile Style, Pink Nectar changes it to Pa'u Style, Purple Nectar changes it to Sensu Style, and Yellow Nectar reverts its form to Pom-Pom Style.",
+          "description": "This Pokémon's default form is Pom-Pom Style, but can change by giving it a certain kind of Nectar. Red Nectar changes it to Baile Style, Pink Nectar changes it to Pa'u Style, Purple Nectar changes it to Sensu Style, and Yellow Nectar reverts its form to Pom-Pom Style.",
           "hidden": false
         }
       ],
@@ -103783,7 +103824,7 @@
       "abilities": [
         {
           "name": "Water Compaction",
-          "description": "After being damaged by a water- type move, any other damage dealt to this Pokémon until the beginning of its next turn is halved.",
+          "description": "After being damaged by a water-type move, any other damage dealt to this Pokémon until the beginning of its next turn is halved.",
           "hidden": false
         },
         {
@@ -103915,7 +103956,7 @@
       "abilities": [
         {
           "name": "Water Compaction",
-          "description": "After being damaged by a water- type move, any other damage dealt to this Pokémon until the beginning of its next turn is halved.",
+          "description": "After being damaged by a water-type move, any other damage dealt to this Pokémon until the beginning of its next turn is halved.",
           "hidden": false
         },
         {
@@ -104400,7 +104441,7 @@
       "abilities": [
         {
           "name": "Shields Down",
-          "description": "This Pokémon is immune to Non- Volatile status effects while in Meteor Form. When this Pokémon falls below 50% of its maximum hp, its outer shell breaks and it changes to Core Form. In Core Form, it adds 6 points to its DEX, but reduces its AC by 4. The Pokémon must complete a short rest to restore itself to Meteor Form.",
+          "description": "This Pokémon is immune to Non-Volatile status effects while in Meteor Form. When this Pokémon falls below 50% of its maximum hp, its outer shell breaks and it changes to Core Form. In Core Form, it adds 6 points to its DEX, but reduces its AC by 4. The Pokémon must complete a short rest to restore itself to Meteor Form.",
           "hidden": false
         }
       ],
@@ -104518,7 +104559,7 @@
       "abilities": [
         {
           "name": "Shields Down",
-          "description": "This Pokémon is immune to Non- Volatile status effects while in Meteor Form. When this Pokémon falls below 50% of its maximum hp, its outer shell breaks and it changes to Core Form. In Core Form, it adds 6 points to its DEX, but reduces its AC by 4. The Pokémon must complete a short rest to restore itself to Meteor Form.",
+          "description": "This Pokémon is immune to Non-Volatile status effects while in Meteor Form. When this Pokémon falls below 50% of its maximum hp, its outer shell breaks and it changes to Core Form. In Core Form, it adds 6 points to its DEX, but reduces its AC by 4. The Pokémon must complete a short rest to restore itself to Meteor Form.",
           "hidden": false
         }
       ],
@@ -104876,7 +104917,7 @@
         },
         {
           "name": "Lightning Rod",
-          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage- dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
+          "description": "If this Pokemon or an ally within 30 feet is targeted with a direct electric-type, damage-dealing move, the Pokemon may use a reaction to redirect the target to itself and take half damage from it if it hits.",
           "hidden": false
         },
         {
@@ -105537,7 +105578,7 @@
         },
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": false
         },
         {
@@ -105671,7 +105712,7 @@
         },
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": false
         },
         {
@@ -105803,7 +105844,7 @@
         },
         {
           "name": "Soundproof",
-          "description": "This Pokémon is immune to sound- based moves.",
+          "description": "This Pokémon is immune to sound-based moves.",
           "hidden": false
         },
         {
@@ -106559,7 +106600,7 @@
         "stage": "3",
         "maxStage": "3"
       },
-      "description": "The Sunne Pokémon. Sometimes the result of its opening an Ultra Wormhole is that energy and life- forms from other worlds are called here to this world.",
+      "description": "The Sunne Pokémon. Sometimes the result of its opening an Ultra Wormhole is that energy and life-forms from other worlds are called here to this world.",
       "ac": 18,
       "hp": 335,
       "hitDice": "d20",
