@@ -15,6 +15,7 @@
 
 <script lang="ts">
     import type { Move } from '$lib/moves/types'
+    import Layout from './_layout.svelte'
     import PokeMove from '$lib/moves/PokeMove.svelte'
 
     export let move: Move
@@ -24,4 +25,6 @@
     <title>{move.name} | Pokemon 5e Reference</title>
 </svelte:head>
 
-<PokeMove move={move} />
+<Layout>
+    <PokeMove move={move} />
+</Layout>

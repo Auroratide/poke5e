@@ -16,6 +16,7 @@
 <script lang="ts">
     import type { Pokemon } from '$lib/creatures/types'
     import PokemonStatblock from '$lib/creatures/Pokemon.svelte'
+    import Layout from './_layout.svelte'
 
     export let pokemon: Pokemon
 </script>
@@ -24,4 +25,6 @@
     <title>{pokemon.name} | Pokemon 5e Reference</title>
 </svelte:head>
 
-<PokemonStatblock {pokemon} />
+<Layout>
+    <PokemonStatblock {pokemon} />
+</Layout>

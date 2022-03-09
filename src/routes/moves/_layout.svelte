@@ -1,25 +1,30 @@
+<!-- Cannot use named slots with normal layouts -->
+<!-- https://github.com/sveltejs/kit/issues/627 -->
+
 <script lang="ts">
     import Theme from '$lib/design/Theme.svelte'
-    import PokemonList from '$lib/creatures/PokemonList.svelte'
-    import Backdrop from '$lib/design/Backdrop.svelte'
+    import MoveList from '$lib/moves/MoveList.svelte'
     import IconShadow from '$lib/design/IconShadow.svelte'
-    import Pokeball from '$lib/design/icon/Pokeball.svelte'
+    import Hit from '$lib/design/icon/Hit.svelte'
+    import Backdrop from '$lib/design/Backdrop.svelte'
     import Loader from '$lib/design/Loader.svelte'
-    import { pokemon } from '$lib/creatures/store'
+    import { moves } from '$lib/moves/store'
 </script>
 
-<Theme theme="red">
+<Theme theme="blue">
     <IconShadow>
-        <Pokeball />
+        <Hit />
     </IconShadow>
     <Backdrop />
     <div class="page">
-        <nav class="table" aria-label="Pokemon List">
-            {#if $pokemon !== undefined}
-                <PokemonList pokemons={$pokemon} />
-            {:else}
-                <Loader />
-            {/if}
+        <nav class="table" aria-label="Move List">
+            <slot name="list">
+                {#if $moves !== undefined}
+                    <MoveList moves={$moves} />
+                {:else}
+                    <Loader />
+                {/if}
+            </slot>
         </nav>
         <main>
             <slot></slot>
