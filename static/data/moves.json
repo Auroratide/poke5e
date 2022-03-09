@@ -5370,7 +5370,7 @@
         "You summon a sharp, magical leaf that strikes a creature. This move is guaranteed to hit for 1d6 + MOVE grass damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves."
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17.",
-      "optional": "The Shield spell blocks all damage from this attack."
+      "optional": ["The Shield spell blocks all damage from this attack."]
     },
     {
       "id": "magma-storm",
