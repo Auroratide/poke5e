@@ -38,7 +38,7 @@ const asId = s => s.toLowerCase()
     .replace(/[\s]/g, '-')
     .replace('♀', 'f')
     .replace('♂', 'm')
-    .replace('%', '') // zygarde
+    .replace(/[^a-z0-9\-]/g, '')
 
 const percentToRatio = (n) => {
     switch(n) {

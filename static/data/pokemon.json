@@ -10339,7 +10339,7 @@
       }
     },
     {
-      "id": "farfetch'd",
+      "id": "farfetchd",
       "name": "Farfetch'd",
       "number": 83,
       "type": [
@@ -15502,7 +15502,7 @@
       }
     },
     {
-      "id": "mr.-mime",
+      "id": "mr-mime",
       "name": "Mr. Mime",
       "number": 122,
       "type": [
@@ -21394,7 +21394,7 @@
           "psychic"
         ],
         "level18": [
-          "toxic-thread,poison-jab",
+          "toxic-threadpoison-jab",
           "cross-poison",
           "sticky-web"
         ],
@@ -55368,7 +55368,7 @@
           "sweet-kiss",
           "switcheroo",
           "teeter-dance",
-          "thunder-punch-,"
+          "thunder-punch-"
         ]
       }
     },
@@ -56851,7 +56851,7 @@
       }
     },
     {
-      "id": "mime-jr.",
+      "id": "mime-jr",
       "name": "Mime Jr.",
       "number": 439,
       "type": [
@@ -63824,10 +63824,10 @@
       ],
       "moves": {
         "formchange": [
-          "giratina's-default-form-is-altered-forme.-when-it-is-given-a-griseous-orb-to-hold",
+          "giratinas-default-form-is-altered-forme-when-it-is-given-a-griseous-orb-to-hold",
           "or-any-time-it-is-in-its-home-plane",
           "the-distortion-world",
-          "it-takes-on-the-origin-forme."
+          "it-takes-on-the-origin-forme"
         ],
         "start": [
           "dragon-breath",
@@ -83711,9 +83711,9 @@
       ],
       "moves": {
         "formchange": [
-          "tornadus'-default-form-is-incarnate-forme.-when-given-a-reveal-glass-to-hold",
-          "it-can-change-to-therian-forme-at-will.-in-therian-forme",
-          "its-abilities-are-replaced-with-regenerator."
+          "tornadus-default-form-is-incarnate-forme-when-given-a-reveal-glass-to-hold",
+          "it-can-change-to-therian-forme-at-will-in-therian-forme",
+          "its-abilities-are-replaced-with-regenerator"
         ],
         "start": [
           "astonish",
@@ -83845,9 +83845,9 @@
       ],
       "moves": {
         "formchange": [
-          "thundurus'-default-form-is-incarnate-forme.-when-given-a-reveal-glass-to-hold",
-          "it-can-change-to-therian-forme-at-will.-in-therian-forme",
-          "its-abilities-are-replaced-with-volt-absorb."
+          "thundurus-default-form-is-incarnate-forme-when-given-a-reveal-glass-to-hold",
+          "it-can-change-to-therian-forme-at-will-in-therian-forme",
+          "its-abilities-are-replaced-with-volt-absorb"
         ],
         "start": [
           "astonish",
@@ -84239,9 +84239,9 @@
       ],
       "moves": {
         "formchange": [
-          "landorus'-default-form-is-incarnate-forme.-when-given-a-reveal-glass-to-hold",
-          "it-can-change-to-therian-forme-at-will.-in-therian-forme",
-          "its-abilities-are-replaced-with-intimidate."
+          "landorus-default-form-is-incarnate-forme-when-given-a-reveal-glass-to-hold",
+          "it-can-change-to-therian-forme-at-will-in-therian-forme",
+          "its-abilities-are-replaced-with-intimidate"
         ],
         "start": [
           "block",
@@ -87548,7 +87548,7 @@
       }
     },
     {
-      "id": "flabébé",
+      "id": "flabb",
       "name": "Flabébé",
       "number": 669,
       "type": [
@@ -89238,7 +89238,7 @@
           "head-smash",
           "iron-defense",
           "iron-head",
-          "king's-shield",
+          "kings-shield",
           "night-slash",
           "power-trick",
           "pursuit",
@@ -92683,7 +92683,7 @@
           "will-o-wisp"
         ],
         "level14": [
-          "forest's-curse",
+          "forests-curse",
           "destiny-bond"
         ],
         "level18": [
@@ -92823,7 +92823,7 @@
           "will-o-wisp"
         ],
         "level14": [
-          "forest's-curse",
+          "forests-curse",
           "destiny-bond"
         ],
         "level18": [
@@ -92946,13 +92946,13 @@
       ],
       "moves": {
         "variablesize": [
-          "pumpkaboo-come-in-a-variety-of-sizes:-small",
+          "pumpkaboo-come-in-a-variety-of-sizes-small",
           "average",
           "large",
-          "and-supersize-(all-considered-\"small\"-for-d&d).-the-stat-block-above-is-for-its-small-variety.-for-each-size-above-small",
-          "decrease-its-dex-by--1-and-raise-its-con-by-+1.-evolution:-pumpkaboo-can-evolve-into-gourgeist-at-level-9-and-above.-when-it-evolves",
+          "and-supersize-all-considered-small-for-dd-the-stat-block-above-is-for-its-small-variety-for-each-size-above-small",
+          "decrease-its-dex-by--1-and-raise-its-con-by-1-evolution-pumpkaboo-can-evolve-into-gourgeist-at-level-9-and-above-when-it-evolves",
           "its-health-increases-by-double-its-level",
-          "and-it-gains-9-points-to-add-to-its-ability-scores-(max-20)."
+          "and-it-gains-9-points-to-add-to-its-ability-scores-max-20"
         ],
         "start": [
           "astonish",
@@ -93097,11 +93097,11 @@
       ],
       "moves": {
         "variablesize": [
-          "gourgeist-come-in-a-variety-of-sizes:-small",
+          "gourgeist-come-in-a-variety-of-sizes-small",
           "average",
           "large",
-          "and-supersize-(all-considered-\"small\"-for-d&d).-the-stat-block-above-is-for-its-small-variety.-for-each-size-above-small",
-          "decrease-its-dex-by--1-and-raise-its-con-by-+1."
+          "and-supersize-all-considered-small-for-dd-the-stat-block-above-is-for-its-small-variety-for-each-size-above-small",
+          "decrease-its-dex-by--1-and-raise-its-con-by-1"
         ],
         "start": [
           "astonish",
@@ -94029,7 +94029,7 @@
           "safeguard",
           "dig",
           "bind",
-          "land's-wrath",
+          "lands-wrath",
           "sandstorm",
           "haze",
           "crunch",
@@ -94142,7 +94142,7 @@
           "safeguard",
           "dig",
           "bind",
-          "land's-wrath",
+          "lands-wrath",
           "sandstorm",
           "haze",
           "crunch",
@@ -94250,7 +94250,7 @@
           "safeguard",
           "dig",
           "bind",
-          "land's-wrath",
+          "lands-wrath",
           "sandstorm",
           "haze",
           "crunch",
@@ -99839,7 +99839,7 @@
       }
     },
     {
-      "id": "oricorio-pa'u-style",
+      "id": "oricorio-pau-style",
       "name": "Oricorio Pa'u Style",
       "number": 741,
       "type": [
@@ -104088,7 +104088,7 @@
       }
     },
     {
-      "id": "type:-null",
+      "id": "type-null",
       "name": "Type: Null",
       "number": 772,
       "type": [
@@ -105957,7 +105957,7 @@
           "charge",
           "wild-charge",
           "mirror-move",
-          "nature’s-madness"
+          "natures-madness"
         ],
         "level18": [
           "discharge",
@@ -106090,7 +106090,7 @@
           "skill-swap",
           "psyshock",
           "tickle",
-          "nature’s-madness"
+          "natures-madness"
         ],
         "level18": [
           "extrasensory",
@@ -106217,7 +106217,7 @@
           "leech-seed",
           "horn-leech",
           "rototiller",
-          "nature’s-madness"
+          "natures-madness"
         ],
         "level18": [
           "zen-headbutt",
@@ -106353,7 +106353,7 @@
           "refresh",
           "brine",
           "defog",
-          "nature’s-madness"
+          "natures-madness"
         ],
         "level18": [
           "muddy-water",
