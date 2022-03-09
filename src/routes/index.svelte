@@ -1,6 +1,7 @@
 <script lang="ts">
     import Pokeball from '$lib/design/icon/Pokeball.svelte'
     import Hit from '$lib/design/icon/Hit.svelte'
+    import { base } from '$app/paths'
 </script>
 
 <svelte:head>
@@ -14,11 +15,11 @@
     </section>
     <ul>
         <li class="theme-red">
-            <a href="/pokemon">Pokemon</a>
+            <a href="{base}/pokemon">Pokemon</a>
             <span class="icon"><Pokeball /></span>
         </li>
         <li class="theme-blue">
-            <a href="/moves">Moves</a>
+            <a href="{base}/moves">Moves</a>
             <span class="icon"><Hit /></span>
         </li>
     </ul>

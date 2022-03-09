@@ -11,6 +11,9 @@ const config = {
 		prerender: {
 			default: true,
 		},
+		paths: {
+			base: '/poke5e'
+		},
 		adapter: adapter()
 	}
 };

@@ -1,8 +1,9 @@
 <script lang="ts" context="module">
     import type { Load } from '@sveltejs/kit'
+    import { assets } from '$app/paths'
 
     export const load: Load = async ({ fetch }) => {
-        const moves = await fetch('/data/moves.json')
+        const moves = await fetch(`${assets}/data/moves.json`)
             .then(res => res.json())
             .then(data => data.moves)
 

@@ -20,6 +20,7 @@
 
 <script lang="ts">
     import Container from '$lib/design/Container.svelte'
+    import { base } from '$app/paths'
 
     export let activeSection: string = ''
 </script>
@@ -29,8 +30,8 @@
         <Container>
             <nav aria-label="Site Navigation">
                 <ul>
-                    <li class:active={activeSection === 'pokemon'} class="theme-red"><a href="/pokemon">Pokemon</a></li>
-                    <li class:active={activeSection === 'moves'} class="theme-blue"><a href="/moves">Moves</a></li>
+                    <li class:active={activeSection === 'pokemon'} class="theme-red"><a href="{base}/pokemon">Pokemon</a></li>
+                    <li class:active={activeSection === 'moves'} class="theme-blue"><a href="{base}/moves">Moves</a></li>
                 </ul>
             </nav>
         </Container>

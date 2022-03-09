@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Move } from './types'
+    import { base } from '$app/paths'
     import SortableTable from '../design/SortableTable.svelte'
     import SearchField from '../design/SearchField.svelte'
     import { powerAsString } from './string'
@@ -28,7 +29,7 @@
     key: 'pp', name: 'PP', ratio: 1, sort: byNumericField(it => it.pp),
 } ]}>
     <tr role="row" class="row" style:--skin-local-bg="var(--skin-{item.type}-bg)">
-        <td role="cell" class="name"><a href="/moves/{item.id}">{item.name}</a></td>
+        <td role="cell" class="name"><a href="{base}/moves/{item.id}">{item.name}</a></td>
         <td role="cell">{item.type}</td>
         <td role="cell">{powerAsString(item.power)}</td>
         <td role="cell">{item.pp}</td>

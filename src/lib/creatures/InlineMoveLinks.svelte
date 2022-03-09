@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { base } from '$app/paths'
     import { moves as allMoves } from '../moves/store'
 
     export let moves: string[]
@@ -9,7 +10,7 @@
 {#if $allMoves !== undefined}
     <ul>
         {#each moves as move}
-            <li><a href="/moves/{move}">{name(move)}</a></li>
+            <li><a href="{base}/moves/{move}">{name(move)}</a></li>
         {/each}
     </ul>
 {:else}

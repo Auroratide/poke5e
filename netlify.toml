@@ -1,6 +1,0 @@
-[Settings]
-  ID = "poke5e"
-
-[build]
-  publish = "build"
-  command = "npm run ci"

@@ -21,6 +21,8 @@
 </script>
 
 <script lang="ts">
+    import { base, assets } from '$app/paths'
+
     export let title: string
     export let message: string
 </script>
@@ -32,8 +34,8 @@
 <main>
     <h1>{title}</h1>
     <p>{message}</p>
-    <img class="missingno" src="/missingno.png" alt="a nearly random assortment of purple, pink, and black pixels" />
-    <p>Try <a href="/">returning to the home page.</a></p>
+    <img class="missingno" src="{assets}/missingno.png" alt="a nearly random assortment of purple, pink, and black pixels" />
+    <p>Try <a href="{base}">returning to the home page.</a></p>
 </main>
 
 <style>

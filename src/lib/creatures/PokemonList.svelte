@@ -1,5 +1,6 @@
 <script lang="ts">
     import type { Pokemon } from './types'
+    import { base } from '$app/paths'
     import SortableTable from '../design/SortableTable.svelte'
     import SearchField from '../design/SearchField.svelte'
     import * as asString from './string'
@@ -26,7 +27,7 @@
     key: 'sr', name: 'SR', ratio: 1, sort: byNumericField(it => it.sr),
 } ]}>
     <tr role="row" class="row" style:--skin-local-bg="var(--skin-{item.type[0]}-bg)">
-        <td role="cell" class="name"><a href="/pokemon/{item.id}">{item.name}</a></td>
+        <td role="cell" class="name"><a href="{base}/pokemon/{item.id}">{item.name}</a></td>
         <td role="cell">{asString.type(item.type)}</td>
         <td role="cell">{asString.sr(item.sr)}</td>
     </tr>
