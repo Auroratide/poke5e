@@ -16,8 +16,8 @@ const footerText = /\d+\nThis is unofficial Fan Content and is not approved\/end
 const nonempty = line => line.trim().length !== 0
 
 const consolidateLongNames = {
-    regex: /(.*?[a-z])[A-Z].*\n#(\d+)#\d+/g,
-    replacement: '$1 #$2$1 #$2',
+    regex: /(.*?[a-z])[A-Z].*\n(.*?)#(\d+).*?#\d+/g,
+    replacement: '$1 $2#$3$1 $2#$3',
 }
 
 const shedinjaAbilityText = 'A Shedinja has both of its abilities, all the time.'
@@ -38,6 +38,7 @@ const asId = s => s.toLowerCase()
     .replace(/[\s]/g, '-')
     .replace('♀', 'f')
     .replace('♂', 'm')
+    .replace('%', '') // zygarde
 
 const percentToRatio = (n) => {
     switch(n) {

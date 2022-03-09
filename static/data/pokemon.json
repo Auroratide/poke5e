@@ -93958,7 +93958,7 @@
       }
     },
     {
-      "id": "zygarde-10%-forme",
+      "id": "zygarde-10-forme",
       "name": "Zygarde 10% Forme",
       "number": 718,
       "type": [
@@ -94071,7 +94071,7 @@
       }
     },
     {
-      "id": "zygarde-50%-forme",
+      "id": "zygarde-50-forme",
       "name": "Zygarde 50% Forme",
       "number": 718,
       "type": [
@@ -94184,8 +94184,8 @@
       }
     },
     {
-      "id": "forme",
-      "name": "Forme",
+      "id": "zygarde-complete-forme",
+      "name": "Zygarde Complete Forme",
       "number": 718,
       "type": [
         "dragon",
@@ -99712,13 +99712,13 @@
           "captivate",
           "pluck",
           "safeguard",
-          "tailwind-oricorio-pom-pomoricorio-pom-pom"
+          "tailwind"
         ]
       }
     },
     {
-      "id": "style",
-      "name": "Style",
+      "id": "oricorio-pom-pom-style",
+      "name": "Oricorio Pom-Pom Style",
       "number": 741,
       "type": [
         "electric",
@@ -100591,8 +100591,8 @@
       }
     },
     {
-      "id": "form",
-      "name": "Form",
+      "id": "lycanroc-midnight-form",
+      "name": "Lycanroc Midnight Form",
       "number": 745,
       "type": [
         "rock"
@@ -100932,13 +100932,13 @@
           "muddy-water",
           "water-pulse",
           "water-sport",
-          "whirlpool-wishiwashi-schoolwishiwashi-school"
+          "whirlpool"
         ]
       }
     },
     {
-      "id": "form",
-      "name": "Form",
+      "id": "wishiwashi-school-form",
+      "name": "Wishiwashi School Form",
       "number": 746,
       "type": [
         "water"
