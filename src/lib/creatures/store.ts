@@ -1,5 +1,5 @@
 import type { Pokemon } from './types'
-import { readable } from 'svelte/store'
+import { readable, writable } from 'svelte/store'
 import { assets } from '$app/paths'
 
 export const pokemon = readable<Pokemon[]>(undefined, (set) => {
@@ -9,3 +9,6 @@ export const pokemon = readable<Pokemon[]>(undefined, (set) => {
             .then(data => set(data.items))
     }
 })
+
+export const filterValue = writable('')
+export const currentSorter = writable(() => 0)

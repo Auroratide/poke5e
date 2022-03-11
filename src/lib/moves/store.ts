@@ -1,5 +1,5 @@
 import type { Move } from './types'
-import { readable } from 'svelte/store'
+import { readable, writable } from 'svelte/store'
 import { assets } from '$app/paths'
 
 export const moves = readable<Move[]>(undefined, (set) => {
@@ -9,3 +9,6 @@ export const moves = readable<Move[]>(undefined, (set) => {
             .then(data => set(data.moves))
     }
 })
+
+export const filterValue = writable('')
+export const currentSorter = writable(() => 0)

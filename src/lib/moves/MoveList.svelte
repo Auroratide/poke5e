@@ -5,21 +5,21 @@
     import SearchField from '../design/SearchField.svelte'
     import { powerAsString } from './string'
     import { matchNameOrType } from './filter'
+    import { filterValue, currentSorter } from './store'
 
     export let moves: Move[]
 
-    let filterValue: string = ''
-    $: filteredMoves = moves.filter(matchNameOrType(filterValue))
+    $: filteredMoves = moves.filter(matchNameOrType($filterValue))
 
     const byStringField = (field: (m: Move) => string) => (l: Move, r: Move) => field(l).localeCompare(field(r))
     const byNumericField = (field: (m: Move) => number) => (l: Move, r: Move) => field(l) - field(r)
 </script>
 
 <div class="search-field">
-    <SearchField id="filter-moves" label="Search" bind:value={filterValue} matched={filteredMoves.length} max={moves.length} />
+    <SearchField id="filter-moves" label="Search" bind:value={$filterValue} matched={filteredMoves.length} max={moves.length} />
 </div>
 <!-- svelte-ignore a11y-no-redundant-roles -->
-<SortableTable let:item items={filteredMoves} headers={[ {
+<SortableTable let:item items={filteredMoves} bind:currentSorter={$currentSorter} headers={[ {
     key: 'name', name: 'Name', ratio: 3, sort: byStringField(it => it.name),
 }, {
     key: 'type', name: 'Type', ratio: 2, sort: byStringField(it => it.type),

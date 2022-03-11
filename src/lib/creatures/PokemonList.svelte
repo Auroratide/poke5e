@@ -5,21 +5,21 @@
     import SearchField from '../design/SearchField.svelte'
     import * as asString from './string'
     import { matchNameOrType } from './filter'
+    import { filterValue, currentSorter } from './store'
 
     export let pokemons: Pokemon[]
 
-    let filterValue: string = ''
-    $: filtered = pokemons.filter(matchNameOrType(filterValue))
+    $: filtered = pokemons.filter(matchNameOrType($filterValue))
 
     const byStringField = (field: (m: Pokemon) => string) => (l: Pokemon, r: Pokemon) => field(l).localeCompare(field(r))
     const byNumericField = (field: (m: Pokemon) => number) => (l: Pokemon, r: Pokemon) => field(l) - field(r)
 </script>
 
 <div class="search-field">
-    <SearchField id="filter-moves" label="Search" bind:value={filterValue} matched={filtered.length} max={pokemons.length} />
+    <SearchField id="filter-moves" label="Search" bind:value={$filterValue} matched={filtered.length} max={pokemons.length} />
 </div>
 <!-- svelte-ignore a11y-no-redundant-roles -->
-<SortableTable let:item items={filtered} headers={[ {
+<SortableTable let:item items={filtered} bind:currentSorter={$currentSorter} headers={[ {
     key: 'name', name: 'Name', ratio: 3, sort: byStringField(it => it.name),
 }, {
     key: 'type', name: 'Type', ratio: 3, sort: byStringField(it => it.type.join(', ')),

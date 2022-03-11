@@ -1,5 +1,6 @@
 <script lang="ts">
     type Sorter = (l: any, r: any) => number
+    const noSort = () => 0
 
     export let items: any[]
     export let headers: {
@@ -8,11 +9,9 @@
         ratio: number,
         sort?: Sorter,
     }[]
-
-    const noSort = () => 0
+    export let currentSorter: Sorter = noSort
 
     let reversed = false
-    let currentSorter: Sorter = noSort
     $: sorted = items
         .slice(0)
         .sort((l, r) => currentSorter(l, r) * (reversed ? -1 : 1))
