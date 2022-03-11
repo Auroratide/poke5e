@@ -19,10 +19,18 @@
 </script>
 
 <script lang="ts">
+    import type { Writable } from 'svelte/store'
     import Container from '$lib/design/Container.svelte'
     import { base } from '$app/paths'
+    import { filterValue as pokemonFilter, currentSorter as pokemonSorter } from '$lib/creatures/store'
+    import { filterValue as movesFilter, currentSorter as movesSorter } from '$lib/moves/store'
 
     export let activeSection: string = ''
+
+    export let resetStores = (filter: Writable<string>, sorter: Writable<() => number>) => () => {
+        filter.set('')
+        sorter.set(() => 0)
+    }
 </script>
 
 <div class="page">
@@ -30,8 +38,12 @@
         <Container>
             <nav aria-label="Site Navigation">
                 <ul>
-                    <li class:active={activeSection === 'pokemon'} class="theme-red"><a href="{base}/pokemon">Pokemon</a></li>
-                    <li class:active={activeSection === 'moves'} class="theme-blue"><a href="{base}/moves">Moves</a></li>
+                    <li class:active={activeSection === 'pokemon'} class="theme-red">
+                        <a href="{base}/pokemon" on:click={resetStores(pokemonFilter, pokemonSorter)}>Pokemon</a>
+                    </li>
+                    <li class:active={activeSection === 'moves'} class="theme-blue">
+                        <a href="{base}/moves" on:click={resetStores(movesFilter, movesSorter)}>Moves</a>
+                    </li>
                 </ul>
             </nav>
         </Container>
