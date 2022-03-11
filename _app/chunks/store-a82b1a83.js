@@ -1,1 +1,0 @@
-import{U as s}from"./vendor-ad2fd054.js";import{a as t}from"./paths-396f020f.js";const n=s(void 0,e=>{typeof window!="undefined"&&fetch(`${t}/data/moves.json`).then(o=>o.json()).then(o=>e(o.moves))});export{n as m};

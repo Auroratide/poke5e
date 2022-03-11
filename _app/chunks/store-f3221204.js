@@ -1,0 +1,1 @@
+import{O as s,D as o}from"./vendor-67e8a856.js";import{a}from"./paths-396f020f.js";const i=s(void 0,t=>{typeof window!="undefined"&&fetch(`${a}/data/pokemon.json`).then(e=>e.json()).then(e=>t(e.items))}),f=o(""),m=o(()=>0);export{m as c,f,i as p};
