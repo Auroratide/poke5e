@@ -17,14 +17,12 @@
     import type { Move } from '$lib/moves/types'
     import Layout from './_layout.svelte'
     import MoveList from '$lib/moves/MoveList.svelte'
+    import Title from '$lib/design/Title.svelte'
 
     export let moves: Move[]
 </script>
 
-<svelte:head>
-    <title>Pokemon Moves | Pokemon 5e Reference</title>
-</svelte:head>
-
+<Title value="Pokemon Moves" />
 <Layout>
     <MoveList slot="list" {moves} />
 </Layout>

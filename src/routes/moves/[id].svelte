@@ -18,14 +18,12 @@
     import type { Move } from '$lib/moves/types'
     import Layout from './_layout.svelte'
     import PokeMove from '$lib/moves/PokeMove.svelte'
+    import Title from '$lib/design/Title.svelte'
 
     export let move: Move
 </script>
 
-<svelte:head>
-    <title>{move.name} | Pokemon 5e Reference</title>
-</svelte:head>
-
+<Title value={move.name} />
 <Layout>
     <PokeMove move={move} />
 </Layout>

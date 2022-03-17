@@ -22,15 +22,13 @@
 
 <script lang="ts">
     import { base, assets } from '$app/paths'
+    import Title from '$lib/design/Title.svelte'
 
     export let title: string
     export let message: string
 </script>
 
-<svelte:head>
-    <title>Pokemon 5e Reference</title>
-</svelte:head>
-
+<Title />
 <main>
     <h1>{title}</h1>
     <p>{message}</p>

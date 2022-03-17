@@ -1,12 +1,10 @@
 <script lang="ts">
     import Page from '$lib/design/Page.svelte'
     import Pokeball from '$lib/design/icon/Pokeball.svelte'
+    import Title from '$lib/design/Title.svelte'
 </script>
 
-<svelte:head>
-    <title>My Pokemon | Pokemon 5e Reference</title>
-</svelte:head>
-
+<Title value="My Pokemon" />
 <Page theme="purple">
     <Pokeball slot="icon" />
     <nav slot="side" class="table" aria-label="Pokemon List">

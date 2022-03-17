@@ -17,14 +17,12 @@
     import type { Pokemon } from '$lib/creatures/types'
     import Layout from './_layout.svelte'
     import PokemonList from '$lib/creatures/PokemonList.svelte'
+    import Title from '$lib/design/Title.svelte'
 
     export let pokemon: Pokemon[]
 </script>
 
-<svelte:head>
-    <title>Pokemon | Pokemon 5e Reference</title>
-</svelte:head>
-
+<Title value="Pokemon" />
 <Layout>
     <PokemonList slot="list" pokemons={pokemon} />
 </Layout>

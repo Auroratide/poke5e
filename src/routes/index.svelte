@@ -2,12 +2,10 @@
     import Pokeball from '$lib/design/icon/Pokeball.svelte'
     import Hit from '$lib/design/icon/Hit.svelte'
     import { base } from '$app/paths'
+    import Title from '$lib/design/Title.svelte'
 </script>
 
-<svelte:head>
-    <title>Pokemon 5e Reference</title>
-</svelte:head>
-
+<Title />
 <main>
     <section class="title-section">
         <h1>Pokemon 5th Edition</h1>
