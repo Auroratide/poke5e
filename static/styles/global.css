@@ -64,6 +64,13 @@
     --theme-light: hsl(355, 90%, 67%);
 }
 
+.theme-purple {
+    --theme-main: hsl(248, 100%, 83%);
+    --theme-dark: hsl(249, 100%, 79%);
+    --theme-text: hsl(249, 50%, 57%);
+    --theme-light: hsl(248, 100%, 83%);
+}
+
 body {
     font-family: var(--font-reg);
     font-size: var(--font-sz-base);
