@@ -1,5 +1,9 @@
+<script lang="ts" context="module">
+    export type ThemeColor = 'blue' | 'red'
+</script>
+
 <script lang="ts">
-    export let theme: 'blue' | 'red'
+    export let theme: ThemeColor
 </script>
 
 <!-- theme colors defined with css variables -->
