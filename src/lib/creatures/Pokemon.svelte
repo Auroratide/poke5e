@@ -1,21 +1,14 @@
 <script lang="ts">
     import type { Pokemon } from './types'
-    import type { PokeType } from '../pokemon/types'
     import Card from '../design/Card.svelte'
     import FlatDl from '../design/FlatDl.svelte'
     import AttributeBlock from '../dnd/AttributeBlock.svelte'
     import InlineMoveLinks from './InlineMoveLinks.svelte'
-    import { vulnerabilities, resistances, immunities } from '../pokemon/type-interactions'
     import TypeTag from '../pokemon/TypeTag.svelte'
+    import TypeEffectiveness from './TypeEffectiveness.svelte'
     import * as asString from './string'
 
     export let pokemon: Pokemon
-
-    $: vul = Array.from(vulnerabilities(pokemon.type))
-    $: res = Array.from(resistances(pokemon.type))
-    $: imm = Array.from(immunities(pokemon.type))
-
-    const showTypeList = (list: PokeType[]) => list.length === 0 ? 'none' : list.join(', ')
 </script>
 
 <Card title={pokemon.name}>
@@ -67,12 +60,7 @@
             <dd class="cap">{pokemon.skills.join(', ')}</dd>
             <dt>Saving Throws</dt>
             <dd class="upper">{pokemon.savingThrows.join(', ')}</dd>
-            <dt>Vulnerabilities</dt>
-            <dd class="cap">{showTypeList(vul)}</dd>
-            <dt>Resistances</dt>
-            <dd class="cap">{showTypeList(res)}</dd>
-            <dt>Immunities</dt>
-            <dd class="cap">{showTypeList(imm)}</dd>
+            <TypeEffectiveness type={pokemon.type} />
         </FlatDl>
     </section>
     <hr />
