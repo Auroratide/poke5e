@@ -10,6 +10,7 @@
     import GenderIcon from './GenderIcon.svelte'
     import { modifierForScore } from '../dnd/attributes'
     import VisuallyHidden from '../design/VisuallyHidden.svelte'
+    import TypeEffectiveness from '../creatures/TypeEffectiveness.svelte'
     import * as asString from '../creatures/string'
 
     export let pokemon: PlayerPokemon & WithPokemonData
@@ -83,6 +84,9 @@
                     <dd>{proficiency} +{proficiencyModifier(proficiency, pokemon.attributes, pb)}</dd>
                 {/each}
             </div>
+        </FlatDl>
+        <FlatDl>
+            <TypeEffectiveness type={data.type} />
         </FlatDl>
     </section>
 </Card>
