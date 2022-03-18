@@ -9,7 +9,8 @@
     import { proficiencyBonus, proficiencyModifier } from '../dnd/proficiency'
     import GenderIcon from './GenderIcon.svelte'
     import { modifierForScore } from '../dnd/attributes'
-    import VisuallyHidden from '$lib/design/VisuallyHidden.svelte'
+    import VisuallyHidden from '../design/VisuallyHidden.svelte'
+    import * as asString from '../creatures/string'
 
     export let pokemon: PlayerPokemon & WithPokemonData
     let hp = pokemon.hp.current
@@ -51,6 +52,20 @@
             <dd>+{pb}</dd>
             <dt>Size</dt>
             <dd class="cap">{data.size}</dd>
+            <dt>Speed</dt>
+            <div>
+                {#each data.speed as speed}
+                    <dd>{asString.speed(speed)}</dd>
+                {/each}
+            </div>
+            {#if data.senses.length > 0}
+                <dt>Senses</dt>
+                <div class="cap">
+                    {#each data.senses as sense}
+                        <dd>{asString.sense(sense)}</dd>
+                    {/each}
+                </div>
+            {/if}
         </FlatDl>
         <AttributeBlock attributes={pokemon.attributes} />
     </section>
