@@ -18,6 +18,7 @@ export type PlayerPokemon = {
     pokemonId: string,
     nickname?: string,
     level: number,
+    gender: Gender,
     attributes: {
         str: number,
         dex: number,

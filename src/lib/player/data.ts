@@ -1,8 +1,11 @@
+import { Gender } from './types'
+
 export const inMemoryPokemon = [ {
     id: '1',
     pokemonId: 'mimikyu',
     nickname: 'Pikachu',
     level: 6,
+    gender: Gender.Male,
     attributes: {
         str: 10,
         dex: 14,
