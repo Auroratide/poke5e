@@ -4,10 +4,16 @@
     import AttributeBlock from '../dnd/AttributeBlock.svelte'
     import TypeTag from '../pokemon/TypeTag.svelte'
     import FlatDl from '../design/FlatDl.svelte'
+    import NumericResourceInput from './NumericResourceInput.svelte'
+    import ResourceBar from './ResourceBar.svelte'
     import { proficiencyBonus, proficiencyModifier } from '../dnd/proficiency'
+    import GenderIcon from './GenderIcon.svelte'
     import { modifierForScore } from '../dnd/attributes'
+    import VisuallyHidden from '$lib/design/VisuallyHidden.svelte'
 
     export let pokemon: PlayerPokemon & WithPokemonData
+    let hp = pokemon.hp.current
+    let hitDice = pokemon.hitDice.current
     $: data = pokemon.pokemonData
 
     $: title = pokemon.nickname ?? pokemon.pokemonData.name
@@ -16,25 +22,39 @@
 
 <Card title={title}>
     <TypeTag slot="header-extra" type={data.type} />
-    <section class="info">
-        <FlatDl columns={2}>
-            <dt>Pokemon</dt>
-            <dd>{data.name}</dd>
-            <dt><abbr title="Species Rating">SR</abbr></dt>
-            <dd>{data.sr}</dd>
-            <dt>Level</dt>
-            <dd>{pokemon.level}</dd>
-            <dt>Size</dt>
-            <dd class="cap">{data.size}</dd>
-            <dt>Gender</dt>
-            <dd class="cap">{pokemon.gender}</dd>
-            <dt>Evolution</dt>
-            <dd>{data.evolution ? `${data.evolution.stage} / ${data.evolution.maxStage}` : '1 / 1'}</dd>
-        </FlatDl>
+    <section class="health">
+        <span class="name">{data.name} <span class="gender"><GenderIcon gender={pokemon.gender} /></span></span>
+        <span class="level"><span class="level-text">Lv.</span><span class="level-number">{pokemon.level}</span></span>
+        <span class="bar"><ResourceBar current={hp} max={pokemon.hp.max} /></span>
+        <span class="hp">
+            <VisuallyHidden><label for="current-hp">HP</label></VisuallyHidden>
+            <span class="current-hp"><NumericResourceInput id="current-hp" bind:value={hp} /></span>
+            <span class="max-hp">/ {pokemon.hp.max}</span>
+        </span>
+        <span class="hit-dice">
+            <span class="hit-dice-bar"><ResourceBar secondary current={hitDice} max={pokemon.hitDice.max} /></span>
+            <span class="hit-dice-text">
+                <VisuallyHidden><label for="current-hit-dice">Hit Dice</label></VisuallyHidden>
+                <span class="current-hit-dice"><NumericResourceInput id="current-hit-dice" bind:value={hitDice} /></span>
+                <span class="max-hit-dice">/ {pokemon.hitDice.max} ({data.hitDice})</span>
+            </span>
+        </span>
     </section>
     <hr />
     <section class="stats">
+        <FlatDl columns={2}>
+            <dt>Armor Class</dt>
+            <dd>{pokemon.ac}</dd>
+            <dt><abbr title="Species Rating">SR</abbr></dt>
+            <dd>{data.sr}</dd>
+            <dt>Proficiency</dt>
+            <dd>+{pb}</dd>
+            <dt>Size</dt>
+            <dd class="cap">{data.size}</dd>
+        </FlatDl>
         <AttributeBlock attributes={pokemon.attributes} />
+    </section>
+    <section class="skills">
         <FlatDl columns={2}>
             <dt>Saves</dt>
             <div class="upper">
@@ -66,5 +86,74 @@
 
     .upper {
         text-transform: uppercase,
+    }
+
+    .health {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "name level"
+            "bar bar"
+            "hp hit-dice";
+        align-items: center;
+        gap: 0.125em;
+
+        .name {
+            grid-area: name;
+            display: flex;
+            align-items: center;
+
+            .gender {
+                margin-left: 0.25em;
+            }
+        }
+
+        .level {
+            grid-area: level;
+            justify-self: right;
+
+            .level-text {
+                font-size: var(--font-sz-venus);
+            }
+
+            .level-number {
+                font-size: var(--font-sz-neptune);
+            }
+        }
+
+        .bar {
+            grid-area: bar;
+            display: flex;
+        }
+
+        .hp {
+            grid-area: hp;
+            font-size: var(--font-sz-neptune);
+
+            .current-hp {
+                --input-min-width: 3ch;
+                display: inline-block;
+            }
+        }
+
+        .hit-dice {
+            grid-area: hit-dice;
+            display: flex;
+            flex-direction: column;
+            font-size: var(--font-sz-mars);
+
+            .hit-dice-bar {
+                margin-bottom: 0.125em;
+            }
+
+            .current-hit-dice {
+                --input-min-width: 3ch;
+                display: inline-block;
+            }
+
+            .hit-dice-text {
+                align-self: flex-end;
+            }
+        }
     }
 </style>
