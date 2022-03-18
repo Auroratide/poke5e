@@ -1,4 +1,13 @@
-export type Attribute = 'str' | 'dex' | 'con' | 'int' | 'wis' | 'cha'
+export type Attributes = {
+    str: number,
+    dex: number,
+    con: number,
+    int: number,
+    wis: number,
+    cha: number,
+}
+
+export type Attribute = keyof Attributes
 
 export type CreatureSize = 'tiny' | 'smalll' | 'medium' | 'large' | 'huge' | 'gargantuan'
 

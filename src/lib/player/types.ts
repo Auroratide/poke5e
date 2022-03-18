@@ -1,4 +1,4 @@
-import type { Skill } from '../dnd/types'
+import type { Skill, Attribute } from '../dnd/types'
 import type { Pokemon } from '../creatures/types'
 
 export type Resource = {
@@ -30,6 +30,8 @@ export type PlayerPokemon = {
     ac: number,
     hp: Resource,
     hitDice: Resource,
+    proficiencies: Skill[],
+    savingThrows: Attribute[],
 }
 
 export type WithPokemonData = {

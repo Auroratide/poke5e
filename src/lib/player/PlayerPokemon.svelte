@@ -4,11 +4,14 @@
     import AttributeBlock from '../dnd/AttributeBlock.svelte'
     import TypeTag from '../pokemon/TypeTag.svelte'
     import FlatDl from '../design/FlatDl.svelte'
+    import { proficiencyBonus, proficiencyModifier } from '../dnd/proficiency'
+    import { modifierForScore } from '../dnd/attributes'
 
     export let pokemon: PlayerPokemon & WithPokemonData
     $: data = pokemon.pokemonData
 
     $: title = pokemon.nickname ?? pokemon.pokemonData.name
+    $: pb = proficiencyBonus(pokemon.level)
 </script>
 
 <Card title={title}>
@@ -32,6 +35,20 @@
     <hr />
     <section class="stats">
         <AttributeBlock attributes={pokemon.attributes} />
+        <FlatDl columns={2}>
+            <dt>Saves</dt>
+            <div class="upper">
+                {#each pokemon.savingThrows as savingThrow}
+                    <dd>{savingThrow} +{modifierForScore(pokemon.attributes[savingThrow]) + pb}</dd>
+                {/each}
+            </div>
+            <dt>Proficiencies</dt>
+            <div class="cap">
+                {#each pokemon.proficiencies as proficiency}
+                    <dd>{proficiency} +{proficiencyModifier(proficiency, pokemon.attributes, pb)}</dd>
+                {/each}
+            </div>
+        </FlatDl>
     </section>
 </Card>
 
@@ -45,5 +62,9 @@
 
     .cap {
         text-transform: capitalize,
+    }
+
+    .upper {
+        text-transform: uppercase,
     }
 </style>

@@ -23,4 +23,6 @@ export const inMemoryPokemon = [ {
         current: 6,
         max: 6,
     },
+    proficiencies: ['arcana', 'intimidation', 'performance'],
+    savingThrows: ['wis', 'cha'],
 } ]
