@@ -1,6 +1,7 @@
+import type { PlayerPokemon } from './types'
 import { Gender } from './types'
 
-export const inMemoryPokemon = [ {
+export const inMemoryPokemon: PlayerPokemon[] = [ {
     id: '1',
     pokemonId: 'mimikyu',
     nickname: 'Pikachu',
