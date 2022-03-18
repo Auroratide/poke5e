@@ -3,7 +3,7 @@
     export let gender: Gender
 </script>
 
-<span class="gender {gender}" aria-label="{gender}"></span>
+<span class="gender {gender}" title="{gender}" aria-label="{gender}"></span>
 
 <style lang="scss">
     .gender {
