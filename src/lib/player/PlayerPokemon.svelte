@@ -12,6 +12,8 @@
     import VisuallyHidden from '../design/VisuallyHidden.svelte'
     import TypeEffectiveness from '../creatures/TypeEffectiveness.svelte'
     import * as asString from '../creatures/string'
+    import Modal from '../design/Modal.svelte'
+    import EditPokemon from './EditPokemon.svelte'
 
     export let pokemon: PlayerPokemon & WithPokemonData
     let hp = pokemon.hp.current
@@ -20,8 +22,16 @@
 
     $: title = pokemon.nickname ?? pokemon.pokemonData.name
     $: pb = proficiencyBonus(pokemon.level)
+
+    let modalVisible = false
+
+    const openModal = () => modalVisible = true
+    const closeModal = () => modalVisible = false
 </script>
 
+<Modal title="Edit Pokemon" isOpen={modalVisible} on:dismiss={closeModal}>
+    <EditPokemon />
+</Modal>
 <Card title={title}>
     <TypeTag slot="header-extra" type={data.type} />
     <section class="health">
@@ -89,6 +99,7 @@
             <TypeEffectiveness type={data.type} />
         </FlatDl>
     </section>
+    <button on:click={openModal}>Modal!</button>
 </Card>
 
 <style lang="scss">
