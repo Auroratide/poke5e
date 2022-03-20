@@ -30,7 +30,9 @@
 </script>
 
 <Modal title="Edit Pokemon" isOpen={modalVisible} on:dismiss={closeModal}>
-    <PokemonEditor />
+    <section>
+        <PokemonEditor {pokemon} />
+    </section>
 </Modal>
 <Card title={title}>
     <TypeTag slot="header-extra" type={data.type} />
