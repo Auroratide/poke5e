@@ -13,7 +13,7 @@
     import TypeEffectiveness from '../creatures/TypeEffectiveness.svelte'
     import * as asString from '../creatures/string'
     import Modal from '../design/Modal.svelte'
-    import EditPokemon from './EditPokemon.svelte'
+    import PokemonEditor from './PokemonEditor'
 
     export let pokemon: PlayerPokemon & WithPokemonData
     let hp = pokemon.hp.current
@@ -30,7 +30,7 @@
 </script>
 
 <Modal title="Edit Pokemon" isOpen={modalVisible} on:dismiss={closeModal}>
-    <EditPokemon />
+    <PokemonEditor />
 </Modal>
 <Card title={title}>
     <TypeTag slot="header-extra" type={data.type} />

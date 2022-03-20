@@ -1,6 +1,6 @@
 <script lang="ts">
-    import { attributeList } from '../dnd/attributes'
-    import { skillList } from '../dnd/proficiency'
+    import { attributeList } from '../../dnd/attributes'
+    import { skillList } from '../../dnd/proficiency'
 
     const noSpaces = (s: string) => s.replace(/\s/g, '')
 </script>
