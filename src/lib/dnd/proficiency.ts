@@ -1,32 +1,69 @@
-import type { Attributes, Skill } from './types'
+import type { Attribute, Attributes, Skill } from './types'
 import { modifierForScore } from './attributes'
+
+export const skillList: {
+    name: Skill,
+    attribute: Attribute,
+}[] = [ {
+    name: 'athletics',
+    attribute: 'str',
+}, {
+    name: 'acrobatics',
+    attribute: 'dex',
+}, {
+    name: 'sleight of hand',
+    attribute: 'dex',
+}, {
+    name: 'stealth',
+    attribute: 'dex',
+}, {
+    name: 'arcana',
+    attribute: 'int',
+}, {
+    name: 'history',
+    attribute: 'int',
+}, {
+    name: 'investigation',
+    attribute: 'int',
+}, {
+    name: 'nature',
+    attribute: 'int',
+}, {
+    name: 'religion',
+    attribute: 'int',
+}, {
+    name: 'animal handling',
+    attribute: 'wis',
+}, {
+    name: 'insight',
+    attribute: 'wis',
+}, {
+    name: 'medicine',
+    attribute: 'wis',
+}, {
+    name: 'perception',
+    attribute: 'wis',
+}, {
+    name: 'survival',
+    attribute: 'wis',
+}, {
+    name: 'deception',
+    attribute: 'cha',
+}, {
+    name: 'intimidation',
+    attribute: 'cha',
+}, {
+    name: 'performance',
+    attribute: 'cha',
+}, {
+    name: 'persuasion',
+    attribute: 'cha',
+} ]
 
 export const proficiencyBonus = (level: number) => 2 + Math.floor((level - 1) / 4)
 
 export const proficiencyModifier = (skill: Skill, attributes: Attributes, proficiencyBonus: number) => {
-    switch (skill) {
-        case 'athletics':
-            return modifierForScore(attributes.str) + proficiencyBonus
-        case 'acrobatics':
-        case 'sleight of hand':
-        case 'stealth':
-            return modifierForScore(attributes.dex) + proficiencyBonus
-        case 'arcana':
-        case 'history':
-        case 'investigation':
-        case 'nature':
-        case 'religion':
-            return modifierForScore(attributes.int) + proficiencyBonus
-        case 'animal handling':
-        case 'insight':
-        case 'medicine':
-        case 'perception':
-        case 'survival':
-            return modifierForScore(attributes.wis) + proficiencyBonus
-        case 'deception':
-        case 'intimidation':
-        case 'performance':
-        case 'persuasion':
-            return modifierForScore(attributes.cha) + proficiencyBonus
-    }
+    const relevantAttribute = skillList.find(it => it.name === skill).attribute
+
+    return modifierForScore(attributes[relevantAttribute]) + proficiencyBonus
 }
