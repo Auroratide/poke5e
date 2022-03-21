@@ -48,7 +48,7 @@
 
     .card {
         max-width: var(--container-half);
-        max-height: 100%;
+        height: 100%;
         margin: auto;
     }
 
