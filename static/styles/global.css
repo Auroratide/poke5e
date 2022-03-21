@@ -103,3 +103,12 @@ a {
 a:hover {
     text-decoration: none;
 }
+
+input {
+    border: none;
+    background-color: var(--skin-input-bg);
+}
+
+input:focus {
+    background-color: var(--skin-content);
+}

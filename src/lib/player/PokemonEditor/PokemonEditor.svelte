@@ -26,7 +26,7 @@
 
 <form on:submit|preventDefault={onSubmit}>
     <fieldset class="basic-info">
-        <legend>Basic Info</legend>
+        <legend><span class="unskew">Basic Info</span></legend>
         <div class="input-group">
             <label for="nickname-input">Nickname</label>
             <input name="nickname" id="nickname-input" type="text" bind:value={nickname} />
@@ -39,7 +39,7 @@
         </div>
     </fieldset>
     <fieldset class="gender">
-        <legend>Gender</legend>
+        <legend><span class="unskew">Gender</span></legend>
         <div class="input-group">
             <input value={Gender.Male} type="radio" id="gender-input-male" name="gender" bind:group={gender} />
             <label for="gender-input-male">Male</label>
@@ -52,7 +52,7 @@
         </div>
     </fieldset>
     <fieldset class="attributes">
-        <legend>Attributes</legend>
+        <legend><span class="unskew">Attributes</span></legend>
         <div class="input-group">
             {#each attributeList as attr}
                 <label for="{attr.abbr}-input">{attr.abbr}</label>
@@ -61,7 +61,7 @@
         </div>
     </fieldset>
     <fieldset class="proficiencies">
-        <legend>Proficiencies</legend>
+        <legend><span class="unskew">Proficiencies</span></legend>
         <div class="input-group">
             {#each skillList as skill}
                 {@const nameId = noSpaces(skill.name)}
@@ -71,7 +71,7 @@
         </div>
     </fieldset>
     <fieldset class="saving-throws">
-        <legend>Saving Throws</legend>
+        <legend><span class="unskew">Saving Throws</span></legend>
         <div class="input-group">
             {#each attributeList as attr}
                 <input value={attr.abbr} bind:group={savingThrows} type="checkbox" id="saves-input-{attr.abbr}" name="saves" />
@@ -82,30 +82,48 @@
 </form>
 
 <style lang="scss">
+    fieldset {
+        border: none;
+        padding: 0.5em 1em;
+        margin-bottom: 1em;
+    }
+
+    legend {
+        display: block;
+        background-color: var(--skin-bg);
+        color: var(--skin-bg-text);
+        margin-left: -4em;
+        padding: 0.25em 1em 0.25em 4em;
+        transform: skewX(var(--skew-angle));
+
+        .unskew {
+            display: inline-block;
+            transform: skewX(var(--skew-undo));
+        }
+    }
+
+    .input-group {
+        display: grid;
+        column-gap: 0.5em;
+        row-gap: 0.25em;
+        align-items: center;
+    }
+
     .basic-info {
         .input-group {
-            display: grid;
             grid-template-columns: auto 1fr;
-            align-items: center;
-            gap: 0.25em;
         }
     }
 
     .gender {
         .input-group {
-            display: grid;
             grid-template-columns: repeat(4, auto 1fr);
-            align-items: center;
-            gap: 0.25em;
         }
     }
 
     .attributes {
         .input-group {
-            display: grid;
             grid-template-columns: repeat(3, auto 1fr);
-            gap: 0.25em;
-            align-items: center;
         }
 
         label {
@@ -119,10 +137,7 @@
 
     .proficiencies, .saving-throws {
         .input-group {
-            display: grid;
             grid-template-columns: repeat(2, auto 1fr);
-            gap: 0.25em;
-            align-items: center;
         }
 
         label {

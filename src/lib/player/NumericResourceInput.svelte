@@ -29,11 +29,5 @@
 <style>
     input {
         min-width: var(--input-min-width, 100%);
-        border: none;
-        background-color: var(--skin-input-bg);
-    }
-
-    input:focus {
-        background-color: var(--skin-content);
     }
 </style>
