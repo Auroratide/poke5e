@@ -1,0 +1,1 @@
+const s=t=>{if(t==="0:0")return"genderless";{const[e,r]=t.split(":");return`${e} F : ${r} M`}},n=t=>t<=.125?"1/8":t<=.25?"1/4":t<=.5?"1/2":Math.round(t).toString(),o=({type:t,value:e})=>`${e}ft. ${t}`,p=({type:t,value:e})=>`${t} ${e}ft.`,i=t=>t.join("/"),c=t=>`#${t.toString().padStart(3,"0")}`;export{o as a,p as b,s as g,c as p,n as s,i as t};

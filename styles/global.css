@@ -1,5 +1,6 @@
 :root {
     --container-width: 75rem;
+    --container-half: 37.5rem;
 
     --font-reg: 'Rubik', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
     --font-sz-base: clamp(1rem, 1.5vw, 1.125rem);
@@ -22,8 +23,12 @@
     --skin-bg-dark: hsl(251, 13%, 17%);
     --skin-bg-softtext: hsla(0, 0%, 100%, 0.667);
 
+    --skin-shade: hsla(0, 0%, 0%, 0.667);
+
     --skin-content: hsl(0, 0%, 100%);
     --skin-content-text: hsl(0, 0%, 20%);
+
+    --skin-input-bg: hsl(0, 0%, 90%);
 
     --skin-footer: hsl(0, 0%, 0%);
     --skin-footer-text: hsl(0, 0%, 100%);
@@ -48,6 +53,15 @@
     --skin-fairy-bg: hsl(347, 50%, 63%);
     --skin-typeless-bg: hsl(0, 0%, 40%);
     --skin-varies-bg: hsl(0, 0%, 40%);
+
+    --skin-male-bg: hsl(227, 86%, 48%);
+    --skin-female-bg: hsl(354, 99%, 41%);
+    --skin-agender-bg: hsl(0, 0%, 33%);
+    --skin-gender-text: hsl(0, 0%, 100%);
+
+    --skin-bar-bg: hsl(330, 1%, 38%);
+    --skin-bar-fill: hsl(119, 100%, 52%);
+    --skin-bar-secondary: hsl(197, 91%, 64%);
 }
 
 .theme-blue {
@@ -62,6 +76,13 @@
     --theme-dark: hsl(355, 66%, 45%);
     --theme-text: hsl(355, 66%, 45%);
     --theme-light: hsl(355, 90%, 67%);
+}
+
+.theme-purple {
+    --theme-main: hsl(248, 100%, 83%);
+    --theme-dark: hsl(249, 100%, 79%);
+    --theme-text: hsl(249, 50%, 57%);
+    --theme-light: hsl(248, 100%, 83%);
 }
 
 body {
@@ -81,4 +102,13 @@ a {
 
 a:hover {
     text-decoration: none;
+}
+
+input {
+    border: none;
+    background-color: var(--skin-input-bg);
+}
+
+input:focus {
+    background-color: var(--skin-content);
 }
