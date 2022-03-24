@@ -2,8 +2,8 @@
     import Page from '$lib/design/Page.svelte'
     import Pokeball from '$lib/design/icon/Pokeball.svelte'
     import Title from '$lib/design/Title.svelte'
-    import PlayerPokemon from '$lib/player/PlayerPokemon.svelte'
-    import { inMemoryPokemon } from '$lib/player/data'
+    import PlayerPokemon from '$lib/trainers/PlayerPokemon.svelte'
+    import { inMemoryPokemon } from '$lib/trainers/data'
     import { pokemon } from '$lib/creatures/store'
     import Loader from '$lib/design/Loader.svelte'
 </script>
