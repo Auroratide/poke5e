@@ -1,0 +1,35 @@
+<script lang="ts">
+    import { onMount } from 'svelte'
+    import Page from '$lib/design/Page.svelte'
+    import Pokeball from '$lib/design/icon/Pokeball.svelte'
+    import PlayerPokemon from '$lib/trainers/PlayerPokemon.svelte'
+    import { inMemoryPokemon } from '$lib/trainers/data'
+    import { pokemon } from '$lib/creatures/store'
+    import Loader from '$lib/design/Loader.svelte'
+
+    export let trainerId: string
+
+    onMount(() => {
+        
+    })
+</script>
+
+<Page theme="purple">
+    <Pokeball slot="icon" />
+    <nav slot="side" class="table" aria-label="Pokemon List">
+        <p>Something</p>
+    </nav>
+    {#if $pokemon === undefined}
+        <Loader />
+    {:else}
+        <PlayerPokemon pokemon={Object.assign({}, inMemoryPokemon[0], {
+            pokemonData: $pokemon.find(it => it.id === inMemoryPokemon[0].pokemonId)
+        })} />
+    {/if}
+</Page>
+
+<style lang="scss">
+    nav {
+        height: 100%;
+    }
+</style>

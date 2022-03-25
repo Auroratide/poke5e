@@ -15,6 +15,7 @@ export enum Gender {
 
 export type PlayerPokemon = {
     id: string,
+    trainerId: string,
     pokemonId: string,
     nickname?: string,
     level: number,
@@ -36,4 +37,10 @@ export type PlayerPokemon = {
 
 export type WithPokemonData = {
     pokemonData: Pokemon,
+}
+
+export type Trainer = {
+    id: string,
+    name: string,
+    pokemon: PlayerPokemon[],
 }
