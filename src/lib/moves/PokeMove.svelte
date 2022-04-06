@@ -35,6 +35,7 @@
             {@html renderHtml(move.optional)}
         {/if}
     </section>
+    <slot name="extra"></slot>
 </Card>
 
 <style lang="scss">

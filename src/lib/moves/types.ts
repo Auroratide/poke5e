@@ -17,3 +17,14 @@ export type Move = {
     higherLevels?: string,
     optional?: BodyText,
 }
+
+export type Tm = {
+    id: number,
+    move: string,
+    cost: number,
+    moveInfo?: Partial<Move>,
+    pokemon?: {
+        id: string,
+        name: string,
+    }[],
+}
