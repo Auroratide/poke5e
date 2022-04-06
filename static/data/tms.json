@@ -1,0 +1,504 @@
+{
+  "tms": [
+    {
+      "id": 1,
+      "move": "work-up",
+      "cost": 8000
+    },
+    {
+      "id": 2,
+      "move": "dragon-claw",
+      "cost": 6000
+    },
+    {
+      "id": 3,
+      "move": "psyshock",
+      "cost": 6000
+    },
+    {
+      "id": 4,
+      "move": "calm-mind",
+      "cost": 5500
+    },
+    {
+      "id": 5,
+      "move": "roar",
+      "cost": 4000
+    },
+    {
+      "id": 6,
+      "move": "toxic",
+      "cost": 8000
+    },
+    {
+      "id": 7,
+      "move": "hail",
+      "cost": 8000
+    },
+    {
+      "id": 8,
+      "move": "bulk-up",
+      "cost": 6000
+    },
+    {
+      "id": 9,
+      "move": "venoshock",
+      "cost": 5200
+    },
+    {
+      "id": 10,
+      "move": "hidden-power",
+      "cost": 5200
+    },
+    {
+      "id": 11,
+      "move": "sunny-day",
+      "cost": 4400
+    },
+    {
+      "id": 12,
+      "move": "taunt",
+      "cost": 4400
+    },
+    {
+      "id": 13,
+      "move": "ice-beam",
+      "cost": 7200
+    },
+    {
+      "id": 14,
+      "move": "blizzard",
+      "cost": 8400
+    },
+    {
+      "id": 15,
+      "move": "hyper-beam",
+      "cost": 10800
+    },
+    {
+      "id": 16,
+      "move": "light-screen",
+      "cost": 4400
+    },
+    {
+      "id": 17,
+      "move": "protect",
+      "cost": 8000
+    },
+    {
+      "id": 18,
+      "move": "rain-dance",
+      "cost": 4400
+    },
+    {
+      "id": 19,
+      "move": "roost",
+      "cost": 5600
+    },
+    {
+      "id": 20,
+      "move": "safeguard",
+      "cost": 6000
+    },
+    {
+      "id": 21,
+      "move": "frustration",
+      "cost": 3600
+    },
+    {
+      "id": 22,
+      "move": "solar-beam",
+      "cost": 8800
+    },
+    {
+      "id": 23,
+      "move": "smack-down",
+      "cost": 4400
+    },
+    {
+      "id": 24,
+      "move": "thunderbolt",
+      "cost": 7200
+    },
+    {
+      "id": 25,
+      "move": "thunder",
+      "cost": 8400
+    },
+    {
+      "id": 26,
+      "move": "earthquake",
+      "cost": 8000
+    },
+    {
+      "id": 27,
+      "move": "return",
+      "cost": 5200
+    },
+    {
+      "id": 28,
+      "move": "leech-life",
+      "cost": 6000
+    },
+    {
+      "id": 29,
+      "move": "psychic",
+      "cost": 7200
+    },
+    {
+      "id": 30,
+      "move": "shadow-ball",
+      "cost": 6000
+    },
+    {
+      "id": 31,
+      "move": "brick-break",
+      "cost": 5600
+    },
+    {
+      "id": 32,
+      "move": "double-team",
+      "cost": 7000
+    },
+    {
+      "id": 33,
+      "move": "reflect",
+      "cost": 8000
+    },
+    {
+      "id": 34,
+      "move": "sludge-wave",
+      "cost": 7200
+    },
+    {
+      "id": 35,
+      "move": "flamethrower",
+      "cost": 7200
+    },
+    {
+      "id": 36,
+      "move": "sludge-bomb",
+      "cost": 7200
+    },
+    {
+      "id": 37,
+      "move": "sandstorm",
+      "cost": 8400
+    },
+    {
+      "id": 38,
+      "move": "fire-blast",
+      "cost": 8400
+    },
+    {
+      "id": 39,
+      "move": "rock-tomb",
+      "cost": 5200
+    },
+    {
+      "id": 40,
+      "move": "aerial-ace",
+      "cost": 5200
+    },
+    {
+      "id": 41,
+      "move": "torment",
+      "cost": 6000
+    },
+    {
+      "id": 42,
+      "move": "facade",
+      "cost": 5600
+    },
+    {
+      "id": 43,
+      "move": "flame-charge",
+      "cost": 4400
+    },
+    {
+      "id": 44,
+      "move": "rest",
+      "cost": 6000
+    },
+    {
+      "id": 45,
+      "move": "attract",
+      "cost": 4000
+    },
+    {
+      "id": 46,
+      "move": "thief",
+      "cost": 5200
+    },
+    {
+      "id": 47,
+      "move": "low-sweep",
+      "cost": 5200
+    },
+    {
+      "id": 48,
+      "move": "round",
+      "cost": 5200
+    },
+    {
+      "id": 49,
+      "move": "echoed-voice",
+      "cost": 4000
+    },
+    {
+      "id": 50,
+      "move": "overheat",
+      "cost": 10000
+    },
+    {
+      "id": 51,
+      "move": "steel-wing",
+      "cost": 5600
+    },
+    {
+      "id": 52,
+      "move": "focus-blast",
+      "cost": 8800
+    },
+    {
+      "id": 53,
+      "move": "energy-ball",
+      "cost": 7200
+    },
+    {
+      "id": 54,
+      "move": "false-swipe",
+      "cost": 4000
+    },
+    {
+      "id": 55,
+      "move": "scald",
+      "cost": 6000
+    },
+    {
+      "id": 56,
+      "move": "fling",
+      "cost": 4500
+    },
+    {
+      "id": 57,
+      "move": "charge-beam",
+      "cost": 4400
+    },
+    {
+      "id": 58,
+      "move": "sky-drop",
+      "cost": 5200
+    },
+    {
+      "id": 59,
+      "move": "brutal-swing",
+      "cost": 5200
+    },
+    {
+      "id": 60,
+      "move": "quash",
+      "cost": 5600
+    },
+    {
+      "id": 61,
+      "move": "will-o-wisp",
+      "cost": 6000
+    },
+    {
+      "id": 62,
+      "move": "acrobatics",
+      "cost": 4400
+    },
+    {
+      "id": 63,
+      "move": "embargo",
+      "cost": 5000
+    },
+    {
+      "id": 64,
+      "move": "explosion",
+      "cost": 14000
+    },
+    {
+      "id": 65,
+      "move": "shadow-claw",
+      "cost": 5600
+    },
+    {
+      "id": 66,
+      "move": "payback",
+      "cost": 4400
+    },
+    {
+      "id": 67,
+      "move": "smart-strike",
+      "cost": 5600
+    },
+    {
+      "id": 68,
+      "move": "giga-impact",
+      "cost": 10800
+    },
+    {
+      "id": 69,
+      "move": "rock-polish",
+      "cost": 8000
+    },
+    {
+      "id": 70,
+      "move": "aurora-veil",
+      "cost": 2500
+    },
+    {
+      "id": 71,
+      "move": "stone-edge",
+      "cost": 8000
+    },
+    {
+      "id": 72,
+      "move": "volt-switch",
+      "cost": 5600
+    },
+    {
+      "id": 73,
+      "move": "thunder-wave",
+      "cost": 5000
+    },
+    {
+      "id": 74,
+      "move": "gyro-ball",
+      "cost": 5500
+    },
+    {
+      "id": 75,
+      "move": "swords-dance",
+      "cost": 8000
+    },
+    {
+      "id": 76,
+      "move": "fly",
+      "cost": 7200
+    },
+    {
+      "id": 77,
+      "move": "psych-up",
+      "cost": 4500
+    },
+    {
+      "id": 78,
+      "move": "bulldoze",
+      "cost": 5200
+    },
+    {
+      "id": 79,
+      "move": "frost-breath",
+      "cost": 5200
+    },
+    {
+      "id": 80,
+      "move": "rock-slide",
+      "cost": 5600
+    },
+    {
+      "id": 81,
+      "move": "x-scissor",
+      "cost": 6000
+    },
+    {
+      "id": 82,
+      "move": "dragon-tail",
+      "cost": 5200
+    },
+    {
+      "id": 83,
+      "move": "infestation",
+      "cost": 2800
+    },
+    {
+      "id": 84,
+      "move": "poison-jab",
+      "cost": 6000
+    },
+    {
+      "id": 85,
+      "move": "dream-eater",
+      "cost": 8000
+    },
+    {
+      "id": 86,
+      "move": "grass-knot",
+      "cost": 6500
+    },
+    {
+      "id": 87,
+      "move": "swagger",
+      "cost": 5000
+    },
+    {
+      "id": 88,
+      "move": "sleep-talk",
+      "cost": 4500
+    },
+    {
+      "id": 89,
+      "move": "u-turn",
+      "cost": 5600
+    },
+    {
+      "id": 90,
+      "move": "substitute",
+      "cost": 7500
+    },
+    {
+      "id": 91,
+      "move": "flash-cannon",
+      "cost": 6000
+    },
+    {
+      "id": 92,
+      "move": "trick-room",
+      "cost": 5000
+    },
+    {
+      "id": 93,
+      "move": "wild-charge",
+      "cost": 7200
+    },
+    {
+      "id": 94,
+      "move": "surf",
+      "cost": 7200
+    },
+    {
+      "id": 95,
+      "move": "snarl",
+      "cost": 4400
+    },
+    {
+      "id": 96,
+      "move": "nature-power",
+      "cost": 5000
+    },
+    {
+      "id": 97,
+      "move": "dark-pulse",
+      "cost": 6000
+    },
+    {
+      "id": 98,
+      "move": "waterfall",
+      "cost": 6000
+    },
+    {
+      "id": 99,
+      "move": "dazzling-gleam",
+      "cost": 6000
+    },
+    {
+      "id": 100,
+      "move": "confide",
+      "cost": 4400
+    }
+  ]
+}
