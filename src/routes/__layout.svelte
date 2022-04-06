@@ -23,7 +23,12 @@
     import Container from '$lib/design/Container.svelte'
     import { base } from '$app/paths'
     import { filterValue as pokemonFilter, currentSorter as pokemonSorter } from '$lib/creatures/store'
-    import { filterValue as movesFilter, currentSorter as movesSorter } from '$lib/moves/store'
+    import {
+        filterValue as movesFilter,
+        currentSorter as movesSorter,
+        filterTmValue as tmsFilter,
+        currentTmSorter as tmsSorter,
+    } from '$lib/moves/store'
 
     export let activeSection: string = ''
 
@@ -43,6 +48,9 @@
                     </li>
                     <li class:active={activeSection === 'moves'} class="theme-blue">
                         <a href="{base}/moves" on:click={resetStores(movesFilter, movesSorter)}>Moves</a>
+                    </li>
+                    <li class:active={activeSection === 'tms'} class="theme-purple">
+                        <a href="{base}/tms" on:click={resetStores(tmsFilter, tmsSorter)}>TMs</a>
                     </li>
                 </ul>
             </nav>

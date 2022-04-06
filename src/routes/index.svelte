@@ -1,6 +1,7 @@
 <script lang="ts">
     import Pokeball from '$lib/design/icon/Pokeball.svelte'
     import Hit from '$lib/design/icon/Hit.svelte'
+    import Disc from '$lib/design/icon/Disc.svelte'
     import { base } from '$app/paths'
     import Title from '$lib/design/Title.svelte'
 </script>
@@ -19,6 +20,10 @@
         <li class="theme-blue">
             <a href="{base}/moves">Moves</a>
             <span class="icon"><Hit /></span>
+        </li>
+        <li class="theme-purple">
+            <a href="{base}/tms">TMs</a>
+            <span class="icon"><Disc /></span>
         </li>
     </ul>
     <section class="footer-section">
