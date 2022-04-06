@@ -4,13 +4,13 @@
 <script lang="ts">
     import Page from '$lib/design/Page.svelte'
     import TmList from '$lib/moves/TmList.svelte'
-    import Pokeball from '$lib/design/icon/Pokeball.svelte'
+    import Disc from '$lib/design/icon/Disc.svelte'
     import Loader from '$lib/design/Loader.svelte'
     import { tms } from '$lib/moves/store'
 </script>
 
 <Page theme="purple">
-    <Pokeball slot="icon" />
+    <Disc slot="icon" />
     <nav slot="side" aria-label="TM List">
         <slot name="list">
             {#if $tms !== undefined}
