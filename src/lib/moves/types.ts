@@ -18,11 +18,13 @@ export type Move = {
     optional?: BodyText,
 }
 
+export type MinimalMoveInfo = Pick<Move, 'id' | 'name' | 'type' | 'power' | 'pp'>
+
 export type Tm = {
     id: number,
     move: string,
     cost: number,
-    moveInfo?: Partial<Move>,
+    moveInfo: MinimalMoveInfo & Partial<Move>,
     pokemon?: {
         id: string,
         name: string,

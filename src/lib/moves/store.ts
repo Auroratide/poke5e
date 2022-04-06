@@ -20,3 +20,6 @@ export const tms = readable<Tm[]>(undefined, (set) => {
 
 export const filterValue = writable('')
 export const currentSorter = writable(() => 0)
+
+export const filterTmValue = writable('')
+export const currentTmSorter = writable(() => 0)

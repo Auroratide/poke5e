@@ -14,16 +14,15 @@
 </script>
 
 <script lang="ts">
-    import type { Move } from '$lib/moves/types'
+    import type { Tm } from '$lib/moves/types'
     import Layout from './_layout.svelte'
-    import MoveList from '$lib/moves/MoveList.svelte'
+    import TmList from '$lib/moves/TmList.svelte'
     import Title from '$lib/design/Title.svelte'
 
-    export let tms: { moveInfo: Move }[]
-    $: moves = tms.map(tm => tm.moveInfo)
+    export let tms: Tm[]
 </script>
 
 <Title value="TMs" />
 <Layout>
-    <MoveList slot="list" moves={moves} />
+    <TmList slot="list" tms={tms} />
 </Layout>
