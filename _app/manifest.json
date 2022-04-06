@@ -1,6 +1,6 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-144a94df.js",
+    "file": "start-7ce6e10e.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -14,19 +14,21 @@
       "src/routes/pokemon/index.svelte",
       "src/routes/pokemon/[id].svelte",
       "src/routes/moves/index.svelte",
-      "src/routes/moves/[id].svelte"
+      "src/routes/moves/[id].svelte",
+      "src/routes/tms/index.svelte",
+      "src/routes/tms/[id].svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-0a38fdf9.js",
+    "file": "pages/__layout.svelte-baa52660.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-10d0c3ca.js",
       "_paths-396f020f.js",
-      "_store-bd03e840.js",
-      "_store-59ac6284.js"
+      "_store-f2025faf.js",
+      "_store-b3dd6a82.js"
     ],
     "css": [
       "assets/pages/__layout.svelte-0a44f995.css"
@@ -47,37 +49,39 @@
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-6bad3a37.js",
+    "file": "pages/index.svelte-74b1266c.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-10d0c3ca.js",
       "_Pokeball-adef7673.js",
+      "_Hit-40b8e480.js",
+      "_Disc-cc72878f.js",
       "_paths-396f020f.js",
       "_Title-9a8b162d.js"
     ],
     "css": [
-      "assets/pages/index.svelte-8afde26c.css"
+      "assets/pages/index.svelte-7e41303c.css"
     ]
   },
   "src/routes/pokemon/index.svelte": {
-    "file": "pages/pokemon/index.svelte-37375a00.js",
+    "file": "pages/pokemon/index.svelte-e83bafac.js",
     "src": "src/routes/pokemon/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-10d0c3ca.js",
       "_paths-396f020f.js",
-      "__layout-c218d455.js",
+      "__layout-f6187f35.js",
       "_Title-9a8b162d.js",
-      "_Loader-3f6e27dc.js",
+      "_Loader-b599d24f.js",
       "_Pokeball-adef7673.js",
-      "_store-bd03e840.js"
+      "_store-f2025faf.js"
     ]
   },
   "src/routes/pokemon/[id].svelte": {
-    "file": "pages/pokemon/_id_.svelte-ec3fa52b.js",
+    "file": "pages/pokemon/_id_.svelte-04ef995d.js",
     "src": "src/routes/pokemon/[id].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
@@ -85,49 +89,93 @@
       "_vendor-10d0c3ca.js",
       "_paths-396f020f.js",
       "_TypeTag-0be13894.js",
-      "_store-59ac6284.js",
-      "__layout-c218d455.js",
+      "_store-b3dd6a82.js",
+      "__layout-f6187f35.js",
       "_Title-9a8b162d.js",
-      "_Loader-3f6e27dc.js",
+      "_Loader-b599d24f.js",
       "_Pokeball-adef7673.js",
-      "_store-bd03e840.js"
+      "_store-f2025faf.js"
     ],
     "css": [
       "assets/pages/pokemon/_id_.svelte-f4068316.css"
     ]
   },
   "src/routes/moves/index.svelte": {
-    "file": "pages/moves/index.svelte-b72ca5bf.js",
+    "file": "pages/moves/index.svelte-1e793dc0.js",
     "src": "src/routes/moves/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-10d0c3ca.js",
       "_paths-396f020f.js",
-      "__layout-656bcecf.js",
+      "__layout-03bf0887.js",
       "_Title-9a8b162d.js",
-      "_Loader-3f6e27dc.js",
+      "_Loader-b599d24f.js",
       "_Pokeball-adef7673.js",
-      "_store-59ac6284.js"
+      "_string-78f0a8b9.js",
+      "_filter-b6f3cb86.js",
+      "_store-b3dd6a82.js",
+      "_Hit-40b8e480.js"
     ]
   },
   "src/routes/moves/[id].svelte": {
-    "file": "pages/moves/_id_.svelte-699badb9.js",
+    "file": "pages/moves/_id_.svelte-266881dc.js",
     "src": "src/routes/moves/[id].svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
       "_vendor-10d0c3ca.js",
       "_paths-396f020f.js",
-      "__layout-656bcecf.js",
-      "_TypeTag-0be13894.js",
+      "__layout-03bf0887.js",
+      "_PokeMove-3e5d9dff.js",
       "_Title-9a8b162d.js",
-      "_Loader-3f6e27dc.js",
+      "_Loader-b599d24f.js",
       "_Pokeball-adef7673.js",
-      "_store-59ac6284.js"
+      "_string-78f0a8b9.js",
+      "_filter-b6f3cb86.js",
+      "_store-b3dd6a82.js",
+      "_Hit-40b8e480.js",
+      "_TypeTag-0be13894.js"
+    ]
+  },
+  "src/routes/tms/index.svelte": {
+    "file": "pages/tms/index.svelte-791c281c.js",
+    "src": "src/routes/tms/index.svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-10d0c3ca.js",
+      "_paths-396f020f.js",
+      "__layout-493b7cd7.js",
+      "_Title-9a8b162d.js",
+      "_Loader-b599d24f.js",
+      "_Pokeball-adef7673.js",
+      "_filter-b6f3cb86.js",
+      "_store-b3dd6a82.js",
+      "_Disc-cc72878f.js"
+    ]
+  },
+  "src/routes/tms/[id].svelte": {
+    "file": "pages/tms/_id_.svelte-42b97377.js",
+    "src": "src/routes/tms/[id].svelte",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "imports": [
+      "_vendor-10d0c3ca.js",
+      "_paths-396f020f.js",
+      "__layout-493b7cd7.js",
+      "_PokeMove-3e5d9dff.js",
+      "_Title-9a8b162d.js",
+      "_Loader-b599d24f.js",
+      "_Pokeball-adef7673.js",
+      "_filter-b6f3cb86.js",
+      "_store-b3dd6a82.js",
+      "_Disc-cc72878f.js",
+      "_TypeTag-0be13894.js",
+      "_string-78f0a8b9.js"
     ],
     "css": [
-      "assets/pages/moves/_id_.svelte-a87423bf.css"
+      "assets/pages/tms/_id_.svelte-d9b4bee3.css"
     ]
   },
   "_vendor-10d0c3ca.js": {
@@ -136,15 +184,15 @@
   "_paths-396f020f.js": {
     "file": "chunks/paths-396f020f.js"
   },
-  "_store-bd03e840.js": {
-    "file": "chunks/store-bd03e840.js",
+  "_store-f2025faf.js": {
+    "file": "chunks/store-f2025faf.js",
     "imports": [
       "_vendor-10d0c3ca.js",
       "_paths-396f020f.js"
     ]
   },
-  "_store-59ac6284.js": {
-    "file": "chunks/store-59ac6284.js",
+  "_store-b3dd6a82.js": {
+    "file": "chunks/store-b3dd6a82.js",
     "imports": [
       "_vendor-10d0c3ca.js",
       "_paths-396f020f.js"
@@ -165,27 +213,45 @@
       "assets/Pokeball-cdf68179.css"
     ]
   },
-  "__layout-c218d455.js": {
-    "file": "chunks/_layout-c218d455.js",
+  "_Hit-40b8e480.js": {
+    "file": "chunks/Hit-40b8e480.js",
     "imports": [
-      "_vendor-10d0c3ca.js",
-      "_Loader-3f6e27dc.js",
-      "_paths-396f020f.js",
-      "_store-bd03e840.js",
-      "_Pokeball-adef7673.js"
+      "_vendor-10d0c3ca.js"
     ],
     "css": [
-      "assets/_layout-1e40742f.css"
+      "assets/Hit-aac29686.css"
     ]
   },
-  "_Loader-3f6e27dc.js": {
-    "file": "chunks/Loader-3f6e27dc.js",
+  "_Disc-cc72878f.js": {
+    "file": "chunks/Disc-cc72878f.js",
+    "imports": [
+      "_vendor-10d0c3ca.js"
+    ],
+    "css": [
+      "assets/Disc-5f8121db.css"
+    ]
+  },
+  "__layout-f6187f35.js": {
+    "file": "chunks/_layout-f6187f35.js",
+    "imports": [
+      "_vendor-10d0c3ca.js",
+      "_Loader-b599d24f.js",
+      "_paths-396f020f.js",
+      "_store-f2025faf.js",
+      "_Pokeball-adef7673.js"
+    ],
+    "css": [
+      "assets/_layout-6b0d86bd.css"
+    ]
+  },
+  "_Loader-b599d24f.js": {
+    "file": "chunks/Loader-b599d24f.js",
     "imports": [
       "_vendor-10d0c3ca.js",
       "_Pokeball-adef7673.js"
     ],
     "css": [
-      "assets/Loader-7331cfd8.css"
+      "assets/Loader-762b3015.css"
     ]
   },
   "_TypeTag-0be13894.js": {
@@ -197,17 +263,50 @@
       "assets/TypeTag-d619e9f6.css"
     ]
   },
-  "__layout-656bcecf.js": {
-    "file": "chunks/_layout-656bcecf.js",
+  "__layout-03bf0887.js": {
+    "file": "chunks/_layout-03bf0887.js",
     "imports": [
       "_vendor-10d0c3ca.js",
-      "_Loader-3f6e27dc.js",
+      "_Loader-b599d24f.js",
       "_paths-396f020f.js",
-      "_store-59ac6284.js",
-      "_Pokeball-adef7673.js"
+      "_string-78f0a8b9.js",
+      "_filter-b6f3cb86.js",
+      "_store-b3dd6a82.js",
+      "_Hit-40b8e480.js"
     ],
     "css": [
-      "assets/_layout-1e40742f.css"
+      "assets/_layout-6b0d86bd.css"
+    ]
+  },
+  "_string-78f0a8b9.js": {
+    "file": "chunks/string-78f0a8b9.js"
+  },
+  "_filter-b6f3cb86.js": {
+    "file": "chunks/filter-b6f3cb86.js"
+  },
+  "_PokeMove-3e5d9dff.js": {
+    "file": "chunks/PokeMove-3e5d9dff.js",
+    "imports": [
+      "_vendor-10d0c3ca.js",
+      "_TypeTag-0be13894.js",
+      "_string-78f0a8b9.js"
+    ],
+    "css": [
+      "assets/PokeMove-092097c9.css"
+    ]
+  },
+  "__layout-493b7cd7.js": {
+    "file": "chunks/_layout-493b7cd7.js",
+    "imports": [
+      "_vendor-10d0c3ca.js",
+      "_Loader-b599d24f.js",
+      "_paths-396f020f.js",
+      "_filter-b6f3cb86.js",
+      "_store-b3dd6a82.js",
+      "_Disc-cc72878f.js"
+    ],
+    "css": [
+      "assets/_layout-6b0d86bd.css"
     ]
   }
 }
