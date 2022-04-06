@@ -4,13 +4,13 @@
 <script lang="ts">
     import Page from '$lib/design/Page.svelte'
     import MoveList from '$lib/moves/MoveList.svelte'
-    import Pokeball from '$lib/design/icon/Pokeball.svelte'
+    import Hit from '$lib/design/icon/Hit.svelte'
     import Loader from '$lib/design/Loader.svelte'
     import { moves } from '$lib/moves/store'
 </script>
 
 <Page theme="blue">
-    <Pokeball slot="icon" />
+    <Hit slot="icon" />
     <nav slot="side" class="table" aria-label="Pokemon List">
         <slot name="list">
             {#if $moves !== undefined}
