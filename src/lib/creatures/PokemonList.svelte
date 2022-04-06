@@ -6,6 +6,7 @@
     import * as asString from './string'
     import { matchNameOrType } from './filter'
     import { filterValue, currentSorter } from './store'
+    import BubbleRow from '../design/BubbleRow'
 
     export let pokemons: Pokemon[]
 
@@ -26,64 +27,15 @@
 }, {
     key: 'sr', name: 'SR', ratio: 1, sort: byNumericField(it => it.sr),
 } ]}>
-    <tr role="row" class="row" style:--skin-local-bg="var(--skin-{item.type[0]}-bg)">
-        <td role="cell" class="name"><a href="{base}/pokemon/{item.id}">{item.name}</a></td>
-        <td role="cell">{asString.type(item.type)}</td>
-        <td role="cell">{asString.sr(item.sr)}</td>
-    </tr>
+    <BubbleRow.Row interactive mainBg="var(--skin-{item.type[0]}-bg)">
+        <BubbleRow.Cell primary><a href="{base}/pokemon/{item.id}">{item.name}</a></BubbleRow.Cell>
+        <BubbleRow.Cell>{asString.type(item.type)}</BubbleRow.Cell>
+        <BubbleRow.Cell>{asString.sr(item.sr)}</BubbleRow.Cell>
+    </BubbleRow.Row>
 </SortableTable>
 
 <style lang="scss">
     .search-field {
         margin-bottom: 0.5em;
-    }
-
-    .row {
-        position: relative;
-        border-radius: 1em;
-        box-shadow: var(--elev-cumulus);
-
-        td {
-            background-color: var(--skin-content);
-            color: var(--skin-content-text);
-        }
-
-        td.name {
-            background-color: var(--skin-bg);
-            color: var(--skin-bg-text);
-
-            a {
-                color: var(--skin-bg-text);
-                text-decoration: none;
-            }
-        }
-
-        td:first-child {
-            border-radius: 1em 0 0 1em;
-        }
-
-        td:last-child {
-            border-radius: 0 1em 1em 0;
-        }
-
-        a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-        }
-
-        &:hover {
-            td {
-                background-color: var(--skin-bg);
-                color: var(--skin-bg-text);
-            }
-
-            td.name {
-                background-color: var(--skin-local-bg);
-            }
-        }
     }
 </style>
