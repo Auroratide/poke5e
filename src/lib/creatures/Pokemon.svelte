@@ -4,6 +4,7 @@
     import FlatDl from '../design/FlatDl.svelte'
     import AttributeBlock from '../dnd/AttributeBlock.svelte'
     import InlineMoveLinks from './InlineMoveLinks.svelte'
+    import InlineTmLinks from './InlineTmLinks.svelte'
     import TypeTag from '../pokemon/TypeTag.svelte'
     import TypeEffectiveness from './TypeEffectiveness.svelte'
     import * as asString from './string'
@@ -116,7 +117,7 @@
             {/if}
             {#if pokemon.moves.tm !== undefined}
                 <dt>TM</dt>
-                <dd>{pokemon.moves.tm.join(', ')}</dd>
+                <dd><InlineTmLinks tms={pokemon.moves.tm} /></dd>
             {/if}
         </FlatDl>
     </section>
