@@ -109200,7 +109200,7 @@
         "maxStage": "3",
         "description": "Grookey can evolve into Thwackey at level 6 and above. When it evolves, its health increases by double its level, and it gains 6 points to add to its ability scores (max 20)."
       },
-      "description": "Grookey, the Chimp Pokémon. Grookey attacks by beating with a stick. As the speed of its beats increases, Grookey's excitement does too.",
+      "description": "The Chimp Pokémon. Grookey attacks by beating with a stick. As the speed of its beats increases, Grookey's excitement does too.",
       "ac": 13,
       "hp": 17,
       "hitDice": "d6",
@@ -109282,6 +109282,225 @@
           54,
           56,
           62,
+          86,
+          89,
+          90
+        ]
+      }
+    },
+    {
+      "id": "thwackey",
+      "name": "Thwackey",
+      "number": 811,
+      "type": [
+        "grass"
+      ],
+      "size": "small",
+      "sr": 5,
+      "minLevel": 5,
+      "eggGroup": [
+        "field",
+        "grass"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "3",
+        "description": "Thwackey can evolve into Rillaboom at level 14 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20)."
+      },
+      "description": "The Chimp Pokémon. The faster a Thwackey can beat out a rhythm with its two sticks, the more respect it wins from its peers.",
+      "ac": 15,
+      "hp": 48,
+      "hitDice": "d8",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        },
+        {
+          "type": "climbing",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "15",
+        "dex": "15",
+        "con": "13",
+        "int": "6",
+        "wis": "10",
+        "cha": "11"
+      },
+      "skills": [
+        "acrobatics",
+        "nature"
+      ],
+      "savingThrows": [
+        "dex"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Overgrow",
+          "description": "This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health.",
+          "hidden": false
+        },
+        {
+          "name": "Grassy Surge",
+          "description": "If the move is known, this Pokémon may use the Grassy Terrain move as a bonus action.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "scratch",
+          "growl",
+          "branch-poke",
+          "taunt"
+        ],
+        "level6": [
+          "double-hit",
+          "razor-leaf",
+          "screech",
+          "knock-off"
+        ],
+        "level10": [
+          "slam",
+          "uproar"
+        ],
+        "level14": [
+          "wood-hammer"
+        ],
+        "level18": [
+          "endeavor"
+        ],
+        "tm": [
+          1,
+          6,
+          11,
+          12,
+          17,
+          22,
+          42,
+          44,
+          45,
+          46,
+          47,
+          53,
+          54,
+          56,
+          62,
+          86,
+          89,
+          90
+        ]
+      }
+    },
+    {
+      "id": "rillaboom",
+      "name": "Rillaboom",
+      "number": 812,
+      "type": [
+        "grass"
+      ],
+      "size": "medium",
+      "sr": 13,
+      "minLevel": 10,
+      "eggGroup": [
+        "field",
+        "grass"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "3",
+        "maxStage": "3"
+      },
+      "description": "The Chimp Pokémon. By drumming, it taps into the power of its special tree stump. The roots of the stump follow its direction in battle.",
+      "ac": 16,
+      "hp": 115,
+      "hitDice": "d12",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        },
+        {
+          "type": "climbing",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "20",
+        "dex": "18",
+        "con": "15",
+        "int": "6",
+        "wis": "10",
+        "cha": "12"
+      },
+      "skills": [
+        "acrobatics",
+        "nature"
+      ],
+      "savingThrows": [
+        "dex",
+        "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Overgrow",
+          "description": "This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health.",
+          "hidden": false
+        },
+        {
+          "name": "Grassy Surge",
+          "description": "If the move is known, this Pokémon may use the Grassy Terrain move as a bonus action.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "scratch",
+          "growl",
+          "branch-poke",
+          "taunt",
+          "double-hit",
+          "razor-leaf",
+          "screech",
+          "knock-off",
+          "slam",
+          "uproar",
+          "drum-beating",
+          "grassy-terrain",
+          "noble-roar"
+        ],
+        "level14": [
+          "wood-hammer"
+        ],
+        "level18": [
+          "boomburst",
+          "endeavor"
+        ],
+        "tm": [
+          1,
+          6,
+          11,
+          12,
+          15,
+          17,
+          22,
+          26,
+          31,
+          42,
+          44,
+          45,
+          46,
+          47,
+          53,
+          54,
+          56,
+          62,
+          68,
+          78,
           86,
           89,
           90
