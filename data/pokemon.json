@@ -109181,6 +109181,535 @@
       }
     },
     {
+      "id": "galarian-meowth",
+      "name": "Galarian Meowth",
+      "number": 52,
+      "type": [
+        "steel"
+      ],
+      "size": "tiny",
+      "sr": 0.5,
+      "minLevel": 1,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Galarian Meowth can evolve into Perrserker at level 8 and above. When it evolves, its health increases by double its level, and it gains 11 points to add to its ability scores (max 20)."
+      },
+      "description": "The Scratch Cat Pokémon. Living with a savage, seafaring people has toughened this Pokémon's body so much that parts of it have turned to iron.",
+      "ac": 14,
+      "hp": 17,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        },
+        {
+          "type": "climbing",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "12",
+        "dex": "12",
+        "con": "11",
+        "int": "8",
+        "wis": "10",
+        "cha": "12"
+      },
+      "skills": [
+        "persuasion",
+        "deception",
+        "sleight of hand"
+      ],
+      "savingThrows": [
+        "dex",
+        "cha"
+      ],
+      "senses": [
+        {
+          "type": "darkvision",
+          "value": 30
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Pickup",
+          "description": "If an opponent uses a consumable held item in battle, this Pokémon gains a copy of it if it is not currently holding an item.",
+          "hidden": false
+        },
+        {
+          "name": "Tough Claws",
+          "description": "A successful melee attack by this Pokémon automatically gets STAB, regardless of its type. If it would normally get STAB, double the STAB bonus when adding to damage.",
+          "hidden": false
+        },
+        {
+          "name": "Unnerve",
+          "description": "Opponents in combat with this Pokémon cannot eat held berries.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "growl",
+          "fake-out"
+        ],
+        "level2": [
+          "hone-claws",
+          "scratch"
+        ],
+        "level6": [
+          "pay-day",
+          "metal-claw",
+          "taunt"
+        ],
+        "level10": [
+          "swagger",
+          "fury-swipes",
+          "screech"
+        ],
+        "level14": [
+          "metal-sound",
+          "slash"
+        ],
+        "level18": [
+          "thrash"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          11,
+          12,
+          17,
+          18,
+          21,
+          24,
+          25,
+          27,
+          30,
+          41,
+          42,
+          44,
+          45,
+          46,
+          48,
+          49,
+          65,
+          66,
+          74,
+          77,
+          87,
+          88,
+          89,
+          90,
+          91,
+          100
+        ],
+        "egg": [
+          "amnesia",
+          "assist",
+          "charm",
+          "covet",
+          "double-edge",
+          "flail",
+          "foul-play",
+          "iron-tail",
+          "night-slash",
+          "psych-up",
+          "punishment",
+          "snatch",
+          "spite"
+        ]
+      }
+    },
+    {
+      "id": "galarian-ponyta",
+      "name": "Galarian Ponyta",
+      "number": 77,
+      "type": [
+        "psychic"
+      ],
+      "size": "small",
+      "sr": 0.5,
+      "minLevel": 1,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Galarian Ponyta can evolve into Galarian Rapidash at level 10 and above. When it evolves, its health increases by double its level, and it gains 12 points to add to its ability scores (max 20)."
+      },
+      "description": "The Unique Horn Pokémon. Its small horn hides a healing power. With a few rubs from this Pokémon's horn, any slight wound you have will be healed.",
+      "ac": 14,
+      "hp": 18,
+      "hitDice": "d8",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "12",
+        "dex": "15",
+        "con": "10",
+        "int": "6",
+        "wis": "10",
+        "cha": "10"
+      },
+      "skills": [
+        "athletics"
+      ],
+      "savingThrows": [
+        "dex"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Run Away",
+          "description": "This Pokémon cannot be the target of an attack of opportunity.",
+          "hidden": false
+        },
+        {
+          "name": "Pastel Veil",
+          "description": "This Pokémon and its allies cannot be poisoned for as long as it is in combat.",
+          "hidden": false
+        },
+        {
+          "name": "Anticipation",
+          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "growl",
+          "tackle"
+        ],
+        "level2": [
+          "tail-whip",
+          "confusion"
+        ],
+        "level6": [
+          "fairy-wind",
+          "agility"
+        ],
+        "level10": [
+          "psybeam",
+          "stomp",
+          "heal-pulse"
+        ],
+        "level14": [
+          "take-down",
+          "dazzling-gleam"
+        ],
+        "level18": [
+          "psychic",
+          "healing-wish"
+        ],
+        "tm": [
+          4,
+          6,
+          10,
+          11,
+          17,
+          21,
+          22,
+          27,
+          29,
+          32,
+          42,
+          43,
+          44,
+          45,
+          48,
+          49,
+          61,
+          87,
+          88,
+          90,
+          93,
+          99,
+          100
+        ],
+        "egg": [
+          "ally-switch",
+          "captivate",
+          "charm",
+          "double-kick",
+          "double-edge",
+          "horn-drill",
+          "hypnosis",
+          "iron-tail",
+          "low-kick",
+          "morning-sun",
+          "psybeam",
+          "thrash"
+        ]
+      }
+    },
+    {
+      "id": "galarian-rapidash",
+      "name": "Galarian Rapidash",
+      "number": 78,
+      "type": [
+        "psychic",
+        "fairy"
+      ],
+      "size": "large",
+      "sr": 11,
+      "minLevel": 10,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Unique Horn Pokémon. Fearless and proud, Rapidash uses Psychic powers stored in the flowing fur above its hooves to dash through the forest with ease.",
+      "ac": 16,
+      "hp": 98,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 40
+        }
+      ],
+      "attributes": {
+        "str": "16",
+        "dex": "18",
+        "con": "14",
+        "int": "6",
+        "wis": "12",
+        "cha": "12"
+      },
+      "skills": [
+        "athletics"
+      ],
+      "savingThrows": [
+        "dex"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Run Away",
+          "description": "This Pokémon cannot be the target of an attack of opportunity.",
+          "hidden": false
+        },
+        {
+          "name": "Pastel Veil",
+          "description": "This Pokémon and its allies cannot be poisoned for as long as it is in combat.",
+          "hidden": false
+        },
+        {
+          "name": "Anticipation",
+          "description": "When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "psycho-cut",
+          "megahorn",
+          "tackle",
+          "quick-attack",
+          "growl",
+          "tail-whip",
+          "confusion",
+          "fairy-wind",
+          "agility",
+          "psybeam",
+          "stomp",
+          "heal-pulse"
+        ],
+        "level14": [
+          "take-down",
+          "dazzling-gleam"
+        ],
+        "level18": [
+          "psychic",
+          "healing-wish"
+        ],
+        "tm": [
+          4,
+          6,
+          10,
+          11,
+          17,
+          21,
+          22,
+          27,
+          29,
+          32,
+          42,
+          43,
+          44,
+          45,
+          48,
+          49,
+          61,
+          87,
+          88,
+          90,
+          92,
+          93,
+          99,
+          100
+        ]
+      }
+    },
+    {
+      "id": "galarian-farfetchd",
+      "name": "Galarian Farfetch'd",
+      "number": 83,
+      "type": [
+        "fighting"
+      ],
+      "size": "tiny",
+      "sr": 3,
+      "minLevel": 1,
+      "eggGroup": [
+        "flying",
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Galarian Farfetch'd can evolve into a Sirfetch'd at level 8 and above, after enduring a single battle where it lands three critical hits. When it evolves, its health increases by double its level, and it gains 11 points to add to its ability scores (max 20)."
+      },
+      "description": "The Wild Duck Pokémon. Farfetch'd always carries a leek that is twice as long and heavy as its own body and never lets go.",
+      "ac": 14,
+      "hp": 25,
+      "hitDice": "d8",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 25
+        },
+        {
+          "type": "flying",
+          "value": 25
+        }
+      ],
+      "attributes": {
+        "str": "15",
+        "dex": "14",
+        "con": "12",
+        "int": "6",
+        "wis": "12",
+        "cha": "10"
+      },
+      "skills": [
+        "perception",
+        "intimidation"
+      ],
+      "savingThrows": [
+        "dex"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Steadfast",
+          "description": "Once per long rest, when this Pokémon fails a saving throw against a negative condition, it can choose to pass instead.",
+          "hidden": false
+        },
+        {
+          "name": "Scrappy",
+          "description": "This Pokémon's Normal and Fighting type moves ignore immunities granted by a Pokémon's type. If a target’s secondary type gives it vulnerability or resistance to the attack, it follows the secondary type for that effect.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "fury-cutter",
+          "leer",
+          "peck",
+          "sand-attack"
+        ],
+        "level2": [
+          "rock-smash",
+          "brutal-swing"
+        ],
+        "level6": [
+          "detect",
+          "knock-off"
+        ],
+        "level10": [
+          "defog",
+          "brick-break",
+          "swords-dance"
+        ],
+        "level14": [
+          "slam",
+          "leaf-blade"
+        ],
+        "level18": [
+          "acrobatics",
+          "feint",
+          "false-swipe",
+          "final-gambit",
+          "brave-bird"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          11,
+          17,
+          19,
+          21,
+          27,
+          31,
+          32,
+          42,
+          44,
+          45,
+          46,
+          48,
+          51,
+          54,
+          59,
+          62,
+          75,
+          77,
+          84,
+          87,
+          88,
+          89,
+          90,
+          100
+        ],
+        "egg": [
+          "counter",
+          "covet",
+          "curse",
+          "double-edge",
+          "feint",
+          "flail",
+          "foresight",
+          "leaf-blade",
+          "mud-slap",
+          "night-slash",
+          "quick-attack",
+          "quick-guard",
+          "revenge",
+          "simple-beam",
+          "steel-wing",
+          "trump-card"
+        ]
+      }
+    },
+    {
       "id": "grookey",
       "name": "Grookey",
       "number": 810,
@@ -109504,6 +110033,261 @@
           86,
           89,
           90
+        ]
+      }
+    },
+    {
+      "id": "perrserker",
+      "name": "Perrserker",
+      "number": 863,
+      "type": [
+        "steel"
+      ],
+      "size": "small",
+      "sr": 7,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Scratch Cat Pokémon. What appears to be an iron helmet is actually hardened hair. This Pokémon lives for the thrill of battle.",
+      "ac": 16,
+      "hp": 46,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        },
+        {
+          "type": "climbing",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "16",
+        "dex": "13",
+        "con": "15",
+        "int": "8",
+        "wis": "10",
+        "cha": "14"
+      },
+      "skills": [
+        "persuasion",
+        "deception",
+        "sleight of hand"
+      ],
+      "savingThrows": [
+        "dex",
+        "cha"
+      ],
+      "senses": [
+        {
+          "type": "darkvision",
+          "value": 30
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Pickup",
+          "description": "If an opponent uses a consumable held item in battle, this Pokémon gains a copy of it if it is not currently holding an item.",
+          "hidden": false
+        },
+        {
+          "name": "Tough Claws",
+          "description": "A successful melee attack by this Pokémon automatically gets STAB, regardless of its type. If it would normally get STAB, double the STAB bonus when adding to damage.",
+          "hidden": false
+        },
+        {
+          "name": "Unnerve",
+          "description": "Opponents in combat with this Pokémon cannot eat held berries.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "fake-out",
+          "growl",
+          "hone-claws",
+          "iron-defense",
+          "iron-head",
+          "metal-burst",
+          "scratch"
+        ],
+        "level6": [
+          "pay-day",
+          "metal-claw",
+          "taunt"
+        ],
+        "level10": [
+          "swagger",
+          "fury-swipes",
+          "screech"
+        ],
+        "level14": [
+          "metal-sound",
+          "slash"
+        ],
+        "level18": [
+          "thrash"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          11,
+          12,
+          17,
+          18,
+          21,
+          24,
+          25,
+          27,
+          30,
+          41,
+          42,
+          44,
+          45,
+          46,
+          48,
+          49,
+          65,
+          66,
+          74,
+          77,
+          87,
+          88,
+          89,
+          90,
+          91,
+          100
+        ]
+      }
+    },
+    {
+      "id": "sirfetchd",
+      "name": "Sirfetch'd",
+      "number": 865,
+      "type": [
+        "fighting"
+      ],
+      "size": "tiny",
+      "sr": 10,
+      "minLevel": 8,
+      "eggGroup": [
+        "flying",
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Wild Duck Pokémon. Only Farfetch'd that have survived many battles can attain this evolution. When this Pokémon's leek withers, it will retire from combat.",
+      "ac": 17,
+      "hp": 71,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 25
+        },
+        {
+          "type": "flying",
+          "value": 25
+        }
+      ],
+      "attributes": {
+        "str": "18",
+        "dex": "14",
+        "con": "15",
+        "int": "6",
+        "wis": "12",
+        "cha": "14"
+      },
+      "skills": [
+        "perception",
+        "intimidation"
+      ],
+      "savingThrows": [
+        "dex",
+        "cha"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Steadfast",
+          "description": "Once per long rest, when this Pokémon fails a saving throw against a negative condition, it can choose to pass instead.",
+          "hidden": false
+        },
+        {
+          "name": "Scrappy",
+          "description": "This Pokémon's Normal and Fighting type moves ignore immunities granted by a Pokémon's type. If a target’s secondary type gives it vulnerability or resistance to the attack, it follows the secondary type for that effect.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "first-impression",
+          "fury-cutter",
+          "iron-defense",
+          "leer",
+          "peck",
+          "sand-attack",
+          "rock-smash",
+          "brutal-swing",
+          "detect",
+          "knock-off"
+        ],
+        "level10": [
+          "defog",
+          "brick-break",
+          "swords-dance"
+        ],
+        "level14": [
+          "slam",
+          "leaf-blade"
+        ],
+        "level18": [
+          "acrobatics",
+          "feint",
+          "false-swipe",
+          "final-gambit",
+          "brave-bird",
+          "meteor-assault"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          11,
+          17,
+          19,
+          21,
+          27,
+          31,
+          32,
+          42,
+          44,
+          45,
+          46,
+          48,
+          51,
+          54,
+          59,
+          62,
+          75,
+          77,
+          84,
+          87,
+          88,
+          89,
+          90,
+          100
         ]
       }
     }
