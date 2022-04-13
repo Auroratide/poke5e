@@ -13827,7 +13827,7 @@
       "evolution": {
         "stage": "1",
         "maxStage": "2",
-        "description": "Koffing can evolve into Weezing at level 9 and above. When it evolves, its health increases by double its level, and it gains 9 points to add to its ability scores (max 20)."
+        "description": "Koffing can evolve into Weezing at level 9 and above. If in a region with significant anthropogenic pollution, it evolves into Galarian Weezing instead. When it evolves, its health increases by double its level, and it gains 9 points to add to its ability scores (max 20)."
       },
       "description": "The Poison Gas Pokémon. In hot places, its internal gases could expand and explode without any warning. Be very careful!",
       "ac": 14,
@@ -56906,8 +56906,8 @@
       "gender": "1:1",
       "evolution": {
         "stage": "1",
-        "maxStage": "2",
-        "description": "Mime Jr. can evolve into Mr. Mime at the time 'Mimic' is learned. When it evolves, its health increases by double its level, and it gains 8 points to add to its ability scores (max 20)."
+        "maxStage": "3",
+        "description": "Mime Jr. can evolve into Mr. Mime at the time 'Mimic' is learned. If in a region of typically cool climate (DM discretion), Mime Jr. evolves into Galarian Mr. Mime instead. When it evolves, its health increases by double its level, and it gains 8 points to add to its ability scores (max 20)."
       },
       "description": "The Mime Pokémon. It habitually mimics foes. Once mimicked, the foe cannot take its eyes off this Pokémon.",
       "ac": 14,
@@ -109710,6 +109710,432 @@
       }
     },
     {
+      "id": "galarian-weezing",
+      "name": "Galarian Weezing",
+      "number": 110,
+      "type": [
+        "poison",
+        "fairy"
+      ],
+      "size": "medium",
+      "sr": 10,
+      "minLevel": 8,
+      "eggGroup": [
+        "amorphous"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Poison Gas Pokémon. This Pokémon consumes particles that contaminate the air. Instead of leaving droppings, it expels clean air.",
+      "ac": 16,
+      "hp": 88,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "flying (hover)",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "16",
+        "dex": "14",
+        "con": "18",
+        "int": "6",
+        "wis": "12",
+        "cha": "8"
+      },
+      "skills": [
+        "deception"
+      ],
+      "savingThrows": [
+        "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Neutralizing Gas",
+          "description": "You are immune to poison damage and being poisoned.",
+          "hidden": false
+        }
+      ],
+      "moves": {
+        "start": [
+          "double-hit",
+          "strange-steam",
+          "defog",
+          "poison-gas",
+          "smog",
+          "smokescreen",
+          "tackle",
+          "assurance",
+          "clear-smog",
+          "sludge",
+          "aromatic-mist"
+        ],
+        "level10": [
+          "self-destruct",
+          "haze",
+          "fairy-wind"
+        ],
+        "level14": [
+          "gyro-ball",
+          "sludge-bomb"
+        ],
+        "level18": [
+          "explosion",
+          "destiny-bond",
+          "memento",
+          "belch",
+          "misty-terrain"
+        ],
+        "tm": [
+          6,
+          9,
+          10,
+          11,
+          12,
+          15,
+          17,
+          18,
+          21,
+          24,
+          25,
+          27,
+          30,
+          32,
+          35,
+          36,
+          38,
+          41,
+          42,
+          44,
+          45,
+          46,
+          48,
+          61,
+          64,
+          66,
+          68,
+          74,
+          83,
+          87,
+          88,
+          90,
+          97,
+          99,
+          100
+        ]
+      }
+    },
+    {
+      "id": "galarian-mr-mime",
+      "name": "Galarian Mr. Mime",
+      "number": 122,
+      "type": [
+        "ice",
+        "psychic"
+      ],
+      "size": "medium",
+      "sr": 9,
+      "minLevel": 5,
+      "eggGroup": [
+        "human-like"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "3",
+        "description": "Galarian Mr. Mime can evolve into Mr. Rime at level 14 and above. When it evolves, its health increases by double its level, and it gains 9 points to add to its ability scores (max 20)."
+      },
+      "description": "The Dancing Pokémon. Its talent is tap-dancing. It can also manipulate temperatures to create a floor of ice, which this Pokémon can kick up to use as a barrier.",
+      "ac": 17,
+      "hp": 52,
+      "hitDice": "d8",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "13",
+        "dex": "15",
+        "con": "8",
+        "int": "12",
+        "wis": "12",
+        "cha": "13"
+      },
+      "skills": [
+        "performance"
+      ],
+      "savingThrows": [
+        "cha"
+      ],
+      "senses": [
+        {
+          "type": "truesight",
+          "value": 10
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Vital Spirit",
+          "description": "This Pokémon cannot be put to sleep.",
+          "hidden": false
+        },
+        {
+          "name": "Screen Cleaner",
+          "description": "Light Screen, Reflect, and Aurora Veil have no effect within 40ft of this Pokémon.",
+          "hidden": false
+        },
+        {
+          "name": "Ice Body",
+          "description": "While it is snowing or hailing, this Pokémon heals for an amount of HP equal to its proficiency modifier at the end of each of its turns.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "barrier",
+          "confusion",
+          "guard-swap",
+          "misty-terrain",
+          "power-swap",
+          "quick-guard",
+          "wide-guard",
+          "copycat",
+          "meditate",
+          "double-slap",
+          "ice-shard"
+        ],
+        "level6": [
+          "mimic",
+          "psywave",
+          "encore"
+        ],
+        "level10": [
+          "light-screen",
+          "reflect",
+          "psybeam",
+          "icy-wind"
+        ],
+        "level14": [
+          "substitute",
+          "recycle",
+          "trick"
+        ],
+        "level18": [
+          "psychic",
+          "role-play",
+          "baton-pass",
+          "safeguard",
+          "freeze-dry",
+          "teeter-dance"
+        ],
+        "tm": [
+          3,
+          4,
+          6,
+          7,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          24,
+          25,
+          27,
+          29,
+          30,
+          31,
+          32,
+          33,
+          40,
+          41,
+          42,
+          44,
+          45,
+          46,
+          48,
+          52,
+          53,
+          56,
+          57,
+          66,
+          68,
+          73,
+          77,
+          83,
+          85,
+          86,
+          87,
+          88,
+          90,
+          92,
+          99,
+          100
+        ]
+      }
+    },
+    {
+      "id": "galarian-corsola",
+      "name": "Galarian Corsola",
+      "number": 222,
+      "type": [
+        "ghost"
+      ],
+      "size": "tiny",
+      "sr": 3,
+      "minLevel": 1,
+      "eggGroup": [
+        "water 1",
+        "water 3"
+      ],
+      "gender": "3:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "A Galarian Corsola can evolve into Cursola at level 11 and above. When it evolves, its health increases by double its level, and it gains 9 points to add to its ability scores (max 20)."
+      },
+      "description": "The Coral Pokémon. Sudden climate change wiped out this ancient kind of Corsola. This Pokémon absorbs others' life-force through its branches.",
+      "ac": 16,
+      "hp": 21,
+      "hitDice": "d8",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 15
+        },
+        {
+          "type": "swimming",
+          "value": 25
+        }
+      ],
+      "attributes": {
+        "str": "14",
+        "dex": "11",
+        "con": "17",
+        "int": "6",
+        "wis": "10",
+        "cha": "10"
+      },
+      "skills": [
+        "history",
+        "stealth"
+      ],
+      "savingThrows": [
+        "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Weak Armor",
+          "description": "When an attack hits this Pokémon, its speed increases by 5 feet, but its AC is temporarily reduced by 1 until the end of battle (for a maximum reduction of -5).",
+          "hidden": false
+        },
+        {
+          "name": "Cursed Body",
+          "description": "When hit by a melee attack, this Pokémon may roll 1d4. On a result of 4, the opponent who made the attack cannot use the same move on its next turn.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "harden",
+          "tackle",
+          "astonish"
+        ],
+        "level2": [
+          "disable",
+          "spite",
+          "refresh"
+        ],
+        "level6": [
+          "ancient-power",
+          "spike-cannon"
+        ],
+        "level10": [
+          "lucky-chant",
+          "hex",
+          "iron-defense",
+          "curse"
+        ],
+        "level14": [
+          "endure",
+          "strength-sap",
+          "power-gem"
+        ],
+        "level18": [
+          "mirror-coat",
+          "night-shade",
+          "grudge"
+        ],
+        "tm": [
+          4,
+          6,
+          7,
+          10,
+          11,
+          13,
+          14,
+          16,
+          17,
+          18,
+          20,
+          21,
+          26,
+          27,
+          29,
+          30,
+          32,
+          33,
+          37,
+          39,
+          42,
+          44,
+          45,
+          48,
+          55,
+          64,
+          69,
+          71,
+          78,
+          80,
+          87,
+          88,
+          90,
+          94,
+          96,
+          100
+        ],
+        "egg": [
+          "amnesia",
+          "aqua-ring",
+          "barrier",
+          "camouflage",
+          "confuse-ray",
+          "curse",
+          "destiny-bond",
+          "head-smash",
+          "icicle-spear",
+          "ingrain",
+          "nature-power",
+          "rock-slide",
+          "screech",
+          "water-pulse"
+        ]
+      }
+    },
+    {
       "id": "grookey",
       "name": "Grookey",
       "number": 810,
@@ -110169,6 +110595,136 @@
       }
     },
     {
+      "id": "cursola",
+      "name": "Cursola",
+      "number": 864,
+      "type": [
+        "ghost"
+      ],
+      "size": "small",
+      "sr": 11,
+      "minLevel": 8,
+      "eggGroup": [
+        "water 1",
+        "water 3"
+      ],
+      "gender": "3:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Coral Pokémon. Its shell is overflowing with its heightened otherworldly energy. The ectoplasm serves as protection for this Pokémon's core spirit.",
+      "ac": 17,
+      "hp": 91,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 10
+        },
+        {
+          "type": "swimming",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "17",
+        "dex": "11",
+        "con": "19",
+        "int": "6",
+        "wis": "14",
+        "cha": "10"
+      },
+      "skills": [
+        "history",
+        "stealth"
+      ],
+      "savingThrows": [
+        "con",
+        "wis"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Weak Armor",
+          "description": "When an attack hits this Pokémon, its speed increases by 5 feet, but its AC is temporarily reduced by 1 until the end of battle (for a maximum reduction of -5).",
+          "hidden": false
+        },
+        {
+          "name": "Perish Body",
+          "description": "When hit by a melee attack, this Pokémon and its attacker will faint in 3 rounds, at the start of their respective turn, unless fleeing or switched out by their trainer before the end of the three rounds.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "harden",
+          "tackle",
+          "astonish",
+          "disable",
+          "spite",
+          "refresh",
+          "ancient-power",
+          "spike-cannon",
+          "perish-song"
+        ],
+        "level10": [
+          "lucky-chant",
+          "hex",
+          "iron-defense",
+          "curse"
+        ],
+        "level14": [
+          "endure",
+          "strength-sap",
+          "power-gem"
+        ],
+        "level18": [
+          "mirror-coat",
+          "night-shade",
+          "grudge"
+        ],
+        "tm": [
+          4,
+          6,
+          7,
+          10,
+          11,
+          13,
+          14,
+          16,
+          17,
+          18,
+          20,
+          21,
+          26,
+          27,
+          29,
+          30,
+          32,
+          33,
+          37,
+          39,
+          42,
+          44,
+          45,
+          48,
+          55,
+          64,
+          69,
+          71,
+          78,
+          80,
+          87,
+          88,
+          90,
+          94,
+          96,
+          100
+        ]
+      }
+    },
+    {
       "id": "sirfetchd",
       "name": "Sirfetch'd",
       "number": 865,
@@ -110287,6 +110843,159 @@
           88,
           89,
           90,
+          100
+        ]
+      }
+    },
+    {
+      "id": "mr-rime",
+      "name": "Mr. Rime",
+      "number": 866,
+      "type": [
+        "ice",
+        "psychic"
+      ],
+      "size": "medium",
+      "sr": 13,
+      "minLevel": 10,
+      "eggGroup": [
+        "human-like"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "3",
+        "maxStage": "3"
+      },
+      "description": "The Dancing Pokémon. It's highly skilled at tap-dancing. It waves its cane of ice in time with its graceful movements.",
+      "ac": 17,
+      "hp": 85,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "14",
+        "dex": "15",
+        "con": "8",
+        "int": "14",
+        "wis": "15",
+        "cha": "16"
+      },
+      "skills": [
+        "performance"
+      ],
+      "savingThrows": [
+        "wis",
+        "cha"
+      ],
+      "senses": [
+        {
+          "type": "truesight",
+          "value": 10
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Vital Spirit",
+          "description": "This Pokémon cannot be put to sleep.",
+          "hidden": false
+        },
+        {
+          "name": "Screen Cleaner",
+          "description": "Light Screen, Reflect, and Aurora Veil have no effect within 40ft of this Pokémon.",
+          "hidden": false
+        },
+        {
+          "name": "Ice Body",
+          "description": "While it is snowing or hailing, this Pokémon heals for an amount of HP equal to its proficiency modifier at the end of each of its turns.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "barrier",
+          "confusion",
+          "guard-swap",
+          "misty-terrain",
+          "power-swap",
+          "quick-guard",
+          "wide-guard",
+          "copycat",
+          "meditate",
+          "double-slap",
+          "ice-shard",
+          "mimic",
+          "psywave",
+          "encore",
+          "light-screen",
+          "reflect",
+          "psybeam",
+          "icy-wind"
+        ],
+        "level14": [
+          "substitute",
+          "recycle",
+          "trick"
+        ],
+        "level18": [
+          "psychic",
+          "role-play",
+          "baton-pass",
+          "safeguard",
+          "freeze-dry",
+          "teeter-dance"
+        ],
+        "tm": [
+          3,
+          4,
+          6,
+          7,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          22,
+          24,
+          25,
+          27,
+          29,
+          30,
+          31,
+          32,
+          33,
+          40,
+          41,
+          42,
+          44,
+          45,
+          46,
+          48,
+          52,
+          53,
+          56,
+          57,
+          66,
+          68,
+          73,
+          77,
+          83,
+          85,
+          86,
+          87,
+          88,
+          90,
+          92,
+          99,
           100
         ]
       }
