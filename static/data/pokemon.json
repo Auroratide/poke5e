@@ -109568,6 +109568,303 @@
       }
     },
     {
+      "id": "galarian-slowpoke",
+      "name": "Galarian Slowpoke",
+      "number": 79,
+      "type": [
+        "psychic"
+      ],
+      "size": "medium",
+      "sr": 0.5,
+      "minLevel": 1,
+      "eggGroup": [
+        "monster",
+        "water 1"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Galarian Slowpoke can evolve into Galarian Slowbro at level 10 and above, or Galarian Slowking at level 10 and above while holding a King's Rock. When it evolves, its health increases by double its level, and it gains 14 points to add to its ability scores (max 20)."
+      },
+      "description": "The Dopey Pokémon. Although this Pokémon is normally zoned out, its expression abruptly sharpens on occasion. The cause for this seems to lie in Slowpoke's diet.",
+      "ac": 12,
+      "hp": 20,
+      "hitDice": "d8",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 15
+        },
+        {
+          "type": "swimming",
+          "value": 25
+        }
+      ],
+      "attributes": {
+        "str": "12",
+        "dex": "8",
+        "con": "14",
+        "int": "6",
+        "wis": "12",
+        "cha": "10"
+      },
+      "skills": [
+        "insight",
+        "history"
+      ],
+      "savingThrows": [
+        "con",
+        "wis"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Gluttony",
+          "description": "This Pokémon must eat its held berry when it falls below ½ of its maximum HP.",
+          "hidden": false
+        },
+        {
+          "name": "Own Tempo",
+          "description": "This Pokémon is immune to becoming confused.",
+          "hidden": false
+        },
+        {
+          "name": "Regenerator",
+          "description": "Once per long rest, this Pokémon regains hit points equal to its level when it returns to its Pokéball.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "curse",
+          "tackle",
+          "yawn"
+        ],
+        "level2": [
+          "growl",
+          "acid"
+        ],
+        "level6": [
+          "confusion",
+          "disable"
+        ],
+        "level10": [
+          "headbutt"
+        ],
+        "level14": [
+          "water-pulse",
+          "zen-headbutt",
+          "slack-off",
+          "amnesia"
+        ],
+        "level18": [
+          "psychic",
+          "rain-dance",
+          "psych-up",
+          "heal-pulse"
+        ],
+        "tm": [
+          3,
+          4,
+          6,
+          7,
+          10,
+          11,
+          13,
+          14,
+          16,
+          17,
+          18,
+          20,
+          21,
+          26,
+          27,
+          29,
+          30,
+          32,
+          35,
+          38,
+          42,
+          44,
+          45,
+          48,
+          49,
+          55,
+          73,
+          77,
+          78,
+          85,
+          86,
+          87,
+          88,
+          90,
+          92,
+          94,
+          100
+        ],
+        "egg": [
+          "belch",
+          "belly-drum",
+          "block",
+          "future-sight",
+          "me-first",
+          "mud-sport",
+          "safeguard",
+          "sleep-talk",
+          "snore",
+          "stomp",
+          "wonder-room",
+          "zen-headbutt"
+        ]
+      }
+    },
+    {
+      "id": "galarian-slowbro",
+      "name": "Galarian Slowbro",
+      "number": 80,
+      "type": [
+        "poison",
+        "psychic"
+      ],
+      "size": "medium",
+      "sr": 11,
+      "minLevel": 8,
+      "eggGroup": [
+        "monster",
+        "water 1"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Hermit Crab Pokémon. A Shellder bite set off a chemical reaction with the spices inside Slowbro's body, causing Slowbro to become a Poison-type Pokémon.",
+      "ac": 15,
+      "hp": 97,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 20
+        },
+        {
+          "type": "swimming",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "17",
+        "dex": "12",
+        "con": "18",
+        "int": "6",
+        "wis": "16",
+        "cha": "10"
+      },
+      "skills": [
+        "insight",
+        "history"
+      ],
+      "savingThrows": [
+        "con",
+        "wis"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Quick Draw",
+          "description": "This Pokémon has advantage on initiative rolls.",
+          "hidden": false
+        },
+        {
+          "name": "Own Tempo",
+          "description": "This Pokémon is immune to becoming confused.",
+          "hidden": false
+        },
+        {
+          "name": "Regenerator",
+          "description": "Once per long rest, this Pokémon regains hit points equal to its level when it returns to its Pokéball.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "shell-side-arm",
+          "curse",
+          "growl",
+          "tackle",
+          "withdraw",
+          "yawn",
+          "acid",
+          "confusion",
+          "disable"
+        ],
+        "level10": [
+          "headbutt"
+        ],
+        "level14": [
+          "water-pulse",
+          "zen-headbutt",
+          "slack-off"
+        ],
+        "level18": [
+          "amnesia",
+          "psychic",
+          "rain-dance",
+          "psych-up",
+          "heal-pulse"
+        ],
+        "tm": [
+          3,
+          4,
+          6,
+          7,
+          9,
+          10,
+          11,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          26,
+          27,
+          29,
+          30,
+          31,
+          32,
+          34,
+          35,
+          36,
+          38,
+          40,
+          42,
+          44,
+          45,
+          48,
+          49,
+          52,
+          55,
+          56,
+          68,
+          73,
+          77,
+          78,
+          84,
+          85,
+          86,
+          87,
+          90,
+          92,
+          94,
+          100
+        ]
+      }
+    },
+    {
       "id": "galarian-farfetchd",
       "name": "Galarian Farfetch'd",
       "number": 83,
@@ -109982,6 +110279,153 @@
           90,
           92,
           99,
+          100
+        ]
+      }
+    },
+    {
+      "id": "galarian-slowking",
+      "name": "Galarian Slowking",
+      "number": 199,
+      "type": [
+        "poison",
+        "psychic"
+      ],
+      "size": "medium",
+      "sr": 11,
+      "minLevel": 8,
+      "eggGroup": [
+        "monster",
+        "water 1"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Hexpert Pokémon. A combination of toxins and the shock of evolving has increased Shellder's intelligence to the point that Shellder now controls Slowking.",
+      "ac": 16,
+      "hp": 97,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        },
+        {
+          "type": "swimming",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "16",
+        "dex": "13",
+        "con": "18",
+        "int": "15",
+        "wis": "14",
+        "cha": "10"
+      },
+      "skills": [
+        "insight",
+        "history"
+      ],
+      "savingThrows": [
+        "con",
+        "wis"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Curious Medicine",
+          "description": "As a bonus action, this Pokémon can reset changes to the ability scores, AC, and attack modifier of either itself or an ally within 30 ft. This Pokémon may do this a number of times equal to its INT modifier (minimum of once), and it resets on a long rest.",
+          "hidden": false
+        },
+        {
+          "name": "Own Tempo",
+          "description": "This Pokémon is immune to becoming confused.",
+          "hidden": false
+        },
+        {
+          "name": "Regenerator",
+          "description": "Once per long rest, this Pokémon regains hit points equal to its level when it returns to its Pokéball.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "eerie-spell",
+          "curse",
+          "heal-pulse",
+          "hidden-power",
+          "power-gem",
+          "tackle",
+          "yawn",
+          "growl",
+          "acid",
+          "confusion",
+          "disable"
+        ],
+        "level10": [
+          "headbutt",
+          "water-pulse",
+          "zen-headbutt"
+        ],
+        "level14": [
+          "nasty-plot",
+          "swagger"
+        ],
+        "level18": [
+          "psychic",
+          "trump-card",
+          "psych-up"
+        ],
+        "tm": [
+          3,
+          4,
+          6,
+          7,
+          9,
+          10,
+          11,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          26,
+          27,
+          29,
+          30,
+          31,
+          32,
+          34,
+          35,
+          36,
+          38,
+          42,
+          44,
+          45,
+          48,
+          49,
+          52,
+          55,
+          56,
+          60,
+          68,
+          73,
+          77,
+          78,
+          82,
+          85,
+          86,
+          87,
+          88,
+          90,
+          92,
+          94,
           100
         ]
       }
