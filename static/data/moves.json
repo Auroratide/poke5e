@@ -1578,6 +1578,25 @@
       "higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d8 at level 10, and 2d6 at level 17."
     },
     {
+      "id": "court-change",
+      "name": "Court Change",
+      "type": "normal",
+      "power": [
+        "dex",
+        "cha"
+      ],
+      "time": "1 reaction",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "120ft",
+      "description": [
+        "When another creature you can see in range performs a non-damaging move that requires one or more target (including self), you may force the target to make a CHA save. On failure, you choose the target(s) of the move."
+      ],
+      "optional": [
+        "This move may also apply to spells. Spells cast at the sixth level or higher cannot be a target of Court Change."
+      ]
+    },
+    {
       "id": "covet",
       "name": "Covet",
       "type": "normal",
@@ -7316,6 +7335,23 @@
         "As a reaction, when a creature is fleeing or is switched out by their trainer, you may make a ranged attack roll against it, doing 1d6 + MOVE dark damage on a hit."
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
+    },
+    {
+      "id": "pyro-ball",
+      "name": "Pyro Ball",
+      "type": "fire",
+      "power": [
+        "str",
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "60ft",
+      "description": [
+        "The user attacks by igniting a small stone and launching it as a fiery ball at the target. Make a ranged attack against a creature, dealing 2d8 + MOVE fire damage on hit. On hit, the target must make a DEX save, becoming burned on failure."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d8 at level 10, and 4d10 at level 17."
     },
     {
       "id": "quash",
