@@ -2461,6 +2461,26 @@
       ]
     },
     {
+      "id": "eerie-spell",
+      "name": "Eerie Spell",
+      "type": "psychic",
+      "power": [
+        "int",
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "1 minute, concentration",
+      "range": "60ft",
+      "description": [
+        "The user attacks with its tremendous psychic power. The target must make an INT save. On failure, moves the target makes cost 1 additional PP for the duration."
+      ],
+      "higherLevels": "The additional PP cost becomes 2 at level 10.",
+      "optional": [
+        "If the target is a spellcaster, spells cast by the target require 1 additional spell slot (2 at level 10)."
+      ]
+    },
+    {
       "id": "egg-bomb",
       "name": "Egg Bomb",
       "type": "normal",
@@ -6347,6 +6367,23 @@
       "higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17."
     },
     {
+      "id": "obstruct",
+      "name": "Obstruct",
+      "type": "dark",
+      "power": [
+        "str",
+        "con"
+      ],
+      "time": "1 reaction",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "self",
+      "description": [
+        "You sense incoming danger and are able to quickly avoid it. When you are the recipient of the damage and/or effects of a move, you may automatically avoid the damage/effects on the first instance of this reaction. On future instances of this move in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful. This reaction may not be used to guard against the damage/effects that result from a natural 20 attack roll.",
+        "If the attack was a melee attack, the attacker must make a CON save, flinching on failure. This flinch lasts for the rest of this turn and through the attacker's next turn."
+      ]
+    },
+    {
       "id": "octazooka",
       "name": "Octazooka",
       "type": "water",
@@ -8319,6 +8356,24 @@
       "description": [
         "You send a chill down the spine of a creature, freezing its core. Choose a target in range and roll a d20. On a 20, the target faints. On any other roll, this move has no effect. If the target's level is 10 more than your own, this move automatically fails."
       ]
+    },
+    {
+      "id": "shell-side-arm",
+      "name": "Shell Side Arm",
+      "type": "poison",
+      "power": [
+        "str",
+        "dex",
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "You fire acidic ooze from your side-arm. Make a ranged attack on a creature in range, doing 2d8 + MOVE poison damage on a hit. On a hit, the target makes a CON save, becoming poisoned on failure."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
     },
     {
       "id": "shell-smash",
