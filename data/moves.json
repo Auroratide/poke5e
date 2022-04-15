@@ -1590,7 +1590,7 @@
       "duration": "instantaneous",
       "range": "120ft",
       "description": [
-        "When another creature you can see in range performs a non-damaging move that requires one or more target (including self), you may force the target to make a CHA save. On failure, you choose the target(s) of the move."
+        "When another creature you can see in range performs a non-damaging move that requires one or more targets (possibly including self), you may force that creature to make a CHA save. On failure, you choose the target(s) of the move."
       ],
       "optional": [
         "This move may also apply to spells. Spells cast at the sixth level or higher cannot be a target of Court Change."
@@ -8887,6 +8887,22 @@
       ]
     },
     {
+      "id": "snipe-shot",
+      "name": "Snipe Shot",
+      "type": "water",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "150ft",
+      "description": [
+        "You snipe your foe with a high-velocity stream of water. Make a ranged attack, doing 2d6 + MOVE water damage on hit. If the attack was made with advantage, double the damage dice."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
+    {
       "id": "snore",
       "name": "Snore",
       "type": "normal",
@@ -9500,6 +9516,19 @@
         "You resist an attack, fighting back against a creature. When hit by a melee attack, you may use a reaction to immediately retaliate with an attack roll of your own, dealing 1d6 + MOVE bug damage on a hit."
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17."
+    },
+    {
+      "id": "stuff-cheeks",
+      "name": "Stuff Cheeks",
+      "type": "normal",
+      "power": "none",
+      "time": "1 bonus action",
+      "pp": 5,
+      "duration": "10 minutes",
+      "range": "self",
+      "description": [
+        "You consume a held food item, gaining its effects. In addition, your AC increases by 2 for 10 minutes. The max bonus AC you can gain this way is 4. This move works even in the presence of Unnerve or Magic Room."
+      ]
     },
     {
       "id": "stun-spore",

@@ -112009,6 +112009,543 @@
       }
     },
     {
+      "id": "sobble",
+      "name": "Sobble",
+      "number": 816,
+      "type": [
+        "water"
+      ],
+      "size": "tiny",
+      "sr": 0.5,
+      "minLevel": 1,
+      "eggGroup": [
+        "water 1",
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "3",
+        "description": "Sobble can evolve into Drizzile at level 6 and above. When it evolves, its health increases by double its level, and it gains 6 points to add to its ability scores (max 20)."
+      },
+      "description": "The Water Lizard Pokémon. When scared, this Pokémon cries. Its tears pack the chemical punch of 100 onions, and attackers won't be able to resist weeping.",
+      "ac": 12,
+      "hp": 17,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 25
+        },
+        {
+          "type": "swimming",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "11",
+        "dex": "13",
+        "con": "11",
+        "int": "6",
+        "wis": "12",
+        "cha": "10"
+      },
+      "skills": [
+        "stealth",
+        "survival"
+      ],
+      "savingThrows": [
+        "wis"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Torrent",
+          "description": "This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health.",
+          "hidden": false
+        },
+        {
+          "name": "Sniper",
+          "description": "On a critical hit made by this Pokémon, triple the dice roll instead of doubling it.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "pound",
+          "growl"
+        ],
+        "level2": [
+          "water-gun",
+          "bind"
+        ],
+        "level6": [
+          "water-pulse",
+          "tearful-look",
+          "sucker-punch"
+        ],
+        "level10": [
+          "u-turn",
+          "liquidation"
+        ],
+        "level14": [
+          "soak"
+        ],
+        "level18": [
+          "rain-dance"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          16,
+          17,
+          18,
+          20,
+          33,
+          42,
+          44,
+          45,
+          48,
+          88,
+          89,
+          90,
+          94,
+          100
+        ]
+      }
+    },
+    {
+      "id": "drizzile",
+      "name": "Drizzile",
+      "number": 817,
+      "type": [
+        "water"
+      ],
+      "size": "small",
+      "sr": 5,
+      "minLevel": 5,
+      "eggGroup": [
+        "water 1",
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "3",
+        "description": "Drizzile can evolve into Inteleon at level 14 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20)."
+      },
+      "description": "The Water Lizard Pokémon. A clever combatant, this Pokémon battles using water balloons created with moisture secreted from its palms.",
+      "ac": 13,
+      "hp": 37,
+      "hitDice": "d8",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        },
+        {
+          "type": "swimming",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "11",
+        "dex": "15",
+        "con": "11",
+        "int": "8",
+        "wis": "14",
+        "cha": "10"
+      },
+      "skills": [
+        "stealth",
+        "survival"
+      ],
+      "savingThrows": [
+        "wis"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Torrent",
+          "description": "This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health.",
+          "hidden": false
+        },
+        {
+          "name": "Sniper",
+          "description": "On a critical hit made by this Pokémon, triple the dice roll instead of doubling it.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "pound",
+          "growl",
+          "water-gun",
+          "bind"
+        ],
+        "level6": [
+          "water-pulse",
+          "tearful-look",
+          "sucker-punch"
+        ],
+        "level10": [
+          "u-turn",
+          "liquidation"
+        ],
+        "level14": [
+          "soak"
+        ],
+        "level18": [
+          "rain-dance"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          16,
+          17,
+          18,
+          20,
+          33,
+          42,
+          44,
+          45,
+          48,
+          88,
+          89,
+          90,
+          94,
+          100
+        ]
+      }
+    },
+    {
+      "id": "inteleon",
+      "name": "Inteleon",
+      "number": 818,
+      "type": [
+        "water"
+      ],
+      "size": "medium",
+      "sr": 13,
+      "minLevel": 10,
+      "eggGroup": [
+        "water 1",
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "3",
+        "maxStage": "3"
+      },
+      "description": "The Secret Agent Pokémon. It has many hidden capabilities, such as fingertips that can shoot water and a membrane on its back that it can use to glide through the air.",
+      "ac": 15,
+      "hp": 76,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        },
+        {
+          "type": "swimming",
+          "value": 35
+        }
+      ],
+      "attributes": {
+        "str": "12",
+        "dex": "19",
+        "con": "12",
+        "int": "9",
+        "wis": "16",
+        "cha": "10"
+      },
+      "skills": [
+        "stealth",
+        "survival"
+      ],
+      "savingThrows": [
+        "dex",
+        "wis"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Torrent",
+          "description": "This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health.",
+          "hidden": false
+        },
+        {
+          "name": "Sniper",
+          "description": "On a critical hit made by this Pokémon, triple the dice roll instead of doubling it.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "snipe-shot",
+          "pound",
+          "growl",
+          "water-gun",
+          "bind",
+          "water-pulse",
+          "tearful-look",
+          "sucker-punch",
+          "u-turn",
+          "liquidation",
+          "acrobatics"
+        ],
+        "level14": [
+          "soak"
+        ],
+        "level18": [
+          "rain-dance",
+          "hydro-pump"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          20,
+          30,
+          33,
+          42,
+          44,
+          45,
+          48,
+          55,
+          68,
+          75,
+          88,
+          89,
+          90,
+          94,
+          97,
+          98,
+          100
+        ]
+      }
+    },
+    {
+      "id": "skwovet",
+      "name": "Skwovet",
+      "number": 819,
+      "type": [
+        "normal"
+      ],
+      "size": "tiny",
+      "sr": 0.25,
+      "minLevel": 1,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Skwovet can evolve into Greedent at level 6 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20)."
+      },
+      "description": "The Cheeky Pokémon. It eats berries nonstop—a habit that has made it more resilient than it looks. It'll show up on farms, searching for yet more berries.",
+      "ac": 12,
+      "hp": 18,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 20
+        },
+        {
+          "type": "climbing",
+          "value": 20
+        }
+      ],
+      "attributes": {
+        "str": "10",
+        "dex": "10",
+        "con": "15",
+        "int": "6",
+        "wis": "8",
+        "cha": "10"
+      },
+      "skills": [
+        "survival"
+      ],
+      "savingThrows": [
+        "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Cheek Pouch",
+          "description": "When this Pokémon eats any type of berry, is heals for an additional 10% of its maximum HP (rounded up to the nearest whole number).",
+          "hidden": false
+        },
+        {
+          "name": "Gluttony",
+          "description": "This Pokémon must eat its held berry when it falls below ½ of its maximum HP.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "tail-whip"
+        ],
+        "level2": [
+          "bite",
+          "stuff-cheeks"
+        ],
+        "level6": [
+          "stockpile",
+          "swallow",
+          "spit-up"
+        ],
+        "level10": [
+          "body-slam",
+          "rest"
+        ],
+        "level14": [
+          "counter",
+          "bullet-seed"
+        ],
+        "level18": [
+          "super-fang",
+          "belch"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          17,
+          42,
+          44,
+          46,
+          48,
+          56,
+          59,
+          66,
+          74,
+          88,
+          90,
+          100
+        ]
+      }
+    },
+    {
+      "id": "greedent",
+      "name": "Greedent",
+      "number": 820,
+      "type": [
+        "normal"
+      ],
+      "size": "small",
+      "sr": 5,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Greedy Pokémon. It stashes berries in its tail—so many berries that they fall out constantly. But this Pokémon is a bit slow-witted, so it doesn't notice the loss.",
+      "ac": 14,
+      "hp": 52,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 20
+        },
+        {
+          "type": "climbing",
+          "value": 15
+        }
+      ],
+      "attributes": {
+        "str": "14",
+        "dex": "10",
+        "con": "19",
+        "int": "6",
+        "wis": "8",
+        "cha": "10"
+      },
+      "skills": [
+        "survival"
+      ],
+      "savingThrows": [
+        "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Cheek Pouch",
+          "description": "When this Pokémon eats any type of berry, is heals for an additional 10% of its maximum HP (rounded up to the nearest whole number).",
+          "hidden": false
+        },
+        {
+          "name": "Gluttony",
+          "description": "This Pokémon must eat its held berry when it falls below ½ of its maximum HP.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "tail-whip",
+          "bite",
+          "stuff-cheeks",
+          "covet"
+        ],
+        "level6": [
+          "stockpile",
+          "swallow",
+          "spit-up"
+        ],
+        "level10": [
+          "body-slam",
+          "rest"
+        ],
+        "level14": [
+          "counter",
+          "bullet-seed"
+        ],
+        "level18": [
+          "super-fang",
+          "belch"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          15,
+          17,
+          26,
+          42,
+          44,
+          46,
+          48,
+          56,
+          59,
+          66,
+          68,
+          74,
+          88,
+          90,
+          93,
+          100
+        ]
+      }
+    },
+    {
       "id": "obstagoon",
       "name": "Obstagoon",
       "number": 862,
