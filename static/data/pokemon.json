@@ -64796,12 +64796,7 @@
         },
         {
           "name": "Form Change",
-          "description": "Arceus' default type is Normal. It can change its type by holding an Elemental Plate. While holding this plate, the signature move, Judgment, also changes its type to match Arceus. These plates",
-          "hidden": false
-        },
-        {
-          "name": "are",
-          "description": "Draco (Dragon), Dread (Dark), Earth (Ground), Fist (Fighting), Flame (Fire), Icicle (Ice), Insect (Bug), Iron (Steel), Meadow (Grass), Mind (Psychic), Pixie (Fairy), Sky (Flying), Splash (Water), Spooky (Ghost), Stone (Rock), Toxic (Poison), and Zap (Electric)",
+          "description": "Arceus' default type is Normal. It can change its type by holding an Elemental Plate. While holding this plate, the signature move, Judgment, also changes its type to match Arceus. These plates are: Draco (Dragon), Dread (Dark), Earth (Ground), Fist (Fighting), Flame (Fire), Icicle (Ice), Insect (Bug), Iron (Steel), Meadow (Grass), Mind (Psychic), Pixie (Fairy), Sky (Flying), Splash (Water), Spooky (Ghost), Stone (Rock), Toxic (Poison), and Zap (Electric).",
           "hidden": false
         }
       ],
