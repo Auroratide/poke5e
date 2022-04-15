@@ -1590,7 +1590,7 @@
       "duration": "instantaneous",
       "range": "120ft",
       "description": [
-        "When another creature you can see in range performs a non-damaging move that requires one or more target (including self), you may force the target to make a CHA save. On failure, you choose the target(s) of the move."
+        "When another creature you can see in range performs a non-damaging move that requires one or more targets (possibly including self), you may force that creature to make a CHA save. On failure, you choose the target(s) of the move."
       ],
       "optional": [
         "This move may also apply to spells. Spells cast at the sixth level or higher cannot be a target of Court Change."
