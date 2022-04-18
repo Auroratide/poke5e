@@ -112546,6 +112546,637 @@
       }
     },
     {
+      "id": "rookidee",
+      "name": "Rookidee",
+      "number": 821,
+      "type": [
+        "flying"
+      ],
+      "size": "tiny",
+      "sr": 0.25,
+      "minLevel": 1,
+      "eggGroup": [
+        "flying"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "3",
+        "description": "Rookidee can evolve into Corvisquire at level 6 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20)."
+      },
+      "description": "The Tiny Bird Pokémon. Jumping nimbly about, this small-bodied Pokémon takes advantage of even the slightest opportunity to disorient larger opponents.",
+      "ac": 12,
+      "hp": 16,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 20
+        },
+        {
+          "type": "flying",
+          "value": 25
+        }
+      ],
+      "attributes": {
+        "str": "10",
+        "dex": "12",
+        "con": "10",
+        "int": "6",
+        "wis": "10",
+        "cha": "10"
+      },
+      "skills": [
+        "perception"
+      ],
+      "savingThrows": [
+        "dex"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Keen Eye",
+          "description": "This Pokémon ignores disadvantage when it relates to sight.",
+          "hidden": false
+        },
+        {
+          "name": "Unnerve",
+          "description": "Opponents in combat with this Pokémon cannot eat held berries.",
+          "hidden": false
+        },
+        {
+          "name": "Big Pecks",
+          "description": "This Pokémon's AC cannot be reduced by an opponent's moves.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "peck",
+          "leer"
+        ],
+        "level2": [
+          "power-trip",
+          "hone-claws"
+        ],
+        "level6": [
+          "fury-attack",
+          "pluck"
+        ],
+        "level10": [
+          "taunt",
+          "scary-face"
+        ],
+        "level14": [
+          "drill-peck",
+          "swagger"
+        ],
+        "level18": [
+          "brave-bird"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          12,
+          17,
+          42,
+          44,
+          45,
+          46,
+          48,
+          66,
+          76,
+          88,
+          89,
+          90,
+          100
+        ]
+      }
+    },
+    {
+      "id": "corvisquire",
+      "name": "Corvisquire",
+      "number": 822,
+      "type": [
+        "flying"
+      ],
+      "size": "small",
+      "sr": 4,
+      "minLevel": 5,
+      "eggGroup": [
+        "flying"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "3",
+        "description": "Corvisquire can evolve into Corviknight at level 14 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20)."
+      },
+      "description": "The Raven Pokémon. Smart enough to use tools in battle, these Pokémon have been seen picking up rocks and flinging them or using ropes to wrap up enemies.",
+      "ac": 13,
+      "hp": 45,
+      "hitDice": "d8",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 20
+        },
+        {
+          "type": "flying",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "13",
+        "dex": "14",
+        "con": "12",
+        "int": "9",
+        "wis": "10",
+        "cha": "10"
+      },
+      "skills": [
+        "investigation",
+        "perception"
+      ],
+      "savingThrows": [
+        "dex"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Keen Eye",
+          "description": "This Pokémon ignores disadvantage when it relates to sight.",
+          "hidden": false
+        },
+        {
+          "name": "Unnerve",
+          "description": "Opponents in combat with this Pokémon cannot eat held berries.",
+          "hidden": false
+        },
+        {
+          "name": "Big Pecks",
+          "description": "This Pokémon's AC cannot be reduced by an opponent's moves.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "peck",
+          "leer",
+          "power-trip",
+          "hone-claws"
+        ],
+        "level6": [
+          "fury-attack",
+          "pluck"
+        ],
+        "level10": [
+          "taunt",
+          "scary-face"
+        ],
+        "level14": [
+          "drill-peck",
+          "swagger"
+        ],
+        "level18": [
+          "brave-bird"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          12,
+          17,
+          42,
+          44,
+          45,
+          46,
+          48,
+          66,
+          76,
+          88,
+          89,
+          90,
+          100
+        ]
+      }
+    },
+    {
+      "id": "corviknight",
+      "name": "Corviknight",
+      "number": 823,
+      "type": [
+        "flying",
+        "steel"
+      ],
+      "size": "large",
+      "sr": 11,
+      "minLevel": 8,
+      "eggGroup": [
+        "flying"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "3",
+        "maxStage": "3"
+      },
+      "description": "The Raven Pokémon. With their great intellect and flying skills, the black luster of its steel body could drive terror into the heart of any foe.",
+      "ac": 17,
+      "hp": 80,
+      "hitDice": "d8",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 20
+        },
+        {
+          "type": "flying",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "16",
+        "dex": "14",
+        "con": "14",
+        "int": "10",
+        "wis": "12",
+        "cha": "10"
+      },
+      "skills": [
+        "investigation",
+        "perception"
+      ],
+      "savingThrows": [
+        "dex"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Pressure",
+          "description": "Any move targeting this Pokémon directly (non-area of effect moves) reduces its PP by two when activated.",
+          "hidden": false
+        },
+        {
+          "name": "Unnerve",
+          "description": "Opponents in combat with this Pokémon cannot eat held berries.",
+          "hidden": false
+        },
+        {
+          "name": "Mirror Armor",
+          "description": "When affected by an effect that lowers this Pokémon's attack roll, AC, movement, or ability scores, the same effect is applied to the source (if applicable).",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "peck",
+          "leer",
+          "power-trip",
+          "hone-claws",
+          "fury-attack",
+          "pluck",
+          "steel-wing",
+          "iron-defense",
+          "metal-sound"
+        ],
+        "level10": [
+          "taunt",
+          "scary-face"
+        ],
+        "level14": [
+          "drill-peck",
+          "swagger"
+        ],
+        "level18": [
+          "brave-bird"
+        ],
+        "tm": [
+          1,
+          6,
+          8,
+          10,
+          12,
+          16,
+          17,
+          33,
+          42,
+          44,
+          45,
+          46,
+          48,
+          51,
+          66,
+          68,
+          76,
+          88,
+          89,
+          90,
+          91,
+          100
+        ]
+      }
+    },
+    {
+      "id": "blipbug",
+      "name": "Blipbug",
+      "number": 824,
+      "type": [
+        "bug"
+      ],
+      "size": "tiny",
+      "sr": 0.125,
+      "minLevel": 1,
+      "eggGroup": [
+        "bug"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "3",
+        "description": "Blipbug can evolve into Dottler at level 4 and above. When it evolves, its health increases by double its level, and it gains 7 points to add to its ability scores (max 20)."
+      },
+      "description": "The Larva Pokémon. Often found in gardens, this Pokémon has hairs on its body that it uses to assess its surroundings.",
+      "ac": 10,
+      "hp": 15,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 20
+        },
+        {
+          "type": "climbing",
+          "value": 20
+        }
+      ],
+      "attributes": {
+        "str": "7",
+        "dex": "10",
+        "con": "8",
+        "int": "8",
+        "wis": "10",
+        "cha": "10"
+      },
+      "skills": [
+        "history"
+      ],
+      "savingThrows": [
+        "int"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "name": "Swarm",
+          "description": "This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health.",
+          "hidden": false
+        },
+        {
+          "name": "Compound Eyes",
+          "description": "This Pokémon gets an additional +1 to attack rolls.",
+          "hidden": false
+        },
+        {
+          "name": "Telepathy",
+          "description": "This Pokémon cannot be damaged by its allies' attacks.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "struggle-bug"
+        ],
+        "egg": [
+          "infestation",
+          "recover",
+          "sticky-web",
+          "supersonic"
+        ]
+      }
+    },
+    {
+      "id": "dottler",
+      "name": "Dottler",
+      "number": 825,
+      "type": [
+        "bug",
+        "psychic"
+      ],
+      "size": "tiny",
+      "sr": 1,
+      "minLevel": 2,
+      "eggGroup": [
+        "bug"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "3",
+        "description": "Dottler can evolve into Orbeetle at level 7 and above. When it evolves, its health increases by double its level, and it gains 16 points to add to its ability scores (max 20)."
+      },
+      "description": "The Radome Pokémon. It barely moves, but it's still alive. Hiding in its shell without food or water seems to have awakened its psychic powers.",
+      "ac": 13,
+      "hp": 20,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 5
+        }
+      ],
+      "attributes": {
+        "str": "7",
+        "dex": "10",
+        "con": "10",
+        "int": "10",
+        "wis": "14",
+        "cha": "10"
+      },
+      "skills": [
+        "history"
+      ],
+      "savingThrows": [
+        "int"
+      ],
+      "senses": [
+        {
+          "type": "truesight",
+          "value": 15
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Swarm",
+          "description": "This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health.",
+          "hidden": false
+        },
+        {
+          "name": "Compound Eyes",
+          "description": "This Pokémon gets an additional +1 to attack rolls.",
+          "hidden": false
+        },
+        {
+          "name": "Telepathy",
+          "description": "This Pokémon cannot be damaged by its allies' attacks.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "struggle-bug",
+          "reflect",
+          "light-screen",
+          "confusion"
+        ],
+        "tm": [
+          3,
+          4,
+          6,
+          10,
+          16,
+          17,
+          20,
+          22,
+          28,
+          30,
+          33,
+          42,
+          44,
+          45,
+          48,
+          53,
+          66,
+          88,
+          90,
+          92
+        ]
+      }
+    },
+    {
+      "id": "orbeetle",
+      "name": "Orbeetle",
+      "number": 826,
+      "type": [
+        "bug",
+        "psychic"
+      ],
+      "size": "tiny",
+      "sr": 9,
+      "minLevel": 5,
+      "eggGroup": [
+        "bug"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "3",
+        "maxStage": "3"
+      },
+      "description": "The Seven Spot Pokémon. It's famous for its high level of intelligence, and the large size of its brain is proof that it also possesses immense psychic power.",
+      "ac": 16,
+      "hp": 20,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 25
+        },
+        {
+          "type": "climbing",
+          "value": 20
+        }
+      ],
+      "attributes": {
+        "str": "10",
+        "dex": "12",
+        "con": "12",
+        "int": "14",
+        "wis": "16",
+        "cha": "10"
+      },
+      "skills": [
+        "history",
+        "insight"
+      ],
+      "savingThrows": [
+        "int",
+        "wis"
+      ],
+      "senses": [
+        {
+          "type": "truesight",
+          "value": 15
+        }
+      ],
+      "abilities": [
+        {
+          "name": "Swarm",
+          "description": "This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health.",
+          "hidden": false
+        },
+        {
+          "name": "Frisk",
+          "description": "Upon entering a battle, a single opponent’s held item is revealed, if it has one.",
+          "hidden": false
+        },
+        {
+          "name": "Telepathy",
+          "description": "This Pokémon cannot be damaged by its allies' attacks.",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "struggle-bug",
+          "reflect",
+          "light-screen",
+          "confusion",
+          "confuse-ray",
+          "magic-coat"
+        ],
+        "level6": [
+          "agility",
+          "psybeam"
+        ],
+        "level10": [
+          "hypnosis",
+          "ally-switch",
+          "bug-buzz"
+        ],
+        "level14": [
+          "mirror-coat",
+          "psychic",
+          "after-you"
+        ],
+        "level18": [
+          "calm-mind",
+          "psychic-terrain"
+        ],
+        "tm": [
+          3,
+          4,
+          6,
+          10,
+          16,
+          17,
+          20,
+          22,
+          28,
+          30,
+          33,
+          42,
+          44,
+          45,
+          48,
+          53,
+          66,
+          88,
+          89,
+          90,
+          92
+        ]
+      }
+    },
+    {
       "id": "obstagoon",
       "name": "Obstagoon",
       "number": 862,
