@@ -146,6 +146,11 @@
       "description": "This Pokémon's moves ignore the poison immunity of creatures granted by their Pokémon type, and can inflict the poisoned status on poison and steel type creatures. If the target’s secondary type gives it vulnerability or resistance to the damage, it follows the secondary type for that effect."
     },
     {
+      "id": "cotton-down",
+      "name": "Cotton Down",
+      "description": "When this Pokémon is damaged, cotton spews everywhere. The area within 10ft of this Pokémon becomes difficult terrain for everything except Grass monotypes until the beginning of its next turn."
+    },
+    {
       "id": "curious-medicine",
       "name": "Curious Medicine",
       "description": "As a bonus action, this Pokémon can reset changes to the ability scores, AC, and attack modifier of either itself or an ally within 30 ft. This Pokémon may do this a number of times equal to its INT modifier (minimum of once), and it resets on a long rest."
@@ -199,6 +204,11 @@
       "id": "download",
       "name": "Download",
       "description": "Once per short rest, this Pokémon can choose a different damage type for one of their normal attacks."
+    },
+    {
+      "id": "drifter",
+      "name": "Drifter",
+      "description": "In windy conditions (DM discretion), this Pokémon's flying (hover) speed is doubled until windy conditions cease."
     },
     {
       "id": "drizzle",

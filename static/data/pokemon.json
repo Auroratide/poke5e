@@ -111281,6 +111281,232 @@
       }
     },
     {
+      "id": "gossifleur",
+      "name": "Gossifleur",
+      "number": 829,
+      "type": [
+        "grass"
+      ],
+      "size": "tiny",
+      "sr": 0.5,
+      "minLevel": 1,
+      "eggGroup": [
+        "grass"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Gossifleur can evolve into Eldegoss at level 7 and above. When it evolves, its health increases by double its level, and it gains 11 points to add to its ability scores (max 20)."
+      },
+      "description": "The Flowering Pokémon. It anchors itself in the ground with its single leg, then basks in the sun. After absorbing enough sunlight, its petals spread as it blooms brilliantly.",
+      "ac": 12,
+      "hp": 17,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 5
+        },
+        {
+          "type": "flying (hover)",
+          "value": 10
+        }
+      ],
+      "attributes": {
+        "str": "12",
+        "dex": "8",
+        "con": "12",
+        "int": "6",
+        "wis": "12",
+        "cha": "12"
+      },
+      "skills": [
+        "nature"
+      ],
+      "savingThrows": [
+        "wis"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "drifter",
+          "hidden": false
+        },
+        {
+          "id": "cotton-down",
+          "hidden": false
+        },
+        {
+          "id": "regenerator",
+          "hidden": false
+        },
+        {
+          "id": "effect-spore",
+          "hidden": true
+        }
+      ],
+      "specialAbilityText": "This Pokémon always has the Drifter ability, along with one other.",
+      "moves": {
+        "start": [
+          "leafage",
+          "sing"
+        ],
+        "level2": [
+          "rapid-spin",
+          "sweet-scent"
+        ],
+        "level6": [
+          "razor-leaf",
+          "round"
+        ],
+        "level10": [
+          "leaf-tornado",
+          "synthesis",
+          "hyper-voice"
+        ],
+        "level14": [
+          "aromatherapy",
+          "leaf-storm"
+        ],
+        "tm": [
+          6,
+          10,
+          11,
+          16,
+          17,
+          22,
+          42,
+          44,
+          45,
+          48,
+          53,
+          86,
+          88,
+          90,
+          100
+        ],
+        "egg": [
+          "growth",
+          "leech-seed",
+          "poison-powder",
+          "sleep-powder",
+          "stun-spore",
+          "worry-seed"
+        ]
+      }
+    },
+    {
+      "id": "eldegoss",
+      "name": "Eldegoss",
+      "number": 830,
+      "type": [
+        "grass"
+      ],
+      "size": "tiny",
+      "sr": 7,
+      "minLevel": 5,
+      "eggGroup": [
+        "grass"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Cotton Bloom Pokémon. The seeds attached to its cotton fluff are full of nutrients. It spreads them on the wind so that plants and other Pokémon can benefit from them.",
+      "ac": 15,
+      "hp": 50,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 10
+        },
+        {
+          "type": "flying (hover)",
+          "value": 20
+        }
+      ],
+      "attributes": {
+        "str": "12",
+        "dex": "11",
+        "con": "14",
+        "int": "6",
+        "wis": "16",
+        "cha": "14"
+      },
+      "skills": [
+        "nature"
+      ],
+      "savingThrows": [
+        "wis"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "drifter",
+          "hidden": false
+        },
+        {
+          "id": "cotton-down",
+          "hidden": false
+        },
+        {
+          "id": "regenerator",
+          "hidden": false
+        },
+        {
+          "id": "effect-spore",
+          "hidden": true
+        }
+      ],
+      "specialAbilityText": "This Pokémon always has the Drifter ability, along with one other.",
+      "moves": {
+        "start": [
+          "leafage",
+          "sing",
+          "rapid-spin",
+          "sweet-scent",
+          "cotton-spore"
+        ],
+        "level6": [
+          "razor-leaf",
+          "round"
+        ],
+        "level10": [
+          "leaf-tornado",
+          "synthesis"
+        ],
+        "level14": [
+          "hyper-voice",
+          "aromatherapy"
+        ],
+        "level18": [
+          "leaf-storm",
+          "cotton-guard"
+        ],
+        "tm": [
+          6,
+          10,
+          11,
+          15,
+          16,
+          17,
+          22,
+          42,
+          44,
+          45,
+          48,
+          53,
+          86,
+          88,
+          90,
+          100
+        ]
+      }
+    },
+    {
       "id": "obstagoon",
       "name": "Obstagoon",
       "number": 862,
