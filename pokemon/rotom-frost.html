@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-77db18cc.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-a023a12a.js">
 	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-10d0c3ca.js">
 	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
 	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-baa52660.js">
@@ -91,7 +91,7 @@
 <dd class="svelte-1umt4iy">none</dd></dl></section>
     <hr class="svelte-3tneqv">
     <section class="abilities">
-        <p class="svelte-3tneqv"><strong>Levitate:</strong> This Pokémon is immune to ground moves.</p><p class="svelte-3tneqv"><strong>Blizzard:</strong> This Pokémon knows Blizzard as a fifth move. The move is forgotten if it takes any other form.</p><p class="svelte-3tneqv"><strong>Form Change:</strong> Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form.</p></section>
+        <p class="svelte-3tneqv"><strong>Levitate:</strong> This Pokémon is immune to ground moves.</p><p class="svelte-3tneqv"><strong>Blizzard:</strong> This Pokémon knows Blizzard as a fifth move. The move is forgotten if it takes any other form.</p><p class="svelte-3tneqv"><strong>Form Change (Rotom):</strong> Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form.</p></section>
     
     <hr class="svelte-3tneqv">
     <section class="moves"><dl class="svelte-zgshlf" style="--local-columns: 1;"><dt>Starting</dt>
@@ -115,10 +115,10 @@
 </div>
 
 
-		<script type="module" data-hydrate="1fo2omw">
-		import { start } from "/poke5e/_app/start-77db18cc.js";
+		<script type="module" data-hydrate="synk4y">
+		import { start } from "/poke5e/_app/start-a023a12a.js";
 		start({
-			target: document.querySelector('[data-hydrate="1fo2omw"]').parentNode,
+			target: document.querySelector('[data-hydrate="synk4y"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
 			session: {},
 			route: true,
@@ -134,6 +134,6 @@
 				params: {id:"rotom-frost"}
 			}
 		});
-	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/rotom-frost.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"rotom-frost\",\"name\":\"Rotom Frost\",\"number\":479,\"type\":[\"electric\",\"ice\"],\"size\":\"small\",\"sr\":8,\"minLevel\":5,\"eggGroup\":[\"gender unknown\"],\"gender\":\"0:0\",\"description\":\"The Plasma Pokémon. Its body is composed of plasma. It is known to infiltrate electronic devices and wreak havoc.\",\"ac\":16,\"hp\":44,\"hitDice\":\"d8\",\"speed\":[{\"type\":\"flying (hover)\",\"value\":30}],\"attributes\":{\"str\":\"16\",\"dex\":\"16\",\"con\":\"14\",\"int\":\"10\",\"wis\":\"12\",\"cha\":\"10\"},\"skills\":[\"arcana\"],\"savingThrows\":[\"dex\"],\"senses\":[],\"abilities\":[{\"name\":\"Levitate\",\"description\":\"This Pokémon is immune to ground moves.\",\"hidden\":false},{\"name\":\"Blizzard\",\"description\":\"This Pokémon knows Blizzard as a fifth move. The move is forgotten if it takes any other form.\",\"hidden\":false},{\"name\":\"Form Change\",\"description\":\"Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form.\",\"hidden\":false}],\"moves\":{\"start\":[\"astonish\",\"confuse-ray\",\"thunder-shock\",\"thunder-wave\",\"trick\",\"uproar\"],\"level6\":[\"double-team\",\"shock-wave\"],\"level10\":[\"ominous-wind\"],\"level14\":[\"substitute\",\"electro-ball\"],\"level18\":[\"hex\",\"charge\",\"discharge\"],\"tm\":[6,10,11,16,17,18,21,24,25,27,30,32,33,42,44,46,48,57,61,72,73,77,85,87,88,90,97,100]}}"}</script></div>
+	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/rotom-frost.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"rotom-frost\",\"name\":\"Rotom Frost\",\"number\":479,\"type\":[\"electric\",\"ice\"],\"size\":\"small\",\"sr\":8,\"minLevel\":5,\"eggGroup\":[\"gender unknown\"],\"gender\":\"0:0\",\"description\":\"The Plasma Pokémon. Its body is composed of plasma. It is known to infiltrate electronic devices and wreak havoc.\",\"ac\":16,\"hp\":44,\"hitDice\":\"d8\",\"speed\":[{\"type\":\"flying (hover)\",\"value\":30}],\"attributes\":{\"str\":\"16\",\"dex\":\"16\",\"con\":\"14\",\"int\":\"10\",\"wis\":\"12\",\"cha\":\"10\"},\"skills\":[\"arcana\"],\"savingThrows\":[\"dex\"],\"senses\":[],\"abilities\":[{\"id\":\"levitate\",\"name\":\"Levitate\",\"description\":\"This Pokémon is immune to ground moves.\",\"hidden\":false},{\"id\":\"blizzard\",\"name\":\"Blizzard\",\"description\":\"This Pokémon knows Blizzard as a fifth move. The move is forgotten if it takes any other form.\",\"hidden\":false},{\"id\":\"form-change-rotom\",\"name\":\"Form Change (Rotom)\",\"description\":\"Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form.\",\"hidden\":false}],\"moves\":{\"start\":[\"astonish\",\"confuse-ray\",\"thunder-shock\",\"thunder-wave\",\"trick\",\"uproar\"],\"level6\":[\"double-team\",\"shock-wave\"],\"level10\":[\"ominous-wind\"],\"level14\":[\"substitute\",\"electro-ball\"],\"level18\":[\"hex\",\"charge\",\"discharge\"],\"tm\":[6,10,11,16,17,18,21,24,25,27,30,32,33,42,44,46,48,57,61,72,73,77,85,87,88,90,97,100]}}"}</script></div>
 	</body>
 </html>
