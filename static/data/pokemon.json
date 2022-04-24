@@ -111715,6 +111715,234 @@
       }
     },
     {
+      "id": "chewtle",
+      "name": "Chewtle",
+      "number": 833,
+      "type": [
+        "water"
+      ],
+      "size": "tiny",
+      "sr": 0.5,
+      "minLevel": 1,
+      "eggGroup": [
+        "monster",
+        "water 1"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Chewtle can evolve into Drednaw at level 7 and above. When it evolves, its health increases by double its level, and it gains 11 points to add to its ability scores (max 20)."
+      },
+      "description": "The Snapping Pokémon. It starts off battles by attacking with its rock-hard horn, but as soon as the opponent flinches, this Pokémon bites down and never lets go.",
+      "ac": 13,
+      "hp": 17,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 20
+        },
+        {
+          "type": "swimming",
+          "value": 20
+        }
+      ],
+      "attributes": {
+        "str": "13",
+        "dex": "10",
+        "con": "12",
+        "int": "6",
+        "wis": "10",
+        "cha": "10"
+      },
+      "skills": [
+        "survival"
+      ],
+      "savingThrows": [
+        "str"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "strong-jaw",
+          "hidden": false
+        },
+        {
+          "id": "shell-armor",
+          "hidden": false
+        },
+        {
+          "id": "swift-swim",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "water-gun"
+        ],
+        "level2": [
+          "bite"
+        ],
+        "level6": [
+          "protect",
+          "headbutt"
+        ],
+        "level10": [
+          "counter",
+          "jaw-lock"
+        ],
+        "level14": [
+          "liquidation"
+        ],
+        "level18": [
+          "body-slam"
+        ],
+        "tm": [
+          6,
+          10,
+          17,
+          18,
+          42,
+          44,
+          45,
+          48,
+          66,
+          88,
+          90,
+          94,
+          100
+        ],
+        "egg": [
+          "dragon-tail",
+          "gastro-acid",
+          "skull-bash"
+        ]
+      }
+    },
+    {
+      "id": "drednaw",
+      "name": "Drednaw",
+      "number": 834,
+      "type": [
+        "water",
+        "rock"
+      ],
+      "size": "small",
+      "sr": 9,
+      "minLevel": 5,
+      "eggGroup": [
+        "monster",
+        "water 1"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Bite Pokémon. With jaws that can shear through steel rods, this highly aggressive Pokémon chomps down on its unfortunate prey.",
+      "ac": 17,
+      "hp": 58,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 20
+        },
+        {
+          "type": "swimming",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "17",
+        "dex": "12",
+        "con": "16",
+        "int": "6",
+        "wis": "11",
+        "cha": "10"
+      },
+      "skills": [
+        "athletics",
+        "survival"
+      ],
+      "savingThrows": [
+        "str"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "strong-jaw",
+          "hidden": false
+        },
+        {
+          "id": "shell-armor",
+          "hidden": false
+        },
+        {
+          "id": "swift-swim",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "water-gun",
+          "bite",
+          "rock-tomb",
+          "razor-shell",
+          "crunch",
+          "rock-polish"
+        ],
+        "level6": [
+          "protect",
+          "headbutt"
+        ],
+        "level10": [
+          "counter",
+          "jaw-lock"
+        ],
+        "level14": [
+          "liquidation"
+        ],
+        "level18": [
+          "body-slam",
+          "head-smash"
+        ],
+        "tm": [
+          6,
+          10,
+          13,
+          14,
+          15,
+          17,
+          18,
+          26,
+          37,
+          39,
+          42,
+          44,
+          45,
+          48,
+          54,
+          55,
+          66,
+          67,
+          68,
+          71,
+          78,
+          80,
+          84,
+          88,
+          90,
+          94,
+          98,
+          100
+        ]
+      }
+    },
+    {
       "id": "obstagoon",
       "name": "Obstagoon",
       "number": 862,
