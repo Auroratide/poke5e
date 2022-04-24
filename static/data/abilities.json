@@ -56,6 +56,11 @@
       "description": "If an opponent in battle with this Pokémon falls asleep, they take an amount of damage equal to this Pokémon's proficeincy bonus at the end of each of their turns."
     },
     {
+      "id": "ball-fetch",
+      "name": "Ball Fetch",
+      "description": "This Pokémon has advantage catching or intercepting thrown/falling objects."
+    },
+    {
       "id": "battery",
       "name": "Battery",
       "description": "Allies that activate electric-type moves within 20 feet of this Pokémon double their damage dice."
