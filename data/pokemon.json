@@ -111507,6 +111507,647 @@
       }
     },
     {
+      "id": "wooloo",
+      "name": "Wooloo",
+      "number": 831,
+      "type": [
+        "normal"
+      ],
+      "size": "tiny",
+      "sr": 0.25,
+      "minLevel": 1,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Wooloo can evolve into Dubwool at level 7 and above. When it evolves, its health increases by double its level, and it gains 13 points to add to its ability scores (max 20)."
+      },
+      "description": "The Sheep Pokémon. Its curly fleece is such an effective cushion that this Pokémon could fall off a cliff and stand right back up at the bottom, unharmed.",
+      "ac": 13,
+      "hp": 17,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 25
+        }
+      ],
+      "attributes": {
+        "str": "11",
+        "dex": "10",
+        "con": "11",
+        "int": "6",
+        "wis": "10",
+        "cha": "10"
+      },
+      "skills": [
+        "nature"
+      ],
+      "savingThrows": [
+        "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "fluffy",
+          "hidden": false
+        },
+        {
+          "id": "run-away",
+          "hidden": false
+        },
+        {
+          "id": "bulletproof",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "growl"
+        ],
+        "level2": [
+          "defense-curl",
+          "copycat"
+        ],
+        "level6": [
+          "guard-split",
+          "double-kick"
+        ],
+        "level10": [
+          "headbutt",
+          "take-down",
+          "guard-swap"
+        ],
+        "level14": [
+          "reversal",
+          "cotton-guard"
+        ],
+        "level18": [
+          "double-edge"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          17,
+          42,
+          44,
+          45,
+          48,
+          66,
+          73,
+          88,
+          90,
+          93,
+          100
+        ],
+        "egg": [
+          "counter",
+          "stomp",
+          "swagger"
+        ]
+      }
+    },
+    {
+      "id": "dubwool",
+      "name": "Dubwool",
+      "number": 832,
+      "type": [
+        "normal"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Sheep Pokémon. Weave a carpet from its springy wool, and you end up with something closer to a trampoline. You'll start to bounce the moment you set foot on it.",
+      "ac": 15,
+      "hp": 54,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "14",
+        "dex": "12",
+        "con": "14",
+        "int": "6",
+        "wis": "13",
+        "cha": "11"
+      },
+      "skills": [
+        "nature"
+      ],
+      "savingThrows": [
+        "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "fluffy",
+          "hidden": false
+        },
+        {
+          "id": "steadfast",
+          "hidden": false
+        },
+        {
+          "id": "bulletproof",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "growl",
+          "defense-curl",
+          "copycat"
+        ],
+        "level6": [
+          "guard-split",
+          "double-kick"
+        ],
+        "level10": [
+          "headbutt",
+          "take-down"
+        ],
+        "level14": [
+          "guard-swap",
+          "reversal"
+        ],
+        "level18": [
+          "cotton-guard",
+          "double-edge",
+          "last-resort"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          15,
+          17,
+          42,
+          44,
+          45,
+          48,
+          66,
+          68,
+          73,
+          75,
+          88,
+          90,
+          93,
+          100
+        ]
+      }
+    },
+    {
+      "id": "chewtle",
+      "name": "Chewtle",
+      "number": 833,
+      "type": [
+        "water"
+      ],
+      "size": "tiny",
+      "sr": 0.5,
+      "minLevel": 1,
+      "eggGroup": [
+        "monster",
+        "water 1"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Chewtle can evolve into Drednaw at level 7 and above. When it evolves, its health increases by double its level, and it gains 11 points to add to its ability scores (max 20)."
+      },
+      "description": "The Snapping Pokémon. It starts off battles by attacking with its rock-hard horn, but as soon as the opponent flinches, this Pokémon bites down and never lets go.",
+      "ac": 13,
+      "hp": 17,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 20
+        },
+        {
+          "type": "swimming",
+          "value": 20
+        }
+      ],
+      "attributes": {
+        "str": "13",
+        "dex": "10",
+        "con": "12",
+        "int": "6",
+        "wis": "10",
+        "cha": "10"
+      },
+      "skills": [
+        "survival"
+      ],
+      "savingThrows": [
+        "str"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "strong-jaw",
+          "hidden": false
+        },
+        {
+          "id": "shell-armor",
+          "hidden": false
+        },
+        {
+          "id": "swift-swim",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "water-gun"
+        ],
+        "level2": [
+          "bite"
+        ],
+        "level6": [
+          "protect",
+          "headbutt"
+        ],
+        "level10": [
+          "counter",
+          "jaw-lock"
+        ],
+        "level14": [
+          "liquidation"
+        ],
+        "level18": [
+          "body-slam"
+        ],
+        "tm": [
+          6,
+          10,
+          17,
+          18,
+          42,
+          44,
+          45,
+          48,
+          66,
+          88,
+          90,
+          94,
+          100
+        ],
+        "egg": [
+          "dragon-tail",
+          "gastro-acid",
+          "skull-bash"
+        ]
+      }
+    },
+    {
+      "id": "drednaw",
+      "name": "Drednaw",
+      "number": 834,
+      "type": [
+        "water",
+        "rock"
+      ],
+      "size": "small",
+      "sr": 9,
+      "minLevel": 5,
+      "eggGroup": [
+        "monster",
+        "water 1"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Bite Pokémon. With jaws that can shear through steel rods, this highly aggressive Pokémon chomps down on its unfortunate prey.",
+      "ac": 17,
+      "hp": 58,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 20
+        },
+        {
+          "type": "swimming",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "17",
+        "dex": "12",
+        "con": "16",
+        "int": "6",
+        "wis": "11",
+        "cha": "10"
+      },
+      "skills": [
+        "athletics",
+        "survival"
+      ],
+      "savingThrows": [
+        "str"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "strong-jaw",
+          "hidden": false
+        },
+        {
+          "id": "shell-armor",
+          "hidden": false
+        },
+        {
+          "id": "swift-swim",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "water-gun",
+          "bite",
+          "rock-tomb",
+          "razor-shell",
+          "crunch",
+          "rock-polish"
+        ],
+        "level6": [
+          "protect",
+          "headbutt"
+        ],
+        "level10": [
+          "counter",
+          "jaw-lock"
+        ],
+        "level14": [
+          "liquidation"
+        ],
+        "level18": [
+          "body-slam",
+          "head-smash"
+        ],
+        "tm": [
+          6,
+          10,
+          13,
+          14,
+          15,
+          17,
+          18,
+          26,
+          37,
+          39,
+          42,
+          44,
+          45,
+          48,
+          54,
+          55,
+          66,
+          67,
+          68,
+          71,
+          78,
+          80,
+          84,
+          88,
+          90,
+          94,
+          98,
+          100
+        ]
+      }
+    },
+    {
+      "id": "yamper",
+      "name": "Yamper",
+      "number": 835,
+      "type": [
+        "electric"
+      ],
+      "size": "tiny",
+      "sr": 0.5,
+      "minLevel": 1,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Yamper can evolve into Boltund at level 8 and above. When it evolves, its health increases by double its level, and it gains 11 points to add to its ability scores (max 20)."
+      },
+      "description": "The Puppy Pokémon. This gluttonous Pokémon only assists people with their work because it wants treats. As it runs, it crackles with electricity.",
+      "ac": 12,
+      "hp": 17,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "11",
+        "dex": "12",
+        "con": "12",
+        "int": "6",
+        "wis": "10",
+        "cha": "12"
+      },
+      "skills": [
+        "acrobatics"
+      ],
+      "savingThrows": [
+        "cha"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "ball-fetch",
+          "hidden": false
+        },
+        {
+          "id": "rattled",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "tail-whip"
+        ],
+        "level2": [
+          "nuzzle",
+          "bite"
+        ],
+        "level6": [
+          "roar",
+          "spark"
+        ],
+        "level10": [
+          "charm",
+          "crunch"
+        ],
+        "level14": [
+          "charge",
+          "wild-charge"
+        ],
+        "level18": [
+          "play-rough"
+        ],
+        "tm": [
+          6,
+          10,
+          17,
+          24,
+          25,
+          42,
+          44,
+          45,
+          48,
+          72,
+          73,
+          88,
+          90,
+          93,
+          95,
+          100
+        ],
+        "egg": [
+          "discharge",
+          "double-edge",
+          "flame-charge",
+          "howl",
+          "sand-attack"
+        ]
+      }
+    },
+    {
+      "id": "boltund",
+      "name": "Boltund",
+      "number": 836,
+      "type": [
+        "electric"
+      ],
+      "size": "small",
+      "sr": 7,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Dog Pokémon. This Pokémon generates electricity and channels it into its legs to keep them going strong. Boltund can run nonstop for three full days.",
+      "ac": 14,
+      "hp": 52,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 45
+        }
+      ],
+      "attributes": {
+        "str": "14",
+        "dex": "17",
+        "con": "13",
+        "int": "6",
+        "wis": "10",
+        "cha": "14"
+      },
+      "skills": [
+        "acrobatics"
+      ],
+      "savingThrows": [
+        "con",
+        "cha"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "strong-jaw",
+          "hidden": false
+        },
+        {
+          "id": "competitive",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "tail-whip",
+          "nuzzle",
+          "bite",
+          "electrify"
+        ],
+        "level6": [
+          "roar",
+          "spark"
+        ],
+        "level10": [
+          "charm",
+          "crunch"
+        ],
+        "level14": [
+          "charge",
+          "wild-charge"
+        ],
+        "level18": [
+          "play-rough",
+          "electric-terrain"
+        ],
+        "tm": [
+          6,
+          10,
+          15,
+          17,
+          24,
+          25,
+          42,
+          44,
+          45,
+          48,
+          68,
+          72,
+          73,
+          88,
+          90,
+          93,
+          95,
+          100
+        ]
+      }
+    },
+    {
       "id": "obstagoon",
       "name": "Obstagoon",
       "number": 862,
