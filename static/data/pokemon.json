@@ -111507,6 +111507,214 @@
       }
     },
     {
+      "id": "wooloo",
+      "name": "Wooloo",
+      "number": 831,
+      "type": [
+        "normal"
+      ],
+      "size": "tiny",
+      "sr": 0.25,
+      "minLevel": 1,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Wooloo can evolve into Dubwool at level 7 and above. When it evolves, its health increases by double its level, and it gains 13 points to add to its ability scores (max 20)."
+      },
+      "description": "The Sheep Pokémon. Its curly fleece is such an effective cushion that this Pokémon could fall off a cliff and stand right back up at the bottom, unharmed.",
+      "ac": 13,
+      "hp": 17,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 25
+        }
+      ],
+      "attributes": {
+        "str": "11",
+        "dex": "10",
+        "con": "11",
+        "int": "6",
+        "wis": "10",
+        "cha": "10"
+      },
+      "skills": [
+        "nature"
+      ],
+      "savingThrows": [
+        "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "fluffy",
+          "hidden": false
+        },
+        {
+          "id": "run-away",
+          "hidden": false
+        },
+        {
+          "id": "bulletproof",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "growl"
+        ],
+        "level2": [
+          "defense-curl",
+          "copycat"
+        ],
+        "level6": [
+          "guard-split",
+          "double-kick"
+        ],
+        "level10": [
+          "headbutt",
+          "take-down",
+          "guard-swap"
+        ],
+        "level14": [
+          "reversal",
+          "cotton-guard"
+        ],
+        "level18": [
+          "double-edge"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          17,
+          42,
+          44,
+          45,
+          48,
+          66,
+          73,
+          88,
+          90,
+          93,
+          100
+        ],
+        "egg": [
+          "counter",
+          "stomp",
+          "swagger"
+        ]
+      }
+    },
+    {
+      "id": "dubwool",
+      "name": "Dubwool",
+      "number": 832,
+      "type": [
+        "normal"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Sheep Pokémon. Weave a carpet from its springy wool, and you end up with something closer to a trampoline. You'll start to bounce the moment you set foot on it.",
+      "ac": 15,
+      "hp": 54,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "14",
+        "dex": "12",
+        "con": "14",
+        "int": "6",
+        "wis": "13",
+        "cha": "11"
+      },
+      "skills": [
+        "nature"
+      ],
+      "savingThrows": [
+        "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "fluffy",
+          "hidden": false
+        },
+        {
+          "id": "steadfast",
+          "hidden": false
+        },
+        {
+          "id": "bulletproof",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "growl",
+          "defense-curl",
+          "copycat"
+        ],
+        "level6": [
+          "guard-split",
+          "double-kick"
+        ],
+        "level10": [
+          "headbutt",
+          "take-down"
+        ],
+        "level14": [
+          "guard-swap",
+          "reversal"
+        ],
+        "level18": [
+          "cotton-guard",
+          "double-edge",
+          "last-resort"
+        ],
+        "tm": [
+          1,
+          6,
+          10,
+          15,
+          17,
+          42,
+          44,
+          45,
+          48,
+          66,
+          68,
+          73,
+          75,
+          88,
+          90,
+          93,
+          100
+        ]
+      }
+    },
+    {
       "id": "obstagoon",
       "name": "Obstagoon",
       "number": 862,
