@@ -31,5 +31,8 @@
   "author": {
     "name": "Timothy Foster",
     "url": "https://auroratide.com"
+  },
+  "dependencies": {
+    "@auroratide/pokemon-types": "^0.1.0"
   }
 }
