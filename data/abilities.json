@@ -416,6 +416,11 @@
       "description": "If the move is known, this Pokémon may use the Grassy Terrain move as a bonus action."
     },
     {
+      "id": "gulp-missile",
+      "name": "Gulp Missile",
+      "description": "May Grapple as a bonus action after completing either Surf or Dive. As a bonus action, may launch a creature grappled by you up to 15ft, dealing fall damage equivalent to the distance launched."
+    },
+    {
       "id": "guts",
       "name": "Guts",
       "description": "When this Pokémon is burned or poisoned, they are not affected by the disadvantage or reduced damage effects. They still take damage at the end of each of their turns."
