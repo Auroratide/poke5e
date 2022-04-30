@@ -112148,6 +112148,327 @@
       }
     },
     {
+      "id": "rolycoly",
+      "name": "Rolycoly",
+      "number": 837,
+      "type": [
+        "rock"
+      ],
+      "size": "tiny",
+      "sr": 0.5,
+      "minLevel": 1,
+      "eggGroup": [
+        "mineral"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "3",
+        "description": "Rolycoly can evolve into Carkol at level 7 and above. When it evolves, its health increases by double its level, and it gains 9 points to add to its ability scores (max 20)."
+      },
+      "description": "The Coal Pokémon. Most of its body has the same composition as coal. Fittingly, this Pokémon was first discovered in coal mines about 400 years ago.",
+      "ac": 13,
+      "hp": 17,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 20
+        }
+      ],
+      "attributes": {
+        "str": "12",
+        "dex": "10",
+        "con": "12",
+        "int": "6",
+        "wis": "10",
+        "cha": "10"
+      },
+      "skills": [
+        "survival"
+      ],
+      "savingThrows": [
+        "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "steam-engine",
+          "hidden": false
+        },
+        {
+          "id": "heatproof",
+          "hidden": false
+        },
+        {
+          "id": "flash-fire",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "smokescreen"
+        ],
+        "level2": [
+          "rapid-spin",
+          "smack-down"
+        ],
+        "level6": [
+          "rock-polish",
+          "ancient-power"
+        ],
+        "level10": [
+          "incinerate",
+          "stealth-rock"
+        ],
+        "level14": [
+          "heat-crash",
+          "rock-blast"
+        ],
+        "tm": [
+          6,
+          10,
+          17,
+          33,
+          37,
+          39,
+          42,
+          44,
+          45,
+          48,
+          61,
+          71,
+          74,
+          80,
+          88,
+          90,
+          100
+        ],
+        "egg": [
+          "block",
+          "explosion",
+          "mud-slap"
+        ]
+      }
+    },
+    {
+      "id": "carkol",
+      "name": "Carkol",
+      "number": 838,
+      "type": [
+        "rock",
+        "fire"
+      ],
+      "size": "small",
+      "sr": 7,
+      "minLevel": 5,
+      "eggGroup": [
+        "mineral"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "3",
+        "description": "Carkol can evolve into Coalossal at level 14 and above. When it evolves, its health increases by double its level, and it gains 7 points to add to its ability scores (max 20)."
+      },
+      "description": "The Coal Pokémon. By rapidly rolling its legs, it can travel at over 18 mph. The temperature of the flames it breathes exceeds 1,800 degrees Fahrenheit.",
+      "ac": 15,
+      "hp": 55,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 25
+        }
+      ],
+      "attributes": {
+        "str": "14",
+        "dex": "11",
+        "con": "16",
+        "int": "6",
+        "wis": "12",
+        "cha": "10"
+      },
+      "skills": [
+        "survival"
+      ],
+      "savingThrows": [
+        "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "steam-engine",
+          "hidden": false
+        },
+        {
+          "id": "flame-body",
+          "hidden": false
+        },
+        {
+          "id": "flash-fire",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "smokescreen",
+          "rapid-spin",
+          "smack-down",
+          "flame-charge"
+        ],
+        "level6": [
+          "rock-polish",
+          "ancient-power"
+        ],
+        "level10": [
+          "incinerate"
+        ],
+        "level14": [
+          "stealth-rock",
+          "heat-crash"
+        ],
+        "level18": [
+          "rock-blast",
+          "burn-up"
+        ],
+        "tm": [
+          6,
+          10,
+          17,
+          33,
+          35,
+          37,
+          38,
+          39,
+          42,
+          44,
+          45,
+          48,
+          50,
+          55,
+          61,
+          71,
+          74,
+          80,
+          88,
+          90,
+          100
+        ]
+      }
+    },
+    {
+      "id": "coalossal",
+      "name": "Coalossal",
+      "number": 839,
+      "type": [
+        "rock",
+        "fire"
+      ],
+      "size": "large",
+      "sr": 14,
+      "minLevel": 10,
+      "eggGroup": [
+        "mineral"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "3",
+        "maxStage": "3"
+      },
+      "description": "The Coal Pokémon. While it's engaged in battle, its mountain of coal will burn bright red, sending off sparks that scorch the surrounding area.",
+      "ac": 17,
+      "hp": 129,
+      "hitDice": "d12",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 25
+        }
+      ],
+      "attributes": {
+        "str": "17",
+        "dex": "11",
+        "con": "20",
+        "int": "6",
+        "wis": "14",
+        "cha": "10"
+      },
+      "skills": [
+        "athletics",
+        "survival"
+      ],
+      "savingThrows": [
+        "str",
+        "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "steam-engine",
+          "hidden": false
+        },
+        {
+          "id": "flame-body",
+          "hidden": false
+        },
+        {
+          "id": "flash-fire",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "tackle",
+          "smokescreen",
+          "rapid-spin",
+          "smack-down",
+          "flame-charge",
+          "rock-polish",
+          "ancient-power",
+          "incinerate",
+          "tar-shot"
+        ],
+        "level14": [
+          "stealth-rock",
+          "heat-crash"
+        ],
+        "level18": [
+          "rock-blast",
+          "burn-up"
+        ],
+        "tm": [
+          6,
+          10,
+          15,
+          17,
+          22,
+          33,
+          35,
+          37,
+          38,
+          39,
+          42,
+          44,
+          45,
+          48,
+          50,
+          55,
+          61,
+          68,
+          71,
+          74,
+          78,
+          80,
+          88,
+          90,
+          100
+        ]
+      }
+    },
+    {
       "id": "cramorant",
       "name": "Cramorant",
       "number": 845,

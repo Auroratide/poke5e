@@ -1086,6 +1086,11 @@
       "description": "Once per long rest, when this Pokémon fails a saving throw against a negative condition, it can choose to pass instead."
     },
     {
+      "id": "steam-engine",
+      "name": "Steam Engine",
+      "description": "When damaged by a Fire- or Water-type move, this Pokémon's walking speed becomes double its base value until the end of its next turn."
+    },
+    {
       "id": "steelworker",
       "name": "Steelworker",
       "description": "This Pokémon adds its proficiency bonus to damage dealt by steel-type moves."
