@@ -112469,6 +112469,326 @@
       }
     },
     {
+      "id": "applin",
+      "name": "Applin",
+      "number": 840,
+      "type": [
+        "grass",
+        "dragon"
+      ],
+      "size": "tiny",
+      "sr": 0.125,
+      "minLevel": 1,
+      "eggGroup": [
+        "grass",
+        "dragon"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Applin can evolve at level 5 and above. It evolves into a Flapple if inhabiting a green or gold apple, and into an Appletun if inhabiting a red apple. When it evolves, its health increases by double its level, and it gains 14 points to add to its ability scores (max 20)."
+      },
+      "description": "The Apple Core Pokémon. It spends its entire life inside an apple. It hides from its natural enemies, bird Pokémon, by pretending it's just an apple and nothing more.",
+      "ac": 13,
+      "hp": 16,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 10
+        },
+        {
+          "type": "climbing",
+          "value": 10
+        }
+      ],
+      "attributes": {
+        "str": "10",
+        "dex": "10",
+        "con": "11",
+        "int": "6",
+        "wis": "10",
+        "cha": "12"
+      },
+      "skills": [
+        "deception"
+      ],
+      "savingThrows": [
+        "cha"
+      ],
+      "senses": [
+        {
+          "type": "darkvision",
+          "value": 30
+        }
+      ],
+      "abilities": [
+        {
+          "id": "ripen",
+          "hidden": false
+        },
+        {
+          "id": "gluttony",
+          "hidden": false
+        },
+        {
+          "id": "bulletproof",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "withdraw",
+          "astonish"
+        ],
+        "tm": [
+          45
+        ]
+      }
+    },
+    {
+      "id": "flapple",
+      "name": "Flapple",
+      "number": 841,
+      "type": [
+        "grass",
+        "dragon"
+      ],
+      "size": "tiny",
+      "sr": 7,
+      "minLevel": 5,
+      "eggGroup": [
+        "grass",
+        "dragon"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Apple Wing Pokémon. It flies on wings of apple skin and spits a powerful acid. It can also change its shape into that of an apple.",
+      "ac": 15,
+      "hp": 44,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 10
+        },
+        {
+          "type": "flying",
+          "value": 25
+        }
+      ],
+      "attributes": {
+        "str": "16",
+        "dex": "15",
+        "con": "13",
+        "int": "6",
+        "wis": "10",
+        "cha": "14"
+      },
+      "skills": [
+        "acrobatics",
+        "deception"
+      ],
+      "savingThrows": [
+        "dex",
+        "cha"
+      ],
+      "senses": [
+        {
+          "type": "darkvision",
+          "value": 30
+        }
+      ],
+      "abilities": [
+        {
+          "id": "ripen",
+          "hidden": false
+        },
+        {
+          "id": "gluttony",
+          "hidden": false
+        },
+        {
+          "id": "hustle",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "withdraw",
+          "astonish",
+          "wing-attack",
+          "recycle",
+          "growth",
+          "twister",
+          "acid-spray",
+          "acrobatics"
+        ],
+        "level6": [
+          "leech-seed",
+          "protect",
+          "dragon-breath"
+        ],
+        "level10": [
+          "dragon-dance",
+          "dragon-pulse"
+        ],
+        "level14": [
+          "grav-apple",
+          "iron-defense"
+        ],
+        "level18": [
+          "fly",
+          "dragon-rush"
+        ],
+        "tm": [
+          6,
+          10,
+          11,
+          15,
+          17,
+          22,
+          42,
+          44,
+          45,
+          48,
+          53,
+          62,
+          68,
+          76,
+          86,
+          88,
+          89,
+          90,
+          100
+        ]
+      }
+    },
+    {
+      "id": "appletun",
+      "name": "Appletun",
+      "number": 842,
+      "type": [
+        "grass",
+        "dragon"
+      ],
+      "size": "tiny",
+      "sr": 7,
+      "minLevel": 5,
+      "eggGroup": [
+        "grass",
+        "dragon"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Apple Nectar Pokémon. Its body is covered in sweet nectar, and the skin on its back is especially yummy. A nectarous scent wafts from its body, luring in the bug Pokémon it preys on.",
+      "ac": 15,
+      "hp": 52,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 25
+        }
+      ],
+      "attributes": {
+        "str": "15",
+        "dex": "10",
+        "con": "16",
+        "int": "6",
+        "wis": "13",
+        "cha": "14"
+      },
+      "skills": [
+        "deception",
+        "performance"
+      ],
+      "savingThrows": [
+        "con",
+        "cha"
+      ],
+      "senses": [
+        {
+          "type": "darkvision",
+          "value": 30
+        }
+      ],
+      "abilities": [
+        {
+          "id": "ripen",
+          "hidden": false
+        },
+        {
+          "id": "gluttony",
+          "hidden": false
+        },
+        {
+          "id": "thick-fat",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "withdraw",
+          "astonish",
+          "headbutt",
+          "recycle",
+          "growth",
+          "sweet-scent",
+          "curse",
+          "stomp"
+        ],
+        "level6": [
+          "leech-seed",
+          "protect",
+          "bullet-seed"
+        ],
+        "level10": [
+          "recover",
+          "apple-acid"
+        ],
+        "level14": [
+          "body-slam",
+          "iron-defense"
+        ],
+        "level18": [
+          "dragon-pulse",
+          "energy-ball"
+        ],
+        "tm": [
+          6,
+          10,
+          11,
+          15,
+          16,
+          17,
+          20,
+          22,
+          26,
+          33,
+          42,
+          44,
+          45,
+          48,
+          53,
+          66,
+          68,
+          78,
+          86,
+          88,
+          90,
+          100
+        ]
+      }
+    },
+    {
       "id": "cramorant",
       "name": "Cramorant",
       "number": 845,
