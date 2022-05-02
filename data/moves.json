@@ -280,6 +280,23 @@
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
     {
+      "id": "apple-acid",
+      "name": "Apple Acid",
+      "type": "grass",
+      "power": [
+        "dex",
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "self (15ft cone)",
+      "description": [
+        "You douse the area in the acid of tart apples. Targets in the area must make a DEX save. A creature takes 1d10 + MOVE grass damage on failure, half on success. Every creature that fails the save also suffers -2 to DEX or CON saving throws until the end of the encounter or until withdrawn. This effect may stack up to three times on the same creature."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
+    },
+    {
       "id": "aqua-jet",
       "name": "Aqua Jet",
       "type": "water",
@@ -3834,6 +3851,24 @@
       "description": [
         "Grass sprouts from the ground in a circle around you, coating the earth with healing energy. For 3 turns, all creatures in the affected area heal for an amount of hit points equal to their proficiency bonus at the end of their turn. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from grass-type moves activated inside the area."
       ]
+    },
+    {
+      "id": "grav-apple",
+      "name": "Grav Apple",
+      "type": "grass",
+      "power": [
+        "dex",
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "40ft",
+      "description": [
+        "You summon an apple which accosts its victim's head. Make a ranged attack roll, dealing 2d6 + MOVE grass damage on hit. On a hit, the target must make a CHA save against your move DC, suffering -1 to AC on failure until the end of the encounter or until the target is withdrawn. This effect may stack up to three times.",
+        "If enhanced gravity is in effect, such as via the move Gravity, double the damage dice for this move."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
     {
       "id": "gravity",

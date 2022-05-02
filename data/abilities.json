@@ -891,6 +891,11 @@
       "description": "Once per long rest, this Pokémon regains hit points equal to its level when it returns to its Pokéball."
     },
     {
+      "id": "ripen",
+      "name": "Ripen",
+      "description": "Doubles the effects of berries consumed."
+    },
+    {
       "id": "rivalry",
       "name": "Rivalry",
       "description": "This Pokémon adds its proficiency bonus to damage when attacking a Pokémon of the same type."
