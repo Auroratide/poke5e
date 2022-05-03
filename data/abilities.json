@@ -931,6 +931,11 @@
       "description": "This Pokémon is immune to Sandstorm damage, and its speed is doubled in desert terrain, or during a Sandstorm."
     },
     {
+      "id": "sand-spit",
+      "name": "Sand Spit",
+      "description": "When this Pokémon takes damage, it may use its reaction to cause a Sandstorm centered on self with a radius of 30ft. The Sandstorm lasts for five rounds. The Pokémon may do this a number of times equal to its proficiency bonus, and it resets after a long rest."
+    },
+    {
       "id": "sand-stream",
       "name": "Sand Stream",
       "description": "When this Pokémon enters an outside battle, the weather immediately changes to a Sandstorm for 5 rounds. In the case of another Pokémon with a similar weather ability, the tie goes to the Pokémon with the highest DEX score."
