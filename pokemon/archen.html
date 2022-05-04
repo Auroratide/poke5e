@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Archen | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css">
@@ -17,18 +25,23 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-60d9613b.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-bc8a00f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -119,7 +132,7 @@
 
 
 		<script type="module" data-hydrate="8ociau">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="8ociau"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -131,10 +144,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js")
 				],
-				params: {id:"archen"}
+				params: {id:"archen"},
+				routeId: "pokemon/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/archen.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"archen\",\"name\":\"Archen\",\"number\":566,\"type\":[\"rock\",\"flying\"],\"size\":\"tiny\",\"sr\":3,\"minLevel\":5,\"eggGroup\":[\"flying\",\"water 3\"],\"gender\":\"1:7\",\"evolution\":{\"stage\":\"1\",\"maxStage\":\"2\",\"description\":\"Archen can evolve into Archeops at level 10 and above. When it evolves, its health increases by double its level, and it gains 11 points to add to its ability scores (max 20).\"},\"description\":\"The First Bird Pokémon. Revived from a fossil, this Pokémon is thought to be the ancestor of all bird Pokémon.\",\"ac\":13,\"hp\":36,\"hitDice\":\"d6\",\"speed\":[{\"type\":\"walking\",\"value\":20},{\"type\":\"climbing\",\"value\":15}],\"attributes\":{\"str\":\"13\",\"dex\":\"16\",\"con\":\"13\",\"int\":\"6\",\"wis\":\"10\",\"cha\":\"10\"},\"skills\":[\"acrobatics\"],\"savingThrows\":[\"dex\"],\"senses\":[],\"abilities\":[{\"id\":\"defeatist\",\"name\":\"Defeatist\",\"description\":\"When this Pokémon drops below 25% of its maximum HP, all of its attacks are rolled with disadvantage.\",\"hidden\":false}],\"moves\":{\"start\":[\"leer\",\"quick-attack\",\"wing-attack\",\"rock-throw\",\"double-team\",\"scary-face\"],\"level6\":[\"pluck\",\"ancient-power\",\"agility\"],\"level10\":[\"quick-guard\",\"acrobatics\",\"dragon-breath\"],\"level14\":[\"crunch\",\"endeavor\",\"u-turn\"],\"level18\":[\"rock-slide\",\"dragon-claw\",\"thrash\"],\"tm\":[2,5,6,10,12,17,19,21,23,26,27,32,37,39,40,41,42,44,45,48,51,62,65,69,71,78,80,87,88,89,90,100],\"egg\":[\"ally-switch\",\"bite\",\"defog\",\"dragon-pulse\",\"earth-power\",\"head-smash\",\"knock-off\",\"steel-wing\",\"switcheroo\"]}}"}</script></div>

@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>2 - Dragon Claw | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/tms/_id_.svelte-d9b4bee3.css">
@@ -19,22 +27,27 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/Disc-5f8121db.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/PokeMove-092097c9.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/TypeTag-d619e9f6.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/tms/_id_.svelte-77295814.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-49537f75.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/tms/_id_.svelte-84bafa9d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-d4dea994.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
 	<link rel="modulepreload" href="/poke5e/_app/chunks/filter-b6f3cb86.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Disc-064f7641.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/PokeMove-28ab213d.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Disc-3c3a700e.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/PokeMove-38352db5.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
 	<link rel="modulepreload" href="/poke5e/_app/chunks/string-78f0a8b9.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -86,7 +99,7 @@
 
 
 		<script type="module" data-hydrate="1fp2dyv">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="1fp2dyv"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -98,10 +111,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/tms/_id_.svelte-77295814.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/tms/_id_.svelte-84bafa9d.js")
 				],
-				params: {id:"2"}
+				params: {id:"2"},
+				routeId: "tms/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/tms/2.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":2,\"move\":\"dragon-claw\",\"cost\":6000,\"moveInfo\":{\"id\":\"dragon-claw\",\"name\":\"2 - Dragon Claw\",\"type\":\"dragon\",\"power\":[\"str\"],\"time\":\"1 action\",\"pp\":10,\"duration\":\"instantaneous\",\"range\":\"melee\",\"description\":[\"You strike out with a powerful claw attack. Make a melee attack on a creature, doing 2d6 + MOVE dragon damage on a hit.\"],\"higherLevels\":\"The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.\"},\"pokemon\":[{\"id\":\"charmander\",\"name\":\"Charmander\"},{\"id\":\"charmeleon\",\"name\":\"Charmeleon\"},{\"id\":\"charizard\",\"name\":\"Charizard\"},{\"id\":\"aerodactyl\",\"name\":\"Aerodactyl\"},{\"id\":\"dragonite\",\"name\":\"Dragonite\"},{\"id\":\"mew\",\"name\":\"Mew\"},{\"id\":\"totodile\",\"name\":\"Totodile\"},{\"id\":\"croconaw\",\"name\":\"Croconaw\"},{\"id\":\"feraligatr\",\"name\":\"Feraligatr\"},{\"id\":\"tyranitar\",\"name\":\"Tyranitar\"},{\"id\":\"sceptile\",\"name\":\"Sceptile\"},{\"id\":\"aggron\",\"name\":\"Aggron\"},{\"id\":\"flygon\",\"name\":\"Flygon\"},{\"id\":\"altaria\",\"name\":\"Altaria\"},{\"id\":\"bagon\",\"name\":\"Bagon\"},{\"id\":\"shelgon\",\"name\":\"Shelgon\"},{\"id\":\"salamence\",\"name\":\"Salamence\"},{\"id\":\"latias\",\"name\":\"Latias\"},{\"id\":\"latios\",\"name\":\"Latios\"},{\"id\":\"groudon\",\"name\":\"Groudon\"},{\"id\":\"rayquaza\",\"name\":\"Rayquaza\"},{\"id\":\"gible\",\"name\":\"Gible\"},{\"id\":\"gabite\",\"name\":\"Gabite\"},{\"id\":\"garchomp\",\"name\":\"Garchomp\"},{\"id\":\"dialga\",\"name\":\"Dialga\"},{\"id\":\"palkia\",\"name\":\"Palkia\"},{\"id\":\"giratina-altered-forme\",\"name\":\"Giratina Altered Forme\"},{\"id\":\"giratina-origin-forme\",\"name\":\"Giratina Origin Forme\"},{\"id\":\"arceus\",\"name\":\"Arceus\"},{\"id\":\"krookodile\",\"name\":\"Krookodile\"},{\"id\":\"scraggy\",\"name\":\"Scraggy\"},{\"id\":\"scrafty\",\"name\":\"Scrafty\"},{\"id\":\"archen\",\"name\":\"Archen\"},{\"id\":\"archeops\",\"name\":\"Archeops\"},{\"id\":\"eelektross\",\"name\":\"Eelektross\"},{\"id\":\"axew\",\"name\":\"Axew\"},{\"id\":\"fraxure\",\"name\":\"Fraxure\"},{\"id\":\"haxorus\",\"name\":\"Haxorus\"},{\"id\":\"druddigon\",\"name\":\"Druddigon\"},{\"id\":\"reshiram\",\"name\":\"Reshiram\"},{\"id\":\"zekrom\",\"name\":\"Zekrom\"},{\"id\":\"kyurem\",\"name\":\"Kyurem\"},{\"id\":\"white-kyurem\",\"name\":\"White Kyurem\"},{\"id\":\"black-kyurem\",\"name\":\"Black Kyurem\"},{\"id\":\"chesnaught\",\"name\":\"Chesnaught\"},{\"id\":\"pangoro\",\"name\":\"Pangoro\"},{\"id\":\"barbaracle\",\"name\":\"Barbaracle\"},{\"id\":\"tyrunt\",\"name\":\"Tyrunt\"},{\"id\":\"tyrantrum\",\"name\":\"Tyrantrum\"},{\"id\":\"phantump\",\"name\":\"Phantump\"},{\"id\":\"noivern\",\"name\":\"Noivern\"},{\"id\":\"yveltal\",\"name\":\"Yveltal\"},{\"id\":\"salandit\",\"name\":\"Salandit\"},{\"id\":\"salazzle\",\"name\":\"Salazzle\"},{\"id\":\"bewear\",\"name\":\"Bewear\"},{\"id\":\"type-null\",\"name\":\"Type: Null\"},{\"id\":\"silvally\",\"name\":\"Silvally\"},{\"id\":\"minior-meteor-form\",\"name\":\"Minior Meteor Form\"},{\"id\":\"minior-core-form\",\"name\":\"Minior Core Form\"},{\"id\":\"turtonator\",\"name\":\"Turtonator\"},{\"id\":\"drampa\",\"name\":\"Drampa\"},{\"id\":\"jangmo-o\",\"name\":\"Jangmo-o\"},{\"id\":\"hakamo-o\",\"name\":\"Hakamo-o\"},{\"id\":\"kommo-o\",\"name\":\"Kommo-o\"},{\"id\":\"tapu-bulu\",\"name\":\"Tapu Bulu\"},{\"id\":\"guzzlord\",\"name\":\"Guzzlord\"},{\"id\":\"naganadel\",\"name\":\"Naganadel\"}]}"}</script></div>

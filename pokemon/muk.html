@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Muk | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css">
@@ -17,18 +25,23 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-60d9613b.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-bc8a00f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -117,7 +130,7 @@
 
 
 		<script type="module" data-hydrate="19npua4">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="19npua4"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -129,10 +142,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js")
 				],
-				params: {id:"muk"}
+				params: {id:"muk"},
+				routeId: "pokemon/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/muk.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"muk\",\"name\":\"Muk\",\"number\":89,\"type\":[\"poison\"],\"size\":\"medium\",\"sr\":10,\"minLevel\":8,\"eggGroup\":[\"amorphous\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"2\",\"maxStage\":\"2\"},\"description\":\"The Sludge Pokémon. Smells so awful, it can cause fainting. Through degeneration of its nose, it lost its sense of smell.\",\"ac\":16,\"hp\":80,\"hitDice\":\"d12\",\"speed\":[{\"type\":\"walking\",\"value\":20}],\"attributes\":{\"str\":\"17\",\"dex\":\"13\",\"con\":\"20\",\"int\":\"6\",\"wis\":\"12\",\"cha\":\"8\"},\"skills\":[\"stealth\"],\"savingThrows\":[\"con\"],\"senses\":[{\"type\":\"darkvision\",\"value\":40}],\"abilities\":[{\"id\":\"stench\",\"name\":\"Stench\",\"description\":\"When this Pokémon is hit by a melee attack, roll a d10. On a 10, the attacker flinches.\",\"hidden\":false},{\"id\":\"sticky-hold\",\"name\":\"Sticky Hold\",\"description\":\"Held items cannot be stolen or knocked away from this Pokémon.\",\"hidden\":false},{\"id\":\"poison-touch\",\"name\":\"Poison Touch\",\"description\":\"On melee attacks made by this Pokémon, roll a d10 on a hit. On a result of a 10, the target is poisoned.\",\"hidden\":true}],\"moves\":{\"start\":[\"harden\",\"mud-slap\",\"poison-gas\",\"pound\",\"disable\",\"sludge\",\"mud-bomb\",\"venom-drench\"],\"level10\":[\"minimize\",\"fling\"],\"level14\":[\"sludge-bomb\",\"sludge-wave\",\"screech\"],\"level18\":[\"gunk-shot\",\"acid-armor\",\"memento\",\"belch\"],\"tm\":[6,9,10,11,12,15,17,18,21,24,25,27,30,31,32,34,35,36,39,41,42,44,45,46,48,52,56,64,66,68,80,83,84,87,88,90,97,100]}}"}</script></div>

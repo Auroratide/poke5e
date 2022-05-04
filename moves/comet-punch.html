@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Comet Punch | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
@@ -18,22 +26,27 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/Hit-aac29686.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/PokeMove-092097c9.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/TypeTag-d619e9f6.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/moves/_id_.svelte-7102eaac.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-0501fd0f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/moves/_id_.svelte-5066f5ee.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-c0b6afd6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
 	<link rel="modulepreload" href="/poke5e/_app/chunks/string-78f0a8b9.js">
 	<link rel="modulepreload" href="/poke5e/_app/chunks/filter-b6f3cb86.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Hit-3ab4a396.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/PokeMove-28ab213d.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Hit-1e1a54d6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/PokeMove-38352db5.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -89,7 +102,7 @@
 
 
 		<script type="module" data-hydrate="1kbyc2u">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="1kbyc2u"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -101,10 +114,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/moves/_id_.svelte-7102eaac.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/moves/_id_.svelte-5066f5ee.js")
 				],
-				params: {id:"comet-punch"}
+				params: {id:"comet-punch"},
+				routeId: "moves/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/moves/comet-punch.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"comet-punch\",\"name\":\"Comet Punch\",\"type\":\"normal\",\"power\":[\"str\",\"dex\"],\"time\":\"1 action\",\"pp\":10,\"duration\":\"instantaneous\",\"range\":\"melee\",\"description\":[\"You strike out with a lightning fast punch. Make a melee attack roll. The target takes 1d4 + MOVE normal damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 normal damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.\"],\"higherLevels\":\"The damage dice rolls for this move change to 1d6 at level 5, 1d8 at level 10, and 2d6 at level 17.\"}"}</script></div>

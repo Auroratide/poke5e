@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Larvitar | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css">
@@ -17,18 +25,23 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-60d9613b.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-bc8a00f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -121,7 +134,7 @@
 
 
 		<script type="module" data-hydrate="1jiul2s">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="1jiul2s"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -133,10 +146,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js")
 				],
-				params: {id:"larvitar"}
+				params: {id:"larvitar"},
+				routeId: "pokemon/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/larvitar.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"larvitar\",\"name\":\"Larvitar\",\"number\":246,\"type\":[\"rock\",\"ground\"],\"size\":\"tiny\",\"sr\":1,\"minLevel\":1,\"eggGroup\":[\"monster\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"1\",\"maxStage\":\"3\",\"description\":\"Larvitar can evolve into Pupitar at level 8 and above. When it evolves, its health increases by double its level, and it gains 5 points to add to its ability scores (max 20).\"},\"description\":\"The Rock Skin Pokémon. Larvitar is born deep under the ground. To come up to the surface, this Pokémon must eat its way through the soil above. Until it does so, Larvitar cannot see its parents.\",\"ac\":13,\"hp\":20,\"hitDice\":\"d8\",\"speed\":[{\"type\":\"walking\",\"value\":20}],\"attributes\":{\"str\":\"13\",\"dex\":\"12\",\"con\":\"15\",\"int\":\"6\",\"wis\":\"10\",\"cha\":\"10\"},\"skills\":[\"athletics\"],\"savingThrows\":[\"str\"],\"senses\":[{\"type\":\"tremorsense\",\"value\":30}],\"abilities\":[{\"id\":\"guts\",\"name\":\"Guts\",\"description\":\"When this Pokémon is burned or poisoned, they are not affected by the disadvantage or reduced damage effects. They still take damage at the end of each of their turns.\",\"hidden\":false},{\"id\":\"sand-veil\",\"name\":\"Sand Veil\",\"description\":\"This Pokémon is immune to Sandstorm damage. In addition, its AC increases by 2 in desert terrain, or during a Sandstorm.\",\"hidden\":true}],\"moves\":{\"start\":[\"bite\",\"leer\"],\"level2\":[\"sandstorm\",\"screech\"],\"level6\":[\"chip-away\",\"rock-slide\"],\"level10\":[\"scary-face\",\"thrash\",\"dark-pulse\"],\"level14\":[\"payback\",\"crunch\",\"earthquake\"],\"level18\":[\"stone-edge\",\"hyper-beam\"],\"tm\":[6,10,11,12,15,17,18,21,23,26,27,31,32,37,39,41,42,44,45,48,66,69,71,78,80,87,88,90,95,97,100],\"egg\":[\"ancient-power\",\"assurance\",\"curse\",\"dragon-dance\",\"focus-energy\",\"iron-defense\",\"iron-head\",\"iron-tail\",\"outrage\",\"pursuit\",\"stealth-rock\",\"stomp\"]}}"}</script></div>

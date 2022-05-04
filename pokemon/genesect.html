@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Genesect | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css">
@@ -17,18 +25,23 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-60d9613b.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-bc8a00f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -114,7 +127,7 @@
 
 
 		<script type="module" data-hydrate="1n7ppez">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="1n7ppez"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -126,10 +139,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js")
 				],
-				params: {id:"genesect"}
+				params: {id:"genesect"},
+				routeId: "pokemon/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/genesect.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"genesect\",\"name\":\"Genesect\",\"number\":649,\"type\":[\"bug\",\"steel\"],\"size\":\"medium\",\"sr\":15,\"minLevel\":15,\"eggGroup\":[\"undiscovered\"],\"gender\":\"0:0\",\"description\":\"The Paleozoic Pokémon. This ancient bug Pokémon was altered by Team Plasma. They upgraded the cannon on its back.\",\"ac\":17,\"hp\":232,\"hitDice\":\"d12\",\"speed\":[{\"type\":\"walking\",\"value\":40},{\"type\":\"flying\",\"value\":40}],\"attributes\":{\"str\":\"20\",\"dex\":\"19\",\"con\":\"17\",\"int\":\"16\",\"wis\":\"16\",\"cha\":\"10\"},\"skills\":[\"athletics\",\"acrobatics\",\"survival\",\"arcana\"],\"savingThrows\":[\"str\",\"con\",\"wis\"],\"senses\":[{\"type\":\"darkvision\",\"value\":100}],\"abilities\":[{\"id\":\"download\",\"name\":\"Download\",\"description\":\"Once per short rest, this Pokémon can choose a different damage type for one of their normal attacks.\",\"hidden\":false}],\"moves\":{\"start\":[\"magnet-rise\",\"metal-claw\",\"quick-attack\",\"screech\",\"techno-blast\",\"fury-cutter\",\"lock-on\",\"flame-charge\",\"magnet-bomb\",\"slash\",\"metal-sound\",\"signal-beam\"],\"level18\":[\"tri-attack\",\"x-scissor\",\"bug-buzz\",\"simple-beam\",\"zap-cannon\",\"hyper-beam\",\"self-destruct\"],\"tm\":[6,10,13,14,15,16,17,21,22,24,25,27,29,32,33,35,40,42,43,44,48,53,57,64,65,68,69,73,76,81,83,87,88,89,90,91,97,100]}}"}</script></div>

@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>75 - Swords Dance | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/tms/_id_.svelte-d9b4bee3.css">
@@ -19,22 +27,27 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/Disc-5f8121db.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/PokeMove-092097c9.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/TypeTag-d619e9f6.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/tms/_id_.svelte-77295814.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-49537f75.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/tms/_id_.svelte-84bafa9d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-d4dea994.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
 	<link rel="modulepreload" href="/poke5e/_app/chunks/filter-b6f3cb86.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Disc-064f7641.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/PokeMove-28ab213d.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Disc-3c3a700e.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/PokeMove-38352db5.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
 	<link rel="modulepreload" href="/poke5e/_app/chunks/string-78f0a8b9.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -86,7 +99,7 @@
 
 
 		<script type="module" data-hydrate="1p57n2d">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="1p57n2d"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -98,10 +111,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/tms/_id_.svelte-77295814.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/tms/_id_.svelte-84bafa9d.js")
 				],
-				params: {id:"75"}
+				params: {id:"75"},
+				routeId: "tms/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/tms/75.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":75,\"move\":\"swords-dance\",\"cost\":8000,\"moveInfo\":{\"id\":\"swords-dance\",\"name\":\"75 - Swords Dance\",\"type\":\"normal\",\"power\":[\"dex\",\"wis\"],\"time\":\"1 action\",\"pp\":5,\"duration\":\"1 minute, concentration\",\"range\":\"self\",\"description\":[\"When you activate this move, a sword appears and dances around you, increasing your AC by 1. As a bonus action on a future turn, you may drop concentration to release this sword and roll a ranged attack at a target within 30 feet of you, dealing 2d6 + MOVE normal damage on a hit.\"],\"higherLevels\":\"The damage dice for this move changes to 2d8 at level 5. At level 10, you can now create two swords for +2 to AC and two ranged attacks. At level 17, the damage dice for each sword increases to 3d8.\"},\"pokemon\":[{\"id\":\"bulbasaur\",\"name\":\"Bulbasaur\"},{\"id\":\"ivysaur\",\"name\":\"Ivysaur\"},{\"id\":\"venusaur\",\"name\":\"Venusaur\"},{\"id\":\"charmander\",\"name\":\"Charmander\"},{\"id\":\"charmeleon\",\"name\":\"Charmeleon\"},{\"id\":\"charizard\",\"name\":\"Charizard\"},{\"id\":\"beedrill\",\"name\":\"Beedrill\"},{\"id\":\"raticate\",\"name\":\"Raticate\"},{\"id\":\"sandshrew\",\"name\":\"Sandshrew\"},{\"id\":\"sandslash\",\"name\":\"Sandslash\"},{\"id\":\"gloom\",\"name\":\"Gloom\"},{\"id\":\"vileplume\",\"name\":\"Vileplume\"},{\"id\":\"paras\",\"name\":\"Paras\"},{\"id\":\"parasect\",\"name\":\"Parasect\"},{\"id\":\"bellsprout\",\"name\":\"Bellsprout\"},{\"id\":\"weepinbell\",\"name\":\"Weepinbell\"},{\"id\":\"victreebel\",\"name\":\"Victreebel\"},{\"id\":\"tentacool\",\"name\":\"Tentacool\"},{\"id\":\"tentacruel\",\"name\":\"Tentacruel\"},{\"id\":\"farfetchd\",\"name\":\"Farfetch'd\"},{\"id\":\"doduo\",\"name\":\"Doduo\"},{\"id\":\"dodrio\",\"name\":\"Dodrio\"},{\"id\":\"krabby\",\"name\":\"Krabby\"},{\"id\":\"kingler\",\"name\":\"Kingler\"},{\"id\":\"exeggcute\",\"name\":\"Exeggcute\"},{\"id\":\"exeggutor\",\"name\":\"Exeggutor\"},{\"id\":\"cubone\",\"name\":\"Cubone\"},{\"id\":\"marowak\",\"name\":\"Marowak\"},{\"id\":\"lickitung\",\"name\":\"Lickitung\"},{\"id\":\"rhyhorn\",\"name\":\"Rhyhorn\"},{\"id\":\"rhydon\",\"name\":\"Rhydon\"},{\"id\":\"tangela\",\"name\":\"Tangela\"},{\"id\":\"scyther\",\"name\":\"Scyther\"},{\"id\":\"pinsir\",\"name\":\"Pinsir\"},{\"id\":\"kabutops\",\"name\":\"Kabutops\"},{\"id\":\"mew\",\"name\":\"Mew\"},{\"id\":\"chikorita\",\"name\":\"Chikorita\"},{\"id\":\"bayleef\",\"name\":\"Bayleef\"},{\"id\":\"meganium\",\"name\":\"Meganium\"},{\"id\":\"totodile\",\"name\":\"Totodile\"},{\"id\":\"croconaw\",\"name\":\"Croconaw\"},{\"id\":\"feraligatr\",\"name\":\"Feraligatr\"},{\"id\":\"ledyba\",\"name\":\"Ledyba\"},{\"id\":\"ledian\",\"name\":\"Ledian\"},{\"id\":\"ariados\",\"name\":\"Ariados\"},{\"id\":\"bellossom\",\"name\":\"Bellossom\"},{\"id\":\"hoppip\",\"name\":\"Hoppip\"},{\"id\":\"skiploom\",\"name\":\"Skiploom\"},{\"id\":\"jumpluff\",\"name\":\"Jumpluff\"},{\"id\":\"sunkern\",\"name\":\"Sunkern\"},{\"id\":\"sunflora\",\"name\":\"Sunflora\"},{\"id\":\"gligar\",\"name\":\"Gligar\"},{\"id\":\"scizor\",\"name\":\"Scizor\"},{\"id\":\"heracross\",\"name\":\"Heracross\"},{\"id\":\"sneasel\",\"name\":\"Sneasel\"},{\"id\":\"teddiursa\",\"name\":\"Teddiursa\"},{\"id\":\"ursaring\",\"name\":\"Ursaring\"},{\"id\":\"skarmory\",\"name\":\"Skarmory\"},{\"id\":\"celebi\",\"name\":\"Celebi\"},{\"id\":\"treecko\",\"name\":\"Treecko\"},{\"id\":\"grovyle\",\"name\":\"Grovyle\"},{\"id\":\"sceptile\",\"name\":\"Sceptile\"},{\"id\":\"torchic\",\"name\":\"Torchic\"},{\"id\":\"combusken\",\"name\":\"Combusken\"},{\"id\":\"blaziken\",\"name\":\"Blaziken\"},{\"id\":\"lotad\",\"name\":\"Lotad\"},{\"id\":\"lombre\",\"name\":\"Lombre\"},{\"id\":\"ludicolo\",\"name\":\"Ludicolo\"},{\"id\":\"seedot\",\"name\":\"Seedot\"},{\"id\":\"nuzleaf\",\"name\":\"Nuzleaf\"},{\"id\":\"shiftry\",\"name\":\"Shiftry\"},{\"id\":\"shroomish\",\"name\":\"Shroomish\"},{\"id\":\"breloom\",\"name\":\"Breloom\"},{\"id\":\"ninjask\",\"name\":\"Ninjask\"},{\"id\":\"mawile\",\"name\":\"Mawile\"},{\"id\":\"roselia\",\"name\":\"Roselia\"},{\"id\":\"cacnea\",\"name\":\"Cacnea\"},{\"id\":\"cacturne\",\"name\":\"Cacturne\"},{\"id\":\"zangoose\",\"name\":\"Zangoose\"},{\"id\":\"seviper\",\"name\":\"Seviper\"},{\"id\":\"corphish\",\"name\":\"Corphish\"},{\"id\":\"crawdaunt\",\"name\":\"Crawdaunt\"},{\"id\":\"lileep\",\"name\":\"Lileep\"},{\"id\":\"cradily\",\"name\":\"Cradily\"},{\"id\":\"anorith\",\"name\":\"Anorith\"},{\"id\":\"armaldo\",\"name\":\"Armaldo\"},{\"id\":\"tropius\",\"name\":\"Tropius\"},{\"id\":\"absol\",\"name\":\"Absol\"},{\"id\":\"groudon\",\"name\":\"Groudon\"},{\"id\":\"rayquaza\",\"name\":\"Rayquaza\"},{\"id\":\"turtwig\",\"name\":\"Turtwig\"},{\"id\":\"grotle\",\"name\":\"Grotle\"},{\"id\":\"torterra\",\"name\":\"Torterra\"},{\"id\":\"chimchar\",\"name\":\"Chimchar\"},{\"id\":\"monferno\",\"name\":\"Monferno\"},{\"id\":\"infernape\",\"name\":\"Infernape\"},{\"id\":\"empoleon\",\"name\":\"Empoleon\"},{\"id\":\"bidoof\",\"name\":\"Bidoof\"},{\"id\":\"bibarel\",\"name\":\"Bibarel\"},{\"id\":\"kricketune\",\"name\":\"Kricketune\"},{\"id\":\"budew\",\"name\":\"Budew\"},{\"id\":\"roserade\",\"name\":\"Roserade\"},{\"id\":\"cranidos\",\"name\":\"Cranidos\"},{\"id\":\"rampardos\",\"name\":\"Rampardos\"},{\"id\":\"cherubi\",\"name\":\"Cherubi\"},{\"id\":\"cherrim\",\"name\":\"Cherrim\"},{\"id\":\"garchomp\",\"name\":\"Garchomp\"},{\"id\":\"riolu\",\"name\":\"Riolu\"},{\"id\":\"lucario\",\"name\":\"Lucario\"},{\"id\":\"skorupi\",\"name\":\"Skorupi\"},{\"id\":\"drapion\",\"name\":\"Drapion\"},{\"id\":\"toxicroak\",\"name\":\"Toxicroak\"},{\"id\":\"carnivine\",\"name\":\"Carnivine\"},{\"id\":\"snover\",\"name\":\"Snover\"},{\"id\":\"abomasnow\",\"name\":\"Abomasnow\"},{\"id\":\"weavile\",\"name\":\"Weavile\"},{\"id\":\"lickilicky\",\"name\":\"Lickilicky\"},{\"id\":\"rhyperior\",\"name\":\"Rhyperior\"},{\"id\":\"tangrowth\",\"name\":\"Tangrowth\"},{\"id\":\"leafeon\",\"name\":\"Leafeon\"},{\"id\":\"gliscor\",\"name\":\"Gliscor\"},{\"id\":\"gallade\",\"name\":\"Gallade\"},{\"id\":\"darkrai\",\"name\":\"Darkrai\"},{\"id\":\"shaymin-land\",\"name\":\"Shaymin Land\"},{\"id\":\"shaymin-sky\",\"name\":\"Shaymin Sky\"},{\"id\":\"arceus\",\"name\":\"Arceus\"},{\"id\":\"snivy\",\"name\":\"Snivy\"},{\"id\":\"servine\",\"name\":\"Servine\"},{\"id\":\"serperior\",\"name\":\"Serperior\"},{\"id\":\"oshawott\",\"name\":\"Oshawott\"},{\"id\":\"dewott\",\"name\":\"Dewott\"},{\"id\":\"samurott\",\"name\":\"Samurott\"},{\"id\":\"patrat\",\"name\":\"Patrat\"},{\"id\":\"watchog\",\"name\":\"Watchog\"},{\"id\":\"drilbur\",\"name\":\"Drilbur\"},{\"id\":\"excadrill\",\"name\":\"Excadrill\"},{\"id\":\"leavanny\",\"name\":\"Leavanny\"},{\"id\":\"scolipede\",\"name\":\"Scolipede\"},{\"id\":\"lilligant\",\"name\":\"Lilligant\"},{\"id\":\"dwebble\",\"name\":\"Dwebble\"},{\"id\":\"crustle\",\"name\":\"Crustle\"},{\"id\":\"zorua\",\"name\":\"Zorua\"},{\"id\":\"zoroark\",\"name\":\"Zoroark\"},{\"id\":\"sawsbuck\",\"name\":\"Sawsbuck\"},{\"id\":\"karrablast\",\"name\":\"Karrablast\"},{\"id\":\"escavalier\",\"name\":\"Escavalier\"},{\"id\":\"ferrothorn\",\"name\":\"Ferrothorn\"},{\"id\":\"axew\",\"name\":\"Axew\"},{\"id\":\"fraxure\",\"name\":\"Fraxure\"},{\"id\":\"haxorus\",\"name\":\"Haxorus\"},{\"id\":\"beartic\",\"name\":\"Beartic\"},{\"id\":\"mienfoo\",\"name\":\"Mienfoo\"},{\"id\":\"mienshao\",\"name\":\"Mienshao\"},{\"id\":\"pawniard\",\"name\":\"Pawniard\"},{\"id\":\"bisharp\",\"name\":\"Bisharp\"},{\"id\":\"bouffalant\",\"name\":\"Bouffalant\"},{\"id\":\"cobalion\",\"name\":\"Cobalion\"},{\"id\":\"terrakion\",\"name\":\"Terrakion\"},{\"id\":\"virizion\",\"name\":\"Virizion\"},{\"id\":\"landorus\",\"name\":\"Landorus\"},{\"id\":\"keldeo\",\"name\":\"Keldeo\"},{\"id\":\"chespin\",\"name\":\"Chespin\"},{\"id\":\"quilladin\",\"name\":\"Quilladin\"},{\"id\":\"chesnaught\",\"name\":\"Chesnaught\"},{\"id\":\"diggersby\",\"name\":\"Diggersby\"},{\"id\":\"fletchling\",\"name\":\"Fletchling\"},{\"id\":\"fletchinder\",\"name\":\"Fletchinder\"},{\"id\":\"talonflame\",\"name\":\"Talonflame\"},{\"id\":\"pancham\",\"name\":\"Pancham\"},{\"id\":\"pangoro\",\"name\":\"Pangoro\"},{\"id\":\"honedge\",\"name\":\"Honedge\"},{\"id\":\"doublade\",\"name\":\"Doublade\"},{\"id\":\"aegislash\",\"name\":\"Aegislash\"},{\"id\":\"binacle\",\"name\":\"Binacle\"},{\"id\":\"barbaracle\",\"name\":\"Barbaracle\"},{\"id\":\"clauncher\",\"name\":\"Clauncher\"},{\"id\":\"clawitzer\",\"name\":\"Clawitzer\"},{\"id\":\"hawlucha\",\"name\":\"Hawlucha\"},{\"id\":\"alolan-raticate\",\"name\":\"Alolan Raticate\"},{\"id\":\"alolan-sandshrew\",\"name\":\"Alolan Sandshrew\"},{\"id\":\"alolan-sandslash\",\"name\":\"Alolan Sandslash\"},{\"id\":\"alolan-exeggutor\",\"name\":\"Alolan Exeggutor\"},{\"id\":\"alolan-marowak\",\"name\":\"Alolan Marowak\"},{\"id\":\"rowlet\",\"name\":\"Rowlet\"},{\"id\":\"dartrix\",\"name\":\"Dartrix\"},{\"id\":\"decidueye\",\"name\":\"Decidueye\"},{\"id\":\"litten\",\"name\":\"Litten\"},{\"id\":\"torracat\",\"name\":\"Torracat\"},{\"id\":\"incineroar\",\"name\":\"Incineroar\"},{\"id\":\"pikipek\",\"name\":\"Pikipek\"},{\"id\":\"trumbeak\",\"name\":\"Trumbeak\"},{\"id\":\"toucannon\",\"name\":\"Toucannon\"},{\"id\":\"oricorio-baile-style\",\"name\":\"Oricorio Baile Style\"},{\"id\":\"oricorio-pom-pom-style\",\"name\":\"Oricorio Pom-Pom Style\"},{\"id\":\"oricorio-pau-style\",\"name\":\"Oricorio Pa'u Style\"},{\"id\":\"oricorio-sensu-style\",\"name\":\"Oricorio Sensu Style\"},{\"id\":\"fomantis\",\"name\":\"Fomantis\"},{\"id\":\"lurantis\",\"name\":\"Lurantis\"},{\"id\":\"stufful\",\"name\":\"Stufful\"},{\"id\":\"bewear\",\"name\":\"Bewear\"},{\"id\":\"golisopod\",\"name\":\"Golisopod\"},{\"id\":\"type-null\",\"name\":\"Type: Null\"},{\"id\":\"silvally\",\"name\":\"Silvally\"},{\"id\":\"komala\",\"name\":\"Komala\"},{\"id\":\"mimikyu\",\"name\":\"Mimikyu\"},{\"id\":\"bruxish\",\"name\":\"Bruxish\"},{\"id\":\"dhelmise\",\"name\":\"Dhelmise\"},{\"id\":\"jangmo-o\",\"name\":\"Jangmo-o\"},{\"id\":\"hakamo-o\",\"name\":\"Hakamo-o\"},{\"id\":\"kommo-o\",\"name\":\"Kommo-o\"},{\"id\":\"tapu-bulu\",\"name\":\"Tapu Bulu\"},{\"id\":\"kartana\",\"name\":\"Kartana\"},{\"id\":\"necrozma\",\"name\":\"Necrozma\"},{\"id\":\"dusk-mane-necrozma\",\"name\":\"Dusk Mane Necrozma\"},{\"id\":\"dawn-wings-necrozma\",\"name\":\"Dawn Wings Necrozma\"},{\"id\":\"ultra-necrozma\",\"name\":\"Ultra Necrozma\"},{\"id\":\"galarian-farfetchd\",\"name\":\"Galarian Farfetch'd\"},{\"id\":\"inteleon\",\"name\":\"Inteleon\"},{\"id\":\"dubwool\",\"name\":\"Dubwool\"},{\"id\":\"sirfetchd\",\"name\":\"Sirfetch'd\"}]}"}</script></div>

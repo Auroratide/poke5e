@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Jynx | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css">
@@ -17,18 +25,23 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-60d9613b.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-bc8a00f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -118,7 +131,7 @@
 
 
 		<script type="module" data-hydrate="1hsdv47">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="1hsdv47"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -130,10 +143,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js")
 				],
-				params: {id:"jynx"}
+				params: {id:"jynx"},
+				routeId: "pokemon/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/jynx.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"jynx\",\"name\":\"Jynx\",\"number\":124,\"type\":[\"ice\",\"psychic\"],\"size\":\"medium\",\"sr\":8,\"minLevel\":5,\"eggGroup\":[\"human-like\"],\"gender\":\"1:0\",\"evolution\":{\"stage\":\"2\",\"maxStage\":\"2\"},\"description\":\"The Human Shape Pokémon. Appears to move to a rhythm of its own, as if it were dancing. It wiggles its hips as it walks.\",\"ac\":15,\"hp\":67,\"hitDice\":\"d10\",\"speed\":[{\"type\":\"walking\",\"value\":30}],\"attributes\":{\"str\":\"12\",\"dex\":\"16\",\"con\":\"14\",\"int\":\"8\",\"wis\":\"16\",\"cha\":\"16\"},\"skills\":[\"deception\",\"insight\"],\"savingThrows\":[\"cha\"],\"senses\":[],\"abilities\":[{\"id\":\"oblivious\",\"name\":\"Oblivious\",\"description\":\"This Pokémon is immune to moves that attempt to charm or taunt it.\",\"hidden\":false},{\"id\":\"forewarn\",\"name\":\"Forewarn\",\"description\":\"When this Pokémon enters battle, it selects a target to reveal the move it knows with the most damage output. In the case of a tie, the target can choose which move it reveals.\",\"hidden\":false},{\"id\":\"dry-skin\",\"name\":\"Dry Skin\",\"description\":\"At the end of each of this Pokémon's turns, it takes an amount of damage equal to its proficiency modifier in harsh sunlight, or heals for the same amount during rain.\",\"hidden\":true}],\"moves\":{\"start\":[\"draining-kiss\",\"pound\",\"lick\",\"lovely-kiss\",\"powder-snow\"],\"level6\":[\"double-slap\",\"ice-punch\"],\"level10\":[\"heart-stamp\",\"mean-look\"],\"level14\":[\"fake-tears\",\"wake-up-slap\"],\"level18\":[\"avalanche\",\"body-slam\",\"wring-out\",\"perish-song\",\"blizzard\"],\"tm\":[3,4,6,7,10,12,13,14,15,16,17,18,21,27,29,30,31,32,33,41,42,44,45,46,48,49,52,53,56,66,68,70,77,79,85,86,87,88,90,92,100]}}"}</script></div>

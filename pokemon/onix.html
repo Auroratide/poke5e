@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Onix | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css">
@@ -17,18 +25,23 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-60d9613b.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-bc8a00f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -120,7 +133,7 @@
 
 
 		<script type="module" data-hydrate="z52kkx">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="z52kkx"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -132,10 +145,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js")
 				],
-				params: {id:"onix"}
+				params: {id:"onix"},
+				routeId: "pokemon/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/onix.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"onix\",\"name\":\"Onix\",\"number\":95,\"type\":[\"rock\",\"ground\"],\"size\":\"huge\",\"sr\":10,\"minLevel\":5,\"eggGroup\":[\"mineral\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"1\",\"maxStage\":\"2\",\"description\":\"Onix can evolve into Steelix at level 14 and above while holding a Metal Coat. When it evolves, its health increases by double its level, and it gains 7 points to add to its ability scores (max 20).\"},\"description\":\"The Rock Snake Pokémon. Burrows at high speed in search of food. The tunnels it leaves are used as homes by Diglett.\",\"ac\":17,\"hp\":65,\"hitDice\":\"d10\",\"speed\":[{\"type\":\"walking\",\"value\":25},{\"type\":\"burrowing\",\"value\":25}],\"attributes\":{\"str\":\"18\",\"dex\":\"13\",\"con\":\"16\",\"int\":\"6\",\"wis\":\"12\",\"cha\":\"10\"},\"skills\":[\"athletics\"],\"savingThrows\":[\"con\",\"str\"],\"senses\":[{\"type\":\"tremorsense\",\"value\":120}],\"abilities\":[{\"id\":\"rock-head\",\"name\":\"Rock Head\",\"description\":\"This Pokémon takes no recoil damage.\",\"hidden\":false},{\"id\":\"sturdy\",\"name\":\"Sturdy\",\"description\":\"When taking damage equal to half or more of your current HP, roll a d4. On a result of 3 of 4, halve the damage dealt.\",\"hidden\":false},{\"id\":\"weak-armor\",\"name\":\"Weak Armor\",\"description\":\"When an attack hits this Pokémon, its speed increases by 5 feet, but its AC is temporarily reduced by 1 until the end of battle (for a maximum reduction of -5).\",\"hidden\":true}],\"moves\":{\"start\":[\"bind\",\"harden\",\"mud-sport\",\"tackle\",\"curse\",\"rock-throw\",\"rock-tomb\"],\"level6\":[\"rage\",\"stealth-rock\",\"rock-polish\"],\"level10\":[\"gyro-ball\",\"smack-down\",\"dragon-breath\",\"slam\"],\"level14\":[\"screech\",\"rock-slide\",\"sand-tomb\",\"iron-tail\"],\"level18\":[\"dig\",\"stone-edge\",\"double-edge\",\"sandstorm\"],\"tm\":[5,6,10,11,12,17,21,23,26,27,32,37,39,41,42,44,45,48,59,64,66,69,71,74,77,78,80,82,87,88,90,91,96,100],\"egg\":[\"block\",\"defense-curl\",\"explosion\",\"flail\",\"slam\",\"rock-blast\",\"rock-climb\",\"rock-slide\",\"rollout\",\"rototiller\",\"stealth-rock\"]}}"}</script></div>

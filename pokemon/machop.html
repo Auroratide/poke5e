@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Machop | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css">
@@ -17,18 +25,23 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-60d9613b.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-bc8a00f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -119,7 +132,7 @@
 
 
 		<script type="module" data-hydrate="7dcz83">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="7dcz83"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -131,10 +144,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js")
 				],
-				params: {id:"machop"}
+				params: {id:"machop"},
+				routeId: "pokemon/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/machop.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"machop\",\"name\":\"Machop\",\"number\":66,\"type\":[\"fighting\"],\"size\":\"tiny\",\"sr\":0.5,\"minLevel\":1,\"eggGroup\":[\"human-like\"],\"gender\":\"1:3\",\"evolution\":{\"stage\":\"1\",\"maxStage\":\"3\",\"description\":\"Machop can evolve into Machoke at level 8 and above. When it evolves, its health increases by double its level, and it gains 6 points to add to its ability scores (max 20).\"},\"description\":\"The Superpower Pokémon. Very powerful in spite of its small size. Its mastery of many types of martial arts makes it very tough.\",\"ac\":12,\"hp\":17,\"hitDice\":\"d6\",\"speed\":[{\"type\":\"walking\",\"value\":25}],\"attributes\":{\"str\":\"14\",\"dex\":\"12\",\"con\":\"12\",\"int\":\"6\",\"wis\":\"10\",\"cha\":\"10\"},\"skills\":[\"athletics\",\"acrobatics\"],\"savingThrows\":[\"str\",\"dex\"],\"senses\":[],\"abilities\":[{\"id\":\"guts\",\"name\":\"Guts\",\"description\":\"When this Pokémon is burned or poisoned, they are not affected by the disadvantage or reduced damage effects. They still take damage at the end of each of their turns.\",\"hidden\":false},{\"id\":\"no-guard\",\"name\":\"No Guard\",\"description\":\"Any attack made by or against this Pokémon has advantage.\",\"hidden\":false},{\"id\":\"steadfast\",\"name\":\"Steadfast\",\"description\":\"Once per long rest, when this Pokémon fails a saving throw against a negative condition, it can choose to pass instead.\",\"hidden\":true}],\"moves\":{\"start\":[\"leer\",\"low-kick\",\"focus-energy\"],\"level2\":[\"karate-chop\",\"foresight\"],\"level6\":[\"low-sweep\",\"seismic-toss\",\"revenge\"],\"level10\":[\"knock-off\",\"vital-throw\",\"wake-up-slap\"],\"level14\":[\"dual-chop\",\"submission\",\"bulk-up\"],\"level18\":[\"cross-chop\",\"scary-face\",\"dynamic-punch\"],\"tm\":[1,6,8,10,11,16,17,18,21,23,26,27,31,32,35,38,39,42,44,45,46,47,48,52,56,66,78,80,84,87,88,90,100],\"egg\":[\"bullet-punch\",\"close-combat\",\"counter\",\"encore\",\"fire-punch\",\"heavy-slam\",\"ice-punch\",\"knock-off\",\"light-screen\",\"meditate\",\"power-trick\",\"quick-guard\",\"rock-slide\",\"rolling-kick\",\"smelling-salts\",\"thunder-punch\",\"tickle\"]}}"}</script></div>

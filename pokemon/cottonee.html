@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Cottonee | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css">
@@ -17,18 +25,23 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-60d9613b.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-bc8a00f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -120,7 +133,7 @@
 
 
 		<script type="module" data-hydrate="nvawnu">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="nvawnu"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -132,10 +145,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js")
 				],
-				params: {id:"cottonee"}
+				params: {id:"cottonee"},
+				routeId: "pokemon/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/cottonee.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"cottonee\",\"name\":\"Cottonee\",\"number\":546,\"type\":[\"grass\",\"fairy\"],\"size\":\"tiny\",\"sr\":0.5,\"minLevel\":1,\"eggGroup\":[\"grass\",\"fairy\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"1\",\"maxStage\":\"2\",\"description\":\"Cottonee can evolve into Whimsicott at level 6 and above, with the help of a Sun Stone. When it evolves, its health increases by double its level, and it gains 11 points to add to its ability scores (max 20).\"},\"description\":\"The Cotton Puff Pokémon. They go wherever the wind takes them. On rainy days, their bodies are heavier, so they take shelter beneath big trees.\",\"ac\":13,\"hp\":17,\"hitDice\":\"d6\",\"speed\":[{\"type\":\"walking\",\"value\":5},{\"type\":\"flying (hover)\",\"value\":20}],\"attributes\":{\"str\":\"12\",\"dex\":\"13\",\"con\":\"12\",\"int\":\"6\",\"wis\":\"10\",\"cha\":\"10\"},\"skills\":[\"nature\"],\"savingThrows\":[\"cha\"],\"senses\":[],\"abilities\":[{\"id\":\"prankster\",\"name\":\"Prankster\",\"description\":\"Once per short rest, this Pokémon can move to the top of initiative order in a single round, but must use a status-affecting move on its turn.\",\"hidden\":false},{\"id\":\"infiltrator\",\"name\":\"Infiltrator\",\"description\":\"This Pokémon bypasses Light Screen, Reflect, Substitute, Mist, Safeguard, and Aurora Veil.\",\"hidden\":false},{\"id\":\"chlorophyll\",\"name\":\"Chlorophyll\",\"description\":\"This Pokémon’s speed is doubled in harsh sunlight.\",\"hidden\":true}],\"moves\":{\"start\":[\"absorb\",\"fairy-wind\",\"growth\"],\"level2\":[\"leech-seed\",\"stun-spore\",\"mega-drain\"],\"level6\":[\"cotton-spore\",\"razor-leaf\",\"poison-powder\"],\"level10\":[\"giga-drain\",\"charm\",\"helping-hand\"],\"level14\":[\"energy-ball\",\"cotton-guard\",\"sunny-day\"],\"level18\":[\"endeavor\",\"solar-beam\"],\"tm\":[6,10,11,12,17,20,21,22,27,32,42,44,45,48,53,85,86,87,88,90,96,99,100],\"egg\":[\"beat-up\",\"captivate\",\"encore\",\"fake-tears\",\"grass-whistle\",\"memento\",\"natural-gift\",\"switcheroo\",\"tickle\",\"worry-seed\"]}}"}</script></div>

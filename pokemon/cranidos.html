@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Cranidos | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css">
@@ -17,18 +25,23 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-60d9613b.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-bc8a00f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -119,7 +132,7 @@
 
 
 		<script type="module" data-hydrate="4cfmdq">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="4cfmdq"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -131,10 +144,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js")
 				],
-				params: {id:"cranidos"}
+				params: {id:"cranidos"},
+				routeId: "pokemon/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/cranidos.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"cranidos\",\"name\":\"Cranidos\",\"number\":408,\"type\":[\"rock\"],\"size\":\"small\",\"sr\":2,\"minLevel\":1,\"eggGroup\":[\"monster\"],\"gender\":\"1:7\",\"evolution\":{\"stage\":\"1\",\"maxStage\":\"2\",\"description\":\"Cranidos can evolve into Rampardos at level 8 and above. When it evolves, its health increases by double its level, and it gains 8 points to add to its ability scores (max 20).\"},\"description\":\"The Head Butt Pokémon. It lived in jungles around 100 million years ago. Its skull is as hard as iron.\",\"ac\":12,\"hp\":20,\"hitDice\":\"d8\",\"speed\":[{\"type\":\"walking\",\"value\":25}],\"attributes\":{\"str\":\"15\",\"dex\":\"13\",\"con\":\"14\",\"int\":\"6\",\"wis\":\"10\",\"cha\":\"10\"},\"skills\":[\"survival\"],\"savingThrows\":[\"str\",\"con\"],\"senses\":[],\"abilities\":[{\"id\":\"mold-breaker\",\"name\":\"Mold Breaker\",\"description\":\"This Pokémon's moves ignore any abilities that would lessen their effect or ability to hit an opponent (Due to things like Water Absorb, Snow Cloak, Thick Fat, Sturdy, etc.)\",\"hidden\":false},{\"id\":\"sheer-force\",\"name\":\"Sheer Force\",\"description\":\"When activating a move that has a chance to impose a stat change or inflict a status, this creature instead doubles its move modifier for the damage with no chance of the additional effect.\",\"hidden\":true}],\"moves\":{\"start\":[\"headbutt\",\"leer\"],\"level2\":[\"focus-energy\",\"pursuit\"],\"level6\":[\"take-down\",\"scary-face\"],\"level10\":[\"assurance\",\"chip-away\"],\"level14\":[\"ancient-power\",\"zen-headbutt\"],\"level18\":[\"screech\",\"head-smash\"],\"tm\":[5,6,10,11,13,14,17,18,21,23,24,25,26,27,32,35,37,38,39,42,44,45,46,48,56,66,69,71,75,78,80,87,88,90,100],\"egg\":[\"crunch\",\"curse\",\"double-edge\",\"hammer-arm\",\"iron-head\",\"iron-tail\",\"leer\",\"slam\",\"stomp\",\"thrash\",\"whirlwind\"]}}"}</script></div>

@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Combusken | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css">
@@ -17,18 +25,23 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-60d9613b.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-bc8a00f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -118,7 +131,7 @@
 
 
 		<script type="module" data-hydrate="mtld9k">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="mtld9k"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -130,10 +143,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js")
 				],
-				params: {id:"combusken"}
+				params: {id:"combusken"},
+				routeId: "pokemon/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/combusken.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"combusken\",\"name\":\"Combusken\",\"number\":256,\"type\":[\"fire\",\"fighting\"],\"size\":\"small\",\"sr\":5,\"minLevel\":5,\"eggGroup\":[\"field\"],\"gender\":\"1:7\",\"evolution\":{\"stage\":\"2\",\"maxStage\":\"3\",\"description\":\"Combusken can evolve into Blaziken at level 14 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20).\"},\"description\":\"The Young Fowl Pokémon. Combusken battles with the intensely hot flames it spews from its beak and with outstandingly destructive kicks. This Pokémon's cry is very loud and distracting.\",\"ac\":14,\"hp\":45,\"hitDice\":\"d8\",\"speed\":[{\"type\":\"walking\",\"value\":30}],\"attributes\":{\"str\":\"14\",\"dex\":\"15\",\"con\":\"12\",\"int\":\"6\",\"wis\":\"12\",\"cha\":\"10\"},\"skills\":[\"athletics\"],\"savingThrows\":[\"dex\",\"str\"],\"senses\":[],\"abilities\":[{\"id\":\"blaze\",\"name\":\"Blaze\",\"description\":\"This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health.\",\"hidden\":false},{\"id\":\"speed-boost\",\"name\":\"Speed Boost\",\"description\":\"This Pokémon's speed is increased by 10 feet while in an environment related to its type (DM Discretion).\",\"hidden\":true}],\"moves\":{\"start\":[\"double-kick\",\"ember\",\"growl\",\"sand-attack\",\"scratch\"],\"level6\":[\"peck\",\"flame-charge\"],\"level10\":[\"quick-attack\",\"bulk-up\"],\"level14\":[\"focus-energy\",\"slash\"],\"level18\":[\"mirror-move\",\"sky-uppercut\",\"flare-blitz\"],\"tm\":[1,6,8,10,11,17,21,27,31,32,35,38,39,40,42,43,44,45,47,48,49,50,52,56,61,65,75,80,84,87,88,90,100]}}"}</script></div>

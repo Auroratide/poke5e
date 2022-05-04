@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Gumshoos | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css">
@@ -17,18 +25,23 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-60d9613b.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-bc8a00f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -118,7 +131,7 @@
 
 
 		<script type="module" data-hydrate="xaze1n">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="xaze1n"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -130,10 +143,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js")
 				],
-				params: {id:"gumshoos"}
+				params: {id:"gumshoos"},
+				routeId: "pokemon/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/gumshoos.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"gumshoos\",\"name\":\"Gumshoos\",\"number\":735,\"type\":[\"normal\"],\"size\":\"small\",\"sr\":7,\"minLevel\":5,\"eggGroup\":[\"field\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"2\",\"maxStage\":\"2\"},\"description\":\"The Stakeout Pokémon. Although it wasn’t originally found in Alola, this Pokémon was brought over a long time ago when there was a huge Rattata outbreak.\",\"ac\":13,\"hp\":61,\"hitDice\":\"d10\",\"speed\":[{\"type\":\"walking\",\"value\":30}],\"attributes\":{\"str\":\"14\",\"dex\":\"14\",\"con\":\"16\",\"int\":\"6\",\"wis\":\"12\",\"cha\":\"10\"},\"skills\":[\"insight\",\"investigation\"],\"savingThrows\":[\"str\",\"wis\"],\"senses\":[{\"type\":\"darkvision\",\"value\":50}],\"abilities\":[{\"id\":\"stakeout\",\"name\":\"Stakeout\",\"description\":\"When an opponent is switched out in battle, this Pokémon doubles the damage dealt if it targets the replacement on the first turn immediately following the switch.\",\"hidden\":false},{\"id\":\"strong-jaw\",\"name\":\"Strong Jaw\",\"description\":\"For biting moves activated by this Pokémon (Bite, Thunder Fang, Crunch, etc.), they may roll the damage twice and choose either total.\",\"hidden\":false},{\"id\":\"adaptability\",\"name\":\"Adaptability\",\"description\":\"When this Pokémon uses a move of its own type, it may roll the damage twice and choose either total.\",\"hidden\":true}],\"moves\":{\"start\":[\"leer\",\"pursuit\",\"sand-attack\",\"tackle\",\"odor-sleuth\"],\"level6\":[\"bide\",\"bite\"],\"level10\":[\"mud-slap\",\"super-fang\",\"take-down\"],\"level14\":[\"scary-face\",\"crunch\",\"hyper-fang\"],\"level18\":[\"yawn\",\"thrash\",\"rest\"],\"tm\":[1,6,10,12,17,21,26,32,37,39,41,42,44,45,46,48,49,66,87,88,89,90,100]}}"}</script></div>

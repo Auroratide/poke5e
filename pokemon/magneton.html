@@ -3,13 +3,21 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
-		<link rel="icon" href="/poke5e/favicon.png" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/poke5e/icons/192.png" />
+		<link rel="shortcut icon" href="/poke5e/icons/032.png" />
+
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
 		<link rel="stylesheet" href="/poke5e/styles/normalize.css" />
 		<link rel="stylesheet" href="/poke5e/styles/global.css" />
+		<link rel="manifest" href="/poke5e/poke5e.webmanifest" />
+
 		<meta http-equiv="content-security-policy" content=""><title>Magneton | Pokemon 5e Reference</title>
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css">
@@ -17,18 +25,23 @@
 	<link rel="stylesheet" href="/poke5e/_app/assets/_layout-6b0d86bd.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Loader-762b3015.css">
 	<link rel="stylesheet" href="/poke5e/_app/assets/Pokeball-cdf68179.css">
-	<link rel="modulepreload" href="/poke5e/_app/start-514d442e.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/vendor-eda9ac5c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-396f020f.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-cab0a561.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-f3221f4f.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/store-be72d650.js">
-	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-79bf91e3.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-60d9613b.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-589b0d97.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-fac5830a.js">
-	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-1c2bfb69.js">
+	<link rel="modulepreload" href="/poke5e/_app/start-68fb0e40.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/paths-a68037f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/index-616296c3.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/__layout.svelte-11d8cd20.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-881072a6.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/store-b6a5922a.js">
+	<link rel="modulepreload" href="/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/TypeTag-1c879e8d.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/_layout-bc8a00f4.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Loader-b8e6e374.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Pokeball-c6cd3b66.js">
+	<link rel="modulepreload" href="/poke5e/_app/chunks/Title-d04f9dab.js">
+				<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('/poke5e/service-worker.js');
+		}
+	</script>
 	</head>
 	<body>
 		<div>
@@ -118,7 +131,7 @@
 
 
 		<script type="module" data-hydrate="d6nqk6">
-		import { start } from "/poke5e/_app/start-514d442e.js";
+		import { start } from "/poke5e/_app/start-68fb0e40.js";
 		start({
 			target: document.querySelector('[data-hydrate="d6nqk6"]').parentNode,
 			paths: {"base":"/poke5e","assets":"/poke5e"},
@@ -130,10 +143,11 @@
 				status: 200,
 				error: null,
 				nodes: [
-					import("/poke5e/_app/pages/__layout.svelte-cab0a561.js"),
-						import("/poke5e/_app/pages/pokemon/_id_.svelte-d0ca2f7c.js")
+					import("/poke5e/_app/pages/__layout.svelte-11d8cd20.js"),
+						import("/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js")
 				],
-				params: {id:"magneton"}
+				params: {id:"magneton"},
+				routeId: "pokemon/[id]"
 			}
 		});
 	</script><script type="application/json" sveltekit:data-type="data" sveltekit:data-url="/poke5e/pokemon/magneton.json">{"status":200,"statusText":"","headers":{"content-type":"application/json; charset=utf-8"},"body":"{\"id\":\"magneton\",\"name\":\"Magneton\",\"number\":82,\"type\":[\"electric\",\"steel\"],\"size\":\"small\",\"sr\":8,\"minLevel\":5,\"eggGroup\":[\"gender unknown\"],\"gender\":\"0:0\",\"evolution\":{\"stage\":\"2\",\"maxStage\":\"3\",\"description\":\"Magneton can evolve into Magnezone at level 15 and above. When it evolves, its health increases by double its level, and it gains 8 points to add to its ability scores (max 20).\"},\"description\":\"The Magnet Pokémon. Generates strange radio signals. It raises the temperature by 3.6 degrees Fahrenheit within 3,300 feet.\",\"ac\":16,\"hp\":55,\"hitDice\":\"d10\",\"speed\":[{\"type\":\"flying (hover)\",\"value\":30}],\"attributes\":{\"str\":\"13\",\"dex\":\"15\",\"con\":\"17\",\"int\":\"8\",\"wis\":\"12\",\"cha\":\"8\"},\"skills\":[\"insight\",\"acrobatics\"],\"savingThrows\":[\"con\"],\"senses\":[],\"abilities\":[{\"id\":\"magnet-pull\",\"name\":\"Magnet Pull\",\"description\":\"Steel opponents in battle with this Pokémon may not switch out or flee.\",\"hidden\":false},{\"id\":\"sturdy\",\"name\":\"Sturdy\",\"description\":\"When taking damage equal to half or more of your current HP, roll a d4. On a result of 3 of 4, halve the damage dealt.\",\"hidden\":false},{\"id\":\"analytic\",\"name\":\"Analytic\",\"description\":\"After this Pokémon misses an attack, its next attack is done at advantage.\",\"hidden\":true}],\"moves\":{\"start\":[\"magnet-bomb\",\"supersonic\",\"tackle\",\"thunder-shock\",\"tri-attack\",\"thunder-wave\",\"electric-terrain\"],\"level6\":[\"light-screen\",\"sonic-boom\"],\"level10\":[\"spark\",\"mirror-shot\",\"metal-sound\"],\"level14\":[\"electro-ball\",\"flash-cannon\",\"screech\"],\"level18\":[\"discharge\",\"lock-on\",\"magnet-rise\",\"gyro-ball\",\"zap-cannon\"],\"tm\":[6,10,11,15,16,17,18,21,24,25,27,32,33,42,44,48,57,64,68,72,73,74,77,87,88,90,91,93,100]}}"}</script></div>
