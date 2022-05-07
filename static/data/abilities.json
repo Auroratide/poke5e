@@ -831,6 +831,11 @@
       "description": "When this Pokémon is subject to damage in its vulnerabilities list, roll the damage dice twice and use the lower result for the damage calculation."
     },
     {
+      "id": "propeller-tail",
+      "name": "Propeller Tail",
+      "description": "This Pokémon's ignores the effects of moves that alters the targets of its own moves (such as Follow Me)."
+    },
+    {
       "id": "protean",
       "name": "Protean",
       "description": "This Pokémon's type changes to the type of move it uses, just before the move is used. It takes on the new type's resistances, vulnerabilities, and immunities."

@@ -113125,6 +113125,213 @@
       }
     },
     {
+      "id": "arrokuda",
+      "name": "Arrokuda",
+      "number": 846,
+      "type": [
+        "water"
+      ],
+      "size": "tiny",
+      "sr": 0.5,
+      "minLevel": 1,
+      "eggGroup": [
+        "water 2"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Arrokuda can evolve into Barraskewda at level 7 and above. When it evolves, its health increases by double its level, and it gains 11 points to add to its ability scores (max 20)."
+      },
+      "description": "The Rush Pokémon. If it sees any movement around it, this Pokémon charges for it straightaway, leading with its sharply pointed jaw. It's very proud of that jaw.",
+      "ac": 12,
+      "hp": 17,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 5
+        },
+        {
+          "type": "swimming",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "14",
+        "dex": "13",
+        "con": "12",
+        "int": "6",
+        "wis": "10",
+        "cha": "10"
+      },
+      "skills": [
+        "survival"
+      ],
+      "savingThrows": [
+        "dex"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "swift-swim",
+          "hidden": false
+        },
+        {
+          "id": "propeller-tail",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "peck",
+          "aqua-jet"
+        ],
+        "level2": [
+          "fury-attack"
+        ],
+        "level6": [
+          "bite",
+          "agility"
+        ],
+        "level10": [
+          "dive",
+          "laser-focus"
+        ],
+        "level14": [
+          "crunch"
+        ],
+        "level18": [
+          "liquidation",
+          "double-edge"
+        ],
+        "tm": [
+          6,
+          10,
+          17,
+          18,
+          31,
+          42,
+          44,
+          48,
+          55,
+          84,
+          88,
+          90,
+          98,
+          100
+        ],
+        "egg": [
+          "acupressure",
+          "night-slash",
+          "slash",
+          "thrash"
+        ]
+      }
+    },
+    {
+      "id": "barraskewda",
+      "name": "Barraskewda",
+      "number": 847,
+      "type": [
+        "water"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "water 2"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2"
+      },
+      "description": "The Skewer Pokémon. It spins its tail fins to propel itself, surging forward at speeds of over 100 knots before ramming prey and spearing into them.",
+      "ac": 15,
+      "hp": 45,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 5
+        },
+        {
+          "type": "swimming",
+          "value": 40
+        }
+      ],
+      "attributes": {
+        "str": "18",
+        "dex": "18",
+        "con": "12",
+        "int": "6",
+        "wis": "12",
+        "cha": "10"
+      },
+      "skills": [
+        "acrobatics",
+        "survival"
+      ],
+      "savingThrows": [
+        "dex"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "swift-swim",
+          "hidden": false
+        },
+        {
+          "id": "propeller-tail",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "peck",
+          "aqua-jet",
+          "fury-attack",
+          "throat-chop",
+          "bite"
+        ],
+        "level6": [
+          "agility"
+        ],
+        "level10": [
+          "dive",
+          "laser-focus"
+        ],
+        "level14": [
+          "crunch"
+        ],
+        "level18": [
+          "liquidation",
+          "double-edge"
+        ],
+        "tm": [
+          6,
+          10,
+          15,
+          17,
+          18,
+          31,
+          42,
+          44,
+          45,
+          48,
+          55,
+          68,
+          84,
+          88,
+          90,
+          94,
+          98,
+          100
+        ]
+      }
+    },
+    {
       "id": "obstagoon",
       "name": "Obstagoon",
       "number": 862,
