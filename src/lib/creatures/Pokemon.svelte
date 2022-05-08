@@ -58,9 +58,9 @@
     <section class="skills">
         <FlatDl>
             <dt>Proficiencies</dt>
-            <dd class="cap">{pokemon.skills.join(', ')}</dd>
+            <dd class="cap">{asString.list(pokemon.skills)}</dd>
             <dt>Saving Throws</dt>
-            <dd class="upper">{pokemon.savingThrows.join(', ')}</dd>
+            <dd class="upper">{asString.list(pokemon.savingThrows)}</dd>
             <TypeEffectiveness type={pokemon.type} />
         </FlatDl>
     </section>

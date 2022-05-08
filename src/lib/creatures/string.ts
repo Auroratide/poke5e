@@ -47,3 +47,6 @@ export const type = (value: PokeType[]): string => {
 
 export const pokeIndex = (value: number): string =>
     `#${value.toString().padStart(3, '0')}`
+
+export const list = (value: string[]): string =>
+    value.length > 0 ? value.join(', ') : 'none'
