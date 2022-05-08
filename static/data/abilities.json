@@ -846,6 +846,11 @@
       "description": "If the move is known, this Pokémon may use the Psychic Terrain move as a bonus action."
     },
     {
+      "id": "punk-rock",
+      "name": "Punk Rock",
+      "description": "When this Pokémon uses a sound-based move, it adds its STAB bonus to the damage. This Pokémon has resistance to sound-based moves."
+    },
+    {
       "id": "pure-power",
       "name": "Pure Power",
       "description": "Once per short rest, this Pokémon may double the damage dice for a single damage roll. The player must announce that they are using this ability before the attack roll."
