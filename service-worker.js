@@ -1,5 +1,5 @@
 const build = [
-  "/poke5e/_app/start-68fb0e40.js",
+  "/poke5e/_app/start-7714becd.js",
   "/poke5e/_app/pages/__layout.svelte-11d8cd20.js",
   "/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css",
   "/poke5e/_app/pages/__error.svelte-5949676c.js",
@@ -8,9 +8,9 @@ const build = [
   "/poke5e/_app/assets/pages/index.svelte-7e41303c.css",
   "/poke5e/_app/pages/moves/_id_.svelte-5066f5ee.js",
   "/poke5e/_app/pages/moves/index.svelte-00b210c4.js",
-  "/poke5e/_app/pages/pokemon/_id_.svelte-4b0bdc59.js",
+  "/poke5e/_app/pages/pokemon/_id_.svelte-897721f5.js",
   "/poke5e/_app/assets/pages/pokemon/_id_.svelte-f4068316.css",
-  "/poke5e/_app/pages/pokemon/index.svelte-2e3678d3.js",
+  "/poke5e/_app/pages/pokemon/index.svelte-65a19478.js",
   "/poke5e/_app/pages/tms/_id_.svelte-84bafa9d.js",
   "/poke5e/_app/assets/pages/tms/_id_.svelte-d9b4bee3.css",
   "/poke5e/_app/pages/tms/index.svelte-cfb52e84.js",
@@ -35,10 +35,10 @@ const build = [
   "/poke5e/_app/assets/TypeTag-d619e9f6.css",
   "/poke5e/_app/chunks/string-78f0a8b9.js",
   "/poke5e/_app/chunks/filter-b6f3cb86.js",
-  "/poke5e/_app/chunks/_layout-bc8a00f4.js",
+  "/poke5e/_app/chunks/_layout-e501fbbf.js",
   "/poke5e/_app/chunks/_layout-d4dea994.js"
 ];
-const version = "1651690087961";
+const version = "1652013904401";
 const cacheName = `poke5e-${version}`;
 const install = async () => {
   const cache = await caches.open(cacheName);

@@ -831,6 +831,11 @@
       "description": "When this Pokémon is subject to damage in its vulnerabilities list, roll the damage dice twice and use the lower result for the damage calculation."
     },
     {
+      "id": "propeller-tail",
+      "name": "Propeller Tail",
+      "description": "This Pokémon's ignores the effects of moves that alters the targets of its own moves (such as Follow Me)."
+    },
+    {
       "id": "protean",
       "name": "Protean",
       "description": "This Pokémon's type changes to the type of move it uses, just before the move is used. It takes on the new type's resistances, vulnerabilities, and immunities."
@@ -839,6 +844,11 @@
       "id": "psychic-surge",
       "name": "Psychic Surge",
       "description": "If the move is known, this Pokémon may use the Psychic Terrain move as a bonus action."
+    },
+    {
+      "id": "punk-rock",
+      "name": "Punk Rock",
+      "description": "When this Pokémon uses a sound-based move, it adds its STAB bonus to the damage. This Pokémon has resistance to sound-based moves."
     },
     {
       "id": "pure-power",
