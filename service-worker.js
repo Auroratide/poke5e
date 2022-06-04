@@ -1,5 +1,5 @@
 const build = [
-  "/poke5e/_app/start-991d8011.js",
+  "/poke5e/_app/start-fbb9f6a4.js",
   "/poke5e/_app/pages/__layout.svelte-11d8cd20.js",
   "/poke5e/_app/assets/pages/__layout.svelte-0a44f995.css",
   "/poke5e/_app/pages/__error.svelte-5949676c.js",
@@ -38,7 +38,7 @@ const build = [
   "/poke5e/_app/chunks/_layout-e501fbbf.js",
   "/poke5e/_app/chunks/_layout-d4dea994.js"
 ];
-const version = "1653320741562";
+const version = "1654359146130";
 const cacheName = `poke5e-${version}`;
 const install = async () => {
   const cache = await caches.open(cacheName);
