@@ -36,6 +36,20 @@
         {/if}
     </section>
     <slot name="extra"></slot>
+    {#if move.contest}
+        <section class="contest" style:--contest-color="var(--skin-contest-{move.contest.contest})">
+            <FlatDl>
+                <dt>Contest</dt>
+                <dd class="contest-type">{move.contest.contest}</dd>
+                <dt>Appeal</dt>
+                <dd>{move.contest.appeal}</dd>
+                <dt>Jam</dt>
+                <dd>{move.contest.jam}</dd>
+                <dt>Effect</dt>
+                <dd>{move.contest.effect}</dd>
+            </FlatDl>
+        </section>
+    {/if}
 </Card>
 
 <style lang="scss">
@@ -43,7 +57,7 @@
         text-transform: uppercase;
     }
 
-    .duration, .range {
+    .duration, .range, .contest-type {
         text-transform: capitalize;
     }
 
@@ -82,5 +96,11 @@
 
     .optional-heading {
         margin-bottom: 0.15em;
+    }
+
+    .contest {
+        background-color: var(--contest-color);
+        padding-block-start: 1em;
+        padding-block-end: 0.5em;
     }
 </style>

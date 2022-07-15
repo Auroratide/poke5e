@@ -62,6 +62,12 @@
     --skin-bar-bg: hsl(330, 1%, 38%);
     --skin-bar-fill: hsl(119, 100%, 52%);
     --skin-bar-secondary: hsl(197, 91%, 64%);
+
+    --skin-contest-cool: hsla(25, 86%, 72%, 0.5);
+    --skin-contest-beauty: hsla(222, 81%, 79%, 0.5);
+    --skin-contest-cute: hsla(342, 91%, 78%, 0.5);
+    --skin-contest-clever: hsla(100, 52%, 71%, 0.5);
+    --skin-contest-tough: hsla(48, 93%, 73%, 0.5);
 }
 
 .theme-blue {

@@ -4,6 +4,13 @@ import type { BodyText } from '../rendering/types'
 
 export type Power = Attribute[] | 'none' | 'any' | 'varies'
 
+export type Contest = {
+    contest: string,
+    appeal: number,
+    jam: number,
+    effect: string,
+}
+
 export type Move = {
     id: string,
     name: string,
@@ -16,6 +23,7 @@ export type Move = {
     description: BodyText,
     higherLevels?: string,
     optional?: BodyText,
+    contest?: Contest,
 }
 
 export type MinimalMoveInfo = Pick<Move, 'id' | 'name' | 'type' | 'power' | 'pp'>
