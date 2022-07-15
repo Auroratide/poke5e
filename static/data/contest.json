@@ -806,6 +806,27 @@
       "effect": "Makes audience expect little of other contestants."
     },
     {
+      "id": "doom-desire",
+      "contest": "beauty",
+      "appeal": 3,
+      "jam": 0,
+      "effect": "Excites the audience a lot if used last."
+    },
+    {
+      "id": "double-hit",
+      "contest": "cool",
+      "appeal": 2,
+      "jam": 1,
+      "effect": "Badly startles Pokémon that used a move of the same type."
+    },
+    {
+      "id": "double-kick",
+      "contest": "cool",
+      "appeal": 2,
+      "jam": 1,
+      "effect": "Badly startles Pokémon that used a move of the same type."
+    },
+    {
       "id": "double-slap",
       "contest": "cute",
       "appeal": 1,
@@ -1247,6 +1268,27 @@
       "effect": "A very appealing move, but after using this move, the user is more easily startled."
     },
     {
+      "id": "flash",
+      "contest": "beauty",
+      "appeal": 3,
+      "jam": 0,
+      "effect": "Makes audience expect little of other contestants."
+    },
+    {
+      "id": "flash-cannon",
+      "contest": "beauty",
+      "appeal": 4,
+      "jam": 0,
+      "effect": "Quite an appealing move."
+    },
+    {
+      "id": "flatter",
+      "contest": "clever",
+      "appeal": 2,
+      "jam": 0,
+      "effect": "Makes the remaining Pokémon nervous."
+    },
+    {
       "id": "fling",
       "contest": "cute",
       "appeal": 3,
@@ -1366,6 +1408,13 @@
       "effect": "Startles the last Pokemon to act before the user."
     },
     {
+      "id": "fury-attack",
+      "contest": "cool",
+      "appeal": 1,
+      "jam": 0,
+      "effect": "Effectiveness varies depending on when it is used."
+    },
+    {
       "id": "fury-cutter",
       "contest": "cool",
       "appeal": 3,
@@ -1392,6 +1441,13 @@
       "appeal": 1,
       "jam": 0,
       "effect": "Works better the later it is used in a turn."
+    },
+    {
+      "id": "future-sight",
+      "contest": "clever",
+      "appeal": 2,
+      "jam": 0,
+      "effect": "Works well if it is the same type as the move used by the last Pokémon."
     },
     {
       "id": "gastro-acid",
@@ -2024,6 +2080,27 @@
       "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
     },
     {
+      "id": "leech-seed",
+      "contest": "clever",
+      "appeal": 1,
+      "jam": 0,
+      "effect": "Gets the Pokémon pumped up. Helps prevent nervousness, too."
+    },
+    {
+      "id": "leer",
+      "contest": "cool",
+      "appeal": 2,
+      "jam": 1,
+      "effect": "Badly startles the Pokémon that the audience has high expectations of."
+    },
+    {
+      "id": "lick",
+      "contest": "cute",
+      "appeal": 2,
+      "jam": 3,
+      "effect": "Startles the last Pokémon to act before the user."
+    },
+    {
       "id": "light-of-ruin",
       "contest": "beauty",
       "appeal": 6,
@@ -2493,6 +2570,13 @@
       "effect": "Excites the audience a lot if used first."
     },
     {
+      "id": "outrage",
+      "contest": "cool",
+      "appeal": 6,
+      "jam": 0,
+      "effect": "A very appealing move, but after using this move, the user is more easily startled."
+    },
+    {
       "id": "overheat",
       "contest": "beauty",
       "appeal": 6,
@@ -2512,6 +2596,27 @@
       "appeal": 1,
       "jam": 0,
       "effect": "Shows off the Pokemon’s appeal about as well as all the moves before it this turn."
+    },
+    {
+      "id": "parting-shot",
+      "contest": "cool",
+      "appeal": 3,
+      "jam": 0,
+      "effect": "Excites the audience a lot if used last."
+    },
+    {
+      "id": "pay-day",
+      "contest": "clever",
+      "appeal": 2,
+      "jam": 0,
+      "effect": "Excites the audience in any kind of contest."
+    },
+    {
+      "id": "payback",
+      "contest": "tough",
+      "appeal": 2,
+      "jam": 0,
+      "effect": "Works great if the user goes last this turn."
     },
     {
       "id": "peck",
@@ -2582,6 +2687,13 @@
       "appeal": 4,
       "jam": 0,
       "effect": "Quite an appealing move."
+    },
+    {
+      "id": "poison-gas",
+      "contest": "clever",
+      "appeal": 3,
+      "jam": 0,
+      "effect": "Makes audience expect little of other contestants."
     },
     {
       "id": "poison-jab",
@@ -2876,6 +2988,13 @@
       "appeal": 2,
       "jam": 0,
       "effect": "Works well if it is the same type as the move used by the last Pokemon."
+    },
+    {
+      "id": "refresh",
+      "contest": "cute",
+      "appeal": 2,
+      "jam": 0,
+      "effect": "Prevents the user from being startled one time this turn."
     },
     {
       "id": "relic-song",
@@ -3800,6 +3919,13 @@
       "appeal": 1,
       "jam": 0,
       "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
+    },
+    {
+      "id": "thousand-arrows",
+      "contest": "beauty",
+      "appeal": 2,
+      "jam": 1,
+      "effect": "Badly startles Pokémon that used a move of the same type."
     },
     {
       "id": "thousand-waves",
