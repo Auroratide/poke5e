@@ -1,8 +1,8 @@
-import type { RequestHandler } from '@sveltejs/kit'
+import type { RequestHandler } from './$types'
 import moves from '../../../static/data/moves.json'
 import tms from '../../../static/data/tms.json'
 
-export const get: RequestHandler = async () => {
+export const GET: RequestHandler = async () => {
     const tmsWithMoveInfo = tms.tms.map(tm => {
         const move = moves.moves.find(it => it.id === tm.move)
         return {
@@ -17,10 +17,9 @@ export const get: RequestHandler = async () => {
         }
     })
 
-    return {
+    return new Response(JSON.stringify({
+        items: tmsWithMoveInfo,
+    }), {
         status: 200,
-        body: {
-            items: tmsWithMoveInfo,
-        },
-    }
+    })
 }

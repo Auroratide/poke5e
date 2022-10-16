@@ -10,9 +10,6 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		prerender: {
-			default: true,
-		},
 		paths: {
 			base: dev ? '' : '/poke5e'
 		},

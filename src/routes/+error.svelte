@@ -1,31 +1,15 @@
-<script lang="ts" context="module">
-    import type { ErrorLoad } from '@sveltejs/kit'
-
-    export const load: ErrorLoad = async ({ status }) => {
-        if (status === 404) {
-            return {
-                props: {
-                    title: 'MissingNo.',
-                    message: 'Looks like there\'s nothing here!',
-                },
-            }
-        } else {
-            return {
-                props: {
-                    title: 'We\'re sorry!',
-                    message: 'A problem seems to have occurred.',
-                },
-            }
-        }
-    }
-</script>
-
 <script lang="ts">
+    import { page } from '$app/stores'
     import { base, assets } from '$app/paths'
     import Title from '$lib/design/Title.svelte'
 
-    export let title: string
-    export let message: string
+    const title = $page.status === 404
+        ? 'MissingNo.'
+        : 'We\'re sorry!'
+    
+    const message = $page.status === 404
+        ? 'Looks like there\'s nothing here!'
+        : 'A problem seems to have occurred.'
 </script>
 
 <Title />

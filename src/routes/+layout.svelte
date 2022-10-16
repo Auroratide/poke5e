@@ -1,24 +1,5 @@
-<script lang="ts" context="module">
-    import type { Load } from '@sveltejs/kit'
-
-    const getActiveSection = (url: URL) => {
-        const match = url.pathname.match(/^\/([^\/]*).*$/)
-        if (match)
-            return match[1]
-        else
-            return ''
-    }
-
-    export const load: Load = async ({ url }) => {
-        return {
-            props: {
-                activeSection: getActiveSection(url),
-            },
-        }
-    }
-</script>
-
 <script lang="ts">
+    import type { LayoutData } from './$types'
     import type { Writable } from 'svelte/store'
     import Container from '$lib/design/Container.svelte'
     import { base } from '$app/paths'
@@ -30,7 +11,8 @@
         currentTmSorter as tmsSorter,
     } from '$lib/moves/store'
 
-    export let activeSection: string = ''
+    export let data: LayoutData
+    $: activeSection = data.activeSection
 
     export let resetStores = (filter: Writable<string>, sorter: Writable<() => number>) => () => {
         filter.set('')
