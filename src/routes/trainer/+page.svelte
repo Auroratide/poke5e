@@ -4,6 +4,7 @@
     import Loader from '$lib/design/Loader.svelte'
     import PlayerPokemon from '$lib/trainers/PlayerPokemon.svelte'
     import WithPokemonData from './WithPokemonData.svelte'
+    import WithMoveData from './WithMoveData.svelte'
 
     const byId = (trainer: Trainer, id: PokemonId) =>
         trainer.pokemon.find((it) => it.id === id)
@@ -15,16 +16,17 @@
 </script>
 
 {#if trainer !== undefined}
-    <WithPokemonData let:data pokemon={pokemon.pokemonId}>
-        {#await data}
-            <Loader />
-        {:then data}
-            <PlayerPokemon pokemon={{
-                ...pokemon,
-                pokemonData: data,
-            }} />
-        {/await}
+    <WithPokemonData let:data={pokemonData} pokemon={pokemon.pokemonId}>
+        <WithMoveData let:data={moveData} moves={pokemon.moves.map(it => it.moveId)}>
+            {#await Promise.all([pokemonData, moveData])}
+                <Loader />
+            {:then data}
+                <PlayerPokemon pokemon={{
+                    ...pokemon,
+                    pokemonData: data[0],
+                    moveData: data[1],
+                }} />
+            {/await}
+        </WithMoveData>
     </WithPokemonData>
-{:else}
-    <h1>No trrainer</h1>
 {/if}

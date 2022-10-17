@@ -6,27 +6,59 @@ export const inMemoryPokemon: PlayerPokemon[] = [ {
     trainerId: 'Renibel',
     pokemonId: 'mimikyu',
     nickname: 'Pikachu',
-    level: 6,
+    level: 11,
     gender: Gender.Male,
     attributes: {
         str: 10,
         dex: 14,
         con: 16,
         int: 6,
-        wis: 16,
-        cha: 12,
+        wis: 18,
+        cha: 13,
     },
     ac: 17,
     hp: {
         current: 44,
-        max: 52,
+        max: 97,
     },
     hitDice: {
-        current: 6,
-        max: 6,
+        current: 11,
+        max: 11,
     },
     proficiencies: ['arcana', 'intimidation', 'performance'],
     savingThrows: ['wis', 'cha'],
+    moves: [ {
+        moveId: 'mimic',
+        pp: {
+            current: 5,
+            max: 5,
+        },
+        notes: '2d8 + 10 ghost'
+    }, {
+        moveId: 'astonish',
+        pp: {
+            current: 10,
+            max: 10,
+        },
+    }, {
+        moveId: 'copycat',
+        pp: {
+            current: 10,
+            max: 10,
+        },
+    }, {
+        moveId: 'protect',
+        pp: {
+            current: 3,
+            max: 3,
+        },
+    }, {
+        moveId: 'charm',
+        pp: {
+            current: 10,
+            max: 10,
+        },
+    } ],
 }, {
     id: '2',
     trainerId: 'Renibel',
@@ -53,6 +85,31 @@ export const inMemoryPokemon: PlayerPokemon[] = [ {
     },
     proficiencies: ['insight', 'perception',],
     savingThrows: ['wis'],
+    moves: [ {
+        moveId: 'psychic',
+        pp: {
+            current: 5,
+            max: 5,
+        },
+    }, {
+        moveId: 'teleport',
+        pp: {
+            current: 10,
+            max: 10,
+        },
+    }, {
+        moveId: 'heal-pulse',
+        pp: {
+            current: 5,
+            max: 5,
+        },
+    }, {
+        moveId: 'magical-leaf',
+        pp: {
+            current: 5,
+            max: 5,
+        },
+    } ],
 }, {
     id: '3',
     trainerId: 'Renibel',
@@ -79,6 +136,31 @@ export const inMemoryPokemon: PlayerPokemon[] = [ {
     },
     proficiencies: ['arcana'],
     savingThrows: ['wis'],
+    moves: [ {
+        moveId: 'hex',
+        pp: {
+            current: 5,
+            max: 5,
+        },
+    }, {
+        moveId: 'smog',
+        pp: {
+            current: 5,
+            max: 5,
+        },
+    }, {
+        moveId: 'will-o-wisp',
+        pp: {
+            current: 10,
+            max: 10,
+        },
+    }, {
+        moveId: 'flame-burst',
+        pp: {
+            current: 10,
+            max: 10,
+        },
+    } ],
 } ]
 
 export const inMemoryTrainers: Trainer[] = [ {

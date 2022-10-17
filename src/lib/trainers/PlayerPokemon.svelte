@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { PlayerPokemon, WithPokemonData } from './types'
+    import type { PlayerPokemon, WithPokemonData, WithMoveData } from './types'
     import Card from '../design/Card.svelte'
     import AttributeBlock from '../dnd/AttributeBlock.svelte'
     import TypeTag from '../pokemon/TypeTag.svelte'
@@ -14,8 +14,9 @@
     import * as asString from '../creatures/string'
     import Modal from '../design/Modal.svelte'
     import PokemonEditor from './PokemonEditor'
+    import LearnedMove from './LearnedMove.svelte'
 
-    export let pokemon: PlayerPokemon & WithPokemonData
+    export let pokemon: PlayerPokemon & WithPokemonData & WithMoveData
     let hp = pokemon.hp.current
     let hitDice = pokemon.hitDice.current
     $: data = pokemon.pokemonData
@@ -98,6 +99,16 @@
         <FlatDl>
             <TypeEffectiveness type={data.type} />
         </FlatDl>
+    </section>
+    <hr />
+    <section class="moves">
+        <ul class="nolist">
+            {#each pokemon.moves as move}
+                <li>
+                    <LearnedMove {move} moveData={pokemon.moveData[move.moveId]} proficiencyBonus={pb} attributes={pokemon.attributes} />
+                </li>
+            {/each}
+        </ul>
     </section>
     <button on:click={openModal}>Modal!</button>
 </Card>

@@ -1,5 +1,6 @@
 import type { Skill, Attribute } from '../dnd/types'
 import type { Pokemon } from '../creatures/types'
+import type { Move } from '$lib/moves/types'
 
 export type Resource = {
     current: number,
@@ -11,6 +12,12 @@ export enum Gender {
     Female = 'female',
     None = 'none',
     Other = 'other',
+}
+
+export type LearnedMove = {
+    moveId: string,
+    pp: Resource,
+    notes?: string,
 }
 
 export type PokemonId = string
@@ -34,10 +41,17 @@ export type PlayerPokemon = {
     hitDice: Resource,
     proficiencies: Skill[],
     savingThrows: Attribute[],
+    moves: LearnedMove[],
 }
 
 export type WithPokemonData = {
     pokemonData: Pokemon,
+}
+
+export type WithMoveData = {
+    moveData: {
+        [key: string]: Move
+    }
 }
 
 export type TrainerId = string

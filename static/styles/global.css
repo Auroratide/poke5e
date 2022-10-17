@@ -125,3 +125,8 @@ input {
 input:focus {
     background-color: var(--skin-content);
 }
+
+.nolist {
+    list-style: none;
+    padding: 0;
+}
