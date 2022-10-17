@@ -58,8 +58,8 @@
         <FlatDl columns={2}>
             <dt>Armor Class</dt>
             <dd>{pokemon.ac}</dd>
-            <dt><abbr title="Species Rating">SR</abbr></dt>
-            <dd>{data.sr}</dd>
+            <dt>Nature</dt>
+            <dd class="cap">{pokemon.nature}</dd>
             <dt>Proficiency</dt>
             <dd>+{pb}</dd>
             <dt>Size</dt>

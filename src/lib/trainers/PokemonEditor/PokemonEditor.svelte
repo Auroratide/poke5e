@@ -3,12 +3,15 @@
     import { Gender } from '../types'
     import { attributeList } from '../../dnd/attributes'
     import { skillList } from '../../dnd/proficiency'
+    import { Natures } from '../types'
 
     const noSpaces = (s: string) => s.replace(/\s/g, '')
 
     export let pokemon: PlayerPokemon
 
     let nickname = pokemon.nickname
+    let nature = pokemon.nature
+    let natureCustom = pokemon.nature
     let level = pokemon.level
     let ac = pokemon.ac
     let maxHp = pokemon.hp.max
@@ -30,6 +33,20 @@
         <div class="input-group">
             <label for="nickname-input">Nickname</label>
             <input name="nickname" id="nickname-input" type="text" bind:value={nickname} />
+            <label for="nature-input">Nature</label>
+            <select id="nature-input" class="cap" bind:value={nature}>
+                {#each Natures as natureOption}
+                    <option value="{natureOption}">{natureOption}</option>
+                {/each}
+                <option value="other">Other</option>
+            </select>
+            {#if nature === 'other'}
+                <span></span>
+                <span class="hrow">
+                    <label for="nature-input-custom">Specify:</label>
+                    <input class="full-width" name="nature-custom" id="nature-input-custom" type="text" bind:value={natureCustom} />
+                </span>
+            {/if}
             <label for="level-input">Level</label>
             <input name="level" id="level-input" type="number" min="1" max="20" bind:value={level} />
             <label for="ac-input">AC</label>
@@ -88,6 +105,10 @@
         margin-bottom: 1em;
     }
 
+    .cap {
+        text-transform: capitalize;
+    }
+
     legend {
         display: block;
         background-color: var(--skin-bg);
@@ -143,5 +164,15 @@
         label {
             text-transform: capitalize;
         }
+    }
+
+    .hrow {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .full-width {
+        width: 100%;
     }
 </style>

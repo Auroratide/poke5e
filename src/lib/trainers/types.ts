@@ -14,6 +14,30 @@ export enum Gender {
     Other = 'other',
 }
 
+export const Natures = [
+    'reckless',
+    'rash',
+    'brave',
+    'arrogant',
+    'skittish',
+    'hasty',
+    'energetic',
+    'clumsy',
+    'apathetic',
+    'stubborn',
+    'grumpy',
+    'relaxed',
+    'careful',
+    'curious',
+    'naughty',
+    'cheerful',
+    'sassy',
+    'innocent',
+    'hardy',
+    'nimble',
+] as const
+export type Nature = (typeof Natures)[number] | string
+
 export type LearnedMove = {
     moveId: string,
     pp: Resource,
@@ -26,6 +50,7 @@ export type PlayerPokemon = {
     trainerId: TrainerId,
     pokemonId: string,
     nickname: string,
+    nature: Nature,
     level: number,
     gender: Gender,
     attributes: {

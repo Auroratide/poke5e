@@ -6,6 +6,7 @@ export const inMemoryPokemon: PlayerPokemon[] = [ {
     trainerId: 'Renibel',
     pokemonId: 'mimikyu',
     nickname: 'Pikachu',
+    nature: 'cheerful',
     level: 11,
     gender: Gender.Male,
     attributes: {
@@ -64,6 +65,7 @@ export const inMemoryPokemon: PlayerPokemon[] = [ {
     trainerId: 'Renibel',
     pokemonId: 'kirlia',
     nickname: 'Curly',
+    nature: 'curious',
     level: 6,
     gender: Gender.Female,
     attributes: {
@@ -115,6 +117,7 @@ export const inMemoryPokemon: PlayerPokemon[] = [ {
     trainerId: 'Renibel',
     pokemonId: 'litwick',
     nickname: 'Torchee',
+    nature: 'apathetic',
     level: 6,
     gender: Gender.Male,
     attributes: {
