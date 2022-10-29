@@ -96,6 +96,23 @@
             {/each}
         </div>
     </fieldset>
+    <fieldset hidden class="moves">
+        <legend><span class="unskew">Moves</span></legend>
+        {#each pokemon.moves as move, i}
+            <div class="input-group">
+                <label for="move-input-{i}">Move</label>
+                <input id="move-input-{i}" name="move[{i}]" value={move.moveId} />
+                <label for="max-pp-input-{i}">Max PP</label>
+                <input id="max-pp-input-{i}" type="number" name="max-pp[{i}]" value={move.pp.max} />
+                <label for="notes-input-{i}" class="align-start">Notes</label>
+                <textarea id="notes-input-{i}" name="notes[{i}]" rows="3">{move.notes ?? ''}</textarea>
+                <span></span>
+                <button>Remove this move</button>
+            </div>
+            <hr />
+        {/each}
+        <button>Add a move</button>
+    </fieldset>
 </form>
 
 <style lang="scss">
@@ -130,7 +147,7 @@
         align-items: center;
     }
 
-    .basic-info {
+    .basic-info, .moves {
         .input-group {
             grid-template-columns: auto 1fr;
         }
@@ -174,5 +191,14 @@
 
     .full-width {
         width: 100%;
+    }
+
+    .align-start {
+        align-self: flex-start;
+    }
+
+    hr {
+        margin-block: 1rem;
+        margin-inline: 2rem;
     }
 </style>
