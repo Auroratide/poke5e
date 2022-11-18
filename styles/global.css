@@ -91,6 +91,13 @@
     --theme-light: hsl(248, 100%, 83%);
 }
 
+.theme-green {
+    --theme-main: hsl(78, 82%, 56%);
+    --theme-dark: hsl(77, 100%, 42%);
+    --theme-text: hsl(77, 50%, 36%);
+    --theme-light: hsl(78, 82%, 56%);
+}
+
 body {
     font-family: var(--font-reg);
     font-size: var(--font-sz-base);
@@ -117,4 +124,9 @@ input {
 
 input:focus {
     background-color: var(--skin-content);
+}
+
+.nolist {
+    list-style: none;
+    padding: 0;
 }
