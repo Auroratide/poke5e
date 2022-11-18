@@ -6,7 +6,7 @@
     import type { Attributes } from '$lib/dnd/types'
     import { modifierForScore } from '$lib/dnd/attributes'
 
-    const maxBy = <T>(val: (o: T) => number) => (max: T, cur: T) => val(cur) > val(max) ? cur : max
+    const maxBy = (val: (o: any) => number) => (max: any, cur: any) => val(cur) > val(max) ? cur : max
 
     export let move: LearnedMove
     export let moveData: Move
