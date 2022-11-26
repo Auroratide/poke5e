@@ -10,7 +10,8 @@
     "clean": "rm -rf build",
     "ci": "npm-run-all clean check build",
     "gh": "gh-pages -d build --dotfiles",
-    "publish": "npm-run-all ci gh"
+    "publish": "npm-run-all ci gh",
+    "script:get-pokemon-images": "node ./scripts/get-pokemon-images.js"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^1.0.0-next.44",
