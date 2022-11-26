@@ -167,6 +167,11 @@ export const inMemoryPokemon: PlayerPokemon[] = [ {
 } ]
 
 export const inMemoryTrainers: Trainer[] = [ {
+    id: '9fed6e0',
     name: 'Renibel',
-    pokemon: inMemoryPokemon.filter(p => p.trainerId === 'Renibel'),
+    description: 'A trainer that likes ghosts and urban legends.',
+}, {
+    id: '89bb42a',
+    name: 'Iris',
+    description: 'A trainer that likes colors and flowers.',
 } ]

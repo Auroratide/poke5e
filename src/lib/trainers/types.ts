@@ -80,8 +80,8 @@ export type WithMoveData = {
 }
 
 export type TrainerId = string
-
 export type Trainer = {
-    name: TrainerId,
-    pokemon: PlayerPokemon[],
+    id: TrainerId,
+    name: string,
+    description: string,
 }

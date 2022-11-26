@@ -7,9 +7,9 @@ export type TrainerClient = {
 }
 
 export const InMemoryTrainerClient: () => TrainerClient = () => ({
-    trainer: async (trainer: TrainerId) => {
+    trainer: async (id: TrainerId) => {
         if (browser)
-            return inMemoryTrainers.find((it) => it.name === trainer)
+            return inMemoryTrainers.find((it) => it.id === id)
         else
             return undefined
     }
