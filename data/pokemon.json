@@ -45614,6 +45614,9 @@
           "psych-up",
           "reflect-type"
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10125.png"
       }
     },
     {
@@ -45735,6 +45738,9 @@
           "psych-up",
           "reflect-type"
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10014.png"
       }
     },
     {
@@ -45856,6 +45862,9 @@
           "psych-up",
           "reflect-type"
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10015.png"
       }
     },
     {
@@ -50288,6 +50297,9 @@
           97,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/386.png"
       }
     },
     {
@@ -53600,6 +53612,9 @@
           90,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/413.png"
       }
     },
     {
@@ -53724,6 +53739,9 @@
           90,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10004.png"
       }
     },
     {
@@ -53849,6 +53867,9 @@
           90,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10005.png"
       }
     },
     {
@@ -64175,6 +64196,9 @@
           97,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/487.png"
       }
     },
     {
@@ -64307,6 +64331,9 @@
           97,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10007.png"
       }
     },
     {
@@ -72366,6 +72393,9 @@
           "swift",
           "whirlpool"
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/550.png"
       }
     },
     {
@@ -73069,6 +73099,9 @@
           90,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/555.png"
       }
     },
     {
@@ -84117,6 +84150,9 @@
           97,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/641.png"
       }
     },
     {
@@ -84255,6 +84291,9 @@
           97,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/642.png"
       }
     },
     {
@@ -84646,6 +84685,9 @@
           90,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/645.png"
       }
     },
     {
@@ -84893,6 +84935,9 @@
           91,
           101
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10023.png"
       }
     },
     {
@@ -85013,6 +85058,9 @@
           91,
           102
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10022.png"
       }
     },
     {
@@ -85131,6 +85179,9 @@
           94,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/647.png"
       }
     },
     {
@@ -85267,6 +85318,9 @@
           99,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/648.png"
       }
     },
     {
@@ -85403,6 +85457,9 @@
           99,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10018.png"
       }
     },
     {
@@ -87897,7 +87954,7 @@
       }
     },
     {
-      "id": "flabb",
+      "id": "flabebe",
       "name": "Flabébé",
       "number": 669,
       "type": [
@@ -88014,6 +88071,9 @@
           "captivate",
           "copycat"
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/669.png"
       }
     },
     {
@@ -89164,6 +89224,9 @@
           97,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/678.png"
       }
     },
     {
@@ -89303,6 +89366,9 @@
           97,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10025.png"
       }
     },
     {
@@ -89631,6 +89697,9 @@
           91,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/681.png"
       }
     },
     {
@@ -93386,6 +93455,9 @@
           "destiny-bond",
           "disable"
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/710.png"
       }
     },
     {
@@ -93528,6 +93600,9 @@
           97,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/711.png"
       }
     },
     {
@@ -94542,6 +94617,9 @@
           90,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/718.png"
       }
     },
     {
@@ -94649,6 +94727,9 @@
           90,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10120.png"
       }
     },
     {
@@ -94900,6 +94981,9 @@
           97,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/720.png"
       }
     },
     {
@@ -100100,6 +100184,9 @@
           "safeguard",
           "tailwind"
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10124.png"
       }
     },
     {
@@ -100220,6 +100307,9 @@
           "safeguard",
           "tailwind"
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10124.png"
       }
     },
     {
@@ -100340,6 +100430,9 @@
           "safeguard",
           "tailwind"
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10124.png"
       }
     },
     {
@@ -100460,6 +100553,9 @@
           "safeguard",
           "tailwind"
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10125.png"
       }
     },
     {
@@ -100965,6 +101061,9 @@
           95,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/745.png"
       }
     },
     {
@@ -101084,6 +101183,9 @@
           95,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10126.png"
       }
     },
     {
@@ -101195,6 +101297,9 @@
           95,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10152.png"
       }
     },
     {
@@ -101306,6 +101411,9 @@
           "water-sport",
           "whirlpool"
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/746.png"
       }
     },
     {
@@ -101410,6 +101518,9 @@
           98,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10127.png"
       }
     },
     {
@@ -104856,6 +104967,9 @@
           99,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/774.png"
       }
     },
     {
@@ -104973,6 +105087,9 @@
           99,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/774.png"
       }
     },
     {
@@ -105481,6 +105598,9 @@
           "grudge",
           "nightmare"
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/778.png"
       }
     },
     {
@@ -108299,6 +108419,9 @@
           97,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10155.png"
       }
     },
     {
@@ -108432,6 +108555,9 @@
           97,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10156.png"
       }
     },
     {
@@ -108565,6 +108691,9 @@
           97,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10157.png"
       }
     },
     {
@@ -111506,6 +111635,9 @@
           90,
           100
         ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10177.png"
       }
     },
     {

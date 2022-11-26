@@ -1,0 +1,1 @@
+import{e as r}from"./index-c6486264.js";import{b as a}from"./paths-1397b395.js";const n=async({fetch:e,params:t})=>e(`${a}/pokemon/${t.id}.json`).then(async o=>{if(o.status===404)throw r(404);return{pokemon:await o.json()}}),p=Object.freeze(Object.defineProperty({__proto__:null,load:n},Symbol.toStringTag,{value:"Module"}));export{p as _,n as l};
