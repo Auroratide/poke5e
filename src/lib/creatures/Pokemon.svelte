@@ -17,7 +17,7 @@
 <Card title={pokemon.name}>
     <TypeTag slot="header-extra" type={pokemon.type} />
     <section class="info">
-        <div class="row">
+        <div class="{hasImage ? 'row' : ''}">
             <FlatDl columns={hasImage ? 1 : 2}>
                 <dt>Number</dt>
                 <dd>{asString.pokeIndex(pokemon.number)}</dd>
