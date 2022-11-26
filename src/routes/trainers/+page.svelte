@@ -1,21 +1,20 @@
 <script lang="ts">
-    import type { Trainer } from '$lib/trainers/types'
     import { onMount } from 'svelte'
     import { page } from '$app/stores'
     import Page from '$lib/design/Page.svelte'
     import Pokeball from '$lib/design/icon/Pokeball.svelte'
     import Title from '$lib/design/Title.svelte'
     import Loader from '$lib/design/Loader.svelte'
-    import { InMemoryTrainerClient } from '$lib/trainers/trainers'
-    import TrainerDetails from '$lib/trainers/TrainerDetails.svelte'
+    import { InMemoryClient, type TrainerClient } from '$lib/trainers/trainers'
+    import TrainerCard from '$lib/trainers/trainer-details/Card.svelte'
 
-    const client = InMemoryTrainerClient()
-    let trainer: Promise<Trainer>
+    const client = InMemoryClient()
+    let trainerClient: TrainerClient
 
     onMount(() => {
         const trainerId = $page.url.searchParams.get('id')
         if (trainerId) {
-            trainer = client.trainer(trainerId)
+            trainerClient = client.trainer(trainerId)
         }
     })
 </script>
@@ -26,14 +25,10 @@
     <nav slot="side" class="table" aria-label="Pokemon List">
         <Loader />
     </nav>
-    {#if trainer == null}
+    {#if trainerClient == null}
         <Loader />
     {:else}
-        {#await trainer}
-            <Loader />
-        {:then trainer}
-            <TrainerDetails {trainer} />
-        {/await}
+        <TrainerCard client={trainerClient} />
     {/if}
 </Page>
 

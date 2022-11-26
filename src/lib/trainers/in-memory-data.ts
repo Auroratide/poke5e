@@ -1,4 +1,4 @@
-import type { PlayerPokemon, Trainer } from './types'
+import type { PlayerPokemon, Trainer, WithWriteId } from './types'
 import { Gender } from './types'
 
 export const inMemoryPokemon: PlayerPokemon[] = [ {
@@ -166,12 +166,14 @@ export const inMemoryPokemon: PlayerPokemon[] = [ {
     } ],
 } ]
 
-export const inMemoryTrainers: Trainer[] = [ {
+export const inMemoryTrainers: (Trainer & WithWriteId)[] = [ {
     id: '9fed6e0',
+    writeId: 'ff0d563-44f6c2e',
     name: 'Renibel',
     description: 'A trainer that likes ghosts and urban legends.',
 }, {
     id: '89bb42a',
+    writeId: '4267b92-b465d3b',
     name: 'Iris',
     description: 'A trainer that likes colors and flowers.',
 } ]

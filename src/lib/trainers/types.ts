@@ -85,3 +85,7 @@ export type Trainer = {
     name: string,
     description: string,
 }
+export type WriteId = string
+export type WithWriteId = {
+    writeId: WriteId,
+}
