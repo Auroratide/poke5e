@@ -54,4 +54,7 @@ export type Pokemon = {
         egg?: string[],
         tm?: number[],
     },
+    media?: {
+        main: string,
+    },
 }

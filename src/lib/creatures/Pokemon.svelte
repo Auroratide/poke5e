@@ -10,25 +10,32 @@
     import * as asString from './string'
 
     export let pokemon: Pokemon
+
+    $: hasImage = pokemon.media != null
 </script>
 
 <Card title={pokemon.name}>
     <TypeTag slot="header-extra" type={pokemon.type} />
     <section class="info">
-        <FlatDl columns={2}>
-            <dt>Number</dt>
-            <dd>{asString.pokeIndex(pokemon.number)}</dd>
-            <dt>Size</dt>
-            <dd class="cap">{pokemon.size}</dd>
-            <dt><abbr title="Species Rating">SR</abbr></dt>
-            <dd>{asString.sr(pokemon.sr)}</dd>
-            <dt>Egg Group</dt>
-            <dd class="cap">{pokemon.eggGroup.join(', ')}</dd>
-            <dt>Min Level</dt>
-            <dd>{pokemon.minLevel}</dd>
-            <dt>Gender</dt>
-            <dd class="cap">{asString.gender(pokemon.gender)}</dd>
-        </FlatDl>
+        <div class="row">
+            <FlatDl columns={hasImage ? 1 : 2}>
+                <dt>Number</dt>
+                <dd>{asString.pokeIndex(pokemon.number)}</dd>
+                <dt>Size</dt>
+                <dd class="cap">{pokemon.size}</dd>
+                <dt><abbr title="Species Rating">SR</abbr></dt>
+                <dd>{asString.sr(pokemon.sr)}</dd>
+                <dt>Egg Group</dt>
+                <dd class="cap">{pokemon.eggGroup.join(', ')}</dd>
+                <dt>Min Level</dt>
+                <dd>{pokemon.minLevel}</dd>
+                <dt>Gender</dt>
+                <dd class="cap">{asString.gender(pokemon.gender)}</dd>
+            </FlatDl>
+            {#if hasImage}
+                <img src={pokemon.media.main} alt="" />
+            {/if}
+        </div>
         <p>{pokemon.description}</p>
     </section>
     <hr />
@@ -145,5 +152,16 @@
 
     .upper {
         text-transform: uppercase;
+    }
+
+    .info .row {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        margin: 0;
     }
 </style>
