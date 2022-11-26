@@ -34,5 +34,9 @@
   },
   "dependencies": {
     "@auroratide/pokemon-types": "^0.1.0"
+  },
+  "packageManager": "pnpm@7.13.3",
+  "engines": {
+    "pnpm": "^7.0.0"
   }
 }
