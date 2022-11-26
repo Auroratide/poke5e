@@ -1,16 +1,16 @@
 const s = [
-  "/poke5e/_app/immutable/start-ec9e11b5.js",
+  "/poke5e/_app/immutable/start-7f9f3da0.js",
   "/poke5e/_app/immutable/components/pages/_layout.svelte-8e954073.js",
   "/poke5e/_app/immutable/assets/_layout-9a3e7f30.css",
-  "/poke5e/_app/immutable/components/pages/_error.svelte-16ebd378.js",
+  "/poke5e/_app/immutable/components/pages/_error.svelte-067cf4ae.js",
   "/poke5e/_app/immutable/assets/_error-a83e7ca7.css",
   "/poke5e/_app/immutable/components/pages/_page.svelte-849d2408.js",
   "/poke5e/_app/immutable/assets/_page-efac4ea3.css",
   "/poke5e/_app/immutable/components/pages/moves/_page.svelte-51f4cc03.js",
   "/poke5e/_app/immutable/components/pages/moves/_id_/_page.svelte-126b4232.js",
   "/poke5e/_app/immutable/components/pages/pokemon/_page.svelte-24b7c054.js",
-  "/poke5e/_app/immutable/components/pages/pokemon/_id_/_page.svelte-8d0e4c2a.js",
-  "/poke5e/_app/immutable/assets/_page-4fe18b68.css",
+  "/poke5e/_app/immutable/components/pages/pokemon/_id_/_page.svelte-3c62f034.js",
+  "/poke5e/_app/immutable/assets/_page-369a699f.css",
   "/poke5e/_app/immutable/components/pages/tms/_page.svelte-170438e0.js",
   "/poke5e/_app/immutable/components/pages/tms/_id_/_page.svelte-8b043e1f.js",
   "/poke5e/_app/immutable/assets/_page-5a95889c.css",
@@ -21,7 +21,7 @@ const s = [
   "/poke5e/_app/immutable/modules/pages/pokemon/_id_/_page.ts-66206197.js",
   "/poke5e/_app/immutable/modules/pages/tms/_page.ts-00858c46.js",
   "/poke5e/_app/immutable/modules/pages/tms/_id_/_page.ts-02029a5c.js",
-  "/poke5e/_app/immutable/chunks/singletons-83b857bd.js",
+  "/poke5e/_app/immutable/chunks/singletons-7fb9f807.js",
   "/poke5e/_app/immutable/chunks/paths-6cd3a76e.js",
   "/poke5e/_app/immutable/chunks/index-cd82e938.js",
   "/poke5e/_app/immutable/chunks/control-03134885.js",
@@ -56,15 +56,15 @@ const s = [
   "/poke5e/_app/immutable/chunks/_page-4346aaf4.js",
   "/poke5e/_app/immutable/chunks/_page-7e9cb6b9.js",
   "/poke5e/_app/immutable/chunks/0-066a0f22.js",
-  "/poke5e/_app/immutable/chunks/1-5d9c023b.js",
+  "/poke5e/_app/immutable/chunks/1-b9158c61.js",
   "/poke5e/_app/immutable/chunks/2-6ecd3eac.js",
   "/poke5e/_app/immutable/chunks/3-28d855f9.js",
   "/poke5e/_app/immutable/chunks/4-91a7126f.js",
   "/poke5e/_app/immutable/chunks/5-f854dcb1.js",
-  "/poke5e/_app/immutable/chunks/6-9af0f7b6.js",
+  "/poke5e/_app/immutable/chunks/6-c961a507.js",
   "/poke5e/_app/immutable/chunks/7-bbf8e04c.js",
   "/poke5e/_app/immutable/chunks/8-a2108b9b.js"
-], m = "1668801723277", p = `poke5e-${m}`, t = async () => {
+], m = "1669429422729", p = `poke5e-${m}`, t = async () => {
   await (await caches.open(p)).addAll(s);
 };
 self.addEventListener("install", (e) => e.waitUntil(t()));
