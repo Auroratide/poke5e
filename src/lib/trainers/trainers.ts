@@ -1,39 +1,31 @@
-import type { TrainerId, Trainer, WriteId } from './types'
-import { inMemoryTrainers } from './in-memory-data'
+import type { TrainerId, Trainer, WriteId, TrainerPokemon } from './types'
+import { inMemoryPokemon, inMemoryTrainers } from './in-memory-data'
 
-export const TrainersDataStorage = {
-    writeId: (id: TrainerId) => ({
-        get: () => localStorage.getItem(`write:${id}`),
-    }),
+export type TrainerData = {
+    info: Trainer,
+    pokemon: TrainerPokemon[],
+    writable: boolean,
 }
 
-export type TrainerClient = {
-    get: () => Promise<Trainer | undefined>
-    update?: (data: Partial<Trainer>) => Promise<void>
-}
+const latency = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
-export type TrainersDataClient = {
-    trainer: (id: TrainerId) => TrainerClient
-}
+export const getWriteId = (id: TrainerId): WriteId | undefined =>
+    localStorage.getItem(`write:${id}`)
 
-export const InMemoryClient: () => TrainersDataClient = () => ({
-    trainer: (id: TrainerId) => {
-        const writeId = TrainersDataStorage.writeId(id).get()
 
-        const get = async () => {
-            console.log(`GETTING ${id}`)
-            return inMemoryTrainers.find((it) => it.id === id)
-        }
-        const update = writeId ? async (data: Partial<Trainer>) => {
-            const trainer = inMemoryTrainers.find((it) => it.id === id)
-            if (trainer && trainer.writeId === writeId) {
-                if (data.name) trainer.name = data.name
-                if (data.description) trainer.description = data.description
-            } else {
-                throw new Error('Could not write to trainer')
-            }
-        } : undefined
+export const getTrainer = async (id: TrainerId): Promise<undefined | TrainerData> => {
+    await latency(400)
 
-        return { get, update }
+    const trainer = inMemoryTrainers.find((it) => it.id === id)
+    if (!trainer) return undefined
+
+    const pokemon = inMemoryPokemon.filter((it) => it.trainerId === id)
+
+    const writeId = getWriteId(id)
+
+    return {
+        info: trainer,
+        pokemon,
+        writable: writeId?.length > 0,
     }
-})
+}

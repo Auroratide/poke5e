@@ -131,3 +131,11 @@ input:focus, textarea:focus {
     list-style: none;
     padding: 0;
 }
+
+.cap {
+    text-transform: capitalize;
+}
+
+.upper {
+    text-transform: uppercase;
+}

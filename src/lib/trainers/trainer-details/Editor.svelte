@@ -1,3 +1,7 @@
+<script lang="ts" context="module">
+    export type UpdateDetail = Partial<Trainer>
+</script>
+
 <script lang="ts">
     import type { Trainer } from '../types'
     import { createEventDispatcher } from 'svelte'

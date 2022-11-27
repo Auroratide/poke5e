@@ -1,13 +1,13 @@
 <script lang="ts">
-    import type { PlayerPokemon, WithPokemonData, WithMoveData } from './types'
+    import type { TrainerPokemon, WithPokemonData, WithMoveData } from './types'
     import Card from '../design/Card.svelte'
     import AttributeBlock from '../dnd/AttributeBlock.svelte'
     import TypeTag from '../pokemon/TypeTag.svelte'
     import FlatDl from '../design/FlatDl.svelte'
-    import NumericResourceInput from './NumericResourceInput.svelte'
-    import ResourceBar from './ResourceBar.svelte'
+    import NumericResourceInput from '../design/Form/NumericResourceInput.svelte'
+    import ResourceBar from '../design/ResourceBar.svelte'
     import { proficiencyBonus, proficiencyModifier } from '../dnd/proficiency'
-    import GenderIcon from './GenderIcon.svelte'
+    import GenderIcon from '../design/GenderIcon.svelte'
     import { modifierForScore } from '../dnd/attributes'
     import VisuallyHidden from '../design/VisuallyHidden.svelte'
     import TypeEffectiveness from '../creatures/TypeEffectiveness.svelte'
@@ -16,7 +16,7 @@
     import PokemonEditor from './PokemonEditor'
     import LearnedMove from './LearnedMove.svelte'
 
-    export let pokemon: PlayerPokemon & WithPokemonData & WithMoveData
+    export let pokemon: TrainerPokemon & WithPokemonData & WithMoveData
     let hp = pokemon.hp.current
     let hitDice = pokemon.hitDice.current
     $: data = pokemon.pokemonData

@@ -1,55 +1,44 @@
 <script lang="ts">
-    import type { Trainer } from '$lib/trainers/types'
-    import type { TrainerClient } from '$lib/trainers/trainers'
-    import { onMount } from 'svelte'
-    import Loader from '$lib/design/Loader.svelte'
     import Info from './Info.svelte'
-    import Editor from './Editor.svelte'
+    import Editor, { type UpdateDetail } from './Editor.svelte'
     import Card from '$lib/design/Card.svelte'
     import Button from '$lib/design/Button.svelte'
     import ActionArea from '$lib/design/Form/ActionArea.svelte'
+    import type { TrainerData } from '../trainers'
 
-    export let client: TrainerClient
-    $: canEdit = client.update != null
+    export let trainer: TrainerData
 
-    let trainer: Trainer
     let editing = false
-
     const startEdit = () => editing = true
-
-    onMount(() => {
-        client.get().then((data) => trainer = data)
-    })
 
     const onCancel = () => {
         editing = false
     }
 
-    const onUpdate = (e: CustomEvent) => {
+    const onUpdate = (e: CustomEvent<UpdateDetail>) => {
         editing = false
 
         trainer = {
             ...trainer,
-            ...e.detail,
+            info: {
+                ...trainer.info,
+                ...e.detail,
+            }
         }
 
-        client.update(e.detail)
+        // client.update(e.detail)
     }
 </script>
 
-{#if trainer}
-    <Card title={trainer.name}>
-        {#if editing}
-            <Editor {trainer} on:update={onUpdate} on:cancel={onCancel} />
-        {:else}
-            <Info {trainer} />
-            {#if canEdit}
-                <ActionArea>
-                    <Button on:click={startEdit}>Edit</Button>
-                </ActionArea>
-            {/if}
+<Card title={trainer.info.name}>
+    {#if editing}
+        <Editor trainer={trainer.info} on:update={onUpdate} on:cancel={onCancel} />
+    {:else}
+        <Info trainer={trainer.info} />
+        {#if trainer.writable}
+            <ActionArea>
+                <Button on:click={startEdit}>Edit</Button>
+            </ActionArea>
         {/if}
-    </Card>
-{:else}
-    <Loader />
-{/if}
+    {/if}
+</Card>

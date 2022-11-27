@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { Gender } from './types'
+    import type { Gender } from '../trainers/types'
     export let gender: Gender
 </script>
 

@@ -1,19 +1,19 @@
 <script lang="ts">
-    import type { PlayerPokemon, TrainerId } from './types'
+    import type { TrainerPokemon, TrainerId } from './types'
     import { base } from '$app/paths'
     import SortableTable from '../design/SortableTable.svelte'
     import SearchField from '../design/SearchField.svelte'
     import { filterValue, currentSorter } from './store'
     import BubbleRow from '../design/BubbleRow'
-    import GenderIcon from './GenderIcon.svelte'
+    import GenderIcon from '../design/GenderIcon.svelte'
 
     export let trainerId: TrainerId
-    export let pokemons: PlayerPokemon[]
+    export let pokemons: TrainerPokemon[]
 
     $: filtered = pokemons.filter((it) => it.nickname.toLocaleLowerCase().includes($filterValue.toLocaleLowerCase()))
 
-    const byStringField = (field: (m: PlayerPokemon) => string) => (l: PlayerPokemon, r: PlayerPokemon) => field(l).localeCompare(field(r))
-    const byNumericField = (field: (m: PlayerPokemon) => number) => (l: PlayerPokemon, r: PlayerPokemon) => field(l) - field(r)
+    const byStringField = (field: (m: TrainerPokemon) => string) => (l: TrainerPokemon, r: TrainerPokemon) => field(l).localeCompare(field(r))
+    const byNumericField = (field: (m: TrainerPokemon) => number) => (l: TrainerPokemon, r: TrainerPokemon) => field(l) - field(r)
 </script>
 
 <div class="search-field">

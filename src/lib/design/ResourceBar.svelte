@@ -1,5 +1,5 @@
 <script lang="ts">
-    import VisuallyHidden from '../design/VisuallyHidden.svelte'
+    import VisuallyHidden from './VisuallyHidden.svelte'
 
     export let current: number
     export let max: number

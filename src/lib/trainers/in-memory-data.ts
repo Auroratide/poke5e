@@ -1,9 +1,9 @@
-import type { PlayerPokemon, Trainer, WithWriteId } from './types'
+import type { TrainerPokemon, Trainer, WithWriteId } from './types'
 import { Gender } from './types'
 
-export const inMemoryPokemon: PlayerPokemon[] = [ {
+export const inMemoryPokemon: TrainerPokemon[] = [ {
     id: '1',
-    trainerId: 'Renibel',
+    trainerId: '9fed6e0',
     pokemonId: 'mimikyu',
     nickname: 'Pikachu',
     nature: 'cheerful',
@@ -62,7 +62,7 @@ export const inMemoryPokemon: PlayerPokemon[] = [ {
     } ],
 }, {
     id: '2',
-    trainerId: 'Renibel',
+    trainerId: '9fed6e0',
     pokemonId: 'kirlia',
     nickname: 'Curly',
     nature: 'curious',
@@ -114,7 +114,7 @@ export const inMemoryPokemon: PlayerPokemon[] = [ {
     } ],
 }, {
     id: '3',
-    trainerId: 'Renibel',
+    trainerId: '9fed6e0',
     pokemonId: 'litwick',
     nickname: 'Torchee',
     nature: 'apathetic',

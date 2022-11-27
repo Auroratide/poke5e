@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { PlayerPokemon } from '../types'
+    import type { TrainerPokemon } from '../types'
     import { Gender } from '../types'
     import { attributeList } from '../../dnd/attributes'
     import { skillList } from '../../dnd/proficiency'
@@ -7,7 +7,7 @@
 
     const noSpaces = (s: string) => s.replace(/\s/g, '')
 
-    export let pokemon: PlayerPokemon
+    export let pokemon: TrainerPokemon
 
     let nickname = pokemon.nickname
     let nature = pokemon.nature
