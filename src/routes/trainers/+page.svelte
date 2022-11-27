@@ -10,8 +10,8 @@
     import TrainerRoster from '$lib/trainers/trainer-details/Roster.svelte'
     import { type TrainerData, getTrainer } from '$lib/trainers/trainers'
 
-    $: trainerId = $page.url.searchParams.get('id')
-    $: pokemonId = $page.url.searchParams.get('pokemon')
+    $: trainerId = browser ? $page.url.searchParams.get('id') : undefined
+    $: pokemonId = browser ? $page.url.searchParams.get('pokemon') : undefined
 
     let trainer: Promise<undefined | TrainerData> | undefined
 
