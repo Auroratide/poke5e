@@ -117,16 +117,25 @@ a:hover {
     text-decoration: none;
 }
 
-input {
+input, textarea {
     border: none;
     background-color: var(--skin-input-bg);
+    padding: 0.1em 0.25em;
 }
 
-input:focus {
+input:focus, textarea:focus {
     background-color: var(--skin-content);
 }
 
 .nolist {
     list-style: none;
     padding: 0;
+}
+
+.cap {
+    text-transform: capitalize;
+}
+
+.upper {
+    text-transform: uppercase;
 }
