@@ -1,11 +1,11 @@
 <script lang="ts">
     import type { Pokemon } from '$lib/creatures/types'
-    import type { PlayerPokemon } from '../types'
+    import type { TrainerPokemon } from '../types'
     import FlatDl from '$lib/design/FlatDl.svelte'
     import { proficiencyBonus } from '$lib/dnd/proficiency'
     import * as asString from '$lib/creatures/string'
 
-    export let pokemon: PlayerPokemon
+    export let pokemon: TrainerPokemon
     export let species: Pokemon
 
     $: pb = proficiencyBonus(pokemon.level)

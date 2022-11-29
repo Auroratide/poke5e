@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { PlayerPokemon } from '../types'
+    import type { TrainerPokemon } from '../types'
     import type { Pokemon } from '$lib/creatures/types'
     import BasicInfo from './BasicInfo.svelte'
     import HealthInfo from './HealthInfo.svelte'
@@ -10,7 +10,7 @@
     import TypeEffectiveness from '$lib/creatures/TypeEffectiveness.svelte'
     import { proficiencyBonus } from '$lib/dnd/proficiency'
 
-    export let pokemon: PlayerPokemon
+    export let pokemon: TrainerPokemon
     export let species: Pokemon
 
     $: pb = proficiencyBonus(pokemon.level)

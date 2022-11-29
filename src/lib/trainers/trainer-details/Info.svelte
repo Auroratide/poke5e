@@ -10,7 +10,7 @@
 <section class="info">
     <FlatDl columns={2}>
         <dt>Trainer Id</dt>
-        <dd>{trainer.id}</dd>
+        <dd>{trainer.readKey}</dd>
     </FlatDl>
     <Paragraphs value={trainer.description} />
 </section>

@@ -30,7 +30,7 @@
     key: 'level', name: 'Level', ratio: 1, sort: byNumericField(it => it.level),
 } ]}>
     <BubbleRow.Row interactive mainBg="var(--skin-{item.gender}-bg)">
-        <BubbleRow.Cell primary><a href="{base}/trainers?id={trainer.info.id}&pokemon={item.id}">{item.nickname}</a></BubbleRow.Cell>
+        <BubbleRow.Cell primary><a href="{base}/trainers?id={trainer.info.readKey}&pokemon={item.id}">{item.nickname}</a></BubbleRow.Cell>
         <BubbleRow.Cell><GenderIcon gender={item.gender} /></BubbleRow.Cell>
         <BubbleRow.Cell>Lv. {item.level}</BubbleRow.Cell>
     </BubbleRow.Row>

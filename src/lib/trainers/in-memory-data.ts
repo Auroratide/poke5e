@@ -1,9 +1,9 @@
-import type { TrainerPokemon, Trainer, WithWriteId } from './types'
+import type { TrainerPokemon, Trainer, WithWriteKey } from './types'
 import { Gender } from './types'
 
 export const inMemoryPokemon: TrainerPokemon[] = [ {
     id: '1',
-    trainerId: '9fed6e0',
+    trainerId: 'e2439894-8b10-4081-812c-0f16a773e959',
     pokemonId: 'mimikyu',
     nickname: 'Pikachu',
     nature: 'cheerful',
@@ -62,7 +62,7 @@ export const inMemoryPokemon: TrainerPokemon[] = [ {
     } ],
 }, {
     id: '2',
-    trainerId: '9fed6e0',
+    trainerId: 'e2439894-8b10-4081-812c-0f16a773e959',
     pokemonId: 'kirlia',
     nickname: 'Curly',
     nature: 'curious',
@@ -114,7 +114,7 @@ export const inMemoryPokemon: TrainerPokemon[] = [ {
     } ],
 }, {
     id: '3',
-    trainerId: '9fed6e0',
+    trainerId: 'e2439894-8b10-4081-812c-0f16a773e959',
     pokemonId: 'litwick',
     nickname: 'Torchee',
     nature: 'apathetic',
@@ -166,14 +166,16 @@ export const inMemoryPokemon: TrainerPokemon[] = [ {
     } ],
 } ]
 
-export const inMemoryTrainers: (Trainer & WithWriteId)[] = [ {
-    id: '9fed6e0',
-    writeId: 'ff0d563-44f6c2e',
+export const inMemoryTrainers: (Trainer & WithWriteKey)[] = [ {
+    id: 'e2439894-8b10-4081-812c-0f16a773e959',
+    readKey: '9fed6e0',
+    writeKey: 'ff0d563-44f6c2e',
     name: 'Renibel',
     description: 'A trainer that likes ghosts and urban legends.',
 }, {
-    id: '89bb42a',
-    writeId: '4267b92-b465d3b',
+    id: 'f87e5b9a-d011-4194-983d-95c0c8db84fc',
+    readKey: '89bb42a',
+    writeKey: '4267b92-b465d3b',
     name: 'Iris',
     description: 'A trainer that likes colors and flowers.',
 } ]

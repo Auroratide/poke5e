@@ -1,11 +1,11 @@
 <script lang="ts">
-    import type { PlayerPokemon } from '../types'
+    import type { TrainerPokemon } from '../types'
     import type { Pokemon } from '$lib/creatures/types'
     import ResourceBar from '$lib/design/ResourceBar.svelte'
     import VisuallyHidden from '$lib/design/VisuallyHidden.svelte'
     import NumericResourceInput from '$lib/design/Form/NumericResourceInput.svelte'
 
-    export let pokemon: PlayerPokemon
+    export let pokemon: TrainerPokemon
     export let species: Pokemon
 
     let hp = pokemon.hp.current
