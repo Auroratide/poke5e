@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -148,10 +149,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="13ivg58">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -163,7 +164,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="13ivg58"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/spinarak.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"spinarak\",\"name\":\"Spinarak\",\"number\":167,\"type\":[\"bug\",\"poison\"],\"size\":\"small\",\"sr\":0.25,\"minLevel\":1,\"eggGroup\":[\"bug\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"1\",\"maxStage\":\"2\",\"description\":\"Spinarak can evolve into Ariados at level 7 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20).\"},\"description\":\"The String Spit Pokémon. Although the poison from its fangs isn’t that strong, it’s potent enough to weaken prey that gets caught in its web.\",\"ac\":12,\"hp\":18,\"hitDice\":\"d6\",\"speed\":[{\"type\":\"walking\",\"value\":20},{\"type\":\"climbing\",\"value\":20}],\"attributes\":{\"str\":\"11\",\"dex\":\"10\",\"con\":\"15\",\"int\":\"6\",\"wis\":\"10\",\"cha\":\"8\"},\"skills\":[\"stealth\"],\"savingThrows\":[\"dex\"],\"senses\":[{\"type\":\"darkvision\",\"value\":30}],\"abilities\":[{\"id\":\"swarm\",\"name\":\"Swarm\",\"description\":\"This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health.\",\"hidden\":false},{\"id\":\"insomnia\",\"name\":\"Insomnia\",\"description\":\"This Pokémon is immune to sleep.\",\"hidden\":false},{\"id\":\"sniper\",\"name\":\"Sniper\",\"description\":\"On a critical hit made by this Pokémon, triple the dice roll instead of doubling it.\",\"hidden\":true}],\"moves\":{\"start\":[\"constrict\",\"poison-sting\",\"string-shot\"],\"level2\":[\"absorb\",\"infestation\",\"scary-face\"],\"level6\":[\"night-shade\",\"shadow-sneak\",\"fury-swipes\"],\"level10\":[\"sucker-punch\",\"spider-web\"],\"level14\":[\"agility\",\"pin-missile\",\"psychic\"],\"level18\":[\"toxic-thread\",\"poison-jab\",\"cross-poison\",\"sticky-web\"],\"tm\":[6,9,10,11,17,21,22,27,28,29,32,36,42,44,45,46,48,81,83,84,87,88,90,100],\"egg\":[\"baton-pass\",\"disable\",\"electroweb\",\"night-slash\",\"poison-jab\",\"psybeam\",\"pursuit\",\"rage-powder\",\"signal-beam\",\"sonic-boom\",\"toxic-spikes\",\"twineedle\"]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/167.png\"}}"}</script></div>

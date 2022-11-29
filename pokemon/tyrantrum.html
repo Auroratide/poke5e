@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -144,10 +145,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="hix1cz">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -159,7 +160,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="hix1cz"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/tyrantrum.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"tyrantrum\",\"name\":\"Tyrantrum\",\"number\":697,\"type\":[\"rock\",\"dragon\"],\"size\":\"large\",\"sr\":12,\"minLevel\":8,\"eggGroup\":[\"monster\",\"dragon\"],\"gender\":\"1:7\",\"evolution\":{\"stage\":\"2\",\"maxStage\":\"2\"},\"description\":\"The Despot Pokémon. Thanks to its gargantuan jaws, which could shred thick metal plates as if they were paper, it was invincible in the ancient world it once inhabited.\",\"ac\":16,\"hp\":92,\"hitDice\":\"d12\",\"speed\":[{\"type\":\"walking\",\"value\":30}],\"attributes\":{\"str\":\"18\",\"dex\":\"15\",\"con\":\"18\",\"int\":\"6\",\"wis\":\"12\",\"cha\":\"10\"},\"skills\":[\"survival\",\"athletics\",\"intimidation\"],\"savingThrows\":[\"str\",\"con\"],\"senses\":[],\"abilities\":[{\"id\":\"strong-jaw\",\"name\":\"Strong Jaw\",\"description\":\"For biting moves activated by this Pokémon (Bite, Thunder Fang, Crunch, etc.), they may roll the damage twice and choose either total.\",\"hidden\":false},{\"id\":\"rock-head\",\"name\":\"Rock Head\",\"description\":\"This Pokémon takes no recoil damage.\",\"hidden\":true}],\"moves\":{\"start\":[\"rock-slide\",\"tackle\",\"tail-whip\",\"roar\",\"stomp\",\"bide\",\"stealth-rock\",\"bite\",\"charm\"],\"level10\":[\"ancient-power\",\"dragon-tail\",\"crunch\"],\"level14\":[\"dragon-claw\",\"thrash\"],\"level18\":[\"earthquake\",\"horn-drill\",\"head-smash\",\"giga-impact\"],\"tm\":[2,5,6,10,11,15,17,21,26,27,31,32,37,39,40,42,44,45,48,59,68,69,71,78,80,82,87,88,90,97,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/697.png\"}}"}</script></div>

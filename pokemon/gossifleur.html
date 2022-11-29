@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -145,10 +146,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="spzret">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -160,7 +161,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="spzret"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/gossifleur.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"gossifleur\",\"name\":\"Gossifleur\",\"number\":829,\"type\":[\"grass\"],\"size\":\"tiny\",\"sr\":0.5,\"minLevel\":1,\"eggGroup\":[\"grass\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"1\",\"maxStage\":\"2\",\"description\":\"Gossifleur can evolve into Eldegoss at level 7 and above. When it evolves, its health increases by double its level, and it gains 11 points to add to its ability scores (max 20).\"},\"description\":\"The Flowering Pokémon. It anchors itself in the ground with its single leg, then basks in the sun. After absorbing enough sunlight, its petals spread as it blooms brilliantly.\",\"ac\":12,\"hp\":17,\"hitDice\":\"d6\",\"speed\":[{\"type\":\"walking\",\"value\":5},{\"type\":\"flying (hover)\",\"value\":10}],\"attributes\":{\"str\":\"12\",\"dex\":\"8\",\"con\":\"12\",\"int\":\"6\",\"wis\":\"12\",\"cha\":\"12\"},\"skills\":[\"nature\"],\"savingThrows\":[\"wis\"],\"senses\":[],\"abilities\":[{\"id\":\"drifter\",\"name\":\"Drifter\",\"description\":\"In windy conditions (DM discretion), this Pokémon's flying (hover) speed is doubled until windy conditions cease.\",\"hidden\":false},{\"id\":\"cotton-down\",\"name\":\"Cotton Down\",\"description\":\"When this Pokémon is damaged, cotton spews everywhere. The area within 10ft of this Pokémon becomes difficult terrain for everything except Grass monotypes until the beginning of its next turn.\",\"hidden\":false},{\"id\":\"regenerator\",\"name\":\"Regenerator\",\"description\":\"Once per long rest, this Pokémon regains hit points equal to its level when it returns to its Pokéball.\",\"hidden\":false},{\"id\":\"effect-spore\",\"name\":\"Effect Spore\",\"description\":\"When hit by a melee attack, roll a d4. On a 4, deal an amount of grass damage equal to your proficiency modifier to your attacker.\",\"hidden\":true}],\"specialAbilityText\":\"This Pokémon always has the Drifter ability, along with one other.\",\"moves\":{\"start\":[\"leafage\",\"sing\"],\"level2\":[\"rapid-spin\",\"sweet-scent\"],\"level6\":[\"razor-leaf\",\"round\"],\"level10\":[\"leaf-tornado\",\"synthesis\",\"hyper-voice\"],\"level14\":[\"aromatherapy\",\"leaf-storm\"],\"tm\":[6,10,11,16,17,22,42,44,45,48,53,86,88,90,100],\"egg\":[\"growth\",\"leech-seed\",\"poison-powder\",\"sleep-powder\",\"stun-spore\",\"worry-seed\"]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/829.png\"}}"}</script></div>

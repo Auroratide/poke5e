@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -143,10 +144,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="4vzb7a">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -158,7 +159,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="4vzb7a"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/salamence.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"salamence\",\"name\":\"Salamence\",\"number\":373,\"type\":[\"dragon\",\"flying\"],\"size\":\"large\",\"sr\":14,\"minLevel\":12,\"eggGroup\":[\"dragon\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"3\",\"maxStage\":\"3\"},\"description\":\"The Dragon Pokémon. By evolving into Salamence, this Pokémon finally realizes its long-held dream of growing wings. To express its joy, it flies and wheels all over the sky while spouting flames from its mouth.\",\"ac\":16,\"hp\":121,\"hitDice\":\"d12\",\"speed\":[{\"type\":\"walking\",\"value\":30},{\"type\":\"flying\",\"value\":40}],\"attributes\":{\"str\":\"18\",\"dex\":\"20\",\"con\":\"16\",\"int\":\"8\",\"wis\":\"14\",\"cha\":\"10\"},\"skills\":[\"athletics\",\"acrobatics\"],\"savingThrows\":[\"str\",\"con\"],\"senses\":[],\"abilities\":[{\"id\":\"intimidate\",\"name\":\"Intimidate\",\"description\":\"Once per short rest, you can impose disadvantage on an enemy attack roll of your choice.\",\"hidden\":false},{\"id\":\"moxie\",\"name\":\"Moxie\",\"description\":\"Upon causing an opponent to faint, this Pokémon may immediately take another action.\",\"hidden\":true}],\"moves\":{\"start\":[\"bite\",\"dragon-tail\",\"ember\",\"fire-fang\",\"fly\",\"leer\",\"protect\",\"rage\",\"thunder-fang\",\"dragon-breath\",\"headbutt\",\"focus-energy\",\"crunch\",\"dragon-claw\"],\"level14\":[\"zen-headbutt\"],\"level18\":[\"scary-face\",\"flamethrower\",\"double-edge\"],\"tm\":[2,5,6,10,11,15,17,18,19,21,26,27,31,32,35,38,39,40,42,44,45,48,51,59,65,68,71,76,78,80,82,87,88,90,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/373.png\"}}"}</script></div>

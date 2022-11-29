@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/Hit-2d3f7d4a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/PokeMove-1413d279.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/TypeTag-0063f7d6.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -113,10 +114,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="1p5whup">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -128,7 +129,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="1p5whup"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/moves/toxic-thread.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"toxic-thread\",\"name\":\"Toxic Thread\",\"type\":\"poison\",\"power\":[\"dex\"],\"time\":\"1 action\",\"pp\":15,\"duration\":\"instantaneous\",\"range\":\"60ft\",\"description\":[\"You fire a collection of poisonous threads at a creature in range. Make a ranged attack roll against a target, covering them with threads on a hit. So long as the threads make contact with the target, the target is poisoned and its speed is reduced by 10. This move is stackable to any amount however the poison effect does not affect the target more than once. If this reduction in speed causes their speed to be 0, the target is restrained. The target may use an action to remove the threads from its body, healing the poisoned status.\"]}"}</script></div>

@@ -27,11 +27,12 @@
 		<link href="/poke5e/_app/immutable/assets/Disc-6f138303.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/PokeMove-1413d279.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/TypeTag-0063f7d6.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -110,10 +111,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="gv5g57">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -125,7 +126,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="gv5g57"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/tms/82.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":82,\"move\":\"dragon-tail\",\"cost\":5200,\"moveInfo\":{\"id\":\"dragon-tail\",\"name\":\"82 - Dragon Tail\",\"type\":\"dragon\",\"power\":[\"str\"],\"time\":\"1 action\",\"pp\":5,\"duration\":\"instantaneous\",\"range\":\"melee\",\"description\":[\"You whip your dragon tail at a creature in an attempt to send them away. Make a melee attack roll against a target, dealing 1d10 + MOVE dragon damage. In wild battles, the target takes the damage and flees from battle if its level is lower than that of the user. In trainer battles, the target takes the damage and must be immediately switched out for another creature in the trainer's party, if any remain.\"],\"higherLevels\":\"The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.\"},\"pokemon\":[{\"id\":\"charizard\",\"name\":\"Charizard\"},{\"id\":\"blastoise\",\"name\":\"Blastoise\"},{\"id\":\"arbok\",\"name\":\"Arbok\"},{\"id\":\"nidoqueen\",\"name\":\"Nidoqueen\"},{\"id\":\"nidoking\",\"name\":\"Nidoking\"},{\"id\":\"onix\",\"name\":\"Onix\"},{\"id\":\"lickitung\",\"name\":\"Lickitung\"},{\"id\":\"rhydon\",\"name\":\"Rhydon\"},{\"id\":\"gyarados\",\"name\":\"Gyarados\"},{\"id\":\"dratini\",\"name\":\"Dratini\"},{\"id\":\"dragonair\",\"name\":\"Dragonair\"},{\"id\":\"dragonite\",\"name\":\"Dragonite\"},{\"id\":\"mew\",\"name\":\"Mew\"},{\"id\":\"meganium\",\"name\":\"Meganium\"},{\"id\":\"feraligatr\",\"name\":\"Feraligatr\"},{\"id\":\"slowking\",\"name\":\"Slowking\"},{\"id\":\"steelix\",\"name\":\"Steelix\"},{\"id\":\"tyranitar\",\"name\":\"Tyranitar\"},{\"id\":\"lugia\",\"name\":\"Lugia\"},{\"id\":\"aggron\",\"name\":\"Aggron\"},{\"id\":\"flygon\",\"name\":\"Flygon\"},{\"id\":\"seviper\",\"name\":\"Seviper\"},{\"id\":\"milotic\",\"name\":\"Milotic\"},{\"id\":\"salamence\",\"name\":\"Salamence\"},{\"id\":\"groudon\",\"name\":\"Groudon\"},{\"id\":\"rayquaza\",\"name\":\"Rayquaza\"},{\"id\":\"rampardos\",\"name\":\"Rampardos\"},{\"id\":\"garchomp\",\"name\":\"Garchomp\"},{\"id\":\"lickilicky\",\"name\":\"Lickilicky\"},{\"id\":\"rhyperior\",\"name\":\"Rhyperior\"},{\"id\":\"dialga\",\"name\":\"Dialga\"},{\"id\":\"palkia\",\"name\":\"Palkia\"},{\"id\":\"giratina-altered-forme\",\"name\":\"Giratina Altered Forme\"},{\"id\":\"giratina-origin-forme\",\"name\":\"Giratina Origin Forme\"},{\"id\":\"serperior\",\"name\":\"Serperior\"},{\"id\":\"samurott\",\"name\":\"Samurott\"},{\"id\":\"krookodile\",\"name\":\"Krookodile\"},{\"id\":\"scraggy\",\"name\":\"Scraggy\"},{\"id\":\"scrafty\",\"name\":\"Scrafty\"},{\"id\":\"archeops\",\"name\":\"Archeops\"},{\"id\":\"eelektross\",\"name\":\"Eelektross\"},{\"id\":\"fraxure\",\"name\":\"Fraxure\"},{\"id\":\"haxorus\",\"name\":\"Haxorus\"},{\"id\":\"druddigon\",\"name\":\"Druddigon\"},{\"id\":\"deino\",\"name\":\"Deino\"},{\"id\":\"zweilous\",\"name\":\"Zweilous\"},{\"id\":\"hydreigon\",\"name\":\"Hydreigon\"},{\"id\":\"reshiram\",\"name\":\"Reshiram\"},{\"id\":\"zekrom\",\"name\":\"Zekrom\"},{\"id\":\"kyurem\",\"name\":\"Kyurem\"},{\"id\":\"white-kyurem\",\"name\":\"White Kyurem\"},{\"id\":\"black-kyurem\",\"name\":\"Black Kyurem\"},{\"id\":\"dragalge\",\"name\":\"Dragalge\"},{\"id\":\"helioptile\",\"name\":\"Helioptile\"},{\"id\":\"heliolisk\",\"name\":\"Heliolisk\"},{\"id\":\"tyrunt\",\"name\":\"Tyrunt\"},{\"id\":\"tyrantrum\",\"name\":\"Tyrantrum\"},{\"id\":\"amaura\",\"name\":\"Amaura\"},{\"id\":\"aurorus\",\"name\":\"Aurorus\"},{\"id\":\"goodra\",\"name\":\"Goodra\"},{\"id\":\"zygarde-10-forme\",\"name\":\"Zygarde 10% Forme\"},{\"id\":\"zygarde-50-forme\",\"name\":\"Zygarde 50% Forme\"},{\"id\":\"zygarde-complete-forme\",\"name\":\"Zygarde Complete Forme\"},{\"id\":\"alolan-exeggutor\",\"name\":\"Alolan Exeggutor\"},{\"id\":\"turtonator\",\"name\":\"Turtonator\"},{\"id\":\"drampa\",\"name\":\"Drampa\"},{\"id\":\"jangmo-o\",\"name\":\"Jangmo-o\"},{\"id\":\"hakamo-o\",\"name\":\"Hakamo-o\"},{\"id\":\"kommo-o\",\"name\":\"Kommo-o\"},{\"id\":\"guzzlord\",\"name\":\"Guzzlord\"},{\"id\":\"naganadel\",\"name\":\"Naganadel\"},{\"id\":\"galarian-slowking\",\"name\":\"Galarian Slowking\"}]}"}</script></div>

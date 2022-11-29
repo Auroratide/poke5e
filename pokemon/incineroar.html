@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -144,10 +145,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="1d7ro6o">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -159,7 +160,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="1d7ro6o"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/incineroar.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"incineroar\",\"name\":\"Incineroar\",\"number\":727,\"type\":[\"fire\",\"dark\"],\"size\":\"medium\",\"sr\":13,\"minLevel\":10,\"eggGroup\":[\"field\"],\"gender\":\"1:7\",\"evolution\":{\"stage\":\"3\",\"maxStage\":\"3\"},\"description\":\"The Heel Pokémon. Although it’s rough mannered and egotistical, it finds beating down unworthy opponents boring. It gets motivated for stronger opponents.\",\"ac\":16,\"hp\":97,\"hitDice\":\"d12\",\"speed\":[{\"type\":\"walking\",\"value\":35},{\"type\":\"climbing\",\"value\":30}],\"attributes\":{\"str\":\"17\",\"dex\":\"18\",\"con\":\"15\",\"int\":\"6\",\"wis\":\"14\",\"cha\":\"10\"},\"skills\":[\"athletics\",\"intimidation\"],\"savingThrows\":[\"str\",\"con\"],\"senses\":[{\"type\":\"darkvision\",\"value\":75}],\"abilities\":[{\"id\":\"blaze\",\"name\":\"Blaze\",\"description\":\"This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health.\",\"hidden\":false},{\"id\":\"intimidate\",\"name\":\"Intimidate\",\"description\":\"Once per short rest, you can impose disadvantage on an enemy attack roll of your choice.\",\"hidden\":true}],\"moves\":{\"start\":[\"bulk-up\",\"darkest-lariat\",\"ember\",\"growl\",\"lick\",\"scratch\",\"throat-chop\",\"leer\",\"fire-fang\",\"double-kick\",\"roar\",\"bite\",\"swagger\"],\"level14\":[\"fury-swipes\",\"thrash\",\"flamethrower\"],\"level18\":[\"scary-face\",\"flare-blitz\",\"outrage\",\"cross-chop\"],\"tm\":[1,5,6,8,10,11,12,15,17,21,26,27,28,31,32,35,38,41,42,43,44,45,47,48,50,52,56,59,60,61,62,63,65,68,75,78,87,88,89,90,95,97,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/727.png\"}}"}</script></div>

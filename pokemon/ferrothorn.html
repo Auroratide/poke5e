@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -145,10 +146,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="np78k9">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -160,7 +161,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="np78k9"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/ferrothorn.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"ferrothorn\",\"name\":\"Ferrothorn\",\"number\":598,\"type\":[\"grass\",\"steel\"],\"size\":\"medium\",\"sr\":10,\"minLevel\":5,\"eggGroup\":[\"grass\",\"mineral\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"2\",\"maxStage\":\"2\"},\"description\":\"The Thorn Pod Pokémon. They attach themselves to cave ceilings, firing steel spikes at targets passing beneath them.\",\"ac\":18,\"hp\":66,\"hitDice\":\"d12\",\"speed\":[{\"type\":\"walking\",\"value\":25},{\"type\":\"climbing\",\"value\":25}],\"attributes\":{\"str\":\"18\",\"dex\":\"9\",\"con\":\"18\",\"int\":\"6\",\"wis\":\"12\",\"cha\":\"10\"},\"skills\":[\"survival\",\"nature\"],\"savingThrows\":[\"con\"],\"senses\":[],\"abilities\":[{\"id\":\"iron-barbs\",\"name\":\"Iron Barbs\",\"description\":\"When this Pokémon is hit by a melee attack, it may roll a d4. On a 4, deal an amount of steel damage equal to its proficiency modifier to its attacker.\",\"hidden\":false},{\"id\":\"anticipation\",\"name\":\"Anticipation\",\"description\":\"When this Pokémon enters the battle, an opponent must reveal if it has a move that the Pokémon is vulnerable to. The move itself does not have to be revealed, only that there is such a move.\",\"hidden\":true}],\"moves\":{\"start\":[\"curse\",\"harden\",\"power-whip\",\"rock-climb\",\"rollout\",\"tackle\"],\"level6\":[\"metal-claw\",\"pin-missile\",\"gyro-ball\"],\"level10\":[\"iron-defense\",\"mirror-shot\"],\"level14\":[\"ingrain\",\"self-destruct\"],\"level18\":[\"iron-head\",\"payback\",\"flash-cannon\",\"explosion\"],\"tm\":[6,10,11,15,17,21,22,24,25,27,32,37,40,42,44,48,53,64,65,66,68,69,73,74,75,78,84,86,87,88,90,91,96,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/598.png\"}}"}</script></div>

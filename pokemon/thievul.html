@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -145,10 +146,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="1g16l2z">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -160,7 +161,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="1g16l2z"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/thievul.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"thievul\",\"name\":\"Thievul\",\"number\":828,\"type\":[\"dark\"],\"size\":\"small\",\"sr\":8,\"minLevel\":5,\"eggGroup\":[\"field\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"2\",\"maxStage\":\"2\"},\"description\":\"The Fox Pokémon. It secretly marks potential targets with a scent. By following the scent, it stalks its targets and steals from them when they least expect it.\",\"ac\":14,\"hp\":49,\"hitDice\":\"d10\",\"speed\":[{\"type\":\"walking\",\"value\":30},{\"type\":\"climbing\",\"value\":20}],\"attributes\":{\"str\":\"10\",\"dex\":\"16\",\"con\":\"14\",\"int\":\"8\",\"wis\":\"15\",\"cha\":\"15\"},\"skills\":[\"sleight of hand\",\"deception\"],\"savingThrows\":[\"dex\",\"cha\"],\"senses\":[{\"type\":\"darkvision\",\"value\":30}],\"abilities\":[{\"id\":\"run-away\",\"name\":\"Run Away\",\"description\":\"This Pokémon cannot be the target of an attack of opportunity.\",\"hidden\":false},{\"id\":\"unburden\",\"name\":\"Unburden\",\"description\":\"While this Pokémon is not holding an item, it gains 10 feet to its speed.\",\"hidden\":false},{\"id\":\"stakeout\",\"name\":\"Stakeout\",\"description\":\"When an opponent is switched out in battle, this Pokémon doubles the damage dealt if it targets the replacement on the first turn immediately following the switch.\",\"hidden\":true}],\"moves\":{\"start\":[\"quick-attack\",\"tail-whip\",\"beat-up\",\"hone-claws\",\"thief\"],\"level6\":[\"snarl\",\"assurance\"],\"level10\":[\"nasty-plot\",\"sucker-punch\"],\"level14\":[\"night-slash\",\"tail-slap\"],\"level18\":[\"foul-play\",\"parting-shot\"],\"tm\":[6,10,12,15,17,29,30,42,44,45,46,48,62,65,86,88,89,90,95,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/828.png\"}}"}</script></div>

@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -140,10 +141,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="xacwgv">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -155,7 +156,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="xacwgv"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/black-kyurem.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"black-kyurem\",\"name\":\"Black Kyurem\",\"number\":646,\"type\":[\"dragon\",\"ice\"],\"size\":\"large\",\"sr\":15,\"minLevel\":20,\"eggGroup\":[\"undiscovered\"],\"gender\":\"0:0\",\"description\":\"The Boundary Pokémon. It can produce ultracold air. Its body is frozen.\",\"ac\":20,\"hp\":524,\"hitDice\":\"d20\",\"speed\":[{\"type\":\"walking\",\"value\":50},{\"type\":\"flying\",\"value\":70}],\"attributes\":{\"str\":\"22\",\"dex\":\"22\",\"con\":\"22\",\"int\":\"14\",\"wis\":\"18\",\"cha\":\"18\"},\"skills\":[\"all skills\"],\"savingThrows\":[\"all\"],\"senses\":[{\"type\":\"darkvision\",\"value\":100},{\"type\":\"truesight\",\"value\":100}],\"abilities\":[{\"id\":\"teravolt\",\"name\":\"Teravolt\",\"description\":\"This Pokémon’s moves completely ignore any ability that would hinder or prevent their effect on the target or the user's ability to hit the target.\",\"hidden\":false}],\"moves\":{\"start\":[\"dragon-rage\",\"icy-wind\",\"imprison\",\"ancient-power\",\"ice-beam\",\"dragon-breath\",\"slash\",\"fusion-bolt\",\"freeze-shock\",\"dragon-pulse\",\"endeavor\",\"blizzard\",\"outrage\",\"hyper-voice\"],\"tm\":[2,6,7,10,11,13,14,15,16,17,18,19,20,21,27,29,30,32,33,39,42,44,48,49,51,52,56,59,65,66,68,71,76,80,82,87,88,90,91,102]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10022.png\"}}"}</script></div>

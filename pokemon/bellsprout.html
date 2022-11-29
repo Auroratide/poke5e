@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -148,10 +149,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="k0j2p4">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -163,7 +164,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="k0j2p4"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/bellsprout.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"bellsprout\",\"name\":\"Bellsprout\",\"number\":69,\"type\":[\"grass\",\"poison\"],\"size\":\"tiny\",\"sr\":0.25,\"minLevel\":1,\"eggGroup\":[\"grass\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"1\",\"maxStage\":\"3\",\"description\":\"Bellsprout can evolve into Weepinbell at level 7 and above. When it evolves, its health increases by double its level, and it gains 8 points to add to its ability scores (max 20).\"},\"description\":\"The Flower Pokémon. Prefers hot and humid places. It ensnares tiny bugs with its vines and devours them.\",\"ac\":11,\"hp\":18,\"hitDice\":\"d6\",\"speed\":[{\"type\":\"walking\",\"value\":20}],\"attributes\":{\"str\":\"10\",\"dex\":\"12\",\"con\":\"14\",\"int\":\"6\",\"wis\":\"10\",\"cha\":\"10\"},\"skills\":[\"nature\",\"survival\"],\"savingThrows\":[\"con\"],\"senses\":[{\"type\":\"tremorsense\",\"value\":20}],\"abilities\":[{\"id\":\"chlorophyll\",\"name\":\"Chlorophyll\",\"description\":\"This Pokémon’s speed is doubled in harsh sunlight.\",\"hidden\":false},{\"id\":\"gluttony\",\"name\":\"Gluttony\",\"description\":\"This Pokémon must eat its held berry when it falls below ½ of its maximum HP.\",\"hidden\":true}],\"moves\":{\"start\":[\"vine-whip\"],\"level2\":[\"growth\",\"wrap\"],\"level6\":[\"sleep-powder\",\"poison-powder\",\"stun-spore\"],\"level10\":[\"acid\",\"knock-off\"],\"level14\":[\"sweet-scent\",\"gastro-acid\"],\"level18\":[\"razor-leaf\",\"poison-jab\",\"slam\",\"wring-out\"],\"tm\":[6,9,10,11,17,21,22,27,32,33,36,42,44,45,46,48,53,75,83,84,86,87,88,90,96,100],\"egg\":[\"acid-spray\",\"belch\",\"bullet-seed\",\"clear-smog\",\"encore\",\"giga-drain\",\"ingrain\",\"leech-life\",\"magical-leaf\",\"natural-gift\",\"power-whip\",\"reflect\",\"swords-dance\",\"synthesis\",\"tickle\",\"weather-ball\",\"worry-seed\"]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/69.png\"}}"}</script></div>

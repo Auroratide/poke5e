@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/Hit-2d3f7d4a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/PokeMove-1413d279.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/TypeTag-0063f7d6.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -120,10 +121,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="ck4hsc">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -135,7 +136,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="ck4hsc"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/moves/drill-run.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"drill-run\",\"name\":\"Drill Run\",\"type\":\"ground\",\"power\":[\"str\",\"dex\"],\"time\":\"1 action\",\"pp\":5,\"duration\":\"instantaneous\",\"range\":\"melee\",\"description\":[\"You crash into a creature, spinning your body like a drill. Make a melee attack, dealing 2d6 + MOVE ground damage on a hit. This attack scores a critical hit on 19s and 20s.\"],\"higherLevels\":\"The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.\",\"contest\":{\"id\":\"drill-run\",\"contest\":\"tough\",\"appeal\":3,\"jam\":0,\"effect\":\"Affected by how well the previous Pokemon’s move went.\"}}"}</script></div>

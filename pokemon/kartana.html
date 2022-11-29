@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -140,10 +141,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="201du7">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -155,7 +156,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="201du7"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/kartana.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"kartana\",\"name\":\"Kartana\",\"number\":798,\"type\":[\"grass\",\"steel\"],\"size\":\"small\",\"sr\":15,\"minLevel\":15,\"eggGroup\":[\"undiscovered\"],\"gender\":\"0:0\",\"description\":\"The Drawn Sword Pokémon. This Ultra Beast’s body, which is as thin as paper, is like a sharpened sword.\",\"ac\":16,\"hp\":218,\"hitDice\":\"d12\",\"speed\":[{\"type\":\"walking\",\"value\":50}],\"attributes\":{\"str\":\"20\",\"dex\":\"20\",\"con\":\"14\",\"int\":\"8\",\"wis\":\"14\",\"cha\":\"12\"},\"skills\":[\"acrobatics\",\"deception\",\"sleight of hand\"],\"savingThrows\":[\"str\",\"dex\"],\"senses\":[],\"abilities\":[{\"id\":\"beast-boost\",\"name\":\"Beast Boost\",\"description\":\"Upon causing an opponent to faint, this Pokémon increases the ability scores of its saving throw proficiencies by 2 until the end of combat. This is stackable up to a maximum of +10 to any one ability score.\",\"hidden\":false}],\"moves\":{\"start\":[\"air-cutter\",\"cut\",\"defog\",\"fury-cutter\",\"sacred-sword\",\"vacuum-wave\",\"false-swipe\",\"razor-leaf\",\"synthesis\",\"aerial-ace\",\"laser-focus\",\"night-slash\",\"swords-dance\"],\"level18\":[\"leaf-blade\",\"x-scissor\",\"detect\",\"air-slash\",\"psycho-cut\",\"guillotine\"],\"tm\":[4,6,10,17,21,27,31,32,40,44,48,54,67,68,75,81,87,88,90,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/798.png\"}}"}</script></div>

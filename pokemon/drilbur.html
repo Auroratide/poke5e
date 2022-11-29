@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -147,10 +148,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="1tibqlo">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -162,7 +163,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="1tibqlo"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/drilbur.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"drilbur\",\"name\":\"Drilbur\",\"number\":529,\"type\":[\"ground\"],\"size\":\"tiny\",\"sr\":1,\"minLevel\":1,\"eggGroup\":[\"field\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"1\",\"maxStage\":\"2\",\"description\":\"Drilbur can evolve into Excadrill at level 9 and above. When it evolves, its health increases by double its level, and it gains 12 points to add to its ability scores (max 20).\"},\"description\":\"The Mole Pokémon. It makes its way swiftly through the soil by putting both claws together and rotating at high speed.\",\"ac\":13,\"hp\":17,\"hitDice\":\"d6\",\"speed\":[{\"type\":\"walking\",\"value\":25},{\"type\":\"burrowing\",\"value\":30}],\"attributes\":{\"str\":\"12\",\"dex\":\"14\",\"con\":\"13\",\"int\":\"6\",\"wis\":\"10\",\"cha\":\"10\"},\"skills\":[\"athletics\"],\"savingThrows\":[\"str\"],\"senses\":[{\"type\":\"tremorsense\",\"value\":40}],\"abilities\":[{\"id\":\"sand-rush\",\"name\":\"Sand Rush\",\"description\":\"This Pokémon is immune to Sandstorm damage, and its speed is doubled in desert terrain, or during a Sandstorm.\",\"hidden\":false},{\"id\":\"sand-force\",\"name\":\"Sand Force\",\"description\":\"During a Sandstorm, this Pokémon can double its STAB when it hits an opponent.\",\"hidden\":false},{\"id\":\"mold-breaker\",\"name\":\"Mold Breaker\",\"description\":\"This Pokémon's moves ignore any abilities that would lessen their effect or ability to hit an opponent (Due to things like Water Absorb, Snow Cloak, Thick Fat, Sturdy, etc.)\",\"hidden\":true}],\"moves\":{\"start\":[\"mud-sport\",\"scratch\"],\"level2\":[\"rapid-spin\",\"mud-slap\",\"fury-swipes\"],\"level6\":[\"metal-claw\",\"dig\",\"hone-claws\"],\"level10\":[\"slash\",\"rock-slide\"],\"level14\":[\"earthquake\",\"swords-dance\",\"sandstorm\"],\"level18\":[\"drill-run\",\"fissure\"],\"tm\":[6,10,17,21,26,27,31,32,36,37,39,40,42,44,45,48,56,65,75,78,80,81,84,87,88,90,100],\"egg\":[\"crush-claw\",\"earth-power\",\"iron-defense\",\"metal-sound\",\"rapid-spin\",\"rock-climb\",\"skull-bash\",\"submission\"]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/529.png\"}}"}</script></div>

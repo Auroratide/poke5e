@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -142,10 +143,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="fcu85g">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -157,7 +158,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="fcu85g"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/politoed.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"politoed\",\"name\":\"Politoed\",\"number\":186,\"type\":[\"water\"],\"size\":\"small\",\"sr\":12,\"minLevel\":10,\"eggGroup\":[\"water 1\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"3\",\"maxStage\":\"3\"},\"description\":\"The Frog Pokémon. The longer and more luxurious the curled hair on its head, the greater the number of Poliwag and Poliwhirl that will obey it.\",\"ac\":16,\"hp\":97,\"hitDice\":\"d12\",\"speed\":[{\"type\":\"walking\",\"value\":30},{\"type\":\"swimming\",\"value\":30}],\"attributes\":{\"str\":\"17\",\"dex\":\"15\",\"con\":\"14\",\"int\":\"8\",\"wis\":\"16\",\"cha\":\"10\"},\"skills\":[\"athletics\"],\"savingThrows\":[\"str\"],\"senses\":[],\"abilities\":[{\"id\":\"water-absorb\",\"name\":\"Water Absorb\",\"description\":\"This Pokémon takes no damage from water or water-type attacks. Instead, half of any water damage done is absorbed, restoring the Pokémon's HP.\",\"hidden\":false},{\"id\":\"damp\",\"name\":\"Damp\",\"description\":\"This Pokémon is unaffected by Self Destruct and Explosion moves.\",\"hidden\":false},{\"id\":\"drizzle\",\"name\":\"Drizzle\",\"description\":\"When this Pokémon enters an outside battle, the weather immediately changes to light rain for 5 rounds. In the case of another Pokémon with a similar weather ability, the tie goes to the Pokémon with the highest DEX score.\",\"hidden\":true}],\"moves\":{\"start\":[\"bubble-beam\",\"double-slap\",\"hypnosis\",\"perish-song\",\"swagger\"],\"level14\":[\"bounce\"],\"level18\":[\"hyper-voice\"],\"tm\":[6,7,10,13,14,15,17,18,21,26,27,29,31,32,42,44,45,46,48,49,52,55,56,66,68,78,87,88,90,94,98,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/186.png\"}}"}</script></div>

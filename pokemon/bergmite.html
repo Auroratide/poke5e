@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -146,10 +147,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="fvovgs">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -161,7 +162,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="fvovgs"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/bergmite.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"bergmite\",\"name\":\"Bergmite\",\"number\":712,\"type\":[\"ice\"],\"size\":\"small\",\"sr\":0.25,\"minLevel\":1,\"eggGroup\":[\"monster\",\"mineral\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"1\",\"maxStage\":\"2\",\"description\":\"Bergmite can evolve into Avalugg at level 10 and above. When it evolves, its health increases by double its level, and it gains 11 points to add to its ability scores (max 20).\"},\"description\":\"The Ice Chunk Pokémon. It blocks opponents' attacks with the ice that shields its body. It uses cold air to repair any cracks with new ice.\",\"ac\":13,\"hp\":19,\"hitDice\":\"d8\",\"speed\":[{\"type\":\"walking\",\"value\":15}],\"attributes\":{\"str\":\"14\",\"dex\":\"9\",\"con\":\"13\",\"int\":\"6\",\"wis\":\"10\",\"cha\":\"10\"},\"skills\":[\"survival\"],\"savingThrows\":[\"con\"],\"senses\":[],\"abilities\":[{\"id\":\"own-tempo\",\"name\":\"Own Tempo\",\"description\":\"This Pokémon is immune to becoming confused.\",\"hidden\":false},{\"id\":\"ice-body\",\"name\":\"Ice Body\",\"description\":\"While it is snowing or hailing, this Pokémon heals for an amount of HP equal to its proficiency modifier at the end of each of its turns.\",\"hidden\":false},{\"id\":\"sturdy\",\"name\":\"Sturdy\",\"description\":\"When taking damage equal to half or more of your current HP, roll a d4. On a result of 3 of 4, halve the damage dealt.\",\"hidden\":true}],\"moves\":{\"start\":[\"bite\",\"harden\",\"tackle\"],\"level2\":[\"powder-snow\",\"icy-wind\"],\"level6\":[\"take-down\",\"sharpen\",\"curse\"],\"level10\":[\"ice-fang\",\"ice-ball\"],\"level14\":[\"rapid-spin\",\"avalanche\"],\"level18\":[\"blizzard\",\"recover\",\"double-edge\"],\"tm\":[6,7,10,13,14,17,18,20,21,27,32,39,42,44,45,48,69,71,74,79,80,87,88,90,91,94,100],\"egg\":[\"barrier\",\"mirror-coat\",\"mist\",\"recover\"]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/712.png\"}}"}</script></div>

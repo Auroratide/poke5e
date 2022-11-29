@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -143,10 +144,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="1gi2hz5">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -158,7 +159,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="1gi2hz5"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/tropius.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"tropius\",\"name\":\"Tropius\",\"number\":357,\"type\":[\"grass\",\"flying\"],\"size\":\"large\",\"sr\":11,\"minLevel\":8,\"eggGroup\":[\"monster\",\"grass\"],\"gender\":\"1:1\",\"description\":\"The Fruit Pokémon. Children of the southern tropics eat as snacks the fruit that grows in bunches around the neck of Tropius. This Pokémon flies by flapping the leaves on its back as if they were wings.\",\"ac\":15,\"hp\":82,\"hitDice\":\"d10\",\"speed\":[{\"type\":\"walking\",\"value\":25},{\"type\":\"flying\",\"value\":35}],\"attributes\":{\"str\":\"18\",\"dex\":\"14\",\"con\":\"20\",\"int\":\"6\",\"wis\":\"12\",\"cha\":\"10\"},\"skills\":[\"nature\",\"athletics\"],\"savingThrows\":[\"str\",\"con\"],\"senses\":[],\"abilities\":[{\"id\":\"chlorophyll\",\"name\":\"Chlorophyll\",\"description\":\"This Pokémon’s speed is doubled in harsh sunlight.\",\"hidden\":false},{\"id\":\"solar-power\",\"name\":\"Solar Power\",\"description\":\"Damage rolls for this Pokémon get an additional +2 during harsh sunlight.\",\"hidden\":false},{\"id\":\"harvest\",\"name\":\"Harvest\",\"description\":\"At the end of this Pokémon's turn, if it used a berry, roll 1d4. On a result of 3 or 4, it regains that berry as a held item.\",\"hidden\":true}],\"moves\":{\"start\":[\"growth\",\"gust\",\"leer\",\"razor-leaf\",\"sweet-scent\",\"stomp\",\"magical-leaf\",\"whirlwind\"],\"level10\":[\"leaf-tornado\",\"natural-gift\"],\"level14\":[\"air-slash\",\"body-slam\"],\"level18\":[\"bestow\",\"synthesis\",\"solar-beam\",\"leaf-storm\"],\"tm\":[5,6,10,11,15,17,19,20,21,22,26,27,32,40,42,44,45,48,51,53,59,68,75,76,78,86,87,88,90,96,100],\"egg\":[\"bullet-seed\",\"curse\",\"dragon-dance\",\"headbutt\",\"leaf-blade\",\"leaf-storm\",\"leech-seed\",\"natural-gift\",\"nature-power\",\"razor-wind\",\"slam\",\"synthesis\"]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/357.png\"}}"}</script></div>

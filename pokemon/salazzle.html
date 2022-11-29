@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -144,10 +145,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="159uy7t">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -159,7 +160,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="159uy7t"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/salazzle.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"salazzle\",\"name\":\"Salazzle\",\"number\":758,\"type\":[\"poison\",\"fire\"],\"size\":\"small\",\"sr\":10,\"minLevel\":8,\"eggGroup\":[\"monster\",\"dragon\"],\"gender\":\"1:0\",\"evolution\":{\"stage\":\"2\",\"maxStage\":\"2\"},\"description\":\"The Toxic Lizard Pokémon. Salazzle lives deep in caves and forces the Salandit it has attracted with its pheromones to serve it.\",\"ac\":15,\"hp\":72,\"hitDice\":\"d10\",\"speed\":[{\"type\":\"walking\",\"value\":35},{\"type\":\"climbing\",\"value\":30}],\"attributes\":{\"str\":\"14\",\"dex\":\"18\",\"con\":\"15\",\"int\":\"6\",\"wis\":\"12\",\"cha\":\"10\"},\"skills\":[\"stealth\",\"deception\"],\"savingThrows\":[\"dex\",\"wis\"],\"senses\":[],\"abilities\":[{\"id\":\"corrosion\",\"name\":\"Corrosion\",\"description\":\"This Pokémon's moves ignore the poison immunity of creatures granted by their Pokémon type, and can inflict the poisoned status on poison and steel type creatures. If the target’s secondary type gives it vulnerability or resistance to the damage, it follows the secondary type for that effect.\",\"hidden\":false},{\"id\":\"oblivious\",\"name\":\"Oblivious\",\"description\":\"This Pokémon is immune to moves that attempt to charm or taunt it.\",\"hidden\":true}],\"moves\":{\"start\":[\"captivate\",\"disable\",\"ember\",\"encore\",\"poison-gas\",\"pound\",\"swagger\",\"sweet-scent\",\"torment\",\"dragon-rage\",\"smog\",\"double-slap\"],\"level10\":[\"flame-burst\",\"toxic\",\"nasty-plot\"],\"level14\":[\"venoshock\"],\"level18\":[\"flamethrower\",\"venom-drench\",\"dragon-pulse\"],\"tm\":[2,6,9,10,12,17,21,27,28,32,34,35,36,38,41,42,43,44,45,46,48,50,56,61,65,84,87,88,90,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/758.png\"}}"}</script></div>

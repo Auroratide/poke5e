@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -142,10 +143,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="g1udb0">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -157,7 +158,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="g1udb0"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/aegislash.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"aegislash\",\"name\":\"Aegislash\",\"number\":681,\"type\":[\"steel\",\"ghost\"],\"size\":\"medium\",\"sr\":13,\"minLevel\":10,\"eggGroup\":[\"mineral\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"3\",\"maxStage\":\"3\"},\"description\":\"The Royal Sword Pokémon. Generations of kings were attended by these Pokémon, which used their spectral power to manipulate and control people and Pokémon.\",\"ac\":15,\"hp\":120,\"hitDice\":\"d10\",\"speed\":[{\"type\":\"flying (hover)\",\"value\":30}],\"attributes\":{\"str\":\"16\",\"dex\":\"20\",\"con\":\"16\",\"int\":\"8\",\"wis\":\"14\",\"cha\":\"10\"},\"skills\":[\"athletics\"],\"savingThrows\":[\"wis\",\"con\"],\"senses\":[],\"abilities\":[{\"id\":\"stance-change\",\"name\":\"Stance Change\",\"description\":\"Aegislash has two forms. When Aegislash uses King's Shield, it changes to Shield Forme, swapping its AC and DEX stats. When it uses a damaging move, Aegislash immediately returns to Blade Forme, returning its stats to normal.\",\"hidden\":false}],\"moves\":{\"start\":[\"aerial-ace\",\"autotomize\",\"fury-cutter\",\"head-smash\",\"iron-defense\",\"iron-head\",\"kings-shield\",\"night-slash\",\"power-trick\",\"pursuit\",\"shadow-sneak\",\"slash\",\"swords-dance\"],\"level18\":[\"sacred-sword\",\"iron-head\"],\"tm\":[6,10,11,15,17,18,21,27,30,31,32,33,40,42,44,45,48,54,59,65,68,74,75,80,87,88,90,91,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/681.png\"}}"}</script></div>

@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -140,10 +141,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="1b1fetq">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -155,7 +156,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="1b1fetq"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/simisear.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"simisear\",\"name\":\"Simisear\",\"number\":514,\"type\":[\"fire\"],\"size\":\"small\",\"sr\":10,\"minLevel\":8,\"eggGroup\":[\"field\"],\"gender\":\"1:7\",\"evolution\":{\"stage\":\"2\",\"maxStage\":\"2\"},\"description\":\"The Ember Pokémon. A flame burns inside its body. It scatters embers from its head and tail to sear its opponents.\",\"ac\":15,\"hp\":80,\"hitDice\":\"d10\",\"speed\":[{\"type\":\"walking\",\"value\":30},{\"type\":\"climbing\",\"value\":30}],\"attributes\":{\"str\":\"15\",\"dex\":\"19\",\"con\":\"16\",\"int\":\"6\",\"wis\":\"12\",\"cha\":\"10\"},\"skills\":[\"acrobatics\",\"survival\"],\"savingThrows\":[\"dex\"],\"senses\":[],\"abilities\":[{\"id\":\"gluttony\",\"name\":\"Gluttony\",\"description\":\"This Pokémon must eat its held berry when it falls below ½ of its maximum HP.\",\"hidden\":false},{\"id\":\"blaze\",\"name\":\"Blaze\",\"description\":\"This Pokémon doubles its STAB bonus when it has 25% or less of its maximum health.\",\"hidden\":true}],\"moves\":{\"start\":[\"flame-burst\",\"fury-swipes\",\"leer\",\"lick\"],\"tm\":[1,6,10,11,12,15,17,21,22,27,31,32,35,38,39,41,42,43,44,45,46,47,48,50,52,56,61,62,65,66,68,80,86,87,88,90,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/514.png\"}}"}</script></div>

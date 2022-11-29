@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -143,10 +144,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="1rgl7u0">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -158,7 +159,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="1rgl7u0"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/comfey.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"comfey\",\"name\":\"Comfey\",\"number\":764,\"type\":[\"fairy\"],\"size\":\"tiny\",\"sr\":9,\"minLevel\":5,\"eggGroup\":[\"grass\"],\"gender\":\"3:1\",\"description\":\"The Posy Picker Pokémon. It stretches sticky vines out from its head and picks flowers to adorn itself with. When it doesn’t have any flowers, it feels uneasy.\",\"ac\":18,\"hp\":43,\"hitDice\":\"d8\",\"speed\":[{\"type\":\"flying (hover)\",\"value\":30}],\"attributes\":{\"str\":\"17\",\"dex\":\"17\",\"con\":\"16\",\"int\":\"6\",\"wis\":\"10\",\"cha\":\"10\"},\"skills\":[\"nature\",\"medicine\"],\"savingThrows\":[\"wis\",\"cha\"],\"senses\":[],\"abilities\":[{\"id\":\"flower-veil\",\"name\":\"Flower Veil\",\"description\":\"Any grass-type ally within 15 feet of this Pokémon is immune to new status effects.\",\"hidden\":false},{\"id\":\"triage\",\"name\":\"Triage\",\"description\":\"This Pokémon's healing or draining moves have a move time of 1 bonus action.\",\"hidden\":false},{\"id\":\"natural-cure\",\"name\":\"Natural Cure\",\"description\":\"This Pokémon is cured of negative status ailments upon returning to its Pokeball.\",\"hidden\":true}],\"moves\":{\"start\":[\"growth\",\"wrap\",\"vine-whip\",\"helping-hand\",\"draining-kiss\",\"flower-shield\"],\"level6\":[\"magical-leaf\",\"synthesis\",\"leech-seed\"],\"level10\":[\"grass-knot\",\"sweet-kiss\",\"floral-healing\"],\"level14\":[\"petal-blizzard\",\"aromatherapy\",\"play-rough\"],\"level18\":[\"sweet-scent\",\"petal-dance\",\"grassy-terrain\"],\"tm\":[4,6,10,11,12,15,16,17,20,21,22,27,32,42,45,46,48,49,53,56,62,77,86,87,88,89,90,92,96,99,100],\"egg\":[\"after-you\",\"amnesia\",\"endure\",\"lucky-chant\"]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/764.png\"}}"}</script></div>

@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -144,10 +145,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="1o0irnd">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -159,7 +160,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="1o0irnd"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/tyranitar.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"tyranitar\",\"name\":\"Tyranitar\",\"number\":248,\"type\":[\"rock\",\"dark\"],\"size\":\"large\",\"sr\":14,\"minLevel\":10,\"eggGroup\":[\"monster\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"3\",\"maxStage\":\"3\"},\"description\":\"The Armor Pokémon. Tyranitar is so overwhelmingly powerful, it can bring down a whole mountain to make its nest. This Pokémon wanders about in mountains seeking new opponents to fight.\",\"ac\":17,\"hp\":133,\"hitDice\":\"d12\",\"speed\":[{\"type\":\"walking\",\"value\":30}],\"attributes\":{\"str\":\"20\",\"dex\":\"17\",\"con\":\"20\",\"int\":\"6\",\"wis\":\"14\",\"cha\":\"10\"},\"skills\":[\"athletics\",\"survival\"],\"savingThrows\":[\"str\",\"con\"],\"senses\":[{\"type\":\"tremorsense\",\"value\":80}],\"abilities\":[{\"id\":\"sand-stream\",\"name\":\"Sand Stream\",\"description\":\"When this Pokémon enters an outside battle, the weather immediately changes to a Sandstorm for 5 rounds. In the case of another Pokémon with a similar weather ability, the tie goes to the Pokémon with the highest DEX score.\",\"hidden\":false},{\"id\":\"unnerve\",\"name\":\"Unnerve\",\"description\":\"Opponents in combat with this Pokémon cannot eat held berries.\",\"hidden\":true}],\"moves\":{\"start\":[\"bite\",\"fire-fang\",\"ice-fang\",\"leer\",\"sandstorm\",\"screech\",\"thunder-fang\",\"chip-away\",\"rock-slide\",\"scary-face\",\"thrash\"],\"level14\":[\"dark-pulse\",\"payback\",\"crunch\"],\"level18\":[\"earthquake\",\"stone-edge\",\"hyper-beam\",\"giga-impact\"],\"tm\":[2,5,6,10,11,12,13,14,15,17,18,21,23,24,25,26,27,31,32,35,37,38,39,40,41,42,44,45,48,52,56,59,65,66,68,69,71,73,78,80,82,87,88,90,94,95,97,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/248.png\"}}"}</script></div>

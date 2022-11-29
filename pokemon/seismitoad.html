@@ -26,11 +26,12 @@
 		<link href="/poke5e/_app/immutable/assets/_layout-08fd4b5a.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-8652cbf3.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-089e4c1f.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-598673c2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-a9672fa3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-a5a97368.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-dc61f2ca.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/paths-1397b395.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/preload-helper-9b728935.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/control-aa894445.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/_layout.svelte-7bbd1093.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-055470ca.js">
@@ -143,10 +144,10 @@
 
 
 		<script type="module" data-sveltekit-hydrate="dnrdw2">
-			import { start } from "/poke5e/_app/immutable/start-089e4c1f.js";
+			import { start } from "/poke5e/_app/immutable/start-598673c2.js";
 
 			start({
-				env: {},
+				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				hydrate: {
 					status: 200,
 					error: null,
@@ -158,7 +159,7 @@
 				},
 				paths: {"base":"/poke5e","assets":"/poke5e"},
 				target: document.querySelector('[data-sveltekit-hydrate="dnrdw2"]').parentNode,
-				version: "1669562227963"
+				version: "1669762894565"
 			});
 		</script>
 	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/seismitoad.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"seismitoad\",\"name\":\"Seismitoad\",\"number\":537,\"type\":[\"water\",\"ground\"],\"size\":\"medium\",\"sr\":13,\"minLevel\":10,\"eggGroup\":[\"water 1\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"3\",\"maxStage\":\"3\"},\"description\":\"The Vibration Pokémon. It increases the power of its punches by vibrating the bumps on its fists. It can turn a boulder to rubble with one punch.\",\"ac\":15,\"hp\":117,\"hitDice\":\"d12\",\"speed\":[{\"type\":\"walking\",\"value\":25},{\"type\":\"swimming\",\"value\":30}],\"attributes\":{\"str\":\"16\",\"dex\":\"16\",\"con\":\"19\",\"int\":\"6\",\"wis\":\"14\",\"cha\":\"10\"},\"skills\":[\"survival\"],\"savingThrows\":[\"dex\",\"con\"],\"senses\":[],\"abilities\":[{\"id\":\"swift-swim\",\"name\":\"Swift Swim\",\"description\":\"This Pokémon's speed is doubled in rainy conditions.\",\"hidden\":false},{\"id\":\"poison-touch\",\"name\":\"Poison Touch\",\"description\":\"On melee attacks made by this Pokémon, roll a d10 on a hit. On a result of a 10, the target is poisoned.\",\"hidden\":false},{\"id\":\"water-absorb\",\"name\":\"Water Absorb\",\"description\":\"This Pokémon takes no damage from water or water-type attacks. Instead, half of any water damage done is absorbed, restoring the Pokémon's HP.\",\"hidden\":true}],\"moves\":{\"start\":[\"acid\",\"bubble\",\"growl\",\"round\",\"supersonic\",\"bubble-beam\",\"mud-shot\",\"aqua-ring\",\"uproar\",\"muddy-water\"],\"level14\":[\"rain-dance\",\"flail\"],\"level18\":[\"drain-punch\",\"echoed-voice\",\"hydro-pump\",\"hyper-voice\"],\"tm\":[6,7,9,10,15,17,18,21,26,27,31,32,34,36,39,42,44,45,48,49,52,55,56,66,68,78,80,83,84,86,87,88,90,94,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/537.png\"}}"}</script></div>
