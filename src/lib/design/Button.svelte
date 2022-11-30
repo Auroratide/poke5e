@@ -1,9 +1,10 @@
 <script lang="ts">
     export let variant: 'solid' | 'ghost' = 'solid'
     export let type: 'submit' | 'button' | 'reset' = 'button'
+    export let disabled: boolean = false
 </script>
 
-<button on:click {type} class="{variant}">
+<button on:click {type} class="{variant}" {disabled}>
     <slot></slot>
 </button>
 

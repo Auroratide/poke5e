@@ -1,9 +1,9 @@
 <script lang="ts" context="module">
-    export type UpdateDetail = Partial<Trainer>
+    export type UpdateDetail = TrainerInfo
 </script>
 
 <script lang="ts">
-    import type { Trainer } from '../types'
+    import type { Trainer, TrainerInfo } from '../types'
     import { createEventDispatcher } from 'svelte'
     import Button from '$lib/design/Button.svelte'
     import Fieldset from '$lib/design/Form/Fieldset.svelte'
@@ -12,6 +12,7 @@
     const dispatch = createEventDispatcher()
 
     export let trainer: Trainer
+    export let saving: boolean = false
 
     let name = trainer.name
     let description = trainer.description
@@ -35,7 +36,7 @@
         <textarea name="description" id="description-input" bind:value={description} rows="6"></textarea>
     </Fieldset>
     <ActionArea>
-        <Button on:click={cancel} variant="ghost">Cancel</Button>
-        <Button type="submit">Finish!</Button>
+        <Button on:click={cancel} variant="ghost" disabled={saving}>Cancel</Button>
+        <Button type="submit" disabled={saving}>Finish!</Button>
     </ActionArea>
 </form>

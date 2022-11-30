@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-    export type UpdateDetail = Partial<TrainerPokemon>
+    export type UpdateDetail = TrainerPokemon
 </script>
 
 <script lang="ts">
@@ -17,6 +17,7 @@
     const dispatch = createEventDispatcher()
 
     export let pokemon: TrainerPokemon
+    export let saving: boolean = false
 
     let nickname = pokemon.nickname
     let nature = pokemon.nature
@@ -34,6 +35,7 @@
     }
     const endEdit = () => {
         dispatch('update', {
+            ...pokemon,
             nickname,
             nature: nature === 'other' ? natureCustom : nature,
             level,
@@ -41,6 +43,10 @@
             hp: {
                 current: pokemon.hp.current,
                 max: maxHp,
+            },
+            hitDice: {
+                current: pokemon.hitDice.current,
+                max: pokemon.level,
             },
             gender,
             attributes,
@@ -92,7 +98,7 @@
         {/each}
     </Fieldset>
     <ActionArea>
-        <Button on:click={cancel} variant="ghost">Cancel</Button>
-        <Button type="submit">Finish!</Button>
+        <Button on:click={cancel} variant="ghost" disabled={saving}>Cancel</Button>
+        <Button type="submit" disabled={saving}>Finish!</Button>
     </ActionArea>
 </form>

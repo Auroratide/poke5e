@@ -1,11 +1,11 @@
-import type { TrainerId, Trainer, ReadWriteKey, TrainerPokemon, Gender } from './types'
+import type { TrainerId, Trainer, ReadWriteKey, TrainerPokemon, Gender, TrainerInfo } from './types'
 import { supabase } from '../supabase'
 import type { Skill, Attribute } from '$lib/dnd/types'
 
 export type TrainerData = {
     info: Trainer,
     pokemon: TrainerPokemon[],
-    writable: boolean,
+    writeKey: ReadWriteKey,
 }
 
 export const getWriteKey = (id: TrainerId): ReadWriteKey | undefined =>
@@ -147,11 +147,70 @@ export const getTrainer = async (readKey: ReadWriteKey): Promise<undefined | Tra
             return data.map((it) => rowToPokemon(it))
         })
 
-    const writeId = getWriteKey(readKey)
+    const writeKey = getWriteKey(readKey)
 
     return {
         info: trainer,
         pokemon,
-        writable: writeId?.length > 0,
+        writeKey,
     }
+}
+
+export const updateTrainerInfo = async (writeKey: ReadWriteKey, info: TrainerInfo): Promise<boolean> => {
+    const { data, error } = await supabase.rpc('update_trainer', {
+        _write_key: writeKey,
+        _name: info.name,
+        _description: info.description,
+    }).single()
+
+    return data > 0
+}
+
+export const updatePokemon = async (writeKey: ReadWriteKey, info: TrainerPokemon): Promise<boolean> => {
+    const { data, error } = await supabase.rpc('update_pokemon', {
+        _write_key: writeKey,
+        _id: parseInt(info.id),
+        _species: info.pokemonId,
+        _nickname: info.nickname,
+        _nature: info.nature,
+        _level: info.level,
+        _gender: info.gender,
+        _strength: info.attributes.str,
+        _dexterity: info.attributes.dex,
+        _constitution: info.attributes.con,
+        _intelligence: info.attributes.int,
+        _wisdom: info.attributes.wis,
+        _charisma: info.attributes.cha,
+        _ac: info.ac,
+        _hp_cur: info.hp.current,
+        _hp_max: info.hp.max,
+        _hit_dice_cur: info.hitDice.current,
+        _hit_dice_max: info.hitDice.max,
+        _prof_athletics: info.proficiencies.includes('athletics'),
+        _prof_acrobatics: info.proficiencies.includes('acrobatics'),
+        _prof_sleight_of_hand: info.proficiencies.includes('sleight of hand'),
+        _prof_stealth: info.proficiencies.includes('stealth'),
+        _prof_arcana: info.proficiencies.includes('arcana'),
+        _prof_history: info.proficiencies.includes('history'),
+        _prof_investigation: info.proficiencies.includes('investigation'),
+        _prof_nature: info.proficiencies.includes('nature'),
+        _prof_religion: info.proficiencies.includes('religion'),
+        _prof_animal_handling: info.proficiencies.includes('animal handling'),
+        _prof_insight: info.proficiencies.includes('insight'),
+        _prof_medicine: info.proficiencies.includes('medicine'),
+        _prof_perception: info.proficiencies.includes('perception'),
+        _prof_survival: info.proficiencies.includes('survival'),
+        _prof_deception: info.proficiencies.includes('deception'),
+        _prof_intimidation: info.proficiencies.includes('intimidation'),
+        _prof_performance: info.proficiencies.includes('performance'),
+        _prof_persuasion: info.proficiencies.includes('persuasion'),
+        _save_str: info.savingThrows.includes('str'),
+        _save_dex: info.savingThrows.includes('dex'),
+        _save_con: info.savingThrows.includes('con'),
+        _save_int: info.savingThrows.includes('int'),
+        _save_wis: info.savingThrows.includes('wis'),
+        _save_cha: info.savingThrows.includes('cha'),
+    }).single()
+
+    return data > 0
 }

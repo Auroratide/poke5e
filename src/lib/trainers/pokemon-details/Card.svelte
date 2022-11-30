@@ -7,7 +7,7 @@
     import Button from '$lib/design/Button.svelte'
     import ActionArea from '$lib/design/Form/ActionArea.svelte'
     import TypeTag from '$lib/pokemon/TypeTag.svelte'
-    import type { TrainerData } from '../trainers'
+    import { updatePokemon, type TrainerData } from '../trainers'
     import Editor, { type UpdateDetail } from './Editor.svelte'
 
     export let trainer: TrainerData
@@ -17,24 +17,26 @@
     $: species = $pokeData?.find((it) => it.id === pokemon.pokemonId)
     
     let editing = false
+    let saving = false
     const startEdit = () => editing = true
     const cancelEdit = () => editing = false
 
     const onUpdate = (e: CustomEvent<UpdateDetail>) => {
-        editing = false
+        updatePokemon(trainer.writeKey, e.detail).then(() => {
+            saving = false
+            editing = false
 
-        const index = trainer.pokemon.findIndex((it) => it.id === id)
-        trainer.pokemon[index] = {
-            ...trainer.pokemon[index],
-            ...e.detail,
-        }
+            const index = trainer.pokemon.findIndex((it) => it.id === id)
+            trainer.pokemon[index] = {
+                ...trainer.pokemon[index],
+                ...e.detail,
+            }
 
-        trainer = {
-            ...trainer,
-            pokemon: trainer.pokemon,
-        }
-
-        // client.update(e.detail)
+            trainer = {
+                ...trainer,
+                pokemon: trainer.pokemon,
+            }
+        })
     }
 </script>
 
@@ -42,10 +44,10 @@
     <Card title={pokemon.nickname ? pokemon.nickname : species.name}>
         <TypeTag slot="header-extra" type={species.type} />
         {#if editing}
-            <Editor {pokemon} on:cancel={cancelEdit} on:update={onUpdate} />
+            <Editor {pokemon} on:cancel={cancelEdit} on:update={onUpdate} {saving} />
         {:else}
             <Info {pokemon} {species} />
-            {#if trainer.writable}
+            {#if trainer.writeKey}
                 <ActionArea>
                     <Button on:click={startEdit}>Edit</Button>
                 </ActionArea>

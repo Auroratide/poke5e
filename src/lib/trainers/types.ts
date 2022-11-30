@@ -81,11 +81,14 @@ export type WithMoveData = {
 
 export type TrainerId = string
 export type ReadWriteKey = string
-export type Trainer = {
-    id: TrainerId,
-    readKey: ReadWriteKey,
+
+export type TrainerInfo = {
     name: string,
     description: string,
+}
+export type Trainer = TrainerInfo & {
+    id: TrainerId,
+    readKey: ReadWriteKey,
 }
 export type WithWriteKey = {
     writeKey: ReadWriteKey,
