@@ -1,4 +1,14 @@
+<script lang="ts" context="module">
+    export type ChangeDetail = {
+        value: number
+    }
+</script>
+
 <script lang="ts">
+    import { createEventDispatcher } from 'svelte'
+
+    const dispatch = createEventDispatcher()
+
     export let id: string
     export let value: number
 
@@ -16,6 +26,8 @@
         }
 
         width = value?.toString()?.length ?? 0
+
+        dispatch('change', { value } as ChangeDetail)
     }
 
     const onInput = (e: Event) => {

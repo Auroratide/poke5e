@@ -1,14 +1,14 @@
 <script lang="ts">
-    import type { PokemonId } from '$lib/trainers/types'
+    import type { PokemonId, TrainerPokemon } from '$lib/trainers/types'
     import { pokemon as pokeData } from '$lib/creatures/store'
     import Loader from '$lib/design/Loader.svelte'
-    import Info from './Info.svelte'
+    import Info, { type UpdateDetail as UpdateInfoDetail} from './Info.svelte'
     import Card from '$lib/design/Card.svelte'
     import Button from '$lib/design/Button.svelte'
     import ActionArea from '$lib/design/Form/ActionArea.svelte'
     import TypeTag from '$lib/pokemon/TypeTag.svelte'
     import { updatePokemon, type TrainerData } from '../trainers'
-    import Editor, { type UpdateDetail } from './Editor.svelte'
+    import Editor, { type UpdateDetail as UpdateEditorDetail } from './Editor.svelte'
 
     export let trainer: TrainerData
     export let id: PokemonId
@@ -21,22 +21,32 @@
     const startEdit = () => editing = true
     const cancelEdit = () => editing = false
 
-    const onUpdate = (e: CustomEvent<UpdateDetail>) => {
+    const updatePokemonView = (updated: TrainerPokemon) => {
+        const index = trainer.pokemon.findIndex((it) => it.id === id)
+        trainer.pokemon[index] = {
+            ...trainer.pokemon[index],
+            ...updated,
+        }
+
+        trainer = {
+            ...trainer,
+            pokemon: trainer.pokemon,
+        }
+    }
+
+    const onUpdate = (e: CustomEvent<UpdateEditorDetail>) => {
         updatePokemon(trainer.writeKey, e.detail).then(() => {
             saving = false
             editing = false
 
-            const index = trainer.pokemon.findIndex((it) => it.id === id)
-            trainer.pokemon[index] = {
-                ...trainer.pokemon[index],
-                ...e.detail,
-            }
-
-            trainer = {
-                ...trainer,
-                pokemon: trainer.pokemon,
-            }
+            updatePokemonView(e.detail)
         })
+    }
+
+    const onImmediateUpdate = (e: CustomEvent<UpdateInfoDetail>) => {
+        updatePokemonView(e.detail)
+
+        updatePokemon(trainer.writeKey, e.detail)
     }
 </script>
 
@@ -46,7 +56,7 @@
         {#if editing}
             <Editor {pokemon} on:cancel={cancelEdit} on:update={onUpdate} {saving} />
         {:else}
-            <Info {pokemon} {species} />
+            <Info {pokemon} {species} editable={trainer.writeKey?.length > 0} on:update={onImmediateUpdate} />
             {#if trainer.writeKey}
                 <ActionArea>
                     <Button on:click={startEdit}>Edit</Button>

@@ -1,24 +1,43 @@
+<script lang="ts" context="module">
+    export type UpdateDetail = TrainerPokemon
+</script>
+
 <script lang="ts">
     import type { TrainerPokemon } from '../types'
     import type { Pokemon } from '$lib/creatures/types'
+    import { createEventDispatcher } from 'svelte'
     import BasicInfo from './BasicInfo.svelte'
-    import HealthInfo from './HealthInfo.svelte'
+    import HealthInfo, { type UpdateDetail as HealthUpdateDetail } from './HealthInfo.svelte'
     import StatsInfo from './StatsInfo.svelte'
     import SkillsInfo from './SkillsInfo.svelte'
     import FlatDl from '$lib/design/FlatDl.svelte'
     import AttributeBlock from '$lib/dnd/AttributeBlock.svelte'
     import TypeEffectiveness from '$lib/creatures/TypeEffectiveness.svelte'
-    import { proficiencyBonus } from '$lib/dnd/proficiency'
+
+    const dispatch = createEventDispatcher()
 
     export let pokemon: TrainerPokemon
     export let species: Pokemon
+    export let editable: boolean
 
-    $: pb = proficiencyBonus(pokemon.level)
+    const onUpdate = (e: CustomEvent<HealthUpdateDetail>) => {
+        dispatch('update', {
+            ...pokemon,
+            hp: {
+                current: e.detail.currentHp,
+                max: pokemon.hp.max,
+            },
+            hitDice: {
+                current: e.detail.currentHitDice,
+                max: pokemon.hitDice.max,
+            }
+        } as TrainerPokemon)
+    }
 </script>
 
 <section class="info">
     <BasicInfo {pokemon} {species} />
-    <HealthInfo {pokemon} {species} />
+    <HealthInfo {pokemon} {species} {editable} on:update={onUpdate} />
 </section>
 <hr />
 <section class="stats">
