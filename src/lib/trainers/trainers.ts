@@ -1,11 +1,12 @@
-import type { TrainerId, Trainer, ReadWriteKey, TrainerPokemon, Gender, TrainerInfo } from './types'
+import { type TrainerId, type Trainer, type ReadWriteKey, type TrainerPokemon, Gender, type TrainerInfo, Natures } from './types'
 import { supabase } from '../supabase'
 import type { Skill, Attribute } from '$lib/dnd/types'
+import type { Pokemon } from '$lib/creatures/types'
 
 export type TrainerData = {
     info: Trainer,
     pokemon: TrainerPokemon[],
-    writeKey: ReadWriteKey,
+    writeKey?: ReadWriteKey,
 }
 
 export const getWriteKey = (id: TrainerId): ReadWriteKey | undefined =>
@@ -29,7 +30,7 @@ type PokemonRow = {
     id: number,
     trainer_id: string,
     species: string,
-    nickname?: string,
+    nickname: string,
     nature: string,
     level: number,
     gender: string,
@@ -213,4 +214,57 @@ export const updatePokemon = async (writeKey: ReadWriteKey, info: TrainerPokemon
     }).single()
 
     return data > 0
+}
+
+// returns the id for the new pokemon
+export const addPokemonToTeam = async (writeKey: ReadWriteKey, pokemon: Pokemon): Promise<string> => {
+    const { data, error } = await supabase.rpc('add_pokemon', {
+        _write_key: writeKey,
+        _nickname: pokemon.name,
+        _species: pokemon.id,
+        _nature: Natures[0],
+        _level: pokemon.minLevel,
+        _gender: Gender.None,
+        _strength: pokemon.attributes.str,
+        _dexterity: pokemon.attributes.dex,
+        _constitution: pokemon.attributes.con,
+        _intelligence: pokemon.attributes.int,
+        _wisdom: pokemon.attributes.wis,
+        _charisma: pokemon.attributes.cha,
+        _ac: pokemon.ac,
+        _hp_cur: pokemon.hp,
+        _hp_max: pokemon.hp,
+        _hit_dice_cur: pokemon.minLevel,
+        _hit_dice_max: pokemon.minLevel,
+        _prof_athletics: pokemon.skills.includes('athletics'),
+        _prof_acrobatics: pokemon.skills.includes('acrobatics'),
+        _prof_sleight_of_hand: pokemon.skills.includes('sleight of hand'),
+        _prof_stealth: pokemon.skills.includes('stealth'),
+        _prof_arcana: pokemon.skills.includes('arcana'),
+        _prof_history: pokemon.skills.includes('history'),
+        _prof_investigation: pokemon.skills.includes('investigation'),
+        _prof_nature: pokemon.skills.includes('nature'),
+        _prof_religion: pokemon.skills.includes('religion'),
+        _prof_animal_handling: pokemon.skills.includes('animal handling'),
+        _prof_insight: pokemon.skills.includes('insight'),
+        _prof_medicine: pokemon.skills.includes('medicine'),
+        _prof_perception: pokemon.skills.includes('perception'),
+        _prof_survival: pokemon.skills.includes('survival'),
+        _prof_deception: pokemon.skills.includes('deception'),
+        _prof_intimidation: pokemon.skills.includes('intimidation'),
+        _prof_performance: pokemon.skills.includes('performance'),
+        _prof_persuasion: pokemon.skills.includes('persuasion'),
+        _save_str: pokemon.savingThrows.includes('str'),
+        _save_dex: pokemon.savingThrows.includes('dex'),
+        _save_con: pokemon.savingThrows.includes('con'),
+        _save_int: pokemon.savingThrows.includes('int'),
+        _save_wis: pokemon.savingThrows.includes('wis'),
+        _save_cha: pokemon.savingThrows.includes('cha'),
+    }).single()
+
+    if (error) {
+        console.error(error)
+    }
+
+    return data.toString()
 }

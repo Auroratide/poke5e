@@ -11,12 +11,14 @@
     import NatureInput from './NatureInput.svelte'
     import { attributeList } from '$lib/dnd/attributes'
     import { skillList } from '$lib/dnd/proficiency'
+    import type { Pokemon } from '$lib/creatures/types'
 
     const noSpaces = (s: string) => s.replace(/\s/g, '')
     
     const dispatch = createEventDispatcher()
 
     export let pokemon: TrainerPokemon
+    export let species: Pokemon
     export let saving: boolean = false
 
     let nickname = pokemon.nickname
@@ -36,7 +38,7 @@
     const endEdit = () => {
         dispatch('update', {
             ...pokemon,
-            nickname,
+            nickname: nickname.length > 0 ? nickname : species.name,
             nature: nature === 'other' ? natureCustom : nature,
             level,
             ac,

@@ -49,7 +49,7 @@ export type TrainerPokemon = {
     id: PokemonId,
     trainerId: TrainerId,
     pokemonId: string,
-    nickname?: string,
+    nickname: string,
     nature: Nature,
     level: number,
     gender: Gender,

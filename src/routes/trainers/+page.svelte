@@ -9,9 +9,12 @@
     import PokemonCard from '$lib/trainers/pokemon-details/Card.svelte'
     import TrainerRoster from '$lib/trainers/trainer-details/Roster.svelte'
     import { type TrainerData, getTrainer } from '$lib/trainers/trainers'
+    import { PageAction } from '$lib/trainers/page-action'
+    import AddPokemonCard from '$lib/trainers/AddPokemonCard.svelte'
 
     $: trainerId = browser ? $page.url.searchParams.get('id') : undefined
     $: pokemonId = browser ? $page.url.searchParams.get('pokemon') : undefined
+    $: action = browser ? $page.url.searchParams.get('action') : undefined
 
     let trainer: Promise<undefined | TrainerData> | undefined
 
@@ -41,6 +44,8 @@
     {:then trainer}
         {#if !trainer}
             <Loader />
+        {:else if action === PageAction.addPokemon}
+            <AddPokemonCard {trainer} />
         {:else if pokemonId}
             <PokemonCard {trainer} id={pokemonId} />
         {:else}

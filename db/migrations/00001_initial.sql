@@ -59,7 +59,7 @@ CREATE TABLE private.pokemon (
     id SERIAL PRIMARY KEY,
     trainer_id uuid REFERENCES private.trainers NOT NULL,
     species VARCHAR(255) NOT NULL,
-    nickname VARCHAR(255),
+    nickname VARCHAR(255) NOT NULL,
     nature VARCHAR(255) NOT NULL,
     level INT NOT NULL,
     gender VARCHAR(255) NOT NULL,

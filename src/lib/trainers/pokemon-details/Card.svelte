@@ -51,10 +51,10 @@
 </script>
 
 {#if pokemon && species}
-    <Card title={pokemon.nickname ? pokemon.nickname : species.name}>
+    <Card title={pokemon.nickname}>
         <TypeTag slot="header-extra" type={species.type} />
         {#if editing}
-            <Editor {pokemon} on:cancel={cancelEdit} on:update={onUpdate} {saving} />
+            <Editor {pokemon} on:cancel={cancelEdit} on:update={onUpdate} {saving} {species} />
         {:else}
             <Info {pokemon} {species} editable={trainer.writeKey?.length > 0} on:update={onImmediateUpdate} />
             {#if trainer.writeKey}

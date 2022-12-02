@@ -57,6 +57,8 @@
     --skin-male-bg: hsl(227, 86%, 48%);
     --skin-female-bg: hsl(354, 99%, 41%);
     --skin-agender-bg: hsl(0, 0%, 33%);
+    --skin-none-bg: hsl(0, 0%, 33%);
+    --skin-other-bg: hsl(0, 0%, 33%);
     --skin-gender-text: hsl(0, 0%, 100%);
 
     --skin-bar-bg: hsl(330, 1%, 38%);
