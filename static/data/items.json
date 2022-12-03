@@ -1,0 +1,49 @@
+{
+  "items": [
+    {
+      "id": "potion",
+      "name": "Potion",
+      "category": "medicine",
+      "price": 200,
+      "description": [
+        "Restores 2d4 + 2 HP."
+      ]
+    },
+    {
+      "id": "super-potion",
+      "name": "Super Potion",
+      "category": "medicine",
+      "price": 500,
+      "description": [
+        "Restores 3d6 + 6 HP."
+      ]
+    },
+    {
+      "id": "hyper-potion",
+      "name": "Hyper Potion",
+      "category": "medicine",
+      "price": 800,
+      "description": [
+        "Restores 4d12 + 10 HP."
+      ]
+    },
+    {
+      "id": "pokeball",
+      "name": "Pokeball",
+      "category": "pokeball",
+      "price": 250,
+      "description": [
+        "+0 to Capture Rolls."
+      ]
+    },
+    {
+      "id": "great-ball",
+      "name": "Great Ball",
+      "category": "pokeball",
+      "price": 500,
+      "description": [
+        "+5 to Capture Rolls."
+      ]
+    }
+  ]
+}
