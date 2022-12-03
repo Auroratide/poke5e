@@ -4,9 +4,9 @@
     import Card from '$lib/design/Card.svelte'
     import Button from '$lib/design/Button.svelte'
     import ActionArea from '$lib/design/Form/ActionArea.svelte'
-    import { updateTrainerInfo, type TrainerData } from '../trainers'
+    import type { TrainerStore } from '../trainers'
 
-    export let trainer: TrainerData
+    export let trainer: TrainerStore
 
     let editing = false
     let saving = false
@@ -18,27 +18,19 @@
 
     const onUpdate = (e: CustomEvent<UpdateDetail>) => {
         saving = true
-        updateTrainerInfo(trainer.writeKey, e.detail).then(() => {
+        trainer.update?.info(e.detail).then(() => {
             saving = false
             editing = false
-
-            trainer = {
-                ...trainer,
-                info: {
-                    ...trainer.info,
-                    ...e.detail,
-                }
-            }
         })
     }
 </script>
 
-<Card title={trainer.info.name}>
+<Card title={$trainer.info.name}>
     {#if editing}
-        <Editor trainer={trainer.info} on:update={onUpdate} on:cancel={onCancel} {saving} />
+        <Editor trainer={$trainer.info} on:update={onUpdate} on:cancel={onCancel} {saving} />
     {:else}
-        <Info trainer={trainer.info} />
-        {#if trainer.writeKey}
+        <Info trainer={$trainer.info} />
+        {#if trainer.update}
             <ActionArea>
                 <Button on:click={startEdit}>Edit</Button>
             </ActionArea>

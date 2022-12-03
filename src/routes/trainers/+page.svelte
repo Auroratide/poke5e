@@ -8,7 +8,7 @@
     import TrainerCard from '$lib/trainers/trainer-details/Card.svelte'
     import PokemonCard from '$lib/trainers/pokemon-details/Card.svelte'
     import TrainerRoster from '$lib/trainers/trainer-details/Roster.svelte'
-    import { type TrainerData, getTrainer } from '$lib/trainers/trainers'
+    import { trainers, type TrainerStore } from '$lib/trainers/trainers'
     import { PageAction } from '$lib/trainers/page-action'
     import AddPokemonCard from '$lib/trainers/AddPokemonCard.svelte'
 
@@ -16,11 +16,11 @@
     $: pokemonId = browser ? $page.url.searchParams.get('pokemon') : undefined
     $: action = browser ? $page.url.searchParams.get('action') : undefined
 
-    let trainer: Promise<undefined | TrainerData> | undefined
+    let trainer: Promise<undefined | TrainerStore> | undefined
 
     $: {
         if (trainerId && browser) {
-            trainer = getTrainer(trainerId)
+            trainer = trainers.get(trainerId)
         } else {
             trainer = undefined
         }

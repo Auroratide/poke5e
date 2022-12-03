@@ -2,15 +2,16 @@
     import Card from '$lib/design/Card.svelte'
     import { pokemon } from '$lib/creatures/store'
     import Button from '$lib/design/Button.svelte'
-    import { addPokemonToTeam, type TrainerData } from './trainers'
+    import type { TrainerStore } from './trainers'
     import { matchNameOrType } from '$lib/creatures/filter'
     import Loader from '$lib/design/Loader.svelte'
     import type { Pokemon } from '$lib/creatures/types'
     import { goto } from '$app/navigation'
     import { base } from '$app/paths'
 
-    export let trainer: TrainerData
-    $: canAdd = trainer.writeKey?.length > 0
+    export let trainer: TrainerStore
+    $: canAdd = trainer.update != null
+    $: readKey = $trainer.info.readKey
 
     let species = ''
     $: filteredPokemon = species.length > 0
@@ -20,14 +21,13 @@
     let saving = false
     const onSelect = (p: Pokemon) => () => {
         saving = true
-
-        addPokemonToTeam(trainer.writeKey, p).then((id) => {
-            goto(`${base}/trainers?id=${trainer.info.readKey}&pokemon=${id}`)
+        trainer.update?.addToTeam(p).then(({ id }) => {
+            goto(`${base}/trainers?id=${readKey}&pokemon=${id}`)
         })
     }
 </script>
 
-<Card title="Add to {trainer.info.name}'s team">
+<Card title="Add to {$trainer.info.name}'s team">
     {#if canAdd}
         <section>
             <p>Start typing the pokemon's species, then select from the provided list.</p>

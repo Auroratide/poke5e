@@ -5,12 +5,12 @@
     import BubbleRow from '$lib/design/BubbleRow'
     import GenderIcon from '$lib/design/GenderIcon.svelte'
     import { filterValue, currentSorter } from '../store'
-    import type { TrainerData } from '../trainers'
+    import type { TrainerStore } from '../trainers'
     import type { TrainerPokemon } from '../types'
 
-    export let trainer: TrainerData
+    export let trainer: TrainerStore
 
-    $: filtered = trainer.pokemon.filter((it) => it.nickname.toLocaleLowerCase().includes($filterValue.toLocaleLowerCase()))
+    $: filtered = $trainer.pokemon.filter((it) => it.nickname.toLocaleLowerCase().includes($filterValue.toLocaleLowerCase()))
 
     const byStringField = (field: (m: TrainerPokemon) => string) =>
         (l: TrainerPokemon, r: TrainerPokemon) => field(l).localeCompare(field(r))
@@ -19,7 +19,7 @@
 </script>
 
 <div class="space-bottom">
-    <SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={trainer.pokemon.length} />
+    <SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} />
 </div>
 <!-- svelte-ignore a11y-no-redundant-roles -->
 <SortableTable let:item items={filtered} bind:currentSorter={$currentSorter} headers={[ {
@@ -30,7 +30,7 @@
     key: 'level', name: 'Level', ratio: 1, sort: byNumericField(it => it.level),
 } ]}>
     <BubbleRow.Row interactive mainBg="var(--skin-{item.gender}-bg)">
-        <BubbleRow.Cell primary><a href="{base}/trainers?id={trainer.info.readKey}&pokemon={item.id}">{item.nickname}</a></BubbleRow.Cell>
+        <BubbleRow.Cell primary><a href="{base}/trainers?id={$trainer.info.readKey}&pokemon={item.id}">{item.nickname}</a></BubbleRow.Cell>
         <BubbleRow.Cell><GenderIcon gender={item.gender} /></BubbleRow.Cell>
         <BubbleRow.Cell>Lv. {item.level}</BubbleRow.Cell>
     </BubbleRow.Row>
