@@ -538,10 +538,6 @@
     "file": "_app/immutable/assets/_layout-9a3e7f30.css",
     "src": "src/routes/+layout.css"
   },
-  "Pokeball.css": {
-    "file": "_app/immutable/assets/Pokeball-92bff52b.css",
-    "src": "Pokeball.css"
-  },
   "src/routes/+error.css": {
     "file": "_app/immutable/assets/_error-a83e7ca7.css",
     "src": "src/routes/+error.css"
@@ -550,9 +546,13 @@
     "file": "_app/immutable/assets/_page-efac4ea3.css",
     "src": "src/routes/+page.css"
   },
-  "src/routes/pokemon/[id]/+page.css": {
-    "file": "_app/immutable/assets/_page-4735017a.css",
-    "src": "src/routes/pokemon/[id]/+page.css"
+  "Pokeball.css": {
+    "file": "_app/immutable/assets/Pokeball-92bff52b.css",
+    "src": "Pokeball.css"
+  },
+  "Hit.css": {
+    "file": "_app/immutable/assets/Hit-2d3f7d4a.css",
+    "src": "Hit.css"
   },
   "Disc.css": {
     "file": "_app/immutable/assets/Disc-6f138303.css",
@@ -562,29 +562,29 @@
     "file": "_app/immutable/assets/_layout-08fd4b5a.css",
     "src": "_layout.css"
   },
-  "Hit.css": {
-    "file": "_app/immutable/assets/Hit-2d3f7d4a.css",
-    "src": "Hit.css"
-  },
   "Loader.css": {
     "file": "_app/immutable/assets/Loader-8652cbf3.css",
     "src": "Loader.css"
+  },
+  "PokeMove.css": {
+    "file": "_app/immutable/assets/PokeMove-1413d279.css",
+    "src": "PokeMove.css"
   },
   "TypeTag.css": {
     "file": "_app/immutable/assets/TypeTag-0063f7d6.css",
     "src": "TypeTag.css"
   },
-  "src/routes/tms/[id]/+page.css": {
-    "file": "_app/immutable/assets/_page-5a95889c.css",
-    "src": "src/routes/tms/[id]/+page.css"
+  "src/routes/pokemon/[id]/+page.css": {
+    "file": "_app/immutable/assets/_page-4735017a.css",
+    "src": "src/routes/pokemon/[id]/+page.css"
   },
   "TypeEffectiveness.css": {
     "file": "_app/immutable/assets/TypeEffectiveness-53d08c0c.css",
     "src": "TypeEffectiveness.css"
   },
-  "PokeMove.css": {
-    "file": "_app/immutable/assets/PokeMove-1413d279.css",
-    "src": "PokeMove.css"
+  "src/routes/tms/[id]/+page.css": {
+    "file": "_app/immutable/assets/_page-5a95889c.css",
+    "src": "src/routes/tms/[id]/+page.css"
   },
   "src/routes/trainers/+page.css": {
     "file": "_app/immutable/assets/_page-d2ed9c79.css",
