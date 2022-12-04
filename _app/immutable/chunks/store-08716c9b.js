@@ -1,0 +1,1 @@
+import{r as s,w as t}from"./index-c39b3395.js";import{b as n}from"./paths-1397b395.js";const i=s(void 0,o=>{typeof window<"u"&&fetch(`${n}/moves.json`).then(e=>e.json()).then(e=>o(e.moves))}),f=s(void 0,o=>{typeof window<"u"&&fetch(`${n}/tms.json`).then(e=>e.json()).then(e=>o(e.items))}),m=t(""),c=t(()=>0),d=t(""),h=t(()=>0);export{d as a,h as b,c,m as f,i as m,f as t};
