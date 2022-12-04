@@ -1,7 +1,7 @@
 import type { Pokemon } from '$lib/creatures/types'
 import { writable } from 'svelte/store'
 import type { TrainerData } from './data'
-import * as datastore from './data'
+import { provider } from './data'
 import type { ReadWriteKey, TrainerInfo, TrainerPokemon } from './types'
 
 type AllTrainers = {
@@ -40,14 +40,14 @@ const createStore = () => {
     return {
         get: (readKey: ReadWriteKey) => {
             if (promises[readKey] == null) {
-                promises[readKey] = datastore.getTrainer(readKey).then((data) => {
+                promises[readKey] = provider.getTrainer(readKey).then((data) => {
                     if (data == null) return undefined
 
                     let update: TrainerUpdater | undefined = undefined
                     if (data.writeKey?.length > 0) {
                         update = {
                             info: (info: TrainerInfo) => {
-                                return datastore.updateTrainerInfo(data.writeKey, info).then(() => {
+                                return provider.updateTrainerInfo(data.writeKey, info).then(() => {
                                     storeUpdateOne(readKey, (prev) => ({
                                         ...prev,
                                         info: {
@@ -58,7 +58,7 @@ const createStore = () => {
                                 })
                             },
                             pokemon: (info: TrainerPokemon) => {
-                                return datastore.updatePokemon(data.writeKey, info).then(() => {
+                                return provider.updatePokemon(data.writeKey, info).then(() => {
                                     storeUpdateOne(readKey, (prev) => {
                                         const pokemonList = [...prev.pokemon]
                                         const pokeIndex = pokemonList.findIndex((it) => it.id === info.id)
@@ -75,7 +75,7 @@ const createStore = () => {
                                 })
                             },
                             addToTeam: (pokemon: Pokemon) => {
-                                return datastore.addPokemonToTeam(data.writeKey, data.info.id, pokemon).then((result) => {
+                                return provider.addPokemonToTeam(data.writeKey, data.info.id, pokemon).then((result) => {
                                     storeUpdateOne(readKey, (prev) => {
                                         const pokemonList = [...prev.pokemon, result]
     
