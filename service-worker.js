@@ -1,5 +1,5 @@
 const s = [
-  "/poke5e/_app/immutable/start-cb338df2.js",
+  "/poke5e/_app/immutable/start-f30feed2.js",
   "/poke5e/_app/immutable/components/pages/_layout.svelte-76a68cfd.js",
   "/poke5e/_app/immutable/assets/_layout-9a3e7f30.css",
   "/poke5e/_app/immutable/components/pages/_error.svelte-e8b912f7.js",
@@ -14,8 +14,8 @@ const s = [
   "/poke5e/_app/immutable/components/pages/tms/_page.svelte-0ec22859.js",
   "/poke5e/_app/immutable/components/pages/tms/_id_/_page.svelte-e6f2391a.js",
   "/poke5e/_app/immutable/assets/_page-5a95889c.css",
-  "/poke5e/_app/immutable/components/pages/trainers/_page.svelte-48d97ec8.js",
-  "/poke5e/_app/immutable/assets/_page-d2ed9c79.css",
+  "/poke5e/_app/immutable/components/pages/trainers/_page.svelte-e1d2ed3d.js",
+  "/poke5e/_app/immutable/assets/_page-da85b8ca.css",
   "/poke5e/_app/immutable/modules/pages/_layout.ts-5337e018.js",
   "/poke5e/_app/immutable/modules/pages/moves/_page.ts-d12158a0.js",
   "/poke5e/_app/immutable/modules/pages/moves/_id_/_page.ts-942679ff.js",
@@ -71,8 +71,8 @@ const s = [
   "/poke5e/_app/immutable/chunks/6-d5a1f69a.js",
   "/poke5e/_app/immutable/chunks/7-4c4fca05.js",
   "/poke5e/_app/immutable/chunks/8-255045ad.js",
-  "/poke5e/_app/immutable/chunks/9-53af8721.js"
-], m = "1670092953477", p = `poke5e-${m}`, t = async () => {
+  "/poke5e/_app/immutable/chunks/9-c37dacc7.js"
+], m = "1670156626284", p = `poke5e-${m}`, t = async () => {
   await (await caches.open(p)).addAll(s);
 };
 self.addEventListener("install", (e) => e.waitUntil(t()));
