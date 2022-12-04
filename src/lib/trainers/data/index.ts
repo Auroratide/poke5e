@@ -8,6 +8,8 @@ import type {
 } from '../types'
 import { SupabaseTrainerProvider } from './supabase'
 import { supabase } from '$lib/supabase'
+import { InMemoryTrainerProvider } from './in-memory'
+import * as ENV from '$env/static/public'
 
 export type TrainerData = {
     info: Trainer,
@@ -22,4 +24,6 @@ export interface TrainerDataProvider {
     addPokemonToTeam: (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: Pokemon) => Promise<TrainerPokemon>
 }
 
-export const provider = new SupabaseTrainerProvider(supabase)
+export const provider = ENV.PUBLIC_OFFLINE === 'true'
+    ? new InMemoryTrainerProvider()
+    : new SupabaseTrainerProvider(supabase)
