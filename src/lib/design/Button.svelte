@@ -57,4 +57,15 @@
     button.full {
         width: 100%;
     }
+
+    button:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    button:disabled:hover::before,
+    button:disabled:focus::before,
+    button:disabled:active::before {
+        display: none;
+    }
 </style>
