@@ -4,11 +4,11 @@
     export let id: string
     export let value: string
     export let custom: string
-
+    export let disabled = false
 </script>
 
 <label for="{id}">Nature</label>
-<select {id} class="cap" bind:value>
+<select {id} class="cap" bind:value {disabled}>
     {#each Natures as natureOption}
         <option value="{natureOption}">{natureOption}</option>
     {/each}
@@ -18,6 +18,6 @@
     <span></span>
     <span class="hrow">
         <label for="{id}-custom">Specify:</label>
-        <input class="full-width" id="{id}-custom" type="text" bind:value={custom} />
+        <input class="full-width" id="{id}-custom" type="text" bind:value={custom} {disabled} />
     </span>
 {/if}
