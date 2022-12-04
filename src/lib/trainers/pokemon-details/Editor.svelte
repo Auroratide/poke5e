@@ -12,7 +12,7 @@
     import { attributeList } from '$lib/dnd/attributes'
     import { skillList } from '$lib/dnd/proficiency'
     import type { Pokemon } from '$lib/creatures/types'
-    import Loader from '$lib/design/Loader.svelte'
+    import Saveable from '$lib/design/Saveable.svelte'
 
     const noSpaces = (s: string) => s.replace(/\s/g, '')
     
@@ -60,8 +60,8 @@
     }
 </script>
 
-<div class="relative">
-    <form on:submit|preventDefault={endEdit} class:muted={saving}>
+<Saveable {saving}>
+    <form on:submit|preventDefault={endEdit}>
         <Fieldset title="Basic Info">
             <label for="nickname-input">Nickname</label>
             <input name="name" id="nickname-input" type="text" bind:value={nickname} {disabled} />
@@ -107,27 +107,4 @@
             <Button type="submit" {disabled}>Finish!</Button>
         </ActionArea>
     </form>
-    {#if saving}
-        <div class="center-overlay" aria-live="assertive">
-            <div class="fixed">
-                <Loader caption="Saving..." />
-            </div>
-        </div>
-    {/if}
-</div>
-
-<style>
-    .muted { opacity: 0.5; }
-    .relative { position: relative; }
-    .fixed { position: fixed; }
-
-    .center-overlay {
-        position: absolute;
-        top: 15vh;
-        left: 50%;
-    }
-    .center-overlay .fixed {
-        --skin-local-color: var(--skin-content-text);
-        transform: translateX(-50%);
-    }
-</style>
+</Saveable>
