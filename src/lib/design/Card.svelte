@@ -1,40 +1,14 @@
 <script lang="ts">
-    import { onMount, onDestroy, afterUpdate } from 'svelte'
-
     export let title: string
-
-    // Height calculations because my brain isn't big enough to figure out a CSS-only solution
-    let container: HTMLElement
-    let scrollable: HTMLElement
-    const setHeight = () => {
-        // reset otherwise scrollheight retains its height if the previously populated card was larger
-        scrollable.style.height = ''
-        // The 3em accounts for the header and padding
-        scrollable.style.height = `min(${scrollable.scrollHeight}px, calc(${container.clientHeight}px - 3em))`
-    }
-
-    onMount(() => {
-        setHeight()
-        window.addEventListener('resize', setHeight)
-    })
-
-    afterUpdate(() => {
-        setHeight()
-    })
-
-    onDestroy(() => {
-        if (typeof window !== 'undefined')
-            window.removeEventListener('resize', setHeight)
-    })
 </script>
 
-<div bind:this={container} class="container">
+<div class="container">
     <article>
         <header>
             <h1>{title}</h1>
             <slot name="header-extra"></slot>
         </header>
-        <div bind:this={scrollable} class="scrollable">
+        <div class="scrollable">
             <slot></slot>
         </div>
     </article>
@@ -51,6 +25,8 @@
         border-radius: 2em;
         box-shadow: var(--elev-cirrus);
         max-height: 100%;
+        display: flex;
+        flex-direction: column;
         overflow: hidden;
 
         header {
