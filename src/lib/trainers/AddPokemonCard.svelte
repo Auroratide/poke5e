@@ -35,9 +35,7 @@
                 <label for="species-input" class="font-sm spaced-sm">Species</label>
                 <input id="species-input" bind:value={species} type="text" class="font-lg" disabled={saving} />
             </div>
-            {#if !$pokemon}
-                <Loader />
-            {:else if filteredPokemon.length === 0 && species.length > 0}
+            {#if filteredPokemon.length === 0 && species.length > 0}
                 <p class="muted center">No matched pokemon</p>
             {:else}
                 <ul class="no-list columnated">
