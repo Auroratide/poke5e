@@ -7,10 +7,12 @@
     import { filterValue, currentSorter } from '../store'
     import type { TrainerStore } from '../trainers'
     import type { TrainerPokemon } from '../types'
+    import Button from '$lib/design/Button.svelte'
 
     export let trainer: TrainerStore
 
     $: filtered = $trainer.pokemon.filter((it) => it.nickname.toLocaleLowerCase().includes($filterValue.toLocaleLowerCase()))
+    $: baseTrainerUrl = `${base}/trainers?id=${$trainer.info.readKey}`
 
     const byStringField = (field: (m: TrainerPokemon) => string) =>
         (l: TrainerPokemon, r: TrainerPokemon) => field(l).localeCompare(field(r))
@@ -18,6 +20,13 @@
         (l: TrainerPokemon, r: TrainerPokemon) => field(l) - field(r)
 </script>
 
+<div class="flex-row space-bottom">
+    <div class="flex-column" style:flex="1">
+        <p class="large-font no-space">{$trainer.info.name}'s Pokemon</p>
+        <p class="indent small-font no-space"><a href="{baseTrainerUrl}" class="dark-font">View trainer profile &gt;</a></p>
+    </div>
+    <Button href="{baseTrainerUrl}&action=add-pokemon">+ Add Pokemon</Button>
+</div>
 <div class="space-bottom">
     <SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} />
 </div>
@@ -30,14 +39,40 @@
     key: 'level', name: 'Level', ratio: 1, sort: byNumericField(it => it.level),
 } ]}>
     <BubbleRow.Row interactive mainBg="var(--skin-{item.gender}-bg)">
-        <BubbleRow.Cell primary><a href="{base}/trainers?id={$trainer.info.readKey}&pokemon={item.id}">{item.nickname}</a></BubbleRow.Cell>
+        <BubbleRow.Cell primary><a href="{baseTrainerUrl}&pokemon={item.id}">{item.nickname}</a></BubbleRow.Cell>
         <BubbleRow.Cell><GenderIcon gender={item.gender} /></BubbleRow.Cell>
         <BubbleRow.Cell>Lv. {item.level}</BubbleRow.Cell>
     </BubbleRow.Row>
 </SortableTable>
 
 <style lang="scss">
+    .flex-row {
+        display: flex;
+        align-items: flex-end;
+    }
+
     .space-bottom {
         margin-bottom: 0.5em;
+    }
+
+    .large-font {
+        font-size: var(--font-sz-neptune);
+        font-weight: bold;
+    }
+
+    .small-font {
+        font-size: var(--font-sz-venus);
+    }
+
+    .indent {
+        text-indent: 1em;
+    }
+
+    .dark-font {
+        color: var(--skin-content-text);
+    }
+
+    .no-space {
+        margin: 0;
     }
 </style>

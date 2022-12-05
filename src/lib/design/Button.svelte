@@ -4,22 +4,30 @@
     export let align: 'center' | 'left' = 'center'
     export let width: 'auto' | 'full' = 'auto'
     export let disabled: boolean = false
+    export let href: string | undefined = undefined
 </script>
 
-<button on:click {type} class="{variant} {align} {width}" {disabled}>
-    <slot></slot>
-</button>
+{#if href != null}
+    <a {href} on:click {type} class="button {variant} {align} {width}" {disabled}>
+        <slot></slot>
+    </a>
+{:else}
+    <button on:click {type} class="button {variant} {align} {width}" {disabled}>
+        <slot></slot>
+    </button>
+{/if}
 
 <style>
-    button {
+    .button {
         position: relative;
         border-radius: 1.5em;
         border: none;
         padding: 0.25em 0.75em;
         cursor: pointer;
+        text-decoration: none;
     }
 
-    button:hover::before, button:focus::before {
+    .button:hover::before, .button:focus::before {
         content: '>';
         color: var(--skin-bg-dark);
         font-weight: 900;
@@ -30,42 +38,42 @@
         -webkit-text-stroke: 0.03em var(--skin-bg-text);
     }
 
-    button:active::before {
+    .button:active::before {
         left: -0.27em;
     }
 
-    button.solid {
+    .button.solid {
         background-color: var(--skin-bg-dark);
         color: var(--skin-bg-text);
     }
 
-    button.ghost {
+    .button.ghost {
         background-color: transparent;
         color: var(--skin-bg-dark);
     }
 
-    button.ghost:hover,
-    button.ghost:focus,
-    button.ghost:active {
+    .button.ghost:hover,
+    .button.ghost:focus,
+    .button.ghost:active {
         background-color: var(--skin-input-bg);
     }
 
-    button.left {
+    .button.left {
         text-align: left;
     }
 
-    button.full {
+    .button.full {
         width: 100%;
     }
 
-    button:disabled {
+    .button:disabled {
         cursor: not-allowed;
         opacity: 0.5;
     }
 
-    button:disabled:hover::before,
-    button:disabled:focus::before,
-    button:disabled:active::before {
+    .button:disabled:hover::before,
+    .button:disabled:focus::before,
+    .button:disabled:active::before {
         display: none;
     }
 </style>
