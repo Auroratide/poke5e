@@ -34,7 +34,7 @@
 <SortableTable let:item items={filtered} bind:currentSorter={$currentSorter} headers={[ {
     key: 'name', name: 'Name', ratio: 3, sort: byStringField(it => it.nickname),
 }, {
-    key: 'gender', name: 'Gender', ratio: 3, sort: byStringField(it => it.gender),
+    key: 'gender', name: 'Gender', ratio: 2, sort: byStringField(it => it.gender),
 }, {
     key: 'level', name: 'Level', ratio: 1, sort: byNumericField(it => it.level),
 } ]}>
