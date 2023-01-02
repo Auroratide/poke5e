@@ -534,25 +534,13 @@
       "src/routes/trainers/+page.svelte"
     ]
   },
-  "src/routes/+layout.css": {
-    "file": "_app/immutable/assets/_layout-9a3e7f30.css",
-    "src": "src/routes/+layout.css"
-  },
-  "_layout.css": {
-    "file": "_app/immutable/assets/_layout-08fd4b5a.css",
-    "src": "_layout.css"
+  "PokeMove.css": {
+    "file": "_app/immutable/assets/PokeMove-1413d279.css",
+    "src": "PokeMove.css"
   },
   "src/routes/+error.css": {
     "file": "_app/immutable/assets/_error-a83e7ca7.css",
     "src": "src/routes/+error.css"
-  },
-  "src/routes/+page.css": {
-    "file": "_app/immutable/assets/_page-efac4ea3.css",
-    "src": "src/routes/+page.css"
-  },
-  "Pokeball.css": {
-    "file": "_app/immutable/assets/Pokeball-92bff52b.css",
-    "src": "Pokeball.css"
   },
   "Hit.css": {
     "file": "_app/immutable/assets/Hit-2d3f7d4a.css",
@@ -562,32 +550,44 @@
     "file": "_app/immutable/assets/Disc-6f138303.css",
     "src": "Disc.css"
   },
-  "src/routes/trainers/+page.css": {
-    "file": "_app/immutable/assets/_page-f78519ee.css",
-    "src": "src/routes/trainers/+page.css"
-  },
-  "PokeMove.css": {
-    "file": "_app/immutable/assets/PokeMove-1413d279.css",
-    "src": "PokeMove.css"
-  },
-  "src/routes/pokemon/[id]/+page.css": {
-    "file": "_app/immutable/assets/_page-4735017a.css",
-    "src": "src/routes/pokemon/[id]/+page.css"
+  "_layout.css": {
+    "file": "_app/immutable/assets/_layout-08fd4b5a.css",
+    "src": "_layout.css"
   },
   "Loader.css": {
     "file": "_app/immutable/assets/Loader-f0d835ef.css",
     "src": "Loader.css"
   },
+  "TypeEffectiveness.css": {
+    "file": "_app/immutable/assets/TypeEffectiveness-53d08c0c.css",
+    "src": "TypeEffectiveness.css"
+  },
   "TypeTag.css": {
     "file": "_app/immutable/assets/TypeTag-59509f45.css",
     "src": "TypeTag.css"
+  },
+  "Pokeball.css": {
+    "file": "_app/immutable/assets/Pokeball-92bff52b.css",
+    "src": "Pokeball.css"
+  },
+  "src/routes/+page.css": {
+    "file": "_app/immutable/assets/_page-efac4ea3.css",
+    "src": "src/routes/+page.css"
+  },
+  "src/routes/pokemon/[id]/+page.css": {
+    "file": "_app/immutable/assets/_page-4735017a.css",
+    "src": "src/routes/pokemon/[id]/+page.css"
   },
   "src/routes/tms/[id]/+page.css": {
     "file": "_app/immutable/assets/_page-5a95889c.css",
     "src": "src/routes/tms/[id]/+page.css"
   },
-  "TypeEffectiveness.css": {
-    "file": "_app/immutable/assets/TypeEffectiveness-53d08c0c.css",
-    "src": "TypeEffectiveness.css"
+  "src/routes/trainers/+page.css": {
+    "file": "_app/immutable/assets/_page-f78519ee.css",
+    "src": "src/routes/trainers/+page.css"
+  },
+  "src/routes/+layout.css": {
+    "file": "_app/immutable/assets/_layout-9a3e7f30.css",
+    "src": "src/routes/+layout.css"
   }
 }

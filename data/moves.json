@@ -10139,6 +10139,23 @@
       ]
     },
     {
+      "id": "tera-blast",
+      "name": "Tera Blast",
+      "type": "normal",
+      "power": [
+        "dex",
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "40ft",
+      "description": [
+        "You unleash the power of your tera type as a focused beam of elemental energy. Make a ranged attack against a creature, doing 2d6 + MOVE damage on hit. If you are terastallized, the type of this damage is the same as your tera type. Otherwise, it is normal."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
+    {
       "id": "thief",
       "name": "Thief",
       "type": "dark",

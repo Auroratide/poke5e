@@ -72,7 +72,7 @@ const s = [
   "/poke5e/_app/immutable/chunks/7-25461b3c.js",
   "/poke5e/_app/immutable/chunks/8-31395e47.js",
   "/poke5e/_app/immutable/chunks/9-2e2efe98.js"
-], m = "1670252074556", p = `poke5e-${m}`, t = async () => {
+], m = "1672626022501", p = `poke5e-${m}`, t = async () => {
   await (await caches.open(p)).addAll(s);
 };
 self.addEventListener("install", (e) => e.waitUntil(t()));
