@@ -1,0 +1,1 @@
+import{e as r}from"./index-2f9fe195.js";import{c as a}from"./shared-23917130.js";const s=async({fetch:e,params:o})=>e(`${a}/tms/${o.id}.json`).then(async t=>{if(t.status===404)throw r(404);return{tm:await t.json()}}),c=Object.freeze(Object.defineProperty({__proto__:null,load:s},Symbol.toStringTag,{value:"Module"}));export{c as _,s as l};
