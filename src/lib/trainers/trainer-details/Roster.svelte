@@ -6,10 +6,11 @@
     import GenderIcon from '$lib/design/GenderIcon.svelte'
     import { filterValue, currentSorter } from '../store'
     import type { TrainerStore } from '../trainers'
-    import type { TrainerPokemon } from '../types'
+    import type { PokemonId, TrainerPokemon } from '../types'
     import Button from '$lib/design/Button.svelte'
 
     export let trainer: TrainerStore
+    export let currentPokemon: PokemonId | undefined
 
     $: filtered = $trainer.pokemon.filter((it) => it.nickname.toLocaleLowerCase().includes($filterValue.toLocaleLowerCase()))
     $: baseTrainerUrl = `${base}/trainers?id=${$trainer.info.readKey}`
@@ -23,7 +24,13 @@
 <div class="flex-row space-bottom">
     <div class="flex-column" style:flex="1">
         <p class="large-font no-space">{$trainer.info.name}'s Pokemon</p>
-        <p class="indent small-font no-space"><a href="{baseTrainerUrl}" class="dark-font">View trainer profile &gt;</a></p>
+        <p class="indent small-font no-space">
+            {#if currentPokemon}
+                <a href="{baseTrainerUrl}" class="dark-font">View trainer profile &gt;</a>
+            {:else}
+                <a href="{base}/trainers" class="dark-font">See Trainer List &gt;</a>
+            {/if}
+        </p>
     </div>
     <Button href="{baseTrainerUrl}&action=add-pokemon">+ Add Pokemon</Button>
 </div>

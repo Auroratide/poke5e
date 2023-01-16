@@ -44,7 +44,7 @@
                 <Loader />
             {:then trainer}
                 {#if trainer}
-                    <TrainerRoster {trainer} />
+                    <TrainerRoster {trainer} currentPokemon={pokemonId} />
                 {/if}
             {/await}
         {:else}
