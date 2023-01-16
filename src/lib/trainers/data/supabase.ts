@@ -14,6 +14,16 @@ import type { SupabaseClient } from '@supabase/supabase-js'
 
 export class SupabaseTrainerProvider implements TrainerDataProvider {
     constructor(private supabase: SupabaseClient) {}
+
+    allTrainers = async (): Promise<Trainer[]> => {
+        return Promise.all(getReadKeys().map((key) => this.supabase.rpc('get_trainer', { _read_key: key })
+            .maybeSingle()
+            .then(({ data, error }) => {
+                if (!data) return undefined
+                return rowToTrainer(data)
+            }))
+        ).then((trainers) => trainers.filter((it) => it != null))
+    }
     
     getTrainer = async (readKey: ReadWriteKey): Promise<undefined | TrainerData> => {
         const trainer = await this.supabase.rpc('get_trainer', { _read_key: readKey })
@@ -176,6 +186,9 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
         }
     }
 }
+
+export const getReadKeys = (): ReadWriteKey[] =>
+    (localStorage.getItem('trainers') ?? '').split(',')
 
 export const getWriteKey = (id: TrainerId): ReadWriteKey | undefined =>
     localStorage.getItem(`write:${id}`)

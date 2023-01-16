@@ -2,7 +2,7 @@ import type { Pokemon } from '$lib/creatures/types'
 import { writable } from 'svelte/store'
 import type { TrainerData } from './data'
 import { provider } from './data'
-import type { ReadWriteKey, TrainerInfo, TrainerPokemon } from './types'
+import type { ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from './types'
 
 type AllTrainers = {
     [readKey: ReadWriteKey]: TrainerData
@@ -19,6 +19,10 @@ export type TrainerStore = {
     update?: TrainerUpdater,
 }
 
+export type TrainerListStore = {
+    subscribe: (run: (value: Trainer[]) => void) => () => void,
+}
+
 type AllTrainerFetchRequests = {
     [readKey: ReadWriteKey]: Promise<TrainerStore | undefined>
 }
@@ -26,6 +30,7 @@ type AllTrainerFetchRequests = {
 const createStore = () => {
     const { subscribe: storeSubscribe, update: storeUpdate } = writable<AllTrainers>({})
     const promises: AllTrainerFetchRequests = {}
+    let listPromise: Promise<TrainerListStore> = undefined
 
     const storeUpdateOne = (readKey: string, update: (prev: TrainerData) => TrainerData) => {
         storeUpdate((prev) => ({
@@ -91,12 +96,14 @@ const createStore = () => {
                         }
                     }
 
+                    let updated = false
                     return {
                         subscribe: (s: (value: TrainerData) => void) => {
                             return storeSubscribe((all) => {
                                 s(all[readKey] ?? data)
 
-                                if (all[readKey] == null) {
+                                if (!updated) {
+                                    updated = true
                                     storeUpdate((prev) => ({
                                         ...prev,
                                         [readKey]: data,
@@ -110,6 +117,35 @@ const createStore = () => {
             }
 
             return promises[readKey]
+        },
+
+        all: () => {
+            if (listPromise == null) {
+                listPromise = provider.allTrainers().then((data) => {
+                    let updated = false
+                    return {
+                        subscribe: (s: (value: Trainer[]) => void) => {
+                            return storeSubscribe((all) => {
+                                s(Object.values(all).map((it) => it.info))
+
+                                if (!updated) {
+                                    updated = true
+                                    storeUpdate((prev) => data.reduce((newAll, cur) => ({
+                                        [cur.readKey]: {
+                                            info: cur,
+                                            pokemon: [],
+                                        },
+                                        ...newAll,
+                                    }), prev))
+                                }
+
+                            })
+                        }
+                    }
+                })
+            }
+
+            return listPromise
         }
     }
 }

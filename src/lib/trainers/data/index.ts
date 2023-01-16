@@ -18,6 +18,7 @@ export type TrainerData = {
 }
 
 export interface TrainerDataProvider {
+    allTrainers: () => Promise<Trainer[]>
     getTrainer: (readKey: ReadWriteKey) => Promise<TrainerData | undefined>
     updateTrainerInfo: (writeKey: ReadWriteKey, info: TrainerInfo) => Promise<boolean>
     updatePokemon: (writeKey: ReadWriteKey, info: TrainerPokemon) => Promise<boolean>

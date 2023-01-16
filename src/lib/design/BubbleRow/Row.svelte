@@ -21,11 +21,13 @@
             }
 
             td:first-child {
-                border-radius: 1em 0 0 1em;
+                border-top-left-radius: 1em;
+                border-bottom-left-radius: 1em;
             }
 
             td:last-child {
-                border-radius: 0 1em 1em 0;
+                border-top-right-radius: 1em;
+                border-bottom-right-radius: 1em;
             }
 
             .primary {

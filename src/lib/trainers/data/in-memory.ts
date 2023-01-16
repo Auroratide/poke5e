@@ -6,6 +6,7 @@ import {
     type TrainerInfo,
     type TrainerId,
     Natures,
+    type Trainer,
 } from '../types'
 import { Gender } from '../types'
 
@@ -196,6 +197,10 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 
 export class InMemoryTrainerProvider implements TrainerDataProvider {
     constructor(private entries: TrainerData[] = DEFAULT_INITIAL_ENTRIES) {}
+
+    allTrainers = async (): Promise<Trainer[]> => {
+        return this.entries.map((it) => it.info)
+    }
 
     getTrainer = async (readKey: ReadWriteKey): Promise<TrainerData | undefined> => {
         return this.entries.find((it) => it.info.readKey === readKey)
