@@ -8,7 +8,7 @@
 </script>
 
 {#if href != null}
-    <a {href} on:click {type} class="button {variant} {align} {width}" {disabled}>
+    <a {href} on:click {type} class="button {variant} {align} {width}" class:disabled>
         <slot></slot>
     </a>
 {:else}
@@ -66,14 +66,22 @@
         width: 100%;
     }
 
-    .button:disabled {
+    a.button.disabled {
+        pointer-events: none;
+    }
+
+    .button:disabled,
+    .button.disabled {
         cursor: not-allowed;
         opacity: 0.5;
     }
 
     .button:disabled:hover::before,
     .button:disabled:focus::before,
-    .button:disabled:active::before {
+    .button:disabled:active::before,
+    .button.disabled:hover::before,
+    .button.disabled:focus::before,
+    .button.disabled:active::before {
         display: none;
     }
 </style>
