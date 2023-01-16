@@ -12,6 +12,7 @@
     import { PageAction } from '$lib/trainers/page-action'
     import AddPokemonCard from '$lib/trainers/AddPokemonCard.svelte'
   import TrainerList from '$lib/trainers/TrainerList.svelte';
+  import NewTrainerCard from '$lib/trainers/NewTrainerCard.svelte';
 
     $: trainerId = browser ? $page.url.searchParams.get('id') : undefined
     $: pokemonId = browser ? $page.url.searchParams.get('pokemon') : undefined
@@ -70,6 +71,10 @@
                 <TrainerCard {trainer} />
             {/if}
         {/await}
+    {:else}
+        {#if action === PageAction.newTrainer}
+            <NewTrainerCard />
+        {/if}
     {/if}
 </Page>
 

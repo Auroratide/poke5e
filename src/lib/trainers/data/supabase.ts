@@ -6,6 +6,7 @@ import {
     type TrainerInfo,
     Gender,
     Natures,
+    type WithWriteKey,
 } from '../types'
 import type { Skill, Attribute } from '$lib/dnd/types'
 import type { Pokemon } from '$lib/creatures/types'
@@ -34,6 +35,8 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             })
         
         if (!trainer) return undefined
+
+        addReadKey(readKey)
     
         const pokemon = await this.supabase.rpc('get_pokemon', { _trainer_id: trainer.id })
             .select()
@@ -47,6 +50,26 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             info: trainer,
             pokemon,
             writeKey,
+        }
+    }
+
+    newTrainer = async (info: TrainerInfo): Promise<TrainerData & WithWriteKey> => {
+        const { data, error } = await this.supabase.rpc('new_trainer', {
+            _name: info.name,
+            _description: info.description,
+        }).single()
+
+        addReadKey(data.ret_read_key)
+        addWriteKey(data.ret_read_key, data.ret_write_key)
+
+        return {
+            info: {
+                ...info,
+                id: data.ret_id,
+                readKey: data.ret_read_key,
+            },
+            pokemon: [],
+            writeKey: data.ret_write_key,
         }
     }
 
@@ -190,8 +213,18 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 export const getReadKeys = (): ReadWriteKey[] =>
     (localStorage.getItem('trainers') ?? '').split(',')
 
-export const getWriteKey = (id: TrainerId): ReadWriteKey | undefined =>
-    localStorage.getItem(`write:${id}`)
+export const addReadKey = (key: ReadWriteKey) => {
+    const previous = getReadKeys()
+    const newList = [...new Set(previous.concat(key))]
+    localStorage.setItem('trainers', newList.join(','))
+}
+
+export const getWriteKey = (readKey: ReadWriteKey): ReadWriteKey | undefined =>
+    localStorage.getItem(`write:${readKey}`)
+
+export const addWriteKey = (readKey: ReadWriteKey, writeKey: ReadWriteKey) => {
+    localStorage.setItem(`write:${readKey}`, writeKey)
+}
 
 type TrainerRow = {
     id: string,

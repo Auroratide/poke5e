@@ -6,6 +6,7 @@
     import { trainerListFilterValue, trainerListSorter } from './store'
     import type { TrainerListStore } from './trainers'
     import type { Trainer } from './types'
+    import Button from '$lib/design/Button.svelte'
 
     export let trainers: TrainerListStore
 
@@ -14,14 +15,13 @@
     const byStringField = (field: (m: Trainer) => string) =>
         (l: Trainer, r: Trainer) => field(l).localeCompare(field(r))
 </script>
-<!-- 
+
 <div class="flex-row space-bottom">
     <div class="flex-column" style:flex="1">
-        <p class="large-font no-space">{$trainer.info.name}'s Pokemon</p>
-        <p class="indent small-font no-space"><a href="{baseTrainerUrl}" class="dark-font">View trainer profile &gt;</a></p>
+        <h1 class="large-font no-space">Trainer List</h1>
     </div>
-    <Button href="{baseTrainerUrl}&action=add-pokemon">+ Add Pokemon</Button>
-</div> -->
+    <Button href="{base}/trainers?action=new-trainer">+ New Trainer</Button>
+</div>
 <div class="space-bottom">
     <SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} />
 </div>

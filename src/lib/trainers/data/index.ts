@@ -5,6 +5,7 @@ import type {
     TrainerId,
     TrainerInfo,
     TrainerPokemon,
+    WithWriteKey,
 } from '../types'
 import { SupabaseTrainerProvider } from './supabase'
 import { supabase } from '$lib/supabase'
@@ -20,6 +21,7 @@ export type TrainerData = {
 export interface TrainerDataProvider {
     allTrainers: () => Promise<Trainer[]>
     getTrainer: (readKey: ReadWriteKey) => Promise<TrainerData | undefined>
+    newTrainer: (info: TrainerInfo) => Promise<TrainerData & WithWriteKey>
     updateTrainerInfo: (writeKey: ReadWriteKey, info: TrainerInfo) => Promise<boolean>
     updatePokemon: (writeKey: ReadWriteKey, info: TrainerPokemon) => Promise<boolean>
     addPokemonToTeam: (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: Pokemon) => Promise<TrainerPokemon>

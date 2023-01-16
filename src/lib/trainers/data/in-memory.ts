@@ -7,11 +7,23 @@ import {
     type TrainerId,
     Natures,
     type Trainer,
+    type WithWriteKey,
 } from '../types'
 import { Gender } from '../types'
 
 let ID = 1
 const nextId = () => (++ID).toString()
+
+const randomKey = (length: number): ReadWriteKey => {
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    let key = ''
+    for (let i = 0; i < length; ++i) {
+        key += alphabet[Math.floor(Math.random() * alphabet.length)]
+    }
+
+    return key
+}
+
 const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
     writeKey: 'QM9M65DPLEBV218UKFNG',
     info: {
@@ -204,6 +216,22 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 
     getTrainer = async (readKey: ReadWriteKey): Promise<TrainerData | undefined> => {
         return this.entries.find((it) => it.info.readKey === readKey)
+    }
+
+    newTrainer = async (info: TrainerInfo): Promise<TrainerData & WithWriteKey> => {
+        const id = nextId()
+        const readKey = randomKey(12)
+        const writeKey = randomKey(20)
+
+        return {
+            info: {
+                ...info,
+                id,
+                readKey,
+            },
+            pokemon: [],
+            writeKey,
+        }
     }
 
     updateTrainerInfo = async (writeKey: ReadWriteKey, info: TrainerInfo): Promise<boolean> => {

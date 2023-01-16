@@ -146,6 +146,14 @@ const createStore = () => {
             }
 
             return listPromise
+        },
+
+        new: (info: TrainerInfo) => {
+            return provider.newTrainer(info).then((result) => {
+                storeUpdateOne(result.info.readKey, () => result)
+
+                return result
+            })
         }
     }
 }
