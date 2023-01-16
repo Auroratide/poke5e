@@ -1,6 +1,6 @@
 <script lang="ts">
-    import type { LearnedMove } from './types'
-    import type { Move } from '../moves/types'
+    import type { LearnedMove } from '../types'
+    import type { Move } from '$lib/moves/types'
     import { base } from '$app/paths'
     import VisuallyHidden from '$lib/design/VisuallyHidden.svelte'
     import type { Attributes } from '$lib/dnd/types'
@@ -50,7 +50,7 @@
             </span>
         </div>
     </div>
-    {#if move.notes !== undefined}
+    {#if move.notes !== undefined && move.notes.length > 0}
         <div class="space-inner smaller-font">{move.notes}</div>
     {/if}
 </div>

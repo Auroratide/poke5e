@@ -7,6 +7,7 @@ import {
     Gender,
     Natures,
     type WithWriteKey,
+    type LearnedMove,
 } from '../types'
 import type { Skill, Attribute } from '$lib/dnd/types'
 import type { Pokemon } from '$lib/creatures/types'
@@ -38,11 +39,18 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
         addReadKey(readKey)
     
-        const pokemon = await this.supabase.rpc('get_pokemon', { _trainer_id: trainer.id })
+        const pokemon: TrainerPokemon[] = await this.supabase.rpc('get_pokemon', { _trainer_id: trainer.id })
             .select()
-            .then(({ data, error }) => {
-                return data.map((it) => rowToPokemon(it))
-            })
+            .then(({ data, error }) => data.map((it) => rowToPokemon(it)))
+            .then((pokemon) => Promise.all(pokemon.map((thePokemon) => {
+                return this.supabase.rpc('get_moveset', { _pokemon_id: thePokemon.id })
+                    .select()
+                    .then(({ data, error }) => ({
+                        ...thePokemon,
+                        moves: data?.map((move) => rowToMove(move)) ?? [],
+                    }))
+                }))
+            )
     
         const writeKey = getWriteKey(readKey)
     
@@ -344,4 +352,22 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
         cha: row.save_cha,
     }),
     moves: [],
+})
+
+type MoveRow = {
+    id: string,
+    move_id: string,
+    pp_cur: number,
+    pp_max: number,
+    notes: string | undefined,
+}
+
+const rowToMove = (row: MoveRow): LearnedMove => ({
+    id: row.id.toString(),
+    moveId: row.move_id,
+    pp: {
+        current: row.pp_cur,
+        max: row.pp_max,
+    },
+    notes: row.notes,
 })

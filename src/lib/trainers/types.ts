@@ -39,6 +39,7 @@ export const Natures = [
 export type Nature = (typeof Natures)[number] | string
 
 export type LearnedMove = {
+    id: string,
     moveId: string,
     pp: Resource,
     notes?: string,

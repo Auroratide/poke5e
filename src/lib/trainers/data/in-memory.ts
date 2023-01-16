@@ -11,8 +11,11 @@ import {
 } from '../types'
 import { Gender } from '../types'
 
-let ID = 1
-const nextId = () => (++ID).toString()
+let POKEMON_ID = 1
+const nextPokemonId = () => (++POKEMON_ID).toString()
+
+let MOVE_ID = 1
+const nextMoveId = () => (++MOVE_ID).toString()
 
 const randomKey = (length: number): ReadWriteKey => {
     const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
@@ -33,7 +36,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
         description: 'A trainer that likes ghosts and urban legends.',
     },
     pokemon: [ {
-        id: nextId(),
+        id: nextPokemonId(),
         trainerId: 'e2439894-8b10-4081-812c-0f16a773e959',
         pokemonId: 'mimikyu',
         nickname: 'Pikachu',
@@ -60,6 +63,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
         proficiencies: ['arcana', 'intimidation', 'performance'],
         savingThrows: ['wis', 'cha'],
         moves: [ {
+            id: nextMoveId(),
             moveId: 'mimic',
             pp: {
                 current: 5,
@@ -67,24 +71,28 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
             },
             notes: '2d8 + 10 ghost'
         }, {
+            id: nextMoveId(),
             moveId: 'astonish',
             pp: {
                 current: 10,
                 max: 10,
             },
         }, {
+            id: nextMoveId(),
             moveId: 'copycat',
             pp: {
                 current: 10,
                 max: 10,
             },
         }, {
+            id: nextMoveId(),
             moveId: 'protect',
             pp: {
                 current: 3,
                 max: 3,
             },
         }, {
+            id: nextMoveId(),
             moveId: 'charm',
             pp: {
                 current: 10,
@@ -92,7 +100,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
             },
         } ],
     }, {
-        id: nextId(),
+        id: nextPokemonId(),
         trainerId: 'e2439894-8b10-4081-812c-0f16a773e959',
         pokemonId: 'kirlia',
         nickname: 'Curly',
@@ -119,24 +127,28 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
         proficiencies: ['insight', 'perception',],
         savingThrows: ['wis'],
         moves: [ {
+            id: nextMoveId(),
             moveId: 'psychic',
             pp: {
                 current: 5,
                 max: 5,
             },
         }, {
+            id: nextMoveId(),
             moveId: 'teleport',
             pp: {
                 current: 10,
                 max: 10,
             },
         }, {
+            id: nextMoveId(),
             moveId: 'heal-pulse',
             pp: {
                 current: 5,
                 max: 5,
             },
         }, {
+            id: nextMoveId(),
             moveId: 'magical-leaf',
             pp: {
                 current: 5,
@@ -144,7 +156,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
             },
         } ],
     }, {
-        id: nextId(),
+        id: nextPokemonId(),
         trainerId: 'e2439894-8b10-4081-812c-0f16a773e959',
         pokemonId: 'litwick',
         nickname: 'Torchee',
@@ -171,24 +183,28 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
         proficiencies: ['arcana'],
         savingThrows: ['wis'],
         moves: [ {
+            id: nextMoveId(),
             moveId: 'hex',
             pp: {
                 current: 5,
                 max: 5,
             },
         }, {
+            id: nextMoveId(),
             moveId: 'smog',
             pp: {
                 current: 5,
                 max: 5,
             },
         }, {
+            id: nextMoveId(),
             moveId: 'will-o-wisp',
             pp: {
                 current: 10,
                 max: 10,
             },
         }, {
+            id: nextMoveId(),
             moveId: 'flame-burst',
             pp: {
                 current: 10,
@@ -219,7 +235,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
     }
 
     newTrainer = async (info: TrainerInfo): Promise<TrainerData & WithWriteKey> => {
-        const id = nextId()
+        const id = nextPokemonId()
         const readKey = randomKey(12)
         const writeKey = randomKey(20)
 
@@ -273,7 +289,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
         const trainer = this.entries.find((it) => it.writeKey === writeKey)
         if (trainer) {
             const newPokemon = {
-                id: nextId(),
+                id: nextPokemonId(),
                 trainerId: trainerId,
                 pokemonId: pokemon.id,
                 nickname: pokemon.name,

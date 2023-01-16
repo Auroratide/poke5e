@@ -13,6 +13,7 @@
     import FlatDl from '$lib/design/FlatDl.svelte'
     import AttributeBlock from '$lib/dnd/AttributeBlock.svelte'
     import TypeEffectiveness from '$lib/creatures/TypeEffectiveness.svelte'
+    import MovesInfo from './MovesInfo.svelte'
 
     const dispatch = createEventDispatcher()
 
@@ -47,6 +48,10 @@
     <FlatDl>
         <TypeEffectiveness type={species.type} />
     </FlatDl>
+</section>
+<hr />
+<section>
+    <MovesInfo {pokemon} />
 </section>
 
 <style>
