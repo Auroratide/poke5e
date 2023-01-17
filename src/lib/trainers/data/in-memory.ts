@@ -8,6 +8,7 @@ import {
     Natures,
     type Trainer,
     type WithWriteKey,
+    type LearnedMove,
 } from '../types'
 import { Gender } from '../types'
 
@@ -317,5 +318,17 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
         } else {
             throw new Error('Invalid write key')
         }
+    }
+
+    updateMoveset = async (writeKey: string, pokemonId: string, moves: LearnedMove[]): Promise<LearnedMove[]> => {
+        if (!writeKey) throw new Error('Invalid write key')
+
+        const pokemon = this.entries
+            .flatMap((it) => it.pokemon)
+            .find((pokemon) => pokemon.id === pokemonId)
+
+        pokemon.moves = moves
+
+        return moves
     }
 }

@@ -64,12 +64,15 @@ const createStore = () => {
                             },
                             pokemon: (info: TrainerPokemon) => {
                                 return provider.updatePokemon(data.writeKey, info).then(() => {
+                                    return provider.updateMoveset(data.writeKey, info.id, info.moves)
+                                }).then((newMoves) => {
                                     storeUpdateOne(readKey, (prev) => {
                                         const pokemonList = [...prev.pokemon]
                                         const pokeIndex = pokemonList.findIndex((it) => it.id === info.id)
                                         pokemonList[pokeIndex] = {
                                             ...prev.pokemon[pokeIndex],
                                             ...info,
+                                            moves: newMoves,
                                         }
     
                                         return {

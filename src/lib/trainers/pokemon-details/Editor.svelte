@@ -13,6 +13,7 @@
     import { skillList } from '$lib/dnd/proficiency'
     import type { Pokemon } from '$lib/creatures/types'
     import Saveable from '$lib/design/Saveable.svelte'
+    import MoveEditor from './MoveEditor.svelte'
 
     const noSpaces = (s: string) => s.replace(/\s/g, '')
     
@@ -33,6 +34,8 @@
     let attributes = { ...pokemon.attributes }
     let proficiencies = pokemon.proficiencies
     let savingThrows = pokemon.savingThrows
+
+    let moves = pokemon.moves
 
     const cancel = () => {
         dispatch('cancel')
@@ -56,6 +59,7 @@
             attributes,
             proficiencies,
             savingThrows,
+            moves,
         } as UpdateDetail)
     }
 </script>
@@ -100,6 +104,11 @@
             {#each attributeList as attr}
                 <input value={attr.abbr} bind:group={savingThrows} type="checkbox" id="saves-input-{attr.abbr}" name="saves" {disabled} />
                 <label for="saves-input-{attr.abbr}" class="cap">{attr.name}</label>
+            {/each}
+        </Fieldset>
+        <Fieldset title="Moves">
+            {#each moves as move (move.id)}
+                <MoveEditor {move} {disabled} />
             {/each}
         </Fieldset>
         <ActionArea>

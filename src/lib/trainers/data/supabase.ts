@@ -8,6 +8,7 @@ import {
     Natures,
     type WithWriteKey,
     type LearnedMove,
+    type PokemonId,
 } from '../types'
 import type { Skill, Attribute } from '$lib/dnd/types'
 import type { Pokemon } from '$lib/creatures/types'
@@ -43,14 +44,11 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             .select()
             .then(({ data, error }) => data.map((it) => rowToPokemon(it)))
             .then((pokemon) => Promise.all(pokemon.map((thePokemon) => {
-                return this.supabase.rpc('get_moveset', { _pokemon_id: thePokemon.id })
-                    .select()
-                    .then(({ data, error }) => ({
-                        ...thePokemon,
-                        moves: data?.map((move) => rowToMove(move)) ?? [],
-                    }))
+                return this.getMoveset(thePokemon.id).then((moves) => ({
+                    ...thePokemon,
+                    moves,
                 }))
-            )
+            })))
     
         const writeKey = getWriteKey(readKey)
     
@@ -215,6 +213,50 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             ...trainerPokemon,
             id: data.toString()
         }
+    }
+
+    updateMoveset = async (writeKey: ReadWriteKey, pokemonId: PokemonId, newMoveset: LearnedMove[]): Promise<LearnedMove[]> => {
+        const existingMoveset = await this.getMoveset(pokemonId)
+        const newIds = newMoveset.map((it) => it.id)
+        const existingIds = existingMoveset.map((it) => it.id)
+
+        const deletedIds = existingIds.filter((id) => !newIds.includes(id))
+        await Promise.all(deletedIds.map((id) => this.supabase.rpc('remove_move', {
+            _write_key: writeKey,
+            _id: id,
+        }).single().then(({ data, error }) => data > 0)))
+
+        return await Promise.all(newMoveset.map((move) => {
+            if (existingIds.includes(move.id)) {
+                return this.supabase.rpc('update_move', {
+                    _write_key: writeKey,
+                    _id: move.id,
+                    _move_id: move.moveId,
+                    _pp_cur: move.pp.current,
+                    _pp_max: move.pp.max,
+                    _notes: move.notes,
+                }).single().then(() => ({ ...move }))
+            } else {
+                return this.supabase.rpc('add_move', {
+                    _write_key: writeKey,
+                    _pokemon_id: pokemonId,
+                    _move_id: move.moveId,
+                    _pp_cur: move.pp.current,
+                    _pp_max: move.pp.max,
+                    _notes: move.notes,
+                }).single().then(({ data }) => ({
+                    ...move,
+                    id: data,
+                }))
+            }
+        }))
+    }
+
+    private getMoveset = async (id: PokemonId): Promise<LearnedMove[]> => {
+        const { data, error } = await this.supabase.rpc('get_moveset', { _pokemon_id: id })
+            .select()
+
+        return data?.map((move) => rowToMove(move)) ?? []
     }
 }
 
