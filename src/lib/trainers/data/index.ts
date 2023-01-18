@@ -28,6 +28,7 @@ export interface TrainerDataProvider {
     updatePokemon: (writeKey: ReadWriteKey, info: TrainerPokemon) => Promise<boolean>
     addPokemonToTeam: (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: Pokemon) => Promise<TrainerPokemon>
     updateMoveset: (writeKey: ReadWriteKey, pokemonId: PokemonId, moves: LearnedMove[]) => Promise<LearnedMove[]>
+    updateOneMove: (writeKey: ReadWriteKey, move: LearnedMove) => Promise<boolean>
 }
 
 export const provider = ENV.PUBLIC_OFFLINE === 'true'

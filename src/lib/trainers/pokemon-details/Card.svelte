@@ -1,8 +1,8 @@
 <script lang="ts">
-    import type { PokemonId, TrainerPokemon } from '$lib/trainers/types'
+    import type { LearnedMove, PokemonId, TrainerPokemon } from '$lib/trainers/types'
     import { pokemon as pokeData } from '$lib/creatures/store'
     import Loader from '$lib/design/Loader.svelte'
-    import Info, { type UpdateDetail as UpdateInfoDetail} from './Info.svelte'
+    import Info from './Info.svelte'
     import Card from '$lib/design/Card.svelte'
     import Button from '$lib/design/Button.svelte'
     import ActionArea from '$lib/design/Form/ActionArea.svelte'
@@ -30,8 +30,12 @@
         })
     }
 
-    const onImmediateUpdate = (e: CustomEvent<UpdateInfoDetail>) => {
+    const onUpdateHealth = (e: CustomEvent<TrainerPokemon>) => {
         trainer.update?.pokemon(e.detail)
+    }
+
+    const onUpdatePp = (e: CustomEvent<LearnedMove>) => {
+        trainer.update?.move(e.detail)
     }
 </script>
 
@@ -41,7 +45,7 @@
         {#if editing}
             <Editor {pokemon} on:cancel={cancelEdit} on:update={onUpdate} {saving} {species} />
         {:else}
-            <Info {pokemon} {species} editable={canEdit} on:update-health={onImmediateUpdate} />
+            <Info {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} />
             {#if canEdit}
                 <ActionArea>
                     <Button on:click={startEdit}>Edit</Button>

@@ -252,6 +252,19 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
         }))
     }
 
+    updateOneMove = async (writeKey: string, move: LearnedMove): Promise<boolean> => {
+        const { data, error } = await this.supabase.rpc('update_move', {
+            _write_key: writeKey,
+            _id: move.id,
+            _move_id: move.moveId,
+            _pp_cur: move.pp.current,
+            _pp_max: move.pp.max,
+            _notes: move.notes,
+        }).single()
+
+        return data > 0
+    }
+
     private getMoveset = async (id: PokemonId): Promise<LearnedMove[]> => {
         const { data, error } = await this.supabase.rpc('get_moveset', { _pokemon_id: id })
             .select()

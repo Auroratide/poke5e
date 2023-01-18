@@ -2,7 +2,7 @@ import type { Pokemon } from '$lib/creatures/types'
 import { writable } from 'svelte/store'
 import type { TrainerData } from './data'
 import { provider } from './data'
-import type { ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from './types'
+import type { LearnedMove, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from './types'
 
 type AllTrainers = {
     [readKey: ReadWriteKey]: TrainerData
@@ -11,6 +11,7 @@ type AllTrainers = {
 type TrainerUpdater = {
     info: (info: TrainerInfo) => Promise<void>
     pokemon: (info: TrainerPokemon) => Promise<void>
+    move: (info: LearnedMove) => Promise<void>
     addToTeam: (pokemon: Pokemon) => Promise<TrainerPokemon>
 }
 
@@ -78,6 +79,24 @@ const createStore = () => {
                                         return {
                                             ...prev,
                                             pokemon: pokemonList,
+                                        }
+                                    })
+                                })
+                            },
+                            move: (info: LearnedMove) => {
+                                return provider.updateOneMove(data.writeKey, info).then(() => {
+                                    storeUpdateOne(readKey, (prev) => {
+                                        const pokemonWithMove = prev.pokemon
+                                            .find((p) => p.moves.map((m) => m.id).includes(info.id))
+                                        if (!pokemonWithMove) {
+                                            return prev
+                                        }
+
+                                        const moveIndex = pokemonWithMove.moves.findIndex((m) => m.id === info.id)
+                                        pokemonWithMove.moves[moveIndex] = info
+
+                                        return {
+                                            ...prev,
                                         }
                                     })
                                 })

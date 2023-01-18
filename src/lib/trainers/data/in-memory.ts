@@ -272,7 +272,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
         
         const trainer = this.entries.find((it) => it.writeKey === writeKey)
         const pokemonIndex = trainer?.pokemon.findIndex((it) => it.id === info.id)
-        if (pokemonIndex != null) {
+        if (pokemonIndex >= 0) {
             trainer.pokemon[pokemonIndex] = {
                 ...trainer.pokemon[pokemonIndex],
                 ...info,
@@ -330,5 +330,24 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
         pokemon.moves = moves
 
         return moves
+    }
+
+    updateOneMove = async (writeKey: string, move: LearnedMove): Promise<boolean> => {
+        if (!writeKey) return false
+
+        const pokemonWithMove = this.entries
+            .flatMap((it) => it.pokemon)
+            .find((pokemon) =>
+                pokemon.moves.map((move) => move.id).includes(move.id)
+            )
+
+        const moveIndex = pokemonWithMove?.moves.findIndex((it) => it.id === move.id)
+        if (moveIndex >= 0) {
+            pokemonWithMove.moves[moveIndex] = move
+
+            return true
+        } else {
+            return false
+        }
     }
 }

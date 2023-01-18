@@ -1,3 +1,9 @@
+<script lang="ts" context="module">
+    export type UpdatePpDetail = {
+        value: number,
+    }
+</script>
+
 <script lang="ts">
     import type { LearnedMove } from '../types'
     import type { Move } from '$lib/moves/types'
@@ -5,6 +11,9 @@
     import VisuallyHidden from '$lib/design/VisuallyHidden.svelte'
     import type { Attributes } from '$lib/dnd/types'
     import { modifierForScore } from '$lib/dnd/attributes'
+    import { createEventDispatcher } from 'svelte'
+
+    const dispatch = createEventDispatcher()
 
     const maxBy = (val: (o: any) => number) => (max: any, cur: any) => val(cur) > val(max) ? cur : max
 
@@ -12,7 +21,9 @@
     export let moveData: Move
     export let proficiencyBonus: number
     export let attributes: Attributes
-    export let currentPp: number = move.pp.current
+    export let editable: boolean
+
+    $: currentPp = move.pp.current
 
     let attributeMod = 0
     $: {
@@ -29,6 +40,12 @@
 
     $: toHit = proficiencyBonus + attributeMod
     $: dc = 8 + proficiencyBonus + attributeMod
+
+    const onChangePp = (e: Event) => {
+        dispatch('update', {
+            value: parseInt((e.target as HTMLInputElement).value ?? '0'),
+        } as UpdatePpDetail)
+    }
 </script>
 
 <div class="vstack space-after">
@@ -37,7 +54,13 @@
             <span class="flex-span"><a href="{base}/moves/{move.moveId}">{moveData.name}</a></span>
             <span>
                 <VisuallyHidden><label for="current-hp">{moveData.name} PP</label></VisuallyHidden>
-                <span class="current"><input id="current-pp-{move.moveId}" type="number" bind:value={currentPp} /></span>
+                <span class="current">
+                    {#if editable}
+                        <input id="current-pp-{move.moveId}" type="number" value={currentPp} on:change={onChangePp} />
+                    {:else}
+                        {currentPp}
+                    {/if}
+                </span>
                 <span class="max">/ {move.pp.max}</span>
             </span>
         </div>

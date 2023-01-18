@@ -1,9 +1,5 @@
-<script lang="ts" context="module">
-    export type UpdateDetail = TrainerPokemon
-</script>
-
 <script lang="ts">
-    import type { TrainerPokemon } from '../types'
+    import type { LearnedMove, TrainerPokemon } from '../types'
     import type { Pokemon } from '$lib/creatures/types'
     import { createEventDispatcher } from 'svelte'
     import BasicInfo from './BasicInfo.svelte'
@@ -21,7 +17,7 @@
     export let species: Pokemon
     export let editable: boolean
 
-    const onUpdate = (e: CustomEvent<HealthUpdateDetail>) => {
+    const onUpdateHealth = (e: CustomEvent<HealthUpdateDetail>) => {
         dispatch('update-health', {
             ...pokemon,
             hp: {
@@ -34,11 +30,15 @@
             }
         } as TrainerPokemon)
     }
+
+    const onUpdatePp = (e: CustomEvent<LearnedMove>) => {
+        dispatch('update-pp', e.detail)
+    }
 </script>
 
 <section class="info">
     <BasicInfo {pokemon} {species} />
-    <HealthInfo {pokemon} {species} {editable} on:update={onUpdate} />
+    <HealthInfo {pokemon} {species} {editable} on:update={onUpdateHealth} />
 </section>
 <hr />
 <section class="stats">
@@ -51,7 +51,7 @@
 </section>
 <hr />
 <section>
-    <MovesInfo {pokemon} />
+    <MovesInfo {pokemon} {editable} on:update={onUpdatePp} />
 </section>
 
 <style>
