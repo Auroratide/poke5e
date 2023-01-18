@@ -94,7 +94,7 @@
     }
 
     .current input {
-        width: 4ch;
+        width: 5ch;
         display: inline-block;
     }
 

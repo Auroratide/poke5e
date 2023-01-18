@@ -35,7 +35,23 @@
     let proficiencies = pokemon.proficiencies
     let savingThrows = pokemon.savingThrows
 
-    let moves = pokemon.moves
+    let newMoveId = -1001
+    const nextNewMoveId = () => (--newMoveId).toString()
+    let moves = structuredClone(pokemon.moves)
+    const removeMove = (id: string) => () => {
+        moves = moves.filter((it) => it.id !== id)
+    }
+    const addMove = () => {
+        moves = [...moves, {
+            id: nextNewMoveId(),
+            moveId: 'tackle',
+            pp: {
+                current: 20,
+                max: 20,
+            },
+            notes: '',
+        } ]
+    }
 
     const cancel = () => {
         dispatch('cancel')
@@ -108,8 +124,10 @@
         </Fieldset>
         <Fieldset title="Moves">
             {#each moves as move (move.id)}
-                <MoveEditor {move} {disabled} />
+                <MoveEditor {move} {disabled} on:remove={removeMove(move.id)} />
             {/each}
+            <span></span>
+            <Button on:click={addMove}>Add Move</Button>
         </Fieldset>
         <ActionArea>
             <Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
