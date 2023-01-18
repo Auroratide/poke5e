@@ -22,7 +22,7 @@
     export let editable: boolean
 
     const onUpdate = (e: CustomEvent<HealthUpdateDetail>) => {
-        dispatch('update', {
+        dispatch('update-health', {
             ...pokemon,
             hp: {
                 current: e.detail.currentHp,

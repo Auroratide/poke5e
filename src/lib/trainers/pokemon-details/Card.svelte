@@ -41,7 +41,7 @@
         {#if editing}
             <Editor {pokemon} on:cancel={cancelEdit} on:update={onUpdate} {saving} {species} />
         {:else}
-            <Info {pokemon} {species} editable={canEdit} on:update={onImmediateUpdate} />
+            <Info {pokemon} {species} editable={canEdit} on:update-health={onImmediateUpdate} />
             {#if canEdit}
                 <ActionArea>
                     <Button on:click={startEdit}>Edit</Button>
