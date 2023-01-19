@@ -43,7 +43,7 @@
     </div>
     <footer>
         <Container>
-            <p class="license"><small>This is unofficial Fan Content and is not approved/endorsed by &copy; Wizards of the Coast, &copy; Game Freak, or &copy; Nintendo Company Inc. Portions of the material are property of &copy; Wizards of the Coast, &copy; Game Freak, or &copy; Nintendo Company Inc.</small></p>
+            <p class="license"><small>This is unofficial Fan Content and is not approved/endorsed by &copy; Wizards of the Coast, &copy; Game Freak, or &copy; Nintendo Company Inc. Portions of the material may be property of &copy; Wizards of the Coast, &copy; Game Freak, or &copy; Nintendo Company Inc.</small></p>
         </Container>
     </footer>
 </div>
@@ -114,7 +114,7 @@
         .license {
             text-align: center;
             margin: 0;
-            font-size: var(--font-sz-mars);
+            font-size: var(--font-sz-mercury);
         }
     }
 </style>
