@@ -8,6 +8,7 @@
     import TypeTag from '../pokemon/TypeTag.svelte'
     import TypeEffectiveness from './TypeEffectiveness.svelte'
     import * as asString from './string'
+    import EvolutionSection from './EvolutionSection.svelte'
 
     export let pokemon: Pokemon
 
@@ -82,14 +83,7 @@
     </section>
     {#if pokemon.evolution !== undefined}
         <hr />
-        <section class="evolution">
-            <p><strong>Evolution:</strong> {pokemon.evolution.stage} / {pokemon.evolution.maxStage}</p>
-            {#if pokemon.evolution.description !== undefined}
-                <p>{pokemon.evolution.description}</p>
-            {:else}
-                <p>This pokemon is at its highest evolutionary state.</p>
-            {/if}
-        </section>
+        <EvolutionSection {pokemon} />
     {/if}
     <hr />
     <section class="moves">
@@ -140,10 +134,6 @@
 
     p {
         font-size: var(--font-sz-venus);
-    }
-
-    .evolution p:first-child {
-        margin-bottom: 0.125em;
     }
 
     .cap {

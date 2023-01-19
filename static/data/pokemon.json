@@ -40818,13 +40818,13 @@
               },
               {
                 "type": "special",
-                "value": "its trainer has an empty pokeball when Nincada evolves into Ninjask"
+                "value": "when its trainer has an empty pokeball when Nincada evolves into Ninjask"
               }
             ],
             "effects": [
               {
                 "type": "special",
-                "value": "The Shedinja has all the base statistics that are in its stat block, plus any health and Ability Score Increases it would obtain from leveling up from its minimum found level."
+                "value": "the Shedinja has all the base statistics that are in its stat block, plus any health and Ability Score Increases it would obtain from leveling up from its minimum found level"
               }
             ]
           }
@@ -96151,7 +96151,7 @@
             ]
           },
           {
-            "id": "meowstic-4",
+            "id": "meowstic-f",
             "conditions": [
               {
                 "type": "level",
