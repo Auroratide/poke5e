@@ -12,6 +12,8 @@
     export let trainer: TrainerStore
     export let currentPokemon: PokemonId | undefined
 
+    $: editable = trainer.update != null
+
     $: filtered = $trainer.pokemon.filter((it) => it.nickname.toLocaleLowerCase().includes($filterValue.toLocaleLowerCase()))
     $: baseTrainerUrl = `${base}/trainers?id=${$trainer.info.readKey}`
 
@@ -32,7 +34,9 @@
             {/if}
         </p>
     </div>
-    <Button href="{baseTrainerUrl}&action=add-pokemon">+ Add Pokemon</Button>
+    <div style:visibility={editable ? 'visible' : 'hidden'}>
+        <Button href="{baseTrainerUrl}&action=add-pokemon">+ Add Pokemon</Button>
+    </div>
 </div>
 <div class="space-bottom">
     <SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} />
