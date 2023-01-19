@@ -1,4 +1,4 @@
-import type { PokeType } from '../pokemon/types'
+import type { PokeType, PokeEvolution } from '../pokemon/types'
 import type { Attribute, CreatureSize, HitDice, Skill } from '../dnd/types'
 
 export type Pokemon = {
@@ -39,11 +39,7 @@ export type Pokemon = {
         hidden?: boolean,
     }[],
     specialAbilityText?: string,
-    evolution?: {
-        stage: number,
-        maxStage: number,
-        description?: string,
-    },
+    evolution?: PokeEvolution,
     moves: {
         start: string[],
         level2?: string[],
