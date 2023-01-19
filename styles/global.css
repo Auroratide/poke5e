@@ -4,6 +4,7 @@
 
     --font-reg: 'Rubik', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
     --font-sz-base: clamp(1rem, 1.5vw, 1.125rem);
+    --font-sz-mercury: 0.7em;
     --font-sz-mars: 0.75em;
     --font-sz-venus: 0.875em;
     --font-sz-earth: 1em;
