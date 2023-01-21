@@ -1,5 +1,5 @@
 <script lang="ts">
-    export let variant: 'solid' | 'ghost' = 'solid'
+    export let variant: 'solid' | 'ghost' | 'danger' = 'solid'
     export let type: 'submit' | 'button' | 'reset' = 'button'
     export let align: 'center' | 'left' = 'center'
     export let width: 'auto' | 'full' = 'auto'
@@ -56,6 +56,11 @@
     .button.ghost:focus,
     .button.ghost:active {
         background-color: var(--skin-input-bg);
+    }
+
+    .button.danger {
+        background-color: var(--skin-danger-bg);
+        color: var(--skin-bg-text);
     }
 
     .button.left {

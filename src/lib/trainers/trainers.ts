@@ -13,6 +13,7 @@ type TrainerUpdater = {
     pokemon: (info: TrainerPokemon) => Promise<void>
     move: (info: LearnedMove) => Promise<void>
     addToTeam: (pokemon: Pokemon) => Promise<TrainerPokemon>
+    removeFromTeam: (id: string) => Promise<void>
 }
 
 export type TrainerStore = {
@@ -113,6 +114,18 @@ const createStore = () => {
                                     })
 
                                     return result
+                                })
+                            },
+                            removeFromTeam: (id: string) => {
+                                return provider.removePokemon(data.writeKey, id).then(() => {
+                                    storeUpdateOne(readKey, (prev) => {
+                                        const pokemonList = prev.pokemon.filter((it) => it.id !== id)
+    
+                                        return {
+                                            ...prev,
+                                            pokemon: pokemonList,
+                                        }
+                                    })
                                 })
                             },
                         }

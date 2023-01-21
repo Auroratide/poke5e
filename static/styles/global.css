@@ -34,6 +34,8 @@
     --skin-footer: hsl(0, 0%, 0%);
     --skin-footer-text: hsl(0, 0%, 100%);
 
+    --skin-danger-bg: hsl(355, 66%, 45%);
+
     --skin-normal-bg: hsl(60, 26%, 46%);
     --skin-fighting-bg: hsl(3, 66%, 45%);
     --skin-flying-bg: hsl(255, 76%, 70%);

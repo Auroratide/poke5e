@@ -320,6 +320,16 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
         }
     }
 
+    removePokemon = async (writeKey: string, id: string): Promise<boolean> => {
+        const trainer = this.entries.find((it) => it.writeKey === writeKey)
+        if (trainer) {
+            trainer.pokemon = trainer.pokemon.filter((it) => it.id !== id)
+            return true
+        }
+
+        return false
+    }
+
     updateMoveset = async (writeKey: string, pokemonId: string, moves: LearnedMove[]): Promise<LearnedMove[]> => {
         if (!writeKey) throw new Error('Invalid write key')
 

@@ -215,6 +215,15 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
         }
     }
 
+    removePokemon = async (writeKey: string, id: string): Promise<boolean> => {
+        const { data, error } = await this.supabase.rpc('remove_pokemon', {
+            _write_key: writeKey,
+            _id: id,
+        }).single()
+
+        return data > 0
+    }
+
     updateMoveset = async (writeKey: ReadWriteKey, pokemonId: PokemonId, newMoveset: LearnedMove[]): Promise<LearnedMove[]> => {
         const existingMoveset = await this.getMoveset(pokemonId)
         const newIds = newMoveset.map((it) => it.id)

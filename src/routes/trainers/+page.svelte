@@ -11,8 +11,9 @@
     import { trainers, type TrainerListStore, type TrainerStore } from '$lib/trainers/trainers'
     import { PageAction } from '$lib/trainers/page-action'
     import AddPokemonCard from '$lib/trainers/AddPokemonCard.svelte'
-  import TrainerList from '$lib/trainers/TrainerList.svelte';
-  import NewTrainerCard from '$lib/trainers/NewTrainerCard.svelte';
+    import TrainerList from '$lib/trainers/TrainerList.svelte'
+    import NewTrainerCard from '$lib/trainers/NewTrainerCard.svelte'
+  import RemovePokemon from '$lib/trainers/pokemon-details/RemovePokemon.svelte';
 
     $: trainerId = browser ? $page.url.searchParams.get('id') : undefined
     $: pokemonId = browser ? $page.url.searchParams.get('pokemon') : undefined
@@ -65,6 +66,8 @@
                 <Loader />
             {:else if action === PageAction.addPokemon}
                 <AddPokemonCard {trainer} />
+            {:else if action === PageAction.removePokemon}
+                <RemovePokemon {trainer} id={pokemonId} />
             {:else if pokemonId}
                 <PokemonCard {trainer} id={pokemonId} />
             {:else}

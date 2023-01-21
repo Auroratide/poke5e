@@ -10,6 +10,8 @@
     import type { TrainerStore } from '../trainers'
     import Editor, { type UpdateDetail as UpdateEditorDetail } from './Editor.svelte'
     import Evolver from './Evolver.svelte'
+    import { base } from '$app/paths'
+    import { PageAction } from '../page-action'
 
     export let trainer: TrainerStore
     export let id: PokemonId
@@ -62,6 +64,7 @@
             <Info {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} />
             {#if canEdit}
                 <ActionArea>
+                    <Button href="{base}/trainers?id={$trainer.info.readKey}&pokemon={pokemon.id}&action={PageAction.removePokemon}" variant="ghost">Remove</Button>
                     {#if species.evolution?.to?.length > 0}
                         <Button on:click={startEvolve} variant="ghost">Evolve</Button>
                     {/if}
