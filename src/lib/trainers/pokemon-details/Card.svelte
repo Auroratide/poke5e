@@ -9,6 +9,7 @@
     import TypeTag from '$lib/pokemon/TypeTag.svelte'
     import type { TrainerStore } from '../trainers'
     import Editor, { type UpdateDetail as UpdateEditorDetail } from './Editor.svelte'
+    import Evolver from './Evolver.svelte'
 
     export let trainer: TrainerStore
     export let id: PokemonId
@@ -18,9 +19,12 @@
     $: species = $pokeData?.find((it) => it.id === pokemon.pokemonId)
 
     let editing = false
-    let saving = false
     const startEdit = () => editing = true
     const cancelEdit = () => editing = false
+    let evolving = false
+    const startEvolve = () => evolving = true
+    const cancelEvolve = () => evolving = false
+    let saving = false
 
     const onUpdate = (e: CustomEvent<UpdateEditorDetail>) => {
         saving = true
@@ -37,6 +41,14 @@
     const onUpdatePp = (e: CustomEvent<LearnedMove>) => {
         trainer.update?.move(e.detail)
     }
+
+    const onEvolve = (e: CustomEvent<TrainerPokemon>) => {
+        saving = true
+        trainer.update?.pokemon(e.detail).then(() => {
+            saving = false
+            evolving = false
+        })
+    }
 </script>
 
 {#if pokemon && species}
@@ -44,10 +56,15 @@
         <TypeTag slot="header-extra" type={species.type} />
         {#if editing}
             <Editor {pokemon} on:cancel={cancelEdit} on:update={onUpdate} {saving} {species} />
+        {:else if evolving}
+            <Evolver {pokemon} on:cancel={cancelEvolve} on:submit={onEvolve} {species} {saving} />
         {:else}
             <Info {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} />
             {#if canEdit}
                 <ActionArea>
+                    {#if species.evolution?.to?.length > 0}
+                        <Button on:click={startEvolve} variant="ghost">Evolve</Button>
+                    {/if}
                     <Button on:click={startEdit}>Edit</Button>
                 </ActionArea>
             {/if}

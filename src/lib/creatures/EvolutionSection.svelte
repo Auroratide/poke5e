@@ -3,14 +3,11 @@
     import { pokemon as allPokemon } from './store'
     import { moves } from '$lib/moves/store'
     import { base } from '$app/paths'
-    import * as string from '$lib/pokemon/string'
+    import * as pokemonString from '$lib/pokemon/string'
+    import * as creatureString from '$lib/creatures/string'
 
     export let pokemon: Pokemon
     $: evolution = pokemon.evolution
-
-    const withLinks = (s: string) => s
-        .replace(/{{pokemon:(.*?)}}/, (_, p) => `<a href="${base}/pokemon/${p}">${$allPokemon.find((it) => it.id === p)?.name ?? p}</a>`)
-        .replace(/{{move:(.*?)}}/, (_, m) => `<a href="${base}/moves/${m}">${$moves.find((it) => it.id === m)?.name ?? m}</a>`)
 </script>
 
 
@@ -29,7 +26,7 @@
         {/if}
         {#if evolution.to?.length > 0}
             {#each evolution.to as to (to.id)}
-                <p>{@html withLinks(string.evolution(pokemon.name, to))}</p>
+                <p>{@html pokemonString.evolution(pokemon.name, to, creatureString.evolutionWithLinks(base, $allPokemon, $moves))}</p>
             {/each}
         {:else}
             <p>This pokemon is at its highest evolutionary state.</p>

@@ -1,4 +1,4 @@
-import type { EvolutionCondition, EvolutionEffect } from "./types";
+import type { EvolutionCondition, EvolutionEffect } from './types'
 
 export const evolutionCondition = (c: EvolutionCondition): string => {
     switch (c.type) {
@@ -24,10 +24,12 @@ export const evolution = (pokemonName: string, e: {
     id: string,
     conditions: EvolutionCondition[],
     effects: EvolutionEffect[],
-}): string => {
+}, transformer?: (type: 'pokemon' | 'move', id: string) => string): string => {
     const genderCondition = e.conditions.find((it) => it.type === 'gender')
     const levelCondition = e.conditions.find((it) => it.type === 'level')
     const otherConditions = e.conditions.filter((it) => it.type !== 'gender' && it.type !== 'level')
 
     return `${genderCondition ? `${evolutionCondition(genderCondition)} ` : ''}${pokemonName} can evolve into {{pokemon:${e.id}}} ${levelCondition ? evolutionCondition(levelCondition) : ''}${otherConditions.length > 0 ? ' ' : ''}${otherConditions.map((it) => evolutionCondition(it)).join(', ')}. When it evolves, ${e.effects.map((it) => evolutionEffect(it)).join(', ')}.`
+        .replaceAll(/{{pokemon:(.*?)}}/g, (orig, id) => transformer ? transformer('pokemon', id) : orig)
+        .replaceAll(/{{move:(.*?)}}/g, (orig, id) => transformer ? transformer('move', id) : orig)
 }
