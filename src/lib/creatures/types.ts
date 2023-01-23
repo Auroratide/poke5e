@@ -52,5 +52,6 @@ export type Pokemon = {
     },
     media?: {
         main: string,
+        sprite: string,
     },
 }

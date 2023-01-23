@@ -3,12 +3,17 @@
     import GenderIcon from '$lib/design/GenderIcon.svelte'
     import ResourceBar from '$lib/design/ResourceBar.svelte'
     import { Url } from '$lib/url'
+    import { pokemon as allPokemon } from '$lib/creatures/store'
 
     export let trainer: ReadWriteKey
     export let pokemon: TrainerPokemon
+
+    $: species = $allPokemon?.find((it) => it.id === pokemon.pokemonId)
+    $: sprite = species?.media?.sprite
 </script>
 
 <a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded">
+    <span style:grid-area="sprite" class="max-height">{#if sprite}<img src={sprite} alt="{species?.name}" />{/if}</span>
     <span style:grid-area="name">{pokemon.nickname}</span>
     <span style:grid-area="gender" class="right away-from-edge flex"><GenderIcon gender={pokemon.gender} /></span>
     <span style:grid-area="hpbar" class="away-from-edge"><ResourceBar current={pokemon.hp.current} max={pokemon.hp.max} /></span>
@@ -19,10 +24,11 @@
 <style>
     .gridded {
         display: grid;
+        grid-template-columns: 3em 1fr auto;
         grid-template-areas:
-            "name gender"
-            "hpbar hpbar"
-            "hp lv";
+            "sprite name gender"
+            "sprite hpbar hpbar"
+            "sprite hp lv";
         gap: 0.125em;
     }
 
@@ -39,9 +45,18 @@
         align-items: center;
     }
 
+    .max-height {
+        max-height: 3em;
+    }
+
+    .max-height img {
+        display: block;
+        height: 100%;
+    }
+
     .selectable-bubble {
         background-color: var(--skin-content);
-        padding: 0.375em 2em;
+        padding: 0.375em 1.5em 0.375em 0.5em;
         border-radius: 3em;
         text-decoration: none;
         color: var(--skin-content-text);
