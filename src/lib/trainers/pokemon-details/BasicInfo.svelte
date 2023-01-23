@@ -31,6 +31,8 @@
         align-items: center;
 
         .gender {
+            display: flex;
+            align-items: center;
             margin-left: 0.25em;
         }
     }
