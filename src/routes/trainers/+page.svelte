@@ -13,7 +13,9 @@
     import AddPokemonCard from '$lib/trainers/AddPokemonCard.svelte'
     import TrainerList from '$lib/trainers/TrainerList.svelte'
     import NewTrainerCard from '$lib/trainers/NewTrainerCard.svelte'
-  import RemovePokemon from '$lib/trainers/pokemon-details/RemovePokemon.svelte';
+    import RemovePokemonCard from '$lib/trainers/pokemon-details/RemovePokemonCard.svelte'
+    import EditPokemonCard from '$lib/trainers/pokemon-details/EditPokemonCard.svelte'
+    import EvolvePokemonCard from '$lib/trainers/pokemon-details/EvolvePokemonCard.svelte'
 
     $: trainerId = browser ? $page.url.searchParams.get('id') : undefined
     $: pokemonId = browser ? $page.url.searchParams.get('pokemon') : undefined
@@ -66,8 +68,12 @@
                 <Loader />
             {:else if action === PageAction.addPokemon}
                 <AddPokemonCard {trainer} />
+            {:else if action === PageAction.editPokemon}
+                <EditPokemonCard {trainer} id={pokemonId} />
+            {:else if action === PageAction.evolvePokemon}
+                <EvolvePokemonCard {trainer} id={pokemonId} />
             {:else if action === PageAction.removePokemon}
-                <RemovePokemon {trainer} id={pokemonId} />
+                <RemovePokemonCard {trainer} id={pokemonId} />
             {:else if pokemonId}
                 <PokemonCard {trainer} id={pokemonId} />
             {:else}

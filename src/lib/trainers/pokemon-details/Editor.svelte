@@ -1,7 +1,3 @@
-<script lang="ts" context="module">
-    export type UpdateDetail = TrainerPokemon
-</script>
-
 <script lang="ts">
     import { Gender, type TrainerPokemon } from '../types'
     import { createEventDispatcher } from 'svelte'
@@ -76,7 +72,7 @@
             proficiencies,
             savingThrows,
             moves,
-        } as UpdateDetail)
+        } as TrainerPokemon)
     }
 </script>
 
