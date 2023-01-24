@@ -11310,7 +11310,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -11456,7 +11456,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -12884,7 +12884,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -13048,7 +13048,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -13184,7 +13184,7 @@
           "value": 35
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 35
         }
       ],
@@ -15393,7 +15393,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -15526,7 +15526,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -19433,7 +19433,7 @@
           "value": 20
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -26611,7 +26611,7 @@
           "value": 20
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -26776,7 +26776,7 @@
           "value": 25
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -26906,7 +26906,7 @@
           "value": 30
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -28524,7 +28524,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -28661,7 +28661,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -33229,7 +33229,7 @@
           "value": 30
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -48709,7 +48709,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -48845,7 +48845,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -50476,7 +50476,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -50627,7 +50627,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -50780,7 +50780,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -50946,7 +50946,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -51226,7 +51226,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -51772,7 +51772,7 @@
           "value": 30
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -53405,7 +53405,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -53500,7 +53500,7 @@
           "value": 25
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -53638,7 +53638,7 @@
           "value": 30
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -61117,7 +61117,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 35
         }
       ],
@@ -61694,7 +61694,7 @@
           "value": 25
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -62137,7 +62137,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 15
         }
       ],
@@ -62278,7 +62278,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -63039,7 +63039,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -66011,7 +66011,7 @@
       "hitDice": "d12",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 35
         }
       ],
@@ -67595,7 +67595,7 @@
           "value": 35
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 35
         }
       ],
@@ -68026,7 +68026,7 @@
           "value": 30
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -68173,7 +68173,7 @@
           "value": 20
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -68296,7 +68296,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -68407,7 +68407,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -68522,7 +68522,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -68637,7 +68637,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -68752,7 +68752,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -68867,7 +68867,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -74238,7 +74238,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -74387,7 +74387,7 @@
       "hitDice": "d12",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -78294,7 +78294,7 @@
           "value": 5
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -78433,7 +78433,7 @@
           "value": 25
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -80600,7 +80600,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -80735,7 +80735,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -82730,7 +82730,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 15
         }
       ],
@@ -82891,7 +82891,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -83022,7 +83022,7 @@
       "hitDice": "d12",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -83454,7 +83454,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -83601,7 +83601,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -83718,7 +83718,7 @@
       "hitDice": "d12",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -84115,7 +84115,7 @@
           "value": 25
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -84404,7 +84404,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 35
         }
       ],
@@ -84815,7 +84815,7 @@
           "value": 25
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -84962,7 +84962,7 @@
           "value": 30
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -85801,7 +85801,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -85937,7 +85937,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -86053,7 +86053,7 @@
       "hitDice": "d12",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -86192,7 +86192,7 @@
           "value": 25
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -86291,7 +86291,7 @@
           "value": 30
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -86410,7 +86410,7 @@
           "value": 35
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 35
         }
       ],
@@ -86690,7 +86690,7 @@
           "value": 25
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -87012,7 +87012,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -87144,7 +87144,7 @@
       "hitDice": "d12",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -87966,7 +87966,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 35
         }
       ],
@@ -89084,7 +89084,7 @@
           "value": 30
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -95751,7 +95751,7 @@
           "value": 10
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 10
         }
       ],
@@ -95899,7 +95899,7 @@
           "value": 10
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -96018,7 +96018,7 @@
           "value": 15
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -97311,7 +97311,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -97453,7 +97453,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -97563,7 +97563,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -97975,7 +97975,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -98102,7 +98102,7 @@
       "hitDice": "d12",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -98243,7 +98243,7 @@
           "value": 20
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -98393,7 +98393,7 @@
           "value": 30
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -101147,7 +101147,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -101291,7 +101291,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -101436,7 +101436,7 @@
           "value": 25
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -101578,7 +101578,7 @@
           "value": 20
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -101729,7 +101729,7 @@
           "value": 25
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -103042,7 +103042,7 @@
       "hitDice": "d12",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 35
         }
       ],
@@ -103165,7 +103165,7 @@
       "hitDice": "d12",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 35
         }
       ],
@@ -103864,7 +103864,7 @@
           "value": 35
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 35
         }
       ],
@@ -112662,7 +112662,7 @@
       "hitDice": "d8",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -114008,7 +114008,7 @@
           "value": 10
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 35
         }
       ],
@@ -114129,7 +114129,7 @@
           "value": 10
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 35
         }
       ],
@@ -114627,7 +114627,7 @@
           "value": 10
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -115041,7 +115041,7 @@
           "value": 30
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -116607,7 +116607,7 @@
       "hitDice": "d12",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 40
         }
       ],
@@ -118113,7 +118113,7 @@
           "value": 25
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 50
         }
       ],
@@ -118599,7 +118599,7 @@
           "value": 50
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 50
         }
       ],
@@ -119973,7 +119973,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
@@ -121216,7 +121216,7 @@
       "hitDice": "d6",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 25
         }
       ],
@@ -123811,7 +123811,7 @@
           "value": 5
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 10
         }
       ],
@@ -123933,7 +123933,7 @@
           "value": 10
         },
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 20
         }
       ],
@@ -127717,7 +127717,7 @@
       "hitDice": "d10",
       "speed": [
         {
-          "type": "flying (hover)",
+          "type": "hover",
           "value": 30
         }
       ],
