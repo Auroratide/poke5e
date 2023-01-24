@@ -17,6 +17,8 @@
     export let species: Pokemon
     export let editable: boolean
 
+    $: hasImage = species.media != null
+
     const onUpdateHealth = (e: CustomEvent<HealthUpdateDetail>) => {
         dispatch('update-health', {
             ...pokemon,
@@ -36,13 +38,21 @@
     }
 </script>
 
-<section class="info">
-    <BasicInfo {pokemon} {species} />
-    <HealthInfo {pokemon} {species} {editable} on:update={onUpdateHealth} />
+<section class="info column lg:row">
+    <div style:flex="1" style:width="100%">
+        <div style:margin-bottom="0.5em">
+            <BasicInfo {pokemon} {species} />
+            <HealthInfo {pokemon} {species} {editable} on:update={onUpdateHealth} />
+        </div>
+        <StatsInfo {pokemon} {species} />
+    </div>
+    {#if hasImage}
+        <div style:--size="clamp(8rem, 12.66vw, 9.5rem)" class="square-image">
+            <img src={species.media.main} alt="" />
+        </div>
+    {/if}
 </section>
-<hr />
 <section class="stats">
-    <StatsInfo {pokemon} {species} />
     <AttributeBlock attributes={pokemon.attributes} />
     <SkillsInfo {pokemon} />
     <FlatDl>
@@ -64,5 +74,31 @@
         border: none;
         border-bottom: 0.0625em solid var(--skin-bg);
         opacity: 0.5;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 37.5rem) {
+        .lg\:row {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+
+    .square-image {
+        width: var(--size);
+        height: var(--size);
+        padding: 0.5rem 0 0.5rem 1rem;
+    }
+
+    img {
+        width: 100%;
+        display: block;
+        margin: 0;
     }
 </style>

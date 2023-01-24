@@ -12,11 +12,11 @@
 </script>
 
 <FlatDl columns={2}>
-    <dt>Armor Class</dt>
+    <dt><abbr title="Armor Class">AC</abbr></dt>
     <dd>{pokemon.ac}</dd>
     <dt>Nature</dt>
     <dd class="cap">{pokemon.nature}</dd>
-    <dt>Proficiency</dt>
+    <dt>Bonus</dt>
     <dd>+{pb}</dd>
     <dt>Size</dt>
     <dd class="cap">{species.size}</dd>
