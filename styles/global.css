@@ -35,6 +35,7 @@
     --skin-footer-text: hsl(0, 0%, 100%);
 
     --skin-danger-bg: hsl(355, 66%, 45%);
+    --skin-danger-text: hsl(355, 66%, 45%);
 
     --skin-normal-bg: hsl(60, 26%, 46%);
     --skin-fighting-bg: hsl(3, 66%, 45%);
@@ -130,6 +131,32 @@ input, textarea {
 
 input:focus, textarea:focus {
     background-color: var(--skin-content);
+}
+
+figure {
+    margin: 0;
+}
+
+figure img {
+    width: 100%;
+    box-shadow: var(--elev-stratus);
+    border: 0.125em solid var(--skin-bg);
+    border-radius: 0.5em;
+}
+
+figure figcaption {
+    padding-block: 0.25em;
+    display: block;
+    text-align: center;
+    font-size: var(--font-sz-venus);
+    opacity: 0.9;
+}
+
+hr {
+    width: 33%;
+    border: none;
+    border-bottom: 0.0625em solid var(--skin-bg);
+    opacity: 0.5;
 }
 
 .nolist {
