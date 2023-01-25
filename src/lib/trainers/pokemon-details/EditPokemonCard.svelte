@@ -9,6 +9,7 @@
     import { goto } from '$app/navigation'
     import Editor from './Editor.svelte'
     import { Url } from '$lib/url'
+    import RequirePokemon from './RequirePokemon.svelte'
 
     export let trainer: TrainerStore
     export let id: PokemonId
@@ -30,19 +31,21 @@
     }
 </script>
 
-{#if pokemon && species}
-    <Card title="Edit {pokemon.nickname}">
-        {#if canEdit}
-            <Editor {pokemon} {species} {saving} on:cancel={cancel} on:update={update} />
-        {:else}
-            <section>
-                <p>You do not have permission to edit this pokemon.</p>
-                <ActionArea>
-                    <Button href="{Url.trainers($trainer.info.readKey, id)}">Go Back</Button>
-                </ActionArea>
-            </section>
-        {/if}
-    </Card>
-{:else}
-    <Loader />
-{/if}
+<RequirePokemon trainer={$trainer} {id}>
+    {#if species}
+        <Card title="Edit {pokemon.nickname}">
+            {#if canEdit}
+                <Editor {pokemon} {species} {saving} on:cancel={cancel} on:update={update} />
+            {:else}
+                <section>
+                    <p>You do not have permission to edit this pokemon.</p>
+                    <ActionArea>
+                        <Button href="{Url.trainers($trainer.info.readKey, id)}">Go Back</Button>
+                    </ActionArea>
+                </section>
+            {/if}
+        </Card>
+    {:else}
+        <Loader />
+    {/if}
+</RequirePokemon>

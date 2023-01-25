@@ -1,6 +1,7 @@
 <script lang="ts">
     import { page } from '$app/stores'
     import { base, assets } from '$app/paths'
+    import MissingNo from '$lib/design/MissingNo.svelte'
     import Title from '$lib/design/Title.svelte'
 
     const title = $page.status === 404
@@ -16,7 +17,7 @@
 <main>
     <h1>{title}</h1>
     <p>{message}</p>
-    <img class="missingno" src="{assets}/missingno.png" alt="a nearly random assortment of purple, pink, and black pixels" />
+    <p class="missingno"><MissingNo /></p>
     <p>Try <a href="{base}">returning to the home page.</a></p>
 </main>
 
@@ -46,11 +47,6 @@
     }
 
     .missingno {
-        image-rendering: crisp-edges;
-        image-rendering: pixelated;
         height: 33vh;
-        margin-bottom: 3em;
-        display: block;
-        margin: 0 auto 3em;
     }
 </style>

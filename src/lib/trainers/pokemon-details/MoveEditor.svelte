@@ -23,7 +23,7 @@
 <label for="move-name-input-{move.id}">Move</label>
 <div class="flex-row">
     <select id="move-name-input-{move.id}" bind:value={move.moveId} on:change={onMoveChange} style:flex="1">
-        {#each $moves as moveData}
+        {#each ($moves ?? []) as moveData}
             <option value={moveData.id}>{moveData.name}</option>
         {/each}
     </select>
