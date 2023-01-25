@@ -125,13 +125,6 @@
 </Card>
 
 <style lang="scss">
-    hr {
-        width: 33%;
-        border: none;
-        border-bottom: 0.0625em solid var(--skin-bg);
-        opacity: 0.5;
-    }
-
     p {
         font-size: var(--font-sz-venus);
     }

@@ -7,6 +7,8 @@
     import type { TrainerListStore } from './trainers'
     import type { Trainer } from './types'
     import Button from '$lib/design/Button.svelte'
+    import { Url } from '$lib/url'
+    import { PageAction } from './page-action'
 
     export let trainers: TrainerListStore
 
@@ -19,6 +21,9 @@
 <div class="flex-row space-bottom">
     <div class="flex-column" style:flex="1">
         <h1 class="large-font no-space">Trainer List</h1>
+        <p class="indent small-font no-space">
+            <a href="{Url.trainers(undefined, undefined, PageAction.findTrainer)}" class="dark-font">Find by trainer ID &gt;</a>
+        </p>
     </div>
     <Button href="{base}/trainers?action=new-trainer">+ New Trainer</Button>
 </div>

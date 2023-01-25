@@ -2,6 +2,7 @@
     import Loader from './Loader.svelte'
 
     export let saving: boolean
+    export let caption: string = 'Saving...'
 </script>
 
 <div class="relative">
@@ -11,7 +12,7 @@
     {#if saving}
         <div class="center-overlay" aria-live="assertive">
             <div class="fixed">
-                <Loader caption="Saving..." />
+                <Loader {caption} />
             </div>
         </div>
     {/if}

@@ -69,13 +69,6 @@
         margin-bottom: 0.5em;
     }
 
-    hr {
-        width: 33%;
-        border: none;
-        border-bottom: 0.0625em solid var(--skin-bg);
-        opacity: 0.5;
-    }
-
     .column {
         display: flex;
         flex-direction: column;
