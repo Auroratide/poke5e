@@ -20,6 +20,9 @@
     export let saving: boolean = false
     $: disabled = saving
 
+    $: ability = species.abilities.find((it) => it.id === pokemon.ability)
+    $: currentAbilityIndex = species.abilities.indexOf(ability)
+
     // if there is only one choice, default it to be selected
     let evolveToId = species.evolution?.to?.length === 1 ? species.evolution.to[0].id : undefined
     $: evolveToInfo = species.evolution?.to?.find((it) => it.id === evolveToId)
@@ -29,6 +32,7 @@
     $: gainedAc = Math.max(0, (evolveToPokemon?.ac ?? 0) - pokemon.ac)
     $: gainedProficiencies = list.difference(evolveToPokemon?.skills ?? [])(pokemon.proficiencies)
     $: gainedSavingThrows = list.difference(evolveToPokemon?.savingThrows ?? [])(pokemon.savingThrows)
+    $: newAbility = evolveToPokemon?.abilities[Math.min(evolveToPokemon?.abilities.length - 1, currentAbilityIndex)]
 
     const cancel = () => {
         dispatch('cancel')
@@ -45,6 +49,7 @@
             ac: pokemon.ac + gainedAc,
             proficiencies: pokemon.proficiencies.concat(gainedProficiencies),
             savingThrows: pokemon.savingThrows.concat(gainedSavingThrows),
+            ability: newAbility?.id ?? pokemon.ability,
         }
 
         dispatch('submit', afterEvolution)
@@ -70,6 +75,7 @@
                         {#if gainedAc > 0}<li>AC will increase by {gainedAc}</li>{/if}
                         {#if gainedProficiencies.length > 0}<li>Proficiency in <span class="cap">{gainedProficiencies.join(', ')}</span></li>{/if}
                         {#if gainedSavingThrows.length > 0}<li>Proficiency in <span class="upper">{gainedSavingThrows.join(', ')}</span> saving throws</li>{/if}
+                        {#if newAbility && pokemon.ability !== newAbility.id}<li>Ability will change from {ability.name} to {newAbility.name}</li>{/if}
                     </ul>
                 {/if}
             </section>

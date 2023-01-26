@@ -35,7 +35,7 @@
     {#if species}
         <Card title="Evolve {pokemon.nickname}">
             {#if canEdit}
-                <Evolver {pokemon} {species} {saving} on:cancel={cancel} on:update={update} />
+                <Evolver {pokemon} {species} {saving} on:cancel={cancel} on:submit={update} />
             {:else}
                 <section>
                     <p>You do not have permission to evolve this pokemon.</p>
