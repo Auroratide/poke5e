@@ -133,6 +133,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _save_int: info.savingThrows.includes('int'),
             _save_wis: info.savingThrows.includes('wis'),
             _save_cha: info.savingThrows.includes('cha'),
+            _ability: info.ability,
         }).single()
     
         return data > 0
@@ -148,6 +149,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             gender: Gender.None,
             attributes: pokemon.attributes,
             ac: pokemon.ac,
+            ability: pokemon.abilities[0]?.id,
             hp: {
                 current: pokemon.hp,
                 max: pokemon.hp,
@@ -203,6 +205,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _save_int: pokemon.savingThrows.includes('int'),
             _save_wis: pokemon.savingThrows.includes('wis'),
             _save_cha: pokemon.savingThrows.includes('cha'),
+            _ability: pokemon.abilities[0]?.id,
         }).single()
     
         if (error) {
@@ -355,6 +358,7 @@ type PokemonRow = {
     save_int: boolean,
     save_wis: boolean,
     save_cha: boolean,
+    ability: string,
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -387,6 +391,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
         current: row.hit_dice_cur,
         max: row.hit_dice_max,
     },
+    ability: row.ability,
     proficiencies: booleansToList<Skill>({
         'athletics': row.prof_athletics,
         'acrobatics': row.prof_acrobatics,

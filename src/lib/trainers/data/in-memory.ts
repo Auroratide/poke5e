@@ -61,6 +61,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
             current: 11,
             max: 11,
         },
+        ability: 'disguise',
         proficiencies: ['arcana', 'intimidation', 'performance'],
         savingThrows: ['wis', 'cha'],
         moves: [ {
@@ -125,6 +126,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
             current: 6,
             max: 6,
         },
+        ability: 'telepathy',
         proficiencies: ['insight', 'perception',],
         savingThrows: ['wis'],
         moves: [ {
@@ -181,6 +183,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
             current: 6,
             max: 6,
         },
+        ability: 'flame-body',
         proficiencies: ['arcana'],
         savingThrows: ['wis'],
         moves: [ {
@@ -289,7 +292,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
         
         const trainer = this.entries.find((it) => it.writeKey === writeKey)
         if (trainer) {
-            const newPokemon = {
+            const newPokemon: TrainerPokemon = {
                 id: nextPokemonId(),
                 trainerId: trainerId,
                 pokemonId: pokemon.id,
@@ -299,6 +302,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
                 gender: Gender.None,
                 attributes: pokemon.attributes,
                 ac: pokemon.ac,
+                ability: pokemon.abilities[0]?.id,
                 hp: {
                     current: pokemon.hp,
                     max: pokemon.hp,

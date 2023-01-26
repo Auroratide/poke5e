@@ -28,6 +28,7 @@
     let maxHp = pokemon.hp.max
     let gender = pokemon.gender
     let attributes = { ...pokemon.attributes }
+    let ability = pokemon.ability
     let proficiencies = pokemon.proficiencies
     let savingThrows = pokemon.savingThrows
 
@@ -69,6 +70,7 @@
             },
             gender,
             attributes,
+            ability,
             proficiencies,
             savingThrows,
             moves,
@@ -104,6 +106,14 @@
                 <label for="{attr.abbr}-input" class="upper">{attr.abbr}</label>
                 <input name="{attr.abbr}" id="{attr.abbr}-input" min="0" max="30" type="number" bind:value={attributes[attr.abbr]} style:max-width="4em" {disabled} />
             {/each}
+        </Fieldset>
+        <Fieldset title="Feats">
+            <label for="ability-input">Ability</label>
+            <select id="ability-input" bind:value={ability}>
+                {#each species.abilities as a}
+                    <option value="{a.id}">{a.name}</option>
+                {/each}
+            </select>
         </Fieldset>
         <Fieldset title="Proficiencies" columns={2}>
             {#each skillList as skill}

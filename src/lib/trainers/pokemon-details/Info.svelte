@@ -10,6 +10,7 @@
     import AttributeBlock from '$lib/dnd/AttributeBlock.svelte'
     import TypeEffectiveness from '$lib/creatures/TypeEffectiveness.svelte'
     import MovesInfo from './MovesInfo.svelte'
+    import FeatsInfo from './FeatsInfo.svelte'
 
     const dispatch = createEventDispatcher()
 
@@ -58,6 +59,7 @@
     <FlatDl>
         <TypeEffectiveness type={species.type} />
     </FlatDl>
+    <FeatsInfo {pokemon} {species} />
 </section>
 <hr />
 <section>
