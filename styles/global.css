@@ -123,7 +123,7 @@ a:hover {
     text-decoration: none;
 }
 
-input, textarea {
+input, textarea, select {
     border: none;
     background-color: var(--skin-input-bg);
     padding: 0.1em 0.25em;
