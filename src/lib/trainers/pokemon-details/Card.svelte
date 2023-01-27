@@ -20,11 +20,15 @@
     $: species = $pokeData?.find((it) => it.id === pokemon?.pokemonId)
 
     const onUpdateHealth = (e: CustomEvent<TrainerPokemon>) => {
-        trainer.update?.pokemon(e.detail)
+        trainer.update?.pokemon(e.detail, {
+            optimistic: true,
+        })
     }
 
     const onUpdatePp = (e: CustomEvent<LearnedMove>) => {
-        trainer.update?.move(e.detail)
+        trainer.update?.move(e.detail, {
+            optimistic: true,
+        })
     }
 </script>
 

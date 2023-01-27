@@ -9,11 +9,15 @@ type AllTrainers = {
     [readKey: ReadWriteKey]: TrainerData
 }
 
+type UpdaterOptions = {
+    optimistic?: boolean
+}
+
 type TrainerUpdater = {
     info: (info: TrainerInfo) => Promise<void>
-    pokemon: (info: TrainerPokemon) => Promise<void>
+    pokemon: (info: TrainerPokemon, options?: UpdaterOptions) => Promise<void>
     moveset: (info: TrainerPokemon) => Promise<void>
-    move: (info: LearnedMove) => Promise<void>
+    move: (info: LearnedMove, options?: UpdaterOptions) => Promise<void>
     addToTeam: (pokemon: Pokemon) => Promise<TrainerPokemon>
     removeFromTeam: (id: string) => Promise<void>
 }
@@ -66,22 +70,35 @@ const createStore = () => {
                                     }))
                                 })
                             },
-                            pokemon: (info: TrainerPokemon) => {
-                                return provider.updatePokemon(data.writeKey, info).then(() => {
-                                    storeUpdateOne(readKey, (prev) => {
-                                        const pokemonList = [...prev.pokemon]
-                                        const pokeIndex = pokemonList.findIndex((it) => it.id === info.id)
-                                        pokemonList[pokeIndex] = {
-                                            ...prev.pokemon[pokeIndex],
-                                            ...info,
-                                        }
+                            pokemon: (info: TrainerPokemon, options: UpdaterOptions = {}) => {
+                                let original: TrainerPokemon = undefined
+                                const updateStore = (info: TrainerPokemon) => storeUpdateOne(readKey, (prev) => {
+                                    const pokemonList = [...prev.pokemon]
+                                    const pokeIndex = pokemonList.findIndex((it) => it.id === info.id)
+                                    original = pokemonList[pokeIndex]
+                                    pokemonList[pokeIndex] = {
+                                        ...prev.pokemon[pokeIndex],
+                                        ...info,
+                                    }
 
-                                        return {
-                                            ...prev,
-                                            pokemon: pokemonList,
-                                        }
-                                    })
+                                    return {
+                                        ...prev,
+                                        pokemon: pokemonList,
+                                    }
                                 })
+
+                                if (options.optimistic) {
+                                    updateStore(info)
+
+                                    return provider.updatePokemon(data.writeKey, info).then(() => {}).catch((e) => {
+                                        updateStore(original)
+                                        throw e
+                                    })
+                                } else {
+                                    return provider.updatePokemon(data.writeKey, info).then(() => {
+                                        updateStore(info)
+                                    })
+                                }
                             },
                             moveset: (info: TrainerPokemon) => {
                                 return provider.updateMoveset(data.writeKey, info.id, info.moves).then((newMoves) => {
@@ -100,8 +117,9 @@ const createStore = () => {
                                     })
                                 })
                             },
-                            move: (info: LearnedMove) => {
-                                return provider.updateOneMove(data.writeKey, info).then(() => {
+                            move: (info: LearnedMove, options: UpdaterOptions = {}) => {
+                                let original: LearnedMove = undefined
+                                const updateStore = (info: LearnedMove) => {
                                     storeUpdateOne(readKey, (prev) => {
                                         const pokemonWithMove = prev.pokemon
                                             .find((p) => p.moves.map((m) => m.id).includes(info.id))
@@ -110,13 +128,27 @@ const createStore = () => {
                                         }
 
                                         const moveIndex = pokemonWithMove.moves.findIndex((m) => m.id === info.id)
+                                        original = pokemonWithMove.moves[moveIndex]
                                         pokemonWithMove.moves[moveIndex] = info
 
                                         return {
                                             ...prev,
                                         }
                                     })
-                                })
+                                }
+
+                                if (options.optimistic) {
+                                    updateStore(info)
+
+                                    return provider.updateOneMove(data.writeKey, info).then(() => {}).catch((e) => {
+                                        updateStore(original)
+                                        throw e
+                                    })
+                                } else {
+                                    return provider.updateOneMove(data.writeKey, info).then(() => {
+                                        updateStore(info)
+                                    })
+                                }
                             },
                             addToTeam: (pokemon: Pokemon) => {
                                 return provider.addPokemonToTeam(data.writeKey, data.info.id, pokemon).then((result) => {
