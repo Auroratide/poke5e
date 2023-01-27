@@ -5,4 +5,5 @@ export const PageAction = {
     removePokemon: 'remove-pokemon',
     newTrainer: 'new-trainer',
     findTrainer: 'find-trainer',
+    editTrainer: 'edit-trainer',
 }

@@ -18,6 +18,7 @@
     import EvolvePokemonCard from '$lib/trainers/pokemon-details/EvolvePokemonCard.svelte'
     import NoTrainer from '$lib/trainers/trainer-details/NoTrainer.svelte'
     import FindTrainerCard from '$lib/trainers/FindTrainerCard.svelte'
+    import EditTrainerCard from '$lib/trainers/trainer-details/EditTrainerCard.svelte'
 
     $: trainerId = browser ? $page.url.searchParams.get('id') : undefined
     $: pokemonId = browser ? $page.url.searchParams.get('pokemon') : undefined
@@ -80,6 +81,8 @@
                 <RemovePokemonCard {trainer} id={pokemonId} />
             {:else if pokemonId}
                 <PokemonCard {trainer} id={pokemonId} />
+            {:else if action === PageAction.editTrainer}
+                <EditTrainerCard {trainer} />
             {:else}
                 <TrainerCard {trainer} />
             {/if}
