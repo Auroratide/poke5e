@@ -8,7 +8,7 @@
 </script>
 
 {#if href != null}
-    <a {href} on:click {type} class="button {variant} {align} {width}" class:disabled>
+    <a {href} on:click class="button {variant} {align} {width}" class:disabled>
         <slot></slot>
     </a>
 {:else}
