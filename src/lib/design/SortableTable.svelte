@@ -57,7 +57,8 @@
 <style lang="scss">
     table {
         width: 100%;
-        height: 100%;
+        flex: 1;
+        height: 0;
         display: flex;
         flex-direction: column;
 
@@ -68,7 +69,7 @@
         }
 
         tbody {
-            height: calc(100% - 4em); // TODO what is this really?
+            height: 100%;
             overflow: auto;
         }
 
