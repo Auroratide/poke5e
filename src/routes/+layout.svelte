@@ -10,6 +10,10 @@
         filterTmValue as tmsFilter,
         currentTmSorter as tmsSorter,
     } from '$lib/moves/store'
+    import {
+        trainerListFilterValue,
+        trainerListSorter,
+    } from '$lib/trainers/store'
     import ErrorDialog from '$lib/design/errors/ErrorDialog.svelte'
 
     export let data: LayoutData
@@ -34,6 +38,9 @@
                     </li>
                     <li class:active={activeSection === 'tms'} class="theme-purple">
                         <a href="{base}/tms" on:click={resetStores(tmsFilter, tmsSorter)}>TMs</a>
+                    </li>
+                    <li class:active={activeSection === 'trainers'} class="theme-green">
+                        <a href="{base}/trainers" on:click={resetStores(trainerListFilterValue, trainerListSorter)}>Trainers</a>
                     </li>
                 </ul>
             </nav>

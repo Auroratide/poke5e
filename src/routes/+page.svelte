@@ -4,6 +4,7 @@
     import Disc from '$lib/design/icon/Disc.svelte'
     import { base } from '$app/paths'
     import Title from '$lib/design/Title.svelte'
+    import IdBadge from '$lib/design/icon/IdBadge.svelte'
 </script>
 
 <Title />
@@ -24,6 +25,10 @@
         <li class="theme-purple">
             <a href="{base}/tms">TMs</a>
             <span class="icon"><Disc /></span>
+        </li>
+        <li class="theme-green">
+            <a href="{base}/trainers">Trainers</a>
+            <span class="icon"><IdBadge /></span>
         </li>
     </ul>
     <section class="footer-section">
