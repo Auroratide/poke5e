@@ -1,1 +1,0 @@
-import{w as s}from"./index-723b78fe.js";const{subscribe:e,set:a,update:o}=s({hasError:!1,message:""}),h={subscribe:e,show:r=>a({hasError:!0,message:r}),hide:()=>o(r=>({...r,hasError:!1}))};export{h as e};
