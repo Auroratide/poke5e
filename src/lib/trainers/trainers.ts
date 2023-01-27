@@ -1,8 +1,9 @@
 import type { Pokemon } from '$lib/creatures/types'
 import { writable } from 'svelte/store'
-import type { TrainerData } from './data'
+import type { TrainerData, TrainerDataProviderError } from './data'
 import { provider } from './data'
 import type { LearnedMove, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from './types'
+import { error } from '$lib/design/errors/store'
 
 type AllTrainers = {
     [readKey: ReadWriteKey]: TrainerData
@@ -126,6 +127,9 @@ const createStore = () => {
                                             pokemon: pokemonList,
                                         }
                                     })
+                                }).catch((e: Error) => {
+                                    error.show(e.message)
+                                    throw e
                                 })
                             },
                         }

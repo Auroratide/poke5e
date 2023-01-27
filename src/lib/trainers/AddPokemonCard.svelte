@@ -23,6 +23,8 @@
         saving = true
         trainer.update?.addToTeam(p).then(({ id }) => {
             goto(`${base}/trainers?id=${readKey}&pokemon=${id}`)
+        }).catch(() => {
+            saving = false
         })
     }
 </script>

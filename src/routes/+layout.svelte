@@ -10,6 +10,7 @@
         filterTmValue as tmsFilter,
         currentTmSorter as tmsSorter,
     } from '$lib/moves/store'
+    import ErrorDialog from '$lib/design/errors/ErrorDialog.svelte'
 
     export let data: LayoutData
     $: activeSection = data.activeSection
@@ -46,6 +47,7 @@
             <p class="license"><small>This is unofficial Fan Content and is not approved/endorsed by &copy; Wizards of the Coast, &copy; Game Freak, or &copy; Nintendo Company Inc. Portions of the material may be property of &copy; Wizards of the Coast, &copy; Game Freak, or &copy; Nintendo Company Inc.</small></p>
         </Container>
     </footer>
+    <ErrorDialog />
 </div>
 
 <style lang="scss">

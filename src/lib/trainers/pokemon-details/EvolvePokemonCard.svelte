@@ -24,6 +24,8 @@
         trainer.update?.pokemon(e.detail).then(() => {
             saving = false
             goto(Url.trainers($trainer.info.readKey, id))
+        }).catch(() => {
+            saving = false
         })
     }
     const cancel = () => {

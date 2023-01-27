@@ -20,6 +20,17 @@ export type TrainerData = {
     writeKey?: ReadWriteKey,
 }
 
+export type ErrorDiagnostics = {
+    code?: string,
+    details?: string,
+}
+
+export class TrainerDataProviderError extends Error {
+    constructor(message: string, readonly diagnostics?: ErrorDiagnostics) {
+        super(message + (diagnostics?.code ? ` Code: ${diagnostics.code}` : ''))
+    }
+}
+
 export interface TrainerDataProvider {
     allTrainers: () => Promise<Trainer[]>
     getTrainer: (readKey: ReadWriteKey) => Promise<TrainerData | undefined>

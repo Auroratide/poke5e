@@ -21,6 +21,8 @@
         trainer.update?.info(e.detail).then(() => {
             saving = false
             editing = false
+        }).catch(() => {
+            saving = false
         })
     }
 </script>

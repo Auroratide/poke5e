@@ -23,6 +23,8 @@
         saving = true
         trainer.update?.removeFromTeam(id).then(() => {
             goto(`${base}/trainers?id=${$trainer.info.readKey}`)
+        }).catch(() => {
+            saving = false
         })
     }
 </script>

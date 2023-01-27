@@ -12,7 +12,7 @@ import {
 } from '../types'
 import type { Skill, Attribute } from '$lib/dnd/types'
 import type { Pokemon } from '$lib/creatures/types'
-import type { TrainerData, TrainerDataProvider } from '.'
+import { TrainerDataProviderError, type TrainerData, type TrainerDataProvider } from '.'
 import type { SupabaseClient } from '@supabase/supabase-js'
 
 export class SupabaseTrainerProvider implements TrainerDataProvider {
@@ -22,7 +22,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
         return Promise.all(getReadKeys().map((key) => this.supabase.rpc('get_trainer', { _read_key: key })
             .maybeSingle()
             .then(({ data, error }) => {
+                if (error) {
+                    throw new TrainerDataProviderError('Could not get trainer.', error)
+                }
+
                 if (!data) return undefined
+
                 return rowToTrainer(data)
             }))
         ).then((trainers) => trainers.filter((it) => it != null))
@@ -32,7 +37,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
         const trainer = await this.supabase.rpc('get_trainer', { _read_key: readKey })
             .maybeSingle()
             .then(({ data, error }) => {
+                if (error) {
+                    throw new TrainerDataProviderError('Could not get trainer.', error)
+                }
+
                 if (!data) return undefined
+
                 return rowToTrainer(data)
             })
         
@@ -42,7 +52,13 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
     
         const pokemon: TrainerPokemon[] = await this.supabase.rpc('get_pokemon', { _trainer_id: trainer.id })
             .select()
-            .then(({ data, error }) => data.map((it) => rowToPokemon(it)))
+            .then(({ data, error }) => {
+                if (error) {
+                    throw new TrainerDataProviderError('Could not trainer\'s pokemon.', error)
+                }
+
+                return data.map((it) => rowToPokemon(it))
+            })
             .then((pokemon) => Promise.all(pokemon.map((thePokemon) => {
                 return this.getMoveset(thePokemon.id).then((moves) => ({
                     ...thePokemon,
@@ -65,6 +81,10 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _description: info.description,
         }).single()
 
+        if (error) {
+            throw new TrainerDataProviderError('Could not create trainer.', error)
+        }
+
         addReadKey(data.ret_read_key)
         addWriteKey(data.ret_read_key, data.ret_write_key)
 
@@ -85,6 +105,14 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _name: info.name,
             _description: info.description,
         }).single()
+
+        if (data <= 0) {
+            throw new TrainerDataProviderError('Either this trainer does not exist or you do not have permission to edit them.')
+        }
+
+        if (error) {
+            throw new TrainerDataProviderError('Could not update trainer.', error)
+        }
     
         return data > 0
     }
@@ -135,6 +163,14 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _save_cha: info.savingThrows.includes('cha'),
             _ability: info.ability,
         }).single()
+
+        if (data <= 0) {
+            throw new TrainerDataProviderError('Either this pokemon does not exist or you do not have permission to edit them.')
+        }
+
+        if (error) {
+            throw new TrainerDataProviderError('Could not update pokemon.', error)
+        }
     
         return data > 0
     }
@@ -209,9 +245,9 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
         }).single()
     
         if (error) {
-            console.error(error)
+            throw new TrainerDataProviderError('Could not add pokemon.', error)
         }
-    
+
         return {
             ...trainerPokemon,
             id: data.toString()
@@ -223,6 +259,10 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _write_key: writeKey,
             _id: id,
         }).single()
+
+        if (error) {
+            throw new TrainerDataProviderError('Could not remove pokemon.', error)
+        }
 
         return data > 0
     }
@@ -236,7 +276,17 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
         await Promise.all(deletedIds.map((id) => this.supabase.rpc('remove_move', {
             _write_key: writeKey,
             _id: id,
-        }).single().then(({ data, error }) => data > 0)))
+        }).single().then(({ data, error }) => {
+            if (data <= 0) {
+                throw new TrainerDataProviderError('Either this pokemon does not exist or you do not have permission to edit them.')
+            }
+    
+            if (error) {
+                throw new TrainerDataProviderError('Could not delete move.', error)
+            }
+
+            return data > 0
+        })))
 
         return await Promise.all(newMoveset.map((move) => {
             if (existingIds.includes(move.id)) {
@@ -247,7 +297,17 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
                     _pp_cur: move.pp.current,
                     _pp_max: move.pp.max,
                     _notes: move.notes,
-                }).single().then(() => ({ ...move }))
+                }).single().then(({ data, error }) => {
+                    if (data <= 0) {
+                        throw new TrainerDataProviderError('Either this pokemon does not exist or you do not have permission to edit them.')
+                    }
+            
+                    if (error) {
+                        throw new TrainerDataProviderError('Could not update move.', error)
+                    }
+
+                    return { ...move }
+                })
             } else {
                 return this.supabase.rpc('add_move', {
                     _write_key: writeKey,
@@ -256,10 +316,16 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
                     _pp_cur: move.pp.current,
                     _pp_max: move.pp.max,
                     _notes: move.notes,
-                }).single().then(({ data }) => ({
-                    ...move,
-                    id: data,
-                }))
+                }).single().then(({ data, error }) => {
+                    if (error) {
+                        throw new TrainerDataProviderError('Could not add move.', error)
+                    }
+
+                    return {
+                        ...move,
+                        id: data,
+                    }
+                })
             }
         }))
     }
@@ -274,12 +340,24 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _notes: move.notes,
         }).single()
 
+        if (data <= 0) {
+            throw new TrainerDataProviderError('Either this pokemon does not exist or you do not have permission to edit them.')
+        }
+
+        if (error) {
+            throw new TrainerDataProviderError('Could not update pokemon.', error)
+        }
+
         return data > 0
     }
 
     private getMoveset = async (id: PokemonId): Promise<LearnedMove[]> => {
         const { data, error } = await this.supabase.rpc('get_moveset', { _pokemon_id: id })
             .select()
+
+        if (error) {
+            throw new TrainerDataProviderError('Could not get moveset.', error)
+        }
 
         return data?.map((move) => rowToMove(move)) ?? []
     }

@@ -1,11 +1,7 @@
 <script lang="ts">
     import Card from '$lib/design/Card.svelte'
-    import { pokemon } from '$lib/creatures/store'
     import Button from '$lib/design/Button.svelte'
-    import { trainers, type TrainerStore } from './trainers'
-    import { matchNameOrType } from '$lib/creatures/filter'
-    import Loader from '$lib/design/Loader.svelte'
-    import type { Pokemon } from '$lib/creatures/types'
+    import { trainers, } from './trainers'
     import { goto } from '$app/navigation'
     import { base } from '$app/paths'
     import Saveable from '$lib/design/Saveable.svelte'
@@ -24,6 +20,8 @@
             description,
         }).then(({ info }) => {
             goto(`${base}/trainers?id=${info.readKey}`)
+        }).catch(() => {
+            saving = false
         })
     }
 
@@ -50,43 +48,3 @@
         </Saveable>
     </section>
 </Card>
-
-<style>
-    .no-list {
-        list-style: none;
-        padding: 0;
-    }
-
-    .columnated {
-        column-count: 2;
-    }
-
-    .spaced-lg {
-        margin-bottom: 1em;
-    }
-
-    .spaced-sm {
-        margin-bottom: 0.25em;
-    }
-
-    .font-lg {
-        font-size: 1.5rem;
-    }
-
-    .font-sm {
-        font-size: 1rem;
-    }
-
-    .vertical {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .muted {
-        opacity: 0.75;
-    }
-
-    .center {
-        text-align: center;
-    }
-</style>
