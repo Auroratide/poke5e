@@ -45,7 +45,7 @@
         <section>
             <p>Each trainer has a unique 12-character ID. You can find it on their page, pictured below.</p>
             <figure class="spaced-lg">
-                <img src={findTrainerIdImg} alt="The label 'Trainer ID' denotes the trainer's id." />
+                <img src={findTrainerIdImg} alt="The label 'Trainer ID' denotes the trainer's id." width="800" height="256" />
                 <figcaption>Use this ID for searching</figcaption>
             </figure>
             <p>Searching by a trainer's ID can allow you to view a friend's pokemon or view your own trainer's pokemon on different devices.</p>
@@ -89,5 +89,6 @@
     
     img {
         width: 100%;
+        height: 100%;
     }
 </style>
