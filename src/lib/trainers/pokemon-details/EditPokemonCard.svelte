@@ -22,6 +22,8 @@
     const update = (e: CustomEvent<TrainerPokemon>) => {
         saving = true
         trainer.update?.pokemon(e.detail).then(() => {
+            return trainer.update?.moveset(e.detail)
+        }).then(() => {
             saving = false
             goto(Url.trainers($trainer.info.readKey, id))
         }).catch(() => {

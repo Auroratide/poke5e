@@ -12,6 +12,7 @@ type AllTrainers = {
 type TrainerUpdater = {
     info: (info: TrainerInfo) => Promise<void>
     pokemon: (info: TrainerPokemon) => Promise<void>
+    moveset: (info: TrainerPokemon) => Promise<void>
     move: (info: LearnedMove) => Promise<void>
     addToTeam: (pokemon: Pokemon) => Promise<TrainerPokemon>
     removeFromTeam: (id: string) => Promise<void>
@@ -67,14 +68,28 @@ const createStore = () => {
                             },
                             pokemon: (info: TrainerPokemon) => {
                                 return provider.updatePokemon(data.writeKey, info).then(() => {
-                                    return provider.updateMoveset(data.writeKey, info.id, info.moves)
-                                }).then((newMoves) => {
                                     storeUpdateOne(readKey, (prev) => {
                                         const pokemonList = [...prev.pokemon]
                                         const pokeIndex = pokemonList.findIndex((it) => it.id === info.id)
                                         pokemonList[pokeIndex] = {
                                             ...prev.pokemon[pokeIndex],
                                             ...info,
+                                        }
+
+                                        return {
+                                            ...prev,
+                                            pokemon: pokemonList,
+                                        }
+                                    })
+                                })
+                            },
+                            moveset: (info: TrainerPokemon) => {
+                                return provider.updateMoveset(data.writeKey, info.id, info.moves).then((newMoves) => {
+                                    storeUpdateOne(readKey, (prev) => {
+                                        const pokemonList = [...prev.pokemon]
+                                        const pokeIndex = pokemonList.findIndex((it) => it.id === info.id)
+                                        pokemonList[pokeIndex] = {
+                                            ...prev.pokemon[pokeIndex],
                                             moves: newMoves,
                                         }
     
