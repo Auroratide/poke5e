@@ -9,6 +9,7 @@
     import Button from '$lib/design/Button.svelte'
     import { Url } from '$lib/url'
     import { PageAction } from './page-action'
+    import ListHeading from '$lib/design/ListHeading.svelte'
 
     export let trainers: TrainerListStore
 
@@ -18,15 +19,10 @@
         (l: Trainer, r: Trainer) => field(l).localeCompare(field(r))
 </script>
 
-<div class="flex-row space-bottom">
-    <div class="flex-column" style:flex="1">
-        <h1 class="large-font no-space">Trainer List</h1>
-        <p class="indent small-font no-space">
-            <a href="{Url.trainers(undefined, undefined, PageAction.findTrainer)}" class="dark-font">Find by trainer ID &gt;</a>
-        </p>
-    </div>
-    <Button href="{base}/trainers?action=new-trainer">+ New Trainer</Button>
-</div>
+<ListHeading title="Trainer List">
+    <a slot="link" href="{Url.trainers(undefined, undefined, PageAction.findTrainer)}" class="dark-font">Find by trainer ID &gt;</a>
+    <Button slot="action" href="{base}/trainers?action=new-trainer">+ New Trainer</Button>
+</ListHeading>
 <div class="space-bottom">
     <SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} />
 </div>
@@ -39,34 +35,12 @@
     </BubbleRow.Row>
 </SortableTable>
 
-<style lang="scss">
-    .flex-row {
-        display: flex;
-        align-items: flex-end;
-    }
-
+<style>
     .space-bottom {
         margin-bottom: 0.5em;
     }
 
-    .large-font {
-        font-size: var(--font-sz-neptune);
-        font-weight: bold;
-    }
-
-    .small-font {
-        font-size: var(--font-sz-venus);
-    }
-
-    .indent {
-        text-indent: 1em;
-    }
-
     .dark-font {
         color: var(--skin-content-text);
-    }
-
-    .no-space {
-        margin: 0;
     }
 </style>

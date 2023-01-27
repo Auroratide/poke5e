@@ -40,6 +40,7 @@
             margin-bottom: 0.5em;
 
             h1 {
+                flex: 1;
                 font-weight: 700;
                 font-size: var(--font-sz-neptune);
             }

@@ -6,6 +6,7 @@
     import type { PokemonId, TrainerPokemon } from '../types'
     import Button from '$lib/design/Button.svelte'
     import PokemonSummary from './PokemonSummary.svelte'
+    import ListHeading from '$lib/design/ListHeading.svelte'
 
     export let trainer: TrainerStore
     export let currentPokemon: PokemonId | undefined
@@ -21,21 +22,18 @@
     $: baseTrainerUrl = `${base}/trainers?id=${$trainer.info.readKey}`
 </script>
 
-<div class="flex-row space-bottom">
-    <div class="flex-column" style:flex="1">
-        <p class="large-font no-space">{$trainer.info.name}'s Pokemon</p>
-        <p class="indent small-font no-space">
-            {#if currentPokemon}
-                <a href="{baseTrainerUrl}" class="dark-font">View trainer profile &gt;</a>
-            {:else}
-                <a href="{base}/trainers" class="dark-font">See Trainer List &gt;</a>
-            {/if}
-        </p>
-    </div>
-    <div style:visibility={editable ? 'visible' : 'hidden'}>
+<ListHeading title="{$trainer.info.name}'s Pokemon">
+    <span slot="link">
+        {#if currentPokemon}
+            <a href="{baseTrainerUrl}" class="dark-font">View trainer profile &gt;</a>
+        {:else}
+            <a href="{base}/trainers" class="dark-font">See Trainer List &gt;</a>
+        {/if}
+    </span>
+    <span slot="action" style:visibility={editable ? 'visible' : 'hidden'} style:display="flex">
         <Button href="{baseTrainerUrl}&action=add-pokemon">+ Add Pokemon</Button>
-    </div>
-</div>
+    </span>
+</ListHeading>
 <div class="space-bottom">
     <SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} />
 </div>
@@ -51,27 +49,9 @@
     </div>
 </div>
 
-<style lang="scss">
-    .flex-row {
-        display: flex;
-        align-items: flex-end;
-    }
-
+<style>
     .space-bottom {
         margin-bottom: 0.5em;
-    }
-
-    .large-font {
-        font-size: var(--font-sz-neptune);
-        font-weight: bold;
-    }
-
-    .small-font {
-        font-size: var(--font-sz-venus);
-    }
-
-    .indent {
-        text-indent: 1em;
     }
 
     .dark-font {
