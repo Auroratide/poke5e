@@ -41,7 +41,7 @@
     }
 </script>
 
-<Title value="Trainer" />
+<Title value="Trainers" />
 <Page theme="green">
     <IdBadge slot="icon" />
     <nav slot="side" class="table" aria-label="Pokemon List">
@@ -92,6 +92,8 @@
             <NewTrainerCard />
         {:else if action === PageAction.findTrainer}
             <FindTrainerCard />
+        {:else}
+            <Title value="Trainers" />
         {/if}
     {/if}
 </Page>

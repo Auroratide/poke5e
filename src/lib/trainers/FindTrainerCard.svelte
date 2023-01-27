@@ -6,6 +6,7 @@
     import { goto } from '$app/navigation'
     import { Url } from '$lib/url'
     import findTrainerIdImg from '$lib/assets/find-trainer-id.png'
+    import Title from '$lib/design/Title.svelte'
 
     let id = ''
     $: id = id.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, '')
@@ -26,6 +27,7 @@
     }
 </script>
 
+<Title value="Find Trainer by ID" />
 <Card title="Find Trainer by ID">
     <Saveable saving={searching} caption="Searching...">
         <section>

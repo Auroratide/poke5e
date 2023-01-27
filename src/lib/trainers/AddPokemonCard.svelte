@@ -4,10 +4,10 @@
     import Button from '$lib/design/Button.svelte'
     import type { TrainerStore } from './trainers'
     import { matchNameOrType } from '$lib/creatures/filter'
-    import Loader from '$lib/design/Loader.svelte'
     import type { Pokemon } from '$lib/creatures/types'
     import { goto } from '$app/navigation'
     import { base } from '$app/paths'
+    import Title from '$lib/design/Title.svelte'
 
     export let trainer: TrainerStore
     $: canAdd = trainer.update != null
@@ -29,6 +29,7 @@
     }
 </script>
 
+<Title value="Add Pokemon" />
 <Card title="Add to {$trainer.info.name}'s team">
     {#if canAdd}
         <section>

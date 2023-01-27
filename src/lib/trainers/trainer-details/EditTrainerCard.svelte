@@ -6,6 +6,7 @@
     import type { TrainerStore } from '../trainers'
     import { goto } from '$app/navigation'
     import { Url } from '$lib/url'
+    import Title from '$lib/design/Title.svelte'
 
     export let trainer: TrainerStore
 
@@ -27,6 +28,7 @@
     }
 </script>
 
+<Title value="Edit {$trainer.info.name}" />
 <Card title={$trainer.info.name}>
     {#if canEdit}
         <Editor trainer={$trainer.info} on:update={onUpdate} on:cancel={onCancel} {saving} />

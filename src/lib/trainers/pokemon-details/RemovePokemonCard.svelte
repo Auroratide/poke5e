@@ -29,7 +29,7 @@
     }
 </script>
 
-<RequirePokemon trainer={$trainer} {id}>
+<RequirePokemon trainer={$trainer} {id} titlePrefix="Remove">
     {#if species}
         <Card title="Remove {pokemon.nickname}?">
             {#if canEdit}

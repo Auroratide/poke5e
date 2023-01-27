@@ -6,10 +6,12 @@
     import type { TrainerStore } from '../trainers'
     import { Url } from '$lib/url'
     import { PageAction } from '../page-action'
+    import Title from '$lib/design/Title.svelte'
 
     export let trainer: TrainerStore
 </script>
 
+<Title value="{$trainer.info.name}" />
 <Card title={$trainer.info.name}>
     <Info trainer={$trainer.info} />
     {#if trainer.update}

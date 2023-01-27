@@ -10,6 +10,7 @@
     import { Url } from '$lib/url'
     import Evolver from './Evolver.svelte'
     import RequirePokemon from './RequirePokemon.svelte'
+    import Title from '$lib/design/Title.svelte'
 
     export let trainer: TrainerStore
     export let id: PokemonId
@@ -33,7 +34,7 @@
     }
 </script>
 
-<RequirePokemon trainer={$trainer} {id}>
+<RequirePokemon trainer={$trainer} {id} titlePrefix="Evolve">
     {#if species}
         <Card title="Evolve {pokemon.nickname}">
             {#if canEdit}

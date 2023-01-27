@@ -33,7 +33,7 @@
     }
 </script>
 
-<RequirePokemon trainer={$trainer} {id}>
+<RequirePokemon trainer={$trainer} {id} titlePrefix="Edit">
     {#if species}
         <Card title="Edit {pokemon.nickname}">
             {#if canEdit}

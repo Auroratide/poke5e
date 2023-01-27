@@ -7,6 +7,7 @@
     import Saveable from '$lib/design/Saveable.svelte'
     import ActionArea from '$lib/design/Form/ActionArea.svelte'
     import Fieldset from '$lib/design/Form/Fieldset.svelte'
+    import Title from '$lib/design/Title.svelte'
 
     let name = ''
     let description = ''
@@ -30,6 +31,7 @@
     }
 </script>
 
+<Title value="Create Trainer" />
 <Card title="Create a New Trainer">
     <section>
         <Saveable {saving}>
