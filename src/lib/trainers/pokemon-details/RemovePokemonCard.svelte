@@ -37,7 +37,9 @@
                     <section>
                         <p>Are you sure you want to remove {pokemon.nickname} from {$trainer.info.name}'s team?</p>
                         <p>Removal is permanent and cannot be undone!</p>
-                        <p class="centered"><img class="greyscale" src={species.media.main} alt="{species.name}" title="{species.name}" /></p>
+                        {#if species.media?.main}
+                            <p class="centered"><img class="greyscale" src={species.media.main} alt="{species.name}" title="{species.name}" /></p>
+                        {/if}
                         <ActionArea>
                             <Button href="{base}/trainers?id={$trainer.info.readKey}&pokemon={pokemon.id}" variant="ghost">Cancel</Button>
                             <Button on:click={remove} variant="danger">Delete</Button>
