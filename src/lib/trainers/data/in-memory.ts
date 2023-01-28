@@ -101,6 +101,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
                 max: 10,
             },
         } ],
+        notes: 'Not vulnerable to ghost-type moves.',
     }, {
         id: nextPokemonId(),
         trainerId: 'e2439894-8b10-4081-812c-0f16a773e959',
@@ -158,6 +159,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
                 max: 5,
             },
         } ],
+        notes: '',
     }, {
         id: nextPokemonId(),
         trainerId: 'e2439894-8b10-4081-812c-0f16a773e959',
@@ -215,6 +217,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
                 max: 10,
             },
         } ],
+        notes: '',
     } ]
 }, {
     writeKey: '0DHGNM55DGSU9MLA1J7D',
@@ -314,6 +317,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
                 proficiencies: pokemon.skills,
                 savingThrows: pokemon.savingThrows,
                 moves: [],
+                notes: '',
             }
 
             trainer.pokemon.push(newPokemon)

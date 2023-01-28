@@ -32,6 +32,7 @@
     let ability = pokemon.ability
     let proficiencies = pokemon.proficiencies
     let savingThrows = pokemon.savingThrows
+    let notes = pokemon.notes
 
     // keep level and maxHitDice in sync unless they were different
     const onLevelChange = (e: Event) => {
@@ -84,6 +85,7 @@
             proficiencies,
             savingThrows,
             moves,
+            notes,
         } as TrainerPokemon)
     }
 </script>
@@ -147,9 +149,28 @@
             <span></span>
             <Button on:click={addMove}>Add Move</Button>
         </Fieldset>
+        <Fieldset title="General">
+            <div class="stacked">
+                <label for="notes-input">Notes</label>
+                <textarea name="notes" id="notes-input" bind:value={notes} rows="6" class="font-sm" placeholder="Use this for any general notes not covered by the above fields..."></textarea>
+            </div>
+        </Fieldset>
         <ActionArea>
             <Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
             <Button type="submit" {disabled}>Finish!</Button>
         </ActionArea>
     </form>
 </Saveable>
+
+<style>
+    .stacked {
+        grid-column: span 2;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25em;
+    }
+
+    .font-sm {
+        font-size: var(--font-sz-venus);
+    }
+</style>

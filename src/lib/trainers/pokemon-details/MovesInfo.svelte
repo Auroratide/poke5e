@@ -26,7 +26,7 @@
 
 {#if pokemon.moves.length > 0}
     {#if $moves}
-        <h2 style:font-size="var(--font-sz-neptune)" style:margin-bottom="0.5em">Moves</h2>
+        <h2>Moves</h2>
         <ul style:list-style="none" style:padding="0">
             {#each pokemon.moves as move}
                 {@const moveData = $moves.find((it) => it.id === move.moveId)}

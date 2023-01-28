@@ -53,5 +53,10 @@
         :global(section) {
             padding: 0 1em;
         }
+
+        :global(section h2) {
+            font-size: var(--font-sz-neptune);
+            margin-bottom: 0.5em;
+        }
     }
 </style>

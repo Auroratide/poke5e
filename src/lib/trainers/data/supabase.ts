@@ -162,6 +162,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _save_wis: info.savingThrows.includes('wis'),
             _save_cha: info.savingThrows.includes('cha'),
             _ability: info.ability,
+            _notes: info.notes,
         }).single()
 
         if (data <= 0) {
@@ -197,6 +198,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             proficiencies: pokemon.skills,
             savingThrows: pokemon.savingThrows,
             moves: [],
+            notes: '',
         }
     
         const { data, error } = await this.supabase.rpc('add_pokemon', {
@@ -242,6 +244,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _save_wis: pokemon.savingThrows.includes('wis'),
             _save_cha: pokemon.savingThrows.includes('cha'),
             _ability: pokemon.abilities[0]?.id,
+            _notes: '',
         }).single()
     
         if (error) {
@@ -437,6 +440,7 @@ type PokemonRow = {
     save_wis: boolean,
     save_cha: boolean,
     ability: string,
+    notes: string,
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -499,6 +503,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
         cha: row.save_cha,
     }),
     moves: [],
+    notes: row.notes,
 })
 
 type MoveRow = {

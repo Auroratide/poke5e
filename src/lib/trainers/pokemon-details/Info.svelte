@@ -11,6 +11,7 @@
     import TypeEffectiveness from '$lib/creatures/TypeEffectiveness.svelte'
     import MovesInfo from './MovesInfo.svelte'
     import FeatsInfo from './FeatsInfo.svelte'
+    import NotesInfo from './NotesInfo.svelte'
 
     const dispatch = createEventDispatcher()
 
@@ -65,6 +66,12 @@
 <section>
     <MovesInfo {pokemon} {editable} on:update={onUpdatePp} />
 </section>
+{#if pokemon.notes?.length > 0}
+    <hr />
+    <section>
+        <NotesInfo {pokemon} />
+    </section>
+{/if}
 
 <style>
     section {

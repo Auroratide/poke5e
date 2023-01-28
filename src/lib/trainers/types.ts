@@ -70,6 +70,7 @@ export type TrainerPokemon = {
     proficiencies: Skill[],
     savingThrows: Attribute[],
     moves: LearnedMove[],
+    notes: string,
 }
 
 export type WithPokemonData = {
