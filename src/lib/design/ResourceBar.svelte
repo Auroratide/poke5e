@@ -6,16 +6,16 @@
     export let secondary: boolean = false
 
     $: percentage = Math.max(100 * current / max, 0)
+    $: status = percentage >= 50 ? 'healthy' : percentage >= 20 ? 'warning' : 'danger'
 </script>
 
-<meter class:secondary max="{max}" value="{current}">
+<meter class:secondary class="{status}" max="{max}" value="{current}">
     <div class="fill" style:width="{percentage}%"></div>
     <VisuallyHidden>{current} / {max}</VisuallyHidden>
 </meter>
 
-<style lang="scss">
+<style>
     meter {
-        --skin-local-fill: var(--skin-bar-fill);
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
@@ -25,19 +25,31 @@
         width: 100%;
         height: 0.5em;
         overflow: hidden;
+    }
 
-        &::-moz-meter-bar, &::-webkit-meter-bar {
-            background: none;
-            background-color: var(--skin-local-fill);
-        }
+    .healthy {
+        --skin-local-fill: var(--skin-bar-healthy);
+    }
 
-        .fill {
-            height: 0.5em;
-            background-color: var(--skin-local-fill);
-        }
+    .warning {
+        --skin-local-fill: var(--skin-bar-warning);
+    }
 
-        &.secondary {
-            --skin-local-fill: var(--skin-bar-secondary);
-        }
+    .danger {
+        --skin-local-fill: var(--skin-bar-danger);
+    }
+
+    meter::-moz-meter-bar, meter::-webkit-meter-bar {
+        background: none;
+        background-color: var(--skin-local-fill);
+    }
+
+    .fill {
+        height: 0.5em;
+        background-color: var(--skin-local-fill);
+    }
+
+    meter.secondary {
+        --skin-local-fill: var(--skin-bar-secondary);
     }
 </style>
