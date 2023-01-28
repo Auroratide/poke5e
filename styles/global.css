@@ -67,8 +67,10 @@
     --skin-gender-text: hsl(0, 0%, 100%);
 
     --skin-bar-bg: hsl(330, 1%, 38%);
-    --skin-bar-fill: hsl(119, 100%, 52%);
+    --skin-bar-healthy: hsl(119, 100%, 52%);
     --skin-bar-secondary: hsl(197, 91%, 64%);
+    --skin-bar-warning: hsl(45, 83%, 49%);
+    --skin-bar-danger: hsl(355, 72%, 53%);
 
     --skin-contest-cool: hsla(25, 86%, 72%, 0.5);
     --skin-contest-beauty: hsla(222, 81%, 79%, 0.5);
