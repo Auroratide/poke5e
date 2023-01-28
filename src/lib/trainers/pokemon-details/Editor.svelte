@@ -26,11 +26,21 @@
     let level = pokemon.level
     let ac = pokemon.ac
     let maxHp = pokemon.hp.max
+    let maxHitDice = pokemon.hitDice.max
     let gender = pokemon.gender
     let attributes = { ...pokemon.attributes }
     let ability = pokemon.ability
     let proficiencies = pokemon.proficiencies
     let savingThrows = pokemon.savingThrows
+
+    // keep level and maxHitDice in sync unless they were different
+    const onLevelChange = (e: Event) => {
+        const target = e.target as HTMLInputElement
+        if (level === maxHitDice) {
+            maxHitDice = parseInt(target.value)
+        }
+        level = parseInt(target.value)
+    }
 
     let newMoveId = -1001
     const nextNewMoveId = () => (--newMoveId).toString()
@@ -66,7 +76,7 @@
             },
             hitDice: {
                 current: pokemon.hitDice.current,
-                max: pokemon.level,
+                max: maxHitDice,
             },
             gender,
             attributes,
@@ -85,11 +95,13 @@
             <input name="name" id="nickname-input" type="text" bind:value={nickname} {disabled} />
             <NatureInput id="nature-input" bind:value={nature} bind:custom={natureCustom} {disabled} />
             <label for="level-input">Level</label>
-            <input name="level" id="level-input" type="number" min="1" max="20" bind:value={level} {disabled} />
+            <input name="level" id="level-input" type="number" min="1" max="20" value={level} on:change={onLevelChange} {disabled} />
             <label for="ac-input">AC</label>
             <input name="ac" id="ac-input" min="0" max="30" type="number" bind:value={ac} {disabled} />
             <label for="max-hp-input">Max HP</label>
             <input name="max-hp" id="max-hp-input" min="1" type="number" bind:value={maxHp} {disabled} />
+            <label for="max-hit-dice-input">Max Hit Dice</label>
+            <input name="max-hit-dice" id="max-hit-dice-input" min="1" type="number" bind:value={maxHitDice} {disabled} />
         </Fieldset>
         <Fieldset title="Gender" columns={4}>
             <input value={Gender.Male} type="radio" id="gender-input-male" name="gender" bind:group={gender} {disabled} />
