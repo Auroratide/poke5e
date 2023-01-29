@@ -28,6 +28,7 @@ jobs:
 
   test:
     name: Test
+    needs: deploy
     runs-on: ubuntu-latest
     env:
       ENV: prod
