@@ -106,13 +106,33 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _description: info.description,
         }).single()
 
+        if (error) {
+            throw new TrainerDataProviderError('Could not update trainer.', error)
+        }
+
         if (data <= 0) {
             throw new TrainerDataProviderError('Either this trainer does not exist or you do not have permission to edit them.')
         }
 
+        return data > 0
+    }
+
+    removeTrainer = async (writeKey: ReadWriteKey, id: TrainerId, readKey: ReadWriteKey): Promise<boolean> => {
+        const { data, error } = await this.supabase.rpc('delete_trainer', {
+            _write_key: writeKey,
+            _id: id,
+        }).single()
+
         if (error) {
-            throw new TrainerDataProviderError('Could not update trainer.', error)
+            throw new TrainerDataProviderError('Could not delete trainer.', error)
         }
+
+        if (data <= 0) {
+            throw new TrainerDataProviderError('Either this trainer does not exist or you do not have permission to edit them.')
+        }
+
+        removeWriteKey(readKey)
+        removeReadKey(readKey)
     
         return data > 0
     }
@@ -165,12 +185,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _notes: info.notes,
         }).single()
 
-        if (data <= 0) {
-            throw new TrainerDataProviderError('Either this pokemon does not exist or you do not have permission to edit them.')
-        }
-
         if (error) {
             throw new TrainerDataProviderError('Could not update pokemon.', error)
+        }
+
+        if (data <= 0) {
+            throw new TrainerDataProviderError('Either this pokemon does not exist or you do not have permission to edit them.')
         }
     
         return data > 0
@@ -280,12 +300,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _write_key: writeKey,
             _id: id,
         }).single().then(({ data, error }) => {
-            if (data <= 0) {
-                throw new TrainerDataProviderError('Either this pokemon does not exist or you do not have permission to edit them.')
-            }
-    
             if (error) {
                 throw new TrainerDataProviderError('Could not delete move.', error)
+            }
+            
+            if (data <= 0) {
+                throw new TrainerDataProviderError('Either this pokemon does not exist or you do not have permission to edit them.')
             }
 
             return data > 0
@@ -301,12 +321,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
                     _pp_max: move.pp.max,
                     _notes: move.notes,
                 }).single().then(({ data, error }) => {
-                    if (data <= 0) {
-                        throw new TrainerDataProviderError('Either this pokemon does not exist or you do not have permission to edit them.')
-                    }
-            
                     if (error) {
                         throw new TrainerDataProviderError('Could not update move.', error)
+                    }
+
+                    if (data <= 0) {
+                        throw new TrainerDataProviderError('Either this pokemon does not exist or you do not have permission to edit them.')
                     }
 
                     return { ...move }
@@ -343,12 +363,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _notes: move.notes,
         }).single()
 
-        if (data <= 0) {
-            throw new TrainerDataProviderError('Either this pokemon does not exist or you do not have permission to edit them.')
-        }
-
         if (error) {
             throw new TrainerDataProviderError('Could not update pokemon.', error)
+        }
+
+        if (data <= 0) {
+            throw new TrainerDataProviderError('Either this pokemon does not exist or you do not have permission to edit them.')
         }
 
         return data > 0
@@ -375,11 +395,21 @@ export const addReadKey = (key: ReadWriteKey) => {
     localStorage.setItem('trainers', newList.join(','))
 }
 
+export const removeReadKey = (key: ReadWriteKey) => {
+    const previous = getReadKeys()
+    const newList = previous.filter((it) => it !== key)
+    localStorage.setItem('trainers', newList.join(','))
+}
+
 export const getWriteKey = (readKey: ReadWriteKey): ReadWriteKey | undefined =>
     localStorage.getItem(`write:${readKey}`)
 
 export const addWriteKey = (readKey: ReadWriteKey, writeKey: ReadWriteKey) => {
     localStorage.setItem(`write:${readKey}`, writeKey)
+}
+
+export const removeWriteKey = (readKey: ReadWriteKey) => {
+    localStorage.removeItem(`write:${readKey}`)
 }
 
 type TrainerRow = {

@@ -35,6 +35,7 @@ export interface TrainerDataProvider {
     allTrainers: () => Promise<Trainer[]>
     getTrainer: (readKey: ReadWriteKey) => Promise<TrainerData | undefined>
     newTrainer: (info: TrainerInfo) => Promise<TrainerData & WithWriteKey>
+    removeTrainer: (writeKey: ReadWriteKey, id: TrainerId, readKey: ReadWriteKey) => Promise<boolean>
     updateTrainerInfo: (writeKey: ReadWriteKey, info: TrainerInfo) => Promise<boolean>
     updatePokemon: (writeKey: ReadWriteKey, info: TrainerPokemon) => Promise<boolean>
     addPokemonToTeam: (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: Pokemon) => Promise<TrainerPokemon>

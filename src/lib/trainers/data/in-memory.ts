@@ -257,6 +257,14 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
         }
     }
 
+    removeTrainer = async (writeKey: ReadWriteKey, id: TrainerId): Promise<boolean> => {
+        if (!writeKey) return false
+
+        this.entries = this.entries.filter((it) => it.info.id !== id)
+
+        return true
+    }
+
     updateTrainerInfo = async (writeKey: ReadWriteKey, info: TrainerInfo): Promise<boolean> => {
         if (!writeKey) return false
         

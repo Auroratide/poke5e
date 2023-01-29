@@ -15,6 +15,7 @@ type UpdaterOptions = {
 
 type TrainerUpdater = {
     info: (info: TrainerInfo) => Promise<void>
+    retire: () => Promise<void>
     pokemon: (info: TrainerPokemon, options?: UpdaterOptions) => Promise<void>
     moveset: (info: TrainerPokemon) => Promise<void>
     move: (info: LearnedMove, options?: UpdaterOptions) => Promise<void>
@@ -68,6 +69,20 @@ const createStore = () => {
                                             ...info,
                                         },
                                     }))
+                                }).catch((e: Error) => {
+                                    error.show(e.message)
+                                    throw e
+                                })
+                            },
+                            retire: () => {
+                                return provider.removeTrainer(data.writeKey, data.info.id, data.info.readKey).then(() => {
+                                    storeUpdate((prev) => {
+                                        const { [data.info.readKey]: _, ...rest } = prev
+                                        return rest
+                                    })
+                                }).catch((e: Error) => {
+                                    error.show(e.message)
+                                    throw e
                                 })
                             },
                             pokemon: (info: TrainerPokemon, options: UpdaterOptions = {}) => {
@@ -92,11 +107,15 @@ const createStore = () => {
 
                                     return provider.updatePokemon(data.writeKey, info).then(() => {}).catch((e) => {
                                         updateStore(original)
+                                        error.show(e.message)
                                         throw e
                                     })
                                 } else {
                                     return provider.updatePokemon(data.writeKey, info).then(() => {
                                         updateStore(info)
+                                    }).catch((e: Error) => {
+                                        error.show(e.message)
+                                        throw e
                                     })
                                 }
                             },
@@ -115,6 +134,9 @@ const createStore = () => {
                                             pokemon: pokemonList,
                                         }
                                     })
+                                }).catch((e: Error) => {
+                                    error.show(e.message)
+                                    throw e
                                 })
                             },
                             move: (info: LearnedMove, options: UpdaterOptions = {}) => {
@@ -142,11 +164,15 @@ const createStore = () => {
 
                                     return provider.updateOneMove(data.writeKey, info).then(() => {}).catch((e) => {
                                         updateStore(original)
+                                        error.show(e.message)
                                         throw e
                                     })
                                 } else {
                                     return provider.updateOneMove(data.writeKey, info).then(() => {
                                         updateStore(info)
+                                    }).catch((e: Error) => {
+                                        error.show(e.message)
+                                        throw e
                                     })
                                 }
                             },
@@ -162,6 +188,9 @@ const createStore = () => {
                                     })
 
                                     return result
+                                }).catch((e: Error) => {
+                                    error.show(e.message)
+                                    throw e
                                 })
                             },
                             removeFromTeam: (id: string) => {
