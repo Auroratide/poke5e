@@ -1,6 +1,12 @@
 import type { PokeType, PokeEvolution, Ability } from '../pokemon/types'
 import type { Attribute, CreatureSize, HitDice, Skill } from '../dnd/types'
 
+export type PokemonMedia = {
+    main?: string,
+    sprite?: string,
+    attribution?: string,
+}
+
 export type Pokemon = {
     id: string,
     name: string,
@@ -46,8 +52,5 @@ export type Pokemon = {
         egg?: string[],
         tm?: number[],
     },
-    media: {
-        main?: string,
-        sprite?: string,
-    },
+    media: PokemonMedia,
 }

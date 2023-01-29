@@ -10,6 +10,7 @@
     import Saveable from '$lib/design/Saveable.svelte'
     import { goto } from '$app/navigation'
     import RequirePokemon from './RequirePokemon.svelte'
+    import PokemonArt from '$lib/creatures/PokemonArt.svelte'
 
     export let trainer: TrainerStore
     export let id: PokemonId
@@ -38,7 +39,9 @@
                         <p>Are you sure you want to remove {pokemon.nickname} from {$trainer.info.name}'s team?</p>
                         <p>Removal is permanent and cannot be undone!</p>
                         {#if species.media?.main}
-                            <p class="centered"><img class="greyscale" src={species.media.main} alt="{species.name}" title="{species.name}" /></p>
+                            <p class="centered greyscale">
+                                <PokemonArt media={species.media} alt={species.name} />
+                            </p>
                         {/if}
                         <ActionArea>
                             <Button href="{base}/trainers?id={$trainer.info.readKey}&pokemon={pokemon.id}" variant="ghost">Cancel</Button>
@@ -63,11 +66,8 @@
 <style>
     .centered {
         text-align: center;
-    }
-
-    img {
-        display: inline-block;
         max-width: 10rem;
+        margin: auto;
     }
 
     .greyscale {

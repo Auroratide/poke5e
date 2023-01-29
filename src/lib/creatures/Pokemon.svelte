@@ -9,6 +9,7 @@
     import TypeEffectiveness from './TypeEffectiveness.svelte'
     import * as asString from './string'
     import EvolutionSection from './EvolutionSection.svelte'
+    import PokemonArt from './PokemonArt.svelte'
 
     export let pokemon: Pokemon
 
@@ -33,9 +34,7 @@
                 <dt>Gender</dt>
                 <dd class="cap">{asString.gender(pokemon.gender)}</dd>
             </FlatDl>
-            {#if hasImage}
-                <img src={pokemon.media.main} alt="" />
-            {/if}
+            <PokemonArt media={pokemon.media} alt="" />
         </div>
         <p>{pokemon.description}</p>
     </section>
@@ -140,11 +139,5 @@
     .info .row {
         display: grid;
         grid-template-columns: 3fr 1fr;
-    }
-
-    img {
-        width: 100%;
-        display: block;
-        margin: 0;
     }
 </style>

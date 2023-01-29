@@ -4,16 +4,16 @@
     import ResourceBar from '$lib/design/ResourceBar.svelte'
     import { Url } from '$lib/url'
     import { pokemon as allPokemon } from '$lib/creatures/store'
+    import PokemonSprite from '$lib/creatures/PokemonSprite.svelte'
 
     export let trainer: ReadWriteKey
     export let pokemon: TrainerPokemon
 
     $: species = $allPokemon?.find((it) => it.id === pokemon.pokemonId)
-    $: sprite = species?.media?.sprite
 </script>
 
 <a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded">
-    <span style:grid-area="sprite" class="max-height">{#if sprite}<img src={sprite} alt="{species?.name}" />{/if}</span>
+    <span style:grid-area="sprite" class="max-height"><PokemonSprite media={species?.media} alt={species?.name} /></span>
     <span style:grid-area="name">{pokemon.nickname}</span>
     <span style:grid-area="gender" class="right away-from-edge flex"><GenderIcon gender={pokemon.gender} /></span>
     <span style:grid-area="hpbar" class="away-from-edge"><ResourceBar current={pokemon.hp.current} max={pokemon.hp.max} /></span>
@@ -47,11 +47,6 @@
 
     .max-height {
         max-height: 3em;
-    }
-
-    .max-height img {
-        display: block;
-        height: 100%;
     }
 
     .selectable-bubble {

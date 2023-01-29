@@ -12,6 +12,7 @@
     import MovesInfo from './MovesInfo.svelte'
     import FeatsInfo from './FeatsInfo.svelte'
     import NotesInfo from './NotesInfo.svelte'
+    import PokemonArt from '$lib/creatures/PokemonArt.svelte'
 
     const dispatch = createEventDispatcher()
 
@@ -50,7 +51,7 @@
     </div>
     {#if hasImage}
         <div style:--size="clamp(8rem, 12.66vw, 9.5rem)" class="square-image">
-            <img src={species.media.main} alt="" />
+            <PokemonArt media={species.media} alt="" />
         </div>
     {/if}
 </section>
@@ -96,11 +97,5 @@
         width: var(--size);
         height: var(--size);
         padding: 0.5rem 0 0.5rem 1rem;
-    }
-
-    img {
-        width: 100%;
-        display: block;
-        margin: 0;
     }
 </style>
