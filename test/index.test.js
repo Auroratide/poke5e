@@ -1,10 +1,13 @@
 import { openBrowser, closeBrowser } from 'taiko'
 import { test as trainerJourney } from './trainers.journey.js'
 import { exit } from 'process'
+import { observe } from './config.js'
 
 async function run() {
     let numberFailed = 0
-    await openBrowser()
+    await openBrowser({
+        headless: !observe,
+    })
 
     await trainerJourney().catch((e) => {
         console.error(e)
