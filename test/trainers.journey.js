@@ -51,16 +51,22 @@ const createTrainer = async (name) => {
     await click(link('New Trainer'))
     await write(name, into(textBox('Name')))
     await click('Finish!')
+    await doneSaving()
 }
 
 const addPokemon = async (species) => {
+    console.log(`  Adding ${species}...`)
+
     const searchQuery = species.toLocaleLowerCase().substring(0, 4)
     await click(link('Add Pokemon'))
     await write(searchQuery, into(textBox('Species')))
     await click(species)
+    await doneSaving()
 }
 
 const editPokemon = async (nickname) => {
+    console.log(`  Editing ${nickname}...`)
+
     await click('Edit')
     await clear(textBox('Nickname'))
     await write(nickname)
@@ -69,6 +75,7 @@ const editPokemon = async (nickname) => {
 
     await addMove('ember')
     await click('Finish!')
+    await doneSaving()
 }
 
 const addMove = async (move) => {
@@ -77,12 +84,22 @@ const addMove = async (move) => {
 }
 
 const evolvePokemon = async (choice) => {
+    console.log(`  Evolving into ${choice}...`)
+
     await click('Evolve')
     await click(radioButton(choice))
     await click('Evolve!')
+    await doneSaving()
 }
 
 const removePokemon = async () => {
+    console.log(`  Removing pokemon...`)
+
     await click('Remove')
     await click('Delete')
+    await doneSaving()
+}
+
+const doneSaving = async () => {
+    await waitFor(async () => !(await text('Saving...').exists(0, 0)))
 }
