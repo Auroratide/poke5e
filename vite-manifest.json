@@ -7,33 +7,29 @@
     "file": "_app/immutable/assets/_layout-42cff5c5.css",
     "src": "src/routes/+layout.css"
   },
-  "_layout.css": {
-    "file": "_app/immutable/assets/_layout-7347eafe.css",
-    "src": "_layout.css"
-  },
-  "src/routes/+error.css": {
-    "file": "_app/immutable/assets/_error-9e7091b2.css",
-    "src": "src/routes/+error.css"
-  },
-  "MissingNo.css": {
-    "file": "_app/immutable/assets/MissingNo-f6000a17.css",
-    "src": "MissingNo.css"
-  },
-  "src/routes/tms/[id]/+page.css": {
-    "file": "_app/immutable/assets/_page-5a95889c.css",
-    "src": "src/routes/tms/[id]/+page.css"
+  "string.css": {
+    "file": "_app/immutable/assets/string-53d08c0c.css",
+    "src": "string.css"
   },
   "Loader.css": {
     "file": "_app/immutable/assets/Loader-931f4675.css",
     "src": "Loader.css"
   },
-  "PokeMove.css": {
-    "file": "_app/immutable/assets/PokeMove-1413d279.css",
-    "src": "PokeMove.css"
+  "_layout.css": {
+    "file": "_app/immutable/assets/_layout-7347eafe.css",
+    "src": "_layout.css"
   },
   "TypeTag.css": {
     "file": "_app/immutable/assets/TypeTag-ba2bf374.css",
     "src": "TypeTag.css"
+  },
+  "src/routes/+error.css": {
+    "file": "_app/immutable/assets/_error-9e7091b2.css",
+    "src": "src/routes/+error.css"
+  },
+  "src/routes/pokemon/[id]/+page.css": {
+    "file": "_app/immutable/assets/_page-23672260.css",
+    "src": "src/routes/pokemon/[id]/+page.css"
   },
   "IdBadge.css": {
     "file": "_app/immutable/assets/Pokeball-92bff52b.css",
@@ -47,86 +43,34 @@
     "file": "_app/immutable/assets/Disc-6f138303.css",
     "src": "Disc.css"
   },
+  "src/routes/tms/[id]/+page.css": {
+    "file": "_app/immutable/assets/_page-5a95889c.css",
+    "src": "src/routes/tms/[id]/+page.css"
+  },
+  "MissingNo.css": {
+    "file": "_app/immutable/assets/MissingNo-f6000a17.css",
+    "src": "MissingNo.css"
+  },
+  "PokeMove.css": {
+    "file": "_app/immutable/assets/PokeMove-1413d279.css",
+    "src": "PokeMove.css"
+  },
   "src/routes/+page.css": {
     "file": "_app/immutable/assets/_page-efac4ea3.css",
     "src": "src/routes/+page.css"
-  },
-  "src/routes/pokemon/[id]/+page.css": {
-    "file": "_app/immutable/assets/_page-23672260.css",
-    "src": "src/routes/pokemon/[id]/+page.css"
-  },
-  "string.css": {
-    "file": "_app/immutable/assets/string-53d08c0c.css",
-    "src": "string.css"
   },
   "src/routes/trainers/+page.css": {
     "file": "_app/immutable/assets/_page-be267973.css",
     "src": "src/routes/trainers/+page.css"
   },
-  ".svelte-kit/generated/nodes/4.js": {
-    "file": "_app/immutable/chunks/4-d1a900fa.js",
-    "src": ".svelte-kit/generated/nodes/4.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "__page-0107073f.js",
-      "src/routes/moves/[id]/+page.svelte"
-    ]
+  "_shared-23917130.js": {
+    "file": "_app/immutable/chunks/shared-23917130.js"
   },
-  ".svelte-kit/generated/nodes/2.js": {
-    "file": "_app/immutable/chunks/2-dfa9431c.js",
-    "src": ".svelte-kit/generated/nodes/2.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/+page.svelte"
-    ]
+  "__layout-e169dcd7.js": {
+    "file": "_app/immutable/chunks/_layout-e169dcd7.js"
   },
-  ".svelte-kit/generated/nodes/3.js": {
-    "file": "_app/immutable/chunks/3-90d4c37c.js",
-    "src": ".svelte-kit/generated/nodes/3.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "__page-9fbe707b.js",
-      "src/routes/moves/+page.svelte"
-    ]
-  },
-  "__page-0107073f.js": {
-    "file": "_app/immutable/chunks/_page-0107073f.js",
-    "imports": [
-      "_index-2f9fe195.js",
-      "_shared-23917130.js"
-    ]
-  },
-  "_index-2f9fe195.js": {
-    "file": "_app/immutable/chunks/index-2f9fe195.js",
-    "imports": [
-      "_control-e7f5239e.js"
-    ]
-  },
-  "src/routes/pokemon/+page.svelte": {
-    "file": "_app/immutable/components/pages/pokemon/_page.svelte-f66ece14.js",
-    "src": "src/routes/pokemon/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-072da995.js",
-      "__layout-4738fe4a.js",
-      "_Title-51a6e3fa.js"
-    ]
-  },
-  "_filter-f04b55bd.js": {
-    "file": "_app/immutable/chunks/filter-f04b55bd.js"
-  },
-  "__page-6b69af6d.js": {
-    "file": "_app/immutable/chunks/_page-6b69af6d.js",
-    "imports": [
-      "_shared-23917130.js"
-    ]
-  },
-  "_singletons-54da248b.js": {
-    "file": "_app/immutable/chunks/singletons-54da248b.js",
-    "imports": [
-      "_index-723b78fe.js",
-      "_shared-23917130.js"
-    ]
+  "_control-e7f5239e.js": {
+    "file": "_app/immutable/chunks/control-e7f5239e.js"
   },
   "_store-019afe61.js": {
     "file": "_app/immutable/chunks/store-019afe61.js",
@@ -135,55 +79,11 @@
       "_shared-23917130.js"
     ]
   },
-  "src/routes/moves/[id]/+page.svelte": {
-    "file": "_app/immutable/components/pages/moves/_id_/_page.svelte-afd9e6c3.js",
-    "src": "src/routes/moves/[id]/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-072da995.js",
-      "__layout-dd451de0.js",
-      "_PokeMove-d07233e7.js",
-      "_Title-51a6e3fa.js"
-    ]
-  },
-  ".svelte-kit/generated/nodes/1.js": {
-    "file": "_app/immutable/chunks/1-2d0765ee.js",
-    "src": ".svelte-kit/generated/nodes/1.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/+error.svelte"
-    ]
-  },
-  "_string-6e6291ef.js": {
-    "file": "_app/immutable/chunks/string-6e6291ef.js",
-    "imports": [
-      "_index-072da995.js"
-    ],
-    "css": [
-      "_app/immutable/assets/string-53d08c0c.css"
-    ]
-  },
-  "_shared-23917130.js": {
-    "file": "_app/immutable/chunks/shared-23917130.js"
-  },
   "_store-06454cff.js": {
     "file": "_app/immutable/chunks/store-06454cff.js",
     "imports": [
       "_index-723b78fe.js"
     ]
-  },
-  "src/routes/pokemon/[id]/+page.ts": {
-    "file": "_app/immutable/modules/pages/pokemon/_id_/_page.ts-0b92f25e.js",
-    "src": "src/routes/pokemon/[id]/+page.ts",
-    "isEntry": true,
-    "imports": [
-      "_index-2f9fe195.js",
-      "_shared-23917130.js",
-      "__page-afc94725.js"
-    ]
-  },
-  "_control-e7f5239e.js": {
-    "file": "_app/immutable/chunks/control-e7f5239e.js"
   },
   "_index-723b78fe.js": {
     "file": "_app/immutable/chunks/index-723b78fe.js",
@@ -201,281 +101,10 @@
       "_shared-23917130.js"
     ]
   },
-  "src/routes/tms/+page.ts": {
-    "file": "_app/immutable/modules/pages/tms/_page.ts-1b08e624.js",
-    "src": "src/routes/tms/+page.ts",
-    "isEntry": true,
+  "_singletons-54da248b.js": {
+    "file": "_app/immutable/chunks/singletons-54da248b.js",
     "imports": [
-      "_shared-23917130.js",
-      "__page-1109c1be.js"
-    ]
-  },
-  "src/routes/tms/[id]/+page.ts": {
-    "file": "_app/immutable/modules/pages/tms/_id_/_page.ts-2b7b1986.js",
-    "src": "src/routes/tms/[id]/+page.ts",
-    "isEntry": true,
-    "imports": [
-      "_index-2f9fe195.js",
-      "_shared-23917130.js",
-      "__page-2587a511.js"
-    ]
-  },
-  "_Hit-bf108d10.js": {
-    "file": "_app/immutable/chunks/Hit-bf108d10.js",
-    "imports": [
-      "_index-072da995.js"
-    ],
-    "css": [
-      "_app/immutable/assets/Hit-2d3f7d4a.css"
-    ]
-  },
-  "src/routes/+layout.svelte": {
-    "file": "_app/immutable/components/pages/_layout.svelte-9b97932e.js",
-    "src": "src/routes/+layout.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-072da995.js",
-      "_shared-23917130.js",
-      "_store-e5b6fee9.js",
-      "_store-019afe61.js",
-      "_store-06454cff.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_layout-42cff5c5.css"
-    ]
-  },
-  "__layout-dd451de0.js": {
-    "file": "_app/immutable/chunks/_layout-dd451de0.js",
-    "imports": [
-      "_index-072da995.js",
-      "_Loader-4aa6e5d8.js",
-      "_shared-23917130.js",
-      "_string-574587ae.js",
-      "_filter-17340034.js",
-      "_store-019afe61.js",
-      "_Hit-bf108d10.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_layout-7347eafe.css"
-    ]
-  },
-  "src/routes/+error.svelte": {
-    "file": "_app/immutable/components/pages/_error.svelte-1ea3fac7.js",
-    "src": "src/routes/+error.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-072da995.js",
-      "_MissingNo-b2b28f1d.js",
-      "_shared-23917130.js",
-      "_Title-51a6e3fa.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_error-9e7091b2.css"
-    ]
-  },
-  "_MissingNo-b2b28f1d.js": {
-    "file": "_app/immutable/chunks/MissingNo-b2b28f1d.js",
-    "imports": [
-      "_index-072da995.js",
-      "_singletons-54da248b.js",
-      "_shared-23917130.js"
-    ],
-    "css": [
-      "_app/immutable/assets/MissingNo-f6000a17.css"
-    ]
-  },
-  "src/routes/tms/[id]/+page.svelte": {
-    "file": "_app/immutable/components/pages/tms/_id_/_page.svelte-87f65867.js",
-    "src": "src/routes/tms/[id]/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-072da995.js",
-      "__layout-e71dcc31.js",
-      "_PokeMove-d07233e7.js",
-      "_Title-51a6e3fa.js",
-      "_shared-23917130.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page-5a95889c.css"
-    ]
-  },
-  "__layout-e71dcc31.js": {
-    "file": "_app/immutable/chunks/_layout-e71dcc31.js",
-    "imports": [
-      "_index-072da995.js",
-      "_Loader-4aa6e5d8.js",
-      "_shared-23917130.js",
-      "_filter-17340034.js",
-      "_store-019afe61.js",
-      "_Disc-873d129d.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_layout-7347eafe.css"
-    ]
-  },
-  "_Title-51a6e3fa.js": {
-    "file": "_app/immutable/chunks/Title-51a6e3fa.js",
-    "imports": [
-      "_index-072da995.js"
-    ]
-  },
-  "__layout-4738fe4a.js": {
-    "file": "_app/immutable/chunks/_layout-4738fe4a.js",
-    "imports": [
-      "_index-072da995.js",
-      "_Loader-4aa6e5d8.js",
-      "_shared-23917130.js",
-      "_filter-f04b55bd.js",
-      "_store-e5b6fee9.js",
-      "_Pokeball-5d4f5443.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_layout-7347eafe.css"
-    ]
-  },
-  "src/routes/moves/+page.svelte": {
-    "file": "_app/immutable/components/pages/moves/_page.svelte-82d82a28.js",
-    "src": "src/routes/moves/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-072da995.js",
-      "__layout-dd451de0.js",
-      "_Title-51a6e3fa.js"
-    ]
-  },
-  "_string-574587ae.js": {
-    "file": "_app/immutable/chunks/string-574587ae.js"
-  },
-  ".svelte-kit/generated/nodes/6.js": {
-    "file": "_app/immutable/chunks/6-332e1ee4.js",
-    "src": ".svelte-kit/generated/nodes/6.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "__page-afc94725.js",
-      "src/routes/pokemon/[id]/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/5.js": {
-    "file": "_app/immutable/chunks/5-42717e17.js",
-    "src": ".svelte-kit/generated/nodes/5.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "__page-6b69af6d.js",
-      "src/routes/pokemon/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/8.js": {
-    "file": "_app/immutable/chunks/8-e5efac4b.js",
-    "src": ".svelte-kit/generated/nodes/8.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "__page-2587a511.js",
-      "src/routes/tms/[id]/+page.svelte"
-    ]
-  },
-  ".svelte-kit/generated/nodes/7.js": {
-    "file": "_app/immutable/chunks/7-ec74c8d3.js",
-    "src": ".svelte-kit/generated/nodes/7.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "__page-1109c1be.js",
-      "src/routes/tms/+page.svelte"
-    ]
-  },
-  "src/routes/+layout.ts": {
-    "file": "_app/immutable/modules/pages/_layout.ts-b803f5af.js",
-    "src": "src/routes/+layout.ts",
-    "isEntry": true,
-    "imports": [
-      "__layout-e169dcd7.js"
-    ]
-  },
-  ".svelte-kit/generated/nodes/9.js": {
-    "file": "_app/immutable/chunks/9-50ddad18.js",
-    "src": ".svelte-kit/generated/nodes/9.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "src/routes/trainers/+page.svelte"
-    ]
-  },
-  "src/routes/moves/[id]/+page.ts": {
-    "file": "_app/immutable/modules/pages/moves/_id_/_page.ts-6fd9e2fb.js",
-    "src": "src/routes/moves/[id]/+page.ts",
-    "isEntry": true,
-    "imports": [
-      "_index-2f9fe195.js",
-      "_shared-23917130.js",
-      "__page-0107073f.js"
-    ]
-  },
-  "src/routes/moves/+page.ts": {
-    "file": "_app/immutable/modules/pages/moves/_page.ts-2f9132e5.js",
-    "src": "src/routes/moves/+page.ts",
-    "isEntry": true,
-    "imports": [
-      "_shared-23917130.js",
-      "__page-9fbe707b.js"
-    ]
-  },
-  "_Pokeball-5d4f5443.js": {
-    "file": "_app/immutable/chunks/Pokeball-5d4f5443.js",
-    "imports": [
-      "_index-072da995.js"
-    ],
-    "css": [
-      "_app/immutable/assets/Pokeball-92bff52b.css"
-    ]
-  },
-  "src/routes/pokemon/+page.ts": {
-    "file": "_app/immutable/modules/pages/pokemon/_page.ts-823154e1.js",
-    "src": "src/routes/pokemon/+page.ts",
-    "isEntry": true,
-    "imports": [
-      "_shared-23917130.js",
-      "__page-6b69af6d.js"
-    ]
-  },
-  "_index-072da995.js": {
-    "file": "_app/immutable/chunks/index-072da995.js"
-  },
-  ".svelte-kit/generated/nodes/0.js": {
-    "file": "_app/immutable/chunks/0-23438290.js",
-    "src": ".svelte-kit/generated/nodes/0.js",
-    "isDynamicEntry": true,
-    "imports": [
-      "__layout-e169dcd7.js",
-      "src/routes/+layout.svelte"
-    ]
-  },
-  "__page-2587a511.js": {
-    "file": "_app/immutable/chunks/_page-2587a511.js",
-    "imports": [
-      "_index-2f9fe195.js",
-      "_shared-23917130.js"
-    ]
-  },
-  "_IdBadge-70b27654.js": {
-    "file": "_app/immutable/chunks/IdBadge-70b27654.js",
-    "imports": [
-      "_index-072da995.js"
-    ],
-    "css": [
-      "_app/immutable/assets/Pokeball-92bff52b.css"
-    ]
-  },
-  "src/routes/tms/+page.svelte": {
-    "file": "_app/immutable/components/pages/tms/_page.svelte-1ec85127.js",
-    "src": "src/routes/tms/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-072da995.js",
-      "__layout-e71dcc31.js",
-      "_Title-51a6e3fa.js"
-    ]
-  },
-  "__page-1109c1be.js": {
-    "file": "_app/immutable/chunks/_page-1109c1be.js",
-    "imports": [
+      "_index-723b78fe.js",
       "_shared-23917130.js"
     ]
   },
@@ -496,69 +125,11 @@
       "_app/immutable/assets/_page-efac4ea3.css"
     ]
   },
-  "_PokeMove-d07233e7.js": {
-    "file": "_app/immutable/chunks/PokeMove-d07233e7.js",
-    "imports": [
-      "_index-072da995.js",
-      "_TypeTag-ba8186f8.js",
-      "_string-574587ae.js"
-    ],
-    "css": [
-      "_app/immutable/assets/PokeMove-1413d279.css"
-    ]
-  },
-  "__layout-e169dcd7.js": {
-    "file": "_app/immutable/chunks/_layout-e169dcd7.js"
-  },
-  "_Loader-4aa6e5d8.js": {
-    "file": "_app/immutable/chunks/Loader-4aa6e5d8.js",
-    "imports": [
-      "_index-072da995.js",
-      "_Pokeball-5d4f5443.js"
-    ],
-    "css": [
-      "_app/immutable/assets/Loader-931f4675.css"
-    ]
-  },
-  "_TypeTag-ba8186f8.js": {
-    "file": "_app/immutable/chunks/TypeTag-ba8186f8.js",
-    "imports": [
-      "_index-072da995.js"
-    ],
-    "css": [
-      "_app/immutable/assets/TypeTag-ba2bf374.css"
-    ]
-  },
-  "__page-9fbe707b.js": {
-    "file": "_app/immutable/chunks/_page-9fbe707b.js",
-    "imports": [
-      "_shared-23917130.js"
-    ]
-  },
-  "_filter-17340034.js": {
-    "file": "_app/immutable/chunks/filter-17340034.js"
-  },
-  "src/routes/pokemon/[id]/+page.svelte": {
-    "file": "_app/immutable/components/pages/pokemon/_id_/_page.svelte-87ea55f4.js",
-    "src": "src/routes/pokemon/[id]/+page.svelte",
-    "isEntry": true,
-    "imports": [
-      "_index-072da995.js",
-      "_TypeTag-ba8186f8.js",
-      "_string-6e6291ef.js",
-      "_shared-23917130.js",
-      "_store-019afe61.js",
-      "_filter-f04b55bd.js",
-      "_store-e5b6fee9.js",
-      "__layout-4738fe4a.js",
-      "_Title-51a6e3fa.js"
-    ],
-    "css": [
-      "_app/immutable/assets/_page-23672260.css"
-    ]
+  "_string-574587ae.js": {
+    "file": "_app/immutable/chunks/string-574587ae.js"
   },
   "node_modules/.pnpm/@sveltejs+kit@1.1.1_svelte@3.55.1+vite@4.0.4/node_modules/@sveltejs/kit/src/runtime/client/start.js": {
-    "file": "_app/immutable/start-06c7a512.js",
+    "file": "_app/immutable/start-22d1a0d7.js",
     "src": "node_modules/.pnpm/@sveltejs+kit@1.1.1_svelte@3.55.1+vite@4.0.4/node_modules/@sveltejs/kit/src/runtime/client/start.js",
     "isEntry": true,
     "imports": [
@@ -581,13 +152,38 @@
       ".svelte-kit/generated/nodes/9.js"
     ]
   },
-  "_Disc-873d129d.js": {
-    "file": "_app/immutable/chunks/Disc-873d129d.js",
+  "src/routes/moves/+page.svelte": {
+    "file": "_app/immutable/components/pages/moves/_page.svelte-82d82a28.js",
+    "src": "src/routes/moves/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-072da995.js",
+      "__layout-dd451de0.js",
+      "_Title-51a6e3fa.js"
+    ]
+  },
+  "_Title-51a6e3fa.js": {
+    "file": "_app/immutable/chunks/Title-51a6e3fa.js",
     "imports": [
       "_index-072da995.js"
-    ],
-    "css": [
-      "_app/immutable/assets/Disc-6f138303.css"
+    ]
+  },
+  "src/routes/tms/+page.ts": {
+    "file": "_app/immutable/modules/pages/tms/_page.ts-1b08e624.js",
+    "src": "src/routes/tms/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_shared-23917130.js",
+      "__page-1109c1be.js"
+    ]
+  },
+  "_filter-f04b55bd.js": {
+    "file": "_app/immutable/chunks/filter-f04b55bd.js"
+  },
+  "__page-6b69af6d.js": {
+    "file": "_app/immutable/chunks/_page-6b69af6d.js",
+    "imports": [
+      "_shared-23917130.js"
     ]
   },
   "__page-afc94725.js": {
@@ -597,8 +193,412 @@
       "_shared-23917130.js"
     ]
   },
+  "src/routes/tms/+page.svelte": {
+    "file": "_app/immutable/components/pages/tms/_page.svelte-1ec85127.js",
+    "src": "src/routes/tms/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-072da995.js",
+      "__layout-e71dcc31.js",
+      "_Title-51a6e3fa.js"
+    ]
+  },
+  "__page-1109c1be.js": {
+    "file": "_app/immutable/chunks/_page-1109c1be.js",
+    "imports": [
+      "_shared-23917130.js"
+    ]
+  },
+  ".svelte-kit/generated/nodes/0.js": {
+    "file": "_app/immutable/chunks/0-23438290.js",
+    "src": ".svelte-kit/generated/nodes/0.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__layout-e169dcd7.js",
+      "src/routes/+layout.svelte"
+    ]
+  },
+  "__page-2587a511.js": {
+    "file": "_app/immutable/chunks/_page-2587a511.js",
+    "imports": [
+      "_index-2f9fe195.js",
+      "_shared-23917130.js"
+    ]
+  },
+  ".svelte-kit/generated/nodes/1.js": {
+    "file": "_app/immutable/chunks/1-2d0765ee.js",
+    "src": ".svelte-kit/generated/nodes/1.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/+error.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/5.js": {
+    "file": "_app/immutable/chunks/5-42717e17.js",
+    "src": ".svelte-kit/generated/nodes/5.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__page-6b69af6d.js",
+      "src/routes/pokemon/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/6.js": {
+    "file": "_app/immutable/chunks/6-332e1ee4.js",
+    "src": ".svelte-kit/generated/nodes/6.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__page-afc94725.js",
+      "src/routes/pokemon/[id]/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/7.js": {
+    "file": "_app/immutable/chunks/7-ec74c8d3.js",
+    "src": ".svelte-kit/generated/nodes/7.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__page-1109c1be.js",
+      "src/routes/tms/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/8.js": {
+    "file": "_app/immutable/chunks/8-e5efac4b.js",
+    "src": ".svelte-kit/generated/nodes/8.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__page-2587a511.js",
+      "src/routes/tms/[id]/+page.svelte"
+    ]
+  },
+  "src/routes/tms/[id]/+page.ts": {
+    "file": "_app/immutable/modules/pages/tms/_id_/_page.ts-2b7b1986.js",
+    "src": "src/routes/tms/[id]/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_index-2f9fe195.js",
+      "_shared-23917130.js",
+      "__page-2587a511.js"
+    ]
+  },
+  ".svelte-kit/generated/nodes/9.js": {
+    "file": "_app/immutable/chunks/9-82e4ef11.js",
+    "src": ".svelte-kit/generated/nodes/9.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/trainers/+page.svelte"
+    ]
+  },
+  "src/routes/+layout.ts": {
+    "file": "_app/immutable/modules/pages/_layout.ts-b803f5af.js",
+    "src": "src/routes/+layout.ts",
+    "isEntry": true,
+    "imports": [
+      "__layout-e169dcd7.js"
+    ]
+  },
+  "src/routes/moves/+page.ts": {
+    "file": "_app/immutable/modules/pages/moves/_page.ts-2f9132e5.js",
+    "src": "src/routes/moves/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_shared-23917130.js",
+      "__page-9fbe707b.js"
+    ]
+  },
+  "src/routes/moves/[id]/+page.ts": {
+    "file": "_app/immutable/modules/pages/moves/_id_/_page.ts-6fd9e2fb.js",
+    "src": "src/routes/moves/[id]/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_index-2f9fe195.js",
+      "_shared-23917130.js",
+      "__page-0107073f.js"
+    ]
+  },
+  "src/routes/pokemon/+page.ts": {
+    "file": "_app/immutable/modules/pages/pokemon/_page.ts-823154e1.js",
+    "src": "src/routes/pokemon/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_shared-23917130.js",
+      "__page-6b69af6d.js"
+    ]
+  },
+  "src/routes/pokemon/[id]/+page.ts": {
+    "file": "_app/immutable/modules/pages/pokemon/_id_/_page.ts-0b92f25e.js",
+    "src": "src/routes/pokemon/[id]/+page.ts",
+    "isEntry": true,
+    "imports": [
+      "_index-2f9fe195.js",
+      "_shared-23917130.js",
+      "__page-afc94725.js"
+    ]
+  },
+  "__layout-4738fe4a.js": {
+    "file": "_app/immutable/chunks/_layout-4738fe4a.js",
+    "imports": [
+      "_index-072da995.js",
+      "_Loader-4aa6e5d8.js",
+      "_shared-23917130.js",
+      "_filter-f04b55bd.js",
+      "_store-e5b6fee9.js",
+      "_Pokeball-5d4f5443.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout-7347eafe.css"
+    ]
+  },
+  "src/routes/+error.svelte": {
+    "file": "_app/immutable/components/pages/_error.svelte-1ea3fac7.js",
+    "src": "src/routes/+error.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-072da995.js",
+      "_MissingNo-b2b28f1d.js",
+      "_shared-23917130.js",
+      "_Title-51a6e3fa.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_error-9e7091b2.css"
+    ]
+  },
+  "_Pokeball-5d4f5443.js": {
+    "file": "_app/immutable/chunks/Pokeball-5d4f5443.js",
+    "imports": [
+      "_index-072da995.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Pokeball-92bff52b.css"
+    ]
+  },
+  "_Hit-bf108d10.js": {
+    "file": "_app/immutable/chunks/Hit-bf108d10.js",
+    "imports": [
+      "_index-072da995.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Hit-2d3f7d4a.css"
+    ]
+  },
+  "_Disc-873d129d.js": {
+    "file": "_app/immutable/chunks/Disc-873d129d.js",
+    "imports": [
+      "_index-072da995.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Disc-6f138303.css"
+    ]
+  },
+  "src/routes/tms/[id]/+page.svelte": {
+    "file": "_app/immutable/components/pages/tms/_id_/_page.svelte-87f65867.js",
+    "src": "src/routes/tms/[id]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-072da995.js",
+      "__layout-e71dcc31.js",
+      "_PokeMove-d07233e7.js",
+      "_Title-51a6e3fa.js",
+      "_shared-23917130.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-5a95889c.css"
+    ]
+  },
+  "_filter-17340034.js": {
+    "file": "_app/immutable/chunks/filter-17340034.js"
+  },
+  "__page-9fbe707b.js": {
+    "file": "_app/immutable/chunks/_page-9fbe707b.js",
+    "imports": [
+      "_shared-23917130.js"
+    ]
+  },
+  "__page-0107073f.js": {
+    "file": "_app/immutable/chunks/_page-0107073f.js",
+    "imports": [
+      "_index-2f9fe195.js",
+      "_shared-23917130.js"
+    ]
+  },
+  "src/routes/pokemon/+page.svelte": {
+    "file": "_app/immutable/components/pages/pokemon/_page.svelte-f66ece14.js",
+    "src": "src/routes/pokemon/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-072da995.js",
+      "__layout-4738fe4a.js",
+      "_Title-51a6e3fa.js"
+    ]
+  },
+  "_index-2f9fe195.js": {
+    "file": "_app/immutable/chunks/index-2f9fe195.js",
+    "imports": [
+      "_control-e7f5239e.js"
+    ]
+  },
+  ".svelte-kit/generated/nodes/4.js": {
+    "file": "_app/immutable/chunks/4-d1a900fa.js",
+    "src": ".svelte-kit/generated/nodes/4.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__page-0107073f.js",
+      "src/routes/moves/[id]/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/3.js": {
+    "file": "_app/immutable/chunks/3-90d4c37c.js",
+    "src": ".svelte-kit/generated/nodes/3.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "__page-9fbe707b.js",
+      "src/routes/moves/+page.svelte"
+    ]
+  },
+  ".svelte-kit/generated/nodes/2.js": {
+    "file": "_app/immutable/chunks/2-dfa9431c.js",
+    "src": ".svelte-kit/generated/nodes/2.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "src/routes/+page.svelte"
+    ]
+  },
+  "src/routes/+layout.svelte": {
+    "file": "_app/immutable/components/pages/_layout.svelte-9b97932e.js",
+    "src": "src/routes/+layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-072da995.js",
+      "_shared-23917130.js",
+      "_store-e5b6fee9.js",
+      "_store-019afe61.js",
+      "_store-06454cff.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout-42cff5c5.css"
+    ]
+  },
+  "_PokeMove-d07233e7.js": {
+    "file": "_app/immutable/chunks/PokeMove-d07233e7.js",
+    "imports": [
+      "_index-072da995.js",
+      "_TypeTag-ba8186f8.js",
+      "_string-574587ae.js"
+    ],
+    "css": [
+      "_app/immutable/assets/PokeMove-1413d279.css"
+    ]
+  },
+  "__layout-dd451de0.js": {
+    "file": "_app/immutable/chunks/_layout-dd451de0.js",
+    "imports": [
+      "_index-072da995.js",
+      "_Loader-4aa6e5d8.js",
+      "_shared-23917130.js",
+      "_string-574587ae.js",
+      "_filter-17340034.js",
+      "_store-019afe61.js",
+      "_Hit-bf108d10.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout-7347eafe.css"
+    ]
+  },
+  "_string-6e6291ef.js": {
+    "file": "_app/immutable/chunks/string-6e6291ef.js",
+    "imports": [
+      "_index-072da995.js"
+    ],
+    "css": [
+      "_app/immutable/assets/string-53d08c0c.css"
+    ]
+  },
+  "_Loader-4aa6e5d8.js": {
+    "file": "_app/immutable/chunks/Loader-4aa6e5d8.js",
+    "imports": [
+      "_index-072da995.js",
+      "_Pokeball-5d4f5443.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Loader-931f4675.css"
+    ]
+  },
+  "_index-072da995.js": {
+    "file": "_app/immutable/chunks/index-072da995.js"
+  },
+  "src/routes/moves/[id]/+page.svelte": {
+    "file": "_app/immutable/components/pages/moves/_id_/_page.svelte-afd9e6c3.js",
+    "src": "src/routes/moves/[id]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-072da995.js",
+      "__layout-dd451de0.js",
+      "_PokeMove-d07233e7.js",
+      "_Title-51a6e3fa.js"
+    ]
+  },
+  "_TypeTag-ba8186f8.js": {
+    "file": "_app/immutable/chunks/TypeTag-ba8186f8.js",
+    "imports": [
+      "_index-072da995.js"
+    ],
+    "css": [
+      "_app/immutable/assets/TypeTag-ba2bf374.css"
+    ]
+  },
+  "_MissingNo-b2b28f1d.js": {
+    "file": "_app/immutable/chunks/MissingNo-b2b28f1d.js",
+    "imports": [
+      "_index-072da995.js",
+      "_singletons-54da248b.js",
+      "_shared-23917130.js"
+    ],
+    "css": [
+      "_app/immutable/assets/MissingNo-f6000a17.css"
+    ]
+  },
+  "__layout-e71dcc31.js": {
+    "file": "_app/immutable/chunks/_layout-e71dcc31.js",
+    "imports": [
+      "_index-072da995.js",
+      "_Loader-4aa6e5d8.js",
+      "_shared-23917130.js",
+      "_filter-17340034.js",
+      "_store-019afe61.js",
+      "_Disc-873d129d.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_layout-7347eafe.css"
+    ]
+  },
+  "_IdBadge-70b27654.js": {
+    "file": "_app/immutable/chunks/IdBadge-70b27654.js",
+    "imports": [
+      "_index-072da995.js"
+    ],
+    "css": [
+      "_app/immutable/assets/Pokeball-92bff52b.css"
+    ]
+  },
+  "src/routes/pokemon/[id]/+page.svelte": {
+    "file": "_app/immutable/components/pages/pokemon/_id_/_page.svelte-87ea55f4.js",
+    "src": "src/routes/pokemon/[id]/+page.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-072da995.js",
+      "_TypeTag-ba8186f8.js",
+      "_string-6e6291ef.js",
+      "_shared-23917130.js",
+      "_store-019afe61.js",
+      "_filter-f04b55bd.js",
+      "_store-e5b6fee9.js",
+      "__layout-4738fe4a.js",
+      "_Title-51a6e3fa.js"
+    ],
+    "css": [
+      "_app/immutable/assets/_page-23672260.css"
+    ]
+  },
   "src/routes/trainers/+page.svelte": {
-    "file": "_app/immutable/components/pages/trainers/_page.svelte-acd86117.js",
+    "file": "_app/immutable/components/pages/trainers/_page.svelte-88de90f8.js",
     "src": "src/routes/trainers/+page.svelte",
     "isEntry": true,
     "imports": [
