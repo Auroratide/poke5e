@@ -11,6 +11,9 @@ import {
     text,
     listItem,
     waitFor,
+    visitPathExplicitly,
+    readDescriptionDefinition,
+    screenshot,
 } from './actions.js'
 import assert from 'node:assert/strict'
 
@@ -19,7 +22,8 @@ export async function test() {
 
     const name = `Automated Tester ${Math.floor(Math.random() * 999999)}`
 
-    await createTrainer(name)
+    const readKey = await createTrainer(name)
+    console.log(`  (read key is ${readKey})`)
     assert.ok(await text(`${name}'s Pokemon`).exists())
 
     await addPokemon('Charmander')
@@ -42,6 +46,8 @@ export async function test() {
     await click(link('Appletun'))
     await removePokemon()
     await waitFor(async () => !(await listItem('Appletun').exists(0, 0)))
+
+    await removeTrainer(readKey)
 }
 
 const createTrainer = async (name) => {
@@ -52,6 +58,8 @@ const createTrainer = async (name) => {
     await write(name, into(textBox('Name')))
     await click('Finish!')
     await doneSaving()
+
+    return await readDescriptionDefinition('Trainer Id')
 }
 
 const addPokemon = async (species) => {
@@ -96,6 +104,14 @@ const removePokemon = async () => {
     console.log(`  Removing pokemon...`)
 
     await click('Remove')
+    await click('Delete')
+    await doneSaving()
+}
+
+const removeTrainer = async (readKey) => {
+    console.log(`  Removing trainer...`)
+
+    await visitPathExplicitly(`/trainers?id=${readKey}&action=retire-trainer`)
     await click('Delete')
     await doneSaving()
 }
