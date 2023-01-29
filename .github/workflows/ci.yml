@@ -11,12 +11,13 @@ jobs:
     env:
       PUBLIC_SUPABASE_URL: ${{ secrets.PUBLIC_SUPABASE_URL }}
       PUBLIC_SUPABASE_KEY: ${{ secrets.PUBLIC_SUPABASE_KEY }}
+      ENV: prod
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2.2.2
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: '19.x'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
@@ -24,3 +25,18 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    env:
+      ENV: prod
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2.2.2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '19.x'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test
