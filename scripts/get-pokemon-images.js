@@ -5,7 +5,8 @@
 import * as fs from 'fs/promises'
 import * as path from 'path'
 
-const POKEMON_JSON = path.join('static', 'data', 'pokemon.json')
+const POKEMON_IN = path.join('static', 'data', 'pokemon.json')
+const POKEMON_OUT = path.join('static', 'data', 'pokemon-2.json')
 
 const Api = {
     pokemon: (name) => fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
@@ -79,20 +80,28 @@ const getApiId = (jsonId) => {
     return jsonId
 }
 
+const missingMedia = (it) => it.media?.main == null || it.media?.sprite == null
+
 async function main() {
-    const pokemon = JSON.parse(await fs.readFile(POKEMON_JSON, { encoding: 'utf-8' }))
+    const pokemon = JSON.parse(await fs.readFile(POKEMON_IN, { encoding: 'utf-8' }))
 
     const calls = pokemon.items
-        .filter((item) => item.media == null)
+        .filter(missingMedia)
         .map((item) => {
             console.log(`Getting for ${item.id}...`)
+            item.media = item.media ?? {}
             return Api.pokemon(getApiId(item.id))
                 .then((data) => {
-                    const sprite = data.sprites.other['official-artwork'].front_default
+                    const main = data.sprites.other['official-artwork'].front_default
+                    if (main) {
+                        item.media.main = main
+                    } else {
+                        console.log(`${item.id} was missing the main artwork`)
+                    }
+                    
+                    const sprite = data.sprites.front_default
                     if (sprite) {
-                        item.media = {
-                            main: sprite,
-                        }
+                        item.media.sprite = sprite
                     } else {
                         console.log(`${item.id} was missing a sprite`)
                     }
@@ -104,7 +113,7 @@ async function main() {
 
     await Promise.all(calls)
 
-    await fs.writeFile(POKEMON_JSON, JSON.stringify(pokemon, null, 2), { encoding: 'utf-8' })
+    await fs.writeFile(POKEMON_OUT, JSON.stringify(pokemon, null, 2), { encoding: 'utf-8' })
 }
 
 main()
