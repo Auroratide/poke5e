@@ -174,3 +174,8 @@ hr {
 .upper {
     text-transform: uppercase;
 }
+
+dfn {
+    font-weight: bold;
+    font-style: normal;
+}
