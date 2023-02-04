@@ -36,7 +36,7 @@
     }
 
     $: name = $trainer?.info.name ?? ''
-    $: canEdit = trainer.update != null
+    $: canEdit = $trainer.update != null
 </script>
 
 <Title value="{name}'s Access Key" />

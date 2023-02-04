@@ -11,7 +11,7 @@
     export let trainer: TrainerStore
     export let currentPokemon: PokemonId | undefined
 
-    $: editable = trainer.update != null
+    $: editable = $trainer.update != null
 
     const byStringField = (field: (m: TrainerPokemon) => string) =>
         (l: TrainerPokemon, r: TrainerPokemon) => field(l).localeCompare(field(r))

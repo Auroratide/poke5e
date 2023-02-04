@@ -15,14 +15,14 @@
     export let trainer: TrainerStore
     export let id: PokemonId
     
-    $: canEdit = trainer.update != null
+    $: canEdit = $trainer.update != null
     $: pokemon = $trainer.pokemon.find((it) => it.id === id)
     $: species = $pokeData?.find((it) => it.id === pokemon?.pokemonId)
 
     let saving = false
     const remove = () => {
         saving = true
-        trainer.update?.removeFromTeam(id).then(() => {
+        $trainer.update?.removeFromTeam(id).then(() => {
             goto(`${base}/trainers?id=${$trainer.info.readKey}`)
         }).catch(() => {
             saving = false

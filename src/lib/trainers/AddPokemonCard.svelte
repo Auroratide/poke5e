@@ -10,7 +10,7 @@
     import Title from '$lib/design/Title.svelte'
 
     export let trainer: TrainerStore
-    $: canAdd = trainer.update != null
+    $: canAdd = $trainer.update != null
     $: readKey = $trainer.info.readKey
 
     let species = ''
@@ -21,7 +21,7 @@
     let saving = false
     const onSelect = (p: Pokemon) => () => {
         saving = true
-        trainer.update?.addToTeam(p).then(({ id }) => {
+        $trainer.update?.addToTeam(p).then(({ id }) => {
             goto(`${base}/trainers?id=${readKey}&pokemon=${id}`)
         }).catch(() => {
             saving = false

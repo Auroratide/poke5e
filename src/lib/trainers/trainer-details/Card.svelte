@@ -16,7 +16,7 @@
     <Info trainer={$trainer.info} />
     <ActionArea>
         <Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="ghost">Access Key</Button>
-        {#if trainer.update}
+        {#if $trainer.update}
             <Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.editTrainer)}">Edit</Button>
         {/if}
     </ActionArea>

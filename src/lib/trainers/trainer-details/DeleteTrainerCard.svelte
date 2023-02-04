@@ -13,7 +13,7 @@
     let saving = false
     const retire = () => {
         saving = true
-        trainer.update?.retire().then(() => {
+        $trainer.update?.retire().then(() => {
             goto(Url.trainers())
         }).catch(() => {
             saving = false
@@ -21,7 +21,7 @@
     }
 
     $: name = $trainer?.info.name ?? ''
-    $: canEdit = trainer.update != null
+    $: canEdit = $trainer.update != null
 </script>
 
 <Title value="Retire {name}?" />

@@ -10,7 +10,7 @@
 
     export let trainer: TrainerStore
 
-    $: canEdit = trainer.update != null
+    $: canEdit = $trainer.update != null
     let saving = false
 
     const onCancel = () => {
@@ -19,7 +19,7 @@
 
     const onUpdate = (e: CustomEvent<UpdateDetail>) => {
         saving = true
-        trainer.update?.info(e.detail).then(() => {
+        $trainer.update?.info(e.detail).then(() => {
             saving = false
             goto(Url.trainers($trainer.info.readKey))
         }).catch(() => {

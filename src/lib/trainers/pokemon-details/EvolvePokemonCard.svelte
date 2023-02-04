@@ -15,14 +15,14 @@
     export let trainer: TrainerStore
     export let id: PokemonId
     
-    $: canEdit = trainer.update != null
+    $: canEdit = $trainer.update != null
     $: pokemon = $trainer.pokemon.find((it) => it.id === id)
     $: species = $pokeData?.find((it) => it.id === pokemon?.pokemonId)
 
     let saving = false
     const update = (e: CustomEvent<TrainerPokemon>) => {
         saving = true
-        trainer.update?.pokemon(e.detail).then(() => {
+        $trainer.update?.pokemon(e.detail).then(() => {
             saving = false
             goto(Url.trainers($trainer.info.readKey, id))
         }).catch(() => {
