@@ -26,6 +26,7 @@ type TrainerUpdater = {
 export type TrainerStore = {
     subscribe: (run: (value: TrainerData) => void) => () => void,
     update?: TrainerUpdater,
+    verifyAccess: (writeKey: ReadWriteKey) => Promise<boolean>,
 }
 
 export type TrainerListStore = {
@@ -227,6 +228,18 @@ const createStore = () => {
                             })
                         },
                         update,
+                        verifyAccess: (writeKey: ReadWriteKey) => {
+                            return provider.verifyWriteKey(data.info, writeKey).then((isVerified) => {
+                                if (isVerified) {
+                                    storeUpdateOne(readKey, (prev) => ({
+                                        ...prev,
+                                        writeKey: writeKey,
+                                    }))
+                                }
+
+                                return isVerified
+                            })
+                        }
                     }
                 })
             }

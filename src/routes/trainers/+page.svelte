@@ -20,6 +20,7 @@
     import FindTrainerCard from '$lib/trainers/FindTrainerCard.svelte'
     import EditTrainerCard from '$lib/trainers/trainer-details/EditTrainerCard.svelte'
     import DeleteTrainerCard from '$lib/trainers/trainer-details/DeleteTrainerCard.svelte'
+    import AccessKeyCard from '$lib/trainers/trainer-details/AccessKeyCard.svelte'
 
     $: trainerId = browser ? $page.url.searchParams.get('id') : undefined
     $: pokemonId = browser ? $page.url.searchParams.get('pokemon') : undefined
@@ -86,6 +87,8 @@
                 <EditTrainerCard {trainer} />
             {:else if action === PageAction.retireTrainer}
                 <DeleteTrainerCard {trainer} />
+            {:else if action === PageAction.accessKey}
+                <AccessKeyCard {trainer} />
             {:else}
                 <TrainerCard {trainer} />
             {/if}

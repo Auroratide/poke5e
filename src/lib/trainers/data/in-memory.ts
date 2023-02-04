@@ -376,4 +376,10 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
             return false
         }
     }
+
+    verifyWriteKey = async (trainer: Trainer, writeKey: ReadWriteKey): Promise<boolean> => {
+        const found = this.entries.find((it) => it.info.id === trainer.id)
+
+        return found?.writeKey === writeKey
+    }
 }

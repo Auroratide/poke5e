@@ -374,6 +374,23 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
         return data > 0
     }
 
+    verifyWriteKey = async (trainer: Trainer, writeKey: ReadWriteKey): Promise<boolean> => {
+        const { data, error } = await this.supabase.rpc('verify_write_key', {
+            _id: trainer.id,
+            _write_key: writeKey,
+        }).single()
+
+        if (error) {
+            throw new TrainerDataProviderError('Could not verify trainer.', error)
+        }
+
+        if (data > 0) {
+            addWriteKey(trainer.readKey, writeKey)
+        }
+
+        return data > 0
+    }
+
     private getMoveset = async (id: PokemonId): Promise<LearnedMove[]> => {
         const { data, error } = await this.supabase.rpc('get_moveset', { _pokemon_id: id })
             .select()
