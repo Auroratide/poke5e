@@ -33,6 +33,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            flex-wrap: wrap;
 
             background-color: var(--skin-bg);
             color: var(--skin-bg-text);
