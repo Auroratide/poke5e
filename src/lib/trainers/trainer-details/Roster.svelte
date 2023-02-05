@@ -16,8 +16,11 @@
     const byStringField = (field: (m: TrainerPokemon) => string) =>
         (l: TrainerPokemon, r: TrainerPokemon) => field(l).localeCompare(field(r))
 
+    const byNicknameOrSpecies = (filterValue: string) => (it: TrainerPokemon) =>
+        it.nickname.toLocaleLowerCase().includes(filterValue) || it.pokemonId.replace('-', ' ').includes(filterValue)
+
     $: filtered = $trainer.pokemon
-        .filter((it) => it.nickname.toLocaleLowerCase().includes($filterValue.toLocaleLowerCase()))
+        .filter(byNicknameOrSpecies($filterValue.toLocaleLowerCase()))
         .sort(byStringField((it) => it.nickname))
     $: baseTrainerUrl = `${base}/trainers?id=${$trainer.info.readKey}`
 </script>
