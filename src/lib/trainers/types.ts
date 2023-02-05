@@ -1,7 +1,7 @@
 import type { Skill, Attribute } from '../dnd/types'
 import type { Pokemon } from '../creatures/types'
 import type { Move } from '$lib/moves/types'
-import type { AbilityId } from '$lib/pokemon/types'
+import type { AbilityId, PokeType } from '$lib/pokemon/types'
 
 export type Resource = {
     current: number,
@@ -52,6 +52,7 @@ export type TrainerPokemon = {
     trainerId: TrainerId,
     pokemonId: string,
     nickname: string,
+    type: PokeType[],
     nature: Nature,
     level: number,
     gender: Gender,

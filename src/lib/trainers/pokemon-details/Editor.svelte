@@ -10,6 +10,7 @@
     import type { Pokemon } from '$lib/creatures/types'
     import Saveable from '$lib/design/Saveable.svelte'
     import MoveEditor from './MoveEditor.svelte'
+    import TypeInput from './TypeInput.svelte'
 
     const noSpaces = (s: string) => s.replace(/\s/g, '')
     
@@ -33,6 +34,7 @@
     let proficiencies = pokemon.proficiencies
     let savingThrows = pokemon.savingThrows
     let notes = pokemon.notes
+    let type = pokemon.type
 
     // keep level and maxHitDice in sync unless they were different
     const onLevelChange = (e: Event) => {
@@ -68,6 +70,7 @@
         dispatch('update', {
             ...pokemon,
             nickname: nickname.length > 0 ? nickname : species.name,
+            type,
             nature: nature === 'other' ? natureCustom : nature,
             level,
             ac,
@@ -155,6 +158,7 @@
                 <textarea name="notes" id="notes-input" bind:value={notes} rows="6" class="font-sm" placeholder="Use this for any general notes not covered by the above fields..."></textarea>
             </div>
         </Fieldset>
+        <TypeInput bind:value={type} id="type-input" />
         <ActionArea>
             <Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
             <Button type="submit" {disabled}>Finish!</Button>

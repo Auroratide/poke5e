@@ -136,6 +136,10 @@ input:focus, textarea:focus {
     background-color: var(--skin-content);
 }
 
+input:disabled + label {
+    opacity: 0.5;
+}
+
 figure {
     margin: 0;
 }

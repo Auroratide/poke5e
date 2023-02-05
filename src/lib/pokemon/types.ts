@@ -1,22 +1,26 @@
-export type PokeType =
-    'normal' |
-    'fighting' |
-    'flying' |
-    'poison' |
-    'ground' |
-    'rock' |
-    'bug' |
-    'ghost' |
-    'steel' |
-    'fire' |
-    'water' |
-    'grass' |
-    'electric' |
-    'psychic' |
-    'ice' |
-    'dragon' |
-    'dark' |
-    'fairy'
+export const PokeTypes = [
+    'normal',
+    'fighting',
+    'flying',
+    'poison',
+    'ground',
+    'rock',
+    'bug',
+    'ghost',
+    'steel',
+    'fire',
+    'water',
+    'grass',
+    'electric',
+    'psychic',
+    'ice',
+    'dragon',
+    'dark',
+    'fairy',
+] as const
+export type PokeType = typeof PokeTypes[number]
+export const isPokeType = (type: string): type is PokeType =>
+    (PokeTypes as readonly string[]).includes(type)
 
 export type AbilityId = string
 export type Ability = {

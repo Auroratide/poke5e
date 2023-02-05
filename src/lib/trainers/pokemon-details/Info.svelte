@@ -59,7 +59,7 @@
     <AttributeBlock attributes={pokemon.attributes} />
     <SkillsInfo {pokemon} />
     <FlatDl>
-        <TypeEffectiveness type={species.type} />
+        <TypeEffectiveness type={pokemon.type} />
     </FlatDl>
     <FeatsInfo {pokemon} {species} />
 </section>

@@ -5,7 +5,7 @@
 </script>
 
 <span class="type-tag">
-    {#if type.length === 2}
+    {#if type.length >= 2}
         <span class="skew type left" style:--skin-local-bg="var(--skin-{type[0]}-bg)">
             <span class="unskew">{type[0]}</span>
         </span>

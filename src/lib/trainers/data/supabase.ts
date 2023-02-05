@@ -14,6 +14,7 @@ import type { Skill, Attribute } from '$lib/dnd/types'
 import type { Pokemon } from '$lib/creatures/types'
 import { TrainerDataProviderError, type TrainerData, type TrainerDataProvider } from '.'
 import type { SupabaseClient } from '@supabase/supabase-js'
+import { isPokeType, PokeTypes } from '$lib/pokemon/types'
 
 export class SupabaseTrainerProvider implements TrainerDataProvider {
     constructor(private supabase: SupabaseClient) {}
@@ -143,6 +144,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _id: parseInt(info.id),
             _species: info.pokemonId,
             _nickname: info.nickname,
+            _type: info.type,
             _nature: info.nature,
             _level: info.level,
             _gender: info.gender,
@@ -201,6 +203,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             trainerId: trainerId,
             pokemonId: pokemon.id,
             nickname: pokemon.name,
+            type: pokemon.type,
             nature: Natures[0],
             level: pokemon.minLevel,
             gender: Gender.None,
@@ -226,6 +229,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
             _nickname: pokemon.name,
             _species: pokemon.id,
             _nature: Natures[0],
+            _type: pokemon.type,
             _level: pokemon.minLevel,
             _gender: Gender.None,
             _strength: pokemon.attributes.str,
@@ -448,6 +452,7 @@ type PokemonRow = {
     trainer_id: string,
     species: string,
     nickname: string,
+    type: string[],
     nature: string,
     level: number,
     gender: string,
@@ -500,6 +505,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
     trainerId: row.trainer_id,
     pokemonId: row.species,
     nickname: row.nickname,
+    type: row.type.filter(isPokeType),
     nature: row.nature,
     level: row.level,
     gender: row.gender as Gender,

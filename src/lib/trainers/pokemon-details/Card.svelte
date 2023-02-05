@@ -35,7 +35,7 @@
 <RequirePokemon trainer={$trainer} {id}>
     {#if species}
         <Card title={pokemon.nickname}>
-            <TypeTag slot="header-extra" type={species.type} />
+            <TypeTag slot="header-extra" type={pokemon.type} />
             <Info {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} />
             {#if canEdit}
                 <ActionArea>
