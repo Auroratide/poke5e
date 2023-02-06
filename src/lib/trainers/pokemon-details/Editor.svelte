@@ -11,6 +11,7 @@
     import Saveable from '$lib/design/Saveable.svelte'
     import MoveEditor from './MoveEditor.svelte'
     import TypeInput from './TypeInput.svelte'
+    import FormDetails from '$lib/design/Form/FormDetails.svelte'
 
     const noSpaces = (s: string) => s.replace(/\s/g, '')
     
@@ -158,7 +159,9 @@
                 <textarea name="notes" id="notes-input" bind:value={notes} rows="6" class="font-sm" placeholder="Use this for any general notes not covered by the above fields..."></textarea>
             </div>
         </Fieldset>
-        <TypeInput bind:value={type} id="type-input" />
+        <FormDetails title="Advanced">
+            <TypeInput bind:value={type} id="type-input" />
+        </FormDetails>
         <ActionArea>
             <Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
             <Button type="submit" {disabled}>Finish!</Button>
