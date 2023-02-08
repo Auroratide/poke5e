@@ -499,6 +499,11 @@
       "id": 100,
       "move": "confide",
       "cost": 4400
+    },
+    {
+      "id": 101,
+      "move": "pounce",
+      "cost": 6400
     }
   ]
 }
