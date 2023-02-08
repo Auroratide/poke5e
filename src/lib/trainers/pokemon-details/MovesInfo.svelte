@@ -31,7 +31,7 @@
             {#each pokemon.moves as move}
                 {@const moveData = $moves.find((it) => it.id === move.moveId)}
                 <li>
-                    <MoveDetails {move} {moveData} {editable} proficiencyBonus={pb} attributes={pokemon.attributes} on:update={onUpdate(move)} />
+                    <MoveDetails {move} {moveData} {editable} proficiencyBonus={pb} attributes={pokemon.attributes} pokemonType={pokemon.type} on:update={onUpdate(move)} />
                 </li>
             {/each}
         </ul>

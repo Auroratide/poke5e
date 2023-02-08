@@ -12,6 +12,7 @@
     import type { Attributes } from '$lib/dnd/types'
     import { modifierForScore } from '$lib/dnd/attributes'
     import { createEventDispatcher } from 'svelte'
+    import type { PokeType } from '$lib/pokemon/types'
 
     const dispatch = createEventDispatcher()
 
@@ -20,6 +21,7 @@
     export let move: LearnedMove
     export let moveData: Move
     export let proficiencyBonus: number
+    export let pokemonType: PokeType[]
     export let attributes: Attributes
     export let editable: boolean
 
@@ -37,9 +39,11 @@
             attributeMod = modifierForScore(attributes[bestPower])
         }
     }
+    $: hasStab = pokemonType.includes(moveData.type)
 
     $: toHit = proficiencyBonus + attributeMod
     $: dc = 8 + proficiencyBonus + attributeMod
+    $: dmg = attributeMod + (hasStab ? attributeMod : 0)
 
     const onChangePp = (e: Event) => {
         dispatch('update', {
@@ -68,7 +72,7 @@
             <span class="capitalize flex-span">{moveData.type}</span>
             <span>
                 {#if moveData.power !== 'none' && moveData.power !== 'varies'}
-                    To Hit: +{toHit}, DC: {dc}
+                    To Hit: +{toHit}, DC: {dc}, Dmg: +{dmg}
                 {/if}
             </span>
         </div>
