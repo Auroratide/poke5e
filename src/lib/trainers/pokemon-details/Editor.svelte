@@ -76,11 +76,11 @@
             level,
             ac,
             hp: {
-                current: pokemon.hp.current,
+                current: pokemon.hp.current + (maxHp - pokemon.hp.max),
                 max: maxHp,
             },
             hitDice: {
-                current: pokemon.hitDice.current,
+                current: pokemon.hitDice.current + (maxHitDice - pokemon.hitDice.max),
                 max: maxHitDice,
             },
             gender,
