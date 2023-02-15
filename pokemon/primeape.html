@@ -25,8 +25,8 @@
 		<link href="/poke5e/_app/immutable/assets/PokemonArt-00f0b67e.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/_layout-7347eafe.css" rel="stylesheet">
 		<link href="/poke5e/_app/immutable/assets/Loader-931f4675.css" rel="stylesheet">
-		<link href="/poke5e/_app/immutable/assets/Pokeball-92bff52b.css" rel="stylesheet">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/start-735b1dd5.js">
+		<link href="/poke5e/_app/immutable/assets/IdBadge-92bff52b.css" rel="stylesheet">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/start-574a0c3e.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-53b314aa.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/singletons-c32e22f2.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-829391e1.js">
@@ -39,13 +39,13 @@
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/store-aedfb092.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/modules/pages/_layout.ts-b803f5af.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/_layout-e169dcd7.js">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/pokemon/_id_/_page.svelte-d6e59ea8.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/components/pages/pokemon/_id_/_page.svelte-1634c952.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/TypeTag-f2f08b10.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/PokemonArt-307b1bf3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/filter-f04b55bd.js">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/_layout-585e25bc.js">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/Loader-7fc95bba.js">
-		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/Pokeball-92ea9427.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/_layout-7bce336d.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/Loader-780f2a26.js">
+		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/Pokeball-2171e6d3.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/Title-4044ced1.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/modules/pages/pokemon/_id_/_page.ts-0b92f25e.js">
 		<link rel="modulepreload" href="/poke5e/_app/immutable/chunks/index-2f9fe195.js">
@@ -124,7 +124,7 @@
     <section class="abilities">
         <p class="svelte-jugxg1"><strong>Vital Spirit:</strong> This Pokémon cannot be put to sleep.</p><p class="svelte-jugxg1"><strong>Anger Point:</strong> After suffering a critical hit, this Pokémon doubles the damage dice for a single move it activates on the following turn.</p><p class="svelte-jugxg1"><strong>Defiant:</strong> While this Pokémon is suffering from a negative status effect or stat change imposed by an opponent, it gains +2 to all attack rolls.</p></section>
     <hr>
-        <section class="evolution"><p class="svelte-kxv90g" style="margin-bottom: 0.125em;"><strong>Evolution:</strong> 2 / 2</p>
+        <section class="evolution"><p class="svelte-kxv90g" style="margin-bottom: 0.125em;"><strong>Evolution:</strong> 2 / 3</p>
     
 </section>
     <hr>
@@ -154,14 +154,14 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="a1udsa">
-			import { start } from "/poke5e/_app/immutable/start-735b1dd5.js";
+		<script type="module" data-sveltekit-hydrate="1mjv92j">
+			import { start } from "/poke5e/_app/immutable/start-574a0c3e.js";
 
 			start({
 				env: {"PUBLIC_SUPABASE_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxvZ25jYmpqZm1udmJmcmpkeG1nIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njk1ODY2MzEsImV4cCI6MTk4NTE2MjYzMX0.RXw9pfN-4qOR2AbqPoM6GMzjDGRwYnClF9LEiI2VE5k","PUBLIC_SUPABASE_URL":"https://logncbjjfmnvbfrjdxmg.supabase.co"},
 				paths: {"assets":"/poke5e","base":"/poke5e"},
-				target: document.querySelector('[data-sveltekit-hydrate="a1udsa"]').parentNode,
-				version: "1676464149768",
+				target: document.querySelector('[data-sveltekit-hydrate="1mjv92j"]').parentNode,
+				version: "1676499724536",
 				hydrate: {
 					node_ids: [0, 6],
 					data: [null,null],
@@ -170,6 +170,6 @@
 				}
 			});
 		</script>
-	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/primeape.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"primeape\",\"name\":\"Primeape\",\"number\":57,\"type\":[\"fighting\"],\"size\":\"small\",\"sr\":6,\"minLevel\":5,\"eggGroup\":[\"field\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"2\",\"maxStage\":\"2\",\"from\":[\"mankey\"]},\"description\":\"The Pig Monkey Pokémon. It stops being angry only when nobody else is around. To view this moment is very difficult.\",\"ac\":15,\"hp\":45,\"hitDice\":\"d10\",\"speed\":[{\"type\":\"walking\",\"value\":30},{\"type\":\"climbing\",\"value\":30}],\"attributes\":{\"str\":\"16\",\"dex\":\"16\",\"con\":\"13\",\"int\":\"6\",\"wis\":\"12\",\"cha\":\"8\"},\"skills\":[\"athletics\",\"acrobatics\"],\"savingThrows\":[\"dex\",\"str\"],\"senses\":[],\"abilities\":[{\"id\":\"vital-spirit\",\"name\":\"Vital Spirit\",\"description\":\"This Pokémon cannot be put to sleep.\",\"hidden\":false},{\"id\":\"anger-point\",\"name\":\"Anger Point\",\"description\":\"After suffering a critical hit, this Pokémon doubles the damage dice for a single move it activates on the following turn.\",\"hidden\":false},{\"id\":\"defiant\",\"name\":\"Defiant\",\"description\":\"While this Pokémon is suffering from a negative status effect or stat change imposed by an opponent, it gains +2 to all attack rolls.\",\"hidden\":true}],\"moves\":{\"start\":[\"fling\",\"focus-energy\",\"leer\",\"low-kick\",\"rage\",\"scratch\",\"fury-swipes\",\"karate-chop\"],\"level6\":[\"pursuit\",\"seismic-toss\"],\"level10\":[\"swagger\",\"cross-chop\",\"assurance\"],\"level14\":[\"punishment\",\"thrash\"],\"level18\":[\"stomping-tantrum\",\"close-combat\",\"screech\",\"outrage\",\"final-gambit\"],\"tm\":[1,10,11,12,15,17,18,21,23,24,25,26,27,31,32,39,40,42,44,45,46,47,48,50,52,56,62,66,68,71,78,80,84,87,88,89,90,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/57.png\",\"sprite\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png\"}}"}</script></div>
+	<script type="application/json" data-sveltekit-fetched data-url="/poke5e/pokemon/primeape.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"primeape\",\"name\":\"Primeape\",\"number\":57,\"type\":[\"fighting\"],\"size\":\"small\",\"sr\":6,\"minLevel\":5,\"eggGroup\":[\"field\"],\"gender\":\"1:1\",\"evolution\":{\"stage\":\"2\",\"maxStage\":\"3\",\"to\":[{\"id\":\"annihilape\",\"conditions\":[{\"type\":\"level\",\"value\":10},{\"type\":\"special\",\"value\":\"after using Rage Fist 10 times\"}],\"effects\":[{\"type\":\"asi\",\"value\":6}]}],\"from\":[\"mankey\"]},\"description\":\"The Pig Monkey Pokémon. It stops being angry only when nobody else is around. To view this moment is very difficult.\",\"ac\":15,\"hp\":45,\"hitDice\":\"d10\",\"speed\":[{\"type\":\"walking\",\"value\":30},{\"type\":\"climbing\",\"value\":30}],\"attributes\":{\"str\":\"16\",\"dex\":\"16\",\"con\":\"13\",\"int\":\"6\",\"wis\":\"12\",\"cha\":\"8\"},\"skills\":[\"athletics\",\"acrobatics\"],\"savingThrows\":[\"dex\",\"str\"],\"senses\":[],\"abilities\":[{\"id\":\"vital-spirit\",\"name\":\"Vital Spirit\",\"description\":\"This Pokémon cannot be put to sleep.\",\"hidden\":false},{\"id\":\"anger-point\",\"name\":\"Anger Point\",\"description\":\"After suffering a critical hit, this Pokémon doubles the damage dice for a single move it activates on the following turn.\",\"hidden\":false},{\"id\":\"defiant\",\"name\":\"Defiant\",\"description\":\"While this Pokémon is suffering from a negative status effect or stat change imposed by an opponent, it gains +2 to all attack rolls.\",\"hidden\":true}],\"moves\":{\"start\":[\"fling\",\"focus-energy\",\"leer\",\"low-kick\",\"rage\",\"scratch\",\"fury-swipes\",\"karate-chop\"],\"level6\":[\"pursuit\",\"seismic-toss\"],\"level10\":[\"swagger\",\"cross-chop\",\"assurance\",\"rage-fist\"],\"level14\":[\"punishment\",\"thrash\"],\"level18\":[\"stomping-tantrum\",\"close-combat\",\"screech\",\"outrage\",\"final-gambit\"],\"tm\":[1,10,11,12,15,17,18,21,23,24,25,26,27,31,32,39,40,42,44,45,46,47,48,50,52,56,62,66,68,71,78,80,84,87,88,89,90,100]},\"media\":{\"main\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/57.png\",\"sprite\":\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/57.png\"}}"}</script></div>
 	</body>
 </html>

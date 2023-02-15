@@ -7633,7 +7633,7 @@
       "gender": "1:1",
       "evolution": {
         "stage": "1",
-        "maxStage": "2",
+        "maxStage": "3",
         "description": "Mankey can evolve into Primeape at level 8 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20).",
         "to": [
           {
@@ -7804,7 +7804,28 @@
       "gender": "1:1",
       "evolution": {
         "stage": "2",
-        "maxStage": "2",
+        "maxStage": "3",
+        "to": [
+          {
+            "id": "annihilape",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 10
+              },
+              {
+                "type": "special",
+                "value": "after using Rage Fist 10 times"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 6
+              }
+            ]
+          }
+        ],
         "from": [
           "mankey"
         ]
@@ -7872,7 +7893,8 @@
         "level10": [
           "swagger",
           "cross-chop",
-          "assurance"
+          "assurance",
+          "rage-fist"
         ],
         "level14": [
           "punishment",
@@ -127869,9 +127891,152 @@
       }
     },
     {
+      "id": "annihilape",
+      "name": "Annihilape",
+      "number": 979,
+      "type": [
+        "fighting",
+        "ghost"
+      ],
+      "size": "small",
+      "sr": 10,
+      "minLevel": 8,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "3",
+        "maxStage": "3",
+        "from": [
+          "primeape"
+        ]
+      },
+      "description": "The Rage Monkey Pokémon. When its anger rose beyond a critical point, this Pokémon gained power that is unfettered by the limits of its physical body.",
+      "ac": 16,
+      "hp": 70,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        },
+        {
+          "type": "climbing",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "20",
+        "dex": "16",
+        "con": "16",
+        "int": "6",
+        "wis": "12",
+        "cha": "8"
+      },
+      "skills": [
+        "athletics",
+        "acrobatics"
+      ],
+      "savingThrows": [
+        "dex",
+        "str"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "vital-spirit",
+          "hidden": false
+        },
+        {
+          "id": "inner-focus",
+          "hidden": false
+        },
+        {
+          "id": "defiant",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "fling",
+          "focus-energy",
+          "leer",
+          "low-kick",
+          "rage",
+          "scratch",
+          "fury-swipes",
+          "karate-chop",
+          "pursuit",
+          "seismic-toss",
+          "rage-fist"
+        ],
+        "level10": [
+          "swagger",
+          "cross-chop",
+          "assurance"
+        ],
+        "level14": [
+          "punishment",
+          "thrash"
+        ],
+        "level18": [
+          "stomping-tantrum",
+          "close-combat",
+          "screech",
+          "outrage",
+          "final-gambit"
+        ],
+        "tm": [
+          1,
+          10,
+          11,
+          12,
+          15,
+          17,
+          18,
+          21,
+          23,
+          24,
+          25,
+          26,
+          27,
+          31,
+          32,
+          39,
+          40,
+          42,
+          44,
+          45,
+          46,
+          47,
+          48,
+          50,
+          52,
+          56,
+          62,
+          65,
+          66,
+          68,
+          71,
+          78,
+          80,
+          84,
+          87,
+          88,
+          89,
+          90,
+          100
+        ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/979.png"
+      }
+    },
+    {
       "id": "dudunsparce",
       "name": "Dudunsparce",
-      "number": 917,
+      "number": 982,
       "type": [
         "normal"
       ],
@@ -128161,6 +128326,125 @@
       "media": {
         "main": "/unofficial/rookite/main.png",
         "attribution": "/unofficial/rookite/attribution.json"
+      }
+    },
+    {
+      "id": "belseraph",
+      "name": "Belseraph",
+      "unofficial": true,
+      "number": 0,
+      "type": [
+        "fairy",
+        "flying"
+      ],
+      "size": "tiny",
+      "sr": 15,
+      "minLevel": 10,
+      "eggGroup": [
+        "undiscovered"
+      ],
+      "gender": "1:0",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "1"
+      },
+      "description": "The Angel Pokémon. One kind of Ultra Beast. Belseraph's song is thought to gradually \"shift\" people into the afterlife if they listen for too long.",
+      "ac": 18,
+      "hp": 90,
+      "hitDice": "d12",
+      "speed": [
+        {
+          "type": "flying",
+          "value": 35
+        }
+      ],
+      "attributes": {
+        "str": "12",
+        "dex": "16",
+        "con": "11",
+        "int": "11",
+        "wis": "16",
+        "cha": "18"
+      },
+      "skills": [
+        "religion",
+        "perception",
+        "persuaion"
+      ],
+      "savingThrows": [
+        "wis",
+        "cha"
+      ],
+      "senses": [
+        {
+          "type": "truesight",
+          "value": 30
+        }
+      ],
+      "abilities": [
+        {
+          "id": "serene-grace",
+          "hidden": false
+        },
+        {
+          "id": "beast-boost",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "halo-song",
+          "mystical-fire",
+          "fairy-wind",
+          "air-cutter",
+          "defog",
+          "safeguard",
+          "captivate",
+          "sing"
+        ],
+        "level14": [
+          "fiery-dance",
+          "light-of-ruin",
+          "wish",
+          "ancient-power"
+        ],
+        "level18": [
+          "endeavor",
+          "perish-song",
+          "hurricane"
+        ],
+        "tm": [
+          3,
+          6,
+          10,
+          11,
+          15,
+          16,
+          17,
+          20,
+          22,
+          25,
+          26,
+          33,
+          38,
+          41,
+          44,
+          45,
+          48,
+          49,
+          61,
+          73,
+          79,
+          85,
+          90,
+          92,
+          99,
+          100
+        ]
+      },
+      "media": {
+        "main": "/unofficial/belseraph/main.png",
+        "attribution": "/unofficial/belseraph/attribution.json"
       }
     }
   ]
