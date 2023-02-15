@@ -7633,7 +7633,7 @@
       "gender": "1:1",
       "evolution": {
         "stage": "1",
-        "maxStage": "2",
+        "maxStage": "3",
         "description": "Mankey can evolve into Primeape at level 8 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20).",
         "to": [
           {
@@ -7804,7 +7804,28 @@
       "gender": "1:1",
       "evolution": {
         "stage": "2",
-        "maxStage": "2",
+        "maxStage": "3",
+        "to": [
+          {
+            "id": "annihilape",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 10
+              },
+              {
+                "type": "special",
+                "value": "after using Rage Fist 10 times"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 6
+              }
+            ]
+          }
+        ],
         "from": [
           "mankey"
         ]
@@ -7872,7 +7893,8 @@
         "level10": [
           "swagger",
           "cross-chop",
-          "assurance"
+          "assurance",
+          "rage-fist"
         ],
         "level14": [
           "punishment",
@@ -127869,9 +127891,152 @@
       }
     },
     {
+      "id": "annihilape",
+      "name": "Annihilape",
+      "number": 979,
+      "type": [
+        "fighting",
+        "ghost"
+      ],
+      "size": "small",
+      "sr": 10,
+      "minLevel": 8,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "3",
+        "maxStage": "3",
+        "from": [
+          "primeape"
+        ]
+      },
+      "description": "The Rage Monkey Pokémon. When its anger rose beyond a critical point, this Pokémon gained power that is unfettered by the limits of its physical body.",
+      "ac": 16,
+      "hp": 70,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        },
+        {
+          "type": "climbing",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "20",
+        "dex": "16",
+        "con": "16",
+        "int": "6",
+        "wis": "12",
+        "cha": "8"
+      },
+      "skills": [
+        "athletics",
+        "acrobatics"
+      ],
+      "savingThrows": [
+        "dex",
+        "str"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "vital-spirit",
+          "hidden": false
+        },
+        {
+          "id": "inner-focus",
+          "hidden": false
+        },
+        {
+          "id": "defiant",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "fling",
+          "focus-energy",
+          "leer",
+          "low-kick",
+          "rage",
+          "scratch",
+          "fury-swipes",
+          "karate-chop",
+          "pursuit",
+          "seismic-toss",
+          "rage-fist"
+        ],
+        "level10": [
+          "swagger",
+          "cross-chop",
+          "assurance"
+        ],
+        "level14": [
+          "punishment",
+          "thrash"
+        ],
+        "level18": [
+          "stomping-tantrum",
+          "close-combat",
+          "screech",
+          "outrage",
+          "final-gambit"
+        ],
+        "tm": [
+          1,
+          10,
+          11,
+          12,
+          15,
+          17,
+          18,
+          21,
+          23,
+          24,
+          25,
+          26,
+          27,
+          31,
+          32,
+          39,
+          40,
+          42,
+          44,
+          45,
+          46,
+          47,
+          48,
+          50,
+          52,
+          56,
+          62,
+          65,
+          66,
+          68,
+          71,
+          78,
+          80,
+          84,
+          87,
+          88,
+          89,
+          90,
+          100
+        ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/979.png"
+      }
+    },
+    {
       "id": "dudunsparce",
       "name": "Dudunsparce",
-      "number": 917,
+      "number": 982,
       "type": [
         "normal"
       ],
