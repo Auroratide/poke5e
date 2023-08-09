@@ -18927,6 +18927,212 @@
                 "value": 14
               }
             ]
+          },
+          {
+            "id": "droideon",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 8
+              },
+              {
+                "type": "special",
+                "value": "but the conditions are not well understood"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "id": "brawleon",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 8
+              },
+              {
+                "type": "loyalty",
+                "value": 2
+              },
+              {
+                "type": "move-type",
+                "value": "fighting"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "id": "specteon",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 8
+              },
+              {
+                "type": "special",
+                "value": "after taking non-zero ghost-type damage"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "id": "toxeon",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 8
+              },
+              {
+                "type": "item",
+                "value": "Toxic Stone"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "id": "minereon",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 8
+              },
+              {
+                "type": "special",
+                "value": "after using two different evolution stones simultaneously"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "id": "aereon",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 8
+              },
+              {
+                "type": "loyalty",
+                "value": 2
+              },
+              {
+                "type": "special",
+                "value": "while above the clouds"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "id": "pesteon",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 8
+              },
+              {
+                "type": "loyalty",
+                "value": 2
+              },
+              {
+                "type": "move-type",
+                "value": "bug"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "id": "terreon",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 8
+              },
+              {
+                "type": "loyalty",
+                "value": 2
+              },
+              {
+                "type": "special",
+                "value": "while under ground or in a cave"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "id": "drakeon",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 8
+              },
+              {
+                "type": "special",
+                "value": "but the conditions are not well understood"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 14
+              }
+            ]
+          },
+          {
+            "id": "eeveon",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 8
+              },
+              {
+                "type": "special",
+                "value": "and the only damage-dealing move it knows is Tackle"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 12
+              }
+            ]
           }
         ]
       },
@@ -128445,6 +128651,1208 @@
       "media": {
         "main": "/unofficial/belseraph/main.png",
         "attribution": "/unofficial/belseraph/attribution.json"
+      }
+    },
+    {
+      "id": "droideon",
+      "name": "Droideon",
+      "unofficial": true,
+      "number": 0,
+      "type": [
+        "steel"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2",
+        "from": [
+          "eevee"
+        ]
+      },
+      "description": "The Droid Pokémon. It was born from an experiment to save a dying Eevee. It became dramatically more observant, however, making scientists wonder how much of the original Eevee remains.",
+      "ac": 18,
+      "hp": 60,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "18",
+        "dex": "14",
+        "con": "18",
+        "int": "6",
+        "wis": "12",
+        "cha": "10"
+      },
+      "skills": [
+        "investigation",
+        "perception"
+      ],
+      "savingThrows": [
+        "dex",
+        "cha"
+      ],
+      "senses": [
+        {
+          "type": "darkvision",
+          "value": 30
+        }
+      ],
+      "abilities": [
+        {
+          "id": "quark-drive",
+          "hidden": false
+        }
+      ],
+      "moves": {
+        "start": [
+          "helping-hand",
+          "tackle",
+          "tail-whip",
+          "metal-claw",
+          "sand-attack",
+          "baby-doll-eyes"
+        ],
+        "level6": [
+          "thunder-shock",
+          "metal-sound"
+        ],
+        "level10": [
+          "autotomize",
+          "supersonic"
+        ],
+        "level14": [
+          "electric-terrain",
+          "volt-tackle"
+        ],
+        "level18": [
+          "iron-head",
+          "synchronoise"
+        ],
+        "tm": [
+          1,
+          10,
+          11,
+          15,
+          16,
+          17,
+          18,
+          21,
+          27,
+          30,
+          32,
+          42,
+          44,
+          45,
+          48,
+          49,
+          57,
+          67,
+          68,
+          72,
+          74,
+          87,
+          88,
+          90,
+          91,
+          100
+        ]
+      },
+      "media": {
+        "main": "/unofficial/droideon/main.png",
+        "attribution": "/unofficial/droideon/attribution.json"
+      }
+    },
+    {
+      "id": "brawleon",
+      "name": "Brawleon",
+      "unofficial": true,
+      "number": 0,
+      "type": [
+        "fighting"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2",
+        "from": [
+          "eevee"
+        ]
+      },
+      "description": "The Roughhouse Pokémon. Its keen eyes lock onto adversaries with unwavering focus, anticipating their every move in battle.",
+      "ac": 16,
+      "hp": 45,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "18",
+        "dex": "18",
+        "con": "14",
+        "int": "6",
+        "wis": "10",
+        "cha": "15"
+      },
+      "skills": [
+        "athletics",
+        "intimidation"
+      ],
+      "savingThrows": [
+        "dex",
+        "cha"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "vital-spirit",
+          "hidden": false
+        },
+        {
+          "id": "guts",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "helping-hand",
+          "tackle",
+          "tail-whip",
+          "rock-smash",
+          "sand-attack",
+          "baby-doll-eyes"
+        ],
+        "level6": [
+          "quick-attack",
+          "counter"
+        ],
+        "level10": [
+          "work-up",
+          "low-sweep"
+        ],
+        "level14": [
+          "take-down",
+          "feint"
+        ],
+        "level18": [
+          "swords-dance",
+          "superpower"
+        ],
+        "tm": [
+          1,
+          8,
+          10,
+          11,
+          15,
+          16,
+          17,
+          18,
+          21,
+          27,
+          30,
+          31,
+          32,
+          42,
+          44,
+          45,
+          47,
+          48,
+          49,
+          52,
+          59,
+          68,
+          87,
+          88,
+          90,
+          100
+        ]
+      },
+      "media": {
+        "main": "/unofficial/brawleon/main.png",
+        "attribution": "/unofficial/brawleon/attribution.json"
+      }
+    },
+    {
+      "id": "specteon",
+      "name": "Specteon",
+      "unofficial": true,
+      "number": 0,
+      "type": [
+        "ghost"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2",
+        "from": [
+          "eevee"
+        ]
+      },
+      "description": "The Ethereal Pokémon. Its luminous, sapphire eyes exude an eerie glow, capable of entrancing those who meet its gaze.",
+      "ac": 15,
+      "hp": 45,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "13",
+        "dex": "15",
+        "con": "12",
+        "int": "6",
+        "wis": "15",
+        "cha": "16"
+      },
+      "skills": [
+        "insight",
+        "perception"
+      ],
+      "savingThrows": [
+        "dex",
+        "cha"
+      ],
+      "senses": [
+        {
+          "type": "darkvision",
+          "value": 30
+        }
+      ],
+      "abilities": [
+        {
+          "id": "insomnia",
+          "hidden": false
+        },
+        {
+          "id": "cursed-body",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "helping-hand",
+          "tackle",
+          "tail-whip",
+          "shadow-claw",
+          "sand-attack",
+          "baby-doll-eyes"
+        ],
+        "level6": [
+          "swift",
+          "shadow-ball"
+        ],
+        "level10": [
+          "curse",
+          "crunch"
+        ],
+        "level14": [
+          "scary-face",
+          "yawn"
+        ],
+        "level18": [
+          "ominous-wind",
+          "dream-eater"
+        ],
+        "tm": [
+          1,
+          10,
+          11,
+          13,
+          15,
+          16,
+          17,
+          18,
+          21,
+          27,
+          30,
+          32,
+          41,
+          42,
+          44,
+          45,
+          48,
+          49,
+          65,
+          68,
+          87,
+          88,
+          90,
+          97,
+          100
+        ]
+      },
+      "media": {
+        "main": "/unofficial/specteon/main.png",
+        "attribution": "/unofficial/specteon/attribution.json"
+      }
+    },
+    {
+      "id": "toxeon",
+      "name": "Toxeon",
+      "unofficial": true,
+      "number": 0,
+      "type": [
+        "poison"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2",
+        "from": [
+          "eevee"
+        ]
+      },
+      "description": "The Secretion Pokémon. Its fur is constantly drenched with a paralyzing toxin which, despite years of study, has no known medical use.",
+      "ac": 15,
+      "hp": 55,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "15",
+        "dex": "15",
+        "con": "17",
+        "int": "6",
+        "wis": "13",
+        "cha": "14"
+      },
+      "skills": [
+        "nature",
+        "survival"
+      ],
+      "savingThrows": [
+        "con",
+        "cha"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "poison-touch",
+          "hidden": false
+        },
+        {
+          "id": "adaptability",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "helping-hand",
+          "tackle",
+          "tail-whip",
+          "poison-fang",
+          "sand-attack",
+          "baby-doll-eyes"
+        ],
+        "level6": [
+          "odor-sleuth",
+          "acid-spray"
+        ],
+        "level10": [
+          "clear-smog",
+          "crunch"
+        ],
+        "level14": [
+          "take-down",
+          "sludge-wave"
+        ],
+        "level18": [
+          "venom-drench",
+          "pollen-puff"
+        ],
+        "tm": [
+          1,
+          9,
+          10,
+          11,
+          15,
+          16,
+          17,
+          18,
+          21,
+          27,
+          30,
+          32,
+          34,
+          36,
+          42,
+          44,
+          45,
+          48,
+          49,
+          68,
+          86,
+          87,
+          88,
+          90,
+          100
+        ]
+      },
+      "media": {
+        "main": "/unofficial/toxeon/main.png",
+        "attribution": "/unofficial/toxeon/attribution.json"
+      }
+    },
+    {
+      "id": "minereon",
+      "name": "Minereon",
+      "unofficial": true,
+      "number": 0,
+      "type": [
+        "rock"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2",
+        "from": [
+          "eevee"
+        ]
+      },
+      "description": "The Geodrift Pokémon. The mineral formations on its back and tail can emit an array of dazzling geoglow patterns, which are believed to be a form of communication among its kind.",
+      "ac": 17,
+      "hp": 50,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "17",
+        "dex": "13",
+        "con": "15",
+        "int": "6",
+        "wis": "11",
+        "cha": "14"
+      },
+      "skills": [
+        "nature",
+        "persuasion"
+      ],
+      "savingThrows": [
+        "str",
+        "cha"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "sturdy",
+          "hidden": false
+        },
+        {
+          "id": "clear-body",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "helping-hand",
+          "tackle",
+          "tail-whip",
+          "rock-blast",
+          "sand-attack",
+          "baby-doll-eyes"
+        ],
+        "level6": [
+          "bide",
+          "power-gem"
+        ],
+        "level10": [
+          "sandstorm",
+          "skull-bash"
+        ],
+        "level14": [
+          "rock-climb",
+          "stealth-rock"
+        ],
+        "level18": [
+          "ancient-power",
+          "earthquake"
+        ],
+        "tm": [
+          1,
+          10,
+          11,
+          15,
+          16,
+          17,
+          18,
+          21,
+          27,
+          30,
+          31,
+          32,
+          37,
+          39,
+          42,
+          44,
+          45,
+          48,
+          49,
+          68,
+          69,
+          80,
+          87,
+          88,
+          90,
+          100
+        ]
+      },
+      "media": {
+        "main": "/unofficial/minereon/main.png",
+        "attribution": "/unofficial/minereon/attribution.json"
+      }
+    },
+    {
+      "id": "aereon",
+      "name": "Aereon",
+      "unofficial": true,
+      "number": 0,
+      "type": [
+        "flying"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2",
+        "from": [
+          "eevee"
+        ]
+      },
+      "description": "The Gliding Pokémon. The currents it creates with its wings carry the soothing scent of fresh air, calming those around it.",
+      "ac": 15,
+      "hp": 45,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        },
+        {
+          "type": "flying",
+          "value": 25
+        }
+      ],
+      "attributes": {
+        "str": "15",
+        "dex": "17",
+        "con": "14",
+        "int": "6",
+        "wis": "13",
+        "cha": "15"
+      },
+      "skills": [
+        "performance",
+        "persuasion"
+      ],
+      "savingThrows": [
+        "dex",
+        "cha"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "technician",
+          "hidden": false
+        },
+        {
+          "id": "cloud-nine",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "helping-hand",
+          "tackle",
+          "tail-whip",
+          "wing-attack",
+          "sand-attack",
+          "baby-doll-eyes"
+        ],
+        "level6": [
+          "quick-attack",
+          "air-cutter"
+        ],
+        "level10": [
+          "defog",
+          "fly"
+        ],
+        "level14": [
+          "take-down",
+          "aerial-ace"
+        ],
+        "level18": [
+          "play-nice",
+          "air-slash"
+        ],
+        "tm": [
+          1,
+          10,
+          11,
+          15,
+          16,
+          17,
+          18,
+          21,
+          25,
+          27,
+          30,
+          32,
+          40,
+          42,
+          44,
+          45,
+          48,
+          49,
+          58,
+          62,
+          68,
+          76,
+          87,
+          88,
+          90,
+          100
+        ]
+      },
+      "media": {
+        "main": "/unofficial/aereon/main.png",
+        "attribution": "/unofficial/aereon/attribution.json"
+      }
+    },
+    {
+      "id": "pesteon",
+      "name": "Pesteon",
+      "unofficial": true,
+      "number": 0,
+      "type": [
+        "bug"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2",
+        "from": [
+          "eevee"
+        ]
+      },
+      "description": "The Infestant Pokémon. The antennae on its head can detect differences in heat down to a tenth of a degree.",
+      "ac": 16,
+      "hp": 45,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "15",
+        "dex": "18",
+        "con": "15",
+        "int": "6",
+        "wis": "14",
+        "cha": "14"
+      },
+      "skills": [
+        "nature",
+        "survival"
+      ],
+      "savingThrows": [
+        "dex",
+        "cha"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "tinted-lens",
+          "hidden": false
+        },
+        {
+          "id": "hustle",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "helping-hand",
+          "tackle",
+          "tail-whip",
+          "pounce",
+          "sand-attack",
+          "baby-doll-eyes"
+        ],
+        "level6": [
+          "tail-whip",
+          "quiver-dance"
+        ],
+        "level10": [
+          "minimize",
+          "u-turn"
+        ],
+        "level14": [
+          "acid-spray",
+          "fury-cutter"
+        ],
+        "level18": [
+          "giga-drain",
+          "last-resort"
+        ],
+        "tm": [
+          1,
+          10,
+          11,
+          15,
+          16,
+          17,
+          18,
+          21,
+          27,
+          28,
+          30,
+          32,
+          42,
+          44,
+          45,
+          48,
+          49,
+          68,
+          81,
+          87,
+          88,
+          89,
+          90,
+          100,
+          101
+        ]
+      },
+      "media": {
+        "main": "/unofficial/pesteon/main.png",
+        "attribution": "/unofficial/pesteon/attribution.json"
+      }
+    },
+    {
+      "id": "terreon",
+      "name": "Terreon",
+      "unofficial": true,
+      "number": 0,
+      "type": [
+        "ground"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2",
+        "from": [
+          "eevee"
+        ]
+      },
+      "description": "The Bone Meal Pokémon. The bones it scavenges break down in its fur over time, giving it a distinctive smell and luster.",
+      "ac": 16,
+      "hp": 50,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "17",
+        "dex": "14",
+        "con": "16",
+        "int": "6",
+        "wis": "13",
+        "cha": "15"
+      },
+      "skills": [
+        "perception",
+        "survival"
+      ],
+      "savingThrows": [
+        "str",
+        "cha"
+      ],
+      "senses": [
+        {
+          "type": "tremorsense",
+          "value": 30
+        }
+      ],
+      "abilities": [
+        {
+          "id": "sand-rush",
+          "hidden": false
+        },
+        {
+          "id": "sand-veil",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "helping-hand",
+          "tackle",
+          "tail-whip",
+          "mud-shot",
+          "sand-attack",
+          "baby-doll-eyes"
+        ],
+        "level6": [
+          "wood-hammer",
+          "rototiller"
+        ],
+        "level10": [
+          "sandstorm",
+          "sand-tomb"
+        ],
+        "level14": [
+          "body-slam",
+          "bone-rush",
+          "dig"
+        ],
+        "level18": [
+          "shore-up"
+        ],
+        "tm": [
+          1,
+          10,
+          11,
+          15,
+          16,
+          17,
+          18,
+          21,
+          26,
+          27,
+          30,
+          32,
+          37,
+          42,
+          44,
+          45,
+          48,
+          49,
+          68,
+          78,
+          86,
+          87,
+          88,
+          90,
+          100
+        ]
+      },
+      "media": {
+        "main": "/unofficial/terreon/main.png",
+        "attribution": "/unofficial/terreon/attribution.json"
+      }
+    },
+    {
+      "id": "drakeon",
+      "name": "Drakeon",
+      "unofficial": true,
+      "number": 0,
+      "type": [
+        "dragon"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2",
+        "from": [
+          "eevee"
+        ]
+      },
+      "description": "The Elementist Pokémon. Drakeon is the rarest naturally occuring Eevee evolution. Legends speak of its ability to control and manipulate elemental energies, bestowing it with an array of versatile breath attacks.",
+      "ac": 17,
+      "hp": 50,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        },
+        {
+          "type": "flying",
+          "value": 15
+        }
+      ],
+      "attributes": {
+        "str": "18",
+        "dex": "15",
+        "con": "16",
+        "int": "6",
+        "wis": "12",
+        "cha": "16"
+      },
+      "skills": [
+        "perception",
+        "intimidation"
+      ],
+      "savingThrows": [
+        "dex",
+        "cha"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "intimidate",
+          "hidden": false
+        },
+        {
+          "id": "inner-focus",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "helping-hand",
+          "tackle",
+          "tail-whip",
+          "dragon-breath",
+          "sand-attack",
+          "baby-doll-eyes"
+        ],
+        "level6": [
+          "flamethrower",
+          "dragon-claw"
+        ],
+        "level10": [
+          "dragon-dance",
+          "crunch"
+        ],
+        "level14": [
+          "muddy-water",
+          "outrage",
+          "last-resort"
+        ],
+        "level18": [
+          "take-down",
+          "thunder-fang",
+          "hyper-beam"
+        ],
+        "tm": [
+          1,
+          2,
+          6,
+          10,
+          11,
+          15,
+          16,
+          17,
+          18,
+          21,
+          27,
+          30,
+          32,
+          42,
+          44,
+          45,
+          48,
+          49,
+          53,
+          68,
+          79,
+          82,
+          87,
+          88,
+          90,
+          91,
+          100
+        ]
+      },
+      "media": {
+        "main": "/unofficial/drakeon/main.png",
+        "attribution": "/unofficial/drakeon/attribution.json"
+      }
+    },
+    {
+      "id": "eeveon",
+      "name": "Eeveon",
+      "unofficial": true,
+      "number": 0,
+      "type": [
+        "normal"
+      ],
+      "size": "small",
+      "sr": 8,
+      "minLevel": 5,
+      "eggGroup": [
+        "field"
+      ],
+      "gender": "1:7",
+      "evolution": {
+        "stage": "2",
+        "maxStage": "2",
+        "from": [
+          "eevee"
+        ]
+      },
+      "description": "The Domesticated Pokémon. It is born from an absence of evolutionary pressure. Scientists believe increasingly more Eevees will evolve into Eeveon as human influence grows.",
+      "ac": 15,
+      "hp": 45,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "15",
+        "dex": "16",
+        "con": "13",
+        "int": "6",
+        "wis": "12",
+        "cha": "16"
+      },
+      "skills": [
+        "insight",
+        "performance",
+        "persuasion"
+      ],
+      "savingThrows": [
+        "dex",
+        "cha"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "cute-charm",
+          "hidden": false
+        },
+        {
+          "id": "serene-grace",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "helping-hand",
+          "tackle",
+          "tail-whip",
+          "charm",
+          "sand-attack",
+          "baby-doll-eyes"
+        ],
+        "level6": [
+          "swift",
+          "sing"
+        ],
+        "level10": [
+          "heal-pulse",
+          "encore",
+          "quick-attack",
+          "refresh"
+        ],
+        "level14": [
+          "follow-me",
+          "me-first",
+          "last-resort",
+          "baton-pass"
+        ],
+        "level18": [
+          "hyper-beam",
+          "trump-card"
+        ],
+        "tm": [
+          1,
+          10,
+          11,
+          15,
+          16,
+          17,
+          18,
+          20,
+          21,
+          27,
+          30,
+          32,
+          33,
+          42,
+          44,
+          45,
+          46,
+          48,
+          49,
+          68,
+          87,
+          88,
+          90,
+          96,
+          100
+        ]
+      },
+      "media": {
+        "main": "/unofficial/eeveon/main.png",
+        "attribution": "/unofficial/eeveon/attribution.json"
       }
     }
   ]

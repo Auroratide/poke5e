@@ -856,6 +856,11 @@
       "description": "Once per short rest, this Pokémon may double the damage dice for a single damage roll. The player must announce that they are using this ability before the attack roll."
     },
     {
+      "id": "quark-drive",
+      "name": "Quark Drive",
+      "description": "While on electric terrain, gain +2 to STR and DEX ability checks and saving throws."
+    },
+    {
       "id": "queenly-majesty",
       "name": "Queenly Majesty",
       "description": "Creatures within line of sight of this Pokémon cannot use bonus actions to activate Moves. Moves that would normally have a Move Time of \"1 bonus action\" instead have a Move Time of \"1 action\"."
