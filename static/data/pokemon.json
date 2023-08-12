@@ -128801,7 +128801,7 @@
       "speed": [
         {
           "type": "walking",
-          "value": 30
+          "value": 40
         }
       ],
       "attributes": {
@@ -129276,11 +129276,11 @@
       "speed": [
         {
           "type": "walking",
-          "value": 30
+          "value": 40
         },
         {
           "type": "flying",
-          "value": 25
+          "value": 30
         }
       ],
       "attributes": {
@@ -129398,7 +129398,7 @@
       "speed": [
         {
           "type": "walking",
-          "value": 30
+          "value": 40
         }
       ],
       "attributes": {
@@ -129515,7 +129515,7 @@
       "speed": [
         {
           "type": "walking",
-          "value": 30
+          "value": 40
         }
       ],
       "attributes": {
@@ -129637,7 +129637,7 @@
       "speed": [
         {
           "type": "walking",
-          "value": 30
+          "value": 40
         },
         {
           "type": "flying",
@@ -129691,10 +129691,10 @@
         "level14": [
           "muddy-water",
           "outrage",
-          "last-resort"
+          "draco-power"
         ],
         "level18": [
-          "take-down",
+          "last-resort",
           "thunder-fang",
           "hyper-beam"
         ],
@@ -129762,7 +129762,7 @@
       "speed": [
         {
           "type": "walking",
-          "value": 30
+          "value": 40
         }
       ],
       "attributes": {
