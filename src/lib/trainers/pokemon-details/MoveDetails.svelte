@@ -13,6 +13,7 @@
     import { modifierForScore } from '$lib/dnd/attributes'
     import { createEventDispatcher } from 'svelte'
     import type { PokeType } from '$lib/pokemon/types'
+    import MoveDescription from '$lib/moves/MoveDescription.svelte'
 
     const dispatch = createEventDispatcher()
 
@@ -77,7 +78,11 @@
             </span>
         </div>
     </div>
+    <div class="space-inner smaller-font">
+        <MoveDescription move={moveData} />
+    </div>
     {#if move.notes !== undefined && move.notes.length > 0}
+        <hr />
         <div class="space-inner smaller-font">{move.notes}</div>
     {/if}
 </div>
