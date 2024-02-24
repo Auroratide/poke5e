@@ -408,7 +408,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 }
 
 export const getReadKeys = (): ReadWriteKey[] =>
-    (localStorage.getItem('trainers') ?? '').split(',')
+    localStorage.getItem('trainers')?.split(',') ?? []
 
 export const addReadKey = (key: ReadWriteKey) => {
     const previous = getReadKeys()
