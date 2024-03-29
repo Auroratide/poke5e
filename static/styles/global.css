@@ -116,6 +116,7 @@ body {
         radial-gradient(circle at 80vw 95vh, hsla(45, 80%, 65%, 0.25), hsla(45, 50%, 65%, 0) 67%);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 a {
