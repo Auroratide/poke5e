@@ -1,9 +1,9 @@
 <script lang="ts">
-    export let value: string = ''
+	export let value: string = ""
 
-    $: title = value.length > 0 ? `${value} | ` : ''
+	$: title = value.length > 0 ? `${value} | ` : ""
 </script>
 
 <svelte:head>
-    <title>{title}Pokemon 5e Reference</title>
+	<title>{title}Pokemon 5e Reference</title>
 </svelte:head>

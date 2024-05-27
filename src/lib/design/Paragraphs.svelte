@@ -1,9 +1,9 @@
 <script lang="ts">
-    export let value = ''
+	export let value = ""
 
-    $: lines = value.split(/\n+/)
+	$: lines = value.split(/\n+/)
 </script>
 
 {#each lines as line}
-    <p>{line}</p>
+	<p>{line}</p>
 {/each}

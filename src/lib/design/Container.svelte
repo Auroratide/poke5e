@@ -1,10 +1,10 @@
 <div class="container">
-    <slot></slot>
+	<slot></slot>
 </div>
 
 <style>
-    .container {
-        max-width: var(--container-width);
-        margin: auto;
-    }
+	.container {
+		max-width: var(--container-width);
+		margin: auto;
+	}
 </style>

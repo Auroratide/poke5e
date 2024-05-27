@@ -1,29 +1,29 @@
 <script lang="ts">
-    export let columns = 1
+	export let columns = 1
 </script>
 
 <dl style:--local-columns="{columns}">
-    <slot></slot>
+	<slot></slot>
 </dl>
 
-<style lang="scss">
-    dl {
-        display: grid;
-        grid-template-columns: repeat(var(--local-columns), auto 1fr);
-        column-gap: 0.5em;
-        font-size: var(--font-sz-venus);
-        line-height: 1.25;
+<style>
+	dl {
+		display: grid;
+		grid-template-columns: repeat(var(--local-columns), auto 1fr);
+		column-gap: 0.5em;
+		font-size: var(--font-sz-venus);
+		line-height: 1.25;
+	}
 
-        :global(dt) {
-            font-weight: 700;
+	dl :global(dt) {
+		font-weight: 700;
+	}
 
-            &::after {
-                content: ':';
-            }
-        }
+	dl :global(dt::after) {
+		content: ':';
+	}
 
-        :global(dd) {
-            margin: 0;
-        }
-    }
+	dl :global(dd) {
+		margin: 0;
+	}
 </style>

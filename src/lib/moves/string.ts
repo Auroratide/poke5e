@@ -1,5 +1,5 @@
-import type { Power } from './types'
+import type { Power } from "./types"
 
-export const powerAsString = (value: Power) => typeof value === 'string'
-    ? value
-    : value.join(', ')
+export const powerAsString = (value: Power) => typeof value === "string"
+	? value
+	: value.join(", ")

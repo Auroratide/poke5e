@@ -1,8 +1,8 @@
 export type PNode = string
 export type TableNode = {
-    type: 'table',
-    headers: string[],
-    rows: string[][],
+	type: "table",
+	headers: string[],
+	rows: string[][],
 }
 
 export type BodyText = (PNode | TableNode)[]

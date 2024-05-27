@@ -1,0 +1,4 @@
+root = true
+
+[*.{js,ts,html,css,json,svelte}]
+indent_style = tab

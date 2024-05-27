@@ -1,7 +1,8 @@
-import adapter from '@sveltejs/adapter-static';
-import preprocess from 'svelte-preprocess';
+/* eslint-disable no-undef */
+import adapter from "@sveltejs/adapter-static"
+import preprocess from "svelte-preprocess"
 
-const dev = process.env.NODE_ENV === 'development'
+const dev = process.env.NODE_ENV === "development"
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -11,10 +12,10 @@ const config = {
 
 	kit: {
 		paths: {
-			base: dev ? '' : '/poke5e'
+			base: dev ? "" : "/poke5e",
 		},
-		adapter: adapter()
-	}
-};
+		adapter: adapter(),
+	},
+}
 
-export default config;
+export default config

@@ -1,0 +1,36 @@
+env:
+  browser: true
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/recommended
+  - plugin:svelte/recommended
+parser: "@typescript-eslint/parser"
+parserOptions:
+  ecmaVersion: "latest"
+  sourceType: "module"
+  extraFileExtensions:
+    - ".svelte"
+plugins:
+  - "@typescript-eslint"
+  - "only-error"
+rules:
+  comma-dangle:
+    - "error"
+    - "always-multiline"
+  quotes:
+    - "error"
+    - "double"
+  semi:
+    - "error"
+    - "never"
+  indent:
+    - "error"
+    - "tab"
+  svelte/no-at-html-tags:
+    - "off"
+overrides:
+    - files:
+        - "*.svelte"
+      parser: svelte-eslint-parser
+      parserOptions:
+        parser: "@typescript-eslint/parser"
