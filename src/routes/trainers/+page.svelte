@@ -21,6 +21,7 @@
 	import EditTrainerCard from "$lib/trainers/trainer-details/EditTrainerCard.svelte"
 	import DeleteTrainerCard from "$lib/trainers/trainer-details/DeleteTrainerCard.svelte"
 	import AccessKeyCard from "$lib/trainers/trainer-details/AccessKeyCard.svelte"
+	import RemoveTrainerCard from "$lib/trainers/trainer-details/RemoveTrainerCard.svelte"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: pokemonId = browser ? $page.url.searchParams.get("pokemon") : undefined
@@ -49,21 +50,21 @@
 	<nav slot="side" class="table" aria-label="Pokemon List">
 		{#if trainerId}
 			{#await trainer}
-					<Loader />
+				<Loader />
 			{:then trainer}
-					{#if trainer}
-						<TrainerRoster {trainer} currentPokemon={pokemonId} />
-					{:else}
-						<NoTrainer trainerKey={trainerId} />
-					{/if}
+				{#if trainer}
+					<TrainerRoster {trainer} currentPokemon={pokemonId} />
+				{:else}
+					<NoTrainer trainerKey={trainerId} />
+				{/if}
 			{/await}
 		{:else}
 			{#await trainerList}
-					<Loader />
+				<Loader />
 			{:then trainerList}
-					{#if trainerList}
-						<TrainerList trainers={trainerList} />
-					{/if}
+				{#if trainerList}
+					<TrainerList trainers={trainerList} />
+				{/if}
 			{/await}
 		{/if}
 	</nav>
@@ -72,25 +73,27 @@
 			<Loader />
 		{:then trainer}
 			{#if !trainer}
-					<br />
+				<br />
 			{:else if action === PageAction.addPokemon}
-					<AddPokemonCard {trainer} />
+				<AddPokemonCard {trainer} />
 			{:else if action === PageAction.editPokemon}
-					<EditPokemonCard {trainer} id={pokemonId} />
+				<EditPokemonCard {trainer} id={pokemonId} />
 			{:else if action === PageAction.evolvePokemon}
-					<EvolvePokemonCard {trainer} id={pokemonId} />
+				<EvolvePokemonCard {trainer} id={pokemonId} />
 			{:else if action === PageAction.removePokemon}
-					<RemovePokemonCard {trainer} id={pokemonId} />
+				<RemovePokemonCard {trainer} id={pokemonId} />
 			{:else if pokemonId}
-					<PokemonCard {trainer} id={pokemonId} />
+				<PokemonCard {trainer} id={pokemonId} />
 			{:else if action === PageAction.editTrainer}
-					<EditTrainerCard {trainer} />
+				<EditTrainerCard {trainer} />
+			{:else if action === PageAction.removeTrainer}
+				<RemoveTrainerCard {trainer} />
 			{:else if action === PageAction.retireTrainer}
-					<DeleteTrainerCard {trainer} />
+				<DeleteTrainerCard {trainer} />
 			{:else if action === PageAction.accessKey}
-					<AccessKeyCard {trainer} />
+				<AccessKeyCard {trainer} />
 			{:else}
-					<TrainerCard {trainer} />
+				<TrainerCard {trainer} />
 			{/if}
 		{/await}
 	{:else}

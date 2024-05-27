@@ -6,7 +6,7 @@ import type { LearnedMove, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } 
 import { error } from "$lib/design/errors/store"
 
 type AllTrainers = {
-	[readKey: ReadWriteKey]: TrainerData & WithUpdater
+	[readKey: ReadWriteKey]: TrainerData & WithUpdater & WithRemover
 }
 
 type UpdaterOptions = {
@@ -26,8 +26,12 @@ type WithUpdater = {
 	update?: TrainerUpdater
 }
 
+type WithRemover = {
+	remove: () => Promise<void>
+}
+
 export type TrainerStore = {
-	subscribe: (run: (value: TrainerData & WithUpdater) => void) => () => void,
+	subscribe: (run: (value: TrainerData & WithUpdater & WithRemover) => void) => () => void,
 	verifyAccess: (writeKey: ReadWriteKey) => Promise<boolean>,
 }
 
@@ -54,6 +58,16 @@ const createStore = () => {
 		}))
 	}
 
+	const createRemoveTrainer = (info: Trainer) => () => {
+		return provider.removeTrainer(info.id, info.readKey).then(() => {
+			storeUpdate((prev) => {
+				// eslint-disable-next-line @typescript-eslint/no-unused-vars
+				const { [info.readKey]: _, ...rest } = prev
+				return rest
+			})
+		})
+	}
+
 	return {
 		get: (readKey: ReadWriteKey) => {
 			if (promises[readKey] == null) {
@@ -76,7 +90,7 @@ const createStore = () => {
 							})
 						},
 						retire: () => {
-							return provider.removeTrainer(data.writeKey, data.info.id, data.info.readKey).then(() => {
+							return provider.deleteTrainer(data.writeKey, data.info.id, data.info.readKey).then(() => {
 								storeUpdate((prev) => {
 									// eslint-disable-next-line @typescript-eslint/no-unused-vars
 									const { [data.info.readKey]: _, ...rest } = prev
@@ -219,11 +233,12 @@ const createStore = () => {
 
 					let updated = false
 					return {
-						subscribe: (s: (value: TrainerData & WithUpdater) => void) => {
+						subscribe: (s: (value: TrainerData & WithUpdater & WithRemover) => void) => {
 							return storeSubscribe((all) => {
 								s(all[readKey] ?? {
 									...data,
 									update,
+									remove: createRemoveTrainer(data.info),
 								})
 
 								if (!updated) {
@@ -233,6 +248,7 @@ const createStore = () => {
 										[readKey]: {
 											...data,
 											update,
+											remove: createRemoveTrainer(data.info),
 										},
 									}))
 								}
@@ -276,6 +292,7 @@ const createStore = () => {
 										[cur.readKey]: {
 											info: cur,
 											pokemon: [],
+											remove: createRemoveTrainer(cur),
 										},
 										...newAll,
 									}), prev))

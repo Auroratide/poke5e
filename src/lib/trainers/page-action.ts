@@ -7,5 +7,6 @@ export const PageAction = {
 	findTrainer: "find-trainer",
 	editTrainer: "edit-trainer",
 	retireTrainer: "retire-trainer",
+	removeTrainer: "remove-trainer",
 	accessKey: "access-key",
 }

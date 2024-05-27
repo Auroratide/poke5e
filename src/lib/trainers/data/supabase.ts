@@ -118,7 +118,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return data > 0
 	}
 
-	removeTrainer = async (writeKey: ReadWriteKey, id: TrainerId, readKey: ReadWriteKey): Promise<boolean> => {
+	removeTrainer = async (id: TrainerId, readKey: ReadWriteKey): Promise<void> => {
+		removeWriteKey(readKey)
+		removeReadKey(readKey)
+	}
+
+	deleteTrainer = async (writeKey: ReadWriteKey, id: TrainerId, readKey: ReadWriteKey): Promise<boolean> => {
 		const { data, error } = await this.supabase.rpc("delete_trainer", {
 			_write_key: writeKey,
 			_id: id,
