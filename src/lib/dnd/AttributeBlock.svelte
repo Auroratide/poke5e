@@ -28,7 +28,7 @@
 	<dd>{attributes.cha} ({modifierAsString(modifierForScore(attributes.cha))})</dd>
 </dl>
 
-<style lang="scss">
+<style>
 	dl {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
@@ -36,20 +36,20 @@
 		grid-auto-flow: column;
 		font-size: var(--font-sz-venus);
 		text-align: center;
+	}
 
-		dt {
-			font-weight: 700;
-			text-transform: uppercase;
-			background-color: var(--skin-bg-dark);
-			color: var(--skin-bg-text);
-			padding: 0.25em 0;
-		}
+	dt {
+		font-weight: 700;
+		text-transform: uppercase;
+		background-color: var(--skin-bg-dark);
+		color: var(--skin-bg-text);
+		padding: 0.25em 0;
+	}
 
-		dd {
-			margin: 0;
-			background-color: var(--skin-bg);
-			color: var(--skin-bg-text);
-			padding-bottom: 0.25em;
-		}
+	dd {
+		margin: 0;
+		background-color: var(--skin-bg);
+		color: var(--skin-bg-text);
+		padding-bottom: 0.25em;
 	}
 </style>

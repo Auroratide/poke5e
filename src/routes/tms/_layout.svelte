@@ -23,7 +23,7 @@
 	<slot></slot>
 </Page>
 
-<style lang="scss">
+<style>
 	nav {
 		display: flex;
 		flex-direction: column;

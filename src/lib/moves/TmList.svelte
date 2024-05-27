@@ -33,7 +33,7 @@
 	</BubbleRow.Row>
 </SortableTable>
 
-<style lang="scss">
+<style>
 	.search-field {
 		margin-bottom: 0.5em;
 	}

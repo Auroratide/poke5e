@@ -22,23 +22,23 @@
 	</div>
 </Theme>
 
-<style lang="scss">
+<style>
 	.page {
 		height: 100%;
 		max-width: calc(0.5 * var(--container-width));
 		margin: auto;
+	}
 
-		.side, main {
-			padding: 0.5em;
-		}
+	.page .side, .page main {
+		padding: 0.5em;
+	}
 
-		.side {
-			height: 33%;
-		}
+	.page .side {
+		height: 33%;
+	}
 
-		main {
-			height: 67%;
-		}
+	.page main {
+		height: 67%;
 	}
 
 	@media screen and (min-width: 75rem) {
@@ -49,11 +49,11 @@
 			justify-content: center;
 			max-width: 75rem;
 			height: 100%;
+		}
 
-			.side, main {
-					flex: 0 1 37.5rem;
-					height: 100%;
-			}
+		.page .side, .page main {
+			flex: 0 1 37.5rem;
+			height: 100%;
 		}
 	}
 </style>

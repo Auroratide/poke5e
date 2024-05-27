@@ -66,44 +66,44 @@
 	</span>
 </div>
 
-<style lang="scss">
+<style>
 	.grid {
 		display: grid;
 		grid-template-columns: 2fr 1fr;
 		align-items: center;
 		gap: 0.125em;
+	}
 
-		.bar {
-			grid-column: span 2;
-			display: flex;
-		}
+	.bar {
+		grid-column: span 2;
+		display: flex;
+	}
 
-		.hp {
-			font-size: var(--font-sz-neptune);
+	.hp {
+		font-size: var(--font-sz-neptune);
+	}
 
-			.current-hp {
-					--input-min-width: 3ch;
-					display: inline-block;
-			}
-		}
+	.current-hp {
+		--input-min-width: 3ch;
+		display: inline-block;
+	}
 
-		.hit-dice {
-			display: flex;
-			flex-direction: column;
-			font-size: var(--font-sz-mars);
+	.hit-dice {
+		display: flex;
+		flex-direction: column;
+		font-size: var(--font-sz-mars);
+	}
 
-			.hit-dice-bar {
-					margin-bottom: 0.125em;
-			}
+	.hit-dice-bar {
+		margin-bottom: 0.125em;
+	}
 
-			.current-hit-dice {
-					--input-min-width: 3ch;
-					display: inline-block;
-			}
+	.current-hit-dice {
+		--input-min-width: 3ch;
+		display: inline-block;
+	}
 
-			.hit-dice-text {
-					align-self: flex-end;
-			}
-		}
+	.hit-dice-text {
+		align-self: flex-end;
 	}
 </style>

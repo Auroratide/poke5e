@@ -36,7 +36,7 @@
 	</section>
 </main>
 
-<style lang="scss">
+<style>
 	main {
 		max-width: calc(0.5 * var(--container-width));
 		margin: auto;
@@ -50,16 +50,14 @@
 		margin-bottom: 3em;
 	}
 
-	.title-section {
-		h1 {
-			font-size: var(--font-sz-jupiter);
-			margin-bottom: 0.5em;
-		}
+	.title-section h1 {
+		font-size: var(--font-sz-jupiter);
+		margin-bottom: 0.5em;
+	}
 
-		p {
-			font-size: var(--font-sz-neptune);
-			line-height: 1.5;
-		}
+	.title-section p {
+		font-size: var(--font-sz-neptune);
+		line-height: 1.5;
 	}
 
 	.footer-section {
@@ -72,52 +70,52 @@
 		margin: 0 auto 4em;
 		padding: 0;
 		max-width: calc(0.33 * var(--container-width));
+	}
 
-		li {
-			--skin-local-stroke: var(--theme-main);
-			position: relative;
-			display: block;
-			font-size: var(--font-sz-uranus);
-			padding: 1em 1.25em;
-			overflow: hidden;
-			background-color: var(--skin-content);
-			border-radius: 2em;
-			box-shadow: var(--elev-cirrus);
-			margin-bottom: 1em;
-		}
+	ul li {
+		--skin-local-stroke: var(--theme-main);
+		position: relative;
+		display: block;
+		font-size: var(--font-sz-uranus);
+		padding: 1em 1.25em;
+		overflow: hidden;
+		background-color: var(--skin-content);
+		border-radius: 2em;
+		box-shadow: var(--elev-cirrus);
+		margin-bottom: 1em;
+	}
 
-		a {
-			color: var(--skin-content-text);
-			text-decoration: none;
-		}
+	ul a {
+		color: var(--skin-content-text);
+		text-decoration: none;
+	}
 
-		a::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			z-index: 2;
-		}
+	ul a::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+	}
 
-		.icon {
-			position: absolute;
-			display: block;
-			right: 0.5em;
-			top: 0;
-			width: 4em;
-			height: 4em;
-			z-index: 1;
-			transform: rotate(var(--skew-angle));
-		}
+	ul .icon {
+		position: absolute;
+		display: block;
+		right: 0.5em;
+		top: 0;
+		width: 4em;
+		height: 4em;
+		z-index: 1;
+		transform: rotate(var(--skew-angle));
+	}
 
-		li:hover {
-			background-color: var(--skin-bg);
+	ul li:hover {
+		background-color: var(--skin-bg);
+	}
 
-			a {
-					color: var(--skin-bg-text);
-			}
-		}
+	ul li:hover a {
+		color: var(--skin-bg-text);
 	}
 </style>

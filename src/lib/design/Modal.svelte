@@ -33,7 +33,7 @@
 	</div>
 {/if}
 
-<style lang="scss">
+<style>
 	.modal {
 		position: fixed;
 		top: 0;

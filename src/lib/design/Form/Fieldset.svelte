@@ -10,7 +10,7 @@
 	</div>
 </fieldset>
 
-<style lang="scss">
+<style>
 	fieldset {
 		border: none;
 		padding: 0.5em 1em;
@@ -24,11 +24,11 @@
 		margin-left: -4em;
 		padding: 0.25em 1em 0.25em 4em;
 		transform: skewX(var(--skew-angle));
+	}
 
-		.unskew {
-			display: inline-block;
-			transform: skewX(var(--skew-undo));
-		}
+	legend .unskew {
+		display: inline-block;
+		transform: skewX(var(--skew-undo));
 	}
 
 	.grid {
