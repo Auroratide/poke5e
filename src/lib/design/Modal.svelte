@@ -23,7 +23,7 @@
 </script>
 
 {#if isOpen}
-	<div role="dialog" aria-label={title} class="modal" transition:fade={{ duration: 200 }} on:click={onShadeClicked}>
+	<div role="dialog" aria-label={title} class="modal" transition:fade|global={{ duration: 200 }} on:click={onShadeClicked}>
 		<div class="card">
 			<Card {title}>
 					<button class="close-button" slot="header-extra" on:click={dismiss} aria-label="close">&times;</button>

@@ -18,7 +18,7 @@
 	<h1>{title}</h1>
 	<p>{message}</p>
 	<p class="missingno"><MissingNo /></p>
-	<p>Try <a href="{base}">returning to the home page.</a></p>
+	<p>Try <a href="{base}/">returning to the home page.</a></p>
 </main>
 
 <style>

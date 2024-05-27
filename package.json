@@ -17,10 +17,11 @@
 		"lint": "eslint src --ignore-path .gitignore"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-static": "^1.0.6",
-		"@sveltejs/kit": "^1.30.4",
-		"@typescript-eslint/eslint-plugin": "^7.9.0",
-		"@typescript-eslint/parser": "^7.9.0",
+		"@sveltejs/adapter-static": "^3.0.1",
+		"@sveltejs/kit": "^2.5.10",
+		"@sveltejs/vite-plugin-svelte": "^3.1.0",
+		"@typescript-eslint/eslint-plugin": "^7.10.0",
+		"@typescript-eslint/parser": "^7.10.0",
 		"dotenv": "^16.4.5",
 		"eslint": "8.57.0",
 		"eslint-plugin-only-error": "^1.0.2",
@@ -29,13 +30,13 @@
 		"npm-run-all": "^4.1.5",
 		"postgres-migrations": "^5.3.0",
 		"sass": "^1.77.2",
-		"svelte": "^3.59.2",
+		"svelte": "^4.2.17",
 		"svelte-check": "^3.7.1",
 		"svelte-preprocess": "^5.1.4",
 		"taiko": "^1.3.10",
 		"tslib": "^2.6.2",
-		"typescript": "~4.9.5",
-		"vite": "^4.5.3"
+		"typescript": "^5.4.5",
+		"vite": "^5.2.11"
 	},
 	"type": "module",
 	"license": "ISC",
@@ -45,7 +46,7 @@
 	},
 	"dependencies": {
 		"@auroratide/pokemon-types": "^0.1.0",
-		"@supabase/supabase-js": "^2.43.2"
+		"@supabase/supabase-js": "^2.43.4"
 	},
 	"packageManager": "pnpm@8.15.1",
 	"engines": {
