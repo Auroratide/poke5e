@@ -18,7 +18,7 @@ This site is a static [SvelteKit](https://kit.svelte.dev/) site that makes use o
 
 Assuming you have the code downloaded locally, you will need to set up a `.env` file; use the `.env.example` file as a template.
 
-You're not going to have access to the real Supabase credentials, and I haven't set up a local supabase docker image yet. For now, you can either set up your own supabase environment, or set the `PUBLIC_ONLINE` environment variable to true; this sets up a sorta in-memory representation of the database.
+You're not going to have access to the real Supabase credentials, and I haven't set up a local supabase docker image yet. For now, you can either set up your own supabase environment, or set the `PUBLIC_OFFLINE` environment variable to true; this sets up a sorta in-memory representation of the database.
 
 ### Running the code
 
