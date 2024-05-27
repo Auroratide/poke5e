@@ -1,0 +1,1 @@
+import{r as n,w as o}from"./index.9IHGp1c2.js";import{b as r}from"./paths.BGcMIHb1.js";const i=n(void 0,t=>{typeof window<"u"&&fetch(`${r}/pokemon.json`).then(e=>e.json()).then(e=>t(e.items))}),f=o(""),m=o(()=>0);export{m as c,f,i as p};
