@@ -1,0 +1,1 @@
+import{w as r}from"./index.9IHGp1c2.js";const i=r(""),l=r(""),n=r(()=>0),{subscribe:e,set:t,update:a}=r({hasError:!1,message:""}),c={subscribe:e,show:s=>t({hasError:!0,message:s}),hide:()=>a(s=>({...s,hasError:!1}))};export{n as a,c as e,i as f,l as t};
