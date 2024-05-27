@@ -21,7 +21,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 	allTrainers = async (): Promise<Trainer[]> => {
 		return Promise.all(getReadKeys().map((key) => this.supabase.rpc("get_trainer", { _read_key: key })
-			.maybeSingle()
+			.maybeSingle<TrainerRow>()
 			.then(({ data, error }) => {
 				if (error) {
 					throw new TrainerDataProviderError("Could not get trainer.", error)
@@ -36,7 +36,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
     
 	getTrainer = async (readKey: ReadWriteKey): Promise<undefined | TrainerData> => {
 		const trainer = await this.supabase.rpc("get_trainer", { _read_key: readKey })
-			.maybeSingle()
+			.maybeSingle<TrainerRow>()
 			.then(({ data, error }) => {
 				if (error) {
 					throw new TrainerDataProviderError("Could not get trainer.", error)
@@ -80,7 +80,11 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		const { data, error } = await this.supabase.rpc("new_trainer", {
 			_name: info.name,
 			_description: info.description,
-		}).single()
+		}).single<{
+			ret_id: string,
+			ret_read_key: string,
+			ret_write_key: string,
+		}>()
 
 		if (error) {
 			throw new TrainerDataProviderError("Could not create trainer.", error)
@@ -105,7 +109,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_write_key: writeKey,
 			_name: info.name,
 			_description: info.description,
-		}).single()
+		}).single<number>()
 
 		if (error) {
 			throw new TrainerDataProviderError("Could not update trainer.", error)
@@ -127,7 +131,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		const { data, error } = await this.supabase.rpc("delete_trainer", {
 			_write_key: writeKey,
 			_id: id,
-		}).single()
+		}).single<number>()
 
 		if (error) {
 			throw new TrainerDataProviderError("Could not delete trainer.", error)
@@ -190,7 +194,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_cha: info.savingThrows.includes("cha"),
 			_ability: info.ability,
 			_notes: info.notes,
-		}).single()
+		}).single<number>()
 
 		if (error) {
 			throw new TrainerDataProviderError("Could not update pokemon.", error)
@@ -274,7 +278,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_cha: pokemon.savingThrows.includes("cha"),
 			_ability: pokemon.abilities[0]?.id,
 			_notes: "",
-		}).single()
+		}).single<number>()
     
 		if (error) {
 			throw new TrainerDataProviderError("Could not add pokemon.", error)
@@ -290,7 +294,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		const { data, error } = await this.supabase.rpc("remove_pokemon", {
 			_write_key: writeKey,
 			_id: id,
-		}).single()
+		}).single<number>()
 
 		if (error) {
 			throw new TrainerDataProviderError("Could not remove pokemon.", error)
@@ -308,7 +312,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		await Promise.all(deletedIds.map((id) => this.supabase.rpc("remove_move", {
 			_write_key: writeKey,
 			_id: id,
-		}).single().then(({ data, error }) => {
+		}).single<number>().then(({ data, error }) => {
 			if (error) {
 				throw new TrainerDataProviderError("Could not delete move.", error)
 			}
@@ -329,7 +333,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					_pp_cur: move.pp.current,
 					_pp_max: move.pp.max,
 					_notes: move.notes,
-				}).single().then(({ data, error }) => {
+				}).single<number>().then(({ data, error }) => {
 					if (error) {
 						throw new TrainerDataProviderError("Could not update move.", error)
 					}
@@ -348,7 +352,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					_pp_cur: move.pp.current,
 					_pp_max: move.pp.max,
 					_notes: move.notes,
-				}).single().then(({ data, error }) => {
+				}).single<string>().then(({ data, error }) => {
 					if (error) {
 						throw new TrainerDataProviderError("Could not add move.", error)
 					}
@@ -370,7 +374,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_pp_cur: move.pp.current,
 			_pp_max: move.pp.max,
 			_notes: move.notes,
-		}).single()
+		}).single<number>()
 
 		if (error) {
 			throw new TrainerDataProviderError("Could not update pokemon.", error)
@@ -387,7 +391,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		const { data, error } = await this.supabase.rpc("verify_write_key", {
 			_id: trainer.id,
 			_write_key: writeKey,
-		}).single()
+		}).single<number>()
 
 		if (error) {
 			throw new TrainerDataProviderError("Could not verify trainer.", error)
