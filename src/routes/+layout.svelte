@@ -3,6 +3,8 @@
 	import type { Writable } from "svelte/store"
 	import Container from "$lib/design/Container.svelte"
 	import { base } from "$app/paths"
+	import { afterNavigate } from "$app/navigation"
+	import * as Analytics from "$lib/analytics"
 	import { filterValue as pokemonFilter, currentSorter as pokemonSorter } from "$lib/creatures/store"
 	import {
 		filterValue as movesFilter,
@@ -23,6 +25,10 @@
 		filter.set("")
 		sorter.set(() => 0)
 	}
+
+	afterNavigate((navigation) => {
+		Analytics.createPageviewEvent(navigation.to.url.pathname)
+	})
 </script>
 
 <div class="page">

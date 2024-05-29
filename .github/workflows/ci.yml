@@ -10,6 +10,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     env:
+      PUBLIC_ANALYTICS_ENABLED: true
       PUBLIC_SUPABASE_URL: ${{ secrets.PUBLIC_SUPABASE_URL }}
       PUBLIC_SUPABASE_KEY: ${{ secrets.PUBLIC_SUPABASE_KEY }}
       ENV: prod
