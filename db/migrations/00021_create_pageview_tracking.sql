@@ -1,0 +1,16 @@
+CREATE TABLE private.pageview_events (
+	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	path VARCHAR(255) NOT NULL
+);
+
+CREATE OR REPLACE FUNCTION create_pageview_event(
+	_path VARCHAR(255)
+) AS $$
+BEGIN
+	INSERT INTO private.pageview_events (
+		path
+	) VALUES (
+		_path
+	);
+END $$ LANGUAGE PLPGSQL VOLATILE SECURITY DEFINER;
