@@ -6,7 +6,7 @@ CREATE TABLE private.pageview_events (
 
 CREATE OR REPLACE FUNCTION create_pageview_event(
 	_path VARCHAR(255)
-) AS $$
+) RETURNS void AS $$
 BEGIN
 	INSERT INTO private.pageview_events (
 		path
