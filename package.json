@@ -12,7 +12,7 @@
 		"gh": "gh-pages -d build --dotfiles",
 		"publish": "npm-run-all ci gh",
 		"script:get-pokemon-images": "node ./scripts/get-pokemon-images.js",
-		"migrate": "node -r dotenv/config db/migrate.js",
+		"migrate": "node db/migrate.js",
 		"test": "node test/index.test.js",
 		"lint": "eslint src --ignore-path .gitignore"
 	},
