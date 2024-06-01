@@ -2,6 +2,7 @@
 	import type { Pokemon } from "$lib/creatures/types"
 	import type { TrainerPokemon } from "../types"
 	import GenderIcon from "$lib/design/GenderIcon.svelte"
+	import Level from "$lib/design/Level.svelte"
 
 	export let pokemon: TrainerPokemon
 	export let species: Pokemon
@@ -14,10 +15,7 @@
 			<GenderIcon gender={pokemon.gender} />
 		</span>
 	</span>
-	<span class="level">
-		<span class="level-text">Lv.</span>
-		<span class="level-number">{pokemon.level}</span>
-	</span>
+	<Level value={pokemon.level} />
 </div>
 
 <style>
@@ -35,17 +33,5 @@
 		display: flex;
 		align-items: center;
 		margin-left: 0.25em;
-	}
-
-	.level {
-		justify-self: right;
-	}
-
-	.level-text {
-		font-size: var(--font-sz-venus);
-	}
-
-	.level-number {
-		font-size: var(--font-sz-neptune);
 	}
 </style>

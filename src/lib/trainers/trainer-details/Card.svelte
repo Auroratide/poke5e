@@ -7,12 +7,16 @@
 	import { Url } from "$lib/url"
 	import { PageAction } from "../page-action"
 	import Title from "$lib/design/Title.svelte"
+	import Level from "$lib/design/Level.svelte"
 
 	export let trainer: TrainerStore
 </script>
 
 <Title value="{$trainer.info.name}" />
 <Card title={$trainer.info.name}>
+	<div slot="header-extra" style:padding-inline-end="0.5em">
+		<Level value={$trainer.info.level} />
+	</div>
 	<Info trainer={$trainer.info} />
 	<ActionArea>
 		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="ghost">Access Key</Button>
