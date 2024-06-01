@@ -206,7 +206,7 @@ BEGIN
 		save_con,
 		save_int,
 		save_wis,
-		save_cha,
+		save_cha
 	) VALUES (
 		_name,
 		_description,
@@ -288,7 +288,7 @@ CREATE OR REPLACE FUNCTION update_trainer(
 	_save_con BOOLEAN DEFAULT FALSE,
 	_save_int BOOLEAN DEFAULT FALSE,
 	_save_wis BOOLEAN DEFAULT FALSE,
-	_save_cha BOOLEAN DEFAULT FALSE,
+	_save_cha BOOLEAN DEFAULT FALSE
 ) RETURNS INT AS $$
 DECLARE affected_rows INT;
 BEGIN
