@@ -36,16 +36,16 @@
 	<section>
 		<Saveable {saving}>
 			<form on:submit|preventDefault={onCreate}>
-					<Fieldset title="Basic Info">
-						<label for="name-input">Name</label>
-						<input name="name" required id="name-input" type="text" bind:value={name} {disabled} />
-						<label for="description-input" style:place-self="start">Description</label>
-						<textarea name="description" id="description-input" bind:value={description} rows="6" {disabled}></textarea>
-					</Fieldset>
-					<ActionArea>
-						<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
-						<Button type="submit" {disabled}>Finish!</Button>
-					</ActionArea>
+				<Fieldset title="Basic Info">
+					<label for="name-input">Name</label>
+					<input name="name" required id="name-input" type="text" bind:value={name} {disabled} />
+					<label for="description-input" style:place-self="start">Description</label>
+					<textarea name="description" id="description-input" bind:value={description} rows="6" {disabled}></textarea>
+				</Fieldset>
+				<ActionArea>
+					<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
+					<Button type="submit" {disabled}>Finish!</Button>
+				</ActionArea>
 			</form>
 		</Saveable>
 	</section>

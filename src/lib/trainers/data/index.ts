@@ -34,7 +34,7 @@ export class TrainerDataProviderError extends Error {
 export interface TrainerDataProvider {
 	allTrainers: () => Promise<Trainer[]>
 	getTrainer: (readKey: ReadWriteKey) => Promise<TrainerData | undefined>
-	newTrainer: (info: TrainerInfo) => Promise<TrainerData & WithWriteKey>
+	newTrainer: (info: Pick<TrainerInfo, "name" | "description">) => Promise<TrainerData & WithWriteKey>
 	removeTrainer: (id: TrainerId, readKey: ReadWriteKey) => Promise<void>
 	deleteTrainer: (writeKey: ReadWriteKey, id: TrainerId, readKey: ReadWriteKey) => Promise<boolean>
 	updateTrainerInfo: (writeKey: ReadWriteKey, info: TrainerInfo) => Promise<boolean>

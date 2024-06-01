@@ -35,6 +35,26 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		readKey: "YLFN6S3NGOPA",
 		name: "Renibel",
 		description: "A trainer that likes ghosts and urban legends.",
+		level: 10,
+		ac: 11,
+		hp: {
+			current: 50,
+			max: 50,
+		},
+		hitDice: {
+			current: 10,
+			max: 10,
+		},
+		attributes: {
+			str: 9,
+			dex: 11,
+			con: 10,
+			int: 17,
+			wis: 12,
+			cha: 15,
+		},
+		savingThrows: ["cha"],
+		proficiencies: ["animal handling", "history", "deception"],
 	},
 	pokemon: [ {
 		id: nextPokemonId(),
@@ -229,6 +249,26 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		readKey: "7JD88HNDIURS",
 		name: "Iris",
 		description: "A trainer that likes colors and flowers.",
+		level: 10,
+		ac: 14,
+		hp: {
+			current: 50,
+			max: 50,
+		},
+		hitDice: {
+			current: 10,
+			max: 10,
+		},
+		attributes: {
+			str: 12,
+			dex: 16,
+			con: 10,
+			int: 17,
+			wis: 8,
+			cha: 13,
+		},
+		savingThrows: ["dex", "int"],
+		proficiencies: ["stealth", "animal handling", "persuasion", "deception"],
 	},
 	pokemon: [],
 } ]
@@ -244,7 +284,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 		return this.entries.find((it) => it.info.readKey === readKey)
 	}
 
-	newTrainer = async (info: TrainerInfo): Promise<TrainerData & WithWriteKey> => {
+	newTrainer = async (info: Pick<TrainerInfo, "name" | "description">): Promise<TrainerData & WithWriteKey> => {
 		const id = nextPokemonId()
 		const readKey = randomKey(12)
 		const writeKey = randomKey(20)
@@ -252,6 +292,26 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 		return {
 			info: {
 				...info,
+				level: 1,
+				ac: 10,
+				hp: {
+					current: 8,
+					max: 8,
+				},
+				hitDice: {
+					current: 1,
+					max: 1,
+				},
+				attributes: {
+					str: 10,
+					dex: 10,
+					con: 10,
+					int: 10,
+					wis: 10,
+					cha: 10,
+				},
+				proficiencies: ["animal handling"],
+				savingThrows: ["cha"],
 				id,
 				readKey,
 			},

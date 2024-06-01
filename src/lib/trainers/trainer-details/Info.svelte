@@ -3,7 +3,6 @@
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import Paragraphs from "$lib/design/Paragraphs.svelte"
 
-	
 	export let trainer: Trainer
 </script>
 
