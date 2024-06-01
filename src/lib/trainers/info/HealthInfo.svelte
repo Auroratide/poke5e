@@ -6,62 +6,63 @@
 </script>
 
 <script lang="ts">
-	import type { TrainerPokemon } from "../types"
-	import type { Pokemon } from "$lib/creatures/types"
+	import type { Resource } from "../types"
 	import { createEventDispatcher } from "svelte"
 	import ResourceBar from "$lib/design/ResourceBar.svelte"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import NumericResourceInput, { type ChangeDetail } from "$lib/design/Form/NumericResourceInput.svelte"
+	import type { HitDice } from "$lib/dnd/types"
 
 	const dispatch = createEventDispatcher()
 
-	export let pokemon: TrainerPokemon
-	export let species: Pokemon
+	export let hp: Resource
+	export let hitDice: Resource
+	export let dieSize: HitDice
 	export let editable: boolean
 
-	$: hp = pokemon.hp.current
-	$: hitDice = pokemon.hitDice.current
+	$: hpCur = hp.current
+	$: hitDiceCur = hitDice.current
 
 	const onChangeHp = (e: CustomEvent<ChangeDetail>) => {
 		dispatch("update", {
 			currentHp: e.detail.value,
-			currentHitDice: hitDice,
+			currentHitDice: hitDiceCur,
 		} as UpdateDetail)
 	}
 
 	const onChangeHitDice = (e: CustomEvent<ChangeDetail>) => {
 		dispatch("update", {
-			currentHp: hp,
+			currentHp: hpCur,
 			currentHitDice: e.detail.value,
 		} as UpdateDetail)
 	}
 </script>
 
 <div class="grid">
-	<span class="bar"><ResourceBar current={hp} max={pokemon.hp.max} /></span>
+	<span class="bar"><ResourceBar current={hpCur} max={hp.max} /></span>
 	<span class="hp">
 		<VisuallyHidden><label for="current-hp">HP</label></VisuallyHidden>
 		<span class="current-hp">
 			{#if editable}
-					<NumericResourceInput id="current-hp" value={hp} on:change={onChangeHp} />
+				<NumericResourceInput id="current-hp" value={hpCur} on:change={onChangeHp} />
 			{:else}
-					{pokemon.hp.current}
+				{hp.current}
 			{/if}
 		</span>
-		<span class="max-hp">/ {pokemon.hp.max}</span>
+		<span class="max-hp">/ {hp.max}</span>
 	</span>
 	<span class="hit-dice">
-		<span class="hit-dice-bar"><ResourceBar secondary current={hitDice} max={pokemon.hitDice.max} /></span>
+		<span class="hit-dice-bar"><ResourceBar secondary current={hitDiceCur} max={hitDice.max} /></span>
 		<span class="hit-dice-text">
 			<VisuallyHidden><label for="current-hit-dice">Hit Dice</label></VisuallyHidden>
 			<span class="current-hit-dice">
-					{#if editable}
-						<NumericResourceInput id="current-hit-dice" value={hitDice} on:change={onChangeHitDice} />
-					{:else}
-						{pokemon.hitDice.current}
-					{/if}
+				{#if editable}
+					<NumericResourceInput id="current-hit-dice" value={hitDiceCur} on:change={onChangeHitDice} />
+				{:else}
+					{hitDice.current}
+				{/if}
 			</span>
-			<span class="max-hit-dice">/ {pokemon.hitDice.max} ({species.hitDice})</span>
+			<span class="max-hit-dice">/ {hitDice.max} ({dieSize})</span>
 		</span>
 	</span>
 </div>

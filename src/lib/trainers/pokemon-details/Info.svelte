@@ -3,9 +3,9 @@
 	import type { Pokemon } from "$lib/creatures/types"
 	import { createEventDispatcher } from "svelte"
 	import BasicInfo from "./BasicInfo.svelte"
-	import HealthInfo, { type UpdateDetail as HealthUpdateDetail } from "./HealthInfo.svelte"
+	import HealthInfo, { type UpdateDetail as HealthUpdateDetail } from "../info/HealthInfo.svelte"
 	import StatsInfo from "./StatsInfo.svelte"
-	import SkillsInfo from "./SkillsInfo.svelte"
+	import SkillsInfo from "../info/SkillsInfo.svelte"
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import AttributeBlock from "$lib/dnd/AttributeBlock.svelte"
 	import TypeEffectiveness from "$lib/creatures/TypeEffectiveness.svelte"
@@ -45,7 +45,7 @@
 	<div style:flex="1" style:width="100%">
 		<div style:margin-bottom="0.5em">
 			<BasicInfo {pokemon} {species} />
-			<HealthInfo {pokemon} {species} {editable} on:update={onUpdateHealth} />
+			<HealthInfo hp={pokemon.hp} hitDice={pokemon.hitDice} dieSize={species.hitDice} {editable} on:update={onUpdateHealth} />
 		</div>
 		<StatsInfo {pokemon} {species} />
 	</div>
@@ -57,7 +57,7 @@
 </section>
 <section class="stats">
 	<AttributeBlock attributes={pokemon.attributes} />
-	<SkillsInfo {pokemon} />
+	<SkillsInfo level={pokemon.level} attributes={pokemon.attributes} savingThrows={pokemon.savingThrows} proficiencies={pokemon.proficiencies} />
 	<FlatDl>
 		<TypeEffectiveness type={pokemon.type} />
 	</FlatDl>
