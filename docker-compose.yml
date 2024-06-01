@@ -1,0 +1,12 @@
+services:
+  poke5e-db:
+    image: supabase/postgres
+    restart: unless-stopped
+    container_name: poke5e-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: analytics
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
+    ports:
+      - 5432:5432

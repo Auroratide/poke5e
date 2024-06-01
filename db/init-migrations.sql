@@ -1,3 +1,5 @@
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
 CREATE TABLE IF NOT EXISTS migrations (
   id integer PRIMARY KEY,
   name varchar(100) UNIQUE NOT NULL,
