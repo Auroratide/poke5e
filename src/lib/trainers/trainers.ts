@@ -14,7 +14,7 @@ type UpdaterOptions = {
 }
 
 type TrainerUpdater = {
-	info: (info: TrainerInfo) => Promise<void>
+	info: (info: TrainerInfo, options?: UpdaterOptions) => Promise<void>
 	retire: () => Promise<void>
 	pokemon: (info: TrainerPokemon, options?: UpdaterOptions) => Promise<void>
 	moveset: (info: TrainerPokemon) => Promise<void>
@@ -74,20 +74,33 @@ const createStore = () => {
 				promises[readKey] = provider.getTrainer(readKey).then((data) => {
 					if (data == null) return undefined
 
-					const createUpdate = (data: TrainerData) => ({
+					const createUpdate = (data: TrainerData, options: UpdaterOptions = {}) => ({
 						info: (info: TrainerInfo) => {
-							return provider.updateTrainerInfo(data.writeKey, info).then(() => {
-								storeUpdateOne(readKey, (prev) => ({
-									...prev,
-									info: {
-										...prev.info,
-										...info,
-									},
-								}))
-							}).catch((e: Error) => {
-								error.show(e.message)
-								throw e
-							})
+							const original = data.info
+							const updateStore = (info: TrainerInfo) => storeUpdateOne(readKey, (prev) => ({
+								...prev,
+								info: {
+									...prev.info,
+									...info,
+								},
+							}))
+
+							if (options.optimistic) {
+								updateStore(info)
+
+								return provider.updateTrainerInfo(data.writeKey, info).then(() => {}).catch((e) => {
+									updateStore(original)
+									error.show(e.message)
+									throw e
+								})
+							} else {
+								return provider.updateTrainerInfo(data.writeKey, info).then(() => {
+									updateStore(info)
+								}).catch((e: Error) => {
+									error.show(e.message)
+									throw e
+								})
+							}
 						},
 						retire: () => {
 							return provider.deleteTrainer(data.writeKey, data.info.id, data.info.readKey).then(() => {

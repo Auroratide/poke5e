@@ -8,8 +8,16 @@
 	import { PageAction } from "../page-action"
 	import Title from "$lib/design/Title.svelte"
 	import Level from "$lib/design/Level.svelte"
+	import type { TrainerInfo } from "../types"
 
 	export let trainer: TrainerStore
+	$: canEdit = $trainer.update != null
+
+	const onUpdateHealth = (e: CustomEvent<TrainerInfo>) => {
+		$trainer.update?.info(e.detail, {
+			optimistic: true,
+		})
+	}
 </script>
 
 <Title value="{$trainer.info.name}" />
@@ -17,7 +25,7 @@
 	<div slot="header-extra" style:padding-inline-end="0.5em">
 		<Level value={$trainer.info.level} />
 	</div>
-	<Info trainer={$trainer.info} />
+	<Info trainer={$trainer.info} editable={canEdit} on:update-health={onUpdateHealth} />
 	<ActionArea>
 		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="ghost">Access Key</Button>
 		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.removeTrainer)}" variant="ghost">Remove</Button>

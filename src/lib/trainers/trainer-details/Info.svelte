@@ -1,13 +1,31 @@
 <script lang="ts">
-	import type { Trainer } from "../types"
+	import type { Trainer, TrainerInfo } from "../types"
+	import { createEventDispatcher } from "svelte"
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import Paragraphs from "$lib/design/Paragraphs.svelte"
-	import HealthInfo from "../info/HealthInfo.svelte"
+	import HealthInfo, { type UpdateDetail as HealthUpdateDetail } from "../info/HealthInfo.svelte"
 	import StatsInfo from "./StatsInfo.svelte"
 	import AttributeBlock from "$lib/dnd/AttributeBlock.svelte"
 	import SkillsInfo from "../info/SkillsInfo.svelte"
 
+	const dispatch = createEventDispatcher()
+
 	export let trainer: Trainer
+	export let editable: boolean
+
+	const onUpdateHealth = (e: CustomEvent<HealthUpdateDetail>) => {
+		dispatch("update-health", {
+			...trainer,
+			hp: {
+				current: e.detail.currentHp,
+				max: trainer.hp.max,
+			},
+			hitDice: {
+				current: e.detail.currentHitDice,
+				max: trainer.hitDice.max,
+			},
+		} as TrainerInfo)
+	}
 </script>
 
 <section class="info">
@@ -16,7 +34,7 @@
 		<dd>{trainer.readKey}</dd>
 	</FlatDl>
 	<div class="column">
-		<HealthInfo hp={trainer.hp} hitDice={trainer.hitDice} dieSize="d8" editable={false} />
+		<HealthInfo hp={trainer.hp} hitDice={trainer.hitDice} dieSize="d8" {editable} on:update={onUpdateHealth} />
 		<StatsInfo {trainer} />
 	</div>
 </section>
