@@ -1841,6 +1841,22 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
+	 {
+      "id": "decorate",
+      "name": "Decoate",
+      "type": "fairy",
+      "power": [
+        "wis",
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "1 minute",
+      "range": "melee",
+      "description": [
+        "You decorate the target. The target has advantage on attack rolls. When the target takes damage, it must make a concentration CON save; on failure, the decorate effect ends immediately."
+      ]
+    },
     {
       "id": "defend-order",
       "name": "Defend Order",
