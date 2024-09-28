@@ -128322,6 +128322,315 @@
       }
     },
 	 {
+      "id": "falinks",
+      "name": "Falinks",
+      "number": 870,
+      "type": [
+        "fighting"
+      ],
+      "size": "small",
+      "sr": 6,
+      "minLevel": 5,
+      "eggGroup": [
+        "fairy",
+        "mineral"
+      ],
+      "gender": "0:0",
+      "description": "The Formation Pokémon. The leader, known as the brass, uses its extendible horn to issue orders to the others when it’s time to change formation.",
+      "ac": 16,
+      "hp": 50,
+      "hitDice": "d10",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 30
+        }
+      ],
+      "attributes": {
+        "str": "16",
+        "dex": "14",
+        "con": "17",
+        "int": "6",
+        "wis": "10",
+        "cha": "11"
+      },
+      "skills": [],
+      "savingThrows": [
+        "str",
+		  "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "battle-armor",
+          "hidden": false
+        },
+        {
+          "id": "defiant",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "protect",
+			 "tackle",
+			 "rock-smash",
+			 "focus-energy",
+			 "headbutt"
+        ],
+        "level6": [
+          "bulk-up",
+			 "endure"
+        ],
+        "level10": [
+          "reversal",
+			 "first-impression",
+			 "no-retreat"
+        ],
+        "level14": [
+          "iron-defense",
+			 "close-combat"
+        ],
+        "level18": [
+          "megahorn",
+			 "counter"
+        ],
+        "tm": [
+			 8,
+			 11,
+			 15,
+			 17,
+			 18,
+			 31,
+			 39,
+			 42,
+			 44,
+			 52,
+			 54,
+			 67,
+			 68,
+			 75,
+			 77,
+			 80,
+			 84,
+			 88,
+			 90
+        ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/870.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/870.png"
+      }
+    },
+	 {
+      "id": "pincurchin",
+      "name": "Pincurchin",
+      "number": 871,
+      "type": [
+        "electric"
+      ],
+      "size": "tiny",
+      "sr": 5,
+      "minLevel": 1,
+      "eggGroup": [
+        "amorphous",
+        "water 1"
+      ],
+      "gender": "1:1",
+      "description": "The Sea Urchin Pokémon. This Pokémon is so timid that even brushing against seaweed will make it discharge electricity in surprise. Its lips do not conduct electricity.",
+      "ac": 16,
+      "hp": 20,
+      "hitDice": "d8",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 5
+        },
+		  {
+			"type": "swimming",
+			"value": 20
+		  }
+      ],
+      "attributes": {
+        "str": "15",
+        "dex": "6",
+        "con": "15",
+        "int": "6",
+        "wis": "14",
+        "cha": "10"
+      },
+      "skills": [
+			"survival"
+		],
+      "savingThrows": [
+		  "con"
+      ],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "lightning-rod",
+          "hidden": false
+        },
+        {
+          "id": "electric-surge",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "peck",
+			 "thunder-shock"
+        ],
+		  "level2": [
+          "water-gun",
+			 "charge"
+        ],
+        "level6": [
+          "fury-attack",
+			 "spark",
+			 "bubble-beam"
+        ],
+        "level10": [
+          "recover",
+			 "curse",
+			 "electric-terrain"
+        ],
+        "level14": [
+          "poison-jab",
+			 "zing-zap"
+        ],
+        "level18": [
+          "acupressure",
+			 "discharge"
+        ],
+		  "egg": [
+			 "memento",
+			 "sucker-punch"
+		  ],
+        "tm": [
+			 9,
+			 15,
+			 17,
+			 18,
+			 24,
+			 25,
+			 42,
+			 44,
+			 55,
+			 57,
+			 68,
+			 73,
+			 84,
+			 88,
+			 90,
+			 93,
+			 94
+        ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/871.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/871.png"
+      }
+    },
+	 {
+      "id": "snom",
+      "name": "Snom",
+      "number": 872,
+      "type": [
+        "ice",
+		  "bug"
+      ],
+      "size": "tiny",
+      "sr": 0.125,
+      "minLevel": 1,
+      "eggGroup": [
+        "bug"
+      ],
+      "gender": "1:1",
+      "evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Snom can evolve into Frosmoth at level 4 and above. When it evolves, its health increases by double its level, and it gains 12 points to add to its ability scores (max 20).",
+        "to": [
+          {
+            "id": "frosmoth",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 4
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 12
+              }
+            ]
+          }
+        ]
+      },
+      "description": "The Worm Pokemon. Within its internal organs, Snom amplifies the frigid air it gets from eating snow and then uses this amplified air to create icicle-like spikes.",
+      "ac": 11,
+      "hp": 16,
+      "hitDice": "d6",
+      "speed": [
+        {
+          "type": "walking",
+          "value": 15
+        },
+		  {
+			"type": "climbing",
+			"value": 15
+		 }
+      ],
+      "attributes": {
+        "str": "9",
+        "dex": "7",
+        "con": "10",
+        "int": "6",
+        "wis": "11",
+        "cha": "11"
+      },
+      "skills": [
+        "survival"
+      ],
+      "savingThrows": [],
+      "senses": [],
+      "abilities": [
+        {
+          "id": "shield-dust",
+          "hidden": false
+        },
+        {
+          "id": "ice-scales",
+          "hidden": true
+        }
+      ],
+      "moves": {
+        "start": [
+          "powder-snow",
+			 "struggle-bug"
+        ],
+        "egg": [
+          "bug-bite",
+			 "fairy-wind",
+			 "mirror-coat"
+        ],
+        "tm": [
+			 17,
+			 42,
+			 44,
+			 88,
+			 90,
+			 101
+        ]
+      },
+      "media": {
+        "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/872.png",
+        "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/872.png"
+      }
+    },
+	 {
       "id": "sprigatito",
       "name": "Sprigatito",
       "number": 906,
