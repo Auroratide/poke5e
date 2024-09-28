@@ -6473,6 +6473,21 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 4d6 at level 5, 5d6 at level 10, and 6d6 at level 17."
     },
+	 {
+      "id": "no-retreat",
+      "name": "No Retreat",
+      "type": "fighting",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "1 minute",
+      "range": "self",
+      "description": [
+        "For the duration, you have advantage on attack rolls and saving throws. You cannot switch out or flee."
+      ]
+    },
     {
       "id": "noble-roar",
       "name": "Noble Roar",

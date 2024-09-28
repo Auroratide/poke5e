@@ -480,6 +480,11 @@
       "name": "Ice Body",
       "description": "While it is snowing or hailing, this Pokémon heals for an amount of HP equal to its proficiency modifier at the end of each of its turns."
     },
+	 {
+      "id": "ice-scales",
+      "name": "Ice Scales",
+      "description": "This Pokémon has resistance to damange dealt by moves whose power is one of INT, WIS, or CHA."
+    },
     {
       "id": "illuminate",
       "name": "Illuminate",
