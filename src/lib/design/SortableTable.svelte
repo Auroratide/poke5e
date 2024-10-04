@@ -75,13 +75,13 @@
 		overflow: auto;
 	}
 
-	:global(tr) {
+	table :global(tr) {
 		display: grid;
 		grid-template-columns: var(--table-columns);
 		margin-bottom: 0.25em;
 	}
 
-	:global(td), :global(th) {
+	table :global(td), :global(th) {
 		padding: 0.125em 1em;
 	}
 
