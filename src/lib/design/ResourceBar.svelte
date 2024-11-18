@@ -9,22 +9,22 @@
 	$: status = percentage >= 50 ? "healthy" : percentage >= 20 ? "warning" : "danger"
 </script>
 
-<meter class:secondary class="{status}" max="{max}" value="{current}">
-	<div class="fill" style:width="{percentage}%"></div>
-	<VisuallyHidden>{current} / {max}</VisuallyHidden>
-</meter>
+<div role="meter" aria-valuenow="{current}" aria-valuemin="0" aria-valuemax="{max}" aria-valuetext="{current} / {max}" class:secondary class="meter {status}">
+	<div class="bar" style:inline-size="{Math.max(100 * current / max, 0)}%"></div>
+</div>
 
 <style>
-	meter {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
+	.meter {
 		display: block;
-		background: none;
 		background-color: var(--skin-bar-bg);
-		width: 100%;
-		height: 0.5em;
+		inline-size: 100%;
+		block-size: 0.5em;
 		overflow: hidden;
+	}
+
+	.bar {
+		background-color: var(--skin-local-fill);
+		block-size: 0.5em;
 	}
 
 	.healthy {
@@ -39,17 +39,7 @@
 		--skin-local-fill: var(--skin-bar-danger);
 	}
 
-	meter::-moz-meter-bar, meter::-webkit-meter-bar {
-		background: none;
-		background-color: var(--skin-local-fill);
-	}
-
-	.fill {
-		height: 0.5em;
-		background-color: var(--skin-local-fill);
-	}
-
-	meter.secondary {
+	.meter.secondary {
 		--skin-local-fill: var(--skin-bar-secondary);
 	}
 </style>
