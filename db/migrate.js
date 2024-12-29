@@ -1,12 +1,12 @@
 import * as path from "path"
 import { fileURLToPath } from "url"
-import { migrate } from "postgres-migrations"
+import { migrate as pgMigrate } from "postgres-migrations"
 import { env } from "./env.js"
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const migrationsPath = path.resolve(__dirname, "migrations")
 
-async function run() {
+export async function migrate() {
 	const config = {
 		database: env.database,
 		user: env.user,
@@ -17,8 +17,6 @@ async function run() {
 		defaultDatabase: "postgres",
 	}
 
-	await migrate(config, migrationsPath)
+	await pgMigrate(config, migrationsPath)
 	console.log("Successfully migrated")
 }
-
-run()
