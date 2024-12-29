@@ -20,6 +20,7 @@
 	import SavingThrowsFieldset from "../form/SavingThrowsFieldset.svelte"
 	import PokeMovesFieldset from "../form/PokeMovesFieldset.svelte"
 	import GeneralTextarea from "../form/GeneralTextarea.svelte"
+	import TeraTypeInput from "./TeraTypeInput.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -30,6 +31,7 @@
 
 	let nickname = pokemon.nickname
 	let nature = pokemon.nature
+	let tera = pokemon.teraType
 	let natureCustom = pokemon.nature
 	let level = pokemon.level
 	let ac = pokemon.ac
@@ -55,6 +57,7 @@
 			nickname: nickname.length > 0 ? nickname : species.name,
 			type,
 			nature: nature === "other" ? natureCustom : nature,
+			teraType: tera,
 			level,
 			ac,
 			hp: {
@@ -81,6 +84,7 @@
 		<Fieldset title="Basic Info">
 			<NameInput label="Nickname" bind:value={nickname} {disabled} />
 			<NatureInput id="nature-input" bind:value={nature} bind:custom={natureCustom} {disabled} />
+			<TeraTypeInput id="tera-input" bind:value={tera} {disabled} />
 			<LevelInput bind:value={level} bind:maxHitDice={maxHitDice} {disabled} />
 			<AcInput bind:value={ac} {disabled} />
 			<NumberInput name="max-hp" label="Max HP" bind:value={maxHp} {disabled} />

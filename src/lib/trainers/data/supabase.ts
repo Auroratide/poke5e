@@ -14,7 +14,7 @@ import type { Skill, Attribute } from "$lib/dnd/types"
 import type { Pokemon } from "$lib/creatures/types"
 import { TrainerDataProviderError, type TrainerData, type TrainerDataProvider } from "."
 import type { SupabaseClient } from "@supabase/supabase-js"
-import { isPokeType } from "$lib/pokemon/types"
+import { isPokeType, type TeraPokeType } from "$lib/pokemon/types"
 
 export class SupabaseTrainerProvider implements TrainerDataProvider {
 	constructor(private supabase: SupabaseClient) {}
@@ -290,6 +290,10 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_cha: info.savingThrows.includes("cha"),
 			_ability: info.ability,
 			_notes: info.notes,
+			_tera_type: info.teraType,
+			_exp: 0,
+			_status: null,
+			_held_item: null,
 		}).single<number>()
 
 		if (error) {
@@ -327,6 +331,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			savingThrows: pokemon.savingThrows,
 			moves: [],
 			notes: "",
+			teraType: pokemon.type[0],
 		}
     
 		const { data, error } = await this.supabase.rpc("add_pokemon", {
@@ -374,6 +379,10 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_cha: pokemon.savingThrows.includes("cha"),
 			_ability: pokemon.abilities[0]?.id,
 			_notes: "",
+			_tera_type: pokemon.type[0],
+			_exp: 0,
+			_status: null,
+			_held_item: null,
 		}).single<number>()
     
 		if (error) {
@@ -680,6 +689,10 @@ type PokemonRow = {
 	save_cha: boolean,
 	ability: string,
 	notes: string,
+	tera_type: string,
+	exp: number,
+	status: string,
+	held_item: string,
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -744,6 +757,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 	}),
 	moves: [],
 	notes: row.notes,
+	teraType: row.tera_type as TeraPokeType,
 })
 
 type MoveRow = {

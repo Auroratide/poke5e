@@ -4,6 +4,7 @@
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import { proficiencyBonus } from "$lib/dnd/proficiency"
 	import * as asString from "$lib/creatures/string"
+	import TeraTypeTag from "$lib/pokemon/TeraTypeTag.svelte"
 
 	export let pokemon: TrainerPokemon
 	export let species: Pokemon
@@ -33,5 +34,9 @@
 					<dd>{asString.sense(sense)}</dd>
 			{/each}
 		</div>
+	{/if}
+	{#if pokemon.teraType !== ""}
+		<dt>Tera</dt>
+		<dd><TeraTypeTag type="{pokemon.teraType}" /></dd>
 	{/if}
 </FlatDl>

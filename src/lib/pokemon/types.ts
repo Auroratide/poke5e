@@ -18,9 +18,14 @@ export const PokeTypes = [
 	"dark",
 	"fairy",
 ] as const
+export const StellarType = "stellar"
+export const TeraPokeTypes = [...PokeTypes, StellarType]
 export type PokeType = typeof PokeTypes[number]
 export const isPokeType = (type: string): type is PokeType =>
 	(PokeTypes as readonly string[]).includes(type)
+export type TeraPokeType = PokeType | typeof StellarType
+export const isTeraPokeType = (type: string): type is TeraPokeType =>
+	(TeraPokeTypes as readonly string[]).includes(type)
 
 export type AbilityId = string
 export type Ability = {
