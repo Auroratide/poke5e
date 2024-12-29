@@ -7,7 +7,7 @@ To test a migration locally:
 3. Write a new `test/after.js` to match what you expect the result of the migration to be.
 4. Run `pnpm migrate:test:local`
 5. Tweak the migration until your test passes.
-6. Run the journey test with `pnpm test`. **Important: Make sure there are no local changes to the web code!**
+6. Note to self: might need a legit local supabase. ~~Run the journey test with `pnpm test`. **Important: Make sure there are no local changes to the web code!**~~
 7. When done, commit and push! The pipeline will run the migration and the journey test after.
 
 ## Strategy
@@ -22,7 +22,7 @@ My testing strategy accounts for this:
 2. Run the migration.
 3. Run the `before` test _again_, for backward compatibility.
 4. Run the `after` test, to ensure the migration worked.
-5. Run the journey tests against the old website, again for backward compatibility _and_ integration.
+5. Note: Need a legit local supabase. ~~Run the journey tests against the old website, again for backward compatibility _and_ integration.~~
 
 ## Notes about this
 
