@@ -58,6 +58,26 @@
     --skin-fairy-bg: hsl(347, 50%, 63%);
     --skin-typeless-bg: hsl(0, 0%, 40%);
     --skin-varies-bg: hsl(0, 0%, 40%);
+    --skin-stellar-bg: conic-gradient(
+        var(--skin-electric-bg) 20deg,
+        var(--skin-fire-bg) 20deg 40deg,
+        var(--skin-fighting-bg) 40deg 60deg,
+        var(--skin-fairy-bg) 60deg 80deg,
+        var(--skin-psychic-bg) 80deg 100deg,
+        var(--skin-poison-bg) 100deg 120deg,
+        var(--skin-ghost-bg) 120deg 140deg,
+        var(--skin-steel-bg) 140deg 160deg,
+        var(--skin-normal-bg) 160deg 180deg,
+        var(--skin-dark-bg) 180deg 200deg,
+        var(--skin-dragon-bg) 200deg 220deg,
+        var(--skin-flying-bg) 220deg 240deg,
+        var(--skin-ice-bg) 240deg 260deg,
+        var(--skin-water-bg) 260deg 280deg,
+        var(--skin-grass-bg) 280deg 300deg,
+        var(--skin-bug-bg) 300deg 320deg,
+        var(--skin-rock-bg) 320deg 340deg,
+        var(--skin-ground-bg) 340deg 360deg
+    );
 
     --skin-male-bg: hsl(227, 86%, 48%);
     --skin-female-bg: hsl(354, 99%, 41%);
