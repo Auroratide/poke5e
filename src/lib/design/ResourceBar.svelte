@@ -1,6 +1,4 @@
 <script lang="ts">
-	import VisuallyHidden from "./VisuallyHidden.svelte"
-
 	export let current: number
 	export let max: number
 	export let secondary: boolean = false
