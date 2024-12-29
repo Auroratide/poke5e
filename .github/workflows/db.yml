@@ -27,7 +27,7 @@ jobs:
 
   test:
     name: Test
-    needs: deploy
+    needs: migrate
     runs-on: ubuntu-latest
     env:
       ENV: prod
