@@ -1,11 +1,15 @@
 <script lang="ts">
 	export let title: string
+	export let level: 1 | 2 | 3 | 4 | 5 | 6 = 1
+	export let inline = false
+
+	$: leveltag = `h${level}`
 </script>
 
-<div class="container">
+<div class="container" class:inline>
 	<article>
 		<header>
-			<h1>{title}</h1>
+			<svelte:element this={leveltag}>{title}</svelte:element>
 			<slot name="header-extra"></slot>
 		</header>
 		<div class="scrollable">
@@ -17,6 +21,8 @@
 <style>
 	.container {
 		height: 100%;
+	} .container.inline {
+		height: auto;
 	}
 
 	article {
@@ -42,7 +48,7 @@
 		margin-bottom: 0.5em;
 	}
 
-	article header h1 {
+	article header :global(:is(h1, h2, h3, h4, h5, h6)) {
 		flex: 1;
 		font-weight: 700;
 		font-size: var(--font-sz-neptune);
