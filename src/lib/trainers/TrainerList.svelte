@@ -13,6 +13,7 @@
 	import GetStarted from "./GetStarted.svelte"
 
 	export let trainers: TrainerListStore
+	export let showGetStarted = false
 
 	$: hasNoTrainers = $trainers.length === 0
 	$: filtered = $trainers.filter((it) => it.name.toLocaleLowerCase().includes($trainerListFilterValue.toLocaleLowerCase()))
@@ -29,7 +30,7 @@
 	<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} />
 </div>
 {#if hasNoTrainers}
-	<GetStarted />
+	{#if showGetStarted}<GetStarted />{/if}
 {:else}
 	<SortableTable let:item items={filtered} bind:currentSorter={$trainerListSorter} headers={[ {
 		key: "name", name: "Name", ratio: 1, sort: byStringField(it => it.name),

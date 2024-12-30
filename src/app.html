@@ -30,7 +30,6 @@
 					const iframe = document.createElement("iframe")
 
 					window.addEventListener("message", (event) => {
-						console.log(event.origin)
 						if (event.origin !== "https://auroratide.github.io") return
 						if (!Array.isArray(event.data)) return
 

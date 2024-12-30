@@ -63,7 +63,7 @@
 				<Loader />
 			{:then trainerList}
 				{#if trainerList}
-					<TrainerList trainers={trainerList} />
+					<TrainerList trainers={trainerList} showGetStarted={action == null} />
 				{/if}
 			{/await}
 		{/if}
