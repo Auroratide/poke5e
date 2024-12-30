@@ -27,6 +27,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+          cname: poke5e.app
 
   test:
     name: Test
