@@ -22,5 +22,44 @@
 	</head>
 	<body>
 		<div>%sveltekit.body%</div>
+		<script>
+			function migrateData() {
+				const target = "poke5e"
+				const hasMigrated = localStorage.getItem("migrated") != null || localStorage.getItem("trainers") != null
+				if (!hasMigrated) {
+					const iframe = document.createElement("iframe")
+
+					window.addEventListener("message", (event) => {
+						console.log(event.origin)
+						if (event.origin !== "https://auroratide.github.io") return
+						if (!Array.isArray(event.data)) return
+
+						console.log("Migrating data to new domain...")
+						event.data.forEach(([key, value]) => {
+							localStorage.setItem(key, value)
+						})
+
+						localStorage.setItem("migrated", "true")
+						console.log("...Done migrating!")
+
+						iframe.remove()
+					}, { once: true })
+
+					iframe.style.position = "absolute"
+					iframe.style.width = "1px"
+					iframe.style.height = "1px"
+					iframe.style.clipPath = "inset(50%)"
+					iframe.style.overflow = "hidden"
+					iframe.style.left = "-9999px"
+					iframe.src = `https://auroratide.github.io/storage-migration/${target}`
+
+					document.body.appendChild(iframe)
+				}
+			}
+
+			if (window.location.origin === "https://poke5e.app") {
+				migrateData()
+			}
+		</script>
 	</body>
 </html>

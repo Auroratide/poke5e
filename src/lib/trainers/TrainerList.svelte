@@ -10,9 +10,11 @@
 	import { Url } from "$lib/url"
 	import { PageAction } from "./page-action"
 	import ListHeading from "$lib/design/ListHeading.svelte"
+	import GetStarted from "./GetStarted.svelte"
 
 	export let trainers: TrainerListStore
 
+	$: hasNoTrainers = $trainers.length === 0
 	$: filtered = $trainers.filter((it) => it.name.toLocaleLowerCase().includes($trainerListFilterValue.toLocaleLowerCase()))
 
 	const byStringField = (field: (m: Trainer) => string) =>
@@ -26,13 +28,17 @@
 <div class="space-bottom">
 	<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} />
 </div>
-<SortableTable let:item items={filtered} bind:currentSorter={$trainerListSorter} headers={[ {
-	key: "name", name: "Name", ratio: 1, sort: byStringField(it => it.name),
-} ]}>
-	<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
-		<BubbleRow.Cell primary><a href="{base}/trainers?id={item.readKey}">{item.name}</a></BubbleRow.Cell>
-	</BubbleRow.Row>
-</SortableTable>
+{#if hasNoTrainers}
+	<GetStarted />
+{:else}
+	<SortableTable let:item items={filtered} bind:currentSorter={$trainerListSorter} headers={[ {
+		key: "name", name: "Name", ratio: 1, sort: byStringField(it => it.name),
+	} ]}>
+		<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
+			<BubbleRow.Cell primary><a href="{base}/trainers?id={item.readKey}">{item.name}</a></BubbleRow.Cell>
+		</BubbleRow.Row>
+	</SortableTable>
+{/if}
 
 <style>
 	.space-bottom {
