@@ -28,23 +28,23 @@
 		<link href="../_app/immutable/assets/Card.BTfwWh4d.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/TypeTag.CPPP8U0H.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/MoveDescription.N0aJz_fP.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/entry/start.q8MwFGDE.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/entry.DRR-lZYN.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/start.o64zMGph.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/entry.CKwVUEZO.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/scheduler.DHCSneAP.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.B0DS5ko9.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/paths.BGUxpmXb.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/paths.CrJrm6hR.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/control.CYgJF_JY.js">
-		<link rel="modulepreload" href="../_app/immutable/entry/app.CVGiOTam.js">
+		<link rel="modulepreload" href="../_app/immutable/entry/app.Ch_gEtkc.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper.C1FmrZbK.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.1NXkYVa0.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/0.B6HAe6UG.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/0.dBjnTxho.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/store.BYWzeG-Z.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/store.BdPSNN82.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/store.CBUQxOzW.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/store.ENTa09f4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/store.Daud7rXV.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/versions.BQofqvpj.js">
-		<link rel="modulepreload" href="../_app/immutable/nodes/5.CRh4UCvP.js">
+		<link rel="modulepreload" href="../_app/immutable/nodes/5.CtUcZVuV.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index.CzR0xuCU.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.BO5ouRD1.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_layout.BqOOaqVK.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/Loader.BFu6kRzv.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/each.CjzS1Pv8.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/Pokeball.DZyzKq1h.js">
@@ -68,7 +68,7 @@
 			<script type="application/json" data-sveltekit-fetched data-url="/poke5e/moves/power-swap.json">{"status":200,"statusText":"","headers":{},"body":"{\"id\":\"power-swap\",\"name\":\"Power Swap\",\"type\":\"psychic\",\"power\":[\"wis\",\"int\"],\"time\":\"1 bonus action\",\"pp\":3,\"duration\":\"1 round\",\"range\":\"40ft\",\"description\":[\"As a bonus action, force a creature in range to make a WIS save against your Move DC. On a failure, you employ your psychic power to swap a single ability score with a creature until the end of their next turn, for purposes of attack and damage rolls.\"],\"contest\":{\"id\":\"power-swap\",\"contest\":\"clever\",\"appeal\":1,\"jam\":0,\"effect\":\"Shows off the Pokemon’s appeal about as well as all the moves before it this turn.\"}}"}</script>
 			<script>
 				{
-					__sveltekit_33onhu = {
+					__sveltekit_1tt73fh = {
 						base: new URL("..", location).pathname.slice(0, -1),
 						assets: "/poke5e"
 					};
@@ -76,8 +76,8 @@
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("../_app/immutable/entry/start.q8MwFGDE.js"),
-						import("../_app/immutable/entry/app.CVGiOTam.js")
+						import("../_app/immutable/entry/start.o64zMGph.js"),
+						import("../_app/immutable/entry/app.Ch_gEtkc.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element, {
 							node_ids: [0, 5],
@@ -95,5 +95,44 @@
 				}
 			</script>
 		</div>
+		<script>
+			function migrateData() {
+				const target = "poke5e"
+				const hasMigrated = localStorage.getItem("migrated") != null || localStorage.getItem("trainers") != null
+				if (!hasMigrated) {
+					const iframe = document.createElement("iframe")
+
+					window.addEventListener("message", (event) => {
+						console.log(event.origin)
+						if (event.origin !== "https://auroratide.github.io") return
+						if (!Array.isArray(event.data)) return
+
+						console.log("Migrating data to new domain...")
+						event.data.forEach(([key, value]) => {
+							localStorage.setItem(key, value)
+						})
+
+						localStorage.setItem("migrated", "true")
+						console.log("...Done migrating!")
+
+						iframe.remove()
+					}, { once: true })
+
+					iframe.style.position = "absolute"
+					iframe.style.width = "1px"
+					iframe.style.height = "1px"
+					iframe.style.clipPath = "inset(50%)"
+					iframe.style.overflow = "hidden"
+					iframe.style.left = "-9999px"
+					iframe.src = `https://auroratide.github.io/storage-migration/${target}`
+
+					document.body.appendChild(iframe)
+				}
+			}
+
+			if (window.location.origin === "https://poke5e.app") {
+				migrateData()
+			}
+		</script>
 	</body>
 </html>
