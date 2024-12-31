@@ -39,6 +39,8 @@
     --skin-danger-text: hsl(355, 66%, 45%);
     --skin-danger-light: hsl(355, 85%, 98%);
 
+	--skin-success-text: hsl(85 58% 30%);
+
     --skin-normal-bg: hsl(60, 26%, 46%);
     --skin-fighting-bg: hsl(3, 66%, 45%);
     --skin-flying-bg: hsl(255, 76%, 70%);

@@ -18,6 +18,9 @@
 	} from "$lib/trainers/store"
 	import ErrorDialog from "$lib/design/errors/ErrorDialog.svelte"
 	import { currentVersion } from "./version-history/versions"
+	import MigrationDialog from "$lib/trainers/migration/MigrationDialog.svelte"
+	import { browser } from "$app/environment"
+	import { MY_ORIGIN } from "$lib/trainers/migration/origins"
 
 	export let data: LayoutData
 	$: activeSection = data.activeSection
@@ -66,6 +69,9 @@
 		</Container>
 	</footer>
 	<ErrorDialog />
+	{#if browser && window.location.origin === MY_ORIGIN}
+		<MigrationDialog />
+	{/if}
 </div>
 
 <style>
