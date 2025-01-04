@@ -35,10 +35,14 @@
 
 	.page .side {
 		height: 33%;
+	} .page .side:has(+ main:empty) {
+		height: 100%;
 	}
 
 	.page main {
 		height: 67%;
+	} .page main:empty {
+		height: 0%;
 	}
 
 	@media screen and (min-width: 75rem) {
