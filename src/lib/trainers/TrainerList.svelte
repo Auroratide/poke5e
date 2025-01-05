@@ -11,6 +11,7 @@
 	import { PageAction } from "./page-action"
 	import ListHeading from "$lib/design/ListHeading.svelte"
 	import GetStarted from "./GetStarted.svelte"
+	import ManualMigrationMessage from "./migration/ManualMigrationMessage.svelte"
 
 	export let trainers: TrainerListStore
 	export let showGetStarted = false
@@ -32,6 +33,7 @@
 {#if hasNoTrainers}
 	{#if showGetStarted}<GetStarted />{/if}
 {:else}
+	<ManualMigrationMessage />
 	<SortableTable let:item items={filtered} bind:currentSorter={$trainerListSorter} headers={[ {
 		key: "name", name: "Name", ratio: 1, sort: byStringField(it => it.name),
 	} ]}>

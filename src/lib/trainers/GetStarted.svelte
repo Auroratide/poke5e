@@ -21,9 +21,9 @@
 	{#if isNotMigrated}
 		<hr />
 		<section class="center more-space">
-			<p>The Poke 5e App has recently moved to a new home: <strong>poke5e.app</strong>! If you had trainer data, it should have been automatically transfered to here.</p>
-			<p>If that didn't happen, you can manually transfer your trainer data by visiting the following link and copying any Trainer IDs.</p>
-			<p class="more-space"><Button href="https://auroratide.github.io/storage-migration/poke5e">Manually Transfer Trainers</Button></p>
+			<p>The Poke 5e App has recently moved to <strong>poke5e.app</strong>! If you had trainer data, it should have been automatically transfered to here.</p>
+			<p>If that didn't happen, learn how you can recover your trainer data by clicking the link below:</p>
+			<p class="more-space"><Button href="{base}/trainer-recovery">Recover Trainers</Button></p>
 		</section>
 	{/if}
 </div>
