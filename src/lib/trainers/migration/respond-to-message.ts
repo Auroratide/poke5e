@@ -2,6 +2,7 @@ import { migrationStatus } from "./store"
 import { OLD_ORIGIN } from "./origins"
 import { trainers } from "../trainers"
 import { getReadKeys } from "../data/supabase"
+import * as Analytics from "$lib/analytics"
 
 type MigrationMessageData = "failed" | "manual" | [string, string][]
 
@@ -9,6 +10,8 @@ export function respondToMessage(event: MessageEvent<MigrationMessageData>) {
 	if (event.origin !== OLD_ORIGIN) return
 	if (!Array.isArray(event.data)) {
 		migrationStatus.set(event.data)
+
+		Analytics.createTrainerRecoveryEvent("failed")
 	} else {
 		console.log("Migrating:", event.data)
 		const existingKeys = getReadKeys()
@@ -29,9 +32,13 @@ export function respondToMessage(event: MessageEvent<MigrationMessageData>) {
 			})
 			migrationStatus.set("done")
 			console.log("Done migrating.")
+
+			Analytics.createTrainerRecoveryEvent("succeeded")
 		}).catch((e) => {
 			console.error(e)
 			migrationStatus.set("failed")
+
+			Analytics.createTrainerRecoveryEvent("failed")
 		})
 	}
 }

@@ -9,6 +9,7 @@
 	import { trainers } from "../trainers"
 	import TransferredTrainers from "./TransferredTrainers.svelte"
 	import Loader from "$lib/design/Loader.svelte"
+	import * as Analytics from "$lib/analytics"
 
 	let modal: HTMLDialogElement
 	let popupInitiated = false
@@ -44,6 +45,7 @@
 		if (!succeeded) {
 			console.warn("Failed to auto-transfer via popup window")
 			migrationStatus.set("failed")
+			Analytics.createTrainerRecoveryEvent("popup-blocked")
 		}
 	}
 </script>
