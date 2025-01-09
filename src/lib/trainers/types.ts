@@ -99,3 +99,5 @@ export type Trainer = TrainerInfo & {
 export type WithWriteKey = {
 	writeKey: ReadWriteKey,
 }
+
+export type Specializations = { [type in PokeType]?: number }
