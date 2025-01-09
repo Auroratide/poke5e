@@ -62,8 +62,25 @@
 		padding: 0 1em;
 	}
 
+	article :global(section section) {
+		padding-inline: 0;
+	}
+
 	article :global(section h2) {
-		font-size: var(--font-sz-neptune);
-		margin-bottom: 0.5em;
+		font-size: 1.125em;
+		font-weight: bold;
+		position: relative;
+		z-index: 2;
+		color: var(--skin-bg-text);
+		padding: 0.25em 0;
+		margin-block-end: 0.5em;
+	} article :global(section h2::before) {
+		content: "";
+		display: block;
+		background: var(--skin-bg);
+		transform: skewX(var(--skew-angle));
+		position: absolute;
+		inset: 0 2em 0 -4em;
+		z-index: -1;
 	}
 </style>
