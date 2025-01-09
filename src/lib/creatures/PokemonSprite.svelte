@@ -20,5 +20,7 @@
 		margin: 0 auto;
 		border: none;
 		box-shadow: none;
+		image-rendering: crisp-edges;
+		image-rendering: pixelated;
 	}
 </style>
