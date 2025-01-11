@@ -83,4 +83,10 @@
 		inset: 0 2em 0 -4em;
 		z-index: -1;
 	}
+
+	article :global(section h3) {
+		font-size: var(--font-sz-earth);
+		font-weight: bold;
+		margin-block-end: 0.5em;
+	}
 </style>

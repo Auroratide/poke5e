@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	export type ThemeColor = "blue" | "red" | "purple" | "green"
+	export type ThemeColor = "blue" | "red" | "purple" | "green" | "navy"
 </script>
 
 <script lang="ts">

@@ -13,4 +13,8 @@ export const Url = {
 
 		return `${base}/trainers?${params.toString()}`
 	},
-}
+	reference: {
+		all: () => `${base}/reference`,
+		status: () => `${base}/reference/status-conditions`,
+	},
+} as const
