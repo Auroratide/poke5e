@@ -12,7 +12,7 @@
 	export let id: string
 	export let value: number
 
-	let width = value?.toString()?.length ?? 0
+	$: width = value?.toString()?.length ?? 0
 
 	const onChange = (e: Event) => {
 		const target = e.target as HTMLInputElement
@@ -24,8 +24,6 @@
 			const numericValue = parseFloat(target.value)
 			value = isNaN(numericValue) ? 0 : numericValue
 		}
-
-		width = value?.toString()?.length ?? 0
 
 		dispatch("change", { value } as ChangeDetail)
 	}
