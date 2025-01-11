@@ -43,7 +43,7 @@
 		color: var(--skin-bg-text);
 		border-radius: 1em;
 		text-transform: capitalize;
-		box-shadow: var(--elev-stratus);
+		filter: var(--elev-stratus-filter);
 		overflow: hidden;
 	}
 
