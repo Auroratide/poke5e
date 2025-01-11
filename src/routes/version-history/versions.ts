@@ -11,6 +11,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.0.1",
+		description: [
+			"Bug fix: Custom natures now appear in pokemon editor",
+			"Bug fix: HP fields better respect size of the number",
+		],
+	}, {
 		name: "v1.0.0",
 		description: [
 			"Pokemon reference, including basic stats, movesets, and evolutionary lines.",
