@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Natures } from "../types"
+	import { CustomNatureIdentifier, Natures } from "../types"
 
 	export let id: string
 	export let value: string
@@ -12,9 +12,9 @@
 	{#each Natures as natureOption}
 		<option value="{natureOption}">{natureOption}</option>
 	{/each}
-	<option value="other">Other</option>
+	<option value="{CustomNatureIdentifier}">Other</option>
 </select>
-{#if value === "other"}
+{#if value === CustomNatureIdentifier}
 	<span></span>
 	<span class="hrow">
 		<label for="{id}-custom">Specify:</label>

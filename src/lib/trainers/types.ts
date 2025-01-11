@@ -38,6 +38,9 @@ export const Natures = [
 	"nimble",
 ] as const
 export type Nature = (typeof Natures)[number] | string
+export const CustomNatureIdentifier = "other"
+export const isStandardNature = (value: string): value is Nature =>
+	(Natures as readonly string[]).includes(value)
 
 export type LearnedMove = {
 	id: string,

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { TrainerPokemon } from "../types"
+	import { CustomNatureIdentifier, isStandardNature, type TrainerPokemon } from "../types"
 	import { createEventDispatcher } from "svelte"
 	import Button from "$lib/design/Button.svelte"
 	import Fieldset from "$lib/design/Form/Fieldset.svelte"
@@ -30,7 +30,7 @@
 	$: disabled = saving
 
 	let nickname = pokemon.nickname
-	let nature = pokemon.nature
+	let nature = isStandardNature(pokemon.nature) ? pokemon.nature : CustomNatureIdentifier
 	let tera = pokemon.teraType
 	let natureCustom = pokemon.nature
 	let level = pokemon.level
