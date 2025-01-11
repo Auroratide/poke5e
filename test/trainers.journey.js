@@ -5,6 +5,7 @@ import {
 	write,
 	into,
 	textBox,
+	button,
 	dropDown,
 	clear,
 	radioButton,
@@ -53,12 +54,21 @@ const createTrainer = async (name) => {
 	console.log(`  Creating ${name}...`)
 
 	await click(link("Trainers"))
+	await dismissTrainerTransferDialog()
 	await click(link("New Trainer"))
 	await write(name, into(textBox("Name")))
 	await click("Finish!")
 	await doneSaving()
 
 	return await readDescriptionDefinition("Trainer Id")
+}
+
+const dismissTrainerTransferDialog = async () => {
+	const dialogIsPresent = await text("Trainer Data Transfer").exists()
+	if (dialogIsPresent) {
+		console.log("  Dismissing Trainer Transfer Dialong...")
+		await click(button("Close"))
+	}
 }
 
 const addPokemon = async (species) => {
