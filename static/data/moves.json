@@ -7373,7 +7373,7 @@
       "duration": "instantaneous",
       "range": "melee",
       "description": [
-        "You lash forward with poisonous venom. Make a melee attack roll against a creature, dealing 1d8 + MOVE poison damage on a hit, forcing the target to make a CON save against your Move DC. On a failure, the creature is poisoned. A creature poisoned by this move takes double the normal poison damage at the end of each of its turns."
+        "You lash forward with poisonous venom. Make a melee attack roll against a creature, dealing 1d8 + MOVE poison damage on a hit, forcing the target to make a CON save against your Move DC. On a failure, the creature is badly poisoned."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17."
     },
@@ -11081,7 +11081,7 @@
       "duration": "instantaneous",
       "range": "30ft",
       "description": [
-        "You send a downpour of potent, poisonous rain in a 5 foot radius, centered on a point within range. Targets in the area must make a CON save against your MOVE DC or become poisoned. Creatures poisoned by this move take double the normal poison damage."
+        "You send a downpour of potent, poisonous rain in a 5 foot radius, centered on a point within range. Targets in the area must make a CON save against your MOVE DC or become badly poisoned."
       ]
     },
     {
@@ -11097,7 +11097,7 @@
       "duration": "instantaneous",
       "range": "50ft",
       "description": [
-        "You quickly summon a trap of poisonous spikes around a creature that enters the battle. When a creature is switched into battle, you may use your reaction to force a creature to make a CON save against your Move DC, becoming poisoned on a failure."
+        "You quickly summon a trap of poisonous spikes around a creature that enters the battle. When a creature is switched into battle, you may use your reaction to force a creature to make a CON save against your Move DC, becoming poisoned on a failure. If the creature fails by 5 or more, it becomes badly poisoned instead."
       ]
     },
     {
