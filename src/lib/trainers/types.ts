@@ -2,6 +2,7 @@ import type { Skill, Attribute, Attributes } from "../dnd/types"
 import type { Pokemon } from "../creatures/types"
 import type { Move } from "$lib/moves/types"
 import type { AbilityId, PokeType, TeraPokeType } from "$lib/pokemon/types"
+import type { NonVolatileStatus } from "$lib/pokemon/status"
 
 export type Resource = {
 	current: number,
@@ -69,6 +70,7 @@ export type TrainerPokemon = {
 	moves: LearnedMove[],
 	notes: string,
 	teraType: TeraPokeType | "",
+	status: NonVolatileStatus | null,
 }
 
 export type WithPokemonData = {

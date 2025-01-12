@@ -2,6 +2,7 @@
 	export type UpdateDetail = {
 		currentHp: number,
 		currentHitDice: number,
+		currentStatus: NonVolatileStatus | null,
 	}
 </script>
 
@@ -10,30 +11,45 @@
 	import { createEventDispatcher } from "svelte"
 	import ResourceBar from "$lib/design/ResourceBar.svelte"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
-	import NumericResourceInput, { type ChangeDetail } from "$lib/design/Form/NumericResourceInput.svelte"
+	import NumericResourceInput, { type ChangeDetail as NumericChangeDetail } from "$lib/design/Form/NumericResourceInput.svelte"
 	import type { HitDice } from "$lib/dnd/types"
+	import type { NonVolatileStatus } from "$lib/pokemon/status"
+	import StatusInput, { type ChangeDetail as StatusChangeDetail } from "$lib/design/Form/StatusInput.svelte"
+	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 
 	const dispatch = createEventDispatcher()
 
 	export let hp: Resource
 	export let hitDice: Resource
 	export let dieSize: HitDice
+	export let status: NonVolatileStatus | null
 	export let editable: boolean
 
 	$: hpCur = hp.current
 	$: hitDiceCur = hitDice.current
+	$: statusCur = status
 
-	const onChangeHp = (e: CustomEvent<ChangeDetail>) => {
+	const onChangeHp = (e: CustomEvent<NumericChangeDetail>) => {
 		dispatch("update", {
 			currentHp: e.detail.value,
 			currentHitDice: hitDiceCur,
+			currentStatus: status,
 		} as UpdateDetail)
 	}
 
-	const onChangeHitDice = (e: CustomEvent<ChangeDetail>) => {
+	const onChangeHitDice = (e: CustomEvent<NumericChangeDetail>) => {
 		dispatch("update", {
 			currentHp: hpCur,
 			currentHitDice: e.detail.value,
+			currentStatus: status,
+		} as UpdateDetail)
+	}
+
+	const onChangeStatus = (e: CustomEvent<StatusChangeDetail>) => {
+		dispatch("update", {
+			currentHp: hpCur,
+			currentHitDice: hitDiceCur,
+			currentStatus: e.detail.value,
 		} as UpdateDetail)
 	}
 </script>
@@ -65,6 +81,14 @@
 			<span class="max-hit-dice">/ {hitDice.max} ({dieSize})</span>
 		</span>
 	</span>
+</div>
+<div class="row">
+	{#if status != null}
+		<StatusTag value={status} />
+	{/if}
+	{#if editable}
+		<StatusInput id="current-status" value={statusCur} on:change={onChangeStatus} />
+	{/if}
 </div>
 
 <style>
@@ -106,5 +130,13 @@
 
 	.hit-dice-text {
 		align-self: flex-end;
+	}
+
+	.row {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 0.25em;
+		margin-block: 0.5em;
 	}
 </style>

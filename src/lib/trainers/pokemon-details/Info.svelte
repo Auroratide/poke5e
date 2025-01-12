@@ -33,6 +33,7 @@
 				current: e.detail.currentHitDice,
 				max: pokemon.hitDice.max,
 			},
+			status: e.detail.currentStatus,
 		} as TrainerPokemon)
 	}
 
@@ -45,7 +46,14 @@
 	<div style:flex="1" style:width="100%">
 		<div style:margin-bottom="0.5em">
 			<BasicInfo {pokemon} {species} />
-			<HealthInfo hp={pokemon.hp} hitDice={pokemon.hitDice} dieSize={species.hitDice} {editable} on:update={onUpdateHealth} />
+			<HealthInfo
+				hp={pokemon.hp}
+				hitDice={pokemon.hitDice}
+				dieSize={species.hitDice}
+				status={pokemon.status}
+				{editable}
+				on:update={onUpdateHealth}
+			/>
 		</div>
 		<StatsInfo {pokemon} {species} />
 	</div>

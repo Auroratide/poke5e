@@ -40,6 +40,6 @@
 	}
 
 	.none, .other {
-		display: none;
+		visibility: hidden;
 	}
 </style>

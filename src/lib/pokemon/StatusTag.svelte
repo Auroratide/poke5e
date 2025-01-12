@@ -2,6 +2,8 @@
 	import { NonVolatileStatus } from "./status"
 
 	export let value: NonVolatileStatus
+	export let abbr = false
+
 	$: description = NonVolatileStatus[value]
 	$: name = value === "BadlyPoisoned" ? NonVolatileStatus.Poisoned.name : description.name
 </script>
@@ -10,7 +12,7 @@
 	class="status-tag"
 	title="{description.effect}"
 	style:--skin-bg-local="var(--skin-status-{value.toLocaleLowerCase()})"
->{name}</span>
+>{#if abbr} {description.abbr} {:else} {name} {/if}</span>
 
 <style>
 	.status-tag {

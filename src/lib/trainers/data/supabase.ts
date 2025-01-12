@@ -15,6 +15,7 @@ import type { Pokemon } from "$lib/creatures/types"
 import { TrainerDataProviderError, type TrainerData, type TrainerDataProvider } from "."
 import type { SupabaseClient } from "@supabase/supabase-js"
 import { isPokeType, type TeraPokeType } from "$lib/pokemon/types"
+import type { NonVolatileStatus } from "$lib/pokemon/status"
 
 export class SupabaseTrainerProvider implements TrainerDataProvider {
 	constructor(private supabase: SupabaseClient) {}
@@ -292,7 +293,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_notes: info.notes,
 			_tera_type: info.teraType,
 			_exp: 0,
-			_status: null,
+			_status: info.status,
 			_held_item: null,
 		}).single<number>()
 
@@ -332,6 +333,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			moves: [],
 			notes: "",
 			teraType: pokemon.type[0],
+			status: null,
 		}
     
 		const { data, error } = await this.supabase.rpc("add_pokemon", {
@@ -691,7 +693,7 @@ type PokemonRow = {
 	notes: string,
 	tera_type: string,
 	exp: number,
-	status: string,
+	status: string | null,
 	held_item: string,
 }
 
@@ -758,6 +760,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 	moves: [],
 	notes: row.notes,
 	teraType: row.tera_type as TeraPokeType,
+	status: row.status as NonVolatileStatus | null,
 })
 
 type MoveRow = {

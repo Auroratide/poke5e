@@ -5,6 +5,7 @@
 	import { Url } from "$lib/url"
 	import { pokemon as allPokemon } from "$lib/creatures/store"
 	import PokemonSprite from "$lib/creatures/PokemonSprite.svelte"
+	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 
 	export let trainer: ReadWriteKey
 	export let pokemon: TrainerPokemon
@@ -18,17 +19,18 @@
 	<span style:grid-area="gender" class="right away-from-edge flex"><GenderIcon gender={pokemon.gender} /></span>
 	<span style:grid-area="hpbar" class="away-from-edge"><ResourceBar current={pokemon.hp.current} max={pokemon.hp.max} /></span>
 	<span style:grid-area="hp">{pokemon.hp.current}/{pokemon.hp.max}</span>
+	<span style:grid-area="status" class="smaller-text">{#if pokemon.status != null}<StatusTag abbr value={pokemon.status} />{/if}</span>
 	<span style:grid-area="lv" class="right">Lv. {pokemon.level}</span>
 </a>
 
 <style>
 	.gridded {
 		display: grid;
-		grid-template-columns: 3em 1fr auto;
+		grid-template-columns: 3em 1fr auto auto;
 		grid-template-areas:
-			"sprite name gender"
-			"sprite hpbar hpbar"
-			"sprite hp lv";
+			"sprite name name gender"
+			"sprite hpbar hpbar hpbar"
+			"sprite hp status lv";
 		gap: 0.125em;
 	}
 
@@ -63,6 +65,8 @@
 		background-color: var(--skin-bg);
 		color: var(--skin-bg-text);
 	}
+
+	.smaller-text { font-size: var(--font-sz-venus); }
 
 	/* Literally cannot work with the scrollbar */
 	/* .selectable-bubble:hover::before,
