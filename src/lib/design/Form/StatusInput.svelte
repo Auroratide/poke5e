@@ -20,6 +20,16 @@
 		value = target.value ? (target.value) as NonVolatileStatus : null
 		dispatch("change", { value } as ChangeDetail)
 	}
+
+	// Accessibility
+	const onKeyUp = (e: KeyboardEvent) => {
+		if (e.key === "Enter") {
+			const target = e.target as HTMLSelectElement
+			if ("showPicker" in HTMLSelectElement.prototype) {
+				target.showPicker()
+			}
+		}
+	}
 </script>
 
 <div class="overlapping interactive-container">
@@ -29,7 +39,7 @@
 		</span>
 		<VisuallyHidden>Edit Status</VisuallyHidden>
 	</label>
-	<select {id} {value} on:change={onChange} class="overlay">
+	<select {id} {value} on:change={onChange} class="overlay" on:keyup={onKeyUp}>
 		<option value={null}>None</option>
 		{#each statusList as status}
 			<option value="{status.id}">{status.name}</option>
