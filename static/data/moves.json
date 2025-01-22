@@ -10186,6 +10186,21 @@
         "You fill your eyes with tears to make all creatures in range lose their combative spirit.  All creatures in range must make a CHA save against your Move DC.  On a fail, they add -1 to any attack they makes for the duration.  This modifier can be stacked if an affected creature fails multiple Tearful Look saves, up to a maximum of -5."
       ]
     },
+		{
+      "id": "teatime",
+      "name": "Teatime",
+      "type": "normal",
+      "power": [
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "It's tea time! All creatures in range must make a CHA save against your Move DC. On a fail, the creature must spend its next action consuming its held berry. This move has no effect on the creature if it is not holding a berry. You also immediately consume your held berry. Outside of combat, this move may be used once during a short rest to grant each ally one free hit die of recovery."
+      ]
+    },
     {
       "id": "techno-blast",
       "name": "Techno Blast",
