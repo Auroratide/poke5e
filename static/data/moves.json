@@ -2885,6 +2885,23 @@
         "You fake a creature out with superficial tears, lowering their defenses. When activating this move, a target must make a WIS saving throw against your Move DC. On a failure, all attack rolls against the target are given a +5 bonus until the end of your next turn."
       ]
     },
+		{
+      "id": "false-surrender",
+      "name": "False Surrender",
+      "type": "dark",
+      "power": [
+        "dex",
+				"cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You pretend to bow your head, only to backstab your target at the last moment. The target must make a WIS save against your Move DC. On failure, the target takes 2d6 + MOVE dark damage, or half that damage on a successful save."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
     {
       "id": "false-swipe",
       "name": "False Swipe",
@@ -5350,6 +5367,22 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17."
     },
+		{
+      "id": "life-dew",
+      "name": "Life Dew",
+      "type": "water",
+      "power": [
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "Self (15 ft radius)",
+      "description": [
+        "You scatter mysterious water around yourself. You and all allies withing 15 ft of you regain 1d4 + MOVE hit points."
+      ],
+      "higherLevels": "The healing dice roll for this move changes to 2d4 at level 5, 2d8 at level 10, and 4d6 at level 17."
+    },
     {
       "id": "light-of-ruin",
       "name": "Light of Ruin",
@@ -5550,6 +5583,22 @@
       "range": "50ft",
       "description": [
         "A flash of magical energy forms between you and a creature, reflecting negative energy back at an attacker in range. When an attack from a creature causes you to suffer from a negative status condition, they are also affected by the same condition."
+      ]
+    },
+		{
+      "id": "magic-powder",
+      "name": "Magic Powder",
+      "type": "psychic",
+      "power": [
+        "int",
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "1 minute",
+      "range": "30ft",
+      "description": [
+        "You scatter a cloud of magic powder at a foe. Target creature within 30 ft must make a CHA save against your Move DC. On failure, their type changes to Psychic type for the duration."
       ]
     },
     {
@@ -9359,6 +9408,23 @@
       "description": [
         "You quickly raise a spiked shield to protect yourself from damage. When you are hit by a melee attack, use your reaction to ignore damage, dealing grass damage equal to your proficiency modifier to the attacker instead. On future instances of this reaction in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful."
       ]
+    },
+		{
+      "id": "spirit-break",
+      "name": "Spirit Break",
+      "type": "fairy",
+      "power": [
+        "str",
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You attack with so much force it breaks the target's spirit. Make a melee attack against a target, dealing 2d8 + MOVE fairy damage on a hit. The target has disadvantage on its next attack."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
     },
     {
       "id": "spirit-shackle",
