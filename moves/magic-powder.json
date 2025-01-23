@@ -1,0 +1,1 @@
+{"id":"magic-powder","name":"Magic Powder","type":"psychic","power":["int","wis"],"time":"1 action","pp":5,"duration":"1 minute","range":"30ft","description":["You scatter a cloud of magic powder at a foe. Target creature within 30 ft must make a CHA save against your Move DC. On failure, their type changes to Psychic type for the duration."]}
