@@ -11,6 +11,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.0.2",
+		description: [
+			"Added Pokemon: Polteageist line, Hatterene line, Grimmsnarl line",
+			"Added Moves: Tea Time, Life Dew, Magic Powder, False Surrender, Spirit Break"
+		],
+	}, {
 		name: "v1.0.1",
 		description: [
 			"Bug fix: Custom natures now appear in pokemon editor",
