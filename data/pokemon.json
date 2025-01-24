@@ -12111,7 +12111,8 @@
           "aqua-tail",
           "ice-beam",
           "safeguard",
-          "hail"
+          "hail",
+					"snowscape"
         ],
         "tm": [
           6,
@@ -12255,7 +12256,8 @@
           "aqua-tail",
           "ice-beam",
           "safeguard",
-          "hail"
+          "hail",
+					"snowscape"
         ],
         "tm": [
           6,
@@ -20722,7 +20724,8 @@
           "mind-reader",
           "ancient-power",
           "agility",
-          "reflect"
+          "reflect",
+					"snowscape"
         ],
         "level18": [
           "hail",
@@ -51952,7 +51955,8 @@
         ],
         "level14": [
           "frost-breath",
-          "crunch"
+          "crunch",
+					"snowscape"
         ],
         "level18": [
           "blizzard",
@@ -52080,7 +52084,8 @@
         ],
         "level14": [
           "frost-breath",
-          "crunch"
+          "crunch",
+					"snowscape"
         ],
         "level18": [
           "blizzard",
@@ -67505,7 +67510,8 @@
         ],
         "level10": [
           "ice-shard",
-          "barrier"
+          "barrier",
+					"snowscape"
         ],
         "level14": [
           "mirror-coat",
@@ -68486,7 +68492,8 @@
         ],
         "level14": [
           "wake-up-slap",
-          "captivate"
+          "captivate",
+					"snowscape"
         ],
         "level18": [
           "shadow-ball",
@@ -87587,7 +87594,8 @@
         ],
         "level10": [
           "false-swipe",
-          "dragon-claw"
+          "dragon-claw",
+					"breaking-swipe"
         ],
         "level14": [
           "taunt",
@@ -87741,7 +87749,8 @@
         "level10": [
           "false-swipe",
           "dragon-claw",
-          "dragon-dance"
+          "dragon-dance",
+					"breaking-swipe"
         ],
         "level14": [
           "taunt",
@@ -87863,7 +87872,8 @@
           "slash",
           "false-swipe",
           "dragon-claw",
-          "dragon-dance"
+          "dragon-dance",
+					"breaking-swipe"
         ],
         "level14": [
           "taunt",
@@ -88016,7 +88026,8 @@
         ],
         "level10": [
           "endure",
-          "charm"
+          "charm",
+					"snowscape"
         ],
         "level14": [
           "slash",
@@ -88153,7 +88164,8 @@
         ],
         "level10": [
           "endure",
-          "swagger"
+          "swagger",
+					"snowscape"
         ],
         "level14": [
           "slash",
@@ -104365,7 +104377,8 @@
         ],
         "level18": [
           "hail",
-          "blizzard"
+          "blizzard",
+					"snowscape"
         ],
         "tm": [
           1,
@@ -129644,6 +129657,1820 @@
         "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/872.png"
       }
     },
+		{
+			"id": "frosmoth",
+			"name": "Frosmoth",
+			"number": 873,
+			"type": [
+				"ice",
+				"bug"
+			],
+			"size": "small",
+			"sr": 7,
+			"minLevel": 8,
+			"eggGroup": [
+				"bug"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"snom"
+				]
+			},
+			"description": "The Frost Moth Pokémon. Icy scales fall from its wings like snow as it flies over fields and mountains. The temperature of its wings is less than -290 degrees Fahrenheit.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				},
+				{
+					"type": "flying",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 14,
+				"con": 14,
+				"int": 6,
+				"wis": 15,
+				"cha": 10
+			},
+			"hp": 76,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "shield-dust",
+					"hidden": false
+				},
+				{
+					"id": "ice-scales",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"powder-snow",
+					"icy-wind",
+					"attract",
+					"helping-hand",
+					"struggle-bug",
+					"stun-spore",
+					"infestation",
+					"mist",
+					"defog"
+				],
+				"level10": [
+					"aurora-beam",
+					"hail",
+					"feather-dance",
+					"snowscape"
+				],
+				"level14": [
+					"bug-buzz"
+				],
+				"level18": [
+					"blizzard",
+					"tailwind",
+					"wide-guard",
+					"quiver-dance",
+					"aurora-veil"
+				],
+				"tm": [
+					4,
+					13,
+					15,
+					16,
+					17,
+					20,
+					28,
+					33,
+					42,
+					44,
+					48,
+					62,
+					68,
+					88,
+					89,
+					90,
+					99,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/873.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/873.png"
+			}
+		},
+		{
+			"id": "stonjourner",
+			"name": "Stonjourner",
+			"number": 874,
+			"type": [
+				"rock"
+			],
+			"size": "large",
+			"sr": 6,
+			"minLevel": 5,
+			"eggGroup": [
+				"mineral"
+			],
+			"gender": "1:1",
+			"description": "The Big Rock Pokémon. It stands in grasslands, watching the sun’s descent from zenith to horizon. This Pokémon has a talent for delivering dynamic kicks.",
+			"ac": 15,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 11,
+				"con": 17,
+				"int": 6,
+				"wis": 9,
+				"cha": 10
+			},
+			"hp": 74,
+			"skills": [
+				"history"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [
+				{
+					"type": "tremorsense",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "power-spot",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"rock-throw",
+					"block",
+					"rock-polish",
+					"rock-tomb"
+				],
+				"level6": [
+					"gravity"
+				],
+				"level10": [
+					"stomp",
+					"stealth-rock"
+				],
+				"level14": [
+					"body-slam",
+					"rock-slide",
+					"wide-guard"
+				],
+				"level18": [
+					"mega-kick",
+					"stone-edge",
+					"heavy-slam"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					20,
+					23,
+					26,
+					37,
+					42,
+					44,
+					45,
+					47,
+					48,
+					59,
+					68,
+					77,
+					78,
+					88,
+					90
+				],
+				"egg": [
+					"curse",
+					"ancient-power"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/874.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/874.png"
+			}
+		},
+		{
+			"id": "eiscue",
+			"name": "Eiscue",
+			"number": 875,
+			"type": [
+				"ice"
+			],
+			"size": "medium",
+			"sr": 6,
+			"minLevel": 5,
+			"eggGroup": [
+				"water-1",
+				"field"
+			],
+			"gender": "1:1",
+			"description": "The Penguin Pokémon. It drifted in on the flow of ocean waters from a frigid place. It keeps its head iced constantly to make sure it stays nice and cold.",
+			"ac": 18,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				},
+				{
+					"type": "swimming",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 13,
+				"con": 15,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 56,
+			"skills": [
+				"nature",
+				"survival"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "ice-face",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"powder-snow",
+					"mist",
+					"weather-ball"
+				],
+				"level6": [
+					"icy-wind"
+				],
+				"level10": [
+					"headbutt",
+					"amnesia"
+				],
+				"level14": [
+					"freeze-dry",
+					"snowscape",
+					"aurora-veil"
+				],
+				"level18": [
+					"surf",
+					"blizzard",
+					"hail"
+				],
+				"tm": [
+					13,
+					15,
+					17,
+					18,
+					33,
+					42,
+					44,
+					45,
+					48,
+					68,
+					88,
+					90,
+					98
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/875.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/875.png"
+			}
+		},
+		{
+			"id": "indeedee-m",
+			"name": "Indeedee ♂",
+			"number": 876,
+			"type": [
+				"psychic",
+				"normal"
+			],
+			"size": "small",
+			"sr": 7,
+			"minLevel": 5,
+			"eggGroup": [
+				"fairy"
+			],
+			"gender": "1:1",
+			"description": "The Emotion Pokémon. It uses the horns on its head to sense the emotions of others. Males will act as valets for those they serve, looking after their every need.",
+			"ac": 15,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 16,
+				"con": 13,
+				"int": 6,
+				"wis": 16,
+				"cha": 12
+			},
+			"hp": 49,
+			"skills": [
+				"arcana",
+				"insight"
+			],
+			"savingThrows": [
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "inner-focus",
+					"hidden": false
+				},
+				{
+					"id": "synchronize",
+					"hidden": false
+				},
+				{
+					"id": "psychic-surge",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"stored-power",
+					"play-nice",
+					"encore",
+					"disarming-voice"
+				],
+				"level6": [
+					"psybeam",
+					"helping-hand"
+				],
+				"level10": [
+					"aromatherapy",
+					"healing-wish",
+					"after-you"
+				],
+				"level14": [
+					"psychic",
+					"calm-mind"
+				],
+				"level18": [
+					"last-resort",
+					"power-split",
+					"psychic-terrain"
+				],
+				"tm": [
+					3,
+					17,
+					30,
+					42,
+					44,
+					45,
+					48,
+					53,
+					88,
+					90,
+					92,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/876.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/876.png"
+			}
+		},
+		{
+			"id": "indeedee-f",
+			"name": "Indeedee ♀",
+			"number": 876,
+			"type": [
+				"psychic",
+				"normal"
+			],
+			"size": "small",
+			"sr": 7,
+			"minLevel": 5,
+			"eggGroup": [
+				"fairy"
+			],
+			"gender": "1:1",
+			"description": "The Emotion Pokémon. They diligently serve people and Pokémon so they can gather feelings of gratitude. The females are particularly good at babysitting.",
+			"ac": 16,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 15,
+				"con": 14,
+				"int": 6,
+				"wis": 15,
+				"cha": 12
+			},
+			"hp": 55,
+			"skills": [
+				"arcana",
+				"insight"
+			],
+			"savingThrows": [
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "own-tempo",
+					"hidden": false
+				},
+				{
+					"id": "synchronize",
+					"hidden": false
+				},
+				{
+					"id": "psychic-surge",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"stored-power",
+					"play-nice",
+					"encore",
+					"disarming-voice"
+				],
+				"level6": [
+					"psybeam",
+					"helping-hand"
+				],
+				"level10": [
+					"aromatherapy",
+					"healing-wish",
+					"after-you"
+				],
+				"level14": [
+					"psychic",
+					"calm-mind"
+				],
+				"level18": [
+					"last-resort",
+					"power-split",
+					"psychic-terrain"
+				],
+				"tm": [
+					3,
+					17,
+					30,
+					42,
+					44,
+					45,
+					48,
+					53,
+					88,
+					90,
+					92,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10186.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10186.png"
+			}
+		},
+		{
+			"id": "morpeko",
+			"name": "Morpeko",
+			"number": 877,
+			"type": [
+				"electric",
+				"dark"
+			],
+			"size": "tiny",
+			"sr": 4,
+			"minLevel": 5,
+			"eggGroup": [
+				"field",
+				"fairy"
+			],
+			"gender": "1:1",
+			"description": "The Two-Sided Pokémon. As it eats the seeds stored up in its pocket-like pouches, this Pokémon is not just satisfying its constant hunger. It’s also generating electricity.",
+			"ac": 14,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 13,
+				"con": 13,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 41,
+			"skills": [
+				"perception"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "hunger-switch",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"tail-whip",
+					"thunder-shock",
+					"leer",
+					"power-trip"
+				],
+				"level6": [
+					"quick-attack",
+					"flatter"
+				],
+				"level10": [
+					"bite",
+					"spark"
+				],
+				"level14": [
+					"torment",
+					"agility",
+					"bullet-seed"
+				],
+				"level18": [
+					"thrash",
+					"crunch",
+					"aura-wheel"
+				],
+				"tm": [
+					12,
+					17,
+					24,
+					25,
+					31,
+					42,
+					44,
+					45,
+					46,
+					48,
+					56,
+					57,
+					66,
+					72,
+					73,
+					88,
+					90,
+					93,
+					95,
+					97
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/877.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/877.png"
+			}
+		},
+		{
+			"id": "cufant",
+			"name": "Cufant",
+			"number": 878,
+			"type": [
+				"steel"
+			],
+			"size": "small",
+			"sr": 1,
+			"minLevel": 1,
+			"eggGroup": [
+				"field",
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "copperajah",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				],
+				"description": "Cufant can evolve into Copperajah at level 8 and above. When it evolves, its health increases by double its level, and it gains 12 points to add to its ability scores (max 20)."
+			},
+			"description": "The Copperderm Pokémon. It digs up the ground with its trunk. It’s also very strong, being able to carry loads of over five tons without any problem at all.",
+			"ac": 13,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 11,
+				"con": 14,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 19,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "sheer-force",
+					"hidden": false
+				},
+				{
+					"id": "heavy-metal",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"growl"
+				],
+				"level2": [
+					"rollout",
+					"rock-smash"
+				],
+				"level6": [
+					"stomp",
+					"bulldoze"
+				],
+				"level10": [
+					"dig",
+					"iron-defense"
+				],
+				"level14": [
+					"strength",
+					"iron-head",
+					"play-rough"
+				],
+				"level18": [
+					"superpower",
+					"high-horsepower"
+				],
+				"tm": [
+					1,
+					17,
+					26,
+					31,
+					37,
+					39,
+					42,
+					44,
+					45,
+					48,
+					56,
+					59,
+					71,
+					80,
+					88,
+					90,
+					91
+				],
+				"egg": [
+					"whirlwind",
+					"slam",
+					"double-edge",
+					"fissure",
+					"defense-curl",
+					"curse",
+					"swagger",
+					"belch"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/878.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/878.png"
+			}
+		},
+		{
+			"id": "copperajah",
+			"name": "Copperajah",
+			"number": 879,
+			"type": [
+				"steel"
+			],
+			"size": "large",
+			"sr": 9,
+			"minLevel": 5,
+			"eggGroup": [
+				"field",
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"cufant"
+				]
+			},
+			"description": "The Copperderm Pokémon. They came over from another region long ago and worked together with humans. Their green skin is resistant to water.",
+			"ac": 15,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 35
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 11,
+				"con": 17,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 80,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "sheer-force",
+					"hidden": false
+				},
+				{
+					"id": "heavy-metal",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"growl",
+					"rollout",
+					"rock-smash",
+					"heavy-slam"
+				],
+				"level6": [
+					"bulldoze",
+					"stomp"
+				],
+				"level10": [
+					"dig",
+					"iron-defense"
+				],
+				"level14": [
+					"strength",
+					"iron-head"
+				],
+				"level18": [
+					"superpower",
+					"play-rough",
+					"high-horsepower"
+				],
+				"tm": [
+					1,
+					12,
+					15,
+					17,
+					23,
+					26,
+					31,
+					37,
+					39,
+					42,
+					44,
+					45,
+					48,
+					56,
+					59,
+					66,
+					68,
+					71,
+					80,
+					88,
+					90,
+					91,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/879.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/879.png"
+			}
+		},
+		{
+			"id": "dracozolt",
+			"name": "Dracozolt",
+			"number": 880,
+			"type": [
+				"electric",
+				"dragon"
+			],
+			"size": "medium",
+			"sr": 9,
+			"minLevel": 8,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Fossil Pokémon. In ancient times, it was unbeatable thanks to its powerful lower body, but it went extinct anyway after it depleted all its plant-based food sources.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 35
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 14,
+				"con": 16,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 86,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "volt-absorb",
+					"hidden": false
+				},
+				{
+					"id": "hustle",
+					"hidden": false
+				},
+				{
+					"id": "sand-rush",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"thunder-shock",
+					"charge",
+					"aerial-ace"
+				],
+				"level10": [
+					"ancient-power",
+					"pluck",
+					"dragon-tail"
+				],
+				"level14": [
+					"slam",
+					"stomp",
+					"discharge",
+					"bolt-beak"
+				],
+				"level18": [
+					"dragon-pulse",
+					"dragon-rush"
+				],
+				"tm": [
+					2,
+					11,
+					12,
+					15,
+					17,
+					18,
+					24,
+					25,
+					26,
+					35,
+					38,
+					39,
+					42,
+					44,
+					48,
+					59,
+					68,
+					71,
+					73,
+					78,
+					80,
+					88,
+					90,
+					93
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/880.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/880.png"
+			}
+		},
+		{
+			"id": "arctozolt",
+			"name": "Arctozolt",
+			"number": 881,
+			"type": [
+				"electric",
+				"ice"
+			],
+			"size": "large",
+			"sr": 9,
+			"minLevel": 8,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Fossil Pokémon. The shaking of its freezing upper half is what generates its electricity. It has a hard time walking around.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 12,
+				"con": 16,
+				"int": 6,
+				"wis": 13,
+				"cha": 10
+			},
+			"hp": 84,
+			"skills": [
+				"intimidation"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "volt-absorb",
+					"hidden": false
+				},
+				{
+					"id": "static",
+					"hidden": false
+				},
+				{
+					"id": "slush-rush",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"thunder-shock",
+					"powder-snow",
+					"charge",
+					"echoed-voice"
+				],
+				"level10": [
+					"ancient-power",
+					"pluck",
+					"avalanche"
+				],
+				"level14": [
+					"slam",
+					"discharge",
+					"bolt-beak"
+				],
+				"level18": [
+					"blizzard",
+					"icicle-crash",
+					"freeze-dry"
+				],
+				"tm": [
+					7,
+					12,
+					13,
+					15,
+					17,
+					18,
+					24,
+					25,
+					39,
+					42,
+					44,
+					48,
+					66,
+					68,
+					71,
+					73,
+					78,
+					80,
+					88,
+					90,
+					93,
+					94
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/881.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/881.png"
+			}
+		},
+		{
+			"id": "dracovish",
+			"name": "Dracovish",
+			"number": 882,
+			"type": [
+				"water",
+				"dragon"
+			],
+			"size": "large",
+			"sr": 9,
+			"minLevel": 8,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Fossil Pokémon. Powerful legs and jaws made it the apex predator of its time. Its own overhunting of its prey was what drove it to extinction.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				},
+				{
+					"type": "swimming",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 14,
+				"con": 17,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 90,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "water-absorb",
+					"hidden": false
+				},
+				{
+					"id": "strong-jaw",
+					"hidden": false
+				},
+				{
+					"id": "sand-rush",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"water-gun",
+					"protect",
+					"brutal-swing"
+				],
+				"level10": [
+					"bite",
+					"ancient-power",
+					"dragon-breath"
+				],
+				"level14": [
+					"stomp",
+					"super-fang",
+					"crunch"
+				],
+				"level18": [
+					"dragon-pulse",
+					"dragon-rush",
+					"fishious-rend"
+				],
+				"tm": [
+					15,
+					18,
+					26,
+					28,
+					39,
+					42,
+					44,
+					48,
+					55,
+					68,
+					71,
+					78,
+					80,
+					88,
+					90,
+					94,
+					98
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/882.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/882.png"
+			}
+		},
+		{
+			"id": "arctovish",
+			"name": "Arctovish",
+			"number": 883,
+			"type": [
+				"water",
+				"ice"
+			],
+			"size": "medium",
+			"sr": 9,
+			"minLevel": 8,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Fossil Pokémon. Though it’s able to capture prey by freezing its surroundings, it has trouble eating the prey afterward because its mouth is on top of its head.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				},
+				{
+					"type": "swimming",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 13,
+				"con": 17,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 90,
+			"skills": [
+				"intimidation"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "water-absorb",
+					"hidden": false
+				},
+				{
+					"id": "ice-body",
+					"hidden": false
+				},
+				{
+					"id": "slush-rush",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"water-gun",
+					"powder-snow",
+					"protect",
+					"icy-wind"
+				],
+				"level10": [
+					"bite",
+					"ancient-power",
+					"aurora-veil"
+				],
+				"level14": [
+					"freeze-dry",
+					"super-fang",
+					"crunch"
+				],
+				"level18": [
+					"blizzard",
+					"icicle-crash",
+					"fishious-rend"
+				],
+				"tm": [
+					7,
+					13,
+					15,
+					18,
+					39,
+					42,
+					44,
+					48,
+					68,
+					71,
+					80,
+					88,
+					90,
+					94,
+					98
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/883.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/883.png"
+			}
+		},
+		{
+			"id": "duraludon",
+			"name": "Duraludon",
+			"number": 884,
+			"type": [
+				"steel",
+				"dragon"
+			],
+			"size": "medium",
+			"sr": 12,
+			"minLevel": 8,
+			"eggGroup": [
+				"mineral",
+				"dragon"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "archaludon",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 14
+							},
+							{
+								"type": "item",
+								"value": "Metal Alloy"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 8
+							}
+						]
+					}
+				],
+				"description": "Duraludon can evolve into Archaludon at level 14 and above with the help of a Metal Alloy. When it evolves, its health increases by double its level, and it gains 8 points to add to its ability scores (max 20)."
+			},
+			"description": "The Alloy Pokémon. Its body resembles polished metal, and it’s both lightweight and strong. The only drawback is that it rusts easily.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 12,
+				"con": 17,
+				"int": 6,
+				"wis": 18,
+				"cha": 11
+			},
+			"hp": 99,
+			"skills": [
+				"intimidation"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "light-metal",
+					"hidden": false
+				},
+				{
+					"id": "heavy-metal",
+					"hidden": false
+				},
+				{
+					"id": "stalwart",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"metal-claw",
+					"rock-smash",
+					"metal-sound",
+					"hone-claws"
+				],
+				"level10": [
+					"dragon-tail",
+					"breaking-swipe"
+				],
+				"level14": [
+					"iron-defense",
+					"focus-energy",
+					"dragon-claw"
+				],
+				"level18": [
+					"hyper-beam",
+					"metal-burst",
+					"flash-cannon",
+					"laser-focus"
+				],
+				"tm": [
+					5,
+					16,
+					17,
+					22,
+					24,
+					25,
+					31,
+					33,
+					39,
+					42,
+					44,
+					45,
+					48,
+					68,
+					71,
+					73,
+					74,
+					75,
+					80,
+					88,
+					90,
+					95,
+					97
+				],
+				"egg": [
+					"slash",
+					"mirror-coat",
+					"night-slash"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/884.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/884.png"
+			}
+		},
+		{
+			"id": "dreepy",
+			"name": "Dreepy",
+			"number": 885,
+			"type": [
+				"dragon",
+				"ghost"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"amorphous",
+				"dragon"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "1",
+				"to": [
+					{
+						"id": "drakloak",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 10
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				],
+				"description": "Dreepy can evolve into Drakloak at level 10 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20)."
+			},
+			"description": "The Lingering Pokémon. After being reborn as a ghost Pokémon, Dreepy wanders the areas it used to inhabit back when it was alive in prehistoric seas.",
+			"ac": 12,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "flying",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 16,
+				"con": 11,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 16,
+			"skills": [
+				"history"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "clear-body",
+					"hidden": false
+				},
+				{
+					"id": "infiltrator",
+					"hidden": false
+				},
+				{
+					"id": "cursed-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"bite",
+					"quick-attack",
+					"astonish",
+					"infestation"
+				],
+				"tm": [
+					17,
+					42,
+					44,
+					45,
+					48,
+					73,
+					88,
+					90
+				],
+				"egg": [
+					"disable",
+					"double-team",
+					"confuse-ray",
+					"curse",
+					"grudge",
+					"sucker-punch",
+					"dragon-tail"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/885.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/885.png"
+			}
+		},
+		{
+			"id": "drakloak",
+			"name": "Drakloak",
+			"number": 886,
+			"type": [
+				"dragon",
+				"ghost"
+			],
+			"size": "medium",
+			"sr": 3,
+			"minLevel": 5,
+			"eggGroup": [
+				"amorphous",
+				"dragon"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"dreepy"
+				],
+				"to": [
+					{
+						"id": "dragapult",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 16
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				],
+				"description": "Drakloak can evolve into Dragapult at level 16 and above. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20)."
+			},
+			"description": "The Caretaker Pokémon. It’s capable of flying faster than 120 mph. It battles alongside Dreepy and dotes on them until they successfully evolve.",
+			"ac": 13,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "flying",
+					"value": 50
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 18,
+				"con": 13,
+				"int": 6,
+				"wis": 11,
+				"cha": 10
+			},
+			"hp": 42,
+			"skills": [
+				"history"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "clear-body",
+					"hidden": false
+				},
+				{
+					"id": "infiltrator",
+					"hidden": false
+				},
+				{
+					"id": "cursed-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"bite",
+					"quick-attack",
+					"astonish",
+					"dragon-pulse",
+					"infestation",
+					"lock-on"
+				],
+				"level6": [
+					"assurance",
+					"hex"
+				],
+				"level10": [
+					"agility",
+					"double-hit",
+					"u-turn"
+				],
+				"level14": [
+					"dragon-dance",
+					"phantom-force",
+					"take-down"
+				],
+				"level18": [
+					"double-edge",
+					"last-resort",
+					"dragon-rush"
+				],
+				"tm": [
+					11,
+					16,
+					17,
+					24,
+					25,
+					30,
+					33,
+					35,
+					38,
+					42,
+					44,
+					45,
+					46,
+					48,
+					51,
+					55,
+					61,
+					62,
+					73,
+					82,
+					88,
+					90,
+					94,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/886.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/886.png"
+			}
+		},
+		{
+			"id": "dragapult",
+			"name": "Dragapult",
+			"number": 887,
+			"type": [
+				"dragon",
+				"ghost"
+			],
+			"size": "large",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"amorphous",
+				"dragon"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"drakloak"
+				]
+			},
+			"description": "The Stealth Pokémon. When it isn’t battling, it keeps Dreepy in the holes on its horns. Once a fight starts, it launches the Dreepy like supersonic missiles.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "flying",
+					"value": 50
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 20,
+				"con": 16,
+				"int": 6,
+				"wis": 14,
+				"cha": 14
+			},
+			"hp": 142,
+			"skills": [
+				"stealth",
+				"history"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "clear-body",
+					"hidden": false
+				},
+				{
+					"id": "infiltrator",
+					"hidden": false
+				},
+				{
+					"id": "cursed-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"bite",
+					"quick-attack",
+					"dragon-breath",
+					"astonish",
+					"sucker-punch",
+					"infestation",
+					"dragon-darts",
+					"lock-on",
+					"assurance",
+					"hex",
+					"agility",
+					"double-hit",
+					"u-turn"
+				],
+				"level18": [
+					"take-down",
+					"double-edge",
+					"dragon-dance",
+					"last-resort",
+					"dragon-rush",
+					"phantom-force"
+				],
+				"tm": [
+					2,
+					11,
+					15,
+					16,
+					17,
+					22,
+					24,
+					25,
+					30,
+					33,
+					35,
+					38,
+					42,
+					44,
+					45,
+					46,
+					48,
+					51,
+					55,
+					61,
+					62,
+					68,
+					73,
+					76,
+					82,
+					88,
+					90,
+					94,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/887.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/887.png"
+			}
+		},
 	 {
       "id": "sprigatito",
       "name": "Sprigatito",
@@ -130309,6 +132136,122 @@
         "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/982.png"
       }
     },
+		{
+			"id": "archaludon",
+			"name": "Archaludon",
+			"number": 1018,
+			"type": [
+				"steel",
+				"dragon"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 10,
+			"eggGroup": [
+				"mineral",
+				"dragon"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"duraludon"
+				]
+			},
+			"description": "The Alloy Pokémon. It gathers static electricity from its surroundings. The beams it launches when down on all fours are tremendously powerful.",
+			"ac": 17,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 19,
+				"dex": 14,
+				"con": 18,
+				"int": 6,
+				"wis": 19,
+				"cha": 12
+			},
+			"hp": 123,
+			"skills": [
+				"athletics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "stamina",
+					"hidden": false
+				},
+				{
+					"id": "sturdy",
+					"hidden": false
+				},
+				{
+					"id": "stalwart",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"metal-claw",
+					"electro-shot",
+					"rock-smash",
+					"metal-sound",
+					"hone-claws",
+					"dragon-tail",
+					"breaking-swipe"
+				],
+				"level14": [
+					"iron-defense",
+					"focus-energy"
+				],
+				"level18": [
+					"hyper-beam",
+					"dragon-claw",
+					"metal-burst",
+					"flash-cannon"
+				],
+				"tm": [
+					5,
+					16,
+					17,
+					22,
+					23,
+					24,
+					25,
+					26,
+					31,
+					33,
+					39,
+					42,
+					44,
+					68,
+					71,
+					73,
+					74,
+					75,
+					80,
+					88,
+					90,
+					95,
+					97
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1018.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1018.png"
+			}
+		},
     {
       "id": "rookite",
       "name": "Rookite",

@@ -483,6 +483,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17."
     },
+		{
+      "id": "aura-wheel",
+      "name": "Aura Wheel",
+      "type": "electric",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You create a wheel of energy around yourself and charge at a creature in range. You can immediately move up to 5ft and make a melee attack against a creature in range, doing 1d8 + MOVE electric damage on a hit. If this attack hits, the next time Aura Wheel is used, you may move an additional 5ft. This effect stacks up to a total bonus movement of 20ft.",
+				"The damage type of this move is Electric when its user is in Full Belly Mode, and Dark when its user is in Hangry Mode."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 2d12 at level 10, and 4d8 at level 17."
+    },
     {
       "id": "aurora-beam",
       "name": "Aurora Beam",
@@ -834,6 +851,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
+		{
+      "id": "bolt-beak",
+      "name": "Bolt Beak",
+      "type": "electric",
+      "power": [
+        "str",
+				"dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You stab the target with an electrified beak. Make a melee attack, dealing 2d6 + MOVE electric damage on a hit. If the target did not use an attacking move on its last turn, double the MOVE damage."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
     {
       "id": "bolt-strike",
       "name": "Bolt Strike",
@@ -966,6 +1000,23 @@
         "You tuck in your wings and dive at a creature. Make a melee attack, dealing 2d10 + MOVE flying damage on a hit. On a hit, you also take a quarter of the total (rounded down) in typeless recoil damage."
       ],
       "higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 4d10 at level 10, and 7d8 at level 17."
+    },
+		{
+      "id": "breaking-swipe",
+      "name": "Breaking Swipe",
+      "type": "dragon",
+      "power": [
+        "str",
+				"dex"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "self (5ft radius)",
+      "description": [
+        "You swing your tail wildly around you. All creatures within 5ft must make a DEX save against your Move DC, taking 1d10 + MOVE dragon damage on a fail, and half as much on a success. Creatures that fail the saving throw also have disadvantage on all of their attacks until the end of their next turn."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
     {
       "id": "brick-break",
@@ -2254,6 +2305,23 @@
         "You perform a mystical dance, pumping yourself up. For the duration, double your proficiency bonus when making an attack."
       ]
     },
+		{
+      "id": "dragon-darts",
+      "name": "Dragon Darts",
+      "type": "dragon",
+      "power": [
+        "str",
+				"dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "60ft",
+      "description": [
+        "Make two ranged attacks against up to two creatures in range, each dealing 1d8 + MOVE dragon damage on hit."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17."
+    },
     {
       "id": "dragon-hammer",
       "name": "Dragon Hammer",
@@ -2614,6 +2682,23 @@
         "You hurl an electric orb at a target in range. Make a ranged attack roll, dealing 1d6 + MOVE electric damage on a hit. Compare the target and user's highest speed type (walking, flying, etc.). If the user's speed is higher, roll the next tier's damage dice for this move. In the case of level 17 or higher, double the damage dice."
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
+    },
+		{
+      "id": "electro-shot",
+      "name": "Electro Shot",
+      "type": "electric",
+      "power": [
+				"dex",
+        "wis"
+      ],
+      "time": "1 action, charge",
+      "pp": 5,
+      "duration": "1 round, concentration",
+      "range": "self (80ft line)",
+      "description": [
+        "When you use this move, soak in electricity and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a 80 foot line of electric energy, 5 feet wide. Any creature caught in the line must succeed on a DEX save or take 3d8 + MOVE electric damage on a fail and half as much on a save. If this move is used in the rain, double your MOVE modifier for damage and it can be used on the turn it is activated, without concentration."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17."
     },
     {
       "id": "electroweb",
@@ -3133,6 +3218,23 @@
         "You make quite the entrance, quickly attacking a creature. This attack can only be used on the first turn that the user has entered combat. Make a melee attack on a creature, doing 2d8 + MOVE bug damage on a hit."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
+    },
+		{
+      "id": "fishious-rend",
+      "name": "Fishious Rend",
+      "type": "water",
+      "power": [
+        "str",
+				"dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You rend the target with your hard gills. Make a melee attack, dealing 2d6 + MOVE water damage on a hit. If the target did not use an attacking move on its last turn, double the MOVE damage."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
     {
       "id": "fissure",
@@ -9179,6 +9281,22 @@
         "While you are asleep, you may activate this move to create a harsh noise that damages all creature within range for 1d8 + MOVE normal damage."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17."
+    },
+		{
+      "id": "snowscape",
+      "name": "Snowscape",
+      "type": "ice",
+      "power": [
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "1 minute, concentration",
+      "range": "Self (60ft radius)",
+      "description": [
+				"You cover the battlefield in a snowstorm. While concentrating, Ice-type creatures in range have +1 to AC."
+      ],
+      "higherLevels": "The AC bonus for this move changes to +2 at level 5, +3 at level 10, and +4 at level 17."
     },
     {
       "id": "soak",

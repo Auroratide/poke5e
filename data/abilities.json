@@ -455,6 +455,11 @@
       "name": "Huge Power",
       "description": "Once per short rest, this Pokémon may double the damage dice for a single damage roll. The player must announce that they are using this ability before the attack roll."
     },
+		{
+      "id": "hunger-switch",
+      "name": "Hunger Switch",
+      "description": "At the start of its turn, this Pokemon switches to Hangry Mode if it was in Full Belly Mode, or switches to Full Belly Mode if it was in Hangry Mode."
+    },
     {
       "id": "hustle",
       "name": "Hustle",
@@ -479,6 +484,11 @@
       "id": "ice-body",
       "name": "Ice Body",
       "description": "While it is snowing or hailing, this Pokémon heals for an amount of HP equal to its proficiency modifier at the end of each of its turns."
+    },
+		{
+      "id": "ice-face",
+      "name": "Ice Face",
+      "description": "This Pokémon has two forms: Ice Form and No-Ice Form. When in Ice Form, the first time this pokémon takes damage, it takes half that damage but transforms into No-Ice Form. When in No-Ice Form, this pokemon's AC is decreased by 3 and each of its movement speeds are increased by 5 ft. This Pokémon reverts back to Ice Form after a short rest, or on the start of its turn when in the hail."
     },
 	 {
       "id": "ice-scales",
@@ -820,6 +830,11 @@
       "name": "Power of Alchemy",
       "description": "When switched in after an ally faints, this Pokémon copies the non-hidden ability of the fainted ally until switched out."
     },
+		{
+      "id": "power-spot",
+      "name": "Power Spot",
+      "description": "Allies within 15 ft of this Pokemon may add 1d6 to damage they deal from moves. This die may only be used once per move per turn. At level 10, the bonus damage becomes 1d8 instead."
+    },
     {
       "id": "prankster",
       "name": "Prankster",
@@ -1094,6 +1109,11 @@
       "id": "stall",
       "name": "Stall",
       "description": "This Pokémon is always last in initiative order."
+    },
+		{
+      "id": "stalwart",
+      "name": "Stalwart",
+      "description": "This Pokémon may always choose its targets, ignoring the effects of moves that redirect targetting."
     },
     {
       "id": "stamina",
