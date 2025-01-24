@@ -11,6 +11,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.0.3",
+		description: [
+			"Added Pokemon: Frosmoth line, Stonjourner, Eiscue, Indeedee, Morpeko, Copperajah line, Dracozolt, Arctozolt, Dracovish, Arctovish, Dragapult line, Archaludon line",
+			"Added Moves: Aura Wheel, Bolt Beak, Breaking Swipe, Dragon Darts, Electro Shot, Fishious Rend, Snowscape"
+		],
+	}, {
 		name: "v1.0.2",
 		description: [
 			"Added Pokemon: Polteageist line, Hatterene line, Grimmsnarl line",
