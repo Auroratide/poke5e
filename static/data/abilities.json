@@ -45,6 +45,11 @@
       "name": "Aroma Veil",
       "description": "Any ally within 15 feet of this Pokémon automatically passes any WIS save they are required to make."
     },
+		{
+      "id": "as-one",
+      "name": "As One",
+      "description": "Opponents in combat with this Pokémon cannot eat held berries. Upon causing an opponent to faint, this Pokémon may immediately move up to 20ft take another action. This ability cannot be swapped off this Pokémon."
+    },
     {
       "id": "aura-break",
       "name": "Aura Break",
@@ -104,6 +109,11 @@
       "id": "cheek-pouch",
       "name": "Cheek Pouch",
       "description": "When this Pokémon eats any type of berry, is heals for an additional 10% of its maximum HP (rounded up to the nearest whole number)."
+    },
+		{
+      "id": "chilling-neigh",
+      "name": "Chilling Neigh",
+      "description": "Upon causing an opponent to faint, this Pokémon may immediately move up to 20ft take another action."
     },
     {
       "id": "chlorophyll",
@@ -185,6 +195,11 @@
       "name": "Dark Aura",
       "description": "When this Pokémon is in battle, all dark-type moves by allies or opponents within 100 feet deal double their damage."
     },
+		{
+      "id": "dauntless-shield",
+      "name": "Dauntless Shield",
+      "description": "Melee attacks made against this Pokémon have disadvantage."
+    },
     {
       "id": "dazzling",
       "name": "Dazzling",
@@ -209,6 +224,11 @@
       "id": "download",
       "name": "Download",
       "description": "Once per short rest, this Pokémon can choose a different damage type for one of their normal attacks."
+    },
+		{
+      "id": "dragons-maw",
+      "name": "Dragon's Maw",
+      "description": "When this Pokémon uses a dragon-type move, it may roll the damage twice and choose either total."
     },
     {
       "id": "drifter",
@@ -415,6 +435,11 @@
       "name": "Grassy Surge",
       "description": "If the move is known, this Pokémon may use the Grassy Terrain move as a bonus action."
     },
+		{
+      "id": "grim-neigh",
+      "name": "Grim Neigh",
+      "description": "Upon causing an opponent to faint, this Pokémon may immediately move up to 20ft take another action."
+    },
     {
       "id": "gulp-missile",
       "name": "Gulp Missile",
@@ -539,6 +564,11 @@
       "id": "intimidate",
       "name": "Intimidate",
       "description": "Once per short rest, you can impose disadvantage on an enemy attack roll of your choice."
+    },
+		{
+      "id": "intrepid-sword",
+      "name": "Intrepid Sword",
+      "description": "This Pokémon makes melee attacks with advantage."
     },
     {
       "id": "iron-barbs",
@@ -1270,6 +1300,11 @@
       "name": "Transformer",
       "description": "This Pokémon has a standard Normal form from which all stats are based, but may change forms as a bonus action to drastically change its abilities. The forms it can take are Attack, Defense, and Speed. In Attack form, it adds an additional +5 to its attack rolls, but all attacks against it has advantage. In Defense form, its AC increases by 3, but its attacks are rolled at disadvantage. If the activated move requires a save, the target(s) have advantage. In Speed form, it gains an additional attack action each turn, but the attack is done at disadvantage. If it is a move that requires a save, the target(s) have advantage."
     },
+		{
+      "id": "transistor",
+      "name": "Transistor",
+      "description": "When this Pokémon uses an electric-type move, it may roll the damage twice and choose either total."
+    },
     {
       "id": "triage",
       "name": "Triage",
@@ -1299,6 +1334,11 @@
       "id": "unnerve",
       "name": "Unnerve",
       "description": "Opponents in combat with this Pokémon cannot eat held berries."
+    },
+		{
+      "id": "unseen-fist",
+      "name": "Unseen Fist",
+      "description": "Melee attacks this Pokémon make may damage through the opponent's use of Protect or Detect."
     },
     {
       "id": "victory-star",
