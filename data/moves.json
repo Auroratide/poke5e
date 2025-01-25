@@ -660,6 +660,38 @@
         "You use strength in numbers to attack a creature. Make a melee attack on a creature, and an additional attack for any other conscious creature your trainer is currently carrying, dealing 2d6 dark damage on each hit."
       ]
     },
+		{
+      "id": "behemoth-bash",
+      "name": "Behemoth Bash",
+      "type": "steel",
+      "power": [
+        "con"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You bash with your gigantic shield. Make a melee attack on a creature, dealing 4d4 + MOVE steel damage on a hit. If the target was dynamaxed, double the overall damage."
+      ],
+			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
+    },
+		{
+      "id": "behemoth-blade",
+      "name": "Behemoth Blade",
+      "type": "steel",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You slash with your gigantic sword. Make a melee attack on a creature, dealing 4d4 + MOVE steel damage on a hit. If the target was dynamaxed, double the overall damage."
+      ],
+			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
+    },
     {
       "id": "belch",
       "name": "Belch",
@@ -2338,6 +2370,22 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
     },
+		{
+      "id": "dragon-energy",
+      "name": "Dragon Energy",
+      "type": "dragon",
+      "power": [
+        "str",
+        "con"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "You convert your life force into power. Make a ranged attack against a target in range, doing 1d6 + MOVE dragon damage on a hit. For every 20 HP you currently have (excluding temporary HP), deal an additional 1d6 dragon damage."
+      ]
+    },
     {
       "id": "dragon-pulse",
       "name": "Dragon Pulse",
@@ -2519,6 +2567,22 @@
         "You lash out at a creature(s) with two quick strikes. Make two melee attack rolls, dealing 1d6 + MOVE dragon damage with each hit."
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
+    },
+		{
+      "id": "dynamax-cannon",
+      "name": "Dynamax Cannon",
+      "type": "dragon",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "120ft",
+      "description": [
+        "You unleash a strong beam of pure energy. Make a ranged attack on a creature, dealing 4d4 + MOVE dragon damage on a hit. If the target was dynamaxed, double the overall damage."
+      ],
+			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
     },
     {
       "id": "dynamic-punch",
@@ -2845,6 +2909,22 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17."
     },
+		{
+      "id": "eternabeam",
+      "name": "Eternabeam",
+      "type": "dragon",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "150ft",
+      "description": [
+        "You unleash an overwhelmingly powerful beam of pure energy. Target a point within range. Each creature in a 20-foot-radius sphere centered on that point makes a DEX saving throw against your Move DC, taking 8d6 + MOVE dragon damage on fail, half on success. You become incapacitated until the end of your next turn."
+      ],
+			"higherLevels": "The damage dice roll for this move changes to 10d6 at level 5, 12d6 at level 10, and 14d6 at level 17."
+    },
     {
       "id": "explosion",
       "name": "Explosion",
@@ -2855,7 +2935,7 @@
       "duration": "instantaneous",
       "range": "80ft",
       "description": [
-        "You create a sphere of energy that packs a concentrated and devastating explosion. Choose a target within range and roll a d20. On a 20, the explosion goes off and all creature within 5 feet of that point faint On any other roll, the explosion fails to go off and this move has no effect. If the target's level is 10 more than your own, this move automatically fails."
+        "You create a sphere of energy that packs a concentrated and devastating explosion. Choose a target within range and roll a d20. On a 20, the explosion goes off and all creatures within 5 feet of that point faint. On any other roll, the explosion fails to go off and this move has no effect. If the target's level is 10 more than your own, or their SR is 15, this move automatically fails."
       ]
     },
     {
@@ -5216,6 +5296,22 @@
         "You leap into the air to deliver a strong kick to a creature. Make a melee attack against a target, doing 4d4 + MOVE fighting damage on a hit. On a miss, you take 1 damage."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
+    },
+		{
+      "id": "jungle-healing",
+      "name": "Jungle Healing",
+      "type": "grass",
+      "power": [
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "Self (15 ft radius)",
+      "description": [
+        "You become one with the jungle. You and all allies withing 15 ft of you regain 1d4 + MOVE hit points and are cured of any negative status conditions."
+      ],
+      "higherLevels": "The healing dice roll for this move changes to 2d4 at level 5, 2d8 at level 10, and 4d6 at level 17."
     },
     {
       "id": "karate-chop",
@@ -10083,6 +10179,22 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
     },
+		{
+      "id": "surging-strikes",
+      "name": "Surging Strikes",
+      "type": "water",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You strike the target three times in a single fluid motion. Make three melee attacks against a single target, each with -5 to your attack roll. On a hit, you deal 1d6 + 5 + MOVE water damage."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d8 at level 5, 1d12 at level 10, and 3d6 at level 17."
+    },
     {
       "id": "swagger",
       "name": "Swagger",
@@ -10563,6 +10675,22 @@
         "Powerful electric energy arcs out from you, hitting any creature in a 20 foot radius, centered on you. Creatures caught in the area must make a DEX save against your Move DC, taking 3d6 + MOVE electric damage on a fail, and half as much on a success. Creatures that fail the saving throw by 5 or more become paralyzed. Creatures in range that are in flight or in the invulnerable stage of Fly or Bounce take double damage from this move."
       ],
       "higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 6d6 at level 10, and 7d8 at level 17."
+    },
+		{
+      "id": "thunder-cage",
+      "name": "Thunder Cage",
+      "type": "electric",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "60ft",
+      "description": [
+        "You create a cage of electricity that envelopes a creature in range. Make a ranged attack roll. On a hit, the target takes 1d6 + MOVE electric damage and is restrained. At the beginning of each of its turns, it may attempt to escape with a DEX save against your Move DC. On each successive turn, if the creature is still restrained, you may use this move again (as an action) and automatically hit."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17."
     },
     {
       "id": "thunder-fang",
@@ -11269,6 +11397,22 @@
       "description": [
         "You create a whirlwind of spinning air around you, increasing your AC by +2 until the beginning of your next turn. When you activate this move, any creature within 5 feet of you must succeed on a STR saving throw against your Move DC or fall prone. In wild creature battles, this move can be activated to automatically count as a single success in a group DEX check to run away."
       ]
+    },
+		{
+      "id": "wicked-blow",
+      "name": "Wicked Blow",
+      "type": "dark",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You strike the target with a single, fierce blow. Make a melee attack with -5 to your attack roll. On a hit, you deal 1d12 + 10 + MOVE dark damage."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
     },
     {
       "id": "wide-guard",

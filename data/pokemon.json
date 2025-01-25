@@ -131471,6 +131471,1785 @@
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/887.png"
 			}
 		},
+		{
+			"id": "zacian",
+			"name": "Zacian",
+			"number": 888,
+			"type": [
+				"fairy"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Warrior Pokémon. Known as a legendary hero, this Pokémon absorbs metal particles, transforming them into a weapon it uses to battle.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 50
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 20,
+				"con": 18,
+				"int": 10,
+				"wis": 14,
+				"cha": 17
+			},
+			"hp": 345,
+			"skills": [
+				"athletics",
+				"history",
+				"perception"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "intrepid-sword",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"bite",
+					"quick-attack",
+					"metal-claw",
+					"howl",
+					"quick-guard",
+					"sacred-sword",
+					"slash",
+					"swords-dance",
+					"iron-head",
+					"crunch",
+					"close-combat",
+					"giga-impact",
+					"noble-roar",
+					"moonblast",
+					"laser-focus"
+				],
+				"tm": [
+					1,
+					15,
+					17,
+					31,
+					42,
+					44,
+					48,
+					52,
+					54,
+					59,
+					84,
+					88,
+					90,
+					91,
+					93,
+					95,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/888.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/888.png"
+			}
+		},
+		{
+			"id": "zacian-crowned",
+			"name": "Zacian (Crowned)",
+			"number": 888,
+			"type": [
+				"fairy",
+				"steel"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Warrior Pokémon. Known as a legendary hero, this Pokémon absorbs metal particles, transforming them into a weapon it uses to battle.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 50
+				}
+			],
+			"attributes": {
+				"str": 22,
+				"dex": 22,
+				"con": 18,
+				"int": 10,
+				"wis": 14,
+				"cha": 17
+			},
+			"hp": 345,
+			"skills": [
+				"athletics",
+				"history",
+				"perception"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "intrepid-sword",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"bite",
+					"quick-attack",
+					"metal-claw",
+					"howl",
+					"quick-guard",
+					"sacred-sword",
+					"slash",
+					"swords-dance",
+					"crunch",
+					"close-combat",
+					"giga-impact",
+					"noble-roar",
+					"moonblast",
+					"laser-focus",
+					"behemoth-blade"
+				],
+				"tm": [
+					1,
+					15,
+					17,
+					31,
+					42,
+					44,
+					48,
+					52,
+					54,
+					59,
+					84,
+					88,
+					90,
+					91,
+					93,
+					95,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10188.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10188.png"
+			}
+		},
+		{
+			"id": "zamazenta",
+			"name": "Zamazenta",
+			"number": 889,
+			"type": [
+				"fighting"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Warrior Pokémon. In times past, it worked together with a king of the people to save the Galar region. It absorbs metal that it then uses in battle.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 50
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 20,
+				"con": 18,
+				"int": 10,
+				"wis": 14,
+				"cha": 17
+			},
+			"hp": 345,
+			"skills": [
+				"athletics",
+				"history",
+				"perception"
+			],
+			"savingThrows": [
+				"con",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "dauntless-shield",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"bite",
+					"quick-attack",
+					"metal-claw",
+					"howl",
+					"metal-burst",
+					"wide-guard",
+					"slash",
+					"iron-defense",
+					"iron-head",
+					"crunch",
+					"close-combat",
+					"giga-impact",
+					"moonblast",
+					"laser-focus"
+				],
+				"tm": [
+					1,
+					5,
+					11,
+					15,
+					16,
+					17,
+					18,
+					20,
+					22,
+					31,
+					33,
+					37,
+					42,
+					44,
+					48,
+					52,
+					66,
+					71,
+					88,
+					90,
+					91,
+					93,
+					95,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/889.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/889.png"
+			}
+		},
+		{
+			"id": "zamazenta-crowned",
+			"name": "Zamazenta (Crowned)",
+			"number": 889,
+			"type": [
+				"fighting",
+				"steel"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Warrior Pokémon. In times past, it worked together with a king of the people to save the Galar region. It absorbs metal that it then uses in battle.",
+			"ac": 22,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 50
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 20,
+				"con": 18,
+				"int": 10,
+				"wis": 14,
+				"cha": 17
+			},
+			"hp": 345,
+			"skills": [
+				"athletics",
+				"history",
+				"perception"
+			],
+			"savingThrows": [
+				"con",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "dauntless-shield",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"bite",
+					"quick-attack",
+					"metal-claw",
+					"howl",
+					"metal-burst",
+					"wide-guard",
+					"slash",
+					"iron-defense",
+					"crunch",
+					"close-combat",
+					"giga-impact",
+					"moonblast",
+					"laser-focus",
+					"behemoth-bash"
+				],
+				"tm": [
+					1,
+					5,
+					11,
+					15,
+					16,
+					17,
+					18,
+					20,
+					22,
+					31,
+					33,
+					37,
+					42,
+					44,
+					48,
+					52,
+					66,
+					71,
+					88,
+					90,
+					91,
+					93,
+					95,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10189.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10189.png"
+			}
+		},
+		{
+			"id": "eternatus",
+			"name": "Eternatus",
+			"number": 890,
+			"type": [
+				"poison",
+				"dragon"
+			],
+			"size": "gargantuan",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Gigantic Pokémon. The core on its chest absorbs energy emanating from the lands of the Galar region. This energy is what allows Eternatus to stay active.",
+			"ac": 18,
+			"hitDice": "d20",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				},
+				{
+					"type": "flying",
+					"value": 80
+				},
+				{
+					"type": "swimming",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 25,
+				"dex": 16,
+				"con": 25,
+				"int": 15,
+				"wis": 15,
+				"cha": 19
+			},
+			"hp": 466,
+			"skills": [
+				"history",
+				"perception"
+			],
+			"savingThrows": [
+				"con",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 120
+				},
+				{
+					"type": "blindsight",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "pressure",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"agility",
+					"confuse-ray",
+					"poison-tail",
+					"dragon-tail",
+					"toxic",
+					"venoshock",
+					"dragon-dance",
+					"cross-poison",
+					"flamethrower",
+					"hyper-beam",
+					"recover",
+					"outrage",
+					"cosmic-power",
+					"dragon-pulse",
+					"dynamax-cannon",
+					"eternabeam"
+				],
+				"tm": [
+					11,
+					16,
+					17,
+					18,
+					22,
+					30,
+					33,
+					34,
+					36,
+					38,
+					42,
+					44,
+					48,
+					59,
+					66,
+					68,
+					76,
+					84,
+					88,
+					90,
+					91
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/890.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/890.png"
+			}
+		},
+		{
+			"id": "eternatus-eternamax",
+			"name": "Eternatus (Eternamax)",
+			"number": 890,
+			"type": [
+				"poison",
+				"dragon"
+			],
+			"size": "gargantuan",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Gigantic Pokémon. The core on its chest absorbs energy emanating from the lands of the Galar region. This energy is what allows Eternatus to stay active.",
+			"ac": 25,
+			"hitDice": "d20",
+			"speed": [
+				{
+					"type": "flying",
+					"value": 120
+				}
+			],
+			"attributes": {
+				"str": 30,
+				"dex": 16,
+				"con": 30,
+				"int": 15,
+				"wis": 15,
+				"cha": 23
+			},
+			"hp": 1125,
+			"skills": [
+				"history",
+				"perception"
+			],
+			"savingThrows": [
+				"con",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 120
+				},
+				{
+					"type": "blindsight",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "pressure",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"agility",
+					"confuse-ray",
+					"poison-tail",
+					"dragon-tail",
+					"toxic",
+					"venoshock",
+					"dragon-dance",
+					"cross-poison",
+					"flamethrower",
+					"hyper-beam",
+					"recover",
+					"outrage",
+					"cosmic-power",
+					"dragon-pulse",
+					"dynamax-cannon",
+					"eternabeam"
+				],
+				"tm": [
+					11,
+					16,
+					17,
+					18,
+					22,
+					30,
+					33,
+					34,
+					36,
+					38,
+					42,
+					44,
+					48,
+					59,
+					66,
+					68,
+					76,
+					84,
+					88,
+					90,
+					91
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10190.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10190.png"
+			}
+		},
+		{
+			"id": "kubfu",
+			"name": "Kubfu",
+			"number": 891,
+			"type": [
+				"fighting"
+			],
+			"size": "tiny",
+			"sr": 7,
+			"minLevel": 1,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "1:7",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "urshifu-single",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 10
+							},
+							{
+								"type": "item",
+								"value": "Scroll of Darkness"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 14
+							}
+						]
+					},
+					{
+						"id": "urshifu-rapid",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 10
+							},
+							{
+								"type": "item",
+								"value": "Scroll of Waters"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 14
+							}
+						]
+					}
+				],
+				"description": "Kubfu can evolve into Urshifu at level 10 and above with the help of either a Scroll of Darkness or Scroll of Waters. When it evolves, its health increases by double its level, and it gains 14 points to add to its ability scores (max 20)."
+			},
+			"description": "The Wushu Pokémon. Kubfu trains hard to perfect its moves. The moves it masters will determine which form it takes when it evolves.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 13,
+				"con": 11,
+				"int": 6,
+				"wis": 10,
+				"cha": 12
+			},
+			"hp": 19,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [
+				{
+					"type": "blindsight",
+					"value": 15
+				}
+			],
+			"abilities": [
+				{
+					"id": "inner-focus",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"rock-smash"
+				],
+				"level2": [
+					"focus-energy",
+					"endure"
+				],
+				"level6": [
+					"scary-face",
+					"aerial-ace",
+					"headbutt"
+				],
+				"level10": [
+					"detect",
+					"brick-break",
+					"bulk-up"
+				],
+				"level14": [
+					"iron-head",
+					"counter",
+					"dynamic-punch"
+				],
+				"level18": [
+					"focus-punch",
+					"close-combat"
+				],
+				"tm": [
+					1,
+					17,
+					42,
+					44,
+					45,
+					47,
+					48,
+					56,
+					62,
+					75,
+					88,
+					89,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/891.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/891.png"
+			}
+		},
+		{
+			"id": "urshifu-single",
+			"name": "Urshifu (Single Strike)",
+			"number": 892,
+			"type": [
+				"fighting",
+				"dark"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 10,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "1:7",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": ["kubfu"]
+			},
+			"description": "The Wushu Pokémon. This form of Urshifu is a strong believer in the one-hit KO. Its strategy is to leap in close to foes and land a devastating blow with a hardened fist.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 16,
+				"con": 16,
+				"int": 8,
+				"wis": 12,
+				"cha": 14
+			},
+			"hp": 115,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [
+				{
+					"type": "blindsight",
+					"value": 15
+				}
+			],
+			"abilities": [
+				{
+					"id": "unseen-fist",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"rock-smash",
+					"focus-energy",
+					"endure",
+					"sucker-punch",
+					"scary-face",
+					"aerial-ace",
+					"headbutt",
+					"detect",
+					"brick-break",
+					"bulk-up",
+					"wicked-blow"
+				],
+				"level14": [
+					"iron-head",
+					"dynamic-punch"
+				],
+				"level18": [
+					"counter",
+					"focus-punch",
+					"close-combat"
+				],
+				"tm": [
+					1,
+					17,
+					42,
+					44,
+					45,
+					47,
+					48,
+					56,
+					62,
+					75,
+					88,
+					89,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/892.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/892.png"
+			}
+		},
+		{
+			"id": "urshifu-rapid",
+			"name": "Urshifu (Rapid Strike)",
+			"number": 892,
+			"type": [
+				"fighting",
+				"water"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 10,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "1:7",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": ["kubfu"]
+			},
+			"description": "The Wushu Pokémon. This form of Urshifu is a strong believer in defeating foes by raining many blows down on them. Its strikes are nonstop, flowing like a river.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 16,
+				"con": 16,
+				"int": 8,
+				"wis": 12,
+				"cha": 14
+			},
+			"hp": 115,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [
+				{
+					"type": "blindsight",
+					"value": 15
+				}
+			],
+			"abilities": [
+				{
+					"id": "unseen-fist",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"rock-smash",
+					"focus-energy",
+					"endure",
+					"aqua-jet",
+					"scary-face",
+					"aerial-ace",
+					"headbutt",
+					"detect",
+					"brick-break",
+					"bulk-up",
+					"wicked-blow"
+				],
+				"level14": [
+					"iron-head",
+					"dynamic-punch"
+				],
+				"level18": [
+					"counter",
+					"focus-punch",
+					"close-combat"
+				],
+				"tm": [
+					1,
+					17,
+					42,
+					44,
+					45,
+					47,
+					48,
+					56,
+					62,
+					75,
+					88,
+					89,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10191.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10191.png"
+			}
+		},
+		{
+			"id": "zarude",
+			"name": "Zarude",
+			"number": 893,
+			"type": [
+				"dark",
+				"grass"
+			],
+			"size": "medium",
+			"sr": 15,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Rogue Monkey Pokémon. Within dense forests, this Pokémon lives in a pack with others of its kind. It’s incredibly aggressive, and the other Pokémon of the forest fear it.",
+			"ac": 17,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				},
+				{
+					"type": "climbing",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 19,
+				"con": 17,
+				"int": 8,
+				"wis": 13,
+				"cha": 10
+			},
+			"hp": 187,
+			"skills": [
+				"acrobatics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "leaf-guard",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"bind",
+					"leer",
+					"vine-whip",
+					"growth",
+					"fury-swipes",
+					"scary-face",
+					"bite",
+					"swagger",
+					"synthesis",
+					"u-turn",
+					"energy-ball",
+					"grass-knot",
+					"jungle-healing"
+				],
+				"level18": [
+					"hammer-arm",
+					"power-whip",
+					"thrash"
+				],
+				"tm": [
+					5,
+					8,
+					11,
+					12,
+					15,
+					17,
+					22,
+					31,
+					39,
+					40,
+					42,
+					44,
+					46,
+					47,
+					48,
+					56,
+					59,
+					62,
+					66,
+					68,
+					75,
+					80,
+					88,
+					90,
+					95,
+					97
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/893.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/893.png"
+			}
+		},
+		{
+			"id": "regieleki",
+			"name": "Regieleki",
+			"number": 894,
+			"type": [
+				"electric"
+			],
+			"size": "small",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Electron Pokémon. This Pokémon is a cluster of electrical energy. It’s said that removing the rings on Regieleki’s body will unleash the Pokémon’s latent power.",
+			"ac": 15,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 100
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 23,
+				"con": 14,
+				"int": 8,
+				"wis": 13,
+				"cha": 10
+			},
+			"hp": 266,
+			"skills": [
+				"athletics",
+				"survival"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "transistor",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"thunder-shock",
+					"rapid-spin",
+					"electroweb",
+					"ancient-power",
+					"shock-wave",
+					"thunder-wave",
+					"extreme-speed",
+					"thunderbolt",
+					"magnet-rise",
+					"thunder-cage"
+				],
+				"level18": [
+					"explosion",
+					"hyper-beam",
+					"zap-cannon",
+					"lock-on",
+					"thrash"
+				],
+				"tm": [
+					16,
+					17,
+					18,
+					25,
+					33,
+					42,
+					44,
+					48,
+					57,
+					62,
+					68,
+					72,
+					88,
+					90,
+					93
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/894.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/894.png"
+			}
+		},
+		{
+			"id": "regidrago",
+			"name": "Regidrago",
+			"number": 895,
+			"type": [
+				"dragon"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Dragon Orb Pokémon. An academic theory proposes that Regidrago’s arms were once the head of an ancient dragon Pokémon. The theory remains unproven.",
+			"ac": 20,
+			"hitDice": "d20",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 35
+				}
+			],
+			"attributes": {
+				"str": 19,
+				"dex": 15,
+				"con": 22,
+				"int": 8,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 414,
+			"skills": [
+				"athletics",
+				"survival"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [
+				{
+					"type": "tremorsense",
+					"value": 50
+				},
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "dragons-maw",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"vice-grip",
+					"twister",
+					"bite",
+					"dragon-breath",
+					"ancient-power",
+					"crunch",
+					"dragon-claw",
+					"dragon-dance",
+					"hammer-arm",
+					"laser-focus"
+				],
+				"level18": [
+					"explosion",
+					"hyper-beam",
+					"dragon-energy",
+					"focus-energy",
+					"thrash"
+				],
+				"tm": [
+					16,
+					17,
+					26,
+					33,
+					42,
+					44,
+					48,
+					68,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/895.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/895.png"
+			}
+		},
+		{
+			"id": "glastrier",
+			"name": "Glastrier",
+			"number": 896,
+			"type": [
+				"ice"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Wild Horse Pokémon. Glastrier emits intense cold from its hooves. It’s also a belligerent Pokémon—anything it wants, it takes by force.",
+			"ac": 19,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 60
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 11,
+				"con": 19,
+				"int": 6,
+				"wis": 14,
+				"cha": 10
+			},
+			"hp": 232,
+			"skills": [
+				"nature"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "chilling-neigh",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"tail-whip",
+					"double-kick",
+					"stomp",
+					"avalanche",
+					"mist",
+					"torment",
+					"swords-dance",
+					"take-down",
+					"thrash",
+					"double-edge",
+					"taunt",
+					"iron-defense",
+					"icicle-crash"
+				],
+				"tm": [
+					5,
+					7,
+					13,
+					14,
+					15,
+					17,
+					42,
+					44,
+					48,
+					66,
+					67,
+					68,
+					78,
+					88,
+					90,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/896.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/896.png"
+			}
+		},
+		{
+			"id": "spectrier",
+			"name": "Spectrier",
+			"number": 897,
+			"type": [
+				"ghost"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Swift Horse Pokémon. It probes its surroundings with all its senses save one—it doesn’t use its sense of sight. Spectrier’s kicks are said to separate soul from body.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 60
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 20,
+				"con": 19,
+				"int": 6,
+				"wis": 15,
+				"cha": 10
+			},
+			"hp": 199,
+			"skills": [
+				"nature"
+			],
+			"savingThrows": [
+				"dex",
+				"con"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "grim-neigh",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"tail-whip",
+					"double-kick",
+					"stomp",
+					"hex",
+					"confuse-ray",
+					"haze",
+					"take-down",
+					"thrash",
+					"double-edge",
+					"disable",
+					"agility",
+					"shadow-ball",
+					"nasty-plot"
+				],
+				"tm": [
+					4,
+					12,
+					15,
+					17,
+					29,
+					42,
+					44,
+					48,
+					61,
+					66,
+					68,
+					78,
+					88,
+					90,
+					95,
+					97
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/897.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/897.png"
+			}
+		},
+		{
+			"id": "calyrex",
+			"name": "Calyrex",
+			"number": 898,
+			"type": [
+				"psychic",
+				"grass"
+			],
+			"size": "small",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The King Pokémon. Calyrex is a merciful Pokémon, capable of providing healing and blessings. It reigned over the Galar region in times of yore.",
+			"ac": 15,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 13,
+				"con": 13,
+				"int": 17,
+				"wis": 17,
+				"cha": 17
+			},
+			"hp": 190,
+			"skills": [
+				"history",
+				"insight",
+				"persuasion"
+			],
+			"savingThrows": [
+				"wis",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "truesight",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "unnerve",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"pound",
+					"mega-drain",
+					"growth",
+					"confusion",
+					"life-dew",
+					"giga-drain",
+					"psyshock",
+					"helping-hand",
+					"leech-seed",
+					"solar-beam",
+					"psychic",
+					"future-sight",
+					"aromatherapy",
+					"energy-ball",
+					"heal-pulse"
+				],
+				"tm": [
+					4,
+					11,
+					15,
+					16,
+					17,
+					20,
+					33,
+					42,
+					44,
+					48,
+					68,
+					77,
+					86,
+					88,
+					90,
+					92,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/898.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/898.png"
+			}
+		},
+		{
+			"id": "calyrex-ice",
+			"name": "Calyrex (Ice Rider)",
+			"number": 898,
+			"type": [
+				"psychic",
+				"ice"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The High King Pokémon. According to lore, this Pokémon showed no mercy to those who got in its way, yet it would heal its opponents’ wounds after battle.",
+			"ac": 19,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 60
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 11,
+				"con": 19,
+				"int": 17,
+				"wis": 17,
+				"cha": 17
+			},
+			"hp": 250,
+			"skills": [
+				"history",
+				"insight",
+				"persuasion"
+			],
+			"savingThrows": [
+				"str",
+				"wis",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				},
+				{
+					"type": "truesight",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "as-one",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"pound",
+					"mega-drain",
+					"growth",
+					"confusion",
+					"life-dew",
+					"giga-drain",
+					"psyshock",
+					"helping-hand",
+					"leech-seed",
+					"solar-beam",
+					"psychic",
+					"future-sight",
+					"aromatherapy",
+					"energy-ball",
+					"heal-pulse",
+					"tackle",
+					"tail-whip",
+					"double-kick",
+					"stomp",
+					"avalanche",
+					"mist",
+					"torment",
+					"swords-dance",
+					"take-down",
+					"thrash",
+					"double-edge",
+					"taunt",
+					"iron-defense",
+					"icicle-crash"
+				],
+				"tm": [
+					4,
+					11,
+					15,
+					16,
+					17,
+					20,
+					33,
+					42,
+					44,
+					48,
+					68,
+					77,
+					86,
+					88,
+					90,
+					92,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10193.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10193.png"
+			}
+		},
+		{
+			"id": "calyrex-shadow",
+			"name": "Calyrex (Shadow Rider)",
+			"number": 898,
+			"type": [
+				"psychic",
+				"ghost"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The High King Pokémon. Legend says that by using its power to see all events from past to future, this Pokémon saved the creatures of a forest from a meteorite strike.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 60
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 20,
+				"con": 19,
+				"int": 17,
+				"wis": 17,
+				"cha": 17
+			},
+			"hp": 250,
+			"skills": [
+				"history",
+				"insight",
+				"persuasion"
+			],
+			"savingThrows": [
+				"dex",
+				"wis",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				},
+				{
+					"type": "truesight",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "as-one",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"pound",
+					"mega-drain",
+					"growth",
+					"confusion",
+					"life-dew",
+					"giga-drain",
+					"psyshock",
+					"helping-hand",
+					"leech-seed",
+					"solar-beam",
+					"psychic",
+					"future-sight",
+					"aromatherapy",
+					"energy-ball",
+					"heal-pulse",
+					"tackle",
+					"tail-whip",
+					"double-kick",
+					"stomp",
+					"hex",
+					"confuse-ray",
+					"haze",
+					"take-down",
+					"thrash",
+					"double-edge",
+					"disable",
+					"agility",
+					"shadow-ball",
+					"nasty-plot"
+				],
+				"tm": [
+					4,
+					11,
+					15,
+					16,
+					17,
+					20,
+					33,
+					42,
+					44,
+					48,
+					68,
+					77,
+					86,
+					88,
+					90,
+					92,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10194.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10194.png"
+			}
+	},
 	 {
       "id": "sprigatito",
       "name": "Sprigatito",
