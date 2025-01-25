@@ -11,6 +11,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.0.4",
+		description: [
+			"Added Pokemon: Zacian, Zamazenta, Eternatus, Urshifu line, Zarude, Regieleki, Regidrago, Glastrier, Spectrier, Calyrex",
+			"Added Moves: Behemoth Bash, Behemoth Blade, Dragon Energy, Dynamax Cannon, Eternabeam, Jungle Healing, Surging Strikes, Thunder Cage, Wicked Blow"
+		],
+	}, {
 		name: "v1.0.3",
 		description: [
 			"Added Pokemon: Frosmoth line, Stonjourner, Eiscue, Indeedee, Morpeko, Copperajah line, Dracozolt, Arctozolt, Dracovish, Arctovish, Dragapult line, Archaludon line",
