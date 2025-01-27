@@ -1045,6 +1045,11 @@
       "name": "Shadow Tag",
       "description": "Creatures within 50 feet of this Pokémon may not flee or switch out, except by item, Move, or ability."
     },
+		{
+      "id": "sharpness",
+      "name": "Sharpness",
+      "description": "Moves with 'Cut', 'Blade', 'Slash', 'Edge', 'Cleave', 'Razor', 'Sword', or 'Axe' in their name have their MOVE damage doubled."
+    },
     {
       "id": "shed-skin",
       "name": "Shed Skin",

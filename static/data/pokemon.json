@@ -932,7 +932,8 @@
         ],
         "level10": [
           "protect",
-          "water-pulse"
+          "water-pulse",
+					"wave-crash"
         ],
         "level14": [
           "aqua-tail",
@@ -1092,7 +1093,8 @@
         "level14": [
           "water-pulse",
           "aqua-tail",
-          "skull-bash"
+          "skull-bash",
+					"wave-crash"
         ],
         "level18": [
           "iron-defense",
@@ -1202,7 +1204,8 @@
         "level14": [
           "water-pulse",
           "aqua-tail",
-          "skull-bash"
+          "skull-bash",
+					"wave-crash"
         ],
         "level18": [
           "iron-defense",
@@ -15027,7 +15030,8 @@
         ],
         "level14": [
           "high-jump-kick",
-          "mind-reader"
+          "mind-reader",
+					"axe-kick"
         ],
         "level18": [
           "wide-guard",
@@ -17483,7 +17487,7 @@
       "evolution": {
         "stage": "1",
         "maxStage": "2",
-        "description": "Scyther can evolve into Scizor at level 14 and above while holding a Metal Coat. When it evolves, its health increases by double its level, and it gains 7 points to add to its ability scores (max 20).",
+        "description": "Scyther can evolve into Scizor at level 14 and above while holding a Metal Coat, or into Kleavor at level 14 or above while holding a Black Augurite. When it evolves, its health increases by double its level, and it gains 7 points to add to its ability scores (max 20).",
         "to": [
           {
             "id": "scizor",
@@ -17495,6 +17499,25 @@
               {
                 "type": "item",
                 "value": "Metal Coat"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 7
+              }
+            ]
+          },
+					{
+            "id": "kleavor",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 14
+              },
+              {
+                "type": "item",
+                "value": "Black Augurite"
               }
             ],
             "effects": [
@@ -22381,6 +22404,21 @@
         "to": [
           {
             "id": "typhlosion",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 14
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 10
+              }
+            ]
+          },
+					{
+            "id": "typhlosion-hisui",
             "conditions": [
               {
                 "type": "level",
@@ -31047,7 +31085,7 @@
       "gender": "1:1",
       "evolution": {
         "stage": "1",
-        "maxStage": "2",
+        "maxStage": "3",
         "description": "Teddiursa can evolve into Ursaring at level 8 and above. When it evolves, its health increases by double its level, and it gains 9 points to add to its ability scores (max 20).",
         "to": [
           {
@@ -31207,9 +31245,34 @@
       "gender": "1:1",
       "evolution": {
         "stage": "2",
-        "maxStage": "2",
+        "maxStage": "3",
         "from": [
           "teddiursa"
+        ],
+				"to": [
+          {
+            "id": "ursaluna",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 14
+              },
+							{
+                "type": "item",
+                "value": "Peat Block"
+              },
+							{
+                "type": "special",
+                "value": "under a full moon"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 6
+              }
+            ]
+          }
         ]
       },
       "description": "The Hibernator Pokémon. In the forests inhabited by Ursaring, it is said that there are many streams and towering trees where they gather food. This Pokémon walks through its forest gathering food every day.",
@@ -33125,7 +33188,8 @@
         "level18": [
           "dragon-pulse",
           "dragon-dance",
-          "hydro-pump"
+          "hydro-pump",
+					"wave-crash"
         ],
         "tm": [
           6,
@@ -33587,6 +33651,32 @@
         "field"
       ],
       "gender": "1:1",
+			"evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Stantler can evolve into Wyrdeer at level 10 and above while knowing Psyshield Bash. When it evolves, its health increases by double its level, and it gains 8 points to add to its ability scores (max 20).",
+        "to": [
+          {
+            "id": "wyrdeer",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 10
+              },
+              {
+                "type": "move",
+                "value": "psyshield-bash"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 8
+              }
+            ]
+          }
+        ]
+      },
       "description": "The Big Horn Pokémon. Stantler's magnificent antlers were traded at high prices as works of art. As a result, this Pokémon was hunted close to extinction by those who were after the priceless antlers.",
       "ac": 14,
       "hp": 30,
@@ -33702,6 +33792,7 @@
           "megahorn",
           "mud-sport",
           "psych-up",
+					"psyshield-bash",
           "rage",
           "spite",
           "swagger",
@@ -42419,7 +42510,8 @@
           "endure",
           "close-combat",
           "reversal",
-          "heavy-slam"
+          "heavy-slam",
+					"headlong-rush"
         ],
         "tm": [
           1,
@@ -44088,7 +44180,8 @@
         ],
         "level14": [
           "acupressure",
-          "power-trick"
+          "power-trick",
+					"axe-kick"
         ],
         "level18": [
           "reversal",
@@ -55667,7 +55760,8 @@
         "level18": [
           "crunch",
           "giga-drain",
-          "leaf-storm"
+          "leaf-storm",
+					"headlong-rush"
         ],
         "tm": [
           1,
@@ -56104,7 +56198,8 @@
         "level18": [
           "acrobatics",
           "calm-mind",
-          "flare-blitz"
+          "flare-blitz",
+					"raging-fury"
         ],
         "tm": [
           1,
@@ -56537,7 +56632,8 @@
         "level18": [
           "mist",
           "drill-peck",
-          "hydro-pump"
+          "hydro-pump",
+					"wave-crash"
         ],
         "tm": [
           1,
@@ -59909,7 +60005,8 @@
         "level14": [
           "razor-wind",
           "aqua-tail",
-          "agility"
+          "agility",
+					"wave-crash"
         ],
         "level18": [
           "hydro-pump"
@@ -60054,7 +60151,8 @@
         "level18": [
           "aqua-tail",
           "agility",
-          "hydro-pump"
+          "hydro-pump",
+					"wave-crash"
         ],
         "tm": [
           5,
@@ -72413,6 +72511,21 @@
                 "value": 9
               }
             ]
+          },
+					{
+            "id": "samurott-hisui",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 14
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 9
+              }
+            ]
           }
         ]
       },
@@ -78833,6 +78946,25 @@
                 "value": 15
               }
             ]
+          },
+					{
+            "id": "lilligant-hisui",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 6
+              },
+              {
+                "type": "item",
+                "value": "Sun Stone"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 15
+              }
+            ]
           }
         ]
       },
@@ -79069,6 +79201,59 @@
         "water 2"
       ],
       "gender": "1:1",
+			"evolution": {
+        "stage": "1",
+        "maxStage": "2",
+        "description": "Basculin can evolve into Basculegion at level 10 and above after fainting due to recoil damage. When it evolves, its health increases by double its level, and it gains 12 points to add to its ability scores (max 20).",
+        "to": [
+          {
+            "id": "basculegion-m",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 10
+              },
+							{
+                "type": "gender",
+                "value": "male"
+              },
+							{
+                "type": "special",
+                "value": "after fainting from recoil damage"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 12
+              }
+            ]
+          },
+					{
+            "id": "basculegion-f",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 10
+              },
+							{
+                "type": "gender",
+                "value": "female"
+              },
+							{
+                "type": "special",
+                "value": "after fainting from recoil damage"
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 12
+              }
+            ]
+          }
+        ]
+      },
       "description": "The Hostile Pokémon. Red and blue Basculin usually do not get along, but sometimes members of one school mingle with the other's school.",
       "ac": 14,
       "hp": 46,
@@ -79131,7 +79316,8 @@
         "level10": [
           "soak",
           "double-edge",
-          "scary-face"
+          "scary-face",
+					"wave-crash"
         ],
         "level14": [
           "flail",
@@ -89930,6 +90116,21 @@
         "to": [
           {
             "id": "braviary",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 13
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 11
+              }
+            ]
+          },
+					{
+            "id": "braviary-hisui",
             "conditions": [
               {
                 "type": "level",
@@ -101061,6 +101262,21 @@
                 "value": 9
               }
             ]
+          },
+					{
+            "id": "sliggoo-hisui",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 12
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 9
+              }
+            ]
           }
         ]
       },
@@ -102167,6 +102383,21 @@
         "to": [
           {
             "id": "avalugg",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 10
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 11
+              }
+            ]
+          },
+					{
+            "id": "avalugg-hisui",
             "conditions": [
               {
                 "type": "level",
@@ -106658,6 +106889,21 @@
         "to": [
           {
             "id": "decidueye",
+            "conditions": [
+              {
+                "type": "level",
+                "value": 13
+              }
+            ],
+            "effects": [
+              {
+                "type": "asi",
+                "value": 10
+              }
+            ]
+          },
+					{
+            "id": "decidueye-hisui",
             "conditions": [
               {
                 "type": "level",
@@ -115124,7 +115370,8 @@
         "level14": [
           "aqua-tail",
           "screech",
-          "psychic-fangs"
+          "psychic-fangs",
+					"wave-crash"
         ],
         "level18": [
           "synchronoise"
@@ -133250,6 +133497,2933 @@
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10194.png"
 			}
 	},
+	{
+    "id": "growlithe-hisui",
+    "name": "Hisuian Growlithe",
+    "number": 58,
+    "type": [
+      "fire",
+      "rock"
+    ],
+    "size": "small",
+    "sr": 1,
+    "minLevel": 1,
+    "eggGroup": [
+      "field"
+    ],
+    "gender": "1:3",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "1",
+      "to": [
+        {
+          "id": "arcanine-hisui",
+          "conditions": [
+            {
+              "type": "level",
+              "value": 8
+            },
+						{
+							"type": "item",
+							"value": "Fire Stone"
+						}
+          ],
+          "effects": [
+            {
+              "type": "asi",
+              "value": 12
+            }
+          ]
+        }
+      ],
+      "description": "Hisuian Growlith can evolve into Hisuian Arcanine at level 8 and above with the help of a Fire Stone. When it evolves, its health increases by double its level, and it gains 12 points to add to its ability scores (max 20)."
+    },
+    "description": "The Scout Pokémon. They patrol their territory in pairs. I believe the igneous rock components in the fur of this species are the result of volcanic activity in its habitat.",
+    "ac": 13,
+    "hitDice": "d6",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 30
+			}
+		],
+    "attributes": {
+      "str": 13,
+      "dex": 13,
+      "con": 13,
+      "int": 6,
+      "wis": 10,
+      "cha": 10
+    },
+    "hp": 17,
+    "skills": [
+			"perception"
+		],
+    "savingThrows": [
+			"dex"
+		],
+    "senses": [],
+    "abilities": [
+      {
+        "id": "intimidate",
+        "hidden": false
+      },
+      {
+        "id": "flash-fire",
+        "hidden": false
+      },
+      {
+        "id": "rock-head",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "leer"
+      ],
+      "level2": [
+        "bite",
+        "ember",
+        "howl"
+      ],
+      "level6": [
+        "flame-wheel",
+        "helping-hand",
+        "fire-fang"
+      ],
+      "level10": [
+        "rock-slide",
+        "crunch",
+        "retaliate"
+      ],
+			"level14": [
+				"roar",
+				"take-down",
+				"double-edge"
+			],
+      "level18": [
+        "reversal",
+        "flare-blitz"
+      ],
+      "tm": [
+        11,
+        17,
+        23,
+        37,
+        38,
+        39,
+        42,
+        43,
+        50,
+        61,
+        67,
+        71,
+        88,
+        90
+      ],
+      "egg": [
+        "double-kick",
+        "thrash",
+        "morning-sun",
+        "covet",
+        "head-smash"
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10229.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10229.png"
+    }
+  },
+  {
+    "id": "arcanine-hisui",
+    "name": "Hisuian Arcanine",
+    "number": 59,
+    "type": [
+      "fire",
+      "rock"
+    ],
+    "size": "medium",
+    "sr": 11,
+    "minLevel": 8,
+    "eggGroup": [
+      "field"
+    ],
+    "gender": "1:3",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "2",
+      "from": [
+        "growlithe-hisui"
+      ]
+    },
+    "description": "The Legendary Pokémon. Snaps at its foes with fangs cloaked in blazing flame. Despite its bulk, it deftly feints every which way, leading opponents on a deceptively merry chase as it all but dances around them.",
+    "ac": 15,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 35
+			}
+		],
+    "attributes": {
+      "str": 17,
+      "dex": 17,
+      "con": 16,
+      "int": 6,
+      "wis": 14,
+      "cha": 10
+    },
+    "hp": 92,
+    "skills": [
+			"perception",
+			"deception"
+		],
+    "savingThrows": [
+			"str",
+			"dex"
+		],
+    "senses": [],
+    "abilities": [
+      {
+        "id": "intimidate",
+        "hidden": false
+      },
+      {
+        "id": "flash-fire",
+        "hidden": false
+      },
+      {
+        "id": "rock-head",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "take-down",
+        "leer",
+        "roar",
+        "rock-throw",
+        "agility",
+        "flame-wheel",
+        "reversal",
+        "extreme-speed",
+        "helping-hand",
+        "howl",
+        "retaliate",
+        "bite",
+        "ember",
+        "fire-fang"
+      ],
+      "level10": [
+        "rock-slide",
+        "crunch",
+        "raging-fury"
+      ],
+			"level14": [
+				"double-edge"
+			],
+      "level18": [
+        "flare-blitz"
+      ],
+      "tm": [
+        11,
+        17,
+        22,
+        23,
+        37,
+        38,
+        39,
+        42,
+        43,
+        46,
+        50,
+        61,
+        67,
+        88,
+        90
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10230.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10230.png"
+    }
+  },
+  {
+    "id": "voltorb-hisui",
+    "name": "Hisuian Voltorb",
+    "number": 100,
+    "type": [
+      "electric",
+      "grass"
+    ],
+    "size": "tiny",
+    "sr": 1,
+    "minLevel": 1,
+    "eggGroup": [
+      "mineral"
+    ],
+    "gender": "0:0",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "1",
+      "to": [
+        {
+          "id": "electrode-hisui",
+          "conditions": [
+            {
+              "type": "level",
+              "value": 8
+            },
+						{
+              "type": "item",
+              "value": "Leaf Stone"
+            }
+          ],
+          "effects": [
+            {
+              "type": "asi",
+              "value": 10
+            }
+          ]
+        }
+      ],
+      "description": "Hisuian Voltorb can evolve into Hisuian Electrode at level 8 and above using a Leaf Stone. When it evolves, its health increases by double its level, and it gains 10 points to add to its ability scores (max 20)."
+    },
+    "description": "The Sphere Pokémon. An enigmatic Pokémon that happens to bear a resemblance to a Poké Ball. When excited, it discharges the electric current it has stored in its belly, then lets out a great, uproarious laugh.",
+    "ac": 14,
+    "hitDice": "d6",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 25
+			}
+		],
+    "attributes": {
+      "str": 12,
+      "dex": 14,
+      "con": 12,
+      "int": 6,
+      "wis": 10,
+      "cha": 8
+    },
+    "hp": 17,
+    "skills": [
+			"stealth"
+		],
+    "savingThrows": [
+			"con"
+		],
+    "senses": [],
+    "abilities": [
+      {
+        "id": "soundproof",
+        "hidden": false
+      },
+      {
+        "id": "static",
+        "hidden": false
+      },
+      {
+        "id": "aftermath",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "thunder-shock",
+        "charge"
+      ],
+      "level2": [
+        "tackle",
+        "stun-spore",
+        "thunder-wave",
+        "bullet-seed"
+      ],
+      "level6": [
+        "screech",
+        "rollout",
+        "spark"
+      ],
+      "level10": [
+        "thunderbolt",
+        "energy-ball",
+        "electro-ball"
+      ],
+      "level14": [
+        "seed-bomb",
+        "discharge"
+      ],
+      "level18": [
+        "thunder",
+        "self-destruct",
+        "explosion",
+        "gyro-ball",
+        "grassy-terrain"
+      ],
+      "tm": [
+        12,
+        17,
+        18,
+        22,
+        33,
+        42,
+        46,
+        72,
+        86,
+        88,
+        90
+      ],
+      "egg": [
+        "leech-seed",
+        "recycle",
+        "worry-seed"
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10231.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10231.png"
+    }
+  },
+  {
+    "id": "electrode-hisui",
+    "name": "Hisuian Electrode",
+    "number": 101,
+    "type": [
+      "electric",
+      "grass"
+    ],
+    "size": "small",
+    "sr": 8,
+    "minLevel": 5,
+    "eggGroup": [
+      "mineral"
+    ],
+    "gender": "0:0",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "2",
+      "from": [
+        "voltorb-hisui"
+      ]
+    },
+    "description": "The Sphere Pokémon. The tissue on the surface of its body is curiously similar in composition to an Apricorn. When irritated, this Pokémon lets loose an electric current equal to 20 lightning bolts.",
+    "ac": 17,
+    "hitDice": "d10",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 40
+			}
+		],
+    "attributes": {
+      "str": 14,
+      "dex": 17,
+      "con": 15,
+      "int": 6,
+      "wis": 12,
+      "cha": 8
+    },
+    "hp": 50,
+    "skills": [
+        "stealth"
+		],
+		"savingThrows": [
+			"con"
+		],
+		"senses": [],
+		"abilities": [
+      {
+        "id": "soundproof",
+        "hidden": false
+      },
+      {
+        "id": "static",
+        "hidden": false
+      },
+      {
+        "id": "aftermath",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "thunder-shock",
+        "charge",
+        "tackle",
+        "stun-spore",
+        "thunder-wave",
+        "bullet-seed",
+        "screech",
+        "rollout",
+        "spark"
+      ],
+      "level10": [
+        "thunderbolt",
+        "energy-ball",
+        "electro-ball"
+      ],
+      "level14": [
+        "seed-bomb",
+        "discharge"
+      ],
+      "level18": [
+        "thunder",
+        "self-destruct",
+        "explosion",
+        "gyro-ball",
+        "grassy-terrain",
+        "chloroblast"
+      ],
+      "tm": [
+        12,
+        17,
+        18,
+        22,
+        33,
+        42,
+        46,
+        72,
+        86,
+        88,
+        90
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10232.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10232.png"
+    }
+  },
+  {
+    "id": "typhlosion-hisui",
+    "name": "Hisuian Typhlosion",
+    "number": 157,
+    "type": [
+      "fire",
+      "ghost"
+    ],
+    "size": "medium",
+    "sr": 13,
+    "minLevel": 10,
+    "eggGroup": [
+      "field"
+    ],
+    "gender": "1:7",
+    "evolution": {
+      "maxStage": "3",
+      "stage": "3",
+      "from": [
+        "quilava"
+      ]
+    },
+    "description": "The Ghost Flame Pokémon. Said to purify lost, forsaken souls with its flames and guide them to the afterlife. I believe its form has been influenced by the energy of the sacred mountain towering at Hisui’s center.",
+    "ac": 16,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 30
+			}
+		],
+    "attributes": {
+      "str": 17,
+      "dex": 19,
+      "con": 13,
+      "int": 6,
+      "wis": 15,
+      "cha": 10
+    },
+    "hp": 87,
+    "skills": [
+			"athletics"
+		],
+		"savingThrows": [
+			"dex",
+			"str"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "blaze",
+        "hidden": false
+      },
+      {
+        "id": "frisk",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "double-edge",
+        "leer",
+        "quick-attack",
+        "smokescreen",
+        "eruption",
+        "gyro-ball",
+        "hex",
+        "ember",
+        "flame-wheel",
+        "rollout",
+        "defense-curl",
+        "swift"
+      ],
+      "level14": [
+        "flamethrower",
+        "flame-charge"
+      ],
+      "level18": [
+        "shadow-ball",
+        "overheat",
+        "lava-plume",
+        "inferno",
+        "infernal-parade"
+      ],
+      "tm": [
+        5,
+        11,
+        17,
+        22,
+        26,
+        31,
+        38,
+        42,
+        52,
+        61,
+        88,
+        90
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10233.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10233.png"
+    }
+  },
+  {
+    "id": "qwilfish-hisui",
+    "name": "Hisuian Qwilfish",
+    "number": 211,
+    "type": [
+      "dark",
+      "poison"
+    ],
+    "size": "tiny",
+    "sr": 5,
+    "minLevel": 5,
+    "eggGroup": [
+      "water-2"
+    ],
+    "gender": "1:1",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "1",
+      "to": [
+        {
+          "id": "overqwil",
+          "conditions": [
+            {
+              "type": "level",
+              "value": 10
+            },
+						{
+              "type": "move",
+              "value": "barb-barrage"
+            }
+          ],
+          "effects": [
+            {
+              "type": "asi",
+              "value": 8
+            }
+          ]
+        }
+      ],
+      "description": "Hisuian Qwilfish can evolve into Overqwil at level 10 and above. When it evolves, its health increases by double its level, and it gains 8 points to add to its ability scores (max 20)."
+    },
+    "description": "The Balloon Pokémon. Fishers detest this troublesome Pokémon because it sprays poison from its spines, getting it everywhere. A different form of Qwilfish lives in other regions.",
+    "ac": 15,
+    "hitDice": "d6",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 5
+			},
+			{
+				"type": "swimming",
+				"value": 30
+			}
+		],
+    "attributes": {
+      "str": 15,
+      "dex": 16,
+      "con": 14,
+      "int": 6,
+      "wis": 12,
+      "cha": 10
+    },
+    "hp": 20,
+    "skills": [
+			"intimidation"
+		],
+		"savingThrows": [
+			"dex"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "poison-point",
+        "hidden": false
+      },
+      {
+        "id": "swift-swim",
+        "hidden": false
+      },
+      {
+        "id": "intimidate",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "poison-sting",
+        "pin-missile",
+        "bite",
+        "harden",
+        "spikes"
+      ],
+      "level6": [
+        "minimize",
+        "fell-stinger",
+        "barb-barrage"
+      ],
+      "level10": [
+        "water-pulse",
+        "brine",
+        "poison-jab",
+        "dark-pulse"
+      ],
+			"level14": [
+				"toxic",
+				"stockpile",
+        "spit-up",
+				"toxic-spikes"
+			],
+      "level18": [
+        "double-edge",
+        "self-destruct",
+        "destiny-bond",
+        "crunch",
+        "acupressure"
+      ],
+      "tm": [
+        9,
+        12,
+        14,
+        17,
+        18,
+        42,
+        68,
+        74,
+        75,
+        88,
+        90,
+        94,
+        98
+      ],
+      "egg": [
+        "supersonic",
+        "bubble-beam",
+        "haze",
+        "flail",
+        "astonish",
+        "aqua-jet",
+        "acid-spray"
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10234.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10234.png"
+    }
+  },
+  {
+    "id": "sneasel-hisui",
+    "name": "Hisuian Sneasel",
+    "number": 215,
+    "type": [
+      "fighting",
+      "poison"
+    ],
+    "size": "small",
+    "sr": 4,
+    "minLevel": 5,
+    "eggGroup": [
+      "field"
+    ],
+    "gender": "1:1",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "1",
+      "to": [
+        {
+          "id": "sneasler",
+          "conditions": [
+            {
+              "type": "level",
+              "value": 10
+            },
+						{
+							"type": "item",
+							"value": "Razor Claw"
+						},
+						{
+							"type": "time",
+							"value": "day"
+						}
+          ],
+          "effects": [
+            {
+              "type": "asi",
+              "value": 12
+            }
+          ]
+        }
+      ],
+      "description": "Hisuian Sneasel can evolve into Sneasler at level 10 and above while holding a Razor Claw during the day. When it evolves, its health increases by double its level, and it gains 12 points to add to its ability scores (max 20)."
+    },
+    "description": "The Sharp Claw Pokémon. Its sturdy, curved claws are ideal for traversing precipitous cliffs. From the tips of these claws drips a venom that infiltrates the nerves of any prey caught in Sneasel’s grasp.",
+    "ac": 15,
+    "hitDice": "d8",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 25
+			},
+			{
+				"type": "climbing",
+				"value": 40
+			}
+		],
+    "attributes": {
+      "str": 13,
+      "dex": 16,
+      "con": 12,
+      "int": 6,
+      "wis": 12,
+      "cha": 10
+    },
+    "hp": 30,
+    "skills": [
+			"stealth",
+			"deception",
+			"sleight of hand"
+		],
+		"savingThrows": [
+			"dex"
+		],
+		"senses": [
+			{
+				"type": "darkvision",
+				"value": 40
+			}
+		],
+    "abilities": [
+      {
+        "id": "inner-focus",
+        "hidden": false
+      },
+      {
+        "id": "keen-eye",
+        "hidden": false
+      },
+      {
+        "id": "pickpocket",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "scratch",
+        "leer",
+        "quick-attack",
+        "rock-smash",
+        "taunt"
+      ],
+      "level6": [
+        "swift",
+        "slash",
+        "metal-claw"
+      ],
+      "level10": [
+        "brick-break",
+        "poison-jab"
+      ],
+      "level14": [
+        "swords-dance"
+      ],
+      "level18": [
+        "agility",
+        "screech",
+        "close-combat",
+        "hone-claws"
+      ],
+      "tm": [
+        6,
+        9,
+        11,
+        17,
+        18,
+        34,
+        36,
+        42,
+        46,
+        47,
+        52,
+        56,
+        68,
+        86,
+        88,
+        90
+      ],
+      "egg": [
+        "counter",
+        "fake-out",
+        "feint",
+        "night-slash",
+        "switcheroo",
+        "double-hit",
+        "quick-guard"
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10235.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10235.png"
+    }
+  },
+  {
+    "id": "samurott-hisui",
+    "name": "Hisuian Samurott",
+    "number": 503,
+    "type": [
+      "water",
+      "dark"
+    ],
+    "size": "medium",
+    "sr": 13,
+    "minLevel": 10,
+    "eggGroup": [
+      "field"
+    ],
+    "gender": "1:7",
+    "evolution": {
+      "maxStage": "3",
+      "stage": "3",
+      "from": [
+        "dewott"
+      ]
+    },
+    "description": "The Formidable Pokémon. Hard of heart and deft of blade, this rare form of Samurott is a product of the Pokémon’s evolution in the region of Hisui. Its turbulent blows crash into foes like ceaseless pounding waves.",
+    "ac": 15,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 30
+			},
+			{
+				"type": "swimming",
+				"value": 30
+			}
+		],
+    "attributes": {
+      "str": 17,
+      "dex": 16,
+      "con": 17,
+      "int": 6,
+      "wis": 14,
+      "cha": 10
+    },
+    "hp": 107,
+    "skills": [
+			"survival",
+			"intimidation"
+		],
+		"savingThrows": [
+			"dex",
+			"str"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "torrent",
+        "hidden": false
+      },
+      {
+        "id": "sharpness",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "tail-whip",
+        "water-gun",
+        "megahorn",
+        "sucker-punch",
+        "night-slash",
+        "aqua-jet",
+        "swords-dance",
+        "focus-energy",
+        "water-pulse",
+        "razor-shell",
+        "slash",
+        "fury-cutter",
+        "aerial-ace",
+        "ceaseless-edge"
+      ],
+      "level14": [
+        "aqua-tail"
+      ],
+      "level18": [
+        "hydro-pump",
+        "encore",
+        "dark-pulse",
+        "retaliate"
+      ],
+      "tm": [
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        31,
+        42,
+        44,
+        46,
+        54,
+        56,
+        67,
+        68,
+        78,
+        81,
+        86,
+        88,
+        90,
+        94,
+        95,
+        98
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10236.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10236.png"
+    }
+  },
+  {
+    "id": "lilligant-hisui",
+    "name": "Hisuian Lilligant",
+    "number": 549,
+    "type": [
+      "grass",
+      "fighting"
+    ],
+    "size": "small",
+    "sr": 9,
+    "minLevel": 5,
+    "eggGroup": [
+      "grass"
+    ],
+    "gender": "1:0",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "2",
+      "from": [
+        "petilil"
+      ]
+    },
+    "description": "The Spinning Pokémon. I suspect that its well-developed legs are the result of a life spent on mountains covered in deep snow. The scent it exudes from its flower crown heartens those in proximity.",
+    "ac": 15,
+    "hitDice": "d10",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 25
+			}
+		],
+    "attributes": {
+      "str": 16,
+      "dex": 17,
+      "con": 16,
+      "int": 6,
+      "wis": 11,
+      "cha": 11
+    },
+    "hp": 55,
+    "skills": [
+			"survival",
+			"nature"
+		],
+		"savingThrows": [
+			"con"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "chlorophyll",
+        "hidden": false
+      },
+      {
+        "id": "hustle",
+        "hidden": false
+      },
+      {
+        "id": "leaf-guard",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "mega-kick",
+        "absorb",
+        "mega-drain",
+        "leech-seed",
+        "growth",
+        "giga-drain",
+        "synthesis",
+        "sunny-day",
+        "rock-smash",
+        "helping-hand",
+        "teeter-dance",
+        "defog",
+        "entrainment",
+        "after-you",
+        "petal-blizzard",
+        "solar-blade",
+        "stun-spore",
+        "leafage",
+        "axe-kick",
+        "poison-powder"
+      ],
+      "level10": [
+        "sleep-powder",
+        "energy-ball"
+      ],
+      "level14": [
+        "drain-punch"
+      ],
+      "level18": [
+        "petal-dance",
+        "recover",
+        "leaf-blade",
+        "close-combat",
+        "leaf-storm",
+        "victory-dance"
+      ],
+      "tm": [
+        17,
+        18,
+        22,
+        31,
+        42,
+        47,
+        62,
+        75,
+        77,
+        86,
+        88,
+        90
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10237.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10237.png"
+    }
+  },
+  {
+    "id": "zorua-hisui",
+    "name": "Hisuian Zorua",
+    "number": 570,
+    "type": [
+      "normal",
+      "ghost"
+    ],
+    "size": "small",
+    "sr": 1,
+    "minLevel": 1,
+    "eggGroup": [
+      "field"
+    ],
+    "gender": "1:7",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "1",
+      "to": [
+        {
+          "id": "zoroark-hisui",
+          "conditions": [
+            {
+              "type": "level",
+              "value": 8
+            }
+          ],
+          "effects": [
+            {
+              "type": "asi",
+              "value": 15
+            }
+          ]
+        }
+      ],
+      "description": "Hisuian Zorua can evolve into Hisuian Zoroark at level 8 and above. When it evolves, its health increases by double its level, and it gains 15 points to add to its ability scores (max 20)."
+    },
+    "description": "The Spiteful Fox Pokémon. A once-departed soul, returned to life in Hisui. Derives power from resentment, which rises as energy atop its head and takes on the forms of foes. In this way, Zorua vents lingering malice.",
+    "ac": 12,
+    "hitDice": "d6",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 25
+			}
+		],
+    "attributes": {
+      "str": 11,
+      "dex": 14,
+      "con": 11,
+      "int": 6,
+      "wis": 12,
+      "cha": 12
+    },
+    "hp": 16,
+    "skills": [
+			"deception"
+		],
+		"savingThrows": [
+			"wis",
+			"dex"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "illusion",
+        "hidden": false
+      }
+    ],
+    "moves": {
+      "start": [
+        "scratch",
+        "leer",
+        "shadow-sneak"
+      ],
+      "level2": [
+        "torment",
+        "hone-claws",
+        "snarl"
+      ],
+      "level6": [
+        "swift",
+        "curse",
+        "taunt",
+        "bitter-malice"
+      ],
+      "level10": [
+        "slash",
+        "spite",
+        "knock-off"
+      ],
+      "level14": [
+        "agility",
+        "shadow-claw"
+      ],
+      "level18": [
+        "nasty-plot",
+        "foul-play"
+      ],
+      "tm": [
+        5,
+        15,
+        17,
+        18,
+        42,
+        46,
+        56,
+        61,
+        68,
+        77,
+        88,
+        89,
+        90
+      ],
+      "egg": [
+        "detect",
+        "memento",
+        "extrasensory",
+        "comeuppance"
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10238.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10238.png"
+    }
+  },
+  {
+    "id": "zoroark-hisui",
+    "name": "Hisuian Zoroark",
+    "number": 571,
+    "type": [
+      "normal",
+      "ghost"
+    ],
+    "size": "medium",
+    "sr": 12,
+    "minLevel": 8,
+    "eggGroup": [
+      "field"
+    ],
+    "gender": "1:7",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "2",
+      "from": [
+        "zorua-hisui"
+      ]
+    },
+    "description": "The Baneful Fox Pokémon. With its disheveled white fur, it looks like an embodiment of death. Heedless of its own safety, Zoroark attacks its nemeses with a bitter energy so intense, it lacerates Zoroark’s own body.",
+    "ac": 15,
+    "hitDice": "d10",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 35
+			}
+		],
+    "attributes": {
+      "str": 15,
+      "dex": 18,
+      "con": 14,
+      "int": 6,
+      "wis": 16,
+      "cha": 14
+    },
+    "hp": 72,
+    "skills": [
+			"deception",
+			"intimidation"
+		],
+		"savingThrows": [
+			"wis",
+			"dex"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "illusion",
+        "hidden": false
+      }
+    ],
+    "moves": {
+      "start": [
+        "scratch",
+        "leer",
+        "torment",
+        "u-turn",
+        "shadow-sneak",
+        "hone-claws",
+        "snarl",
+        "swift",
+        "curse",
+        "taunt",
+        "bitter-malice"
+      ],
+      "level10": [
+        "slash",
+        "spite",
+        "knock-off"
+      ],
+      "level14": [
+        "agility",
+        "shadow-claw"
+      ],
+      "level18": [
+        "shadow-ball",
+        "extrasensory",
+        "nasty-plot",
+        "foul-play"
+      ],
+      "tm": [
+        5,
+        17,
+        18,
+        29,
+        31,
+        42,
+        46,
+        47,
+        52,
+        56,
+        61,
+        75,
+        77,
+        86,
+        88,
+        90
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10239.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10239.png"
+    }
+  },
+  {
+    "id": "braviary-hisui",
+    "name": "Hisuian Braviary",
+    "number": 628,
+    "type": [
+      "psychic",
+      "flying"
+    ],
+    "size": "medium",
+    "sr": 12,
+    "minLevel": 8,
+    "eggGroup": [
+      "flying"
+    ],
+    "gender": "0:1",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "2",
+      "from": [
+        "rufflet"
+      ]
+    },
+    "description": "The Battle Cry Pokémon. Screaming a bloodcurdling battle cry, this huge and ferocious bird Pokémon goes out on the hunt. It blasts lakes with shock waves, then scoops up any prey that float to the water’s surface.",
+    "ac": 15,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 25
+			},
+			{
+				"type": "flying",
+				"value": 30
+			}
+		],
+    "attributes": {
+      "str": 15,
+      "dex": 16,
+      "con": 18,
+      "int": 6,
+      "wis": 15,
+      "cha": 11
+    },
+    "hp": 97,
+    "skills": [
+			"perception",
+			"survival"
+		],
+		"savingThrows": [
+			"dex",
+			"con"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "keen-eye",
+        "hidden": false
+      },
+      {
+        "id": "sheer-force",
+        "hidden": false
+      },
+      {
+        "id": "tinted-lens",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "wing-attack",
+        "leer",
+        "peck",
+        "quick-attack",
+        "sky-attack",
+        "superpower",
+        "hone-claws",
+        "aerial-ace",
+        "slash",
+        "twister",
+        "tailwind",
+        "air-slash"
+      ],
+      "level10": [
+        "scary-face",
+        "roost",
+        "esper-wing"
+      ],
+      "level14": [
+        "double-edge"
+      ],
+      "level18": [
+        "whirlwind",
+        "thrash",
+        "crush-claw",
+        "brave-bird",
+        "defog",
+        "hurricane"
+      ],
+      "tm": [
+        3,
+        4,
+        11,
+        17,
+        18,
+        30,
+        39,
+        42,
+        62,
+        76,
+        77,
+        88,
+        89,
+        90,
+        95
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10240.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10240.png"
+    }
+  },
+  {
+    "id": "sliggoo-hisui",
+    "name": "Hisuian Sliggoo",
+    "number": 705,
+    "type": [
+      "steel",
+      "dragon"
+    ],
+    "size": "small",
+    "sr": 10,
+    "minLevel": 8,
+    "eggGroup": [
+      "dragon"
+    ],
+    "gender": "1:1",
+    "evolution": {
+      "maxStage": "3",
+      "stage": "2",
+      "from": [
+        "goomy"
+      ],
+      "to": [
+        {
+          "id": "goodra-hisui",
+          "conditions": [
+            {
+              "type": "level",
+              "value": 16
+            }
+          ],
+          "effects": [
+            {
+              "type": "asi",
+              "value": 12
+            }
+          ]
+        }
+      ],
+      "description": "Hisuian Sliggoo can evolve into Hisuian Goodra at level 16 and above. When it evolves, its health increases by double its level, and it gains 12 points to add to its ability scores (max 20)."
+    },
+    "description": "The Snail Pokémon. A creature given to melancholy. I suspect its metallic shell developed as a result of the mucus on its skin reacting with the iron in Hisui’s water.",
+    "ac": 16,
+    "hitDice": "d8",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 15
+			}
+		],
+    "attributes": {
+      "str": 16,
+      "dex": 11,
+      "con": 17,
+      "int": 6,
+      "wis": 12,
+      "cha": 10
+    },
+    "hp": 84,
+    "skills": [
+			"survival",
+			"perception"
+		],
+		"savingThrows": [
+			"con"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "sap-sipper",
+        "hidden": false
+      },
+      {
+        "id": "shell-armor",
+        "hidden": false
+      },
+      {
+        "id": "gooey",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "water-gun",
+        "absorb",
+        "bubble",
+        "dragon-breath",
+        "acid-spray",
+        "acid-armor",
+        "flail",
+        "protect",
+        "water-pulse"
+      ],
+      "level10": [
+        "rain-dance",
+        "dragon-pulse",
+        "iron-head"
+      ],
+      "level14": [
+        "shelter"
+      ],
+      "level18": [
+        "hydro-pump",
+        "curse",
+        "muddy-water"
+      ],
+      "tm": [
+        11,
+        14,
+        25,
+        34,
+        37,
+        39,
+        42,
+        74,
+        88,
+        90,
+        91
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10241.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10241.png"
+    }
+  },
+  {
+    "id": "goodra-hisui",
+    "name": "Hisuian Goodra",
+    "number": 706,
+    "type": [
+      "steel",
+      "dragon"
+    ],
+    "size": "medium",
+    "sr": 14,
+    "minLevel": 10,
+    "eggGroup": [
+      "dragon"
+    ],
+    "gender": "1:1",
+    "evolution": {
+      "maxStage": "3",
+      "stage": "3",
+      "from": [
+        "sliggoo-hisui"
+      ]
+    },
+    "description": "The Shell Bunker Pokémon. Able to freely control the hardness of its metallic shell. It loathes solitude and is extremely clingy—it will fume and run riot if those dearest to it ever leave its side.",
+    "ac": 19,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 25
+			}
+		],
+    "attributes": {
+      "str": 18,
+      "dex": 14,
+      "con": 20,
+      "int": 6,
+      "wis": 14,
+      "cha": 10
+    },
+    "hp": 140,
+		"skills": [
+			"survival",
+			"perception"
+		],
+		"savingThrows": [
+			"con",
+			"cha"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "sap-sipper",
+        "hidden": false
+      },
+      {
+        "id": "shell-armor",
+        "hidden": false
+      },
+      {
+        "id": "gooey",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "water-gun",
+        "absorb",
+        "bubble",
+        "dragon-breath",
+        "feint",
+        "tearful-look",
+        "acid-spray",
+        "acid-armor",
+        "flail",
+        "protect",
+        "water-pulse",
+        "rain-dance",
+        "dragon-pulse",
+        "iron-head"
+      ],
+      "level14": [
+        "shelter"
+      ],
+      "level18": [
+        "body-slam",
+        "hydro-pump",
+        "curse",
+        "muddy-water",
+        "heavy-slam"
+      ],
+      "tm": [
+        2,
+        11,
+        14,
+        25,
+        26,
+        34,
+        37,
+        38,
+        39,
+        42,
+        74,
+        82,
+        88,
+        90,
+        91,
+        94
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10242.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10242.png"
+    }
+  },
+  {
+    "id": "avalugg-hisui",
+    "name": "Hisuian Avalugg",
+    "number": 713,
+    "type": [
+      "ice",
+      "rock"
+    ],
+    "size": "medium",
+    "sr": 13,
+    "minLevel": 8,
+    "eggGroup": [
+      "monster",
+      "mineral"
+    ],
+    "gender": "1:1",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "2",
+      "from": [
+        "bergmite"
+      ]
+    },
+    "description": "The Iceberg Pokémon. The armor of ice covering its lower jaw puts steel to shame and can shatter rocks with ease. This Pokémon barrels along steep mountain paths, cleaving through the deep snow.",
+    "ac": 20,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 25
+			}
+		],
+    "attributes": {
+      "str": 20,
+      "dex": 10,
+      "con": 17,
+      "int": 6,
+      "wis": 12,
+      "cha": 10
+    },
+    "hp": 93,
+    "skills": [
+			"survival"
+		],
+		"savingThrows": [
+			"con",
+			"str"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "strong-jaw",
+        "hidden": false
+      },
+      {
+        "id": "ice-body",
+        "hidden": false
+      },
+      {
+        "id": "sturdy",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "harden",
+        "rock-slide",
+        "rapid-spin",
+        "wide-guard",
+        "curse",
+        "powder-snow",
+        "ice-shard",
+        "bite",
+        "protect",
+        "avalanche"
+      ],
+      "level10": [
+        "recover",
+        "crunch",
+        "iron-defense",
+        "earth-power"
+      ],
+			"level14": [
+				"double-edge",
+        "blizzard"
+			],
+      "level18": [
+        "take-down",
+        "mountain-gale"
+      ],
+      "tm": [
+        18,
+        26,
+        37,
+        39,
+        42,
+        74,
+        88,
+        90
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10243.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10243.png"
+    }
+  },
+  {
+    "id": "decidueye-hisui",
+    "name": "Hisuian Decidueye",
+    "number": 724,
+    "type": [
+      "grass",
+      "fighting"
+    ],
+    "size": "medium",
+    "sr": 13,
+    "minLevel": 10,
+    "eggGroup": [
+      "flying"
+    ],
+    "gender": "1:7",
+    "evolution": {
+      "maxStage": "3",
+      "stage": "3",
+      "from": [
+        "dartrix"
+      ]
+    },
+    "description": "The Arrow Quill Pokémon. The air stored inside the rachises of Decidueye’s feathers insulates the Pokémon against Hisui’s extreme cold. This is firm proof that evolution can be influenced by environment.",
+    "ac": 16,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 40
+			},
+			{
+				"type": "flying",
+				"value": 10
+			}
+		],
+    "attributes": {
+      "str": 14,
+      "dex": 19,
+      "con": 17,
+      "int": 6,
+      "wis": 14,
+      "cha": 10
+    },
+    "hp": 112,
+    "skills": [
+			"acrobatics",
+			"nature"
+		],
+		"savingThrows": [
+			"dex",
+			"wis"
+		],
+		"senses": [
+			{
+				"type": "darkvision",
+				"value": 75
+			}
+		],
+    "abilities": [
+      {
+        "id": "overgrow",
+        "hidden": false
+      },
+      {
+        "id": "scrappy",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "gust",
+        "tackle",
+        "growl",
+        "rock-smash",
+        "u-turn",
+        "peck",
+        "leafage",
+        "razor-leaf",
+        "synthesis",
+        "aerial-ace",
+        "roost",
+        "shadow-sneak"
+      ],
+      "level10": [
+        "magical-leaf",
+        "pluck",
+        "aura-sphere",
+        "air-slash"
+      ],
+      "level14": [
+        "leaf-blade",
+        "triple-arrows"
+      ],
+      "level18": [
+        "feather-dance",
+        "sucker-punch",
+        "brave-bird",
+        "leaf-storm"
+      ],
+      "tm": [
+        11,
+        12,
+        17,
+        18,
+        22,
+        23,
+        31,
+        39,
+        42,
+        47,
+        52,
+        75,
+        86,
+        88,
+        90
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10244.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10244.png"
+    }
+  },
+	{
+    "id": "wyrdeer",
+    "name": "Wyrdeer",
+    "number": 899,
+    "type": [
+      "normal",
+      "psychic"
+    ],
+    "size": "medium",
+    "sr": 11,
+    "minLevel": 10,
+    "eggGroup": [
+      "field"
+    ],
+    "gender": "1:1",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "2",
+      "from": [
+        "stantler"
+      ]
+    },
+    "description": "The Big Horn Pokémon. The black orbs shine with an uncanny light when the Pokémon is erecting invisible barriers. The fur shed from its beard retains heat well and is a highly useful material for winter clothing.",
+    "ac": 15,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 40
+			}
+		],
+    "attributes": {
+      "str": 16,
+      "dex": 18,
+      "con": 14,
+      "int": 6,
+      "wis": 16,
+      "cha": 12
+    },
+    "hp": 112,
+    "skills": [
+			"athletics",
+			"intimidation"
+		],
+    "savingThrows": [
+			"dex",
+			"wis"
+		],
+    "senses": [],
+    "abilities": [
+      {
+        "id": "intimidate",
+        "hidden": false
+      },
+      {
+        "id": "frisk",
+        "hidden": false
+      },
+      {
+        "id": "sap-sipper",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "leer",
+        "confusion",
+        "hypnosis",
+        "astonish",
+        "stomp",
+        "sand-attack",
+        "calm-mind",
+        "take-down",
+        "confuse-ray",
+        "extrasensory",
+        "psyshield-bash"
+      ],
+      "level14": [
+        "role-play",
+				"zen-headbutt"
+      ],
+      "level18": [
+        "double-edge",
+        "megahorn",
+				"imprison"
+      ],
+      "tm": [
+        3,
+        5,
+        11,
+        15,
+        16,
+        17,
+        18,
+        22,
+        24,
+        25,
+        26,
+        29,
+        30,
+        33,
+        42,
+        44,
+        46,
+        53,
+        57,
+        68,
+        73,
+        77,
+        78,
+        88,
+        90,
+        92,
+        93
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/899.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/899.png"
+    }
+  },
+  {
+    "id": "kleavor",
+    "name": "Kleavor",
+    "number": 900,
+    "type": [
+      "bug",
+      "rock"
+    ],
+    "size": "medium",
+    "sr": 14,
+    "minLevel": 10,
+    "eggGroup": [
+      "bug"
+    ],
+    "gender": "1:1",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "2",
+      "from": [
+        "scyther"
+      ]
+    },
+    "description": "The Axe Pokémon. A violent creature that fells towering trees with its crude axes and shields itself with hard stone. If one should chance upon this Pokémon in the wilds, one's only recourse is to flee.",
+    "ac": 16,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 40
+			}
+		],
+    "attributes": {
+      "str": 20,
+      "dex": 16,
+      "con": 18,
+      "int": 6,
+      "wis": 12,
+      "cha": 10
+    },
+    "hp": 139,
+    "skills": [
+			"acrobatics",
+			"intimidation"
+		],
+    "savingThrows": [
+			"str",
+			"dex"
+		],
+    "senses": [],
+    "abilities": [
+      {
+        "id": "swarm",
+        "hidden": false
+      },
+      {
+        "id": "sheer-force",
+        "hidden": false
+      },
+      {
+        "id": "sharpness",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "leer",
+        "quick-attack",
+        "false-swipe",
+        "fury-cutter",
+        "silver-wind",
+        "double-team",
+        "aerial-ace",
+        "air-slash",
+        "stealth-rock",
+        "double-hit",
+        "smack-down",
+        "swords-dance",
+        "focus-energy",
+        "slash",
+        "stone-axe"
+      ],
+      "level14": [
+        "agility",
+        "x-scissor"
+      ],
+      "level18": [
+        "rock-slide",
+        "close-combat"
+      ],
+      "tm": [
+        11,
+        15,
+        16,
+        17,
+        31,
+        37,
+        39,
+        42,
+        44,
+        46,
+        62,
+        68,
+        71,
+        88,
+        89,
+        90,
+        101
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/900.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/900.png"
+    }
+  },
+  {
+    "id": "ursaluna",
+    "name": "Ursaluna",
+    "number": 901,
+    "type": [
+      "ground",
+      "normal"
+    ],
+    "size": "large",
+    "sr": 14,
+    "minLevel": 10,
+    "eggGroup": [
+      "field"
+    ],
+    "gender": "1:1",
+    "evolution": {
+      "maxStage": "3",
+      "stage": "3",
+      "from": [
+        "ursaring"
+      ]
+    },
+    "description": "The Peat Pokémon. I believe it was Hisui's swampy terrain that gave Ursaluna its burly physique and newfound capacity to manipulate peat at will.",
+    "ac": 16,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 30
+			},
+			{
+				"type": "climbing",
+				"value": 25
+			}
+		],
+    "attributes": {
+      "str": 20,
+      "dex": 13,
+      "con": 19,
+      "int": 6,
+      "wis": 14,
+      "cha": 11
+    },
+    "hp": 145,
+    "skills": [
+			"athletics",
+			"perception"
+		],
+    "savingThrows": [
+			"str",
+			"con"
+		],
+    "senses": [],
+    "abilities": [
+      {
+        "id": "guts",
+        "hidden": false
+      },
+      {
+        "id": "bulletproof",
+        "hidden": false
+      },
+      {
+        "id": "unnerve",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "scratch",
+        "tackle",
+        "leer",
+        "lick",
+        "fake-tears",
+        "covet",
+        "fury-swipes",
+        "baby-doll-eyes",
+        "slash",
+        "sweet-scent",
+        "payback",
+        "bulldoze",
+        "play-rough",
+        "play-nice",
+				"headlong-rush"
+      ],
+      "level14": [
+        "scary-face",
+        "high-horsepower"
+      ],
+      "level18": [
+        "thrash",
+        "double-edge",
+        "rest",
+        "snore",
+        "hammer-arm"
+      ],
+      "tm": [
+        5,
+        8,
+        11,
+        12,
+        15,
+        17,
+        18,
+        23,
+        26,
+        31,
+        39,
+        40,
+        42,
+        46,
+        56,
+        65,
+        68,
+        71,
+        75,
+        80,
+        88,
+        90
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/901.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/901.png"
+    }
+  },
+	{
+    "id": "basculegion-m",
+    "name": "Basculegion ♂",
+    "number": 902,
+    "type": [
+      "water",
+      "ghost"
+    ],
+    "size": "large",
+    "sr": 12,
+    "minLevel": 10,
+    "eggGroup": [
+      "water-2"
+    ],
+    "gender": "0:1",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "2",
+      "from": [
+        "basculin"
+      ]
+    },
+    "description": "The Big Fish Pokémon. Clads itself in the souls of comrades that perished before fulfilling their goals of journeying upstream. No other species throughout all Hisui's rivers is Basculegion's equal.",
+    "ac": 15,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 5
+			},
+			{
+				"type": "swimming",
+				"value": 30
+			}
+		],
+    "attributes": {
+      "str": 18,
+      "dex": 18,
+      "con": 17,
+      "int": 6,
+      "wis": 12,
+      "cha": 10
+    },
+    "hp": 112,
+		"skills": [
+			"intimidation"
+		],
+		"savingThrows": [
+			"dex"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "swift-swim",
+        "hidden": false
+      },
+      {
+        "id": "adaptability",
+        "hidden": false
+      },
+      {
+        "id": "mold-breaker",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "tail-whip",
+        "water-gun",
+        "phantom-force",
+        "flail",
+        "aqua-jet",
+        "bite",
+        "scary-face",
+        "zen-headbutt",
+        "hex",
+        "headbutt",
+        "crunch",
+        "shadow-ball",
+        "soak"
+      ],
+      "level14": [
+        "wave-crash",
+				"thrash",
+				"double-edge"
+      ],
+      "level18": [
+        "take-down",
+        "uproar",
+        "head-smash"
+      ],
+      "tm": [
+        13,
+        14,
+        15,
+        17,
+        18,
+        42,
+        44,
+        68,
+        88,
+        90,
+        94,
+        98
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/902.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/902.png"
+    }
+  },
+	{
+    "id": "basculegion-f",
+    "name": "Basculegion ♀",
+    "number": 902,
+    "type": [
+      "water",
+      "ghost"
+    ],
+    "size": "large",
+    "sr": 12,
+    "minLevel": 10,
+    "eggGroup": [
+      "water-2"
+    ],
+    "gender": "1:0",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "2",
+      "from": [
+        "basculin"
+      ]
+    },
+    "description": "The Big Fish Pokémon. Clads itself in the souls of comrades that perished before fulfilling their goals of journeying upstream. No other species throughout all Hisui's rivers is Basculegion's equal.",
+    "ac": 15,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 5
+			},
+			{
+				"type": "swimming",
+				"value": 30
+			}
+		],
+    "attributes": {
+      "str": 16,
+      "dex": 18,
+      "con": 17,
+      "int": 6,
+      "wis": 16,
+      "cha": 10
+    },
+    "hp": 112,
+		"skills": [
+			"intimidation"
+		],
+		"savingThrows": [
+			"dex"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "swift-swim",
+        "hidden": false
+      },
+      {
+        "id": "adaptability",
+        "hidden": false
+      },
+      {
+        "id": "mold-breaker",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "tail-whip",
+        "water-gun",
+        "phantom-force",
+        "flail",
+        "aqua-jet",
+        "bite",
+        "scary-face",
+        "zen-headbutt",
+        "hex",
+        "headbutt",
+        "crunch",
+        "shadow-ball",
+        "soak"
+      ],
+      "level14": [
+        "wave-crash",
+				"thrash",
+				"double-edge"
+      ],
+      "level18": [
+        "take-down",
+        "uproar",
+        "head-smash"
+      ],
+      "tm": [
+        13,
+        14,
+        15,
+        17,
+        18,
+        42,
+        44,
+        68,
+        88,
+        90,
+        94,
+        98
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10248.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10248.png"
+    }
+  },
+  {
+    "id": "sneasler",
+    "name": "Sneasler",
+    "number": 903,
+    "type": [
+      "fighting",
+      "poison"
+    ],
+    "size": "small",
+    "sr": 11,
+    "minLevel": 8,
+    "eggGroup": [
+      "field"
+    ],
+    "gender": "1:1",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "2",
+      "from": [
+        "sneasel-hisui"
+      ]
+    },
+    "description": "The Free Climb Pokémon. Because of Sneasler's virulent poison and daunting physical prowess, no other species could hope to best it on the frozen highlands. Preferring solitude, this species does not form packs.",
+    "ac": 15,
+    "hitDice": "d10",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 30
+			},
+			{
+				"type": "climbing",
+				"value": 60
+			}
+		],
+    "attributes": {
+      "str": 17,
+      "dex": 20,
+      "con": 14,
+      "int": 6,
+      "wis": 13,
+      "cha": 10
+    },
+    "hp": 80,
+    "skills": [
+			"stealth",
+			"sleight of hand",
+			"deception"
+		],
+    "savingThrows": [
+			"dex",
+			"wis"
+		],
+    "senses": [
+			{
+				"type": "darkvision",
+				"value": 80
+			}
+		],
+    "abilities": [
+      {
+        "id": "pressure",
+        "hidden": false
+      },
+      {
+        "id": "unburden",
+        "hidden": false
+      },
+      {
+        "id": "poison-touch",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "scratch",
+        "leer",
+        "quick-attack",
+        "fling",
+        "rock-smash",
+        "taunt",
+        "swift",
+        "slash",
+        "metal-claw",
+        "dire-claw"
+      ],
+      "level10": [
+        "brick-break",
+        "poison-jab"
+      ],
+      "level14": [
+        "swords-dance"
+      ],
+      "level18": [
+        "agility",
+        "screech",
+        "close-combat",
+        "hone-claws"
+      ],
+      "tm": [
+        4,
+        6,
+        8,
+        9,
+        11,
+        15,
+        17,
+        18,
+        30,
+        34,
+        36,
+        39,
+        40,
+        42,
+        44,
+        46,
+        47,
+        52,
+        54,
+        62,
+        65,
+        68,
+        80,
+        81,
+        86,
+        88,
+        89,
+        90
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/903.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/903.png"
+    }
+  },
+  {
+    "id": "overqwil",
+    "name": "Overqwil",
+    "number": 904,
+    "type": [
+      "dark",
+      "poison"
+    ],
+    "size": "large",
+    "sr": 10,
+    "minLevel": 8,
+    "eggGroup": [
+      "water-2"
+    ],
+    "gender": "1:1",
+    "evolution": {
+      "maxStage": "2",
+      "stage": "2",
+      "from": [
+        "qwilfish-hisui"
+      ]
+    },
+    "description": "The Pin Cluster Pokémon. Its lancelike spikes and savage temperament have earned it the nickname ”sea fiend.” It slurps up poison to nourish itself.",
+    "ac": 16,
+    "hitDice": "d10",
+    "speed": [
+			{
+				"type": "walking",
+				"value": 5
+			},
+			{
+				"type": "swimming",
+				"value": 30
+			}
+		],
+    "attributes": {
+      "str": 18,
+      "dex": 16,
+      "con": 16,
+      "int": 6,
+      "wis": 12,
+      "cha": 12
+    },
+    "hp": 90,
+    "skills": [
+			"intimidation"
+		],
+		"savingThrows": [
+			"dex",
+			"cha"
+		],
+		"senses": [],
+    "abilities": [
+      {
+        "id": "poison-point",
+        "hidden": false
+      },
+      {
+        "id": "swift-swim",
+        "hidden": false
+      },
+      {
+        "id": "intimidate",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "poison-sting",
+        "pin-missile",
+        "bite",
+        "harden",
+        "spikes",
+        "minimize",
+        "fell-stinger",
+        "barb-barrage"
+      ],
+      "level10": [
+        "water-pulse",
+        "brine",
+        "poison-jab",
+        "dark-pulse"
+      ],
+			"level14": [
+				"toxic",
+				"stockpile",
+        "spit-up",
+				"toxic-spikes"
+			],
+      "level18": [
+        "double-edge",
+        "self-destruct",
+        "destiny-bond",
+        "crunch",
+        "acupressure"
+      ],
+      "tm": [
+        9,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        30,
+        34,
+        36,
+        42,
+        44,
+        67,
+        68,
+        74,
+        75,
+        88,
+        90,
+        94,
+        98
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/904.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/904.png"
+    }
+  },
+  {
+    "id": "enamorus",
+    "name": "Enamorus",
+    "number": 905,
+    "type": [
+      "fairy",
+      "flying"
+    ],
+    "size": "medium",
+    "sr": 14,
+    "minLevel": 15,
+    "eggGroup": [
+      "undiscovered"
+    ],
+    "gender": "1:0",
+    "description": "The Love-Hate Pokémon. When it flies to this land from across the sea, the bitter winter comes to an end. According to legend, this Pokémon's love gives rise to the budding of fresh life across Hisui.",
+    "ac": 16,
+    "hitDice": "d12",
+    "speed": [
+			{
+				"type": "flying",
+				"value": 50
+			}
+		],
+    "attributes": {
+      "str": 16,
+      "dex": 18,
+      "con": 15,
+      "int": 12,
+      "wis": 20,
+      "cha": 10
+    },
+    "hp": 230,
+    "skills": [
+			"athletics",
+			"acrobatics",
+			"nature"
+		],
+    "savingThrows": [
+			"str",
+			"dex",
+			"wis"
+		],
+    "senses": [
+			{
+				"type": "darkvision",
+				"value": 100
+			},
+			{
+				"type": "truesight",
+				"value": 100
+			}
+		],
+    "abilities": [
+      {
+        "id": "cute-charm",
+        "hidden": false
+      },
+      {
+        "id": "contrary",
+        "hidden": true
+      }
+    ],
+    "moves": {
+      "start": [
+        "tackle",
+        "astonish",
+        "fairy-wind",
+        "bite",
+        "torment",
+        "flatter",
+        "twister",
+        "draining-kiss",
+        "imprison",
+        "iron-defense",
+        "extrasensory",
+        "mystical-fire",
+        "crunch",
+        "dazzling-gleam"
+      ],
+			"level18": [
+				"uproar",
+				"superpower",
+				"healing-wish",
+				"moonblast",
+				"outrage",
+				"springtide-storm"
+			],
+      "tm": [
+        4,
+        11,
+        12,
+        15,
+        17,
+        18,
+        29,
+        36,
+        42,
+        44,
+        52,
+        68,
+        76,
+        77,
+        86,
+        88,
+        90
+      ]
+    },
+    "media": {
+      "main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/905.png",
+      "sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/905.png"
+    }
+  },
 	 {
       "id": "sprigatito",
       "name": "Sprigatito",
