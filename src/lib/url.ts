@@ -16,5 +16,6 @@ export const Url = {
 	reference: {
 		all: () => `${base}/reference`,
 		status: () => `${base}/reference/status-conditions`,
+		transformations: () => `${base}/reference/pokemon-transformations`,
 	},
 } as const

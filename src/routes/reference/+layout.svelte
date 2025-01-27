@@ -13,6 +13,7 @@
 		{#if isMainRefPage} <h1 class="title">Reference</h1> {:else} <p class="title">Reference</p> {/if}
 		<ul>
 			<li><a href="{Url.reference.status()}">Status Conditions</a></li>
+			<li><a href="{Url.reference.transformations()}">Pokemon Transformations</a></li>
 		</ul>
 	</nav>
 	<slot></slot>
