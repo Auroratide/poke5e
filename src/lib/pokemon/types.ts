@@ -72,7 +72,6 @@ export type EvolutionEffect = {
 export type PokeEvolution = {
 	stage: string,
 	maxStage: string,
-	description?: string,
 	from: string[],
 	to: {
 		id: string,

@@ -426,10 +426,6 @@ function createEvolutionDescription(name, evolution) {
 		}
 	}
 
-	if (result.stage < result.maxStage) {
-		result.description = `${name} can evolve into ${UNKNOWN()} at level ${UNKNOWN()} and above. When it evolves, its health increases by double its level, and it gains ${UNKNOWN()} points to add to its ability scores (max 20).`
-	}
-
 	return result
 }
 
