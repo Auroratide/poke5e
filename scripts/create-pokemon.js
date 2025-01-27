@@ -409,7 +409,7 @@ function createEvolutionDescription(name, evolution) {
 		if (currentNode.depth > result.maxStage)
 			result.maxStage = currentNode.depth
 
-		if (currentNode.value.species.name === name) {
+		if (currentNode.value.species.name === name || (name.includes("-") && name.startsWith(currentNode.value.species.name))) {
 			result.stage = currentNode.depth
 
 			if (currentNode.depth > 1) {
