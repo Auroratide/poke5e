@@ -559,6 +559,24 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
+		{
+      "id": "axe-kick",
+      "name": "Axe Kick",
+      "type": "fighting",
+      "power": [
+        "str",
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You leap into the air to slam your heel upon the target. Make a melee attack, doing 2d6 + MOVE fighting damage on a hit. On a miss, you take 1 damage.",
+				"On a successful hit, the target must succeed a CON save against your Move DC or become confused."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 5d8 at level 17."
+    },
     {
       "id": "baby-doll-eyes",
       "name": "Baby-Doll Eyes",
@@ -584,6 +602,22 @@
       "description": [
         "You sense incoming danger and are able to quickly create a barrier to avoid it.  When targeted by an attack, you may automatically avoid taking damage on the first instance of this reaction. If Baneful Bunker was successful in avoiding a melee attack, the attacker becomes poisoned.  On future instances of this move in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful."
       ]
+    },
+		{
+      "id": "barb-barrage",
+      "name": "Barb Barrage",
+      "type": "poison",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "self (15ft radius)",
+      "description": [
+        "You launch a countless toxic barbs in all directions. Each creature in range must make a DEX save against your Move DC, taking 1d6 + MOVE poison damage on a hit and becoming poisoned. If the target is already poisoned, double your MOVE modifier when adding damage."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 7d4 at level 17."
     },
     {
       "id": "barrage",
@@ -785,6 +819,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
       "optional": ["Instead of a natural roll of 19 or higher, the target must make a CON save against your MOVE DC. On failure, the target flinches."]
+    },
+		{
+      "id": "bitter-malice",
+      "name": "Bitter Malice",
+      "type": "ghost",
+      "power": [
+        "wis",
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "60ft",
+      "description": [
+        "You attack with spine-chilling resentment. Make a ranged attack roll, doing 1d10 + MOVE ghost damage on a hit. On a hit, the target must succeed a WIS save against your Move DC or have disadvantage on any attack it makes on its next turn."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
     {
       "id": "blast-burn",
@@ -1287,6 +1338,23 @@
         "You attempt to charm a creature into pulling its punches. When hit by an attack from a creature of the opposite gender, you may use a reaction to force it to make a CHA save against your Move DC. On a failure, the attack does not hit."
       ]
     },
+		{
+      "id": "ceaseless-edge",
+      "name": "Ceaseless Edge",
+      "type": "dark",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You slash your shell blade and splinter debris over the field. Make a melee attack against a creature, dealing 1d10 + MOVE dark damage on a hit.",
+				"On a successful hit, spikes cover the ground in a 10-foot square centered on the target, turning it into Difficult Terrain for 1 minute. When the spikes appear, each creature standing in the area except for the creature using this move must succeed on a DEX save against your Move DC or suffer 1d10 dark damage. A creature that enters the area or ends its turn there must also succeed or take the damage."
+      ],
+      "higherLevels": "The damage dice rolls for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
+    },
     {
       "id": "charge",
       "name": "Charge",
@@ -1367,6 +1435,22 @@
         "You wait for an opening, striking with speed when the moment is right. Ignoring any boosts to the AC of a target, make a melee attack, dealing 1d12 + MOVE normal damage on a hit."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
+    },
+		{
+      "id": "chloroblast",
+      "name": "Chloroblast",
+      "type": "grass",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "self (30ft cone)",
+      "description": [
+        "You launch your amassed chlorophyll in a 30ft cone in front of you. You take typeless damage equal to one half of your maximum HP. Creatures in the area must make a DEX save against your Move DC. On failure, a creature takes 3d8 + MOVE grass damage, or half on success."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17."
     },
     {
       "id": "circle-throw",
@@ -2039,6 +2123,23 @@
         "You burrow underground, disappearing from view before striking from underneath a target. When you activate this move, you use 10 feet of your movement to burrow underground (ignoring difficult terrain) and remain there until your next turn. During this time, you are immune to the damage and effects of any move. If you have no remaining movement or are grappled/restrained before activating this move, the move fails. On your next turn, you emerge from the ground and make a melee attack on a creature in range, with advantage, doing 2d8 + MOVE ground damage on a successful hit. If the target has Tremorsense, the attack is not rolled with advantage."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
+    },
+		{
+      "id": "dire-claw",
+      "name": "Dire Claw",
+      "type": "poison",
+      "power": [
+        "str",
+				"dex"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You lash out at your target with ruinous claws. Make a melee attack against a target, doing 2d6 + MOVE poison damage on a hit. On a hit, the creature must make a CON save against your Move DC. On failure, the target rolls a d6: on 1-2, the target is poisoned; on 3-4, the target is paralyzed; on 5-6, the target is put to sleep."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
     {
       "id": "disable",
@@ -2908,6 +3009,22 @@
         "You spew hot magma in a 15 foot cone. Any creature caught in the blast must make a DEX saving throw against your Move DC, taking 3d8 + MOVE fire damage on a failure, or half as much on a success. If you are at full health when activating this move, double your STAB bonus when dealing damage."
       ],
       "higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17."
+    },
+		{
+      "id": "esper-wing",
+      "name": "Esper Wing",
+      "type": "psychic",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "60ft",
+      "description": [
+        "You slash out with aura-enriched wings. Make a ranged attack, doing 1d12 + MOVE psychic damage on a hit. Esper Wing results in a critical hit on 19s and 20s. With each successful hit from this move, increase your movement speed by 5ft until you are incapacitated, are switched out, or the combat ends (Maximum of +30ft to movement speed)."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
     },
 		{
       "id": "eternabeam",
@@ -4404,6 +4521,22 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
     },
+		{
+      "id": "headlong-rush",
+      "name": "Headlong Rush",
+      "type": "ground",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You smash into a target with a full-body tackle, sacrificing your defenses. Make a melee attack on a creature, dealing 2d10 + MOVE ground damage on a hit. After activating this move, the target has advantage on any attack it makes against you before the beginning of your next turn."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 4d10 at level 10, and 7d8 at level 17."
+    },
     {
       "id": "heal-bell",
       "name": "Heal Bell",
@@ -5124,6 +5257,22 @@
         "You summon forth a burning hot flame that surrounds a creature. Make a ranged attack, dealing 1d10 + MOVE fire damage on a hit. On a hit, if the target is holding a berry, it is immediately burned to ash, becoming unusable."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
+    },
+		{
+      "id": "infernal-parade",
+      "name": "Infernal Parade",
+      "type": "ghost",
+      "power": [
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "50ft",
+      "description": [
+        "You launch a myriad of fireballs. Make a ranged attack, dealing 1d8 + MOVE ghost damage on a hit. If the target is affected by a status condition, double your MOVE modifier when adding damage. On a hit, the target must make a DEX save against your Move DC, becoming burned on failure."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 3d6 at level 10, and 3d10 at level 17."
     },
     {
       "id": "inferno",
@@ -6414,6 +6563,22 @@
       ],
       "higherLevels": "The healing dice roll for this move changes to 3d10 at level 5, 7d6 at level 10, and 8d8 at level 17."
     },
+		{
+      "id": "mountain-gale",
+      "name": "Mountain Gale",
+      "type": "ice",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "You hurl giant chunks of ice at the target. Make a ranged attack, dealing 4d4 + MOVE ice damage on a hit. On a hit, the target must succeed a CON save against your Move DC or flinch."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
+    },
     {
       "id": "mud-bomb",
       "name": "Mud Bomb",
@@ -7682,6 +7847,23 @@
         "You employ your psychic power to transfer a status condition to someone else. Choose a willing ally (or yourself) and a creature in range. Force the target to make a WIS save against your Move DC. on a failure, a status affecting the ally (or you) is transferred to the target instead."
       ]
     },
+		{
+      "id": "psyshield-bash",
+      "name": "Psyshield Bash",
+      "type": "psychic",
+      "power": [
+        "str",
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You cloak yourself in psychic energy before striking your target. Make a melee attack on a creature, doing 1d12 + MOVE psychic damage on a hit. Your AC is increased by 1 until the end of your next turn."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
+    },
     {
       "id": "psyshock",
       "name": "Psyshock",
@@ -7902,6 +8084,24 @@
       "description": [
         "You scatter a cloud of irritating powder, drawing attacks to yourself. Any creature in a 15 foot cone must make a WIS saving throw against your Move DC. On a failure, the creature(s) can only use damaging moves that target you for the duration. Any creature affected can repeat the save at the end of each of its turns to shake off the effect."
       ]
+    },
+		{
+      "id": "raging-fury",
+      "name": "Raging Fury",
+      "type": "fire",
+      "power": [
+        "str",
+				"dex"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "3 rounds, concentration",
+      "range": "15ft",
+      "description": [
+        "You go into a rampage, spewing flames about for three rounds. For up to three rounds while concentrating, make a ranged attack against a creature, dealing 2d10 + MOVE fire damage on a hit. Concentration ends at the end of the third round after activing this move, when you miss with this move, or fail to use this move; you cannot lose concentration on Raging Fury as a result of taking damage, and you cannot willingly drop concentration. While concentrating, you may only attack with Raging Fury.",
+				"When concentration ends, you become confused."
+      ],
+      "higherLevels": "The dice used for this move changes to a 3d8 at level 5, a 4d10 at level 10, and a 7d8 at level 17."
     },
     {
       "id": "rain-dance",
@@ -8905,6 +9105,19 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17."
     },
+		{
+      "id": "shelter",
+      "name": "Shelter",
+      "type": "steel",
+      "power": "none",
+      "time": "1 reaction",
+      "pp": 5,
+      "duration": "1 round",
+      "range": "self",
+      "description": [
+        "As a reaction to being hit by an attack, you make your skin as hard as an iron shield. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack."
+      ]
+    },
     {
       "id": "shift-gear",
       "name": "Shift Gear",
@@ -9735,6 +9948,23 @@
         "You shine a bright light on a creature in range that follows them around the battlefield. The target must make a DEX save against your Move DC. On a fail, attacks against that creature have advantage for the duration."
       ]
     },
+		{
+      "id": "springtide-storm",
+      "name": "Springtide Storm",
+      "type": "fairy",
+      "power": [
+				"cha"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "1 minute, concentration",
+      "range": "100ft",
+      "description": [
+        "You create a storm brimming with love an hate with the size of a 40-foot-cube centered on a point in range. Each enemy creature in the area makes a CHA saving throw against your Move DC. On a failed save, it takes 4d4 + MOVE fairy damage and has disadvantage on all attack rolls it makes until the end of its next turn. On a successful save, it takes half the damage and does not get disadvantage.",
+				"A creature also makes that save if it enters the area or ends it turn there. A creature makes that save only once per turn."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
+    },
     {
       "id": "stealth-rock",
       "name": "Stealth Rock",
@@ -9862,6 +10092,23 @@
         "Driven by frustration, you aggressively attack.  Make a melee attack, dealing 1d12 + MOVE ground damage on a hit.  If you last attack missed, double the dice roll for damage."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
+    },
+		{
+      "id": "stone-axe",
+      "name": "Stone Axe",
+      "type": "rock",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You swing your stone axes at the target. Make a melee attack against a creature, dealing 1d10 + MOVE rock damage on a hit.",
+				"On a successful hit, spikes cover the ground in a 10-foot square centered on the target, turning it into Difficult Terrain for 1 minute. When the spikes appear, each creature standing in the area except for the creature using this move must succeed on a DEX save against your Move DC or suffer 1d10 rock damage. A creature that enters the area or ends its turn there must also succeed or take the damage."
+      ],
+      "higherLevels": "The damage dice rolls for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
     {
       "id": "stone-edge",
@@ -10942,6 +11189,23 @@
         "You attempt to scare the spirit right out of a creature in range. Force a creature in range to make a CHA save against your Move DC. On a failure, its type is changed to Ghost through their next three turns in battle."
       ]
     },
+		{
+      "id": "triple-arrows",
+      "name": "Triple Arrows",
+      "type": "fighting",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "80ft",
+      "description": [
+        "You fire three arrows at the target. Make three ranged attacks against the same target in range, each dealing 1d4 + MOVE fighting damage on a hit.",
+				"The first attack critical hits on nat 19s and 20s. The second attack lowers the target's AC by 1 if it hits until the end of combat (stacks up to 5 times). The third attack flinches the target on a hit."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d8 at level 10, and 1d10 at level 17."
+    },
     {
       "id": "triple-kick",
       "name": "Triple Kick",
@@ -11141,6 +11405,20 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17."
     },
+		{
+      "id": "victory-dance",
+      "name": "Victory Dance",
+      "type": "fighting",
+      "power": "none",
+      "time": "1 action",
+      "pp": 10,
+      "duration": "1 minute, concentration",
+      "range": "self",
+      "description": [
+        "You perform an intense dance to usher victory. For the duration, add +1 to your AC, attack rolls, and saving throws."
+      ],
+      "higherLevels": "Add +2 to your AC, attack rolls, and saving throws at level 10 and above"
+    },
     {
       "id": "vine-whip",
       "name": "Vine Whip",
@@ -11334,6 +11612,22 @@
         "You create an intense waterfall that crashes down on creatures in a 10 foot radius, centered on a point within range. Creatures in the area must make a STR save against your Move DC or take 2d6 + MOVE water damage and fall prone on a fail, or half as much on a save."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
+		{
+      "id": "wave-crash",
+      "name": "Wave Crash",
+      "type": "water",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You shroud yourself in water and slam into the target with your full body. Roll a melee attack roll. On a hit, you deal 3d8 + MOVE water damage, taking half of the total damage (rounded down) in typeless recoil."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 3d10 at level 5, 5d8 at level 10, and 7d8 at level 17."
     },
     {
       "id": "weather-ball",
