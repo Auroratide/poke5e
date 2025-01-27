@@ -11,22 +11,28 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.0.5",
+		description: [
+			"Added Hisuian Pokemon and moves they learn on level up",
+			"Reduce size of pokemon download file by 25%",
+		],
+	}, {
 		name: "v1.0.4",
 		description: [
 			"Added Pokemon: Zacian, Zamazenta, Eternatus, Urshifu line, Zarude, Regieleki, Regidrago, Glastrier, Spectrier, Calyrex",
-			"Added Moves: Behemoth Bash, Behemoth Blade, Dragon Energy, Dynamax Cannon, Eternabeam, Jungle Healing, Surging Strikes, Thunder Cage, Wicked Blow"
+			"Added Moves: Behemoth Bash, Behemoth Blade, Dragon Energy, Dynamax Cannon, Eternabeam, Jungle Healing, Surging Strikes, Thunder Cage, Wicked Blow",
 		],
 	}, {
 		name: "v1.0.3",
 		description: [
 			"Added Pokemon: Frosmoth line, Stonjourner, Eiscue, Indeedee, Morpeko, Copperajah line, Dracozolt, Arctozolt, Dracovish, Arctovish, Dragapult line, Archaludon line",
-			"Added Moves: Aura Wheel, Bolt Beak, Breaking Swipe, Dragon Darts, Electro Shot, Fishious Rend, Snowscape"
+			"Added Moves: Aura Wheel, Bolt Beak, Breaking Swipe, Dragon Darts, Electro Shot, Fishious Rend, Snowscape",
 		],
 	}, {
 		name: "v1.0.2",
 		description: [
 			"Added Pokemon: Polteageist line, Hatterene line, Grimmsnarl line",
-			"Added Moves: Tea Time, Life Dew, Magic Powder, False Surrender, Spirit Break"
+			"Added Moves: Tea Time, Life Dew, Magic Powder, False Surrender, Spirit Break",
 		],
 	}, {
 		name: "v1.0.1",
