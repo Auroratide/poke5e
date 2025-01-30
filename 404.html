@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="An online reference for pokemon dungeons and dragons homebrew!" />
+
+		<meta name="theme-color" content="#ffca04" />
+		<link rel="apple-touch-icon" sizes="192x192" href="/icons/192.png" />
+		<link rel="shortcut icon" href="/icons/032.png" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+
+		<link rel="stylesheet" href="/styles/normalize.css" />
+		<link rel="stylesheet" href="/styles/global.css" />
+		<link rel="manifest" href="/poke5e.webmanifest" />
+
+		
+		<link rel="modulepreload" href="/_app/immutable/entry/start.CFTG4t7j.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/entry.7QzegmFU.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/scheduler.C3LxWxeP.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.LMGQo2HK.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/paths.QkREKld0.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/control.CYgJF_JY.js">
+		<link rel="modulepreload" href="/_app/immutable/entry/app.Cu1JPOkm.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/preload-helper.D7HrI6pR.js">
+		<link rel="modulepreload" href="/_app/immutable/chunks/index.D91aCrzX.js">
+	</head>
+	<body>
+		<div>
+			<script>
+				{
+					__sveltekit_1l2yjxa = {
+						base: ""
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/_app/immutable/entry/start.CFTG4t7j.js"),
+						import("/_app/immutable/entry/app.Cu1JPOkm.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+
+					if ('serviceWorker' in navigator) {
+						addEventListener('load', function () {
+							navigator.serviceWorker.register('/service-worker.js');
+						});
+					}
+				}
+			</script>
+		</div>
+	</body>
+</html>
