@@ -66,6 +66,15 @@
 		padding-inline: 0;
 	}
 
+	article :global(section > p) {
+		line-height: 1.4;
+	}
+
+	article :global(section > :is(ul, ol) > li) {
+		margin-block-end: 0.25em;
+		line-height: 1.25;
+	}
+
 	article :global(section h2) {
 		font-size: 1.125em;
 		font-weight: bold;
@@ -73,7 +82,7 @@
 		z-index: 2;
 		color: var(--skin-bg-text);
 		padding: 0.25em 0;
-		margin-block-end: 0.5em;
+		margin-block: 1.5em 0.5em;
 	} article :global(section h2::before) {
 		content: "";
 		display: block;
