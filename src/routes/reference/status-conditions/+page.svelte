@@ -1,5 +1,6 @@
 <script>
 	import Card from "$lib/design/Card.svelte"
+	import IconedCardHeading from "$lib/design/IconedCardHeading.svelte"
 	import Title from "$lib/design/Title.svelte"
 	import { NonVolatileStatus, VolatileStatus } from "$lib/pokemon/status"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
@@ -18,10 +19,10 @@
 		<p>A Pokémon can only be affected by one non-volatile status at a time. If a Pokémon is already affected by a non-volatile status, it cannot be affected by another until cured of the original status.</p>
 		{#each nonVolatileList as status}
 			<div class="status-block">
-				<div class="row">
-					<h3 class="no-margin">{status.name}</h3>
-					<span aria-hidden="true"><StatusTag value={status.id} /></span>
-				</div>
+				<IconedCardHeading>
+					{status.name}
+					<StatusTag slot="icon" value={status.id} />
+				</IconedCardHeading>
 				<p>{status.effect}</p>
 				{#if status.immunity}
 					<p>{status.immunity}</p>
@@ -45,16 +46,6 @@
 </Card>
 
 <style>
-	.row {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		justify-content: space-between;
-		margin-block-end: 0.5em;
-	}
-
-	h3.no-margin { margin: 0; }
-
 	.status-block {
 		margin-block-end: 2em;
 	}
