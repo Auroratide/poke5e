@@ -15,7 +15,10 @@ export const Url = {
 	},
 	reference: {
 		all: () => `${base}/reference`,
+		specializations: () => `${base}/reference/specializations`,
 		status: () => `${base}/reference/status-conditions`,
+		trainerClass: () => `${base}/reference/trainer-class`,
+		trainerPaths: () => `${base}/reference/trainer-paths`,
 		transformations: () => `${base}/reference/pokemon-transformations`,
 	},
 } as const
