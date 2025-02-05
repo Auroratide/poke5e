@@ -25,6 +25,7 @@
 		padding: 0.25em 0.75em;
 		cursor: pointer;
 		text-decoration: none;
+		line-height: 1.2;
 	}
 
 	.button:hover::before, .button:focus::before {

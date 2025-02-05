@@ -44,6 +44,7 @@
 		border-radius: 1em;
 		text-transform: capitalize;
 		filter: var(--elev-stratus-filter);
+		display: inline-block;
 		overflow: hidden;
 	}
 
