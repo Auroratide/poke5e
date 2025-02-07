@@ -16,6 +16,7 @@
 		trainerListFilterValue,
 		trainerListSorter,
 	} from "$lib/trainers/store"
+	import { filterValue as referenceFilter } from "./reference/store"
 	import ErrorDialog from "$lib/design/errors/ErrorDialog.svelte"
 	import { currentVersion } from "./version-history/versions"
 	import MigrationDialog from "$lib/trainers/migration/MigrationDialog.svelte"
@@ -30,19 +31,23 @@
 	export let data: LayoutData
 	$: activeSection = data.activeSection
 
-	export let resetStores = (filter: Writable<string>, sorter: Writable<() => number>) => () => {
-		filter.set("")
-		sorter.set(() => 0)
+	export let resetStores = (filter?: Writable<string>, sorter?: Writable<() => number>) => () => {
+		filter?.set("")
+		sorter?.set(() => 0)
 	}
 
 	afterNavigate((navigation) => {
-		if (navigation.from.url.pathname.split("/")[1] !== navigation.to.url.pathname.split("/")[1]) {
+		if (navigation.from?.url.pathname.split("/")[1] !== navigation.to?.url.pathname.split("/")[1]) {
 			resetStores(pokemonFilter, pokemonSorter)()
 			resetStores(movesFilter, movesSorter)()
 			resetStores(tmsFilter, tmsSorter)()
 			resetStores(trainerListFilterValue, trainerListSorter)()
+			resetStores(referenceFilter, undefined)()
 		}
-		Analytics.createPageviewEvent(navigation.to.url.pathname)
+
+		if (navigation.to) {
+			Analytics.createPageviewEvent(navigation.to.url.pathname)
+		}
 	})
 </script>
 
