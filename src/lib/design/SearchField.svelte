@@ -9,11 +9,11 @@
 </script>
 
 <div class="skew-container">
-	<div class="search-field">
+	<search class="search-field">
 		<VisuallyHidden><label for={id}>{label}</label></VisuallyHidden>
 		<input {id} type="search" placeholder="Search..." bind:value />
 		<span class="matched"><span class="text">{matched} / {max}</span></span>
-	</div>
+	</search>
 </div>
 
 <style>
