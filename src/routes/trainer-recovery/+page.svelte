@@ -3,6 +3,7 @@
 	import Button from "$lib/design/Button.svelte"
 	import Title from "$lib/design/Title.svelte"
 	import { seenTrainerRecovery } from "$lib/trainers/migration/store"
+	import StaticPage from "$lib/design/StaticPage.svelte"
 
 	onMount(() => {
 		seenTrainerRecovery.set(true)
@@ -10,7 +11,7 @@
 </script>
 
 <Title value="Trainer Recovery" />
-<main>
+<StaticPage>
 	<section class="title-section">
 		<h1>Trainer Recovery</h1>
 	</section>
@@ -21,17 +22,9 @@
 		<p>If you cannot find your trainers at the above link or otherwise run into any other problems, let me know by creating an issue and I'll help as much as I can:</p>
 		<p class="has-button"><Button href="https://github.com/Auroratide/poke5e/issues/new">Create Issue</Button></p>
 	</section>
-</main>
+</StaticPage>
 
 <style>
-	main {
-		max-inline-size: calc(0.5 * var(--container-width));
-		margin: auto;
-		overflow: auto;
-		block-size: 100%;
-		padding: 2em 1em;
-	}
-
 	section {
 		margin-block-end: 3em;
 	}

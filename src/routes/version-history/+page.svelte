@@ -2,10 +2,11 @@
 	import Title from "$lib/design/Title.svelte"
 	import Card from "$lib/design/Card.svelte"
 	import { versionHistory, currentVersion, getVersionsForGroup } from "./versions"
+	import StaticPage from "$lib/design/StaticPage.svelte"
 </script>
 
 <Title value="Version History" />
-<main>
+<StaticPage>
 	<section class="title-section">
 		<h1>Version History</h1>
 		<p>{currentVersion}</p>
@@ -27,17 +28,9 @@
 			</Card>
 		{/each}
 	</section>
-</main>
+</StaticPage>
 
 <style>
-	main {
-		max-inline-size: calc(0.5 * var(--container-width));
-		margin: auto;
-		overflow: auto;
-		block-size: 100%;
-		padding: 2em 1em;
-	}
-
 	.title-section {
 		text-align: center;
 		margin-block-end: 3em;

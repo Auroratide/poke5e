@@ -1,9 +1,10 @@
 <script lang="ts">
+	import StaticPage from "$lib/design/StaticPage.svelte"
 	import Title from "$lib/design/Title.svelte"
 </script>
 
 <Title value="Feedback" />
-<main>
+<StaticPage>
 	<section class="title-section">
 		<h1>Got Feedback?</h1>
 		<p>Help make Poke 5e better!</p>
@@ -13,17 +14,9 @@
 		<p><a class="button" href="https://github.com/Auroratide/poke5e/issues/new">Create Issue</a></p>
 		<p><strong>Note:</strong> I currently use <a href="https://github.com/">Github</a> to track issues. You will need a Github account to create an issue.</p>
 	</section>
-</main>
+</StaticPage>
 
 <style>
-	main {
-		max-inline-size: calc(0.5 * var(--container-width));
-		margin: auto;
-		overflow: auto;
-		block-size: 100%;
-		padding: 2em 1em;
-	}
-
 	section {
 		text-align: center;
 		margin-block-end: 3em;

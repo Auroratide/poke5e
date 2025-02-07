@@ -5,10 +5,11 @@
 	import Title from "$lib/design/Title.svelte"
 	import IdBadge from "$lib/design/icon/IdBadge.svelte"
 	import { Url } from "$lib/url"
+	import StaticPage from "$lib/design/StaticPage.svelte"
 </script>
 
 <Title />
-<main>
+<StaticPage>
 	<section class="title-section">
 		<h1>Pokemon 5th Edition</h1>
 		<p>An online reference for pokemon dungeons and dragons homebrew!</p>
@@ -38,17 +39,9 @@
 	<section class="footer-section">
 		<p>Homebrew by <a href="https://twitter.com/JOEtheDM">@JOEtheDM</a>. Website by <a href="https://auroratide.com">Auroratide</a>. Source code on <a href="https://github.com/Auroratide/poke5e">Github</a>.</p>
 	</section>
-</main>
+</StaticPage>
 
 <style>
-	main {
-		max-width: calc(0.5 * var(--container-width));
-		margin: auto;
-		overflow: auto;
-		height: 100%;
-		padding: 2em 1em;
-	}
-
 	section {
 		text-align: center;
 		margin-bottom: 3em;
