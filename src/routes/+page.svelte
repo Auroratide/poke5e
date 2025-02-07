@@ -2,9 +2,9 @@
 	import Pokeball from "$lib/design/icon/Pokeball.svelte"
 	import Hit from "$lib/design/icon/Hit.svelte"
 	import Disc from "$lib/design/icon/Disc.svelte"
-	import { base } from "$app/paths"
 	import Title from "$lib/design/Title.svelte"
 	import IdBadge from "$lib/design/icon/IdBadge.svelte"
+	import { Url } from "$lib/url"
 </script>
 
 <Title />
@@ -15,20 +15,24 @@
 	</section>
 	<ul>
 		<li class="theme-red">
-			<a href="{base}/pokemon">Pokemon</a>
+			<a href="{Url.pokemon()}">Pokemon</a>
 			<span class="icon"><Pokeball /></span>
 		</li>
 		<li class="theme-blue">
-			<a href="{base}/moves">Moves</a>
+			<a href="{Url.moves()}">Moves</a>
 			<span class="icon"><Hit /></span>
 		</li>
 		<li class="theme-purple">
-			<a href="{base}/tms">TMs</a>
+			<a href="{Url.tms()}">TMs</a>
 			<span class="icon"><Disc /></span>
 		</li>
 		<li class="theme-green">
-			<a href="{base}/trainers">Trainers</a>
+			<a href="{Url.trainers()}">Trainers</a>
 			<span class="icon"><IdBadge /></span>
+		</li>
+		<li class="theme-navy">
+			<a href="{Url.reference.all()}">Reference</a>
+			<span class="icon"><Disc /></span>
 		</li>
 	</ul>
 	<section class="footer-section">

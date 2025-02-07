@@ -65,15 +65,15 @@
 				color: "purple",
 				icon: Disc,
 			}, {
-				id: "reference",
-				name: "Reference",
-				color: "navy",
-				icon: Disc,
-			}, {
 				id: "trainers",
 				name: "Trainers",
 				color: "green",
 				icon: IdBadge,
+			}, {
+				id: "reference",
+				name: "Reference",
+				color: "navy",
+				icon: Disc,
 			} ]} />
 		</Container>
 	</header>
