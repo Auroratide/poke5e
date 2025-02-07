@@ -21,6 +21,11 @@
 	import MigrationDialog from "$lib/trainers/migration/MigrationDialog.svelte"
 	import { browser } from "$app/environment"
 	import { MY_ORIGIN } from "$lib/trainers/migration/origins"
+	import MainNavigation from "$lib/design/MainNavigation.svelte"
+	import Pokeball from "$lib/design/icon/Pokeball.svelte"
+	import Hit from "$lib/design/icon/Hit.svelte"
+	import Disc from "$lib/design/icon/Disc.svelte"
+	import IdBadge from "$lib/design/icon/IdBadge.svelte"
 
 	export let data: LayoutData
 	$: activeSection = data.activeSection
@@ -31,6 +36,12 @@
 	}
 
 	afterNavigate((navigation) => {
+		if (navigation.from.url.pathname.split("/")[1] !== navigation.to.url.pathname.split("/")[1]) {
+			resetStores(pokemonFilter, pokemonSorter)()
+			resetStores(movesFilter, movesSorter)()
+			resetStores(tmsFilter, tmsSorter)()
+			resetStores(trainerListFilterValue, trainerListSorter)()
+		}
 		Analytics.createPageviewEvent(navigation.to.url.pathname)
 	})
 </script>
@@ -38,22 +49,32 @@
 <div class="page">
 	<header>
 		<Container>
-			<nav aria-label="Site Navigation">
-				<ul>
-					<li class:active={activeSection === "pokemon"} class="theme-red">
-						<a href="{base}/pokemon" on:click={resetStores(pokemonFilter, pokemonSorter)}>Pokemon</a>
-					</li>
-					<li class:active={activeSection === "moves"} class="theme-blue">
-						<a href="{base}/moves" on:click={resetStores(movesFilter, movesSorter)}>Moves</a>
-					</li>
-					<li class:active={activeSection === "tms"} class="theme-purple">
-						<a href="{base}/tms" on:click={resetStores(tmsFilter, tmsSorter)}>TMs</a>
-					</li>
-					<li class:active={activeSection === "trainers"} class="theme-green">
-						<a href="{base}/trainers" on:click={resetStores(trainerListFilterValue, trainerListSorter)}>Trainers</a>
-					</li>
-				</ul>
-			</nav>
+			<MainNavigation active={activeSection} items={[ {
+				id: "pokemon",
+				name: "Pokémon",
+				color: "red",
+				icon: Pokeball,
+			}, {
+				id: "moves",
+				name: "Moves",
+				color: "blue",
+				icon: Hit,
+			}, {
+				id: "tms",
+				name: "TMs",
+				color: "purple",
+				icon: Disc,
+			}, {
+				id: "reference",
+				name: "Reference",
+				color: "navy",
+				icon: Disc,
+			}, {
+				id: "trainers",
+				name: "Trainers",
+				color: "green",
+				icon: IdBadge,
+			} ]} />
 		</Container>
 	</header>
 	<div class="content">
@@ -80,52 +101,6 @@
 		flex-direction: column;
 		height: 100vh;
 		overflow: hidden;
-	}
-
-	nav {
-		text-align: right;
-		padding: 0.25em 0;
-	}
-
-	nav ul {
-		position: relative;
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		display: inline-flex;
-		padding: 0 2em;
-	}
-
-	nav ul::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		right: -1000rem;
-		left: 0;
-		bottom: 0;
-		background: var(--skin-bg);
-		z-index: 1;
-		transform: skewX(var(--skew-angle));
-	}
-
-	nav li {
-		position: relative;
-		z-index: 2;
-	}
-
-	nav a {
-		color: var(--skin-bg-softtext);
-		text-decoration: none;
-		display: inline-block;
-		padding: 0.25em 1em;
-
-		&:hover {
-				color: var(--theme-light);
-		}
-	}
-
-	nav .active a {
-		color: var(--skin-bg-text);
 	}
 
 	.content {

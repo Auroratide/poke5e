@@ -109,6 +109,11 @@
 	--skin-status-paralysis: oklch(87% 0.179 92);
 	--skin-status-asleep: oklch(80% 0.105 247);
 	--skin-status-text: oklch(0% 0 0);
+
+	--red-main: hsl(355 72% 53%);
+    --red-dark: hsl(355 66% 45%);
+    --red-text: hsl(355 66% 45%);
+    --red-light: hsl(355 90% 67%);
 }
 
 .theme-blue {
@@ -119,10 +124,10 @@
 }
 
 .theme-red {
-    --theme-main: hsl(355, 72%, 53%);
-    --theme-dark: hsl(355, 66%, 45%);
-    --theme-text: hsl(355, 66%, 45%);
-    --theme-light: hsl(355, 90%, 67%);
+    --theme-main: var(--red-main);
+    --theme-dark: var(--red-dark);
+    --theme-text: var(--red-text);
+    --theme-light: var(--red-light);
 }
 
 .theme-purple {

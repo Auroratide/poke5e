@@ -1,7 +1,7 @@
 import { base } from "$app/paths"
 
 export const Url = {
-	home: () => `${base}`,
+	home: () => `${base}/`,
 	pokemon: (id?: string) => `${base}/pokemon${id ? `/${id}` : ""}`,
 	moves: (id?: string) => `${base}/moves${id ? `/${id}` : ""}`,
 	tms: (id?: string) => `${base}/tms${id ? `/${id}` : ""}`,
