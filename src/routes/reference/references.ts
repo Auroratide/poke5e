@@ -9,11 +9,11 @@ export type ReferenceInfo = {
 export const References = [ {
 	name: "Pokémon Leveling",
 	url: Url.reference.pokemonLeveling(),
-	keywords: ["class", "table", "experience", "evolution", "evolve", "moves", "peak power"],
+	keywords: ["pokemon leveling", "class", "table", "experience", "evolution", "evolve", "moves", "peak power"],
 }, {
 	name: "Pokémon Transformations",
 	url: Url.reference.transformations(),
-	keywords: ["mega evolution", "z-move", "z move", "dynamax", "gigantamax", "terastallization", "terastallize", "stellar", "tera"],
+	keywords: ["pokemon transformations", "mega evolution", "z-move", "z move", "dynamax", "gigantamax", "terastallization", "terastallize", "stellar", "tera"],
 }, {
 	name: "Specializations",
 	url: Url.reference.specializations(),

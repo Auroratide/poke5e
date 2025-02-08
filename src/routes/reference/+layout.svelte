@@ -7,21 +7,31 @@
 	import { search, References } from "./references"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 
-	$: isMainRefPage = $page.url.pathname === "/reference"
+	$: pathname = $page.url.pathname
+	$: isMainRefPage = pathname === "/reference"
+
+	// This manual DOM update is here because, for reasons I can't ascertain, Svelte is
+	// not updating anything inside the side slot reactively. So I'll do it myself.
+	let ul: HTMLUListElement
+	$: {
+		ul?.querySelectorAll("a").forEach((a) => {
+			a.classList.toggle("active", pathname.startsWith(a.dataset.pathname))
+		})
+	}
 
 	$: filtered = search($filterValue)
 </script>
 
 <Page theme="navy">
 	<PencilNotes slot="icon" />
-	<nav slot="side" aria-label="Reference">
+	<nav slot="side" aria-label="Reference" data-pathname="{pathname}">
 		<SearchField id="reference-search" label="Search" bind:value={$filterValue} matched={filtered.length} max={References.length} />
 		<VisuallyHidden>
 			{#if isMainRefPage} <h1 class="title">Reference</h1> {:else} <p class="title">Reference</p> {/if}
 		</VisuallyHidden>
-		<ul>
+		<ul bind:this={ul}>
 			{#each filtered as reference (reference.name)}
-				<li><a href="{reference.url}">{reference.name}</a></li>
+				<li><a href="{reference.url}" data-pathname="{reference.url}">{reference.name}</a></li>
 			{/each}
 		</ul>
 	</nav>
@@ -59,7 +69,12 @@
 		border-radius: 1em;
 		padding: 0.125em 1em;
 		box-shadow: var(--elev-cumulus);
-	} a:hover, a:focus {
+	} a:hover:not(.active), a:focus:not(.active) {
+		background: var(--skin-content);
+		color: var(--skin-content-text);
+	} a:global(.active) {
+		font-weight: bold;
+	} a:global(.active):hover, a:global(.active):focus {
 		background: var(--skin-bg-dark);
 	}
 </style>
