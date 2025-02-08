@@ -11,6 +11,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.1.0",
+		description: [
+			"New References section, for Pokemon 5e rules",
+			"Overhauled top menu bar",
+			"Trainer pokemon can specify non-volatile conditions that afflict them",
+		],
+	}, {
 		name: "v1.0.5",
 		description: [
 			"Added Hisuian Pokemon and moves they learn on level up",
@@ -50,6 +57,9 @@ export const versionHistory: VersionHistory = {
 		],
 	} ],
 	groups: [ {
+		name: "v1.1",
+		description: "Adds reference material for general rules of Pokemon 5e.",
+	}, {
 		name: "v1.0",
 		description: "Initial version of the app. Includes reference material for pokemon, moves, and TMs, as well as the ability to manage trainers and pokemon to a basic level.",
 	} ],
