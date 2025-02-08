@@ -3,7 +3,7 @@
 	import { base } from "$app/paths"
 	import type { ThemeColor } from "./Theme.svelte"
 	import Container from "./Container.svelte"
-	import Pokeball from "./icon/Pokeball.svelte"
+	import MenuIcon from "./icon/Menu.svelte"
 	import { Url } from "$lib/url"
 
 	export let items: {
@@ -26,7 +26,7 @@
 	<p class="site-title"><a href="{Url.home()}">Pokémon 5e</a></p>
 	<div class="nav-bar">
 		<button on:click={openDialog} class="menu-button row space-small lg:hide">
-			<span class="icon"><Pokeball /></span>
+			<span class="icon no-rotate"><MenuIcon /></span>
 			<span>Menu</span>
 		</button>
 		<ul class="no-list row space-large nav-list lg:show" style:gap="1.375em">
@@ -127,6 +127,8 @@
 		inline-size: 1em;
 		block-size: 1em;
 		transform: rotate(var(--skew-angle));
+	} .icon.no-rotate {
+		transform: rotate(0deg);
 	}
 
 	.site-title {
