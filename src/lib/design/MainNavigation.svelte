@@ -195,7 +195,6 @@
 		transform: rotate(var(--skew-angle));
 		box-shadow: var(--elev-cumulus);
 	} a:hover .bubble, a:focus .bubble {
-		--skin-local-stroke: var(--skin-bg-text);
 		background: var(--skin-bg);
 	} .bubble :global(svg) {
 		inline-size: 100%;
