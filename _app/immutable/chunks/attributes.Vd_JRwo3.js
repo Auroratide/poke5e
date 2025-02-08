@@ -1,0 +1,1 @@
+const t=[{abbr:"str",name:"strength"},{abbr:"dex",name:"dexterity"},{abbr:"con",name:"constitution"},{abbr:"int",name:"intelligence"},{abbr:"wis",name:"wisdom"},{abbr:"cha",name:"charisma"}],e=a=>Math.floor(a/2)-5;export{t as a,e as m};
