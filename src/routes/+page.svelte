@@ -4,6 +4,7 @@
 	import Disc from "$lib/design/icon/Disc.svelte"
 	import Title from "$lib/design/Title.svelte"
 	import IdBadge from "$lib/design/icon/IdBadge.svelte"
+	import PencilNotes from "$lib/design/icon/PencilNotes.svelte"
 	import { Url } from "$lib/url"
 	import StaticPage from "$lib/design/StaticPage.svelte"
 </script>
@@ -33,7 +34,7 @@
 		</li>
 		<li class="theme-navy">
 			<a href="{Url.reference.all()}">Reference</a>
-			<span class="icon"><Disc /></span>
+			<span class="icon"><PencilNotes /></span>
 		</li>
 	</ul>
 	<section class="footer-section">

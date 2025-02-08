@@ -27,6 +27,7 @@
 	import Hit from "$lib/design/icon/Hit.svelte"
 	import Disc from "$lib/design/icon/Disc.svelte"
 	import IdBadge from "$lib/design/icon/IdBadge.svelte"
+	import PencilNotes from "$lib/design/icon/PencilNotes.svelte"
 
 	export let data: LayoutData
 	$: activeSection = data.activeSection
@@ -78,7 +79,7 @@
 				id: "reference",
 				name: "Reference",
 				color: "navy",
-				icon: Disc,
+				icon: PencilNotes,
 			} ]} />
 		</Container>
 	</header>

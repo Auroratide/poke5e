@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Page from "$lib/design/Page.svelte"
-	import Disc from "$lib/design/icon/Disc.svelte"
+	import PencilNotes from "$lib/design/icon/PencilNotes.svelte"
 	import { page } from "$app/stores"
 	import SearchField from "$lib/design/SearchField.svelte"
 	import { filterValue } from "./store"
@@ -13,7 +13,7 @@
 </script>
 
 <Page theme="navy">
-	<Disc slot="icon" />
+	<PencilNotes slot="icon" />
 	<nav slot="side" aria-label="Reference">
 		<SearchField id="reference-search" label="Search" bind:value={$filterValue} matched={filtered.length} max={References.length} />
 		<VisuallyHidden>
