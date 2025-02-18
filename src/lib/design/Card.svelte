@@ -1,9 +1,19 @@
 <script lang="ts">
+	import { afterNavigate } from "$app/navigation"
+
 	export let title: string
 	export let level: 1 | 2 | 3 | 4 | 5 | 6 = 1
 	export let inline = false
 
 	$: leveltag = `h${level}`
+
+	let scrollElem: HTMLElement
+
+	afterNavigate(() => {
+		if (scrollElem != null) {
+			scrollElem.scrollTop = 0
+		}
+	})
 </script>
 
 <div class="container" class:inline>
@@ -12,7 +22,7 @@
 			<svelte:element this={leveltag}>{title}</svelte:element>
 			<slot name="header-extra"></slot>
 		</header>
-		<div class="scrollable">
+		<div bind:this={scrollElem} class="scrollable">
 			<slot></slot>
 		</div>
 	</article>
