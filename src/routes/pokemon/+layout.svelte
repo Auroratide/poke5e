@@ -1,24 +1,23 @@
-<!-- Cannot use named slots with normal layouts -->
-<!-- https://github.com/sveltejs/kit/issues/627 -->
-
 <script lang="ts">
+	import { page } from "$app/stores"
 	import Page from "$lib/design/Page.svelte"
 	import PokemonList from "$lib/creatures/PokemonList.svelte"
 	import Pokeball from "$lib/design/icon/Pokeball.svelte"
 	import Loader from "$lib/design/Loader.svelte"
 	import { pokemon } from "$lib/creatures/store"
+
+	$: ssrPokemon = $page.data.pokemonList
+	$: pokemonToRender = ssrPokemon ?? $pokemon
 </script>
 
 <Page theme="red">
 	<Pokeball slot="icon" />
 	<nav slot="side" class="table" aria-label="Pokemon List">
-		<slot name="list">
-			{#if $pokemon !== undefined}
-					<PokemonList pokemons={$pokemon} />
-			{:else}
-					<Loader />
-			{/if}
-		</slot>
+		{#if pokemonToRender !== undefined}
+			<PokemonList pokemons={pokemonToRender} />
+		{:else}
+			<Loader />
+		{/if}
 	</nav>
 	<slot></slot>
 </Page>

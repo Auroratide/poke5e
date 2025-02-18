@@ -1,24 +1,23 @@
-<!-- Cannot use named slots with normal layouts -->
-<!-- https://github.com/sveltejs/kit/issues/627 -->
-
 <script lang="ts">
+	import { page } from "$app/stores"
 	import Page from "$lib/design/Page.svelte"
 	import MoveList from "$lib/moves/MoveList.svelte"
 	import Hit from "$lib/design/icon/Hit.svelte"
 	import Loader from "$lib/design/Loader.svelte"
 	import { moves } from "$lib/moves/store"
+
+	$: ssrMoves = $page.data.movesList
+	$: movesToRender = ssrMoves ?? $moves
 </script>
 
 <Page theme="blue">
 	<Hit slot="icon" />
 	<nav slot="side" class="table" aria-label="Pokemon List">
-		<slot name="list">
-			{#if $moves !== undefined}
-					<MoveList moves={$moves} />
-			{:else}
-					<Loader />
-			{/if}
-		</slot>
+		{#if movesToRender !== undefined}
+			<MoveList moves={movesToRender} />
+		{:else}
+			<Loader />
+		{/if}
 	</nav>
 	<slot></slot>
 </Page>

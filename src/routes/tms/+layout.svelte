@@ -1,24 +1,23 @@
-<!-- Cannot use named slots with normal layouts -->
-<!-- https://github.com/sveltejs/kit/issues/627 -->
-
 <script lang="ts">
+	import { page } from "$app/stores"
 	import Page from "$lib/design/Page.svelte"
 	import TmList from "$lib/moves/TmList.svelte"
 	import Disc from "$lib/design/icon/Disc.svelte"
 	import Loader from "$lib/design/Loader.svelte"
 	import { tms } from "$lib/moves/store"
+
+	$: ssrTms = $page.data.tmsList
+	$: tmsToRender = ssrTms ?? $tms
 </script>
 
 <Page theme="purple">
 	<Disc slot="icon" />
 	<nav slot="side" aria-label="TM List">
-		<slot name="list">
-			{#if $tms !== undefined}
-					<TmList tms={$tms} />
-			{:else}
-					<Loader />
-			{/if}
-		</slot>
+		{#if tmsToRender !== undefined}
+			<TmList tms={tmsToRender} />
+		{:else}
+			<Loader />
+		{/if}
 	</nav>
 	<slot></slot>
 </Page>

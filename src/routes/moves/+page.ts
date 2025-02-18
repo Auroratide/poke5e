@@ -6,5 +6,5 @@ export const load: PageLoad = async ({ fetch }) => {
 		.then(res => res.json())
 		.then(data => data.moves)
 
-	return { moves }
+	return { movesList: moves }
 }
