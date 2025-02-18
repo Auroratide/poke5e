@@ -11,6 +11,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.1.1",
+		description: [
+			"Bug fix: Maintain list position when pokemon, move, or TM is selected",
+		],
+	}, {
 		name: "v1.1.0",
 		description: [
 			"New References section, for Pokemon 5e rules",
