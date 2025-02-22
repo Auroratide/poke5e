@@ -63923,7 +63923,7 @@
 				"maxStage": "2",
 				"to": [
 					{
-						"id": "mr-mime",
+						"id": "lucario",
 						"conditions": [
 							{
 								"type": "level",
