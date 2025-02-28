@@ -135,7 +135,9 @@ function processPokemon(pokemon, species, evolution, allAbilities, allMoves, all
 
 	result.media = {
 		main: pokemon.sprites.other["official-artwork"].front_default,
+		mainShiny: pokemon.sprites.other["official-artwork"].front_shiny,
 		sprite: pokemon.sprites.front_default,
+		spriteShiny: pokemon.sprites.front_shiny,
 	}
 
 	doubleCheck(result)

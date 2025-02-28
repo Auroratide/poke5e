@@ -3,7 +3,9 @@ import type { Attribute, CreatureSize, HitDice, Skill } from "../dnd/types"
 
 export type PokemonMedia = {
 	main?: string,
+	mainShiny?: string,
 	sprite?: string,
+	spriteShiny?: string,
 	attribution?: string,
 }
 
