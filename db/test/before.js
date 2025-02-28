@@ -38,7 +38,9 @@ export async function test() {
 			14, 66, 66, 6, 6,
 			false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
 			false, false, false, false, false, false,
-			"shield-dust", ""
+			"shield-dust", "",
+			// NEW ARGS!
+			"fairy", 5400, null, null
 		])
 
 		const [ [psybeamId] ] = await call(client, "add_move", [
@@ -63,7 +65,9 @@ export async function test() {
 			14, 45, 66, 6, 6,
 			false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
 			false, false, false, false, false, false,
-			"shield-dust", ""
+			"shield-dust", "",
+			// NEW ARGS!
+			"fairy", 6200, "Burned", "Focus Sash"
 		])
 
 		await call(client, "update_trainer", [
@@ -86,6 +90,13 @@ export async function test() {
 		
 		assert.equal(irisPokemon[0][3], "Sunny Yellow")
 		assert.equal(irisPokemon[0][14], 45, `expected 45 hp, but was ${irisPokemon[0][14]}`)
+
+		// NEW ARGS
+		assert.equal(irisPokemon[0][45], "fairy")
+		assert.equal(irisPokemon[0][46], 6200, `expected 6200 exp, but was ${irisPokemon[0][45]}`)
+		assert.equal(irisPokemon[0][47], "Burned")
+		assert.equal(irisPokemon[0][48], "Focus Sash")
+		// END NEW ARGS
 
 		assert.equal(irisInfo[2], "Iris")
 		assert.equal(irisInfo[6], 44, `expected 44 hp, but was ${irisInfo[6]}`)
