@@ -11,6 +11,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.1.3",
+		description: [
+			"Can make trainer pokémon shiny",
+		],
+	}, {
 		name: "v1.1.2",
 		description: [
 			"Bug fix: Riolu evolves into Lucario",
