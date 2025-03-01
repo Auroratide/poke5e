@@ -25,7 +25,9 @@
 
 {#if sprite}
 	<figure>
-		<img {src} {alt} class:smaller={attribution != null} />
+		{#key src}
+			<img {src} {alt} class:smaller={attribution != null} class:shimmer={shiny} />
+		{/key}
 		{#if attribution}
 			{#await attribution}
 				<figcaption style:visibility="hidden">Getting attribution...</figcaption>
@@ -58,5 +60,24 @@
 
 	figcaption {
 		font-size: 0.5rem;
+	}
+
+	.shimmer {
+		mask: linear-gradient(-60deg, oklch(0% 0 0) 30%, oklch(0% 0 0 / 0.5), oklch(0% 0 0) 70%) right / 350% 100%;
+		animation: shimmer 1s forwards;
+		animation-delay: 0.5s;
+	}
+
+	@keyframes shimmer {
+		100% {
+			mask-position: left;
+		}
+	}
+
+	@media (prefers-reduced-motion) {
+		.shimmer {
+			mask: none;
+			animation: none;
+		}
 	}
 </style>
