@@ -8,6 +8,9 @@ dependencies:
   '@auroratide/pokemon-types':
     specifier: ^0.1.0
     version: 0.1.0
+  '@auroratide/toggle-switch':
+    specifier: ^0.3.1
+    version: 0.3.1
   '@supabase/supabase-js':
     specifier: ^2.48.1
     version: 2.48.1
@@ -89,6 +92,10 @@ packages:
 
   /@auroratide/pokemon-types@0.1.0:
     resolution: {integrity: sha512-jVr8JLnAT8mbd20/SIhgtVWPftA8iP/X8rz6dWZPo7KvAKZifLEnA3crRkgs60pf7Mq3STVqZ+kPXJjZSTvVpA==}
+    dev: false
+
+  /@auroratide/toggle-switch@0.3.1:
+    resolution: {integrity: sha512-CNqjgZQNSkuIyLibw4a2+D2kZENhudmec1BU72uRsRonSGXzgQVsU+S6gbKqkEi5ykw8hUO3hpyXGmFscx7YiQ==}
     dev: false
 
   /@babel/code-frame@7.26.2:

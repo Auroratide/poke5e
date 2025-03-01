@@ -295,6 +295,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_exp: 0,
 			_status: info.status,
 			_held_item: null,
+			_is_shiny: info.isShiny,
 		}).single<number>()
 
 		if (error) {
@@ -334,6 +335,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			notes: "",
 			teraType: pokemon.type[0],
 			status: null,
+			isShiny: false,
 		}
     
 		const { data, error } = await this.supabase.rpc("add_pokemon", {
@@ -385,6 +387,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_exp: 0,
 			_status: null,
 			_held_item: null,
+			_is_shiny: false,
 		}).single<number>()
     
 		if (error) {
@@ -695,6 +698,7 @@ type PokemonRow = {
 	exp: number,
 	status: string | null,
 	held_item: string,
+	is_shiny: boolean,
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -761,6 +765,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 	notes: row.notes,
 	teraType: row.tera_type as TeraPokeType,
 	status: row.status as NonVolatileStatus | null,
+	isShiny: row.is_shiny,
 })
 
 type MoveRow = {

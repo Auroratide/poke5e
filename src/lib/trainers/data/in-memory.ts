@@ -125,6 +125,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		notes: "Not vulnerable to ghost-type moves.",
 		teraType: "fairy",
 		status: null,
+		isShiny: false,
 	}, {
 		id: nextPokemonId(),
 		trainerId: "e2439894-8b10-4081-812c-0f16a773e959",
@@ -186,6 +187,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		notes: "",
 		teraType: "ghost",
 		status: null,
+		isShiny: false,
 	}, {
 		id: nextPokemonId(),
 		trainerId: "e2439894-8b10-4081-812c-0f16a773e959",
@@ -247,6 +249,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		notes: "",
 		teraType: "fire",
 		status: null,
+		isShiny: false,
 	} ],
 }, {
 	writeKey: "0DHGNM55DGSU9MLA1J7D",
@@ -402,6 +405,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 				notes: "",
 				teraType: "normal",
 				status: null,
+				isShiny: false,
 			}
 
 			trainer.pokemon.push(newPokemon)

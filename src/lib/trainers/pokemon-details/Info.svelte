@@ -59,7 +59,7 @@
 	</div>
 	{#if hasImage}
 		<div style:--size="clamp(8rem, 12.66vw, 9.5rem)" class="square-image">
-			<PokemonArt media={species.media} alt="" />
+			<PokemonArt media={species.media} alt="" shiny={pokemon.isShiny} />
 		</div>
 	{/if}
 </section>

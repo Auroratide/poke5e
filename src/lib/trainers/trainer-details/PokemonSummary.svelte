@@ -14,7 +14,7 @@
 </script>
 
 <a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded">
-	<span style:grid-area="sprite" class="max-height"><PokemonSprite media={species?.media} alt={species?.name} /></span>
+	<span style:grid-area="sprite" class="max-height"><PokemonSprite media={species?.media} alt={species?.name} shiny={pokemon.isShiny} /></span>
 	<span style:grid-area="name">{pokemon.nickname}</span>
 	<span style:grid-area="gender" class="right away-from-edge flex"><GenderIcon gender={pokemon.gender} /></span>
 	<span style:grid-area="hpbar" class="away-from-edge"><ResourceBar current={pokemon.hp.current} max={pokemon.hp.max} /></span>

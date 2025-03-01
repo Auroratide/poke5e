@@ -21,6 +21,7 @@
 	import PokeMovesFieldset from "../form/PokeMovesFieldset.svelte"
 	import GeneralTextarea from "../form/GeneralTextarea.svelte"
 	import TeraTypeInput from "./TeraTypeInput.svelte"
+	import ToggleSwitchInput from "../form/ToggleSwitchInput.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -44,6 +45,7 @@
 	let savingThrows = pokemon.savingThrows
 	let notes = pokemon.notes
 	let type = pokemon.type
+	let isShiny = pokemon.isShiny
 
 	let moves = structuredClone(pokemon.moves)
 
@@ -69,6 +71,7 @@
 				max: maxHitDice,
 			},
 			gender,
+			isShiny,
 			attributes,
 			ability,
 			proficiencies,
@@ -89,6 +92,7 @@
 			<AcInput bind:value={ac} {disabled} />
 			<NumberInput name="max-hp" label="Max HP" bind:value={maxHp} {disabled} />
 			<NumberInput name="max-hit-dice" label="Max Hit Dice" bind:value={maxHitDice} {disabled} />
+			<ToggleSwitchInput name="shiny" label="Shiny" bind:value={isShiny} {disabled} />
 		</Fieldset>
 		<PokeGenderFieldset bind:value={gender} {disabled} />
 		<AttributesFieldset bind:values={attributes} {disabled} />

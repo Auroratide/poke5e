@@ -28,6 +28,10 @@
 	import Disc from "$lib/design/icon/Disc.svelte"
 	import IdBadge from "$lib/design/icon/IdBadge.svelte"
 	import PencilNotes from "$lib/design/icon/PencilNotes.svelte"
+	
+	if (browser) {
+		import("@auroratide/toggle-switch/lib/define.js")
+	}
 
 	export let data: LayoutData
 	$: activeSection = data.activeSection

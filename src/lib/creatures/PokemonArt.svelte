@@ -5,9 +5,12 @@
 
 	export let media: PokemonMedia
 	export let alt: string
+	export let shiny: boolean = false
 
+	$: imgKey = "main" + (shiny ? "Shiny" : "")
 	$: isExternal = /^http/.test(media.main)
-	$: src = isExternal ? media.main : `${assets}${media.main}`
+	$: sprite = media?.[imgKey] ?? media?.sprite
+	$: src = isExternal ? sprite : `${assets}${sprite}`
 
 	let attribution = undefined
 	$: {
@@ -20,16 +23,16 @@
 	}
 </script>
 
-{#if media.main}
+{#if sprite}
 	<figure>
 		<img {src} {alt} class:smaller={attribution != null} />
 		{#if attribution}
 			{#await attribution}
-					<figcaption style:visibility="hidden">Getting attribution...</figcaption>
+				<figcaption style:visibility="hidden">Getting attribution...</figcaption>
 			{:then attribution}
-					{#if attribution.main}
-						<figcaption>By <a href="{attribution.main.link}">{attribution.main.author}</a></figcaption>
-					{/if}
+				{#if attribution.main}
+					<figcaption>By <a href="{attribution.main.link}">{attribution.main.author}</a></figcaption>
+				{/if}
 			{/await}
 		{/if}
 	</figure>

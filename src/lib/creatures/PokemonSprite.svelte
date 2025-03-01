@@ -4,12 +4,15 @@
 
 	export let media: PokemonMedia
 	export let alt: string
+	export let shiny: boolean = false
 
+	$: imgKey = "sprite" + (shiny ? "Shiny" : "")
 	$: isExternal = /^http/.test(media?.sprite)
-	$: src = isExternal ? media?.sprite : `${assets}${media?.sprite}`
+	$: sprite = media?.[imgKey] ?? media?.sprite
+	$: src = isExternal ? sprite : `${assets}${sprite}`
 </script>
 
-{#if media?.sprite}
+{#if sprite}
 	<img {src} {alt} />
 {/if}
 

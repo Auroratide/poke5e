@@ -71,6 +71,7 @@ export type TrainerPokemon = {
 	notes: string,
 	teraType: TeraPokeType | "",
 	status: NonVolatileStatus | null,
+	isShiny: boolean,
 }
 
 export type WithPokemonData = {
