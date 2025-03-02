@@ -139047,6 +139047,367 @@
 			}
 		},
 		{
+			"id": "lechonk",
+			"name": "Lechonk",
+			"number": 915,
+			"type": [
+				"normal"
+			],
+			"size": "tiny",
+			"sr": 0.25,
+			"minLevel": 1,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "oinkologne-male",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							},
+							{
+								"type": "gender",
+								"value": "male"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					},
+					{
+						"id": "oinkologne-female",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							},
+							{
+								"type": "gender",
+								"value": "female"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The Hog Pokémon. It searches for food all day. It possesses a keen sense of smell but doesn’t use it for anything other than foraging.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 10,
+				"con": 12,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "aroma-veil",
+					"hidden": false
+				},
+				{
+					"id": "gluttony",
+					"hidden": false
+				},
+				{
+					"id": "thick-fat",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"tail-whip"
+				],
+				"level2": [
+					"echoed-voice",
+					"disarming-voice"
+				],
+				"level6": [
+					"dig",
+					"mud-shot",
+					"covet"
+				],
+				"level10": [
+					"headbutt",
+					"take-down",
+					"yawn"
+				],
+				"level14": [
+					"work-up",
+					"uproar"
+				],
+				"level18": [
+					"double-edge"
+				],
+				"tm": [
+					11,
+					17,
+					18,
+					42,
+					44,
+					46,
+					78,
+					88,
+					90
+				],
+				"egg": [
+					"stockpile",
+					"spit-up",
+					"swallow",
+					"endeavor",
+					"stuff-cheeks"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/915.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/915.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/915.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/915.png"
+			}
+		},
+		{
+			"id": "oinkologne-male",
+			"name": "Oinkologne ♂",
+			"number": 916,
+			"type": [
+				"normal"
+			],
+			"size": "small",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "0:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"lechonk"
+				]
+			},
+			"description": "The Hog Pokémon. Oinkologne is proud of its fine, glossy skin. It emits a concentrated scent from the tip of its tail.",
+			"ac": 15,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 12,
+				"con": 15,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 62,
+			"skills": ["survival"],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "lingering-aroma",
+					"hidden": false
+				},
+				{
+					"id": "gluttony",
+					"hidden": false
+				},
+				{
+					"id": "thick-fat",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"tail-whip",
+					"echoed-voice",
+					"disarming-voice",
+					"mud-shot"
+				],
+				"level6": [
+					"dig",
+					"covet"
+				],
+				"level10": [
+					"headbutt",
+					"take-down",
+					"yawn"
+				],
+				"level14": [
+					"work-up",
+					"uproar"
+				],
+				"level18": [
+					"double-edge",
+					"earth-power",
+					"belch"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					18,
+					42,
+					44,
+					46,
+					53,
+					68,
+					78,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/916.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/916.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/916.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/916.png"
+			}
+		},
+		{
+			"id": "oinkologne-female",
+			"name": "Oinkologne ♀",
+			"number": 916,
+			"type": [
+				"normal"
+			],
+			"size": "small",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:0",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"lechonk"
+				]
+			},
+			"description": "The Hog Pokémon. This is a meticulous Pokémon that likes to keep things tidy. It shrouds itself in a floral aroma that soothes the Pokémon around it.",
+			"ac": 15,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 12,
+				"con": 16,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 68,
+			"skills": ["survival"],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "aroma-veil",
+					"hidden": false
+				},
+				{
+					"id": "gluttony",
+					"hidden": false
+				},
+				{
+					"id": "thick-fat",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"tail-whip",
+					"echoed-voice",
+					"disarming-voice",
+					"mud-shot"
+				],
+				"level6": [
+					"dig",
+					"covet"
+				],
+				"level10": [
+					"headbutt",
+					"take-down",
+					"yawn"
+				],
+				"level14": [
+					"work-up",
+					"uproar"
+				],
+				"level18": [
+					"double-edge",
+					"earth-power",
+					"belch"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					18,
+					42,
+					44,
+					46,
+					53,
+					68,
+					78,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10254.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10254.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10254.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10254.png"
+			}
+		},
+		{
 			"id": "annihilape",
 			"name": "Annihilape",
 			"number": 979,
