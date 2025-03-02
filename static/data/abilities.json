@@ -630,6 +630,11 @@
       "name": "Limber",
       "description": "This Pokémon is immune to being paralyzed."
     },
+		{
+      "id": "lingering-aroma",
+      "name": "Lingering Aroma",
+      "description": "When this Pokémon is hit by a melee attack or hits with a melee attack, one random ability of its attacker changes to Lingering Aroma until the end of the encounter or until switched out."
+    },
     {
       "id": "liquid-ooze",
       "name": "Liquid Ooze",
