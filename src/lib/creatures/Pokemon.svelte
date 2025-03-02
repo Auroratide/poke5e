@@ -10,6 +10,7 @@
 	import * as asString from "./string"
 	import EvolutionSection from "./EvolutionSection.svelte"
 	import PokemonArt from "./PokemonArt.svelte"
+	import GenderRatio from "./GenderRatio.svelte"
 
 	export let pokemon: Pokemon
 
@@ -32,7 +33,7 @@
 					<dt>Min Level</dt>
 					<dd>{pokemon.minLevel}</dd>
 					<dt>Gender</dt>
-					<dd class="cap">{asString.gender(pokemon.gender)}</dd>
+					<dd><GenderRatio value={pokemon.gender} /></dd>
 			</FlatDl>
 			<PokemonArt media={pokemon.media} alt="" />
 		</div>
