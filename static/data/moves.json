@@ -9213,6 +9213,22 @@
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
       "optional": ["Instead of natural roll of 19 or 20, target makes a WIS save against your MOVE DC, becoming confused on failure."]
     },
+		{
+      "id": "silk-trap",
+      "name": "Silk Trap",
+      "type": "bug",
+      "power": [
+				"dex"
+			],
+      "time": "1 reaction",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "self",
+      "description": [
+        "You spin a silked trap for your opponent. When you are the recipient of the damage and/or effects of a move at melee range, you may automatically avoid the damage/effects. Additionally, the attacker must make a DEX save against your Move DC, becoming Restrained on failure until the end of their next turn.",
+				"This reaction may not be used to guard against the damage/effects that result from a natural 20 attack roll."
+      ]
+    },
     {
       "id": "silver-wind",
       "name": "Silver Wind",
@@ -9286,6 +9302,23 @@
       "description": [
         "You attempt to swap abilities with a creature for the duration. Select a target in range and force them to make a WIS saving throw against your Move DC. On a failure, choose which abilities to switch for the duration."
       ]
+    },
+		{
+      "id": "skitter-smack",
+      "name": "Skitter Smack",
+      "type": "bug",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You skitter behind the target to attack. Make a melee attack roll against a target, doing 1d6 + MOVE bug damage on a hit. If the attack roll was made with advantage, you deal an extra Xd6 bug damage, where X is your current level divided by two, rounded up (e.g. at level 11, you deal an additional 6d6 damage).",
+				"You don't need Advantage on the attack roll if at least one of your allies is within 5 feet of the target, the ally doesn't have the Incapacitated condition, and you don't have Disadvantage on the attack roll."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17."
     },
     {
       "id": "skull-bash",
