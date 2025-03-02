@@ -7,6 +7,10 @@ export type ReferenceInfo = {
 }
 
 export const References = [ {
+	name: "Damage Types",
+	url: Url.reference.damageTypes(),
+	keywords: ["damage", "type", "resistance", "vulnerability", "immunity", "bludgeoning", "slashing", "piercing", "fire", "cold", "lightning", "force", "radiant", "necrotic", "thunder", "acid", "poison", "calculator", "convert", "conversion", "magic"],
+}, {
 	name: "Pokémon Leveling",
 	url: Url.reference.pokemonLeveling(),
 	keywords: ["pokemon leveling", "class", "table", "experience", "evolution", "evolve", "moves", "peak power"],
