@@ -138338,6 +138338,715 @@
 			}
 		},
 		{
+			"id": "fuecoco",
+			"name": "Fuecoco",
+			"number": 909,
+			"type": [
+				"fire"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:7",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "1",
+				"to": [
+					{
+					"id": "crocalor",
+					"conditions": [
+						{
+							"type": "level",
+							"value": 6
+						}
+					],
+					"effects": [
+						{
+							"type": "asi",
+							"value": 6
+						}
+					]
+					}
+				]
+			},
+			"description": "The Fire Croc Pokémon. It lies on warm rocks and uses the heat absorbed by its square-shaped scales to create fire energy.",
+			"ac": 13,
+			"hitDice": "d8",
+			"speed": [
+					{
+						"type": "walking",
+						"value": 30
+					}
+				],
+			"attributes": {
+				"str": 12,
+				"dex": 11,
+				"con": 14,
+				"int": 6,
+				"wis": 10,
+				"cha": 11
+			},
+			"hp": 19,
+			"skills": [
+					"nature",
+					"performance"
+				],
+			"savingThrows": [
+					"con"
+				],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "blaze",
+					"hidden": false
+				},
+				{
+					"id": "unaware",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer",
+					"ember"
+				],
+				"level2": [
+					"round",
+					"bite"
+				],
+				"level6": [
+					"yawn",
+					"incinerate",
+					"flamethrower"
+				],
+				"level10": [
+					"roar",
+					"snarl"
+				],
+				"level14": [
+					"hyper-voice"
+				],
+				"level18": [
+					"fire-blast"
+				],
+				"tm": [
+					11,
+					17,
+					42,
+					43,
+					44,
+					50,
+					61,
+					88,
+					90
+				],
+				"egg": [
+					"curse",
+					"encore",
+					"slack-off",
+					"belch"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/909.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/909.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/909.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/909.png"
+			}
+			},
+			{
+			"id": "crocalor",
+			"name": "Crocalor",
+			"number": 910,
+			"type": [
+				"fire"
+			],
+			"size": "small",
+			"sr": 5,
+			"minLevel": 5,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:7",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"fuecoco"
+				],
+				"to": [
+					{
+					"id": "skeledirge",
+					"conditions": [
+						{
+							"type": "level",
+							"value": 14
+						}
+					],
+					"effects": [
+						{
+							"type": "asi",
+							"value": 10
+						}
+					]
+					}
+				]
+			},
+			"description": "The Fire Croc Pokémon. The combination of Crocalor’s fire energy and overflowing vitality has caused an egg-shaped fireball to appear on the Pokémon’s head.",
+			"ac": 14,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 13,
+				"con": 15,
+				"int": 6,
+				"wis": 10,
+				"cha": 13
+			},
+			"hp": 47,
+			"skills": [
+				"nature",
+				"performance"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "blaze",
+					"hidden": false
+				},
+				{
+					"id": "unaware",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer",
+					"ember",
+					"lick",
+					"round"
+				],
+				"level6": [
+					"bite",
+					"yawn",
+					"incinerate"
+				],
+				"level10": [
+					"roar",
+					"snarl",
+					"flamethrower"
+				],
+				"level14": [
+						"hyper-voice"
+				],
+				"level18": [
+					"fire-blast",
+					"will-o-wisp"
+				],
+				"tm": [
+					11,
+					17,
+					42,
+					43,
+					44,
+					50,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/910.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/910.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/910.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/910.png"
+			}
+			},
+			{
+			"id": "skeledirge",
+			"name": "Skeledirge",
+			"number": 911,
+			"type": [
+				"fire",
+				"ghost"
+			],
+			"size": "medium",
+			"sr": 13,
+			"minLevel": 10,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:7",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"crocalor"
+				]
+			},
+			"description": "The Singer Pokémon. The fiery bird changes shape when Skeledirge sings. Rumor has it that the bird was born when the fireball on Skeledirge’s head gained a soul.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 14,
+				"con": 17,
+				"int": 6,
+				"wis": 10,
+				"cha": 17
+			},
+			"hp": 112,
+			"skills": [
+				"nature",
+				"persuasion",
+				"performance"
+			],
+			"savingThrows": [
+				"con",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "blaze",
+					"hidden": false
+				},
+				{
+					"id": "unaware",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer",
+					"ember",
+					"torch-song",
+					"lick",
+					"round",
+					"bite",
+					"scary-face",
+					"incinerate",
+					"roar",
+					"snarl"
+				],
+				"level14": [
+					"flamethrower",
+					"hyper-voice"
+				],
+				"level18": [
+					"fire-blast",
+					"shadow-ball",
+					"will-o-wisp",
+					"overheat",
+					"hex"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					22,
+					26,
+					42,
+					43,
+					44,
+					65,
+					68,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/911.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/911.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/911.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/911.png"
+			}
+		},
+		{
+			"id": "quaxly",
+			"name": "Quaxly",
+			"number": 912,
+			"type": [
+				"water"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"flying",
+				"water-1"
+			],
+			"gender": "1:7",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "1",
+				"to": [
+					{
+						"id": "quaxwell",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Duckling Pokémon. This Pokémon migrated to Paldea from distant lands long ago. The gel secreted by its feathers repels water and grime.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				},
+				{
+					"type": "swimming",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 13,
+				"con": 12,
+				"int": 6,
+				"wis": 10,
+				"cha": 11
+			},
+			"hp": 17,
+			"skills": [
+				"survival",
+				"performance"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "torrent",
+					"hidden": false
+				},
+				{
+					"id": "moxie",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"pound",
+					"growl",
+					"water-gun"
+				],
+				"level2": [
+					"wing-attack",
+					"work-up"
+				],
+				"level6": [
+					"aqua-jet",
+					"double-hit"
+				],
+				"level10": [
+					"focus-energy",
+					"air-slash",
+					"aqua-cutter"
+				],
+				"level14": [
+					"acrobatics"
+				],
+				"level18": [
+					"liquidation"
+				],
+				"tm": [
+					17,
+					18,
+					40,
+					42,
+					44,
+					77,
+					94
+				],
+				"egg": [
+					"detect",
+					"rapid-spin",
+					"roost",
+					"last-resort"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/912.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/912.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/912.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/912.png"
+			}
+		},
+		{
+			"id": "quaxwell",
+			"name": "Quaxwell",
+			"number": 913,
+			"type": [
+				"water"
+			],
+			"size": "small",
+			"sr": 5,
+			"minLevel": 5,
+			"eggGroup": [
+				"flying",
+				"water-1"
+			],
+			"gender": "1:7",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"quaxly"
+				],
+				"to": [
+					{
+						"id": "quaquaval",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 14
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Practicing Pokémon. These Pokémon constantly run through shallow waters to train their legs, then compete with each other to see which of them kicks most gracefully.",
+			"ac": 14,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				},
+				{
+					"type": "swimming",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 14,
+				"con": 14,
+				"int": 6,
+				"wis": 10,
+				"cha": 13
+			},
+			"hp": 47,
+			"skills": [
+				"survival",
+				"performance"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "torrent",
+					"hidden": false
+				},
+				{
+					"id": "moxie",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"pound",
+					"growl",
+					"water-gun",
+					"double-hit",
+					"wing-attack",
+					"work-up"
+				],
+				"level6": [
+					"water-pulse",
+					"aqua-jet",
+					"low-sweep"
+				],
+				"level10": [
+					"air-slash",
+					"aqua-cutter"
+				],
+				"level14": [
+					"focus-energy",
+					"acrobatics"
+				],
+				"level18": [
+					"feather-dance",
+					"liquidation"
+				],
+				"tm": [
+					17,
+					18,
+					40,
+					42,
+					44,
+					77,
+					94
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/913.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/913.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/913.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/913.png"
+			}
+		},
+		{
+			"id": "quaquaval",
+			"name": "Quaquaval",
+			"number": 914,
+			"type": [
+				"water",
+				"fighting"
+			],
+			"size": "medium",
+			"sr": 13,
+			"minLevel": 10,
+			"eggGroup": [
+				"flying",
+				"water-1"
+			],
+			"gender": "1:7",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"quaxwell"
+				]
+			},
+			"description": "The Dancer Pokémon. A single kick from a Quaquaval can send a truck rolling. This Pokémon uses its powerful legs to perform striking dances from far-off lands.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				},
+				{
+					"type": "swimming",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 16,
+				"con": 14,
+				"int": 6,
+				"wis": 12,
+				"cha": 16
+			},
+			"hp": 102,
+			"skills": [
+				"acrobatics",
+				"survival",
+				"performance"
+			],
+			"savingThrows": [
+				"str",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "torrent",
+					"hidden": false
+				},
+				{
+					"id": "moxie",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"pound",
+					"growl",
+					"water-gun",
+					"double-hit",
+					"aqua-step",
+					"wing-attack",
+					"work-up",
+					"water-pulse",
+					"aqua-jet",
+					"low-sweep",
+					"air-slash",
+					"aqua-cutter"
+				],
+				"level14": [
+					"focus-energy",
+					"acrobatics"
+				],
+				"level18": [
+					"mega-kick",
+					"feather-dance",
+					"close-combat",
+					"liquidation",
+					"wave-crash"
+				],
+				"tm": [
+					8,
+					12,
+					15,
+					17,
+					18,
+					31,
+					40,
+					42,
+					44,
+					56,
+					68,
+					75,
+					77,
+					88,
+					89,
+					90,
+					94
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/914.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/914.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/914.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/914.png"
+			}
+		},
+		{
 			"id": "annihilape",
 			"name": "Annihilape",
 			"number": 979,
