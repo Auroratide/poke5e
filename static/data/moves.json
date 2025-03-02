@@ -296,6 +296,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
+		{
+      "id": "aqua-cutter",
+      "name": "Aqua Cutter",
+      "type": "water",
+      "power": [
+        "str",
+				"dex"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You expel pressurized water to cut the target like a blade. Make a melee attack, dealing 1d12 + MOVE water damage on a hit. This attack scores a critical hit on natural attack rolls of 19 or 20."
+      ],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
+    },
     {
       "id": "aqua-jet",
       "name": "Aqua Jet",
@@ -324,6 +341,22 @@
       "description": [
         "You surround yourself with a veil of healing water. At the end of each of your turns, as long as you hold concentration, regain a number of hit points equal to your proficiency bonus."
       ]
+    },
+		{
+      "id": "aqua-step",
+      "name": "Aqua Step",
+      "type": "water",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You charge at your target with fluid dance steps. Make a melee attack, dealing 2d6 + MOVE water damage on a hit. At the end of your turn, regardless of whether you hit, your movement speed increases by 10ft until the end of your next turn."
+      ],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
     {
       "id": "aqua-tail",
@@ -11052,6 +11085,22 @@
       "description": [
         "You unleash a dark energy that has the power to reverse the stat changes of a creature. Force a creature in range to make a CHA save against your Move DC. On a failure, any stat changes currently affecting the target have the opposite effect."
       ]
+    },
+		{
+      "id": "torch-song",
+      "name": "Torch Song",
+      "type": "fire",
+      "power": [
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "self (20ft radius)",
+      "description": [
+        "You blow out raging flames whilst singing a song. Choose any number of creatures within a 20ft radius. Each creature must make a CHA saving throw against your Move DC. On a failure, the creature takes 1d10 + MOVE fire damage, half on success. The DC for this move increases by 1 for each consecutive turn it is used, up to a maximum of +5, and resets after not being used for a turn."
+      ],
+			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 5d4 at level 10, and 5d6 at level 17."
     },
     {
       "id": "torment",
