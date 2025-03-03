@@ -16,6 +16,7 @@ export const Url = {
 	reference: {
 		all: () => `${base}/reference`,
 		damageTypes: () => `${base}/reference/damage-types`,
+		natures: () => `${base}/reference/natures`,
 		pokemonLeveling: () => `${base}/reference/pokemon-leveling`,
 		specializations: () => `${base}/reference/specializations`,
 		status: () => `${base}/reference/status-conditions`,

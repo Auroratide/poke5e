@@ -11,6 +11,10 @@ export const References = [ {
 	url: Url.reference.damageTypes(),
 	keywords: ["damage", "type", "resistance", "vulnerability", "immunity", "bludgeoning", "slashing", "piercing", "fire", "cold", "lightning", "force", "radiant", "necrotic", "thunder", "acid", "poison", "calculator", "convert", "conversion", "magic"],
 }, {
+	name: "Natures",
+	url: Url.reference.natures(),
+	keywords: ["nature", "personality", "hardy", "lonely", "brave", "adamant", "naughty", "bold", "docile", "relaxed", "impish", "lax", "timid", "hasty", "serious", "jolly", "naive", "modest", "mild", "quiet", "bashful", "rash", "calm", "gentle", "sassy", "careful", "quirky"],
+}, {
 	name: "Pokémon Leveling",
 	url: Url.reference.pokemonLeveling(),
 	keywords: ["pokemon leveling", "class", "table", "experience", "evolution", "evolve", "moves", "peak power"],
