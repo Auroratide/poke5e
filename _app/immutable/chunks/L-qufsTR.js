@@ -1,0 +1,1 @@
+const e=["normal","fighting","flying","poison","ground","rock","bug","ghost","steel","fire","water","grass","electric","psychic","ice","dragon","dark","fairy"],o="stellar",r=[...e,o],a=s=>e.includes(s);export{e as P,r as T,a as i};
