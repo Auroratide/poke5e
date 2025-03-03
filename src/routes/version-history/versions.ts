@@ -11,6 +11,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.1.4",
+		description: [
+			"Added Pokemon: Skeledirge line, Quaquaval line, Oinkologne line, Spidops line",
+			"Added References: Damage Types, Natures",
+			"Improved gender ratio display",
+		],
+	}, {
 		name: "v1.1.3",
 		description: [
 			"Can make trainer pokémon shiny",
