@@ -1,6 +1,6 @@
 # Pokemon 5e Reference
 
-**Visit at [auroratide.github.io/poke5e](https://auroratide.github.io/poke5e/)!**
+**Visit at [poke5e.app](https://poke5e.app)!**
 
 This is a reference for a ton of Pokemon-related content that you can use in your Dungeons and Dragons games. It also lets you manage trainers and pokemon teams.
 
