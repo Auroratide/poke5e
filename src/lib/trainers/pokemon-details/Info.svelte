@@ -51,6 +51,7 @@
 				hitDice={pokemon.hitDice}
 				dieSize={species.hitDice}
 				status={pokemon.status}
+				hasStatus
 				{editable}
 				on:update={onUpdateHealth}
 			/>

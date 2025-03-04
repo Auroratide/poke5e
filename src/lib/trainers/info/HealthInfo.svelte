@@ -23,6 +23,7 @@
 	export let hitDice: Resource
 	export let dieSize: HitDice
 	export let status: NonVolatileStatus | null
+	export let hasStatus: boolean = false
 	export let editable: boolean
 
 	$: hpCur = hp.current
@@ -82,14 +83,16 @@
 		</span>
 	</span>
 </div>
-<div class="row">
-	{#if status != null}
-		<StatusTag value={status} />
-	{/if}
-	{#if editable}
-		<StatusInput id="current-status" value={statusCur} on:change={onChangeStatus} />
-	{/if}
-</div>
+{#if hasStatus}
+	<div class="row">
+		{#if status != null}
+			<StatusTag value={status} />
+		{/if}
+		{#if editable}
+			<StatusInput id="current-status" value={statusCur} on:change={onChangeStatus} />
+		{/if}
+	</div>
+{/if}
 
 <style>
 	.grid {

@@ -34,7 +34,7 @@
 		<dd>{trainer.readKey}</dd>
 	</FlatDl>
 	<div class="column">
-		<HealthInfo hp={trainer.hp} hitDice={trainer.hitDice} dieSize="d8" {editable} on:update={onUpdateHealth} />
+		<HealthInfo hp={trainer.hp} hitDice={trainer.hitDice} dieSize="d8" {editable} on:update={onUpdateHealth} status={null} />
 		<StatsInfo {trainer} />
 	</div>
 </section>
