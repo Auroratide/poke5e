@@ -11,6 +11,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.1.5",
+		description: [
+			"Bug fix: Trainers cannot (yet) be inflicted with status effects",
+		],
+	}, {
 		name: "v1.1.4",
 		description: [
 			"Added Pokemon: Skeledirge line, Quaquaval line, Oinkologne line, Spidops line",
