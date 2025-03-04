@@ -139655,6 +139655,877 @@
 			}
 		},
 		{
+			"id": "nymble",
+			"name": "Nymble",
+			"number": 919,
+			"type": [
+				"bug"
+			],
+			"size": "tiny",
+			"sr": 0.125,
+			"minLevel": 1,
+			"eggGroup": [
+				"bug"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "lokix",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The Grasshopper Pokémon. It has its third set of legs folded up. When it’s in a tough spot, this Pokémon jumps over 30 feet using the strength of its legs.",
+			"ac": 12,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 11,
+				"dex": 13,
+				"con": 10,
+				"int": 6,
+				"wis": 9,
+				"cha": 9
+			},
+			"hp": 16,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "swarm",
+					"hidden": false
+				},
+				{
+					"id": "tinted-lens",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer"
+				],
+				"level2": [
+					"astonish",
+					"assurance",
+					"struggle-bug"
+				],
+				"level6": [
+					"double-kick",
+					"screech",
+					"endure"
+				],
+				"level10": [
+					"agility",
+					"feint",
+					"bug-bite"
+				],
+				"level14": [
+					"sucker-punch"
+				],
+				"level18": [
+					"first-impression"
+				],
+				"tm": [
+					11,
+					17,
+					18,
+					28,
+					42,
+					44,
+					46,
+					81,
+					88,
+					89,
+					90,
+					101
+				],
+				"egg": [
+					"counter",
+					"skitter-smack"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/919.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/919.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/919.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/919.png"
+			}
+		},
+		{
+			"id": "lokix",
+			"name": "Lokix",
+			"number": 920,
+			"type": [
+				"bug",
+				"dark"
+			],
+			"size": "small",
+			"sr": 5,
+			"minLevel": 5,
+			"eggGroup": [
+				"bug"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"nymble"
+				]
+			},
+			"description": "The Grasshopper Pokémon. When it decides to fight all out, it stands on its previously folded legs to enter Showdown Mode. It neutralizes its enemies in short order.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 35
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 17,
+				"con": 13,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 41,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "swarm",
+					"hidden": false
+				},
+				{
+					"id": "tinted-lens",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer",
+					"low-kick",
+					"detect",
+					"lunge",
+					"astonish",
+					"assurance",
+					"struggle-bug"
+				],
+				"level6": [
+					"double-kick",
+					"screech",
+					"endure"
+				],
+				"level10": [
+					"feint",
+					"bug-bite"
+				],
+				"level14": [
+					"agility",
+					"sucker-punch"
+				],
+				"level18": [
+					"bounce",
+					"first-impression",
+					"throat-chop",
+					"axe-kick"
+				],
+				"tm": [
+					11,
+					12,
+					17,
+					18,
+					28,
+					31,
+					40,
+					42,
+					44,
+					46,
+					47,
+					56,
+					68,
+					75,
+					81,
+					88,
+					89,
+					90,
+					97,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/920.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/920.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/920.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/920.png"
+			}
+		},
+		{
+			"id": "pawmi",
+			"name": "Pawmi",
+			"number": 921,
+			"type": [
+				"electric"
+			],
+			"size": "tiny",
+			"sr": 0.25,
+			"minLevel": 1,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "1",
+				"to": [
+					{
+						"id": "pawmo",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 6
+							}
+						]
+					}
+				]
+			},
+			"description": "The Mouse Pokémon. It has underdeveloped electric sacs on its cheeks. These sacs can produce electricity only if Pawmi rubs them furiously with the pads on its forepaws.",
+			"ac": 11,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 11,
+				"dex": 13,
+				"con": 11,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 16,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "static",
+					"hidden": false
+				},
+				{
+					"id": "natural-cure",
+					"hidden": false
+				},
+				{
+					"id": "iron-fist",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"growl"
+				],
+				"level2": [
+					"thunder-shock",
+					"quick-attack",
+					"charge"
+				],
+				"level6": [
+					"bite",
+					"dig",
+					"nuzzle"
+				],
+				"level10": [
+					"thunder-wave",
+					"spark"
+				],
+				"level14": [
+					"slam",
+					"entrainment"
+				],
+				"level18": [
+					"agility",
+					"discharge",
+					"wild-charge"
+				],
+				"tm": [
+					11,
+					17,
+					18,
+					24,
+					25,
+					42,
+					44,
+					46,
+					56,
+					57,
+					72,
+					88,
+					90
+				],
+				"egg": [
+					"mach-punch",
+					"sweet-kiss",
+					"fake-out",
+					"wish"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/921.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/921.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/921.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/921.png"
+			}
+		},
+		{
+			"id": "pawmo",
+			"name": "Pawmo",
+			"number": 922,
+			"type": [
+				"electric",
+				"fighting"
+			],
+			"size": "tiny",
+			"sr": 4,
+			"minLevel": 5,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"pawmi"
+				],
+				"to": [
+					{
+						"id": "pawmot",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 12
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Mouse Pokémon. When its group is attacked, Pawmo is the first to leap into battle, defeating enemies with a fighting technique that utilizes electric shocks.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 16,
+				"con": 13,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 37,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "volt-absorb",
+					"hidden": false
+				},
+				{
+					"id": "natural-cure",
+					"hidden": false
+				},
+				{
+					"id": "iron-fist",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"growl",
+					"arm-thrust",
+					"thunder-shock",
+					"quick-attack",
+					"charge"
+				],
+				"level6": [
+					"bite",
+					"dig",
+					"nuzzle"
+				],
+				"level10": [
+					"thunder-wave",
+					"spark"
+				],
+				"level14": [
+					"slam",
+					"entrainment"
+				],
+				"level18": [
+					"agility",
+					"discharge",
+					"wild-charge"
+				],
+				"tm": [
+					11,
+					17,
+					18,
+					24,
+					25,
+					42,
+					44,
+					46,
+					47,
+					56,
+					57,
+					72,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/922.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/922.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/922.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/922.png"
+			}
+		},
+		{
+			"id": "pawmot",
+			"name": "Pawmot",
+			"number": 923,
+			"type": [
+				"electric",
+				"fighting"
+			],
+			"size": "small",
+			"sr": 10,
+			"minLevel": 8,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"pawmo"
+				]
+			},
+			"description": "The Hands-On Pokémon. This Pokémon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 19,
+				"con": 14,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 76,
+			"skills": [
+				"acrobatics",
+				"survival"
+			],
+			"savingThrows": [
+				"str",
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "volt-absorb",
+					"hidden": false
+				},
+				{
+					"id": "natural-cure",
+					"hidden": false
+				},
+				{
+					"id": "iron-fist",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"growl",
+					"wild-charge",
+					"revival-blessing",
+					"thunder-shock",
+					"quick-attack",
+					"charge",
+					"bite",
+					"dig",
+					"nuzzle"
+				],
+				"level10": [
+					"thunder-wave",
+					"spark",
+					"arm-thrust"
+				],
+				"level14": [
+					"slam",
+					"entrainment"
+				],
+				"level18": [
+					"agility",
+					"close-combat",
+					"discharge",
+					"double-shock"
+				],
+				"tm": [
+					8,
+					11,
+					15,
+					17,
+					18,
+					24,
+					25,
+					31,
+					39,
+					42,
+					44,
+					46,
+					47,
+					52,
+					56,
+					57,
+					68,
+					72,
+					86,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/923.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/923.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/923.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/923.png"
+			}
+		},
+		{
+			"id": "tandemaus",
+			"name": "Tandemaus",
+			"number": 924,
+			"type": [
+				"normal"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"field",
+				"fairy"
+			],
+			"gender": "0:0",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "maushold",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Couple Pokémon. Exhibiting great teamwork, they use their incisors to cut pieces out of any material that might be useful for a nest, then make off with them.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 14,
+				"con": 12,
+				"int": 6,
+				"wis": 11,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [
+				"sleight of hand"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "run-away",
+					"hidden": false
+				},
+				{
+					"id": "pickup",
+					"hidden": false
+				},
+				{
+					"id": "own-tempo",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"pound",
+					"baby-doll-eyes"
+				],
+				"level2": [
+					"helping-hand",
+					"echoed-voice"
+				],
+				"level6": [
+					"super-fang",
+					"bullet-seed",
+					"double-hit"
+				],
+				"level10": [
+					"encore",
+					"hyper-voice",
+					"play-rough"
+				],
+				"level14": [
+					"charm",
+					"beat-up"
+				],
+				"level18": [
+					"copycat",
+					"population-bomb"
+				],
+				"tm": [
+					11,
+					12,
+					17,
+					18,
+					40,
+					42,
+					44,
+					46,
+					47,
+					65,
+					73,
+					86,
+					88,
+					89,
+					90
+				],
+				"egg": [
+					"bite",
+					"baton-pass",
+					"tickle",
+					"feint",
+					"switcheroo",
+					"after-you"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/924.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/924.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/924.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/924.png"
+			}
+		},
+		{
+			"id": "maushold",
+			"name": "Maushold",
+			"number": 925,
+			"type": [
+				"normal"
+			],
+			"size": "tiny",
+			"sr": 6,
+			"minLevel": 5,
+			"eggGroup": [
+				"field",
+				"fairy"
+			],
+			"gender": "0:0",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"tandemaus"
+				]
+			},
+			"description": "The Family Pokémon. The two little ones just appeared one day. The group might be a family of related Pokémon, but nobody knows for sure.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 18,
+				"con": 13,
+				"int": 6,
+				"wis": 14,
+				"cha": 10
+			},
+			"hp": 45,
+			"skills": [
+				"sleight of hand"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "friend-guard",
+					"hidden": false
+				},
+				{
+					"id": "cheek-pouch",
+					"hidden": false
+				},
+				{
+					"id": "technician",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"pound",
+					"follow-me",
+					"baby-doll-eyes",
+					"tidy-up",
+					"helping-hand",
+					"echoed-voice"
+				],
+				"level6": [
+					"super-fang",
+					"bullet-seed",
+					"double-hit"
+				],
+				"level10": [
+					"encore",
+					"play-rough"
+				],
+				"level14": [
+					"hyper-voice",
+					"beat-up"
+				],
+				"level18": [
+					"charm",
+					"copycat",
+					"population-bomb"
+				],
+				"tm": [
+					11,
+					12,
+					15,
+					17,
+					18,
+					40,
+					42,
+					44,
+					46,
+					47,
+					65,
+					68,
+					73,
+					86,
+					88,
+					89,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/925.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/925.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/925.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/925.png"
+			}
+		},
+		{
 			"id": "annihilape",
 			"name": "Annihilape",
 			"number": 979,
