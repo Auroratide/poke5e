@@ -265,6 +265,11 @@
       "name": "Electric Surge",
       "description": "If the move is known, this Pokémon may use the Electric Terrain move as a bonus action."
     },
+		{
+      "id": "electromorphosis",
+      "name": "Electromorphosis",
+      "description": "When this Pokémon takes damage, it may double the MOVE damage modifier of its next electric-type move."
+    },
     {
       "id": "emergency-exit",
       "name": "Emergency Exit",
@@ -439,6 +444,11 @@
       "id": "grim-neigh",
       "name": "Grim Neigh",
       "description": "Upon causing an opponent to faint, this Pokémon may immediately move up to 20ft take another action."
+    },
+		{
+      "id": "guard-dog",
+      "name": "Guard Dog",
+      "description": "This Pokémon cannot be forcibly switched out by other moves. Intimidation rolls made against this Pokémon have disadvantage. This Pokémon is unaffected by the Intimidate ability."
     },
     {
       "id": "gulp-missile",
@@ -1419,6 +1429,11 @@
       "id": "wimp-out",
       "name": "Wimp Out",
       "description": "When a damaging move causes this Pokémon to fall below 50% of its maximum HP, it MUST disengage and move up to its speed in a straight line towards its trainer as a free action. If this would put the Pokémon in range of switching out, it must do so as another free action if another Pokémon is available to replace it."
+    },
+		{
+      "id": "wind-power",
+      "name": "Wind Power",
+      "description": "When this Pokémon is damaged by a wind move, the number of damage dice used for its next electric-type attack doubles. Wind moves include Air Cutter, Bleakwind Storm, Blizzard, Fairy Wind, Gust, Heat Wave, Hurricane, Icy Wind, Petal Blizzard, Sandsear Storm, Sandstorm, Springtide Storm, Tailwind, Twister, Whirlwind, and Wildbolt Storm."
     },
     {
       "id": "wonder-guard",

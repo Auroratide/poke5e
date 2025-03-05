@@ -141969,6 +141969,734 @@
 			}
 		},
 		{
+			"id": "tadbulb",
+			"name": "Tadbulb",
+			"number": 938,
+			"type": [
+				"electric"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"water-1"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "bellibolt",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							},
+							{
+								"type": "item",
+								"value": "Thunder Stone"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The EleTadpole Pokémon. Tadbulb shakes its tail to generate electricity. If it senses danger, it will make its head blink on and off to alert its allies.",
+			"ac": 12,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 11,
+				"con": 13,
+				"int": 6,
+				"wis": 11,
+				"cha": 10
+			},
+			"hp": 18,
+			"skills": [
+				"perception"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "own-tempo",
+					"hidden": false
+				},
+				{
+					"id": "static",
+					"hidden": false
+				},
+				{
+					"id": "damp",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"mud-slap"
+				],
+				"level2": [
+					"thunder-shock",
+					"water-gun"
+				],
+				"level6": [
+					"charge",
+					"mud-shot"
+				],
+				"level10": [
+					"flail",
+					"spark"
+				],
+				"level14": [
+					"discharge",
+					"weather-ball",
+					"electric-terrain"
+				],
+				"level18": [
+					"zap-cannon",
+					"sucker-punch"
+				],
+				"tm": [
+					16,
+					17,
+					18,
+					24,
+					25,
+					33,
+					44,
+					57,
+					72,
+					73,
+					88,
+					90,
+					93
+				],
+				"egg": [
+					"muddy-water",
+					"soak",
+					"parabolic-charge"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/938.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/938.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/938.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/938.png"
+			}
+		},
+		{
+			"id": "bellibolt",
+			"name": "Bellibolt",
+			"number": 939,
+			"type": [
+				"electric"
+			],
+			"size": "small",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"water-1"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"tadbulb"
+				]
+			},
+			"description": "The EleFrog Pokémon. When this Pokémon expands and contracts its wobbly body, the belly-button dynamo in its stomach produces a huge amount of electricity.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 12,
+				"con": 16,
+				"int": 6,
+				"wis": 14,
+				"cha": 10
+			},
+			"hp": 85,
+			"skills": [
+				"perception"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "electromorphosis",
+					"hidden": false
+				},
+				{
+					"id": "static",
+					"hidden": false
+				},
+				{
+					"id": "damp",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"mud-slap",
+					"slack-off",
+					"thunder-shock",
+					"water-gun"
+				],
+				"level6": [
+					"charge",
+					"mud-shot"
+				],
+				"level10": [
+					"flail",
+					"spark"
+				],
+				"level14": [
+					"discharge",
+					"weather-ball",
+					"electric-terrain"
+				],
+				"level18": [
+					"zap-cannon",
+					"sucker-punch"
+				],
+				"tm": [
+					6,
+					15,
+					16,
+					17,
+					18,
+					24,
+					25,
+					33,
+					44,
+					57,
+					68,
+					72,
+					73,
+					88,
+					90,
+					93
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/939.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/939.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/939.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/939.png"
+			}
+		},
+		{
+			"id": "wattrel",
+			"name": "Wattrel",
+			"number": 940,
+			"type": [
+				"electric",
+				"flying"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"water-1",
+				"flying"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "kilowattrel",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Storm Petrel Pokémon. When its wings catch the wind, the bones within produce electricity. This Pokémon dives into the ocean, catching prey by electrocuting them.",
+			"ac": 14,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "flying",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 11,
+				"dex": 15,
+				"con": 11,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 16,
+			"skills": [
+				"acrobatics"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "wind-power",
+					"hidden": false
+				},
+				{
+					"id": "volt-absorb",
+					"hidden": false
+				},
+				{
+					"id": "competitive",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"growl",
+					"peck"
+				],
+				"level2": [
+					"thunder-shock",
+					"quick-attack"
+				],
+				"level6": [
+					"spark",
+					"uproar",
+					"pluck"
+				],
+				"level10": [
+					"roost",
+					"dual-wingbeat"
+				],
+				"level14": [
+					"agility",
+					"volt-switch"
+				],
+				"level18": [
+					"discharge"
+				],
+				"tm": [
+					17,
+					24,
+					25,
+					40,
+					42,
+					44,
+					57,
+					62,
+					73,
+					76,
+					88,
+					89,
+					90,
+					93
+				],
+				"egg": [
+					"stockpile",
+					"spit-up",
+					"swallow",
+					"endeavor",
+					"feather-dance",
+					"weather-ball"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/940.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/940.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/940.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/940.png"
+			}
+		},
+		{
+			"id": "kilowattrel",
+			"name": "Kilowattrel",
+			"number": 941,
+			"type": [
+				"electric",
+				"flying"
+			],
+			"size": "medium",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"water-1",
+				"flying"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"wattrel"
+				]
+			},
+			"description": "The Frigatebird Pokémon. Kilowattrel inflates its throat sac to amplify its electricity. By riding the wind, this Pokémon can fly over 430 miles in a day.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "flying",
+					"value": 45
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 18,
+				"con": 13,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 68,
+			"skills": [
+				"acrobatics"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "wind-power",
+					"hidden": false
+				},
+				{
+					"id": "volt-absorb",
+					"hidden": false
+				},
+				{
+					"id": "competitive",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"growl",
+					"peck",
+					"electro-ball",
+					"thunder-shock",
+					"quick-attack"
+				],
+				"level6": [
+					"spark",
+					"uproar",
+					"pluck"
+				],
+				"level10": [
+					"roost",
+					"dual-wingbeat"
+				],
+				"level14": [
+					"agility",
+					"volt-switch"
+				],
+				"level18": [
+					"discharge",
+					"hurricane"
+				],
+				"tm": [
+					15,
+					17,
+					24,
+					25,
+					40,
+					42,
+					44,
+					57,
+					62,
+					68,
+					73,
+					76,
+					88,
+					89,
+					90,
+					93
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/941.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/941.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/941.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/941.png"
+			}
+		},
+		{
+			"id": "maschiff",
+			"name": "Maschiff",
+			"number": 942,
+			"type": [
+				"dark"
+			],
+			"size": "tiny",
+			"sr": 1,
+			"minLevel": 1,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "mabosstiff",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 9
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Rascal Pokémon. It always scowls in an attempt to make opponents take it seriously, but even crying children will burst into laughter when they see Maschiff’s face.",
+			"ac": 14,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 12,
+				"con": 14,
+				"int": 6,
+				"wis": 10,
+				"cha": 12
+			},
+			"hp": 18,
+			"skills": [
+				"perception",
+				"intimidation"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "intimidate",
+					"hidden": false
+				},
+				{
+					"id": "run-away",
+					"hidden": false
+				},
+				{
+					"id": "stakeout",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer",
+					"scary-face"
+				],
+				"level2": [
+					"lick",
+					"hone-claws",
+					"snarl"
+				],
+				"level6": [
+					"bite",
+					"roar"
+				],
+				"level10": [
+					"headbutt",
+					"payback"
+				],
+				"level14": [
+					"swagger",
+					"crunch",
+					"reversal"
+				],
+				"level18": [
+					"double-edge",
+					"jaw-lock"
+				],
+				"tm": [
+					11,
+					12,
+					17,
+					18,
+					42,
+					44,
+					46,
+					88,
+					90,
+					97
+				],
+				"egg": [
+					"destiny-bond",
+					"endeavor",
+					"retaliate",
+					"play-rough"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/942.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/942.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/942.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/942.png"
+			}
+		},
+		{
+			"id": "mabosstiff",
+			"name": "Mabosstiff",
+			"number": 943,
+			"type": [
+				"dark"
+			],
+			"size": "small",
+			"sr": 10,
+			"minLevel": 8,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"maschiff"
+				]
+			},
+			"description": "The Boss Pokémon. This Pokémon can store energy in its large dewlap. Mabosstiff unleashes this energy all at once to blow away enemies.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 15,
+				"con": 16,
+				"int": 6,
+				"wis": 10,
+				"cha": 14
+			},
+			"hp": 84,
+			"skills": [
+				"perception",
+				"intimidation"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "intimidate",
+					"hidden": false
+				},
+				{
+					"id": "guard-dog",
+					"hidden": false
+				},
+				{
+					"id": "stakeout",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer",
+					"scary-face",
+					"comeuppance",
+					"lick",
+					"hone-claws",
+					"snarl",
+					"bite",
+					"roar"
+				],
+				"level10": [
+					"headbutt",
+					"payback"
+				],
+				"level14": [
+					"swagger",
+					"crunch",
+					"reversal"
+				],
+				"level18": [
+					"double-edge",
+					"outrage",
+					"jaw-lock"
+				],
+				"tm": [
+					11,
+					12,
+					15,
+					17,
+					18,
+					42,
+					44,
+					46,
+					68,
+					88,
+					90,
+					93,
+					97
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/943.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/943.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/943.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/943.png"
+			}
+		},
+		{
 			"id": "annihilape",
 			"name": "Annihilape",
 			"number": 979,

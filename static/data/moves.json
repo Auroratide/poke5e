@@ -1769,6 +1769,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
     },
+		{
+      "id": "comeuppance",
+      "name": "Comeuppance",
+      "type": "dark",
+      "power": [
+        "str",
+        "dex"
+      ],
+      "time": "1 reaction",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "When you are hit by a melee attack, you can use your reaction to make a melee attack against the creature, doing 1d4 + MOVE dark damage on a successful hit."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d8 at level 10, and 2d6 at level 17."
+    },
     {
       "id": "cosmic-power",
       "name": "Cosmic Power",
@@ -2751,6 +2768,23 @@
       "range": "melee",
       "description": [
         "You lash out at a creature(s) with two quick strikes. Make two melee attack rolls, dealing 1d6 + MOVE dragon damage with each hit."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
+    },
+		{
+      "id": "dual-wingbeat",
+      "name": "Dual Wingbeat",
+      "type": "flying",
+      "power": [
+				"str",
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You slam a target with both of your wings. Make two melee attack rolls against a target, doing 1d6 + MOVE flying damage on each hit."
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
     },
