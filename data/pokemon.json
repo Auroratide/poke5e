@@ -139655,6 +139655,1951 @@
 			}
 		},
 		{
+			"id": "nymble",
+			"name": "Nymble",
+			"number": 919,
+			"type": [
+				"bug"
+			],
+			"size": "tiny",
+			"sr": 0.125,
+			"minLevel": 1,
+			"eggGroup": [
+				"bug"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "lokix",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The Grasshopper Pokémon. It has its third set of legs folded up. When it’s in a tough spot, this Pokémon jumps over 30 feet using the strength of its legs.",
+			"ac": 12,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 11,
+				"dex": 13,
+				"con": 10,
+				"int": 6,
+				"wis": 9,
+				"cha": 9
+			},
+			"hp": 16,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "swarm",
+					"hidden": false
+				},
+				{
+					"id": "tinted-lens",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer"
+				],
+				"level2": [
+					"astonish",
+					"assurance",
+					"struggle-bug"
+				],
+				"level6": [
+					"double-kick",
+					"screech",
+					"endure"
+				],
+				"level10": [
+					"agility",
+					"feint",
+					"bug-bite"
+				],
+				"level14": [
+					"sucker-punch"
+				],
+				"level18": [
+					"first-impression"
+				],
+				"tm": [
+					11,
+					17,
+					18,
+					28,
+					42,
+					44,
+					46,
+					81,
+					88,
+					89,
+					90,
+					101
+				],
+				"egg": [
+					"counter",
+					"skitter-smack"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/919.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/919.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/919.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/919.png"
+			}
+		},
+		{
+			"id": "lokix",
+			"name": "Lokix",
+			"number": 920,
+			"type": [
+				"bug",
+				"dark"
+			],
+			"size": "small",
+			"sr": 5,
+			"minLevel": 5,
+			"eggGroup": [
+				"bug"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"nymble"
+				]
+			},
+			"description": "The Grasshopper Pokémon. When it decides to fight all out, it stands on its previously folded legs to enter Showdown Mode. It neutralizes its enemies in short order.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 35
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 17,
+				"con": 13,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 41,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "swarm",
+					"hidden": false
+				},
+				{
+					"id": "tinted-lens",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer",
+					"low-kick",
+					"detect",
+					"lunge",
+					"astonish",
+					"assurance",
+					"struggle-bug"
+				],
+				"level6": [
+					"double-kick",
+					"screech",
+					"endure"
+				],
+				"level10": [
+					"feint",
+					"bug-bite"
+				],
+				"level14": [
+					"agility",
+					"sucker-punch"
+				],
+				"level18": [
+					"bounce",
+					"first-impression",
+					"throat-chop",
+					"axe-kick"
+				],
+				"tm": [
+					11,
+					12,
+					17,
+					18,
+					28,
+					31,
+					40,
+					42,
+					44,
+					46,
+					47,
+					56,
+					68,
+					75,
+					81,
+					88,
+					89,
+					90,
+					97,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/920.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/920.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/920.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/920.png"
+			}
+		},
+		{
+			"id": "pawmi",
+			"name": "Pawmi",
+			"number": 921,
+			"type": [
+				"electric"
+			],
+			"size": "tiny",
+			"sr": 0.25,
+			"minLevel": 1,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "1",
+				"to": [
+					{
+						"id": "pawmo",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 6
+							}
+						]
+					}
+				]
+			},
+			"description": "The Mouse Pokémon. It has underdeveloped electric sacs on its cheeks. These sacs can produce electricity only if Pawmi rubs them furiously with the pads on its forepaws.",
+			"ac": 11,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 11,
+				"dex": 13,
+				"con": 11,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 16,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "static",
+					"hidden": false
+				},
+				{
+					"id": "natural-cure",
+					"hidden": false
+				},
+				{
+					"id": "iron-fist",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"growl"
+				],
+				"level2": [
+					"thunder-shock",
+					"quick-attack",
+					"charge"
+				],
+				"level6": [
+					"bite",
+					"dig",
+					"nuzzle"
+				],
+				"level10": [
+					"thunder-wave",
+					"spark"
+				],
+				"level14": [
+					"slam",
+					"entrainment"
+				],
+				"level18": [
+					"agility",
+					"discharge",
+					"wild-charge"
+				],
+				"tm": [
+					11,
+					17,
+					18,
+					24,
+					25,
+					42,
+					44,
+					46,
+					56,
+					57,
+					72,
+					88,
+					90
+				],
+				"egg": [
+					"mach-punch",
+					"sweet-kiss",
+					"fake-out",
+					"wish"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/921.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/921.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/921.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/921.png"
+			}
+		},
+		{
+			"id": "pawmo",
+			"name": "Pawmo",
+			"number": 922,
+			"type": [
+				"electric",
+				"fighting"
+			],
+			"size": "tiny",
+			"sr": 4,
+			"minLevel": 5,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"pawmi"
+				],
+				"to": [
+					{
+						"id": "pawmot",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 12
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Mouse Pokémon. When its group is attacked, Pawmo is the first to leap into battle, defeating enemies with a fighting technique that utilizes electric shocks.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 16,
+				"con": 13,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 37,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "volt-absorb",
+					"hidden": false
+				},
+				{
+					"id": "natural-cure",
+					"hidden": false
+				},
+				{
+					"id": "iron-fist",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"growl",
+					"arm-thrust",
+					"thunder-shock",
+					"quick-attack",
+					"charge"
+				],
+				"level6": [
+					"bite",
+					"dig",
+					"nuzzle"
+				],
+				"level10": [
+					"thunder-wave",
+					"spark"
+				],
+				"level14": [
+					"slam",
+					"entrainment"
+				],
+				"level18": [
+					"agility",
+					"discharge",
+					"wild-charge"
+				],
+				"tm": [
+					11,
+					17,
+					18,
+					24,
+					25,
+					42,
+					44,
+					46,
+					47,
+					56,
+					57,
+					72,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/922.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/922.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/922.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/922.png"
+			}
+		},
+		{
+			"id": "pawmot",
+			"name": "Pawmot",
+			"number": 923,
+			"type": [
+				"electric",
+				"fighting"
+			],
+			"size": "small",
+			"sr": 10,
+			"minLevel": 8,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"pawmo"
+				]
+			},
+			"description": "The Hands-On Pokémon. This Pokémon normally is slow to react, but once it enters battle, it will strike down its enemies with lightning-fast movements.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 19,
+				"con": 14,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 76,
+			"skills": [
+				"acrobatics",
+				"survival"
+			],
+			"savingThrows": [
+				"str",
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "volt-absorb",
+					"hidden": false
+				},
+				{
+					"id": "natural-cure",
+					"hidden": false
+				},
+				{
+					"id": "iron-fist",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"growl",
+					"wild-charge",
+					"revival-blessing",
+					"thunder-shock",
+					"quick-attack",
+					"charge",
+					"bite",
+					"dig",
+					"nuzzle"
+				],
+				"level10": [
+					"thunder-wave",
+					"spark",
+					"arm-thrust"
+				],
+				"level14": [
+					"slam",
+					"entrainment"
+				],
+				"level18": [
+					"agility",
+					"close-combat",
+					"discharge",
+					"double-shock"
+				],
+				"tm": [
+					8,
+					11,
+					15,
+					17,
+					18,
+					24,
+					25,
+					31,
+					39,
+					42,
+					44,
+					46,
+					47,
+					52,
+					56,
+					57,
+					68,
+					72,
+					86,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/923.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/923.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/923.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/923.png"
+			}
+		},
+		{
+			"id": "tandemaus",
+			"name": "Tandemaus",
+			"number": 924,
+			"type": [
+				"normal"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"field",
+				"fairy"
+			],
+			"gender": "0:0",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "maushold",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Couple Pokémon. Exhibiting great teamwork, they use their incisors to cut pieces out of any material that might be useful for a nest, then make off with them.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 14,
+				"con": 12,
+				"int": 6,
+				"wis": 11,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [
+				"sleight of hand"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "run-away",
+					"hidden": false
+				},
+				{
+					"id": "pickup",
+					"hidden": false
+				},
+				{
+					"id": "own-tempo",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"pound",
+					"baby-doll-eyes"
+				],
+				"level2": [
+					"helping-hand",
+					"echoed-voice"
+				],
+				"level6": [
+					"super-fang",
+					"bullet-seed",
+					"double-hit"
+				],
+				"level10": [
+					"encore",
+					"hyper-voice",
+					"play-rough"
+				],
+				"level14": [
+					"charm",
+					"beat-up"
+				],
+				"level18": [
+					"copycat",
+					"population-bomb"
+				],
+				"tm": [
+					11,
+					12,
+					17,
+					18,
+					40,
+					42,
+					44,
+					46,
+					47,
+					65,
+					73,
+					86,
+					88,
+					89,
+					90
+				],
+				"egg": [
+					"bite",
+					"baton-pass",
+					"tickle",
+					"feint",
+					"switcheroo",
+					"after-you"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/924.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/924.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/924.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/924.png"
+			}
+		},
+		{
+			"id": "maushold",
+			"name": "Maushold",
+			"number": 925,
+			"type": [
+				"normal"
+			],
+			"size": "tiny",
+			"sr": 6,
+			"minLevel": 5,
+			"eggGroup": [
+				"field",
+				"fairy"
+			],
+			"gender": "0:0",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"tandemaus"
+				]
+			},
+			"description": "The Family Pokémon. The two little ones just appeared one day. The group might be a family of related Pokémon, but nobody knows for sure.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 18,
+				"con": 13,
+				"int": 6,
+				"wis": 14,
+				"cha": 10
+			},
+			"hp": 45,
+			"skills": [
+				"sleight of hand"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "friend-guard",
+					"hidden": false
+				},
+				{
+					"id": "cheek-pouch",
+					"hidden": false
+				},
+				{
+					"id": "technician",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"pound",
+					"follow-me",
+					"baby-doll-eyes",
+					"tidy-up",
+					"helping-hand",
+					"echoed-voice"
+				],
+				"level6": [
+					"super-fang",
+					"bullet-seed",
+					"double-hit"
+				],
+				"level10": [
+					"encore",
+					"play-rough"
+				],
+				"level14": [
+					"hyper-voice",
+					"beat-up"
+				],
+				"level18": [
+					"charm",
+					"copycat",
+					"population-bomb"
+				],
+				"tm": [
+					11,
+					12,
+					15,
+					17,
+					18,
+					40,
+					42,
+					44,
+					46,
+					47,
+					65,
+					68,
+					73,
+					86,
+					88,
+					89,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/925.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/925.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/925.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/925.png"
+			}
+		},
+		{
+			"id": "fidough",
+			"name": "Fidough",
+			"number": 926,
+			"type": [
+				"fairy"
+			],
+			"size": "tiny",
+			"sr": 1,
+			"minLevel": 1,
+			"eggGroup": [
+				"field",
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "dachsbun",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Puppy Pokémon. This Pokémon is smooth and moist to the touch. Yeast in Fidough’s breath induces fermentation in the Pokémon’s vicinity.",
+			"ac": 14,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 11,
+				"dex": 14,
+				"con": 10,
+				"int": 6,
+				"wis": 12,
+				"cha": 12
+			},
+			"hp": 17,
+			"skills": [
+				"perception"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "own-tempo",
+					"hidden": false
+				},
+				{
+					"id": "klutz",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"growl"
+				],
+				"level2": [
+					"tail-whip",
+					"lick",
+					"covet"
+				],
+				"level6": [
+					"bite",
+					"play-rough",
+					"baby-doll-eyes"
+				],
+				"level10": [
+					"roar",
+					"baton-pass",
+					"work-up"
+				],
+				"level14": [
+					"double-edge",
+					"charm"
+				],
+				"level18": [
+					"crunch",
+					"last-resort"
+				],
+				"tm": [
+					11,
+					17,
+					18,
+					42,
+					44,
+					77,
+					88,
+					90,
+					95,
+					99
+				],
+				"egg": [
+					"sweet-scent",
+					"wish",
+					"yawn",
+					"howl",
+					"copycat"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/926.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/926.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/926.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/926.png"
+			}
+		},
+		{
+			"id": "dachsbun",
+			"name": "Dachsbun",
+			"number": 927,
+			"type": [
+				"fairy"
+			],
+			"size": "tiny",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"field",
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"fidough"
+				]
+			},
+			"description": "The Dog Pokémon. The pleasant aroma that emanates from this Pokémon’s body helps wheat grow, so Dachsbun has been treasured by farming villages.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 35
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 15,
+				"con": 12,
+				"int": 6,
+				"wis": 15,
+				"cha": 15
+			},
+			"hp": 44,
+			"skills": [
+				"perception",
+				"insight"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "well-baked-body",
+					"hidden": false
+				},
+				{
+					"id": "aroma-veil",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"growl",
+					"tail-whip",
+					"lick",
+					"covet"
+				],
+				"level6": [
+					"bite",
+					"play-rough",
+					"baby-doll-eyes"
+				],
+				"level10": [
+					"baton-pass",
+					"work-up"
+				],
+				"level14": [
+					"roar",
+					"double-edge",
+					"charm"
+				],
+				"level18": [
+					"crunch",
+					"last-resort"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					18,
+					42,
+					44,
+					68,
+					77,
+					88,
+					90,
+					95,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/927.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/927.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/927.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/927.png"
+			}
+		},
+		{
+			"id": "smoliv",
+			"name": "Smoliv",
+			"number": 928,
+			"type": [
+				"grass",
+				"normal"
+			],
+			"size": "tiny",
+			"sr": 0.25,
+			"minLevel": 1,
+			"eggGroup": [
+				"grass"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "1",
+				"to": [
+					{
+						"id": "dolliv",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 6
+							}
+						]
+					}
+				]
+			},
+			"description": "The Olive Pokémon. It protects itself from enemies by emitting oil from the fruit on its head. This oil is bitter and astringent enough to make someone flinch.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 11,
+				"dex": 10,
+				"con": 12,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "early-bird",
+					"hidden": false
+				},
+				{
+					"id": "harvest",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"sweet-scent"
+				],
+				"level2": [
+					"absorb",
+					"growth",
+					"razor-leaf"
+				],
+				"level6": [
+					"mega-drain",
+					"flail",
+					"helping-hand"
+				],
+				"level10": [
+					"seed-bomb",
+					"energy-ball",
+					"grassy-terrain"
+				],
+				"level14": [
+					"leech-seed"
+				],
+				"level18": [
+					"terrain-pulse"
+				],
+				"tm": [
+					11,
+					17,
+					22,
+					42,
+					44,
+					86,
+					88,
+					90
+				],
+				"egg": [
+					"synthesis",
+					"memento",
+					"weather-ball",
+					"strength-sap"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/928.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/928.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/928.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/928.png"
+			}
+		},
+		{
+			"id": "dolliv",
+			"name": "Dolliv",
+			"number": 929,
+			"type": [
+				"grass",
+				"normal"
+			],
+			"size": "tiny",
+			"sr": 4,
+			"minLevel": 5,
+			"eggGroup": [
+				"grass"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"smoliv"
+				],
+				"to": [
+					{
+						"id": "arboliva",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 14
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Olive Pokémon. Dolliv shares its tasty, fresh-scented oil with others. This species has coexisted with humans since times long gone.",
+			"ac": 15,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 10,
+				"con": 14,
+				"int": 6,
+				"wis": 15,
+				"cha": 10
+			},
+			"hp": 44,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "early-bird",
+					"hidden": false
+				},
+				{
+					"id": "harvest",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"sweet-scent",
+					"absorb",
+					"growth",
+					"razor-leaf"
+				],
+				"level6": [
+					"mega-drain",
+					"flail",
+					"helping-hand"
+				],
+				"level10": [
+					"seed-bomb",
+					"grassy-terrain"
+				],
+				"level14": [
+					"energy-ball",
+					"leech-seed"
+				],
+				"level18": [
+					"terrain-pulse"
+				],
+				"tm": [
+					11,
+					17,
+					22,
+					42,
+					44,
+					86,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/929.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/929.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/929.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/929.png"
+			}
+		},
+		{
+			"id": "arboliva",
+			"name": "Arboliva",
+			"number": 930,
+			"type": [
+				"grass",
+				"normal"
+			],
+			"size": "medium",
+			"sr": 11,
+			"minLevel": 10,
+			"eggGroup": [
+				"grass"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"dolliv"
+				]
+			},
+			"description": "The Olive Pokémon. This calm Pokémon is very compassionate. It will share its delicious, nutrient-rich oil with weakened Pokémon.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 11,
+				"con": 16,
+				"int": 6,
+				"wis": 18,
+				"cha": 12
+			},
+			"hp": 102,
+			"skills": [
+				"medicine",
+				"survival"
+			],
+			"savingThrows": [
+				"con",
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "seed-sower",
+					"hidden": false
+				},
+				{
+					"id": "harvest",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"safeguard",
+					"sweet-scent",
+					"mirror-coat",
+					"absorb",
+					"growth",
+					"razor-leaf",
+					"mega-drain",
+					"flail",
+					"helping-hand",
+					"seed-bomb",
+					"grassy-terrain"
+				],
+				"level14": [
+					"energy-ball",
+					"leech-seed"
+				],
+				"level18": [
+					"petal-dance",
+					"petal-blizzard",
+					"terrain-pulse"
+				],
+				"tm": [
+					11,
+					15,
+					16,
+					17,
+					22,
+					33,
+					42,
+					44,
+					56,
+					68,
+					77,
+					86,
+					88,
+					90,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/930.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/930.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/930.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/930.png"
+			}
+		},
+		{
+			"id": "squawkabilly",
+			"name": "Squawkabilly",
+			"number": 931,
+			"type": [
+				"normal",
+				"flying"
+			],
+			"size": "tiny",
+			"sr": 4,
+			"minLevel": 1,
+			"eggGroup": [
+				"flying"
+			],
+			"gender": "1:1",
+			"description": "The Parrot Pokémon. These Pokémon prefer to live in cities. They form flocks based on the color of their feathers, and they fight over territory.",
+			"ac": 14,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 15
+				},
+				{
+					"type": "flying",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 14,
+				"con": 12,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 19,
+			"skills": [
+				"perception"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "intimidate",
+					"hidden": false
+				},
+				{
+					"id": "hustle",
+					"hidden": false
+				},
+				{
+					"id": "guts",
+					"hidden": true
+				},
+				{
+					"id": "sheer-force",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"growl",
+					"peck",
+					"mimic"
+				],
+				"level2": [
+					"quick-attack",
+					"torment"
+				],
+				"level6": [
+					"fury-attack",
+					"taunt",
+					"aerial-ace"
+				],
+				"level10": [
+					"fly",
+					"uproar",
+					"copycat"
+				],
+				"level14": [
+					"facade",
+					"swagger",
+					"brave-bird"
+				],
+				"level18": [
+					"reversal",
+					"roost"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					44,
+					46,
+					68,
+					88,
+					89,
+					90,
+					101
+				],
+				"egg": [
+					"double-edge",
+					"flatter",
+					"final-gambit",
+					"parting-shot"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/931.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/931.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/931.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/931.png"
+			}
+		},
+		{
+			"id": "nacli",
+			"name": "Nacli",
+			"number": 932,
+			"type": [
+				"rock"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "1",
+				"to": [
+					{
+						"id": "naclstack",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 6
+							}
+						]
+					}
+				]
+			},
+			"description": "The Rock Salt Pokémon. It was born in a layer of rock salt deep under the earth. This species was particularly treasured in the old days, as they would share precious salt.",
+			"ac": 14,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 10,
+				"con": 14,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 18,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [
+				{
+					"type": "tremmorsense",
+					"value": 20
+				}
+			],
+			"abilities": [
+				{
+					"id": "purifying-salt",
+					"hidden": false
+				},
+				{
+					"id": "sturdy",
+					"hidden": false
+				},
+				{
+					"id": "clear-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"harden"
+				],
+				"level2": [
+					"rock-throw",
+					"mud-shot",
+					"smack-down"
+				],
+				"level6": [
+					"headbutt",
+					"iron-defense",
+					"rock-polish"
+				],
+				"level10": [
+					"recover",
+					"rock-slide"
+				],
+				"level14": [
+					"stealth-rock",
+					"heavy-slam"
+				],
+				"level18": [
+					"earthquake",
+					"stone-edge"
+				],
+				"tm": [
+					11,
+					17,
+					18,
+					37,
+					42,
+					44,
+					78,
+					88,
+					90,
+					91
+				],
+				"egg": [
+					"fissure",
+					"curse",
+					"ancient-power",
+					"power-gem"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/932.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/932.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/932.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/932.png"
+			}
+		},
+		{
+			"id": "naclstack",
+			"name": "Naclstack",
+			"number": 933,
+			"type": [
+				"rock"
+			],
+			"size": "tiny",
+			"sr": 5,
+			"minLevel": 5,
+			"eggGroup": [
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"nacli"
+				],
+				"to": [
+					{
+						"id": "garganacl",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 14
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Rock Salt Pokémon. This Pokémon dry cures its prey by spraying salt over them. The curing process steals away the water in the prey’s body.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 10,
+				"con": 16,
+				"int": 6,
+				"wis": 10,
+				"cha": 11
+			},
+			"hp": 48,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [
+				{
+					"type": "tremmorsense",
+					"value": 20
+				}
+			],
+			"abilities": [
+				{
+					"id": "purifying-salt",
+					"hidden": false
+				},
+				{
+					"id": "sturdy",
+					"hidden": false
+				},
+				{
+					"id": "clear-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"harden",
+					"salt-cure",
+					"rock-throw",
+					"mud-shot",
+					"smack-down"
+				],
+				"level6": [
+					"headbutt",
+					"iron-defense",
+					"rock-polish"
+				],
+				"level10": [
+					"recover",
+					"rock-slide"
+				],
+				"level14": [
+					"stealth-rock",
+					"heavy-slam"
+				],
+				"level18": [
+					"earthquake",
+					"stone-edge"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					18,
+					37,
+					42,
+					44,
+					68,
+					78,
+					88,
+					90,
+					91
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/933.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/933.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/933.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/933.png"
+			}
+		},
+		{
+			"id": "garganacl",
+			"name": "Garganacl",
+			"number": 934,
+			"type": [
+				"rock"
+			],
+			"size": "large",
+			"sr": 13,
+			"minLevel": 10,
+			"eggGroup": [
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"naclstack"
+				]
+			},
+			"description": "The Rock Salt Pokémon. Garganacl will rub its fingertips together and sprinkle injured Pokémon with salt. Even severe wounds will promptly heal afterward.",
+			"ac": 19,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 10,
+				"con": 19,
+				"int": 6,
+				"wis": 10,
+				"cha": 13
+			},
+			"hp": 120,
+			"skills": [
+				"athletics",
+				"insight"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [
+				{
+					"type": "tremmorsense",
+					"value": 20
+				}
+			],
+			"abilities": [
+				{
+					"id": "purifying-salt",
+					"hidden": false
+				},
+				{
+					"id": "sturdy",
+					"hidden": false
+				},
+				{
+					"id": "clear-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"harden",
+					"block",
+					"rock-blast",
+					"hammer-arm",
+					"wide-guard",
+					"rock-throw",
+					"rock-tomb",
+					"mud-shot",
+					"headbutt",
+					"rock-polish",
+					"recover",
+					"salt-cure"
+				],
+				"level14": [
+					"rock-slide",
+					"stealth-rock",
+					"heavy-slam"
+				],
+				"level18": [
+					"earthquake",
+					"explosion",
+					"stone-edge"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					18,
+					23,
+					31,
+					37,
+					42,
+					44,
+					56,
+					68,
+					78,
+					88,
+					90,
+					91
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/934.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/934.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/934.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/934.png"
+			}
+		},
+		{
 			"id": "annihilape",
 			"name": "Annihilape",
 			"number": 979,
