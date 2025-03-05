@@ -392,6 +392,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d8 at level 10, and 2d6 at level 17."
     },
+		{
+      "id": "armor-cannon",
+      "name": "Armor Cannon",
+      "type": "fire",
+      "power": [
+				"str",
+        "con"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "60ft",
+      "description": [
+        "You shoot your own armor out as blazing projectiles. Make a ranged attack against a target in range, dealing 2d10 + MOVE fire damage on a hit. Until the end of your next turn, all attacks made against you have advantage, and you have disadvantage on all CON saves."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 4d10 at level 10, and 7d8 at level 17."
+    },
     {
       "id": "aromatherapy",
       "name": "Aromatherapy",
@@ -852,6 +869,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
       "optional": ["Instead of a natural roll of 19 or higher, the target must make a CON save against your MOVE DC. On failure, the target flinches."]
+    },
+		{
+      "id": "bitter-blade",
+      "name": "Bitter Blade",
+      "type": "fire",
+      "power": [
+				"str",
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You focus your bitter feelings toward the world of the living into a slashing attack. Make a melee attack, doing 2d6 + MOVE fire damage on a hit. Half of the damage dealt is restored to the user."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
     },
 		{
       "id": "bitter-malice",
@@ -3092,6 +3126,23 @@
         "You unleash an overwhelmingly powerful beam of pure energy. Target a point within range. Each creature in a 20-foot-radius sphere centered on that point makes a DEX saving throw against your Move DC, taking 8d6 + MOVE dragon damage on fail, half on success. You become incapacitated until the end of your next turn."
       ],
 			"higherLevels": "The damage dice roll for this move changes to 10d6 at level 5, 12d6 at level 10, and 14d6 at level 17."
+    },
+		{
+      "id": "expanding-force",
+      "name": "Expanding Force",
+      "type": "psychic",
+      "power": [
+				"int",
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "40ft",
+      "description": [
+        "You attack with psychic power. Choose a target in range. That target makes a WIS save against your Move DC, taking 1d6 + MOVE psychic damage on failure or half damage on success. If you are under the effects of Psychic Terrain, then this move deals an additional 1d6 psychic damage, and you may choose any number of targets subject to the same terrain effect to make the save."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 3d6 at level 10, and 4d6 at level 17."
     },
     {
       "id": "explosion",

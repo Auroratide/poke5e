@@ -141600,6 +141600,375 @@
 			}
 		},
 		{
+			"id": "charcadet",
+			"name": "Charcadet",
+			"number": 935,
+			"type": [
+				"fire"
+			],
+			"size": "tiny",
+			"sr": 1,
+			"minLevel": 1,
+			"eggGroup": [
+				"human-like"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "armarouge",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							},
+							{
+								"type": "item",
+								"value": "Auspicious Armor"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					},
+					{
+						"id": "ceruledge",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							},
+							{
+								"type": "item",
+								"value": "Malicious Armor"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The Fire Child Pokémon. Burnt charcoal came to life and became a Pokémon. Possessing a fiery fighting spirit, Charcadet will battle even tough opponents.",
+			"ac": 12,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 13,
+				"con": 10,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [
+				"intimidation"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "flash-fire",
+					"hidden": false
+				},
+				{
+					"id": "flame-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"ember",
+					"astonish"
+				],
+				"level2": [
+					"clear-smog"
+				],
+				"level6": [
+					"fire-spin",
+					"night-shade",
+					"will-o-wisp"
+				],
+				"level10": [
+					"flame-charge",
+					"incinerate"
+				],
+				"level14": [
+					"lava-plume"
+				],
+				"tm": [
+					11,
+					17,
+					35,
+					38,
+					42,
+					50,
+					88,
+					90
+				],
+				"egg": [
+					"disable",
+					"spite",
+					"destiny-bond"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/935.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/935.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/935.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/935.png"
+			}
+		},
+		{
+			"id": "armarouge",
+			"name": "Armarouge",
+			"number": 936,
+			"type": [
+				"fire",
+				"psychic"
+			],
+			"size": "medium",
+			"sr": 11,
+			"minLevel": 8,
+			"eggGroup": [
+				"human-like"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"charcadet"
+				]
+			},
+			"description": "The Fire Warrior Pokémon. Armarouge evolved through the use of a set of armor that belonged to a distinguished warrior. This Pokémon is incredibly loyal.",
+			"ac": 18,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 12,
+				"con": 17,
+				"int": 8,
+				"wis": 15,
+				"cha": 10
+			},
+			"hp": 85,
+			"skills": [
+				"intimidation"
+			],
+			"savingThrows": [
+				"dex",
+				"con",
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "flash-fire",
+					"hidden": false
+				},
+				{
+					"id": "weak-armor",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"ember",
+					"astonish",
+					"wide-guard",
+					"psyshock",
+					"mystical-fire",
+					"clear-smog",
+					"fire-spin",
+					"night-shade",
+					"will-o-wisp"
+				],
+				"level10": [
+					"flame-charge",
+					"incinerate"
+				],
+				"level14": [
+					"lava-plume",
+					"ally-switch",
+					"flamethrower"
+				],
+				"level18": [
+					"calm-mind",
+					"expanding-force",
+					"armor-cannon"
+				],
+				"tm": [
+					11,
+					12,
+					16,
+					17,
+					22,
+					29,
+					30,
+					33,
+					38,
+					42,
+					44,
+					50,
+					52,
+					53,
+					56,
+					77,
+					88,
+					90,
+					91,
+					92,
+					97
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/936.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/936.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/936.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/936.png"
+			}
+		},
+		{
+			"id": "ceruledge",
+			"name": "Ceruledge",
+			"number": 937,
+			"type": [
+				"fire",
+				"ghost"
+			],
+			"size": "medium",
+			"sr": 11,
+			"minLevel": 8,
+			"eggGroup": [
+				"human-like"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"charcadet"
+				]
+			},
+			"description": "The Fire Blades Pokémon. The fiery blades on its arms burn fiercely with the lingering resentment of a sword wielder who fell before accomplishing their goal.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 17,
+				"con": 14,
+				"int": 8,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 75,
+			"skills": [
+				"acrobatics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "flash-fire",
+					"hidden": false
+				},
+				{
+					"id": "weak-armor",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"ember",
+					"astonish",
+					"shadow-claw",
+					"clear-smog",
+					"fire-spin",
+					"night-shade",
+					"will-o-wisp"
+				],
+				"level10": [
+					"flame-charge",
+					"incinerate"
+				],
+				"level14": [
+					"lava-plume",
+					"ally-switch",
+					"bitter-blade"
+				],
+				"level18": [
+					"swords-dance",
+					"flare-blitz",
+					"psycho-cut"
+				],
+				"tm": [
+					2,
+					8,
+					11,
+					12,
+					16,
+					17,
+					30,
+					31,
+					33,
+					35,
+					38,
+					42,
+					44,
+					50,
+					54,
+					56,
+					77,
+					81,
+					84,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/937.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/937.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/937.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/937.png"
+			}
+		},
+		{
 			"id": "annihilape",
 			"name": "Annihilape",
 			"number": 979,
