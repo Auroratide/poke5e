@@ -141103,6 +141103,503 @@
 			}
 		},
 		{
+			"id": "squawkabilly",
+			"name": "Squawkabilly",
+			"number": 931,
+			"type": [
+				"normal",
+				"flying"
+			],
+			"size": "tiny",
+			"sr": 4,
+			"minLevel": 1,
+			"eggGroup": [
+				"flying"
+			],
+			"gender": "1:1",
+			"description": "The Parrot Pokémon. These Pokémon prefer to live in cities. They form flocks based on the color of their feathers, and they fight over territory.",
+			"ac": 14,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 15
+				},
+				{
+					"type": "flying",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 14,
+				"con": 12,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 19,
+			"skills": [
+				"perception"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "intimidate",
+					"hidden": false
+				},
+				{
+					"id": "hustle",
+					"hidden": false
+				},
+				{
+					"id": "guts",
+					"hidden": true
+				},
+				{
+					"id": "sheer-force",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"growl",
+					"peck",
+					"mimic"
+				],
+				"level2": [
+					"quick-attack",
+					"torment"
+				],
+				"level6": [
+					"fury-attack",
+					"taunt",
+					"aerial-ace"
+				],
+				"level10": [
+					"fly",
+					"uproar",
+					"copycat"
+				],
+				"level14": [
+					"facade",
+					"swagger",
+					"brave-bird"
+				],
+				"level18": [
+					"reversal",
+					"roost"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					44,
+					46,
+					68,
+					88,
+					89,
+					90,
+					101
+				],
+				"egg": [
+					"double-edge",
+					"flatter",
+					"final-gambit",
+					"parting-shot"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/931.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/931.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/931.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/931.png"
+			}
+		},
+		{
+			"id": "nacli",
+			"name": "Nacli",
+			"number": 932,
+			"type": [
+				"rock"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "1",
+				"to": [
+					{
+						"id": "naclstack",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 6
+							}
+						]
+					}
+				]
+			},
+			"description": "The Rock Salt Pokémon. It was born in a layer of rock salt deep under the earth. This species was particularly treasured in the old days, as they would share precious salt.",
+			"ac": 14,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 10,
+				"con": 14,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 18,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [
+				{
+					"type": "tremmorsense",
+					"value": 20
+				}
+			],
+			"abilities": [
+				{
+					"id": "purifying-salt",
+					"hidden": false
+				},
+				{
+					"id": "sturdy",
+					"hidden": false
+				},
+				{
+					"id": "clear-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"harden"
+				],
+				"level2": [
+					"rock-throw",
+					"mud-shot",
+					"smack-down"
+				],
+				"level6": [
+					"headbutt",
+					"iron-defense",
+					"rock-polish"
+				],
+				"level10": [
+					"recover",
+					"rock-slide"
+				],
+				"level14": [
+					"stealth-rock",
+					"heavy-slam"
+				],
+				"level18": [
+					"earthquake",
+					"stone-edge"
+				],
+				"tm": [
+					11,
+					17,
+					18,
+					37,
+					42,
+					44,
+					78,
+					88,
+					90,
+					91
+				],
+				"egg": [
+					"fissure",
+					"curse",
+					"ancient-power",
+					"power-gem"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/932.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/932.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/932.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/932.png"
+			}
+		},
+		{
+			"id": "naclstack",
+			"name": "Naclstack",
+			"number": 933,
+			"type": [
+				"rock"
+			],
+			"size": "tiny",
+			"sr": 5,
+			"minLevel": 5,
+			"eggGroup": [
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"nacli"
+				],
+				"to": [
+					{
+						"id": "garganacl",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 14
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Rock Salt Pokémon. This Pokémon dry cures its prey by spraying salt over them. The curing process steals away the water in the prey’s body.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 10,
+				"con": 16,
+				"int": 6,
+				"wis": 10,
+				"cha": 11
+			},
+			"hp": 48,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [
+				{
+					"type": "tremmorsense",
+					"value": 20
+				}
+			],
+			"abilities": [
+				{
+					"id": "purifying-salt",
+					"hidden": false
+				},
+				{
+					"id": "sturdy",
+					"hidden": false
+				},
+				{
+					"id": "clear-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"harden",
+					"salt-cure",
+					"rock-throw",
+					"mud-shot",
+					"smack-down"
+				],
+				"level6": [
+					"headbutt",
+					"iron-defense",
+					"rock-polish"
+				],
+				"level10": [
+					"recover",
+					"rock-slide"
+				],
+				"level14": [
+					"stealth-rock",
+					"heavy-slam"
+				],
+				"level18": [
+					"earthquake",
+					"stone-edge"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					18,
+					37,
+					42,
+					44,
+					68,
+					78,
+					88,
+					90,
+					91
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/933.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/933.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/933.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/933.png"
+			}
+		},
+		{
+			"id": "garganacl",
+			"name": "Garganacl",
+			"number": 934,
+			"type": [
+				"rock"
+			],
+			"size": "large",
+			"sr": 13,
+			"minLevel": 10,
+			"eggGroup": [
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"naclstack"
+				]
+			},
+			"description": "The Rock Salt Pokémon. Garganacl will rub its fingertips together and sprinkle injured Pokémon with salt. Even severe wounds will promptly heal afterward.",
+			"ac": 19,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 10,
+				"con": 19,
+				"int": 6,
+				"wis": 10,
+				"cha": 13
+			},
+			"hp": 120,
+			"skills": [
+				"athletics",
+				"insight"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [
+				{
+					"type": "tremmorsense",
+					"value": 20
+				}
+			],
+			"abilities": [
+				{
+					"id": "purifying-salt",
+					"hidden": false
+				},
+				{
+					"id": "sturdy",
+					"hidden": false
+				},
+				{
+					"id": "clear-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"harden",
+					"block",
+					"rock-blast",
+					"hammer-arm",
+					"wide-guard",
+					"rock-throw",
+					"rock-tomb",
+					"mud-shot",
+					"headbutt",
+					"rock-polish",
+					"recover",
+					"salt-cure"
+				],
+				"level14": [
+					"rock-slide",
+					"stealth-rock",
+					"heavy-slam"
+				],
+				"level18": [
+					"earthquake",
+					"explosion",
+					"stone-edge"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					18,
+					23,
+					31,
+					37,
+					42,
+					44,
+					56,
+					68,
+					78,
+					88,
+					90,
+					91
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/934.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/934.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/934.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/934.png"
+			}
+		},
+		{
 			"id": "annihilape",
 			"name": "Annihilape",
 			"number": 979,

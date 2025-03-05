@@ -910,6 +910,11 @@
       "name": "Pure Power",
       "description": "Once per short rest, this Pokémon may double the damage dice for a single damage roll. The player must announce that they are using this ability before the attack roll."
     },
+		{
+      "id": "purifying-salt",
+      "name": "Purifying Salt",
+      "description": "This Pokémon has resistance to Ghost-type damage, and it cannot be afflicted with non-volatile status conditions."
+    },
     {
       "id": "quark-drive",
       "name": "Quark Drive",
