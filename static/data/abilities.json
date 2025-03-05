@@ -1035,6 +1035,11 @@
       "name": "Screen Cleaner",
       "description": "Light Screen, Reflect, and Aurora Veil have no effect within 40ft of this Pokémon."
     },
+		{
+      "id": "seed-sower",
+      "name": "Seed Sower",
+      "description": "When hit by a damaging attack, this Pokémon may use its reaction to use the Grassy Terrain move. The Pokémon does not need to know this move, and it costs no PP to use."
+    },
     {
       "id": "serene-grace",
       "name": "Serene Grace",
@@ -1394,6 +1399,11 @@
       "id": "weak-armor",
       "name": "Weak Armor",
       "description": "When an attack hits this Pokémon, its speed increases by 5 feet, but its AC is temporarily reduced by 1 until the end of battle (for a maximum reduction of -5)."
+    },
+		{
+      "id": "well-baked-body",
+      "name": "Well-Baked Body",
+      "description": "This Pokémon takes no damage from fire or fire-type attacks. Instead, its AC increases by 2 until it takes damage or after 1 minute, whichever happens first."
     },
     {
       "id": "white-smoke",
