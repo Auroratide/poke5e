@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { CustomNatureIdentifier, isStandardNature, type TrainerPokemon } from "../types"
+	import { type TrainerPokemon } from "../types"
+	import { CustomNatureIdentifier, isStandardNature } from "../nature"
 	import { createEventDispatcher } from "svelte"
 	import Button from "$lib/design/Button.svelte"
 	import Fieldset from "$lib/design/Form/Fieldset.svelte"

@@ -5,11 +5,11 @@ import {
 	type ReadWriteKey,
 	type TrainerInfo,
 	type TrainerId,
-	Natures,
 	type Trainer,
 	type WithWriteKey,
 	type LearnedMove,
 } from "../types"
+import { Natures } from "../nature"
 import { Gender } from "../types"
 
 let POKEMON_ID = 1

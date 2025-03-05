@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CustomNatureIdentifier, Natures } from "../types"
+	import { CustomNatureIdentifier, Natures } from "../nature"
 
 	export let id: string
 	export let value: string

@@ -5,6 +5,7 @@
 	import { Url } from "$lib/url"
 	import NatureRow from "./NatureRow.svelte"
 	import OldNatureRow from "./OldNatureRow.svelte"
+	import { Natures, NatureEffect } from "$lib/trainers/nature"
 </script>
 
 <Title value="Natures" />
@@ -22,35 +23,9 @@
 				</tr>
 			</thead>
 			<tbody>
-				<NatureRow name="Hardy" index={0} increase="str" decrease="str" />
-				<NatureRow name="Lonely" index={1} increase="str" decrease="con" />
-				<NatureRow name="Brave" index={2} increase="str" decrease="dex" />
-				<NatureRow name="Adamant" index={3} increase="str" decrease="wis" />
-				<NatureRow name="Naughty" index={4} increase="str" decrease="cha" />
-
-				<NatureRow name="Bold" index={5} increase="con" decrease="str" />
-				<NatureRow name="Docile" index={6} increase="con" decrease="con" />
-				<NatureRow name="Relaxed" index={7} increase="con" decrease="dex" />
-				<NatureRow name="Impish" index={8} increase="con" decrease="wis" />
-				<NatureRow name="Lax" index={9} increase="con" decrease="cha" />
-
-				<NatureRow name="Timid" index={10} increase="dex" decrease="str" />
-				<NatureRow name="Hasty" index={11} increase="dex" decrease="con" />
-				<NatureRow name="Serious" index={12} increase="dex" decrease="dex" />
-				<NatureRow name="Jolly" index={13} increase="dex" decrease="wis" />
-				<NatureRow name="Naive" index={14} increase="dex" decrease="cha" />
-
-				<NatureRow name="Modest" index={15} increase="wis" decrease="str" />
-				<NatureRow name="Mild" index={16} increase="wis" decrease="con" />
-				<NatureRow name="Quiet" index={17} increase="wis" decrease="dex" />
-				<NatureRow name="Bashful" index={18} increase="wis" decrease="wis" />
-				<NatureRow name="Rash" index={19} increase="wis" decrease="cha" />
-
-				<NatureRow name="Calm" index={20} increase="cha" decrease="str" />
-				<NatureRow name="Gentle" index={21} increase="cha" decrease="con" />
-				<NatureRow name="Sassy" index={22} increase="cha" decrease="dex" />
-				<NatureRow name="Careful" index={23} increase="cha" decrease="wis" />
-				<NatureRow name="Quirky" index={24} increase="cha" decrease="cha" />
+				{#each Natures as nature, index}
+					<NatureRow name="{nature}" {index} increase={NatureEffect[nature].increase} decrease={NatureEffect[nature].decrease} />
+				{/each}
 			</tbody>
 		</InfoTable>
 		<p><strong>Note</strong>: The <a href="{Url.trainers()}">Trainers Tool</a> does not, currently, apply Nature modifications. This maximizes flexibility for tables that prefer using Natures entirely for their narrative power.</p>

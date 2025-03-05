@@ -5,11 +5,11 @@ import {
 	type TrainerPokemon,
 	type TrainerInfo,
 	Gender,
-	Natures,
 	type WithWriteKey,
 	type LearnedMove,
 	type PokemonId,
 } from "../types"
+import { Natures } from "../nature"
 import type { Skill, Attribute } from "$lib/dnd/types"
 import type { Pokemon } from "$lib/creatures/types"
 import { TrainerDataProviderError, type StorageResource, type TrainerData, type TrainerDataProvider } from "."

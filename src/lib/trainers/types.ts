@@ -4,6 +4,7 @@ import type { Move } from "$lib/moves/types"
 import type { AbilityId, PokeType, TeraPokeType } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import type { StorageResource } from "./data"
+import type { Nature } from "./nature"
 
 export type Resource = {
 	current: number,
@@ -16,33 +17,6 @@ export enum Gender {
 	None = "none",
 	Other = "other",
 }
-
-export const Natures = [
-	"reckless",
-	"rash",
-	"brave",
-	"arrogant",
-	"skittish",
-	"hasty",
-	"energetic",
-	"clumsy",
-	"apathetic",
-	"stubborn",
-	"grumpy",
-	"relaxed",
-	"careful",
-	"curious",
-	"naughty",
-	"cheerful",
-	"sassy",
-	"innocent",
-	"hardy",
-	"nimble",
-] as const
-export type Nature = (typeof Natures)[number] | string
-export const CustomNatureIdentifier = "other"
-export const isStandardNature = (value: string): value is Nature =>
-	(Natures as readonly string[]).includes(value)
 
 export type LearnedMove = {
 	id: string,
