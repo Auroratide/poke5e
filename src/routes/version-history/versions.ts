@@ -11,6 +11,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.1.6",
+		description: [
+			"Added Pokemon: Lokix line, Pawmot line, Maushold line, Dachsbun line, Arboliva line, Squawkabilly, Garganacl line",
+		],
+	}, {
 		name: "v1.1.5",
 		description: [
 			"Bug fix: Trainers cannot (yet) be inflicted with status effects",
