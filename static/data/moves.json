@@ -2307,6 +2307,19 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
     },
+		{
+      "id": "doodle",
+      "name": "Doodle",
+      "type": "normal",
+      "power": "none",
+      "time": "1 action",
+      "pp": 10,
+      "duration": "1 minute, concentration",
+      "range": "30ft",
+      "description": [
+        "You capture the very essence of the target in a sketch. Choose a target in range. You and each ally within 5ft of you change one of your abilities to an ability on the target. If you know the target's abilities, you may choose which ability to copy; otherwise, you obtain a random ability from the target."
+      ]
+    },
     {
       "id": "doom-desire",
       "name": "Doom Desire",
