@@ -143551,6 +143551,1113 @@
 			}
 		},
 		{
+			"id": "capsakid",
+			"name": "Capsakid",
+			"number": 951,
+			"type": [
+				"grass"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"grass"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "scovillain",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							},
+							{
+								"type": "item",
+								"value": "Fire Stone"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Spicy Pepper Pokémon. The more sunlight this Pokémon bathes in, the more spicy chemicals are produced by its body, and thus the spicier its moves become.",
+			"ac": 12,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 10,
+				"con": 11,
+				"int": 6,
+				"wis": 11,
+				"cha": 11
+			},
+			"hp": 17,
+			"skills": [
+				"nature"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "chlorophyll",
+					"hidden": false
+				},
+				{
+					"id": "insomnia",
+					"hidden": false
+				},
+				{
+					"id": "klutz",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"leafage"
+				],
+				"level2": [
+					"bite",
+					"growth"
+				],
+				"level6": [
+					"razor-leaf",
+					"sunny-day"
+				],
+				"level10": [
+					"headbutt",
+					"bullet-seed",
+					"zen-headbutt"
+				],
+				"level14": [
+					"crunch",
+					"seed-bomb"
+				],
+				"level18": [
+					"solar-beam"
+				],
+				"tm": [
+					17,
+					37,
+					42,
+					44,
+					46,
+					53,
+					86,
+					88,
+					90
+				],
+				"egg": [
+					"leech-seed",
+					"rollout",
+					"ingrain",
+					"worry-seed",
+					"rage-powder"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/951.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/951.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/951.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/951.png"
+			}
+		},
+		{
+			"id": "scovillain",
+			"name": "Scovillain",
+			"number": 952,
+			"type": [
+				"grass",
+				"fire"
+			],
+			"size": "small",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"grass"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"capsakid"
+				]
+			},
+			"description": "The Spicy Pepper Pokémon. The red head converts spicy chemicals into fire energy and blasts the surrounding area with a super spicy stream of flame.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 12,
+				"con": 13,
+				"int": 6,
+				"wis": 14,
+				"cha": 12
+			},
+			"hp": 60,
+			"skills": [
+				"nature",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "chlorophyll",
+					"hidden": false
+				},
+				{
+					"id": "insomnia",
+					"hidden": false
+				},
+				{
+					"id": "moody",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"flamethrower",
+					"fire-fang",
+					"leafage",
+					"spicy-extract",
+					"bite",
+					"growth"
+				],
+				"level6": [
+					"razor-leaf",
+					"sunny-day"
+				],
+				"level10": [
+					"headbutt",
+					"bullet-seed",
+					"zen-headbutt"
+				],
+				"level14": [
+					"worry-seed",
+					"solar-beam",
+					"crunch"
+				],
+				"level18": [
+					"overheat",
+					"seed-bomb"
+				],
+				"tm": [
+					15,
+					17,
+					37,
+					38,
+					42,
+					44,
+					46,
+					53,
+					61,
+					68,
+					86,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/952.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/952.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/952.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/952.png"
+			}
+		},
+		{
+			"id": "rellor",
+			"name": "Rellor",
+			"number": 953,
+			"type": [
+				"bug"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"bug"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "rabsca",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The Rolling Pokémon. This Pokémon creates a mud ball by mixing sand and dirt with psychic energy. It treasures its mud ball more than its own life.",
+			"ac": 14,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 13,
+				"con": 10,
+				"int": 6,
+				"wis": 13,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [
+				"insight"
+			],
+			"savingThrows": [
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "compound-eyes",
+					"hidden": false
+				},
+				{
+					"id": "shed-skin",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"defense-curl"
+				],
+				"level2": [
+					"sand-attack",
+					"struggle-bug"
+				],
+				"level6": [
+					"rollout",
+					"mud-shot",
+					"bug-bite"
+				],
+				"level10": [
+					"take-down",
+					"dig"
+				],
+				"level14": [
+					"lunge"
+				],
+				"tm": [
+					17,
+					28,
+					36,
+					39,
+					42,
+					44,
+					46,
+					56,
+					81,
+					88,
+					90,
+					101
+				],
+				"egg": [
+					"recover",
+					"memento",
+					"weather-ball",
+					"cosmic-power"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/953.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/953.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/953.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/953.png"
+			}
+		},
+		{
+			"id": "rabsca",
+			"name": "Rabsca",
+			"number": 954,
+			"type": [
+				"bug",
+				"psychic"
+			],
+			"size": "tiny",
+			"sr": 7,
+			"minLevel": 5,
+			"eggGroup": [
+				"bug"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"rellor"
+				]
+			},
+			"description": "The Rolling Pokémon. The body that supports the ball barely moves. Therefore, it is thought that the true body of this Pokémon is actually inside the ball.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 14,
+				"con": 12,
+				"int": 8,
+				"wis": 16,
+				"cha": 10
+			},
+			"hp": 60,
+			"skills": [
+				"arcana",
+				"insight"
+			],
+			"savingThrows": [
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "synchronize",
+					"hidden": false
+				},
+				{
+					"id": "telepathy",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"confusion",
+					"defense-curl",
+					"revival-blessing",
+					"sand-attack",
+					"struggle-bug",
+					"psybeam"
+				],
+				"level6": [
+					"rollout",
+					"bug-bite"
+				],
+				"level10": [
+					"take-down",
+					"extrasensory"
+				],
+				"level14": [
+					"lunge",
+					"power-swap",
+					"guard-swap",
+					"speed-swap"
+				],
+				"level18": [
+					"psychic",
+					"bug-buzz"
+				],
+				"tm": [
+					3,
+					4,
+					11,
+					15,
+					16,
+					17,
+					18,
+					28,
+					30,
+					33,
+					36,
+					37,
+					39,
+					42,
+					44,
+					46,
+					53,
+					56,
+					68,
+					81,
+					88,
+					90,
+					92,
+					99,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/954.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/954.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/954.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/954.png"
+			}
+		},
+		{
+			"id": "flittle",
+			"name": "Flittle",
+			"number": 955,
+			"type": [
+				"psychic"
+			],
+			"size": "tiny",
+			"sr": 0.25,
+			"minLevel": 1,
+			"eggGroup": [
+				"flying"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "espathra",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 10
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The Frill Pokémon. Flittle’s toes levitate about half an inch above the ground because of the psychic power emitted from the frills on the Pokémon’s belly.",
+			"ac": 12,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 10,
+				"dex": 14,
+				"con": 8,
+				"int": 6,
+				"wis": 15,
+				"cha": 12
+			},
+			"hp": 16,
+			"skills": [
+				"perception"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "anticipation",
+					"hidden": false
+				},
+				{
+					"id": "frisk",
+					"hidden": false
+				},
+				{
+					"id": "speed-boost",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"growl",
+					"peck"
+				],
+				"level2": [
+					"confusion",
+					"baby-doll-eyes"
+				],
+				"level6": [
+					"psybeam",
+					"quick-attack",
+					"disarming-voice"
+				],
+				"level10": [
+					"agility",
+					"pluck"
+				],
+				"level14": [
+					"uproar"
+				],
+				"tm": [
+					3,
+					4,
+					11,
+					16,
+					17,
+					18,
+					29,
+					33,
+					37,
+					42,
+					44,
+					46,
+					88,
+					89,
+					90,
+					92,
+					101
+				],
+				"egg": [
+					"hypnosis",
+					"roost",
+					"ally-switch"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/955.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/955.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/955.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/955.png"
+			}
+		},
+		{
+			"id": "espathra",
+			"name": "Espathra",
+			"number": 956,
+			"type": [
+				"psychic"
+			],
+			"size": "medium",
+			"sr": 9,
+			"minLevel": 8,
+			"eggGroup": [
+				"flying"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"flittle"
+				]
+			},
+			"description": "The Ostrich Pokémon. It immobilizes opponents by bathing them in psychic power from its large eyes. Despite its appearance, it has a vicious temperament.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 16,
+				"con": 12,
+				"int": 6,
+				"wis": 18,
+				"cha": 14
+			},
+			"hp": 80,
+			"skills": [
+				"perception",
+				"persuasion"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "opportunist",
+					"hidden": false
+				},
+				{
+					"id": "frisk",
+					"hidden": false
+				},
+				{
+					"id": "speed-boost",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"growl",
+					"peck",
+					"drill-peck",
+					"feather-dance",
+					"lumina-crash",
+					"confusion",
+					"baby-doll-eyes",
+					"psybeam",
+					"quick-attack",
+					"disarming-voice"
+				],
+				"level10": [
+					"agility",
+					"pluck"
+				],
+				"level14": [
+					"uproar",
+					"psychic",
+					"dazzling-gleam"
+				],
+				"level18": [
+					"last-resort"
+				],
+				"tm": [
+					3,
+					4,
+					11,
+					15,
+					16,
+					17,
+					18,
+					30,
+					33,
+					37,
+					40,
+					42,
+					44,
+					46,
+					53,
+					68,
+					77,
+					88,
+					89,
+					90,
+					91,
+					92,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/956.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/956.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/956.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/956.png"
+			}
+		},
+		{
+			"id": "tinkatink",
+			"name": "Tinkatink",
+			"number": 957,
+			"type": [
+				"fairy",
+				"steel"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"fairy"
+			],
+			"gender": "1:0",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "1",
+				"to": [
+					{
+						"id": "tinkatuff",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 6
+							}
+						]
+					}
+				]
+			},
+			"description": "The Metalsmith Pokémon. It swings its handmade hammer around to protect itself, but the hammer is often stolen by Pokémon that eat metal.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 10,
+				"con": 12,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "mold-breaker",
+					"hidden": false
+				},
+				{
+					"id": "own-tempo",
+					"hidden": false
+				},
+				{
+					"id": "pickpocket",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"astonish",
+					"fairy-wind"
+				],
+				"level2": [
+					"metal-claw",
+					"baby-doll-eyes"
+				],
+				"level6": [
+					"rock-smash",
+					"covet",
+					"draining-kiss"
+				],
+				"level10": [
+					"slam",
+					"sweet-kiss",
+					"brutal-swing",
+					"play-rough"
+				],
+				"level14": [
+					"flash-cannon",
+					"fake-out",
+					"flatter"
+				],
+				"level18": [
+					"knock-off",
+					"skitter-smack"
+				],
+				"tm": [
+					16,
+					17,
+					33,
+					39,
+					42,
+					44,
+					46,
+					56,
+					71,
+					73,
+					75,
+					80,
+					88,
+					90,
+					101
+				],
+				"egg": [
+					"feint",
+					"quash",
+					"ice-hammer"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/957.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/957.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/957.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/957.png"
+			}
+		},
+		{
+			"id": "tinkatuff",
+			"name": "Tinkatuff",
+			"number": 958,
+			"type": [
+				"fairy",
+				"steel"
+			],
+			"size": "small",
+			"sr": 4,
+			"minLevel": 5,
+			"eggGroup": [
+				"fairy"
+			],
+			"gender": "1:0",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"tinkatink"
+				],
+				"to": [
+					{
+						"id": "tinkaton",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 14
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 8
+							}
+						]
+					}
+				]
+			},
+			"description": "The Hammer Pokémon. This Pokémon will attack groups of Pawniard and Bisharp, gathering metal from them in order to create a large and sturdy hammer.",
+			"ac": 15,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 12,
+				"con": 14,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 47,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "mold-breaker",
+					"hidden": false
+				},
+				{
+					"id": "own-tempo",
+					"hidden": false
+				},
+				{
+					"id": "pickpocket",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"astonish",
+					"fairy-wind",
+					"metal-claw",
+					"baby-doll-eyes"
+				],
+				"level6": [
+					"rock-smash",
+					"covet",
+					"draining-kiss"
+				],
+				"level10": [
+					"slam",
+					"sweet-kiss",
+					"brutal-swing",
+					"play-rough"
+				],
+				"level14": [
+					"flash-cannon",
+					"fake-out",
+					"flatter"
+				],
+				"level18": [
+					"knock-off",
+					"skitter-smack"
+				],
+				"tm": [
+					16,
+					17,
+					31,
+					33,
+					39,
+					42,
+					44,
+					46,
+					56,
+					71,
+					73,
+					75,
+					80,
+					88,
+					90,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/958.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/958.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/958.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/958.png"
+			}
+		},
+		{
+			"id": "tinkaton",
+			"name": "Tinkaton",
+			"number": 959,
+			"type": [
+				"fairy",
+				"steel"
+			],
+			"size": "small",
+			"sr": 12,
+			"minLevel": 10,
+			"eggGroup": [
+				"fairy"
+			],
+			"gender": "1:0",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"tinkatuff"
+				]
+			},
+			"description": "The Hammer Pokémon. This intelligent Pokémon has a very daring disposition. It knocks rocks into the sky with its hammer, aiming for flying Corviknight.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 13,
+				"con": 16,
+				"int": 6,
+				"wis": 14,
+				"cha": 12
+			},
+			"hp": 92,
+			"skills": [
+				"athletics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"con",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "mold-breaker",
+					"hidden": false
+				},
+				{
+					"id": "own-tempo",
+					"hidden": false
+				},
+				{
+					"id": "pickpocket",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"astonish",
+					"fairy-wind",
+					"gigaton-hammer",
+					"metal-claw",
+					"baby-doll-eyes",
+					"rock-smash",
+					"covet",
+					"draining-kiss",
+					"slam",
+					"sweet-kiss",
+					"brutal-swing"
+				],
+				"level14": [
+					"flash-cannon",
+					"play-rough",
+					"fake-out",
+					"flatter"
+				],
+				"level18": [
+					"knock-off",
+					"skitter-smack"
+				],
+				"tm": [
+					16,
+					17,
+					23,
+					31,
+					33,
+					39,
+					42,
+					44,
+					46,
+					56,
+					71,
+					73,
+					75,
+					78,
+					80,
+					88,
+					90,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/959.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/959.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/959.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/959.png"
+			}
+		},
+		{
 			"id": "annihilape",
 			"name": "Annihilape",
 			"number": 979,
