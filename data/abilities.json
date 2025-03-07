@@ -30,6 +30,11 @@
       "name": "Anger Point",
       "description": "After suffering a critical hit, this Pokémon doubles the damage dice for a single move it activates on the following turn."
     },
+		{
+      "id": "anger-shell",
+      "name": "Anger Shell",
+      "description": "When this Pokémon's HP drops below half its maximum HP, its AC drops by 2, but its STR and DEX scores each increase by 2, up to a maximum of 22. After a long rest, this Pokémon's AC, STR, and DEX return to their former values."
+    },
     {
       "id": "anticipation",
       "name": "Anticipation",
@@ -265,6 +270,11 @@
       "name": "Electric Surge",
       "description": "If the move is known, this Pokémon may use the Electric Terrain move as a bonus action."
     },
+		{
+      "id": "electromorphosis",
+      "name": "Electromorphosis",
+      "description": "When this Pokémon takes damage, it may double the MOVE damage modifier of its next electric-type move."
+    },
     {
       "id": "emergency-exit",
       "name": "Emergency Exit",
@@ -439,6 +449,11 @@
       "id": "grim-neigh",
       "name": "Grim Neigh",
       "description": "Upon causing an opponent to faint, this Pokémon may immediately move up to 20ft take another action."
+    },
+		{
+      "id": "guard-dog",
+      "name": "Guard Dog",
+      "description": "This Pokémon cannot be forcibly switched out by other moves. Intimidation rolls made against this Pokémon have disadvantage. This Pokémon is unaffected by the Intimidate ability."
     },
     {
       "id": "gulp-missile",
@@ -745,6 +760,11 @@
       "name": "Mummy",
       "description": "When this Pokémon is hit by a melee attack, one random ability of its attacker changes to Mummy for the remainder of the encounter."
     },
+		{
+      "id": "mycelium-might",
+      "name": "Mycelium Might",
+      "description": "Once per short rest, when causing a creature to make a save that inflicts a status condition on failure, this Pokémon may invoke Mycelium Might to cause that creatre to roll the save with disadvantage."
+    },
     {
       "id": "natural-cure",
       "name": "Natural Cure",
@@ -774,6 +794,11 @@
       "id": "oblivious",
       "name": "Oblivious",
       "description": "This Pokémon is immune to moves that attempt to charm or taunt it."
+    },
+		{
+      "id": "opportunist",
+      "name": "Opportunist",
+      "description": "When the AC, STR, DEX, CON, INT, WIS, or CHA of a creature within 30ft of this Pokémon increases, then this Pokémon's corresponding attribute increases by the same amount. This effect lasts for the duration of battle, or for 1 minute."
     },
     {
       "id": "overcoat",
@@ -1419,6 +1444,16 @@
       "id": "wimp-out",
       "name": "Wimp Out",
       "description": "When a damaging move causes this Pokémon to fall below 50% of its maximum HP, it MUST disengage and move up to its speed in a straight line towards its trainer as a free action. If this would put the Pokémon in range of switching out, it must do so as another free action if another Pokémon is available to replace it."
+    },
+		{
+      "id": "wind-power",
+      "name": "Wind Power",
+      "description": "When this Pokémon is damaged by a wind move, the number of damage dice used for its next electric-type attack doubles. Wind moves include Air Cutter, Bleakwind Storm, Blizzard, Fairy Wind, Gust, Heat Wave, Hurricane, Icy Wind, Petal Blizzard, Sandsear Storm, Sandstorm, Springtide Storm, Tailwind, Twister, Whirlwind, and Wildbolt Storm."
+    },
+		{
+      "id": "wind-rider",
+      "name": "Wind Rider",
+      "description": "This Pokémon is immune to damage dealt by wind moves. Additionally, this Pokémon's movement speed is double when moving with the wind's current direction, and halved when moving against the wind."
     },
     {
       "id": "wonder-guard",

@@ -141600,6 +141600,3064 @@
 			}
 		},
 		{
+			"id": "charcadet",
+			"name": "Charcadet",
+			"number": 935,
+			"type": [
+				"fire"
+			],
+			"size": "tiny",
+			"sr": 1,
+			"minLevel": 1,
+			"eggGroup": [
+				"human-like"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "armarouge",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							},
+							{
+								"type": "item",
+								"value": "Auspicious Armor"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					},
+					{
+						"id": "ceruledge",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							},
+							{
+								"type": "item",
+								"value": "Malicious Armor"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The Fire Child Pokémon. Burnt charcoal came to life and became a Pokémon. Possessing a fiery fighting spirit, Charcadet will battle even tough opponents.",
+			"ac": 12,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 13,
+				"con": 10,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [
+				"intimidation"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "flash-fire",
+					"hidden": false
+				},
+				{
+					"id": "flame-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"ember",
+					"astonish"
+				],
+				"level2": [
+					"clear-smog"
+				],
+				"level6": [
+					"fire-spin",
+					"night-shade",
+					"will-o-wisp"
+				],
+				"level10": [
+					"flame-charge",
+					"incinerate"
+				],
+				"level14": [
+					"lava-plume"
+				],
+				"tm": [
+					11,
+					17,
+					35,
+					38,
+					42,
+					50,
+					88,
+					90
+				],
+				"egg": [
+					"disable",
+					"spite",
+					"destiny-bond"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/935.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/935.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/935.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/935.png"
+			}
+		},
+		{
+			"id": "armarouge",
+			"name": "Armarouge",
+			"number": 936,
+			"type": [
+				"fire",
+				"psychic"
+			],
+			"size": "medium",
+			"sr": 11,
+			"minLevel": 8,
+			"eggGroup": [
+				"human-like"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"charcadet"
+				]
+			},
+			"description": "The Fire Warrior Pokémon. Armarouge evolved through the use of a set of armor that belonged to a distinguished warrior. This Pokémon is incredibly loyal.",
+			"ac": 18,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 12,
+				"con": 17,
+				"int": 8,
+				"wis": 15,
+				"cha": 10
+			},
+			"hp": 85,
+			"skills": [
+				"intimidation"
+			],
+			"savingThrows": [
+				"dex",
+				"con",
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "flash-fire",
+					"hidden": false
+				},
+				{
+					"id": "weak-armor",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"ember",
+					"astonish",
+					"wide-guard",
+					"psyshock",
+					"mystical-fire",
+					"clear-smog",
+					"fire-spin",
+					"night-shade",
+					"will-o-wisp"
+				],
+				"level10": [
+					"flame-charge",
+					"incinerate"
+				],
+				"level14": [
+					"lava-plume",
+					"ally-switch",
+					"flamethrower"
+				],
+				"level18": [
+					"calm-mind",
+					"expanding-force",
+					"armor-cannon"
+				],
+				"tm": [
+					11,
+					12,
+					16,
+					17,
+					22,
+					29,
+					30,
+					33,
+					38,
+					42,
+					44,
+					50,
+					52,
+					53,
+					56,
+					77,
+					88,
+					90,
+					91,
+					92,
+					97
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/936.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/936.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/936.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/936.png"
+			}
+		},
+		{
+			"id": "ceruledge",
+			"name": "Ceruledge",
+			"number": 937,
+			"type": [
+				"fire",
+				"ghost"
+			],
+			"size": "medium",
+			"sr": 11,
+			"minLevel": 8,
+			"eggGroup": [
+				"human-like"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"charcadet"
+				]
+			},
+			"description": "The Fire Blades Pokémon. The fiery blades on its arms burn fiercely with the lingering resentment of a sword wielder who fell before accomplishing their goal.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 17,
+				"con": 14,
+				"int": 8,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 75,
+			"skills": [
+				"acrobatics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "flash-fire",
+					"hidden": false
+				},
+				{
+					"id": "weak-armor",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"ember",
+					"astonish",
+					"shadow-claw",
+					"clear-smog",
+					"fire-spin",
+					"night-shade",
+					"will-o-wisp"
+				],
+				"level10": [
+					"flame-charge",
+					"incinerate"
+				],
+				"level14": [
+					"lava-plume",
+					"ally-switch",
+					"bitter-blade"
+				],
+				"level18": [
+					"swords-dance",
+					"flare-blitz",
+					"psycho-cut"
+				],
+				"tm": [
+					2,
+					8,
+					11,
+					12,
+					16,
+					17,
+					30,
+					31,
+					33,
+					35,
+					38,
+					42,
+					44,
+					50,
+					54,
+					56,
+					77,
+					81,
+					84,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/937.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/937.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/937.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/937.png"
+			}
+		},
+		{
+			"id": "tadbulb",
+			"name": "Tadbulb",
+			"number": 938,
+			"type": [
+				"electric"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"water-1"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "bellibolt",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							},
+							{
+								"type": "item",
+								"value": "Thunder Stone"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The EleTadpole Pokémon. Tadbulb shakes its tail to generate electricity. If it senses danger, it will make its head blink on and off to alert its allies.",
+			"ac": 12,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 11,
+				"con": 13,
+				"int": 6,
+				"wis": 11,
+				"cha": 10
+			},
+			"hp": 18,
+			"skills": [
+				"perception"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "own-tempo",
+					"hidden": false
+				},
+				{
+					"id": "static",
+					"hidden": false
+				},
+				{
+					"id": "damp",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"mud-slap"
+				],
+				"level2": [
+					"thunder-shock",
+					"water-gun"
+				],
+				"level6": [
+					"charge",
+					"mud-shot"
+				],
+				"level10": [
+					"flail",
+					"spark"
+				],
+				"level14": [
+					"discharge",
+					"weather-ball",
+					"electric-terrain"
+				],
+				"level18": [
+					"zap-cannon",
+					"sucker-punch"
+				],
+				"tm": [
+					16,
+					17,
+					18,
+					24,
+					25,
+					33,
+					44,
+					57,
+					72,
+					73,
+					88,
+					90,
+					93
+				],
+				"egg": [
+					"muddy-water",
+					"soak",
+					"parabolic-charge"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/938.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/938.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/938.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/938.png"
+			}
+		},
+		{
+			"id": "bellibolt",
+			"name": "Bellibolt",
+			"number": 939,
+			"type": [
+				"electric"
+			],
+			"size": "small",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"water-1"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"tadbulb"
+				]
+			},
+			"description": "The EleFrog Pokémon. When this Pokémon expands and contracts its wobbly body, the belly-button dynamo in its stomach produces a huge amount of electricity.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 12,
+				"con": 16,
+				"int": 6,
+				"wis": 14,
+				"cha": 10
+			},
+			"hp": 85,
+			"skills": [
+				"perception"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "electromorphosis",
+					"hidden": false
+				},
+				{
+					"id": "static",
+					"hidden": false
+				},
+				{
+					"id": "damp",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"mud-slap",
+					"slack-off",
+					"thunder-shock",
+					"water-gun"
+				],
+				"level6": [
+					"charge",
+					"mud-shot"
+				],
+				"level10": [
+					"flail",
+					"spark"
+				],
+				"level14": [
+					"discharge",
+					"weather-ball",
+					"electric-terrain"
+				],
+				"level18": [
+					"zap-cannon",
+					"sucker-punch"
+				],
+				"tm": [
+					6,
+					15,
+					16,
+					17,
+					18,
+					24,
+					25,
+					33,
+					44,
+					57,
+					68,
+					72,
+					73,
+					88,
+					90,
+					93
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/939.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/939.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/939.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/939.png"
+			}
+		},
+		{
+			"id": "wattrel",
+			"name": "Wattrel",
+			"number": 940,
+			"type": [
+				"electric",
+				"flying"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"water-1",
+				"flying"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "kilowattrel",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Storm Petrel Pokémon. When its wings catch the wind, the bones within produce electricity. This Pokémon dives into the ocean, catching prey by electrocuting them.",
+			"ac": 14,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "flying",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 11,
+				"dex": 15,
+				"con": 11,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 16,
+			"skills": [
+				"acrobatics"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "wind-power",
+					"hidden": false
+				},
+				{
+					"id": "volt-absorb",
+					"hidden": false
+				},
+				{
+					"id": "competitive",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"growl",
+					"peck"
+				],
+				"level2": [
+					"thunder-shock",
+					"quick-attack"
+				],
+				"level6": [
+					"spark",
+					"uproar",
+					"pluck"
+				],
+				"level10": [
+					"roost",
+					"dual-wingbeat"
+				],
+				"level14": [
+					"agility",
+					"volt-switch"
+				],
+				"level18": [
+					"discharge"
+				],
+				"tm": [
+					17,
+					24,
+					25,
+					40,
+					42,
+					44,
+					57,
+					62,
+					73,
+					76,
+					88,
+					89,
+					90,
+					93
+				],
+				"egg": [
+					"stockpile",
+					"spit-up",
+					"swallow",
+					"endeavor",
+					"feather-dance",
+					"weather-ball"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/940.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/940.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/940.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/940.png"
+			}
+		},
+		{
+			"id": "kilowattrel",
+			"name": "Kilowattrel",
+			"number": 941,
+			"type": [
+				"electric",
+				"flying"
+			],
+			"size": "medium",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"water-1",
+				"flying"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"wattrel"
+				]
+			},
+			"description": "The Frigatebird Pokémon. Kilowattrel inflates its throat sac to amplify its electricity. By riding the wind, this Pokémon can fly over 430 miles in a day.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "flying",
+					"value": 45
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 18,
+				"con": 13,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 68,
+			"skills": [
+				"acrobatics"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "wind-power",
+					"hidden": false
+				},
+				{
+					"id": "volt-absorb",
+					"hidden": false
+				},
+				{
+					"id": "competitive",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"growl",
+					"peck",
+					"electro-ball",
+					"thunder-shock",
+					"quick-attack"
+				],
+				"level6": [
+					"spark",
+					"uproar",
+					"pluck"
+				],
+				"level10": [
+					"roost",
+					"dual-wingbeat"
+				],
+				"level14": [
+					"agility",
+					"volt-switch"
+				],
+				"level18": [
+					"discharge",
+					"hurricane"
+				],
+				"tm": [
+					15,
+					17,
+					24,
+					25,
+					40,
+					42,
+					44,
+					57,
+					62,
+					68,
+					73,
+					76,
+					88,
+					89,
+					90,
+					93
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/941.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/941.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/941.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/941.png"
+			}
+		},
+		{
+			"id": "maschiff",
+			"name": "Maschiff",
+			"number": 942,
+			"type": [
+				"dark"
+			],
+			"size": "tiny",
+			"sr": 1,
+			"minLevel": 1,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "mabosstiff",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 9
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Rascal Pokémon. It always scowls in an attempt to make opponents take it seriously, but even crying children will burst into laughter when they see Maschiff’s face.",
+			"ac": 14,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 12,
+				"con": 14,
+				"int": 6,
+				"wis": 10,
+				"cha": 12
+			},
+			"hp": 18,
+			"skills": [
+				"perception",
+				"intimidation"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "intimidate",
+					"hidden": false
+				},
+				{
+					"id": "run-away",
+					"hidden": false
+				},
+				{
+					"id": "stakeout",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer",
+					"scary-face"
+				],
+				"level2": [
+					"lick",
+					"hone-claws",
+					"snarl"
+				],
+				"level6": [
+					"bite",
+					"roar"
+				],
+				"level10": [
+					"headbutt",
+					"payback"
+				],
+				"level14": [
+					"swagger",
+					"crunch",
+					"reversal"
+				],
+				"level18": [
+					"double-edge",
+					"jaw-lock"
+				],
+				"tm": [
+					11,
+					12,
+					17,
+					18,
+					42,
+					44,
+					46,
+					88,
+					90,
+					97
+				],
+				"egg": [
+					"destiny-bond",
+					"endeavor",
+					"retaliate",
+					"play-rough"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/942.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/942.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/942.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/942.png"
+			}
+		},
+		{
+			"id": "mabosstiff",
+			"name": "Mabosstiff",
+			"number": 943,
+			"type": [
+				"dark"
+			],
+			"size": "small",
+			"sr": 10,
+			"minLevel": 8,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"maschiff"
+				]
+			},
+			"description": "The Boss Pokémon. This Pokémon can store energy in its large dewlap. Mabosstiff unleashes this energy all at once to blow away enemies.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 15,
+				"con": 16,
+				"int": 6,
+				"wis": 10,
+				"cha": 14
+			},
+			"hp": 84,
+			"skills": [
+				"perception",
+				"intimidation"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "intimidate",
+					"hidden": false
+				},
+				{
+					"id": "guard-dog",
+					"hidden": false
+				},
+				{
+					"id": "stakeout",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer",
+					"scary-face",
+					"comeuppance",
+					"lick",
+					"hone-claws",
+					"snarl",
+					"bite",
+					"roar"
+				],
+				"level10": [
+					"headbutt",
+					"payback"
+				],
+				"level14": [
+					"swagger",
+					"crunch",
+					"reversal"
+				],
+				"level18": [
+					"double-edge",
+					"outrage",
+					"jaw-lock"
+				],
+				"tm": [
+					11,
+					12,
+					15,
+					17,
+					18,
+					42,
+					44,
+					46,
+					68,
+					88,
+					90,
+					93,
+					97
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/943.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/943.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/943.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/943.png"
+			}
+		},
+		{
+			"id": "shroodle",
+			"name": "Shroodle",
+			"number": 944,
+			"type": [
+				"poison",
+				"normal"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "grafaiai",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Toxic Mouse Pokémon. Though usually a mellow Pokémon, it will sink its sharp, poison-soaked front teeth into any that anger it, causing paralysis in the object of its ire.",
+			"ac": 12,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 15,
+				"con": 10,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 16,
+			"skills": [
+				"stealth"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "unburden",
+					"hidden": false
+				},
+				{
+					"id": "pickpocket",
+					"hidden": false
+				},
+				{
+					"id": "prankster",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"leer"
+				],
+				"level2": [
+					"bite",
+					"fury-swipes",
+					"acid-spray"
+				],
+				"level6": [
+					"flatter",
+					"poison-fang",
+					"switcheroo"
+				],
+				"level10": [
+					"slash",
+					"u-turn",
+					"poison-jab"
+				],
+				"level14": [
+					"taunt",
+					"substitute"
+				],
+				"level18": [
+					"knock-off",
+					"gunk-shot"
+				],
+				"tm": [
+					9,
+					11,
+					17,
+					18,
+					34,
+					36,
+					42,
+					44,
+					46,
+					56,
+					62,
+					75,
+					77,
+					88,
+					101
+				],
+				"egg": [
+					"toxic",
+					"super-fang",
+					"swagger",
+					"copycat",
+					"cross-poison",
+					"parting-shot"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/944.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/944.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/944.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/944.png"
+			}
+		},
+		{
+			"id": "grafaiai",
+			"name": "Grafaiai",
+			"number": 945,
+			"type": [
+				"poison",
+				"normal"
+			],
+			"size": "small",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"shroodle"
+				]
+			},
+			"description": "The Toxic Monkey Pokémon. The color of the poisonous saliva depends on what the Pokémon eats. Grafaiai covers its fingers in its saliva and draws patterns on trees in forests.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 19,
+				"con": 12,
+				"int": 6,
+				"wis": 10,
+				"cha": 14
+			},
+			"hp": 58,
+			"skills": [
+				"sleight of hand",
+				"stealth"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "unburden",
+					"hidden": false
+				},
+				{
+					"id": "poison-touch",
+					"hidden": false
+				},
+				{
+					"id": "prankster",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"leer",
+					"doodle",
+					"fury-swipes",
+					"acid-spray"
+				],
+				"level6": [
+					"flatter",
+					"poison-fang",
+					"switcheroo"
+				],
+				"level10": [
+					"slash",
+					"u-turn",
+					"poison-jab"
+				],
+				"level14": [
+					"substitute",
+					"taunt"
+				],
+				"level18": [
+					"knock-off",
+					"gunk-shot"
+				],
+				"tm": [
+					6,
+					9,
+					11,
+					17,
+					18,
+					34,
+					36,
+					42,
+					44,
+					46,
+					47,
+					56,
+					62,
+					65,
+					68,
+					75,
+					77,
+					81,
+					88,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/945.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/945.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/945.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/945.png"
+			}
+		},
+		{
+			"id": "bramblin",
+			"name": "Bramblin",
+			"number": 946,
+			"type": [
+				"grass",
+				"ghost"
+			],
+			"size": "tiny",
+			"sr": 1,
+			"minLevel": 1,
+			"eggGroup": [
+				"grass"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "brambleghast",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 10
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Tumbleweed Pokémon. A soul unable to move on to the afterlife was blown around by the wind until it got tangled up with dried grass and became a Pokémon.",
+			"ac": 13,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 11,
+				"con": 11,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [
+				"nature"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "wind-rider",
+					"hidden": false
+				},
+				{
+					"id": "infiltrator",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"defense-curl",
+					"rollout",
+					"astonish"
+				],
+				"level2": [
+					"absorb",
+					"rapid-spin"
+				],
+				"level6": [
+					"bullet-seed",
+					"infestation"
+				],
+				"level10": [
+					"disable",
+					"mega-drain",
+					"hex"
+				],
+				"level14": [
+					"phantom-force",
+					"curse",
+					"giga-drain"
+				],
+				"level18": [
+					"pain-split",
+					"power-whip"
+				],
+				"tm": [
+					17,
+					22,
+					30,
+					42,
+					44,
+					46,
+					53,
+					86,
+					88,
+					90,
+					101
+				],
+				"egg": [
+					"leech-seed",
+					"beat-up",
+					"block",
+					"shadow-sneak",
+					"strength-sap"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/946.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/946.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/946.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/946.png"
+			}
+		},
+		{
+			"id": "brambleghast",
+			"name": "Brambleghast",
+			"number": 947,
+			"type": [
+				"grass",
+				"ghost"
+			],
+			"size": "small",
+			"sr": 7,
+			"minLevel": 5,
+			"eggGroup": [
+				"grass"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"bramblin"
+				]
+			},
+			"description": "The Tumbleweed Pokémon. It will open the branches of its head to envelop its prey. Once it absorbs all the life energy it needs, it expels the prey and discards it.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 12,
+				"con": 14,
+				"int": 6,
+				"wis": 14,
+				"cha": 10
+			},
+			"hp": 50,
+			"skills": [
+				"nature",
+				"deception"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "wind-rider",
+					"hidden": false
+				},
+				{
+					"id": "infiltrator",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"defense-curl",
+					"rollout",
+					"astonish",
+					"absorb",
+					"rapid-spin"
+				],
+				"level6": [
+					"bullet-seed",
+					"infestation"
+				],
+				"level10": [
+					"disable",
+					"mega-drain",
+					"hex"
+				],
+				"level14": [
+					"phantom-force",
+					"curse",
+					"giga-drain"
+				],
+				"level18": [
+					"pain-split",
+					"power-whip"
+				],
+				"tm": [
+					15,
+					17,
+					22,
+					30,
+					42,
+					44,
+					46,
+					53,
+					68,
+					86,
+					88,
+					90,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/947.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/947.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/947.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/947.png"
+			}
+		},
+		{
+			"id": "toedscool",
+			"name": "Toedscool",
+			"number": 948,
+			"type": [
+				"ground",
+				"grass"
+			],
+			"size": "small",
+			"sr": 1,
+			"minLevel": 1,
+			"eggGroup": [
+				"grass"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "toedscruel",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 10
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Woodear Pokémon. Toedscool lives in muggy forests. The flaps that fall from its body are chewy and very delicious.",
+			"ac": 14,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 11,
+				"dex": 14,
+				"con": 11,
+				"int": 6,
+				"wis": 13,
+				"cha": 10
+			},
+			"hp": 18,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "mycelium-might",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"wrap",
+					"mud-slap"
+				],
+				"level2": [
+					"absorb",
+					"poison-powder",
+					"stun-spore"
+				],
+				"level6": [
+					"tackle",
+					"supersonic",
+					"mega-drain",
+					"screech"
+				],
+				"level10": [
+					"mud-shot",
+					"hex"
+				],
+				"level14": [
+					"seed-bomb",
+					"growth",
+					"spore"
+				],
+				"level18": [
+					"giga-drain",
+					"earth-power",
+					"power-whip"
+				],
+				"tm": [
+					9,
+					12,
+					16,
+					17,
+					18,
+					22,
+					33,
+					36,
+					44,
+					53,
+					86,
+					88,
+					90,
+					91,
+					92,
+					99
+				],
+				"egg": [
+					"leech-seed",
+					"toxic",
+					"rapid-spin",
+					"mirror-coat",
+					"knock-off",
+					"tickle",
+					"acupressure",
+					"rage-powder"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/948.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/948.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/948.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/948.png"
+			}
+		},
+		{
+			"id": "toedscruel",
+			"name": "Toedscruel",
+			"number": 949,
+			"type": [
+				"ground",
+				"grass"
+			],
+			"size": "medium",
+			"sr": 10,
+			"minLevel": 5,
+			"eggGroup": [
+				"grass"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"toedscool"
+				]
+			},
+			"description": "The Woodear Pokémon. These Pokémon gather into groups and form colonies deep within forests. They absolutely hate it when strangers approach.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 35
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 17,
+				"con": 12,
+				"int": 6,
+				"wis": 16,
+				"cha": 10
+			},
+			"hp": 61,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "mycelium-might",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"wrap",
+					"mud-slap",
+					"reflect-type",
+					"absorb",
+					"poison-powder",
+					"stun-spore"
+				],
+				"level6": [
+					"tackle",
+					"supersonic",
+					"mega-drain",
+					"screech"
+				],
+				"level10": [
+					"mud-shot",
+					"hex"
+				],
+				"level14": [
+					"seed-bomb",
+					"growth",
+					"spore"
+				],
+				"level18": [
+					"giga-drain",
+					"earth-power",
+					"power-whip"
+				],
+				"tm": [
+					6,
+					9,
+					12,
+					15,
+					16,
+					17,
+					18,
+					22,
+					33,
+					36,
+					44,
+					53,
+					68,
+					86,
+					88,
+					90,
+					91,
+					92,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/949.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/949.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/949.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/949.png"
+			}
+		},
+		{
+			"id": "klawf",
+			"name": "Klawf",
+			"number": 950,
+			"type": [
+				"rock"
+			],
+			"size": "small",
+			"sr": 6,
+			"minLevel": 5,
+			"eggGroup": [
+				"water-3"
+			],
+			"gender": "1:1",
+			"description": "The Ambush Pokémon. Klawf hangs upside-down from cliffs, waiting for prey. But Klawf can’t remain in this position for long because its blood rushes to its head.",
+			"ac": 18,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 12,
+				"con": 16,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 68,
+			"skills": [
+				"stealth",
+				"survival"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "anger-shell",
+					"hidden": false
+				},
+				{
+					"id": "shell-armor",
+					"hidden": false
+				},
+				{
+					"id": "regenerator",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"rock-throw",
+					"harden",
+					"rock-smash",
+					"metal-claw"
+				],
+				"level6": [
+					"rock-tomb",
+					"protect"
+				],
+				"level10": [
+					"rock-blast",
+					"x-scissor",
+					"swords-dance"
+				],
+				"level14": [
+					"rock-slide",
+					"flail",
+					"high-horsepower"
+				],
+				"level18": [
+					"guillotine",
+					"iron-defense"
+				],
+				"tm": [
+					11,
+					15,
+					18,
+					23,
+					31,
+					37,
+					42,
+					44,
+					46,
+					56,
+					65,
+					68,
+					71,
+					78,
+					88,
+					90
+				],
+				"egg": [
+					"crabhammer",
+					"ancient-power",
+					"knock-off",
+					"endeavor"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/950.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/950.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/950.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/950.png"
+			}
+		},
+		{
+			"id": "capsakid",
+			"name": "Capsakid",
+			"number": 951,
+			"type": [
+				"grass"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"grass"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "scovillain",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							},
+							{
+								"type": "item",
+								"value": "Fire Stone"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Spicy Pepper Pokémon. The more sunlight this Pokémon bathes in, the more spicy chemicals are produced by its body, and thus the spicier its moves become.",
+			"ac": 12,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 10,
+				"con": 11,
+				"int": 6,
+				"wis": 11,
+				"cha": 11
+			},
+			"hp": 17,
+			"skills": [
+				"nature"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "chlorophyll",
+					"hidden": false
+				},
+				{
+					"id": "insomnia",
+					"hidden": false
+				},
+				{
+					"id": "klutz",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"leafage"
+				],
+				"level2": [
+					"bite",
+					"growth"
+				],
+				"level6": [
+					"razor-leaf",
+					"sunny-day"
+				],
+				"level10": [
+					"headbutt",
+					"bullet-seed",
+					"zen-headbutt"
+				],
+				"level14": [
+					"crunch",
+					"seed-bomb"
+				],
+				"level18": [
+					"solar-beam"
+				],
+				"tm": [
+					17,
+					37,
+					42,
+					44,
+					46,
+					53,
+					86,
+					88,
+					90
+				],
+				"egg": [
+					"leech-seed",
+					"rollout",
+					"ingrain",
+					"worry-seed",
+					"rage-powder"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/951.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/951.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/951.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/951.png"
+			}
+		},
+		{
+			"id": "scovillain",
+			"name": "Scovillain",
+			"number": 952,
+			"type": [
+				"grass",
+				"fire"
+			],
+			"size": "small",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"grass"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"capsakid"
+				]
+			},
+			"description": "The Spicy Pepper Pokémon. The red head converts spicy chemicals into fire energy and blasts the surrounding area with a super spicy stream of flame.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 12,
+				"con": 13,
+				"int": 6,
+				"wis": 14,
+				"cha": 12
+			},
+			"hp": 60,
+			"skills": [
+				"nature",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "chlorophyll",
+					"hidden": false
+				},
+				{
+					"id": "insomnia",
+					"hidden": false
+				},
+				{
+					"id": "moody",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"flamethrower",
+					"fire-fang",
+					"leafage",
+					"spicy-extract",
+					"bite",
+					"growth"
+				],
+				"level6": [
+					"razor-leaf",
+					"sunny-day"
+				],
+				"level10": [
+					"headbutt",
+					"bullet-seed",
+					"zen-headbutt"
+				],
+				"level14": [
+					"worry-seed",
+					"solar-beam",
+					"crunch"
+				],
+				"level18": [
+					"overheat",
+					"seed-bomb"
+				],
+				"tm": [
+					15,
+					17,
+					37,
+					38,
+					42,
+					44,
+					46,
+					53,
+					61,
+					68,
+					86,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/952.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/952.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/952.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/952.png"
+			}
+		},
+		{
+			"id": "rellor",
+			"name": "Rellor",
+			"number": 953,
+			"type": [
+				"bug"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"bug"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "rabsca",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The Rolling Pokémon. This Pokémon creates a mud ball by mixing sand and dirt with psychic energy. It treasures its mud ball more than its own life.",
+			"ac": 14,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 13,
+				"con": 10,
+				"int": 6,
+				"wis": 13,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [
+				"insight"
+			],
+			"savingThrows": [
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "compound-eyes",
+					"hidden": false
+				},
+				{
+					"id": "shed-skin",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"defense-curl"
+				],
+				"level2": [
+					"sand-attack",
+					"struggle-bug"
+				],
+				"level6": [
+					"rollout",
+					"mud-shot",
+					"bug-bite"
+				],
+				"level10": [
+					"take-down",
+					"dig"
+				],
+				"level14": [
+					"lunge"
+				],
+				"tm": [
+					17,
+					28,
+					36,
+					39,
+					42,
+					44,
+					46,
+					56,
+					81,
+					88,
+					90,
+					101
+				],
+				"egg": [
+					"recover",
+					"memento",
+					"weather-ball",
+					"cosmic-power"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/953.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/953.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/953.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/953.png"
+			}
+		},
+		{
+			"id": "rabsca",
+			"name": "Rabsca",
+			"number": 954,
+			"type": [
+				"bug",
+				"psychic"
+			],
+			"size": "tiny",
+			"sr": 7,
+			"minLevel": 5,
+			"eggGroup": [
+				"bug"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"rellor"
+				]
+			},
+			"description": "The Rolling Pokémon. The body that supports the ball barely moves. Therefore, it is thought that the true body of this Pokémon is actually inside the ball.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 14,
+				"con": 12,
+				"int": 8,
+				"wis": 16,
+				"cha": 10
+			},
+			"hp": 60,
+			"skills": [
+				"arcana",
+				"insight"
+			],
+			"savingThrows": [
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "synchronize",
+					"hidden": false
+				},
+				{
+					"id": "telepathy",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"confusion",
+					"defense-curl",
+					"revival-blessing",
+					"sand-attack",
+					"struggle-bug",
+					"psybeam"
+				],
+				"level6": [
+					"rollout",
+					"bug-bite"
+				],
+				"level10": [
+					"take-down",
+					"extrasensory"
+				],
+				"level14": [
+					"lunge",
+					"power-swap",
+					"guard-swap",
+					"speed-swap"
+				],
+				"level18": [
+					"psychic",
+					"bug-buzz"
+				],
+				"tm": [
+					3,
+					4,
+					11,
+					15,
+					16,
+					17,
+					18,
+					28,
+					30,
+					33,
+					36,
+					37,
+					39,
+					42,
+					44,
+					46,
+					53,
+					56,
+					68,
+					81,
+					88,
+					90,
+					92,
+					99,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/954.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/954.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/954.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/954.png"
+			}
+		},
+		{
+			"id": "flittle",
+			"name": "Flittle",
+			"number": 955,
+			"type": [
+				"psychic"
+			],
+			"size": "tiny",
+			"sr": 0.25,
+			"minLevel": 1,
+			"eggGroup": [
+				"flying"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "espathra",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 10
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The Frill Pokémon. Flittle’s toes levitate about half an inch above the ground because of the psychic power emitted from the frills on the Pokémon’s belly.",
+			"ac": 12,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 10,
+				"dex": 14,
+				"con": 8,
+				"int": 6,
+				"wis": 15,
+				"cha": 12
+			},
+			"hp": 16,
+			"skills": [
+				"perception"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "anticipation",
+					"hidden": false
+				},
+				{
+					"id": "frisk",
+					"hidden": false
+				},
+				{
+					"id": "speed-boost",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"growl",
+					"peck"
+				],
+				"level2": [
+					"confusion",
+					"baby-doll-eyes"
+				],
+				"level6": [
+					"psybeam",
+					"quick-attack",
+					"disarming-voice"
+				],
+				"level10": [
+					"agility",
+					"pluck"
+				],
+				"level14": [
+					"uproar"
+				],
+				"tm": [
+					3,
+					4,
+					11,
+					16,
+					17,
+					18,
+					29,
+					33,
+					37,
+					42,
+					44,
+					46,
+					88,
+					89,
+					90,
+					92,
+					101
+				],
+				"egg": [
+					"hypnosis",
+					"roost",
+					"ally-switch"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/955.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/955.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/955.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/955.png"
+			}
+		},
+		{
+			"id": "espathra",
+			"name": "Espathra",
+			"number": 956,
+			"type": [
+				"psychic"
+			],
+			"size": "medium",
+			"sr": 9,
+			"minLevel": 8,
+			"eggGroup": [
+				"flying"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"flittle"
+				]
+			},
+			"description": "The Ostrich Pokémon. It immobilizes opponents by bathing them in psychic power from its large eyes. Despite its appearance, it has a vicious temperament.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 16,
+				"con": 12,
+				"int": 6,
+				"wis": 18,
+				"cha": 14
+			},
+			"hp": 80,
+			"skills": [
+				"perception",
+				"persuasion"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "opportunist",
+					"hidden": false
+				},
+				{
+					"id": "frisk",
+					"hidden": false
+				},
+				{
+					"id": "speed-boost",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"growl",
+					"peck",
+					"drill-peck",
+					"feather-dance",
+					"lumina-crash",
+					"confusion",
+					"baby-doll-eyes",
+					"psybeam",
+					"quick-attack",
+					"disarming-voice"
+				],
+				"level10": [
+					"agility",
+					"pluck"
+				],
+				"level14": [
+					"uproar",
+					"psychic",
+					"dazzling-gleam"
+				],
+				"level18": [
+					"last-resort"
+				],
+				"tm": [
+					3,
+					4,
+					11,
+					15,
+					16,
+					17,
+					18,
+					30,
+					33,
+					37,
+					40,
+					42,
+					44,
+					46,
+					53,
+					68,
+					77,
+					88,
+					89,
+					90,
+					91,
+					92,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/956.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/956.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/956.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/956.png"
+			}
+		},
+		{
+			"id": "tinkatink",
+			"name": "Tinkatink",
+			"number": 957,
+			"type": [
+				"fairy",
+				"steel"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"fairy"
+			],
+			"gender": "1:0",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "1",
+				"to": [
+					{
+						"id": "tinkatuff",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 6
+							}
+						]
+					}
+				]
+			},
+			"description": "The Metalsmith Pokémon. It swings its handmade hammer around to protect itself, but the hammer is often stolen by Pokémon that eat metal.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 10,
+				"con": 12,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "mold-breaker",
+					"hidden": false
+				},
+				{
+					"id": "own-tempo",
+					"hidden": false
+				},
+				{
+					"id": "pickpocket",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"astonish",
+					"fairy-wind"
+				],
+				"level2": [
+					"metal-claw",
+					"baby-doll-eyes"
+				],
+				"level6": [
+					"rock-smash",
+					"covet",
+					"draining-kiss"
+				],
+				"level10": [
+					"slam",
+					"sweet-kiss",
+					"brutal-swing",
+					"play-rough"
+				],
+				"level14": [
+					"flash-cannon",
+					"fake-out",
+					"flatter"
+				],
+				"level18": [
+					"knock-off",
+					"skitter-smack"
+				],
+				"tm": [
+					16,
+					17,
+					33,
+					39,
+					42,
+					44,
+					46,
+					56,
+					71,
+					73,
+					75,
+					80,
+					88,
+					90,
+					101
+				],
+				"egg": [
+					"feint",
+					"quash",
+					"ice-hammer"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/957.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/957.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/957.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/957.png"
+			}
+		},
+		{
+			"id": "tinkatuff",
+			"name": "Tinkatuff",
+			"number": 958,
+			"type": [
+				"fairy",
+				"steel"
+			],
+			"size": "small",
+			"sr": 4,
+			"minLevel": 5,
+			"eggGroup": [
+				"fairy"
+			],
+			"gender": "1:0",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"tinkatink"
+				],
+				"to": [
+					{
+						"id": "tinkaton",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 14
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 8
+							}
+						]
+					}
+				]
+			},
+			"description": "The Hammer Pokémon. This Pokémon will attack groups of Pawniard and Bisharp, gathering metal from them in order to create a large and sturdy hammer.",
+			"ac": 15,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 12,
+				"con": 14,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 47,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "mold-breaker",
+					"hidden": false
+				},
+				{
+					"id": "own-tempo",
+					"hidden": false
+				},
+				{
+					"id": "pickpocket",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"astonish",
+					"fairy-wind",
+					"metal-claw",
+					"baby-doll-eyes"
+				],
+				"level6": [
+					"rock-smash",
+					"covet",
+					"draining-kiss"
+				],
+				"level10": [
+					"slam",
+					"sweet-kiss",
+					"brutal-swing",
+					"play-rough"
+				],
+				"level14": [
+					"flash-cannon",
+					"fake-out",
+					"flatter"
+				],
+				"level18": [
+					"knock-off",
+					"skitter-smack"
+				],
+				"tm": [
+					16,
+					17,
+					31,
+					33,
+					39,
+					42,
+					44,
+					46,
+					56,
+					71,
+					73,
+					75,
+					80,
+					88,
+					90,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/958.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/958.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/958.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/958.png"
+			}
+		},
+		{
+			"id": "tinkaton",
+			"name": "Tinkaton",
+			"number": 959,
+			"type": [
+				"fairy",
+				"steel"
+			],
+			"size": "small",
+			"sr": 12,
+			"minLevel": 10,
+			"eggGroup": [
+				"fairy"
+			],
+			"gender": "1:0",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"tinkatuff"
+				]
+			},
+			"description": "The Hammer Pokémon. This intelligent Pokémon has a very daring disposition. It knocks rocks into the sky with its hammer, aiming for flying Corviknight.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 13,
+				"con": 16,
+				"int": 6,
+				"wis": 14,
+				"cha": 12
+			},
+			"hp": 92,
+			"skills": [
+				"athletics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"con",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "mold-breaker",
+					"hidden": false
+				},
+				{
+					"id": "own-tempo",
+					"hidden": false
+				},
+				{
+					"id": "pickpocket",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"astonish",
+					"fairy-wind",
+					"gigaton-hammer",
+					"metal-claw",
+					"baby-doll-eyes",
+					"rock-smash",
+					"covet",
+					"draining-kiss",
+					"slam",
+					"sweet-kiss",
+					"brutal-swing"
+				],
+				"level14": [
+					"flash-cannon",
+					"play-rough",
+					"fake-out",
+					"flatter"
+				],
+				"level18": [
+					"knock-off",
+					"skitter-smack"
+				],
+				"tm": [
+					16,
+					17,
+					23,
+					31,
+					33,
+					39,
+					42,
+					44,
+					46,
+					56,
+					71,
+					73,
+					75,
+					78,
+					80,
+					88,
+					90,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/959.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/959.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/959.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/959.png"
+			}
+		},
+		{
 			"id": "annihilape",
 			"name": "Annihilape",
 			"number": 979,
