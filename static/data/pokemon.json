@@ -144658,6 +144658,849 @@
 			}
 		},
 		{
+			"id": "wiglett",
+			"name": "Wiglett",
+			"number": 960,
+			"type": [
+				"water"
+			],
+			"size": "small",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"water-3"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "wugtrio",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 13
+							}
+						]
+					}
+				]
+			},
+			"description": "The Garden Eel Pokémon. This Pokémon can pick up the scent of a Veluza just over 65 feet away and will hide itself in the sand.",
+			"ac": 11,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "burrowing",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 15,
+				"con": 9,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 18,
+			"skills": [
+				"stealth",
+				"perception"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [
+				{
+					"type": "tremmorsense",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "gooey",
+					"hidden": false
+				},
+				{
+					"id": "rattled",
+					"hidden": false
+				},
+				{
+					"id": "sand-veil",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"sand-attack",
+					"water-gun"
+				],
+				"level2": [
+					"wrap",
+					"mud-slap"
+				],
+				"level6": [
+					"slam",
+					"water-pulse",
+					"aqua-jet"
+				],
+				"level10": [
+					"headbutt",
+					"dig"
+				],
+				"level14": [
+					"sucker-punch",
+					"throat-chop"
+				],
+				"level18": [
+					"liquidation"
+				],
+				"tm": [
+					13,
+					14,
+					17,
+					18,
+					37,
+					42,
+					44,
+					78,
+					88,
+					90,
+					94
+				],
+				"egg": [
+					"memento",
+					"final-gambit"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/960.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/960.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/960.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/960.png"
+			}
+		},
+		{
+			"id": "wugtrio",
+			"name": "Wugtrio",
+			"number": 961,
+			"type": [
+				"water"
+			],
+			"size": "small",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"water-3"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"wiglett"
+				]
+			},
+			"description": "The Garden Eel Pokémon. It has a vicious temperament, contrary to what its appearance may suggest. It wraps its long bodies around prey, then drags the prey into its den.",
+			"ac": 14,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "burrowing",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 20,
+				"con": 12,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 42,
+			"skills": [
+				"stealth",
+				"perception"
+			],
+			"savingThrows": [
+				"dex",
+				"con"
+			],
+			"senses": [
+				{
+					"type": "tremmorsense",
+					"value": 80
+				}
+			],
+			"abilities": [
+				{
+					"id": "gooey",
+					"hidden": false
+				},
+				{
+					"id": "rattled",
+					"hidden": false
+				},
+				{
+					"id": "sand-veil",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"sand-attack",
+					"wrap",
+					"water-gun",
+					"mud-slap"
+				],
+				"level6": [
+					"slam",
+					"water-pulse",
+					"aqua-jet"
+				],
+				"level10": [
+					"headbutt",
+					"triple-dive"
+				],
+				"level14": [
+					"sucker-punch",
+					"throat-chop"
+				],
+				"level18": [
+					"dig",
+					"liquidation"
+				],
+				"tm": [
+					13,
+					14,
+					15,
+					17,
+					18,
+					37,
+					42,
+					44,
+					68,
+					78,
+					88,
+					90,
+					94
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/961.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/961.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/961.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/961.png"
+			}
+		},
+		{
+			"id": "bombirdier",
+			"name": "Bombirdier",
+			"number": 962,
+			"type": [
+				"flying",
+				"dark"
+			],
+			"size": "medium",
+			"sr": 7,
+			"minLevel": 5,
+			"eggGroup": [
+				"flying"
+			],
+			"gender": "1:1",
+			"description": "The Item Drop Pokémon. It gathers things up in an apron made from shed feathers added to the Pokémon’s chest feathers, then drops those things from high places for fun.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 15
+				},
+				{
+					"type": "flying",
+					"value": 35
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 15,
+				"con": 15,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 59,
+			"skills": [
+				"sleight of hand",
+				"perception"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "big-pecks",
+					"hidden": false
+				},
+				{
+					"id": "keen-eye",
+					"hidden": false
+				},
+				{
+					"id": "rocky-payload",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"wing-attack",
+					"leer",
+					"peck",
+					"memento",
+					"hone-claws",
+					"thief"
+				],
+				"level6": [
+					"whirlwind",
+					"rock-throw",
+					"pluck"
+				],
+				"level10": [
+					"torment",
+					"rock-tomb"
+				],
+				"level14": [
+					"payback",
+					"dual-wingbeat",
+					"rock-slide"
+				],
+				"level18": [
+					"knock-off",
+					"parting-shot"
+				],
+				"tm": [
+					11,
+					12,
+					15,
+					17,
+					18,
+					37,
+					40,
+					42,
+					62,
+					68,
+					71,
+					76,
+					77,
+					88,
+					89,
+					90,
+					95,
+					97
+				],
+				"egg": [
+					"sky-attack",
+					"feather-dance",
+					"roost",
+					"sucker-punch",
+					"power-trip"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/962.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/962.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/962.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/962.png"
+			}
+		},
+		{
+			"id": "finizen",
+			"name": "Finizen",
+			"number": 963,
+			"type": [
+				"water"
+			],
+			"size": "small",
+			"sr": 1,
+			"minLevel": 1,
+			"eggGroup": [
+				"field",
+				"water-2"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "palafin",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 10
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Dolphin Pokémon. It likes playing with others of its kind using the water ring on its tail. It uses ultrasonic waves to sense the emotions of other living creatures.",
+			"ac": 13,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "swimming",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 11,
+				"dex": 15,
+				"con": 13,
+				"int": 8,
+				"wis": 11,
+				"cha": 10
+			},
+			"hp": 18,
+			"skills": [
+				"acrobatics",
+				"insight"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "water-veil",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"supersonic",
+					"water-gun"
+				],
+				"level2": [
+					"focus-energy",
+					"astonish"
+				],
+				"level6": [
+					"aqua-jet",
+					"double-hit"
+				],
+				"level10": [
+					"charm",
+					"dive",
+					"acrobatics"
+				],
+				"level14": [
+					"encore",
+					"aqua-tail"
+				],
+				"level18": [
+					"mist",
+					"hydro-pump"
+				],
+				"tm": [
+					13,
+					14,
+					17,
+					18,
+					42,
+					44,
+					56,
+					77,
+					88,
+					90,
+					94,
+					98
+				],
+				"egg": [
+					"counter",
+					"haze",
+					"tickle",
+					"bounce",
+					"boomburst"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/963.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/963.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/963.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/963.png"
+			}
+		},
+		{
+			"id": "palafin",
+			"name": "Palafin",
+			"number": 964,
+			"type": [
+				"water"
+			],
+			"size": "small",
+			"sr": 10,
+			"minLevel": 8,
+			"eggGroup": [
+				"field",
+				"water-2"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"finizen"
+				]
+			},
+			"description": "The Dolphin Pokémon. This Pokémon changes its appearance if it hears its allies calling for help. Palafin will never show anybody its moment of transformation.",
+			"ac": 14,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "swimming",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 18,
+				"con": 16,
+				"int": 8,
+				"wis": 14,
+				"cha": 10
+			},
+			"hp": 92,
+			"skills": [
+				"acrobatics",
+				"insight"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "zero-to-hero",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"supersonic",
+					"water-gun",
+					"flip-turn",
+					"jet-punch",
+					"focus-energy",
+					"astonish",
+					"aqua-jet",
+					"double-hit"
+				],
+				"level10": [
+					"charm",
+					"dive",
+					"acrobatics"
+				],
+				"level14": [
+					"encore",
+					"aqua-tail",
+					"mist"
+				],
+				"level18": [
+					"hydro-pump",
+					"focus-punch",
+					"wave-crash"
+				],
+				"tm": [
+					8,
+					12,
+					13,
+					14,
+					15,
+					17,
+					18,
+					42,
+					44,
+					52,
+					56,
+					68,
+					77,
+					86,
+					88,
+					90,
+					94,
+					98
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/964.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/964.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/964.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/964.png"
+			}
+		},
+		{
+			"id": "varoom",
+			"name": "Varoom",
+			"number": 965,
+			"type": [
+				"steel",
+				"poison"
+			],
+			"size": "small",
+			"sr": 2,
+			"minLevel": 1,
+			"eggGroup": [
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "revavroom",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 12
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Single-Cyl Pokémon. It is said that this Pokémon was born when an unknown poison Pokémon entered and inspirited an engine left at a scrap-processing factory.",
+			"ac": 13,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 12,
+				"con": 13,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [
+				"athletics"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "overcoat",
+					"hidden": false
+				},
+				{
+					"id": "slow-start",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"lick",
+					"poison-gas"
+				],
+				"level2": [
+					"smog",
+					"taunt",
+					"assurance"
+				],
+				"level6": [
+					"sludge",
+					"gyro-ball"
+				],
+				"level10": [
+					"headbutt",
+					"screech",
+					"iron-head"
+				],
+				"level14": [
+					"swagger",
+					"uproar",
+					"poison-jab"
+				],
+				"level18": [
+					"gunk-shot",
+					"spin-out"
+				],
+				"tm": [
+					9,
+					11,
+					17,
+					18,
+					34,
+					36,
+					37,
+					42,
+					46,
+					78,
+					88,
+					90,
+					91
+				],
+				"egg": [
+					"toxic",
+					"haze",
+					"self-destruct",
+					"torment",
+					"parting-shot"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/965.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/965.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/965.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/965.png"
+			}
+		},
+		{
+			"id": "revavroom",
+			"name": "Revavroom",
+			"number": 966,
+			"type": [
+				"steel",
+				"poison"
+			],
+			"size": "medium",
+			"sr": 13,
+			"minLevel": 8,
+			"eggGroup": [
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"varoom"
+				]
+			},
+			"description": "The Multi-Cyl Pokémon. It creates a gas out of poison and minerals from rocks. It then detonates the gas in its cylinders—now numbering eight—to generate energy.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 45
+				}
+			],
+			"attributes": {
+				"str": 19,
+				"dex": 17,
+				"con": 16,
+				"int": 6,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 84,
+			"skills": [
+				"athletics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "overcoat",
+					"hidden": false
+				},
+				{
+					"id": "filter",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"lick",
+					"poison-gas",
+					"magnet-rise",
+					"shift-gear",
+					"smog",
+					"taunt",
+					"assurance",
+					"sludge",
+					"gyro-ball"
+				],
+				"level10": [
+					"headbutt",
+					"screech",
+					"iron-head"
+				],
+				"level14": [
+					"swagger",
+					"uproar",
+					"poison-jab"
+				],
+				"level18": [
+					"gunk-shot",
+					"spin-out"
+				],
+				"tm": [
+					6,
+					9,
+					11,
+					15,
+					17,
+					18,
+					34,
+					36,
+					37,
+					42,
+					44,
+					46,
+					50,
+					68,
+					78,
+					88,
+					90,
+					91
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/966.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/966.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/966.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/966.png"
+			}
+		},
+		{
 			"id": "annihilape",
 			"name": "Annihilape",
 			"number": 979,

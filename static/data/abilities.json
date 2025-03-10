@@ -1010,6 +1010,11 @@
       "name": "Rock Head",
       "description": "This Pokémon takes no recoil damage."
     },
+		{
+      "id": "rocky-payload",
+      "name": "Rocky Payload",
+      "description": "When this Pokémon uses a rock-type move, it may roll the damage twice and choose either total."
+    },
     {
       "id": "rough-skin",
       "name": "Rough Skin",
@@ -1474,6 +1479,11 @@
       "id": "zen-mode-galarian",
       "name": "Zen Mode (Galarian)",
       "description": "When Galarian Darmanitan is below 50% of its HP, it enters Zen Mode. In Zen Mode, Galarian Darmanitan changes into the form of a flaming snowman. It's type changes to Ice/Fire, it gains +4 to its AC, and its STR and WIS ability scores are swapped."
+    },
+		{
+      "id": "zero-to-hero",
+      "name": "Zero to Hero",
+      "description": "When a non-Pokémon ally of Palafin takes damage from a source outside that ally's control, Palafin may enter its Hero Form. In Hero Form, Palafin's size changes to Medium, its AC increases by 4, and each of its STR and DEX scores increase by 4, up to a maximum of 22. It may do this once per long rest. It reverts to normal form at the end of combat."
     }
   ]
 }
