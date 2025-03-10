@@ -11,6 +11,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.1.8",
+		description: [
+			"Added Pokemon: Wugtrio line, Bombirdier, Palafin line, Revavroom line",
+		],
+	}, {
 		name: "v1.1.7",
 		description: [
 			"Added Pokemon: Armarouge and Ceruledge line, Bellibolt line, Kilowattrel line, Mabosstif line, Grafaiai line, Brambleghast line, Toedscruel line, Klawf, Scovillain line, Rabsca line, Espathra line, Tinkaton line",
