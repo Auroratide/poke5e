@@ -3795,6 +3795,22 @@
         }
       ]
     },
+		{
+      "id": "flip-turn",
+      "name": "Flip Turn",
+      "type": "water",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You switch places with an ally after making an attack. Make a melee attack, dealing 1d12 + MOVE bug damage on a hit. After this move is activated, a trainer must switch out the user as a free action."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
+    },
     {
       "id": "floral-healing",
       "name": "Floral Healing",
@@ -5577,6 +5593,22 @@
         "On a hit, you grapple the target. On your turn, you may activate this move against a target grappled this way to deal 2d6 + MOVE dark damage. This move can grapple targets up to two sizes larger than you."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
+		{
+      "id": "jet-punch",
+      "name": "Jet Punch",
+      "type": "water",
+      "power": [
+        "dex"
+      ],
+      "time": "1 bonus action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You summon a torrent around your fist and punch with blinding speed. Make a melee attack, dealing 1d4 + MOVE water damage on a hit."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d10 at level 10, and 1d12 at level 17."
     },
     {
       "id": "judgment",
@@ -10096,6 +10128,22 @@
       ]
     },
 		{
+      "id": "spin-out",
+      "name": "Spin Out",
+      "type": "steel",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You spin furiously by straining your legs. Make a melee attack, dealing 4d4 + MOVE steel damage on a hit. Until the beginning of your next turn, you have disadvantage on all DEX saves and your speed is halved."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
+    },
+		{
       "id": "spirit-break",
       "name": "Spirit Break",
       "type": "fairy",
@@ -11527,6 +11575,23 @@
 				"The first attack critical hits on nat 19s and 20s. The second attack lowers the target's AC by 1 if it hits until the end of combat (stacks up to 5 times). The third attack flinches the target on a hit."
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d8 at level 10, and 1d10 at level 17."
+    },
+		{
+      "id": "triple-dive",
+      "name": "Triple Dive",
+      "type": "water",
+      "power": [
+				"str",
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You perform a perfectly timed triple dive. Make three melee attack rolls against a target, doing 1d6 + MOVE water damage on each hit."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
     },
     {
       "id": "triple-kick",
