@@ -260,6 +260,11 @@
       "name": "Early Bird",
       "description": "This Pokémon has advantage on rolls to wake from sleep."
     },
+		{
+      "id": "earth-eater",
+      "name": "Earth Eater",
+      "description": "This Pokémon takes no damage from ground-type attacks. Instead, half of any ground damage done is absorbed, restoring the Pokémon's HP."
+    },
     {
       "id": "effect-spore",
       "name": "Effect Spore",

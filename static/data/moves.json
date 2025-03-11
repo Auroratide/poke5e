@@ -9286,6 +9286,19 @@
       ],
       "higherLevels": "The dice roll for this move changes to 1d6 at level 10."
     },
+		{
+      "id": "shed-tail",
+      "name": "Shed Tail",
+      "type": "normal",
+      "power": "none",
+      "time": "1 reaction",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "self",
+      "description": [
+				"When hit with an attack, you may use your reaction to take 2d6 typeless damage in order to negate the damage and effects of the attack. If you do, you must switch out of battle as a free action."
+      ]
+    },
     {
       "id": "sheer-cold",
       "name": "Sheer Cold",
