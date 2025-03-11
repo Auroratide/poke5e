@@ -2,7 +2,6 @@
 	type Sorter<S = unknown> = (l: S, r: S) => number
 	const noSort = () => 0
 
-	// eslint-disable-next-line no-undef
 	export let items: T[]
 	export let headers: {
 		key: string, // no spaces

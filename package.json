@@ -19,20 +19,20 @@
 		"migrate:local": "PGPASSWORD=postgres psql -h localhost -f ./db/init-migrations.sql postgres postgres && node -r dotenv/config db/run-migrate.js",
 		"migrate:ci": "node db/run-migrate.js",
 		"test": "node test/index.test.js",
-		"lint": "eslint src --ignore-path .gitignore"
+		"lint": "eslint src"
 	},
 	"devDependencies": {
+		"@eslint/js": "^9.22.0",
 		"@sveltejs/adapter-static": "^3.0.8",
-		"@sveltejs/kit": "^2.17.2",
+		"@sveltejs/kit": "^2.19.0",
 		"@sveltejs/vite-plugin-svelte": "^3.1.2",
 		"@types/pg": "^8.11.11",
-		"@typescript-eslint/eslint-plugin": "^7.18.0",
-		"@typescript-eslint/parser": "^7.18.0",
 		"dotenv": "^16.4.7",
-		"eslint": "8.57.0",
+		"eslint": "^9.22.0",
 		"eslint-plugin-only-error": "^1.0.2",
-		"eslint-plugin-svelte": "^2.46.1",
+		"eslint-plugin-svelte": "^3.1.0",
 		"gh-pages": "^3.2.3",
+		"globals": "^16.0.0",
 		"npm-run-all": "^4.1.5",
 		"pg": "^8.13.3",
 		"postgres-migrations": "^5.3.0",
@@ -41,7 +41,8 @@
 		"svelte-preprocess": "^5.1.4",
 		"taiko": "^1.4.3",
 		"tslib": "^2.8.1",
-		"typescript": "^5.7.3",
+		"typescript": "^5.8.2",
+		"typescript-eslint": "^8.26.1",
 		"vite": "^5.4.14"
 	},
 	"type": "module",
@@ -53,10 +54,10 @@
 	"dependencies": {
 		"@auroratide/pokemon-types": "^0.1.0",
 		"@auroratide/toggle-switch": "^0.3.1",
-		"@supabase/supabase-js": "^2.48.1"
+		"@supabase/supabase-js": "^2.49.1"
 	},
-	"packageManager": "pnpm@8.15.1",
+	"packageManager": "pnpm@10.6.2",
 	"engines": {
-		"pnpm": "^8.0.0"
+		"pnpm": "^10.0.0"
 	}
 }
