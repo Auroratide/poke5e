@@ -18459,7 +18459,8 @@
 					"rest"
 				],
 				"level10": [
-					"payback"
+					"payback",
+					"raging-bull"
 				],
 				"level14": [
 					"work-up",
@@ -29382,6 +29383,27 @@
 					"value": 30
 				}
 			],
+			"evolution": {
+				"stage": "1",
+				"maxStage": "2",
+				"to": [
+					{
+						"id": "farigiraf",
+						"conditions": [
+							{
+								"type": "move",
+								"value": "twin-beam"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 6
+							}
+						]
+					}
+				]
+			},
 			"attributes": {
 				"str": "15",
 				"dex": "17",
@@ -29433,7 +29455,8 @@
 				],
 				"level14": [
 					"crunch",
-					"baton-pass"
+					"baton-pass",
+					"twin-beam"
 				],
 				"level18": [
 					"nasty-plot",
@@ -90633,7 +90656,7 @@
 			"gender": "1:1",
 			"evolution": {
 				"stage": "1",
-				"maxStage": "2",
+				"maxStage": "3",
 				"to": [
 					{
 						"id": "bisharp",
@@ -90811,6 +90834,27 @@
 				"maxStage": "2",
 				"from": [
 					"pawniard"
+				],
+				"to": [
+					{
+						"id": "kingambit",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 15
+							},
+							{
+								"type": "special",
+								"value": "after defeating an evolution of Pawniard that's holding a Leader's Crest one-on-one, while itself holding a Leader's Crest"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 4
+							}
+						]
+					}
 				]
 			},
 			"description": "The Sword Blade Pokémon. Bisharp pursues prey in the company of a large group of Pawniard. Then Bisharp finishes off the prey.",
@@ -137969,6 +138013,549 @@
 			}
 		},
 		{
+			"id": "tauros-paldea-combat-breed",
+			"name": "Paldean Tauros (Combat Breed)",
+			"number": 128,
+			"type": [
+				"fighting"
+			],
+			"size": "medium",
+			"sr": 10,
+			"minLevel": 5,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "0:1",
+			"description": "The Wild Bull Pokémon. This Pokémon has a muscular body and excels at close-quarters combat. It uses its short horns to strike the opponent’s weak spots.",
+			"ac": 16,
+			"hp": 70,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": "18",
+				"dex": "17",
+				"con": "16",
+				"int": "8",
+				"wis": "10",
+				"cha": "8"
+			},
+			"skills": [
+				"athletics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "intimidate",
+					"hidden": false
+				},
+				{
+					"id": "anger-point",
+					"hidden": false
+				},
+				{
+					"id": "cud-chew",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"tail-whip",
+					"work-up",
+					"double-kick"
+				],
+				"level6": [
+					"assurance",
+					"headbutt"
+				],
+				"level10": [
+					"scary-face",
+					"zen-headbutt",
+					"raging-bull"
+				],
+				"level14": [
+					"rest",
+					"swagger",
+					"thrash"
+				],
+				"level18": [
+					"double-edge",
+					"close-combat"
+				],
+				"tm": [
+					1,
+					6,
+					10,
+					11,
+					13,
+					14,
+					15,
+					17,
+					18,
+					21,
+					22,
+					24,
+					25,
+					26,
+					27,
+					32,
+					35,
+					37,
+					38,
+					39,
+					42,
+					44,
+					45,
+					48,
+					66,
+					67,
+					68,
+					71,
+					78,
+					80,
+					87,
+					88,
+					90,
+					93,
+					94,
+					100
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10250.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10250.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10250.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10250.png"
+			}
+		},
+		{
+			"id": "tauros-paldea-blaze-breed",
+			"name": "Paldean Tauros (Blaze Breed)",
+			"number": 128,
+			"type": [
+				"fighting",
+				"fire"
+			],
+			"size": "medium",
+			"sr": 10,
+			"minLevel": 5,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "0:1",
+			"description": "The Wild Bull Pokémon. When heated by fire energy, its horns can get hotter than 1,800 degrees Fahrenheit. Those gored by them will suffer both wounds and burns.",
+			"ac": 16,
+			"hp": 70,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": "18",
+				"dex": "17",
+				"con": "16",
+				"int": "8",
+				"wis": "10",
+				"cha": "8"
+			},
+			"skills": [
+				"athletics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "intimidate",
+					"hidden": false
+				},
+				{
+					"id": "anger-point",
+					"hidden": false
+				},
+				{
+					"id": "cud-chew",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"tail-whip",
+					"work-up",
+					"double-kick"
+				],
+				"level6": [
+					"flame-charge",
+					"headbutt"
+				],
+				"level10": [
+					"scary-face",
+					"zen-headbutt",
+					"raging-bull"
+				],
+				"level14": [
+					"rest",
+					"swagger",
+					"thrash"
+				],
+				"level18": [
+					"flare-blitz",
+					"close-combat"
+				],
+				"tm": [
+					1,
+					6,
+					10,
+					11,
+					13,
+					14,
+					15,
+					17,
+					18,
+					21,
+					22,
+					24,
+					25,
+					26,
+					27,
+					32,
+					35,
+					37,
+					38,
+					39,
+					42,
+					44,
+					45,
+					48,
+					66,
+					67,
+					68,
+					71,
+					78,
+					80,
+					87,
+					88,
+					90,
+					93,
+					94,
+					100
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10251.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10251.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10251.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10251.png"
+			}
+		},
+		{
+			"id": "tauros-paldea-aqua-breed",
+			"name": "Paldean Tauros (Aqua Breed)",
+			"number": 128,
+			"type": [
+				"fighting",
+				"water"
+			],
+			"size": "medium",
+			"sr": 10,
+			"minLevel": 5,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "0:1",
+			"description": "The Wild Bull Pokémon. This Pokémon blasts water from holes on the tips of its horns—the high-pressure jets pierce right through Tauros’s enemies.",
+			"ac": 16,
+			"hp": 70,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": "18",
+				"dex": "17",
+				"con": "16",
+				"int": "8",
+				"wis": "10",
+				"cha": "8"
+			},
+			"skills": [
+				"athletics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "intimidate",
+					"hidden": false
+				},
+				{
+					"id": "anger-point",
+					"hidden": false
+				},
+				{
+					"id": "cud-chew",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"tail-whip",
+					"work-up",
+					"double-kick"
+				],
+				"level6": [
+					"aqua-jet",
+					"headbutt"
+				],
+				"level10": [
+					"scary-face",
+					"zen-headbutt",
+					"raging-bull"
+				],
+				"level14": [
+					"rest",
+					"swagger",
+					"thrash"
+				],
+				"level18": [
+					"wave-crash",
+					"close-combat"
+				],
+				"tm": [
+					1,
+					6,
+					10,
+					11,
+					13,
+					14,
+					15,
+					17,
+					18,
+					21,
+					22,
+					24,
+					25,
+					26,
+					27,
+					32,
+					35,
+					37,
+					38,
+					39,
+					42,
+					44,
+					45,
+					48,
+					66,
+					67,
+					68,
+					71,
+					78,
+					80,
+					87,
+					88,
+					90,
+					93,
+					94,
+					100
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10252.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10252.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10252.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10252.png"
+			}
+		},
+		{
+			"id": "wooper-paldea",
+			"name": "Paldean Wooper",
+			"number": 194,
+			"type": [
+				"poison",
+				"ground"
+			],
+			"size": "tiny",
+			"sr": 0.25,
+			"minLevel": 1,
+			"eggGroup": [
+				"water 1",
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"stage": "1",
+				"maxStage": "2",
+				"to": [
+					{
+						"id": "clodsire",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 6
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 9
+							}
+						]
+					}
+				]
+			},
+			"description": "The Poison Fish Pokémon. After losing a territorial struggle, Wooper began living on land. The Pokémon changed over time, developing a poisonous film to protect its body.",
+			"ac": 11,
+			"hp": 17,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				},
+				{
+					"type": "swimming",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": "10",
+				"dex": "10",
+				"con": "12",
+				"int": "6",
+				"wis": "12",
+				"cha": "12"
+			},
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "poison-point",
+					"hidden": false
+				},
+				{
+					"id": "water-absorb",
+					"hidden": false
+				},
+				{
+					"id": "unaware",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tail-whip",
+					"mud-shot"
+				],
+				"level2": [
+					"tackle",
+					"poison-tail"
+				],
+				"level6": [
+					"slam",
+					"toxic-spikes"
+				],
+				"level10": [
+					"poison-jab",
+					"yawn",
+					"sludge-wave"
+				],
+				"level14": [
+					"amnesia",
+					"toxic"
+				],
+				"level18": [
+					"earthquake"
+				],
+				"tm": [
+					6,
+					7,
+					10,
+					13,
+					14,
+					17,
+					18,
+					20,
+					21,
+					26,
+					27,
+					32,
+					34,
+					36,
+					37,
+					42,
+					44,
+					45,
+					48,
+					55,
+					78,
+					83,
+					87,
+					88,
+					90,
+					94,
+					98,
+					100
+				],
+				"egg": [
+					"acid-spray",
+					"after-you",
+					"ancient-power",
+					"slam",
+					"counter",
+					"curse",
+					"double-kick",
+					"encore",
+					"guard-swap",
+					"haze",
+					"mist",
+					"mud-sport",
+					"recover",
+					"safeguard",
+					"sleep-talk",
+					"spit-up",
+					"stockpile",
+					"swallow"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10253.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10253.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10253.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10253.png"
+			}
+		},
+		{
 			"id": "sprigatito",
 			"name": "Sprigatito",
 			"number": 906,
@@ -147021,7 +147608,250 @@
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/979.png",
-				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/979.png"
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/979.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/979.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/979.png"
+			}
+		},
+		{
+			"id": "clodsire",
+			"name": "Clodsire",
+			"number": 980,
+			"type": [
+				"poison",
+				"ground"
+			],
+			"size": "medium",
+			"sr": 6,
+			"minLevel": 5,
+			"eggGroup": [
+				"water-1",
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"wooper-paldea"
+				]
+			},
+			"description": "The Spiny Fish Pokémon. When attacked, this Pokémon will retaliate by sticking thick spines out from its body. It’s a risky move that puts everything on the line.",
+			"ac": 15,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				},
+				{
+					"type": "swimming",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 10,
+				"con": 17,
+				"int": 6,
+				"wis": 14,
+				"cha": 10
+			},
+			"hp": 69,
+			"skills": [
+				"survival",
+				"nature"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "poison-point",
+					"hidden": false
+				},
+				{
+					"id": "water-absorb",
+					"hidden": false
+				},
+				{
+					"id": "unaware",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tail-whip",
+					"poison-sting",
+					"amnesia",
+					"mud-shot",
+					"poison-tail"
+				],
+				"level6": [
+					"toxic-spikes",
+					"slam"
+				],
+				"level10": [
+					"yawn",
+					"poison-jab",
+					"sludge-wave"
+				],
+				"level14": [
+					"toxic"
+				],
+				"level18": [
+					"earthquake",
+					"megahorn"
+				],
+				"tm": [
+					9,
+					15,
+					17,
+					18,
+					36,
+					37,
+					39,
+					42,
+					44,
+					68,
+					71,
+					78,
+					80,
+					88,
+					90,
+					94,
+					98
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/980.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/980.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/980.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/980.png"
+			}
+		},
+		{
+			"id": "farigiraf",
+			"name": "Farigiraf",
+			"number": 981,
+			"type": [
+				"normal",
+				"psychic"
+			],
+			"size": "large",
+			"sr": 11,
+			"minLevel": 10,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"girafarig"
+				]
+			},
+			"description": "The Long Neck Pokémon. Now that the brain waves from the head and tail are synced up, the psychic power of this Pokémon is 10 times stronger than Girafarig’s.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 18,
+				"con": 14,
+				"int": 8,
+				"wis": 16,
+				"cha": 12
+			},
+			"hp": 101,
+			"skills": [
+				"athletics",
+				"insight"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "cud-chew",
+					"hidden": false
+				},
+				{
+					"id": "armor-tail",
+					"hidden": false
+				},
+				{
+					"id": "sap-sipper",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"growl",
+					"astonish",
+					"power-swap",
+					"guard-swap",
+					"confusion",
+					"assurance",
+					"stomp",
+					"psybeam",
+					"agility",
+					"double-hit",
+					"twin-beam"
+				],
+				"level14": [
+					"baton-pass",
+					"crunch"
+				],
+				"level18": [
+					"psychic",
+					"nasty-plot"
+				],
+				"tm": [
+					3,
+					4,
+					5,
+					11,
+					15,
+					16,
+					17,
+					18,
+					24,
+					25,
+					26,
+					30,
+					33,
+					42,
+					44,
+					46,
+					53,
+					57,
+					68,
+					73,
+					77,
+					78,
+					86,
+					88,
+					90,
+					92,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/981.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/981.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/981.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/981.png"
 			}
 		},
 		{
@@ -147179,7 +148009,131 @@
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/982.png",
-				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/982.png"
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/982.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/982.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/982.png"
+			}
+		},
+		{
+			"id": "kingambit",
+			"name": "Kingambit",
+			"number": 983,
+			"type": [
+				"dark",
+				"steel"
+			],
+			"size": "medium",
+			"sr": 13,
+			"minLevel": 15,
+			"eggGroup": [
+				"human-like"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"bisharp"
+				]
+			},
+			"description": "The Big Blade Pokémon. Only a Bisharp that stands above all others in its vast army can evolve into Kingambit.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 16,
+				"con": 16,
+				"int": 8,
+				"wis": 14,
+				"cha": 14
+			},
+			"hp": 168,
+			"skills": [
+				"athletics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "defiant",
+					"hidden": false
+				},
+				{
+					"id": "supreme-overlord",
+					"hidden": false
+				},
+				{
+					"id": "pressure",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"leer",
+					"fury-cutter",
+					"metal-claw",
+					"metal-burst",
+					"kowtow-cleave",
+					"scary-face",
+					"torment",
+					"metal-sound",
+					"assurance",
+					"slash",
+					"night-slash",
+					"iron-defense"
+				],
+				"level18": [
+					"guillotine",
+					"swords-dance",
+					"iron-head",
+					"retaliate"
+				],
+				"tm": [
+					12,
+					15,
+					17,
+					18,
+					31,
+					37,
+					39,
+					40,
+					42,
+					44,
+					46,
+					47,
+					52,
+					54,
+					56,
+					65,
+					68,
+					71,
+					73,
+					81,
+					84,
+					86,
+					88,
+					90,
+					91,
+					95,
+					97
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/983.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/983.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/983.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/983.png"
 			}
 		},
 		{

@@ -5731,6 +5731,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
+		{
+      "id": "kowtow-cleave",
+      "name": "Kowtow Cleave",
+      "type": "dark",
+      "power": [
+        "str",
+				"cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You slash your opponent after kowtowing so they let down their guard. The target must make a CHA save against your Move DC. On failure, the target takes 2d6 + MOVE dark damage, or half that damage on a successful save."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
     {
       "id": "lands-wrath",
       "name": "Land's Wrath",
@@ -8369,6 +8386,36 @@
       "description": [
         "You scatter a cloud of irritating powder, drawing attacks to yourself. Any creature in a 15 foot cone must make a WIS saving throw against your Move DC. On a failure, the creature(s) can only use damaging moves that target you for the duration. Any creature affected can repeat the save at the end of each of its turns to shake off the effect."
       ]
+    },
+		{
+      "id": "raging-bull",
+      "name": "Raging Bull",
+      "type": "normal",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You tackle like a raging bull. Make a melee attack roll, doing 1d12 + MOVE damage on a hit. This move ignores the effects of moves that would reduce its damage (Harden, Reflect, etc.).",
+				"The type of damage dealt by this move depends on the breed of its user.",
+				{
+          "type": "table",
+          "headers": ["Breed", "Damage Type"],
+          "rows": [ [
+            "Unspecified", "Normal"
+          ], [
+            "Combat Breed", "Fighting"
+          ], [
+            "Blaze Breed", "Fire"
+          ], [
+            "Aqua Breed", "Water"
+          ] ]
+        }
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
     },
 		{
       "id": "raging-fury",
@@ -11729,6 +11776,23 @@
         "You strike out with a blast of energy that increases in strength the more it is used. Make a ranged attack on a creature, dealing 1d6 + MOVE normal damage on a hit. Increase the damage by your Move modifier for each PP that has been expended for the move, before the move was activated. Using a restorative to regain PP resets the damage for this attack."
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d8 at level 5, 2d6 at level 10, and 4d6 at level 17."
+    },
+		{
+      "id": "twin-beam",
+      "name": "Twin Beam",
+      "type": "psychic",
+      "power": [
+				"int",
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "You shoot mystical beams from your eyes. Make two ranged attack rolls against a target, doing 1d6 + MOVE psychic damage on each hit."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
     },
     {
       "id": "twineedle",
