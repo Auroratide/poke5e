@@ -45,6 +45,11 @@
       "name": "Arena Trap",
       "description": "Grounded creatures within 50 feet of this Pokémon may not flee or switch out, except by item, Move, or ability."
     },
+		{
+      "id": "armor-tail",
+      "name": "Armor Tail",
+      "description": "While this Pokémon is out, hostile Pokémon within sight cannot use moves that require a bonus action to use."
+    },
     {
       "id": "aroma-veil",
       "name": "Aroma Veil",
@@ -145,6 +150,11 @@
       "name": "Comatose",
       "description": "This Pokémon is in a continuous state of drowsiness. It is immune to the sleep condition, but is considered affected by sleep for all moves that require a Pokémon to be asleep to use or activate additional effects (Snore, Sleep Talk, Wake-Up Slap, Dream Eater, etc.)"
     },
+		{
+      "id": "commander",
+      "name": "Commander",
+      "description": "Once per long rest, this Pokémon may use its action to leap into the mouth of a nearby Dondozo. While in the mouth, this Pokémon may not take actions that target creatures or objects outside of Dondozo's body; additionally, it cannot itself be targeted. While in the mouth, the Dondozo gains proficiency to WIS saves. This Pokémon may use an action to leave Dondozo's mouth, or it is ejected from the mouth at an adjacent space if Dondozo faints."
+    },
     {
       "id": "competitive",
       "name": "Competitive",
@@ -165,10 +175,20 @@
       "name": "Corrosion",
       "description": "This Pokémon's moves ignore the poison immunity of creatures granted by their Pokémon type, and can inflict the poisoned status on poison and steel type creatures. If the target’s secondary type gives it vulnerability or resistance to the damage, it follows the secondary type for that effect."
     },
+		{
+      "id": "costar",
+      "name": "Costar",
+      "description": "When this Pokémon is within 5ft of an ally, it has advantage on its attack rolls."
+    },
     {
       "id": "cotton-down",
       "name": "Cotton Down",
       "description": "When this Pokémon is damaged, cotton spews everywhere. The area within 10ft of this Pokémon becomes difficult terrain for everything except Grass monotypes until the beginning of its next turn."
+    },
+		{
+      "id": "cud-chew",
+      "name": "Cud Chew",
+      "description": "After consuming a berry, on the following turn, this Pokémon may consume the berry a second time, thereafter consuming it permanently."
     },
     {
       "id": "curious-medicine",
@@ -259,6 +279,11 @@
       "id": "early-bird",
       "name": "Early Bird",
       "description": "This Pokémon has advantage on rolls to wake from sleep."
+    },
+		{
+      "id": "earth-eater",
+      "name": "Earth Eater",
+      "description": "This Pokémon takes no damage from ground-type attacks. Instead, half of any ground damage done is absorbed, restoring the Pokémon's HP."
     },
     {
       "id": "effect-spore",
@@ -1260,6 +1285,11 @@
       "name": "Super Luck",
       "description": "This Pokémon increases its critical hit range by 1 (20 to 19+, etc.)"
     },
+		{
+      "id": "supreme-overlord",
+      "name": "Supreme Overlord",
+      "description": "This Pokémon adds +1 to its attack rolls for each currently downed ally, up to a maximum of +5."
+    },
     {
       "id": "surge-surfer",
       "name": "Surge Surfer",
@@ -1339,6 +1369,11 @@
       "id": "toxic-boost",
       "name": "Toxic Boost",
       "description": "When this Pokémon is hit by a poison-type attack, its next attack is rolled at advantage."
+    },
+		{
+      "id": "toxic-debris",
+      "name": "Toxic Debris",
+      "description": "When this Pokémon is damaged, it may use its reaction to emit toxic spikes. Each creature within 5ft of it must make a DEX save against a DC of this Pokémon's level + 2. On failure, the creature is poisoned."
     },
     {
       "id": "trace",

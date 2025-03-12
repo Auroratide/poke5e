@@ -3434,6 +3434,19 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
+		{
+      "id": "fillet-away",
+      "name": "Fillet Away",
+      "type": "normal",
+      "power": "none",
+      "time": "1 bonus action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "self",
+      "description": [
+        "You fillet yourself to sharpen your senses. You take 10 typeless damage. Your next attack has advantage, and your movement speed increases by 15ft until the start of your next turn."
+      ]
+    },
     {
       "id": "final-gambit",
       "name": "Final Gambit",
@@ -5718,6 +5731,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
+		{
+      "id": "kowtow-cleave",
+      "name": "Kowtow Cleave",
+      "type": "dark",
+      "power": [
+        "str",
+				"cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You slash your opponent after kowtowing so they let down their guard. The target must make a CHA save against your Move DC. On failure, the target takes 2d6 + MOVE dark damage, or half that damage on a successful save."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
     {
       "id": "lands-wrath",
       "name": "Land's Wrath",
@@ -5763,6 +5793,21 @@
         "You lash out an a creature with a furious strike. This move can only be activated when all other known moves by a user have been activated in the same combat. If the user is switched out, this rule resets. Make a melee attack, dealing 2d12 + MOVE normal damage on a hit."
       ],
       "higherLevels": "The damage dice roll for this move changes to 3d10 at level 5, 7d6 at level 10, and 8d8 at level 17."
+    },
+		{
+      "id": "last-respects",
+      "name": "Last Respects",
+      "type": "ghost",
+      "power": [
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "You avenge your allies with a powerful attack. Make a ranged attack, dealing 1d6 + MOVE ghost damage on a hit. Increase the damage dice by 2d6 for each of your currently downed allies this combat, up to a maximum of 10d6."
+      ]
     },
     {
       "id": "lava-plume",
@@ -6761,6 +6806,24 @@
       "higherLevels": "The healing dice roll for this move changes to 3d10 at level 5, 7d6 at level 10, and 8d8 at level 17."
     },
 		{
+      "id": "mortal-spin",
+      "name": "Mortal Spin",
+      "type": "poison",
+      "power": [
+        "str",
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You strike out with an incredibly fast spinning move. All creatures within melee range must make a DEX save against your Move DC, taking 1d4 + MOVE poison damage on a failure, or half as much on a success. Creatures that fail the save are also poisoned.",
+				"In addition, this move automatically frees the user from Leech Seed or anything causing it to be grappled or restrained. It is removed from these statuses before the saving throw is made."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d4 at level 5, 1d12 at level 10, and 4d4 at level 17."
+    },
+		{
       "id": "mountain-gale",
       "name": "Mountain Gale",
       "type": "ice",
@@ -7225,6 +7288,33 @@
         "You stir up a gust of repulsive wind that strikes a creature in range. Make a ranged attack, dealing 1d10 + MOVE ghost damage on a hit. On a natural attack roll of 19 or 20, increase all of your ability scores by +1 while you remain in battle."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
+    },
+		{
+      "id": "order-up",
+      "name": "Order Up",
+      "type": "dragon",
+      "power": [
+				"str"
+			],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "15ft",
+      "description": [
+        "Make a ranged attack, dealing 2d6 + MOVE dragon damage on a hit. If you have a Tatsugiri in your mouth, then an effect occurs depending on the form of Tatsugiri:",
+        {
+          "type": "table",
+          "headers": ["Form", "Effect"],
+          "rows": [ [
+            "Curly (orange)", "This attack deals extra damage equal to your STR modifier."
+          ], [
+            "Droopy (pink)", "You gain +3 AC until the start of your next turn."
+          ], [
+            "Stretchy (yellow)", "You have advantage on DEX saves until the start of your next turn."
+          ] ]
+        }
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
     {
       "id": "origin-pulse",
@@ -8298,6 +8388,36 @@
       ]
     },
 		{
+      "id": "raging-bull",
+      "name": "Raging Bull",
+      "type": "normal",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You tackle like a raging bull. Make a melee attack roll, doing 1d12 + MOVE damage on a hit. This move ignores the effects of moves that would reduce its damage (Harden, Reflect, etc.).",
+				"The type of damage dealt by this move depends on the breed of its user.",
+				{
+          "type": "table",
+          "headers": ["Breed", "Damage Type"],
+          "rows": [ [
+            "Unspecified", "Normal"
+          ], [
+            "Combat Breed", "Fighting"
+          ], [
+            "Blaze Breed", "Fire"
+          ], [
+            "Aqua Breed", "Water"
+          ] ]
+        }
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
+    },
+		{
       "id": "raging-fury",
       "name": "Raging Fury",
       "type": "fire",
@@ -9285,6 +9405,19 @@
         "You collect your focus, sharpening your combat skills. You may add 1d4 to all attack rolls for the duration."
       ],
       "higherLevels": "The dice roll for this move changes to 1d6 at level 10."
+    },
+		{
+      "id": "shed-tail",
+      "name": "Shed Tail",
+      "type": "normal",
+      "power": "none",
+      "time": "1 reaction",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "self",
+      "description": [
+				"When hit with an attack, you may use your reaction to take 2d6 typeless damage in order to negate the damage and effects of the attack. If you do, you must switch out of battle as a free action."
+      ]
     },
     {
       "id": "sheer-cold",
@@ -11643,6 +11776,23 @@
         "You strike out with a blast of energy that increases in strength the more it is used. Make a ranged attack on a creature, dealing 1d6 + MOVE normal damage on a hit. Increase the damage by your Move modifier for each PP that has been expended for the move, before the move was activated. Using a restorative to regain PP resets the damage for this attack."
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d8 at level 5, 2d6 at level 10, and 4d6 at level 17."
+    },
+		{
+      "id": "twin-beam",
+      "name": "Twin Beam",
+      "type": "psychic",
+      "power": [
+				"int",
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "You shoot mystical beams from your eyes. Make two ranged attack rolls against a target, doing 1d6 + MOVE psychic damage on each hit."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
     },
     {
       "id": "twineedle",
