@@ -11,6 +11,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.1.9",
+		description: [
+			"Added Pokemon: Cyclizar, Orthworm, Glimmora line, Houndstone line, Flamigo, Cetitan line, Veluza, Dondozo, Tatsugiri, Clodsire line, Farigiraf, Kingambit, Paldean Tauros",
+		],
+	}, {
 		name: "v1.1.8",
 		description: [
 			"Added Pokemon: Wugtrio line, Bombirdier, Palafin line, Revavroom line",
