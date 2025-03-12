@@ -145718,6 +145718,1169 @@
 			}
 		},
 		{
+			"id": "glimmet",
+			"name": "Glimmet",
+			"number": 969,
+			"type": [
+				"rock",
+				"poison"
+			],
+			"size": "tiny",
+			"sr": 2,
+			"minLevel": 1,
+			"eggGroup": [
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "glimmora",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 10
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The Ore Pokémon. It absorbs nutrients from cave walls. The petals it wears are made of crystallized poison.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 11,
+				"dex": 10,
+				"con": 14,
+				"int": 6,
+				"wis": 13,
+				"cha": 10
+			},
+			"hp": 17,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"wis"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 80
+				}
+			],
+			"abilities": [
+				{
+					"id": "toxic-debris",
+					"hidden": false
+				},
+				{
+					"id": "corrosion",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"rock-throw",
+					"harden",
+					"smack-down"
+				],
+				"level2": [
+					"acid-spray",
+					"rock-polish"
+				],
+				"level6": [
+					"ancient-power",
+					"stealth-rock"
+				],
+				"level10": [
+					"self-destruct",
+					"sandstorm",
+					"venoshock"
+				],
+				"level14": [
+					"rock-slide",
+					"power-gem"
+				],
+				"level18": [
+					"acid-armor",
+					"sludge-wave"
+				],
+				"tm": [
+					11,
+					16,
+					17,
+					18,
+					33,
+					36,
+					39,
+					42,
+					44,
+					71,
+					88,
+					90,
+					99
+				],
+				"egg": [
+					"toxic",
+					"explosion",
+					"memento"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/969.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/969.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/969.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/969.png"
+			}
+		},
+		{
+			"id": "glimmora",
+			"name": "Glimmora",
+			"number": 970,
+			"type": [
+				"rock",
+				"poison"
+			],
+			"size": "small",
+			"sr": 13,
+			"minLevel": 8,
+			"eggGroup": [
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"glimmet"
+				]
+			},
+			"description": "The Ore Pokémon. When this Pokémon detects danger, it will open up its crystalline petals and fire beams from its conical body.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 12,
+				"con": 16,
+				"int": 6,
+				"wis": 17,
+				"cha": 12
+			},
+			"hp": 84,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"con",
+				"wis"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 120
+				}
+			],
+			"abilities": [
+				{
+					"id": "toxic-debris",
+					"hidden": false
+				},
+				{
+					"id": "corrosion",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"rock-throw",
+					"harden",
+					"toxic-spikes",
+					"smack-down",
+					"spiky-shield",
+					"mortal-spin",
+					"acid-spray",
+					"ancient-power",
+					"rock-polish",
+					"stealth-rock"
+				],
+				"level10": [
+					"self-destruct",
+					"sandstorm",
+					"venoshock"
+				],
+				"level14": [
+					"rock-slide",
+					"power-gem"
+				],
+				"level18": [
+					"acid-armor",
+					"sludge-wave"
+				],
+				"tm": [
+					6,
+					11,
+					15,
+					16,
+					17,
+					18,
+					22,
+					33,
+					36,
+					39,
+					42,
+					44,
+					53,
+					68,
+					71,
+					88,
+					90,
+					91,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/970.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/970.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/970.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/970.png"
+			}
+		},
+		{
+			"id": "greavard",
+			"name": "Greavard",
+			"number": 971,
+			"type": [
+				"ghost"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "houndstone",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							},
+							{
+								"type": "time",
+								"value": "night"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Ghost Dog Pokémon. It is said that a dog Pokémon that died in the wild without ever interacting with a human was reborn as this Pokémon.",
+			"ac": 14,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 11,
+				"con": 13,
+				"int": 6,
+				"wis": 10,
+				"cha": 12
+			},
+			"hp": 17,
+			"skills": [
+				"persuasion"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "pickup",
+					"hidden": false
+				},
+				{
+					"id": "fluffy",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"growl"
+				],
+				"level2": [
+					"tail-whip",
+					"bite",
+					"roar",
+					"lick"
+				],
+				"level6": [
+					"headbutt",
+					"dig"
+				],
+				"level10": [
+					"rest",
+					"crunch"
+				],
+				"level14": [
+					"play-rough",
+					"helping-hand",
+					"phantom-force"
+				],
+				"level18": [
+					"double-edge",
+					"charm"
+				],
+				"tm": [
+					11,
+					17,
+					18,
+					30,
+					37,
+					42,
+					46,
+					78,
+					88,
+					90,
+					95
+				],
+				"egg": [
+					"disable",
+					"destiny-bond",
+					"memento",
+					"yawn",
+					"howl",
+					"shadow-sneak",
+					"ally-switch"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/971.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/971.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/971.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/971.png"
+			}
+		},
+		{
+			"id": "houndstone",
+			"name": "Houndstone",
+			"number": 972,
+			"type": [
+				"ghost"
+			],
+			"size": "small",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"greavard"
+				]
+			},
+			"description": "The Ghost Dog Pokémon. Houndstone spends most of its time sleeping in graveyards. Among all the dog Pokémon, this one is most loyal to its master.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 35
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 11,
+				"con": 15,
+				"int": 6,
+				"wis": 12,
+				"cha": 16
+			},
+			"hp": 66,
+			"skills": [
+				"perception",
+				"persuasion"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 80
+				}
+			],
+			"abilities": [
+				{
+					"id": "sand-rush",
+					"hidden": false
+				},
+				{
+					"id": "fluffy",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"growl",
+					"last-respects",
+					"tail-whip",
+					"bite",
+					"roar",
+					"lick"
+				],
+				"level6": [
+					"headbutt",
+					"dig"
+				],
+				"level10": [
+					"rest",
+					"crunch"
+				],
+				"level14": [
+					"play-rough",
+					"helping-hand",
+					"phantom-force"
+				],
+				"level18": [
+					"double-edge",
+					"charm"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					18,
+					30,
+					37,
+					42,
+					46,
+					61,
+					68,
+					78,
+					88,
+					90,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/972.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/972.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/972.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/972.png"
+			}
+		},
+		{
+			"id": "flamigo",
+			"name": "Flamigo",
+			"number": 973,
+			"type": [
+				"flying",
+				"fighting"
+			],
+			"size": "medium",
+			"sr": 9,
+			"minLevel": 5,
+			"eggGroup": [
+				"flying"
+			],
+			"gender": "1:1",
+			"description": "The Synchronize Pokémon. This Pokémon apparently ties the base of its neck into a knot so that energy stored in its belly does not escape from its beak.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				},
+				{
+					"type": "flying",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 17,
+				"con": 12,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 50,
+			"skills": [
+				"acrobatics",
+				"nature"
+			],
+			"savingThrows": [
+				"dex"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "scrappy",
+					"hidden": false
+				},
+				{
+					"id": "tangled-feet",
+					"hidden": false
+				},
+				{
+					"id": "costar",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"peck",
+					"copycat",
+					"double-kick",
+					"detect",
+					"wing-attack"
+				],
+				"level6": [
+					"low-kick",
+					"focus-energy"
+				],
+				"level10": [
+					"feint",
+					"payback"
+				],
+				"level14": [
+					"roost",
+					"air-slash",
+					"mega-kick"
+				],
+				"level18": [
+					"brave-bird",
+					"wide-guard",
+					"throat-chop"
+				],
+				"tm": [
+					8,
+					12,
+					15,
+					17,
+					40,
+					42,
+					44,
+					46,
+					47,
+					56,
+					62,
+					68,
+					75,
+					76,
+					77,
+					88,
+					89,
+					90,
+					101
+				],
+				"egg": [
+					"double-team",
+					"sky-attack",
+					"quick-guard"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/973.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/973.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/973.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/973.png"
+			}
+		},
+		{
+			"id": "cetoddle",
+			"name": "Cetoddle",
+			"number": 974,
+			"type": [
+				"ice"
+			],
+			"size": "small",
+			"sr": 1,
+			"minLevel": 1,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "cetitan",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							},
+							{
+								"type": "item",
+								"value": "Ice Stone"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Terra Whale Pokémon. This species left the ocean and began living on land a very long time ago. It seems to be closely related to Wailmer.",
+			"ac": 13,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 10,
+				"con": 16,
+				"int": 6,
+				"wis": 11,
+				"cha": 10
+			},
+			"hp": 20,
+			"skills": [],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "thick-fat",
+					"hidden": false
+				},
+				{
+					"id": "snow-cloak",
+					"hidden": false
+				},
+				{
+					"id": "sheer-force",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"powder-snow"
+				],
+				"level2": [
+					"growl",
+					"echoed-voice"
+				],
+				"level6": [
+					"take-down",
+					"rest",
+					"ice-shard"
+				],
+				"level10": [
+					"flail",
+					"avalanche",
+					"bounce"
+				],
+				"level14": [
+					"body-slam",
+					"amnesia",
+					"ice-spinner"
+				],
+				"level18": [
+					"double-edge",
+					"blizzard"
+				],
+				"tm": [
+					13,
+					15,
+					17,
+					18,
+					26,
+					42,
+					78,
+					88,
+					90
+				],
+				"egg": [
+					"belly-drum",
+					"superpower",
+					"yawn",
+					"entrainment",
+					"icicle-crash"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/974.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/974.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/974.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/974.png"
+			}
+		},
+		{
+			"id": "cetitan",
+			"name": "Cetitan",
+			"number": 975,
+			"type": [
+				"ice"
+			],
+			"size": "huge",
+			"sr": 12,
+			"minLevel": 5,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"cetoddle"
+				]
+			},
+			"description": "The Terra Whale Pokémon. This Pokémon wanders around snowy, icy areas. It protects its body with powerful muscles and a thick layer of fat under its skin.",
+			"ac": 14,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 12,
+				"con": 19,
+				"int": 6,
+				"wis": 13,
+				"cha": 10
+			},
+			"hp": 85,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "thick-fat",
+					"hidden": false
+				},
+				{
+					"id": "slush-rush",
+					"hidden": false
+				},
+				{
+					"id": "sheer-force",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"powder-snow",
+					"growl",
+					"echoed-voice"
+				],
+				"level6": [
+					"take-down",
+					"rest",
+					"ice-shard"
+				],
+				"level10": [
+					"flail",
+					"avalanche",
+					"bounce"
+				],
+				"level14": [
+					"body-slam",
+					"amnesia",
+					"ice-spinner"
+				],
+				"level18": [
+					"double-edge",
+					"blizzard"
+				],
+				"tm": [
+					13,
+					15,
+					17,
+					18,
+					26,
+					42,
+					68,
+					78,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/975.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/975.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/975.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/975.png"
+			}
+		},
+		{
+			"id": "veluza",
+			"name": "Veluza",
+			"number": 976,
+			"type": [
+				"water",
+				"psychic"
+			],
+			"size": "large",
+			"sr": 8,
+			"minLevel": 5,
+			"eggGroup": [
+				"water-2"
+			],
+			"gender": "1:1",
+			"description": "The Jettison Pokémon. When Veluza discards unnecessary flesh, its mind becomes honed and its psychic power increases. The spare flesh has a mild but delicious flavor.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "swimming",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 14,
+				"con": 16,
+				"int": 6,
+				"wis": 11,
+				"cha": 11
+			},
+			"hp": 61,
+			"skills": [
+				"insight"
+			],
+			"savingThrows": [
+				"dex",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "mold-breaker",
+					"hidden": false
+				},
+				{
+					"id": "sharpness",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"aqua-jet",
+					"pluck",
+					"water-pulse"
+				],
+				"level6": [
+					"focus-energy",
+					"slash"
+				],
+				"level10": [
+					"fillet-away",
+					"aqua-cutter"
+				],
+				"level14": [
+					"night-slash",
+					"psycho-cut",
+					"liquidation"
+				],
+				"level18": [
+					"crunch",
+					"final-gambit"
+				],
+				"tm": [
+					13,
+					14,
+					15,
+					17,
+					18,
+					29,
+					44,
+					68,
+					88,
+					90,
+					94,
+					98
+				],
+				"egg": [
+					"thrash",
+					"recover"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/976.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/976.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/976.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/976.png"
+			}
+		},
+		{
+			"id": "dondozo",
+			"name": "Dondozo",
+			"number": 977,
+			"type": [
+				"water"
+			],
+			"size": "gargantuan",
+			"sr": 12,
+			"minLevel": 8,
+			"eggGroup": [
+				"water-2"
+			],
+			"gender": "1:1",
+			"description": "The Big Catfish Pokémon. This Pokémon is a glutton, but it’s bad at getting food. It teams up with a Tatsugiri to catch prey.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "swimming",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 10,
+				"con": 20,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 112,
+			"skills": [
+				"athletics",
+				"nature"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "unaware",
+					"hidden": false
+				},
+				{
+					"id": "oblivious",
+					"hidden": false
+				},
+				{
+					"id": "water-veil",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"supersonic",
+					"water-gun",
+					"flail",
+					"tickle",
+					"rest",
+					"sleep-talk",
+					"soak"
+				],
+				"level10": [
+					"dive",
+					"noble-roar",
+					"body-slam"
+				],
+				"level14": [
+					"aqua-tail",
+					"rain-dance",
+					"order-up"
+				],
+				"level18": [
+					"double-edge",
+					"heavy-slam",
+					"wave-crash"
+				],
+				"tm": [
+					15,
+					17,
+					26,
+					42,
+					68,
+					78,
+					80,
+					90,
+					94,
+					98
+				],
+				"egg": [
+					"thrash",
+					"fissure",
+					"curse",
+					"yawn"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/977.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/977.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/977.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/977.png"
+			}
+		},
+		{
+			"id": "tatsugiri",
+			"name": "Tatsugiri",
+			"number": 978,
+			"type": [
+				"dragon",
+				"water"
+			],
+			"size": "tiny",
+			"sr": 13,
+			"minLevel": 8,
+			"eggGroup": [
+				"water-2"
+			],
+			"gender": "1:1",
+			"description": "The Mimicry Pokémon. This is a small dragon Pokémon. It lives inside the mouth of Dondozo to protect itself from enemies on the outside.",
+			"ac": 15,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 10
+				},
+				{
+					"type": "swimming",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 10,
+				"dex": 16,
+				"con": 13,
+				"int": 8,
+				"wis": 16,
+				"cha": 12
+			},
+			"hp": 56,
+			"skills": [
+				"stealth",
+				"insight",
+				"persuasion"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "commander",
+					"hidden": false
+				},
+				{
+					"id": "storm-drain",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"water-gun",
+					"splash",
+					"harden",
+					"helping-hand",
+					"water-pulse"
+				],
+				"level10": [
+					"taunt",
+					"soak"
+				],
+				"level14": [
+					"memento",
+					"muddy-water",
+					"nasty-plot"
+				],
+				"level18": [
+					"mirror-coat",
+					"dragon-pulse"
+				],
+				"tm": [
+					15,
+					17,
+					18,
+					42,
+					44,
+					68,
+					88,
+					90,
+					94
+				],
+				"egg": [
+					"counter",
+					"baton-pass",
+					"rapid-spin"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/978.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/978.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/978.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/978.png"
+			}
+		},
+		{
 			"id": "annihilape",
 			"name": "Annihilape",
 			"number": 979,

@@ -145,6 +145,11 @@
       "name": "Comatose",
       "description": "This Pokémon is in a continuous state of drowsiness. It is immune to the sleep condition, but is considered affected by sleep for all moves that require a Pokémon to be asleep to use or activate additional effects (Snore, Sleep Talk, Wake-Up Slap, Dream Eater, etc.)"
     },
+		{
+      "id": "commander",
+      "name": "Commander",
+      "description": "Once per long rest, this Pokémon may use its action to leap into the mouth of a nearby Dondozo. While in the mouth, this Pokémon may not take actions that target creatures or objects outside of Dondozo's body; additionally, it cannot itself be targeted. While in the mouth, the Dondozo gains proficiency to WIS saves. This Pokémon may use an action to leave Dondozo's mouth, or it is ejected from the mouth at an adjacent space if Dondozo faints."
+    },
     {
       "id": "competitive",
       "name": "Competitive",
@@ -164,6 +169,11 @@
       "id": "corrosion",
       "name": "Corrosion",
       "description": "This Pokémon's moves ignore the poison immunity of creatures granted by their Pokémon type, and can inflict the poisoned status on poison and steel type creatures. If the target’s secondary type gives it vulnerability or resistance to the damage, it follows the secondary type for that effect."
+    },
+		{
+      "id": "costar",
+      "name": "Costar",
+      "description": "When this Pokémon is within 5ft of an ally, it has advantage on its attack rolls."
     },
     {
       "id": "cotton-down",
@@ -1344,6 +1354,11 @@
       "id": "toxic-boost",
       "name": "Toxic Boost",
       "description": "When this Pokémon is hit by a poison-type attack, its next attack is rolled at advantage."
+    },
+		{
+      "id": "toxic-debris",
+      "name": "Toxic Debris",
+      "description": "When this Pokémon is damaged, it may use its reaction to emit toxic spikes. Each creature within 5ft of it must make a DEX save against a DC of this Pokémon's level + 2. On failure, the creature is poisoned."
     },
     {
       "id": "trace",
