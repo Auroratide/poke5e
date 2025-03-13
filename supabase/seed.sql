@@ -1,0 +1,4 @@
+INSERT INTO private.trainers
+	(read_key, write_key, name, description, level, ac, hp_cur, hp_max, hit_dice_cur, hit_dice_max, strength, dexterity, constitution, intelligence, wisdom, charisma, prof_athletics, prof_acrobatics, prof_sleight_of_hand, prof_stealth, prof_arcana, prof_history, prof_investigation, prof_nature, prof_religion, prof_animal_handling, prof_insight, prof_medicine, prof_perception, prof_survival, prof_deception, prof_intimidation, prof_performance, prof_persuasion, save_str, save_dex, save_con, save_int, save_wis, save_cha)
+VALUES
+	('7WO0AIQWDSRP', '5P89LPAEWAXTRHMZ', 'Renibel', 'A trainer interested in cryptemons.', 6, 11, 29, 29, 6, 6, 10, 13, 9, 17, 14, 15, false, false, false, false, true, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, true);

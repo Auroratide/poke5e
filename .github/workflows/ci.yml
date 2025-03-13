@@ -6,9 +6,36 @@ on:
       - main
 
 jobs:
-  deploy:
-    name: Deploy
+  backend-deploy:
+    name: Backend Deploy
     runs-on: ubuntu-latest
+    env:
+      ENV: prod
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      SUPABASE_PROJECT_ID: ${{ secrets.SUPABASE_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+      - run: pnpm install --frozen-lockfile
+      - run: supabase db start
+      - name: Run migration tests
+        run: pnpm test:db
+      - run: supabase link --project-ref $SUPABASE_PROJECT_ID
+      - name: Push migrations
+        run: supabase db push --dry-run
+
+  site-deploy:
+    name: Site Deploy
+    runs-on: ubuntu-latest
+    needs: backend-deploy
     env:
       PUBLIC_ANALYTICS_ENABLED: true
       PUBLIC_SUPABASE_URL: ${{ secrets.PUBLIC_SUPABASE_URL }}
@@ -29,9 +56,9 @@ jobs:
           publish_dir: ./build
           cname: poke5e.app
 
-  test:
-    name: Test
-    needs: deploy
+  smoke-test:
+    name: Smoke Test
+    needs: site-deploy
     runs-on: ubuntu-22.04 # See: https://github.com/puppeteer/puppeteer/issues/12818
     env:
       ENV: prod
@@ -43,4 +70,4 @@ jobs:
           node-version-file: '.nvmrc'
           cache: pnpm
       - run: pnpm install --frozen-lockfile
-      - run: pnpm test
+      - run: pnpm test:smoke
