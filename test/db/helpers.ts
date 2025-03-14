@@ -11,7 +11,9 @@ function parameterize(array: any[]): string {
 }
 
 function parseResult(result: string | string[]) {
-	if (typeof result === "string") {
+	if (typeof result === "string" && !result.startsWith("(")) {
+		return [result]
+	} else if (typeof result === "string") {
 		return result
 			?.substring(1, result.length - 1)
 			?.match(/(".*?"|[^",\s]+)(?=\s*,|\s*$)/g) // https://stackoverflow.com/questions/11456850/split-a-string-by-commas-but-ignore-commas-within-double-quotes-using-javascript

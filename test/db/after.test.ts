@@ -22,7 +22,6 @@ test("migation is forward compatible", async () => {
 		10, 16, 10, 13, 11, 15,
 		false, true, false, true, false, false, false, false, false, true, false, false, true, false, true, false, false, false,
 		false, true, false, false, false, true,
-		// NEW FIELDS (species, gender, age, home_region, background)
 		"Human", null, null, null, null
 	])
 
@@ -76,8 +75,17 @@ test("migation is forward compatible", async () => {
 		10, 16, 10, 13, 11, 15,
 		false, true, false, true, false, false, false, false, false, true, false, false, true, false, true, false, false, false,
 		false, true, false, false, false, true,
-		// NEW FIELDS (species, gender, age, home_region, background)
 		"Human", "Female", 18, "Unova", "Thief"
+	])
+
+	// NEW Function
+	await call(client, "new_trainer_avatar_filename", [
+		writeKey, ".png"
+	])
+
+	// Called again, to ensure only most recent is retrieved
+	const [ [avatarFilename] ] = await call(client, "new_trainer_avatar_filename", [
+		writeKey, ".png"
 	])
 
 	const sunnyMoves = await call(client, "get_moveset", [pokemonId])
@@ -92,7 +100,7 @@ test("migation is forward compatible", async () => {
 	expect(irisPokemon[0][3]).toEqual("Sunny Yellow")
 	expect(irisPokemon[0][14]).toEqual("45")
 
-	expect(irisPokemon[0][45], "fairy")
+	expect(irisPokemon[0][45]).toEqual("fairy")
 	expect(irisPokemon[0][46]).toEqual("6200")
 	expect(irisPokemon[0][47]).toEqual("Burned")
 	expect(irisPokemon[0][48]).toEqual("Focus Sash")
@@ -101,12 +109,14 @@ test("migation is forward compatible", async () => {
 
 	expect(irisInfo[2]).toEqual("Iris")
 	expect(irisInfo[6]).toEqual("44")
-	// NEW FIELDS
 	expect(irisInfo[40]).toEqual("Human")
 	expect(irisInfo[41]).toEqual("Female")
 	expect(irisInfo[42]).toEqual("18")
 	expect(irisInfo[43]).toEqual("Unova")
 	expect(irisInfo[44]).toEqual("Thief")
+
+	// NEW FIELD
+	expect(irisInfo[45]).toEqual(avatarFilename)
 
 	await call(client, "remove_move", [writeKey, psybeamId])
 	await call(client, "remove_move", [writeKey, pounceId])
