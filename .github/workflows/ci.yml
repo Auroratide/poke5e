@@ -30,7 +30,7 @@ jobs:
         run: pnpm test:db
       - run: supabase link --project-ref $SUPABASE_PROJECT_ID
       - name: Push migrations
-        run: supabase db push --dry-run
+        run: supabase db push
 
   site-deploy:
     name: Site Deploy
