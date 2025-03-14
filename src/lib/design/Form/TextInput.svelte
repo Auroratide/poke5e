@@ -1,9 +1,10 @@
 <script lang="ts">
 	export let name: string
 	export let label: string
-	export let value: number
+	export let value: string
 	export let disabled: boolean
+	export let placeholder: string = ""
 </script>
 
 <label for="{name}-input">{label}</label>
-<input name="{name}" id="{name}-input" min="1" step="1" type="number" bind:value {disabled} />
+<input {name} id="{name}-input" type="text" {placeholder} bind:value {disabled} />

@@ -87,6 +87,14 @@ export type WithMoveData = {
 export type TrainerId = string
 export type ReadWriteKey = string
 
+export type TrainerBio = {
+	species: string | null,
+	gender: string | null,
+	age: number | null,
+	homeRegion: string | null,
+	background: string | null,
+}
+
 export type TrainerInfo = {
 	name: string,
 	description: string,
@@ -97,6 +105,7 @@ export type TrainerInfo = {
 	attributes: Attributes,
 	proficiencies: Skill[],
 	savingThrows: Attribute[],
+	biography: TrainerBio,
 }
 export type Trainer = TrainerInfo & {
 	id: TrainerId,

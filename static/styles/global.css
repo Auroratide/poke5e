@@ -32,6 +32,7 @@
     --skin-content-text: hsl(0, 0%, 20%);
 
     --skin-input-bg: hsl(0, 0%, 90%);
+	--skin-focus: hsl(205 90% 50%);
 
     --skin-footer: hsl(0, 0%, 0%);
     --skin-footer-text: hsl(0, 0%, 100%);

@@ -19,7 +19,7 @@
 		font-weight: 700;
 	}
 
-	dl :global(dt::after) {
+	dl :global(dt:not(:empty)::after) {
 		content: ':';
 	}
 

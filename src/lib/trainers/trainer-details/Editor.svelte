@@ -17,6 +17,7 @@
 	import AttributesFieldset from "../form/AttributesFieldset.svelte"
 	import ProficienciesFieldset from "../form/ProficienciesFieldset.svelte"
 	import SavingThrowsFieldset from "../form/SavingThrowsFieldset.svelte"
+	import BiographyFieldset from "../form/BiographyFieldset.svelte"
 	
 	const dispatch = createEventDispatcher()
 
@@ -33,6 +34,8 @@
 	let proficiencies = [...trainer.proficiencies]
 	let savingThrows = [...trainer.savingThrows]
 	let description = trainer.description
+	let biography = trainer.biography
+	let avatarToUpload = undefined
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -54,6 +57,7 @@
 			attributes,
 			proficiencies,
 			savingThrows,
+			biography,
 		})
 	}
 </script>
@@ -67,6 +71,7 @@
 			<NumberInput name="max-hp" label="Max HP" bind:value={maxHp} {disabled} />
 			<NumberInput name="max-hit-dice" label="Max Hit Dice" bind:value={maxHitDice} {disabled} />
 		</Fieldset>
+		<BiographyFieldset bind:biography={biography} bind:avatar={avatarToUpload} {disabled} />
 		<AttributesFieldset bind:values={attributes} {disabled} />
 		<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 		<SavingThrowsFieldset bind:values={savingThrows} {disabled} />

@@ -100,6 +100,13 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			},
 			proficiencies: ["animal handling"],
 			savingThrows: ["cha"],
+			biography: {
+				species: "Human",
+				gender: null,
+				age: null,
+				homeRegion: null,
+				background: null,
+			},
 		}
 
 		const { data, error } = await this.supabase.rpc("new_trainer", {
@@ -141,6 +148,11 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_int: toCreate.savingThrows.includes("int"),
 			_save_wis: toCreate.savingThrows.includes("wis"),
 			_save_cha: toCreate.savingThrows.includes("cha"),
+			_species: toCreate.biography.species,
+			_gender: toCreate.biography.gender,
+			_age: toCreate.biography.age,
+			_home_region: toCreate.biography.homeRegion,
+			_background: toCreate.biography.background,
 		}).single<{
 			ret_id: string,
 			ret_read_key: string,
@@ -206,6 +218,11 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_int: info.savingThrows.includes("int"),
 			_save_wis: info.savingThrows.includes("wis"),
 			_save_cha: info.savingThrows.includes("cha"),
+			_species: info.biography.species,
+			_gender: info.biography.gender,
+			_age: info.biography.age,
+			_home_region: info.biography.homeRegion,
+			_background: info.biography.background,
 		}).single<number>()
 
 		if (error) {
@@ -593,6 +610,11 @@ type TrainerRow = {
 	save_int: boolean,
 	save_wis: boolean,
 	save_cha: boolean,
+	species: string | null,
+	gender: string | null,
+	age: number | null,
+	home_region: string | null,
+	background: string | null,
 }
 
 const rowToTrainer = (row: TrainerRow): Trainer => ({
@@ -646,6 +668,13 @@ const rowToTrainer = (row: TrainerRow): Trainer => ({
 		wis: row.save_wis,
 		cha: row.save_cha,
 	}),
+	biography: {
+		species: row.species,
+		gender: row.gender,
+		age: row.age,
+		homeRegion: row.home_region,
+		background: row.background,
+	},
 })
 
 type PokemonRow = {

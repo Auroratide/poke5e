@@ -55,6 +55,13 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		},
 		savingThrows: ["cha"],
 		proficiencies: ["animal handling", "history", "deception"],
+		biography: {
+			species: "Human",
+			gender: "Female",
+			age: 16,
+			homeRegion: "Sinnoh",
+			background: "Cryptemologist",
+		},
 	},
 	pokemon: [ {
 		id: nextPokemonId(),
@@ -278,6 +285,13 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		},
 		savingThrows: ["dex", "int"],
 		proficiencies: ["stealth", "animal handling", "persuasion", "deception"],
+		biography: {
+			species: "Halfling",
+			gender: "Female",
+			age: 24,
+			homeRegion: "Pastelrift",
+			background: "Rogue",
+		},
 	},
 	pokemon: [],
 } ]
@@ -321,6 +335,13 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 				},
 				proficiencies: ["animal handling"],
 				savingThrows: ["cha"],
+				biography: {
+					species: "Human",
+					gender: null,
+					age: null,
+					homeRegion: null,
+					background: null,
+				},
 				id,
 				readKey,
 			},
