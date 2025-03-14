@@ -22,6 +22,8 @@ test("migation is forward compatible", async () => {
 		10, 16, 10, 13, 11, 15,
 		false, true, false, true, false, false, false, false, false, true, false, false, true, false, true, false, false, false,
 		false, true, false, false, false, true,
+		// NEW FIELDS (species, gender, age, home_region, background)
+		"Human", null, null, null, null
 	])
 
 	const [ [canWrite] ] = await call(client, "verify_write_key", [trainerId, writeKey])
@@ -37,7 +39,6 @@ test("migation is forward compatible", async () => {
 		false, false, false, false, false, false,
 		"shield-dust", "",
 		"fairy", 5400, null, null,
-		// NEW ARGS!
 		false
 	])
 
@@ -65,7 +66,6 @@ test("migation is forward compatible", async () => {
 		false, false, false, false, false, false,
 		"shield-dust", "",
 		"fairy", 6200, "Burned", "Focus Sash",
-		// NEW ARGS!
 		true
 	])
 
@@ -76,6 +76,8 @@ test("migation is forward compatible", async () => {
 		10, 16, 10, 13, 11, 15,
 		false, true, false, true, false, false, false, false, false, true, false, false, true, false, true, false, false, false,
 		false, true, false, false, false, true,
+		// NEW FIELDS (species, gender, age, home_region, background)
+		"Human", "Female", 18, "Unova", "Thief"
 	])
 
 	const sunnyMoves = await call(client, "get_moveset", [pokemonId])
@@ -87,7 +89,7 @@ test("migation is forward compatible", async () => {
 	expect(psybeam?.[3]).toEqual("9")
 	expect(pounce?.[3]).toEqual("10")
 	
-	expect(irisPokemon[0][3], "Sunny Yellow")
+	expect(irisPokemon[0][3]).toEqual("Sunny Yellow")
 	expect(irisPokemon[0][14]).toEqual("45")
 
 	expect(irisPokemon[0][45], "fairy")
@@ -95,12 +97,16 @@ test("migation is forward compatible", async () => {
 	expect(irisPokemon[0][47]).toEqual("Burned")
 	expect(irisPokemon[0][48]).toEqual("Focus Sash")
 
-	// NEW ARGS
 	expect(irisPokemon[0][49]).toEqual("t")
-	// END NEW ARGS
 
 	expect(irisInfo[2]).toEqual("Iris")
 	expect(irisInfo[6]).toEqual("44")
+	// NEW FIELDS
+	expect(irisInfo[40]).toEqual("Human")
+	expect(irisInfo[41]).toEqual("Female")
+	expect(irisInfo[42]).toEqual("18")
+	expect(irisInfo[43]).toEqual("Unova")
+	expect(irisInfo[44]).toEqual("Thief")
 
 	await call(client, "remove_move", [writeKey, psybeamId])
 	await call(client, "remove_move", [writeKey, pounceId])

@@ -36,8 +36,9 @@ test("migation is backward compatible", async () => {
 		false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
 		false, false, false, false, false, false,
 		"shield-dust", "",
+		"fairy", 5400, null, null,
 		// NEW ARGS!
-		"fairy", 5400, null, null
+		false
 	])
 
 	const [ [psybeamId] ] = await call(client, "add_move", [
@@ -63,8 +64,9 @@ test("migation is backward compatible", async () => {
 		false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
 		false, false, false, false, false, false,
 		"shield-dust", "",
+		"fairy", 6200, "Burned", "Focus Sash",
 		// NEW ARGS!
-		"fairy", 6200, "Burned", "Focus Sash"
+		true
 	])
 
 	await call(client, "update_trainer", [
@@ -85,14 +87,16 @@ test("migation is backward compatible", async () => {
 	expect(psybeam?.[3]).toEqual("9")
 	expect(pounce?.[3]).toEqual("10")
 	
-	expect(irisPokemon[0][3], "Sunny Yellow")
+	expect(irisPokemon[0][3]).toEqual("Sunny Yellow")
 	expect(irisPokemon[0][14]).toEqual("45")
 
-	// NEW ARGS
 	expect(irisPokemon[0][45], "fairy")
 	expect(irisPokemon[0][46]).toEqual("6200")
 	expect(irisPokemon[0][47]).toEqual("Burned")
 	expect(irisPokemon[0][48]).toEqual("Focus Sash")
+
+	// NEW ARGS
+	expect(irisPokemon[0][49]).toEqual("t")
 	// END NEW ARGS
 
 	expect(irisInfo[2]).toEqual("Iris")
