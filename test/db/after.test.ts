@@ -1,133 +1,229 @@
-import { Client } from "pg"
-import { test, beforeEach, afterEach, expect } from "vitest"
-import { env } from "./env"
-import { call } from "./helpers"
+import { test, expect } from "vitest"
+import { call, callAll, expectError } from "./supabase"
+import { Iris, SunnyYellow } from "./stubs"
 
-const client = new Client({
-	user: env.user,
-	database: env.database,
-	password: env.password,
-	host: env.host,
-	port: env.port,
-})
+test("updating trainers", async () => {
+	const {
+		ret_id: trainerId,
+		ret_read_key: readKey,
+		ret_write_key: writeKey
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
 
-beforeEach(async () => { await client.connect() })
-afterEach(async () => { await client.end() })
-
-test("migation is forward compatible", async () => {
-	const [ [trainerId, readKey, writeKey] ] = await call(client, "new_trainer", [
-		"Iris",
-		"A trainer who loves colors.",
-		6, 11, 50, 50, 6, 6,
-		10, 16, 10, 13, 11, 15,
-		false, true, false, true, false, false, false, false, false, true, false, false, true, false, true, false, false, false,
-		false, true, false, false, false, true,
-		"Human", null, null, null, null
-	])
-
-	const [ [canWrite] ] = await call(client, "verify_write_key", [trainerId, writeKey])
+	const canWrite = await call<number>("verify_write_key", {
+		_id: trainerId,
+		_write_key: writeKey,
+	})
 	
 	expect(canWrite).toEqual(1)
 
-	const [ [pokemonId] ] = await call(client, "add_pokemon", [
-		writeKey,
-		"Sunny Yellow", "vivillon", ["bug", "flying"], "Quirky", 6, "female",
-		12, 17, 16, 6, 14, 10,
-		14, 66, 66, 6, 6,
-		false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
-		false, false, false, false, false, false,
-		"shield-dust", "",
-		"fairy", 5400, null, null,
-		false
-	])
+	// Update
+	await call("update_trainer", {
+		_write_key: writeKey,
+		...Iris(),
+		_hp_cur: 44,
+		_species: "Human",
+		_gender: "Female",
+		_age: 22,
+		_home_region: "Unova",
+		_background: "Thief",
+	})
 
-	const [ [psybeamId] ] = await call(client, "add_move", [
-		writeKey, pokemonId,
-		"psybeam", 10, 10, ""
-	])
+	// Updating the avatar
+	await call("new_trainer_avatar_filename", {
+		_write_key: writeKey,
+		_extension: ".png",
+	})
 
-	const [ [pounceId] ] = await call(client, "add_move", [
-		writeKey, pokemonId,
-		"pounce", 10, 10, ""
-	])
+	// Call twice to ensure most recent filename survives
+	const avatarFilename = await call<string>("new_trainer_avatar_filename", {
+		_write_key: writeKey,
+		_extension: ".png",
+	})
 
-	await call(client, "update_move", [
-		writeKey, psybeamId,
-		"psybeam", 9, 10, ""
-	])
+	// Assert
+	const irisInfo = await call<any>("get_trainer", {
+		_read_key: readKey,
+	})
 
-	await call(client, "update_pokemon", [
-		writeKey, pokemonId,
-		"vivillon", "Sunny Yellow", ["bug", "flying"], "Quirky", 6, "female",
-		12, 17, 16, 6, 14, 10,
-		14, 45, 66, 6, 6,
-		false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,
-		false, false, false, false, false, false,
-		"shield-dust", "",
-		"fairy", 6200, "Burned", "Focus Sash",
-		true
-	])
+	expect(irisInfo.name).toEqual("Iris")
+	expect(irisInfo.hp_cur).toEqual(44)
+	expect(irisInfo.species).toEqual("Human")
+	expect(irisInfo.gender).toEqual("Female")
+	expect(irisInfo.age).toEqual(22)
+	expect(irisInfo.home_region).toEqual("Unova")
+	expect(irisInfo.background).toEqual("Thief")
 
-	await call(client, "update_trainer", [
-		writeKey,
-		"Iris", "A trainer who loves colors.",
-		6, 11, 44, 50, 6, 6,
-		10, 16, 10, 13, 11, 15,
-		false, true, false, true, false, false, false, false, false, true, false, false, true, false, true, false, false, false,
-		false, true, false, false, false, true,
-		"Human", "Female", 18, "Unova", "Thief"
-	])
+	// NEW FIELDS
+	expect(irisInfo.avatar_filename).toEqual(avatarFilename)
 
-	// NEW Function
-	await call(client, "new_trainer_avatar_filename", [
-		writeKey, ".png"
-	])
+	// Cleanup
+	await call("delete_trainer", {
+		_write_key: writeKey,
+		_id: trainerId,
+	})
+	await call<any>("get_trainer", {
+		_read_key: readKey,
+	}, {
+		assertNull: true,
+	})
+})
 
-	// Called again, to ensure only most recent is retrieved
-	const [ [avatarFilename] ] = await call(client, "new_trainer_avatar_filename", [
-		writeKey, ".png"
-	])
+test("updating pokemon", async () => {
+	const {
+		ret_id: trainerId,
+		ret_read_key: readKey,
+		ret_write_key: writeKey
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
 
-	const sunnyMoves = await call(client, "get_moveset", [pokemonId])
-	const irisPokemon = await call(client, "get_pokemon", [trainerId])
-	const [irisInfo] = await call(client, "get_trainer", [readKey])
+	const pokemonId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+	})
 
-	const psybeam = sunnyMoves.find((it) => it[2] === "psybeam")
-	const pounce = sunnyMoves.find((it) => it[2] === "pounce")
-	expect(psybeam?.[3]).toEqual("9")
-	expect(pounce?.[3]).toEqual("10")
-	
-	expect(irisPokemon[0][3]).toEqual("Sunny Yellow")
-	expect(irisPokemon[0][14]).toEqual("45")
+	// Update
+	await call("update_pokemon", {
+		_write_key: writeKey,
+		_id: pokemonId,
+		...SunnyYellow(),
+		_hp_cur: 45,
+		_exp: 6200,
+		_status: "Burned",
+		_held_item: "Focus Sash",
+		_is_shiny: true,
+	})
 
-	expect(irisPokemon[0][45]).toEqual("fairy")
-	expect(irisPokemon[0][46]).toEqual("6200")
-	expect(irisPokemon[0][47]).toEqual("Burned")
-	expect(irisPokemon[0][48]).toEqual("Focus Sash")
+	const [vivillon] = await callAll<any>("get_pokemon", {
+		_trainer_id: trainerId,
+	})
 
-	expect(irisPokemon[0][49]).toEqual("t")
+	expect(vivillon.nickname).toEqual("Sunny Yellow")
+	expect(vivillon.hp_cur).toEqual(45)
 
-	expect(irisInfo[2]).toEqual("Iris")
-	expect(irisInfo[6]).toEqual("44")
-	expect(irisInfo[40]).toEqual("Human")
-	expect(irisInfo[41]).toEqual("Female")
-	expect(irisInfo[42]).toEqual("18")
-	expect(irisInfo[43]).toEqual("Unova")
-	expect(irisInfo[44]).toEqual("Thief")
+	expect(vivillon.tera_type).toEqual("fairy")
+	expect(vivillon.exp).toEqual(6200)
+	expect(vivillon.status).toEqual("Burned")
+	expect(vivillon.held_item).toEqual("Focus Sash")
 
-	// NEW FIELD
-	expect(irisInfo[45]).toEqual(avatarFilename)
+	expect(vivillon.is_shiny).toEqual(true)
 
-	await call(client, "remove_move", [writeKey, psybeamId])
-	await call(client, "remove_move", [writeKey, pounceId])
-	const noMoreMoves = await call(client, "get_moveset", [pokemonId])
+	// Cleanup
+	await call("remove_pokemon", {
+		_write_key: writeKey,
+		_id: pokemonId,
+	})
+	await call("delete_trainer", {
+		_write_key: writeKey,
+		_id: trainerId,
+	})
+	const noMorePokemon = await callAll<any>("get_pokemon", {
+		_trainer_id: trainerId,
+	})
+	expect(noMorePokemon.length).toEqual(0)
+})
+
+test("updating movesets", async () => {
+	const {
+		ret_id: trainerId,
+		ret_read_key: readKey,
+		ret_write_key: writeKey
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const pokemonId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+	})
+
+	const psybeamId = await call<string>("add_move", {
+		_write_key: writeKey,
+		_pokemon_id: pokemonId,
+		_move_id: "psybeem",
+		_pp_cur: 10,
+		_pp_max: 10,
+		_notes: "",
+	})
+
+	const pounceId = await call<string>("add_move", {
+		_write_key: writeKey,
+		_pokemon_id: pokemonId,
+		_move_id: "pounce",
+		_pp_cur: 10,
+		_pp_max: 10,
+		_notes: "",
+	})
+
+	// Update
+	await call("update_move", {
+		_write_key: writeKey,
+		_id: psybeamId,
+		_move_id: "psybeam",
+		_pp_cur: 9,
+		_pp_max: 10,
+		_notes: "",
+	})
+
+	// Assert
+	const sunnyMoves = await callAll<any>("get_moveset", {
+		_pokemon_id: pokemonId,
+	})
+
+	const psybeam = sunnyMoves.find((it) => it.move_id === "psybeam")
+	const pounce = sunnyMoves.find((it) => it.move_id === "pounce")
+	expect(psybeam?.pp_cur).toEqual(9)
+	expect(pounce?.pp_cur).toEqual(10)
+
+	// Cleanup
+	await call("remove_move", {
+		_write_key: writeKey,
+		_id: psybeamId,
+	})
+	await call("remove_move", {
+		_write_key: writeKey,
+		_id: pounceId,
+	})
+	const noMoreMoves = await callAll<any>("get_moveset", {
+		_pokemon_id: pokemonId,
+	})
+
 	expect(noMoreMoves.length).toEqual(0)
 
-	await call(client, "remove_pokemon", [writeKey, pokemonId])
-	const noMorePokemon = await call(client, "get_pokemon", [trainerId])
-	expect(noMorePokemon.length).toEqual(0)
+	await call("remove_pokemon", {
+		_write_key: writeKey,
+		_id: pokemonId,
+	})
+	await call("delete_trainer", {
+		_write_key: writeKey,
+		_id: trainerId,
+	})
+})
 
-	await call(client, "delete_trainer", [writeKey, trainerId])
-	const noMoreTrainer = await call(client, "get_trainer", [readKey])
-	expect(noMoreTrainer.length).toEqual(0)
+test("no direct access allowed", async () => {
+	const UNAUTHORIZED_SCHEMA = "PGRST106"
+
+	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
+		supabase.schema("private").from("trainers").select()
+	)
+
+	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
+		supabase.schema("private").from("trainers").insert({ name: "Iris" })
+	)
+
+	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
+		supabase.schema("private").from("pokemon").select()
+	)
+
+	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
+		supabase.schema("private").from("moves").select()
+	)
 })
