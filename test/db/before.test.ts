@@ -25,7 +25,6 @@ test("updating trainers", async () => {
 		_write_key: writeKey,
 		...Iris(),
 		_hp_cur: 44,
-		// NEW FIELDS
 		_species: "Human",
 		_gender: "Female",
 		_age: 22,
@@ -33,18 +32,33 @@ test("updating trainers", async () => {
 		_background: "Thief",
 	})
 
+	// Updating the avatar
+	await call("new_trainer_avatar_filename", {
+		_write_key: writeKey,
+		_extension: ".png",
+	})
+
+	// Call twice to ensure most recent filename survives
+	const avatarFilename = await call<string>("new_trainer_avatar_filename", {
+		_write_key: writeKey,
+		_extension: ".png",
+	})
+
+	// Assert
 	const irisInfo = await call<any>("get_trainer", {
 		_read_key: readKey,
 	})
 
 	expect(irisInfo.name).toEqual("Iris")
 	expect(irisInfo.hp_cur).toEqual(44)
-	// NEW FIELDS
 	expect(irisInfo.species).toEqual("Human")
 	expect(irisInfo.gender).toEqual("Female")
 	expect(irisInfo.age).toEqual(22)
 	expect(irisInfo.home_region).toEqual("Unova")
 	expect(irisInfo.background).toEqual("Thief")
+
+	// NEW FIELDS
+	expect(irisInfo.avatar_filename).toEqual(avatarFilename)
 
 	// Cleanup
 	await call("delete_trainer", {

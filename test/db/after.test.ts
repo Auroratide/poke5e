@@ -1,5 +1,5 @@
 import { test, expect } from "vitest"
-import { call, callAll, expectError } from "./supabase"
+import { supabase, call, callAll, expectError } from "./supabase"
 import { Iris, SunnyYellow } from "./stubs"
 
 test("updating trainers", async () => {
@@ -56,8 +56,6 @@ test("updating trainers", async () => {
 	expect(irisInfo.age).toEqual(22)
 	expect(irisInfo.home_region).toEqual("Unova")
 	expect(irisInfo.background).toEqual("Thief")
-
-	// NEW FIELDS
 	expect(irisInfo.avatar_filename).toEqual(avatarFilename)
 
 	// Cleanup
@@ -226,4 +224,55 @@ test("no direct access allowed", async () => {
 	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
 		supabase.schema("private").from("moves").select()
 	)
+})
+
+test("uploading files", async () => {
+	const UNAUTHORIZED = "403"
+
+	const {
+		ret_write_key: writeKey
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const file = new File([], "my-file.png", {
+		type: "image/png",
+	})
+
+	// Attempt to upload to an invalid key
+	await expectError(UNAUTHORIZED, async (supabase) =>
+		supabase.storage.from("trainer_avatars").upload("my-file.png", file)
+	)
+
+	// Get a valid key, then upload
+	const avatarFilename = await call<string>("new_trainer_avatar_filename", {
+		_write_key: writeKey,
+		_extension: ".png",
+	})
+
+	const { error: uploadShouldSucceed } = await supabase.storage.from("trainer_avatars").upload(avatarFilename, file)
+
+	expect(uploadShouldSucceed).toBeNull()
+
+	// Attempt to override the uploaded file
+	await expectError(UNAUTHORIZED, async (supabase) =>
+		supabase.storage.from("trainer_avatars").update(avatarFilename, file)
+	)
+
+	// Attempt to delete a valid key
+	const { data: deleteValidKeyResult } = await supabase.storage.from("trainer_avatars").remove([avatarFilename])
+
+	expect(deleteValidKeyResult?.length).toEqual(0)
+
+	// Get a new key, then delete the old one
+	await call<string>("new_trainer_avatar_filename", {
+		_write_key: writeKey,
+		_extension: ".png",
+	})
+
+	const { data: deleteOldKeyResult } = await supabase.storage.from("trainer_avatars").remove([avatarFilename])
+
+	expect(deleteOldKeyResult?.length).toEqual(1)
 })

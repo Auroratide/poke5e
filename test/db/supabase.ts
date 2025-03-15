@@ -38,8 +38,21 @@ export async function callAll<T>(name: string, args: any): Promise<T[]> {
 	return data
 }
 
-export async function expectError(expectedCode: string, action: (client: typeof supabase) => Promise<PostgrestSingleResponse<any>>) {
+type StorageError = {
+	statusCode: string
+}
+export async function expectError(expectedCode: string, action: (client: typeof supabase) => Promise<{ error: any }>) {
 	const { error } = await action(supabase)
 
-	expect(error?.code).toEqual(expectedCode)
+	if (error == null) {
+		throw new Error(`Expected error ${expectedCode}, but was successful`)
+	}
+
+	if ("code" in error) {
+		expect(error.code).toEqual(expectedCode)
+	}
+	
+	if ("statusCode" in error) {
+		expect(error.statusCode).toEqual(expectedCode)
+	}
 }
