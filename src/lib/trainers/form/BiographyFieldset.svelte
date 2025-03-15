@@ -46,8 +46,7 @@
 <style>
 	.grid {
 		display: grid;
-		grid-template-columns: auto 1fr 9em;
-		block-size: 9em;
+		grid-template-columns: auto 1fr;
 		column-gap: 0.5em;
 		row-gap: 0.5em;
 		align-items: center;
@@ -55,8 +54,24 @@
 	}
 
 	.image-input {
-		grid-area: 1 / 3 / 6 / 3;
+		grid-column: span 2;
 		inline-size: 100%;
 		block-size: 100%;
+		aspect-ratio: 1;
+		max-inline-size: 9em;
+		place-self: center;
+	}
+
+	@media screen and (min-width: 75rem) {
+		.grid {
+			grid-template-columns: auto 1fr 9em;
+			block-size: 9em;
+		}
+
+		.image-input {
+			grid-area: 1 / 3 / 6 / 3;
+			inline-size: 100%;
+			block-size: 100%;
+		}
 	}
 </style>
