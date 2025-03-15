@@ -40,6 +40,7 @@
 	let biography = trainer.biography
 	let originalAvatar = trainer.avatar
 	let avatarToUpload: File | undefined = undefined
+	let isValid = true
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -79,7 +80,7 @@
 			<NumberInput name="max-hp" label="Max HP" bind:value={maxHp} {disabled} />
 			<NumberInput name="max-hit-dice" label="Max Hit Dice" bind:value={maxHitDice} {disabled} />
 		</Fieldset>
-		<BiographyFieldset originalAvatarSrc={originalAvatar?.href} bind:biography={biography} bind:avatar={avatarToUpload} {disabled} />
+		<BiographyFieldset originalAvatarSrc={originalAvatar?.href} bind:biography={biography} bind:avatar={avatarToUpload} bind:isValid {disabled} />
 		<AttributesFieldset bind:values={attributes} {disabled} />
 		<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 		<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
@@ -88,7 +89,19 @@
 		</Fieldset>
 		<ActionArea>
 			<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
-			<Button type="submit" {disabled}>Finish!</Button>
+			<Button type="submit" disabled={disabled || !isValid}>Finish!</Button>
 		</ActionArea>
+		{#if !isValid}
+			<section>
+				<p class="error">One or more fields above have an issue.</p>
+			</section>
+		{/if}
 	</form>
 </Saveable>
+
+<style>
+	.error {
+		color: var(--red-text);
+		text-align: end;
+	}
+</style>

@@ -9,12 +9,15 @@
 	export let originalAvatarSrc: string | undefined
 	export let avatar: File | undefined
 	export let disabled: boolean
+	export let isValid = true
 
 	let species = biography.species
 	let gender = biography.gender
 	let age = biography.age
 	let homeRegion = biography.homeRegion
 	let background = biography.background
+
+	const FIVE_HUNDRED_KB = 524288
 
 	$: {
 		biography = {
@@ -35,7 +38,7 @@
 		<TextInput name="region" label="Home Region" bind:value={homeRegion} placeholder="e.g. Sinnoh" {disabled} />
 		<TextInput name="Background" label="Background" bind:value={background} placeholder="e.g. Entertainer" {disabled} />
 		<div class="image-input">
-			<ImageInput name="avatar" label="Avatar" previousValue={originalAvatarSrc} bind:currentValue={avatar} {disabled} />
+			<ImageInput name="avatar" label="Avatar" previousValue={originalAvatarSrc} bind:currentValue={avatar} maxbytes={FIVE_HUNDRED_KB} bind:isValid {disabled} />
 		</div>
 	</div>
 </Fieldset>

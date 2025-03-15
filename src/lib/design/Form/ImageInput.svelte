@@ -6,10 +6,23 @@
 	export let disabled: boolean = false
 	export let previousValue: string | undefined = undefined
 	export let currentValue: File | undefined
+	export let maxbytes: number | undefined = undefined
+	export let isValid = true
 
 	let previewSrc = ""
+	let error: string | undefined = undefined
 
 	$: srcToShow = previewSrc ? previewSrc : previousValue
+
+	const prettyPrintBytes = (bytes: number) => {
+		if (bytes < 1000) {
+			return `${bytes} bytes`
+		} else if (bytes < 1000000) {
+			return `${(bytes / 1000).toFixed(0)} KB`
+		} else {
+			return `${(bytes / 1000000).toFixed(0)} MB`
+		}
+	}
 
 	const onChange = (e: Event) => {
 		const input = e.target as HTMLInputElement
@@ -18,6 +31,14 @@
 		if (file) previewSrc = URL.createObjectURL(file)
 		else previewSrc = ""
 		currentValue = file
+
+		if (file.size > maxbytes) {
+			isValid = false
+			error = `File is too large. Must be less than ${prettyPrintBytes(maxbytes)}.`
+		} else {
+			isValid = true
+			error = undefined
+		}
 	}
 
 	onDestroy(() => {
@@ -34,6 +55,11 @@
 	<input id="{name}-input" {name} type="file" accept="image/*" on:change={onChange} {disabled} />
 	{#if srcToShow}
 		<img src="{srcToShow}" alt="Upload Preview" />
+	{/if}
+	{#if error}
+		<div class="error">
+			<p>{error}</p>
+		</div>
 	{/if}
 </div>
 
@@ -93,5 +119,25 @@
 
 	input:hover ~ img {
 		opacity: 0.175;
+	}
+
+	.error {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 0.25em;
+		inline-size: 100%;
+		block-size: 100%;
+		background: hsl(var(--red-hsl) / 0.75);
+	}
+
+	.error p {
+		font-size: var(--font-sz-venus);
+		background: var(--skin-bg-text);
+		border: 0.125em solid var(--red-dark);
+		padding: 0.25em;
+		margin: 0;
 	}
 </style>

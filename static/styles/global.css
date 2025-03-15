@@ -111,6 +111,7 @@
 	--skin-status-asleep: oklch(80% 0.105 247);
 	--skin-status-text: oklch(0% 0 0);
 
+	--red-hsl: 355 72% 53%;
 	--red-main: hsl(355 72% 53%);
     --red-dark: hsl(355 66% 45%);
     --red-text: hsl(355 66% 45%);
