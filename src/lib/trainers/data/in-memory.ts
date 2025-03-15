@@ -1,5 +1,5 @@
 import type { Pokemon } from "$lib/creatures/types"
-import type { TrainerData, TrainerDataProvider } from "."
+import type { StorageResource, TrainerData, TrainerDataProvider } from "."
 import {
 	type TrainerPokemon,
 	type ReadWriteKey,
@@ -375,6 +375,18 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 			return true
 		} else {
 			return false
+		}
+	}
+
+	updateTrainerAvatar = async (writeKey: ReadWriteKey, newAvatar: File): Promise<StorageResource> => {
+		if (!writeKey) return null
+
+		const extension = newAvatar.name.split(".").at(-1)
+		const name = `${randomKey(20)}.${extension}`
+
+		return {
+			name: name,
+			href: `http://localhost:3000/${name}`,
 		}
 	}
 

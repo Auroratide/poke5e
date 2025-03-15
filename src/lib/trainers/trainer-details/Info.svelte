@@ -7,11 +7,15 @@
 	import StatsInfo from "./StatsInfo.svelte"
 	import AttributeBlock from "$lib/dnd/AttributeBlock.svelte"
 	import SkillsInfo from "../info/SkillsInfo.svelte"
+	import Art from "$lib/design/Art.svelte"
+	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 
 	const dispatch = createEventDispatcher()
 
 	export let trainer: Trainer
 	export let editable: boolean
+
+	$: hasImage = trainer.avatar != null
 
 	const onUpdateHealth = (e: CustomEvent<HealthUpdateDetail>) => {
 		dispatch("update-health", {
@@ -28,7 +32,7 @@
 	}
 </script>
 
-<section class="info">
+<SideArtCardSection {hasImage}>
 	<FlatDl columns={2}>
 		<dt>Trainer Id</dt>
 		<dd>{trainer.readKey}</dd>
@@ -37,7 +41,8 @@
 		<HealthInfo hp={trainer.hp} hitDice={trainer.hitDice} dieSize="d8" {editable} on:update={onUpdateHealth} status={null} />
 		<StatsInfo {trainer} />
 	</div>
-</section>
+	<Art slot="art" src="{trainer.avatar.href}" alt="Trainer Avatar" />
+</SideArtCardSection>
 <section class="stats">
 	<AttributeBlock attributes={trainer.attributes} />
 	<SkillsInfo level={trainer.level} attributes={trainer.attributes} savingThrows={trainer.savingThrows} proficiencies={trainer.proficiencies} />

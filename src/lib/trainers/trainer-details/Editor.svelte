@@ -1,5 +1,8 @@
 <script lang="ts" context="module">
-	export type UpdateDetail = TrainerInfo
+	export type UpdateDetail = {
+		trainer: TrainerInfo,
+		newAvatar?: File,
+	}
 </script>
 
 <script lang="ts">
@@ -35,29 +38,34 @@
 	let savingThrows = [...trainer.savingThrows]
 	let description = trainer.description
 	let biography = trainer.biography
-	let avatarToUpload = undefined
+	let originalAvatar = trainer.avatar
+	let avatarToUpload: File | undefined = undefined
 
 	const cancel = () => {
 		dispatch("cancel")
 	}
 	const endEdit = () => {
 		dispatch("update", {
-			name,
-			description,
-			level,
-			ac,
-			hp: {
-				current: trainer.hp.current + (maxHp - trainer.hp.max),
-				max: maxHp,
+			trainer: {
+				name,
+				description,
+				level,
+				ac,
+				hp: {
+					current: trainer.hp.current + (maxHp - trainer.hp.max),
+					max: maxHp,
+				},
+				hitDice: {
+					current: trainer.hitDice.current + (maxHitDice - trainer.hitDice.max),
+					max: maxHitDice,
+				},
+				attributes,
+				proficiencies,
+				savingThrows,
+				biography,
+				avatar: originalAvatar,
 			},
-			hitDice: {
-				current: trainer.hitDice.current + (maxHitDice - trainer.hitDice.max),
-				max: maxHitDice,
-			},
-			attributes,
-			proficiencies,
-			savingThrows,
-			biography,
+			newAvatar: avatarToUpload,
 		})
 	}
 </script>
@@ -71,7 +79,7 @@
 			<NumberInput name="max-hp" label="Max HP" bind:value={maxHp} {disabled} />
 			<NumberInput name="max-hit-dice" label="Max Hit Dice" bind:value={maxHitDice} {disabled} />
 		</Fieldset>
-		<BiographyFieldset bind:biography={biography} bind:avatar={avatarToUpload} {disabled} />
+		<BiographyFieldset originalAvatarSrc={originalAvatar?.href} bind:biography={biography} bind:avatar={avatarToUpload} {disabled} />
 		<AttributesFieldset bind:values={attributes} {disabled} />
 		<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 		<SavingThrowsFieldset bind:values={savingThrows} {disabled} />

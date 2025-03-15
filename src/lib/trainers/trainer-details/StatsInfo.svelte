@@ -53,8 +53,8 @@
 		flex-direction: row;
 		gap: 1em;
 	} .two-columns > :first-child {
-		flex: 1;
-	} .two-columns > :last-child {
 		flex: 2;
+	} .two-columns > :last-child {
+		flex: 3;
 	}
 </style>

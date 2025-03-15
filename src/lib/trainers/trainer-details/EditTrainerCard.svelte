@@ -19,7 +19,9 @@
 
 	const onUpdate = (e: CustomEvent<UpdateDetail>) => {
 		saving = true
-		$trainer.update?.info(e.detail).then(() => {
+		$trainer.update?.info(e.detail.trainer, {
+			newAvatar: e.detail.newAvatar,
+		}).then(() => {
 			saving = false
 			goto(Url.trainers($trainer.info.readKey))
 		}).catch(() => {

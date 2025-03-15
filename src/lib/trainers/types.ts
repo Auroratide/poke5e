@@ -3,6 +3,7 @@ import type { Pokemon } from "../creatures/types"
 import type { Move } from "$lib/moves/types"
 import type { AbilityId, PokeType, TeraPokeType } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
+import type { StorageResource } from "./data"
 
 export type Resource = {
 	current: number,
@@ -106,6 +107,7 @@ export type TrainerInfo = {
 	proficiencies: Skill[],
 	savingThrows: Attribute[],
 	biography: TrainerBio,
+	avatar?: StorageResource,
 }
 export type Trainer = TrainerInfo & {
 	id: TrainerId,

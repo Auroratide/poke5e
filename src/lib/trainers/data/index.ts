@@ -20,6 +20,11 @@ export type TrainerData = {
 	writeKey?: ReadWriteKey,
 }
 
+export type StorageResource = {
+	name: string,
+	href: string,
+}
+
 export type ErrorDiagnostics = {
 	code?: string,
 	details?: string,
@@ -38,6 +43,7 @@ export interface TrainerDataProvider {
 	removeTrainer: (id: TrainerId, readKey: ReadWriteKey) => Promise<void>
 	deleteTrainer: (writeKey: ReadWriteKey, id: TrainerId, readKey: ReadWriteKey) => Promise<boolean>
 	updateTrainerInfo: (writeKey: ReadWriteKey, info: TrainerInfo) => Promise<boolean>
+	updateTrainerAvatar: (writeKey: ReadWriteKey, newAvatar: File, oldResource?: StorageResource) => Promise<StorageResource>
 	updatePokemon: (writeKey: ReadWriteKey, info: TrainerPokemon) => Promise<boolean>
 	addPokemonToTeam: (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: Pokemon) => Promise<TrainerPokemon>
 	removePokemon: (writeKey: ReadWriteKey, id: string) => Promise<boolean>

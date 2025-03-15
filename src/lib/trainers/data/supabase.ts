@@ -12,10 +12,12 @@ import {
 } from "../types"
 import type { Skill, Attribute } from "$lib/dnd/types"
 import type { Pokemon } from "$lib/creatures/types"
-import { TrainerDataProviderError, type TrainerData, type TrainerDataProvider } from "."
+import { TrainerDataProviderError, type StorageResource, type TrainerData, type TrainerDataProvider } from "."
 import type { SupabaseClient } from "@supabase/supabase-js"
 import { isPokeType, type TeraPokeType } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
+
+const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
 export class SupabaseTrainerProvider implements TrainerDataProvider {
 	constructor(private supabase: SupabaseClient) {}
@@ -30,7 +32,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 				if (!data) return undefined
 
-				return rowToTrainer(data)
+				return rowToTrainer(data, this.getStorageResource)
 			})),
 		).then((trainers) => trainers.filter((it) => it != null))
 	}
@@ -45,7 +47,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 				if (!data) return undefined
 
-				return rowToTrainer(data)
+				return rowToTrainer(data, this.getStorageResource)
 			})
         
 		if (!trainer) return undefined
@@ -234,6 +236,44 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 
 		return data > 0
+	}
+
+	updateTrainerAvatar = async (writeKey: ReadWriteKey, newAvatar: File, oldResource?: StorageResource): Promise<StorageResource> => {
+		const filename = await this.generateTrainerAvatarFilename(writeKey, newAvatar)
+
+		const { error: uploadError } = await this.supabase.storage.from(TRAINER_AVATARS_BUCKET).upload(filename, newAvatar)
+
+		if (uploadError) {
+			throw new TrainerDataProviderError("Could not upload file for trainer.")
+		}
+
+		await this.removeOldTrainerAvatar(oldResource)
+
+		return this.getStorageResource(TRAINER_AVATARS_BUCKET, filename)
+	}
+
+	private generateTrainerAvatarFilename = async (writeKey: ReadWriteKey, newAvatar: File): Promise<string> => {
+		const extension = newAvatar.name.split(".").at(-1)
+		const { data: filename, error: newFilenameError } = await this.supabase.rpc("new_trainer_avatar_filename", {
+			_write_key: writeKey,
+			_extension: "." + extension,
+		}).single<string>()
+
+		if (newFilenameError) {
+			throw new TrainerDataProviderError("Could not generate filename for trainer avatar.", newFilenameError)
+		}
+
+		return filename
+	}
+
+	private removeOldTrainerAvatar = async (oldResource?: StorageResource) => {
+		if (oldResource != null) {
+			const { error: deleteError } = await this.supabase.storage.from(TRAINER_AVATARS_BUCKET).remove([oldResource.name])
+
+			if (deleteError) {
+				console.warn("Could not remove old trainer avatar. Ignoring this error.")
+			}
+		}
 	}
 
 	removeTrainer = async (id: TrainerId, readKey: ReadWriteKey): Promise<void> => {
@@ -541,6 +581,11 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 		return data?.map((move) => rowToMove(move)) ?? []
 	}
+
+	private getStorageResource = (bucket: string, name: string) => ({
+		name: name,
+		href: this.supabase.storage.from(bucket).getPublicUrl(name).data.publicUrl,
+	})
 }
 
 export const getReadKeys = (): ReadWriteKey[] =>
@@ -615,9 +660,10 @@ type TrainerRow = {
 	age: number | null,
 	home_region: string | null,
 	background: string | null,
+	avatar_filename: string | null,
 }
 
-const rowToTrainer = (row: TrainerRow): Trainer => ({
+const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name: string) => StorageResource) => ({
 	id: row.id,
 	readKey: row.read_key,
 	name: row.name,
@@ -675,6 +721,9 @@ const rowToTrainer = (row: TrainerRow): Trainer => ({
 		homeRegion: row.home_region,
 		background: row.background,
 	},
+	avatar: row.avatar_filename != null ?
+		getStorageResource(TRAINER_AVATARS_BUCKET, row.avatar_filename) :
+		null,
 })
 
 type PokemonRow = {

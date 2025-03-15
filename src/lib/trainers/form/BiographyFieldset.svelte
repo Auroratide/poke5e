@@ -6,6 +6,7 @@
 	import NumberInput from "./NumberInput.svelte"
 	
 	export let biography: TrainerBio
+	export let originalAvatarSrc: string | undefined
 	export let avatar: File | undefined
 	export let disabled: boolean
 
@@ -34,7 +35,7 @@
 		<TextInput name="region" label="Home Region" bind:value={homeRegion} placeholder="e.g. Sinnoh" {disabled} />
 		<TextInput name="Background" label="Background" bind:value={background} placeholder="e.g. Entertainer" {disabled} />
 		<div class="image-input">
-			<ImageInput name="avatar" label="Avatar" bind:currentValue={avatar} {disabled} />
+			<ImageInput name="avatar" label="Avatar" previousValue={originalAvatarSrc} bind:currentValue={avatar} {disabled} />
 		</div>
 	</div>
 </Fieldset>

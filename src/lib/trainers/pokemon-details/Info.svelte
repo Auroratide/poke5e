@@ -13,6 +13,7 @@
 	import FeatsInfo from "./FeatsInfo.svelte"
 	import NotesInfo from "./NotesInfo.svelte"
 	import PokemonArt from "$lib/creatures/PokemonArt.svelte"
+	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -42,28 +43,22 @@
 	}
 </script>
 
-<section class="info column lg:row">
-	<div style:flex="1" style:width="100%">
-		<div style:margin-bottom="0.5em">
-			<BasicInfo {pokemon} {species} />
-			<HealthInfo
-				hp={pokemon.hp}
-				hitDice={pokemon.hitDice}
-				dieSize={species.hitDice}
-				status={pokemon.status}
-				hasStatus
-				{editable}
-				on:update={onUpdateHealth}
-			/>
-		</div>
-		<StatsInfo {pokemon} {species} />
+<SideArtCardSection {hasImage}>
+	<div style:margin-bottom="0.5em">
+		<BasicInfo {pokemon} {species} />
+		<HealthInfo
+			hp={pokemon.hp}
+			hitDice={pokemon.hitDice}
+			dieSize={species.hitDice}
+			status={pokemon.status}
+			hasStatus
+			{editable}
+			on:update={onUpdateHealth}
+		/>
 	</div>
-	{#if hasImage}
-		<div style:--size="clamp(8rem, 12.66vw, 9.5rem)" class="square-image">
-			<PokemonArt media={species.media} alt="" shiny={pokemon.isShiny} />
-		</div>
-	{/if}
-</section>
+	<StatsInfo {pokemon} {species} />
+	<PokemonArt slot="art" media={species.media} alt="" shiny={pokemon.isShiny} />
+</SideArtCardSection>
 <section class="stats">
 	<AttributeBlock attributes={pokemon.attributes} />
 	<SkillsInfo level={pokemon.level} attributes={pokemon.attributes} savingThrows={pokemon.savingThrows} proficiencies={pokemon.proficiencies} />
@@ -86,25 +81,5 @@
 <style>
 	section {
 		margin-bottom: 0.5em;
-	}
-
-	.column {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-
-	@media screen and (min-width: 37.5rem) {
-		.lg\:row {
-			display: flex;
-			flex-direction: row;
-			align-items: flex-start;
-		}
-	}
-
-	.square-image {
-		width: var(--size);
-		height: var(--size);
-		padding: 0.5rem 0 0.5rem 1rem;
 	}
 </style>

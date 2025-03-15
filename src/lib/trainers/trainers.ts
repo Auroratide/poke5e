@@ -13,8 +13,12 @@ type UpdaterOptions = {
 	optimistic?: boolean
 }
 
+type AvatarUploadOptions = {
+	newAvatar?: File
+}
+
 type TrainerUpdater = {
-	info: (info: TrainerInfo, options?: UpdaterOptions) => Promise<void>
+	info: (info: TrainerInfo, options?: UpdaterOptions & AvatarUploadOptions) => Promise<void>
 	retire: () => Promise<void>
 	pokemon: (info: TrainerPokemon, options?: UpdaterOptions) => Promise<void>
 	moveset: (info: TrainerPokemon) => Promise<void>
@@ -74,14 +78,24 @@ const createStore = () => {
 				promises[readKey] = provider.getTrainer(readKey).then((data) => {
 					if (data == null) return undefined
 
-					const createUpdate = (data: TrainerData, options: UpdaterOptions = {}) => ({
-						info: (info: TrainerInfo) => {
+					const createUpdate = (data: TrainerData) => ({
+						info: async (info: TrainerInfo, options: UpdaterOptions & AvatarUploadOptions = {}) => {
 							const original = data.info
+
+							let avatar = info.avatar
+							if (options.newAvatar != null) {
+								avatar = await provider.updateTrainerAvatar(data.writeKey, options.newAvatar, info.avatar).catch((e) => {
+									error.show(e.message)
+									throw e
+								})
+							}
+
 							const updateStore = (info: TrainerInfo) => storeUpdateOne(readKey, (prev) => ({
 								...prev,
 								info: {
 									...prev.info,
 									...info,
+									avatar: avatar,
 								},
 							}))
 

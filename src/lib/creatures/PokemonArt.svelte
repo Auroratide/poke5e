@@ -2,6 +2,7 @@
 	import type { PokemonMedia } from "./types"
 	import { assets } from "$app/paths"
 	import { browser } from "$app/environment"
+	import Art from "$lib/design/Art.svelte"
 
 	export let media: PokemonMedia
 	export let alt: string
@@ -24,60 +25,13 @@
 </script>
 
 {#if sprite}
-	<figure>
-		{#key src}
-			<img {src} {alt} class:smaller={attribution != null} class:shimmer={shiny} />
-		{/key}
-		{#if attribution}
-			{#await attribution}
-				<figcaption style:visibility="hidden">Getting attribution...</figcaption>
-			{:then attribution}
-				{#if attribution.main}
-					<figcaption>By <a href="{attribution.main.link}">{attribution.main.author}</a></figcaption>
-				{/if}
-			{/await}
-		{/if}
-	</figure>
+	{#if attribution}
+		{#await attribution}
+			<Art {src} {alt} attribution="Getting attribution..." shimmer={shiny} />
+		{:then attribution}
+			<Art {src} {alt} attribution={attribution.main} shimmer={shiny} />
+		{/await}
+	{:else}
+		<Art {src} {alt} shimmer={shiny} />
+	{/if}
 {/if}
-
-<style>
-	figure {
-		margin: 0;
-		display: block;
-	}
-
-	img {
-		display: block;
-		width: 100%;
-		margin: 0 auto;
-		border: none;
-		box-shadow: none;
-	}
-
-	.smaller {
-		width: 85%;
-	}
-
-	figcaption {
-		font-size: 0.5rem;
-	}
-
-	.shimmer {
-		mask: linear-gradient(-60deg, oklch(0% 0 0) 30%, oklch(0% 0 0 / 0.5), oklch(0% 0 0) 70%) right / 350% 100%;
-		animation: shimmer 1s forwards;
-		animation-delay: 0.5s;
-	}
-
-	@keyframes shimmer {
-		100% {
-			mask-position: left;
-		}
-	}
-
-	@media (prefers-reduced-motion) {
-		.shimmer {
-			mask: none;
-			animation: none;
-		}
-	}
-</style>

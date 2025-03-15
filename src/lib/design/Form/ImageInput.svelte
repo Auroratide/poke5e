@@ -1,14 +1,17 @@
 <script lang="ts">
+	import { onDestroy } from "svelte"
+
 	export let name: string
 	export let label: string
 	export let disabled: boolean = false
-	// export let previousValue: string | undefined = undefined
+	export let previousValue: string | undefined = undefined
 	export let currentValue: File | undefined
 
 	let previewSrc = ""
 
+	$: srcToShow = previewSrc ? previewSrc : previousValue
+
 	const onChange = (e: Event) => {
-		console.log(e)
 		const input = e.target as HTMLInputElement
 		const [file] = input.files
 		if (previewSrc) URL.revokeObjectURL(previewSrc)
@@ -16,6 +19,10 @@
 		else previewSrc = ""
 		currentValue = file
 	}
+
+	onDestroy(() => {
+		if (previewSrc) URL.revokeObjectURL(previewSrc)
+	})
 </script>
 
 <div class="image-uploader">
@@ -25,8 +32,8 @@
 		<span>Select File</span>
 	</div>
 	<input id="{name}-input" {name} type="file" accept="image/*" on:change={onChange} {disabled} />
-	{#if previewSrc}
-		<img src="{previewSrc}" alt="Upload Preview" />
+	{#if srcToShow}
+		<img src="{srcToShow}" alt="Upload Preview" />
 	{/if}
 </div>
 
