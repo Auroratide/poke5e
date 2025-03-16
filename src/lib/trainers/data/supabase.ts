@@ -252,6 +252,20 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return this.getStorageResource(TRAINER_AVATARS_BUCKET, filename)
 	}
 
+	removeTrainerAvatar = async (writeKey: ReadWriteKey): Promise<void> => {
+		const { data, error } = await this.supabase.rpc("remove_trainer_avatar", {
+			_write_key: writeKey,
+		}).single<number>()
+
+		if (data != null && data <= 0) {
+			throw new TrainerDataProviderError("You do not have permission to edit this trainer.")
+		}
+
+		if (error) {
+			throw new TrainerDataProviderError("Could not remove trainer's avatar image", error)
+		}
+	}
+
 	private generateTrainerAvatarFilename = async (writeKey: ReadWriteKey, newAvatar: File): Promise<string> => {
 		const extension = newAvatar.name.split(".").at(-1)
 		const { data: filename, error: newFilenameError } = await this.supabase.rpc("new_trainer_avatar_filename", {

@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	export type UpdateDetail = {
 		trainer: TrainerInfo,
-		newAvatar?: File,
+		updateAvatar?: ImageInputValue,
 	}
 </script>
 
@@ -21,6 +21,7 @@
 	import ProficienciesFieldset from "../form/ProficienciesFieldset.svelte"
 	import SavingThrowsFieldset from "../form/SavingThrowsFieldset.svelte"
 	import BiographyFieldset from "../form/BiographyFieldset.svelte"
+	import type { ImageInputValue } from "$lib/design/Form/ImageInput.svelte"
 	
 	const dispatch = createEventDispatcher()
 
@@ -39,7 +40,7 @@
 	let description = trainer.description
 	let biography = trainer.biography
 	let originalAvatar = trainer.avatar
-	let avatarToUpload: File | undefined = undefined
+	let avatarToUpload: ImageInputValue | undefined = undefined
 	let isValid = true
 
 	const cancel = () => {
@@ -66,7 +67,7 @@
 				biography,
 				avatar: originalAvatar,
 			},
-			newAvatar: avatarToUpload,
+			updateAvatar: avatarToUpload,
 		})
 	}
 </script>

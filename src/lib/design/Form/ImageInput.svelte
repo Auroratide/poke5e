@@ -1,27 +1,43 @@
+<script lang="ts" context="module">
+	export type ImageInputValue = {
+		type: "new",
+		value: File,
+	} | {
+		type: "remove",
+	}
+</script>
+
 <script lang="ts">
 	import { onDestroy } from "svelte"
+	import Button from "$lib/design/Button.svelte"
 
 	export let name: string
 	export let label: string
 	export let disabled: boolean = false
 	export let previousValue: string | undefined = undefined
-	export let currentValue: File | undefined
+	export let currentValue: ImageInputValue | undefined
 	export let maxbytes: number | undefined = undefined
 	export let isValid = true
 
+	let inputElem: HTMLInputElement | null = null
 	let previewSrc = ""
 	let error: string | undefined = undefined
 
-	$: srcToShow = previewSrc ? previewSrc : previousValue
+	$: srcToShow = currentValue?.type === "remove" ? "" : (previewSrc ? previewSrc : previousValue)
+	$: canRemove = (previousValue != null || currentValue != null) && currentValue?.type !== "remove"
 
 	const prettyPrintBytes = (bytes: number) => {
-		if (bytes < 1000) {
+		if (bytes < 1024) {
 			return `${bytes} bytes`
-		} else if (bytes < 1000000) {
-			return `${(bytes / 1000).toFixed(0)} KB`
+		} else if (bytes < 1048576) {
+			return `${(bytes / 1024).toFixed(0)} KB`
 		} else {
-			return `${(bytes / 1000000).toFixed(0)} MB`
+			return `${(bytes / 1048576).toFixed(0)} MB`
 		}
+	}
+
+	$: {
+		console.log(srcToShow, canRemove, currentValue)
 	}
 
 	const onChange = (e: Event) => {
@@ -30,7 +46,10 @@
 		if (previewSrc) URL.revokeObjectURL(previewSrc)
 		if (file) previewSrc = URL.createObjectURL(file)
 		else previewSrc = ""
-		currentValue = file
+		currentValue = {
+			type: "new",
+			value: file,
+		}
 
 		if (file.size > maxbytes) {
 			isValid = false
@@ -41,35 +60,63 @@
 		}
 	}
 
+	const onRemove = () => {
+		currentValue = {
+			type: "remove",
+		}
+		isValid = true
+		error = undefined
+		if (previewSrc) URL.revokeObjectURL(previewSrc)
+		previewSrc = ""
+		
+		if (inputElem) inputElem.value = null
+	}
+
 	onDestroy(() => {
 		if (previewSrc) URL.revokeObjectURL(previewSrc)
 	})
 </script>
 
-<div class="image-uploader">
-	<div class="placeholder"></div>
-	<div class="text">
-		<label for="{name}-input">{label}</label>
-		<span>Select File</span>
-	</div>
-	<input id="{name}-input" {name} type="file" accept="image/*" on:change={onChange} {disabled} />
-	{#if srcToShow}
-		<img src="{srcToShow}" alt="Upload Preview" />
-	{/if}
-	{#if error}
-		<div class="error">
-			<p>{error}</p>
+<div class="image-uploader-container">
+	<div class="image-uploader">
+		<div class="placeholder"></div>
+		<div class="text">
+			<label for="{name}-input">{label}</label>
+			<span>Select File</span>
 		</div>
-	{/if}
+		<input bind:this={inputElem} id="{name}-input" {name} type="file" accept="image/*" on:change={onChange} {disabled} />
+		{#if srcToShow}
+			<img src="{srcToShow}" alt="Upload Preview" />
+		{/if}
+		{#if error}
+			<div class="error">
+				<p>{error}</p>
+			</div>
+		{/if}
+	</div>
+	<div class="remove-image" class:hide={!canRemove}>
+		<Button variant="ghost" on:click={onRemove}>Remove Avatar</Button>
+	</div>
 </div>
 
 <style>
+	.image-uploader-container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 0.25em;
+		inline-size: 100%;
+		block-size: 100%;
+	}
+
 	.image-uploader {
 		display: grid;
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
 		inline-size: 100%;
 		block-size: 100%;
+		aspect-ratio: 1;
 		place-items: center;
 		border: 0.125em solid var(--skin-input-bg);
 		padding: 0.25em;
@@ -140,4 +187,10 @@
 		padding: 0.25em;
 		margin: 0;
 	}
+
+	.remove-image {
+		font-size: var(--font-sz-venus);
+	}
+
+	.hide { visibility: hidden; }
 </style>

@@ -390,6 +390,10 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 		}
 	}
 
+	removeTrainerAvatar = async (writeKey: ReadWriteKey): Promise<void> => {
+		if (!writeKey) return null
+	}
+
 	updatePokemon = async (writeKey: ReadWriteKey, info: TrainerPokemon): Promise<boolean> => {
 		if (!writeKey) return false
         

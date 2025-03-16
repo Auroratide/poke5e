@@ -14,7 +14,12 @@ type UpdaterOptions = {
 }
 
 type AvatarUploadOptions = {
-	newAvatar?: File
+	updateAvatar?: {
+		type: "new",
+		value: File,
+	} | {
+		type: "remove",
+	}
 }
 
 type TrainerUpdater = {
@@ -83,11 +88,19 @@ const createStore = () => {
 							const original = data.info
 
 							let avatar = info.avatar
-							if (options.newAvatar != null) {
-								avatar = await provider.updateTrainerAvatar(data.writeKey, options.newAvatar, info.avatar).catch((e) => {
-									error.show(e.message)
-									throw e
-								})
+							if (options.updateAvatar != null) {
+								if (options.updateAvatar.type === "new") {
+									avatar = await provider.updateTrainerAvatar(data.writeKey, options.updateAvatar.value, info.avatar).catch((e) => {
+										error.show(e.message)
+										throw e
+									})
+								} else {
+									await provider.removeTrainerAvatar(data.writeKey).catch((e) => {
+										error.show(e.message)
+										throw e
+									})
+									avatar = null
+								}
 							}
 
 							const updateStore = (info: TrainerInfo) => storeUpdateOne(readKey, (prev) => ({

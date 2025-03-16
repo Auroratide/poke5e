@@ -20,7 +20,7 @@
 	const onUpdate = (e: CustomEvent<UpdateDetail>) => {
 		saving = true
 		$trainer.update?.info(e.detail.trainer, {
-			newAvatar: e.detail.newAvatar,
+			updateAvatar: e.detail.updateAvatar,
 		}).then(() => {
 			saving = false
 			goto(Url.trainers($trainer.info.readKey))
@@ -38,7 +38,7 @@
 		<section>
 			<p>You do not have permission to edit this trainer.</p>
 			<ActionArea>
-					<Button href="{Url.trainers($trainer.info.readKey)}">Go Back</Button>
+				<Button href="{Url.trainers($trainer.info.readKey)}">Go Back</Button>
 			</ActionArea>
 		</section>
 	{/if}
