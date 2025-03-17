@@ -11,6 +11,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.2.1",
+		description: [
+			"Bug fix: Better fit non-square trainer avatar images",
+		],
+	}, {
 		name: "v1.2.0",
 		description: [
 			"New: Can upload an image of a trainer.",
