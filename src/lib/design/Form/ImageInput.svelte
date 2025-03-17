@@ -114,7 +114,6 @@
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr;
 		inline-size: 100%;
-		block-size: 100%;
 		aspect-ratio: 1;
 		place-items: center;
 		border: 0.125em solid var(--skin-input-bg);
@@ -160,7 +159,8 @@
 		display: block;
 		inline-size: 100%;
 		block-size: 100%;
-		object-fit: cover;
+		aspect-ratio: 1;
+		object-fit: contain;
 		transition: opacity 0.125s ease-in-out;
 		background-color: var(--skin-input-bg);
 	}
