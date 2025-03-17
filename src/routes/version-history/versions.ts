@@ -11,6 +11,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.2.0",
+		description: [
+			"New: Can upload an image of a trainer.",
+			"New: Can edit a trainer's species, gender, age, home region, and background.",
+			"Nature list for trainer Pokémon now includes all 25 standard natures.",
+		],
+	}, {
 		name: "v1.1.9",
 		description: [
 			"Added Pokemon: Cyclizar, Orthworm, Glimmora line, Houndstone line, Flamigo, Cetitan line, Veluza, Dondozo, Tatsugiri, Clodsire line, Farigiraf, Kingambit, Paldean Tauros",
@@ -104,8 +111,11 @@ export const versionHistory: VersionHistory = {
 		],
 	} ],
 	groups: [ {
+		name: "v1.2",
+		description: "Adds ability to edit trainers' biographical information and avatar.",
+	}, {
 		name: "v1.1",
-		description: "Adds reference material for general rules of Pokemon 5e.",
+		description: "Adds reference material for general rules of Pokemon 5e and all standard Paldean Pokémon.",
 	}, {
 		name: "v1.0",
 		description: "Initial version of the app. Includes reference material for pokemon, moves, and TMs, as well as the ability to manage trainers and pokemon to a basic level.",
