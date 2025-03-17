@@ -128122,7 +128122,7 @@
 							},
 							{
 								"type": "special",
-								"value": "its nature is Arrogant, Brave, Energetic, Grumpy, Hardy, Hasty, Naughty, Rash, Reckless, or Sassy"
+								"value": "its nature is Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky"
 							}
 						],
 						"effects": [
@@ -128141,7 +128141,7 @@
 							},
 							{
 								"type": "special",
-								"value": "its nature is NOT Arrogant, Brave, Energetic, Grumpy, Hardy, Hasty, Naughty, Rash, Reckless, or Sassy"
+								"value": "its nature is NOT Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky"
 							}
 						],
 						"effects": [
