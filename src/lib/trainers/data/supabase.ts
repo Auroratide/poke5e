@@ -252,7 +252,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return this.getStorageResource(TRAINER_AVATARS_BUCKET, filename)
 	}
 
-	removeTrainerAvatar = async (writeKey: ReadWriteKey): Promise<void> => {
+	removeTrainerAvatar = async (writeKey: ReadWriteKey, oldResource?: StorageResource): Promise<void> => {
 		const { data, error } = await this.supabase.rpc("remove_trainer_avatar", {
 			_write_key: writeKey,
 		}).single<number>()
@@ -264,6 +264,8 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		if (error) {
 			throw new TrainerDataProviderError("Could not remove trainer's avatar image", error)
 		}
+
+		await this.removeOldTrainerAvatar(oldResource)
 	}
 
 	private generateTrainerAvatarFilename = async (writeKey: ReadWriteKey, newAvatar: File): Promise<string> => {

@@ -44,7 +44,7 @@ export interface TrainerDataProvider {
 	deleteTrainer: (writeKey: ReadWriteKey, id: TrainerId, readKey: ReadWriteKey) => Promise<boolean>
 	updateTrainerInfo: (writeKey: ReadWriteKey, info: TrainerInfo) => Promise<boolean>
 	updateTrainerAvatar: (writeKey: ReadWriteKey, newAvatar: File, oldResource?: StorageResource) => Promise<StorageResource>
-	removeTrainerAvatar: (writeKey: ReadWriteKey) => Promise<void>
+	removeTrainerAvatar: (writeKey: ReadWriteKey, oldResource?: StorageResource) => Promise<void>
 	updatePokemon: (writeKey: ReadWriteKey, info: TrainerPokemon) => Promise<boolean>
 	addPokemonToTeam: (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: Pokemon) => Promise<TrainerPokemon>
 	removePokemon: (writeKey: ReadWriteKey, id: string) => Promise<boolean>

@@ -95,7 +95,7 @@ const createStore = () => {
 										throw e
 									})
 								} else {
-									await provider.removeTrainerAvatar(data.writeKey).catch((e) => {
+									await provider.removeTrainerAvatar(data.writeKey, info.avatar).catch((e) => {
 										error.show(e.message)
 										throw e
 									})

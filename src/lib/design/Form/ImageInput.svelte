@@ -36,10 +36,6 @@
 		}
 	}
 
-	$: {
-		console.log(srcToShow, canRemove, currentValue)
-	}
-
 	const onChange = (e: Event) => {
 		const input = e.target as HTMLInputElement
 		const [file] = input.files
@@ -83,6 +79,9 @@
 		<div class="text">
 			<label for="{name}-input">{label}</label>
 			<span>Select File</span>
+			{#if maxbytes}
+				<span class="smaller">(Max {prettyPrintBytes(maxbytes)})</span>
+			{/if}
 		</div>
 		<input bind:this={inputElem} id="{name}-input" {name} type="file" accept="image/*" on:change={onChange} {disabled} />
 		{#if srcToShow}
@@ -154,6 +153,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		gap: 0.125em;
 	}
 
 	img {
@@ -162,6 +162,7 @@
 		block-size: 100%;
 		object-fit: cover;
 		transition: opacity 0.125s ease-in-out;
+		background-color: var(--skin-input-bg);
 	}
 
 	input:hover ~ img {
@@ -193,4 +194,6 @@
 	}
 
 	.hide { visibility: hidden; }
+
+	.smaller { font-size: var(--font-sz-venus); }
 </style>
