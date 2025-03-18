@@ -18,6 +18,7 @@ export const Url = {
 		bonds: () => `${base}/reference/bonds`,
 		catchingPokemon: () => `${base}/reference/catching-pokemon`,
 		damageTypes: () => `${base}/reference/damage-types`,
+		faintingRestingHealing: () => `${base}/reference/fainting-resting-and-healing`,
 		natures: () => `${base}/reference/natures`,
 		pokemonLeveling: () => `${base}/reference/pokemon-leveling`,
 		specializations: () => `${base}/reference/specializations`,
