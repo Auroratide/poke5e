@@ -15,6 +15,7 @@ export const Url = {
 	},
 	reference: {
 		all: () => `${base}/reference`,
+		bonds: () => `${base}/reference/bonds`,
 		catchingPokemon: () => `${base}/reference/catching-pokemon`,
 		damageTypes: () => `${base}/reference/damage-types`,
 		natures: () => `${base}/reference/natures`,

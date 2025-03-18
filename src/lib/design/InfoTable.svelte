@@ -35,6 +35,17 @@
 		padding: 0.5em 0.5em;
 	}
 
+	table :global(th p:last-child), table :global(td p:last-child) {
+		margin-block-end: 0;
+	}
+
+	table :global(a) {
+		color: var(--skin-bg-text);
+		text-decoration: underline;
+	} table :global(a:hover), table :global(a:focus) {
+		text-decoration: none;
+	}
+
 	caption {
 		caption-side: bottom;
 		padding: 0.5em;
