@@ -44,7 +44,7 @@
 	<section>
 		<h2>Switching Pokémon</h2>
 		<p>A Trainer may take the "switch" action to recall one of their Pokémon within line of sight from up to 60 feet away and realease a new Pokémon within line of sight up to 60 feet away. Changing out a Pokémon before it has fainted takes up an entire action, but changing out a Pokémon when it faints can be done immediately and out of turn as a reaction.</p>
-		<p>When a Pokémon is switched in, it has to take a moment to take stablize itself after its recent reformation from pure energy. A Pokémon that has been switched cannot move nor take any actions, reactions, or bonus actions during the current turn.</p>
+		<p>When a Pokémon is switched in, it has to take a moment to stablize itself after its recent reformation from pure energy. A Pokémon that has been switched cannot move nor take any actions, reactions, or bonus actions during the current turn.</p>
 		<p>Switching out a Pokémon does not provoke an attack of oppurtunity on either the trainer or the Pokémon.</p>
 	</section>
 	<section>

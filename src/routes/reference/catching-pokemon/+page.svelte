@@ -83,7 +83,7 @@
 				</tr>
 				<tr>
 					<td>Love Ball</td>
-					<td>If the target Pokémon experiences attraction to your currently active Pokémon (usually by having the opposite gender), reduce the capture DC by 2 &times; your active Pokémon's Charisma modifier.</td>
+					<td>Reduce the capture DC by twice your active Pokémon's Charisma modifier.</td>
 				</tr>
 				<tr>
 					<td>Friend Ball</td>
@@ -176,7 +176,7 @@
 				<dd><strong>= 16 DC</strong></dd>
 			</FlatDl>
 		</div>
-		<p>You are a level 6 trainer trying to capture a level 5 Orthworm. You attempt to use a Nature Ball; your INT score is 16, and you are proficient in Nature. The DC is calculated as follows:</p>
+		<p>You are a level 6 trainer trying to capture a level 5 Orthworm. You attempt to use a Safari Ball; your INT score is 16, and you are proficient in Nature. The DC is calculated as follows:</p>
 		<div class="indent">
 			<FlatDl>
 				<dt>Base</dt>
