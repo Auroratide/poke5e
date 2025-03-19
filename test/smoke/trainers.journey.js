@@ -87,7 +87,7 @@ const editPokemon = async (nickname) => {
 	await click("Edit")
 	await clear(textBox("Nickname"))
 	await write(nickname)
-	await dropDown("Nature").select("stubborn")
+	await dropDown("Nature").select("Serious")
 	await click(radioButton("Male"))
 
 	await addMove("ember")
