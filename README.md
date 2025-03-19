@@ -16,9 +16,9 @@ This site is a static [SvelteKit](https://kit.svelte.dev/) site that makes use o
 
 ### Set up your environment
 
-Assuming you have the code downloaded locally, you will need to set up a `.env` file; use the `.env.example` file as a template.
+The code is fitted with a fully local version of Supabase to make integrated development easy. Run `pnpm supabase start` to start it, and `pnpm supabase stop` to stop it.
 
-You're not going to have access to the real Supabase credentials, and I haven't set up a local supabase docker image yet. For now, you can either set up your own supabase environment, or set the `PUBLIC_OFFLINE` environment variable to true; this sets up a sorta in-memory representation of the database.
+You will need to set up a `.env` file; use the `.env.example` file as a template. The `PUBLIC_SUPABASE_KEY` value should be the same as the "anon key" value spat out by the `pnpm supabase start` command.
 
 ### Running the code
 
@@ -26,11 +26,17 @@ You're not going to have access to the real Supabase credentials, and I haven't 
 # Install dependencies
 pnpm install
 
-# Run the project
+# Start Local Supabase
+pnpm supabase start
+
+# Run Database Tests
+pnpm test:db
+
+# Start the site
 pnpm dev
 
-# Run the tests (assuming the site is running)
-pnpm test
+# Run the site tests
+pnpm test:smoke
 ```
 
 ## Disclaimer
