@@ -20,6 +20,7 @@ export const Url = {
 		combat: () => `${base}/reference/combat`,
 		damageTypes: () => `${base}/reference/damage-types`,
 		faintingRestingHealing: () => `${base}/reference/fainting-resting-and-healing`,
+		feats: () => `${base}/reference/feats`,
 		natures: () => `${base}/reference/natures`,
 		pokemonLeveling: () => `${base}/reference/pokemon-leveling`,
 		specializations: () => `${base}/reference/specializations`,
