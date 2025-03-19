@@ -26,5 +26,6 @@ export const Url = {
 		trainerClass: () => `${base}/reference/trainer-class`,
 		trainerPaths: () => `${base}/reference/trainer-paths`,
 		transformations: () => `${base}/reference/pokemon-transformations`,
+		weather: () => `${base}/reference/weather`,
 	},
 } as const

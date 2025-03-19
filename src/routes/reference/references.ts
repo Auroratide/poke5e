@@ -50,6 +50,10 @@ export const References = [ {
 	name: "Trainer Paths",
 	url: Url.reference.trainerPaths(),
 	keywords: ["ace trainer", "battle master", "rapid switching", "tactical mastery", "hobbyist", "versatile", "generalist", "multitalented", "nurse", "pokechef", "warning words", "tip-top shape", "tip top shape", "researcher", "analyst", "evolution expert", "professor", "ranger", "capture styler", "partners", "poke assist"],
+}, {
+	name: "Weather",
+	url: Url.reference.weather(),
+	keywords: ["weather", "harsh sunlight", "rain", "sandstorm", "hail", "snow", "fog"],
 } ] satisfies ReferenceInfo[]
 
 export function search(value: string): ReferenceInfo[] {
