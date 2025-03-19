@@ -11,6 +11,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.2.2",
+		description: [
+			"Added references: Catching Pokémon, Bonds, Fainting and Healing, Weather, Combat, and Feats",
+		],
+	}, {
 		name: "v1.2.1",
 		description: [
 			"Bug fix: Better fit non-square trainer avatar images",
