@@ -148137,6 +148137,1200 @@
 			}
 		},
 		{
+			"id": "great-tusk",
+			"name": "Great Tusk",
+			"number": 984,
+			"type": [
+				"ground",
+				"fighting"
+			],
+			"size": "large",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. This creature resembles a mysterious Pokémon that, according to a paranormal magazine, has lived since ancient times.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 22,
+				"dex": 15,
+				"con": 19,
+				"int": 5,
+				"wis": 11,
+				"cha": 10
+			},
+			"hp": 174,
+			"skills": [
+				"athletics",
+				"survival"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "protosynthesis",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"horn-attack",
+					"defense-curl",
+					"rollout",
+					"sunny-day",
+					"bulldoze",
+					"taunt",
+					"rapid-spin",
+					"brick-break",
+					"stomping-tantrum",
+					"knock-off",
+					"earthquake",
+					"giga-impact"
+				],
+				"level18": [
+					"megahorn",
+					"endeavor",
+					"close-combat",
+					"head-smash",
+					"headlong-rush"
+				],
+				"tm": [
+					3,
+					5,
+					8,
+					15,
+					17,
+					23,
+					37,
+					39,
+					42,
+					44,
+					67,
+					71,
+					80,
+					88,
+					90,
+					91
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/984.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/984.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/984.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/984.png"
+			}
+		},
+		{
+			"id": "scream-tail",
+			"name": "Scream Tail",
+			"number": 985,
+			"type": [
+				"fairy",
+				"psychic"
+			],
+			"size": "small",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. It resembles a mysterious Pokémon described in a paranormal magazine as a Jigglypuff from one billion years ago.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 19,
+				"con": 18,
+				"int": 5,
+				"wis": 14,
+				"cha": 14
+			},
+			"hp": 160,
+			"skills": [
+				"performance",
+				"persuasion"
+			],
+			"savingThrows": [
+				"wis",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "protosynthesis",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"pound",
+					"sing",
+					"disable",
+					"howl",
+					"noble-roar",
+					"body-slam",
+					"bite",
+					"rest",
+					"play-rough",
+					"hyper-voice",
+					"psychic-fangs"
+				],
+				"level18": [
+					"perish-song",
+					"crunch",
+					"wish",
+					"gyro-ball",
+					"boomburst"
+				],
+				"tm": [
+					3,
+					4,
+					5,
+					8,
+					13,
+					14,
+					15,
+					16,
+					17,
+					18,
+					24,
+					25,
+					29,
+					33,
+					35,
+					37,
+					38,
+					39,
+					42,
+					52,
+					56,
+					68,
+					73,
+					77,
+					86,
+					88,
+					90,
+					92,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/985.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/985.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/985.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/985.png"
+			}
+		},
+		{
+			"id": "brute-bonnet",
+			"name": "Brute Bonnet",
+			"number": 986,
+			"type": [
+				"grass",
+				"dark"
+			],
+			"size": "small",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. It bears a slight resemblance to a Pokémon described in a dubious magazine as a cross between a dinosaur and a mushroom.",
+			"ac": 17,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 13,
+				"con": 21,
+				"int": 5,
+				"wis": 14,
+				"cha": 10
+			},
+			"hp": 180,
+			"skills": [
+				"nature",
+				"deception"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [
+				{
+					"type": "tremmorsense",
+					"value": 20
+				}
+			],
+			"abilities": [
+				{
+					"id": "protosynthesis",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"absorb",
+					"growth",
+					"astonish",
+					"stun-spore",
+					"mega-drain",
+					"synthesis",
+					"clear-smog",
+					"payback",
+					"thrash",
+					"giga-drain",
+					"sucker-punch"
+				],
+				"level18": [
+					"solar-beam",
+					"spore",
+					"ingrain",
+					"rage-powder"
+				],
+				"tm": [
+					9,
+					12,
+					15,
+					17,
+					42,
+					44,
+					46,
+					53,
+					68,
+					86,
+					88,
+					90,
+					97
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/986.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/986.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/986.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/986.png"
+			}
+		},
+		{
+			"id": "flutter-mane",
+			"name": "Flutter Mane",
+			"number": 987,
+			"type": [
+				"ghost",
+				"fairy"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. It has similar features to a ghostly pterosaur that was covered in a paranormal magazine, but the two have little else in common.",
+			"ac": 17,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 50
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 20,
+				"con": 13,
+				"int": 5,
+				"wis": 18,
+				"cha": 16
+			},
+			"hp": 130,
+			"skills": [
+				"stealth",
+				"deception"
+			],
+			"savingThrows": [
+				"wis",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "protosynthesis",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"confuse-ray",
+					"spite",
+					"astonish",
+					"psybeam",
+					"mean-look",
+					"memento",
+					"wish",
+					"dazzling-gleam",
+					"shadow-ball",
+					"mystical-fire",
+					"power-gem"
+				],
+				"level18": [
+					"perish-song",
+					"pain-split",
+					"psyshock",
+					"phantom-force",
+					"moonblast"
+				],
+				"tm": [
+					4,
+					12,
+					15,
+					17,
+					24,
+					25,
+					44,
+					53,
+					57,
+					68,
+					73,
+					88,
+					90,
+					92,
+					97
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/987.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/987.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/987.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/987.png"
+			}
+		},
+		{
+			"id": "slither-wing",
+			"name": "Slither Wing",
+			"number": 988,
+			"type": [
+				"bug",
+				"fighting"
+			],
+			"size": "large",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. This Pokémon somewhat resembles an ancient form of Volcarona that was introduced in a dubious magazine.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				},
+				{
+					"type": "climbing",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 16,
+				"con": 16,
+				"int": 5,
+				"wis": 14,
+				"cha": 10
+			},
+			"hp": 152,
+			"skills": [
+				"nature",
+				"survival"
+			],
+			"savingThrows": [
+				"dex",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "protosynthesis",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"gust",
+					"ember",
+					"bug-bite",
+					"poison-powder",
+					"stun-spore",
+					"flame-charge",
+					"stomp",
+					"low-sweep",
+					"morning-sun",
+					"lunge",
+					"superpower",
+					"bulk-up"
+				],
+				"level18": [
+					"whirlwind",
+					"thrash",
+					"leech-life",
+					"first-impression",
+					"dual-wingbeat"
+				],
+				"tm": [
+					15,
+					17,
+					18,
+					26,
+					31,
+					37,
+					40,
+					42,
+					44,
+					61,
+					62,
+					68,
+					88,
+					89,
+					90,
+					93
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/988.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/988.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/988.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/988.png"
+			}
+		},
+		{
+			"id": "sandy-shocks",
+			"name": "Sandy Shocks",
+			"number": 989,
+			"type": [
+				"electric",
+				"ground"
+			],
+			"size": "large",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. It slightly resembles a Magneton that lived for 10,000 years and was featured in an article in a paranormal magazine.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 18,
+				"con": 16,
+				"int": 5,
+				"wis": 17,
+				"cha": 8
+			},
+			"hp": 158,
+			"skills": [
+				"athletics",
+				"insight"
+			],
+			"savingThrows": [
+				"con",
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "protosynthesis",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"supersonic",
+					"thunder-shock",
+					"thunder-wave",
+					"electric-terrain",
+					"spark",
+					"bulldoze",
+					"tri-attack",
+					"charge-beam",
+					"screech",
+					"heavy-slam",
+					"metal-sound",
+					"discharge"
+				],
+				"level18": [
+					"zap-cannon",
+					"mirror-coat",
+					"gravity",
+					"earth-power",
+					"magnetic-flux"
+				],
+				"tm": [
+					15,
+					16,
+					17,
+					24,
+					25,
+					26,
+					33,
+					37,
+					42,
+					44,
+					68,
+					72,
+					88,
+					90,
+					91,
+					93
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/989.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/989.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/989.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/989.png"
+			}
+		},
+		{
+			"id": "iron-treads",
+			"name": "Iron Treads",
+			"number": 990,
+			"type": [
+				"ground",
+				"steel"
+			],
+			"size": "small",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. This Pokémon closely resembles a scientific weapon that a paranormal magazine claimed was sent to this planet by aliens.",
+			"ac": 19,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 19,
+				"dex": 22,
+				"con": 18,
+				"int": 8,
+				"wis": 13,
+				"cha": 10
+			},
+			"hp": 152,
+			"skills": [
+				"athletics",
+				"perception"
+			],
+			"savingThrows": [
+				"dex",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "quark-drive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"horn-attack",
+					"defense-curl",
+					"rollout",
+					"electric-terrain",
+					"bulldoze",
+					"rapid-spin",
+					"iron-head",
+					"stomping-tantrum",
+					"knock-off",
+					"earthquake",
+					"heavy-slam"
+				],
+				"level18": [
+					"megahorn",
+					"endeavor",
+					"giga-impact",
+					"wild-charge",
+					"steel-roller"
+				],
+				"tm": [
+					15,
+					17,
+					25,
+					37,
+					39,
+					42,
+					44,
+					67,
+					71,
+					72,
+					74,
+					80,
+					90,
+					91
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/990.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/990.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/990.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/990.png"
+			}
+		},
+		{
+			"id": "iron-bundle",
+			"name": "Iron Bundle",
+			"number": 991,
+			"type": [
+				"ice",
+				"water"
+			],
+			"size": "tiny",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. Its shape is similar to a robot featured in a paranormal magazine article. The robot was said to have been created by an ancient civilization.",
+			"ac": 16,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 22,
+				"con": 11,
+				"int": 8,
+				"wis": 14,
+				"cha": 14
+			},
+			"hp": 134,
+			"skills": [
+				"acrobatics",
+				"insight"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "quark-drive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"present",
+					"powder-snow",
+					"whirlpool",
+					"take-down",
+					"drill-peck",
+					"helping-hand",
+					"freeze-dry",
+					"flip-turn",
+					"ice-beam"
+				],
+				"level18": [
+					"hydro-pump",
+					"blizzard",
+					"agility",
+					"aurora-veil",
+					"snowscape"
+				],
+				"tm": [
+					12,
+					15,
+					17,
+					18,
+					42,
+					44,
+					46,
+					56,
+					62,
+					68,
+					88,
+					89,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/991.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/991.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/991.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/991.png"
+			}
+		},
+		{
+			"id": "iron-hands",
+			"name": "Iron Hands",
+			"number": 992,
+			"type": [
+				"fighting",
+				"electric"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. It is very similar to a cyborg covered exclusively by a paranormal magazine. The cyborg was said to be the modified form of a certain athlete.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 12,
+				"con": 20,
+				"int": 8,
+				"wis": 12,
+				"cha": 10
+			},
+			"hp": 201,
+			"skills": [
+				"athletics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "quark-drive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"sand-attack",
+					"tackle",
+					"focus-energy",
+					"arm-thrust",
+					"fake-out",
+					"whirlwind",
+					"thunder-punch",
+					"slam",
+					"force-palm",
+					"seismic-toss",
+					"charge",
+					"wild-charge"
+				],
+				"level18": [
+					"belly-drum",
+					"detect",
+					"focus-punch",
+					"close-combat",
+					"heavy-slam"
+				],
+				"tm": [
+					15,
+					17,
+					24,
+					25,
+					26,
+					31,
+					39,
+					42,
+					44,
+					47,
+					52,
+					56,
+					68,
+					72,
+					75,
+					78,
+					80,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/992.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/992.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/992.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/992.png"
+			}
+		},
+		{
+			"id": "iron-jugulis",
+			"name": "Iron Jugulis",
+			"number": 993,
+			"type": [
+				"dark",
+				"flying"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. It resembles a certain Pokémon introduced in a paranormal magazine, described as the offspring of a Hydreigon that fell in love with a robot.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				},
+				{
+					"type": "flying",
+					"value": 35
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 19,
+				"con": 16,
+				"int": 8,
+				"wis": 19,
+				"cha": 10
+			},
+			"hp": 158,
+			"skills": [
+				"perception",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 80
+				}
+			],
+			"abilities": [
+				{
+					"id": "quark-drive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"focus-energy",
+					"tri-attack",
+					"air-cutter",
+					"work-up",
+					"electric-terrain",
+					"roar",
+					"assurance",
+					"dragon-breath",
+					"snarl",
+					"crunch",
+					"hyper-voice",
+					"air-slash"
+				],
+				"level18": [
+					"knock-off",
+					"hyper-beam",
+					"outrage",
+					"dark-pulse",
+					"dragon-pulse"
+				],
+				"tm": [
+					11,
+					12,
+					17,
+					18,
+					35,
+					38,
+					39,
+					42,
+					44,
+					52,
+					57,
+					62,
+					68,
+					76,
+					82,
+					88,
+					89,
+					90,
+					91
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/993.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/993.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/993.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/993.png"
+			}
+		},
+		{
+			"id": "iron-moth",
+			"name": "Iron Moth",
+			"number": 994,
+			"type": [
+				"fire",
+				"poison"
+			],
+			"size": "small",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. This Pokémon resembles an unknown object described in a paranormal magazine as a UFO sent to observe humanity.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "flying",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 19,
+				"con": 14,
+				"int": 8,
+				"wis": 22,
+				"cha": 10
+			},
+			"hp": 137,
+			"skills": [
+				"investigation",
+				"survival"
+			],
+			"savingThrows": [
+				"con",
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "quark-drive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"gust",
+					"whirlwind",
+					"ember",
+					"acid-spray",
+					"struggle-bug",
+					"fire-spin",
+					"take-down",
+					"lunge",
+					"screech",
+					"discharge",
+					"sludge-wave",
+					"fiery-dance"
+				],
+				"level18": [
+					"morning-sun",
+					"overheat",
+					"metal-sound",
+					"bug-buzz",
+					"hurricane"
+				],
+				"tm": [
+					6,
+					9,
+					11,
+					15,
+					16,
+					17,
+					22,
+					29,
+					35,
+					38,
+					42,
+					43,
+					44,
+					53,
+					57,
+					62,
+					68,
+					88,
+					89,
+					90,
+					91,
+					99,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/994.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/994.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/994.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/994.png"
+			}
+		},
+		{
+			"id": "iron-thorns",
+			"name": "Iron Thorns",
+			"number": 995,
+			"type": [
+				"rock",
+				"electric"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. It has some similarities to a Pokémon introduced in a dubious magazine as a Tyranitar from one billion years into the future.",
+			"ac": 19,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 17,
+				"con": 20,
+				"int": 8,
+				"wis": 16,
+				"cha": 11
+			},
+			"hp": 172,
+			"skills": [
+				"athletics",
+				"history"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "quark-drive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"rock-throw",
+					"iron-defense",
+					"thunder-fang",
+					"ice-fang",
+					"fire-fang",
+					"screech",
+					"bite",
+					"rock-tomb",
+					"charge",
+					"rock-slide",
+					"sandstorm",
+					"wild-charge"
+				],
+				"level18": [
+					"pin-missile",
+					"earthquake",
+					"giga-impact",
+					"stone-edge",
+					"stealth-rock"
+				],
+				"tm": [
+					2,
+					11,
+					12,
+					13,
+					14,
+					15,
+					17,
+					18,
+					23,
+					24,
+					25,
+					31,
+					35,
+					38,
+					42,
+					44,
+					52,
+					56,
+					57,
+					72,
+					73,
+					75,
+					78,
+					82,
+					90,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/995.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/995.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/995.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/995.png"
+			}
+		},
+		{
 			"id": "archaludon",
 			"name": "Archaludon",
 			"number": 1018,
