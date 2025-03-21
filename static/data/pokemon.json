@@ -149331,6 +149331,653 @@
 			}
 		},
 		{
+			"id": "frigibax",
+			"name": "Frigibax",
+			"number": 996,
+			"type": [
+				"dragon",
+				"ice"
+			],
+			"size": "tiny",
+			"sr": 1,
+			"minLevel": 1,
+			"eggGroup": [
+				"dragon",
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "1",
+				"to": [
+					{
+						"id": "arctibax",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 8
+							}
+						]
+					}
+				]
+			},
+			"description": "The Ice Fin Pokémon. Frigibax absorbs heat through its dorsal fin and converts the heat into ice energy. The higher the temperature, the more energy Frigibax stores.",
+			"ac": 13,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 11,
+				"con": 12,
+				"int": 6,
+				"wis": 10,
+				"cha": 10
+			},
+			"hp": 18,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "thermal-exchange",
+					"hidden": false
+				},
+				{
+					"id": "ice-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer",
+					"dragon-tail"
+				],
+				"level2": [
+					"icy-wind"
+				],
+				"level6": [
+					"focus-energy",
+					"dragon-breath"
+				],
+				"level10": [
+					"bite",
+					"ice-fang",
+					"dragon-claw"
+				],
+				"level14": [
+					"take-down",
+					"ice-beam"
+				],
+				"level18": [
+					"crunch",
+					"icicle-crash"
+				],
+				"tm": [
+					14,
+					17,
+					18,
+					42,
+					44,
+					75,
+					88,
+					90
+				],
+				"egg": [
+					"icicle-spear",
+					"aqua-tail",
+					"dragon-rush",
+					"freeze-dry"
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/996.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/996.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/996.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/996.png"
+			}
+		},
+		{
+			"id": "arctibax",
+			"name": "Arctibax",
+			"number": 997,
+			"type": [
+				"dragon",
+				"ice"
+			],
+			"size": "small",
+			"sr": 7,
+			"minLevel": 5,
+			"eggGroup": [
+				"dragon",
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"frigibax"
+				],
+				"to": [
+					{
+						"id": "baxcalibur",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 16
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Ice Fin Pokémon. Arctibax freezes the air around it, protecting its face with an ice mask and turning its dorsal fin into a blade of ice.",
+			"ac": 14,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 11,
+				"con": 14,
+				"int": 6,
+				"wis": 13,
+				"cha": 10
+			},
+			"hp": 47,
+			"skills": [
+				"survival"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "thermal-exchange",
+					"hidden": false
+				},
+				{
+					"id": "ice-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer",
+					"dragon-tail",
+					"icy-wind"
+				],
+				"level6": [
+					"focus-energy",
+					"dragon-breath"
+				],
+				"level10": [
+					"bite",
+					"ice-fang"
+				],
+				"level14": [
+					"take-down",
+					"ice-beam"
+				],
+				"level18": [
+					"crunch",
+					"icicle-crash"
+				],
+				"tm": [
+					2,
+					14,
+					17,
+					18,
+					31,
+					40,
+					42,
+					44,
+					75,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/997.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/997.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/997.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/997.png"
+			}
+		},
+		{
+			"id": "baxcalibur",
+			"name": "Baxcalibur",
+			"number": 998,
+			"type": [
+				"dragon",
+				"ice"
+			],
+			"size": "large",
+			"sr": 14,
+			"minLevel": 10,
+			"eggGroup": [
+				"dragon",
+				"mineral"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"arctibax"
+				]
+			},
+			"description": "The Ice Dragon Pokémon. This Pokémon blasts cryogenic air out from its mouth. This air can instantly freeze even liquid-hot lava.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 19,
+				"dex": 14,
+				"con": 18,
+				"int": 6,
+				"wis": 15,
+				"cha": 12
+			},
+			"hp": 122,
+			"skills": [
+				"survival",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "thermal-exchange",
+					"hidden": false
+				},
+				{
+					"id": "ice-body",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"leer",
+					"ice-shard",
+					"dragon-tail",
+					"breaking-swipe",
+					"glaive-rush",
+					"snowscape",
+					"icy-wind",
+					"focus-energy",
+					"dragon-breath",
+					"bite",
+					"ice-fang"
+				],
+				"level14": [
+					"dragon-claw",
+					"take-down",
+					"ice-beam"
+				],
+				"level18": [
+					"crunch",
+					"icicle-crash"
+				],
+				"tm": [
+					14,
+					15,
+					17,
+					18,
+					26,
+					31,
+					40,
+					42,
+					44,
+					54,
+					68,
+					75,
+					78,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/998.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/998.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/998.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/998.png"
+			}
+		},
+		{
+			"id": "gimmighoul",
+			"name": "Gimmighoul (Chest)",
+			"number": 999,
+			"type": [
+				"ghost"
+			],
+			"size": "tiny",
+			"sr": 2,
+			"minLevel": 1,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "gholdengo",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 5
+							},
+							{
+								"type": "special",
+								"value": "when this Pokémon has collected 999 gimmighoul coins (chest form starts with 50+1d100, roaming form starts with 1d20)"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The Coin Chest Pokémon. This Pokémon was born inside a treasure chest about 1,500 years ago. It sucks the life-force out of scoundrels who try to steal the treasure.",
+			"ac": 15,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 10
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 8,
+				"con": 14,
+				"int": 6,
+				"wis": 11,
+				"cha": 12
+			},
+			"hp": 17,
+			"skills": [
+				"sleight of hand",
+				"deception"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "rattled",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"astonish"
+				],
+				"tm": [
+					16,
+					17,
+					30,
+					33,
+					44,
+					46,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/999.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/999.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/999.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/999.png"
+			}
+		},
+		{
+			"id": "gimmighoul-roaming",
+			"name": "Gimmighoul (Roaming)",
+			"number": 999,
+			"type": [
+				"ghost"
+			],
+			"size": "tiny",
+			"sr": 0.25,
+			"minLevel": 1,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "gholdengo",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 5
+							},
+							{
+								"type": "special",
+								"value": "when this Pokémon has collected 999 gimmighoul coins (chest form starts with 50+1d100, roaming form starts with 1d20)"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					}
+				]
+			},
+			"description": "The Coin Hunter Pokémon. This Pokémon was born from passion that seeped into a coin. It wanders, apparently seeking to return to the treasure chest it once inhabited.",
+			"ac": 12,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": 12,
+				"dex": 14,
+				"con": 8,
+				"int": 6,
+				"wis": 11,
+				"cha": 12
+			},
+			"hp": 17,
+			"skills": [
+				"sleight of hand",
+				"deception"
+			],
+			"savingThrows": [
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "run-away",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"astonish"
+				],
+				"tm": [
+					16,
+					17,
+					30,
+					33,
+					44,
+					46,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10263.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10263.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10263.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10263.png"
+			}
+		},
+		{
+			"id": "gholdengo",
+			"name": "Gholdengo",
+			"number": 1000,
+			"type": [
+				"steel",
+				"ghost"
+			],
+			"size": "small",
+			"sr": 12,
+			"minLevel": 5,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"gimmighoul",
+					"gimmighoul-roaming"
+				]
+			},
+			"description": "The Coin Entity Pokémon. Its body seems to be made up of 1,000 coins. This Pokémon gets along well with others and is quick to make friends with anybody.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 16,
+				"con": 15,
+				"int": 6,
+				"wis": 13,
+				"cha": 16
+			},
+			"hp": 45,
+			"skills": [
+				"sleight of hand",
+				"deception"
+			],
+			"savingThrows": [
+				"con",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "good-as-gold",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"tackle",
+					"astonish",
+					"night-shade",
+					"confuse-ray"
+				],
+				"level6": [
+					"substitute",
+					"metal-sound"
+				],
+				"level10": [
+					"shadow-ball",
+					"recover"
+				],
+				"level14": [
+					"power-gem",
+					"make-it-rain"
+				],
+				"level18": [
+					"memento",
+					"nasty-plot"
+				],
+				"tm": [
+					3,
+					15,
+					16,
+					17,
+					24,
+					25,
+					29,
+					33,
+					37,
+					44,
+					46,
+					47,
+					52,
+					56,
+					57,
+					68,
+					73,
+					88,
+					91,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1000.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1000.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1000.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1000.png"
+			}
+		},
+		{
 			"id": "archaludon",
 			"name": "Archaludon",
 			"number": 1018,

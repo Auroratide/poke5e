@@ -4332,6 +4332,22 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
+		{
+      "id": "glaive-rush",
+      "name": "Glaive Rush",
+      "type": "dragon",
+      "power": [
+				"str"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You throw your entire body into a reckless charge. Make a melee attack roll with advantage, dealing 2d10 + MOVE dragon damage on a hit. Until the start of your next turn, attack rolls made against you have advantage."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 4d10 at level 10, and 7d8 at level 17."
+    },
     {
       "id": "glare",
       "name": "Glare",
@@ -6313,6 +6329,23 @@
         }
       ],
       "higherLevels": "For damage rolls, use 2x Dice at level 5, 3x Dice at level 10, and 4x Dice at level 17."
+    },
+		{
+      "id": "make-it-rain",
+      "name": "Make it Rain",
+      "type": "steel",
+      "power": [
+				"wis",
+				"cha"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "self (20ft cone)",
+      "description": [
+        "You throw out a mass of coins. Each creature in range must make a DEX save against your Move DC, taking 2d10 + MOVE steel damage on failure, half on success. You gain 1d10 ₽ for each creature that fails the save, and 2d10 ₽ for each creature that succeeds."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 4d10 at level 10, and 7d8 at level 17."
     },
     {
       "id": "mat-block",

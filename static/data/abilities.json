@@ -450,6 +450,11 @@
       "name": "Gluttony",
       "description": "This Pokémon must eat its held berry when it falls below ½ of its maximum HP."
     },
+		{
+      "id": "good-as-gold",
+      "name": "Good as Gold",
+      "description": "This Pokémon is immune to status effects."
+    },
     {
       "id": "gooey",
       "name": "Gooey",
@@ -1349,6 +1354,11 @@
       "id": "teravolt",
       "name": "Teravolt",
       "description": "This Pokémon’s moves completely ignore any ability that would hinder or prevent their effect on the target or the user's ability to hit the target."
+    },
+		{
+      "id": "thermal-exchange",
+      "name": "Thermal Exchange",
+      "description": "This Pokémon cannot be burned. When this Pokémon takes fire-type damage, it makes its next attack with advantage."
     },
     {
       "id": "thick-fat",
