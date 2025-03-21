@@ -149978,6 +149978,437 @@
 			}
 		},
 		{
+			"id": "wo-chien",
+			"name": "Wo-Chien",
+			"number": 1001,
+			"type": [
+				"dark",
+				"grass"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Ruinous Pokémon. The grudge of a person punished for writing the king’s evil deeds upon wooden tablets has clad itself in dead leaves to become a Pokémon.",
+			"ac": 18,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				},
+				{
+					"type": "climbing",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 13,
+				"con": 16,
+				"int": 8,
+				"wis": 16,
+				"cha": 21
+			},
+			"hp": 157,
+			"skills": [
+				"history",
+				"nature",
+				"perception"
+			],
+			"savingThrows": [
+				"con",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 120
+				},
+				{
+					"type": "truesight",
+					"value": 20
+				}
+			],
+			"abilities": [
+				{
+					"id": "tablets-of-ruin",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"absorb",
+					"spite",
+					"mean-look",
+					"tickle",
+					"payback",
+					"mega-drain",
+					"poison-powder",
+					"stun-spore",
+					"leech-seed",
+					"growth",
+					"ingrain",
+					"giga-drain",
+					"dark-pulse",
+					"power-whip",
+					"foul-play",
+					"ruination"
+				],
+				"level18": [
+					"grassy-terrain",
+					"knock-off",
+					"leaf-storm"
+				],
+				"tm": [
+					11,
+					12,
+					15,
+					16,
+					17,
+					18,
+					22,
+					33,
+					42,
+					44,
+					53,
+					68,
+					86,
+					88,
+					90,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1001.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1001.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1001.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1001.png"
+			}
+		},
+		{
+			"id": "chien-pao",
+			"name": "Chien-Pao",
+			"number": 1002,
+			"type": [
+				"dark",
+				"ice"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Ruinous Pokémon. This Pokémon can control 100 tons of fallen snow. It plays around innocently by leaping in and out of avalanches it has caused.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 50
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 21,
+				"con": 15,
+				"int": 8,
+				"wis": 13,
+				"cha": 16
+			},
+			"hp": 141,
+			"skills": [
+				"acrobatics",
+				"history",
+				"nature"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 120
+				},
+				{
+					"type": "truesight",
+					"value": 20
+				}
+			],
+			"abilities": [
+				{
+					"id": "sword-of-ruin",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"spite",
+					"powder-snow",
+					"mean-look",
+					"icy-wind",
+					"payback",
+					"mist",
+					"haze",
+					"ice-shard",
+					"swords-dance",
+					"snowscape",
+					"night-slash",
+					"sucker-punch",
+					"dark-pulse",
+					"sacred-sword",
+					"icicle-crash",
+					"ruination"
+				],
+				"level18": [
+					"recover",
+					"throat-chop",
+					"sheer-cold"
+				],
+				"tm": [
+					12,
+					14,
+					15,
+					17,
+					18,
+					31,
+					40,
+					42,
+					44,
+					54,
+					62,
+					68,
+					88,
+					90,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1002.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1002.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1002.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1002.png"
+			}
+		},
+		{
+			"id": "ting-lu",
+			"name": "Ting-Lu",
+			"number": 1003,
+			"type": [
+				"dark",
+				"ground"
+			],
+			"size": "large",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Ruinous Pokémon. The fear poured into an ancient ritual vessel has clad itself in rocks and dirt to become a Pokémon.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 12,
+				"con": 21,
+				"int": 8,
+				"wis": 13,
+				"cha": 16
+			},
+			"hp": 190,
+			"skills": [
+				"athletics",
+				"history",
+				"nature"
+			],
+			"savingThrows": [
+				"str",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 120
+				},
+				{
+					"type": "truesight",
+					"value": 20
+				}
+			],
+			"abilities": [
+				{
+					"id": "vessel-of-ruin",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"spite",
+					"mean-look",
+					"sand-tomb",
+					"spikes",
+					"payback",
+					"stomp",
+					"bulldoze",
+					"whirlwind",
+					"taunt",
+					"thrash",
+					"rock-slide",
+					"dark-pulse",
+					"throat-chop",
+					"stomping-tantrum",
+					"ruination"
+				],
+				"level18": [
+					"memento",
+					"earthquake",
+					"fissure"
+				],
+				"tm": [
+					11,
+					15,
+					17,
+					37,
+					39,
+					42,
+					44,
+					68,
+					71,
+					88,
+					90,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1003.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1003.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1003.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1003.png"
+			}
+		},
+		{
+			"id": "chi-yu",
+			"name": "Chi-Yu",
+			"number": 1004,
+			"type": [
+				"dark",
+				"fire"
+			],
+			"size": "tiny",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Ruinous Pokémon. It controls flames burning at over 5,400 degrees Fahrenheit. It casually swims through the sea of lava it creates by melting rock and sand.",
+			"ac": 16,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 40
+				},{
+					"type": "swimming",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 19,
+				"con": 14,
+				"int": 8,
+				"wis": 21,
+				"cha": 16
+			},
+			"hp": 122,
+			"skills": [
+				"history",
+				"nature",
+				"insight"
+			],
+			"savingThrows": [
+				"wis",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 120
+				},
+				{
+					"type": "truesight",
+					"value": 20
+				}
+			],
+			"abilities": [
+				{
+					"id": "beads-of-ruin",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"ember",
+					"spite",
+					"mean-look",
+					"flame-wheel",
+					"payback",
+					"will-o-wisp",
+					"flame-charge",
+					"confuse-ray",
+					"incinerate",
+					"nasty-plot",
+					"swagger",
+					"bounce",
+					"dark-pulse",
+					"lava-plume",
+					"ruination"
+				],
+				"level18": [
+					"inferno",
+					"memento",
+					"overheat"
+				],
+				"tm": [
+					11,
+					12,
+					15,
+					16,
+					17,
+					29,
+					33,
+					35,
+					38,
+					42,
+					44,
+					68,
+					88,
+					90,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1004.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1004.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1004.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1004.png"
+			}
+		},
+		{
 			"id": "archaludon",
 			"name": "Archaludon",
 			"number": 1018,

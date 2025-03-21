@@ -85,6 +85,11 @@
       "name": "Battle Armor",
       "description": "This Pokémon is immune to extra damage dealt by a Critical Hit."
     },
+		{
+      "id": "beads-of-ruin",
+      "name": "Beads of Ruin",
+      "description": "Creatures within 60ft of this Pokémon which do not have a \"* of Ruin\" ability have -4 Charisma score, to a minimum of 1. This effect does not stack, and the creature's Charisma score is restored upon leaving the area of effect."
+    },
     {
       "id": "beast-boost",
       "name": "Beast Boost",
@@ -1320,6 +1325,11 @@
       "name": "Swift Swim",
       "description": "This Pokémon's speed is doubled in rainy conditions."
     },
+		{
+      "id": "sword-of-ruin",
+      "name": "Sword of Ruin",
+      "description": "Creatures within 60ft of this Pokémon which do not have a \"* of Ruin\" ability have -4 Constitution score, to a minimum of 1. This effect does not stack, and the creature's Constitution score is restored upon leaving the area of effect."
+    },
     {
       "id": "symbiosis",
       "name": "Symbiosis",
@@ -1329,6 +1339,11 @@
       "id": "synchronize",
       "name": "Synchronize",
       "description": "If this Pokémon becomes burned, paralyzed, or poisoned, its attacker receives the negative status condition as well (if not immune)."
+    },
+		{
+      "id": "tablets-of-ruin",
+      "name": "Tablets of Ruin",
+      "description": "Creatures within 60ft of this Pokémon which do not have a \"* of Ruin\" ability have -4 Strength score, to a minimum of 1. This effect does not stack, and the creature's Strength score is restored upon leaving the area of effect."
     },
     {
       "id": "tangled-feet",
@@ -1439,6 +1454,11 @@
       "id": "unseen-fist",
       "name": "Unseen Fist",
       "description": "Melee attacks this Pokémon make may damage through the opponent's use of Protect or Detect."
+    },
+		{
+      "id": "vessel-of-ruin",
+      "name": "Vessel of Ruin",
+      "description": "Creatures within 60ft of this Pokémon which do not have a \"* of Ruin\" ability have -4 Wisdom score, to a minimum of 1. This effect does not stack, and the creature's Wisdom score is restored upon leaving the area of effect."
     },
     {
       "id": "victory-star",

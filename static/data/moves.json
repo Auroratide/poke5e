@@ -9015,6 +9015,21 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d10 at level 17."
     },
+		{
+      "id": "ruination",
+      "name": "Ruination",
+      "type": "dark",
+      "power": [
+				"cha"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "60ft",
+      "description": [
+        "You summon ruinous disaster on a creature you can see in range. The target must make a CON save against your Move DC. On a failed save, it loses half of its current HP, and its Hit Point maximum is reduced by the amount of HP lost."
+      ]
+    },
     {
       "id": "sacred-fire",
       "name": "Sacred Fire",
