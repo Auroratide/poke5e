@@ -500,6 +500,11 @@
       "name": "Guts",
       "description": "When this Pokémon is burned or poisoned, they are not affected by the disadvantage or reduced damage effects. They still take damage at the end of each of their turns."
     },
+		{
+      "id": "hadron-engine",
+      "name": "Hadron Engine",
+      "description": "As a bonus action, this Pokémon may change the terrain to electric terrain for 5 rounds; this bonus action may be used twice per short rest. In electric terrain, this Pokémon has advantage on attack rolls using DEX or WIS as the move power."
+    },
     {
       "id": "harvest",
       "name": "Harvest",
@@ -834,6 +839,11 @@
       "id": "opportunist",
       "name": "Opportunist",
       "description": "When the AC, STR, DEX, CON, INT, WIS, or CHA of a creature within 30ft of this Pokémon increases, then this Pokémon's corresponding attribute increases by the same amount. This effect lasts for the duration of battle, or for 1 minute."
+    },
+		{
+      "id": "orichalcum-pulse",
+      "name": "Orichalcum Pulse",
+      "description": "As a bonus action, this Pokémon may change the weather to harsh sunlight for 5 rounds; this bonus action may be used twice per short rest. In harsh sunlight, this Pokémon has advantage on attack rolls using STR or CON as the move power."
     },
     {
       "id": "overcoat",

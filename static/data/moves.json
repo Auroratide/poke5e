@@ -1614,6 +1614,24 @@
         "You coil up and concentrate your power. For the duration, gain +1 to your attack rolls, damage rolls, and AC."
       ]
     },
+		{
+      "id": "collision-course",
+      "name": "Collision Course",
+      "type": "fighting",
+      "power": [
+        "str",
+        "con"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You crash into the ground, causing a massive prehistoric explosion. Make a melee attack roll, dealing 4d4 + MOVE fighting damage on a hit. On a hit, the target must make a STR save against your Move DC or be knocked prone.",
+				"If the target is vulnurable to this damage, the damage is increased by MOVE."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
+    },
     {
       "id": "comet-punch",
       "name": "Comet Punch",
@@ -2979,6 +2997,24 @@
         "You hurl an electric orb at a target in range. Make a ranged attack roll, dealing 1d6 + MOVE electric damage on a hit. Compare the target and user's highest speed type (walking, flying, etc.). If the user's speed is higher, roll the next tier's damage dice for this move. In the case of level 17 or higher, double the damage dice."
       ],
       "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
+    },
+		{
+      "id": "electro-drift",
+      "name": "Electro Drift",
+      "type": "electric",
+      "power": [
+        "dex",
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You race at ultrafast speeds with futuristic electricity. Make a melee attack roll, dealing 4d4 + MOVE electric damage on a hit. On a hit, the target cannot make attacks of opportunity against you until the end of your current turn.",
+				"If the target is vulnurable to this damage, the damage is increased by MOVE."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
     },
 		{
       "id": "electro-shot",

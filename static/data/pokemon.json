@@ -150409,6 +150409,454 @@
 			}
 		},
 		{
+			"id": "roaring-moon",
+			"name": "Roaring Moon",
+			"number": 1005,
+			"type": [
+				"dragon",
+				"dark"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. According to an article in a dubious magazine, this Pokémon has some connection to a phenomenon that occurs in a certain region.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 15
+				},
+				{
+					"type": "flying",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 22,
+				"dex": 20,
+				"con": 16,
+				"int": 5,
+				"wis": 13,
+				"cha": 10
+			},
+			"hp": 161,
+			"skills": [
+				"athletics",
+				"acrobatics"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "protosynthesis",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"bite",
+					"focus-energy",
+					"dragon-breath",
+					"incinerate",
+					"headbutt",
+					"scary-face",
+					"dragon-claw",
+					"zen-headbutt",
+					"flamethrower",
+					"night-slash",
+					"dragon-dance"
+				],
+				"level18": [
+					"fly",
+					"double-edge",
+					"roost",
+					"dragon-rush",
+					"throat-chop"
+				],
+				"tm": [
+					5,
+					12,
+					15,
+					17,
+					26,
+					31,
+					38,
+					40,
+					42,
+					44,
+					62,
+					65,
+					68,
+					71,
+					80,
+					81,
+					82,
+					88,
+					89,
+					90,
+					95,
+					97
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1005.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1005.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1005.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1005.png"
+			}
+		},
+		{
+			"id": "iron-valiant",
+			"name": "Iron Valiant",
+			"number": 1006,
+			"type": [
+				"fairy",
+				"fighting"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. It has some similarities to a mad scientist’s invention covered in a paranormal magazine.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 22,
+				"con": 16,
+				"int": 10,
+				"wis": 18,
+				"cha": 10
+			},
+			"hp": 142,
+			"skills": [
+				"acrobatics",
+				"persuasion"
+			],
+			"savingThrows": [
+				"str",
+				"wis"
+			],
+			"senses": [
+				{
+					"type": "truesight",
+					"value": 20
+				}
+			],
+			"abilities": [
+				{
+					"id": "quark-drive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"disable",
+					"double-team",
+					"fury-cutter",
+					"shadow-sneak",
+					"hypnosis",
+					"feint",
+					"future-sight",
+					"dazzling-gleam",
+					"psycho-cut",
+					"night-slash",
+					"leaf-blade",
+					"moonblast",
+					"close-combat"
+				],
+				"level18": [
+					"destiny-bond",
+					"knock-off",
+					"wide-guard",
+					"quick-guard",
+					"spirit-break"
+				],
+				"tm": [
+					3,
+					4,
+					12,
+					15,
+					16,
+					17,
+					24,
+					29,
+					30,
+					31,
+					33,
+					40,
+					44,
+					52,
+					53,
+					54,
+					56,
+					57,
+					65,
+					68,
+					73,
+					75,
+					77,
+					81,
+					84,
+					86,
+					88,
+					90,
+					92
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1006.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1006.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1006.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1006.png"
+			}
+		},
+		{
+			"id": "koraidon",
+			"name": "Koraidon",
+			"number": 1007,
+			"type": [
+				"fighting",
+				"dragon"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. This seems to be the Winged King mentioned in an old expedition journal. It was said to have split the land with its bare fists.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 60
+				},
+				{
+					"type": "swimming",
+					"value": 40
+				},
+				{
+					"type": "climbing",
+					"value": 30
+				},
+				{
+					"type": "gliding",
+					"value": 60
+				}
+			],
+			"attributes": {
+				"str": 22,
+				"dex": 18,
+				"con": 22,
+				"int": 8,
+				"wis": 12,
+				"cha": 14
+			},
+			"hp": 242,
+			"skills": [
+				"athletics",
+				"perception",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "orichalcum-pulse",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"sunny-day",
+					"breaking-swipe",
+					"rock-smash",
+					"ancient-power",
+					"brick-break",
+					"drain-punch",
+					"agility",
+					"flamethrower",
+					"counter",
+					"screech",
+					"outrage",
+					"dragon-claw",
+					"close-combat",
+					"flare-blitz",
+					"giga-impact",
+					"collision-course"
+				],
+				"tm": [
+					5,
+					8,
+					12,
+					15,
+					17,
+					22,
+					38,
+					42,
+					43,
+					44,
+					47,
+					50,
+					52,
+					62,
+					65,
+					75,
+					78,
+					82,
+					88,
+					89,
+					90,
+					93,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1007.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1007.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1007.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1007.png"
+			}
+		},
+		{
+			"id": "miraidon",
+			"name": "Miraidon",
+			"number": 1008,
+			"type": [
+				"electric",
+				"dragon"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. This seems to be the Iron Serpent mentioned in an old book. The Iron Serpent is said to have turned the land to ash with its lightning.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 60
+				},
+				{
+					"type": "swimming",
+					"value": 40
+				},
+				{
+					"type": "climbing",
+					"value": 30
+				},
+				{
+					"type": "gliding",
+					"value": 60
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 22,
+				"con": 16,
+				"int": 10,
+				"wis": 22,
+				"cha": 14
+			},
+			"hp": 212,
+			"skills": [
+				"acrobatics",
+				"perception",
+				"persuasion"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "hadron-engine",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"thunder-shock",
+					"dragon-breath",
+					"electric-terrain",
+					"shock-wave",
+					"charge",
+					"discharge",
+					"parabolic-charge",
+					"agility",
+					"hyper-beam",
+					"thunder",
+					"outrage",
+					"mirror-coat",
+					"overheat",
+					"metal-sound",
+					"dragon-pulse",
+					"electro-drift"
+				],
+				"tm": [
+					2,
+					4,
+					12,
+					16,
+					17,
+					22,
+					24,
+					33,
+					42,
+					44,
+					57,
+					62,
+					68,
+					72,
+					73,
+					75,
+					82,
+					88,
+					89,
+					90,
+					91,
+					93,
+					95,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1008.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1008.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1008.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1008.png"
+			}
+		},
+		{
 			"id": "archaludon",
 			"name": "Archaludon",
 			"number": 1018,
