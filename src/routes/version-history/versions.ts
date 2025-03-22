@@ -11,6 +11,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.2.3",
+		description: [
+			"Added Pokémon: Great Tusk, Scream Tail, Brute Bonnet, Flutter Mane, Slither Wing, Sandy Shocks, Iron Treads, Iron Bundle, Iron Hands, Iron Jugulis, Iron Moth, Iron Thorns, Baxcalibur line, Gholdengo line, Wo-Chien, Chien-Pao, Ting-Lu, Chi-Yu, Roaring Moon, Iron Valiant, Koraidon, Miraidon",
+			"New: When choosing Pokemon moves, moves the Pokémon can learn naturally are at the top of the list.",
+		],
+	}, {
 		name: "v1.2.2",
 		description: [
 			"Added references: Catching Pokémon, Bonds, Fainting and Healing, Weather, Combat, and Feats",
