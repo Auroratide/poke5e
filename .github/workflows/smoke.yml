@@ -6,7 +6,6 @@ on:
 jobs:
   smoke-test:
     name: Smoke Test
-    needs: site-deploy
     runs-on: ubuntu-22.04 # See: https://github.com/puppeteer/puppeteer/issues/12818
     env:
       ENV: prod
