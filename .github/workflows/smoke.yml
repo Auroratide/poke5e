@@ -1,0 +1,21 @@
+name: Smoke Test
+on:
+  workflow_dispatch:
+  workflow_call:
+
+jobs:
+  smoke-test:
+    name: Smoke Test
+    needs: site-deploy
+    runs-on: ubuntu-22.04 # See: https://github.com/puppeteer/puppeteer/issues/12818
+    env:
+      ENV: prod
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm test:smoke

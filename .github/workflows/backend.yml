@@ -1,0 +1,38 @@
+name: Backend Deployment
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - supabase/**
+
+jobs:
+  backend-deploy:
+    name: Backend Deploy
+    runs-on: ubuntu-latest
+    env:
+      ENV: prod
+      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      SUPABASE_DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      SUPABASE_PROJECT_ID: ${{ secrets.SUPABASE_REF }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+      - uses: supabase/setup-cli@v1
+        with:
+          version: latest
+      - run: pnpm install --frozen-lockfile
+      - run: supabase start
+      - name: Run migration tests
+        run: pnpm test:db
+      - run: supabase link --project-ref $SUPABASE_PROJECT_ID
+      - name: Push migrations
+        run: supabase db push
+
+  smoke-test:
+    uses: ./.github/workflows/smoke.yml
