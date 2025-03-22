@@ -9,6 +9,17 @@ export type PokemonMedia = {
 	attribution?: string,
 }
 
+export type MovePool = {
+	start: string[],
+	level2?: string[],
+	level6?: string[],
+	level10?: string[],
+	level14?: string[],
+	level18?: string[],
+	egg?: string[],
+	tm?: number[],
+}
+
 export type Pokemon = {
 	id: string,
 	name: string,
@@ -44,15 +55,6 @@ export type Pokemon = {
 	abilities: Ability[],
 	specialAbilityText?: string,
 	evolution?: PokeEvolution,
-	moves: {
-		start: string[],
-		level2?: string[],
-		level6?: string[],
-		level10?: string[],
-		level14?: string[],
-		level18?: string[],
-		egg?: string[],
-		tm?: number[],
-	},
+	moves: MovePool,
 	media: PokemonMedia,
 }

@@ -102,7 +102,7 @@
 		</Fieldset>
 		<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 		<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
-		<PokeMovesFieldset bind:values={moves} {disabled} />
+		<PokeMovesFieldset bind:values={moves} {species} {disabled} />
 		<Fieldset title="General">
 			<GeneralTextarea name="notes" label="Notes" bind:value={notes} {disabled} placeholder="Use this for any general notes not covered by the above fields..." />
 		</Fieldset>

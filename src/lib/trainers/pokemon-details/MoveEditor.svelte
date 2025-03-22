@@ -1,13 +1,18 @@
 <script lang="ts">
 	import type { LearnedMove } from "../types"
-	import { moves } from "$lib/moves/store"
+	import { moves, tms } from "$lib/moves/store"
 	import { createEventDispatcher } from "svelte"
 	import Button from "$lib/design/Button.svelte"
+	import type { Pokemon } from "$lib/creatures/types"
+	import { groupByLearnability } from "$lib/moves/group"
 
 	const dispatch = createEventDispatcher()
 
 	export let move: LearnedMove
+	export let species: Pokemon
 	export let disabled: boolean = false
+
+	$: moveGroups = groupByLearnability($moves ?? [], $tms ?? [], species)
 
 	const onMoveChange = () => {
 		const pp = $moves.find((it) => it.id === move.moveId)?.pp ?? 0
@@ -23,8 +28,12 @@
 <label for="move-name-input-{move.id}">Move</label>
 <div class="flex-row">
 	<select id="move-name-input-{move.id}" bind:value={move.moveId} on:change={onMoveChange} style:flex="1">
-		{#each ($moves ?? []) as moveData}
-			<option value={moveData.id}>{moveData.name}</option>
+		{#each moveGroups as group}
+			<optgroup label="{group.name}">
+				{#each group.moves as move}
+					<option value={move.id}>{move.name}</option>
+				{/each}
+			</optgroup>
 		{/each}
 	</select>
 	<Button on:click={onRemove}>Remove</Button>
