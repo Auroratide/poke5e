@@ -26,6 +26,8 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
+      - name: Unit Test
+        run: pnpm test:unit
       - run: pnpm build
       - uses: peaceiris/actions-gh-pages@v4
         with:
