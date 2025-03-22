@@ -56,6 +56,8 @@
 		list-style: none;
 		padding: 0;
 		inline-size: 100%;
+		overflow: auto;
+		margin: 0;
 	} ul li {
 		display: block;
 		margin-block-end: 0.25em;
