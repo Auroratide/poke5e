@@ -85,6 +85,11 @@
       "name": "Battle Armor",
       "description": "This Pokémon is immune to extra damage dealt by a Critical Hit."
     },
+		{
+      "id": "beads-of-ruin",
+      "name": "Beads of Ruin",
+      "description": "Creatures within 60ft of this Pokémon which do not have a \"* of Ruin\" ability have -4 Charisma score, to a minimum of 1. This effect does not stack, and the creature's Charisma score is restored upon leaving the area of effect."
+    },
     {
       "id": "beast-boost",
       "name": "Beast Boost",
@@ -450,6 +455,11 @@
       "name": "Gluttony",
       "description": "This Pokémon must eat its held berry when it falls below ½ of its maximum HP."
     },
+		{
+      "id": "good-as-gold",
+      "name": "Good as Gold",
+      "description": "This Pokémon is immune to status effects."
+    },
     {
       "id": "gooey",
       "name": "Gooey",
@@ -489,6 +499,11 @@
       "id": "guts",
       "name": "Guts",
       "description": "When this Pokémon is burned or poisoned, they are not affected by the disadvantage or reduced damage effects. They still take damage at the end of each of their turns."
+    },
+		{
+      "id": "hadron-engine",
+      "name": "Hadron Engine",
+      "description": "As a bonus action, this Pokémon may change the terrain to electric terrain for 5 rounds; this bonus action may be used twice per short rest. In electric terrain, this Pokémon has advantage on attack rolls using DEX or WIS as the move power."
     },
     {
       "id": "harvest",
@@ -825,6 +840,11 @@
       "name": "Opportunist",
       "description": "When the AC, STR, DEX, CON, INT, WIS, or CHA of a creature within 30ft of this Pokémon increases, then this Pokémon's corresponding attribute increases by the same amount. This effect lasts for the duration of battle, or for 1 minute."
     },
+		{
+      "id": "orichalcum-pulse",
+      "name": "Orichalcum Pulse",
+      "description": "As a bonus action, this Pokémon may change the weather to harsh sunlight for 5 rounds; this bonus action may be used twice per short rest. In harsh sunlight, this Pokémon has advantage on attack rolls using STR or CON as the move power."
+    },
     {
       "id": "overcoat",
       "name": "Overcoat",
@@ -945,6 +965,11 @@
       "name": "Protean",
       "description": "This Pokémon's type changes to the type of move it uses, just before the move is used. It takes on the new type's resistances, vulnerabilities, and immunities."
     },
+		{
+      "id": "protosynthesis",
+      "name": "Protosynthesis",
+      "description": "This Pokémon may have a STR and CON scores up to 22. In harsh sunlight, this Pokémon has advantage on STR and CON saves."
+    },
     {
       "id": "psychic-surge",
       "name": "Psychic Surge",
@@ -968,7 +993,7 @@
     {
       "id": "quark-drive",
       "name": "Quark Drive",
-      "description": "While on electric terrain, gain +2 to STR and DEX ability checks and saving throws."
+      "description": "This Pokémon may have a DEX and WIS scores up to 22. On electric terrain, this Pokémon has advantage on DEX and WIS saves."
     },
     {
       "id": "queenly-majesty",
@@ -1310,6 +1335,11 @@
       "name": "Swift Swim",
       "description": "This Pokémon's speed is doubled in rainy conditions."
     },
+		{
+      "id": "sword-of-ruin",
+      "name": "Sword of Ruin",
+      "description": "Creatures within 60ft of this Pokémon which do not have a \"* of Ruin\" ability have -4 Constitution score, to a minimum of 1. This effect does not stack, and the creature's Constitution score is restored upon leaving the area of effect."
+    },
     {
       "id": "symbiosis",
       "name": "Symbiosis",
@@ -1319,6 +1349,11 @@
       "id": "synchronize",
       "name": "Synchronize",
       "description": "If this Pokémon becomes burned, paralyzed, or poisoned, its attacker receives the negative status condition as well (if not immune)."
+    },
+		{
+      "id": "tablets-of-ruin",
+      "name": "Tablets of Ruin",
+      "description": "Creatures within 60ft of this Pokémon which do not have a \"* of Ruin\" ability have -4 Strength score, to a minimum of 1. This effect does not stack, and the creature's Strength score is restored upon leaving the area of effect."
     },
     {
       "id": "tangled-feet",
@@ -1344,6 +1379,11 @@
       "id": "teravolt",
       "name": "Teravolt",
       "description": "This Pokémon’s moves completely ignore any ability that would hinder or prevent their effect on the target or the user's ability to hit the target."
+    },
+		{
+      "id": "thermal-exchange",
+      "name": "Thermal Exchange",
+      "description": "This Pokémon cannot be burned. When this Pokémon takes fire-type damage, it makes its next attack with advantage."
     },
     {
       "id": "thick-fat",
@@ -1424,6 +1464,11 @@
       "id": "unseen-fist",
       "name": "Unseen Fist",
       "description": "Melee attacks this Pokémon make may damage through the opponent's use of Protect or Detect."
+    },
+		{
+      "id": "vessel-of-ruin",
+      "name": "Vessel of Ruin",
+      "description": "Creatures within 60ft of this Pokémon which do not have a \"* of Ruin\" ability have -4 Wisdom score, to a minimum of 1. This effect does not stack, and the creature's Wisdom score is restored upon leaving the area of effect."
     },
     {
       "id": "victory-star",
