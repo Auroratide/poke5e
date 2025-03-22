@@ -35,4 +35,5 @@ jobs:
         run: supabase db push
 
   smoke-test:
+    needs: backend-deploy
     uses: ./.github/workflows/smoke.yml
