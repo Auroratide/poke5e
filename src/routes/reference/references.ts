@@ -7,6 +7,10 @@ export type ReferenceInfo = {
 }
 
 export const References = [ {
+	name: "Abilities",
+	url: Url.reference.abilities(),
+	keywords: ["ability", "pokemon", "feature", "list", "filter"],
+}, {
 	name: "Bonds",
 	url: Url.reference.bonds(),
 	keywords: ["bond", "bond level", "loyalty", "relationship", "disloyal", "disobey", "trust"],
