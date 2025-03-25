@@ -1,120 +1,3196 @@
 {
 	"items": [
 		{
-			"id": "cheri-berry",
-			"name": "Cheri Berry",
-			"type": "berry",
-			"holdable": true,
-			"cost": 200,
-			"description": [
-				"Consume to cure paralysis. Can be consumed as a reaction to becoming paralyzed."
-			]
-		},
-		{
-			"id": "chesto-berry",
-			"name": "Chesto Berry",
-			"type": "berry",
-			"holdable": true,
-			"cost": 200,
-			"description": [
-				"Consume to cure asleep condition. Can be consumed as a reaction to becoming asleep."
-			]
-		},
-		{
-			"id": "pecha-berry",
-			"name": "Pecha Berry",
-			"type": "berry",
-			"holdable": true,
-			"cost": 200,
-			"description": [
-				"Consume to cure poison. Can be consumed as a reaction to becoming poisoned or badly poisoned."
-			]
-		},
-		{
-			"id": "rawst-berry",
-			"name": "Rawst Berry",
-			"type": "berry",
-			"holdable": true,
-			"cost": 200,
-			"description": [
-				"Consume to cure burn. Can be consumed as a reaction to becoming burned."
-			]
-		},
-		{
-			"id": "aspear-berry",
-			"name": "Aspear Berry",
-			"type": "berry",
-			"holdable": true,
-			"cost": 200,
-			"description": [
-				"Consume to cure freeze. Can be consumed as a reaction to becoming frozen."
-			]
-		},
-		{
-			"id": "leppa-berry",
-			"name": "Leppa Berry",
-			"type": "berry",
-			"holdable": true,
-			"cost": 500,
-			"description": [
-				"Consume to restore 10 PP to a single move. Can be consumed as a reaction to a move reaching 0 PP."
-			]
-		},
-		{
-			"id": "oran-berry",
-			"name": "Oran Berry",
-			"type": "berry",
-			"holdable": true,
-			"cost": 200,
-			"description": [
-				"Consume to restore 2d4+2 HP. Can be consumed as a reaction ????????????????."
-			]
-		},
-
-		{
-			"id": "potion",
-			"name": "Potion",
-			"type": "medicine",
-			"cost": 200,
-			"description": [
-				"Restores 2d4 + 2 HP."
-			]
-		},
-		{
-			"id": "super-potion",
-			"name": "Super Potion",
-			"type": "medicine",
-			"cost": 500,
-			"description": [
-				"Restores 3d6 + 6 HP."
-			]
-		},
-		{
-			"id": "hyper-potion",
-			"name": "Hyper Potion",
-			"type": "medicine",
-			"cost": 800,
-			"description": [
-				"Restores 4d12 + 10 HP."
-			]
-		},
-		{
-			"id": "pokeball",
-			"name": "Pokeball",
+			"id": "poke-ball",
+			"name": "Poké Ball",
 			"type": "pokeball",
-			"cost": 250,
+			"cost": 200,
 			"description": [
-				"+0 to Capture Rolls."
-			]
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+			}
 		},
 		{
 			"id": "great-ball",
 			"name": "Great Ball",
 			"type": "pokeball",
-			"cost": 500,
+			"cost": 600,
 			"description": [
-				"+5 to Capture Rolls."
-			]
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 5."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"
+			}
+		},
+		{
+			"id": "ultra-ball",
+			"name": "Ultra Ball",
+			"type": "pokeball",
+			"cost": 800,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 10."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png"
+			}
+		},
+		{
+			"id": "master-ball",
+			"name": "Master Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": [
+				"Lets a trainer automatically succeed on a Capture Roll to catch a Pokémon."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png"
+			}
+		},
+		{
+			"id": "safari-ball",
+			"name": "Safari Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/safari-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon, using a catch rate of 1.5×.\n\nThis item can only be used in the great marsh or kanto safari zone."
+		},
+		{
+			"id": "net-ball",
+			"name": "Net Ball",
+			"type": "pokeball",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/net-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  If the wild Pokémon is water- or bug-type, this ball has a catch rate of 3×.  Otherwise, it has a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+		},
+		{
+			"id": "dive-ball",
+			"name": "Dive Ball",
+			"type": "pokeball",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dive-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  If the wild Pokémon was encountered by surfing or fishing, this ball has a catch rate of 3.5×.  Otherwise, it has a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+		},
+		{
+			"id": "nest-ball",
+			"name": "Nest Ball",
+			"type": "pokeball",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nest-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  Has a catch rate of given by `(40 - level) / 10`, where `level` is the wild Pokémon's level, to a maximum of 3.9× for level 1 Pokémon.  If the wild Pokémon's level is higher than 30, this ball has a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+		},
+		{
+			"id": "repeat-ball",
+			"name": "Repeat Ball",
+			"type": "pokeball",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/repeat-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  If the wild Pokémon's species is marked as caught in the trainer's Pokédex, this ball has a catch rate of 3×.  Otherwise, it has a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+		},
+		{
+			"id": "timer-ball",
+			"name": "Timer Ball",
+			"type": "pokeball",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/timer-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  Has a catch rate of 1.1× on the first turn of the battle and increases by 0.1× every turn, to a maximum of 4× on turn 30.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+		},
+		{
+			"id": "luxury-ball",
+			"name": "Luxury Ball",
+			"type": "pokeball",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/luxury-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon, using a catch rate of 1×.  Whenever the caught Pokémon's happiness increases, it increases by one extra point.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+		},
+		{
+			"id": "premier-ball",
+			"name": "Premier Ball",
+			"type": "pokeball",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/premier-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon, using a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+		},
+		{
+			"id": "dusk-ball",
+			"name": "Dusk Ball",
+			"type": "pokeball",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  If it's currently nighttime or the wild Pokémon was encountered while walking in a cave, this ball has a catch rate of 3.5×.  Otherwise, it has a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+		},
+		{
+			"id": "heal-ball",
+			"name": "Heal Ball",
+			"type": "pokeball",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon, using a catch rate of 1×.  The caught Pokémon's HP is immediately restored, PP for all its moves is restored, and any status ailment is cured.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+		},
+		{
+			"id": "quick-ball",
+			"name": "Quick Ball",
+			"type": "pokeball",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon, using a catch rate of 4× on the first turn of a battle, but 1× any other time.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+		},
+		{
+			"id": "cherish-ball",
+			"name": "Cherish Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cherish-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon, using a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+		},
+		{
+			"id": "potion",
+			"name": "Potion",
+			"type": "medicine",
+			"cost": 200,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/potion.png"
+			},
+			"_ingameEffect": "Used on a friendly Pokémon\n:   Restores 20 HP."
+		},
+		{
+			"id": "antidote",
+			"name": "Antidote",
+			"type": "medicine",
+			"cost": 200,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/antidote.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Cures poison."
+		},
+		{
+			"id": "burn-heal",
+			"name": "Burn Heal",
+			"type": "medicine",
+			"cost": 200,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/burn-heal.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Cures a burn."
+		},
+		{
+			"id": "ice-heal",
+			"name": "Ice Heal",
+			"type": "medicine",
+			"cost": 200,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-heal.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Cures freezing."
+		},
+		{
+			"id": "awakening",
+			"name": "Awakening",
+			"type": "medicine",
+			"cost": 200,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/awakening.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Cures sleep."
+		},
+		{
+			"id": "paralyze-heal",
+			"name": "Paralyze Heal",
+			"type": "medicine",
+			"cost": 200,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/paralyze-heal.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Cures paralysis."
+		},
+		{
+			"id": "full-restore",
+			"name": "Full Restore",
+			"type": "medicine",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-restore.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores HP to full and cures any status ailment and confusion."
+		},
+		{
+			"id": "max-potion",
+			"name": "Max Potion",
+			"type": "medicine",
+			"cost": 2500,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-potion.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores HP to full."
+		},
+		{
+			"id": "hyper-potion",
+			"name": "Hyper Potion",
+			"type": "medicine",
+			"cost": 1500,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hyper-potion.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores 200 HP."
+		},
+		{
+			"id": "super-potion",
+			"name": "Super Potion",
+			"type": "medicine",
+			"cost": 700,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-potion.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores 50 HP."
+		},
+		{
+			"id": "full-heal",
+			"name": "Full Heal",
+			"type": "medicine",
+			"cost": 400,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-heal.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Cures any status ailment and confusion."
+		},
+		{
+			"id": "revive",
+			"name": "Revive",
+			"type": "medicine",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revive.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Revives the Pokémon and restores half its HP."
+		},
+		{
+			"id": "max-revive",
+			"name": "Max Revive",
+			"type": "medicine",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-revive.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Revives the Pokémon and restores its HP to full."
+		},
+		{
+			"id": "fresh-water",
+			"name": "Fresh Water",
+			"type": "medicine",
+			"cost": 200,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fresh-water.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores 50 HP."
+		},
+		{
+			"id": "soda-pop",
+			"name": "Soda Pop",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soda-pop.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores 60 HP."
+		},
+		{
+			"id": "lemonade",
+			"name": "Lemonade",
+			"type": "medicine",
+			"cost": 400,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lemonade.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores 80 HP."
+		},
+		{
+			"id": "moomoo-milk",
+			"name": "Moomoo Milk",
+			"type": "medicine",
+			"cost": 600,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moomoo-milk.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores 100 HP."
+		},
+		{
+			"id": "energy-powder",
+			"name": "Energy Powder",
+			"type": "medicine",
+			"cost": 500,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-powder.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores 50 HP.  Decreases happiness by 5/5/10."
+		},
+		{
+			"id": "energy-root",
+			"name": "Energy Root",
+			"type": "medicine",
+			"cost": 1200,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-root.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores 200 HP.  Decreases happiness by 10/10/15."
+		},
+		{
+			"id": "heal-powder",
+			"name": "Heal Powder",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-powder.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Cures any status ailment.  Decreases happiness by 5/5/10."
+		},
+		{
+			"id": "revival-herb",
+			"name": "Revival Herb",
+			"type": "medicine",
+			"cost": 2800,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revival-herb.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Revives a fainted Pokémon and restores its HP to full.  Decreases happiness by 10/10/15."
+		},
+		{
+			"id": "ether",
+			"name": "Ether",
+			"type": "medicine",
+			"cost": 1200,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ether.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores 10 PP for a selected move."
+		},
+		{
+			"id": "max-ether",
+			"name": "Max Ether",
+			"type": "medicine",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-ether.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores PP to full for a selected move."
+		},
+		{
+			"id": "elixir",
+			"name": "Elixir",
+			"type": "medicine",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/elixir.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores 10 PP for each move."
+		},
+		{
+			"id": "max-elixir",
+			"name": "Max Elixir",
+			"type": "medicine",
+			"cost": 4500,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-elixir.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores PP to full for each move."
+		},
+		{
+			"id": "lava-cookie",
+			"name": "Lava Cookie",
+			"type": "medicine",
+			"cost": 350,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lava-cookie.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Cures any status ailment and confusion."
+		},
+		{
+			"id": "berry-juice",
+			"name": "Berry Juice",
+			"type": "medicine",
+			"cost": 200,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berry-juice.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Restores 20 HP."
+		},
+		{
+			"id": "sacred-ash",
+			"name": "Sacred Ash",
+			"type": "medicine",
+			"cost": 50000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sacred-ash.png"
+			},
+			"_ingameEffect": "Used\n:   Revives all fainted Pokémon in the party and restores their HP to full."
+		},
+		{
+			"id": "hp-up",
+			"name": "HP Up",
+			"type": "medicine",
+			"cost": 10000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hp-up.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases HP effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
+		},
+		{
+			"id": "protein",
+			"name": "Protein",
+			"type": "medicine",
+			"cost": 10000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protein.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases Attack effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
+		},
+		{
+			"id": "iron",
+			"name": "Iron",
+			"type": "medicine",
+			"cost": 10000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases Defense effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
+		},
+		{
+			"id": "carbos",
+			"name": "Carbos",
+			"type": "medicine",
+			"cost": 10000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/carbos.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases Speed effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
+		},
+		{
+			"id": "calcium",
+			"name": "Calcium",
+			"type": "medicine",
+			"cost": 10000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/calcium.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases Special Attack effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
+		},
+		{
+			"id": "rare-candy",
+			"name": "Rare Candy",
+			"type": "medicine",
+			"cost": 10000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rare-candy.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases level by 1.  Increases happiness by 5/3/2."
+		},
+		{
+			"id": "pp-up",
+			"name": "PP Up",
+			"type": "medicine",
+			"cost": 10000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pp-up.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases a selected move's max PP by 20% its original max PP, to a maximum of 1.6×.  Increases happiness by 5/3/2."
+		},
+		{
+			"id": "zinc",
+			"name": "Zinc",
+			"type": "medicine",
+			"cost": 10000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zinc.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases Special Defense effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
+		},
+		{
+			"id": "pp-max",
+			"name": "PP Max",
+			"type": "medicine",
+			"cost": 10000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pp-max.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases a selected move's max PP to 1.6× its original max PP.  Increases happiness by 5/3/2."
+		},
+		{
+			"id": "old-gateau",
+			"name": "Old Gateau",
+			"type": "medicine",
+			"cost": 350,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-gateau.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Cures any status ailment and confusion."
+		},
+		{
+			"id": "guard-spec",
+			"name": "Guard Spec.",
+			"type": "medicine",
+			"cost": 1500,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/guard-spec.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon in battle\n:   Protects the target's stats from being lowered for the next five turns.  Increases happiness by 1/1/0."
+		},
+		{
+			"id": "dire-hit",
+			"name": "Dire Hit",
+			"type": "medicine",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dire-hit.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon in battle\n:   Increases the target's critical hit chance by one stage until it leaves the field.  Increases happiness by 1/1/0."
+		},
+		{
+			"id": "x-attack",
+			"name": "X Attack",
+			"type": "medicine",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-attack.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon in battle\n:   Raises the target's Attack by one stage.  Increases happiness by 1/1/0."
+		},
+		{
+			"id": "x-defense",
+			"name": "X Defense",
+			"type": "medicine",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-defense.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon in battle\n:   Raises the target's Defense by one stage.  Increases happiness by 1/1/0."
+		},
+		{
+			"id": "x-speed",
+			"name": "X Speed",
+			"type": "medicine",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-speed.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon in battle\n:   Raises the target's Speed by one stage.  Increases happiness by 1/1/0."
+		},
+		{
+			"id": "x-accuracy",
+			"name": "X Accuracy",
+			"type": "medicine",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-accuracy.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon in battle\n:   Raises the target's accuracy by one stage.  Increases happiness by 1/1/0."
+		},
+		{
+			"id": "x-sp-atk",
+			"name": "X Sp. Atk",
+			"type": "medicine",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-sp-atk.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon in battle\n:   Raises the target's Special Attack by one stage.  Increases happiness by 1/1/0."
+		},
+		{
+			"id": "x-sp-def",
+			"name": "X Sp. Def",
+			"type": "medicine",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-sp-def.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon in battle\n:   Raises the target's Special Defense by one stage.  Increases happiness by 1/1/0."
+		},
+		{
+			"id": "sun-stone",
+			"name": "Sun Stone",
+			"type": "evolution",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sun-stone.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Evolves a cottonee into whimsicott, a gloom into bellossom, a petilil into lilligant, or a sunkern into sunflora."
+		},
+		{
+			"id": "moon-stone",
+			"name": "Moon Stone",
+			"type": "evolution",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moon-stone.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Evolves a clefairy into clefable, a jigglypuff into wigglytuff, a munna into musharna, a nidorina into nidoqueen, a nidorino into nidoking, or a skitty into delcatty."
+		},
+		{
+			"id": "fire-stone",
+			"name": "Fire Stone",
+			"type": "evolution",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fire-stone.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Evolves an eevee into flareon, a growlithe into arcanine, a pansear into simisear, or a vulpix into ninetales."
+		},
+		{
+			"id": "thunder-stone",
+			"name": "Thunder Stone",
+			"type": "evolution",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thunder-stone.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Evolves an eelektrik into eelektross, an eevee into jolteon, or a pikachu into raichu."
+		},
+		{
+			"id": "water-stone",
+			"name": "Water Stone",
+			"type": "evolution",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/water-stone.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Evolves an eevee into vaporeon, a lombre into ludicolo, a panpour into simipour, a poliwhirl into poliwrath, a shellder into cloyster, or a staryu into starmie."
+		},
+		{
+			"id": "leaf-stone",
+			"name": "Leaf Stone",
+			"type": "evolution",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leaf-stone.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Evolves an exeggcute into exeggutor, a gloom into vileplume, a nuzleaf into shiftry, a pansage into simisage, or a weepinbell into victreebel."
+		},
+		{
+			"id": "shiny-stone",
+			"name": "Shiny Stone",
+			"type": "evolution",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shiny-stone.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Evolves a minccino into cinccino, a roselia into roserade, or a togetic into togekiss."
+		},
+		{
+			"id": "dusk-stone",
+			"name": "Dusk Stone",
+			"type": "evolution",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-stone.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Evolves a lampent into chandelure, a misdreavus into mismagius, or a murkrow into honchkrow."
+		},
+		{
+			"id": "dawn-stone",
+			"name": "Dawn Stone",
+			"type": "evolution",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dawn-stone.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Evolves a male kirlia into gallade or a female snorunt into froslass."
+		},
+		{
+			"id": "oval-stone",
+			"name": "Oval Stone",
+			"type": "evolution",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oval-stone.png"
+			},
+			"_ingameEffect": "Held by happiny\n:   Holder evolves into chansey when it levels up during the daytime."
+		},
+		{
+			"id": "cheri-berry",
+			"name": "Cheri Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cheri-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder is paralyzed, it consumes this item to cure the paralysis.\n\nUsed on a party Pokémon\n:   Cures paralysis."
+		},
+		{
+			"id": "chesto-berry",
+			"name": "Chesto Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder is asleep, it consumes this item to wake up.\n\nUsed on a party Pokémon\n:   Cures sleep."
+		},
+		{
+			"id": "pecha-berry",
+			"name": "Pecha Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pecha-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder is poisoned, it consumes this item to cure the poison.\n\nUsed on a party Pokémon\n:   Cures poison."
+		},
+		{
+			"id": "rawst-berry",
+			"name": "Rawst Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rawst-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder is burned, it consumes this item to cure the burn.\n\nUsed on a party Pokémon\n:   Cures a burn."
+		},
+		{
+			"id": "aspear-berry",
+			"name": "Aspear Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/aspear-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder is frozen, it consumes this item to thaw itself.\n\nUsed on a party Pokémon\n:   Cures freezing."
+		},
+		{
+			"id": "leppa-berry",
+			"name": "Leppa Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leppa-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder is out of PP for one of its moves, it consumes this item to restore 10 of that move's PP.\n\nUsed on a party Pokémon\n:   Restores 10 PP for a selected move."
+		},
+		{
+			"id": "oran-berry",
+			"name": "Oran Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oran-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder has 1/2 its max HP remaining or less, it consumes this item to restore 10 HP.\n\nUsed on a party Pokémon\n:   Restores 10 HP."
+		},
+		{
+			"id": "persim-berry",
+			"name": "Persim Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder is confused, it consumes this item to cure the confusion.\n\nUsed on a party Pokémon\n:   Cures confusion."
+		},
+		{
+			"id": "lum-berry",
+			"name": "Lum Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder is afflicted with a major status ailment, it consumes this item to cure the ailment.\n\nUsed on a party Pokémon\n:   Cures any major status ailment."
+		},
+		{
+			"id": "sitrus-berry",
+			"name": "Sitrus Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder has 1/2 its max HP remaining or less, it consumes this item to restore 1/4 its max HP.\n\nUsed on a party Pokémon\n:   Restores 1/4 the Pokémon's max HP."
+		},
+		{
+			"id": "occa-berry",
+			"name": "Occa Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective fire-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "passho-berry",
+			"name": "Passho Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/passho-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective water-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "wacan-berry",
+			"name": "Wacan Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wacan-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective electric-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "rindo-berry",
+			"name": "Rindo Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rindo-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective grass-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "yache-berry",
+			"name": "Yache Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yache-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective ice-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "chople-berry",
+			"name": "Chople Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chople-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective fighting-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "kebia-berry",
+			"name": "Kebia Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kebia-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective poison-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "shuca-berry",
+			"name": "Shuca Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shuca-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective ground-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "coba-berry",
+			"name": "Coba Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coba-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective flying-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "payapa-berry",
+			"name": "Payapa Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/payapa-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective psychic-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "tanga-berry",
+			"name": "Tanga Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tanga-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective bug-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "charti-berry",
+			"name": "Charti Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charti-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective rock-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "kasib-berry",
+			"name": "Kasib Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kasib-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective ghost-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "haban-berry",
+			"name": "Haban Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/haban-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective dragon-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "colbur-berry",
+			"name": "Colbur Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/colbur-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective dark-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "babiri-berry",
+			"name": "Babiri Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/babiri-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective steel-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "chilan-berry",
+			"name": "Chilan Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chilan-berry.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder would take normal-type damage, it consumes this item to halve the amount of damage taken."
+		},
+		{
+			"id": "bright-powder",
+			"name": "Bright Powder",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bright-powder.png"
+			},
+			"_ingameEffect": "Held in battle\n:   Moves targeting the holder have 0.9× chance to hit."
+		},
+		{
+			"id": "white-herb",
+			"name": "White Herb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-herb.png"
+			},
+			"_ingameEffect": "Held in battle\n:   At the end of each turn, if any of the holder's stats have a negative stat modifier, the holder consumes this item to remove the modifiers from those stats."
+		},
+		{
+			"id": "quick-claw",
+			"name": "Quick Claw",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-claw.png"
+			},
+			"_ingameEffect": "Held in battle\n:   Whenever the holder attempts to use a move, it has a 3/16 chance to act first among moves with the same priority.  If multiple Pokémon have this effect at the same time, Speed is the tie-breaker as normal, but the effect of trick room is ignored."
+		},
+		{
+			"id": "mental-herb",
+			"name": "Mental Herb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mental-herb.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder is attracted, it consumes this item to cure the attraction."
+		},
+		{
+			"id": "choice-band",
+			"name": "Choice Band",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-band.png"
+			},
+			"_ingameEffect": "Held in battle\n:   Holder has 1.5× its Attack.  When the holder attempts to use a move, all its other moves are disabled until it leaves battle or loses this item.\n\n    The restriction ends even if this item is swapped for another Choice item\nvia trick or switcheroo."
+		},
+		{
+			"id": "kings-rock",
+			"name": "King’s Rock",
+			"type": "held item",
+			"cost": 5000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png"
+			},
+			"_ingameEffect": "Held in battle\n:   Holder's damaging moves have a 10% chance to make their target flinch.  This chance applies independently to each hit of a multi-hit move.\n\n    This item's chance is rolled independently of any other move effects;\ne.g., a move with a 30% chance to flinch normally will have a 37% total chance to flinch when used with this item, because 3% of the time, both effects activate.\n\nHeld by poliwhirl or slowbro\n:   Holder evolves into politoed or slowking, respectively, when traded."
+		},
+		{
+			"id": "silver-powder",
+			"name": "Silver Powder",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silver-powder.png"
+			},
+			"_ingameEffect": "Held in battle\n:   Holder's bug-type moves have 1.2× their power.\n"
+		},
+		{
+			"id": "smoke-ball",
+			"name": "Smoke Ball",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smoke-ball.png"
+			},
+			"_ingameEffect": "Held: In wild battles, attempts to run away on the holder's turn will always succeed."
+		},
+		{
+			"id": "focus-band",
+			"name": "Focus Band",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-band.png"
+			},
+			"_ingameEffect": "Held: If the holder is attacked for regular damage that would faint it, this item has a 10% chance to prevent the holder's HP from lowering below 1."
+		},
+		{
+			"id": "scope-lens",
+			"name": "Scope Lens",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/scope-lens.png"
+			},
+			"_ingameEffect": "Held: Raises the holder's critical hit counter by 1."
+		},
+		{
+			"id": "metal-coat",
+			"name": "Metal Coat",
+			"type": "held item",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-coat.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Steel moves by 20%.\nHeld by Onix or Scyther: Evolves the holder into Steelix or Scizor when traded, respectively."
+		},
+		{
+			"id": "leftovers",
+			"name": "Leftovers",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png"
+			},
+			"_ingameEffect": "Held: Heals the holder by 1/16 its max HP at the end of each turn."
+		},
+		{
+			"id": "dragon-scale",
+			"name": "Dragon Scale",
+			"type": "evolution",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-scale.png"
+			},
+			"_ingameEffect": "Held by Seadra: Evolves the holder into Kingdra when traded."
+		},
+		{
+			"id": "soft-sand",
+			"name": "Soft Sand",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soft-sand.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Ground moves by 20%."
+		},
+		{
+			"id": "hard-stone",
+			"name": "Hard Stone",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hard-stone.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Rock moves by 20%."
+		},
+		{
+			"id": "miracle-seed",
+			"name": "Miracle Seed",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/miracle-seed.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Grass moves by 20%."
+		},
+		{
+			"id": "black-glasses",
+			"name": "Black Glasses",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-glasses.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Dark moves by 20%."
+		},
+		{
+			"id": "black-belt",
+			"name": "Black Belt",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-belt.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Fighting moves by 20%."
+		},
+		{
+			"id": "magnet",
+			"name": "Magnet",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magnet.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Electric moves by 20%."
+		},
+		{
+			"id": "mystic-water",
+			"name": "Mystic Water",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mystic-water.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Water moves by 20%."
+		},
+		{
+			"id": "sharp-beak",
+			"name": "Sharp Beak",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sharp-beak.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Flying moves by 20%."
+		},
+		{
+			"id": "poison-barb",
+			"name": "Poison Barb",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poison-barb.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Poison moves by 20%."
+		},
+		{
+			"id": "never-melt-ice",
+			"name": "Never-Melt Ice",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/never-melt-ice.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Ice moves by 20%."
+		},
+		{
+			"id": "spell-tag",
+			"name": "Spell Tag",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/spell-tag.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Ghost moves by 20%."
+		},
+		{
+			"id": "twisted-spoon",
+			"name": "Twisted Spoon",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/twisted-spoon.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Psychic moves by 20%."
+		},
+		{
+			"id": "charcoal",
+			"name": "Charcoal",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charcoal.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Fire moves by 20%."
+		},
+		{
+			"id": "dragon-fang",
+			"name": "Dragon Fang",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-fang.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Dragon moves by 20%."
+		},
+		{
+			"id": "silk-scarf",
+			"name": "Silk Scarf",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silk-scarf.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Normal moves by 20%."
+		},
+		{
+			"id": "up-grade",
+			"name": "Upgrade",
+			"type": "evolution",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/up-grade.png"
+			},
+			"_ingameEffect": "Held by Porygon: Evolves the holder into Porygon2 when traded."
+		},
+		{
+			"id": "shell-bell",
+			"name": "Shell Bell",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shell-bell.png"
+			},
+			"_ingameEffect": "Held: Heals the holder by 1/8 of any damage it inflicts."
+		},
+		{
+			"id": "sea-incense",
+			"name": "Sea Incense",
+			"type": "held item",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sea-incense.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Water moves by 20%."
+		},
+		{
+			"id": "lax-incense",
+			"name": "Lax Incense",
+			"type": "held item",
+			"cost": 5000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lax-incense.png"
+			},
+			"_ingameEffect": "Held: Increases the holder's Evasion by 5%."
+		},
+		{
+			"id": "wide-lens",
+			"name": "Wide Lens",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wide-lens.png"
+			},
+			"_ingameEffect": "Held: Increases the accuracy of any move the holder uses by 10% (multiplied; i.e. 70% accuracy is increased to 77%)."
+		},
+		{
+			"id": "muscle-band",
+			"name": "Muscle Band",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's physical moves by 10%."
+		},
+		{
+			"id": "wise-glasses",
+			"name": "Wise Glasses",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wise-glasses.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's special moves by 10%."
+		},
+		{
+			"id": "expert-belt",
+			"name": "Expert Belt",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png"
+			},
+			"_ingameEffect": "Held: When the holder hits with a super-effective move, its power is raised by 20%."
+		},
+		{
+			"id": "light-clay",
+			"name": "Light Clay",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/light-clay.png"
+			},
+			"_ingameEffect": "Held: The holder's Reflect and Light Screen will create effects lasting for eight turns rather than five.  As this item affects the move rather than the barrier itself, the effect is not lost if the holder leaves battle or drops this item."
+		},
+		{
+			"id": "life-orb",
+			"name": "Life Orb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png"
+			},
+			"_ingameEffect": "Held: Damage from the holder's moves is increased by 30%.  On each turn the holder uses a damage-inflicting move, it takes 10% its max HP in damage."
+		},
+		{
+			"id": "power-herb",
+			"name": "Power Herb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-herb.png"
+			},
+			"_ingameEffect": "Held: Whenever the holder uses a move that requires a turn to charge first (Bounce, Dig, Dive, Fly, Razor Wind, Skull Bash, Sky Attack, or Solarbeam), this item is consumed and the charge is skipped.  Skull Bash still provides a Defense boost."
+		},
+		{
+			"id": "toxic-orb",
+			"name": "Toxic Orb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-orb.png"
+			},
+			"_ingameEffect": "Held: Badly poisons the holder at the end of each turn."
+		},
+		{
+			"id": "flame-orb",
+			"name": "Flame Orb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-orb.png"
+			},
+			"_ingameEffect": "Held: Burns the holder at the end of each turn."
+		},
+		{
+			"id": "focus-sash",
+			"name": "Focus Sash",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png"
+			},
+			"_ingameEffect": "Held: If the holder has full HP and is attacked for regular damage that would faint it, this item is consumed and prevents the holder's HP from lowering below 1.  This effect works against multi-hit attacks, but does not work against the effects of Doom Desire or Future Sight."
+		},
+		{
+			"id": "zoom-lens",
+			"name": "Zoom Lens",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zoom-lens.png"
+			},
+			"_ingameEffect": "Held: Raises the holder's Accuracy by 20% when it goes last.\nIngame description is incorrect."
+		},
+		{
+			"id": "metronome",
+			"name": "Metronome",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metronome.png"
+			},
+			"_ingameEffect": "Held: Each time the holder uses the same move consecutively, its power is increased by another 10% of its original, to a maximum of 100%."
+		},
+		{
+			"id": "iron-ball",
+			"name": "Iron Ball",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron-ball.png"
+			},
+			"_ingameEffect": "Held: Decreases the holder's Speed by 50%.  If the holder is Flying or has Levitate, it takes regular damage from Ground attacks and is suspectible to Spikes and Toxic Spikes."
+		},
+		{
+			"id": "lagging-tail",
+			"name": "Lagging Tail",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lagging-tail.png"
+			},
+			"_ingameEffect": "Held: The holder will go last within its move's priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
+		},
+		{
+			"id": "destiny-knot",
+			"name": "Destiny Knot",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/destiny-knot.png"
+			},
+			"_ingameEffect": "Held: When the holder becomes Attracted, the Pokémon it is Attracted to becomes Attracted back."
+		},
+		{
+			"id": "black-sludge",
+			"name": "Black Sludge",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-sludge.png"
+			},
+			"_ingameEffect": "Held: If the holder is Poison-type, restores 1/16 max HP at the end of each turn.  Otherwise, damages the holder by 1/16 its max HP at the end of each turn."
+		},
+		{
+			"id": "icy-rock",
+			"name": "Icy Rock",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/icy-rock.png"
+			},
+			"_ingameEffect": "Held: The holder's Hail will create a hailstorm lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
+		},
+		{
+			"id": "smooth-rock",
+			"name": "Smooth Rock",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smooth-rock.png"
+			},
+			"_ingameEffect": "Held: The holder's Sandstorm will create a sandstorm lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
+		},
+		{
+			"id": "heat-rock",
+			"name": "Heat Rock",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heat-rock.png"
+			},
+			"_ingameEffect": "Held: The holder's Sunny Day will create sunshine lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
+		},
+		{
+			"id": "damp-rock",
+			"name": "Damp Rock",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/damp-rock.png"
+			},
+			"_ingameEffect": "Held: The holder's Rain Dance will create rain lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
+		},
+		{
+			"id": "grip-claw",
+			"name": "Grip Claw",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grip-claw.png"
+			},
+			"_ingameEffect": "Held: Increases the duration of the holder's multiturn (2-5 turn) moves by three turns."
+		},
+		{
+			"id": "choice-scarf",
+			"name": "Choice Scarf",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-scarf.png"
+			},
+			"_ingameEffect": "Held: Increases the holder's Speed by 50%, but restricts it to the first move it uses until it leaves battle or loses this item.  If this item is swapped for another Choice item via Trick or Switcheroo, the holder's restriction is still lifted, but it will again be restricted to the next move it uses.\n(Quirk: If the holder is switched in by U-Turn and it also knows U-Turn, U-Turn becomes its restricted move.)"
+		},
+		{
+			"id": "sticky-barb",
+			"name": "Sticky Barb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sticky-barb.png"
+			},
+			"_ingameEffect": "Held: Damaged the holder for 1/8 its max HP.  When the holder is struck by a contact move, damages the attacker for 1/8 its max HP; if the attacker is not holding an item, it will take this item."
+		},
+		{
+			"id": "shed-shell",
+			"name": "Shed Shell",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shed-shell.png"
+			},
+			"_ingameEffect": "Held: The holder is unaffected by any moves or abilities that would prevent it from actively leaving battle."
+		},
+		{
+			"id": "big-root",
+			"name": "Big Root",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-root.png"
+			},
+			"_ingameEffect": "Held: HP restored from Absorb, Aqua Ring, Drain Punch, Dream Eater, Giga Drain, Ingrain, Leech Life, Leech Seed, and Mega Drain is increased by 30%.  Damage inflicted is not affected."
+		},
+		{
+			"id": "choice-specs",
+			"name": "Choice Specs",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-specs.png"
+			},
+			"_ingameEffect": "Held: Increases the holder's Special Attack by 50%, but restricts it to the first move it uses until it leaves battle or loses this item.  If this item is swapped for another Choice item via Trick or Switcheroo, the holder's restriction is still lifted, but it will again be restricted to the next move it uses.\n(Quirk: If the holder is switched in by U-Turn and it also knows U-Turn, U-Turn becomes its restricted move.)"
+		},
+		{
+			"id": "odd-incense",
+			"name": "Odd Incense",
+			"type": "held item",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/odd-incense.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Psychic moves by 20%."
+		},
+		{
+			"id": "rock-incense",
+			"name": "Rock Incense",
+			"type": "held item",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rock-incense.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Rock moves by 20%."
+		},
+		{
+			"id": "full-incense",
+			"name": "Full Incense",
+			"type": "held item",
+			"cost": 5000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-incense.png"
+			},
+			"_ingameEffect": "Held: The holder will go last within its move's priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
+		},
+		{
+			"id": "wave-incense",
+			"name": "Wave Incense",
+			"type": "held item",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wave-incense.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Water moves by 20%."
+		},
+		{
+			"id": "rose-incense",
+			"name": "Rose Incense",
+			"type": "held item",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rose-incense.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Grass moves by 20%."
+		},
+		{
+			"id": "protector",
+			"name": "Protector",
+			"type": "evolution",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protector.png"
+			},
+			"_ingameEffect": "Held by Rhydon: Evolves the holder into Rhyperior when traded."
+		},
+		{
+			"id": "electirizer",
+			"name": "Electirizer",
+			"type": "evolution",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electirizer.png"
+			},
+			"_ingameEffect": "Held by Electabuzz: Evolves the holder into Electivire when traded."
+		},
+		{
+			"id": "magmarizer",
+			"name": "Magmarizer",
+			"type": "evolution",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magmarizer.png"
+			},
+			"_ingameEffect": "Held by Magmar: Evolves the holder into Magmortar when traded."
+		},
+		{
+			"id": "dubious-disc",
+			"name": "Dubious Disc",
+			"type": "evolution",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dubious-disc.png"
+			},
+			"_ingameEffect": "Held by Porygon2: Evolves the holder into Porygon-Z when traded."
+		},
+		{
+			"id": "reaper-cloth",
+			"name": "Reaper Cloth",
+			"type": "evolution",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/reaper-cloth.png"
+			},
+			"_ingameEffect": "Held by Dusclops: Evolves the holder into Dusknoir when traded."
+		},
+		{
+			"id": "razor-claw",
+			"name": "Razor Claw",
+			"type": "held item",
+			"cost": 5000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-claw.png"
+			},
+			"_ingameEffect": "Held: Raises the holder's critical hit counter by 1.\nHeld by Sneasel: Evolves the holder into Weavile when it levels up during the night."
+		},
+		{
+			"id": "razor-fang",
+			"name": "Razor Fang",
+			"type": "held item",
+			"cost": 5000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-fang.png"
+			},
+			"_ingameEffect": "Held: When the holder attacks with most damaging moves, provides an extra 11.7% (30/256) chance for the target to flinch.\nHeld by Gligar: Evolves the holder into Gliscor when it levels up."
+		},
+		{
+			"id": "park-ball",
+			"name": "Park Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/park-ball.png"
+			},
+			"_ingameEffect": "Used by a trainer in battle\n:   Catches a wild Pokémon.\n\nThis item can only be used in pal park."
+		},
+		{
+			"id": "sport-ball",
+			"name": "Sport Ball",
+			"type": "pokeball",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sport-ball.png"
+			},
+			"_ingameEffect": "Used by a trainer in battle\n:   Attempts to catch a wild Pokémon.\n\n    The wild Pokémon's catch rate is 1.5× normal."
+		},
+		{
+			"id": "sweet-heart",
+			"name": "Sweet Heart",
+			"type": "medicine",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sweet-heart.png"
+			},
+			"_ingameEffect": "Used on a friendly Pokémon\n:   Restores 20 HP."
+		},
+		{
+			"id": "prism-scale",
+			"name": "Prism Scale",
+			"type": "evolution",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/prism-scale.png"
+			},
+			"_ingameEffect": "Held by feebas\n:   Holder evolves into milotic when traded."
+		},
+		{
+			"id": "eviolite",
+			"name": "Eviolite",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/eviolite.png"
+			},
+			"_ingameEffect": "Held by a Pokémon that is not fully evolved\n:   Holder has 1.5× Defense and Special Defense."
+		},
+		{
+			"id": "float-stone",
+			"name": "Float Stone",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/float-stone.png"
+			},
+			"_ingameEffect": "Held\n:   Holder has 0.5× weight."
+		},
+		{
+			"id": "rocky-helmet",
+			"name": "Rocky Helmet",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rocky-helmet.png"
+			},
+			"_ingameEffect": "Held\n:   When the holder is hit by a contact move, the attacking Pokémon takes 1/6 its max HP in damage."
+		},
+		{
+			"id": "air-balloon",
+			"name": "Air Balloon",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/air-balloon.png"
+			},
+			"_ingameEffect": "Held\n:   Holder is immune to ground-type moves, spikes, toxic spikes, and arena trap.\n\n    This effect does not apply during gravity or ingrain.\n\n    When the holder takes damage from a move, this item is consumed."
+		},
+		{
+			"id": "red-card",
+			"name": "Red Card",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-card.png"
+			},
+			"_ingameEffect": "Held\n:   When the holder takes damage directly from a move and does not faint, it switches out for another random, non-fainted Pokémon in its party.\nThis effect does not activate if another effect prevents the holder from switching out."
+		},
+		{
+			"id": "ring-target",
+			"name": "Ring Target",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ring-target.png"
+			},
+			"_ingameEffect": "Held\n:   When one of the user's types would render it immune to damage, that type is ignored for damage calculation."
+		},
+		{
+			"id": "binding-band",
+			"name": "Binding Band",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/binding-band.png"
+			},
+			"_ingameEffect": "Held\n:   Moves used by the holder that trap and damage a target for multiple turns (e.g. bind, fire spin) inflict twice their usual per-turn damage."
+		},
+		{
+			"id": "absorb-bulb",
+			"name": "Absorb Bulb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/absorb-bulb.png"
+			},
+			"_ingameEffect": "Held\n:   When the holder takes water-type damage from a move, its Special Attack rises by one stage and this item is consumed."
+		},
+		{
+			"id": "cell-battery",
+			"name": "Cell Battery",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cell-battery.png"
+			},
+			"_ingameEffect": "Held\n:   When the holder takes electric-type damage from a move, its Attack rises by one stage and this item is consumed."
+		},
+		{
+			"id": "eject-button",
+			"name": "Eject Button",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/eject-button.png"
+			},
+			"_ingameEffect": "Held\n:   When the holder takes damage directly from a move and does not faint, it switches out for another non-fainted Pokémon in its party, as chosen by the Trainer.\nThis effect does not activate if another effect prevents the holder from switching out."
+		},
+		{
+			"id": "health-wing",
+			"name": "Health Feather",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/health-wing.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's HP effort by 1."
+		},
+		{
+			"id": "muscle-wing",
+			"name": "Muscle Feather",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-wing.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Attack effort by 1."
+		},
+		{
+			"id": "resist-wing",
+			"name": "Resist Feather",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/resist-wing.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Defense effort by 1."
+		},
+		{
+			"id": "genius-wing",
+			"name": "Genius Feather",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/genius-wing.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Special Attack effort by 1."
+		},
+		{
+			"id": "clever-wing",
+			"name": "Clever Feather",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/clever-wing.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Special Defense effort by 1."
+		},
+		{
+			"id": "swift-wing",
+			"name": "Swift Feather",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/swift-wing.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Speed effort by 1."
+		},
+		{
+			"id": "pass-orb",
+			"name": "Pass Orb",
+			"type": "held item",
+			"cost": 200,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pass-orb.png"
+			},
+			"_ingameEffect": "Acts as currency to activate Pass Powers in the Entralink."
+		},
+		{
+			"id": "dream-ball",
+			"name": "Dream Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dream-ball.png"
+			},
+			"_ingameEffect": "Can only be used in Entree Forest, to catch Pokémon encountered in the Dream World.\n\nUsed in battle\n:   Catches a wild Pokémon without fail."
+		},
+		{
+			"id": "casteliacone",
+			"name": "Casteliacone",
+			"type": "medicine",
+			"cost": 350,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/casteliacone.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Cures any status ailment and confusion."
+		},
+		{
+			"id": "weakness-policy",
+			"name": "Weakness Policy",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/weakness-policy.png"
+			},
+			"_ingameEffect": "Held: When the holder is hit by a super effective move, its Attack and Special Attack raise by two stages."
+		},
+		{
+			"id": "assault-vest",
+			"name": "Assault Vest",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/assault-vest.png"
+			},
+			"_ingameEffect": "Raises the holder's Special Defense to 1.5×.  Prevents the holder from selecting a status move."
+		},
+		{
+			"id": "ability-capsule",
+			"name": "Ability Capsule",
+			"type": "medicine",
+			"cost": 10000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ability-capsule.png"
+			},
+			"_ingameEffect": "Switches a Pokémon between its two possible (non-Hidden) Abilities."
+		},
+		{
+			"id": "whipped-dream",
+			"name": "Whipped Dream",
+			"type": "evolution",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/whipped-dream.png"
+			},
+			"_ingameEffect": "Traded on a Swirlix: Holder evolves into Slurpuff."
+		},
+		{
+			"id": "sachet",
+			"name": "Sachet",
+			"type": "evolution",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sachet.png"
+			},
+			"_ingameEffect": "Traded on a Spritzee: Holder evolves into Aromatisse."
+		},
+		{
+			"id": "luminous-moss",
+			"name": "Luminous Moss",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/luminous-moss.png"
+			},
+			"_ingameEffect": "Held: If the holder is hit by a damaging Water move, it consumes this item and raises its Special Defense by one stage."
+		},
+		{
+			"id": "snowball",
+			"name": "Snowball",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/snowball.png"
+			},
+			"_ingameEffect": "Held: If the holder is hit by a damaging Ice move, raises its Attack by one stage."
+		},
+		{
+			"id": "safety-goggles",
+			"name": "Safety Goggles",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/safety-goggles.png"
+			},
+			"_ingameEffect": "Held: Prevents damage from powder moves and the damage from Hail and Sandstorm."
+		},
+		{
+			"id": "roseli-berry",
+			"name": "Roseli Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/roseli-berry.png"
+			},
+			"_ingameEffect": "Held: Consumed when struck by a super-effective Fairy-type attack to halve the damage."
+		},
+		{
+			"id": "lumiose-galette",
+			"name": "Lumiose Galette",
+			"type": "medicine",
+			"cost": 350,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lumiose-galette.png"
+			},
+			"_ingameEffect": "Cures all major status ailments and confusion."
+		},
+		{
+			"id": "shalour-sable",
+			"name": "Shalour Sable",
+			"type": "medicine",
+			"cost": 350,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shalour-sable.png"
+			},
+			"_ingameEffect": "Cures any major status ailment and confusion."
+		},
+		{
+			"id": "adrenaline-orb",
+			"name": "Adrenaline Orb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/adrenaline-orb.png"
+			},
+			"_ingameEffect": "Makes wild Pokémon more likely to summon allies.  Held: increases the holder's Speed by one stage when affected by Intimidate."
+		},
+		{
+			"id": "ice-stone",
+			"name": "Ice Stone",
+			"type": "evolution",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-stone.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Evolves an Alola sandshrew into Alola sandslash or an Alola vulpix into Alola ninetales."
+		},
+		{
+			"id": "beast-ball",
+			"name": "Beast Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/beast-ball.png"
+			},
+			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  If the wild Pokémon is an Ultra Beast, this ball has a catch rate of 5×.  Otherwise, it has a catch rate of 0.1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+		},
+		{
+			"id": "big-malasada",
+			"name": "Big Malasada",
+			"type": "medicine",
+			"cost": 350,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-malasada.png"
+			},
+			"_ingameEffect": "Cures major status ailments and confusion."
+		},
+		{
+			"id": "terrain-extender",
+			"name": "Terrain Extender",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/terrain-extender.png"
+			},
+			"_ingameEffect": "Held: When the holder changes the Terrain (whether by move or ability), it will last  8 turns instead of 5."
+		},
+		{
+			"id": "protective-pads",
+			"name": "Protective Pads",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protective-pads.png"
+			},
+			"_ingameEffect": "Held: Prevents side effects of contact moves used on the holder."
+		},
+		{
+			"id": "electric-seed",
+			"name": "Electric Seed",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electric-seed.png"
+			},
+			"_ingameEffect": "Held: If the holder enters battle during Electric Terrain, or if Electric Terrain is activated while the holder is in battle, this item is consumed and the holder's Defense raises by one stage."
+		},
+		{
+			"id": "psychic-seed",
+			"name": "Psychic Seed",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/psychic-seed.png"
+			},
+			"_ingameEffect": "Held: If the holder enters battle during Psychic Terrain, or if Psychic Terrain is activated while the holder is in battle, this item is consumed and the holder's Special Defense raises by one stage."
+		},
+		{
+			"id": "misty-seed",
+			"name": "Misty Seed",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/misty-seed.png"
+			},
+			"_ingameEffect": "Held: If the holder enters battle during Misty Terrain, or if Misty Terrain is activated while the holder is in battle, this item is consumed and the holder's Special Defense raises by one stage."
+		},
+		{
+			"id": "grassy-seed",
+			"name": "Grassy Seed",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grassy-seed.png"
+			},
+			"_ingameEffect": "Held: If the holder enters battle during Grassy Terrain, or if Grassy Terrain is activated while the holder is in battle, this item is consumed and the holder's Defense raises by one stage."
+		},
+		{
+			"id": "pewter-crunchies",
+			"name": "Pewter Crunchies",
+			"type": "medicine",
+			"cost": 250,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "health-candy",
+			"name": "Health Candy",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "mighty-candy",
+			"name": "Mighty Candy",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "tough-candy",
+			"name": "Tough Candy",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "smart-candy",
+			"name": "Smart Candy",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "courage-candy",
+			"name": "Courage Candy",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "quick-candy",
+			"name": "Quick Candy",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "health-candy-l",
+			"name": "Health Candy L",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "mighty-candy-l",
+			"name": "Mighty Candy L",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "tough-candy-l",
+			"name": "Tough Candy L",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "smart-candy-l",
+			"name": "Smart Candy L",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "courage-candy-l",
+			"name": "Courage Candy L",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "quick-candy-l",
+			"name": "Quick Candy L",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "health-candy-xl",
+			"name": "Health Candy XL",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "mighty-candy-xl",
+			"name": "Mighty Candy XL",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "tough-candy-xl",
+			"name": "Tough Candy XL",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "smart-candy-xl",
+			"name": "Smart Candy XL",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "courage-candy-xl",
+			"name": "Courage Candy XL",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "quick-candy-xl",
+			"name": "Quick Candy XL",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "strawberry-sweet",
+			"name": "Strawberry Sweet",
+			"type": "evolution",
+			"cost": 500,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "love-sweet",
+			"name": "Love Sweet",
+			"type": "evolution",
+			"cost": 500,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "berry-sweet",
+			"name": "Berry Sweet",
+			"type": "evolution",
+			"cost": 500,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "clover-sweet",
+			"name": "Clover Sweet",
+			"type": "evolution",
+			"cost": 500,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "flower-sweet",
+			"name": "Flower Sweet",
+			"type": "evolution",
+			"cost": 500,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "star-sweet",
+			"name": "Star Sweet",
+			"type": "evolution",
+			"cost": 500,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "ribbon-sweet",
+			"name": "Ribbon Sweet",
+			"type": "evolution",
+			"cost": 500,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "sweet-apple",
+			"name": "Sweet Apple",
+			"type": "evolution",
+			"cost": 2200,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "tart-apple",
+			"name": "Tart Apple",
+			"type": "evolution",
+			"cost": 2200,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "throat-spray",
+			"name": "Throat Spray",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "eject-pack",
+			"name": "Eject Pack",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "heavy-duty-boots",
+			"name": "Heavy-Duty Boots",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "blunder-policy",
+			"name": "Blunder Policy",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "room-service",
+			"name": "Room Service",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "utility-umbrella",
+			"name": "Utility Umbrella",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "exp-candy-xs",
+			"name": "Exp. Candy XS",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "exp-candy-s",
+			"name": "Exp. Candy S",
+			"type": "medicine",
+			"cost": 240,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "exp-candy-m",
+			"name": "Exp. Candy M",
+			"type": "medicine",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "exp-candy-l",
+			"name": "Exp. Candy L",
+			"type": "medicine",
+			"cost": 3000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "exp-candy-xl",
+			"name": "Exp. Candy XL",
+			"type": "medicine",
+			"cost": 10000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "dynamax-candy",
+			"name": "Dynamax Candy",
+			"type": "medicine",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "cracked-pot",
+			"name": "Cracked Pot",
+			"type": "evolution",
+			"cost": 1600,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "chipped-pot",
+			"name": "Chipped Pot",
+			"type": "evolution",
+			"cost": 38000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "max-honey",
+			"name": "Max Honey",
+			"type": "medicine",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "max-mushrooms",
+			"name": "Max Mushrooms",
+			"type": "medicine",
+			"cost": 6000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "ability-patch",
+			"name": "Ability Patch",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "malicious-armor",
+			"name": "Malicious Armor",
+			"type": "evolution",
+			"cost": 750,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "booster-energy",
+			"name": "Booster Energy",
+			"type": "held item",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "ability-shield",
+			"name": "Ability Shield",
+			"type": "held item",
+			"cost": 20000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "clear-amulet",
+			"name": "Clear Amulet",
+			"type": "held item",
+			"cost": 30000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "mirror-herb",
+			"name": "Mirror Herb",
+			"type": "held item",
+			"cost": 30000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "punching-glove",
+			"name": "Punching Glove",
+			"type": "held item",
+			"cost": 15000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "covert-cloak",
+			"name": "Covert Cloak",
+			"type": "held item",
+			"cost": 20000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "loaded-dice",
+			"name": "Loaded Dice",
+			"type": "held item",
+			"cost": 20000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "fairy-feather",
+			"name": "Fairy Feather",
+			"type": "held item",
+			"cost": 750,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "wellspring-mask",
+			"name": "Wellspring Mask",
+			"type": "held item",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "hearthflame-mask",
+			"name": "Hearthflame Mask",
+			"type": "held item",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "cornerstone-mask",
+			"name": "Cornerstone Mask",
+			"type": "held item",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "syrupy-apple",
+			"name": "Syrupy Apple",
+			"type": "evolution",
+			"cost": 500,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "unremarkable-teacup",
+			"name": "Unremarlable Teacup",
+			"type": "evolution",
+			"cost": 400,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "masterpiece-teacup",
+			"name": "Masterpiece Teacup",
+			"type": "evolution",
+			"cost": 9500,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "health-mochi",
+			"name": "Health Mochi",
+			"type": "medicine",
+			"cost": 125,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "muscle-mochi",
+			"name": "Muscle Mochi",
+			"type": "medicine",
+			"cost": 125,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "resist-mochi",
+			"name": "Resist Mochi",
+			"type": "medicine",
+			"cost": 125,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "genius-mochi",
+			"name": "Genius Mochi",
+			"type": "medicine",
+			"cost": 125,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "clever-mochi",
+			"name": "Clever Mochi",
+			"type": "medicine",
+			"cost": 125,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "swift-mochi",
+			"name": "Swift Mochi",
+			"type": "medicine",
+			"cost": 125,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "fresh-start-mochi",
+			"name": "Fresh Start Mochi",
+			"type": "medicine",
+			"cost": 75,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "linking-cord",
+			"name": "Linking Cord",
+			"type": "evolution",
+			"cost": 8000,
+			"description": null,
+			"media": {
+				"sprite": null
+			},
+			"_ingameEffect": " The Linking Cord triggers the evolution of certain Pokémon (all of which can alternatively evolve when traded) upon use. This consumes the Linking Cord."
+		},
+		{
+			"id": "lastrange-ball",
+			"name": "Strange Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lastrange-ball.png"
+			}
+		},
+		{
+			"id": "lapoke-ball",
+			"name": "Poké Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lapoke-ball.png"
+			}
+		},
+		{
+			"id": "lagreat-ball",
+			"name": "Great Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lagreat-ball.png"
+			}
+		},
+		{
+			"id": "laultra-ball",
+			"name": "Ultra Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/laultra-ball.png"
+			}
+		},
+		{
+			"id": "laheavy-ball",
+			"name": "Heavy Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/laheavy-ball.png"
+			}
+		},
+		{
+			"id": "laleaden-ball",
+			"name": "Leaden Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/laleaden-ball.png"
+			}
+		},
+		{
+			"id": "lagigaton-ball",
+			"name": "Gigaton Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lagigaton-ball.png"
+			}
+		},
+		{
+			"id": "lafeather-ball",
+			"name": "Feather Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lafeather-ball.png"
+			}
+		},
+		{
+			"id": "lawing-ball",
+			"name": "Wing Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lawing-ball.png"
+			}
+		},
+		{
+			"id": "lajet-ball",
+			"name": "Jet Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lajet-ball.png"
+			}
+		},
+		{
+			"id": "laorigin-ball",
+			"name": "Origin Ball",
+			"type": "pokeball",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/laorigin-ball.png"
+			}
+		},
+		{
+			"id": "black-augurite",
+			"type": "evolution",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "peat-block",
+			"type": "evolution",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "arceus-plate",
+			"name": "Arceus Plate",
+			"type": "held item",
+			"cost": null,
+			"description": [
+				"Changes the typing of Arceus and the move Judgement. Comes in 18 varieties, one for each pokémon type."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "megalite-stone",
+			"name": "Megalite Stone",
+			"type": "held item",
+			"cost": null,
+			"description": [
+				"Allows the Pokémon holding this to Mega Evolve. Has one charge, and recovers its charge at dawn each day."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "z-crystal",
+			"name": "Z-Crystal",
+			"type": "held item",
+			"cost": null,
+			"description": [
+				"Allows the Pokémon holding this to use a Z-Move. Has one charge, and recovers its charge at dawn each day."
+			],
+			"media": {
+				"sprite": null
+			}
 		}
 	]
 }

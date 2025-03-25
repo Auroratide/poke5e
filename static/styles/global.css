@@ -93,7 +93,9 @@
 
 	--skin-pokeball-bg: hsl(355 66% 45%);
 	--skin-medicine-bg: hsl(249, 50%, 57%);
-	--skin-berry-bg: hsl(176, 60%, 32%);
+	--skin-berry-bg: hsl(205 50% 35%);
+	--skin-held-item-bg: hsl(176, 60%, 32%);
+	--skin-evolution-bg: hsl(77, 50%, 36%);
 
     --skin-bar-bg: hsl(330, 1%, 38%);
     --skin-bar-healthy: hsl(119, 100%, 52%);
