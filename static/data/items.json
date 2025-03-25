@@ -1,49 +1,120 @@
 {
-  "items": [
-    {
-      "id": "potion",
-      "name": "Potion",
-      "category": "medicine",
-      "price": 200,
-      "description": [
-        "Restores 2d4 + 2 HP."
-      ]
-    },
-    {
-      "id": "super-potion",
-      "name": "Super Potion",
-      "category": "medicine",
-      "price": 500,
-      "description": [
-        "Restores 3d6 + 6 HP."
-      ]
-    },
-    {
-      "id": "hyper-potion",
-      "name": "Hyper Potion",
-      "category": "medicine",
-      "price": 800,
-      "description": [
-        "Restores 4d12 + 10 HP."
-      ]
-    },
-    {
-      "id": "pokeball",
-      "name": "Pokeball",
-      "category": "pokeball",
-      "price": 250,
-      "description": [
-        "+0 to Capture Rolls."
-      ]
-    },
-    {
-      "id": "great-ball",
-      "name": "Great Ball",
-      "category": "pokeball",
-      "price": 500,
-      "description": [
-        "+5 to Capture Rolls."
-      ]
-    }
-  ]
+	"items": [
+		{
+			"id": "cheri-berry",
+			"name": "Cheri Berry",
+			"type": "berry",
+			"holdable": true,
+			"cost": 200,
+			"description": [
+				"Consume to cure paralysis. Can be consumed as a reaction to becoming paralyzed."
+			]
+		},
+		{
+			"id": "chesto-berry",
+			"name": "Chesto Berry",
+			"type": "berry",
+			"holdable": true,
+			"cost": 200,
+			"description": [
+				"Consume to cure asleep condition. Can be consumed as a reaction to becoming asleep."
+			]
+		},
+		{
+			"id": "pecha-berry",
+			"name": "Pecha Berry",
+			"type": "berry",
+			"holdable": true,
+			"cost": 200,
+			"description": [
+				"Consume to cure poison. Can be consumed as a reaction to becoming poisoned or badly poisoned."
+			]
+		},
+		{
+			"id": "rawst-berry",
+			"name": "Rawst Berry",
+			"type": "berry",
+			"holdable": true,
+			"cost": 200,
+			"description": [
+				"Consume to cure burn. Can be consumed as a reaction to becoming burned."
+			]
+		},
+		{
+			"id": "aspear-berry",
+			"name": "Aspear Berry",
+			"type": "berry",
+			"holdable": true,
+			"cost": 200,
+			"description": [
+				"Consume to cure freeze. Can be consumed as a reaction to becoming frozen."
+			]
+		},
+		{
+			"id": "leppa-berry",
+			"name": "Leppa Berry",
+			"type": "berry",
+			"holdable": true,
+			"cost": 500,
+			"description": [
+				"Consume to restore 10 PP to a single move. Can be consumed as a reaction to a move reaching 0 PP."
+			]
+		},
+		{
+			"id": "oran-berry",
+			"name": "Oran Berry",
+			"type": "berry",
+			"holdable": true,
+			"cost": 200,
+			"description": [
+				"Consume to restore 2d4+2 HP. Can be consumed as a reaction ????????????????."
+			]
+		},
+
+		{
+			"id": "potion",
+			"name": "Potion",
+			"type": "medicine",
+			"cost": 200,
+			"description": [
+				"Restores 2d4 + 2 HP."
+			]
+		},
+		{
+			"id": "super-potion",
+			"name": "Super Potion",
+			"type": "medicine",
+			"cost": 500,
+			"description": [
+				"Restores 3d6 + 6 HP."
+			]
+		},
+		{
+			"id": "hyper-potion",
+			"name": "Hyper Potion",
+			"type": "medicine",
+			"cost": 800,
+			"description": [
+				"Restores 4d12 + 10 HP."
+			]
+		},
+		{
+			"id": "pokeball",
+			"name": "Pokeball",
+			"type": "pokeball",
+			"cost": 250,
+			"description": [
+				"+0 to Capture Rolls."
+			]
+		},
+		{
+			"id": "great-ball",
+			"name": "Great Ball",
+			"type": "pokeball",
+			"cost": 500,
+			"description": [
+				"+5 to Capture Rolls."
+			]
+		}
+	]
 }
