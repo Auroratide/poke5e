@@ -1,5 +1,6 @@
 <script lang="ts">
 	export let hasImage: boolean = false
+	export let size = "clamp(8rem, 12.66vw, 9.5rem)"
 </script>
 
 <section class="info column lg:row">
@@ -7,7 +8,7 @@
 		<slot></slot>
 	</div>
 	{#if hasImage}
-		<div style:--size="clamp(8rem, 12.66vw, 9.5rem)" class="square-image">
+		<div style:--size="{size}" class="square-image">
 			<slot name="art"></slot>
 		</div>
 	{/if}
@@ -35,6 +36,6 @@
 	.square-image {
 		width: var(--size);
 		height: var(--size);
-		padding: 0.5rem 0 0.5rem 1rem;
+		padding: 0 0 0.5rem 1rem;
 	}
 </style>

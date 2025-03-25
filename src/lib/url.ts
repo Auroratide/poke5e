@@ -2,6 +2,7 @@ import { base } from "$app/paths"
 
 export const Url = {
 	home: () => `${base}/`,
+	items: (id?: string) => `${base}/items${id ? `/${id}` : ""}`,
 	pokemon: (id?: string) => `${base}/pokemon${id ? `/${id}` : ""}`,
 	moves: (id?: string) => `${base}/moves${id ? `/${id}` : ""}`,
 	tms: (id?: string) => `${base}/tms${id ? `/${id}` : ""}`,
