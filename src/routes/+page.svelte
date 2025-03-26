@@ -2,6 +2,7 @@
 	import Pokeball from "$lib/design/icon/Pokeball.svelte"
 	import Hit from "$lib/design/icon/Hit.svelte"
 	import Disc from "$lib/design/icon/Disc.svelte"
+	import Backpack from "$lib/design/icon/Backpack.svelte"
 	import Title from "$lib/design/Title.svelte"
 	import IdBadge from "$lib/design/icon/IdBadge.svelte"
 	import PencilNotes from "$lib/design/icon/PencilNotes.svelte"
@@ -27,6 +28,10 @@
 		<li class="theme-purple">
 			<a href="{Url.tms()}">TMs</a>
 			<span class="icon"><Disc /></span>
+		</li>
+		<li class="theme-yellow">
+			<a href="{Url.items()}">Items</a>
+			<span class="icon"><Backpack /></span>
 		</li>
 		<li class="theme-green">
 			<a href="{Url.trainers()}">Trainers</a>
