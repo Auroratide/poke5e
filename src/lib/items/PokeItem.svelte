@@ -7,6 +7,9 @@
 	import { Url } from "$lib/url"
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 	import ItemSprite from "./ItemSprite.svelte"
+	import { pokemon } from "$lib/creatures/store"
+	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
+	import { hasEvolutionRequirement } from "$lib/pokemon/evolution"
 
 	export let item: Item
 </script>
@@ -25,6 +28,13 @@
 		{@html renderHtml(item.description)}
 		{#if item.type === "pokeball"}
 			<p>See: <a href="{Url.reference.catchingPokemon()}">Catching Pokémon</a></p>
+		{/if}
+		{#if item.type === "evolution"}
+			<p>Pokemon that evolve using this item:</p>
+			<SimplePokemonList pokemon={$pokemon?.filter(hasEvolutionRequirement({
+				type: "item",
+				value: item.name,
+			})) ?? []} />
 		{/if}
 	</section>
 </Card>

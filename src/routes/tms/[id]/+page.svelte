@@ -3,7 +3,7 @@
 	import type { Move } from "$lib/moves/types"
 	import PokeMove from "$lib/moves/PokeMove.svelte"
 	import Title from "$lib/design/Title.svelte"
-	import TeachablePokemon from "$lib/moves/TeachablePokemon.svelte"
+	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 
 	export let data: PageData
 	$: tm = data.tm
@@ -13,6 +13,7 @@
 <Title value={move.name} />
 <PokeMove move={move}>
 	<section slot="extra">
-		<TeachablePokemon pokemon={tm.pokemon} />
+		<h2>Can teach this to:</h2>
+		<SimplePokemonList pokemon={tm.pokemon} />
 	</section>
 </PokeMove>

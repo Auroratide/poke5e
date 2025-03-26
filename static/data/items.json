@@ -28,7 +28,7 @@
 			"id": "ultra-ball",
 			"name": "Ultra Ball",
 			"type": "pokeball",
-			"cost": 800,
+			"cost": 1200,
 			"description": [
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 10."
 			],
@@ -52,408 +52,541 @@
 			"id": "safari-ball",
 			"name": "Safari Ball",
 			"type": "pokeball",
-			"cost": null,
-			"description": null,
+			"cost": 800,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Nature skill modifier."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/safari-ball.png"
-			},
-			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon, using a catch rate of 1.5×.\n\nThis item can only be used in the great marsh or kanto safari zone."
+			}
+		},
+		{
+			"id": "fast-ball",
+			"name": "Fast Ball",
+			"type": "pokeball",
+			"cost": 600,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Can throw as a reaction to a fleeing Pokémon."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fast-ball.png"
+			}
+		},
+		{
+			"id": "level-ball",
+			"name": "Level Ball",
+			"type": "pokeball",
+			"cost": 600,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 5 if your trainer level is higher than the target Pokémon's level."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/level-ball.png"
+			}
+		},
+		{
+			"id": "lure-ball",
+			"name": "Lure Ball",
+			"type": "pokeball",
+			"cost": 1000,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 if used while fishing."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lure-ball.png"
+			}
+		},
+		{
+			"id": "heavy-ball",
+			"name": "Heavy Ball",
+			"type": "pokeball",
+			"cost": 1000,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 if the target Pokémon is size medium or larger."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heavy-ball.png"
+			}
+		},
+		{
+			"id": "love-ball",
+			"name": "Love Ball",
+			"type": "pokeball",
+			"cost": 800,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by twice your active Pokémon's Charisma modifier."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/love-ball.png"
+			}
+		},
+		{
+			"id": "friend-ball",
+			"name": "Friend Ball",
+			"type": "pokeball",
+			"cost": 800,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Persuasion skill modifier."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/friend-ball.png"
+			}
+		},
+		{
+			"id": "moon-ball",
+			"name": "Moon Ball",
+			"type": "pokeball",
+			"cost": 1000,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against Pokémon that can evolve using a Moon Stone."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moon-ball.png"
+			}
+		},
+		{
+			"id": "sport-ball",
+			"name": "Sport Ball",
+			"type": "pokeball",
+			"cost": 800,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Athletics skill modifier."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sport-ball.png"
+			}
 		},
 		{
 			"id": "net-ball",
 			"name": "Net Ball",
 			"type": "pokeball",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against Water- or Bug-type Pokémon."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/net-ball.png"
-			},
-			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  If the wild Pokémon is water- or bug-type, this ball has a catch rate of 3×.  Otherwise, it has a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+			}
 		},
 		{
 			"id": "dive-ball",
 			"name": "Dive Ball",
 			"type": "pokeball",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 while underwater."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dive-ball.png"
-			},
-			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  If the wild Pokémon was encountered by surfing or fishing, this ball has a catch rate of 3.5×.  Otherwise, it has a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+			}
 		},
 		{
 			"id": "nest-ball",
 			"name": "Nest Ball",
 			"type": "pokeball",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 5 if target Pokémon is level 5 or lower."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nest-ball.png"
-			},
-			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  Has a catch rate of given by `(40 - level) / 10`, where `level` is the wild Pokémon's level, to a maximum of 3.9× for level 1 Pokémon.  If the wild Pokémon's level is higher than 30, this ball has a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+			}
 		},
 		{
 			"id": "repeat-ball",
 			"name": "Repeat Ball",
 			"type": "pokeball",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against a species you have already caught before."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/repeat-ball.png"
-			},
-			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  If the wild Pokémon's species is marked as caught in the trainer's Pokédex, this ball has a catch rate of 3×.  Otherwise, it has a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+			}
 		},
 		{
 			"id": "timer-ball",
 			"name": "Timer Ball",
 			"type": "pokeball",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. When you use the Throw Pokéball action, you may instead hold the ball and start concentrating. At a later round, when you throw the ball, reduce the capture DC by 1 for each turn spent concentrating, to a max of 10."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/timer-ball.png"
-			},
-			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  Has a catch rate of 1.1× on the first turn of the battle and increases by 0.1× every turn, to a maximum of 4× on turn 30.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+			}
 		},
 		{
 			"id": "luxury-ball",
 			"name": "Luxury Ball",
 			"type": "pokeball",
 			"cost": 3000,
-			"description": null,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Pokémon residing in a Luxury Ball gain +1 to their max hit dice."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/luxury-ball.png"
-			},
-			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon, using a catch rate of 1×.  Whenever the caught Pokémon's happiness increases, it increases by one extra point.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+			}
 		},
 		{
 			"id": "premier-ball",
 			"name": "Premier Ball",
 			"type": "pokeball",
-			"cost": 20,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Rare, and often considered a token of class."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/premier-ball.png"
-			},
-			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon, using a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+			}
 		},
 		{
 			"id": "dusk-ball",
 			"name": "Dusk Ball",
 			"type": "pokeball",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 while at night or in darkness."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-ball.png"
-			},
-			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon.  If it's currently nighttime or the wild Pokémon was encountered while walking in a cave, this ball has a catch rate of 3.5×.  Otherwise, it has a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+			}
 		},
 		{
 			"id": "heal-ball",
 			"name": "Heal Ball",
 			"type": "pokeball",
-			"cost": 300,
-			"description": null,
+			"cost": 3000,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. When the Pokémon in the Heal Ball spends a hit die during a short rest, it may roll twice and take the higher result."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-ball.png"
-			},
-			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon, using a catch rate of 1×.  The caught Pokémon's HP is immediately restored, PP for all its moves is restored, and any status ailment is cured.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+			}
 		},
 		{
 			"id": "quick-ball",
 			"name": "Quick Ball",
 			"type": "pokeball",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 8 if used during the first round of combat."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-ball.png"
-			},
-			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon, using a catch rate of 4× on the first turn of a battle, but 1× any other time.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+			}
 		},
 		{
-			"id": "cherish-ball",
-			"name": "Cherish Ball",
+			"id": "dream-ball",
+			"name": "Dream Ball",
 			"type": "pokeball",
-			"cost": null,
-			"description": null,
+			"cost": 500,
+			"description": [
+				"Reduce the capture DC by 5 if used on a Pokémon affected by the Sleep condition."
+			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cherish-ball.png"
-			},
-			"_ingameEffect": "Used in battle\n:   Attempts to catch a wild Pokémon, using a catch rate of 1×.\n\n    If used in a trainer battle, nothing happens and the ball is lost."
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dream-ball.png"
+			}
 		},
 		{
 			"id": "potion",
 			"name": "Potion",
 			"type": "medicine",
 			"cost": 200,
-			"description": null,
+			"description": [
+				"A trainer may use an action to restore 2d4 + 2 HP to an adjacent Pokémon. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/potion.png"
-			},
-			"_ingameEffect": "Used on a friendly Pokémon\n:   Restores 20 HP."
-		},
-		{
-			"id": "antidote",
-			"name": "Antidote",
-			"type": "medicine",
-			"cost": 200,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/antidote.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Cures poison."
-		},
-		{
-			"id": "burn-heal",
-			"name": "Burn Heal",
-			"type": "medicine",
-			"cost": 200,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/burn-heal.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Cures a burn."
-		},
-		{
-			"id": "ice-heal",
-			"name": "Ice Heal",
-			"type": "medicine",
-			"cost": 200,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-heal.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Cures freezing."
-		},
-		{
-			"id": "awakening",
-			"name": "Awakening",
-			"type": "medicine",
-			"cost": 200,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/awakening.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Cures sleep."
-		},
-		{
-			"id": "paralyze-heal",
-			"name": "Paralyze Heal",
-			"type": "medicine",
-			"cost": 200,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/paralyze-heal.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Cures paralysis."
-		},
-		{
-			"id": "full-restore",
-			"name": "Full Restore",
-			"type": "medicine",
-			"cost": 3000,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-restore.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores HP to full and cures any status ailment and confusion."
-		},
-		{
-			"id": "max-potion",
-			"name": "Max Potion",
-			"type": "medicine",
-			"cost": 2500,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-potion.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores HP to full."
-		},
-		{
-			"id": "hyper-potion",
-			"name": "Hyper Potion",
-			"type": "medicine",
-			"cost": 1500,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hyper-potion.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores 200 HP."
+			}
 		},
 		{
 			"id": "super-potion",
 			"name": "Super Potion",
 			"type": "medicine",
 			"cost": 700,
-			"description": null,
+			"description": [
+				"A trainer may use an action to restore 3d6 + 6 HP to an adjacent Pokémon. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-potion.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores 50 HP."
+			}
+		},
+		{
+			"id": "hyper-potion",
+			"name": "Hyper Potion",
+			"type": "medicine",
+			"cost": 1500,
+			"description": [
+				"A trainer may use an action to restore 4d12 + 10 HP to an adjacent Pokémon. Consumed on use."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hyper-potion.png"
+			}
+		},
+		{
+			"id": "antidote",
+			"name": "Antidote",
+			"type": "medicine",
+			"cost": 200,
+			"description": [
+				"A trainer may use an action to cure an adjacent Pokémon of the Poisoned or Badly Poisoned conditions. Consumed on use."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/antidote.png"
+			}
+		},
+		{
+			"id": "burn-heal",
+			"name": "Burn Heal",
+			"type": "medicine",
+			"cost": 200,
+			"description": [
+				"A trainer may use an action to cure an adjacent Pokémon of the Burned condition. Consumed on use."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/burn-heal.png"
+			}
+		},
+		{
+			"id": "ice-heal",
+			"name": "Ice Heal",
+			"type": "medicine",
+			"cost": 200,
+			"description": [
+				"A trainer may use an action to cure an adjacent Pokémon of the Frozen condition. Consumed on use."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-heal.png"
+			}
+		},
+		{
+			"id": "awakening",
+			"name": "Awakening",
+			"type": "medicine",
+			"cost": 200,
+			"description": [
+				"A trainer may use an action to cure an adjacent Pokémon of the Asleep condition. Consumed on use."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/awakening.png"
+			}
+		},
+		{
+			"id": "paralyze-heal",
+			"name": "Paralyze Heal",
+			"type": "medicine",
+			"cost": 200,
+			"description": [
+				"A trainer may use an action to cure an adjacent Pokémon of the Paralysis condition. Consumed on use."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/paralyze-heal.png"
+			}
+		},
+		{
+			"id": "max-potion",
+			"name": "Max Potion",
+			"type": "medicine",
+			"cost": 2500,
+			"description": [
+				"A trainer may use an action to administor this medicine to an adjacent Pokémon. 10 minutes after consumption, the Pokémon regains 70 HP. Consumed on use."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-potion.png"
+			}
 		},
 		{
 			"id": "full-heal",
 			"name": "Full Heal",
 			"type": "medicine",
 			"cost": 400,
-			"description": null,
+			"description": [
+				"A trainer may use an action to administor this medicine to an adjacent Pokémon. 10 minutes after consumption, the Pokémon is cured of all status conditions. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-heal.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Cures any status ailment and confusion."
+			}
+		},
+		{
+			"id": "full-restore",
+			"name": "Full Restore",
+			"type": "medicine",
+			"cost": 3000,
+			"description": [
+				"A trainer may use an action to administor this medicine to an adjacent Pokémon. 10 minutes after consumption, the Pokémon regains 70 HP and is cured of all status conditions. Consumed on use."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-restore.png"
+			}
 		},
 		{
 			"id": "revive",
 			"name": "Revive",
 			"type": "medicine",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"A trainer may use an action to restore 2d4 + 2 HP to a fainted Pokémon in a Pokéball. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revive.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Revives the Pokémon and restores half its HP."
+			}
 		},
 		{
 			"id": "max-revive",
 			"name": "Max Revive",
 			"type": "medicine",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"A trainer may use an action to restore 4d12 + 10 HP to a fainted Pokémon in a Pokéball. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-revive.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Revives the Pokémon and restores its HP to full."
+			}
 		},
 		{
 			"id": "fresh-water",
 			"name": "Fresh Water",
 			"type": "medicine",
 			"cost": 200,
-			"description": null,
+			"description": [
+				"When consumed, restores 7 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fresh-water.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores 50 HP."
+			}
 		},
 		{
 			"id": "soda-pop",
 			"name": "Soda Pop",
 			"type": "medicine",
-			"cost": 300,
-			"description": null,
+			"cost": 400,
+			"description": [
+				"When consumed, restores 15 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soda-pop.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores 60 HP."
+			}
 		},
 		{
 			"id": "lemonade",
 			"name": "Lemonade",
 			"type": "medicine",
-			"cost": 400,
-			"description": null,
+			"cost": 800,
+			"description": [
+				"When consumed, restores 30 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lemonade.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores 80 HP."
+			}
 		},
 		{
 			"id": "moomoo-milk",
 			"name": "Moomoo Milk",
 			"type": "medicine",
-			"cost": 600,
-			"description": null,
+			"cost": 1600,
+			"description": [
+				"When consumed, restores 50 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moomoo-milk.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores 100 HP."
+			}
 		},
 		{
 			"id": "energy-powder",
 			"name": "Energy Powder",
 			"type": "medicine",
 			"cost": 500,
-			"description": null,
+			"description": [
+				"A trainer may use an action to restore 3d6 + 6 HP to an adjacent Pokémon. Consumed on use. Most Pokémon dislike Energy Powder, so overuse may result in loss of bond."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-powder.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores 50 HP.  Decreases happiness by 5/5/10."
+			}
 		},
 		{
 			"id": "energy-root",
 			"name": "Energy Root",
 			"type": "medicine",
 			"cost": 1200,
-			"description": null,
+			"description": [
+				"A trainer may use an action to restore 4d12 + 10 HP to an adjacent Pokémon. Consumed on use. Most Pokémon dislike Energy Root, so overuse may result in loss of bond."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-root.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores 200 HP.  Decreases happiness by 10/10/15."
+			}
 		},
 		{
 			"id": "heal-powder",
 			"name": "Heal Powder",
 			"type": "medicine",
 			"cost": 300,
-			"description": null,
+			"description": [
+				"A trainer may use an action to cure an adjacent Pokémon of all status conditions. Consumed on use. Most Pokémon dislike Heal Powder, so overuse may result in loss of bond."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-powder.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Cures any status ailment.  Decreases happiness by 5/5/10."
+			}
 		},
 		{
 			"id": "revival-herb",
 			"name": "Revival Herb",
 			"type": "medicine",
 			"cost": 2800,
-			"description": null,
+			"description": [
+				"A trainer may use an action to restore 4d12 + 10 HP to a fainted Pokémon in a Pokéball. Consumed on use. Most Pokémon dislike Revival Herbs, so overuse may result in loss of bond."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revival-herb.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Revives a fainted Pokémon and restores its HP to full.  Decreases happiness by 10/10/15."
+			}
 		},
 		{
 			"id": "ether",
 			"name": "Ether",
 			"type": "medicine",
 			"cost": 1200,
-			"description": null,
+			"description": [
+				"A trainer may use an action to restore 5 PP to a single move of an adjacent Pokémon. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ether.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores 10 PP for a selected move."
+			}
 		},
 		{
 			"id": "max-ether",
 			"name": "Max Ether",
 			"type": "medicine",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"A trainer may use an action to restore 10 PP to a single moves of an adjacent Pokémon. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-ether.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores PP to full for a selected move."
+			}
 		},
 		{
 			"id": "elixir",
 			"name": "Elixir",
 			"type": "medicine",
 			"cost": 3000,
-			"description": null,
+			"description": [
+				"A trainer may use an action to restore 5 PP to all moves of an adjacent Pokémon. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/elixir.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores 10 PP for each move."
+			}
 		},
 		{
 			"id": "max-elixir",
 			"name": "Max Elixir",
 			"type": "medicine",
 			"cost": 4500,
-			"description": null,
+			"description": [
+				"A trainer may use an action to restore 10 PP to all moves of an adjacent Pokémon. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-elixir.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores PP to full for each move."
+			}
 		},
 		{
 			"id": "lava-cookie",
@@ -691,110 +824,120 @@
 			"name": "Sun Stone",
 			"type": "evolution",
 			"cost": 3000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this stone to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sun-stone.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Evolves a cottonee into whimsicott, a gloom into bellossom, a petilil into lilligant, or a sunkern into sunflora."
+			}
 		},
 		{
 			"id": "moon-stone",
 			"name": "Moon Stone",
 			"type": "evolution",
 			"cost": 3000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this stone to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moon-stone.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Evolves a clefairy into clefable, a jigglypuff into wigglytuff, a munna into musharna, a nidorina into nidoqueen, a nidorino into nidoking, or a skitty into delcatty."
+			}
 		},
 		{
 			"id": "fire-stone",
 			"name": "Fire Stone",
 			"type": "evolution",
 			"cost": 3000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this stone to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fire-stone.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Evolves an eevee into flareon, a growlithe into arcanine, a pansear into simisear, or a vulpix into ninetales."
+			}
 		},
 		{
 			"id": "thunder-stone",
 			"name": "Thunder Stone",
 			"type": "evolution",
 			"cost": 3000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this stone to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thunder-stone.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Evolves an eelektrik into eelektross, an eevee into jolteon, or a pikachu into raichu."
+			}
 		},
 		{
 			"id": "water-stone",
 			"name": "Water Stone",
 			"type": "evolution",
 			"cost": 3000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this stone to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/water-stone.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Evolves an eevee into vaporeon, a lombre into ludicolo, a panpour into simipour, a poliwhirl into poliwrath, a shellder into cloyster, or a staryu into starmie."
+			}
 		},
 		{
 			"id": "leaf-stone",
 			"name": "Leaf Stone",
 			"type": "evolution",
 			"cost": 3000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this stone to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leaf-stone.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Evolves an exeggcute into exeggutor, a gloom into vileplume, a nuzleaf into shiftry, a pansage into simisage, or a weepinbell into victreebel."
+			}
 		},
 		{
 			"id": "shiny-stone",
 			"name": "Shiny Stone",
 			"type": "evolution",
 			"cost": 3000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this stone to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shiny-stone.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Evolves a minccino into cinccino, a roselia into roserade, or a togetic into togekiss."
+			}
 		},
 		{
 			"id": "dusk-stone",
 			"name": "Dusk Stone",
 			"type": "evolution",
 			"cost": 3000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this stone to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-stone.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Evolves a lampent into chandelure, a misdreavus into mismagius, or a murkrow into honchkrow."
+			}
 		},
 		{
 			"id": "dawn-stone",
 			"name": "Dawn Stone",
 			"type": "evolution",
 			"cost": 3000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this stone to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dawn-stone.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Evolves a male kirlia into gallade or a female snorunt into froslass."
+			}
 		},
 		{
 			"id": "oval-stone",
 			"name": "Oval Stone",
 			"type": "evolution",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this stone to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oval-stone.png"
-			},
-			"_ingameEffect": "Held by happiny\n:   Holder evolves into chansey when it levels up during the daytime."
+			}
 		},
 		{
 			"id": "cheri-berry",
