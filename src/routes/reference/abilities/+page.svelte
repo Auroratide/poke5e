@@ -1,12 +1,12 @@
 <script lang="ts">
 	import Card from "$lib/design/Card.svelte"
 	import Title from "$lib/design/Title.svelte"
-	import { Url } from "$lib/url"
 	import { pokemonWithAbilities } from "$lib/pokemon/abilities"
 	import { pokemon } from "$lib/creatures/store"
 	import type { PageData } from "./$types"
 	import Filter from "./Filter.svelte"
 	import Loader from "$lib/design/Loader.svelte"
+	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 
 	export let data: PageData
 	$: abilities = data.abilities
@@ -31,11 +31,7 @@
 				<div class="ability" class:hide={!filteredAbilities.includes(ability)}>
 					<h3>{ability.name}</h3>
 					<p>{ability.description}</p>
-					<ul>
-						{#each (associatedPokemon[ability.id] ?? []) as pokemon}
-							<li><a href="{Url.pokemon(pokemon.id)}">{pokemon.name}</a></li>
-						{/each}
-					</ul>
+					<SimplePokemonList pokemon={associatedPokemon[ability.id] ?? []} />
 				</div>
 			{/each}
 		{:else}
@@ -47,12 +43,6 @@
 <style>
 	.ability {
 		margin-block: 2em;
-	}
-
-	.ability ul {
-		font-size: var(--font-sz-venus);
-		column-count: 3;
-		line-height: 1.25;
 	}
 
 	.hide { display: none; }
