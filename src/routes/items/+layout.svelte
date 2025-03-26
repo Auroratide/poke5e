@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/stores"
 	import Page from "$lib/design/Page.svelte"
-	import Hit from "$lib/design/icon/Hit.svelte"
+	import Backpack from "$lib/design/icon/Backpack.svelte"
 	import Loader from "$lib/design/Loader.svelte"
 	import { items } from "$lib/items/store"
 	import ItemList from "$lib/items/ItemList.svelte"
@@ -11,7 +11,7 @@
 </script>
 
 <Page theme="yellow">
-	<Hit slot="icon" />
+	<Backpack slot="icon" />
 	<nav slot="side" class="table" aria-label="Item List">
 		{#if itemsToRender !== undefined}
 			<ItemList items={itemsToRender} />

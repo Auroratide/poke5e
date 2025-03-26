@@ -28,6 +28,7 @@
 	import Disc from "$lib/design/icon/Disc.svelte"
 	import IdBadge from "$lib/design/icon/IdBadge.svelte"
 	import PencilNotes from "$lib/design/icon/PencilNotes.svelte"
+	import Backpack from "$lib/design/icon/Backpack.svelte"
 	
 	if (browser) {
 		import("@auroratide/toggle-switch/lib/define.js")
@@ -74,6 +75,11 @@
 				name: "TMs",
 				color: "purple",
 				icon: Disc,
+			}, {
+				id: "items",
+				name: "Items",
+				color: "yellow",
+				icon: Backpack,
 			}, {
 				id: "trainers",
 				name: "Trainers",
