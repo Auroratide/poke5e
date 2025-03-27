@@ -674,91 +674,100 @@
 		},
 		{
 			"id": "guard-spec",
-			"name": "Guard Spec.",
+			"name": "Guard Spec",
 			"type": "medicine",
 			"cost": 1500,
-			"description": null,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon cannot be affected by new status conditions."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/guard-spec.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon in battle\n:   Protects the target's stats from being lowered for the next five turns.  Increases happiness by 1/1/0."
+			}
 		},
 		{
 			"id": "dire-hit",
 			"name": "Dire Hit",
 			"type": "medicine",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon's critical hit range increases by one.",
+				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands crticial hit range, criticals can happen on natural 18, 19, or 20."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dire-hit.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon in battle\n:   Increases the target's critical hit chance by one stage until it leaves the field.  Increases happiness by 1/1/0."
+			}
 		},
 		{
 			"id": "x-attack",
 			"name": "X Attack",
 			"type": "medicine",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to their attack rolls."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-attack.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon in battle\n:   Raises the target's Attack by one stage.  Increases happiness by 1/1/0."
+			}
 		},
 		{
 			"id": "x-defense",
 			"name": "X Defense",
 			"type": "medicine",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to AC."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-defense.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon in battle\n:   Raises the target's Defense by one stage.  Increases happiness by 1/1/0."
+			}
 		},
 		{
 			"id": "x-speed",
 			"name": "X Speed",
 			"type": "medicine",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon's movement speed is increased by 10ft."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-speed.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon in battle\n:   Raises the target's Speed by one stage.  Increases happiness by 1/1/0."
+			}
 		},
 		{
 			"id": "x-accuracy",
 			"name": "X Accuracy",
 			"type": "medicine",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. The Pokémon gains advantage on its next three attack rolls."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-accuracy.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon in battle\n:   Raises the target's accuracy by one stage.  Increases happiness by 1/1/0."
+			}
 		},
 		{
 			"id": "x-sp-atk",
 			"name": "X Sp. Atk",
 			"type": "medicine",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to its Move DC."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-sp-atk.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon in battle\n:   Raises the target's Special Attack by one stage.  Increases happiness by 1/1/0."
+			}
 		},
 		{
 			"id": "x-sp-def",
 			"name": "X Sp. Def",
 			"type": "medicine",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to saving throws."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-sp-def.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon in battle\n:   Raises the target's Special Defense by one stage.  Increases happiness by 1/1/0."
+			}
 		},
 		{
 			"id": "sun-stone",
@@ -1243,11 +1252,12 @@
 			"name": "Quick Claw",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"The holder adds +3 to their initiative rolls."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-claw.png"
-			},
-			"_ingameEffect": "Held in battle\n:   Whenever the holder attempts to use a move, it has a 3/16 chance to act first among moves with the same priority.  If multiple Pokémon have this effect at the same time, Speed is the tie-breaker as normal, but the effect of trick room is ignored."
+			}
 		},
 		{
 			"id": "mental-herb",
@@ -1276,77 +1286,85 @@
 			"name": "King’s Rock",
 			"type": "held item",
 			"cost": 5000,
-			"description": null,
+			"description": [
+				"When a target is hit by a melee attack made by the holder, the target must make a CON save, flinching on failure. The DC is equal to 8 + half the holder's level."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png"
-			},
-			"_ingameEffect": "Held in battle\n:   Holder's damaging moves have a 10% chance to make their target flinch.  This chance applies independently to each hit of a multi-hit move.\n\n    This item's chance is rolled independently of any other move effects;\ne.g., a move with a 30% chance to flinch normally will have a 37% total chance to flinch when used with this item, because 3% of the time, both effects activate.\n\nHeld by poliwhirl or slowbro\n:   Holder evolves into politoed or slowking, respectively, when traded."
+			}
 		},
 		{
 			"id": "silver-powder",
 			"name": "Silver Powder",
 			"type": "held item",
 			"cost": 1000,
-			"description": null,
+			"description": [
+				"The holder adds its proficiency bonus to bug-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silver-powder.png"
-			},
-			"_ingameEffect": "Held in battle\n:   Holder's bug-type moves have 1.2× their power.\n"
+			}
 		},
 		{
 			"id": "smoke-ball",
 			"name": "Smoke Ball",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"Guarantees a success in an attempt to flee from wild Pokémon battles."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smoke-ball.png"
-			},
-			"_ingameEffect": "Held: In wild battles, attempts to run away on the holder's turn will always succeed."
+			}
 		},
 		{
 			"id": "focus-band",
 			"name": "Focus Band",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"When the holder would become flinched, roll a d20. On a 10 or higher, the holder does not flinch."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-band.png"
-			},
-			"_ingameEffect": "Held: If the holder is attacked for regular damage that would faint it, this item has a 10% chance to prevent the holder's HP from lowering below 1."
+			}
 		},
 		{
 			"id": "scope-lens",
 			"name": "Scope Lens",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"The holder's critical hit range increases by one.",
+				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands crticial hit range, criticals can happen on natural 18, 19, or 20."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/scope-lens.png"
-			},
-			"_ingameEffect": "Held: Raises the holder's critical hit counter by 1."
+			}
 		},
 		{
 			"id": "metal-coat",
 			"name": "Metal Coat",
 			"type": "held item",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"The holder adds its proficiency bonus to steel-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-coat.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Steel moves by 20%.\nHeld by Onix or Scyther: Evolves the holder into Steelix or Scizor when traded, respectively."
+			}
 		},
 		{
 			"id": "leftovers",
 			"name": "Leftovers",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"This item has 10 charges. The holder may use a bonus action to use a charge, healing HP equal to their proficiency bonus."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png"
-			},
-			"_ingameEffect": "Held: Heals the holder by 1/16 its max HP at the end of each turn."
+			}
 		},
 		{
 			"id": "dragon-scale",
@@ -1363,166 +1381,181 @@
 			"id": "soft-sand",
 			"name": "Soft Sand",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to ground-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soft-sand.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Ground moves by 20%."
+			}
 		},
 		{
 			"id": "hard-stone",
 			"name": "Hard Stone",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to rock-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hard-stone.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Rock moves by 20%."
+			}
 		},
 		{
 			"id": "miracle-seed",
 			"name": "Miracle Seed",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to grass-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/miracle-seed.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Grass moves by 20%."
+			}
 		},
 		{
 			"id": "black-glasses",
 			"name": "Black Glasses",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to dark-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-glasses.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Dark moves by 20%."
+			}
 		},
 		{
 			"id": "black-belt",
 			"name": "Black Belt",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to fighting-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-belt.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Fighting moves by 20%."
+			}
 		},
 		{
 			"id": "magnet",
 			"name": "Magnet",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to electric-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magnet.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Electric moves by 20%."
+			}
 		},
 		{
 			"id": "mystic-water",
 			"name": "Mystic Water",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to water-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mystic-water.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Water moves by 20%."
+			}
 		},
 		{
 			"id": "sharp-beak",
 			"name": "Sharp Beak",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to flying-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sharp-beak.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Flying moves by 20%."
+			}
 		},
 		{
 			"id": "poison-barb",
 			"name": "Poison Barb",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to poison-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poison-barb.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Poison moves by 20%."
+			}
 		},
 		{
 			"id": "never-melt-ice",
 			"name": "Never-Melt Ice",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to ice-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/never-melt-ice.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Ice moves by 20%."
+			}
 		},
 		{
 			"id": "spell-tag",
 			"name": "Spell Tag",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to ghost-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/spell-tag.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Ghost moves by 20%."
+			}
 		},
 		{
 			"id": "twisted-spoon",
 			"name": "Twisted Spoon",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to psychic-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/twisted-spoon.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Psychic moves by 20%."
+			}
 		},
 		{
 			"id": "charcoal",
 			"name": "Charcoal",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to fire-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charcoal.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Fire moves by 20%."
+			}
 		},
 		{
 			"id": "dragon-fang",
 			"name": "Dragon Fang",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to dragon-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-fang.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Dragon moves by 20%."
+			}
 		},
 		{
 			"id": "silk-scarf",
 			"name": "Silk Scarf",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 2000,
+			"description": [
+				"The holder adds its proficiency bonus to normal-type damage it deals (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silk-scarf.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Normal moves by 20%."
+			}
 		},
 		{
 			"id": "up-grade",
@@ -1540,11 +1573,12 @@
 			"name": "Shell Bell",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"When the holder uses a move that damages at least one creature, the holder restores HP equal to its proficiency bonus."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shell-bell.png"
-			},
-			"_ingameEffect": "Held: Heals the holder by 1/8 of any damage it inflicts."
+			}
 		},
 		{
 			"id": "sea-incense",
@@ -1573,33 +1607,36 @@
 			"name": "Wide Lens",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"The holder gains +1 to attack rolls."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wide-lens.png"
-			},
-			"_ingameEffect": "Held: Increases the accuracy of any move the holder uses by 10% (multiplied; i.e. 70% accuracy is increased to 77%)."
+			}
 		},
 		{
 			"id": "muscle-band",
 			"name": "Muscle Band",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"The holder adds its proficiency bonus to damage it deals from melee attacks (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's physical moves by 10%."
+			}
 		},
 		{
 			"id": "wise-glasses",
 			"name": "Wise Glasses",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"The holder adds its proficiency bonus to damage it deals from ranged attacks (once per move)."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wise-glasses.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's special moves by 10%."
+			}
 		},
 		{
 			"id": "expert-belt",
@@ -1628,11 +1665,12 @@
 			"name": "Life Orb",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"The holder adds its proficiency bonus to damage it deals, but takes the same amount of typeless-damage each time."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png"
-			},
-			"_ingameEffect": "Held: Damage from the holder's moves is increased by 30%.  On each turn the holder uses a damage-inflicting move, it takes 10% its max HP in damage."
+			}
 		},
 		{
 			"id": "power-herb",
@@ -1650,33 +1688,37 @@
 			"name": "Toxic Orb",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"At the end of the holder's turn, the holder becomes badly poisoned."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-orb.png"
-			},
-			"_ingameEffect": "Held: Badly poisons the holder at the end of each turn."
+			}
 		},
 		{
 			"id": "flame-orb",
 			"name": "Flame Orb",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"At the end of the holder's turn, the holder becomes burned."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-orb.png"
-			},
-			"_ingameEffect": "Held: Burns the holder at the end of each turn."
+			}
 		},
 		{
 			"id": "focus-sash",
 			"name": "Focus Sash",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"This item has 1 charge. If damage would bring the holder to below 1 HP, it instead brings the holder to 1 HP, consuming the charge.",
+				"The Focus Sash regains its charge at dawn each day."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png"
-			},
-			"_ingameEffect": "Held: If the holder has full HP and is attacked for regular damage that would faint it, this item is consumed and prevents the holder's HP from lowering below 1.  This effect works against multi-hit attacks, but does not work against the effects of Doom Desire or Future Sight."
+			}
 		},
 		{
 			"id": "zoom-lens",
