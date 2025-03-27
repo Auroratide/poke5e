@@ -589,147 +589,88 @@
 			}
 		},
 		{
-			"id": "lava-cookie",
-			"name": "Lava Cookie",
-			"type": "medicine",
-			"cost": 350,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lava-cookie.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Cures any status ailment and confusion."
-		},
-		{
-			"id": "berry-juice",
-			"name": "Berry Juice",
-			"type": "medicine",
-			"cost": 200,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berry-juice.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Restores 20 HP."
-		},
-		{
 			"id": "sacred-ash",
 			"name": "Sacred Ash",
 			"type": "medicine",
 			"cost": 50000,
-			"description": null,
+			"description": [
+				"A trainer may spend 5 minutes to revive up to six fainted Pokémon. Each Pokémon revived this way is restored to half their max HP."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sacred-ash.png"
-			},
-			"_ingameEffect": "Used\n:   Revives all fainted Pokémon in the party and restores their HP to full."
+			}
 		},
 		{
 			"id": "hp-up",
 			"name": "HP Up",
 			"type": "medicine",
-			"cost": 10000,
-			"description": null,
+			"cost": 1000,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's max HP is increased by 5. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hp-up.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases HP effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
+			}
 		},
 		{
 			"id": "protein",
 			"name": "Protein",
 			"type": "medicine",
-			"cost": 10000,
-			"description": null,
+			"cost": 1000,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's STR score is increased by 1. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protein.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases Attack effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
+			}
 		},
 		{
 			"id": "iron",
 			"name": "Iron",
 			"type": "medicine",
-			"cost": 10000,
-			"description": null,
+			"cost": 1000,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's CON score is increased by 1. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases Defense effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
+			}
 		},
 		{
 			"id": "carbos",
 			"name": "Carbos",
 			"type": "medicine",
-			"cost": 10000,
-			"description": null,
+			"cost": 1000,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's DEX score is increased by 1. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/carbos.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases Speed effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
+			}
 		},
 		{
 			"id": "calcium",
 			"name": "Calcium",
 			"type": "medicine",
-			"cost": 10000,
-			"description": null,
+			"cost": 1000,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's WIS score is increased by 1. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/calcium.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases Special Attack effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
-		},
-		{
-			"id": "rare-candy",
-			"name": "Rare Candy",
-			"type": "medicine",
-			"cost": 10000,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rare-candy.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases level by 1.  Increases happiness by 5/3/2."
-		},
-		{
-			"id": "pp-up",
-			"name": "PP Up",
-			"type": "medicine",
-			"cost": 10000,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pp-up.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases a selected move's max PP by 20% its original max PP, to a maximum of 1.6×.  Increases happiness by 5/3/2."
+			}
 		},
 		{
 			"id": "zinc",
 			"name": "Zinc",
 			"type": "medicine",
 			"cost": 10000,
-			"description": null,
+			"description": [
+				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's CHA score is increased by 1. Consumed on use."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zinc.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases Special Defense effort by 10, but won't increase it beyond 100.  Increases happiness by 5/3/2."
-		},
-		{
-			"id": "pp-max",
-			"name": "PP Max",
-			"type": "medicine",
-			"cost": 10000,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pp-max.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases a selected move's max PP to 1.6× its original max PP.  Increases happiness by 5/3/2."
-		},
-		{
-			"id": "old-gateau",
-			"name": "Old Gateau",
-			"type": "medicine",
-			"cost": 350,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-gateau.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Cures any status ailment and confusion."
+			}
 		},
 		{
 			"id": "guard-spec",
@@ -944,297 +885,336 @@
 			"name": "Cheri Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Consume to cure paralysis. Can be consumed as a reaction to becoming paralyzed."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cheri-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder is paralyzed, it consumes this item to cure the paralysis.\n\nUsed on a party Pokémon\n:   Cures paralysis."
+			}
 		},
 		{
 			"id": "chesto-berry",
 			"name": "Chesto Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Consume to cure sleep. Can be consumed as a reaction to becoming asleep."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder is asleep, it consumes this item to wake up.\n\nUsed on a party Pokémon\n:   Cures sleep."
+			}
 		},
 		{
 			"id": "pecha-berry",
 			"name": "Pecha Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Consume to cure poison. Can be consumed as a reaction to becoming poisoned or badly poisoned."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pecha-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder is poisoned, it consumes this item to cure the poison.\n\nUsed on a party Pokémon\n:   Cures poison."
+			}
 		},
 		{
 			"id": "rawst-berry",
 			"name": "Rawst Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Consume to cure burn. Can be consumed as a reaction to becoming burned."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rawst-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder is burned, it consumes this item to cure the burn.\n\nUsed on a party Pokémon\n:   Cures a burn."
+			}
 		},
 		{
 			"id": "aspear-berry",
 			"name": "Aspear Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Consume to cure freeze. Can be consumed as a reaction to becoming frozen."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/aspear-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder is frozen, it consumes this item to thaw itself.\n\nUsed on a party Pokémon\n:   Cures freezing."
+			}
 		},
 		{
 			"id": "leppa-berry",
 			"name": "Leppa Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Consume to restore 3 PP to a move. Can be consumed as a reaction to a move reaching 0 PP."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leppa-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder is out of PP for one of its moves, it consumes this item to restore 10 of that move's PP.\n\nUsed on a party Pokémon\n:   Restores 10 PP for a selected move."
+			}
 		},
 		{
 			"id": "oran-berry",
 			"name": "Oran Berry",
 			"type": "berry",
-			"cost": 80,
-			"description": null,
+			"cost": 200,
+			"description": [
+				"Consume to restore 2d4 + 2 HP. Can be consumed as a reaction to dropping below half health."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oran-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder has 1/2 its max HP remaining or less, it consumes this item to restore 10 HP.\n\nUsed on a party Pokémon\n:   Restores 10 HP."
+			}
 		},
 		{
 			"id": "persim-berry",
 			"name": "Persim Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Consume to cure confusion. Can be consumed as a reaction to becoming confused."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder is confused, it consumes this item to cure the confusion.\n\nUsed on a party Pokémon\n:   Cures confusion."
+			}
 		},
 		{
 			"id": "lum-berry",
 			"name": "Lum Berry",
 			"type": "berry",
-			"cost": 80,
-			"description": null,
+			"cost": 200,
+			"description": [
+				"Consume to cure any single status condition. Can be consumed as a reaction to becoming being afflicted with a status condition."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder is afflicted with a major status ailment, it consumes this item to cure the ailment.\n\nUsed on a party Pokémon\n:   Cures any major status ailment."
+			}
 		},
 		{
 			"id": "sitrus-berry",
 			"name": "Sitrus Berry",
 			"type": "berry",
-			"cost": 80,
-			"description": null,
+			"cost": 800,
+			"description": [
+				"Consume to restore 30 HP. Can be consumed as a reaction to dropping below half health."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder has 1/2 its max HP remaining or less, it consumes this item to restore 1/4 its max HP.\n\nUsed on a party Pokémon\n:   Restores 1/4 the Pokémon's max HP."
+			}
 		},
 		{
 			"id": "occa-berry",
 			"name": "Occa Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking fire-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective fire-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "passho-berry",
 			"name": "Passho Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking water-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/passho-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective water-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "wacan-berry",
 			"name": "Wacan Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking electric-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wacan-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective electric-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "rindo-berry",
 			"name": "Rindo Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking grass-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rindo-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective grass-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "yache-berry",
 			"name": "Yache Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking ice-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yache-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective ice-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "chople-berry",
 			"name": "Chople Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking fighting-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chople-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective fighting-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "kebia-berry",
 			"name": "Kebia Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking poison-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kebia-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective poison-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "shuca-berry",
 			"name": "Shuca Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking ground-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shuca-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective ground-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "coba-berry",
 			"name": "Coba Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking flying-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coba-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective flying-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "payapa-berry",
 			"name": "Payapa Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking psychic-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/payapa-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective psychic-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "tanga-berry",
 			"name": "Tanga Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking bug-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tanga-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective bug-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "charti-berry",
 			"name": "Charti Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking rock-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charti-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective rock-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "kasib-berry",
 			"name": "Kasib Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking ghost-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kasib-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective ghost-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "haban-berry",
 			"name": "Haban Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking dragon-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/haban-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective dragon-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "colbur-berry",
 			"name": "Colbur Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking dark-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/colbur-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective dark-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "babiri-berry",
 			"name": "Babiri Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking steel-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/babiri-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take super-effective steel-type damage, it consumes this item to halve the amount of damage taken."
+			}
 		},
 		{
 			"id": "chilan-berry",
 			"name": "Chilan Berry",
 			"type": "berry",
 			"cost": 80,
-			"description": null,
+			"description": [
+				"Can be consumed as a reaction to taking normal-type damage. You take half that damage instead."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chilan-berry.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder would take normal-type damage, it consumes this item to halve the amount of damage taken."
+			}
+		},
+		{
+			"id": "roseli-berry",
+			"name": "Roseli Berry",
+			"type": "berry",
+			"cost": 80,
+			"description": [
+				"Can be consumed as a reaction to taking fairy-type damage. You take half that damage instead."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/roseli-berry.png"
+			}
 		},
 		{
 			"id": "bright-powder",
@@ -2346,17 +2326,6 @@
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/safety-goggles.png"
 			},
 			"_ingameEffect": "Held: Prevents damage from powder moves and the damage from Hail and Sandstorm."
-		},
-		{
-			"id": "roseli-berry",
-			"name": "Roseli Berry",
-			"type": "berry",
-			"cost": 80,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/roseli-berry.png"
-			},
-			"_ingameEffect": "Held: Consumed when struck by a super-effective Fairy-type attack to halve the damage."
 		},
 		{
 			"id": "lumiose-galette",
