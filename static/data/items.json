@@ -878,6 +878,18 @@
 			}
 		},
 		{
+			"id": "ice-stone",
+			"name": "Ice Stone",
+			"type": "evolution",
+			"cost": 3000,
+			"description": [
+				"Some Pokémon may consume the power of this stone to evolve."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-stone.png"
+			}
+		},
+		{
 			"id": "oval-stone",
 			"name": "Oval Stone",
 			"type": "evolution",
@@ -1780,55 +1792,61 @@
 			"name": "Black Sludge",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"This item has 10 charges. If the holder is a poison-type Pokémon, they may use a bonus action to use a charge, healing HP equal to their proficiency bonus.",
+				"If the holder is not a poison-type Pokémon, they take 1d6 poison damage at the end of each of their turns."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-sludge.png"
-			},
-			"_ingameEffect": "Held: If the holder is Poison-type, restores 1/16 max HP at the end of each turn.  Otherwise, damages the holder by 1/16 its max HP at the end of each turn."
+			}
 		},
 		{
 			"id": "icy-rock",
 			"name": "Icy Rock",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"The holder increases the duration of their Hail and Snow effects by 3 rounds."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/icy-rock.png"
-			},
-			"_ingameEffect": "Held: The holder's Hail will create a hailstorm lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
+			}
 		},
 		{
 			"id": "smooth-rock",
 			"name": "Smooth Rock",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"The holder increases the duration of their Sandstorm effects by 3 rounds."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smooth-rock.png"
-			},
-			"_ingameEffect": "Held: The holder's Sandstorm will create a sandstorm lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
+			}
 		},
 		{
 			"id": "heat-rock",
 			"name": "Heat Rock",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"The holder increases the duration of their Harsh Sunlight effects by 3 rounds."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heat-rock.png"
-			},
-			"_ingameEffect": "Held: The holder's Sunny Day will create sunshine lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
+			}
 		},
 		{
 			"id": "damp-rock",
 			"name": "Damp Rock",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"The holder increases the duration of their Rain effects by 3 rounds."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/damp-rock.png"
-			},
-			"_ingameEffect": "Held: The holder's Rain Dance will create rain lasting for eight turns rather than five.  As this item affects the move rather than the weather itself, the effect is not lost if the holder leaves battle or drops this item."
+			}
 		},
 		{
 			"id": "grip-claw",
@@ -1879,11 +1897,12 @@
 			"name": "Big Root",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"Moves that simultaneously deal damage to a target and heal the holder restore an additional 1d12 HP to the holder."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-root.png"
-			},
-			"_ingameEffect": "Held: HP restored from Absorb, Aqua Ring, Drain Punch, Dream Eater, Giga Drain, Ingrain, Leech Life, Leech Seed, and Mega Drain is increased by 30%.  Damage inflicted is not affected."
+			}
 		},
 		{
 			"id": "choice-specs",
@@ -2010,12 +2029,14 @@
 			"id": "razor-claw",
 			"name": "Razor Claw",
 			"type": "held item",
-			"cost": 5000,
-			"description": null,
+			"cost": 4000,
+			"description": [
+				"The holder's critical hit range increases by one.",
+				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands crticial hit range, criticals can happen on natural 18, 19, or 20."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-claw.png"
-			},
-			"_ingameEffect": "Held: Raises the holder's critical hit counter by 1.\nHeld by Sneasel: Evolves the holder into Weavile when it levels up during the night."
+			}
 		},
 		{
 			"id": "razor-fang",
@@ -2027,28 +2048,6 @@
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-fang.png"
 			},
 			"_ingameEffect": "Held: When the holder attacks with most damaging moves, provides an extra 11.7% (30/256) chance for the target to flinch.\nHeld by Gligar: Evolves the holder into Gliscor when it levels up."
-		},
-		{
-			"id": "park-ball",
-			"name": "Park Ball",
-			"type": "pokeball",
-			"cost": null,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/park-ball.png"
-			},
-			"_ingameEffect": "Used by a trainer in battle\n:   Catches a wild Pokémon.\n\nThis item can only be used in pal park."
-		},
-		{
-			"id": "sport-ball",
-			"name": "Sport Ball",
-			"type": "pokeball",
-			"cost": 300,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sport-ball.png"
-			},
-			"_ingameEffect": "Used by a trainer in battle\n:   Attempts to catch a wild Pokémon.\n\n    The wild Pokémon's catch rate is 1.5× normal."
 		},
 		{
 			"id": "sweet-heart",
@@ -2076,12 +2075,13 @@
 			"id": "eviolite",
 			"name": "Eviolite",
 			"type": "held item",
-			"cost": 4000,
-			"description": null,
+			"cost": 5000,
+			"description": [
+				"The holder is prevented from evolving. If the Pokémon holding this is not a final evolutionary form, they take 3 less damage from all damage sources."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/eviolite.png"
-			},
-			"_ingameEffect": "Held by a Pokémon that is not fully evolved\n:   Holder has 1.5× Defense and Special Defense."
+			}
 		},
 		{
 			"id": "float-stone",
@@ -2110,11 +2110,13 @@
 			"name": "Air Balloon",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"The holder is immune to ground-type damage. When the holder takes damage, the item is popped and no longer confers its benefit.",
+				"The Air Balloon can be freely repaired during a short rest."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/air-balloon.png"
-			},
-			"_ingameEffect": "Held\n:   Holder is immune to ground-type moves, spikes, toxic spikes, and arena trap.\n\n    This effect does not apply during gravity or ingrain.\n\n    When the holder takes damage from a move, this item is consumed."
+			}
 		},
 		{
 			"id": "red-card",
@@ -2176,11 +2178,13 @@
 			"name": "Eject Button",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"This item has 1 charge. When the holder is damaged by an attack, its trainer may perform a single Switch as a free action, consuming the charge.",
+				"The Eject Button regains its charge at dawn each day."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/eject-button.png"
-			},
-			"_ingameEffect": "Held\n:   When the holder takes damage directly from a move and does not faint, it switches out for another non-fainted Pokémon in its party, as chosen by the Trainer.\nThis effect does not activate if another effect prevents the holder from switching out."
+			}
 		},
 		{
 			"id": "health-wing",
@@ -2296,12 +2300,13 @@
 			"id": "assault-vest",
 			"name": "Assault Vest",
 			"type": "held item",
-			"cost": 1000,
-			"description": null,
+			"cost": 4000,
+			"description": [
+				"The holder has +1 to their AC, but may only use damaging moves."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/assault-vest.png"
-			},
-			"_ingameEffect": "Raises the holder's Special Defense to 1.5×.  Prevents the holder from selecting a status move."
+			}
 		},
 		{
 			"id": "ability-capsule",
@@ -2401,17 +2406,6 @@
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/adrenaline-orb.png"
 			},
 			"_ingameEffect": "Makes wild Pokémon more likely to summon allies.  Held: increases the holder's Speed by one stage when affected by Intimidate."
-		},
-		{
-			"id": "ice-stone",
-			"name": "Ice Stone",
-			"type": "evolution",
-			"cost": 3000,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-stone.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Evolves an Alola sandshrew into Alola sandslash or an Alola vulpix into Alola ninetales."
 		},
 		{
 			"id": "beast-ball",
