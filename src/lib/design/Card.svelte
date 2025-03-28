@@ -76,7 +76,7 @@
 		padding-inline: 0;
 	}
 
-	article :global(section > p) {
+	article :global(section p) {
 		line-height: 1.4;
 	}
 
@@ -107,5 +107,9 @@
 		font-size: var(--font-sz-earth);
 		font-weight: bold;
 		margin-block-end: 0.5em;
+	}
+
+	article :global(.loader) {
+		--skin-local-color: var(--skin-content-text);
 	}
 </style>
