@@ -206,6 +206,90 @@ test("updating movesets", async () => {
 	})
 })
 
+test("updating held items", async () => {
+	const {
+		ret_id: trainerId,
+		ret_read_key: readKey,
+		ret_write_key: writeKey
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const pokemonId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+	})
+
+	const miracleSeedId = await call<string>("add_held_item", {
+		_write_key: writeKey,
+		_pokemon_id: pokemonId,
+		_item_id: "miracle-seed",
+		_custom_name: null,
+		_description: null,
+	})
+
+	const customItemId = await call<string>("add_held_item", {
+		_write_key: writeKey,
+		_pokemon_id: pokemonId,
+		_item_id: null,
+		_custom_name: "Lustergem",
+		_description: "Does something super cool."
+	})
+
+	// Update
+	await call("update_held_item", {
+		_write_key: writeKey,
+		_id: miracleSeedId,
+		_item_id: "lum-berry",
+		_custom_name: null,
+		_description: null,
+	})
+
+	await call("update_held_item", {
+		_write_key: writeKey,
+		_id: customItemId,
+		_item_id: null,
+		_custom_name: "Lustergem",
+		_description: "The holder may use Luster Purge once per day.",
+	})
+
+	// Assert
+	const sunnyItems = await callAll<any>("get_held_items", {
+		_pokemon_id: pokemonId,
+	})
+
+	const lumBerry = sunnyItems.find((it) => it.item_id === "lum-berry")
+	const customItem = sunnyItems.find((it) => it.custom_name === "Lustergem")
+	expect(lumBerry).not.toBeUndefined()
+	expect(customItem?.description).toEqual("The holder may use Luster Purge once per day.")
+
+	// Cleanup
+	await call("remove_held_item", {
+		_write_key: writeKey,
+		_id: miracleSeedId,
+	})
+	await call("remove_held_item", {
+		_write_key: writeKey,
+		_id: customItemId,
+	})
+	const noMoreItems = await callAll<any>("get_held_items", {
+		_pokemon_id: pokemonId,
+	})
+
+	expect(noMoreItems.length).toEqual(0)
+
+	await call("remove_pokemon", {
+		_write_key: writeKey,
+		_id: pokemonId,
+	})
+	await call("delete_trainer", {
+		_write_key: writeKey,
+		_id: trainerId,
+	})
+})
+
 test("no direct access allowed", async () => {
 	const UNAUTHORIZED_SCHEMA = "PGRST106"
 
@@ -223,6 +307,10 @@ test("no direct access allowed", async () => {
 
 	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
 		supabase.schema("private").from("moves").select()
+	)
+
+	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
+		supabase.schema("private").from("held_items").select()
 	)
 })
 
