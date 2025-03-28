@@ -11,14 +11,9 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
-		name: "v1.2.5",
-		description: [
-			"Added references: Abilities",
-		],
-	}, {
 		name: "v1.2.4",
 		description: [
-			"Bug fix: References on mobile is now scrollable.",
+			"Buf fix: References on mobile is now scrollable.",
 		],
 	}, {
 		name: "v1.2.3",
