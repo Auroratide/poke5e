@@ -14,6 +14,7 @@ export const versionHistory: VersionHistory = {
 		name: "v1.2.5",
 		description: [
 			"Added references: Abilities",
+			"New: Can give any pokémon any ability in the editor for full flexibility",
 		],
 	}, {
 		name: "v1.2.4",
