@@ -2923,7 +2923,7 @@
 				"Changes the typing of Arceus and the move Judgement. Comes in 18 varieties, one for each pokémon type."
 			],
 			"media": {
-				"sprite": null
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron-plate.png"
 			}
 		},
 		{
@@ -2935,7 +2935,7 @@
 				"Allows the Pokémon holding this to Mega Evolve. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": null
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charizardite-y.png"
 			}
 		},
 		{
@@ -2947,7 +2947,7 @@
 				"Allows the Pokémon holding this to use a Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": null
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tapunium-z--held.png"
 			}
 		}
 	]
