@@ -72,6 +72,83 @@ test("updating trainers", async () => {
 	})
 })
 
+test("updating trainer inventory", async () => {
+	const {
+		ret_id: trainerId,
+		ret_read_key: readKey,
+		ret_write_key: writeKey
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const potionId = await call<string>("add_inventory_item", {
+		_write_key: writeKey,
+		_item_id: "potion",
+		_quantity: 1,
+		_custom_name: null,
+		_description: null,
+	})
+
+	const customItemId = await call<string>("add_inventory_item", {
+		_write_key: writeKey,
+		_item_id: null,
+		_quantity: 1,
+		_custom_name: "Lustergem",
+		_description: "Does something super cool."
+	})
+
+	// Update
+	await call("update_inventory_item", {
+		_write_key: writeKey,
+		_id: potionId,
+		_item_id: "potion",
+		_quantity: 2,
+		_custom_name: null,
+		_description: null,
+	})
+
+	await call("update_inventory_item", {
+		_write_key: writeKey,
+		_id: customItemId,
+		_item_id: null,
+		_quantity: 1,
+		_custom_name: "Lustergem",
+		_description: "The holder may use Luster Purge once per day.",
+	})
+
+	// Assert
+	const irisItems = await callAll<any>("get_inventory_items", {
+		_read_key: readKey,
+	})
+
+	const potion = irisItems.find((it) => it.item_id === "potion")
+	const customItem = irisItems.find((it) => it.custom_name === "Lustergem")
+	expect(potion?.quantity).toEqual(2)
+	expect(customItem?.description).toEqual("The holder may use Luster Purge once per day.")
+
+	// Cleanup
+	await call("remove_inventory_item", {
+		_write_key: writeKey,
+		_id: potionId,
+	})
+	await call("remove_inventory_item", {
+		_write_key: writeKey,
+		_id: customItemId,
+	})
+	const noMoreItems = await callAll<any>("get_inventory_items", {
+		_read_key: readKey,
+	})
+
+	expect(noMoreItems.length).toEqual(0)
+
+	await call("delete_trainer", {
+		_write_key: writeKey,
+		_id: trainerId,
+	})
+})
+
 test("updating pokemon", async () => {
 	const {
 		ret_id: trainerId,
@@ -313,6 +390,10 @@ test("no direct access allowed", async () => {
 
 	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
 		supabase.schema("private").from("held_items").select()
+	)
+
+	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
+		supabase.schema("private").from("inventory_items").select()
 	)
 })
 

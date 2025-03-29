@@ -30,6 +30,7 @@ test("updating trainers", async () => {
 		_age: 22,
 		_home_region: "Unova",
 		_background: "Thief",
+		_money: 3000,
 	})
 
 	// Updating the avatar
@@ -57,6 +58,7 @@ test("updating trainers", async () => {
 	expect(irisInfo.home_region).toEqual("Unova")
 	expect(irisInfo.background).toEqual("Thief")
 	expect(irisInfo.avatar_filename).toEqual(avatarFilename)
+	expect(irisInfo.money).toEqual(3000)
 
 	// Cleanup
 	await call("delete_trainer", {
