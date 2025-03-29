@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { TrainerPokemon } from "../types"
 	import { items } from "$lib/items/store"
+	import { getHeldItemDetails } from "$lib/pokemon/held-items"
 
 	export let pokemon: TrainerPokemon
 </script>
@@ -9,12 +10,8 @@
 	<h3>Held Items</h3>
 	<ul>
 		{#each pokemon.items as item (item.id)}
-			{#if item.type === "standard"}
-				{@const standardItem = $items?.find((it) => it.id === item.itemId)}
-				<li class:imaged={standardItem?.media.sprite != null} style:--img="url('{standardItem?.media.sprite}')"><strong>{standardItem?.name}</strong>: {standardItem?.description}</li>
-			{:else}
-				<li><strong>{item.name}</strong>: {item.description}</li>
-			{/if}
+			{@const details = getHeldItemDetails(item, $items)}
+			<li class:imaged={details.media.sprite != null} style:--img="url('{details.media.sprite}')"><strong>{details.name}</strong>: {details.description}</li>
 		{/each}
 	</ul>
 {/if}

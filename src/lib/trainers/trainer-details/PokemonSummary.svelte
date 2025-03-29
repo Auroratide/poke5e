@@ -4,17 +4,28 @@
 	import ResourceBar from "$lib/design/ResourceBar.svelte"
 	import { Url } from "$lib/url"
 	import { pokemon as allPokemon } from "$lib/creatures/store"
+	import { items } from "$lib/items/store"
+	import { getHeldItemDetails } from "$lib/pokemon/held-items"
 	import PokemonSprite from "$lib/creatures/PokemonSprite.svelte"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
+	import ItemSprite from "$lib/items/ItemSprite.svelte"
 
 	export let trainer: ReadWriteKey
 	export let pokemon: TrainerPokemon
 
 	$: species = $allPokemon?.find((it) => it.id === pokemon.pokemonId)
+	$: heldItem = pokemon.items.length > 0 ? getHeldItemDetails(pokemon.items[0], $items) : undefined
 </script>
 
 <a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded">
-	<span style:grid-area="sprite" class="max-height"><PokemonSprite media={species?.media} alt={species?.name} shiny={pokemon.isShiny} /></span>
+	<span style:grid-area="sprite" class="max-height holding-item">
+		<PokemonSprite media={species?.media} alt={species?.name} shiny={pokemon.isShiny} />
+		{#if heldItem != null}
+			<span class="held-item">
+				<ItemSprite src="{heldItem.media.sprite}" alt="Holding {heldItem.name}" />
+			</span>
+		{/if}
+	</span>
 	<span style:grid-area="name">{pokemon.nickname}</span>
 	<span style:grid-area="gender" class="right away-from-edge flex"><GenderIcon gender={pokemon.gender} /></span>
 	<span style:grid-area="hpbar" class="away-from-edge"><ResourceBar current={pokemon.hp.current} max={pokemon.hp.max} /></span>
@@ -67,6 +78,18 @@
 	}
 
 	.smaller-text { font-size: var(--font-sz-venus); }
+
+	.holding-item {
+		position: relative;
+	}
+
+	.held-item {
+		display: inline-block;
+		position: absolute;
+		inset: auto 0 0 auto;
+		inline-size: 1.375em;
+		block-size: 1.375em;
+	}
 
 	/* Literally cannot work with the scrollbar */
 	/* .selectable-bubble:hover::before,
