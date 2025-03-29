@@ -18,8 +18,9 @@
 </script>
 
 <a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded">
-	<span style:grid-area="sprite" class="max-height holding-item">
+	<span style:grid-area="sprite" class="max-height holding-item jumping-animation">
 		<PokemonSprite media={species?.media} alt={species?.name} shiny={pokemon.isShiny} />
+		<span class="shadow"></span>
 		{#if heldItem != null}
 			<span class="held-item">
 				<ItemSprite src="{heldItem.media.sprite}" alt="Holding {heldItem.name}" />
@@ -89,6 +90,40 @@
 		inset: auto 0 0 auto;
 		inline-size: 1.375em;
 		block-size: 1.375em;
+		z-index: 3;
+	}
+
+	.shadow {
+		display: block;
+		position: absolute;
+		inset: auto 0.5em 0.25em 0.5em;
+		block-size: 1em;
+		background: oklch(0% 0 0 / 0.2);
+		border-radius: 100%;
+		z-index: 1;
+	}
+
+	.jumping-animation > :global(img) {
+		position: relative;
+		z-index: 2;
+	}
+
+	a:hover .jumping-animation > :global(img),
+	a:focus .jumping-animation > :global(img) {
+		animation: jump 0.75s infinite;
+	}
+
+	@keyframes jump {
+		0% { inset-block-start: 0; }
+		15% { inset-block-start: -0.5em; }
+		30% { inset-block-start: 0; }
+		100% { inset-block-start: 0; }
+	}
+
+	@media (prefers-reduced-motion) {
+		.jumping-animation > :global(img) {
+			animation: none !important;
+		}
 	}
 
 	/* Literally cannot work with the scrollbar */
