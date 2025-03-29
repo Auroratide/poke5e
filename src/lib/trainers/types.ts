@@ -25,6 +25,19 @@ export type LearnedMove = {
 	notes?: string,
 }
 
+export type StandardHeldItem = {
+	type: "standard",
+	itemId: string,
+}
+
+export type CustomHeldItem = {
+	type: "custom",
+	name: string,
+	description: string,
+}
+
+export type HeldItem = { id: string } & (StandardHeldItem | CustomHeldItem)
+
 export type PokemonId = string
 export type TrainerPokemon = {
 	id: PokemonId,
@@ -43,6 +56,7 @@ export type TrainerPokemon = {
 	proficiencies: Skill[],
 	savingThrows: Attribute[],
 	moves: LearnedMove[],
+	items: HeldItem[],
 	notes: string,
 	teraType: TeraPokeType | "",
 	status: NonVolatileStatus | null,

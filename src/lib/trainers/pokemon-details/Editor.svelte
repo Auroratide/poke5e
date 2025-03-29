@@ -23,6 +23,7 @@
 	import GeneralTextarea from "../form/GeneralTextarea.svelte"
 	import TeraTypeInput from "./TeraTypeInput.svelte"
 	import ToggleSwitchInput from "../form/ToggleSwitchInput.svelte"
+	import HeldItemsFieldset from "../form/HeldItemsFieldset.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -49,6 +50,7 @@
 	let isShiny = pokemon.isShiny
 
 	let moves = structuredClone(pokemon.moves)
+	let items = structuredClone(pokemon.items)
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -78,6 +80,7 @@
 			proficiencies,
 			savingThrows,
 			moves,
+			items,
 			notes,
 		} as TrainerPokemon)
 	}
@@ -103,6 +106,7 @@
 		<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 		<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
 		<PokeMovesFieldset bind:values={moves} {species} {disabled} />
+		<HeldItemsFieldset bind:values={items} {disabled} />
 		<Fieldset title="General">
 			<GeneralTextarea name="notes" label="Notes" bind:value={notes} {disabled} placeholder="Use this for any general notes not covered by the above fields..." />
 		</Fieldset>

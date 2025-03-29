@@ -8,6 +8,7 @@ import {
 	type Trainer,
 	type WithWriteKey,
 	type LearnedMove,
+	type HeldItem,
 } from "../types"
 import { Natures } from "../nature"
 import { Gender } from "../types"
@@ -129,6 +130,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 				max: 10,
 			},
 		} ],
+		items: [],
 		notes: "Not vulnerable to ghost-type moves.",
 		teraType: "fairy",
 		status: null,
@@ -191,6 +193,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 				max: 5,
 			},
 		} ],
+		items: [],
 		notes: "",
 		teraType: "ghost",
 		status: null,
@@ -253,6 +256,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 				max: 10,
 			},
 		} ],
+		items: [],
 		notes: "",
 		teraType: "fire",
 		status: null,
@@ -439,6 +443,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 				proficiencies: pokemon.skills,
 				savingThrows: pokemon.savingThrows,
 				moves: [],
+				items: [],
 				notes: "",
 				teraType: "normal",
 				status: null,
@@ -492,6 +497,18 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 		} else {
 			return false
 		}
+	}
+
+	updateAllHeldItems = async (writeKey: string, pokemonId: string, items: HeldItem[]): Promise<HeldItem[]> => {
+		if (!writeKey) throw new Error("Invalid write key")
+
+		const pokemon = this.entries
+			.flatMap((it) => it.pokemon)
+			.find((pokemon) => pokemon.id === pokemonId)
+
+		pokemon.items = items
+
+		return items
 	}
 
 	verifyWriteKey = async (trainer: Trainer, writeKey: ReadWriteKey): Promise<boolean> => {

@@ -14,6 +14,7 @@
 	import NotesInfo from "./NotesInfo.svelte"
 	import PokemonArt from "$lib/creatures/PokemonArt.svelte"
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
+	import HeldItemsInfo from "./HeldItemsInfo.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -66,6 +67,7 @@
 		<TypeEffectiveness type={pokemon.type} />
 	</FlatDl>
 	<FeatsInfo {pokemon} {species} />
+	<HeldItemsInfo {pokemon} />
 </section>
 <hr />
 <section>
