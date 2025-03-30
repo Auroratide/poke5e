@@ -2,7 +2,7 @@ import type { Pokemon } from "$lib/creatures/types"
 import { writable } from "svelte/store"
 import type { TrainerData } from "./data"
 import { provider } from "./data"
-import type { LearnedMove, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from "./types"
+import type { InventoryItem, LearnedMove, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from "./types"
 import { error } from "$lib/design/errors/store"
 
 type AllTrainers = {
@@ -25,6 +25,7 @@ type AvatarUploadOptions = {
 type TrainerUpdater = {
 	info: (info: TrainerInfo, options?: UpdaterOptions & AvatarUploadOptions) => Promise<void>
 	inventory: (info: TrainerInfo) => Promise<void>
+	inventoryItem: (item: InventoryItem, options?: UpdaterOptions) => Promise<void>
 	retire: () => Promise<void>
 	pokemon: (info: TrainerPokemon, options?: UpdaterOptions) => Promise<void>
 	moveset: (info: TrainerPokemon) => Promise<void>
@@ -144,6 +145,38 @@ const createStore = () => {
 								error.show(e.message)
 								throw e
 							})
+						},
+						inventoryItem: (info: InventoryItem, options: UpdaterOptions = {}) => {
+							let original: InventoryItem = undefined
+							const updateStore = (info: InventoryItem) => {
+								storeUpdateOne(readKey, (prev) => {
+									const index = prev.info.inventory.findIndex((it) => it.id === info.id)
+
+									original = prev.info.inventory[index]
+									prev.info.inventory[index] = info
+
+									return {
+										...prev,
+									}
+								})
+							}
+
+							if (options.optimistic) {
+								updateStore(info)
+
+								return provider.updateTrainerItem(data.writeKey, info).then(() => {}).catch((e) => {
+									updateStore(original)
+									error.show(e.message)
+									throw e
+								})
+							} else {
+								return provider.updateTrainerItem(data.writeKey, info).then(() => {
+									updateStore(info)
+								}).catch((e: Error) => {
+									error.show(e.message)
+									throw e
+								})
+							}
 						},
 						retire: () => {
 							return provider.deleteTrainer(data.writeKey, data.info.id, data.info.readKey).then(() => {

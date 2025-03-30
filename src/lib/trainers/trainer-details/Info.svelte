@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Trainer, TrainerInfo } from "../types"
+	import type { InventoryItem, Trainer, TrainerInfo } from "../types"
 	import { createEventDispatcher } from "svelte"
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import Paragraphs from "$lib/design/Paragraphs.svelte"
@@ -38,6 +38,10 @@
 			money: e.detail.money,
 		} as TrainerInfo)
 	}
+
+	const onUpdateItem = (e: CustomEvent<InventoryItem>) => {
+		dispatch("update-item", e.detail)
+	}
 </script>
 
 <SideArtCardSection {hasImage}>
@@ -56,7 +60,7 @@
 	<SkillsInfo level={trainer.level} attributes={trainer.attributes} savingThrows={trainer.savingThrows} proficiencies={trainer.proficiencies} />
 </section>
 <section>
-	<InventoryInfo money={trainer.money} inventory={trainer.inventory} {editable} on:update={onUpdateMoney} />
+	<InventoryInfo money={trainer.money} inventory={trainer.inventory} {editable} on:update={onUpdateMoney} on:update-item={onUpdateItem} />
 </section>
 {#if trainer.description}
 	<section>

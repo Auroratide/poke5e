@@ -8,8 +8,9 @@
 	import { createEventDispatcher } from "svelte"
 	import NumericResourceInput, { type ChangeDetail as NumericChangeDetail } from "$lib/design/Form/NumericResourceInput.svelte"
 	import { formatMoney } from "$lib/pokemon/money"
-	import InventoryList from "../info/InventoryList.svelte"
+	import InventoryList, { type UpdateQuantityDetail } from "../info/InventoryList.svelte"
 	import type { InventoryItem } from "../types"
+	import { error } from "$lib/design/errors/store"
 
 	const dispatch = createEventDispatcher()
 
@@ -21,6 +22,21 @@
 		dispatch("update", {
 			money: e.detail.value,
 		} as UpdateDetail)
+	}
+
+	const onChangeQuantity = (e: CustomEvent<UpdateQuantityDetail>) => {
+		const originalItem = inventory.find((it) => it.id === e.detail.id)
+		if (originalItem == null) {
+			error.show("Could not update item quantity. It seems to be missing?")
+			return
+		}
+
+		const newItem = {
+			...originalItem,
+			quantity: e.detail.quantity,
+		}
+
+		dispatch("update-item", newItem)
 	}
 </script>
 
@@ -40,7 +56,7 @@
 		{/if}
 	</span>
 </p>
-<InventoryList items={inventory} />
+<InventoryList items={inventory} {editable} on:update={onChangeQuantity} />
 
 <style>
 	label { font-weight: bold; }

@@ -38,6 +38,7 @@ export type CustomHeldItem = {
 
 export type HeldItem = { id: string } & (StandardHeldItem | CustomHeldItem)
 export type InventoryItem = HeldItem & { quantity: number }
+export type MaybeQuantity = { quantity?: number }
 
 export type PokemonId = string
 export type TrainerPokemon = {

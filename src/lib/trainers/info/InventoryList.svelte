@@ -1,16 +1,52 @@
-<script lang="ts">
-	import { getItemDetails } from "$lib/pokemon/held-items"
-	import type { HeldItem } from "../types"
-	import { items as allItems } from "$lib/items/store"
+<script lang="ts" context="module">
+	export type UpdateQuantityDetail = {
+		id: string,
+		quantity: number,
+	}
+</script>
 
-	export let items: HeldItem[]
+<script lang="ts">
+	import { createEventDispatcher } from "svelte"
+	import { getItemDetails } from "$lib/pokemon/held-items"
+	import type { HeldItem, MaybeQuantity } from "../types"
+	import { items as allItems } from "$lib/items/store"
+	import NumericResourceInput, { type ChangeDetail as NumericChangeDetail } from "$lib/design/Form/NumericResourceInput.svelte"
+
+	const dispatch = createEventDispatcher()
+
+	export let items: (HeldItem & MaybeQuantity)[]
+	export let editable: boolean = false
+
+	const onChangeQuantity = (item: HeldItem) => (e: CustomEvent<NumericChangeDetail>) => {
+		dispatch("update", {
+			id: item.id,
+			quantity: e.detail.value,
+		} as UpdateQuantityDetail)
+	}
 </script>
 
 <ul>
 	{#each items as item (item.id)}
 		{@const details = getItemDetails(item, $allItems)}
 		{#if details != null}
-			<li class:imaged={details.media.sprite != null} style:--img="url('{details.media.sprite}')"><strong>{details.name}</strong>: {details.description}</li>
+			<li class:imaged={details.media.sprite != null} style:--img="url('{details.media.sprite}')">
+				{#if details.quantity != null}
+					<div>
+						<strong>{details.name}</strong>
+						<span class="editable-quantity">
+							<label for="quantity-{details.id}" aria-label="Quantity">&times;</label>
+							{#if editable}
+								<NumericResourceInput id="quantity-{details.id}" value={details.quantity} on:change={onChangeQuantity(details)} />
+							{:else}
+								<span>{details.quantity}</span>
+							{/if}
+						</span>
+						<p>{details.description}</p>
+					</div>
+				{:else}
+					<strong>{details.name}</strong>: {details.description}
+				{/if}
+			</li>
 		{/if}
 	{/each}
 </ul>
@@ -38,5 +74,9 @@
 		inline-size: 1.5em;
 		block-size: 1.5em;
 		background-size: contain;
+	}
+
+	.editable-quantity {
+		--input-min-width: 3ch;
 	}
 </style>

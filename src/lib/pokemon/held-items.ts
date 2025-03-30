@@ -10,7 +10,7 @@ export type HeldItemDetails = {
 	},
 }
 
-export function getItemDetails(item: HeldItem, standardItems: Item[] | undefined): (HeldItem & HeldItemDetails) | undefined {
+export function getItemDetails<T extends HeldItem>(item: T, standardItems: Item[] | undefined): (T & HeldItemDetails) | undefined {
 	if (standardItems == null || standardItems.length === 0) {
 		return undefined
 	}
@@ -31,6 +31,6 @@ export function getItemDetails(item: HeldItem, standardItems: Item[] | undefined
 			media: {
 				sprite: HeldItemIcon,
 			},
-		}
+		} as T & HeldItemDetails
 	}
 }

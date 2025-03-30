@@ -529,6 +529,19 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 		return items
 	}
 
+	updateTrainerItem = async (writeKey: ReadWriteKey, item: InventoryItem): Promise<boolean> => {
+		if (!writeKey) return false
+
+		const trainer = this.entries.find((trainer) => trainer.writeKey === writeKey)
+
+		if (trainer == null) return false
+
+		const itemIndex = trainer.info.inventory.findIndex((it) => it.id === item.id)
+		trainer.info.inventory[itemIndex] = item
+
+		return true
+	}
+
 	verifyWriteKey = async (trainer: Trainer, writeKey: ReadWriteKey): Promise<boolean> => {
 		const found = this.entries.find((it) => it.info.id === trainer.id)
 

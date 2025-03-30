@@ -721,6 +721,27 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}))
 	}
 
+	updateTrainerItem = async (writeKey: ReadWriteKey, item: InventoryItem): Promise<boolean> => {
+		const { data, error } = await this.supabase.rpc("update_inventory_item", {
+			_write_key: writeKey,
+			_id: item.id,
+			_item_id: item.type === "standard" ? item.itemId : null,
+			_quantity: item.quantity,
+			_custom_name: item.type === "custom" ? item.name : null,
+			_description: item.type === "custom" ? item.description : null,
+		}).single<number>()
+
+		if (error) {
+			throw new TrainerDataProviderError("Could not update inventory item.", error)
+		}
+
+		if (data <= 0) {
+			throw new TrainerDataProviderError("Either this trainer does not exist or you do not have permission to edit them.")
+		}
+
+		return data > 0
+	}
+
 	verifyWriteKey = async (trainer: Trainer, writeKey: ReadWriteKey): Promise<boolean> => {
 		const { data, error } = await this.supabase.rpc("verify_write_key", {
 			_id: trainer.id,
