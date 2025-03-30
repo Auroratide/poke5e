@@ -11,6 +11,7 @@
 
 	export let id: string
 	export let value: number
+	export let disabled: boolean = false
 
 	$: width = value?.toString()?.length ?? 0
 
@@ -34,7 +35,7 @@
 	}
 </script>
 
-<input {id} type="text" {value} on:change={onChange} on:input={onInput} style:width="{width + 1}ch" />
+<input {id} type="text" {value} on:change={onChange} on:input={onInput} style:width="{width + 1}ch" {disabled} />
 
 <style>
 	input {

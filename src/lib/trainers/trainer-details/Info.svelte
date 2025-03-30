@@ -9,6 +9,7 @@
 	import SkillsInfo from "../info/SkillsInfo.svelte"
 	import Art from "$lib/design/Art.svelte"
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
+	import InventoryInfo, { type UpdateDetail as InventoryUpdateDetail } from "./InventoryInfo.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -18,7 +19,7 @@
 	$: hasImage = trainer.avatar != null
 
 	const onUpdateHealth = (e: CustomEvent<HealthUpdateDetail>) => {
-		dispatch("update-health", {
+		dispatch("update", {
 			...trainer,
 			hp: {
 				current: e.detail.currentHp,
@@ -28,6 +29,13 @@
 				current: e.detail.currentHitDice,
 				max: trainer.hitDice.max,
 			},
+		} as TrainerInfo)
+	}
+
+	const onUpdateMoney = (e: CustomEvent<InventoryUpdateDetail>) => {
+		dispatch("update", {
+			...trainer,
+			money: e.detail.money,
 		} as TrainerInfo)
 	}
 </script>
@@ -47,8 +55,12 @@
 	<AttributeBlock attributes={trainer.attributes} />
 	<SkillsInfo level={trainer.level} attributes={trainer.attributes} savingThrows={trainer.savingThrows} proficiencies={trainer.proficiencies} />
 </section>
+<section>
+	<InventoryInfo money={trainer.money} {editable} on:update={onUpdateMoney} />
+</section>
 <hr />
 <section>
+	<h2>About</h2>
 	<Paragraphs value={trainer.description} />
 </section>
 

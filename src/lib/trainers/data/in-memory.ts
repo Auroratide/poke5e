@@ -63,6 +63,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			homeRegion: "Sinnoh",
 			background: "Cryptemologist",
 		},
+		money: 0,
 	},
 	pokemon: [ {
 		id: nextPokemonId(),
@@ -296,6 +297,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			homeRegion: "Pastelrift",
 			background: "Rogue",
 		},
+		money: 0,
 	},
 	pokemon: [],
 } ]
@@ -346,6 +348,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 					homeRegion: null,
 					background: null,
 				},
+				money: 0,
 				id,
 				readKey,
 			},

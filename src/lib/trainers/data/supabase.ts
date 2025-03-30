@@ -116,6 +116,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 				homeRegion: null,
 				background: null,
 			},
+			money: 0,
 		}
 
 		const { data, error } = await this.supabase.rpc("new_trainer", {
@@ -162,6 +163,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_age: toCreate.biography.age,
 			_home_region: toCreate.biography.homeRegion,
 			_background: toCreate.biography.background,
+			_money: toCreate.money,
 		}).single<{
 			ret_id: string,
 			ret_read_key: string,
@@ -232,6 +234,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_age: info.biography.age,
 			_home_region: info.biography.homeRegion,
 			_background: info.biography.background,
+			_money: info.money,
 		}).single<number>()
 
 		if (error) {
@@ -757,6 +760,7 @@ type TrainerRow = {
 	home_region: string | null,
 	background: string | null,
 	avatar_filename: string | null,
+	money: number,
 }
 
 const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name: string) => StorageResource) => ({
@@ -817,6 +821,7 @@ const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name
 		homeRegion: row.home_region,
 		background: row.background,
 	},
+	money: row.money,
 	avatar: row.avatar_filename != null ?
 		getStorageResource(TRAINER_AVATARS_BUCKET, row.avatar_filename) :
 		null,

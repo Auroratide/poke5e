@@ -22,6 +22,7 @@
 	import SavingThrowsFieldset from "../form/SavingThrowsFieldset.svelte"
 	import BiographyFieldset from "../form/BiographyFieldset.svelte"
 	import type { ImageInputValue } from "$lib/design/Form/ImageInput.svelte"
+	import InventoryFieldset from "../form/InventoryFieldset.svelte"
 	
 	const dispatch = createEventDispatcher()
 
@@ -40,6 +41,7 @@
 	let description = trainer.description
 	let biography = trainer.biography
 	let originalAvatar = trainer.avatar
+	let money = trainer.money
 	let avatarToUpload: ImageInputValue | undefined = undefined
 	let isValid = true
 
@@ -65,6 +67,7 @@
 				proficiencies,
 				savingThrows,
 				biography,
+				money,
 				avatar: originalAvatar,
 			},
 			updateAvatar: avatarToUpload,
@@ -85,6 +88,7 @@
 		<AttributesFieldset bind:values={attributes} {disabled} />
 		<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 		<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
+		<InventoryFieldset bind:money={money} {disabled} />
 		<Fieldset title="General">
 			<GeneralTextarea name="description" label="Description" bind:value={description} {disabled} placeholder="General info about this trainer..." />
 		</Fieldset>

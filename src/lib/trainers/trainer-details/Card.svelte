@@ -13,7 +13,7 @@
 	export let trainer: TrainerStore
 	$: canEdit = $trainer.update != null
 
-	const onUpdateHealth = (e: CustomEvent<TrainerInfo>) => {
+	const onUpdate = (e: CustomEvent<TrainerInfo>) => {
 		$trainer.update?.info(e.detail, {
 			optimistic: true,
 		})
@@ -25,7 +25,7 @@
 	<div slot="header-extra" style:padding-inline-end="0.5em">
 		<Level value={$trainer.info.level} />
 	</div>
-	<Info trainer={$trainer.info} editable={canEdit} on:update-health={onUpdateHealth} />
+	<Info trainer={$trainer.info} editable={canEdit} on:update={onUpdate} />
 	<ActionArea>
 		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="ghost">Access Key</Button>
 		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.removeTrainer)}" variant="ghost">Remove</Button>
