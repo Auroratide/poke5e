@@ -5,7 +5,7 @@
 	import { Url } from "$lib/url"
 	import { pokemon as allPokemon } from "$lib/creatures/store"
 	import { items } from "$lib/items/store"
-	import { getHeldItemDetails } from "$lib/pokemon/held-items"
+	import { getItemDetails } from "$lib/pokemon/held-items"
 	import PokemonSprite from "$lib/creatures/PokemonSprite.svelte"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 	import ItemSprite from "$lib/items/ItemSprite.svelte"
@@ -14,7 +14,7 @@
 	export let pokemon: TrainerPokemon
 
 	$: species = $allPokemon?.find((it) => it.id === pokemon.pokemonId)
-	$: heldItem = pokemon.items.length > 0 ? getHeldItemDetails(pokemon.items[0], $items) : undefined
+	$: heldItem = pokemon.items.length > 0 ? getItemDetails(pokemon.items[0], $items) : undefined
 </script>
 
 <a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded">

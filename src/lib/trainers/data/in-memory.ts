@@ -9,6 +9,7 @@ import {
 	type WithWriteKey,
 	type LearnedMove,
 	type HeldItem,
+	type InventoryItem,
 } from "../types"
 import { Natures } from "../nature"
 import { Gender } from "../types"
@@ -64,6 +65,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			background: "Cryptemologist",
 		},
 		money: 0,
+		inventory: [],
 	},
 	pokemon: [ {
 		id: nextPokemonId(),
@@ -298,6 +300,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			background: "Rogue",
 		},
 		money: 0,
+		inventory: [],
 	},
 	pokemon: [],
 } ]
@@ -349,6 +352,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 					background: null,
 				},
 				money: 0,
+				inventory: [],
 				id,
 				readKey,
 			},
@@ -510,6 +514,17 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 			.find((pokemon) => pokemon.id === pokemonId)
 
 		pokemon.items = items
+
+		return items
+	}
+
+	updateTrainerInventory = async (writeKey: string, items: InventoryItem[]): Promise<InventoryItem[]> => {
+		if (!writeKey) throw new Error("Invalid write key")
+
+		const trainer = this.entries.find((trainer) => trainer.writeKey === writeKey)
+		if (trainer != null) {
+			trainer.info.inventory = items
+		}
 
 		return items
 	}

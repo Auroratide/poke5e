@@ -9,6 +9,7 @@ import {
 	type LearnedMove,
 	type PokemonId,
 	type HeldItem,
+	type InventoryItem,
 } from "../types"
 import { Natures } from "../nature"
 import type { Skill, Attribute } from "$lib/dnd/types"
@@ -34,6 +35,13 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 				if (!data) return undefined
 
 				return rowToTrainer(data, this.getStorageResource)
+			})
+			.then(async (trainer) => {
+				if (trainer) {
+					const inventory = await this.getTrainerInventory(trainer.readKey)
+					trainer.inventory = inventory
+				}
+				return trainer
 			})),
 		).then((trainers) => trainers.filter((it) => it != null))
 	}
@@ -50,7 +58,14 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 				return rowToTrainer(data, this.getStorageResource)
 			})
-        
+			.then(async (trainer) => {
+				if (trainer != null) {
+					const inventory = await this.getTrainerInventory(trainer.readKey)
+					trainer.inventory = inventory
+				}
+				return trainer
+			})
+
 		if (!trainer) return undefined
 
 		addReadKey(readKey)
@@ -117,6 +132,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 				background: null,
 			},
 			money: 0,
+			inventory: [],
 		}
 
 		const { data, error } = await this.supabase.rpc("new_trainer", {
@@ -642,6 +658,69 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}))
 	}
 
+	updateTrainerInventory = async (writeKey: ReadWriteKey, newInventory: InventoryItem[]): Promise<InventoryItem[]> => {
+		const readKey = getReadKey(writeKey)
+		const existingInventory = await this.getTrainerInventory(readKey)
+		const newIds = newInventory.map((it) => it.id)
+		const existingIds = existingInventory.map((it) => it.id)
+
+		const deletedIds = existingIds.filter((id) => !newIds.includes(id))
+		await Promise.all(deletedIds.map((id) => this.supabase.rpc("remove_inventory_item", {
+			_write_key: writeKey,
+			_id: id,
+		}).single<number>().then(({ data, error }) => {
+			if (error) {
+				throw new TrainerDataProviderError("Could not delete inventory item.", error)
+			}
+            
+			if (data <= 0) {
+				throw new TrainerDataProviderError("Either this trainer does not exist or you do not have permission to edit them.")
+			}
+
+			return data > 0
+		})))
+
+		return await Promise.all(newInventory.map((item) => {
+			if (existingIds.includes(item.id)) {
+				return this.supabase.rpc("update_inventory_item", {
+					_write_key: writeKey,
+					_id: item.id,
+					_item_id: item.type === "standard" ? item.itemId : null,
+					_quantity: item.quantity,
+					_custom_name: item.type === "custom" ? item.name : null,
+					_description: item.type === "custom" ? item.description : null,
+				}).single<number>().then(({ data, error }) => {
+					if (error) {
+						throw new TrainerDataProviderError("Could not update inventory item.", error)
+					}
+
+					if (data <= 0) {
+						throw new TrainerDataProviderError("Either this trainer does not exist or you do not have permission to edit them.")
+					}
+
+					return { ...item }
+				})
+			} else {
+				return this.supabase.rpc("add_inventory_item", {
+					_write_key: writeKey,
+					_item_id: item.type === "standard" ? item.itemId : null,
+					_quantity: item.quantity,
+					_custom_name: item.type === "custom" ? item.name : null,
+					_description: item.type === "custom" ? item.description : null,
+				}).single<string>().then(({ data, error }) => {
+					if (error) {
+						throw new TrainerDataProviderError("Could not add inventory item.", error)
+					}
+
+					return {
+						...item,
+						id: data,
+					}
+				})
+			}
+		}))
+	}
+
 	verifyWriteKey = async (trainer: Trainer, writeKey: ReadWriteKey): Promise<boolean> => {
 		const { data, error } = await this.supabase.rpc("verify_write_key", {
 			_id: trainer.id,
@@ -681,6 +760,17 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return data?.map((row) => rowToHeldItem(row)) ?? []
 	}
 
+	private getTrainerInventory = async (readKey: ReadWriteKey): Promise<InventoryItem[]> => {
+		const { data, error } = await this.supabase.rpc("get_inventory_items", { _read_key: readKey })
+			.select()
+
+		if (error) {
+			throw new TrainerDataProviderError("Could not get inventory items.", error)
+		}
+
+		return data?.map((row) => rowToInventoryItem(row)) ?? []
+	}
+
 	private getStorageResource = (bucket: string, name: string) => ({
 		name: name,
 		href: this.supabase.storage.from(bucket).getPublicUrl(name).data.publicUrl,
@@ -701,6 +791,9 @@ export const removeReadKey = (key: ReadWriteKey) => {
 	const newList = previous.filter((it) => it !== key)
 	localStorage.setItem("trainers", newList.join(","))
 }
+
+export const getReadKey = (writeKey: ReadWriteKey): ReadWriteKey | undefined =>
+	getReadKeys().find((readKey) => getWriteKey(readKey) === writeKey)
 
 export const getWriteKey = (readKey: ReadWriteKey): ReadWriteKey | undefined =>
 	localStorage.getItem(`write:${readKey}`)
@@ -822,6 +915,7 @@ const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name
 		background: row.background,
 	},
 	money: row.money,
+	inventory: [],
 	avatar: row.avatar_filename != null ?
 		getStorageResource(TRAINER_AVATARS_BUCKET, row.avatar_filename) :
 		null,
@@ -977,6 +1071,23 @@ const rowToHeldItem = (row: HeldItemRow): HeldItem => ({
 	id: row.id.toString(),
 	type: row.item_id != null ? "standard" : "custom",
 	itemId: row.item_id,
+	name: row.custom_name,
+	description: row.description,
+})
+
+type InventoryItemRow = {
+	id: string,
+	item_id: string | null,
+	quantity: number,
+	custom_name: string | null,
+	description: string | null,
+}
+
+const rowToInventoryItem = (row: InventoryItemRow): InventoryItem => ({
+	id: row.id.toString(),
+	type: row.item_id != null ? "standard" : "custom",
+	itemId: row.item_id,
+	quantity: row.quantity,
 	name: row.custom_name,
 	description: row.description,
 })

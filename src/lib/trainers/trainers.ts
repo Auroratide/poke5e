@@ -24,6 +24,7 @@ type AvatarUploadOptions = {
 
 type TrainerUpdater = {
 	info: (info: TrainerInfo, options?: UpdaterOptions & AvatarUploadOptions) => Promise<void>
+	inventory: (info: TrainerInfo) => Promise<void>
 	retire: () => Promise<void>
 	pokemon: (info: TrainerPokemon, options?: UpdaterOptions) => Promise<void>
 	moveset: (info: TrainerPokemon) => Promise<void>
@@ -129,6 +130,20 @@ const createStore = () => {
 									throw e
 								})
 							}
+						},
+						inventory: (info: TrainerInfo) => {
+							return provider.updateTrainerInventory(data.writeKey, info.inventory).then((newInventory) => {
+								storeUpdateOne(readKey, (prev) => ({
+									...prev,
+									info: {
+										...prev.info,
+										inventory: newInventory,
+									},
+								}))
+							}).catch((e: Error) => {
+								error.show(e.message)
+								throw e
+							})
 						},
 						retire: () => {
 							return provider.deleteTrainer(data.writeKey, data.info.id, data.info.readKey).then(() => {

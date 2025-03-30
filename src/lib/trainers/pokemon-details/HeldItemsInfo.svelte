@@ -1,43 +1,11 @@
 <script lang="ts">
 	import type { TrainerPokemon } from "../types"
-	import { items } from "$lib/items/store"
-	import { getHeldItemDetails } from "$lib/pokemon/held-items"
+	import InventoryList from "../info/InventoryList.svelte"
 
 	export let pokemon: TrainerPokemon
 </script>
 
 {#if pokemon.items.length > 0}
 	<h3>Held Items</h3>
-	<ul>
-		{#each pokemon.items as item (item.id)}
-			{@const details = getHeldItemDetails(item, $items)}
-			<li class:imaged={details.media.sprite != null} style:--img="url('{details.media.sprite}')"><strong>{details.name}</strong>: {details.description}</li>
-		{/each}
-	</ul>
+	<InventoryList items={pokemon.items} />
 {/if}
-
-<style>
-	ul {
-		font-size: var(--font-sz-venus);
-		padding: 0 0 0 1.625em;
-		list-style: none;
-	}
-
-	ul li {
-		margin-block-end: 0.75em;
-		position: relative;
-	}
-
-	.imaged::before {
-		content: "";
-		position: absolute;
-		display: block;
-		inset-block-start: -0.1875em;
-		inset-inline-start: -1.625em;
-		image-rendering: pixelated;
-		background-image: var(--img);
-		inline-size: 1.5em;
-		block-size: 1.5em;
-		background-size: contain;
-	}
-</style>

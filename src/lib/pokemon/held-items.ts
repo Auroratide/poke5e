@@ -10,7 +10,7 @@ export type HeldItemDetails = {
 	},
 }
 
-export function getHeldItemDetails(item: HeldItem, standardItems: Item[] | undefined): (HeldItem & HeldItemDetails) | undefined {
+export function getItemDetails(item: HeldItem, standardItems: Item[] | undefined): (HeldItem & HeldItemDetails) | undefined {
 	if (standardItems == null || standardItems.length === 0) {
 		return undefined
 	}

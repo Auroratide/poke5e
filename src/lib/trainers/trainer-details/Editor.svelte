@@ -45,6 +45,8 @@
 	let avatarToUpload: ImageInputValue | undefined = undefined
 	let isValid = true
 
+	let inventory = structuredClone(trainer.inventory)
+
 	const cancel = () => {
 		dispatch("cancel")
 	}
@@ -68,6 +70,7 @@
 				savingThrows,
 				biography,
 				money,
+				inventory,
 				avatar: originalAvatar,
 			},
 			updateAvatar: avatarToUpload,
@@ -88,7 +91,7 @@
 		<AttributesFieldset bind:values={attributes} {disabled} />
 		<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 		<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
-		<InventoryFieldset bind:money={money} {disabled} />
+		<InventoryFieldset bind:inventory bind:money={money} {disabled} />
 		<Fieldset title="General">
 			<GeneralTextarea name="description" label="Description" bind:value={description} {disabled} placeholder="General info about this trainer..." />
 		</Fieldset>

@@ -17,7 +17,7 @@
 {#if value.type === "standard"}
 	<label for="item-id-input-{value.id}">Item</label>
 	<div class="flex-row">
-		<select id="item-id-input-{value.id}" bind:value={value.itemId} style:flex="1">
+		<select id="item-id-input-{value.id}" bind:value={value.itemId} style:flex="1" {disabled}>
 			{#each ($items ?? []) as selectableItem}
 				<option value={selectableItem.id}>{selectableItem.name}</option>
 			{/each}
@@ -27,11 +27,11 @@
 {:else}
 	<label for="item-name-input-{value.id}">Name</label>
 	<div class="flex-row">
-		<input id="item-name-input-{value.id}" type="text" bind:value={value.name} style:flex="1" />
+		<input id="item-name-input-{value.id}" type="text" bind:value={value.name} style:flex="1" {disabled} />
 		<Button on:click={onRemove}>Remove</Button>
 	</div>
 	<label for="item-description-input-{value.id}" style:place-self="start">Desc.</label>
-	<textarea id="item-description-input-{value.id}" rows="4" bind:value={value.description}></textarea>
+	<textarea id="item-description-input-{value.id}" rows="4" bind:value={value.description} {disabled}></textarea>
 {/if}
 <hr />
 

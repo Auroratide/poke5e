@@ -1,6 +1,7 @@
 import type { Pokemon } from "$lib/creatures/types"
 import type {
 	HeldItem,
+	InventoryItem,
 	LearnedMove,
 	PokemonId,
 	ReadWriteKey,
@@ -52,6 +53,7 @@ export interface TrainerDataProvider {
 	updateMoveset: (writeKey: ReadWriteKey, pokemonId: PokemonId, moves: LearnedMove[]) => Promise<LearnedMove[]>
 	updateOneMove: (writeKey: ReadWriteKey, move: LearnedMove) => Promise<boolean>
 	updateAllHeldItems: (writeKey: ReadWriteKey, pokemonId: PokemonId, heldItems: HeldItem[]) => Promise<HeldItem[]>
+	updateTrainerInventory: (writeKey: ReadWriteKey, inventory: InventoryItem[]) => Promise<InventoryItem[]>
 	verifyWriteKey: (trainer: Trainer, writeKey: ReadWriteKey) => Promise<boolean>
 }
 

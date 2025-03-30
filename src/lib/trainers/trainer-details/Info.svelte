@@ -56,9 +56,8 @@
 	<SkillsInfo level={trainer.level} attributes={trainer.attributes} savingThrows={trainer.savingThrows} proficiencies={trainer.proficiencies} />
 </section>
 <section>
-	<InventoryInfo money={trainer.money} {editable} on:update={onUpdateMoney} />
+	<InventoryInfo money={trainer.money} inventory={trainer.inventory} {editable} on:update={onUpdateMoney} />
 </section>
-<hr />
 {#if trainer.description}
 	<section>
 		<h2>About</h2>

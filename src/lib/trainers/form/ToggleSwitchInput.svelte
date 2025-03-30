@@ -5,7 +5,6 @@
 	export let disabled: boolean
 
 	const handleChange = (e: CustomEvent<{ checked: boolean }>) => {
-		console.log("changing")
 		value = e.detail.checked
 	}
 </script>

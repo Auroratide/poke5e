@@ -97,6 +97,7 @@ export type TrainerInfo = {
 	savingThrows: Attribute[],
 	biography: TrainerBio,
 	money: number,
+	inventory: InventoryItem[],
 	avatar?: StorageResource,
 }
 export type Trainer = TrainerInfo & {

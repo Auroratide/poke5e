@@ -1,7 +1,7 @@
 <script lang="ts" generics="TItem extends HeldItem">
 	import Button from "$lib/design/Button.svelte"
 	import type { HeldItem } from "../types"
-	import ItemEditor from "../pokemon-details/HeldItemEditor.svelte"
+	import ItemEditor from "../pokemon-details/ItemEditor.svelte"
 
 	export let values: TItem[]
 	export let disabled: boolean

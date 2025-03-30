@@ -8,10 +8,13 @@
 	import { createEventDispatcher } from "svelte"
 	import NumericResourceInput, { type ChangeDetail as NumericChangeDetail } from "$lib/design/Form/NumericResourceInput.svelte"
 	import { formatMoney } from "$lib/pokemon/money"
+	import InventoryList from "../info/InventoryList.svelte"
+	import type { InventoryItem } from "../types"
 
 	const dispatch = createEventDispatcher()
 
 	export let money: number
+	export let inventory: InventoryItem[]
 	export let editable: boolean
 
 	const onChangeMoney = (e: CustomEvent<NumericChangeDetail>) => {
@@ -25,18 +28,19 @@
 <p class="row" style:gap="0.5em">
 	<label for="current-money">Money:</label>
 	<span style:flex="1">
-	{#if editable}
-		<span class="row" style:gap="0.25em">
-			<span>₽</span>
-			<span style:flex="1">
-				<NumericResourceInput id="current-money" value={money} on:change={onChangeMoney} />
+		{#if editable}
+			<span class="row" style:gap="0.25em">
+				<span>₽</span>
+				<span style:flex="1">
+					<NumericResourceInput id="current-money" value={money} on:change={onChangeMoney} />
+				</span>
 			</span>
-		</span>
-	{:else}
-		{formatMoney(money)}
-	{/if}
-</span>
+		{:else}
+			{formatMoney(money)}
+		{/if}
+	</span>
 </p>
+<InventoryList items={inventory} />
 
 <style>
 	label { font-weight: bold; }
