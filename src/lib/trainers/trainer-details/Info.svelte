@@ -59,10 +59,12 @@
 	<InventoryInfo money={trainer.money} {editable} on:update={onUpdateMoney} />
 </section>
 <hr />
-<section>
-	<h2>About</h2>
-	<Paragraphs value={trainer.description} />
-</section>
+{#if trainer.description}
+	<section>
+		<h2>About</h2>
+		<Paragraphs value={trainer.description} />
+	</section>
+{/if}
 
 <style>
 	.column {
