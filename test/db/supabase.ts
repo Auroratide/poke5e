@@ -14,7 +14,7 @@ export async function call<T>(name: string, args: any, options?: {
 	}
 
 	if (!options?.assertNull && data == null) {
-		throw new Error(`Calling ${name} resulted in null result`)
+		throw new Error(`Calling ${name} resulted in null result; error: ${error?.message}`)
 	}
 
 	if (error) {
