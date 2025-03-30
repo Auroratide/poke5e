@@ -30,6 +30,7 @@
 		display: block;
 		transition: opacity 0.25s ease-out, right 0.25s ease-out;
 		pointer-events: none;
+		z-index: 9;
 	}
 
 	dialog[open] {
