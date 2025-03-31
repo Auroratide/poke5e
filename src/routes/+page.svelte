@@ -75,6 +75,15 @@
 		max-width: calc(0.33 * var(--container-width));
 	}
 
+	/* 43.5 = 75 / 2 + 4 (counteract negative margin) + 2 (additional padding) */
+	@media screen and (min-width: 43.5rem) {
+		ul {
+			column-count: 2;
+			max-width: none;
+			margin-inline: -2em;
+		}
+	}
+
 	ul li {
 		--skin-local-stroke: var(--theme-main);
 		position: relative;
