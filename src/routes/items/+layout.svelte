@@ -6,7 +6,7 @@
 	import { items } from "$lib/items/store"
 	import ItemList from "$lib/items/ItemList.svelte"
 
-	$: ssrItems = $page.data.itemList
+	$: ssrItems = $page.data.itemsList
 	$: itemsToRender = ssrItems ?? $items
 </script>
 
