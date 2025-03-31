@@ -534,7 +534,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			return data > 0
 		})))
 
-		return await Promise.all(newMoveset.map((move) => {
+		return await Promise.all(newMoveset.map((move, index) => {
 			if (existingIds.includes(move.id)) {
 				return this.supabase.rpc("update_move", {
 					_write_key: writeKey,
@@ -543,6 +543,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					_pp_cur: move.pp.current,
 					_pp_max: move.pp.max,
 					_notes: move.notes,
+					_rank: index,
 				}).single<number>().then(({ data, error }) => {
 					if (error) {
 						throw new TrainerDataProviderError("Could not update move.", error)
@@ -562,6 +563,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					_pp_cur: move.pp.current,
 					_pp_max: move.pp.max,
 					_notes: move.notes,
+					_rank: index,
 				}).single<string>().then(({ data, error }) => {
 					if (error) {
 						throw new TrainerDataProviderError("Could not add move.", error)
@@ -618,7 +620,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			return data > 0
 		})))
 
-		return await Promise.all(newHeldItems.map((item) => {
+		return await Promise.all(newHeldItems.map((item, index) => {
 			if (existingIds.includes(item.id)) {
 				return this.supabase.rpc("update_held_item", {
 					_write_key: writeKey,
@@ -626,6 +628,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					_item_id: item.type === "standard" ? item.itemId : null,
 					_custom_name: item.type === "custom" ? item.name : null,
 					_description: item.type === "custom" ? item.description : null,
+					_rank: index,
 				}).single<number>().then(({ data, error }) => {
 					if (error) {
 						throw new TrainerDataProviderError("Could not update held item.", error)
@@ -644,6 +647,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					_item_id: item.type === "standard" ? item.itemId : null,
 					_custom_name: item.type === "custom" ? item.name : null,
 					_description: item.type === "custom" ? item.description : null,
+					_rank: index,
 				}).single<string>().then(({ data, error }) => {
 					if (error) {
 						throw new TrainerDataProviderError("Could not add held item.", error)
@@ -680,7 +684,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			return data > 0
 		})))
 
-		return await Promise.all(newInventory.map((item) => {
+		return await Promise.all(newInventory.map((item, index) => {
 			if (existingIds.includes(item.id)) {
 				return this.supabase.rpc("update_inventory_item", {
 					_write_key: writeKey,
@@ -689,6 +693,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					_quantity: item.quantity,
 					_custom_name: item.type === "custom" ? item.name : null,
 					_description: item.type === "custom" ? item.description : null,
+					_rank: index,
 				}).single<number>().then(({ data, error }) => {
 					if (error) {
 						throw new TrainerDataProviderError("Could not update inventory item.", error)
@@ -707,6 +712,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					_quantity: item.quantity,
 					_custom_name: item.type === "custom" ? item.name : null,
 					_description: item.type === "custom" ? item.description : null,
+					_rank: index,
 				}).single<string>().then(({ data, error }) => {
 					if (error) {
 						throw new TrainerDataProviderError("Could not add inventory item.", error)
