@@ -14,6 +14,7 @@ import {
 	waitFor,
 	visitPathExplicitly,
 	readDescriptionDefinition,
+	below,
 } from "./actions.js"
 import assert from "node:assert/strict"
 
@@ -26,6 +27,12 @@ export async function test() {
 	console.log(`  (read key is ${readKey})`)
 	assert.ok(await text(`${name}'s Pokemon`).exists())
 
+	await editTrainer()
+	assert.ok(await text("Kanto").exists())
+	assert.equal(await textBox("Money").value(), "1000")
+	assert.ok(await text("Great Ball").exists())
+	assert.ok(await text("Lustergem").exists())
+
 	await addPokemon("Charmander")
 	assert.ok(await text("Charmander").exists())
 	assert.ok(await text("Fire").exists())
@@ -33,6 +40,7 @@ export async function test() {
 	await editPokemon("Fritz")
 	assert.ok(await text("Fritz").exists())
 	assert.ok(await text("Ember").exists())
+	assert.ok(await text("Sitrus Berry").exists())
 
 	await addPokemon("Appletun")
 	assert.ok(await text("Appletun").exists())
@@ -63,6 +71,22 @@ const createTrainer = async (name) => {
 	return await readDescriptionDefinition("Trainer Id")
 }
 
+const editTrainer = async () => {
+	console.log(`  Editing Trainer...`)
+
+	await click("Edit")
+	await clear(textBox("Home Region"))
+	await write("Kanto")
+	await clear(textBox("Money"))
+	await write("1000")
+
+	await addStandardItem("Great Ball")
+	await addCustomItem("Lustergem", "A very powerful gem.")
+
+	await click("Finish!")
+	await doneSaving()
+}
+
 const dismissTrainerTransferDialog = async () => {
 	const dialogIsPresent = await text("Trainer Data Transfer").exists()
 	if (dialogIsPresent) {
@@ -91,6 +115,8 @@ const editPokemon = async (nickname) => {
 	await click(radioButton("Male"))
 
 	await addMove("ember")
+	await addStandardItem("Sitrus Berry")
+
 	await click("Finish!")
 	await doneSaving()
 }
@@ -98,6 +124,19 @@ const editPokemon = async (nickname) => {
 const addMove = async (move) => {
 	await click("Add Move")
 	await dropDown("Move").select(move)
+}
+
+const addStandardItem = async (item) => {
+	await click("Add Item")
+	await dropDown("Item").select(item)
+}
+
+const addCustomItem = async (name, description) => {
+	await click("Add Custom Item")
+	await clear(textBox("Name", below(text("Inventory"))))
+	await write(name)
+	await clear(textBox("Desc."))
+	await write(description)
 }
 
 const evolvePokemon = async (choice) => {
