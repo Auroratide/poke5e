@@ -78,7 +78,9 @@
 	/* 43.5 = 75 / 2 + 4 (counteract negative margin) + 2 (additional padding) */
 	@media screen and (min-width: 43.5rem) {
 		ul {
-			column-count: 2;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 0.5em 1.5em;
 			max-width: none;
 			margin-inline: -2em;
 		}
