@@ -29,7 +29,7 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: supabase start
       - name: Run migration tests
-        run: pnpm test:db --debug
+        run: pnpm test:db
       # - run: supabase link --project-ref $SUPABASE_PROJECT_ID
       # - name: Push migrations
       #   run: supabase db push
