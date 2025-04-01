@@ -21,5 +21,5 @@
 </script>
 
 <Fieldset title="Held Items">
-	<InventoryEditor bind:values {disabled} newStandardItem={addStandardItem} newCustomItem={addCustomItem} />
+	<InventoryEditor bind:values {disabled} newStandardItem={addStandardItem} newCustomItem={addCustomItem} groupOrder={["berry", "held item", "evolution", "medicine", "pokeball"]} />
 </Fieldset>

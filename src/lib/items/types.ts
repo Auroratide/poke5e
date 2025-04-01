@@ -1,4 +1,5 @@
-export type ItemType = "berry" | "medicine" | "pokeball" | "evolution" | "held item"
+export const ItemTypes = ["pokeball", "medicine", "berry", "held item", "evolution"] as const
+export type ItemType = typeof ItemTypes[number]
 
 export type Item = {
 	id: string,

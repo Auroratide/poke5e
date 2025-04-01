@@ -3,11 +3,16 @@
 	import { items } from "$lib/items/store"
 	import { createEventDispatcher } from "svelte"
 	import Button from "$lib/design/Button.svelte"
+	import type { ItemType } from "$lib/items/types"
+	import { groupByType } from "$lib/items/group"
 
 	const dispatch = createEventDispatcher()
 
 	export let value: HeldItem
+	export let groupOrder: ItemType[] = []
 	export let disabled: boolean = false
+
+	$: itemGroups = groupByType($items ?? [], groupOrder)
 
 	const onRemove = () => {
 		dispatch("remove")
@@ -18,8 +23,12 @@
 	<label for="item-id-input-{value.id}">Item</label>
 	<div class="flex-row">
 		<select id="item-id-input-{value.id}" bind:value={value.itemId} style:flex="1" {disabled}>
-			{#each ($items ?? []) as selectableItem}
-				<option value={selectableItem.id}>{selectableItem.name}</option>
+			{#each itemGroups as group}
+				<optgroup label="{group.name}">
+					{#each group.items as item (item.id)}
+						<option value={item.id}>{item.name}</option>
+					{/each}
+				</optgroup>
 			{/each}
 		</select>
 		<Button on:click={onRemove}>Remove</Button>

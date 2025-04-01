@@ -29,5 +29,5 @@
 		<span>₽</span>
 		<input id="money-input" type="number" name="money" bind:value={money} step="1" max="2000000000" min="-2000000000" {disabled} required />
 	</span>
-	<InventoryEditor bind:values={inventory} {disabled} newStandardItem={addStandardItem} newCustomItem={addCustomItem} />
+	<InventoryEditor bind:values={inventory} {disabled} newStandardItem={addStandardItem} newCustomItem={addCustomItem} groupOrder={["pokeball", "medicine", "berry", "held item", "evolution"]} />
 </Fieldset>

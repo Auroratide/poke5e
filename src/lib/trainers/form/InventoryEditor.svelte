@@ -2,8 +2,10 @@
 	import Button from "$lib/design/Button.svelte"
 	import type { HeldItem } from "../types"
 	import ItemEditor from "../pokemon-details/ItemEditor.svelte"
+	import type { ItemType } from "$lib/items/types"
 
 	export let values: TItem[]
+	export let groupOrder: ItemType[] = []
 	export let disabled: boolean
 	export let newStandardItem: (id: string) => TItem
 	export let newCustomItem: (id: string) => TItem
@@ -25,7 +27,7 @@
 </script>
 
 {#each values as item (item.id)}
-	<ItemEditor value={item} {disabled} on:remove={removeItem(item.id)} />
+	<ItemEditor value={item} {disabled} {groupOrder} on:remove={removeItem(item.id)} />
 {/each}
 <span></span>
 <div class="row">
