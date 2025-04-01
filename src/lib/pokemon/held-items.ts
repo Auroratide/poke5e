@@ -21,8 +21,8 @@ export function getItemDetails<T extends HeldItem>(item: T, standardItems: Item[
 			...item,
 			name: standardItem?.name ?? item.itemId,
 			description: standardItem?.description?.join(" "),
-			media: standardItem?.media ?? {
-				sprite: HeldItemIcon,
+			media: {
+				sprite: standardItem?.media.sprite ?? HeldItemIcon,
 			},
 		}
 	} else {
