@@ -24,7 +24,7 @@
 }, {
 	key: "type", name: "Type", ratio: 2, sort: byStringField(it => it.type),
 }, {
-	key: "cost", name: "Cost", ratio: 1, sort: byNumericField(it => it.cost ?? -1),
+	key: "cost", name: "Cost", ratio: 2, sort: byNumericField(it => it.cost ?? -1),
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type.replace(" ", "-")}-bg)">
 		<BubbleRow.Cell primary><a href="{Url.items(item.id)}">{item.name}</a></BubbleRow.Cell>
