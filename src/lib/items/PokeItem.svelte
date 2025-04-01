@@ -12,6 +12,11 @@
 	import { hasEvolutionRequirement } from "$lib/pokemon/evolution"
 
 	export let item: Item
+
+	$: pokemonThatEvolve = item.type ==="evolution" ? $pokemon?.filter(hasEvolutionRequirement({
+		type: "item",
+		value: item.name,
+	})) ?? [] : []
 </script>
 
 <Card title={item.name}>
@@ -29,12 +34,9 @@
 		{#if item.type === "pokeball"}
 			<p>See: <a href="{Url.reference.catchingPokemon()}">Catching Pokémon</a></p>
 		{/if}
-		{#if item.type === "evolution"}
+		{#if item.type === "evolution" && pokemonThatEvolve.length > 0}
 			<p>Pokemon that evolve using this item:</p>
-			<SimplePokemonList pokemon={$pokemon?.filter(hasEvolutionRequirement({
-				type: "item",
-				value: item.name,
-			})) ?? []} />
+			<SimplePokemonList pokemon={pokemonThatEvolve} />
 		{/if}
 	</section>
 </Card>

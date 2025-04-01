@@ -2580,110 +2580,120 @@
 			"name": "Dragon Scale",
 			"type": "evolution",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-scale.png"
-			},
-			"_ingameEffect": "Held by Seadra: Evolves the holder into Kingdra when traded."
+			}
 		},
 		{
 			"id": "up-grade",
 			"name": "Upgrade",
 			"type": "evolution",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/up-grade.png"
-			},
-			"_ingameEffect": "Held by Porygon: Evolves the holder into Porygon2 when traded."
+			}
 		},
 		{
 			"id": "protector",
 			"name": "Protector",
 			"type": "evolution",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protector.png"
-			},
-			"_ingameEffect": "Held by Rhydon: Evolves the holder into Rhyperior when traded."
+			}
 		},
 		{
 			"id": "electirizer",
 			"name": "Electirizer",
 			"type": "evolution",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electirizer.png"
-			},
-			"_ingameEffect": "Held by Electabuzz: Evolves the holder into Electivire when traded."
+			}
 		},
 		{
 			"id": "magmarizer",
 			"name": "Magmarizer",
 			"type": "evolution",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magmarizer.png"
-			},
-			"_ingameEffect": "Held by Magmar: Evolves the holder into Magmortar when traded."
+			}
 		},
 		{
 			"id": "dubious-disc",
 			"name": "Dubious Disc",
 			"type": "evolution",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dubious-disc.png"
-			},
-			"_ingameEffect": "Held by Porygon2: Evolves the holder into Porygon-Z when traded."
+			}
 		},
 		{
 			"id": "reaper-cloth",
 			"name": "Reaper Cloth",
 			"type": "evolution",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/reaper-cloth.png"
-			},
-			"_ingameEffect": "Held by Dusclops: Evolves the holder into Dusknoir when traded."
+			}
 		},
 		{
 			"id": "prism-scale",
 			"name": "Prism Scale",
 			"type": "evolution",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/prism-scale.png"
-			},
-			"_ingameEffect": "Held by feebas\n:   Holder evolves into milotic when traded."
+			}
 		},
 		{
 			"id": "whipped-dream",
 			"name": "Whipped Dream",
 			"type": "evolution",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/whipped-dream.png"
-			},
-			"_ingameEffect": "Traded on a Swirlix: Holder evolves into Slurpuff."
+			}
 		},
 		{
 			"id": "sachet",
 			"name": "Sachet",
 			"type": "evolution",
 			"cost": 2000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sachet.png"
-			},
-			"_ingameEffect": "Traded on a Spritzee: Holder evolves into Aromatisse."
+			}
 		},
 		{
 			"id": "sweet",
@@ -2692,38 +2702,8 @@
 			"cost": 500,
 			"description": [
 				"Some Pokémon may consume the power of this item to evolve.",
-				"Comes in different flavors: Strawberry, Love, Berry, Clover, Flower, Star, and Ribbon."
+				"Comes in different flavors, such as strawberry, love, berry, clover, flower, star, and ribbon."
 			],
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "sweet-apple",
-			"name": "Sweet Apple",
-			"type": "evolution",
-			"cost": 2200,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "tart-apple",
-			"name": "Tart Apple",
-			"type": "evolution",
-			"cost": 2200,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "syrupy-apple",
-			"name": "Syrupy Apple",
-			"type": "evolution",
-			"cost": 500,
-			"description": null,
 			"media": {
 				"sprite": null
 			}
@@ -2733,7 +2713,9 @@
 			"name": "Cracked Pot",
 			"type": "evolution",
 			"cost": 1600,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": null
 			}
@@ -2743,17 +2725,21 @@
 			"name": "Chipped Pot",
 			"type": "evolution",
 			"cost": 38000,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": null
 			}
 		},
 		{
 			"id": "unremarkable-teacup",
-			"name": "Unremarlable Teacup",
+			"name": "Unremarkable Teacup",
 			"type": "evolution",
 			"cost": 400,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": null
 			}
@@ -2763,36 +2749,45 @@
 			"name": "Masterpiece Teacup",
 			"type": "evolution",
 			"cost": 9500,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": null
 			}
 		},
 		{
-			"id": "linking-cord",
-			"name": "Linking Cord",
-			"type": "evolution",
-			"cost": 8000,
-			"description": null,
-			"media": {
-				"sprite": null
-			},
-			"_ingameEffect": " The Linking Cord triggers the evolution of certain Pokémon (all of which can alternatively evolve when traded) upon use. This consumes the Linking Cord."
-		},
-		{
 			"id": "black-augurite",
+			"name": "Black Augurite",
 			"type": "evolution",
 			"cost": null,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": null
 			}
 		},
 		{
 			"id": "peat-block",
+			"name": "Peat Block",
 			"type": "evolution",
 			"cost": null,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "auspicious-armor",
+			"name": "Auspicious Armor",
+			"type": "evolution",
+			"cost": 750,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": null
 			}
@@ -2802,7 +2797,9 @@
 			"name": "Malicious Armor",
 			"type": "evolution",
 			"cost": 750,
-			"description": null,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
 			"media": {
 				"sprite": null
 			}
