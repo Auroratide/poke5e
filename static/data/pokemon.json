@@ -72017,10 +72017,32 @@
 				"cha": "25"
 			},
 			"skills": [
-				"all skills"
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
 			],
 			"savingThrows": [
-				"all"
+				"str",
+				"dex",
+				"con",
+				"int",
+				"wis",
+				"cha"
 			],
 			"senses": [
 				{
