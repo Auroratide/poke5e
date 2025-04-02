@@ -469,6 +469,18 @@
 			}
 		},
 		{
+			"id": "berry-juice",
+			"name": "Berry Juice",
+			"type": "medicine",
+			"cost": 500,
+			"description": [
+				"When consumed, restores 20 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berry-juice.png"
+			}
+		},
+		{
 			"id": "lemonade",
 			"name": "Lemonade",
 			"type": "medicine",
@@ -604,9 +616,10 @@
 			"id": "hp-up",
 			"name": "HP Up",
 			"type": "medicine",
-			"cost": 1000,
+			"cost": 2000,
 			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's max HP is increased by 5. Consumed on use."
+				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's max HP is increased by 5. Consumed on use.",
+				"This is a vitamin. Pokémon may only benefit from the effects of one vitamin at a time."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hp-up.png"
@@ -616,9 +629,10 @@
 			"id": "protein",
 			"name": "Protein",
 			"type": "medicine",
-			"cost": 1000,
+			"cost": 2000,
 			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's STR score is increased by 1. Consumed on use."
+				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's STR score is increased by 1. Consumed on use.",
+				"This is a vitamin. Pokémon may only benefit from the effects of one vitamin at a time."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protein.png"
@@ -628,9 +642,10 @@
 			"id": "iron",
 			"name": "Iron",
 			"type": "medicine",
-			"cost": 1000,
+			"cost": 2000,
 			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's CON score is increased by 1. Consumed on use."
+				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's CON score is increased by 1. Consumed on use.",
+				"This is a vitamin. Pokémon may only benefit from the effects of one vitamin at a time."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron.png"
@@ -640,9 +655,10 @@
 			"id": "carbos",
 			"name": "Carbos",
 			"type": "medicine",
-			"cost": 1000,
+			"cost": 2000,
 			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's DEX score is increased by 1. Consumed on use."
+				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's DEX score is increased by 1. Consumed on use.",
+				"This is a vitamin. Pokémon may only benefit from the effects of one vitamin at a time."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/carbos.png"
@@ -652,9 +668,10 @@
 			"id": "calcium",
 			"name": "Calcium",
 			"type": "medicine",
-			"cost": 1000,
+			"cost": 2000,
 			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's WIS score is increased by 1. Consumed on use."
+				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's WIS score is increased by 1. Consumed on use.",
+				"This is a vitamin. Pokémon may only benefit from the effects of one vitamin at a time."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/calcium.png"
@@ -664,9 +681,10 @@
 			"id": "zinc",
 			"name": "Zinc",
 			"type": "medicine",
-			"cost": 10000,
+			"cost": 2000,
 			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's CHA score is increased by 1. Consumed on use."
+				"A trainer may use an action to administer this to a Pokémon. For 8 hours, that Pokémon's CHA score is increased by 1. Consumed on use.",
+				"This is a vitamin. Pokémon may only benefit from the effects of one vitamin at a time."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zinc.png"
