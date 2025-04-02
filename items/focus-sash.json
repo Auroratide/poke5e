@@ -1,0 +1,1 @@
+{"id":"focus-sash","name":"Focus Sash","type":"held item","cost":4000,"description":["This item has 1 charge. If damage would bring the holder to below 1 HP, it instead brings the holder to 1 HP, consuming the charge.","The Focus Sash regains its charge at dawn each day."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png"}}

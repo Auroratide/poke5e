@@ -1,0 +1,1 @@
+{"id":"dream-ball","name":"Dream Ball","type":"pokeball","cost":500,"description":["Reduce the capture DC by 5 if used on a Pokémon affected by the Sleep condition."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dream-ball.png"}}

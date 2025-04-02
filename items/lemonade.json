@@ -1,0 +1,1 @@
+{"id":"lemonade","name":"Lemonade","type":"medicine","cost":800,"description":["When consumed, restores 30 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lemonade.png"}}

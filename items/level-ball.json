@@ -1,0 +1,1 @@
+{"id":"level-ball","name":"Level Ball","type":"pokeball","cost":600,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 5 if your trainer level is higher than the target Pokémon's level."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/level-ball.png"}}

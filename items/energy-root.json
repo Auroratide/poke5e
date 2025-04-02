@@ -1,0 +1,1 @@
+{"id":"energy-root","name":"Energy Root","type":"medicine","cost":1200,"description":["A trainer may use an action to restore 4d12 + 10 HP to an adjacent Pokémon. Consumed on use. Most Pokémon dislike Energy Root, so overuse may result in loss of bond."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-root.png"}}

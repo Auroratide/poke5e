@@ -1,0 +1,1 @@
+{"id":"moon-ball","name":"Moon Ball","type":"pokeball","cost":1000,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against Pokémon that can evolve using a Moon Stone."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moon-ball.png"}}

@@ -1,0 +1,1 @@
+{"id":"great-ball","name":"Great Ball","type":"pokeball","cost":600,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 5."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"}}

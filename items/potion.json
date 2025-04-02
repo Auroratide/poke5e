@@ -1,0 +1,1 @@
+{"id":"potion","name":"Potion","type":"medicine","cost":200,"description":["A trainer may use an action to restore 2d4 + 2 HP to an adjacent Pokémon. Consumed on use."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/potion.png"}}

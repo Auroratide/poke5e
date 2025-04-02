@@ -1,0 +1,1 @@
+{"id":"focus-band","name":"Focus Band","type":"held item","cost":4000,"description":["When the holder would become flinched, roll a d20. On a 10 or higher, the holder does not flinch."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-band.png"}}

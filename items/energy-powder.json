@@ -1,0 +1,1 @@
+{"id":"energy-powder","name":"Energy Powder","type":"medicine","cost":500,"description":["A trainer may use an action to restore 3d6 + 6 HP to an adjacent Pokémon. Consumed on use. Most Pokémon dislike Energy Powder, so overuse may result in loss of bond."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-powder.png"}}

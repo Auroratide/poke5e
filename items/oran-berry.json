@@ -1,0 +1,1 @@
+{"id":"oran-berry","name":"Oran Berry","type":"berry","cost":200,"description":["Consume to restore 2d4 + 2 HP. Can be consumed as a reaction to dropping below half health."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oran-berry.png"}}

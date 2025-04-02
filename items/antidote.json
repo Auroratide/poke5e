@@ -1,0 +1,1 @@
+{"id":"antidote","name":"Antidote","type":"medicine","cost":200,"description":["A trainer may use an action to cure an adjacent Pokémon of the Poisoned or Badly Poisoned conditions. Consumed on use."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/antidote.png"}}

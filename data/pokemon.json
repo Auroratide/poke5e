@@ -1326,12 +1326,8 @@
 				"wis": "10",
 				"cha": "14"
 			},
-			"skills": [
-				"none"
-			],
-			"savingThrows": [
-				"non"
-			],
+			"skills": [],
+			"savingThrows": [],
 			"senses": [],
 			"abilities": [
 				{
@@ -1634,12 +1630,8 @@
 				"wis": "10",
 				"cha": "10"
 			},
-			"skills": [
-				"none"
-			],
-			"savingThrows": [
-				"non"
-			],
+			"skills": [],
+			"savingThrows": [],
 			"senses": [],
 			"abilities": [
 				{
@@ -18576,12 +18568,8 @@
 				"wis": "8",
 				"cha": "10"
 			},
-			"skills": [
-				"none"
-			],
-			"savingThrows": [
-				"non"
-			],
+			"skills": [],
+			"savingThrows": [],
 			"senses": [],
 			"abilities": [
 				{
@@ -38465,12 +38453,8 @@
 				"wis": "10",
 				"cha": "12"
 			},
-			"skills": [
-				"none"
-			],
-			"savingThrows": [
-				"non"
-			],
+			"skills": [],
+			"savingThrows": [],
 			"senses": [],
 			"abilities": [
 				{
@@ -42187,7 +42171,7 @@
 			"description": "The Shed Pokémon. Shedinja's hard body doesn't move-not even a twitch. In fact, its body appears to be merely a hollow shell. It is believed that this Pokémon will steal the spirit of anyone peering into its hollow body from its back.",
 			"ac": 12,
 			"hp": 1,
-			"hitDice": "None",
+			"hitDice": "d6",
 			"speed": [
 				{
 					"type": "flying",
@@ -43072,9 +43056,7 @@
 				"wis": "10",
 				"cha": "10"
 			},
-			"skills": [
-				"none"
-			],
+			"skills": [],
 			"savingThrows": [
 				"con"
 			],
@@ -52454,12 +52436,8 @@
 				"wis": "14",
 				"cha": "10"
 			},
-			"skills": [
-				"none"
-			],
-			"savingThrows": [
-				"non"
-			],
+			"skills": [],
+			"savingThrows": [],
 			"senses": [],
 			"abilities": [
 				{
@@ -72017,10 +71995,32 @@
 				"cha": "25"
 			},
 			"skills": [
-				"all skills"
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
 			],
 			"savingThrows": [
-				"all"
+				"str",
+				"dex",
+				"con",
+				"int",
+				"wis",
+				"cha"
 			],
 			"senses": [
 				{
@@ -75749,12 +75749,8 @@
 				"wis": "8",
 				"cha": "10"
 			},
-			"skills": [
-				"none"
-			],
-			"savingThrows": [
-				"non"
-			],
+			"skills": [],
+			"savingThrows": [],
 			"senses": [],
 			"abilities": [
 				{
@@ -91450,9 +91446,7 @@
 				"wis": "12",
 				"cha": "10"
 			},
-			"skills": [
-				"none"
-			],
+			"skills": [],
 			"savingThrows": [
 				"con"
 			],
@@ -92010,9 +92004,7 @@
 				"wis": "10",
 				"cha": "10"
 			},
-			"skills": [
-				"none"
-			],
+			"skills": [],
 			"savingThrows": [
 				"str",
 				"con"
@@ -111981,12 +111973,8 @@
 				"wis": "10",
 				"cha": "10"
 			},
-			"skills": [
-				"none"
-			],
-			"savingThrows": [
-				"non"
-			],
+			"skills": [],
+			"savingThrows": [],
 			"senses": [],
 			"abilities": [
 				{

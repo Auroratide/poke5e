@@ -1,0 +1,1 @@
+{"id":"dive-ball","name":"Dive Ball","type":"pokeball","cost":1000,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 while underwater."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dive-ball.png"}}

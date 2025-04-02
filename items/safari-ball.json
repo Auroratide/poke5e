@@ -1,0 +1,1 @@
+{"id":"safari-ball","name":"Safari Ball","type":"pokeball","cost":800,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Nature skill modifier."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/safari-ball.png"}}

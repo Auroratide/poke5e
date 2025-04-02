@@ -1,0 +1,1 @@
+{"id":"life-orb","name":"Life Orb","type":"held item","cost":4000,"description":["The holder adds its proficiency bonus to damage it deals, but takes the same amount of typeless-damage each time."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png"}}

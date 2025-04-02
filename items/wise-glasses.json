@@ -1,0 +1,1 @@
+{"id":"wise-glasses","name":"Wise Glasses","type":"held item","cost":4000,"description":["The holder adds its proficiency bonus to damage it deals from ranged attacks (once per move)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wise-glasses.png"}}

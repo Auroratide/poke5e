@@ -1,0 +1,1 @@
+{"id":"heal-powder","name":"Heal Powder","type":"medicine","cost":300,"description":["A trainer may use an action to cure an adjacent Pokémon of all status conditions. Consumed on use. Most Pokémon dislike Heal Powder, so overuse may result in loss of bond."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-powder.png"}}

@@ -1,0 +1,1 @@
+{"id":"nest-ball","name":"Nest Ball","type":"pokeball","cost":1000,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 5 if target Pokémon is level 5 or lower."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nest-ball.png"}}

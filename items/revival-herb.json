@@ -1,0 +1,1 @@
+{"id":"revival-herb","name":"Revival Herb","type":"medicine","cost":2800,"description":["A trainer may use an action to restore 4d12 + 10 HP to a fainted Pokémon in a Pokéball. Consumed on use. Most Pokémon dislike Revival Herbs, so overuse may result in loss of bond."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revival-herb.png"}}

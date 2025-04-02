@@ -1,0 +1,1 @@
+{"id":"x-sp-atk","name":"X Sp. Atk","type":"medicine","cost":1000,"description":["A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to its Move DC."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-sp-atk.png"}}

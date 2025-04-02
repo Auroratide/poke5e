@@ -1,0 +1,1 @@
+{"id":"burn-heal","name":"Burn Heal","type":"medicine","cost":200,"description":["A trainer may use an action to cure an adjacent Pokémon of the Burned condition. Consumed on use."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/burn-heal.png"}}

@@ -1,0 +1,1 @@
+{"id":"fresh-water","name":"Fresh Water","type":"medicine","cost":200,"description":["When consumed, restores 7 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fresh-water.png"}}

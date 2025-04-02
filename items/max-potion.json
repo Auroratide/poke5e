@@ -1,0 +1,1 @@
+{"id":"max-potion","name":"Max Potion","type":"medicine","cost":2500,"description":["A trainer may use an action to administor this medicine to an adjacent Pokémon. 10 minutes after consumption, the Pokémon regains 70 HP. Consumed on use."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-potion.png"}}

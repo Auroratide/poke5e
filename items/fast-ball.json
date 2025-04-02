@@ -1,0 +1,1 @@
+{"id":"fast-ball","name":"Fast Ball","type":"pokeball","cost":600,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Can throw as a reaction to a fleeing Pokémon."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fast-ball.png"}}

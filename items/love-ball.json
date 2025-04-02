@@ -1,0 +1,1 @@
+{"id":"love-ball","name":"Love Ball","type":"pokeball","cost":800,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by twice your active Pokémon's Charisma modifier."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/love-ball.png"}}

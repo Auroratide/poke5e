@@ -1,0 +1,1 @@
+{"id":"dusk-ball","name":"Dusk Ball","type":"pokeball","cost":1000,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 while at night or in darkness."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-ball.png"}}

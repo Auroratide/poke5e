@@ -1,0 +1,1 @@
+{"id":"max-ether","name":"Max Ether","type":"medicine","cost":2000,"description":["A trainer may use an action to restore 10 PP to a single moves of an adjacent Pokémon. Consumed on use."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-ether.png"}}

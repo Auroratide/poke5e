@@ -1,0 +1,1 @@
+{"id":"leppa-berry","name":"Leppa Berry","type":"berry","cost":80,"description":["Consume to restore 3 PP to a move. Can be consumed as a reaction to a move reaching 0 PP."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leppa-berry.png"}}

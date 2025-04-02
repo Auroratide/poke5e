@@ -1,0 +1,1 @@
+{"id":"revive","name":"Revive","type":"medicine","cost":2000,"description":["A trainer may use an action to restore 2d4 + 2 HP to a fainted Pokémon in a Pokéball. Consumed on use."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revive.png"}}

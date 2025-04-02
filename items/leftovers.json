@@ -1,0 +1,1 @@
+{"id":"leftovers","name":"Leftovers","type":"held item","cost":4000,"description":["This item has 10 charges. The holder may use a bonus action to use a charge, healing HP equal to their proficiency bonus."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png"}}

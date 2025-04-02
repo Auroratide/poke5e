@@ -1,0 +1,1 @@
+{"id":"premier-ball","name":"Premier Ball","type":"pokeball","cost":2000,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Rare, and often considered a token of class."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/premier-ball.png"}}

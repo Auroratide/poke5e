@@ -1,0 +1,1 @@
+{"id":"muscle-band","name":"Muscle Band","type":"held item","cost":4000,"description":["The holder adds its proficiency bonus to damage it deals from melee attacks (once per move)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png"}}

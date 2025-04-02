@@ -1,0 +1,1 @@
+{"id":"x-attack","name":"X Attack","type":"medicine","cost":1000,"description":["A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to their attack rolls."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-attack.png"}}
