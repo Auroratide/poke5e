@@ -11,6 +11,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.3.0",
+		description: [
+			"New: Items section, documenting different items made for the 5e ruleset",
+			"New: Inventory and Held Item management in the Trainer editor",
+			"Bug fix: Pokémon with no skill or saving throw proficiencies now get properly added to trainer rosters"
+		],
+	}, {
 		name: "v1.2.5",
 		description: [
 			"Added references: Abilities",
@@ -138,6 +145,9 @@ export const versionHistory: VersionHistory = {
 		],
 	} ],
 	groups: [ {
+		name: "v1.3",
+		description: "Adds items reference and the ability to manage items for both trainers and their Pokémon.",
+	}, {
 		name: "v1.2",
 		description: "Adds ability to edit trainers' biographical information and avatar.",
 	}, {
