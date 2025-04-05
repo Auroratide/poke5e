@@ -3471,6 +3471,23 @@
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
 		{
+      "id": "fiery-wrath",
+      "name": "Fiery Wrath",
+      "type": "dark",
+      "power": [
+        "wis",
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "You transform your wrath into a fire-like aura to attack. Choose any number of creatures in range to make a CHA save against your Move DC. On failure, the creature takes 2d8 + MOVE dark damage and flinches. On success, they take half the damage and do not flinch."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
+    },
+		{
       "id": "fillet-away",
       "name": "Fillet Away",
       "type": "normal",
@@ -4094,6 +4111,23 @@
         "You unleash a freezing cold air that rapidly chills a creature in range. Make a ranged attack on a creature, dealing 1d12 + MOVE ice damage on a hit. On a natural attack roll of 19 or 20, the target is frozen. This move deals super effective damage to water-type creatures. If the target’s secondary type is resistant to ice damage, this move deals standard damage instead."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
+    },
+		{
+      "id": "freezing-glare",
+      "name": "Freezing Glare",
+      "type": "psychic",
+      "power": [
+        "int",
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "60ft",
+      "description": [
+        "You shoot psychic power from your eyes. Choose a creature in line of sight to make a WIS save against your Move DC. On failure, the target takes 2d8 + MOVE psychic damage and becomes frozen. On success, they take half damage and is not frozen."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
     },
     {
       "id": "frenzy-plant",
@@ -11593,6 +11627,23 @@
       "range": "60ft",
       "description": [
         "You send a powerful bolt of electricity at a target in range. Make a ranged attack roll, doing 2d8 + MOVE electric damage on a hit. On a natural attack roll of 19 or 20, the target is paralyzed."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
+    },
+		{
+      "id": "thunderous-kick",
+      "name": "Thunderous Kick",
+      "type": "fighting",
+      "power": [
+        "str",
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You overwhelm the target with lightning-like movement before delivering a kick. Make a melee attack against a target in range, dealing 2d8 + MOVE fighting damage on a hit. On a hit, the target must make a CON save against your Move DC, being knocked prone and knocked back up to 15 ft on failure."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
     },
