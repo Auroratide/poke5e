@@ -122166,6 +122166,366 @@
 			}
 		},
 		{
+			"id": "articuno-galar",
+			"name": "Galarian Articuno",
+			"number": 144,
+			"type": [
+				"psychic",
+				"flying"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Cruel Pokémon. Its feather-like blades are composed of psychic energy and can shear through thick iron sheets as if they were paper.",
+			"ac": 17,
+			"hp": 246,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				},
+				{
+					"type": "flying",
+					"value": 60
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 16,
+				"con": 18,
+				"int": 6,
+				"wis": 18,
+				"cha": 16
+			},
+			"skills": [
+				"arcana",
+				"insight",
+				"intimidation"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				},
+				{
+					"type": "truesight",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "competitive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"gust",
+					"confusion",
+					"reflect",
+					"hypnosis",
+					"agility",
+					"ancient-power",
+					"tailwind",
+					"psycho-cut",
+					"recover",
+					"freezing-glare"
+				],
+				"level18": [
+					"dream-eater",
+					"hurricane",
+					"double-team",
+					"future-sight",
+					"trick-room"
+				],
+				"tm": [
+					5,
+					6,
+					7,
+					10,
+					11,
+					13,
+					14,
+					15,
+					17,
+					18,
+					19,
+					21,
+					27,
+					32,
+					33,
+					37,
+					40,
+					42,
+					44,
+					48,
+					51,
+					58,
+					68,
+					70,
+					76,
+					79,
+					97,
+					88,
+					89,
+					90,
+					100
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10169.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10169.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10169.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10169.png"
+			}
+		},
+		{
+			"id": "zapdos-galar",
+			"name": "Galarian Zapdos",
+			"number": 145,
+			"type": [
+				"fighting",
+				"flying"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Strong Legs Pokémon. One kick from its powerful legs will pulverize a dump truck. Supposedly, this Pokémon runs through the mountains at over 180 mph.",
+			"ac": 17,
+			"hp": 232,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 60
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 20,
+				"con": 16,
+				"int": 6,
+				"wis": 12,
+				"cha": 16
+			},
+			"skills": [
+				"athletics",
+				"arcana",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"dex"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "defiant",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"peck",
+					"focus-energy",
+					"rock-smash",
+					"light-screen",
+					"pluck",
+					"agility",
+					"ancient-power",
+					"brick-break",
+					"drill-peck",
+					"quick-guard",
+					"thunderous-kick"
+				],
+				"level18": [
+					"bulk-up",
+					"counter",
+					"detect",
+					"close-combat",
+					"reversal"
+				],
+				"tm": [
+					5,
+					6,
+					10,
+					11,
+					15,
+					16,
+					17,
+					18,
+					19,
+					21,
+					24,
+					25,
+					27,
+					32,
+					37,
+					40,
+					42,
+					44,
+					48,
+					51,
+					57,
+					58,
+					68,
+					72,
+					73,
+					76,
+					87,
+					88,
+					89,
+					90,
+					93,
+					100
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10170.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10170.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10170.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10170.png"
+			}
+		},
+		{
+			"id": "moltres-galar",
+			"name": "Galarian Moltres",
+			"number": 146,
+			"type": [
+				"dark",
+				"flying"
+			],
+			"size": "large",
+			"sr": 15,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Malevolent Pokémon. This Pokémon’s sinister, flame-like aura will consume the spirit of any creature it hits. Victims become burned-out shadows of themselves.",
+			"ac": 17,
+			"hp": 232,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				},
+				{
+					"type": "flying",
+					"value": 60
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 18,
+				"con": 16,
+				"int": 6,
+				"wis": 16,
+				"cha": 16
+			},
+			"skills": [
+				"arcana",
+				"insight",
+				"intimidation"
+			],
+			"savingThrows": [
+				"con",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 120
+				}
+			],
+			"abilities": [
+				{
+					"id": "berserk",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"gust",
+					"leer",
+					"payback",
+					"safeguard",
+					"wing-attack",
+					"agility",
+					"ancient-power",
+					"sucker-punch",
+					"air-slash",
+					"after-you",
+					"fiery-wrath"
+				],
+				"level18": [
+					"nasty-plot",
+					"hurricane",
+					"endure",
+					"memento",
+					"sky-attack"
+				],
+				"tm": [
+					5,
+					6,
+					10,
+					11,
+					15,
+					17,
+					18,
+					19,
+					20,
+					21,
+					22,
+					27,
+					32,
+					35,
+					38,
+					40,
+					42,
+					43,
+					44,
+					48,
+					50,
+					51,
+					58,
+					61,
+					68,
+					76,
+					87,
+					88,
+					89,
+					90,
+					100
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10171.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10171.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10171.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10171.png"
+			}
+		},
+		{
 			"id": "galarian-slowking",
 			"name": "Galarian Slowking",
 			"number": 199,
