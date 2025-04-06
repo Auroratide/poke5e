@@ -11,11 +11,17 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.3.1",
+		description: [
+			"Added Pokémon: Galarian Articuno, Galarian Zapdos, Galarian Moltres",
+			"Added reference: Breeding",
+		],
+	}, {
 		name: "v1.3.0",
 		description: [
 			"New: Items section, documenting different items made for the 5e ruleset",
 			"New: Inventory and Held Item management in the Trainer editor",
-			"Bug fix: Pokémon with no skill or saving throw proficiencies now get properly added to trainer rosters"
+			"Bug fix: Pokémon with no skill or saving throw proficiencies now get properly added to trainer rosters",
 		],
 	}, {
 		name: "v1.2.5",
