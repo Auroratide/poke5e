@@ -1,0 +1,1 @@
+import{w as t,r as s}from"./MKEaUgcW.js";import{b as n}from"./BiIoTypo.js";const i=s(void 0,o=>{typeof window<"u"&&fetch(`${n}/moves.json`).then(e=>e.json()).then(e=>o(e.moves))}),f=s(void 0,o=>{typeof window<"u"&&fetch(`${n}/tms.json`).then(e=>e.json()).then(e=>o(e.items))}),m=t(""),c=t(()=>0),d=t(""),h=t(()=>0);export{d as a,h as b,c,m as f,i as m,f as t};
