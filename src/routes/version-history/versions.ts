@@ -11,6 +11,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.3.2",
+		description: [
+			"Bug fix: Sunny Castform uses correct sprite",
+		],
+	}, {
 		name: "v1.3.1",
 		description: [
 			"Added Pokémon: Galarian Articuno, Galarian Zapdos, Galarian Moltres",
