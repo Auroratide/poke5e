@@ -530,6 +530,11 @@
       "name": "Honey Gather",
       "description": "At the end of each battle, this Pokémon may roll a d20 + its proficiency bonus. On a result of 20 or higher, its trainer adds a Honey to their inventory."
     },
+		{
+      "id": "hospitality",
+      "name": "Hospitality",
+      "description": "At the start of its turn, all allies within 20ft of this Pokémon gain 1d4 temporary HP. This replaces existing temporary HP."
+    },
     {
       "id": "huge-power",
       "name": "Huge Power",

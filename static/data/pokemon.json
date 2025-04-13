@@ -151565,6 +151565,244 @@
 			}
 		},
 		{
+			"id": "poltchageist",
+			"name": "Poltchageist",
+			"number": 1012,
+			"type": [
+				"grass",
+				"ghost"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"mineral",
+				"amorphous"
+			],
+			"gender": "0:0",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "sinistcha",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 4
+							},
+							{
+								"type": "item",
+								"value": "Unremarkable Teacup"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Matcha Pokémon. Supposedly, the regrets of a tea ceremony master who died before perfecting his craft lingered in some matcha and became a Pokémon.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": 10,
+				"dex": 13,
+				"con": 12,
+				"int": 6,
+				"wis": 12,
+				"cha": 11
+			},
+			"hp": 17,
+			"skills": [
+				"stealth",
+				"deception"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "hospitality",
+					"hidden": false
+				},
+				{
+					"id": "heatproof",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"stun-spore",
+					"withdraw",
+					"astonish"
+				],
+				"level2": [
+					"absorb"
+				],
+				"level6": [
+					"foul-play",
+					"life-dew"
+				],
+				"level10": [
+					"mega-drain",
+					"hex"
+				],
+				"level14": [
+					"rage-powder",
+					"giga-drain"
+				],
+				"level18": [
+					"shadow-ball",
+					"memento",
+					"leaf-storm"
+				],
+				"tm": [
+					4,
+					17,
+					22,
+					33,
+					44,
+					53,
+					55,
+					77,
+					88,
+					90,
+					92
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1012.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1012.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1012.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1012.png"
+			}
+		},
+		{
+			"id": "sinistcha",
+			"name": "Sinistcha",
+			"number": 1013,
+			"type": [
+				"grass",
+				"ghost"
+			],
+			"size": "tiny",
+			"sr": 9,
+			"minLevel": 8,
+			"eggGroup": [
+				"mineral",
+				"amorphous"
+			],
+			"gender": "0:0",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"poltchageist"
+				]
+			},
+			"description": "The Matcha Pokémon. It pretends to be tea, trying to fool people into drinking it so it can drain their life-force. Its ruse is generally unsuccessful.",
+			"ac": 17,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 15,
+				"con": 15,
+				"int": 6,
+				"wis": 15,
+				"cha": 14
+			},
+			"hp": 74,
+			"skills": [
+				"stealth",
+				"deception"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "hospitality",
+					"hidden": false
+				},
+				{
+					"id": "heatproof",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"stun-spore",
+					"withdraw",
+					"astonish",
+					"matcha-gotcha",
+					"absorb",
+					"life-dew"
+				],
+				"level10": [
+					"foul-play",
+					"mega-drain",
+					"hex"
+				],
+				"level14": [
+					"rage-powder",
+					"strength-sap"
+				],
+				"level18": [
+					"shadow-ball",
+					"memento",
+					"leaf-storm"
+				],
+				"tm": [
+					4,
+					15,
+					17,
+					22,
+					33,
+					44,
+					53,
+					55,
+					77,
+					88,
+					90,
+					92
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1013.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1013.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1013.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1013.png"
+			}
+		},
+		{
 			"id": "hydrapple",
 			"name": "Hydrapple",
 			"number": 1019,

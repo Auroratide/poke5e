@@ -6464,6 +6464,23 @@
         "You conjure up a ethereal, protective mat to shield you and your allies. Until the end of your next turn, any ally creature within 15 feet of you (including you) is immune to damage from damaging moves. Status-inducing moves can still affect their targets."
       ]
     },
+		{
+      "id": "matcha-gotcha",
+      "name": "Matcha Gotcha",
+      "type": "grass",
+      "power": [
+        "dex",
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "self (20ft cone)",
+      "description": [
+        "You spray a blast of tea that you mixed. Creatures in range must make a DEX save against your Move DC, taking 2d6 + MOVE grass damage on failure, half on success. For each creature that failed the save, you regain 1d6 HP."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
     {
       "id": "me-first",
       "name": "Me First",
