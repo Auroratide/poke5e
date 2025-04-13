@@ -152765,6 +152765,410 @@
 			}
 		},
 		{
+			"id": "gouging-fire",
+			"name": "Gouging Fire",
+			"number": 1020,
+			"type": [
+				"fire",
+				"dragon"
+			],
+			"size": "large",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. There are scant few reports of this creature being sighted. One short video shows it rampaging and spouting pillars of flame.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 21,
+				"dex": 17,
+				"con": 19,
+				"int": 5,
+				"wis": 11,
+				"cha": 10
+			},
+			"hp": 161,
+			"skills": [
+				"survival",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "protosynthesis",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"stomp",
+					"leer",
+					"sunny-day",
+					"incinerate",
+					"fire-fang",
+					"howl",
+					"bite",
+					"dragon-claw",
+					"crush-claw",
+					"dragon-rush",
+					"morning-sun",
+					"burning-bulwark"
+				],
+				"level18": [
+					"fire-blast",
+					"outrage",
+					"flare-blitz",
+					"lava-plume",
+					"raging-fury"
+				],
+				"tm": [
+					5,
+					15,
+					17,
+					26,
+					35,
+					42,
+					43,
+					44,
+					50,
+					67,
+					68,
+					71,
+					78,
+					82,
+					88,
+					90,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1020.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1020.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1020.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1020.png"
+			}
+		},
+		{
+			"id": "raging-bolt",
+			"name": "Raging Bolt",
+			"number": 1021,
+			"type": [
+				"electric",
+				"dragon"
+			],
+			"size": "huge",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. It's said to incinerate everything around it with lightning launched from its fur. Very little is known about this creature.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 13,
+				"con": 22,
+				"int": 5,
+				"wis": 18,
+				"cha": 10
+			},
+			"hp": 180,
+			"skills": [
+				"survival",
+				"intimidation"
+			],
+			"savingThrows": [
+				"con",
+				"wis"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "protosynthesis",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"stomp",
+					"twister",
+					"sunny-day",
+					"shock-wave",
+					"charge",
+					"dragon-breath",
+					"discharge",
+					"electric-terrain",
+					"dragon-tail",
+					"dragon-hammer",
+					"thunderclap",
+					"calm-mind"
+				],
+				"level18": [
+					"thunder",
+					"zap-cannon",
+					"dragon-pulse",
+					"body-press",
+					"rising-voltage"
+				],
+				"tm": [
+					5,
+					12,
+					15,
+					17,
+					22,
+					24,
+					26,
+					42,
+					44,
+					57,
+					68,
+					72,
+					73,
+					88,
+					90,
+					93,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1021.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1021.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1021.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1021.png"
+			}
+		},
+		{
+			"id": "iron-boulder",
+			"name": "Iron Boulder",
+			"number": 1022,
+			"type": [
+				"rock",
+				"psychic"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. It was named after a mysterious object recorded in an old book. Its body seems to be metallic.",
+			"ac": 17,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 22,
+				"con": 16,
+				"int": 8,
+				"wis": 11,
+				"cha": 11
+			},
+			"hp": 152,
+			"skills": [
+				"athletics",
+				"survival"
+			],
+			"savingThrows": [
+				"str",
+				"dex"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "quark-drive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"horn-attack",
+					"leer",
+					"rock-throw",
+					"electric-terrain",
+					"quick-attack",
+					"slash",
+					"agility",
+					"psycho-cut",
+					"counter",
+					"sacred-sword",
+					"mighty-cleave",
+					"rock-tomb"
+				],
+				"level18": [
+					"swords-dance",
+					"megahorn",
+					"giga-impact",
+					"stone-edge",
+					"quick-guard"
+				],
+				"tm": [
+					3,
+					12,
+					15,
+					17,
+					26,
+					29,
+					31,
+					37,
+					40,
+					42,
+					44,
+					78,
+					81,
+					84,
+					88,
+					90,
+					93
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1022.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1022.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1022.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1022.png"
+			}
+		},
+		{
+			"id": "iron-crown",
+			"name": "Iron Crown",
+			"number": 1023,
+			"type": [
+				"steel",
+				"psychic"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. There was supposedly an incident in which it launched shining blades to cut everything around it to pieces. Little else is known about it.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 18,
+				"con": 16,
+				"int": 8,
+				"wis": 21,
+				"cha": 14
+			},
+			"hp": 142,
+			"skills": [
+				"insight",
+				"perception"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "quark-drive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"confusion",
+					"metal-claw",
+					"electric-terrain",
+					"smart-strike",
+					"slash",
+					"iron-defense",
+					"psyshock",
+					"psycho-cut",
+					"tachyon-cutter",
+					"sacred-sword",
+					"flash-cannon"
+				],
+				"level18": [
+					"hyper-beam",
+					"future-sight",
+					"metal-burst",
+					"quick-guard",
+					"volt-switch"
+				],
+				"tm": [
+					4,
+					17,
+					29,
+					31,
+					42,
+					44,
+					52,
+					68,
+					75,
+					78,
+					81,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1023.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1023.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1023.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1023.png"
+			}
+		},
+		{
 			"id": "rookite",
 			"name": "Rookite",
 			"unofficial": true,

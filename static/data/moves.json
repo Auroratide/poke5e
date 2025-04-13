@@ -1363,6 +1363,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 3d10 at level 5, 5d8 at level 10, and 8d8 at level 17."
     },
+		{
+      "id": "burning-bulwark",
+      "name": "Burning Bulwark",
+      "type": "fire",
+      "power": [
+        "con"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "1 minute, concentration",
+      "range": "self",
+      "description": [
+        "Your intensely hot fur burns any attacker that makes direct contact. Flames wreathe your body for the duration, shedding Bright Light in a 10ft radius and Dim Light for an additional 10ft.",
+				"Whenever a creature hits you with a melee attack roll, the bulwark erupts with flame. The attacker takes 1d8 + MOVE fire damage."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 3d8 at level 10, and 4d8 at level 17."
+    },
     {
       "id": "calm-mind",
       "name": "Calm Mind",
@@ -6727,6 +6744,22 @@
         "You summon a move at random to inflict against a creature. When you use this move, roll a d100. The resulting number is the TM number for the move you make. If the move is unable to be completed because of positioning, range, etc., Metronome fails."
       ]
     },
+		{
+      "id": "mighty-cleave",
+      "name": "Mighty Cleave",
+      "type": "rock",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You wield the light that has accumulated atop your head to cleave the target. Make a melee attack, dealing 2d8 + MOVE rock damage on a hit. This move hits and deals damage even through moves/abilities that would negate it, such as Protect, Spiky Shield, etc."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
+    },
     {
       "id": "milk-drink",
       "name": "Milk Drink",
@@ -11275,6 +11308,22 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
+		{
+      "id": "tachyon-cutter",
+      "name": "Tachyon Cutter",
+      "type": "steel",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "You launch particle blades at the opponent twice in a row. This move is guaranteed to hit twice, each for 1d4 + MOVE steel damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d10 at level 10, and 2d8 at level 17."
+    },
     {
       "id": "tackle",
       "name": "Tackle",
@@ -11744,6 +11793,22 @@
         "You send a powerful bolt of electricity at a target in range. Make a ranged attack roll, doing 2d8 + MOVE electric damage on a hit. On a natural attack roll of 19 or 20, the target is paralyzed."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
+    },
+		{
+      "id": "thunderclap",
+      "name": "Thunderclap",
+      "type": "electric",
+      "power": [
+        "dex"
+      ],
+      "time": "1 reaction",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "120ft",
+      "description": [
+        "As a reaction to being attacked with a ranged attack by a creature you can see in range, you may strike first with a jolt of electricity. Make a ranged attack against the attacker, dealing 1d6 + MOVE electric damage on a hit. Your roll happens before theirs."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
     },
 		{
       "id": "thunderous-kick",
