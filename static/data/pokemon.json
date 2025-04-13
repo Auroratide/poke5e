@@ -151803,6 +151803,316 @@
 			}
 		},
 		{
+			"id": "okidogi",
+			"name": "Okidogi",
+			"number": 1014,
+			"type": [
+				"poison",
+				"fighting"
+			],
+			"size": "medium",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:1",
+			"description": "The Retainer Pokémon. After all its muscles were stimulated by the toxic chain around its neck, Okidogi transformed and gained a powerful physique.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 21,
+				"dex": 13,
+				"con": 17,
+				"int": 10,
+				"wis": 10,
+				"cha": 13
+			},
+			"hp": 192,
+			"skills": [
+				"athletics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "toxic-chain",
+					"hidden": false
+				},
+				{
+					"id": "guard-dog",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"bite",
+					"low-kick",
+					"bulk-up",
+					"howl",
+					"poison-fang",
+					"force-palm",
+					"counter",
+					"crunch",
+					"superpower",
+					"poison-jab",
+					"giga-impact",
+					"brutal-swing"
+				],
+				"tm": [
+					5,
+					6,
+					12,
+					15,
+					17,
+					31,
+					34,
+					36,
+					39,
+					42,
+					44,
+					46,
+					47,
+					52,
+					56,
+					65,
+					88,
+					90,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1014.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1014.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1014.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1014.png"
+			}
+		},
+		{
+			"id": "munkidori",
+			"name": "Munkidori",
+			"number": 1015,
+			"type": [
+				"poison",
+				"psychic"
+			],
+			"size": "small",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:1",
+			"description": "The Retainer Pokémon. The chain is made from toxins that enhance capabilities. It stimulated Munkidori's brain and caused the Pokémon's psychic powers to bloom.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				},
+				{
+					"type": "climbing",
+					"value": 15
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 18,
+				"con": 15,
+				"int": 20,
+				"wis": 16,
+				"cha": 11
+			},
+			"hp": 172,
+			"skills": [
+				"arcana",
+				"insight",
+				"persuasion"
+			],
+			"savingThrows": [
+				"int",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "toxic-chain",
+					"hidden": false
+				},
+				{
+					"id": "frisk",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"confusion",
+					"fake-out",
+					"flatter",
+					"helping-hand",
+					"psybeam",
+					"clear-smog",
+					"poison-jab",
+					"psychic",
+					"future-sight",
+					"nasty-plot",
+					"sludge-wave",
+					"parting-shot"
+				],
+				"tm": [
+					3,
+					4,
+					6,
+					9,
+					12,
+					15,
+					16,
+					17,
+					30,
+					36,
+					42,
+					44,
+					46,
+					52,
+					56,
+					65,
+					68,
+					77,
+					86,
+					88,
+					89,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1015.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1015.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1015.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1015.png"
+			}
+		},
+		{
+			"id": "fezandipiti",
+			"name": "Fezandipiti",
+			"number": 1016,
+			"type": [
+				"poison",
+				"fairy"
+			],
+			"size": "medium",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:1",
+			"description": "The Retainer Pokémon. Fezandipiti owes its beautiful looks and lovely voice to the toxic stimulants emanating from the chain wrapped around its body.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 15
+				},
+				{
+					"type": "flying",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 18,
+				"con": 14,
+				"int": 10,
+				"wis": 14,
+				"cha": 21
+			},
+			"hp": 192,
+			"skills": [
+				"perception",
+				"intimidation",
+				"performance"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "toxic-chain",
+					"hidden": false
+				},
+				{
+					"id": "technician",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"double-kick",
+					"peck",
+					"poison-gas",
+					"disarming-voice",
+					"quick-attack",
+					"attract",
+					"wing-attack",
+					"cross-poison",
+					"swagger",
+					"beat-up",
+					"flatter",
+					"roost",
+					"tail-slap",
+					"moonblast"
+				],
+				"tm": [
+					4,
+					6,
+					9,
+					12,
+					15,
+					16,
+					17,
+					30,
+					36,
+					40,
+					42,
+					44,
+					46,
+					62,
+					65,
+					68,
+					75,
+					76,
+					77,
+					84,
+					88,
+					89,
+					90,
+					97,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1016.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1016.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1016.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1016.png"
+			}
+		},
+		{
 			"id": "hydrapple",
 			"name": "Hydrapple",
 			"number": 1019,

@@ -1421,6 +1421,11 @@
       "description": "When this Pokémon is hit by a poison-type attack, its next attack is rolled at advantage."
     },
 		{
+      "id": "toxic-chain",
+      "name": "Toxic Chain",
+      "description": "When this Pokémon lands a hit against a target using a melee attack, the target must make a CON save DC 16, becoming badly poisoned on failure."
+    },
+		{
       "id": "toxic-debris",
       "name": "Toxic Debris",
       "description": "When this Pokémon is damaged, it may use its reaction to emit toxic spikes. Each creature within 5ft of it must make a DEX save against a DC of this Pokémon's level + 2. On failure, the creature is poisoned."
