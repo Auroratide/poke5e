@@ -1311,6 +1311,11 @@
       "description": "This Pokémon increases its critical hit range by 1 (20 to 19+, etc.)"
     },
 		{
+      "id": "supersweet-syrup",
+      "name": "Supersweet Syrup",
+      "description": "Attacks made against creatures within 30ft of this Pokémon gain 1d4 on the roll. Creatures with no sense of smell are not affected by this ability."
+    },
+		{
       "id": "supreme-overlord",
       "name": "Supreme Overlord",
       "description": "This Pokémon adds +1 to its attack rolls for each currently downed ally, up to a maximum of +5."

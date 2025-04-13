@@ -2542,6 +2542,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
+		{
+      "id": "dragon-cheer",
+      "name": "Dragon Cheer",
+      "type": "dragon",
+      "power": [
+        "cha"
+      ],
+      "time": "1 bonus action",
+      "pp": 5,
+      "duration": "1 minute",
+      "range": "60ft",
+      "description": [
+        "You can use a bonus action to choose one ally other than yourself within 60 feet of you who can hear you. That ally's critical hit range is extended by 1 for the next minute or until they land a critical hit, whichever happens first. If the ally is Dragon-type, double the critical hit range extension. This bonus does not stack.",
+				"A critical hit range extension of 1 means a critical occurs on a natural 19 or 20."
+      ],
+      "higherLevels": "The critical range extension changes to 2 at level 10."
+    },
     {
       "id": "dragon-claw",
       "name": "Dragon Claw",
@@ -11193,6 +11210,23 @@
         "You regenerate from the inside, healing some of your wounds. Heal yourself for 1d12 + MOVE hit points. If activated in harsh sunlight, double the healing dice."
       ],
       "higherLevels": "The healing dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
+    },
+		{
+      "id": "syrup-bomb",
+      "name": "Syrup Bomb",
+      "type": "grass",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "3 rounds",
+      "range": "60ft",
+      "description": [
+        "You set off an explosion of sticky candy syrup at a point within range. Each creature within 5ft of that point must make a DEX save against your Move DC, taking 1d10 + MOVE grass damage on failure, half on success. On failure, the creature also falls Prone.",
+				"Syrup then covers the ground within 5ft of the target point for the duration. A creature that enters the area or ends its turn there must make a DEX save against your Move DC, falling Prone on failure."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
     },
     {
       "id": "tackle",

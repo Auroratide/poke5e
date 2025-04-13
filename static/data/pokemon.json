@@ -127464,7 +127464,7 @@
 			"gender": "1:1",
 			"evolution": {
 				"stage": "1",
-				"maxStage": "2",
+				"maxStage": "3",
 				"to": [
 					{
 						"id": "flapple",
@@ -127495,6 +127495,25 @@
 							{
 								"type": "special",
 								"value": "inhabiting a red apple"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 14
+							}
+						]
+					},
+					{
+						"id": "dipplin",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 5
+							},
+							{
+								"type": "special",
+								"value": "inhabiting a syrup-covered apple"
 							}
 						],
 						"effects": [
@@ -151406,6 +151425,258 @@
 				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1010.png",
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1010.png",
 				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1010.png"
+			}
+		},
+		{
+			"id": "dipplin",
+			"name": "Dipplin",
+			"number": 1011,
+			"type": [
+				"grass",
+				"dragon"
+			],
+			"size": "tiny",
+			"sr": 7,
+			"minLevel": 5,
+			"eggGroup": [
+				"grass",
+				"dragon"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"applin"
+				],
+				"to": [
+					{
+						"id": "hydrapple",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 10
+							},
+							{
+								"type": "move",
+								"value": "dragon-cheer"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 6
+							}
+						]
+					}
+				]
+			},
+			"description": "The Candy Apple Pokémon. Dipplin is two creatures in one Pokémon. Its evolution was triggered by a special apple grown only in one place.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 15
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 10,
+				"con": 16,
+				"int": 6,
+				"wis": 14,
+				"cha": 12
+			},
+			"hp": 50,
+			"skills": [
+				"stealth",
+				"deception"
+			],
+			"savingThrows": [
+				"str",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "supersweet-syrup",
+					"hidden": false
+				},
+				{
+					"id": "gluttony",
+					"hidden": false
+				},
+				{
+					"id": "sticky-hold",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"withdraw",
+					"sweet-scent",
+					"recycle",
+					"astonish",
+					"double-hit",
+					"growth",
+					"dragon-tail"
+				],
+				"level6": [
+					"dragon-breath",
+					"protect",
+					"bullet-seed"
+				],
+				"level10": [
+					"syrup-bomb",
+					"dragon-pulse"
+				],
+				"level14": [
+					"recover"
+				],
+				"level18": [
+					"substitute",
+					"energy-ball"
+				],
+				"tm": [
+					11,
+					15,
+					22,
+					33,
+					42,
+					44,
+					68,
+					74,
+					86,
+					88,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1011.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1011.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1011.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1011.png"
+			}
+		},
+		{
+			"id": "hydrapple",
+			"name": "Hydrapple",
+			"number": 1019,
+			"type": [
+				"grass",
+				"dragon"
+			],
+			"size": "medium",
+			"sr": 13,
+			"minLevel": 10,
+			"eggGroup": [
+				"grass",
+				"dragon"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"dipplin"
+				]
+			},
+			"description": "The Apple Hydra Pokémon. Seven syrpents live inside an apple made of syrup. The syrpent in the center is the commander.",
+			"ac": 17,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 12,
+				"con": 18,
+				"int": 6,
+				"wis": 16,
+				"cha": 13
+			},
+			"hp": 112,
+			"skills": [
+				"stealth",
+				"deception"
+			],
+			"savingThrows": [
+				"str",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "supersweet-syrup",
+					"hidden": false
+				},
+				{
+					"id": "regenerator",
+					"hidden": false
+				},
+				{
+					"id": "sticky-hold",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"withdraw",
+					"sweet-scent",
+					"recycle",
+					"astonish",
+					"fickle-beam",
+					"growth",
+					"dragon-tail",
+					"protect",
+					"dragon-breath",
+					"bullet-seed",
+					"syrup-bomb"
+				],
+				"level14": [
+					"dragon-pulse",
+					"recover"
+				],
+				"level18": [
+					"substitute",
+					"energy-ball",
+					"power-whip"
+				],
+				"tm": [
+					11,
+					15,
+					18,
+					22,
+					26,
+					33,
+					42,
+					44,
+					68,
+					74,
+					86,
+					88,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1019.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1019.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1019.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1019.png"
 			}
 		},
 		{
