@@ -305,6 +305,26 @@
       "name": "Electromorphosis",
       "description": "When this Pokémon takes damage, it may double the MOVE damage modifier of its next electric-type move."
     },
+		{
+      "id": "embody-aspect-cornerstone",
+      "name": "Embody Aspect (Cornerstone)",
+      "description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's CON score becomes 23, unless it is already higher."
+    },
+		{
+      "id": "embody-aspect-heartflame",
+      "name": "Embody Aspect (Heartflame)",
+      "description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's STR score becomes 23, unless it is already higher."
+    },
+		{
+      "id": "embody-aspect-teal",
+      "name": "Embody Aspect (Teal)",
+      "description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's DEX score becomes 23, unless it is already higher."
+    },
+		{
+      "id": "embody-aspect-wellspring",
+      "name": "Embody Aspect (Wellspring)",
+      "description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's CHA score becomes 23, unless it is already higher."
+    },
     {
       "id": "emergency-exit",
       "name": "Emergency Exit",
@@ -399,6 +419,11 @@
       "id": "form-change-necrozma",
       "name": "Form Change (Necrozma)",
       "description": "Necrozma can fuse with a willing Solgaleo, at will, with the help of the N-Solarizer, or Lunala with the help of the N-Lunarizer. The fusion will result in a Dusk Mane Necrozma (if fused with Solgaleo) or Dawn Wings Necrozma (if fused with Lunala) with the same current HP."
+    },
+		{
+      "id": "form-change-ogerpon",
+      "name": "Form Change (Ogerpon)",
+      "description": "Ogerpon's form changes depending on the type of mask it wears. The four masks it can wear are the Teal Mask (Grass), Wellspring Mask (Water), Heartflame Mask (Fire), and Cornerstone Mask (Rock). Additionally, when terastallized, Ogerpon's type changes to that of its mask, regardless of its Tera Type."
     },
     {
       "id": "form-change-oricorio",
