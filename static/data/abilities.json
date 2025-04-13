@@ -440,6 +440,11 @@
       "name": "Form Change (Shaymin)",
       "description": "Shaymin's default form is Land. When Given a Gracidea Flower to hold, it can change to Sky Form, taking on new typing, statistics, and moves"
     },
+		{
+      "id": "form-change-terapagos",
+      "name": "Form Change (Terapagos)",
+      "description": "Terapagos changes into its Stellar Form whenever it terastallizes. In Stellar Form, its type is Stellar regardless of its Tera Type. When its terastallization ends, it reverts back to either its Normal Form or Terastal Form, whichever it was when it terastallized."
+    },
     {
       "id": "form-change-ultra-necrozma",
       "name": "Form Change (Ultra Necrozma)",
@@ -1409,6 +1414,21 @@
       "id": "telepathy",
       "name": "Telepathy",
       "description": "This Pokémon cannot be damaged by its allies' attacks."
+    },
+		{
+      "id": "tera-shell",
+      "name": "Tera Shell",
+      "description": "While Terapagos is at full HP, it is resistant to all damage types."
+    },
+		{
+      "id": "tera-shift",
+      "name": "Tera Shift",
+      "description": "Terapagos can shift into its Terastal form a number of times per day equal to its CON modifier as a free action. It reverts to its normal form after 10 minutes or at will."
+    },
+		{
+      "id": "teraform-zero",
+      "name": "Teraform Zero",
+      "description": "While Terapagos is in its Stellar Form, all terrain and weather effects within 1000ft end, and the terrain and weather cannot be changed."
     },
     {
       "id": "teravolt",

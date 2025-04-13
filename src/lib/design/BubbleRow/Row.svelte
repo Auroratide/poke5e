@@ -16,7 +16,7 @@
 	}
 
 	tr :global(td) {
-		background-color: var(--skin-content);
+		background: var(--skin-content);
 		color: var(--skin-content-text);
 	}
 
@@ -31,7 +31,7 @@
 	}
 
 	tr :global(.primary) {
-		background-color: var(--skin-bg);
+		background: var(--skin-bg);
 		color: var(--skin-bg-text);
 	}
 
@@ -50,11 +50,11 @@
 	}
 
 	tr.interactive:hover :global(td) {
-		background-color: var(--skin-bg);
+		background: var(--skin-bg);
 		color: var(--skin-bg-text);
 	}
 
 	tr.interactive:hover :global(td.primary) {
-		background-color: var(--skin-local-bg);
+		background: var(--skin-local-bg);
 	}
 </style>

@@ -39,7 +39,7 @@
 
 <style>
 	.type-tag {
-		background-color: var(--skin-local-bg);
+		background: var(--skin-local-bg);
 		color: var(--skin-bg-text);
 		border-radius: 1em;
 		text-transform: capitalize;
@@ -51,7 +51,7 @@
 	.type {
 		display: inline-block;
 		padding: 0.25em 1em;
-		background-color: var(--skin-local-bg);
+		background: var(--skin-local-bg);
 		border: none;
 		color: var(--skin-bg-text);
 	}
