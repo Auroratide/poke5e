@@ -945,6 +945,11 @@
       "name": "Poison Point",
       "description": "When this Pokémon is hit with a melee attack, roll a 1d4. On a result of 4, the attacker takes an amount of poison damage equal to this Pokémon’s proficiency modifier."
     },
+		{
+      "id": "poison-puppeteer",
+      "name": "Poison Puppeteer",
+      "description": "When this Pokémon inflicts the Poisoned or Badly Poisoned condition, it also inflicts the Charmed condition. Creatures charmed this way may attempt to break from the charm at the end of each of their turns with a CHA save against this Pokémon's CHA DC."
+    },
     {
       "id": "poison-touch",
       "name": "Poison Touch",

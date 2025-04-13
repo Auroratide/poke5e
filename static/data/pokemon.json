@@ -153484,6 +153484,94 @@
 			}
 		},
 		{
+			"id": "pecharunt",
+			"name": "Pecharunt",
+			"number": 1025,
+			"type": [
+				"poison",
+				"ghost"
+			],
+			"size": "tiny",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Subjugation Pokémon. It feeds others toxic mochi that draw out desires and capabilities. Those who eat the mochi fall under Pecharunt’s control, chained to its will.",
+			"ac": 20,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 16,
+				"con": 16,
+				"int": 16,
+				"wis": 16,
+				"cha": 23
+			},
+			"hp": 212,
+			"skills": [
+				"sleight of hand",
+				"medicine",
+				"persuasion"
+			],
+			"savingThrows": [
+				"dex",
+				"wis",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "truesight",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "poison-puppeteer",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"smog",
+					"poison-gas",
+					"memento",
+					"astonish",
+					"withdraw",
+					"destiny-bond",
+					"fake-tears",
+					"parting-shot",
+					"toxic",
+					"recover",
+					"shadow-ball",
+					"nasty-plot",
+					"malignant-chain"
+				],
+				"tm": [
+					9,
+					17,
+					34,
+					36,
+					44,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1025.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1025.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1025.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1025.png"
+			}
+		},
+		{
 			"id": "rookite",
 			"name": "Rookite",
 			"unofficial": true,
