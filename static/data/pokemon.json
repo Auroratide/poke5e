@@ -152113,121 +152113,6 @@
 			}
 		},
 		{
-			"id": "hydrapple",
-			"name": "Hydrapple",
-			"number": 1019,
-			"type": [
-				"grass",
-				"dragon"
-			],
-			"size": "medium",
-			"sr": 13,
-			"minLevel": 10,
-			"eggGroup": [
-				"grass",
-				"dragon"
-			],
-			"gender": "1:1",
-			"evolution": {
-				"maxStage": "3",
-				"stage": "3",
-				"from": [
-					"dipplin"
-				]
-			},
-			"description": "The Apple Hydra Pokémon. Seven syrpents live inside an apple made of syrup. The syrpent in the center is the commander.",
-			"ac": 17,
-			"hitDice": "d12",
-			"speed": [
-				{
-					"type": "walking",
-					"value": 20
-				}
-			],
-			"attributes": {
-				"str": 17,
-				"dex": 12,
-				"con": 18,
-				"int": 6,
-				"wis": 16,
-				"cha": 13
-			},
-			"hp": 112,
-			"skills": [
-				"stealth",
-				"deception"
-			],
-			"savingThrows": [
-				"str",
-				"cha"
-			],
-			"senses": [
-				{
-					"type": "darkvision",
-					"value": 30
-				}
-			],
-			"abilities": [
-				{
-					"id": "supersweet-syrup",
-					"hidden": false
-				},
-				{
-					"id": "regenerator",
-					"hidden": false
-				},
-				{
-					"id": "sticky-hold",
-					"hidden": true
-				}
-			],
-			"moves": {
-				"start": [
-					"withdraw",
-					"sweet-scent",
-					"recycle",
-					"astonish",
-					"fickle-beam",
-					"growth",
-					"dragon-tail",
-					"protect",
-					"dragon-breath",
-					"bullet-seed",
-					"syrup-bomb"
-				],
-				"level14": [
-					"dragon-pulse",
-					"recover"
-				],
-				"level18": [
-					"substitute",
-					"energy-ball",
-					"power-whip"
-				],
-				"tm": [
-					11,
-					15,
-					18,
-					22,
-					26,
-					33,
-					42,
-					44,
-					68,
-					74,
-					86,
-					88,
-					101
-				]
-			},
-			"media": {
-				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1019.png",
-				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1019.png",
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1019.png",
-				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1019.png"
-			}
-		},
-		{
 			"id": "archaludon",
 			"name": "Archaludon",
 			"number": 1018,
@@ -152343,6 +152228,121 @@
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1018.png",
 				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1018.png",
 				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1018.png"
+			}
+		},
+		{
+			"id": "hydrapple",
+			"name": "Hydrapple",
+			"number": 1019,
+			"type": [
+				"grass",
+				"dragon"
+			],
+			"size": "medium",
+			"sr": 13,
+			"minLevel": 10,
+			"eggGroup": [
+				"grass",
+				"dragon"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"dipplin"
+				]
+			},
+			"description": "The Apple Hydra Pokémon. Seven syrpents live inside an apple made of syrup. The syrpent in the center is the commander.",
+			"ac": 17,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 12,
+				"con": 18,
+				"int": 6,
+				"wis": 16,
+				"cha": 13
+			},
+			"hp": 112,
+			"skills": [
+				"stealth",
+				"deception"
+			],
+			"savingThrows": [
+				"str",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "supersweet-syrup",
+					"hidden": false
+				},
+				{
+					"id": "regenerator",
+					"hidden": false
+				},
+				{
+					"id": "sticky-hold",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"withdraw",
+					"sweet-scent",
+					"recycle",
+					"astonish",
+					"fickle-beam",
+					"growth",
+					"dragon-tail",
+					"protect",
+					"dragon-breath",
+					"bullet-seed",
+					"syrup-bomb"
+				],
+				"level14": [
+					"dragon-pulse",
+					"recover"
+				],
+				"level18": [
+					"substitute",
+					"energy-ball",
+					"power-whip"
+				],
+				"tm": [
+					11,
+					15,
+					18,
+					22,
+					26,
+					33,
+					42,
+					44,
+					68,
+					74,
+					86,
+					88,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1019.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1019.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1019.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1019.png"
 			}
 		},
 		{
