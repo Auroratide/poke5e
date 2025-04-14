@@ -14,6 +14,8 @@ export const Url = {
 
 		return `${base}/trainers?${params.toString()}`
 	},
+	versionHistory: () => `${base}/version-history`,
+	feedback: () => `${base}/feedback`,
 	reference: {
 		all: () => `${base}/reference`,
 		abilities: () => `${base}/reference/abilities`,
@@ -32,5 +34,10 @@ export const Url = {
 		trainerPaths: () => `${base}/reference/trainer-paths`,
 		transformations: () => `${base}/reference/pokemon-transformations`,
 		weather: () => `${base}/reference/weather`,
+	},
+	external: {
+		auroratide: () => "https://auroratide.com",
+		github: () => "https://github.com/Auroratide/poke5e",
+		discord: () => "#",
 	},
 } as const
