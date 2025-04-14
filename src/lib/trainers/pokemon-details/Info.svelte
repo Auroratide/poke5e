@@ -15,6 +15,7 @@
 	import PokemonArt from "$lib/creatures/PokemonArt.svelte"
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 	import HeldItemsInfo from "./HeldItemsInfo.svelte"
+	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -45,6 +46,7 @@
 </script>
 
 <SideArtCardSection {hasImage}>
+	<VisuallyHidden><h2>Health and Status</h2></VisuallyHidden>
 	<div style:margin-bottom="0.5em">
 		<BasicInfo {pokemon} {species} />
 		<HealthInfo
@@ -61,15 +63,16 @@
 	<PokemonArt slot="art" media={species.media} alt="" shiny={pokemon.isShiny} />
 </SideArtCardSection>
 <section class="stats">
+	<VisuallyHidden><h2>Stats</h2></VisuallyHidden>
 	<AttributeBlock attributes={pokemon.attributes} />
 	<SkillsInfo level={pokemon.level} attributes={pokemon.attributes} savingThrows={pokemon.savingThrows} proficiencies={pokemon.proficiencies} />
 	<FlatDl>
 		<TypeEffectiveness type={pokemon.type} />
 	</FlatDl>
+	<h2>Abilities & Items</h2>
 	<FeatsInfo {pokemon} {species} />
 	<HeldItemsInfo {pokemon} />
 </section>
-<hr />
 <section>
 	<MovesInfo {pokemon} {editable} on:update={onUpdatePp} />
 </section>

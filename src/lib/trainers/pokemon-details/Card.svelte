@@ -38,13 +38,13 @@
 			<TypeTag slot="header-extra" type={pokemon.type} />
 			<Info {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} />
 			{#if canEdit}
-					<ActionArea>
-						<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="ghost">Remove</Button>
-						{#if species.evolution?.to?.length > 0}
-							<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="ghost">Evolve</Button>
-						{/if}
-						<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.editPokemon)}">Edit</Button>
-					</ActionArea>
+				<ActionArea>
+					<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="ghost">Remove</Button>
+					{#if species.evolution?.to?.length > 0}
+						<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="ghost">Evolve</Button>
+					{/if}
+					<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.editPokemon)}">Edit</Button>
+				</ActionArea>
 			{/if}
 		</Card>
 	{:else}
