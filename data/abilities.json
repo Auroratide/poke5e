@@ -305,6 +305,26 @@
       "name": "Electromorphosis",
       "description": "When this Pokémon takes damage, it may double the MOVE damage modifier of its next electric-type move."
     },
+		{
+      "id": "embody-aspect-cornerstone",
+      "name": "Embody Aspect (Cornerstone)",
+      "description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's CON score becomes 23, unless it is already higher."
+    },
+		{
+      "id": "embody-aspect-heartflame",
+      "name": "Embody Aspect (Heartflame)",
+      "description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's STR score becomes 23, unless it is already higher."
+    },
+		{
+      "id": "embody-aspect-teal",
+      "name": "Embody Aspect (Teal)",
+      "description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's DEX score becomes 23, unless it is already higher."
+    },
+		{
+      "id": "embody-aspect-wellspring",
+      "name": "Embody Aspect (Wellspring)",
+      "description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's CHA score becomes 23, unless it is already higher."
+    },
     {
       "id": "emergency-exit",
       "name": "Emergency Exit",
@@ -400,6 +420,11 @@
       "name": "Form Change (Necrozma)",
       "description": "Necrozma can fuse with a willing Solgaleo, at will, with the help of the N-Solarizer, or Lunala with the help of the N-Lunarizer. The fusion will result in a Dusk Mane Necrozma (if fused with Solgaleo) or Dawn Wings Necrozma (if fused with Lunala) with the same current HP."
     },
+		{
+      "id": "form-change-ogerpon",
+      "name": "Form Change (Ogerpon)",
+      "description": "Ogerpon's form changes depending on the type of mask it wears. The four masks it can wear are the Teal Mask (Grass), Wellspring Mask (Water), Heartflame Mask (Fire), and Cornerstone Mask (Rock). Additionally, when terastallized, Ogerpon's type changes to that of its mask, regardless of its Tera Type."
+    },
     {
       "id": "form-change-oricorio",
       "name": "Form Change (Oricorio)",
@@ -414,6 +439,11 @@
       "id": "form-change-shaymin",
       "name": "Form Change (Shaymin)",
       "description": "Shaymin's default form is Land. When Given a Gracidea Flower to hold, it can change to Sky Form, taking on new typing, statistics, and moves"
+    },
+		{
+      "id": "form-change-terapagos",
+      "name": "Form Change (Terapagos)",
+      "description": "Terapagos changes into its Stellar Form whenever it terastallizes. In Stellar Form, its type is Stellar regardless of its Tera Type. When its terastallization ends, it reverts back to either its Normal Form or Terastal Form, whichever it was when it terastallized."
     },
     {
       "id": "form-change-ultra-necrozma",
@@ -529,6 +559,11 @@
       "id": "honey-gather",
       "name": "Honey Gather",
       "description": "At the end of each battle, this Pokémon may roll a d20 + its proficiency bonus. On a result of 20 or higher, its trainer adds a Honey to their inventory."
+    },
+		{
+      "id": "hospitality",
+      "name": "Hospitality",
+      "description": "At the start of its turn, all allies within 20ft of this Pokémon gain 1d4 temporary HP. This replaces existing temporary HP."
     },
     {
       "id": "huge-power",
@@ -909,6 +944,11 @@
       "id": "poison-point",
       "name": "Poison Point",
       "description": "When this Pokémon is hit with a melee attack, roll a 1d4. On a result of 4, the attacker takes an amount of poison damage equal to this Pokémon’s proficiency modifier."
+    },
+		{
+      "id": "poison-puppeteer",
+      "name": "Poison Puppeteer",
+      "description": "When this Pokémon inflicts the Poisoned or Badly Poisoned condition, it also inflicts the Charmed condition. Creatures charmed this way may attempt to break from the charm at the end of each of their turns with a CHA save against this Pokémon's CHA DC."
     },
     {
       "id": "poison-touch",
@@ -1311,6 +1351,11 @@
       "description": "This Pokémon increases its critical hit range by 1 (20 to 19+, etc.)"
     },
 		{
+      "id": "supersweet-syrup",
+      "name": "Supersweet Syrup",
+      "description": "Attacks made against creatures within 30ft of this Pokémon gain 1d4 on the roll. Creatures with no sense of smell are not affected by this ability."
+    },
+		{
       "id": "supreme-overlord",
       "name": "Supreme Overlord",
       "description": "This Pokémon adds +1 to its attack rolls for each currently downed ally, up to a maximum of +5."
@@ -1375,6 +1420,21 @@
       "name": "Telepathy",
       "description": "This Pokémon cannot be damaged by its allies' attacks."
     },
+		{
+      "id": "tera-shell",
+      "name": "Tera Shell",
+      "description": "While Terapagos is at full HP, it is resistant to all damage types."
+    },
+		{
+      "id": "tera-shift",
+      "name": "Tera Shift",
+      "description": "Terapagos can shift into its Terastal form a number of times per day equal to its CON modifier as a free action. It reverts to its normal form after 10 minutes or at will."
+    },
+		{
+      "id": "teraform-zero",
+      "name": "Teraform Zero",
+      "description": "While Terapagos is in its Stellar Form, all terrain and weather effects within 1000ft end, and the terrain and weather cannot be changed."
+    },
     {
       "id": "teravolt",
       "name": "Teravolt",
@@ -1409,6 +1469,11 @@
       "id": "toxic-boost",
       "name": "Toxic Boost",
       "description": "When this Pokémon is hit by a poison-type attack, its next attack is rolled at advantage."
+    },
+		{
+      "id": "toxic-chain",
+      "name": "Toxic Chain",
+      "description": "When this Pokémon lands a hit against a target using a melee attack, the target must make a CON save DC 16, becoming badly poisoned on failure."
     },
 		{
       "id": "toxic-debris",

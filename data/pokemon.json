@@ -127464,7 +127464,7 @@
 			"gender": "1:1",
 			"evolution": {
 				"stage": "1",
-				"maxStage": "2",
+				"maxStage": "3",
 				"to": [
 					{
 						"id": "flapple",
@@ -127495,6 +127495,25 @@
 							{
 								"type": "special",
 								"value": "inhabiting a red apple"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 14
+							}
+						]
+					},
+					{
+						"id": "dipplin",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 5
+							},
+							{
+								"type": "special",
+								"value": "inhabiting a syrup-covered apple"
 							}
 						],
 						"effects": [
@@ -151205,6 +151224,1314 @@
 			}
 		},
 		{
+			"id": "walking-wake",
+			"name": "Walking Wake",
+			"number": 1009,
+			"type": [
+				"water",
+				"dragon"
+			],
+			"size": "large",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. This ferocious creature is shrouded in mystery. It's named after an aquatic monster mentioned in an old expedition journal.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				},
+				{
+					"type": "swimming",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 20,
+				"con": 17,
+				"int": 5,
+				"wis": 18,
+				"cha": 10
+			},
+			"hp": 148,
+			"skills": [
+				"stealth",
+				"perception"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "protosynthesis",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"roar",
+					"twister",
+					"aqua-jet",
+					"bite",
+					"water-pulse",
+					"dragon-breath",
+					"noble-roar",
+					"breaking-swipe",
+					"dragon-rush"
+				],
+				"level18": [
+					"flamethrower",
+					"hydro-pump",
+					"outrage",
+					"dragon-pulse",
+					"hydro-steam"
+				],
+				"tm": [
+					2,
+					15,
+					17,
+					18,
+					42,
+					44,
+					55,
+					68,
+					88,
+					90,
+					94,
+					95,
+					98
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1009.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1009.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1009.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1009.png"
+			}
+		},
+		{
+			"id": "iron-leaves",
+			"name": "Iron Leaves",
+			"number": 1010,
+			"type": [
+				"grass",
+				"psychic"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. According to the few eyewitness accounts that exist, it used its shining blades to julienne large trees and boulders.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 19,
+				"dex": 19,
+				"con": 16,
+				"int": 8,
+				"wis": 14,
+				"cha": 10
+			},
+			"hp": 139,
+			"skills": [
+				"athletics",
+				"nature"
+			],
+			"savingThrows": [
+				"str",
+				"dex"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "quark-drive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"quick-attack",
+					"helping-hand",
+					"work-up",
+					"magical-leaf",
+					"retaliate",
+					"night-slash",
+					"quick-guard",
+					"swords-dance",
+					"leaf-blade",
+					"psyblade",
+					"sacred-sword"
+				],
+				"level18": [
+					"megahorn",
+					"imprison",
+					"close-combat",
+					"ally-switch",
+					"solar-blade"
+				],
+				"tm": [
+					4,
+					12,
+					15,
+					17,
+					22,
+					31,
+					40,
+					42,
+					44,
+					52,
+					53,
+					54,
+					67,
+					68,
+					81,
+					86,
+					88,
+					90,
+					93
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1010.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1010.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1010.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1010.png"
+			}
+		},
+		{
+			"id": "dipplin",
+			"name": "Dipplin",
+			"number": 1011,
+			"type": [
+				"grass",
+				"dragon"
+			],
+			"size": "tiny",
+			"sr": 7,
+			"minLevel": 5,
+			"eggGroup": [
+				"grass",
+				"dragon"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "2",
+				"from": [
+					"applin"
+				],
+				"to": [
+					{
+						"id": "hydrapple",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 10
+							},
+							{
+								"type": "move",
+								"value": "dragon-cheer"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 6
+							}
+						]
+					}
+				]
+			},
+			"description": "The Candy Apple Pokémon. Dipplin is two creatures in one Pokémon. Its evolution was triggered by a special apple grown only in one place.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 15
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 10,
+				"con": 16,
+				"int": 6,
+				"wis": 14,
+				"cha": 12
+			},
+			"hp": 50,
+			"skills": [
+				"stealth",
+				"deception"
+			],
+			"savingThrows": [
+				"str",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "supersweet-syrup",
+					"hidden": false
+				},
+				{
+					"id": "gluttony",
+					"hidden": false
+				},
+				{
+					"id": "sticky-hold",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"withdraw",
+					"sweet-scent",
+					"recycle",
+					"astonish",
+					"double-hit",
+					"growth",
+					"dragon-tail"
+				],
+				"level6": [
+					"dragon-breath",
+					"protect",
+					"bullet-seed"
+				],
+				"level10": [
+					"syrup-bomb",
+					"dragon-pulse"
+				],
+				"level14": [
+					"recover"
+				],
+				"level18": [
+					"substitute",
+					"energy-ball"
+				],
+				"tm": [
+					11,
+					15,
+					22,
+					33,
+					42,
+					44,
+					68,
+					74,
+					86,
+					88,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1011.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1011.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1011.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1011.png"
+			}
+		},
+		{
+			"id": "poltchageist",
+			"name": "Poltchageist",
+			"number": 1012,
+			"type": [
+				"grass",
+				"ghost"
+			],
+			"size": "tiny",
+			"sr": 0.5,
+			"minLevel": 1,
+			"eggGroup": [
+				"mineral",
+				"amorphous"
+			],
+			"gender": "0:0",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "1",
+				"to": [
+					{
+						"id": "sinistcha",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 4
+							},
+							{
+								"type": "item",
+								"value": "Unremarkable Teacup"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					}
+				]
+			},
+			"description": "The Matcha Pokémon. Supposedly, the regrets of a tea ceremony master who died before perfecting his craft lingered in some matcha and became a Pokémon.",
+			"ac": 13,
+			"hitDice": "d6",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": 10,
+				"dex": 13,
+				"con": 12,
+				"int": 6,
+				"wis": 12,
+				"cha": 11
+			},
+			"hp": 17,
+			"skills": [
+				"stealth",
+				"deception"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "hospitality",
+					"hidden": false
+				},
+				{
+					"id": "heatproof",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"stun-spore",
+					"withdraw",
+					"astonish"
+				],
+				"level2": [
+					"absorb"
+				],
+				"level6": [
+					"foul-play",
+					"life-dew"
+				],
+				"level10": [
+					"mega-drain",
+					"hex"
+				],
+				"level14": [
+					"rage-powder",
+					"giga-drain"
+				],
+				"level18": [
+					"shadow-ball",
+					"memento",
+					"leaf-storm"
+				],
+				"tm": [
+					4,
+					17,
+					22,
+					33,
+					44,
+					53,
+					55,
+					77,
+					88,
+					90,
+					92
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1012.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1012.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1012.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1012.png"
+			}
+		},
+		{
+			"id": "sinistcha",
+			"name": "Sinistcha",
+			"number": 1013,
+			"type": [
+				"grass",
+				"ghost"
+			],
+			"size": "tiny",
+			"sr": 9,
+			"minLevel": 8,
+			"eggGroup": [
+				"mineral",
+				"amorphous"
+			],
+			"gender": "0:0",
+			"evolution": {
+				"maxStage": "2",
+				"stage": "2",
+				"from": [
+					"poltchageist"
+				]
+			},
+			"description": "The Matcha Pokémon. It pretends to be tea, trying to fool people into drinking it so it can drain their life-force. Its ruse is generally unsuccessful.",
+			"ac": 17,
+			"hitDice": "d8",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 15,
+				"con": 15,
+				"int": 6,
+				"wis": 15,
+				"cha": 14
+			},
+			"hp": 74,
+			"skills": [
+				"stealth",
+				"deception"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "hospitality",
+					"hidden": false
+				},
+				{
+					"id": "heatproof",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"stun-spore",
+					"withdraw",
+					"astonish",
+					"matcha-gotcha",
+					"absorb",
+					"life-dew"
+				],
+				"level10": [
+					"foul-play",
+					"mega-drain",
+					"hex"
+				],
+				"level14": [
+					"rage-powder",
+					"strength-sap"
+				],
+				"level18": [
+					"shadow-ball",
+					"memento",
+					"leaf-storm"
+				],
+				"tm": [
+					4,
+					15,
+					17,
+					22,
+					33,
+					44,
+					53,
+					55,
+					77,
+					88,
+					90,
+					92
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1013.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1013.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1013.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1013.png"
+			}
+		},
+		{
+			"id": "okidogi",
+			"name": "Okidogi",
+			"number": 1014,
+			"type": [
+				"poison",
+				"fighting"
+			],
+			"size": "medium",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:1",
+			"description": "The Retainer Pokémon. After all its muscles were stimulated by the toxic chain around its neck, Okidogi transformed and gained a powerful physique.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 21,
+				"dex": 13,
+				"con": 17,
+				"int": 10,
+				"wis": 10,
+				"cha": 13
+			},
+			"hp": 192,
+			"skills": [
+				"athletics",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "toxic-chain",
+					"hidden": false
+				},
+				{
+					"id": "guard-dog",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"bite",
+					"low-kick",
+					"bulk-up",
+					"howl",
+					"poison-fang",
+					"force-palm",
+					"counter",
+					"crunch",
+					"superpower",
+					"poison-jab",
+					"giga-impact",
+					"brutal-swing"
+				],
+				"tm": [
+					5,
+					6,
+					12,
+					15,
+					17,
+					31,
+					34,
+					36,
+					39,
+					42,
+					44,
+					46,
+					47,
+					52,
+					56,
+					65,
+					88,
+					90,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1014.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1014.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1014.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1014.png"
+			}
+		},
+		{
+			"id": "munkidori",
+			"name": "Munkidori",
+			"number": 1015,
+			"type": [
+				"poison",
+				"psychic"
+			],
+			"size": "small",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:1",
+			"description": "The Retainer Pokémon. The chain is made from toxins that enhance capabilities. It stimulated Munkidori's brain and caused the Pokémon's psychic powers to bloom.",
+			"ac": 15,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				},
+				{
+					"type": "climbing",
+					"value": 15
+				}
+			],
+			"attributes": {
+				"str": 13,
+				"dex": 18,
+				"con": 15,
+				"int": 20,
+				"wis": 16,
+				"cha": 11
+			},
+			"hp": 172,
+			"skills": [
+				"arcana",
+				"insight",
+				"persuasion"
+			],
+			"savingThrows": [
+				"int",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "toxic-chain",
+					"hidden": false
+				},
+				{
+					"id": "frisk",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"confusion",
+					"fake-out",
+					"flatter",
+					"helping-hand",
+					"psybeam",
+					"clear-smog",
+					"poison-jab",
+					"psychic",
+					"future-sight",
+					"nasty-plot",
+					"sludge-wave",
+					"parting-shot"
+				],
+				"tm": [
+					3,
+					4,
+					6,
+					9,
+					12,
+					15,
+					16,
+					17,
+					30,
+					36,
+					42,
+					44,
+					46,
+					52,
+					56,
+					65,
+					68,
+					77,
+					86,
+					88,
+					89,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1015.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1015.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1015.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1015.png"
+			}
+		},
+		{
+			"id": "fezandipiti",
+			"name": "Fezandipiti",
+			"number": 1016,
+			"type": [
+				"poison",
+				"fairy"
+			],
+			"size": "medium",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:1",
+			"description": "The Retainer Pokémon. Fezandipiti owes its beautiful looks and lovely voice to the toxic stimulants emanating from the chain wrapped around its body.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 15
+				},
+				{
+					"type": "flying",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 18,
+				"con": 14,
+				"int": 10,
+				"wis": 14,
+				"cha": 21
+			},
+			"hp": 192,
+			"skills": [
+				"perception",
+				"intimidation",
+				"performance"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "toxic-chain",
+					"hidden": false
+				},
+				{
+					"id": "technician",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"double-kick",
+					"peck",
+					"poison-gas",
+					"disarming-voice",
+					"quick-attack",
+					"attract",
+					"wing-attack",
+					"cross-poison",
+					"swagger",
+					"beat-up",
+					"flatter",
+					"roost",
+					"tail-slap",
+					"moonblast"
+				],
+				"tm": [
+					4,
+					6,
+					9,
+					12,
+					15,
+					16,
+					17,
+					30,
+					36,
+					40,
+					42,
+					44,
+					46,
+					62,
+					65,
+					68,
+					75,
+					76,
+					77,
+					84,
+					88,
+					89,
+					90,
+					97,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1016.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1016.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1016.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1016.png"
+			}
+		},
+		{
+			"id": "ogerpon",
+			"name": "Ogerpon (Teal Mask)",
+			"number": 1017,
+			"type": [
+				"grass"
+			],
+			"size": "small",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "1:0",
+			"description": "The Mask Pokémon. This Pokémon's type changes based on which mask it's wearing. It confounds its enemies with nimble movements and kicks.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 19,
+				"dex": 19,
+				"con": 14,
+				"int": 15,
+				"wis": 13,
+				"cha": 18
+			},
+			"hp": 192,
+			"skills": [
+				"acrobatics",
+				"sleight of hand",
+				"deception",
+				"performance"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "defiant",
+					"hidden": false
+				},
+				{
+					"id": "form-change-ogerpon",
+					"hidden": false
+				},
+				{
+					"id": "embody-aspect-teal",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"vine-whip",
+					"leech-seed",
+					"quick-attack",
+					"follow-me",
+					"focus-energy",
+					"slam",
+					"growth",
+					"low-sweep",
+					"ivy-cudgel",
+					"synthesis",
+					"superpower",
+					"power-whip",
+					"wood-hammer",
+					"spiky-shield",
+					"throat-chop"
+				],
+				"tm": [
+					11,
+					12,
+					17,
+					18,
+					22,
+					31,
+					37,
+					39,
+					42,
+					44,
+					53,
+					54,
+					56,
+					68,
+					75,
+					86,
+					88,
+					89,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1017.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1017.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1017.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1017.png"
+			}
+		},
+		{
+			"id": "ogerpon-wellspring-mask",
+			"name": "Ogerpon (Wellspring Mask)",
+			"number": 1017,
+			"type": [
+				"grass",
+				"water"
+			],
+			"size": "small",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "1:0",
+			"description": "The Mask Pokémon. This Pokémon's type changes based on which mask it's wearing. It confounds its enemies with nimble movements and kicks.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 19,
+				"dex": 19,
+				"con": 14,
+				"int": 15,
+				"wis": 13,
+				"cha": 18
+			},
+			"hp": 192,
+			"skills": [
+				"acrobatics",
+				"sleight of hand",
+				"deception",
+				"performance"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "water-absorb",
+					"hidden": false
+				},
+				{
+					"id": "form-change-ogerpon",
+					"hidden": false
+				},
+				{
+					"id": "embody-aspect-wellspring",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"vine-whip",
+					"leech-seed",
+					"quick-attack",
+					"follow-me",
+					"focus-energy",
+					"slam",
+					"growth",
+					"low-sweep",
+					"ivy-cudgel",
+					"synthesis",
+					"superpower",
+					"power-whip",
+					"wood-hammer",
+					"spiky-shield",
+					"throat-chop"
+				],
+				"tm": [
+					11,
+					12,
+					17,
+					18,
+					22,
+					31,
+					37,
+					39,
+					42,
+					44,
+					53,
+					54,
+					56,
+					68,
+					75,
+					86,
+					88,
+					89,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10273.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10273.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10273.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10273.png"
+			}
+		},
+		{
+			"id": "ogerpon-heartflame-mask",
+			"name": "Ogerpon (Heartflame Mask)",
+			"number": 1017,
+			"type": [
+				"grass",
+				"fire"
+			],
+			"size": "small",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "1:0",
+			"description": "The Mask Pokémon. This Pokémon's type changes based on which mask it's wearing. It confounds its enemies with nimble movements and kicks.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 19,
+				"dex": 19,
+				"con": 14,
+				"int": 15,
+				"wis": 13,
+				"cha": 18
+			},
+			"hp": 192,
+			"skills": [
+				"acrobatics",
+				"sleight of hand",
+				"deception",
+				"performance"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "mold-breaker",
+					"hidden": false
+				},
+				{
+					"id": "form-change-ogerpon",
+					"hidden": false
+				},
+				{
+					"id": "embody-aspect-heartflame",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"vine-whip",
+					"leech-seed",
+					"quick-attack",
+					"follow-me",
+					"focus-energy",
+					"slam",
+					"growth",
+					"low-sweep",
+					"ivy-cudgel",
+					"synthesis",
+					"superpower",
+					"power-whip",
+					"wood-hammer",
+					"spiky-shield",
+					"throat-chop"
+				],
+				"tm": [
+					11,
+					12,
+					17,
+					18,
+					22,
+					31,
+					37,
+					39,
+					42,
+					44,
+					53,
+					54,
+					56,
+					68,
+					75,
+					86,
+					88,
+					89,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10274.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10274.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10274.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10274.png"
+			}
+		},
+		{
+			"id": "ogerpon-cornerstone-mask",
+			"name": "Ogerpon (Cornerstone Mask)",
+			"number": 1017,
+			"type": [
+				"grass",
+				"rock"
+			],
+			"size": "small",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "1:0",
+			"description": "The Mask Pokémon. This Pokémon's type changes based on which mask it's wearing. It confounds its enemies with nimble movements and kicks.",
+			"ac": 16,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 19,
+				"dex": 19,
+				"con": 14,
+				"int": 15,
+				"wis": 13,
+				"cha": 18
+			},
+			"hp": 192,
+			"skills": [
+				"acrobatics",
+				"sleight of hand",
+				"deception",
+				"performance"
+			],
+			"savingThrows": [
+				"dex",
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "sturdy",
+					"hidden": false
+				},
+				{
+					"id": "form-change-ogerpon",
+					"hidden": false
+				},
+				{
+					"id": "embody-aspect-wellspring",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"vine-whip",
+					"leech-seed",
+					"quick-attack",
+					"follow-me",
+					"focus-energy",
+					"slam",
+					"growth",
+					"low-sweep",
+					"ivy-cudgel",
+					"synthesis",
+					"superpower",
+					"power-whip",
+					"wood-hammer",
+					"spiky-shield",
+					"throat-chop"
+				],
+				"tm": [
+					11,
+					12,
+					17,
+					18,
+					22,
+					31,
+					37,
+					39,
+					42,
+					44,
+					53,
+					54,
+					56,
+					68,
+					75,
+					86,
+					88,
+					89,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10275.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10275.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10275.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10275.png"
+			}
+		},
+		{
 			"id": "archaludon",
 			"name": "Archaludon",
 			"number": 1018,
@@ -151320,6 +152647,928 @@
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1018.png",
 				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1018.png",
 				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1018.png"
+			}
+		},
+		{
+			"id": "hydrapple",
+			"name": "Hydrapple",
+			"number": 1019,
+			"type": [
+				"grass",
+				"dragon"
+			],
+			"size": "medium",
+			"sr": 13,
+			"minLevel": 10,
+			"eggGroup": [
+				"grass",
+				"dragon"
+			],
+			"gender": "1:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"dipplin"
+				]
+			},
+			"description": "The Apple Hydra Pokémon. Seven syrpents live inside an apple made of syrup. The syrpent in the center is the commander.",
+			"ac": 17,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 20
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 12,
+				"con": 18,
+				"int": 6,
+				"wis": 16,
+				"cha": 13
+			},
+			"hp": 112,
+			"skills": [
+				"stealth",
+				"deception"
+			],
+			"savingThrows": [
+				"str",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "supersweet-syrup",
+					"hidden": false
+				},
+				{
+					"id": "regenerator",
+					"hidden": false
+				},
+				{
+					"id": "sticky-hold",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"withdraw",
+					"sweet-scent",
+					"recycle",
+					"astonish",
+					"fickle-beam",
+					"growth",
+					"dragon-tail",
+					"protect",
+					"dragon-breath",
+					"bullet-seed",
+					"syrup-bomb"
+				],
+				"level14": [
+					"dragon-pulse",
+					"recover"
+				],
+				"level18": [
+					"substitute",
+					"energy-ball",
+					"power-whip"
+				],
+				"tm": [
+					11,
+					15,
+					18,
+					22,
+					26,
+					33,
+					42,
+					44,
+					68,
+					74,
+					86,
+					88,
+					101
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1019.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1019.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1019.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1019.png"
+			}
+		},
+		{
+			"id": "gouging-fire",
+			"name": "Gouging Fire",
+			"number": 1020,
+			"type": [
+				"fire",
+				"dragon"
+			],
+			"size": "large",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. There are scant few reports of this creature being sighted. One short video shows it rampaging and spouting pillars of flame.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 21,
+				"dex": 17,
+				"con": 19,
+				"int": 5,
+				"wis": 11,
+				"cha": 10
+			},
+			"hp": 161,
+			"skills": [
+				"survival",
+				"intimidation"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "protosynthesis",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"stomp",
+					"leer",
+					"sunny-day",
+					"incinerate",
+					"fire-fang",
+					"howl",
+					"bite",
+					"dragon-claw",
+					"crush-claw",
+					"dragon-rush",
+					"morning-sun",
+					"burning-bulwark"
+				],
+				"level18": [
+					"fire-blast",
+					"outrage",
+					"flare-blitz",
+					"lava-plume",
+					"raging-fury"
+				],
+				"tm": [
+					5,
+					15,
+					17,
+					26,
+					35,
+					42,
+					43,
+					44,
+					50,
+					67,
+					68,
+					71,
+					78,
+					82,
+					88,
+					90,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1020.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1020.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1020.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1020.png"
+			}
+		},
+		{
+			"id": "raging-bolt",
+			"name": "Raging Bolt",
+			"number": 1021,
+			"type": [
+				"electric",
+				"dragon"
+			],
+			"size": "huge",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. It's said to incinerate everything around it with lightning launched from its fur. Very little is known about this creature.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 15,
+				"dex": 13,
+				"con": 22,
+				"int": 5,
+				"wis": 18,
+				"cha": 10
+			},
+			"hp": 180,
+			"skills": [
+				"survival",
+				"intimidation"
+			],
+			"savingThrows": [
+				"con",
+				"wis"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "protosynthesis",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"stomp",
+					"twister",
+					"sunny-day",
+					"shock-wave",
+					"charge",
+					"dragon-breath",
+					"discharge",
+					"electric-terrain",
+					"dragon-tail",
+					"dragon-hammer",
+					"thunderclap",
+					"calm-mind"
+				],
+				"level18": [
+					"thunder",
+					"zap-cannon",
+					"dragon-pulse",
+					"body-press",
+					"rising-voltage"
+				],
+				"tm": [
+					5,
+					12,
+					15,
+					17,
+					22,
+					24,
+					26,
+					42,
+					44,
+					57,
+					68,
+					72,
+					73,
+					88,
+					90,
+					93,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1021.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1021.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1021.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1021.png"
+			}
+		},
+		{
+			"id": "iron-boulder",
+			"name": "Iron Boulder",
+			"number": 1022,
+			"type": [
+				"rock",
+				"psychic"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. It was named after a mysterious object recorded in an old book. Its body seems to be metallic.",
+			"ac": 17,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 20,
+				"dex": 22,
+				"con": 16,
+				"int": 8,
+				"wis": 11,
+				"cha": 11
+			},
+			"hp": 152,
+			"skills": [
+				"athletics",
+				"survival"
+			],
+			"savingThrows": [
+				"str",
+				"dex"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "quark-drive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"horn-attack",
+					"leer",
+					"rock-throw",
+					"electric-terrain",
+					"quick-attack",
+					"slash",
+					"agility",
+					"psycho-cut",
+					"counter",
+					"sacred-sword",
+					"mighty-cleave",
+					"rock-tomb"
+				],
+				"level18": [
+					"swords-dance",
+					"megahorn",
+					"giga-impact",
+					"stone-edge",
+					"quick-guard"
+				],
+				"tm": [
+					3,
+					12,
+					15,
+					17,
+					26,
+					29,
+					31,
+					37,
+					40,
+					42,
+					44,
+					78,
+					81,
+					84,
+					88,
+					90,
+					93
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1022.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1022.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1022.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1022.png"
+			}
+		},
+		{
+			"id": "iron-crown",
+			"name": "Iron Crown",
+			"number": 1023,
+			"type": [
+				"steel",
+				"psychic"
+			],
+			"size": "medium",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Paradox Pokémon. There was supposedly an incident in which it launched shining blades to cut everything around it to pieces. Little else is known about it.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 40
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 18,
+				"con": 16,
+				"int": 8,
+				"wis": 21,
+				"cha": 14
+			},
+			"hp": 142,
+			"skills": [
+				"insight",
+				"perception"
+			],
+			"savingThrows": [
+				"dex",
+				"wis"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 60
+				}
+			],
+			"abilities": [
+				{
+					"id": "quark-drive",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"leer",
+					"confusion",
+					"metal-claw",
+					"electric-terrain",
+					"smart-strike",
+					"slash",
+					"iron-defense",
+					"psyshock",
+					"psycho-cut",
+					"tachyon-cutter",
+					"sacred-sword",
+					"flash-cannon"
+				],
+				"level18": [
+					"hyper-beam",
+					"future-sight",
+					"metal-burst",
+					"quick-guard",
+					"volt-switch"
+				],
+				"tm": [
+					4,
+					17,
+					29,
+					31,
+					42,
+					44,
+					52,
+					68,
+					75,
+					78,
+					81,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1023.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1023.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1023.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1023.png"
+			}
+		},
+		{
+			"id": "terapagos",
+			"name": "Terapagos",
+			"number": 1024,
+			"type": [
+				"normal"
+			],
+			"size": "tiny",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "1:1",
+			"description": "The Tera Pokémon. Terapagos protects itself using its power to transform energy into hard crystals. This Pokémon is the source of the Terastal phenomenon.",
+			"ac": 16,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 10,
+				"con": 16,
+				"int": 9,
+				"wis": 11,
+				"cha": 12
+			},
+			"hp": 256,
+			"skills": [
+				"arcana",
+				"insight",
+				"perception"
+			],
+			"savingThrows": [
+				"cha"
+			],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "tera-shift",
+					"hidden": false
+				},
+				{
+					"id": "form-change-terapagos",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"withdraw",
+					"tri-attack",
+					"rapid-spin",
+					"ancient-power",
+					"headbutt",
+					"protect",
+					"double-edge",
+					"gyro-ball",
+					"rock-polish",
+					"earth-power",
+					"heavy-slam",
+					"tera-starstorm"
+				],
+				"tm": [
+					4,
+					5,
+					6,
+					11,
+					13,
+					15,
+					18,
+					22,
+					24,
+					25,
+					26,
+					35,
+					42,
+					44,
+					53,
+					68,
+					71,
+					80,
+					88,
+					90,
+					91,
+					93,
+					94,
+					97,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1024.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1024.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1024.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1024.png"
+			}
+		},
+		{
+			"id": "terapagos-terastal-form",
+			"name": "Terapagos (Terastal)",
+			"number": 1024,
+			"type": [
+				"normal"
+			],
+			"size": "tiny",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "1:1",
+			"description": "The Tera Pokémon. Terapagos protects itself using its power to transform energy into hard crystals. This Pokémon is the source of the Terastal phenomenon.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 12,
+				"con": 20,
+				"int": 9,
+				"wis": 15,
+				"cha": 16
+			},
+			"hp": 256,
+			"skills": [
+				"arcana",
+				"insight",
+				"perception"
+			],
+			"savingThrows": [
+				"con",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "truesight",
+					"value": 15
+				}
+			],
+			"abilities": [
+				{
+					"id": "tera-shell",
+					"hidden": false
+				},
+				{
+					"id": "form-change-terapagos",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"withdraw",
+					"tri-attack",
+					"rapid-spin",
+					"ancient-power",
+					"headbutt",
+					"protect",
+					"double-edge",
+					"gyro-ball",
+					"rock-polish",
+					"earth-power",
+					"heavy-slam",
+					"tera-starstorm"
+				],
+				"tm": [
+					4,
+					5,
+					6,
+					11,
+					13,
+					15,
+					18,
+					22,
+					24,
+					25,
+					26,
+					35,
+					42,
+					44,
+					53,
+					68,
+					71,
+					80,
+					88,
+					90,
+					91,
+					93,
+					94,
+					97,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10276.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10276.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10276.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10276.png"
+			}
+		},
+		{
+			"id": "terapagos-stellar-form",
+			"name": "Terapagos (Stellar)",
+			"number": 1024,
+			"type": [
+				"normal"
+			],
+			"size": "tiny",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "1:1",
+			"description": "The Tera Pokémon. Terapagos protects itself using its power to transform energy into hard crystals. This Pokémon is the source of the Terastal phenomenon.",
+			"ac": 18,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 18,
+				"dex": 12,
+				"con": 25,
+				"int": 9,
+				"wis": 15,
+				"cha": 20
+			},
+			"hp": 324,
+			"skills": [
+				"arcana",
+				"insight",
+				"perception"
+			],
+			"savingThrows": [
+				"con",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "truesight",
+					"value": 15
+				}
+			],
+			"abilities": [
+				{
+					"id": "teraform-zero",
+					"hidden": false
+				},
+				{
+					"id": "form-change-terapagos",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"withdraw",
+					"tri-attack",
+					"rapid-spin",
+					"ancient-power",
+					"headbutt",
+					"protect",
+					"double-edge",
+					"gyro-ball",
+					"rock-polish",
+					"earth-power",
+					"heavy-slam",
+					"tera-starstorm"
+				],
+				"tm": [
+					4,
+					5,
+					6,
+					11,
+					13,
+					15,
+					18,
+					22,
+					24,
+					25,
+					26,
+					35,
+					42,
+					44,
+					53,
+					68,
+					71,
+					80,
+					88,
+					90,
+					91,
+					93,
+					94,
+					97,
+					99
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10277.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10277.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10277.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10277.png"
+			}
+		},
+		{
+			"id": "pecharunt",
+			"name": "Pecharunt",
+			"number": 1025,
+			"type": [
+				"poison",
+				"ghost"
+			],
+			"size": "tiny",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Subjugation Pokémon. It feeds others toxic mochi that draw out desires and capabilities. Those who eat the mochi fall under Pecharunt’s control, chained to its will.",
+			"ac": 20,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "hover",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 16,
+				"dex": 16,
+				"con": 16,
+				"int": 16,
+				"wis": 16,
+				"cha": 23
+			},
+			"hp": 212,
+			"skills": [
+				"sleight of hand",
+				"medicine",
+				"persuasion"
+			],
+			"savingThrows": [
+				"dex",
+				"wis",
+				"cha"
+			],
+			"senses": [
+				{
+					"type": "truesight",
+					"value": 30
+				}
+			],
+			"abilities": [
+				{
+					"id": "poison-puppeteer",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"smog",
+					"poison-gas",
+					"memento",
+					"astonish",
+					"withdraw",
+					"destiny-bond",
+					"fake-tears",
+					"parting-shot",
+					"toxic",
+					"recover",
+					"shadow-ball",
+					"nasty-plot",
+					"malignant-chain"
+				],
+				"tm": [
+					9,
+					17,
+					34,
+					36,
+					44,
+					88,
+					90
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1025.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/1025.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1025.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/1025.png"
 			}
 		},
 		{

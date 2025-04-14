@@ -1363,6 +1363,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 3d10 at level 5, 5d8 at level 10, and 8d8 at level 17."
     },
+		{
+      "id": "burning-bulwark",
+      "name": "Burning Bulwark",
+      "type": "fire",
+      "power": [
+        "con"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "1 minute, concentration",
+      "range": "self",
+      "description": [
+        "Your intensely hot fur burns any attacker that makes direct contact. Flames wreathe your body for the duration, shedding Bright Light in a 10ft radius and Dim Light for an additional 10ft.",
+				"Whenever a creature hits you with a melee attack roll, the bulwark erupts with flame. The attacker takes 1d8 + MOVE fire damage."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 3d8 at level 10, and 4d8 at level 17."
+    },
     {
       "id": "calm-mind",
       "name": "Calm Mind",
@@ -2541,6 +2558,23 @@
         "You release a powerful breath of energy in a 40 foot cone. All targets caught in the blast must make a DEX save against your Move DC, taking 1d10 + MOVE dragon damage on a fail, and half as much on a save. If a creature fails the save by 5 or more, it is paralyzed."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
+    },
+		{
+      "id": "dragon-cheer",
+      "name": "Dragon Cheer",
+      "type": "dragon",
+      "power": [
+        "cha"
+      ],
+      "time": "1 bonus action",
+      "pp": 5,
+      "duration": "1 minute",
+      "range": "60ft",
+      "description": [
+        "You can use a bonus action to choose one ally other than yourself within 60 feet of you who can hear you. That ally's critical hit range is extended by 1 for the next minute or until they land a critical hit, whichever happens first. If the ally is Dragon-type, double the critical hit range extension. This bonus does not stack.",
+				"A critical hit range extension of 1 means a critical occurs on a natural 19 or 20."
+      ],
+      "higherLevels": "The critical range extension changes to 2 at level 10."
     },
     {
       "id": "dragon-claw",
@@ -5225,6 +5259,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 6d6 at level 10, and 7d8 at level 17."
     },
+		{
+      "id": "hydro-steam",
+      "name": "Hydro Steam",
+      "type": "water",
+      "power": [
+        "str",
+				"dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "You blast the target with boiling-hot water. Make a ranged attack, dealing 2d6 + MOVE water damage on a hit. This move's damage is not subject to disadvantage in Harsh Sunlight. If you are in Harsh Sunlight, you make the attack with advantage."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
     {
       "id": "hyper-beam",
       "name": "Hyper Beam",
@@ -5673,6 +5724,36 @@
       "range": "melee",
       "description": [
         "You swing your tail out, attempting to crush a creature. Make an attack roll on a creature in range, doing 4d4 + MOVE steel damage on a hit. If the natural attack roll is a 19 or 20, the target’s AC is decreased by 1 for the rest of combat."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
+    },
+		{
+      "id": "ivy-cudgel",
+      "name": "Ivy Cudgel",
+      "type": "grass",
+      "power": [
+        "str",
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You strike with an ivy-wrapped cudgel. Make a melee attack, dealing 4d4 + MOVE grass damage on a hit. When used by Ogerpon, the type of this attack and damage changes to that of the mask it is wearing:",
+				{
+          "type": "table",
+          "headers": ["Mask", "Type"],
+          "rows": [ [
+						"Teal", "Grass"
+					], [
+						"Wellspring", "Water"
+					], [
+						"Heartflame", "Fire"
+					], [
+						"Cornerstone", "Rock"
+					] ]
+        }
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
     },
@@ -6417,6 +6498,23 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 4d10 at level 10, and 7d8 at level 17."
     },
+		{
+      "id": "malignant-chain",
+      "name": "Malignant Chain",
+      "type": "poison",
+      "power": [
+        "dex",
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "You pour toxins into the target by wrapping them in a toxic, corrosive chain. Make a ranged attack, dealing 4d4 + MOVE poison damage on a hit. A creature that is hit must make a CON save against your Move DC or be badly poisoned."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
+    },
     {
       "id": "mat-block",
       "name": "Mat Block",
@@ -6429,6 +6527,23 @@
       "description": [
         "You conjure up a ethereal, protective mat to shield you and your allies. Until the end of your next turn, any ally creature within 15 feet of you (including you) is immune to damage from damaging moves. Status-inducing moves can still affect their targets."
       ]
+    },
+		{
+      "id": "matcha-gotcha",
+      "name": "Matcha Gotcha",
+      "type": "grass",
+      "power": [
+        "dex",
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "self (20ft cone)",
+      "description": [
+        "You spray a blast of tea that you mixed. Creatures in range must make a DEX save against your Move DC, taking 2d6 + MOVE grass damage on failure, half on success. For each creature that failed the save, you regain 1d6 HP."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
     {
       "id": "me-first",
@@ -6645,6 +6760,22 @@
       "description": [
         "You summon a move at random to inflict against a creature. When you use this move, roll a d100. The resulting number is the TM number for the move you make. If the move is unable to be completed because of positioning, range, etc., Metronome fails."
       ]
+    },
+		{
+      "id": "mighty-cleave",
+      "name": "Mighty Cleave",
+      "type": "rock",
+      "power": [
+        "str"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You wield the light that has accumulated atop your head to cleave the target. Make a melee attack, dealing 2d8 + MOVE rock damage on a hit. This move hits and deals damage even through moves/abilities that would negate it, such as Protect, Spiky Shield, etc."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
     },
     {
       "id": "milk-drink",
@@ -8139,6 +8270,23 @@
       "range": "60ft",
       "description": [
         "You send a beam of invisible, psychic energy at a target in range. The target must make a WIS saving throw against your Move DC, taking 2d6 + MOVE psychic damage on a fail, or half as much on a success. Creatures that fail the save by 5 or more become confused."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
+		{
+      "id": "psyblade",
+      "name": "Psyblade",
+      "type": "psychic",
+      "power": [
+        "str",
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You rend the target with an ethereal blade. Make a melee attack, dealing 2d6 + MOVE psychic damage on a hit. If you are on Electric Terrain, you make the attack with advantage."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
@@ -11160,6 +11308,39 @@
       ],
       "higherLevels": "The healing dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
     },
+		{
+      "id": "syrup-bomb",
+      "name": "Syrup Bomb",
+      "type": "grass",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "3 rounds",
+      "range": "60ft",
+      "description": [
+        "You set off an explosion of sticky candy syrup at a point within range. Each creature within 5ft of that point must make a DEX save against your Move DC, taking 1d10 + MOVE grass damage on failure, half on success. On failure, the creature also falls Prone.",
+				"Syrup then covers the ground within 5ft of the target point for the duration. A creature that enters the area or ends its turn there must make a DEX save against your Move DC, falling Prone on failure."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17."
+    },
+		{
+      "id": "tachyon-cutter",
+      "name": "Tachyon Cutter",
+      "type": "steel",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "You launch particle blades at the opponent twice in a row. This move is guaranteed to hit twice, each for 1d4 + MOVE steel damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d10 at level 10, and 2d8 at level 17."
+    },
     {
       "id": "tackle",
       "name": "Tackle",
@@ -11398,6 +11579,25 @@
       "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
 		{
+      "id": "tera-starstorm",
+      "name": "Tera Starstorm",
+      "type": "stellar",
+      "power": [
+        "str",
+				"cha"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "240ft",
+      "description": [
+        "With the power of your crystals, you bombard and eliminate the target. Choose a point you can see within range. Each creature in a 20ft radius sphere centered on the point makes a DEX saving throw against your Move DC. A creature takes 2d12 + MOVE stellar damage on a failed save or half as much on a successful save.",
+				"Only Terapagos may use this move. If Terapagos is in its Stellar Form, then you may choose four points instead of one. A creature in an area of more than one tera sphere is affected only once.",
+				"Terastallized Pokémon are vulnerable to stellar-type damage. Otherwise, all creatures of any type take normal damage."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 3d10 at level 5, 7d6 at level 10, and 8d8 at level 17."
+    },
+		{
       "id": "terrain-pulse",
       "name": "Terrain Pulse",
       "type": "normal",
@@ -11629,6 +11829,22 @@
         "You send a powerful bolt of electricity at a target in range. Make a ranged attack roll, doing 2d8 + MOVE electric damage on a hit. On a natural attack roll of 19 or 20, the target is paralyzed."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
+    },
+		{
+      "id": "thunderclap",
+      "name": "Thunderclap",
+      "type": "electric",
+      "power": [
+        "dex"
+      ],
+      "time": "1 reaction",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "120ft",
+      "description": [
+        "As a reaction to being attacked with a ranged attack by a creature you can see in range, you may strike first with a jolt of electricity. Make a ranged attack against the attacker, dealing 1d6 + MOVE electric damage on a hit. Your roll happens before theirs."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
     },
 		{
       "id": "thunderous-kick",
