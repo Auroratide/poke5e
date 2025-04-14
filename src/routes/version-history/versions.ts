@@ -11,6 +11,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.3.3",
+		description: [
+			"Added Pokémon: Walking Wake, Iron Leaves, Hydrapple line, Sinistcha line, the Loyal Three, Ogerpon, Gouging Fire, Raging Bolt, Iron Boulder, Iron Crown, Terapagos, Pecharunt",
+		],
+	}, {
 		name: "v1.3.2",
 		description: [
 			"Bug fix: Sunny Castform uses correct sprite",
