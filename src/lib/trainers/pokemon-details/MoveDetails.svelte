@@ -107,7 +107,7 @@
 	}
 
 	.bg-by-type {
-		background-color: var(--bg);
+		background: var(--bg);
 		color: var(--skin-bg-text);
 	}
 
