@@ -25,7 +25,7 @@
 	$: baseTrainerUrl = `${base}/trainers?id=${$trainer.info.readKey}`
 </script>
 
-<ListHeading title="{$trainer.info.name}'s Pokemon">
+<ListHeading title="{$trainer.info.name}'s Pokemon" target="/trainers">
 	<span slot="link">
 		{#if currentPokemon}
 			<a href="{baseTrainerUrl}" class="dark-font">View trainer profile &gt;</a>

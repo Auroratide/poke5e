@@ -23,7 +23,7 @@
 		(l: Trainer, r: Trainer) => field(l).localeCompare(field(r))
 </script>
 
-<ListHeading title="Trainer List">
+<ListHeading title="Trainer List" target="/trainers">
 	<a slot="link" href="{Url.trainers(undefined, undefined, PageAction.findTrainer)}" class="dark-font">Find by trainer ID &gt;</a>
 	<Button slot="action" href="{base}/trainers?action=new-trainer">+ New Trainer</Button>
 </ListHeading>
