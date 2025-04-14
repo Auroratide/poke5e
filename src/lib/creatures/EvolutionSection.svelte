@@ -12,16 +12,17 @@
 
 
 <section class="evolution">
+	<h2>Evolution</h2>
 	<p style:margin-bottom="0.125em">
 		<strong>Evolution:</strong> {evolution.stage} / {evolution.maxStage}
 	</p>
 	{#if $allPokemon && $moves}
 		{#if evolution.from?.length > 0}
 			<p>
-					{pokemon.name} evolves from
-					{#each evolution.from as fromId, i}
-						{@const from = $allPokemon.find((it) => it.id === fromId)}
-						<a href="{base}/pokemon/{from.id}">{from.name}</a>{#if i !== evolution.from.length - 1}, {/if}{/each}.
+				{pokemon.name} evolves from
+				{#each evolution.from as fromId, i}
+					{@const from = $allPokemon.find((it) => it.id === fromId)}
+					<a href="{base}/pokemon/{from.id}">{from.name}</a>{#if i !== evolution.from.length - 1}, {/if}{/each}.
 			</p>
 		{/if}
 		{#if evolution.to?.length > 0}

@@ -11,6 +11,7 @@
 	import EvolutionSection from "./EvolutionSection.svelte"
 	import PokemonArt from "./PokemonArt.svelte"
 	import GenderRatio from "./GenderRatio.svelte"
+	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 
 	export let pokemon: Pokemon
 
@@ -20,6 +21,7 @@
 <Card title={pokemon.name}>
 	<TypeTag slot="header-extra" type={pokemon.type} />
 	<section class="info">
+		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<div class="{hasImage ? "row" : ""}">
 			<FlatDl columns={hasImage ? 1 : 2}>
 					<dt>Number</dt>
@@ -39,8 +41,8 @@
 		</div>
 		<p>{pokemon.description}</p>
 	</section>
-	<hr />
 	<section class="stats">
+		<h2>Stats</h2>
 		<FlatDl>
 			<dt>Armor Class</dt>
 			<dd>{pokemon.ac}</dd>
@@ -72,8 +74,8 @@
 			<TypeEffectiveness type={pokemon.type} />
 		</FlatDl>
 	</section>
-	<hr />
 	<section class="abilities">
+		<h2>Abilities</h2>
 		{#if pokemon.specialAbilityText !== undefined}
 			<p><strong>{pokemon.specialAbilityText}</strong></p>
 		{/if}
@@ -82,11 +84,10 @@
 		{/each}
 	</section>
 	{#if pokemon.evolution !== undefined}
-		<hr />
 		<EvolutionSection {pokemon} />
 	{/if}
-	<hr />
 	<section class="moves">
+		<h2>Moves</h2>
 		<FlatDl>
 			<dt>Starting</dt>
 			<dd><InlineMoveLinks moves={pokemon.moves.start} /></dd>
