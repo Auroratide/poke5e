@@ -7,18 +7,19 @@
 
 	let showMore = false
 	const toggleMore = () => showMore = !showMore
+	const close = () => showMore = false
 </script>
 
 <footer>
 	<Container>
 		<div class="small-screen">
 			<div class="summary">
-				<p><a href="{Url.versionHistory()}">{currentVersion}</a></p>
+				<p><a href="{Url.versionHistory()}" on:click={close}>{currentVersion}</a></p>
 				<button aria-expanded="{showMore}" aria-controls="site-footer-more" on:click={toggleMore}>{showMore ? "Less" : "More"} <span class="icon chevron-menu"><ChevronMenu label="" /></span></button>
 			</div>
 			<div id="site-footer-more" class="animate-height" hidden={!showMore} aria-hidden="{!showMore}">
 				<ul class="links">
-					<li><a href="{Url.feedback()}">Feedback</a></li>
+					<li><a href="{Url.feedback()}" on:click={close}>Feedback</a></li>
 					<li><a href="{Url.external.github()}">Github</a></li>
 					<!-- <li><a href="{Url.external.discord()}">Discord</a></li> -->
 				</ul>
