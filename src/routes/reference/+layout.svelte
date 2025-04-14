@@ -5,10 +5,9 @@
 	import SearchField from "$lib/design/SearchField.svelte"
 	import { filterValue } from "./store"
 	import { search, References } from "./references"
-	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
+	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
 
 	$: pathname = $page.url.pathname
-	$: isMainRefPage = pathname === "/reference"
 
 	// This manual DOM update is here because, for reasons I can't ascertain, Svelte is
 	// not updating anything inside the side slot reactively. So I'll do it myself.
@@ -25,10 +24,8 @@
 <Page theme="navy">
 	<PencilNotes slot="icon" />
 	<nav slot="side" aria-label="Reference" data-pathname="{pathname}">
+		<ListPageHeading title="Reference" target="/reference" />
 		<SearchField id="reference-search" label="Search" bind:value={$filterValue} matched={filtered.length} max={References.length} />
-		<VisuallyHidden>
-			{#if isMainRefPage} <h1 class="title">Reference</h1> {:else} <p class="title">Reference</p> {/if}
-		</VisuallyHidden>
 		<ul bind:this={ul}>
 			{#each filtered as reference (reference.name)}
 				<li><a href="{reference.url}" data-pathname="{reference.url}">{reference.name}</a></li>
@@ -44,12 +41,6 @@
 		flex-direction: column;
 		height: 100%;
 		gap: 1em;
-	}
-
-	.title {
-		font-size: var(--font-sz-neptune);
-		font-weight: bold;
-		margin-block-end: 0.5em;
 	}
 
 	ul {

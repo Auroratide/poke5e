@@ -5,6 +5,7 @@
 	import Pokeball from "$lib/design/icon/Pokeball.svelte"
 	import Loader from "$lib/design/Loader.svelte"
 	import { pokemon } from "$lib/creatures/store"
+	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
 
 	$: ssrPokemon = $page.data.pokemonList
 	$: pokemonToRender = ssrPokemon ?? $pokemon
@@ -12,7 +13,8 @@
 
 <Page theme="red">
 	<Pokeball slot="icon" />
-	<nav slot="side" class="table" aria-label="Pokemon List">
+	<nav slot="side" class="table" aria-label="Pokémon List">
+		<ListPageHeading title="Pokémon List" target="/pokemon" />
 		{#if pokemonToRender !== undefined}
 			<PokemonList pokemons={pokemonToRender} />
 		{:else}

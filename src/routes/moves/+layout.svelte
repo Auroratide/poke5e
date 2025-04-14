@@ -5,6 +5,7 @@
 	import Hit from "$lib/design/icon/Hit.svelte"
 	import Loader from "$lib/design/Loader.svelte"
 	import { moves } from "$lib/moves/store"
+	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
 
 	$: ssrMoves = $page.data.movesList
 	$: movesToRender = ssrMoves ?? $moves
@@ -12,7 +13,8 @@
 
 <Page theme="blue">
 	<Hit slot="icon" />
-	<nav slot="side" class="table" aria-label="Pokemon List">
+	<nav slot="side" class="table" aria-label="Move List">
+		<ListPageHeading title="Move List" target="/moves" />
 		{#if movesToRender !== undefined}
 			<MoveList moves={movesToRender} />
 		{:else}
