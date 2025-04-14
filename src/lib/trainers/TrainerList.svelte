@@ -34,11 +34,11 @@
 	{#if showGetStarted}<GetStarted />{/if}
 {:else}
 	<ManualMigrationMessage />
-	<SortableTable let:item items={filtered} bind:currentSorter={$trainerListSorter} headers={[ {
+	<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$trainerListSorter} headers={[ {
 		key: "name", name: "Name", ratio: 1, sort: byStringField(it => it.name),
 	} ]}>
 		<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
-			<BubbleRow.Cell primary><a href="{base}/trainers?id={item.readKey}">{item.name}</a></BubbleRow.Cell>
+			<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{base}/trainers?id={item.readKey}">{item.name}</a></BubbleRow.Cell>
 		</BubbleRow.Row>
 	</SortableTable>
 {/if}

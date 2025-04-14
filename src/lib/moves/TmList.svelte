@@ -19,17 +19,17 @@
 <div class="search-field">
 	<SearchField id="filter-moves" label="Search" bind:value={$filterTmValue} matched={filtered.length} max={tms.length} />
 </div>
-<SortableTable let:item items={filtered} bind:currentSorter={$currentTmSorter} headers={[ {
+<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$currentTmSorter} headers={[ {
 	key: "name", name: "Name", ratio: 3, sort: byStringField(it => it.moveInfo.name),
 }, {
 	key: "type", name: "Type", ratio: 2, sort: byStringField(it => it.moveInfo.type),
 }, {
-	key: "cost", name: "Cost", ratio: 2, sort: byNumericField(it => it.cost),
+	key: "cost", name: "Cost", ratio: 2, sort: byNumericField(it => it.cost), largeScreenOnly: true,
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.moveInfo.type}-bg)">
-		<BubbleRow.Cell primary><a href="{base}/tms/{item.id}">{item.moveInfo.name}</a></BubbleRow.Cell>
-		<BubbleRow.Cell>{item.moveInfo.type}</BubbleRow.Cell>
-		<BubbleRow.Cell>{formatMoney(item.cost)}</BubbleRow.Cell>
+		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{base}/tms/{item.id}">{item.moveInfo.name}</a></BubbleRow.Cell>
+		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{item.moveInfo.type}</BubbleRow.Cell>
+		<BubbleRow.Cell cellVisibility={cellVisibility[2]}>{formatMoney(item.cost)}</BubbleRow.Cell>
 	</BubbleRow.Row>
 </SortableTable>
 
