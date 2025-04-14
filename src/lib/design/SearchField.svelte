@@ -12,7 +12,8 @@
 	<search class="search-field">
 		<VisuallyHidden><label for={id}>{label}</label></VisuallyHidden>
 		<input {id} type="search" placeholder="Search..." bind:value />
-		<span class="matched"><span class="text">{matched} / {max}</span></span>
+		<VisuallyHidden><label for="results-{id}">Number of results</label></VisuallyHidden>
+		<span class="matched"><output id="results-{id}" class="text" aria-live="polite">{matched} / {max}</output></span>
 	</search>
 </div>
 
@@ -22,6 +23,13 @@
 		color: var(--skin-bg-text);
 		transform: skewX(var(--skew-angle));
 		padding-left: 1em;
+		margin-inline: -1em;
+	}
+
+	@media screen and (min-width: 37.5rem) {
+		.skew-container {
+			margin-inline: 0;
+		}
 	}
 
 	.search-field {
@@ -30,6 +38,7 @@
 	}
 
 	.search-field input {
+		inline-size: 0;
 		flex: 1;
 		background: none;
 		border: none;
@@ -45,6 +54,7 @@
 		padding: 0 1em;
 		margin-left: 0.5em;
 		color: var(--skin-bg-softtext);
+		white-space: nowrap;
 	}
 
 	.matched .text {
