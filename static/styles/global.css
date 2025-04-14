@@ -122,6 +122,8 @@
     --red-dark: hsl(355 66% 45%);
     --red-text: hsl(355 66% 45%);
     --red-light: hsl(355 90% 67%);
+
+	interpolate-size: allow-keywords;
 }
 
 .theme-blue {

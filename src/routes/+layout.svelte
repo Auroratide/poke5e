@@ -2,7 +2,6 @@
 	import type { LayoutData } from "./$types"
 	import type { Writable } from "svelte/store"
 	import Container from "$lib/design/Container.svelte"
-	import { base } from "$app/paths"
 	import { afterNavigate } from "$app/navigation"
 	import * as Analytics from "$lib/analytics"
 	import { filterValue as pokemonFilter, currentSorter as pokemonSorter } from "$lib/creatures/store"
@@ -29,6 +28,7 @@
 	import IdBadge from "$lib/design/icon/IdBadge.svelte"
 	import PencilNotes from "$lib/design/icon/PencilNotes.svelte"
 	import Backpack from "$lib/design/icon/Backpack.svelte"
+	import SiteFooter from "$lib/design/SiteFooter.svelte"
 	
 	if (browser) {
 		import("@auroratide/toggle-switch/lib/define.js")
@@ -96,15 +96,7 @@
 	<div class="content">
 		<slot></slot>
 	</div>
-	<footer>
-		<Container>
-			<div class="horizontal-between footer-links">
-				<p><a href="{base}/version-history">{currentVersion}</a></p>
-				<p><a href="{base}/feedback">Got feedback?</a></p>
-			</div>
-			<p class="license"><small>This is unofficial Fan Content and is not approved/endorsed by &copy; Wizards of the Coast, &copy; Game Freak, or &copy; Nintendo Company Inc. Portions of the material may be property of &copy; Wizards of the Coast, &copy; Game Freak, or &copy; Nintendo Company Inc.</small></p>
-		</Container>
-	</footer>
+	<SiteFooter {currentVersion} />
 	<ErrorDialog />
 	{#if browser && window.location.origin === MY_ORIGIN}
 		<MigrationDialog />
@@ -122,29 +114,5 @@
 	.content {
 		flex: 1;
 		overflow: hidden;
-	}
-
-	footer {
-		background: var(--skin-footer);
-		color: var(--skin-footer-text);
-	}
-
-	.license {
-		text-align: center;
-		margin: 0;
-		font-size: var(--font-sz-mercury);
-	}
-
-	.horizontal-between {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-	.footer-links {
-		font-size: var(--font-sz-mars);
-		padding: 0.25em 0.5em;
-	} .footer-links p {
-		margin: 0;
 	}
 </style>
