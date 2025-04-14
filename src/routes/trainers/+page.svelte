@@ -22,6 +22,7 @@
 	import DeleteTrainerCard from "$lib/trainers/trainer-details/DeleteTrainerCard.svelte"
 	import AccessKeyCard from "$lib/trainers/trainer-details/AccessKeyCard.svelte"
 	import RemoveTrainerCard from "$lib/trainers/trainer-details/RemoveTrainerCard.svelte"
+	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: pokemonId = browser ? $page.url.searchParams.get("pokemon") : undefined
@@ -47,7 +48,7 @@
 <Title value="Trainers" />
 <Page theme="green">
 	<IdBadge slot="icon" />
-	<nav slot="side" class="table" aria-label="Pokemon List">
+	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Pokemon List">
 		{#if trainerId}
 			{#await trainer}
 				<Loader />

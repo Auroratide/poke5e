@@ -6,6 +6,7 @@
 	import Loader from "$lib/design/Loader.svelte"
 	import { tms } from "$lib/moves/store"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
+	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 
 	$: ssrTms = $page.data.tmsList
 	$: tmsToRender = ssrTms ?? $tms
@@ -13,7 +14,7 @@
 
 <Page theme="purple">
 	<Disc slot="icon" />
-	<nav slot="side" aria-label="TM List">
+	<nav id="{MAIN_SEARCH_ID}" slot="side" aria-label="TM List">
 		<ListPageHeading title="TM List" target="/tms" />
 		{#if tmsToRender !== undefined}
 			<TmList tms={tmsToRender} />

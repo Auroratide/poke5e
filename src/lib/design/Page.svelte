@@ -3,6 +3,7 @@
 	import Theme from "$lib/design/Theme.svelte"
 	import Backdrop from "$lib/design/Backdrop.svelte"
 	import IconShadow from "$lib/design/IconShadow.svelte"
+	import { MAIN_CONTENT_ID } from "./SkipLinks.svelte"
 
 	export let theme: ThemeColor
 </script>
@@ -16,7 +17,7 @@
 		<div class="side">
 			<slot name="side"></slot>
 		</div>
-		<main>
+		<main id="{MAIN_CONTENT_ID}">
 			<slot></slot>
 		</main>
 	</div>

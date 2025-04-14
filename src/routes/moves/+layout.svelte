@@ -6,6 +6,7 @@
 	import Loader from "$lib/design/Loader.svelte"
 	import { moves } from "$lib/moves/store"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
+	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 
 	$: ssrMoves = $page.data.movesList
 	$: movesToRender = ssrMoves ?? $moves
@@ -13,7 +14,7 @@
 
 <Page theme="blue">
 	<Hit slot="icon" />
-	<nav slot="side" class="table" aria-label="Move List">
+	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Move List">
 		<ListPageHeading title="Move List" target="/moves" />
 		{#if movesToRender !== undefined}
 			<MoveList moves={movesToRender} />

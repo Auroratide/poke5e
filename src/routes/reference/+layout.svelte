@@ -6,6 +6,7 @@
 	import { filterValue } from "./store"
 	import { search, References } from "./references"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
+	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 
 	$: pathname = $page.url.pathname
 
@@ -23,7 +24,7 @@
 
 <Page theme="navy">
 	<PencilNotes slot="icon" />
-	<nav slot="side" aria-label="Reference" data-pathname="{pathname}">
+	<nav id="{MAIN_SEARCH_ID}" slot="side" aria-label="Reference" data-pathname="{pathname}">
 		<ListPageHeading title="Reference" target="/reference" />
 		<SearchField id="reference-search" label="Search" bind:value={$filterValue} matched={filtered.length} max={References.length} />
 		<ul bind:this={ul}>

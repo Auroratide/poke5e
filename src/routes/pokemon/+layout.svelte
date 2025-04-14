@@ -6,6 +6,7 @@
 	import Loader from "$lib/design/Loader.svelte"
 	import { pokemon } from "$lib/creatures/store"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
+	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 
 	$: ssrPokemon = $page.data.pokemonList
 	$: pokemonToRender = ssrPokemon ?? $pokemon
@@ -13,7 +14,7 @@
 
 <Page theme="red">
 	<Pokeball slot="icon" />
-	<nav slot="side" class="table" aria-label="Pokémon List">
+	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Pokémon List">
 		<ListPageHeading title="Pokémon List" target="/pokemon" />
 		{#if pokemonToRender !== undefined}
 			<PokemonList pokemons={pokemonToRender} />

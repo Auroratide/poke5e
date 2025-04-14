@@ -6,6 +6,7 @@
 	import { items } from "$lib/items/store"
 	import ItemList from "$lib/items/ItemList.svelte"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
+	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 
 	$: ssrItems = $page.data.itemsList
 	$: itemsToRender = ssrItems ?? $items
@@ -13,7 +14,7 @@
 
 <Page theme="yellow">
 	<Backpack slot="icon" />
-	<nav slot="side" class="table" aria-label="Item List">
+	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Item List">
 		<ListPageHeading title="Item List" target="/items" />
 		{#if itemsToRender !== undefined}
 			<ItemList items={itemsToRender} />
