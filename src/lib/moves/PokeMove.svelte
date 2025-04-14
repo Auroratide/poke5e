@@ -5,6 +5,7 @@
 	import TypeTag from "../pokemon/TypeTag.svelte"
 	import { powerAsString } from "./string"
 	import MoveDescription from "./MoveDescription.svelte"
+	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 
 	export let move: Move
 </script>
@@ -12,6 +13,7 @@
 <Card title={move.name}>
 	<TypeTag slot="header-extra" type={[move.type]}></TypeTag>
 	<section class="info">
+		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<FlatDl>
 			<dt>Move Power</dt>
 			<dd class="power">{powerAsString(move.power)}</dd>
@@ -31,6 +33,7 @@
 	<slot name="extra"></slot>
 	{#if move.contest}
 		<section class="contest" style:--contest-color="var(--skin-contest-{move.contest.contest})">
+			<VisuallyHidden><h2>Context</h2></VisuallyHidden>
 			<FlatDl>
 					<dt>Contest</dt>
 					<dd class="contest-type">{move.contest.contest}</dd>

@@ -17,7 +17,7 @@
 </script>
 
 <div class="container" class:inline>
-	<article>
+	<article aria-label="{title}">
 		<header>
 			<svelte:element this={leveltag}>{title}</svelte:element>
 			<slot name="header-extra"></slot>
