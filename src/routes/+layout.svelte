@@ -29,6 +29,8 @@
 	import PencilNotes from "$lib/design/icon/PencilNotes.svelte"
 	import Backpack from "$lib/design/icon/Backpack.svelte"
 	import SiteFooter from "$lib/design/SiteFooter.svelte"
+	import SkipLinks, { MAIN_CONTENT_ID, MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
+	import { page } from "$app/stores"
 	
 	if (browser) {
 		import("@auroratide/toggle-switch/lib/define.js")
@@ -55,9 +57,14 @@
 			Analytics.createPageviewEvent(navigation.to.url.pathname)
 		}
 	})
+
+	// Sort of an abusive way to make sure this is always right
+	$: hasContent = browser && $page.url != null ? (document.querySelector(`#${MAIN_CONTENT_ID}`)?.textContent?.length ?? 0) > 0 : false
+	$: hasSearch = browser && $page.url != null ? (document.querySelector(`#${MAIN_SEARCH_ID}`)?.textContent?.length ?? 0) > 0 : false
 </script>
 
 <div class="page">
+	<SkipLinks content={hasContent} search={hasSearch} />
 	<header>
 		<Container>
 			<MainNavigation active={activeSection} items={[ {

@@ -1,8 +1,9 @@
 <script lang="ts">
 	import Container from "./Container.svelte"
+	import { MAIN_CONTENT_ID } from "./SkipLinks.svelte"
 </script>
 
-<main>
+<main id="{MAIN_CONTENT_ID}">
 	<Container half>
 		<slot></slot>
 	</Container>
