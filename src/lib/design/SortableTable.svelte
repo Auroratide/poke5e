@@ -8,6 +8,7 @@
 		name: string,
 		ratio: number,
 		sort?: Sorter,
+		largeScreenOnly?: boolean
 	}[]
 	export let currentSorter: Sorter = noSort
 
@@ -16,7 +17,12 @@
 		.slice(0)
 		.sort((l, r) => currentSorter(l, r) * (reversed ? -1 : 1))
 	$: arrow = reversed ? "&#9650;" : "&#9660;"
-	$: columns = headers.map(it => `${it.ratio}fr`).join(" ")
+	$: smallColumns = headers.filter((it) => !it.largeScreenOnly).map(it => `${it.ratio}fr`).join(" ")
+	$: largeColumns = headers.map(it => `${it.ratio}fr`).join(" ")
+	$: cellVisibility = headers.map((it, i) => ({
+		largeScreenOnly: it.largeScreenOnly,
+		lastVisibleCell: headers.slice(i + 1).every((it2) => it2.largeScreenOnly),
+	}))
 
 	const toggle = (sort: Sorter) => () => {
 		if (sort === currentSorter && !reversed) {
@@ -32,10 +38,10 @@
 </script>
 
 <!-- svelte-ignore a11y-no-redundant-roles -->
-<table role="table" style:--table-columns={columns}>
+<table role="table" style:--large-table-columns={largeColumns} style:--small-table-columns={smallColumns}>
 	<thead role="rowgroup">
 		<tr role="row">{#each headers as header (header.key)}
-			<th role="columnheader" style="--alignment: var(--{header.key}-alignment);">{#if header.sort !== undefined}
+			<th role="columnheader" style="--alignment: var(--{header.key}-alignment);" class:large-screen-only={header.largeScreenOnly}>{#if header.sort !== undefined}
 				<button on:click={toggle(header.sort)}>
 					<span>{header.name}</span>
 					{#if header.sort === currentSorter}
@@ -49,7 +55,7 @@
 	</thead>
 	<tbody role="rowgroup">
 		{#each sorted as item}
-			<slot {item}><tr></tr></slot>
+			<slot {item} {cellVisibility}><tr></tr></slot>
 		{/each}
 	</tbody>
 </table>
@@ -76,7 +82,7 @@
 
 	table :global(tr) {
 		display: grid;
-		grid-template-columns: var(--table-columns);
+		grid-template-columns: var(--large-table-columns);
 		margin-bottom: 0.25em;
 	}
 
@@ -102,5 +108,15 @@
 
 	.sort-arrow {
 		font-size: 0.75em;
+	}
+
+	@media screen and (max-width: 37.5rem) {
+		table :global(tr) {
+			grid-template-columns: var(--small-table-columns);
+		}
+
+		.large-screen-only {
+			display: none;
+		}
 	}
 </style>
