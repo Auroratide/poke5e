@@ -6,11 +6,11 @@
 	export let target: string
 
 	$: pathname = $page.url.pathname
-	$: isMainRefPage = pathname === target
+	$: isMainPage = pathname === target
 </script>
 
 <VisuallyHidden>
-	{#if isMainRefPage} <h1 class="title">{title}</h1> {:else} <p class="title">{title}</p> {/if}
+	{#if isMainPage} <h1 class="title">{title}</h1> {:else} <p class="title">{title}</p> {/if}
 </VisuallyHidden>
 
 <style>

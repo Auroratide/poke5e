@@ -1,9 +1,20 @@
 <script lang="ts">
+	import { page } from "$app/stores"
+
 	export let title: string
+	export let target: string
+
+	$: pathname = $page.url.pathname
+	$: numberOfParams = $page.url.searchParams.size
+	$: isMainPage = pathname === target && numberOfParams === 0
 </script>
 
 <div class="flex-column space-bottom">
-	<p class="large-font space-bottom">{title}</p>
+	{#if isMainPage}
+		<h1 class="large-font space-bottom">{title}</h1>
+	{:else}
+		<p class="large-font space-bottom">{title}</p>
+	{/if}
 	<div class="flex-row space-between">
 		<p class="indent small-font no-space">
 			<slot name="link"></slot>
