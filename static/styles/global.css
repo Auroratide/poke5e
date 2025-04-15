@@ -188,6 +188,10 @@ a:hover {
     text-decoration: none;
 }
 
+ul, ol {
+	padding-inline-start: clamp(0.75em, 3vw, 2em);
+}
+
 input, textarea, select {
     border: none;
     background-color: var(--skin-input-bg);
