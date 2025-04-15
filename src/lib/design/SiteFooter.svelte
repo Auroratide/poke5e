@@ -20,6 +20,7 @@
 			<div id="site-footer-more" class="animate-height" hidden={!showMore} aria-hidden="{!showMore}">
 				<ul class="links">
 					<li><a href="{Url.feedback()}" on:click={close}>Feedback</a></li>
+					<li><a href="{Url.accessibility()}" on:click={close}>Accessibility</a></li>
 					<li><a href="{Url.external.github()}">Github</a></li>
 					<!-- <li><a href="{Url.external.discord()}">Discord</a></li> -->
 				</ul>
@@ -31,6 +32,7 @@
 				<p><a href="{Url.versionHistory()}">{currentVersion}</a></p>
 				<ul class="links">
 					<li><a href="{Url.feedback()}">Feedback</a></li>
+					<li><a href="{Url.accessibility()}" on:click={close}>Accessibility</a></li>
 					<li><a href="{Url.external.github()}">Github</a></li>
 					<!-- <li><a href="{Url.external.discord()}">Discord</a></li> -->
 				</ul>

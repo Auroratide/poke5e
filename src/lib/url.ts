@@ -16,6 +16,7 @@ export const Url = {
 	},
 	versionHistory: () => `${base}/version-history`,
 	feedback: () => `${base}/feedback`,
+	accessibility: () => `${base}/accessibility`,
 	reference: {
 		all: () => `${base}/reference`,
 		abilities: () => `${base}/reference/abilities`,
