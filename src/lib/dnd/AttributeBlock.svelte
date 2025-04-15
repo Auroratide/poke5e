@@ -32,7 +32,7 @@
 	dl {
 		display: grid;
 		grid-template-columns: repeat(6, 1fr);
-		grid-template-rows: repeat(2, 1fr);
+		grid-template-rows: auto 1fr;
 		grid-auto-flow: column;
 		font-size: var(--font-sz-venus);
 		text-align: center;
@@ -50,6 +50,7 @@
 		margin: 0;
 		background-color: var(--skin-bg);
 		color: var(--skin-bg-text);
-		padding-bottom: 0.25em;
+		padding-inline: 0.25em;
+		padding-block-end: 0.25em;
 	}
 </style>
