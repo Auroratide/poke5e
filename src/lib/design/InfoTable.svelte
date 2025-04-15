@@ -2,12 +2,19 @@
 	export let label: string
 </script>
 
-<table>
-	<caption>{label}</caption>
-	<slot></slot>
-</table>
+<div class="scroll-container">
+	<table>
+		<caption>{label}</caption>
+		<slot></slot>
+	</table>
+</div>
 
 <style>
+	.scroll-container {
+		inline-size: 100%;
+		overflow-x: auto;
+	}
+
 	table {
 		border-collapse: collapse;
 		margin: 0 auto 1em;
