@@ -65,5 +65,6 @@
 <style>
 	input {
 		min-width: var(--input-min-width, 100%);
+		padding: 0.1em 0.25em;
 	}
 </style>
