@@ -5,7 +5,7 @@
 	import Info from "./Info.svelte"
 	import Card from "$lib/design/Card.svelte"
 	import Button from "$lib/design/Button.svelte"
-	import ActionArea from "$lib/design/Form/ActionArea.svelte"
+	import { ActionArea } from "$lib/design/forms"
 	import TypeTag from "$lib/pokemon/TypeTag.svelte"
 	import type { TrainerStore } from "../trainers"
 	import { PageAction } from "../page-action"

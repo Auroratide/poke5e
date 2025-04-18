@@ -2,7 +2,7 @@
 	import Editor, { type UpdateDetail } from "./Editor.svelte"
 	import Card from "$lib/design/Card.svelte"
 	import Button from "$lib/design/Button.svelte"
-	import ActionArea from "$lib/design/Form/ActionArea.svelte"
+	import { ActionArea } from "$lib/design/forms"
 	import type { TrainerStore } from "../trainers"
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/url"

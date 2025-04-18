@@ -5,7 +5,7 @@
 	import { goto } from "$app/navigation"
 	import { base } from "$app/paths"
 	import Saveable from "$lib/design/Saveable.svelte"
-	import ActionArea from "$lib/design/Form/ActionArea.svelte"
+	import { ActionArea } from "$lib/design/forms"
 	import Fieldset from "$lib/design/Form/Fieldset.svelte"
 	import Title from "$lib/design/Title.svelte"
 

@@ -3,7 +3,7 @@
 	import { createEventDispatcher } from "svelte"
 	import Button from "$lib/design/Button.svelte"
 	import Fieldset from "$lib/design/Form/Fieldset.svelte"
-	import ActionArea from "$lib/design/Form/ActionArea.svelte"
+	import { ActionArea } from "$lib/design/forms"
 	import type { Pokemon } from "$lib/creatures/types"
 	import Saveable from "$lib/design/Saveable.svelte"
 	import { pokemon as allPokemon } from "$lib/creatures/store"
