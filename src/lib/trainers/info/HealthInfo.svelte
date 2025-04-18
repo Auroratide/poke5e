@@ -11,7 +11,10 @@
 	import { createEventDispatcher } from "svelte"
 	import ResourceBar from "$lib/design/ResourceBar.svelte"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
-	import NumericResourceInput, { type ChangeDetail as NumericChangeDetail } from "$lib/design/Form/NumericResourceInput.svelte"
+	import {
+		NumericResourceField,
+		type NumericChangeDetail,
+	} from "$lib/design/forms"
 	import type { HitDice } from "$lib/dnd/types"
 	import type { NonVolatileStatus } from "$lib/pokemon/status"
 	import StatusInput, { type ChangeDetail as StatusChangeDetail } from "$lib/design/Form/StatusInput.svelte"
@@ -61,7 +64,7 @@
 		<VisuallyHidden><label for="current-hp">HP</label></VisuallyHidden>
 		<span class="current-hp">
 			{#if editable}
-				<NumericResourceInput id="current-hp" value={hpCur} on:change={onChangeHp} />
+				<NumericResourceField id="current-hp" value={hpCur} on:change={onChangeHp} />
 			{:else}
 				{hp.current}
 			{/if}
@@ -74,7 +77,7 @@
 			<VisuallyHidden><label for="current-hit-dice">Hit Dice</label></VisuallyHidden>
 			<span class="current-hit-dice">
 				{#if editable}
-					<NumericResourceInput id="current-hit-dice" value={hitDiceCur} on:change={onChangeHitDice} />
+					<NumericResourceField id="current-hit-dice" value={hitDiceCur} on:change={onChangeHitDice} />
 				{:else}
 					{hitDice.current}
 				{/if}

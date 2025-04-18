@@ -6,7 +6,10 @@
 
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
-	import NumericResourceInput, { type ChangeDetail as NumericChangeDetail } from "$lib/design/Form/NumericResourceInput.svelte"
+	import {
+		NumericResourceField,
+		type NumericChangeDetail,
+	} from "$lib/design/forms"
 	import { formatMoney } from "$lib/pokemon/money"
 	import InventoryList, { type UpdateQuantityDetail } from "../info/InventoryList.svelte"
 	import type { InventoryItem } from "../types"
@@ -48,7 +51,7 @@
 			<span class="row" style:gap="0.25em">
 				<span>₽</span>
 				<span style:flex="1">
-					<NumericResourceInput id="current-money" value={money} on:change={onChangeMoney} />
+					<NumericResourceField id="current-money" value={money} on:change={onChangeMoney} />
 				</span>
 			</span>
 		{:else}

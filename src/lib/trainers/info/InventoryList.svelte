@@ -10,8 +10,10 @@
 	import { getItemDetails } from "$lib/pokemon/held-items"
 	import type { HeldItem, MaybeQuantity } from "../types"
 	import { items as allItems } from "$lib/items/store"
-	import NumericResourceInput, { type ChangeDetail as NumericChangeDetail } from "$lib/design/Form/NumericResourceInput.svelte"
-
+	import {
+		NumericResourceField,
+		type NumericChangeDetail,
+	} from "$lib/design/forms"
 	const dispatch = createEventDispatcher()
 
 	export let items: (HeldItem & MaybeQuantity)[]
@@ -36,7 +38,7 @@
 						<span class="editable-quantity">
 							<label for="quantity-{details.id}" aria-label="Quantity">&times;</label>
 							{#if editable}
-								<NumericResourceInput id="quantity-{details.id}" value={details.quantity} on:change={onChangeQuantity(details)} />
+								<NumericResourceField id="quantity-{details.id}" value={details.quantity} on:change={onChangeQuantity(details)} />
 							{:else}
 								<span>{details.quantity}</span>
 							{/if}
