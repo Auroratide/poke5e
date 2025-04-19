@@ -4,9 +4,14 @@
 	import { trainers } from "./trainers"
 	import { goto } from "$app/navigation"
 	import { base } from "$app/paths"
-	import Saveable from "$lib/design/Saveable.svelte"
-	import { ActionArea } from "$lib/design/forms"
-	import Fieldset from "$lib/design/Form/Fieldset.svelte"
+	import {
+		ActionArea,
+		Form,
+		Fieldset,
+		TextField,
+		MarkdownField,
+		HintText,
+	} from "$lib/design/forms"
 	import Title from "$lib/design/Title.svelte"
 
 	let name = ""
@@ -33,20 +38,15 @@
 
 <Title value="Create Trainer" />
 <Card title="Create a New Trainer">
-	<section>
-		<Saveable {saving}>
-			<form on:submit|preventDefault={onCreate}>
-				<Fieldset title="Basic Info">
-					<label for="name-input">Name</label>
-					<input name="name" required id="name-input" type="text" bind:value={name} {disabled} />
-					<label for="description-input" style:place-self="start">Description</label>
-					<textarea name="description" id="description-input" bind:value={description} rows="6" {disabled}></textarea>
-				</Fieldset>
-				<ActionArea>
-					<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
-					<Button type="submit" {disabled}>Finish!</Button>
-				</ActionArea>
-			</form>
-		</Saveable>
-	</section>
+	<Form onsubmit={onCreate} {saving}>
+		<Fieldset title="Basic Info">
+			<TextField label="Name" bind:value={name} {disabled} required />
+			<MarkdownField label="Description" bind:value={description} rows={6} {disabled} />
+		</Fieldset>
+		<HintText>Once your trainer is created, you will be able to edit their stats, Pokémon, and inventory!</HintText>
+		<ActionArea>
+			<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
+			<Button type="submit" {disabled}>Finish!</Button>
+		</ActionArea>
+	</Form>
 </Card>

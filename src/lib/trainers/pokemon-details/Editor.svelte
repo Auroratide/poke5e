@@ -1,29 +1,20 @@
 <script lang="ts">
-	import { type TrainerPokemon } from "../types"
-	import { CustomNatureIdentifier, isStandardNature } from "../nature"
-	import { createEventDispatcher } from "svelte"
-	import Button from "$lib/design/Button.svelte"
-	import Fieldset from "$lib/design/Form/Fieldset.svelte"
-	import { ActionArea } from "$lib/design/forms"
-	import NatureInput from "./NatureInput.svelte"
 	import type { Pokemon } from "$lib/creatures/types"
-	import Saveable from "$lib/design/Saveable.svelte"
-	import TypeInput from "./TypeInput.svelte"
-	import FormDetails from "$lib/design/Form/FormDetails.svelte"
-	import NameInput from "../form/NameInput.svelte"
-	import LevelInput from "../form/LevelInput.svelte"
-	import AcInput from "../form/AcInput.svelte"
-	import NumberInput from "../form/NumberInput.svelte"
-	import PokeGenderFieldset from "../form/PokeGenderFieldset.svelte"
-	import AttributesFieldset from "../form/AttributesFieldset.svelte"
-	import PokeAbilityInput from "../form/PokeAbilityInput.svelte"
-	import ProficienciesFieldset from "../form/ProficienciesFieldset.svelte"
-	import SavingThrowsFieldset from "../form/SavingThrowsFieldset.svelte"
-	import PokeMovesFieldset from "../form/PokeMovesFieldset.svelte"
-	import GeneralTextarea from "../form/GeneralTextarea.svelte"
-	import TeraTypeInput from "./TeraTypeInput.svelte"
-	import ToggleSwitchInput from "../form/ToggleSwitchInput.svelte"
-	import HeldItemsFieldset from "../form/HeldItemsFieldset.svelte"
+	import Button from "$lib/design/Button.svelte"
+	import { ActionArea, Form, FormDetails, MarkdownField } from "$lib/design/forms"
+	import Fieldset from "$lib/design/forms/Fieldset.svelte"
+	import AttributesFieldset from "$lib/dnd/AttributesFieldset.svelte"
+	import ProficienciesFieldset from "$lib/dnd/ProficienciesFieldset.svelte"
+	import SavingThrowsFieldset from "$lib/dnd/SavingThrowsFieldset.svelte"
+	import TypeField from "$lib/pokemon/TypeField.svelte"
+	import { createEventDispatcher } from "svelte"
+	import { CustomNatureIdentifier, isStandardNature } from "../nature"
+	import { type TrainerPokemon } from "../types"
+	import BasicInfoFieldset from "./forms/BasicInfoFieldset.svelte"
+	import FeatsFieldset from "./forms/FeatsFieldset.svelte"
+	import GenderFieldset from "./forms/GenderFieldset.svelte"
+	import HeldItemsFieldset from "./forms/HeldItemsFieldset.svelte"
+	import MovesFieldset from "./forms/MovesFieldset.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -86,36 +77,23 @@
 	}
 </script>
 
-<Saveable {saving}>
-	<form on:submit|preventDefault={endEdit}>
-		<Fieldset title="Basic Info">
-			<NameInput label="Nickname" bind:value={nickname} {disabled} />
-			<NatureInput id="nature-input" bind:value={nature} bind:custom={natureCustom} {disabled} />
-			<TeraTypeInput id="tera-input" bind:value={tera} {disabled} />
-			<LevelInput bind:value={level} bind:maxHitDice={maxHitDice} {disabled} />
-			<AcInput bind:value={ac} {disabled} />
-			<NumberInput name="max-hp" label="Max HP" bind:value={maxHp} {disabled} />
-			<NumberInput name="max-hit-dice" label="Max Hit Dice" bind:value={maxHitDice} {disabled} />
-			<ToggleSwitchInput name="shiny" label="Shiny" bind:value={isShiny} {disabled} />
-		</Fieldset>
-		<PokeGenderFieldset bind:value={gender} {disabled} />
-		<AttributesFieldset bind:values={attributes} {disabled} />
-		<Fieldset title="Feats">
-			<PokeAbilityInput abilities={species.abilities} bind:value={ability} {disabled} />
-		</Fieldset>
-		<ProficienciesFieldset bind:values={proficiencies} {disabled} />
-		<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
-		<PokeMovesFieldset bind:values={moves} {species} {disabled} />
-		<HeldItemsFieldset bind:values={items} {disabled} />
-		<Fieldset title="General">
-			<GeneralTextarea name="notes" label="Notes" bind:value={notes} {disabled} placeholder="Use this for any general notes not covered by the above fields..." />
-		</Fieldset>
-		<FormDetails title="Advanced">
-			<TypeInput bind:value={type} id="type-input" />
-		</FormDetails>
-		<ActionArea>
-			<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
-			<Button type="submit" {disabled}>Finish!</Button>
-		</ActionArea>
-	</form>
-</Saveable>
+<Form onsubmit={endEdit} {saving}>
+	<BasicInfoFieldset bind:nickname bind:nature bind:natureCustom bind:tera bind:level bind:ac bind:maxHp bind:maxHitDice bind:isShiny {disabled} />
+	<GenderFieldset bind:value={gender} {disabled} />
+	<AttributesFieldset bind:values={attributes} {disabled} />
+	<FeatsFieldset bind:ability {species} {disabled} />
+	<ProficienciesFieldset bind:values={proficiencies} {disabled} />
+	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
+	<MovesFieldset bind:values={moves} {species} {disabled} />
+	<HeldItemsFieldset bind:items {disabled} />
+	<Fieldset title="General">
+		<MarkdownField label="Notes" bind:value={notes} placeholder="Use this for any general notes not covered by the above fields..." {disabled} />
+	</Fieldset>
+	<FormDetails title="Advanced">
+		<TypeField bind:value={type} {disabled} />
+	</FormDetails>
+	<ActionArea>
+		<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
+		<Button type="submit" {disabled}>Finish!</Button>
+	</ActionArea>
+</Form>

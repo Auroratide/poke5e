@@ -5,6 +5,7 @@
 	export let value: string
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
+	export let required: boolean = false
 	export let placeholder: string = ""
 
 	$: kebabName = name ?? kebab(label)
@@ -13,7 +14,7 @@
 
 <div class="text-field">
 	<label for="{id}">{label}</label>
-	<input type="text" {id} name="{kebabName}" {placeholder} bind:value {disabled} />
+	<input type="text" {id} name="{kebabName}" {placeholder} bind:value {disabled} {required} />
 </div>
 
 <style>

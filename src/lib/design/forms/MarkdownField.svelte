@@ -6,6 +6,7 @@
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
 	export let placeholder: string = ""
+	export let rows: number = 4
 
 	$: kebabName = name ?? kebab(label)
 	$: id = `${kebabName}-input`
@@ -13,7 +14,7 @@
 
 <div class="markdown-field">
 	<label for="{id}">{label}</label>
-	<textarea {id} name="{kebabName}" {placeholder} rows="4" bind:value {disabled}></textarea>
+	<textarea {id} name="{kebabName}" {placeholder} {rows} bind:value {disabled}></textarea>
 </div>
 
 <style>

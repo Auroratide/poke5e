@@ -29,10 +29,10 @@
 		<h2>Moves</h2>
 		<ul style:list-style="none" style:padding="0">
 			{#each pokemon.moves as move}
-					{@const moveData = $moves.find((it) => it.id === move.moveId)}
-					<li>
-						<MoveDetails {move} {moveData} {editable} proficiencyBonus={pb} attributes={pokemon.attributes} pokemonType={pokemon.type} on:update={onUpdate(move)} />
-					</li>
+				{@const moveData = $moves.find((it) => it.id === move.moveId)}
+				<li>
+					<MoveDetails {move} {moveData} {editable} proficiencyBonus={pb} attributes={pokemon.attributes} pokemonType={pokemon.type} on:update={onUpdate(move)} />
+				</li>
 			{/each}
 		</ul>
 	{:else}

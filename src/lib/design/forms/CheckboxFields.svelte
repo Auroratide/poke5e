@@ -6,6 +6,7 @@
 	export let values: {
 		name: string,
 		value: string,
+		disabled?: boolean,
 	}[]
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
@@ -16,7 +17,7 @@
 {#each values as value}
 	{@const id = `${kebab(value.value)}-${kebabName}`}
 	<div class="checkbox-field">
-		<input {id} value={value.value} bind:group={checked} type="checkbox" name={kebabName} {disabled} />
+		<input {id} value={value.value} bind:group={checked} type="checkbox" name={kebabName} disabled={disabled || value.disabled} />
 		<label for="{id}" class="cap">{value.name}</label>
 	</div>
 {/each}
@@ -46,6 +47,8 @@
 		background: var(--skin-input-bg);
 		transition: background-color calc(2 * var(--dur)) ease-in-out;
 	}
+
+	input:disabled { opacity: 0.5; }
 
 	input::before,
 	input::after {
