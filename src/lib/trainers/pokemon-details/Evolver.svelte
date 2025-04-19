@@ -28,6 +28,9 @@
 	$: evolveToInfo = species.evolution?.to?.find((it) => it.id === evolveToId)
 	$: evolveToPokemon = $allPokemon?.find((it) => it.id === evolveToId)
 
+	$: typeWasCustomized = !list.equalUnordered(pokemon.type)(species.type)
+	$: newType = evolveToPokemon?.type ?? []
+	$: typeWillChange = !list.equalUnordered(species.type)(newType)
 	$: gainedHp = pokemon.level * 2
 	$: gainedAc = Math.max(0, (evolveToPokemon?.ac ?? 0) - pokemon.ac)
 	$: gainedProficiencies = list.difference(evolveToPokemon?.skills ?? [])(pokemon.proficiencies)
@@ -42,6 +45,7 @@
 			...pokemon,
 			pokemonId: evolveToId,
 			nickname: pokemon.nickname === species.name ? evolveToPokemon.name : pokemon.nickname,
+			type: newType,
 			hp: {
 				current: pokemon.hp.max + gainedHp,
 				max: pokemon.hp.max + gainedHp,
@@ -60,28 +64,30 @@
 	{#if species.evolution?.to?.length > 0}
 		<form on:submit|preventDefault={endEdit}>
 			<Fieldset title="Choose one" columns={2}>
-					{#each species.evolution.to as to}
-						{@const name = $allPokemon?.find((it) => it.id === to.id)?.name ?? ""}
-						<input id="evolve-to-{to.id}" name="evolve-to" type="radio" value={to.id} bind:group={evolveToId} {disabled} required />
-						<label for="evolve-to-{to.id}">{name}</label>
-					{/each}
+				{#each species.evolution.to as to}
+					{@const name = $allPokemon?.find((it) => it.id === to.id)?.name ?? ""}
+					<input id="evolve-to-{to.id}" name="evolve-to" type="radio" value={to.id} bind:group={evolveToId} {disabled} required />
+					<label for="evolve-to-{to.id}">{name}</label>
+				{/each}
 			</Fieldset>
 			<section style:min-height="12em">
-					{#if evolveToInfo}
-						<p>{@html pokemonString.evolution(species.name, evolveToInfo, creatureString.evolutionWithLinks(base, $allPokemon, $allMoves))}</p>
-						<p>Evolving this pokemon will have these effects:</p>
-						<ul>
-							<li>Max HP will increase by {gainedHp}</li>
-							{#if gainedAc > 0}<li>AC will increase by {gainedAc}</li>{/if}
-							{#if gainedProficiencies.length > 0}<li>Proficiency in <span class="cap">{gainedProficiencies.join(", ")}</span></li>{/if}
-							{#if gainedSavingThrows.length > 0}<li>Proficiency in <span class="upper">{gainedSavingThrows.join(", ")}</span> saving throws</li>{/if}
-							{#if newAbility && pokemon.ability !== newAbility.id}<li>Ability will change from {ability.name} to {newAbility.name}</li>{/if}
-						</ul>
-					{/if}
+				{#if evolveToInfo}
+					<p>{@html pokemonString.evolution(species.name, evolveToInfo, creatureString.evolutionWithLinks(base, $allPokemon, $allMoves))}</p>
+					<p>Evolving this pokemon will have these effects:</p>
+					<ul>
+						{#if !typeWasCustomized && typeWillChange}<li>Type will change to <span class="cap">{newType.join("/")}</span></li>{/if}
+						<li>Max HP will increase by {gainedHp}</li>
+						{#if gainedAc > 0}<li>AC will increase by {gainedAc}</li>{/if}
+						{#if gainedProficiencies.length > 0}<li>Proficiency in <span class="cap">{gainedProficiencies.join(", ")}</span></li>{/if}
+						{#if gainedSavingThrows.length > 0}<li>Proficiency in <span class="upper">{gainedSavingThrows.join(", ")}</span> saving throws</li>{/if}
+						{#if newAbility && pokemon.ability !== newAbility.id}<li>Ability will change from {ability.name} to {newAbility.name}</li>{/if}
+						{#if typeWasCustomized && typeWillChange}<li><strong>Note:</strong> This Pokémon's type will not change since its type was customized.</li>{/if}
+					</ul>
+				{/if}
 			</section>
 			<ActionArea>
-					<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
-					<Button type="submit" {disabled}>Evolve!</Button>
+				<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
+				<Button type="submit" {disabled}>Evolve!</Button>
 			</ActionArea>
 		</form>
 	{/if}
