@@ -11,6 +11,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.3.4",
+		description: [
+			"Bug fix: When Pokémon evolve, their type now evolves as well.",
+		],
+	}, {
 		name: "v1.3.3",
 		description: [
 			"Added Pokémon: Walking Wake, Iron Leaves, Hydrapple line, Sinistcha line, the Loyal Three, Ogerpon, Gouging Fire, Raging Bolt, Iron Boulder, Iron Crown, Terapagos, Pecharunt",
