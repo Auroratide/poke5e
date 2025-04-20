@@ -13,7 +13,7 @@
 
 <style>
 	.action-area {
-		margin: 0 1em;
+		margin: 1em 1em 0;
 		padding: 0.5em 0.25em 0.75em;
 		border-block-start: 0.0625em solid var(--skin-input-bg);
 	}

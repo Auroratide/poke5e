@@ -1,25 +1,31 @@
 <script lang="ts">
 	import { kebab } from "./kebab"
+	import WithButton from "./WithButton.svelte"
 
 	export let label: string
 	export let value: string
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
 	export let required: boolean = false
-	export let placeholder: string = ""
-	export let maxlength: number | undefined = undefined
+
+	let revealed = false
+	$: inputType = revealed ? "text" : "password"
+	$: toggleButtonText = revealed ? "Hide" : "Reveal"
+	const toggleRevealed = () => revealed = !revealed
 
 	$: kebabName = name ?? kebab(label)
 	$: id = `${kebabName}-input`
 </script>
 
-<div class="text-field">
-	<label for="{id}">{label}</label>
-	<input type="text" {id} name="{kebabName}" {placeholder} {maxlength} bind:value {disabled} {required} />
-</div>
+<WithButton label="{toggleButtonText}" on:click={toggleRevealed}>
+	<div class="password-field">
+		<label for="{id}">{label}</label>
+		<input type="{inputType}" {id} name="{kebabName}" {value} {disabled} {required} />
+	</div>
+</WithButton>
 
 <style>
-	.text-field {
+	.password-field {
 		display: flex;
 		flex-direction: column;
 		gap: 0.125em;

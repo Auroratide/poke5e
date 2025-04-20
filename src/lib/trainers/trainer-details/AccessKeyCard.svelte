@@ -2,18 +2,13 @@
 	import Card from "$lib/design/Card.svelte"
 	import type { TrainerStore } from "../trainers"
 	import Saveable from "$lib/design/Saveable.svelte"
-	import { ActionArea } from "$lib/design/forms"
+	import { ActionArea, PasswordField, TextField, WithButton } from "$lib/design/forms"
 	import Button from "$lib/design/Button.svelte"
 	import { Url } from "$lib/url"
 	import Title from "$lib/design/Title.svelte"
 	import findAccessKey from "$lib/assets/find-access-key.png"
 	
 	export let trainer: TrainerStore
-
-	let showAccessKey = false
-	$: accessKeyType = showAccessKey ? "text" : "password"
-	$: toggleButtonText = showAccessKey ? "Hide" : "Reveal"
-	const toggleShowAccessKey = () => showAccessKey = !showAccessKey
 
 	let accessKey = ""
 	$: accessKey = accessKey.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "")
@@ -45,7 +40,7 @@
 			<p><strong>Success!</strong></p>
 			<p>You can now manage {name} and their pokemon.</p>
 			<ActionArea>
-					<Button href="{Url.trainers($trainer?.info.readKey)}">Go to Trainer's Page</Button>
+				<Button href="{Url.trainers($trainer?.info.readKey)}">Go to Trainer's Page</Button>
 			</ActionArea>
 		</section>
 	{:else}
@@ -54,38 +49,30 @@
 		</section>
 		{#if canEdit}
 			<section>
-					<p>You currently have {name}'s access key saved to this device. To share this key, press Reveal below.</p>
-					<div class="vertical spaced-lg">
-						<label for="key-input" class="font-sm spaced-sm">Access Key</label>
-						<div class="horizontal spaced-sm">
-							<input id="key-input" value={$trainer.writeKey} type={accessKeyType} class="font-lg" style:flex="1" disabled />
-							<Button on:click={toggleShowAccessKey}>{toggleButtonText}</Button>
-						</div>
-					</div>
+				<p>You currently have {name}'s access key saved to this device. To share this key, press Reveal below.</p>
+				<PasswordField label="Access Key" value={$trainer.writeKey} disabled />
 			</section>
 		{:else}
 			<Saveable saving={searching} caption="Searching...">
-					<section>
-						<p>You currently do not have permission to manage {name}. To obtain permission, put {name}'s access key into the field below and press Submit.</p>
-						<form on:submit|preventDefault={verify} class="vertical spaced-lg">
-							<label for="key-input" class="font-sm spaced-sm">Access Key</label>
-							<div class="horizontal spaced-sm">
-									<input id="key-input" type="text" bind:value={accessKey} placeholder="e.g. JM7WEZ0YKW3WGC8I" class="font-lg" style:flex="1" disabled={searching} required />
-									<Button type="submit">Submit</Button>
-							</div>
-							{#if couldNotFind.length > 0 && couldNotFind === accessKey}
-									<p class="font-sm error">The provided access key does match this trainer's key</p>
-							{/if}
-						</form>
-					</section>
-					<hr />
-					<section>
-						<p>If you are managing {name} from another device, you can find their access code from the trainer's page.</p>
-						<figure class="spaced-lg">
-							<img src={findAccessKey} alt="'Access Key' is a button at the bottom of the trainer's page." width="800" height="250" />
-							<figcaption>Click this button to get the access key</figcaption>
-						</figure>
-					</section>
+				<section>
+					<p>You currently do not have permission to manage {name}. To obtain permission, put {name}'s access key into the field below and press Submit.</p>
+					<form on:submit|preventDefault={verify} class="vertical spaced-lg">
+						<WithButton label="Submit" type="submit">
+							<TextField label="Access Key" bind:value={accessKey} placeholder="e.g. JM7WEZ0YKW3WGC8I" disabled={searching} required />
+						</WithButton>
+						{#if couldNotFind.length > 0 && couldNotFind === accessKey}
+							<p class="font-sm error">The provided access key does match this trainer's key</p>
+						{/if}
+					</form>
+				</section>
+				<hr />
+				<section>
+					<p>If you are managing {name} from another device, you can find their access code from the trainer's page.</p>
+					<figure class="spaced-lg">
+						<img src={findAccessKey} alt="'Access Key' is a button at the bottom of the trainer's page." width="800" height="250" />
+						<figcaption>Click this button to get the access key</figcaption>
+					</figure>
+				</section>
 			</Saveable>
 		{/if}
 		<ActionArea>
@@ -97,14 +84,6 @@
 <style>
 	.spaced-lg {
 		margin-bottom: 1em;
-	}
-
-	.spaced-sm {
-		margin-bottom: 0.25em;
-	}
-
-	.font-lg {
-		font-size: 1.25rem;
 	}
 
 	.font-sm {
@@ -119,13 +98,6 @@
 	.vertical {
 		display: flex;
 		flex-direction: column;
-	}
-
-	.horizontal {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		gap: 0.5em;
 	}
 	
 	img {
