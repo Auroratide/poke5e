@@ -9,6 +9,7 @@
 	}[]
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
+	export let required: boolean = false
 
 	$: kebabName = name ?? kebab(label)
 </script>
@@ -16,7 +17,7 @@
 {#each values as value}
 	{@const id = `${kebab(value.value)}-${kebabName}`}
 	<div class="radio-field">
-		<input {id} value={value.value} bind:group={checked} type="radio" name={kebabName} {disabled} />
+		<input {id} value={value.value} bind:group={checked} type="radio" name={kebabName} {disabled} {required} />
 		<label for="{id}" class="cap">{value.name}</label>
 	</div>
 {/each}

@@ -8,12 +8,12 @@
 <script lang="ts">
 	import type { Trainer, TrainerInfo } from "../types"
 	import { createEventDispatcher } from "svelte"
-	import type { ImageInputValue } from "$lib/design/Form/ImageInput.svelte"
 	import {
 		Form,
 		Fieldset,
 		MarkdownField,
 		ActionArea,
+		type ImageInputValue,
 	} from "$lib/design/forms"
 	import BasicInfoFieldset from "./forms/BasicInfoFieldset.svelte"
 	import BiographyFieldset from "./forms/BiographyFieldset.svelte"

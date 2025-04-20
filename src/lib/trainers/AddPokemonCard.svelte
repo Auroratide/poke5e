@@ -8,6 +8,7 @@
 	import { goto } from "$app/navigation"
 	import { base } from "$app/paths"
 	import Title from "$lib/design/Title.svelte"
+	import { TextField } from "$lib/design/forms"
 
 	export let trainer: TrainerStore
 	$: canAdd = $trainer.update != null
@@ -34,20 +35,19 @@
 	{#if canAdd}
 		<section>
 			<p>Start typing the pokemon's species, then select from the provided list.</p>
-			<div class="vertical spaced-lg">
-					<label for="species-input" class="font-sm spaced-sm">Species</label>
-					<input id="species-input" bind:value={species} type="text" class="font-lg" disabled={saving} />
+			<div class="font-lg spaced-lg">
+				<TextField label="Species" bind:value={species} disabled={saving} />
 			</div>
 			{#if filteredPokemon.length === 0 && species.length > 0}
-					<p class="muted center">No matched pokemon</p>
+				<p class="muted center">No matched pokemon</p>
 			{:else}
-					<ul class="no-list columnated">
-						{#each filteredPokemon as p}
-							<li class="spaced-sm">
-									<Button align="left" width="full" on:click={onSelect(p)} disabled={saving}>{p.name}</Button>
-							</li>
-						{/each}
-					</ul>
+				<ul class="no-list columnated">
+					{#each filteredPokemon as p}
+						<li class="spaced-sm">
+							<Button align="left" width="full" on:click={onSelect(p)} disabled={saving}>{p.name}</Button>
+						</li>
+					{/each}
+				</ul>
 			{/if}
 		</section>
 	{:else}
@@ -76,16 +76,7 @@
 	}
 
 	.font-lg {
-		font-size: 1.5rem;
-	}
-
-	.font-sm {
-		font-size: 1rem;
-	}
-
-	.vertical {
-		display: flex;
-		flex-direction: column;
+		font-size: var(--font-sz-neptune);
 	}
 
 	.muted {

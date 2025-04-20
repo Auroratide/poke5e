@@ -17,7 +17,7 @@
 	} from "$lib/design/forms"
 	import type { HitDice } from "$lib/dnd/types"
 	import type { NonVolatileStatus } from "$lib/pokemon/status"
-	import StatusInput, { type ChangeDetail as StatusChangeDetail } from "$lib/design/Form/StatusInput.svelte"
+	import StatusEditor, { type ChangeDetail as StatusChangeDetail } from "$lib/pokemon/StatusEditor.svelte"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 
 	const dispatch = createEventDispatcher()
@@ -92,7 +92,7 @@
 			<StatusTag value={status} />
 		{/if}
 		{#if editable}
-			<StatusInput id="current-status" value={statusCur} on:change={onChangeStatus} />
+			<StatusEditor id="current-status" value={statusCur} on:change={onChangeStatus} />
 		{/if}
 	</div>
 {/if}

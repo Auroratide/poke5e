@@ -1,10 +1,12 @@
 <script lang="ts">
 	import FlatDl from "$lib/design/FlatDl.svelte"
-	import Fieldset from "$lib/design/Form/Fieldset.svelte"
 	import { PokeTypes, type PokeType } from "$lib/pokemon/types"
 	import { vulnerabilities, resistances, immunities, normalDamange } from "$lib/pokemon/type-interactions"
+	import { Fieldset, CheckboxFields } from "$lib/design/forms"
 
 	let types: PokeType[] = []
+
+	const typeOptions = PokeTypes.map((it) => ({ name: it, value: it }))
 	
 	$: resistant = types.length > 0 ? Array.from(resistances(types)) : []
 	$: vulnerable = types.length > 0 ? Array.from(vulnerabilities(types)) : []
@@ -14,10 +16,7 @@
 
 <form>
 	<Fieldset title="Types" columns={3}>
-		{#each PokeTypes as type}
-			<input value={type} bind:group={types} type="checkbox" id="type-input-{type}" name="types" />
-			<label for="type-input-{type}" class="cap">{type}</label>
-		{/each}
+		<CheckboxFields label="Types" bind:checked={types} values={typeOptions} />
 	</Fieldset>
 </form>
 <FlatDl>

@@ -14,6 +14,7 @@
 	import { createEventDispatcher } from "svelte"
 	import type { PokeType } from "$lib/pokemon/types"
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
+	import { NumericResourceField } from "$lib/design/forms"
 
 	const dispatch = createEventDispatcher()
 
@@ -57,16 +58,16 @@
 	<div class="vstack bg-by-type rounded space-inner" style:--bg="var(--skin-{moveData.type}-bg)">
 		<div class="hrow space-after-tiny">
 			<span class="flex-span"><a href="{base}/moves/{move.moveId}">{moveData.name}</a></span>
-			<span>
-					<VisuallyHidden><label for="current-hp">{moveData.name} PP</label></VisuallyHidden>
-					<span class="current">
-						{#if editable}
-							<input id="current-pp-{move.moveId}" type="number" value={currentPp} on:change={onChangePp} />
-						{:else}
-							{currentPp}
-						{/if}
-					</span>
-					<span class="max">/ {move.pp.max}</span>
+			<span class="pp">
+				<VisuallyHidden><label for="current-hp">{moveData.name} PP</label></VisuallyHidden>
+				<span class="current">
+					{#if editable}
+						<NumericResourceField id="current-pp-{move.moveId}" value={currentPp} on:change={onChangePp}  />
+					{:else}
+						{currentPp}
+					{/if}
+				</span>
+				<span class="max">/ {move.pp.max}</span>
 			</span>
 		</div>
 		<div class="hrow tiny-font">
@@ -125,9 +126,11 @@
 		flex: 1;
 	}
 
-	.current input {
-		width: 5ch;
-		display: inline-block;
+	.pp {
+		display: flex;
+		flex-direction: row;
+		gap: 0.25em;
+		align-items: center;
 	}
 
 	.rounded {

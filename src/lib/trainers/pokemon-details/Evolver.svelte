@@ -2,16 +2,19 @@
 	import type { TrainerPokemon } from "../types"
 	import { createEventDispatcher } from "svelte"
 	import Button from "$lib/design/Button.svelte"
-	import Fieldset from "$lib/design/Form/Fieldset.svelte"
 	import { ActionArea } from "$lib/design/forms"
 	import type { Pokemon } from "$lib/creatures/types"
-	import Saveable from "$lib/design/Saveable.svelte"
 	import { pokemon as allPokemon } from "$lib/creatures/store"
 	import { moves as allMoves } from "$lib/moves/store"
 	import * as pokemonString from "$lib/pokemon/string"
 	import * as creatureString from "$lib/creatures/string"
 	import { base } from "$app/paths"
 	import * as list from "$lib/list"
+	import {
+		Form,
+		Fieldset,
+		RadioFields,
+	} from "$lib/design/forms"
 
 	const dispatch = createEventDispatcher()
 
@@ -58,40 +61,36 @@
 
 		dispatch("submit", afterEvolution)
 	}
+
+	const getName = (id: string) => $allPokemon?.find((it) => it.id === id)?.name ?? ""
 </script>
 
-<Saveable {saving}>
+<Form onsubmit={endEdit} {saving}>
 	{#if species.evolution?.to?.length > 0}
-		<form on:submit|preventDefault={endEdit}>
-			<Fieldset title="Choose one" columns={2}>
-				{#each species.evolution.to as to}
-					{@const name = $allPokemon?.find((it) => it.id === to.id)?.name ?? ""}
-					<input id="evolve-to-{to.id}" name="evolve-to" type="radio" value={to.id} bind:group={evolveToId} {disabled} required />
-					<label for="evolve-to-{to.id}">{name}</label>
-				{/each}
-			</Fieldset>
-			<section style:min-height="12em">
-				{#if evolveToInfo}
-					<p>{@html pokemonString.evolution(species.name, evolveToInfo, creatureString.evolutionWithLinks(base, $allPokemon, $allMoves))}</p>
-					<p>Evolving this pokemon will have these effects:</p>
-					<ul>
-						{#if !typeWasCustomized && typeWillChange}<li>Type will change to <span class="cap">{newType.join("/")}</span></li>{/if}
-						<li>Max HP will increase by {gainedHp}</li>
-						{#if gainedAc > 0}<li>AC will increase by {gainedAc}</li>{/if}
-						{#if gainedProficiencies.length > 0}<li>Proficiency in <span class="cap">{gainedProficiencies.join(", ")}</span></li>{/if}
-						{#if gainedSavingThrows.length > 0}<li>Proficiency in <span class="upper">{gainedSavingThrows.join(", ")}</span> saving throws</li>{/if}
-						{#if newAbility && pokemon.ability !== newAbility.id}<li>Ability will change from {ability.name} to {newAbility.name}</li>{/if}
-						{#if typeWasCustomized && typeWillChange}<li><strong>Note:</strong> This Pokémon's type will not change since its type was customized.</li>{/if}
-					</ul>
-				{/if}
-			</section>
-			<ActionArea>
-				<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
-				<Button type="submit" {disabled}>Evolve!</Button>
-			</ActionArea>
-		</form>
+		<Fieldset title="Choose one" columns={2}>
+			<RadioFields label="Evolution Choices" bind:checked={evolveToId} values={species.evolution.to.map((it) => ({ name: getName(it.id), value: it.id }))} required />
+		</Fieldset>
+		<section style:min-height="12em">
+			{#if evolveToInfo}
+				<p>{@html pokemonString.evolution(species.name, evolveToInfo, creatureString.evolutionWithLinks(base, $allPokemon, $allMoves))}</p>
+				<p>Evolving this pokemon will have these effects:</p>
+				<ul>
+					{#if !typeWasCustomized && typeWillChange}<li>Type will change to <span class="cap">{newType.join("/")}</span></li>{/if}
+					<li>Max HP will increase by {gainedHp}</li>
+					{#if gainedAc > 0}<li>AC will increase by {gainedAc}</li>{/if}
+					{#if gainedProficiencies.length > 0}<li>Proficiency in <span class="cap">{gainedProficiencies.join(", ")}</span></li>{/if}
+					{#if gainedSavingThrows.length > 0}<li>Proficiency in <span class="upper">{gainedSavingThrows.join(", ")}</span> saving throws</li>{/if}
+					{#if newAbility && pokemon.ability !== newAbility.id}<li>Ability will change from {ability.name} to {newAbility.name}</li>{/if}
+					{#if typeWasCustomized && typeWillChange}<li><strong>Note:</strong> This Pokémon's type will not change since its type was customized.</li>{/if}
+				</ul>
+			{/if}
+		</section>
+		<ActionArea>
+			<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
+			<Button type="submit" {disabled}>Evolve!</Button>
+		</ActionArea>
 	{/if}
-</Saveable>
+</Form>
 
 <style>
 	section {
