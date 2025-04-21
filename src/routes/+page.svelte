@@ -11,59 +11,53 @@
 </script>
 
 <Title />
-<StaticPage>
-	<section class="title-section">
-		<h1>Pokemon 5th Edition</h1>
-		<p>An online reference for pokemon dungeons and dragons homebrew!</p>
-	</section>
-	<ul>
-		<li class="theme-red">
-			<a href="{Url.pokemon()}">Pokemon</a>
-			<span class="icon"><Pokeball /></span>
-		</li>
-		<li class="theme-blue">
-			<a href="{Url.moves()}">Moves</a>
-			<span class="icon"><Hit /></span>
-		</li>
-		<li class="theme-purple">
-			<a href="{Url.tms()}">TMs</a>
-			<span class="icon"><Disc /></span>
-		</li>
-		<li class="theme-yellow">
-			<a href="{Url.items()}">Items</a>
-			<span class="icon"><Backpack /></span>
-		</li>
-		<li class="theme-green">
-			<a href="{Url.trainers()}">Trainers</a>
-			<span class="icon"><IdBadge /></span>
-		</li>
-		<li class="theme-navy">
-			<a href="{Url.reference.all()}">Reference</a>
-			<span class="icon"><PencilNotes /></span>
-		</li>
-	</ul>
-	<section class="footer-section">
-		<p>Homebrew by <a href="https://twitter.com/JOEtheDM">@JOEtheDM</a>. Website by <a href="https://auroratide.com">Auroratide</a>. Source code on <a href="https://github.com/Auroratide/poke5e">Github</a>.</p>
-	</section>
-</StaticPage>
+<div class="main-page">
+	<StaticPage title="Pokemon 5th Edition" subtitle="An online reference for pokemon dungeons and dragons homebrew!">
+		<ul>
+			<li class="theme-red">
+				<a href="{Url.pokemon()}">Pokemon</a>
+				<span class="icon"><Pokeball /></span>
+			</li>
+			<li class="theme-blue">
+				<a href="{Url.moves()}">Moves</a>
+				<span class="icon"><Hit /></span>
+			</li>
+			<li class="theme-purple">
+				<a href="{Url.tms()}">TMs</a>
+				<span class="icon"><Disc /></span>
+			</li>
+			<li class="theme-yellow">
+				<a href="{Url.items()}">Items</a>
+				<span class="icon"><Backpack /></span>
+			</li>
+			<li class="theme-green">
+				<a href="{Url.trainers()}">Trainers</a>
+				<span class="icon"><IdBadge /></span>
+			</li>
+			<li class="theme-navy">
+				<a href="{Url.reference.all()}">Reference</a>
+				<span class="icon"><PencilNotes /></span>
+			</li>
+		</ul>
+		<address>
+			<p>Homebrew by the community. Website by <a href="{Url.external.auroratide()}">Auroratide</a>. Source code on <a href="{Url.external.github()}">Github</a>.</p>
+		</address>
+	</StaticPage>
+</div>
 
 <style>
-	section {
-		text-align: center;
-		margin-bottom: 3em;
-	}
-
-	.title-section h1 {
+	.main-page :global(header h1) {
 		font-size: var(--font-sz-jupiter);
-		margin-bottom: 0.5em;
 	}
 
-	.title-section p {
+	.main-page :global(h1 + p) {
 		font-size: var(--font-sz-neptune);
 		line-height: 1.5;
 	}
 
-	.footer-section {
+	address {
+		font-style: normal;
+		text-align: center;
 		font-size: var(--font-sz-venus);
 		margin: 0;
 	}

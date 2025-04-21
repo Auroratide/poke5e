@@ -6,48 +6,44 @@
 </script>
 
 <Title value="Version History" />
-<StaticPage>
-	<section class="title-section">
-		<h1>Version History</h1>
-		<p>{currentVersion}</p>
-	</section>
-	<section class="versions-section">
-		{#each versionHistory.groups as group}
-			<Card title="{group.name}" level={2} inline>
-				<section>
-					<p>{group.description}</p>
-					{#each getVersionsForGroup(group) as version}
-						<h3>{version.name}</h3>
-						<ul>
-							{#each version.description as point}
-								<li>{point}</li>
-							{/each}
-						</ul>
-					{/each}
-				</section>
-			</Card>
-		{/each}
-	</section>
-</StaticPage>
+<div class="version-page">
+	<StaticPage title="Version History" subtitle="{currentVersion}">
+		<section class="versions-section">
+			{#each versionHistory.groups as group}
+				<Card title="{group.name}" level={2} inline>
+					<section>
+						<p>{group.description}</p>
+						{#each getVersionsForGroup(group) as version}
+							<h3>{version.name}</h3>
+							<ul>
+								{#each version.description as point}
+									<li>{point}</li>
+								{/each}
+							</ul>
+						{/each}
+					</section>
+				</Card>
+			{/each}
+		</section>
+	</StaticPage>
+</div>
 
 <style>
-	.title-section {
-		text-align: center;
-		margin-block-end: 3em;
-	}
-
-	.title-section h1 {
-		font-size: var(--font-sz-saturn);
-		margin-block-end: 0.25em;
-	}
-
-	.title-section p {
-		font-size: var(--font-sz-uranus);
+	.version-page :global(header p) {
 		font-weight: bold;
-		line-height: 1.5;
 	}
 
 	.versions-section {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+	} .versions-section :global(h2) {
+		margin: 0;
+	} .versions-section section:last-child {
+		margin: 0;
+	}
+
+	/* .versions-section {
 		display: flex;
 		flex-direction: column;
 		gap: 2em;
@@ -63,5 +59,5 @@
 		flex-direction: column;
 		gap: 0.5em;
 		padding: 0 0 0 1em;
-	}
+	} */
 </style>

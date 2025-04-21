@@ -4,12 +4,8 @@
 </script>
 
 <Title value="Feedback" />
-<StaticPage>
-	<section class="title-section">
-		<h1>Got Feedback?</h1>
-		<p>Help make Poke 5e better!</p>
-	</section>
-	<section class="content-section">
+<StaticPage title="Got Feedback?" subtitle="Help make Pokémon 5e better!">
+	<section>
 		<p>Found a problem? Want to suggest a feature?<br />Let me know by creating an <strong>issue</strong>:</p>
 		<p><a class="button" href="https://github.com/Auroratide/poke5e/issues/new">Create Issue</a></p>
 		<p><strong>Note:</strong> I currently use <a href="https://github.com/">Github</a> to track issues. You will need a Github account to create an issue.</p>
@@ -19,22 +15,6 @@
 <style>
 	section {
 		text-align: center;
-		margin-block-end: 3em;
-	}
-
-	.title-section h1 {
-		font-size: var(--font-sz-saturn);
-		margin-block-end: 0.5em;
-	} .title-section p {
-		font-size: var(--font-sz-uranus);
-		line-height: 1.5;
-	}
-
-	.content-section {
-		line-height: 1.4;
-		display: flex;
-		flex-direction: column;
-		gap: 2em;
 	}
 
 	.button {
@@ -49,6 +29,8 @@
 		box-shadow: var(--elev-cirrus);
 		margin-inline: auto;
 		text-decoration: none;
+		color: var(--skin-content-text);
+		margin-block: 2em;
 	} .button:hover, .button:focus {
 		background-color: var(--skin-bg);
 		color: var(--skin-bg-text);

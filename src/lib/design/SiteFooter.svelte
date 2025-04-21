@@ -21,6 +21,7 @@
 				<ul class="links">
 					<li><a href="{Url.feedback()}" on:click={close}>Feedback</a></li>
 					<li><a href="{Url.accessibility()}" on:click={close}>Accessibility</a></li>
+					<li><a href="{Url.privacyPolicy()}" on:click={close}>Privacy Policy</a></li>
 					<li><a href="{Url.external.github()}">Github</a></li>
 					<!-- <li><a href="{Url.external.discord()}">Discord</a></li> -->
 				</ul>
@@ -33,6 +34,7 @@
 				<ul class="links">
 					<li><a href="{Url.feedback()}">Feedback</a></li>
 					<li><a href="{Url.accessibility()}" on:click={close}>Accessibility</a></li>
+					<li><a href="{Url.privacyPolicy()}" on:click={close}>Privacy Policy</a></li>
 					<li><a href="{Url.external.github()}">Github</a></li>
 					<!-- <li><a href="{Url.external.discord()}">Discord</a></li> -->
 				</ul>

@@ -11,10 +11,7 @@
 </script>
 
 <Title value="Trainer Recovery" />
-<StaticPage>
-	<section class="title-section">
-		<h1>Trainer Recovery</h1>
-	</section>
+<StaticPage title="Trainer Recovery">
 	<section class="content-section">
 		<p>The Poke 5e App has recently moved to <strong>poke5e.app</strong> from <strong>auroratide.github.io/poke5e</strong>! I tried to automatically transfer the data from the old location, but if you're here, that probably didn't work.</p>
 		<p>No worries! You can manually transfer your trainer data by visiting the following link and copying any Trainer IDs.</p>
@@ -25,23 +22,6 @@
 </StaticPage>
 
 <style>
-	section {
-		margin-block-end: 3em;
-	}
-
-	.title-section h1 {
-		font-size: var(--font-sz-saturn);
-		margin-block-end: 0.5em;
-		text-align: center;
-	}
-
-	.content-section {
-		line-height: 1.4;
-		display: flex;
-		flex-direction: column;
-		gap: 1em;
-	}
-
 	.has-button {
 		font-size: var(--font-sz-neptune);
 		text-align: center;
