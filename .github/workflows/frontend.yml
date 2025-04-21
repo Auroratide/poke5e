@@ -5,12 +5,15 @@ on:
     branches:
       - main
     paths:
-      - src/**
-      - static/**
+      - src/routes/version-history/versions.ts
 
 jobs:
+  unit-tests:
+    uses: ./.github/workflows/test.yml
+
   site-deploy:
     name: Site Deploy
+    needs: unit-tests
     runs-on: ubuntu-latest
     env:
       PUBLIC_ANALYTICS_ENABLED: true
@@ -25,8 +28,6 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
-      - name: Unit Test
-        run: pnpm test:unit
       - run: pnpm build
       - uses: peaceiris/actions-gh-pages@v4
         with:
