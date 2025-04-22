@@ -46,6 +46,11 @@
 </div>
 
 <style>
+	.main-page {
+		height: 100%;
+		overflow: hidden;
+	}
+
 	.main-page :global(header h1) {
 		font-size: var(--font-sz-jupiter);
 	}

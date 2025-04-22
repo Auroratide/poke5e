@@ -29,6 +29,11 @@
 </div>
 
 <style>
+	.version-page {
+		height: 100%;
+		overflow: hidden;
+	}
+
 	.version-page :global(header p) {
 		font-weight: bold;
 	}
