@@ -31,6 +31,8 @@
 	import SiteFooter from "$lib/design/SiteFooter.svelte"
 	import SkipLinks, { MAIN_CONTENT_ID, MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 	import { page } from "$app/stores"
+	import { initializeTransitions } from "$lib/design/transitions"
+	import "$lib/design/transitions/layers.css"
 	
 	if (browser) {
 		import("@auroratide/toggle-switch/lib/define.js")
@@ -43,6 +45,8 @@
 		filter?.set("")
 		sorter?.set(() => 0)
 	}
+
+	initializeTransitions()
 
 	afterNavigate((navigation) => {
 		if (navigation.from?.url.pathname.split("/")[1] !== navigation.to?.url.pathname.split("/")[1]) {

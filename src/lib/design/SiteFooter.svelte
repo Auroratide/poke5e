@@ -50,6 +50,7 @@
 		background: var(--skin-footer);
 		color: var(--skin-footer-text);
 		padding: 0.25em 0.5em;
+		view-transition-name: bottombar;
 	}
 
 	.summary {

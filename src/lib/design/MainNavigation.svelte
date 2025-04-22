@@ -73,6 +73,7 @@
 <style>
 	nav {
 		text-align: end;
+		view-transition-name: topbar;
 	}
 
 	.nav-bar {

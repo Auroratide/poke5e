@@ -28,6 +28,7 @@
 		height: 100%;
 		max-width: calc(0.5 * var(--container-width));
 		margin: auto;
+		view-transition-name: page;
 	}
 
 	.page .side, .page main {

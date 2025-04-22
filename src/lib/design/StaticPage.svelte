@@ -22,6 +22,7 @@
 		overflow: auto;
 		height: 100%;
 		padding: 2em 1em;
+		view-transition-name: staticpage;
 	}
 
 	main :global(section) {

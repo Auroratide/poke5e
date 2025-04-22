@@ -1,0 +1,18 @@
+::view-transition-group(backdrop) {
+	z-index: 1;
+}
+
+::view-transition-old(backdrop),
+::view-transition-new(backdrop) {
+	mix-blend-mode: normal !important;
+}
+
+::view-transition-group(staticpage),
+::view-transition-group(page) {
+	z-index: 5;
+}
+
+::view-transition-group(topbar),
+::view-transition-group(bottombar) {
+	z-index: 10;
+}

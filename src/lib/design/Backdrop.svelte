@@ -1,5 +1,5 @@
 <div class="window" aria-hidden="true">
-	<div class="backdrop"></div>
+	<div class="backdrop" data-transition-name="backdrop"></div>
 </div>
 
 <style>
@@ -14,6 +14,7 @@
 	}
 
 	.backdrop {
+		view-transition-name: backdrop;
 		position: absolute;
 		top: 0;
 		right: calc(50% + 8rem);
