@@ -23,5 +23,6 @@
 		width: 50vmax;
 		transform: rotate(var(--skew-angle)) translate(15%, 25%);
 		transform-origin: center center;
+		view-transition-name: backicon;
 	}
 </style>

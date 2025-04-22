@@ -47,22 +47,4 @@
 	} .versions-section section:last-child {
 		margin: 0;
 	}
-
-	/* .versions-section {
-		display: flex;
-		flex-direction: column;
-		gap: 2em;
-	} .versions-section p {
-		line-height: 1.4;
-	} .versions-section h3 {
-		font-size: var(--font-sz-earth);
-		font-weight: bold;
-		margin-block: 0.5em 0.25em;
-	} .versions-section ul {
-		line-height: 1.25;
-		display: flex;
-		flex-direction: column;
-		gap: 0.5em;
-		padding: 0 0 0 1em;
-	} */
 </style>

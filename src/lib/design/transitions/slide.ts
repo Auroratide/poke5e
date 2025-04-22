@@ -14,6 +14,13 @@ export const Slide = {
 			],
 			opacity: ["0", "1"],
 		}),
+		BottomRight: (amount: string) => ({
+			transform: [
+				`translate(${amount}, ${amount})`,
+				"translate(0, 0)",
+			],
+			opacity: ["0", "1"],
+		}),
 	},
 	To: {
 		Bottom: (amount: string) => ({
@@ -27,6 +34,13 @@ export const Slide = {
 			transform: [
 				"translateX(0)",
 				`translateX(-${amount})`,
+			],
+			opacity: ["1", "0"],
+		}),
+		BottomRight: (amount: string) => ({
+			transform: [
+				"translate(0, 0)",
+				`translate(${amount}, ${amount})`,
 			],
 			opacity: ["1", "0"],
 		}),

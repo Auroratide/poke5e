@@ -51,6 +51,18 @@ export function initializeTransitions() {
 						duration: 250,
 					},
 				})
+
+				animate({
+					name: "backicon",
+					old: {
+						keyframes: Slide.To.BottomRight("1em"),
+						duration: 250,
+					},
+					new: {
+						keyframes: Slide.From.BottomRight("1em"),
+						duration: 250,
+					},
+				})
 			})
 		})
 	})
