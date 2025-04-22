@@ -11,6 +11,7 @@ export function initializeTransitions() {
 		if (prefersReducedMotion()) return
 
 		const hadBackdrop = document.querySelector("[data-transition-name=\"backdrop\"]") != null
+		const oldBackiconName = document.querySelector("[data-transition-name=\"backicon\"] title")?.textContent
 
 		return new Promise((resolve) => {
 			const transition = document.startViewTransition(async () => {
@@ -20,6 +21,7 @@ export function initializeTransitions() {
 
 			transition.ready.then(() => {
 				const willHaveBackdrop = document.querySelector("[data-transition-name=\"backdrop\"]") != null
+				const newBackiconName = document.querySelector("[data-transition-name=\"backicon\"] title")?.textContent
 
 				animate({
 					name: "staticpage",
@@ -52,17 +54,19 @@ export function initializeTransitions() {
 					},
 				})
 
-				animate({
-					name: "backicon",
-					old: {
-						keyframes: Slide.To.BottomRight("1em"),
-						duration: 250,
-					},
-					new: {
-						keyframes: Slide.From.BottomRight("1em"),
-						duration: 250,
-					},
-				})
+				if (oldBackiconName !== newBackiconName) {
+					animate({
+						name: "backicon",
+						old: {
+							keyframes: Slide.To.BottomRight("1em"),
+							duration: 250,
+						},
+						new: {
+							keyframes: Slide.From.BottomRight("1em"),
+							duration: 250,
+						},
+					})
+				}
 			})
 		})
 	})

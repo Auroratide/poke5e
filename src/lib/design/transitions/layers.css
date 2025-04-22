@@ -1,4 +1,5 @@
-::view-transition-group(backdrop) {
+::view-transition-group(backdrop),
+::view-transition-group(backicon) {
 	z-index: 1;
 }
 

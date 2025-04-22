@@ -1,5 +1,5 @@
 <div class="window" aria-hidden="true">
-	<div class="icon-shadow">
+	<div class="icon-shadow" data-transition-name="backicon">
 		<slot></slot>
 	</div>
 </div>
