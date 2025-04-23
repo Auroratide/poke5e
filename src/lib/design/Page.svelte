@@ -37,12 +37,14 @@
 
 	.page .side {
 		height: 33%;
+		view-transition-name: pageside;
 	} .page .side:has(+ main:empty) {
 		height: 100%;
 	}
 
 	.page main {
 		height: 67%;
+		view-transition-name: pagemain;
 	} .page main:empty {
 		height: 0%;
 	}

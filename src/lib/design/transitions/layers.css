@@ -1,3 +1,8 @@
+::view-transition-old(pageside),
+::view-transition-new(pageside) {
+	animation-duration: 0s;
+}
+
 ::view-transition-group(backdrop),
 ::view-transition-group(backicon) {
 	z-index: 1;
@@ -9,7 +14,8 @@
 }
 
 ::view-transition-group(staticpage),
-::view-transition-group(page) {
+::view-transition-group(pageside),
+::view-transition-group(pagemain) {
 	z-index: 5;
 }
 

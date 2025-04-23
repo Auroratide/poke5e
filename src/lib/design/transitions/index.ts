@@ -1,5 +1,5 @@
 import { onNavigate } from "$app/navigation"
-import { prefersReducedMotion } from "$lib/media"
+import { isLargeScreen, prefersReducedMotion } from "$lib/media"
 import { animate } from "./animate"
 import { None } from "./none"
 import { Slide } from "./slide"
@@ -64,6 +64,34 @@ export function initializeTransitions() {
 						new: {
 							keyframes: Slide.From.BottomRight("1em"),
 							duration: 250,
+						},
+					})
+				}
+
+				if (isLargeScreen()) {
+					animate({
+						name: "pagemain",
+						old: {
+							keyframes: Slide.To.Bottom("2em"),
+							duration: 175,
+						},
+						new: {
+							keyframes: Slide.From.Right("2em"),
+							duration: 250,
+							delay: 100,
+						},
+					})
+				} else {
+					animate({
+						name: "pagemain",
+						old: {
+							keyframes: Slide.To.Bottom("2em"),
+							duration: 175,
+						},
+						new: {
+							keyframes: Slide.From.Top("2em"),
+							duration: 250,
+							delay: 100,
 						},
 					})
 				}
