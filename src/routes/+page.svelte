@@ -11,55 +11,39 @@
 </script>
 
 <Title />
-<div class="main-page">
-	<StaticPage title="Pokemon 5th Edition" subtitle="An online reference for pokemon dungeons and dragons homebrew!">
-		<ul>
-			<li class="theme-red">
-				<a href="{Url.pokemon()}">Pokemon</a>
-				<span class="icon"><Pokeball /></span>
-			</li>
-			<li class="theme-blue">
-				<a href="{Url.moves()}">Moves</a>
-				<span class="icon"><Hit /></span>
-			</li>
-			<li class="theme-purple">
-				<a href="{Url.tms()}">TMs</a>
-				<span class="icon"><Disc /></span>
-			</li>
-			<li class="theme-yellow">
-				<a href="{Url.items()}">Items</a>
-				<span class="icon"><Backpack /></span>
-			</li>
-			<li class="theme-green">
-				<a href="{Url.trainers()}">Trainers</a>
-				<span class="icon"><IdBadge /></span>
-			</li>
-			<li class="theme-navy">
-				<a href="{Url.reference.all()}">Reference</a>
-				<span class="icon"><PencilNotes /></span>
-			</li>
-		</ul>
-		<address>
-			<p>Homebrew by the community. Website by <a href="{Url.external.auroratide()}">Auroratide</a>. Source code on <a href="{Url.external.github()}">Github</a>.</p>
-		</address>
-	</StaticPage>
-</div>
+<StaticPage large title="Pokemon 5th Edition" subtitle="An online reference for pokemon dungeons and dragons homebrew!">
+	<ul>
+		<li class="theme-red">
+			<a href="{Url.pokemon()}">Pokemon</a>
+			<span class="icon"><Pokeball /></span>
+		</li>
+		<li class="theme-blue">
+			<a href="{Url.moves()}">Moves</a>
+			<span class="icon"><Hit /></span>
+		</li>
+		<li class="theme-purple">
+			<a href="{Url.tms()}">TMs</a>
+			<span class="icon"><Disc /></span>
+		</li>
+		<li class="theme-yellow">
+			<a href="{Url.items()}">Items</a>
+			<span class="icon"><Backpack /></span>
+		</li>
+		<li class="theme-green">
+			<a href="{Url.trainers()}">Trainers</a>
+			<span class="icon"><IdBadge /></span>
+		</li>
+		<li class="theme-navy">
+			<a href="{Url.reference.all()}">Reference</a>
+			<span class="icon"><PencilNotes /></span>
+		</li>
+	</ul>
+	<address>
+		<p>Homebrew by the community. Website by <a href="{Url.external.auroratide()}">Auroratide</a>. Source code on <a href="{Url.external.github()}">Github</a>.</p>
+	</address>
+</StaticPage>
 
 <style>
-	.main-page {
-		height: 100%;
-		overflow: hidden;
-	}
-
-	.main-page :global(header h1) {
-		font-size: var(--font-sz-jupiter);
-	}
-
-	.main-page :global(h1 + p) {
-		font-size: var(--font-sz-neptune);
-		line-height: 1.5;
-	}
-
 	address {
 		font-style: normal;
 		text-align: center;

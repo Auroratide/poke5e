@@ -4,9 +4,10 @@
 
 	export let title: string
 	export let subtitle: string | undefined = undefined
+	export let large: boolean = false
 </script>
 
-<main id="{MAIN_CONTENT_ID}">
+<main id="{MAIN_CONTENT_ID}" class:large>
 	<Container half>
 		<header>
 			<h1>{title}</h1>
@@ -36,6 +37,10 @@
 	} header h1 {
 		font-size: var(--font-sz-saturn);
 		margin-block-end: 0.5em;
+	}
+
+	.large header h1 {
+		font-size: var(--font-sz-jupiter);
 	}
 
 	main :global(h2) {
