@@ -5,6 +5,10 @@ import { None } from "./none"
 import { Slide } from "./slide"
 import { Wipe } from "./wipe"
 
+/**
+ * Note: Some of the isLargeScreen() conditions are to optimize performance
+ * on mobile platforms. The animations are very stuttery otherwise.
+ */
 export function initializeTransitions() {
 	onNavigate((navigation) => {
 		if (!document.startViewTransition) return
@@ -42,7 +46,7 @@ export function initializeTransitions() {
 					},
 				})
 
-				if (themeChanged) {
+				if (themeChanged && !(!isLargeScreen() && hadBackdrop)) {
 					animate({
 						name: "backdrop",
 						old: willHaveBackdrop ? {
@@ -62,7 +66,7 @@ export function initializeTransitions() {
 					})
 				}
 
-				if (oldBackiconName !== newBackiconName) {
+				if (oldBackiconName !== newBackiconName && isLargeScreen()) {
 					animate({
 						name: "backicon",
 						old: {

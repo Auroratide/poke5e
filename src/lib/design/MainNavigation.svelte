@@ -19,7 +19,7 @@
 
 	const openDialog = () => dialog.showModal()
 
-	const closeDialog = () => dialog.close()
+	const closeDialog = () => setTimeout(() => dialog.close(), 100)
 </script>
 
 <nav aria-label="Site" class="row space-between">
@@ -155,6 +155,7 @@
 		margin: 0;
 		max-inline-size: 100%;
 		max-block-size: 100%;
+		view-transition-name: navdialog;
 	}  dialog::backdrop {
 		background: oklch(0% 0 0 / 0.333);
 	}

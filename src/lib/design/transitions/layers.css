@@ -26,10 +26,14 @@
 ::view-transition-group(staticpage),
 ::view-transition-group(pageside),
 ::view-transition-group(pagemain) {
-	z-index: 5;
+	z-index: 2;
 }
 
 ::view-transition-group(topbar),
 ::view-transition-group(bottombar) {
-	z-index: 10;
+	z-index: 3;
+}
+
+::view-transition-group(navdialog) {
+	z-index: 9;
 }
