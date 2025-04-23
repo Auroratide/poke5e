@@ -1,5 +1,15 @@
 ::view-transition-old(pageside),
-::view-transition-new(pageside) {
+::view-transition-new(pageside),
+::view-transition-old(backdrop),
+::view-transition-new(backdrop) {
+	/*
+	 * I haven't quite figured out how to consolidate the mix-blend-mode of a crossfade
+	 * vs a wipe effect. This 0s is a hack, relying on the javascript animate() function's
+	 * duration to take precedance. If we define an animation explicitly, then it happens,
+	 * otherwise a crossfade of 0s happens.
+	 *
+	 * All this to remove a very subtly blinking shadow when staying in the same theme.
+	 */
 	animation-duration: 0s;
 }
 

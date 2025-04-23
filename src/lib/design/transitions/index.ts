@@ -12,6 +12,7 @@ export function initializeTransitions() {
 
 		const hadBackdrop = document.querySelector("[data-transition-name=\"backdrop\"]") != null
 		const oldBackiconName = document.querySelector("[data-transition-name=\"backicon\"] title")?.textContent
+		const oldPageTheme = document.querySelector("#page-theme")?.className
 
 		return new Promise((resolve) => {
 			const transition = document.startViewTransition(async () => {
@@ -22,6 +23,11 @@ export function initializeTransitions() {
 			transition.ready.then(() => {
 				const willHaveBackdrop = document.querySelector("[data-transition-name=\"backdrop\"]") != null
 				const newBackiconName = document.querySelector("[data-transition-name=\"backicon\"] title")?.textContent
+				const newPageTheme = document.querySelector("#page-theme")?.className
+
+				const themeChanged = oldPageTheme !== newPageTheme
+				console.log("OLD", oldPageTheme)
+				console.log("NEW", newPageTheme)
 
 				animate({
 					name: "staticpage",
@@ -36,23 +42,25 @@ export function initializeTransitions() {
 					},
 				})
 
-				animate({
-					name: "backdrop",
-					old: willHaveBackdrop ? {
-						keyframes: None(),
-						duration: 250,
-					} : {
-						keyframes: Slide.To.Left("50em"),
-						duration: 250,
-					},
-					new: hadBackdrop ? {
-						keyframes: Wipe.From.Left(),
-						duration: 150,
-					} : {
-						keyframes: Slide.From.Left("50em"),
-						duration: 250,
-					},
-				})
+				if (themeChanged) {
+					animate({
+						name: "backdrop",
+						old: willHaveBackdrop ? {
+							keyframes: None(),
+							duration: 250,
+						} : {
+							keyframes: Slide.To.Left("50em"),
+							duration: 250,
+						},
+						new: hadBackdrop ? {
+							keyframes: Wipe.From.Left(),
+							duration: 150,
+						} : {
+							keyframes: Slide.From.Left("50em"),
+							duration: 250,
+						},
+					})
+				}
 
 				if (oldBackiconName !== newBackiconName) {
 					animate({

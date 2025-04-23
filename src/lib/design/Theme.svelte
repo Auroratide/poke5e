@@ -3,11 +3,12 @@
 </script>
 
 <script lang="ts">
+	export let id: string | undefined = undefined
 	export let theme: ThemeColor
 </script>
 
 <!-- theme colors defined with css variables -->
-<div class="theme theme-{theme}">
+<div {id} class="theme theme-{theme}">
 	<slot></slot>
 </div>
 

@@ -8,7 +8,7 @@
 	export let theme: ThemeColor
 </script>
 
-<Theme {theme}>
+<Theme id="page-theme" {theme}>
 	<IconShadow>
 		<slot name="icon"></slot>
 	</IconShadow>
