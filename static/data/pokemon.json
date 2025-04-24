@@ -8487,7 +8487,26 @@
 							},
 							{
 								"type": "item",
-								"value": "Water Stone, or Politoed at level 14 and above while holding a King's Rock"
+								"value": "Water Stone"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 12
+							}
+						]
+					},
+					{
+						"id": "politoed",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 14
+							},
+							{
+								"type": "item",
+								"value": "King's Rock"
 							}
 						],
 						"effects": [
