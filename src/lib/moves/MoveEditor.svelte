@@ -1,5 +1,5 @@
 <script lang="ts" context="module">
-	export const getMoveFieldName = (id: string) => `item-id-${id}`
+	export const getMoveFieldName = (id: string) => `move-id-${id}`
 </script>
 
 <script lang="ts">

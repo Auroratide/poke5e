@@ -95,7 +95,7 @@
 		letter-spacing: -0.04em;
 	}
 
-	select {
+	select, input {
 		inline-size: 100%;
 	}
 </style>

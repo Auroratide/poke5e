@@ -15,6 +15,7 @@
 	import type { PokeType } from "$lib/pokemon/types"
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
 	import { NumericResourceField } from "$lib/design/forms"
+	import type { ChangeDetail } from "$lib/design/forms/NumericResourceField.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -47,9 +48,9 @@
 	$: dc = 8 + proficiencyBonus + attributeMod
 	$: dmg = attributeMod + (hasStab ? attributeMod : 0)
 
-	const onChangePp = (e: Event) => {
+	const onChangePp = (e: CustomEvent<ChangeDetail>) => {
 		dispatch("update", {
-			value: parseInt((e.target as HTMLInputElement).value ?? "0"),
+			value: e.detail.value ?? 0,
 		} as UpdatePpDetail)
 	}
 </script>

@@ -99,7 +99,7 @@
 		text-decoration: none;
 		border-block-end: 0.0625em dotted currentColor;
 	} a:hover, a:focus {
-		border-block-end-width: 0;
+		border-block-end-color: transparent;
 	}
 
 	.icon {
@@ -176,10 +176,13 @@
 		font-size: var(--font-sz-mercury);
 	}
 
+	.animate-height {
+		margin-block-start: 1em;
+	}
+
 	@supports (interpolate-size: allow-keywords) {
 		.animate-height {
 			height: auto;
-			margin-block-start: 1em;
 			transition: all 0.25s ease-in-out;
 			overflow: hidden;
 		} .animate-height[hidden] {

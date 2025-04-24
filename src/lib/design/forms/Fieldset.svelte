@@ -15,6 +15,7 @@
 		border: none;
 		padding: 0.5em 1em;
 		margin-block-end: 1.5em;
+		margin-inline: 0;
 		inline-size: 100%;
 	}
 
