@@ -2,6 +2,8 @@
 	import Container from "./Container.svelte"
 	import { Url } from "$lib/url"
 	import ChevronMenu from "./icon/ChevronMenu.svelte"
+	import DiscordIcon from "./icon/DiscordIcon.svelte"
+	import GithubIcon from "./icon/GithubIcon.svelte"
 
 	export let currentVersion: string
 
@@ -22,8 +24,8 @@
 					<li><a href="{Url.feedback()}" on:click={close}>Feedback</a></li>
 					<li><a href="{Url.accessibility()}" on:click={close}>Accessibility</a></li>
 					<li><a href="{Url.privacyPolicy()}" on:click={close}>Privacy Policy</a></li>
-					<li><a href="{Url.external.github()}">Github</a></li>
-					<!-- <li><a href="{Url.external.discord()}">Discord</a></li> -->
+					<li><a href="{Url.external.github()}"><GithubIcon /> Github</a></li>
+					<li><a href="{Url.external.discord()}"><DiscordIcon /> Discord</a></li>
 				</ul>
 				<p class="license"><small>Site by <a href="{Url.external.auroratide()}">Auroratide</a>. Content by the community. Pokémon and Pokémon character names are trademarks of Nintendo. Dungeons and Dragons is a trademark of Wizards of the Coast.</small></p>
 			</div>
@@ -35,8 +37,8 @@
 					<li><a href="{Url.feedback()}">Feedback</a></li>
 					<li><a href="{Url.accessibility()}" on:click={close}>Accessibility</a></li>
 					<li><a href="{Url.privacyPolicy()}" on:click={close}>Privacy Policy</a></li>
-					<li><a href="{Url.external.github()}">Github</a></li>
-					<!-- <li><a href="{Url.external.discord()}">Discord</a></li> -->
+					<li><a href="{Url.external.github()}"><GithubIcon /> Github</a></li>
+					<li><a href="{Url.external.discord()}"><DiscordIcon /> Discord</a></li>
 				</ul>
 			</div>
 			<p class="license"><small>Site by <a href="{Url.external.auroratide()}">Auroratide</a>. Content by the community. Pokémon and Pokémon character names are trademarks of Nintendo. Dungeons and Dragons is a trademark of Wizards of the Coast.</small></p>
@@ -104,11 +106,23 @@
 		display: flex;
 		justify-content: center;
 		flex: 1;
+		flex-wrap: wrap;
 		list-style: none;
 		padding: 0;
 		margin: 0 0 1em 0;
 		text-align: center;
 		gap: 1em;
+	}
+
+	.links li {
+		display: flex;
+		align-items: center;
+	}
+
+	.links a {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.25em;
 	}
 
 	.links li::before {

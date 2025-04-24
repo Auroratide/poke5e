@@ -40,6 +40,6 @@ export const Url = {
 	external: {
 		auroratide: () => "https://auroratide.com",
 		github: () => "https://github.com/Auroratide/poke5e",
-		discord: () => "#",
+		discord: () => "https://discord.gg/aXQUC7N39v",
 	},
 } as const
