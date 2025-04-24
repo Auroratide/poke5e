@@ -5,6 +5,7 @@ export type VersionHistory = {
 	}[],
 	groups: {
 		name: `v${number}.${number}`,
+		highlight: string,
 		description: string,
 	}[]
 }
@@ -167,20 +168,25 @@ export const versionHistory: VersionHistory = {
 	} ],
 	groups: [ {
 		name: "v1.3",
+		highlight: "Added items!",
 		description: "Adds items reference and the ability to manage items for both trainers and their Pokémon.",
 	}, {
 		name: "v1.2",
+		highlight: "Added trainer biographies!",
 		description: "Adds ability to edit trainers' biographical information and avatar.",
 	}, {
 		name: "v1.1",
+		highlight: "Added references!",
 		description: "Adds reference material for general rules of Pokemon 5e and all standard Paldean Pokémon.",
 	}, {
 		name: "v1.0",
+		highlight: "Initial release!",
 		description: "Initial version of the app. Includes reference material for pokemon, moves, and TMs, as well as the ability to manage trainers and pokemon to a basic level.",
 	} ],
 }
 
 export const currentVersion = versionHistory.versions[0].name
+export const currentHighlight = versionHistory.groups[0].highlight
 
 export const getVersionsForGroup = (group: VersionHistory["groups"][number]): VersionHistory["versions"] =>
 	versionHistory.versions.filter((it) => it.name.startsWith(group.name))

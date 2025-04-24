@@ -4,19 +4,35 @@
 	import ChevronMenu from "./icon/ChevronMenu.svelte"
 	import DiscordIcon from "./icon/DiscordIcon.svelte"
 	import GithubIcon from "./icon/GithubIcon.svelte"
+	import { shouldShowVersionHighlight } from "./version-tracking"
+	import { browser } from "$app/environment"
 
 	export let currentVersion: string
+	export let versionHighlight: string = ""
+
+	let versionAcknowledged = false
+
+	$: showHighlight = browser ? shouldShowVersionHighlight(currentVersion) : false
 
 	let showMore = false
 	const toggleMore = () => showMore = !showMore
 	const close = () => showMore = false
+	const acknowledgeVersion = () => versionAcknowledged = true
+
+	const combine = (...f: (() => void)[]) => () => f.forEach((it) => it())
 </script>
 
 <footer>
 	<Container>
 		<div class="small-screen">
 			<div class="summary">
-				<p><a href="{Url.versionHistory()}" on:click={close}>{currentVersion}</a></p>
+				<p><a href="{Url.versionHistory()}" on:click={combine(acknowledgeVersion, close)} class="row">
+					<span>{currentVersion}</span>
+					{#if showHighlight && !versionAcknowledged}
+						<span class="arrow">←</span>
+						<span>{versionHighlight}</span>
+					{/if}
+				</a></p>
 				<button aria-expanded="{showMore}" aria-controls="site-footer-more" on:click={toggleMore}>{showMore ? "Less" : "More"} <span class="icon chevron-menu"><ChevronMenu label="" /></span></button>
 			</div>
 			<div id="site-footer-more" class="animate-height" hidden={!showMore} aria-hidden="{!showMore}">
@@ -32,7 +48,13 @@
 		</div>
 		<div class="large-screen">
 			<div class="summary">
-				<p><a href="{Url.versionHistory()}">{currentVersion}</a></p>
+				<p><a href="{Url.versionHistory()}" on:click={acknowledgeVersion} class="row">
+					<span>{currentVersion}</span>
+					{#if showHighlight && !versionAcknowledged}
+						<span class="arrow">←</span>
+						<span>{versionHighlight}</span>
+					{/if}
+				</a></p>
 				<ul class="links">
 					<li><a href="{Url.feedback()}">Feedback</a></li>
 					<li><a href="{Url.accessibility()}" on:click={close}>Accessibility</a></li>
@@ -142,6 +164,16 @@
 
 	.small-screen .links {
 		font-size: var(--font-sz-mars);
+	}
+
+	.row {
+		display: flex;
+		align-items: center;
+		gap: 0.25em;
+	}
+
+	.arrow {
+		font-size: var(--font-sz-mercury);
 	}
 
 	@supports (interpolate-size: allow-keywords) {

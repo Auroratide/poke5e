@@ -17,7 +17,7 @@
 	} from "$lib/trainers/store"
 	import { filterValue as referenceFilter } from "./reference/store"
 	import ErrorDialog from "$lib/design/errors/ErrorDialog.svelte"
-	import { currentVersion } from "./version-history/versions"
+	import { currentHighlight, currentVersion } from "./version-history/versions"
 	import MigrationDialog from "$lib/trainers/migration/MigrationDialog.svelte"
 	import { browser } from "$app/environment"
 	import { MY_ORIGIN } from "$lib/trainers/migration/origins"
@@ -106,7 +106,7 @@
 	<div class="content">
 		<slot></slot>
 	</div>
-	<SiteFooter {currentVersion} />
+	<SiteFooter {currentVersion} versionHighlight={currentHighlight} />
 	<ErrorDialog />
 	{#if browser && window.location.origin === MY_ORIGIN}
 		<MigrationDialog />
