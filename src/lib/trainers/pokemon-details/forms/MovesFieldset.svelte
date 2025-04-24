@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Pokemon } from "$lib/creatures/types"
 	import Button from "$lib/design/Button.svelte"
-	import { Fieldset } from "$lib/design/forms"
-	import MoveEditor from "$lib/moves/MoveEditor.svelte"
+	import { Fieldset, focusInputField } from "$lib/design/forms"
+	import MoveEditor, { getMoveFieldName } from "$lib/moves/MoveEditor.svelte"
 	import { moves } from "$lib/moves/store"
 	import type { LearnedMove } from "$lib/trainers/types"
 
@@ -20,9 +20,10 @@
 	const addMove = () => {
 		const newMove = species?.moves?.start?.[0] ?? "tackle"
 		const pp = $moves?.find((it) => it.id === newMove)?.pp ?? 20
+		const nextId = nextNewMoveId()
 
 		values = [...values, {
-			id: nextNewMoveId(),
+			id: nextId,
 			moveId: species?.moves?.start?.[0] ?? "tackle",
 			pp: {
 				current: pp,
@@ -30,6 +31,8 @@
 			},
 			notes: "",
 		} ]
+
+		focusInputField(getMoveFieldName(nextId))
 	}
 </script>
 

@@ -1,3 +1,7 @@
+<script lang="ts" context="module">
+	export const getMoveFieldName = (id: string) => `item-id-${id}`
+</script>
+
 <script lang="ts">
 	import { moves, tms } from "$lib/moves/store"
 	import type { Pokemon } from "$lib/creatures/types"
@@ -17,6 +21,7 @@
 		name: it.name,
 		values: it.moves.map((it) => ({ name: it.name, value: it.id })),
 	}))
+	$: moveFieldName = getMoveFieldName(value.id)
 
 	const onMoveChange = () => {
 		const pp = $moves.find((it) => it.id === value.moveId)?.pp ?? 0
@@ -27,7 +32,7 @@
 
 <div class="move-editor">
 	<Removable on:remove>
-		<SelectField label="Move" name="move-id-{value.id}" bind:value={value.moveId} options={moveOptions} {disabled} on:change={onMoveChange} />
+		<SelectField label="Move" name="{moveFieldName}" bind:value={value.moveId} options={moveOptions} {disabled} on:change={onMoveChange} />
 	</Removable>
 	<IntField label="Max PP" name="move-pp-{value.id}" bind:value={value.pp.max} {disabled} />
 	<MarkdownField label="Notes" name="move-notes-{value.id}" bind:value={value.notes} {disabled} />

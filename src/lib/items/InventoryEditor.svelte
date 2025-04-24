@@ -1,7 +1,8 @@
 <script lang="ts" generics="TItem extends HeldItem">
+	import { focusInputField } from "$lib/design/forms"
 	import Button from "$lib/design/Button.svelte"
 	import type { ItemType } from "./types"
-	import ItemEditor from "./ItemEditor.svelte"
+	import ItemEditor, { getItemFieldName } from "./ItemEditor.svelte"
 	import type { HeldItem } from "$lib/trainers/types"
 	
 	export let values: TItem[]
@@ -18,11 +19,15 @@
 	}
 
 	const addStandardItem = () => {
-		values = [...values, newStandardItem(nextNewId()) ]
+		const nextId = nextNewId()
+		values = [...values, newStandardItem(nextId) ]
+		focusInputField(getItemFieldName(nextId))
 	}
 
 	const addCustomItem = () => {
-		values = [...values, newCustomItem(nextNewId()) ]
+		const nextId = nextNewId()
+		values = [...values, newCustomItem(nextId) ]
+		focusInputField(getItemFieldName(nextId))
 	}
 </script>
 
