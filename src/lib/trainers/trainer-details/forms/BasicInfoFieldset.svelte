@@ -17,7 +17,7 @@
 	}
 </script>
 
-<Fieldset title="Basic Info">
+<Fieldset title="Basic Info" columns={2}>
 	<TextField label="Name" bind:value={name} {disabled} />
 	<IntField label="Level" value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
 	<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} />

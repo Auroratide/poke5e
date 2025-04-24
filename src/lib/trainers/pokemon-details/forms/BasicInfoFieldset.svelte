@@ -40,7 +40,7 @@
 	}))
 </script>
 
-<Fieldset title="Basic Info">
+<Fieldset title="Basic Info" columns={2}>
 	<TextField label="Nickname" bind:value={nickname} {disabled} />
 	<SelectField label="Nature" options={natureOptions} bind:value={nature} bind:other={natureCustom} {disabled} />
 	<SelectField label="Tera" options={teraOptions} bind:value={tera} {disabled} />

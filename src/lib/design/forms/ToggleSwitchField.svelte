@@ -38,6 +38,7 @@
 		--transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
 		display: flex;
 		gap: 1em;
+		padding: 0.5em 0;
 	}
 
 	toggle-switch::part(track),
