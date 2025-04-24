@@ -6,6 +6,14 @@ const config = {
 	server: {
 		port: 3000,
 	},
+	test: {
+		browser: {
+			provider: "playwright",
+			enabled: true,
+			headless: true,
+			instances: [ { browser: "chromium" } ],
+		}
+	}
 }
 
 export default config
