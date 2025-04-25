@@ -12,6 +12,15 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.4.0",
+		description: [
+			"Added an Accessibility Statement and Privacy Policy.",
+			"Added Github and Discord links to footer.",
+			"General forms overhaul, improving the spacing of the UI for better browser and mobile compatibility.",
+			"Multiple accessibility enhancements (skip links, headings, focus management).",
+			"Bug fix: Poliwhirl can evolve into Politoed.",
+		],
+	}, {
 		name: "v1.3.4",
 		description: [
 			"Bug fix: When Pokémon evolve, their type now evolves as well.",
@@ -167,6 +176,10 @@ export const versionHistory: VersionHistory = {
 		],
 	} ],
 	groups: [ {
+		name: "v1.4",
+		highlight: "General editor enhancements!",
+		description: "Overhauls the trainer editor for better browser and mobile compatibility, and enhances the overall accessibility of the app.",
+	}, {
 		name: "v1.3",
 		highlight: "Added items!",
 		description: "Adds items reference and the ability to manage items for both trainers and their Pokémon.",
