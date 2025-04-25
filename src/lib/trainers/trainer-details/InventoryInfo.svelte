@@ -50,7 +50,7 @@
 		{#if editable}
 			<span class="row" style:gap="0.25em">
 				<span>₽</span>
-				<span style:flex="1">
+				<span style:flex="1" style:--input-min-width="100%">
 					<NumericResourceField id="current-money" value={money} on:change={onChangeMoney} />
 				</span>
 			</span>
