@@ -4,8 +4,18 @@
 	import Backdrop from "$lib/design/Backdrop.svelte"
 	import IconShadow from "$lib/design/IconShadow.svelte"
 	import { MAIN_CONTENT_ID } from "./SkipLinks.svelte"
+	import { afterUpdate } from "svelte"
 
 	export let theme: ThemeColor
+
+	let mainEl: HTMLElement
+	let isMainEmpty = true
+
+	// I ended up doing this over simply using :empty because Safari
+	// wasn't actually redrawing the screen
+	afterUpdate(() => {
+		isMainEmpty = mainEl.textContent.length === 0
+	})
 </script>
 
 <Theme id="page-theme" {theme}>
@@ -13,11 +23,11 @@
 		<slot name="icon"></slot>
 	</IconShadow>
 	<Backdrop />
-	<div class="page">
+	<div class="page" class:main-empty={isMainEmpty}>
 		<div class="side">
 			<slot name="side"></slot>
 		</div>
-		<main id="{MAIN_CONTENT_ID}">
+		<main bind:this={mainEl} id="{MAIN_CONTENT_ID}">
 			<slot></slot>
 		</main>
 	</div>
@@ -38,14 +48,14 @@
 	.page .side {
 		height: 33%;
 		view-transition-name: pageside;
-	} .page .side:has(+ main:empty) {
+	} .page.main-empty .side {
 		height: 100%;
 	}
 
 	.page main {
 		height: 67%;
 		view-transition-name: pagemain;
-	} .page main:empty {
+	} .page.main-empty main {
 		height: 0%;
 	}
 
