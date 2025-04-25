@@ -122,6 +122,8 @@
     --red-dark: hsl(355 66% 45%);
     --red-text: hsl(355 66% 45%);
     --red-light: hsl(355 90% 67%);
+
+	interpolate-size: allow-keywords;
 }
 
 .theme-blue {
@@ -186,14 +188,19 @@ a:hover {
     text-decoration: none;
 }
 
+ul, ol {
+	padding-inline-start: clamp(0.75em, 3vw, 2em);
+}
+
 input, textarea, select {
     border: none;
     background-color: var(--skin-input-bg);
-    padding: 0.1em 0.25em;
+    padding: 0.5em 0.75em;
 }
 
 input:focus, textarea:focus {
     background-color: var(--skin-content);
+	outline: 0.125em solid var(--skin-focus);
 }
 
 input:disabled + label {
