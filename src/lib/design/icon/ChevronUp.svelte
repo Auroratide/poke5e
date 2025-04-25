@@ -16,7 +16,7 @@
 
 	.stroke {
 		fill: none;
-		stroke: var(--skin-local-stroke);
+		stroke: var(--skin-local-stroke, currentColor);
 		stroke-width: 12;
 		stroke-linecap: round;
 	}

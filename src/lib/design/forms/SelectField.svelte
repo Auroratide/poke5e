@@ -19,6 +19,7 @@
 	import { slide } from "svelte/transition"
 	import { kebab } from "./kebab"
 	import { createEventDispatcher } from "svelte"
+	import ChevronDown from "../icon/ChevronDown.svelte"
 
 	export let label: string
 	export let value: string
@@ -42,24 +43,27 @@
 
 <div class="select-field">
 	<label for="{id}">{label}</label>
-	<select class="cap" {id} bind:value style:flex="1" {disabled} on:change={handleChange}>
-		{#if isGroups(options)}
-			{#each options as group}
-				<optgroup label="{group.name}">
-					{#each group.values as option (option.value)}
-						<option value="{option.value}" disabled={option.disabled}>{option.name}</option>
-					{/each}
-				</optgroup>
-			{/each}
-		{:else}
-			{#each options as option (option.value)}
-				<option value="{option.value}" disabled={option.disabled}>{option.name}</option>
-			{/each}
-			{#if other != null}
-				<option value="{SelectFieldOther}">Other</option>
+	<div class="select-container">
+		<select class="cap" {id} bind:value {disabled} on:change={handleChange}>
+			{#if isGroups(options)}
+				{#each options as group}
+					<optgroup label="{group.name}">
+						{#each group.values as option (option.value)}
+							<option value="{option.value}" disabled={option.disabled}>{option.name}</option>
+						{/each}
+					</optgroup>
+				{/each}
+			{:else}
+				{#each options as option (option.value)}
+					<option value="{option.value}" disabled={option.disabled}>{option.name}</option>
+				{/each}
+				{#if other != null}
+					<option value="{SelectFieldOther}">Other</option>
+				{/if}
 			{/if}
-		{/if}
-	</select>
+		</select>
+		<span class="select-indicator" aria-hidden="true"><ChevronDown /></span>
+	</div>
 	{#if value === SelectFieldOther}
 		<div class="other-field" transition:slide>
 			<label for="{id}-other">Specify:</label>
@@ -73,6 +77,22 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.125em;
+	}
+
+	.select-container {
+		flex: 1;
+		position: relative;
+	}
+
+	.select-indicator {
+		position: absolute;
+		pointer-events: none;
+		user-select: none;
+		inset-block: 0;
+		inset-inline-end: 0;
+		display: inline-flex;
+		align-items: center;
+		padding-inline: 0.125em;
 	}
 
 	.other-field {
@@ -93,6 +113,12 @@
 		font-weight: bold;
 		font-size: var(--font-sz-venus);
 		letter-spacing: -0.04em;
+	}
+
+	select {
+		appearance: none;
+		border-radius: 0;
+		cursor: pointer;
 	}
 
 	select, input {
