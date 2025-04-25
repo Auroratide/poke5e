@@ -19,7 +19,8 @@
 		margin-bottom: 1em;
 	}
 
-	summary::marker {
+	summary::marker,
+	summary::-webkit-details-marker {
 		display: none;
 	}
 
