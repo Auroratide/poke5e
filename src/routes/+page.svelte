@@ -39,7 +39,7 @@
 		</li>
 	</ul>
 	<address>
-		<p>Homebrew by the community. Website by <a href="{Url.external.auroratide()}">Auroratide</a>. Source code on <a href="{Url.external.github()}">Github</a>.</p>
+		<p>Homebrew by the community. Website by <a href="{Url.external.auroratide()}">Auroratide</a>.<br /> Source code on <a href="{Url.external.github()}">Github</a>. Chill with us on <a href="{Url.external.discord()}">Discord</a>.</p>
 	</address>
 </StaticPage>
 
