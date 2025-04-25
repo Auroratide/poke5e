@@ -91,6 +91,7 @@
 		display: flex;
 		align-items: center;
 		gap: 0.25em;
+		cursor: pointer;
 	} button:hover, button:focus {
 		border-block-end: 0.0625em dotted currentColor;
 	}
