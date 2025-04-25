@@ -135,7 +135,7 @@ const addCustomItem = async (name, description) => {
 	await click("Add Custom Item")
 	await clear(textBox("Name", below(text("Inventory"))))
 	await write(name)
-	await clear(textBox("Desc."))
+	await clear(textBox("Item Description"))
 	await write(description)
 }
 
