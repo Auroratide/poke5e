@@ -6,7 +6,7 @@
 <Title value="Privacy Policy" />
 <StaticPage title="Privacy Policy">
 	<section>
-		<p><strong>Effective Date</strong>: <time datetime="2025-04-20">20 Apr 2025</time></p>
+		<p><strong>Effective Date</strong>: <time datetime="2025-04-25">25 Apr 2025</time></p>
 		<p>Pokémon 5e Reference ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy outlines our practices regarding the collection, use, and disclosure of information when you visit our website.</p>
 	</section>
 	<section>
