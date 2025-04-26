@@ -114,8 +114,8 @@
 		</FlatDl>
 		<FlatDl>
 			{#if pokemon.moves.egg !== undefined}
-					<dt>Egg</dt>
-					<dd><InlineMoveLinks moves={pokemon.moves.egg} /></dd>
+					<dt class="space-after">Egg</dt>
+					<dd class="space-after"><InlineMoveLinks moves={pokemon.moves.egg} /></dd>
 			{/if}
 			{#if pokemon.moves.tm !== undefined}
 					<dt>TM</dt>
@@ -141,5 +141,9 @@
 	.info .row {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
+	}
+
+	.space-after {
+		margin-block-end: 1em;
 	}
 </style>

@@ -10,7 +10,7 @@
 {#if $allTms !== undefined}
 	<ul>
 		{#each tms as tm}
-			<li><a href="{base}/tms/{tm}" title={name(tm)}>{tm}</a></li>
+			<li><a href="{base}/tms/{tm}">{name(tm)}</a></li>
 		{/each}
 	</ul>
 {:else}
@@ -20,21 +20,17 @@
 <style>
 	ul {
 		list-style: none;
-		display: inline;
 		padding: 0;
 		margin: 0;
+		column-count: 2;
+	}
+
+	@media screen and (min-width: 37.5rem) {
+		ul { column-count: 3; }
 	}
 
 	li {
-		display: inline;
-	}
-
-	li::after {
-		content: ', '
-	}
-
-	li:last-child::after {
-		display: none;
+		display: block;
 	}
 
 	.loading {
