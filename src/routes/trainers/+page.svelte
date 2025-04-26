@@ -23,6 +23,7 @@
 	import AccessKeyCard from "$lib/trainers/trainer-details/AccessKeyCard.svelte"
 	import RemoveTrainerCard from "$lib/trainers/trainer-details/RemoveTrainerCard.svelte"
 	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
+	import JavascriptRequired from "$lib/trainers/JavascriptRequired.svelte"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: pokemonId = browser ? $page.url.searchParams.get("pokemon") : undefined
@@ -49,6 +50,7 @@
 <Page theme="green">
 	<IdBadge slot="icon" />
 	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Pokemon List">
+		<JavascriptRequired />
 		{#if trainerId}
 			{#await trainer}
 				<Loader />
