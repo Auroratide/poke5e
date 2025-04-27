@@ -12,6 +12,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.4.1",
+		description: [
+			"Display move name for TMs Pokémon can learn",
+			"Better messaging if scripting is disabled",
+		],
+	}, {
 		name: "v1.4.0",
 		description: [
 			"Added an Accessibility Statement and Privacy Policy.",
