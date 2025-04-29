@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.4.2",
+		description: [
+			"Added Pokémon: Origin Forme Dialga and Palkia, Bloodmoon Ursaluna",
+		],
+	}, {
 		name: "v1.4.1",
 		description: [
 			"Display move name for TMs Pokémon can learn",
