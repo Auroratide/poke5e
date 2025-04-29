@@ -70524,7 +70524,24 @@
 				"cha": "16"
 			},
 			"skills": [
-				"all skills"
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
 			],
 			"savingThrows": [
 				"wis",
@@ -70621,6 +70638,157 @@
 			}
 		},
 		{
+			"id": "dialga-origin",
+			"name": "Dialga (Origin Forme)",
+			"number": 483,
+			"type": [
+				"steel",
+				"dragon"
+			],
+			"size": "huge",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Temporal Pokémon. Radiant light caused Dialga to take on a form bearing a striking resemblance to the creator Pokémon. Dialga now wields such colossal strength that one must conclude this is its true form.",
+			"ac": 20,
+			"hitDice": "d20",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 80
+				},
+				{
+					"type": "flying",
+					"value": 80
+				}
+			],
+			"attributes": {
+				"str": 19,
+				"dex": 19,
+				"con": 20,
+				"int": 20,
+				"wis": 24,
+				"cha": 20
+			},
+			"hp": 505,
+			"skills": [
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
+			],
+			"savingThrows": [
+				"wis",
+				"int",
+				"str"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 100
+				},
+				{
+					"type": "truesight",
+					"value": 100
+				}
+			],
+			"abilities": [
+				{
+					"id": "pressure",
+					"hidden": false
+				},
+				{
+					"id": "telepathy",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scary-face",
+					"metal-claw",
+					"dragon-breath",
+					"ancient-power",
+					"slash",
+					"flash-cannon",
+					"iron-tail",
+					"dragon-claw",
+					"metal-burst",
+					"aura-sphere",
+					"power-gem",
+					"earth-power",
+					"roar-of-time"
+				],
+				"tm": [
+					2,
+					5,
+					6,
+					8,
+					10,
+					11,
+					13,
+					14,
+					15,
+					17,
+					18,
+					20,
+					21,
+					24,
+					25,
+					26,
+					27,
+					31,
+					32,
+					35,
+					37,
+					38,
+					39,
+					40,
+					42,
+					44,
+					48,
+					49,
+					50,
+					65,
+					68,
+					71,
+					73,
+					77,
+					78,
+					80,
+					82,
+					87,
+					88,
+					90,
+					91,
+					92,
+					100
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10245.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10245.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10245.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10245.png"
+			}
+		},
+		{
 			"id": "palkia",
 			"name": "Palkia",
 			"number": 484,
@@ -70658,7 +70826,24 @@
 				"cha": "16"
 			},
 			"skills": [
-				"all skills"
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
 			],
 			"savingThrows": [
 				"wis",
@@ -70754,6 +70939,158 @@
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/484.png",
 				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/484.png",
 				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/484.png"
+			}
+		},
+		{
+			"id": "palkia-origin",
+			"name": "Palkia (Origin Forme)",
+			"number": 484,
+			"type": [
+				"water",
+				"dragon"
+			],
+			"size": "huge",
+			"sr": 15,
+			"minLevel": 20,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "0:0",
+			"description": "The Spatial Pokémon. It soars across the sky in a form that greatly resembles the creator of all things. Perhaps this imitation of appearance is Palkia’s strategy for gaining Arceus’s powers.",
+			"ac": 20,
+			"hitDice": "d20",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 80
+				},
+				{
+					"type": "flying",
+					"value": 80
+				}
+			],
+			"attributes": {
+				"str": 19,
+				"dex": 22,
+				"con": 19,
+				"int": 20,
+				"wis": 24,
+				"cha": 16
+			},
+			"hp": 486,
+			"skills": [
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
+			],
+			"savingThrows": [
+				"wis",
+				"int",
+				"str"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 100
+				},
+				{
+					"type": "truesight",
+					"value": 100
+				}
+			],
+			"abilities": [
+				{
+					"id": "pressure",
+					"hidden": false
+				},
+				{
+					"id": "telepathy",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"scary-face",
+					"water-pulse",
+					"dragon-breath",
+					"ancient-power",
+					"slash",
+					"aqua-ring",
+					"hydro-pump",
+					"aura-sphere",
+					"aqua-tail",
+					"power-gem",
+					"earth-power",
+					"spacial-rend"
+				],
+				"tm": [
+					2,
+					5,
+					6,
+					7,
+					8,
+					10,
+					11,
+					13,
+					14,
+					15,
+					17,
+					18,
+					20,
+					21,
+					24,
+					25,
+					26,
+					27,
+					31,
+					32,
+					35,
+					37,
+					38,
+					39,
+					40,
+					42,
+					44,
+					48,
+					49,
+					52,
+					56,
+					65,
+					68,
+					71,
+					73,
+					77,
+					78,
+					80,
+					82,
+					87,
+					88,
+					90,
+					92,
+					94,
+					100
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10246.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10246.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10246.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10246.png"
 			}
 		},
 		{
@@ -93360,7 +93697,24 @@
 				"cha": "10"
 			},
 			"skills": [
-				"all skills"
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
 			],
 			"savingThrows": [
 				"wis",
@@ -93490,7 +93844,24 @@
 				"cha": "10"
 			},
 			"skills": [
-				"all skills"
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
 			],
 			"savingThrows": [
 				"wis",
@@ -93763,7 +94134,24 @@
 				"cha": "15"
 			},
 			"skills": [
-				"all skills"
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
 			],
 			"savingThrows": [
 				"all"
@@ -93893,7 +94281,24 @@
 				"cha": "18"
 			},
 			"skills": [
-				"all skills"
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
 			],
 			"savingThrows": [
 				"all"
@@ -94018,7 +94423,24 @@
 				"cha": "18"
 			},
 			"skills": [
-				"all skills"
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
 			],
 			"savingThrows": [
 				"all"
@@ -104417,7 +104839,24 @@
 				"cha": "14"
 			},
 			"skills": [
-				"all skills"
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
 			],
 			"savingThrows": [
 				"int",
@@ -104532,7 +104971,24 @@
 				"cha": "16"
 			},
 			"skills": [
-				"all skills"
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
 			],
 			"savingThrows": [
 				"int",
@@ -104649,7 +105105,24 @@
 				"cha": "18"
 			},
 			"skills": [
-				"all skills"
+				"athletics",
+				"acrobatics",
+				"sleight of hand",
+				"stealth",
+				"arcana",
+				"history",
+				"investigation",
+				"nature",
+				"religion",
+				"animal handling",
+				"insight",
+				"medicine",
+				"perception",
+				"survival",
+				"deception",
+				"intimidation",
+				"performance",
+				"persuasion"
 			],
 			"savingThrows": [
 				"int",
@@ -137789,6 +138262,132 @@
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/901.png",
 				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/901.png",
 				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/901.png"
+			}
+		},
+		{
+			"id": "ursaluna-bloodmoon",
+			"name": "Bloodmoon Ursaluna",
+			"number": 901,
+			"type": [
+				"ground",
+				"normal"
+			],
+			"size": "large",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"field"
+			],
+			"gender": "0:1",
+			"evolution": {
+				"maxStage": "3",
+				"stage": "3",
+				"from": [
+					"ursaring"
+				]
+			},
+			"description": "The Peat Pokémon. This special Ursaluna can see in the dark with its left eye and protects itself with mud that is as hard as iron.",
+			"ac": 17,
+			"hitDice": "d12",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				},
+				{
+					"type": "climbing",
+					"value": 25
+				}
+			],
+			"attributes": {
+				"str": 17,
+				"dex": 13,
+				"con": 20,
+				"int": 6,
+				"wis": 20,
+				"cha": 13
+			},
+			"hp": 201,
+			"skills": [
+				"athletics",
+				"insight",
+				"perception"
+			],
+			"savingThrows": [
+				"str",
+				"con"
+			],
+			"senses": [
+				{
+					"type": "darkvision",
+					"value": 120
+				},
+				{
+					"type": "blindsight",
+					"value": 10
+				}
+			],
+			"abilities": [
+				{
+					"id": "minds-eye",
+					"hidden": false
+				}
+			],
+			"moves": {
+				"start": [
+					"scratch",
+					"leer",
+					"lick",
+					"headlong-rush",
+					"fury-swipes",
+					"harden",
+					"payback",
+					"slash",
+					"play-nice",
+					"scary-face"
+				],
+				"level18": [
+					"rest",
+					"snore",
+					"hammer-arm",
+					"earth-power",
+					"moonblast",
+					"blood-moon"
+				],
+				"tm": [
+					4,
+					5,
+					8,
+					11,
+					12,
+					15,
+					17,
+					18,
+					23,
+					26,
+					31,
+					39,
+					40,
+					42,
+					46,
+					52,
+					56,
+					65,
+					68,
+					71,
+					75,
+					78,
+					80,
+					88,
+					90,
+					95
+				]
+			},
+			"media": {
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10272.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10272.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10272.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10272.png"
 			}
 		},
 		{

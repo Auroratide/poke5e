@@ -968,6 +968,22 @@
         "If a creature within range attempts to flee or switch out, you may use your reaction to stop it dead in its tracks, keeping this from happening."
       ]
     },
+		{
+      "id": "blood-moon",
+      "name": "Blood Moon",
+      "type": "normal",
+      "power": [
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "30ft",
+      "description": [
+        "You unleash the full brunt of your spirit from a full moon that shines as red as blood. Choose a creature in range to make a DEX save against your move DC. The creature takes 3d8 + MOVE normal damage on a hit on a failed save, or half damage on a successful save. This move cannot be used on consecutive turns by the same creature."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17."
+    },
     {
       "id": "blue-flare",
       "name": "Blue Flare",

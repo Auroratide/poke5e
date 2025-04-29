@@ -785,6 +785,11 @@
       "name": "Mimicry",
       "description": "This Pokémon's type changes depending on the terrain. If a Terrain move is active, this Pokémon's type becomes the Terrain move's type. This Pokémon's type reverts once the Terrain move deactivates."
     },
+		{
+      "id": "minds-eye",
+      "name": "Mind's Eye",
+      "description": "This Pokémon ignores immunity to its Normal- and Fighting-type moves. It also ignores disadvantage on attacks it makes against targets it can see."
+    },
     {
       "id": "minus",
       "name": "Minus",
