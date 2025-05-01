@@ -3217,6 +3217,427 @@
 			"media": {
 				"sprite": null
 			}
+		},
+		{
+			"id": "trainers-license",
+			"name": "Trainer's License",
+			"type": "trainer gear",
+			"cost": null,
+			"description": [
+				"Only licensed trainers are permitted to capture Pokémon, and this license identifies you as having such authorization. It also allows trainers to gain access to special services at Pokémon centers and to purchase goods at the Poké Mart.",
+				"Trainers can lose their license for attacking other trainers or their Pokémon, or failing to take care of their own Pokémon."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/permit.png"
+			}
+		},
+		{
+			"id": "key-stone",
+			"name": "Key Stone",
+			"type": "trainer gear",
+			"cost": null,
+			"description": [
+				"Allows a trainer to Mega Evolve their Pokémon. Has one charge, and recovers its charge at dawn each day."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/key-stone.png"
+			}
+		},
+		{
+			"id": "z-ring",
+			"name": "Z-Ring",
+			"type": "trainer gear",
+			"cost": null,
+			"description": [
+				"Allows a trainer to unleash their Pokémon's Z-Power in the form of a Z-Move. Has one charge, and recovers its charge at dawn each day."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/z-ring.png"
+			}
+		},
+		{
+			"id": "dynamax-band",
+			"name": "Dynamax Band",
+			"type": "trainer gear",
+			"cost": null,
+			"description": [
+				"Allows a trainer to Dynamax their Pokémon. Has one charge, and recovers its charge at dawn each day."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "tera-orb",
+			"name": "Tera Orb",
+			"type": "trainer gear",
+			"cost": null,
+			"description": [
+				"Allows a trainer to Terastallize their Pokémon. Has one charge, and recovers its charge at dawn each day."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "backpack",
+			"name": "Backpack",
+			"type": "trainer gear",
+			"cost": 150,
+			"description": [
+				"A backpack that can hold up to 30 pounds."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "binoculars",
+			"name": "Binoculars",
+			"type": "trainer gear",
+			"cost": 250,
+			"description": [
+				"You can see objects up to double their size."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "camping-kettle",
+			"name": "Camping Kettle",
+			"type": "trainer gear",
+			"cost": 100,
+			"description": [
+				"A kettle that can be placed in or above a campfire for heating up liquids."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "camping-stove",
+			"name": "Camping Stove",
+			"type": "trainer gear",
+			"cost": 250,
+			"description": [
+				"A light, portable stove that is heated by wood chips."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "canteen",
+			"name": "Canteen",
+			"type": "trainer gear",
+			"cost": 50,
+			"description": [
+				"A metal or plastic canteen to carry water or other liquids."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "energy-cell",
+			"name": "Energy Cell",
+			"type": "trainer gear",
+			"cost": 20,
+			"description": [
+				"A small, flat disc, used to provide energy for various powered objects."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "flashlight",
+			"name": "Flashlight",
+			"type": "trainer gear",
+			"cost": 50,
+			"description": [
+				"Casts bright light in a 15-foot cone and dim light for an additional 30 feet. Requires a new energy cell after 4 hours of use."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "solar-flashlight",
+			"name": "Solar Flashlight",
+			"type": "trainer gear",
+			"cost": 120,
+			"description": [
+				"Casts bright light in a 15-foot cone and dim light for an additional 30 feet. Charges in the sunlight; for each hour doing so, it gains an hour of use, up to 4 hours."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "flint-and-steel",
+			"name": "Flint and Steel",
+			"type": "trainer gear",
+			"cost": 100,
+			"description": [
+				"A 'D'-shaped piece of steel and a square of flint to make a spark to start a fire."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "climbers-kit",
+			"name": "Climber's Kit",
+			"type": "trainer gear",
+			"cost": 500,
+			"description": [
+				"Includes special pitons, boot tips, gloves, and a harness. You have advantage on climbing checks and you can't fall more than 25 ft if you fail. Add your proficiency modifier to related checks."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "cooking-kit",
+			"name": "Cooking Kit",
+			"type": "trainer gear",
+			"cost": 500,
+			"description": [
+				"Includes pots, pans, utensils, and molds for cooking. Used to make foods while in a kitchen or similar facility. Add your proficiency modifier to related checks."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "divers-kit",
+			"name": "Diver's Kit",
+			"type": "trainer gear",
+			"cost": 750,
+			"description": [
+				"Includes a wetsuit, diving belt, mask, fins, and air tanks. While worn it reduces your movement speed by 20ft, but gives you a swimming speed of 30ft. In addition, you have 2 hours of air, can dive a depth of 200ft, and aren't affected by the water's temperature."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "gardeners-kit",
+			"name": "Gardener's Kit",
+			"type": "trainer gear",
+			"cost": 350,
+			"description": [
+				"Includes clippers, gloves, a spade, and a watering pale. It's everything needed to gather and care for plants, berries, and apricorn trees. Add your proficiency modifier to related checks."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "lantern",
+			"name": "Lantern",
+			"type": "trainer gear",
+			"cost": 100,
+			"description": [
+				"Casts bright light in a 30-foot radius and dim light for an aditional 30 feet. Requires a new energy cell after 4 hours of use."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "solar-lantern",
+			"name": "Solar Lantern",
+			"type": "trainer gear",
+			"cost": 150,
+			"description": [
+				"Casts bright light in a 30-foot radius and dim light for an aditional 30 feet. Needs to recharge in the sunlight for a short rest, but otherwise provides 4 hours of light."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "mess-kit",
+			"name": "Mess Kit",
+			"type": "trainer gear",
+			"cost": 150,
+			"description": [
+				"This stainless steel box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan, and the other as a plate or shallow bowl."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "multi-tool",
+			"name": "Multi-tool",
+			"type": "trainer gear",
+			"cost": 150,
+			"description": [
+				"A tool with pliers, scissors, knife, and other basic tools. Add your proficiency modifier to related checks."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "pocket-knife",
+			"name": "Pocket Knife",
+			"type": "trainer gear",
+			"cost": 50,
+			"description": [
+				"A small pocket knife with micro tools. Add your proficiency modifier to related checks."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "camping-ration",
+			"name": "Camping Ration",
+			"type": "trainer gear",
+			"cost": 50,
+			"description": [
+				"An air-tight packet of freeze-dried food. Add hot water to reconstitute. Provides a daily meal for one person."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "rebreather",
+			"name": "Rebreather",
+			"type": "trainer gear",
+			"cost": 500,
+			"description": [
+				"A small breathing apparatus that allows breathing underwater. Its filter needs to be replaced after 4 hours of use."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "rebreather-filter",
+			"name": "Rebreather Filter",
+			"type": "trainer gear",
+			"cost": 50,
+			"description": [
+				"A filter for a rebreather."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "sleeping-bag",
+			"name": "Sleeping Bag",
+			"type": "trainer gear",
+			"cost": 250,
+			"description": [
+				"A sleeping bag for one person."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "solar-charger",
+			"name": "Solar Charger",
+			"type": "trainer gear",
+			"cost": 250,
+			"description": [
+				"A solar charger stores sunlight during a short rest during the day, and can be used to charge two energy cells during a long rest."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "small-tent",
+			"name": "Small Tent",
+			"type": "trainer gear",
+			"cost": 250,
+			"description": [
+				"A tent for two people."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "large-tent",
+			"name": "Large Tent",
+			"type": "trainer gear",
+			"cost": 500,
+			"description": [
+				"A tent for four people."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "artisan-tools",
+			"name": "Artisan Tools",
+			"type": "trainer gear",
+			"cost": 350,
+			"description": [
+				"Tools used by tradesmen, such as calligraphers, artists, or smiths. Choose one type of artisan tool upon purchase. Add your proficiency modifier to related checks."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "thieves-tools",
+			"name": "Thieves' Tools",
+			"type": "trainer gear",
+			"cost": 500,
+			"description": [
+				"You can add your proficiency modifier to checks when disarming traps or opening locks."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "dungeoneers-pack",
+			"name": "Dungeoneer's Pack",
+			"type": "trainer gear",
+			"cost": 1200,
+			"description": [
+				"Contains a backpack, climber's kit, flashlight, 5 energy cells, flint and steel, 10 camping rations, a canteen, and 30 feet of rope."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "explorers-pack",
+			"name": "Explorer's Pack",
+			"type": "trainer gear",
+			"cost": 1200,
+			"description": [
+				"Contains a backpack, sleeping bag, mess kit, flint and steel, flashlight, 5 energy cells, 10 camping rations, a canteen, and 30 feet of rope."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "filchers-pack",
+			"name": "Filcher's Pack",
+			"type": "trainer gear",
+			"cost": 1200,
+			"description": [
+				"Contains a bacpack, thieves' tools, 20 feet of wire,a bell, a lantern, 3 energy cells, 5 camping rations, flint and steel, and a canteen."
+			],
+			"media": {
+				"sprite": null
+			}
 		}
 	]
 }
