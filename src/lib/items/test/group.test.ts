@@ -33,12 +33,19 @@ const heldItem = stubItem({
 	type: "held item",
 })
 
+const trainerGear = stubItem({
+	id: "trainer-gear",
+	name: "Trainer Gear",
+	type: "trainer gear",
+})
+
 const ALL_ITEMS: Item[] = [
 	berry,
 	evoStone,
 	pokeball,
 	potion,
 	heldItem,
+	trainerGear,
 ]
 
 test("default groups", () => {
@@ -61,12 +68,15 @@ test("default groups", () => {
 	}, {
 		name: "Evolution",
 		items: [evoStone],
+	}, {
+		name: "Trainer Gear",
+		items: [trainerGear],
 	} ])
 })
 
 test("group order given", () => {
 	// when
-	const result = groupByType(ALL_ITEMS, ["medicine", "held item", "berry", "evolution", "pokeball"])
+	const result = groupByType(ALL_ITEMS, ["medicine", "held item", "berry", "evolution", "pokeball", "trainer gear"])
 
 	// then
 	expect(result).toEqual([ {
@@ -84,6 +94,9 @@ test("group order given", () => {
 	}, {
 		name: "Pokeball",
 		items: [pokeball],
+	}, {
+		name: "Trainer Gear",
+		items: [trainerGear],
 	} ])
 })
 
@@ -114,5 +127,8 @@ test("multiple items in a single group", () => {
 	}, {
 		name: "Evolution",
 		items: [evoStone],
+	}, {
+		name: "Trainer Gear",
+		items: [trainerGear],
 	} ])
 })
