@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.4.3",
+		description: [
+			"Added trainer gear to items, including the trainer's license, key stone, z-ring, dynamax band, tera orb, and modern adventuring equipment.",
+		],
+	}, {
 		name: "v1.4.2",
 		description: [
 			"Added Pokémon: Origin Forme Dialga and Palkia, Bloodmoon Ursaluna",
