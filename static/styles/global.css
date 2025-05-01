@@ -96,6 +96,7 @@
 	--skin-berry-bg: hsl(205 50% 35%);
 	--skin-held-item-bg: hsl(176, 60%, 32%);
 	--skin-evolution-bg: hsl(77, 50%, 36%);
+	--skin-trainer-gear-bg: hsl(28 50% 32%);
 
     --skin-bar-bg: hsl(330, 1%, 38%);
     --skin-bar-healthy: hsl(119, 100%, 52%);
@@ -166,6 +167,13 @@
     --theme-dark: hsl(42 100% 45%);
     --theme-text: hsl(42 100% 29%);
     --theme-light: hsl(43 89% 54%);
+}
+
+.theme-orange {
+	--theme-main: hsl(28 87% 54%);
+	--theme-dark: hsl(40 100% 71%);
+	--theme-text: hsl(28 50% 32%);
+    --theme-light: hsl(40 100% 71%);
 }
 
 body {
