@@ -131070,7 +131070,7 @@
 			],
 			"abilities": [
 				{
-					"id": "pickup",
+					"id": "battle-armor",
 					"hidden": false
 				},
 				{
@@ -131078,7 +131078,7 @@
 					"hidden": false
 				},
 				{
-					"id": "unnerve",
+					"id": "steely-spirit",
 					"hidden": true
 				}
 			],
