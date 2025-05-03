@@ -9,7 +9,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 		},
 		level5: {
 			name: "Battle Master",
-			description: ["When you reach level 5, you gain a number of battle dice (d6) equal to your Dexterity modifier. These die can be added to a single attack or damage roll. You can assign any amount of the dice to any of your Pokémon at the end of each of your long rests. A Pokémon with a battle dice can use one of those dice when they roll an attack roll or damage roll. Each day when you assign your battle dice for the day, any previous day's assignments are removed."],
+			description: ["When you reach level 5, you gain a number of battle dice (d6) equal to 1 + your Dexterity modifier (minimum of 1). You may assign one of these to any of your Pokémon to be added to a single attack or damage roll, after the result of the initial roll. You replenish your pool of battle dice at each long rest."],
 		},
 		level9: {
 			name: "Rapid Switching",
@@ -24,11 +24,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	name: "Hobbyist",
 	features: {
 		level2: {
-			description: [`You think being a trainer requires being very good at a little bit of everything. Select one additional <a href="${Url.reference.specializations()}">Specialization</a> and two new skill proficiences for your trainer. The specialization you choose must be different from any specializations you already have.`],
+			description: [`You think being a trainer requires being very good at a little bit of everything. Select one additional <a href="${Url.reference.specializations()}">Specialization</a> and two new skill proficiencies for your trainer. The specialization you choose must be different from any specializations you already have.`],
 		},
 		level5: {
 			name: "Versatile",
-			description: ["At level 5, you gain a number of skill dice (d6) equal to your Intelligence modifier. These dice may be added to a single skill check or saving throw. You can assign any amount of these dice to yourself or any of your Pokémon at the end of each of your long rests. Each day when you assign your skill dice for the day, any previous day's assignments are removed."],
+			description: ["At level 5, you gain a number of skill dice (d6) equal to 1 + your Wisdom modifier (minimum of 1). You may assign one of these to any of your Pokémon to be added to a single skill check or saving throw, after the result of the initial roll. You replenish your pool of skill dice at each long rest."],
 		},
 		level9: {
 			name: "Generalist",
@@ -50,12 +50,12 @@ export const TrainerPaths: TrainerPath[] = [ {
 			description: ["You excel at creating meals for your Pokémon, seemingly out of nothing. At level 5, you are frequently prepared with some sort of edible treat, granting 2d4+2 hit points when given. You can give the treat to a creature as a bonus action and other creatures can administer it as an action. You can use this feature a number of times equal to your proficiency modifier per long rest."],
 		},
 		level9: {
-			name: "Warning Words",
-			description: ["At 9th level, you can call out in battle, warning your Pokémon of incoming threats. When one of your Pokémon would suffer damage, you may use your reaction to reduce the incoming damage by 2d6 plus your Wisdom modifier. You may use this ability a number of times equal to your Wisdom modifier per day (minimum one)."],
+			name: "Field Medic",
+			description: ["At 9th level, you can perform first aid in the heat of battle. As an action, you may make a Medicine Check DC 12 to cure an adjacent Pokémon of a non-volatile status effect.", "In addition, your Pokéchef treat now heals 3d10+6 hit points."],
 		},
 		level15: {
 			name: "Tip-top Shape",
-			description: ["When you reach level 15, your Pokémon have advantage on saving throws against negative status effects. Additionally, the amount you can reduce with your Warning Words ability increases to 3d6 plus your Wisdom modifier."],
+			description: ["When you reach level 15, your Pokémon have advantage on saving throws against acquiring negative status conditions.", "In addition, your Pokéchef treat now heals 4d12+10 hit points."],
 		},
 	},
 }, {
