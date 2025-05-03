@@ -72251,7 +72251,7 @@
 			],
 			"abilities": [
 				{
-					"id": "natural-cure",
+					"id": "serene-grace",
 					"hidden": false
 				},
 				{
@@ -103658,7 +103658,24 @@
 			"gender": "1:1",
 			"evolution": {
 				"stage": "1",
-				"maxStage": "2"
+				"maxStage": "2",
+				"to": [
+					{
+						"id": "gourgeist",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 9
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 9
+							}
+						]
+					}
+				]
 			},
 			"description": "The Pumpkin Pokémon. The pumpkin body is inhabited by a spirit trapped in this world. As the sun sets, it becomes restless and active.",
 			"ac": 14,
@@ -103708,16 +103725,8 @@
 					"hidden": true
 				}
 			],
+			"specialAbilityText": "Pumpkaboo come in a variety of sizes: Small, Average, Large, and Supersize (All considered \"Small\" for D&D). The stat block above is for its Small variety. For each size above Small, decrease its DEX by -1 and raise its CON by +1.",
 			"moves": {
-				"variablesize": [
-					"pumpkaboo-come-in-a-variety-of-sizes-small",
-					"average",
-					"large",
-					"and-supersize-all-considered-small-for-dd-the-stat-block-above-is-for-its-small-variety-for-each-size-above-small",
-					"decrease-its-dex-by--1-and-raise-its-con-by-1-evolution-pumpkaboo-can-evolve-into-gourgeist-at-level-9-and-above-when-it-evolves",
-					"its-health-increases-by-double-its-level",
-					"and-it-gains-9-points-to-add-to-its-ability-scores-max-20"
-				],
 				"start": [
 					"astonish",
 					"confuse-ray",
@@ -103811,7 +103820,8 @@
 			"gender": "1:1",
 			"evolution": {
 				"stage": "2",
-				"maxStage": "2"
+				"maxStage": "2",
+				"from": ["pumpkaboo"]
 			},
 			"description": "The Pumpkin Pokémon. Singing in eerie voices, they wander town streets on the night of the new moon. Anyone who hears their song is cursed.",
 			"ac": 18,
@@ -103862,14 +103872,8 @@
 					"hidden": true
 				}
 			],
+			"specialAbilityText": "Gourgeist come in a variety of sizes: Small, Average, Large, and Supersize (All considered \"Small\" for D&D, except for Supersize, which is considered \"Medium\"). The stat block above is for its Small variety. For each size above Small, decrease its DEX by -1 and raise its CON by +1.",
 			"moves": {
-				"variablesize": [
-					"gourgeist-come-in-a-variety-of-sizes-small",
-					"average",
-					"large",
-					"and-supersize-all-considered-small-for-dd-the-stat-block-above-is-for-its-small-variety-for-each-size-above-small",
-					"decrease-its-dex-by--1-and-raise-its-con-by-1"
-				],
 				"start": [
 					"astonish",
 					"confuse-ray",
@@ -111197,10 +111201,10 @@
 				]
 			},
 			"media": {
-				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10124.png",
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10124.png",
-				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10124.png",
-				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10124.png"
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/741.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/741.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/741.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/741.png"
 			}
 		},
 		{
@@ -111323,10 +111327,10 @@
 				]
 			},
 			"media": {
-				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10124.png",
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10124.png",
-				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10124.png",
-				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10124.png"
+				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10123.png",
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10123.png",
+				"mainShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/shiny/10123.png",
+				"spriteShiny": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/10123.png"
 			}
 		},
 		{
@@ -121886,7 +121890,7 @@
 							},
 							{
 								"type": "item",
-								"value": "King's Rock"
+								"value": "Galarica Wreath"
 							}
 						],
 						"effects": [
@@ -135037,7 +135041,7 @@
 					"detect",
 					"brick-break",
 					"bulk-up",
-					"wicked-blow"
+					"surging-strikes"
 				],
 				"level14": [
 					"iron-head",
@@ -135727,6 +135731,7 @@
 			],
 			"moves": {
 				"start": [
+					"glacial-lance",
 					"pound",
 					"mega-drain",
 					"growth",
@@ -135845,6 +135850,7 @@
 			],
 			"moves": {
 				"start": [
+					"astral-barrage",
 					"pound",
 					"mega-drain",
 					"growth",

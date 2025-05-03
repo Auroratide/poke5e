@@ -77,7 +77,7 @@
 	<section class="abilities">
 		<h2>Abilities</h2>
 		{#if pokemon.specialAbilityText !== undefined}
-			<p><strong>{pokemon.specialAbilityText}</strong></p>
+			<p>{pokemon.specialAbilityText}</p>
 		{/if}
 		{#each pokemon.abilities as ability}
 			<p><strong>{ability.name}:</strong> {ability.description}</p>
