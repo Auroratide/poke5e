@@ -12,6 +12,19 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.4.5",
+		description: [
+			"Bug fix: Fix Shaymin Sky's ability",
+			"Bug fix: Fix sprites for the different Oricorio forms",
+			"Bug fix: Fix Pumpkaboo's and Gourgeist's evolution descriptions",
+			"Bug fix: Urshifu Rapid Strike should have Surging Strikes",
+			"Bug fix: Galarian Slowking requires a Galarica Wreath to evolve",
+			"Bug fix: Galarian Zen Mode changes stats that are more faithful to Pokémon lore",
+			"Bug fix: Calyrex Rider forms have their signature moves now",
+			"Reference: Update ASI bonus for leveling Pokémon",
+			"Items: Added Leek, DNA Splicer, and Galarica Wreath",
+		],
+	}, {
 		name: "v1.4.4",
 		description: [
 			"Bug fix: Use correct Perrserker abilities.",
