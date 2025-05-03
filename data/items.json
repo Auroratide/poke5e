@@ -2990,6 +2990,19 @@
 			}
 		},
 		{
+			"id": "leek",
+			"name": "Leek",
+			"type": "held item",
+			"cost": 200,
+			"description": [
+				"When held by a Farfetch'd or Sirfetch'd, the holder's critical hit range increases by two.",
+				"Most of the time, this means attacks can critical on a natural 18, 19, or 20. For a move like Slash which already expands crticial hit range, criticals can happen on natural 17, 18, 19, or 20."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/stick.png"
+			}
+		},
+		{
 			"id": "dragon-scale",
 			"name": "Dragon Scale",
 			"type": "evolution",
@@ -3163,6 +3176,18 @@
 			"name": "Masterpiece Teacup",
 			"type": "evolution",
 			"cost": 9500,
+			"description": [
+				"Some Pokémon may consume the power of this item to evolve."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "galarica-wreath",
+			"name": "Galarica Wreath",
+			"type": "evolution",
+			"cost": 5000,
 			"description": [
 				"Some Pokémon may consume the power of this item to evolve."
 			],
@@ -3637,6 +3662,18 @@
 			],
 			"media": {
 				"sprite": null
+			}
+		},
+		{
+			"id": "dna-splicer",
+			"name": "DNA Splicer",
+			"type": "trainer gear",
+			"cost": null,
+			"description": [
+				"While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom)."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dna-splicers.png"
 			}
 		}
 	]

@@ -1633,7 +1633,7 @@
     {
       "id": "zen-mode-galarian",
       "name": "Zen Mode (Galarian)",
-      "description": "When Galarian Darmanitan is below 50% of its HP, it enters Zen Mode. In Zen Mode, Galarian Darmanitan changes into the form of a flaming snowman. It's type changes to Ice/Fire, it gains +4 to its AC, and its STR and WIS ability scores are swapped."
+      "description": "When Galarian Darmanitan is below 50% of its HP, it enters Zen Mode. In Zen Mode, Galarian Darmanitan changes into the form of a flaming snowman. It's type changes to Ice/Fire, and its STR and DEX each increase by +2."
     },
 		{
       "id": "zero-to-hero",

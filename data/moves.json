@@ -484,6 +484,23 @@
       "higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17.",
       "optional": ["Instead of a natural roll of 15 or higher, target must make a WIS save against your MOVE DC. On failure, the target flinches."]
     },
+		{
+      "id": "astral-barrage",
+      "name": "Astral Barrage",
+      "type": "ghost",
+      "power": [
+        "wis",
+        "cha"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "60ft",
+      "description": [
+        "You send a frightful amount of small ghosts at a point within range. Each creature in a 10-foot-radius Sphere centered there makes a WIS saving throw against your Move DC, taking 3d6 + MOVE ghost damage on a failed save or half as much damage on a successful save."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 6d6 at level 10, and 7d8 at level 17."
+    },
     {
       "id": "attack-order",
       "name": "Attack Order",
@@ -4435,6 +4452,23 @@
         "You swing your whole body around to attack with your huge hammer. Make a melee attack roll, dealing 3d8 + MOVE steel damage on a hit. This move cannot be used on consecutive turns by the same creature."
       ],
       "higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17."
+    },
+		{
+      "id": "glacial-lance",
+      "name": "Glacial Lance",
+      "type": "ice",
+      "power": [
+        "str",
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "80ft",
+      "description": [
+        "You hurl a blizzard-cloaked icicle lance. Make a ranged attack, dealing 3d6 + MOVE ice damage on a hit. All other creatures within 5ft of the straight-line path between you and the target must make a DEX save against your Move DC, taking 2×MOVE ice damage on failure."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 6d6 at level 10, and 7d8 at level 17."
     },
     {
       "id": "glaciate",
