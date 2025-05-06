@@ -1,5 +1,5 @@
 import { env } from "./env"
-import { createClient, PostgrestError, PostgrestSingleResponse } from "@supabase/supabase-js"
+import { createClient } from "@supabase/supabase-js"
 import { expect } from "vitest"
 
 export const supabase = createClient(env.supabaseUrl, env.supabaseKey)
