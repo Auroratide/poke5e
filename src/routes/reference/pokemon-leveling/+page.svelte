@@ -21,7 +21,7 @@
 			<dt>Matching Trainer</dt>
 			<dd>Level always matches the trainer's level</dd>
 		</FlatDl>
-		<p>When a Pokémon levels up, it gains benefits outlined in the table below.</p>
+		<p>When a Pokémon levels up, it gains benefits outlined in the table below. Additionally, each time a Pokémon levels up, it gains HP equal to a roll of its hit dice + CON, retroactive with increased CON scores.</p>
 		<InfoTable label="Pokémon Level Table">
 			<thead>
 				<tr>
