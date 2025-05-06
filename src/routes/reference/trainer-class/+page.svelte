@@ -16,6 +16,7 @@
 		<p>You want to be the very best like no one ever was? Follow these guidelines to create your Pokémon Trainer! These rules are built to accommodate any 5e race.</p>
 		<p>You can use this app's <a href="{Url.trainers()}">Trainer Tool</a> to create and manage trainers and their pokemon! Use the button below to get started:</p>
 		<p class="text-center"><Button href="{Url.trainers(null, null, PageAction.newTrainer)}">Create a Trainer</Button></p>
+		<p>For more on leveling up a trainer, see the <a href="{Url.reference.trainerLeveling()}">Trainer Leveling</a> page.</p>
 	</section>
 	<section>
 		<h2>Core Traits</h2>

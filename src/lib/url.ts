@@ -33,6 +33,7 @@ export const Url = {
 		specializations: () => `${base}/reference/specializations`,
 		status: () => `${base}/reference/status-conditions`,
 		trainerClass: () => `${base}/reference/trainer-class`,
+		trainerLeveling: () => `${base}/reference/trainer-leveling`,
 		trainerPaths: () => `${base}/reference/trainer-paths`,
 		transformations: () => `${base}/reference/pokemon-transformations`,
 		weather: () => `${base}/reference/weather`,

@@ -45,7 +45,7 @@ export const References = [ {
 }, {
 	name: "Pokémon Leveling",
 	url: Url.reference.pokemonLeveling(),
-	keywords: ["pokemon leveling", "class", "table", "experience", "evolution", "evolve", "moves", "peak power"],
+	keywords: ["pokemon leveling", "class", "table", "experience", "evolution", "evolve", "moves", "peak power", "milestones"],
 }, {
 	name: "Pokémon Transformations",
 	url: Url.reference.transformations(),
@@ -62,6 +62,10 @@ export const References = [ {
 	name: "Trainer Class",
 	url: Url.reference.trainerClass(),
 	keywords: ["class", "traits", "abilities", "equipment", "multiclass", "table", "features", "specializations", "paths", "license", "pokedex", "pokeslots", "control upgrade", "trainer's resolve", "pokemon tracker", "master trainer"],
+}, {
+	name: "Trainer Leveling",
+	url: Url.reference.trainerLeveling(),
+	keywords: ["class", "trainer", "table", "experience", "milestones", "pokedex", "registered", "pokeslots", "levels"],
 }, {
 	name: "Trainer Paths",
 	url: Url.reference.trainerPaths(),
