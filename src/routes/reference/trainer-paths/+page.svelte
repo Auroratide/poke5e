@@ -16,8 +16,6 @@
 	<RulesVersionToggle slot="header-extra" />
 	<section>
 		<p>There are many ways and reasons to train Pokémon. At the 2nd level, depending on your long term goals, choose one of the following paths.</p>
-		<p><strong>Note:</strong> You may choose to use either updated "2024" trainer paths, or use the original "2018" trainer paths found in the original handbook.</p>
-		<!-- <RulesVersionToggle /> -->
 	</section>
 	<aside aria-labelledby="shortcuts-label">
 		<strong id="shortcuts-label" class="space-after">List of Paths</strong>
