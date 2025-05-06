@@ -1,0 +1,1 @@
+import{w as t,r as o}from"./R6fQXOgo.js";import{b as r}from"./6D5Vc0NR.js";const n=o(void 0,s=>{typeof window<"u"&&fetch(`${r}/items.json`).then(e=>e.json()).then(e=>s(e.items))}),f=t(""),m=t(()=>0);export{m as c,f,n as i};
