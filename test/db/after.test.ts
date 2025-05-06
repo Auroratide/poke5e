@@ -31,6 +31,24 @@ test("updating trainers", async () => {
 		_home_region: "Unova",
 		_background: "Thief",
 		_money: 3000,
+		_special_normal: 0,
+		_special_fighting: 0,
+		_special_flying: 0,
+		_special_poison: 0,
+		_special_ground: 0,
+		_special_rock: 0,
+		_special_bug: 0,
+		_special_ghost: 0,
+		_special_steel: 0,
+		_special_fire: 0,
+		_special_water: 0,
+		_special_grass: 1,
+		_special_electric: 0,
+		_special_psychic: 0,
+		_special_ice: 0,
+		_special_dragon: 0,
+		_special_dark: 0,
+		_special_fairy: 0,
 	})
 
 	// Updating the avatar
@@ -59,6 +77,7 @@ test("updating trainers", async () => {
 	expect(irisInfo.background).toEqual("Thief")
 	expect(irisInfo.avatar_filename).toEqual(avatarFilename)
 	expect(irisInfo.money).toEqual(3000)
+	expect(irisInfo.special_grass).toEqual(1)
 
 	// Cleanup
 	await call("delete_trainer", {

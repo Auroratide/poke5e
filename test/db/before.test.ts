@@ -1,6 +1,6 @@
-import { test, expect } from "vitest"
-import { supabase, call, callAll, expectError } from "./supabase"
+import { expect, test } from "vitest"
 import { Iris, SunnyYellow } from "./stubs"
+import { call, callAll, expectError, supabase } from "./supabase"
 
 test("updating trainers", async () => {
 	const {
@@ -89,6 +89,7 @@ test("updating trainer inventory", async () => {
 		_quantity: 1,
 		_custom_name: null,
 		_description: null,
+		_rank: 0,
 	})
 
 	const customItemId = await call<string>("add_inventory_item", {
@@ -96,7 +97,8 @@ test("updating trainer inventory", async () => {
 		_item_id: null,
 		_quantity: 1,
 		_custom_name: "Lustergem",
-		_description: "Does something super cool."
+		_description: "Does something super cool.",
+		_rank: 1,
 	})
 
 	// Update
@@ -107,6 +109,7 @@ test("updating trainer inventory", async () => {
 		_quantity: 2,
 		_custom_name: null,
 		_description: null,
+		_rank: 1,
 	})
 
 	await call("update_inventory_item", {
@@ -116,6 +119,7 @@ test("updating trainer inventory", async () => {
 		_quantity: 1,
 		_custom_name: "Lustergem",
 		_description: "The holder may use Luster Purge once per day.",
+		_rank: 0,
 	})
 
 	// Assert
@@ -123,9 +127,11 @@ test("updating trainer inventory", async () => {
 		_read_key: readKey,
 	})
 
-	const potion = irisItems.find((it) => it.item_id === "potion")
-	const customItem = irisItems.find((it) => it.custom_name === "Lustergem")
+	const potion = irisItems[1]
+	const customItem = irisItems[0]
+	expect(potion?.item_id).toEqual("potion")
 	expect(potion?.quantity).toEqual(2)
+	expect(customItem?.custom_name).toEqual("Lustergem")
 	expect(customItem?.description).toEqual("The holder may use Luster Purge once per day.")
 
 	// Cleanup
@@ -229,6 +235,7 @@ test("updating movesets", async () => {
 		_pp_cur: 10,
 		_pp_max: 10,
 		_notes: "",
+		_rank: 0,
 	})
 
 	const pounceId = await call<string>("add_move", {
@@ -238,6 +245,7 @@ test("updating movesets", async () => {
 		_pp_cur: 10,
 		_pp_max: 10,
 		_notes: "",
+		_rank: 1,
 	})
 
 	// Update
@@ -248,6 +256,17 @@ test("updating movesets", async () => {
 		_pp_cur: 9,
 		_pp_max: 10,
 		_notes: "",
+		_rank: 1,
+	})
+
+	await call("update_move", {
+		_write_key: writeKey,
+		_id: pounceId,
+		_move_id: "pounce",
+		_pp_cur: 10,
+		_pp_max: 10,
+		_notes: "",
+		_rank: 0,
 	})
 
 	// Assert
@@ -255,9 +274,11 @@ test("updating movesets", async () => {
 		_pokemon_id: pokemonId,
 	})
 
-	const psybeam = sunnyMoves.find((it) => it.move_id === "psybeam")
-	const pounce = sunnyMoves.find((it) => it.move_id === "pounce")
+	const psybeam = sunnyMoves[1]
+	const pounce = sunnyMoves[0]
+	expect(psybeam?.move_id).toEqual("psybeam")
 	expect(psybeam?.pp_cur).toEqual(9)
+	expect(pounce?.move_id).toEqual("pounce")
 	expect(pounce?.pp_cur).toEqual(10)
 
 	// Cleanup
@@ -307,6 +328,7 @@ test("updating held items", async () => {
 		_item_id: "miracle-seed",
 		_custom_name: null,
 		_description: null,
+		_rank: 0,
 	})
 
 	const customItemId = await call<string>("add_held_item", {
@@ -314,7 +336,8 @@ test("updating held items", async () => {
 		_pokemon_id: pokemonId,
 		_item_id: null,
 		_custom_name: "Lustergem",
-		_description: "Does something super cool."
+		_description: "Does something super cool.",
+		_rank: 1,
 	})
 
 	// Update
@@ -324,6 +347,7 @@ test("updating held items", async () => {
 		_item_id: "lum-berry",
 		_custom_name: null,
 		_description: null,
+		_rank: 1,
 	})
 
 	await call("update_held_item", {
@@ -332,6 +356,7 @@ test("updating held items", async () => {
 		_item_id: null,
 		_custom_name: "Lustergem",
 		_description: "The holder may use Luster Purge once per day.",
+		_rank: 0,
 	})
 
 	// Assert
@@ -339,9 +364,10 @@ test("updating held items", async () => {
 		_pokemon_id: pokemonId,
 	})
 
-	const lumBerry = sunnyItems.find((it) => it.item_id === "lum-berry")
-	const customItem = sunnyItems.find((it) => it.custom_name === "Lustergem")
-	expect(lumBerry).not.toBeUndefined()
+	const lumBerry = sunnyItems[1]
+	const customItem = sunnyItems[0]
+	expect(lumBerry?.item_id).toEqual("lum-berry")
+	expect(customItem?.custom_name).toEqual("Lustergem")
 	expect(customItem?.description).toEqual("The holder may use Luster Purge once per day.")
 
 	// Cleanup
