@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.4.6",
+		description: [
+			"References: Include note that Pokemon gain HP when levelling up.",
+		],
+	}, {
 		name: "v1.4.5",
 		description: [
 			"Bug fix: Fix Shaymin Sky's ability",
