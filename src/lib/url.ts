@@ -20,6 +20,7 @@ export const Url = {
 	privacyPolicy: () => `${base}/privacy-policy`,
 	reference: {
 		all: () => `${base}/reference`,
+		introduction: () => `${base}/reference/introduction`,
 		abilities: () => `${base}/reference/abilities`,
 		bonds: () => `${base}/reference/bonds`,
 		breeding: () => `${base}/reference/breeding`,
