@@ -19,6 +19,7 @@
 			<li>STAB simplified, though buffed at lower levels.</li>
 			<li>Pokémon death rules added.</li>
 			<li>Adapted feats to D&D 2024 rules, and added a couple new feats.</li>
+			<li>Updated natures table to include all actual Pokémon natures.</li>
 		</ul>
 	</section>
 </ReferencePage>
