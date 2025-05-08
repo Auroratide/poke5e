@@ -1,9 +1,10 @@
 <script lang="ts">
 	export let title: string
 	export let columns: number = 1
+	export let columnsLg: number = columns
 </script>
 
-<fieldset style:--columns="{columns}">
+<fieldset style:--columns="{columns}" style:--columns-lg="{columnsLg}">
 	<legend><span class="unskew">{title}</span></legend>
 	<div class="grid">
 		<slot></slot>
@@ -38,16 +39,11 @@
 		grid-template-columns: repeat(var(--columns), 1fr);
 		column-gap: 0.5em;
 		row-gap: 1em;
-		/* display: flex;
-		flex-direction: column;
-		gap: 1em; */
 	}
 
-	/* .grid {
-		display: grid;
-		column-gap: 0.5em;
-		row-gap: 0.5em;
-		align-items: center;
-		grid-template-columns: repeat(var(--columns), auto 1fr);
-	} */
+	@media screen and (min-width: 37.5rem) {
+		.grid {
+			grid-template-columns: repeat(var(--columns-lg), 1fr);
+		}
+	}
 </style>
