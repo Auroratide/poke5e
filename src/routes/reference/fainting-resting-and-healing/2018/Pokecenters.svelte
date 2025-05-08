@@ -1,0 +1,1 @@
+<p>Pokécenters are small hospital-like facilities that can heal your Pokémon to full health, status, and recover all PP in less than 30 minutes. Free for those with Trainer Licenses, they can be found across the world in abundance.</p>

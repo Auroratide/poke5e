@@ -16,6 +16,8 @@
 			<li>Loyalty Levels renamed to Bond Levels, with simpler mechanics.</li>
 			<li>Slightly modified DC calculation for making captures.</li>
 			<li>Combat rules updated to allow for double battles.</li>
+			<li>STAB simplified, though buffed at lower levels.</li>
+			<li>Pokémon death rules added.</li>
 		</ul>
 	</section>
 </ReferencePage>
