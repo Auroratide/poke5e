@@ -5,7 +5,7 @@
 	import { rulesVersion } from "$lib/design/rules-version"
 </script>
 
-<ReferencePage title="Faining, Resting, and Healing">
+<ReferencePage title="Fainting, Resting, and Healing">
 	<section>
 		<p>The rules for HP, healing, and resting for Pokémon are the same as in D&D 5e, with some extensions.</p>
 	</section>

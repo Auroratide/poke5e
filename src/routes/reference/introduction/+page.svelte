@@ -18,6 +18,7 @@
 			<li>Combat rules updated to allow for double battles.</li>
 			<li>STAB simplified, though buffed at lower levels.</li>
 			<li>Pokémon death rules added.</li>
+			<li>Adapted feats to D&D 2024 rules, and added a couple new feats.</li>
 		</ul>
 	</section>
 </ReferencePage>
