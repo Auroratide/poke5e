@@ -1,0 +1,2 @@
+<p style:text-align="center"><code>10 + SR<sub>rounded down</sub> + Pokémon Level</code></p>
+<p>Reduce the DC by 5 if the Pokémon is below half health (in the yellow), and reduce the DC by another 5 if the Pokémon is below 10% of its max health (in the red). Additionally, the Pokéball variant may reduce the DC even further.</p>

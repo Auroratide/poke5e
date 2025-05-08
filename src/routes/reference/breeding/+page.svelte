@@ -3,6 +3,7 @@
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Url } from "$lib/url"
 	import ReferencePage from "../ReferencePage.svelte"
+	import { rulesVersion } from "$lib/design/rules-version"
 </script>
 
 <ReferencePage title="Breeding">
@@ -88,7 +89,7 @@
 		<h3>Species</h3>
 		<p>The resulting Pokémon's species is that of the <strong>female</strong> parent's lowest evolutionary form, and at its minimum found level listed in its stat block.</p>
 		<h3>Nature</h3>
-		<p>The Nature of the hatched Pokémon should be determined by a random d100 roll against the <a href="{Url.reference.natures()}">Nature Table</a>. It is not affected by the breeding parents.</p>
+		<p>The Nature of the hatched Pokémon should be determined by a random {#if $rulesVersion === "2018"}d20{:else}d100{/if} roll against the <a href="{Url.reference.natures()}">Nature Table</a>. It is not affected by the breeding parents.</p>
 		<h3>Gender</h3>
 		<p>The gender of the hatched Pokémon should be determined by a d100 roll against the Gender Rate in the hatched Pokémon's stat block.</p>
 		<p>For example, say you've hatched an Eevee which has a gender rate of 12.5% female and 87.5% male. A d100 roll from 1-13 will result in a female Eevee, and a roll from 14-100 will result in a male Eevee.</p>
