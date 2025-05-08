@@ -13,6 +13,7 @@ import {
 } from "../types"
 import { Natures } from "../nature"
 import { Gender } from "../types"
+import { type Specialization, SpecializationList } from "../specializations"
 
 let POKEMON_ID = 1
 const nextPokemonId = () => (++POKEMON_ID).toString()
@@ -66,6 +67,10 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		},
 		money: 0,
 		inventory: [],
+		specializations: new Map<Specialization, number>([
+			[SpecializationList.Mystic, 1],
+			[SpecializationList.Actor, 1],
+		]),
 	},
 	pokemon: [ {
 		id: nextPokemonId(),
@@ -301,6 +306,9 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		},
 		money: 0,
 		inventory: [],
+		specializations: new Map<Specialization, number>([
+			[SpecializationList.Gardener, 2],
+		]),
 	},
 	pokemon: [],
 } ]
@@ -353,6 +361,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 				},
 				money: 0,
 				inventory: [],
+				specializations: new Map<Specialization, number>(),
 				id,
 				readKey,
 			},

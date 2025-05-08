@@ -374,3 +374,20 @@ export function specializationDescription(specialization: Specialization): strin
 
 	return description.join(" ")
 }
+
+function findByType(type: PokeType): Specialization {
+	return Object.values(SpecializationList).find((it) => it.type === type)
+}
+
+export function typeRanksToMap(types: Record<PokeType, number>): Map<Specialization, number> {
+	return new Map<Specialization, number>(Object.entries(types).map(([type, rank]) =>
+		[findByType(type as PokeType), rank]
+	))
+}
+
+export function mapToTypeRanks(specializations: Map<Specialization, number>): Record<PokeType, number> {
+	return specializations.entries().reduce((obj, cur) => ({
+		...obj,
+		[cur[0].type]: cur[1],
+	}), {} as Record<PokeType, number>)
+}

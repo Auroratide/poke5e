@@ -10,6 +10,7 @@
 	import Art from "$lib/design/Art.svelte"
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 	import InventoryInfo, { type UpdateDetail as InventoryUpdateDetail } from "./InventoryInfo.svelte"
+	import SpecializationsInfo from "../specializations/SpecializationsInfo.svelte";
 
 	const dispatch = createEventDispatcher()
 
@@ -58,6 +59,8 @@
 <section class="stats">
 	<AttributeBlock attributes={trainer.attributes} />
 	<SkillsInfo level={trainer.level} attributes={trainer.attributes} savingThrows={trainer.savingThrows} proficiencies={trainer.proficiencies} />
+	<h3>Specializations</h3>
+	<SpecializationsInfo specializations={trainer.specializations} />
 </section>
 <section>
 	<InventoryInfo money={trainer.money} inventory={trainer.inventory} {editable} on:update={onUpdateMoney} on:update-item={onUpdateItem} />

@@ -5,6 +5,7 @@ import type { AbilityId, PokeType, TeraPokeType } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import type { StorageResource } from "./data"
 import type { Nature } from "./nature"
+import type { Specialization } from "./specializations"
 
 export type Resource = {
 	current: number,
@@ -100,6 +101,7 @@ export type TrainerInfo = {
 	money: number,
 	inventory: InventoryItem[],
 	avatar?: StorageResource,
+	specializations: Map<Specialization, number>,
 }
 export type Trainer = TrainerInfo & {
 	id: TrainerId,
