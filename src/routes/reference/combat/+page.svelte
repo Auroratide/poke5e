@@ -1,10 +1,8 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
-	import Title from "$lib/design/Title.svelte"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Combat" />
-<Card title="Combat">
+<ReferencePage title="Combat">
 	<section>
 		<p>Being a master of your Pokémon in battle is one of the most important parts of this game. Pokémon have their own set of moves, stats, and levels to gain.</p>
 		<p>Combat rules are the same as in D&D 5e, with the following extensions:</p>
@@ -56,7 +54,7 @@
 		<p>A Pokémon can choose to use the action on their turn to "ready" one of their Moves to use as a reaction that triggers after a set of circumstances determined by the player.</p>
 		<p>In order to ready a Move, the Move must be selected and PP reduced. Readying a Move and waiting for the perfect moment to activate it requires concentration. If concentration breaks before the trigger, the Move cannot be used and the PP is lost.</p>
 	</section>
-</Card>
+</ReferencePage>
 
 <style>
 	.center { text-align: center; }

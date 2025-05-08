@@ -1,15 +1,13 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
-	import Title from "$lib/design/Title.svelte"
 	import InfoTable from "$lib/design/InfoTable.svelte"
 	import { Url } from "$lib/url"
 	import NatureRow from "./NatureRow.svelte"
 	import OldNatureRow from "./OldNatureRow.svelte"
 	import { Natures, NatureEffect } from "$lib/trainers/nature"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Natures" />
-<Card title="Natures">
+<ReferencePage title="Natures">
 	<section>
 		<p>Each Pokémon has their own personality - their own wants, needs, likes and dislikes. Taking care of your Pokémon means building a trusting relationship with them and accepting them for who they are.</p>
 		<p>As such, any Pokémon you come into contact with has its own <dfn>Nature</dfn> that may affect their ability scores and sticks with them for their entire life. The following table can be used by the DM to randomly give Pokémon a nature with a roll of a d100. When you choose your starter, you may choose any of the following with their effects.</p>
@@ -77,4 +75,4 @@
 			</tbody>
 		</InfoTable>
 	</section>
-</Card>
+</ReferencePage>

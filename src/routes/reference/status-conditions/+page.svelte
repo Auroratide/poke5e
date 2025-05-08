@@ -1,16 +1,14 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
 	import IconedCardHeading from "$lib/design/IconedCardHeading.svelte"
-	import Title from "$lib/design/Title.svelte"
 	import { NonVolatileStatus, VolatileStatus } from "$lib/pokemon/status"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
+	import ReferencePage from "../ReferencePage.svelte"
 
 	const nonVolatileList = Object.values(NonVolatileStatus)
 	const volatileList = Object.values(VolatileStatus)
 </script>
 
-<Title value="Status Conditions" />
-<Card title="Status Conditions">
+<ReferencePage title="Status Conditions">
 	<section>
 		<p>Status conditions affect a creature's ability to perform in combat. Conditions listed here are often inflicted by many different moves. Some moves may confer unique conditions, the details of which are provided in the move description.</p>
 	</section>
@@ -43,7 +41,7 @@
 			</div>
 		{/each}
 	</section>
-</Card>
+</ReferencePage>
 
 <style>
 	.status-block {

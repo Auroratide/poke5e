@@ -1,10 +1,8 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
-	import Title from "$lib/design/Title.svelte"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Feats" />
-<Card title="Feats">
+<ReferencePage title="Feats">
 	<section>
 		<p>Trainers may take any feat found in the D&D 5e Player Handbook.</p>
 	</section>
@@ -52,4 +50,4 @@
 		<h3>Tireless</h3>
 		<p>Your Pokémon endures hours of rigorous training which keep it in battle longer than the average Pokémon. Gain +1 PP for every move.</p>
 	</section>
-</Card>
+</ReferencePage>

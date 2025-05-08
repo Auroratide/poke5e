@@ -1,12 +1,10 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import InfoTable from "$lib/design/InfoTable.svelte"
-	import Title from "$lib/design/Title.svelte"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Catching Pokemon" />
-<Card title="Catching Pokémon">
+<ReferencePage title="Catching Pokémon">
 	<section>
 		<p>Catching Pokémon is crucial to your success as a trainer. There are several rules to follow when catching Pokémon:</p>
 		<ul>
@@ -192,7 +190,7 @@
 			</FlatDl>
 		</div>
 	</section>
-</Card>
+</ReferencePage>
 
 <style>
 	.indent {

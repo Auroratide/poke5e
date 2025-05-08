@@ -1,13 +1,11 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import InfoTable from "$lib/design/InfoTable.svelte"
-	import Title from "$lib/design/Title.svelte"
 	import { Url } from "$lib/url"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Trainer Leveling" />
-<Card title="Trainer Leveling">
+<ReferencePage title="Trainer Leveling">
 	<section>
 		<p>Trainers can level up in different ways depending on how your group wants to run the game. Some recommended ways include:</p>
 		<FlatDl>
@@ -99,7 +97,7 @@
 		</InfoTable>
 		<p>This option is particularly interesting if a campaign starts at later levels, because players can choose which Pokémon they have seen, with DM approval, leading to interesting backstories.</p>
 	</section>
-</Card>
+</ReferencePage>
 
 <style>
 	th, td {

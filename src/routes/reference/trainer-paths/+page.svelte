@@ -1,19 +1,16 @@
 <script lang="ts">
-	import Card from "$lib/design/Card.svelte"
-	import Title from "$lib/design/Title.svelte"
 	import { TrainerPaths } from "$lib/trainers/paths"
 	import { renderHtml } from "$lib/rendering/render"
-	import { rulesVersion, RulesVersionToggle } from "$lib/design/rules-version"
+	import { rulesVersion } from "$lib/design/rules-version"
 	import ColumnedList from "$lib/design/ColumnedList.svelte"
+	import ReferencePage from "../ReferencePage.svelte"
 
 	$: paths = TrainerPaths[$rulesVersion] 
 
 	const asId = (name: string) => name.replaceAll(/[^a-zA-Z0-9]/g, "").toLocaleLowerCase()
 </script>
 
-<Title value="Trainer Paths" />
-<Card title="Trainer Paths">
-	<RulesVersionToggle slot="header-extra" />
+<ReferencePage title="Trainer Paths">
 	<section>
 		<p>There are many ways and reasons to train Pokémon. At the 2nd level, depending on your long term goals, choose one of the following paths.</p>
 	</section>
@@ -35,7 +32,7 @@
 			{@html renderHtml(path.features.level15.description)}
 		</section>
 	{/each}
-</Card>
+</ReferencePage>
 
 <style>
 	h2 sub {

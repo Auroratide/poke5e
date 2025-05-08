@@ -1,13 +1,11 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
 	import InfoTable from "$lib/design/InfoTable.svelte"
-	import Title from "$lib/design/Title.svelte"
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Url } from "$lib/url"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Breeding" />
-<Card title="Breeding">
+<ReferencePage title="Breeding">
 	<section>
 		<p>Pokémon do not simply appear out of thin air - they are born into your world as babies and grow and thrive to become powerful monsters. This guide sets the stage as a simplistic form of Pokémon breeding and egg development to add variety to every species in your game.</p>
 	</section>
@@ -118,7 +116,7 @@
 			<li><strong>Bond Level</strong>: Shinx's initial Bond Level is 1.</li>
 		</ol>
 	</section>
-</Card>
+</ReferencePage>
 
 <style>
 	td {

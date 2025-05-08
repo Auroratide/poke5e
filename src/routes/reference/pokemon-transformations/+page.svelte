@@ -1,12 +1,10 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
-	import Title from "$lib/design/Title.svelte"
 	import TeraTypeTag from "$lib/pokemon/TeraTypeTag.svelte"
 	import IconedCardHeading from "$lib/design/IconedCardHeading.svelte"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Pokemon Transformations" />
-<Card title="Pokemon Transformations">
+<ReferencePage title="Pokémon Transformations">
 	<section>
 		<p>A <dfn>transformation</dfn> grants a pokemon a temporary, but potent, boost in power by altering its form and capabilities. Any pokemon can undergo one of four kinds of transformations:</p>
 		<ul>
@@ -121,4 +119,4 @@
 		<p>Pokemon with the Stellar tera type retain the vulnerabilities and resistances of their original type when terastallized.</p>
 		<p>A pokemon that is terastallized is vulnerable to Stellar-type moves.</p>
 	</section>
-</Card>
+</ReferencePage>

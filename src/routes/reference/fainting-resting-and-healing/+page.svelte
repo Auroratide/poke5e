@@ -1,10 +1,8 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
-	import Title from "$lib/design/Title.svelte"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Fainting, Resting, and Healing" />
-<Card title="Fainting, Resting, and Healing">
+<ReferencePage title="Faining, Resting, and Healing">
 	<section>
 		<p>The rules for HP, healing, and resting for Pokémon are the same as in D&D 5e, with some extensions.</p>
 	</section>
@@ -38,4 +36,4 @@
 		<h3>Potions and Food</h3>
 		<p>Certain items and food can be given to Pokémon as an action, or in some cases consumed as a reaction, to restore HP, PP, or status. These items cannot be given to Pokémon within Pokéballs.</p>
 	</section>
-</Card>
+</ReferencePage>

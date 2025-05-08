@@ -1,12 +1,10 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
 	import InfoTable from "$lib/design/InfoTable.svelte"
-	import Title from "$lib/design/Title.svelte"
 	import { Url } from "$lib/url"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Bonds" />
-<Card title="Bonds">
+<ReferencePage title="Bonds">
 	<section>
 		<p>The bond between a Pokémon and its trainer is not always stable; It can ebb and flow as the two parties interact with one another. In Pokémon 5e, the relationship between a Pokémon and its trainer moves through various <dfn>Bond Levels</dfn>. These levels each have different effects on the ability of a Pokémon, how well they listen to you, and even whether or not certain Pokémon can evolve.</p>
 	</section>
@@ -78,7 +76,7 @@
 		<p><strong>Advantage:</strong> When you roll a d20 for an ability check, attack roll, or saving throw, you can spend 1 Bond Point to gain advantage on the roll.</p>
 		<p><strong>Disadvantage:</strong> When a creature rolls a d20 for an attack roll against you, you can spend 1 Bond Point to impose disadvantage on the roll.</p>
 	</section>
-</Card>
+</ReferencePage>
 
 <style>
 	td:first-child {

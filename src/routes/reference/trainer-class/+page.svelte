@@ -1,6 +1,4 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
-	import Title from "$lib/design/Title.svelte"
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import { formatMoney } from "$lib/pokemon/money"
 	import InfoTable from "$lib/design/InfoTable.svelte"
@@ -8,10 +6,10 @@
 	import Button from "$lib/design/Button.svelte"
 	import { Url } from "$lib/url"
 	import { PageAction } from "$lib/trainers/page-action"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Trainer Class" />
-<Card title="Trainer Class">
+<ReferencePage title="Trainer Class">
 	<section>
 		<p>You want to be the very best like no one ever was? Follow these guidelines to create your Pokémon Trainer! These rules are built to accommodate any 5e race.</p>
 		<p>You can use this app's <a href="{Url.trainers()}">Trainer Tool</a> to create and manage trainers and their pokemon! Use the button below to get started:</p>
@@ -232,7 +230,7 @@
 		<p>There are many ways and reasons to train Pokémon. At the 2nd level, depending on your long term goals, choose a <dfn><a href="{Url.reference.trainerPaths()}">trainer path</a></dfn> which grants you class features at levels 2, 5, 9, and 15.</p>
 		<p><strong><a href="{Url.reference.trainerPaths()}">View the list of trainer paths.</a></strong></p>
 	</section>
-</Card>
+</ReferencePage>
 
 <style>
 	th:nth-child(1),

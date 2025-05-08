@@ -1,16 +1,14 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
-	import Title from "$lib/design/Title.svelte"
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import InfoTable from "$lib/design/InfoTable.svelte"
 	import LevelTableRow from "./LevelTableRow.svelte"
 	import ExpTableRow from "./ExpTableRow.svelte"
 	import ExperienceTool from "./ExperienceTool.svelte"
 	import { Url } from "$lib/url"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Pokémon Leveling" />
-<Card title="Pokémon Leveling">
+<ReferencePage title="Pokémon Leveling">
 	<section>
 		<p>Pokémon can level up in different ways depending on how your group wants to run the game. Some recommended ways include:</p>
 		<FlatDl>
@@ -245,4 +243,4 @@
 			<li>Evolution can be delayed at the player’s discretion, but once the decision has been made, the Pokémon cannot evolve until gaining an additional level.</li>
 		</ul>
 	</section>
-</Card>
+</ReferencePage>

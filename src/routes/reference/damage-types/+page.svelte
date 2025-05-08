@@ -1,12 +1,10 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
-	import Title from "$lib/design/Title.svelte"
 	import InfoTable from "$lib/design/InfoTable.svelte"
 	import TypeCalculator from "./TypeCalculator.svelte"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Damage Types" />
-<Card title="Damage Types">
+<ReferencePage title="Damage Types">
 	<section>
 		<p>Pokémon 5e replaces the standard 5e damage types (bludgeoning, slashing, etc) with fire, water, grass, ice, ground, rock, electric, fighting, ghost, psychic, poison, bug, steel, dark, fairy, and normal.</p>
 	</section>
@@ -171,4 +169,4 @@
 		<h3>Magic Damage</h3>
 		<p>D&D often makes a distinction between magical and non-magical damage. In Pokémon 5e, if a Pokémon would normally be immune to bludgeoning, slashing, or piercing damage, it instead takes normal damage if the source of that damage is considered magical.</p>
 	</section>
-</Card>
+</ReferencePage>

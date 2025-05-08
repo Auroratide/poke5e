@@ -1,11 +1,9 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
 	import InfoTable from "$lib/design/InfoTable.svelte"
-	import Title from "$lib/design/Title.svelte"
+	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
-<Title value="Weather" />
-<Card title="Weather">
+<ReferencePage title="Weather">
 	<section>
 		<p>Weather plays a significant role on most Pokémon journeys. Many Pokémon have abilities that are affected by the surrounding weather or terrain, and weather can impact the power of certain Pokémon types.</p>
 		<InfoTable label="Weather Effects">
@@ -43,7 +41,7 @@
 			</tbody>
 		</InfoTable>
 	</section>
-</Card>
+</ReferencePage>
 
 <style>
 	td:first-child {
