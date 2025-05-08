@@ -15,6 +15,7 @@
 		<ul>
 			<li>Loyalty Levels renamed to Bond Levels, with simpler mechanics.</li>
 			<li>Slightly modified DC calculation for making captures.</li>
+			<li>Combat rules updated to allow for double battles.</li>
 		</ul>
 	</section>
 </ReferencePage>
