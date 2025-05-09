@@ -28,6 +28,10 @@
 		text-align: start;
 	}
 
+	table :global(tbody th) {
+		border-bottom: none;
+	}
+
 	table :global(tbody tr:nth-child(odd) td) {
 		background-color: var(--skin-bg);
 		color: var(--skin-bg-text);

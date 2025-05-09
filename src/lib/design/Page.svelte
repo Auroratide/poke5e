@@ -71,6 +71,7 @@
 
 		.page .side, .page main {
 			flex: 0 1 37.5rem;
+			width: 50%;
 			height: 100%;
 		}
 	}

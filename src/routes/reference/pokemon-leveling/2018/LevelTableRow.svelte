@@ -1,0 +1,23 @@
+<script lang="ts">
+	import { proficiencyBonus } from "$lib/dnd/proficiency"
+
+	export let level: number
+	export let features: string[]
+
+	$: stab = Math.floor(0.25 * (level + 1))
+</script>
+
+<tr>
+	<td>{level}</td>
+	<td>+{proficiencyBonus(level)}</td>
+	<td>{features.join(", ")}</td>
+	<td>+{stab}</td>
+</tr>
+
+<style>
+	td:nth-child(1),
+	td:nth-child(2),
+	td:nth-child(4) {
+		text-align: center;
+	}
+</style>

@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { experienceAwarded } from "$lib/creatures/experience"
+	export let formula: (level: number, sr: number) => number | null
 
 	let level = 1
 	let sr = "1"
 
 	$: srNum = parseFloat(sr)
-	$: expToAward = experienceAwarded(level, srNum)
+	$: expToAward = formula(level, srNum)
 </script>
 
 <form>
@@ -37,7 +37,13 @@
 	</div>
 	<div class="outputs">
 		<label for="exp-to-award">Exp Awarded:</label>
-		<output id="exp-to-award" aria-live="polite">{Intl.NumberFormat().format(expToAward)}</output>
+		<output id="exp-to-award" aria-live="polite">
+			{#if expToAward != null}
+				{Intl.NumberFormat().format(expToAward)}
+			{:else}
+				N/A
+			{/if}
+		</output>
 	</div>
 </form>
 

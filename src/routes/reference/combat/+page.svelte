@@ -3,6 +3,7 @@
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
 	import { rulesVersion } from "$lib/design/rules-version"
+	import Formula from "$lib/design/Formula.svelte"
 </script>
 
 <ReferencePage title="Combat">
@@ -19,11 +20,9 @@
 		<h2>Moves/Move Power</h2>
 		<p>Moves in Pokémon 5e work similarly to spells in 5e D&D. Instead of a single character having a set amount of spell slots, each move has a set amount of <dfn>Power Points</dfn> (<abbr>PP</abbr>). PP determines how many times the move can be used, one use per one PP. Refilling PP can be done by long resting or using an item such as Ether.</p>
 		<p>Most moves have a <dfn>Move Power</dfn> - the focused ability of that move. Move Powers can be any of the six main ability scores, and determine which ability to use for attack, damage, and saving throw DC. If a move specifies multiple move powers, you choose one of the move powers for calculations.</p>
-		<div class="center smaller">
-			<p><code><strong>Attack Roll Bonus</strong> = Move Power Mod + Prof. Mod</code></p>
-			<p><code><strong>Damage Bonus</strong> = Move Power Mod + STAB</code></p>
-			<p><code><strong>Saving Throw DC</strong> = 8 + Move Power Mod + Prof. Mod</code></p>
-		</div>
+		<Formula equals="Attack Roll Bonus" expression="Move Power Mod + Prof. Mod" />
+		<Formula equals="Damage Bonus" expression="Move Power Mod + STAB" />
+		<Formula equals="Saving Throw DC" expression="8 + Move Power Mod + Prof. Mod" />
 		<p>Pokémon are proficient in all the moves they know.</p>
 		<h3>STAB</h3>
 		{#if $rulesVersion === "2018"}
@@ -58,8 +57,3 @@
 		<p>In order to ready a Move, the Move must be selected and PP reduced. Readying a Move and waiting for the perfect moment to activate it requires concentration. If concentration breaks before the trigger, the Move cannot be used and the PP is lost.</p>
 	</section>
 </ReferencePage>
-
-<style>
-	.center { text-align: center; }
-	.smaller { font-size: var(--font-sz-venus); }
-</style>
