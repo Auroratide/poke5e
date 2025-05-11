@@ -27,6 +27,7 @@
 			<li>Made Asleep a volatile condition, added Badly Poisoned, and reworked Confused to work more like the Confusion spell.</li>
 			<li>Change trainer hit dice to d6 since they are basically full-casters.</li>
 			<li>Added multiclassing potential.</li>
+			<li>Simplified weather, so its effect is more subtle, and because the 2018 tables assumed only a specific kind of biome.</li>
 		</ul>
 	</section>
 </ReferencePage>
