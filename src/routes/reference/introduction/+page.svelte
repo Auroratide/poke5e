@@ -25,6 +25,8 @@
 			<li>Added Z-Moves, Dynamax, and Terastallization.</li>
 			<li>Rework trainer specializations to match Pokémon's trainer class names, and make their benefits more symmetrical.</li>
 			<li>Made Asleep a volatile condition, added Badly Poisoned, and reworked Confused to work more like the Confusion spell.</li>
+			<li>Change trainer hit dice to d6 since they are basically full-casters.</li>
+			<li>Added multiclassing potential.</li>
 		</ul>
 	</section>
 </ReferencePage>
