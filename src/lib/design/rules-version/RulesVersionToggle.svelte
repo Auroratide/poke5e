@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Url } from "$lib/url"
 	import HelpIcon from "../icon/HelpIcon.svelte"
 import Popover from "../Popover.svelte"
 import { rulesVersion } from "./RulesVersion"
@@ -10,7 +11,7 @@ import { rulesVersion } from "./RulesVersion"
 	<legend>
 		<Popover id="{id}-popover">
 			<HelpIcon slot="activator" label="Rules Version" />
-			<p>You may choose to use either the updated "2024" rules, or use the "2018" rules found in the original handbook.</p>
+			<p>You may choose to use either the updated "2024" rules, or use the "2018" rules found in the original handbook.<br />See: <a href="{Url.reference.introduction()}#rulesets">2024 Rule Updates</a></p>
 		</Popover>
 	</legend>
 	<span class="skew-tags">
@@ -37,6 +38,10 @@ import { rulesVersion } from "./RulesVersion"
 
 	legend {
 		float: inline-start;
+	}
+
+	legend a {
+		color: var(--theme-light);
 	}
 
 	.skew-tags {

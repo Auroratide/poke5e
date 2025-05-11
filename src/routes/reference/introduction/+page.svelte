@@ -1,13 +1,30 @@
 <script lang="ts">
+	import { Url } from "$lib/url"
 	import ReferencePage from "../ReferencePage.svelte"
 </script>
 
 <ReferencePage title="Introduction">
 	<section>
-		<p>Hello!</p>
+		<p>Hello, and welcome to Pokémon 5e! This is an online guide and tool for playing D&D in the Pokémon universe with your friends.</p>
+		<p>These reference pages provide the core rules playing game. The only prerequisite for understanding the content on this site is that you understand the rules of Dungeons and Dragons found in its Player Handbook. Rules that would be found in the D&D Player Handbook will <strong>not</strong> be reprinted on this site, so it is recommended that you own a copy in order to get the most out of Pokémon 5e.</p>
+		<p>If you're just getting started, we recommended starting with these pages:</p>
+		<ol>
+			<li><a href="{Url.reference.trainerClass()}">Trainer Class</a></li>
+			<li><a href="{Url.reference.trainerPaths()}">Trainer Paths</a></li>
+			<li><a href="{Url.reference.catchingPokemon()}">Catching Pokémon</a></li>
+			<li><a href="{Url.reference.pokemonLeveling()}">Pokémon Leveling</a></li>
+			<li><a href="{Url.reference.combat()}">Combat</a></li>
+			<li><a href="{Url.reference.faintingRestingHealing()}">Fainting, Resting, and Healing</a></li>
+		</ol>
 	</section>
 	<section>
-		<h2>2018 vs 2024 Rulesets</h2>
+		<h2>Versioning Disclaimer</h2>
+		<p>The precise rules found in this reference are not necessarily permanent or set in stone. As the community identifies core balance issues, the rules may be updated. Any changes that are made will be identified on the <a href="{Url.versionHistory()}">Version History</a> page.</p>
+		<p>Additionally, if there are rules your group personally thinks could be better, this is a Homebrew! Remix it as much as you want to make the game as fun as possible.</p>
+	</section>
+	<section>
+		<h2 id="rulesets">2018 vs 2024 Rulesets</h2>
+		<p>The rules to Pokémon 5e were originally published as a handbook and monster manual in 2018, but was eventually discontinued.</p>
 		<p>The version of the rules found on this website are slightly updated from the version of the rules originally published in 2018. This is so the community can adopt new Pokémon mechanics, reduce complexity, improve balance, adapt to D&D's 2024 rules, etc.</p>
 		<p>That said, if you prefer the original rules, you can use the switch found in the title of each rules page. The original ruleset is called "2018" rules, and the updated rules are called "2024" rules.</p>
 		<h3>Summary of updates</h3>
@@ -29,6 +46,7 @@
 			<li>Added multiclassing potential.</li>
 			<li>Simplified weather, so its effect is more subtle, and because the 2018 tables assumed only a specific kind of biome.</li>
 		</ul>
+		<h3>Trainer Path Updates</h3>
 		<p>Additionally, several trainer paths were tweaked:</p>
 		<ul>
 			<li>
