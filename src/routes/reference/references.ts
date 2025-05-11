@@ -43,6 +43,10 @@ export const References = [ {
 	url: Url.reference.feats(),
 	keywords: ["ambidextrous", "combo master", "extra ac", "extra move", "gifted", "natural mount", "power sculptor", "terrain adept", "tireless"],
 }, {
+	name: "Legendary/Boss Battles",
+	url: Url.reference.legendaryBattles(),
+	keywords: ["legendary", "boss", "grit", "resilience", "resistance", "attack", "energy", "nimbleness", "speed", "toughness", "reflexes", "knowledge", "armor"],
+}, {
 	name: "Natures",
 	url: Url.reference.natures(),
 	keywords: ["nature", "personality", "hardy", "lonely", "brave", "adamant", "naughty", "bold", "docile", "relaxed", "impish", "lax", "timid", "hasty", "serious", "jolly", "naive", "modest", "mild", "quiet", "bashful", "rash", "calm", "gentle", "sassy", "careful", "quirky"],
