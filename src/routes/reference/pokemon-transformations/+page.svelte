@@ -2,6 +2,9 @@
 	import TeraTypeTag from "$lib/pokemon/TeraTypeTag.svelte"
 	import IconedCardHeading from "$lib/design/IconedCardHeading.svelte"
 	import ReferencePage from "../ReferencePage.svelte"
+	import Rules2018 from "./2018"
+	import Rules2024 from "./2024"
+	import { rulesVersion } from "$lib/design/rules-version"
 </script>
 
 <ReferencePage title="Pokémon Transformations">
@@ -9,40 +12,26 @@
 		<p>A <dfn>transformation</dfn> grants a pokemon a temporary, but potent, boost in power by altering its form and capabilities. Any pokemon can undergo one of four kinds of transformations:</p>
 		<ul>
 			<li><a href="#mega-evolution">Mega Evolution</a></li>
-			<li><a href="#z-move">Z-Move</a></li>
-			<li><a href="#dynamax">Dynamax</a></li>
-			<li><a href="#terastallization">Terastallization</a></li>
+			<li><a href="#z-move">Z-Move</a>{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</li>
+			<li><a href="#dynamax">Dynamax</a>{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</li>
+			<li><a href="#terastallization">Terastallization</a>{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</li>
 		</ul>
+		{#if $rulesVersion === "2018"}
+			<p><strong>Note:</strong> Only Mega Evolution existed in the 2018 ruleset. The 2024 rules for the other forms are reprinted here for convenience.</p>
+		{/if}
 		<p>A pokemon may only undergo a single transformation per long rest. Additionally, due to the equipment needed to perform these transformations, a trainer may only induce each kind of transformation once per long rest.</p>
 		<p>Most sanctioned battles only allow a single transformation. Some venues only allow a specific kind of transformation. Others allow any, and yet others disallow them entirely.</p>
 	</section>
 	<section>
 		<h2 id="mega-evolution">Mega Evolution</h2>
-		<p>When a pokemon mega-evolves, it breaks the boundaries of evolution by changing form and becoming stronger.</p>
-		<p>A pokemon may only mega-evolve if it meets all of these conditions:</p>
-		<ul>
-			<li>It is at a final stage of its evolution line.</li>
-			<li>It is at least level 10.</li>
-			<li>It is holding a Megalite Stone.</li>
-			<li>Its trainer possesses a Key Stone.</li>
-		</ul>
-		<p>When a pokemon mega-evolves:</p>
-		<ul>
-			<li>Its AC increases by 2.</li>
-			<li>It doubles its ability score modifiers for attack rolls, damage rolls, saving throw rolls, and saving throw DCs.</li>
-			<li>Its type <em>may</em> change. Use one of the <a href="https://bulbapedia.bulbagarden.net/wiki/Mega_Evolution#Pok%C3%A9mon_capable_of_Mega_Evolution" rel="noreferrer">canon transformations</a>, or work with your DM on what makes sense.</li>
-			<li>Its physical form changes to something epic!</li>
-		</ul>
-		<p>A mega-evolved pokemon reverts back to its original form when any of the conditions are met:</p>
-		<ul>
-			<li>At the end of combat, if used during combat.</li>
-			<li>After 10 minutes, if used outside of combat.</li>
-			<li>When the pokemon faints.</li>
-			<li>If the trainer loses possession of their Key Stone.</li>
-		</ul>
+		{#if $rulesVersion === "2018"}
+			<Rules2018.MegaEvolution />
+		{:else}
+			<Rules2024.MegaEvolution />
+		{/if}
 	</section>
 	<section>
-		<h2 id="z-move">Z-Move</h2>
+		<h2 id="z-move">Z-Move{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</h2>
 		<p>A pokemon empowered with Z-Power may unleash a single, ultra-powerful move.</p>
 		<p>A pokemon may only use a Z-Move if it meets all of these conditions:</p>
 		<ul>
@@ -61,7 +50,7 @@
 		</ul>
 	</section>
 	<section>
-		<h2 id="dynamax">Dynamax</h2>
+		<h2 id="dynamax">Dynamax{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</h2>
 		<p>When a pokemon dynamaxes, it warps the space around it to gains tremendous size and strength.</p>
 		<p>A pokemon may only dynamax if it meets all of these conditions:</p>
 		<ul>
@@ -87,7 +76,7 @@
 		</ul>
 	</section>
 	<section>
-		<h2 id="terastallization">Terastallization</h2>
+		<h2 id="terastallization">Terastallization{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</h2>
 		<p>When a pokemon terastallizes, it shimmers like a gem and changes its typing.</p>
 		<p>Each pokemon has a special <dfn>Tera Type</dfn> which is one of the 18 primary types or the Stellar type. For most pokemon, their Tera Type is the same as their primary type, but rarely, pokemon may possess a Tera Type that differs from their customary typing entirely.</p>
 		<p>A pokemon may only terastallize if it meets all of these conditions:</p>
