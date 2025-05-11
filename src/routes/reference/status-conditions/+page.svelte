@@ -1,16 +1,26 @@
 <script>
 	import IconedCardHeading from "$lib/design/IconedCardHeading.svelte"
-	import { NonVolatileStatus, VolatileStatus } from "$lib/pokemon/status"
+	import {
+		NonVolatileStatus,
+		VolatileStatus,
+		NonVolatileStatus2018,
+		VolatileStatus2018,
+	} from "$lib/pokemon/status"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 	import ReferencePage from "../ReferencePage.svelte"
+	import { rulesVersion } from "$lib/design/rules-version"
 
-	const nonVolatileList = Object.values(NonVolatileStatus)
-	const volatileList = Object.values(VolatileStatus)
+	$: nonVolatileList = $rulesVersion === "2018" ? Object.values(NonVolatileStatus2018) : Object.values(NonVolatileStatus)
+	$: volatileList = $rulesVersion === "2018" ? Object.values(VolatileStatus2018) : Object.values(VolatileStatus)
 </script>
 
 <ReferencePage title="Status Conditions">
 	<section>
 		<p>Status conditions affect a creature's ability to perform in combat. Conditions listed here are often inflicted by many different moves. Some moves may confer unique conditions, the details of which are provided in the move description.</p>
+	</section>
+	<section>
+		<h2>Grace Period</h2>
+		<p>When a Pokémon recovers from a status effect, they cannot succumb to the <strong>same</strong> effect until after the end of their next turn.</p>
 	</section>
 	<section>
 		<h2>Non-Volatile Conditions</h2>

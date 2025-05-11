@@ -24,6 +24,7 @@
 			<li>Gave Pokémon a cool level 20 capstone feature.</li>
 			<li>Added Z-Moves, Dynamax, and Terastallization.</li>
 			<li>Rework trainer specializations to match Pokémon's trainer class names, and make their benefits more symmetrical.</li>
+			<li>Made Asleep a volatile condition, added Badly Poisoned, and reworked Confused to work more like the Confusion spell.</li>
 		</ul>
 	</section>
 </ReferencePage>
