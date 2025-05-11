@@ -10,10 +10,13 @@ export type Specialization = {
 
 export type SpecializationEffect = {
 	type: "asi",
-	value: Attribute,
+	value: Attribute[],
 } | {
 	type: "proficiency",
-	value: Skill,
+	value: Skill[],
+} | {
+	type: "other",
+	value: string,
 }
 
 export const SpecializationList = {
@@ -22,7 +25,7 @@ export const SpecializationList = {
 		name: "Poké Fan",
 		effect: [ {
 			type: "asi",
-			value: "cha",
+			value: ["cha"],
 		} ],
 		type: "normal",
 	},
@@ -31,7 +34,7 @@ export const SpecializationList = {
 		name: "Black Belt",
 		effect: [ {
 			type: "proficiency",
-			value: "athletics",
+			value: ["athletics"],
 		} ],
 		type: "fighting",
 	},
@@ -40,7 +43,7 @@ export const SpecializationList = {
 		name: "Bird Keeper",
 		effect: [ {
 			type: "proficiency",
-			value: "perception",
+			value: ["perception"],
 		} ],
 		type: "flying",
 	},
@@ -49,7 +52,7 @@ export const SpecializationList = {
 		name: "Punk",
 		effect: [ {
 			type: "proficiency",
-			value: "sleight of hand",
+			value: ["sleight of hand"],
 		} ],
 		type: "poison",
 	},
@@ -58,7 +61,7 @@ export const SpecializationList = {
 		name: "Camper",
 		effect: [ {
 			type: "proficiency",
-			value: "survival",
+			value: ["survival"],
 		} ],
 		type: "ground",
 	},
@@ -67,7 +70,7 @@ export const SpecializationList = {
 		name: "Hiker",
 		effect: [ {
 			type: "asi",
-			value: "con",
+			value: ["con"],
 		} ],
 		type: "rock",
 	},
@@ -76,7 +79,7 @@ export const SpecializationList = {
 		name: "Bug Maniac",
 		effect: [ {
 			type: "proficiency",
-			value: "nature",
+			value: ["nature"],
 		} ],
 		type: "bug",
 	},
@@ -85,7 +88,7 @@ export const SpecializationList = {
 		name: "Mystic",
 		effect: [ {
 			type: "proficiency",
-			value: "religion",
+			value: ["religion"],
 		} ],
 		type: "ghost",
 	},
@@ -94,7 +97,7 @@ export const SpecializationList = {
 		name: "Worker",
 		effect: [ {
 			type: "asi",
-			value: "str",
+			value: ["str"],
 		} ],
 		type: "steel",
 	},
@@ -103,7 +106,7 @@ export const SpecializationList = {
 		name: "Kindler",
 		effect: [ {
 			type: "proficiency",
-			value: "intimidation",
+			value: ["intimidation"],
 		} ],
 		type: "fire",
 	},
@@ -112,7 +115,7 @@ export const SpecializationList = {
 		name: "Swimmer",
 		effect: [ {
 			type: "asi",
-			value: "dex",
+			value: ["dex"],
 		} ],
 		type: "water",
 	},
@@ -121,7 +124,7 @@ export const SpecializationList = {
 		name: "Gardener",
 		effect: [ {
 			type: "proficiency",
-			value: "medicine",
+			value: ["medicine"],
 		} ],
 		type: "grass",
 	},
@@ -130,7 +133,7 @@ export const SpecializationList = {
 		name: "Engineer",
 		effect: [ {
 			type: "asi",
-			value: "int",
+			value: ["int"],
 		} ],
 		type: "electric",
 	},
@@ -139,7 +142,7 @@ export const SpecializationList = {
 		name: "Psychic",
 		effect: [ {
 			type: "proficiency",
-			value: "arcana",
+			value: ["arcana"],
 		} ],
 		type: "psychic",
 	},
@@ -148,7 +151,7 @@ export const SpecializationList = {
 		name: "Skier",
 		effect: [ {
 			type: "proficiency",
-			value: "acrobatics",
+			value: ["acrobatics"],
 		} ],
 		type: "ice",
 	},
@@ -157,7 +160,7 @@ export const SpecializationList = {
 		name: "Dragon Tamer",
 		effect: [ {
 			type: "asi",
-			value: "wis",
+			value: ["wis"],
 		} ],
 		type: "dragon",
 	},
@@ -166,7 +169,7 @@ export const SpecializationList = {
 		name: "Delinquent",
 		effect: [ {
 			type: "proficiency",
-			value: "stealth",
+			value: ["stealth"],
 		} ],
 		type: "dark",
 	},
@@ -175,7 +178,172 @@ export const SpecializationList = {
 		name: "Actor",
 		effect: [ {
 			type: "proficiency",
-			value: "performance",
+			value: ["performance"],
+		} ],
+		type: "fairy",
+	},
+} satisfies Record<string, Specialization>
+
+export const SpecializationList2018 = {
+	TeamPlayer: {
+		id: "team-player",
+		name: "Team Player",
+		effect: [ {
+			type: "asi",
+			value: ["str", "dex", "con", "int", "wis", "cha"],
+		} ],
+		type: "normal",
+	},
+	MartialArtist: {
+		id: "martial-artist",
+		name: "Martial Artist",
+		effect: [ {
+			type: "asi",
+			value: ["str", "dex", "con"],
+		} ],
+		type: "fighting",
+	},
+	BirdKeeper: {
+		id: "bird-keeper",
+		name: "Bird Keeper",
+		effect: [ {
+			type: "proficiency",
+			value: ["perception"],
+		} ],
+		type: "flying",
+	},
+	Alchemist: {
+		id: "alchemist",
+		name: "Alchemist",
+		effect: [ {
+			type: "proficiency",
+			value: ["medicine", "deception"],
+		} ],
+		type: "poison",
+	},
+	Camper: {
+		id: "camper",
+		name: "Camper",
+		effect: [ {
+			type: "proficiency",
+			value: ["survival"],
+		} ],
+		type: "ground",
+	},
+	Mountaineer: {
+		id: "mountaineer",
+		name: "Mountaineer",
+		effect: [ {
+			type: "asi",
+			value: ["str", "dex", "con"],
+		} ],
+		type: "rock",
+	},
+	BugManiac: {
+		id: "bug-maniac",
+		name: "Bug Maniac",
+		effect: [ {
+			type: "proficiency",
+			value: ["nature"],
+		} ],
+		type: "bug",
+	},
+	Mystic: {
+		id: "mystic",
+		name: "Mystic",
+		effect: [ {
+			type: "proficiency",
+			value: ["arcana"],
+		} ],
+		type: "ghost",
+	},
+	SteelWorker: {
+		id: "steel-worker",
+		name: "Steel Worker",
+		effect: [ {
+			type: "asi",
+			value: ["str", "con"],
+		} ],
+		type: "steel",
+	},
+	Pyromaniac: {
+		id: "pyromaniac",
+		name: "Pyromaniac",
+		effect: [ {
+			type: "asi",
+			value: ["con"],
+		} ],
+		type: "fire",
+	},
+	Swimmer: {
+		id: "swimmer",
+		name: "Swimmer",
+		effect: [ {
+			type: "other",
+			value: "You gain a swim speed equal to your movement speed.",
+		} ],
+		type: "water",
+	},
+	Gardener: {
+		id: "gardener",
+		name: "Gardener",
+		effect: [ {
+			type: "proficiency",
+			value: ["nature"],
+		} ],
+		type: "grass",
+	},
+	Engineer: {
+		id: "engineer",
+		name: "Engineer",
+		effect: [ {
+			type: "asi",
+			value: ["int"],
+		} ],
+		type: "electric",
+	},
+	Psychic: {
+		id: "psychic",
+		name: "Psychic",
+		effect: [ {
+			type: "other",
+			value: "You gain the ability to target one of your Pokémon with the Telepathy spell once per day, ignoring components.",
+		} ],
+		type: "psychic",
+	},
+	IceSkater: {
+		id: "ice-skater",
+		name: "Ice Skater",
+		effect: [ {
+			type: "proficiency",
+			value: ["performance", "persuasion"],
+		} ],
+		type: "ice",
+	},
+	DragonTamer: {
+		id: "dragon-tamer",
+		name: "Dragon Tamer",
+		effect: [ {
+			type: "asi",
+			value: ["wis"],
+		} ],
+		type: "dragon",
+	},
+	Shadow: {
+		id: "shadow",
+		name: "Shadow",
+		effect: [ {
+			type: "proficiency",
+			value: ["deception", "stealth"],
+		} ],
+		type: "dark",
+	},
+	Charmer: {
+		id: "charmer",
+		name: "Charmer",
+		effect: [ {
+			type: "asi",
+			value: ["cha"],
 		} ],
 		type: "fairy",
 	},
@@ -191,10 +359,13 @@ export function specializationDescription(specialization: Specialization): strin
 	specialization.effect.forEach((it) => {
 		switch (it.type) {
 		case "asi":
-			description.push(`Increase your ${it.value.toLocaleUpperCase()} by 1, to a maximum of 20.`)
+			description.push(`Increase your ${new Intl.ListFormat("en", { type: "disjunction" }).format(it.value.map((word) => word.toLocaleUpperCase()))} by 1, to a maximum of 20.`)
 			break
 		case "proficiency":
-			description.push(`You gain proficiency in ${capitalize(it.value)}, or if you already had proficiency, you gain expertise.`)
+			description.push(`You gain proficiency in ${new Intl.ListFormat("en", { type: "disjunction" }).format(it.value.map(capitalize))}, or if you already had proficiency, you gain expertise.`)
+			break
+		case "other":
+			description.push(it.value)
 			break
 		}
 	})

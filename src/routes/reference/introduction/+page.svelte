@@ -23,6 +23,7 @@
 			<li>Simplified Pokémon experience awards.</li>
 			<li>Gave Pokémon a cool level 20 capstone feature.</li>
 			<li>Added Z-Moves, Dynamax, and Terastallization.</li>
+			<li>Rework trainer specializations to match Pokémon's trainer class names, and make their benefits more symmetrical.</li>
 		</ul>
 	</section>
 </ReferencePage>
