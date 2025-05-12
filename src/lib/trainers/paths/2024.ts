@@ -93,7 +93,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 		},
 		level15: {
 			name: "Expert Tracker",
-			description: ["At level 15, you become an expert at tracking Pokémon. When you use your Pokémon Tracker class feature, you may roll a DC 11 Investigation or Nature check in order to encounter any single Pokémon in the list of wild Pokémon for the area. Additionally, you may now use the Pokémon class feature twice per long rest."],
+			description: ["At level 15, you become an expert at tracking Pokémon. When you use your Pokémon Tracker class feature, you may roll a DC 11 Investigation or Nature check in order to encounter any single Pokémon in the list of wild Pokémon for the area. Additionally, you may now use the Pokémon Tracker class feature twice per long rest."],
 		},
 	},
 }, {
