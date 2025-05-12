@@ -17,11 +17,11 @@ import { rulesVersion } from "./RulesVersion"
 	<span class="skew-tags">
 		<input id="{id}-2018-input" bind:group={$rulesVersion} value="2018" type="radio" class="visually-hidden" />
 		<label for="{id}-2018-input" class="skew-tag left">
-			<span class="unskew">'18</span>
+			<span class="text unskew">'18</span>
 		</label>
 		<input id="{id}-2024-input" bind:group={$rulesVersion} value="2024" type="radio" class="visually-hidden" />
 		<label for="{id}-2024-input" class="skew-tag right">
-			<span class="unskew">'24</span>
+			<span class="text unskew">'24</span>
 		</label>
 	</span>
 </fieldset>
@@ -74,6 +74,12 @@ import { rulesVersion } from "./RulesVersion"
 	.right {
 		margin-right: -1em;
 		padding-right: 2em;
+	}
+
+	input + .skew-tag .text {
+		font-size: var(--font-sz-venus);
+	} input:checked + .skew-tag .text {
+		font-size: var(--font-sz-earth);
 	}
 
 	input:checked + .skew-tag {
