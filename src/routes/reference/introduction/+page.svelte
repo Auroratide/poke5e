@@ -1,6 +1,19 @@
 <script lang="ts">
+	import { page } from "$app/stores"
 	import { Url } from "$lib/url"
+	import { onMount } from "svelte"
 	import ReferencePage from "../ReferencePage.svelte"
+
+	onMount(() => {
+		// I'm not sure why, but Svelte is not properly jumping to this element
+		// So I had to do it... manually?
+		if ($page.url.hash) {
+			window.setTimeout(() => {
+				const target = document.querySelector($page.url.hash)
+				target?.scrollIntoView()
+			}, 10)
+		}
+	})
 </script>
 
 <ReferencePage title="Introduction">
