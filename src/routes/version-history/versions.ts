@@ -12,6 +12,15 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.5.0",
+		description: [
+			"New: Added toggle in References section for toggling between the original \"2018\" rules and the updated \"2024\" rules.",
+			"References: All original rules have been reprinted under the \"2018\" toggle.",
+			"References: Added Introduction.",
+			"References: Added Legendary/Boss Battles.",
+			"Items: Added Capture Styler.",
+		],
+	}, {
 		name: "v1.4.7",
 		description: [
 			"References: Include page for leveling up trainers.",
@@ -221,6 +230,10 @@ export const versionHistory: VersionHistory = {
 		],
 	} ],
 	groups: [ {
+		name: "v1.5",
+		highlight: "Original vs Updated Rules Toggle!",
+		description: "Adds all of the original rules from the Pokémon 5e handbook, under a toggle that switches between the original rules and updated rules.",
+	}, {
 		name: "v1.4",
 		highlight: "General editor enhancements!",
 		description: "Overhauls the trainer editor for better browser and mobile compatibility, and enhances the overall accessibility of the app.",
