@@ -1,0 +1,1 @@
+import{w as t}from"./BEV_lI2h.js";const r="migrationStatus",o=localStorage.getItem(r),s=t(o??"not started");s.subscribe(e=>localStorage.setItem(r,e));const a="seenTrainerRecovery",i=localStorage.getItem(a)==="true",n=t(i??!1);n.subscribe(e=>localStorage.setItem(a,e.toString()));export{s as m,n as s};
