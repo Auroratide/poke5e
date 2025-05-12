@@ -20,7 +20,7 @@
 		font-weight: bold;
 		line-height: 1;
 		margin-block: 0.45em;
-		margin-inline-end: 0.375em;
+		margin-inline: 0.375em;
 	}
 
 	.visually-hidden {

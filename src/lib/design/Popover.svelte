@@ -58,6 +58,8 @@
 	button {
 		all: unset;
 		cursor: help;
+	} button:focus-visible {
+		outline: 0.125em solid var(--skin-focus);
 	}
 
 	.popover .content {

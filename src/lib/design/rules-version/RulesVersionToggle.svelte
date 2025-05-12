@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { Url } from "$lib/url"
 	import HelpIcon from "../icon/HelpIcon.svelte"
-import Popover from "../Popover.svelte"
-import { rulesVersion } from "./RulesVersion"
+	import Popover from "../Popover.svelte"
+	import { rulesVersion } from "./RulesVersion"
 
 	export let id: string = "rules-version-fieldset"
 </script>
@@ -49,6 +49,8 @@ import { rulesVersion } from "./RulesVersion"
 		filter: var(--elev-stratus-filter);
 		display: inline-block;
 		overflow: hidden;
+	} .skew-tags:has(input:focus-visible) {
+		outline: 0.15em solid var(--skin-focus);
 	}
 
 	.skew-tag {
