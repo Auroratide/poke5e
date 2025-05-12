@@ -44,6 +44,7 @@
 			<li>Made Asleep a volatile condition, added Badly Poisoned, and reworked Confused to work more like the Confusion spell.</li>
 			<li>Change trainer hit dice to d6 since they are basically full-casters.</li>
 			<li>Added multiclassing potential.</li>
+			<li>Added Epic Boon Feat at Level 19 in place of ASI to fit the theme of the 2024 D&D handbook.</li>
 			<li>Simplified weather, so its effect is more subtle, and because the 2018 tables assumed only a specific kind of biome.</li>
 		</ul>
 		<h3>Trainer Path Updates</h3>

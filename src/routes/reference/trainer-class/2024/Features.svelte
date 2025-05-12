@@ -22,5 +22,9 @@
 <p>At level 13, you have already spent countless hours in the wild, searching for Pokémon high and low. Once per long rest you may search for Pokémon in the nearby area. You learn a list of wild Pokémon that can be found in the nearby area.</p>
 <p>Additionally, you gain Expertise in Animal Handling.</p>
 
+<h3>Epic Boon</h3>
+<p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Fate is recommended.</p>
+<p>Be creative roleplaying boons that seem "magical" for a Pokémon universe. For example, perhaps Boon of Fate could be interpretted as your trainer giving a last-minute critical command that gets your Pokémon out of danger.</p>
+
 <h3>Master Trainer</h3>
 <p>You have finally achieved the title of Master Trainer. Your Pokémon are at peak fighting performance. When you or your Pokémon fail a saving throw, you may choose to succeed instead. This feature can be used twice per long rest.</p>
