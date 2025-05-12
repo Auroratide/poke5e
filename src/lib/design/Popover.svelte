@@ -7,13 +7,9 @@
 	$: popoverId = `${id}-popover-content`
 
 	let button: HTMLButtonElement
+	let popover: HTMLElement
 
-	const showPopover = () => {
-		const popover = document.querySelector<HTMLElement>(`#${popoverId}`)
-		if (popover == null) return
-
-		popover.showPopover()
-
+	const repositionPopover = () => {
 		computePosition(button, popover, {
 			placement: "bottom",
 			middleware: [offset(2.5)],
@@ -23,6 +19,13 @@
 				left: `${x}px`,
 			})
 		})
+	}
+
+	const showPopover = () => {
+		if (popover == null) return
+
+		popover.showPopover()
+		repositionPopover()
 
 		const container = document.querySelector<HTMLElement>(`#${id}`)
 		container?.addEventListener("mouseleave", () => {
@@ -42,6 +45,14 @@
 		button.addEventListener("mouseleave", () => {
 			window.clearTimeout(timeout)
 		})
+
+		popover.addEventListener("toggle", (e: ToggleEvent) => {
+			if (e.newState === "open") {
+				showPopover()
+			}
+		})
+
+		repositionPopover()
 	})
 </script>
 
@@ -49,7 +60,7 @@
 	<button bind:this={button} popovertarget="{popoverId}" popovertargetaction="show" class="activator">
 		<slot name="activator"></slot>
 	</button>
-	<div id="{popoverId}" popover class="content">
+	<div bind:this={popover} id="{popoverId}" popover class="content">
 		<slot></slot>
 	</div>
 </div>
