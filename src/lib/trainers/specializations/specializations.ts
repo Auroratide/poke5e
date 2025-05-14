@@ -23,6 +23,8 @@ export type SpecializationEffect = {
 	value: string,
 }
 
+export type Specializations = Record<PokeType, number>
+
 export const SpecializationList = derived([rulesVersion], ([rulesVersion]) => 
 	rulesVersion === "2018" ? List2018 : List2024
 )

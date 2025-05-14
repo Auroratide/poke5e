@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { Fieldset, RanksField } from "$lib/design/forms"
-	import type { PokeType } from "$lib/pokemon/types"
-	import { SpecializationList } from "$lib/trainers/specializations"
+	import { SpecializationList, type Specializations } from "$lib/trainers/specializations"
 
-	export let values: Record<PokeType, number>
+	export let values: Specializations
 	export let disabled: boolean = false
 </script>
 

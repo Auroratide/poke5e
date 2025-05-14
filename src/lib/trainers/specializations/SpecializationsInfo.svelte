@@ -1,9 +1,8 @@
 <script lang="ts">
-	import { SpecializationList } from "./specializations"
+	import { SpecializationList, type Specializations } from "./specializations"
 	import { TypeIcon } from "$lib/pokemon/icons"
-	import type { PokeType } from "$lib/pokemon/types"
 
-	export let specializations: Record<PokeType, number>
+	export let specializations: Specializations
 </script>
 
 <ul>
