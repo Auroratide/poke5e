@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.5.1",
+		description: [
+			"References: Fixed typos.",
+		],
+	}, {
 		name: "v1.5.0",
 		description: [
 			"New: Added toggle in References section for toggling between the original \"2018\" rules and the updated \"2024\" rules.",
