@@ -19,7 +19,7 @@
 <ReferencePage title="Introduction">
 	<section>
 		<p>Hello, and welcome to Pokémon 5e! This is an online guide and tool for playing D&D in the Pokémon universe with your friends.</p>
-		<p>These reference pages provide the core rules playing game. The only prerequisite for understanding the content on this site is that you understand the rules of Dungeons and Dragons found in its Player Handbook. Rules that would be found in the D&D Player Handbook will <strong>not</strong> be reprinted on this site, so it is recommended that you own a copy in order to get the most out of Pokémon 5e.</p>
+		<p>These reference pages provide the core rules for playing the game. The only prerequisite for understanding the content on this site is that you understand the rules of Dungeons and Dragons found in its Player Handbook. Rules that would be found in the D&D Player Handbook will <strong>not</strong> be reprinted on this site, so it is recommended that you own a copy in order to get the most out of Pokémon 5e.</p>
 		<p>If you're just getting started, we recommended starting with these pages:</p>
 		<ol>
 			<li><a href="{Url.reference.trainerClass()}">Trainer Class</a></li>
