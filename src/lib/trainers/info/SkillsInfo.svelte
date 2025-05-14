@@ -3,13 +3,11 @@
 	import { proficiencyBonus, proficiencyModifier } from "$lib/dnd/proficiency"
 	import { modifierForScore } from "$lib/dnd/attributes"
 	import type { Attribute, Attributes, Skill } from "$lib/dnd/types"
-	import type { Specializations } from "../types"
 
 	export let level: number
 	export let attributes: Attributes
 	export let savingThrows: Attribute[]
 	export let proficiencies: Skill[]
-	export let specializations: Specializations | undefined = undefined
 
 	$: pb = proficiencyBonus(level)
 </script>
@@ -28,13 +26,3 @@
 		{/each}
 	</div>
 </FlatDl>
-{#if specializations != null}
-	<FlatDl>
-		<dt>Specializations</dt>
-		<div class="cap">
-			{#each Object.entries(specializations) as specialization}
-				<dd>{specialization[0]} &times;{specialization[1]}</dd>
-			{/each}
-		</div>
-	</FlatDl>
-{/if}
