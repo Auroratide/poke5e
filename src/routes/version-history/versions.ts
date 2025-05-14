@@ -12,6 +12,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.5.2",
+		description: [
+			"Moves: Added Ice Spinner for Cetitan.",
+			"References: Added Terrain Effects",
+		],
+	}, {
 		name: "v1.5.1",
 		description: [
 			"References: Fixed typos.",
