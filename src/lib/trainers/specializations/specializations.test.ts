@@ -1,94 +1,74 @@
-import { test, expect } from "vitest"
-import { mapToTypeRanks, SpecializationList, typeRanksToMap, type Specialization } from "./specializations"
+import { describe, test, expect } from "vitest"
+import { specializationDescription } from "./specializations"
 
-test("typeRanksToMap", () => {
-	const ranks = {
-		normal: 0,
-		fighting: 1,
-		flying: 2,
-		poison: 3,
-		ground: 4,
-		rock: 3,
-		bug: 2,
-		ghost: 1,
-		steel: 0,
-		fire: 1,
-		water: 2,
-		grass: 3,
-		electric: 4,
-		psychic: 3,
-		ice: 2,
-		dragon: 1,
-		dark: 0,
-		fairy: 1,
-	}
-	
-	const result = typeRanksToMap(ranks)
+describe("specializationDescription", () => {
+	test("single ASI", () => {
+		const result = specializationDescription({
+			id: "specialization",
+			name: "Specialization",
+			type: "normal",
+			effect: [ {
+				type: "asi",
+				value: ["str"],
+			} ]
+		})
 
-	expect(result).toEqual(new Map<Specialization, number>([
-		[SpecializationList.PokeFan, 0],
-		[SpecializationList.BlackBelt, 1],
-		[SpecializationList.BirdKeeper, 2],
-		[SpecializationList.Punk, 3],
-		[SpecializationList.Camper, 4],
-		[SpecializationList.Hiker, 3],
-		[SpecializationList.BugManiac, 2],
-		[SpecializationList.Mystic, 1],
-		[SpecializationList.Worker, 0],
-		[SpecializationList.Kindler, 1],
-		[SpecializationList.Swimmer, 2],
-		[SpecializationList.Gardener, 3],
-		[SpecializationList.Engineer, 4],
-		[SpecializationList.Psychic, 3],
-		[SpecializationList.Skier, 2],
-		[SpecializationList.DragonTamer, 1],
-		[SpecializationList.Delinquent, 0],
-		[SpecializationList.Actor, 1],
-	]))
-})
+		expect(result).toEqual("Increase your STR by 1, to a maximum of 20. Add a +1 bonus to all skill checks made by any of your Normal-type Pokémon.")
+	})
 
-test("mapToTypeRanks", () => {
-	const specializations = new Map<Specialization, number>([
-		[SpecializationList.PokeFan, 0],
-		[SpecializationList.BlackBelt, 1],
-		[SpecializationList.BirdKeeper, 2],
-		[SpecializationList.Punk, 3],
-		[SpecializationList.Camper, 4],
-		[SpecializationList.Hiker, 3],
-		[SpecializationList.BugManiac, 2],
-		[SpecializationList.Mystic, 1],
-		[SpecializationList.Worker, 0],
-		[SpecializationList.Kindler, 1],
-		[SpecializationList.Swimmer, 2],
-		[SpecializationList.Gardener, 3],
-		[SpecializationList.Engineer, 4],
-		[SpecializationList.Psychic, 3],
-		[SpecializationList.Skier, 2],
-		[SpecializationList.DragonTamer, 1],
-		[SpecializationList.Delinquent, 0],
-		[SpecializationList.Actor, 1],
-	])
-	
-	const result = mapToTypeRanks(specializations)
+	test("multiple ASI", () => {
+		const result = specializationDescription({
+			id: "specialization",
+			name: "Specialization",
+			type: "normal",
+			effect: [ {
+				type: "asi",
+				value: ["str", "dex", "con"],
+			} ]
+		})
 
-	expect(result).toEqual({
-		normal: 0,
-		fighting: 1,
-		flying: 2,
-		poison: 3,
-		ground: 4,
-		rock: 3,
-		bug: 2,
-		ghost: 1,
-		steel: 0,
-		fire: 1,
-		water: 2,
-		grass: 3,
-		electric: 4,
-		psychic: 3,
-		ice: 2,
-		dragon: 1,
-		dark: 0,
-		fairy: 1,
+		expect(result).toEqual("Increase your STR, DEX, or CON by 1, to a maximum of 20. Add a +1 bonus to all skill checks made by any of your Normal-type Pokémon.")
+	})
+
+	test("single proficiency", () => {
+		const result = specializationDescription({
+			id: "specialization",
+			name: "Specialization",
+			type: "normal",
+			effect: [ {
+				type: "proficiency",
+				value: ["athletics"],
+			} ]
+		})
+
+		expect(result).toEqual("You gain proficiency in Athletics, or if you already had proficiency, you gain expertise. Add a +1 bonus to all skill checks made by any of your Normal-type Pokémon.")
+	})
+
+	test("multiple proficiencies", () => {
+		const result = specializationDescription({
+			id: "specialization",
+			name: "Specialization",
+			type: "normal",
+			effect: [ {
+				type: "proficiency",
+				value: ["athletics", "acrobatics", "stealth"],
+			} ]
+		})
+
+		expect(result).toEqual("You gain proficiency in Athletics, Acrobatics, or Stealth, or if you already had proficiency, you gain expertise. Add a +1 bonus to all skill checks made by any of your Normal-type Pokémon.")
+	})
+
+	test("other", () => {
+		const result = specializationDescription({
+			id: "specialization",
+			name: "Specialization",
+			type: "normal",
+			effect: [ {
+				type: "other",
+				value: "You become buff.",
+			} ]
+		})
+
+		expect(result).toEqual("You become buff. Add a +1 bonus to all skill checks made by any of your Normal-type Pokémon.")
 	})
 })
