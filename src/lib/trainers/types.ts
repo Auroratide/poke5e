@@ -101,7 +101,7 @@ export type TrainerInfo = {
 	money: number,
 	inventory: InventoryItem[],
 	avatar?: StorageResource,
-	specializations: Map<Specialization, number>,
+	specializations: Record<PokeType, number>,
 }
 export type Trainer = TrainerInfo & {
 	id: TrainerId,

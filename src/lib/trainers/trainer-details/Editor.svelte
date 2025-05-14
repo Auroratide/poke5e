@@ -22,7 +22,7 @@
 	import SavingThrowsFieldset from "$lib/dnd/SavingThrowsFieldset.svelte"
 	import InventoryFieldset from "./forms/InventoryFieldset.svelte"
 	import Button from "$lib/design/Button.svelte"
-	import { mapToTypeRanks, SpecializationsFieldset, typeRanksToMap } from "../specializations"
+	import { SpecializationsFieldset } from "../specializations"
 	
 	const dispatch = createEventDispatcher()
 
@@ -42,7 +42,7 @@
 	let biography = trainer.biography
 	let originalAvatar = trainer.avatar
 	let money = trainer.money
-	let specializations = mapToTypeRanks(trainer.specializations)
+	let specializations = trainer.specializations
 	let avatarToUpload: ImageInputValue | undefined = undefined
 	let isValid = true
 
@@ -73,7 +73,7 @@
 				money,
 				inventory,
 				avatar: originalAvatar,
-				specializations: typeRanksToMap(specializations),
+				specializations,
 			},
 			updateAvatar: avatarToUpload,
 		})

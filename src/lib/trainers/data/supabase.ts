@@ -18,7 +18,6 @@ import { TrainerDataProviderError, type StorageResource, type TrainerData, type 
 import type { SupabaseClient } from "@supabase/supabase-js"
 import { isPokeType, type TeraPokeType } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
-import { type Specialization, SpecializationList, typeRanksToMap } from "../specializations"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -134,7 +133,26 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			},
 			money: 0,
 			inventory: [],
-			specializations: new Map<Specialization, number>(),
+			specializations: {
+				ghost: 0,
+				fairy: 0,
+				normal: 0,
+				fighting: 0,
+				flying: 0,
+				poison: 0,
+				fire: 0,
+				grass: 0,
+				water: 0,
+				electric: 0,
+				psychic: 0,
+				dark: 0,
+				bug: 0,
+				ice: 0,
+				dragon: 0,
+				steel: 0,
+				rock: 0,
+				ground: 0,
+			},
 		}
 
 		const { data, error } = await this.supabase.rpc("new_trainer", {
@@ -182,24 +200,24 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_home_region: toCreate.biography.homeRegion,
 			_background: toCreate.biography.background,
 			_money: toCreate.money,
-			_special_normal: toCreate.specializations.get(SpecializationList.PokeFan) ?? 0,
-			_special_fighting: toCreate.specializations.get(SpecializationList.BlackBelt) ?? 0,
-			_special_flying: toCreate.specializations.get(SpecializationList.BirdKeeper) ?? 0,
-			_special_poison: toCreate.specializations.get(SpecializationList.Punk) ?? 0,
-			_special_ground: toCreate.specializations.get(SpecializationList.Camper) ?? 0,
-			_special_rock: toCreate.specializations.get(SpecializationList.Hiker) ?? 0,
-			_special_bug: toCreate.specializations.get(SpecializationList.BugManiac) ?? 0,
-			_special_ghost: toCreate.specializations.get(SpecializationList.Mystic) ?? 0,
-			_special_steel: toCreate.specializations.get(SpecializationList.Worker) ?? 0,
-			_special_fire: toCreate.specializations.get(SpecializationList.Kindler) ?? 0,
-			_special_water: toCreate.specializations.get(SpecializationList.Swimmer) ?? 0,
-			_special_grass: toCreate.specializations.get(SpecializationList.Gardener) ?? 0,
-			_special_electric: toCreate.specializations.get(SpecializationList.Engineer) ?? 0,
-			_special_psychic: toCreate.specializations.get(SpecializationList.Psychic) ?? 0,
-			_special_ice: toCreate.specializations.get(SpecializationList.Skier) ?? 0,
-			_special_dragon: toCreate.specializations.get(SpecializationList.DragonTamer) ?? 0,
-			_special_dark: toCreate.specializations.get(SpecializationList.Delinquent) ?? 0,
-			_special_fairy: toCreate.specializations.get(SpecializationList.Actor) ?? 0,
+			_special_normal: toCreate.specializations.normal ?? 0,
+			_special_fighting: toCreate.specializations.fighting ?? 0,
+			_special_flying: toCreate.specializations.flying ?? 0,
+			_special_poison: toCreate.specializations.poison ?? 0,
+			_special_ground: toCreate.specializations.ground ?? 0,
+			_special_rock: toCreate.specializations.rock ?? 0,
+			_special_bug: toCreate.specializations.bug ?? 0,
+			_special_ghost: toCreate.specializations.ghost ?? 0,
+			_special_steel: toCreate.specializations.steel ?? 0,
+			_special_fire: toCreate.specializations.fire ?? 0,
+			_special_water: toCreate.specializations.water ?? 0,
+			_special_grass: toCreate.specializations.grass ?? 0,
+			_special_electric: toCreate.specializations.electric ?? 0,
+			_special_psychic: toCreate.specializations.psychic ?? 0,
+			_special_ice: toCreate.specializations.ice ?? 0,
+			_special_dragon: toCreate.specializations.dragon ?? 0,
+			_special_dark: toCreate.specializations.dark ?? 0,
+			_special_fairy: toCreate.specializations.fairy ?? 0,
 		}).single<{
 			ret_id: string,
 			ret_read_key: string,
@@ -271,24 +289,24 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_home_region: info.biography.homeRegion,
 			_background: info.biography.background,
 			_money: info.money,
-			_special_normal: info.specializations.get(SpecializationList.PokeFan) ?? 0,
-			_special_fighting: info.specializations.get(SpecializationList.BlackBelt) ?? 0,
-			_special_flying: info.specializations.get(SpecializationList.BirdKeeper) ?? 0,
-			_special_poison: info.specializations.get(SpecializationList.Punk) ?? 0,
-			_special_ground: info.specializations.get(SpecializationList.Camper) ?? 0,
-			_special_rock: info.specializations.get(SpecializationList.Hiker) ?? 0,
-			_special_bug: info.specializations.get(SpecializationList.BugManiac) ?? 0,
-			_special_ghost: info.specializations.get(SpecializationList.Mystic) ?? 0,
-			_special_steel: info.specializations.get(SpecializationList.Worker) ?? 0,
-			_special_fire: info.specializations.get(SpecializationList.Kindler) ?? 0,
-			_special_water: info.specializations.get(SpecializationList.Swimmer) ?? 0,
-			_special_grass: info.specializations.get(SpecializationList.Gardener) ?? 0,
-			_special_electric: info.specializations.get(SpecializationList.Engineer) ?? 0,
-			_special_psychic: info.specializations.get(SpecializationList.Psychic) ?? 0,
-			_special_ice: info.specializations.get(SpecializationList.Skier) ?? 0,
-			_special_dragon: info.specializations.get(SpecializationList.DragonTamer) ?? 0,
-			_special_dark: info.specializations.get(SpecializationList.Delinquent) ?? 0,
-			_special_fairy: info.specializations.get(SpecializationList.Actor) ?? 0,
+			_special_normal: info.specializations.normal ?? 0,
+			_special_fighting: info.specializations.fighting ?? 0,
+			_special_flying: info.specializations.flying ?? 0,
+			_special_poison: info.specializations.poison ?? 0,
+			_special_ground: info.specializations.ground ?? 0,
+			_special_rock: info.specializations.rock ?? 0,
+			_special_bug: info.specializations.bug ?? 0,
+			_special_ghost: info.specializations.ghost ?? 0,
+			_special_steel: info.specializations.steel ?? 0,
+			_special_fire: info.specializations.fire ?? 0,
+			_special_water: info.specializations.water ?? 0,
+			_special_grass: info.specializations.grass ?? 0,
+			_special_electric: info.specializations.electric ?? 0,
+			_special_psychic: info.specializations.psychic ?? 0,
+			_special_ice: info.specializations.ice ?? 0,
+			_special_dragon: info.specializations.dragon ?? 0,
+			_special_dark: info.specializations.dark ?? 0,
+			_special_fairy: info.specializations.fairy ?? 0,
 		}).single<number>()
 
 		if (error) {
@@ -1002,7 +1020,7 @@ const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name
 	avatar: row.avatar_filename != null ?
 		getStorageResource(TRAINER_AVATARS_BUCKET, row.avatar_filename) :
 		null,
-	specializations: typeRanksToMap({
+	specializations: {
 		normal: row.special_normal,
 		fighting: row.special_fighting,
 		flying: row.special_flying,
@@ -1021,7 +1039,7 @@ const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name
 		dragon: row.special_dragon,
 		dark: row.special_dark,
 		fairy: row.special_fairy,
-	}),
+	},
 })
 
 type PokemonRow = {

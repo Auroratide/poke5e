@@ -1,26 +1,28 @@
 <script lang="ts">
-	import type { Specialization } from "./specializations"
+	import { SpecializationList } from "./specializations"
 	import { TypeIcon } from "$lib/pokemon/icons"
+	import type { PokeType } from "$lib/pokemon/types"
 
-	export let specializations: Map<Specialization, number>
-
-	$: nonzeroSpecializations = specializations.entries().filter((it) => it[1] > 0)
+	export let specializations: Record<PokeType, number>
 </script>
 
 <ul>
-	{#each nonzeroSpecializations as specialization}
-		<li>
-			<span class="tag" style:--skin-local-bg="var(--skin-{specialization[0].type}-bg)">
-				<span class="header">
-					<span class="type-icon"><TypeIcon type={specialization[0].type} /></span>
-					<span class="type-name">{specialization[0].type}</span>
+	{#each Object.values($SpecializationList) as specialization}
+		{@const amount = specializations[specialization.type]}
+		{#if amount > 0}
+			<li>
+				<span class="tag" style:--skin-local-bg="var(--skin-{specialization.type}-bg)">
+					<span class="header">
+						<span class="type-icon"><TypeIcon type={specialization.type} /></span>
+						<span class="type-name">{specialization.type}</span>
+					</span>
+					<span class="main">
+						<span class="specialization-name">{specialization.name}</span>
+						<span class="specialization-count"><strong>&times;{amount}</strong></span>
+					</span>
 				</span>
-				<span class="main">
-					<span class="specialization-name">{specialization[0].name}</span>
-					<span class="specialization-count"><strong>&times;{specialization[1]}</strong></span>
-				</span>
-			</span>
-		</li>
+			</li>
+		{/if}
 	{/each}
 </ul>
 
