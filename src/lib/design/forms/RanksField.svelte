@@ -12,7 +12,7 @@
 	$: kebabName = name ?? kebab(label)
 	$: id = `${kebabName}-input`
 	$: knobTranslation = 100 * value / (max - min)
-	$: notches = Array(max - min + 1)
+	$: notches = [...Array(max - min + 1)].map((_, i) => i)
 </script>
 
 <div class="ranks-field">
@@ -23,7 +23,9 @@
 			<div class="track"></div>
 			<div class="notches">
 				{#each notches as notch}
-					<div class="notch"><span class="marker"></span></div>
+					<div class="notch"><span class="marker">
+						<span style:display="none">{notch}</span> <!-- eslint complains otherwise -->
+					</span></div>
 				{/each}
 			</div>
 			<span class="knob-container" style:transform="translateX({knobTranslation}%)">
