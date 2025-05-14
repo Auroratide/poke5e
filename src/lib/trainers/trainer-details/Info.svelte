@@ -10,7 +10,7 @@
 	import Art from "$lib/design/Art.svelte"
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 	import InventoryInfo, { type UpdateDetail as InventoryUpdateDetail } from "./InventoryInfo.svelte"
-	import SpecializationsInfo from "../specializations/SpecializationsInfo.svelte";
+	import SpecializationsInfo from "../specializations/SpecializationsInfo.svelte"
 
 	const dispatch = createEventDispatcher()
 

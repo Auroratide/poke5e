@@ -381,7 +381,7 @@ function findByType(type: PokeType): Specialization {
 
 export function typeRanksToMap(types: Record<PokeType, number>): Map<Specialization, number> {
 	return new Map<Specialization, number>(Object.entries(types).map(([type, rank]) =>
-		[findByType(type as PokeType), rank]
+		[findByType(type as PokeType), rank],
 	))
 }
 
