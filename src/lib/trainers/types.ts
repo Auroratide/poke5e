@@ -5,7 +5,7 @@ import type { AbilityId, PokeType, TeraPokeType } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import type { StorageResource } from "./data"
 import type { Nature } from "./nature"
-import type { Specialization } from "./specializations"
+import type { Specialization, Specializations } from "./specializations"
 
 export type Resource = {
 	current: number,
@@ -101,7 +101,7 @@ export type TrainerInfo = {
 	money: number,
 	inventory: InventoryItem[],
 	avatar?: StorageResource,
-	specializations: Record<PokeType, number>,
+	specializations: Specializations,
 }
 export type Trainer = TrainerInfo & {
 	id: TrainerId,
@@ -110,5 +110,3 @@ export type Trainer = TrainerInfo & {
 export type WithWriteKey = {
 	writeKey: ReadWriteKey,
 }
-
-export type Specializations = { [type in PokeType]?: number }
