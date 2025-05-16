@@ -1,28 +1,26 @@
 <script lang="ts">
-	import FlatDl from "$lib/design/FlatDl.svelte"
-	import { proficiencyBonus, proficiencyModifier } from "$lib/dnd/proficiency"
-	import { modifierForScore } from "$lib/dnd/attributes"
-	import type { Attribute, Attributes, Skill } from "$lib/dnd/types"
+	import { attributeList } from "$lib/dnd/attributes";
+	import { skillList } from "$lib/dnd/proficiency";
+	import ProficiencyBlock from "$lib/dnd/ProficiencyBlock.svelte";
+	import type { Attribute, Attributes, Skill } from "$lib/dnd/types";
+	import { capitalizeAll } from "$lib/string";
 
 	export let level: number
 	export let attributes: Attributes
 	export let savingThrows: Attribute[]
 	export let proficiencies: Skill[]
-
-	$: pb = proficiencyBonus(level)
 </script>
 
-<FlatDl columns={2}>
-	<dt>Saves</dt>
-	<div class="upper">
-		{#each savingThrows as savingThrow}
-			<dd>{savingThrow} +{modifierForScore(attributes[savingThrow]) + pb}</dd>
-		{/each}
-	</div>
-	<dt>Proficiencies</dt>
-	<div class="cap">
-		{#each proficiencies as proficiency}
-			<dd>{proficiency} +{proficiencyModifier(proficiency, attributes, pb)}</dd>
-		{/each}
-	</div>
-</FlatDl>
+<h3>Saves</h3>
+<ProficiencyBlock {level} {attributes} values={attributeList.map((attr) => ({
+	name: attr.abbr.toLocaleUpperCase(),
+	attr: attr.abbr,
+	proficient: savingThrows.includes(attr.abbr),
+}))} columns={3} />
+
+<h3>Skills</h3>
+<ProficiencyBlock {level} {attributes} values={skillList.map((skill) => ({
+	name: capitalizeAll(skill.name),
+	attr: skill.attribute,
+	proficient: proficiencies.includes(skill.name),
+}))} columns={2} />

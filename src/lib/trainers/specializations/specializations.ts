@@ -4,6 +4,7 @@ import type { PokeType } from "$lib/pokemon/types"
 import { SpecializationList as List2018 } from "./2018/SpecializationList"
 import { SpecializationList as List2024 } from "./2024/SpecializationList"
 import { rulesVersion } from "$lib/design/rules-version"
+import { capitalize } from "$lib/string"
 
 export type Specialization = {
 	id: string,
@@ -28,10 +29,6 @@ export type Specializations = Record<PokeType, number>
 export const SpecializationList = derived([rulesVersion], ([rulesVersion]) => 
 	rulesVersion === "2018" ? List2018 : List2024
 )
-
-function capitalize(word: string): string {
-	return word.charAt(0).toLocaleUpperCase() + word.slice(1)
-}
 
 export function specializationDescription(specialization: Specialization): string {
 	const description = []
