@@ -1,3 +1,4 @@
+import { capitalizeAll } from "$lib/string"
 import { ItemTypes, type Item, type ItemType } from "./types"
 
 export type ItemGroup = {
@@ -6,8 +7,6 @@ export type ItemGroup = {
 }
 
 const createGroup = (name: string): ItemGroup => ({ name, items: [] })
-const capitalizeOne = (name: string): string => name.charAt(0).toLocaleUpperCase() + name.slice(1)
-const capitalizeAll = (name: string): string => name.split(" ").map(capitalizeOne).join(" ")
 
 export function groupByType(items: Item[], typeOrder: ItemType[]): ItemGroup[] {
 	const fullOrder = typeOrder.concat(ItemTypes.filter((type) => !typeOrder.includes(type)))
