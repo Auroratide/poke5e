@@ -5,48 +5,34 @@
 </script>
 
 <script lang="ts">
-	import type { LearnedMove } from "../types"
-	import type { Move } from "$lib/moves/types"
 	import { base } from "$app/paths"
-	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
-	import type { Attributes } from "$lib/dnd/types"
-	import { modifierForScore } from "$lib/dnd/attributes"
-	import { createEventDispatcher } from "svelte"
-	import type { PokeType } from "$lib/pokemon/types"
-	import MoveDescription from "$lib/moves/MoveDescription.svelte"
 	import { NumericResourceField } from "$lib/design/forms"
 	import type { ChangeDetail } from "$lib/design/forms/NumericResourceField.svelte"
+	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
+	import type { Attributes } from "$lib/dnd/types"
+	import MoveDescription from "$lib/moves/MoveDescription.svelte"
+	import { deriveMovePowers } from "$lib/moves/MovePowers"
+	import type { Move } from "$lib/moves/types"
+	import type { PokeType } from "$lib/pokemon/types"
+	import { createEventDispatcher } from "svelte"
+	import type { LearnedMove } from "../types"
 
 	const dispatch = createEventDispatcher()
 
-	const maxBy = <T>(val: (o: T) => number) => (max: T, cur: T) => val(cur) > val(max) ? cur : max
-
 	export let move: LearnedMove
 	export let moveData: Move
-	export let proficiencyBonus: number
+	export let level: number
 	export let pokemonType: PokeType[]
 	export let attributes: Attributes
 	export let editable: boolean
 
 	$: currentPp = move.pp.current
 
-	let attributeMod = 0
-	$: {
-		if (moveData.power !== "none" && moveData.power !== "varies") {
-			const power = moveData.power === "any"
-				? ["str", "dex", "con", "int", "wis", "cha"]
-				: moveData.power
-
-			const bestPower = power.reduce(maxBy((power) => attributes[power]))
-			
-			attributeMod = modifierForScore(attributes[bestPower])
-		}
-	}
-	$: hasStab = pokemonType.includes(moveData.type)
-
-	$: toHit = proficiencyBonus + attributeMod
-	$: dc = 8 + proficiencyBonus + attributeMod
-	$: dmg = attributeMod + (hasStab ? attributeMod : 0)
+	$: movePowers = deriveMovePowers(moveData, {
+		attributes: attributes,
+		level: level,
+		type: pokemonType,
+	})
 
 	const onChangePp = (e: CustomEvent<ChangeDetail>) => {
 		dispatch("update", {
@@ -74,9 +60,9 @@
 		<div class="hrow tiny-font">
 			<span class="capitalize flex-span">{moveData.type}</span>
 			<span>
-					{#if moveData.power !== "none" && moveData.power !== "varies"}
-						To Hit: +{toHit}, DC: {dc}, Dmg: +{dmg}
-					{/if}
+				{#if movePowers != null}
+					To Hit: +{movePowers.toHit}, DC: {movePowers.dc}, Dmg: +{movePowers.dmg}
+				{/if}
 			</span>
 		</div>
 	</div>

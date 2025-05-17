@@ -1,17 +1,15 @@
 <script lang="ts">
-	import type { LearnedMove, TrainerPokemon } from "../types"
-	import MoveDetails from "./MoveDetails.svelte"
-	import { moves } from "$lib/moves/store"
 	import Loader from "$lib/design/Loader.svelte"
-	import { proficiencyBonus } from "$lib/dnd/proficiency"
+	import { moves } from "$lib/moves/store"
 	import { createEventDispatcher } from "svelte"
+	import type { LearnedMove, TrainerPokemon } from "../types"
 	import type { UpdatePpDetail } from "./MoveDetails.svelte"
+	import MoveDetails from "./MoveDetails.svelte"
 
 	const dispatch = createEventDispatcher()
 
 	export let pokemon: TrainerPokemon
 	export let editable: boolean = false
-	$: pb = proficiencyBonus(pokemon.level)
 
 	const onUpdate = (move: LearnedMove) => (e: CustomEvent<UpdatePpDetail>) => {
 		dispatch("update", {
@@ -31,7 +29,7 @@
 			{#each pokemon.moves as move}
 				{@const moveData = $moves.find((it) => it.id === move.moveId)}
 				<li>
-					<MoveDetails {move} {moveData} {editable} proficiencyBonus={pb} attributes={pokemon.attributes} pokemonType={pokemon.type} on:update={onUpdate(move)} />
+					<MoveDetails {move} {moveData} {editable} level={pokemon.level} attributes={pokemon.attributes} pokemonType={pokemon.type} on:update={onUpdate(move)} />
 				</li>
 			{/each}
 		</ul>
