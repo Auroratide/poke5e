@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.5.3",
+		description: [
+			"Bug Fix: Move to-hit, DC, and damage now calculated appropriately when adding a new Pokémon to the team",
+		],
+	}, {
 		name: "v1.5.2",
 		description: [
 			"Moves: Added Ice Spinner for Cetitan.",
