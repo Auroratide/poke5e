@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { attributeList } from "$lib/dnd/attributes";
-	import { skillList } from "$lib/dnd/proficiency";
-	import ProficiencyBlock from "$lib/dnd/ProficiencyBlock.svelte";
-	import type { Attribute, Attributes, Skill } from "$lib/dnd/types";
-	import { capitalizeAll } from "$lib/string";
+	import { attributeList } from "$lib/dnd/attributes"
+	import { skillList } from "$lib/dnd/proficiency"
+	import ProficiencyBlock from "$lib/dnd/ProficiencyBlock.svelte"
+	import type { Attribute, Attributes, Skill } from "$lib/dnd/types"
+	import { capitalizeAll } from "$lib/string"
 
 	export let level: number
 	export let attributes: Attributes
