@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { modifierForScore } from "./attributes";
-	import { proficiencyBonus } from "./proficiency";
-	import type { Attribute, Attributes } from "./types";
+	import { modifierForScore } from "./attributes"
+	import { proficiencyBonus } from "./proficiency"
+	import type { Attribute, Attributes } from "./types"
 
 	export let values: {
 		name: string,
