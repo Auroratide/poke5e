@@ -16,6 +16,7 @@
 	import type { PokeType } from "$lib/pokemon/types"
 	import { createEventDispatcher } from "svelte"
 	import type { LearnedMove } from "../types"
+	import PlusMinus from "$lib/design/PlusMinus.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -61,7 +62,7 @@
 			<span class="capitalize flex-span">{moveData.type}</span>
 			<span>
 				{#if movePowers != null}
-					To Hit: +{movePowers.toHit}, DC: {movePowers.dc}, Dmg: +{movePowers.dmg}
+					To Hit: <PlusMinus value={movePowers.toHit} />, DC: {movePowers.dc}, Dmg: <PlusMinus value={movePowers.dmg} />
 				{/if}
 			</span>
 		</div>
