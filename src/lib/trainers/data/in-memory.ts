@@ -13,7 +13,6 @@ import {
 } from "../types"
 import { Natures } from "../nature"
 import { Gender } from "../types"
-import { type Specialization, SpecializationList } from "../specializations"
 
 let POKEMON_ID = 1
 const nextPokemonId = () => (++POKEMON_ID).toString()

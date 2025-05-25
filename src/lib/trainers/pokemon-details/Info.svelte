@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { LearnedMove, TrainerPokemon } from "../types"
+	import type { LearnedMove, Trainer, TrainerPokemon } from "../types"
 	import type { Pokemon } from "$lib/creatures/types"
 	import { createEventDispatcher } from "svelte"
 	import BasicInfo from "./BasicInfo.svelte"
@@ -19,6 +19,7 @@
 
 	const dispatch = createEventDispatcher()
 
+	export let trainer: Trainer
 	export let pokemon: TrainerPokemon
 	export let species: Pokemon
 	export let editable: boolean
@@ -65,7 +66,14 @@
 <section class="stats">
 	<VisuallyHidden><h2>Stats</h2></VisuallyHidden>
 	<AttributeBlock attributes={pokemon.attributes} />
-	<SkillsInfo level={pokemon.level} attributes={pokemon.attributes} savingThrows={pokemon.savingThrows} proficiencies={pokemon.proficiencies} />
+	<SkillsInfo
+		level={pokemon.level}
+		attributes={pokemon.attributes}
+		savingThrows={pokemon.savingThrows}
+		proficiencies={pokemon.proficiencies}
+		type={pokemon.type}
+		specializations={trainer.specializations}
+	/>
 	<FlatDl>
 		<TypeEffectiveness type={pokemon.type} />
 	</FlatDl>

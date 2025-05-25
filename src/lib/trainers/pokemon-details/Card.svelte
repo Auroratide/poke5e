@@ -36,7 +36,7 @@
 	{#if species}
 		<Card title={pokemon.nickname}>
 			<TypeTag slot="header-extra" type={pokemon.type} />
-			<Info {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} />
+			<Info trainer={$trainer.info} {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} />
 			{#if canEdit}
 				<ActionArea>
 					<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="ghost">Remove</Button>
