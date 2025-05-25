@@ -20,9 +20,16 @@
 	{#each values as value, index}
 		{@const modifier = modifierForScore(attributes[value.attr]) + (value.proficient ? pb : 0) + (value.extraModifiers?.[value.name] ?? 0)}
 		{@const even = index % (2 * columns) >= columns}
-		<dt class:proficient={value.proficient} class:even>{value.name}</dt>
+		<dt class:even>
+			<span class="icon">
+				{#if value.proficient}
+					<abbr title="Proficient">⦿</abbr>
+				{/if}
+			</span>
+			<span>{value.name}</span>
+		</dt>
 		<dd class:even>{modifier >= 0 ? "+" : ""}{modifier}</dd>
-		<dd class:even aria-hidden="true"></dd>	
+		<dd class:even aria-hidden="true"></dd>
 	{/each}
 </dl>
 
@@ -36,17 +43,14 @@
 	}
 
 	dt {
-		padding: 0.25em 0.25em 0.25em 1.75em;
+		padding: 0.25em;
 	}
 
 	dd {
 		padding: 0.25em 0.375em;
 	}
 
-	dt.proficient {
-		padding-inline-start: 0.25em;
-	} dt.proficient::before {
-		content: "⦿";
+	.icon {
 		display: inline-block;
 		inline-size: 1.5em;
 		text-align: center;
@@ -62,5 +66,10 @@
 		background: var(--skin-bg-dark);
 	} dt.even, dd.even {
 		background: var(--skin-bg);
+	}
+
+	abbr {
+		text-decoration: none;
+		cursor: help;
 	}
 </style>
