@@ -5,7 +5,7 @@ import type { AbilityId, PokeType, TeraPokeType } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import type { StorageResource } from "./data"
 import type { Nature } from "./nature"
-import type { Specialization, Specializations } from "./specializations"
+import type { Specializations } from "./specializations"
 
 export type Resource = {
 	current: number,

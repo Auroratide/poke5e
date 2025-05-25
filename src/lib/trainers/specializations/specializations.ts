@@ -51,3 +51,30 @@ export function specializationDescription(specialization: Specialization): strin
 
 	return description.join(" ")
 }
+
+export function skillModifiersFromSpecializations(specializations: Specializations, types: PokeType[]): Record<Skill, number> {
+	const modifier = Object.entries(specializations).reduce((sum, [type, value]) => {
+		return sum + (types.includes(type as PokeType) ? value : 0)
+	}, 0)
+
+	return {
+		"athletics": modifier,
+		"acrobatics": modifier,
+		"sleight of hand": modifier,
+		"stealth": modifier,
+		"arcana": modifier,
+		"history": modifier,
+		"investigation": modifier,
+		"nature": modifier,
+		"religion": modifier,
+		"animal handling": modifier,
+		"insight": modifier,
+		"medicine": modifier,
+		"perception": modifier,
+		"survival": modifier,
+		"deception": modifier,
+		"intimidation": modifier,
+		"performance": modifier,
+		"persuasion": modifier,
+	}
+}

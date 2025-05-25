@@ -7,6 +7,7 @@
 		name: string,
 		attr: Attribute,
 		proficient: boolean,
+		extraModifiers?: Record<string, number>,
 	}[]
 	export let attributes: Attributes
 	export let level: number
@@ -17,7 +18,7 @@
 
 <dl style:--columns={columns}>
 	{#each values as value, index}
-		{@const modifier = modifierForScore(attributes[value.attr]) + (value.proficient ? pb : 0)}
+		{@const modifier = modifierForScore(attributes[value.attr]) + (value.proficient ? pb : 0) + (value.extraModifiers?.[value.name] ?? 0)}
 		{@const even = index % (2 * columns) >= columns}
 		<dt class:proficient={value.proficient} class:even>{value.name}</dt>
 		<dd class:even>{modifier >= 0 ? "+" : ""}{modifier}</dd>
@@ -62,18 +63,4 @@
 	} dt.even, dd.even {
 		background: var(--skin-bg);
 	}
-
-
-
-	/* dt:nth-child(6n + 1),
-	dd:nth-child(6n + 2),
-	dd:nth-child(6n + 3) {
-		background: var(--skin-bg);
-	}
-
-	dt:nth-child(6n + 4),
-	dd:nth-child(6n + 5),
-	dd:nth-child(6n) {
-		background: var(--skin-bg);
-	} */
 </style>

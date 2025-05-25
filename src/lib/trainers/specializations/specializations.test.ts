@@ -1,5 +1,8 @@
 import { describe, test, expect } from "vitest"
-import { specializationDescription } from "./specializations"
+import { specializationDescription, skillModifiersFromSpecializations } from "./specializations"
+import { stubSpecializations } from "./test/stubs"
+import type { Skill } from "$lib/dnd/types"
+import type { PokeType } from "$lib/pokemon/types"
 
 describe("specializationDescription", () => {
 	test("single ASI", () => {
@@ -70,5 +73,69 @@ describe("specializationDescription", () => {
 		})
 
 		expect(result).toEqual("You become buff. Add a +1 bonus to all skill checks made by any of your Normal-type Pokémon.")
+	})
+})
+
+describe("skillModifiersFromSpecializations", () => {
+	const eachModifier = (modifiers: Record<Skill, number>): number => {
+		const values = Object.values(modifiers)
+
+		expect(Math.max(...values)).toEqual(Math.min(...values))
+
+		return Math.max(...values)
+	}
+
+	test("no specializations", () => {
+		const type: PokeType[] = ["normal"]
+		const specializations = stubSpecializations({})
+
+		const result = skillModifiersFromSpecializations(specializations, type)
+
+		expect(eachModifier(result)).toEqual(0)
+	})
+
+	test("matching specialization", () => {
+		const type: PokeType[] = ["normal"]
+		const specializations = stubSpecializations({
+			normal: 1,
+		})
+
+		const result = skillModifiersFromSpecializations(specializations, type)
+
+		expect(eachModifier(result)).toEqual(1)
+	})
+
+	test("non-matching specialization", () => {
+		const type: PokeType[] = ["normal"]
+		const specializations = stubSpecializations({
+			psychic: 1,
+		})
+
+		const result = skillModifiersFromSpecializations(specializations, type)
+
+		expect(eachModifier(result)).toEqual(0)
+	})
+
+	test("multiple specializations and multiple types", () => {
+		const type: PokeType[] = ["normal", "psychic"]
+		const specializations = stubSpecializations({
+			normal: 1,
+			psychic: 1,
+		})
+
+		const result = skillModifiersFromSpecializations(specializations, type)
+
+		expect(eachModifier(result)).toEqual(2)
+	})
+
+	test("level 2+ specialization", () => {
+		const type: PokeType[] = ["normal"]
+		const specializations = stubSpecializations({
+			normal: 3,
+		})
+
+		const result = skillModifiersFromSpecializations(specializations, type)
+
+		expect(eachModifier(result)).toEqual(3)
 	})
 })
