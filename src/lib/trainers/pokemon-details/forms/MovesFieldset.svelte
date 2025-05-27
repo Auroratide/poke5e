@@ -4,10 +4,11 @@
 	import { Fieldset, focusInputField } from "$lib/design/forms"
 	import MoveEditor, { getMoveFieldName } from "$lib/moves/MoveEditor.svelte"
 	import { moves } from "$lib/moves/store"
-	import type { LearnedMove } from "$lib/trainers/types"
+	import type { LearnedMove, TrainerPokemon } from "$lib/trainers/types"
 
 	export let values: LearnedMove[]
 	export let species: Pokemon
+	export let level: number
 	export let disabled: boolean
 
 	let newMoveId = -1001
@@ -38,7 +39,7 @@
 
 <Fieldset title="Moves">
 	{#each values as move (move.id)}
-		<MoveEditor value={move} {species} {disabled} on:remove={removeMove(move.id)} />
+		<MoveEditor value={move} {species} {disabled} on:remove={removeMove(move.id)} {level} />
 		<hr />
 	{/each}
 	<Button on:click={addMove}>Add Move</Button>

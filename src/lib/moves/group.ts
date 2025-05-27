@@ -9,13 +9,26 @@ export type MoveGroup = {
 const alphabetize = (a: string, b: string) => a.localeCompare(b)
 const createGroup = (name: string): MoveGroup => ({ name, moves: [] })
 
-export function groupByLearnability(moves: Move[], tms: Tm[], species: Pokemon): MoveGroup[] {
-	const learnableMoves = species.moves.start.concat(
-		species.moves.level2 ?? [],
-		species.moves.level6 ?? [],
-		species.moves.level10 ?? [],
-		species.moves.level14 ?? [],
-		species.moves.level18 ?? [],
+export function groupByLearnability(moves: Move[], tms: Tm[], species: Pokemon, level: number): MoveGroup[] {
+	const canLearn = (currentLevel: number, neededLevel: number, moves: string[] | undefined): string[] =>
+		currentLevel >= neededLevel ? (moves ?? []) : []
+	const cannotLearn = (currentLevel: number, neededLevel: number, moves: string[] | undefined): string[] =>
+		currentLevel < neededLevel ? (moves ?? []) : []
+
+	const learnableNowMoves = species.moves.start.concat(
+		canLearn(level, 2, species.moves.level2),
+		canLearn(level, 6, species.moves.level6),
+		canLearn(level, 10, species.moves.level10),
+		canLearn(level, 14, species.moves.level14),
+		canLearn(level, 18, species.moves.level18),
+	).toSorted(alphabetize)
+
+	const learnableLaterMoves = [].concat(
+		cannotLearn(level, 2, species.moves.level2),
+		cannotLearn(level, 6, species.moves.level6),
+		cannotLearn(level, 10, species.moves.level10),
+		cannotLearn(level, 14, species.moves.level14),
+		cannotLearn(level, 18, species.moves.level18),
 	).toSorted(alphabetize)
 
 	const tmMoves = species.moves.tm
@@ -26,15 +39,20 @@ export function groupByLearnability(moves: Move[], tms: Tm[], species: Pokemon):
 
 	const eggMoves = species.moves.egg?.toSorted(alphabetize) ?? []
 
-	const learnableMovesGroup = createGroup("Learnable Moves")
+	const learnableNowGroup = createGroup("Learnable at Current Level")
+	const learnableLaterGroup = createGroup("Learnable at Later Levels")
 	const tmMovesGroup = createGroup("TMs")
 	const eggMovesGroup = createGroup("Egg Moves")
 	const otherMovesGroup = createGroup("All Other Moves")
 
 	moves.forEach((move) => {
 		const addTo = []
-		if (learnableMoves.includes(move.id)) {
-			addTo.push(learnableMovesGroup)
+		if (learnableNowMoves.includes(move.id)) {
+			addTo.push(learnableNowGroup)
+		}
+
+		if (learnableLaterMoves.includes(move.id)) {
+			addTo.push(learnableLaterGroup)
 		}
 
 		if (tmMoves.includes(move.id)) {
@@ -53,7 +71,8 @@ export function groupByLearnability(moves: Move[], tms: Tm[], species: Pokemon):
 	})
 
 	return [
-		learnableMovesGroup,
+		learnableNowGroup,
+		learnableLaterGroup,
 		tmMovesGroup,
 		eggMovesGroup,
 		otherMovesGroup,

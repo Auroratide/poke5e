@@ -84,7 +84,7 @@
 	<FeatsFieldset bind:ability {species} {disabled} />
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
-	<MovesFieldset bind:values={moves} {species} {disabled} />
+	<MovesFieldset bind:values={moves} {species} {level} {disabled} />
 	<HeldItemsFieldset bind:items {disabled} />
 	<Fieldset title="General">
 		<MarkdownField label="Notes" bind:value={notes} placeholder="Use this for any general notes not covered by the above fields..." {disabled} />

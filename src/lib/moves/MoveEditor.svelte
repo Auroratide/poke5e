@@ -14,9 +14,10 @@
 
 	export let value: LearnedMove
 	export let species: Pokemon
+	export let level: number
 	export let disabled: boolean = false
 
-	$: moveGroups = groupByLearnability($moves ?? [], $tms ?? [], species)
+	$: moveGroups = groupByLearnability($moves ?? [], $tms ?? [], species, level)
 	$: moveOptions = moveGroups.map((it) => ({
 		name: it.name,
 		values: it.moves.map((it) => ({ name: it.name, value: it.id })),

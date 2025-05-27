@@ -55,7 +55,7 @@ test("pokemon cannot learn any moves", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon)
+	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 20)
 
 	// then: only non-empty groups show
 	expect(result).toEqual([ {
@@ -73,11 +73,11 @@ test("pokemon can learn some moves", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon)
+	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 20)
 
 	// then
 	expect(result).toEqual([ {
-		name: "Learnable Moves",
+		name: "Learnable at Current Level",
 		moves: [flamethrower, tackle],
 	}, {
 		name: "All Other Moves",
@@ -95,11 +95,36 @@ test("pokemon can learn moves at different levels", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon)
+	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 3)
 
 	// then: order is alphabetical
 	expect(result).toEqual([ {
-		name: "Learnable Moves",
+		name: "Learnable at Current Level",
+		moves: [flamethrower, tackle],
+	}, {
+		name: "Learnable at Later Levels",
+		moves: [razorLeaf, waterGun],
+	}, {
+		name: "All Other Moves",
+		moves: [thunderbolt],
+	} ])
+})
+
+test("pokemon can learn moves from every available level", () => {
+	// given
+	const pokemon = stubPokemon({
+		moves: {
+			start: [tackle.id, flamethrower.id],
+			level6: [waterGun.id, razorLeaf.id],
+		},
+	})
+
+	// when
+	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 10)
+
+	// then: order is alphabetical
+	expect(result).toEqual([ {
+		name: "Learnable at Current Level",
 		moves: [flamethrower, razorLeaf, tackle, waterGun],
 	}, {
 		name: "All Other Moves",
@@ -117,11 +142,11 @@ test("pokemon can learn egg moves", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon)
+	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 20)
 
 	// then
 	expect(result).toEqual([ {
-		name: "Learnable Moves",
+		name: "Learnable at Current Level",
 		moves: [flamethrower, tackle],
 	}, {
 		name: "Egg Moves",
@@ -142,11 +167,11 @@ test("egg move is also a learnable move", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon)
+	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 20)
 
 	// then
 	expect(result).toEqual([ {
-		name: "Learnable Moves",
+		name: "Learnable at Current Level",
 		moves: [flamethrower, tackle],
 	}, {
 		name: "Egg Moves",
@@ -167,11 +192,11 @@ test("pokemon can learn TMs", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon)
+	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 20)
 
 	// then
 	expect(result).toEqual([ {
-		name: "Learnable Moves",
+		name: "Learnable at Current Level",
 		moves: [flamethrower, tackle],
 	}, {
 		name: "TMs",
@@ -191,7 +216,7 @@ test("moves list is empty", () => {
 	})
 
 	// when
-	const result = groupByLearnability([], ALL_TMS, pokemon)
+	const result = groupByLearnability([], ALL_TMS, pokemon, 20)
 
 	// then
 	expect(result).toEqual([])
@@ -207,11 +232,11 @@ test("tms list is empty", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, [], pokemon)
+	const result = groupByLearnability(ALL_MOVES, [], pokemon, 20)
 
 	// then
 	expect(result).toEqual([ {
-		name: "Learnable Moves",
+		name: "Learnable at Current Level",
 		moves: [flamethrower, tackle],
 	}, {
 		name: "All Other Moves",
@@ -233,7 +258,7 @@ test("performance is not garbage", () => {
 
 	// when
 	const { elapsedMs } = measureTime(() => {
-		groupByLearnability(thousandsOfMoves, hundredsOfTms, pokemon)
+		groupByLearnability(thousandsOfMoves, hundredsOfTms, pokemon, 20)
 	})
 
 	// then
