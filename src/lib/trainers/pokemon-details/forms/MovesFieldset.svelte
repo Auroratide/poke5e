@@ -4,7 +4,7 @@
 	import { Fieldset, focusInputField } from "$lib/design/forms"
 	import MoveEditor, { getMoveFieldName } from "$lib/moves/MoveEditor.svelte"
 	import { moves } from "$lib/moves/store"
-	import type { LearnedMove, TrainerPokemon } from "$lib/trainers/types"
+	import type { LearnedMove } from "$lib/trainers/types"
 
 	export let values: LearnedMove[]
 	export let species: Pokemon

@@ -12,6 +12,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.5.4",
+		description: [
+			"Better layout for mobile landscape mode.",
+			"References: Added Shiny Pokémon.",
+			"In trainer pokémon editor, moves are now separated by whether the pokémon can learn them at their current level.",
+		],
+	}, {
 		name: "v1.5.3",
 		description: [
 			"Bug Fix: Move to-hit, DC, and damage now calculated appropriately when adding a new Pokémon to the team",
