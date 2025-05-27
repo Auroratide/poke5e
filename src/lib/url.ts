@@ -32,6 +32,7 @@ export const Url = {
 		legendaryBattles: () => `${base}/reference/legendary-battles`,
 		natures: () => `${base}/reference/natures`,
 		pokemonLeveling: () => `${base}/reference/pokemon-leveling`,
+		shinyPokemon: () => `${base}/reference/shiny-pokemon`,
 		specializations: () => `${base}/reference/specializations`,
 		status: () => `${base}/reference/status-conditions`,
 		terrainEffects: () => `${base}/reference/terrain-effects`,
