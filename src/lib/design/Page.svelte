@@ -59,10 +59,9 @@
 		height: 0%;
 	}
 
-	@media screen and (min-width: 75rem) {
+	@media screen and (min-width: 37.5rem) {
 		.page {
 			display: flex;
-			flex-wrap: wrap;
 			margin: auto;
 			justify-content: center;
 			max-width: 75rem;
@@ -70,7 +69,7 @@
 		}
 
 		.page .side, .page main {
-			flex: 0 1 37.5rem;
+			flex: 1 1 37.5rem;
 			width: 50%;
 			height: 100%;
 		}

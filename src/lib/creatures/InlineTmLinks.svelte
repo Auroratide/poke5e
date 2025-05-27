@@ -25,7 +25,7 @@
 		column-count: 2;
 	}
 
-	@media screen and (min-width: 37.5rem) {
+	@media screen and (min-width: 75rem) {
 		ul { column-count: 3; }
 	}
 
