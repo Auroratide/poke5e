@@ -35,3 +35,14 @@
 		extraModifiers: extraModifiers,
 	}))} columns={2} />
 </div>
+{#if extraModifiers?.athletics > 0}
+	<p class="footnote"><small>+{extraModifiers.athletics} from trainer specialization included</small></p>
+{/if}
+
+<style>
+	.footnote {
+		margin-block-start: -1em;
+		padding-inline-start: 0.5em;
+		font-style: italic;
+	}
+</style>
