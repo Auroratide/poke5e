@@ -18,6 +18,7 @@ import { TrainerDataProviderError, type StorageResource, type TrainerData, type 
 import type { SupabaseClient } from "@supabase/supabase-js"
 import { isPokeType, type TeraPokeType } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
+import { createEmptyChosenTrainerPath } from "$lib/trainers/paths"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -153,6 +154,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 				rock: 0,
 				ground: 0,
 			},
+			path: createEmptyChosenTrainerPath(),
 		}
 
 		const { data, error } = await this.supabase.rpc("new_trainer", {
@@ -218,6 +220,16 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_special_dragon: toCreate.specializations.dragon ?? 0,
 			_special_dark: toCreate.specializations.dark ?? 0,
 			_special_fairy: toCreate.specializations.fairy ?? 0,
+			_path_name: toCreate.path.name,
+			_path_resource: toCreate.path.resource,
+			_path_rank_1_name: "",
+			_path_rank_1_desc: toCreate.path.customFeatures.level2.description,
+			_path_rank_2_name: toCreate.path.customFeatures.level5.name,
+			_path_rank_2_desc: toCreate.path.customFeatures.level5.description,
+			_path_rank_3_name: toCreate.path.customFeatures.level9.name,
+			_path_rank_3_desc: toCreate.path.customFeatures.level9.description,
+			_path_rank_4_name: toCreate.path.customFeatures.level15.name,
+			_path_rank_4_desc: toCreate.path.customFeatures.level15.description,
 		}).single<{
 			ret_id: string,
 			ret_read_key: string,
@@ -307,6 +319,16 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_special_dragon: info.specializations.dragon ?? 0,
 			_special_dark: info.specializations.dark ?? 0,
 			_special_fairy: info.specializations.fairy ?? 0,
+			_path_name: info.path.name,
+			_path_resource: info.path.resource,
+			_path_rank_1_name: "",
+			_path_rank_1_desc: info.path.customFeatures.level2.description,
+			_path_rank_2_name: info.path.customFeatures.level5.name,
+			_path_rank_2_desc: info.path.customFeatures.level5.description,
+			_path_rank_3_name: info.path.customFeatures.level9.name,
+			_path_rank_3_desc: info.path.customFeatures.level9.description,
+			_path_rank_4_name: info.path.customFeatures.level15.name,
+			_path_rank_4_desc: info.path.customFeatures.level15.description,
 		}).single<number>()
 
 		if (error) {
@@ -955,6 +977,16 @@ type TrainerRow = {
 	special_dragon: number,
 	special_dark: number,
 	special_fairy: number,
+	path_name: string,
+	path_resource: number,
+	path_rank_1_name: string,
+	path_rank_1_desc: string,
+	path_rank_2_name: string,
+	path_rank_2_desc: string,
+	path_rank_3_name: string,
+	path_rank_3_desc: string,
+	path_rank_4_name: string,
+	path_rank_4_desc: string
 }
 
 const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name: string) => StorageResource) => ({
@@ -1039,6 +1071,27 @@ const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name
 		dragon: row.special_dragon,
 		dark: row.special_dark,
 		fairy: row.special_fairy,
+	},
+	path: {
+		name: row.path_name,
+		resource: row.path_resource,
+		customFeatures: {
+			level2: {
+				description: row.path_rank_1_desc,
+			},
+			level5: {
+				name: row.path_rank_2_name,
+				description: row.path_rank_2_desc,
+			},
+			level9: {
+				name: row.path_rank_3_name,
+				description: row.path_rank_3_desc,
+			},
+			level15: {
+				name: row.path_rank_4_name,
+				description: row.path_rank_4_desc,
+			},
+		},
 	},
 })
 

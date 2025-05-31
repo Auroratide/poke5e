@@ -1,3 +1,8 @@
+import { TrainerPaths } from "./2024"
+
+export const TrainerFeatureLevelLandmarks = [2, 5, 9, 15] as const
+export type TrainerFeatureLevelLandmark = 2 | 5 | 9 | 15
+
 export type TrainerPath = {
 	name: string,
 	features: {
@@ -11,4 +16,8 @@ export type TrainerPath = {
 export type TrainerPathFeature = {
 	name: string,
 	description: string[],
+}
+
+export function isStandardTrainerPath(pathName: string): boolean {
+	return TrainerPaths.map((it) => it.name).includes(pathName)
 }

@@ -6,6 +6,7 @@ import type { NonVolatileStatus } from "$lib/pokemon/status"
 import type { StorageResource } from "./data"
 import type { Nature } from "./nature"
 import type { Specializations } from "./specializations"
+import type { ChosenTrainerPath } from "./paths/ChosenTrainerPath"
 
 export type Resource = {
 	current: number,
@@ -102,6 +103,7 @@ export type TrainerInfo = {
 	inventory: InventoryItem[],
 	avatar?: StorageResource,
 	specializations: Specializations,
+	path: ChosenTrainerPath,
 }
 export type Trainer = TrainerInfo & {
 	id: TrainerId,

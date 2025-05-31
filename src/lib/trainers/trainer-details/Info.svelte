@@ -11,6 +11,7 @@
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 	import InventoryInfo, { type UpdateDetail as InventoryUpdateDetail } from "./InventoryInfo.svelte"
 	import SpecializationsInfo from "../specializations/SpecializationsInfo.svelte"
+	import { TrainerPathsInfo } from "../paths"
 
 	const dispatch = createEventDispatcher()
 
@@ -62,6 +63,7 @@
 	<h3>Specializations</h3>
 	<SpecializationsInfo specializations={trainer.specializations} />
 </section>
+<TrainerPathsInfo value={trainer.path} level={trainer.level} />
 <section>
 	<InventoryInfo money={trainer.money} inventory={trainer.inventory} {editable} on:update={onUpdateMoney} on:update-item={onUpdateItem} />
 </section>

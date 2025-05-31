@@ -23,6 +23,7 @@
 	import InventoryFieldset from "./forms/InventoryFieldset.svelte"
 	import Button from "$lib/design/Button.svelte"
 	import { SpecializationsFieldset } from "../specializations"
+	import { TrainerPathsFieldset } from "../paths"
 	
 	const dispatch = createEventDispatcher()
 
@@ -43,6 +44,7 @@
 	let originalAvatar = trainer.avatar
 	let money = trainer.money
 	let specializations = trainer.specializations
+	let trainerPath = trainer.path
 	let avatarToUpload: ImageInputValue | undefined = undefined
 	let isValid = true
 
@@ -74,6 +76,7 @@
 				inventory,
 				avatar: originalAvatar,
 				specializations,
+				path: trainerPath,
 			},
 			updateAvatar: avatarToUpload,
 		})
@@ -87,6 +90,7 @@
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
 	<SpecializationsFieldset bind:values={specializations} {disabled} />
+	<TrainerPathsFieldset bind:value={trainerPath} {disabled} />
 	<InventoryFieldset bind:money bind:inventory {disabled} />
 	<Fieldset title="General">
 		<MarkdownField label="Description" bind:value={description} placeholder="General info about this trainer..." {disabled} />

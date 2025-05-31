@@ -86,6 +86,11 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			rock: 0,
 			ground: 0,
 		},
+		path: {
+			name: "Hobbyist",
+			resource: 3,
+			customFeatures: undefined,
+		},
 	},
 	pokemon: [ {
 		id: nextPokemonId(),
@@ -341,6 +346,11 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			rock: 0,
 			ground: 0,
 		},
+		path: {
+			name: "Hobbyist",
+			resource: 3,
+			customFeatures: undefined,
+		},
 	},
 	pokemon: [],
 } ]
@@ -413,6 +423,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 					rock: 0,
 					ground: 0,
 				},
+				path: undefined,
 				id,
 				readKey,
 			},
