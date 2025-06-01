@@ -12,6 +12,7 @@
 	import InventoryInfo, { type UpdateDetail as InventoryUpdateDetail } from "./InventoryInfo.svelte"
 	import SpecializationsInfo from "../specializations/SpecializationsInfo.svelte"
 	import { TrainerPathsInfo, type PathResourceUpdateDetail } from "../paths"
+	import { hasSpecialization } from "../specializations"
 
 	const dispatch = createEventDispatcher()
 
@@ -70,8 +71,10 @@
 <section class="stats">
 	<AttributeBlock attributes={trainer.attributes} />
 	<SkillsInfo level={trainer.level} attributes={trainer.attributes} savingThrows={trainer.savingThrows} proficiencies={trainer.proficiencies} />
-	<h3>Specializations</h3>
-	<SpecializationsInfo specializations={trainer.specializations} />
+	{#if hasSpecialization(trainer.specializations)}
+		<h3>Specializations</h3>
+		<SpecializationsInfo specializations={trainer.specializations} />
+	{/if}
 </section>
 <TrainerPathsInfo value={trainer.path} level={trainer.level} on:update={onUpdatePathResource} />
 <section>

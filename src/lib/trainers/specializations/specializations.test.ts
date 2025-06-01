@@ -1,6 +1,6 @@
 import { describe, test, expect } from "vitest"
-import { specializationDescription, skillModifiersFromSpecializations } from "./specializations"
-import { stubSpecializations } from "./test/stubs"
+import { specializationDescription, skillModifiersFromSpecializations, hasSpecialization } from "./specializations"
+import { stubNoSpecializations, stubSpecializations } from "./test/stubs"
 import type { Skill } from "$lib/dnd/types"
 import type { PokeType } from "$lib/pokemon/types"
 
@@ -137,5 +137,25 @@ describe("skillModifiersFromSpecializations", () => {
 		const result = skillModifiersFromSpecializations(specializations, type)
 
 		expect(eachModifier(result)).toEqual(3)
+	})
+})
+
+describe("hasSpecialization", () => {
+	test("has specialization", () => {
+		const specializations = stubSpecializations({
+			normal: 1,
+		})
+
+		const result = hasSpecialization(specializations)
+
+		expect(result).toBe(true)
+	})
+
+	test("does not have specialization", () => {
+		const specializations = stubNoSpecializations()
+
+		const result = hasSpecialization(specializations)
+
+		expect(result).toBe(false)
 	})
 })

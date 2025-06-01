@@ -78,3 +78,7 @@ export function skillModifiersFromSpecializations(specializations: Specializatio
 		"persuasion": modifier,
 	}
 }
+
+export function hasSpecialization(specializations: Specializations): boolean {
+	return Object.values(specializations).some((it) => it > 0)
+}
