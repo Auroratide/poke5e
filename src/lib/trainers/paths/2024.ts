@@ -1,8 +1,15 @@
 import { Url } from "$lib/url"
 import type { TrainerPath } from "./TrainerPath"
+import { modifierForScore } from "$lib/dnd/attributes"
+import { proficiencyBonus } from "$lib/dnd/proficiency"
 
 export const TrainerPaths: TrainerPath[] = [ {
 	name: "Ace Trainer",
+	resource: {
+		name: "Battle Dice",
+		acquiredAtLevel: 5,
+		max: (trainer) => Math.max(1, 1 + modifierForScore(trainer.attributes.dex)),
+	},
 	features: {
 		level2: {
 			description: ["Your goal is to become one of the strongest trainers in the world, and so you excel in battle. All of your Pokémon gain a +1 bonus to their attack and damage rolls."],
@@ -22,6 +29,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Hobbyist",
+	resource: {
+		name: "Skill Dice",
+		acquiredAtLevel: 5,
+		max: (trainer) => Math.max(1, 1 + modifierForScore(trainer.attributes.wis)),
+	},
 	features: {
 		level2: {
 			description: [`You think being a trainer requires being very good at a little bit of everything. Select one additional <a href="${Url.reference.specializations()}">Specialization</a> and two new skill proficiencies for your trainer. The specialization you choose must be different from any specializations you already have.`],
@@ -41,6 +53,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Poké Mentor",
+	resource: {
+		name: "Cheerleader",
+		acquiredAtLevel: 9,
+		max: () => 1,
+	},
 	features: {
 		level2: {
 			description: ["You have a skill for mentoring Pokémon to bring out the best in them. Beginning at level 2, your TMs can be used twice before breaking."],
@@ -60,6 +77,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Researcher",
+	resource: {
+		name: "Understanding",
+		acquiredAtLevel: 2,
+		max: (trainer) => proficiencyBonus(trainer.level),
+	},
 	features: {
 		level2: {
 			description: ["You wish to learn more about Pokémon and the secrets that they hold within. Due to your heightened understanding of your Pokémon, you may add your Intelligence modifier (minimum one) to any skill check your Pokémon makes. You may use this abiliy a number of times equal to your proficiency bonus per long rest."],
@@ -79,6 +101,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Pokémon Collector",
+	resource: {
+		name: "Gotta Catch 'Em All",
+		acquiredAtLevel: 5,
+		max: () => 1,
+	},
 	features: {
 		level2: {
 			description: ["Your fascination with all the different types of Pokémon of the world drives your need to collect them all. Beginning at level 2, you now have expertise in Animal Handling, doubling your proficiency in this skill."],
@@ -98,6 +125,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Nurse",
+	resource: {
+		name: "Pokéchef",
+		acquiredAtLevel: 5,
+		max: (trainer) => proficiencyBonus(trainer.level),
+	},
 	features: {
 		level2: {
 			description: ["You have a nurturing touch and a skill for mentoring Pokémon to bring out the best in them. You gain proficiency in the Medicine skill. Every time you use an item or ability to heal a Pokémon, that Pokémon regains addtional hit points equal to your Wisdom modifier (minimum one)."],
@@ -158,6 +190,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Grunt",
+	resource: {
+		name: "Shadow Points",
+		acquiredAtLevel: 2,
+		max: (trainer) => trainer.level,
+	},
 	features: {
 		level2: {
 			description: [
@@ -179,6 +216,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Tactician",
+	resource: {
+		name: "Tactical Points",
+		acquiredAtLevel: 2,
+		max: (trainer) => trainer.level,
+	},
 	features: {
 		level2: {
 			description: [
@@ -219,6 +261,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Guru",
+	resource: {
+		name: "Spirit",
+		acquiredAtLevel: 15,
+		max: (trainer) => Math.max(1, modifierForScore(trainer.attributes.wis)),
+	},
 	features: {
 		level2: {
 			description: ["You and your Pokémon are connected by way of more than just trainer and beast. Your past has trained you to be in complete control of your Mind, Body, and Spirit, and you transfer that aura to your Pokémon. When you choose this path at level 2, your Max SR you can control increases by 1."],

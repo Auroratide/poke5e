@@ -11,7 +11,7 @@
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 	import InventoryInfo, { type UpdateDetail as InventoryUpdateDetail } from "./InventoryInfo.svelte"
 	import SpecializationsInfo from "../specializations/SpecializationsInfo.svelte"
-	import { TrainerPathsInfo } from "../paths"
+	import { TrainerPathsInfo, type PathResourceUpdateDetail } from "../paths"
 
 	const dispatch = createEventDispatcher()
 
@@ -41,6 +41,16 @@
 		} as TrainerInfo)
 	}
 
+	const onUpdatePathResource = (e: CustomEvent<PathResourceUpdateDetail>) => {
+		dispatch("update", {
+			...trainer,
+			path: {
+				...trainer.path,
+				resource: e.detail.resource,
+			},
+		} as TrainerInfo)
+	}
+
 	const onUpdateItem = (e: CustomEvent<InventoryItem>) => {
 		dispatch("update-item", e.detail)
 	}
@@ -63,7 +73,7 @@
 	<h3>Specializations</h3>
 	<SpecializationsInfo specializations={trainer.specializations} />
 </section>
-<TrainerPathsInfo value={trainer.path} level={trainer.level} />
+<TrainerPathsInfo value={trainer.path} level={trainer.level} on:update={onUpdatePathResource} />
 <section>
 	<InventoryInfo money={trainer.money} inventory={trainer.inventory} {editable} on:update={onUpdateMoney} on:update-item={onUpdateItem} />
 </section>

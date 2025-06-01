@@ -1,3 +1,4 @@
+import type { TrainerInfo } from "../types"
 import { TrainerPaths } from "./2024"
 
 export const TrainerFeatureLevelLandmarks = [2, 5, 9, 15] as const
@@ -5,6 +6,11 @@ export type TrainerFeatureLevelLandmark = 2 | 5 | 9 | 15
 
 export type TrainerPath = {
 	name: string,
+	resource?: {
+		name: string,
+		acquiredAtLevel: TrainerFeatureLevelLandmark,
+		max: (trainer: TrainerInfo) => number,
+	},
 	features: {
 		level2: Omit<TrainerPathFeature, "name">,
 		level5: TrainerPathFeature,

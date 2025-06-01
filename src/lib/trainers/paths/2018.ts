@@ -1,8 +1,14 @@
+import { modifierForScore } from "$lib/dnd/attributes"
 import { Url } from "$lib/url"
 import type { TrainerPath } from "./TrainerPath"
 
 export const TrainerPaths: TrainerPath[] = [ {
 	name: "Ace Trainer",
+	resource: {
+		name: "Battle Dice",
+		acquiredAtLevel: 5,
+		max: (trainer) => Math.max(1, 1 + modifierForScore(trainer.attributes.wis)),
+	},
 	features: {
 		level2: {
 			description: ["Your goal is to become one of the strongest trainers in the world, and so you excel in battle. All of your Pokémon gain a +1 bonus to their attack and damage rolls."],
@@ -22,6 +28,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Hobbyist",
+	resource: {
+		name: "Skill Dice",
+		acquiredAtLevel: 5,
+		max: (trainer) => Math.max(1, 1 + modifierForScore(trainer.attributes.wis)),
+	},
 	features: {
 		level2: {
 			description: [`You choose to dabble in a variety of skills to take care of your Pokémon. At level 2, select one additional <a href="${Url.reference.specializations()}">Specialization</a> and two new skill proficiencies for your trainer.`],
@@ -41,6 +52,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Poké Mentor",
+	resource: {
+		name: "Pokéchef",
+		acquiredAtLevel: 5,
+		max: (trainer) => Math.max(1, 1 + modifierForScore(trainer.attributes.wis)),
+	},
 	features: {
 		level2: {
 			description: ["You have a nurturing touch and a skill for mentoring Pokémon to bring out the best in them. Beginning at level 2, your TMs can be used twice before breaking."],
@@ -60,6 +76,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Researcher",
+	resource: {
+		name: "Professor",
+		acquiredAtLevel: 15,
+		max: (trainer) => Math.max(1, 1 + modifierForScore(trainer.attributes.int)),
+	},
 	features: {
 		level2: {
 			description: ["You wish to learn more about Pokémon and the secrets that they hold within. Beginning at level 2, due to your heightened understanding of your Pokémon, you may increase any skill check your Pokémon makes by your trainer's Wisdom or Intelligence modifier (minimum of 1). You must choose which at the time you choose this path."],
@@ -79,6 +100,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Pokémon Collector",
+	resource: {
+		name: "Gotta Catch 'Em All",
+		acquiredAtLevel: 5,
+		max: () => 1,
+	},
 	features: {
 		level2: {
 			description: ["Your fascination with all the different types of Pokémon of the world drives your need to collect them all. Beginning at level 2, you now have expertise in Animal Handling, doubling your proficiency in this skill."],
@@ -98,6 +124,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Nurse",
+	resource: {
+		name: "Pure Heart",
+		acquiredAtLevel: 5,
+		max: (trainer) => trainer.level * 5,
+	},
 	features: {
 		level2: {
 			description: ["You have a pure heart and a healing spirit. You want the best for your Pokémon, and that involves always keeping them in tip-top shape. When you choose this path at level 2, gain proficiency in the Medicine skill. At each long rest or Pokémon center visit, your held Pokémon gain temporary hit points equal to your level."],
@@ -136,6 +167,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Commander",
+	resource: {
+		name: "Show Me What You've Got",
+		acquiredAtLevel: 9,
+		max: () => 1,
+	},
 	features: {
 		level2: {
 			description: ["You rule over your Pokémon with an iron fist, demanding respect and forming an unbreakable bond with your team. When you choose this path at level 2, your starter’s Loyalty increases to “Loyal”. In addition, all of your Pokémon double the saving throw and HP bonuses from positive Loyalty levels."],
@@ -155,6 +191,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Grunt",
+	resource: {
+		name: "Shadow Points",
+		acquiredAtLevel: 2,
+		max: (trainer) => trainer.level,
+	},
 	features: {
 		level2: {
 			description: ["Whether current or aspiring evil team member, your goal is to cast down all goody two shoe trainers and rise up in the ranks! Beginning at level 2, gain a pool of “Shadow Points” equal to your level. Your point pool increases with each level, and resets on each long rest. At level 2, you gain access to the “Sabotage” ability. As a reaction, you may spend any number of points to decrease the total result of an attack roll including modifiers) that hits your Pokémon if it would cause the attack to miss. The natural attack roll is unaffected by this ability for purposes of move effects, and attacks with a natural roll of 20 may not be decreased at all."],
@@ -174,6 +215,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Tactician",
+	resource: {
+		name: "Tactical Points",
+		acquiredAtLevel: 2,
+		max: (trainer) => trainer.level,
+	},
 	features: {
 		level2: {
 			description: ["You have an eye for detail and a unique set of skills to use in battle. Beginning at level 2, you gain a pool of \"Tactical Points\" equal to your trainer level. Your point pool increases with each level, and resets after each long rest. At level 2, when a Pokémon regains hit points from an item or move, you may increase the amount by 1d4 for each \"Tactical Point\" spent."],
@@ -193,6 +239,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Ranger",
+	resource: {
+		name: "Deep Connection",
+		acquiredAtLevel: 5,
+		max: (trainer) => Math.max(1, Math.max(modifierForScore(trainer.attributes.wis), modifierForScore(trainer.attributes.cha))),
+	},
 	features: {
 		level2: {
 			description: ["You are comfortable in the wild, and have an incredible respect for Pokémon in their natural habitat. When you choose this path at level 2, gain proficiency in Nature and Survival. If you were already proficient, gain expertise. In addition, your walking speed increases by 5, and you gain a climbing and swimming speed equal to your walking speed."],
@@ -212,6 +263,11 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Guru",
+	resource: {
+		name: "Spirit",
+		acquiredAtLevel: 15,
+		max: (trainer) => Math.max(1, modifierForScore(trainer.attributes.wis)),
+	},
 	features: {
 		level2: {
 			description: ["You and your Pokémon are connected by way of more than just trainer and beast. Your past has trained you to be in complete control of your Mind, Body, and Spirit, and you transfer that aura to your Pokémon. When you choose this path at level 2, you gain proficiency in the Persuasion skill. In addition, Pokémon not yet able to be controlled by you are set at the \"Indifferent\" loyalty level instead of \"Disloyal\" until the Control Upgrade is met."],
