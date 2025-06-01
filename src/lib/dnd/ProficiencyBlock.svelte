@@ -11,16 +11,18 @@
 	}[]
 	export let attributes: Attributes
 	export let level: number
+	export let columnsLg: number = 1
 	export let columns: number = 1
 
 	$: pb = proficiencyBonus(level)
 </script>
 
-<dl style:--columns={columns}>
+<dl style:--columns={columns} style:--columns-lg={columnsLg}>
 	{#each values as value, index}
 		{@const modifier = modifierForScore(attributes[value.attr]) + (value.proficient ? pb : 0) + (value.extraModifiers?.[value.name] ?? 0)}
+		{@const evenLg = index % (2 * columnsLg) >= columnsLg}
 		{@const even = index % (2 * columns) >= columns}
-		<dt class:even>
+		<dt class:even class:even-lg={evenLg}>
 			<span class="icon">
 				{#if value.proficient}
 					<abbr title="Proficient">⦿</abbr>
@@ -28,8 +30,8 @@
 			</span>
 			<span>{value.name}</span>
 		</dt>
-		<dd class:even>{modifier >= 0 ? "+" : ""}{modifier}</dd>
-		<dd class:even aria-hidden="true"></dd>
+		<dd class:even class:even-lg={evenLg}>{modifier >= 0 ? "+" : ""}{modifier}</dd>
+		<dd class:even class:even-lg={evenLg} aria-hidden="true"></dd>
 	{/each}
 </dl>
 
@@ -71,5 +73,19 @@
 	abbr {
 		text-decoration: none;
 		cursor: help;
+	}
+
+	@media screen and (min-width: 50rem) {
+		dl {
+			grid-template-columns: repeat(var(--columns-lg), auto auto 1fr);
+		}
+
+		dt.even, dd.even {
+			background: var(--skin-bg-dark);
+		}
+
+		dt.even-lg, dd.even-lg {
+			background: var(--skin-bg);
+		}
 	}
 </style>

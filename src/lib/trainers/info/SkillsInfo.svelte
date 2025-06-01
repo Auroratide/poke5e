@@ -23,7 +23,7 @@
 		name: attr.abbr,
 		attr: attr.abbr,
 		proficient: savingThrows.includes(attr.abbr),
-	}))} columns={3} />
+	}))} columnsLg={3} columns={2} />
 </div>
 
 <h3>Skills</h3>
@@ -33,7 +33,7 @@
 		attr: skill.attribute,
 		proficient: proficiencies.includes(skill.name),
 		extraModifiers: extraModifiers,
-	}))} columns={2} />
+	}))} columnsLg={2} columns={1} />
 </div>
 {#if extraModifiers?.athletics > 0}
 	<p class="footnote"><small>+{extraModifiers.athletics} from trainer specialization included</small></p>
