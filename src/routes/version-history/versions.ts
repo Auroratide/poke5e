@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.5.5",
+		description: [
+			"Bug fix: Remove extra info on the Night Shade move",
+		],
+	}, {
 		name: "v1.5.4",
 		description: [
 			"Better layout for mobile landscape mode.",
