@@ -11,9 +11,6 @@ jobs:
   backend-deploy:
     name: Backend Deploy
     runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.52.0-noble
-      options: --user 1001
     env:
       ENV: prod
       SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
@@ -30,6 +27,7 @@ jobs:
         with:
           version: latest
       - run: pnpm install --frozen-lockfile
+      - run: pnpm exec playwright install
       - run: pnpm supabase start
       - name: Run migration tests
         run: pnpm test:db
