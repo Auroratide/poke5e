@@ -41,7 +41,7 @@
 		row-gap: 1em;
 	}
 
-	@media screen and (min-width: 37.5rem) {
+	@media screen and (min-width: 75rem) {
 		.grid {
 			grid-template-columns: repeat(var(--columns-lg), 1fr);
 		}
