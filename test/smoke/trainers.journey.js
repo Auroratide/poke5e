@@ -15,6 +15,7 @@ import {
 	visitPathExplicitly,
 	readDescriptionDefinition,
 	below,
+	range,
 } from "./actions.js"
 import assert from "node:assert/strict"
 
@@ -28,6 +29,8 @@ export async function test() {
 	assert.ok(await text(`${name}'s Pokemon`).exists())
 
 	await editTrainer()
+	assert.ok(await text("Battle Master").exists())
+	assert.ok(await text("Kindler ×1").exists())
 	assert.ok(await text("Kanto").exists())
 	assert.equal(await textBox("Money").value(), "1000")
 	assert.ok(await text("Great Ball").exists())
@@ -75,6 +78,12 @@ const editTrainer = async () => {
 	console.log(`  Editing Trainer...`)
 
 	await click("Edit")
+
+	await clear(textBox("Level"))
+	await write("5")
+	await dropDown("Path Name").select("Ace Trainer")
+	await range("Kindler (fire)").select(1)
+
 	await clear(textBox("Home Region"))
 	await write("Kanto")
 	await clear(textBox("Money"))
