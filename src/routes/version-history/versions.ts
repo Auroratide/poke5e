@@ -12,6 +12,14 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.6.0",
+		description: [
+			"New: Can specify trainer specializations.",
+			"New: Can specify trainer path, or create a custom path.",
+			"New: Can manage trainer path resources, such as Battle Dice or Shadow Points.",
+			"Show all save and skill modifiers rather than just the proficient ones."
+		],
+	}, {
 		name: "v1.5.5",
 		description: [
 			"Bug fix: Remove extra info on the Night Shade move",
@@ -258,6 +266,10 @@ export const versionHistory: VersionHistory = {
 		],
 	} ],
 	groups: [ {
+		name: "v1.6",
+		highlight: "Trainer Paths & Specializations!",
+		description: "Trainers can now specify type specializations and chosen path. Type bonuses are applied to the corresponding Pokémon, and path resources (such as Shadow Points) can be managed.",
+	}, {
 		name: "v1.5",
 		highlight: "Original vs Updated Rules Toggle!",
 		description: "Adds all of the original rules from the Pokémon 5e handbook, under a toggle that switches between the original rules and updated rules.",
