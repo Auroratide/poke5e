@@ -108,9 +108,6 @@
 	</div>
 	<SiteFooter {currentVersion} versionHighlight={currentHighlight} />
 	<ErrorDialog />
-	{#if browser && window.location.origin === MY_ORIGIN}
-		<MigrationDialog />
-	{/if}
 </div>
 
 <style>
