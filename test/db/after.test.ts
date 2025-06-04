@@ -221,6 +221,157 @@ test("updating trainer inventory", async () => {
 	})
 })
 
+test("updating feats", async () => {
+	const {
+		ret_id: trainerId,
+		ret_read_key: readKey,
+		ret_write_key: writeKey
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const keenMindId = await call<string>("add_trainer_feat", {
+		_write_key: writeKey,
+		_feat_name: "Keen Mind",
+		_description: null,
+		_is_custom: false,
+		_rank: 0,
+	})
+
+	const customFeatId = await call<string>("add_trainer_feat", {
+		_write_key: writeKey,
+		_feat_name: "Custom Feat",
+		_description: "Does something super cool.",
+		_is_custom: true,
+		_rank: 1,
+	})
+
+	// Update
+	await call("update_trainer_feat", {
+		_write_key: writeKey,
+		_id: keenMindId,
+		_feat_name: "Keen Mind",
+		_description: "Custom description.",
+		_is_custom: false,
+		_rank: 1,
+	})
+
+	await call("update_trainer_feat", {
+		_write_key: writeKey,
+		_id: customFeatId,
+		_feat_name: "Chopstick Mastery",
+		_description: "You can catch flies with chopsticks.",
+		_is_custom: true,
+		_rank: 0,
+	})
+
+	// Assert
+	const irisFeats = await callAll<any>("get_trainer_feats", {
+		_read_key: readKey,
+	})
+
+	const keenMind = irisFeats[1]
+	const customFeat = irisFeats[0]
+	expect(keenMind?.feat_name).toEqual("Keen Mind")
+	expect(keenMind?.description).toEqual("Custom description.")
+	expect(keenMind?.is_custom).toBe(false)
+	expect(customFeat?.feat_name).toEqual("Chopstick Mastery")
+	expect(customFeat?.description).toEqual("You can catch flies with chopsticks.")
+	expect(customFeat?.is_custom).toBe(true)
+
+	// Pokemon Too
+	const pokemonId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+	})
+
+	const extraMoveId = await call<string>("add_pokemon_feat", {
+		_write_key: writeKey,
+		_pokemon_id: pokemonId,
+		_feat_name: "Extra Move",
+		_description: null,
+		_is_custom: false,
+		_rank: 0,
+	})
+
+	const extraTypeId = await call<string>("add_pokemon_feat", {
+		_write_key: writeKey,
+		_pokemon_id: pokemonId,
+		_feat_name: "Extra Type",
+		_description: "You have a third type now.",
+		_is_custom: true,
+		_rank: 1,
+	})
+
+	await call("update_pokemon_feat", {
+		_write_key: writeKey,
+		_id: extraMoveId,
+		_feat_name: "Extra Move",
+		_description: "Custom description.",
+		_is_custom: false,
+		_rank: 1,
+	})
+
+	await call("update_pokemon_feat", {
+		_write_key: writeKey,
+		_id: extraTypeId,
+		_feat_name: "Extra Type",
+		_description: "You have a third type in addition to your other types.",
+		_is_custom: true,
+		_rank: 0,
+	})
+
+	const sunnyFeats = await callAll<any>("get_pokemon_feats", {
+		_pokemon_id: pokemonId,
+	})
+
+	const extraMove = sunnyFeats[1]
+	const extraType = sunnyFeats[0]
+	expect(extraMove?.feat_name).toEqual("Extra Move")
+	expect(extraMove?.description).toEqual("Custom description.")
+	expect(extraMove?.is_custom).toBe(false)
+	expect(extraType?.feat_name).toEqual("Extra Type")
+	expect(extraType?.description).toEqual("You have a third type in addition to your other types.")
+	expect(extraType?.is_custom).toBe(true)
+
+	// Cleanup
+	await call("remove_pokemon_feat", {
+		_write_key: writeKey,
+		_id: extraMoveId,
+	})
+	await call("remove_pokemon_feat", {
+		_write_key: writeKey,
+		_id: extraTypeId,
+	})
+
+	const noMorePokemonFeats = await callAll<any>("get_pokemon_feats", {
+		_pokemon_id: pokemonId,
+	})
+
+	expect(noMorePokemonFeats.length).toEqual(0)
+
+	await call("remove_trainer_feat", {
+		_write_key: writeKey,
+		_id: keenMindId,
+	})
+	await call("remove_trainer_feat", {
+		_write_key: writeKey,
+		_id: customFeatId,
+	})
+	const noMoreTrainerFeats = await callAll<any>("get_trainer_feats", {
+		_read_key: readKey,
+	})
+
+	expect(noMoreTrainerFeats.length).toEqual(0)
+
+	await call("delete_trainer", {
+		_write_key: writeKey,
+		_id: trainerId,
+	})
+})
+
 test("updating pokemon", async () => {
 	const {
 		ret_id: trainerId,
