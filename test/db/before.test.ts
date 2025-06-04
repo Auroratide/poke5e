@@ -21,8 +21,7 @@ test("updating trainers", async () => {
 	expect(canWrite).toEqual(1)
 
 	// Update
-	await call("update_trainer", {
-		_write_key: writeKey,
+	const IrisUpdated = () => ({
 		...Iris(),
 		_hp_cur: 44,
 		_species: "Human",
@@ -49,6 +48,21 @@ test("updating trainers", async () => {
 		_special_dragon: 0,
 		_special_dark: 0,
 		_special_fairy: 0,
+		_path_name: "Nurse",
+		_path_resource: 3,
+		_path_rank_1_name: "",
+		_path_rank_1_desc: "",
+		_path_rank_2_name: "",
+		_path_rank_2_desc: "",
+		_path_rank_3_name: "",
+		_path_rank_3_desc: "",
+		_path_rank_4_name: "",
+		_path_rank_4_desc: "",
+	})
+
+	await call("update_trainer", {
+		_write_key: writeKey,
+		...IrisUpdated(),
 	})
 
 	// Updating the avatar
@@ -78,6 +92,39 @@ test("updating trainers", async () => {
 	expect(irisInfo.avatar_filename).toEqual(avatarFilename)
 	expect(irisInfo.money).toEqual(3000)
 	expect(irisInfo.special_grass).toEqual(1)
+	expect(irisInfo.path_name).toEqual("Nurse")
+	expect(irisInfo.path_resource).toEqual(3)
+
+	// Custom Trainer Path
+	await call("update_trainer", {
+		_write_key: writeKey,
+		...IrisUpdated(),
+		_path_name: "Flower Girl",
+		_path_resource: 0,
+		_path_rank_1_name: "Lily",
+		_path_rank_1_desc: "Lily Ability",
+		_path_rank_2_name: "Tulip",
+		_path_rank_2_desc: "Tulip Ability",
+		_path_rank_3_name: "Sunflower",
+		_path_rank_3_desc: "Sunflower Ability",
+		_path_rank_4_name: "Rose",
+		_path_rank_4_desc: "Rose Ability",
+	})
+
+	const irisInfoCustomPath = await call<any>("get_trainer", {
+		_read_key: readKey,
+	})
+
+	expect(irisInfoCustomPath.path_name).toEqual("Flower Girl")
+	expect(irisInfoCustomPath.path_resource).toEqual(0)
+	expect(irisInfoCustomPath.path_rank_1_name).toEqual("Lily")
+	expect(irisInfoCustomPath.path_rank_1_desc).toEqual("Lily Ability")
+	expect(irisInfoCustomPath.path_rank_2_name).toEqual("Tulip")
+	expect(irisInfoCustomPath.path_rank_2_desc).toEqual("Tulip Ability")
+	expect(irisInfoCustomPath.path_rank_3_name).toEqual("Sunflower")
+	expect(irisInfoCustomPath.path_rank_3_desc).toEqual("Sunflower Ability")
+	expect(irisInfoCustomPath.path_rank_4_name).toEqual("Rose")
+	expect(irisInfoCustomPath.path_rank_4_desc).toEqual("Rose Ability")
 
 	// Cleanup
 	await call("delete_trainer", {
