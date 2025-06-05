@@ -1,8 +1,7 @@
 <script>
 	import ReferencePage from "../ReferencePage.svelte"
-	import Rules2018 from "./2018"
-	import Rules2024 from "./2024"
-	import { rulesVersion } from "$lib/design/rules-version"
+	import { PokemonFeats, DndFeatsForPokemon } from "$lib/feats/PokemonFeats"
+	import Markdown from "$lib/rendering/Markdown.svelte"
 </script>
 
 <ReferencePage title="Feats">
@@ -13,16 +12,17 @@
 		<h2>Pokémon Feats</h2>
 		<p>The following D&D feats can be selected by your Pokémon instead of taking the Ability Score Increase given during the leveling process. New feats unique to Pokémon are printed after the list of standard feats.</p>
 
-		{#if $rulesVersion === "2018"}
-			<Rules2018.StandardFeats />
-		{:else}
-			<Rules2024.StandardFeats />
-		{/if}
+		<ul>
+			{#each $DndFeatsForPokemon as feat}
+				<li>
+					<span>{feat.name}</span>
+					{#if feat.qualifier}<span>({feat.qualifier})</span>{/if}</li>
+			{/each}
+		</ul>
 
-		{#if $rulesVersion === "2018"}
-			<Rules2018.PokemonFeats />
-		{:else}
-			<Rules2024.PokemonFeats />
-		{/if}
+		{#each $PokemonFeats as feat}
+			<h3>{feat.name}</h3>
+			<Markdown value={feat.description} />
+		{/each}
 	</section>
 </ReferencePage>
