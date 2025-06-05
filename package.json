@@ -58,7 +58,8 @@
 		"@auroratide/pokemon-types": "^0.1.0",
 		"@auroratide/toggle-switch": "^0.3.1",
 		"@floating-ui/dom": "^1.7.0",
-		"@supabase/supabase-js": "^2.49.1"
+		"@supabase/supabase-js": "^2.49.1",
+		"marked": "^15.0.12"
 	},
 	"packageManager": "pnpm@10.6.2",
 	"engines": {
