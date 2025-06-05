@@ -12,6 +12,7 @@ const config = {
 			enabled: true,
 			headless: true,
 			instances: [ { browser: "chromium" } ],
+			screenshotFailures: false,
 		}
 	}
 }
