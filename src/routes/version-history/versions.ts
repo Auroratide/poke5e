@@ -17,7 +17,7 @@ export const versionHistory: VersionHistory = {
 			"New: Can specify trainer specializations.",
 			"New: Can specify trainer path, or create a custom path.",
 			"New: Can manage trainer path resources, such as Battle Dice or Shadow Points.",
-			"Show all save and skill modifiers rather than just the proficient ones."
+			"Show all save and skill modifiers rather than just the proficient ones.",
 		],
 	}, {
 		name: "v1.5.5",
