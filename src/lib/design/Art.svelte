@@ -30,7 +30,8 @@
 <style>
 	figure {
 		margin: 0;
-		display: block;
+		display: flex;
+		flex-direction: column;
 		inline-size: 100%;
 		block-size: 100%;
 	}
@@ -43,6 +44,7 @@
 		border: none;
 		box-shadow: none;
 		object-fit: contain;
+		flex: 1;
 	}
 
 	.smaller {
