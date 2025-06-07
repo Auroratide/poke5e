@@ -170,7 +170,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	name: "Commander",
 	features: {
 		level2: {
-			description: ["You rule over your Pokémon with an iron fist, demanding respect and forming an unbreakable bond with your team. When you choose this path at level 2, your starter’s Bond Level becomes +2. In addition, all of your with a positive Bond Level have 1 additional Bond Point."],
+			description: ["You rule over your Pokémon with an iron fist, demanding respect and forming an unbreakable bond with your team. When you choose this path at level 2, your starter’s Bond Level becomes +2. In addition, all of your Pokémon with a positive Bond Level have 1 additional Bond Point."],
 		},
 		level5: {
 			name: "Follow Me",
