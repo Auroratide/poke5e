@@ -12,12 +12,18 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.6.1",
+		description: [
+			"References: Fixed typos.",
+			"Bug fix: Show correct hit dice on trainer profile page.",
+		],
+	}, {
 		name: "v1.6.0",
 		description: [
 			"New: Can specify trainer specializations.",
 			"New: Can specify trainer path, or create a custom path.",
 			"New: Can manage trainer path resources, such as Battle Dice or Shadow Points.",
-			"Show all save and skill modifiers rather than just the proficient ones."
+			"Show all save and skill modifiers rather than just the proficient ones.",
 		],
 	}, {
 		name: "v1.5.5",
