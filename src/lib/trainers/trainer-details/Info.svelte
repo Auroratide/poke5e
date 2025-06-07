@@ -13,6 +13,7 @@
 	import SpecializationsInfo from "../specializations/SpecializationsInfo.svelte"
 	import { TrainerPathsInfo, type PathResourceUpdateDetail } from "../paths"
 	import { hasSpecialization } from "../specializations"
+	import { trainerHitDiceSize } from "../hit-dice"
 
 	const dispatch = createEventDispatcher()
 
@@ -63,7 +64,7 @@
 		<dd>{trainer.readKey}</dd>
 	</FlatDl>
 	<div class="column">
-		<HealthInfo hp={trainer.hp} hitDice={trainer.hitDice} dieSize="d8" {editable} on:update={onUpdateHealth} status={null} />
+		<HealthInfo hp={trainer.hp} hitDice={trainer.hitDice} dieSize={$trainerHitDiceSize} {editable} on:update={onUpdateHealth} status={null} />
 		<StatsInfo {trainer} />
 	</div>
 	<Art slot="art" src="{trainer.avatar.href}" alt="Trainer Avatar" />
