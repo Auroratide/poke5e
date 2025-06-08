@@ -43,8 +43,8 @@
 	let biography = trainer.biography
 	let originalAvatar = trainer.avatar
 	let money = trainer.money
-	let specializations = trainer.specializations
-	let trainerPath = trainer.path
+	let specializations = structuredClone(trainer.specializations)
+	let trainerPath = structuredClone(trainer.path)
 	let avatarToUpload: ImageInputValue | undefined = undefined
 	let isValid = true
 
