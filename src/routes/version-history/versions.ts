@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.6.2",
+		description: [
+			"Bug fix: No longer persists specializations or trainer path if editing is cancelled.",
+		],
+	}, {
 		name: "v1.6.1",
 		description: [
 			"References: Fixed typos.",
