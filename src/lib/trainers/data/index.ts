@@ -15,6 +15,7 @@ import { SupabaseTrainerProvider } from "./supabase"
 import { supabase } from "$lib/supabase"
 import { InMemoryTrainerProvider } from "./in-memory"
 import * as ENV from "$env/static/public"
+import type { ChosenFeat } from "$lib/feats/ChosenFeat"
 
 export type TrainerData = {
 	info: Trainer,
@@ -55,6 +56,8 @@ export interface TrainerDataProvider {
 	updateAllHeldItems: (writeKey: ReadWriteKey, pokemonId: PokemonId, heldItems: HeldItem[]) => Promise<HeldItem[]>
 	updateTrainerInventory: (writeKey: ReadWriteKey, inventory: InventoryItem[]) => Promise<InventoryItem[]>
 	updateTrainerItem: (writeKey: ReadWriteKey, item: InventoryItem) => Promise<boolean>
+	updateTrainerFeats: (writeKey: ReadWriteKey, feats: ChosenFeat[]) => Promise<ChosenFeat[]>
+	updatePokemonFeats: (writeKey: ReadWriteKey, pokemonId: PokemonId, feats: ChosenFeat[]) => Promise<ChosenFeat[]>
 	verifyWriteKey: (trainer: Trainer, writeKey: ReadWriteKey) => Promise<boolean>
 }
 
