@@ -11,7 +11,7 @@
 	import { CustomNatureIdentifier, isStandardNature } from "../nature"
 	import { type TrainerPokemon } from "../types"
 	import BasicInfoFieldset from "./forms/BasicInfoFieldset.svelte"
-	import FeatsFieldset from "./forms/FeatsFieldset.svelte"
+	import AbilitiesFieldset from "./forms/AbilitiesFieldset.svelte"
 	import GenderFieldset from "./forms/GenderFieldset.svelte"
 	import HeldItemsFieldset from "./forms/HeldItemsFieldset.svelte"
 	import MovesFieldset from "./forms/MovesFieldset.svelte"
@@ -81,7 +81,7 @@
 	<BasicInfoFieldset bind:nickname bind:nature bind:natureCustom bind:tera bind:level bind:ac bind:maxHp bind:maxHitDice bind:isShiny {disabled} />
 	<GenderFieldset bind:value={gender} {disabled} />
 	<AttributesFieldset bind:values={attributes} {disabled} />
-	<FeatsFieldset bind:ability {species} {disabled} />
+	<AbilitiesFieldset bind:ability {species} {disabled} />
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
 	<MovesFieldset bind:values={moves} {species} {level} {disabled} />
