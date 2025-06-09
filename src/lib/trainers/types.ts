@@ -7,6 +7,7 @@ import type { StorageResource } from "./data"
 import type { Nature } from "./nature"
 import type { Specializations } from "./specializations"
 import type { ChosenTrainerPath } from "./paths/ChosenTrainerPath"
+import type { ChosenFeat } from "$lib/feats/ChosenFeat"
 
 export type Resource = {
 	current: number,
@@ -65,6 +66,7 @@ export type TrainerPokemon = {
 	teraType: TeraPokeType | "",
 	status: NonVolatileStatus | null,
 	isShiny: boolean,
+	feats: ChosenFeat[],
 }
 
 export type WithPokemonData = {
@@ -104,6 +106,7 @@ export type TrainerInfo = {
 	avatar?: StorageResource,
 	specializations: Specializations,
 	path: ChosenTrainerPath,
+	feats: ChosenFeat[],
 }
 export type Trainer = TrainerInfo & {
 	id: TrainerId,

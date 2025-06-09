@@ -26,10 +26,12 @@ type TrainerUpdater = {
 	info: (info: TrainerInfo, options?: UpdaterOptions & AvatarUploadOptions) => Promise<void>
 	inventory: (info: TrainerInfo) => Promise<void>
 	inventoryItem: (item: InventoryItem, options?: UpdaterOptions) => Promise<void>
+	trainerFeats: (info: TrainerInfo) => Promise<void>
 	retire: () => Promise<void>
 	pokemon: (info: TrainerPokemon, options?: UpdaterOptions) => Promise<void>
 	moveset: (info: TrainerPokemon) => Promise<void>
 	heldItems: (info: TrainerPokemon) => Promise<void>
+	pokemonFeats: (info: TrainerPokemon) => Promise<void>
 	move: (info: LearnedMove, options?: UpdaterOptions) => Promise<void>
 	addToTeam: (pokemon: Pokemon) => Promise<TrainerPokemon>
 	removeFromTeam: (id: string) => Promise<void>
@@ -178,6 +180,20 @@ const createStore = () => {
 								})
 							}
 						},
+						trainerFeats: (info: TrainerInfo) => {
+							return provider.updateTrainerFeats(data.writeKey, info.feats).then((newFeats) => {
+								storeUpdateOne(readKey, (prev) => ({
+									...prev,
+									info: {
+										...prev.info,
+										feats: newFeats,
+									},
+								}))
+							}).catch((e: Error) => {
+								error.show(e.message)
+								throw e
+							})
+						},
 						retire: () => {
 							return provider.deleteTrainer(data.writeKey, data.info.id, data.info.readKey).then(() => {
 								storeUpdate((prev) => {
@@ -289,6 +305,26 @@ const createStore = () => {
 									pokemonList[pokeIndex] = {
 										...prev.pokemon[pokeIndex],
 										items: newItems,
+									}
+
+									return {
+										...prev,
+										pokemon: pokemonList,
+									}
+								})
+							}).catch((e: Error) => {
+								error.show(e.message)
+								throw e
+							})
+						},
+						pokemonFeats: (info: TrainerPokemon) => {
+							return provider.updatePokemonFeats(data.writeKey, info.id, info.feats).then((newFeats) => {
+								storeUpdateOne(readKey, (prev) => {
+									const pokemonList = [...prev.pokemon]
+									const pokeIndex = pokemonList.findIndex((it) => it.id === info.id)
+									pokemonList[pokeIndex] = {
+										...prev.pokemon[pokeIndex],
+										feats: newFeats,
 									}
 
 									return {

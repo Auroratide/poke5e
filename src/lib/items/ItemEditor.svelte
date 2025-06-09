@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import { MarkdownField, SelectField, TextField, Removable } from "$lib/design/forms"
+	import { MarkdownField, SelectField, TextField, Removable, Divider } from "$lib/design/forms"
 	import type { HeldItem } from "$lib/trainers/types"
 	import { groupByType } from "./group"
 	import { items } from "./store"
@@ -35,14 +35,4 @@
 	</Removable>
 	<MarkdownField label="Item Description" name="item-description-{value.id}" bind:value={value.description} {disabled} />
 {/if}
-<hr />
-
-<style>
-	hr {
-		grid-column: span 2;
-		margin: 0.25em auto;
-		background: none;
-		border: none;
-		border-block-end: 0.0625em dotted var(--skin-bg);
-	}
-</style>
+<Divider />

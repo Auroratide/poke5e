@@ -22,7 +22,10 @@
 		$trainer.update?.info(e.detail.trainer, {
 			updateAvatar: e.detail.updateAvatar,
 		}).then(() => {
-			return $trainer.update?.inventory(e.detail.trainer) ?? Promise.resolve()
+			return Promise.all([
+				$trainer.update?.inventory(e.detail.trainer) ?? Promise.resolve(),
+				$trainer.update?.trainerFeats(e.detail.trainer) ?? Promise.resolve(),
+			])
 		}).then(() => {
 			saving = false
 			goto(Url.trainers($trainer.info.readKey))

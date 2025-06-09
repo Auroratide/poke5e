@@ -13,6 +13,7 @@ import {
 } from "../types"
 import { Natures } from "../nature"
 import { Gender } from "../types"
+import type { ChosenFeat } from "$lib/feats/ChosenFeat"
 
 let POKEMON_ID = 1
 const nextPokemonId = () => (++POKEMON_ID).toString()
@@ -91,6 +92,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			resource: 3,
 			customFeatures: undefined,
 		},
+		feats: [],
 	},
 	pokemon: [ {
 		id: nextPokemonId(),
@@ -163,6 +165,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		teraType: "fairy",
 		status: null,
 		isShiny: false,
+		feats: [],
 	}, {
 		id: nextPokemonId(),
 		trainerId: "e2439894-8b10-4081-812c-0f16a773e959",
@@ -226,6 +229,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		teraType: "ghost",
 		status: null,
 		isShiny: false,
+		feats: [],
 	}, {
 		id: nextPokemonId(),
 		trainerId: "e2439894-8b10-4081-812c-0f16a773e959",
@@ -289,6 +293,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		teraType: "fire",
 		status: null,
 		isShiny: false,
+		feats: [],
 	} ],
 }, {
 	writeKey: "0DHGNM55DGSU9MLA1J7D",
@@ -351,6 +356,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			resource: 3,
 			customFeatures: undefined,
 		},
+		feats: [],
 	},
 	pokemon: [],
 } ]
@@ -424,6 +430,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 					ground: 0,
 				},
 				path: undefined,
+				feats: [],
 				id,
 				readKey,
 			},
@@ -526,6 +533,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 				teraType: "normal",
 				status: null,
 				isShiny: false,
+				feats: [],
 			}
 
 			trainer.pokemon.push(newPokemon)
@@ -611,6 +619,29 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 		trainer.info.inventory[itemIndex] = item
 
 		return true
+	}
+
+	updateTrainerFeats = async (writeKey: string, feats: ChosenFeat[]): Promise<ChosenFeat[]> => {
+		if (!writeKey) throw new Error("Invalid write key")
+
+		const trainer = this.entries.find((trainer) => trainer.writeKey === writeKey)
+		if (trainer != null) {
+			trainer.info.feats = feats
+		}
+
+		return feats
+	}
+
+	updatePokemonFeats = async (writeKey: string, pokemonId: string, feats: ChosenFeat[]): Promise<ChosenFeat[]> => {
+		if (!writeKey) throw new Error("Invalid write key")
+
+		const pokemon = this.entries
+			.flatMap((it) => it.pokemon)
+			.find((pokemon) => pokemon.id === pokemonId)
+
+		pokemon.feats = feats
+
+		return feats
 	}
 
 	verifyWriteKey = async (trainer: Trainer, writeKey: ReadWriteKey): Promise<boolean> => {

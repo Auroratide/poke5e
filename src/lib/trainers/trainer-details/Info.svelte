@@ -14,6 +14,7 @@
 	import { TrainerPathsInfo, type PathResourceUpdateDetail } from "../paths"
 	import { hasSpecialization } from "../specializations"
 	import { trainerHitDiceSize } from "../hit-dice"
+	import FeatsInfo from "$lib/feats/FeatsInfo.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -78,6 +79,12 @@
 	{/if}
 </section>
 <TrainerPathsInfo value={trainer.path} level={trainer.level} on:update={onUpdatePathResource} />
+{#if trainer.feats.length > 0}
+	<section>
+		<h2>Feats</h2>
+		<FeatsInfo values={trainer.feats} />
+	</section>
+{/if}
 <section>
 	<InventoryInfo money={trainer.money} inventory={trainer.inventory} {editable} on:update={onUpdateMoney} on:update-item={onUpdateItem} />
 </section>

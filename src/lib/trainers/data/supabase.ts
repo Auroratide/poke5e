@@ -19,6 +19,7 @@ import type { SupabaseClient } from "@supabase/supabase-js"
 import { isPokeType, type TeraPokeType } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import { createEmptyChosenTrainerPath } from "$lib/trainers/paths"
+import type { ChosenFeat } from "$lib/feats/ChosenFeat"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -26,28 +27,30 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 	constructor(private supabase: SupabaseClient) {}
 
 	allTrainers = async (): Promise<Trainer[]> => {
-		return Promise.all(getReadKeys().map((key) => this.supabase.rpc("get_trainer", { _read_key: key })
-			.maybeSingle<TrainerRow>()
-			.then(({ data, error }) => {
-				if (error) {
-					throw new TrainerDataProviderError("Could not get trainer.", error)
-				}
-
-				if (!data) return undefined
-
-				return rowToTrainer(data, this.getStorageResource)
-			})
-			.then(async (trainer) => {
-				if (trainer) {
-					const inventory = await this.getTrainerInventory(trainer.readKey)
-					trainer.inventory = inventory
-				}
-				return trainer
-			})),
-		).then((trainers) => trainers.filter((it) => it != null))
+		return Promise.all(
+			getReadKeys().map((key) => this.getOneTrainerInfo(key),
+			)).then((trainers) => trainers.filter((it) => it != null))
 	}
     
 	getTrainer = async (readKey: ReadWriteKey): Promise<undefined | TrainerData> => {
+		const trainer = await this.getOneTrainerInfo(readKey)
+
+		if (!trainer) return undefined
+
+		addReadKey(readKey)
+    
+		const pokemon: TrainerPokemon[] = await this.getTrainersPokemon(trainer.id)
+
+		const writeKey = getWriteKey(readKey)
+    
+		return {
+			info: trainer,
+			pokemon,
+			writeKey,
+		}
+	}
+
+	private getOneTrainerInfo = async (readKey: ReadWriteKey): Promise<Trainer | undefined> => {
 		const trainer = await this.supabase.rpc("get_trainer", { _read_key: readKey })
 			.maybeSingle<TrainerRow>()
 			.then(({ data, error }) => {
@@ -59,19 +62,22 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 				return rowToTrainer(data, this.getStorageResource)
 			})
-			.then(async (trainer) => {
-				if (trainer != null) {
-					const inventory = await this.getTrainerInventory(trainer.readKey)
-					trainer.inventory = inventory
-				}
-				return trainer
-			})
+		
+		if (trainer == null) return undefined
 
-		if (!trainer) return undefined
+		const [inventory, feats] = await Promise.all([
+			this.getTrainerInventory(trainer.readKey),
+			this.getTrainerFeats(trainer.readKey),
+		])
 
-		addReadKey(readKey)
-    
-		const pokemon: TrainerPokemon[] = await this.supabase.rpc("get_pokemon", { _trainer_id: trainer.id })
+		trainer.inventory = inventory
+		trainer.feats = feats
+
+		return trainer
+	}
+
+	private getTrainersPokemon = async (trainerId: string): Promise<TrainerPokemon[]> => {
+		return await this.supabase.rpc("get_pokemon", { _trainer_id: trainerId })
 			.select()
 			.then(({ data, error }) => {
 				if (error) {
@@ -92,14 +98,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					items,
 				}))
 			})))
-    
-		const writeKey = getWriteKey(readKey)
-    
-		return {
-			info: trainer,
-			pokemon,
-			writeKey,
-		}
+			.then((pokemon) => Promise.all(pokemon.map((thePokemon) => {
+				return this.getPokemonFeats(thePokemon.id).then((feats) => ({
+					...thePokemon,
+					feats,
+				}))
+			})))
 	}
 
 	newTrainer = async (info: Pick<TrainerInfo, "name" | "description">): Promise<TrainerData & WithWriteKey> => {
@@ -155,6 +159,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 				ground: 0,
 			},
 			path: createEmptyChosenTrainerPath(),
+			feats: [],
 		}
 
 		const { data, error } = await this.supabase.rpc("new_trainer", {
@@ -514,6 +519,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			teraType: pokemon.type[0],
 			status: null,
 			isShiny: false,
+			feats: [],
 		}
     
 		const { data, error } = await this.supabase.rpc("add_pokemon", {
@@ -591,70 +597,93 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return data > 0
 	}
 
-	updateMoveset = async (writeKey: ReadWriteKey, pokemonId: PokemonId, newMoveset: LearnedMove[]): Promise<LearnedMove[]> => {
-		const existingMoveset = await this.getMoveset(pokemonId)
-		const newIds = newMoveset.map((it) => it.id)
-		const existingIds = existingMoveset.map((it) => it.id)
+	private updateListOfThings = async <T extends { id: string }>({
+		thingName,
+		writeKey,
+		newThings,
+		getExistingThings,
+		removeFunctionName,
+		updateFunctionName,
+		addFunctionName,
+		mapThingToDbArgument,
+	}: {
+		thingName: string,
+		writeKey: ReadWriteKey,
+		newThings: T[],
+		getExistingThings: () => Promise<T[]>,
+		removeFunctionName: string,
+		updateFunctionName: string,
+		addFunctionName: string,
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
+		mapThingToDbArgument: (thing: T, index: number, type: "add" | "update") => any,
+	}): Promise<T[]> => {
+		const existingThings = await getExistingThings()
+		const newIds = newThings.map((it) => it.id)
+		const existingIds = existingThings.map((it) => it.id)
 
 		const deletedIds = existingIds.filter((id) => !newIds.includes(id))
-		await Promise.all(deletedIds.map((id) => this.supabase.rpc("remove_move", {
+		await Promise.all(deletedIds.map((id) => this.supabase.rpc(removeFunctionName, {
 			_write_key: writeKey,
 			_id: id,
 		}).single<number>().then(({ data, error }) => {
 			if (error) {
-				throw new TrainerDataProviderError("Could not delete move.", error)
+				throw new TrainerDataProviderError(`Could not delete ${thingName}.`, error)
 			}
-            
+
 			if (data <= 0) {
-				throw new TrainerDataProviderError("Either this pokemon does not exist or you do not have permission to edit them.")
+				throw new TrainerDataProviderError("Either this trainer/pokemon does not exist or you do not have permission to edit them.")
 			}
 
 			return data > 0
 		})))
 
-		return await Promise.all(newMoveset.map((move, index) => {
-			if (existingIds.includes(move.id)) {
-				return this.supabase.rpc("update_move", {
-					_write_key: writeKey,
-					_id: move.id,
-					_move_id: move.moveId,
-					_pp_cur: move.pp.current,
-					_pp_max: move.pp.max,
-					_notes: move.notes,
-					_rank: index,
-				}).single<number>().then(({ data, error }) => {
+		return await Promise.all(newThings.map((thing, index) => {
+			if (existingIds.includes(thing.id)) {
+				return this.supabase.rpc(updateFunctionName, mapThingToDbArgument(thing, index, "update")).single<number>().then(({ data, error }) => {
 					if (error) {
-						throw new TrainerDataProviderError("Could not update move.", error)
+						throw new TrainerDataProviderError(`Could not update ${thingName}.`, error)
 					}
 
 					if (data <= 0) {
-						throw new TrainerDataProviderError("Either this pokemon does not exist or you do not have permission to edit them.")
+						throw new TrainerDataProviderError("Either this trainer/pokemon does not exist or you do not have permission to edit them.")
 					}
 
-					return { ...move }
+					return { ...thing }
 				})
 			} else {
-				return this.supabase.rpc("add_move", {
-					_write_key: writeKey,
-					_pokemon_id: pokemonId,
-					_move_id: move.moveId,
-					_pp_cur: move.pp.current,
-					_pp_max: move.pp.max,
-					_notes: move.notes,
-					_rank: index,
-				}).single<string>().then(({ data, error }) => {
+				return this.supabase.rpc(addFunctionName, mapThingToDbArgument(thing, index, "add")).single<string>().then(({ data, error }) => {
 					if (error) {
-						throw new TrainerDataProviderError("Could not add move.", error)
+						throw new TrainerDataProviderError(`Could not add ${thingName}.`, error)
 					}
 
 					return {
-						...move,
+						...thing,
 						id: data,
 					}
 				})
 			}
 		}))
 	}
+
+	updateMoveset = async (writeKey: ReadWriteKey, pokemonId: PokemonId, newMoveset: LearnedMove[]) => this.updateListOfThings<LearnedMove>({
+		thingName: "move",
+		writeKey: writeKey,
+		newThings: newMoveset,
+		getExistingThings: () => this.getMoveset(pokemonId),
+		removeFunctionName: "remove_move",
+		updateFunctionName: "update_move",
+		addFunctionName: "add_move",
+		mapThingToDbArgument: (move, index, type) => ({
+			_write_key: writeKey,
+			_pokemon_id: type === "add" ? pokemonId : undefined,
+			_id: type === "update" ? move.id : undefined,
+			_move_id: move.moveId,
+			_pp_cur: move.pp.current,
+			_pp_max: move.pp.max,
+			_notes: move.notes,
+			_rank: index,
+		}),
+	})
 
 	updateOneMove = async (writeKey: string, move: LearnedMove): Promise<boolean> => {
 		const { data, error } = await this.supabase.rpc("update_move", {
@@ -677,133 +706,80 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return data > 0
 	}
 
-	updateAllHeldItems = async (writeKey: ReadWriteKey, pokemonId: PokemonId, newHeldItems: HeldItem[]): Promise<HeldItem[]> => {
-		const existingHeldItems = await this.getHeldItems(pokemonId)
-		const newIds = newHeldItems.map((it) => it.id)
-		const existingIds = existingHeldItems.map((it) => it.id)
-
-		const deletedIds = existingIds.filter((id) => !newIds.includes(id))
-		await Promise.all(deletedIds.map((id) => this.supabase.rpc("remove_held_item", {
+	updateAllHeldItems = async (writeKey: ReadWriteKey, pokemonId: PokemonId, newHeldItems: HeldItem[]) => this.updateListOfThings<HeldItem>({
+		thingName: "held item",
+		writeKey: writeKey,
+		newThings: newHeldItems,
+		getExistingThings: () => this.getHeldItems(pokemonId),
+		removeFunctionName: "remove_held_item",
+		updateFunctionName: "update_held_item",
+		addFunctionName: "add_held_item",
+		mapThingToDbArgument: (item, index, type) => ({
 			_write_key: writeKey,
-			_id: id,
-		}).single<number>().then(({ data, error }) => {
-			if (error) {
-				throw new TrainerDataProviderError("Could not delete held item.", error)
-			}
-            
-			if (data <= 0) {
-				throw new TrainerDataProviderError("Either this pokemon does not exist or you do not have permission to edit them.")
-			}
+			_pokemon_id: type === "add" ? pokemonId : undefined,
+			_id: type === "update" ? item.id : undefined,
+			_item_id: item.type === "standard" ? item.itemId : null,
+			_custom_name: item.type === "custom" ? item.name : null,
+			_description: item.type === "custom" ? item.description : null,
+			_rank: index,
+		}),
+	})
 
-			return data > 0
-		})))
-
-		return await Promise.all(newHeldItems.map((item, index) => {
-			if (existingIds.includes(item.id)) {
-				return this.supabase.rpc("update_held_item", {
-					_write_key: writeKey,
-					_id: item.id,
-					_item_id: item.type === "standard" ? item.itemId : null,
-					_custom_name: item.type === "custom" ? item.name : null,
-					_description: item.type === "custom" ? item.description : null,
-					_rank: index,
-				}).single<number>().then(({ data, error }) => {
-					if (error) {
-						throw new TrainerDataProviderError("Could not update held item.", error)
-					}
-
-					if (data <= 0) {
-						throw new TrainerDataProviderError("Either this pokemon does not exist or you do not have permission to edit them.")
-					}
-
-					return { ...item }
-				})
-			} else {
-				return this.supabase.rpc("add_held_item", {
-					_write_key: writeKey,
-					_pokemon_id: pokemonId,
-					_item_id: item.type === "standard" ? item.itemId : null,
-					_custom_name: item.type === "custom" ? item.name : null,
-					_description: item.type === "custom" ? item.description : null,
-					_rank: index,
-				}).single<string>().then(({ data, error }) => {
-					if (error) {
-						throw new TrainerDataProviderError("Could not add held item.", error)
-					}
-
-					return {
-						...item,
-						id: data,
-					}
-				})
-			}
-		}))
-	}
-
-	updateTrainerInventory = async (writeKey: ReadWriteKey, newInventory: InventoryItem[]): Promise<InventoryItem[]> => {
-		const readKey = getReadKey(writeKey)
-		const existingInventory = await this.getTrainerInventory(readKey)
-		const newIds = newInventory.map((it) => it.id)
-		const existingIds = existingInventory.map((it) => it.id)
-
-		const deletedIds = existingIds.filter((id) => !newIds.includes(id))
-		await Promise.all(deletedIds.map((id) => this.supabase.rpc("remove_inventory_item", {
+	updateTrainerInventory = async (writeKey: ReadWriteKey, newInventory: InventoryItem[]) => this.updateListOfThings<InventoryItem>({
+		thingName: "inventory item",
+		writeKey: writeKey,
+		newThings: newInventory,
+		getExistingThings: () => this.getTrainerInventory(getReadKey(writeKey)),
+		removeFunctionName: "remove_inventory_item",
+		updateFunctionName: "update_inventory_item",
+		addFunctionName: "add_inventory_item",
+		mapThingToDbArgument: (item, index, type) => ({
 			_write_key: writeKey,
-			_id: id,
-		}).single<number>().then(({ data, error }) => {
-			if (error) {
-				throw new TrainerDataProviderError("Could not delete inventory item.", error)
-			}
-            
-			if (data <= 0) {
-				throw new TrainerDataProviderError("Either this trainer does not exist or you do not have permission to edit them.")
-			}
+			_id: type === "update" ? item.id : undefined,
+			_item_id: item.type === "standard" ? item.itemId : null,
+			_quantity: item.quantity,
+			_custom_name: item.type === "custom" ? item.name : null,
+			_description: item.type === "custom" ? item.description : null,
+			_rank: index,
+		}),
+	})
 
-			return data > 0
-		})))
+	updateTrainerFeats = async (writeKey: ReadWriteKey, newFeats: ChosenFeat[]) => this.updateListOfThings<ChosenFeat>({
+		thingName: "feat",
+		writeKey: writeKey,
+		newThings: newFeats,
+		getExistingThings: () => this.getTrainerFeats(getReadKey(writeKey)),
+		removeFunctionName: "remove_trainer_feat",
+		updateFunctionName: "update_trainer_feat",
+		addFunctionName: "add_trainer_feat",
+		mapThingToDbArgument: (feat, index, type) => ({
+			_write_key: writeKey,
+			_id: type === "update" ? feat.id : undefined,
+			_feat_name: feat.name,
+			_description: feat.description,
+			_is_custom: feat.isCustom,
+			_rank: index,
+		}),
+	})
 
-		return await Promise.all(newInventory.map((item, index) => {
-			if (existingIds.includes(item.id)) {
-				return this.supabase.rpc("update_inventory_item", {
-					_write_key: writeKey,
-					_id: item.id,
-					_item_id: item.type === "standard" ? item.itemId : null,
-					_quantity: item.quantity,
-					_custom_name: item.type === "custom" ? item.name : null,
-					_description: item.type === "custom" ? item.description : null,
-					_rank: index,
-				}).single<number>().then(({ data, error }) => {
-					if (error) {
-						throw new TrainerDataProviderError("Could not update inventory item.", error)
-					}
-
-					if (data <= 0) {
-						throw new TrainerDataProviderError("Either this trainer does not exist or you do not have permission to edit them.")
-					}
-
-					return { ...item }
-				})
-			} else {
-				return this.supabase.rpc("add_inventory_item", {
-					_write_key: writeKey,
-					_item_id: item.type === "standard" ? item.itemId : null,
-					_quantity: item.quantity,
-					_custom_name: item.type === "custom" ? item.name : null,
-					_description: item.type === "custom" ? item.description : null,
-					_rank: index,
-				}).single<string>().then(({ data, error }) => {
-					if (error) {
-						throw new TrainerDataProviderError("Could not add inventory item.", error)
-					}
-
-					return {
-						...item,
-						id: data,
-					}
-				})
-			}
-		}))
-	}
+	updatePokemonFeats = async (writeKey: ReadWriteKey, pokemonId: PokemonId, newFeats: ChosenFeat[]) => this.updateListOfThings<ChosenFeat>({
+		thingName: "feat",
+		writeKey: writeKey,
+		newThings: newFeats,
+		getExistingThings: () => this.getPokemonFeats(pokemonId),
+		removeFunctionName: "remove_pokemon_feat",
+		updateFunctionName: "update_pokemon_feat",
+		addFunctionName: "add_pokemon_feat",
+		mapThingToDbArgument: (feat, index, type) => ({
+			_write_key: writeKey,
+			_pokemon_id: type === "add" ? pokemonId : undefined,
+			_id: type === "update" ? feat.id : undefined,
+			_feat_name: feat.name,
+			_description: feat.description,
+			_is_custom: feat.isCustom,
+			_rank: index,
+		}),
+	})
 
 	updateTrainerItem = async (writeKey: ReadWriteKey, item: InventoryItem): Promise<boolean> => {
 		const { data, error } = await this.supabase.rpc("update_inventory_item", {
@@ -874,6 +850,28 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 
 		return data?.map((row) => rowToInventoryItem(row)) ?? []
+	}
+
+	private getTrainerFeats = async (readKey: ReadWriteKey): Promise<ChosenFeat[]> => {
+		const { data, error } = await this.supabase.rpc("get_trainer_feats", { _read_key: readKey })
+			.select()
+
+		if (error) {
+			throw new TrainerDataProviderError("Could not get trainer feats.", error)
+		}
+
+		return data?.map((row) => rowToTrainerFeat(row)) ?? []
+	}
+
+	private getPokemonFeats = async (pokemonId: PokemonId): Promise<ChosenFeat[]> => {
+		const { data, error } = await this.supabase.rpc("get_pokemon_feats", { _pokemon_id: pokemonId  })
+			.select()
+
+		if (error) {
+			throw new TrainerDataProviderError("Could not get pokemon feats.", error)
+		}
+
+		return data?.map((row) => rowToPokemonFeat(row)) ?? []
 	}
 
 	private getStorageResource = (bucket: string, name: string) => ({
@@ -1093,6 +1091,7 @@ const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name
 			},
 		},
 	},
+	feats: [],
 })
 
 type PokemonRow = {
@@ -1214,6 +1213,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 	teraType: row.tera_type as TeraPokeType,
 	status: row.status as NonVolatileStatus | null,
 	isShiny: row.is_shiny,
+	feats: [],
 })
 
 type MoveRow = {
@@ -1264,4 +1264,32 @@ const rowToInventoryItem = (row: InventoryItemRow): InventoryItem => ({
 	quantity: row.quantity,
 	name: row.custom_name,
 	description: row.description,
+})
+
+type TrainerFeatRow = {
+	id: string,
+	feat_name: string,
+	description: string | null,
+	is_custom: boolean,
+}
+
+const rowToTrainerFeat = (row: TrainerFeatRow): ChosenFeat => ({
+	id: row.id.toString(),
+	name: row.feat_name,
+	description: row.description,
+	isCustom: row.is_custom,
+})
+
+type PokemonFeatRow = {
+	id: string,
+	feat_name: string,
+	description: string | null,
+	is_custom: boolean,
+}
+
+const rowToPokemonFeat = (row: PokemonFeatRow): ChosenFeat => ({
+	id: row.id.toString(),
+	name: row.feat_name,
+	description: row.description,
+	isCustom: row.is_custom,
 })
