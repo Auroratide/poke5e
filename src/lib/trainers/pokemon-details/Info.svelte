@@ -10,7 +10,7 @@
 	import AttributeBlock from "$lib/dnd/AttributeBlock.svelte"
 	import TypeEffectiveness from "$lib/creatures/TypeEffectiveness.svelte"
 	import MovesInfo from "./MovesInfo.svelte"
-	import FeatsInfo from "./FeatsInfo.svelte"
+	import AbilitiesInfo from "./AbilitiesInfo.svelte"
 	import NotesInfo from "./NotesInfo.svelte"
 	import PokemonArt from "$lib/creatures/PokemonArt.svelte"
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
@@ -78,7 +78,7 @@
 		<TypeEffectiveness type={pokemon.type} />
 	</FlatDl>
 	<h2>Abilities & Items</h2>
-	<FeatsInfo {pokemon} {species} />
+	<AbilitiesInfo {pokemon} {species} />
 	<HeldItemsInfo {pokemon} />
 </section>
 <section>
