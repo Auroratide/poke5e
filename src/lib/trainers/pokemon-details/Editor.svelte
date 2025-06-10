@@ -15,6 +15,8 @@
 	import GenderFieldset from "./forms/GenderFieldset.svelte"
 	import HeldItemsFieldset from "./forms/HeldItemsFieldset.svelte"
 	import MovesFieldset from "./forms/MovesFieldset.svelte"
+	import FeatsFieldset from "$lib/feats/FeatsFieldset.svelte"
+	import { DndAndPokemonFeats } from "$lib/feats/PokemonFeats"
 
 	const dispatch = createEventDispatcher()
 
@@ -39,6 +41,7 @@
 	let notes = pokemon.notes
 	let type = pokemon.type
 	let isShiny = pokemon.isShiny
+	let feats = pokemon.feats.map((it) => structuredClone(it))
 
 	let moves = structuredClone(pokemon.moves)
 	let items = structuredClone(pokemon.items)
@@ -73,6 +76,7 @@
 			moves,
 			items,
 			notes,
+			feats,
 		} as TrainerPokemon)
 	}
 </script>
@@ -85,6 +89,7 @@
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
 	<MovesFieldset bind:values={moves} {species} {level} {disabled} />
+	<FeatsFieldset feats={$DndAndPokemonFeats} bind:values={feats} {disabled} />
 	<HeldItemsFieldset bind:items {disabled} />
 	<Fieldset title="General">
 		<MarkdownField label="Notes" bind:value={notes} placeholder="Use this for any general notes not covered by the above fields..." {disabled} />

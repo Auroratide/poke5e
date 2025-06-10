@@ -16,6 +16,7 @@
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 	import HeldItemsInfo from "./HeldItemsInfo.svelte"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
+	import FeatsInfo from "$lib/feats/FeatsInfo.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -77,10 +78,18 @@
 	<FlatDl>
 		<TypeEffectiveness type={pokemon.type} />
 	</FlatDl>
+</section>
+<section>
 	<h2>Abilities & Items</h2>
 	<AbilitiesInfo {pokemon} {species} />
 	<HeldItemsInfo {pokemon} />
 </section>
+{#if pokemon.feats.length > 0}
+	<section>
+		<h2>Feats</h2>
+		<FeatsInfo values={pokemon.feats} />
+	</section>
+{/if}
 <section>
 	<MovesInfo {pokemon} {editable} on:update={onUpdatePp} />
 </section>

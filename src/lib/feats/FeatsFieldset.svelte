@@ -2,13 +2,14 @@
 	import Button from "$lib/design/Button.svelte"
 	import { Fieldset, focusInputField } from "$lib/design/forms"
 	import type { ChosenFeat } from "./ChosenFeat"
-	import { DndFeats } from "./DndFeats"
+	import type { Feat } from "./Feat"
 	import FeatEditor from "./FeatEditor.svelte"
 
 	export let values: ChosenFeat[]
 	export let disabled: boolean
+	export let feats: Feat[]
 
-	const options = DndFeats.map((it) => ({
+	$: options = feats.map((it) => ({
 		name: it.name,
 		value: it.name,
 		placeholder: it.description,
@@ -25,7 +26,7 @@
 		const nextId = nextNewId()
 		values = [...values, {
 			id: nextId,
-			name: DndFeats[0].name,
+			name: feats[0].name,
 			description: "",
 			isCustom: false,
 		} ]
