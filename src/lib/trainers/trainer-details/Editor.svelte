@@ -25,6 +25,7 @@
 	import { SpecializationsFieldset } from "../specializations"
 	import { TrainerPathsFieldset } from "../paths"
 	import FeatsFieldset from "$lib/feats/FeatsFieldset.svelte"
+	import { DndFeats } from "$lib/feats"
 	
 	const dispatch = createEventDispatcher()
 
@@ -94,7 +95,7 @@
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
 	<SpecializationsFieldset bind:values={specializations} {disabled} />
 	<TrainerPathsFieldset bind:value={trainerPath} {disabled} />
-	<FeatsFieldset bind:values={feats} {disabled} />
+	<FeatsFieldset feats={DndFeats} bind:values={feats} {disabled} />
 	<InventoryFieldset bind:money bind:inventory {disabled} />
 	<Fieldset title="General">
 		<MarkdownField label="Description" bind:value={description} placeholder="General info about this trainer..." {disabled} />
