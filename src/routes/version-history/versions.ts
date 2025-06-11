@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.6.3",
+		description: [
+			"New: Can manage feats on trainers and Pokémon.",
+		],
+	}, {
 		name: "v1.6.2",
 		description: [
 			"Bug fix: No longer persists specializations or trainer path if editing is cancelled.",
@@ -279,7 +284,7 @@ export const versionHistory: VersionHistory = {
 	groups: [ {
 		name: "v1.6",
 		highlight: "Trainer Paths & Specializations!",
-		description: "Trainers can now specify type specializations and chosen path. Type bonuses are applied to the corresponding Pokémon, and path resources (such as Shadow Points) can be managed.",
+		description: "Trainers can now specify type specializations, chosen path, and feats. Type bonuses are applied to the corresponding Pokémon, and path resources (such as Shadow Points) can be managed.",
 	}, {
 		name: "v1.5",
 		highlight: "Original vs Updated Rules Toggle!",
