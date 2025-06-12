@@ -24,6 +24,7 @@
 	import RemoveTrainerCard from "$lib/trainers/trainer-details/RemoveTrainerCard.svelte"
 	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 	import JavascriptRequired from "$lib/trainers/JavascriptRequired.svelte"
+	import ErrorMessage from "$lib/trainers/ErrorMessage.svelte"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: pokemonId = browser ? $page.url.searchParams.get("pokemon") : undefined
@@ -60,6 +61,8 @@
 				{:else}
 					<NoTrainer trainerKey={trainerId} />
 				{/if}
+			{:catch error}
+				<ErrorMessage error="{error}" />
 			{/await}
 		{:else}
 			{#await trainerList}
@@ -68,6 +71,8 @@
 				{#if trainerList}
 					<TrainerList trainers={trainerList} showGetStarted={action == null} />
 				{/if}
+			{:catch error}
+				<ErrorMessage error="{error}" />
 			{/await}
 		{/if}
 	</nav>
@@ -98,6 +103,8 @@
 			{:else}
 				<TrainerCard {trainer} />
 			{/if}
+		{:catch error}
+			<ErrorMessage error="{error}" />
 		{/await}
 	{:else}
 		{#if action === PageAction.newTrainer}
