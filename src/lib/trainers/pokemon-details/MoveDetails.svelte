@@ -17,6 +17,7 @@
 	import { createEventDispatcher } from "svelte"
 	import type { LearnedMove } from "../types"
 	import PlusMinus from "$lib/design/PlusMinus.svelte"
+	import FlatDl from "$lib/design/FlatDl.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -68,6 +69,15 @@
 		</div>
 	</div>
 	<div class="space-inner smaller-font">
+		<FlatDl columns={1}>
+			<dt>Range</dt>
+			<dd class="cap">{moveData.range}</dd>
+			<dt>Time</dt>
+			<dd>{moveData.time}</dd>
+			<dt>Duration</dt>
+			<dd class="cap">{moveData.duration}</dd>
+		</FlatDl>
+		<div style:margin-block-end="0.5em"></div>
 		<MoveDescription move={moveData} />
 	</div>
 	{#if move.notes !== undefined && move.notes.length > 0}
