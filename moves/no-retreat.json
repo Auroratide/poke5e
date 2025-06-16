@@ -1,1 +1,1 @@
-{"id":"no-retreat","name":"No Retreat","type":"fighting","power":["str"],"time":"1 action","pp":3,"duration":"1 minute","range":"self","description":["For the duration, you have advantage on attack rolls and saving throws. You cannot switch out or flee."]}
+{"id":"no-retreat","name":"No Retreat","type":"fighting","power":["str"],"time":"1 action","pp":3,"duration":"1 minute","range":"self","description":["For the duration, you have advantage on attack rolls and saving throws. You cannot switch out or flee."],"pokemon":[{"id":"falinks","name":"Falinks"}]}
