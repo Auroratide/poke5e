@@ -24,6 +24,10 @@ export type Move = {
 	higherLevels?: string,
 	optional?: BodyText,
 	contest?: Contest,
+	pokemon?: {
+		id: string,
+		name: string,
+	}[],
 }
 
 export type MinimalMoveInfo = Pick<Move, "id" | "name" | "type" | "power" | "pp">
@@ -33,6 +37,9 @@ export type Tm = {
 	move: string,
 	cost: number,
 	moveInfo: MinimalMoveInfo & Partial<Move>,
+	/**
+	 * @deprecated use move.pokemon instead
+	 */
 	pokemon?: {
 		id: string,
 		name: string,

@@ -6,6 +6,7 @@
 	import { powerAsString } from "./string"
 	import MoveDescription from "./MoveDescription.svelte"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
+	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 
 	export let move: Move
 </script>
@@ -30,19 +31,25 @@
 	<section class="description">
 		<MoveDescription {move} />
 	</section>
+	{#if move.pokemon != null && move.pokemon.length > 0}
+		<section>
+			<h2>Can learn this move:</h2>
+			<SimplePokemonList pokemon={move.pokemon} />
+		</section>
+	{/if}
 	<slot name="extra"></slot>
 	{#if move.contest}
 		<section class="contest" style:--contest-color="var(--skin-contest-{move.contest.contest})">
 			<VisuallyHidden><h2>Context</h2></VisuallyHidden>
 			<FlatDl>
-					<dt>Contest</dt>
-					<dd class="contest-type">{move.contest.contest}</dd>
-					<dt>Appeal</dt>
-					<dd>{move.contest.appeal}</dd>
-					<dt>Jam</dt>
-					<dd>{move.contest.jam}</dd>
-					<dt>Effect</dt>
-					<dd>{move.contest.effect}</dd>
+				<dt>Contest</dt>
+				<dd class="contest-type">{move.contest.contest}</dd>
+				<dt>Appeal</dt>
+				<dd>{move.contest.appeal}</dd>
+				<dt>Jam</dt>
+				<dd>{move.contest.jam}</dd>
+				<dt>Effect</dt>
+				<dd>{move.contest.effect}</dd>
 			</FlatDl>
 		</section>
 	{/if}
