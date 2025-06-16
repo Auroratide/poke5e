@@ -12,6 +12,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.6.4",
+		description: [
+			"Can view range, time, and duration of moves that your Pokémon have learned.",
+			"On move pages, can view a list of what Pokémon can learn those moves.",
+			"Bug fix: Trainer path resource should not appear editable when trainer is read-only.",
+		],
+	}, {
 		name: "v1.6.3",
 		description: [
 			"New: Can manage feats on trainers and Pokémon.",
