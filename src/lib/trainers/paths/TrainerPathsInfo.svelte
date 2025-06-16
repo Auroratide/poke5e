@@ -15,6 +15,7 @@
 	const dispatch = createEventDispatcher()
 
 	export let value: ChosenTrainerPath
+	export let editable: boolean
 	export let level: number
 
 	$: paths = TrainerPaths[$rulesVersion] 
@@ -36,10 +37,17 @@
 		{/if}
 		{#if resource != null && level >= resource.acquiredAtLevel}
 			<p class="row">
-				<label for="trainer-path-resource">{resource.name}:</label>
-				<span style:flex="1">
-					<NumericResourceField id="trainer-path-resource" value={value.resource} on:change={onChangeResource} />
-				</span>
+				{#if editable}
+					<label for="trainer-path-resource">{resource.name}:</label>
+					<span style:flex="1">
+						<NumericResourceField id="trainer-path-resource" value={value.resource} on:change={onChangeResource} />
+					</span>
+				{:else}
+					<strong>{resource.name}:</strong>
+					<span style:flex="1">
+						{value.resource}
+					</span>
+				{/if}
 			</p>
 		{/if}
 		{#each TrainerFeatureLevelLandmarks as landmarkLevel}

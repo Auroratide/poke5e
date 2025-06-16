@@ -78,7 +78,7 @@
 		<SpecializationsInfo specializations={trainer.specializations} />
 	{/if}
 </section>
-<TrainerPathsInfo value={trainer.path} level={trainer.level} on:update={onUpdatePathResource} />
+<TrainerPathsInfo value={trainer.path} level={trainer.level} on:update={onUpdatePathResource} {editable} />
 {#if trainer.feats.length > 0}
 	<section>
 		<h2>Feats</h2>
