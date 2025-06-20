@@ -16431,8 +16431,7 @@
 					"knock-off",
 					"stun-spore",
 					"natural-gift",
-					"ancient-power",
-					""
+					"ancient-power"
 				],
 				"level18": [
 					"giga-drain",
@@ -17765,13 +17764,11 @@
 				"level6": [
 					"false-swipe",
 					"agility",
-					"wing-attack",
-					""
+					"wing-attack"
 				],
 				"level10": [
 					"fury-cutter",
-					"slash",
-					""
+					"slash"
 				],
 				"level14": [
 					"razor-wind",
