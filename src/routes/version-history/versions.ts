@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.6.5",
+		description: [
+			"Bug fix: Removed undefined moves on Scyther and Tangela.",
+		],
+	}, {
 		name: "v1.6.4",
 		description: [
 			"Can view range, time, and duration of moves that your Pokémon have learned.",
