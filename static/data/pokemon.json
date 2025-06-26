@@ -5957,7 +5957,26 @@
 							},
 							{
 								"type": "item",
-								"value": "Leaf Stone, or Bellossom at level 14 and above with the help of a Sun Stone"
+								"value": "Leaf Stone"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					},
+					{
+						"id": "bellossom",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 14
+							},
+							{
+								"type": "item",
+								"value": "Sun Stone"
 							}
 						],
 						"effects": [
@@ -53251,7 +53270,26 @@
 							},
 							{
 								"type": "item",
-								"value": "Deep Sea Tooth, or Gorebyss at level 8 and above while holding a Deep Sea Scale"
+								"value": "Deep Sea Tooth"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 10
+							}
+						]
+					},
+					{
+						"id": "gorebyss",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							},
+							{
+								"type": "item",
+								"value": "Deep Sea Scale"
 							}
 						],
 						"effects": [
