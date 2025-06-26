@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.6.6",
+		description: [
+			"Bug fix: Fixed evolution options for Gloom and Clamperl.",
+		],
+	}, {
 		name: "v1.6.5",
 		description: [
 			"Bug fix: Removed undefined moves on Scyther and Tangela.",
