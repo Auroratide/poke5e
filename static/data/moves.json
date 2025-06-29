@@ -1018,6 +1018,22 @@
       ],
       "higherLevels": "The damage dice roll for this move changes to 3d10 at level 5, 5d8 at level 10, and 8d8 at level 17."
     },
+		{
+      "id": "body-press",
+      "name": "Body Press",
+      "type": "fighting",
+      "power": [
+        "con"
+      ],
+      "time": "1 action",
+      "pp": 10,
+      "duration": "instantaneous",
+      "range": "melee",
+      "description": [
+        "You slam into your target with your body. Make a melee attack against a target, dealing 2d6 + MOVE fighting damage on a hit. If your size is at least one category greater than the target's size, deal an additional MOVE fighting damage."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
     {
       "id": "body-slam",
       "name": "Body Slam",
@@ -3519,6 +3535,22 @@
         "You lunge at a creature with a devastating sting attack. Make a melee attack on a creature, dealing 1d8 + MOVE bug damage on a hit. If this attack causes the target to faint, double your ability modifier for attack rolls and damage on your next turn."
       ],
       "higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17."
+    },
+		{
+      "id": "fickle-beam",
+      "name": "Fickle Beam",
+      "type": "dragon",
+      "power": [
+        "dex"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "80ft",
+      "description": [
+        "You shoot a beam of light to inflict damage. Make a ranged attack, dealing 2d6 + MOVE dragon damage. This move scores a critical hit on an attack roll of natural 17 or higher."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
     },
     {
       "id": "fiery-dance",
@@ -6329,6 +6361,22 @@
         "When a creature scores a critical hit on you or an ally in range, you may use your reaction to quickly recite a magical incantation that treats the attack like a normal hit, preventing the extra damage and/or effect of the crit."
       ]
     },
+		{
+      "id": "lumina-crash",
+      "name": "Lumina Crash",
+      "type": "psychic",
+      "power": [
+        "wis"
+      ],
+      "time": "1 action",
+      "pp": 5,
+      "duration": "instantaneous",
+      "range": "self (20ft cone)",
+      "description": [
+        "You unleash a peculiar light that affects the mind. Each creature in range must make a WIS save against your Move DC, taking 2d6 + MOVE psychic damage on a failure or half that damage on a success. Each creature that fails also has -2 to their WIS saves until the end of your next turn."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17."
+    },
     {
       "id": "lunar-dance",
       "name": "Lunar Dance",
@@ -9046,6 +9094,24 @@
       "description": [
         "You bestow a loving blessing on a target feinted Pokémon. Half of the target's HP is restored."
       ]
+    },
+		{
+      "id": "rising-voltage",
+      "name": "Rising Voltage",
+      "type": "electric",
+      "power": [
+        "dex",
+				"wis"
+      ],
+      "time": "1 action",
+      "pp": 3,
+      "duration": "instantaneous",
+      "range": "60ft",
+      "description": [
+        "You attack with electric voltage rising from the ground. The target creature must make a DEX save against your Move DC, taking 1d12 + MOVE electric damage on failure or half on success.",
+				"If you are in electric terrain, then all other ceatures in the same electric terrain become targets of this move, up to 60ft from you."
+      ],
+      "higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
     },
     {
       "id": "roar",
