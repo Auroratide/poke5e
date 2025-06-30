@@ -1,1 +1,1 @@
-{"id":"babiri-berry","name":"Babiri Berry","type":"berry","cost":80,"description":["Can be consumed as a reaction to taking steel-type damage. You take half that damage instead."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/babiri-berry.png"}}
+{"id":"babiri-berry","name":"Babiri Berry","type":"berry","cost":200,"description":["Can be consumed as a reaction to taking steel-type damage. You take half that damage instead."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/babiri-berry.png"}}

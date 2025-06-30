@@ -1,0 +1,1 @@
+{"id":"flying-memory-disc","name":"Flying Memory Disc","type":"held item","cost":2000,"description":["When held by a Pokémon with the RKS System ability, changes the type of the holder to Flying."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flying-memory.png"}}

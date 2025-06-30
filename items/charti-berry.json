@@ -1,1 +1,1 @@
-{"id":"charti-berry","name":"Charti Berry","type":"berry","cost":80,"description":["Can be consumed as a reaction to taking rock-type damage. You take half that damage instead."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charti-berry.png"}}
+{"id":"charti-berry","name":"Charti Berry","type":"berry","cost":200,"description":["Can be consumed as a reaction to taking rock-type damage. You take half that damage instead."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charti-berry.png"}}

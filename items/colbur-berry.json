@@ -1,1 +1,1 @@
-{"id":"colbur-berry","name":"Colbur Berry","type":"berry","cost":80,"description":["Can be consumed as a reaction to taking dark-type damage. You take half that damage instead."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/colbur-berry.png"}}
+{"id":"colbur-berry","name":"Colbur Berry","type":"berry","cost":200,"description":["Can be consumed as a reaction to taking dark-type damage. You take half that damage instead."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/colbur-berry.png"}}

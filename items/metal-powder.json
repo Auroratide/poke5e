@@ -1,0 +1,1 @@
+{"id":"metal-powder","name":"Metal Powder","type":"held item","cost":1200,"description":["When held by a Ditto, its CON score increases by +3."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-powder.png"}}

@@ -1,1 +1,1 @@
-{"id":"occa-berry","name":"Occa Berry","type":"berry","cost":80,"description":["Can be consumed as a reaction to taking fire-type damage. You take half that damage instead."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png"}}
+{"id":"occa-berry","name":"Occa Berry","type":"berry","cost":200,"description":["Can be consumed as a reaction to taking fire-type damage. You take half that damage instead."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png"}}

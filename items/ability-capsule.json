@@ -1,0 +1,1 @@
+{"id":"ability-capsule","name":"Ability Capsule","type":"medicine","cost":5000,"description":["When consumed by a Pokémon during a long rest, the Pokémon may switch its non-hidden ability it knows (if two options are available)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ability-capsule.png"}}

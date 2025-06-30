@@ -1,1 +1,1 @@
-{"id":"smoke-ball","name":"Smoke Ball","type":"held item","cost":4000,"description":["Guarantees a success in an attempt to flee from wild Pokémon battles."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smoke-ball.png"}}
+{"id":"smoke-ball","name":"Smoke Ball","type":"held item","cost":4400,"description":["Guarantees a success in an attempt to flee from wild Pokémon battles."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smoke-ball.png"}}

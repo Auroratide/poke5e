@@ -1,0 +1,1 @@
+{"id":"light-ball","name":"Light Ball","type":"held item","cost":1400,"description":["When held by a Pikachu, raises its MOVE power modifier by +1."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/light-ball.png"}}

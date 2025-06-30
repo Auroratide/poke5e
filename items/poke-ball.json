@@ -1,1 +1,1 @@
-{"id":"poke-ball","name":"Poké Ball","type":"pokeball","cost":200,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"}}
+{"id":"poke-ball","name":"Poké Ball","type":"pokeball","cost":250,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"}}

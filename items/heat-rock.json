@@ -1,1 +1,1 @@
-{"id":"heat-rock","name":"Heat Rock","type":"held item","cost":4000,"description":["The holder increases the duration of their Harsh Sunlight effects by 3 rounds."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heat-rock.png"}}
+{"id":"heat-rock","name":"Heat Rock","type":"held item","cost":2500,"description":["The holder increases the duration of their Harsh Sunlight effects by 3 rounds."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heat-rock.png"}}

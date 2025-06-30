@@ -1,1 +1,1 @@
-{"id":"spell-tag","name":"Spell Tag","type":"held item","cost":2000,"description":["The holder adds its proficiency bonus to ghost-type damage it deals (once per move)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/spell-tag.png"}}
+{"id":"spell-tag","name":"Spell Tag","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to ghost-type damage it deals (once per move)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/spell-tag.png"}}

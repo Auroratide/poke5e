@@ -1,1 +1,1 @@
-{"id":"metal-coat","name":"Metal Coat","type":"held item","cost":2000,"description":["The holder adds its proficiency bonus to steel-type damage it deals (once per move)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-coat.png"}}
+{"id":"metal-coat","name":"Metal Coat","type":"held item","cost":4000,"description":["The holder adds its proficiency bonus to steel-type damage it deals (once per move)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-coat.png"}}

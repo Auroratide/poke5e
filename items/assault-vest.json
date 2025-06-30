@@ -1,1 +1,1 @@
-{"id":"assault-vest","name":"Assault Vest","type":"held item","cost":4000,"description":["The holder has +1 to their AC, but may only use damaging moves."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/assault-vest.png"}}
+{"id":"assault-vest","name":"Assault Vest","type":"held item","cost":2000,"description":["The holder has +1 to their AC, but may only use damaging moves."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/assault-vest.png"}}

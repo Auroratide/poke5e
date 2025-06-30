@@ -1,1 +1,1 @@
-{"id":"smooth-rock","name":"Smooth Rock","type":"held item","cost":4000,"description":["The holder increases the duration of their Sandstorm effects by 3 rounds."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smooth-rock.png"}}
+{"id":"smooth-rock","name":"Smooth Rock","type":"held item","cost":2500,"description":["The holder increases the duration of their Sandstorm effects by 3 rounds."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smooth-rock.png"}}

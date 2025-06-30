@@ -1,1 +1,1 @@
-{"id":"kasib-berry","name":"Kasib Berry","type":"berry","cost":80,"description":["Can be consumed as a reaction to taking ghost-type damage. You take half that damage instead."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kasib-berry.png"}}
+{"id":"kasib-berry","name":"Kasib Berry","type":"berry","cost":200,"description":["Can be consumed as a reaction to taking ghost-type damage. You take half that damage instead."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kasib-berry.png"}}

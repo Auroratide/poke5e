@@ -1,1 +1,1 @@
-{"id":"damp-rock","name":"Damp Rock","type":"held item","cost":4000,"description":["The holder increases the duration of their Rain effects by 3 rounds."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/damp-rock.png"}}
+{"id":"damp-rock","name":"Damp Rock","type":"held item","cost":2500,"description":["The holder increases the duration of their Rain effects by 3 rounds."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/damp-rock.png"}}

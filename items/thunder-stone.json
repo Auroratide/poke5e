@@ -1,1 +1,1 @@
-{"id":"thunder-stone","name":"Thunder Stone","type":"evolution","cost":3000,"description":["Some Pokémon may consume the power of this stone to evolve."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thunder-stone.png"}}
+{"id":"thunder-stone","name":"Thunder Stone","type":"evolution","cost":4000,"description":["Some Pokémon may consume the power of this stone to evolve."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thunder-stone.png"}}

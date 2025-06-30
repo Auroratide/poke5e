@@ -1,1 +1,1 @@
-{"id":"rindo-berry","name":"Rindo Berry","type":"berry","cost":80,"description":["Can be consumed as a reaction to taking grass-type damage. You take half that damage instead."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rindo-berry.png"}}
+{"id":"rindo-berry","name":"Rindo Berry","type":"berry","cost":200,"description":["Can be consumed as a reaction to taking grass-type damage. You take half that damage instead."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rindo-berry.png"}}

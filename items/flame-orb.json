@@ -1,1 +1,1 @@
-{"id":"flame-orb","name":"Flame Orb","type":"held item","cost":4000,"description":["At the end of the holder's turn, the holder becomes burned."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-orb.png"}}
+{"id":"flame-orb","name":"Flame Orb","type":"held item","cost":2000,"description":["At the end of the holder's turn, the holder becomes burned."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-orb.png"}}

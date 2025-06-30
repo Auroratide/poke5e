@@ -1,1 +1,1 @@
-{"id":"sharp-beak","name":"Sharp Beak","type":"held item","cost":2000,"description":["The holder adds its proficiency bonus to flying-type damage it deals (once per move)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sharp-beak.png"}}
+{"id":"sharp-beak","name":"Sharp Beak","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to flying-type damage it deals (once per move)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sharp-beak.png"}}
