@@ -3064,6 +3064,18 @@
 			}
 		},
 		{
+			"id": "dna-splicer",
+			"name": "DNA Splicer",
+			"type": "trainer gear",
+			"cost": null,
+			"description": [
+				"While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom)."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dna-splicers.png"
+			}
+		},
+		{
 			"id": "deep-sea-scale",
 			"name": "Deep Sea Scale",
 			"type": "held item",
@@ -3219,6 +3231,258 @@
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thick-club.png"
+			}
+		},
+		{
+			"id": "burn-drive",
+			"name": "Burn Drive",
+			"type": "held item",
+			"cost": 4000,
+			"description": [
+				"When held by a Genesect, changes the type of its move Techno Blast to Fire."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/burn-drive.png"
+			}
+		},
+		{
+			"id": "chill-drive",
+			"name": "Chill Drive",
+			"type": "held item",
+			"cost": 4000,
+			"description": [
+				"When held by a Genesect, changes the type of its move Techno Blast to Ice."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chill-drive.png"
+			}
+		},
+		{
+			"id": "douse-drive",
+			"name": "Douse Drive",
+			"type": "held item",
+			"cost": 4000,
+			"description": [
+				"When held by a Genesect, changes the type of its move Techno Blast to Water."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/douse-drive.png"
+			}
+		},
+		{
+			"id": "shock-drive",
+			"name": "Shock Drive",
+			"type": "held item",
+			"cost": 4000,
+			"description": [
+				"When held by a Genesect, changes the type of its move Techno Blast to Electric."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shock-drive.png"
+			}
+		},
+		{
+			"id": "bug-memory-disc",
+			"name": "Bug Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Bug."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bug-memory.png"
+			}
+		},
+		{
+			"id": "dark-memory-disc",
+			"name": "Dark Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Dark."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dark-memory.png"
+			}
+		},
+		{
+			"id": "dragon-memory-disc",
+			"name": "Dragon Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Dragon."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-memory.png"
+			}
+		},
+		{
+			"id": "electric-memory-disc",
+			"name": "Electric Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Electric."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electric-memory.png"
+			}
+		},
+		{
+			"id": "fairy-memory-disc",
+			"name": "Fairy Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Fairy."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fairy-memory.png"
+			}
+		},
+		{
+			"id": "fighting-memory-disc",
+			"name": "Fighting Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Fighting."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fighting-memory.png"
+			}
+		},
+		{
+			"id": "fire-memory-disc",
+			"name": "Fire Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Fire."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fire-memory.png"
+			}
+		},
+		{
+			"id": "flying-memory-disc",
+			"name": "Flying Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Flying."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flying-memory.png"
+			}
+		},
+		{
+			"id": "ghost-memory-disc",
+			"name": "Ghost Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Ghost."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ghost-memory.png"
+			}
+		},
+		{
+			"id": "grass-memory-disc",
+			"name": "Grass Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Grass."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grass-memory.png"
+			}
+		},
+		{
+			"id": "ground-memory-disc",
+			"name": "Ground Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Ground."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ground-memory.png"
+			}
+		},
+		{
+			"id": "ice-memory-disc",
+			"name": "Ice Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Ice."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-memory.png"
+			}
+		},
+		{
+			"id": "poison-memory-disc",
+			"name": "Poison Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Poison."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poison-memory.png"
+			}
+		},
+		{
+			"id": "psychic-memory-disc",
+			"name": "Psychic Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Psychic."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/psychic-memory.png"
+			}
+		},
+		{
+			"id": "rock-memory-disc",
+			"name": "Rock Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Rock."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rock-memory.png"
+			}
+		},
+		{
+			"id": "steel-memory-disc",
+			"name": "Steel Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Steel."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/steel-memory.png"
+			}
+		},
+		{
+			"id": "water-memory-disc",
+			"name": "Water Memory Disc",
+			"type": "held item",
+			"cost": 2000,
+			"description": [
+				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Water."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/water-memory.png"
 			}
 		},
 		{
@@ -3969,18 +4233,6 @@
 			],
 			"media": {
 				"sprite": null
-			}
-		},
-		{
-			"id": "dna-splicer",
-			"name": "DNA Splicer",
-			"type": "trainer gear",
-			"cost": null,
-			"description": [
-				"While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom)."
-			],
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dna-splicers.png"
 			}
 		}
 	]
