@@ -3064,16 +3064,161 @@
 			}
 		},
 		{
+			"id": "deep-sea-scale",
+			"name": "Deep Sea Scale",
+			"type": "held item",
+			"cost": 4000,
+			"description": [
+				"When held by a Clamperl, its AC is increased by 1."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/deep-sea-scale.png"
+			}
+		},
+		{
+			"id": "deep-sea-tooth",
+			"name": "Deep Sea Tooth",
+			"type": "held item",
+			"cost": 4000,
+			"description": [
+				"When held by a Clamperl, its STAB is increased by 1."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/deep-sea-tooth.png"
+			}
+		},
+		{
+			"id": "gracidea-flower",
+			"name": "Gracidea Flower",
+			"type": "held item",
+			"cost": 1400,
+			"description": [
+				"When held by a Shaymin, the Shaymin may use its action to change between its Land and Sky forms."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gracidea.png"
+			}
+		},
+		{
+			"id": "griseous-orb",
+			"name": "Griseous Orb",
+			"type": "held item",
+			"cost": 7000,
+			"description": [
+				"When held by a Giratina, the Giratina may use its action to change between its Altered and Origin forms. Its Dragon- and Ghost-type moves have double STAB."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/griseous-orb.png"
+			}
+		},
+		{
 			"id": "leek",
 			"name": "Leek",
 			"type": "held item",
-			"cost": 200,
+			"cost": 1200,
 			"description": [
 				"When held by a Farfetch'd or Sirfetch'd, the holder's critical hit range increases by two.",
 				"Most of the time, this means attacks can critical on a natural 18, 19, or 20. For a move like Slash which already expands crticial hit range, criticals can happen on natural 17, 18, 19, or 20."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/stick.png"
+			}
+		},
+		{
+			"id": "light-ball",
+			"name": "Light Ball",
+			"type": "held item",
+			"cost": 1400,
+			"description": [
+				"When held by a Pikachu, raises its MOVE power modifier by +1."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/light-ball.png"
+			}
+		},
+		{
+			"id": "lucky-punch",
+			"name": "Lucky Punch",
+			"type": "held item",
+			"cost": 1200,
+			"description": [
+				"When held by a Chansey, its critical hit range increases by one.",
+				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands crticial hit range, criticals can happen on natural 18, 19, or 20."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lucky-punch.png"
+			}
+		},
+		{
+			"id": "metal-powder",
+			"name": "Metal Powder",
+			"type": "held item",
+			"cost": 1200,
+			"description": [
+				"When held by a Ditto, its CON score increases by +3."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-powder.png"
+			}
+		},
+		{
+			"id": "n-solarizer",
+			"name": "N-Solarizer",
+			"type": "trainer gear",
+			"cost": null,
+			"description": [
+				"A trainer with both a Solgaleo and Necrozma may use an action to fuse them into a Dusk Mane Necrozma. The trainer may also use an action to separate a Dusk Mane Necrozma into a Solgaleo and Necrozma."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "n-lunarizer",
+			"name": "N-Lunarizer",
+			"type": "trainer gear",
+			"cost": null,
+			"description": [
+				"A trainer with both a Lunala and Necrozma may use an action to fuse them into a Dawn Wings Necrozma. The trainer may also use an action to separate a Dawn Wings Necrozma into a Lunala and Necrozma."
+			],
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "prison-bottle",
+			"name": "Prison Bottle",
+			"type": "trainer gear",
+			"cost": null,
+			"description": [
+				"A trainer may use their action to unconfine a nearby Hoopa, changing it from its Confined form to Unconfimed form for three days."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/prison-bottle.png"
+			}
+		},
+		{
+			"id": "reveal-glass",
+			"name": "Reveal Glass",
+			"type": "held item",
+			"cost": null,
+			"description": [
+				"When held by a Thundurus, Landorus, or Tornadus, the holder may use its action to change between its Incarnate and Therian forms."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/reveal-glass.png"
+			}
+		},
+		{
+			"id": "thick-club",
+			"name": "Thick Club",
+			"type": "held item",
+			"cost": 4400,
+			"description": [
+				"When held by a Cubone, Marowak, or Alolan Marowak, the holder's STAB is doubled."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thick-club.png"
 			}
 		},
 		{
