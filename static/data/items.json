@@ -704,6 +704,18 @@
 			}
 		},
 		{
+			"id": "ability-capsule",
+			"name": "Ability Capsule",
+			"type": "medicine",
+			"cost": 5000,
+			"description": [
+				"When consumed by a Pokémon during a long rest, the Pokémon may switch its non-hidden ability it knows (if two options are available)."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ability-capsule.png"
+			}
+		},
+		{
 			"id": "guard-spec",
 			"name": "Guard Spec",
 			"type": "medicine",
@@ -799,17 +811,6 @@
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-sp-def.png"
 			}
-		},
-		{
-			"id": "ability-capsule",
-			"name": "Ability Capsule",
-			"type": "medicine",
-			"cost": 10000,
-			"description": null,
-			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ability-capsule.png"
-			},
-			"_ingameEffect": "Switches a Pokémon between its two possible (non-Hidden) Abilities."
 		},
 		{
 			"id": "pewter-crunchies",
@@ -1633,6 +1634,18 @@
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/eviolite.png"
+			}
+		},
+		{
+			"id": "exp-share",
+			"name": "Exp Share",
+			"type": "held item",
+			"cost": 7500,
+			"description": [
+				"A Pokémon holding this item receives up to half of the total experience gained in each combat while in the party."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/exp-share.png"
 			}
 		},
 		{
@@ -3279,6 +3292,69 @@
 			],
 			"media": {
 				"sprite": null
+			}
+		},
+		{
+			"id": "old-rod",
+			"name": "Old Rod",
+			"type": "trainer gear",
+			"cost": 1000,
+			"description": [
+				"Allows you to fish for Pokémon. Fishing for Pokémon takes one hour, and the Pokémon you catch is random.",
+				"The Old Rod allows you to catch only Magikarp."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-rod.png"
+			}
+		},
+		{
+			"id": "good-rod",
+			"name": "Good Rod",
+			"type": "trainer gear",
+			"cost": 5000,
+			"description": [
+				"Allows you to fish for Pokémon. Fishing for Pokémon takes one hour, and the Pokémon you catch is random.",
+				"The Good Rod allows you to catch Alomomola, Azumarill, Barboach, Basculin, Bibarel, Briionne, Bruxish, Buizel, Carvanha, Chinchou, Clamperl, Clauncher, Corphish, Corsola, Crawdaunt, Croconaw, Dewpider, Dewott, Ducklett, Feebas, Finneon, Frillish, Froakie, Frogadier, Goldeen, Horsea, Inkay, Kabuto, Krabby, Lanturn, Lombre, Lotad, Luvdisc, Magikarp, Mantyke, Mareanie, Marill, Marshtomp, Mudkip, Octillery, Omanyte, Oshawott, Palpitoad, Piplup, Poliwag, Poliwhirl, Popplio, Prinplup, Psyduck, Pyukumuku, Quagsire, Qwilfish, Remoraid, Seel, Shellder, Shellos, Skrelp, Slowpoke, Spheal, Squirtle, Staryu, Stunfisk, Surskit, Tentacool, Tirtouga, Totodile, Tympole, Tynamo, Wailmer, Wartortle, Whiscash, Wimpod, Wingull, Wishiwashi, or Wooper."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/good-rod.png"
+			}
+		},
+		{
+			"id": "super-rod",
+			"name": "Super Rod",
+			"type": "trainer gear",
+			"cost": 15000,
+			"description": [
+				"Allows you to fish for Pokémon. Fishing for Pokémon takes one hour, and the Pokémon you catch is random.",
+				"The Old Rod allows you to catch Araquanid, Blastoise, Carracosta, Clawitzer, Cloyster, Dewgong, Dragalge, Empoleon, Feraligatr, Floatzel, Gastrodon, Golduck, Golisopod, Gorebyss, Greninja, Gyarados, Huntail, Jellicent, Kabutops, Kingdra, Kingler, Lapras, Ludicolo, Lumineon, Malamar, Mantine, Milotic, Omastar, Politoed, Poliwrath, Primarina, Relicanth, Samurott, Seadra, Seaking, Sealeo, Seismitoad, Sharpedo, Slowbro, Slowking, Starmie, Swampert, Tentacruel, Toxapex, Wailord, Walrein."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-rod.png"
+			}
+		},
+		{
+			"id": "escape-rope",
+			"name": "Escape Rope",
+			"type": "trainer gear",
+			"cost": 150,
+			"description": [
+				"Consume in order to automatically succeed in fleeing from a wild Pokémon battle."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/escape-rope.png"
+			}
+		},
+		{
+			"id": "honey",
+			"name": "Honey",
+			"type": "trainer gear",
+			"cost": 1000,
+			"description": [
+				"Can be used to automatically attract a single Pokémon that resides in the area. Which Pokémon is up to the DM's discretion."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/honey.png"
 			}
 		},
 		{
