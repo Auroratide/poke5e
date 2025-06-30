@@ -12,6 +12,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.6.8",
+		description: [
+			"Match item prices to those found in the original Player Handbook.",
+			"Add missing trainer gear and Pokémon-specific held items.",
+		],
+	}, {
 		name: "v1.6.7",
 		description: [
 			"Bug fix: Added missing moves to Toxtricity, Espathra, Hydrapple, and Raging Bolt.",
