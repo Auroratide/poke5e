@@ -813,6 +813,54 @@
 			}
 		},
 		{
+			"id": "red-nectar",
+			"name": "Red Nectar",
+			"type": "medicine",
+			"cost": 400,
+			"description": [
+				"When fed to an Oricorio, it changes form to Oricorio Baile Style."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-nectar.png"
+			}
+		},
+		{
+			"id": "yellow-nectar",
+			"name": "Yellow Nectar",
+			"type": "medicine",
+			"cost": 400,
+			"description": [
+				"When fed to an Oricorio, it changes form to Oricorio Pom-Pom Style."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yellow-nectar.png"
+			}
+		},
+		{
+			"id": "pink-nectar",
+			"name": "Pink Nectar",
+			"type": "medicine",
+			"cost": 400,
+			"description": [
+				"When fed to an Oricorio, it changes form to Oricorio Pa'u Style."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pink-nectar.png"
+			}
+		},
+		{
+			"id": "purple-nectar",
+			"name": "Purple Nectar",
+			"type": "medicine",
+			"cost": 400,
+			"description": [
+				"When fed to an Oricorio, it changes form to Oricorio Sensu Style."
+			],
+			"media": {
+				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/purple-nectar.png"
+			}
+		},
+		{
 			"id": "pewter-crunchies",
 			"name": "Pewter Crunchies",
 			"type": "medicine",
