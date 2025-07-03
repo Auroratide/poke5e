@@ -95410,7 +95410,7 @@
 				"grass",
 				"fighting"
 			],
-			"size": "small",
+			"size": "medium",
 			"sr": 13,
 			"minLevel": 10,
 			"eggGroup": [
@@ -136405,28 +136405,30 @@
 					"charge",
 					"tackle",
 					"stun-spore",
-					"thunder-wave",
 					"bullet-seed",
-					"screech",
+					"chloroblast"
+				],
+				"level6": [
 					"rollout",
-					"spark"
+					"screech",
+					"charge-beam"
 				],
 				"level10": [
 					"thunderbolt",
 					"energy-ball",
-					"electro-ball"
+					"self-destruct",
+					"swift"
 				],
 				"level14": [
+					"electro-ball",
 					"seed-bomb",
 					"discharge"
 				],
 				"level18": [
 					"thunder",
-					"self-destruct",
 					"explosion",
 					"gyro-ball",
-					"grassy-terrain",
-					"chloroblast"
+					"grassy-terrain"
 				],
 				"tm": [
 					12,
@@ -136521,7 +136523,8 @@
 					"flame-wheel",
 					"rollout",
 					"defense-curl",
-					"swift"
+					"swift",
+					"infernal-parade"
 				],
 				"level14": [
 					"flamethrower",
@@ -136531,8 +136534,7 @@
 					"shadow-ball",
 					"overheat",
 					"lava-plume",
-					"inferno",
-					"infernal-parade"
+					"inferno"
 				],
 				"tm": [
 					5,
@@ -137061,9 +137063,12 @@
 					"after-you",
 					"petal-blizzard",
 					"solar-blade",
-					"stun-spore",
-					"leafage",
 					"axe-kick",
+					"victory-dance"
+				],
+				"level6": [
+					"leafage",
+					"stun-spore",
 					"poison-powder"
 				],
 				"level10": [
@@ -137071,15 +137076,14 @@
 					"energy-ball"
 				],
 				"level14": [
-					"drain-punch"
+					"drain-punch",
+					"recover",
+					"leaf-blade"
 				],
 				"level18": [
 					"petal-dance",
-					"recover",
-					"leaf-blade",
 					"close-combat",
-					"leaf-storm",
-					"victory-dance"
+					"leaf-storm"
 				],
 				"tm": [
 					17,
