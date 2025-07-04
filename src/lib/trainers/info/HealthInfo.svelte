@@ -15,7 +15,7 @@
 		NumericResourceField,
 		type NumericChangeDetail,
 	} from "$lib/design/forms"
-	import type { HitDice } from "$lib/dnd/types"
+		import type { HitDice } from "$lib/dnd/HitDice"
 	import type { NonVolatileStatus } from "$lib/pokemon/status"
 	import StatusEditor, { type ChangeDetail as StatusChangeDetail } from "$lib/pokemon/StatusEditor.svelte"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"

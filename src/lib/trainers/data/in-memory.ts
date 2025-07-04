@@ -166,6 +166,17 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		status: null,
 		isShiny: false,
 		feats: [],
+		customSize: undefined,
+		customHitDiceSize: undefined,
+		speeds: {},
+		senses: {},
+		bond: {
+			level: 1,
+			points: {
+				current: 1,
+				max: 1,
+			},
+		},
 	}, {
 		id: nextPokemonId(),
 		trainerId: "e2439894-8b10-4081-812c-0f16a773e959",
@@ -230,6 +241,17 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		status: null,
 		isShiny: false,
 		feats: [],
+		customSize: undefined,
+		customHitDiceSize: undefined,
+		speeds: {},
+		senses: {},
+		bond: {
+			level: 1,
+			points: {
+				current: 1,
+				max: 1,
+			},
+		},
 	}, {
 		id: nextPokemonId(),
 		trainerId: "e2439894-8b10-4081-812c-0f16a773e959",
@@ -294,6 +316,17 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		status: null,
 		isShiny: false,
 		feats: [],
+		customSize: undefined,
+		customHitDiceSize: undefined,
+		speeds: {},
+		senses: {},
+		bond: {
+			level: 1,
+			points: {
+				current: 1,
+				max: 1,
+			},
+		},
 	} ],
 }, {
 	writeKey: "0DHGNM55DGSU9MLA1J7D",
@@ -534,6 +567,17 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 				status: null,
 				isShiny: false,
 				feats: [],
+				customSize: undefined,
+				customHitDiceSize: undefined,
+				speeds: {},
+				senses: {},
+				bond: {
+					level: 0,
+					points: {
+						current: 0,
+						max: 0,
+					},
+				},
 			}
 
 			trainer.pokemon.push(newPokemon)

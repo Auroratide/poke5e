@@ -20,6 +20,8 @@ import { isPokeType, type TeraPokeType } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import { createEmptyChosenTrainerPath } from "$lib/trainers/paths"
 import type { ChosenFeat } from "$lib/feats/ChosenFeat"
+import { isCreatureSize } from "$lib/dnd/CreatureSize"
+import { isHitDice } from "$lib/dnd/HitDice"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -478,6 +480,21 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_status: info.status,
 			_held_item: null,
 			_is_shiny: info.isShiny,
+			_custom_size: info.customSize ?? null,
+			_hit_dice_size: info.customHitDiceSize ?? null,
+			_speed_walking: info.speeds.walking ?? null,
+			_speed_climbing: info.speeds.climbing ?? null,
+			_speed_swimming: info.speeds.swimming ?? null,
+			_speed_flying: info.speeds.flying ?? null,
+			_speed_hover: info.speeds.hover ?? null,
+			_speed_burrowing: info.speeds.burrowing ?? null,
+			_sense_darkvision: info.senses.darkvision ?? null,
+			_sense_blindsight: info.senses.blindsight ?? null,
+			_sense_tremorsense: info.senses.tremorsense ?? null,
+			_sense_truesight: info.senses.truesight ?? null,
+			_bond_level: info.bond.level,
+			_bond_points_cur: info.bond.points.current,
+			_bond_points_max: info.bond.points.max,
 		}).single<number>()
 
 		if (error) {
@@ -520,6 +537,17 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			status: null,
 			isShiny: false,
 			feats: [],
+			customSize: undefined,
+			customHitDiceSize: undefined,
+			speeds: {},
+			senses: {},
+			bond: {
+				level: 0,
+				points: {
+					current: 0,
+					max: 0,
+				},
+			},
 		}
     
 		const { data, error } = await this.supabase.rpc("add_pokemon", {
@@ -572,6 +600,21 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_status: null,
 			_held_item: null,
 			_is_shiny: false,
+			_custom_size: null,
+			_hit_dice_size: null,
+			_speed_walking: null,
+			_speed_climbing: null,
+			_speed_swimming: null,
+			_speed_flying: null,
+			_speed_hover: null,
+			_speed_burrowing: null,
+			_sense_darkvision: null,
+			_sense_blindsight: null,
+			_sense_tremorsense: null,
+			_sense_truesight: null,
+			_bond_level: 0,
+			_bond_points_cur: 0,
+			_bond_points_max: 0,
 		}).single<number>()
     
 		if (error) {
@@ -1145,6 +1188,21 @@ type PokemonRow = {
 	status: string | null,
 	held_item: string,
 	is_shiny: boolean,
+	custom_size: string | null,
+	hit_dice_size: string | null,
+	speed_walking: number | null,
+	speed_climbing: number | null,
+	speed_swimming: number | null,
+	speed_flying: number | null,
+	speed_hover: number | null,
+	speed_burrowing: number | null,
+	sense_darkvision: number | null,
+	sense_blindsight: number | null,
+	sense_tremorsense: number | null,
+	sense_truesight: number | null,
+	bond_level: number,
+	bond_points_cur: number,
+	bond_points_max: number,
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -1214,6 +1272,29 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 	status: row.status as NonVolatileStatus | null,
 	isShiny: row.is_shiny,
 	feats: [],
+	customSize: isCreatureSize(row.custom_size) ? row.custom_size : undefined,
+	customHitDiceSize: isHitDice(row.hit_dice_size) ? row.hit_dice_size : undefined,
+	speeds: {
+		walking: row.speed_walking,
+		climbing: row.speed_climbing,
+		swimming: row.speed_swimming,
+		flying: row.speed_flying,
+		hover: row.speed_hover,
+		burrowing: row.speed_burrowing,
+	},
+	senses: {
+		darkvision: row.sense_darkvision,
+		blindsight: row.sense_blindsight,
+		tremorsense: row.sense_tremorsense,
+		truesight: row.sense_truesight,
+	},
+	bond: {
+		level: row.bond_level,
+		points: {
+			current: row.bond_points_cur,
+			max: row.bond_points_max,
+		},
+	},
 })
 
 type MoveRow = {

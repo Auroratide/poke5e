@@ -9,10 +9,6 @@ export type Attributes = {
 
 export type Attribute = keyof Attributes
 
-export type CreatureSize = "tiny" | "small" | "medium" | "large" | "huge" | "gargantuan"
-
-export type HitDice = "d4" | "d6" | "d8" | "d10" | "d12" | "d20"
-
 export type Skill =
 	"athletics" |
 	"acrobatics" |

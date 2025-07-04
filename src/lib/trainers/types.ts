@@ -1,4 +1,5 @@
 import type { Skill, Attribute, Attributes } from "../dnd/types"
+import type { CreatureSize } from "$lib/dnd/CreatureSize"
 import type { Pokemon } from "../creatures/types"
 import type { Move } from "$lib/moves/types"
 import type { AbilityId, PokeType, TeraPokeType } from "$lib/pokemon/types"
@@ -8,6 +9,9 @@ import type { Nature } from "./nature"
 import type { Specializations } from "./specializations"
 import type { ChosenTrainerPath } from "./paths/ChosenTrainerPath"
 import type { ChosenFeat } from "$lib/feats/ChosenFeat"
+import type { DndSpeeds } from "$lib/dnd/DndSpeeds"
+import type { DndSenses } from "$lib/dnd/DndSenses"
+import type { HitDice } from "$lib/dnd/HitDice"
 
 export type Resource = {
 	current: number,
@@ -67,6 +71,14 @@ export type TrainerPokemon = {
 	status: NonVolatileStatus | null,
 	isShiny: boolean,
 	feats: ChosenFeat[],
+	customSize?: CreatureSize,
+	customHitDiceSize?: HitDice,
+	speeds: DndSpeeds,
+	senses: DndSenses,
+	bond: {
+		level: number,
+		points: Resource,
+	},
 }
 
 export type WithPokemonData = {
