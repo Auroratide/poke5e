@@ -398,6 +398,21 @@ test("updating pokemon", async () => {
 		_status: "Burned",
 		_held_item: "Focus Sash",
 		_is_shiny: true,
+		_custom_size: "medium",
+		_hit_dice_size: "d4",
+		_speed_walking: 60,
+		_speed_climbing: 70,
+		_speed_swimming: 80,
+		_speed_flying: 90,
+		_speed_hover: 100,
+		_speed_burrowing: 110,
+		_sense_darkvision: 30,
+		_sense_blindsight: 40,
+		_sense_tremorsense: 50,
+		_sense_truesight: 60,
+		_bond_level: 3,
+		_bond_points_cur: 2,
+		_bond_points_max: 3,
 	})
 
 	const [vivillon] = await callAll<any>("get_pokemon", {
@@ -413,6 +428,25 @@ test("updating pokemon", async () => {
 	expect(vivillon.held_item).toEqual("Focus Sash")
 
 	expect(vivillon.is_shiny).toEqual(true)
+
+	expect(vivillon.custom_size).toEqual("medium")
+	expect(vivillon.hit_dice_size).toEqual("d4")
+
+	expect(vivillon.speed_walking).toEqual(60)
+	expect(vivillon.speed_climbing).toEqual(70)
+	expect(vivillon.speed_swimming).toEqual(80)
+	expect(vivillon.speed_flying).toEqual(90)
+	expect(vivillon.speed_hover).toEqual(100)
+	expect(vivillon.speed_burrowing).toEqual(110)
+
+	expect(vivillon.sense_darkvision).toEqual(30)
+	expect(vivillon.sense_blindsight).toEqual(40)
+	expect(vivillon.sense_tremorsense).toEqual(50)
+	expect(vivillon.sense_truesight).toEqual(60)
+
+	expect(vivillon.bond_level).toEqual(3)
+	expect(vivillon.bond_points_cur).toEqual(2)
+	expect(vivillon.bond_points_max).toEqual(3)
 
 	// Cleanup
 	await call("remove_pokemon", {
