@@ -1,5 +1,7 @@
 import type { PokeType, PokeEvolution, Ability } from "../pokemon/types"
-import type { Attribute, CreatureSize, HitDice, Skill } from "../dnd/types"
+import type { Attribute, Skill } from "../dnd/types"
+import type { HitDice } from "$lib/dnd/HitDice"
+import type { CreatureSize } from "$lib/dnd/CreatureSize"
 
 export type PokemonMedia = {
 	main?: string,
