@@ -54,7 +54,7 @@
 		<HealthInfo
 			hp={pokemon.hp}
 			hitDice={pokemon.hitDice}
-			dieSize={species.hitDice}
+			dieSize={pokemon.customHitDiceSize ?? species.hitDice}
 			status={pokemon.status}
 			hasStatus
 			{editable}

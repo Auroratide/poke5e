@@ -20,7 +20,7 @@
 	<dt>Bonus</dt>
 	<dd>+{pb}</dd>
 	<dt>Size</dt>
-	<dd class="cap">{species.size}</dd>
+	<dd class="cap">{pokemon.customSize ?? species.size}</dd>
 	<dt>Speed</dt>
 	<div>
 		{#each species.speed as speed}
