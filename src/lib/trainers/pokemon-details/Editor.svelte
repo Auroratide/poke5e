@@ -18,6 +18,8 @@
 	import FeatsFieldset from "$lib/feats/FeatsFieldset.svelte"
 	import { DndAndPokemonFeats } from "$lib/feats/PokemonFeats"
 	import CustomBasicInfoFieldset from "./forms/CustomBasicInfoFieldset.svelte"
+	import SpeedsFieldset from "$lib/dnd/SpeedsFieldset.svelte"
+	import SensesFieldset from "$lib/dnd/SensesFieldset.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -45,6 +47,8 @@
 	let feats = pokemon.feats.map((it) => structuredClone(it))
 	let customSize = pokemon.customSize
 	let customHitDiceSize = pokemon.customHitDiceSize
+	let speeds = structuredClone(pokemon.speeds)
+	let senses = structuredClone(pokemon.senses)
 
 	let moves = structuredClone(pokemon.moves)
 	let items = structuredClone(pokemon.items)
@@ -80,8 +84,10 @@
 			items,
 			notes,
 			feats,
-			customSize: customSize,
-			customHitDiceSize: customHitDiceSize,
+			customSize,
+			customHitDiceSize,
+			speeds,
+			senses,
 		} as TrainerPokemon)
 	}
 </script>
@@ -102,6 +108,8 @@
 	<FormDetails title="Advanced">
 		<TypeField bind:value={type} {disabled} />
 		<CustomBasicInfoFieldset bind:customSize bind:customHitDiceSize {disabled} />
+		<SpeedsFieldset bind:values={speeds} {disabled} />
+		<SensesFieldset bind:values={senses} {disabled} />
 	</FormDetails>
 	<ActionArea>
 		<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>

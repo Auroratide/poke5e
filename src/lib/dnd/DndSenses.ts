@@ -5,3 +5,11 @@ export type DndSenses = {
 	tremorsense?: number,
 	truesight?: number,
 }
+
+export const DndSenseTypes = {
+	Darkvision: "darkvision",
+	Blindsight: "blindsight",
+	Tremorsense: "tremorsense",
+	Truesight: "truesight",
+} as const satisfies Record<string, keyof DndSenses>
+export type DndSenseType = typeof DndSenseTypes[keyof typeof DndSenseTypes]
