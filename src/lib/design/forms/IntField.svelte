@@ -13,6 +13,7 @@
 	export let placeholder: string = ""
 	export let min: number | undefined = undefined
 	export let max: number | undefined = undefined
+	export let optional: boolean = false
 
 	const dispatch = createEventDispatcher()
 
@@ -23,6 +24,8 @@
 		const v = parseFloat((e.target as HTMLInputElement).value)
 		if (!isNaN(v)) {
 			value = Math.round(v)
+		} else {
+			value = optional ? undefined : value
 		}
 
 		dispatch("change", { value })
