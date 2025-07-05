@@ -22,6 +22,7 @@ import { createEmptyChosenTrainerPath } from "$lib/trainers/paths"
 import type { ChosenFeat } from "$lib/feats/ChosenFeat"
 import { isCreatureSize } from "$lib/dnd/CreatureSize"
 import { isHitDice } from "$lib/dnd/HitDice"
+import { experienceNeededAtLevel } from "$lib/creatures/experience"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -476,7 +477,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_ability: info.ability,
 			_notes: info.notes,
 			_tera_type: info.teraType,
-			_exp: 0,
+			_exp: info.exp,
 			_status: info.status,
 			_held_item: null,
 			_is_shiny: info.isShiny,
@@ -516,6 +517,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			type: pokemon.type,
 			nature: Natures[0],
 			level: pokemon.minLevel,
+			exp: experienceNeededAtLevel(pokemon.minLevel),
 			gender: Gender.None,
 			attributes: pokemon.attributes,
 			ac: pokemon.ac,
@@ -596,7 +598,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_ability: pokemon.abilities[0]?.id,
 			_notes: "",
 			_tera_type: pokemon.type[0],
-			_exp: 0,
+			_exp: trainerPokemon.exp,
 			_status: null,
 			_held_item: null,
 			_is_shiny: false,
@@ -1218,6 +1220,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 	type: row.type.filter(isPokeType),
 	nature: row.nature,
 	level: row.level,
+	exp: row.exp,
 	gender: row.gender as Gender,
 	attributes: {
 		str: row.strength,

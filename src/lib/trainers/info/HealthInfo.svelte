@@ -3,6 +3,7 @@
 		currentHp: number,
 		currentHitDice: number,
 		currentStatus: NonVolatileStatus | null,
+		exp: number,
 	}
 </script>
 
@@ -19,14 +20,17 @@
 	import type { NonVolatileStatus } from "$lib/pokemon/status"
 	import StatusEditor, { type ChangeDetail as StatusChangeDetail } from "$lib/pokemon/StatusEditor.svelte"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
+	import { experienceNeededAtLevel, experienceNeededUntilLevelUp, formatExp } from "$lib/creatures/experience"
 
 	const dispatch = createEventDispatcher()
 
 	export let hp: Resource
 	export let hitDice: Resource
 	export let dieSize: HitDice
+	export let exp: number
+	export let level: number
 	export let status: NonVolatileStatus | null
-	export let hasStatus: boolean = false
+	export let hasStatusAndExp: boolean = false
 	export let editable: boolean
 
 	$: hpCur = hp.current
@@ -38,6 +42,7 @@
 			currentHp: e.detail.value,
 			currentHitDice: hitDiceCur,
 			currentStatus: status,
+			exp: exp,
 		} as UpdateDetail)
 	}
 
@@ -46,6 +51,7 @@
 			currentHp: hpCur,
 			currentHitDice: e.detail.value,
 			currentStatus: status,
+			exp: exp,
 		} as UpdateDetail)
 	}
 
@@ -54,8 +60,21 @@
 			currentHp: hpCur,
 			currentHitDice: hitDiceCur,
 			currentStatus: e.detail.value,
+			exp: exp,
 		} as UpdateDetail)
 	}
+
+	const onChangeExp = (e: CustomEvent<NumericChangeDetail>) => {
+		dispatch("update", {
+			currentHp: hpCur,
+			currentHitDice: hitDiceCur,
+			currentStatus: status,
+			exp: e.detail.value,
+		} as UpdateDetail)
+	}
+
+	$: expBarMax = experienceNeededUntilLevelUp(experienceNeededAtLevel(level), level)
+	$: expBarCur = expBarMax - experienceNeededUntilLevelUp(exp, level)
 </script>
 
 <div class="grid">
@@ -72,7 +91,7 @@
 		<span class="max-hp">/ {hp.max}</span>
 	</span>
 	<span class="hit-dice">
-		<span class="hit-dice-bar"><ResourceBar secondary current={hitDiceCur} max={hitDice.max} /></span>
+		<span class="hit-dice-bar"><ResourceBar variant="secondary" current={hitDiceCur} max={hitDice.max} /></span>
 		<span class="hit-dice-text">
 			<VisuallyHidden><label for="current-hit-dice">Hit Dice</label></VisuallyHidden>
 			<span class="current-hit-dice">
@@ -85,17 +104,32 @@
 			<span class="max-hit-dice">/ {hitDice.max} ({dieSize})</span>
 		</span>
 	</span>
+	{#if hasStatusAndExp}
+		<span>
+			<span class="row">
+				{#if status != null}
+					<StatusTag value={status} />
+				{/if}
+				{#if editable}
+					<StatusEditor id="current-status" value={statusCur} on:change={onChangeStatus} />
+				{/if}
+			</span>
+		</span>
+		<span class="exp">
+			<span class="exp-bar"><ResourceBar variant="tertiary" current={expBarCur} max={expBarMax} /></span>
+			<span class="exp-text">
+				<label for="current-experience">Exp:</label>
+				<span class="current-exp">
+					{#if editable}
+						<NumericResourceField id="current-experience" value={exp} on:change={onChangeExp} />
+					{:else}
+						{formatExp(exp)}
+					{/if}
+				</span>
+			</span>
+		</span>
+	{/if}
 </div>
-{#if hasStatus}
-	<div class="row">
-		{#if status != null}
-			<StatusTag value={status} />
-		{/if}
-		{#if editable}
-			<StatusEditor id="current-status" value={statusCur} on:change={onChangeStatus} />
-		{/if}
-	</div>
-{/if}
 
 <style>
 	.grid {
@@ -119,23 +153,31 @@
 		display: inline-block;
 	}
 
-	.hit-dice {
+	.hit-dice, .exp {
 		display: flex;
 		flex-direction: column;
 		font-size: var(--font-sz-mars);
+	} .exp {
+		place-self: start stretch;
 	}
 
-	.hit-dice-bar {
+	.hit-dice-bar, .exp-bar {
 		margin-bottom: 0.125em;
 	}
 
-	.current-hit-dice {
+	.current-hit-dice, .current-exp {
 		--input-min-width: 3ch;
 		display: inline-block;
 	}
 
-	.hit-dice-text {
+	.hit-dice-text, .exp-text {
 		align-self: flex-end;
+	}
+
+	.exp-text {
+		display: flex;
+		align-items: center;
+		gap: 0.25em;
 	}
 
 	.row {

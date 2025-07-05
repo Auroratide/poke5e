@@ -102,6 +102,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		nature: "cheerful",
 		type: ["ghost", "fairy"],
 		level: 11,
+		exp: 82000,
 		gender: Gender.Male,
 		attributes: {
 			str: 10,
@@ -185,6 +186,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		type: ["psychic", "fairy"],
 		nature: "curious",
 		level: 6,
+		exp: 12000,
 		gender: Gender.Female,
 		attributes: {
 			str: 10,
@@ -260,6 +262,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		type: ["ghost", "fire"],
 		nature: "apathetic",
 		level: 6,
+		exp: 12000,
 		gender: Gender.Male,
 		attributes: {
 			str: 12,
@@ -546,6 +549,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 				type: ["normal"], // wrong, but the type info is in a database apparently
 				nature: Natures[0],
 				level: pokemon.minLevel,
+				exp: 0,
 				gender: Gender.None,
 				attributes: pokemon.attributes,
 				ac: pokemon.ac,

@@ -39,6 +39,7 @@
 				max: pokemon.hitDice.max,
 			},
 			status: e.detail.currentStatus,
+			exp: e.detail.exp,
 		} as TrainerPokemon)
 	}
 
@@ -54,9 +55,11 @@
 		<HealthInfo
 			hp={pokemon.hp}
 			hitDice={pokemon.hitDice}
+			level={pokemon.level}
+			exp={pokemon.exp}
 			dieSize={pokemon.customHitDiceSize ?? species.hitDice}
 			status={pokemon.status}
-			hasStatus
+			hasStatusAndExp
 			{editable}
 			on:update={onUpdateHealth}
 		/>
