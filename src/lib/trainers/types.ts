@@ -56,6 +56,7 @@ export type TrainerPokemon = {
 	type: PokeType[],
 	nature: Nature,
 	level: number,
+	exp: number,
 	gender: Gender,
 	attributes: Attributes,
 	ac: number,

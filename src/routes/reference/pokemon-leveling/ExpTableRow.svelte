@@ -1,13 +1,13 @@
 <script lang="ts">
+	import { formatExp } from "$lib/creatures/experience"
+
 	export let level: number
 	export let exp: number
-
-	const formatter = Intl.NumberFormat()
 </script>
 
 <tr>
 	<td>{level}</td>
-	<td>{formatter.format(exp)}</td>
+	<td>{formatExp(exp)}</td>
 </tr>
 
 <style>

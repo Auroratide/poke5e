@@ -101,6 +101,7 @@
     --skin-bar-bg: hsl(330, 1%, 38%);
     --skin-bar-healthy: hsl(119, 100%, 52%);
     --skin-bar-secondary: hsl(197, 91%, 64%);
+	--skin-bar-tertiary: hsl(330, 1%, 65%);
     --skin-bar-warning: hsl(45, 83%, 49%);
     --skin-bar-danger: hsl(355, 72%, 53%);
 

@@ -1,3 +1,39 @@
+export const ExperienceNeededPerLevel = [
+	0,
+	200,
+	800,
+	2000,
+	6000,
+	12000,
+	20000,
+	30000,
+	44000,
+	62000,
+	82000,
+	104000,
+	128000,
+	158000,
+	194000,
+	234000,
+	278000,
+	326000,
+	382000,
+	450000,
+]
+
+export function formatExp(exp: number): string {
+	const formatter = Intl.NumberFormat()
+	return formatter.format(exp)
+}
+
+export function experienceNeededAtLevel(level: number): number {
+	return ExperienceNeededPerLevel[level - 1] ?? 0
+}
+
+export function experienceNeededUntilLevelUp(exp: number, currentLevel: number): number {
+	return Math.max(0, experienceNeededAtLevel(currentLevel + 1) - exp)
+}
+
 export function experienceAwarded(level: number, sr: number): number {
 	return 200 * level * sr
 }

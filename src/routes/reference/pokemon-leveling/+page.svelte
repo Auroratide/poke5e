@@ -5,6 +5,7 @@
 	import ReferencePage from "../ReferencePage.svelte"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
+	import ExperienceTable from "./ExperienceTable.svelte"
 	import ExperienceTool from "./ExperienceTool.svelte"
 
 	$: expFormula = $rulesVersion === "2018" ? experienceAwareded2018 : experienceAwarded
@@ -41,11 +42,7 @@
 		<p>Experience points are rewarded to Pokémon for successfully defeating other Pokémon, or given out at the DM’s discretion when the players complete a particularly difficult challenge or trainer battle. Catching a Pokémon also gives experience, but at 1/5 the normal amount.</p>
 		<p>XP can be distributed to a player’s Pokémon in any amount, but only Pokémon that took an action in the fight can be rewarded. Fainted Pokémon can also be given XP as long as they were in the fight. If two or more people battle against a single Pokémon, the XP given to each player to distribute is determined by the DM.</p>
 		<p>The following is a table containing the total experience a Pokémon needs at each level to level up:</p>
-		{#if $rulesVersion === "2018"}
-			<Rules2018.ExperienceTable />
-		{:else}
-			<Rules2024.ExperienceTable />
-		{/if}
+		<ExperienceTable />
 		<h3>Awarding Experience</h3>
 		<p>Defeating a Pokémon confers experience according to its Level and Species Rating (<abbr>SR</abbr>). Use the tool below to determine how much experience a Pokémon should award.</p>
 		<ExperienceTool formula={expFormula} />
