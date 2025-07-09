@@ -13,6 +13,8 @@
 	import type { PokemonBond } from "../../trainers/types"
 	import { BondIcon } from "./icons"
 	import PlusMinus from "$lib/design/PlusMinus.svelte"
+	import { BondEffects } from "./BondEffects"
+	import Popover from "$lib/design/Popover.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -20,6 +22,7 @@
 	export let editable: boolean
 
 	$: bondCur = value.points.current
+	$: bondEffect = $BondEffects[value.level]
 
 	const onChangeBondPoints = (e: CustomEvent<NumericChangeDetail>) => {
 		dispatch("update", {
@@ -30,10 +33,20 @@
 
 
 <div class="bond-info">
-	<p class="row">
-		<span class="icon"><BondIcon level={value.level} /></span>
-		<strong class="small-text">Bond: <PlusMinus value={value.level} /></strong>
-	</p>
+	{#if bondEffect}
+		<Popover id="bond-effect-popover" block>
+			<p class="row" slot="activator">
+				<span class="icon"><BondIcon level={value.level} /></span>
+				<strong class="small-text dotted">Bond: <PlusMinus value={value.level} /></strong>
+			</p>
+			<p class="small-text">{bondEffect}</p>
+		</Popover>
+	{:else}
+		<p class="row">
+			<span class="icon"><BondIcon level={value.level} /></span>
+			<strong class="small-text">Bond: <PlusMinus value={value.level} /></strong>
+		</p>
+	{/if}
 	{#if value.points.max > 0}
 		<p class="bond-points smaller-text row">
 			<label for="current-bond-points">Points:</label>
@@ -87,5 +100,9 @@
 
 	.bond-points {
 		--input-min-width: 3ch;
+	}
+
+	.dotted {
+		border-block-end: 0.125em dotted currentColor;
 	}
 </style>

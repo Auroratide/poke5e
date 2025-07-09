@@ -42,14 +42,14 @@
 		<tr>
 			<td>-2</td>
 			<td>
-				<p>At their discretion, the DM may have this Pokémon make an attack roll or ability check with disadvantage.</p>
+				<p>When the trainer issues a command, roll a d20. On 10 or lower, the Pokémon hesitates and follows the command with disadvantage.</p>
 				<p>Indifferent Pokémon do not care if their trainers win or lose. They will sometimes obey orders, and other times simply refuse to act.</p>
 			</td>
 		</tr>
 		<tr>
 			<td>-3</td>
 			<td>
-				<p>At their discretion, the DM may have this Pokémon disobey their trainer's order, either doing nothing or acting on their own.</p>
+				<p>When the trainer issues a command, roll a d20. On 10 or lower, the Pokémon disobeys the command, either by doing nothing or acting on its own.</p>
 				<p>Disloyal Pokémon hold disdain for being captured, and would rather be free. They have no need to impress their trainers, and actively disobey orders.</p>
 			</td>
 		</tr>

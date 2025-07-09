@@ -3,6 +3,7 @@
 	import { computePosition, offset } from "@floating-ui/dom"
 
 	export let id: string
+	export let block = false
 
 	$: popoverId = `${id}-popover-content`
 
@@ -57,7 +58,7 @@
 </script>
 
 <div {id} class="popover">
-	<button bind:this={button} popovertarget="{popoverId}" popovertargetaction="show" class="activator">
+	<button bind:this={button} popovertarget="{popoverId}" popovertargetaction="show" class="activator" class:block>
 		<slot name="activator"></slot>
 	</button>
 	<div bind:this={popover} id="{popoverId}" popover class="content">
@@ -71,6 +72,8 @@
 		cursor: help;
 	} button:focus-visible {
 		outline: 0.125em solid var(--skin-focus);
+	} button.block {
+		display: block;
 	}
 
 	.popover .content {
