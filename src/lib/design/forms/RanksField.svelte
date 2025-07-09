@@ -1,4 +1,10 @@
+<script lang="ts" context="module">
+	export type RankFieldInputEvent = CustomEvent<{ value: number }>
+</script>
+
+
 <script lang="ts">
+	import { createEventDispatcher } from "svelte"
 	import { kebab } from "./kebab"
 
 	export let label: string
@@ -9,16 +15,24 @@
 	export let min: number = 0
 	export let max: number
 
+	const dispatch = createEventDispatcher()
+
 	$: kebabName = name ?? kebab(label)
 	$: id = `${kebabName}-input`
-	$: knobTranslation = 100 * value / (max - min)
+	$: knobTranslation = 100 * (value - min) / (max - min)
 	$: notches = [...Array(max - min + 1)].map((_, i) => i)
+
+	const onInput = (e: Event) => {
+		value = parseInt((e.target as HTMLInputElement).value)
+
+		dispatch("input", { value })
+	}
 </script>
 
 <div class="ranks-field">
 	<label for="{id}">{label}</label>
 	<div class="container">
-		<input type="range" {id} name="{kebabName}" {placeholder} {min} {max} step="1" bind:value {disabled} />
+		<input type="range" {id} name="{kebabName}" {placeholder} {min} {max} step="1" {value} {disabled} on:input={onInput} />
 		<div class="range-display" aria-hidden="true">
 			<div class="track"></div>
 			<div class="notches">

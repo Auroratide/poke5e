@@ -8,8 +8,11 @@
 		<slot></slot>
 	</div>
 	{#if hasImage}
-		<div style:--size="{size}" class="square-image">
-			<slot name="art"></slot>
+		<div class="column">
+			<div style:--size="{size}" class="square-image">
+				<slot name="art"></slot>
+			</div>
+			<slot name="after-art"></slot>
 		</div>
 	{/if}
 </section>
@@ -25,7 +28,7 @@
 		align-items: center;
 	}
 
-	@media screen and (min-width: 37.5rem) {
+	@media screen and (min-width: 70rem) {
 		.lg\:row {
 			display: flex;
 			flex-direction: row;
@@ -36,6 +39,6 @@
 	.square-image {
 		width: var(--size);
 		height: var(--size);
-		padding: 0 0 0.5rem 1rem;
+		padding: 0;
 	}
 </style>

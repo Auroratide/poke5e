@@ -20,6 +20,7 @@
 	import CustomBasicInfoFieldset from "./forms/CustomBasicInfoFieldset.svelte"
 	import SpeedsFieldset from "$lib/dnd/SpeedsFieldset.svelte"
 	import SensesFieldset from "$lib/dnd/SensesFieldset.svelte"
+	import BondFieldset from "$lib/pokemon/bond/BondFieldset.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -49,6 +50,7 @@
 	let customHitDiceSize = pokemon.customHitDiceSize
 	let speeds = structuredClone(pokemon.speeds)
 	let senses = structuredClone(pokemon.senses)
+	let bond = structuredClone(pokemon.bond)
 
 	let moves = structuredClone(pokemon.moves)
 	let items = structuredClone(pokemon.items)
@@ -88,6 +90,7 @@
 			customHitDiceSize,
 			speeds,
 			senses,
+			bond,
 		} as TrainerPokemon)
 	}
 </script>
@@ -97,6 +100,7 @@
 	<GenderFieldset bind:value={gender} {disabled} />
 	<AttributesFieldset bind:values={attributes} {disabled} />
 	<AbilitiesFieldset bind:ability {species} {disabled} />
+	<BondFieldset bind:value={bond} {disabled} />
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
 	<MovesFieldset bind:values={moves} {species} {level} {disabled} />

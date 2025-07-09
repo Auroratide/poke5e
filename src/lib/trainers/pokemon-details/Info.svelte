@@ -17,6 +17,7 @@
 	import HeldItemsInfo from "./HeldItemsInfo.svelte"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import FeatsInfo from "$lib/feats/FeatsInfo.svelte"
+	import BondInfo, { type UpdateDetail as BondUpdateDetail } from "$lib/pokemon/bond/BondInfo.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -46,6 +47,19 @@
 	const onUpdatePp = (e: CustomEvent<LearnedMove>) => {
 		dispatch("update-pp", e.detail)
 	}
+
+	const onUpdateBond = (e: CustomEvent<BondUpdateDetail>) => {
+		dispatch("update-bond", {
+			...pokemon,
+			bond: {
+				...pokemon.bond,
+				points: {
+					current: e.detail.currentBondPoints,
+					max: pokemon.bond.points.max,
+				},
+			},
+		})
+	}
 </script>
 
 <SideArtCardSection {hasImage}>
@@ -66,6 +80,7 @@
 	</div>
 	<StatsInfo {pokemon} {species} />
 	<PokemonArt slot="art" media={species.media} alt="" shiny={pokemon.isShiny} />
+	<BondInfo slot="after-art" value={pokemon.bond} {editable} on:update={onUpdateBond} />
 </SideArtCardSection>
 <section class="stats">
 	<VisuallyHidden><h2>Stats</h2></VisuallyHidden>

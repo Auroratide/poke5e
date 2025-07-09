@@ -47,6 +47,11 @@ export type HeldItem = { id: string } & (StandardHeldItem | CustomHeldItem)
 export type InventoryItem = HeldItem & { quantity: number }
 export type MaybeQuantity = { quantity?: number }
 
+export type PokemonBond = {
+	level: number,
+	points: Resource,
+}
+
 export type PokemonId = string
 export type TrainerPokemon = {
 	id: PokemonId,
@@ -76,10 +81,7 @@ export type TrainerPokemon = {
 	customHitDiceSize?: HitDice,
 	speeds: DndSpeeds,
 	senses: DndSenses,
-	bond: {
-		level: number,
-		points: Resource,
-	},
+	bond: PokemonBond,
 }
 
 export type WithPokemonData = {

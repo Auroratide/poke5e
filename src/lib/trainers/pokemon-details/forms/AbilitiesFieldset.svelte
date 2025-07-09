@@ -18,6 +18,6 @@
 	} ]
 </script>
 
-<Fieldset title="Feats">
+<Fieldset title="Ability">
 	<SelectField label="Ability" options={abilityOptions} bind:value={ability} {disabled} />
 </Fieldset>

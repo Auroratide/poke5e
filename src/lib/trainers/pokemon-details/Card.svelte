@@ -30,13 +30,19 @@
 			optimistic: true,
 		})
 	}
+
+	const onUpdateBond = (e: CustomEvent<TrainerPokemon>) => {
+		$trainer.update?.pokemon(e.detail, {
+			optimistic: true,
+		})
+	}
 </script>
 
 <RequirePokemon trainer={$trainer} {id}>
 	{#if species}
 		<Card title={pokemon.nickname}>
 			<TypeTag slot="header-extra" type={pokemon.type} />
-			<Info trainer={$trainer.info} {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} />
+			<Info trainer={$trainer.info} {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} on:update-bond={onUpdateBond} />
 			{#if canEdit}
 				<ActionArea>
 					<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="ghost">Remove</Button>
