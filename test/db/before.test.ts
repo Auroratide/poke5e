@@ -1,5 +1,4 @@
 import { expect, test } from "vitest"
-import { Iris, SunnyYellow } from "./stubs"
 import { call, callAll, expectError, supabase } from "./supabase"
 
 test("updating trainers", async () => {
@@ -398,6 +397,21 @@ test("updating pokemon", async () => {
 		_status: "Burned",
 		_held_item: "Focus Sash",
 		_is_shiny: true,
+		_custom_size: "medium",
+		_hit_dice_size: "d4",
+		_speed_walking: 60,
+		_speed_climbing: 70,
+		_speed_swimming: 80,
+		_speed_flying: 90,
+		_speed_hover: 100,
+		_speed_burrowing: 110,
+		_sense_darkvision: 30,
+		_sense_blindsight: 40,
+		_sense_tremorsense: 50,
+		_sense_truesight: 60,
+		_bond_level: 3,
+		_bond_points_cur: 2,
+		_bond_points_max: 3,
 	})
 
 	const [vivillon] = await callAll<any>("get_pokemon", {
@@ -413,6 +427,25 @@ test("updating pokemon", async () => {
 	expect(vivillon.held_item).toEqual("Focus Sash")
 
 	expect(vivillon.is_shiny).toEqual(true)
+
+	expect(vivillon.custom_size).toEqual("medium")
+	expect(vivillon.hit_dice_size).toEqual("d4")
+
+	expect(vivillon.speed_walking).toEqual(60)
+	expect(vivillon.speed_climbing).toEqual(70)
+	expect(vivillon.speed_swimming).toEqual(80)
+	expect(vivillon.speed_flying).toEqual(90)
+	expect(vivillon.speed_hover).toEqual(100)
+	expect(vivillon.speed_burrowing).toEqual(110)
+
+	expect(vivillon.sense_darkvision).toEqual(30)
+	expect(vivillon.sense_blindsight).toEqual(40)
+	expect(vivillon.sense_tremorsense).toEqual(50)
+	expect(vivillon.sense_truesight).toEqual(60)
+
+	expect(vivillon.bond_level).toEqual(3)
+	expect(vivillon.bond_points_cur).toEqual(2)
+	expect(vivillon.bond_points_max).toEqual(3)
 
 	// Cleanup
 	await call("remove_pokemon", {
@@ -690,3 +723,101 @@ test("uploading files", async () => {
 
 	expect(deleteOldKeyResult?.length).toEqual(1)
 })
+
+export const Iris = () => ({
+	_name: "Iris",
+	_description: "A trainer who loves colors.",
+	_level: 6,
+	_strength: 10,
+	_dexterity: 16,
+	_constitution: 10,
+	_intelligence: 13,
+	_wisdom: 11,
+	_charisma: 15,
+	_ac: 11,
+	_hp_cur: 50,
+	_hp_max: 50,
+	_hit_dice_cur: 6,
+	_hit_dice_max: 6,
+	_prof_athletics: false,
+	_prof_acrobatics: true,
+	_prof_sleight_of_hand: false,
+	_prof_stealth: true,
+	_prof_arcana: false,
+	_prof_history: false,
+	_prof_investigation: false,
+	_prof_nature: false,
+	_prof_religion: false,
+	_prof_animal_handling: true,
+	_prof_insight: false,
+	_prof_medicine: false,
+	_prof_perception: false,
+	_prof_survival: false,
+	_prof_deception: true,
+	_prof_intimidation: false,
+	_prof_performance: false,
+	_prof_persuasion: false,
+	_save_str: false,
+	_save_dex: true,
+	_save_con: false,
+	_save_int: false,
+	_save_wis: false,
+	_save_cha: true,
+	_species: "Human",
+	_gender: null,
+	_age: null,
+	_home_region: null,
+	_background: null,
+})
+
+export const SunnyYellow = () => ({
+	_nickname: "Sunny Yellow",
+	_species: "vivillon",
+	_nature: "Quirky",
+	_type: ["bug", "flying"],
+	_level: 6,
+	_gender: "female",
+	_strength: 12,
+	_dexterity: 17,
+	_constitution: 16,
+	_intelligence: 6,
+	_wisdom: 14,
+	_charisma: 10,
+	_ac: 14,
+	_hp_cur: 66,
+	_hp_max: 66,
+	_hit_dice_cur: 6,
+	_hit_dice_max: 6,
+	_prof_athletics: false,
+	_prof_acrobatics: false,
+	_prof_sleight_of_hand: false,
+	_prof_stealth: false,
+	_prof_arcana: false,
+	_prof_history: false,
+	_prof_investigation: false,
+	_prof_nature: false,
+	_prof_religion: false,
+	_prof_animal_handling: false,
+	_prof_insight: false,
+	_prof_medicine: false,
+	_prof_perception: false,
+	_prof_survival: false,
+	_prof_deception: false,
+	_prof_intimidation: false,
+	_prof_performance: false,
+	_prof_persuasion: false,
+	_save_str: false,
+	_save_dex: false,
+	_save_con: false,
+	_save_int: false,
+	_save_wis: false,
+	_save_cha: false,
+	_ability: "shield-dust",
+	_notes: "",
+	_tera_type: "fairy",
+	_exp: 5400,
+	_status: null,
+	_held_item: null,
+	_is_shiny: false,
+})
+
