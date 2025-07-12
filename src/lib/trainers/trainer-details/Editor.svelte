@@ -39,7 +39,7 @@
 	let maxHp = trainer.hp.max
 	let maxHitDice = trainer.hitDice.max
 	let attributes = { ...trainer.attributes }
-	let proficiencies = [...trainer.proficiencies]
+	let proficiencies = structuredClone(trainer.proficiencies)
 	let savingThrows = [...trainer.savingThrows]
 	let description = trainer.description
 	let biography = trainer.biography

@@ -40,8 +40,8 @@
 	let gender = pokemon.gender
 	let attributes = { ...pokemon.attributes }
 	let ability = pokemon.ability
-	let proficiencies = pokemon.proficiencies
-	let savingThrows = pokemon.savingThrows
+	let proficiencies = structuredClone(pokemon.proficiencies)
+	let savingThrows = [...pokemon.savingThrows]
 	let notes = pokemon.notes
 	let type = pokemon.type
 	let isShiny = pokemon.isShiny

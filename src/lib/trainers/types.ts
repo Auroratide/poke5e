@@ -1,4 +1,4 @@
-import type { Skill, Attribute, Attributes } from "../dnd/types"
+import type { Attribute, Attributes, SkillRanks } from "../dnd/types"
 import type { CreatureSize } from "$lib/dnd/CreatureSize"
 import type { Pokemon } from "../creatures/types"
 import type { Move } from "$lib/moves/types"
@@ -68,7 +68,7 @@ export type TrainerPokemon = {
 	hp: Resource,
 	hitDice: Resource,
 	ability: AbilityId,
-	proficiencies: Skill[],
+	proficiencies: SkillRanks,
 	savingThrows: Attribute[],
 	moves: LearnedMove[],
 	items: HeldItem[],
@@ -113,7 +113,7 @@ export type TrainerInfo = {
 	hp: Resource,
 	hitDice: Resource,
 	attributes: Attributes,
-	proficiencies: Skill[],
+	proficiencies: SkillRanks,
 	savingThrows: Attribute[],
 	biography: TrainerBio,
 	money: number,

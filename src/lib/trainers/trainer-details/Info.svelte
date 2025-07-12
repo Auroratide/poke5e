@@ -65,7 +65,7 @@
 		<dd>{trainer.readKey}</dd>
 	</FlatDl>
 	<div class="column">
-		<HealthInfo hp={trainer.hp} hitDice={trainer.hitDice} dieSize={$trainerHitDiceSize} {editable} on:update={onUpdateHealth} status={null} />
+		<HealthInfo hp={trainer.hp} hitDice={trainer.hitDice} dieSize={$trainerHitDiceSize} {editable} on:update={onUpdateHealth} status={null} level={trainer.level} exp={0} />
 		<StatsInfo {trainer} />
 	</div>
 	<Art slot="art" src="{trainer.avatar.href}" alt="Trainer Avatar" />

@@ -14,6 +14,7 @@ import {
 import { Natures } from "../nature"
 import { Gender } from "../types"
 import type { ChosenFeat } from "$lib/feats/ChosenFeat"
+import { skillListToRanks } from "$lib/dnd/types"
 
 let POKEMON_ID = 1
 const nextPokemonId = () => (++POKEMON_ID).toString()
@@ -57,7 +58,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			cha: 15,
 		},
 		savingThrows: ["cha"],
-		proficiencies: ["animal handling", "history", "deception"],
+		proficiencies: skillListToRanks(["animal handling", "history", "deception"]),
 		biography: {
 			species: "Human",
 			gender: "Female",
@@ -122,7 +123,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			max: 11,
 		},
 		ability: "disguise",
-		proficiencies: ["arcana", "intimidation", "performance"],
+		proficiencies: skillListToRanks(["arcana", "intimidation", "performance"]),
 		savingThrows: ["wis", "cha"],
 		moves: [ {
 			id: nextMoveId(),
@@ -206,7 +207,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			max: 6,
 		},
 		ability: "telepathy",
-		proficiencies: ["insight", "perception"],
+		proficiencies: skillListToRanks(["insight", "perception"]),
 		savingThrows: ["wis"],
 		moves: [ {
 			id: nextMoveId(),
@@ -282,7 +283,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			max: 6,
 		},
 		ability: "flame-body",
-		proficiencies: ["arcana"],
+		proficiencies: skillListToRanks(["arcana"]),
 		savingThrows: ["wis"],
 		moves: [ {
 			id: nextMoveId(),
@@ -357,7 +358,7 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			cha: 13,
 		},
 		savingThrows: ["dex", "int"],
-		proficiencies: ["stealth", "animal handling", "persuasion", "deception"],
+		proficiencies: skillListToRanks(["stealth", "animal handling", "persuasion", "deception"]),
 		biography: {
 			species: "Halfling",
 			gender: "Female",
@@ -434,7 +435,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 					wis: 10,
 					cha: 10,
 				},
-				proficiencies: ["animal handling"],
+				proficiencies: skillListToRanks(["animal handling"]),
 				savingThrows: ["cha"],
 				biography: {
 					species: "Human",
@@ -562,7 +563,7 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 					current: pokemon.minLevel,
 					max: pokemon.minLevel,
 				},
-				proficiencies: pokemon.skills,
+				proficiencies: skillListToRanks(pokemon.skills),
 				savingThrows: pokemon.savingThrows,
 				moves: [],
 				items: [],

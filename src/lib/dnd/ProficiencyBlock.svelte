@@ -7,6 +7,7 @@
 		name: string,
 		attr: Attribute,
 		proficient: boolean,
+		expert: boolean,
 		extraModifiers?: Record<string, number>,
 	}[]
 	export let attributes: Attributes
@@ -19,12 +20,14 @@
 
 <dl style:--columns={columns} style:--columns-lg={columnsLg}>
 	{#each values as value, index}
-		{@const modifier = modifierForScore(attributes[value.attr]) + (value.proficient ? pb : 0) + (value.extraModifiers?.[value.name] ?? 0)}
+		{@const modifier = modifierForScore(attributes[value.attr]) + (value.proficient ? pb : 0) + (value.expert ? pb : 0) + (value.extraModifiers?.[value.name] ?? 0)}
 		{@const evenLg = index % (2 * columnsLg) >= columnsLg}
 		{@const even = index % (2 * columns) >= columns}
 		<dt class:even class:even-lg={evenLg}>
 			<span class="icon">
-				{#if value.proficient}
+				{#if value.expert}
+					<abbr title="Expert">★</abbr>
+				{:else if value.proficient}
 					<abbr title="Proficient">⦿</abbr>
 				{/if}
 			</span>

@@ -1,3 +1,5 @@
+import { skillList } from "./proficiency"
+
 export type Attributes = {
 	str: number,
 	dex: number,
@@ -28,3 +30,20 @@ export type Skill =
 	"intimidation" |
 	"performance" |
 	"persuasion"
+
+export type SkillRanks = Record<Skill, number>
+
+export function skillListToRanks(list: Skill[]): SkillRanks {
+	return skillList.reduce((ranks, skill) => ({
+		...ranks,
+		[skill.name]: list.includes(skill.name) ? 1 : 0,
+	}), {} as SkillRanks)
+}
+
+export function isProficient(ranks: SkillRanks, skill: Skill): boolean {
+	return ranks[skill] > 0
+}
+
+export function isExpert(ranks: SkillRanks, skill: Skill): boolean {
+	return ranks[skill] > 1
+}
