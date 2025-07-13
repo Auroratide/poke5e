@@ -13,7 +13,10 @@
 	const repositionPopover = () => {
 		computePosition(button, popover, {
 			placement: "bottom",
-			middleware: [offset(2.5)],
+			middleware: [offset({
+				mainAxis: 4,
+				crossAxis: 2,
+			})],
 		}).then(({ x, y }) => {
 			Object.assign(popover.style, {
 				top: `${y}px`,

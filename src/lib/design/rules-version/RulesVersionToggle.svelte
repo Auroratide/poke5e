@@ -38,6 +38,7 @@
 
 	legend {
 		float: inline-start;
+		margin: 0.25em 0.5em;
 	}
 
 	legend a {

@@ -21,6 +21,8 @@
 	import StatusEditor, { type ChangeDetail as StatusChangeDetail } from "$lib/pokemon/StatusEditor.svelte"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 	import { experienceNeededAtLevel, experienceNeededUntilLevelUp, formatExp } from "$lib/creatures/experience"
+	import Popover from "$lib/design/Popover.svelte"
+	import HelpIcon from "$lib/design/icon/HelpIcon.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -74,7 +76,8 @@
 	}
 
 	$: expBarMax = experienceNeededUntilLevelUp(experienceNeededAtLevel(level), level)
-	$: expBarCur = expBarMax - experienceNeededUntilLevelUp(exp, level)
+	$: expNeeded = experienceNeededUntilLevelUp(exp, level)
+	$: expBarCur = expBarMax - expNeeded
 </script>
 
 <div class="grid">
@@ -118,6 +121,10 @@
 		<span class="exp">
 			<span class="exp-bar"><ResourceBar variant="tertiary" current={expBarCur} max={expBarMax} /></span>
 			<span class="exp-text">
+				<Popover id="exp-remaining">
+					<HelpIcon slot="activator" label="Exp Needed" />
+					<p style:text-align="center">{formatExp(expNeeded)} needed until level up.</p>
+				</Popover>
 				<label for="current-experience">Exp:</label>
 				<span class="current-exp">
 					{#if editable}

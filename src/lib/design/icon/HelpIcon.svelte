@@ -4,23 +4,26 @@
 
 <span class="help-icon">
 	<span class="visually-hidden">{label}</span>
-	<span class="help" aria-hidden="true">?</span>
+	<span class="help" aria-hidden="true">
+		<span class="small">?</span>
+	</span>
 </span>
 
 <style>
 	.help {
-		font-size: var(--font-sz-mercury);
-		border: 0.25em solid currentColor;
+		border: 0.2em solid currentColor;
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		inline-size: 1.5em;
-		block-size: 1.5em;
+		inline-size: 1.2em;
+		block-size: 1.2em;
 		border-radius: 1em;
 		font-weight: bold;
 		line-height: 1;
-		margin-block: 0.45em;
-		margin-inline: 0.375em;
+	}
+
+	.small {
+		font-size: 0.875em;
 	}
 
 	.visually-hidden {
