@@ -12,7 +12,7 @@
 
 	// keep bond level and max points in sync unless they were different
 	const onBondLevelChange = (e: RankFieldInputEvent) => {
-		if (value.level === value.points.max) {
+		if (Math.max(0, value.level) === value.points.max) {
 			value.points.max = Math.max(0, e.detail.value)
 		}
 		value.level = e.detail.value

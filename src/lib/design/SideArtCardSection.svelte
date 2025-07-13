@@ -26,6 +26,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		gap: 0.5em;
 	}
 
 	@media screen and (min-width: 70rem) {

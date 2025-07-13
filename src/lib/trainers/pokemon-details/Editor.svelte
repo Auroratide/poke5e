@@ -90,7 +90,13 @@
 			customHitDiceSize,
 			speeds,
 			senses,
-			bond,
+			bond: {
+				...bond,
+				points: {
+					current: Math.max(0, pokemon.bond.points.current + (bond.points.max - pokemon.bond.points.max)),
+					max: bond.points.max,
+				},
+			},
 		} as TrainerPokemon)
 	}
 </script>

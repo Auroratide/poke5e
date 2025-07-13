@@ -2,7 +2,7 @@
 	export let name: string
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" style:--bg="var(--skin-bond-{name}-bg)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" style:--bg="var(--skin-bond-{name}-bg)" style:--bg-dark="var(--skin-bond-{name}-bg-dark)">
 	<title>{name}</title>
 	<slot></slot>
 </svg>
@@ -24,7 +24,6 @@
 	svg :global(path.face-feature),
 	svg :global(circle.face-feature),
 	svg :global(rect.face-feature) {
-		fill: var(--bg);
-		filter: brightness(0.5);
+		fill: var(--bg-dark);
 	}
 </style>

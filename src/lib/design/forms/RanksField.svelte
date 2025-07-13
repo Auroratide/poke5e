@@ -98,7 +98,7 @@
 		position: absolute;
 		inline-size: 100%;
 		block-size: 1em;
-		background: var(--skin-local-bg, var(--skin-bg));
+		background: var(--skin-local-bg, var(--skin-bg-light));
 		border-radius: 2em 1em;
 		inset: 50% 0;
 		transform: translateY(-50%);
@@ -106,7 +106,7 @@
 	}
 
 	.knob {
-		background: var(--skin-local-bg, var(--skin-bg));
+		background: var(--skin-local-bg, var(--skin-bg-light));
 		color: var(--skin-bg-text);
 		text-shadow: 0.0625em 0.0625em 0 oklch(0% 0 0);
 		box-shadow: var(--elev-cumulus);
@@ -141,6 +141,6 @@
 		inline-size: 0.5em;
 		block-size: 0.5em;
 		border-radius: 100% 50%;
-		background: var(--skin-local-bg, var(--skin-bg));
+		background: var(--skin-local-bg, var(--skin-bg-light));
 	}
 </style>
