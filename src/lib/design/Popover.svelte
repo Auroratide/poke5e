@@ -64,7 +64,7 @@
 	<button bind:this={button} popovertarget="{popoverId}" popovertargetaction="show" class="activator" class:block>
 		<slot name="activator"></slot>
 	</button>
-	<div bind:this={popover} id="{popoverId}" popover class="content">
+	<div bind:this={popover} id="{popoverId}" popover="" class="content">
 		<slot></slot>
 	</div>
 </div>
