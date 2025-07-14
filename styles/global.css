@@ -25,6 +25,7 @@
     --skin-bg-text: hsl(0, 0%, 100%);
     --skin-bg-dark: hsl(251, 13%, 17%);
     --skin-bg-softtext: hsla(0, 0%, 100%, 0.667);
+	--skin-bg-light: hsl(0, 0%, 30%);
 
     --skin-shade: hsla(0, 0%, 0%, 0.667);
 
@@ -91,6 +92,22 @@
     --skin-other-bg: hsl(0, 0%, 33%);
     --skin-gender-text: hsl(0, 0%, 100%);
 
+	/* Dark variants needed, filter brightness does not work on svg elements in Safari */
+	--skin-bond-disloyal-bg: oklch(0.7076 0.1847 28.38);
+	--skin-bond-disloyal-bg-dark: oklch(0.4421 0.1092 28.2);
+	--skin-bond-indifferent-bg: oklch(0.8019 0.1677 72.5);
+	--skin-bond-indifferent-bg-dark: oklch(0.5 0.1157 74);
+	--skin-bond-upset-bg: oklch(0.9501 0.1771 105.86);
+	--skin-bond-upset-bg-dark: oklch(0.5599 0.1218 105.4);
+	--skin-bond-neutral-bg: oklch(0.874 0.0402 315.57);
+	--skin-bond-neutral-bg-dark: oklch(0.5021 0.0251 312);
+	--skin-bond-content-bg: oklch(0.8903 0.2255 143.17);
+	--skin-bond-content-bg-dark: oklch(0.5067 0.1427 143.5);
+	--skin-bond-pleased-bg: oklch(0.9051 0.1467 182.58);
+	--skin-bond-pleased-bg-dark: oklch(0.507 0.0921 182.5);
+	--skin-bond-loyal-bg: oklch(0.7609 0.2122 334.9);
+	--skin-bond-loyal-bg-dark: oklch(0.4613 0.1217 335);
+
 	--skin-pokeball-bg: hsl(355 66% 45%);
 	--skin-medicine-bg: hsl(249, 50%, 57%);
 	--skin-berry-bg: hsl(205 50% 35%);
@@ -101,6 +118,7 @@
     --skin-bar-bg: hsl(330, 1%, 38%);
     --skin-bar-healthy: hsl(119, 100%, 52%);
     --skin-bar-secondary: hsl(197, 91%, 64%);
+	--skin-bar-tertiary: hsl(330, 1%, 65%);
     --skin-bar-warning: hsl(45, 83%, 49%);
     --skin-bar-danger: hsl(355, 72%, 53%);
 
@@ -257,4 +275,16 @@ hr {
 dfn {
     font-weight: bold;
     font-style: normal;
+}
+
+/* https://webaim.org/techniques/css/invisiblecontent/ */
+.visually-hidden {
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	width: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
 }
