@@ -40,6 +40,25 @@ export function skillListToRanks(list: Skill[]): SkillRanks {
 	}), {} as SkillRanks)
 }
 
+export function skillRanksToList(ranks: SkillRanks): Skill[] {
+	return Object
+		.entries(ranks)
+		.filter(([, rank]) => rank > 0)
+		.map((it) => it[0] as Skill)
+}
+
+export function addProficiencies(ranks: SkillRanks, skills: Skill[]): SkillRanks {
+	const updatedRanks = { ...ranks }
+
+	for (const skill of skills) {
+		if (updatedRanks[skill] === 0) {
+			updatedRanks[skill] = 1
+		}
+	}
+
+	return updatedRanks
+}
+
 export function isProficient(ranks: SkillRanks, skill: Skill): boolean {
 	return ranks[skill] > 0
 }

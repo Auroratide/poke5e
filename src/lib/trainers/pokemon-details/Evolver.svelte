@@ -15,6 +15,7 @@
 		Fieldset,
 		RadioFields,
 	} from "$lib/design/forms"
+	import { addProficiencies, skillRanksToList } from "$lib/dnd/types"
 
 	const dispatch = createEventDispatcher()
 
@@ -36,7 +37,7 @@
 	$: typeWillChange = !list.equalUnordered(species.type)(newType)
 	$: gainedHp = pokemon.level * 2
 	$: gainedAc = Math.max(0, (evolveToPokemon?.ac ?? 0) - pokemon.ac)
-	$: gainedProficiencies = list.difference(evolveToPokemon?.skills ?? [])(pokemon.proficiencies)
+	$: gainedProficiencies = list.difference(evolveToPokemon?.skills ?? [])(skillRanksToList(pokemon.proficiencies))
 	$: gainedSavingThrows = list.difference(evolveToPokemon?.savingThrows ?? [])(pokemon.savingThrows)
 	$: newAbility = evolveToPokemon?.abilities[Math.min(evolveToPokemon?.abilities.length - 1, currentAbilityIndex)]
 
@@ -54,7 +55,7 @@
 				max: pokemon.hp.max + gainedHp,
 			},
 			ac: pokemon.ac + gainedAc,
-			proficiencies: pokemon.proficiencies.concat(gainedProficiencies),
+			proficiencies: addProficiencies(pokemon.proficiencies, gainedProficiencies),
 			savingThrows: pokemon.savingThrows.concat(gainedSavingThrows),
 			ability: newAbility?.id ?? pokemon.ability,
 		}
