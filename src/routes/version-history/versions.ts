@@ -12,6 +12,17 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.7.0",
+		description: [
+			"New: Can customize pokémon size, hit dice, movement, and senses (\"Advanced\" options in the editor).",
+			"New: Can manage Pokémons' experience points.",
+			"New: Can manage Pokémons' bond level and points.",
+			"New: Can assign expertise to skills.",
+			"Bug fix: Fixed Chesnaught size.",
+			"Reference: Match evolution rules of the 2018 rules to the PHB.",
+			"Adjusted the level requirements for some of the Hisuian Pokémon.",
+		],
+	}, {
 		name: "v1.6.8",
 		description: [
 			"Match item prices to those found in the original Player Handbook.",
@@ -310,6 +321,10 @@ export const versionHistory: VersionHistory = {
 		],
 	} ],
 	groups: [ {
+		name: "v1.7",
+		highlight: "More Pokémon Customization!",
+		description: "Pokémon have more Advanced options in the editor, allowing you to specify custom size, hit die, movement, and senses. Additionally, experience and bond can be managed, as well as expertise for skill proficiencies.",
+	}, {
 		name: "v1.6",
 		highlight: "Trainer Paths & Specializations!",
 		description: "Trainers can now specify type specializations, chosen path, and feats. Type bonuses are applied to the corresponding Pokémon, and path resources (such as Shadow Points) can be managed.",
