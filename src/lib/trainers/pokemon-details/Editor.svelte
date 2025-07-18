@@ -3,7 +3,7 @@
 	import Button from "$lib/design/Button.svelte"
 	import { ActionArea, Form, FormDetails, MarkdownField } from "$lib/design/forms"
 	import Fieldset from "$lib/design/forms/Fieldset.svelte"
-	import AttributesFieldset from "$lib/dnd/AttributesFieldset.svelte"
+	import { AttributesFieldset } from "$lib/dnd/attributes"
 	import ProficienciesFieldset from "$lib/dnd/ProficienciesFieldset.svelte"
 	import SavingThrowsFieldset from "$lib/dnd/SavingThrowsFieldset.svelte"
 	import TypeField from "$lib/pokemon/TypeField.svelte"
@@ -38,7 +38,7 @@
 	let maxHp = pokemon.hp.max
 	let maxHitDice = pokemon.hitDice.max
 	let gender = pokemon.gender
-	let attributes = { ...pokemon.attributes }
+	let attributes = pokemon.attributes.copy()
 	let ability = pokemon.ability
 	let proficiencies = structuredClone(pokemon.proficiencies)
 	let savingThrows = [...pokemon.savingThrows]

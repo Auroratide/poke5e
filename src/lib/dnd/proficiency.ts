@@ -1,5 +1,5 @@
-import type { Attribute, Attributes, Skill } from "./types"
-import { modifierForScore } from "./attributes"
+import type { Skill } from "./types"
+import { Attributes, type Attribute } from "./attributes"
 
 export const skillList: {
     name: Skill,
@@ -65,5 +65,5 @@ export const proficiencyBonus = (level: number) => 2 + Math.floor((level - 1) / 
 export const proficiencyModifier = (skill: Skill, attributes: Attributes, proficiencyBonus: number) => {
 	const relevantAttribute = skillList.find(it => it.name === skill).attribute
 
-	return modifierForScore(attributes[relevantAttribute]) + proficiencyBonus
+	return attributes[relevantAttribute].modifier + proficiencyBonus
 }

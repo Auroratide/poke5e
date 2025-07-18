@@ -1,12 +1,11 @@
 <script lang="ts">
 	import { Fieldset, CheckboxFields } from "$lib/design/forms"
-	import { attributeList } from "$lib/dnd/attributes"
-	import type { Attributes } from "$lib/dnd/types"
+	import { Attributes, type Attribute } from "./attributes"
 
-	export let values: (keyof Attributes)[]
+	export let values: Attribute[]
 	export let disabled: boolean
 
-	const attributeNames = attributeList.map((it) => ({
+	const attributeNames = Attributes.list.map((it) => ({
 		name: it.name,
 		value: it.abbr,
 	}))

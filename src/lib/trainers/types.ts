@@ -1,4 +1,4 @@
-import type { Attribute, Attributes, SkillRanks } from "../dnd/types"
+import type { Attribute, Attributes } from "$lib/dnd/attributes"
 import type { CreatureSize } from "$lib/dnd/CreatureSize"
 import type { Pokemon } from "../creatures/types"
 import type { Move } from "$lib/moves/types"
@@ -12,6 +12,7 @@ import type { ChosenFeat } from "$lib/feats/ChosenFeat"
 import type { DndSpeeds } from "$lib/dnd/DndSpeeds"
 import type { DndSenses } from "$lib/dnd/DndSenses"
 import type { HitDice } from "$lib/dnd/HitDice"
+import type { SkillRanks } from "$lib/dnd/types"
 
 export type Resource = {
 	current: number,

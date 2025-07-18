@@ -5,7 +5,7 @@
 	import Paragraphs from "$lib/design/Paragraphs.svelte"
 	import HealthInfo, { type UpdateDetail as HealthUpdateDetail } from "../info/HealthInfo.svelte"
 	import StatsInfo from "./StatsInfo.svelte"
-	import AttributeBlock from "$lib/dnd/AttributeBlock.svelte"
+	import { AttributeBlock } from "$lib/dnd/attributes"
 	import SkillsInfo from "../info/SkillsInfo.svelte"
 	import Art from "$lib/design/Art.svelte"
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"

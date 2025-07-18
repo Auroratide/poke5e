@@ -1,5 +1,5 @@
 import { expect, test } from "vitest"
-import { stubAttributes } from "../dnd/test/stubs"
+import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { level, oneOfAttributes } from "./Prerequisite"
 
 test("level prerequisite", () => {

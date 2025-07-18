@@ -9,7 +9,7 @@
 	import { NumericResourceField } from "$lib/design/forms"
 	import type { ChangeDetail } from "$lib/design/forms/NumericResourceField.svelte"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
-	import type { Attributes } from "$lib/dnd/types"
+	import type { Attributes } from "$lib/dnd/attributes"
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
 	import { deriveMovePowers } from "$lib/moves/MovePowers"
 	import type { Move } from "$lib/moves/types"

@@ -1,16 +1,5 @@
 import { skillList } from "./proficiency"
 
-export type Attributes = {
-	str: number,
-	dex: number,
-	con: number,
-	int: number,
-	wis: number,
-	cha: number,
-}
-
-export type Attribute = keyof Attributes
-
 export type Skill =
 	"athletics" |
 	"acrobatics" |

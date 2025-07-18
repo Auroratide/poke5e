@@ -1,6 +1,5 @@
-import { modifierForScore } from "$lib/dnd/attributes"
 import { proficiencyBonus } from "$lib/dnd/proficiency"
-import type { Attributes } from "$lib/dnd/types"
+import type { Attributes, Attribute } from "$lib/dnd/attributes"
 import type { PokeType } from "$lib/pokemon/types"
 import type { Move } from "../types"
 
@@ -21,12 +20,12 @@ const maxBy = <T>(val: (o: T) => number) => (max: T, cur: T) => val(cur) > val(m
 export function deriveMovePowers(move: Move, deps: MovePowerDependencies): MovePowers | undefined {
 	if (move.power === "none" || move.power === "varies") return undefined
 
-	const power = move.power === "any"
+	const power: Attribute[] = move.power === "any"
 		? ["str", "dex", "con", "int", "wis", "cha"]
 		: move.power
 
-	const bestPower = power.reduce(maxBy((power) => deps.attributes[power]))
-	const attributeMod = modifierForScore(deps.attributes[bestPower])
+	const bestPower = power.reduce(maxBy((power) => deps.attributes[power].score))
+	const attributeMod = deps.attributes[bestPower].modifier
 
 	const pb = proficiencyBonus(deps.level)
 	const hasStab = deps.type.includes(move.type)

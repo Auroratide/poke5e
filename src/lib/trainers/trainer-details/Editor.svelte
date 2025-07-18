@@ -17,7 +17,7 @@
 	} from "$lib/design/forms"
 	import BasicInfoFieldset from "./forms/BasicInfoFieldset.svelte"
 	import BiographyFieldset from "./forms/BiographyFieldset.svelte"
-	import AttributesFieldset from "$lib/dnd/AttributesFieldset.svelte"
+	import { AttributesFieldset } from "$lib/dnd/attributes"
 	import ProficienciesFieldset from "$lib/dnd/ProficienciesFieldset.svelte"
 	import SavingThrowsFieldset from "$lib/dnd/SavingThrowsFieldset.svelte"
 	import InventoryFieldset from "./forms/InventoryFieldset.svelte"
@@ -38,7 +38,7 @@
 	let ac = trainer.ac
 	let maxHp = trainer.hp.max
 	let maxHitDice = trainer.hitDice.max
-	let attributes = { ...trainer.attributes }
+	let attributes = trainer.attributes.copy()
 	let proficiencies = structuredClone(trainer.proficiencies)
 	let savingThrows = [...trainer.savingThrows]
 	let description = trainer.description

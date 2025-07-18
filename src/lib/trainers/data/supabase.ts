@@ -12,7 +12,7 @@ import {
 	type InventoryItem,
 } from "../types"
 import { Natures } from "../nature"
-import { type Skill, type Attribute, type SkillRanks, skillListToRanks } from "$lib/dnd/types"
+import { type Skill, type SkillRanks, skillListToRanks } from "$lib/dnd/types"
 import type { Pokemon } from "$lib/creatures/types"
 import { TrainerDataProviderError, type StorageResource, type TrainerData, type TrainerDataProvider } from "."
 import type { SupabaseClient } from "@supabase/supabase-js"
@@ -23,6 +23,7 @@ import type { ChosenFeat } from "$lib/feats/ChosenFeat"
 import { isCreatureSize } from "$lib/dnd/CreatureSize"
 import { isHitDice } from "$lib/dnd/HitDice"
 import { experienceNeededAtLevel } from "$lib/creatures/experience"
+import { Attributes, type Attribute } from "$lib/dnd/attributes"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -122,14 +123,14 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 				current: 1,
 				max: 1,
 			},
-			attributes: {
+			attributes: new Attributes({
 				str: 10,
 				dex: 10,
 				con: 10,
 				int: 10,
 				wis: 10,
 				cha: 10,
-			},
+			}),
 			proficiencies: {
 				"athletics": 0,
 				"acrobatics": 0,
@@ -188,12 +189,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_name: toCreate.name,
 			_description: toCreate.description,
 			_level: toCreate.level,
-			_strength: toCreate.attributes.str,
-			_dexterity: toCreate.attributes.dex,
-			_constitution: toCreate.attributes.con,
-			_intelligence: toCreate.attributes.int,
-			_wisdom: toCreate.attributes.wis,
-			_charisma: toCreate.attributes.cha,
+			_strength: toCreate.attributes.str.score,
+			_dexterity: toCreate.attributes.dex.score,
+			_constitution: toCreate.attributes.con.score,
+			_intelligence: toCreate.attributes.int.score,
+			_wisdom: toCreate.attributes.wis.score,
+			_charisma: toCreate.attributes.cha.score,
 			_ac: toCreate.ac,
 			_hp_cur: toCreate.hp.current,
 			_hp_max: toCreate.hp.max,
@@ -287,12 +288,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_name: info.name,
 			_description: info.description,
 			_level: info.level,
-			_strength: info.attributes.str,
-			_dexterity: info.attributes.dex,
-			_constitution: info.attributes.con,
-			_intelligence: info.attributes.int,
-			_wisdom: info.attributes.wis,
-			_charisma: info.attributes.cha,
+			_strength: info.attributes.str.score,
+			_dexterity: info.attributes.dex.score,
+			_constitution: info.attributes.con.score,
+			_intelligence: info.attributes.int.score,
+			_wisdom: info.attributes.wis.score,
+			_charisma: info.attributes.cha.score,
 			_ac: info.ac,
 			_hp_cur: info.hp.current,
 			_hp_max: info.hp.max,
@@ -458,12 +459,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_nature: info.nature,
 			_level: info.level,
 			_gender: info.gender,
-			_strength: info.attributes.str,
-			_dexterity: info.attributes.dex,
-			_constitution: info.attributes.con,
-			_intelligence: info.attributes.int,
-			_wisdom: info.attributes.wis,
-			_charisma: info.attributes.cha,
+			_strength: info.attributes.str.score,
+			_dexterity: info.attributes.dex.score,
+			_constitution: info.attributes.con.score,
+			_intelligence: info.attributes.int.score,
+			_wisdom: info.attributes.wis.score,
+			_charisma: info.attributes.cha.score,
 			_ac: info.ac,
 			_hp_cur: info.hp.current,
 			_hp_max: info.hp.max,
@@ -579,12 +580,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_type: pokemon.type,
 			_level: pokemon.minLevel,
 			_gender: Gender.None,
-			_strength: pokemon.attributes.str,
-			_dexterity: pokemon.attributes.dex,
-			_constitution: pokemon.attributes.con,
-			_intelligence: pokemon.attributes.int,
-			_wisdom: pokemon.attributes.wis,
-			_charisma: pokemon.attributes.cha,
+			_strength: pokemon.attributes.str.score,
+			_dexterity: pokemon.attributes.dex.score,
+			_constitution: pokemon.attributes.con.score,
+			_intelligence: pokemon.attributes.int.score,
+			_wisdom: pokemon.attributes.wis.score,
+			_charisma: pokemon.attributes.cha.score,
 			_ac: pokemon.ac,
 			_hp_cur: pokemon.hp,
 			_hp_max: pokemon.hp,
@@ -1075,14 +1076,14 @@ const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name
 	name: row.name,
 	description: row.description,
 	level: row.level,
-	attributes: {
+	attributes: new Attributes({
 		str: row.strength,
 		dex: row.dexterity,
 		con: row.constitution,
 		int: row.intelligence,
 		wis: row.wisdom,
 		cha: row.charisma,
-	},
+	}),
 	ac: row.ac,
 	hp: {
 		current: row.hp_cur,
@@ -1288,14 +1289,14 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 	level: row.level,
 	exp: row.exp,
 	gender: row.gender as Gender,
-	attributes: {
+	attributes: new Attributes({
 		str: row.strength,
 		dex: row.dexterity,
 		con: row.constitution,
 		int: row.intelligence,
 		wis: row.wisdom,
 		cha: row.charisma,
-	},
+	}),
 	ac: row.ac,
 	hp: {
 		current: row.hp_cur,

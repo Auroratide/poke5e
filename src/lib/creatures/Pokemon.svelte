@@ -2,7 +2,7 @@
 	import type { Pokemon } from "./types"
 	import Card from "../design/Card.svelte"
 	import FlatDl from "../design/FlatDl.svelte"
-	import AttributeBlock from "../dnd/AttributeBlock.svelte"
+	import { AttributeBlock } from "$lib/dnd/attributes"
 	import InlineMoveLinks from "./InlineMoveLinks.svelte"
 	import InlineTmLinks from "./InlineTmLinks.svelte"
 	import TypeTag from "../pokemon/TypeTag.svelte"

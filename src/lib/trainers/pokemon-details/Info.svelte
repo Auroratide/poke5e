@@ -7,7 +7,7 @@
 	import StatsInfo from "./StatsInfo.svelte"
 	import SkillsInfo from "../info/SkillsInfo.svelte"
 	import FlatDl from "$lib/design/FlatDl.svelte"
-	import AttributeBlock from "$lib/dnd/AttributeBlock.svelte"
+	import { AttributeBlock } from "$lib/dnd/attributes"
 	import TypeEffectiveness from "$lib/creatures/TypeEffectiveness.svelte"
 	import MovesInfo from "./MovesInfo.svelte"
 	import AbilitiesInfo from "./AbilitiesInfo.svelte"

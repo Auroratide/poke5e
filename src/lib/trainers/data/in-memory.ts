@@ -15,6 +15,7 @@ import { Natures } from "../nature"
 import { Gender } from "../types"
 import type { ChosenFeat } from "$lib/feats/ChosenFeat"
 import { skillListToRanks } from "$lib/dnd/types"
+import { Attributes } from "$lib/dnd/attributes"
 
 let POKEMON_ID = 1
 const nextPokemonId = () => (++POKEMON_ID).toString()
@@ -49,14 +50,14 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			current: 10,
 			max: 10,
 		},
-		attributes: {
+		attributes: new Attributes({
 			str: 9,
 			dex: 11,
 			con: 10,
 			int: 17,
 			wis: 12,
 			cha: 15,
-		},
+		}),
 		savingThrows: ["cha"],
 		proficiencies: skillListToRanks(["animal handling", "history", "deception"]),
 		biography: {
@@ -105,14 +106,14 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		level: 11,
 		exp: 82000,
 		gender: Gender.Male,
-		attributes: {
+		attributes: new Attributes({
 			str: 10,
 			dex: 14,
 			con: 16,
 			int: 6,
 			wis: 18,
 			cha: 13,
-		},
+		}),
 		ac: 17,
 		hp: {
 			current: 44,
@@ -189,14 +190,14 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		level: 6,
 		exp: 12000,
 		gender: Gender.Female,
-		attributes: {
+		attributes: new Attributes({
 			str: 10,
 			dex: 14,
 			con: 8,
 			int: 10,
 			wis: 16,
 			cha: 12,
-		},
+		}),
 		ac: 12,
 		hp: {
 			current: 44,
@@ -265,14 +266,14 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 		level: 6,
 		exp: 12000,
 		gender: Gender.Male,
-		attributes: {
+		attributes: new Attributes({
 			str: 12,
 			dex: 7,
 			con: 15,
 			int: 6,
 			wis: 13,
 			cha: 10,
-		},
+		}),
 		ac: 13,
 		hp: {
 			current: 47,
@@ -349,14 +350,14 @@ const DEFAULT_INITIAL_ENTRIES: TrainerData[] = [ {
 			current: 10,
 			max: 10,
 		},
-		attributes: {
+		attributes: new Attributes({
 			str: 12,
 			dex: 16,
 			con: 10,
 			int: 17,
 			wis: 8,
 			cha: 13,
-		},
+		}),
 		savingThrows: ["dex", "int"],
 		proficiencies: skillListToRanks(["stealth", "animal handling", "persuasion", "deception"]),
 		biography: {
@@ -427,14 +428,14 @@ export class InMemoryTrainerProvider implements TrainerDataProvider {
 					current: 1,
 					max: 1,
 				},
-				attributes: {
+				attributes: new Attributes({
 					str: 10,
 					dex: 10,
 					con: 10,
 					int: 10,
 					wis: 10,
 					cha: 10,
-				},
+				}),
 				proficiencies: skillListToRanks(["animal handling"]),
 				savingThrows: ["cha"],
 				biography: {

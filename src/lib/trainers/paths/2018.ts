@@ -1,4 +1,3 @@
-import { modifierForScore } from "$lib/dnd/attributes"
 import { Url } from "$lib/url"
 import type { TrainerPath } from "./TrainerPath"
 
@@ -7,7 +6,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Battle Dice",
 		acquiredAtLevel: 5,
-		max: (trainer) => Math.max(1, 1 + modifierForScore(trainer.attributes.wis)),
+		max: (trainer) => Math.max(1, 1 + trainer.attributes.wis.modifier),
 	},
 	features: {
 		level2: {
@@ -31,7 +30,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Skill Dice",
 		acquiredAtLevel: 5,
-		max: (trainer) => Math.max(1, 1 + modifierForScore(trainer.attributes.wis)),
+		max: (trainer) => Math.max(1, 1 + trainer.attributes.wis.modifier),
 	},
 	features: {
 		level2: {
@@ -55,7 +54,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Pokéchef",
 		acquiredAtLevel: 5,
-		max: (trainer) => Math.max(1, 1 + modifierForScore(trainer.attributes.wis)),
+		max: (trainer) => Math.max(1, 1 + trainer.attributes.wis.modifier),
 	},
 	features: {
 		level2: {
@@ -79,7 +78,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Professor",
 		acquiredAtLevel: 15,
-		max: (trainer) => Math.max(1, 1 + modifierForScore(trainer.attributes.int)),
+		max: (trainer) => Math.max(1, 1 + trainer.attributes.int.modifier),
 	},
 	features: {
 		level2: {
@@ -242,7 +241,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Deep Connection",
 		acquiredAtLevel: 5,
-		max: (trainer) => Math.max(1, Math.max(modifierForScore(trainer.attributes.wis), modifierForScore(trainer.attributes.cha))),
+		max: (trainer) => Math.max(1, Math.max(trainer.attributes.wis.modifier, trainer.attributes.cha.modifier)),
 	},
 	features: {
 		level2: {
@@ -266,7 +265,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Spirit",
 		acquiredAtLevel: 15,
-		max: (trainer) => Math.max(1, modifierForScore(trainer.attributes.wis)),
+		max: (trainer) => Math.max(1, trainer.attributes.wis.modifier),
 	},
 	features: {
 		level2: {

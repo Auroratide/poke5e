@@ -1,4 +1,4 @@
-import type { Attribute } from "$lib/dnd/types"
+import type { Attribute } from "$lib/dnd/attributes"
 
 export const Natures = [
 	"Hardy",

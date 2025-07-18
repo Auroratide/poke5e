@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { attributeList } from "$lib/dnd/attributes"
+	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import { skillList } from "$lib/dnd/proficiency"
 	import ProficiencyBlock from "$lib/dnd/ProficiencyBlock.svelte"
-	import { isExpert, isProficient, type Attribute, type Attributes, type SkillRanks } from "$lib/dnd/types"
+	import { isExpert, isProficient, type SkillRanks } from "$lib/dnd/types"
 	import type { PokeType } from "$lib/pokemon/types"
 	import { skillModifiersFromSpecializations, type Specializations } from "../specializations"
 
@@ -19,7 +19,7 @@
 
 <h3>Saves</h3>
 <div class="upper">
-	<ProficiencyBlock {level} {attributes} values={attributeList.map((attr) => ({
+	<ProficiencyBlock {level} {attributes} values={Attributes.list.map((attr) => ({
 		name: attr.abbr,
 		attr: attr.abbr,
 		proficient: savingThrows.includes(attr.abbr),

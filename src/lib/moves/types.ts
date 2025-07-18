@@ -1,5 +1,5 @@
+import type { Attribute } from "$lib/dnd/attributes"
 import type { PokeType } from "../pokemon/types"
-import type { Attribute } from "../dnd/types"
 import type { BodyText } from "../rendering/types"
 
 export type Power = Attribute[] | "none" | "any" | "varies"

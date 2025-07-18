@@ -1,16 +1,17 @@
 import { test, expect } from "vitest"
 import { stubMove } from "../test/stubs"
-import type { Attributes } from "$lib/dnd/types"
 import { deriveMovePowers } from "./MovePowers"
+import type { Attributes } from "$lib/dnd/attributes"
+import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 
-const ATTRIBUTES: Attributes = {
+const ATTRIBUTES: Attributes = stubAttributes({
 	str: 8,
 	dex: 10,
 	con: 12,
 	int: 14,
 	wis: 16,
 	cha: 18,
-}
+})
 
 test("single attribute", () => {
 	const move = stubMove({

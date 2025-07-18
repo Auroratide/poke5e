@@ -1,6 +1,5 @@
 import { Url } from "$lib/url"
 import type { TrainerPath } from "./TrainerPath"
-import { modifierForScore } from "$lib/dnd/attributes"
 import { proficiencyBonus } from "$lib/dnd/proficiency"
 
 export const TrainerPaths: TrainerPath[] = [ {
@@ -8,7 +7,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Battle Dice",
 		acquiredAtLevel: 5,
-		max: (trainer) => Math.max(1, 1 + modifierForScore(trainer.attributes.dex)),
+		max: (trainer) => Math.max(1, 1 + trainer.attributes.dex.modifier),
 	},
 	features: {
 		level2: {
@@ -32,7 +31,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Skill Dice",
 		acquiredAtLevel: 5,
-		max: (trainer) => Math.max(1, 1 + modifierForScore(trainer.attributes.wis)),
+		max: (trainer) => Math.max(1, 1 + trainer.attributes.wis.modifier),
 	},
 	features: {
 		level2: {
@@ -264,7 +263,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Spirit",
 		acquiredAtLevel: 15,
-		max: (trainer) => Math.max(1, modifierForScore(trainer.attributes.wis)),
+		max: (trainer) => Math.max(1, trainer.attributes.wis.modifier),
 	},
 	features: {
 		level2: {

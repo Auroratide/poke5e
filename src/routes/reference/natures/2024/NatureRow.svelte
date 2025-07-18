@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Attribute } from "$lib/dnd/types"
+	import type { Attribute } from "$lib/dnd/attributes"
 
 	export let index: number
 	export let name: string
