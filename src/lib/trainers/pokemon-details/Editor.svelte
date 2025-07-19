@@ -4,7 +4,7 @@
 	import { ActionArea, Form, FormDetails, MarkdownField } from "$lib/design/forms"
 	import Fieldset from "$lib/design/forms/Fieldset.svelte"
 	import { AttributesFieldset } from "$lib/dnd/attributes"
-	import ProficienciesFieldset from "$lib/dnd/ProficienciesFieldset.svelte"
+	import { ProficienciesFieldset } from "$lib/dnd/skills"
 	import SavingThrowsFieldset from "$lib/dnd/SavingThrowsFieldset.svelte"
 	import TypeField from "$lib/pokemon/TypeField.svelte"
 	import { createEventDispatcher } from "svelte"
@@ -21,6 +21,7 @@
 	import SpeedsFieldset from "$lib/dnd/SpeedsFieldset.svelte"
 	import SensesFieldset from "$lib/dnd/SensesFieldset.svelte"
 	import BondFieldset from "$lib/pokemon/bond/BondFieldset.svelte"
+	import { Level } from "$lib/dnd/level"
 
 	const dispatch = createEventDispatcher()
 
@@ -33,14 +34,14 @@
 	let nature = isStandardNature(pokemon.nature) ? pokemon.nature : CustomNatureIdentifier
 	let tera = pokemon.teraType
 	let natureCustom = pokemon.nature
-	let level = pokemon.level
+	let level = pokemon.level.data
 	let ac = pokemon.ac
 	let maxHp = pokemon.hp.max
 	let maxHitDice = pokemon.hitDice.max
 	let gender = pokemon.gender
 	let attributes = pokemon.attributes.copy()
 	let ability = pokemon.ability
-	let proficiencies = structuredClone(pokemon.proficiencies)
+	let proficiencies = pokemon.proficiencies.copy()
 	let savingThrows = [...pokemon.savingThrows]
 	let notes = pokemon.notes
 	let type = pokemon.type
@@ -66,7 +67,7 @@
 			type,
 			nature: nature === "other" ? natureCustom : nature,
 			teraType: tera,
-			level,
+			level: new Level(level),
 			ac,
 			hp: {
 				current: pokemon.hp.current + (maxHp - pokemon.hp.max),

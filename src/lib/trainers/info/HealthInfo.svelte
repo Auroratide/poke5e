@@ -23,6 +23,7 @@
 	import { experienceNeededAtLevel, experienceNeededUntilLevelUp, formatExp } from "$lib/creatures/experience"
 	import Popover from "$lib/design/Popover.svelte"
 	import HelpIcon from "$lib/design/icon/HelpIcon.svelte"
+	import type { Level } from "$lib/dnd/level"
 
 	const dispatch = createEventDispatcher()
 
@@ -30,7 +31,7 @@
 	export let hitDice: Resource
 	export let dieSize: HitDice
 	export let exp: number
-	export let level: number
+	export let level: Level
 	export let status: NonVolatileStatus | null
 	export let hasStatusAndExp: boolean = false
 	export let editable: boolean
@@ -75,8 +76,8 @@
 		} as UpdateDetail)
 	}
 
-	$: expBarMax = experienceNeededUntilLevelUp(experienceNeededAtLevel(level), level)
-	$: expNeeded = experienceNeededUntilLevelUp(exp, level)
+	$: expBarMax = experienceNeededUntilLevelUp(experienceNeededAtLevel(level.data), level.data)
+	$: expNeeded = experienceNeededUntilLevelUp(exp, level.data)
 	$: expBarCur = expBarMax - expNeeded
 </script>
 

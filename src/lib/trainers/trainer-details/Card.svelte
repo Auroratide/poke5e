@@ -29,7 +29,7 @@
 <Title value="{$trainer.info.name}" />
 <Card title={$trainer.info.name}>
 	<div slot="header-extra" style:padding-inline-end="0.5em">
-		<Level value={$trainer.info.level} />
+		<Level value={$trainer.info.level.data} />
 	</div>
 	<Info trainer={$trainer.info} editable={canEdit} on:update={onUpdate} on:update-item={onUpdateItem} />
 	<ActionArea>

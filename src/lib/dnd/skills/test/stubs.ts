@@ -1,7 +1,8 @@
-import type { SkillRanks } from "../types"
+import type { Data } from "$lib/DataClass"
+import { SkillRanks } from "../SkillRanks"
 
-export function stubSkillProficiencies(ranks: Partial<SkillRanks> = {}): SkillRanks {
-	return {
+export function stubSkillProficiencies(ranks: Partial<Data<SkillRanks>> = {}): SkillRanks {
+	return new SkillRanks({
 		"athletics": 0,
 		"acrobatics": 0,
 		"sleight of hand": 0,
@@ -21,5 +22,5 @@ export function stubSkillProficiencies(ranks: Partial<SkillRanks> = {}): SkillRa
 		"performance": 0,
 		"persuasion": 0,
 		...ranks,
-	}
+	})
 }

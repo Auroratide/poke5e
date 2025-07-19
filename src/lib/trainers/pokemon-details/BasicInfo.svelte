@@ -15,7 +15,7 @@
 			<GenderIcon gender={pokemon.gender} />
 		</span>
 	</span>
-	<Level value={pokemon.level} />
+	<Level value={pokemon.level.data} />
 </div>
 
 <style>

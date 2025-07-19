@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { proficiencyBonus } from "$lib/dnd/proficiency"
+	import { Level } from "$lib/dnd/level"
 
 	export let level: number
 	export let features: string[]
@@ -9,7 +9,7 @@
 
 <tr>
 	<td>{level}</td>
-	<td>+{proficiencyBonus(level)}</td>
+	<td>+{new Level(level).proficiencyBonus}</td>
 	<td>{features.join(", ")}</td>
 	<td>+{stab}</td>
 </tr>

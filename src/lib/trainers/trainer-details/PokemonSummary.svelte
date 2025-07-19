@@ -32,7 +32,7 @@
 	<span style:grid-area="hpbar" class="away-from-edge"><ResourceBar current={pokemon.hp.current} max={pokemon.hp.max} /></span>
 	<span style:grid-area="hp">{pokemon.hp.current}/{pokemon.hp.max}</span>
 	<span style:grid-area="status" class="smaller-text">{#if pokemon.status != null}<StatusTag abbr value={pokemon.status} />{/if}</span>
-	<span style:grid-area="lv" class="right">Lv. {pokemon.level}</span>
+	<span style:grid-area="lv" class="right">Lv. {pokemon.level.data}</span>
 </a>
 
 <style>

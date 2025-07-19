@@ -2,7 +2,6 @@
 	import { withCustomDistances, type Pokemon } from "$lib/creatures/types"
 	import type { TrainerPokemon } from "../types"
 	import FlatDl from "$lib/design/FlatDl.svelte"
-	import { proficiencyBonus } from "$lib/dnd/proficiency"
 	import * as asString from "$lib/creatures/string"
 	import TeraTypeTag from "$lib/pokemon/TeraTypeTag.svelte"
 	import DistancesDlItem from "$lib/design/DistancesDlItem.svelte"
@@ -12,7 +11,7 @@
 	export let pokemon: TrainerPokemon
 	export let species: Pokemon
 
-	$: pb = proficiencyBonus(pokemon.level)
+	$: pb = pokemon.level.proficiencyBonus
 	$: speeds = withCustomDistances(DndSpeedTypes, species.speed, pokemon.speeds)
 	$: senses = withCustomDistances(DndSenseTypes, species.senses, pokemon.senses)
 </script>

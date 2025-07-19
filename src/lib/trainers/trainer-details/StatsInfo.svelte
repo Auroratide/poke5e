@@ -1,11 +1,10 @@
 <script lang="ts">
 	import type { TrainerInfo } from "../types"
 	import FlatDl from "$lib/design/FlatDl.svelte"
-	import { proficiencyBonus } from "$lib/dnd/proficiency"
 
 	export let trainer: TrainerInfo
 
-	$: pb = proficiencyBonus(trainer.level)
+	$: pb = trainer.level.proficiencyBonus
 </script>
 
 <div class="two-columns">

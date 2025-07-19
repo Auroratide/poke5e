@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { proficiencyBonus } from "./proficiency"
 	import { type Attribute, Attributes } from "./attributes"
+	import type { Level } from "./level"
 
 	export let values: {
 		name: string,
@@ -10,11 +10,11 @@
 		extraModifiers?: Record<string, number>,
 	}[]
 	export let attributes: Attributes
-	export let level: number
+	export let level: Level
 	export let columnsLg: number = 1
 	export let columns: number = 1
 
-	$: pb = proficiencyBonus(level)
+	$: pb = level.proficiencyBonus
 </script>
 
 <dl style:--columns={columns} style:--columns-lg={columnsLg}>

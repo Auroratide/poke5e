@@ -11,12 +11,13 @@
 	import { TrainerFeatureLevelLandmarks, TrainerPaths } from "."
 	import { NumericResourceField, type NumericChangeDetail } from "$lib/design/forms"
 	import FeatureInfo from "./FeatureInfo.svelte"
+	import type { Level } from "$lib/dnd/level"
 
 	const dispatch = createEventDispatcher()
 
 	export let value: ChosenTrainerPath
 	export let editable: boolean
-	export let level: number
+	export let level: Level
 
 	$: paths = TrainerPaths[$rulesVersion] 
 	$: standardPath = paths.find((it) => it.name === value.name)
@@ -32,10 +33,10 @@
 {#if value.name !== ""}
 	<section>
 		<h2>Path: {value.name}</h2>
-		{#if level < TrainerFeatureLevelLandmarks[0]}
+		{#if level.data < TrainerFeatureLevelLandmarks[0]}
 			<p>You gain access to your first trainer path feature at level {TrainerFeatureLevelLandmarks[0]}.</p>
 		{/if}
-		{#if resource != null && level >= resource.acquiredAtLevel}
+		{#if resource != null && level.data >= resource.acquiredAtLevel}
 			<p class="row">
 				{#if editable}
 					<label for="trainer-path-resource">{resource.name}:</label>
@@ -51,7 +52,7 @@
 			</p>
 		{/if}
 		{#each TrainerFeatureLevelLandmarks as landmarkLevel}
-			{#if level >= landmarkLevel}
+			{#if level.data >= landmarkLevel}
 				<FeatureInfo {standardPath} customPath={value} level={landmarkLevel} />
 			{/if}	
 		{/each}

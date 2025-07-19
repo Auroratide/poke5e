@@ -18,12 +18,13 @@
 	import type { LearnedMove } from "../types"
 	import PlusMinus from "$lib/design/PlusMinus.svelte"
 	import FlatDl from "$lib/design/FlatDl.svelte"
+	import type { Level } from "$lib/dnd/level"
 
 	const dispatch = createEventDispatcher()
 
 	export let move: LearnedMove
 	export let moveData: Move
-	export let level: number
+	export let level: Level
 	export let pokemonType: PokeType[]
 	export let attributes: Attributes
 	export let editable: boolean

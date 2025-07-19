@@ -1,3 +1,4 @@
+import path from "node:path"
 import { sveltekit } from "@sveltejs/kit/vite"
 
 /** @type {import('vite').UserConfig} */
@@ -7,6 +8,7 @@ const config = {
 		port: 3000,
 	},
 	test: {
+		setupFiles: [path.join("src", "test", "setup.ts")],
 		browser: {
 			provider: "playwright",
 			enabled: true,

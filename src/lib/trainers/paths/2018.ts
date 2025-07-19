@@ -126,7 +126,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Pure Heart",
 		acquiredAtLevel: 5,
-		max: (trainer) => trainer.level * 5,
+		max: (trainer) => trainer.level.data * 5,
 	},
 	features: {
 		level2: {
@@ -193,7 +193,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Shadow Points",
 		acquiredAtLevel: 2,
-		max: (trainer) => trainer.level,
+		max: (trainer) => trainer.level.data,
 	},
 	features: {
 		level2: {
@@ -217,7 +217,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Tactical Points",
 		acquiredAtLevel: 2,
-		max: (trainer) => trainer.level,
+		max: (trainer) => trainer.level.data,
 	},
 	features: {
 		level2: {

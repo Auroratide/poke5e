@@ -3,6 +3,7 @@ import { stubMove } from "../test/stubs"
 import { deriveMovePowers } from "./MovePowers"
 import type { Attributes } from "$lib/dnd/attributes"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
+import { Level } from "$lib/dnd/level"
 
 const ATTRIBUTES: Attributes = stubAttributes({
 	str: 8,
@@ -22,7 +23,7 @@ test("single attribute", () => {
 	// +2 from int, +2 from level
 	const result = deriveMovePowers(move, {
 		attributes: ATTRIBUTES,
-		level: 1,
+		level: new Level(1),
 		type: ["psychic"],
 	})
 
@@ -42,7 +43,7 @@ test("multiple attribute", () => {
 	// +0 from dex, +2 from level
 	const result = deriveMovePowers(move, {
 		attributes: ATTRIBUTES,
-		level: 1,
+		level: new Level(1),
 		type: ["psychic"],
 	})
 
@@ -62,7 +63,7 @@ test("any attribute", () => {
 	// +4 from cha, +2 from level
 	const result = deriveMovePowers(move, {
 		attributes: ATTRIBUTES,
-		level: 1,
+		level: new Level(1),
 		type: ["psychic"],
 	})
 
@@ -81,7 +82,7 @@ test("no attribute", () => {
 
 	const result = deriveMovePowers(move, {
 		attributes: ATTRIBUTES,
-		level: 1,
+		level: new Level(1),
 		type: ["psychic"],
 	})
 
@@ -96,7 +97,7 @@ test("varies attribute", () => {
 
 	const result = deriveMovePowers(move, {
 		attributes: ATTRIBUTES,
-		level: 1,
+		level: new Level(1),
 		type: ["psychic"],
 	})
 
@@ -112,7 +113,7 @@ test("has STAB", () => {
 	// +2 from int, +2 from level, +2 from STAB
 	const result = deriveMovePowers(move, {
 		attributes: ATTRIBUTES,
-		level: 1,
+		level: new Level(1),
 		type: ["psychic"],
 	})
 
@@ -132,7 +133,7 @@ test("higher level", () => {
 	// +2 from int, +6 from level
 	const result = deriveMovePowers(move, {
 		attributes: ATTRIBUTES,
-		level: 20,
+		level: new Level(20),
 		type: ["psychic"],
 	})
 
@@ -152,7 +153,7 @@ test("multiple types with STAB", () => {
 	// +2 from int, +2 from level, +2 from STAB
 	const result = deriveMovePowers(move, {
 		attributes: ATTRIBUTES,
-		level: 1,
+		level: new Level(1),
 		type: ["psychic", "normal"],
 	})
 

@@ -18,7 +18,7 @@
 	import BasicInfoFieldset from "./forms/BasicInfoFieldset.svelte"
 	import BiographyFieldset from "./forms/BiographyFieldset.svelte"
 	import { AttributesFieldset } from "$lib/dnd/attributes"
-	import ProficienciesFieldset from "$lib/dnd/ProficienciesFieldset.svelte"
+	import { ProficienciesFieldset } from "$lib/dnd/skills"
 	import SavingThrowsFieldset from "$lib/dnd/SavingThrowsFieldset.svelte"
 	import InventoryFieldset from "./forms/InventoryFieldset.svelte"
 	import Button from "$lib/design/Button.svelte"
@@ -26,6 +26,7 @@
 	import { TrainerPathsFieldset } from "../paths"
 	import FeatsFieldset from "$lib/feats/FeatsFieldset.svelte"
 	import { DndFeats } from "$lib/feats"
+	import { Level } from "$lib/dnd/level"
 	
 	const dispatch = createEventDispatcher()
 
@@ -34,12 +35,12 @@
 	$: disabled = saving
 
 	let name = trainer.name
-	let level = trainer.level
+	let level = trainer.level.data
 	let ac = trainer.ac
 	let maxHp = trainer.hp.max
 	let maxHitDice = trainer.hitDice.max
 	let attributes = trainer.attributes.copy()
-	let proficiencies = structuredClone(trainer.proficiencies)
+	let proficiencies = trainer.proficiencies.copy()
 	let savingThrows = [...trainer.savingThrows]
 	let description = trainer.description
 	let biography = trainer.biography
@@ -61,7 +62,7 @@
 			trainer: {
 				name,
 				description,
-				level,
+				level: new Level(level),
 				ac,
 				hp: {
 					current: trainer.hp.current + (maxHp - trainer.hp.max),

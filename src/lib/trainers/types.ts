@@ -12,7 +12,8 @@ import type { ChosenFeat } from "$lib/feats/ChosenFeat"
 import type { DndSpeeds } from "$lib/dnd/DndSpeeds"
 import type { DndSenses } from "$lib/dnd/DndSenses"
 import type { HitDice } from "$lib/dnd/HitDice"
-import type { SkillRanks } from "$lib/dnd/types"
+import type { SkillRanks } from "$lib/dnd/skills"
+import type { Level } from "$lib/dnd/level"
 
 export type Resource = {
 	current: number,
@@ -61,7 +62,7 @@ export type TrainerPokemon = {
 	nickname: string,
 	type: PokeType[],
 	nature: Nature,
-	level: number,
+	level: Level,
 	exp: number,
 	gender: Gender,
 	attributes: Attributes,
@@ -109,7 +110,7 @@ export type TrainerBio = {
 export type TrainerInfo = {
 	name: string,
 	description: string,
-	level: number,
+	level: Level,
 	ac: number,
 	hp: Resource,
 	hitDice: Resource,

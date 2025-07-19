@@ -1,6 +1,5 @@
 import { Url } from "$lib/url"
 import type { TrainerPath } from "./TrainerPath"
-import { proficiencyBonus } from "$lib/dnd/proficiency"
 
 export const TrainerPaths: TrainerPath[] = [ {
 	name: "Ace Trainer",
@@ -79,7 +78,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Understanding",
 		acquiredAtLevel: 2,
-		max: (trainer) => proficiencyBonus(trainer.level),
+		max: (trainer) => trainer.level.proficiencyBonus,
 	},
 	features: {
 		level2: {
@@ -127,7 +126,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Pokéchef",
 		acquiredAtLevel: 5,
-		max: (trainer) => proficiencyBonus(trainer.level),
+		max: (trainer) => trainer.level.proficiencyBonus,
 	},
 	features: {
 		level2: {
@@ -192,7 +191,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Shadow Points",
 		acquiredAtLevel: 2,
-		max: (trainer) => trainer.level,
+		max: (trainer) => trainer.level.data,
 	},
 	features: {
 		level2: {
@@ -218,7 +217,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	resource: {
 		name: "Tactical Points",
 		acquiredAtLevel: 2,
-		max: (trainer) => trainer.level,
+		max: (trainer) => trainer.level.data,
 	},
 	features: {
 		level2: {
