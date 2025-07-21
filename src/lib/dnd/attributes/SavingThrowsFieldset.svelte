@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Fieldset, CheckboxFields } from "$lib/design/forms"
-	import { Attributes, type Attribute } from "./attributes"
+	import { Attributes, type Attribute } from "."
 
 	export let values: Attribute[]
 	export let disabled: boolean

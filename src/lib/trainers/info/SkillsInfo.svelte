@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import type { Level } from "$lib/dnd/level"
-	import ProficiencyBlock from "$lib/dnd/ProficiencyBlock.svelte"
-	import { SkillRanks } from "$lib/dnd/skills"
+	import { ProficiencyBlock, SkillRanks } from "$lib/dnd/skills"
 	import type { PokeType } from "$lib/pokemon/types"
 	import { skillModifiersFromSpecializations, type Specializations } from "../specializations"
 

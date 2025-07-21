@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { type Attribute, Attributes } from "./attributes"
-	import type { Level } from "./level"
+	import { type Attribute, Attributes } from "../attributes"
+	import type { Level } from "../level"
 
 	export let values: {
 		name: string,
