@@ -6,8 +6,8 @@
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
 	export let placeholder: string = ""
-	export let min: number | undefined = undefined
-	export let max: number | undefined = undefined
+	export let min: number = -2000000000
+	export let max: number = 2000000000
 
 	$: kebabName = name ?? kebab(label)
 	$: id = `${kebabName}-input`
@@ -23,7 +23,7 @@
 	<label for="{id}">{label}</label>
 	<span class="row">
 		<span class="currency">₽</span>
-		<input type="number" {id} name="{kebabName}" {placeholder} min="-2000000000" max="2000000000" step="1" bind:value on:change={roundOnChange} {disabled} />
+		<input type="number" {id} name="{kebabName}" {placeholder} min="{min}" max="{max}" step="1" bind:value on:change={roundOnChange} {disabled} />
 	</span>
 </div>
 

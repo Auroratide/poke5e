@@ -55,9 +55,5 @@
 </ReferencePage>
 
 <style>
-	.status-block {
-		margin-block-end: 2em;
-	}
-
 	p { line-height: 1.25; }
 </style>
