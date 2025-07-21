@@ -1,19 +1,19 @@
 <script lang="ts">
-	import { withCustomDistances, type Pokemon } from "$lib/creatures/types"
+	import { type Pokemon } from "$lib/creatures/types"
 	import type { TrainerPokemon } from "../types"
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import * as asString from "$lib/creatures/string"
 	import TeraTypeTag from "$lib/pokemon/TeraTypeTag.svelte"
-	import DistancesDlItem from "$lib/design/DistancesDlItem.svelte"
-	import { DndSpeedTypes } from "$lib/dnd/DndSpeeds"
-	import { DndSenseTypes } from "$lib/dnd/DndSenses"
+	import { DistancesDlItem, DistanceSet } from "$lib/dnd/distance"
+	import { Speeds } from "$lib/dnd/movement"
+	import { Senses } from "$lib/dnd/senses"
 
 	export let pokemon: TrainerPokemon
 	export let species: Pokemon
 
 	$: pb = pokemon.level.proficiencyBonus
-	$: speeds = withCustomDistances(DndSpeedTypes, species.speed, pokemon.speeds)
-	$: senses = withCustomDistances(DndSenseTypes, species.senses, pokemon.senses)
+	$: speeds = DistanceSet.fromList(Speeds, species.speed).mergeWith(pokemon.speeds)
+	$: senses = DistanceSet.fromList(Senses, species.senses).mergeWith(pokemon.senses)
 </script>
 
 <FlatDl columns={2}>

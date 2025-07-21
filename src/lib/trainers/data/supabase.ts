@@ -26,6 +26,8 @@ import { Attributes, type Attribute } from "$lib/dnd/attributes"
 import { SkillRanks, type Skill } from "$lib/dnd/skills"
 import type { Data } from "$lib/DataClass"
 import { Level } from "$lib/dnd/level"
+import { Senses } from "$lib/dnd/senses"
+import { Speeds } from "$lib/dnd/movement"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -505,16 +507,16 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_is_shiny: info.isShiny,
 			_custom_size: info.customSize ?? null,
 			_hit_dice_size: info.customHitDiceSize ?? null,
-			_speed_walking: info.speeds.walking ?? null,
-			_speed_climbing: info.speeds.climbing ?? null,
-			_speed_swimming: info.speeds.swimming ?? null,
-			_speed_flying: info.speeds.flying ?? null,
-			_speed_hover: info.speeds.hover ?? null,
-			_speed_burrowing: info.speeds.burrowing ?? null,
-			_sense_darkvision: info.senses.darkvision ?? null,
-			_sense_blindsight: info.senses.blindsight ?? null,
-			_sense_tremorsense: info.senses.tremorsense ?? null,
-			_sense_truesight: info.senses.truesight ?? null,
+			_speed_walking: info.speeds.data.walking ?? null,
+			_speed_climbing: info.speeds.data.climbing ?? null,
+			_speed_swimming: info.speeds.data.swimming ?? null,
+			_speed_flying: info.speeds.data.flying ?? null,
+			_speed_hover: info.speeds.data.hover ?? null,
+			_speed_burrowing: info.speeds.data.burrowing ?? null,
+			_sense_darkvision: info.senses.data.darkvision ?? null,
+			_sense_blindsight: info.senses.data.blindsight ?? null,
+			_sense_tremorsense: info.senses.data.tremorsense ?? null,
+			_sense_truesight: info.senses.data.truesight ?? null,
 			_bond_level: info.bond.level,
 			_bond_points_cur: info.bond.points.current,
 			_bond_points_max: info.bond.points.max,
@@ -563,8 +565,8 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			feats: [],
 			customSize: undefined,
 			customHitDiceSize: undefined,
-			speeds: {},
-			senses: {},
+			speeds: new Speeds({}),
+			senses: new Senses({}),
 			bond: {
 				level: 0,
 				points: {
@@ -1347,20 +1349,20 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 	feats: [],
 	customSize: isCreatureSize(row.custom_size) ? row.custom_size : undefined,
 	customHitDiceSize: isHitDice(row.hit_dice_size) ? row.hit_dice_size : undefined,
-	speeds: {
+	speeds: new Speeds({
 		walking: row.speed_walking,
 		climbing: row.speed_climbing,
 		swimming: row.speed_swimming,
 		flying: row.speed_flying,
 		hover: row.speed_hover,
 		burrowing: row.speed_burrowing,
-	},
-	senses: {
+	}),
+	senses: new Senses({
 		darkvision: row.sense_darkvision,
 		blindsight: row.sense_blindsight,
 		tremorsense: row.sense_tremorsense,
 		truesight: row.sense_truesight,
-	},
+	}),
 	bond: {
 		level: row.bond_level,
 		points: {

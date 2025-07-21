@@ -9,11 +9,11 @@ import type { Nature } from "./nature"
 import type { Specializations } from "./specializations"
 import type { ChosenTrainerPath } from "./paths/ChosenTrainerPath"
 import type { ChosenFeat } from "$lib/feats/ChosenFeat"
-import type { DndSpeeds } from "$lib/dnd/DndSpeeds"
-import type { DndSenses } from "$lib/dnd/DndSenses"
 import type { HitDice } from "$lib/dnd/HitDice"
 import type { SkillRanks } from "$lib/dnd/skills"
 import type { Level } from "$lib/dnd/level"
+import type { Senses } from "$lib/dnd/senses"
+import type { Speeds } from "$lib/dnd/movement"
 
 export type Resource = {
 	current: number,
@@ -81,8 +81,8 @@ export type TrainerPokemon = {
 	feats: ChosenFeat[],
 	customSize?: CreatureSize,
 	customHitDiceSize?: HitDice,
-	speeds: DndSpeeds,
-	senses: DndSenses,
+	speeds: Speeds,
+	senses: Senses,
 	bond: PokemonBond,
 }
 

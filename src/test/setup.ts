@@ -12,8 +12,8 @@ expect.extend({
 			pass,
 			message: () =>
 				pass
-					? `expected ${this.utils.printReceived(received)} not to equal data of ${this.utils.printExpected(expected)}`
-					: `expected ${this.utils.printReceived(received)} to equal data of ${this.utils.printExpected(expected)}`,
+					? `expected ${this.utils.printReceived(received.data)} not to equal data of ${this.utils.printExpected(expected.data)}`
+					: `expected ${this.utils.printReceived((received as DataClass<unknown>).data)} to equal data of ${this.utils.printExpected((expected as DataClass<unknown>).data)}`,
 		}
 	},
 })

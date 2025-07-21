@@ -17,10 +17,10 @@
 	import FeatsFieldset from "$lib/feats/FeatsFieldset.svelte"
 	import { DndAndPokemonFeats } from "$lib/feats/PokemonFeats"
 	import CustomBasicInfoFieldset from "./forms/CustomBasicInfoFieldset.svelte"
-	import SpeedsFieldset from "$lib/dnd/SpeedsFieldset.svelte"
-	import SensesFieldset from "$lib/dnd/SensesFieldset.svelte"
+	import { SensesFieldset } from "$lib/dnd/senses"
 	import BondFieldset from "$lib/pokemon/bond/BondFieldset.svelte"
 	import { Level } from "$lib/dnd/level"
+	import { SpeedsFieldset } from "$lib/dnd/movement"
 
 	const dispatch = createEventDispatcher()
 
@@ -48,8 +48,8 @@
 	let feats = pokemon.feats.map((it) => structuredClone(it))
 	let customSize = pokemon.customSize
 	let customHitDiceSize = pokemon.customHitDiceSize
-	let speeds = structuredClone(pokemon.speeds)
-	let senses = structuredClone(pokemon.senses)
+	let speeds = pokemon.speeds.copy()
+	let senses = pokemon.senses.copy()
 	let bond = structuredClone(pokemon.bond)
 
 	let moves = structuredClone(pokemon.moves)

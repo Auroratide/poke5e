@@ -1,10 +1,10 @@
 import type { PokeType, PokeEvolution, Ability } from "../pokemon/types"
 import type { HitDice } from "$lib/dnd/HitDice"
 import type { CreatureSize } from "$lib/dnd/CreatureSize"
-import type { DndSpeedType } from "$lib/dnd/DndSpeeds"
-import type { DndSenseType } from "$lib/dnd/DndSenses"
 import type { Attributes, Attribute } from "$lib/dnd/attributes"
 import type { SkillRanks } from "$lib/dnd/skills"
+import type { SenseType } from "$lib/dnd/senses"
+import type { SpeedType } from "$lib/dnd/movement"
 
 export type PokemonMedia = {
 	main?: string,
@@ -40,14 +40,14 @@ export type Pokemon = {
 	hp: number,
 	hitDice: HitDice,
 	speed: {
-		type: DndSpeedType,
+		type: SpeedType,
 		value: number,
 	}[],
 	attributes: Attributes,
 	skills: SkillRanks,
 	savingThrows: Attribute[],
 	senses: {
-		type: DndSenseType,
+		type: SenseType,
 		value: number,
 	}[],
 	abilities: Ability[],
@@ -55,11 +55,4 @@ export type Pokemon = {
 	evolution?: PokeEvolution,
 	moves: MovePool,
 	media: PokemonMedia,
-}
-
-export function withCustomDistances<DistanceTypes extends Readonly<Record<string, string>>>(allDistanceTypes: DistanceTypes, nativeDistances: { type: DistanceTypes[keyof DistanceTypes], value: number }[], customDistances: Partial<Record<DistanceTypes[keyof DistanceTypes], number>>): Record<DistanceTypes[keyof DistanceTypes], number> {
-	return Object.values(allDistanceTypes).reduce((total, current) => ({
-		...total,
-		[current]: customDistances[current] ?? nativeDistances.find((it) => it.type === current)?.value,
-	}), {} as Record<keyof DistanceTypes, number>)
 }
