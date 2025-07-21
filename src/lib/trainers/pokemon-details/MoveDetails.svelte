@@ -13,19 +13,19 @@
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
 	import { deriveMovePowers } from "$lib/moves/MovePowers"
 	import type { Move } from "$lib/moves/types"
-	import type { PokeType } from "$lib/pokemon/types"
 	import { createEventDispatcher } from "svelte"
 	import type { LearnedMove } from "../types"
 	import PlusMinus from "$lib/design/PlusMinus.svelte"
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import type { Level } from "$lib/dnd/level"
+	import type { PokemonType } from "$lib/pokemon/types-2"
 
 	const dispatch = createEventDispatcher()
 
 	export let move: LearnedMove
 	export let moveData: Move
 	export let level: Level
-	export let pokemonType: PokeType[]
+	export let pokemonType: PokemonType
 	export let attributes: Attributes
 	export let editable: boolean
 
@@ -34,7 +34,7 @@
 	$: movePowers = deriveMovePowers(moveData, {
 		attributes: attributes,
 		level: level,
-		type: pokemonType,
+		type: pokemonType.data,
 	})
 
 	const onChangePp = (e: CustomEvent<ChangeDetail>) => {

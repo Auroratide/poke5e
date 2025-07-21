@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { CheckboxFields, Fieldset, SelectField } from "$lib/design/forms"
-	import { type PokeType, PokeTypes, isPokeType } from "$lib/pokemon/types"
+	import { type PokeType, PokemonType } from "./PokemonType"
 
 	const NONE = ""
 
@@ -11,7 +11,7 @@
 	let secondary = value[1] ?? NONE
 	let previousValues = [primary, secondary]
 
-	const primaryTypeOptions = PokeTypes.map((it) => ({ name: it, value: it }))
+	const primaryTypeOptions = PokemonType.list.map((it) => ({ name: it, value: it }))
 	const noneOption = { name: "- None -", value: NONE }
 	const disableIf = (predicate: (type: string) => boolean) => (it: { name: string, value: string }) => ({
 		...it,
@@ -25,7 +25,7 @@
 	$: {
 		value = [...new Set([primary, secondary]
 			.concat(value.filter((it) => !previousValues.includes(it)))
-			.filter(isPokeType),
+			.filter(PokemonType.isPokeType),
 		)]
 
 		previousValues = [primary, secondary]

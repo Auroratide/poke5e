@@ -1,6 +1,6 @@
 import type { Attributes, Attribute } from "$lib/dnd/attributes"
 import type { Level } from "$lib/dnd/level"
-import type { PokeType } from "$lib/pokemon/types"
+import type { PokeType } from "$lib/pokemon/types-2"
 import type { Move } from "../types"
 
 export type MovePowers = {

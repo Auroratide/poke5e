@@ -31,9 +31,9 @@
 	$: evolveToInfo = species.evolution?.to?.find((it) => it.id === evolveToId)
 	$: evolveToPokemon = $allPokemon?.find((it) => it.id === evolveToId)
 
-	$: typeWasCustomized = !list.equalUnordered(pokemon.type)(species.type)
-	$: newType = evolveToPokemon?.type ?? []
-	$: typeWillChange = !list.equalUnordered(species.type)(newType)
+	$: typeWasCustomized = !pokemon.type.equivalent(species.type)
+	$: newType = evolveToPokemon?.type
+	$: typeWillChange = newType != null && !species.type.equivalent(newType)
 	$: gainedHp = pokemon.level.data * 2
 	$: gainedAc = Math.max(0, (evolveToPokemon?.ac ?? 0) - pokemon.ac)
 	$: gainedProficiencies = list.difference(evolveToPokemon?.skills.toList() ?? [])(pokemon.proficiencies.toList())
@@ -75,7 +75,7 @@
 				<p>{@html pokemonString.evolution(species.name, evolveToInfo, creatureString.evolutionWithLinks(base, $allPokemon, $allMoves))}</p>
 				<p>Evolving this pokemon will have these effects:</p>
 				<ul>
-					{#if !typeWasCustomized && typeWillChange}<li>Type will change to <span class="cap">{newType.join("/")}</span></li>{/if}
+					{#if !typeWasCustomized && typeWillChange}<li>Type will change to <span class="cap">{newType?.data.join("/")}</span></li>{/if}
 					<li>Max HP will increase by {gainedHp}</li>
 					{#if gainedAc > 0}<li>AC will increase by {gainedAc}</li>{/if}
 					{#if gainedProficiencies.length > 0}<li>Proficiency in <span class="cap">{gainedProficiencies.join(", ")}</span></li>{/if}

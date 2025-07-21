@@ -6,11 +6,11 @@
 	import Card from "$lib/design/Card.svelte"
 	import Button from "$lib/design/Button.svelte"
 	import { ActionArea } from "$lib/design/forms"
-	import TypeTag from "$lib/pokemon/TypeTag.svelte"
 	import type { TrainerStore } from "../trainers"
 	import { PageAction } from "../page-action"
 	import { Url } from "$lib/url"
 	import RequirePokemon from "./RequirePokemon.svelte"
+	import { TypeTag } from "$lib/pokemon/types-2"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
@@ -41,7 +41,7 @@
 <RequirePokemon trainer={$trainer} {id}>
 	{#if species}
 		<Card title={pokemon.nickname}>
-			<TypeTag slot="header-extra" type={pokemon.type} />
+			<TypeTag slot="header-extra" type={pokemon.type.data} />
 			<Info trainer={$trainer.info} {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} on:update-bond={onUpdateBond} />
 			{#if canEdit}
 				<ActionArea>

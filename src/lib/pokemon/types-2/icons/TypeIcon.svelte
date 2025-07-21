@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PokeType } from "../types"
+	import type { PokeType } from "../PokemonType"
 	import BugIcon from "./BugIcon.svelte"
 	import DarkIcon from "./DarkIcon.svelte"
 	import DragonIcon from "./DragonIcon.svelte"

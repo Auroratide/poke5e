@@ -5,13 +5,12 @@
 	import { AttributeBlock } from "$lib/dnd/attributes"
 	import InlineMoveLinks from "./InlineMoveLinks.svelte"
 	import InlineTmLinks from "./InlineTmLinks.svelte"
-	import TypeTag from "../pokemon/TypeTag.svelte"
-	import TypeEffectiveness from "./TypeEffectiveness.svelte"
 	import * as asString from "./string"
 	import EvolutionSection from "./EvolutionSection.svelte"
 	import PokemonArt from "./PokemonArt.svelte"
 	import GenderRatio from "./GenderRatio.svelte"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
+	import { TypeTag, TypeEffectiveness } from "$lib/pokemon/types-2"
 
 	export let pokemon: Pokemon
 
@@ -19,7 +18,7 @@
 </script>
 
 <Card title={pokemon.name}>
-	<TypeTag slot="header-extra" type={pokemon.type} />
+	<TypeTag slot="header-extra" type={pokemon.type.data} />
 	<section class="info">
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<div class="{hasImage ? "row" : ""}">

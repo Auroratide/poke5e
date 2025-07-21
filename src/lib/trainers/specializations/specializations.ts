@@ -1,11 +1,11 @@
 import { derived } from "svelte/store"
-import type { PokeType } from "$lib/pokemon/types"
 import { SpecializationList as List2018 } from "./2018/SpecializationList"
 import { SpecializationList as List2024 } from "./2024/SpecializationList"
 import { rulesVersion } from "$lib/design/rules-version"
 import { capitalize } from "$lib/string"
 import type { Attribute } from "$lib/dnd/attributes"
 import type { Skill } from "$lib/dnd/skills"
+import type { PokeType } from "$lib/pokemon/types-2"
 
 export type Specialization = {
 	id: string,

@@ -1,10 +1,10 @@
 <script>
-	import TeraTypeTag from "$lib/pokemon/TeraTypeTag.svelte"
 	import IconedCardHeading from "$lib/design/IconedCardHeading.svelte"
 	import ReferencePage from "../ReferencePage.svelte"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
 	import { rulesVersion } from "$lib/design/rules-version"
+	import { TeraTypeTag } from "$lib/pokemon/types-2"
 </script>
 
 <ReferencePage title="Pokémon Transformations">

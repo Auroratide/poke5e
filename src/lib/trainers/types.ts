@@ -2,7 +2,7 @@ import type { Attribute, Attributes } from "$lib/dnd/attributes"
 import type { CreatureSize } from "$lib/dnd/CreatureSize"
 import type { Pokemon } from "../creatures/types"
 import type { Move } from "$lib/moves/types"
-import type { AbilityId, PokeType, TeraPokeType } from "$lib/pokemon/types"
+import type { AbilityId } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import type { StorageResource } from "./data"
 import type { Nature } from "./nature"
@@ -14,6 +14,7 @@ import type { SkillRanks } from "$lib/dnd/skills"
 import type { Level } from "$lib/dnd/level"
 import type { Senses } from "$lib/dnd/senses"
 import type { Speeds } from "$lib/dnd/movement"
+import type { PokemonTeraType, PokemonType } from "$lib/pokemon/types-2"
 
 export type Resource = {
 	current: number,
@@ -60,7 +61,7 @@ export type TrainerPokemon = {
 	trainerId: TrainerId,
 	pokemonId: string,
 	nickname: string,
-	type: PokeType[],
+	type: PokemonType,
 	nature: Nature,
 	level: Level,
 	exp: number,
@@ -75,7 +76,7 @@ export type TrainerPokemon = {
 	moves: LearnedMove[],
 	items: HeldItem[],
 	notes: string,
-	teraType: TeraPokeType | "",
+	teraType?: PokemonTeraType,
 	status: NonVolatileStatus | null,
 	isShiny: boolean,
 	feats: ChosenFeat[],

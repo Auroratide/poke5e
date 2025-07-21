@@ -5,7 +5,6 @@
 	import Fieldset from "$lib/design/forms/Fieldset.svelte"
 	import { AttributesFieldset, SavingThrowsFieldset } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
-	import TypeField from "$lib/pokemon/TypeField.svelte"
 	import { createEventDispatcher } from "svelte"
 	import { CustomNatureIdentifier, isStandardNature } from "../nature"
 	import { type TrainerPokemon } from "../types"
@@ -21,6 +20,7 @@
 	import BondFieldset from "$lib/pokemon/bond/BondFieldset.svelte"
 	import { Level } from "$lib/dnd/level"
 	import { SpeedsFieldset } from "$lib/dnd/movement"
+	import { PokemonTeraType, TypeField, type TeraType } from "$lib/pokemon/types-2"
 
 	const dispatch = createEventDispatcher()
 
@@ -31,7 +31,7 @@
 
 	let nickname = pokemon.nickname
 	let nature = isStandardNature(pokemon.nature) ? pokemon.nature : CustomNatureIdentifier
-	let tera = pokemon.teraType
+	let tera = pokemon.teraType?.copy() ?? new PokemonTeraType("" as TeraType) // deal with undefined teras on older pokemon
 	let natureCustom = pokemon.nature
 	let level = pokemon.level.data
 	let ac = pokemon.ac
@@ -43,7 +43,7 @@
 	let proficiencies = pokemon.proficiencies.copy()
 	let savingThrows = [...pokemon.savingThrows]
 	let notes = pokemon.notes
-	let type = pokemon.type
+	let type = pokemon.type.copy()
 	let isShiny = pokemon.isShiny
 	let feats = pokemon.feats.map((it) => structuredClone(it))
 	let customSize = pokemon.customSize
@@ -102,7 +102,7 @@
 </script>
 
 <Form onsubmit={endEdit} {saving}>
-	<BasicInfoFieldset bind:nickname bind:nature bind:natureCustom bind:tera bind:level bind:ac bind:maxHp bind:maxHitDice bind:isShiny {disabled} />
+	<BasicInfoFieldset bind:nickname bind:nature bind:natureCustom bind:tera={tera} bind:level bind:ac bind:maxHp bind:maxHitDice bind:isShiny {disabled} />
 	<GenderFieldset bind:value={gender} {disabled} />
 	<AttributesFieldset bind:values={attributes} {disabled} />
 	<AbilitiesFieldset bind:ability {species} {disabled} />
@@ -116,7 +116,7 @@
 		<MarkdownField label="Notes" bind:value={notes} placeholder="Use this for any general notes not covered by the above fields..." {disabled} />
 	</Fieldset>
 	<FormDetails title="Advanced">
-		<TypeField bind:value={type} {disabled} />
+		<TypeField bind:value={type.data} {disabled} />
 		<CustomBasicInfoFieldset bind:customSize bind:customHitDiceSize {disabled} />
 		<SpeedsFieldset bind:values={speeds} {disabled} />
 		<SensesFieldset bind:values={senses} {disabled} />

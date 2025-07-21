@@ -1,6 +1,7 @@
 import type { Pokemon, MovePool } from "../types"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
+import { PokemonType } from "$lib/pokemon/types-2"
 
 export function stubMovePool(template: Partial<MovePool> = {}): MovePool {
 	return {
@@ -21,7 +22,7 @@ export function stubPokemon(template: Partial<Pokemon> = {}): Pokemon {
 		id: template.id ?? "eeveon",
 		name: template.name ?? "Eeveon",
 		number: template.number ?? 0,
-		type: template.type ?? ["normal"],
+		type: template.type?.copy() ?? new PokemonType(["normal"]),
 		size: template.size ?? "small",
 		sr: template.sr ?? 8,
 		minLevel: template.minLevel ?? 5,

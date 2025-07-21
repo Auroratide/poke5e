@@ -1,0 +1,6 @@
+export * from "./PokemonType"
+export * from "./PokemonTeraType"
+export { default as TypeTag } from "./TypeTag.svelte"
+export { default as TypeField } from "./TypeField.svelte"
+export { default as TeraTypeTag } from "./TeraTypeTag.svelte"
+export { default as TypeEffectiveness } from "./TypeEffectiveness.svelte"

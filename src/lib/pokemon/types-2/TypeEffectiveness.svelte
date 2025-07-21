@@ -1,12 +1,11 @@
 <script lang="ts">
-	import type { PokeType } from "../pokemon/types"
-	import { vulnerabilities, resistances, immunities } from "../pokemon/type-interactions"
+	import type { PokemonType, PokeType } from "./PokemonType"
 
-	export let type: PokeType[]
+	export let type: PokemonType
 
-	$: vul = Array.from(vulnerabilities(type))
-	$: res = Array.from(resistances(type))
-	$: imm = Array.from(immunities(type))
+	$: vul = Array.from(type.vulnerabilities())
+	$: res = Array.from(type.resistances())
+	$: imm = Array.from(type.immunities())
 
 	const showTypeList = (list: PokeType[]) => list.length === 0 ? "none" : list.join(", ")
 </script>

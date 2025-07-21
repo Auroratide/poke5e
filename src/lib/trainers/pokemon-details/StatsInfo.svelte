@@ -3,10 +3,10 @@
 	import type { TrainerPokemon } from "../types"
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import * as asString from "$lib/creatures/string"
-	import TeraTypeTag from "$lib/pokemon/TeraTypeTag.svelte"
 	import { DistancesDlItem, DistanceSet } from "$lib/dnd/distance"
 	import { Speeds } from "$lib/dnd/movement"
 	import { Senses } from "$lib/dnd/senses"
+	import { TeraTypeTag } from "$lib/pokemon/types-2"
 
 	export let pokemon: TrainerPokemon
 	export let species: Pokemon
@@ -27,8 +27,8 @@
 	<dd class="cap">{pokemon.customSize ?? species.size}</dd>
 	<DistancesDlItem label="Speed" values={speeds} tostring={asString.speed} />
 	<DistancesDlItem label="Senses" values={senses} tostring={asString.sense} />
-	{#if pokemon.teraType !== ""}
+	{#if pokemon.teraType != null}
 		<dt>Tera</dt>
-		<dd><TeraTypeTag type="{pokemon.teraType}" /></dd>
+		<dd><TeraTypeTag type={pokemon.teraType} /></dd>
 	{/if}
 </FlatDl>

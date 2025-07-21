@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PokeType } from "./types"
+	import type { PokeType } from "./PokemonType"
 
 	export let type: PokeType[]
 

@@ -1,31 +1,4 @@
-export const PokeTypes = [
-	"normal",
-	"fighting",
-	"flying",
-	"poison",
-	"ground",
-	"rock",
-	"bug",
-	"ghost",
-	"steel",
-	"fire",
-	"water",
-	"grass",
-	"electric",
-	"psychic",
-	"ice",
-	"dragon",
-	"dark",
-	"fairy",
-] as const
-export const StellarType = "stellar"
-export const TeraPokeTypes = [...PokeTypes, StellarType]
-export type PokeType = typeof PokeTypes[number]
-export const isPokeType = (type: string): type is PokeType =>
-	(PokeTypes as readonly string[]).includes(type)
-export type TeraPokeType = PokeType | typeof StellarType
-export const isTeraPokeType = (type: string): type is TeraPokeType =>
-	(TeraPokeTypes as readonly string[]).includes(type)
+import type { PokeType } from "./types-2"
 
 export type AbilityId = string
 export type Ability = {

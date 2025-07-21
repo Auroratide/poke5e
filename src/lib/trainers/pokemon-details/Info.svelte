@@ -8,7 +8,6 @@
 	import SkillsInfo from "../info/SkillsInfo.svelte"
 	import FlatDl from "$lib/design/FlatDl.svelte"
 	import { AttributeBlock } from "$lib/dnd/attributes"
-	import TypeEffectiveness from "$lib/creatures/TypeEffectiveness.svelte"
 	import MovesInfo from "./MovesInfo.svelte"
 	import AbilitiesInfo from "./AbilitiesInfo.svelte"
 	import NotesInfo from "./NotesInfo.svelte"
@@ -18,6 +17,7 @@
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import FeatsInfo from "$lib/feats/FeatsInfo.svelte"
 	import BondInfo, { type UpdateDetail as BondUpdateDetail } from "$lib/pokemon/bond/BondInfo.svelte"
+	import { TypeEffectiveness } from "$lib/pokemon/types-2"
 
 	const dispatch = createEventDispatcher()
 

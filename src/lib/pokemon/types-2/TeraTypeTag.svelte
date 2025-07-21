@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { TeraPokeType } from "./types"
+	import type { PokemonTeraType } from "./PokemonTeraType"
 
-	export let type: TeraPokeType
+	export let type: PokemonTeraType
 </script>
 
-<span class="tera-type-tag" style:--skin-local-bg="var(--skin-{type}-bg)">
-   {type}
+<span class="tera-type-tag" style:--skin-local-bg="var(--skin-{type.data}-bg)">
+   {type.data}
 </span>
 
 <style>

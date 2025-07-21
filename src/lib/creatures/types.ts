@@ -1,10 +1,11 @@
-import type { PokeType, PokeEvolution, Ability } from "../pokemon/types"
+import type { PokeEvolution, Ability } from "../pokemon/types"
 import type { HitDice } from "$lib/dnd/HitDice"
 import type { CreatureSize } from "$lib/dnd/CreatureSize"
 import type { Attributes, Attribute } from "$lib/dnd/attributes"
 import type { SkillRanks } from "$lib/dnd/skills"
 import type { SenseType } from "$lib/dnd/senses"
 import type { SpeedType } from "$lib/dnd/movement"
+import type { PokemonType } from "$lib/pokemon/types-2"
 
 export type PokemonMedia = {
 	main?: string,
@@ -29,7 +30,7 @@ export type Pokemon = {
 	id: string,
 	name: string,
 	number: number,
-	type: PokeType[],
+	type: PokemonType,
 	size: CreatureSize,
 	sr: number,
 	minLevel: number,

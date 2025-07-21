@@ -1,5 +1,5 @@
 import type { Move } from "$lib/moves/types"
-import type { PokeType } from "$lib/pokemon/types"
+import type { PokeType } from "$lib/pokemon/types-2"
 import type { Pokemon } from "./types"
 
 /**

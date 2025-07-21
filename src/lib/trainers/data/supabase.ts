@@ -15,7 +15,6 @@ import { Natures } from "../nature"
 import type { Pokemon } from "$lib/creatures/types"
 import { TrainerDataProviderError, type StorageResource, type TrainerData, type TrainerDataProvider } from "."
 import type { SupabaseClient } from "@supabase/supabase-js"
-import { isPokeType, type TeraPokeType } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import { createEmptyChosenTrainerPath } from "$lib/trainers/paths"
 import type { ChosenFeat } from "$lib/feats/ChosenFeat"
@@ -28,6 +27,7 @@ import type { Data } from "$lib/DataClass"
 import { Level } from "$lib/dnd/level"
 import { Senses } from "$lib/dnd/senses"
 import { Speeds } from "$lib/dnd/movement"
+import { PokemonTeraType, PokemonType } from "$lib/pokemon/types-2"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -459,7 +459,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_id: parseInt(info.id),
 			_species: info.pokemonId,
 			_nickname: info.nickname,
-			_type: info.type,
+			_type: info.type.data,
 			_nature: info.nature,
 			_level: info.level.data,
 			_gender: info.gender,
@@ -500,7 +500,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_cha: info.savingThrows.includes("cha"),
 			_ability: info.ability,
 			_notes: info.notes,
-			_tera_type: info.teraType,
+			_tera_type: info.teraType.data,
 			_exp: info.exp,
 			_status: info.status,
 			_held_item: null,
@@ -559,7 +559,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			moves: [],
 			items: [],
 			notes: "",
-			teraType: pokemon.type[0],
+			teraType: new PokemonTeraType(pokemon.type.primary),
 			status: null,
 			isShiny: false,
 			feats: [],
@@ -581,7 +581,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_nickname: pokemon.name,
 			_species: pokemon.id,
 			_nature: Natures[0],
-			_type: pokemon.type,
+			_type: pokemon.type.data,
 			_level: pokemon.minLevel,
 			_gender: Gender.None,
 			_strength: pokemon.attributes.str.score,
@@ -621,7 +621,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_cha: pokemon.savingThrows.includes("cha"),
 			_ability: pokemon.abilities[0]?.id,
 			_notes: "",
-			_tera_type: pokemon.type[0],
+			_tera_type: pokemon.type.primary,
 			_exp: trainerPokemon.exp,
 			_status: null,
 			_held_item: null,
@@ -1289,7 +1289,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 	trainerId: row.trainer_id,
 	pokemonId: row.species,
 	nickname: row.nickname,
-	type: row.type.filter(isPokeType),
+	type: new PokemonType(row.type.filter(PokemonType.isPokeType)),
 	nature: row.nature,
 	level: new Level(row.level),
 	exp: row.exp,
@@ -1343,7 +1343,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 	moves: [],
 	items: [],
 	notes: row.notes,
-	teraType: row.tera_type as TeraPokeType,
+	teraType: PokemonTeraType.isTeraType(row.tera_type) ? new PokemonTeraType(row.tera_type) : undefined,
 	status: row.status as NonVolatileStatus | null,
 	isShiny: row.is_shiny,
 	feats: [],

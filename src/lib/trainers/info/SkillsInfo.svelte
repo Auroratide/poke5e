@@ -2,7 +2,7 @@
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import type { Level } from "$lib/dnd/level"
 	import { ProficiencyBlock, SkillRanks } from "$lib/dnd/skills"
-	import type { PokeType } from "$lib/pokemon/types"
+	import type { PokemonType } from "$lib/pokemon/types-2"
 	import { skillModifiersFromSpecializations, type Specializations } from "../specializations"
 
 	export let level: Level
@@ -10,10 +10,10 @@
 	export let savingThrows: Attribute[]
 	export let proficiencies: SkillRanks
 
-	export let type: PokeType[] | undefined = undefined
+	export let type: PokemonType | undefined = undefined
 	export let specializations: Specializations | undefined = undefined
 
-	$: extraModifiers = type != null && specializations != null ? skillModifiersFromSpecializations(specializations, type) : undefined
+	$: extraModifiers = type != null && specializations != null ? skillModifiersFromSpecializations(specializations, type.data) : undefined
 </script>
 
 <h3>Saves</h3>

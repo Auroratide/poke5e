@@ -2,11 +2,11 @@
 	import type { Move } from "./types"
 	import Card from "../design/Card.svelte"
 	import FlatDl from "../design/FlatDl.svelte"
-	import TypeTag from "../pokemon/TypeTag.svelte"
 	import { powerAsString } from "./string"
 	import MoveDescription from "./MoveDescription.svelte"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
+	import { TypeTag } from "$lib/pokemon/types-2"
 
 	export let move: Move
 </script>

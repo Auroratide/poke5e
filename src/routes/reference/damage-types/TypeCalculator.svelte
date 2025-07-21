@@ -1,17 +1,16 @@
 <script lang="ts">
 	import FlatDl from "$lib/design/FlatDl.svelte"
-	import { PokeTypes, type PokeType } from "$lib/pokemon/types"
-	import { vulnerabilities, resistances, immunities, normalDamange } from "$lib/pokemon/type-interactions"
 	import { Fieldset, CheckboxFields } from "$lib/design/forms"
+	import { PokemonType, type PokeType } from "$lib/pokemon/types-2"
 
 	let types: PokeType[] = []
 
-	const typeOptions = PokeTypes.map((it) => ({ name: it, value: it }))
+	const typeOptions = PokemonType.list.map((it) => ({ name: it, value: it }))
 	
-	$: resistant = types.length > 0 ? Array.from(resistances(types)) : []
-	$: vulnerable = types.length > 0 ? Array.from(vulnerabilities(types)) : []
-	$: immune = types.length > 0 ? Array.from(immunities(types)) : []
-	$: normal = types.length > 0 ? Array.from(normalDamange(types)) : []
+	$: resistant = types.length > 0 ? Array.from(new PokemonType(types).resistances()) : []
+	$: vulnerable = types.length > 0 ? Array.from(new PokemonType(types).vulnerabilities()) : []
+	$: immune = types.length > 0 ? Array.from(new PokemonType(types).immunities()) : []
+	$: normal = types.length > 0 ? Array.from(new PokemonType(types).normalDamange()) : []
 </script>
 
 <form>

@@ -3,8 +3,12 @@ export class DataClass<T> {
 
 	copy(overrides: Partial<T> = {}): this {
 		const constructor = this.constructor as new (data: T) => this
-		const clone = structuredClone(this.data)
-		return new constructor(Object.assign(clone, overrides))
+		if (typeof this.data === "object") {
+			const clone = structuredClone(this.data)
+			return new constructor(Object.assign(clone, overrides))
+		} else {
+			return new constructor(this.data)
+		}
 	}
 }
 

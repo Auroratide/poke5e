@@ -7,13 +7,13 @@
 		ToggleSwitchField,
 		type IntFieldChangeEvent,
 	} from "$lib/design/forms"
-	import { TeraPokeTypes, type TeraPokeType } from "$lib/pokemon/types"
+	import { PokemonTeraType } from "$lib/pokemon/types-2"
 	import { Natures, type Nature } from "$lib/trainers/nature"
 
 	export let nickname: string
 	export let nature: Nature
 	export let natureCustom: string
-	export let tera: TeraPokeType | ""
+	export let tera: PokemonTeraType
 	export let level: number
 	export let ac: number
 	export let maxHp: number
@@ -34,16 +34,18 @@
 		value: it,
 	}))
 
-	const teraOptions = TeraPokeTypes.map((it) => ({
+	const teraOptions = PokemonTeraType.list.map((it) => ({
 		name: it,
 		value: it,
 	}))
+
+	$: console.log(tera.data)
 </script>
 
 <Fieldset title="Basic Info" columns={2}>
 	<TextField label="Nickname" bind:value={nickname} {disabled} />
 	<SelectField label="Nature" options={natureOptions} bind:value={nature} bind:other={natureCustom} {disabled} />
-	<SelectField label="Tera" options={teraOptions} bind:value={tera} {disabled} />
+	<SelectField label="Tera" options={teraOptions} bind:value={tera.data} {disabled} />
 	<IntField label="Level" value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
 	<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} />
 	<IntField label="Max HP" bind:value={maxHp} min={0} {disabled} />
