@@ -94,6 +94,44 @@ test("updating trainers", async () => {
 	expect(irisInfo.path_name).toEqual("Nurse")
 	expect(irisInfo.path_resource).toEqual(3)
 
+	expect(irisInfo.prof_athletics).toEqual(false)
+	expect(irisInfo.prof_acrobatics).toEqual(true)
+	expect(irisInfo.prof_sleight_of_hand).toEqual(false)
+	expect(irisInfo.prof_stealth).toEqual(true)
+	expect(irisInfo.prof_arcana).toEqual(false)
+	expect(irisInfo.prof_history).toEqual(false)
+	expect(irisInfo.prof_investigation).toEqual(false)
+	expect(irisInfo.prof_nature).toEqual(false)
+	expect(irisInfo.prof_religion).toEqual(false)
+	expect(irisInfo.prof_animal_handling).toEqual(true)
+	expect(irisInfo.prof_insight).toEqual(false)
+	expect(irisInfo.prof_medicine).toEqual(false)
+	expect(irisInfo.prof_perception).toEqual(false)
+	expect(irisInfo.prof_survival).toEqual(false)
+	expect(irisInfo.prof_deception).toEqual(true)
+	expect(irisInfo.prof_intimidation).toEqual(false)
+	expect(irisInfo.prof_performance).toEqual(false)
+	expect(irisInfo.prof_persuasion).toEqual(false)
+
+	expect(irisInfo.rank_athletics).toEqual(0)
+	expect(irisInfo.rank_acrobatics).toEqual(2)
+	expect(irisInfo.rank_sleight_of_hand).toEqual(0)
+	expect(irisInfo.rank_stealth).toEqual(1)
+	expect(irisInfo.rank_arcana).toEqual(0)
+	expect(irisInfo.rank_history).toEqual(0)
+	expect(irisInfo.rank_investigation).toEqual(0)
+	expect(irisInfo.rank_nature).toEqual(0)
+	expect(irisInfo.rank_religion).toEqual(0)
+	expect(irisInfo.rank_animal_handling).toEqual(1)
+	expect(irisInfo.rank_insight).toEqual(0)
+	expect(irisInfo.rank_medicine).toEqual(0)
+	expect(irisInfo.rank_perception).toEqual(0)
+	expect(irisInfo.rank_survival).toEqual(0)
+	expect(irisInfo.rank_deception).toEqual(1)
+	expect(irisInfo.rank_intimidation).toEqual(0)
+	expect(irisInfo.rank_performance).toEqual(0)
+	expect(irisInfo.rank_persuasion).toEqual(0)
+
 	// Custom Trainer Path
 	await call("update_trainer", {
 		_write_key: writeKey,
@@ -447,6 +485,44 @@ test("updating pokemon", async () => {
 	expect(vivillon.bond_points_cur).toEqual(2)
 	expect(vivillon.bond_points_max).toEqual(3)
 
+	expect(vivillon.prof_athletics).toEqual(false)
+	expect(vivillon.prof_acrobatics).toEqual(true)
+	expect(vivillon.prof_sleight_of_hand).toEqual(false)
+	expect(vivillon.prof_stealth).toEqual(false)
+	expect(vivillon.prof_arcana).toEqual(false)
+	expect(vivillon.prof_history).toEqual(false)
+	expect(vivillon.prof_investigation).toEqual(false)
+	expect(vivillon.prof_nature).toEqual(false)
+	expect(vivillon.prof_religion).toEqual(false)
+	expect(vivillon.prof_animal_handling).toEqual(false)
+	expect(vivillon.prof_insight).toEqual(false)
+	expect(vivillon.prof_medicine).toEqual(false)
+	expect(vivillon.prof_perception).toEqual(false)
+	expect(vivillon.prof_survival).toEqual(false)
+	expect(vivillon.prof_deception).toEqual(false)
+	expect(vivillon.prof_intimidation).toEqual(false)
+	expect(vivillon.prof_performance).toEqual(false)
+	expect(vivillon.prof_persuasion).toEqual(true)
+
+	expect(vivillon.rank_athletics).toEqual(0)
+	expect(vivillon.rank_acrobatics).toEqual(2)
+	expect(vivillon.rank_sleight_of_hand).toEqual(0)
+	expect(vivillon.rank_stealth).toEqual(0)
+	expect(vivillon.rank_arcana).toEqual(0)
+	expect(vivillon.rank_history).toEqual(0)
+	expect(vivillon.rank_investigation).toEqual(0)
+	expect(vivillon.rank_nature).toEqual(0)
+	expect(vivillon.rank_religion).toEqual(0)
+	expect(vivillon.rank_animal_handling).toEqual(0)
+	expect(vivillon.rank_insight).toEqual(0)
+	expect(vivillon.rank_medicine).toEqual(0)
+	expect(vivillon.rank_perception).toEqual(0)
+	expect(vivillon.rank_survival).toEqual(0)
+	expect(vivillon.rank_deception).toEqual(0)
+	expect(vivillon.rank_intimidation).toEqual(0)
+	expect(vivillon.rank_performance).toEqual(0)
+	expect(vivillon.rank_persuasion).toEqual(1)
+
 	// Cleanup
 	await call("remove_pokemon", {
 		_write_key: writeKey,
@@ -728,35 +804,17 @@ export const Iris = () => ({
 	_name: "Iris",
 	_description: "A trainer who loves colors.",
 	_level: 6,
+	_ac: 11,
+	_hp_cur: 50,
+	_hp_max: 50,
+	_hit_dice_cur: 6,
+	_hit_dice_max: 6,
 	_strength: 10,
 	_dexterity: 16,
 	_constitution: 10,
 	_intelligence: 13,
 	_wisdom: 11,
 	_charisma: 15,
-	_ac: 11,
-	_hp_cur: 50,
-	_hp_max: 50,
-	_hit_dice_cur: 6,
-	_hit_dice_max: 6,
-	_prof_athletics: false,
-	_prof_acrobatics: true,
-	_prof_sleight_of_hand: false,
-	_prof_stealth: true,
-	_prof_arcana: false,
-	_prof_history: false,
-	_prof_investigation: false,
-	_prof_nature: false,
-	_prof_religion: false,
-	_prof_animal_handling: true,
-	_prof_insight: false,
-	_prof_medicine: false,
-	_prof_perception: false,
-	_prof_survival: false,
-	_prof_deception: true,
-	_prof_intimidation: false,
-	_prof_performance: false,
-	_prof_persuasion: false,
 	_save_str: false,
 	_save_dex: true,
 	_save_con: false,
@@ -768,6 +826,53 @@ export const Iris = () => ({
 	_age: null,
 	_home_region: null,
 	_background: null,
+	_money: 0,
+	_special_normal: 0,
+	_special_fighting: 0,
+	_special_flying: 0,
+	_special_poison: 0,
+	_special_ground: 0,
+	_special_rock: 0,
+	_special_bug: 0,
+	_special_ghost: 0,
+	_special_steel: 0,
+	_special_fire: 0,
+	_special_water: 0,
+	_special_grass: 1,
+	_special_electric: 0,
+	_special_psychic: 0,
+	_special_ice: 0,
+	_special_dragon: 0,
+	_special_dark: 0,
+	_special_fairy: 0,
+	_path_name: "Nurse",
+	_path_resource: 3,
+	_path_rank_1_name: "",
+	_path_rank_1_desc: "",
+	_path_rank_2_name: "",
+	_path_rank_2_desc: "",
+	_path_rank_3_name: "",
+	_path_rank_3_desc: "",
+	_path_rank_4_name: "",
+	_path_rank_4_desc: "",
+	_rank_athletics: 0,
+	_rank_acrobatics: 2,
+	_rank_sleight_of_hand: 0,
+	_rank_stealth: 1,
+	_rank_arcana: 0,
+	_rank_history: 0,
+	_rank_investigation: 0,
+	_rank_nature: 0,
+	_rank_religion: 0,
+	_rank_animal_handling: 1,
+	_rank_insight: 0,
+	_rank_medicine: 0,
+	_rank_perception: 0,
+	_rank_survival: 0,
+	_rank_deception: 1,
+	_rank_intimidation: 0,
+	_rank_performance: 0,
+	_rank_persuasion: 0,
 })
 
 export const SunnyYellow = () => ({
@@ -788,24 +893,6 @@ export const SunnyYellow = () => ({
 	_hp_max: 66,
 	_hit_dice_cur: 6,
 	_hit_dice_max: 6,
-	_prof_athletics: false,
-	_prof_acrobatics: false,
-	_prof_sleight_of_hand: false,
-	_prof_stealth: false,
-	_prof_arcana: false,
-	_prof_history: false,
-	_prof_investigation: false,
-	_prof_nature: false,
-	_prof_religion: false,
-	_prof_animal_handling: false,
-	_prof_insight: false,
-	_prof_medicine: false,
-	_prof_perception: false,
-	_prof_survival: false,
-	_prof_deception: false,
-	_prof_intimidation: false,
-	_prof_performance: false,
-	_prof_persuasion: false,
 	_save_str: false,
 	_save_dex: false,
 	_save_con: false,
@@ -819,5 +906,38 @@ export const SunnyYellow = () => ({
 	_status: null,
 	_held_item: null,
 	_is_shiny: false,
+	_custom_size: null,
+	_hit_dice_size: null,
+	_speed_walking: null,
+	_speed_climbing: null,
+	_speed_swimming: null,
+	_speed_flying: null,
+	_speed_hover: null,
+	_speed_burrowing: null,
+	_sense_darkvision: null,
+	_sense_blindsight: null,
+	_sense_tremorsense: null,
+	_sense_truesight: null,
+	_bond_level: 0,
+	_bond_points_cur: 0,
+	_bond_points_max: 0,
+	_rank_athletics: 0,
+	_rank_acrobatics: 2,
+	_rank_sleight_of_hand: 0,
+	_rank_stealth: 0,
+	_rank_arcana: 0,
+	_rank_history: 0,
+	_rank_investigation: 0,
+	_rank_nature: 0,
+	_rank_religion: 0,
+	_rank_animal_handling: 0,
+	_rank_insight: 0,
+	_rank_medicine: 0,
+	_rank_perception: 0,
+	_rank_survival: 0,
+	_rank_deception: 0,
+	_rank_intimidation: 0,
+	_rank_performance: 0,
+	_rank_persuasion: 1,
 })
 
