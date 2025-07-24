@@ -721,6 +721,175 @@ test("updating held items", async () => {
 	})
 })
 
+test("updating fakemon", async () => {
+	const {
+		ret_id: fakemonId,
+		ret_read_key: readKey,
+		ret_write_key: writeKey
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_fakemon", Drakeon())
+
+	const canWrite = await call<number>("verify_fakemon_write_key", {
+		_id: fakemonId,
+		_write_key: writeKey,
+	})
+	
+	expect(canWrite).toEqual(1)
+
+	// Update
+	const DrakeonUpdated = () => ({
+		_species_name: "Drakeon",
+		_type: ["Dragon"],
+		_size: "small",
+		_sr: "8",
+		_min_level: 5,
+		_egg_groups: ["Field"],
+		_gender: "1:7",
+		_description: "The Elementist Pokémon. Drakeon is the rarest naturally occuring Eevee evolution. Legends speak of its ability to control and manipulate elemental energies, bestowing it with an array of versatile breath attacks.",
+		_ac: 17,
+		_hp: 50,
+		_hit_dice: "d10",
+		_speed_walking: 40,
+		_speed_climbing: 0,
+		_speed_swimming: 0,
+		_speed_flying: 15,
+		_speed_hover: 0,
+		_speed_burrowing: 0,
+		_sense_darkvision: 0,
+		_sense_blindsight: 0,
+		_sense_tremorsense: 0,
+		_sense_truesight: 0,
+		_strength: 14,
+		_dexterity: 15,
+		_constitution: 16,
+		_intelligence: 6,
+		_wisdom: 12,
+		_charisma: 16,
+		_prof_athletics: false,
+		_prof_acrobatics: false,
+		_prof_sleight_of_hand: false,
+		_prof_stealth: false,
+		_prof_arcana: false,
+		_prof_history: false,
+		_prof_investigation: false,
+		_prof_nature: false,
+		_prof_religion: false,
+		_prof_animal_handling: false,
+		_prof_insight: false,
+		_prof_medicine: false,
+		_prof_perception: true,
+		_prof_survival: false,
+		_prof_deception: false,
+		_prof_intimidation: true,
+		_prof_performance: false,
+		_prof_persuasion: false,
+		_save_str: false,
+		_save_dex: true,
+		_save_con: false,
+		_save_int: false,
+		_save_wis: false,
+		_save_cha: true,
+		_abilities: ["intimidate"],
+		_hidden_abilities: ["inner-focus"],
+		_moves_start: ["helping-hand", "tackle", "tail-whip", "dragon-breath", "sand-attack", "baby-doll-eyes"],
+		_moves_level2: [],
+		_moves_level6: ["flamethrower", "dragon-claw"],
+		_moves_level10: ["dragon-dance", "crunch"],
+		_moves_level14: ["muddy-water", "outrage", "draco-power"],
+		_moves_level18: ["last-resort", "thunder-fang", "hyper-beam"],
+		_moves_egg: [],
+		_moves_tm: [1, 2, 3, 4],
+	})
+
+	await call("update_fakemon", {
+		_write_key: writeKey,
+		...DrakeonUpdated(),
+	})
+
+	// Assert
+	const drakeon = await call<any>("get_fakemon", {
+		_read_key: readKey,
+	})
+
+	expect(drakeon.species_name).toEqual("Drakeon")
+	expect(drakeon.type).toEqual(["Dragon"])
+	expect(drakeon.size).toEqual("small")
+	expect(drakeon.sr).toEqual("8")
+	expect(drakeon.min_level).toEqual(5)
+	expect(drakeon.egg_groups).toEqual(["Field"])
+	expect(drakeon.gender).toEqual("1:7")
+	expect(drakeon.description).toEqual("The Elementist Pokémon. Drakeon is the rarest naturally occuring Eevee evolution. Legends speak of its ability to control and manipulate elemental energies, bestowing it with an array of versatile breath attacks.")
+	expect(drakeon.ac).toEqual(17)
+	expect(drakeon.hp).toEqual(50)
+	expect(drakeon.hit_dice).toEqual("d10")
+	expect(drakeon.speed_walking).toEqual(40)
+	expect(drakeon.speed_climbing).toEqual(0)
+	expect(drakeon.speed_swimming).toEqual(0)
+	expect(drakeon.speed_flying).toEqual(15)
+	expect(drakeon.speed_hover).toEqual(0)
+	expect(drakeon.speed_burrowing).toEqual(0)
+	expect(drakeon.sense_darkvision).toEqual(0)
+	expect(drakeon.sense_blindsight).toEqual(0)
+	expect(drakeon.sense_tremorsense).toEqual(0)
+	expect(drakeon.sense_truesight).toEqual(0)
+	expect(drakeon.strength).toEqual(14)
+	expect(drakeon.dexterity).toEqual(15)
+	expect(drakeon.constitution).toEqual(16)
+	expect(drakeon.intelligence).toEqual(6)
+	expect(drakeon.wisdom).toEqual(12)
+	expect(drakeon.charisma).toEqual(16)
+	expect(drakeon.save_str).toEqual(false)
+	expect(drakeon.save_dex).toEqual(true)
+	expect(drakeon.save_con).toEqual(false)
+	expect(drakeon.save_int).toEqual(false)
+	expect(drakeon.save_wis).toEqual(false)
+	expect(drakeon.save_cha).toEqual(true)
+	expect(drakeon.abilities).toEqual(["intimidate"])
+	expect(drakeon.hidden_abilities).toEqual(["inner-focus"])
+	expect(drakeon.moves_start).toEqual(["helping-hand", "tackle", "tail-whip", "dragon-breath", "sand-attack", "baby-doll-eyes"]) 
+	expect(drakeon.moves_level2).toEqual([])
+	expect(drakeon.moves_level6).toEqual(["flamethrower", "dragon-claw"])
+	expect(drakeon.moves_level10).toEqual(["dragon-dance", "crunch"])
+	expect(drakeon.moves_level14).toEqual(["muddy-water", "outrage", "draco-power"])
+	expect(drakeon.moves_level18).toEqual(["last-resort", "thunder-fang", "hyper-beam"])
+	expect(drakeon.moves_egg).toEqual([])
+	expect(drakeon.moves_tm).toEqual([1, 2, 3, 4])
+	
+
+	expect(drakeon.prof_athletics).toEqual(false)
+	expect(drakeon.prof_acrobatics).toEqual(false)
+	expect(drakeon.prof_sleight_of_hand).toEqual(false)
+	expect(drakeon.prof_stealth).toEqual(false)
+	expect(drakeon.prof_arcana).toEqual(false)
+	expect(drakeon.prof_history).toEqual(false)
+	expect(drakeon.prof_investigation).toEqual(false)
+	expect(drakeon.prof_nature).toEqual(false)
+	expect(drakeon.prof_religion).toEqual(false)
+	expect(drakeon.prof_animal_handling).toEqual(false)
+	expect(drakeon.prof_insight).toEqual(false)
+	expect(drakeon.prof_medicine).toEqual(false)
+	expect(drakeon.prof_perception).toEqual(true)
+	expect(drakeon.prof_survival).toEqual(false)
+	expect(drakeon.prof_deception).toEqual(false)
+	expect(drakeon.prof_intimidation).toEqual(true)
+	expect(drakeon.prof_performance).toEqual(false)
+	expect(drakeon.prof_persuasion).toEqual(false)
+
+	// Cleanup
+	await call("delete_fakemon", {
+		_write_key: writeKey,
+		_id: fakemonId,
+	})
+	await call<any>("get_fakemon", {
+		_read_key: readKey,
+	}, {
+		assertNull: true,
+	})
+})
+
 test("no direct access allowed", async () => {
 	const UNAUTHORIZED_SCHEMA = "PGRST106"
 
@@ -746,6 +915,10 @@ test("no direct access allowed", async () => {
 
 	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
 		supabase.schema("private").from("inventory_items").select()
+	)
+
+	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
+		supabase.schema("private").from("fakemon").select()
 	)
 })
 
@@ -941,3 +1114,66 @@ export const SunnyYellow = () => ({
 	_rank_persuasion: 1,
 })
 
+const Drakeon = () => ({
+	_species_name: "Drakeon",
+	_type: ["Dragon"],
+	_size: "small",
+	_sr: 8,
+	_min_level: 5,
+	_egg_groups: ["Field"],
+	_gender: "1:7",
+	_description: "The Elementist Pokémon. Drakeon is the rarest naturally occuring Eevee evolution. Legends speak of its ability to control and manipulate elemental energies, bestowing it with an array of versatile breath attacks.",
+	_ac: 17,
+	_hp: 50,
+	_hit_dice: "d10",
+	_speed_walking: 40,
+	_speed_climbing: 0,
+	_speed_swimming: 0,
+	_speed_flying: 15,
+	_speed_hover: 0,
+	_speed_burrowing: 0,
+	_sense_darkvision: 0,
+	_sense_blindsight: 0,
+	_sense_tremorsense: 0,
+	_sense_truesight: 0,
+	_strength: 14,
+	_dexterity: 15,
+	_constitution: 16,
+	_intelligence: 6,
+	_wisdom: 12,
+	_charisma: 16,
+	_prof_athletics: false,
+	_prof_acrobatics: false,
+	_prof_sleight_of_hand: false,
+	_prof_stealth: false,
+	_prof_arcana: false,
+	_prof_history: false,
+	_prof_investigation: false,
+	_prof_nature: false,
+	_prof_religion: false,
+	_prof_animal_handling: false,
+	_prof_insight: false,
+	_prof_medicine: false,
+	_prof_perception: true,
+	_prof_survival: false,
+	_prof_deception: false,
+	_prof_intimidation: true,
+	_prof_performance: false,
+	_prof_persuasion: false,
+	_save_str: false,
+	_save_dex: true,
+	_save_con: false,
+	_save_int: false,
+	_save_wis: false,
+	_save_cha: true,
+	_abilities: ["intimidate"],
+	_hidden_abilities: ["inner-focus"],
+	_moves_start: ["helping-hand", "tackle", "tail-whip", "dragon-breath", "sand-attack", "baby-doll-eyes"],
+	_moves_level2: [],
+	_moves_level6: ["flamethrower", "dragon-claw"],
+	_moves_level10: ["dragon-dance", "crunch"],
+	_moves_level14: ["muddy-water", "outrage", "draco-power"],
+	_moves_level18: ["last-resort", "thunder-fang", "hyper-beam"],
+	_moves_egg: [],
+	_moves_tm: [1, 2, 3, 4],
+})
