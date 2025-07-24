@@ -1,24 +1,57 @@
 <script lang="ts">
-	import type { PokemonType, PokeType } from "./PokemonType"
+	import type { PokemonType } from "./PokemonType"
+	import { InlineTypeName } from "."
 
 	export let type: PokemonType
 
 	$: vul = Array.from(type.vulnerabilities())
 	$: res = Array.from(type.resistances())
 	$: imm = Array.from(type.immunities())
-
-	const showTypeList = (list: PokeType[]) => list.length === 0 ? "none" : list.join(", ")
 </script>
 
 <dt>Vulnerabilities</dt>
-<dd>{showTypeList(vul)}</dd>
+<div>
+	{#if vul.length === 0}
+		<dd class="none">None</dd>
+	{/if}
+	{#each vul as value}
+		<dd><InlineTypeName {value} /></dd>
+	{/each}
+</div>
 <dt>Resistances</dt>
-<dd>{showTypeList(res)}</dd>
+<div>
+	{#if res.length === 0}
+		<dd class="none">None</dd>
+	{/if}
+	{#each res as value}
+		<dd><InlineTypeName {value} /></dd>
+	{/each}
+</div>
 <dt>Immunities</dt>
-<dd>{showTypeList(imm)}</dd>
+<div>
+	{#if imm.length === 0}
+		<dd class="none">None</dd>
+	{/if}
+	{#each imm as value}
+		<dd><InlineTypeName {value} /></dd>
+	{/each}
+</div>
 
 <style>
-	dd {
-		text-transform: capitalize;
+	dt {
+		margin-block: 0.25em;
+	}
+
+	div {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 0 0.25em;
+		margin-block: 0.25em;
+	}
+
+	.none {
+		display: inline-block;
+		padding-block: 0.0625em;
 	}
 </style>
