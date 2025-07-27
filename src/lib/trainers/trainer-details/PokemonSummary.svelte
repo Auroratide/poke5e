@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { ReadWriteKey, TrainerPokemon } from "../types"
-	import GenderIcon from "$lib/design/GenderIcon.svelte"
 	import ResourceBar from "$lib/design/ResourceBar.svelte"
 	import { Url } from "$lib/url"
 	import { pokemon as allPokemon } from "$lib/creatures/store"
@@ -9,6 +8,7 @@
 	import PokemonSprite from "$lib/creatures/PokemonSprite.svelte"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 	import ItemSprite from "$lib/items/ItemSprite.svelte"
+	import { GenderIcon } from "$lib/creatures/gender"
 
 	export let trainer: ReadWriteKey
 	export let pokemon: TrainerPokemon

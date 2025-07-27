@@ -1,11 +1,16 @@
 <script lang="ts">
-	import { Gender } from "../../types"
 	import { Fieldset, RadioFields } from "$lib/design/forms"
+	import { PokemonGender } from "./PokemonGender"
 
-	export let value: Gender
+	export let value: PokemonGender
 	export let disabled: boolean = false
 
-	const genders = [Gender.Male, Gender.Female, Gender.None, Gender.Other].map((it) => ({
+	const genders = [
+		PokemonGender.Male,
+		PokemonGender.Female,
+		PokemonGender.None,
+		PokemonGender.Other,
+	].map((it) => ({
 		name: it,
 		value: it,
 	}))

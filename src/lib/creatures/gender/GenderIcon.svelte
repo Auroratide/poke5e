@@ -1,6 +1,7 @@
 <script lang="ts">
-	import type { Gender } from "../trainers/types"
-	export let gender: Gender
+	import { PokemonGender } from "./PokemonGender"
+
+	export let gender: PokemonGender
 </script>
 
 <span class="gender {gender}" title="{gender}" aria-label="{gender}"></span>

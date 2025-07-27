@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Pokemon } from "$lib/creatures/types"
 	import type { TrainerPokemon } from "../types"
-	import GenderIcon from "$lib/design/GenderIcon.svelte"
 	import Level from "$lib/design/Level.svelte"
+	import { GenderIcon } from "$lib/creatures/gender"
 
 	export let pokemon: TrainerPokemon
 	export let species: Pokemon

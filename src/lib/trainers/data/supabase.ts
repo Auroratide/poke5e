@@ -4,7 +4,6 @@ import {
 	type ReadWriteKey,
 	type TrainerPokemon,
 	type TrainerInfo,
-	Gender,
 	type WithWriteKey,
 	type LearnedMove,
 	type PokemonId,
@@ -28,6 +27,7 @@ import { Level } from "$lib/dnd/level"
 import { Senses } from "$lib/dnd/senses"
 import { Speeds } from "$lib/dnd/movement"
 import { PokemonTeraType, PokemonType } from "$lib/pokemon/types-2"
+import { PokemonGender } from "$lib/creatures/gender"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -542,7 +542,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			nature: Natures[0],
 			level: new Level(pokemon.minLevel),
 			exp: experienceNeededAtLevel(pokemon.minLevel),
-			gender: Gender.None,
+			gender: PokemonGender.None,
 			attributes: pokemon.attributes,
 			ac: pokemon.ac,
 			ability: pokemon.abilities[0]?.id,
@@ -583,7 +583,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_nature: Natures[0],
 			_type: pokemon.type.data,
 			_level: pokemon.minLevel,
-			_gender: Gender.None,
+			_gender: PokemonGender.None,
 			_strength: pokemon.attributes.str.score,
 			_dexterity: pokemon.attributes.dex.score,
 			_constitution: pokemon.attributes.con.score,
@@ -1293,7 +1293,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 	nature: row.nature,
 	level: new Level(row.level),
 	exp: row.exp,
-	gender: row.gender as Gender,
+	gender: row.gender as PokemonGender,
 	attributes: new Attributes({
 		str: row.strength,
 		dex: row.dexterity,

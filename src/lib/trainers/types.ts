@@ -15,17 +15,11 @@ import type { Level } from "$lib/dnd/level"
 import type { Senses } from "$lib/dnd/senses"
 import type { Speeds } from "$lib/dnd/movement"
 import type { PokemonTeraType, PokemonType } from "$lib/pokemon/types-2"
+import type { PokemonGender } from "$lib/creatures/gender"
 
 export type Resource = {
 	current: number,
 	max: number,
-}
-
-export enum Gender {
-	Male = "male",
-	Female = "female",
-	None = "none",
-	Other = "other",
 }
 
 export type LearnedMove = {
@@ -65,7 +59,7 @@ export type TrainerPokemon = {
 	nature: Nature,
 	level: Level,
 	exp: number,
-	gender: Gender,
+	gender: PokemonGender,
 	attributes: Attributes,
 	ac: number,
 	hp: Resource,

@@ -8,9 +8,9 @@
 	import * as asString from "./string"
 	import EvolutionSection from "./EvolutionSection.svelte"
 	import PokemonArt from "./PokemonArt.svelte"
-	import GenderRatio from "./GenderRatio.svelte"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import { TypeTag, TypeEffectiveness } from "$lib/pokemon/types-2"
+	import { GenderRatioDisplay } from "./gender"
 
 	export let pokemon: Pokemon
 
@@ -34,7 +34,7 @@
 					<dt>Min Level</dt>
 					<dd>{pokemon.minLevel}</dd>
 					<dt>Gender</dt>
-					<dd><GenderRatio value={pokemon.gender} /></dd>
+					<dd><GenderRatioDisplay value={pokemon.gender} /></dd>
 			</FlatDl>
 			<PokemonArt media={pokemon.media} alt="" />
 		</div>

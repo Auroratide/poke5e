@@ -10,7 +10,6 @@
 	import { type TrainerPokemon } from "../types"
 	import BasicInfoFieldset from "./forms/BasicInfoFieldset.svelte"
 	import AbilitiesFieldset from "./forms/AbilitiesFieldset.svelte"
-	import GenderFieldset from "./forms/GenderFieldset.svelte"
 	import HeldItemsFieldset from "./forms/HeldItemsFieldset.svelte"
 	import MovesFieldset from "./forms/MovesFieldset.svelte"
 	import FeatsFieldset from "$lib/feats/FeatsFieldset.svelte"
@@ -21,6 +20,7 @@
 	import { Level } from "$lib/dnd/level"
 	import { SpeedsFieldset } from "$lib/dnd/movement"
 	import { PokemonTeraType, TypeField, type TeraType } from "$lib/pokemon/types-2"
+	import { GenderFieldset } from "$lib/creatures/gender"
 
 	const dispatch = createEventDispatcher()
 

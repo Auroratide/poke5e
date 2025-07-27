@@ -6,6 +6,7 @@ import type { SkillRanks } from "$lib/dnd/skills"
 import type { SenseType } from "$lib/dnd/senses"
 import type { SpeedType } from "$lib/dnd/movement"
 import type { PokemonType } from "$lib/pokemon/types-2"
+import type { GenderRatio } from "./gender"
 
 export type PokemonMedia = {
 	main?: string,
@@ -35,7 +36,7 @@ export type Pokemon = {
 	sr: number,
 	minLevel: number,
 	eggGroup: string[],
-	gender: string,
+	gender: GenderRatio,
 	description: string,
 	ac: number,
 	hp: number,
