@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.7.1",
+		description: [
+			"Bug fix: Fix Flower Trick crashing trainer page",
+		],
+	}, {
 		name: "v1.7.0",
 		description: [
 			"New: Can customize pokémon size, hit dice, movement, and senses (\"Advanced\" options in the editor).",
