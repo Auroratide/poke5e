@@ -4009,7 +4009,7 @@
       "id": "flower-trick",
       "name": "Flower Trick",
       "type": "grass",
-      "power": "dex",
+      "power": ["dex"],
       "time": "1 action",
       "pp": 5,
       "duration": "instantaneous",
