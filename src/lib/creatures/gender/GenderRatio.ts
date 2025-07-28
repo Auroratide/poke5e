@@ -20,6 +20,8 @@ export class GenderRatio extends DataClass<string> {
 	private percentOf = (com: 0 | 1): number => {
 		if (this.isGenderless()) return 0
 		const r = this.ratio()
-		return 100 * r[com] / (r[0] + r[1])
+		return roundPercent(100 * r[com] / (r[0] + r[1]))
 	}
 }
+
+const roundPercent = (n: number): number => n < 50 ? Math.ceil(n) : Math.floor(n)
