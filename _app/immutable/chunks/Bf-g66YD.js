@@ -1,0 +1,1 @@
+class o{constructor(t){this.data=t}copy(t={}){const s=this.constructor;if(typeof this.data=="object"){const a=structuredClone(this.data);return new s(Object.assign(a,t))}else return new s(this.data)}}export{o as D};
