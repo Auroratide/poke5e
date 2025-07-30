@@ -16,7 +16,6 @@
 		NumericResourceField,
 		type NumericChangeDetail,
 	} from "$lib/design/forms"
-		import type { HitDice } from "$lib/dnd/HitDice"
 	import type { NonVolatileStatus } from "$lib/pokemon/status"
 	import StatusEditor, { type ChangeDetail as StatusChangeDetail } from "$lib/pokemon/StatusEditor.svelte"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
@@ -24,6 +23,7 @@
 	import Popover from "$lib/design/Popover.svelte"
 	import HelpIcon from "$lib/design/icon/HelpIcon.svelte"
 	import type { Level } from "$lib/dnd/level"
+	import type { HitDice } from "$lib/dnd/hit-dice"
 
 	const dispatch = createEventDispatcher()
 
@@ -105,7 +105,7 @@
 					{hitDice.current}
 				{/if}
 			</span>
-			<span class="max-hit-dice">/ {hitDice.max} ({dieSize})</span>
+			<span class="max-hit-dice">/ {hitDice.max} ({dieSize.data})</span>
 		</span>
 	</span>
 	{#if hasStatusAndExp}

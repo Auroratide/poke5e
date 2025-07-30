@@ -3,9 +3,9 @@ import { FakemonDataProviderError, FakemonPermissionError, type FakemonDataProvi
 import { Fakemon, type DraftFakemon } from "../Fakemon"
 import { PokemonType } from "$lib/pokemon/types-2"
 import type { Attribute } from "$lib/dnd/attributes"
-import { isHitDice } from "$lib/dnd/HitDice"
 import { isCreatureSize } from "$lib/dnd/CreatureSize"
 import type { Data } from "$lib/DataClass"
+import { HitDice } from "$lib/dnd/hit-dice"
 
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	constructor(private readonly supabase: SupabaseClient) {}
@@ -75,7 +75,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_description: fakemon.description,
 			_ac: fakemon.ac,
 			_hp: fakemon.hp,
-			_hit_dice: fakemon.hitDice,
+			_hit_dice: fakemon.hitDice.data,
 			_speed_walking: fakemon.speed.walking,
 			_speed_climbing: fakemon.speed.climbing,
 			_speed_swimming: fakemon.speed.swimming,
@@ -219,7 +219,7 @@ function rowToFakemon(row: FakemonRow): Fakemon {
 		description: row.description,
 		ac: row.ac,
 		hp: row.hp,
-		hitDice: isHitDice(row.hit_dice) ? row.hit_dice : "d6",
+		hitDice: HitDice.isHitDice(row.hit_dice) ? new HitDice(row.hit_dice) : new HitDice("d6"),
 		speed: {
 			walking: row.speed_walking,
 			swimming: row.speed_swimming,

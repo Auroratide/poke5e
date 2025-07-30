@@ -4,11 +4,11 @@
 		SelectField,
 	} from "$lib/design/forms"
 	import { CreatureSizes, type CreatureSize } from "$lib/dnd/CreatureSize"
-	import { HitDice } from "$lib/dnd/HitDice"
+	import { HitDice, HitDiceSize } from "$lib/dnd/hit-dice"
 	import { capitalize } from "$lib/string"
 
 	export let customSize: CreatureSize | undefined
-	export let customHitDiceSize: HitDice | undefined
+	export let customHitDiceSize: HitDiceSize | undefined
 	export let disabled: boolean = false
 
 	const sizeOptions = [ {
@@ -22,7 +22,7 @@
 	const hitDiceOptions = [ {
 		name: "— Default —",
 		value: undefined,
-	} ].concat(HitDice.map((it) => ({
+	} ].concat(HitDice.list.map((it) => ({
 		name: it,
 		value: it,
 	})))

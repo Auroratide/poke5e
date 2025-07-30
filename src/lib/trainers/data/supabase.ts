@@ -18,7 +18,7 @@ import type { NonVolatileStatus } from "$lib/pokemon/status"
 import { createEmptyChosenTrainerPath } from "$lib/trainers/paths"
 import type { ChosenFeat } from "$lib/feats/ChosenFeat"
 import { isCreatureSize } from "$lib/dnd/CreatureSize"
-import { isHitDice } from "$lib/dnd/HitDice"
+import { HitDice } from "$lib/dnd/hit-dice"
 import { experienceNeededAtLevel } from "$lib/creatures/experience"
 import { Attributes, type Attribute } from "$lib/dnd/attributes"
 import { SkillRanks, type Skill } from "$lib/dnd/skills"
@@ -506,7 +506,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_held_item: null,
 			_is_shiny: info.isShiny,
 			_custom_size: info.customSize ?? null,
-			_hit_dice_size: info.customHitDiceSize ?? null,
+			_hit_dice_size: info.customHitDiceSize?.data ?? null,
 			_speed_walking: info.speeds.data.walking ?? null,
 			_speed_climbing: info.speeds.data.climbing ?? null,
 			_speed_swimming: info.speeds.data.swimming ?? null,
@@ -1348,7 +1348,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 	isShiny: row.is_shiny,
 	feats: [],
 	customSize: isCreatureSize(row.custom_size) ? row.custom_size : undefined,
-	customHitDiceSize: isHitDice(row.hit_dice_size) ? row.hit_dice_size : undefined,
+	customHitDiceSize: HitDice.isHitDice(row.hit_dice_size) ? new HitDice(row.hit_dice_size) : undefined,
 	speeds: new Speeds({
 		walking: row.speed_walking,
 		climbing: row.speed_climbing,

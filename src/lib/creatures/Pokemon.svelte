@@ -46,7 +46,7 @@
 			<dt>Armor Class</dt>
 			<dd>{pokemon.ac}</dd>
 			<dt>Hit Points</dt>
-			<dd>{pokemon.hp} ({pokemon.hitDice})</dd>
+			<dd>{pokemon.hp} ({pokemon.hitDice.data})</dd>
 			<dt>Speed</dt>
 			<div>
 					{#each pokemon.speed as speed}

@@ -38,8 +38,6 @@
 		name: it,
 		value: it,
 	}))
-
-	$: console.log(tera.data)
 </script>
 
 <Fieldset title="Basic Info" columns={2}>

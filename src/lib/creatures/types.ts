@@ -1,5 +1,5 @@
 import type { PokeEvolution, Ability } from "../pokemon/types"
-import type { HitDice } from "$lib/dnd/HitDice"
+import type { HitDice } from "$lib/dnd/hit-dice"
 import type { CreatureSize } from "$lib/dnd/CreatureSize"
 import type { Attributes, Attribute } from "$lib/dnd/attributes"
 import type { SkillRanks } from "$lib/dnd/skills"

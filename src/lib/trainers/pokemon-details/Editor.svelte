@@ -21,6 +21,7 @@
 	import { SpeedsFieldset } from "$lib/dnd/movement"
 	import { PokemonTeraType, TypeField, type TeraType } from "$lib/pokemon/types-2"
 	import { GenderFieldset } from "$lib/creatures/gender"
+	import { HitDice } from "$lib/dnd/hit-dice"
 
 	const dispatch = createEventDispatcher()
 
@@ -47,7 +48,7 @@
 	let isShiny = pokemon.isShiny
 	let feats = pokemon.feats.map((it) => structuredClone(it))
 	let customSize = pokemon.customSize
-	let customHitDiceSize = pokemon.customHitDiceSize
+	let customHitDiceSize = pokemon.customHitDiceSize?.data
 	let speeds = pokemon.speeds.copy()
 	let senses = pokemon.senses.copy()
 	let bond = structuredClone(pokemon.bond)
@@ -87,7 +88,7 @@
 			notes,
 			feats,
 			customSize,
-			customHitDiceSize,
+			customHitDiceSize: customHitDiceSize ? new HitDice(customHitDiceSize) : undefined,
 			speeds,
 			senses,
 			bond: {
