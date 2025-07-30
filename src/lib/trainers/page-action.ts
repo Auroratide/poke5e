@@ -2,6 +2,7 @@ export const PageAction = {
 	addPokemon: "add-pokemon",
 	editPokemon: "edit-pokemon",
 	evolvePokemon: "evolve-pokemon",
+	restPokemon: "rest-pokemon",
 	removePokemon: "remove-pokemon",
 	newTrainer: "new-trainer",
 	findTrainer: "find-trainer",

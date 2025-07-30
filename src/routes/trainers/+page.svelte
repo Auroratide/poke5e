@@ -25,6 +25,7 @@
 	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 	import JavascriptRequired from "$lib/trainers/JavascriptRequired.svelte"
 	import ErrorMessage from "$lib/trainers/ErrorMessage.svelte"
+	import RestPokemonCard from "$lib/trainers/pokemon-details/RestPokemonCard.svelte"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: pokemonId = browser ? $page.url.searchParams.get("pokemon") : undefined
@@ -88,6 +89,8 @@
 				<EditPokemonCard {trainer} id={pokemonId} />
 			{:else if action === PageAction.evolvePokemon}
 				<EvolvePokemonCard {trainer} id={pokemonId} />
+			{:else if action === PageAction.restPokemon}
+				<RestPokemonCard {trainer} id={pokemonId} />
 			{:else if action === PageAction.removePokemon}
 				<RemovePokemonCard {trainer} id={pokemonId} />
 			{:else if pokemonId}
