@@ -9,4 +9,6 @@ export class HitDice extends DataClass<HitDiceSize> {
 	static isHitDice(dice: string): dice is HitDiceSize {
 		return (HitDiceSize as unknown as string[]).includes(dice)
 	}
+
+	sizeAsInt = (): number => parseInt(this.data.slice(1))
 }

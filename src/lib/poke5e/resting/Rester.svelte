@@ -5,20 +5,22 @@
 	import { PokemonResting } from "./Rest"
 	import type { TrainerPokemon } from "$lib/trainers/types"
 	import IntField from "$lib/design/forms/IntField.svelte"
+	import type { Pokemon } from "$lib/creatures/types"
 
 	const dispatch = createEventDispatcher()
 
 	export let pokemon: TrainerPokemon
+	export let species: Pokemon
 	export let saving: boolean = false
 	$: disabled = saving
 
 	let restToPerform: keyof typeof PokemonResting = undefined
 	let hitDiceToSpend = 0
-	$: rest = restToPerform ? PokemonResting[restToPerform]({ hitDiceToSpend }) : undefined
+	$: rest = restToPerform ? PokemonResting[restToPerform]({ hitDiceToSpend, hitDiceSize: species.hitDice }) : undefined
 	$: applicableEffects = rest?.effects.filter((it) => it.isApplicable(pokemon)) ?? []
 
 	const options = Object.entries(PokemonResting).map(([key, value]) => ({
-		name: value({ hitDiceToSpend: 0 }).name,
+		name: value({ hitDiceToSpend: 0, hitDiceSize: species.hitDice }).name,
 		value: key,
 	}))
 

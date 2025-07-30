@@ -1,3 +1,5 @@
+import { RandomDiceRoller, type DiceRoller } from "$lib/dnd/dice"
+import type { HitDice } from "$lib/dnd/hit-dice"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import type { LearnedMove, PokemonBond, Resource } from "$lib/trainers/types"
 
@@ -53,16 +55,26 @@ export class RestoreStatus<T extends HasStatus> implements RestEffect<T> {
 }
 
 export class RestoreSomeHp<T extends HasHp> implements RestEffect<T> {
+	constructor(
+		private readonly amount: number,
+		private readonly hitDice: HitDice,
+		private readonly diceRoller: DiceRoller = RandomDiceRoller.instance,
+	) {}
+
 	description(creature: T) {
-		return `<strong>HP</strong>: ${creature.hp.current} → TODO`
+		return `<strong>HP</strong>: ${creature.hp.current} → +${this.amount}${this.hitDice.data}`
 	}
 
 	isApplicable() {
-		return false
+		return this.amount > 0
 	}
 
 	apply(creature: T): T {
-		// TODO
+		const sides = this.hitDice.sizeAsInt()
+		for (let i = 0; i < this.amount; ++i) {
+			creature.hp.current = Math.min(creature.hp.max, creature.hp.current + this.diceRoller.roll(sides))
+		}
+
 		return creature
 	}
 }

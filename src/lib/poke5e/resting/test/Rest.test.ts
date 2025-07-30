@@ -2,6 +2,8 @@ import { describe, test, expect, beforeEach } from "vitest"
 import { PokemonResting } from "../Rest"
 import type { TrainerPokemon } from "$lib/trainers/types"
 import { stubLearnedMove, stubTrainerPokemon } from "$lib/trainers/test/stubs"
+import { HitDice } from "$lib/dnd/hit-dice"
+import { PredictableDiceRoller } from "$lib/dnd/dice/test/PredictableDiceRoller"
 
 describe("Pokemon rest", () => {
 	let damagedPokemon: TrainerPokemon
@@ -55,12 +57,16 @@ describe("Pokemon rest", () => {
 	})
 
 	test("short rest", () => {
-		const rest = PokemonResting.Short({ hitDiceToSpend: 1})
+		const rest = PokemonResting.Short({
+			hitDiceToSpend: 2,
+			hitDiceSize: new HitDice("d6"),
+			diceRoller: new PredictableDiceRoller([2, 3]),
+		})
 
 		const healed = rest.apply(damagedPokemon)
 
-		expect(healed.hp.current).toEqual(15)
-		expect(healed.hitDice.current).toEqual(1)
+		expect(healed.hp.current).toEqual(20)
+		expect(healed.hitDice.current).toEqual(0)
 		expect(healed.status).toBeNull()
 		expect(healed.moves[0].pp.current).toEqual(4)
 		expect(healed.moves[1].pp.current).toEqual(0)

@@ -8,12 +8,15 @@
 	import { Url } from "$lib/url"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import { Rester } from "$lib/poke5e/resting"
+	import Loader from "$lib/design/Loader.svelte"
+	import { pokemon as pokeData } from "$lib/creatures/store"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
 	
 	$: canEdit = $trainer.update != null
 	$: pokemon = $trainer.pokemon.find((it) => it.id === id)
+	$: species = $pokeData?.find((it) => it.id === pokemon?.pokemonId)
 
 	let saving = false
 	const update = (e: CustomEvent<TrainerPokemon>) => {
@@ -31,16 +34,20 @@
 </script>
 
 <RequirePokemon trainer={$trainer} {id} titlePrefix="Rest">
-	<Card title="Rest {pokemon.nickname}">
-		{#if canEdit}
-			<Rester {pokemon} {saving} on:cancel={cancel} on:submit={update} />
-		{:else}
-			<section>
-				<p>You do not have permission to edit this pokemon.</p>
-				<ActionArea>
-					<Button href="{Url.trainers($trainer.info.readKey, id)}">Go Back</Button>
-				</ActionArea>
-			</section>
-		{/if}
-	</Card>
+	{#if species}
+		<Card title="Rest {pokemon.nickname}">
+			{#if canEdit}
+				<Rester {pokemon} {species} {saving} on:cancel={cancel} on:submit={update} />
+			{:else}
+				<section>
+					<p>You do not have permission to edit this pokemon.</p>
+					<ActionArea>
+						<Button href="{Url.trainers($trainer.info.readKey, id)}">Go Back</Button>
+					</ActionArea>
+				</section>
+			{/if}
+		</Card>
+	{:else}
+		<Loader />
+	{/if}
 </RequirePokemon>

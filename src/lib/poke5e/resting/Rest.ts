@@ -1,3 +1,5 @@
+import type { DiceRoller } from "$lib/dnd/dice"
+import type { HitDice } from "$lib/dnd/hit-dice"
 import type { TrainerPokemon } from "$lib/trainers/types"
 import {
 	RestoreAllHp,
@@ -26,9 +28,9 @@ export const PokemonResting = {
 		new RestorePp(),
 		new RestoreBondPoints(),
 	]),
-	Short: ({ hitDiceToSpend }: { hitDiceToSpend: number }) => new Rest("Short Rest", [ 
-		new RestoreSomeHp(),
-		new SpendHitDice(hitDiceToSpend),
+	Short: (options: { hitDiceToSpend: number, hitDiceSize: HitDice, diceRoller?: DiceRoller }) => new Rest("Short Rest", [ 
+		new RestoreSomeHp(options.hitDiceToSpend, options.hitDiceSize, options.diceRoller),
+		new SpendHitDice(options.hitDiceToSpend),
 		new RestoreStatus(),
 	]),
 	Pokecenter: () => new Rest("Pokécenter", [ 
