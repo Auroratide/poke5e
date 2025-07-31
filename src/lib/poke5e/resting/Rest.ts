@@ -6,7 +6,6 @@ import {
 	RestoreBondPoints,
 	RestoreHitDice,
 	RestorePp,
-	RestoreSomeHp,
 	RestoreStatus,
 	SpendHitDice,
 	type RestEffect,
@@ -29,8 +28,7 @@ export const PokemonResting = {
 		new RestoreBondPoints(),
 	]),
 	Short: (options: { hitDiceToSpend: number, hitDiceSize: HitDice, diceRoller?: DiceRoller }) => new Rest("Short Rest", [ 
-		new RestoreSomeHp(options.hitDiceToSpend, options.hitDiceSize, options.diceRoller),
-		new SpendHitDice(options.hitDiceToSpend),
+		new SpendHitDice(options.hitDiceToSpend, options.hitDiceSize, options.diceRoller),
 		new RestoreStatus(),
 	]),
 	Pokecenter: () => new Rest("Pokécenter", [ 

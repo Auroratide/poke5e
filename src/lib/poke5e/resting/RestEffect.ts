@@ -4,14 +4,14 @@ import type { NonVolatileStatus } from "$lib/pokemon/status"
 import type { LearnedMove, PokemonBond, Resource } from "$lib/trainers/types"
 
 export interface RestEffect<T> {
-	description: (creature: T) => string
+	description: (creature: T) => string[]
 	isApplicable: (creature: T) => boolean
 	apply: (creature: T) => T
 }
 
 export class RestoreAllHp<T extends HasHp> implements RestEffect<T> {
 	description(creature: T) {
-		return `<strong>HP</strong>: ${creature.hp.current} → ${creature.hp.max}`
+		return [`<strong>HP</strong>: ${creature.hp.current} → ${creature.hp.max}`]
 	}
 
 	isApplicable(creature: T) {
@@ -26,7 +26,7 @@ export class RestoreAllHp<T extends HasHp> implements RestEffect<T> {
 
 export class RestoreHitDice<T extends HasHitDice> implements RestEffect<T> {
 	description(creature: T) {
-		return `<strong>Hit Dice</strong>: ${creature.hitDice.current} → ${creature.hitDice.max}`
+		return [`<strong>Hit Dice</strong>: ${creature.hitDice.current} → ${creature.hitDice.max}`]
 	}
 
 	isApplicable(creature: T) {
@@ -41,7 +41,7 @@ export class RestoreHitDice<T extends HasHitDice> implements RestEffect<T> {
 
 export class RestoreStatus<T extends HasStatus> implements RestEffect<T> {
 	description(creature: T) {
-		return `<strong>Status</strong>: ${creature.status ?? "None"} → None`
+		return [`<strong>Status</strong>: ${creature.status ?? "None"} → None`]
 	}
 
 	isApplicable(creature: T) {
@@ -54,7 +54,7 @@ export class RestoreStatus<T extends HasStatus> implements RestEffect<T> {
 	}
 }
 
-export class RestoreSomeHp<T extends HasHp> implements RestEffect<T> {
+export class SpendHitDice<T extends HasHitDice & HasHp> implements RestEffect<T> {
 	constructor(
 		private readonly amount: number,
 		private readonly hitDice: HitDice,
@@ -62,43 +62,33 @@ export class RestoreSomeHp<T extends HasHp> implements RestEffect<T> {
 	) {}
 
 	description(creature: T) {
-		return `<strong>HP</strong>: ${creature.hp.current} → +${this.amount}${this.hitDice.data}`
+		const maxHpPerDie = this.hitDice.sizeAsInt()
+		const mightExceed = creature.hp.current + (this.amount - 1) * maxHpPerDie > creature.hp.max
+
+		return [
+			`<strong>HP</strong>: ${creature.hp.current} → +${this.amount}${this.hitDice.data}`,
+			`<strong>Hit Dice</strong>: ${creature.hitDice.current} → ${Math.max(0, creature.hitDice.current - this.amount)}${mightExceed ? " (or higher)" : ""}`,
+		]
 	}
 
-	isApplicable() {
-		return this.amount > 0
+	isApplicable(creature: T) {
+		return creature.hp.current < creature.hp.max
 	}
 
 	apply(creature: T): T {
 		const sides = this.hitDice.sizeAsInt()
-		for (let i = 0; i < this.amount; ++i) {
+		for (let i = 0; i < this.amount && creature.hp.current < creature.hp.max; ++i) {
 			creature.hp.current = Math.min(creature.hp.max, creature.hp.current + this.diceRoller.roll(sides))
+			creature.hitDice.current -= 1
 		}
 
 		return creature
 	}
 }
 
-export class SpendHitDice<T extends HasHitDice> implements RestEffect<T> {
-	constructor(private readonly amount: number) {}
-
-	description(creature: T) {
-		return `<strong>Hit Dice</strong>: ${creature.hitDice.current} → ${Math.max(0, creature.hitDice.current - this.amount)}`
-	}
-
-	isApplicable() {
-		return true
-	}
-
-	apply(creature: T): T {
-		creature.hitDice.current -= this.amount
-		return creature
-	}
-}
-
 export class RestorePp<T extends HasMoves> implements RestEffect<T> {
 	description() {
-		return "<strong>Move PP</strong>: Restored to max"
+		return ["<strong>Move PP</strong>: Restored to max"]
 	}
 
 	isApplicable() {
@@ -116,7 +106,7 @@ export class RestorePp<T extends HasMoves> implements RestEffect<T> {
 
 export class RestoreBondPoints<T extends HasBond> implements RestEffect<T> {
 	description(creature: T) {
-		return `<strong>Bond Points</strong>: ${creature.bond.points.current} → ${creature.bond.points.max}`
+		return [`<strong>Bond Points</strong>: ${creature.bond.points.current} → ${creature.bond.points.max}`]
 	}
 
 	isApplicable(creature: T) {

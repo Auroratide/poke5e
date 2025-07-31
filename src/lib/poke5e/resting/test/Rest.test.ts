@@ -73,6 +73,30 @@ describe("Pokemon rest", () => {
 		expect(healed.bond.points.current).toEqual(0)
 	})
 
+	test("short resting won't spend extra hit dice", () => {
+		const slightlyDamangedPokemon = stubTrainerPokemon({
+			hp: {
+				current: 31,
+				max: 32,
+			},
+			hitDice: {
+				current: 5,
+				max: 5,
+			},
+		})
+
+		const rest = PokemonResting.Short({
+			hitDiceToSpend: 5,
+			hitDiceSize: new HitDice("d6"),
+			diceRoller: new PredictableDiceRoller([2, 3, 4, 5, 6]),
+		})
+
+		const healed = rest.apply(slightlyDamangedPokemon)
+
+		expect(healed.hp.current).toEqual(32)
+		expect(healed.hitDice.current).toEqual(4)
+	})
+
 	test("pokecenter", () => {
 		const rest = PokemonResting.Pokecenter()
 

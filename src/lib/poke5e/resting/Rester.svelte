@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
 	import Button from "$lib/design/Button.svelte"
-	import { ActionArea, Fieldset, Form, RadioFields } from "$lib/design/forms"
+	import { ActionArea, Fieldset, Form, IntField, RadioFields, HintText } from "$lib/design/forms"
 	import { PokemonResting } from "./Rest"
 	import type { TrainerPokemon } from "$lib/trainers/types"
-	import IntField from "$lib/design/forms/IntField.svelte"
 	import type { Pokemon } from "$lib/creatures/types"
 
 	const dispatch = createEventDispatcher()
@@ -43,14 +42,17 @@
 	<section style:min-height="8em">
 		{#if rest != null}
 			{#if restToPerform === "Short"}
-				<IntField label="Hit Dice to Spend" bind:value={hitDiceToSpend} min={0} max={pokemon.hitDice.current} />
+				<IntField label="Max Hit Dice to Spend" bind:value={hitDiceToSpend} min={0} max={pokemon.hitDice.current} />
+				<HintText>This will stop spending hit dice once max HP is reached.</HintText>
 			{/if}
 			<div class="effects">
 				<p>Resting will have these effects:</p>
 				{#if applicableEffects.length > 0}
 					<ul>
 						{#each applicableEffects as effect}
-							<li>{@html effect.description(pokemon)}</li>
+							{#each effect.description(pokemon) as description}
+								<li>{@html description}</li>
+							{/each}
 						{/each}
 					</ul>
 				{:else}
