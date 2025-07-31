@@ -13,14 +13,15 @@
 	export let species: Pokemon
 	export let saving: boolean = false
 	$: disabled = saving
+	$: hitDiceSize = pokemon.customHitDiceSize ?? species.hitDice
 
 	let restToPerform: keyof typeof PokemonResting = undefined
 	let hitDiceToSpend = 0
-	$: rest = restToPerform ? PokemonResting[restToPerform]({ hitDiceToSpend, hitDiceSize: species.hitDice }) : undefined
+	$: rest = restToPerform ? PokemonResting[restToPerform]({ hitDiceToSpend, hitDiceSize }) : undefined
 	$: applicableEffects = rest?.effects.filter((it) => it.isApplicable(pokemon)) ?? []
 
 	const options = Object.entries(PokemonResting).map(([key, value]) => ({
-		name: value({ hitDiceToSpend: 0, hitDiceSize: species.hitDice }).name,
+		name: value({ hitDiceToSpend: 0, hitDiceSize }).name,
 		value: key,
 	}))
 
