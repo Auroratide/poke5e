@@ -20,6 +20,7 @@
 
 	.row {
 		display: flex;
+		flex-wrap: wrap;
 		gap: 0.5em;
 		justify-content: flex-end;
 	}
