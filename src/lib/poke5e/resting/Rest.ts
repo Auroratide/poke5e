@@ -1,6 +1,6 @@
 import type { DiceRoller } from "$lib/dnd/dice"
 import type { HitDice } from "$lib/dnd/hit-dice"
-import type { TrainerPokemon } from "$lib/trainers/types"
+import type { Trainer, TrainerPokemon } from "$lib/trainers/types"
 import {
 	RestoreAllHp,
 	RestoreBondPoints,
@@ -19,6 +19,8 @@ export class Rest<T> {
 	}
 }
 
+export type RestType = "Long" | "Short" | "Pokecenter"
+
 export const PokemonResting = {
 	Long: () => new Rest("Long Rest", [ 
 		new RestoreAllHp(), 
@@ -35,4 +37,15 @@ export const PokemonResting = {
 		new RestoreAllHp(), 
 		new RestoreStatus(),
 	]),
-} as const satisfies Record<string, (context?: unknown) => Rest<TrainerPokemon>>
+} as const satisfies Record<RestType, (context?: unknown) => Rest<TrainerPokemon>>
+
+export const TrainerResting = {
+	Long: () => new Rest("Long Rest", [ 
+		new RestoreAllHp(), 
+		new RestoreHitDice(),
+	]),
+	Short: (options: { hitDiceToSpend: number, hitDiceSize: HitDice, diceRoller?: DiceRoller }) => new Rest("Short Rest", [ 
+		new SpendHitDice(options.hitDiceToSpend, options.hitDiceSize, options.diceRoller),
+	]),
+	Pokecenter: () => new Rest("Pokécenter", []),
+} as const satisfies Record<RestType, (context?: unknown) => Rest<Trainer>>

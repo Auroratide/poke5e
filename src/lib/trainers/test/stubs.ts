@@ -5,7 +5,9 @@ import { Speeds } from "$lib/dnd/movement"
 import { Senses } from "$lib/dnd/senses"
 import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
 import { PokemonTeraType, PokemonType } from "$lib/pokemon/types-2"
-import type { LearnedMove, TrainerPokemon } from "../types"
+import { createEmptyChosenTrainerPath } from "../paths"
+import { stubSpecializations } from "../specializations/test/stubs"
+import type { LearnedMove, Trainer, TrainerBio, TrainerPokemon } from "../types"
 
 export function stubLearnedMove(template: Partial<LearnedMove> = {}): LearnedMove {
 	return {
@@ -62,6 +64,46 @@ export function stubTrainerPokemon(template: Partial<TrainerPokemon> = {}): Trai
 				max: 2,
 			},
 		},
+		...template,
+	}
+}
+
+export function stubTrainerBio(template: Partial<TrainerBio> = {}): TrainerBio {
+	return {
+		species: "Human",
+		gender: "Female",
+		age: 16,
+		homeRegion: "Sinnoh",
+		background: "Acolyte",
+		...template,
+	}
+}
+
+export function stubTrainer(template: Partial<Trainer> = {}): Trainer {
+	return {
+		id: "1",
+		readKey: "trainer-key",
+		name: "Renibel",
+		description: "",
+		level: new Level(4),
+		ac: 11,
+		hp: {
+			current: 22,
+			max: 22,
+		},
+		hitDice: {
+			current: 4,
+			max: 4,
+		},
+		attributes: stubAttributes(),
+		proficiencies: stubSkillProficiencies(),
+		savingThrows: ["cha"],
+		biography: stubTrainerBio(),
+		money: 100,
+		inventory: [],
+		specializations: stubSpecializations({}),
+		path: createEmptyChosenTrainerPath(),
+		feats: [],
 		...template,
 	}
 }

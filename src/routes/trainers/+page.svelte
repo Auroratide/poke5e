@@ -26,6 +26,7 @@
 	import JavascriptRequired from "$lib/trainers/JavascriptRequired.svelte"
 	import ErrorMessage from "$lib/trainers/ErrorMessage.svelte"
 	import RestPokemonCard from "$lib/trainers/pokemon-details/RestPokemonCard.svelte"
+	import RestTrainerCard from "$lib/trainers/trainer-details/RestTrainerCard.svelte"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: pokemonId = browser ? $page.url.searchParams.get("pokemon") : undefined
@@ -95,6 +96,8 @@
 				<RemovePokemonCard {trainer} id={pokemonId} />
 			{:else if pokemonId}
 				<PokemonCard {trainer} id={pokemonId} />
+			{:else if action === PageAction.restTrainer}
+				<RestTrainerCard {trainer} />
 			{:else if action === PageAction.editTrainer}
 				<EditTrainerCard {trainer} />
 			{:else if action === PageAction.removeTrainer}
