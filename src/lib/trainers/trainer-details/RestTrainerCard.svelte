@@ -20,6 +20,10 @@
 			updates.push(...e.detail.trainer.pokemon.map((pokemon) =>
 				$trainer.update?.pokemon(pokemon),
 			))
+
+			updates.push(...e.detail.trainer.pokemon.map((pokemon) =>
+				$trainer.update?.moveset(pokemon),
+			))
 		}
 
 		Promise.all(updates).then(() => {

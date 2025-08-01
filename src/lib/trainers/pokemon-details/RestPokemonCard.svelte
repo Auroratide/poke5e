@@ -21,7 +21,10 @@
 	let saving = false
 	const update = (e: CustomEvent<TrainerPokemon>) => {
 		saving = true
-		$trainer.update?.pokemon(e.detail).then(() => {
+		Promise.all([
+			$trainer.update?.pokemon(e.detail),
+			$trainer.update?.moveset(e.detail),
+		]).then(() => {
 			saving = false
 			goto(Url.trainers($trainer.info.readKey, id))
 		}).catch(() => {
