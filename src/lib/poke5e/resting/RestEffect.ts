@@ -1,7 +1,8 @@
 import { RandomDiceRoller, type DiceRoller } from "$lib/dnd/dice"
 import type { HitDice } from "$lib/dnd/hit-dice"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
-import type { LearnedMove, PokemonBond, Resource } from "$lib/trainers/types"
+import type { TrainerPath } from "$lib/trainers/paths"
+import type { LearnedMove, PokemonBond, Resource, TrainerInfo } from "$lib/trainers/types"
 
 export interface RestEffect<T> {
 	description: (creature: T) => string[]
@@ -116,6 +117,43 @@ export class RestoreBondPoints<T extends HasBond> implements RestEffect<T> {
 	apply(creature: T): T {
 		creature.bond.points.current = creature.bond.points.max
 		return creature
+	}
+}
+
+export class RestorePathResource<T extends TrainerInfo> implements RestEffect<T> {
+	constructor(private readonly possiblePaths: TrainerPath[]) {}
+
+	description(creature: T) {
+		const resource = this.myResource(creature)
+
+		if (resource != null) {
+			const max = resource.max(creature)
+			const newValue = creature.path.resource > max ? creature.path.resource : max
+
+			return [`<strong>${resource.name}</strong>: ${creature.path.resource} → ${newValue}`]
+		} else {
+			return []
+		}
+	}
+
+	isApplicable(creature: T) {
+		const resource = this.myResource(creature)
+
+		return resource != null && creature.path.resource < resource.max(creature)
+	}
+
+	apply(creature: T): T {
+		const resource = this.myResource(creature)
+		if (resource != null) {
+			const max = resource.max(creature)
+			creature.path.resource = creature.path.resource > max ? creature.path.resource : max
+		}
+
+		return creature
+	}
+
+	private myResource(creature: T): TrainerPath["resource"] | undefined {
+		return this.possiblePaths.find((it) => it.name === creature.path.name)?.resource
 	}
 }
 

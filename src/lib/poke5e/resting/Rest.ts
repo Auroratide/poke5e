@@ -1,10 +1,12 @@
 import type { DiceRoller } from "$lib/dnd/dice"
 import type { HitDice } from "$lib/dnd/hit-dice"
+import type { TrainerPath } from "$lib/trainers/paths"
 import type { Trainer, TrainerPokemon } from "$lib/trainers/types"
 import {
 	RestoreAllHp,
 	RestoreBondPoints,
 	RestoreHitDice,
+	RestorePathResource,
 	RestorePp,
 	RestoreStatus,
 	SpendHitDice,
@@ -40,9 +42,10 @@ export const PokemonResting = {
 } as const satisfies Record<RestType, (context?: unknown) => Rest<TrainerPokemon>>
 
 export const TrainerResting = {
-	Long: () => new Rest("Long Rest", [ 
+	Long: (options: { trainerPaths: TrainerPath[] }) => new Rest("Long Rest", [ 
 		new RestoreAllHp(), 
 		new RestoreHitDice(),
+		new RestorePathResource(options.trainerPaths),
 	]),
 	Short: (options: { hitDiceToSpend: number, hitDiceSize: HitDice, diceRoller?: DiceRoller }) => new Rest("Short Rest", [ 
 		new SpendHitDice(options.hitDiceToSpend, options.hitDiceSize, options.diceRoller),

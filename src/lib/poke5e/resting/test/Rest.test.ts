@@ -4,6 +4,9 @@ import type { Trainer, TrainerPokemon } from "$lib/trainers/types"
 import { stubLearnedMove, stubTrainer, stubTrainerPokemon } from "$lib/trainers/test/stubs"
 import { HitDice } from "$lib/dnd/hit-dice"
 import { PredictableDiceRoller } from "$lib/dnd/dice/test/PredictableDiceRoller"
+import { TrainerPaths } from "$lib/trainers/paths"
+import { stubChosenTrainerPath } from "$lib/trainers/paths/test/stubs"
+import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 
 describe("Pokemon rest", () => {
 	let damagedPokemon: TrainerPokemon
@@ -128,7 +131,7 @@ describe("trainer rest", () => {
 	})
 
 	test("long rest", () => {
-		const rest = TrainerResting.Long()
+		const rest = TrainerResting.Long({ trainerPaths: [] })
 
 		const healed = rest.apply(damagedTrainer)
 
@@ -180,5 +183,74 @@ describe("trainer rest", () => {
 
 		expect(healed.hp.current).toEqual(15)
 		expect(healed.hitDice.current).toEqual(2)
+	})
+
+	describe("trainer paths", () => {
+		test("path has a resource", () => {
+			const aceTrainer = stubTrainer({
+				attributes: stubAttributes({
+					dex: 16,
+				}),
+				path: stubChosenTrainerPath({
+					name: "Ace Trainer",
+					resource: 1,
+				}),
+			})
+
+			const rest = TrainerResting.Long({ trainerPaths: TrainerPaths["2024"] })
+	
+			const healed = rest.apply(aceTrainer)
+	
+			// 1 + dex (3)
+			expect(healed.path.resource).toEqual(4)
+		})
+
+		test("path has no resources", () => {
+			const typeMaster = stubTrainer({
+				path: stubChosenTrainerPath({
+					name: "Type Master",
+					resource: 0,
+				}),
+			})
+
+			const rest = TrainerResting.Long({ trainerPaths: TrainerPaths["2024"] })
+	
+			const healed = rest.apply(typeMaster)
+	
+			expect(healed.path.resource).toEqual(0)
+		})
+
+		test("custom trainer path", () => {
+			const notInList = stubTrainer({
+				path: stubChosenTrainerPath({
+					name: "Not In List",
+					resource: 0,
+				}),
+			})
+
+			const rest = TrainerResting.Long({ trainerPaths: TrainerPaths["2024"] })
+	
+			const healed = rest.apply(notInList)
+	
+			expect(healed.path.resource).toEqual(0)
+		})
+
+		test("trainer resource already exceeds theoretical max", () => {
+			const aceTrainer = stubTrainer({
+				attributes: stubAttributes({
+					dex: 16,
+				}),
+				path: stubChosenTrainerPath({
+					name: "Ace Trainer",
+					resource: 10,
+				}),
+			})
+
+			const rest = TrainerResting.Long({ trainerPaths: TrainerPaths["2024"] })
+	
+			const healed = rest.apply(aceTrainer)
+	
+			expect(healed.path.resource).toEqual(10)
+		})
 	})
 })

@@ -14,6 +14,8 @@
 	import { trainerHitDiceSize } from "$lib/trainers/hit-dice"
 	import PokemonBanner from "./PokemonBanner.svelte"
 	import { pokemon as allPokemon } from "$lib/creatures/store"
+	import { TrainerPaths } from "$lib/trainers/paths"
+	import { rulesVersion } from "$lib/design/rules-version"
 
 	const dispatch = createEventDispatcher()
 	const getSpecies = (pokemonId: string) => $allPokemon.find((s) => s.id === pokemonId)
@@ -25,15 +27,21 @@
 	$: disabled = saving
 	$: hitDiceSize = $trainerHitDiceSize
 
+	$: trainerPaths = TrainerPaths[$rulesVersion] 
+
 	let restToPerform: RestType = undefined
 	let hitDiceToSpend = 0
 	let pokemonOptions: string[] = [APPLY_TO_POKEMON]
 	$: applyToPokemon = pokemonOptions.includes(APPLY_TO_POKEMON)
-	$: rest = restToPerform ? TrainerResting[restToPerform]({ hitDiceToSpend, hitDiceSize }) : undefined
+	$: rest = restToPerform ? TrainerResting[restToPerform]({
+		hitDiceToSpend,
+		hitDiceSize,
+		trainerPaths,
+	}) : undefined
 	$: applicableEffects = rest?.effects.filter((it) => it.isApplicable(trainer.info)) ?? []
 
 	const options = Object.entries(TrainerResting).map(([key, value]) => ({
-		name: value({ hitDiceToSpend: 0, hitDiceSize }).name,
+		name: value({ hitDiceToSpend: 0, hitDiceSize, trainerPaths }).name,
 		value: key,
 	}))
 
