@@ -1,3 +1,4 @@
+import type { GenderRatio } from "$lib/creatures/gender"
 import type { MovePool } from "$lib/creatures/types"
 import { DataClass, type Data } from "$lib/DataClass"
 import { Attributes, type Attribute } from "$lib/dnd/attributes"
@@ -20,7 +21,7 @@ export class Fakemon extends DataClass<{
 	sr: number, // TODO
 	minLevel: number,
 	eggGroups: string[],
-	gender: string, // TODO
+	gender: GenderRatio,
 	description: MarkdownString,
 	ac: number,
 	hp: number,

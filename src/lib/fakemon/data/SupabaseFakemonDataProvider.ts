@@ -6,6 +6,7 @@ import type { Attribute } from "$lib/dnd/attributes"
 import { isCreatureSize } from "$lib/dnd/CreatureSize"
 import type { Data } from "$lib/DataClass"
 import { HitDice } from "$lib/dnd/hit-dice"
+import { GenderRatio } from "$lib/creatures/gender"
 
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	constructor(private readonly supabase: SupabaseClient) {}
@@ -71,7 +72,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_sr: fakemon.sr,
 			_min_level: fakemon.minLevel,
 			_egg_groups: fakemon.eggGroups,
-			_gender: fakemon.gender,
+			_gender: fakemon.gender.data,
 			_description: fakemon.description,
 			_ac: fakemon.ac,
 			_hp: fakemon.hp,
@@ -215,7 +216,7 @@ function rowToFakemon(row: FakemonRow): Fakemon {
 		sr: parseFloat(row.sr),
 		minLevel: row.min_level,
 		eggGroups: row.egg_groups,
-		gender: row.gender,
+		gender: new GenderRatio(row.gender),
 		description: row.description,
 		ac: row.ac,
 		hp: row.hp,
