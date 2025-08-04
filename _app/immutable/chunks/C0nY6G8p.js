@@ -1,1 +1,0 @@
-const e={addPokemon:"add-pokemon",editPokemon:"edit-pokemon",evolvePokemon:"evolve-pokemon",removePokemon:"remove-pokemon",newTrainer:"new-trainer",findTrainer:"find-trainer",editTrainer:"edit-trainer",retireTrainer:"retire-trainer",removeTrainer:"remove-trainer",accessKey:"access-key"};export{e as P};
