@@ -21,11 +21,11 @@ export class Fakemon extends DataClass<{
 	sr: number, // TODO
 	minLevel: number,
 	eggGroups: string[],
-	gender: GenderRatio,
+	gender: Data<GenderRatio>,
 	description: MarkdownString,
 	ac: number,
 	hp: number,
-	hitDice: HitDice,
+	hitDice: Data<HitDice>,
 	speed: Data<Speeds>,
 	senses: Data<Senses>,
 	attributes: Data<Attributes>,

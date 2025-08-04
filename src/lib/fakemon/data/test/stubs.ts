@@ -3,8 +3,6 @@ import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { Fakemon } from "$lib/fakemon/Fakemon"
 import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
 import { stubMovePool } from "$lib/creatures/test/stubs"
-import { GenderRatio } from "$lib/creatures/gender"
-import { HitDice } from "$lib/dnd/hit-dice"
 
 export function stubFakemon(template: Partial<Data<Fakemon>> = {}): Fakemon {
 	return new Fakemon({
@@ -18,11 +16,11 @@ export function stubFakemon(template: Partial<Data<Fakemon>> = {}): Fakemon {
 		sr: 8,
 		minLevel: 5,
 		eggGroups: ["Field"],
-		gender: new GenderRatio("7:1"),
+		gender: "7:1",
 		description: "",
 		ac: 17,
 		hp: 50,
-		hitDice: new HitDice("d10"),
+		hitDice: "d10",
 		speed: {
 			walking: 40,
 			swimming: 0,
