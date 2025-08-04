@@ -5,6 +5,7 @@
 	import { PokemonResting } from "./Rest"
 	import type { TrainerPokemon } from "$lib/trainers/types"
 	import type { Pokemon } from "$lib/creatures/types"
+	import { rulesVersion } from "$lib/design/rules-version"
 
 	const dispatch = createEventDispatcher()
 
@@ -16,11 +17,15 @@
 
 	let restToPerform: keyof typeof PokemonResting = undefined
 	let hitDiceToSpend = 0
-	$: rest = restToPerform ? PokemonResting[restToPerform]({ hitDiceToSpend, hitDiceSize }) : undefined
+	$: rest = restToPerform ? PokemonResting[restToPerform]({
+		hitDiceToSpend,
+		hitDiceSize,
+		rulesVersion: $rulesVersion,
+	}) : undefined
 	$: applicableEffects = rest?.effects.filter((it) => it.isApplicable(pokemon)) ?? []
 
 	const options = Object.entries(PokemonResting).map(([key, value]) => ({
-		name: value({ hitDiceToSpend: 0, hitDiceSize }).name,
+		name: value({ hitDiceToSpend: 0, hitDiceSize, rulesVersion: $rulesVersion }).name,
 		value: key,
 	}))
 

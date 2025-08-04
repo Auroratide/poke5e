@@ -78,7 +78,7 @@ export class SpendHitDice<T extends HasHitDice & HasHp> implements RestEffect<T>
 
 	apply(creature: T): T {
 		const sides = this.hitDice.sizeAsInt()
-		for (let i = 0; i < this.amount && creature.hp.current < creature.hp.max; ++i) {
+		for (let i = 0; i < this.amount && creature.hp.current < creature.hp.max && creature.hitDice.current > 0; ++i) {
 			creature.hp.current = Math.min(creature.hp.max, creature.hp.current + this.diceRoller.roll(sides))
 			creature.hitDice.current -= 1
 		}

@@ -7,7 +7,7 @@
 	export let darken: boolean = false
 
 	$: allMedia = pokemon.map((fromTrainer) =>
-		$allPokemon.find((species) =>
+		$allPokemon?.find((species) =>
 			species.id === fromTrainer.pokemonId,
 		),
 	).filter((it) => it != null).map((it) => it.media)

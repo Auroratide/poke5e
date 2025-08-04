@@ -100,8 +100,32 @@ describe("Pokemon rest", () => {
 		expect(healed.hitDice.current).toEqual(4)
 	})
 
+	test("short resting won't spend more than the max available", () => {
+		const heavilyDamagedPokemon = stubTrainerPokemon({
+			hp: {
+				current: 1,
+				max: 32,
+			},
+			hitDice: {
+				current: 3, // we can't spend more than 3
+				max: 5,
+			},
+		})
+
+		const rest = PokemonResting.Short({
+			hitDiceToSpend: 5,
+			hitDiceSize: new HitDice("d6"),
+			diceRoller: new PredictableDiceRoller([2, 3, 4, 5, 6]),
+		})
+
+		const healed = rest.apply(heavilyDamagedPokemon)
+
+		expect(healed.hp.current).toEqual(10)
+		expect(healed.hitDice.current).toEqual(0)
+	})
+
 	test("pokecenter", () => {
-		const rest = PokemonResting.Pokecenter()
+		const rest = PokemonResting.Pokecenter({ rulesVersion: "2024" })
 
 		const healed = rest.apply(damagedPokemon)
 
@@ -111,6 +135,19 @@ describe("Pokemon rest", () => {
 		expect(healed.moves[0].pp.current).toEqual(4)
 		expect(healed.moves[1].pp.current).toEqual(0)
 		expect(healed.bond.points.current).toEqual(0)
+	})
+
+	test("pokecenter: original ruleset", () => {
+		const rest = PokemonResting.Pokecenter({ rulesVersion: "2018" })
+
+		const healed = rest.apply(damagedPokemon)
+
+		expect(healed.hp.current).toEqual(30)
+		expect(healed.hitDice.current).toEqual(4)
+		expect(healed.status).toBeNull()
+		expect(healed.moves[0].pp.current).toEqual(10)
+		expect(healed.moves[1].pp.current).toEqual(5)
+		expect(healed.bond.points.current).toEqual(2)
 	})
 })
 

@@ -1,3 +1,4 @@
+import type { RulesVersion } from "$lib/design/rules-version"
 import type { DiceRoller } from "$lib/dnd/dice"
 import type { HitDice } from "$lib/dnd/hit-dice"
 import type { TrainerPath } from "$lib/trainers/paths"
@@ -35,10 +36,17 @@ export const PokemonResting = {
 		new SpendHitDice(options.hitDiceToSpend, options.hitDiceSize, options.diceRoller),
 		new RestoreStatus(),
 	]),
-	Pokecenter: () => new Rest("Pokécenter", [ 
-		new RestoreAllHp(), 
-		new RestoreStatus(),
-	]),
+	Pokecenter: (options: { rulesVersion: RulesVersion }) => options.rulesVersion === "2018"
+		? new Rest("Pokécenter", [ 
+			new RestoreAllHp(),
+			new RestoreHitDice(),
+			new RestoreStatus(),
+			new RestorePp(),
+			new RestoreBondPoints(),
+		]) : new Rest("Pokécenter", [ 
+			new RestoreAllHp(),
+			new RestoreStatus(),
+		]),
 } as const satisfies Record<RestType, (context?: unknown) => Rest<TrainerPokemon>>
 
 export const TrainerResting = {

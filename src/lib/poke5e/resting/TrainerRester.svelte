@@ -52,7 +52,7 @@
 		if (applyToPokemon) {
 			trainer.pokemon = trainer.pokemon.map((pokemon) => {
 				const hitDiceSize = pokemon.customHitDiceSize ?? getSpecies(pokemon.pokemonId).hitDice
-				const rest = PokemonResting[restToPerform]({ hitDiceToSpend, hitDiceSize })
+				const rest = PokemonResting[restToPerform]({ hitDiceToSpend, hitDiceSize, rulesVersion: $rulesVersion })
 				return rest.apply(pokemon)
 			})
 		}
@@ -125,7 +125,7 @@
 	.pokemon {
 		border-block: 0.125em solid var(--skin-bg);
 		margin-inline: 1em;
-		padding-block: 1em 0.25em;
+		padding-block: 1em 0.5em;
 		margin-block-end: 1em;
 	}
 </style>
