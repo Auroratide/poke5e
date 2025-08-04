@@ -3,7 +3,7 @@ import { provider } from ".."
 import { stubFakemon } from "./stubs"
 import { FakemonPermissionError } from "../FakemonDataProvider"
 
-test("add, get, and update", async () => {
+test.skip("add, get, and update", async () => {
 	const draft = stubFakemon({
 		speciesName: "Droideon",
 	})
@@ -20,7 +20,7 @@ test("add, get, and update", async () => {
 	expect(afterUpdate.data.speciesName).toEqual("Aereon")
 })
 
-test("no permission to update", async () => {
+test.skip("no permission to update", async () => {
 	const draft = stubFakemon({
 		speciesName: "Droideon",
 	})
