@@ -6,6 +6,7 @@
 	import type { TrainerPokemon } from "$lib/trainers/types"
 	import type { Pokemon } from "$lib/creatures/types"
 	import { rulesVersion } from "$lib/design/rules-version"
+	import PokemonArt from "$lib/creatures/PokemonArt.svelte"
 
 	const dispatch = createEventDispatcher()
 
@@ -41,9 +42,12 @@
 </script>
 
 <Form onsubmit={endEdit} {saving}>
-	<Fieldset title="Choose one" columns={1}>
-		<RadioFields label="Rest Choices" bind:checked={restToPerform} values={options} required />
-	</Fieldset>
+	<div class="art-row">
+		<Fieldset title="Choose one" columns={1}>
+			<RadioFields label="Rest Choices" bind:checked={restToPerform} values={options} required />
+		</Fieldset>
+		<PokemonArt media={species.media} shiny={pokemon.isShiny} alt="{pokemon.nickname ?? species.name}" />
+	</div>
 	<section style:min-height="8em">
 		{#if rest != null}
 			{#if restToPerform === "Short"}
@@ -81,5 +85,16 @@
 
 	.effects {
 		font-size: var(--font-sz-venus);
+	}
+
+	.art-row {
+		display: flex;
+	} .art-row :global(> :nth-child(1)) {
+		flex: 2;
+	} .art-row :global(> :nth-child(2)) {
+		flex: 1;
+		padding: 0 0.5em 0 0;
+		block-size: 8em;
+		justify-self: flex-end;
 	}
 </style>
