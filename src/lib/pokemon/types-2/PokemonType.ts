@@ -1,6 +1,6 @@
 import { defensiveMultipliers } from "@auroratide/pokemon-types"
 import { DataClass } from "$lib/DataClass"
-import { equalUnordered } from "$lib/list"
+import { alphabetical, equalUnordered } from "$lib/list"
 
 const PokeTypes = [
 	"normal",
@@ -34,29 +34,29 @@ export class PokemonType extends DataClass<PokeType[]> {
 	get primary(): PokeType { return this.data[0] }
 	get secondary(): PokeType | undefined { return this.data[1] }
 
-	vulnerabilities = (): Set<PokeType> =>
-		new Set(Object.entries(defensiveMultipliers(this.data))
+	vulnerabilities = (): PokeType[] =>
+		Object.entries(defensiveMultipliers(this.data))
 			.filter(([, multiplier]) => multiplier > 1)
-			.map(([type]) => type as PokeType),
-		)
+			.map(([type]) => type as PokeType)
+			.sort(alphabetical)
 	
-	resistances = (): Set<PokeType> => 
-		new Set(Object.entries(defensiveMultipliers(this.data))
+	resistances = (): PokeType[] => 
+		Object.entries(defensiveMultipliers(this.data))
 			.filter(([, multiplier]) => 0 < multiplier && multiplier < 1)
-			.map(([type]) => type as PokeType),
-		)
+			.map(([type]) => type as PokeType)
+			.sort(alphabetical)
 	
-	immunities = (): Set<PokeType> =>
-		new Set(Object.entries(defensiveMultipliers(this.data))
+	immunities = (): PokeType[] =>
+		Object.entries(defensiveMultipliers(this.data))
 			.filter(([, multiplier]) => multiplier === 0)
-			.map(([type]) => type as PokeType),
-		)
+			.map(([type]) => type as PokeType)
+			.sort(alphabetical)
 	
-	normalDamange = (): Set<PokeType> =>
-		new Set(Object.entries(defensiveMultipliers(this.data))
+	normalDamange = (): PokeType[] =>
+		Object.entries(defensiveMultipliers(this.data))
 			.filter(([, multiplier]) => multiplier === 1)
-			.map(([type]) => type as PokeType),
-		)
+			.map(([type]) => type as PokeType)
+			.sort(alphabetical)
 	
 	equivalent = (other: PokemonType): boolean =>
 		equalUnordered(this.data)(other.data)

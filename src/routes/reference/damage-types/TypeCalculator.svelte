@@ -7,10 +7,10 @@
 
 	const typeOptions = PokemonType.list.map((it) => ({ name: it, value: it }))
 	
-	$: resistant = types.length > 0 ? Array.from(new PokemonType(types).resistances()) : []
-	$: vulnerable = types.length > 0 ? Array.from(new PokemonType(types).vulnerabilities()) : []
-	$: immune = types.length > 0 ? Array.from(new PokemonType(types).immunities()) : []
-	$: normal = types.length > 0 ? Array.from(new PokemonType(types).normalDamange()) : []
+	$: resistant = types.length > 0 ? new PokemonType(types).resistances() : []
+	$: vulnerable = types.length > 0 ? new PokemonType(types).vulnerabilities() : []
+	$: immune = types.length > 0 ? new PokemonType(types).immunities() : []
+	$: normal = types.length > 0 ? new PokemonType(types).normalDamange() : []
 </script>
 
 <form>

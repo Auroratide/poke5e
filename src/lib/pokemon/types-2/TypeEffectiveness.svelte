@@ -4,9 +4,9 @@
 
 	export let type: PokemonType
 
-	$: vul = Array.from(type.vulnerabilities())
-	$: res = Array.from(type.resistances())
-	$: imm = Array.from(type.immunities())
+	$: vul = type.vulnerabilities()
+	$: res = type.resistances()
+	$: imm = type.immunities()
 </script>
 
 <dt>Vulnerabilities</dt>
