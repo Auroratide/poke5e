@@ -12,6 +12,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.7.3",
+		description: [
+			"Alphabetize types list.",
+			"Clarify whom a kind of rest benefits when resting trainers or pokémon.",
+		],
+	}, {
 		name: "v1.7.2",
 		description: [
 			"New: Can perform a Long Rest, Short Rest, and Pokécenter rest for trainers and their pokémon.",
