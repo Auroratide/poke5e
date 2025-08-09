@@ -6,22 +6,32 @@
 	import Title from "$lib/design/Title.svelte"
 	import { Url } from "$lib/url"
 	import type { SingleFakemonStore } from "../store/SingleFakemonStore"
-	import FakemonEditor from "./FakemonEditor.svelte"
+	import FakemonEditor, { type SubmitDetail } from "./FakemonEditor.svelte"
 
 	export let fakemon: SingleFakemonStore
-	const canEdit = true
+	$: canEdit = $fakemon.update != null
 
 	let saving = false
 
 	const onCancel = () => {
 		goto(Url.fakemon($fakemon.value.data.readKey))
 	}
+
+	const onSubmit = (e: CustomEvent<SubmitDetail>) => {
+		saving = true
+
+		$fakemon.update?.info(e.detail.fakemon).then(() => {
+			goto(Url.fakemon($fakemon.value.data.readKey))
+		}).catch(() => {
+			saving = false
+		})
+	}
 </script>
 
 <Title value="Edit {$fakemon.value.data.speciesName}" />
 <Card title="Edit {$fakemon.value.data.speciesName}">
 	{#if canEdit}
-		<FakemonEditor fakemon={$fakemon.value} on:cancel={onCancel} {saving} />
+		<FakemonEditor fakemon={$fakemon.value} on:submit={onSubmit} on:cancel={onCancel} {saving} />
 	{:else}
 		<section>
 			<p>You do not have permission to edit this fakémon.</p>

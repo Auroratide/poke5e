@@ -10,7 +10,7 @@
 	import FakemonInfo from "./FakemonInfo.svelte"
 
 	export let fakemon: SingleFakemonStore
-	let canEdit = true
+	$: canEdit = $fakemon.update != null
 </script>
 
 <Title value="{$fakemon.value.data.speciesName}" />

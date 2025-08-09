@@ -6,6 +6,7 @@ import type { Attribute } from "$lib/dnd/attributes"
 import { isCreatureSize } from "$lib/dnd/CreatureSize"
 import type { Data } from "$lib/DataClass"
 import { HitDice } from "$lib/dnd/hit-dice"
+import { FakemonLocalStorage } from "./FakemonLocalStorage"
 
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	constructor(private readonly supabase: SupabaseClient) {}
@@ -18,7 +19,13 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 				if (!data) return undefined
 
-				return rowToFakemon(data)
+				const fakemon = rowToFakemon(data)
+
+				const inStorage = FakemonLocalStorage.get(readKey)
+				fakemon.data.writeKey = inStorage?.writeKey
+				FakemonLocalStorage.add(fakemon.data)
+
+				return fakemon
 			})
 	}
 
@@ -33,11 +40,17 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 		this.validateError("Could not add fakemon.", error)
 
-		return new Fakemon({
-			...draft,
+		const identifyingInfo = {
 			id: data.ret_id,
 			readKey: data.ret_read_key,
 			writeKey: data.ret_write_key,
+		}
+
+		FakemonLocalStorage.add(identifyingInfo)
+
+		return new Fakemon({
+			...draft,
+			...identifyingInfo,
 		})
 	}
 

@@ -51,3 +51,31 @@ test("store remembers", async () => {
 	expect(storedValueAgain.value).toEqualData(eeveon)
 	expect(getFakemon).toBeCalledTimes(1)
 })
+
+test("updating an entry", async () => {
+	// given: fakemon had been added
+	const getFakemon = vi.spyOn(provider, "getByReadKey")
+
+	const draft = stubFakemon({
+		speciesName: "Eeveon",
+	})
+
+	const addedResult = await fakemonStore.new(draft.data)
+	const singleStore = await fakemonStore.get(addedResult.data.readKey)
+	const storedValue = get(singleStore)
+
+	// when: updated
+	const updatedFakemon = storedValue.value.copy({
+		speciesName: "Droideon",
+	})
+	await storedValue.update?.info(updatedFakemon)
+
+	// then: new value is updated
+	const singleStoreAfterUpdate = await fakemonStore.get(addedResult.data.readKey)
+	const storedValueAfterUpdate = get(singleStoreAfterUpdate)
+
+	expect(storedValueAfterUpdate.value.data.speciesName).toEqual("Droideon")
+
+	// and: never retrieved from the provider since it was added
+	expect(getFakemon).not.toHaveBeenCalled()
+})

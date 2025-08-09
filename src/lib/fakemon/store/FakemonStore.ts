@@ -1,6 +1,6 @@
 import { writable } from "svelte/store"
 import type { DraftFakemon, Fakemon, ReadKey } from "../Fakemon"
-import { createSingleFakemonStore, type SingleFakemonStore, type SingleStoredFakemon } from "./SingleFakemonStore"
+import { createSingleFakemonStore, createStoredFakemon, type SingleFakemonStore, type SingleStoredFakemon } from "./SingleFakemonStore"
 import { provider } from "../data"
 
 export type StoredFakemon = Record<ReadKey, SingleStoredFakemon>
@@ -20,7 +20,7 @@ function createStore(): FakemonStore {
 				promises[key] = provider.getByReadKey(key).then((fakemon) => {
 					if (fakemon == null) return undefined
 
-					return createSingleFakemonStore(fakemon, fakemonStore)
+					return createSingleFakemonStore(createStoredFakemon(fakemon, fakemonStore), fakemonStore)
 				})
 			}
 
@@ -29,14 +29,13 @@ function createStore(): FakemonStore {
 
 		new: async (fakemon: DraftFakemon): Promise<Fakemon> => {
 			return provider.add(fakemon).then((result) => {
-				const singlePokemonStore = createSingleFakemonStore(result, fakemonStore)
+				const storedFakemon = createStoredFakemon(result, fakemonStore)
+				const singlePokemonStore = createSingleFakemonStore(storedFakemon, fakemonStore)
 				promises[result.data.readKey] = Promise.resolve(singlePokemonStore)
 
 				fakemonStore.update((prev) => ({
 					...prev,
-					[result.data.readKey]: {
-						value: result,
-					},
+					[result.data.readKey]: storedFakemon,
 				}))
 
 				return result
