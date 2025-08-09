@@ -11,6 +11,7 @@ export type ReadKey = string
 export type WriteKey = string
 
 export interface FakemonDataProvider {
+	getAllKnown(): Promise<Fakemon[]>
 	getByReadKey(readKey: ReadKey): Promise<Fakemon | undefined>
 	add(draft: DraftFakemon): Promise<Fakemon>
 	update(fakemon: Fakemon): Promise<boolean>

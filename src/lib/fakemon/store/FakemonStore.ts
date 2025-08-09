@@ -2,17 +2,20 @@ import { writable } from "svelte/store"
 import type { DraftFakemon, Fakemon, ReadKey } from "../Fakemon"
 import { createSingleFakemonStore, createStoredFakemon, type SingleFakemonStore, type SingleStoredFakemon } from "./SingleFakemonStore"
 import { provider } from "../data"
+import { createFakemonListStore, type FakemonListStore } from "./FakemonListStore"
 
 export type StoredFakemon = Record<ReadKey, SingleStoredFakemon>
 
 export interface FakemonStore {
 	get: (key: ReadKey) => Promise<SingleFakemonStore>
 	new: (fakemon: DraftFakemon) => Promise<Fakemon>
+	all: () => Promise<FakemonListStore>
 }
 
 function createStore(): FakemonStore {
 	const fakemonStore = writable<StoredFakemon>({})
 	const promises: Record<ReadKey, Promise<SingleFakemonStore | undefined>> = {}
+	let listPromise: Promise<FakemonListStore> = undefined
 
 	return {
 		get: async (key: ReadKey): Promise<SingleFakemonStore> => {
@@ -40,6 +43,16 @@ function createStore(): FakemonStore {
 
 				return result
 			})
+		},
+
+		all: async (): Promise<FakemonListStore> => {
+			if (listPromise == null) {
+				listPromise = provider.getAllKnown().then((fakemon) => {
+					return createFakemonListStore(fakemon, fakemonStore)
+				})
+			}
+
+			return listPromise
 		},
 	}
 }

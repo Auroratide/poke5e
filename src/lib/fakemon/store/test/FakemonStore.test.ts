@@ -79,3 +79,21 @@ test("updating an entry", async () => {
 	// and: never retrieved from the provider since it was added
 	expect(getFakemon).not.toHaveBeenCalled()
 })
+
+test("listing fakemon", async () => {
+	// given: some fakemon in the db
+	const eeveonDraft = stubFakemon({ speciesName: "Eeveon" })
+	const drakeonDraft = stubFakemon({ speciesName: "Drakeon" })
+
+	await provider.add(eeveonDraft.data)
+	await provider.add(drakeonDraft.data)
+
+	// when: we get the list
+	const listStore = await fakemonStore.all()
+	const listResult = get(listStore)
+	const resultNames = listResult.map((it) => it.data.speciesName)
+	
+	// then: it contains all the fakemon
+	expect(resultNames).toContain("Eeveon")
+	expect(resultNames).toContain("Drakeon")
+})

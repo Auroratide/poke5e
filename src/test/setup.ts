@@ -1,5 +1,9 @@
 import { DataClass } from "$lib/DataClass"
-import { expect } from "vitest"
+import { expect, beforeEach } from "vitest"
+
+beforeEach(() => {
+	localStorage.clear()
+})
 
 expect.extend({
 	toEqualData(received: unknown, expected: unknown) {

@@ -13,26 +13,29 @@
 		PageAction,
 		InfoFakemonPage,
 	} from "$lib/fakemon/page"
-	import { fakemonStore } from "$lib/fakemon/store"
-	import type { SingleFakemonStore } from "$lib/fakemon/store/SingleFakemonStore"
+	import {
+		fakemonStore,
+		type SingleFakemonStore,
+		type FakemonListStore,
+	} from "$lib/fakemon/store"
 	import ErrorMessage from "$lib/trainers/ErrorMessage.svelte"
 
 	$: fakemonId = browser ? $page.url.searchParams.get("id") : undefined
 	$: action = browser ? $page.url.searchParams.get("action") : undefined
 
-	// let list: Promise<undefined | TrainerListStore> | undefined
+	let list: Promise<undefined | FakemonListStore> | undefined
 	let fakemon: Promise<undefined | SingleFakemonStore> | undefined
 
 	$: {
 		if (fakemonId && browser) {
-			// trainerList = undefined
+			list = fakemonStore.all()
 			fakemon = fakemonStore.get(fakemonId)
 		} else if (!fakemonId && browser) {
-			// trainerList = trainers.all()
+			list = fakemonStore.all()
 			fakemon = undefined
 		} else {
 			fakemon = undefined
-			// trainerList = undefined
+			list = undefined
 		}
 	}
 </script>
@@ -41,7 +44,15 @@
 <Page theme="red">
 	<Greatball slot="icon" />
 	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Fakémon List">
-		<FakemonList />
+		{#await list}
+			<Loader />
+		{:then list}
+			{#if list}
+				<FakemonList fakemon={list} />
+			{/if}
+		{:catch error}
+			<ErrorMessage error="{error}" />
+		{/await}
 	</nav>
 	{#if fakemonId}
 		{#await fakemon}

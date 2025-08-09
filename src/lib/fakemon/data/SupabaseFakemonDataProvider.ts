@@ -11,6 +11,12 @@ import { FakemonLocalStorage } from "./FakemonLocalStorage"
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	constructor(private readonly supabase: SupabaseClient) {}
 
+	async getAllKnown(): Promise<Fakemon[]> {
+		return Promise.all(FakemonLocalStorage.list().map((it) =>
+			this.getByReadKey(it.readKey)),
+		)
+	}
+
 	async getByReadKey(readKey: ReadKey): Promise<Fakemon | undefined> {
 		return this.supabase.rpc("get_fakemon", { _read_key: readKey })
 			.maybeSingle<FakemonRow>()

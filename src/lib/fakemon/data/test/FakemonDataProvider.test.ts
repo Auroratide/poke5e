@@ -26,9 +26,26 @@ test("no permission to update", async () => {
 	})
 
 	const added = await provider.add(draft.data)
+	localStorage.clear()
+
 	const received = await provider.getByReadKey(added.data.readKey)
 
 	// result of get is not supposed to have a write key
 	received.data.speciesName = "Aereon"
 	await expect(provider.update(received)).rejects.toThrow(FakemonPermissionError)
+})
+
+test("getAllKnown", async () => {
+	const drakeon = stubFakemon({ speciesName: "Drakeon" })
+	const droideon = stubFakemon({ speciesName: "Droideon" })
+
+	await provider.add(drakeon.data)
+	await provider.add(droideon.data)
+
+	const result = await provider.getAllKnown()
+	const resultNames = result.map((it) => it.data.speciesName)
+
+	expect(resultNames).toHaveLength(2)
+	expect(resultNames).toContain("Drakeon")
+	expect(resultNames).toContain("Droideon")
 })

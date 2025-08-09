@@ -35,7 +35,24 @@ function add(value: FakemonIdentifyingInfo) {
 	}))
 }
 
+function list(): FakemonIdentifyingInfo[] {
+	const result: FakemonIdentifyingInfo[] = []
+
+	for (let i = 0; i < localStorage.length; ++i) {
+		const key = localStorage.key(i)
+		if (!key.startsWith(KEY_PREFIX)) continue
+
+		const item = get(key.split("::")[1])
+		if (item != null) {
+			result.push(item)
+		}
+	}
+
+	return result
+}
+
 export const FakemonLocalStorage = {
 	get,
 	add,
+	list,
 } as const

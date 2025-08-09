@@ -68,3 +68,38 @@ test("does not remove writeKey if already there", () => {
 	expect(resultAfterSecondAdd.readKey).toEqual("rrrrr")
 	expect(resultAfterSecondAdd.writeKey).toEqual("wwwww")
 })
+
+test("lists all", () => {
+	const drakeon = stubFakemon({
+		id: "12345",
+		readKey: "rrrrr",
+		writeKey: "wwwww",
+	})
+
+	const eeveon  = stubFakemon({
+		id: "54321",
+		readKey: "sssss",
+		writeKey: undefined,
+	})
+
+	FakemonLocalStorage.add(drakeon.data)
+	FakemonLocalStorage.add(eeveon.data)
+
+	localStorage.setItem("ignorethis", "{}")
+	localStorage.setItem("fakemon::", "{}")
+
+	// when
+	const result = FakemonLocalStorage.list()
+
+	// then
+	expect(result).toContainEqual({
+		id: "12345",
+		readKey: "rrrrr",
+		writeKey: "wwwww",
+	})
+
+	expect(result).toContainEqual({
+		id: "54321",
+		readKey: "sssss",
+	})
+})
