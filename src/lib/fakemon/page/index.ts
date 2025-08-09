@@ -1,3 +1,6 @@
 export * from "./actions"
-export { default as FakemonCard } from "./FakemonCard.svelte"
 export { default as FakemonEditor } from "./FakemonEditor.svelte"
+export { default as FakemonList } from "./FakemonList.svelte"
+export { default as EditFakemonPage } from "./EditFakemonPage.svelte"
+export { default as AddFakemonPage } from "./AddFakemonPage.svelte"
+export { default as InfoFakemonPage } from "./InfoFakemonPage.svelte"

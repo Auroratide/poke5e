@@ -4,6 +4,26 @@ import { provider } from "$lib/fakemon/data"
 import { fakemonStore } from "../FakemonStore"
 import { stubFakemon } from "$lib/fakemon/test/stubs"
 
+test("new fakemon", async () => {
+	// given: a draft fakemon
+	const getFakemon = vi.spyOn(provider, "getByReadKey")
+
+	const draft = stubFakemon({
+		speciesName: "Eeveon",
+	})
+
+	// when: it is added
+	const addedResult = await fakemonStore.new(draft.data)
+
+	const singleStore = await fakemonStore.get(addedResult.data.readKey)
+	const storedValue = get(singleStore)
+	storedValue.value.data.writeKey = addedResult.data.writeKey
+
+	// then: we did not need to fetch it explicitly
+	expect(storedValue.value).toEqualData(addedResult)
+	expect(getFakemon).not.toHaveBeenCalled()
+})
+
 test("store remembers", async () => {
 	// given: a fakemon in the db
 	const getFakemon = vi.spyOn(provider, "getByReadKey")
