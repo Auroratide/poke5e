@@ -1,4 +1,4 @@
-import { test, expect } from "vitest"
+import { test } from "vitest"
 // import { provider } from ".."
 // import { stubFakemon } from "./stubs"
 // import { FakemonPermissionError } from "../FakemonDataProvider"
