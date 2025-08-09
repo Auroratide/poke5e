@@ -4,6 +4,7 @@ import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
 import { PokemonType } from "$lib/pokemon/types-2"
 import { HitDice } from "$lib/dnd/hit-dice"
 import { GenderRatio } from "../gender"
+import { SpeciesRating } from "../sr"
 
 export function stubMovePool(template: Partial<MovePool> = {}): MovePool {
 	return {
@@ -26,7 +27,7 @@ export function stubPokemon(template: Partial<Pokemon> = {}): Pokemon {
 		number: template.number ?? 0,
 		type: template.type?.copy() ?? new PokemonType(["normal"]),
 		size: template.size ?? "small",
-		sr: template.sr ?? 8,
+		sr: template.sr ?? new SpeciesRating(8),
 		minLevel: template.minLevel ?? 5,
 		eggGroup: template.eggGroup ?? ["field"],
 		gender: template.gender ?? new GenderRatio("1:7"),

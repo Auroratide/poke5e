@@ -6,6 +6,7 @@ import { SkillRanks } from "$lib/dnd/skills"
 import { PokemonType } from "$lib/pokemon/types-2"
 import { GenderRatio } from "$lib/creatures/gender"
 import { HitDice } from "$lib/dnd/hit-dice"
+import { SpeciesRating } from "$lib/creatures/sr"
 
 export const load: PageLoad = async ({ fetch, params }) => {
 	return fetch(`${base}/pokemon/${params.id}.json`).then(async res => {
@@ -17,6 +18,7 @@ export const load: PageLoad = async ({ fetch, params }) => {
 			return {
 				pokemon: {
 					...pokemonData,
+					sr: new SpeciesRating(pokemonData.sr),
 					gender: new GenderRatio(pokemonData.gender),
 					type: new PokemonType(pokemonData.type),
 					skills: SkillRanks.fromList(pokemonData.skills),

@@ -1,4 +1,5 @@
 import { GenderRatio } from "$lib/creatures/gender"
+import { SpeciesRating } from "$lib/creatures/sr"
 import type { MovePool } from "$lib/creatures/types"
 import { DataClass, type Data } from "$lib/DataClass"
 import { Attributes, type Attribute } from "$lib/dnd/attributes"
@@ -22,7 +23,7 @@ export class Fakemon extends DataClass<{
 	speciesName: string,
 	type: Data<PokemonType>,
 	size: CreatureSize,
-	sr: number, // TODO
+	sr: Data<SpeciesRating>,
 	minLevel: number,
 	eggGroups: string[],
 	gender: Data<GenderRatio>,
@@ -40,6 +41,7 @@ export class Fakemon extends DataClass<{
 }> {
 	get type(): PokemonType { return new PokemonType(this.data.type) }
 	get gender(): GenderRatio { return new GenderRatio(this.data.gender) }
+	get sr(): SpeciesRating { return new SpeciesRating(this.data.sr) }
 	get hitDice(): HitDice { return new HitDice(this.data.hitDice) }
 	get speed(): Speeds { return new Speeds(this.data.speed) }
 	get senses(): Senses { return new Senses(this.data.senses) }

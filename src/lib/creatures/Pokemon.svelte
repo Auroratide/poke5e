@@ -28,7 +28,7 @@
 					<dt>Size</dt>
 					<dd class="cap">{pokemon.size}</dd>
 					<dt><abbr title="Species Rating">SR</abbr></dt>
-					<dd>{asString.sr(pokemon.sr)}</dd>
+					<dd>{pokemon.sr.toString()}</dd>
 					<dt>Egg Group</dt>
 					<dd class="cap">{pokemon.eggGroup.join(", ")}</dd>
 					<dt>Min Level</dt>

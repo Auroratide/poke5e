@@ -100,7 +100,7 @@
 				<dt>Size</dt>
 				<dd class="cap">{fakemon.data.size}</dd>
 				<dt><abbr title="Species Rating">SR</abbr></dt>
-				<dd>{asString.sr(fakemon.data.sr)}</dd>
+				<dd>{fakemon.sr.toString()}</dd>
 				<dt>Egg Group</dt>
 				<dd class="cap">{fakemon.data.eggGroups.join(", ")}</dd>
 				<dt>Min Level</dt>
@@ -187,7 +187,7 @@
 </Card>
 
 <style>
-	p, .small-text {
+	.small-text {
 		font-size: var(--font-sz-venus);
 	}
 

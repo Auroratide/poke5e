@@ -24,12 +24,12 @@
 }, {
 	key: "type", name: "Type", ratio: 3, sort: byStringField(it => it.type.data.join(", ")),
 }, {
-	key: "sr", name: "SR", ratio: 1, sort: byNumericField(it => it.sr), largeScreenOnly: true,
+	key: "sr", name: "SR", ratio: 1, sort: byNumericField(it => it.sr.data), largeScreenOnly: true,
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type.primary}-bg)">
 		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{base}/pokemon/{item.id}">{item.name}</a></BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{asString.type(item.type.data)}</BubbleRow.Cell>
-		<BubbleRow.Cell cellVisibility={cellVisibility[2]}>{asString.sr(item.sr)}</BubbleRow.Cell>
+		<BubbleRow.Cell cellVisibility={cellVisibility[2]}>{item.sr.toString()}</BubbleRow.Cell>
 	</BubbleRow.Row>
 </SortableTable>
 
