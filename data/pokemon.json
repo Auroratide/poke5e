@@ -104941,7 +104941,10 @@
 					"camouflage",
 					"dragon-pulse",
 					"coil",
-					"outrage"
+					"outrage",
+					"thousand-arrows",
+					"thousand-waves",
+					"core-enforcer"
 				],
 				"tm": [
 					6,
@@ -105073,7 +105076,10 @@
 					"camouflage",
 					"dragon-pulse",
 					"coil",
-					"outrage"
+					"outrage",
+					"thousand-arrows",
+					"thousand-waves",
+					"core-enforcer"
 				],
 				"tm": [
 					6,
@@ -105203,7 +105209,10 @@
 					"camouflage",
 					"dragon-pulse",
 					"coil",
-					"outrage"
+					"outrage",
+					"thousand-arrows",
+					"thousand-waves",
+					"core-enforcer"
 				],
 				"tm": [
 					6,
@@ -116431,7 +116440,7 @@
 					17,
 					20,
 					21,
-					2,
+					22,
 					26,
 					27,
 					29,
@@ -116554,7 +116563,7 @@
 					17,
 					20,
 					21,
-					2,
+					22,
 					26,
 					27,
 					29,
