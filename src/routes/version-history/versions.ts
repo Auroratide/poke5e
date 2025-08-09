@@ -12,6 +12,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.7.4",
+		description: [
+			"Bug fix: Minior learns Solar Beam (TM 22) as a TM, not Dragon Claw (TM 2).",
+			"Bug fix: Zygarde learns Thousand Arrows, Thousand Waves, and Core Enforcer.",
+			"Visual update on fractional SR (1/2 becomes ½).",
+		],
+	}, {
 		name: "v1.7.3",
 		description: [
 			"Alphabetize types list.",
