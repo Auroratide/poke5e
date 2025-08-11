@@ -24,6 +24,7 @@
 
 <h3>Epic Boon</h3>
 <p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Fate is recommended.</p>
+<p>A list of Epic Boons can be found in the D&D Player Handbook, page 210.</p>
 <p>Be creative roleplaying boons that seem "magical" for a Pokémon universe. For example, perhaps Boon of Fate could be interpretted as your trainer giving a last-minute critical command that gets your Pokémon out of danger.</p>
 
 <h3>Master Trainer</h3>
