@@ -12,6 +12,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.7.5",
+		description: [
+			"Clarify range of Magnetic Flux.",
+			"Update Arceus's abilities to match the original PHB.",
+			"Add Epic Boons reference page in the D&D PHB.",
+		],
+	}, {
 		name: "v1.7.4",
 		description: [
 			"Bug fix: Minior learns Solar Beam (TM 22) as a TM, not Dragon Claw (TM 2).",
