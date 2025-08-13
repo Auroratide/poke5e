@@ -383,7 +383,7 @@
     {
       "id": "form-change-arceus",
       "name": "Form Change (Arceus)",
-      "description": "Arceus' default type is Normal. It can change its type by holding one or more Elemental Plates. When it uses a Plate to change its type, its signature move Judgment also changes its type to match Arceus."
+      "description": "Arceus' default type is Normal. It can change its type by holding an Elemental Plate. While holding this plate, the signature move, Judgment, also changes its type to match Arceus."
     },
     {
       "id": "form-change-cherrim",
@@ -833,7 +833,7 @@
     {
       "id": "multitype",
       "name": "Multitype",
-      "description": "This Pokémon may hold any number of Elemental Plates that allow it to change its type at will. These plates include Draco, Dread, Earth, Fist, Flame, Icicle, Insect, Iron, Meadow, Mind, Pixie, Sky, Splash, Spooky, Stone, Toxic, and Zap. The Plates cannot be affected by any item-removing ability or move."
+      "description": "This Pokémon's type and form change to match the type of Elemental Plate this Pokémon holds. The Plate cannot be affected by any item-removing ability or move."
     },
     {
       "id": "mummy",
