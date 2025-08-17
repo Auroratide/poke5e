@@ -91218,7 +91218,7 @@
 			"gender": "1:1",
 			"evolution": {
 				"stage": "2",
-				"maxStage": "2",
+				"maxStage": "3",
 				"from": [
 					"pawniard"
 				],
