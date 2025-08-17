@@ -12,6 +12,14 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.7.6",
+		description: [
+			"Bug fix: Bispharp should have 3 evolutionary stages.",
+			"Bug fix: Corrected some egg groups (e.g. water-1 to water 1)",
+			"Reference: Added missing ditto, undiscovered group, and gendered species breeding rules.",
+			"Reference: Added comprehensive glossary of egg groups and the pokémon in them.",
+		],
+	}, {
 		name: "v1.7.5",
 		description: [
 			"Clarify range of Magnetic Flux.",
