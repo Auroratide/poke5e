@@ -1,9 +1,20 @@
-<script>
+<script lang="ts">
 	import InfoTable from "$lib/design/InfoTable.svelte"
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Url } from "$lib/url"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { rulesVersion } from "$lib/design/rules-version"
+	import { pokemon } from "$lib/creatures/store"
+	import { EggGroup } from "$lib/creatures/egg-group"
+	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
+	import Details from "$lib/design/Details.svelte"
+	import Loader from "$lib/design/Loader.svelte"
+	import type { Pokemon } from "$lib/creatures/types"
+
+	$: byEggGroup = EggGroup.groupBy($pokemon ?? [])
+	$: groupEntries = Array.from(byEggGroup.entries()).sort((a, b) => a[0].localeCompare(b[0]))
+
+	const alphabetical = (a: Pokemon, b: Pokemon) => a.name.localeCompare(b.name)
 </script>
 
 <ReferencePage title="Breeding">
@@ -117,10 +128,44 @@
 			<li><strong>Bond Level</strong>: Shinx's initial Bond Level is 1.</li>
 		</ol>
 	</section>
+	<section>
+		<h2>Special Caveats/Rules</h2>
+		<p>There are just a few circumstances that should be noted here when considering breeding.</p>
+		<h3>Ditto</h3>
+		<p>Ditto is a very special case of genderless Pokémon. Any Pokémon can breed with it, regardless of gender or Egg Group. The species of the hatched Pokémon that results from breeding with a Ditto is always based on the "non-ditto" Pokémon, whether male or female.</p>
+		<h3>Undiscovered Group</h3>
+		<p>Baby and Legendary Pokémon cannot breed. These are listed in the "Undiscovered" Egg Group for convenience.</p>
+		<h3>Gendered Species</h3>
+		<p>Certain species of Pokémon such as Nidoran have specific genders that have their own stat blocks. Breeding with one may result in a Pokémon of a different species than itself.</p>
+		<p>For example: A Nidoran Female may produce a Nidoran Female or Nidoran Male egg, which should be determined with a d100 roll against the gender rate listed in its stat block.</p>
+	</section>
+	<section>
+		<h2>Egg Groups</h2>
+		{#if ($pokemon ?? []).length === 0}
+			<Loader />
+		{/if}
+		{#each groupEntries as [groupName, group]}
+			<div class="space-after">
+				<h3 class="cap">{groupName}</h3>
+				{#if group.exclusive.length > 0}
+					<Details title="Exclusive to group">
+						<SimplePokemonList pokemon={group.exclusive.sort(alphabetical)} />	
+					</Details>
+				{/if}
+				{#if group.shares.length > 0}
+					<Details title="Shares another egg group">
+						<SimplePokemonList pokemon={group.shares.sort(alphabetical)} />	
+					</Details>
+				{/if}
+			</div>
+		{/each}
+	</section>
 </ReferencePage>
 
 <style>
 	td {
 		text-align: center;
 	}
+
+	.space-after { margin-block-end: 1.5em; }
 </style>

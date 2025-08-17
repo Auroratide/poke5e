@@ -23,18 +23,18 @@
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<div class="{hasImage ? "row" : ""}">
 			<FlatDl columns={hasImage ? 1 : 2}>
-					<dt>Number</dt>
-					<dd>{asString.pokeIndex(pokemon.number)}</dd>
-					<dt>Size</dt>
-					<dd class="cap">{pokemon.size}</dd>
-					<dt><abbr title="Species Rating">SR</abbr></dt>
-					<dd>{pokemon.sr.toString()}</dd>
-					<dt>Egg Group</dt>
-					<dd class="cap">{pokemon.eggGroup.join(", ")}</dd>
-					<dt>Min Level</dt>
-					<dd>{pokemon.minLevel}</dd>
-					<dt>Gender</dt>
-					<dd><GenderRatioDisplay value={pokemon.gender} /></dd>
+				<dt>Number</dt>
+				<dd>{asString.pokeIndex(pokemon.number)}</dd>
+				<dt>Size</dt>
+				<dd class="cap">{pokemon.size}</dd>
+				<dt><abbr title="Species Rating">SR</abbr></dt>
+				<dd>{pokemon.sr.toString()}</dd>
+				<dt>Egg Group</dt>
+				<dd class="cap">{pokemon.eggGroup.toString()}</dd>
+				<dt>Min Level</dt>
+				<dd>{pokemon.minLevel}</dd>
+				<dt>Gender</dt>
+				<dd><GenderRatioDisplay value={pokemon.gender} /></dd>
 			</FlatDl>
 			<PokemonArt media={pokemon.media} alt="" />
 		</div>

@@ -8,6 +8,7 @@ import type { SpeedType } from "$lib/dnd/movement"
 import type { PokemonType } from "$lib/pokemon/types-2"
 import type { GenderRatio } from "./gender"
 import type { SpeciesRating } from "./sr"
+import type { EggGroup } from "./egg-group"
 
 export type PokemonMedia = {
 	main?: string,
@@ -36,7 +37,7 @@ export type Pokemon = {
 	size: CreatureSize,
 	sr: SpeciesRating,
 	minLevel: number,
-	eggGroup: string[],
+	eggGroup: EggGroup,
 	gender: GenderRatio,
 	description: string,
 	ac: number,

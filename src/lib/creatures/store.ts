@@ -7,6 +7,7 @@ import { PokemonType } from "$lib/pokemon/types-2"
 import { GenderRatio } from "./gender"
 import { HitDice } from "$lib/dnd/hit-dice"
 import { SpeciesRating } from "./sr"
+import { EggGroup } from "./egg-group"
 
 export const pokemon = readable<Pokemon[]>(undefined, (set) => {
 	if (typeof window !== "undefined") {
@@ -16,6 +17,7 @@ export const pokemon = readable<Pokemon[]>(undefined, (set) => {
 				...it,
 				sr: new SpeciesRating(it.sr),
 				gender: new GenderRatio(it.gender),
+				eggGroup: new EggGroup(it.eggGroup),
 				type: new PokemonType(it.type),
 				skills: SkillRanks.fromList(it.skills),
 				attributes: new Attributes(it.attributes),

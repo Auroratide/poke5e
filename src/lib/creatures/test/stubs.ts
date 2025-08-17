@@ -5,6 +5,7 @@ import { PokemonType } from "$lib/pokemon/types-2"
 import { HitDice } from "$lib/dnd/hit-dice"
 import { GenderRatio } from "../gender"
 import { SpeciesRating } from "../sr"
+import { stubEggGroup } from "../egg-group/test/stubs"
 
 export function stubMovePool(template: Partial<MovePool> = {}): MovePool {
 	return {
@@ -29,7 +30,7 @@ export function stubPokemon(template: Partial<Pokemon> = {}): Pokemon {
 		size: template.size ?? "small",
 		sr: template.sr ?? new SpeciesRating(8),
 		minLevel: template.minLevel ?? 5,
-		eggGroup: template.eggGroup ?? ["field"],
+		eggGroup: template.eggGroup ?? stubEggGroup(),
 		gender: template.gender ?? new GenderRatio("1:7"),
 		description: template.description ?? "The Domesticated Pokémon. It is born from an absence of evolutionary pressure. Scientists believe increasingly more Eevees will evolve into Eeveon as human influence grows.",
 		ac: template.ac ?? 15,

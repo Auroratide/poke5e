@@ -129669,7 +129669,7 @@
 			"minLevel": 1,
 			"eggGroup": [
 				"human-like",
-				"water-1"
+				"water 1"
 			],
 			"gender": "1:1",
 			"evolution": {
@@ -129805,7 +129805,7 @@
 			"minLevel": 5,
 			"eggGroup": [
 				"human-like",
-				"water-1"
+				"water 1"
 			],
 			"gender": "1:1",
 			"evolution": {
@@ -132529,7 +132529,7 @@
 			"sr": 6,
 			"minLevel": 5,
 			"eggGroup": [
-				"water-1",
+				"water 1",
 				"field"
 			],
 			"gender": "1:1",
@@ -136579,7 +136579,7 @@
 			"sr": 5,
 			"minLevel": 5,
 			"eggGroup": [
-				"water-2"
+				"water 2"
 			],
 			"gender": "1:1",
 			"evolution": {
@@ -138458,7 +138458,7 @@
 			"sr": 12,
 			"minLevel": 10,
 			"eggGroup": [
-				"water-2"
+				"water 2"
 			],
 			"gender": "0:1",
 			"evolution": {
@@ -138572,7 +138572,7 @@
 			"sr": 12,
 			"minLevel": 10,
 			"eggGroup": [
-				"water-2"
+				"water 2"
 			],
 			"gender": "1:0",
 			"evolution": {
@@ -138823,7 +138823,7 @@
 			"sr": 10,
 			"minLevel": 8,
 			"eggGroup": [
-				"water-2"
+				"water 2"
 			],
 			"gender": "1:1",
 			"evolution": {
@@ -140322,7 +140322,7 @@
 			"minLevel": 1,
 			"eggGroup": [
 				"flying",
-				"water-1"
+				"water 1"
 			],
 			"gender": "1:7",
 			"evolution": {
@@ -140446,7 +140446,7 @@
 			"minLevel": 5,
 			"eggGroup": [
 				"flying",
-				"water-1"
+				"water 1"
 			],
 			"gender": "1:7",
 			"evolution": {
@@ -140569,7 +140569,7 @@
 			"minLevel": 10,
 			"eggGroup": [
 				"flying",
-				"water-1"
+				"water 1"
 			],
 			"gender": "1:7",
 			"evolution": {
@@ -143613,7 +143613,7 @@
 			"sr": 0.5,
 			"minLevel": 1,
 			"eggGroup": [
-				"water-1"
+				"water 1"
 			],
 			"gender": "1:1",
 			"evolution": {
@@ -143745,7 +143745,7 @@
 			"sr": 8,
 			"minLevel": 5,
 			"eggGroup": [
-				"water-1"
+				"water 1"
 			],
 			"gender": "1:1",
 			"evolution": {
@@ -143857,7 +143857,7 @@
 			"sr": 0.5,
 			"minLevel": 1,
 			"eggGroup": [
-				"water-1",
+				"water 1",
 				"flying"
 			],
 			"gender": "1:1",
@@ -143990,7 +143990,7 @@
 			"sr": 8,
 			"minLevel": 5,
 			"eggGroup": [
-				"water-1",
+				"water 1",
 				"flying"
 			],
 			"gender": "1:1",
@@ -145084,7 +145084,7 @@
 			"sr": 6,
 			"minLevel": 5,
 			"eggGroup": [
-				"water-3"
+				"water 3"
 			],
 			"gender": "1:1",
 			"description": "The Ambush Pokémon. Klawf hangs upside-down from cliffs, waiting for prey. But Klawf can’t remain in this position for long because its blood rushes to its head.",
@@ -146302,7 +146302,7 @@
 			"sr": 0.5,
 			"minLevel": 1,
 			"eggGroup": [
-				"water-3"
+				"water 3"
 			],
 			"gender": "1:1",
 			"evolution": {
@@ -146432,7 +146432,7 @@
 			"sr": 8,
 			"minLevel": 5,
 			"eggGroup": [
-				"water-3"
+				"water 3"
 			],
 			"gender": "1:1",
 			"evolution": {
@@ -146673,7 +146673,7 @@
 			"minLevel": 1,
 			"eggGroup": [
 				"field",
-				"water-2"
+				"water 2"
 			],
 			"gender": "1:1",
 			"evolution": {
@@ -146796,7 +146796,7 @@
 			"minLevel": 8,
 			"eggGroup": [
 				"field",
-				"water-2"
+				"water 2"
 			],
 			"gender": "1:1",
 			"evolution": {
@@ -148217,7 +148217,7 @@
 			"sr": 8,
 			"minLevel": 5,
 			"eggGroup": [
-				"water-2"
+				"water 2"
 			],
 			"gender": "1:1",
 			"description": "The Jettison Pokémon. When Veluza discards unnecessary flesh, its mind becomes honed and its psychic power increases. The spare flesh has a mild but delicious flavor.",
@@ -148317,7 +148317,7 @@
 			"sr": 12,
 			"minLevel": 8,
 			"eggGroup": [
-				"water-2"
+				"water 2"
 			],
 			"gender": "1:1",
 			"description": "The Big Catfish Pokémon. This Pokémon is a glutton, but it’s bad at getting food. It teams up with a Tatsugiri to catch prey.",
@@ -148424,7 +148424,7 @@
 			"sr": 13,
 			"minLevel": 8,
 			"eggGroup": [
-				"water-2"
+				"water 2"
 			],
 			"gender": "1:1",
 			"description": "The Mimicry Pokémon. This is a small dragon Pokémon. It lives inside the mouth of Dondozo to protect itself from enemies on the outside.",
@@ -148672,7 +148672,7 @@
 			"sr": 6,
 			"minLevel": 5,
 			"eggGroup": [
-				"water-1",
+				"water 1",
 				"field"
 			],
 			"gender": "1:1",
