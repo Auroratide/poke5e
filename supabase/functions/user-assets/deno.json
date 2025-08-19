@@ -1,0 +1,10 @@
+{
+	"imports": {
+		"@supabase/functions-js": "jsr:@supabase/functions-js/edge-runtime.d.ts",
+		"@supabase/supabase-js": "npm:@supabase/supabase-js@2",
+		"@std/dotenv/load": "jsr:@std/dotenv/load",
+		"@std/assert": "jsr:@std/assert@^1.0.14",
+		"@aws-sdk/client-s3": "npm:@aws-sdk/client-s3@^3.445.0",
+		"@aws-sdk/s3-request-presigner": "npm:@aws-sdk/s3-request-presigner@^3.445.0"
+	}
+}

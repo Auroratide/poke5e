@@ -20,6 +20,10 @@ The code is fitted with a fully local version of Supabase to make integrated dev
 
 You will need to set up a `.env` file; use the `.env.example` file as a template. The `PUBLIC_SUPABASE_KEY` value should be the same as the "anon key" value spat out by the `pnpm supabase start` command.
 
+### Deno
+
+Supabase functions use Deno. So you have to also: https://deno.land/manual/getting_started/setup_your_environment
+
 ### Running the code
 
 ```
