@@ -14,10 +14,10 @@ export function initS3(): S3Client {
 	return new S3Client({
 		region,
 		endpoint,
-		// endpoint: `https://${accountId}.r2.cloudflarestorage.com`,
 		credentials: {
 			accessKeyId,
 			secretAccessKey,
 		},
+		forcePathStyle: true, // without this, I get MalformedXML errors.
 	})
 }

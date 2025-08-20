@@ -1,7 +1,14 @@
+<script lang="ts" context="module">
+	export type UpdateDetail = {
+		pokemon: TrainerPokemon,
+		updateAvatar?: ImageInputValue,
+	}
+</script>
+
 <script lang="ts">
 	import type { Pokemon } from "$lib/creatures/types"
 	import Button from "$lib/design/Button.svelte"
-	import { ActionArea, Form, FormDetails, MarkdownField } from "$lib/design/forms"
+	import { ActionArea, Form, FormDetails, ImageField, MarkdownField, type ImageInputValue } from "$lib/design/forms"
 	import Fieldset from "$lib/design/forms/Fieldset.svelte"
 	import { AttributesFieldset, SavingThrowsFieldset } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
@@ -52,6 +59,9 @@
 	let speeds = pokemon.speeds.copy()
 	let senses = pokemon.senses.copy()
 	let bond = structuredClone(pokemon.bond)
+	let originalAvatar = pokemon.avatar
+	let avatarToUpload: ImageInputValue | undefined = undefined
+	let isValid = true
 
 	let moves = structuredClone(pokemon.moves)
 	let items = structuredClone(pokemon.items)
@@ -62,48 +72,55 @@
 
 	const endEdit = () => {
 		dispatch("update", {
-			...pokemon,
-			nickname: nickname.length > 0 ? nickname : species.name,
-			type,
-			nature: nature === "other" ? natureCustom : nature,
-			teraType: tera,
-			level: new Level(level),
-			ac,
-			hp: {
-				current: pokemon.hp.current + (maxHp - pokemon.hp.max),
-				max: maxHp,
-			},
-			hitDice: {
-				current: pokemon.hitDice.current + (maxHitDice - pokemon.hitDice.max),
-				max: maxHitDice,
-			},
-			gender,
-			isShiny,
-			attributes,
-			ability,
-			proficiencies,
-			savingThrows,
-			moves,
-			items,
-			notes,
-			feats,
-			customSize,
-			customHitDiceSize: customHitDiceSize ? new HitDice(customHitDiceSize) : undefined,
-			speeds,
-			senses,
-			bond: {
-				...bond,
-				points: {
-					current: Math.max(0, pokemon.bond.points.current + (bond.points.max - pokemon.bond.points.max)),
-					max: bond.points.max,
+			pokemon: {
+				...pokemon,
+				nickname: nickname.length > 0 ? nickname : species.name,
+				type,
+				nature: nature === "other" ? natureCustom : nature,
+				teraType: tera,
+				level: new Level(level),
+				ac,
+				hp: {
+					current: pokemon.hp.current + (maxHp - pokemon.hp.max),
+					max: maxHp,
 				},
+				hitDice: {
+					current: pokemon.hitDice.current + (maxHitDice - pokemon.hitDice.max),
+					max: maxHitDice,
+				},
+				gender,
+				isShiny,
+				attributes,
+				ability,
+				proficiencies,
+				savingThrows,
+				moves,
+				items,
+				notes,
+				feats,
+				customSize,
+				customHitDiceSize: customHitDiceSize ? new HitDice(customHitDiceSize) : undefined,
+				speeds,
+				senses,
+				bond: {
+					...bond,
+					points: {
+						current: Math.max(0, pokemon.bond.points.current + (bond.points.max - pokemon.bond.points.max)),
+						max: bond.points.max,
+					},
+				},
+				avatar: originalAvatar,
 			},
-		} as TrainerPokemon)
+			updateAvatar: avatarToUpload,
+		} as UpdateDetail)
 	}
 </script>
 
 <Form onsubmit={endEdit} {saving}>
 	<BasicInfoFieldset bind:nickname bind:nature bind:natureCustom bind:tera={tera} bind:level bind:ac bind:maxHp bind:maxHitDice bind:isShiny {disabled} />
+	<section>
+		<ImageField label="Avatar" previousValue={originalAvatar?.href} bind:currentValue={avatarToUpload} maxbytes={524288} {disabled} bind:isValid />
+	</section>
 	<GenderFieldset bind:value={gender} {disabled} />
 	<AttributesFieldset bind:values={attributes} {disabled} />
 	<AbilitiesFieldset bind:ability {species} {disabled} />

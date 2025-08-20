@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PokemonId, TrainerPokemon } from "$lib/trainers/types"
+	import type { PokemonId } from "$lib/trainers/types"
 	import { pokemon as pokeData } from "$lib/creatures/store"
 	import Loader from "$lib/design/Loader.svelte"
 	import Card from "$lib/design/Card.svelte"
@@ -7,7 +7,7 @@
 	import { ActionArea } from "$lib/design/forms"
 	import type { TrainerStore } from "../trainers"
 	import { goto } from "$app/navigation"
-	import Editor from "./Editor.svelte"
+	import Editor, { type UpdateDetail } from "./Editor.svelte"
 	import { Url } from "$lib/url"
 	import RequirePokemon from "./RequirePokemon.svelte"
 
@@ -19,13 +19,15 @@
 	$: species = $pokeData?.find((it) => it.id === pokemon?.pokemonId)
 
 	let saving = false
-	const update = (e: CustomEvent<TrainerPokemon>) => {
+	const update = (e: CustomEvent<UpdateDetail>) => {
 		saving = true
-		$trainer.update?.pokemon(e.detail).then(() => {
+		$trainer.update?.pokemon(e.detail.pokemon, {
+			updateAvatar: e.detail.updateAvatar,
+		}).then(() => {
 			return Promise.all([
-				$trainer.update?.moveset(e.detail) ?? Promise.resolve(),
-				$trainer.update?.heldItems(e.detail) ?? Promise.resolve(),
-				$trainer.update?.pokemonFeats(e.detail) ?? Promise.resolve(),
+				$trainer.update?.moveset(e.detail.pokemon) ?? Promise.resolve(),
+				$trainer.update?.heldItems(e.detail.pokemon) ?? Promise.resolve(),
+				$trainer.update?.pokemonFeats(e.detail.pokemon) ?? Promise.resolve(),
 			])
 		}).then(() => {
 			saving = false

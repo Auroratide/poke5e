@@ -3,8 +3,10 @@
 	import { assets } from "$app/paths"
 	import { browser } from "$app/environment"
 	import Art from "$lib/design/Art.svelte"
+	import type { StorageResource } from "$lib/trainers/data"
 
 	export let media: PokemonMedia
+	export let avatar: StorageResource | undefined = undefined
 	export let alt: string
 	export let shiny: boolean = false
 
@@ -24,7 +26,9 @@
 	}
 </script>
 
-{#if sprite}
+{#if avatar}
+	<Art src="{avatar.href}" {alt} shimmer={shiny} />
+{:else if sprite}
 	{#if attribution}
 		{#await attribution}
 			<Art {src} {alt} attribution="Getting attribution..." shimmer={shiny} />
