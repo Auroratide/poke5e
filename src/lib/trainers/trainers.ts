@@ -28,7 +28,7 @@ type TrainerUpdater = {
 	inventoryItem: (item: InventoryItem, options?: UpdaterOptions) => Promise<void>
 	trainerFeats: (info: TrainerInfo) => Promise<void>
 	retire: () => Promise<void>
-	pokemon: (info: TrainerPokemon, options?: UpdaterOptions) => Promise<void>
+	pokemon: (info: TrainerPokemon, options?: UpdaterOptions & AvatarUploadOptions) => Promise<void>
 	moveset: (info: TrainerPokemon) => Promise<void>
 	heldItems: (info: TrainerPokemon) => Promise<void>
 	pokemonFeats: (info: TrainerPokemon) => Promise<void>
@@ -206,8 +206,26 @@ const createStore = () => {
 								throw e
 							})
 						},
-						pokemon: (info: TrainerPokemon, options: UpdaterOptions = {}) => {
+						pokemon: async (info: TrainerPokemon, options: UpdaterOptions & AvatarUploadOptions = {}) => {
 							let original: TrainerPokemon = undefined
+
+							let avatar = info.avatar
+							if (options.updateAvatar != null) {
+								if (options.updateAvatar.type === "new") {
+									avatar = await provider.updatePokemonAvatar(data.writeKey, info, options.updateAvatar.value, info.avatar).catch((e) => {
+										error.show(e.message)
+										throw e
+									})
+								} else {
+									avatar = null
+									// await provider.removeTrainerAvatar(data.writeKey, info.avatar).catch((e) => {
+									// 	error.show(e.message)
+									// 	throw e
+									// })
+									// avatar = null
+								}
+							}
+
 							const updateStore = (info: TrainerPokemon) => storeUpdateOne(readKey, (prev) => {
 								const pokemonList = [...prev.pokemon]
 								const pokeIndex = pokemonList.findIndex((it) => it.id === info.id)
@@ -215,6 +233,7 @@ const createStore = () => {
 								pokemonList[pokeIndex] = {
 									...prev.pokemon[pokeIndex],
 									...info,
+									avatar: avatar,
 								}
 
 								return {

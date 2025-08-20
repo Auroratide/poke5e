@@ -7,6 +7,7 @@ import { initSupabase } from "./supabase.ts"
 import { initS3 } from "./s3.ts"
 import { UserAssetsProvider } from "./UserAssetsProvider.ts";
 import { env } from "./env.ts"
+import { handleCors } from "./cors.ts";
 
 const supabase = initSupabase()
 const s3 = initS3()
@@ -28,28 +29,30 @@ function isValidType(body: any): body is RequestBody {
 	return body.type === "pokemon-avatar"
 }
 
-Deno.serve(async (req) => {
-	try {
-		if (req.method !== "POST")
-			return Responses.methodNotAllowed()
+Deno.serve((req) => {
+	return handleCors(req, async (req) => {
+		try {
+			if (req.method !== "POST")
+				return Responses.methodNotAllowed()
 
-		const body = await req.json()
+			const body = await req.json()
 
-		if (!isValidType(body)) {
-			return Responses.badRequest({
-				message: "User asset type is invalid.",
-			})
+			if (!isValidType(body)) {
+				return Responses.badRequest({
+					message: "User asset type is invalid.",
+				})
+			}
+
+			const urlResult = await getUploadUrl({ dataProvider, userAssetsProvider }, body)
+			const response: ResponseBody = { values: urlResult }
+
+			return Responses.ok(response)
+		} catch (e) {
+			if (typeof e === "string") {
+				return Responses.internalServerError({ message: e })
+			} else {
+				return Responses.internalServerError({ message: (e as Error).message })
+			}
 		}
-
-		const urlResult = await getUploadUrl({ dataProvider, userAssetsProvider }, body)
-		const response: ResponseBody = { values: urlResult }
-
-		return Responses.ok(response)
-	} catch (e) {
-		if (typeof e === "string") {
-			return Responses.internalServerError({ message: e })
-		} else {
-			return Responses.internalServerError({ message: (e as Error).message })
-		}
-	}
+	})
 })

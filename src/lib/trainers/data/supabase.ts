@@ -92,7 +92,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					throw new TrainerDataProviderError("Could not trainer's pokemon.", error)
 				}
 
-				return data.map((it) => rowToPokemon(it))
+				return data.map((it) => rowToPokemon(it, this.getUserAssetResource))
 			})
 			.then((pokemon) => Promise.all(pokemon.map((thePokemon) => {
 				return this.getMoveset(thePokemon.id).then((moves) => ({
@@ -533,6 +533,38 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return data > 0
 	}
 
+	updatePokemonAvatar = async (writeKey: ReadWriteKey, info: TrainerPokemon, newAvatar: File, oldResource?: StorageResource): Promise<StorageResource> => {
+		const { data, error } = await this.supabase.functions.invoke<PostUserAssetsResponseBody>("user-assets", {
+			body: {
+				type: "pokemon-avatar",
+				params: {
+					id: info.id,
+					key: writeKey,
+					mimetype: newAvatar.type,
+				},
+			},
+		})
+
+		if (error) {
+			throw new TrainerDataProviderError("Could not upload file for pokemon.")
+		}
+
+		const uploadResponse = await fetch(data.values.uploadUrl, {
+			method: "PUT",
+			body: newAvatar,
+			headers: {
+				"Content-Type": newAvatar.type,
+			},
+		})
+
+		if (!uploadResponse.ok) {
+			console.error(await uploadResponse.text())
+			throw new TrainerDataProviderError("Could not upload file for pokemon.")
+		}
+
+		return this.getUserAssetResource(data.values.filename)
+	}
+
 	addPokemonToTeam = async (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: Pokemon): Promise<TrainerPokemon> => {
 		const trainerPokemon: Omit<TrainerPokemon, "id"> = {
 			trainerId: trainerId,
@@ -947,6 +979,11 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		name: name,
 		href: this.supabase.storage.from(bucket).getPublicUrl(name).data.publicUrl,
 	})
+
+	private getUserAssetResource = (name: string) => ({
+		name: name,
+		href: `http://localhost:9000/user-assets/${name}`,
+	})
 }
 
 export const getReadKeys = (): ReadWriteKey[] =>
@@ -1265,6 +1302,7 @@ type PokemonRow = {
 	rank_intimidation: number,
 	rank_performance: number,
 	rank_persuasion: number,
+	avatar_filename?: string,
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -1284,7 +1322,7 @@ const consolidateSkillRankProfAndRank = (ranks: Record<Skill, [boolean, number]>
 		}), {} as Data<SkillRanks>),
 	)
 
-const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
+const rowToPokemon = (row: PokemonRow, getStorageResource: (name: string) => StorageResource): TrainerPokemon => ({
 	id: row.id.toString(),
 	trainerId: row.trainer_id,
 	pokemonId: row.species,
@@ -1370,6 +1408,7 @@ const rowToPokemon = (row: PokemonRow): TrainerPokemon => ({
 			max: row.bond_points_max,
 		},
 	},
+	avatar: row.avatar_filename ? getStorageResource(row.avatar_filename) : undefined,
 })
 
 type MoveRow = {
@@ -1449,3 +1488,10 @@ const rowToPokemonFeat = (row: PokemonFeatRow): ChosenFeat => ({
 	description: row.description,
 	isCustom: row.is_custom,
 })
+
+type PostUserAssetsResponseBody = {
+	values: {
+		filename: string,
+		uploadUrl: string,
+	},
+}

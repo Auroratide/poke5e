@@ -26,7 +26,7 @@
 	export let species: Pokemon
 	export let editable: boolean
 
-	$: hasImage = species.media != null
+	$: hasImage = pokemon.avatar != null || species.media != null
 
 	const onUpdateHealth = (e: CustomEvent<HealthUpdateDetail>) => {
 		dispatch("update-health", {
@@ -79,7 +79,7 @@
 		/>
 	</div>
 	<StatsInfo {pokemon} {species} />
-	<PokemonArt slot="art" media={species.media} alt="" shiny={pokemon.isShiny} />
+	<PokemonArt slot="art" media={species.media} avatar={pokemon.avatar} alt="" shiny={pokemon.isShiny} />
 	<BondInfo slot="after-art" value={pokemon.bond} {editable} on:update={onUpdateBond} />
 </SideArtCardSection>
 <section class="stats">

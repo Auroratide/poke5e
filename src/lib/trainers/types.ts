@@ -79,6 +79,7 @@ export type TrainerPokemon = {
 	speeds: Speeds,
 	senses: Senses,
 	bond: PokemonBond,
+	avatar?: StorageResource,
 }
 
 export type WithPokemonData = {
