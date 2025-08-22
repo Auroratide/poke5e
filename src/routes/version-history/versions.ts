@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.7.7",
+		description: [
+			"Show which abilities on a Pokémon are hidden.",
+		],
+	}, {
 		name: "v1.7.6",
 		description: [
 			"Bug fix: Bispharp should have 3 evolutionary stages.",
