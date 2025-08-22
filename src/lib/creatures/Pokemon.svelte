@@ -11,6 +11,7 @@
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import { TypeTag, TypeEffectiveness } from "$lib/pokemon/types-2"
 	import { GenderRatioDisplay } from "./gender"
+	import { Tag } from "$lib/design/Tag"
 
 	export let pokemon: Pokemon
 
@@ -79,6 +80,7 @@
 			<p>{pokemon.specialAbilityText}</p>
 		{/if}
 		{#each pokemon.abilities as ability}
+			{#if ability.hidden}<p class="no-margin"><Tag>Hidden</Tag></p>{/if} 
 			<p><strong>{ability.name}:</strong> {ability.description}</p>
 		{/each}
 	</section>
@@ -145,4 +147,6 @@
 	.space-after {
 		margin-block-end: 1em;
 	}
+
+	.no-margin { margin: 0; }
 </style>

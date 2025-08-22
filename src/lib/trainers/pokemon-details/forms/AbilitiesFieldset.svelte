@@ -11,7 +11,10 @@
 	$: nonstandardAbilities = $abilities?.filter((it) => !myAbilityIds.includes(it.id))
 	$: abilityOptions = [ {
 		name: "Learnable Abilities",
-		values: species.abilities.map((it) => ({ name: it.name, value: it.id })),
+		values: species.abilities.map((it) => ({
+			name: it.name + (it.hidden ? " (hidden)" : ""),
+			value: it.id,
+		})),
 	}, {
 		name: "All Other Abilities",
 		values: nonstandardAbilities.map((it) => ({ name: it.name, value: it.id })),
