@@ -23,4 +23,20 @@ export class DataProvider {
 
 		return filename
 	}
+
+	async removePokemonAvatar(options: {
+		id: PokemonId,
+		key: TrainerWriteKey,
+	}): Promise<boolean> {
+		const { data, error } = await this.supabase.rpc("remove_pokemon_avatar", {
+			_id: options.id,
+			_write_key: options.key,
+		}).single<number>()
+
+		if (error) {
+			throw new Error(error.message)
+		}
+
+		return data > 0
+	}
 }

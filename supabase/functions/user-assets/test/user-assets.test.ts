@@ -1,6 +1,6 @@
-import { assertExists, assertGreater } from "@std/assert"
+import { assertExists, assertGreater, assertEquals } from "@std/assert"
 import { createClient, SupabaseClient } from "@supabase/supabase-js"
-import { ResponseBody } from "../index.ts";
+import { PostResponseBody } from "../index.ts";
 import { env } from "./env.ts"
 
 const SUPABASE_OPTIONS = {
@@ -18,11 +18,11 @@ function initSupabase(): SupabaseClient {
 Deno.test("pokemon avatar", async () => {
 	// given
 	const supabase = initSupabase()
-	const { writeKey } = await newTrainer(supabase)
+	const { writeKey, trainerId } = await newTrainer(supabase)
 	const pokemonId = await newPokemon(supabase, writeKey)
 
 	// when
-	const { data } = await supabase.functions.invoke<ResponseBody>("user-assets", {
+	const { data } = await supabase.functions.invoke<PostResponseBody>("user-assets", {
 		body: {
 			type: "pokemon-avatar",
 			params: {
@@ -39,6 +39,26 @@ Deno.test("pokemon avatar", async () => {
 	assertGreater(result.filename.length, 0)
 	assertExists(result.uploadUrl)
 	assertGreater(result.uploadUrl.length, 0)
+
+	// and
+	const pokemonAfterAdd = await getPokemon(supabase, trainerId)
+	assertEquals(pokemonAfterAdd[0].avatar_filename, result.filename)
+
+	// when
+	await supabase.functions.invoke<PostResponseBody>("user-assets", {
+		method: "DELETE",
+		body: {
+			type: "pokemon-avatar",
+			params: {
+				id: pokemonId,
+				key: writeKey,
+			},
+		}
+	})
+
+	// then
+	const pokemonAfterDelete = await getPokemon(supabase, trainerId)
+	assertEquals(pokemonAfterDelete[0].avatar_filename, null)
 })
 
 async function newTrainer(supabase: SupabaseClient) {
@@ -126,6 +146,7 @@ async function newTrainer(supabase: SupabaseClient) {
 	}
 
 	return {
+		trainerId: data.ret_id,
 		readKey: data.ret_read_key,
 		writeKey: data.ret_write_key,
 	}
@@ -205,3 +226,16 @@ async function newPokemon(supabase: SupabaseClient, writeKey: string) {
 
 	return data.toString()
 }
+
+async function getPokemon(supabase: SupabaseClient, trainerId: string) {
+	const { data, error } = await supabase.rpc("get_pokemon", {
+		_trainer_id: trainerId,
+	}).select()
+
+	if (error) {
+		throw new Error(error.message)
+	}
+
+	return data
+}
+
