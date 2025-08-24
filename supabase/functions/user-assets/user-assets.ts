@@ -45,3 +45,22 @@ export async function getUploadUrl({
 		uploadUrl,
 	}
 }
+
+export type RemoveAssetParams = {
+	type: "pokemon-avatar",
+	params: {
+		id: PokemonId,
+		key: TrainerWriteKey,
+	},
+}
+
+export async function removeAsset({
+	dataProvider,
+}: Providers, {
+	params
+}: RemoveAssetParams): Promise<void> {
+	await dataProvider.removePokemonAvatar({
+		id: params.id,
+		key: params.key,
+	})
+}

@@ -212,17 +212,16 @@ const createStore = () => {
 							let avatar = info.avatar
 							if (options.updateAvatar != null) {
 								if (options.updateAvatar.type === "new") {
-									avatar = await provider.updatePokemonAvatar(data.writeKey, info, options.updateAvatar.value, info.avatar).catch((e) => {
+									avatar = await provider.updatePokemonAvatar(data.writeKey, info, options.updateAvatar.value).catch((e) => {
 										error.show(e.message)
 										throw e
 									})
 								} else {
+									await provider.removePokemonAvatar(data.writeKey, info).catch((e) => {
+										error.show(e.message)
+										throw e
+									})
 									avatar = null
-									// await provider.removeTrainerAvatar(data.writeKey, info.avatar).catch((e) => {
-									// 	error.show(e.message)
-									// 	throw e
-									// })
-									// avatar = null
 								}
 							}
 

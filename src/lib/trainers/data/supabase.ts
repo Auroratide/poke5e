@@ -533,8 +533,9 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return data > 0
 	}
 
-	updatePokemonAvatar = async (writeKey: ReadWriteKey, info: TrainerPokemon, newAvatar: File, oldResource?: StorageResource): Promise<StorageResource> => {
+	updatePokemonAvatar = async (writeKey: ReadWriteKey, info: TrainerPokemon, newAvatar: File): Promise<StorageResource> => {
 		const { data, error } = await this.supabase.functions.invoke<PostUserAssetsResponseBody>("user-assets", {
+			method: "POST",
 			body: {
 				type: "pokemon-avatar",
 				params: {
@@ -563,6 +564,24 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 
 		return this.getUserAssetResource(data.values.filename)
+	}
+
+	removePokemonAvatar = async (writeKey: ReadWriteKey, info: TrainerPokemon): Promise<void> => {
+		const { error } = await this.supabase.functions.invoke("user-assets", {
+			method: "DELETE",
+			body: {
+				type: "pokemon-avatar",
+				params: {
+					id: info.id,
+					key: writeKey,
+				},
+			},
+		})
+
+		if (error) {
+			console.error(error)
+			throw new TrainerDataProviderError("Could not delete file for pokemon.")
+		}
 	}
 
 	addPokemonToTeam = async (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: Pokemon): Promise<TrainerPokemon> => {
