@@ -8,7 +8,7 @@
 <script lang="ts">
 	import type { Pokemon } from "$lib/creatures/types"
 	import Button from "$lib/design/Button.svelte"
-	import { ActionArea, Form, FormDetails, ImageField, MarkdownField, type ImageInputValue } from "$lib/design/forms"
+	import { ActionArea, Form, FormDetails, MarkdownField, type ImageInputValue } from "$lib/design/forms"
 	import Fieldset from "$lib/design/forms/Fieldset.svelte"
 	import { AttributesFieldset, SavingThrowsFieldset } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
@@ -117,10 +117,7 @@
 </script>
 
 <Form onsubmit={endEdit} {saving}>
-	<BasicInfoFieldset bind:nickname bind:nature bind:natureCustom bind:tera={tera} bind:level bind:ac bind:maxHp bind:maxHitDice bind:isShiny {disabled} />
-	<section>
-		<ImageField label="Avatar" previousValue={originalAvatar?.href} bind:currentValue={avatarToUpload} maxbytes={524288} {disabled} bind:isValid />
-	</section>
+	<BasicInfoFieldset bind:nickname bind:nature bind:natureCustom bind:tera={tera} bind:level bind:ac bind:maxHp bind:maxHitDice bind:isShiny originalAvatarSrc={originalAvatar?.href} bind:avatar={avatarToUpload} bind:isValid {disabled} />
 	<GenderFieldset bind:value={gender} {disabled} />
 	<AttributesFieldset bind:values={attributes} {disabled} />
 	<AbilitiesFieldset bind:ability {species} {disabled} />

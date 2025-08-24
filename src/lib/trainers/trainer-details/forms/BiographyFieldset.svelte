@@ -59,7 +59,7 @@
 		margin: auto;
 	}
 
-	@media screen and (min-width: 37.5rem) {
+	@media screen and (min-width: 75rem) {
 		.grid {
 			display: grid;
 			grid-template-columns: 1fr 11.25em;
