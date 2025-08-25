@@ -14,6 +14,7 @@ import type {
 import { SupabaseTrainerProvider } from "./supabase"
 import { supabase } from "$lib/supabase"
 import type { ChosenFeat } from "$lib/feats/ChosenFeat"
+import { userAssets } from "$lib/user-assets"
 
 export type TrainerData = {
 	info: Trainer,
@@ -61,4 +62,4 @@ export interface TrainerDataProvider {
 	verifyWriteKey: (trainer: Trainer, writeKey: ReadWriteKey) => Promise<boolean>
 }
 
-export const provider = new SupabaseTrainerProvider(supabase)
+export const provider = new SupabaseTrainerProvider(supabase, userAssets)

@@ -28,11 +28,15 @@ import { Senses } from "$lib/dnd/senses"
 import { Speeds } from "$lib/dnd/movement"
 import { PokemonTeraType, PokemonType } from "$lib/pokemon/types-2"
 import { PokemonGender } from "$lib/creatures/gender"
+import type { UserAssets } from "$lib/user-assets"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
 export class SupabaseTrainerProvider implements TrainerDataProvider {
-	constructor(private supabase: SupabaseClient) {}
+	constructor(
+		private supabase: SupabaseClient,
+		private userAssets: UserAssets,
+	) {}
 
 	allTrainers = async (): Promise<Trainer[]> => {
 		return Promise.all(
@@ -1001,7 +1005,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 	private getUserAssetResource = (name: string) => ({
 		name: name,
-		href: `http://localhost:9000/user-assets/${name}`,
+		href: this.userAssets.getAssetUrl(name),
 	})
 }
 
