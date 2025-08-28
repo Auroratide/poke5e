@@ -13,9 +13,9 @@ jobs:
     runs-on: ubuntu-latest
     env:
       ENV: prod
-      SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
-      SUPABASE_DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-      SUPABASE_PROJECT_ID: ${{ secrets.SUPABASE_REF }}
+      # SUPABASE_ACCESS_TOKEN: ${{ secrets.SUPABASE_ACCESS_TOKEN }}
+      # SUPABASE_DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      # SUPABASE_PROJECT_ID: ${{ secrets.SUPABASE_REF }}
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -23,6 +23,9 @@ jobs:
         with:
           node-version-file: '.nvmrc'
           cache: 'pnpm'
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
       - uses: supabase/setup-cli@v1
         with:
           version: latest
@@ -31,10 +34,12 @@ jobs:
       - run: pnpm supabase start
       - name: Run migration tests
         run: pnpm test:db
-      - run: supabase link --project-ref $SUPABASE_PROJECT_ID
-      - name: Push migrations
-        run: supabase db push
+      - name: Run function tests
+        run: pnpm test:functions
+      # - run: supabase link --project-ref $SUPABASE_PROJECT_ID
+      # - name: Push migrations
+      #   run: supabase db push
 
-  smoke-test:
-    needs: backend-deploy
-    uses: ./.github/workflows/smoke.yml
+  # smoke-test:
+  #   needs: backend-deploy
+  #   uses: ./.github/workflows/smoke.yml
