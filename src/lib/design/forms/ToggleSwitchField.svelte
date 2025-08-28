@@ -1,22 +1,37 @@
 <script lang="ts">
+	import { createEventDispatcher, onMount } from "svelte"
 	import { kebab } from "./kebab"
+
+	const dispatch = createEventDispatcher()
 
 	export let label: string
 	export let value: boolean
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
 
+	let isReady = false
+
 	$: kebabName = name ?? kebab(label)
 	$: id = `${kebabName}-input`
 
 	const handleChange = (e: CustomEvent<{ checked: boolean }>) => {
 		value = e.detail.checked
+
+		dispatch("change", { value })
 	}
+
+	onMount(() => {
+		customElements.whenDefined("toggle-switch").then(() => {
+			isReady = true
+		})
+	})
 </script>
 
 <div class="toggle-switch-field">
 	<label for="{id}">{label}</label>
-	<toggle-switch {id} name="{kebabName}" checked={value} on:change={handleChange} {disabled}></toggle-switch>
+	{#if isReady}
+		<toggle-switch {id} name="{kebabName}" checked={value} on:change={handleChange} {disabled}></toggle-switch>
+	{/if}
 </div>
 
 <style>
@@ -39,6 +54,7 @@
 		display: flex;
 		gap: 1em;
 		padding: 0.5em 0;
+		inline-size: auto;
 	}
 
 	toggle-switch::part(track),
