@@ -9,6 +9,7 @@
 		type ImageInputValue,
 		ImageField,
 	} from "$lib/design/forms"
+	import { FeatureToggles } from "$lib/FeatureToggles"
 	import { PokemonTeraType } from "$lib/pokemon/types-2"
 	import { Natures, type Nature } from "$lib/trainers/nature"
 
@@ -47,19 +48,32 @@
 	}))
 </script>
 
-<Fieldset title="Basic Info">
-	<div class="grid">
-		<div style:grid-area="field1"><TextField label="Nickname" bind:value={nickname} {disabled} /></div>
-		<div style:grid-area="field2"><SelectField label="Nature" options={natureOptions} bind:value={nature} bind:other={natureCustom} {disabled} /></div>
-		<div style:grid-area="field3"><SelectField label="Tera" options={teraOptions} bind:value={tera.data} {disabled} /></div>
+{#if FeatureToggles.PokemonCustomImage()}
+	<Fieldset title="Basic Info">
+		<div class="grid">
+			<div style:grid-area="field1"><TextField label="Nickname" bind:value={nickname} {disabled} /></div>
+			<div style:grid-area="field2"><SelectField label="Nature" options={natureOptions} bind:value={nature} bind:other={natureCustom} {disabled} /></div>
+			<div style:grid-area="field3"><SelectField label="Tera" options={teraOptions} bind:value={tera.data} {disabled} /></div>
+			<IntField label="Level" value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
+			<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} />
+			<IntField label="Max HP" bind:value={maxHp} min={0} {disabled} />
+			<IntField label="Max Hit Dice" bind:value={maxHitDice} min={0} max={20} {disabled} />
+			<ToggleSwitchField label="Shiny" bind:value={isShiny} {disabled} />
+			<div style:grid-area="avatar" class="image-field"><ImageField label="Custom Image" previousValue={originalAvatarSrc} bind:currentValue={avatar} maxbytes={FIVE_HUNDRED_KB} {disabled} bind:isValid /></div>
+		</div>
+	</Fieldset>
+{:else}
+	<Fieldset title="Basic Info" columns={2}>
+		<TextField label="Nickname" bind:value={nickname} {disabled} />
+		<SelectField label="Nature" options={natureOptions} bind:value={nature} bind:other={natureCustom} {disabled} />
+		<SelectField label="Tera" options={teraOptions} bind:value={tera.data} {disabled} />
 		<IntField label="Level" value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
 		<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} />
 		<IntField label="Max HP" bind:value={maxHp} min={0} {disabled} />
 		<IntField label="Max Hit Dice" bind:value={maxHitDice} min={0} max={20} {disabled} />
 		<ToggleSwitchField label="Shiny" bind:value={isShiny} {disabled} />
-		<div style:grid-area="avatar" class="image-field"><ImageField label="Custom Image" previousValue={originalAvatarSrc} bind:currentValue={avatar} maxbytes={FIVE_HUNDRED_KB} {disabled} bind:isValid /></div>
-	</div>
-</Fieldset>
+	</Fieldset>
+{/if}
 
 <style>
 	.grid {
