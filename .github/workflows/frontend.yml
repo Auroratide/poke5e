@@ -19,6 +19,7 @@ jobs:
       PUBLIC_ANALYTICS_ENABLED: true
       PUBLIC_SUPABASE_URL: ${{ secrets.PUBLIC_SUPABASE_URL }}
       PUBLIC_SUPABASE_KEY: ${{ secrets.PUBLIC_SUPABASE_KEY }}
+      PUBLIC_USER_ASSETS_BASE_URL: ${{ secrets.PUBLIC_USER_ASSETS_BASE_URL }}
       ENV: prod
     steps:
       - uses: actions/checkout@v4

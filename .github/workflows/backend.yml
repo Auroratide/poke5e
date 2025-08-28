@@ -23,17 +23,29 @@ jobs:
         with:
           node-version-file: '.nvmrc'
           cache: 'pnpm'
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
       - uses: supabase/setup-cli@v1
         with:
           version: latest
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec playwright install
-      - run: pnpm supabase start
+      - run: cp ./supabase/functions/.env.example ./supabase/functions/.env
+      - run: pnpm services:start
       - name: Run migration tests
         run: pnpm test:db
+      - name: Run function tests
+        run: pnpm test:functions
       - run: supabase link --project-ref $SUPABASE_PROJECT_ID
+      - run: supabase secrets set S3_ENDPOINT=${{ secrets.S3_ENDPOINT }}
+      - run: supabase secrets set S3_ACCESS_KEY_ID=${{ secrets.S3_ACCESS_KEY_ID }}
+      - run: supabase secrets set S3_SECRET_ACCESS_KEY=${{ secrets.S3_SECRET_ACCESS_KEY }}
+      - run: supabase secrets set S3_BUCKET_NAME=${{ secrets.S3_BUCKET_NAME }}
       - name: Push migrations
         run: supabase db push
+      - name: Push functions
+        run: supabase functions deploy
 
   smoke-test:
     needs: backend-deploy
