@@ -15,7 +15,11 @@ const config = {
 			headless: true,
 			instances: [ { browser: "chromium" } ],
 			screenshotFailures: false,
-		}
+		},
+		exclude: [
+			"**\/node_modules/**",
+			"**\/supabase/functions/**",
+		],
 	}
 }
 
