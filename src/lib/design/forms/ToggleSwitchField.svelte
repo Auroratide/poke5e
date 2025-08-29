@@ -55,6 +55,7 @@
 		gap: 1em;
 		padding: 0.5em 0;
 		inline-size: auto;
+		line-height: 1;
 	}
 
 	toggle-switch::part(track),
