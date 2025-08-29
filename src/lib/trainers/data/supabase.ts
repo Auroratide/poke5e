@@ -546,6 +546,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					id: info.id,
 					key: writeKey,
 					mimetype: newAvatar.type,
+					sizeInBytes: newAvatar.size,
 				},
 			},
 		})
@@ -559,6 +560,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			body: newAvatar,
 			headers: {
 				"Content-Type": newAvatar.type,
+				"Content-Length": newAvatar.size.toString(),
 			},
 		})
 

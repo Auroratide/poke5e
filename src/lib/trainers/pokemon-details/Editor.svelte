@@ -136,8 +136,8 @@
 		<SpeedsFieldset bind:values={speeds} {disabled} />
 		<SensesFieldset bind:values={senses} {disabled} />
 	</FormDetails>
-	<ActionArea>
+	<ActionArea error={!isValid ? "One or more fields above have an issue." : undefined}>
 		<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
-		<Button type="submit" {disabled}>Finish!</Button>
+		<Button type="submit" disabled={disabled || !isValid}>Finish!</Button>
 	</ActionArea>
 </Form>

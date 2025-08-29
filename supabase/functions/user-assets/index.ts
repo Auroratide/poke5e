@@ -44,7 +44,12 @@ export type PostResponseBody = {
 
 // deno-lint-ignore no-explicit-any
 function isValidPostRequest(body: any): body is PostRequestBody {
-	return body.type === "pokemon-avatar"
+	return body.type === "pokemon-avatar" && body.params?.sizeInBytes != null
+}
+
+const FIVE_HUNDRED_KB = 524288
+function isValidFileSize(body: PostRequestBody): boolean {
+	return body.params.sizeInBytes <= FIVE_HUNDRED_KB
 }
 
 async function POST(req: Request): Promise<Response> {
@@ -53,6 +58,12 @@ async function POST(req: Request): Promise<Response> {
 	if (!isValidPostRequest(body)) {
 		return Responses.badRequest({
 			message: "User asset type is invalid.",
+		})
+	}
+
+	if (!isValidFileSize(body)) {
+		return Responses.badRequest({
+			message: `File size must be less than ${FIVE_HUNDRED_KB} bytes.`,
 		})
 	}
 

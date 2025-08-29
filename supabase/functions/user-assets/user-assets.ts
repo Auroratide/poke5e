@@ -18,6 +18,7 @@ export type UploadUrlParams = {
 		id: PokemonId,
 		key: TrainerWriteKey,
 		mimetype: keyof typeof MimetypeExtensions,
+		sizeInBytes: number,
 	},
 }
 
@@ -38,7 +39,7 @@ export async function getUploadUrl({
 		extension: MimetypeExtensions[params.mimetype],
 	})
 
-	const uploadUrl = await userAssetsProvider.generatePresignedUploadUrl(filename, params.mimetype)
+	const uploadUrl = await userAssetsProvider.generatePresignedUploadUrl(filename, params.mimetype, params.sizeInBytes)
 
 	return {
 		filename,

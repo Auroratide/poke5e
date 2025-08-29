@@ -11,7 +11,7 @@ export class UserAssetsProvider {
 		}
 	}
 
-	async generatePresignedUploadUrl(filename: string, contentType: string): Promise<string> {
+	async generatePresignedUploadUrl(filename: string, contentType: string, contentLength: number): Promise<string> {
 		const expiresIn = 60 * 15 // 15 min
 
 		try {
@@ -19,6 +19,7 @@ export class UserAssetsProvider {
 				Bucket: this.bucket,
 				Key: filename,
 				ContentType: contentType,
+				ContentLength: contentLength,
 			})
 
 			const uploadUrl = await getSignedUrl(this.s3, command, {

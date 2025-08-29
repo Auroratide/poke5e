@@ -29,6 +29,7 @@ Deno.test("pokemon avatar", async () => {
 				id: pokemonId,
 				key: writeKey,
 				mimetype: "image/png",
+				sizeInBytes: 100,
 			},
 		}
 	})
@@ -59,6 +60,31 @@ Deno.test("pokemon avatar", async () => {
 	// then
 	const pokemonAfterDelete = await getPokemon(supabase, trainerId)
 	assertEquals(pokemonAfterDelete[0].avatar_filename, null)
+})
+
+Deno.test("File size too large", async () => {
+// given
+	const supabase = initSupabase()
+	const { writeKey } = await newTrainer(supabase)
+	const pokemonId = await newPokemon(supabase, writeKey)
+
+	// when
+	const { response } = await supabase.functions.invoke<PostResponseBody>("user-assets", {
+		body: {
+			type: "pokemon-avatar",
+			params: {
+				id: pokemonId,
+				key: writeKey,
+				mimetype: "image/png",
+				sizeInBytes: 2000000,
+			},
+		}
+	})
+
+	await response?.body?.cancel()
+
+	// then
+	assertEquals(response?.status, 400)
 })
 
 async function newTrainer(supabase: SupabaseClient) {
