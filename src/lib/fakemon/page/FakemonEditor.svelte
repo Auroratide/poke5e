@@ -7,7 +7,15 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
 	import { Fakemon } from "../Fakemon"
-	import { ActionArea, Fieldset, Form, IntField, SelectField, TextField } from "$lib/design/forms"
+	import {
+		ActionArea,
+		Fieldset,
+		Form,
+		IntField,
+		SelectField,
+		TextareaField,
+		TextField,
+	} from "$lib/design/forms"
 	import { TypeField } from "$lib/pokemon/types-2"
 	import { SpeedsFieldset } from "$lib/dnd/movement"
 	import { SensesFieldset } from "$lib/dnd/senses"
@@ -40,6 +48,7 @@
 	let savingThrows = fakemon.data.saves
 	let gender = fakemon.gender.copy()
 	let sr = fakemon.sr.copy()
+	let description = fakemon.data.description
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -62,6 +71,7 @@
 				saves: savingThrows,
 				gender: gender.data,
 				sr: sr.data,
+				description: description,
 			}),
 		})
 	}
@@ -87,6 +97,9 @@
 		<SelectField label="Hit Dice" options={hitDiceOptions} bind:value={hitDice} {disabled} />
 		<SelectField label="Size" options={sizeOptions} bind:value={size} {disabled} />
 		<SrField bind:value={sr} {disabled} />
+		<div style:grid-column="span 2">
+			<TextareaField label="Description" bind:value={description} {disabled} placeholder="The ______ Pokémon. It is known for this one rather cool thing." />
+		</div>
 	</Fieldset>
 	<GenderRatioFieldset bind:value={gender} {disabled} />
 	<TypeField bind:value={type.data} {disabled} />
