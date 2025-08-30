@@ -17,6 +17,7 @@
 	import { AttributesFieldset, SavingThrowsFieldset } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
 	import Button from "$lib/design/Button.svelte"
+	import { GenderRatioFieldset } from "$lib/creatures/gender"
 
 	const dispatch = createEventDispatcher()
 
@@ -36,6 +37,7 @@
 	let attributes = fakemon.attributes.copy()
 	let proficiencies = fakemon.skills.copy()
 	let savingThrows = fakemon.data.saves
+	let gender = fakemon.gender.copy()
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -56,6 +58,7 @@
 				attributes: attributes.data,
 				skills: proficiencies.data,
 				saves: savingThrows,
+				gender: gender.data,
 			}),
 		})
 	}
@@ -73,7 +76,7 @@
 
 <Form onsubmit={endEdit} {saving}>
 	<Fieldset title="Basic Info" columns={2}>
-		<TextField label="Species Name" bind:value={speciesName} {disabled} />
+		<TextField label="Species Name" bind:value={speciesName} {disabled} required />
 		<!-- <SelectField label="Tera" options={teraOptions} bind:value={tera.data} {disabled} /> -->
 		<IntField label="Min Level" bind:value={minLevel} min={1} max={20} {disabled} />
 		<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} />
@@ -81,6 +84,7 @@
 		<SelectField label="Hit Dice" options={hitDiceOptions} bind:value={hitDice} {disabled} />
 		<SelectField label="Size" options={sizeOptions} bind:value={size} {disabled} />
 	</Fieldset>
+	<GenderRatioFieldset bind:value={gender} {disabled} />
 	<TypeField bind:value={type.data} {disabled} />
 	<SpeedsFieldset bind:values={speeds} {disabled} />
 	<SensesFieldset bind:values={senses} {disabled} />
