@@ -2178,7 +2178,7 @@
     },
 	 {
       "id": "decorate",
-      "name": "Decoate",
+      "name": "Decorate",
       "type": "fairy",
       "power": [
         "wis",
@@ -10583,7 +10583,7 @@
     },
 		{
       "id": "spicy-extract",
-      "name": "Spice Extract",
+      "name": "Spicy Extract",
       "type": "grass",
       "power": [
 				"wis",

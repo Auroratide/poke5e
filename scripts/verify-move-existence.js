@@ -1,10 +1,7 @@
 import fs from "node:fs/promises"
 import path from "node:path"
 
-async function main() {
-	const pokemon = JSON.parse(await fs.readFile(path.join("static", "data", "pokemon.json"), { encoding: "utf-8" })).items
-	const moves = JSON.parse(await fs.readFile(path.join("static", "data", "moves.json"), { encoding: "utf-8" })).moves
-
+function auditMoves(pokemon, moves) {
 	pokemon.forEach((pokemon) => {
 		const allPokemonMoves = [].concat(
 			pokemon.moves.start ?? [],
@@ -22,6 +19,21 @@ async function main() {
 			console.log(`${pokemon.id} is missing ${missingMove}`)
 		})
 	})
+}
+
+function auditTms(pokemon) {
+	pokemon.forEach((pokemon) => {
+		if (pokemon.moves.tm?.some((it) => it > 101)) {
+			console.log(`${pokemon.id} has bad TMs`)
+		}
+	})
+}
+
+async function main() {
+	const pokemon = JSON.parse(await fs.readFile(path.join("static", "data", "pokemon.json"), { encoding: "utf-8" })).items
+	const moves = JSON.parse(await fs.readFile(path.join("static", "data", "moves.json"), { encoding: "utf-8" })).moves
+
+	auditTms(pokemon)
 }
 
 main()
