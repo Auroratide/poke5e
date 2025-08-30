@@ -10,7 +10,6 @@ import { Senses } from "$lib/dnd/senses"
 import { SkillRanks } from "$lib/dnd/skills"
 import type { Ability } from "$lib/pokemon/types"
 import { PokemonType } from "$lib/pokemon/types-2"
-import type { MarkdownString } from "$lib/rendering/markdown"
 
 export type FakemonId = string
 export type ReadKey = string
@@ -27,7 +26,7 @@ export class Fakemon extends DataClass<{
 	minLevel: number,
 	eggGroups: string[],
 	gender: Data<GenderRatio>,
-	description: MarkdownString,
+	description: string,
 	ac: number,
 	hp: number,
 	hitDice: Data<HitDice>,
