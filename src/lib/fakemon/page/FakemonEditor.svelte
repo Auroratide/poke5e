@@ -18,6 +18,7 @@
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
 	import Button from "$lib/design/Button.svelte"
 	import { GenderRatioFieldset } from "$lib/creatures/gender"
+	import { SrField } from "$lib/creatures/sr"
 
 	const dispatch = createEventDispatcher()
 
@@ -38,6 +39,7 @@
 	let proficiencies = fakemon.skills.copy()
 	let savingThrows = fakemon.data.saves
 	let gender = fakemon.gender.copy()
+	let sr = fakemon.sr.copy()
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -59,6 +61,7 @@
 				skills: proficiencies.data,
 				saves: savingThrows,
 				gender: gender.data,
+				sr: sr.data,
 			}),
 		})
 	}
@@ -83,6 +86,7 @@
 		<IntField label="HP" bind:value={hp} min={0} {disabled} />
 		<SelectField label="Hit Dice" options={hitDiceOptions} bind:value={hitDice} {disabled} />
 		<SelectField label="Size" options={sizeOptions} bind:value={size} {disabled} />
+		<SrField bind:value={sr} {disabled} />
 	</Fieldset>
 	<GenderRatioFieldset bind:value={gender} {disabled} />
 	<TypeField bind:value={type.data} {disabled} />
