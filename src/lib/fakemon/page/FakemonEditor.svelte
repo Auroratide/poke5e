@@ -106,16 +106,10 @@
 	<SpeedsFieldset bind:values={speeds} {disabled} />
 	<SensesFieldset bind:values={senses} {disabled} />
 	<AttributesFieldset bind:values={attributes} {disabled} />
-	<ProficienciesFieldset bind:values={proficiencies} {disabled} />
+	<ProficienciesFieldset bind:values={proficiencies} {disabled} noexpertise />
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
 	<ActionArea>
 		<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
 		<Button type="submit" {disabled}>Finish!</Button>
 	</ActionArea>
 </Form>
-
-<!-- TODOS
-* Handle SR correctly
-* No expertise on proficiencies here
--->
-

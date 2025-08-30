@@ -1,9 +1,24 @@
 <script lang="ts">
-	import { Fieldset, DoubleCheckboxFields, type DoubleCheckboxFieldsChangeEvent, InstructionText } from "$lib/design/forms"
+	import { Fieldset, DoubleCheckboxFields, type DoubleCheckboxFieldsChangeEvent, InstructionText, CheckboxFields } from "$lib/design/forms"
 	import { SkillRanks } from "./SkillRanks"
 
 	export let values: SkillRanks
 	export let disabled: boolean
+
+	// single
+	export let noexpertise = false
+
+	let checked = SkillRanks.list
+		.map((it) => it.name)
+		.filter((it) => values.isProficient(it))
+
+	const singleOptions = SkillRanks.list.map((it) => ({
+		name: it.name,
+		value: it.name,
+	}))
+
+	$: values = noexpertise ? SkillRanks.fromList(checked) : values
+	// /single
 
 	$: skillNames = SkillRanks.list.map((it) => ({
 		name: it.name,
@@ -21,5 +36,9 @@
 
 <Fieldset title="Proficiencies" columns={2}>
 	<InstructionText>First checkbox is for proficiency. Second checkbox is for expertise.</InstructionText>
-	<DoubleCheckboxFields label="Proficiencies" values={skillNames} {disabled} on:change={onChange} />
+	{#if noexpertise}
+		<CheckboxFields label="Proficiencies" bind:checked {disabled} values={singleOptions} />
+	{:else}
+		<DoubleCheckboxFields label="Proficiencies" values={skillNames} {disabled} on:change={onChange} />
+	{/if}
 </Fieldset>
