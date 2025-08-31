@@ -818,6 +818,9 @@ test("updating fakemon", async () => {
 		_moves_level18: ["last-resort", "thunder-fang", "hyper-beam"],
 		_moves_egg: [],
 		_moves_tm: [1, 2, 3, 4],
+		_art_attribution_name: "@auroratide",
+		_art_attribution_href: "https://auroratide.com/art",
+		_shiny_hue_rotation: 120,
 	})
 
 	await call("update_fakemon", {
@@ -873,7 +876,9 @@ test("updating fakemon", async () => {
 	expect(drakeon.moves_level18).toEqual(["last-resort", "thunder-fang", "hyper-beam"])
 	expect(drakeon.moves_egg).toEqual([])
 	expect(drakeon.moves_tm).toEqual([1, 2, 3, 4])
-	
+	expect(drakeon.art_attribution_name).toEqual("@auroratide")
+	expect(drakeon.art_attribution_href).toEqual("https://auroratide.com/art")
+	expect(drakeon.shiny_hue_rotation).toEqual(120)
 
 	expect(drakeon.prof_athletics).toEqual(false)
 	expect(drakeon.prof_acrobatics).toEqual(false)
@@ -893,6 +898,64 @@ test("updating fakemon", async () => {
 	expect(drakeon.prof_intimidation).toEqual(true)
 	expect(drakeon.prof_performance).toEqual(false)
 	expect(drakeon.prof_persuasion).toEqual(false)
+
+	// Filenames and such
+	const newFilenamesResult = await call<any>("new_fakemon_avatar_filenames", {
+		_write_key: writeKey,
+		_normal_portrait_extension: ".png",
+		_normal_sprite_extension: ".png",
+	})
+
+	const drakeonAfterFilenames = await call<any>("get_fakemon", {
+		_read_key: readKey,
+	})
+
+	expect(newFilenamesResult.normal_portrait_filename).toBeTruthy()
+	expect(newFilenamesResult.normal_sprite_filename).toBeTruthy()
+	expect(newFilenamesResult.shiny_portrait_filename).toBeNull()
+	expect(newFilenamesResult.shiny_sprite_filename).toBeNull()
+
+	expect(drakeonAfterFilenames.normal_portrait_filename).toEqual(newFilenamesResult.normal_portrait_filename)
+	expect(drakeonAfterFilenames.normal_sprite_filename).toEqual(newFilenamesResult.normal_sprite_filename)
+	expect(drakeonAfterFilenames.shiny_portrait_filename).toBeNull()
+	expect(drakeonAfterFilenames.shiny_sprite_filename).toBeNull()
+
+	const shinyFilenamesResult = await call<any>("new_fakemon_avatar_filenames", {
+		_write_key: writeKey,
+		_shiny_portrait_extension: ".png",
+		_shiny_sprite_extension: ".png",
+	})
+
+	const drakeonAfterShinies = await call<any>("get_fakemon", {
+		_read_key: readKey,
+	})
+
+	expect(shinyFilenamesResult.normal_portrait_filename).toBeNull()
+	expect(shinyFilenamesResult.normal_sprite_filename).toBeNull()
+	expect(shinyFilenamesResult.shiny_portrait_filename).toBeTruthy()
+	expect(shinyFilenamesResult.shiny_sprite_filename).toBeTruthy()
+
+	expect(drakeonAfterShinies.normal_portrait_filename).toEqual(newFilenamesResult.normal_portrait_filename)
+	expect(drakeonAfterShinies.normal_sprite_filename).toEqual(newFilenamesResult.normal_sprite_filename)
+	expect(drakeonAfterShinies.shiny_portrait_filename).toEqual(shinyFilenamesResult.shiny_portrait_filename)
+	expect(drakeonAfterShinies.shiny_sprite_filename).toEqual(shinyFilenamesResult.shiny_sprite_filename)
+
+	await call("remove_fakemon_avatars", {
+		_write_key: writeKey,
+		_remove_normal_portrait: true,
+		_remove_normal_sprite: true,
+		_remove_shiny_portrait: false,
+		_remove_shiny_sprite: false,
+	})
+
+	const drakeonAfterRemoval = await call<any>("get_fakemon", {
+		_read_key: readKey,
+	})
+
+	expect(drakeonAfterRemoval.normal_portrait_filename).toBeNull()
+	expect(drakeonAfterRemoval.normal_sprite_filename).toBeNull()
+	expect(drakeonAfterRemoval.shiny_portrait_filename).toEqual(shinyFilenamesResult.shiny_portrait_filename)
+	expect(drakeonAfterRemoval.shiny_sprite_filename).toEqual(shinyFilenamesResult.shiny_sprite_filename)
 
 	// Cleanup
 	await call("delete_fakemon", {
@@ -1192,4 +1255,7 @@ const Drakeon = () => ({
 	_moves_level18: ["last-resort", "thunder-fang", "hyper-beam"],
 	_moves_egg: [],
 	_moves_tm: [1, 2, 3, 4],
+	_art_attribution_name: null,
+	_art_attribution_href: null,
+	_shiny_hue_rotation: 0,
 })

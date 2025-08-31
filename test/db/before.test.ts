@@ -452,6 +452,20 @@ test("updating pokemon", async () => {
 		_bond_points_max: 3,
 	})
 
+	// Updating the avatar
+	await call("new_pokemon_avatar_filename", {
+		_id: pokemonId,
+		_write_key: writeKey,
+		_extension: ".png",
+	})
+
+	// Call twice to ensure most recent filename survives
+	const avatarFilename = await call<string>("new_pokemon_avatar_filename", {
+		_id: pokemonId,
+		_write_key: writeKey,
+		_extension: ".png",
+	})
+
 	const [vivillon] = await callAll<any>("get_pokemon", {
 		_trainer_id: trainerId,
 	})
@@ -522,6 +536,8 @@ test("updating pokemon", async () => {
 	expect(vivillon.rank_intimidation).toEqual(0)
 	expect(vivillon.rank_performance).toEqual(0)
 	expect(vivillon.rank_persuasion).toEqual(1)
+
+	expect(vivillon.avatar_filename).toEqual(avatarFilename)
 
 	// Cleanup
 	await call("remove_pokemon", {
