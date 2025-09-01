@@ -12,6 +12,17 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.7.8",
+		description: [
+			"New: Can upload custom images of your pokemon.",
+			"Bug fix: Fix Super Rod item descriotion.",
+			"Bug fix: Fix Mystical Fire contest effect.",
+			"Bug fix: Exeggcute can properly evolve to Alolan Exeggutor.",
+			"Bug fix: Removed bad TM ids from several pokémons' move lists.",
+			"Typo fixes: Decorate move and Spicy Extract move.",
+			"Clarify Supersweet Syrup ability.",
+		],
+	}, {
 		name: "v1.7.7",
 		description: [
 			"Show which abilities on a Pokémon are hidden.",
