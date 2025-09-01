@@ -10684,7 +10684,8 @@
 					71,
 					74,
 					78,
-					8087,
+					80,
+					87,
 					88,
 					90,
 					96,
@@ -14561,7 +14562,26 @@
 							},
 							{
 								"type": "item",
-								"value": "Leaf Stone or Alolan Exeggutor at level 8 and above with the help of an Alola Stone"
+								"value": "Leaf Stone"
+							}
+						],
+						"effects": [
+							{
+								"type": "asi",
+								"value": 11
+							}
+						]
+					},
+					{
+						"id": "alolan-exeggutor",
+						"conditions": [
+							{
+								"type": "level",
+								"value": 8
+							},
+							{
+								"type": "item",
+								"value": "Alola Stone"
 							}
 						],
 						"effects": [
@@ -94552,8 +94572,7 @@
 					87,
 					88,
 					90,
-					91,
-					102
+					91
 				]
 			},
 			"media": {
@@ -106482,7 +106501,7 @@
 					46,
 					48,
 					52,
-					566,
+					56,
 					65,
 					68,
 					70,
@@ -108186,7 +108205,8 @@
 			"gender": "1:1",
 			"evolution": {
 				"stage": "2",
-				"maxStage": "2"
+				"maxStage": "2",
+				"from": ["exeggcute"]
 			},
 			"description": "The Coconut Pokémon. As it grew taller and taller, it outgrew its reliance on psychic powers, while within it awakened the power of the sleeping dragon.",
 			"ac": 15,
@@ -112943,7 +112963,7 @@
 				"tm": [
 					6,
 					7,
-					109,
+					9,
 					10,
 					13,
 					14,
