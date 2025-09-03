@@ -1,6 +1,6 @@
+// deno-lint-ignore-file no-explicit-any
 import { assertExists, assertGreater, assertEquals } from "@std/assert"
 import { createClient, SupabaseClient } from "@supabase/supabase-js"
-import { PostResponseBody } from "../index.ts";
 import { env } from "./env.ts"
 
 const SUPABASE_OPTIONS = {
@@ -22,7 +22,7 @@ Deno.test("pokemon avatar", async () => {
 	const pokemonId = await newPokemon(supabase, writeKey)
 
 	// when
-	const { data } = await supabase.functions.invoke<PostResponseBody>("user-assets", {
+	const { data } = await supabase.functions.invoke<any>("user-assets", {
 		body: {
 			type: "pokemon-avatar",
 			params: {
@@ -46,7 +46,7 @@ Deno.test("pokemon avatar", async () => {
 	assertEquals(pokemonAfterAdd[0].avatar_filename, result.filename)
 
 	// when
-	await supabase.functions.invoke<PostResponseBody>("user-assets", {
+	await supabase.functions.invoke<any>("user-assets", {
 		method: "DELETE",
 		body: {
 			type: "pokemon-avatar",
@@ -62,14 +62,14 @@ Deno.test("pokemon avatar", async () => {
 	assertEquals(pokemonAfterDelete[0].avatar_filename, null)
 })
 
-Deno.test("File size too large", async () => {
+Deno.test("pokemon avatar too large", async () => {
 // given
 	const supabase = initSupabase()
 	const { writeKey } = await newTrainer(supabase)
 	const pokemonId = await newPokemon(supabase, writeKey)
 
 	// when
-	const { response } = await supabase.functions.invoke<PostResponseBody>("user-assets", {
+	const { response } = await supabase.functions.invoke<any>("user-assets", {
 		body: {
 			type: "pokemon-avatar",
 			params: {
@@ -77,6 +77,88 @@ Deno.test("File size too large", async () => {
 				key: writeKey,
 				mimetype: "image/png",
 				sizeInBytes: 2000000,
+			},
+		}
+	})
+
+	await response?.body?.cancel()
+
+	// then
+	assertEquals(response?.status, 400)
+})
+
+Deno.test("fakemon media", async () => {
+	// given
+	const supabase = initSupabase()
+	const { writeKey, readKey } = await newFakemon(supabase)
+
+	// when
+	const { data } = await supabase.functions.invoke<any>("user-assets", {
+		body: {
+			type: "fakemon-media",
+			params: {
+				key: writeKey,
+				normalPortrait: {
+					mimetype: "image/png",
+					sizeInBytes: 100,
+				},
+				shinyPortrait: {
+					mimetype: "image/png",
+					sizeInBytes: 100,
+				},
+			},
+		}
+	})
+
+	// then
+	const result = data?.values as any
+	assertExists(result?.normalPortrait?.filename)
+	assertGreater(result?.normalPortrait?.filename.length, 0)
+	assertExists(result?.normalPortrait?.uploadUrl)
+	assertGreater(result?.normalPortrait?.uploadUrl.length, 0)
+	assertExists(result?.shinyPortrait?.filename)
+	assertGreater(result?.shinyPortrait?.filename.length, 0)
+	assertExists(result?.shinyPortrait?.uploadUrl)
+	assertGreater(result?.shinyPortrait?.uploadUrl.length, 0)
+
+	// and
+	const fakemonAfterAdd = await getFakemon(supabase, readKey)
+	assertEquals(fakemonAfterAdd[0].normal_portrait_filename, result.normalPortrait.filename)
+	assertEquals(fakemonAfterAdd[0].shiny_portrait_filename, result.shinyPortrait.filename)
+
+	// when
+	await supabase.functions.invoke<any>("user-assets", {
+		method: "DELETE",
+		body: {
+			type: "fakemon-media",
+			params: {
+				key: writeKey,
+				normalPortrait: true,
+			},
+		}
+	})
+
+	// then
+	const fakemonAfterDelete = await getFakemon(supabase, readKey)
+	assertEquals(fakemonAfterDelete[0].normal_portrait_filename, null)
+	assertEquals(fakemonAfterDelete[0].shiny_portrait_filename, result.shinyPortrait.filename)
+})
+
+Deno.test("fakemon files too large", async () => {
+// given
+	const supabase = initSupabase()
+	const { writeKey } = await newFakemon(supabase)
+
+	// when
+	const { response } = await supabase.functions.invoke<any>("user-assets", {
+		body: {
+			type: "fakemon-media",
+			params: {
+				key: writeKey,
+				normalSprite: {
+					mimetype: "image/png",
+					sizeInBytes: 2000000,
+				},
 			},
 		}
 	})
@@ -265,3 +347,97 @@ async function getPokemon(supabase: SupabaseClient, trainerId: string) {
 	return data
 }
 
+async function newFakemon(supabase: SupabaseClient) {
+	const { data, error } = await supabase.rpc("new_fakemon", {
+		_species_name: "Drakeon",
+		_type: ["dragon"],
+		_size: "small",
+		_sr: 8,
+		_min_level: 5,
+		_egg_groups: ["field"],
+		_gender: "1:7",
+		_description: "",
+		_ac: 17,
+		_hp: 50,
+		_hit_dice: "d10",
+		_speed_walking: 30,
+		_speed_climbing: 0,
+		_speed_swimming: 0,
+		_speed_flying: 15,
+		_speed_hover: 0,
+		_speed_burrowing: 0,
+		_sense_darkvision: 0,
+		_sense_blindsight: 0,
+		_sense_tremorsense: 0,
+		_sense_truesight: 0,
+		_strength: 16,
+		_dexterity: 16,
+		_constitution: 13,
+		_intelligence: 6,
+		_wisdom: 11,
+		_charisma: 14,
+		_prof_athletics: false,
+		_prof_acrobatics: false,
+		_prof_sleight_of_hand: false,
+		_prof_stealth: false,
+		_prof_arcana: false,
+		_prof_history: false,
+		_prof_investigation: false,
+		_prof_nature: false,
+		_prof_religion: false,
+		_prof_animal_handling: false,
+		_prof_insight: false,
+		_prof_medicine: false,
+		_prof_perception: false,
+		_prof_survival: false,
+		_prof_deception: false,
+		_prof_intimidation: false,
+		_prof_performance: false,
+		_prof_persuasion: false,
+		_save_str: false,
+		_save_dex: false,
+		_save_con: false,
+		_save_int: false,
+		_save_wis: false,
+		_save_cha: false,
+		_abilities: [],
+		_hidden_abilities: [],
+		_moves_start: [],
+		_moves_level2: [],
+		_moves_level6: [],
+		_moves_level10: [],
+		_moves_level14: [],
+		_moves_level18: [],
+		_moves_egg: [],
+		_moves_tm: [],
+		_art_attribution_name: null,
+		_art_attribution_href: null,
+		_shiny_hue_rotation: 0,
+	}).single<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>()
+
+	if (error) {
+		throw new Error(error.message)
+	}
+
+	return {
+		fakemonId: data.ret_id,
+		readKey: data.ret_read_key,
+		writeKey: data.ret_write_key,
+	}
+}
+
+async function getFakemon(supabase: SupabaseClient, readKey: string) {
+	const { data, error } = await supabase.rpc("get_fakemon", {
+		_read_key: readKey,
+	}).select()
+
+	if (error) {
+		throw new Error(error.message)
+	}
+
+	return data
+}
