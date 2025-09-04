@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let variant: "solid" | "ghost" | "danger" | "success" = "solid"
+	export let variant: "solid" | "ghost" | "danger" | "success" | "big" = "solid"
 	export let type: "submit" | "button" | "reset" = "button"
 	export let align: "center" | "left" = "center"
 	export let width: "auto" | "full" = "auto"
@@ -66,6 +66,27 @@
 
 	.button.success {
 		background-color: var(--skin-success-bg);
+		color: var(--skin-bg-text);
+	}
+
+	.button.big {
+		position: relative;
+		display: block;
+		inline-size: min(15em, 100%);
+		padding: 1em 1.25em;
+		font-size: var(--font-sz-uranus);
+		overflow: hidden;
+		background-color: var(--skin-content);
+		border-radius: 2em;
+		box-shadow: var(--elev-cirrus);
+		margin-inline: auto;
+		text-decoration: none;
+		color: var(--skin-content-text);
+		text-align: center;
+	} .button.big:hover::before, .button.big:hover::after, .button.big:focus::before, .button.big:focus::after {
+		content: none;
+	} .button.big:hover, .button.big:focus {
+		background-color: var(--skin-bg);
 		color: var(--skin-bg-text);
 	}
 

@@ -1,11 +1,18 @@
 <script lang="ts">
+	import Button from "$lib/design/Button.svelte"
 	import StaticPage from "$lib/design/StaticPage.svelte"
+	import { Url } from "$lib/url"
 </script>
 
-<StaticPage title="Help Translate Poké 5e" containersize="full" height="full">
-	<section>
-		<p class="center">You can help translate this site to other languages using the chart below!</p>
-		<iframe title="matrix" frameborder="0" src="https://cryptpad.fr/sheet/#/2/sheet/edit/6ZZJPR3+06iQ+kX51fjhIO0e/embed/" />
+<StaticPage title="Help Translate Poké 5e">
+	<section class="center">
+		<p>You can help translate this site to other languages using button below! This will take you to a spreadsheet where you can input translations.</p>
+		<p>
+			<Button href="{Url.external.translations()}" variant="big">Translation Spreadsheet</Button>
+		</p>
+		<p>At the moment, the site does not support multiple languages. In the future, translations in the spreadsheet will be transferred to this site.</p>
+		<!-- Cannot work. See: https://github.com/cryptpad/cryptpad/issues/1040 -->
+		<!-- <iframe title="matrix" frameborder="0" src="???" /> -->
 	</section>
 </StaticPage>
 
@@ -13,7 +20,7 @@
 	section {
 		display: flex;
 		flex-direction: column;
-		block-size: calc(100% - 2.75em);
+		/* block-size: calc(100% - 2.75em); */
 	}
 
 	.center {
@@ -21,8 +28,8 @@
 		text-align: center;
 	}
 
-	iframe {
+	/* iframe {
 		inline-size: 100%;
 		flex: 1;
-	}
+	} */
 </style>

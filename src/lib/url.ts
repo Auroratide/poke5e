@@ -52,6 +52,8 @@ export const Url = {
 	external: {
 		auroratide: () => "https://auroratide.com",
 		github: () => "https://github.com/Auroratide/poke5e",
+		newIssue: () => "https://github.com/Auroratide/poke5e/issues/new",
 		discord: () => "https://discord.gg/6VMhR7XGqV",
+		translations: () => "https://cryptpad.fr/sheet/#/2/sheet/edit/jkST5vKSm8OSzJjru3TF47xL/embed/",
 	},
 } as const
