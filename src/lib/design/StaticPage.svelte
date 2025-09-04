@@ -5,10 +5,12 @@
 	export let title: string
 	export let subtitle: string | undefined = undefined
 	export let large: boolean = false
+	export let containersize: "full" | "half" = "half"
+	export let height: "full" | "auto" = "auto"
 </script>
 
 <main id="{MAIN_CONTENT_ID}" class:large>
-	<Container half>
+	<Container half={containersize === "half"} {height}>
 		<header>
 			<h1>{title}</h1>
 			{#if subtitle}<p>{subtitle}</p>{/if}

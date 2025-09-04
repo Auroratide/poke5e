@@ -1,8 +1,9 @@
 <script lang="ts">
 	export let half = false
+	export let height: "full" | "auto" = "auto"
 </script>
 
-<div class="container" class:half>
+<div class="container" class:half class:full-height={height === "full"}>
 	<slot></slot>
 </div>
 
@@ -12,5 +13,9 @@
 		margin: auto;
 	} .container.half {
 		max-inline-size: var(--container-half);
+	}
+
+	.full-height {
+		block-size: 100%;
 	}
 </style>
