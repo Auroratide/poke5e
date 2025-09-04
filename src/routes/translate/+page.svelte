@@ -1,9 +1,11 @@
 <script lang="ts">
 	import Button from "$lib/design/Button.svelte"
 	import StaticPage from "$lib/design/StaticPage.svelte"
+	import Title from "$lib/design/Title.svelte"
 	import { Url } from "$lib/url"
 </script>
 
+<Title value="Translation" />
 <StaticPage title="Help Translate Poké 5e">
 	<section class="center">
 		<p>You can help translate this site to other languages using button below! This will take you to a spreadsheet where you can input translations.</p>
