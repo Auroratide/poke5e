@@ -20,7 +20,7 @@
 	<dt><abbr title="Armor Class">AC</abbr></dt>
 	<dd>{pokemon.ac}</dd>
 	<dt>Nature</dt>
-	<dd class="cap">{pokemon.nature}</dd>
+	<dd class="cap">{pokemon.nature.data}</dd>
 	<dt>Bonus</dt>
 	<dd>+{pb}</dd>
 	<dt>Size</dt>

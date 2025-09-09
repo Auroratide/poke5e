@@ -10,7 +10,6 @@ import {
 	type HeldItem,
 	type InventoryItem,
 } from "../types"
-import { Natures } from "../nature"
 import type { Pokemon } from "$lib/creatures/types"
 import { TrainerDataProviderError, type StorageResource, type TrainerData, type TrainerDataProvider } from "."
 import type { SupabaseClient } from "@supabase/supabase-js"
@@ -29,6 +28,8 @@ import { Speeds } from "$lib/dnd/movement"
 import { PokemonTeraType, PokemonType } from "$lib/pokemon/types-2"
 import { PokemonGender } from "$lib/creatures/gender"
 import type { UserAssets } from "$lib/user-assets"
+import { Nature, StandardNatures } from "$lib/pokemon/nature"
+import { get } from "svelte/store"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -464,7 +465,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_species: info.pokemonId,
 			_nickname: info.nickname,
 			_type: info.type.data,
-			_nature: info.nature,
+			_nature: info.nature.data,
 			_level: info.level.data,
 			_gender: info.gender,
 			_strength: info.attributes.str.score,
@@ -596,7 +597,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			pokemonId: pokemon.id,
 			nickname: pokemon.name,
 			type: pokemon.type,
-			nature: Natures[0],
+			nature: new Nature(get(StandardNatures)[0]),
 			level: new Level(pokemon.minLevel),
 			exp: experienceNeededAtLevel(pokemon.minLevel),
 			gender: PokemonGender.None,
@@ -637,7 +638,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_write_key: writeKey,
 			_nickname: pokemon.name,
 			_species: pokemon.id,
-			_nature: Natures[0],
+			_nature: trainerPokemon.nature.data,
 			_type: pokemon.type.data,
 			_level: pokemon.minLevel,
 			_gender: PokemonGender.None,
@@ -1353,7 +1354,7 @@ const rowToPokemon = (row: PokemonRow, getStorageResource: (name: string) => Sto
 	pokemonId: row.species,
 	nickname: row.nickname,
 	type: new PokemonType(row.type.filter(PokemonType.isPokeType)),
-	nature: row.nature,
+	nature: new Nature(row.nature),
 	level: new Level(row.level),
 	exp: row.exp,
 	gender: row.gender as PokemonGender,

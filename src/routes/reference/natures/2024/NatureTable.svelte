@@ -1,6 +1,6 @@
 <script lang="ts">
 	import InfoTable from "$lib/design/InfoTable.svelte"
-	import { NatureEffect, Natures } from "$lib/trainers/nature"
+	import { StandardNature } from "$lib/pokemon/nature/StandardNature.2024"
 	import NatureRow from "./NatureRow.svelte"
 </script>
 
@@ -15,8 +15,8 @@
 		</tr>
 	</thead>
 	<tbody>
-		{#each Natures as nature, index}
-			<NatureRow name="{nature}" {index} increase={NatureEffect[nature].increase} decrease={NatureEffect[nature].decrease} />
+		{#each Object.keys(StandardNature) as nature, index}
+			<NatureRow name="{nature}" {index} effect={StandardNature[nature].effect} />
 		{/each}
 	</tbody>
 </InfoTable>

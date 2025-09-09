@@ -1,19 +1,19 @@
 <script lang="ts">
-	import type { Attribute } from "$lib/dnd/attributes"
+	import PlusMinus from "$lib/design/PlusMinus.svelte"
 
 	export let index: number
 	export let name: string
-	export let increase: Attribute
-	export let decrease: Attribute
+	export let effect: Record<string, number>
 
 	$: min = 4 * index + 1
 	$: max = 4 * index + 4
-	$: isNeutral = increase === decrease
+	$: inc = Object.entries(effect).find((it) => it[1] > 0)
+	$: dec = Object.entries(effect).find((it) => it[1] < 0)
 </script>
 
 <tr>
 	<td>{min}-{max}</td>
 	<td><strong>{name}</strong></td>
-	<td class="upper">{#if isNeutral}-{:else}+1 {increase}{/if}</td>
-	<td class="upper">{#if isNeutral}-{:else}-1 {decrease}{/if}</td>
+	<td class="upper">{#if inc == null}-{:else}<PlusMinus value={inc[1]} /> {inc[0]}{/if}</td>
+	<td class="upper">{#if dec == null}-{:else}<PlusMinus value={dec[1]} /> {dec[0]}{/if}</td>
 </tr>

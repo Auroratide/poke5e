@@ -10,14 +10,13 @@
 		ImageField,
 	} from "$lib/design/forms"
 	import { FeatureToggles } from "$lib/FeatureToggles"
+	import { Nature, NatureField } from "$lib/pokemon/nature"
 	import { PokemonTeraType } from "$lib/pokemon/types-2"
-	import { Natures, type Nature } from "$lib/trainers/nature"
 
 	const FIVE_HUNDRED_KB = 524288
 
 	export let nickname: string
 	export let nature: Nature
-	export let natureCustom: string
 	export let tera: PokemonTeraType
 	export let level: number
 	export let ac: number
@@ -37,11 +36,6 @@
 		level = e.detail.value
 	}
 
-	const natureOptions = Natures.map((it) => ({
-		name: it,
-		value: it,
-	}))
-
 	const teraOptions = PokemonTeraType.list.map((it) => ({
 		name: it,
 		value: it,
@@ -52,7 +46,7 @@
 	<Fieldset title="Basic Info">
 		<div class="grid">
 			<div style:grid-area="field1"><TextField label="Nickname" bind:value={nickname} {disabled} /></div>
-			<div style:grid-area="field2"><SelectField label="Nature" options={natureOptions} bind:value={nature} bind:other={natureCustom} {disabled} /></div>
+			<div style:grid-area="field2"><NatureField bind:value={nature} {disabled} /></div>
 			<div style:grid-area="field3"><SelectField label="Tera" options={teraOptions} bind:value={tera.data} {disabled} /></div>
 			<IntField label="Level" value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
 			<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} />
@@ -65,7 +59,7 @@
 {:else}
 	<Fieldset title="Basic Info" columns={2}>
 		<TextField label="Nickname" bind:value={nickname} {disabled} />
-		<SelectField label="Nature" options={natureOptions} bind:value={nature} bind:other={natureCustom} {disabled} />
+		<NatureField bind:value={nature} {disabled} />
 		<SelectField label="Tera" options={teraOptions} bind:value={tera.data} {disabled} />
 		<IntField label="Level" value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
 		<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} />

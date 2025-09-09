@@ -5,7 +5,6 @@ import type { Move } from "$lib/moves/types"
 import type { AbilityId } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import type { StorageResource } from "./data"
-import type { Nature } from "./nature"
 import type { Specializations } from "./specializations"
 import type { ChosenTrainerPath } from "./paths/ChosenTrainerPath"
 import type { ChosenFeat } from "$lib/feats/ChosenFeat"
@@ -16,6 +15,7 @@ import type { Senses } from "$lib/dnd/senses"
 import type { Speeds } from "$lib/dnd/movement"
 import type { PokemonTeraType, PokemonType } from "$lib/pokemon/types-2"
 import type { PokemonGender } from "$lib/creatures/gender"
+import type { Nature } from "$lib/pokemon/nature"
 
 export type Resource = {
 	current: number,

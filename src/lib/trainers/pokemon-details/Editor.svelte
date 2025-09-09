@@ -13,7 +13,6 @@
 	import { AttributesFieldset, SavingThrowsFieldset } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
 	import { createEventDispatcher } from "svelte"
-	import { CustomNatureIdentifier, isStandardNature } from "../nature"
 	import { type TrainerPokemon } from "../types"
 	import BasicInfoFieldset from "./forms/BasicInfoFieldset.svelte"
 	import AbilitiesFieldset from "./forms/AbilitiesFieldset.svelte"
@@ -38,9 +37,8 @@
 	$: disabled = saving
 
 	let nickname = pokemon.nickname
-	let nature = isStandardNature(pokemon.nature) ? pokemon.nature : CustomNatureIdentifier
+	let nature = pokemon.nature.copy()
 	let tera = pokemon.teraType?.copy() ?? new PokemonTeraType("" as TeraType) // deal with undefined teras on older pokemon
-	let natureCustom = pokemon.nature
 	let level = pokemon.level.data
 	let ac = pokemon.ac
 	let maxHp = pokemon.hp.max
@@ -76,7 +74,7 @@
 				...pokemon,
 				nickname: nickname.length > 0 ? nickname : species.name,
 				type,
-				nature: nature === "other" ? natureCustom : nature,
+				nature: nature,
 				teraType: tera,
 				level: new Level(level),
 				ac,
@@ -117,7 +115,7 @@
 </script>
 
 <Form onsubmit={endEdit} {saving}>
-	<BasicInfoFieldset bind:nickname bind:nature bind:natureCustom bind:tera={tera} bind:level bind:ac bind:maxHp bind:maxHitDice bind:isShiny originalAvatarSrc={originalAvatar?.href} bind:avatar={avatarToUpload} bind:isValid {disabled} />
+	<BasicInfoFieldset bind:nickname bind:nature bind:tera={tera} bind:level bind:ac bind:maxHp bind:maxHitDice bind:isShiny originalAvatarSrc={originalAvatar?.href} bind:avatar={avatarToUpload} bind:isValid {disabled} />
 	<GenderFieldset bind:value={gender} {disabled} />
 	<AttributesFieldset bind:values={attributes} {disabled} />
 	<AbilitiesFieldset bind:ability {species} {disabled} />
