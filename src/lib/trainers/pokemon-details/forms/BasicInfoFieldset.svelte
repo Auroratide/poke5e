@@ -46,8 +46,8 @@
 	<Fieldset title="Basic Info">
 		<div class="grid">
 			<div style:grid-area="field1"><TextField label="Nickname" bind:value={nickname} {disabled} /></div>
-			<div style:grid-area="field2"><NatureField bind:value={nature} {disabled} /></div>
-			<div style:grid-area="field3"><SelectField label="Tera" options={teraOptions} bind:value={tera.data} {disabled} /></div>
+			<div style:grid-area="field2"><SelectField label="Tera" options={teraOptions} bind:value={tera.data} {disabled} /></div>
+			<div style:grid-area="field3"><NatureField bind:value={nature} {disabled} /></div>
 			<IntField label="Level" value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
 			<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} />
 			<IntField label="Max HP" bind:value={maxHp} min={0} {disabled} />
@@ -86,6 +86,7 @@
 		.grid {
 			display: grid;
 			grid-template-columns: 1fr 11.25em;
+			grid-template-rows: 3.75em 3.75em 5em;
 			grid-auto-rows: 3.75em;
 			grid-template-areas:
 				"field1 avatar"
@@ -95,7 +96,7 @@
 		}
 
 		.image-field {
-			padding-block-start: 2.25em;
+			padding-block-start: 1.25em;
 			margin: 0;
 			max-width: none;
 		}
