@@ -12,6 +12,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.7.10",
+		description: [
+			"Bug fix: Correct Ogerpon (Cornerstone) ability.",
+			"Charizard TM list update: 28, 29 → 38, 39",
+		],
+	}, {
 		name: "v1.7.9",
 		description: [
 			"Bug fix: Allow 2018 natures to be selectable for pokemon.",
