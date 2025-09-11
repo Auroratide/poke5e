@@ -20,7 +20,9 @@
 	const onSubmit = (e: CustomEvent<SubmitDetail>) => {
 		saving = true
 
-		$fakemon.update?.info(e.detail.fakemon).then(() => {
+		$fakemon.update?.info(e.detail.fakemon, {
+			media: e.detail.newMedia,
+		}).then(() => {
 			goto(Url.fakemon($fakemon.value.data.readKey))
 		}).catch(() => {
 			saving = false

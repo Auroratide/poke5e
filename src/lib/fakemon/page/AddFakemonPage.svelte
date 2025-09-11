@@ -65,6 +65,13 @@
 			egg: [],
 			tm: [],
 		},
+		media: {
+			normalPortrait: undefined,
+			normalSprite: undefined,
+			shinyPortrait: undefined,
+			shinySprite: undefined,
+			attribution: undefined,
+		},
 	})
 	let saving = false
 

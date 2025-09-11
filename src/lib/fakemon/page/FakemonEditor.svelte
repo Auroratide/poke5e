@@ -1,6 +1,7 @@
 <script lang="ts" context="module">
 	export type SubmitDetail = {
 		fakemon: Fakemon,
+		newMedia: FakemonMedia<ImageInputValue>,
 	}
 </script>
 
@@ -15,6 +16,7 @@
 		SelectField,
 		TextareaField,
 		TextField,
+		type ImageInputValue,
 	} from "$lib/design/forms"
 	import { TypeField } from "$lib/pokemon/types-2"
 	import { SpeedsFieldset } from "$lib/dnd/movement"
@@ -27,6 +29,7 @@
 	import Button from "$lib/design/Button.svelte"
 	import { GenderRatioFieldset } from "$lib/creatures/gender"
 	import { SrField } from "$lib/creatures/sr"
+	import { FakemonMedia, FakemonMediaFieldset } from "../media"
 
 	const dispatch = createEventDispatcher()
 
@@ -49,6 +52,13 @@
 	let gender = fakemon.gender.copy()
 	let sr = fakemon.sr.copy()
 	let description = fakemon.data.description
+	let originalMedia = fakemon.media.copy()
+	let updatedMedia = new FakemonMedia<ImageInputValue>({
+		normalPortrait: undefined,
+		normalSprite: undefined,
+		shinyPortrait: undefined,
+		shinySprite: undefined,
+	})
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -73,6 +83,7 @@
 				sr: sr.data,
 				description: description,
 			}),
+			newMedia: updatedMedia,
 		})
 	}
 
@@ -90,7 +101,6 @@
 <Form onsubmit={endEdit} {saving}>
 	<Fieldset title="Basic Info" columns={2}>
 		<TextField label="Species Name" bind:value={speciesName} {disabled} required />
-		<!-- <SelectField label="Tera" options={teraOptions} bind:value={tera.data} {disabled} /> -->
 		<IntField label="Min Level" bind:value={minLevel} min={1} max={20} {disabled} />
 		<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} />
 		<IntField label="HP" bind:value={hp} min={0} {disabled} />
@@ -101,6 +111,7 @@
 			<TextareaField label="Description" bind:value={description} {disabled} placeholder="The ______ Pokémon. It is known for this one rather cool thing." />
 		</div>
 	</Fieldset>
+	<FakemonMediaFieldset originals={originalMedia} bind:updated={updatedMedia} {disabled} />
 	<GenderRatioFieldset bind:value={gender} {disabled} />
 	<TypeField bind:value={type.data} {disabled} />
 	<SpeedsFieldset bind:values={speeds} {disabled} />
