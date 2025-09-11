@@ -1,5 +1,5 @@
 import type { PostgrestError, SupabaseClient } from "@supabase/supabase-js"
-import { FakemonDataProviderError, FakemonPermissionError, type FakemonDataProvider, type ReadKey } from "./FakemonDataProvider"
+import { FakemonDataProviderError, FakemonPermissionError, type FakemonDataProvider, type ReadKey, type WriteKey } from "./FakemonDataProvider"
 import { Fakemon, type DraftFakemon } from "../Fakemon"
 import { PokemonType } from "$lib/pokemon/types-2"
 import type { Attribute } from "$lib/dnd/attributes"
@@ -7,9 +7,15 @@ import { isCreatureSize } from "$lib/dnd/CreatureSize"
 import type { Data } from "$lib/DataClass"
 import { HitDice } from "$lib/dnd/hit-dice"
 import { FakemonLocalStorage } from "./FakemonLocalStorage"
+import { FakemonMedia, type UploadedMedia } from "../media"
+import type { UserAssets } from "$lib/user-assets"
+import type { ImageInputValue } from "$lib/design/forms"
 
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
-	constructor(private readonly supabase: SupabaseClient) {}
+	constructor(
+		private readonly supabase: SupabaseClient,
+		private readonly userAssets: UserAssets,
+	) {}
 
 	async getAllKnown(): Promise<Fakemon[]> {
 		return Promise.all(FakemonLocalStorage.list().map((it) =>
@@ -27,7 +33,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 				if (!data) return undefined
 
-				const fakemon = rowToFakemon(data)
+				const fakemon = rowToFakemon(data, this.getUserAssetResource)
 
 				const inStorage = FakemonLocalStorage.get(readKey)
 				fakemon.data.writeKey = inStorage?.writeKey
@@ -74,6 +80,15 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		this.validateError("Could not edit fakemon.", error)
 
 		return data > 0
+	}
+
+	async updateMedia(writeKey: WriteKey, media: FakemonMedia<ImageInputValue>): Promise<FakemonMedia<UploadedMedia>> {
+		const [newMedia] = await Promise.all([
+			this.handleNewMedia(writeKey, media),
+			this.handleRemovedMedia(writeKey, media),
+		])
+
+		return newMedia
 	}
 
 	private validateError(message: string, e: PostgrestError | undefined) {
@@ -147,8 +162,67 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_moves_level18: fakemon.moves.level18,
 			_moves_egg: fakemon.moves.egg,
 			_moves_tm: fakemon.moves.tm,
+			_art_attribution_name: null,
+			_art_attribution_href: null,
+			_shiny_hue_rotation: 0,
 		}
 	}
+
+	private handleNewMedia = async (writeKey: WriteKey, media: FakemonMedia<ImageInputValue>): Promise<FakemonMedia<UploadedMedia>> => {
+		const { data, error } = await this.supabase.functions.invoke<PostUserAssetsResponseBody>("user-assets", {
+			method: "POST",
+			body: {
+				type: "fakemon-media",
+				params: {
+					key: writeKey,
+					...FakemonMedia.forEachType((type) => media.data[type]?.type === "new" ? {
+						mimetype: media.data[type].value.type,
+						sizeInBytes: media.data[type].value.size,
+					} : undefined)?.data,
+				},
+			},
+		})
+
+		if (error) {
+			throw new FakemonDataProviderError("Could not upload file(s) for fakemon.")
+		}
+
+		await Promise.all(
+			FakemonMedia.types
+				.map((type) => data.values[type] != null && media.data[type]?.type === "new"
+					? this.userAssets.upload(data.values[type].uploadUrl, media.data[type].value)
+					: undefined,
+				).filter((it) => it != null),
+		)
+
+		return FakemonMedia.forEachType((type) =>
+			data.values[type] != null && media.data[type]?.type === "new"
+				? this.getUserAssetResource(data.values[type].filename)
+				: undefined,
+		)
+	}
+
+	private handleRemovedMedia = async (writeKey: WriteKey, media: FakemonMedia<ImageInputValue>): Promise<void> => {
+		const { error } = await this.supabase.functions.invoke<PostUserAssetsResponseBody>("user-assets", {
+			method: "DELETE",
+			body: {
+				type: "fakemon-media",
+				params: {
+					key: writeKey,
+					...FakemonMedia.forEachType((type) => media.data[type]?.type === "remove").data,
+				},
+			},
+		})
+
+		if (error) {
+			throw new FakemonDataProviderError("Could not remove file(s) for fakemon.")
+		}
+	}
+
+	private getUserAssetResource = (name: string) => ({
+		name: name,
+		href: this.userAssets.getAssetUrl(name),
+	})
 }
 
 type Uuid = string
@@ -218,6 +292,13 @@ type FakemonRow = {
 	moves_level18: string[],
 	moves_egg: string[],
 	moves_tm: number[],
+	normal_portrait_filename?: string,
+	normal_sprite_filename?: string,
+	shiny_portrait_filename?: string,
+	shiny_sprite_filename?: string,
+	art_attribution_name?: string,
+	art_attribution_href?: string,
+	shiny_hue_rotation: number,
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -225,7 +306,7 @@ const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
 		.filter(([, val]) => val)
 		.map(([key]) => key as T)
 
-function rowToFakemon(row: FakemonRow): Fakemon {
+function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) => UploadedMedia): Fakemon {
 	return new Fakemon({
 		id: row.id,
 		readKey: row.read_key,
@@ -308,5 +389,18 @@ function rowToFakemon(row: FakemonRow): Fakemon {
 			egg: row.moves_egg,
 			tm: row.moves_tm,
 		},
+		media: {
+			normalPortrait: row.normal_portrait_filename ? getStorageResource(row.normal_portrait_filename) : undefined,
+			normalSprite: row.normal_sprite_filename ? getStorageResource(row.normal_sprite_filename) : undefined,
+			shinyPortrait: row.shiny_portrait_filename ? getStorageResource(row.shiny_portrait_filename) : undefined,
+			shinySprite: row.shiny_sprite_filename ? getStorageResource(row.shiny_sprite_filename) : undefined,
+		},
 	})
+}
+
+type PostUserAssetsResponseBody = {
+	values: Data<FakemonMedia<{
+		filename: string,
+		uploadUrl: string,
+	}>>
 }

@@ -3,6 +3,7 @@ import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { Fakemon } from "$lib/fakemon/Fakemon"
 import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
 import { stubMovePool } from "$lib/creatures/test/stubs"
+import { stubFakemonMedia } from "../media/test/stubs"
 
 export function stubFakemon(template: Partial<Data<Fakemon>> = {}): Fakemon {
 	return new Fakemon({
@@ -47,6 +48,7 @@ export function stubFakemon(template: Partial<Data<Fakemon>> = {}): Fakemon {
 			hidden: true,
 		} ],
 		moves: stubMovePool(),
+		media: stubFakemonMedia().data,
 		...template,
 	})
 }

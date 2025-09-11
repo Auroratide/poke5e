@@ -556,19 +556,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			throw new TrainerDataProviderError("Could not upload file for pokemon.")
 		}
 
-		const uploadResponse = await fetch(data.values.uploadUrl, {
-			method: "PUT",
-			body: newAvatar,
-			headers: {
-				"Content-Type": newAvatar.type,
-				"Content-Length": newAvatar.size.toString(),
-			},
-		})
-
-		if (!uploadResponse.ok) {
-			console.error(await uploadResponse.text())
-			throw new TrainerDataProviderError("Could not upload file for pokemon.")
-		}
+		await this.userAssets.upload(data.values.uploadUrl, newAvatar)
 
 		return this.getUserAssetResource(data.values.filename)
 	}

@@ -2,8 +2,10 @@
 	import { GenderRatioDisplay } from "$lib/creatures/gender"
 	import InlineMoveLinks from "$lib/creatures/InlineMoveLinks.svelte"
 	import InlineTmLinks from "$lib/creatures/InlineTmLinks.svelte"
+	import PokemonArt from "$lib/creatures/PokemonArt.svelte"
 	import * as asString from "$lib/creatures/string"
 	import FlatDl from "$lib/design/FlatDl.svelte"
+	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import { AttributeBlock } from "$lib/dnd/attributes"
 	import { DistancesDlItem } from "$lib/dnd/distance"
@@ -12,32 +14,32 @@
 	import { Fakemon } from "../Fakemon"
 
 	export let fakemon: Fakemon
-	let hasImage = false
+	let hasImage = fakemon.media.data.normalPortrait != null
 </script>
 
-<section class="info">
+<SideArtCardSection {hasImage}>
 	<VisuallyHidden><h2>Info</h2></VisuallyHidden>
-	<div class="{hasImage ? "row" : ""}">
-		<FlatDl columns={hasImage ? 1 : 2}>
-			<dt>ID</dt>
-			<dd>{fakemon.data.readKey}</dd>
-			<dt>Size</dt>
-			<dd class="cap">{fakemon.data.size}</dd>
-			<dt><abbr title="Species Rating">SR</abbr></dt>
-			<dd>{fakemon.sr.toString()}</dd>
-			<dt>Egg Group</dt>
-			<dd class="cap">{fakemon.data.eggGroups.join(", ")}</dd>
-			<dt>Min Level</dt>
-			<dd>{fakemon.data.minLevel}</dd>
-			<dt>Gender</dt>
-			<dd><GenderRatioDisplay value={fakemon.gender} /></dd>
-		</FlatDl>
-		<!-- <PokemonArt media={pokemon.media} alt="" /> -->
-	</div>
+	<FlatDl columns={hasImage ? 1 : 2}>
+		<dt>ID</dt>
+		<dd>{fakemon.data.readKey}</dd>
+		<dt>Size</dt>
+		<dd class="cap">{fakemon.data.size}</dd>
+		<dt><abbr title="Species Rating">SR</abbr></dt>
+		<dd>{fakemon.sr.toString()}</dd>
+		<dt>Egg Group</dt>
+		<dd class="cap">{fakemon.data.eggGroups.join(", ")}</dd>
+		<dt>Min Level</dt>
+		<dd>{fakemon.data.minLevel}</dd>
+		<dt>Gender</dt>
+		<dd><GenderRatioDisplay value={fakemon.gender} /></dd>
+	</FlatDl>
+	<PokemonArt slot="art" media={{
+		main: fakemon.media.data.normalPortrait.href,
+	}} alt="" />
 	<div class="small-text">
 		<Markdown value="{fakemon.data.description}" />
 	</div>
-</section>
+</SideArtCardSection>
 <section class="stats">
 	<h2>Stats</h2>
 	<FlatDl>
@@ -111,11 +113,6 @@
 
 	.upper {
 		text-transform: uppercase;
-	}
-
-	.info .row {
-		display: grid;
-		grid-template-columns: 3fr 1fr;
 	}
 
 	.space-after {

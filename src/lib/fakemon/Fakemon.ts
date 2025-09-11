@@ -10,6 +10,7 @@ import { Senses } from "$lib/dnd/senses"
 import { SkillRanks } from "$lib/dnd/skills"
 import type { Ability } from "$lib/pokemon/types"
 import { PokemonType } from "$lib/pokemon/types-2"
+import { FakemonMedia, type UploadedMedia } from "./media"
 
 export type FakemonId = string
 export type ReadKey = string
@@ -37,6 +38,7 @@ export class Fakemon extends DataClass<{
 	saves: Attribute[],
 	abilities: Pick<Ability, "id" | "hidden">[],
 	moves: MovePool,
+	media: Data<FakemonMedia<UploadedMedia>>,
 }> {
 	get type(): PokemonType { return new PokemonType(this.data.type) }
 	get gender(): GenderRatio { return new GenderRatio(this.data.gender) }
@@ -46,6 +48,7 @@ export class Fakemon extends DataClass<{
 	get senses(): Senses { return new Senses(this.data.senses) }
 	get attributes(): Attributes { return new Attributes(this.data.attributes) }
 	get skills(): SkillRanks { return new SkillRanks(this.data.skills) }
+	get media(): FakemonMedia<UploadedMedia> { return new FakemonMedia(this.data.media) }
 }
 
 export type DraftFakemon = Omit<Data<Fakemon>, "id" | "readKey" | "writeKey">

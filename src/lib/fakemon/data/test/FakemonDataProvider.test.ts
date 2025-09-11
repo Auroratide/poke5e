@@ -3,6 +3,9 @@ import { provider } from ".."
 import { FakemonPermissionError } from "../FakemonDataProvider"
 import { stubFakemon } from "$lib/fakemon/test/stubs"
 import { FakemonLocalStorage } from "../FakemonLocalStorage"
+import { stubFakemonMedia } from "$lib/fakemon/media/test/stubs"
+import type { ImageInputValue } from "$lib/design/forms"
+import { stubImageFile } from "$lib/test/files"
 
 test("add, get, and update", async () => {
 	const draft = stubFakemon({
@@ -66,4 +69,51 @@ test("getAllKnown, but one is invalid", async () => {
 
 	expect(resultNames).toHaveLength(1)
 	expect(resultNames).toContain("Drakeon")
+})
+
+test("uploading new media", async () => {
+	const draft = stubFakemon({
+		speciesName: "Droideon",
+	})
+
+	const added = await provider.add(draft.data)
+	const received = await provider.getByReadKey(added.data.readKey)
+	expect(received.data.speciesName).toEqual(draft.data.speciesName)
+
+	const result = await provider.updateMedia(added.data.writeKey, stubFakemonMedia<ImageInputValue>({
+		shinyPortrait: {
+			type: "new",
+			value: stubImageFile("img.png"),
+		},
+	}))
+
+	expect(result.data.normalPortrait).toBeUndefined()
+	expect(result.data.normalSprite).toBeUndefined()
+	expect(result.data.shinySprite).toBeUndefined()
+	expect(result.data.shinyPortrait?.name).toBeDefined()
+	expect(result.data.shinyPortrait?.href).toBeDefined()
+
+	const afterUpdate = await provider.getByReadKey(added.data.readKey)
+	expect(afterUpdate.data.media.shinyPortrait?.name).toEqual(result.data.shinyPortrait.name)
+
+	// include a deletion
+	const resultWithDelete = await provider.updateMedia(added.data.writeKey, stubFakemonMedia<ImageInputValue>({
+		normalPortrait: {
+			type: "new",
+			value: stubImageFile("img.png"),
+		},
+		shinyPortrait: {
+			type: "remove",
+		},
+	}))
+
+	expect(resultWithDelete.data.normalPortrait?.name).toBeDefined()
+	expect(resultWithDelete.data.normalSprite).toBeUndefined()
+	expect(resultWithDelete.data.shinyPortrait).toBeUndefined()
+	expect(resultWithDelete.data.shinySprite).toBeUndefined()
+
+	const afterDeletion = await provider.getByReadKey(added.data.readKey)
+
+	expect(afterDeletion.data.media.normalPortrait?.name).toEqual(resultWithDelete.data.normalPortrait.name)
+	expect(afterDeletion.data.media.shinyPortrait).toBeUndefined()
 })

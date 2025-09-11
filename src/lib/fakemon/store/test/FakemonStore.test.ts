@@ -3,6 +3,9 @@ import { test, expect, vi } from "vitest"
 import { provider } from "$lib/fakemon/data"
 import { fakemonStore } from "../FakemonStore"
 import { stubFakemon } from "$lib/fakemon/test/stubs"
+import { FakemonMedia } from "$lib/fakemon/media"
+import type { ImageInputValue } from "$lib/design/forms"
+import { stubImageFile } from "$lib/test/files"
 
 test("new fakemon", async () => {
 	// given: a draft fakemon
@@ -68,7 +71,7 @@ test("updating an entry", async () => {
 	const updatedFakemon = storedValue.value.copy({
 		speciesName: "Droideon",
 	})
-	await storedValue.update?.info(updatedFakemon)
+	await storedValue.update?.info(updatedFakemon, {})
 
 	// then: new value is updated
 	const singleStoreAfterUpdate = await fakemonStore.get(addedResult.data.readKey)
@@ -78,6 +81,36 @@ test("updating an entry", async () => {
 
 	// and: never retrieved from the provider since it was added
 	expect(getFakemon).not.toHaveBeenCalled()
+})
+
+test("updating with new media", async () => {
+	// given: fakemon had been added
+	const draft = stubFakemon({
+		speciesName: "Eeveon",
+	})
+
+	const addedResult = await fakemonStore.new(draft.data)
+	const singleStore = await fakemonStore.get(addedResult.data.readKey)
+	const storedValue = get(singleStore)
+
+	// when: updated
+	const updatedFakemon = storedValue.value.copy({
+		speciesName: "Droideon",
+	})
+	await storedValue.update?.info(updatedFakemon, {
+		media: new FakemonMedia<ImageInputValue>({
+			normalPortrait: {
+				type: "new",
+				value: stubImageFile("img.png"),
+			},
+		}),
+	})
+
+	// then: new value is updated
+	const singleStoreAfterUpdate = await fakemonStore.get(addedResult.data.readKey)
+	const storedValueAfterUpdate = get(singleStoreAfterUpdate)
+
+	expect(storedValueAfterUpdate.value.media.data.normalPortrait.name).toBeDefined()
 })
 
 test("listing fakemon", async () => {

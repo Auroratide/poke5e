@@ -12,12 +12,14 @@
 	import Button from "$lib/design/Button.svelte"
 	import { kebab } from "./kebab"
 
+	const DEFAULT_MAX_BYTES = 524288 // 500 KB
+
 	export let label: string
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
 	export let previousValue: string | undefined = undefined
 	export let currentValue: ImageInputValue | undefined
-	export let maxbytes: number | undefined = undefined
+	export let maxbytes: number = DEFAULT_MAX_BYTES
 	export let isValid = true
 
 	$: kebabName = name ?? kebab(label)
