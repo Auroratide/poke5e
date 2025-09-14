@@ -1,6 +1,6 @@
 import { GenderRatio } from "$lib/creatures/gender"
+import { MovePool } from "$lib/creatures/move-pool"
 import { SpeciesRating } from "$lib/creatures/sr"
-import type { MovePool } from "$lib/creatures/types"
 import { DataClass, type Data } from "$lib/DataClass"
 import { Attributes, type Attribute } from "$lib/dnd/attributes"
 import type { CreatureSize } from "$lib/dnd/CreatureSize"
@@ -37,7 +37,7 @@ export class Fakemon extends DataClass<{
 	skills: Data<SkillRanks>,
 	saves: Attribute[],
 	abilities: Pick<Ability, "id" | "hidden">[],
-	moves: MovePool,
+	moves: Data<MovePool>,
 	media: Data<FakemonMedia<UploadedMedia>>,
 }> {
 	get type(): PokemonType { return new PokemonType(this.data.type) }
@@ -49,6 +49,7 @@ export class Fakemon extends DataClass<{
 	get attributes(): Attributes { return new Attributes(this.data.attributes) }
 	get skills(): SkillRanks { return new SkillRanks(this.data.skills) }
 	get media(): FakemonMedia<UploadedMedia> { return new FakemonMedia(this.data.media) }
+	get moves(): MovePool { return new MovePool(this.data.moves) }
 }
 
 export type DraftFakemon = Omit<Data<Fakemon>, "id" | "readKey" | "writeKey">
