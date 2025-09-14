@@ -152,8 +152,8 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_save_int: fakemon.saves.includes("int"),
 			_save_wis: fakemon.saves.includes("wis"),
 			_save_cha: fakemon.saves.includes("cha"),
-			_abilities: fakemon.abilities.filter((it) => !it.hidden).map((it) => it.id),
-			_hidden_abilities: fakemon.abilities.filter((it) => it.hidden).map((it) => it.id),
+			_abilities: fakemon.abilities.normal,
+			_hidden_abilities: fakemon.abilities.hidden,
 			_moves_start: fakemon.moves.start,
 			_moves_level2: fakemon.moves.level2,
 			_moves_level6: fakemon.moves.level6,
@@ -372,13 +372,10 @@ function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) => Upl
 			wis: row.save_wis,
 			cha: row.save_cha,
 		}),
-		abilities: row.abilities.map((it) => ({
-			id: it,
-			hidden: false,
-		})).concat(row.hidden_abilities.map((it) => ({
-			id: it,
-			hidden: true,
-		}))),
+		abilities: {
+			normal: row.abilities,
+			hidden: row.hidden_abilities,
+		},
 		moves: {
 			start: row.moves_start,
 			level2: row.moves_level2,

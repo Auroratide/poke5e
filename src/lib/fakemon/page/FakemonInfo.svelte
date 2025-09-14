@@ -9,6 +9,7 @@
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import { AttributeBlock } from "$lib/dnd/attributes"
 	import { DistancesDlItem } from "$lib/dnd/distance"
+	import { AbilityPoolInfo } from "$lib/pokemon/ability"
 	import { TypeEffectiveness } from "$lib/pokemon/types-2"
 	import Markdown from "$lib/rendering/Markdown.svelte"
 	import { Fakemon } from "../Fakemon"
@@ -61,13 +62,10 @@
 		<TypeEffectiveness type={fakemon.type} />
 	</FlatDl>
 </section>
-<!-- <section class="abilities">
+<section class="abilities">
 	<h2>Abilities</h2>
-	{#each fakemon.data.abilities as ability}
-		<p>TODO</p>
-		<p><strong>{ability.name}:</strong> {ability.description}</p>
-	{/each}
-</section> -->
+	<AbilityPoolInfo value={fakemon.abilities} />
+</section>
 <section class="moves">
 	<h2>Moves</h2>
 	<FlatDl>

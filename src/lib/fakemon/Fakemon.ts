@@ -8,7 +8,7 @@ import { HitDice } from "$lib/dnd/hit-dice"
 import { Speeds } from "$lib/dnd/movement"
 import { Senses } from "$lib/dnd/senses"
 import { SkillRanks } from "$lib/dnd/skills"
-import type { Ability } from "$lib/pokemon/types"
+import { AbilityPool } from "$lib/pokemon/ability"
 import { PokemonType } from "$lib/pokemon/types-2"
 import { FakemonMedia, type UploadedMedia } from "./media"
 
@@ -36,7 +36,7 @@ export class Fakemon extends DataClass<{
 	attributes: Data<Attributes>,
 	skills: Data<SkillRanks>,
 	saves: Attribute[],
-	abilities: Pick<Ability, "id" | "hidden">[],
+	abilities: Data<AbilityPool>,
 	moves: Data<MovePool>,
 	media: Data<FakemonMedia<UploadedMedia>>,
 }> {
@@ -50,6 +50,7 @@ export class Fakemon extends DataClass<{
 	get skills(): SkillRanks { return new SkillRanks(this.data.skills) }
 	get media(): FakemonMedia<UploadedMedia> { return new FakemonMedia(this.data.media) }
 	get moves(): MovePool { return new MovePool(this.data.moves) }
+	get abilities(): AbilityPool { return new AbilityPool(this.data.abilities) }
 }
 
 export type DraftFakemon = Omit<Data<Fakemon>, "id" | "readKey" | "writeKey">
