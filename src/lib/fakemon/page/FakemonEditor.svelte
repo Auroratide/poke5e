@@ -30,6 +30,7 @@
 	import { GenderRatioFieldset } from "$lib/creatures/gender"
 	import { SrField } from "$lib/creatures/sr"
 	import { FakemonMedia, FakemonMediaFieldset } from "../media"
+	import { MovePool, MovePoolFieldset } from "$lib/creatures/move-pool"
 
 	const dispatch = createEventDispatcher()
 
@@ -59,6 +60,7 @@
 		shinyPortrait: undefined,
 		shinySprite: undefined,
 	})
+	let movePool = fakemon.moves.copy()
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -82,6 +84,7 @@
 				gender: gender.data,
 				sr: sr.data,
 				description: description,
+				moves: movePool.data,
 			}),
 			newMedia: updatedMedia,
 		})
@@ -119,6 +122,7 @@
 	<AttributesFieldset bind:values={attributes} {disabled} />
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} noexpertise />
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
+	<MovePoolFieldset bind:value={movePool} {disabled} />
 	<ActionArea>
 		<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
 		<Button type="submit" {disabled}>Finish!</Button>
