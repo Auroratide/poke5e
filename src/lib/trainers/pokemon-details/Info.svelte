@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { LearnedMove, Trainer, TrainerPokemon } from "../types"
-	import type { Pokemon } from "$lib/creatures/types"
 	import { createEventDispatcher } from "svelte"
 	import BasicInfo from "./BasicInfo.svelte"
 	import HealthInfo, { type UpdateDetail as HealthUpdateDetail } from "../info/HealthInfo.svelte"
@@ -11,19 +10,20 @@
 	import MovesInfo from "./MovesInfo.svelte"
 	import AbilitiesInfo from "./AbilitiesInfo.svelte"
 	import NotesInfo from "./NotesInfo.svelte"
-	import PokemonArt from "$lib/creatures/PokemonArt.svelte"
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 	import HeldItemsInfo from "./HeldItemsInfo.svelte"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import FeatsInfo from "$lib/feats/FeatsInfo.svelte"
 	import BondInfo, { type UpdateDetail as BondUpdateDetail } from "$lib/pokemon/bond/BondInfo.svelte"
 	import { TypeEffectiveness } from "$lib/pokemon/types-2"
+	import type { PokemonSpecies } from "$lib/creatures/species"
+	import { SpeciesPortrait } from "$lib/creatures/media"
 
 	const dispatch = createEventDispatcher()
 
 	export let trainer: Trainer
 	export let pokemon: TrainerPokemon
-	export let species: Pokemon
+	export let species: PokemonSpecies
 	export let editable: boolean
 
 	$: hasImage = pokemon.avatar != null || species.media != null
@@ -79,7 +79,7 @@
 		/>
 	</div>
 	<StatsInfo {pokemon} {species} />
-	<PokemonArt slot="art" media={species.media} avatar={pokemon.avatar} alt="" shiny={pokemon.isShiny} />
+	<SpeciesPortrait slot="art" media={species.media} avatar={pokemon.avatar} alt="" shiny={pokemon.isShiny} />
 	<BondInfo slot="after-art" value={pokemon.bond} {editable} on:update={onUpdateBond} />
 </SideArtCardSection>
 <section class="stats">
@@ -99,7 +99,7 @@
 </section>
 <section>
 	<h2>Abilities & Items</h2>
-	<AbilitiesInfo {pokemon} {species} />
+	<AbilitiesInfo {pokemon} />
 	<HeldItemsInfo {pokemon} />
 </section>
 {#if pokemon.feats.length > 0}

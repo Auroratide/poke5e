@@ -1,14 +1,14 @@
 <script lang="ts">
-	import type { PokemonMedia } from "./types"
 	import { assets } from "$app/paths"
+	import type { SpeciesMedia, SpeciesMediaType, UploadedMedia } from "./SpeciesMedia"
 
-	export let media: PokemonMedia
+	export let media: SpeciesMedia<UploadedMedia>
 	export let alt: string
 	export let shiny: boolean = false
 
-	$: imgKey = "sprite" + (shiny ? "Shiny" : "")
-	$: isExternal = /^http/.test(media?.sprite)
-	$: sprite = media?.[imgKey] ?? media?.sprite
+	$: imgKey = (shiny ? "shiny" : "normal") + "Sprite" as SpeciesMediaType
+	$: isExternal = /^http/.test(media?.data.normalSprite.href)
+	$: sprite = media?.data?.[imgKey].href
 	$: src = isExternal ? sprite : `${assets}${sprite}`
 </script>
 

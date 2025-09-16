@@ -9,14 +9,14 @@
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import { Rester } from "$lib/poke5e/resting"
 	import Loader from "$lib/design/Loader.svelte"
-	import { pokemon as pokeData } from "$lib/creatures/store"
+	import { SpeciesStore } from "$lib/creatures/species"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
 	
 	$: canEdit = $trainer.update != null
 	$: pokemon = $trainer.pokemon.find((it) => it.id === id)
-	$: species = $pokeData?.find((it) => it.id === pokemon?.pokemonId)
+	$: species = $SpeciesStore?.find((it) => it.data.id === pokemon?.pokemonId)
 
 	let saving = false
 	const update = (e: CustomEvent<TrainerPokemon>) => {

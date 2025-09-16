@@ -1,21 +1,21 @@
 <script lang="ts">
 	import type { TrainerPokemon } from "$lib/trainers/types"
-	import { pokemon as allPokemon } from "$lib/creatures/store"
-	import PokemonSprite from "$lib/creatures/PokemonSprite.svelte"
+	import { SpeciesSprite } from "$lib/creatures/media"
+	import { SpeciesStore } from "$lib/creatures/species"
 
 	export let pokemon: TrainerPokemon[]
 	export let darken: boolean = false
 
 	$: allMedia = pokemon.map((fromTrainer) =>
-		$allPokemon?.find((species) =>
-			species.id === fromTrainer.pokemonId,
+		$SpeciesStore?.find((species) =>
+			species.data.id === fromTrainer.pokemonId,
 		),
 	).filter((it) => it != null).map((it) => it.media)
 </script>
 
 <figure aria-hidden="true" class:darken>
 	{#each allMedia as media}
-		<PokemonSprite {media} alt="" />
+		<SpeciesSprite {media} alt="" />
 	{/each}
 </figure>
 

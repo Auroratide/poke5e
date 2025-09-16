@@ -40,13 +40,10 @@ export function stubFakemon(template: Partial<Data<Fakemon>> = {}): Fakemon {
 			intimidation: 1,
 		}).data,
 		saves: ["dex"],
-		abilities: [ {
-			id: "intimidate",
-			hidden: false,
-		}, {
-			id: "inner-focus",
-			hidden: true,
-		} ],
+		abilities: {
+			normal: ["intimidate"],
+			hidden: ["inner-focus"],
+		},
 		moves: stubMovePool(),
 		media: stubFakemonMedia().data,
 		...template,

@@ -54,7 +54,10 @@
 			"persuasion": 0,
 		},
 		saves: [],
-		abilities: [],
+		abilities: {
+			normal: [],
+			hidden: [],
+		},
 		moves: {
 			start: [],
 			level2: [],
@@ -70,7 +73,6 @@
 			normalSprite: undefined,
 			shinyPortrait: undefined,
 			shinySprite: undefined,
-			attribution: undefined,
 		},
 	})
 	let saving = false

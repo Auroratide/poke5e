@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { LearnedMove, PokemonId, TrainerPokemon } from "$lib/trainers/types"
-	import { pokemon as pokeData } from "$lib/creatures/store"
 	import Loader from "$lib/design/Loader.svelte"
 	import Info from "./Info.svelte"
 	import Card from "$lib/design/Card.svelte"
@@ -11,13 +10,14 @@
 	import { Url } from "$lib/url"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import { TypeTag } from "$lib/pokemon/types-2"
+	import { SpeciesStore } from "$lib/creatures/species"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
 
 	$: canEdit = $trainer.update != null
 	$: pokemon = $trainer.pokemon.find((it) => it.id === id)
-	$: species = $pokeData?.find((it) => it.id === pokemon?.pokemonId)
+	$: species = $SpeciesStore?.find((it) => it.data.id === pokemon?.pokemonId)
 
 	const onUpdateHealth = (e: CustomEvent<TrainerPokemon>) => {
 		$trainer.update?.pokemon(e.detail, {
@@ -46,7 +46,7 @@
 			{#if canEdit}
 				<ActionArea>
 					<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="ghost">Remove</Button>
-					{#if species.evolution?.to?.length > 0}
+					{#if species.data.evolution?.to?.length > 0}
 						<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="ghost">Evolve</Button>
 					{/if}
 					<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.restPokemon)}" variant="success">Rest</Button>

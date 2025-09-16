@@ -1,16 +1,16 @@
 <script lang="ts">
-	import type { Pokemon } from "$lib/creatures/types"
 	import type { TrainerPokemon } from "../types"
 	import Level from "$lib/design/Level.svelte"
 	import { GenderIcon } from "$lib/creatures/gender"
+	import type { PokemonSpecies } from "$lib/creatures/species"
 
 	export let pokemon: TrainerPokemon
-	export let species: Pokemon
+	export let species: PokemonSpecies
 </script>
 
 <div class="grid">
 	<span class="name">
-		<span>{species.name}</span>
+		<span>{species.data.name}</span>
 		<span class="gender">
 			<GenderIcon gender={pokemon.gender} />
 		</span>
