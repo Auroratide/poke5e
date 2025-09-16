@@ -30,8 +30,8 @@
 	}
 </script>
 
-<Title value="Edit {$fakemon.value.data.speciesName}" />
-<Card title="Edit {$fakemon.value.data.speciesName}">
+<Title value="Edit {$fakemon.value.data.species.name}" />
+<Card title="Edit {$fakemon.value.data.species.name}">
 	{#if canEdit}
 		<FakemonEditor fakemon={$fakemon.value} on:submit={onSubmit} on:cancel={onCancel} {saving} />
 	{:else}

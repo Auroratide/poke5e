@@ -3,11 +3,11 @@ import type { StoredFakemon } from "./FakemonStore"
 import type { FakemonDataProvider } from "../data/FakemonDataProvider"
 import type { Fakemon } from "../Fakemon"
 import { error } from "$lib/design/errors/store"
-import { FakemonMedia } from "../media"
 import type { ImageInputValue } from "$lib/design/forms"
+import { SpeciesMedia } from "$lib/creatures/media"
 
 export type UpdateInfoOptions = {
-	media?: FakemonMedia<ImageInputValue>,
+	media?: SpeciesMedia<ImageInputValue>,
 }
 
 export class FakemonStoreUpdater {
@@ -21,11 +21,11 @@ export class FakemonStoreUpdater {
 			if (options.media != null) {
 				const updatedMedia = await this.provider.updateMedia(updatedFakemon.data.writeKey, options.media)
 
-				FakemonMedia.types.forEach((type) => {
+				SpeciesMedia.types.forEach((type) => {
 					if (options.media.data[type]?.type === "remove") {
-						updatedFakemon.data.media[type] = undefined
+						updatedFakemon.data.species.media[type] = undefined
 					} else if (options.media.data[type]?.type === "new") {
-						updatedFakemon.data.media[type] = updatedMedia.data[type]
+						updatedFakemon.data.species.media[type] = updatedMedia.data[type]
 					}
 				})
 			}

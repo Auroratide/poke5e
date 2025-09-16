@@ -3,20 +3,23 @@ import { test, expect, vi } from "vitest"
 import { provider } from "$lib/fakemon/data"
 import { fakemonStore } from "../FakemonStore"
 import { stubFakemon } from "$lib/fakemon/test/stubs"
-import { FakemonMedia } from "$lib/fakemon/media"
 import type { ImageInputValue } from "$lib/design/forms"
 import { stubImageFile } from "$lib/test/files"
+import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
+import { SpeciesMedia } from "$lib/creatures/media"
 
 test("new fakemon", async () => {
 	// given: a draft fakemon
 	const getFakemon = vi.spyOn(provider, "getByReadKey")
 
 	const draft = stubFakemon({
-		speciesName: "Eeveon",
+		species: stubPokemonSpecies({
+			name: "Eeveon",
+		}).data,
 	})
 
 	// when: it is added
-	const addedResult = await fakemonStore.new(draft.data)
+	const addedResult = await fakemonStore.new(draft.data.species)
 
 	const singleStore = await fakemonStore.get(addedResult.data.readKey)
 	const storedValue = get(singleStore)
@@ -32,10 +35,12 @@ test("store remembers", async () => {
 	const getFakemon = vi.spyOn(provider, "getByReadKey")
 
 	const draft = stubFakemon({
-		speciesName: "Eeveon",
+		species: stubPokemonSpecies({
+			name: "Eeveon",
+		}).data,
 	})
 
-	const eeveon = await provider.add(draft.data)
+	const eeveon = await provider.add(draft.data.species)
 
 	// when: it is fetched
 	const singleStore = await fakemonStore.get(eeveon.data.readKey)
@@ -60,16 +65,20 @@ test("updating an entry", async () => {
 	const getFakemon = vi.spyOn(provider, "getByReadKey")
 
 	const draft = stubFakemon({
-		speciesName: "Eeveon",
+		species: stubPokemonSpecies({
+			name: "Eeveon",
+		}).data,
 	})
 
-	const addedResult = await fakemonStore.new(draft.data)
+	const addedResult = await fakemonStore.new(draft.data.species)
 	const singleStore = await fakemonStore.get(addedResult.data.readKey)
 	const storedValue = get(singleStore)
 
 	// when: updated
 	const updatedFakemon = storedValue.value.copy({
-		speciesName: "Droideon",
+		species: storedValue.value.species.copy({
+			name: "Droideon",
+		}).data,
 	})
 	await storedValue.update?.info(updatedFakemon, {})
 
@@ -77,7 +86,7 @@ test("updating an entry", async () => {
 	const singleStoreAfterUpdate = await fakemonStore.get(addedResult.data.readKey)
 	const storedValueAfterUpdate = get(singleStoreAfterUpdate)
 
-	expect(storedValueAfterUpdate.value.data.speciesName).toEqual("Droideon")
+	expect(storedValueAfterUpdate.value.data.species.name).toEqual("Droideon")
 
 	// and: never retrieved from the provider since it was added
 	expect(getFakemon).not.toHaveBeenCalled()
@@ -86,19 +95,23 @@ test("updating an entry", async () => {
 test("updating with new media", async () => {
 	// given: fakemon had been added
 	const draft = stubFakemon({
-		speciesName: "Eeveon",
+		species: stubPokemonSpecies({
+			name: "Eeveon",
+		}).data,
 	})
 
-	const addedResult = await fakemonStore.new(draft.data)
+	const addedResult = await fakemonStore.new(draft.data.species)
 	const singleStore = await fakemonStore.get(addedResult.data.readKey)
 	const storedValue = get(singleStore)
 
 	// when: updated
 	const updatedFakemon = storedValue.value.copy({
-		speciesName: "Droideon",
+		species: storedValue.value.species.copy({
+			name: "Droideon",
+		}).data,
 	})
 	await storedValue.update?.info(updatedFakemon, {
-		media: new FakemonMedia<ImageInputValue>({
+		media: new SpeciesMedia<ImageInputValue>({
 			normalPortrait: {
 				type: "new",
 				value: stubImageFile("img.png"),
@@ -110,21 +123,29 @@ test("updating with new media", async () => {
 	const singleStoreAfterUpdate = await fakemonStore.get(addedResult.data.readKey)
 	const storedValueAfterUpdate = get(singleStoreAfterUpdate)
 
-	expect(storedValueAfterUpdate.value.media.data.normalPortrait.name).toBeDefined()
+	expect(storedValueAfterUpdate.value.species.media.data.normalPortrait.name).toBeDefined()
 })
 
 test("listing fakemon", async () => {
 	// given: some fakemon in the db
-	const eeveonDraft = stubFakemon({ speciesName: "Eeveon" })
-	const drakeonDraft = stubFakemon({ speciesName: "Drakeon" })
+	const eeveonDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Eeveon",
+		}).data,
+	})
+	const drakeonDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Drakeon",
+		}).data,
+	})
 
-	await provider.add(eeveonDraft.data)
-	await provider.add(drakeonDraft.data)
+	await provider.add(eeveonDraft.data.species)
+	await provider.add(drakeonDraft.data.species)
 
 	// when: we get the list
 	const listStore = await fakemonStore.all()
 	const listResult = get(listStore)
-	const resultNames = listResult.map((it) => it.data.speciesName)
+	const resultNames = listResult.map((it) => it.data.species.name)
 	
 	// then: it contains all the fakemon
 	expect(resultNames).toContain("Eeveon")

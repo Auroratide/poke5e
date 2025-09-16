@@ -4,6 +4,7 @@ import { Level } from "$lib/dnd/level"
 import { Speeds } from "$lib/dnd/movement"
 import { Senses } from "$lib/dnd/senses"
 import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
+import { Nature } from "$lib/pokemon/nature"
 import { PokemonTeraType, PokemonType } from "$lib/pokemon/types-2"
 import { createEmptyChosenTrainerPath } from "../paths"
 import { stubSpecializations } from "../specializations/test/stubs"
@@ -29,7 +30,7 @@ export function stubTrainerPokemon(template: Partial<TrainerPokemon> = {}): Trai
 		pokemonId: "eevee",
 		nickname: "Softie",
 		type: new PokemonType(["normal"]),
-		nature: "Lonely",
+		nature: new Nature("Lonely"),
 		level: new Level(4),
 		exp: 0,
 		gender: PokemonGender.Female,
