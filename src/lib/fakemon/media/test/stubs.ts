@@ -7,7 +7,6 @@ export function stubFakemonMedia<T = UploadedMedia>(template: Data<FakemonMedia<
 		normalSprite: undefined,
 		shinyPortrait: undefined,
 		shinySprite: undefined,
-		attribution: undefined,
 		...template,
 	})
 }

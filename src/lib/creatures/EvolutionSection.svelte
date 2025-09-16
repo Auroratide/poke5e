@@ -1,13 +1,13 @@
 <script lang="ts">
-	import type { Pokemon } from "./types"
 	import { pokemon as allPokemon } from "./store"
 	import { moves } from "$lib/moves/store"
 	import { base } from "$app/paths"
 	import * as pokemonString from "$lib/pokemon/string"
 	import * as creatureString from "$lib/creatures/string"
+	import type { PokemonSpecies } from "./species"
 
-	export let pokemon: Pokemon
-	$: evolution = pokemon.evolution
+	export let pokemon: PokemonSpecies
+	$: evolution = pokemon.data.evolution
 </script>
 
 
@@ -19,7 +19,7 @@
 	{#if $allPokemon && $moves}
 		{#if evolution.from?.length > 0}
 			<p>
-				{pokemon.name} evolves from
+				{pokemon.data.name} evolves from
 				{#each evolution.from as fromId, i}
 					{@const from = $allPokemon.find((it) => it.id === fromId)}
 					<a href="{base}/pokemon/{from.id}">{from.name}</a>{#if i !== evolution.from.length - 1}, {/if}{/each}.
@@ -27,7 +27,7 @@
 		{/if}
 		{#if evolution.to?.length > 0}
 			{#each evolution.to as to (to.id)}
-					<p>{@html pokemonString.evolution(pokemon.name, to, creatureString.evolutionWithLinks(base, $allPokemon, $moves))}</p>
+				<p>{@html pokemonString.evolution(pokemon.data.name, to, creatureString.evolutionWithLinks(base, $allPokemon, $moves))}</p>
 			{/each}
 		{:else}
 			<p>This pokemon is at its highest evolutionary state.</p>

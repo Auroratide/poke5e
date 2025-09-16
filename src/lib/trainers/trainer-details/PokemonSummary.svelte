@@ -2,24 +2,24 @@
 	import type { ReadWriteKey, TrainerPokemon } from "../types"
 	import ResourceBar from "$lib/design/ResourceBar.svelte"
 	import { Url } from "$lib/url"
-	import { pokemon as allPokemon } from "$lib/creatures/store"
 	import { items } from "$lib/items/store"
 	import { getItemDetails } from "$lib/pokemon/held-items"
-	import PokemonSprite from "$lib/creatures/PokemonSprite.svelte"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 	import ItemSprite from "$lib/items/ItemSprite.svelte"
 	import { GenderIcon } from "$lib/creatures/gender"
+	import { SpeciesSprite } from "$lib/creatures/media"
+	import { SpeciesStore } from "$lib/creatures/species"
 
 	export let trainer: ReadWriteKey
 	export let pokemon: TrainerPokemon
 
-	$: species = $allPokemon?.find((it) => it.id === pokemon.pokemonId)
+	$: species = $SpeciesStore?.find((it) => it.data.id === pokemon.pokemonId)
 	$: heldItem = pokemon.items.length > 0 ? getItemDetails(pokemon.items[0], $items) : undefined
 </script>
 
 <a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded">
 	<span style:grid-area="sprite" class="max-height holding-item jumping-animation">
-		<PokemonSprite media={species?.media} alt={species?.name} shiny={pokemon.isShiny} />
+		<SpeciesSprite media={species?.media} alt={species?.data.name} shiny={pokemon.isShiny} />
 		<span class="shadow"></span>
 		{#if heldItem != null}
 			<span class="held-item">

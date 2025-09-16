@@ -4,14 +4,14 @@
 	import { ActionArea, Fieldset, Form, IntField, RadioFields, HintText } from "$lib/design/forms"
 	import { PokemonResting } from "./Rest"
 	import type { TrainerPokemon } from "$lib/trainers/types"
-	import type { Pokemon } from "$lib/creatures/types"
 	import { rulesVersion } from "$lib/design/rules-version"
-	import PokemonArt from "$lib/creatures/PokemonArt.svelte"
+	import { SpeciesPortrait } from "$lib/creatures/media"
+	import type { PokemonSpecies } from "$lib/creatures/species"
 
 	const dispatch = createEventDispatcher()
 
 	export let pokemon: TrainerPokemon
-	export let species: Pokemon
+	export let species: PokemonSpecies
 	export let saving: boolean = false
 	$: disabled = saving
 	$: hitDiceSize = pokemon.customHitDiceSize ?? species.hitDice
@@ -46,7 +46,7 @@
 		<Fieldset title="Choose one" columns={1}>
 			<RadioFields label="Rest Choices" bind:checked={restToPerform} values={options} required />
 		</Fieldset>
-		<PokemonArt avatar={pokemon.avatar} media={species.media} shiny={pokemon.isShiny} alt="{pokemon.nickname ?? species.name}" />
+		<SpeciesPortrait avatar={pokemon.avatar} media={species.media} shiny={pokemon.isShiny} alt="{pokemon.nickname ?? species.data.name}" />
 	</div>
 	<section style:min-height="8em">
 		{#if rest != null}

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PokemonId } from "$lib/trainers/types"
-	import { pokemon as pokeData } from "$lib/creatures/store"
 	import Loader from "$lib/design/Loader.svelte"
 	import Card from "$lib/design/Card.svelte"
 	import Button from "$lib/design/Button.svelte"
@@ -10,14 +9,15 @@
 	import Saveable from "$lib/design/Saveable.svelte"
 	import { goto } from "$app/navigation"
 	import RequirePokemon from "./RequirePokemon.svelte"
-	import PokemonArt from "$lib/creatures/PokemonArt.svelte"
+	import { SpeciesPortrait } from "$lib/creatures/media"
+	import { SpeciesStore } from "$lib/creatures/species"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
 	
 	$: canEdit = $trainer.update != null
 	$: pokemon = $trainer.pokemon.find((it) => it.id === id)
-	$: species = $pokeData?.find((it) => it.id === pokemon?.pokemonId)
+	$: species = $SpeciesStore?.find((it) => it.data.id === pokemon?.pokemonId)
 
 	let saving = false
 	const remove = () => {
@@ -34,28 +34,28 @@
 	{#if species}
 		<Card title="Remove {pokemon.nickname}?">
 			{#if canEdit}
-					<Saveable {saving}>
-						<section>
-							<p>Are you sure you want to remove {pokemon.nickname} from {$trainer.info.name}'s team?</p>
-							<p>Removal is permanent and cannot be undone!</p>
-							{#if species.media?.main}
-									<p class="centered greyscale">
-										<PokemonArt media={species.media} alt={species.name} />
-									</p>
-							{/if}
-							<ActionArea>
-									<Button href="{base}/trainers?id={$trainer.info.readKey}&pokemon={pokemon.id}" variant="ghost">Cancel</Button>
-									<Button on:click={remove} variant="danger">Delete</Button>
-							</ActionArea>
-						</section>
-					</Saveable>
-			{:else}
+				<Saveable {saving}>
 					<section>
-						<p>You do not have permission to remove this pokemon.</p>
+						<p>Are you sure you want to remove {pokemon.nickname} from {$trainer.info.name}'s team?</p>
+						<p>Removal is permanent and cannot be undone!</p>
+						{#if species.media?.data.normalPortrait}
+							<p class="centered greyscale">
+								<SpeciesPortrait media={species.media} alt={species.data.name} />
+							</p>
+						{/if}
 						<ActionArea>
-							<Button href="{base}/trainers?id={$trainer.info.readKey}&pokemon={pokemon.id}">Go Back</Button>
+							<Button href="{base}/trainers?id={$trainer.info.readKey}&pokemon={pokemon.id}" variant="ghost">Cancel</Button>
+							<Button on:click={remove} variant="danger">Delete</Button>
 						</ActionArea>
 					</section>
+				</Saveable>
+			{:else}
+				<section>
+					<p>You do not have permission to remove this pokemon.</p>
+					<ActionArea>
+						<Button href="{base}/trainers?id={$trainer.info.readKey}&pokemon={pokemon.id}">Go Back</Button>
+					</ActionArea>
+				</section>
 			{/if}
 		</Card>
 	{:else}
