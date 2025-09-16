@@ -11,7 +11,7 @@
 	import { fakemonListSorter, fakemonListFilter } from "./sort-and-filter"
 
 	export let fakemon: FakemonListStore
-	$: filtered = $fakemon.filter((it) => it.data.speciesName.toLocaleLowerCase().includes($fakemonListFilter.toLocaleLowerCase()))
+	$: filtered = $fakemon.filter((it) => it.data.species.name.toLocaleLowerCase().includes($fakemonListFilter.toLocaleLowerCase()))
 
 	const byStringField = (field: (m: Fakemon) => string) =>
 		(l: Fakemon, r: Fakemon) => field(l).localeCompare(field(r))
@@ -25,10 +25,10 @@
 	<SearchField id="filter-fakemon" label="Search" bind:value={$fakemonListFilter} matched={filtered.length} max={$fakemon.length} />
 </div>
 <SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$fakemonListSorter} headers={[ {
-	key: "name", name: "Name", ratio: 1, sort: byStringField(it => it.data.speciesName),
+	key: "name", name: "Name", ratio: 1, sort: byStringField(it => it.data.species.name),
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
-		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.fakemon(item.data.readKey)}">{item.data.speciesName}</a></BubbleRow.Cell>
+		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.fakemon(item.data.readKey)}">{item.data.species.name}</a></BubbleRow.Cell>
 	</BubbleRow.Row>
 </SortableTable>
 

@@ -13,11 +13,12 @@
 	import type { PokemonSpecies } from "./PokemonSpecies"
 	import * as asString from "$lib/creatures/string"
 	import Card from "$lib/design/Card.svelte"
-	import { SpeciesPortrait } from "../media"
+	import { SpeciesPortrait } from "$lib/creatures/media"
 	import EvolutionSection from "../EvolutionSection.svelte"
 
 	export let value: PokemonSpecies
-	let hasImage = value.media.data.normalPortrait != null
+	$: hasImage = value.media.data.normalPortrait != null
+	$: useId = value.data.number <= 0
 </script>
 
 <Card title={value.data.name}>
@@ -25,8 +26,8 @@
 	<SideArtCardSection {hasImage}>
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<FlatDl columns={hasImage ? 1 : 2}>
-			<dt>Number</dt>
-			<dd>{value.numberAsString()}</dd>
+			<dt>{useId ? "ID" : "Number"}</dt>
+			<dd>{useId ? value.data.id : value.numberAsString()}</dd>
 			<dt>Size</dt>
 			<dd class="cap">{value.data.size}</dd>
 			<dt><abbr title="Species Rating">SR</abbr></dt>
@@ -110,6 +111,7 @@
 			{/if}
 		</FlatDl>
 	</section>
+	<slot name="footer"></slot>
 </Card>
 
 <style>

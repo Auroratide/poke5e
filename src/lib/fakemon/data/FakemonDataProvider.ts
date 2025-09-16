@@ -1,6 +1,6 @@
+import type { SpeciesMedia, UploadedMedia } from "$lib/creatures/media"
 import type { ImageInputValue } from "$lib/design/forms"
 import type { DraftFakemon, Fakemon } from "../Fakemon"
-import type { FakemonMedia, UploadedMedia } from "../media"
 
 /**
  * 13 characters 0-9A-Z
@@ -17,7 +17,7 @@ export interface FakemonDataProvider {
 	getByReadKey(readKey: ReadKey): Promise<Fakemon | undefined>
 	add(draft: DraftFakemon): Promise<Fakemon>
 	update(fakemon: Fakemon): Promise<boolean>
-	updateMedia(writeKey: WriteKey, media: FakemonMedia<ImageInputValue>): Promise<FakemonMedia<UploadedMedia>>
+	updateMedia(writeKey: WriteKey, media: SpeciesMedia<ImageInputValue>): Promise<SpeciesMedia<UploadedMedia>>
 }
 
 export class FakemonDataProviderError extends Error {

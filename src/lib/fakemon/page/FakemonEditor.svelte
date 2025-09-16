@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	export type SubmitDetail = {
 		fakemon: Fakemon,
-		newMedia: FakemonMedia<ImageInputValue>,
+		newMedia: SpeciesMedia<ImageInputValue>,
 	}
 </script>
 
@@ -29,9 +29,9 @@
 	import Button from "$lib/design/Button.svelte"
 	import { GenderRatioFieldset } from "$lib/creatures/gender"
 	import { SrField } from "$lib/creatures/sr"
-	import { FakemonMedia, FakemonMediaFieldset } from "../media"
 	import { MovePoolFieldset } from "$lib/creatures/move-pool"
 	import { AbilityPoolFieldset } from "$lib/pokemon/ability"
+	import { SpeciesMedia, SpeciesMediaFieldset } from "$lib/creatures/media"
 
 	const dispatch = createEventDispatcher()
 
@@ -39,30 +39,32 @@
 	export let saving = false
 	$: disabled = saving
 
-	let speciesName = fakemon.data.speciesName
-	let type = fakemon.type.copy()
-	let minLevel = fakemon.data.minLevel
-	let ac = fakemon.data.ac
-	let hp = fakemon.data.hp
-	let hitDice = fakemon.hitDice.data
-	let size = fakemon.data.size
-	let speeds = fakemon.speed.copy()
-	let senses = fakemon.senses.copy()
-	let attributes = fakemon.attributes.copy()
-	let proficiencies = fakemon.skills.copy()
-	let savingThrows = fakemon.data.saves
-	let gender = fakemon.gender.copy()
-	let sr = fakemon.sr.copy()
-	let description = fakemon.data.description
-	let originalMedia = fakemon.media.copy()
-	let updatedMedia = new FakemonMedia<ImageInputValue>({
+	let species = fakemon.species
+
+	let speciesName = species.data.name
+	let type = species.type.copy()
+	let minLevel = species.data.minLevel
+	let ac = species.data.ac
+	let hp = species.data.hp
+	let hitDice = species.hitDice.data
+	let size = species.data.size
+	let speeds = species.speed.copy()
+	let senses = species.senses.copy()
+	let attributes = species.attributes.copy()
+	let proficiencies = species.skills.copy()
+	let savingThrows = species.data.saves
+	let gender = species.gender.copy()
+	let sr = species.sr.copy()
+	let description = species.data.description
+	let originalMedia = species.media.copy()
+	let updatedMedia = new SpeciesMedia<ImageInputValue>({
 		normalPortrait: undefined,
 		normalSprite: undefined,
 		shinyPortrait: undefined,
 		shinySprite: undefined,
 	})
-	let abilityPool = fakemon.abilities.copy()
-	let movePool = fakemon.moves.copy()
+	let abilityPool = species.abilities.copy()
+	let movePool = species.moves.copy()
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -71,23 +73,25 @@
 	const endEdit = () => {
 		dispatch("submit", {
 			fakemon: fakemon.copy({
-				speciesName,
-				type: type.data,
-				minLevel,
-				ac,
-				hp,
-				hitDice,
-				size,
-				speed: speeds.data,
-				senses: senses.data,
-				attributes: attributes.data,
-				skills: proficiencies.data,
-				saves: savingThrows,
-				gender: gender.data,
-				sr: sr.data,
-				description: description,
-				abilities: abilityPool.data,
-				moves: movePool.data,
+				species: fakemon.species.copy({
+					name: speciesName,
+					type: type.data,
+					minLevel,
+					ac,
+					hp,
+					hitDice,
+					size,
+					speed: speeds.data,
+					senses: senses.data,
+					attributes: attributes.data,
+					skills: proficiencies.data,
+					saves: savingThrows,
+					gender: gender.data,
+					sr: sr.data,
+					description: description,
+					abilities: abilityPool.data,
+					moves: movePool.data,
+				}).data,
 			}),
 			newMedia: updatedMedia,
 		})
@@ -117,7 +121,7 @@
 			<TextareaField label="Description" bind:value={description} {disabled} placeholder="The ______ Pokémon. It is known for this one rather cool thing." />
 		</div>
 	</Fieldset>
-	<FakemonMediaFieldset originals={originalMedia} bind:updated={updatedMedia} {disabled} />
+	<SpeciesMediaFieldset originals={originalMedia} bind:updated={updatedMedia} {disabled} />
 	<GenderRatioFieldset bind:value={gender} {disabled} />
 	<TypeField bind:value={type.data} {disabled} />
 	<SpeedsFieldset bind:values={speeds} {disabled} />

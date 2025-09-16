@@ -7,9 +7,9 @@ import { isCreatureSize } from "$lib/dnd/CreatureSize"
 import type { Data } from "$lib/DataClass"
 import { HitDice } from "$lib/dnd/hit-dice"
 import { FakemonLocalStorage } from "./FakemonLocalStorage"
-import { FakemonMedia, type UploadedMedia } from "../media"
 import type { UserAssets } from "$lib/user-assets"
 import type { ImageInputValue } from "$lib/design/forms"
+import { SpeciesMedia, type UploadedMedia } from "$lib/creatures/media"
 
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	constructor(
@@ -63,7 +63,10 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		FakemonLocalStorage.add(identifyingInfo)
 
 		return new Fakemon({
-			...draft,
+			species: {
+				...draft,
+				id: identifyingInfo.readKey,
+			},
 			...identifyingInfo,
 		})
 	}
@@ -74,7 +77,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 		const { data, error } = await this.supabase.rpc("update_fakemon", {
 			_write_key: writeKey,
-			...this.toQuery(fakemon.data),
+			...this.toQuery(fakemon.data.species),
 		}).single<number>()
 
 		this.validateError("Could not edit fakemon.", error)
@@ -82,7 +85,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		return data > 0
 	}
 
-	async updateMedia(writeKey: WriteKey, media: FakemonMedia<ImageInputValue>): Promise<FakemonMedia<UploadedMedia>> {
+	async updateMedia(writeKey: WriteKey, media: SpeciesMedia<ImageInputValue>): Promise<SpeciesMedia<UploadedMedia>> {
 		const [newMedia] = await Promise.all([
 			this.handleNewMedia(writeKey, media),
 			this.handleRemovedMedia(writeKey, media),
@@ -99,9 +102,9 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		}
 	}
 
-	private toQuery(fakemon: Omit<Data<Fakemon>, "id" | "readKey" | "writeKey">): object {
+	private toQuery(fakemon: Omit<Data<Fakemon>["species"], "id">): object {
 		return {
-			_species_name: fakemon.speciesName,
+			_species_name: fakemon.name,
 			_type: fakemon.type,
 			_size: fakemon.size,
 			_sr: fakemon.sr,
@@ -168,14 +171,14 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		}
 	}
 
-	private handleNewMedia = async (writeKey: WriteKey, media: FakemonMedia<ImageInputValue>): Promise<FakemonMedia<UploadedMedia>> => {
+	private handleNewMedia = async (writeKey: WriteKey, media: SpeciesMedia<ImageInputValue>): Promise<SpeciesMedia<UploadedMedia>> => {
 		const { data, error } = await this.supabase.functions.invoke<PostUserAssetsResponseBody>("user-assets", {
 			method: "POST",
 			body: {
 				type: "fakemon-media",
 				params: {
 					key: writeKey,
-					...FakemonMedia.forEachType((type) => media.data[type]?.type === "new" ? {
+					...SpeciesMedia.forEachType((type) => media.data[type]?.type === "new" ? {
 						mimetype: media.data[type].value.type,
 						sizeInBytes: media.data[type].value.size,
 					} : undefined)?.data,
@@ -188,28 +191,28 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		}
 
 		await Promise.all(
-			FakemonMedia.types
+			SpeciesMedia.types
 				.map((type) => data.values[type] != null && media.data[type]?.type === "new"
 					? this.userAssets.upload(data.values[type].uploadUrl, media.data[type].value)
 					: undefined,
 				).filter((it) => it != null),
 		)
 
-		return FakemonMedia.forEachType((type) =>
+		return SpeciesMedia.forEachType((type) =>
 			data.values[type] != null && media.data[type]?.type === "new"
 				? this.getUserAssetResource(data.values[type].filename)
 				: undefined,
 		)
 	}
 
-	private handleRemovedMedia = async (writeKey: WriteKey, media: FakemonMedia<ImageInputValue>): Promise<void> => {
+	private handleRemovedMedia = async (writeKey: WriteKey, media: SpeciesMedia<ImageInputValue>): Promise<void> => {
 		const { error } = await this.supabase.functions.invoke<PostUserAssetsResponseBody>("user-assets", {
 			method: "DELETE",
 			body: {
 				type: "fakemon-media",
 				params: {
 					key: writeKey,
-					...FakemonMedia.forEachType((type) => media.data[type]?.type === "remove").data,
+					...SpeciesMedia.forEachType((type) => media.data[type]?.type === "remove").data,
 				},
 			},
 		})
@@ -311,92 +314,96 @@ function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) => Upl
 		id: row.id,
 		readKey: row.read_key,
 		writeKey: row.write_key,
-		speciesName: row.species_name,
-		type: row.type.filter(PokemonType.isPokeType),
-		size: isCreatureSize(row.size) ? row.size : "small",
-		sr: parseFloat(row.sr),
-		minLevel: row.min_level,
-		eggGroups: row.egg_groups,
-		gender: row.gender,
-		description: row.description,
-		ac: row.ac,
-		hp: row.hp,
-		hitDice: HitDice.isHitDice(row.hit_dice) ? row.hit_dice : "d6",
-		speed: {
-			walking: row.speed_walking,
-			swimming: row.speed_swimming,
-			climbing: row.speed_climbing,
-			flying: row.speed_flying,
-			hover: row.speed_hover,
-			burrowing: row.speed_burrowing,
-		},
-		senses: {
-			darkvision: row.sense_darkvision,
-			blindsight: row.sense_blindsight,
-			tremorsense: row.sense_tremorsense,
-			truesight: row.sense_truesight,
-		},
-		attributes: {
-			str: row.strength,
-			dex: row.dexterity,
-			con: row.constitution,
-			int: row.intelligence,
-			wis: row.wisdom,
-			cha: row.charisma,
-		},
-		skills: {
-			"athletics": row.prof_athletics ? 1 : 0,
-			"acrobatics": row.prof_acrobatics ? 1 : 0,
-			"sleight of hand": row.prof_sleight_of_hand ? 1 : 0,
-			"stealth": row.prof_stealth ? 1 : 0,
-			"arcana": row.prof_arcana ? 1 : 0,
-			"history": row.prof_history ? 1 : 0,
-			"investigation": row.prof_investigation ? 1 : 0,
-			"nature": row.prof_nature ? 1 : 0,
-			"religion": row.prof_religion ? 1 : 0,
-			"animal handling": row.prof_animal_handling ? 1 : 0,
-			"insight": row.prof_insight ? 1 : 0,
-			"medicine": row.prof_medicine ? 1 : 0,
-			"perception": row.prof_perception ? 1 : 0,
-			"survival": row.prof_survival ? 1 : 0,
-			"deception": row.prof_deception ? 1 : 0,
-			"intimidation": row.prof_intimidation ? 1 : 0,
-			"performance": row.prof_performance ? 1 : 0,
-			"persuasion": row.prof_persuasion ? 1 : 0,
-		},
-		saves: booleansToList<Attribute>({
-			str: row.save_str,
-			dex: row.save_dex,
-			con: row.save_con,
-			int: row.save_int,
-			wis: row.save_wis,
-			cha: row.save_cha,
-		}),
-		abilities: {
-			normal: row.abilities,
-			hidden: row.hidden_abilities,
-		},
-		moves: {
-			start: row.moves_start,
-			level2: row.moves_level2,
-			level6: row.moves_level6,
-			level10: row.moves_level10,
-			level14: row.moves_level14,
-			level18: row.moves_level18,
-			egg: row.moves_egg,
-			tm: row.moves_tm,
-		},
-		media: {
-			normalPortrait: row.normal_portrait_filename ? getStorageResource(row.normal_portrait_filename) : undefined,
-			normalSprite: row.normal_sprite_filename ? getStorageResource(row.normal_sprite_filename) : undefined,
-			shinyPortrait: row.shiny_portrait_filename ? getStorageResource(row.shiny_portrait_filename) : undefined,
-			shinySprite: row.shiny_sprite_filename ? getStorageResource(row.shiny_sprite_filename) : undefined,
+		species: {
+			id: row.read_key,
+			name: row.species_name,
+			type: row.type.filter(PokemonType.isPokeType),
+			number: 0,
+			size: isCreatureSize(row.size) ? row.size : "small",
+			sr: parseFloat(row.sr),
+			minLevel: row.min_level,
+			eggGroups: row.egg_groups,
+			gender: row.gender,
+			description: row.description,
+			ac: row.ac,
+			hp: row.hp,
+			hitDice: HitDice.isHitDice(row.hit_dice) ? row.hit_dice : "d6",
+			speed: {
+				walking: row.speed_walking,
+				swimming: row.speed_swimming,
+				climbing: row.speed_climbing,
+				flying: row.speed_flying,
+				hover: row.speed_hover,
+				burrowing: row.speed_burrowing,
+			},
+			senses: {
+				darkvision: row.sense_darkvision,
+				blindsight: row.sense_blindsight,
+				tremorsense: row.sense_tremorsense,
+				truesight: row.sense_truesight,
+			},
+			attributes: {
+				str: row.strength,
+				dex: row.dexterity,
+				con: row.constitution,
+				int: row.intelligence,
+				wis: row.wisdom,
+				cha: row.charisma,
+			},
+			skills: {
+				"athletics": row.prof_athletics ? 1 : 0,
+				"acrobatics": row.prof_acrobatics ? 1 : 0,
+				"sleight of hand": row.prof_sleight_of_hand ? 1 : 0,
+				"stealth": row.prof_stealth ? 1 : 0,
+				"arcana": row.prof_arcana ? 1 : 0,
+				"history": row.prof_history ? 1 : 0,
+				"investigation": row.prof_investigation ? 1 : 0,
+				"nature": row.prof_nature ? 1 : 0,
+				"religion": row.prof_religion ? 1 : 0,
+				"animal handling": row.prof_animal_handling ? 1 : 0,
+				"insight": row.prof_insight ? 1 : 0,
+				"medicine": row.prof_medicine ? 1 : 0,
+				"perception": row.prof_perception ? 1 : 0,
+				"survival": row.prof_survival ? 1 : 0,
+				"deception": row.prof_deception ? 1 : 0,
+				"intimidation": row.prof_intimidation ? 1 : 0,
+				"performance": row.prof_performance ? 1 : 0,
+				"persuasion": row.prof_persuasion ? 1 : 0,
+			},
+			saves: booleansToList<Attribute>({
+				str: row.save_str,
+				dex: row.save_dex,
+				con: row.save_con,
+				int: row.save_int,
+				wis: row.save_wis,
+				cha: row.save_cha,
+			}),
+			abilities: {
+				normal: row.abilities,
+				hidden: row.hidden_abilities,
+			},
+			moves: {
+				start: row.moves_start,
+				level2: row.moves_level2,
+				level6: row.moves_level6,
+				level10: row.moves_level10,
+				level14: row.moves_level14,
+				level18: row.moves_level18,
+				egg: row.moves_egg,
+				tm: row.moves_tm,
+			},
+			media: {
+				normalPortrait: row.normal_portrait_filename ? getStorageResource(row.normal_portrait_filename) : undefined,
+				normalSprite: row.normal_sprite_filename ? getStorageResource(row.normal_sprite_filename) : undefined,
+				shinyPortrait: row.shiny_portrait_filename ? getStorageResource(row.shiny_portrait_filename) : undefined,
+				shinySprite: row.shiny_sprite_filename ? getStorageResource(row.shiny_sprite_filename) : undefined,
+			},
 		},
 	})
 }
 
 type PostUserAssetsResponseBody = {
-	values: Data<FakemonMedia<{
+	values: Data<SpeciesMedia<{
 		filename: string,
 		uploadUrl: string,
 	}>>
