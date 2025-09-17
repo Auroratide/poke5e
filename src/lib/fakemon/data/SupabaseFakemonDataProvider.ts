@@ -10,6 +10,7 @@ import { FakemonLocalStorage } from "./FakemonLocalStorage"
 import type { UserAssets } from "$lib/user-assets"
 import type { ImageInputValue } from "$lib/design/forms"
 import { SpeciesMedia, type UploadedMedia } from "$lib/creatures/media"
+import { SpeciesIdentifier } from "$lib/creatures/species"
 
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	constructor(
@@ -315,7 +316,7 @@ function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) => Upl
 		readKey: row.read_key,
 		writeKey: row.write_key,
 		species: {
-			id: row.read_key,
+			id: SpeciesIdentifier.fromFakemonReadKey(row.read_key).data,
 			name: row.species_name,
 			type: row.type.filter(PokemonType.isPokeType),
 			number: 0,
