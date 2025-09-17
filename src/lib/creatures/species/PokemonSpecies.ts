@@ -15,11 +15,10 @@ import { SpeciesMedia, type UploadedMedia } from "../media"
 import { MovePool } from "../move-pool"
 import { SpeciesRating } from "../sr"
 import type { PokemonJsonResponse } from "./PokemonJsonResponse"
-
-export type PokemonSpeciesId = string
+import { SpeciesIdentifier } from "./SpeciesIdentifier"
 
 export class PokemonSpecies extends DataClass<{
-	id: PokemonSpeciesId,
+	id: Data<SpeciesIdentifier>,
 	name: string,
 	number: number,
 	type: Data<PokemonType>,
@@ -42,6 +41,7 @@ export class PokemonSpecies extends DataClass<{
 	media: Data<SpeciesMedia<UploadedMedia>>,
 	evolution?: PokeEvolution,
 }> {
+	get id(): SpeciesIdentifier { return new SpeciesIdentifier(this.data.id) }
 	get type(): PokemonType { return new PokemonType(this.data.type) }
 	get gender(): GenderRatio { return new GenderRatio(this.data.gender) }
 	get sr(): SpeciesRating { return new SpeciesRating(this.data.sr) }
@@ -61,7 +61,7 @@ export class PokemonSpecies extends DataClass<{
 
 	static fromJson(it: PokemonJsonResponse["items"][number]): PokemonSpecies {
 		return new PokemonSpecies({
-			id: it.id,
+			id: SpeciesIdentifier.fromSpeciesName(it.id).data,
 			name: it.name,
 			number: it.number,
 			type: it.type,
