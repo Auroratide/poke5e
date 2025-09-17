@@ -30,6 +30,7 @@ import { PokemonGender } from "$lib/creatures/gender"
 import type { UserAssets } from "$lib/user-assets"
 import { Nature, StandardNatures } from "$lib/pokemon/nature"
 import { get } from "svelte/store"
+import { SpeciesIdentifier } from "$lib/creatures/species"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -462,7 +463,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		const { data, error } = await this.supabase.rpc("update_pokemon", {
 			_write_key: writeKey,
 			_id: parseInt(info.id),
-			_species: info.pokemonId,
+			_species: info.pokemonId.data,
 			_nickname: info.nickname,
 			_type: info.type.data,
 			_nature: info.nature.data,
@@ -582,7 +583,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 	addPokemonToTeam = async (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: Pokemon): Promise<TrainerPokemon> => {
 		const trainerPokemon: Omit<TrainerPokemon, "id"> = {
 			trainerId: trainerId,
-			pokemonId: pokemon.id,
+			pokemonId: SpeciesIdentifier.fromSpeciesName(pokemon.id),
 			nickname: pokemon.name,
 			type: pokemon.type,
 			nature: new Nature(get(StandardNatures)[0]),
@@ -1339,7 +1340,7 @@ const consolidateSkillRankProfAndRank = (ranks: Record<Skill, [boolean, number]>
 const rowToPokemon = (row: PokemonRow, getStorageResource: (name: string) => StorageResource): TrainerPokemon => ({
 	id: row.id.toString(),
 	trainerId: row.trainer_id,
-	pokemonId: row.species,
+	pokemonId: new SpeciesIdentifier(row.species),
 	nickname: row.nickname,
 	type: new PokemonType(row.type.filter(PokemonType.isPokeType)),
 	nature: new Nature(row.nature),

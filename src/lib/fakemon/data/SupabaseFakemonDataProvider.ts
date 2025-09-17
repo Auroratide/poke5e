@@ -66,7 +66,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		return new Fakemon({
 			species: {
 				...draft,
-				id: identifyingInfo.readKey,
+				id: SpeciesIdentifier.fromFakemonReadKey(identifyingInfo.readKey).data,
 			},
 			...identifyingInfo,
 		})

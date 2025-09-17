@@ -4,16 +4,16 @@
 
 <script lang="ts">
 	import { moves, tms } from "$lib/moves/store"
-	import type { Pokemon } from "$lib/creatures/types"
 	import { groupByLearnability } from "$lib/moves/group"
 	import Removable from "$lib/design/forms/Removable.svelte"
 	import SelectField from "$lib/design/forms/SelectField.svelte"
 	import IntField from "$lib/design/forms/IntField.svelte"
 	import { MarkdownField } from "$lib/design/forms"
 	import type { LearnedMove } from "$lib/trainers/types"
+	import type { PokemonSpecies } from "$lib/creatures/species"
 
 	export let value: LearnedMove
-	export let species: Pokemon
+	export let species: PokemonSpecies
 	export let level: number
 	export let disabled: boolean = false
 

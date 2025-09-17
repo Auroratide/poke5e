@@ -14,7 +14,7 @@ import { GenderRatio } from "../gender"
 import { SpeciesMedia, type UploadedMedia } from "../media"
 import { MovePool } from "../move-pool"
 import { SpeciesRating } from "../sr"
-import type { PokemonJsonResponse } from "./PokemonJsonResponse"
+import type { SinglePokemonJsonResponse } from "./PokemonJsonResponse"
 import { SpeciesIdentifier } from "./SpeciesIdentifier"
 
 export class PokemonSpecies extends DataClass<{
@@ -59,7 +59,7 @@ export class PokemonSpecies extends DataClass<{
 		return `#${this.data.number.toString().padStart(4, "0")}`
 	}
 
-	static fromJson(it: PokemonJsonResponse["items"][number]): PokemonSpecies {
+	static fromJson(it: SinglePokemonJsonResponse): PokemonSpecies {
 		return new PokemonSpecies({
 			id: SpeciesIdentifier.fromSpeciesName(it.id).data,
 			name: it.name,

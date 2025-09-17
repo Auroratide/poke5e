@@ -1,9 +1,9 @@
 import { test, expect } from "vitest"
 import { groupByLearnability } from "../group"
-import { stubPokemon } from "$lib/creatures/test/stubs"
 import { stubMove, stubTm } from "./stubs"
 import type { Move, Tm } from "../types"
 import { measureTime } from "$lib/test/time"
+import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
 
 const flamethrower = stubMove({
 	id: "flamethrower",
@@ -48,7 +48,7 @@ const ALL_TMS: Tm[] = [thunderboltTm]
 
 test("pokemon cannot learn any moves", () => {
 	// given
-	const pokemon = stubPokemon({
+	const pokemon = stubPokemonSpecies({
 		moves: {
 			start: [],
 		},
@@ -66,7 +66,7 @@ test("pokemon cannot learn any moves", () => {
 
 test("pokemon can learn some moves", () => {
 	// given
-	const pokemon = stubPokemon({
+	const pokemon = stubPokemonSpecies({
 		moves: {
 			start: [tackle.id, flamethrower.id],
 		},
@@ -87,7 +87,7 @@ test("pokemon can learn some moves", () => {
 
 test("pokemon can learn moves at different levels", () => {
 	// given
-	const pokemon = stubPokemon({
+	const pokemon = stubPokemonSpecies({
 		moves: {
 			start: [tackle.id, flamethrower.id],
 			level6: [waterGun.id, razorLeaf.id],
@@ -112,7 +112,7 @@ test("pokemon can learn moves at different levels", () => {
 
 test("pokemon can learn moves from every available level", () => {
 	// given
-	const pokemon = stubPokemon({
+	const pokemon = stubPokemonSpecies({
 		moves: {
 			start: [tackle.id, flamethrower.id],
 			level6: [waterGun.id, razorLeaf.id],
@@ -134,7 +134,7 @@ test("pokemon can learn moves from every available level", () => {
 
 test("pokemon can learn egg moves", () => {
 	// given
-	const pokemon = stubPokemon({
+	const pokemon = stubPokemonSpecies({
 		moves: {
 			start: [tackle.id, flamethrower.id],
 			egg: [razorLeaf.id],
@@ -159,7 +159,7 @@ test("pokemon can learn egg moves", () => {
 
 test("egg move is also a learnable move", () => {
 	// given
-	const pokemon = stubPokemon({
+	const pokemon = stubPokemonSpecies({
 		moves: {
 			start: [tackle.id, flamethrower.id],
 			egg: [flamethrower.id],
@@ -184,7 +184,7 @@ test("egg move is also a learnable move", () => {
 
 test("pokemon can learn TMs", () => {
 	// given
-	const pokemon = stubPokemon({
+	const pokemon = stubPokemonSpecies({
 		moves: {
 			start: [tackle.id, flamethrower.id],
 			tm: [thunderboltTm.id],
@@ -209,7 +209,7 @@ test("pokemon can learn TMs", () => {
 
 test("moves list is empty", () => {
 	// given
-	const pokemon = stubPokemon({
+	const pokemon = stubPokemonSpecies({
 		moves: {
 			start: [tackle.id, flamethrower.id],
 		},
@@ -224,7 +224,7 @@ test("moves list is empty", () => {
 
 test("tms list is empty", () => {
 	// given
-	const pokemon = stubPokemon({
+	const pokemon = stubPokemonSpecies({
 		moves: {
 			start: [tackle.id, flamethrower.id],
 			tm: [thunderboltTm.id],
@@ -246,7 +246,7 @@ test("tms list is empty", () => {
 
 test("performance is not garbage", () => {
 	// given
-	const pokemon = stubPokemon({
+	const pokemon = stubPokemonSpecies({
 		moves: {
 			start: Array(50).map((_, i) => `${i}`),
 			tm: Array(50).map((_, i) => i),

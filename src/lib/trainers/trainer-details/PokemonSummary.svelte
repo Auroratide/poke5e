@@ -8,18 +8,20 @@
 	import ItemSprite from "$lib/items/ItemSprite.svelte"
 	import { GenderIcon } from "$lib/creatures/gender"
 	import { SpeciesSprite } from "$lib/creatures/media"
-	import { SpeciesStore } from "$lib/creatures/species"
+	import { WithSpecies } from "$lib/creatures/species"
 
 	export let trainer: ReadWriteKey
 	export let pokemon: TrainerPokemon
 
-	$: species = $SpeciesStore?.find((it) => it.data.id === pokemon.pokemonId)
 	$: heldItem = pokemon.items.length > 0 ? getItemDetails(pokemon.items[0], $items) : undefined
 </script>
 
 <a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded">
 	<span style:grid-area="sprite" class="max-height holding-item jumping-animation">
-		<SpeciesSprite media={species?.media} alt={species?.data.name} shiny={pokemon.isShiny} />
+		<WithSpecies let:species ids={[pokemon.pokemonId]}>
+			<div slot="loader"></div>
+			<SpeciesSprite media={species?.media} alt={species?.data.name} shiny={pokemon.isShiny} />
+		</WithSpecies>
 		<span class="shadow"></span>
 		{#if heldItem != null}
 			<span class="held-item">
