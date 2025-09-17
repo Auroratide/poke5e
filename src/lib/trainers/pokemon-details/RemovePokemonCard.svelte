@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PokemonId } from "$lib/trainers/types"
-	import Loader from "$lib/design/Loader.svelte"
 	import Card from "$lib/design/Card.svelte"
 	import Button from "$lib/design/Button.svelte"
 	import { ActionArea } from "$lib/design/forms"
@@ -10,14 +9,13 @@
 	import { goto } from "$app/navigation"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import { SpeciesPortrait } from "$lib/creatures/media"
-	import { SpeciesStore } from "$lib/creatures/species"
+	import { WithSpecies } from "$lib/creatures/species"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
 	
 	$: canEdit = $trainer.update != null
 	$: pokemon = $trainer.pokemon.find((it) => it.id === id)
-	$: species = $SpeciesStore?.find((it) => it.data.id === pokemon?.pokemonId)
 
 	let saving = false
 	const remove = () => {
@@ -31,7 +29,7 @@
 </script>
 
 <RequirePokemon trainer={$trainer} {id} titlePrefix="Remove">
-	{#if species}
+	<WithSpecies let:species ids={[pokemon?.pokemonId]}>
 		<Card title="Remove {pokemon.nickname}?">
 			{#if canEdit}
 				<Saveable {saving}>
@@ -58,9 +56,7 @@
 				</section>
 			{/if}
 		</Card>
-	{:else}
-		<Loader />
-	{/if}
+	</WithSpecies>
 </RequirePokemon>
 
 <style>

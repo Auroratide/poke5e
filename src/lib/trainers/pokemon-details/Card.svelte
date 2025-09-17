@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { LearnedMove, PokemonId, TrainerPokemon } from "$lib/trainers/types"
-	import Loader from "$lib/design/Loader.svelte"
 	import Info from "./Info.svelte"
 	import Card from "$lib/design/Card.svelte"
 	import Button from "$lib/design/Button.svelte"
@@ -10,14 +9,13 @@
 	import { Url } from "$lib/url"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import { TypeTag } from "$lib/pokemon/types-2"
-	import { SpeciesStore } from "$lib/creatures/species"
+	import { WithSpecies } from "$lib/creatures/species"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
 
 	$: canEdit = $trainer.update != null
 	$: pokemon = $trainer.pokemon.find((it) => it.id === id)
-	$: species = $SpeciesStore?.find((it) => it.data.id === pokemon?.pokemonId)
 
 	const onUpdateHealth = (e: CustomEvent<TrainerPokemon>) => {
 		$trainer.update?.pokemon(e.detail, {
@@ -39,7 +37,7 @@
 </script>
 
 <RequirePokemon trainer={$trainer} {id}>
-	{#if species}
+	<WithSpecies let:species ids={[pokemon?.pokemonId]}>
 		<Card title={pokemon.nickname}>
 			<TypeTag slot="header-extra" type={pokemon.type.data} />
 			<Info trainer={$trainer.info} {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} on:update-bond={onUpdateBond} />
@@ -54,7 +52,5 @@
 				</ActionArea>
 			{/if}
 		</Card>
-	{:else}
-		<Loader />
-	{/if}
+	</WithSpecies>
 </RequirePokemon>

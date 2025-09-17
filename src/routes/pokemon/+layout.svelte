@@ -7,8 +7,10 @@
 	import { PokemonSpeciesList, SpeciesStore } from "$lib/creatures/species"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
 
+	const canonList = SpeciesStore.canonList()
+
 	$: ssrPokemon = $page.data.pokemonList
-	$: pokemonToRender = ssrPokemon ?? $SpeciesStore
+	$: pokemonToRender = ssrPokemon ?? $canonList
 </script>
 
 <Page theme="red">

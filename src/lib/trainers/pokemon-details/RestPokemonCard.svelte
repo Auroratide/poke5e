@@ -8,15 +8,13 @@
 	import { Url } from "$lib/url"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import { Rester } from "$lib/poke5e/resting"
-	import Loader from "$lib/design/Loader.svelte"
-	import { SpeciesStore } from "$lib/creatures/species"
+	import { WithSpecies } from "$lib/creatures/species"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
 	
 	$: canEdit = $trainer.update != null
 	$: pokemon = $trainer.pokemon.find((it) => it.id === id)
-	$: species = $SpeciesStore?.find((it) => it.data.id === pokemon?.pokemonId)
 
 	let saving = false
 	const update = (e: CustomEvent<TrainerPokemon>) => {
@@ -37,7 +35,7 @@
 </script>
 
 <RequirePokemon trainer={$trainer} {id} titlePrefix="Rest">
-	{#if species}
+	<WithSpecies let:species ids={[pokemon?.pokemonId]}>
 		<Card title="Rest {pokemon.nickname}">
 			{#if canEdit}
 				<Rester {pokemon} {species} {saving} on:cancel={cancel} on:submit={update} />
@@ -50,7 +48,5 @@
 				</section>
 			{/if}
 		</Card>
-	{:else}
-		<Loader />
-	{/if}
+	</WithSpecies>
 </RequirePokemon>

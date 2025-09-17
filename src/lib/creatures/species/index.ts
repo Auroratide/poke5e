@@ -1,5 +1,7 @@
 export * from "./SpeciesIdentifier"
 export * from "./PokemonSpecies"
-export * from "./store"
+// export * from "./store"
+export * from "./SpeciesStore"
 export { default as PokemonSpeciesCard } from "./PokemonSpeciesCard.svelte"
 export { default as PokemonSpeciesList } from "./PokemonSpeciesList.svelte"
+export { default as WithSpecies } from "./WithSpecies.svelte"

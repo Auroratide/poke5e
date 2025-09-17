@@ -16,6 +16,7 @@ import type { Speeds } from "$lib/dnd/movement"
 import type { PokemonTeraType, PokemonType } from "$lib/pokemon/types-2"
 import type { PokemonGender } from "$lib/creatures/gender"
 import type { Nature } from "$lib/pokemon/nature"
+import type { SpeciesIdentifier } from "$lib/creatures/species"
 
 export type Resource = {
 	current: number,
@@ -53,7 +54,7 @@ export type PokemonId = string
 export type TrainerPokemon = {
 	id: PokemonId,
 	trainerId: TrainerId,
-	pokemonId: string,
+	pokemonId: SpeciesIdentifier,
 	nickname: string,
 	type: PokemonType,
 	nature: Nature,

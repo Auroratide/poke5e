@@ -1,18 +1,18 @@
 <script lang="ts">
 	import { Fieldset, SelectField } from "$lib/design/forms"
 	import { abilities } from "$lib/pokemon/store"
-	import type { Pokemon } from "$lib/creatures/types"
+	import type { PokemonSpecies } from "$lib/creatures/species"
 
 	export let ability: string
-	export let species: Pokemon
+	export let species: PokemonSpecies
 	export let disabled: boolean
 
-	$: myAbilityIds = species.abilities.map((it) => it.id)
+	$: myAbilityIds = species.abilities.toList().map((it) => it.id)
 	$: nonstandardAbilities = $abilities?.filter((it) => !myAbilityIds.includes(it.id))
 	$: abilityOptions = [ {
 		name: "Learnable Abilities",
-		values: species.abilities.map((it) => ({
-			name: it.name + (it.hidden ? " (hidden)" : ""),
+		values: species.abilities.toList().map((it) => ({
+			name: $abilities?.find((ability) => ability.id === it.id)?.name + (it.hidden ? " (hidden)" : ""),
 			value: it.id,
 		})),
 	}, {

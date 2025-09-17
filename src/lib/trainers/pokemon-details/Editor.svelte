@@ -6,7 +6,6 @@
 </script>
 
 <script lang="ts">
-	import type { Pokemon } from "$lib/creatures/types"
 	import Button from "$lib/design/Button.svelte"
 	import { ActionArea, Form, FormDetails, MarkdownField, type ImageInputValue } from "$lib/design/forms"
 	import Fieldset from "$lib/design/forms/Fieldset.svelte"
@@ -28,11 +27,12 @@
 	import { PokemonTeraType, TypeField, type TeraType } from "$lib/pokemon/types-2"
 	import { GenderFieldset } from "$lib/creatures/gender"
 	import { HitDice } from "$lib/dnd/hit-dice"
+	import type { PokemonSpecies } from "$lib/creatures/species"
 
 	const dispatch = createEventDispatcher()
 
 	export let pokemon: TrainerPokemon
-	export let species: Pokemon
+	export let species: PokemonSpecies
 	export let saving: boolean = false
 	$: disabled = saving
 
@@ -72,7 +72,7 @@
 		dispatch("update", {
 			pokemon: {
 				...pokemon,
-				nickname: nickname.length > 0 ? nickname : species.name,
+				nickname: nickname.length > 0 ? nickname : species.data.name,
 				type,
 				nature: nature,
 				teraType: tera,
