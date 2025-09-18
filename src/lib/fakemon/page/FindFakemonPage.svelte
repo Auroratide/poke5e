@@ -1,36 +1,16 @@
-<script>
+<script lang="ts">
 	import Card from "$lib/design/Card.svelte"
 	import Saveable from "$lib/design/Saveable.svelte"
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/url"
 	import findTrainerIdImg from "$lib/assets/find-trainer-id.png"
 	import Title from "$lib/design/Title.svelte"
-	import { WithButton, TextField } from "$lib/design/forms"
-	import { fakemonStore } from "$lib/fakemon/store"
-	import { SpeciesIdentifier } from "$lib/creatures/species"
-
-	let id = ""
-	$: id = id.toLocaleUpperCase().replace(/[^a-zA-Z0-9.]/g, "")
-
-	let couldNotFind = ""
+	import SearchFakemonById from "../search/SearchFakemonById.svelte"
+	import type { SearchFakemonByIdDetail } from "../search"
 
 	let searching = false
-	const onSubmit = () => {
-		const identifier = new SpeciesIdentifier(id)
-		if (!identifier.isFakemon()) {
-			couldNotFind = id
-			return
-		}
-
-		searching = true
-		fakemonStore.get(identifier.toFakemonReadKey()).then((fakemon) => {
-			if (fakemon) {
-				goto(Url.fakemon(identifier.toFakemonReadKey()))
-			} else {
-				searching = false
-				couldNotFind = id
-			}
-		})
+	const onSubmit = (e: CustomEvent<SearchFakemonByIdDetail>) => {
+		goto(Url.fakemon(e.detail.value.data.readKey))
 	}
 </script>
 
@@ -39,14 +19,7 @@
 	<Saveable saving={searching} caption="Searching...">
 		<section>
 			<p>Enter the fakémon's unique ID below and click "Search".</p>
-			<form on:submit|preventDefault={onSubmit} class="vertical spaced-lg" disabled={searching}>
-				<WithButton label="Search" type="submit">
-					<TextField label="Fakémon ID" bind:value={id} maxlength={15} placeholder="e.g. F.H4PF8E2GZA0A" disabled={searching} required />
-				</WithButton>
-				{#if couldNotFind.length > 0 && couldNotFind === id}
-					<p class="font-sm error">No fakémon is registered with this id</p>
-				{/if}
-			</form>
+			<SearchFakemonById on:found={onSubmit} />
 		</section>
 		<hr />
 		<section>
@@ -63,20 +36,6 @@
 <style>
 	.spaced-lg {
 		margin-bottom: 1em;
-	}
-
-	.font-sm {
-		font-size: 1rem;
-	}
-
-	.error {
-		font-style: italic;
-		color: var(--skin-danger-text);
-	}
-
-	.vertical {
-		display: flex;
-		flex-direction: column;
 	}
 	
 	img {
