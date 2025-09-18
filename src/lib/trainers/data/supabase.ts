@@ -30,7 +30,7 @@ import { PokemonGender } from "$lib/creatures/gender"
 import type { UserAssets } from "$lib/user-assets"
 import { Nature, StandardNatures } from "$lib/pokemon/nature"
 import { get } from "svelte/store"
-import { SpeciesIdentifier } from "$lib/creatures/species"
+import { PokemonSpecies, SpeciesIdentifier } from "$lib/creatures/species"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -580,29 +580,29 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 	}
 
-	addPokemonToTeam = async (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: Pokemon): Promise<TrainerPokemon> => {
+	addPokemonToTeam = async (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: PokemonSpecies): Promise<TrainerPokemon> => {
 		const trainerPokemon: Omit<TrainerPokemon, "id"> = {
 			trainerId: trainerId,
-			pokemonId: SpeciesIdentifier.fromSpeciesName(pokemon.id),
-			nickname: pokemon.name,
+			pokemonId: pokemon.id,
+			nickname: pokemon.data.name,
 			type: pokemon.type,
 			nature: new Nature(get(StandardNatures)[0]),
-			level: new Level(pokemon.minLevel),
-			exp: experienceNeededAtLevel(pokemon.minLevel),
+			level: new Level(pokemon.data.minLevel),
+			exp: experienceNeededAtLevel(pokemon.data.minLevel),
 			gender: PokemonGender.None,
 			attributes: pokemon.attributes,
-			ac: pokemon.ac,
+			ac: pokemon.data.ac,
 			ability: pokemon.abilities[0]?.id,
 			hp: {
-				current: pokemon.hp,
-				max: pokemon.hp,
+				current: pokemon.data.hp,
+				max: pokemon.data.hp,
 			},
 			hitDice: {
-				current: pokemon.minLevel,
-				max: pokemon.minLevel,
+				current: pokemon.data.minLevel,
+				max: pokemon.data.minLevel,
 			},
 			proficiencies: pokemon.skills.copy(),
-			savingThrows: pokemon.savingThrows,
+			savingThrows: pokemon.data.saves,
 			moves: [],
 			items: [],
 			notes: "",
@@ -625,11 +625,11 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
     
 		const { data, error } = await this.supabase.rpc("add_pokemon", {
 			_write_key: writeKey,
-			_nickname: pokemon.name,
-			_species: pokemon.id,
+			_nickname: pokemon.data.name,
+			_species: pokemon.id.data,
 			_nature: trainerPokemon.nature.data,
 			_type: pokemon.type.data,
-			_level: pokemon.minLevel,
+			_level: pokemon.data.minLevel,
 			_gender: PokemonGender.None,
 			_strength: pokemon.attributes.str.score,
 			_dexterity: pokemon.attributes.dex.score,
@@ -637,11 +637,11 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_intelligence: pokemon.attributes.int.score,
 			_wisdom: pokemon.attributes.wis.score,
 			_charisma: pokemon.attributes.cha.score,
-			_ac: pokemon.ac,
-			_hp_cur: pokemon.hp,
-			_hp_max: pokemon.hp,
-			_hit_dice_cur: pokemon.minLevel,
-			_hit_dice_max: pokemon.minLevel,
+			_ac: pokemon.data.ac,
+			_hp_cur: pokemon.data.hp,
+			_hp_max: pokemon.data.hp,
+			_hit_dice_cur: pokemon.data.minLevel,
+			_hit_dice_max: pokemon.data.minLevel,
 			_rank_athletics: trainerPokemon.proficiencies.data["athletics"],
 			_rank_acrobatics: trainerPokemon.proficiencies.data["acrobatics"],
 			_rank_sleight_of_hand: trainerPokemon.proficiencies.data["sleight of hand"],
@@ -660,13 +660,13 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_rank_intimidation: trainerPokemon.proficiencies.data["intimidation"],
 			_rank_performance: trainerPokemon.proficiencies.data["performance"],
 			_rank_persuasion: trainerPokemon.proficiencies.data["persuasion"],
-			_save_str: pokemon.savingThrows.includes("str"),
-			_save_dex: pokemon.savingThrows.includes("dex"),
-			_save_con: pokemon.savingThrows.includes("con"),
-			_save_int: pokemon.savingThrows.includes("int"),
-			_save_wis: pokemon.savingThrows.includes("wis"),
-			_save_cha: pokemon.savingThrows.includes("cha"),
-			_ability: pokemon.abilities[0]?.id,
+			_save_str: pokemon.data.saves.includes("str"),
+			_save_dex: pokemon.data.saves.includes("dex"),
+			_save_con: pokemon.data.saves.includes("con"),
+			_save_int: pokemon.data.saves.includes("int"),
+			_save_wis: pokemon.data.saves.includes("wis"),
+			_save_cha: pokemon.data.saves.includes("cha"),
+			_ability: pokemon.abilities.toList()[0]?.id,
 			_notes: "",
 			_tera_type: pokemon.type.primary,
 			_exp: trainerPokemon.exp,

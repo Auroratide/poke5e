@@ -4,6 +4,7 @@ import type { TrainerData } from "./data"
 import { provider } from "./data"
 import type { InventoryItem, LearnedMove, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from "./types"
 import { error } from "$lib/design/errors/store"
+import type { PokemonSpecies } from "$lib/creatures/species"
 
 type AllTrainers = {
 	[readKey: ReadWriteKey]: TrainerData & WithUpdater & WithRemover
@@ -33,7 +34,7 @@ type TrainerUpdater = {
 	heldItems: (info: TrainerPokemon) => Promise<void>
 	pokemonFeats: (info: TrainerPokemon) => Promise<void>
 	move: (info: LearnedMove, options?: UpdaterOptions) => Promise<void>
-	addToTeam: (pokemon: Pokemon) => Promise<TrainerPokemon>
+	addToTeam: (pokemon: PokemonSpecies) => Promise<TrainerPokemon>
 	removeFromTeam: (id: string) => Promise<void>
 }
 type WithUpdater = {
@@ -355,7 +356,7 @@ const createStore = () => {
 								throw e
 							})
 						},
-						addToTeam: (pokemon: Pokemon) => {
+						addToTeam: (pokemon: PokemonSpecies) => {
 							return provider.addPokemonToTeam(data.writeKey, data.info.id, pokemon).then((result) => {
 								storeUpdateOne(readKey, (prev) => {
 									const pokemonList = [...prev.pokemon, result]

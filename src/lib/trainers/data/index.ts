@@ -1,4 +1,3 @@
-import type { Pokemon } from "$lib/creatures/types"
 import type {
 	HeldItem,
 	InventoryItem,
@@ -15,6 +14,7 @@ import { SupabaseTrainerProvider } from "./supabase"
 import { supabase } from "$lib/supabase"
 import type { ChosenFeat } from "$lib/feats/ChosenFeat"
 import { userAssets } from "$lib/user-assets"
+import type { PokemonSpecies } from "$lib/creatures/species"
 
 export type TrainerData = {
 	info: Trainer,
@@ -50,7 +50,7 @@ export interface TrainerDataProvider {
 	updatePokemon: (writeKey: ReadWriteKey, info: TrainerPokemon) => Promise<boolean>
 	updatePokemonAvatar: (writeKey: ReadWriteKey, info: TrainerPokemon, newAvatar: File) => Promise<StorageResource>
 	removePokemonAvatar: (writeKey: ReadWriteKey,  info: TrainerPokemon) => Promise<void>
-	addPokemonToTeam: (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: Pokemon) => Promise<TrainerPokemon>
+	addPokemonToTeam: (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: PokemonSpecies) => Promise<TrainerPokemon>
 	removePokemon: (writeKey: ReadWriteKey, id: string) => Promise<boolean>
 	updateMoveset: (writeKey: ReadWriteKey, pokemonId: PokemonId, moves: LearnedMove[]) => Promise<LearnedMove[]>
 	updateOneMove: (writeKey: ReadWriteKey, move: LearnedMove) => Promise<boolean>

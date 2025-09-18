@@ -1,26 +1,27 @@
 <script lang="ts">
 	import Card from "$lib/design/Card.svelte"
-	import { pokemon } from "$lib/creatures/store"
 	import Button from "$lib/design/Button.svelte"
 	import type { TrainerStore } from "./trainers"
-	import { matchNameOrType } from "$lib/creatures/filter"
-	import type { Pokemon } from "$lib/creatures/types"
+	import { matchNameOrType2 } from "$lib/creatures/filter"
 	import { goto } from "$app/navigation"
 	import { base } from "$app/paths"
 	import Title from "$lib/design/Title.svelte"
 	import { TextField } from "$lib/design/forms"
+	import { PokemonSpecies, SpeciesStore } from "$lib/creatures/species"
 
 	export let trainer: TrainerStore
 	$: canAdd = $trainer.update != null
 	$: readKey = $trainer.info.readKey
 
+	$: pokemon = SpeciesStore.canonList()
+
 	let species = ""
 	$: filteredPokemon = species.length > 0
-		? $pokemon?.filter(matchNameOrType(species)) ?? []
+		? $pokemon?.filter(matchNameOrType2(species)) ?? []
 		: [] // if we haven't typed anything, don't show the ENTIRE list
 	
 	let saving = false
-	const onSelect = (p: Pokemon) => () => {
+	const onSelect = (p: PokemonSpecies) => () => {
 		saving = true
 		$trainer.update?.addToTeam(p).then(({ id }) => {
 			goto(`${base}/trainers?id=${readKey}&pokemon=${id}`)
@@ -44,7 +45,7 @@
 				<ul class="no-list columnated">
 					{#each filteredPokemon as p}
 						<li class="spaced-sm">
-							<Button align="left" width="full" on:click={onSelect(p)} disabled={saving}>{p.name}</Button>
+							<Button align="left" width="full" on:click={onSelect(p)} disabled={saving}>{p.data.name}</Button>
 						</li>
 					{/each}
 				</ul>
