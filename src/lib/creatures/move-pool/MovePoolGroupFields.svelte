@@ -4,7 +4,7 @@
 	export let title: string
 	export let values: string[]
 	export let disabled = false
-	export let moves: { id: string, name: string }[]
+	export let moves: { id: string, name: string }[] = []
 
 	$: options = moves.map((it) => ({
 		name: it.name,
@@ -24,24 +24,26 @@
 	}
 </script>
 
-<div class="move-pool-group">
-	<p><strong>{title}</strong></p>
-	<ul>
-		{#each values as value, index}
-			<li class="no-label">
-				<Removable on:remove={remove(index)}>
-					<SelectField label="{index + 1}." {value} {options} on:change={update(index)} {disabled} />
-				</Removable>
+{#if options.length > 0}
+	<div class="move-pool-group">
+		<p><strong>{title}</strong></p>
+		<ul>
+			{#each values as value, index}
+				<li class="no-label">
+					<Removable on:remove={remove(index)}>
+						<SelectField label="{index + 1}." {value} {options} on:change={update(index)} {disabled} />
+					</Removable>
+				</li>
+			{/each}
+			<li>
+				<!-- key is a workaround to ensure the field is always empty -->
+				{#key values}
+					<SelectField label="Add Move" value="" {options} on:change={add} {disabled} />
+				{/key}
 			</li>
-		{/each}
-		<li>
-			<!-- key is a workaround to ensure the field is always empty -->
-			{#key values}
-				<SelectField label="Add Move" value="" {options} on:change={add} {disabled} />
-			{/key}
-		</li>
-	</ul>
-</div>
+		</ul>
+	</div>
+{/if}
 
 <style>
 	.move-pool-group {

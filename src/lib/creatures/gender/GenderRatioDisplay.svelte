@@ -39,7 +39,8 @@
 <style>
 	.gender-ratio-display {
 		display: inline-flex;
-		inline-size: 50%;
+		max-inline-size: 10em;
+		inline-size: 100%;
 		block-size: 1.25em;
 		background: gray;
 		border-radius: 0.25em;

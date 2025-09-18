@@ -19,7 +19,7 @@
 	<MovePoolGroupFields title="Level 14 Moves" bind:values={value.data.level14} moves={$moves} {disabled} />
 	<MovePoolGroupFields title="Level 18 Moves" bind:values={value.data.level18} moves={$moves} {disabled} />
 	<MovePoolGroupFields title="Egg Moves" bind:values={value.data.egg} moves={$moves} {disabled} />
-	<MovePoolGroupFields title="TMs" bind:values={tmString} moves={$tms.map((it) => ({
+	<MovePoolGroupFields title="TMs" bind:values={tmString} moves={$tms?.map((it) => ({
 		name: `${it.id} - ${it.move}`,
 		id: it.id.toString(),
 	}))} {disabled} />
