@@ -1,4 +1,3 @@
-import type { Pokemon } from "$lib/creatures/types"
 import { writable } from "svelte/store"
 import type { TrainerData } from "./data"
 import { provider } from "./data"

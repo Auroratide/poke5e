@@ -13,7 +13,7 @@
 	$: canAdd = $trainer.update != null
 	$: readKey = $trainer.info.readKey
 
-	$: pokemon = SpeciesStore.canonList()
+	const pokemon = SpeciesStore.canonList()
 
 	let species = ""
 	$: filteredPokemon = species.length > 0

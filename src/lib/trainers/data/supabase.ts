@@ -10,7 +10,6 @@ import {
 	type HeldItem,
 	type InventoryItem,
 } from "../types"
-import type { Pokemon } from "$lib/creatures/types"
 import { TrainerDataProviderError, type StorageResource, type TrainerData, type TrainerDataProvider } from "."
 import type { SupabaseClient } from "@supabase/supabase-js"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
