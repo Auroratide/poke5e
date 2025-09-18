@@ -12,6 +12,7 @@
 		FakemonList,
 		PageAction,
 		InfoFakemonPage,
+		FindFakemonPage,
 	} from "$lib/fakemon/page"
 	import {
 		fakemonStore,
@@ -71,6 +72,8 @@
 	{:else}
 		{#if action === PageAction.add}
 			<AddFakemonPage />
+		{:else if action === PageAction.find}
+			<FindFakemonPage />
 		{:else}
 			<Title value="Fakémon" />
 		{/if}
