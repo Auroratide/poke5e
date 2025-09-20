@@ -621,7 +621,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 				},
 			},
 		}
-    
+
 		const { data, error } = await this.supabase.rpc("add_pokemon", {
 			_write_key: writeKey,
 			_nickname: pokemon.data.name,

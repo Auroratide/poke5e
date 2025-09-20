@@ -27,6 +27,8 @@
 	import ErrorMessage from "$lib/trainers/ErrorMessage.svelte"
 	import RestPokemonCard from "$lib/trainers/pokemon-details/RestPokemonCard.svelte"
 	import RestTrainerCard from "$lib/trainers/trainer-details/RestTrainerCard.svelte"
+	import type { Readable } from "svelte/store"
+	import { SpeciesStore, type PokemonSpecies } from "$lib/creatures/species"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: pokemonId = browser ? $page.url.searchParams.get("pokemon") : undefined
@@ -34,6 +36,11 @@
 
 	let trainerList: Promise<undefined | TrainerListStore> | undefined
 	let trainer: Promise<undefined | TrainerStore> | undefined
+	let allSpecies: Promise<Readable<PokemonSpecies[]>> | undefined
+
+	$: if (browser) {
+		allSpecies = SpeciesStore.completeList()
+	}
 
 	$: {
 		if (trainerId && browser) {
@@ -85,7 +92,11 @@
 			{#if !trainer}
 				<br />
 			{:else if action === PageAction.addPokemon}
-				<AddPokemonCard {trainer} />
+				{#await allSpecies}
+					<Loader />
+				{:then allSpecies}
+					<AddPokemonCard {trainer} {allSpecies} />
+				{/await}
 			{:else if action === PageAction.editPokemon}
 				<EditPokemonCard {trainer} id={pokemonId} />
 			{:else if action === PageAction.evolvePokemon}

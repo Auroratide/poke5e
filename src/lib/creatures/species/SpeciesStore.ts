@@ -30,6 +30,7 @@ export type SingleSpeciesStore = {
 export interface SpeciesStore {
 	get: (id: SpeciesIdentifier) => Promise<SingleSpeciesStore | undefined>
 	canonList: () => Readable<PokemonSpecies[] | undefined>
+	completeList: () => Promise<Readable<PokemonSpecies[]>>
 }
 
 function createStore(): SpeciesStore {
@@ -54,6 +55,13 @@ function createStore(): SpeciesStore {
 			}
 		},
 		canonList: () => allCanonSpecies,
+		completeList: async () => {
+			const fakemon = await fakemonStore.all()
+
+			return derived([allCanonSpecies, fakemon], ([normalSpecies, fakemon]) => {
+				return normalSpecies?.concat(fakemon.map((it) => it.species))
+			})
+		},
 	}
 }
 

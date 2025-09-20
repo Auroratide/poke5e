@@ -7,17 +7,19 @@
 	import { base } from "$app/paths"
 	import Title from "$lib/design/Title.svelte"
 	import { TextField } from "$lib/design/forms"
-	import { PokemonSpecies, SpeciesStore } from "$lib/creatures/species"
+	import { PokemonSpecies } from "$lib/creatures/species"
+	import { SearchFakemonById, type SearchFakemonByIdDetail } from "$lib/fakemon/search"
+	import type { Fakemon } from "$lib/fakemon"
+	import type { Readable } from "svelte/store"
 
 	export let trainer: TrainerStore
+	export let allSpecies: Readable<PokemonSpecies[]>
 	$: canAdd = $trainer.update != null
 	$: readKey = $trainer.info.readKey
 
-	const pokemon = SpeciesStore.canonList()
-
 	let species = ""
 	$: filteredPokemon = species.length > 0
-		? $pokemon?.filter(matchNameOrType2(species)) ?? []
+		? $allSpecies?.filter(matchNameOrType2(species)) ?? []
 		: [] // if we haven't typed anything, don't show the ENTIRE list
 	
 	let saving = false
@@ -28,6 +30,11 @@
 		}).catch(() => {
 			saving = false
 		})
+	}
+
+	let fakemon: Fakemon
+	const onFakemonSearch = (e: CustomEvent<SearchFakemonByIdDetail>) => {
+		fakemon = e.detail.value
 	}
 </script>
 
@@ -51,6 +58,12 @@
 				</ul>
 			{/if}
 		</section>
+		<!-- <section>
+			<SearchFakemonById on:found={onFakemonSearch} />
+			{#if fakemon != null}
+				<Button on:click={onSelect(fakemon.species)}>{fakemon.species.data.name}</Button>
+			{/if}
+		</section> -->
 	{:else}
 		<section>
 			<p>You do not have permission to add pokemon to this trainer.</p>
