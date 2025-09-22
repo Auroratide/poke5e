@@ -140,3 +140,19 @@ test("uploading new media", async () => {
 	expect(afterDeletion.data.species.media.values.normalPortrait?.name).toEqual(resultWithDelete.data.values.normalPortrait.name)
 	expect(afterDeletion.data.species.media.values.shinyPortrait).toBeUndefined()
 })
+
+test("verify write key", async () => {
+	const draft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Droideon",
+		}).data,
+	})
+
+	const added = await provider.add(draft.data.species)
+
+	const noMatch = await provider.verifyWriteKey(added, "Bad write key")
+	expect(noMatch).toBe(false)
+
+	const match = await provider.verifyWriteKey(added, added.data.writeKey)
+	expect(match).toBe(true)
+})

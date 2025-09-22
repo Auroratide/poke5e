@@ -1,5 +1,5 @@
 import type { Unsubscriber, Writable } from "svelte/store"
-import type { Fakemon } from "../Fakemon"
+import type { Fakemon, WriteKey } from "../Fakemon"
 import type { StoredFakemon } from "./FakemonStore"
 import { FakemonStoreUpdater } from "./FakemonUpdater"
 import { provider } from "../data"
@@ -10,7 +10,8 @@ export type SingleStoredFakemon = {
 }
 
 export type SingleFakemonStore = {
-	subscribe: (run: (value: SingleStoredFakemon) => void) => Unsubscriber
+	subscribe: (run: (value: SingleStoredFakemon) => void) => Unsubscriber,
+	verifyAccess: (writeKey: WriteKey) => Promise<boolean>
 }
 
 export function createStoredFakemon(fakemon: Fakemon, fakemonStore: Writable<StoredFakemon>): SingleStoredFakemon {
@@ -29,6 +30,19 @@ export function createSingleFakemonStore(storedFakemon: SingleStoredFakemon, fak
 			return fakemonStore.subscribe((all) => {
 				run(all[storedFakemon.value.data.readKey] ?? storedFakemon)
 			})
+		},
+		verifyAccess: async (writeKey: WriteKey) => {
+			const isVerified = await provider.verifyWriteKey(storedFakemon.value, writeKey)
+			if (isVerified) {
+				fakemonStore.update((prev) => ({
+					...prev,
+					[storedFakemon.value.data.readKey]: createStoredFakemon(storedFakemon.value.copy({
+						writeKey: writeKey,
+					}), fakemonStore),
+				}))
+			}
+
+			return isVerified
 		},
 	}
 }

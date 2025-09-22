@@ -7,6 +7,7 @@ import type { ImageInputValue } from "$lib/design/forms"
 import { stubImageFile } from "$lib/test/files"
 import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
 import { SpeciesMedia } from "$lib/creatures/media"
+import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 
 test("new fakemon", async () => {
 	// given: a draft fakemon
@@ -154,3 +155,29 @@ test("listing fakemon", async () => {
 	expect(resultNames).toContain("Eeveon")
 	expect(resultNames).toContain("Drakeon")
 })
+
+test("verifying access", async () => {
+	// given: a fakemon in the db
+	const draft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Eeveon",
+		}).data,
+	})
+
+	const eeveon = await provider.add(draft.data.species)
+	FakemonLocalStorage.remove(eeveon.data.readKey) // remove the write key
+
+	// when: access is verified
+	const singleStore = await fakemonStore.get(eeveon.data.readKey)
+	const noMatch = await singleStore.verifyAccess("bad")
+	expect(noMatch).toBe(false)
+
+	const match = await singleStore.verifyAccess(eeveon.data.writeKey)
+	expect(match).toBe(true)
+
+	// then: write key is saved
+	const storedValue = get(singleStore)
+	expect(storedValue.value.data.writeKey).toEqual(eeveon.data.writeKey)
+	expect(storedValue.update).toBeDefined()
+})
+

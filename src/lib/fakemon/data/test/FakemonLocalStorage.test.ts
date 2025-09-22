@@ -103,3 +103,27 @@ test("lists all", () => {
 		readKey: "sssss",
 	})
 })
+
+test("removing", () => {
+	// given
+	const fakemon = stubFakemon({
+		id: "12345",
+		readKey: "rrrrr",
+		writeKey: undefined,
+	})
+
+	FakemonLocalStorage.add(fakemon.data)
+
+	// when
+	const result = FakemonLocalStorage.get(fakemon.data.readKey)
+
+	// then
+	expect(result.id).toEqual("12345")
+
+	// when
+	FakemonLocalStorage.remove(fakemon.data.readKey)
+	const resultAfterRemoval = FakemonLocalStorage.get(fakemon.data.readKey)
+	
+	// then
+	expect(resultAfterRemoval).toBeUndefined()
+})

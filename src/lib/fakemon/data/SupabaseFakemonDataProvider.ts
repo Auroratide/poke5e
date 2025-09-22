@@ -95,6 +95,27 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		return newMedia
 	}
 
+	async verifyWriteKey(fakemon: Fakemon, writeKey: WriteKey): Promise<boolean> {
+		const { data, error } = await this.supabase.rpc("verify_fakemon_write_key", {
+			_id: fakemon.data.id,
+			_write_key: writeKey,
+		}).single<number>()
+
+		if (error) {
+			throw new FakemonDataProviderError("Could not verify fakemon.")
+		}
+
+		if (data > 0) {
+			FakemonLocalStorage.add({
+				id: fakemon.data.id,
+				readKey: fakemon.data.readKey,
+				writeKey: writeKey,
+			})
+		}
+
+		return data > 0
+	}
+
 	private validateError(message: string, e: PostgrestError | undefined) {
 		if (e) {
 			 

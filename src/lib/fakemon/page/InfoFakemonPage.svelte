@@ -14,10 +14,11 @@
 <Title value="{$fakemon.value.data.species.name}" />
 <PokemonSpeciesCard value={$fakemon.value.species}>
 	<div slot="footer">
-		{#if canEdit}
-			<ActionArea>
+		<ActionArea>
+			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.accessKey)}" variant="ghost">Access Key</Button>
+			{#if canEdit}
 				<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.edit)}">Edit</Button>
-			</ActionArea>
-		{/if}
+			{/if}
+		</ActionArea>
 	</div>
 </PokemonSpeciesCard>

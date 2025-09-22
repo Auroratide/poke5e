@@ -18,6 +18,7 @@ export interface FakemonDataProvider {
 	add(draft: DraftFakemon): Promise<Fakemon>
 	update(fakemon: Fakemon): Promise<boolean>
 	updateMedia(writeKey: WriteKey, media: SpeciesMedia<ImageInputValue>): Promise<SpeciesMedia<UploadedMedia>>
+	verifyWriteKey(fakemon: Fakemon, writeKey: WriteKey): Promise<boolean>
 }
 
 export class FakemonDataProviderError extends Error {

@@ -11,6 +11,8 @@ function get(readKey: ReadKey): FakemonIdentifyingInfo | undefined {
 	const key = lsKey(readKey)
 
 	const value = localStorage.getItem(key)
+	if (value == null) return undefined
+
 	try {
 		const data = JSON.parse(value)
 
@@ -30,8 +32,8 @@ function add(value: FakemonIdentifyingInfo) {
 	const key = lsKey(value.readKey)
 
 	localStorage.setItem(key, JSON.stringify({
-		id: value.id ?? previous.id,
-		writeKey: value.writeKey ?? previous.writeKey,
+		id: value.id ?? previous?.id,
+		writeKey: value.writeKey ?? previous?.writeKey,
 	}))
 }
 
@@ -51,8 +53,14 @@ function list(): FakemonIdentifyingInfo[] {
 	return result
 }
 
+function remove(readKey: ReadKey) {
+	const key = lsKey(readKey)
+	localStorage.removeItem(key)
+}
+
 export const FakemonLocalStorage = {
 	get,
 	add,
 	list,
+	remove,
 } as const
