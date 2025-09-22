@@ -35,7 +35,9 @@
 </script>
 
 <Fieldset title="Proficiencies" columns={2}>
-	<InstructionText>First checkbox is for proficiency. Second checkbox is for expertise.</InstructionText>
+	{#if !noexpertise}
+		<InstructionText>First checkbox is for proficiency. Second checkbox is for expertise.</InstructionText>
+	{/if}
 	{#if noexpertise}
 		<CheckboxFields label="Proficiencies" bind:checked {disabled} values={singleOptions} />
 	{:else}
