@@ -36,7 +36,7 @@
 					<section>
 						<p>Are you sure you want to remove {pokemon.nickname} from {$trainer.info.name}'s team?</p>
 						<p>Removal is permanent and cannot be undone!</p>
-						{#if species.media?.data.normalPortrait}
+						{#if species.media?.data.values.normalPortrait}
 							<p class="centered greyscale">
 								<SpeciesPortrait media={species.media} alt={species.data.name} />
 							</p>

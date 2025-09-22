@@ -7,8 +7,11 @@
 	import { TrainerRester, type TrainerResterSubmit } from "$lib/poke5e/resting"
 	import Title from "$lib/design/Title.svelte"
 	import { goto } from "$app/navigation"
+	import type { Readable } from "svelte/store"
+	import type { PokemonSpecies } from "$lib/creatures/species"
 
 	export let trainer: TrainerStore
+	export let allSpecies: Readable<PokemonSpecies[]>
 	
 	$: canEdit = $trainer.update != null
 
@@ -42,7 +45,7 @@
 <Title value="Rest {$trainer.info.name}" />
 <Card title="Rest {$trainer.info.name}">
 	{#if canEdit}
-		<TrainerRester trainer={$trainer} {saving} on:cancel={cancel} on:submit={update} />
+		<TrainerRester trainer={$trainer} {allSpecies} {saving} on:cancel={cancel} on:submit={update} />
 	{:else}
 		<section>
 			<p>You do not have permission to edit this trainer.</p>

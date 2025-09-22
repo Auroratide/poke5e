@@ -6,11 +6,12 @@
 	} = undefined
 	export let alt: string
 	export let shimmer: boolean = false
+	export let hue: number = 0
 </script>
 
 <figure>
 	{#key src}
-		<img {src} {alt} class:smaller={attribution != null} class:shimmer={shimmer} />
+		<img {src} {alt} class:smaller={attribution != null} class:shimmer={shimmer} style:--hue-rotate="{hue}deg" />
 	{/key}
 	{#if attribution}
 		{#await attribution}
@@ -45,6 +46,7 @@
 		box-shadow: none;
 		object-fit: contain;
 		flex: 1;
+		filter: hue-rotate(var(--hue-rotate));
 	}
 
 	.smaller {

@@ -36,11 +36,7 @@
 
 	let trainerList: Promise<undefined | TrainerListStore> | undefined
 	let trainer: Promise<undefined | TrainerStore> | undefined
-	let allSpecies: Promise<Readable<PokemonSpecies[]>> | undefined
-
-	$: if (browser) {
-		allSpecies = SpeciesStore.completeList()
-	}
+	let allSpecies: Promise<Readable<PokemonSpecies[]>> = browser ? SpeciesStore.completeList() : undefined
 
 	$: {
 		if (trainerId && browser) {
@@ -100,7 +96,11 @@
 			{:else if action === PageAction.editPokemon}
 				<EditPokemonCard {trainer} id={pokemonId} />
 			{:else if action === PageAction.evolvePokemon}
-				<EvolvePokemonCard {trainer} id={pokemonId} />
+				{#await allSpecies}
+					<Loader />
+				{:then allSpecies}
+					<EvolvePokemonCard {trainer} id={pokemonId} {allSpecies} />
+				{/await}
 			{:else if action === PageAction.restPokemon}
 				<RestPokemonCard {trainer} id={pokemonId} />
 			{:else if action === PageAction.removePokemon}
@@ -108,7 +108,11 @@
 			{:else if pokemonId}
 				<PokemonCard {trainer} id={pokemonId} />
 			{:else if action === PageAction.restTrainer}
-				<RestTrainerCard {trainer} />
+				{#await allSpecies}
+					<Loader />
+				{:then allSpecies}
+					<RestTrainerCard {trainer} {allSpecies} />
+				{/await}
 			{:else if action === PageAction.editTrainer}
 				<EditTrainerCard {trainer} />
 			{:else if action === PageAction.removeTrainer}

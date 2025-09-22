@@ -11,7 +11,9 @@
 
 <figure aria-hidden="true" class:darken>
 	<WithSpecies let:species {ids}>
-		<SpeciesSprite media={species.media} alt="" />
+		<div class="img-container">
+			<SpeciesSprite media={species.media} alt="" />
+		</div>
 	</WithSpecies>
 </figure>
 
@@ -31,7 +33,10 @@
 	}
 
 	figure :global(img) {
-		inline-size: 72px;
 		margin: 0;
+	}
+
+	figure .img-container {
+		inline-size: 72px;
 	}
 </style>

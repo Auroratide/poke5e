@@ -72,10 +72,15 @@
 				tm: [],
 			},
 			media: {
-				normalPortrait: undefined,
-				normalSprite: undefined,
-				shinyPortrait: undefined,
-				shinySprite: undefined,
+				values: {
+					normalPortrait: undefined,
+					normalSprite: undefined,
+					shinyPortrait: undefined,
+					shinySprite: undefined,
+				},
+				customization: {
+					shinyHue: 0,
+				},
 			},
 		},
 	})

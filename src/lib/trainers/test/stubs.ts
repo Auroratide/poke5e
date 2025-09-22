@@ -1,4 +1,5 @@
 import { PokemonGender } from "$lib/creatures/gender"
+import { SpeciesIdentifier } from "$lib/creatures/species"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { Level } from "$lib/dnd/level"
 import { Speeds } from "$lib/dnd/movement"
@@ -27,7 +28,7 @@ export function stubTrainerPokemon(template: Partial<TrainerPokemon> = {}): Trai
 	return {
 		id: "1",
 		trainerId: "1",
-		pokemonId: "eevee",
+		pokemonId: new SpeciesIdentifier("eevee"),
 		nickname: "Softie",
 		type: new PokemonType(["normal"]),
 		nature: new Nature("Lonely"),

@@ -168,7 +168,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_moves_tm: fakemon.moves.tm,
 			_art_attribution_name: null,
 			_art_attribution_href: null,
-			_shiny_hue_rotation: 0,
+			_shiny_hue_rotation: fakemon.media.customization?.shinyHue ?? 0,
 		}
 	}
 
@@ -179,10 +179,10 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 				type: "fakemon-media",
 				params: {
 					key: writeKey,
-					...SpeciesMedia.forEachType((type) => media.data[type]?.type === "new" ? {
-						mimetype: media.data[type].value.type,
-						sizeInBytes: media.data[type].value.size,
-					} : undefined)?.data,
+					...SpeciesMedia.forEachType((type) => media.data.values[type]?.type === "new" ? {
+						mimetype: media.data.values[type].value.type,
+						sizeInBytes: media.data.values[type].value.size,
+					} : undefined)?.data.values,
 				},
 			},
 		})
@@ -193,14 +193,14 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 		await Promise.all(
 			SpeciesMedia.types
-				.map((type) => data.values[type] != null && media.data[type]?.type === "new"
-					? this.userAssets.upload(data.values[type].uploadUrl, media.data[type].value)
+				.map((type) => data.values[type] != null && media.data.values[type]?.type === "new"
+					? this.userAssets.upload(data.values[type].uploadUrl, media.data.values[type].value)
 					: undefined,
 				).filter((it) => it != null),
 		)
 
 		return SpeciesMedia.forEachType((type) =>
-			data.values[type] != null && media.data[type]?.type === "new"
+			data.values[type] != null && media.data.values[type]?.type === "new"
 				? this.getUserAssetResource(data.values[type].filename)
 				: undefined,
 		)
@@ -213,7 +213,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 				type: "fakemon-media",
 				params: {
 					key: writeKey,
-					...SpeciesMedia.forEachType((type) => media.data[type]?.type === "remove").data,
+					...SpeciesMedia.forEachType((type) => media.data.values[type]?.type === "remove").data.values,
 				},
 			},
 		})
@@ -394,10 +394,15 @@ function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) => Upl
 				tm: row.moves_tm,
 			},
 			media: {
-				normalPortrait: row.normal_portrait_filename ? getStorageResource(row.normal_portrait_filename) : undefined,
-				normalSprite: row.normal_sprite_filename ? getStorageResource(row.normal_sprite_filename) : undefined,
-				shinyPortrait: row.shiny_portrait_filename ? getStorageResource(row.shiny_portrait_filename) : undefined,
-				shinySprite: row.shiny_sprite_filename ? getStorageResource(row.shiny_sprite_filename) : undefined,
+				values: {
+					normalPortrait: row.normal_portrait_filename ? getStorageResource(row.normal_portrait_filename) : undefined,
+					normalSprite: row.normal_sprite_filename ? getStorageResource(row.normal_sprite_filename) : undefined,
+					shinyPortrait: row.shiny_portrait_filename ? getStorageResource(row.shiny_portrait_filename) : undefined,
+					shinySprite: row.shiny_sprite_filename ? getStorageResource(row.shiny_sprite_filename) : undefined,
+				},
+				customization: {
+					shinyHue: row.shiny_hue_rotation,
+				},
 			},
 		},
 	})
@@ -407,5 +412,5 @@ type PostUserAssetsResponseBody = {
 	values: Data<SpeciesMedia<{
 		filename: string,
 		uploadUrl: string,
-	}>>
+	}>>["values"]
 }

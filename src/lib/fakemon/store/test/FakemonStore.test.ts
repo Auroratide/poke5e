@@ -112,9 +112,11 @@ test("updating with new media", async () => {
 	})
 	await storedValue.update?.info(updatedFakemon, {
 		media: new SpeciesMedia<ImageInputValue>({
-			normalPortrait: {
-				type: "new",
-				value: stubImageFile("img.png"),
+			values: {
+				normalPortrait: {
+					type: "new",
+					value: stubImageFile("img.png"),
+				},
 			},
 		}),
 	})
@@ -123,7 +125,8 @@ test("updating with new media", async () => {
 	const singleStoreAfterUpdate = await fakemonStore.get(addedResult.data.readKey)
 	const storedValueAfterUpdate = get(singleStoreAfterUpdate)
 
-	expect(storedValueAfterUpdate.value.species.media.data.normalPortrait.name).toBeDefined()
+	// O.O
+	expect(storedValueAfterUpdate.value.species.media.data.values.normalPortrait.name).toBeDefined()
 })
 
 test("listing fakemon", async () => {

@@ -58,10 +58,12 @@
 	let description = species.data.description
 	let originalMedia = species.media.copy()
 	let updatedMedia = new SpeciesMedia<ImageInputValue>({
-		normalPortrait: undefined,
-		normalSprite: undefined,
-		shinyPortrait: undefined,
-		shinySprite: undefined,
+		values: {
+			normalPortrait: undefined,
+			normalSprite: undefined,
+			shinyPortrait: undefined,
+			shinySprite: undefined,
+		},
 	})
 	let abilityPool = species.abilities.copy()
 	let movePool = species.moves.copy()
@@ -91,6 +93,7 @@
 					description: description,
 					abilities: abilityPool.data,
 					moves: movePool.data,
+					media: originalMedia.data,
 				}).data,
 			}),
 			newMedia: updatedMedia,

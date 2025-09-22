@@ -1,29 +1,34 @@
 <script lang="ts">
 	import { assets } from "$app/paths"
-	import type { SpeciesMedia, SpeciesMediaType, UploadedMedia } from "./SpeciesMedia"
+	import type { SpeciesMedia, UploadedMedia } from "./SpeciesMedia"
 
 	export let media: SpeciesMedia<UploadedMedia>
 	export let alt: string
 	export let shiny: boolean = false
 
-	$: imgKey = (shiny ? "shiny" : "normal") + "Sprite" as SpeciesMediaType
-	$: isExternal = /^http/.test(media?.data.normalSprite.href)
-	$: sprite = media?.data?.[imgKey].href
-	$: src = isExternal ? sprite : `${assets}${sprite}`
+	$: value = media.sprite({ shiny })
+	$: isExternal = /^http/.test(value.value?.href)
+	$: src = isExternal ? value.value?.href : `${assets}${value.value?.href}`
 </script>
 
-{#if sprite}
-	<img {src} {alt} />
+{#if value.value?.href != null}
+	<img {src} {alt} class:using-fallback={value.portraitFallback} style:--hue-rotate="{value.hueRotate}deg" />
 {/if}
 
 <style>
 	img {
 		display: block;
-		width: 100%;
+		inline-size: 100%;
 		margin: 0 auto;
 		border: none;
 		box-shadow: none;
 		image-rendering: crisp-edges;
 		image-rendering: pixelated;
+	}
+
+	.using-fallback {
+		padding: 12.5%;
+		image-rendering: auto;
+		filter: hue-rotate(var(--hue-rotate));
 	}
 </style>

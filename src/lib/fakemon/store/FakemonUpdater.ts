@@ -22,10 +22,10 @@ export class FakemonStoreUpdater {
 				const updatedMedia = await this.provider.updateMedia(updatedFakemon.data.writeKey, options.media)
 
 				SpeciesMedia.types.forEach((type) => {
-					if (options.media.data[type]?.type === "remove") {
-						updatedFakemon.data.species.media[type] = undefined
-					} else if (options.media.data[type]?.type === "new") {
-						updatedFakemon.data.species.media[type] = updatedMedia.data[type]
+					if (options.media.data.values[type]?.type === "remove") {
+						updatedFakemon.data.species.media.values[type] = undefined
+					} else if (options.media.data.values[type]?.type === "new") {
+						updatedFakemon.data.species.media.values[type] = updatedMedia.data.values[type]
 					}
 				})
 			}

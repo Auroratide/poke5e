@@ -82,22 +82,27 @@ export class PokemonSpecies extends DataClass<{
 			abilities: AbilityPool.fromList(it.abilities).data,
 			moves: it.moves,
 			media: {
-				normalPortrait: {
-					name: it.media.main,
-					href: it.media.main,
+				values: {
+					normalPortrait: {
+						name: it.media.main,
+						href: it.media.main,
+					},
+					normalSprite: it.media.sprite ? {
+						name: it.media.sprite,
+						href: it.media.sprite,
+					} : undefined,
+					shinyPortrait: it.media.mainShiny ? {
+						name: it.media.mainShiny,
+						href: it.media.mainShiny,
+					} : undefined,
+					shinySprite: it.media.spriteShiny ? {
+						name: it.media.spriteShiny,
+						href: it.media.spriteShiny,
+					} : undefined,
 				},
-				normalSprite: it.media.sprite ? {
-					name: it.media.sprite,
-					href: it.media.sprite,
-				} : undefined,
-				shinyPortrait: it.media.mainShiny ? {
-					name: it.media.mainShiny,
-					href: it.media.mainShiny,
-				} : undefined,
-				shinySprite: it.media.spriteShiny ? {
-					name: it.media.spriteShiny,
-					href: it.media.spriteShiny,
-				} : undefined,
+				customization: {
+					shinyHue: 0,
+				},
 			},
 			evolution: it.evolution,
 		})

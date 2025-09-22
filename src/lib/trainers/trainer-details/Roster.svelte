@@ -17,7 +17,7 @@
 		(l: TrainerPokemon, r: TrainerPokemon) => field(l).localeCompare(field(r))
 
 	const byNicknameOrSpecies = (filterValue: string) => (it: TrainerPokemon) =>
-		it.nickname.toLocaleLowerCase().includes(filterValue) || it.pokemonId.replace("-", " ").includes(filterValue)
+		it.nickname.toLocaleLowerCase().includes(filterValue) || it.pokemonId.data.replace("-", " ").includes(filterValue)
 
 	$: filtered = $trainer.pokemon
 		.filter(byNicknameOrSpecies($filterValue.toLocaleLowerCase()))

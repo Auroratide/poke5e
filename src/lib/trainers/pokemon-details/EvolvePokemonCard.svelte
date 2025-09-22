@@ -1,7 +1,5 @@
 <script lang="ts">
 	import type { PokemonId, TrainerPokemon } from "$lib/trainers/types"
-	import { pokemon as pokeData } from "$lib/creatures/store"
-	import Loader from "$lib/design/Loader.svelte"
 	import Card from "$lib/design/Card.svelte"
 	import Button from "$lib/design/Button.svelte"
 	import { ActionArea } from "$lib/design/forms"
@@ -10,13 +8,15 @@
 	import { Url } from "$lib/url"
 	import Evolver from "./Evolver.svelte"
 	import RequirePokemon from "./RequirePokemon.svelte"
+	import type { Readable } from "svelte/store"
+	import { type PokemonSpecies, WithSpecies } from "$lib/creatures/species"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
+	export let allSpecies: Readable<PokemonSpecies[]>
 	
 	$: canEdit = $trainer.update != null
 	$: pokemon = $trainer.pokemon.find((it) => it.id === id)
-	$: species = $pokeData?.find((it) => it.id === pokemon?.pokemonId)
 
 	let saving = false
 	const update = (e: CustomEvent<TrainerPokemon>) => {
@@ -34,20 +34,18 @@
 </script>
 
 <RequirePokemon trainer={$trainer} {id} titlePrefix="Evolve">
-	{#if species}
+	<WithSpecies let:species ids={[pokemon?.pokemonId]}>
 		<Card title="Evolve {pokemon.nickname}">
 			{#if canEdit}
-					<Evolver {pokemon} {species} {saving} on:cancel={cancel} on:submit={update} />
+				<Evolver {pokemon} {species} {allSpecies} {saving} on:cancel={cancel} on:submit={update} />
 			{:else}
-					<section>
-						<p>You do not have permission to evolve this pokemon.</p>
-						<ActionArea>
-							<Button href="{Url.trainers($trainer.info.readKey, id)}">Go Back</Button>
-						</ActionArea>
-					</section>
+				<section>
+					<p>You do not have permission to evolve this pokemon.</p>
+					<ActionArea>
+						<Button href="{Url.trainers($trainer.info.readKey, id)}">Go Back</Button>
+					</ActionArea>
+				</section>
 			{/if}
 		</Card>
-	{:else}
-		<Loader />
-	{/if}
+	</WithSpecies>
 </RequirePokemon>

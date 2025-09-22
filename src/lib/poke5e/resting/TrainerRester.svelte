@@ -13,18 +13,22 @@
 	import type { TrainerData } from "$lib/trainers/data"
 	import { trainerHitDiceSize } from "$lib/trainers/hit-dice"
 	import PokemonBanner from "./PokemonBanner.svelte"
-	import { pokemon as allPokemon } from "$lib/creatures/store"
 	import { TrainerPaths } from "$lib/trainers/paths"
 	import { rulesVersion } from "$lib/design/rules-version"
 	import Art from "$lib/design/Art.svelte"
+	import type { Readable } from "svelte/store"
+	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/creatures/species"
 
 	const dispatch = createEventDispatcher()
-	const getSpecies = (pokemonId: string) => $allPokemon.find((s) => s.id === pokemonId)
 
 	const APPLY_TO_POKEMON = "apply-to-pokemon"
 
 	export let trainer: TrainerData
 	export let saving: boolean = false
+	export let allSpecies: Readable<PokemonSpecies[]>
+
+	const getSpecies = (pokemonId: SpeciesIdentifier) => $allSpecies.find((s) => s.id.data === pokemonId.data)
+
 	$: disabled = saving
 	$: hitDiceSize = $trainerHitDiceSize
 

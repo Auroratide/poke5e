@@ -100,39 +100,43 @@ test("uploading new media", async () => {
 	expect(received.data.species.name).toEqual(draft.data.species.name)
 
 	const result = await provider.updateMedia(added.data.writeKey, stubSpeciesMedia<ImageInputValue>({
-		shinyPortrait: {
-			type: "new",
-			value: stubImageFile("img.png"),
+		values: {
+			shinyPortrait: {
+				type: "new",
+				value: stubImageFile("img.png"),
+			},
 		},
 	}))
 
-	expect(result.data.normalPortrait).toBeUndefined()
-	expect(result.data.normalSprite).toBeUndefined()
-	expect(result.data.shinySprite).toBeUndefined()
-	expect(result.data.shinyPortrait?.name).toBeDefined()
-	expect(result.data.shinyPortrait?.href).toBeDefined()
+	expect(result.data.values.normalPortrait).toBeUndefined()
+	expect(result.data.values.normalSprite).toBeUndefined()
+	expect(result.data.values.shinySprite).toBeUndefined()
+	expect(result.data.values.shinyPortrait?.name).toBeDefined()
+	expect(result.data.values.shinyPortrait?.href).toBeDefined()
 
 	const afterUpdate = await provider.getByReadKey(added.data.readKey)
-	expect(afterUpdate.data.species.media.shinyPortrait?.name).toEqual(result.data.shinyPortrait.name)
+	expect(afterUpdate.data.species.media.values.shinyPortrait?.name).toEqual(result.data.values.shinyPortrait.name)
 
 	// include a deletion
 	const resultWithDelete = await provider.updateMedia(added.data.writeKey, stubSpeciesMedia<ImageInputValue>({
-		normalPortrait: {
-			type: "new",
-			value: stubImageFile("img.png"),
-		},
-		shinyPortrait: {
-			type: "remove",
+		values: {
+			normalPortrait: {
+				type: "new",
+				value: stubImageFile("img.png"),
+			},
+			shinyPortrait: {
+				type: "remove",
+			},
 		},
 	}))
 
-	expect(resultWithDelete.data.normalPortrait?.name).toBeDefined()
-	expect(resultWithDelete.data.normalSprite).toBeUndefined()
-	expect(resultWithDelete.data.shinyPortrait).toBeUndefined()
-	expect(resultWithDelete.data.shinySprite).toBeUndefined()
+	expect(resultWithDelete.data.values.normalPortrait?.name).toBeDefined()
+	expect(resultWithDelete.data.values.normalSprite).toBeUndefined()
+	expect(resultWithDelete.data.values.shinyPortrait).toBeUndefined()
+	expect(resultWithDelete.data.values.shinySprite).toBeUndefined()
 
 	const afterDeletion = await provider.getByReadKey(added.data.readKey)
 
-	expect(afterDeletion.data.species.media.normalPortrait?.name).toEqual(resultWithDelete.data.normalPortrait.name)
-	expect(afterDeletion.data.species.media.shinyPortrait).toBeUndefined()
+	expect(afterDeletion.data.species.media.values.normalPortrait?.name).toEqual(resultWithDelete.data.values.normalPortrait.name)
+	expect(afterDeletion.data.species.media.values.shinyPortrait).toBeUndefined()
 })

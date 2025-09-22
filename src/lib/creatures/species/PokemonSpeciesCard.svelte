@@ -17,7 +17,7 @@
 	import EvolutionSection from "../EvolutionSection.svelte"
 
 	export let value: PokemonSpecies
-	$: hasImage = value.media.data.normalPortrait != null
+	$: hasImage = value.media.data.values.normalPortrait != null
 	$: useId = value.data.number <= 0
 </script>
 
