@@ -23,4 +23,5 @@ export function setFeatureActive(feature: string, isActive: boolean) {
 
 export const FeatureToggles = {
 	PokemonCustomImage: alwaysActive(),
+	CreatingFakemon: toggle("CreatingFakemon"),
 }

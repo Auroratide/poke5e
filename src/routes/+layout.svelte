@@ -29,6 +29,10 @@
 	import SiteFooter from "$lib/design/SiteFooter.svelte"
 	import SkipLinks, { MAIN_CONTENT_ID, MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 	import { page } from "$app/stores"
+	import Greatball from "$lib/design/icon/Greatball.svelte"
+	import { FeatureToggles } from "$lib/FeatureToggles"
+	import type { ThemeColor } from "$lib/design/Theme.svelte"
+	import type { ComponentType } from "svelte"
 	
 	if (browser) {
 		import("@auroratide/toggle-switch/lib/define.js")
@@ -62,43 +66,59 @@
 	// Sort of an abusive way to make sure this is always right
 	$: hasContent = browser && $page.url != null ? (document.querySelector(`#${MAIN_CONTENT_ID}`)?.textContent?.length ?? 0) > 0 : false
 	$: hasSearch = browser && $page.url != null ? (document.querySelector(`#${MAIN_SEARCH_ID}`)?.textContent?.length ?? 0) > 0 : false
+
+	const navItems: {
+		id: string,
+		name: string,
+		color: ThemeColor,
+		icon: ComponentType,
+	}[] = [ {
+		id: "pokemon",
+		name: "Pokémon",
+		color: "red",
+		icon: Pokeball,
+	}, {
+		id: "moves",
+		name: "Moves",
+		color: "blue",
+		icon: Hit,
+	}, {
+		id: "tms",
+		name: "TMs",
+		color: "purple",
+		icon: Disc,
+	}, {
+		id: "items",
+		name: "Items",
+		color: "yellow",
+		icon: Backpack,
+	}, {
+		id: "trainers",
+		name: "Trainers",
+		color: "green",
+		icon: IdBadge,
+	}, {
+		id: "reference",
+		name: "Reference",
+		color: "navy",
+		icon: PencilNotes,
+	} ]
+
+	if (FeatureToggles.CreatingFakemon()) {
+		navItems.push({
+			id: "fakemon",
+			name: "Fakémon",
+			color: "pink",
+			icon: Greatball,
+		})
+	}
 </script>
 
 <div class="page">
 	<SkipLinks content={hasContent} search={hasSearch} />
 	<header>
 		<Container>
-			<MainNavigation active={activeSection} items={[ {
-				id: "pokemon",
-				name: "Pokémon",
-				color: "red",
-				icon: Pokeball,
-			}, {
-				id: "moves",
-				name: "Moves",
-				color: "blue",
-				icon: Hit,
-			}, {
-				id: "tms",
-				name: "TMs",
-				color: "purple",
-				icon: Disc,
-			}, {
-				id: "items",
-				name: "Items",
-				color: "yellow",
-				icon: Backpack,
-			}, {
-				id: "trainers",
-				name: "Trainers",
-				color: "green",
-				icon: IdBadge,
-			}, {
-				id: "reference",
-				name: "Reference",
-				color: "navy",
-				icon: PencilNotes,
-			} ]} />
+			<MainNavigation active={activeSection} items={navItems} />
 		</Container>
 	</header>
 	<div class="content">

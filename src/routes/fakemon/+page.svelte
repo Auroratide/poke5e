@@ -42,7 +42,7 @@
 </script>
 
 <Title value="Fakémon" />
-<Page theme="red">
+<Page theme="pink">
 	<Greatball slot="icon" />
 	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Fakémon List">
 		{#await list}

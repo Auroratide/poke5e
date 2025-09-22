@@ -6,12 +6,17 @@
 	import MenuIcon from "./icon/Menu.svelte"
 	import { Url } from "$lib/url"
 
+	const NUMBER_OF_UNMENUED_ITEMS = 6
+
 	export let items: {
 		id: string,
 		name: string,
 		color: ThemeColor,
 		icon: ComponentType,
 	}[]
+
+	$: firstFewItems = items.slice(0, NUMBER_OF_UNMENUED_ITEMS)
+	$: exceedsUnmenued = items.length > NUMBER_OF_UNMENUED_ITEMS
 
 	export let active: string
 
@@ -25,12 +30,8 @@
 <nav aria-label="Site" class="row space-between">
 	<p class="site-title"><a href="{Url.home()}">Pokémon 5e</a></p>
 	<div class="nav-bar">
-		<button on:click={openDialog} class="menu-button row space-small lg:hide">
-			<span class="icon no-rotate"><MenuIcon /></span>
-			<span>Menu</span>
-		</button>
 		<ul class="no-list row space-large nav-list lg:show" style:gap="1.375em">
-			{#each items as item}
+			{#each firstFewItems as item}
 				<li class:active={active === item.id} class="theme-{item.color}">
 					<a class="row space-small" href="{base}/{item.id}" on:click={closeDialog}>
 						<span class="icon" aria-hidden="true">
@@ -41,6 +42,11 @@
 				</li>
 			{/each}
 		</ul>
+		<button on:click={openDialog} class="menu-button row space-small" class:lg:hide={!exceedsUnmenued}>
+			<span class="icon no-rotate"><MenuIcon /></span>
+			<span class="lg:hide">Menu</span>
+			<span class="lg:show">More</span>
+		</button>
 	</div>
 </nav>
 
@@ -77,7 +83,8 @@
 	}
 
 	.nav-bar {
-		display: inline-block;
+		display: inline-flex;
+		gap: 1.375em;
 		position: relative;
 		padding-block: 0.375em;
 		padding-inline: 2em;
@@ -319,6 +326,8 @@
 		animation-delay: 0.2s;
 	} .open-transition li.transitioned:nth-child(6) a {
 		animation-delay: 0.25s;
+	} .open-transition li.transitioned:nth-child(7) a {
+		animation-delay: 0.3s;
 	}
 
 	.open-transition[open] li.transitioned:nth-child(1) a {
@@ -333,6 +342,8 @@
 		animation-delay: 0.2s;
 	} .open-transition[open] li.transitioned:nth-child(6) a {
 		animation-delay: 0.25s;
+	} .open-transition[open] li.transitioned:nth-child(7) a {
+		animation-delay: 0.3s;
 	}
 
 	@keyframes appear {

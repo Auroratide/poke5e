@@ -195,6 +195,13 @@
     --theme-light: hsl(40 100% 71%);
 }
 
+.theme-pink {
+	--theme-main: hsl(332, 100%, 69%);
+	--theme-dark: hsl(334, 91%, 63%);
+	--theme-text: hsl(334, 48%, 38%);
+    --theme-light: hsl(332, 100%, 69%);
+}
+
 body {
     font-family: var(--font-reg);
     font-size: var(--font-sz-base);
