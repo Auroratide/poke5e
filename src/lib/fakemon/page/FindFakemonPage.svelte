@@ -3,7 +3,7 @@
 	import Saveable from "$lib/design/Saveable.svelte"
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/url"
-	import findTrainerIdImg from "$lib/assets/find-trainer-id.png"
+	import findId from "./assets/id.webp"
 	import Title from "$lib/design/Title.svelte"
 	import SearchFakemonById from "../search/SearchFakemonById.svelte"
 	import type { SearchFakemonByIdDetail } from "../search"
@@ -25,7 +25,7 @@
 		<section>
 			<p>Each fakémon has a unique 14-character ID. You can find it on its page, pictured below.</p>
 			<figure class="spaced-lg">
-				<img src={findTrainerIdImg} alt="The label 'ID' denotes the fakémon's id." width="800" height="256" />
+				<img src={findId} alt="The label 'ID' denotes the fakémon's id." width="1208" height="422" />
 				<figcaption>Use this ID for searching</figcaption>
 			</figure>
 			<p>Searching by a fakémon's ID can allow you to use a friend's or DM's fakémon in your campaign.</p>

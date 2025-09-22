@@ -19,6 +19,8 @@
 	export let value: PokemonSpecies
 	$: hasImage = value.media.data.values.normalPortrait != null
 	$: useId = value.data.number <= 0
+
+	const exists = <T>(arr: T[] | undefined) => arr != null && arr.length > 0
 </script>
 
 <Card title={value.data.name}>
@@ -79,33 +81,33 @@
 		<FlatDl>
 			<dt>Starting</dt>
 			<dd><InlineMoveLinks moves={value.data.moves.start} /></dd>
-			{#if value.data.moves.level2 !== undefined}
+			{#if exists(value.data.moves.level2)}
 				<dt>Level 2</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level2} /></dd>
 			{/if}
-			{#if value.data.moves.level6 !== undefined}
+			{#if exists(value.data.moves.level6)}
 				<dt>Level 6</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level6} /></dd>
 			{/if}
-			{#if value.data.moves.level10 !== undefined}
+			{#if exists(value.data.moves.level10)}
 				<dt>Level 10</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level10} /></dd>
 			{/if}
-			{#if value.data.moves.level14 !== undefined}
+			{#if exists(value.data.moves.level14)}
 				<dt>Level 14</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level14} /></dd>
 			{/if}
-			{#if value.data.moves.level18 !== undefined}
+			{#if exists(value.data.moves.level18)}
 				<dt>Level 18</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level18} /></dd>
 			{/if}
 		</FlatDl>
 		<FlatDl>
-			{#if value.data.moves.egg !== undefined}
+			{#if exists(value.data.moves.egg)}
 				<dt class="space-after">Egg</dt>
 				<dd class="space-after"><InlineMoveLinks moves={value.data.moves.egg} /></dd>
 			{/if}
-			{#if value.data.moves.tm !== undefined}
+			{#if exists(value.data.moves.tm)}
 				<dt>TM</dt>
 				<dd><InlineTmLinks tms={value.data.moves.tm} /></dd>
 			{/if}

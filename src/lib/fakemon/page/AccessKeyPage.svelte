@@ -5,7 +5,7 @@
 	import Button from "$lib/design/Button.svelte"
 	import { Url } from "$lib/url"
 	import Title from "$lib/design/Title.svelte"
-	import findAccessKey from "$lib/assets/find-access-key.png"
+	import findAccessKey from "./assets/access-key.webp"
 	import type { SingleFakemonStore } from "../store"
 	
 	export let fakemon: SingleFakemonStore
@@ -69,7 +69,7 @@
 				<section>
 					<p>If you are managing {name} from another device, you can find their access code from the fakémon's page.</p>
 					<figure class="spaced-lg">
-						<img src={findAccessKey} alt="'Access Key' is a button at the bottom of the fakémon's page." width="800" height="250" />
+						<img src={findAccessKey} alt="'Access Key' is a button at the bottom of the fakémon's page." width="1172" height="307" />
 						<figcaption>Click this button to get the access key</figcaption>
 					</figure>
 				</section>
