@@ -12,6 +12,7 @@
 		ActionArea,
 		Fieldset,
 		Form,
+		InstructionText,
 		IntField,
 		SelectField,
 		TextareaField,
@@ -138,6 +139,10 @@
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
 	<AbilityPoolFieldset bind:value={abilityPool} {disabled} />
 	<MovePoolFieldset bind:value={movePool} {disabled} />
+	<Fieldset title="Evolution">
+		<InstructionText>Coming soon!</InstructionText>
+		<InstructionText>Evolutionary lines will be customizable in a future update.</InstructionText>
+	</Fieldset>
 	<ActionArea>
 		<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
 		<Button type="submit" {disabled}>Finish!</Button>
