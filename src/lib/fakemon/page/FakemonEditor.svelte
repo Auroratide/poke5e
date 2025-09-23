@@ -32,6 +32,7 @@
 	import { MovePoolFieldset } from "$lib/creatures/move-pool"
 	import { AbilityPoolFieldset } from "$lib/pokemon/ability"
 	import { SpeciesMedia, SpeciesMediaFieldset } from "$lib/creatures/media"
+	import { EggGroupFieldset } from "$lib/creatures/egg-group"
 
 	const dispatch = createEventDispatcher()
 
@@ -48,6 +49,7 @@
 	let hp = species.data.hp
 	let hitDice = species.hitDice.data
 	let size = species.data.size
+	let eggGroups = species.eggGroups.copy()
 	let speeds = species.speed.copy()
 	let senses = species.senses.copy()
 	let attributes = species.attributes.copy()
@@ -83,6 +85,7 @@
 					hp,
 					hitDice,
 					size,
+					eggGroups: eggGroups.data,
 					speed: speeds.data,
 					senses: senses.data,
 					attributes: attributes.data,
@@ -125,8 +128,9 @@
 		</div>
 	</Fieldset>
 	<SpeciesMediaFieldset originals={originalMedia} bind:updated={updatedMedia} {disabled} />
-	<GenderRatioFieldset bind:value={gender} {disabled} />
 	<TypeField bind:value={type.data} {disabled} />
+	<GenderRatioFieldset bind:value={gender} {disabled} />
+	<EggGroupFieldset bind:value={eggGroups} {disabled} />
 	<SpeedsFieldset bind:values={speeds} {disabled} />
 	<SensesFieldset bind:values={senses} {disabled} />
 	<AttributesFieldset bind:values={attributes} {disabled} />
