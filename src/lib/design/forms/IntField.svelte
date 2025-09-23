@@ -10,6 +10,7 @@
 	export let value: number
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
+	export let required: boolean = false
 	export let placeholder: string = ""
 	export let min: number | undefined = undefined
 	export let max: number | undefined = undefined
@@ -34,7 +35,7 @@
 
 <div class="int-field">
 	<label for="{id}">{label}</label>
-	<input type="number" {id} name="{kebabName}" {placeholder} {min} {max} step="1" {value} on:change={roundOnChange} {disabled} />
+	<input type="number" {id} name="{kebabName}" {placeholder} {min} {max} step="1" {value} on:change={roundOnChange} {disabled} {required} />
 </div>
 
 <style>
