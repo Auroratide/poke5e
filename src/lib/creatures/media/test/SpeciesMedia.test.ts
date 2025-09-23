@@ -177,7 +177,7 @@ describe("sprite", () => {
 		})
 	})
 
-	test("shiny with normal portrait fallback", () => {
+	test("shiny sprite with normal portrait fallback", () => {
 		const media = stubSpeciesMedia<string>({
 			values: {
 				normalPortrait: "normal portrait",
@@ -196,6 +196,28 @@ describe("sprite", () => {
 			value: "normal portrait",
 			hueRotate: 100,
 			portraitFallback: true,
+		})
+	})
+
+	test("shiny sprite with normal sprite fallback", () => {
+		const media = stubSpeciesMedia<string>({
+			values: {
+				normalPortrait: "normal portrait",
+				shinyPortrait: undefined,
+				normalSprite: "normal sprite",
+				shinySprite: undefined,
+			},
+			customization: {
+				shinyHue: 100,
+			},
+		})
+
+		const result = media.sprite({ shiny: true })
+
+		expect(result).toEqual({
+			value: "normal sprite",
+			hueRotate: 100,
+			portraitFallback: false,
 		})
 	})
 })

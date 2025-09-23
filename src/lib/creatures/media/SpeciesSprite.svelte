@@ -24,11 +24,11 @@
 		box-shadow: none;
 		image-rendering: crisp-edges;
 		image-rendering: pixelated;
+		filter: hue-rotate(var(--hue-rotate));
 	}
 
 	.using-fallback {
 		padding: 12.5%;
 		image-rendering: auto;
-		filter: hue-rotate(var(--hue-rotate));
 	}
 </style>
