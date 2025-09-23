@@ -5,7 +5,8 @@
 	import { Url } from "$lib/url"
 	import { Fakemon } from "../Fakemon"
 	import { fakemonStore } from "../store"
-	import FakemonEditor, { type SubmitDetail } from "./FakemonEditor.svelte"
+	import FakemonAdder from "./FakemonAdder.svelte"
+	import { type SubmitDetail } from "./FakemonEditor.svelte"
 
 	const draftFakemon = new Fakemon({
 		id: "",
@@ -102,5 +103,5 @@
 
 <Title value="Add New Fakémon" />
 <Card title="Add New Fakémon">
-	<FakemonEditor fakemon={draftFakemon} on:submit={onSubmit} on:cancel={onCancel} {saving} />
+	<FakemonAdder fakemon={draftFakemon} on:submit={onSubmit} on:cancel={onCancel} {saving} />
 </Card>
