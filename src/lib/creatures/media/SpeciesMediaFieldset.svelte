@@ -9,9 +9,10 @@
 	export let disabled = false
 
 	let hueShift = originals.customization.shinyHue
+	$: newNormalHref = updated.data.values.normalPortrait?.type === "new" ? updated.data.values.normalPortrait.href : undefined
 	$: huePreview = originals.copy({
 		values: {
-			normalPortrait: originals.data.values.normalPortrait,
+			normalPortrait: newNormalHref != null ? { name: "", href: newNormalHref } : originals.data.values.normalPortrait,
 			shinyPortrait: undefined,
 			normalSprite: undefined,
 			shinySprite: undefined,

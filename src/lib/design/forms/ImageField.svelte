@@ -2,6 +2,7 @@
 	export type ImageInputValue = {
 		type: "new",
 		value: File,
+		href: string,
 	} | {
 		type: "remove",
 	}
@@ -51,6 +52,7 @@
 		currentValue = {
 			type: "new",
 			value: file,
+			href: previewSrc,
 		}
 
 		if (file.size > maxbytes) {
