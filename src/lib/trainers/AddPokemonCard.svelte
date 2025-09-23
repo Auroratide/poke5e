@@ -11,6 +11,7 @@
 	import { SearchFakemonById, type SearchFakemonByIdDetail } from "$lib/fakemon/search"
 	import type { Fakemon } from "$lib/fakemon"
 	import type { Readable } from "svelte/store"
+	import { FeatureToggles } from "$lib/FeatureToggles"
 
 	export let trainer: TrainerStore
 	export let allSpecies: Readable<PokemonSpecies[]>
@@ -47,9 +48,9 @@
 				<TextField label="Species" bind:value={species} disabled={saving} />
 			</div>
 			{#if filteredPokemon.length === 0 && species.length > 0}
-				<p class="muted center">No matched pokemon</p>
+				<p class="muted center min-height">No matched pokemon</p>
 			{:else}
-				<ul class="no-list columnated">
+				<ul class="no-list columnated min-height">
 					{#each filteredPokemon as p}
 						<li class="spaced-sm">
 							<Button align="left" width="full" on:click={onSelect(p)} disabled={saving}>{p.data.name}</Button>
@@ -58,12 +59,19 @@
 				</ul>
 			{/if}
 		</section>
-		<!-- <section>
-			<SearchFakemonById on:found={onFakemonSearch} />
-			{#if fakemon != null}
-				<Button on:click={onSelect(fakemon.species)}>{fakemon.species.data.name}</Button>
-			{/if}
-		</section> -->
+		{#if FeatureToggles.CreatingFakemon()}
+			<section>
+				<p>Or you can add a Fakémon by its ID.</p>
+				<SearchFakemonById on:found={onFakemonSearch} />
+				<div class="min-height">
+					{#if fakemon != null}
+						<p class="font-lg">
+							<Button on:click={onSelect(fakemon.species)}>{fakemon.species.data.name}</Button>
+						</p>
+					{/if}
+				</div>
+			</section>
+		{/if}
 	{:else}
 		<section>
 			<p>You do not have permission to add pokemon to this trainer.</p>
@@ -99,5 +107,9 @@
 
 	.center {
 		text-align: center;
+	}
+
+	.min-height {
+		min-block-size: 5em;
 	}
 </style>
