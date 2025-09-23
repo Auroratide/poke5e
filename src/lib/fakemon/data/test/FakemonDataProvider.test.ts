@@ -104,6 +104,7 @@ test("uploading new media", async () => {
 			shinyPortrait: {
 				type: "new",
 				value: stubImageFile("img.png"),
+				href: "",
 			},
 		},
 	}))
@@ -123,6 +124,7 @@ test("uploading new media", async () => {
 			normalPortrait: {
 				type: "new",
 				value: stubImageFile("img.png"),
+				href: "",
 			},
 			shinyPortrait: {
 				type: "remove",

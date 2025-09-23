@@ -1,12 +1,14 @@
 <script lang="ts">
-	import { pokemon as allPokemon } from "./store"
 	import { moves } from "$lib/moves/store"
 	import { base } from "$app/paths"
 	import * as pokemonString from "$lib/pokemon/string"
 	import * as creatureString from "$lib/creatures/string"
-	import type { PokemonSpecies } from "./species"
+	import { SpeciesStore, type PokemonSpecies } from "./species"
 
 	export let pokemon: PokemonSpecies
+
+	const allPokemon = SpeciesStore.canonList()
+
 	$: evolution = pokemon.data.evolution
 </script>
 
@@ -21,8 +23,8 @@
 			<p>
 				{pokemon.data.name} evolves from
 				{#each evolution.from as fromId, i}
-					{@const from = $allPokemon.find((it) => it.id === fromId)}
-					<a href="{base}/pokemon/{from.id}">{from.name}</a>{#if i !== evolution.from.length - 1}, {/if}{/each}.
+					{@const from = $allPokemon.find((it) => it.id.data === fromId)}
+					<a href="{base}/pokemon/{from.id}">{from.data.name}</a>{#if i !== evolution.from.length - 1}, {/if}{/each}.
 			</p>
 		{/if}
 		{#if evolution.to?.length > 0}
