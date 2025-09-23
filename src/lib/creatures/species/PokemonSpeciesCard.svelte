@@ -71,7 +71,11 @@
 	</section>
 	<section class="abilities">
 		<h2>Abilities</h2>
-		<AbilityPoolInfo value={value.abilities} />
+		{#if value.abilities.isEmpty()}
+			<p>No abilities provided.</p>
+		{:else}
+			<AbilityPoolInfo value={value.abilities} />
+		{/if}
 	</section>
 	{#if value.data.evolution !== undefined}
 		<EvolutionSection pokemon={value} />

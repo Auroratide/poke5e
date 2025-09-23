@@ -20,6 +20,10 @@ export class AbilityPool extends DataClass<{
 		})))
 	}
 
+	isEmpty(): boolean {
+		return this.data.normal.length === 0 && this.data.hidden.length === 0
+	}
+
 	static fromList(list: AbilityList): AbilityPool {
 		return new AbilityPool({
 			normal: list.filter((it) => !it.hidden).map((it) => it.id),

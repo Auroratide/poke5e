@@ -665,7 +665,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_int: pokemon.data.saves.includes("int"),
 			_save_wis: pokemon.data.saves.includes("wis"),
 			_save_cha: pokemon.data.saves.includes("cha"),
-			_ability: pokemon.abilities.toList()[0]?.id,
+			_ability: pokemon.abilities.toList()[0]?.id ?? "",
 			_notes: "",
 			_tera_type: pokemon.type.primary,
 			_exp: trainerPokemon.exp,
