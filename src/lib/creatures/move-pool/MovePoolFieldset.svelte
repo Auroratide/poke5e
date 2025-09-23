@@ -8,7 +8,7 @@
 	export let disabled = false
 
 	let tmString = value.data.tm.map((it) => it.toString())
-	$: value.data.tm = tmString.map((it) => parseInt(it))
+	$: value.data.tm = tmString.map((it) => parseInt(it)).sort((a, b) => a - b)
 </script>
 
 <Fieldset title="Move Pool">

@@ -9,6 +9,7 @@
 	$: options = moves.map((it) => ({
 		name: it.name,
 		value: it.id,
+		disabled: values.includes(it.id),
 	}))
 
 	const add = (e: SelectFieldChangeEvent) => {
