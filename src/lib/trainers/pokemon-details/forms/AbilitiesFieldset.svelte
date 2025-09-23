@@ -3,6 +3,9 @@
 	import { abilities } from "$lib/pokemon/store"
 	import type { PokemonSpecies } from "$lib/creatures/species"
 
+	const NONE = ""
+	const noneOption = { name: "- None -", value: NONE }
+
 	export let ability: string
 	export let species: PokemonSpecies
 	export let disabled: boolean
@@ -17,7 +20,7 @@
 		})),
 	}, {
 		name: "All Other Abilities",
-		values: nonstandardAbilities.map((it) => ({ name: it.name, value: it.id })),
+		values: [noneOption].concat(nonstandardAbilities.map((it) => ({ name: it.name, value: it.id }))),
 	} ]
 </script>
 
