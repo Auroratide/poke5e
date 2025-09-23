@@ -87,6 +87,10 @@ export class SpeciesMedia<T> extends DataClass<{
 		}
 	}
 
+	hasAnyMedia(): boolean {
+		return Object.values(this.data.values).some((it) => it != null)
+	}
+
 	get customization(): SpeciesMediaCustomization {
 		return this.data.customization ?? {
 			shinyHue: 0,

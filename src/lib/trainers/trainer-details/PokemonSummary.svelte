@@ -21,8 +21,10 @@
 		<WithSpecies let:species ids={[pokemon.pokemonId]}>
 			<div slot="loader"></div>
 			<SpeciesSprite media={species?.media} alt={species?.data.name} shiny={pokemon.isShiny} />
+			{#if species?.media.sprite().value != null}
+				<span class="shadow"></span>
+			{/if}
 		</WithSpecies>
-		<span class="shadow"></span>
 		{#if heldItem != null}
 			<span class="held-item">
 				<ItemSprite src="{heldItem.media.sprite}" alt="Holding {heldItem.name}" />

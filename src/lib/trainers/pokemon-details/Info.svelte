@@ -26,7 +26,7 @@
 	export let species: PokemonSpecies
 	export let editable: boolean
 
-	$: hasImage = pokemon.avatar != null || species.media != null
+	$: hasImage = pokemon.avatar != null || species.media != null && species.media.hasAnyMedia()
 
 	const onUpdateHealth = (e: CustomEvent<HealthUpdateDetail>) => {
 		dispatch("update-health", {
