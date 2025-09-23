@@ -591,7 +591,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			gender: PokemonGender.None,
 			attributes: pokemon.attributes,
 			ac: pokemon.data.ac,
-			ability: pokemon.abilities[0]?.id,
+			ability: pokemon.abilities.toList()[0]?.id,
 			hp: {
 				current: pokemon.data.hp,
 				max: pokemon.data.hp,
