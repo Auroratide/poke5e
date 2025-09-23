@@ -23,7 +23,14 @@ function createStore(): FakemonStore {
 				promises[key] = provider.getByReadKey(key).then((fakemon) => {
 					if (fakemon == null) return undefined
 
-					return createSingleFakemonStore(createStoredFakemon(fakemon, fakemonStore), fakemonStore)
+					const storedFakemon = createStoredFakemon(fakemon, fakemonStore)
+
+					fakemonStore.update((prev) => ({
+						...prev,
+						[fakemon.data.readKey]: storedFakemon,
+					}))
+
+					return createSingleFakemonStore(storedFakemon, fakemonStore)
 				})
 			}
 

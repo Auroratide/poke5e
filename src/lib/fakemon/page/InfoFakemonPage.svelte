@@ -16,6 +16,7 @@
 	<div slot="footer">
 		<ActionArea>
 			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.accessKey)}" variant="ghost">Access Key</Button>
+			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.remove)}" variant="ghost">Remove</Button>
 			{#if canEdit}
 				<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.edit)}">Edit</Button>
 			{/if}

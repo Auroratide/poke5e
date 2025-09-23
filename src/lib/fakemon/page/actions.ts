@@ -3,4 +3,5 @@ export const PageAction = {
 	edit: "edit",
 	find: "find",
 	accessKey: "access-key",
+	remove: "remove",
 }

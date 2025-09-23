@@ -14,6 +14,7 @@
 		InfoFakemonPage,
 		FindFakemonPage,
 		AccessKeyPage,
+		RemoveFakemonPage,
 	} from "$lib/fakemon/page"
 	import {
 		fakemonStore,
@@ -66,6 +67,8 @@
 				<EditFakemonPage {fakemon} />
 			{:else if action === PageAction.accessKey}
 				<AccessKeyPage {fakemon} />
+			{:else if action === PageAction.remove}
+				<RemoveFakemonPage {fakemon} />
 			{:else}
 				<InfoFakemonPage {fakemon} />
 			{/if}

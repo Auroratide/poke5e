@@ -117,6 +117,7 @@ test("updating with new media", async () => {
 				normalPortrait: {
 					type: "new",
 					value: stubImageFile("img.png"),
+					href: "",
 				},
 			},
 		}),
@@ -181,3 +182,27 @@ test("verifying access", async () => {
 	expect(storedValue.update).toBeDefined()
 })
 
+test("removal", async () => {
+	// given: a fakemon in the db
+	const draft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Eeveon",
+		}).data,
+	})
+
+	const eeveon = await provider.add(draft.data.species)
+
+	// when: it is removed
+	const singleStore = await fakemonStore.get(eeveon.data.readKey)
+	await singleStore.remove()
+
+	// then: it is no longer in the list
+	const listStore = await fakemonStore.all()
+	const listValue = get(listStore)
+	const keys = listValue.map((it) => it.data.readKey)
+	expect(keys).not.toContain(eeveon.data.readKey)
+
+	// then: it is no longer stored
+	const fromStorage = FakemonLocalStorage.get(eeveon.data.readKey)
+	expect(fromStorage).toBeUndefined()
+})
