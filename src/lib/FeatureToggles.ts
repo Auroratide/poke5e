@@ -4,10 +4,6 @@ function toggle(name: string) {
 	return () => isFeatureActive(name)
 }
 
-function alwaysActive() {
-	return () => true
-}
-
 export function isFeatureActive(feature: string): boolean {
 	return browser ? localStorage.getItem(`feature-toggle::${feature}`) != null : false
 }
@@ -22,6 +18,5 @@ export function setFeatureActive(feature: string, isActive: boolean) {
 }
 
 export const FeatureToggles = {
-	PokemonCustomImage: alwaysActive(),
 	CreatingFakemon: toggle("CreatingFakemon"),
 }
