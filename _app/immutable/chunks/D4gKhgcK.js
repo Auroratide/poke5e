@@ -1,0 +1,1 @@
+function o(e){return()=>a(e)}function a(e){return localStorage.getItem(`feature-toggle::${e}`)!=null}function r(e,t){t?localStorage.setItem(`feature-toggle::${e}`,"true"):localStorage.removeItem(`feature-toggle::${e}`)}const g={CreatingFakemon:o("CreatingFakemon")};export{g as F,a as i,r as s};
