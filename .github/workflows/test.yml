@@ -18,6 +18,7 @@ jobs:
       PUBLIC_ANALYTICS_ENABLED: false
       PUBLIC_SUPABASE_URL: http://127.0.0.1:54321
       PUBLIC_SUPABASE_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS1kZW1vIiwicm9sZSI6ImFub24iLCJleHAiOjE5ODM4MTI5OTZ9.CRXP1A7WOeoJeXxjNni43kdQwgnWNReilDMblYTn_I0
+      PUBLIC_USER_ASSETS_BASE_URL: http://127.0.0.1:9000/user-assets
     steps:
       - uses: actions/checkout@v4
       - uses: pnpm/action-setup@v4
@@ -30,7 +31,7 @@ jobs:
           version: latest
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec playwright install
-      - run: pnpm supabase start
+      - run: pnpm services:start
       - run: pnpm supabase db reset
       - name: Unit Test
         run: pnpm test:unit
