@@ -1,5 +1,5 @@
 import type { Unsubscriber, Writable } from "svelte/store"
-import type { Fakemon } from "../Fakemon"
+import { Fakemon } from "../Fakemon"
 import type { StoredFakemon } from "./FakemonStore"
 import { createStoredFakemon } from "./SingleFakemonStore"
 
@@ -12,7 +12,7 @@ export function createFakemonListStore(fakemon: Fakemon[], fakemonStore: Writabl
 	return {
 		subscribe: (run: (value: Fakemon[]) => void) => {
 			return fakemonStore.subscribe((all) => {
-				run(Object.values(all).map((it) => it.value))
+				run(Object.values(all).map((it) => it.value).sort(Fakemon.alphabetical))
 
 				if (!updated) {
 					updated = true

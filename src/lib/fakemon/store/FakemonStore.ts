@@ -10,6 +10,7 @@ export interface FakemonStore {
 	get: (key: ReadKey) => Promise<SingleFakemonStore>
 	new: (fakemon: DraftFakemon) => Promise<Fakemon>
 	all: () => Promise<FakemonListStore>
+	reset: () => Promise<void>
 }
 
 function createStore(): FakemonStore {
@@ -61,6 +62,10 @@ function createStore(): FakemonStore {
 
 			return listPromise
 		},
+		
+		reset: async () => {
+			fakemonStore.set({})
+		}
 	}
 }
 

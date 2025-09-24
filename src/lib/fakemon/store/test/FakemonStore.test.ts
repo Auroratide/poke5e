@@ -1,5 +1,5 @@
 import { get } from "svelte/store"
-import { test, expect, vi } from "vitest"
+import { test, expect, vi, beforeEach } from "vitest"
 import { provider } from "$lib/fakemon/data"
 import { fakemonStore } from "../FakemonStore"
 import { stubFakemon } from "$lib/fakemon/test/stubs"
@@ -8,6 +8,10 @@ import { stubImageFile } from "$lib/test/files"
 import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
 import { SpeciesMedia } from "$lib/creatures/media"
 import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
+
+beforeEach(() => {
+	fakemonStore.reset()
+})
 
 test("new fakemon", async () => {
 	// given: a draft fakemon
@@ -143,18 +147,23 @@ test("listing fakemon", async () => {
 			name: "Drakeon",
 		}).data,
 	})
+	const aereonDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Aereon",
+		}).data,
+	})
 
 	await provider.add(eeveonDraft.data.species)
 	await provider.add(drakeonDraft.data.species)
+	await provider.add(aereonDraft.data.species)
 
 	// when: we get the list
 	const listStore = await fakemonStore.all()
 	const listResult = get(listStore)
 	const resultNames = listResult.map((it) => it.data.species.name)
 	
-	// then: it contains all the fakemon
-	expect(resultNames).toContain("Eeveon")
-	expect(resultNames).toContain("Drakeon")
+	// then: it contains all the fakemon, in alpha order
+	expect(resultNames).toEqual(["Aereon", "Drakeon", "Eeveon"])
 })
 
 test("verifying access", async () => {

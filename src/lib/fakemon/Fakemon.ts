@@ -12,6 +12,8 @@ export class Fakemon extends DataClass<{
 	species: Data<PokemonSpecies>,
 }> {
 	get species(): PokemonSpecies { return new PokemonSpecies(this.data.species) }
+
+	static alphabetical = (a: Fakemon, b: Fakemon) => a.data.species.name.localeCompare(b.data.species.name)
 }
 
 export type DraftFakemon = Omit<Data<Fakemon>["species"], "id">
