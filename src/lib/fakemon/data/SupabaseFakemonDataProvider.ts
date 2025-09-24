@@ -209,7 +209,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		})
 
 		if (error) {
-			throw new FakemonDataProviderError("Could not upload file(s) for fakemon.")
+			throw new FakemonDataProviderError("Could not upload file(s) for fakemon. " + error)
 		}
 
 		await Promise.all(
