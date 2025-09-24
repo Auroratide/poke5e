@@ -11,6 +11,13 @@ export type SpeciesMediaCustomization = {
 	shinyHue: number,
 }
 
+export type SpeciesMediaAttribution = {
+	/**
+	 * Temporary for the random fakemons that exist in the official list.
+	 */
+	href?: string,
+}
+
 export class SpeciesMedia<T> extends DataClass<{
 	values: {
 		normalPortrait?: T,
@@ -19,6 +26,7 @@ export class SpeciesMedia<T> extends DataClass<{
 		shinySprite?: T,
 	},
 	customization?: SpeciesMediaCustomization,
+	attribution?: SpeciesMediaAttribution,
 }> {
 	static readonly types: SpeciesMediaType[] = [
 		"normalPortrait",

@@ -59,7 +59,8 @@ export type SinglePokemonJsonResponse = {
 		sprite?: string,
 		mainShiny?: string,
 		spriteShiny?: string,
-	}
+		attribution?: string,
+	},
 }
 
 export type PokemonJsonResponse = {

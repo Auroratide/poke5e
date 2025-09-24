@@ -103,6 +103,9 @@ export class PokemonSpecies extends DataClass<{
 				customization: {
 					shinyHue: 0,
 				},
+				attribution: it.media.attribution ? {
+					href: it.media.attribution,
+				} : undefined,
 			},
 			evolution: it.evolution,
 		})
