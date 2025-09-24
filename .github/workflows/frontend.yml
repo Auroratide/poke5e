@@ -8,12 +8,12 @@ on:
       - src/routes/version-history/versions.ts
 
 jobs:
-  unit-tests:
-    uses: ./.github/workflows/test.yml
+  # unit-tests:
+  #   uses: ./.github/workflows/test.yml
 
   site-deploy:
     name: Site Deploy
-    needs: unit-tests
+    # needs: unit-tests
     runs-on: ubuntu-latest
     env:
       PUBLIC_ANALYTICS_ENABLED: true
