@@ -11,6 +11,8 @@
 	const handleChange = (e: CustomEvent<{ value: boolean }>) => {
 		setFeatureActive(feature, e.detail.value)
 		isActive = e.detail.value
+
+		window.location.reload()
 	}
 </script>
 
