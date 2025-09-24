@@ -503,7 +503,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_int: info.savingThrows.includes("int"),
 			_save_wis: info.savingThrows.includes("wis"),
 			_save_cha: info.savingThrows.includes("cha"),
-			_ability: info.ability,
+			_ability: info.ability ?? "",
 			_notes: info.notes,
 			_tera_type: info.teraType.data,
 			_exp: info.exp,
