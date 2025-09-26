@@ -25,6 +25,8 @@
 		image-rendering: crisp-edges;
 		image-rendering: pixelated;
 		filter: hue-rotate(var(--hue-rotate));
+		aspect-ratio: 1;
+		object-fit: contain;
 	}
 
 	.using-fallback {
