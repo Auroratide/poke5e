@@ -30,8 +30,8 @@ Supabase functions use Deno. So you have to also: https://deno.land/manual/getti
 # Install dependencies
 pnpm install
 
-# Start Local Supabase
-pnpm supabase start
+# Start Local Services
+pnpm services:start
 
 # Run Database Tests
 pnpm test:db
