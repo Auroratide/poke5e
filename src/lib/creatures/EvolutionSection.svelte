@@ -24,7 +24,7 @@
 				{pokemon.data.name} evolves from
 				{#each evolution.from as fromId, i}
 					{@const from = $allPokemon.find((it) => it.id.data === fromId)}
-					<a href="{base}/pokemon/{from.id}">{from.data.name}</a>{#if i !== evolution.from.length - 1}, {/if}{/each}.
+					<a href="{base}/pokemon/{from.id.data}">{from.data.name}</a>{#if i !== evolution.from.length - 1}, {/if}{/each}.
 			</p>
 		{/if}
 		{#if evolution.to?.length > 0}
