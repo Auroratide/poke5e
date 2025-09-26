@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.7.11",
+		description: [
+			"Bug fix: Correct Mimikyu's TM list.",
+		],
+	}, {
 		name: "v1.7.10",
 		description: [
 			"Bug fix: Correct Ogerpon (Cornerstone) ability.",
