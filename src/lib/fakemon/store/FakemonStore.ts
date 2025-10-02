@@ -65,7 +65,7 @@ function createStore(): FakemonStore {
 		
 		reset: async () => {
 			fakemonStore.set({})
-		}
+		},
 	}
 }
 

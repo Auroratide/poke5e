@@ -1,5 +1,5 @@
 import type { Move, Tm } from "./types"
-import { readable, writable } from "svelte/store"
+import { derived, readable, writable } from "svelte/store"
 import { base } from "$app/paths"
 
 export const moves = readable<Move[]>(undefined, (set) => {
@@ -16,6 +16,17 @@ export const tms = readable<Tm[]>(undefined, (set) => {
 			.then(res => res.json())
 			.then(data => set(data.items))
 	}
+})
+
+export const tmMoves = derived([moves, tms], ([moves, tms]) => {
+	return tms?.map((tm) => {
+		const move = moves?.find((it) => it.id === tm.moveInfo.id)
+		return {
+			...move,
+			id: tm.id.toString(),
+			name: tm.moveInfo.name,
+		}
+	})
 })
 
 export const filterValue = writable("")

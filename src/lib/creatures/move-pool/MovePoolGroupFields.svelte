@@ -1,10 +1,21 @@
 <script lang="ts">
-	import { Removable, SelectField, type SelectFieldChangeEvent } from "$lib/design/forms"
+	import Button from "$lib/design/Button.svelte"
+	import Details from "$lib/design/Details.svelte"
+	import { SelectField } from "$lib/design/forms"
+	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
+	import { Attributes, type Attribute } from "$lib/dnd/attributes"
+	import { MoveFilter } from "$lib/moves/MoveFilter"
+	import type { Move } from "$lib/moves/types"
+	import { PokemonType, type PokeType } from "$lib/pokemon/types-2"
+	import MoveOption from "./MoveOption.svelte"
+	import SearchAndFilterField from "./SearchAndFilterField.svelte"
 
 	export let title: string
 	export let values: string[]
 	export let disabled = false
-	export let moves: { id: string, name: string }[] = []
+	export let moves: Move[] = []
+
+	$: id = title.replaceAll(/\s/g, "-").toLocaleLowerCase()
 
 	$: options = moves.map((it) => ({
 		name: it.name,
@@ -12,37 +23,77 @@
 		disabled: values.includes(it.id),
 	}))
 
-	const add = (e: SelectFieldChangeEvent) => {
-		values = [...values, e.detail.value]
+	const add = (moveId: string) => () => {
+		values = [...values, moveId]
 	}
 
 	const remove = (i: number) => () => {
 		values = values.toSpliced(i, 1)
 	}
 
-	const update = (i: number) => (e: SelectFieldChangeEvent) => {
-		values = values.toSpliced(i, 1, e.detail.value)
-	}
+	let nameFilter = ""
+	let typeFilter: PokeType | "" = ""
+	let powerFilter: Attribute | "" = ""
+	$: moveFilter = new MoveFilter()
+		.name(nameFilter)
+		.type(typeFilter)
+		.power(powerFilter)
+		.not(values)
+	$: filteredMoves = (nameFilter === "" && typeFilter === "" && powerFilter === "") ? [] : moves.filter(moveFilter.apply)
+
+	const countActiveFilters = (...filters: string[]) => filters.reduce((sum, cur) => sum + (cur === "" ? 0 : 1), 0)
+
+	const typeOptions = [ {
+		name: "- Any -",
+		value: "",
+	} ].concat(PokemonType.list.map((it) => ({
+		name: it,
+		value: it,
+	})))
+
+	const movePowerOptions = [ {
+		name: "- Any -",
+		value: "",
+	} ].concat(Attributes.list.map((it) => ({
+		name: it.name,
+		value: it.abbr,
+	})))
 </script>
 
 {#if options.length > 0}
 	<div class="move-pool-group">
 		<p><strong>{title}</strong></p>
-		<ul>
-			{#each values as value, index}
-				<li class="no-label">
-					<Removable on:remove={remove(index)}>
-						<SelectField label="{index + 1}." {value} {options} on:change={update(index)} {disabled} />
-					</Removable>
-				</li>
-			{/each}
-			<li>
-				<!-- key is a workaround to ensure the field is always empty -->
-				{#key values}
-					<SelectField label="Add Move" value="" {options} on:change={add} {disabled} />
-				{/key}
-			</li>
-		</ul>
+
+		{#if values.length > 0}
+			<ul class="space-bottom">
+				{#each values as value, index}
+					{@const move = moves.find((it) => it.id === value)}
+					<li>
+						<MoveOption idPrefix="{id}" value={move}>
+							<Button variant="danger" on:click={remove(index)}><strong><span aria-hidden="true">&times;</span><VisuallyHidden inline>remove</VisuallyHidden></strong></Button>
+						</MoveOption>
+					</li>
+				{/each}
+			</ul>
+		{:else}
+			<p>No moves added yet.</p>
+		{/if}
+
+		<Details title="Add Moves">
+			<SearchAndFilterField name="{id}-search" label="Find Move to Add" bind:value={nameFilter} {disabled} matches={filteredMoves.length} placeholder="e.g. Power Split" activeFilters={countActiveFilters(typeFilter, powerFilter)}>
+				<SelectField name="{id}-type-filter" label="Type" options={typeOptions} bind:value={typeFilter} />
+				<SelectField name="{id}-move-power-filter" label="Power" options={movePowerOptions} bind:value={powerFilter} />
+			</SearchAndFilterField>
+			<ul class="scrollable">
+				{#each filteredMoves as move (move.id)}
+					<li>
+						<MoveOption idPrefix="{id}" value={move}>
+							<Button variant="success" on:click={add(move.id)}><strong><span aria-hidden="true">+</span><VisuallyHidden inline>add</VisuallyHidden></strong></Button>
+						</MoveOption>
+					</li>
+				{/each}
+			</ul>
+		</Details>
 	</div>
 {/if}
 
@@ -59,10 +110,15 @@
 		margin: 0;
 		display: flex;
 		flex-direction: column;
-		gap: 0.75em;
+		gap: 0.25em;
 	}
 
-	.no-label :global(label) {
-		font-size: 0.1px;
+	.space-bottom {
+		margin-block-end: 1em;
+	}
+
+	.scrollable {
+		overflow: auto;
+		block-size: 12.5em;
 	}
 </style>

@@ -1,16 +1,49 @@
-<span class="tag">
-	<slot></slot>
+<script lang="ts">
+	import type { PokeType } from "$lib/pokemon/types-2"
+
+	export let color: PokeType | undefined = undefined
+</script>
+
+<span class="tag" style:--color="var(--skin-{color}-bg)">
+	{#if $$slots.icon}
+		<span class="icon" aria-hidden="true">
+			<slot name="icon"></slot>
+		</span>
+	{/if}
+	<span class="name">
+		<slot></slot>
+	</span>
 </span>
 
 <style>
 	.tag {
-		display: inline-block;
-		background: var(--skin-bg);
-		color: var(--skin-bg-text);
 		font-size: var(--font-sz-venus);
-		padding: 0.2em 0.375em;
+		display: inline-flex;
+		flex-direction: row;
+		color: var(--skin-bg-text);
+		text-transform: capitalize;
+		overflow: hidden;
 		border-radius: 0.25em;
 		line-height: 1;
+	}
+
+	.icon {
+		background: var(--color);
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		inline-size: 1.375em;
+	} .icon :global(svg) {
+		font-size: 1.2em;
+	}
+
+	.name {
+		flex: 1;
+		display: flex;
+		align-items: center;
+		background: var(--skin-bg);
+		padding-inline: 0.375em;
+		padding-block: 0.0625em;
 		font-weight: bold;
 	}
 </style>
