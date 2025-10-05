@@ -30,7 +30,6 @@
 	import SkipLinks, { MAIN_CONTENT_ID, MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 	import { page } from "$app/stores"
 	import Greatball from "$lib/design/icon/Greatball.svelte"
-	import { FeatureToggles } from "$lib/FeatureToggles"
 	import type { ThemeColor } from "$lib/design/Theme.svelte"
 	import type { ComponentType } from "svelte"
 	
@@ -102,16 +101,12 @@
 		name: "Reference",
 		color: "navy",
 		icon: PencilNotes,
+	}, {
+		id: "fakemon",
+		name: "Fakémon",
+		color: "pink",
+		icon: Greatball,
 	} ]
-
-	if (FeatureToggles.CreatingFakemon()) {
-		navItems.push({
-			id: "fakemon",
-			name: "Fakémon",
-			color: "pink",
-			icon: Greatball,
-		})
-	}
 </script>
 
 <div class="page">

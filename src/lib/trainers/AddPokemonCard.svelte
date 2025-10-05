@@ -11,7 +11,6 @@
 	import { SearchFakemonById, type SearchFakemonByIdDetail } from "$lib/fakemon/search"
 	import type { Fakemon } from "$lib/fakemon"
 	import type { Readable } from "svelte/store"
-	import { FeatureToggles } from "$lib/FeatureToggles"
 	import { Url } from "$lib/url"
 
 	export let trainer: TrainerStore
@@ -60,19 +59,17 @@
 				</ul>
 			{/if}
 		</section>
-		{#if FeatureToggles.CreatingFakemon()}
-			<section>
-				<p>Or you can add a <a href="{Url.fakemon()}">Fakémon</a> by its ID.</p>
-				<SearchFakemonById on:found={onFakemonSearch} />
-				<div class="min-height">
-					{#if fakemon != null}
-						<p class="font-lg">
-							<Button on:click={onSelect(fakemon.species)}>{fakemon.species.data.name}</Button>
-						</p>
-					{/if}
-				</div>
-			</section>
-		{/if}
+		<section>
+			<p>Or you can add a <a href="{Url.fakemon()}">Fakémon</a> by its ID.</p>
+			<SearchFakemonById on:found={onFakemonSearch} />
+			<div class="min-height">
+				{#if fakemon != null}
+					<p class="font-lg">
+						<Button on:click={onSelect(fakemon.species)}>{fakemon.species.data.name}</Button>
+					</p>
+				{/if}
+			</div>
+		</section>
 	{:else}
 		<section>
 			<p>You do not have permission to add pokemon to this trainer.</p>
