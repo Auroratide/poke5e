@@ -22,6 +22,8 @@
 		type FakemonListStore,
 	} from "$lib/fakemon/store"
 	import ErrorMessage from "$lib/trainers/ErrorMessage.svelte"
+	import { CanCreateCustomPokemonBanner } from "$lib/creatures/species/CanCreateCustomPokemonBanner"
+	import { onMount } from "svelte"
 
 	$: fakemonId = browser ? $page.url.searchParams.get("id") : undefined
 	$: action = browser ? $page.url.searchParams.get("action") : undefined
@@ -41,6 +43,10 @@
 			list = undefined
 		}
 	}
+
+	onMount(() => {
+		CanCreateCustomPokemonBanner.set(true)
+	})
 </script>
 
 <Title value="Fakémon" />

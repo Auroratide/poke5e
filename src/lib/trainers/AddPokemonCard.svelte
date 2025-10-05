@@ -12,6 +12,7 @@
 	import type { Fakemon } from "$lib/fakemon"
 	import type { Readable } from "svelte/store"
 	import { FeatureToggles } from "$lib/FeatureToggles"
+	import { Url } from "$lib/url"
 
 	export let trainer: TrainerStore
 	export let allSpecies: Readable<PokemonSpecies[]>
@@ -61,7 +62,7 @@
 		</section>
 		{#if FeatureToggles.CreatingFakemon()}
 			<section>
-				<p>Or you can add a Fakémon by its ID.</p>
+				<p>Or you can add a <a href="{Url.fakemon()}">Fakémon</a> by its ID.</p>
 				<SearchFakemonById on:found={onFakemonSearch} />
 				<div class="min-height">
 					{#if fakemon != null}

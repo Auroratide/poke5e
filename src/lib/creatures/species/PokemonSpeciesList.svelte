@@ -7,6 +7,9 @@
 	import type { PokemonSpecies } from "./PokemonSpecies"
 	import * as asString from "../string"
 	import { matchNameOrType2 } from "../filter"
+	import TemporaryBannerMessage from "$lib/design/TemporaryBannerMessage.svelte"
+	import { CanCreateCustomPokemonBanner } from "./CanCreateCustomPokemonBanner"
+	import { Url } from "$lib/url"
 
 	export let pokemons: PokemonSpecies[]
 
@@ -19,6 +22,9 @@
 <div class="search-field">
 	<SearchField id="filter-moves" label="Search" bind:value={$filterValue} matched={filtered.length} max={pokemons.length} />
 </div>
+<TemporaryBannerMessage condition={CanCreateCustomPokemonBanner}>
+	You can now create <a href="{Url.fakemon()}">custom Pokémon</a>!
+</TemporaryBannerMessage>
 <SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$currentSorter} headers={[ {
 	key: "name", name: "Name", ratio: 3, sort: byStringField(it => it.data.name),
 }, {
