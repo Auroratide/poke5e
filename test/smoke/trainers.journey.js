@@ -16,17 +16,33 @@ import {
 	readDescriptionDefinition,
 	below,
 	range,
+	near,
+	checkBox,
+	toRightOf,
 } from "./actions.js"
 import assert from "node:assert/strict"
 
 export async function test() {
 	await startJourney("A trainer manages their pokemon")
 
-	const name = `Automated Tester ${Math.floor(Math.random() * 999999)}`
+	const trainerName = `Automated Tester ${Math.floor(Math.random() * 999999)}`
+	const fakemonName = `Automated Fakemon ${Math.floor(Math.random() * 999999)}`
 
-	const readKey = await createTrainer(name)
-	console.log(`  (read key is ${readKey})`)
-	assert.ok(await text(`${name}'s Pokemon`).exists())
+	const fakemonReadKey = await createFakemon(fakemonName)
+	console.log(`  (read key is ${fakemonReadKey})`)
+	assert.ok(await text(fakemonName).exists())
+
+	await editFakemon()
+	assert.equal(await readDescriptionDefinition("Min Level"), "5")
+	assert.ok(await text("The Automated Test Pokemon").exists())
+	assert.ok(await text("Athletics").exists())
+	assert.ok(await text("INT", toRightOf(text("Saving Throws"))).exists())
+	assert.ok(await text("Aftermath").exists())
+	assert.ok(await text("Hidden Power").exists())
+
+	const trainerReadKey = await createTrainer(trainerName)
+	console.log(`  (read key is ${trainerReadKey})`)
+	assert.ok(await text(`${trainerName}'s Pokemon`).exists())
 
 	await editTrainer()
 	assert.ok(await text("Battle Master").exists())
@@ -58,7 +74,46 @@ export async function test() {
 	await removePokemon()
 	await waitFor(async () => !(await listItem("Appletun").exists(0, 0)))
 
-	await removeTrainer(readKey)
+	await addPokemon(fakemonName)
+	assert.ok(await text(fakemonName).exists())
+	assert.ok(await text("Water").exists())
+	assert.ok(await text("Grass").exists())
+
+	await removeTrainer(trainerReadKey)
+}
+
+const createFakemon = async (name) => {
+	console.log(`  Creating Fakemon ${name}...`)
+
+	await click(button(/More/))
+	await click(link("Fakémon"))
+	await click(link("New Fakémon"))
+	await write(name, into(textBox("Species Name")))
+	await dropDown("Primary Type").select("water")
+	await dropDown("Secondary Type").select("grass")
+	await click("Finish!")
+	await doneSaving()
+
+	return await readDescriptionDefinition("ID")
+}
+
+const editFakemon = async () => {
+	console.log(`  Editing Fakemon...`)
+
+	await click("Edit")
+	await clear(textBox("Min Level"))
+	await write("5")
+	await write("The Automated Test Pokemon. This pokemon was generated to test that the website still works correctly.", into(textBox("Description")))
+	await click(radioButton("50% ♀ : 50% ♂"))
+	await click(checkBox("Athletics"))
+	await click(checkBox("Intelligence"))
+	await dropDown("Add Ability", below(text("Non-Hidden Abilities"))).select("aftermath")
+	await click("Add Moves", below(text("Starting Moves")))
+	await write("power", into(textBox("Find Move to Add")))
+	await click(button(/add/, toRightOf(text("Hidden Power"))))
+
+	await click("Finish!")
+	await doneSaving()
 }
 
 const createTrainer = async (name) => {
