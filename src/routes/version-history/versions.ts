@@ -12,6 +12,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.8.0",
+		description: [
+			"New: Custom Pokémon (aka Fakémon) navigator and editor.",
+			"New: Fakémon can be added to trainer teams like regular Pokémon.",
+			"Typo fix: Laser Focus",
+		],
+	}, {
 		name: "v1.7.11",
 		description: [
 			"Bug fix: Correct Mimikyu's TM list.",
@@ -395,6 +402,10 @@ export const versionHistory: VersionHistory = {
 		],
 	} ],
 	groups: [ {
+		name: "v1.8",
+		highlight: "Custom Pokémon!",
+		description: "You can now create custom Pokémon (aka, \"Fakémon\")! Fakémon can have customized move pools, list of abilities, stat blocks, artwork, and more. They can be shared with friends via their IDs and added as part of trainer teams.",
+	}, {
 		name: "v1.7",
 		highlight: "More Pokémon Customization!",
 		description: "Pokémon have more Advanced options in the editor, allowing you to specify custom size, hit die, movement, and senses. Additionally, experience and bond can be managed, as well as expertise for skill proficiencies.",
