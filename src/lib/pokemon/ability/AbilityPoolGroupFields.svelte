@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { Removable, SelectField, type SelectFieldChangeEvent } from "$lib/design/forms"
+	import { kebab } from "$lib/design/forms/kebab"
 	import { abilities } from "../store"
 
 	export let title: string
 	export let values: string[]
 	export let disabled = false
+
+	$: id = kebab(title)
 
 	$: options = $abilities?.map((it) => ({
 		name: it.name,
@@ -31,14 +34,14 @@
 			{#each values as value, index}
 				<li class="no-label">
 					<Removable on:remove={remove(index)}>
-						<SelectField label="{index + 1}." {value} {options} on:change={update(index)} {disabled} />
+						<SelectField label="{index + 1}." name="{id}-{index}" {value} {options} on:change={update(index)} {disabled} />
 					</Removable>
 				</li>
 			{/each}
 			<li>
 				<!-- key is a workaround to ensure the field is always empty -->
 				{#key values}
-					<SelectField label="Add Ability" value="" {options} on:change={add} {disabled} />
+					<SelectField label="Add Ability" name="{id}-add-ability" value="" {options} on:change={add} {disabled} />
 				{/key}
 			</li>
 		</ul>
