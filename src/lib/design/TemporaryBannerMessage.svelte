@@ -2,12 +2,13 @@
 	import type { Writable } from "svelte/store"
 	import { slide } from "svelte/transition"
 
-	export let condition: Writable<boolean>
+	export let condition: Writable<boolean | undefined>
+	$: value = $condition
 
 	const dismiss = () => condition.set(true)
 </script>
 
-{#if !$condition}
+{#if value != null && !value}
 	<p transition:slide={{ axis: "y", duration: 200 }}><slot></slot> <button on:click={dismiss}>Dismiss this message.</button></p>
 {/if}
 
