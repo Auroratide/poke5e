@@ -131652,7 +131652,7 @@
 				"ground",
 				"ghost"
 			],
-			"size": "tiny",
+			"size": "medium",
 			"sr": 9,
 			"minLevel": 5,
 			"eggGroup": [
@@ -147764,7 +147764,7 @@
 			"type": [
 				"ghost"
 			],
-			"size": "small",
+			"size": "medium",
 			"sr": 8,
 			"minLevel": 5,
 			"eggGroup": [
