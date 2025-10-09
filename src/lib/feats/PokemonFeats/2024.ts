@@ -58,6 +58,10 @@ export const PokemonFeats: Feat[] = [ {
 	category: "General",
 	description: "Increase one ability score of your choice by 1, to a maximum of 22. This ability score's maximum is now 22. As a prerequisite, the Pokémon taking this feat must be at least level 10.",
 }, {
+	name: "Hidden Ability",
+	category: "General",
+	description: "Your Pokémon reaches inside itself to discover a new ability. It gains access to the Hidden Ability in its stat block.",
+}, {
 	name: "Melee Master",
 	category: "General",
 	description: "Your Pokémon is a master of close combat.\n\n- Gain advantage on all attacks of opportunity.\n- When you hit a creature with a melee move that uses STR as its move power as part of the Attack action on your turn, you can cause the attack to deal extra damage to the target. The extra damage equals your Proficiency Bonus.",
