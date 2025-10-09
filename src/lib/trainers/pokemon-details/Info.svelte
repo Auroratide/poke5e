@@ -79,6 +79,9 @@
 		/>
 	</div>
 	<StatsInfo {pokemon} {species} />
+	{#if !hasImage}
+		<BondInfo value={pokemon.bond} {editable} on:update={onUpdateBond} />
+	{/if}
 	<SpeciesPortrait slot="art" media={species.media} avatar={pokemon.avatar} alt="" shiny={pokemon.isShiny} />
 	<BondInfo slot="after-art" value={pokemon.bond} {editable} on:update={onUpdateBond} />
 </SideArtCardSection>
