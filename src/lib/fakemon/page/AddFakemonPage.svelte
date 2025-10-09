@@ -82,6 +82,18 @@
 				customization: {
 					shinyHue: 0,
 				},
+				attribution: {
+					portrait: {
+						type: "",
+						name: "",
+						href: "",
+					},
+					sprite: {
+						type: "",
+						name: "",
+						href: "",
+					},
+				},
 			},
 		},
 	})
