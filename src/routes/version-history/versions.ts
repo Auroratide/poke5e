@@ -12,6 +12,14 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.8.1",
+		description: [
+			"New: Fakémon artwork can be given attribution to their artists.",
+			"Reference: Add Hidden Ability feat back to 2024 rules.",
+			"Bug fix: Can now see bond levels on pokémon that do not have a picture.",
+			"Bug fix: Fix sizes of Runerigus and Houndstone.",
+		],
+	}, {
 		name: "v1.8.0",
 		description: [
 			"New: Custom Pokémon (aka Fakémon) navigator and editor.",
