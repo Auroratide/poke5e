@@ -37,6 +37,7 @@ export default [
 			"svelte/require-event-dispatcher-types": "off",
 			"svelte/valid-prop-names-in-kit-pages": "off",
 			"svelte/no-reactive-reassign": "off",
+			"svelte/no-navigation-without-resolve": "off",
 		},
 	},
 ]
