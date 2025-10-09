@@ -12,6 +12,18 @@ export function stubSpeciesMedia<T = UploadedMedia>(template: Partial<Data<Speci
 		customization: {
 			shinyHue: 0,
 		},
+		attribution: {
+			portrait: {
+				type: "",
+				name: "",
+				href: "",
+			},
+			sprite: {
+				type: "",
+				name: "",
+				href: "",
+			},
+		},
 		...template,
 	})
 }

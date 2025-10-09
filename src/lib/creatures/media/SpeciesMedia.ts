@@ -11,11 +11,19 @@ export type SpeciesMediaCustomization = {
 	shinyHue: number,
 }
 
+export type SpeciesMediaTypeAttribution = {
+	type: "human" | "ai" | "other" | "",
+	name: string,
+	href: string,
+}
+
 export type SpeciesMediaAttribution = {
 	/**
 	 * Temporary for the random fakemons that exist in the official list.
 	 */
 	href?: string,
+	portrait: SpeciesMediaTypeAttribution,
+	sprite: SpeciesMediaTypeAttribution,
 }
 
 export class SpeciesMedia<T> extends DataClass<{
@@ -34,6 +42,20 @@ export class SpeciesMedia<T> extends DataClass<{
 		"shinyPortrait",
 		"shinySprite",
 	] as const
+
+	static readonly attributionTypes: {
+		name: string,
+		value: SpeciesMediaTypeAttribution["type"]
+	}[] = [ {
+			name: "Human Drawn",
+			value: "human",
+		}, {
+			name: "AI Generated",
+			value: "ai",
+		}, {
+			name: "Other",
+			value: "other",
+		} ]
 
 	portrait({ shiny = false }: { shiny?: boolean } = {}): {
 		value: T,

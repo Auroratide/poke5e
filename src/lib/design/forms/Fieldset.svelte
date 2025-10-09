@@ -20,6 +20,11 @@
 		inline-size: 100%;
 	}
 
+	fieldset :global(hr) {
+		grid-column: 1 / -1;
+		margin-block: 1em;
+	}
+
 	legend {
 		display: block;
 		background-color: var(--skin-bg);

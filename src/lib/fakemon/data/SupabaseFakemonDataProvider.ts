@@ -9,7 +9,7 @@ import { HitDice } from "$lib/dnd/hit-dice"
 import { FakemonLocalStorage } from "./FakemonLocalStorage"
 import type { UserAssets } from "$lib/user-assets"
 import type { ImageInputValue } from "$lib/design/forms"
-import { SpeciesMedia, type UploadedMedia } from "$lib/creatures/media"
+import { SpeciesMedia, type SpeciesMediaTypeAttribution, type UploadedMedia } from "$lib/creatures/media"
 import { SpeciesIdentifier } from "$lib/creatures/species"
 
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
@@ -187,8 +187,12 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_moves_level18: fakemon.moves.level18,
 			_moves_egg: fakemon.moves.egg,
 			_moves_tm: fakemon.moves.tm,
-			_art_attribution_name: null,
-			_art_attribution_href: null,
+			_art_attribution_type: fakemon.media.attribution?.portrait?.type ?? null,
+			_art_attribution_name: fakemon.media.attribution?.portrait?.name ?? null,
+			_art_attribution_href: fakemon.media.attribution?.portrait?.href ?? null,
+			_sprite_attribution_type: fakemon.media.attribution?.sprite?.type ?? null,
+			_sprite_attribution_name: fakemon.media.attribution?.sprite?.name ?? null,
+			_sprite_attribution_href: fakemon.media.attribution?.sprite?.href ?? null,
 			_shiny_hue_rotation: fakemon.media.customization?.shinyHue ?? 0,
 		}
 	}
@@ -321,8 +325,12 @@ type FakemonRow = {
 	normal_sprite_filename?: string,
 	shiny_portrait_filename?: string,
 	shiny_sprite_filename?: string,
+	art_attribution_type?: SpeciesMediaTypeAttribution["type"],
 	art_attribution_name?: string,
 	art_attribution_href?: string,
+	sprite_attribution_type?: SpeciesMediaTypeAttribution["type"],
+	sprite_attribution_name?: string,
+	sprite_attribution_href?: string,
 	shiny_hue_rotation: number,
 }
 
@@ -423,6 +431,18 @@ function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) => Upl
 				},
 				customization: {
 					shinyHue: row.shiny_hue_rotation,
+				},
+				attribution: {
+					portrait: {
+						type: row.art_attribution_type ?? "",
+						name: row.art_attribution_name ?? "",
+						href: row.art_attribution_href ?? "",
+					},
+					sprite: {
+						type: row.sprite_attribution_type ?? "",
+						name: row.sprite_attribution_name ?? "",
+						href: row.sprite_attribution_href ?? "",
+					},
 				},
 			},
 		},

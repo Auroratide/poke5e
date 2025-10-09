@@ -1,30 +1,27 @@
 <script lang="ts">
+	import type { SpeciesMediaTypeAttribution } from "$lib/creatures/media"
+	import { isNotBlank } from "$lib/string"
+	import ArtAttribution from "./ArtAttribution.svelte"
+
 	export let src: string
-	export let attribution: undefined | string | {
-		author: string,
-		link: string,
-	} = undefined
+	export let attribution: undefined | string | SpeciesMediaTypeAttribution = undefined
 	export let alt: string
 	export let shimmer: boolean = false
 	export let hue: number = 0
+
+	$: hasAttribution = attribution != null && attribution !== "" && (typeof attribution === "string" || attribution.type === "ai" || isNotBlank(attribution.name))
 </script>
 
 <figure>
 	{#key src}
-		<img {src} {alt} class:smaller={attribution != null} class:shimmer={shimmer} style:--hue-rotate="{hue}deg" />
+		<img {src} {alt} class:smaller={hasAttribution} class:shimmer={shimmer} style:--hue-rotate="{hue}deg" />
 	{/key}
-	{#if attribution}
-		{#await attribution}
-			<figcaption style:visibility="hidden">Getting attribution...</figcaption>
-		{:then attribution}
-			{#if attribution != null}
-				{#if typeof attribution === "string"}
-					<figcaption>{attribution}</figcaption>
-				{:else}
-					<figcaption>By <a href="{attribution.link}">{attribution.author}</a></figcaption>
-				{/if}
-			{/if}
-		{/await}
+	{#if hasAttribution}
+		{#if typeof attribution === "string"}
+			<figcaption>{attribution}</figcaption>
+		{:else}
+			<figcaption><ArtAttribution value={attribution} /></figcaption>
+		{/if}
 	{/if}
 </figure>
 
@@ -50,7 +47,7 @@
 	}
 
 	.smaller {
-		width: 85%;
+		width: 90%;
 	}
 
 	figcaption {
