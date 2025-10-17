@@ -15,6 +15,7 @@
 	export let min: number | undefined = undefined
 	export let max: number | undefined = undefined
 	export let optional: boolean = false
+	export let span: number = 1
 
 	const dispatch = createEventDispatcher()
 
@@ -33,7 +34,7 @@
 	}
 </script>
 
-<div class="int-field">
+<div class="int-field" style:--span="{span}">
 	<label for="{id}">{label}</label>
 	<input type="number" {id} name="{kebabName}" {placeholder} {min} {max} step="1" {value} on:change={roundOnChange} {disabled} {required} />
 </div>
@@ -43,6 +44,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.125em;
+		grid-column: span var(--span);
 	}
 
 	label {

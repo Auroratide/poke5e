@@ -26,7 +26,7 @@
 	import { CreatureSizes } from "$lib/dnd/CreatureSize"
 	import { capitalize } from "$lib/string"
 	import { HitDice } from "$lib/dnd/hit-dice"
-	import { AttributesFieldset, SavingThrowsFieldset } from "$lib/dnd/attributes"
+	import { SavingThrowsFieldset } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
 	import Button from "$lib/design/Button.svelte"
 	import { GenderRatioFieldset } from "$lib/creatures/gender"
@@ -35,6 +35,7 @@
 	import { AbilityPoolFieldset } from "$lib/pokemon/ability"
 	import { SpeciesMedia, SpeciesMediaFieldset } from "$lib/creatures/media"
 	import { EggGroupFieldset } from "$lib/creatures/egg-group"
+	import { EstimatableStatsFieldset } from "../estimation"
 
 	const dispatch = createEventDispatcher()
 
@@ -122,8 +123,6 @@
 	<Fieldset title="Basic Info" columns={2}>
 		<TextField label="Species Name" bind:value={speciesName} {disabled} required />
 		<IntField label="Min Level" bind:value={minLevel} min={1} max={20} {disabled} required />
-		<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} required />
-		<IntField label="HP" bind:value={hp} min={0} {disabled} required />
 		<SelectField label="Hit Dice" options={hitDiceOptions} bind:value={hitDice} {disabled} />
 		<SelectField label="Size" options={sizeOptions} bind:value={size} {disabled} />
 		<SrField bind:value={sr} {disabled} />
@@ -131,13 +130,13 @@
 			<TextareaField label="Description" bind:value={description} {disabled} placeholder="The ______ Pokémon. It is known for this one rather cool thing." />
 		</div>
 	</Fieldset>
+	<EstimatableStatsFieldset level={minLevel} hitDice={new HitDice(hitDice)} type={type} bind:hp bind:ac bind:attributes {disabled} />
 	<SpeciesMediaFieldset originals={originalMedia} bind:updated={updatedMedia} {disabled} />
 	<TypeField bind:value={type.data} {disabled} />
 	<GenderRatioFieldset bind:value={gender} {disabled} />
 	<EggGroupFieldset bind:value={eggGroups} {disabled} />
 	<SpeedsFieldset bind:values={speeds} {disabled} />
 	<SensesFieldset bind:values={senses} {disabled} />
-	<AttributesFieldset bind:values={attributes} {disabled} />
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} noexpertise />
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
 	<AbilityPoolFieldset bind:value={abilityPool} {disabled} />
