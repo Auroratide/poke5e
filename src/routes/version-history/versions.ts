@@ -12,6 +12,14 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.8.2",
+		description: [
+			"Fakémon: Include a BST-to-Stat converter.",
+			"Fakémon: Add general notes field.",
+			"Fakémon: Add onboarding screen when you do not have any fakémon.",
+			"Bug fix: Correct damage type of Flip Turn.",
+		],
+	}, {
 		name: "v1.8.1",
 		description: [
 			"New: Fakémon artwork can be given attribution to their artists.",
