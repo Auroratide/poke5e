@@ -63,6 +63,7 @@
 		"@auroratide/toggle-switch": "^0.3.1",
 		"@floating-ui/dom": "^1.7.4",
 		"@supabase/supabase-js": "^2.74.0",
+		"dompurify": "^3.3.0",
 		"marked": "^15.0.12"
 	},
 	"packageManager": "pnpm@10.6.2",
