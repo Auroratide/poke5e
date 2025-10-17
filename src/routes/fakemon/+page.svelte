@@ -57,7 +57,7 @@
 			<Loader />
 		{:then list}
 			{#if list}
-				<FakemonList fakemon={list} />
+				<FakemonList fakemon={list} showGetStarted={action == null} />
 			{/if}
 		{:catch error}
 			<ErrorMessage error="{error}" />

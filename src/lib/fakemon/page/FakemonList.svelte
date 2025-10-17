@@ -8,9 +8,13 @@
 	import type { Fakemon } from "../Fakemon"
 	import type { FakemonListStore } from "../store"
 	import { PageAction } from "./actions"
+	import GetStarted from "./GetStarted.svelte"
 	import { fakemonListSorter, fakemonListFilter } from "./sort-and-filter"
 
 	export let fakemon: FakemonListStore
+	export let showGetStarted = false
+
+	$: hasNoFakemon = $fakemon.length === 0
 	$: filtered = $fakemon.filter((it) => it.data.species.name.toLocaleLowerCase().includes($fakemonListFilter.toLocaleLowerCase()))
 
 	const byStringField = (field: (m: Fakemon) => string) =>
@@ -24,13 +28,17 @@
 <div class="space-bottom">
 	<SearchField id="filter-fakemon" label="Search" bind:value={$fakemonListFilter} matched={filtered.length} max={$fakemon.length} />
 </div>
-<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$fakemonListSorter} headers={[ {
-	key: "name", name: "Name", ratio: 1, sort: byStringField(it => it.data.species.name),
-} ]}>
-	<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
-		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.fakemon(item.data.readKey)}">{item.data.species.name}</a></BubbleRow.Cell>
-	</BubbleRow.Row>
-</SortableTable>
+{#if hasNoFakemon}
+	{#if showGetStarted}<GetStarted />{/if}
+{:else}
+	<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$fakemonListSorter} headers={[ {
+		key: "name", name: "Name", ratio: 1, sort: byStringField(it => it.data.species.name),
+	} ]}>
+		<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
+			<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.fakemon(item.data.readKey)}">{item.data.species.name}</a></BubbleRow.Cell>
+		</BubbleRow.Row>
+	</SortableTable>
+{/if}
 
 <style>
 	.space-bottom {
