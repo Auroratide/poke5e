@@ -34,6 +34,10 @@ export class PokemonType extends DataClass<PokeType[]> {
 	get primary(): PokeType { return this.data[0] }
 	get secondary(): PokeType | undefined { return this.data[1] }
 
+	includes(...type: PokeType[]): boolean {
+		return type.some((type) => this.data.includes(type))
+	}
+
 	vulnerabilities = (): PokeType[] =>
 		Object.entries(defensiveMultipliers(this.data))
 			.filter(([, multiplier]) => multiplier > 1)

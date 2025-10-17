@@ -29,9 +29,9 @@ export class StatsEstimator {
 		const str = this.calculateStr(bst)
 		const dex = this.calculateDex(bst)
 		const con = this.calculateCon(bst)
-		const int = this.calculateInt()
+		const int = this.calculateInt(bst)
 		const wis = this.calculateWis(bst)
-		const cha = this.calculateCha()
+		const cha = this.calculateCha(bst)
 		const hp = this.calculateHp(this.level, this.hitDice.sizeAsInt(), con)
 
 		return {
@@ -68,8 +68,13 @@ export class StatsEstimator {
 		return Math.round(0.0467 * total + 7.9)
 	}
 
-	private calculateInt(): number {
-		return 6
+	private calculateInt(bst: Bst): number {
+		if (this.type.includes("psychic")) {
+			const total = bst.data.specialAttack
+			return Math.round(0.045 * total + 6)
+		} else {
+			return 6
+		}
 	}
 
 	private calculateWis(bst: Bst): number {
@@ -77,8 +82,13 @@ export class StatsEstimator {
 		return Math.round(0.035 * total + 7.5)
 	}
 
-	private calculateCha(): number {
-		return 10
+	private calculateCha(bst: Bst): number {
+		if (this.type.includes("fairy", "dark", "dragon")) {
+			const total = bst.data.specialDefense
+			return Math.round(0.038 * total + 10)
+		} else {
+			return 10
+		}
 	}
 
 	private calculateHp(level: number, hitDice: number, con: number): number {
