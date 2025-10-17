@@ -15,6 +15,7 @@
 	import Card from "$lib/design/Card.svelte"
 	import { SpeciesPortrait } from "$lib/creatures/media"
 	import EvolutionSection from "../EvolutionSection.svelte"
+	import { isNotBlank } from "$lib/string"
 
 	export let value: PokemonSpecies
 	$: hasImage = value.media.data.values.normalPortrait != null
@@ -117,6 +118,14 @@
 			{/if}
 		</FlatDl>
 	</section>
+	{#if isNotBlank(value.data.notes)}
+		<section>
+			<h2>Notes</h2>
+			<div class="small-text">
+				<Markdown value="{value.data.notes}" />
+			</div>
+		</section>
+	{/if}
 	<slot name="footer"></slot>
 </Card>
 

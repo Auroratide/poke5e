@@ -194,6 +194,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_sprite_attribution_name: fakemon.media.attribution?.sprite?.name ?? null,
 			_sprite_attribution_href: fakemon.media.attribution?.sprite?.href ?? null,
 			_shiny_hue_rotation: fakemon.media.customization?.shinyHue ?? 0,
+			_notes: fakemon.notes ?? "",
 		}
 	}
 
@@ -332,6 +333,7 @@ type FakemonRow = {
 	sprite_attribution_name?: string,
 	sprite_attribution_href?: string,
 	shiny_hue_rotation: number,
+	notes?: string,
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -445,6 +447,7 @@ function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) => Upl
 					},
 				},
 			},
+			notes: row.notes ?? "",
 		},
 	})
 }

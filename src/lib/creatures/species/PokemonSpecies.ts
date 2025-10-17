@@ -9,6 +9,7 @@ import { SkillRanks } from "$lib/dnd/skills"
 import { AbilityPool } from "$lib/pokemon/ability"
 import type { PokeEvolution } from "$lib/pokemon/types"
 import { PokemonType } from "$lib/pokemon/types-2"
+import type { MarkdownString } from "$lib/rendering/markdown"
 import { EggGroup } from "../egg-group"
 import { GenderRatio } from "../gender"
 import { SpeciesMedia, type UploadedMedia } from "../media"
@@ -40,6 +41,7 @@ export class PokemonSpecies extends DataClass<{
 	moves: Data<MovePool>,
 	media: Data<SpeciesMedia<UploadedMedia>>,
 	evolution?: PokeEvolution,
+	notes?: MarkdownString,
 }> {
 	get id(): SpeciesIdentifier { return new SpeciesIdentifier(this.data.id) }
 	get type(): PokemonType { return new PokemonType(this.data.type) }
@@ -105,6 +107,16 @@ export class PokemonSpecies extends DataClass<{
 				},
 				attribution: it.media.attribution ? {
 					href: it.media.attribution,
+					portrait: {
+						type: "other",
+						name: "",
+						href: "",
+					},
+					sprite: {
+						type: "other",
+						name: "",
+						href: "",
+					},
 				} : undefined,
 			},
 			evolution: it.evolution,

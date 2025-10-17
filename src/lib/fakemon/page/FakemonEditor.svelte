@@ -14,6 +14,7 @@
 		Form,
 		InstructionText,
 		IntField,
+		MarkdownField,
 		SelectField,
 		TextareaField,
 		TextField,
@@ -70,6 +71,7 @@
 	})
 	let abilityPool = species.abilities.copy()
 	let movePool = species.moves.copy()
+	let notes = species.data.notes ?? ""
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -98,6 +100,7 @@
 					abilities: abilityPool.data,
 					moves: movePool.data,
 					media: originalMedia.data,
+					notes,
 				}).data,
 			}),
 			newMedia: updatedMedia,
@@ -142,6 +145,9 @@
 	<Fieldset title="Evolution">
 		<InstructionText>Coming soon!</InstructionText>
 		<InstructionText>Evolutionary lines will be customizable in a future update.</InstructionText>
+	</Fieldset>
+	<Fieldset title="Other">
+		<MarkdownField label="General Notes" bind:value={notes} {disabled} placeholder="Any other important notes." rows={6} />
 	</Fieldset>
 	<ActionArea>
 		<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
