@@ -821,6 +821,10 @@ test("updating fakemon", async () => {
 		_art_attribution_name: "@auroratide",
 		_art_attribution_href: "https://auroratide.com/art",
 		_shiny_hue_rotation: 120,
+		_art_attribution_type: "human",
+		_sprite_attribution_type: "",
+		_sprite_attribution_name: "",
+		_sprite_attribution_href: "",
 	})
 
 	await call("update_fakemon", {
@@ -876,8 +880,12 @@ test("updating fakemon", async () => {
 	expect(drakeon.moves_level18).toEqual(["last-resort", "thunder-fang", "hyper-beam"])
 	expect(drakeon.moves_egg).toEqual([])
 	expect(drakeon.moves_tm).toEqual([1, 2, 3, 4])
+	expect(drakeon.art_attribution_type).toEqual("human")
 	expect(drakeon.art_attribution_name).toEqual("@auroratide")
 	expect(drakeon.art_attribution_href).toEqual("https://auroratide.com/art")
+	expect(drakeon.sprite_attribution_type).toEqual("")
+	expect(drakeon.sprite_attribution_name).toEqual("")
+	expect(drakeon.sprite_attribution_href).toEqual("")
 	expect(drakeon.shiny_hue_rotation).toEqual(120)
 
 	expect(drakeon.prof_athletics).toEqual(false)
