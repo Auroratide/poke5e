@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.8.3",
+		description: [
+			"Bug fix: Fix for some mobile devices not allowing full scrolling.",
+		],
+	}, {
 		name: "v1.8.2",
 		description: [
 			"Fakémon: Include a BST-to-Stat converter.",
