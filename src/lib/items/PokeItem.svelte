@@ -9,7 +9,7 @@
 	import ItemSprite from "./ItemSprite.svelte"
 	import { pokemon } from "$lib/creatures/store"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
-	import { hasEvolutionRequirement } from "$lib/pokemon/evolution"
+	import { hasEvolutionRequirement } from "$lib/pokemon/evolution-old"
 
 	export let item: Item
 

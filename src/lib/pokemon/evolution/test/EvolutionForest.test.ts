@@ -1,0 +1,104 @@
+import { test, expect, beforeEach } from "vitest"
+import { EvolutionForest } from "../EvolutionForest"
+import { stubEvolution } from "./stubs"
+import { SpeciesIdentifier } from "$lib/creatures/species"
+
+let forest: EvolutionForest
+
+beforeEach(() => {
+	forest = new EvolutionForest([
+		stubEvolution({
+			from: "eevee",
+			to: "flareon",
+		}),
+		stubEvolution({
+			from: "eevee",
+			to: "vaporeon",
+		}),
+		stubEvolution({
+			from: "eevee",
+			to: "jolteon",
+		}),
+		stubEvolution({
+			from: "charmander",
+			to: "charmeleon",
+		}),
+		stubEvolution({
+			from: "charmeleon",
+			to: "charizard",
+		}),
+		stubEvolution({
+			from: "applin",
+			to: "flapple",
+		}),
+		stubEvolution({
+			from: "applin",
+			to: "appletun",
+		}),
+		stubEvolution({
+			from: "applin",
+			to: "dipplin",
+		}),
+		stubEvolution({
+			from: "dipplin",
+			to: "hydrapple",
+		}),
+	])
+})
+
+test("max stage 1", () => {
+	const result = forest.maxStage(SpeciesIdentifier.fromSpeciesName("palkia"))
+
+	expect(result).toEqual(1)
+})
+
+test("max stage 2", () => {
+	const result = forest.maxStage(SpeciesIdentifier.fromSpeciesName("eevee"))
+
+	expect(result).toEqual(2)
+})
+
+test("max stage 3", () => {
+	const result = forest.maxStage(SpeciesIdentifier.fromSpeciesName("charmander"))
+
+	expect(result).toEqual(3)
+})
+
+test("max stage at end of sub-branch", () => {
+	let result = forest.maxStage(SpeciesIdentifier.fromSpeciesName("applin"))
+	expect(result).toEqual(3)
+
+	result = forest.maxStage(SpeciesIdentifier.fromSpeciesName("flapple"))
+	expect(result).toEqual(2)
+
+	result = forest.maxStage(SpeciesIdentifier.fromSpeciesName("dipplin"))
+	expect(result).toEqual(3)
+
+	result = forest.maxStage(SpeciesIdentifier.fromSpeciesName("hydrapple"))
+	expect(result).toEqual(3)
+})
+
+test("current stage no evos", () => {
+	const result = forest.currentStage(SpeciesIdentifier.fromSpeciesName("palkia"))
+
+	expect(result).toEqual(1)
+})
+
+test("current stage branching evos", () => {
+	let result = forest.currentStage(SpeciesIdentifier.fromSpeciesName("eevee"))
+	expect(result).toEqual(1)
+
+	result = forest.currentStage(SpeciesIdentifier.fromSpeciesName("vaporeon"))
+	expect(result).toEqual(2)
+})
+
+test("current stage linear evos", () => {
+	let result = forest.currentStage(SpeciesIdentifier.fromSpeciesName("charmander"))
+	expect(result).toEqual(1)
+
+	result = forest.currentStage(SpeciesIdentifier.fromSpeciesName("charmeleon"))
+	expect(result).toEqual(2)
+
+	result = forest.currentStage(SpeciesIdentifier.fromSpeciesName("charizard"))
+	expect(result).toEqual(3)
+})

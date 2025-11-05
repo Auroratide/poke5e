@@ -14,12 +14,14 @@
 	import * as asString from "$lib/creatures/string"
 	import Card from "$lib/design/Card.svelte"
 	import { SpeciesPortrait } from "$lib/creatures/media"
-	import EvolutionSection from "../EvolutionSection.svelte"
 	import { isNotBlank } from "$lib/string"
+	import { EvolutionInfo, EvolutionStore } from "$lib/pokemon/evolution"
 
 	export let value: PokemonSpecies
 	$: hasImage = value.media.data.values.normalPortrait != null
 	$: useId = value.data.number <= 0
+
+	$: evolutions = EvolutionStore.canonList()
 
 	const exists = <T>(arr: T[] | undefined) => arr != null && arr.length > 0
 </script>
@@ -79,7 +81,7 @@
 		{/if}
 	</section>
 	{#if value.data.evolution !== undefined}
-		<EvolutionSection pokemon={value} />
+		<EvolutionInfo species={value.id} evolutions={$evolutions} />
 	{/if}
 	<section class="moves">
 		<h2>Moves</h2>
