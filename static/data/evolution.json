@@ -1,0 +1,9272 @@
+{
+	"items": [
+		{
+			"from": "bulbasaur",
+			"to": "ivysaur",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "ivysaur",
+			"to": "venusaur",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "charmander",
+			"to": "charmeleon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "charmeleon",
+			"to": "charizard",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "squirtle",
+			"to": "wartortle",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "wartortle",
+			"to": "blastoise",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "caterpie",
+			"to": "metapod",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 4
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 5
+				}
+			]
+		},
+		{
+			"from": "metapod",
+			"to": "butterfree",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "weedle",
+			"to": "kakuna",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 4
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 5
+				}
+			]
+		},
+		{
+			"from": "kakuna",
+			"to": "beedrill",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "pidgey",
+			"to": "pidgeotto",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "pidgeotto",
+			"to": "pidgeot",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "rattata",
+			"to": "raticate",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "spearow",
+			"to": "fearow",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "ekans",
+			"to": "arbok",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "pikachu",
+			"to": "raichu",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Thunder Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "pikachu",
+			"to": "alolan-raichu",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Alola Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "sandshrew",
+			"to": "sandslash",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "nidoran-f",
+			"to": "nidorina",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 5
+				}
+			]
+		},
+		{
+			"from": "nidorina",
+			"to": "nidoqueen",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Moon Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "nidoran-m",
+			"to": "nidorino",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 5
+				}
+			]
+		},
+		{
+			"from": "nidorino",
+			"to": "nidoking",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Moon Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "clefairy",
+			"to": "clefable",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Moon Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "vulpix",
+			"to": "ninetales",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Fire Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "jigglypuff",
+			"to": "wigglytuff",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Moon Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "zubat",
+			"to": "golbat",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "golbat",
+			"to": "crobat",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 5
+				}
+			]
+		},
+		{
+			"from": "oddish",
+			"to": "gloom",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "gloom",
+			"to": "vileplume",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Leaf Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "gloom",
+			"to": "bellossom",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Sun Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "paras",
+			"to": "parasect",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "venonat",
+			"to": "venomoth",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "diglett",
+			"to": "dugtrio",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "meowth",
+			"to": "persian",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "psyduck",
+			"to": "golduck",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "mankey",
+			"to": "primeape",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "primeape",
+			"to": "annihilape",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "special",
+					"value": "after using Rage Fist 10 times"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "growlithe",
+			"to": "arcanine",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Fire Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "poliwag",
+			"to": "poliwhirl",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "poliwhirl",
+			"to": "poliwrath",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Water Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "poliwhirl",
+			"to": "politoed",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "King's Rock"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "abra",
+			"to": "kadabra",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "kadabra",
+			"to": "alakazam",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "machop",
+			"to": "machoke",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "machoke",
+			"to": "machamp",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "bellsprout",
+			"to": "weepinbell",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "weepinbell",
+			"to": "victreebel",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Leaf Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "tentacool",
+			"to": "tentacruel",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "geodude",
+			"to": "graveler",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "graveler",
+			"to": "golem",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "ponyta",
+			"to": "rapidash",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "slowpoke",
+			"to": "slowbro",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "slowpoke",
+			"to": "slowking",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "item",
+					"value": "King's Rock"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "magnemite",
+			"to": "magneton",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "magneton",
+			"to": "magnezone",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 15
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "doduo",
+			"to": "dodrio",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "seel",
+			"to": "dewgong",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "grimer",
+			"to": "muk",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "shellder",
+			"to": "cloyster",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Water Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "gastly",
+			"to": "haunter",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "haunter",
+			"to": "gengar",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "onix",
+			"to": "steelix",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Metal Coat"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "drowzee",
+			"to": "hypno",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "krabby",
+			"to": "kingler",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "voltorb",
+			"to": "electrode",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "exeggcute",
+			"to": "exeggutor",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Leaf Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "exeggcute",
+			"to": "alolan-exeggutor",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Alola Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "cubone",
+			"to": "marowak",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "cubone",
+			"to": "alolan-marowak",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Alola Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "lickitung",
+			"to": "lickilicky",
+			"conditions": [
+				{
+					"type": "move",
+					"value": "rollout"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "koffing",
+			"to": "weezing",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "koffing",
+			"to": "galarian-weezing",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				},
+				{
+					"type": "special",
+					"value": "while in a region with significant anthropogenic pollution"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "rhyhorn",
+			"to": "rhydon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 11
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "rhydon",
+			"to": "rhyperior",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				},
+				{
+					"type": "item",
+					"value": "Protector"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "chansey",
+			"to": "blissey",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "tangela",
+			"to": "tangrowth",
+			"conditions": [
+				{
+					"type": "move",
+					"value": "ancient-power"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 5
+				}
+			]
+		},
+		{
+			"from": "horsea",
+			"to": "seadra",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "seadra",
+			"to": "kingdra",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Dragon Scale"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "goldeen",
+			"to": "seaking",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "staryu",
+			"to": "starmie",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				},
+				{
+					"type": "item",
+					"value": "Water Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "scyther",
+			"to": "scizor",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Metal Coat"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "scyther",
+			"to": "kleavor",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Black Augurite"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "electabuzz",
+			"to": "electivire",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 15
+				},
+				{
+					"type": "item",
+					"value": "Electirizer"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "magmar",
+			"to": "magmortar",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 15
+				},
+				{
+					"type": "item",
+					"value": "Magmarizer"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "magikarp",
+			"to": "gyarados",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 16
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "vaporeon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Water Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "jolteon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Thunder Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "flareon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Fire Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "leafeon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Leaf Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "glaceon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Ice Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "espeon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				},
+				{
+					"type": "time",
+					"value": "day"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "umbreon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				},
+				{
+					"type": "time",
+					"value": "night"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "sylveon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				},
+				{
+					"type": "move-type",
+					"value": "fairy"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "droideon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "special",
+					"value": "but the conditions are not well understood"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "brawleon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				},
+				{
+					"type": "move-type",
+					"value": "fighting"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "specteon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "special",
+					"value": "after taking non-zero ghost-type damage"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "toxeon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Toxic Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "minereon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "special",
+					"value": "after using two different evolution stones simultaneously"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "aereon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				},
+				{
+					"type": "special",
+					"value": "while above the clouds"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "pesteon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				},
+				{
+					"type": "move-type",
+					"value": "bug"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "terreon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				},
+				{
+					"type": "special",
+					"value": "while under ground or in a cave"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "drakeon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "special",
+					"value": "but the conditions are not well understood"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "eevee",
+			"to": "eeveon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "special",
+					"value": "and the only damage-dealing move it knows is Tackle"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "porygon",
+			"to": "porygon2",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				},
+				{
+					"type": "item",
+					"value": "Upgrade"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "omanyte",
+			"to": "omastar",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "kabuto",
+			"to": "kabutops",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "dratini",
+			"to": "dragonair",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "dragonair",
+			"to": "dragonite",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "chikorita",
+			"to": "bayleef",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "bayleef",
+			"to": "meganium",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "cyndaquil",
+			"to": "quilava",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "quilava",
+			"to": "typhlosion",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "quilava",
+			"to": "typhlosion-hisui",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "totodile",
+			"to": "croconaw",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "croconaw",
+			"to": "feraligatr",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "sentret",
+			"to": "furret",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "hoothoot",
+			"to": "noctowl",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "ledyba",
+			"to": "ledian",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "spinarak",
+			"to": "ariados",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "chinchou",
+			"to": "lanturn",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "pichu",
+			"to": "pikachu",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 3
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "cleffa",
+			"to": "clefairy",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 3
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "igglybuff",
+			"to": "jigglypuff",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 3
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "togepi",
+			"to": "togetic",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "togetic",
+			"to": "togekiss",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 15
+				},
+				{
+					"type": "item",
+					"value": "Shiny Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "natu",
+			"to": "xatu",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "mareep",
+			"to": "flaaffy",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 5
+				}
+			]
+		},
+		{
+			"from": "flaaffy",
+			"to": "ampharos",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 11
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "marill",
+			"to": "azumarill",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "hoppip",
+			"to": "skiploom",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "skiploom",
+			"to": "jumpluff",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "aipom",
+			"to": "ambipom",
+			"conditions": [
+				{
+					"type": "move",
+					"value": "double-hit"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "sunkern",
+			"to": "sunflora",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				},
+				{
+					"type": "item",
+					"value": "Sun Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "yanma",
+			"to": "yanmega",
+			"conditions": [
+				{
+					"type": "move",
+					"value": "ancient-power"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "wooper",
+			"to": "quagsire",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "murkrow",
+			"to": "honchkrow",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "item",
+					"value": "Dusk Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "misdreavus",
+			"to": "mismagius",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "item",
+					"value": "Dusk Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "girafarig",
+			"to": "farigiraf",
+			"conditions": [
+				{
+					"type": "move",
+					"value": "twin-beam"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "pineco",
+			"to": "forretress",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "dunsparce",
+			"to": "dudunsparce",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "move",
+					"value": "hyper-drill"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "gligar",
+			"to": "gliscor",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "item",
+					"value": "Razor Fang at night"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "snubbull",
+			"to": "granbull",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "sneasel",
+			"to": "weavile",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "item",
+					"value": "Razor Claw at night"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "teddiursa",
+			"to": "ursaring",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "ursaring",
+			"to": "ursaluna",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Peat Block"
+				},
+				{
+					"type": "special",
+					"value": "under a full moon"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "slugma",
+			"to": "magcargo",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "swinub",
+			"to": "piloswine",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "piloswine",
+			"to": "mamoswine",
+			"conditions": [
+				{
+					"type": "move",
+					"value": "ancient-power"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "remoraid",
+			"to": "octillery",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "houndour",
+			"to": "houndoom",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "phanpy",
+			"to": "donphan",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "porygon2",
+			"to": "porygon-z",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Dubious Disc"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "stantler",
+			"to": "wyrdeer",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "move",
+					"value": "psyshield-bash"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "tyrogue",
+			"to": "hitmonchan",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "special",
+					"value": "if its STR is higher than its DEX"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "tyrogue",
+			"to": "hitmonlee",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "special",
+					"value": "if its DEX is higher than its STR"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "tyrogue",
+			"to": "hitmontop",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "special",
+					"value": "if its STR is equal to its DEX"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "smoochum",
+			"to": "jynx",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "elekid",
+			"to": "electabuzz",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "magby",
+			"to": "magmar",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "larvitar",
+			"to": "pupitar",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 5
+				}
+			]
+		},
+		{
+			"from": "pupitar",
+			"to": "tyranitar",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "treecko",
+			"to": "grovyle",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "grovyle",
+			"to": "sceptile",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "torchic",
+			"to": "combusken",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "combusken",
+			"to": "blaziken",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "mudkip",
+			"to": "marshtomp",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "marshtomp",
+			"to": "swampert",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "poochyena",
+			"to": "mightyena",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "zigzagoon",
+			"to": "linoone",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "wurmple",
+			"to": "silcoon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 4
+				},
+				{
+					"type": "time",
+					"value": "day"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "wurmple",
+			"to": "cascoon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 4
+				},
+				{
+					"type": "time",
+					"value": "night"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "silcoon",
+			"to": "beautifly",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "cascoon",
+			"to": "dustox",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "lotad",
+			"to": "lombre",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "lombre",
+			"to": "ludicolo",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "item",
+					"value": "Water Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "seedot",
+			"to": "nuzleaf",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "nuzleaf",
+			"to": "shiftry",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "item",
+					"value": "Leaf Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "taillow",
+			"to": "swellow",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "wingull",
+			"to": "pelipper",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "ralts",
+			"to": "kirlia",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "kirlia",
+			"to": "gardevoir",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "kirlia",
+			"to": "gallade",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				},
+				{
+					"type": "gender",
+					"value": "male"
+				},
+				{
+					"type": "item",
+					"value": "Dawn Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "surskit",
+			"to": "masquerain",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "shroomish",
+			"to": "breloom",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "slakoth",
+			"to": "vigoroth",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "vigoroth",
+			"to": "slaking",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "nincada",
+			"to": "ninjask",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "nincada",
+			"to": "shedinja",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "special",
+					"value": "when its trainer has an empty pokeball when Nincada evolves into Ninjask"
+				}
+			],
+			"effects": [
+				{
+					"type": "special",
+					"value": "the Shedinja has all the base statistics that are in its stat block, plus any health and Ability Score Increases it would obtain from leveling up from its minimum found level"
+				}
+			]
+		},
+		{
+			"from": "whismur",
+			"to": "loudred",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "loudred",
+			"to": "exploud",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "makuhita",
+			"to": "hariyama",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "azurill",
+			"to": "marill",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 3
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "nosepass",
+			"to": "probopass",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "skitty",
+			"to": "delcatty",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Moon Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "aron",
+			"to": "lairon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "lairon",
+			"to": "aggron",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "meditite",
+			"to": "medicham",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "electrike",
+			"to": "manectric",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "roselia",
+			"to": "roserade",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Shiny Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "gulpin",
+			"to": "swalot",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "carvanha",
+			"to": "sharpedo",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "wailmer",
+			"to": "wailord",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 5
+				}
+			]
+		},
+		{
+			"from": "numel",
+			"to": "camerupt",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "spoink",
+			"to": "grumpig",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "trapinch",
+			"to": "vibrava",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "vibrava",
+			"to": "flygon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "cacnea",
+			"to": "cacturne",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "swablu",
+			"to": "altaria",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "barboach",
+			"to": "whiscash",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "corphish",
+			"to": "crawdaunt",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "baltoy",
+			"to": "claydol",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "lileep",
+			"to": "cradily",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "anorith",
+			"to": "armaldo",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "feebas",
+			"to": "milotic",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "item",
+					"value": "Prism Scale"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 18
+				}
+			]
+		},
+		{
+			"from": "shuppet",
+			"to": "banette",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "duskull",
+			"to": "dusclops",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "dusclops",
+			"to": "dusknoir",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				},
+				{
+					"type": "item",
+					"value": "Reaper Cloth"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "wynaut",
+			"to": "wobbuffet",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "snorunt",
+			"to": "glalie",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "snorunt",
+			"to": "froslass",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "gender",
+					"value": "female"
+				},
+				{
+					"type": "item",
+					"value": "Dawn Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "spheal",
+			"to": "sealeo",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "sealeo",
+			"to": "walrein",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "clamperl",
+			"to": "huntail",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Deep Sea Tooth"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "clamperl",
+			"to": "gorebyss",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Deep Sea Scale"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "bagon",
+			"to": "shelgon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "shelgon",
+			"to": "salamence",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "beldum",
+			"to": "metang",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "metang",
+			"to": "metagross",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 15
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "turtwig",
+			"to": "grotle",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "grotle",
+			"to": "torterra",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "chimchar",
+			"to": "monferno",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "monferno",
+			"to": "infernape",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "piplup",
+			"to": "prinplup",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "prinplup",
+			"to": "empoleon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "starly",
+			"to": "staravia",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "staravia",
+			"to": "staraptor",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "bidoof",
+			"to": "bibarel",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "kricketot",
+			"to": "kricketune",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 4
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "shinx",
+			"to": "luxio",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "luxio",
+			"to": "luxray",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 11
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "budew",
+			"to": "roselia",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "cranidos",
+			"to": "rampardos",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "shieldon",
+			"to": "bastiodon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "burmy",
+			"to": "mothim",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "gender",
+					"value": "male"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "burmy",
+			"to": "wormadam-plant-cloak",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "gender",
+					"value": "female"
+				},
+				{
+					"type": "special",
+					"value": "in a tall grass/forest"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "burmy",
+			"to": "wormadam-sand-cloak",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "gender",
+					"value": "female"
+				},
+				{
+					"type": "special",
+					"value": "in a tall cave/desert/mountain"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "burmy",
+			"to": "wormadam-trash-cloak",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "gender",
+					"value": "female"
+				},
+				{
+					"type": "special",
+					"value": "in a city or building"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "combee",
+			"to": "vespiquen",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				},
+				{
+					"type": "gender",
+					"value": "female"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 17
+				}
+			]
+		},
+		{
+			"from": "buizel",
+			"to": "floatzel",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "cherubi",
+			"to": "cherrim",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "shellos",
+			"to": "gastrodon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "drifloon",
+			"to": "drifblim",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "buneary",
+			"to": "lopunny",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "glameow",
+			"to": "purugly",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "chingling",
+			"to": "chimecho",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 16
+				}
+			]
+		},
+		{
+			"from": "stunky",
+			"to": "skuntank",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "bronzor",
+			"to": "bronzong",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 17
+				}
+			]
+		},
+		{
+			"from": "bonsly",
+			"to": "sudowoodo",
+			"conditions": [
+				{
+					"type": "move",
+					"value": "mimic"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "mime-jr",
+			"to": "mr-mime",
+			"conditions": [
+				{
+					"type": "move",
+					"value": "mimic"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "mime-jr",
+			"to": "galarian-mr-mime",
+			"conditions": [
+				{
+					"type": "move",
+					"value": "mimic"
+				},
+				{
+					"type": "special",
+					"value": "in a region of typically cool climate"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "happiny",
+			"to": "chansey",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Oval Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "gible",
+			"to": "gabite",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "gabite",
+			"to": "garchomp",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "munchlax",
+			"to": "snorlax",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "riolu",
+			"to": "lucario",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				},
+				{
+					"type": "time",
+					"value": "day"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "hippopotas",
+			"to": "hippowdon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "skorupi",
+			"to": "drapion",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "croagunk",
+			"to": "toxicroak",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "finneon",
+			"to": "lumineon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "mantyke",
+			"to": "mantine",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "special",
+					"value": "when Remoraid is also in the party"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "snover",
+			"to": "abomasnow",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 11
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "snivy",
+			"to": "servine",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "servine",
+			"to": "serperior",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "tepig",
+			"to": "pignite",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "pignite",
+			"to": "emboar",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "oshawott",
+			"to": "dewott",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "dewott",
+			"to": "samurott",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "dewott",
+			"to": "samurott-hisui",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "patrat",
+			"to": "watchog",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "lillipup",
+			"to": "herdier",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "herdier",
+			"to": "stoutland",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "purrloin",
+			"to": "liepard",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "pansage",
+			"to": "simisage",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Leaf Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "pansear",
+			"to": "simisear",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Fire Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "panpour",
+			"to": "simipour",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Water Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "munna",
+			"to": "musharna",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Moon Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "pidove",
+			"to": "tranquill",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "tranquill",
+			"to": "unfezant",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "blitzle",
+			"to": "zebstrika",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "roggenrola",
+			"to": "boldore",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "boldore",
+			"to": "gigalith",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "woobat",
+			"to": "swoobat",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "drilbur",
+			"to": "excadrill",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "timburr",
+			"to": "gurdurr",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "gurdurr",
+			"to": "conkeldurr",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "tympole",
+			"to": "palpitoad",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "palpitoad",
+			"to": "seismitoad",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "sewaddle",
+			"to": "swadloon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "swadloon",
+			"to": "leavanny",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "venipede",
+			"to": "whirlipede",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "whirlipede",
+			"to": "scolipede",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "cottonee",
+			"to": "whimsicott",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "item",
+					"value": "Sun Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "petilil",
+			"to": "lilligant",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "item",
+					"value": "Sun Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "petilil",
+			"to": "lilligant-hisui",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "item",
+					"value": "Sun Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "basculin",
+			"to": "basculegion-m",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "gender",
+					"value": "male"
+				},
+				{
+					"type": "special",
+					"value": "after fainting from recoil damage"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "basculin",
+			"to": "basculegion-f",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "gender",
+					"value": "female"
+				},
+				{
+					"type": "special",
+					"value": "after fainting from recoil damage"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "sandile",
+			"to": "krokorok",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "krokorok",
+			"to": "krookodile",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 15
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "darumaka",
+			"to": "darmanitan",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "dwebble",
+			"to": "crustle",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "scraggy",
+			"to": "scrafty",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "yamask",
+			"to": "cofagrigus",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "tirtouga",
+			"to": "carracosta",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "archen",
+			"to": "archeops",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "trubbish",
+			"to": "garbodor",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "zorua",
+			"to": "zoroark",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "minccino",
+			"to": "cinccino",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				},
+				{
+					"type": "item",
+					"value": "Shiny Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "gothita",
+			"to": "gothorita",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "gothorita",
+			"to": "gothitelle",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "solosis",
+			"to": "duosion",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "duosion",
+			"to": "reuniclus",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "ducklett",
+			"to": "swanna",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "vanillite",
+			"to": "vanillish",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "vanillish",
+			"to": "vanilluxe",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "deerling",
+			"to": "sawsbuck",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "karrablast",
+			"to": "escavalier",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "special",
+					"value": "while in the presence of a Shelmet"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "foongus",
+			"to": "amoonguss",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "frillish",
+			"to": "jellicent",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "joltik",
+			"to": "galvantula",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "ferroseed",
+			"to": "ferrothorn",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "klink",
+			"to": "klang",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "klang",
+			"to": "klinklang",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 15
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "tynamo",
+			"to": "eelektrik",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "eelektrik",
+			"to": "eelektross",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 15
+				},
+				{
+					"type": "item",
+					"value": "Thunder Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "elgyem",
+			"to": "beheeyem",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "litwick",
+			"to": "lampent",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "lampent",
+			"to": "chandelure",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 15
+				},
+				{
+					"type": "item",
+					"value": "Dusk Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "axew",
+			"to": "fraxure",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "fraxure",
+			"to": "haxorus",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 15
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "cubchoo",
+			"to": "beartic",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "shelmet",
+			"to": "accelgor",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "special",
+					"value": "while in the presence of a Karrablast"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "mienfoo",
+			"to": "mienshao",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "golett",
+			"to": "golurk",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 11
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "pawniard",
+			"to": "bisharp",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "pawniard",
+			"to": "rookite",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "bisharp",
+			"to": "kingambit",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 15
+				},
+				{
+					"type": "special",
+					"value": "after defeating an evolution of Pawniard that's holding a Leader's Crest one-on-one, while itself holding a Leader's Crest"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 4
+				}
+			]
+		},
+		{
+			"from": "rufflet",
+			"to": "braviary",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "rufflet",
+			"to": "braviary-hisui",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "vullaby",
+			"to": "mandibuzz",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "deino",
+			"to": "zweilous",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "zweilous",
+			"to": "hydreigon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 17
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "larvesta",
+			"to": "volcarona",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "chespin",
+			"to": "quilladin",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "quilladin",
+			"to": "chesnaught",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "fennekin",
+			"to": "braixen",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "braixen",
+			"to": "delphox",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "froakie",
+			"to": "frogadier",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "frogadier",
+			"to": "greninja",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "bunnelby",
+			"to": "diggersby",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "fletchling",
+			"to": "fletchinder",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "fletchinder",
+			"to": "talonflame",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "scatterbug",
+			"to": "spewpa",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 4
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 5
+				}
+			]
+		},
+		{
+			"from": "spewpa",
+			"to": "vivillon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 18
+				}
+			]
+		},
+		{
+			"from": "litleo",
+			"to": "pyroar",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "flabebe",
+			"to": "floette",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "floette",
+			"to": "florges",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				},
+				{
+					"type": "item",
+					"value": "Shiny Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "skiddo",
+			"to": "gogoat",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "pancham",
+			"to": "pangoro",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				},
+				{
+					"type": "special",
+					"value": "its trainer has another dark-type Pokemon in their party"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "espurr",
+			"to": "meowstic-m",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				},
+				{
+					"type": "gender",
+					"value": "male"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "espurr",
+			"to": "meowstic-f",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				},
+				{
+					"type": "gender",
+					"value": "female"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "honedge",
+			"to": "doublade",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "doublade",
+			"to": "aegislash",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 15
+				},
+				{
+					"type": "item",
+					"value": "Dusk Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "spritzee",
+			"to": "aromatisse",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				},
+				{
+					"type": "item",
+					"value": "Sachet"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "swirlix",
+			"to": "slurpuff",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				},
+				{
+					"type": "item",
+					"value": "Whipped Dream"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "inkay",
+			"to": "malamar",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 19
+				}
+			]
+		},
+		{
+			"from": "binacle",
+			"to": "barbaracle",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "skrelp",
+			"to": "dragalge",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "clauncher",
+			"to": "clawitzer",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "helioptile",
+			"to": "heliolisk",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				},
+				{
+					"type": "item",
+					"value": "Sun Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "tyrunt",
+			"to": "tyrantrum",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "time",
+					"value": "day"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "amaura",
+			"to": "aurorus",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "time",
+					"value": "night"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "goomy",
+			"to": "sliggoo",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "goomy",
+			"to": "sliggoo-hisui",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "sliggoo",
+			"to": "goodra",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				},
+				{
+					"type": "special",
+					"value": "while raining"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "phantump",
+			"to": "trevenant",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "pumpkaboo",
+			"to": "gourgeist",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "bergmite",
+			"to": "avalugg",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "bergmite",
+			"to": "avalugg-hisui",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "noibat",
+			"to": "noivern",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 18
+				}
+			]
+		},
+		{
+			"from": "alolan-rattata",
+			"to": "alolan-raticate",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "alolan-sandshrew",
+			"to": "alolan-sandslash",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				},
+				{
+					"type": "item",
+					"value": "Ice Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "alolan-vulpix",
+			"to": "alolan-ninetales",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Ice Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "alolan-diglett",
+			"to": "alolan-dugtrio",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "alolan-meowth",
+			"to": "alolan-persian",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "alolan-geodude",
+			"to": "alolan-graveler",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "alolan-graveler",
+			"to": "alolan-golem",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "alolan-grimer",
+			"to": "alolan-muk",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "rowlet",
+			"to": "dartrix",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "dartrix",
+			"to": "decidueye",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "dartrix",
+			"to": "decidueye-hisui",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "litten",
+			"to": "torracat",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "torracat",
+			"to": "incineroar",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "popplio",
+			"to": "brionne",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "brionne",
+			"to": "primarina",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 13
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "pikipek",
+			"to": "trumbeak",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "trumbeak",
+			"to": "toucannon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 11
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "yungoos",
+			"to": "gumshoos",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "time",
+					"value": "day"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "grubbin",
+			"to": "charjabug",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "charjabug",
+			"to": "vikavolt",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				},
+				{
+					"type": "item",
+					"value": "Thunder Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "crabrawler",
+			"to": "crabominable",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "cutiefly",
+			"to": "ribombee",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "rockruff",
+			"to": "lycanroc-midday-form",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				},
+				{
+					"type": "time",
+					"value": "morning"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "rockruff",
+			"to": "lycanroc-midnight-form",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				},
+				{
+					"type": "time",
+					"value": "night"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "rockruff",
+			"to": "lycanroc-dusk-form",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				},
+				{
+					"type": "time",
+					"value": "afternoon"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "mareanie",
+			"to": "toxapex",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "mudbray",
+			"to": "mudsdale",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "dewpider",
+			"to": "araquanid",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "fomantis",
+			"to": "lurantis",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				},
+				{
+					"type": "time",
+					"value": "day"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "morelull",
+			"to": "shiinotic",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "salandit",
+			"to": "salazzle",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				},
+				{
+					"type": "gender",
+					"value": "female"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "stufful",
+			"to": "bewear",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "bounsweet",
+			"to": "steenee",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "steenee",
+			"to": "tsareena",
+			"conditions": [
+				{
+					"type": "move",
+					"value": "stomp"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "wimpod",
+			"to": "golisopod",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "sandygast",
+			"to": "palossand",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 11
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "type-null",
+			"to": "silvally",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				},
+				{
+					"type": "loyalty",
+					"value": 2
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "jangmo-o",
+			"to": "hakamo-o",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "hakamo-o",
+			"to": "kommo-o",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "cosmog",
+			"to": "cosmoem",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 17
+				}
+			]
+		},
+		{
+			"from": "cosmoem",
+			"to": "solgaleo",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				},
+				{
+					"type": "time",
+					"value": "day"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "cosmoem",
+			"to": "lunala",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				},
+				{
+					"type": "time",
+					"value": "night"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "poipole",
+			"to": "naganadel",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "meltan",
+			"to": "melmetal",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 16
+				}
+			]
+		},
+		{
+			"from": "galarian-meowth",
+			"to": "perrserker",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "galarian-ponyta",
+			"to": "galarian-rapidash",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "galarian-slowpoke",
+			"to": "galarian-slowbro",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "galarian-slowpoke",
+			"to": "galarian-slowking",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "item",
+					"value": "Galarica Wreath"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "galarian-farfetchd",
+			"to": "sirfetchd",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "special",
+					"value": "after enduring a single battle where it lands three critical hits"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "galarian-mr-mime",
+			"to": "mr-rime",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "galarian-corsola",
+			"to": "cursola",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 11
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "galarian-zigzagoon",
+			"to": "galarian-linoone",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "galarian-linoone",
+			"to": "obstagoon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "time",
+					"value": "night"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "galarian-darumaka",
+			"to": "galarian-darmanitan",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "galarian-yamask",
+			"to": "runerigus",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "grookey",
+			"to": "thwackey",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "thwackey",
+			"to": "rillaboom",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "scorbunny",
+			"to": "raboot",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "raboot",
+			"to": "cinderace",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "sobble",
+			"to": "drizzile",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "drizzile",
+			"to": "inteleon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "skwovet",
+			"to": "greedent",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "rookidee",
+			"to": "corvisquire",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "corvisquire",
+			"to": "corviknight",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "blipbug",
+			"to": "dottler",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 4
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "dottler",
+			"to": "orbeetle",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 16
+				}
+			]
+		},
+		{
+			"from": "nickit",
+			"to": "thievul",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "gossifleur",
+			"to": "eldegoss",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "wooloo",
+			"to": "dubwool",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "chewtle",
+			"to": "drednaw",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "yamper",
+			"to": "boltund",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "rolycoly",
+			"to": "carkol",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "carkol",
+			"to": "coalossal",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "applin",
+			"to": "flapple",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				},
+				{
+					"type": "special",
+					"value": "inhabiting a green or gold apple"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "applin",
+			"to": "appletun",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				},
+				{
+					"type": "special",
+					"value": "inhabiting a red apple"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "applin",
+			"to": "dipplin",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				},
+				{
+					"type": "special",
+					"value": "inhabiting a syrup-covered apple"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "silicobra",
+			"to": "sandaconda",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "arrokuda",
+			"to": "barraskewda",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 7
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "toxel",
+			"to": "toxtricity-amped",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "special",
+					"value": "its nature is Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "toxel",
+			"to": "toxtricity-low-key",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "special",
+					"value": "its nature is NOT Hardy, Brave, Adamant, Naughty, Docile, Impish, Lax, Hasty, Jolly, Naive, Rash, Sassy, or Quirky"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "sizzlipede",
+			"to": "centiskorch",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "clobbopus",
+			"to": "grapploct",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				},
+				{
+					"type": "move",
+					"value": "taunt"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 11
+				}
+			]
+		},
+		{
+			"from": "sinistea",
+			"to": "polteageist",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 4
+				},
+				{
+					"type": "item",
+					"value": "Cracked Pot"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "hatenna",
+			"to": "hattrem",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "hattrem",
+			"to": "hatterene",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "impidimp",
+			"to": "morgrem",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 7
+				}
+			]
+		},
+		{
+			"from": "morgrem",
+			"to": "grimmsnarl",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "milcery",
+			"to": "alcremie",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				},
+				{
+					"type": "item",
+					"value": "Sweet"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "snom",
+			"to": "frosmoth",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 4
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "cufant",
+			"to": "copperajah",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "duraludon",
+			"to": "archaludon",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				},
+				{
+					"type": "item",
+					"value": "Metal Alloy"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "dreepy",
+			"to": "drakloak",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "drakloak",
+			"to": "dragapult",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "kubfu",
+			"to": "urshifu-single",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "item",
+					"value": "Scroll of Darkness"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "kubfu",
+			"to": "urshifu-rapid",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "item",
+					"value": "Scroll of Waters"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 14
+				}
+			]
+		},
+		{
+			"from": "growlithe-hisui",
+			"to": "arcanine-hisui",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Fire Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "voltorb-hisui",
+			"to": "electrode-hisui",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Leaf Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "qwilfish-hisui",
+			"to": "overqwil",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "move",
+					"value": "barb-barrage"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "sneasel-hisui",
+			"to": "sneasler",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "item",
+					"value": "Razor Claw"
+				},
+				{
+					"type": "time",
+					"value": "day"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "zorua-hisui",
+			"to": "zoroark-hisui",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 15
+				}
+			]
+		},
+		{
+			"from": "sliggoo-hisui",
+			"to": "goodra-hisui",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "wooper-paldea",
+			"to": "clodsire",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 9
+				}
+			]
+		},
+		{
+			"from": "sprigatito",
+			"to": "floragato",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "floragato",
+			"to": "meowscarada",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "fuecoco",
+			"to": "crocalor",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "crocalor",
+			"to": "skeledirge",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "quaxly",
+			"to": "quaxwell",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "quaxwell",
+			"to": "quaquaval",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "lechonk",
+			"to": "oinkologne-male",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "gender",
+					"value": "male"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "lechonk",
+			"to": "oinkologne-female",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "gender",
+					"value": "female"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "tarountula",
+			"to": "spidops",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "nymble",
+			"to": "lokix",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "pawmi",
+			"to": "pawmo",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "pawmo",
+			"to": "pawmot",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "tandemaus",
+			"to": "maushold",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "fidough",
+			"to": "dachsbun",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "smoliv",
+			"to": "dolliv",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "dolliv",
+			"to": "arboliva",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "nacli",
+			"to": "naclstack",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "naclstack",
+			"to": "garganacl",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "charcadet",
+			"to": "armarouge",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Auspicious Armor"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "charcadet",
+			"to": "ceruledge",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Malicious Armor"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "tadbulb",
+			"to": "bellibolt",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				},
+				{
+					"type": "item",
+					"value": "Thunder Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "wattrel",
+			"to": "kilowattrel",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "maschiff",
+			"to": "mabosstiff",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 9
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "shroodle",
+			"to": "grafaiai",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "bramblin",
+			"to": "brambleghast",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "toedscool",
+			"to": "toedscruel",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "capsakid",
+			"to": "scovillain",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Fire Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "rellor",
+			"to": "rabsca",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "flittle",
+			"to": "espathra",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "tinkatink",
+			"to": "tinkatuff",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 6
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "tinkatuff",
+			"to": "tinkaton",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 14
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "wiglett",
+			"to": "wugtrio",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 13
+				}
+			]
+		},
+		{
+			"from": "finizen",
+			"to": "palafin",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "varoom",
+			"to": "revavroom",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 12
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "glimmet",
+			"to": "glimmora",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "greavard",
+			"to": "houndstone",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "time",
+					"value": "night"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "cetoddle",
+			"to": "cetitan",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				},
+				{
+					"type": "item",
+					"value": "Ice Stone"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "frigibax",
+			"to": "arctibax",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 8
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 8
+				}
+			]
+		},
+		{
+			"from": "arctibax",
+			"to": "baxcalibur",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 16
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		},
+		{
+			"from": "gimmighoul",
+			"to": "gholdengo",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				},
+				{
+					"type": "special",
+					"value": "when this Pokémon has collected 999 gimmighoul coins (chest form starts with 50+1d100, roaming form starts with 1d20)"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "gimmighoul-roaming",
+			"to": "gholdengo",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 5
+				},
+				{
+					"type": "special",
+					"value": "when this Pokémon has collected 999 gimmighoul coins (chest form starts with 50+1d100, roaming form starts with 1d20)"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"from": "dipplin",
+			"to": "hydrapple",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "move",
+					"value": "dragon-cheer"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 6
+				}
+			]
+		},
+		{
+			"from": "poltchageist",
+			"to": "sinistcha",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 4
+				},
+				{
+					"type": "item",
+					"value": "Unremarkable Teacup"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 10
+				}
+			]
+		}
+	]
+}
