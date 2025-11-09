@@ -1,6 +1,8 @@
 export * from "./Evolution"
 export * from "./EvolutionForest"
 export * from "./EvolutionCondition"
+export * from "./EvolutionBenefit"
 export * from "./EvolutionEffect"
 export * from "./EvolutionStore"
 export { default as EvolutionInfo } from "./EvolutionInfo.svelte"
+export { default as EvolveForm } from "./EvolveForm.svelte"

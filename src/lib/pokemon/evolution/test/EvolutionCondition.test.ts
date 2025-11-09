@@ -87,7 +87,7 @@ describe("MoveCondition", () => {
 			moves: [
 				stubLearnedMove({
 					moveId: "tackle",
-				})
+				}),
 			],
 		}
 
@@ -102,7 +102,7 @@ describe("MoveCondition", () => {
 			moves: [
 				stubLearnedMove({
 					moveId: "take-down",
-				})
+				}),
 			],
 		}
 

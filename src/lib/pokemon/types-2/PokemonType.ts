@@ -1,6 +1,7 @@
 import { defensiveMultipliers } from "@auroratide/pokemon-types"
 import { DataClass } from "$lib/DataClass"
 import { alphabetical, equalUnordered } from "$lib/list"
+import { capitalize } from "$lib/string"
 
 const PokeTypes = [
 	"normal",
@@ -33,6 +34,10 @@ export class PokemonType extends DataClass<PokeType[]> {
 
 	get primary(): PokeType { return this.data[0] }
 	get secondary(): PokeType | undefined { return this.data[1] }
+
+	toString(): string {
+		return this.data.map(capitalize).join("/")
+	}
 
 	includes(...type: PokeType[]): boolean {
 		return type.some((type) => this.data.includes(type))

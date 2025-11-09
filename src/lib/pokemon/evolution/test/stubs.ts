@@ -1,6 +1,6 @@
-import type { Data } from "$lib/DataClass";
-import { Evolution } from "../Evolution";
-import type { EvolutionJsonResponse, SingleEvolutionJsonResponse } from "../EvolutionJsonResponse";
+import type { Data } from "$lib/DataClass"
+import { Evolution } from "../Evolution"
+import type { EvolutionJsonResponse, SingleEvolutionJsonResponse } from "../EvolutionJsonResponse"
 
 export function stubEvolution(template: Partial<Data<Evolution>>): Evolution {
 	return new Evolution({

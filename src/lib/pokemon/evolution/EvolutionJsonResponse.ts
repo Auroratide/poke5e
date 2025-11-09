@@ -1,11 +1,11 @@
 import type { EvolutionConditionType } from "./EvolutionCondition"
-import type { EvolutionEffectType } from "./EvolutionEffect"
+import type { EvolutionBenefitType } from "./EvolutionBenefit"
 
 export type SingleEvolutionJsonResponse = {
 	from: string,
 	to: string,
 	conditions: EvolutionConditionType[],
-	effects: EvolutionEffectType[],
+	effects: EvolutionBenefitType[],
 }
 
 export type EvolutionJsonResponse = {

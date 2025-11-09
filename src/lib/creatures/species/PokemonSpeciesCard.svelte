@@ -21,7 +21,7 @@
 	$: hasImage = value.media.data.values.normalPortrait != null
 	$: useId = value.data.number <= 0
 
-	$: evolutions = EvolutionStore.canonList()
+	const evolutions = EvolutionStore.canonList()
 
 	const exists = <T>(arr: T[] | undefined) => arr != null && arr.length > 0
 </script>

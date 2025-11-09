@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { SpeciesIdentifier } from "$lib/creatures/species";
-	import { ResolveAsyncText } from "$lib/rendering";
-	import type { EvolutionForest } from "./EvolutionForest";
+	import type { SpeciesIdentifier } from "$lib/creatures/species"
+	import { ResolveAsyncText } from "$lib/rendering"
+	import type { EvolutionForest } from "./EvolutionForest"
 
 	export let species: SpeciesIdentifier
 	export let evolutions: EvolutionForest | undefined

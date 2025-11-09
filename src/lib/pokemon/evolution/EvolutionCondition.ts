@@ -9,19 +9,19 @@ export interface EvolutionCondition<T> {
 }
 
 export const EvolutionCondition = {
-	fromType(type: EvolutionConditionType): EvolutionCondition<any> {
+	fromType(type: EvolutionConditionType): EvolutionCondition<unknown> {
 		switch (type.type) {
-			case "level": return new LevelCondition(type.value)
-			case "item": return new ItemCondition(type.value)
-			case "loyalty": return new BondCondition(type.value)
-			case "move": return new MoveCondition(type.value)
-			case "move-type": return new MoveTypeCondition(type.value)
-			case "gender": return new GenderCondition(type.value as PokemonGender)
-			case "time": return new TimeCondition(type.value)
-			case "special": return new SpecialCondition(type.value)
-			default: return new SpecialCondition("")
+		case "level": return new LevelCondition(type.value)
+		case "item": return new ItemCondition(type.value)
+		case "loyalty": return new BondCondition(type.value)
+		case "move": return new MoveCondition(type.value)
+		case "move-type": return new MoveTypeCondition(type.value)
+		case "gender": return new GenderCondition(type.value as PokemonGender)
+		case "time": return new TimeCondition(type.value)
+		case "special": return new SpecialCondition(type.value)
+		default: return new SpecialCondition("")
 		}
-	}
+	},
 }
 
 export type EvolutionConditionType = {
@@ -62,10 +62,10 @@ export class LevelCondition<T extends HasLevel> implements EvolutionCondition<T>
 	}
 }
 
-export class ItemCondition implements EvolutionCondition<any> {
+export class ItemCondition implements EvolutionCondition<never> {
 	constructor(readonly itemName: string) {}
 
-	meetsCondition(_: any): boolean {
+	meetsCondition(): boolean {
 		return true
 	}
 
@@ -101,7 +101,7 @@ export class MoveCondition<T extends HasMoves> implements EvolutionCondition<T> 
 export class MoveTypeCondition<T extends HasMoves> implements EvolutionCondition<T> {
 	constructor(readonly requiredType: PokeType) {}
 
-	meetsCondition(creature: T): boolean {
+	meetsCondition(): boolean {
 		return true
 	}
 
@@ -122,10 +122,10 @@ export class GenderCondition<T extends HasGender> implements EvolutionCondition<
 	}
 }
 
-export class TimeCondition implements EvolutionCondition<any> {
+export class TimeCondition implements EvolutionCondition<never> {
 	constructor(readonly time: "day" | "night" | "morning" | "afternoon") {}
 
-	meetsCondition(_: any): boolean {
+	meetsCondition(): boolean {
 		return true
 	}
 
@@ -134,10 +134,10 @@ export class TimeCondition implements EvolutionCondition<any> {
 	}
 }
 
-export class SpecialCondition implements EvolutionCondition<any> {
+export class SpecialCondition implements EvolutionCondition<never> {
 	constructor(readonly condition: string) {}
 
-	meetsCondition(_: any): boolean {
+	meetsCondition(): boolean {
 		return true
 	}
 

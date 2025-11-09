@@ -6,10 +6,10 @@
 	import type { TrainerStore } from "../trainers"
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/url"
-	import Evolver from "./Evolver.svelte"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import type { Readable } from "svelte/store"
 	import { type PokemonSpecies, WithSpecies } from "$lib/creatures/species"
+	import { EvolutionStore, EvolveForm } from "$lib/pokemon/evolution"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
@@ -37,7 +37,7 @@
 	<WithSpecies let:species ids={[pokemon?.pokemonId]}>
 		<Card title="Evolve {pokemon.nickname}">
 			{#if canEdit}
-				<Evolver {pokemon} {species} {allSpecies} {saving} on:cancel={cancel} on:submit={update} />
+				<EvolveForm {pokemon} {species} {allSpecies} evolutions={EvolutionStore.canonList()} {saving} on:cancel={cancel} on:submit={update} />
 			{:else}
 				<section>
 					<p>You do not have permission to evolve this pokemon.</p>
