@@ -15,6 +15,10 @@ export class Evolution extends DataClass<{
 	get conditions() { return this.data.conditions.map((it) => EvolutionCondition.fromType(it))}
 	get benefits() { return this.data.effects.map((it) => EvolutionBenefit.fromType(it))}
 
+	hasCondition(condition: EvolutionConditionType): boolean {
+		return this.data.conditions.some((it) => it.type === condition.type && it.value === condition.value)
+	}
+
 	toString(): string {
 		const conditions = this.conditions
 		const benefits = this.benefits

@@ -4,17 +4,18 @@
 	import { Url } from "$lib/url"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { rulesVersion } from "$lib/design/rules-version"
-	import { pokemon } from "$lib/creatures/store"
 	import { EggGroup } from "$lib/creatures/egg-group"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import Details from "$lib/design/Details.svelte"
 	import Loader from "$lib/design/Loader.svelte"
-	import type { Pokemon } from "$lib/creatures/types"
+	import { PokemonSpecies, SpeciesStore } from "$lib/creatures/species"
+
+	const pokemon = SpeciesStore.canonList()
 
 	$: byEggGroup = EggGroup.groupBy($pokemon ?? [])
 	$: groupEntries = Array.from(byEggGroup.entries()).sort((a, b) => a[0].localeCompare(b[0]))
 
-	const alphabetical = (a: Pokemon, b: Pokemon) => a.name.localeCompare(b.name)
+	const alphabetical = (a: PokemonSpecies, b: PokemonSpecies) => a.name.localeCompare(b.name)
 </script>
 
 <ReferencePage title="Breeding">

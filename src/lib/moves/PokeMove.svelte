@@ -7,6 +7,7 @@
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import { TypeTag } from "$lib/pokemon/types-2"
+	import { SpeciesIdentifier } from "$lib/creatures/species"
 
 	export let move: Move
 </script>
@@ -34,7 +35,10 @@
 	{#if move.pokemon != null && move.pokemon.length > 0}
 		<section>
 			<h2>Can learn this move:</h2>
-			<SimplePokemonList pokemon={move.pokemon} />
+			<SimplePokemonList pokemon={move.pokemon.map((it) => ({
+				id: SpeciesIdentifier.fromSpeciesName(it.id),
+				name: it.name,
+			}))} />
 		</section>
 	{/if}
 	<slot name="extra"></slot>

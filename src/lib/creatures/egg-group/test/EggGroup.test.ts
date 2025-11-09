@@ -1,19 +1,19 @@
 import { test, expect } from "vitest"
 import { EggGroup } from "../EggGroup"
-import { stubPokemon } from "$lib/creatures/test/stubs"
 import { stubEggGroup } from "./stubs"
+import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
 
 test("groupBy", () => {
-	const exclusiveField = stubPokemon({
-		eggGroup: stubEggGroup(["field"]),
+	const exclusiveField = stubPokemonSpecies({
+		eggGroups: stubEggGroup(["field"]).data,
 	})
 
-	const exclusiveBug = stubPokemon({
-		eggGroup: stubEggGroup(["bug"]),
+	const exclusiveBug = stubPokemonSpecies({
+		eggGroups: stubEggGroup(["bug"]).data,
 	})
 
-	const fieldAndBug = stubPokemon({
-		eggGroup: stubEggGroup(["field", "bug"]),
+	const fieldAndBug = stubPokemonSpecies({
+		eggGroups: stubEggGroup(["field", "bug"]).data,
 	})
 
 	const result = EggGroup.groupBy([exclusiveField, exclusiveBug, fieldAndBug])

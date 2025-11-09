@@ -30,14 +30,14 @@ export class EggGroup extends DataClass<string[]> {
 
 	toString = () => this.data.join(", ")
 
-	static groupBy<T extends { eggGroup: EggGroup }>(items: T[]): Map<string, GroupedByEggGroup<T>> {
+	static groupBy<T extends { eggGroups: EggGroup }>(items: T[]): Map<string, GroupedByEggGroup<T>> {
 		const result = new Map<string, GroupedByEggGroup<T>>()
 
 		for (const item of items) {
-			item.eggGroup.map((group) => {
+			item.eggGroups.map((group) => {
 				if (!result.has(group)) result.set(group, { exclusive: [], shares: [] })
 				
-				if (item.eggGroup.isExclusive()) {
+				if (item.eggGroups.isExclusive()) {
 					result.get(group).exclusive.push(item)
 				} else {
 					result.get(group).shares.push(item)

@@ -44,6 +44,7 @@ export class PokemonSpecies extends DataClass<{
 	notes?: MarkdownString,
 }> {
 	get id(): SpeciesIdentifier { return new SpeciesIdentifier(this.data.id) }
+	get name(): string { return this.data.name }
 	get type(): PokemonType { return new PokemonType(this.data.type) }
 	get gender(): GenderRatio { return new GenderRatio(this.data.gender) }
 	get sr(): SpeciesRating { return new SpeciesRating(this.data.sr) }

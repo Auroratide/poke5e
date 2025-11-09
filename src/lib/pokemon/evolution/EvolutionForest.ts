@@ -1,5 +1,6 @@
 import type { SpeciesIdentifier } from "$lib/creatures/species"
 import type { Evolution } from "./Evolution"
+import type { EvolutionConditionType } from "./EvolutionCondition"
 
 type TreeNode = {
 	id: SpeciesIdentifier,
@@ -51,6 +52,10 @@ export class EvolutionForest {
 
 	evolvesTo(species: SpeciesIdentifier): Evolution[] {
 		return this.evolutions.filter((evolution) => evolution.from.data === species.data)
+	}
+
+	hasCondition(species: SpeciesIdentifier, condition: EvolutionConditionType): boolean {
+		return this.evolvesTo(species).some((it) => it.hasCondition(condition))
 	}
 
 	currentStage(species: SpeciesIdentifier): number {

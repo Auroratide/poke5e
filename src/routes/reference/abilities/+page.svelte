@@ -1,15 +1,17 @@
 <script lang="ts">
-	import { pokemonWithAbilities } from "$lib/pokemon/abilities"
-	import { pokemon } from "$lib/creatures/store"
 	import type { PageData } from "./$types"
 	import Filter from "./Filter.svelte"
 	import Loader from "$lib/design/Loader.svelte"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import ReferencePage from "../ReferencePage.svelte"
+	import { SpeciesStore } from "$lib/creatures/species"
+	import { AbilityPool } from "$lib/pokemon/ability"
+
+	const pokemon = SpeciesStore.canonList()
 
 	export let data: PageData
 	$: abilities = data.abilities
-	$: associatedPokemon = pokemonWithAbilities(abilities, $pokemon)
+	$: associatedPokemon = AbilityPool.groupSpeciesByAbility(abilities.map((it) => it.id), $pokemon)
 
 	let abilityFilter = ""
 

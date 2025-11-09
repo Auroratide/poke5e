@@ -1,3 +1,4 @@
+import type { PokemonSpecies } from "$lib/creatures/species"
 import { DataClass } from "$lib/DataClass"
 import type { AbilityId } from "./Ability"
 
@@ -75,5 +76,18 @@ export class AbilityPool extends DataClass<{
 			normal: list.filter((it) => !it.hidden).map((it) => it.id),
 			hidden: list.filter((it) => it.hidden).map((it) => it.id),
 		})
+	}
+
+	static groupSpeciesByAbility(abilities: AbilityId[], pokemon: PokemonSpecies[]): Record<AbilityId, PokemonSpecies[]> {
+		if (abilities == null || pokemon == null || abilities?.length === 0 || pokemon?.length === 0)
+			return {}
+	
+		const pokemonHasAbility = (ability: AbilityId) => (pokemon: PokemonSpecies) =>
+			pokemon.abilities.findIndex(ability).exists
+	
+		return abilities.reduce((all, ability) => ({
+			...all,
+			[ability]: pokemon.filter(pokemonHasAbility(ability)),
+		}), {})
 	}
 }

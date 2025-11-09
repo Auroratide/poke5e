@@ -1,5 +1,6 @@
 import { describe, test, expect } from "vitest"
 import { AbilityPool } from "../AbilityPool"
+import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
 
 describe("findApplicableAbility", () => {
 	const pool = new AbilityPool({
@@ -136,5 +137,93 @@ describe("findApplicableAbility", () => {
 		})
 
 		expect(result).toBeUndefined()
+	})
+})
+
+describe("groupSpeciesByAbility", () => {
+	const abilityPool = (...abilityIds: string[]) => ({
+		normal: abilityIds,
+		hidden: [],
+	})
+
+	test("empty lists", () => {
+		const result = AbilityPool.groupSpeciesByAbility([], [])
+	
+		expect(result).toEqual({})
+	})
+	
+	test("abilities and pokemon match up", () => {
+		const appleAbility = "apple-picker"
+		const orangeAbility = "orange-picker"
+		const abilities = [appleAbility, orangeAbility]
+	
+		const applemon = stubPokemonSpecies({ name: "Applemon", abilities: abilityPool(appleAbility) })
+		const orangemon = stubPokemonSpecies({ name: "Orangemon", abilities: abilityPool(orangeAbility) })
+		const pokemon = [applemon, orangemon]
+	
+		const result = AbilityPool.groupSpeciesByAbility(abilities, pokemon)
+	
+		expect(result).toEqual({
+			"apple-picker": [applemon],
+			"orange-picker": [orangemon],
+		})
+	})
+	
+	test("multiple pokemon have the same ability", () => {
+		const fruitAbility = "fruit-picker"
+		const vegAbility = "veg-picker"
+		const abilities = [fruitAbility, vegAbility]
+	
+	
+		const applemon = stubPokemonSpecies({ name: "Applemon", abilities: abilityPool(fruitAbility) })
+		const orangemon = stubPokemonSpecies({ name: "Orangemon", abilities: abilityPool(fruitAbility) })
+		const tomatomon = stubPokemonSpecies({ name: "Tomatomon", abilities: abilityPool(vegAbility) })
+		const pokemon = [applemon, orangemon, tomatomon]
+	
+		const result = AbilityPool.groupSpeciesByAbility(abilities, pokemon)
+	
+		expect(result).toEqual({
+			"fruit-picker": [applemon, orangemon],
+			"veg-picker": [tomatomon],
+		})
+	})
+	
+	test("an ability has no associated pokemon", () => {
+		const fruitAbility = "fruit-picker"
+		const vegAbility = "veg-picker"
+		const abilities = [fruitAbility, vegAbility]
+	
+	
+		const applemon = stubPokemonSpecies({ name: "Applemon", abilities: abilityPool(fruitAbility) })
+		const orangemon = stubPokemonSpecies({ name: "Orangemon", abilities: abilityPool(fruitAbility) })
+		const pokemon = [applemon, orangemon]
+	
+		const result = AbilityPool.groupSpeciesByAbility(abilities, pokemon)
+	
+		expect(result).toEqual({
+			"fruit-picker": [applemon, orangemon],
+			"veg-picker": [],
+		})
+	})
+	
+	test("a pokemon has an ability not in the list of abilities", () => {
+		const fruitAbility = "fruit-picker"
+		const vegAbility = "veg-picker"
+		const dairyAbility = "dairy-picker"
+		const abilities = [fruitAbility, vegAbility] // dairy not in the list!
+	
+	
+		const applemon = stubPokemonSpecies({ name: "Applemon", abilities: abilityPool(fruitAbility) })
+		const orangemon = stubPokemonSpecies({ name: "Orangemon", abilities: abilityPool(fruitAbility) })
+		const tomatomon = stubPokemonSpecies({ name: "Tomatomon", abilities: abilityPool(vegAbility) })
+		const milkmon = stubPokemonSpecies({ name: "Milkmon", abilities: abilityPool(dairyAbility) })
+		const pokemon = [applemon, orangemon, tomatomon, milkmon]
+	
+		const result = AbilityPool.groupSpeciesByAbility(abilities, pokemon)
+	
+		expect(result).toEqual({
+			"fruit-picker": [applemon, orangemon],
+			"veg-picker": [tomatomon],
+		})
 	})
 })

@@ -7,16 +7,19 @@
 	import { Url } from "$lib/url"
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 	import ItemSprite from "./ItemSprite.svelte"
-	import { pokemon } from "$lib/creatures/store"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
-	import { hasEvolutionRequirement } from "$lib/pokemon/evolution-old"
+	import { EvolutionStore } from "$lib/pokemon/evolution"
+	import { SpeciesStore } from "$lib/creatures/species"
+
+	const species = SpeciesStore.canonList()
+	const evolutions = EvolutionStore.canonList()
 
 	export let item: Item
 
-	$: pokemonThatEvolve = item.type ==="evolution" ? $pokemon?.filter(hasEvolutionRequirement({
+	$: pokemonThatEvolve = item.type ==="evolution" ? $species?.filter((it) => $evolutions?.hasCondition(it.id, {
 		type: "item",
 		value: item.name,
-	})) ?? [] : []
+	}) ?? false) ?? [] : []
 </script>
 
 <Card title={item.name}>

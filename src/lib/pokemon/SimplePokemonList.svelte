@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { Pokemon } from "$lib/creatures/types"
+	import type { PokemonSpecies } from "$lib/creatures/species"
 	import ColumnedList from "$lib/design/ColumnedList.svelte"
 	import { Url } from "$lib/url"
 
-	export let pokemon: Pick<Pokemon, "id" | "name">[]
+	export let pokemon: Pick<PokemonSpecies, "id" | "name">[]
 </script>
 
 <ColumnedList let:item items={pokemon}>
-	<a href="{Url.pokemon(item.id)}">{item.name}</a>
+	<a href="{Url.pokemon(item.id.data)}">{item.name}</a>
 </ColumnedList>
