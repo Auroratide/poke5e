@@ -6,7 +6,9 @@ export type MarkdownString = string
 
 export function renderMarkdown(md: MarkdownString): string {
 	if (browser) {
-		return DomPurify.sanitize(marked.parse(md, { async: false }))
+		return DomPurify.sanitize(marked.parse(md, { async: false }), {
+			FORBID_TAGS: ["style", "script"],
+		})
 	} else {
 		return marked.parse(md, { async: false })
 	}
