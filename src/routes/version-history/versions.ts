@@ -12,6 +12,15 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.8.4",
+		description: [
+			"Gallade can have Sharpness as an ability.",
+			"Optimized pokémon file download when site loads.",
+			"Bug fix: Fakémon notes fields render more securely.",
+			"Technical: v2 of Pokémon Raw Data is provided at /pokemon/v2.json. This version removes evolution information.",
+			"Technical: v1 of the Evolution Raw Data is provided at /evolutions/v1.json.",
+		],
+	}, {
 		name: "v1.8.3",
 		description: [
 			"Bug fix: Fix for some mobile devices not allowing full scrolling.",
