@@ -8,7 +8,7 @@ import { fakemonStore } from "$lib/fakemon/store"
 
 export const allCanonSpecies = readable<PokemonSpecies[] | undefined>(undefined, (set) => {
 	if (typeof window !== "undefined") {
-		fetch(`${base}/pokemon.json`)
+		fetch(`${base}/pokemon/v2.json`)
 			.then((res) => res.json())
 			.then((data: PokemonJsonResponse) => data.items.map((it) =>
 				PokemonSpecies.fromJson(it),

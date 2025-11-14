@@ -80,7 +80,7 @@
 			<AbilityPoolInfo value={value.abilities} />
 		{/if}
 	</section>
-	{#if value.data.evolution !== undefined}
+	{#if $evolutions?.hasEvolutionTree(value.id)}
 		<EvolutionInfo species={value.id} evolutions={$evolutions} />
 	{/if}
 	<section class="moves">

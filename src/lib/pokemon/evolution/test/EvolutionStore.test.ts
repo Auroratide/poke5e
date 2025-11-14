@@ -18,7 +18,7 @@ beforeEach(async () => {
 	const evolutions = stubEvolutionJsonResponse(eeveeToFlareon)
 
 	vi.stubGlobal("fetch", vi.fn(async (url: string) => {
-		if (url.includes("evolution.json")) {
+		if (url.includes("evolutions/v1.json")) {
 			return new Response(JSON.stringify(evolutions))
 		} else {
 			return new Response("", {

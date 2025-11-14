@@ -6,7 +6,7 @@ import type { EvolutionJsonResponse } from "./EvolutionJsonResponse"
 
 export const canonEvolutions = readable<EvolutionForest>(undefined, (set) => {
 	if (typeof window !== "undefined") {
-		fetch(`${base}/data/evolution.json`)
+		fetch(`${base}/evolutions/v1.json`)
 			.then((res) => res.json())
 			.then((data: EvolutionJsonResponse) => data.items.map((it) =>
 				Evolution.fromJson(it),

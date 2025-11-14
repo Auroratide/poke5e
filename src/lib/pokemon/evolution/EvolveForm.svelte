@@ -44,7 +44,7 @@
 </script>
 
 <Form onsubmit={endEdit} {saving}>
-	{#if species.data.evolution?.to?.length > 0}
+	{#if evolveToOptions?.length > 0}
 		<Fieldset title="Choose one" columns={2}>
 			<RadioFields label="Evolution Choices" bind:checked={chosenEvolutionId} values={evolveToOptionIds?.map((id) => ({ name: getName(id), value: id })) ?? []} required />
 		</Fieldset>

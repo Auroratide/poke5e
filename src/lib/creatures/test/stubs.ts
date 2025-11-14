@@ -62,12 +62,6 @@ export function stubPokemon(template: Partial<Pokemon> = {}): Pokemon {
 			hidden: false,
 		} ],
 		specialAbilityText: template.specialAbilityText,
-		evolution: template.evolution ?? {
-			stage: "2",
-			maxStage: "2",
-			from: ["eevee"],
-			to: [],
-		},
 		moves: template.moves ?? stubMovePool(),
 		media: template.media ?? {},
 	}

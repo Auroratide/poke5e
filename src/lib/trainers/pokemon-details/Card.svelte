@@ -10,6 +10,9 @@
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import { TypeTag } from "$lib/pokemon/types-2"
 	import { WithSpecies } from "$lib/creatures/species"
+	import { EvolutionStore } from "$lib/pokemon/evolution"
+
+	const evolutions = EvolutionStore.canonList()
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
@@ -44,7 +47,7 @@
 			{#if canEdit}
 				<ActionArea>
 					<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="ghost">Remove</Button>
-					{#if species.data.evolution?.to?.length > 0}
+					{#if $evolutions?.evolvesTo(species.id).length > 0}
 						<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="ghost">Evolve</Button>
 					{/if}
 					<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.restPokemon)}" variant="success">Rest</Button>

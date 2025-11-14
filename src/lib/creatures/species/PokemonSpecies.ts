@@ -120,7 +120,6 @@ export class PokemonSpecies extends DataClass<{
 					},
 				} : undefined,
 			},
-			evolution: it.evolution,
 		})
 	}
 }

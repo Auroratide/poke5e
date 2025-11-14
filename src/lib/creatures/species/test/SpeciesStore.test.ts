@@ -16,7 +16,7 @@ beforeEach(async () => {
 	const pokemon = stubPokemonJsonResponse(eevee)
 
 	vi.stubGlobal("fetch", vi.fn(async (url: string) => {
-		if (url.includes("pokemon.json")) {
+		if (url.includes("pokemon/v2.json")) {
 			return new Response(JSON.stringify(pokemon))
 		} else {
 			return new Response("", {

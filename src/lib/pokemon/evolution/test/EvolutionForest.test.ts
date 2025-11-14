@@ -102,3 +102,17 @@ test("current stage linear evos", () => {
 	result = forest.currentStage(SpeciesIdentifier.fromSpeciesName("charizard"))
 	expect(result).toEqual(3)
 })
+
+test("has evolution tree", () => {
+	const eevee = forest.hasEvolutionTree(SpeciesIdentifier.fromSpeciesName("eevee"))
+	const flareon = forest.hasEvolutionTree(SpeciesIdentifier.fromSpeciesName("flareon"))
+
+	expect(eevee).toBe(true)
+	expect(flareon).toBe(true)
+})
+
+test("does not have evolution tree", () => {
+	const mewtwo = forest.hasEvolutionTree(SpeciesIdentifier.fromSpeciesName("mewtwo"))
+
+	expect(mewtwo).toBe(false)
+})

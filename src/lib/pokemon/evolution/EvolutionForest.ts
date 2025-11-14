@@ -46,6 +46,10 @@ export class EvolutionForest {
 		this.nodes = nodes
 	}
 
+	hasEvolutionTree(species: SpeciesIdentifier): boolean {
+		return this.nodes.has(species.data)
+	}
+
 	evolvesFrom(species: SpeciesIdentifier): Evolution[] {
 		return this.evolutions.filter((evolution) => evolution.to.data === species.data)
 	}
