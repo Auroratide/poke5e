@@ -1,0 +1,1 @@
+function a(t){return t.charAt(0).toLocaleUpperCase()+t.slice(1)}function e(t){return t.split(" ").map(a).join(" ")}function n(t){return t.toLocaleUpperCase()}function i(t){return/^https?:\/\//.test(t)}function r(t){return t!=null&&t.trim()!==""}export{i as a,e as b,a as c,r as i,n as u};

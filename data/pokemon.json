@@ -68930,6 +68930,10 @@
 					"hidden": false
 				},
 				{
+					"id": "sharpness",
+					"hidden": false
+				},
+				{
 					"id": "justified",
 					"hidden": true
 				}
