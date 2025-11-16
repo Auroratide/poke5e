@@ -825,6 +825,7 @@ test("updating fakemon", async () => {
 		_sprite_attribution_type: "",
 		_sprite_attribution_name: "",
 		_sprite_attribution_href: "",
+		_notes: "Additional notes.",
 	})
 
 	await call("update_fakemon", {
@@ -906,6 +907,8 @@ test("updating fakemon", async () => {
 	expect(drakeon.prof_intimidation).toEqual(true)
 	expect(drakeon.prof_performance).toEqual(false)
 	expect(drakeon.prof_persuasion).toEqual(false)
+
+	expect(drakeon.notes).toEqual("Additional notes.")
 
 	// Filenames and such
 	const newFilenamesResult = await call<any>("new_fakemon_avatar_filenames", {
