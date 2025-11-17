@@ -4,7 +4,10 @@ import { EvolutionCondition, GenderCondition, LevelCondition, type EvolutionCond
 import { EvolutionBenefit, type EvolutionBenefitType } from "./EvolutionBenefit"
 import type { SingleEvolutionJsonResponse } from "./EvolutionJsonResponse"
 
+export type EvolutionId = string
+
 export class Evolution extends DataClass<{
+	id: EvolutionId,
 	from: Data<SpeciesIdentifier>,
 	to: Data<SpeciesIdentifier>,
 	conditions: EvolutionConditionType[],

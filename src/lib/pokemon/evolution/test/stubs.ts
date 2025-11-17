@@ -4,6 +4,7 @@ import type { EvolutionJsonResponse, SingleEvolutionJsonResponse } from "../Evol
 
 export function stubEvolution(template: Partial<Data<Evolution>>): Evolution {
 	return new Evolution({
+		id: "eevee-to-flareon",
 		from: "eevee",
 		to: "flareon",
 		conditions: [ {
@@ -20,6 +21,7 @@ export function stubEvolution(template: Partial<Data<Evolution>>): Evolution {
 
 export function stubSingleEvolutionJsonResponse(template: Partial<SingleEvolutionJsonResponse>): SingleEvolutionJsonResponse {
 	return {
+		id: "eevee-to-flareon",
 		from: "eevee",
 		to: "flareon",
 		conditions: [ {
