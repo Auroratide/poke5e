@@ -16,34 +16,12 @@ type TreeNode = {
  * line.
  */
 export class EvolutionForest {
+	private readonly evolutions: Evolution[] = []
 	private readonly nodes: Map<string, TreeNode>
 
-	constructor(private readonly evolutions: Evolution[]) {
-		const nodes = new Map<string, TreeNode>()
-		for (const evolution of evolutions) {
-			if (!nodes.has(evolution.data.from)) nodes.set(evolution.data.from, {
-				id: evolution.from,
-				edges: {
-					from: [],
-					to: [],
-				},
-			})
-
-			if (!nodes.has(evolution.data.to)) nodes.set(evolution.data.to, {
-				id: evolution.to,
-				edges: {
-					from: [],
-					to: [],
-				},
-			})
-
-			const from = nodes.get(evolution.data.from)
-			const to = nodes.get(evolution.data.to)
-			from.edges.to.push(to)
-			to.edges.from.push(from)
-		}
-		
-		this.nodes = nodes
+	constructor(evolutions: Evolution[]) {
+		this.nodes = new Map<string, TreeNode>()
+		this.addAll(evolutions)
 	}
 
 	hasEvolutionTree(species: SpeciesIdentifier): boolean {
@@ -88,6 +66,34 @@ export class EvolutionForest {
 		}
 
 		return currentStage + maxDepth
+	}
+
+	addAll(evolutions: Evolution[]) {
+		this.evolutions.push(...evolutions)
+
+		const nodes = this.nodes
+		for (const evolution of evolutions) {
+			if (!nodes.has(evolution.data.from)) nodes.set(evolution.data.from, {
+				id: evolution.from,
+				edges: {
+					from: [],
+					to: [],
+				},
+			})
+
+			if (!nodes.has(evolution.data.to)) nodes.set(evolution.data.to, {
+				id: evolution.to,
+				edges: {
+					from: [],
+					to: [],
+				},
+			})
+
+			const from = nodes.get(evolution.data.from)
+			const to = nodes.get(evolution.data.to)
+			from.edges.to.push(to)
+			to.edges.from.push(from)
+		}
 	}
 
 	private dfs(node: TreeNode, direction: keyof TreeNode["edges"], action: (node: TreeNode, depth: number) => void, depth: number = 0) {

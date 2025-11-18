@@ -116,3 +116,32 @@ test("does not have evolution tree", () => {
 
 	expect(mewtwo).toBe(false)
 })
+
+test("addAll", () => {
+	let eeveeEvos = forest.evolvesTo(SpeciesIdentifier.fromSpeciesName("eevee"))
+	expect(eeveeEvos.length).toEqual(3)
+
+	let charmanderStages  = forest.maxStage(SpeciesIdentifier.fromSpeciesName("charmander"))
+	expect(charmanderStages).toEqual(3)
+
+	forest.addAll([
+		stubEvolution({
+			from: "eevee",
+			to: "umbreon",
+		}),
+		stubEvolution({
+			from: "eevee",
+			to: "espeon",
+		}),
+		stubEvolution({
+			from: "charizard",
+			to: "charzilla",
+		}),
+	])
+
+	eeveeEvos = forest.evolvesTo(SpeciesIdentifier.fromSpeciesName("eevee"))
+	expect(eeveeEvos.length).toEqual(5)
+
+	charmanderStages  = forest.maxStage(SpeciesIdentifier.fromSpeciesName("charmander"))
+	expect(charmanderStages).toEqual(4)
+})
