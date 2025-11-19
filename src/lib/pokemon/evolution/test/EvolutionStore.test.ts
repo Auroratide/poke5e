@@ -118,6 +118,43 @@ test("adding a new evolution", async () => {
 	expect(toxeonEvolution[0].to).toEqualData(toxeon.species.id)
 })
 
+test("removing an evolution", async () => {
+	// given
+	const fakemonDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Toxeon",
+		}).data,
+	})
+
+	const toxeon = await fakemonProvider.add(fakemonDraft.data.species)
+
+	const evolutionDraft = stubEvolution({
+		id: tmpEvolutionId(),
+		from: SpeciesIdentifier.fromSpeciesName("eevee").data,
+		to: toxeon.species.id.data,
+	})
+
+	const evolution = await evolutionProvider.add(evolutionDraft.data, {
+		to: toxeon.data.writeKey,
+	})
+	
+	// when
+	await EvolutionStore.update([{
+		type: "remove",
+		evolution: evolution,
+		writeKeys: {
+			from: undefined,
+			to: toxeon.data.writeKey,
+		},
+	}])
+
+	const storedValue = await waitForSpecies(toxeon.species.id)
+	const toxeonEvolution = storedValue.evolvesFrom(toxeon.species.id)
+
+	// then
+	expect(toxeonEvolution.length).toEqual(0)
+})
+
 // test("updating an existing evolution", async () => {
 // 	// given
 // 	const fakemonDraft = stubFakemon({

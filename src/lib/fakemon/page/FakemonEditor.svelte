@@ -77,7 +77,7 @@
 	let abilityPool = species.abilities.copy()
 	let movePool = species.moves.copy()
 	let notes = species.data.notes ?? ""
-	let evolutions = allEvolutions?.evolvesFrom(species.id).concat(allEvolutions?.evolvesTo(species.id)) ?? []
+	let evolutions = allEvolutions?.allEvolutions(species.id) ?? []
 
 	const cancel = () => {
 		dispatch("cancel")

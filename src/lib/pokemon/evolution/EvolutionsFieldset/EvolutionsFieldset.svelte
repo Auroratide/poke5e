@@ -2,6 +2,7 @@
 	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/creatures/species"
 	import Button from "$lib/design/Button.svelte"
 	import { Fieldset } from "$lib/design/forms"
+	import { slide } from "svelte/transition"
 	import { Evolution, tmpEvolutionId } from "../Evolution"
 	import EvolutionDefinition from "./EvolutionDefinition.svelte"
 
@@ -37,11 +38,17 @@
 
 		evolutions = [...evolutions, newEvolution]
 	}
+
+	const removeEvolution = (e: Evolution) => () => {
+		evolutions = evolutions.filter((it) => it.id !== e.id)
+	}
 </script>
 
 <Fieldset title="Evolution">
 	{#each evolutions as evolution (evolution.data.id)}
-		<EvolutionDefinition id="{evolution.data.id.replace(".", "")}" value={evolution} {allSpecies} />
+		<div transition:slide>
+			<EvolutionDefinition id="{evolution.data.id.replace(".", "")}" value={evolution} {allSpecies} on:remove={removeEvolution(evolution)} {disabled} />
+		</div>
 	{/each}
 	<Button on:click={addEvolution}>Add Evolution</Button>
 </Fieldset>

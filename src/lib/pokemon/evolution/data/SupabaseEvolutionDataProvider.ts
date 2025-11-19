@@ -1,7 +1,7 @@
 import type { PostgrestError, SupabaseClient } from "@supabase/supabase-js"
 import { EvolutionDataProviderError, type EvolutionDataProvider, type EvolutionDraft, type EvolutionWriteKeys } from "./EvolutionDataProvider"
 import type { SpeciesIdentifier } from "$lib/creatures/species"
-import { Evolution } from "../Evolution"
+import { Evolution, type EvolutionId } from "../Evolution"
 import type { Data } from "$lib/DataClass"
 
 export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
@@ -21,16 +21,28 @@ export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 	async add(draft: EvolutionDraft, writeKeys: EvolutionWriteKeys): Promise<Evolution> {
 		const { data, error } = await this.supabase.rpc("add_fakemon_evolution",
 			this.toQuery(draft, writeKeys),
-		).single<{
-			ret_id: string,
-		}>()
+		).single<number>()
 
 		this.validateError("Could not add evolution.", error)
 
 		return new Evolution({
 			...draft,
-			id: data.ret_id,
+			id: data.toString(),
 		})
+	}
+
+	async remove(evolution: EvolutionId, writeKeys: EvolutionWriteKeys): Promise<void> {
+		const { data, error } = await this.supabase.rpc("remove_fakemon_evolution", {
+			_id: evolution,
+			_original_from_write_key: writeKeys.from ?? null,
+			_original_to_write_key: writeKeys.to ?? null,
+		}).single<number>()
+
+		this.validateError("Could not remove evolution.", error)
+
+		if (data < 1) {
+			throw new EvolutionDataProviderError("Could not remove evolution.")
+		}
 	}
 
 	private toQuery(evolution: Omit<Data<Evolution>, "id">, writeKeys: EvolutionWriteKeys): object {

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { createEventDispatcher } from "svelte"
 	import type { Evolution } from "../Evolution"
 	import {
 		TextField,
@@ -16,9 +17,12 @@
 	import { fakemonStore } from "$lib/fakemon/store"
 	import type { SpeciesFieldChangeEvent } from "$lib/creatures/species/SpeciesField.svelte"
 
+	const dispatch = createEventDispatcher()
+
 	export let id: string
 	export let value: Evolution
 	export let allSpecies: PokemonSpecies[]
+	export let disabled = false
 
 	const isSpeciesDisabled = (species) => {
 		if (species.id.isFakemon()) {
@@ -34,11 +38,13 @@
 	const onSpeciesChange = (e: SpeciesFieldChangeEvent) => {
 		value.data.to = e.detail.species.id.data
 	}
+
+	const onRemove = () => dispatch("remove")
 </script>
 
 <div>
-	<SpeciesField label="Evolves To..." name="{id}" {allSpecies} {isSpeciesDisabled} on:change={onSpeciesChange} />
-	<Button variant="danger" width="full">Remove Evolution</Button>
+	<SpeciesField label="Evolves To..." value={value.data.to} name="{id}" {allSpecies} {isSpeciesDisabled} on:change={onSpeciesChange} />
+	<Button variant="danger" width="full" on:click={onRemove}>Remove Evolution</Button>
 </div>
 
 <FormGroup title="Conditions">

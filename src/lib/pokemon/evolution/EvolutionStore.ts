@@ -72,6 +72,10 @@ function createStore(): EvolutionStore {
 					const addedEvolution = await provider.add(update.evolution.data, update.writeKeys)
 
 					forest.addAll([addedEvolution])
+				} else if (update.type === "remove") {
+					await provider.remove(update.evolution.id, update.writeKeys)
+
+					forest.remove(update.evolution)
 				}
 			}
 

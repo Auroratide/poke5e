@@ -167,3 +167,26 @@ test("duplicates do not get aded", () => {
 	eeveeEvos = forest.evolvesTo(SpeciesIdentifier.fromSpeciesName("eevee"))
 	expect(eeveeEvos.length).toEqual(4)
 })
+
+test("remove", () => {
+	let eeveeEvos = forest.evolvesTo(SpeciesIdentifier.fromSpeciesName("eevee"))
+	expect(eeveeEvos.length).toEqual(3)
+
+	let charmanderStages  = forest.maxStage(SpeciesIdentifier.fromSpeciesName("charmander"))
+	expect(charmanderStages).toEqual(3)
+
+	forest.remove(stubEvolution({
+		from: "eevee",
+		to: "flareon",
+	}))
+	forest.remove(stubEvolution({
+		from: "charmeleon",
+		to: "charizard",
+	}))
+
+	eeveeEvos = forest.evolvesTo(SpeciesIdentifier.fromSpeciesName("eevee"))
+	expect(eeveeEvos.length).toEqual(2)
+
+	charmanderStages  = forest.maxStage(SpeciesIdentifier.fromSpeciesName("charmander"))
+	expect(charmanderStages).toEqual(2)
+})

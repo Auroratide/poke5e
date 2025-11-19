@@ -14,6 +14,7 @@
 	const dispatch = createEventDispatcher()
 
 	export let label: string
+	export let value: string
 	export let name: string
 	export let allSpecies: PokemonSpecies[]
 	export let disabled = false
@@ -21,8 +22,8 @@
 
 	$: id = name ?? kebab(label)
 
-	let species = ""
-	let confirmed = false
+	let species = allSpecies?.find((it) => it.id.data === value)?.name ?? ""
+	let confirmed = species.length > 0
 	$: filteredPokemon = species.length > 0
 		? allSpecies?.filter(matchNameOrType2(species)) ?? []
 		: [] // if we haven't typed anything, don't show the ENTIRE list

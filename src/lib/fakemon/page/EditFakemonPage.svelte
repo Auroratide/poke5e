@@ -9,7 +9,7 @@
 	import type { SingleFakemonStore } from "../store/SingleFakemonStore"
 	import FakemonEditor, { type SubmitDetail } from "./FakemonEditor.svelte"
 	import type { PokemonSpecies } from "$lib/creatures/species"
-	import { EvolutionStore } from "$lib/pokemon/evolution"
+	import { EvolutionStore, type EvolutionUpdate } from "$lib/pokemon/evolution"
 	import { fakemonStore } from "../store"
 
 	export let fakemon: SingleFakemonStore
@@ -27,18 +27,25 @@
 	const onSubmit = (e: CustomEvent<SubmitDetail>) => {
 		saving = true
 
-		e.detail.evolutions.forEach((it) => {
-			console.log("wanting to updae", it)
-		})
-
-		EvolutionStore.update(e.detail.evolutions.map((evolution) => ({
+		const upsertedEvolutions: EvolutionUpdate[] = e.detail.evolutions.map((evolution) => ({
 			type: "upsert",
 			evolution,
 			writeKeys: {
-				from: fakemonStore.getWriteKey(evolution.from.toFakemonReadKey()),
-				to: fakemonStore.getWriteKey(evolution.to.toFakemonReadKey()),
+				from: evolution.from.isFakemon() ? fakemonStore.getWriteKey(evolution.from.toFakemonReadKey()) : undefined,
+				to:evolution.to.isFakemon() ? fakemonStore.getWriteKey(evolution.to.toFakemonReadKey()) : undefined,
 			},
-		}))).then(() => {
+		}))
+
+		const removedEvolutions: EvolutionUpdate[] = $allEvolutions?.allEvolutions($fakemon.value.species.id).filter((original) => !e.detail.evolutions.find((it) => it.id === original.id)).map((evolution) => ({
+			type: "remove",
+			evolution,
+			writeKeys: {
+				from: evolution.from.isFakemon() ? fakemonStore.getWriteKey(evolution.from.toFakemonReadKey()) : undefined,
+				to:evolution.to.isFakemon() ? fakemonStore.getWriteKey(evolution.to.toFakemonReadKey()) : undefined,
+			},
+		})) ?? []
+
+		EvolutionStore.update(upsertedEvolutions.concat(removedEvolutions)).then(() => {
 			$fakemon.update?.info(e.detail.fakemon, {
 				media: e.detail.newMedia,
 			}).then(() => {
@@ -47,7 +54,6 @@
 				saving = false
 			})
 		})
-
 	}
 </script>
 

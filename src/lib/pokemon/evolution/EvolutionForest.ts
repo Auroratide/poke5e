@@ -25,7 +25,7 @@ export class EvolutionForest {
 	}
 
 	hasEvolutionTree(species: SpeciesIdentifier): boolean {
-		return this.nodes.has(species.data)
+		return this.maxStage(species) > 1
 	}
 
 	evolvesFrom(species: SpeciesIdentifier): Evolution[] {
@@ -34,6 +34,10 @@ export class EvolutionForest {
 
 	evolvesTo(species: SpeciesIdentifier): Evolution[] {
 		return this.evolutions.filter((evolution) => evolution.from.data === species.data)
+	}
+
+	allEvolutions(species: SpeciesIdentifier): Evolution[] {
+		return this.evolvesFrom(species).concat(this.evolvesTo(species))
 	}
 
 	hasCondition(species: SpeciesIdentifier, condition: EvolutionConditionType): boolean {
@@ -94,6 +98,24 @@ export class EvolutionForest {
 			const to = nodes.get(evolution.data.to)
 			from.edges.to.push(to)
 			to.edges.from.push(from)
+		}
+	}
+
+	remove(evolution: Evolution) {
+		const exists = this.evolutions.findIndex((it) => it.isSame(evolution))
+		if (exists < 0) return
+
+		this.evolutions.splice(exists, 1)
+		
+		const from = this.nodes.get(evolution.data.from)
+		const to = this.nodes.get(evolution.data.to)
+
+		if (from) {
+			from.edges.to = from.edges.to.filter((it) => it.id.data !== evolution.data.to)
+		}
+
+		if (to) {
+			to.edges.from = to.edges.from.filter((it) => it.id.data !== evolution.data.from)
 		}
 	}
 

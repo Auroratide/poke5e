@@ -17,6 +17,7 @@ export class Evolution extends DataClass<{
 	conditions: EvolutionConditionType[],
 	effects: EvolutionBenefitType[],
 }> {
+	get id() { return this.data.id }
 	get from() { return new SpeciesIdentifier(this.data.from) }
 	get to() { return new SpeciesIdentifier(this.data.to) }
 	get conditions() { return this.data.conditions.map((it) => EvolutionCondition.fromType(it))}
