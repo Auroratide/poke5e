@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { browser } from "$app/environment"
 
 function toggle(name: string) {
@@ -18,4 +17,6 @@ export function setFeatureActive(feature: string, isActive: boolean) {
 	}
 }
 
-export const FeatureToggles = {}
+export const FeatureToggles = {
+	FakemonEvolutions: toggle("FakemonEvolutions"),
+}
