@@ -69,10 +69,11 @@ export class EvolutionForest {
 	}
 
 	addAll(evolutions: Evolution[]) {
-		this.evolutions.push(...evolutions)
+		const nonDuplicates = evolutions.filter((toAdd) => !this.evolutions.find((alreadyIn) => alreadyIn.isSame(toAdd)))
+		this.evolutions.push(...nonDuplicates)
 
 		const nodes = this.nodes
-		for (const evolution of evolutions) {
+		for (const evolution of nonDuplicates) {
 			if (!nodes.has(evolution.data.from)) nodes.set(evolution.data.from, {
 				id: evolution.from,
 				edges: {

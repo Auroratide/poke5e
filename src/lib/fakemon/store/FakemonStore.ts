@@ -1,8 +1,9 @@
 import { writable } from "svelte/store"
-import type { DraftFakemon, Fakemon, ReadKey } from "../Fakemon"
+import type { DraftFakemon, Fakemon, ReadKey, WriteKey } from "../Fakemon"
 import { createSingleFakemonStore, createStoredFakemon, type SingleFakemonStore, type SingleStoredFakemon } from "./SingleFakemonStore"
 import { provider } from "../data"
 import { createFakemonListStore, type FakemonListStore } from "./FakemonListStore"
+import { FakemonLocalStorage } from "../data/FakemonLocalStorage"
 
 export type StoredFakemon = Record<ReadKey, SingleStoredFakemon>
 
@@ -10,6 +11,7 @@ export interface FakemonStore {
 	get: (key: ReadKey) => Promise<SingleFakemonStore>
 	new: (fakemon: DraftFakemon) => Promise<Fakemon>
 	all: () => Promise<FakemonListStore>
+	getWriteKey: (key: ReadKey) => WriteKey | undefined
 	reset: () => Promise<void>
 }
 
@@ -61,6 +63,10 @@ function createStore(): FakemonStore {
 			}
 
 			return listPromise
+		},
+
+		getWriteKey: (key: ReadKey): WriteKey | undefined => {
+			return FakemonLocalStorage.get(key).writeKey
 		},
 		
 		reset: async () => {

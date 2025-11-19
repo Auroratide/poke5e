@@ -5,6 +5,10 @@ import { EvolutionBenefit, type EvolutionBenefitType } from "./EvolutionBenefit"
 import type { SingleEvolutionJsonResponse } from "./EvolutionJsonResponse"
 
 export type EvolutionId = string
+let currentId = 0
+export function tmpEvolutionId(): EvolutionId {
+	return `TMP.${++currentId}`
+}
 
 export class Evolution extends DataClass<{
 	id: EvolutionId,
@@ -17,6 +21,14 @@ export class Evolution extends DataClass<{
 	get to() { return new SpeciesIdentifier(this.data.to) }
 	get conditions() { return this.data.conditions.map((it) => EvolutionCondition.fromType(it))}
 	get benefits() { return this.data.effects.map((it) => EvolutionBenefit.fromType(it))}
+
+	isSame(other: Evolution): boolean {
+		return this.data.from === other.data.from && this.data.to === other.data.to
+	}
+
+	isDraft(): boolean {
+		return this.data.id.startsWith("TMP.")
+	}
 
 	hasCondition(condition: EvolutionConditionType): boolean {
 		return this.data.conditions.some((it) => it.type === condition.type && it.value === condition.value)

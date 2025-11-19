@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from "$lib/design/Button.svelte"
 	import Details from "$lib/design/Details.svelte"
-	import { SelectField } from "$lib/design/forms"
+	import { FormGroup, SelectField } from "$lib/design/forms"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import { MoveFilter } from "$lib/moves/MoveFilter"
@@ -61,9 +61,7 @@
 </script>
 
 {#if options.length > 0}
-	<div class="move-pool-group">
-		<p><strong>{title}</strong></p>
-
+	<FormGroup {title}>
 		{#if values.length > 0}
 			<ul class="space-bottom">
 				{#each values as value, index}
@@ -94,16 +92,10 @@
 				{/each}
 			</ul>
 		</Details>
-	</div>
+	</FormGroup>
 {/if}
 
 <style>
-	.move-pool-group {
-		border-inline-start: 0.25em solid var(--skin-bg);
-		padding-inline-start: 0.75em;
-		margin-block-end: 0.75em;
-	}
-
 	ul {
 		list-style: none;
 		padding: 0;

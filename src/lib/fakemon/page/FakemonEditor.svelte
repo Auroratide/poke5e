@@ -2,6 +2,7 @@
 	export type SubmitDetail = {
 		fakemon: Fakemon,
 		newMedia: SpeciesMedia<ImageInputValue>,
+		evolutions: Evolution[],
 	}
 </script>
 
@@ -12,7 +13,6 @@
 		ActionArea,
 		Fieldset,
 		Form,
-		InstructionText,
 		IntField,
 		MarkdownField,
 		SelectField,
@@ -36,11 +36,15 @@
 	import { SpeciesMedia, SpeciesMediaFieldset } from "$lib/creatures/media"
 	import { EggGroupFieldset } from "$lib/creatures/egg-group"
 	import { EstimatableStatsFieldset } from "../estimation"
+	import { Evolution, EvolutionForest, EvolutionsFieldset } from "$lib/pokemon/evolution"
+	import type { PokemonSpecies } from "$lib/creatures/species"
 
 	const dispatch = createEventDispatcher()
 
 	export let fakemon: Fakemon
 	export let saving = false
+	export let allSpecies: PokemonSpecies[]
+	export let allEvolutions: EvolutionForest
 	$: disabled = saving
 
 	let species = fakemon.species
@@ -73,6 +77,7 @@
 	let abilityPool = species.abilities.copy()
 	let movePool = species.moves.copy()
 	let notes = species.data.notes ?? ""
+	let evolutions = allEvolutions?.evolvesFrom(species.id).concat(allEvolutions?.evolvesTo(species.id)) ?? []
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -105,6 +110,7 @@
 				}).data,
 			}),
 			newMedia: updatedMedia,
+			evolutions: evolutions,
 		})
 	}
 
@@ -141,10 +147,11 @@
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
 	<AbilityPoolFieldset bind:value={abilityPool} {disabled} />
 	<MovePoolFieldset bind:value={movePool} {disabled} />
-	<Fieldset title="Evolution">
+	<EvolutionsFieldset species={species.id} bind:evolutions={evolutions} {allSpecies} {disabled} />
+	<!-- <Fieldset title="Evolution">
 		<InstructionText>Coming soon!</InstructionText>
 		<InstructionText>Evolutionary lines will be customizable in a future update.</InstructionText>
-	</Fieldset>
+	</Fieldset> -->
 	<Fieldset title="Other">
 		<MarkdownField label="General Notes" bind:value={notes} {disabled} placeholder="Any other important notes." rows={6} />
 	</Fieldset>

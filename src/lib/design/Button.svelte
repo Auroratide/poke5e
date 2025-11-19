@@ -5,21 +5,22 @@
 	export let width: "auto" | "full" = "auto"
 	export let disabled: boolean = false
 	export let href: string | undefined = undefined
+	export let title: string | undefined = undefined
 
 	export let expanded: boolean | undefined = undefined
 	export let controls: string | undefined = undefined
 </script>
 
 {#if href != null}
-	<a {href} on:click class="button {variant} {align} {width}" class:disabled>
+	<a {href} on:click class="button {variant} {align} {width}" class:disabled {title}>
 		<slot></slot>
 	</a>
 {:else if controls != null && expanded != null}
-	<button aria-expanded="{expanded}" aria-controls="{controls}" on:click={() => expanded = !expanded} {type} class="button {variant} {align} {width}" {disabled}>
+	<button aria-expanded="{expanded}" aria-controls="{controls}" on:click={() => expanded = !expanded} {type} class="button {variant} {align} {width}" {disabled} {title}>
 		<slot></slot>
 	</button>
 {:else}
-	<button on:click {type} class="button {variant} {align} {width}" {disabled}>
+	<button on:click {type} class="button {variant} {align} {width}" {disabled} {title}>
 		<slot></slot>
 	</button>
 {/if}

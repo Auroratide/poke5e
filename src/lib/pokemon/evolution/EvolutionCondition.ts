@@ -49,6 +49,16 @@ export type EvolutionConditionType = {
 	type: "special",
 	value: string,
 }
+export type TypedEvolutionConditionType<T extends string | number> = {
+	type: EvolutionConditionType["type"],
+	value: T,
+}
+export const TimesOfDay = [
+	"day",
+	"night",
+	"morning",
+	"afternoon",
+] as const
 
 export class LevelCondition<T extends HasLevel> implements EvolutionCondition<T> {
 	constructor(readonly targetLevel: number) {}

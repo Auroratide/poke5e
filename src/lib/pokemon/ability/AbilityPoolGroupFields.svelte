@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Removable, SelectField, type SelectFieldChangeEvent } from "$lib/design/forms"
+	import { FormGroup, Removable, SelectField, type SelectFieldChangeEvent } from "$lib/design/forms"
 	import { kebab } from "$lib/design/forms/kebab"
 	import { abilities } from "../store"
 
@@ -28,8 +28,7 @@
 </script>
 
 {#if options != null}
-	<div class="ability-pool-group">
-		<p><strong>{title}</strong></p>
+	<FormGroup {title}>
 		<ul>
 			{#each values as value, index}
 				<li class="no-label">
@@ -45,16 +44,10 @@
 				{/key}
 			</li>
 		</ul>
-	</div>
+	</FormGroup>
 {/if}
 
 <style>
-	.ability-pool-group {
-		border-inline-start: 0.25em solid var(--skin-bg);
-		padding-inline-start: 0.75em;
-		margin-block-end: 0.75em;
-	}
-
 	ul {
 		list-style: none;
 		padding: 0;

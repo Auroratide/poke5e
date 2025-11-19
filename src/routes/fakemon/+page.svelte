@@ -24,12 +24,15 @@
 	import ErrorMessage from "$lib/trainers/ErrorMessage.svelte"
 	import { CanCreateCustomPokemonBanner } from "$lib/creatures/species/CanCreateCustomPokemonBanner"
 	import { onMount } from "svelte"
+	import { type Readable } from "svelte/store"
+	import { SpeciesStore, type PokemonSpecies } from "$lib/creatures/species"
 
 	$: fakemonId = browser ? $page.url.searchParams.get("id") : undefined
 	$: action = browser ? $page.url.searchParams.get("action") : undefined
 
 	let list: Promise<undefined | FakemonListStore> | undefined
 	let fakemon: Promise<undefined | SingleFakemonStore> | undefined
+	let allSpecies: Promise<Readable<PokemonSpecies[]>> = browser ? SpeciesStore.completeList() : undefined
 
 	$: {
 		if (fakemonId && browser) {
@@ -70,7 +73,11 @@
 			{#if !fakemon}
 				<br />
 			{:else if action === PageAction.edit}
-				<EditFakemonPage {fakemon} />
+				{#await allSpecies}
+					<Loader />
+				{:then allSpecies}
+					<EditFakemonPage {fakemon} {allSpecies} />
+				{/await}
 			{:else if action === PageAction.accessKey}
 				<AccessKeyPage {fakemon} />
 			{:else if action === PageAction.remove}

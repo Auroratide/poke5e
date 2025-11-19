@@ -15,7 +15,7 @@
 
 <div class="text-field">
 	<label for="{id}">{label}</label>
-	<input type="text" {id} name="{kebabName}" {placeholder} {maxlength} bind:value {disabled} {required} />
+	<input type="text" {id} name="{kebabName}" {placeholder} {maxlength} bind:value {disabled} {required} on:blur on:focus />
 </div>
 
 <style>

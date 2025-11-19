@@ -1,6 +1,6 @@
 import { type Readable, get } from "svelte/store"
 
-export async function waitForStore<T>(store: Readable<T | undefined>, timeout = 5000) {
+export async function waitForStore<T>(store: Readable<T | undefined>, timeout = 5000): Promise<T> {
 	const currentValue = get(store)
 	if (currentValue != null) return currentValue
 

@@ -145,3 +145,25 @@ test("addAll", () => {
 	charmanderStages  = forest.maxStage(SpeciesIdentifier.fromSpeciesName("charmander"))
 	expect(charmanderStages).toEqual(4)
 })
+
+test("duplicates do not get aded", () => {
+	let eeveeEvos = forest.evolvesTo(SpeciesIdentifier.fromSpeciesName("eevee"))
+	expect(eeveeEvos.length).toEqual(3)
+
+	forest.addAll([
+		stubEvolution({
+			from: "eevee",
+			to: "umbreon",
+		}),
+	])
+
+	forest.addAll([
+		stubEvolution({
+			from: "eevee",
+			to: "umbreon",
+		}),
+	])
+
+	eeveeEvos = forest.evolvesTo(SpeciesIdentifier.fromSpeciesName("eevee"))
+	expect(eeveeEvos.length).toEqual(4)
+})
