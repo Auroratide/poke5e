@@ -1,31 +1,25 @@
 <script lang="ts">
 	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/creatures/species"
 	import Button from "$lib/design/Button.svelte"
-	import { Fieldset } from "$lib/design/forms"
+	import { Fieldset, HintText } from "$lib/design/forms"
 	import { slide } from "svelte/transition"
 	import { Evolution, tmpEvolutionId } from "../Evolution"
 	import EvolutionDefinition from "./EvolutionDefinition.svelte"
+	import { Tab } from "$lib/design/TabList"
 
 	export let species: SpeciesIdentifier
 	export let evolutions: Evolution[]
 	export let allSpecies: PokemonSpecies[]
 	export let disabled: boolean = false
 
-	// let evolvesTo = evolutions.evolvesTo(species)
-	// section for evolves from
-	// section for evolves to
-	// can add and remove conditions, somehow...?
-	// and... can add MULTIPLE, and delete them
+	$: evolvesFrom = evolutions.filter((it) => it.data.to === species.data)
+	$: evolvesTo = evolutions.filter((it) => it.data.from === species.data)
 
-
-	// for each evolvesTo
-	// 
-
-	const addEvolution = () => {
+	const addEvolution = (fromOrTo: "from" | "to") => () => {
 		const newEvolution = new Evolution({
 			id: tmpEvolutionId(),
-			from: species.data,
-			to: "",
+			from: fromOrTo === "to" ? species.data : "",
+			to: fromOrTo === "from" ? species.data : "",
 			conditions: [ {
 				type: "level",
 				value: 8,
@@ -45,10 +39,32 @@
 </script>
 
 <Fieldset title="Evolution">
-	{#each evolutions as evolution (evolution.data.id)}
-		<div transition:slide>
-			<EvolutionDefinition id="{evolution.data.id.replace(".", "")}" value={evolution} {allSpecies} on:remove={removeEvolution(evolution)} {disabled} />
-		</div>
-	{/each}
-	<Button on:click={addEvolution}>Add Evolution</Button>
+	<div>
+		<Tab.List activation="automatic">
+			<Tab.Item selected for="evolves-to-tabpanel">Evolves To...</Tab.Item>
+			<Tab.Item for="evolves-from-tabpanel">Evolves From...</Tab.Item>
+		</Tab.List>
+		<Tab.Panel id="evolves-to-tabpanel">
+			{#each evolvesTo as evolution (evolution.data.id)}
+				<div class="definition-list" transition:slide>
+					<EvolutionDefinition direction="to" id="{evolution.data.id.replace(".", "")}" value={evolution} {allSpecies} on:remove={removeEvolution(evolution)} {disabled} />
+				</div>
+			{/each}
+			{#if evolvesTo.length === 0}
+				<HintText>This fakémon does not evolve into anything.</HintText>
+			{/if}
+			<Button width="full" on:click={addEvolution("to")}>Add Evolution</Button>
+		</Tab.Panel>
+		<Tab.Panel id="evolves-from-tabpanel">
+			{#each evolvesFrom as evolution (evolution.data.id)}
+				<div class="definition-list" transition:slide>
+					<EvolutionDefinition direction="from" id="{evolution.data.id.replace(".", "")}" value={evolution} {allSpecies} on:remove={removeEvolution(evolution)} {disabled} />
+				</div>
+			{/each}
+			{#if evolvesFrom.length === 0}
+				<HintText>This fakémon does not evolve from anything.</HintText>
+			{/if}
+			<Button width="full" on:click={addEvolution("from")}>Add Evolution</Button>
+		</Tab.Panel>
+	</div>
 </Fieldset>

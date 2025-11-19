@@ -35,6 +35,7 @@
 	
 	if (browser) {
 		import("@auroratide/toggle-switch/lib/define.js")
+		import("@auroratide/tab-list/lib/define.js")
 	}
 
 	export let data: LayoutData

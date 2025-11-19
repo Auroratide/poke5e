@@ -37,13 +37,18 @@
 		/>
 	</div>
 	{#if hasCondition}
-		<div class="details-container" transition:slide>
+		<div class="details-container" transition:slide={{ duration: 200 }}>
 			<slot {condition}></slot>
 		</div>
 	{/if}
 </div>
 
 <style>
+	.condition-field {
+		background: oklch(0 0 0 / 0.025);
+		padding: 0.5em;
+	}
+
 	.checkbox {
 		margin-block-end: 0.5em;
 	}

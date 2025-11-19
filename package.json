@@ -60,6 +60,7 @@
 	},
 	"dependencies": {
 		"@auroratide/pokemon-types": "^0.1.0",
+		"@auroratide/tab-list": "^0.2.6",
 		"@auroratide/toggle-switch": "^0.3.1",
 		"@floating-ui/dom": "^1.7.4",
 		"@supabase/supabase-js": "^2.74.0",

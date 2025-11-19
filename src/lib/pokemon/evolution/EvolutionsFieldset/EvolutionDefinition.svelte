@@ -22,6 +22,7 @@
 	export let id: string
 	export let value: Evolution
 	export let allSpecies: PokemonSpecies[]
+	export let direction: "from" | "to"
 	export let disabled = false
 
 	const isSpeciesDisabled = (species: PokemonSpecies) => {
@@ -36,7 +37,7 @@
 	}
 
 	const onSpeciesChange = (e: SpeciesFieldChangeEvent) => {
-		value.data.to = e.detail.species.id.data
+		value.data[direction] = e.detail.species.id.data
 	}
 
 	const onRemove = () => dispatch("remove")
@@ -46,105 +47,122 @@
 	}
 </script>
 
-<div>
-	<SpeciesField label="Evolves To..." value={value.data.to} name="{id}" {allSpecies} {isSpeciesDisabled} on:change={onSpeciesChange} />
-	<Button variant="danger" width="full" on:click={onRemove}>Remove Evolution</Button>
-</div>
-
-<FormGroup title="Conditions">
-	<div class="columns">
-		<ConditionField
-			{id}
-			type="level"
-			label="Requires Level?"
-			bind:conditions={value.data.conditions}
-			defaultValue={8}
-			let:condition
-			{disabled}
-		>
-			<IntField label="Required Level" name="{id}-level" value={condition.value} min={1} max={20} on:change={updateCondition(condition)} {disabled} />
-		</ConditionField>
-		<ConditionField
-			{id}
-			type="item"
-			label="Requires Item?"
-			bind:conditions={value.data.conditions}
-			defaultValue="Leaf Stone"
-			let:condition
-			{disabled}
-		>
-			<TextField label="Required Item" name="{id}-item" value={condition.value} on:change={updateCondition(condition)} {disabled} />
-		</ConditionField>
-		<ConditionField
-			{id}
-			type="loyalty"
-			label="Requires Bond?"
-			bind:conditions={value.data.conditions}
-			defaultValue={2}
-			let:condition
-			{disabled}
-		>
-			<IntField label="Required Bond Level" name="{id}-loyalty" value={condition.value} min={-3} max={3} on:change={updateCondition(condition)} {disabled} />
-		</ConditionField>
-		<ConditionField
-			{id}
-			type="move"
-			label="Requires Move?"
-			bind:conditions={value.data.conditions}
-			defaultValue="tackle"
-			let:condition
-			{disabled}
-		>
-			<TextField label="Required Move" name="{id}-move" value={condition.value} on:change={updateCondition(condition)} {disabled} />
-		</ConditionField>
-		<ConditionField
-			{id}
-			type="gender"
-			label="Requires Gender?"
-			bind:conditions={value.data.conditions}
-			defaultValue={PokemonGender.Female}
-			let:condition
-			{disabled}
-		>
-			<SelectField label="Required Gender" name="{id}-gender" value={condition.value} options={Object.values(PokemonGender).map((it) => ({
-				name: capitalize(it),
-				value: it,
-			}))} on:change={updateCondition(condition)} {disabled} />
-		</ConditionField>
-		<ConditionField
-			{id}
-			type="time"
-			label="Requires Time of Day?"
-			bind:conditions={value.data.conditions}
-			defaultValue="day"
-			let:condition
-			{disabled}
-		>
-			<SelectField label="Time of Day" name="{id}-time" value={condition.value} options={TimesOfDay.map((it) => ({
-				name: capitalize(it),
-				value: it,
-			}))} on:change={updateCondition(condition)} {disabled} />
-		</ConditionField>
-		<div class="span">
+<div class="evolution-definition">
+	<FormGroup>
+		<SpeciesField label="Evolves {capitalize(direction)}..." value={value.data[direction]} name="{id}" {allSpecies} {isSpeciesDisabled} on:change={onSpeciesChange} />
+		<p class="title">Conditions</p>
+		<div class="columns">
 			<ConditionField
 				{id}
-				type="special"
-				label="Custom Condition?"
+				type="level"
+				label="Requires Level?"
 				bind:conditions={value.data.conditions}
-				defaultValue=""
+				defaultValue={8}
 				let:condition
 				{disabled}
 			>
-				<TextareaField label="Custom Condition" name="{id}-special" value={condition.value} placeholder="after fainting from recoil damage" on:change={updateCondition(condition)} {disabled} />
+				<IntField label="Required Level" name="{id}-level" value={condition.value} min={1} max={20} on:change={updateCondition(condition)} {disabled} />
 			</ConditionField>
+			<ConditionField
+				{id}
+				type="item"
+				label="Requires Item?"
+				bind:conditions={value.data.conditions}
+				defaultValue="Leaf Stone"
+				let:condition
+				{disabled}
+			>
+				<TextField label="Required Item" name="{id}-item" value={condition.value} on:change={updateCondition(condition)} {disabled} />
+			</ConditionField>
+			<ConditionField
+				{id}
+				type="loyalty"
+				label="Requires Bond?"
+				bind:conditions={value.data.conditions}
+				defaultValue={2}
+				let:condition
+				{disabled}
+			>
+				<IntField label="Required Bond Level" name="{id}-loyalty" value={condition.value} min={-3} max={3} on:change={updateCondition(condition)} {disabled} />
+			</ConditionField>
+			<ConditionField
+				{id}
+				type="move"
+				label="Requires Move?"
+				bind:conditions={value.data.conditions}
+				defaultValue="tackle"
+				let:condition
+				{disabled}
+			>
+				<TextField label="Required Move" name="{id}-move" value={condition.value} on:change={updateCondition(condition)} {disabled} />
+			</ConditionField>
+			<ConditionField
+				{id}
+				type="gender"
+				label="Requires Gender?"
+				bind:conditions={value.data.conditions}
+				defaultValue={PokemonGender.Female}
+				let:condition
+				{disabled}
+			>
+				<SelectField label="Required Gender" name="{id}-gender" value={condition.value} options={Object.values(PokemonGender).map((it) => ({
+					name: capitalize(it),
+					value: it,
+				}))} on:change={updateCondition(condition)} {disabled} />
+			</ConditionField>
+			<ConditionField
+				{id}
+				type="time"
+				label="Requires Time of Day?"
+				bind:conditions={value.data.conditions}
+				defaultValue="day"
+				let:condition
+				{disabled}
+			>
+				<SelectField label="Time of Day" name="{id}-time" value={condition.value} options={TimesOfDay.map((it) => ({
+					name: capitalize(it),
+					value: it,
+				}))} on:change={updateCondition(condition)} {disabled} />
+			</ConditionField>
+			<div class="span">
+				<ConditionField
+					{id}
+					type="special"
+					label="Custom Condition?"
+					bind:conditions={value.data.conditions}
+					defaultValue=""
+					let:condition
+					{disabled}
+				>
+					<TextareaField label="Custom Condition" name="{id}-special" value={condition.value} placeholder="after fainting from recoil damage" on:change={updateCondition(condition)} {disabled} />
+				</ConditionField>
+			</div>
 		</div>
-	</div>
-</FormGroup>
+		<!-- <p class="title">Effects</p> -->
+		<p class="title">Actions</p>
+		<Button variant="danger" width="full" on:click={onRemove}>Remove Evolution</Button>
+	</FormGroup>
+</div>
 
 <style>
+	.evolution-definition {
+		margin-block-end: 1.5em;
+	}
+
+	.title {
+		background: var(--skin-bg);
+		color: var(--skin-bg-text);
+		margin-inline-start: -1em;
+		margin-block: 1.5em 0.5em;
+		display: inline-block;
+		padding: 0.125em 1em;
+		clip-path: polygon(0 0, 100% 0, calc(100% - 0.667em) 100%, 0 100%);
+		font-size: var(--font-sz-venus);
+	}
+
 	.columns {
 		display: grid;
-		gap: 1.5em 0.75em;
+		gap: 0.5em;
 	}
 
 	@media screen and (min-width: 75rem) {

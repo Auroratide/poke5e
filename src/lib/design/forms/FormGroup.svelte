@@ -1,9 +1,11 @@
 <script lang="ts">
-	export let title: string
+	export let title: string | undefined = undefined
 </script>
 
 <div class="form-group">
-	<p><strong>{title}</strong></p>
+	{#if title}
+		<p><strong>{title}</strong></p>
+	{/if}
 	<slot></slot>
 </div>
 
