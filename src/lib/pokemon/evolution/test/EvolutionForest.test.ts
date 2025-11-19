@@ -190,3 +190,38 @@ test("remove", () => {
 	charmanderStages  = forest.maxStage(SpeciesIdentifier.fromSpeciesName("charmander"))
 	expect(charmanderStages).toEqual(2)
 })
+
+test("cyclic evolution", () => {
+	const charmander = SpeciesIdentifier.fromSpeciesName("charmander")
+	let charmanderStages  = forest.maxStage(charmander)
+	expect(charmanderStages).toEqual(3)
+
+	forest.addAll([
+		stubEvolution({
+			from: "charizard",
+			to: "charmander",
+		}),
+	])
+
+	charmanderStages  = forest.maxStage(charmander)
+	expect(charmanderStages).toEqual(Infinity)
+
+	const charmanderCurrentState  = forest.currentStage(charmander)
+	expect(charmanderCurrentState).toEqual(0)
+})
+
+test("self-evolution", () => {
+	const heracross = SpeciesIdentifier.fromSpeciesName("heracross")
+	forest.addAll([
+		stubEvolution({
+			from: "heracross",
+			to: "heracross",
+		}),
+	])
+	
+	const maxStages = forest.maxStage(heracross)
+	expect(maxStages).toEqual(Infinity)
+
+	const currentStage  = forest.currentStage(heracross)
+	expect(currentStage).toEqual(0)
+})

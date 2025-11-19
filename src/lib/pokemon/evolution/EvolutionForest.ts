@@ -50,10 +50,16 @@ export class EvolutionForest {
 		let maxDepth = 0
 
 		if (speciesNode != null) {
+			const stats: DfsStats = {}
 			this.dfs(speciesNode, "from", (_, depth) => {
 				maxDepth = Math.max(maxDepth, depth)
-			})
+			}, stats)
+
+			if (stats.cycle) {
+				return 0
+			}
 		}
+
 
 		return maxDepth + 1
 	}
@@ -64,9 +70,14 @@ export class EvolutionForest {
 		let maxDepth = 0
 
 		if (speciesNode != null) {
+			const stats: DfsStats = {}
 			this.dfs(speciesNode, "to", (_, depth) => {
 				maxDepth = Math.max(maxDepth, depth)
-			})
+			}, stats)
+
+			if (stats.cycle) {
+				return Infinity
+			}
 		}
 
 		return currentStage + maxDepth
@@ -119,12 +130,21 @@ export class EvolutionForest {
 		}
 	}
 
-	private dfs(node: TreeNode, direction: keyof TreeNode["edges"], action: (node: TreeNode, depth: number) => void, depth: number = 0) {
+	private dfs(node: TreeNode, direction: keyof TreeNode["edges"], action: (node: TreeNode, depth: number) => void, stats: DfsStats, depth: number = 0, seenNodes: TreeNode[] = []) {
+		if (seenNodes.includes(node)) {
+			stats.cycle = true
+			return
+		}
+
 		action(node, depth)
+		seenNodes.push(node)
 
 		for (const child of node.edges[direction]) {
-			this.dfs(child, direction, action, depth + 1)
+			this.dfs(child, direction, action, stats, depth + 1, seenNodes)
 		}
 	}
 }
 
+type DfsStats = {
+	cycle?: boolean,
+}
