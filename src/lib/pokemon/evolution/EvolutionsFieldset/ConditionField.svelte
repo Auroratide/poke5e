@@ -8,6 +8,7 @@
 	export let label: string
 	export let conditions: EvolutionConditionType[]
 	export let defaultValue: T
+	export let disabled = false
 
 	$: condition = conditions.find((it) => it.type === type) as TypedEvolutionConditionType<T>
 	$: hasCondition = condition != null
@@ -32,6 +33,7 @@
 			name="{id}-requires-{type}"
 			checked={hasCondition}
 			on:change={toggle}
+			{disabled}
 		/>
 	</div>
 	{#if hasCondition}

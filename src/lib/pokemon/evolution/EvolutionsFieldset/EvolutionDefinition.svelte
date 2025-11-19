@@ -60,8 +60,9 @@
 			bind:conditions={value.data.conditions}
 			defaultValue={8}
 			let:condition
+			{disabled}
 		>
-			<IntField label="Required Level" name="{id}-level" value={condition.value} min={1} max={20} on:change={updateCondition(condition)} />
+			<IntField label="Required Level" name="{id}-level" value={condition.value} min={1} max={20} on:change={updateCondition(condition)} {disabled} />
 		</ConditionField>
 		<ConditionField
 			{id}
@@ -70,8 +71,9 @@
 			bind:conditions={value.data.conditions}
 			defaultValue="Leaf Stone"
 			let:condition
+			{disabled}
 		>
-			<TextField label="Required Item" name="{id}-item" value={condition.value} on:change={updateCondition(condition)} />
+			<TextField label="Required Item" name="{id}-item" value={condition.value} on:change={updateCondition(condition)} {disabled} />
 		</ConditionField>
 		<ConditionField
 			{id}
@@ -80,8 +82,9 @@
 			bind:conditions={value.data.conditions}
 			defaultValue={2}
 			let:condition
+			{disabled}
 		>
-			<IntField label="Required Bond Level" name="{id}-loyalty" value={condition.value} min={-3} max={3} on:change={updateCondition(condition)} />
+			<IntField label="Required Bond Level" name="{id}-loyalty" value={condition.value} min={-3} max={3} on:change={updateCondition(condition)} {disabled} />
 		</ConditionField>
 		<ConditionField
 			{id}
@@ -90,8 +93,9 @@
 			bind:conditions={value.data.conditions}
 			defaultValue="tackle"
 			let:condition
+			{disabled}
 		>
-			<TextField label="Required Move" name="{id}-move" value={condition.value} on:change={updateCondition(condition)} />
+			<TextField label="Required Move" name="{id}-move" value={condition.value} on:change={updateCondition(condition)} {disabled} />
 		</ConditionField>
 		<ConditionField
 			{id}
@@ -100,11 +104,12 @@
 			bind:conditions={value.data.conditions}
 			defaultValue={PokemonGender.Female}
 			let:condition
+			{disabled}
 		>
 			<SelectField label="Required Gender" name="{id}-gender" value={condition.value} options={Object.values(PokemonGender).map((it) => ({
 				name: capitalize(it),
 				value: it,
-			}))} on:change={updateCondition(condition)} />
+			}))} on:change={updateCondition(condition)} {disabled} />
 		</ConditionField>
 		<ConditionField
 			{id}
@@ -113,11 +118,12 @@
 			bind:conditions={value.data.conditions}
 			defaultValue="day"
 			let:condition
+			{disabled}
 		>
 			<SelectField label="Time of Day" name="{id}-time" value={condition.value} options={TimesOfDay.map((it) => ({
 				name: capitalize(it),
 				value: it,
-			}))} on:change={updateCondition(condition)} />
+			}))} on:change={updateCondition(condition)} {disabled} />
 		</ConditionField>
 		<div class="span">
 			<ConditionField
@@ -127,8 +133,9 @@
 				bind:conditions={value.data.conditions}
 				defaultValue=""
 				let:condition
+				{disabled}
 			>
-				<TextareaField label="Custom Condition" name="{id}-special" value={condition.value} placeholder="after fainting from recoil damage" on:change={updateCondition(condition)} />
+				<TextareaField label="Custom Condition" name="{id}-special" value={condition.value} placeholder="after fainting from recoil damage" on:change={updateCondition(condition)} {disabled} />
 			</ConditionField>
 		</div>
 	</div>
