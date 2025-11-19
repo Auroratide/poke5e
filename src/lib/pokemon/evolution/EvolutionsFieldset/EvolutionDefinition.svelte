@@ -10,7 +10,7 @@
 	import ConditionField from "./ConditionField.svelte"
 	import { PokemonGender } from "$lib/creatures/gender"
 	import SelectField from "$lib/design/forms/SelectField.svelte"
-	import { TimesOfDay } from "../EvolutionCondition"
+	import { TimesOfDay, type TypedEvolutionConditionType } from "../EvolutionCondition"
 	import { capitalize } from "$lib/string"
 	import { PokemonSpecies, SpeciesField } from "$lib/creatures/species"
 	import Button from "$lib/design/Button.svelte"
@@ -24,7 +24,7 @@
 	export let allSpecies: PokemonSpecies[]
 	export let disabled = false
 
-	const isSpeciesDisabled = (species) => {
+	const isSpeciesDisabled = (species: PokemonSpecies) => {
 		if (species.id.isFakemon()) {
 			const writeKey = fakemonStore.getWriteKey(species.id.toFakemonReadKey())
 			if (writeKey == null) {
@@ -40,6 +40,10 @@
 	}
 
 	const onRemove = () => dispatch("remove")
+
+	const updateCondition = <T extends string | number>(condition: TypedEvolutionConditionType<T>) => (e: CustomEvent<{ value: T}>) => {
+		condition.value = e.detail.value
+	}
 </script>
 
 <div>
@@ -53,78 +57,78 @@
 			{id}
 			type="level"
 			label="Requires Level?"
-			conditions={value.data.conditions}
+			bind:conditions={value.data.conditions}
 			defaultValue={8}
 			let:condition
 		>
-			<IntField label="Required Level" name="{id}-level" value={condition.value} min={1} max={20} />
+			<IntField label="Required Level" name="{id}-level" value={condition.value} min={1} max={20} on:change={updateCondition(condition)} />
 		</ConditionField>
 		<ConditionField
 			{id}
 			type="item"
 			label="Requires Item?"
-			conditions={value.data.conditions}
+			bind:conditions={value.data.conditions}
 			defaultValue="Leaf Stone"
 			let:condition
 		>
-			<TextField label="Required Item" name="{id}-item" value={condition.value} />
+			<TextField label="Required Item" name="{id}-item" value={condition.value} on:change={updateCondition(condition)} />
 		</ConditionField>
 		<ConditionField
 			{id}
 			type="loyalty"
 			label="Requires Bond?"
-			conditions={value.data.conditions}
+			bind:conditions={value.data.conditions}
 			defaultValue={2}
 			let:condition
 		>
-			<IntField label="Required Bond Level" name="{id}-loyalty" value={condition.value} min={-3} max={3} />
+			<IntField label="Required Bond Level" name="{id}-loyalty" value={condition.value} min={-3} max={3} on:change={updateCondition(condition)} />
 		</ConditionField>
 		<ConditionField
 			{id}
 			type="move"
 			label="Requires Move?"
-			conditions={value.data.conditions}
+			bind:conditions={value.data.conditions}
 			defaultValue="tackle"
 			let:condition
 		>
-			<TextField label="Required Move" name="{id}-move" value={condition.value} />
+			<TextField label="Required Move" name="{id}-move" value={condition.value} on:change={updateCondition(condition)} />
 		</ConditionField>
 		<ConditionField
 			{id}
 			type="gender"
 			label="Requires Gender?"
-			conditions={value.data.conditions}
+			bind:conditions={value.data.conditions}
 			defaultValue={PokemonGender.Female}
 			let:condition
 		>
 			<SelectField label="Required Gender" name="{id}-gender" value={condition.value} options={Object.values(PokemonGender).map((it) => ({
 				name: capitalize(it),
 				value: it,
-			}))} />
+			}))} on:change={updateCondition(condition)} />
 		</ConditionField>
 		<ConditionField
 			{id}
 			type="time"
 			label="Requires Time of Day?"
-			conditions={value.data.conditions}
+			bind:conditions={value.data.conditions}
 			defaultValue="day"
 			let:condition
 		>
 			<SelectField label="Time of Day" name="{id}-time" value={condition.value} options={TimesOfDay.map((it) => ({
 				name: capitalize(it),
 				value: it,
-			}))} />
+			}))} on:change={updateCondition(condition)} />
 		</ConditionField>
 		<div class="span">
 			<ConditionField
 				{id}
 				type="special"
 				label="Custom Condition?"
-				conditions={value.data.conditions}
+				bind:conditions={value.data.conditions}
 				defaultValue=""
 				let:condition
 			>
-				<TextareaField label="Custom Condition" name="{id}-special" value={condition.value} placeholder="after fainting from recoil damage" />
+				<TextareaField label="Custom Condition" name="{id}-special" value={condition.value} placeholder="after fainting from recoil damage" on:change={updateCondition(condition)} />
 			</ConditionField>
 		</div>
 	</div>

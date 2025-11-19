@@ -1,5 +1,12 @@
+<script lang="ts" context="module">
+	export type TextareaFieldChangeEvent = CustomEvent<{ value: string }>
+</script>
+
 <script lang="ts">
+	import { createEventDispatcher } from "svelte"
 	import { kebab } from "./kebab"
+
+	const dispatch = createEventDispatcher()
 
 	export let label: string
 	export let value: string
@@ -10,11 +17,15 @@
 
 	$: kebabName = name ?? kebab(label)
 	$: id = `${kebabName}-input`
+
+	const onChange = (e: Event) => {
+		dispatch("change", { value: (e.target as HTMLInputElement).value })
+	}
 </script>
 
 <div class="textarea-field">
 	<label for="{id}">{label}</label>
-	<textarea {id} name="{kebabName}" {placeholder} {rows} bind:value {disabled}></textarea>
+	<textarea {id} name="{kebabName}" {placeholder} {rows} bind:value {disabled} on:change={onChange}></textarea>
 </div>
 
 <style>

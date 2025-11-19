@@ -1,5 +1,12 @@
+<script lang="ts" context="module">
+	export type TextFieldChangeEvent = CustomEvent<{ value: string }>
+</script>
+
 <script lang="ts">
+	import { createEventDispatcher } from "svelte"
 	import { kebab } from "./kebab"
+
+	const dispatch = createEventDispatcher()
 
 	export let label: string
 	export let value: string
@@ -11,11 +18,15 @@
 
 	$: kebabName = name ?? kebab(label)
 	$: id = `${kebabName}-input`
+
+	const onChange = (e: Event) => {
+		dispatch("change", { value: (e.target as HTMLInputElement).value })
+	}
 </script>
 
 <div class="text-field">
 	<label for="{id}">{label}</label>
-	<input type="text" {id} name="{kebabName}" {placeholder} {maxlength} bind:value {disabled} {required} on:blur on:focus />
+	<input type="text" {id} name="{kebabName}" {placeholder} {maxlength} bind:value {disabled} {required} on:blur on:focus on:change={onChange} />
 </div>
 
 <style>
