@@ -3,14 +3,16 @@ import { EvolutionForest } from "../EvolutionForest"
 import { stubEvolution } from "./stubs"
 import { SpeciesIdentifier } from "$lib/creatures/species"
 
+const eeveeToFlareon = stubEvolution({
+	id: "eevee-to-flareon",
+	from: "eevee",
+	to: "flareon",
+})
 let forest: EvolutionForest
 
 beforeEach(() => {
 	forest = new EvolutionForest([
-		stubEvolution({
-			from: "eevee",
-			to: "flareon",
-		}),
+		eeveeToFlareon,
 		stubEvolution({
 			from: "eevee",
 			to: "vaporeon",
@@ -146,7 +148,7 @@ test("addAll", () => {
 	expect(charmanderStages).toEqual(4)
 })
 
-test("duplicates do not get aded", () => {
+test("duplicates do not get added", () => {
 	let eeveeEvos = forest.evolvesTo(SpeciesIdentifier.fromSpeciesName("eevee"))
 	expect(eeveeEvos.length).toEqual(3)
 
@@ -166,6 +168,46 @@ test("duplicates do not get aded", () => {
 
 	eeveeEvos = forest.evolvesTo(SpeciesIdentifier.fromSpeciesName("eevee"))
 	expect(eeveeEvos.length).toEqual(4)
+})
+
+test("update condition", () => {
+	const eevee = SpeciesIdentifier.fromSpeciesName("eevee")
+
+	const newEeveeToFlareonEvo = stubEvolution({
+		...eeveeToFlareon.data,
+		conditions: [ {
+			type: "gender",
+			value: "female",
+		} ],
+	})
+
+	forest.update(newEeveeToFlareonEvo)
+
+	const eeveeEvos = forest.evolvesTo(eevee)
+	expect(eeveeEvos.length).toEqual(3)
+
+	const flareonEvo = eeveeEvos.find((it) => it.to.data === "flareon")
+	expect(flareonEvo.data.conditions[0].value).toEqual("female")
+})
+
+test("update from/to", () => {
+	const eevee = SpeciesIdentifier.fromSpeciesName("eevee")
+	const twovee = SpeciesIdentifier.fromSpeciesName("twovee")
+	const flaretwo = SpeciesIdentifier.fromSpeciesName("flaretwo")
+
+	const twoveeToFlaretwo = stubEvolution({
+		...eeveeToFlareon.data,
+		from: twovee.data,
+		to: flaretwo.data,
+	})
+
+	forest.update(twoveeToFlaretwo)
+
+	const eeveeEvos = forest.evolvesTo(eevee)
+	expect(eeveeEvos.length).toEqual(2) // eevee to flareon got replaced
+
+	const flaretwoEvo = forest.evolvesTo(twovee)
+	expect(flaretwoEvo.length).toEqual(1)
 })
 
 test("remove", () => {

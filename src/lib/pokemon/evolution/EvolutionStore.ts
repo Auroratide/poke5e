@@ -72,17 +72,16 @@ function createStore(): EvolutionStore {
 					const addedEvolution = await provider.add(update.evolution.data, update.writeKeys)
 
 					forest.addAll([addedEvolution])
+				} else if (update.type === "upsert") {
+					const updatedEvolution = await provider.update(update.evolution, update.writeKeys, update.originalKeys)
+
+					forest.update(updatedEvolution)
 				} else if (update.type === "remove") {
 					await provider.remove(update.evolution.id, update.writeKeys)
 
 					forest.remove(update.evolution)
 				}
 			}
-
-			// get tree if it is alive? otherwise wait for it.
-			// step 1: attempt to save every single one. we need to know if it is new or not.
-			// step 2: save these to the forest, somehow?
-			// step 3: return
 		},
 
 		canonList: () => canonEvolutions,

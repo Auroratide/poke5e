@@ -31,6 +31,22 @@ export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 		})
 	}
 
+	async update(evolution: Evolution, writeKeys: EvolutionWriteKeys, oldWriteKeys: EvolutionWriteKeys): Promise<Evolution> {
+		const { data, error } = await this.supabase.rpc("update_fakemon_evolution", {
+			_id: evolution.data.id,
+			_original_from_write_key: oldWriteKeys.from ?? null,
+			_original_to_write_key: oldWriteKeys.to ?? null,
+			...this.toQuery(evolution.data, writeKeys),
+		}).single<number>()
+
+		this.validateError("Could not update evolution.", error)
+		if (data < 1) {
+			throw new EvolutionDataProviderError("Could not update evolution.")
+		}
+
+		return evolution
+	}
+
 	async remove(evolution: EvolutionId, writeKeys: EvolutionWriteKeys): Promise<void> {
 		const { data, error } = await this.supabase.rpc("remove_fakemon_evolution", {
 			_id: evolution,

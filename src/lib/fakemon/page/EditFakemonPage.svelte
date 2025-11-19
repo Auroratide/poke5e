@@ -27,16 +27,28 @@
 	const onSubmit = (e: CustomEvent<SubmitDetail>) => {
 		saving = true
 
-		const upsertedEvolutions: EvolutionUpdate[] = e.detail.evolutions.map((evolution) => ({
-			type: "upsert",
-			evolution,
-			writeKeys: {
-				from: evolution.from.isFakemon() ? fakemonStore.getWriteKey(evolution.from.toFakemonReadKey()) : undefined,
-				to:evolution.to.isFakemon() ? fakemonStore.getWriteKey(evolution.to.toFakemonReadKey()) : undefined,
-			},
-		}))
+		const originalEvolutions = $allEvolutions?.allEvolutions($fakemon.value.species.id)
 
-		const removedEvolutions: EvolutionUpdate[] = $allEvolutions?.allEvolutions($fakemon.value.species.id).filter((original) => !e.detail.evolutions.find((it) => it.id === original.id)).map((evolution) => ({
+		const upsertedEvolutions: EvolutionUpdate[] = e.detail.evolutions.map((evolution) => {
+			const originalEvolution = originalEvolutions.find((it) => it.id === evolution.id)
+
+			console.log(originalEvolution)
+
+			return {
+				type: "upsert",
+				evolution,
+				writeKeys: {
+					from: evolution.from.isFakemon() ? fakemonStore.getWriteKey(evolution.from.toFakemonReadKey()) : undefined,
+					to:evolution.to.isFakemon() ? fakemonStore.getWriteKey(evolution.to.toFakemonReadKey()) : undefined,
+				},
+				originalKeys: originalEvolution != null ? {
+					from: originalEvolution.from.isFakemon() ? fakemonStore.getWriteKey(originalEvolution.from.toFakemonReadKey()) : undefined,
+					to: originalEvolution.to.isFakemon() ? fakemonStore.getWriteKey(originalEvolution.to.toFakemonReadKey()) : undefined,
+				} : undefined,
+			}
+		})
+
+		const removedEvolutions: EvolutionUpdate[] = originalEvolutions.filter((original) => !e.detail.evolutions.find((it) => it.id === original.id)).map((evolution) => ({
 			type: "remove",
 			evolution,
 			writeKeys: {

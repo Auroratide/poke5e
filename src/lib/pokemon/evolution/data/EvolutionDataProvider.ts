@@ -18,6 +18,7 @@ export type EvolutionDraft = Omit<Data<Evolution>, "id">
 export interface EvolutionDataProvider {
 	get(species: SpeciesIdentifier): Promise<Evolution[]>
 	add(evolution: EvolutionDraft, writeKeys: EvolutionWriteKeys): Promise<Evolution>
+	update(evolution: Evolution, writeKeys: EvolutionWriteKeys, oldWriteKeys: EvolutionWriteKeys): Promise<Evolution>
 	remove(evolution: EvolutionId, writeKeys: EvolutionWriteKeys): Promise<void>
 }
 

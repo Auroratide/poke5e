@@ -2,9 +2,12 @@ import type { Data } from "$lib/DataClass"
 import { Evolution } from "../Evolution"
 import type { EvolutionJsonResponse, SingleEvolutionJsonResponse } from "../EvolutionJsonResponse"
 
+let evoId = 0
+const nextEvoId = () => `evo-${++evoId}`
+
 export function stubEvolution(template: Partial<Data<Evolution>>): Evolution {
 	return new Evolution({
-		id: "eevee-to-flareon",
+		id: nextEvoId(),
 		from: "eevee",
 		to: "flareon",
 		conditions: [ {
@@ -21,7 +24,7 @@ export function stubEvolution(template: Partial<Data<Evolution>>): Evolution {
 
 export function stubSingleEvolutionJsonResponse(template: Partial<SingleEvolutionJsonResponse>): SingleEvolutionJsonResponse {
 	return {
-		id: "eevee-to-flareon",
+		id: nextEvoId(),
 		from: "eevee",
 		to: "flareon",
 		conditions: [ {

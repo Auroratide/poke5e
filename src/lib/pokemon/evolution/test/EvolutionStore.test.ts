@@ -155,53 +155,101 @@ test("removing an evolution", async () => {
 	expect(toxeonEvolution.length).toEqual(0)
 })
 
-// test("updating an existing evolution", async () => {
-// 	// given
-// 	const fakemonDraft = stubFakemon({
-// 		species: stubPokemonSpecies({
-// 			name: "Aereon",
-// 		}).data,
-// 	})
+test("updating an existing evolution condition", async () => {
+	// given
+	const fakemonDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Aereon",
+		}).data,
+	})
 
-// 	const aereon = await fakemonProvider.add(fakemonDraft.data.species)
+	const aereon = await fakemonProvider.add(fakemonDraft.data.species)
 
-// 	const evolutionDraft = stubEvolution({
-// 		from: SpeciesIdentifier.fromSpeciesName("eevee").data,
-// 		to: aereon.species.id.data,
-// 		conditions: [ {
-// 			type: "gender",
-// 			value: "male",
-// 		} ],
-// 	})
+	const evolutionDraft = stubEvolution({
+		from: SpeciesIdentifier.fromSpeciesName("eevee").data,
+		to: aereon.species.id.data,
+		conditions: [ {
+			type: "gender",
+			value: "male",
+		} ],
+	})
 
-// 	const evolution = await evolutionProvider.add(evolutionDraft.data, {
-// 		to: aereon.data.writeKey,
-// 	})
+	const evolution = await evolutionProvider.add(evolutionDraft.data, {
+		to: aereon.data.writeKey,
+	})
 
-// 	evolution.data.conditions[0].value = "female"
+	// when
+	evolution.data.conditions[0].value = "female"
+	await EvolutionStore.update([{
+		type: "upsert",
+		evolution: evolution,
+		writeKeys: {
+			from: undefined,
+			to: aereon.data.writeKey,
+		},
+		originalKeys: {
+			from: undefined,
+			to: aereon.data.writeKey,
+		},
+	}])
+	const storedValue = await waitForSpecies(aereon.species.id)
+	const aereonEvolution = storedValue.evolvesFrom(aereon.species.id)
 
-// 	// when
-// 	await EvolutionStore.update([{
-// 		type: "upsert",
-// 		evolution: evolution,
-// 		writeKeys: {
-// 			from: undefined,
-// 			to: aereon.data.writeKey,
-// 		},
-// 		originalKeys: {
-// 			from: undefined,
-// 			to: aereon.data.writeKey,
-// 		},
-// 	}])
-// 	const storedValue = await waitForSpecies(aereon.species.id)
-// 	const aereonEvolution = storedValue.evolvesFrom(aereon.species.id)
+	// then
+	expect(aereonEvolution[0].data.conditions[0]).toEqual({
+		type: "gender",
+		value: "female",
+	})
+})
 
-// 	// then
-// 	expect(aereonEvolution[0].data.conditions[0]).toEqual({
-// 		type: "gender",
-// 		value: "female",
-// 	})
-// })
+test("updating an existing evolution identity", async () => {
+	// given
+	const aereonDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Aereon",
+		}).data,
+	})
+	const pesteonDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Pesteon",
+		}).data,
+	})
+
+	const aereon = await fakemonProvider.add(aereonDraft.data.species)
+	const pesteon = await fakemonProvider.add(pesteonDraft.data.species)
+
+	const evolutionDraft = stubEvolution({
+		from: SpeciesIdentifier.fromSpeciesName("eevee").data,
+		to: aereon.species.id.data,
+	})
+
+	const evolution = await evolutionProvider.add(evolutionDraft.data, {
+		to: aereon.data.writeKey,
+	})
+
+	// when
+	evolution.data.to = pesteon.species.data.id
+	await EvolutionStore.update([{
+		type: "upsert",
+		evolution: evolution,
+		writeKeys: {
+			from: undefined,
+			to: pesteon.data.writeKey,
+		},
+		originalKeys: {
+			from: undefined,
+			to: aereon.data.writeKey,
+		},
+	}])
+	
+	// then
+	const storedValue = await waitForSpecies(aereon.species.id)
+	const aereonEvolution = storedValue.evolvesFrom(aereon.species.id)
+	expect(aereonEvolution.length).toEqual(0)
+
+	const pesteonEvolution = storedValue.evolvesFrom(pesteon.species.id)
+	expect(pesteonEvolution.length).toEqual(1)
+})
 
 function waitForSpecies(species: SpeciesIdentifier): Promise<EvolutionForest> {
 	return waitForStore<EvolutionForest>(EvolutionStore.get(species))

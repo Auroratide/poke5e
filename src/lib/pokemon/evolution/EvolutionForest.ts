@@ -112,12 +112,26 @@ export class EvolutionForest {
 		}
 	}
 
+	update(evolution: Evolution) {
+		const exists = this.evolutions.findIndex((it) => it.id === evolution.id)
+		if (exists >= 0) {
+			const removed = this.evolutions.splice(exists, 1)
+			removed.forEach((it) => this.removeNode(it))
+		}
+
+		this.remove(evolution)
+		this.addAll([evolution])
+	}
+
 	remove(evolution: Evolution) {
 		const exists = this.evolutions.findIndex((it) => it.isSame(evolution))
 		if (exists < 0) return
 
 		this.evolutions.splice(exists, 1)
-		
+		this.removeNode(evolution)
+	}
+
+	private removeNode(evolution: Evolution) {
 		const from = this.nodes.get(evolution.data.from)
 		const to = this.nodes.get(evolution.data.to)
 
