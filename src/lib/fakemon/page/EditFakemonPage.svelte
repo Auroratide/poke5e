@@ -11,6 +11,7 @@
 	import type { PokemonSpecies } from "$lib/creatures/species"
 	import { EvolutionStore, type EvolutionUpdate } from "$lib/pokemon/evolution"
 	import { fakemonStore } from "../store"
+	import Loader from "$lib/design/Loader.svelte"
 
 	export let fakemon: SingleFakemonStore
 	export let allSpecies: Readable<PokemonSpecies[]>
@@ -72,7 +73,11 @@
 <Title value="Edit {$fakemon.value.data.species.name}" />
 <Card title="Edit {$fakemon.value.data.species.name}">
 	{#if canEdit}
-		<FakemonEditor fakemon={$fakemon.value} on:submit={onSubmit} on:cancel={onCancel} {saving} allSpecies={$allSpecies} allEvolutions={$allEvolutions} />
+		{#if $allEvolutions == null}
+			<Loader caption="Loading details" />
+		{:else}
+			<FakemonEditor fakemon={$fakemon.value} on:submit={onSubmit} on:cancel={onCancel} {saving} allSpecies={$allSpecies} allEvolutions={$allEvolutions} />
+		{/if}
 	{:else}
 		<section>
 			<p>You do not have permission to edit this fakémon.</p>
