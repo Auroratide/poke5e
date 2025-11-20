@@ -47,7 +47,7 @@
 		<Tab.Panel id="evolves-to-tabpanel">
 			{#each evolvesTo as evolution (evolution.data.id)}
 				<div class="definition-list" transition:slide>
-					<EvolutionDefinition direction="to" id="{evolution.data.id.replace(".", "")}" value={evolution} {allSpecies} on:remove={removeEvolution(evolution)} {disabled} />
+					<EvolutionDefinition direction="to" id="{evolution.data.id.replace(".", "")}" value={evolution} {allSpecies} {species} on:remove={removeEvolution(evolution)} {disabled} />
 				</div>
 			{/each}
 			{#if evolvesTo.length === 0}
@@ -58,7 +58,7 @@
 		<Tab.Panel id="evolves-from-tabpanel">
 			{#each evolvesFrom as evolution (evolution.data.id)}
 				<div class="definition-list" transition:slide>
-					<EvolutionDefinition direction="from" id="{evolution.data.id.replace(".", "")}" value={evolution} {allSpecies} on:remove={removeEvolution(evolution)} {disabled} />
+					<EvolutionDefinition direction="from" id="{evolution.data.id.replace(".", "")}" value={evolution} {allSpecies} {species} on:remove={removeEvolution(evolution)} {disabled} />
 				</div>
 			{/each}
 			{#if evolvesFrom.length === 0}

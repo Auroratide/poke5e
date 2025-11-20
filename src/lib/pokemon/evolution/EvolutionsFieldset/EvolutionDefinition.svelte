@@ -12,7 +12,7 @@
 	import SelectField from "$lib/design/forms/SelectField.svelte"
 	import { TimesOfDay, type TypedEvolutionConditionType } from "../EvolutionCondition"
 	import { capitalize } from "$lib/string"
-	import { PokemonSpecies, SpeciesField } from "$lib/creatures/species"
+	import { PokemonSpecies, SpeciesField, SpeciesIdentifier } from "$lib/creatures/species"
 	import Button from "$lib/design/Button.svelte"
 	import { fakemonStore } from "$lib/fakemon/store"
 	import type { SpeciesFieldChangeEvent } from "$lib/creatures/species/SpeciesField.svelte"
@@ -22,14 +22,19 @@
 	const dispatch = createEventDispatcher()
 
 	export let id: string
+	export let species: SpeciesIdentifier
 	export let value: Evolution
 	export let allSpecies: PokemonSpecies[]
 	export let direction: "from" | "to"
 	export let disabled = false
 
-	const isSpeciesDisabled = (species: PokemonSpecies) => {
-		if (species.id.isFakemon()) {
-			const writeKey = fakemonStore.getWriteKey(species.id.toFakemonReadKey())
+	const isSpeciesDisabled = (proposedSpecies: PokemonSpecies) => {
+		if (proposedSpecies.id.data === species.data) {
+			return "Fakémon cannot evolve into themselves."
+		}
+
+		if (proposedSpecies.id.isFakemon()) {
+			const writeKey = fakemonStore.getWriteKey(proposedSpecies.id.toFakemonReadKey())
 			if (writeKey == null) {
 				return "Must own the fakemon to evolve to/from it."
 			}
