@@ -33,8 +33,6 @@
 		const upsertedEvolutions: EvolutionUpdate[] = e.detail.evolutions.map((evolution) => {
 			const originalEvolution = originalEvolutions.find((it) => it.id === evolution.id)
 
-			console.log(originalEvolution)
-
 			return {
 				type: "upsert",
 				evolution,
