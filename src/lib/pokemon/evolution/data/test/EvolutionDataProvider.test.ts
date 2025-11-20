@@ -104,6 +104,59 @@ describe("add and get", () => {
 		expect(ironFlameResult[0].from.data).toEqual(ironTail.species.data.id)
 		expect(ironFlameResult[0].to.data).toEqual(ironFlame.species.data.id)
 	})
+
+	test("retrieve entire chain", async () => {
+		// given
+		const stageOneDraft = stubFakemon({
+			species: stubPokemonSpecies({
+				name: "Stage One",
+			}).data,
+		})
+		const stageTwoDraft = stubFakemon({
+			species: stubPokemonSpecies({
+				name: "Stage Two",
+			}).data,
+		})
+		const stageThreeDraft = stubFakemon({
+			species: stubPokemonSpecies({
+				name: "Stage Three",
+			}).data,
+		})
+
+		const stageOne = await fakemonProvider.add(stageOneDraft.data.species)
+		const stageTwo = await fakemonProvider.add(stageTwoDraft.data.species)
+		const stageThree = await fakemonProvider.add(stageThreeDraft.data.species)
+
+		const oneToTwo = stubEvolution({
+			from: stageOne.species.id.data,
+			to: stageTwo.species.id.data,
+		})
+
+		const twoTothree = stubEvolution({
+			from: stageTwo.species.id.data,
+			to: stageThree.species.id.data,
+		})
+
+		await evolutionProvider.add(oneToTwo.data, {
+			from: stageOne.data.writeKey,
+			to: stageTwo.data.writeKey,
+		})
+
+		await evolutionProvider.add(twoTothree.data, {
+			from: stageTwo.data.writeKey,
+			to: stageThree.data.writeKey,
+		})
+
+		// when
+		const stageOneEvos = await evolutionProvider.get(stageOne.species.id)
+		const stageTwoEvos = await evolutionProvider.get(stageTwo.species.id)
+		const stageThreeEvos = await evolutionProvider.get(stageThree.species.id)
+
+		// then
+		expect(stageOneEvos.length).toEqual(2)
+		expect(stageTwoEvos.length).toEqual(2)
+		expect(stageThreeEvos.length).toEqual(2)
+	})
 })
 
 describe("updating", () => {

@@ -85,6 +85,58 @@ test("getting the evolutions for a fakemon", async () => {
 	expect(terreonEvo[0].to).toEqualData(terreon.species.id)
 })
 
+test("getting the entire fakemon's chain", async () => {
+	// given
+	const stageOneDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "StageOne",
+		}).data,
+	})
+
+	const stageTwoDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "StageOne",
+		}).data,
+	})
+
+	const stageThreeDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "StageOne",
+		}).data,
+	})
+
+	const stageOne = await fakemonProvider.add(stageOneDraft.data.species)
+	const stageTwo = await fakemonProvider.add(stageTwoDraft.data.species)
+	const stageThree = await fakemonProvider.add(stageThreeDraft.data.species)
+
+	const oneToTwo = stubEvolution({
+		from: stageOne.species.id.data,
+		to: stageTwo.species.id.data,
+	})
+
+	const twoToThree = stubEvolution({
+		from: stageTwo.species.id.data,
+		to: stageThree.species.id.data,
+	})
+
+	await evolutionProvider.add(oneToTwo.data, {
+		from: stageOne.data.writeKey,
+		to: stageTwo.data.writeKey,
+	})
+
+	await evolutionProvider.add(twoToThree.data, {
+		from: stageTwo.data.writeKey,
+		to: stageThree.data.writeKey,
+	})
+
+	// when
+	const storedValue = await waitForSpecies(stageThree.species.id)
+	const stageThreeMaxStage = storedValue.maxStage(stageThree.species.id)
+
+	// then
+	expect(stageThreeMaxStage).toEqual(3)
+})
+
 test("adding a new evolution", async () => {
 	// given
 	const fakemonDraft = stubFakemon({

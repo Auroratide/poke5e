@@ -7,15 +7,32 @@ import type { Data } from "$lib/DataClass"
 export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 	constructor(private readonly supabase: SupabaseClient) {}
 
-	async get(species: SpeciesIdentifier): Promise<Evolution[]> {
-		return this.supabase.rpc("get_fakemon_evolutions", { _fakemon_id: species.data })
-			.select<"*", EvolutionRow>()
-			.then(({ data, error }) => {
-				this.validateError("Could not get evolutions.", error)
-				if (!data || data.length === 0) return []
+	async get(species: SpeciesIdentifier, seen: Data<SpeciesIdentifier>[] = []): Promise<Evolution[]> {
+		if (!species.isFakemon()) return []
+		if (seen.includes(species.data)) return []
 
-				return data.map(rowToEvolution)
+		const { data, error } = await this.supabase.rpc("get_fakemon_evolutions", { _fakemon_id: species.data }).select<"*", EvolutionRow>()
+
+		this.validateError("Could not get evolutions.", error)
+
+		seen.push(species.data)
+
+		const dedupMap = new Map<EvolutionId, Evolution>()
+		for (const evo of data) {
+			const convertedEvolution = rowToEvolution(evo)
+			dedupMap.set(convertedEvolution.id, convertedEvolution)
+
+			await Promise.all([
+				this.get(convertedEvolution.from, seen),
+				this.get(convertedEvolution.to, seen),
+			]).then((result) => {
+				result.flat().forEach((evo) => {
+					dedupMap.set(evo.id, evo)
+				})
 			})
+		}
+
+		return Array.from(dedupMap.values())
 	}
 
 	async add(draft: EvolutionDraft, writeKeys: EvolutionWriteKeys): Promise<Evolution> {
