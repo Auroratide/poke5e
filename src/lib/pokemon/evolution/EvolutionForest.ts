@@ -131,6 +131,10 @@ export class EvolutionForest {
 		this.removeNode(evolution)
 	}
 
+	clone(): EvolutionForest {
+		return new EvolutionForest(this.evolutions.map((it) => it.copy()))
+	}
+
 	private removeNode(evolution: Evolution) {
 		const from = this.nodes.get(evolution.data.from)
 		const to = this.nodes.get(evolution.data.to)

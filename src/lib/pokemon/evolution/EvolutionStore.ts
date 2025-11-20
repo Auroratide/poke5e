@@ -1,5 +1,5 @@
 import { base } from "$app/paths"
-import { derived, get, writable, type Readable, type Writable } from "svelte/store"
+import { derived, get, writable, type Readable, type Unsubscriber, type Writable } from "svelte/store"
 import { Evolution } from "./Evolution"
 import { EvolutionForest } from "./EvolutionForest"
 import type { EvolutionJsonResponse } from "./EvolutionJsonResponse"
@@ -18,6 +18,16 @@ export const canonEvolutions = cachedReadable<EvolutionForest>(undefined, (set) 
 			))
 			.then((evolution) => set(new EvolutionForest(evolution)))
 	}
+})
+
+export const allEvolutions = cachedReadable<EvolutionForest>(undefined, (set) => {
+	let unsub: Unsubscriber = undefined
+	unsub = canonEvolutions.subscribe((canonEvolutions) => {
+		if (canonEvolutions != null) {
+			set(canonEvolutions.clone())
+			unsub?.()
+		}
+	})
 })
 
 export type EvolutionUpdate = {
@@ -44,7 +54,7 @@ function createStore(): EvolutionStore {
 
 			const hasBeenRetrieved = retrieved.get(species.data)
 
-			return derived([canonEvolutions, hasBeenRetrieved], ([forest, hasBeenRetrievedValue]) => {
+			return derived([allEvolutions, hasBeenRetrieved], ([forest, hasBeenRetrievedValue]) => {
 				if (forest == null) return undefined
 
 				if (!hasBeenRetrievedValue) {
@@ -61,7 +71,7 @@ function createStore(): EvolutionStore {
 		},
 
 		update: async (updates: EvolutionUpdate[]) => {
-			const forest = get(canonEvolutions)
+			const forest = get(allEvolutions)
 			if (forest == null) {
 				// TODO!!!!!!!!!
 				throw new Error("Theoretically unreachable")

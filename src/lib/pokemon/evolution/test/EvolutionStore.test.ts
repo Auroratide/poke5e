@@ -40,12 +40,34 @@ afterEach(() => {
 	vi.resetAllMocks()
 })
 
-test("getting the evolutions from canon list", async () => {
-	const id = SpeciesIdentifier.fromSpeciesName("eevee")
+test("getting the evolutions from canon list, ignore fakemon", async () => {
+	// given
+	const eevee = SpeciesIdentifier.fromSpeciesName("eevee")
 
+	const fakemonDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Terreon",
+		}).data,
+	})
+
+	const terreon = await fakemonProvider.add(fakemonDraft.data.species)
+
+	const evolution = stubEvolution({
+		from: eevee.data,
+		to: terreon.species.id.data,
+	})
+
+	await evolutionProvider.add(evolution.data, {
+		to: terreon.data.writeKey,
+	})
+
+	// when
+	await waitForSpecies(terreon.species.id) // load terreon's data
 	const storedValue = get(EvolutionStore.canonList())
-	const eeveeEvo = storedValue.evolvesTo(id)
+	const eeveeEvo = storedValue.evolvesTo(eevee)
 
+	// then
+	expect(eeveeEvo.length).toEqual(1) // as defined by the stub
 	expect(eeveeEvo[0].to.data).toEqual("flareon")
 })
 
