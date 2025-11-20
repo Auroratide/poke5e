@@ -12,6 +12,7 @@
 	import { EvolutionStore, type EvolutionUpdate } from "$lib/pokemon/evolution"
 	import { fakemonStore } from "../store"
 	import Loader from "$lib/design/Loader.svelte"
+	import { error } from "$lib/design/errors/store"
 
 	export let fakemon: SingleFakemonStore
 	export let allSpecies: Readable<PokemonSpecies[]>
@@ -57,13 +58,14 @@
 		})) ?? []
 
 		EvolutionStore.update(upsertedEvolutions.concat(removedEvolutions)).then(() => {
-			$fakemon.update?.info(e.detail.fakemon, {
+			return $fakemon.update?.info(e.detail.fakemon, {
 				media: e.detail.newMedia,
-			}).then(() => {
-				goto(Url.fakemon($fakemon.value.data.readKey))
-			}).catch(() => {
-				saving = false
 			})
+		}).then(() => {
+			goto(Url.fakemon($fakemon.value.data.readKey))
+		}).catch((e: Error) => {
+			error.show(e.message)
+			saving = false
 		})
 	}
 </script>

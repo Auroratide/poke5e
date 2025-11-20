@@ -40,7 +40,11 @@ export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 			this.toQuery(draft, writeKeys),
 		).single<number>()
 
-		this.validateError("Could not add evolution.", error)
+		this.validateError("Could not add evolution", error, draft)
+
+		if (data == null) {
+			throw new EvolutionDataProviderError("Could not add evolution", draft)
+		}
 
 		return new Evolution({
 			...draft,
@@ -56,9 +60,9 @@ export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 			...this.toQuery(evolution.data, writeKeys),
 		}).single<number>()
 
-		this.validateError("Could not update evolution.", error)
+		this.validateError("Could not update evolution.", error, evolution.data)
 		if (data < 1) {
-			throw new EvolutionDataProviderError("Could not update evolution.")
+			throw new EvolutionDataProviderError("Could not update evolution.", evolution.data)
 		}
 
 		return evolution
@@ -89,10 +93,10 @@ export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 		}
 	}
 
-	private validateError(message: string, e: PostgrestError | undefined) {
+	private validateError(message: string, e: PostgrestError | undefined, evolution?: Pick<Data<Evolution>, "from" | "to">) {
 		if (e) {
 			console.error(e)
-			throw new EvolutionDataProviderError(message)
+			throw new EvolutionDataProviderError(message, evolution)
 		}
 	}
 }
