@@ -14,6 +14,7 @@
 	export let disabled: boolean = false
 	export let placeholder: string = ""
 	export let rows: number = 4
+	export let required = false
 
 	$: kebabName = name ?? kebab(label)
 	$: id = `${kebabName}-input`
@@ -25,7 +26,7 @@
 
 <div class="textarea-field">
 	<label for="{id}">{label}</label>
-	<textarea {id} name="{kebabName}" {placeholder} {rows} bind:value {disabled} on:change={onChange}></textarea>
+	<textarea {id} name="{kebabName}" {placeholder} {rows} bind:value {disabled} on:change={onChange} {required}></textarea>
 </div>
 
 <style>

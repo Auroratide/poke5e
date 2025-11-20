@@ -72,7 +72,7 @@
 				let:condition
 				{disabled}
 			>
-				<IntField label="Required Level" name="{id}-level" value={condition.value} min={1} max={20} on:change={updateCondition(condition)} {disabled} />
+				<IntField label="Required Level" name="{id}-level" value={condition.value} min={1} max={20} on:change={updateCondition(condition)} {disabled} required />
 			</ConditionField>
 			<ConditionField
 				{id}
@@ -83,7 +83,7 @@
 				let:condition
 				{disabled}
 			>
-				<TextField label="Required Item" name="{id}-item" value={condition.value} on:change={updateCondition(condition)} {disabled} />
+				<TextField label="Required Item" name="{id}-item" value={condition.value} on:change={updateCondition(condition)} {disabled} required />
 			</ConditionField>
 			<ConditionField
 				{id}
@@ -94,7 +94,7 @@
 				let:condition
 				{disabled}
 			>
-				<IntField label="Required Bond Level" name="{id}-loyalty" value={condition.value} min={-3} max={3} on:change={updateCondition(condition)} {disabled} />
+				<IntField label="Required Bond Level" name="{id}-loyalty" value={condition.value} min={-3} max={3} on:change={updateCondition(condition)} {disabled} required />
 			</ConditionField>
 			<ConditionField
 				{id}
@@ -105,7 +105,7 @@
 				let:condition
 				{disabled}
 			>
-				<TextField label="Required Move" name="{id}-move" value={condition.value} on:change={updateCondition(condition)} {disabled} />
+				<TextField label="Required Move" name="{id}-move" value={condition.value} on:change={updateCondition(condition)} {disabled} required />
 			</ConditionField>
 			<ConditionField
 				{id}
@@ -145,7 +145,7 @@
 					let:condition
 					{disabled}
 				>
-					<TextareaField label="Custom Condition" name="{id}-special" value={condition.value} placeholder="after fainting from recoil damage" on:change={updateCondition(condition)} {disabled} />
+					<TextareaField label="Custom Condition" name="{id}-special" value={condition.value} placeholder="after fainting from recoil damage" on:change={updateCondition(condition)} {disabled} required />
 				</ConditionField>
 			</div>
 		</div>
@@ -161,7 +161,7 @@
 						let:benefit
 						{disabled}
 					>
-						<IntField label="ASI Granted" name="{id}-asi" value={benefit.value} min={0} on:change={updateBenefit(benefit)} {disabled} />
+						<IntField label="ASI Granted" name="{id}-asi" value={benefit.value} min={0} on:change={updateBenefit(benefit)} {disabled} required />
 					</BenefitsField>
 				</div>
 				<div class="span">
@@ -174,7 +174,7 @@
 						let:benefit
 						{disabled}
 					>
-						<TextareaField label="Custom Benefit" name="{id}-special-benefit" value={benefit.value} placeholder="the pokemon gains a new skill proficiency" on:change={updateBenefit(benefit)} {disabled} />
+						<TextareaField label="Custom Benefit" name="{id}-special-benefit" value={benefit.value} placeholder="the pokemon gains a new skill proficiency" on:change={updateBenefit(benefit)} {disabled} required />
 					</BenefitsField>
 				</div>
 			</div>
