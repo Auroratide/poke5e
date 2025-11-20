@@ -16,6 +16,8 @@
 	import Button from "$lib/design/Button.svelte"
 	import { fakemonStore } from "$lib/fakemon/store"
 	import type { SpeciesFieldChangeEvent } from "$lib/creatures/species/SpeciesField.svelte"
+	import BenefitsField from "./BenefitsField.svelte"
+	import type { TypedEvolutionBenefitType } from "../EvolutionBenefit"
 
 	const dispatch = createEventDispatcher()
 
@@ -44,6 +46,10 @@
 
 	const updateCondition = <T extends string | number>(condition: TypedEvolutionConditionType<T>) => (e: CustomEvent<{ value: T}>) => {
 		condition.value = e.detail.value
+	}
+
+	const updateBenefit = <T extends string | number>(benefit: TypedEvolutionBenefitType<T>) => (e: CustomEvent<{ value: T}>) => {
+		benefit.value = e.detail.value
 	}
 </script>
 
@@ -138,7 +144,35 @@
 				</ConditionField>
 			</div>
 		</div>
-		<!-- <p class="title">Effects</p> -->
+		<p class="title">Benefits</p>
+			<div class="columns">
+				<div class="span">
+					<BenefitsField
+						{id}
+						type="asi"
+						label="Grants ASI?"
+						bind:benefits={value.data.effects}
+						defaultValue={8}
+						let:benefit
+						{disabled}
+					>
+						<IntField label="ASI Granted" name="{id}-asi" value={benefit.value} min={0} on:change={updateBenefit(benefit)} {disabled} />
+					</BenefitsField>
+				</div>
+				<div class="span">
+					<BenefitsField
+						{id}
+						type="special"
+						label="Grants Custom Benefit?"
+						bind:benefits={value.data.effects}
+						defaultValue=""
+						let:benefit
+						{disabled}
+					>
+						<TextareaField label="Custom Benefit" name="{id}-special-benefit" value={benefit.value} placeholder="the pokemon gains a new skill proficiency" on:change={updateBenefit(benefit)} {disabled} />
+					</BenefitsField>
+				</div>
+			</div>
 		<p class="title">Actions</p>
 		<Button variant="danger" width="full" on:click={onRemove}>Remove Evolution</Button>
 	</FormGroup>

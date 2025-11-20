@@ -19,6 +19,10 @@ export type EvolutionBenefitType = {
 	type: "special",
 	value: string,
 }
+export type TypedEvolutionBenefitType<T extends string | number> = {
+	type: EvolutionBenefitType["type"],
+	value: T,
+}
 
 export class AsiBenefit implements EvolutionBenefit {
 	constructor(readonly amount: number) {}
