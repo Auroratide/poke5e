@@ -24,6 +24,6 @@ export interface EvolutionDataProvider {
 
 export class EvolutionDataProviderError extends Error {
 	constructor(message: string, evolution?: Pick<Data<Evolution>, "from" | "to">) {
-		super(`${message}${evolution != null ? `(${evolution.from} to ${evolution.to})` : ""}`)
+		super(`${message}${evolution != null ? ` (${evolution.from} to ${evolution.to})` : ""}`)
 	}
 }

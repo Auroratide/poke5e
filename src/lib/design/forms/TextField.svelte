@@ -15,9 +15,14 @@
 	export let required: boolean = false
 	export let placeholder: string = ""
 	export let maxlength: number | undefined = undefined
+	export let customError: string | undefined = undefined
+
+	let inputElem: HTMLInputElement
 
 	$: kebabName = name ?? kebab(label)
 	$: id = `${kebabName}-input`
+
+	$: inputElem?.setCustomValidity(customError ?? "")
 
 	const onChange = (e: Event) => {
 		dispatch("change", { value: (e.target as HTMLInputElement).value })
@@ -26,7 +31,7 @@
 
 <div class="text-field">
 	<label for="{id}">{label}</label>
-	<input type="text" {id} name="{kebabName}" {placeholder} {maxlength} bind:value {disabled} {required} on:blur on:focus on:change={onChange} />
+	<input bind:this={inputElem} type="text" {id} name="{kebabName}" {placeholder} {maxlength} bind:value {disabled} {required} on:blur on:focus on:change={onChange} />
 </div>
 
 <style>

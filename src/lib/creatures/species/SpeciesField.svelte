@@ -28,16 +28,21 @@
 		? allSpecies?.filter(matchNameOrType2(species)) ?? []
 		: [] // if we haven't typed anything, don't show the ENTIRE list
 
-	const onSelect = (p: PokemonSpecies) => () => {
+	const confirm = (p: PokemonSpecies) => {
 		species = p.name
 		confirmed = true
 		dispatch("change", { species: p })
 	}
 
+	const onSelect = (p: PokemonSpecies) => () => {
+		confirm(p)
+	}
+
 	const onBlur = () => {
-		if (!confirmed && filteredPokemon.length === 1 && filteredPokemon[0].name.toLocaleLowerCase() === species.toLocaleLowerCase()) {
-			confirmed = true
-			dispatch("change", { species: filteredPokemon[0] })
+		const exactMatch = filteredPokemon.find((it) => it.name.toLocaleLowerCase() === species.toLocaleLowerCase())
+
+		if (!confirmed && exactMatch != null && !isSpeciesDisabled(exactMatch)) {
+			confirm(exactMatch)
 		}
 	}
 
@@ -48,7 +53,7 @@
 
 <div class="species-field">
 	<div class="field">
-		<TextField {label} name={id} bind:value={species} {disabled} on:blur={onBlur} on:focus={onFocus} />
+		<TextField {label} name={id} bind:value={species} {disabled} on:blur={onBlur} on:focus={onFocus} customError={confirmed ? undefined : "Please select a valid pokemon"} />
 	</div>
 	{#if filteredPokemon.length === 0 && species.length > 0}
 		<p class="muted center fixed-height" transition:slide>No matched pokemon</p>
@@ -104,7 +109,7 @@
 	}
 
 	.fixed-height {
-		block-size: 6em;
+		block-size: 6.5em;
 		overflow-x: auto;
 		container-type: inline-size;
 		margin-block-end: 0.5em;
