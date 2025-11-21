@@ -134,7 +134,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 		},
 		level5: {
 			name: "Pokéchef",
-			description: ["You excel at creating meals for your Pokémon, seemingly out of nothing. At level 5, you are frequently prepared with some sort of edible treat, granting 2d4+2 hit points when given. You can give the treat to a creature as a bonus action and other creatures can administer it as an action. You can use this feature a number of times equal to your proficiency modifier per long rest."],
+			description: ["You excel at creating meals for your Pokémon, seemingly out of nothing. At level 5, you are frequently prepared with some sort of edible treat, granting 2d4+2 hit points when given. You can give the treat to an adjacent creature as a bonus action and other creatures can administer it as an action. You can use this feature a number of times equal to your proficiency modifier per long rest."],
 		},
 		level9: {
 			name: "Field Medic",
