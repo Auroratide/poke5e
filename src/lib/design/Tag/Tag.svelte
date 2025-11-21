@@ -2,9 +2,10 @@
 	import type { PokeType } from "$lib/pokemon/types-2"
 
 	export let color: PokeType | undefined = undefined
+	export let width: "auto" | "full" = "auto"
 </script>
 
-<span class="tag" style:--color="var(--skin-{color}-bg)">
+<span class="tag" style:--color="var(--skin-{color}-bg)" class:full-width={width === "full"}>
 	{#if $$slots.icon}
 		<span class="icon" aria-hidden="true">
 			<slot name="icon"></slot>
@@ -25,6 +26,10 @@
 		overflow: hidden;
 		border-radius: 0.25em;
 		line-height: 1;
+	}
+
+	.full-width {
+		inline-size: 100%;
 	}
 
 	.icon {
