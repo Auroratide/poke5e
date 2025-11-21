@@ -34,6 +34,7 @@ export const Url = {
 		catchingPokemon: () => `${base}/reference/catching-pokemon`,
 		combat: () => `${base}/reference/combat`,
 		damageTypes: () => `${base}/reference/damage-types`,
+		encounters: () => `${base}/reference/encounters`,
 		faintingRestingHealing: () => `${base}/reference/fainting-resting-and-healing`,
 		feats: () => `${base}/reference/feats`,
 		legendaryBattles: () => `${base}/reference/legendary-battles`,

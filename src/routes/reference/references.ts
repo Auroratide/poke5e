@@ -35,6 +35,10 @@ export const References = [ {
 	url: Url.reference.damageTypes(),
 	keywords: ["damage", "type", "resistance", "vulnerability", "immunity", "bludgeoning", "slashing", "piercing", "fire", "cold", "lightning", "force", "radiant", "necrotic", "thunder", "acid", "poison", "calculator", "convert", "conversion", "magic"],
 }, {
+	name: "Encounters",
+	url: Url.reference.encounters(),
+	keywords: ["wild", "trainer", "battle", "gym leader", "badge", "money", "award", "expedition", "sr", "cr", "challenge rating", "species rating", "double battle", "team battle", "balance"],
+}, {
 	name: "Fainting, Resting, and Healing",
 	url: Url.reference.faintingRestingHealing(),
 	keywords: ["fainting", "downed", "short rest", "long rest", "heal", "pokecenter", "potions", "food", "0 hp", "death", "lethal", "stabilization", "stabilize", "restore"],
