@@ -3,7 +3,3 @@ INSERT INTO private.trainers
 VALUES
 	('7WO0AIQWDSRP', '5P89LPAEWAXTRHMZ', 'Renibel', 'A trainer interested in cryptemons.', 6, 11, 29, 29, 6, 6, 10, 13, 9, 17, 14, 15, false, false, false, false, true, false, false, false, true, true, false, false, false, false, false, false, false, false, false, false, false, false, false, true);
 
-INSERT INTO private.species_info
-	(id, type)
-VALUES
-	('eevee', '{normal}');
