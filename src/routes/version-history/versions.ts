@@ -12,6 +12,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.8.5",
+		description: [
+			"Reference: Added guidelines and recommendations for Encounters.",
+			"Reference: Added note about Pokémon AC.",
+			"Reference: Added range to Nurse Pokéchef feature.",
+		],
+	}, {
 		name: "v1.8.4",
 		description: [
 			"Gallade can have Sharpness as an ability.",
