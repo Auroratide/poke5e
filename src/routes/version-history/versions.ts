@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.8.6",
+		description: [
+			"Bug fix: Added missing TMs to Wartortle.",
+		],
+	}, {
 		name: "v1.8.5",
 		description: [
 			"Reference: Added guidelines and recommendations for Encounters.",
