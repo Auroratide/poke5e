@@ -62,4 +62,8 @@
 			<Rules2024.Evolution />
 		{/if}
 	</section>
+	<section>
+		<h2>A Note on Armor Class</h2>
+		<p>A Pokémon's AC is not necessarily tied to their Dexterity. This is intended. AC was assigned with a more formulaic approach, blending each Pokémon's DEF, SP. DEF, and SPEED stats from the core games into a single number on a scale that fits the normal D&D AC range. Think of it as if each Pokémon gets its own unique "Natural Armor". Any ties to Dexterity are purely coincidental.</p>
+	</section>
 </ReferencePage>

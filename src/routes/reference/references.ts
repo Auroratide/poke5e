@@ -53,7 +53,7 @@ export const References = [ {
 }, {
 	name: "Pokémon Leveling",
 	url: Url.reference.pokemonLeveling(),
-	keywords: ["pokemon leveling", "class", "table", "experience", "evolution", "evolve", "moves", "peak power", "milestones"],
+	keywords: ["pokemon leveling", "class", "table", "experience", "evolution", "evolve", "moves", "peak power", "milestones", "armor", "ac"],
 }, {
 	name: "Pokémon Transformations",
 	url: Url.reference.transformations(),
