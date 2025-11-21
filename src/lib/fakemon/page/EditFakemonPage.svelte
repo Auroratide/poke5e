@@ -57,10 +57,10 @@
 			},
 		})) ?? []
 
-		EvolutionStore.update(upsertedEvolutions.concat(removedEvolutions)).then(() => {
-			return $fakemon.update?.info(e.detail.fakemon, {
-				media: e.detail.newMedia,
-			})
+		$fakemon.update?.info(e.detail.fakemon, {
+			media: e.detail.newMedia,
+		}).then(() => {
+			return EvolutionStore.update(upsertedEvolutions.concat(removedEvolutions))
 		}).then(() => {
 			goto(Url.fakemon($fakemon.value.data.readKey))
 		}).catch((e: Error) => {

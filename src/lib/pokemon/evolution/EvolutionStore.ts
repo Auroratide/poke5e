@@ -46,6 +46,12 @@ export interface EvolutionStore {
 function createStore(): EvolutionStore {
 	const retrieved = new Map<Data<SpeciesIdentifier>, Writable<boolean>>()
 
+	// Needed in order to recursively refetch an entire evo line reliably
+	const reset = (evolution: Evolution) => {
+		retrieved.get(evolution.from.data)?.set(false)
+		retrieved.get(evolution.to.data)?.set(false)
+	}
+
 	return {
 		get: (species: SpeciesIdentifier) => {
 			if (!retrieved.has(species.data)) {
@@ -82,10 +88,14 @@ function createStore(): EvolutionStore {
 					const addedEvolution = await provider.add(update.evolution.data, update.writeKeys)
 
 					forest.addAll([addedEvolution])
+
+					reset(addedEvolution)
 				} else if (update.type === "upsert") {
 					const updatedEvolution = await provider.update(update.evolution, update.writeKeys, update.originalKeys)
 
 					forest.update(updatedEvolution)
+
+					reset(updatedEvolution)
 				} else if (update.type === "remove") {
 					await provider.remove(update.evolution.id, update.writeKeys)
 
