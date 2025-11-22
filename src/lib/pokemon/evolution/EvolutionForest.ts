@@ -155,10 +155,13 @@ export class EvolutionForest {
 		}
 
 		action(node, depth)
-		seenNodes.push(node)
+		// MUST be a new array so that the recursion unwinds nodes when we go back up the tree
+		// Otherwise, we end up identifying "cycles" just because there's more than one way
+		// to reach a node.
+		const newSeenNodes = [...seenNodes, node]
 
 		for (const child of node.edges[direction]) {
-			this.dfs(child, direction, action, stats, depth + 1, seenNodes)
+			this.dfs(child, direction, action, stats, depth + 1, newSeenNodes)
 		}
 	}
 }

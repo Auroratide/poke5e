@@ -1,4 +1,4 @@
-import { test, expect, beforeEach } from "vitest"
+import { describe, test, expect, beforeEach } from "vitest"
 import { EvolutionForest } from "../EvolutionForest"
 import { stubEvolution } from "./stubs"
 import { SpeciesIdentifier } from "$lib/creatures/species"
@@ -233,37 +233,69 @@ test("remove", () => {
 	expect(charmanderStages).toEqual(2)
 })
 
-test("cyclic evolution", () => {
-	const charmander = SpeciesIdentifier.fromSpeciesName("charmander")
-	let charmanderStages  = forest.maxStage(charmander)
-	expect(charmanderStages).toEqual(3)
+describe("weird evolutions", () => {
+	test("cyclic evolution", () => {
+		// A > B > C > A
+		const charmander = SpeciesIdentifier.fromSpeciesName("charmander")
+		let charmanderStages  = forest.maxStage(charmander)
+		expect(charmanderStages).toEqual(3)
 
-	forest.addAll([
-		stubEvolution({
-			from: "charizard",
-			to: "charmander",
-		}),
-	])
+		forest.addAll([
+			stubEvolution({
+				from: "charizard",
+				to: "charmander",
+			}),
+		])
 
-	charmanderStages  = forest.maxStage(charmander)
-	expect(charmanderStages).toEqual(Infinity)
+		charmanderStages  = forest.maxStage(charmander)
+		expect(charmanderStages).toEqual(Infinity)
 
-	const charmanderCurrentState  = forest.currentStage(charmander)
-	expect(charmanderCurrentState).toEqual(0)
-})
+		const charmanderCurrentState  = forest.currentStage(charmander)
+		expect(charmanderCurrentState).toEqual(0)
+	})
 
-test("self-evolution", () => {
-	const heracross = SpeciesIdentifier.fromSpeciesName("heracross")
-	forest.addAll([
-		stubEvolution({
-			from: "heracross",
-			to: "heracross",
-		}),
-	])
-	
-	const maxStages = forest.maxStage(heracross)
-	expect(maxStages).toEqual(Infinity)
+	test("self-evolution", () => {
+		// A > A
+		const heracross = SpeciesIdentifier.fromSpeciesName("heracross")
+		forest.addAll([
+			stubEvolution({
+				from: "heracross",
+				to: "heracross",
+			}),
+		])
 
-	const currentStage  = forest.currentStage(heracross)
-	expect(currentStage).toEqual(0)
+		const maxStages = forest.maxStage(heracross)
+		expect(maxStages).toEqual(Infinity)
+
+		const currentStage  = forest.currentStage(heracross)
+		expect(currentStage).toEqual(0)
+	})
+
+	test("skipping a step", () => {
+		// A > B > C, and A > C
+		const weirdForest = new EvolutionForest([
+			stubEvolution({
+				from: "one",
+				to: "two",
+			}),
+			stubEvolution({
+				from: "two",
+				to: "three",
+			}),
+			stubEvolution({
+				from: "one",
+				to: "three",
+			}),
+		])
+		const one = SpeciesIdentifier.fromSpeciesName("one")
+		const two = SpeciesIdentifier.fromSpeciesName("two")
+		const three = SpeciesIdentifier.fromSpeciesName("three")
+
+		const maxStages = weirdForest.maxStage(one)
+		expect(maxStages).toEqual(3)
+
+		expect(weirdForest.currentStage(one)).toEqual(1)
+		expect(weirdForest.currentStage(two)).toEqual(2)
+		expect(weirdForest.currentStage(three)).toEqual(3)
+	})
 })
