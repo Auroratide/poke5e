@@ -1,8 +1,9 @@
 import type { PostgrestError, SupabaseClient } from "@supabase/supabase-js"
-import { EvolutionDataProviderError, type EvolutionDataProvider, type EvolutionDraft, type EvolutionWriteKeys } from "./EvolutionDataProvider"
+import { EvolutionAlreadyExistsError as DuplicateEvolutionError, EvolutionDataProviderError, type EvolutionDataProvider, type EvolutionDraft, type EvolutionWriteKeys } from "./EvolutionDataProvider"
 import type { SpeciesIdentifier } from "$lib/creatures/species"
 import { Evolution, type EvolutionId } from "../Evolution"
 import type { Data } from "$lib/DataClass"
+import { PostgresErrorCode } from "$lib/supabase"
 
 export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 	constructor(private readonly supabase: SupabaseClient) {}
@@ -96,6 +97,11 @@ export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 	private validateError(message: string, e: PostgrestError | undefined, evolution?: Pick<Data<Evolution>, "from" | "to">) {
 		if (e) {
 			console.error(e)
+
+			if (e.code === PostgresErrorCode.UniqueViolation) {
+				throw new DuplicateEvolutionError(evolution)
+			}
+
 			throw new EvolutionDataProviderError(message, evolution)
 		}
 	}

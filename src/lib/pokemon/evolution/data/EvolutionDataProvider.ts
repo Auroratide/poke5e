@@ -27,3 +27,9 @@ export class EvolutionDataProviderError extends Error {
 		super(`${message}${evolution != null ? ` (${evolution.from} to ${evolution.to})` : ""}`)
 	}
 }
+
+export class EvolutionAlreadyExistsError extends EvolutionDataProviderError {
+	constructor(evolution?: Pick<Data<Evolution>, "from" | "to">) {
+		super("Evolution already exists", evolution)
+	}
+}
