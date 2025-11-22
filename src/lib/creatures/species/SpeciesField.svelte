@@ -38,22 +38,28 @@
 		confirm(p)
 	}
 
-	const onBlur = () => {
-		const exactMatch = filteredPokemon.find((it) => it.name.toLocaleLowerCase() === species.toLocaleLowerCase())
-
-		if (!confirmed && exactMatch != null && !isSpeciesDisabled(exactMatch)) {
-			confirm(exactMatch)
-		}
-	}
-
 	const onFocus = () => {
 		confirmed = false
 	}
+
+	// We use focusout instead of blur for accessibility. People who tab out of the
+	// filter field need to be able to tab through the list of button options, so we
+	// can't perform a submit on blur of the text field.
+	const onFocusOut = (e: FocusEvent) => {
+		if (!(e.currentTarget as HTMLElement)?.contains(e.relatedTarget as Node)) {
+			const exactMatch = filteredPokemon.find((it) => it.name.toLocaleLowerCase() === species.toLocaleLowerCase())
+
+			if (!confirmed && exactMatch != null && !isSpeciesDisabled(exactMatch)) {
+				confirm(exactMatch)
+			}
+		}
+
+	}
 </script>
 
-<div class="species-field">
+<div class="species-field" on:focusout={onFocusOut}>
 	<div class="field">
-		<TextField {label} name={id} bind:value={species} {disabled} on:blur={onBlur} on:focus={onFocus} customError={confirmed ? undefined : "Please select a valid pokemon"} />
+		<TextField {label} name={id} bind:value={species} {disabled} on:focus={onFocus} customError={confirmed ? undefined : "Please select a valid pokemon"} />
 	</div>
 	{#if filteredPokemon.length === 0 && species.length > 0}
 		<p class="muted center fixed-height" transition:slide>No matched pokemon</p>
