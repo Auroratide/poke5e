@@ -83,25 +83,28 @@ function createStore(): EvolutionStore {
 				throw new Error("Theoretically unreachable")
 			}
 
-			for (const update of updates) {
+			const toReset: Evolution[] = []
+
+			await Promise.all(updates.map(async (update) => {
 				if (update.type === "upsert" && update.evolution.isDraft()) {
 					const addedEvolution = await provider.add(update.evolution.data, update.writeKeys)
 
 					forest.addAll([addedEvolution])
-
-					reset(addedEvolution)
+					toReset.push(addedEvolution)
 				} else if (update.type === "upsert") {
 					const updatedEvolution = await provider.update(update.evolution, update.writeKeys, update.originalKeys)
 
 					forest.update(updatedEvolution)
-
-					reset(updatedEvolution)
+					toReset.push(updatedEvolution)
 				} else if (update.type === "remove") {
 					await provider.remove(update.evolution.id, update.writeKeys)
 
 					forest.remove(update.evolution)
 				}
-			}
+			}))
+
+			// must happen after all updates to not refetch old evolutions
+			toReset.forEach((it) => reset(it))
 		},
 
 		canonList: () => canonEvolutions,

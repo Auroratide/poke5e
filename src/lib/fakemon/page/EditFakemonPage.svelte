@@ -53,7 +53,7 @@
 			evolution,
 			writeKeys: {
 				from: evolution.from.isFakemon() ? fakemonStore.getWriteKey(evolution.from.toFakemonReadKey()) : undefined,
-				to:evolution.to.isFakemon() ? fakemonStore.getWriteKey(evolution.to.toFakemonReadKey()) : undefined,
+				to: evolution.to.isFakemon() ? fakemonStore.getWriteKey(evolution.to.toFakemonReadKey()) : undefined,
 			},
 		})) ?? []
 
