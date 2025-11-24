@@ -19,6 +19,7 @@
 	export let allSpecies: PokemonSpecies[]
 	export let disabled = false
 	export let isSpeciesDisabled: (species: PokemonSpecies) => string | false = () => false // return string is the reason for being disabled
+	export let explicitSubmit = false
 
 	$: id = name ?? kebab(label)
 
@@ -46,6 +47,8 @@
 	// filter field need to be able to tab through the list of button options, so we
 	// can't perform a submit on blur of the text field.
 	const onFocusOut = (e: FocusEvent) => {
+		if (explicitSubmit) return
+
 		if (!(e.currentTarget as HTMLElement)?.contains(e.relatedTarget as Node)) {
 			const exactMatch = filteredPokemon.find((it) => it.name.toLocaleLowerCase() === species.toLocaleLowerCase())
 
