@@ -11,6 +11,8 @@
 	import { type PokemonSpecies, WithSpecies } from "$lib/creatures/species"
 	import { EvolutionStore, EvolveForm } from "$lib/pokemon/evolution"
 
+	const evolutions = EvolutionStore.all()
+
 	export let trainer: TrainerStore
 	export let id: PokemonId
 	export let allSpecies: Readable<PokemonSpecies[]>
@@ -37,7 +39,7 @@
 	<WithSpecies let:species ids={[pokemon?.pokemonId]}>
 		<Card title="Evolve {pokemon.nickname}">
 			{#if canEdit}
-				<EvolveForm {pokemon} {species} {allSpecies} evolutions={EvolutionStore.get(species.id)} {saving} on:cancel={cancel} on:submit={update} />
+				<EvolveForm {pokemon} {species} {allSpecies} evolutions={evolutions} {saving} on:cancel={cancel} on:submit={update} />
 			{:else}
 				<section>
 					<p>You do not have permission to evolve this pokemon.</p>

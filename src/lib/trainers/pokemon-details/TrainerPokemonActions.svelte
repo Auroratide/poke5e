@@ -8,11 +8,11 @@
 	import type { TrainerStore } from "../trainers"
 	import type { TrainerPokemon } from "../types"
 
+	const evolutions = EvolutionStore.all()
+
 	export let species: PokemonSpecies
 	export let trainer: TrainerStore
 	export let pokemon: TrainerPokemon
-
-	$: evolutions = EvolutionStore.get(species.id)
 </script>
 
 <ActionArea>

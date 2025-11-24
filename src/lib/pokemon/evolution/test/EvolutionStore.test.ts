@@ -10,6 +10,7 @@ import { stubFakemon } from "$lib/fakemon/test/stubs"
 import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
 import { EvolutionForest } from "../EvolutionForest"
 import { tmpEvolutionId } from "../Evolution"
+import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 
 beforeEach(async () => {
 	const eeveeToFlareon = stubSingleEvolutionJsonResponse({
@@ -157,6 +158,35 @@ test("getting the entire fakemon's chain", async () => {
 
 	// then
 	expect(stageThreeMaxStage).toEqual(3)
+})
+
+test("getting all locally registered fakemon evolitoons", async () => {
+	// given
+	const fakemonDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Terreon",
+		}).data,
+	})
+
+	const terreon = await fakemonProvider.add(fakemonDraft.data.species)
+
+	const evolution = stubEvolution({
+		from: SpeciesIdentifier.fromSpeciesName("eevee").data,
+		to: terreon.species.id.data,
+	})
+
+	await evolutionProvider.add(evolution.data, {
+		to: terreon.data.writeKey,
+	})
+
+	FakemonLocalStorage.add(terreon.data)
+
+	// when
+	const storedValue = await waitForAll()
+	const terreonEvo = storedValue.evolvesFrom(terreon.species.id)
+
+	// then
+	expect(terreonEvo[0].to).toEqualData(terreon.species.id)
 })
 
 test("adding a new evolution", async () => {
@@ -327,4 +357,8 @@ test("updating an existing evolution identity", async () => {
 
 function waitForSpecies(species: SpeciesIdentifier): Promise<EvolutionForest> {
 	return waitForStore<EvolutionForest>(EvolutionStore.get(species))
+}
+
+function waitForAll(): Promise<EvolutionForest> {
+	return waitForStore<EvolutionForest>(EvolutionStore.all())
 }

@@ -3,11 +3,12 @@ import { derived, get, writable, type Readable, type Unsubscriber, type Writable
 import { Evolution } from "./Evolution"
 import { EvolutionForest } from "./EvolutionForest"
 import type { EvolutionJsonResponse } from "./EvolutionJsonResponse"
-import type { SpeciesIdentifier } from "$lib/creatures/species"
+import { SpeciesIdentifier } from "$lib/creatures/species"
 import { provider } from "./data"
 import type { Data } from "$lib/DataClass"
 import type { EvolutionWriteKeys } from "./data/EvolutionDataProvider"
 import { cachedReadable } from "$lib/store"
+import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 
 export const canonEvolutions = cachedReadable<EvolutionForest>(undefined, (set) => {
 	if (typeof window !== "undefined") {
@@ -39,34 +40,71 @@ export type EvolutionUpdate = {
 
 export interface EvolutionStore {
 	get: (species: SpeciesIdentifier) => Readable<EvolutionForest | undefined>
+	all: () => Readable<EvolutionForest | undefined>
 	update: (updates: EvolutionUpdate[]) => Promise<void>
 	canonList: () => Readable<EvolutionForest | undefined>
 }
 
 function createStore(): EvolutionStore {
-	const retrieved = new Map<Data<SpeciesIdentifier>, Writable<boolean>>()
+	const retrievedSpeciesStore = new Map<Data<SpeciesIdentifier>, Writable<boolean>>()
+	const allRetrieved = writable(false)
+
+	const hasBeenRetrieved = (species: SpeciesIdentifier) => {
+		if (!retrievedSpeciesStore.has(species.data)) {
+			retrievedSpeciesStore.set(species.data, writable(!species.isFakemon()))
+		}
+
+		return retrievedSpeciesStore.get(species.data)
+	}
+
+	const didRetrieve = (species: SpeciesIdentifier) => {
+		if (!retrievedSpeciesStore.has(species.data)) {
+			retrievedSpeciesStore.set(species.data, writable(true))
+		} else {
+			retrievedSpeciesStore.get(species.data)?.set(true)
+		}
+	}
 
 	// Needed in order to recursively refetch an entire evo line reliably
 	const reset = (evolution: Evolution) => {
-		retrieved.get(evolution.from.data)?.set(false)
-		retrieved.get(evolution.to.data)?.set(false)
+		retrievedSpeciesStore.get(evolution.from.data)?.set(false)
+		retrievedSpeciesStore.get(evolution.to.data)?.set(false)
 	}
 
 	return {
 		get: (species: SpeciesIdentifier) => {
-			if (!retrieved.has(species.data)) {
-				retrieved.set(species.data, writable(!species.isFakemon()))
-			}
+			const hasBeenRetrievedStore = hasBeenRetrieved(species)
 
-			const hasBeenRetrieved = retrieved.get(species.data)
-
-			return derived([allEvolutions, hasBeenRetrieved], ([forest, hasBeenRetrievedValue]) => {
+			return derived([allEvolutions, hasBeenRetrievedStore], ([forest, hasBeenRetrievedValue]) => {
 				if (forest == null) return undefined
 
 				if (!hasBeenRetrievedValue) {
 					provider.get(species).then((evolutions) => {
 						forest.addAll(evolutions)
-						hasBeenRetrieved.set(true)
+						hasBeenRetrievedStore.set(true)
+					})
+
+					return undefined
+				}
+
+				return forest
+			})
+		},
+
+		all: () => {
+			return derived([allEvolutions, allRetrieved], ([forest, hasBeenRetrieved]) => {
+				if (forest == null) return undefined
+
+				if (!hasBeenRetrieved) {
+					Promise.all(FakemonLocalStorage.list().map((info) => {
+						const species = SpeciesIdentifier.fromFakemonReadKey(info.readKey)
+
+						return provider.get(species).then((evolutions) => {
+							forest.addAll(evolutions)
+							didRetrieve(species)
+						})
+					})).then(() => {
+						allRetrieved.set(true)
 					})
 
 					return undefined
