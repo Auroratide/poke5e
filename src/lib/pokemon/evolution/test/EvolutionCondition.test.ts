@@ -36,9 +36,8 @@ describe("LevelCondition", () => {
 describe("ItemCondition", () => {
 	test("does not matter", () => {
 		const condition = new ItemCondition("Leaf Stone")
-		const creature = {}
 
-		const result = condition.meetsCondition(creature)
+		const result = condition.meetsCondition()
 
 		expect(result).toBe(true)
 	})
@@ -115,11 +114,8 @@ describe("MoveCondition", () => {
 describe("MoveTypeCondition", () => {
 	test("does not matter", () => {
 		const condition = new MoveTypeCondition("dark")
-		const creature = {
-			moves: [],
-		}
 
-		const result = condition.meetsCondition(creature)
+		const result = condition.meetsCondition()
 
 		expect(result).toBe(true)
 	})
@@ -152,9 +148,8 @@ describe("GenderCondition", () => {
 describe("TimeCondition", () => {
 	test("does not matter", () => {
 		const condition = new TimeCondition("night")
-		const creature = {}
 
-		const result = condition.meetsCondition(creature)
+		const result = condition.meetsCondition()
 
 		expect(result).toBe(true)
 	})
@@ -163,9 +158,8 @@ describe("TimeCondition", () => {
 describe("SpecialCondition", () => {
 	test("does not matter", () => {
 		const condition = new SpecialCondition("something interesting")
-		const creature = {}
 
-		const result = condition.meetsCondition(creature)
+		const result = condition.meetsCondition()
 
 		expect(result).toBe(true)
 	})
