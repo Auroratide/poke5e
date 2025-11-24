@@ -1,18 +1,12 @@
 <script lang="ts">
-	import type { LearnedMove, PokemonId, TrainerPokemon } from "$lib/trainers/types"
-	import Info from "./Info.svelte"
-	import Card from "$lib/design/Card.svelte"
-	import Button from "$lib/design/Button.svelte"
-	import { ActionArea } from "$lib/design/forms"
-	import type { TrainerStore } from "../trainers"
-	import { PageAction } from "../page-action"
-	import { Url } from "$lib/url"
-	import RequirePokemon from "./RequirePokemon.svelte"
-	import { TypeTag } from "$lib/pokemon/types-2"
 	import { WithSpecies } from "$lib/creatures/species"
-	import { EvolutionStore } from "$lib/pokemon/evolution"
-
-	const evolutions = EvolutionStore.canonList()
+	import Card from "$lib/design/Card.svelte"
+	import { TypeTag } from "$lib/pokemon/types-2"
+	import type { LearnedMove, PokemonId, TrainerPokemon } from "$lib/trainers/types"
+	import type { TrainerStore } from "../trainers"
+	import Info from "./Info.svelte"
+	import RequirePokemon from "./RequirePokemon.svelte"
+	import TrainerPokemonActions from "./TrainerPokemonActions.svelte"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
@@ -45,14 +39,7 @@
 			<TypeTag slot="header-extra" type={pokemon.type.data} />
 			<Info trainer={$trainer.info} {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} on:update-bond={onUpdateBond} />
 			{#if canEdit}
-				<ActionArea>
-					<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="ghost">Remove</Button>
-					{#if $evolutions?.evolvesTo(species.id).length > 0}
-						<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="ghost">Evolve</Button>
-					{/if}
-					<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.restPokemon)}" variant="success">Rest</Button>
-					<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.editPokemon)}">Edit</Button>
-				</ActionArea>
+				<TrainerPokemonActions {trainer} {species} {pokemon} />
 			{/if}
 		</Card>
 	</WithSpecies>
