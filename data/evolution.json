@@ -1,6 +1,7 @@
 {
 	"items": [
 		{
+			"id": "bulbasaur-to-ivysaur",
 			"from": "bulbasaur",
 			"to": "ivysaur",
 			"conditions": [
@@ -17,6 +18,7 @@
 			]
 		},
 		{
+			"id": "ivysaur-to-venusaur",
 			"from": "ivysaur",
 			"to": "venusaur",
 			"conditions": [
@@ -33,6 +35,7 @@
 			]
 		},
 		{
+			"id": "charmander-to-charmeleon",
 			"from": "charmander",
 			"to": "charmeleon",
 			"conditions": [
@@ -49,6 +52,7 @@
 			]
 		},
 		{
+			"id": "charmeleon-to-charizard",
 			"from": "charmeleon",
 			"to": "charizard",
 			"conditions": [
@@ -65,6 +69,7 @@
 			]
 		},
 		{
+			"id": "squirtle-to-wartortle",
 			"from": "squirtle",
 			"to": "wartortle",
 			"conditions": [
@@ -81,6 +86,7 @@
 			]
 		},
 		{
+			"id": "wartortle-to-blastoise",
 			"from": "wartortle",
 			"to": "blastoise",
 			"conditions": [
@@ -97,6 +103,7 @@
 			]
 		},
 		{
+			"id": "caterpie-to-metapod",
 			"from": "caterpie",
 			"to": "metapod",
 			"conditions": [
@@ -113,6 +120,7 @@
 			]
 		},
 		{
+			"id": "metapod-to-butterfree",
 			"from": "metapod",
 			"to": "butterfree",
 			"conditions": [
@@ -129,6 +137,7 @@
 			]
 		},
 		{
+			"id": "weedle-to-kakuna",
 			"from": "weedle",
 			"to": "kakuna",
 			"conditions": [
@@ -145,6 +154,7 @@
 			]
 		},
 		{
+			"id": "kakuna-to-beedrill",
 			"from": "kakuna",
 			"to": "beedrill",
 			"conditions": [
@@ -161,6 +171,7 @@
 			]
 		},
 		{
+			"id": "pidgey-to-pidgeotto",
 			"from": "pidgey",
 			"to": "pidgeotto",
 			"conditions": [
@@ -177,6 +188,7 @@
 			]
 		},
 		{
+			"id": "pidgeotto-to-pidgeot",
 			"from": "pidgeotto",
 			"to": "pidgeot",
 			"conditions": [
@@ -193,6 +205,7 @@
 			]
 		},
 		{
+			"id": "rattata-to-raticate",
 			"from": "rattata",
 			"to": "raticate",
 			"conditions": [
@@ -209,6 +222,7 @@
 			]
 		},
 		{
+			"id": "spearow-to-fearow",
 			"from": "spearow",
 			"to": "fearow",
 			"conditions": [
@@ -225,6 +239,7 @@
 			]
 		},
 		{
+			"id": "ekans-to-arbok",
 			"from": "ekans",
 			"to": "arbok",
 			"conditions": [
@@ -241,6 +256,7 @@
 			]
 		},
 		{
+			"id": "pikachu-to-raichu",
 			"from": "pikachu",
 			"to": "raichu",
 			"conditions": [
@@ -261,6 +277,7 @@
 			]
 		},
 		{
+			"id": "pikachu-to-alolan-raichu",
 			"from": "pikachu",
 			"to": "alolan-raichu",
 			"conditions": [
@@ -281,6 +298,7 @@
 			]
 		},
 		{
+			"id": "sandshrew-to-sandslash",
 			"from": "sandshrew",
 			"to": "sandslash",
 			"conditions": [
@@ -297,6 +315,7 @@
 			]
 		},
 		{
+			"id": "nidoran-f-to-nidorina",
 			"from": "nidoran-f",
 			"to": "nidorina",
 			"conditions": [
@@ -313,6 +332,7 @@
 			]
 		},
 		{
+			"id": "nidorina-to-nidoqueen",
 			"from": "nidorina",
 			"to": "nidoqueen",
 			"conditions": [
@@ -333,6 +353,7 @@
 			]
 		},
 		{
+			"id": "nidoran-m-to-nidorino",
 			"from": "nidoran-m",
 			"to": "nidorino",
 			"conditions": [
@@ -349,6 +370,7 @@
 			]
 		},
 		{
+			"id": "nidorino-to-nidoking",
 			"from": "nidorino",
 			"to": "nidoking",
 			"conditions": [
@@ -369,6 +391,7 @@
 			]
 		},
 		{
+			"id": "clefairy-to-clefable",
 			"from": "clefairy",
 			"to": "clefable",
 			"conditions": [
@@ -389,6 +412,7 @@
 			]
 		},
 		{
+			"id": "vulpix-to-ninetales",
 			"from": "vulpix",
 			"to": "ninetales",
 			"conditions": [
@@ -409,6 +433,7 @@
 			]
 		},
 		{
+			"id": "jigglypuff-to-wigglytuff",
 			"from": "jigglypuff",
 			"to": "wigglytuff",
 			"conditions": [
@@ -429,6 +454,7 @@
 			]
 		},
 		{
+			"id": "zubat-to-golbat",
 			"from": "zubat",
 			"to": "golbat",
 			"conditions": [
@@ -445,6 +471,7 @@
 			]
 		},
 		{
+			"id": "golbat-to-crobat",
 			"from": "golbat",
 			"to": "crobat",
 			"conditions": [
@@ -465,6 +492,7 @@
 			]
 		},
 		{
+			"id": "oddish-to-gloom",
 			"from": "oddish",
 			"to": "gloom",
 			"conditions": [
@@ -481,6 +509,7 @@
 			]
 		},
 		{
+			"id": "gloom-to-vileplume",
 			"from": "gloom",
 			"to": "vileplume",
 			"conditions": [
@@ -501,6 +530,7 @@
 			]
 		},
 		{
+			"id": "gloom-to-bellossom",
 			"from": "gloom",
 			"to": "bellossom",
 			"conditions": [
@@ -521,6 +551,7 @@
 			]
 		},
 		{
+			"id": "paras-to-parasect",
 			"from": "paras",
 			"to": "parasect",
 			"conditions": [
@@ -537,6 +568,7 @@
 			]
 		},
 		{
+			"id": "venonat-to-venomoth",
 			"from": "venonat",
 			"to": "venomoth",
 			"conditions": [
@@ -553,6 +585,7 @@
 			]
 		},
 		{
+			"id": "diglett-to-dugtrio",
 			"from": "diglett",
 			"to": "dugtrio",
 			"conditions": [
@@ -569,6 +602,7 @@
 			]
 		},
 		{
+			"id": "meowth-to-persian",
 			"from": "meowth",
 			"to": "persian",
 			"conditions": [
@@ -585,6 +619,7 @@
 			]
 		},
 		{
+			"id": "psyduck-to-golduck",
 			"from": "psyduck",
 			"to": "golduck",
 			"conditions": [
@@ -601,6 +636,7 @@
 			]
 		},
 		{
+			"id": "mankey-to-primeape",
 			"from": "mankey",
 			"to": "primeape",
 			"conditions": [
@@ -617,6 +653,7 @@
 			]
 		},
 		{
+			"id": "primeape-to-annihilape",
 			"from": "primeape",
 			"to": "annihilape",
 			"conditions": [
@@ -637,6 +674,7 @@
 			]
 		},
 		{
+			"id": "growlithe-to-arcanine",
 			"from": "growlithe",
 			"to": "arcanine",
 			"conditions": [
@@ -657,6 +695,7 @@
 			]
 		},
 		{
+			"id": "poliwag-to-poliwhirl",
 			"from": "poliwag",
 			"to": "poliwhirl",
 			"conditions": [
@@ -673,6 +712,7 @@
 			]
 		},
 		{
+			"id": "poliwhirl-to-poliwrath",
 			"from": "poliwhirl",
 			"to": "poliwrath",
 			"conditions": [
@@ -693,6 +733,7 @@
 			]
 		},
 		{
+			"id": "poliwhirl-to-politoed",
 			"from": "poliwhirl",
 			"to": "politoed",
 			"conditions": [
@@ -713,6 +754,7 @@
 			]
 		},
 		{
+			"id": "abra-to-kadabra",
 			"from": "abra",
 			"to": "kadabra",
 			"conditions": [
@@ -729,6 +771,7 @@
 			]
 		},
 		{
+			"id": "kadabra-to-alakazam",
 			"from": "kadabra",
 			"to": "alakazam",
 			"conditions": [
@@ -745,6 +788,7 @@
 			]
 		},
 		{
+			"id": "machop-to-machoke",
 			"from": "machop",
 			"to": "machoke",
 			"conditions": [
@@ -761,6 +805,7 @@
 			]
 		},
 		{
+			"id": "machoke-to-machamp",
 			"from": "machoke",
 			"to": "machamp",
 			"conditions": [
@@ -777,6 +822,7 @@
 			]
 		},
 		{
+			"id": "bellsprout-to-weepinbell",
 			"from": "bellsprout",
 			"to": "weepinbell",
 			"conditions": [
@@ -793,6 +839,7 @@
 			]
 		},
 		{
+			"id": "weepinbell-to-victreebel",
 			"from": "weepinbell",
 			"to": "victreebel",
 			"conditions": [
@@ -813,6 +860,7 @@
 			]
 		},
 		{
+			"id": "tentacool-to-tentacruel",
 			"from": "tentacool",
 			"to": "tentacruel",
 			"conditions": [
@@ -829,6 +877,7 @@
 			]
 		},
 		{
+			"id": "geodude-to-graveler",
 			"from": "geodude",
 			"to": "graveler",
 			"conditions": [
@@ -845,6 +894,7 @@
 			]
 		},
 		{
+			"id": "graveler-to-golem",
 			"from": "graveler",
 			"to": "golem",
 			"conditions": [
@@ -861,6 +911,7 @@
 			]
 		},
 		{
+			"id": "ponyta-to-rapidash",
 			"from": "ponyta",
 			"to": "rapidash",
 			"conditions": [
@@ -877,6 +928,7 @@
 			]
 		},
 		{
+			"id": "slowpoke-to-slowbro",
 			"from": "slowpoke",
 			"to": "slowbro",
 			"conditions": [
@@ -893,6 +945,7 @@
 			]
 		},
 		{
+			"id": "slowpoke-to-slowking",
 			"from": "slowpoke",
 			"to": "slowking",
 			"conditions": [
@@ -913,6 +966,7 @@
 			]
 		},
 		{
+			"id": "magnemite-to-magneton",
 			"from": "magnemite",
 			"to": "magneton",
 			"conditions": [
@@ -929,6 +983,7 @@
 			]
 		},
 		{
+			"id": "magneton-to-magnezone",
 			"from": "magneton",
 			"to": "magnezone",
 			"conditions": [
@@ -945,6 +1000,7 @@
 			]
 		},
 		{
+			"id": "doduo-to-dodrio",
 			"from": "doduo",
 			"to": "dodrio",
 			"conditions": [
@@ -961,6 +1017,7 @@
 			]
 		},
 		{
+			"id": "seel-to-dewgong",
 			"from": "seel",
 			"to": "dewgong",
 			"conditions": [
@@ -977,6 +1034,7 @@
 			]
 		},
 		{
+			"id": "grimer-to-muk",
 			"from": "grimer",
 			"to": "muk",
 			"conditions": [
@@ -993,6 +1051,7 @@
 			]
 		},
 		{
+			"id": "shellder-to-cloyster",
 			"from": "shellder",
 			"to": "cloyster",
 			"conditions": [
@@ -1013,6 +1072,7 @@
 			]
 		},
 		{
+			"id": "gastly-to-haunter",
 			"from": "gastly",
 			"to": "haunter",
 			"conditions": [
@@ -1029,6 +1089,7 @@
 			]
 		},
 		{
+			"id": "haunter-to-gengar",
 			"from": "haunter",
 			"to": "gengar",
 			"conditions": [
@@ -1045,6 +1106,7 @@
 			]
 		},
 		{
+			"id": "onix-to-steelix",
 			"from": "onix",
 			"to": "steelix",
 			"conditions": [
@@ -1065,6 +1127,7 @@
 			]
 		},
 		{
+			"id": "drowzee-to-hypno",
 			"from": "drowzee",
 			"to": "hypno",
 			"conditions": [
@@ -1081,6 +1144,7 @@
 			]
 		},
 		{
+			"id": "krabby-to-kingler",
 			"from": "krabby",
 			"to": "kingler",
 			"conditions": [
@@ -1097,6 +1161,7 @@
 			]
 		},
 		{
+			"id": "voltorb-to-electrode",
 			"from": "voltorb",
 			"to": "electrode",
 			"conditions": [
@@ -1113,6 +1178,7 @@
 			]
 		},
 		{
+			"id": "exeggcute-to-exeggutor",
 			"from": "exeggcute",
 			"to": "exeggutor",
 			"conditions": [
@@ -1133,6 +1199,7 @@
 			]
 		},
 		{
+			"id": "exeggcute-to-alolan-exeggutor",
 			"from": "exeggcute",
 			"to": "alolan-exeggutor",
 			"conditions": [
@@ -1153,6 +1220,7 @@
 			]
 		},
 		{
+			"id": "cubone-to-marowak",
 			"from": "cubone",
 			"to": "marowak",
 			"conditions": [
@@ -1169,6 +1237,7 @@
 			]
 		},
 		{
+			"id": "cubone-to-alolan-marowak",
 			"from": "cubone",
 			"to": "alolan-marowak",
 			"conditions": [
@@ -1189,6 +1258,7 @@
 			]
 		},
 		{
+			"id": "lickitung-to-lickilicky",
 			"from": "lickitung",
 			"to": "lickilicky",
 			"conditions": [
@@ -1205,6 +1275,7 @@
 			]
 		},
 		{
+			"id": "koffing-to-weezing",
 			"from": "koffing",
 			"to": "weezing",
 			"conditions": [
@@ -1221,6 +1292,7 @@
 			]
 		},
 		{
+			"id": "koffing-to-galarian-weezing",
 			"from": "koffing",
 			"to": "galarian-weezing",
 			"conditions": [
@@ -1241,6 +1313,7 @@
 			]
 		},
 		{
+			"id": "rhyhorn-to-rhydon",
 			"from": "rhyhorn",
 			"to": "rhydon",
 			"conditions": [
@@ -1257,6 +1330,7 @@
 			]
 		},
 		{
+			"id": "rhydon-to-rhyperior",
 			"from": "rhydon",
 			"to": "rhyperior",
 			"conditions": [
@@ -1277,6 +1351,7 @@
 			]
 		},
 		{
+			"id": "chansey-to-blissey",
 			"from": "chansey",
 			"to": "blissey",
 			"conditions": [
@@ -1297,6 +1372,7 @@
 			]
 		},
 		{
+			"id": "tangela-to-tangrowth",
 			"from": "tangela",
 			"to": "tangrowth",
 			"conditions": [
@@ -1313,6 +1389,7 @@
 			]
 		},
 		{
+			"id": "horsea-to-seadra",
 			"from": "horsea",
 			"to": "seadra",
 			"conditions": [
@@ -1329,6 +1406,7 @@
 			]
 		},
 		{
+			"id": "seadra-to-kingdra",
 			"from": "seadra",
 			"to": "kingdra",
 			"conditions": [
@@ -1349,6 +1427,7 @@
 			]
 		},
 		{
+			"id": "goldeen-to-seaking",
 			"from": "goldeen",
 			"to": "seaking",
 			"conditions": [
@@ -1365,6 +1444,7 @@
 			]
 		},
 		{
+			"id": "staryu-to-starmie",
 			"from": "staryu",
 			"to": "starmie",
 			"conditions": [
@@ -1385,6 +1465,7 @@
 			]
 		},
 		{
+			"id": "scyther-to-scizor",
 			"from": "scyther",
 			"to": "scizor",
 			"conditions": [
@@ -1405,6 +1486,7 @@
 			]
 		},
 		{
+			"id": "scyther-to-kleavor",
 			"from": "scyther",
 			"to": "kleavor",
 			"conditions": [
@@ -1425,6 +1507,7 @@
 			]
 		},
 		{
+			"id": "electabuzz-to-electivire",
 			"from": "electabuzz",
 			"to": "electivire",
 			"conditions": [
@@ -1445,6 +1528,7 @@
 			]
 		},
 		{
+			"id": "magmar-to-magmortar",
 			"from": "magmar",
 			"to": "magmortar",
 			"conditions": [
@@ -1465,6 +1549,7 @@
 			]
 		},
 		{
+			"id": "magikarp-to-gyarados",
 			"from": "magikarp",
 			"to": "gyarados",
 			"conditions": [
@@ -1481,6 +1566,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-vaporeon",
 			"from": "eevee",
 			"to": "vaporeon",
 			"conditions": [
@@ -1501,6 +1587,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-jolteon",
 			"from": "eevee",
 			"to": "jolteon",
 			"conditions": [
@@ -1521,6 +1608,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-flareon",
 			"from": "eevee",
 			"to": "flareon",
 			"conditions": [
@@ -1541,6 +1629,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-leafeon",
 			"from": "eevee",
 			"to": "leafeon",
 			"conditions": [
@@ -1561,6 +1650,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-glaceon",
 			"from": "eevee",
 			"to": "glaceon",
 			"conditions": [
@@ -1581,6 +1671,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-espeon",
 			"from": "eevee",
 			"to": "espeon",
 			"conditions": [
@@ -1605,6 +1696,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-umbreon",
 			"from": "eevee",
 			"to": "umbreon",
 			"conditions": [
@@ -1629,6 +1721,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-sylveon",
 			"from": "eevee",
 			"to": "sylveon",
 			"conditions": [
@@ -1653,6 +1746,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-droideon",
 			"from": "eevee",
 			"to": "droideon",
 			"conditions": [
@@ -1673,6 +1767,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-brawleon",
 			"from": "eevee",
 			"to": "brawleon",
 			"conditions": [
@@ -1697,6 +1792,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-specteon",
 			"from": "eevee",
 			"to": "specteon",
 			"conditions": [
@@ -1717,6 +1813,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-toxeon",
 			"from": "eevee",
 			"to": "toxeon",
 			"conditions": [
@@ -1737,6 +1834,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-minereon",
 			"from": "eevee",
 			"to": "minereon",
 			"conditions": [
@@ -1757,6 +1855,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-aereon",
 			"from": "eevee",
 			"to": "aereon",
 			"conditions": [
@@ -1781,6 +1880,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-pesteon",
 			"from": "eevee",
 			"to": "pesteon",
 			"conditions": [
@@ -1805,6 +1905,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-terreon",
 			"from": "eevee",
 			"to": "terreon",
 			"conditions": [
@@ -1829,6 +1930,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-drakeon",
 			"from": "eevee",
 			"to": "drakeon",
 			"conditions": [
@@ -1849,6 +1951,7 @@
 			]
 		},
 		{
+			"id": "eevee-to-eeveon",
 			"from": "eevee",
 			"to": "eeveon",
 			"conditions": [
@@ -1869,6 +1972,7 @@
 			]
 		},
 		{
+			"id": "porygon-to-porygon2",
 			"from": "porygon",
 			"to": "porygon2",
 			"conditions": [
@@ -1889,6 +1993,7 @@
 			]
 		},
 		{
+			"id": "omanyte-to-omastar",
 			"from": "omanyte",
 			"to": "omastar",
 			"conditions": [
@@ -1905,6 +2010,7 @@
 			]
 		},
 		{
+			"id": "kabuto-to-kabutops",
 			"from": "kabuto",
 			"to": "kabutops",
 			"conditions": [
@@ -1921,6 +2027,7 @@
 			]
 		},
 		{
+			"id": "dratini-to-dragonair",
 			"from": "dratini",
 			"to": "dragonair",
 			"conditions": [
@@ -1937,6 +2044,7 @@
 			]
 		},
 		{
+			"id": "dragonair-to-dragonite",
 			"from": "dragonair",
 			"to": "dragonite",
 			"conditions": [
@@ -1953,6 +2061,7 @@
 			]
 		},
 		{
+			"id": "chikorita-to-bayleef",
 			"from": "chikorita",
 			"to": "bayleef",
 			"conditions": [
@@ -1969,6 +2078,7 @@
 			]
 		},
 		{
+			"id": "bayleef-to-meganium",
 			"from": "bayleef",
 			"to": "meganium",
 			"conditions": [
@@ -1985,6 +2095,7 @@
 			]
 		},
 		{
+			"id": "cyndaquil-to-quilava",
 			"from": "cyndaquil",
 			"to": "quilava",
 			"conditions": [
@@ -2001,6 +2112,7 @@
 			]
 		},
 		{
+			"id": "quilava-to-typhlosion",
 			"from": "quilava",
 			"to": "typhlosion",
 			"conditions": [
@@ -2017,6 +2129,7 @@
 			]
 		},
 		{
+			"id": "quilava-to-typhlosion-hisui",
 			"from": "quilava",
 			"to": "typhlosion-hisui",
 			"conditions": [
@@ -2033,6 +2146,7 @@
 			]
 		},
 		{
+			"id": "totodile-to-croconaw",
 			"from": "totodile",
 			"to": "croconaw",
 			"conditions": [
@@ -2049,6 +2163,7 @@
 			]
 		},
 		{
+			"id": "croconaw-to-feraligatr",
 			"from": "croconaw",
 			"to": "feraligatr",
 			"conditions": [
@@ -2065,6 +2180,7 @@
 			]
 		},
 		{
+			"id": "sentret-to-furret",
 			"from": "sentret",
 			"to": "furret",
 			"conditions": [
@@ -2081,6 +2197,7 @@
 			]
 		},
 		{
+			"id": "hoothoot-to-noctowl",
 			"from": "hoothoot",
 			"to": "noctowl",
 			"conditions": [
@@ -2097,6 +2214,7 @@
 			]
 		},
 		{
+			"id": "ledyba-to-ledian",
 			"from": "ledyba",
 			"to": "ledian",
 			"conditions": [
@@ -2113,6 +2231,7 @@
 			]
 		},
 		{
+			"id": "spinarak-to-ariados",
 			"from": "spinarak",
 			"to": "ariados",
 			"conditions": [
@@ -2129,6 +2248,7 @@
 			]
 		},
 		{
+			"id": "chinchou-to-lanturn",
 			"from": "chinchou",
 			"to": "lanturn",
 			"conditions": [
@@ -2145,6 +2265,7 @@
 			]
 		},
 		{
+			"id": "pichu-to-pikachu",
 			"from": "pichu",
 			"to": "pikachu",
 			"conditions": [
@@ -2165,6 +2286,7 @@
 			]
 		},
 		{
+			"id": "cleffa-to-clefairy",
 			"from": "cleffa",
 			"to": "clefairy",
 			"conditions": [
@@ -2185,6 +2307,7 @@
 			]
 		},
 		{
+			"id": "igglybuff-to-jigglypuff",
 			"from": "igglybuff",
 			"to": "jigglypuff",
 			"conditions": [
@@ -2205,6 +2328,7 @@
 			]
 		},
 		{
+			"id": "togepi-to-togetic",
 			"from": "togepi",
 			"to": "togetic",
 			"conditions": [
@@ -2225,6 +2349,7 @@
 			]
 		},
 		{
+			"id": "togetic-to-togekiss",
 			"from": "togetic",
 			"to": "togekiss",
 			"conditions": [
@@ -2245,6 +2370,7 @@
 			]
 		},
 		{
+			"id": "natu-to-xatu",
 			"from": "natu",
 			"to": "xatu",
 			"conditions": [
@@ -2261,6 +2387,7 @@
 			]
 		},
 		{
+			"id": "mareep-to-flaaffy",
 			"from": "mareep",
 			"to": "flaaffy",
 			"conditions": [
@@ -2277,6 +2404,7 @@
 			]
 		},
 		{
+			"id": "flaaffy-to-ampharos",
 			"from": "flaaffy",
 			"to": "ampharos",
 			"conditions": [
@@ -2293,6 +2421,7 @@
 			]
 		},
 		{
+			"id": "marill-to-azumarill",
 			"from": "marill",
 			"to": "azumarill",
 			"conditions": [
@@ -2309,6 +2438,7 @@
 			]
 		},
 		{
+			"id": "hoppip-to-skiploom",
 			"from": "hoppip",
 			"to": "skiploom",
 			"conditions": [
@@ -2325,6 +2455,7 @@
 			]
 		},
 		{
+			"id": "skiploom-to-jumpluff",
 			"from": "skiploom",
 			"to": "jumpluff",
 			"conditions": [
@@ -2341,6 +2472,7 @@
 			]
 		},
 		{
+			"id": "aipom-to-ambipom",
 			"from": "aipom",
 			"to": "ambipom",
 			"conditions": [
@@ -2357,6 +2489,7 @@
 			]
 		},
 		{
+			"id": "sunkern-to-sunflora",
 			"from": "sunkern",
 			"to": "sunflora",
 			"conditions": [
@@ -2377,6 +2510,7 @@
 			]
 		},
 		{
+			"id": "yanma-to-yanmega",
 			"from": "yanma",
 			"to": "yanmega",
 			"conditions": [
@@ -2393,6 +2527,7 @@
 			]
 		},
 		{
+			"id": "wooper-to-quagsire",
 			"from": "wooper",
 			"to": "quagsire",
 			"conditions": [
@@ -2409,6 +2544,7 @@
 			]
 		},
 		{
+			"id": "murkrow-to-honchkrow",
 			"from": "murkrow",
 			"to": "honchkrow",
 			"conditions": [
@@ -2429,6 +2565,7 @@
 			]
 		},
 		{
+			"id": "misdreavus-to-mismagius",
 			"from": "misdreavus",
 			"to": "mismagius",
 			"conditions": [
@@ -2449,6 +2586,7 @@
 			]
 		},
 		{
+			"id": "girafarig-to-farigiraf",
 			"from": "girafarig",
 			"to": "farigiraf",
 			"conditions": [
@@ -2465,6 +2603,7 @@
 			]
 		},
 		{
+			"id": "pineco-to-forretress",
 			"from": "pineco",
 			"to": "forretress",
 			"conditions": [
@@ -2481,6 +2620,7 @@
 			]
 		},
 		{
+			"id": "dunsparce-to-dudunsparce",
 			"from": "dunsparce",
 			"to": "dudunsparce",
 			"conditions": [
@@ -2501,6 +2641,7 @@
 			]
 		},
 		{
+			"id": "gligar-to-gliscor",
 			"from": "gligar",
 			"to": "gliscor",
 			"conditions": [
@@ -2521,6 +2662,7 @@
 			]
 		},
 		{
+			"id": "snubbull-to-granbull",
 			"from": "snubbull",
 			"to": "granbull",
 			"conditions": [
@@ -2537,6 +2679,7 @@
 			]
 		},
 		{
+			"id": "sneasel-to-weavile",
 			"from": "sneasel",
 			"to": "weavile",
 			"conditions": [
@@ -2557,6 +2700,7 @@
 			]
 		},
 		{
+			"id": "teddiursa-to-ursaring",
 			"from": "teddiursa",
 			"to": "ursaring",
 			"conditions": [
@@ -2573,6 +2717,7 @@
 			]
 		},
 		{
+			"id": "ursaring-to-ursaluna",
 			"from": "ursaring",
 			"to": "ursaluna",
 			"conditions": [
@@ -2597,6 +2742,7 @@
 			]
 		},
 		{
+			"id": "slugma-to-magcargo",
 			"from": "slugma",
 			"to": "magcargo",
 			"conditions": [
@@ -2613,6 +2759,7 @@
 			]
 		},
 		{
+			"id": "swinub-to-piloswine",
 			"from": "swinub",
 			"to": "piloswine",
 			"conditions": [
@@ -2629,6 +2776,7 @@
 			]
 		},
 		{
+			"id": "piloswine-to-mamoswine",
 			"from": "piloswine",
 			"to": "mamoswine",
 			"conditions": [
@@ -2645,6 +2793,7 @@
 			]
 		},
 		{
+			"id": "remoraid-to-octillery",
 			"from": "remoraid",
 			"to": "octillery",
 			"conditions": [
@@ -2661,6 +2810,7 @@
 			]
 		},
 		{
+			"id": "houndour-to-houndoom",
 			"from": "houndour",
 			"to": "houndoom",
 			"conditions": [
@@ -2677,6 +2827,7 @@
 			]
 		},
 		{
+			"id": "phanpy-to-donphan",
 			"from": "phanpy",
 			"to": "donphan",
 			"conditions": [
@@ -2693,6 +2844,7 @@
 			]
 		},
 		{
+			"id": "porygon2-to-porygon-z",
 			"from": "porygon2",
 			"to": "porygon-z",
 			"conditions": [
@@ -2713,6 +2865,7 @@
 			]
 		},
 		{
+			"id": "stantler-to-wyrdeer",
 			"from": "stantler",
 			"to": "wyrdeer",
 			"conditions": [
@@ -2733,6 +2886,7 @@
 			]
 		},
 		{
+			"id": "tyrogue-to-hitmonchan",
 			"from": "tyrogue",
 			"to": "hitmonchan",
 			"conditions": [
@@ -2753,6 +2907,7 @@
 			]
 		},
 		{
+			"id": "tyrogue-to-hitmonlee",
 			"from": "tyrogue",
 			"to": "hitmonlee",
 			"conditions": [
@@ -2773,6 +2928,7 @@
 			]
 		},
 		{
+			"id": "tyrogue-to-hitmontop",
 			"from": "tyrogue",
 			"to": "hitmontop",
 			"conditions": [
@@ -2793,6 +2949,7 @@
 			]
 		},
 		{
+			"id": "smoochum-to-jynx",
 			"from": "smoochum",
 			"to": "jynx",
 			"conditions": [
@@ -2813,6 +2970,7 @@
 			]
 		},
 		{
+			"id": "elekid-to-electabuzz",
 			"from": "elekid",
 			"to": "electabuzz",
 			"conditions": [
@@ -2833,6 +2991,7 @@
 			]
 		},
 		{
+			"id": "magby-to-magmar",
 			"from": "magby",
 			"to": "magmar",
 			"conditions": [
@@ -2853,6 +3012,7 @@
 			]
 		},
 		{
+			"id": "larvitar-to-pupitar",
 			"from": "larvitar",
 			"to": "pupitar",
 			"conditions": [
@@ -2869,6 +3029,7 @@
 			]
 		},
 		{
+			"id": "pupitar-to-tyranitar",
 			"from": "pupitar",
 			"to": "tyranitar",
 			"conditions": [
@@ -2885,6 +3046,7 @@
 			]
 		},
 		{
+			"id": "treecko-to-grovyle",
 			"from": "treecko",
 			"to": "grovyle",
 			"conditions": [
@@ -2901,6 +3063,7 @@
 			]
 		},
 		{
+			"id": "grovyle-to-sceptile",
 			"from": "grovyle",
 			"to": "sceptile",
 			"conditions": [
@@ -2917,6 +3080,7 @@
 			]
 		},
 		{
+			"id": "torchic-to-combusken",
 			"from": "torchic",
 			"to": "combusken",
 			"conditions": [
@@ -2933,6 +3097,7 @@
 			]
 		},
 		{
+			"id": "combusken-to-blaziken",
 			"from": "combusken",
 			"to": "blaziken",
 			"conditions": [
@@ -2949,6 +3114,7 @@
 			]
 		},
 		{
+			"id": "mudkip-to-marshtomp",
 			"from": "mudkip",
 			"to": "marshtomp",
 			"conditions": [
@@ -2965,6 +3131,7 @@
 			]
 		},
 		{
+			"id": "marshtomp-to-swampert",
 			"from": "marshtomp",
 			"to": "swampert",
 			"conditions": [
@@ -2981,6 +3148,7 @@
 			]
 		},
 		{
+			"id": "poochyena-to-mightyena",
 			"from": "poochyena",
 			"to": "mightyena",
 			"conditions": [
@@ -2997,6 +3165,7 @@
 			]
 		},
 		{
+			"id": "zigzagoon-to-linoone",
 			"from": "zigzagoon",
 			"to": "linoone",
 			"conditions": [
@@ -3013,6 +3182,7 @@
 			]
 		},
 		{
+			"id": "wurmple-to-silcoon",
 			"from": "wurmple",
 			"to": "silcoon",
 			"conditions": [
@@ -3033,6 +3203,7 @@
 			]
 		},
 		{
+			"id": "wurmple-to-cascoon",
 			"from": "wurmple",
 			"to": "cascoon",
 			"conditions": [
@@ -3053,6 +3224,7 @@
 			]
 		},
 		{
+			"id": "silcoon-to-beautifly",
 			"from": "silcoon",
 			"to": "beautifly",
 			"conditions": [
@@ -3069,6 +3241,7 @@
 			]
 		},
 		{
+			"id": "cascoon-to-dustox",
 			"from": "cascoon",
 			"to": "dustox",
 			"conditions": [
@@ -3085,6 +3258,7 @@
 			]
 		},
 		{
+			"id": "lotad-to-lombre",
 			"from": "lotad",
 			"to": "lombre",
 			"conditions": [
@@ -3101,6 +3275,7 @@
 			]
 		},
 		{
+			"id": "lombre-to-ludicolo",
 			"from": "lombre",
 			"to": "ludicolo",
 			"conditions": [
@@ -3121,6 +3296,7 @@
 			]
 		},
 		{
+			"id": "seedot-to-nuzleaf",
 			"from": "seedot",
 			"to": "nuzleaf",
 			"conditions": [
@@ -3137,6 +3313,7 @@
 			]
 		},
 		{
+			"id": "nuzleaf-to-shiftry",
 			"from": "nuzleaf",
 			"to": "shiftry",
 			"conditions": [
@@ -3157,6 +3334,7 @@
 			]
 		},
 		{
+			"id": "taillow-to-swellow",
 			"from": "taillow",
 			"to": "swellow",
 			"conditions": [
@@ -3173,6 +3351,7 @@
 			]
 		},
 		{
+			"id": "wingull-to-pelipper",
 			"from": "wingull",
 			"to": "pelipper",
 			"conditions": [
@@ -3189,6 +3368,7 @@
 			]
 		},
 		{
+			"id": "ralts-to-kirlia",
 			"from": "ralts",
 			"to": "kirlia",
 			"conditions": [
@@ -3205,6 +3385,7 @@
 			]
 		},
 		{
+			"id": "kirlia-to-gardevoir",
 			"from": "kirlia",
 			"to": "gardevoir",
 			"conditions": [
@@ -3221,6 +3402,7 @@
 			]
 		},
 		{
+			"id": "kirlia-to-gallade",
 			"from": "kirlia",
 			"to": "gallade",
 			"conditions": [
@@ -3245,6 +3427,7 @@
 			]
 		},
 		{
+			"id": "surskit-to-masquerain",
 			"from": "surskit",
 			"to": "masquerain",
 			"conditions": [
@@ -3261,6 +3444,7 @@
 			]
 		},
 		{
+			"id": "shroomish-to-breloom",
 			"from": "shroomish",
 			"to": "breloom",
 			"conditions": [
@@ -3277,6 +3461,7 @@
 			]
 		},
 		{
+			"id": "slakoth-to-vigoroth",
 			"from": "slakoth",
 			"to": "vigoroth",
 			"conditions": [
@@ -3293,6 +3478,7 @@
 			]
 		},
 		{
+			"id": "vigoroth-to-slaking",
 			"from": "vigoroth",
 			"to": "slaking",
 			"conditions": [
@@ -3309,6 +3495,7 @@
 			]
 		},
 		{
+			"id": "nincada-to-ninjask",
 			"from": "nincada",
 			"to": "ninjask",
 			"conditions": [
@@ -3325,6 +3512,7 @@
 			]
 		},
 		{
+			"id": "nincada-to-shedinja",
 			"from": "nincada",
 			"to": "shedinja",
 			"conditions": [
@@ -3345,6 +3533,7 @@
 			]
 		},
 		{
+			"id": "whismur-to-loudred",
 			"from": "whismur",
 			"to": "loudred",
 			"conditions": [
@@ -3361,6 +3550,7 @@
 			]
 		},
 		{
+			"id": "loudred-to-exploud",
 			"from": "loudred",
 			"to": "exploud",
 			"conditions": [
@@ -3377,6 +3567,7 @@
 			]
 		},
 		{
+			"id": "makuhita-to-hariyama",
 			"from": "makuhita",
 			"to": "hariyama",
 			"conditions": [
@@ -3393,6 +3584,7 @@
 			]
 		},
 		{
+			"id": "azurill-to-marill",
 			"from": "azurill",
 			"to": "marill",
 			"conditions": [
@@ -3409,6 +3601,7 @@
 			]
 		},
 		{
+			"id": "nosepass-to-probopass",
 			"from": "nosepass",
 			"to": "probopass",
 			"conditions": [
@@ -3425,6 +3618,7 @@
 			]
 		},
 		{
+			"id": "skitty-to-delcatty",
 			"from": "skitty",
 			"to": "delcatty",
 			"conditions": [
@@ -3445,6 +3639,7 @@
 			]
 		},
 		{
+			"id": "aron-to-lairon",
 			"from": "aron",
 			"to": "lairon",
 			"conditions": [
@@ -3461,6 +3656,7 @@
 			]
 		},
 		{
+			"id": "lairon-to-aggron",
 			"from": "lairon",
 			"to": "aggron",
 			"conditions": [
@@ -3477,6 +3673,7 @@
 			]
 		},
 		{
+			"id": "meditite-to-medicham",
 			"from": "meditite",
 			"to": "medicham",
 			"conditions": [
@@ -3493,6 +3690,7 @@
 			]
 		},
 		{
+			"id": "electrike-to-manectric",
 			"from": "electrike",
 			"to": "manectric",
 			"conditions": [
@@ -3509,6 +3707,7 @@
 			]
 		},
 		{
+			"id": "roselia-to-roserade",
 			"from": "roselia",
 			"to": "roserade",
 			"conditions": [
@@ -3529,6 +3728,7 @@
 			]
 		},
 		{
+			"id": "gulpin-to-swalot",
 			"from": "gulpin",
 			"to": "swalot",
 			"conditions": [
@@ -3545,6 +3745,7 @@
 			]
 		},
 		{
+			"id": "carvanha-to-sharpedo",
 			"from": "carvanha",
 			"to": "sharpedo",
 			"conditions": [
@@ -3561,6 +3762,7 @@
 			]
 		},
 		{
+			"id": "wailmer-to-wailord",
 			"from": "wailmer",
 			"to": "wailord",
 			"conditions": [
@@ -3577,6 +3779,7 @@
 			]
 		},
 		{
+			"id": "numel-to-camerupt",
 			"from": "numel",
 			"to": "camerupt",
 			"conditions": [
@@ -3593,6 +3796,7 @@
 			]
 		},
 		{
+			"id": "spoink-to-grumpig",
 			"from": "spoink",
 			"to": "grumpig",
 			"conditions": [
@@ -3609,6 +3813,7 @@
 			]
 		},
 		{
+			"id": "trapinch-to-vibrava",
 			"from": "trapinch",
 			"to": "vibrava",
 			"conditions": [
@@ -3625,6 +3830,7 @@
 			]
 		},
 		{
+			"id": "vibrava-to-flygon",
 			"from": "vibrava",
 			"to": "flygon",
 			"conditions": [
@@ -3641,6 +3847,7 @@
 			]
 		},
 		{
+			"id": "cacnea-to-cacturne",
 			"from": "cacnea",
 			"to": "cacturne",
 			"conditions": [
@@ -3657,6 +3864,7 @@
 			]
 		},
 		{
+			"id": "swablu-to-altaria",
 			"from": "swablu",
 			"to": "altaria",
 			"conditions": [
@@ -3673,6 +3881,7 @@
 			]
 		},
 		{
+			"id": "barboach-to-whiscash",
 			"from": "barboach",
 			"to": "whiscash",
 			"conditions": [
@@ -3689,6 +3898,7 @@
 			]
 		},
 		{
+			"id": "corphish-to-crawdaunt",
 			"from": "corphish",
 			"to": "crawdaunt",
 			"conditions": [
@@ -3705,6 +3915,7 @@
 			]
 		},
 		{
+			"id": "baltoy-to-claydol",
 			"from": "baltoy",
 			"to": "claydol",
 			"conditions": [
@@ -3721,6 +3932,7 @@
 			]
 		},
 		{
+			"id": "lileep-to-cradily",
 			"from": "lileep",
 			"to": "cradily",
 			"conditions": [
@@ -3737,6 +3949,7 @@
 			]
 		},
 		{
+			"id": "anorith-to-armaldo",
 			"from": "anorith",
 			"to": "armaldo",
 			"conditions": [
@@ -3753,6 +3966,7 @@
 			]
 		},
 		{
+			"id": "feebas-to-milotic",
 			"from": "feebas",
 			"to": "milotic",
 			"conditions": [
@@ -3773,6 +3987,7 @@
 			]
 		},
 		{
+			"id": "shuppet-to-banette",
 			"from": "shuppet",
 			"to": "banette",
 			"conditions": [
@@ -3789,6 +4004,7 @@
 			]
 		},
 		{
+			"id": "duskull-to-dusclops",
 			"from": "duskull",
 			"to": "dusclops",
 			"conditions": [
@@ -3805,6 +4021,7 @@
 			]
 		},
 		{
+			"id": "dusclops-to-dusknoir",
 			"from": "dusclops",
 			"to": "dusknoir",
 			"conditions": [
@@ -3825,6 +4042,7 @@
 			]
 		},
 		{
+			"id": "wynaut-to-wobbuffet",
 			"from": "wynaut",
 			"to": "wobbuffet",
 			"conditions": [
@@ -3841,6 +4059,7 @@
 			]
 		},
 		{
+			"id": "snorunt-to-glalie",
 			"from": "snorunt",
 			"to": "glalie",
 			"conditions": [
@@ -3857,6 +4076,7 @@
 			]
 		},
 		{
+			"id": "snorunt-to-froslass",
 			"from": "snorunt",
 			"to": "froslass",
 			"conditions": [
@@ -3881,6 +4101,7 @@
 			]
 		},
 		{
+			"id": "spheal-to-sealeo",
 			"from": "spheal",
 			"to": "sealeo",
 			"conditions": [
@@ -3897,6 +4118,7 @@
 			]
 		},
 		{
+			"id": "sealeo-to-walrein",
 			"from": "sealeo",
 			"to": "walrein",
 			"conditions": [
@@ -3913,6 +4135,7 @@
 			]
 		},
 		{
+			"id": "clamperl-to-huntail",
 			"from": "clamperl",
 			"to": "huntail",
 			"conditions": [
@@ -3933,6 +4156,7 @@
 			]
 		},
 		{
+			"id": "clamperl-to-gorebyss",
 			"from": "clamperl",
 			"to": "gorebyss",
 			"conditions": [
@@ -3953,6 +4177,7 @@
 			]
 		},
 		{
+			"id": "bagon-to-shelgon",
 			"from": "bagon",
 			"to": "shelgon",
 			"conditions": [
@@ -3969,6 +4194,7 @@
 			]
 		},
 		{
+			"id": "shelgon-to-salamence",
 			"from": "shelgon",
 			"to": "salamence",
 			"conditions": [
@@ -3985,6 +4211,7 @@
 			]
 		},
 		{
+			"id": "beldum-to-metang",
 			"from": "beldum",
 			"to": "metang",
 			"conditions": [
@@ -4001,6 +4228,7 @@
 			]
 		},
 		{
+			"id": "metang-to-metagross",
 			"from": "metang",
 			"to": "metagross",
 			"conditions": [
@@ -4017,6 +4245,7 @@
 			]
 		},
 		{
+			"id": "turtwig-to-grotle",
 			"from": "turtwig",
 			"to": "grotle",
 			"conditions": [
@@ -4033,6 +4262,7 @@
 			]
 		},
 		{
+			"id": "grotle-to-torterra",
 			"from": "grotle",
 			"to": "torterra",
 			"conditions": [
@@ -4049,6 +4279,7 @@
 			]
 		},
 		{
+			"id": "chimchar-to-monferno",
 			"from": "chimchar",
 			"to": "monferno",
 			"conditions": [
@@ -4065,6 +4296,7 @@
 			]
 		},
 		{
+			"id": "monferno-to-infernape",
 			"from": "monferno",
 			"to": "infernape",
 			"conditions": [
@@ -4081,6 +4313,7 @@
 			]
 		},
 		{
+			"id": "piplup-to-prinplup",
 			"from": "piplup",
 			"to": "prinplup",
 			"conditions": [
@@ -4097,6 +4330,7 @@
 			]
 		},
 		{
+			"id": "prinplup-to-empoleon",
 			"from": "prinplup",
 			"to": "empoleon",
 			"conditions": [
@@ -4113,6 +4347,7 @@
 			]
 		},
 		{
+			"id": "starly-to-staravia",
 			"from": "starly",
 			"to": "staravia",
 			"conditions": [
@@ -4129,6 +4364,7 @@
 			]
 		},
 		{
+			"id": "staravia-to-staraptor",
 			"from": "staravia",
 			"to": "staraptor",
 			"conditions": [
@@ -4145,6 +4381,7 @@
 			]
 		},
 		{
+			"id": "bidoof-to-bibarel",
 			"from": "bidoof",
 			"to": "bibarel",
 			"conditions": [
@@ -4161,6 +4398,7 @@
 			]
 		},
 		{
+			"id": "kricketot-to-kricketune",
 			"from": "kricketot",
 			"to": "kricketune",
 			"conditions": [
@@ -4177,6 +4415,7 @@
 			]
 		},
 		{
+			"id": "shinx-to-luxio",
 			"from": "shinx",
 			"to": "luxio",
 			"conditions": [
@@ -4193,6 +4432,7 @@
 			]
 		},
 		{
+			"id": "luxio-to-luxray",
 			"from": "luxio",
 			"to": "luxray",
 			"conditions": [
@@ -4209,6 +4449,7 @@
 			]
 		},
 		{
+			"id": "budew-to-roselia",
 			"from": "budew",
 			"to": "roselia",
 			"conditions": [
@@ -4229,6 +4470,7 @@
 			]
 		},
 		{
+			"id": "cranidos-to-rampardos",
 			"from": "cranidos",
 			"to": "rampardos",
 			"conditions": [
@@ -4245,6 +4487,7 @@
 			]
 		},
 		{
+			"id": "shieldon-to-bastiodon",
 			"from": "shieldon",
 			"to": "bastiodon",
 			"conditions": [
@@ -4261,6 +4504,7 @@
 			]
 		},
 		{
+			"id": "burmy-to-mothim",
 			"from": "burmy",
 			"to": "mothim",
 			"conditions": [
@@ -4281,6 +4525,7 @@
 			]
 		},
 		{
+			"id": "burmy-to-wormadam-plant-cloak",
 			"from": "burmy",
 			"to": "wormadam-plant-cloak",
 			"conditions": [
@@ -4305,6 +4550,7 @@
 			]
 		},
 		{
+			"id": "burmy-to-wormadam-sand-cloak",
 			"from": "burmy",
 			"to": "wormadam-sand-cloak",
 			"conditions": [
@@ -4329,6 +4575,7 @@
 			]
 		},
 		{
+			"id": "burmy-to-wormadam-trash-cloak",
 			"from": "burmy",
 			"to": "wormadam-trash-cloak",
 			"conditions": [
@@ -4353,6 +4600,7 @@
 			]
 		},
 		{
+			"id": "combee-to-vespiquen",
 			"from": "combee",
 			"to": "vespiquen",
 			"conditions": [
@@ -4373,6 +4621,7 @@
 			]
 		},
 		{
+			"id": "buizel-to-floatzel",
 			"from": "buizel",
 			"to": "floatzel",
 			"conditions": [
@@ -4389,6 +4638,7 @@
 			]
 		},
 		{
+			"id": "cherubi-to-cherrim",
 			"from": "cherubi",
 			"to": "cherrim",
 			"conditions": [
@@ -4405,6 +4655,7 @@
 			]
 		},
 		{
+			"id": "shellos-to-gastrodon",
 			"from": "shellos",
 			"to": "gastrodon",
 			"conditions": [
@@ -4421,6 +4672,7 @@
 			]
 		},
 		{
+			"id": "drifloon-to-drifblim",
 			"from": "drifloon",
 			"to": "drifblim",
 			"conditions": [
@@ -4437,6 +4689,7 @@
 			]
 		},
 		{
+			"id": "buneary-to-lopunny",
 			"from": "buneary",
 			"to": "lopunny",
 			"conditions": [
@@ -4457,6 +4710,7 @@
 			]
 		},
 		{
+			"id": "glameow-to-purugly",
 			"from": "glameow",
 			"to": "purugly",
 			"conditions": [
@@ -4473,6 +4727,7 @@
 			]
 		},
 		{
+			"id": "chingling-to-chimecho",
 			"from": "chingling",
 			"to": "chimecho",
 			"conditions": [
@@ -4489,6 +4744,7 @@
 			]
 		},
 		{
+			"id": "stunky-to-skuntank",
 			"from": "stunky",
 			"to": "skuntank",
 			"conditions": [
@@ -4505,6 +4761,7 @@
 			]
 		},
 		{
+			"id": "bronzor-to-bronzong",
 			"from": "bronzor",
 			"to": "bronzong",
 			"conditions": [
@@ -4521,6 +4778,7 @@
 			]
 		},
 		{
+			"id": "bonsly-to-sudowoodo",
 			"from": "bonsly",
 			"to": "sudowoodo",
 			"conditions": [
@@ -4537,6 +4795,7 @@
 			]
 		},
 		{
+			"id": "mime-jr-to-mr-mime",
 			"from": "mime-jr",
 			"to": "mr-mime",
 			"conditions": [
@@ -4553,6 +4812,7 @@
 			]
 		},
 		{
+			"id": "mime-jr-to-galarian-mr-mime",
 			"from": "mime-jr",
 			"to": "galarian-mr-mime",
 			"conditions": [
@@ -4573,6 +4833,7 @@
 			]
 		},
 		{
+			"id": "happiny-to-chansey",
 			"from": "happiny",
 			"to": "chansey",
 			"conditions": [
@@ -4593,6 +4854,7 @@
 			]
 		},
 		{
+			"id": "gible-to-gabite",
 			"from": "gible",
 			"to": "gabite",
 			"conditions": [
@@ -4609,6 +4871,7 @@
 			]
 		},
 		{
+			"id": "gabite-to-garchomp",
 			"from": "gabite",
 			"to": "garchomp",
 			"conditions": [
@@ -4625,6 +4888,7 @@
 			]
 		},
 		{
+			"id": "munchlax-to-snorlax",
 			"from": "munchlax",
 			"to": "snorlax",
 			"conditions": [
@@ -4645,6 +4909,7 @@
 			]
 		},
 		{
+			"id": "riolu-to-lucario",
 			"from": "riolu",
 			"to": "lucario",
 			"conditions": [
@@ -4669,6 +4934,7 @@
 			]
 		},
 		{
+			"id": "hippopotas-to-hippowdon",
 			"from": "hippopotas",
 			"to": "hippowdon",
 			"conditions": [
@@ -4685,6 +4951,7 @@
 			]
 		},
 		{
+			"id": "skorupi-to-drapion",
 			"from": "skorupi",
 			"to": "drapion",
 			"conditions": [
@@ -4701,6 +4968,7 @@
 			]
 		},
 		{
+			"id": "croagunk-to-toxicroak",
 			"from": "croagunk",
 			"to": "toxicroak",
 			"conditions": [
@@ -4717,6 +4985,7 @@
 			]
 		},
 		{
+			"id": "finneon-to-lumineon",
 			"from": "finneon",
 			"to": "lumineon",
 			"conditions": [
@@ -4733,6 +5002,7 @@
 			]
 		},
 		{
+			"id": "mantyke-to-mantine",
 			"from": "mantyke",
 			"to": "mantine",
 			"conditions": [
@@ -4753,6 +5023,7 @@
 			]
 		},
 		{
+			"id": "snover-to-abomasnow",
 			"from": "snover",
 			"to": "abomasnow",
 			"conditions": [
@@ -4769,6 +5040,7 @@
 			]
 		},
 		{
+			"id": "snivy-to-servine",
 			"from": "snivy",
 			"to": "servine",
 			"conditions": [
@@ -4785,6 +5057,7 @@
 			]
 		},
 		{
+			"id": "servine-to-serperior",
 			"from": "servine",
 			"to": "serperior",
 			"conditions": [
@@ -4801,6 +5074,7 @@
 			]
 		},
 		{
+			"id": "tepig-to-pignite",
 			"from": "tepig",
 			"to": "pignite",
 			"conditions": [
@@ -4817,6 +5091,7 @@
 			]
 		},
 		{
+			"id": "pignite-to-emboar",
 			"from": "pignite",
 			"to": "emboar",
 			"conditions": [
@@ -4833,6 +5108,7 @@
 			]
 		},
 		{
+			"id": "oshawott-to-dewott",
 			"from": "oshawott",
 			"to": "dewott",
 			"conditions": [
@@ -4849,6 +5125,7 @@
 			]
 		},
 		{
+			"id": "dewott-to-samurott",
 			"from": "dewott",
 			"to": "samurott",
 			"conditions": [
@@ -4865,6 +5142,7 @@
 			]
 		},
 		{
+			"id": "dewott-to-samurott-hisui",
 			"from": "dewott",
 			"to": "samurott-hisui",
 			"conditions": [
@@ -4881,6 +5159,7 @@
 			]
 		},
 		{
+			"id": "patrat-to-watchog",
 			"from": "patrat",
 			"to": "watchog",
 			"conditions": [
@@ -4897,6 +5176,7 @@
 			]
 		},
 		{
+			"id": "lillipup-to-herdier",
 			"from": "lillipup",
 			"to": "herdier",
 			"conditions": [
@@ -4913,6 +5193,7 @@
 			]
 		},
 		{
+			"id": "herdier-to-stoutland",
 			"from": "herdier",
 			"to": "stoutland",
 			"conditions": [
@@ -4929,6 +5210,7 @@
 			]
 		},
 		{
+			"id": "purrloin-to-liepard",
 			"from": "purrloin",
 			"to": "liepard",
 			"conditions": [
@@ -4945,6 +5227,7 @@
 			]
 		},
 		{
+			"id": "pansage-to-simisage",
 			"from": "pansage",
 			"to": "simisage",
 			"conditions": [
@@ -4965,6 +5248,7 @@
 			]
 		},
 		{
+			"id": "pansear-to-simisear",
 			"from": "pansear",
 			"to": "simisear",
 			"conditions": [
@@ -4985,6 +5269,7 @@
 			]
 		},
 		{
+			"id": "panpour-to-simipour",
 			"from": "panpour",
 			"to": "simipour",
 			"conditions": [
@@ -5005,6 +5290,7 @@
 			]
 		},
 		{
+			"id": "munna-to-musharna",
 			"from": "munna",
 			"to": "musharna",
 			"conditions": [
@@ -5025,6 +5311,7 @@
 			]
 		},
 		{
+			"id": "pidove-to-tranquill",
 			"from": "pidove",
 			"to": "tranquill",
 			"conditions": [
@@ -5041,6 +5328,7 @@
 			]
 		},
 		{
+			"id": "tranquill-to-unfezant",
 			"from": "tranquill",
 			"to": "unfezant",
 			"conditions": [
@@ -5057,6 +5345,7 @@
 			]
 		},
 		{
+			"id": "blitzle-to-zebstrika",
 			"from": "blitzle",
 			"to": "zebstrika",
 			"conditions": [
@@ -5073,6 +5362,7 @@
 			]
 		},
 		{
+			"id": "roggenrola-to-boldore",
 			"from": "roggenrola",
 			"to": "boldore",
 			"conditions": [
@@ -5089,6 +5379,7 @@
 			]
 		},
 		{
+			"id": "boldore-to-gigalith",
 			"from": "boldore",
 			"to": "gigalith",
 			"conditions": [
@@ -5105,6 +5396,7 @@
 			]
 		},
 		{
+			"id": "woobat-to-swoobat",
 			"from": "woobat",
 			"to": "swoobat",
 			"conditions": [
@@ -5125,6 +5417,7 @@
 			]
 		},
 		{
+			"id": "drilbur-to-excadrill",
 			"from": "drilbur",
 			"to": "excadrill",
 			"conditions": [
@@ -5141,6 +5434,7 @@
 			]
 		},
 		{
+			"id": "timburr-to-gurdurr",
 			"from": "timburr",
 			"to": "gurdurr",
 			"conditions": [
@@ -5157,6 +5451,7 @@
 			]
 		},
 		{
+			"id": "gurdurr-to-conkeldurr",
 			"from": "gurdurr",
 			"to": "conkeldurr",
 			"conditions": [
@@ -5173,6 +5468,7 @@
 			]
 		},
 		{
+			"id": "tympole-to-palpitoad",
 			"from": "tympole",
 			"to": "palpitoad",
 			"conditions": [
@@ -5189,6 +5485,7 @@
 			]
 		},
 		{
+			"id": "palpitoad-to-seismitoad",
 			"from": "palpitoad",
 			"to": "seismitoad",
 			"conditions": [
@@ -5205,6 +5502,7 @@
 			]
 		},
 		{
+			"id": "sewaddle-to-swadloon",
 			"from": "sewaddle",
 			"to": "swadloon",
 			"conditions": [
@@ -5221,6 +5519,7 @@
 			]
 		},
 		{
+			"id": "swadloon-to-leavanny",
 			"from": "swadloon",
 			"to": "leavanny",
 			"conditions": [
@@ -5241,6 +5540,7 @@
 			]
 		},
 		{
+			"id": "venipede-to-whirlipede",
 			"from": "venipede",
 			"to": "whirlipede",
 			"conditions": [
@@ -5257,6 +5557,7 @@
 			]
 		},
 		{
+			"id": "whirlipede-to-scolipede",
 			"from": "whirlipede",
 			"to": "scolipede",
 			"conditions": [
@@ -5273,6 +5574,7 @@
 			]
 		},
 		{
+			"id": "cottonee-to-whimsicott",
 			"from": "cottonee",
 			"to": "whimsicott",
 			"conditions": [
@@ -5293,6 +5595,7 @@
 			]
 		},
 		{
+			"id": "petilil-to-lilligant",
 			"from": "petilil",
 			"to": "lilligant",
 			"conditions": [
@@ -5313,6 +5616,7 @@
 			]
 		},
 		{
+			"id": "petilil-to-lilligant-hisui",
 			"from": "petilil",
 			"to": "lilligant-hisui",
 			"conditions": [
@@ -5333,6 +5637,7 @@
 			]
 		},
 		{
+			"id": "basculin-to-basculegion-m",
 			"from": "basculin",
 			"to": "basculegion-m",
 			"conditions": [
@@ -5357,6 +5662,7 @@
 			]
 		},
 		{
+			"id": "basculin-to-basculegion-f",
 			"from": "basculin",
 			"to": "basculegion-f",
 			"conditions": [
@@ -5381,6 +5687,7 @@
 			]
 		},
 		{
+			"id": "sandile-to-krokorok",
 			"from": "sandile",
 			"to": "krokorok",
 			"conditions": [
@@ -5397,6 +5704,7 @@
 			]
 		},
 		{
+			"id": "krokorok-to-krookodile",
 			"from": "krokorok",
 			"to": "krookodile",
 			"conditions": [
@@ -5413,6 +5721,7 @@
 			]
 		},
 		{
+			"id": "darumaka-to-darmanitan",
 			"from": "darumaka",
 			"to": "darmanitan",
 			"conditions": [
@@ -5429,6 +5738,7 @@
 			]
 		},
 		{
+			"id": "dwebble-to-crustle",
 			"from": "dwebble",
 			"to": "crustle",
 			"conditions": [
@@ -5445,6 +5755,7 @@
 			]
 		},
 		{
+			"id": "scraggy-to-scrafty",
 			"from": "scraggy",
 			"to": "scrafty",
 			"conditions": [
@@ -5461,6 +5772,7 @@
 			]
 		},
 		{
+			"id": "yamask-to-cofagrigus",
 			"from": "yamask",
 			"to": "cofagrigus",
 			"conditions": [
@@ -5477,6 +5789,7 @@
 			]
 		},
 		{
+			"id": "tirtouga-to-carracosta",
 			"from": "tirtouga",
 			"to": "carracosta",
 			"conditions": [
@@ -5493,6 +5806,7 @@
 			]
 		},
 		{
+			"id": "archen-to-archeops",
 			"from": "archen",
 			"to": "archeops",
 			"conditions": [
@@ -5509,6 +5823,7 @@
 			]
 		},
 		{
+			"id": "trubbish-to-garbodor",
 			"from": "trubbish",
 			"to": "garbodor",
 			"conditions": [
@@ -5525,6 +5840,7 @@
 			]
 		},
 		{
+			"id": "zorua-to-zoroark",
 			"from": "zorua",
 			"to": "zoroark",
 			"conditions": [
@@ -5541,6 +5857,7 @@
 			]
 		},
 		{
+			"id": "minccino-to-cinccino",
 			"from": "minccino",
 			"to": "cinccino",
 			"conditions": [
@@ -5561,6 +5878,7 @@
 			]
 		},
 		{
+			"id": "gothita-to-gothorita",
 			"from": "gothita",
 			"to": "gothorita",
 			"conditions": [
@@ -5577,6 +5895,7 @@
 			]
 		},
 		{
+			"id": "gothorita-to-gothitelle",
 			"from": "gothorita",
 			"to": "gothitelle",
 			"conditions": [
@@ -5593,6 +5912,7 @@
 			]
 		},
 		{
+			"id": "solosis-to-duosion",
 			"from": "solosis",
 			"to": "duosion",
 			"conditions": [
@@ -5609,6 +5929,7 @@
 			]
 		},
 		{
+			"id": "duosion-to-reuniclus",
 			"from": "duosion",
 			"to": "reuniclus",
 			"conditions": [
@@ -5625,6 +5946,7 @@
 			]
 		},
 		{
+			"id": "ducklett-to-swanna",
 			"from": "ducklett",
 			"to": "swanna",
 			"conditions": [
@@ -5641,6 +5963,7 @@
 			]
 		},
 		{
+			"id": "vanillite-to-vanillish",
 			"from": "vanillite",
 			"to": "vanillish",
 			"conditions": [
@@ -5657,6 +5980,7 @@
 			]
 		},
 		{
+			"id": "vanillish-to-vanilluxe",
 			"from": "vanillish",
 			"to": "vanilluxe",
 			"conditions": [
@@ -5673,6 +5997,7 @@
 			]
 		},
 		{
+			"id": "deerling-to-sawsbuck",
 			"from": "deerling",
 			"to": "sawsbuck",
 			"conditions": [
@@ -5689,6 +6014,7 @@
 			]
 		},
 		{
+			"id": "karrablast-to-escavalier",
 			"from": "karrablast",
 			"to": "escavalier",
 			"conditions": [
@@ -5709,6 +6035,7 @@
 			]
 		},
 		{
+			"id": "foongus-to-amoonguss",
 			"from": "foongus",
 			"to": "amoonguss",
 			"conditions": [
@@ -5725,6 +6052,7 @@
 			]
 		},
 		{
+			"id": "frillish-to-jellicent",
 			"from": "frillish",
 			"to": "jellicent",
 			"conditions": [
@@ -5741,6 +6069,7 @@
 			]
 		},
 		{
+			"id": "joltik-to-galvantula",
 			"from": "joltik",
 			"to": "galvantula",
 			"conditions": [
@@ -5757,6 +6086,7 @@
 			]
 		},
 		{
+			"id": "ferroseed-to-ferrothorn",
 			"from": "ferroseed",
 			"to": "ferrothorn",
 			"conditions": [
@@ -5773,6 +6103,7 @@
 			]
 		},
 		{
+			"id": "klink-to-klang",
 			"from": "klink",
 			"to": "klang",
 			"conditions": [
@@ -5789,6 +6120,7 @@
 			]
 		},
 		{
+			"id": "klang-to-klinklang",
 			"from": "klang",
 			"to": "klinklang",
 			"conditions": [
@@ -5805,6 +6137,7 @@
 			]
 		},
 		{
+			"id": "tynamo-to-eelektrik",
 			"from": "tynamo",
 			"to": "eelektrik",
 			"conditions": [
@@ -5821,6 +6154,7 @@
 			]
 		},
 		{
+			"id": "eelektrik-to-eelektross",
 			"from": "eelektrik",
 			"to": "eelektross",
 			"conditions": [
@@ -5841,6 +6175,7 @@
 			]
 		},
 		{
+			"id": "elgyem-to-beheeyem",
 			"from": "elgyem",
 			"to": "beheeyem",
 			"conditions": [
@@ -5857,6 +6192,7 @@
 			]
 		},
 		{
+			"id": "litwick-to-lampent",
 			"from": "litwick",
 			"to": "lampent",
 			"conditions": [
@@ -5873,6 +6209,7 @@
 			]
 		},
 		{
+			"id": "lampent-to-chandelure",
 			"from": "lampent",
 			"to": "chandelure",
 			"conditions": [
@@ -5893,6 +6230,7 @@
 			]
 		},
 		{
+			"id": "axew-to-fraxure",
 			"from": "axew",
 			"to": "fraxure",
 			"conditions": [
@@ -5909,6 +6247,7 @@
 			]
 		},
 		{
+			"id": "fraxure-to-haxorus",
 			"from": "fraxure",
 			"to": "haxorus",
 			"conditions": [
@@ -5925,6 +6264,7 @@
 			]
 		},
 		{
+			"id": "cubchoo-to-beartic",
 			"from": "cubchoo",
 			"to": "beartic",
 			"conditions": [
@@ -5941,6 +6281,7 @@
 			]
 		},
 		{
+			"id": "shelmet-to-accelgor",
 			"from": "shelmet",
 			"to": "accelgor",
 			"conditions": [
@@ -5961,6 +6302,7 @@
 			]
 		},
 		{
+			"id": "mienfoo-to-mienshao",
 			"from": "mienfoo",
 			"to": "mienshao",
 			"conditions": [
@@ -5977,6 +6319,7 @@
 			]
 		},
 		{
+			"id": "golett-to-golurk",
 			"from": "golett",
 			"to": "golurk",
 			"conditions": [
@@ -5993,6 +6336,7 @@
 			]
 		},
 		{
+			"id": "pawniard-to-bisharp",
 			"from": "pawniard",
 			"to": "bisharp",
 			"conditions": [
@@ -6009,6 +6353,7 @@
 			]
 		},
 		{
+			"id": "pawniard-to-rookite",
 			"from": "pawniard",
 			"to": "rookite",
 			"conditions": [
@@ -6025,6 +6370,7 @@
 			]
 		},
 		{
+			"id": "bisharp-to-kingambit",
 			"from": "bisharp",
 			"to": "kingambit",
 			"conditions": [
@@ -6045,6 +6391,7 @@
 			]
 		},
 		{
+			"id": "rufflet-to-braviary",
 			"from": "rufflet",
 			"to": "braviary",
 			"conditions": [
@@ -6061,6 +6408,7 @@
 			]
 		},
 		{
+			"id": "rufflet-to-braviary-hisui",
 			"from": "rufflet",
 			"to": "braviary-hisui",
 			"conditions": [
@@ -6077,6 +6425,7 @@
 			]
 		},
 		{
+			"id": "vullaby-to-mandibuzz",
 			"from": "vullaby",
 			"to": "mandibuzz",
 			"conditions": [
@@ -6093,6 +6442,7 @@
 			]
 		},
 		{
+			"id": "deino-to-zweilous",
 			"from": "deino",
 			"to": "zweilous",
 			"conditions": [
@@ -6109,6 +6459,7 @@
 			]
 		},
 		{
+			"id": "zweilous-to-hydreigon",
 			"from": "zweilous",
 			"to": "hydreigon",
 			"conditions": [
@@ -6125,6 +6476,7 @@
 			]
 		},
 		{
+			"id": "larvesta-to-volcarona",
 			"from": "larvesta",
 			"to": "volcarona",
 			"conditions": [
@@ -6141,6 +6493,7 @@
 			]
 		},
 		{
+			"id": "chespin-to-quilladin",
 			"from": "chespin",
 			"to": "quilladin",
 			"conditions": [
@@ -6157,6 +6510,7 @@
 			]
 		},
 		{
+			"id": "quilladin-to-chesnaught",
 			"from": "quilladin",
 			"to": "chesnaught",
 			"conditions": [
@@ -6173,6 +6527,7 @@
 			]
 		},
 		{
+			"id": "fennekin-to-braixen",
 			"from": "fennekin",
 			"to": "braixen",
 			"conditions": [
@@ -6189,6 +6544,7 @@
 			]
 		},
 		{
+			"id": "braixen-to-delphox",
 			"from": "braixen",
 			"to": "delphox",
 			"conditions": [
@@ -6205,6 +6561,7 @@
 			]
 		},
 		{
+			"id": "froakie-to-frogadier",
 			"from": "froakie",
 			"to": "frogadier",
 			"conditions": [
@@ -6221,6 +6578,7 @@
 			]
 		},
 		{
+			"id": "frogadier-to-greninja",
 			"from": "frogadier",
 			"to": "greninja",
 			"conditions": [
@@ -6237,6 +6595,7 @@
 			]
 		},
 		{
+			"id": "bunnelby-to-diggersby",
 			"from": "bunnelby",
 			"to": "diggersby",
 			"conditions": [
@@ -6253,6 +6612,7 @@
 			]
 		},
 		{
+			"id": "fletchling-to-fletchinder",
 			"from": "fletchling",
 			"to": "fletchinder",
 			"conditions": [
@@ -6269,6 +6629,7 @@
 			]
 		},
 		{
+			"id": "fletchinder-to-talonflame",
 			"from": "fletchinder",
 			"to": "talonflame",
 			"conditions": [
@@ -6285,6 +6646,7 @@
 			]
 		},
 		{
+			"id": "scatterbug-to-spewpa",
 			"from": "scatterbug",
 			"to": "spewpa",
 			"conditions": [
@@ -6301,6 +6663,7 @@
 			]
 		},
 		{
+			"id": "spewpa-to-vivillon",
 			"from": "spewpa",
 			"to": "vivillon",
 			"conditions": [
@@ -6317,6 +6680,7 @@
 			]
 		},
 		{
+			"id": "litleo-to-pyroar",
 			"from": "litleo",
 			"to": "pyroar",
 			"conditions": [
@@ -6333,6 +6697,7 @@
 			]
 		},
 		{
+			"id": "flabebe-to-floette",
 			"from": "flabebe",
 			"to": "floette",
 			"conditions": [
@@ -6349,6 +6714,7 @@
 			]
 		},
 		{
+			"id": "floette-to-florges",
 			"from": "floette",
 			"to": "florges",
 			"conditions": [
@@ -6369,6 +6735,7 @@
 			]
 		},
 		{
+			"id": "skiddo-to-gogoat",
 			"from": "skiddo",
 			"to": "gogoat",
 			"conditions": [
@@ -6385,6 +6752,7 @@
 			]
 		},
 		{
+			"id": "pancham-to-pangoro",
 			"from": "pancham",
 			"to": "pangoro",
 			"conditions": [
@@ -6405,6 +6773,7 @@
 			]
 		},
 		{
+			"id": "espurr-to-meowstic-m",
 			"from": "espurr",
 			"to": "meowstic-m",
 			"conditions": [
@@ -6425,6 +6794,7 @@
 			]
 		},
 		{
+			"id": "espurr-to-meowstic-f",
 			"from": "espurr",
 			"to": "meowstic-f",
 			"conditions": [
@@ -6445,6 +6815,7 @@
 			]
 		},
 		{
+			"id": "honedge-to-doublade",
 			"from": "honedge",
 			"to": "doublade",
 			"conditions": [
@@ -6461,6 +6832,7 @@
 			]
 		},
 		{
+			"id": "doublade-to-aegislash",
 			"from": "doublade",
 			"to": "aegislash",
 			"conditions": [
@@ -6481,6 +6853,7 @@
 			]
 		},
 		{
+			"id": "spritzee-to-aromatisse",
 			"from": "spritzee",
 			"to": "aromatisse",
 			"conditions": [
@@ -6501,6 +6874,7 @@
 			]
 		},
 		{
+			"id": "swirlix-to-slurpuff",
 			"from": "swirlix",
 			"to": "slurpuff",
 			"conditions": [
@@ -6521,6 +6895,7 @@
 			]
 		},
 		{
+			"id": "inkay-to-malamar",
 			"from": "inkay",
 			"to": "malamar",
 			"conditions": [
@@ -6537,6 +6912,7 @@
 			]
 		},
 		{
+			"id": "binacle-to-barbaracle",
 			"from": "binacle",
 			"to": "barbaracle",
 			"conditions": [
@@ -6553,6 +6929,7 @@
 			]
 		},
 		{
+			"id": "skrelp-to-dragalge",
 			"from": "skrelp",
 			"to": "dragalge",
 			"conditions": [
@@ -6569,6 +6946,7 @@
 			]
 		},
 		{
+			"id": "clauncher-to-clawitzer",
 			"from": "clauncher",
 			"to": "clawitzer",
 			"conditions": [
@@ -6585,6 +6963,7 @@
 			]
 		},
 		{
+			"id": "helioptile-to-heliolisk",
 			"from": "helioptile",
 			"to": "heliolisk",
 			"conditions": [
@@ -6605,6 +6984,7 @@
 			]
 		},
 		{
+			"id": "tyrunt-to-tyrantrum",
 			"from": "tyrunt",
 			"to": "tyrantrum",
 			"conditions": [
@@ -6625,6 +7005,7 @@
 			]
 		},
 		{
+			"id": "amaura-to-aurorus",
 			"from": "amaura",
 			"to": "aurorus",
 			"conditions": [
@@ -6645,6 +7026,7 @@
 			]
 		},
 		{
+			"id": "goomy-to-sliggoo",
 			"from": "goomy",
 			"to": "sliggoo",
 			"conditions": [
@@ -6661,6 +7043,7 @@
 			]
 		},
 		{
+			"id": "goomy-to-sliggoo-hisui",
 			"from": "goomy",
 			"to": "sliggoo-hisui",
 			"conditions": [
@@ -6677,6 +7060,7 @@
 			]
 		},
 		{
+			"id": "sliggoo-to-goodra",
 			"from": "sliggoo",
 			"to": "goodra",
 			"conditions": [
@@ -6697,6 +7081,7 @@
 			]
 		},
 		{
+			"id": "phantump-to-trevenant",
 			"from": "phantump",
 			"to": "trevenant",
 			"conditions": [
@@ -6713,6 +7098,7 @@
 			]
 		},
 		{
+			"id": "pumpkaboo-to-gourgeist",
 			"from": "pumpkaboo",
 			"to": "gourgeist",
 			"conditions": [
@@ -6729,6 +7115,7 @@
 			]
 		},
 		{
+			"id": "bergmite-to-avalugg",
 			"from": "bergmite",
 			"to": "avalugg",
 			"conditions": [
@@ -6745,6 +7132,7 @@
 			]
 		},
 		{
+			"id": "bergmite-to-avalugg-hisui",
 			"from": "bergmite",
 			"to": "avalugg-hisui",
 			"conditions": [
@@ -6761,6 +7149,7 @@
 			]
 		},
 		{
+			"id": "noibat-to-noivern",
 			"from": "noibat",
 			"to": "noivern",
 			"conditions": [
@@ -6777,6 +7166,7 @@
 			]
 		},
 		{
+			"id": "alolan-rattata-to-alolan-raticate",
 			"from": "alolan-rattata",
 			"to": "alolan-raticate",
 			"conditions": [
@@ -6793,6 +7183,7 @@
 			]
 		},
 		{
+			"id": "alolan-sandshrew-to-alolan-sandslash",
 			"from": "alolan-sandshrew",
 			"to": "alolan-sandslash",
 			"conditions": [
@@ -6813,6 +7204,7 @@
 			]
 		},
 		{
+			"id": "alolan-vulpix-to-alolan-ninetales",
 			"from": "alolan-vulpix",
 			"to": "alolan-ninetales",
 			"conditions": [
@@ -6833,6 +7225,7 @@
 			]
 		},
 		{
+			"id": "alolan-diglett-to-alolan-dugtrio",
 			"from": "alolan-diglett",
 			"to": "alolan-dugtrio",
 			"conditions": [
@@ -6849,6 +7242,7 @@
 			]
 		},
 		{
+			"id": "alolan-meowth-to-alolan-persian",
 			"from": "alolan-meowth",
 			"to": "alolan-persian",
 			"conditions": [
@@ -6865,6 +7259,7 @@
 			]
 		},
 		{
+			"id": "alolan-geodude-to-alolan-graveler",
 			"from": "alolan-geodude",
 			"to": "alolan-graveler",
 			"conditions": [
@@ -6881,6 +7276,7 @@
 			]
 		},
 		{
+			"id": "alolan-graveler-to-alolan-golem",
 			"from": "alolan-graveler",
 			"to": "alolan-golem",
 			"conditions": [
@@ -6897,6 +7293,7 @@
 			]
 		},
 		{
+			"id": "alolan-grimer-to-alolan-muk",
 			"from": "alolan-grimer",
 			"to": "alolan-muk",
 			"conditions": [
@@ -6913,6 +7310,7 @@
 			]
 		},
 		{
+			"id": "rowlet-to-dartrix",
 			"from": "rowlet",
 			"to": "dartrix",
 			"conditions": [
@@ -6929,6 +7327,7 @@
 			]
 		},
 		{
+			"id": "dartrix-to-decidueye",
 			"from": "dartrix",
 			"to": "decidueye",
 			"conditions": [
@@ -6945,6 +7344,7 @@
 			]
 		},
 		{
+			"id": "dartrix-to-decidueye-hisui",
 			"from": "dartrix",
 			"to": "decidueye-hisui",
 			"conditions": [
@@ -6961,6 +7361,7 @@
 			]
 		},
 		{
+			"id": "litten-to-torracat",
 			"from": "litten",
 			"to": "torracat",
 			"conditions": [
@@ -6977,6 +7378,7 @@
 			]
 		},
 		{
+			"id": "torracat-to-incineroar",
 			"from": "torracat",
 			"to": "incineroar",
 			"conditions": [
@@ -6993,6 +7395,7 @@
 			]
 		},
 		{
+			"id": "popplio-to-brionne",
 			"from": "popplio",
 			"to": "brionne",
 			"conditions": [
@@ -7009,6 +7412,7 @@
 			]
 		},
 		{
+			"id": "brionne-to-primarina",
 			"from": "brionne",
 			"to": "primarina",
 			"conditions": [
@@ -7025,6 +7429,7 @@
 			]
 		},
 		{
+			"id": "pikipek-to-trumbeak",
 			"from": "pikipek",
 			"to": "trumbeak",
 			"conditions": [
@@ -7041,6 +7446,7 @@
 			]
 		},
 		{
+			"id": "trumbeak-to-toucannon",
 			"from": "trumbeak",
 			"to": "toucannon",
 			"conditions": [
@@ -7057,6 +7463,7 @@
 			]
 		},
 		{
+			"id": "yungoos-to-gumshoos",
 			"from": "yungoos",
 			"to": "gumshoos",
 			"conditions": [
@@ -7077,6 +7484,7 @@
 			]
 		},
 		{
+			"id": "grubbin-to-charjabug",
 			"from": "grubbin",
 			"to": "charjabug",
 			"conditions": [
@@ -7093,6 +7501,7 @@
 			]
 		},
 		{
+			"id": "charjabug-to-vikavolt",
 			"from": "charjabug",
 			"to": "vikavolt",
 			"conditions": [
@@ -7113,6 +7522,7 @@
 			]
 		},
 		{
+			"id": "crabrawler-to-crabominable",
 			"from": "crabrawler",
 			"to": "crabominable",
 			"conditions": [
@@ -7129,6 +7539,7 @@
 			]
 		},
 		{
+			"id": "cutiefly-to-ribombee",
 			"from": "cutiefly",
 			"to": "ribombee",
 			"conditions": [
@@ -7145,6 +7556,7 @@
 			]
 		},
 		{
+			"id": "rockruff-to-lycanroc-midday-form",
 			"from": "rockruff",
 			"to": "lycanroc-midday-form",
 			"conditions": [
@@ -7165,6 +7577,7 @@
 			]
 		},
 		{
+			"id": "rockruff-to-lycanroc-midnight-form",
 			"from": "rockruff",
 			"to": "lycanroc-midnight-form",
 			"conditions": [
@@ -7185,6 +7598,7 @@
 			]
 		},
 		{
+			"id": "rockruff-to-lycanroc-dusk-form",
 			"from": "rockruff",
 			"to": "lycanroc-dusk-form",
 			"conditions": [
@@ -7205,6 +7619,7 @@
 			]
 		},
 		{
+			"id": "mareanie-to-toxapex",
 			"from": "mareanie",
 			"to": "toxapex",
 			"conditions": [
@@ -7221,6 +7636,7 @@
 			]
 		},
 		{
+			"id": "mudbray-to-mudsdale",
 			"from": "mudbray",
 			"to": "mudsdale",
 			"conditions": [
@@ -7237,6 +7653,7 @@
 			]
 		},
 		{
+			"id": "dewpider-to-araquanid",
 			"from": "dewpider",
 			"to": "araquanid",
 			"conditions": [
@@ -7253,6 +7670,7 @@
 			]
 		},
 		{
+			"id": "fomantis-to-lurantis",
 			"from": "fomantis",
 			"to": "lurantis",
 			"conditions": [
@@ -7273,6 +7691,7 @@
 			]
 		},
 		{
+			"id": "morelull-to-shiinotic",
 			"from": "morelull",
 			"to": "shiinotic",
 			"conditions": [
@@ -7289,6 +7708,7 @@
 			]
 		},
 		{
+			"id": "salandit-to-salazzle",
 			"from": "salandit",
 			"to": "salazzle",
 			"conditions": [
@@ -7309,6 +7729,7 @@
 			]
 		},
 		{
+			"id": "stufful-to-bewear",
 			"from": "stufful",
 			"to": "bewear",
 			"conditions": [
@@ -7325,6 +7746,7 @@
 			]
 		},
 		{
+			"id": "bounsweet-to-steenee",
 			"from": "bounsweet",
 			"to": "steenee",
 			"conditions": [
@@ -7341,6 +7763,7 @@
 			]
 		},
 		{
+			"id": "steenee-to-tsareena",
 			"from": "steenee",
 			"to": "tsareena",
 			"conditions": [
@@ -7357,6 +7780,7 @@
 			]
 		},
 		{
+			"id": "wimpod-to-golisopod",
 			"from": "wimpod",
 			"to": "golisopod",
 			"conditions": [
@@ -7373,6 +7797,7 @@
 			]
 		},
 		{
+			"id": "sandygast-to-palossand",
 			"from": "sandygast",
 			"to": "palossand",
 			"conditions": [
@@ -7389,6 +7814,7 @@
 			]
 		},
 		{
+			"id": "type-null-to-silvally",
 			"from": "type-null",
 			"to": "silvally",
 			"conditions": [
@@ -7409,6 +7835,7 @@
 			]
 		},
 		{
+			"id": "jangmo-o-to-hakamo-o",
 			"from": "jangmo-o",
 			"to": "hakamo-o",
 			"conditions": [
@@ -7425,6 +7852,7 @@
 			]
 		},
 		{
+			"id": "hakamo-o-to-kommo-o",
 			"from": "hakamo-o",
 			"to": "kommo-o",
 			"conditions": [
@@ -7441,6 +7869,7 @@
 			]
 		},
 		{
+			"id": "cosmog-to-cosmoem",
 			"from": "cosmog",
 			"to": "cosmoem",
 			"conditions": [
@@ -7457,6 +7886,7 @@
 			]
 		},
 		{
+			"id": "cosmoem-to-solgaleo",
 			"from": "cosmoem",
 			"to": "solgaleo",
 			"conditions": [
@@ -7477,6 +7907,7 @@
 			]
 		},
 		{
+			"id": "cosmoem-to-lunala",
 			"from": "cosmoem",
 			"to": "lunala",
 			"conditions": [
@@ -7497,6 +7928,7 @@
 			]
 		},
 		{
+			"id": "poipole-to-naganadel",
 			"from": "poipole",
 			"to": "naganadel",
 			"conditions": [
@@ -7513,6 +7945,7 @@
 			]
 		},
 		{
+			"id": "meltan-to-melmetal",
 			"from": "meltan",
 			"to": "melmetal",
 			"conditions": [
@@ -7529,6 +7962,7 @@
 			]
 		},
 		{
+			"id": "galarian-meowth-to-perrserker",
 			"from": "galarian-meowth",
 			"to": "perrserker",
 			"conditions": [
@@ -7545,6 +7979,7 @@
 			]
 		},
 		{
+			"id": "galarian-ponyta-to-galarian-rapidash",
 			"from": "galarian-ponyta",
 			"to": "galarian-rapidash",
 			"conditions": [
@@ -7561,6 +7996,7 @@
 			]
 		},
 		{
+			"id": "galarian-slowpoke-to-galarian-slowbro",
 			"from": "galarian-slowpoke",
 			"to": "galarian-slowbro",
 			"conditions": [
@@ -7577,6 +8013,7 @@
 			]
 		},
 		{
+			"id": "galarian-slowpoke-to-galarian-slowking",
 			"from": "galarian-slowpoke",
 			"to": "galarian-slowking",
 			"conditions": [
@@ -7597,6 +8034,7 @@
 			]
 		},
 		{
+			"id": "galarian-farfetchd-to-sirfetchd",
 			"from": "galarian-farfetchd",
 			"to": "sirfetchd",
 			"conditions": [
@@ -7617,6 +8055,7 @@
 			]
 		},
 		{
+			"id": "galarian-mr-mime-to-mr-rime",
 			"from": "galarian-mr-mime",
 			"to": "mr-rime",
 			"conditions": [
@@ -7633,6 +8072,7 @@
 			]
 		},
 		{
+			"id": "galarian-corsola-to-cursola",
 			"from": "galarian-corsola",
 			"to": "cursola",
 			"conditions": [
@@ -7649,6 +8089,7 @@
 			]
 		},
 		{
+			"id": "galarian-zigzagoon-to-galarian-linoone",
 			"from": "galarian-zigzagoon",
 			"to": "galarian-linoone",
 			"conditions": [
@@ -7665,6 +8106,7 @@
 			]
 		},
 		{
+			"id": "galarian-linoone-to-obstagoon",
 			"from": "galarian-linoone",
 			"to": "obstagoon",
 			"conditions": [
@@ -7685,6 +8127,7 @@
 			]
 		},
 		{
+			"id": "galarian-darumaka-to-galarian-darmanitan",
 			"from": "galarian-darumaka",
 			"to": "galarian-darmanitan",
 			"conditions": [
@@ -7701,6 +8144,7 @@
 			]
 		},
 		{
+			"id": "galarian-yamask-to-runerigus",
 			"from": "galarian-yamask",
 			"to": "runerigus",
 			"conditions": [
@@ -7717,6 +8161,7 @@
 			]
 		},
 		{
+			"id": "grookey-to-thwackey",
 			"from": "grookey",
 			"to": "thwackey",
 			"conditions": [
@@ -7733,6 +8178,7 @@
 			]
 		},
 		{
+			"id": "thwackey-to-rillaboom",
 			"from": "thwackey",
 			"to": "rillaboom",
 			"conditions": [
@@ -7749,6 +8195,7 @@
 			]
 		},
 		{
+			"id": "scorbunny-to-raboot",
 			"from": "scorbunny",
 			"to": "raboot",
 			"conditions": [
@@ -7765,6 +8212,7 @@
 			]
 		},
 		{
+			"id": "raboot-to-cinderace",
 			"from": "raboot",
 			"to": "cinderace",
 			"conditions": [
@@ -7781,6 +8229,7 @@
 			]
 		},
 		{
+			"id": "sobble-to-drizzile",
 			"from": "sobble",
 			"to": "drizzile",
 			"conditions": [
@@ -7797,6 +8246,7 @@
 			]
 		},
 		{
+			"id": "drizzile-to-inteleon",
 			"from": "drizzile",
 			"to": "inteleon",
 			"conditions": [
@@ -7813,6 +8263,7 @@
 			]
 		},
 		{
+			"id": "skwovet-to-greedent",
 			"from": "skwovet",
 			"to": "greedent",
 			"conditions": [
@@ -7829,6 +8280,7 @@
 			]
 		},
 		{
+			"id": "rookidee-to-corvisquire",
 			"from": "rookidee",
 			"to": "corvisquire",
 			"conditions": [
@@ -7845,6 +8297,7 @@
 			]
 		},
 		{
+			"id": "corvisquire-to-corviknight",
 			"from": "corvisquire",
 			"to": "corviknight",
 			"conditions": [
@@ -7861,6 +8314,7 @@
 			]
 		},
 		{
+			"id": "blipbug-to-dottler",
 			"from": "blipbug",
 			"to": "dottler",
 			"conditions": [
@@ -7877,6 +8331,7 @@
 			]
 		},
 		{
+			"id": "dottler-to-orbeetle",
 			"from": "dottler",
 			"to": "orbeetle",
 			"conditions": [
@@ -7893,6 +8348,7 @@
 			]
 		},
 		{
+			"id": "nickit-to-thievul",
 			"from": "nickit",
 			"to": "thievul",
 			"conditions": [
@@ -7909,6 +8365,7 @@
 			]
 		},
 		{
+			"id": "gossifleur-to-eldegoss",
 			"from": "gossifleur",
 			"to": "eldegoss",
 			"conditions": [
@@ -7925,6 +8382,7 @@
 			]
 		},
 		{
+			"id": "wooloo-to-dubwool",
 			"from": "wooloo",
 			"to": "dubwool",
 			"conditions": [
@@ -7941,6 +8399,7 @@
 			]
 		},
 		{
+			"id": "chewtle-to-drednaw",
 			"from": "chewtle",
 			"to": "drednaw",
 			"conditions": [
@@ -7957,6 +8416,7 @@
 			]
 		},
 		{
+			"id": "yamper-to-boltund",
 			"from": "yamper",
 			"to": "boltund",
 			"conditions": [
@@ -7973,6 +8433,7 @@
 			]
 		},
 		{
+			"id": "rolycoly-to-carkol",
 			"from": "rolycoly",
 			"to": "carkol",
 			"conditions": [
@@ -7989,6 +8450,7 @@
 			]
 		},
 		{
+			"id": "carkol-to-coalossal",
 			"from": "carkol",
 			"to": "coalossal",
 			"conditions": [
@@ -8005,6 +8467,7 @@
 			]
 		},
 		{
+			"id": "applin-to-flapple",
 			"from": "applin",
 			"to": "flapple",
 			"conditions": [
@@ -8025,6 +8488,7 @@
 			]
 		},
 		{
+			"id": "applin-to-appletun",
 			"from": "applin",
 			"to": "appletun",
 			"conditions": [
@@ -8045,6 +8509,7 @@
 			]
 		},
 		{
+			"id": "applin-to-dipplin",
 			"from": "applin",
 			"to": "dipplin",
 			"conditions": [
@@ -8065,6 +8530,7 @@
 			]
 		},
 		{
+			"id": "silicobra-to-sandaconda",
 			"from": "silicobra",
 			"to": "sandaconda",
 			"conditions": [
@@ -8081,6 +8547,7 @@
 			]
 		},
 		{
+			"id": "arrokuda-to-barraskewda",
 			"from": "arrokuda",
 			"to": "barraskewda",
 			"conditions": [
@@ -8097,6 +8564,7 @@
 			]
 		},
 		{
+			"id": "toxel-to-toxtricity-amped",
 			"from": "toxel",
 			"to": "toxtricity-amped",
 			"conditions": [
@@ -8117,6 +8585,7 @@
 			]
 		},
 		{
+			"id": "toxel-to-toxtricity-low-key",
 			"from": "toxel",
 			"to": "toxtricity-low-key",
 			"conditions": [
@@ -8137,6 +8606,7 @@
 			]
 		},
 		{
+			"id": "sizzlipede-to-centiskorch",
 			"from": "sizzlipede",
 			"to": "centiskorch",
 			"conditions": [
@@ -8153,6 +8623,7 @@
 			]
 		},
 		{
+			"id": "clobbopus-to-grapploct",
 			"from": "clobbopus",
 			"to": "grapploct",
 			"conditions": [
@@ -8173,6 +8644,7 @@
 			]
 		},
 		{
+			"id": "sinistea-to-polteageist",
 			"from": "sinistea",
 			"to": "polteageist",
 			"conditions": [
@@ -8193,6 +8665,7 @@
 			]
 		},
 		{
+			"id": "hatenna-to-hattrem",
 			"from": "hatenna",
 			"to": "hattrem",
 			"conditions": [
@@ -8209,6 +8682,7 @@
 			]
 		},
 		{
+			"id": "hattrem-to-hatterene",
 			"from": "hattrem",
 			"to": "hatterene",
 			"conditions": [
@@ -8225,6 +8699,7 @@
 			]
 		},
 		{
+			"id": "impidimp-to-morgrem",
 			"from": "impidimp",
 			"to": "morgrem",
 			"conditions": [
@@ -8241,6 +8716,7 @@
 			]
 		},
 		{
+			"id": "morgrem-to-grimmsnarl",
 			"from": "morgrem",
 			"to": "grimmsnarl",
 			"conditions": [
@@ -8257,6 +8733,7 @@
 			]
 		},
 		{
+			"id": "milcery-to-alcremie",
 			"from": "milcery",
 			"to": "alcremie",
 			"conditions": [
@@ -8277,6 +8754,7 @@
 			]
 		},
 		{
+			"id": "snom-to-frosmoth",
 			"from": "snom",
 			"to": "frosmoth",
 			"conditions": [
@@ -8293,6 +8771,7 @@
 			]
 		},
 		{
+			"id": "cufant-to-copperajah",
 			"from": "cufant",
 			"to": "copperajah",
 			"conditions": [
@@ -8309,6 +8788,7 @@
 			]
 		},
 		{
+			"id": "duraludon-to-archaludon",
 			"from": "duraludon",
 			"to": "archaludon",
 			"conditions": [
@@ -8329,6 +8809,7 @@
 			]
 		},
 		{
+			"id": "dreepy-to-drakloak",
 			"from": "dreepy",
 			"to": "drakloak",
 			"conditions": [
@@ -8345,6 +8826,7 @@
 			]
 		},
 		{
+			"id": "drakloak-to-dragapult",
 			"from": "drakloak",
 			"to": "dragapult",
 			"conditions": [
@@ -8361,6 +8843,7 @@
 			]
 		},
 		{
+			"id": "kubfu-to-urshifu-single",
 			"from": "kubfu",
 			"to": "urshifu-single",
 			"conditions": [
@@ -8381,6 +8864,7 @@
 			]
 		},
 		{
+			"id": "kubfu-to-urshifu-rapid",
 			"from": "kubfu",
 			"to": "urshifu-rapid",
 			"conditions": [
@@ -8401,6 +8885,7 @@
 			]
 		},
 		{
+			"id": "growlithe-hisui-to-arcanine-hisui",
 			"from": "growlithe-hisui",
 			"to": "arcanine-hisui",
 			"conditions": [
@@ -8421,6 +8906,7 @@
 			]
 		},
 		{
+			"id": "voltorb-hisui-to-electrode-hisui",
 			"from": "voltorb-hisui",
 			"to": "electrode-hisui",
 			"conditions": [
@@ -8441,6 +8927,7 @@
 			]
 		},
 		{
+			"id": "qwilfish-hisui-to-overqwil",
 			"from": "qwilfish-hisui",
 			"to": "overqwil",
 			"conditions": [
@@ -8461,6 +8948,7 @@
 			]
 		},
 		{
+			"id": "sneasel-hisui-to-sneasler",
 			"from": "sneasel-hisui",
 			"to": "sneasler",
 			"conditions": [
@@ -8485,6 +8973,7 @@
 			]
 		},
 		{
+			"id": "zorua-hisui-to-zoroark-hisui",
 			"from": "zorua-hisui",
 			"to": "zoroark-hisui",
 			"conditions": [
@@ -8501,6 +8990,7 @@
 			]
 		},
 		{
+			"id": "sliggoo-hisui-to-goodra-hisui",
 			"from": "sliggoo-hisui",
 			"to": "goodra-hisui",
 			"conditions": [
@@ -8517,6 +9007,7 @@
 			]
 		},
 		{
+			"id": "wooper-paldea-to-clodsire",
 			"from": "wooper-paldea",
 			"to": "clodsire",
 			"conditions": [
@@ -8533,6 +9024,7 @@
 			]
 		},
 		{
+			"id": "sprigatito-to-floragato",
 			"from": "sprigatito",
 			"to": "floragato",
 			"conditions": [
@@ -8549,6 +9041,7 @@
 			]
 		},
 		{
+			"id": "floragato-to-meowscarada",
 			"from": "floragato",
 			"to": "meowscarada",
 			"conditions": [
@@ -8565,6 +9058,7 @@
 			]
 		},
 		{
+			"id": "fuecoco-to-crocalor",
 			"from": "fuecoco",
 			"to": "crocalor",
 			"conditions": [
@@ -8581,6 +9075,7 @@
 			]
 		},
 		{
+			"id": "crocalor-to-skeledirge",
 			"from": "crocalor",
 			"to": "skeledirge",
 			"conditions": [
@@ -8597,6 +9092,7 @@
 			]
 		},
 		{
+			"id": "quaxly-to-quaxwell",
 			"from": "quaxly",
 			"to": "quaxwell",
 			"conditions": [
@@ -8613,6 +9109,7 @@
 			]
 		},
 		{
+			"id": "quaxwell-to-quaquaval",
 			"from": "quaxwell",
 			"to": "quaquaval",
 			"conditions": [
@@ -8629,6 +9126,7 @@
 			]
 		},
 		{
+			"id": "lechonk-to-oinkologne-male",
 			"from": "lechonk",
 			"to": "oinkologne-male",
 			"conditions": [
@@ -8649,6 +9147,7 @@
 			]
 		},
 		{
+			"id": "lechonk-to-oinkologne-female",
 			"from": "lechonk",
 			"to": "oinkologne-female",
 			"conditions": [
@@ -8669,6 +9168,7 @@
 			]
 		},
 		{
+			"id": "tarountula-to-spidops",
 			"from": "tarountula",
 			"to": "spidops",
 			"conditions": [
@@ -8685,6 +9185,7 @@
 			]
 		},
 		{
+			"id": "nymble-to-lokix",
 			"from": "nymble",
 			"to": "lokix",
 			"conditions": [
@@ -8701,6 +9202,7 @@
 			]
 		},
 		{
+			"id": "pawmi-to-pawmo",
 			"from": "pawmi",
 			"to": "pawmo",
 			"conditions": [
@@ -8717,6 +9219,7 @@
 			]
 		},
 		{
+			"id": "pawmo-to-pawmot",
 			"from": "pawmo",
 			"to": "pawmot",
 			"conditions": [
@@ -8733,6 +9236,7 @@
 			]
 		},
 		{
+			"id": "tandemaus-to-maushold",
 			"from": "tandemaus",
 			"to": "maushold",
 			"conditions": [
@@ -8749,6 +9253,7 @@
 			]
 		},
 		{
+			"id": "fidough-to-dachsbun",
 			"from": "fidough",
 			"to": "dachsbun",
 			"conditions": [
@@ -8765,6 +9270,7 @@
 			]
 		},
 		{
+			"id": "smoliv-to-dolliv",
 			"from": "smoliv",
 			"to": "dolliv",
 			"conditions": [
@@ -8781,6 +9287,7 @@
 			]
 		},
 		{
+			"id": "dolliv-to-arboliva",
 			"from": "dolliv",
 			"to": "arboliva",
 			"conditions": [
@@ -8797,6 +9304,7 @@
 			]
 		},
 		{
+			"id": "nacli-to-naclstack",
 			"from": "nacli",
 			"to": "naclstack",
 			"conditions": [
@@ -8813,6 +9321,7 @@
 			]
 		},
 		{
+			"id": "naclstack-to-garganacl",
 			"from": "naclstack",
 			"to": "garganacl",
 			"conditions": [
@@ -8829,6 +9338,7 @@
 			]
 		},
 		{
+			"id": "charcadet-to-armarouge",
 			"from": "charcadet",
 			"to": "armarouge",
 			"conditions": [
@@ -8849,6 +9359,7 @@
 			]
 		},
 		{
+			"id": "charcadet-to-ceruledge",
 			"from": "charcadet",
 			"to": "ceruledge",
 			"conditions": [
@@ -8869,6 +9380,7 @@
 			]
 		},
 		{
+			"id": "tadbulb-to-bellibolt",
 			"from": "tadbulb",
 			"to": "bellibolt",
 			"conditions": [
@@ -8889,6 +9401,7 @@
 			]
 		},
 		{
+			"id": "wattrel-to-kilowattrel",
 			"from": "wattrel",
 			"to": "kilowattrel",
 			"conditions": [
@@ -8905,6 +9418,7 @@
 			]
 		},
 		{
+			"id": "maschiff-to-mabosstiff",
 			"from": "maschiff",
 			"to": "mabosstiff",
 			"conditions": [
@@ -8921,6 +9435,7 @@
 			]
 		},
 		{
+			"id": "shroodle-to-grafaiai",
 			"from": "shroodle",
 			"to": "grafaiai",
 			"conditions": [
@@ -8937,6 +9452,7 @@
 			]
 		},
 		{
+			"id": "bramblin-to-brambleghast",
 			"from": "bramblin",
 			"to": "brambleghast",
 			"conditions": [
@@ -8953,6 +9469,7 @@
 			]
 		},
 		{
+			"id": "toedscool-to-toedscruel",
 			"from": "toedscool",
 			"to": "toedscruel",
 			"conditions": [
@@ -8969,6 +9486,7 @@
 			]
 		},
 		{
+			"id": "capsakid-to-scovillain",
 			"from": "capsakid",
 			"to": "scovillain",
 			"conditions": [
@@ -8989,6 +9507,7 @@
 			]
 		},
 		{
+			"id": "rellor-to-rabsca",
 			"from": "rellor",
 			"to": "rabsca",
 			"conditions": [
@@ -9005,6 +9524,7 @@
 			]
 		},
 		{
+			"id": "flittle-to-espathra",
 			"from": "flittle",
 			"to": "espathra",
 			"conditions": [
@@ -9021,6 +9541,7 @@
 			]
 		},
 		{
+			"id": "tinkatink-to-tinkatuff",
 			"from": "tinkatink",
 			"to": "tinkatuff",
 			"conditions": [
@@ -9037,6 +9558,7 @@
 			]
 		},
 		{
+			"id": "tinkatuff-to-tinkaton",
 			"from": "tinkatuff",
 			"to": "tinkaton",
 			"conditions": [
@@ -9053,6 +9575,7 @@
 			]
 		},
 		{
+			"id": "wiglett-to-wugtrio",
 			"from": "wiglett",
 			"to": "wugtrio",
 			"conditions": [
@@ -9069,6 +9592,7 @@
 			]
 		},
 		{
+			"id": "finizen-to-palafin",
 			"from": "finizen",
 			"to": "palafin",
 			"conditions": [
@@ -9085,6 +9609,7 @@
 			]
 		},
 		{
+			"id": "varoom-to-revavroom",
 			"from": "varoom",
 			"to": "revavroom",
 			"conditions": [
@@ -9101,6 +9626,7 @@
 			]
 		},
 		{
+			"id": "glimmet-to-glimmora",
 			"from": "glimmet",
 			"to": "glimmora",
 			"conditions": [
@@ -9117,6 +9643,7 @@
 			]
 		},
 		{
+			"id": "greavard-to-houndstone",
 			"from": "greavard",
 			"to": "houndstone",
 			"conditions": [
@@ -9137,6 +9664,7 @@
 			]
 		},
 		{
+			"id": "cetoddle-to-cetitan",
 			"from": "cetoddle",
 			"to": "cetitan",
 			"conditions": [
@@ -9157,6 +9685,7 @@
 			]
 		},
 		{
+			"id": "frigibax-to-arctibax",
 			"from": "frigibax",
 			"to": "arctibax",
 			"conditions": [
@@ -9173,6 +9702,7 @@
 			]
 		},
 		{
+			"id": "arctibax-to-baxcalibur",
 			"from": "arctibax",
 			"to": "baxcalibur",
 			"conditions": [
@@ -9189,6 +9719,7 @@
 			]
 		},
 		{
+			"id": "gimmighoul-to-gholdengo",
 			"from": "gimmighoul",
 			"to": "gholdengo",
 			"conditions": [
@@ -9209,6 +9740,7 @@
 			]
 		},
 		{
+			"id": "gimmighoul-roaming-to-gholdengo",
 			"from": "gimmighoul-roaming",
 			"to": "gholdengo",
 			"conditions": [
@@ -9229,6 +9761,7 @@
 			]
 		},
 		{
+			"id": "dipplin-to-hydrapple",
 			"from": "dipplin",
 			"to": "hydrapple",
 			"conditions": [
@@ -9249,6 +9782,7 @@
 			]
 		},
 		{
+			"id": "poltchageist-to-sinistcha",
 			"from": "poltchageist",
 			"to": "sinistcha",
 			"conditions": [
