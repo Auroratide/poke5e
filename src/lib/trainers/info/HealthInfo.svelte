@@ -21,7 +21,7 @@
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 	import { experienceNeededAtLevel, experienceNeededUntilLevelUp, formatExp } from "$lib/creatures/experience"
 	import Popover from "$lib/design/Popover.svelte"
-	import HelpIcon from "$lib/design/icon/HelpIcon.svelte"
+	import { HelpIcon } from "$lib/ui/icons"
 	import type { Level } from "$lib/dnd/level"
 	import type { HitDice } from "$lib/dnd/hit-dice"
 

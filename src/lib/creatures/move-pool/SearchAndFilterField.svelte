@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FilterIcon from "$lib/design/icon/FilterIcon.svelte"
+	import { FilterIcon } from "$lib/ui/icons"
 
 	export let label: string
 	export let value: string
@@ -25,7 +25,9 @@
 		<div class="buttoned-input">
 			<input type="text" id="{kebabName}" name="{kebabName}" {placeholder} bind:value {disabled} on:submit={preventDefault} />
 			<button class="filter-button" type="button" aria-expanded="{showFilter}" aria-controls="{filterId}" aria-label="Filter Options" title="Filter Options" on:click={toggleFilter}>
-				<FilterIcon />
+				<span class="filter-icon">
+					<FilterIcon />
+				</span>
 				{#if activeFilters > 0}
 					<span class="active-filters">{activeFilters}</span>
 				{/if}
@@ -108,6 +110,12 @@
 		gap: 0.5em;
 	} .filter-group[hidden] {
 		display: none;
+	}
+
+	.filter-icon {
+		display: inline-block;
+		inline-size: 1em;
+		block-size: 1em;
 	}
 
 	@supports (interpolate-size: allow-keywords) {

@@ -3,7 +3,7 @@
 	import { base } from "$app/paths"
 	import type { ThemeColor } from "./Theme.svelte"
 	import Container from "./Container.svelte"
-	import MenuIcon from "./icon/Menu.svelte"
+	import { MenuIcon } from "$lib/ui/icons"
 	import { Url } from "$lib/url"
 
 	const NUMBER_OF_UNMENUED_ITEMS = 6
@@ -100,13 +100,11 @@
 
 	.menu-button {
 		all: unset;
-		--skin-local-stroke: var(--skin-bg-text);
 		position: relative;
 		color: var(--skin-bg-text);
 		cursor: pointer;
 		z-index: 2;
 	} .menu-button:hover, .menu-button:focus {
-		--skin-local-stroke: var(--red-light);
 		color: var(--red-light);
 	}
 
@@ -115,14 +113,11 @@
 		margin: 0;
 		z-index: 2;
 	} .nav-list a {
-		--skin-local-stroke: var(--skin-bg-text);
 		color: var(--skin-bg-text);
 		text-decoration: none;
 	} .nav-list a:hover, .nav-list a:focus {
-		--skin-local-stroke: var(--theme-light);
 		color: var(--theme-light);
 	} .nav-list .active a {
-		--skin-local-stroke: var(--skin-bg-text);
 		color: var(--skin-bg-text);
 		font-weight: bold;
 	} .nav-list .active :global(.stroke) {
@@ -190,7 +185,6 @@
 	}
 
 	.bubble {
-		--skin-local-stroke: var(--theme-main);
 		inline-size: 100%;
 		block-size: 100%;
 		color: var(--theme-main);

@@ -1,12 +1,12 @@
 <script lang="ts">
-	import Pokeball from "./icon/Pokeball.svelte"
+	import { PokeballIcon } from "$lib/ui/icons"
 
 	export let caption: string | undefined = undefined
 </script>
 
 <div class="loader">
 	<div class="icon">
-		<Pokeball label={caption ?? "Loading"} />
+		<PokeballIcon label={caption ?? "Loading"} />
 	</div>
 	{#if caption}
 		<p>{caption}</p>
@@ -24,7 +24,7 @@
 	}
 
 	.icon {
-		--skin-local-stroke: var(--skin-local-color, var(--skin-content));
+		color: var(--skin-local-color, var(--skin-content));
 		font-size: var(--font-sz-jupiter);
 		width: 3em;
 		height: 3em;

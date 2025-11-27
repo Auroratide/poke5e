@@ -8,8 +8,7 @@
 
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
-	import ChevronUp from "$lib/design/icon/ChevronUp.svelte"
-	import ChevronDown from "$lib/design/icon/ChevronDown.svelte"
+	import { ChevronIcon } from "$lib/ui/icons"
 
 	const dispatch = createEventDispatcher()
 
@@ -67,9 +66,9 @@
 
 <span class="numeric-resource-field" style:width="{width + 2.5}ch">
 	<input {id} type="text" {value} on:change={onChange} on:input={onInput} on:keydown={onKeyDown} {disabled} autocomplete="off" />
-	<span class="buttons" style:--skin-local-stroke="black">
-		<button on:click={increment} tabindex="-1"><ChevronUp label="increment" /></button>
-		<button on:click={decrement} tabindex="-1"><ChevronDown label="decrement" /></button>
+	<span class="buttons">
+		<button on:click={increment} tabindex="-1"><ChevronIcon.Up label="increment" /></button>
+		<button on:click={decrement} tabindex="-1"><ChevronIcon.Down label="decrement" /></button>
 	</span>
 </span>
 

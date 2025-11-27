@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Url } from "$lib/url"
-	import HelpIcon from "$lib/design/icon/HelpIcon.svelte"
+	import { HelpIcon } from "$lib/ui/icons"
 	import Popover from "../Popover.svelte"
 	import { rulesVersion } from "./RulesVersion"
 

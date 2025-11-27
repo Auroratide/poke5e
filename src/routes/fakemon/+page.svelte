@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from "$app/environment"
 	import { page } from "$app/stores"
-	import Greatball from "$lib/design/icon/Greatball.svelte"
+	import { GreatballIcon } from "$lib/ui/icons"
 	import Loader from "$lib/design/Loader.svelte"
 	import Page from "$lib/design/Page.svelte"
 	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
@@ -54,7 +54,7 @@
 
 <Title value="Fakémon" />
 <Page theme="pink">
-	<Greatball slot="icon" />
+	<GreatballIcon slot="icon" />
 	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Fakémon List">
 		{#await list}
 			<Loader />

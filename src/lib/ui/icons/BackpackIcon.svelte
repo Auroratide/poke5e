@@ -1,5 +1,8 @@
-<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-	<title>Backpack</title>
+<script lang="ts">
+	import IconBase from "./IconBase.svelte"
+</script>
+
+<IconBase title="Backpack">
 	<path class="stroke main-body" d="
 		M 20 50
 		L 20 85
@@ -47,24 +50,4 @@
 		cx="50"
 		cy="47.5"
 	/>
-</svg>
-
-<style>
-	svg {
-		overflow: visible;
-	}
-
-	.stroke {
-		fill: none;
-		stroke: var(--skin-local-stroke);
-		stroke-width: 8;
-	}
-
-	.fill {
-		fill: var(--skin-local-stroke);
-	}
-
-	.stroke.thin {
-		stroke-width: 5;
-	}
-</style>
+</IconBase>

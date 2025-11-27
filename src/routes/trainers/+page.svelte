@@ -2,7 +2,7 @@
 	import { page } from "$app/stores"
 	import { browser } from "$app/environment"
 	import Page from "$lib/design/Page.svelte"
-	import IdBadge from "$lib/design/icon/IdBadge.svelte"
+	import { IdBadgeIcon } from "$lib/ui/icons"
 	import Title from "$lib/design/Title.svelte"
 	import Loader from "$lib/design/Loader.svelte"
 	import TrainerCard from "$lib/trainers/trainer-details/Card.svelte"
@@ -54,7 +54,7 @@
 
 <Title value="Trainers" />
 <Page theme="green">
-	<IdBadge slot="icon" />
+	<IdBadgeIcon slot="icon" />
 	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Pokemon List">
 		<JavascriptRequired />
 		{#if trainerId}

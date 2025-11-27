@@ -1,11 +1,13 @@
 <script lang="ts">
-	import Pokeball from "$lib/design/icon/Pokeball.svelte"
-	import Hit from "$lib/design/icon/Hit.svelte"
-	import Disc from "$lib/design/icon/Disc.svelte"
-	import Backpack from "$lib/design/icon/Backpack.svelte"
+	import {
+		BackpackIcon,
+		DiscIcon,
+		HitIcon,
+		IdBadgeIcon,
+		PencilNotesIcon,
+		PokeballIcon,
+	} from "$lib/ui/icons"
 	import Title from "$lib/design/Title.svelte"
-	import IdBadge from "$lib/design/icon/IdBadge.svelte"
-	import PencilNotes from "$lib/design/icon/PencilNotes.svelte"
 	import { Url } from "$lib/url"
 	import StaticPage from "$lib/design/StaticPage.svelte"
 </script>
@@ -15,27 +17,27 @@
 	<ul>
 		<li class="theme-red">
 			<a href="{Url.pokemon()}">Pokemon</a>
-			<span class="icon"><Pokeball /></span>
+			<span class="icon"><PokeballIcon /></span>
 		</li>
 		<li class="theme-blue">
 			<a href="{Url.moves()}">Moves</a>
-			<span class="icon"><Hit /></span>
+			<span class="icon"><HitIcon /></span>
 		</li>
 		<li class="theme-purple">
 			<a href="{Url.tms()}">TMs</a>
-			<span class="icon"><Disc /></span>
+			<span class="icon"><DiscIcon /></span>
 		</li>
 		<li class="theme-yellow">
 			<a href="{Url.items()}">Items</a>
-			<span class="icon"><Backpack /></span>
+			<span class="icon"><BackpackIcon /></span>
 		</li>
 		<li class="theme-green">
 			<a href="{Url.trainers()}">Trainers</a>
-			<span class="icon"><IdBadge /></span>
+			<span class="icon"><IdBadgeIcon /></span>
 		</li>
 		<li class="theme-navy">
 			<a href="{Url.reference.all()}">Reference</a>
-			<span class="icon"><PencilNotes /></span>
+			<span class="icon"><PencilNotesIcon /></span>
 		</li>
 	</ul>
 	<address>
@@ -70,7 +72,7 @@
 	}
 
 	ul li {
-		--skin-local-stroke: var(--theme-main);
+		color: var(--theme-main);
 		position: relative;
 		display: block;
 		font-size: var(--font-sz-uranus);

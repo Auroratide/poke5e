@@ -2,7 +2,7 @@
 	import { page } from "$app/stores"
 	import Page from "$lib/design/Page.svelte"
 	import MoveList from "$lib/moves/MoveList.svelte"
-	import Hit from "$lib/design/icon/Hit.svelte"
+	import { HitIcon } from "$lib/ui/icons"
 	import Loader from "$lib/design/Loader.svelte"
 	import { moves } from "$lib/moves/store"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
@@ -13,7 +13,7 @@
 </script>
 
 <Page theme="blue">
-	<Hit slot="icon" />
+	<HitIcon slot="icon" />
 	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Move List">
 		<ListPageHeading title="Move List" target="/moves" />
 		{#if movesToRender !== undefined}

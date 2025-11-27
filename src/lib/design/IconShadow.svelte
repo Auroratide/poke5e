@@ -16,7 +16,7 @@
 	}
 
 	.icon-shadow {
-		--skin-local-stroke: var(--skin-content);
+		color: var(--skin-content);
 		position: absolute;
 		bottom: 0;
 		right: 0;

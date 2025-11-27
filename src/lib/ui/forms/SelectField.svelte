@@ -19,7 +19,7 @@
 	import { slide } from "svelte/transition"
 	import { kebab } from "./kebab"
 	import { createEventDispatcher } from "svelte"
-	import ChevronDown from "$lib/design/icon/ChevronDown.svelte"
+	import { ChevronIcon } from "$lib/ui/icons"
 
 	export let label: string
 	export let value: string
@@ -62,7 +62,7 @@
 				{/if}
 			{/if}
 		</select>
-		<span class="select-indicator" aria-hidden="true"><ChevronDown /></span>
+		<span class="select-indicator" aria-hidden="true"><ChevronIcon.Down /></span>
 	</div>
 	{#if value === SelectFieldOther}
 		<div class="other-field" transition:slide>
@@ -93,6 +93,9 @@
 		display: inline-flex;
 		align-items: center;
 		padding-inline: 0.125em;
+	} .select-indicator :global(svg) {
+		inline-size: 1em;
+		block-size: 1em;
 	}
 
 	.other-field {

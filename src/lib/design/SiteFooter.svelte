@@ -1,9 +1,11 @@
 <script lang="ts">
 	import Container from "./Container.svelte"
 	import { Url } from "$lib/url"
-	import ChevronMenu from "./icon/ChevronMenu.svelte"
-	import DiscordIcon from "./icon/DiscordIcon.svelte"
-	import GithubIcon from "./icon/GithubIcon.svelte"
+	import {
+		ChevronIcon,
+		DiscordIcon,
+		GithubIcon,
+	} from "$lib/ui/icons"
 	import { shouldShowVersionHighlight } from "./version-tracking"
 	import { browser } from "$app/environment"
 
@@ -33,7 +35,7 @@
 						<span>{versionHighlight}</span>
 					{/if}
 				</a></p>
-				<button aria-expanded="{showMore}" aria-controls="site-footer-more" on:click={toggleMore}>{showMore ? "Less" : "More"} <span class="icon chevron-menu"><ChevronMenu label="" /></span></button>
+				<button aria-expanded="{showMore}" aria-controls="site-footer-more" on:click={toggleMore}>{showMore ? "Less" : "More"} <span class="icon chevron-menu"><ChevronIcon.Menu label="" /></span></button>
 			</div>
 			<div id="site-footer-more" class="animate-height" hidden={!showMore} aria-hidden="{!showMore}">
 				<ul class="links">
@@ -70,7 +72,6 @@
 
 <style>
 	footer {
-		--skin-local-stroke: currentColor;
 		background: var(--skin-footer);
 		color: var(--skin-footer-text);
 		padding: 0.25em 0.5em;
