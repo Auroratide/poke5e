@@ -1,0 +1,55 @@
+.theme-blue {
+	--theme-main: oklch(0.7375 0.1141 194.96);
+	--theme-dark: oklch(0.6727 0.1031 191.69);
+	--theme-text: oklch(0.5528 0.0871 188.28);
+	--theme-light: oklch(0.7925 0.108 195.19);
+}
+
+.theme-red {
+	--theme-main: oklch(0.5899 0.207 22.46);
+	--theme-dark: oklch(0.5256 0.1862 22.68);
+	--theme-text: oklch(0.5256 0.1862 22.68);
+	--theme-light: oklch(0.6846 0.1854 18.57);
+}
+
+.theme-purple {
+	--theme-main: oklch(0.7752 0.1225 289.33);
+	--theme-dark: oklch(0.7249 0.1526 288.89);
+	--theme-text: oklch(0.5419 0.164 286.44);
+	--theme-light: oklch(0.7752 0.1225 289.33);
+}
+
+.theme-green {
+	--theme-main: oklch(0.8705 0.206 125.72);
+	--theme-dark: oklch(0.8048 0.208677 127.3907);
+	--theme-text: oklch(0.593 0.1217 123.65);
+	--theme-light: oklch(0.8705 0.206 125.72);
+}
+
+.theme-navy {
+	--theme-main: oklch(0.71 0.1587 248.61);
+	--theme-dark: oklch(0.6478 0.1741 248.68);
+	--theme-text: oklch(0.4732 0.0821 242.36);
+	--theme-light: oklch(0.71 0.1587 248.61);
+}
+
+.theme-yellow {
+	--theme-main: oklch(0.812 0.16 83.85);
+	--theme-dark: oklch(0.7552 0.157 77.917);
+	--theme-text: oklch(0.5477 0.1137 79.13);
+	--theme-light: oklch(0.812 0.16 83.85);
+}
+
+.theme-orange {
+	--theme-main: oklch(0.7168 0.1652 55.22);
+	--theme-dark: oklch(0.8745 0.1291 82.94);
+	--theme-text: oklch(0.4679 0.079 60.14);
+	--theme-light: oklch(0.8745 0.1291 82.94);
+}
+
+.theme-pink {
+	--theme-main: oklch(0.7159 0.2039 354.56);
+	--theme-dark: oklch(0.6736 0.2156 358.22);
+	--theme-text: oklch(0.4645 0.1321 356.67);
+	--theme-light: oklch(0.7159 0.2039 354.56);
+}

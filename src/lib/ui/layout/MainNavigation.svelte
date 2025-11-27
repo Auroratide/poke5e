@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { ComponentType } from "svelte"
 	import { base } from "$app/paths"
-	import type { ThemeColor } from "$lib/ui/layout"
+	import type { ThemeColor } from "$lib/ui/theme"
 	import Container from "./Container.svelte"
 	import { MenuIcon } from "$lib/ui/icons"
 	import { Url } from "$lib/url"

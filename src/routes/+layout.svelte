@@ -1,4 +1,5 @@
 <script lang="ts">
+	import "$lib/ui/theme"
 	import type { LayoutData } from "./$types"
 	import type { Writable } from "svelte/store"
 	import { afterNavigate } from "$app/navigation"
@@ -30,7 +31,6 @@
 	import { page } from "$app/stores"
 	import type { ComponentType } from "svelte"
 	import {
-		type ThemeColor,
 		Container,
 		MainNavigation,
 		SiteFooter,
@@ -38,6 +38,7 @@
 		MAIN_CONTENT_ID,
 		MAIN_SEARCH_ID,
 	} from "$lib/ui/layout"
+	import type { ThemeColor } from "$lib/ui/theme"
 	
 	if (browser) {
 		import("@auroratide/toggle-switch/lib/define.js")

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ThemeColor } from "./ThemeColor"
+	import type { ThemeColor } from "./ThemeOptions"
 
 	export let id: string | undefined = undefined
 	export let theme: ThemeColor
@@ -12,6 +12,6 @@
 
 <style>
 	.theme {
-		height: 100%;
+		block-size: 100%;
 	}
 </style>
