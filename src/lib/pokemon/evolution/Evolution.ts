@@ -10,6 +10,10 @@ export function tmpEvolutionId(): EvolutionId {
 	return `TMP.${++currentId}`
 }
 
+export type ToStringOptions = {
+	link?: "from" | "to",
+}
+
 export class Evolution extends DataClass<{
 	id: EvolutionId,
 	from: Data<SpeciesIdentifier>,
@@ -35,14 +39,14 @@ export class Evolution extends DataClass<{
 		return this.data.conditions.some((it) => it.type === condition.type && it.value === condition.value)
 	}
 
-	toString(): string {
+	toString({ link = "to" }: ToStringOptions = {}): string {
 		const conditions = this.conditions
 		const benefits = this.benefits
 		const genderCondition = conditions.find((it) => it instanceof GenderCondition)
 		const levelCondition = conditions.find((it) => it instanceof LevelCondition)
 		const otherconditions = conditions.filter((it) => it !== genderCondition && it !== levelCondition)
 
-		return `${genderCondition ? genderCondition.toString() + " " : ""}{{pokemon:${this.data.from}}} can evolve into {{pokemon::${this.data.to}}} ${levelCondition ? levelCondition.toString() : ""}${otherconditions.length > 0 && levelCondition ? " " : ""}${otherconditions.map((it) => it.toString()).join(", ")}. When it evolves, ${benefits.map((it) => it.toString()).join(", ")}.`
+		return `${genderCondition ? genderCondition.toString() + " " : ""}{{pokemon:${link === "from" ? ":" : ""}${this.data.from}}} can evolve into {{pokemon:${link === "to" ? ":" : ""}${this.data.to}}} ${levelCondition ? levelCondition.toString() : ""}${otherconditions.length > 0 && levelCondition ? " " : ""}${otherconditions.map((it) => it.toString()).join(", ")}. When it evolves, ${benefits.map((it) => it.toString()).join(", ")}.`
 	}
 
 	static fromJson(json: SingleEvolutionJsonResponse): Evolution {
