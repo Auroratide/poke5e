@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset, CheckboxFields } from "$lib/design/forms"
+	import { Fieldset, CheckboxFields } from "$lib/ui/forms"
 	import { Attributes, type Attribute } from "."
 
 	export let values: Attribute[]

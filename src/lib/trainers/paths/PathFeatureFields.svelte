@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { TextField, MarkdownField } from "$lib/design/forms"
+	import { TextField, MarkdownField } from "$lib/ui/forms"
 
 	export let level: string
 	export let name: string | undefined = undefined

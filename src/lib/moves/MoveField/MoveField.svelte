@@ -3,12 +3,12 @@
 </script>
 
 <script lang="ts">
-	import TextField from "$lib/design/forms/TextField.svelte"
 	import { createEventDispatcher } from "svelte"
 	import { slide } from "svelte/transition"
 	import { MoveFilter } from "../MoveFilter"
 	import type { Move } from "../types"
 	import MoveOption from "./MoveOption.svelte"
+	import { TextField } from "$lib/ui/forms"
 
 	const dispatch = createEventDispatcher()
 

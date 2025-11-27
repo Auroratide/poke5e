@@ -1,6 +1,6 @@
 <script lang="ts" generics='T extends EvolutionBenefitType["value"]'>
 	import type { EvolutionBenefitType, TypedEvolutionBenefitType } from "../EvolutionBenefit"
-	import { SingleCheckboxField, type CheckboxFieldChangeEvent } from "$lib/design/forms"
+	import { SingleCheckboxField, type CheckboxFieldChangeEvent } from "$lib/ui/forms"
 	import { slide } from "svelte/transition"
 
 	export let id: string

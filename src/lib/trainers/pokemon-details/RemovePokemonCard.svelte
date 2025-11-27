@@ -2,7 +2,7 @@
 	import type { PokemonId } from "$lib/trainers/types"
 	import Card from "$lib/design/Card.svelte"
 	import Button from "$lib/design/Button.svelte"
-	import { ActionArea } from "$lib/design/forms"
+	import { ActionArea } from "$lib/ui/forms"
 	import type { TrainerStore } from "../trainers"
 	import { base } from "$app/paths"
 	import Saveable from "$lib/design/Saveable.svelte"

@@ -6,8 +6,7 @@
 
 <script lang="ts">
 	import { base } from "$app/paths"
-	import { NumericResourceField } from "$lib/design/forms"
-	import type { ChangeDetail } from "$lib/design/forms/NumericResourceField.svelte"
+	import { NumericResourceField, type NumericChangeDetail } from "$lib/ui/forms"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import type { Attributes } from "$lib/dnd/attributes"
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
@@ -37,7 +36,7 @@
 		type: pokemonType.data,
 	})
 
-	const onChangePp = (e: CustomEvent<ChangeDetail>) => {
+	const onChangePp = (e: CustomEvent<NumericChangeDetail>) => {
 		dispatch("update", {
 			value: e.detail.value ?? 0,
 		} as UpdatePpDetail)

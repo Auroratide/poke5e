@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
 	import Button from "$lib/design/Button.svelte"
-	import { ActionArea, Fieldset, Form, IntField, RadioFields, HintText } from "$lib/design/forms"
+	import { ActionArea, Fieldset, Form, IntField, RadioFields, HintText } from "$lib/ui/forms"
 	import { PokemonResting } from "./Rest"
 	import type { TrainerPokemon } from "$lib/trainers/types"
 	import { rulesVersion } from "$lib/design/rules-version"

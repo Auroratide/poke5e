@@ -1,6 +1,6 @@
 <script lang="ts">
 	import FlatDl from "$lib/design/FlatDl.svelte"
-	import { Fieldset, CheckboxFields } from "$lib/design/forms"
+	import { Fieldset, CheckboxFields } from "$lib/ui/forms"
 	import { PokemonType, type PokeType } from "$lib/pokemon/types-2"
 
 	let types: PokeType[] = []

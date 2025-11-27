@@ -14,7 +14,7 @@
 		MarkdownField,
 		ActionArea,
 		type ImageInputValue,
-	} from "$lib/design/forms"
+	} from "$lib/ui/forms"
 	import BasicInfoFieldset from "./forms/BasicInfoFieldset.svelte"
 	import BiographyFieldset from "./forms/BiographyFieldset.svelte"
 	import { AttributesFieldset, SavingThrowsFieldset } from "$lib/dnd/attributes"

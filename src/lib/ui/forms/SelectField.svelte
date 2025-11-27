@@ -19,7 +19,7 @@
 	import { slide } from "svelte/transition"
 	import { kebab } from "./kebab"
 	import { createEventDispatcher } from "svelte"
-	import ChevronDown from "../icon/ChevronDown.svelte"
+	import ChevronDown from "$lib/design/icon/ChevronDown.svelte"
 
 	export let label: string
 	export let value: string

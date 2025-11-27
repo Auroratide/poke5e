@@ -9,7 +9,7 @@
 	import {
 		NumericResourceField,
 		type NumericChangeDetail,
-	} from "$lib/design/forms"
+	} from "$lib/ui/forms"
 	import { formatMoney } from "$lib/pokemon/money"
 	import InventoryList, { type UpdateQuantityDetail } from "../info/InventoryList.svelte"
 	import type { InventoryItem } from "../types"

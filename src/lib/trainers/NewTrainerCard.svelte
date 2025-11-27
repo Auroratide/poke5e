@@ -11,7 +11,7 @@
 		TextField,
 		MarkdownField,
 		HintText,
-	} from "$lib/design/forms"
+	} from "$lib/ui/forms"
 	import Title from "$lib/design/Title.svelte"
 
 	let name = ""

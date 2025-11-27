@@ -7,8 +7,7 @@
 
 <script lang="ts">
 	import Button from "$lib/design/Button.svelte"
-	import { ActionArea, Form, FormDetails, MarkdownField, type ImageInputValue } from "$lib/design/forms"
-	import Fieldset from "$lib/design/forms/Fieldset.svelte"
+	import { ActionArea, Form, FormDetails, MarkdownField, type ImageInputValue, Fieldset } from "$lib/ui/forms"
 	import { AttributesFieldset, SavingThrowsFieldset } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
 	import { createEventDispatcher } from "svelte"

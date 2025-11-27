@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Button from "$lib/design/Button.svelte"
 	import Details from "$lib/design/Details.svelte"
-	import { FormGroup, SelectField } from "$lib/design/forms"
+	import { FormGroup, SelectField } from "$lib/ui/forms"
 	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import { MoveFilter } from "$lib/moves/MoveFilter"

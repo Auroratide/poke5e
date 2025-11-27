@@ -8,7 +8,7 @@
 		ToggleSwitchField,
 		type ImageInputValue,
 		type IntFieldChangeEvent,
-	} from "$lib/design/forms"
+	} from "$lib/ui/forms"
 	import { Nature, NatureField } from "$lib/pokemon/nature"
 	import { PokemonTeraType } from "$lib/pokemon/types-2"
 

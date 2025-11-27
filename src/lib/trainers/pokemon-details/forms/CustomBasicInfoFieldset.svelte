@@ -2,7 +2,7 @@
 	import {
 		Fieldset,
 		SelectField,
-	} from "$lib/design/forms"
+	} from "$lib/ui/forms"
 	import { CreatureSizes, type CreatureSize } from "$lib/dnd/CreatureSize"
 	import { HitDice, HitDiceSize } from "$lib/dnd/hit-dice"
 	import { capitalize } from "$lib/string"

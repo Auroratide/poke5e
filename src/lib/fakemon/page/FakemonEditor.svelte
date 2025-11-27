@@ -20,7 +20,7 @@
 		TextareaField,
 		TextField,
 		type ImageInputValue,
-	} from "$lib/design/forms"
+	} from "$lib/ui/forms"
 	import { TypeField } from "$lib/pokemon/types-2"
 	import { SpeedsFieldset } from "$lib/dnd/movement"
 	import { SensesFieldset } from "$lib/dnd/senses"

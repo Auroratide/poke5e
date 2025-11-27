@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Button from "$lib/design/Button.svelte"
-	import { ActionArea } from "$lib/design/forms"
+	import { ActionArea } from "$lib/ui/forms"
 	import { createEventDispatcher } from "svelte"
 	import { type PokemonSpecies } from "$lib/creatures/species"
 	import {
 		Fieldset,
 		Form,
 		RadioFields,
-	} from "$lib/design/forms"
+	} from "$lib/ui/forms"
 	import { ResolveAsyncText } from "$lib/rendering"
 	import type { TrainerPokemon } from "$lib/trainers/types"
 	import type { Readable } from "svelte/store"

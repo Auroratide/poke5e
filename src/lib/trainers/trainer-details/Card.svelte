@@ -2,7 +2,7 @@
 	import Info from "./Info.svelte"
 	import Card from "$lib/design/Card.svelte"
 	import Button from "$lib/design/Button.svelte"
-	import { ActionArea } from "$lib/design/forms"
+	import { ActionArea } from "$lib/ui/forms"
 	import type { TrainerStore } from "../trainers"
 	import { Url } from "$lib/url"
 	import { PageAction } from "../page-action"

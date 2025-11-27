@@ -8,7 +8,7 @@
 	import {
 		NumericResourceField,
 		type NumericChangeDetail,
-	} from "$lib/design/forms"
+	} from "$lib/ui/forms"
 	import { createEventDispatcher } from "svelte"
 	import type { PokemonBond } from "../../trainers/types"
 	import { BondIcon } from "./icons"

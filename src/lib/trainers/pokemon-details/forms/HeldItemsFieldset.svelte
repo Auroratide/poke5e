@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset } from "$lib/design/forms"
+	import { Fieldset } from "$lib/ui/forms"
 	import InventoryEditor from "$lib/items/InventoryEditor.svelte"
 	import type { HeldItem } from "$lib/trainers/types"
 

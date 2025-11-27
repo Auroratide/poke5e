@@ -1,6 +1,5 @@
 <script lang="ts">
-	import { Fieldset, ImageField, InstructionText, type ImageInputValue } from "$lib/design/forms"
-	import HueField from "$lib/design/forms/HueField.svelte"
+	import { Fieldset, ImageField, InstructionText, type ImageInputValue, HueField } from "$lib/ui/forms"
 	import MediaAttributionFields from "./MediaAttributionFields.svelte"
 	import type { SpeciesMedia, UploadedMedia } from "./SpeciesMedia"
 	import SpeciesPortrait from "./SpeciesPortrait.svelte"

@@ -4,11 +4,10 @@
 
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
-	import { TextField } from "$lib/design/forms"
+	import { TextField, kebab } from "$lib/ui/forms"
 	import { matchNameOrType2 } from "$lib/creatures/filter"
 	import type { PokemonSpecies } from "./PokemonSpecies"
 	import Button from "$lib/design/Button.svelte"
-	import { kebab } from "$lib/design/forms/kebab"
 	import { slide } from "svelte/transition"
 
 	const dispatch = createEventDispatcher()

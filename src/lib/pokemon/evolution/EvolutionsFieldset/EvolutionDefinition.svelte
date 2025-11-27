@@ -6,10 +6,10 @@
 		IntField,
 		FormGroup,
 		TextareaField,
-	} from "$lib/design/forms"
+		SelectField,
+	} from "$lib/ui/forms"
 	import ConditionField from "./ConditionField.svelte"
 	import { PokemonGender } from "$lib/creatures/gender"
-	import SelectField from "$lib/design/forms/SelectField.svelte"
 	import { TimesOfDay, type TypedEvolutionConditionType } from "../EvolutionCondition"
 	import { capitalize } from "$lib/string"
 	import { PokemonSpecies, SpeciesField, SpeciesIdentifier, type SpeciesFieldChangeEvent } from "$lib/creatures/species"

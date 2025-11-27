@@ -2,7 +2,7 @@
 	import type { PokemonId, TrainerPokemon } from "$lib/trainers/types"
 	import Card from "$lib/design/Card.svelte"
 	import Button from "$lib/design/Button.svelte"
-	import { ActionArea } from "$lib/design/forms"
+	import { ActionArea } from "$lib/ui/forms"
 	import type { TrainerStore } from "../trainers"
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/url"

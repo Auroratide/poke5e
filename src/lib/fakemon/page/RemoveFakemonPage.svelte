@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Card from "$lib/design/Card.svelte"
 	import Saveable from "$lib/design/Saveable.svelte"
-	import { ActionArea } from "$lib/design/forms"
+	import { ActionArea } from "$lib/ui/forms"
 	import Button from "$lib/design/Button.svelte"
 	import { Url } from "$lib/url"
 	import Title from "$lib/design/Title.svelte"

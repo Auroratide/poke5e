@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "../Button.svelte"
+	import Button from "$lib/design/Button.svelte"
 	
 	export let label: string
 	export let variant: "solid" | "ghost" | "danger" = "solid"

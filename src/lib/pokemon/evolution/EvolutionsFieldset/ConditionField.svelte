@@ -1,5 +1,5 @@
 <script lang="ts" generics='T extends EvolutionConditionType["value"]'>
-	import { SingleCheckboxField, type CheckboxFieldChangeEvent } from "$lib/design/forms"
+	import { SingleCheckboxField, type CheckboxFieldChangeEvent } from "$lib/ui/forms"
 	import { slide } from "svelte/transition"
 	import type { EvolutionConditionType, TypedEvolutionConditionType } from "../EvolutionCondition"
 

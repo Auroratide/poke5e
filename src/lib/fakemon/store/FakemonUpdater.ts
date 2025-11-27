@@ -3,7 +3,7 @@ import type { StoredFakemon } from "./FakemonStore"
 import type { FakemonDataProvider } from "../data/FakemonDataProvider"
 import type { Fakemon } from "../Fakemon"
 import { error } from "$lib/design/errors/store"
-import type { ImageInputValue } from "$lib/design/forms"
+import type { ImageInputValue } from "$lib/ui/forms"
 import { SpeciesMedia } from "$lib/creatures/media"
 
 export type UpdateInfoOptions = {

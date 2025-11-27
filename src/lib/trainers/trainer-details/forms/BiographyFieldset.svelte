@@ -5,7 +5,7 @@
 		TextField,
 		ImageField,
 		type ImageInputValue,
-	} from "$lib/design/forms"
+	} from "$lib/ui/forms"
 	import type { TrainerBio } from "$lib/trainers/types"
 
 	const FIVE_HUNDRED_KB = 524288

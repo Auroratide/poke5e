@@ -8,7 +8,7 @@ import type { Data } from "$lib/DataClass"
 import { HitDice } from "$lib/dnd/hit-dice"
 import { FakemonLocalStorage } from "./FakemonLocalStorage"
 import type { UserAssets } from "$lib/user-assets"
-import type { ImageInputValue } from "$lib/design/forms"
+import type { ImageInputValue } from "$lib/ui/forms"
 import { SpeciesMedia, type SpeciesMediaTypeAttribution, type UploadedMedia } from "$lib/creatures/media"
 import { SpeciesIdentifier } from "$lib/creatures/species"
 

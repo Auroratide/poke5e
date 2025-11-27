@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CheckboxFields, Fieldset, SelectField } from "$lib/design/forms"
+	import { CheckboxFields, Fieldset, SelectField } from "$lib/ui/forms"
 	import { type PokeType, PokemonType } from "./PokemonType"
 
 	const NONE = ""

@@ -8,7 +8,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
 	import Button from "$lib/design/Button.svelte"
-	import { ActionArea, Fieldset, Form, IntField, RadioFields, HintText, CheckboxFields } from "$lib/design/forms"
+	import { ActionArea, Fieldset, Form, IntField, RadioFields, HintText, CheckboxFields } from "$lib/ui/forms"
 	import { PokemonResting, TrainerResting, type RestType } from "./Rest"
 	import type { TrainerData } from "$lib/trainers/data"
 	import { trainerHitDiceSize } from "$lib/trainers/hit-dice"

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SelectField } from "$lib/design/forms"
+	import { SelectField } from "$lib/ui/forms"
 	import { Nature } from "./Nature"
 	import { StandardNatures } from "./StandardNature"
 

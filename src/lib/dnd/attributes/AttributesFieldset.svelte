@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset, IntField } from "$lib/design/forms"
+	import { Fieldset, IntField } from "$lib/ui/forms"
 	import { Attributes } from "./Attributes"
 	
 	export let values: Attributes

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset, RadioFields } from "$lib/design/forms"
+	import { Fieldset, RadioFields } from "$lib/ui/forms"
 	import { GenderRatio } from "./GenderRatio"
 
 	export let value: GenderRatio

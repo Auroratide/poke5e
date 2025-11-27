@@ -15,7 +15,7 @@
 		HintText,
 		TextField,
 		type ImageInputValue,
-	} from "$lib/design/forms"
+	} from "$lib/ui/forms"
 	import SimpleTypeField from "$lib/pokemon/types-2/SimpleTypeField.svelte"
 	import { createEventDispatcher } from "svelte"
 	import { Fakemon } from "../Fakemon"

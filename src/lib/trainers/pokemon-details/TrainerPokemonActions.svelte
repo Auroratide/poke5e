@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PokemonSpecies } from "$lib/creatures/species"
 	import Button from "$lib/design/Button.svelte"
-	import { ActionArea } from "$lib/design/forms"
+	import { ActionArea } from "$lib/ui/forms"
 	import { EvolutionStore } from "$lib/pokemon/evolution"
 	import { Url } from "$lib/url"
 	import { PageAction } from "../page-action"

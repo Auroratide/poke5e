@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ToggleSwitchField } from "$lib/design/forms"
+	import { ToggleSwitchField } from "$lib/ui/forms"
 	import { isFeatureActive, setFeatureActive } from "$lib/FeatureToggles"
 
 	export let feature: string

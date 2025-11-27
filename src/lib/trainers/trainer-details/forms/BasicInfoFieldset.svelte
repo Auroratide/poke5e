@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset, IntField, TextField, type IntFieldChangeEvent } from "$lib/design/forms"
+	import { Fieldset, IntField, TextField, type IntFieldChangeEvent } from "$lib/ui/forms"
 
 	export let name: string
 	export let level: number

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PokemonSpecies } from "$lib/creatures/species"
 	import Button from "$lib/design/Button.svelte"
-	import { Fieldset, focusInputField } from "$lib/design/forms"
+	import { Fieldset, focusInputField } from "$lib/ui/forms"
 	import MoveEditor, { getMoveFieldName } from "$lib/moves/MoveEditor.svelte"
 	import { moves } from "$lib/moves/store"
 	import type { LearnedMove } from "$lib/trainers/types"

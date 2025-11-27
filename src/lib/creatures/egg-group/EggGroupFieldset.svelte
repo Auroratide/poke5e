@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CheckboxFields, Fieldset } from "$lib/design/forms"
+	import { CheckboxFields, Fieldset } from "$lib/ui/forms"
 	import { EggGroup } from "./EggGroup"
 	import { capitalizeAll } from "$lib/string"
 

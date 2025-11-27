@@ -1,5 +1,5 @@
 <script lang="ts" generics="TItem extends HeldItem">
-	import { focusInputField } from "$lib/design/forms"
+	import { focusInputField } from "$lib/ui/forms"
 	import Button from "$lib/design/Button.svelte"
 	import type { ItemType } from "./types"
 	import ItemEditor, { getItemFieldName } from "./ItemEditor.svelte"

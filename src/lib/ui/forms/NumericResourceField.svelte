@@ -8,8 +8,8 @@
 
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
-	import ChevronUp from "../icon/ChevronUp.svelte"
-	import ChevronDown from "../icon/ChevronDown.svelte"
+	import ChevronUp from "$lib/design/icon/ChevronUp.svelte"
+	import ChevronDown from "$lib/design/icon/ChevronDown.svelte"
 
 	const dispatch = createEventDispatcher()
 

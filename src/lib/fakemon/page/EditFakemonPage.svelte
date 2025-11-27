@@ -2,7 +2,7 @@
 	import { goto } from "$app/navigation"
 	import Button from "$lib/design/Button.svelte"
 	import Card from "$lib/design/Card.svelte"
-	import { ActionArea } from "$lib/design/forms"
+	import { ActionArea } from "$lib/ui/forms"
 	import Title from "$lib/design/Title.svelte"
 	import { Url } from "$lib/url"
 	import type { Readable } from "svelte/store"

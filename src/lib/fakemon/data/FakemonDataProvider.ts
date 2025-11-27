@@ -1,5 +1,5 @@
 import type { SpeciesMedia, UploadedMedia } from "$lib/creatures/media"
-import type { ImageInputValue } from "$lib/design/forms"
+import type { ImageInputValue } from "$lib/ui/forms"
 import type { DraftFakemon, Fakemon } from "../Fakemon"
 
 /**

@@ -9,7 +9,7 @@
 	import type { ChosenTrainerPath } from "./ChosenTrainerPath"
 	import { rulesVersion } from "$lib/design/rules-version"
 	import { TrainerFeatureLevelLandmarks, TrainerPaths } from "."
-	import { NumericResourceField, type NumericChangeDetail } from "$lib/design/forms"
+	import { NumericResourceField, type NumericChangeDetail } from "$lib/ui/forms"
 	import FeatureInfo from "./FeatureInfo.svelte"
 	import type { Level } from "$lib/dnd/level"
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset, SelectField } from "$lib/design/forms"
+	import { Fieldset, SelectField } from "$lib/ui/forms"
 	import { abilities } from "$lib/pokemon/store"
 	import type { PokemonSpecies } from "$lib/creatures/species"
 

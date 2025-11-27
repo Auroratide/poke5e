@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { TrainerPaths } from "./2024"
-	import { Fieldset, SelectField, SelectFieldOther } from "$lib/design/forms"
+	import { Fieldset, SelectField, SelectFieldOther } from "$lib/ui/forms"
 	import PathFeatureFields from "./PathFeatureFields.svelte"
 	import type { ChosenTrainerPath } from "./ChosenTrainerPath"
 	import { isStandardTrainerPath } from "./TrainerPath"

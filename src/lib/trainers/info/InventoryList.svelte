@@ -13,7 +13,7 @@
 	import {
 		NumericResourceField,
 		type NumericChangeDetail,
-	} from "$lib/design/forms"
+	} from "$lib/ui/forms"
 	const dispatch = createEventDispatcher()
 
 	export let items: (HeldItem & MaybeQuantity)[]

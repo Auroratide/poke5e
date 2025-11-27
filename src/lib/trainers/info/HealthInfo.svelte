@@ -15,7 +15,7 @@
 	import {
 		NumericResourceField,
 		type NumericChangeDetail,
-	} from "$lib/design/forms"
+	} from "$lib/ui/forms"
 	import type { NonVolatileStatus } from "$lib/pokemon/status"
 	import StatusEditor, { type ChangeDetail as StatusChangeDetail } from "$lib/pokemon/StatusEditor.svelte"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"

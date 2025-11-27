@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset, RanksField } from "$lib/design/forms"
+	import { Fieldset, RanksField } from "$lib/ui/forms"
 	import { SpecializationList, type Specializations } from "$lib/trainers/specializations"
 
 	export let values: Specializations

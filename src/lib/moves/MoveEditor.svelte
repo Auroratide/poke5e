@@ -5,10 +5,12 @@
 <script lang="ts">
 	import { moves, tms } from "$lib/moves/store"
 	import { groupByLearnability } from "$lib/moves/group"
-	import Removable from "$lib/design/forms/Removable.svelte"
-	import SelectField from "$lib/design/forms/SelectField.svelte"
-	import IntField from "$lib/design/forms/IntField.svelte"
-	import { MarkdownField } from "$lib/design/forms"
+	import {
+		MarkdownField,
+		Removable,
+		SelectField,
+		IntField,
+	} from "$lib/ui/forms"
 	import type { LearnedMove } from "$lib/trainers/types"
 	import type { PokemonSpecies } from "$lib/creatures/species"
 

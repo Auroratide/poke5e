@@ -6,7 +6,7 @@
 	import { Url } from "$lib/url"
 	import findTrainerIdImg from "./find-trainer-id.png"
 	import Title from "$lib/design/Title.svelte"
-	import { WithButton, TextField } from "$lib/design/forms"
+	import { WithButton, TextField } from "$lib/ui/forms"
 
 	let id = ""
 	$: id = id.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "")

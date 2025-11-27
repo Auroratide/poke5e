@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset } from "$lib/design/forms"
+	import { Fieldset } from "$lib/ui/forms"
 	import type { MovePool } from "./MovePool"
 	import MovePoolGroupFields from "./MovePoolGroupFields.svelte"
 	import { moves, tmMoves } from "$lib/moves/store"

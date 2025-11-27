@@ -3,7 +3,7 @@
 </script>
 
 <script lang="ts">
-	import { MarkdownField, SelectField, TextField, Removable, Divider } from "$lib/design/forms"
+	import { MarkdownField, SelectField, TextField, Removable, Divider } from "$lib/ui/forms"
 	import type { HeldItem } from "$lib/trainers/types"
 	import { groupByType } from "./group"
 	import { items } from "./store"

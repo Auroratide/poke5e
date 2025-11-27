@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Removable, SelectField, MarkdownField, TextField, Divider } from "$lib/design/forms"
+	import { Removable, SelectField, MarkdownField, TextField, Divider } from "$lib/ui/forms"
 	import type { ChosenFeat } from "./ChosenFeat"
 
 	export let value: ChosenFeat

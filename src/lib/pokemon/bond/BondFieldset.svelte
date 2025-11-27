@@ -3,8 +3,8 @@
 		Fieldset,
 		IntField,
 		type RankFieldInputEvent,
-	} from "$lib/design/forms"
-	import { RanksField } from "$lib/design/forms"
+	} from "$lib/ui/forms"
+	import { RanksField } from "$lib/ui/forms"
 	import type { PokemonBond } from "$lib/trainers/types"
 
 	export let value: PokemonBond

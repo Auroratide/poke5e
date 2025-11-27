@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset, DoubleCheckboxFields, type DoubleCheckboxFieldsChangeEvent, InstructionText, CheckboxFields } from "$lib/design/forms"
+	import { Fieldset, DoubleCheckboxFields, type DoubleCheckboxFieldsChangeEvent, InstructionText, CheckboxFields } from "$lib/ui/forms"
 	import { SkillRanks } from "./SkillRanks"
 
 	export let values: SkillRanks

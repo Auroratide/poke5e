@@ -7,7 +7,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
 	import { get } from "svelte/store"
-	import { TextField, WithButton } from "$lib/design/forms"
+	import { TextField, WithButton } from "$lib/ui/forms"
 	import { SpeciesIdentifier } from "$lib/creatures/species"
 	import { fakemonStore } from "../store"
 	import type { Fakemon } from "../Fakemon"

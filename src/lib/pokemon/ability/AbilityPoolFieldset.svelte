@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset } from "$lib/design/forms"
+	import { Fieldset } from "$lib/ui/forms"
 	import type { AbilityPool } from "./AbilityPool"
 	import AbilityPoolGroupFields from "./AbilityPoolGroupFields.svelte"
 
