@@ -47,7 +47,12 @@
 		color: var(--theme-light);
 	}
 
+	label {
+		cursor: pointer;
+	}
+
 	.skew-tags {
+		transform: translateZ(0); /* Needed to fix a bonkers Safari bug */
 		border-radius: 1em;
 		filter: var(--elev-stratus-filter);
 		display: inline-block;
