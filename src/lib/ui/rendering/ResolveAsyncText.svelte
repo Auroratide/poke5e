@@ -11,6 +11,7 @@
 	import { abilities } from "$lib/pokemon/store"
 	import { Url } from "$lib/url"
 	import { type Unsubscriber } from "svelte/store"
+	import DomPurify from "dompurify"
 
 	let loading = true
 	let species: PokemonSpecies[] = []
@@ -34,14 +35,19 @@
 	export let value: string
 
 	const isFakemon = (id: string) => new SpeciesIdentifier(id).isFakemon()
+
+	$: toRender = value
+		.replaceAll(/{{pokemon:(:?)(.*?)}}/g, (_, link, id) => link !== "" ? `<a href="${isFakemon(id) ? Url.fakemon(new SpeciesIdentifier(id).toFakemonReadKey()) : Url.pokemon(id)}">${species.find((it) => it.id.data === id)?.data.name}</a>` : species.find((it) => it.id.data === id)?.data.name)
+		.replaceAll(/{{move:(:?)(.*?)}}/g, (_, link, id) => link !== "" ? `<a href="${Url.moves(id)}">${$moves.find((it) => it.id === id)?.name}</a>` : $moves.find((it) => it.id === id)?.name)
+		.replaceAll(/{{ability:(:?)(.*?)}}/g, (_, link, id) => link !== "" ? `<a href="${Url.reference.abilities()}#${id}">${$abilities.find((it) => it.id === id)?.name}</a>` : $abilities.find((it) => it.id === id)?.name)
+
+	$: sanitized = DomPurify.sanitize(toRender, {
+			FORBID_TAGS: ["style", "script"],
+		})
 </script>
 
 {#if loading}
 	<LoaderInline />
 {:else}
-	{@html value
-		.replaceAll(/{{pokemon:(:?)(.*?)}}/g, (_, link, id) => link !== "" ? `<a href="${isFakemon(id) ? Url.fakemon(new SpeciesIdentifier(id).toFakemonReadKey()) : Url.pokemon(id)}">${species.find((it) => it.id.data === id)?.data.name}</a>` : species.find((it) => it.id.data === id)?.data.name)
-		.replaceAll(/{{move:(:?)(.*?)}}/g, (_, link, id) => link !== "" ? `<a href="${Url.moves(id)}">${$moves.find((it) => it.id === id)?.name}</a>` : $moves.find((it) => it.id === id)?.name)
-		.replaceAll(/{{ability:(:?)(.*?)}}/g, (_, link, id) => link !== "" ? `<a href="${Url.reference.abilities()}#${id}">${$abilities.find((it) => it.id === id)?.name}</a>` : $abilities.find((it) => it.id === id)?.name)
-	}
+	{@html sanitized}
 {/if}
