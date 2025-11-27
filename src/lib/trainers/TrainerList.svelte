@@ -1,15 +1,13 @@
 <script lang="ts">
 	import { base } from "$app/paths"
 	import { SearchField } from "$lib/ui/forms"
-	import SortableTable from "$lib/design/SortableTable.svelte"
-	import BubbleRow from "$lib/design/BubbleRow"
+	import { SortableTable, BubbleRow, ListHeading } from "$lib/ui/page"
 	import { trainerListFilterValue, trainerListSorter } from "./store"
 	import type { TrainerListStore } from "./trainers"
 	import type { Trainer } from "./types"
 	import { Button } from "$lib/ui/elements"
 	import { Url } from "$lib/url"
 	import { PageAction } from "./page-action"
-	import ListHeading from "$lib/design/ListHeading.svelte"
 	import GetStarted from "./GetStarted.svelte"
 
 	export let trainers: TrainerListStore

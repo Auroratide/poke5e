@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Card from "$lib/design/Card.svelte"
+	import { Card } from "$lib/ui/page"
 	import { RulesVersionToggle } from "$lib/site/rules-version"
 	import { Title } from "$lib/ui/layout"
 

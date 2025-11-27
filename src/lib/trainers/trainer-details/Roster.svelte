@@ -6,7 +6,7 @@
 	import type { PokemonId, TrainerPokemon } from "../types"
 	import { Button } from "$lib/ui/elements"
 	import PokemonSummary from "./PokemonSummary.svelte"
-	import ListHeading from "$lib/design/ListHeading.svelte"
+	import { ListHeading } from "$lib/ui/page"
 
 	export let trainer: TrainerStore
 	export let currentPokemon: PokemonId | undefined

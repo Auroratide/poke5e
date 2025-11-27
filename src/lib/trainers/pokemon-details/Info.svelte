@@ -10,7 +10,7 @@
 	import MovesInfo from "./MovesInfo.svelte"
 	import AbilitiesInfo from "./AbilitiesInfo.svelte"
 	import NotesInfo from "./NotesInfo.svelte"
-	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
+	import { SideArtCardSection } from "$lib/ui/page"
 	import HeldItemsInfo from "./HeldItemsInfo.svelte"
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import FeatsInfo from "$lib/feats/FeatsInfo.svelte"

@@ -1,11 +1,10 @@
 <script lang="ts">
 	import type { Tm } from "./types"
 	import { base } from "$app/paths"
-	import SortableTable from "../design/SortableTable.svelte"
+	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { SearchField } from "$lib/ui/forms"
 	import { matchNameOrType } from "./filter"
 	import { filterTmValue, currentTmSorter } from "./store"
-	import BubbleRow from "../design/BubbleRow"
 	import { formatMoney } from "../pokemon/money"
 
 	export let tms: Tm[]

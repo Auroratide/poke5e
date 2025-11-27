@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Card from "$lib/design/Card.svelte"
+	import { Card } from "$lib/ui/page"
 	import { Button } from "$lib/ui/elements"
 	import { trainers } from "./trainers"
 	import { goto } from "$app/navigation"

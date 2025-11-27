@@ -8,7 +8,7 @@
 	import { AttributeBlock } from "$lib/dnd/attributes"
 	import SkillsInfo from "../info/SkillsInfo.svelte"
 	import { Art } from "$lib/ui/elements"
-	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
+	import { SideArtCardSection } from "$lib/ui/page"
 	import InventoryInfo, { type UpdateDetail as InventoryUpdateDetail } from "./InventoryInfo.svelte"
 	import SpecializationsInfo from "../specializations/SpecializationsInfo.svelte"
 	import { TrainerPathsInfo, type PathResourceUpdateDetail } from "../paths"

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PokemonId } from "$lib/trainers/types"
-	import Card from "$lib/design/Card.svelte"
+	import { Card } from "$lib/ui/page"
 	import { Button } from "$lib/ui/elements"
 	import { ActionArea, Saveable } from "$lib/ui/forms"
 	import type { TrainerStore } from "../trainers"

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { FlatDl } from "$lib/ui/elements"
-	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import { AttributeBlock } from "$lib/dnd/attributes"
 	import { DistancesDlItem } from "$lib/dnd/distance"
@@ -12,7 +11,7 @@
 	import InlineTmLinks from "../InlineTmLinks.svelte"
 	import type { PokemonSpecies } from "./PokemonSpecies"
 	import * as asString from "$lib/creatures/string"
-	import Card from "$lib/design/Card.svelte"
+	import { Card, SideArtCardSection } from "$lib/ui/page"
 	import { SpeciesPortrait } from "$lib/creatures/media"
 	import { isNotBlank } from "$lib/string"
 	import { EvolutionInfo, EvolutionStore } from "$lib/pokemon/evolution"

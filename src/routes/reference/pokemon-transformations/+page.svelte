@@ -1,5 +1,5 @@
 <script>
-	import IconedCardHeading from "$lib/design/IconedCardHeading.svelte"
+	import { IconedCardHeading } from "$lib/ui/page"
 	import ReferencePage from "../ReferencePage.svelte"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"

@@ -1,10 +1,9 @@
 <script lang="ts">
 	import type { Item } from "./types"
-	import SortableTable from "../design/SortableTable.svelte"
+	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { SearchField } from "$lib/ui/forms"
 	import { matchNameOrType } from "./filter"
 	import { filterValue, currentSorter } from "./store"
-	import BubbleRow from "../design/BubbleRow"
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Url } from "$lib/url"
 

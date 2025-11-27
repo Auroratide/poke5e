@@ -1,9 +1,7 @@
 <script lang="ts">
-	import BubbleRow from "$lib/design/BubbleRow"
 	import { Button } from "$lib/ui/elements"
-	import ListHeading from "$lib/design/ListHeading.svelte"
+	import { SortableTable, BubbleRow, ListHeading } from "$lib/ui/page"
 	import { SearchField } from "$lib/ui/forms"
-	import SortableTable from "$lib/design/SortableTable.svelte"
 	import { Url } from "$lib/url"
 	import type { Fakemon } from "../Fakemon"
 	import type { FakemonListStore } from "../store"

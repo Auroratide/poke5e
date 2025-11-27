@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Card from "$lib/design/Card.svelte"
+	import { Card } from "$lib/ui/page"
 	import { ActionArea, PasswordField, TextField, WithButton, Saveable } from "$lib/ui/forms"
 	import { Button } from "$lib/ui/elements"
 	import { Url } from "$lib/url"

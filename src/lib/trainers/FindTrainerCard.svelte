@@ -1,5 +1,5 @@
 <script>
-	import Card from "$lib/design/Card.svelte"
+	import { Card } from "$lib/ui/page"
 	import { trainers } from "./trainers"
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/url"

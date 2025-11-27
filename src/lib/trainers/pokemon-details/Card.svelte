@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { WithSpecies } from "$lib/creatures/species"
-	import Card from "$lib/design/Card.svelte"
+	import { Card } from "$lib/ui/page"
 	import { TypeTag } from "$lib/pokemon/types-2"
 	import type { LearnedMove, PokemonId, TrainerPokemon } from "$lib/trainers/types"
 	import type { TrainerStore } from "../trainers"

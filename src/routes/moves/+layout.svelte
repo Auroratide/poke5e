@@ -5,7 +5,7 @@
 	import { HitIcon } from "$lib/ui/icons"
 	import { Loader } from "$lib/ui/elements"
 	import { moves } from "$lib/moves/store"
-	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
+	import { ListPageHeading } from "$lib/ui/page"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 
 	$: ssrMoves = $page.data.movesList

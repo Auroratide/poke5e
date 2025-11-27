@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { base } from "$app/paths"
-	import BubbleRow from "$lib/design/BubbleRow"
 	import { SearchField } from "$lib/ui/forms"
-	import SortableTable from "$lib/design/SortableTable.svelte"
+	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { currentSorter, filterValue } from "../store"
 	import type { PokemonSpecies } from "./PokemonSpecies"
 	import * as asString from "../string"

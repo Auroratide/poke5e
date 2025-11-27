@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from "$app/navigation"
 	import { Button } from "$lib/ui/elements"
-	import Card from "$lib/design/Card.svelte"
+	import { Card } from "$lib/ui/page"
 	import { ActionArea } from "$lib/ui/forms"
 	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/url"

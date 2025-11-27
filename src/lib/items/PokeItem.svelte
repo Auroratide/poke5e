@@ -1,11 +1,10 @@
 <script lang="ts">
 	import type { Item } from "./types"
-	import Card from "../design/Card.svelte"
+	import { Card, SideArtCardSection } from "$lib/ui/page"
 	import FlatDl from "../ui/elements/FlatDl.svelte"
 	import { renderHtml } from "../ui/rendering/render"
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Url } from "$lib/url"
-	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
 	import ItemSprite from "./ItemSprite.svelte"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import { EvolutionStore } from "$lib/pokemon/evolution"

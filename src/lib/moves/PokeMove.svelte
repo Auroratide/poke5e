@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Move } from "./types"
-	import Card from "../design/Card.svelte"
-	import FlatDl from "../ui/elements/FlatDl.svelte"
+	import { Card } from "$lib/ui/page"
+	import { FlatDl } from "$lib/ui/elements"
 	import { powerAsString } from "./string"
 	import MoveDescription from "./MoveDescription.svelte"
 	import { VisuallyHidden } from "$lib/ui/elements"

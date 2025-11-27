@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Title } from "$lib/ui/layout"
-	import Card from "$lib/design/Card.svelte"
+	import { Card } from "$lib/ui/page"
 	import { versionHistory, currentVersion, getVersionsForGroup } from "./versions"
 	import { StaticPage } from "$lib/ui/layout"
 </script>

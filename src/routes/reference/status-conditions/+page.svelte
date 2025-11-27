@@ -1,5 +1,5 @@
 <script>
-	import IconedCardHeading from "$lib/design/IconedCardHeading.svelte"
+	import { IconedCardHeading } from "$lib/ui/page"
 	import {
 		NonVolatileStatus,
 		VolatileStatus,

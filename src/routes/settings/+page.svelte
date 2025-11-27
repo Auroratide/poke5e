@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Card from "$lib/design/Card.svelte"
+	import { Card } from "$lib/ui/page"
 	import { Page } from "$lib/ui/layout"
 	import { Title } from "$lib/ui/layout"
 	import { PencilNotesIcon } from "$lib/ui/icons"

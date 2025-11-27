@@ -1,12 +1,11 @@
 <script lang="ts">
 	import type { Pokemon } from "./types"
 	import { base } from "$app/paths"
-	import SortableTable from "../design/SortableTable.svelte"
+	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { SearchField } from "$lib/ui/forms"
 	import * as asString from "./string"
 	import { matchNameOrType } from "./filter"
 	import { filterValue, currentSorter } from "./store"
-	import BubbleRow from "../design/BubbleRow"
 
 	export let pokemons: Pokemon[]
 
