@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Move } from "./types"
-	import { renderHtml } from "../rendering/render"
+	import { renderHtml } from "../ui/rendering/render"
 
 	export let move: Move
 </script>

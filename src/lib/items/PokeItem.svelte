@@ -2,7 +2,7 @@
 	import type { Item } from "./types"
 	import Card from "../design/Card.svelte"
 	import FlatDl from "../ui/elements/FlatDl.svelte"
-	import { renderHtml } from "../rendering/render"
+	import { renderHtml } from "../ui/rendering/render"
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Url } from "$lib/url"
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"

@@ -1,6 +1,5 @@
 <script lang="ts">
-	import Paragraphs from "$lib/design/Paragraphs.svelte"
-	import { renderHtml } from "$lib/rendering/render"
+	import { renderHtml, Paragraphs } from "$lib/ui/rendering"
 	import type { ChosenTrainerPath } from "./ChosenTrainerPath"
 	import { type TrainerPath, type TrainerFeatureLevelLandmark, TrainerFeatureLevelLandmarks } from "./TrainerPath"
 

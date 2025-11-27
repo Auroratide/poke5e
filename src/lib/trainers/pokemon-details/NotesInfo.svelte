@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import Markdown from "$lib/rendering/Markdown.svelte"
+	import { Markdown } from "$lib/ui/rendering"
 	import type { TrainerPokemon } from "../types"
 
 	export let pokemon: TrainerPokemon

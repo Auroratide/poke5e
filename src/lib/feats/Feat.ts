@@ -1,4 +1,4 @@
-import type { MarkdownString } from "$lib/rendering/markdown"
+import type { MarkdownString } from "$lib/ui/rendering/markdown"
 import type { Prerequisite } from "./Prerequisite"
 
 export type Feat = {

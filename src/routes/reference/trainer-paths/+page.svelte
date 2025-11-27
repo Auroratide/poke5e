@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { TrainerPaths } from "$lib/trainers/paths"
-	import { renderHtml } from "$lib/rendering/render"
+	import { renderHtml } from "$lib/ui/rendering/render"
 	import { rulesVersion } from "$lib/site/rules-version"
 	import { ColumnedList } from "$lib/ui/elements"
 	import ReferencePage from "../ReferencePage.svelte"

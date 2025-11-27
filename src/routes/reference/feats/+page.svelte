@@ -1,7 +1,7 @@
 <script>
 	import ReferencePage from "../ReferencePage.svelte"
 	import { PokemonFeats, DndFeatsForPokemon } from "$lib/feats/PokemonFeats"
-	import Markdown from "$lib/rendering/Markdown.svelte"
+	import { Markdown } from "$lib/ui/rendering"
 </script>
 
 <ReferencePage title="Feats">

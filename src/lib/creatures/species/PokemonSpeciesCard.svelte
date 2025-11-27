@@ -6,7 +6,7 @@
 	import { DistancesDlItem } from "$lib/dnd/distance"
 	import { AbilityPoolInfo } from "$lib/pokemon/ability"
 	import { TypeEffectiveness, TypeTag } from "$lib/pokemon/types-2"
-	import Markdown from "$lib/rendering/Markdown.svelte"
+	import { Markdown } from "$lib/ui/rendering"
 	import { GenderRatioDisplay } from "../gender"
 	import InlineMoveLinks from "../InlineMoveLinks.svelte"
 	import InlineTmLinks from "../InlineTmLinks.svelte"

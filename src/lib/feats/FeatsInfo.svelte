@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { renderMarkdown } from "$lib/rendering/markdown"
+	import { Markdown, Paragraphs } from "$lib/ui/rendering"
 	import type { ChosenFeat } from "./ChosenFeat"
 	import { AllFeats } from "./AllFeats"
-	import Paragraphs from "$lib/design/Paragraphs.svelte"
 
 	export let values: ChosenFeat[]
 </script>
@@ -13,7 +12,7 @@
 		<li>
 			<p class="no-margin"><strong>{feat.name}</strong></p>
 			{#if matchingFeat != null}
-				{@html renderMarkdown(matchingFeat.description)}
+				<Markdown value={matchingFeat.description} />
 			{/if}
 			{#if feat.description.trim()}
 				<Paragraphs value={feat.description} />

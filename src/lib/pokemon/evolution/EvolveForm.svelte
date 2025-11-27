@@ -8,7 +8,7 @@
 		Form,
 		RadioFields,
 	} from "$lib/ui/forms"
-	import { ResolveAsyncText } from "$lib/rendering"
+	import { ResolveAsyncText } from "$lib/ui/rendering"
 	import type { TrainerPokemon } from "$lib/trainers/types"
 	import type { Readable } from "svelte/store"
 	import { EvolutionEffect } from "./EvolutionEffect"
