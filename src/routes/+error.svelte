@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/stores"
 	import { base } from "$app/paths"
-	import MissingNo from "$lib/design/MissingNo.svelte"
+	import { MissingNo } from "$lib/ui/elements"
 	import { Title } from "$lib/ui/layout"
 	import { MAIN_CONTENT_ID } from "$lib/ui/layout"
 

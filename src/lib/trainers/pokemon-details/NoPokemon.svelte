@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PokemonId, Trainer } from "../types"
-	import MissingNo from "$lib/design/MissingNo.svelte"
+	import { MissingNo } from "$lib/ui/elements"
 
 	export let trainer: Trainer
 	export let pokemonId: PokemonId

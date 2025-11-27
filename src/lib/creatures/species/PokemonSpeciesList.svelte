@@ -7,7 +7,7 @@
 	import type { PokemonSpecies } from "./PokemonSpecies"
 	import * as asString from "../string"
 	import { matchNameOrType2 } from "../filter"
-	import TemporaryBannerMessage from "$lib/design/TemporaryBannerMessage.svelte"
+	import { TemporaryBannerMessage } from "$lib/ui/elements"
 	import { CanCreateCustomPokemonBanner } from "./CanCreateCustomPokemonBanner"
 	import { Url } from "$lib/url"
 
