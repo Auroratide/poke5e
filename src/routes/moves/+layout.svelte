@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores"
-	import Page from "$lib/design/Page.svelte"
+	import { Page } from "$lib/ui/layout"
 	import MoveList from "$lib/moves/MoveList.svelte"
 	import { HitIcon } from "$lib/ui/icons"
 	import Loader from "$lib/design/Loader.svelte"

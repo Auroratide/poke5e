@@ -2,7 +2,7 @@
 	import type { PokemonId } from "$lib/trainers/types"
 	import NoPokemon from "./NoPokemon.svelte"
 	import type { TrainerData } from "../data"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 
 	export let trainer: TrainerData
 	export let id: PokemonId

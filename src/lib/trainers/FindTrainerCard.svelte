@@ -5,7 +5,7 @@
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/url"
 	import findTrainerIdImg from "./find-trainer-id.png"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import { WithButton, TextField } from "$lib/ui/forms"
 
 	let id = ""

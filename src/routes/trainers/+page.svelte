@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { page } from "$app/stores"
 	import { browser } from "$app/environment"
-	import Page from "$lib/design/Page.svelte"
+	import { Page } from "$lib/ui/layout"
 	import { IdBadgeIcon } from "$lib/ui/icons"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import Loader from "$lib/design/Loader.svelte"
 	import TrainerCard from "$lib/trainers/trainer-details/Card.svelte"
 	import PokemonCard from "$lib/trainers/pokemon-details/Card.svelte"

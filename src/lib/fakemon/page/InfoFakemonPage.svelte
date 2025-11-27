@@ -2,7 +2,7 @@
 	import PokemonSpeciesCard from "$lib/creatures/species/PokemonSpeciesCard.svelte"
 	import Button from "$lib/design/Button.svelte"
 	import { ActionArea } from "$lib/ui/forms"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/url"
 	import type { SingleFakemonStore } from "../store/SingleFakemonStore"
 	import { PageAction } from "./actions"

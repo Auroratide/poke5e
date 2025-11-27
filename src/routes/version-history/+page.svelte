@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import Card from "$lib/design/Card.svelte"
 	import { versionHistory, currentVersion, getVersionsForGroup } from "./versions"
-	import StaticPage from "$lib/design/StaticPage.svelte"
+	import { StaticPage } from "$lib/ui/layout"
 </script>
 
 <Title value="Version History" />

@@ -4,7 +4,7 @@
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/url"
 	import findId from "./assets/id.webp"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import SearchFakemonById from "../search/SearchFakemonById.svelte"
 	import type { SearchFakemonByIdDetail } from "../search"
 

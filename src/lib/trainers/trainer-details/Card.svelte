@@ -6,7 +6,7 @@
 	import type { TrainerStore } from "../trainers"
 	import { Url } from "$lib/url"
 	import { PageAction } from "../page-action"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import Level from "$lib/design/Level.svelte"
 	import type { InventoryItem, TrainerInfo } from "../types"
 

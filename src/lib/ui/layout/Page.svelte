@@ -1,10 +1,10 @@
 <script lang="ts">
-	import type { ThemeColor } from "$lib/design/Theme.svelte"
-	import Theme from "$lib/design/Theme.svelte"
-	import Backdrop from "$lib/design/Backdrop.svelte"
-	import IconShadow from "$lib/design/IconShadow.svelte"
-	import { MAIN_CONTENT_ID } from "./SkipLinks.svelte"
+	import Theme from "./Theme.svelte"
+	import Backdrop from "./Backdrop.svelte"
+	import IconShadow from "./IconShadow.svelte"
+	import { MAIN_CONTENT_ID } from "../../design/SkipLinks.svelte"
 	import { afterUpdate } from "svelte"
+	import type { ThemeColor } from "./ThemeColor"
 
 	export let theme: ThemeColor
 

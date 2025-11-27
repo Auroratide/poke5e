@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { onMount } from "svelte"
 	import Button from "$lib/design/Button.svelte"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import { seenTrainerRecovery } from "$lib/trainers/migration/store"
-	import StaticPage from "$lib/design/StaticPage.svelte"
+	import { StaticPage } from "$lib/ui/layout"
 
 	onMount(() => {
 		seenTrainerRecovery.set(true)

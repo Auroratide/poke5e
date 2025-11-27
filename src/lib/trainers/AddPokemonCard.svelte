@@ -4,7 +4,7 @@
 	import type { TrainerStore } from "./trainers"
 	import { goto } from "$app/navigation"
 	import { base } from "$app/paths"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import { PokemonSpecies, SpeciesField } from "$lib/creatures/species"
 	import { SearchFakemonById, type SearchFakemonByIdDetail } from "$lib/fakemon/search"
 	import type { Fakemon } from "$lib/fakemon"

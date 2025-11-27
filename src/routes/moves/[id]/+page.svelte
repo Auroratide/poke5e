@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from "./$types"
 	import PokeMove from "$lib/moves/PokeMove.svelte"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 
 	export let data: PageData
 	$: move = data.move

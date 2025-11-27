@@ -6,7 +6,7 @@
 		DiscordIcon,
 		GithubIcon,
 	} from "$lib/ui/icons"
-	import { shouldShowVersionHighlight } from "./version-tracking"
+	import { shouldShowVersionHighlight } from "../../design/version-tracking"
 	import { browser } from "$app/environment"
 
 	export let currentVersion: string

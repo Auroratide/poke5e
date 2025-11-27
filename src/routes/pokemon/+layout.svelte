@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores"
-	import Page from "$lib/design/Page.svelte"
+	import { Page } from "$lib/ui/layout"
 	import { PokeballIcon } from "$lib/ui/icons"
 	import Loader from "$lib/design/Loader.svelte"
 	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"

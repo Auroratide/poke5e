@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores"
-	import Page from "$lib/design/Page.svelte"
+	import { Page } from "$lib/ui/layout"
 	import { BackpackIcon } from "$lib/ui/icons"
 	import Loader from "$lib/design/Loader.svelte"
 	import { items } from "$lib/items/store"

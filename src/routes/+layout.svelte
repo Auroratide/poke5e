@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { LayoutData } from "./$types"
 	import type { Writable } from "svelte/store"
-	import Container from "$lib/design/Container.svelte"
 	import { afterNavigate } from "$app/navigation"
 	import * as Analytics from "$lib/analytics"
 	import { filterValue as pokemonFilter, currentSorter as pokemonSorter } from "$lib/creatures/store"
@@ -19,7 +18,6 @@
 	import ErrorDialog from "$lib/design/errors/ErrorDialog.svelte"
 	import { currentHighlight, currentVersion } from "./version-history/versions"
 	import { browser } from "$app/environment"
-	import MainNavigation from "$lib/design/MainNavigation.svelte"
 	import {
 		BackpackIcon,
 		DiscIcon,
@@ -29,11 +27,15 @@
 		PencilNotesIcon,
 		PokeballIcon,
 	} from "$lib/ui/icons"
-	import SiteFooter from "$lib/design/SiteFooter.svelte"
 	import SkipLinks, { MAIN_CONTENT_ID, MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 	import { page } from "$app/stores"
-	import type { ThemeColor } from "$lib/design/Theme.svelte"
 	import type { ComponentType } from "svelte"
+	import {
+		type ThemeColor,
+		Container,
+		MainNavigation,
+		SiteFooter,
+	} from "$lib/ui/layout"
 	
 	if (browser) {
 		import("@auroratide/toggle-switch/lib/define.js")

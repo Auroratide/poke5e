@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 </script>
 
 <Title value="References" />

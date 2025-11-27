@@ -3,9 +3,9 @@
 	import { page } from "$app/stores"
 	import { GreatballIcon } from "$lib/ui/icons"
 	import Loader from "$lib/design/Loader.svelte"
-	import Page from "$lib/design/Page.svelte"
+	import { Page } from "$lib/ui/layout"
 	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import {
 		AddFakemonPage,
 		EditFakemonPage,

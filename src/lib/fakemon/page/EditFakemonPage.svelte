@@ -3,7 +3,7 @@
 	import Button from "$lib/design/Button.svelte"
 	import Card from "$lib/design/Card.svelte"
 	import { ActionArea } from "$lib/ui/forms"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/url"
 	import type { Readable } from "svelte/store"
 	import type { SingleFakemonStore } from "../store/SingleFakemonStore"

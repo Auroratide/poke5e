@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { goto } from "$app/navigation"
 	import Card from "$lib/design/Card.svelte"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/url"
 	import { Fakemon } from "../Fakemon"
 	import { fakemonStore } from "../store"

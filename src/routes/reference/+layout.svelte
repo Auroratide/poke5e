@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Page from "$lib/design/Page.svelte"
+	import { Page } from "$lib/ui/layout"
 	import { PencilNotesIcon } from "$lib/ui/icons"
 	import { page } from "$app/stores"
 	import SearchField from "$lib/design/SearchField.svelte"

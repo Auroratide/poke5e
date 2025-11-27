@@ -7,9 +7,9 @@
 		PencilNotesIcon,
 		PokeballIcon,
 	} from "$lib/ui/icons"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/url"
-	import StaticPage from "$lib/design/StaticPage.svelte"
+	import { StaticPage } from "$lib/ui/layout"
 </script>
 
 <Title />

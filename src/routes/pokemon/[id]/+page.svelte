@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PageData } from "./$types"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import { PokemonSpeciesCard } from "$lib/creatures/species"
 
 	export let data: PageData

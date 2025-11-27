@@ -1,8 +1,6 @@
-<script lang="ts" context="module">
-	export type ThemeColor = "blue" | "red" | "purple" | "green" | "navy" | "yellow" | "pink"
-</script>
-
 <script lang="ts">
+	import type { ThemeColor } from "./ThemeColor"
+
 	export let id: string | undefined = undefined
 	export let theme: ThemeColor
 </script>

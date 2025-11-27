@@ -5,7 +5,7 @@
 	import type { TrainerStore } from "../trainers"
 	import { Url } from "$lib/url"
 	import { TrainerRester, type TrainerResterSubmit } from "$lib/poke5e/resting"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import { goto } from "$app/navigation"
 	import type { Readable } from "svelte/store"
 	import type { PokemonSpecies } from "$lib/creatures/species"

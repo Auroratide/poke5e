@@ -1,6 +1,6 @@
 <script lang="ts">
-	import StaticPage from "$lib/design/StaticPage.svelte"
-	import Title from "$lib/design/Title.svelte"
+	import { StaticPage } from "$lib/ui/layout"
+	import { Title } from "$lib/ui/layout"
 </script>
 
 <Title value="Privacy Policy" />

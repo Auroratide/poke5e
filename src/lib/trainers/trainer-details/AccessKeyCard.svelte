@@ -5,7 +5,7 @@
 	import { ActionArea, PasswordField, TextField, WithButton } from "$lib/ui/forms"
 	import Button from "$lib/design/Button.svelte"
 	import { Url } from "$lib/url"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import findAccessKey from "./find-access-key.png"
 	
 	export let trainer: TrainerStore

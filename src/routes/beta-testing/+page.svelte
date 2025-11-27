@@ -1,7 +1,7 @@
 <script lang="ts">
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 	import { FeatureToggles } from "$lib/FeatureToggles"
-	import StaticPage from "$lib/design/StaticPage.svelte"
+	import { StaticPage } from "$lib/ui/layout"
 	import BetaToggle from "./BetaToggle.svelte"
 	import { Url } from "$lib/url"
 </script>

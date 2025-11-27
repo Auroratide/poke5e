@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Card from "$lib/design/Card.svelte"
-	import Page from "$lib/design/Page.svelte"
-	import Title from "$lib/design/Title.svelte"
+	import { Page } from "$lib/ui/layout"
+	import { Title } from "$lib/ui/layout"
 	import { PencilNotesIcon } from "$lib/ui/icons"
 	import RulesVersionSection from "./RulesVersionSection.svelte"
 </script>

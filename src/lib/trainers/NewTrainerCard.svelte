@@ -12,7 +12,7 @@
 		MarkdownField,
 		HintText,
 	} from "$lib/ui/forms"
-	import Title from "$lib/design/Title.svelte"
+	import { Title } from "$lib/ui/layout"
 
 	let name = ""
 	let description = ""
