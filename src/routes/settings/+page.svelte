@@ -11,7 +11,7 @@
 	<CogIcon slot="icon" />
 	<Card title="Settings">
 		<section>
-			<p>In this section, you can update preferences and manage backups of your trainers.</p>
+			<p>In this section, you can update preferences.</p>
 		</section>
 		<RulesVersionSection />
 	</Card>
