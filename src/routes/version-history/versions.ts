@@ -12,6 +12,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.8.7",
+		description: [
+			"New: Settings menu! Currently has rules version and basic backup option.",
+			"Added evolution details for pre-evolutions. Makes individual pokemon stat blocks self-sufficient.",
+		],
+	}, {
 		name: "v1.8.6",
 		description: [
 			"Bug fix: Added missing TMs to Wartortle.",
