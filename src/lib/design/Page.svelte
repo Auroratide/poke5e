@@ -10,11 +10,14 @@
 
 	let mainEl: HTMLElement
 	let isMainEmpty = true
+	let sideEl: HTMLElement
+	let isSideEmpty = true
 
 	// I ended up doing this over simply using :empty because Safari
 	// wasn't actually redrawing the screen
 	afterUpdate(() => {
 		isMainEmpty = mainEl.textContent.length === 0
+		isSideEmpty = sideEl.textContent.length === 0
 	})
 </script>
 
@@ -23,8 +26,8 @@
 		<slot name="icon"></slot>
 	</IconShadow>
 	<Backdrop />
-	<div class="page" class:main-empty={isMainEmpty}>
-		<div class="side">
+	<div class="page" class:main-empty={isMainEmpty} class:side-empty={isSideEmpty}>
+		<div bind:this={sideEl} class="side">
 			<slot name="side"></slot>
 		</div>
 		<main bind:this={mainEl} id="{MAIN_CONTENT_ID}">
@@ -50,6 +53,8 @@
 		view-transition-name: pageside;
 	} .page.main-empty .side {
 		height: 100%;
+	} .page.side-empty .side {
+		height: 0;
 	}
 
 	.page main {
@@ -72,6 +77,12 @@
 			flex: 1 1 37.5rem;
 			width: 50%;
 			height: 100%;
+		}
+
+		.page.side-empty .side {
+			display: none;
+		} .page.side-empty main {
+			max-inline-size: 37.5em;
 		}
 	}
 </style>
