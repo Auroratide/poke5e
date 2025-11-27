@@ -85,7 +85,6 @@ export async function test() {
 const createFakemon = async (name) => {
 	console.log(`  Creating Fakemon ${name}...`)
 
-	await click(button(/More/))
 	await click(link("Fakémon"))
 	await click(link("New Fakémon"))
 	await write(name, into(textBox("Species Name")))
