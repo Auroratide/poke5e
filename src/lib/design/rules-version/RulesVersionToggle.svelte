@@ -9,10 +9,12 @@
 
 <fieldset {id}>
 	<legend>
-		<Popover id="{id}-popover">
-			<HelpIcon slot="activator" label="Rules Version" />
-			<p>You may choose to use either the updated "2024" rules, or use the "2018" rules found in the original handbook.<br />See: <a href="{Url.reference.introduction()}#rulesets">2024 Rule Updates</a></p>
-		</Popover>
+		<slot name="legend">
+			<Popover id="{id}-popover">
+				<HelpIcon slot="activator" label="Rules Version" />
+				<p>You may choose to use either the updated "2024" rules, or use the "2018" rules found in the original handbook.<br />See: <a href="{Url.reference.introduction()}#rulesets">2024 Rule Updates</a></p>
+			</Popover>
+		</slot>
 	</legend>
 	<span class="skew-tags">
 		<input id="{id}-2018-input" bind:group={$rulesVersion} value="2018" type="radio" class="visually-hidden" />
