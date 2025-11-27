@@ -311,33 +311,37 @@
 	.open-transition li.transitioned:nth-child(1) a {
 		animation-delay: 0s;
 	} .open-transition li.transitioned:nth-child(2) a {
-		animation-delay: 0.05s;
+		animation-delay: 0.04s;
 	} .open-transition li.transitioned:nth-child(3) a {
-		animation-delay: 0.1s;
+		animation-delay: 0.08s;
 	} .open-transition li.transitioned:nth-child(4) a {
-		animation-delay: 0.15s;
+		animation-delay: 0.12s;
 	} .open-transition li.transitioned:nth-child(5) a {
-		animation-delay: 0.2s;
+		animation-delay: 0.16s;
 	} .open-transition li.transitioned:nth-child(6) a {
-		animation-delay: 0.25s;
+		animation-delay: 0.20s;
 	} .open-transition li.transitioned:nth-child(7) a {
-		animation-delay: 0.3s;
+		animation-delay: 0.24s;
+	} .open-transition li.transitioned:nth-child(8) a {
+		animation-delay: 0.28s;
 	}
 
 	.open-transition[open] li.transitioned:nth-child(1) a {
 		animation-delay: 0s;
 	} .open-transition[open] li.transitioned:nth-child(2) a {
-		animation-delay: 0.05s;
+		animation-delay: 0.04s;
 	} .open-transition[open] li.transitioned:nth-child(3) a {
-		animation-delay: 0.1s;
+		animation-delay: 0.08s;
 	} .open-transition[open] li.transitioned:nth-child(4) a {
-		animation-delay: 0.15s;
+		animation-delay: 0.12s;
 	} .open-transition[open] li.transitioned:nth-child(5) a {
-		animation-delay: 0.2s;
+		animation-delay: 0.16s;
 	} .open-transition[open] li.transitioned:nth-child(6) a {
-		animation-delay: 0.25s;
+		animation-delay: 0.20s;
 	} .open-transition[open] li.transitioned:nth-child(7) a {
-		animation-delay: 0.3s;
+		animation-delay: 0.24s;
+	} .open-transition[open] li.transitioned:nth-child(8) a {
+		animation-delay: 0.28s;
 	}
 
 	@keyframes appear {

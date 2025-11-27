@@ -8,6 +8,7 @@ export const ChevronIcon = {
 	Menu: ChevronMenuIcon,
 	Up: ChevronUpIcon,
 }
+export { default as CogIcon } from "./CogIcon.svelte"
 export { default as DiscIcon } from "./DiscIcon.svelte"
 export { default as DiscordIcon } from "./DiscordIcon.svelte"
 export { default as FilterIcon } from "./FilterIcon.svelte"

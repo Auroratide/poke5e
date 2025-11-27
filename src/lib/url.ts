@@ -50,6 +50,7 @@ export const Url = {
 		transformations: () => `${base}/reference/pokemon-transformations`,
 		weather: () => `${base}/reference/weather`,
 	},
+	settings: () => `${base}/settings`,
 	external: {
 		auroratide: () => "https://auroratide.com",
 		github: () => "https://github.com/Auroratide/poke5e",

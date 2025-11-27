@@ -1,7 +1,9 @@
 <script lang="ts">
 	import {
 		BackpackIcon,
+		CogIcon,
 		DiscIcon,
+		GreatballIcon,
 		HitIcon,
 		IdBadgeIcon,
 		PencilNotesIcon,
@@ -38,6 +40,14 @@
 		<li class="theme-navy">
 			<a href="{Url.reference.all()}">Reference</a>
 			<span class="icon"><PencilNotesIcon /></span>
+		</li>
+		<li class="theme-pink">
+			<a href="{Url.fakemon()}">Fakémon</a>
+			<span class="icon"><GreatballIcon /></span>
+		</li>
+		<li class="theme-grey">
+			<a href="{Url.settings()}">Settings</a>
+			<span class="icon"><CogIcon /></span>
 		</li>
 	</ul>
 	<address>

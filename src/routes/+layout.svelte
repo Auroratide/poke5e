@@ -21,6 +21,7 @@
 	import { browser } from "$app/environment"
 	import {
 		BackpackIcon,
+		CogIcon,
 		DiscIcon,
 		GreatballIcon,
 		HitIcon,
@@ -114,6 +115,11 @@
 		name: "Fakémon",
 		color: "pink",
 		icon: GreatballIcon,
+	}, {
+		id: "settings",
+		name: "Settings",
+		color: "grey",
+		icon: CogIcon,
 	} ]
 </script>
 

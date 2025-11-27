@@ -6,3 +6,4 @@ export type ThemeColor =
 	| "navy"
 	| "yellow"
 	| "pink"
+	| "grey"

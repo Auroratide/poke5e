@@ -53,3 +53,10 @@
 	--theme-text: oklch(0.4645 0.1321 356.67);
 	--theme-light: oklch(0.7159 0.2039 354.56);
 }
+
+.theme-grey {
+	--theme-main: oklch(0.6032 0 0);
+	--theme-dark: oklch(0.54 0.015 317);
+	--theme-text: oklch(0.45 0.11 317);
+	--theme-light: oklch(0.725 0 0);
+}
