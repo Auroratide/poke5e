@@ -1,4 +1,4 @@
-import type { RulesVersion } from "$lib/design/rules-version"
+import type { RulesVersion } from "$lib/site/rules-version"
 import type { DiceRoller } from "$lib/dnd/dice"
 import type { HitDice } from "$lib/dnd/hit-dice"
 import type { TrainerPath } from "$lib/trainers/paths"

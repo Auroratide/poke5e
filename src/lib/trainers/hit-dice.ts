@@ -1,5 +1,5 @@
 import { derived } from "svelte/store"
-import { rulesVersion } from "$lib/design/rules-version"
+import { rulesVersion } from "$lib/site/rules-version"
 import { HitDice } from "$lib/dnd/hit-dice"
 
 export const trainerHitDiceSize = derived(rulesVersion, (rulesVersion) =>

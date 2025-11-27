@@ -1,7 +1,7 @@
 <script>
 	import { Formula } from "$lib/ui/elements"
 	import ReferencePage from "../ReferencePage.svelte"
-	import { rulesVersion } from "$lib/design/rules-version"
+	import { rulesVersion } from "$lib/site/rules-version"
 	import one from "./1v1.webp"
 	import two from "./2v2.webp"
 	import four from "./4v4.webp"

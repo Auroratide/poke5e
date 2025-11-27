@@ -3,7 +3,7 @@
 	import ReferencePage from "../ReferencePage.svelte"
 	import Table2018 from "./Table2018.svelte"
 	import Table2024 from "./Table2024.svelte"
-	import { rulesVersion } from "$lib/design/rules-version"
+	import { rulesVersion } from "$lib/site/rules-version"
 </script>
 
 <ReferencePage title="Bonds">

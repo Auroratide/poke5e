@@ -2,7 +2,7 @@ import type { Writable } from "svelte/store"
 import type { StoredFakemon } from "./FakemonStore"
 import type { FakemonDataProvider } from "../data/FakemonDataProvider"
 import type { Fakemon } from "../Fakemon"
-import { error } from "$lib/design/errors/store"
+import { error } from "$lib/site/errors"
 import type { ImageInputValue } from "$lib/ui/forms"
 import { SpeciesMedia } from "$lib/creatures/media"
 

@@ -1,7 +1,7 @@
 <script>
 	import { FlatDl } from "$lib/ui/elements"
 	import ReferencePage from "../ReferencePage.svelte"
-	import { rulesVersion } from "$lib/design/rules-version"
+	import { rulesVersion } from "$lib/site/rules-version"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
 </script>

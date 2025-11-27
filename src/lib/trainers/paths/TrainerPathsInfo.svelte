@@ -7,7 +7,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
 	import type { ChosenTrainerPath } from "./ChosenTrainerPath"
-	import { rulesVersion } from "$lib/design/rules-version"
+	import { rulesVersion } from "$lib/site/rules-version"
 	import { TrainerFeatureLevelLandmarks, TrainerPaths } from "."
 	import { NumericResourceField, type NumericChangeDetail } from "$lib/ui/forms"
 	import FeatureInfo from "./FeatureInfo.svelte"

@@ -1,4 +1,4 @@
-import { rulesVersion } from "$lib/design/rules-version"
+import { rulesVersion } from "$lib/site/rules-version"
 import { derived } from "svelte/store"
 import { StandardNatures as StandardNatures2018 } from "./StandardNature.2018"
 import { StandardNatures as StandardNatures2024 } from "./StandardNature.2024"

@@ -4,7 +4,7 @@
 	import { ActionArea, Fieldset, Form, IntField, RadioFields, HintText } from "$lib/ui/forms"
 	import { PokemonResting } from "./Rest"
 	import type { TrainerPokemon } from "$lib/trainers/types"
-	import { rulesVersion } from "$lib/design/rules-version"
+	import { rulesVersion } from "$lib/site/rules-version"
 	import { SpeciesPortrait } from "$lib/creatures/media"
 	import type { PokemonSpecies } from "$lib/creatures/species"
 

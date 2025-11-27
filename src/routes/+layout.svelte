@@ -2,7 +2,7 @@
 	import type { LayoutData } from "./$types"
 	import type { Writable } from "svelte/store"
 	import { afterNavigate } from "$app/navigation"
-	import * as Analytics from "$lib/analytics"
+	import * as Analytics from "$lib/site/analytics"
 	import { filterValue as pokemonFilter, currentSorter as pokemonSorter } from "$lib/creatures/store"
 	import {
 		filterValue as movesFilter,
@@ -15,7 +15,7 @@
 		trainerListSorter,
 	} from "$lib/trainers/store"
 	import { filterValue as referenceFilter } from "./reference/store"
-	import ErrorDialog from "$lib/design/errors/ErrorDialog.svelte"
+	import { ErrorDialog } from "$lib/site/errors"
 	import { currentHighlight, currentVersion } from "./version-history/versions"
 	import { browser } from "$app/environment"
 	import {

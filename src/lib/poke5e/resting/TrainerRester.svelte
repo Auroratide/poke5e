@@ -14,7 +14,7 @@
 	import { trainerHitDiceSize } from "$lib/trainers/hit-dice"
 	import PokemonBanner from "./PokemonBanner.svelte"
 	import { TrainerPaths } from "$lib/trainers/paths"
-	import { rulesVersion } from "$lib/design/rules-version"
+	import { rulesVersion } from "$lib/site/rules-version"
 	import { Art } from "$lib/ui/elements"
 	import type { Readable } from "svelte/store"
 	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/creatures/species"

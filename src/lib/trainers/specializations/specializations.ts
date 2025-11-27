@@ -1,7 +1,7 @@
 import { derived } from "svelte/store"
 import { SpecializationList as List2018 } from "./2018/SpecializationList"
 import { SpecializationList as List2024 } from "./2024/SpecializationList"
-import { rulesVersion } from "$lib/design/rules-version"
+import { rulesVersion } from "$lib/site/rules-version"
 import { capitalize } from "$lib/string"
 import type { Attribute } from "$lib/dnd/attributes"
 import type { Skill } from "$lib/dnd/skills"

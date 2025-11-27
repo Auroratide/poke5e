@@ -9,7 +9,7 @@
 	import { trainers } from "../trainers"
 	import TransferredTrainers from "./TransferredTrainers.svelte"
 	import { Loader } from "$lib/ui/elements"
-	import * as Analytics from "$lib/analytics"
+	import * as Analytics from "$lib/site/analytics"
 
 	let modal: HTMLDialogElement
 	let popupInitiated = false

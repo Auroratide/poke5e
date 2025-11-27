@@ -3,7 +3,7 @@
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Url } from "$lib/url"
 	import ReferencePage from "../ReferencePage.svelte"
-	import { rulesVersion } from "$lib/design/rules-version"
+	import { rulesVersion } from "$lib/site/rules-version"
 	import { EggGroup } from "$lib/creatures/egg-group"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import { Details } from "$lib/ui/elements"

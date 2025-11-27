@@ -12,7 +12,7 @@
 	import { EvolutionStore, type EvolutionUpdate } from "$lib/pokemon/evolution"
 	import { fakemonStore } from "../store"
 	import { Loader } from "$lib/ui/elements"
-	import { error } from "$lib/design/errors/store"
+	import { error } from "$lib/site/errors"
 
 	export let fakemon: SingleFakemonStore
 	export let allSpecies: Readable<PokemonSpecies[]>

@@ -1,7 +1,7 @@
 <script>
 	import { experienceAwarded, experienceAwareded2018 } from "$lib/creatures/experience"
 	import { FlatDl } from "$lib/ui/elements"
-	import { rulesVersion } from "$lib/design/rules-version"
+	import { rulesVersion } from "$lib/site/rules-version"
 	import ReferencePage from "../ReferencePage.svelte"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"

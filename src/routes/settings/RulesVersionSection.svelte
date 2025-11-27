@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { RulesVersionToggle } from "$lib/design/rules-version"
+	import { RulesVersionToggle } from "$lib/site/rules-version"
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import { Url } from "$lib/url"
 </script>

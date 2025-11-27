@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Card from "$lib/design/Card.svelte"
-	import { RulesVersionToggle } from "$lib/design/rules-version"
+	import { RulesVersionToggle } from "$lib/site/rules-version"
 	import { Title } from "$lib/ui/layout"
 
 	export let title: string

@@ -2,7 +2,7 @@ import { migrationStatus } from "./store"
 import { OLD_ORIGIN } from "./origins"
 import { trainers } from "../trainers"
 import { getReadKeys } from "../data/supabase"
-import * as Analytics from "$lib/analytics"
+import * as Analytics from "$lib/site/analytics"
 
 type MigrationMessageData = "failed" | "manual" | [string, string][]
 

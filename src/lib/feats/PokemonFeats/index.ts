@@ -1,4 +1,4 @@
-import { rulesVersion } from "$lib/design/rules-version"
+import { rulesVersion } from "$lib/site/rules-version"
 import { derived } from "svelte/store"
 import { DndFeatsForPokemon as DndFeatsForPokemon2018, PokemonFeats as PokemonFeats2018 } from "./2018"
 import { DndFeatsForPokemon as DndFeatsForPokemon2024, PokemonFeats as PokemonFeats2024 } from "./2024"

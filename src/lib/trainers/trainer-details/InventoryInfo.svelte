@@ -13,7 +13,7 @@
 	import { formatMoney } from "$lib/pokemon/money"
 	import InventoryList, { type UpdateQuantityDetail } from "../info/InventoryList.svelte"
 	import type { InventoryItem } from "../types"
-	import { error } from "$lib/design/errors/store"
+	import { error } from "$lib/site/errors"
 
 	const dispatch = createEventDispatcher()
 
