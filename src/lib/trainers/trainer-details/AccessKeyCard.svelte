@@ -6,7 +6,7 @@
 	import Button from "$lib/design/Button.svelte"
 	import { Url } from "$lib/url"
 	import Title from "$lib/design/Title.svelte"
-	import findAccessKey from "$lib/assets/find-access-key.png"
+	import findAccessKey from "./find-access-key.png"
 	
 	export let trainer: TrainerStore
 

@@ -4,7 +4,7 @@
 	import { trainers } from "./trainers"
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/url"
-	import findTrainerIdImg from "$lib/assets/find-trainer-id.png"
+	import findTrainerIdImg from "./find-trainer-id.png"
 	import Title from "$lib/design/Title.svelte"
 	import { WithButton, TextField } from "$lib/design/forms"
 
