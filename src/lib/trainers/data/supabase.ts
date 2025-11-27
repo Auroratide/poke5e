@@ -30,6 +30,7 @@ import type { UserAssets } from "$lib/user-assets"
 import { Nature, StandardNatures } from "$lib/pokemon/nature"
 import { get } from "svelte/store"
 import { PokemonSpecies, SpeciesIdentifier } from "$lib/creatures/species"
+import { TrainerLocalStorage } from "./TrainerLocalStorage"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -41,7 +42,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 	allTrainers = async (): Promise<Trainer[]> => {
 		return Promise.all(
-			getReadKeys().map((key) => this.getOneTrainerInfo(key),
+			TrainerLocalStorage.getReadKeys().map((key) => this.getOneTrainerInfo(key),
 			)).then((trainers) => trainers.filter((it) => it != null))
 	}
     
@@ -50,11 +51,11 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 		if (!trainer) return undefined
 
-		addReadKey(readKey)
+		TrainerLocalStorage.addReadKey(readKey)
     
 		const pokemon: TrainerPokemon[] = await this.getTrainersPokemon(trainer.id)
 
-		const writeKey = getWriteKey(readKey)
+		const writeKey = TrainerLocalStorage.getWriteKey(readKey)
     
 		return {
 			info: trainer,
@@ -277,8 +278,8 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			throw new TrainerDataProviderError("Could not create trainer.", error)
 		}
 
-		addReadKey(data.ret_read_key)
-		addWriteKey(data.ret_read_key, data.ret_write_key)
+		TrainerLocalStorage.addReadKey(data.ret_read_key)
+		TrainerLocalStorage.addWriteKey(data.ret_read_key, data.ret_write_key)
 
 		return {
 			info: {
@@ -434,8 +435,8 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 	}
 
 	removeTrainer = async (id: TrainerId, readKey: ReadWriteKey): Promise<void> => {
-		removeWriteKey(readKey)
-		removeReadKey(readKey)
+		TrainerLocalStorage.removeWriteKey(readKey)
+		TrainerLocalStorage.removeReadKey(readKey)
 	}
 
 	deleteTrainer = async (writeKey: ReadWriteKey, id: TrainerId, readKey: ReadWriteKey): Promise<boolean> => {
@@ -452,8 +453,8 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			throw new TrainerDataProviderError("Either this trainer does not exist or you do not have permission to edit them.")
 		}
 
-		removeWriteKey(readKey)
-		removeReadKey(readKey)
+		TrainerLocalStorage.removeWriteKey(readKey)
+		TrainerLocalStorage.removeReadKey(readKey)
     
 		return data > 0
 	}
@@ -844,7 +845,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		thingName: "inventory item",
 		writeKey: writeKey,
 		newThings: newInventory,
-		getExistingThings: () => this.getTrainerInventory(getReadKey(writeKey)),
+		getExistingThings: () => this.getTrainerInventory(TrainerLocalStorage.getReadKey(writeKey)),
 		removeFunctionName: "remove_inventory_item",
 		updateFunctionName: "update_inventory_item",
 		addFunctionName: "add_inventory_item",
@@ -863,7 +864,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		thingName: "feat",
 		writeKey: writeKey,
 		newThings: newFeats,
-		getExistingThings: () => this.getTrainerFeats(getReadKey(writeKey)),
+		getExistingThings: () => this.getTrainerFeats(TrainerLocalStorage.getReadKey(writeKey)),
 		removeFunctionName: "remove_trainer_feat",
 		updateFunctionName: "update_trainer_feat",
 		addFunctionName: "add_trainer_feat",
@@ -928,7 +929,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 
 		if (data > 0) {
-			addWriteKey(trainer.readKey, writeKey)
+			TrainerLocalStorage.addWriteKey(trainer.readKey, writeKey)
 		}
 
 		return data > 0
@@ -998,35 +999,6 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		name: name,
 		href: this.userAssets.getAssetUrl(name),
 	})
-}
-
-export const getReadKeys = (): ReadWriteKey[] =>
-	localStorage.getItem("trainers")?.split(",")?.filter((it) => it !== "") ?? []
-
-export const addReadKey = (key: ReadWriteKey) => {
-	const previous = getReadKeys()
-	const newList = [...new Set(previous.concat(key))]
-	localStorage.setItem("trainers", newList.join(","))
-}
-
-export const removeReadKey = (key: ReadWriteKey) => {
-	const previous = getReadKeys()
-	const newList = previous.filter((it) => it !== key)
-	localStorage.setItem("trainers", newList.join(","))
-}
-
-export const getReadKey = (writeKey: ReadWriteKey): ReadWriteKey | undefined =>
-	getReadKeys().find((readKey) => getWriteKey(readKey) === writeKey)
-
-export const getWriteKey = (readKey: ReadWriteKey): ReadWriteKey | undefined =>
-	localStorage.getItem(`write:${readKey}`)
-
-export const addWriteKey = (readKey: ReadWriteKey, writeKey: ReadWriteKey) => {
-	localStorage.setItem(`write:${readKey}`, writeKey)
-}
-
-export const removeWriteKey = (readKey: ReadWriteKey) => {
-	localStorage.removeItem(`write:${readKey}`)
 }
 
 type TrainerRow = {

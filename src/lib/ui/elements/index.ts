@@ -1,5 +1,6 @@
 export { default as Art } from "./Art.svelte"
 export { default as Button } from "./Button.svelte"
+export { default as CodeBlock } from "./CodeBlock.svelte"
 export { default as ColumnedList } from "./ColumnedList.svelte"
 export { default as Details } from "./Details.svelte"
 export { default as FlatDl } from "./FlatDl.svelte"
