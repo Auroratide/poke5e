@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Card from "$lib/design/Card.svelte"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { ActionArea } from "$lib/ui/forms"
 	import type { TrainerStore } from "../trainers"
 	import { Url } from "$lib/url"

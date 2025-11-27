@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PokemonSpecies } from "$lib/creatures/species"
-	import ColumnedList from "$lib/design/ColumnedList.svelte"
+	import { ColumnedList } from "$lib/ui/elements"
 	import { Url } from "$lib/url"
 
 	export let pokemon: Pick<PokemonSpecies, "id" | "name">[]

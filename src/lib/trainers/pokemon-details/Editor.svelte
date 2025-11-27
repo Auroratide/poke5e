@@ -6,7 +6,7 @@
 </script>
 
 <script lang="ts">
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { ActionArea, Form, FormDetails, MarkdownField, type ImageInputValue, Fieldset } from "$lib/ui/forms"
 	import { AttributesFieldset, SavingThrowsFieldset } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"

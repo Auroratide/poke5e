@@ -1,13 +1,13 @@
 <script lang="ts">
 	import Info from "./Info.svelte"
 	import Card from "$lib/design/Card.svelte"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { ActionArea } from "$lib/ui/forms"
 	import type { TrainerStore } from "../trainers"
 	import { Url } from "$lib/url"
 	import { PageAction } from "../page-action"
 	import { Title } from "$lib/ui/layout"
-	import Level from "$lib/design/Level.svelte"
+	import { Level } from "$lib/ui/elements"
 	import type { InventoryItem, TrainerInfo } from "../types"
 
 	export let trainer: TrainerStore

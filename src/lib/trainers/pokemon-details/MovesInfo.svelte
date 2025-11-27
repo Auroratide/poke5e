@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Loader from "$lib/design/Loader.svelte"
+	import { Loader } from "$lib/ui/elements"
 	import { moves } from "$lib/moves/store"
 	import { createEventDispatcher } from "svelte"
 	import type { LearnedMove, TrainerPokemon } from "../types"

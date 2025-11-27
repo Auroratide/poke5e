@@ -3,7 +3,7 @@
 	import { Page } from "$lib/ui/layout"
 	import MoveList from "$lib/moves/MoveList.svelte"
 	import { HitIcon } from "$lib/ui/icons"
-	import Loader from "$lib/design/Loader.svelte"
+	import { Loader } from "$lib/ui/elements"
 	import { moves } from "$lib/moves/store"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
 	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"

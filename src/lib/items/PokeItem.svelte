@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Item } from "./types"
 	import Card from "../design/Card.svelte"
-	import FlatDl from "../design/FlatDl.svelte"
+	import FlatDl from "../ui/elements/FlatDl.svelte"
 	import { renderHtml } from "../rendering/render"
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Url } from "$lib/url"

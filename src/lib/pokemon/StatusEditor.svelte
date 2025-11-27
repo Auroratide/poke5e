@@ -7,7 +7,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
 	import { NonVolatileStatus } from "$lib/pokemon/status"
-	import VisuallyHidden from "../design/VisuallyHidden.svelte"
+	import VisuallyHidden from "../ui/elements/VisuallyHidden.svelte"
 
 	const dispatch = createEventDispatcher()
 	const statusList = Object.values(NonVolatileStatus)

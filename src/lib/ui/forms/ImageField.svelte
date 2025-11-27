@@ -10,7 +10,7 @@
 
 <script lang="ts">
 	import { onDestroy } from "svelte"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { kebab } from "./kebab"
 
 	const DEFAULT_MAX_BYTES = 524288 // 500 KB

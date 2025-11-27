@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores"
-	import VisuallyHidden from "./VisuallyHidden.svelte"
+	import VisuallyHidden from "../ui/elements/VisuallyHidden.svelte"
 
 	export let title: string
 	export let target: string

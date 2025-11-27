@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PokemonSpecies } from "$lib/creatures/species"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { Fieldset, focusInputField } from "$lib/ui/forms"
 	import MoveEditor, { getMoveFieldName } from "$lib/moves/MoveEditor.svelte"
 	import { moves } from "$lib/moves/store"

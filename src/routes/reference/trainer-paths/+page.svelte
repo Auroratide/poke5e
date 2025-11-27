@@ -2,7 +2,7 @@
 	import { TrainerPaths } from "$lib/trainers/paths"
 	import { renderHtml } from "$lib/rendering/render"
 	import { rulesVersion } from "$lib/design/rules-version"
-	import ColumnedList from "$lib/design/ColumnedList.svelte"
+	import { ColumnedList } from "$lib/ui/elements"
 	import ReferencePage from "../ReferencePage.svelte"
 
 	$: paths = TrainerPaths[$rulesVersion] 

@@ -29,7 +29,7 @@
 	import { HitDice } from "$lib/dnd/hit-dice"
 	import { SavingThrowsFieldset } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { GenderRatioFieldset } from "$lib/creatures/gender"
 	import { SrField } from "$lib/creatures/sr"
 	import { MovePoolFieldset } from "$lib/creatures/move-pool"

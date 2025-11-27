@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Card from "$lib/design/Card.svelte"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { trainers } from "./trainers"
 	import { goto } from "$app/navigation"
 	import { base } from "$app/paths"

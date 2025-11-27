@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { Url } from "$lib/url"
 	import { PageAction } from "./actions"
 </script>

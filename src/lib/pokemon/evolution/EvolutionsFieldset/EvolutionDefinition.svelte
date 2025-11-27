@@ -13,7 +13,7 @@
 	import { TimesOfDay, type TypedEvolutionConditionType } from "../EvolutionCondition"
 	import { capitalize } from "$lib/string"
 	import { PokemonSpecies, SpeciesField, SpeciesIdentifier, type SpeciesFieldChangeEvent } from "$lib/creatures/species"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { fakemonStore } from "$lib/fakemon/store"
 	import BenefitsField from "./BenefitsField.svelte"
 	import type { TypedEvolutionBenefitType } from "../EvolutionBenefit"

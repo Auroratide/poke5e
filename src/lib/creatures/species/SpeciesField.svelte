@@ -7,7 +7,7 @@
 	import { TextField, kebab } from "$lib/ui/forms"
 	import { matchNameOrType2 } from "$lib/creatures/filter"
 	import type { PokemonSpecies } from "./PokemonSpecies"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { slide } from "svelte/transition"
 
 	const dispatch = createEventDispatcher()

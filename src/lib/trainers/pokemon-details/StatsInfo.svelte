@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { TrainerPokemon } from "../types"
-	import FlatDl from "$lib/design/FlatDl.svelte"
+	import { FlatDl } from "$lib/ui/elements"
 	import * as asString from "$lib/creatures/string"
 	import { DistancesDlItem } from "$lib/dnd/distance"
 	import { TeraTypeTag } from "$lib/pokemon/types-2"

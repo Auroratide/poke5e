@@ -1,7 +1,7 @@
 <script>
-	import FlatDl from "$lib/design/FlatDl.svelte"
+	import { FlatDl } from "$lib/ui/elements"
 	import { formatMoney } from "$lib/pokemon/money"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { Url } from "$lib/url"
 	import { PageAction } from "$lib/trainers/page-action"
 	import ReferencePage from "../ReferencePage.svelte"

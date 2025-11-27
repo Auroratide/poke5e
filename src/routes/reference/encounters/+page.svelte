@@ -1,5 +1,5 @@
 <script>
-	import Formula from "$lib/design/Formula.svelte"
+	import { Formula } from "$lib/ui/elements"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { rulesVersion } from "$lib/design/rules-version"
 	import one from "./1v1.webp"

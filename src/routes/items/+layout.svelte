@@ -2,7 +2,7 @@
 	import { page } from "$app/stores"
 	import { Page } from "$lib/ui/layout"
 	import { BackpackIcon } from "$lib/ui/icons"
-	import Loader from "$lib/design/Loader.svelte"
+	import { Loader } from "$lib/ui/elements"
 	import { items } from "$lib/items/store"
 	import ItemList from "$lib/items/ItemList.svelte"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"

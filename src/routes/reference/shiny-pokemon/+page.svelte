@@ -1,6 +1,6 @@
 <script>
 	import ReferencePage from "../ReferencePage.svelte"
-	import Art from "$lib/design/Art.svelte"
+	import { Art } from "$lib/ui/elements"
 </script>
 
 <ReferencePage title="Shiny Pokémon">

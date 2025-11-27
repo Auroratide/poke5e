@@ -4,7 +4,7 @@
 	import { Page } from "$lib/ui/layout"
 	import { IdBadgeIcon } from "$lib/ui/icons"
 	import { Title } from "$lib/ui/layout"
-	import Loader from "$lib/design/Loader.svelte"
+	import { Loader } from "$lib/ui/elements"
 	import TrainerCard from "$lib/trainers/trainer-details/Card.svelte"
 	import PokemonCard from "$lib/trainers/pokemon-details/Card.svelte"
 	import TrainerRoster from "$lib/trainers/trainer-details/Roster.svelte"

@@ -2,7 +2,7 @@
 	import type { HeldItem } from "../types"
 	import { items } from "$lib/items/store"
 	import { createEventDispatcher } from "svelte"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import type { ItemType } from "$lib/items/types"
 	import { groupByType } from "$lib/items/group"
 

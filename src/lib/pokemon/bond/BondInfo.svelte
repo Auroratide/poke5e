@@ -12,9 +12,9 @@
 	import { createEventDispatcher } from "svelte"
 	import type { PokemonBond } from "../../trainers/types"
 	import { BondIcon } from "./icons"
-	import PlusMinus from "$lib/design/PlusMinus.svelte"
+	import { PlusMinus } from "$lib/ui/elements"
 	import { BondEffects } from "./BondEffects"
-	import Popover from "$lib/design/Popover.svelte"
+	import { Popover } from "$lib/ui/elements"
 
 	const dispatch = createEventDispatcher()
 

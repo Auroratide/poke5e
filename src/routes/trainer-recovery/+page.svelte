@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { Title } from "$lib/ui/layout"
 	import { seenTrainerRecovery } from "$lib/trainers/migration/store"
 	import { StaticPage } from "$lib/ui/layout"

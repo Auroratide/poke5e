@@ -1,6 +1,6 @@
 <script lang="ts">
 	import BubbleRow from "$lib/design/BubbleRow"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import ListHeading from "$lib/design/ListHeading.svelte"
 	import SearchField from "$lib/design/SearchField.svelte"
 	import SortableTable from "$lib/design/SortableTable.svelte"

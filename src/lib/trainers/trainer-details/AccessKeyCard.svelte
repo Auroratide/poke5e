@@ -3,7 +3,7 @@
 	import type { TrainerStore } from "../trainers"
 	import Saveable from "$lib/design/Saveable.svelte"
 	import { ActionArea, PasswordField, TextField, WithButton } from "$lib/ui/forms"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { Url } from "$lib/url"
 	import { Title } from "$lib/ui/layout"
 	import findAccessKey from "./find-access-key.png"

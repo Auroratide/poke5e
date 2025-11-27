@@ -1,5 +1,5 @@
 <script>
-	import FlatDl from "$lib/design/FlatDl.svelte"
+	import { FlatDl } from "$lib/ui/elements"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { rulesVersion } from "$lib/design/rules-version"
 	import Rules2018 from "./2018"

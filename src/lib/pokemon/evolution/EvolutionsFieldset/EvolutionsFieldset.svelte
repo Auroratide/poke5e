@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/creatures/species"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { Fieldset, HintText, InstructionText } from "$lib/ui/forms"
 	import { slide } from "svelte/transition"
 	import { Evolution, tmpEvolutionId } from "../Evolution"

@@ -1,8 +1,8 @@
 <script lang="ts">
-	import Button from "$lib/design/Button.svelte"
-	import Details from "$lib/design/Details.svelte"
+	import { Button } from "$lib/ui/elements"
+	import { Details } from "$lib/ui/elements"
 	import { FormGroup, SelectField } from "$lib/ui/forms"
-	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
+	import { VisuallyHidden } from "$lib/ui/elements"
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import { MoveFilter } from "$lib/moves/MoveFilter"
 	import type { Move } from "$lib/moves/types"

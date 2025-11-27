@@ -1,5 +1,5 @@
 <script lang="ts">
-	import InfoTable from "$lib/design/InfoTable.svelte"
+	import { InfoTable } from "$lib/ui/elements"
 	import NatureRow from "./NatureRow.svelte"
 	import { StandardNature } from "$lib/pokemon/nature/StandardNature.2018"
 </script>

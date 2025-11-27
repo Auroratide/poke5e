@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { StaticPage } from "$lib/ui/layout"
 	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/url"

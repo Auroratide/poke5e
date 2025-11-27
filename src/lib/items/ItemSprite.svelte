@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Art from "$lib/design/Art.svelte"
+	import { Art } from "$lib/ui/elements"
 
 	export let src: string
 	export let alt: string

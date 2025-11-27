@@ -1,5 +1,5 @@
 <script>
-	import InfoTable from "$lib/design/InfoTable.svelte"
+	import { InfoTable } from "$lib/ui/elements"
 	import TypeCalculator from "./TypeCalculator.svelte"
 	import ReferencePage from "../ReferencePage.svelte"
 </script>

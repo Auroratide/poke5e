@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Attributes } from "./Attributes"
-	import PlusMinus from "$lib/design/PlusMinus.svelte"
+	import { PlusMinus } from "$lib/ui/elements"
 
 	export let attributes: Attributes
 </script>

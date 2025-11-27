@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { Move } from "./types"
 	import Card from "../design/Card.svelte"
-	import FlatDl from "../design/FlatDl.svelte"
+	import FlatDl from "../ui/elements/FlatDl.svelte"
 	import { powerAsString } from "./string"
 	import MoveDescription from "./MoveDescription.svelte"
-	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
+	import { VisuallyHidden } from "$lib/ui/elements"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import { TypeTag } from "$lib/pokemon/types-2"
 	import { SpeciesIdentifier } from "$lib/creatures/species"

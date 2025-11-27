@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Loader from "$lib/design/Loader.svelte"
+	import { Loader } from "$lib/ui/elements"
 	import { Tag } from "$lib/design/Tag"
 	import { abilities } from "../store"
 	import { AbilityPool } from "./AbilityPool"

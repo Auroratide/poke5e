@@ -1,5 +1,5 @@
 <script lang="ts">
-	import InfoTable from "$lib/design/InfoTable.svelte"	
+	import { InfoTable } from "$lib/ui/elements"	
 	import LevelTableRow from "./LevelTableRow.svelte"
 </script>
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { Fieldset, focusInputField } from "$lib/ui/forms"
 	import type { ChosenFeat } from "./ChosenFeat"
 	import type { Feat } from "./Feat"

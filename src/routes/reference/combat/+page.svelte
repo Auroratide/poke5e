@@ -3,7 +3,7 @@
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
 	import { rulesVersion } from "$lib/design/rules-version"
-	import Formula from "$lib/design/Formula.svelte"
+	import { Formula } from "$lib/ui/elements"
 </script>
 
 <ReferencePage title="Combat">

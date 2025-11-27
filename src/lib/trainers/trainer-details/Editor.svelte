@@ -20,7 +20,7 @@
 	import { AttributesFieldset, SavingThrowsFieldset } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
 	import InventoryFieldset from "./forms/InventoryFieldset.svelte"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { SpecializationsFieldset } from "../specializations"
 	import { TrainerPathsFieldset } from "../paths"
 	import FeatsFieldset from "$lib/feats/FeatsFieldset.svelte"

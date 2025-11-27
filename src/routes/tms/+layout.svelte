@@ -3,7 +3,7 @@
 	import { Page } from "$lib/ui/layout"
 	import TmList from "$lib/moves/TmList.svelte"
 	import { DiscIcon } from "$lib/ui/icons"
-	import Loader from "$lib/design/Loader.svelte"
+	import { Loader } from "$lib/ui/elements"
 	import { tms } from "$lib/moves/store"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
 	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"

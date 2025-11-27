@@ -1,5 +1,5 @@
 <script lang="ts">
-	import InfoTable from "$lib/design/InfoTable.svelte"
+	import { InfoTable } from "$lib/ui/elements"
 	import ExpTableRow from "./ExpTableRow.svelte"
 	import { ExperienceNeededPerLevel } from "$lib/creatures/experience"
 </script>

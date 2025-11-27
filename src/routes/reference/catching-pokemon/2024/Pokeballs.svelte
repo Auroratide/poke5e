@@ -1,5 +1,5 @@
 <script lang="ts">
-	import InfoTable from "$lib/design/InfoTable.svelte"
+	import { InfoTable } from "$lib/ui/elements"
 </script>
 
 <InfoTable label="Pokéball Types">

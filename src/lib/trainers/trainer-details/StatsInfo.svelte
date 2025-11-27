@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { TrainerInfo } from "../types"
-	import FlatDl from "$lib/design/FlatDl.svelte"
+	import { FlatDl } from "$lib/ui/elements"
 
 	export let trainer: TrainerInfo
 

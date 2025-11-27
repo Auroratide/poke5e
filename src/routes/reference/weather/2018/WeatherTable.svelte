@@ -1,5 +1,5 @@
 <script lang="ts">
-	import InfoTable from "$lib/design/InfoTable.svelte"
+	import { InfoTable } from "$lib/ui/elements"
 </script>
 
 <p>Below is an example d100 table you can roll on at the beginning of each day to determine the weather. Alternatively, it may be fun to determine the weather by what is actually happening outside your game table!</p>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from "$app/environment"
 	import { base } from "$app/paths"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { MY_ORIGIN } from "./migration/origins"
 	import { migrationStatus } from "./migration/store"
 

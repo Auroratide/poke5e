@@ -4,7 +4,7 @@
 	import { filterValue } from "../store"
 	import type { TrainerStore } from "../trainers"
 	import type { PokemonId, TrainerPokemon } from "../types"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import PokemonSummary from "./PokemonSummary.svelte"
 	import ListHeading from "$lib/design/ListHeading.svelte"
 

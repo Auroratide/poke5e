@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { ActionArea } from "$lib/ui/forms"
 	import { createEventDispatcher } from "svelte"
 	import { type PokemonSpecies } from "$lib/creatures/species"

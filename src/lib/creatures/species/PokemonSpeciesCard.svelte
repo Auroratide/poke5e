@@ -1,7 +1,7 @@
 <script lang="ts">
-	import FlatDl from "$lib/design/FlatDl.svelte"
+	import { FlatDl } from "$lib/ui/elements"
 	import SideArtCardSection from "$lib/design/SideArtCardSection.svelte"
-	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
+	import { VisuallyHidden } from "$lib/ui/elements"
 	import { AttributeBlock } from "$lib/dnd/attributes"
 	import { DistancesDlItem } from "$lib/dnd/distance"
 	import { AbilityPoolInfo } from "$lib/pokemon/ability"

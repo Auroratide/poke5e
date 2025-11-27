@@ -1,6 +1,6 @@
 <script lang="ts">
 	import PokemonSpeciesCard from "$lib/creatures/species/PokemonSpeciesCard.svelte"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { ActionArea } from "$lib/ui/forms"
 	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/url"

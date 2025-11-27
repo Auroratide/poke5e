@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { EXPERIENCE_MATRIX_2018 } from "$lib/creatures/experience"
-	import InfoTable from "$lib/design/InfoTable.svelte"
-	import Details from "$lib/design/Details.svelte"
+	import { InfoTable } from "$lib/ui/elements"
+	import { Details } from "$lib/ui/elements"
 </script>
 
 <p>This value is derived from the following table.</p>

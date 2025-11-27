@@ -5,10 +5,10 @@
 	import { migrationStatus } from "./store"
 	import { respondToMessage } from "./respond-to-message"
 	import { OLD_ORIGIN } from "./origins"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { trainers } from "../trainers"
 	import TransferredTrainers from "./TransferredTrainers.svelte"
-	import Loader from "$lib/design/Loader.svelte"
+	import { Loader } from "$lib/ui/elements"
 	import * as Analytics from "$lib/analytics"
 
 	let modal: HTMLDialogElement

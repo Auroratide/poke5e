@@ -1,13 +1,13 @@
 <script lang="ts">
-	import InfoTable from "$lib/design/InfoTable.svelte"
+	import { InfoTable } from "$lib/ui/elements"
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Url } from "$lib/url"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { rulesVersion } from "$lib/design/rules-version"
 	import { EggGroup } from "$lib/creatures/egg-group"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
-	import Details from "$lib/design/Details.svelte"
-	import Loader from "$lib/design/Loader.svelte"
+	import { Details } from "$lib/ui/elements"
+	import { Loader } from "$lib/ui/elements"
 	import { PokemonSpecies, SpeciesStore } from "$lib/creatures/species"
 
 	const pokemon = SpeciesStore.canonList()

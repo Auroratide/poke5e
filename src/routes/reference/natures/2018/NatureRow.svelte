@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PlusMinus from "$lib/design/PlusMinus.svelte"
+	import { PlusMinus } from "$lib/ui/elements"
 
 	export let index: number
 	export let name: string

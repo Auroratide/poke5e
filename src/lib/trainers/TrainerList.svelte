@@ -6,7 +6,7 @@
 	import { trainerListFilterValue, trainerListSorter } from "./store"
 	import type { TrainerListStore } from "./trainers"
 	import type { Trainer } from "./types"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { Url } from "$lib/url"
 	import { PageAction } from "./page-action"
 	import ListHeading from "$lib/design/ListHeading.svelte"

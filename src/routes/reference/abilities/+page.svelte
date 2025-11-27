@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from "./$types"
 	import Filter from "./Filter.svelte"
-	import Loader from "$lib/design/Loader.svelte"
+	import { Loader } from "$lib/ui/elements"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { SpeciesStore } from "$lib/creatures/species"

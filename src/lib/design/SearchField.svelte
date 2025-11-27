@@ -1,5 +1,5 @@
 <script lang="ts">
-	import VisuallyHidden from "./VisuallyHidden.svelte"
+	import VisuallyHidden from "../ui/elements/VisuallyHidden.svelte"
 
 	export let id: string
 	export let label: string

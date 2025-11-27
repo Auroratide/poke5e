@@ -2,7 +2,7 @@
 	import type { PokemonMedia } from "./types"
 	import { assets } from "$app/paths"
 	import { browser } from "$app/environment"
-	import Art from "$lib/design/Art.svelte"
+	import { Art } from "$lib/ui/elements"
 	import type { StorageResource } from "$lib/trainers/data"
 
 	export let media: PokemonMedia

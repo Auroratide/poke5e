@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Button from "$lib/design/Button.svelte"
-	import Details from "$lib/design/Details.svelte"
+	import { Button } from "$lib/ui/elements"
+	import { Details } from "$lib/ui/elements"
 	import { Fieldset, InstructionText, IntField } from "$lib/ui/forms"
 	import { Attributes } from "$lib/dnd/attributes"
 	import type { HitDice } from "$lib/dnd/hit-dice"

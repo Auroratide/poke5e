@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { TrainerListStore } from "../trainers"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { OLD_ORIGIN } from "./origins"
 
 	export let trainers: TrainerListStore

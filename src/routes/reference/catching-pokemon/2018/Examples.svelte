@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FlatDl from "$lib/design/FlatDl.svelte"
+	import { FlatDl } from "$lib/ui/elements"
 </script>
 
 <p>You are a level 2 trainer trying to capture a full-health Level 2 Caterpie you just found. You use a Pokéball. The DC is calculated as follows:</p>

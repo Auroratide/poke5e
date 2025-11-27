@@ -7,15 +7,15 @@
 <script lang="ts">
 	import { base } from "$app/paths"
 	import { NumericResourceField, type NumericChangeDetail } from "$lib/ui/forms"
-	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
+	import { VisuallyHidden } from "$lib/ui/elements"
 	import type { Attributes } from "$lib/dnd/attributes"
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
 	import { deriveMovePowers } from "$lib/moves/MovePowers"
 	import type { Move } from "$lib/moves/types"
 	import { createEventDispatcher } from "svelte"
 	import type { LearnedMove } from "../types"
-	import PlusMinus from "$lib/design/PlusMinus.svelte"
-	import FlatDl from "$lib/design/FlatDl.svelte"
+	import { PlusMinus } from "$lib/ui/elements"
+	import { FlatDl } from "$lib/ui/elements"
 	import type { Level } from "$lib/dnd/level"
 	import type { PokemonType } from "$lib/pokemon/types-2"
 

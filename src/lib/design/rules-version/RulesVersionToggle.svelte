@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Url } from "$lib/url"
 	import { HelpIcon } from "$lib/ui/icons"
-	import Popover from "../Popover.svelte"
+	import Popover from "../../ui/elements/Popover.svelte"
 	import { rulesVersion } from "./RulesVersion"
 
 	export let id: string = "rules-version-fieldset"

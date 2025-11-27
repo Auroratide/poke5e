@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PokemonId } from "$lib/trainers/types"
 	import Card from "$lib/design/Card.svelte"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { ActionArea } from "$lib/ui/forms"
 	import type { TrainerStore } from "../trainers"
 	import { goto } from "$app/navigation"

@@ -1,6 +1,6 @@
 <script>
-	import FlatDl from "$lib/design/FlatDl.svelte"
-	import InfoTable from "$lib/design/InfoTable.svelte"
+	import { FlatDl } from "$lib/ui/elements"
+	import { InfoTable } from "$lib/ui/elements"
 	import { Url } from "$lib/url"
 	import ReferencePage from "../ReferencePage.svelte"
 </script>

@@ -2,7 +2,7 @@
 	import Card from "$lib/design/Card.svelte"
 	import Saveable from "$lib/design/Saveable.svelte"
 	import { ActionArea } from "$lib/ui/forms"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { Url } from "$lib/url"
 	import { Title } from "$lib/ui/layout"
 	import { goto } from "$app/navigation"

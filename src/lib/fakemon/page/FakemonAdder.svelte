@@ -7,7 +7,7 @@
 
 <script lang="ts">
 	import { SpeciesMedia } from "$lib/creatures/media"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import {
 		ActionArea,
 		Fieldset,

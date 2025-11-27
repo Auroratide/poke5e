@@ -11,7 +11,7 @@
 	import type { Resource } from "../types"
 	import { createEventDispatcher } from "svelte"
 	import ResourceBar from "$lib/design/ResourceBar.svelte"
-	import VisuallyHidden from "$lib/design/VisuallyHidden.svelte"
+	import { VisuallyHidden } from "$lib/ui/elements"
 	import {
 		NumericResourceField,
 		type NumericChangeDetail,
@@ -20,7 +20,7 @@
 	import StatusEditor, { type ChangeDetail as StatusChangeDetail } from "$lib/pokemon/StatusEditor.svelte"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 	import { experienceNeededAtLevel, experienceNeededUntilLevelUp, formatExp } from "$lib/creatures/experience"
-	import Popover from "$lib/design/Popover.svelte"
+	import { Popover } from "$lib/ui/elements"
 	import { HelpIcon } from "$lib/ui/icons"
 	import type { Level } from "$lib/dnd/level"
 	import type { HitDice } from "$lib/dnd/hit-dice"

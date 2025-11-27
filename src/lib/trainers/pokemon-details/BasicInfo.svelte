@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { TrainerPokemon } from "../types"
-	import Level from "$lib/design/Level.svelte"
+	import { Level } from "$lib/ui/elements"
 	import { GenderIcon } from "$lib/creatures/gender"
 	import type { PokemonSpecies } from "$lib/creatures/species"
 

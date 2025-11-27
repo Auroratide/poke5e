@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FlatDl from "$lib/design/FlatDl.svelte"
+	import { FlatDl } from "$lib/ui/elements"
 	import { Fieldset, CheckboxFields } from "$lib/ui/forms"
 	import { PokemonType, type PokeType } from "$lib/pokemon/types-2"
 

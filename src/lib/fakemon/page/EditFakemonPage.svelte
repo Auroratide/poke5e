@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from "$app/navigation"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import Card from "$lib/design/Card.svelte"
 	import { ActionArea } from "$lib/ui/forms"
 	import { Title } from "$lib/ui/layout"
@@ -11,7 +11,7 @@
 	import type { PokemonSpecies } from "$lib/creatures/species"
 	import { EvolutionStore, type EvolutionUpdate } from "$lib/pokemon/evolution"
 	import { fakemonStore } from "../store"
-	import Loader from "$lib/design/Loader.svelte"
+	import { Loader } from "$lib/ui/elements"
 	import { error } from "$lib/design/errors/store"
 
 	export let fakemon: SingleFakemonStore

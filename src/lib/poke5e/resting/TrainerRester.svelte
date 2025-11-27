@@ -7,7 +7,7 @@
 
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
-	import Button from "$lib/design/Button.svelte"
+	import { Button } from "$lib/ui/elements"
 	import { ActionArea, Fieldset, Form, IntField, RadioFields, HintText, CheckboxFields } from "$lib/ui/forms"
 	import { PokemonResting, TrainerResting, type RestType } from "./Rest"
 	import type { TrainerData } from "$lib/trainers/data"
@@ -15,7 +15,7 @@
 	import PokemonBanner from "./PokemonBanner.svelte"
 	import { TrainerPaths } from "$lib/trainers/paths"
 	import { rulesVersion } from "$lib/design/rules-version"
-	import Art from "$lib/design/Art.svelte"
+	import { Art } from "$lib/ui/elements"
 	import type { Readable } from "svelte/store"
 	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/creatures/species"
 

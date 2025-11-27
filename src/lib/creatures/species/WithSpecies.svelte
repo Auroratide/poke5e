@@ -3,7 +3,7 @@
 	import type { SpeciesIdentifier } from "./SpeciesIdentifier"
 	import { SpeciesStore } from "./SpeciesStore"
 	import type { PokemonSpecies } from "./PokemonSpecies"
-	import Loader from "$lib/design/Loader.svelte"
+	import { Loader } from "$lib/ui/elements"
 	import type { Data } from "$lib/DataClass"
 	import * as list from "$lib/list"
 

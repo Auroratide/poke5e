@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from "$app/environment"
 	import { assets } from "$app/paths"
-	import Art from "$lib/design/Art.svelte"
+	import { Art } from "$lib/ui/elements"
 	import type { StorageResource } from "$lib/trainers/data"
 	import type { SpeciesMedia, SpeciesMediaTypeAttribution, UploadedMedia } from "./SpeciesMedia"
 
