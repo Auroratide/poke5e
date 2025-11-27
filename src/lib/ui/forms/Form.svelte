@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Saveable from "$lib/design/Saveable.svelte"
+	import Saveable from "./Saveable.svelte"
 
 	export let onsubmit: () => void
 	export let saving: boolean = false

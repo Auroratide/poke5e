@@ -2,7 +2,7 @@
 	import { Page } from "$lib/ui/layout"
 	import { PencilNotesIcon } from "$lib/ui/icons"
 	import { page } from "$app/stores"
-	import SearchField from "$lib/design/SearchField.svelte"
+	import { SearchField } from "$lib/ui/forms"
 	import { filterValue } from "./store"
 	import { search, References } from "./references"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"

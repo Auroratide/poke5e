@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Loader from "../ui/elements/Loader.svelte"
+	import Loader from "../elements/Loader.svelte"
 
 	export let saving: boolean
 	export let caption: string = "Saving..."

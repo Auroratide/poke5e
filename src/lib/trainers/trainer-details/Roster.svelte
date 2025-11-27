@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from "$app/paths"
-	import SearchField from "$lib/design/SearchField.svelte"
+	import { SearchField } from "$lib/ui/forms"
 	import { filterValue } from "../store"
 	import type { TrainerStore } from "../trainers"
 	import type { PokemonId, TrainerPokemon } from "../types"

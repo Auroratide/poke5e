@@ -2,7 +2,7 @@
 	import type { Move } from "./types"
 	import { base } from "$app/paths"
 	import SortableTable from "../design/SortableTable.svelte"
-	import SearchField from "../design/SearchField.svelte"
+	import { SearchField } from "$lib/ui/forms"
 	import { powerAsString } from "./string"
 	import { matchNameOrType } from "./filter"
 	import { filterValue, currentSorter } from "./store"

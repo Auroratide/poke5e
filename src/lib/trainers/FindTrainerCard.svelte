@@ -1,12 +1,11 @@
 <script>
 	import Card from "$lib/design/Card.svelte"
-	import Saveable from "$lib/design/Saveable.svelte"
 	import { trainers } from "./trainers"
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/url"
 	import findTrainerIdImg from "./find-trainer-id.png"
 	import { Title } from "$lib/ui/layout"
-	import { WithButton, TextField } from "$lib/ui/forms"
+	import { WithButton, TextField, Saveable } from "$lib/ui/forms"
 
 	let id = ""
 	$: id = id.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "")

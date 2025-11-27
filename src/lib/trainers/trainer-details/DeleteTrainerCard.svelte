@@ -1,8 +1,7 @@
 <script lang="ts">
 	import Card from "$lib/design/Card.svelte"
 	import type { TrainerStore } from "../trainers"
-	import Saveable from "$lib/design/Saveable.svelte"
-	import { ActionArea } from "$lib/ui/forms"
+	import { ActionArea, Saveable } from "$lib/ui/forms"
 	import { Button } from "$lib/ui/elements"
 	import { Url } from "$lib/url"
 	import { Title } from "$lib/ui/layout"

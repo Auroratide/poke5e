@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Item } from "./types"
 	import SortableTable from "../design/SortableTable.svelte"
-	import SearchField from "../design/SearchField.svelte"
+	import { SearchField } from "$lib/ui/forms"
 	import { matchNameOrType } from "./filter"
 	import { filterValue, currentSorter } from "./store"
 	import BubbleRow from "../design/BubbleRow"

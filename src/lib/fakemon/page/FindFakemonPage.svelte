@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Card from "$lib/design/Card.svelte"
-	import Saveable from "$lib/design/Saveable.svelte"
+	import { Saveable } from "$lib/ui/forms"
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/url"
 	import findId from "./assets/id.webp"

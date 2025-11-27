@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from "$app/paths"
-	import SearchField from "$lib/design/SearchField.svelte"
+	import { SearchField } from "$lib/ui/forms"
 	import SortableTable from "$lib/design/SortableTable.svelte"
 	import BubbleRow from "$lib/design/BubbleRow"
 	import { trainerListFilterValue, trainerListSorter } from "./store"

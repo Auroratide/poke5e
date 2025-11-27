@@ -2,7 +2,7 @@
 	import type { Pokemon } from "./types"
 	import { base } from "$app/paths"
 	import SortableTable from "../design/SortableTable.svelte"
-	import SearchField from "../design/SearchField.svelte"
+	import { SearchField } from "$lib/ui/forms"
 	import * as asString from "./string"
 	import { matchNameOrType } from "./filter"
 	import { filterValue, currentSorter } from "./store"

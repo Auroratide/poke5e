@@ -2,7 +2,7 @@
 	import type { Tm } from "./types"
 	import { base } from "$app/paths"
 	import SortableTable from "../design/SortableTable.svelte"
-	import SearchField from "../design/SearchField.svelte"
+	import { SearchField } from "$lib/ui/forms"
 	import { matchNameOrType } from "./filter"
 	import { filterTmValue, currentTmSorter } from "./store"
 	import BubbleRow from "../design/BubbleRow"
