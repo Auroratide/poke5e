@@ -146,62 +146,6 @@
 	interpolate-size: allow-keywords;
 }
 
-.theme-blue {
-    --theme-main: hsl(180, 57%, 48%);
-    --theme-dark: hsl(178, 55%, 43%);
-    --theme-text: hsl(176, 60%, 32%);
-    --theme-light: hsl(180, 57%, 58%);
-}
-
-.theme-red {
-    --theme-main: var(--red-main);
-    --theme-dark: var(--red-dark);
-    --theme-text: var(--red-text);
-    --theme-light: var(--red-light);
-}
-
-.theme-purple {
-    --theme-main: hsl(248, 100%, 83%);
-    --theme-dark: hsl(249, 100%, 79%);
-    --theme-text: hsl(249, 50%, 57%);
-    --theme-light: hsl(248, 100%, 83%);
-}
-
-.theme-green {
-    --theme-main: hsl(78, 82%, 56%);
-    --theme-dark: hsl(77, 100%, 42%);
-    --theme-text: hsl(77, 50%, 36%);
-    --theme-light: hsl(78, 82%, 56%);
-}
-
-.theme-navy {
-    --theme-main: hsl(208 100% 63%);
-    --theme-dark: hsl(205 90% 50%);
-    --theme-text: hsl(205 50% 35%);
-    --theme-light: hsl(208 100% 63%);
-}
-
-.theme-yellow {
-    --theme-main: hsl(43 89% 54%);
-    --theme-dark: hsl(42 100% 45%);
-    --theme-text: hsl(42 100% 29%);
-    --theme-light: hsl(43 89% 54%);
-}
-
-.theme-orange {
-	--theme-main: hsl(28 87% 54%);
-	--theme-dark: hsl(40 100% 71%);
-	--theme-text: hsl(28 50% 32%);
-    --theme-light: hsl(40 100% 71%);
-}
-
-.theme-pink {
-	--theme-main: hsl(332, 100%, 69%);
-	--theme-dark: hsl(334, 91%, 63%);
-	--theme-text: hsl(334, 48%, 38%);
-    --theme-light: hsl(332, 100%, 69%);
-}
-
 body {
     font-family: var(--font-reg);
     font-size: var(--font-sz-base);
