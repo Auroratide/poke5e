@@ -10,8 +10,7 @@
 <script lang="ts">
 	import type { Resource } from "../types"
 	import { createEventDispatcher } from "svelte"
-	import ResourceBar from "$lib/design/ResourceBar.svelte"
-	import { VisuallyHidden } from "$lib/ui/elements"
+	import { VisuallyHidden, ResourceBar } from "$lib/ui/elements"
 	import {
 		NumericResourceField,
 		type NumericChangeDetail,

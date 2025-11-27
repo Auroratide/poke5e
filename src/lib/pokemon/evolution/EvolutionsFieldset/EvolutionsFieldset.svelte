@@ -5,7 +5,7 @@
 	import { slide } from "svelte/transition"
 	import { Evolution, tmpEvolutionId } from "../Evolution"
 	import EvolutionDefinition from "./EvolutionDefinition.svelte"
-	import { Tab } from "$lib/design/TabList"
+	import { Tab } from "$lib/ui/elements"
 
 	export let species: SpeciesIdentifier
 	export let evolutions: Evolution[]

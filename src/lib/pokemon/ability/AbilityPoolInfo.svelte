@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Loader } from "$lib/ui/elements"
-	import { Tag } from "$lib/design/Tag"
+	import { Tag } from "$lib/ui/elements"
 	import { abilities } from "../store"
 	import { AbilityPool } from "./AbilityPool"
 
