@@ -61,6 +61,8 @@
 		view-transition-name: pagemain;
 	} .page.main-empty main {
 		height: 0%;
+	} .page.side-empty main {
+		height: calc(100% - 1em);
 	}
 
 	@media screen and (min-width: 37.5rem) {
