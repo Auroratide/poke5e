@@ -4,7 +4,7 @@
 	import { GreatballIcon } from "$lib/ui/icons"
 	import { Loader } from "$lib/ui/elements"
 	import { Page } from "$lib/ui/layout"
-	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
+	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 	import { Title } from "$lib/ui/layout"
 	import {
 		AddFakemonPage,

@@ -3,7 +3,7 @@
 	import { Page } from "$lib/ui/layout"
 	import { PokeballIcon } from "$lib/ui/icons"
 	import { Loader } from "$lib/ui/elements"
-	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
+	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 	import { PokemonSpeciesList, SpeciesStore } from "$lib/creatures/species"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
 

@@ -3,7 +3,7 @@
 	import { base } from "$app/paths"
 	import MissingNo from "$lib/design/MissingNo.svelte"
 	import { Title } from "$lib/ui/layout"
-	import { MAIN_CONTENT_ID } from "$lib/design/SkipLinks.svelte"
+	import { MAIN_CONTENT_ID } from "$lib/ui/layout"
 
 	const title = $page.status === 404
 		? "MissingNo."

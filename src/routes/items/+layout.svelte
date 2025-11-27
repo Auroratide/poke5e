@@ -6,7 +6,7 @@
 	import { items } from "$lib/items/store"
 	import ItemList from "$lib/items/ItemList.svelte"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
-	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
+	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 
 	$: ssrItems = $page.data.itemsList
 	$: itemsToRender = ssrItems ?? $items

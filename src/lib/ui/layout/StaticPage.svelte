@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Container from "./Container.svelte"
-	import { MAIN_CONTENT_ID } from "../../design/SkipLinks.svelte"
+	import { MAIN_CONTENT_ID } from "./SkipLinks.svelte"
 
 	export let title: string
 	export let subtitle: string | undefined = undefined

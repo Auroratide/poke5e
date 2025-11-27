@@ -27,7 +27,6 @@
 		PencilNotesIcon,
 		PokeballIcon,
 	} from "$lib/ui/icons"
-	import SkipLinks, { MAIN_CONTENT_ID, MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
 	import { page } from "$app/stores"
 	import type { ComponentType } from "svelte"
 	import {
@@ -35,6 +34,9 @@
 		Container,
 		MainNavigation,
 		SiteFooter,
+		SkipLinks,
+		MAIN_CONTENT_ID,
+		MAIN_SEARCH_ID,
 	} from "$lib/ui/layout"
 	
 	if (browser) {

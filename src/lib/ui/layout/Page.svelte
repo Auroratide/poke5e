@@ -2,7 +2,7 @@
 	import Theme from "./Theme.svelte"
 	import Backdrop from "./Backdrop.svelte"
 	import IconShadow from "./IconShadow.svelte"
-	import { MAIN_CONTENT_ID } from "../../design/SkipLinks.svelte"
+	import { MAIN_CONTENT_ID } from "./SkipLinks.svelte"
 	import { afterUpdate } from "svelte"
 	import type { ThemeColor } from "./ThemeColor"
 

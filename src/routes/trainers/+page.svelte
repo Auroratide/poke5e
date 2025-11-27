@@ -22,7 +22,7 @@
 	import DeleteTrainerCard from "$lib/trainers/trainer-details/DeleteTrainerCard.svelte"
 	import AccessKeyCard from "$lib/trainers/trainer-details/AccessKeyCard.svelte"
 	import RemoveTrainerCard from "$lib/trainers/trainer-details/RemoveTrainerCard.svelte"
-	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
+	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 	import JavascriptRequired from "$lib/trainers/JavascriptRequired.svelte"
 	import ErrorMessage from "$lib/trainers/ErrorMessage.svelte"
 	import RestPokemonCard from "$lib/trainers/pokemon-details/RestPokemonCard.svelte"

@@ -6,7 +6,7 @@
 	import { filterValue } from "./store"
 	import { search, References } from "./references"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
-	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
+	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 
 	$: pathname = $page.url.pathname
 

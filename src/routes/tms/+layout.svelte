@@ -6,7 +6,7 @@
 	import { Loader } from "$lib/ui/elements"
 	import { tms } from "$lib/moves/store"
 	import ListPageHeading from "$lib/design/ListPageHeading.svelte"
-	import { MAIN_SEARCH_ID } from "$lib/design/SkipLinks.svelte"
+	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 
 	$: ssrTms = $page.data.tmsList
 	$: tmsToRender = ssrTms ?? $tms
