@@ -7,7 +7,6 @@ import { Speeds } from "$lib/dnd/movement"
 import { Senses } from "$lib/dnd/senses"
 import { SkillRanks } from "$lib/dnd/skills"
 import { AbilityPool } from "$lib/pokemon/ability"
-import type { PokeEvolution } from "$lib/pokemon/types"
 import { PokemonType } from "$lib/pokemon/types-2"
 import type { MarkdownString } from "$lib/rendering/markdown"
 import { EggGroup } from "../egg-group"
@@ -40,7 +39,6 @@ export class PokemonSpecies extends DataClass<{
 	abilities: Data<AbilityPool>,
 	moves: Data<MovePool>,
 	media: Data<SpeciesMedia<UploadedMedia>>,
-	evolution?: PokeEvolution,
 	notes?: MarkdownString,
 }> {
 	get id(): SpeciesIdentifier { return new SpeciesIdentifier(this.data.id) }

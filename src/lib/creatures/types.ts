@@ -1,4 +1,4 @@
-import type { PokeEvolution, Ability } from "../pokemon/types"
+import type { Ability } from "../pokemon/types"
 import type { HitDice } from "$lib/dnd/hit-dice"
 import type { CreatureSize } from "$lib/dnd/CreatureSize"
 import type { Attributes, Attribute } from "$lib/dnd/attributes"
@@ -56,7 +56,6 @@ export type Pokemon = {
 	}[],
 	abilities: Ability[],
 	specialAbilityText?: string,
-	evolution?: PokeEvolution,
 	moves: MovePool,
 	media: PokemonMedia,
 }
