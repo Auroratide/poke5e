@@ -46,7 +46,7 @@ export class Evolution extends DataClass<{
 		const levelCondition = conditions.find((it) => it instanceof LevelCondition)
 		const otherconditions = conditions.filter((it) => it !== genderCondition && it !== levelCondition)
 
-		return `${genderCondition ? genderCondition.toString() + " " : ""}{{pokemon:${link === "from" ? ":" : ""}${this.data.from}}} can evolve into {{pokemon:${link === "to" ? ":" : ""}${this.data.to}}} ${levelCondition ? levelCondition.toString() : ""}${otherconditions.length > 0 && levelCondition ? " " : ""}${otherconditions.map((it) => it.toString()).join(", ")}. When it evolves, ${benefits.map((it) => it.toString()).join(", ")}.`
+		return `${genderCondition ? genderCondition.toString() + " " : ""}{{pokemon:${link === "from" ? ":" : ""}${this.data.from}}} can evolve into {{pokemon:${link === "to" ? ":" : ""}${this.data.to}}} ${levelCondition ? levelCondition.toString() : ""}${otherconditions.length > 0 && levelCondition ? " " : ""}${otherconditions.map((it) => it.toString()).join(", ")}.${benefits.length > 0 ? " When it evolves, " : ""}${benefits.map((it) => it.toString()).join(", ")}${benefits.length > 0 ? "." : ""}`
 	}
 
 	static fromJson(json: SingleEvolutionJsonResponse): Evolution {

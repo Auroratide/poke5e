@@ -147,4 +147,20 @@ describe("toString", () => {
 
 		expect(result).toEqual("{{pokemon::eevee}} can evolve into {{pokemon:flareon}} at level 6 or above. When it evolves, its health increases by double its level, and it gains 8 points to add to its ability scores.")
 	})
+
+	test("no benefits", () => {
+		const condition = stubEvolution({
+			from: "eevee",
+			to: "flareon",
+			conditions: [ {
+				type: "level",
+				value: 6,
+			} ],
+			effects: [],
+		})
+
+		const result = condition.toString()
+
+		expect(result).toEqual("{{pokemon:eevee}} can evolve into {{pokemon::flareon}} at level 6 or above.")
+	})
 })
