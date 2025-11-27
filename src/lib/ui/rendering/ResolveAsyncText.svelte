@@ -42,8 +42,8 @@
 		.replaceAll(/{{ability:(:?)(.*?)}}/g, (_, link, id) => link !== "" ? `<a href="${Url.reference.abilities()}#${id}">${$abilities.find((it) => it.id === id)?.name}</a>` : $abilities.find((it) => it.id === id)?.name)
 
 	$: sanitized = DomPurify.sanitize(toRender, {
-			FORBID_TAGS: ["style", "script"],
-		})
+		FORBID_TAGS: ["style", "script"],
+	})
 </script>
 
 {#if loading}
