@@ -4,6 +4,7 @@ import { createSingleFakemonStore, createStoredFakemon, type SingleFakemonStore,
 import { provider } from "../data"
 import { createFakemonListStore, type FakemonListStore } from "./FakemonListStore"
 import { FakemonLocalStorage } from "../data/FakemonLocalStorage"
+import { provider as evoProvider } from "$lib/pokemon/evolution/data"
 
 export type StoredFakemon = Record<ReadKey, SingleStoredFakemon>
 
@@ -15,16 +16,45 @@ export interface FakemonStore {
 	reset: () => Promise<void>
 }
 
-function createStore(): FakemonStore {
+export function createStore(): FakemonStore {
 	const fakemonStore = writable<StoredFakemon>({})
 	const promises: Record<ReadKey, Promise<SingleFakemonStore | undefined>> = {}
 	let listPromise: Promise<FakemonListStore> = undefined
+
+	const getOne = (key: ReadKey) => {
+		if (promises[key] != null) return
+
+		promises[key] = provider.getByReadKey(key).then((fakemon) => {
+			if (fakemon == null) return undefined
+
+			const store = createStoredFakemon(fakemon, fakemonStore)
+
+			fakemonStore.update((prev) => ({
+				...prev,
+				[fakemon.data.readKey]: store,
+			}))
+
+			return createSingleFakemonStore(store, fakemonStore)
+		})
+	}
 
 	return {
 		get: async (key: ReadKey): Promise<SingleFakemonStore> => {
 			if (promises[key] == null) {
 				promises[key] = provider.getByReadKey(key).then((fakemon) => {
 					if (fakemon == null) return undefined
+
+					evoProvider.get(fakemon.species.id).then((evos) => {
+						evos.forEach((evo) => {
+							if (evo.from.isFakemon()) {
+								getOne(evo.from.toFakemonReadKey())
+							}
+
+							if (evo.to.isFakemon()) {
+								getOne(evo.to.toFakemonReadKey())
+							}
+						})
+					})
 
 					const storedFakemon = createStoredFakemon(fakemon, fakemonStore)
 

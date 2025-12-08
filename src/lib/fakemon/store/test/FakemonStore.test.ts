@@ -1,15 +1,21 @@
 import { get } from "svelte/store"
 import { test, expect, vi, beforeEach } from "vitest"
 import { provider } from "$lib/fakemon/data"
-import { fakemonStore } from "../FakemonStore"
+import { provider as evoProvider } from "$lib/pokemon/evolution/data"
+import { createStore, type FakemonStore } from "../FakemonStore"
 import { stubFakemon } from "$lib/fakemon/test/stubs"
 import type { ImageInputValue } from "$lib/ui/forms"
 import { stubImageFile } from "$lib/test/files"
 import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
 import { SpeciesMedia } from "$lib/creatures/media"
 import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
+import { stubEvolution } from "$lib/pokemon/evolution/test/stubs"
+import { waitForStore } from "$lib/test/store"
+
+let fakemonStore: FakemonStore
 
 beforeEach(() => {
+	fakemonStore = createStore()
 	fakemonStore.reset()
 })
 
@@ -63,6 +69,54 @@ test("store remembers", async () => {
 	// then: we only fetched from the db once
 	expect(storedValueAgain.value).toEqualData(eeveon)
 	expect(getFakemon).toBeCalledTimes(1)
+})
+
+test("fakemon has evolutions", async () => {
+	// given: a fakemon in the db
+	const stageOneDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "StageOne",
+		}).data,
+	})
+
+	const stageTwoDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "StageTwo",
+		}).data,
+	})
+
+	const stageOne = await provider.add(stageOneDraft.data.species)
+	const stageTwo = await provider.add(stageTwoDraft.data.species)
+
+	// and: we've never fetched these fakemon before
+	FakemonLocalStorage.remove(stageOne.data.readKey)
+	FakemonLocalStorage.remove(stageTwo.data.readKey)
+
+	// and: they have an evolution between them
+	const evoDraft = stubEvolution({
+		from: stageOne.species.id.data,
+		to: stageTwo.species.id.data,
+	})
+	await evoProvider.add(evoDraft.data, {
+		from: stageOne.data.writeKey,
+		to: stageTwo.data.writeKey,
+	})
+
+	// when: it is fetched
+	const singleStore = await fakemonStore.get(stageOne.data.readKey)
+	const storedValue = get(singleStore)
+	storedValue.value.data.writeKey = stageOne.data.writeKey // getting does not have write key
+
+	// then: we get it back
+	expect(storedValue.value).toEqualData(stageOne)
+
+	// and: we get the evolution too
+	const allStore = await fakemonStore.all()
+	const allValue = await waitForStore(allStore, (value) => value.length >= 2)
+
+	const allIds = allValue.map((it) => it.species.id.data)
+	expect(allIds).toContain(stageOne.species.id.data)
+	expect(allIds).toContain(stageTwo.species.id.data)
 })
 
 test("updating an entry", async () => {
@@ -159,7 +213,7 @@ test("listing fakemon", async () => {
 
 	// when: we get the list
 	const listStore = await fakemonStore.all()
-	const listResult = get(listStore)
+	const listResult = await waitForStore(listStore, (value) => value.length >= 3)
 	const resultNames = listResult.map((it) => it.data.species.name)
 	
 	// then: it contains all the fakemon, in alpha order
