@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.9.0",
+		description: [
+			"New: Fakémon evolution lines can now be created!",
+		],
+	}, {
 		name: "v1.8.7",
 		description: [
 			"New: Settings menu! Currently has rules version and basic backup option.",
@@ -450,6 +455,10 @@ export const versionHistory: VersionHistory = {
 		],
 	} ],
 	groups: [ {
+		name: "v1.9",
+		highlight: "Custom Evolutions!",
+		description: "Fakémon can now be given custom evolution lines! Fakémon can evolve into other fakémon or integrate with canon pokémon. Additionally, you can specify a number of possible conditions for evolution (such as by level, with an item, and more).",
+	}, {
 		name: "v1.8",
 		highlight: "Custom Pokémon!",
 		description: "You can now create custom Pokémon (aka, \"Fakémon\")! Fakémon can have customized move pools, list of abilities, stat blocks, artwork, and more. They can be shared with friends via their IDs and added as part of trainer teams.",
