@@ -1,1 +1,0 @@
-function o(e){return()=>a(e)}function a(e){return localStorage.getItem(`feature-toggle::${e}`)!=null}function l(e,t){t?localStorage.setItem(`feature-toggle::${e}`,"true"):localStorage.removeItem(`feature-toggle::${e}`)}const r={FakemonEvolutions:o("FakemonEvolutions")};export{r as F,a as i,l as s};
