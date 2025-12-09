@@ -1,5 +1,6 @@
 import { browser } from "$app/environment"
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function toggle(name: string) {
 	return () => isFeatureActive(name)
 }
@@ -17,6 +18,5 @@ export function setFeatureActive(feature: string, isActive: boolean) {
 	}
 }
 
-export const FeatureToggles = {
-	FakemonEvolutions: toggle("FakemonEvolutions"),
-}
+// example: FakemonEvolutions: toggle("FakemonEvolutions"),
+export const FeatureToggles = {}

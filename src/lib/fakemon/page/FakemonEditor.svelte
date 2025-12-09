@@ -13,7 +13,6 @@
 		ActionArea,
 		Fieldset,
 		Form,
-		InstructionText,
 		IntField,
 		MarkdownField,
 		SelectField,
@@ -39,7 +38,6 @@
 	import { EstimatableStatsFieldset } from "../estimation"
 	import { Evolution, EvolutionForest, EvolutionsFieldset } from "$lib/pokemon/evolution"
 	import type { PokemonSpecies } from "$lib/creatures/species"
-	import { FeatureToggles } from "$lib/FeatureToggles"
 
 	const dispatch = createEventDispatcher()
 
@@ -149,14 +147,7 @@
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
 	<AbilityPoolFieldset bind:value={abilityPool} {disabled} />
 	<MovePoolFieldset bind:value={movePool} {disabled} />
-	{#if FeatureToggles.FakemonEvolutions()}
-		<EvolutionsFieldset species={species.id} bind:evolutions={evolutions} {allSpecies} {disabled} />
-	{:else}
-		<Fieldset title="Evolution">
-			<InstructionText>Coming soon!</InstructionText>
-			<InstructionText>Evolutionary lines will be customizable in a future update.</InstructionText>
-		</Fieldset>
-	{/if}
+	<EvolutionsFieldset species={species.id} bind:evolutions={evolutions} {allSpecies} {disabled} />
 	<Fieldset title="Other">
 		<MarkdownField label="General Notes" bind:value={notes} {disabled} placeholder="Any other important notes." rows={6} />
 	</Fieldset>
