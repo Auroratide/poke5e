@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.9.1",
+		description: [
+			"Reference: Fixed typos.",
+		],
+	}, {
 		name: "v1.9.0",
 		description: [
 			"New: Fakémon evolution lines can now be created!",
