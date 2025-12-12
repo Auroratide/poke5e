@@ -1,4 +1,4 @@
-<p>In an effort of simplication, <em>any</em> final stage Pokémon can mega-evolve, requiring only one single Mega Evolution stone in the game, "Megalite".</p>
+<p>In an effort of simplification, <em>any</em> final stage Pokémon can mega-evolve, requiring only one single Mega Evolution stone in the game, "Megalite".</p>
 <p>When a pokemon mega-evolves, it breaks the boundaries of evolution by changing form and becoming stronger.</p>
 <p>The simplified rules of Mega Evolution are as follows:</p>
 <ul>

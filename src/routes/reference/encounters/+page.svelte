@@ -86,7 +86,7 @@
 			</figure>
 
 			<h3>Parallel 1v1s</h3>
-			<p>If it's prefered to earn gym badges individually, you can still run the battles in such a way that everyone participates at the same time rather than each player awaiting their turn.</p>
+			<p>If it's preferred to earn gym badges individually, you can still run the battles in such a way that everyone participates at the same time rather than each player awaiting their turn.</p>
 			<p>You run an independent battle for each player, but in parallel. For example, Player 1 makes their action first, followed by the Gym Leader's response. Next, Player 2 makes their action in their battle, followed by the Gym Leader's response. And this continues until the last player's field has made their actions, and it loops back to Player 1.</p>
 			<p>The advantage to running individual battles in parallel is all players participate together. The tradeoff is that as the DM, you essentially need to manage a board state for each player. It is up to you whether this is easier or harder than running single battles consecutively.</p>
 			<figure>

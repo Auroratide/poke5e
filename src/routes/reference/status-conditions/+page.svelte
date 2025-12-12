@@ -40,7 +40,7 @@
 	</section>
 	<section>
 		<h2>Volatile Conditions</h2>
-		<p>A Pokémon can be affected by both a volatile and non-volatile condition. Volatile conditons immediately end outside of combat or when the Pokémon is switched out.</p>
+		<p>A Pokémon can be affected by both a volatile and non-volatile condition. Volatile conditions immediately end outside of combat or when the Pokémon is switched out.</p>
 		{#each volatileList as status}
 			<div class="status-block">
 				<h3>{status.name}</h3>
