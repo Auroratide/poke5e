@@ -40,13 +40,10 @@
 		MAIN_SEARCH_ID,
 	} from "$lib/ui/layout"
 	import type { ThemeColor } from "$lib/ui/theme"
-	import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 	
 	if (browser) {
 		import("@auroratide/toggle-switch/lib/define.js")
 		import("@auroratide/tab-list/lib/define.js")
-
-		FakemonLocalStorage.initializeOriginalOfficialFakemon()
 	}
 
 	export let data: LayoutData

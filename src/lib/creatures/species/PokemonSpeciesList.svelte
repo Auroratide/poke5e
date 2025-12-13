@@ -7,8 +7,8 @@
 	import * as asString from "../string"
 	import { matchNameOrType2 } from "../filter"
 	import { TemporaryBannerMessage } from "$lib/ui/elements"
-	import { CanCreateCustomPokemonBanner } from "./CanCreateCustomPokemonBanner"
 	import { Url } from "$lib/url"
+	import { OfficialFakemonRemovedBanner, readdOfficialFakemon } from "$lib/fakemon/OfficialFakemonRemovedBanner"
 
 	export let pokemons: PokemonSpecies[]
 
@@ -21,8 +21,8 @@
 <div class="search-field">
 	<SearchField id="filter-moves" label="Search" bind:value={$filterValue} matched={filtered.length} max={pokemons.length} />
 </div>
-<TemporaryBannerMessage condition={CanCreateCustomPokemonBanner}>
-	You can now create <a href="{Url.fakemon()}">custom Pokémon</a>!
+<TemporaryBannerMessage condition={OfficialFakemonRemovedBanner}>
+	Non-canon pokémon have been removed from this official list (Brawleon, Minereon, Droideon, Terreon, Specteon, Eeveon, Pesteon, Aereon, Drakeon, Toxeon, Rookite, Belseraph). You may <button class="link-button" on:click={readdOfficialFakemon}>re-add these to your list of Fakémon</button>, or you may add them latter under <a href="{Url.settings()}">settings</a>.
 </TemporaryBannerMessage>
 <SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$currentSorter} headers={[ {
 	key: "name", name: "Name", ratio: 3, sort: byStringField(it => it.data.name),
@@ -41,5 +41,13 @@
 <style>
 	.search-field {
 		margin-bottom: 0.5em;
+	}
+
+	.link-button {
+		all: unset;
+		text-decoration: underline;
+		color: var(--theme-text);
+	} .link-button:hover, .link-button:focus {
+		text-decoration: none;
 	}
 </style>

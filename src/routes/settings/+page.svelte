@@ -5,6 +5,7 @@
 	import { CogIcon } from "$lib/ui/icons"
 	import RulesVersionSection from "./RulesVersionSection.svelte"
 	import BackupsSection from "./BackupsSection.svelte"
+	import OfficialFakemonSection from "./OfficialFakemonSection.svelte"
 </script>
 
 <Title value="Settings" />
@@ -16,5 +17,6 @@
 		</section>
 		<RulesVersionSection />
 		<BackupsSection />
+		<OfficialFakemonSection />
 	</Card>
 </Page>
