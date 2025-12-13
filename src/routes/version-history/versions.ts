@@ -12,6 +12,14 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.9.2",
+		description: [
+			"Pokémon: Removed unofficial pokémon from the official pokémon list (Brawleon, Minereon, Droideon, Terreon, Specteon, Eeveon, Pesteon, Aereon, Drakeon, Toxeon, Rookite, and Belseraph). They can be added to your Fakémon library in the Settings menu.",
+			"Pokémon: Revised ability lists. Added Neutralizing Gas and Stench to Weezing line, exchanged Early Bird for Wind Rider on Shiftry, exchanged Defiant for Competitive on Empoleon line, exchanged Vital Spirit for Tangled Feet on Mr. Rime.",
+			"Reference: Revised rules for the Switch action/reaction to better account for double battles. When the Switch action is taken, it can be used to switch more than one pokémon. When the Switch reaction is taken, the trainer may switch any number of fainted pokémon during that round.",
+			"Reference: Added rules for learning moves from TMs.",
+		],
+	}, {
 		name: "v1.9.1",
 		description: [
 			"Reference: Fixed typos.",
