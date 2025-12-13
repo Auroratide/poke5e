@@ -1,13 +1,13 @@
 import type { RequestHandler } from "./$types"
 import moves from "../../../../static/data/moves.json"
 import tms from "../../../../static/data/tms.json"
-import pokemon from "../../../../static/data/pokemon.json"
+import pokemon from "../../../../static/data/pokemon-v2.json"
 import { pokemonWhoLearnThisTm } from "$lib/moves/pokemon"
 
 export const GET: RequestHandler = async ({ params }) => {
 	const selected = tms.tms.find(it => it.id === parseInt(params.id))
 	const move = moves.moves.find(it => it.id === selected.move)
-	const pokemonThatCanLearnThis = selected != null ? pokemonWhoLearnThisTm(selected.id, pokemon.items) : []
+	const pokemonThatCanLearnThis = selected != null ? pokemonWhoLearnThisTm(selected.id, pokemon.items.filter((it) => it.number !== 0)) : []
 
 	if (selected !== undefined) {
 		return new Response(JSON.stringify({

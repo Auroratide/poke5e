@@ -18,12 +18,14 @@ export class Evolution extends DataClass<{
 	id: EvolutionId,
 	from: Data<SpeciesIdentifier>,
 	to: Data<SpeciesIdentifier>,
+	nonCanon?: boolean,
 	conditions: EvolutionConditionType[],
 	effects: EvolutionBenefitType[],
 }> {
 	get id() { return this.data.id }
 	get from() { return new SpeciesIdentifier(this.data.from) }
 	get to() { return new SpeciesIdentifier(this.data.to) }
+	get nonCanon() { return this.data.nonCanon ?? false }
 	get conditions() { return this.data.conditions.map((it) => EvolutionCondition.fromType(it))}
 	get benefits() { return this.data.effects.map((it) => EvolutionBenefit.fromType(it))}
 

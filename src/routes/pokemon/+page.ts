@@ -15,6 +15,7 @@ export const load: PageLoad = async ({ fetch }) => {
 		.then((data) => data.items.map((it) => 
 			PokemonSpecies.fromJson(it),
 		))
+		.then((pokemon: PokemonSpecies[]) => pokemon.filter((it) => !it.wasNonCanonNonFakemon()))
 
 	return { pokemonList: pokemon }
 }

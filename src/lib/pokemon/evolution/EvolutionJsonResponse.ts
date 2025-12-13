@@ -5,6 +5,7 @@ export type SingleEvolutionJsonResponse = {
 	id: string,
 	from: string,
 	to: string,
+	nonCanon?: boolean,
 	conditions: EvolutionConditionType[],
 	effects: EvolutionBenefitType[],
 }

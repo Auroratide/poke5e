@@ -1749,6 +1749,7 @@
 			"id": "eevee-to-droideon",
 			"from": "eevee",
 			"to": "droideon",
+			"nonCanon": true,
 			"conditions": [
 				{
 					"type": "level",
@@ -1770,6 +1771,7 @@
 			"id": "eevee-to-brawleon",
 			"from": "eevee",
 			"to": "brawleon",
+			"nonCanon": true,
 			"conditions": [
 				{
 					"type": "level",
@@ -1795,6 +1797,7 @@
 			"id": "eevee-to-specteon",
 			"from": "eevee",
 			"to": "specteon",
+			"nonCanon": true,
 			"conditions": [
 				{
 					"type": "level",
@@ -1816,6 +1819,7 @@
 			"id": "eevee-to-toxeon",
 			"from": "eevee",
 			"to": "toxeon",
+			"nonCanon": true,
 			"conditions": [
 				{
 					"type": "level",
@@ -1837,6 +1841,7 @@
 			"id": "eevee-to-minereon",
 			"from": "eevee",
 			"to": "minereon",
+			"nonCanon": true,
 			"conditions": [
 				{
 					"type": "level",
@@ -1858,6 +1863,7 @@
 			"id": "eevee-to-aereon",
 			"from": "eevee",
 			"to": "aereon",
+			"nonCanon": true,
 			"conditions": [
 				{
 					"type": "level",
@@ -1883,6 +1889,7 @@
 			"id": "eevee-to-pesteon",
 			"from": "eevee",
 			"to": "pesteon",
+			"nonCanon": true,
 			"conditions": [
 				{
 					"type": "level",
@@ -1908,6 +1915,7 @@
 			"id": "eevee-to-terreon",
 			"from": "eevee",
 			"to": "terreon",
+			"nonCanon": true,
 			"conditions": [
 				{
 					"type": "level",
@@ -1933,6 +1941,7 @@
 			"id": "eevee-to-drakeon",
 			"from": "eevee",
 			"to": "drakeon",
+			"nonCanon": true,
 			"conditions": [
 				{
 					"type": "level",
@@ -1954,6 +1963,7 @@
 			"id": "eevee-to-eeveon",
 			"from": "eevee",
 			"to": "eeveon",
+			"nonCanon": true,
 			"conditions": [
 				{
 					"type": "level",
@@ -6356,6 +6366,7 @@
 			"id": "pawniard-to-rookite",
 			"from": "pawniard",
 			"to": "rookite",
+			"nonCanon": true,
 			"conditions": [
 				{
 					"type": "level",

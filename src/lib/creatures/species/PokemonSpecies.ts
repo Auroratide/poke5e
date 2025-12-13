@@ -43,6 +43,7 @@ export class PokemonSpecies extends DataClass<{
 }> {
 	get id(): SpeciesIdentifier { return new SpeciesIdentifier(this.data.id) }
 	get name(): string { return this.data.name }
+	get number(): number { return this.data.number }
 	get type(): PokemonType { return new PokemonType(this.data.type) }
 	get gender(): GenderRatio { return new GenderRatio(this.data.gender) }
 	get sr(): SpeciesRating { return new SpeciesRating(this.data.sr) }
@@ -58,6 +59,15 @@ export class PokemonSpecies extends DataClass<{
 
 	numberAsString(): string {
 		return `#${this.data.number.toString().padStart(4, "0")}`
+	}
+
+	/**
+	 * There was originally a set of "official pokemon" that were actually custom
+	 * fakemon used in my friends' campaign. This function identifies them for
+	 * filtering.
+	 */
+	wasNonCanonNonFakemon(): boolean {
+		return !this.id.isFakemon() && this.number === 0
 	}
 
 	static fromJson(it: SinglePokemonJsonResponse): PokemonSpecies {

@@ -55,7 +55,9 @@ function createStore(): SpeciesStore {
 				}))
 			}
 		},
-		canonList: () => allCanonSpecies,
+		canonList: () => {
+			return derived(allCanonSpecies, (species) => species?.filter((it) => !it.wasNonCanonNonFakemon()))
+		},
 		completeList: async () => {
 			const fakemon = await fakemonStore.all()
 

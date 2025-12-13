@@ -17,6 +17,7 @@ export const canonEvolutions = cachedReadable<EvolutionForest>(undefined, (set) 
 			.then((data: EvolutionJsonResponse) => data.items.map((it) =>
 				Evolution.fromJson(it),
 			))
+			.then((evolution) => evolution.filter((it) => !it.nonCanon))
 			.then((evolution) => set(new EvolutionForest(evolution)))
 	}
 })
