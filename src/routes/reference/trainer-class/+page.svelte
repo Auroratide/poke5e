@@ -35,7 +35,7 @@
 			<dt>Saving Throws</dt>
 			<dd>Charisma</dd>
 			<dt>Skills</dt>
-			<dd>Animal Handling, and choose two from Acrobatics, Athletics, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Sleight of Hand, Stealth, or Surivival</dd>
+			<dd>Animal Handling, and choose two from Acrobatics, Athletics, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Sleight of Hand, Stealth, or Survival</dd>
 			<dt>Armor</dt>
 			<dd>None</dd>
 			<dt>Weapons</dt>
