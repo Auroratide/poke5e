@@ -22,7 +22,7 @@
 	<SearchField id="filter-moves" label="Search" bind:value={$filterValue} matched={filtered.length} max={pokemons.length} />
 </div>
 <TemporaryBannerMessage condition={OfficialFakemonRemovedBanner}>
-	Non-canon pokémon have been removed from this official list (Brawleon, Minereon, Droideon, Terreon, Specteon, Eeveon, Pesteon, Aereon, Drakeon, Toxeon, Rookite, Belseraph). You may <button class="link-button" on:click={readdOfficialFakemon}>re-add these to your list of Fakémon</button>, or you may add them latter under <a href="{Url.settings()}">settings</a>.
+	Non-canon pokémon have been removed from this official list (Brawleon, Minereon, Droideon, Terreon, Specteon, Eeveon, Pesteon, Aereon, Drakeon, Toxeon, Rookite, Belseraph). You may <button class="link-button" on:click={readdOfficialFakemon}>re-add these to your list of Fakémon</button>, or you may add them later under <a href="{Url.settings()}">settings</a>.
 </TemporaryBannerMessage>
 <SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$currentSorter} headers={[ {
 	key: "name", name: "Name", ratio: 3, sort: byStringField(it => it.data.name),
@@ -47,6 +47,7 @@
 		all: unset;
 		text-decoration: underline;
 		color: var(--theme-text);
+		cursor: pointer;
 	} .link-button:hover, .link-button:focus {
 		text-decoration: none;
 	}
