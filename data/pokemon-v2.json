@@ -13742,6 +13742,14 @@
 				{
 					"id": "levitate",
 					"hidden": false
+				},
+				{
+					"id": "neutralizing-gas",
+					"hidden": false
+				},
+				{
+					"id": "stench",
+					"hidden": true
 				}
 			],
 			"moves": {
@@ -13849,6 +13857,14 @@
 				{
 					"type": "hover",
 					"value": 30
+				},
+				{
+					"id": "neutralizing-gas",
+					"hidden": false
+				},
+				{
+					"id": "stench",
+					"hidden": true
 				}
 			],
 			"attributes": {
@@ -35075,7 +35091,7 @@
 					"hidden": false
 				},
 				{
-					"id": "early-bird",
+					"id": "wind-rider",
 					"hidden": false
 				},
 				{
@@ -50814,7 +50830,7 @@
 					"hidden": false
 				},
 				{
-					"id": "defiant",
+					"id": "competitive",
 					"hidden": true
 				}
 			],
@@ -50946,7 +50962,7 @@
 					"hidden": false
 				},
 				{
-					"id": "defiant",
+					"id": "competitive",
 					"hidden": true
 				}
 			],
@@ -51068,7 +51084,7 @@
 					"hidden": false
 				},
 				{
-					"id": "defiant",
+					"id": "competitive",
 					"hidden": true
 				}
 			],
@@ -118551,7 +118567,7 @@
 			],
 			"abilities": [
 				{
-					"id": "vital-spirit",
+					"id": "tangled-feet",
 					"hidden": false
 				},
 				{

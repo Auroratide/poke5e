@@ -858,7 +858,7 @@
     {
       "id": "neutralizing-gas",
       "name": "Neutralizing Gas",
-      "description": "You are immune to poison damage and being poisoned."
+      "description": "The abilities of Pokémon within 30ft of this Pokémon are nullified and cannot trigger. This nullification does not apply to the Neutralizing Gas ability or any form changes."
     },
     {
       "id": "no-guard",
