@@ -79,6 +79,10 @@ export const References = [ {
 	url: Url.reference.terrainEffects(),
 	keywords: ["electric terrain", "grassy terrain", "misty terrain", "psychic terrain"],
 }, {
+	name: "TMs",
+	url: Url.reference.tms(),
+	keywords: ["tm", "technical machine", "moves", "teach", "learn"],
+}, {
 	name: "Trainer Class",
 	url: Url.reference.trainerClass(),
 	keywords: ["class", "traits", "abilities", "equipment", "multiclass", "table", "features", "specializations", "paths", "license", "pokedex", "pokeslots", "control upgrade", "trainer's resolve", "pokemon tracker", "master trainer"],

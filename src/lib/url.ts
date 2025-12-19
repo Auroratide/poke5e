@@ -44,6 +44,7 @@ export const Url = {
 		specializations: () => `${base}/reference/specializations`,
 		status: () => `${base}/reference/status-conditions`,
 		terrainEffects: () => `${base}/reference/terrain-effects`,
+		tms: () => `${base}/reference/tms`,
 		trainerClass: () => `${base}/reference/trainer-class`,
 		trainerLeveling: () => `${base}/reference/trainer-leveling`,
 		trainerPaths: () => `${base}/reference/trainer-paths`,
