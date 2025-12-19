@@ -4,5 +4,5 @@
 	<li>A trainer may also use their bonus action to issue up to two commands for moves with a Move Time of 1 Bonus Action, one bonus move per Pokémon.</li>
 	<li>If a trainer has three or more Pokémon out, they may only issue commands to two of them, and the other Pokémon may only use their turns to move.</li>
 	<li>On your turn, both your trainer and your active Pokémon have movement up to their speed.</li>
-	<li>Both you and your Pokémon have one reaction you can use per round of battle.</li>
+	<li>Each of you and your Pokémon have one reaction you can use per round of battle.</li>
 </ul>
