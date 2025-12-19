@@ -82,7 +82,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 	features: {
 		level2: {
-			description: ["You wish to learn more about Pokémon and the secrets that they hold within. Due to your heightened understanding of your Pokémon, you may add your Intelligence modifier (minimum one) to any skill check your Pokémon makes. You may use this abiliy a number of times equal to your proficiency bonus per long rest."],
+			description: ["You wish to learn more about Pokémon and the secrets that they hold within. Due to your heightened understanding of your Pokémon, you may add your Intelligence modifier (minimum one) to any skill check your Pokémon makes. You may use this ability a number of times equal to your proficiency bonus per long rest."],
 		},
 		level5: {
 			name: "Analyst",
