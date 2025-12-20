@@ -4,7 +4,6 @@
 	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { currentSorter, filterValue } from "$lib/creatures/store"
 	import type { PokemonSpecies } from "./PokemonSpecies"
-	import * as asString from "$lib/creatures/string"
 	import { matchNameOrType } from "$lib/creatures/filter"
 	import { TemporaryBannerMessage } from "$lib/ui/elements"
 	import { Url } from "$lib/site/url"
