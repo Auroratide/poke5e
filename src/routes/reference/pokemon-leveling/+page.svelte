@@ -1,5 +1,5 @@
 <script>
-	import { experienceAwarded, experienceAwareded2018 } from "$lib/creatures/experience"
+	import { experienceAwarded, experienceAwareded2018 } from "$lib/poke5e/experience"
 	import { FlatDl } from "$lib/ui/elements"
 	import { rulesVersion } from "$lib/site/rules-version"
 	import ReferencePage from "../ReferencePage.svelte"

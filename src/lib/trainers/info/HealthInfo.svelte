@@ -18,7 +18,7 @@
 	import type { NonVolatileStatus } from "$lib/pokemon/status"
 	import StatusEditor, { type ChangeDetail as StatusChangeDetail } from "$lib/pokemon/StatusEditor.svelte"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
-	import { experienceNeededAtLevel, experienceNeededUntilLevelUp, formatExp } from "$lib/creatures/experience"
+	import { experienceNeededAtLevel, experienceNeededUntilLevelUp, formatExp } from "$lib/poke5e/experience"
 	import { Popover } from "$lib/ui/elements"
 	import { HelpIcon } from "$lib/ui/icons"
 	import type { Level } from "$lib/dnd/level"

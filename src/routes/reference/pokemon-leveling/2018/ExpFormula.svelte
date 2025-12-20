@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { EXPERIENCE_MATRIX_2018 } from "$lib/creatures/experience"
+	import { EXPERIENCE_MATRIX_2018 } from "$lib/poke5e/experience"
 	import { InfoTable } from "$lib/ui/elements"
 	import { Details } from "$lib/ui/elements"
 </script>

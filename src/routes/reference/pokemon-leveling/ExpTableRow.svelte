@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { formatExp } from "$lib/creatures/experience"
+	import { formatExp } from "$lib/poke5e/experience"
 
 	export let level: number
 	export let exp: number

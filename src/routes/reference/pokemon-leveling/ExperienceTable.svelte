@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { InfoTable } from "$lib/ui/elements"
 	import ExpTableRow from "./ExpTableRow.svelte"
-	import { ExperienceNeededPerLevel } from "$lib/creatures/experience"
+	import { ExperienceNeededPerLevel } from "$lib/poke5e/experience"
 </script>
 
 <InfoTable label="Experience Table">
