@@ -5,7 +5,7 @@
 	import { ActionArea } from "$lib/ui/forms"
 	import type { TrainerStore } from "../trainers"
 	import { goto } from "$app/navigation"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import { Rester } from "$lib/poke5e/resting"
 	import { WithSpecies } from "$lib/poke5e/species"

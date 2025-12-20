@@ -3,7 +3,7 @@
 	import { Button } from "$lib/ui/elements"
 	import { ActionArea } from "$lib/ui/forms"
 	import { EvolutionStore } from "$lib/pokemon/evolution"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { PageAction } from "../page-action"
 	import type { TrainerStore } from "../trainers"
 	import type { TrainerPokemon } from "../types"

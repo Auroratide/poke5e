@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Container from "./Container.svelte"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import {
 		ChevronIcon,
 		DiscordIcon,

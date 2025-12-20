@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { InfoTable } from "$lib/ui/elements"
 	import { formatMoney } from "$lib/pokemon/money"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { rulesVersion } from "$lib/site/rules-version"
 	import { EggGroup } from "$lib/pokemon/egg-group"

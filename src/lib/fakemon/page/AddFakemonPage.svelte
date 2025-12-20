@@ -2,7 +2,7 @@
 	import { goto } from "$app/navigation"
 	import { Card } from "$lib/ui/page"
 	import { Title } from "$lib/ui/layout"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { Fakemon } from "../Fakemon"
 	import { fakemonStore } from "../store"
 	import FakemonAdder from "./FakemonAdder.svelte"

@@ -4,7 +4,7 @@
 	import { Button } from "$lib/ui/elements"
 	import { ActionArea } from "$lib/ui/forms"
 	import type { TrainerStore } from "../trainers"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { PageAction } from "../page-action"
 	import { Title } from "$lib/ui/layout"
 	import { Level } from "$lib/ui/elements"

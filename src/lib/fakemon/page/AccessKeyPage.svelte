@@ -2,7 +2,7 @@
 	import { Card } from "$lib/ui/page"
 	import { ActionArea, PasswordField, TextField, WithButton, Saveable } from "$lib/ui/forms"
 	import { Button } from "$lib/ui/elements"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { Title } from "$lib/ui/layout"
 	import findAccessKey from "./assets/access-key.webp"
 	import type { SingleFakemonStore } from "../store"

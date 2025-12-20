@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { onMount } from "svelte"
 	import ReferencePage from "../ReferencePage.svelte"
 

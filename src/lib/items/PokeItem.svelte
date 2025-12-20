@@ -4,7 +4,7 @@
 	import FlatDl from "../ui/elements/FlatDl.svelte"
 	import { renderHtml } from "../ui/rendering/render"
 	import { formatMoney } from "$lib/pokemon/money"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import ItemSprite from "./ItemSprite.svelte"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import { EvolutionStore } from "$lib/pokemon/evolution"

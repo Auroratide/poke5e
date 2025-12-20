@@ -6,7 +6,7 @@
 	import type { TrainerStore } from "../trainers"
 	import { goto } from "$app/navigation"
 	import Editor, { type UpdateDetail } from "./Editor.svelte"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import WithSpecies from "$lib/poke5e/species/WithSpecies.svelte"
 

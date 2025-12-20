@@ -2,7 +2,7 @@
 	import { Card } from "$lib/ui/page"
 	import { trainers } from "./trainers"
 	import { goto } from "$app/navigation"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import findTrainerIdImg from "./find-trainer-id.png"
 	import { Title } from "$lib/ui/layout"
 	import { WithButton, TextField, Saveable } from "$lib/ui/forms"

@@ -2,7 +2,7 @@
 	import { FlatDl } from "$lib/ui/elements"
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Button } from "$lib/ui/elements"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { PageAction } from "$lib/trainers/page-action"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { rulesVersion } from "$lib/site/rules-version"

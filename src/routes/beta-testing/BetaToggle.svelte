@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ToggleSwitchField } from "$lib/ui/forms"
-	import { isFeatureActive, setFeatureActive } from "$lib/FeatureToggles"
+	import { isFeatureActive, setFeatureActive } from "$lib/site/FeatureToggles"
 
 	export let feature: string
 

@@ -3,7 +3,7 @@
 	import { Button } from "$lib/ui/elements"
 	import { ActionArea } from "$lib/ui/forms"
 	import type { TrainerStore } from "../trainers"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { TrainerRester, type TrainerResterSubmit } from "$lib/poke5e/resting"
 	import { Title } from "$lib/ui/layout"
 	import { goto } from "$app/navigation"

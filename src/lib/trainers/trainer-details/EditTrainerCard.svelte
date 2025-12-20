@@ -5,7 +5,7 @@
 	import { ActionArea } from "$lib/ui/forms"
 	import type { TrainerStore } from "../trainers"
 	import { goto } from "$app/navigation"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { Title } from "$lib/ui/layout"
 
 	export let trainer: TrainerStore

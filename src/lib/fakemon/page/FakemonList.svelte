@@ -2,7 +2,7 @@
 	import { Button } from "$lib/ui/elements"
 	import { SortableTable, BubbleRow, ListHeading } from "$lib/ui/page"
 	import { SearchField } from "$lib/ui/forms"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import type { Fakemon } from "../Fakemon"
 	import type { FakemonListStore } from "../store"
 	import { PageAction } from "./actions"

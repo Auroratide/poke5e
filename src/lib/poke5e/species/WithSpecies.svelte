@@ -5,7 +5,7 @@
 	import type { PokemonSpecies } from "./PokemonSpecies"
 	import { Loader } from "$lib/ui/elements"
 	import type { Data } from "$lib/DataClass"
-	import * as list from "$lib/list"
+	import * as list from "$lib/utils/list"
 
 	export let ids: SpeciesIdentifier[]
 	let previousIds: SpeciesIdentifier[] = []

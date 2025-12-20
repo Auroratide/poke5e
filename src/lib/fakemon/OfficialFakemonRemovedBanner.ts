@@ -2,7 +2,7 @@ import { browser } from "$app/environment"
 import { writable } from "svelte/store"
 import { FakemonLocalStorage } from "./data/FakemonLocalStorage"
 import { goto } from "$app/navigation"
-import { Url } from "$lib/url"
+import { Url } from "$lib/site/url"
 
 const key = "OfficialFakemonRemovedBanner"
 const initialValue = browser ? localStorage.getItem(key) === "true" : undefined

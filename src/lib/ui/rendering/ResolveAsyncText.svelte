@@ -9,7 +9,7 @@
 	import { LoaderInline } from "$lib/ui/elements"
 	import { moves } from "$lib/moves/store"
 	import { abilities } from "$lib/pokemon/store"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { type Unsubscriber } from "svelte/store"
 	import DomPurify from "dompurify"
 

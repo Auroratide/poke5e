@@ -24,7 +24,7 @@
 	import { SpeedsFieldset } from "$lib/dnd/movement"
 	import { SensesFieldset } from "$lib/dnd/senses"
 	import { CreatureSizes } from "$lib/dnd/CreatureSize"
-	import { capitalize } from "$lib/string"
+	import { capitalize } from "$lib/utils/string"
 	import { HitDice } from "$lib/dnd/hit-dice"
 	import { SavingThrowsFieldset } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"

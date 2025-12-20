@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { CheckboxFields, Fieldset } from "$lib/ui/forms"
 	import { EggGroup } from "./EggGroup"
-	import { capitalizeAll } from "$lib/string"
+	import { capitalizeAll } from "$lib/utils/string"
 
 	const options = EggGroup.standardList.map((it) => ({
 		name: capitalizeAll(it),

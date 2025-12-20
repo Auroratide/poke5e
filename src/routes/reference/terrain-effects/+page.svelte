@@ -1,7 +1,7 @@
 <script>
 	import ReferencePage from "../ReferencePage.svelte"
 	import { InfoTable } from "$lib/ui/elements"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
 	import { rulesVersion } from "$lib/site/rules-version"

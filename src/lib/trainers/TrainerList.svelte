@@ -6,7 +6,7 @@
 	import type { TrainerListStore } from "./trainers"
 	import type { Trainer } from "./types"
 	import { Button } from "$lib/ui/elements"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { PageAction } from "./page-action"
 	import GetStarted from "./GetStarted.svelte"
 

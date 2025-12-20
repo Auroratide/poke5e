@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ReadWriteKey } from "../types"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 
 	export let trainerKey: ReadWriteKey
 </script>

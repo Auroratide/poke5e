@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { readdOfficialFakemon } from "$lib/fakemon/OfficialFakemonRemovedBanner"
 	import { Button } from "$lib/ui/elements"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 </script>
 
 <section>

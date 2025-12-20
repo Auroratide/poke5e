@@ -1,4 +1,4 @@
-import { capitalizeAll } from "$lib/string"
+import { capitalizeAll } from "$lib/utils/string"
 import { ItemTypes, type Item, type ItemType } from "./types"
 
 export type ItemGroup = {

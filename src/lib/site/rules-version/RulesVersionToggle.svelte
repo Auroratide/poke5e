@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { HelpIcon } from "$lib/ui/icons"
 	import Popover from "../../ui/elements/Popover.svelte"
 	import { rulesVersion } from "./RulesVersion"

@@ -3,7 +3,7 @@
 	import { Button } from "$lib/ui/elements"
 	import { ActionArea } from "$lib/ui/forms"
 	import { Title } from "$lib/ui/layout"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import type { SingleFakemonStore } from "../store/SingleFakemonStore"
 	import { PageAction } from "./actions"
 

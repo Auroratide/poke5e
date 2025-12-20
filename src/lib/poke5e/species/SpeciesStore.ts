@@ -5,7 +5,7 @@ import { base } from "$app/paths"
 import type { PokemonJsonResponse } from "./PokemonJsonResponse"
 import type { Data } from "$lib/DataClass"
 import { fakemonStore } from "$lib/fakemon/store"
-import { cachedReadable } from "$lib/store"
+import { cachedReadable } from "$lib/utils/store"
 
 export const allCanonSpecies = cachedReadable<PokemonSpecies[] | undefined>(undefined, (set) => {
 	if (typeof window !== "undefined") {

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { ReadWriteKey, TrainerPokemon } from "../types"
 	import { ResourceBar } from "$lib/ui/elements"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { items } from "$lib/items/store"
 	import { getItemDetails } from "$lib/pokemon/held-items"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"

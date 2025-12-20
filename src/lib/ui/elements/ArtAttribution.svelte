@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { type SpeciesMediaTypeAttribution } from "$lib/poke5e/species/media"
-	import { isNotBlank, isUrl } from "$lib/string"
+	import { isNotBlank, isUrl } from "$lib/utils/string"
 
 	export let value: SpeciesMediaTypeAttribution
 </script>

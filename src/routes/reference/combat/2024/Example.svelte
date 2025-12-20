@@ -1,5 +1,5 @@
 <script>
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 </script>
 
 <p>You command your level 14 <a href="{Url.pokemon("vivillon")}">Vivillon</a> to use the move <a href="{Url.moves("bug-buzz")}">Bug Buzz</a>.</p>

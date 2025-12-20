@@ -7,7 +7,7 @@
 	import * as asString from "$lib/creatures/string"
 	import { matchNameOrType } from "$lib/creatures/filter"
 	import { TemporaryBannerMessage } from "$lib/ui/elements"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { OfficialFakemonRemovedBanner, readdOfficialFakemon } from "$lib/fakemon/OfficialFakemonRemovedBanner"
 
 	export let pokemons: PokemonSpecies[]

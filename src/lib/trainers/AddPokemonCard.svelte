@@ -9,7 +9,7 @@
 	import { SearchFakemonById, type SearchFakemonByIdDetail } from "$lib/fakemon/search"
 	import type { Fakemon } from "$lib/fakemon"
 	import type { Readable } from "svelte/store"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 
 	export let trainer: TrainerStore
 	export let allSpecies: Readable<PokemonSpecies[]>

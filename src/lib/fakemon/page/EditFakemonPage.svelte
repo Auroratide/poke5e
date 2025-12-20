@@ -4,7 +4,7 @@
 	import { Card } from "$lib/ui/page"
 	import { ActionArea } from "$lib/ui/forms"
 	import { Title } from "$lib/ui/layout"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import type { Readable } from "svelte/store"
 	import type { SingleFakemonStore } from "../store/SingleFakemonStore"
 	import FakemonEditor, { type SubmitDetail } from "./FakemonEditor.svelte"

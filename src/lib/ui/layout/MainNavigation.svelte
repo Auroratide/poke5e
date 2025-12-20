@@ -4,7 +4,7 @@
 	import type { ThemeColor } from "$lib/ui/theme"
 	import Container from "./Container.svelte"
 	import { MenuIcon } from "$lib/ui/icons"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 
 	const NUMBER_OF_UNMENUED_ITEMS = 6
 

@@ -1,7 +1,7 @@
 import { defensiveMultipliers } from "@auroratide/pokemon-types"
 import { DataClass } from "$lib/DataClass"
-import { alphabetical, equalUnordered } from "$lib/list"
-import { capitalize } from "$lib/string"
+import { alphabetical, equalUnordered } from "$lib/utils/list"
+import { capitalize } from "$lib/utils/string"
 
 const PokeTypes = [
 	"normal",

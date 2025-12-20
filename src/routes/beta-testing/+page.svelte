@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { Title } from "$lib/ui/layout"
-	import { FeatureToggles } from "$lib/FeatureToggles"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import { StaticPage } from "$lib/ui/layout"
 	import BetaToggle from "./BetaToggle.svelte"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 </script>
 
 <Title value="Beta Testing" />

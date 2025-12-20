@@ -5,7 +5,7 @@
 	} from "$lib/ui/forms"
 	import { CreatureSizes, type CreatureSize } from "$lib/dnd/CreatureSize"
 	import { HitDice, HitDiceSize } from "$lib/dnd/hit-dice"
-	import { capitalize } from "$lib/string"
+	import { capitalize } from "$lib/utils/string"
 
 	export let customSize: CreatureSize | undefined
 	export let customHitDiceSize: HitDiceSize | undefined

@@ -2,7 +2,7 @@
 	import { Card } from "$lib/ui/page"
 	import { Saveable } from "$lib/ui/forms"
 	import { goto } from "$app/navigation"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import findId from "./assets/id.webp"
 	import { Title } from "$lib/ui/layout"
 	import SearchFakemonById from "../search/SearchFakemonById.svelte"

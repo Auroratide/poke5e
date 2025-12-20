@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { RadioFields, TextField } from "$lib/ui/forms"
-	import { capitalize } from "$lib/string"
+	import { capitalize } from "$lib/utils/string"
 	import { SpeciesMedia, type SpeciesMediaTypeAttribution } from "./SpeciesMedia"
 
 	export let id: string

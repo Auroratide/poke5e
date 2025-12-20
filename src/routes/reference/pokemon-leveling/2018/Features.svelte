@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 </script>
 
 <h3>New Moves</h3>

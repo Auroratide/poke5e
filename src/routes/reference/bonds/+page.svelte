@@ -1,5 +1,5 @@
 <script>
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import ReferencePage from "../ReferencePage.svelte"
 	import Table2018 from "./Table2018.svelte"
 	import Table2024 from "./Table2024.svelte"

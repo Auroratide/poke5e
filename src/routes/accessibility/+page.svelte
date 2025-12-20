@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { StaticPage } from "$lib/ui/layout"
 	import { Title } from "$lib/ui/layout"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 </script>
 
 <Title value="Accessibility Statement" />

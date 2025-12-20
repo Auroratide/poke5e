@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { formatMoney } from "$lib/pokemon/money"
 	import { InfoTable } from "$lib/ui/elements"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import ReferencePage from "../ReferencePage.svelte"
 	import type { PageData } from "./$types"
 	import TmImg from "./tm.png"

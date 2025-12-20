@@ -13,7 +13,7 @@
 	import * as asString from "$lib/creatures/string"
 	import { Card, SideArtCardSection } from "$lib/ui/page"
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
-	import { isNotBlank } from "$lib/string"
+	import { isNotBlank } from "$lib/utils/string"
 	import { EvolutionInfo, EvolutionStore } from "$lib/pokemon/evolution"
 
 	export let value: PokemonSpecies

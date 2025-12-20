@@ -11,7 +11,7 @@
 	import ConditionField from "./ConditionField.svelte"
 	import { PokemonGender } from "$lib/pokemon/gender"
 	import { TimesOfDay, type TypedEvolutionConditionType } from "../EvolutionCondition"
-	import { capitalize } from "$lib/string"
+	import { capitalize } from "$lib/utils/string"
 	import { PokemonSpecies, SpeciesField, SpeciesIdentifier, type SpeciesFieldChangeEvent } from "$lib/poke5e/species"
 	import { Button } from "$lib/ui/elements"
 	import { fakemonStore } from "$lib/fakemon/store"

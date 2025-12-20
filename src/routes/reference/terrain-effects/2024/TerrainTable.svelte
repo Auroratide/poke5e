@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { InfoTable } from "$lib/ui/elements"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 </script>
 
 <InfoTable label="Terrain Effects">

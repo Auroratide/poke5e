@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Button } from "$lib/ui/elements"
-	import { Url } from "$lib/url"
+	import { Url } from "$lib/site/url"
 	import { PageAction } from "./actions"
 </script>
 

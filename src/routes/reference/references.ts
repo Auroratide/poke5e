@@ -1,4 +1,4 @@
-import { Url } from "$lib/url"
+import { Url } from "$lib/site/url"
 
 export type ReferenceInfo = {
 	name: string,

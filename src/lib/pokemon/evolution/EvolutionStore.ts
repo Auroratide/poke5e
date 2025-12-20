@@ -7,7 +7,7 @@ import { SpeciesIdentifier } from "$lib/poke5e/species"
 import { provider } from "./data"
 import type { Data } from "$lib/DataClass"
 import type { EvolutionWriteKeys } from "./data/EvolutionDataProvider"
-import { cachedReadable } from "$lib/store"
+import { cachedReadable } from "$lib/utils/store"
 import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 
 export const canonEvolutions = cachedReadable<EvolutionForest>(undefined, (set) => {

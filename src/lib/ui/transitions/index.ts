@@ -1,5 +1,5 @@
 import { onNavigate } from "$app/navigation"
-import { isLargeScreen, prefersReducedMotion } from "$lib/media"
+import { isLargeScreen, prefersReducedMotion } from "$lib/utils/media"
 import { animate } from "./animate"
 import { None } from "./none"
 import { Slide } from "./slide"
