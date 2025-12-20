@@ -86,6 +86,11 @@ export class SkillRanks extends DataClass<{
 		.filter(([, rank]) => rank > 0)
 		.map((it) => it[0] as Skill)
 
+	toString = () => {
+		const list = this.toList()
+		return list.length > 0 ? list.join(", ") : "none"
+	}
+
 	addProficiencies = (skills: Skill[]): SkillRanks => {
 		for (const skill of skills) {
 			if (this.data[skill] === 0) {

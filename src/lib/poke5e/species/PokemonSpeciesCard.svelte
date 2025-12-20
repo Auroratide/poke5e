@@ -10,7 +10,6 @@
 	import InlineMoveLinks from "$lib/moves/InlineMoveLinks.svelte"
 	import InlineTmLinks from "$lib/moves/InlineTmLinks.svelte"
 	import type { PokemonSpecies } from "./PokemonSpecies"
-	import * as asString from "$lib/creatures/string"
 	import { Card, SideArtCardSection } from "$lib/ui/page"
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
 	import { isNotBlank } from "$lib/utils/string"
@@ -67,9 +66,9 @@
 	<section class="skills">
 		<FlatDl>
 			<dt>Proficiencies</dt>
-			<dd class="cap">{asString.list(value.skills.toList())}</dd>
+			<dd class="cap">{value.skills.toString()}</dd>
 			<dt>Saving Throws</dt>
-			<dd class="upper">{asString.list(value.data.saves)}</dd>
+			<dd class="upper">{value.data.saves.length > 0 ? value.data.saves.join(", ") : "none"}</dd>
 			<TypeEffectiveness type={value.type} />
 		</FlatDl>
 	</section>

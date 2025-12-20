@@ -1,12 +1,6 @@
 import type { Move } from "$lib/moves/types"
 import type { PokemonSpecies } from "../poke5e/species"
 
-export const pokeIndex = (value: number): string =>
-	`#${value.toString().padStart(3, "0")}`
-
-export const list = (value: string[]): string =>
-	value.length > 0 ? value.join(", ") : "none"
-
 export const evolutionWithLinks = (baseUrl: string, allPokemon: PokemonSpecies[], allMoves: Move[]) => (type: "pokemon" | "move", id: string) => {
 	switch (type) {
 	case "pokemon": return `<a href="${baseUrl}/pokemon/${id}">${allPokemon.find((it) => it.id.data === id)?.data.name ?? id}</a>`
