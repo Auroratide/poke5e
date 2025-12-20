@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from "$app/paths"
-	import { moves as allMoves } from "../moves/store"
+	import { moves as allMoves } from "./store"
 
 	export let moves: string[]
 

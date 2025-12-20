@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from "$app/paths"
-	import { tms as allTms } from "../moves/store"
+	import { tms as allTms } from "./store"
 
 	export let tms: number[]
 
