@@ -1,13 +1,5 @@
 import type { Move } from "$lib/moves/types"
-import type { PokeType } from "$lib/pokemon/types-2"
 import type { PokemonSpecies } from "../poke5e/species"
-
-/**
- * Pokemon can only have single- or dual-typing
- */
-export const type = (value: PokeType[]): string => {
-	return value.join("/")
-}
 
 export const pokeIndex = (value: number): string =>
 	`#${value.toString().padStart(3, "0")}`

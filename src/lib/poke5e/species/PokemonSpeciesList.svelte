@@ -33,7 +33,7 @@
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type.primary}-bg)">
 		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{base}/pokemon/{item.data.id}">{item.data.name}</a></BubbleRow.Cell>
-		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{asString.type(item.type.data)}</BubbleRow.Cell>
+		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{item.type.toString()}</BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[2]}>{item.sr.toString()}</BubbleRow.Cell>
 	</BubbleRow.Row>
 </SortableTable>
