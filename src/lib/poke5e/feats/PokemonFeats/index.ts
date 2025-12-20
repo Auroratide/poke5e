@@ -2,7 +2,7 @@ import { rulesVersion } from "$lib/site/rules-version"
 import { derived } from "svelte/store"
 import { DndFeatsForPokemon as DndFeatsForPokemon2018, PokemonFeats as PokemonFeats2018 } from "./2018"
 import { DndFeatsForPokemon as DndFeatsForPokemon2024, PokemonFeats as PokemonFeats2024 } from "./2024"
-import { DndFeats } from "../DndFeats"
+import { DndFeats } from "$lib/dnd/feats"
 
 export const PokemonFeats = derived(rulesVersion, (version) =>
 	version === "2018" ? PokemonFeats2018 : PokemonFeats2024,

@@ -1,6 +1,6 @@
 import { expect, test } from "vitest"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
-import { level, oneOfAttributes } from "./Prerequisite"
+import { level, oneOfAttributes } from "../Prerequisite"
 
 test("level prerequisite", () => {
 	expect(level(4)({

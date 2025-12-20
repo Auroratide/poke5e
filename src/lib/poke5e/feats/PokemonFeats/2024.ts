@@ -1,4 +1,4 @@
-import type { Feat } from "../Feat"
+import type { Feat } from "$lib/dnd/feats"
 import type { DndPokemonFeat } from "./DndPokemonFeat"
 
 export const DndFeatsForPokemon: DndPokemonFeat[] = [ {

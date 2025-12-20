@@ -1,6 +1,6 @@
 <script>
 	import ReferencePage from "../ReferencePage.svelte"
-	import { PokemonFeats, DndFeatsForPokemon } from "$lib/feats/PokemonFeats"
+	import { PokemonFeats, DndFeatsForPokemon } from "$lib/poke5e/feats/PokemonFeats"
 	import { Markdown } from "$lib/ui/rendering"
 </script>
 

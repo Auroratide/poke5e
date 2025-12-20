@@ -23,8 +23,8 @@
 	import { Button } from "$lib/ui/elements"
 	import { SpecializationsFieldset } from "../specializations"
 	import { TrainerPathsFieldset } from "../paths"
-	import FeatsFieldset from "$lib/feats/FeatsFieldset.svelte"
-	import { DndFeats } from "$lib/feats"
+	import { FeatsFieldset } from "$lib/dnd/feats"
+	import { DndFeats } from "$lib/dnd/feats"
 	import { Level } from "$lib/dnd/level"
 	
 	const dispatch = createEventDispatcher()

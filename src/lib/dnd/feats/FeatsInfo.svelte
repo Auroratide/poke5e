@@ -1,14 +1,15 @@
 <script lang="ts">
 	import { Markdown, Paragraphs } from "$lib/ui/rendering"
 	import type { ChosenFeat } from "./ChosenFeat"
-	import { AllFeats } from "./AllFeats"
+	import type { Feat } from "./Feat"
 
+	export let allFeats: Feat[]
 	export let values: ChosenFeat[]
 </script>
 
 <ul>
 	{#each values as feat (feat.id)}
-		{@const matchingFeat = $AllFeats.find((it) => it.name === feat.name)}
+		{@const matchingFeat = allFeats.find((it) => it.name === feat.name)}
 		<li>
 			<p class="no-margin"><strong>{feat.name}</strong></p>
 			{#if matchingFeat != null}

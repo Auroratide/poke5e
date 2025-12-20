@@ -14,7 +14,7 @@ import { TrainerDataProviderError, type StorageResource, type TrainerData, type 
 import type { SupabaseClient } from "@supabase/supabase-js"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import { createEmptyChosenTrainerPath } from "$lib/trainers/paths"
-import type { ChosenFeat } from "$lib/feats/ChosenFeat"
+import type { ChosenFeat } from "$lib/dnd/feats/ChosenFeat"
 import { isCreatureSize } from "$lib/dnd/CreatureSize"
 import { HitDice } from "$lib/dnd/hit-dice"
 import { experienceNeededAtLevel } from "$lib/poke5e/experience"

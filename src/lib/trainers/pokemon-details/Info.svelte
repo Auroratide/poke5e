@@ -13,7 +13,8 @@
 	import { SideArtCardSection } from "$lib/ui/page"
 	import HeldItemsInfo from "./HeldItemsInfo.svelte"
 	import { VisuallyHidden } from "$lib/ui/elements"
-	import FeatsInfo from "$lib/feats/FeatsInfo.svelte"
+	import { FeatsInfo } from "$lib/dnd/feats"
+	import { AllFeats } from "$lib/poke5e/feats"
 	import BondInfo, { type UpdateDetail as BondUpdateDetail } from "$lib/pokemon/bond/BondInfo.svelte"
 	import { TypeEffectiveness } from "$lib/pokemon/types-2"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
@@ -108,7 +109,7 @@
 {#if pokemon.feats.length > 0}
 	<section>
 		<h2>Feats</h2>
-		<FeatsInfo values={pokemon.feats} />
+		<FeatsInfo allFeats={$AllFeats} values={pokemon.feats} />
 	</section>
 {/if}
 <section>

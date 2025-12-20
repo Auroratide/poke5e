@@ -14,7 +14,8 @@
 	import { TrainerPathsInfo, type PathResourceUpdateDetail } from "../paths"
 	import { hasSpecialization } from "../specializations"
 	import { trainerHitDiceSize } from "../hit-dice"
-	import FeatsInfo from "$lib/feats/FeatsInfo.svelte"
+	import { FeatsInfo } from "$lib/dnd/feats"
+	import { AllFeats } from "$lib/poke5e/feats"
 
 	const dispatch = createEventDispatcher()
 
@@ -82,7 +83,7 @@
 {#if trainer.feats.length > 0}
 	<section>
 		<h2>Feats</h2>
-		<FeatsInfo values={trainer.feats} />
+		<FeatsInfo allFeats={$AllFeats} values={trainer.feats} />
 	</section>
 {/if}
 <section>
