@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PokemonSpecies } from "$lib/creatures/species"
+	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { Button } from "$lib/ui/elements"
 	import { ActionArea } from "$lib/ui/forms"
 	import { EvolutionStore } from "$lib/pokemon/evolution"

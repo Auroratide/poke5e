@@ -24,9 +24,9 @@
 	import { Level } from "$lib/dnd/level"
 	import { SpeedsFieldset } from "$lib/dnd/movement"
 	import { PokemonTeraType, TypeField, type TeraType } from "$lib/pokemon/types-2"
-	import { GenderFieldset } from "$lib/creatures/gender"
+	import { GenderFieldset } from "$lib/pokemon/gender"
 	import { HitDice } from "$lib/dnd/hit-dice"
-	import type { PokemonSpecies } from "$lib/creatures/species"
+	import type { PokemonSpecies } from "$lib/poke5e/species"
 
 	const dispatch = createEventDispatcher()
 

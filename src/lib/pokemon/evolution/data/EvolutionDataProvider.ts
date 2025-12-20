@@ -1,4 +1,4 @@
-import type { SpeciesIdentifier } from "$lib/creatures/species"
+import type { SpeciesIdentifier } from "$lib/poke5e/species"
 import type { Data } from "$lib/DataClass"
 import type { WriteKey } from "$lib/fakemon"
 import type { Evolution, EvolutionId } from "../Evolution"

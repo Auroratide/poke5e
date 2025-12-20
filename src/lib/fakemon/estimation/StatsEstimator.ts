@@ -1,4 +1,4 @@
-import type { PokemonSpecies } from "$lib/creatures/species"
+import type { PokemonSpecies } from "$lib/poke5e/species"
 import type { Data } from "$lib/DataClass"
 import type { HitDice } from "$lib/dnd/hit-dice"
 import type { Bst } from "$lib/pokemon/bst"

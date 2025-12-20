@@ -6,9 +6,9 @@
 	import { getItemDetails } from "$lib/pokemon/held-items"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 	import ItemSprite from "$lib/items/ItemSprite.svelte"
-	import { GenderIcon } from "$lib/creatures/gender"
-	import { SpeciesSprite } from "$lib/creatures/media"
-	import { WithSpecies } from "$lib/creatures/species"
+	import { GenderIcon } from "$lib/pokemon/gender"
+	import { SpeciesSprite } from "$lib/poke5e/species/media"
+	import { WithSpecies } from "$lib/poke5e/species"
 
 	export let trainer: ReadWriteKey
 	export let pokemon: TrainerPokemon

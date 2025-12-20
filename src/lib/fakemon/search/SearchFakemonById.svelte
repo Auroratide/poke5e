@@ -8,7 +8,7 @@
 	import { createEventDispatcher } from "svelte"
 	import { get } from "svelte/store"
 	import { TextField, WithButton } from "$lib/ui/forms"
-	import { SpeciesIdentifier } from "$lib/creatures/species"
+	import { SpeciesIdentifier } from "$lib/poke5e/species"
 	import { fakemonStore } from "../store"
 	import type { Fakemon } from "../Fakemon"
 

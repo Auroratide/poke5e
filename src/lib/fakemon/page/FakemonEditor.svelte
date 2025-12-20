@@ -29,15 +29,15 @@
 	import { SavingThrowsFieldset } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
 	import { Button } from "$lib/ui/elements"
-	import { GenderRatioFieldset } from "$lib/creatures/gender"
-	import { SrField } from "$lib/creatures/sr"
-	import { MovePoolFieldset } from "$lib/creatures/move-pool"
+	import { GenderRatioFieldset } from "$lib/pokemon/gender"
+	import { SrField } from "$lib/poke5e/sr"
+	import { MovePoolFieldset } from "$lib/pokemon/move-pool"
 	import { AbilityPoolFieldset } from "$lib/pokemon/ability"
-	import { SpeciesMedia, SpeciesMediaFieldset } from "$lib/creatures/media"
-	import { EggGroupFieldset } from "$lib/creatures/egg-group"
+	import { SpeciesMedia, SpeciesMediaFieldset } from "$lib/poke5e/species/media"
+	import { EggGroupFieldset } from "$lib/pokemon/egg-group"
 	import { EstimatableStatsFieldset } from "../estimation"
 	import { Evolution, EvolutionForest, EvolutionsFieldset } from "$lib/pokemon/evolution"
-	import type { PokemonSpecies } from "$lib/creatures/species"
+	import type { PokemonSpecies } from "$lib/poke5e/species"
 
 	const dispatch = createEventDispatcher()
 

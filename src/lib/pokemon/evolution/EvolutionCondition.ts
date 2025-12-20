@@ -1,4 +1,4 @@
-import type { PokemonGender } from "$lib/creatures/gender"
+import type { PokemonGender } from "$lib/pokemon/gender"
 import type { Level } from "$lib/dnd/level"
 import type { LearnedMove, PokemonBond } from "$lib/trainers/types"
 import type { PokeType } from "../types-2"

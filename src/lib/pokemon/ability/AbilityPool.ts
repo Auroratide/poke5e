@@ -1,4 +1,4 @@
-import type { PokemonSpecies } from "$lib/creatures/species"
+import type { PokemonSpecies } from "$lib/poke5e/species"
 import { DataClass } from "$lib/DataClass"
 import type { AbilityId } from "./Ability"
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Fieldset, SelectField } from "$lib/ui/forms"
 	import { abilities } from "$lib/pokemon/store"
-	import type { PokemonSpecies } from "$lib/creatures/species"
+	import type { PokemonSpecies } from "$lib/poke5e/species"
 
 	const NONE = ""
 	const noneOption = { name: "- None -", value: NONE }

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { WithSpecies } from "$lib/creatures/species"
+	import { WithSpecies } from "$lib/poke5e/species"
 	import { Card } from "$lib/ui/page"
 	import { TypeTag } from "$lib/pokemon/types-2"
 	import type { LearnedMove, PokemonId, TrainerPokemon } from "$lib/trainers/types"

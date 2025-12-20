@@ -4,11 +4,11 @@
 	import { Url } from "$lib/url"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { rulesVersion } from "$lib/site/rules-version"
-	import { EggGroup } from "$lib/creatures/egg-group"
+	import { EggGroup } from "$lib/pokemon/egg-group"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import { Details } from "$lib/ui/elements"
 	import { Loader } from "$lib/ui/elements"
-	import { PokemonSpecies, SpeciesStore } from "$lib/creatures/species"
+	import { PokemonSpecies, SpeciesStore } from "$lib/poke5e/species"
 
 	const pokemon = SpeciesStore.canonList()
 

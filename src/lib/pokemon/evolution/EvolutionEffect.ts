@@ -1,4 +1,4 @@
-import type { PokemonSpecies, SpeciesIdentifier } from "$lib/creatures/species"
+import type { PokemonSpecies, SpeciesIdentifier } from "$lib/poke5e/species"
 import type { Level } from "$lib/dnd/level"
 import type { TrainerPokemon } from "$lib/trainers/types"
 import type { PokemonType } from "$lib/pokemon/types-2"

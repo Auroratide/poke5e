@@ -1,7 +1,7 @@
 import { describe, test, expect, beforeEach } from "vitest"
 import { EvolutionForest } from "../EvolutionForest"
 import { stubEvolution } from "./stubs"
-import { SpeciesIdentifier } from "$lib/creatures/species"
+import { SpeciesIdentifier } from "$lib/poke5e/species"
 
 const eeveeToFlareon = stubEvolution({
 	id: "eevee-to-flareon",

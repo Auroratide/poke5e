@@ -1,6 +1,6 @@
 import type { Move } from "$lib/moves/types"
 import type { PokeType } from "$lib/pokemon/types-2"
-import type { PokemonSpecies } from "./species"
+import type { PokemonSpecies } from "../poke5e/species"
 
 export const speed = ({ type, value }: { type: string, value: number}): string => {
 	return `${value}ft. ${type}`

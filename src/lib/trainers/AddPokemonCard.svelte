@@ -5,7 +5,7 @@
 	import { goto } from "$app/navigation"
 	import { base } from "$app/paths"
 	import { Title } from "$lib/ui/layout"
-	import { PokemonSpecies, SpeciesField } from "$lib/creatures/species"
+	import { PokemonSpecies, SpeciesField } from "$lib/poke5e/species"
 	import { SearchFakemonById, type SearchFakemonByIdDetail } from "$lib/fakemon/search"
 	import type { Fakemon } from "$lib/fakemon"
 	import type { Readable } from "svelte/store"

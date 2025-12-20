@@ -7,8 +7,8 @@
 	import { base } from "$app/paths"
 	import { goto } from "$app/navigation"
 	import RequirePokemon from "./RequirePokemon.svelte"
-	import { SpeciesPortrait } from "$lib/creatures/media"
-	import { WithSpecies } from "$lib/creatures/species"
+	import { SpeciesPortrait } from "$lib/poke5e/species/media"
+	import { WithSpecies } from "$lib/poke5e/species"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId

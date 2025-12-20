@@ -8,7 +8,7 @@
 	import ItemSprite from "./ItemSprite.svelte"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import { EvolutionStore } from "$lib/pokemon/evolution"
-	import { SpeciesStore } from "$lib/creatures/species"
+	import { SpeciesStore } from "$lib/poke5e/species"
 
 	const species = SpeciesStore.canonList()
 	const evolutions = EvolutionStore.canonList()

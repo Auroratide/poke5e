@@ -12,7 +12,7 @@
 		IntField,
 	} from "$lib/ui/forms"
 	import type { LearnedMove } from "$lib/trainers/types"
-	import type { PokemonSpecies } from "$lib/creatures/species"
+	import type { PokemonSpecies } from "$lib/poke5e/species"
 
 	export let value: LearnedMove
 	export let species: PokemonSpecies

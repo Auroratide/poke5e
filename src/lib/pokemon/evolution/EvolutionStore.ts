@@ -3,7 +3,7 @@ import { derived, get, writable, type Readable, type Unsubscriber, type Writable
 import { Evolution } from "./Evolution"
 import { EvolutionForest } from "./EvolutionForest"
 import type { EvolutionJsonResponse } from "./EvolutionJsonResponse"
-import { SpeciesIdentifier } from "$lib/creatures/species"
+import { SpeciesIdentifier } from "$lib/poke5e/species"
 import { provider } from "./data"
 import type { Data } from "$lib/DataClass"
 import type { EvolutionWriteKeys } from "./data/EvolutionDataProvider"

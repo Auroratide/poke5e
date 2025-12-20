@@ -8,7 +8,7 @@
 	import type { Readable } from "svelte/store"
 	import type { SingleFakemonStore } from "../store/SingleFakemonStore"
 	import FakemonEditor, { type SubmitDetail } from "./FakemonEditor.svelte"
-	import type { PokemonSpecies } from "$lib/creatures/species"
+	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { EvolutionStore, type EvolutionUpdate } from "$lib/pokemon/evolution"
 	import { fakemonStore } from "../store"
 	import { Loader } from "$lib/ui/elements"

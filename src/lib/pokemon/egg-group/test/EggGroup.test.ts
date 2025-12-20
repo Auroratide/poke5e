@@ -1,7 +1,7 @@
 import { test, expect } from "vitest"
 import { EggGroup } from "../EggGroup"
 import { stubEggGroup } from "./stubs"
-import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
+import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 
 test("groupBy", () => {
 	const exclusiveField = stubPokemonSpecies({

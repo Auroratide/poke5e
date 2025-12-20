@@ -1,6 +1,6 @@
 import { describe, test, expect } from "vitest"
 import { stubEvolution } from "./stubs"
-import { PokemonGender } from "$lib/creatures/gender"
+import { PokemonGender } from "$lib/pokemon/gender"
 
 describe("toString", () => {
 	test("simple level condition", () => {

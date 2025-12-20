@@ -4,7 +4,7 @@
 	import { Loader } from "$lib/ui/elements"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import ReferencePage from "../ReferencePage.svelte"
-	import { SpeciesStore } from "$lib/creatures/species"
+	import { SpeciesStore } from "$lib/poke5e/species"
 	import { AbilityPool } from "$lib/pokemon/ability"
 
 	const pokemon = SpeciesStore.canonList()

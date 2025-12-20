@@ -8,7 +8,7 @@
 	import { Url } from "$lib/url"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import { Rester } from "$lib/poke5e/resting"
-	import { WithSpecies } from "$lib/creatures/species"
+	import { WithSpecies } from "$lib/poke5e/species"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId

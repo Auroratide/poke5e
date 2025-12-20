@@ -1,6 +1,6 @@
 import { describe, test, expect } from "vitest"
 import { AbilityPool } from "../AbilityPool"
-import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
+import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 
 describe("findApplicableAbility", () => {
 	const pool = new AbilityPool({

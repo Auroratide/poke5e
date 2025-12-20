@@ -1,4 +1,4 @@
-import type { PokemonSpecies } from "$lib/creatures/species"
+import type { PokemonSpecies } from "$lib/poke5e/species"
 import type { Move, Tm } from "./types"
 
 export type MoveGroup = {

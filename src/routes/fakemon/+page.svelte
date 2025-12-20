@@ -22,10 +22,10 @@
 		type FakemonListStore,
 	} from "$lib/fakemon/store"
 	import ErrorMessage from "$lib/trainers/ErrorMessage.svelte"
-	import { CanCreateCustomPokemonBanner } from "$lib/creatures/species/CanCreateCustomPokemonBanner"
+	import { CanCreateCustomPokemonBanner } from "$lib/poke5e/species/CanCreateCustomPokemonBanner"
 	import { onMount } from "svelte"
 	import { type Readable } from "svelte/store"
-	import { SpeciesStore, type PokemonSpecies } from "$lib/creatures/species"
+	import { SpeciesStore, type PokemonSpecies } from "$lib/poke5e/species"
 
 	$: fakemonId = browser ? $page.url.searchParams.get("id") : undefined
 	$: action = browser ? $page.url.searchParams.get("action") : undefined

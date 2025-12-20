@@ -14,7 +14,7 @@ import { SupabaseTrainerProvider } from "./supabase"
 import { supabase } from "$lib/supabase"
 import type { ChosenFeat } from "$lib/feats/ChosenFeat"
 import { userAssets } from "$lib/user-assets"
-import type { PokemonSpecies } from "$lib/creatures/species"
+import type { PokemonSpecies } from "$lib/poke5e/species"
 
 export type TrainerData = {
 	info: Trainer,

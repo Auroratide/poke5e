@@ -8,7 +8,7 @@
 	import Editor, { type UpdateDetail } from "./Editor.svelte"
 	import { Url } from "$lib/url"
 	import RequirePokemon from "./RequirePokemon.svelte"
-	import WithSpecies from "$lib/creatures/species/WithSpecies.svelte"
+	import WithSpecies from "$lib/poke5e/species/WithSpecies.svelte"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId

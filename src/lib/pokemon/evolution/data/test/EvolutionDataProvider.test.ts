@@ -3,8 +3,8 @@ import { provider as fakemonProvider } from "$lib/fakemon/data"
 import { provider as evolutionProvider } from ".."
 import { stubEvolution } from "../../test/stubs"
 import { stubFakemon } from "$lib/fakemon/test/stubs"
-import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
-import { SpeciesIdentifier } from "$lib/creatures/species"
+import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
+import { SpeciesIdentifier } from "$lib/poke5e/species"
 import { EvolutionAlreadyExistsError, EvolutionDataProviderError } from "../EvolutionDataProvider"
 
 describe("add and get", () => {

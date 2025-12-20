@@ -1,4 +1,4 @@
-import { PokemonSpecies } from "$lib/creatures/species"
+import { PokemonSpecies } from "$lib/poke5e/species"
 import { DataClass, type Data } from "$lib/DataClass"
 
 export type FakemonId = string

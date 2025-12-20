@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { TrainerPokemon } from "$lib/trainers/types"
-	import { SpeciesSprite } from "$lib/creatures/media"
-	import { WithSpecies } from "$lib/creatures/species"
+	import { SpeciesSprite } from "$lib/poke5e/species/media"
+	import { WithSpecies } from "$lib/poke5e/species"
 
 	export let pokemon: TrainerPokemon[]
 	export let darken: boolean = false

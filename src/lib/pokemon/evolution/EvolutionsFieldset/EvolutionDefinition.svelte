@@ -9,10 +9,10 @@
 		SelectField,
 	} from "$lib/ui/forms"
 	import ConditionField from "./ConditionField.svelte"
-	import { PokemonGender } from "$lib/creatures/gender"
+	import { PokemonGender } from "$lib/pokemon/gender"
 	import { TimesOfDay, type TypedEvolutionConditionType } from "../EvolutionCondition"
 	import { capitalize } from "$lib/string"
-	import { PokemonSpecies, SpeciesField, SpeciesIdentifier, type SpeciesFieldChangeEvent } from "$lib/creatures/species"
+	import { PokemonSpecies, SpeciesField, SpeciesIdentifier, type SpeciesFieldChangeEvent } from "$lib/poke5e/species"
 	import { Button } from "$lib/ui/elements"
 	import { fakemonStore } from "$lib/fakemon/store"
 	import BenefitsField from "./BenefitsField.svelte"

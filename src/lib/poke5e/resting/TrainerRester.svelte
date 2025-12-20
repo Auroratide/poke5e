@@ -17,7 +17,7 @@
 	import { rulesVersion } from "$lib/site/rules-version"
 	import { Art } from "$lib/ui/elements"
 	import type { Readable } from "svelte/store"
-	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/creatures/species"
+	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/poke5e/species"
 
 	const dispatch = createEventDispatcher()
 

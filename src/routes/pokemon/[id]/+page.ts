@@ -1,5 +1,5 @@
 import { base } from "$app/paths"
-import { PokemonSpecies } from "$lib/creatures/species"
+import { PokemonSpecies } from "$lib/poke5e/species"
 import { error } from "@sveltejs/kit"
 import type { PageLoad } from "./$types"
 

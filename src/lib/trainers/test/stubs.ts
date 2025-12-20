@@ -1,5 +1,5 @@
-import { PokemonGender } from "$lib/creatures/gender"
-import { SpeciesIdentifier } from "$lib/creatures/species"
+import { PokemonGender } from "$lib/pokemon/gender"
+import { SpeciesIdentifier } from "$lib/poke5e/species"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { Level } from "$lib/dnd/level"
 import { Speeds } from "$lib/dnd/movement"

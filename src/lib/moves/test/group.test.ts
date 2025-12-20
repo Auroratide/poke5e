@@ -3,7 +3,7 @@ import { groupByLearnability } from "../group"
 import { stubMove, stubTm } from "./stubs"
 import type { Move, Tm } from "../types"
 import { measureTime } from "$lib/test/time"
-import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
+import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 
 const flamethrower = stubMove({
 	id: "flamethrower",

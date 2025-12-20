@@ -5,8 +5,8 @@ import { stubFakemon } from "$lib/fakemon/test/stubs"
 import { FakemonLocalStorage } from "../FakemonLocalStorage"
 import type { ImageInputValue } from "$lib/ui/forms"
 import { stubImageFile } from "$lib/test/files"
-import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
-import { stubSpeciesMedia } from "$lib/creatures/media/test/stubs"
+import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
+import { stubSpeciesMedia } from "$lib/poke5e/species/media/test/stubs"
 
 test("add, get, and update", async () => {
 	const draft = stubFakemon({

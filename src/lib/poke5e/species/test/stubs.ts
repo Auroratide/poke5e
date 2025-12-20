@@ -1,5 +1,5 @@
-import { stubSpeciesMedia } from "$lib/creatures/media/test/stubs"
-import { stubMovePool } from "$lib/creatures/move-pool/test/stubs"
+import { stubSpeciesMedia } from "$lib/poke5e/species/media/test/stubs"
+import { stubMovePool } from "$lib/pokemon/move-pool/test/stubs"
 import type { Data } from "$lib/DataClass"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"

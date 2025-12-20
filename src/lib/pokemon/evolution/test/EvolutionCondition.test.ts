@@ -11,7 +11,7 @@ import {
 } from "../EvolutionCondition"
 import { Level } from "$lib/dnd/level"
 import { stubLearnedMove } from "$lib/trainers/test/stubs"
-import { PokemonGender } from "$lib/creatures/gender"
+import { PokemonGender } from "$lib/pokemon/gender"
 
 describe("LevelCondition", () => {
 	test("meets level", () => {

@@ -28,7 +28,7 @@
 	import RestPokemonCard from "$lib/trainers/pokemon-details/RestPokemonCard.svelte"
 	import RestTrainerCard from "$lib/trainers/trainer-details/RestTrainerCard.svelte"
 	import type { Readable } from "svelte/store"
-	import { SpeciesStore, type PokemonSpecies } from "$lib/creatures/species"
+	import { SpeciesStore, type PokemonSpecies } from "$lib/poke5e/species"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: pokemonId = browser ? $page.url.searchParams.get("pokemon") : undefined

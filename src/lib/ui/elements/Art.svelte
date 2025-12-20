@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { SpeciesMediaTypeAttribution } from "$lib/creatures/media"
+	import type { SpeciesMediaTypeAttribution } from "$lib/poke5e/species/media"
 	import { isNotBlank } from "$lib/string"
 	import ArtAttribution from "./ArtAttribution.svelte"
 

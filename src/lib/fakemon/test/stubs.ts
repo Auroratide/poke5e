@@ -1,5 +1,5 @@
-import { SpeciesIdentifier } from "$lib/creatures/species"
-import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
+import { SpeciesIdentifier } from "$lib/poke5e/species"
+import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import type { Data } from "$lib/DataClass"
 import { Fakemon } from "$lib/fakemon/Fakemon"
 

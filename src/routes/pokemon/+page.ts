@@ -1,6 +1,6 @@
 import { get } from "svelte/store"
 import { base } from "$app/paths"
-import { PokemonSpecies, SpeciesStore } from "$lib/creatures/species"
+import { PokemonSpecies, SpeciesStore } from "$lib/poke5e/species"
 import type { PageLoad } from "./$types"
 
 export const load: PageLoad = async ({ fetch }) => {

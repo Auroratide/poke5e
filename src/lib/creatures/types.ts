@@ -6,9 +6,9 @@ import type { SkillRanks } from "$lib/dnd/skills"
 import type { SenseType } from "$lib/dnd/senses"
 import type { SpeedType } from "$lib/dnd/movement"
 import type { PokemonType } from "$lib/pokemon/types-2"
-import type { GenderRatio } from "./gender"
-import type { SpeciesRating } from "./sr"
-import type { EggGroup } from "./egg-group"
+import type { GenderRatio } from "../pokemon/gender"
+import type { SpeciesRating } from "../poke5e/sr"
+import type { EggGroup } from "../pokemon/egg-group"
 
 export type PokemonMedia = {
 	main?: string,

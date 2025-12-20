@@ -3,7 +3,7 @@ import type { TrainerData } from "./data"
 import { provider } from "./data"
 import type { InventoryItem, LearnedMove, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from "./types"
 import { error } from "$lib/site/errors"
-import type { PokemonSpecies } from "$lib/creatures/species"
+import type { PokemonSpecies } from "$lib/poke5e/species"
 
 type AllTrainers = {
 	[readKey: ReadWriteKey]: TrainerData & WithUpdater & WithRemover

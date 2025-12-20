@@ -1,4 +1,4 @@
-import { SpeciesIdentifier } from "$lib/creatures/species"
+import { SpeciesIdentifier } from "$lib/poke5e/species"
 import { DataClass, type Data } from "$lib/DataClass"
 import { EvolutionCondition, GenderCondition, LevelCondition, type EvolutionConditionType } from "./EvolutionCondition"
 import { EvolutionBenefit, type EvolutionBenefitType } from "./EvolutionBenefit"

@@ -8,7 +8,7 @@
 	import { Url } from "$lib/url"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import type { Readable } from "svelte/store"
-	import { type PokemonSpecies, WithSpecies } from "$lib/creatures/species"
+	import { type PokemonSpecies, WithSpecies } from "$lib/poke5e/species"
 	import { EvolutionStore, EvolveForm } from "$lib/pokemon/evolution"
 
 	const evolutions = EvolutionStore.all()

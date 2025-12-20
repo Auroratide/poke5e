@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PokemonSpecies } from "$lib/creatures/species"
+	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { ColumnedList } from "$lib/ui/elements"
 	import { Url } from "$lib/url"
 

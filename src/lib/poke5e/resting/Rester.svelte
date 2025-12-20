@@ -5,8 +5,8 @@
 	import { PokemonResting } from "./Rest"
 	import type { TrainerPokemon } from "$lib/trainers/types"
 	import { rulesVersion } from "$lib/site/rules-version"
-	import { SpeciesPortrait } from "$lib/creatures/media"
-	import type { PokemonSpecies } from "$lib/creatures/species"
+	import { SpeciesPortrait } from "$lib/poke5e/species/media"
+	import type { PokemonSpecies } from "$lib/poke5e/species"
 
 	const dispatch = createEventDispatcher()
 

@@ -1,4 +1,4 @@
-import type { SpeciesMedia, UploadedMedia } from "$lib/creatures/media"
+import type { SpeciesMedia, UploadedMedia } from "$lib/poke5e/species/media"
 import type { ImageInputValue } from "$lib/ui/forms"
 import type { DraftFakemon, Fakemon } from "../Fakemon"
 

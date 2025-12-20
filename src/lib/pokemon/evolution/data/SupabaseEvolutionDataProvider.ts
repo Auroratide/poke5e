@@ -1,6 +1,6 @@
 import type { PostgrestError, SupabaseClient } from "@supabase/supabase-js"
 import { EvolutionAlreadyExistsError as DuplicateEvolutionError, EvolutionDataProviderError, type EvolutionDataProvider, type EvolutionDraft, type EvolutionWriteKeys } from "./EvolutionDataProvider"
-import type { SpeciesIdentifier } from "$lib/creatures/species"
+import type { SpeciesIdentifier } from "$lib/poke5e/species"
 import { Evolution, type EvolutionId } from "../Evolution"
 import type { Data } from "$lib/DataClass"
 import { PostgresErrorCode } from "$lib/supabase"

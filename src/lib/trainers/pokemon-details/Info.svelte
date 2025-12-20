@@ -16,8 +16,8 @@
 	import FeatsInfo from "$lib/feats/FeatsInfo.svelte"
 	import BondInfo, { type UpdateDetail as BondUpdateDetail } from "$lib/pokemon/bond/BondInfo.svelte"
 	import { TypeEffectiveness } from "$lib/pokemon/types-2"
-	import type { PokemonSpecies } from "$lib/creatures/species"
-	import { SpeciesPortrait } from "$lib/creatures/media"
+	import type { PokemonSpecies } from "$lib/poke5e/species"
+	import { SpeciesPortrait } from "$lib/poke5e/species/media"
 
 	const dispatch = createEventDispatcher()
 

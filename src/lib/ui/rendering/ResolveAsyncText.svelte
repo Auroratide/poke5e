@@ -5,7 +5,7 @@
 -->
 <script lang="ts">
 	import { onMount, onDestroy } from "svelte"
-	import { PokemonSpecies, SpeciesIdentifier, SpeciesStore } from "$lib/creatures/species"
+	import { PokemonSpecies, SpeciesIdentifier, SpeciesStore } from "$lib/poke5e/species"
 	import { LoaderInline } from "$lib/ui/elements"
 	import { moves } from "$lib/moves/store"
 	import { abilities } from "$lib/pokemon/store"

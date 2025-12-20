@@ -14,9 +14,9 @@ import type { Level } from "$lib/dnd/level"
 import type { Senses } from "$lib/dnd/senses"
 import type { Speeds } from "$lib/dnd/movement"
 import type { PokemonTeraType, PokemonType } from "$lib/pokemon/types-2"
-import type { PokemonGender } from "$lib/creatures/gender"
+import type { PokemonGender } from "$lib/pokemon/gender"
 import type { Nature } from "$lib/pokemon/nature"
-import type { SpeciesIdentifier } from "$lib/creatures/species"
+import type { SpeciesIdentifier } from "$lib/poke5e/species"
 
 export type Resource = {
 	current: number,

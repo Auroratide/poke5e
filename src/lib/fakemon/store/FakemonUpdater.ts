@@ -4,7 +4,7 @@ import type { FakemonDataProvider } from "../data/FakemonDataProvider"
 import type { Fakemon } from "../Fakemon"
 import { error } from "$lib/site/errors"
 import type { ImageInputValue } from "$lib/ui/forms"
-import { SpeciesMedia } from "$lib/creatures/media"
+import { SpeciesMedia } from "$lib/poke5e/species/media"
 
 export type UpdateInfoOptions = {
 	media?: SpeciesMedia<ImageInputValue>,

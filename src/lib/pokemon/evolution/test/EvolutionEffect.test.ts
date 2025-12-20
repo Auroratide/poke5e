@@ -13,10 +13,10 @@ import {
 } from "../EvolutionEffect"
 import { stubTrainerPokemon } from "$lib/trainers/test/stubs"
 import { Level } from "$lib/dnd/level"
-import { stubPokemonSpecies } from "$lib/creatures/species/test/stubs"
+import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import { PokemonType } from "$lib/pokemon/types-2"
 import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
-import type { PokemonSpecies } from "$lib/creatures/species"
+import type { PokemonSpecies } from "$lib/poke5e/species"
 
 let eevee: PokemonSpecies
 let flareon: PokemonSpecies

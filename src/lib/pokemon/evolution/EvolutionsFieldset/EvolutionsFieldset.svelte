@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/creatures/species"
+	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/poke5e/species"
 	import { Button } from "$lib/ui/elements"
 	import { Fieldset, HintText, InstructionText } from "$lib/ui/forms"
 	import { slide } from "svelte/transition"

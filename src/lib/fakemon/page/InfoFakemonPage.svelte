@@ -1,5 +1,5 @@
 <script lang="ts">
-	import PokemonSpeciesCard from "$lib/creatures/species/PokemonSpeciesCard.svelte"
+	import PokemonSpeciesCard from "$lib/poke5e/species/PokemonSpeciesCard.svelte"
 	import { Button } from "$lib/ui/elements"
 	import { ActionArea } from "$lib/ui/forms"
 	import { Title } from "$lib/ui/layout"

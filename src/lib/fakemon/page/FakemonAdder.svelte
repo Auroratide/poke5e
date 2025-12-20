@@ -6,7 +6,7 @@
 </script>
 
 <script lang="ts">
-	import { SpeciesMedia } from "$lib/creatures/media"
+	import { SpeciesMedia } from "$lib/poke5e/species/media"
 	import { Button } from "$lib/ui/elements"
 	import {
 		ActionArea,
