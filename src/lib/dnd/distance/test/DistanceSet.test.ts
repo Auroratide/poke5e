@@ -132,3 +132,25 @@ describe("mergeWith", () => {
 		}))
 	})
 })
+
+describe("formatString", () => {
+	test("speed", () => {
+		const speeds = new Speeds({
+			walking: 30,
+		})
+
+		const result = speeds.formatString("walking")
+
+		expect(result).toEqual("30ft. walking")
+	})
+
+	test("senses", () => {
+		const senses = new Senses({
+			darkvision: 25
+		})
+
+		const result = senses.formatString("darkvision")
+
+		expect(result).toEqual("darkvision 25ft.")
+	})
+})

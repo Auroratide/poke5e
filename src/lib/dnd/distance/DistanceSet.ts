@@ -14,6 +14,8 @@ export class DistanceSet<T extends string> extends DataClass<Partial<Record<T, n
 		return new (this.constructor as new (data: object) => this)(combined)
 	}
 
+	formatString = (type: T): string => `${this.data[type]}ft. ${type}`
+
 	static fromList<T extends string, D extends DistanceSet<T>>(Type: { new(values: Partial<Record<T, number>>): D }, list: { type: T, value: number }[]): D {
 		return new Type(list.reduce((obj, cur) => ({
 			...obj,

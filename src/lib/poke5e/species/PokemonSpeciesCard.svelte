@@ -59,8 +59,8 @@
 			<dd>{value.data.ac}</dd>
 			<dt>Hit Points</dt>
 			<dd>{value.data.hp} ({value.data.hitDice})</dd>
-			<DistancesDlItem label="Speed" values={value.speed} tostring={asString.speed} />
-			<DistancesDlItem label="Senses" values={value.senses} tostring={asString.sense} />
+			<DistancesDlItem label="Speed" values={value.speed} />
+			<DistancesDlItem label="Senses" values={value.senses} />
 		</FlatDl>
 		<AttributeBlock attributes={value.attributes} />
 	</section>

@@ -11,4 +11,6 @@ export class Speeds extends DistanceSet<SpeedType> {
 		Hover: "hover",
 		Burrowing: "burrowing",
 	} as const
+
+	formatString = (type: SpeedType): string => `${this.data[type]}ft. ${type}`
 }

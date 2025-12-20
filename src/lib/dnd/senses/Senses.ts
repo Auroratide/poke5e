@@ -9,4 +9,6 @@ export class Senses extends DistanceSet<SenseType> {
 		Tremorsense: "tremorsense",
 		Truesight: "truesight",
 	} as const
+
+	formatString = (type: SenseType): string => `${type} ${this.data[type]}ft.`
 }

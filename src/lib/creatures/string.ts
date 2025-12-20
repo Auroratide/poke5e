@@ -2,14 +2,6 @@ import type { Move } from "$lib/moves/types"
 import type { PokeType } from "$lib/pokemon/types-2"
 import type { PokemonSpecies } from "../poke5e/species"
 
-export const speed = ({ type, value }: { type: string, value: number}): string => {
-	return `${value}ft. ${type}`
-}
-
-export const sense = ({ type, value }: { type: string, value: number}): string => {
-	return `${type} ${value}ft.`
-}
-
 /**
  * Pokemon can only have single- or dual-typing
  */

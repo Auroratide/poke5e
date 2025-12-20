@@ -23,8 +23,8 @@
 	<dd>+{pb}</dd>
 	<dt>Size</dt>
 	<dd class="cap">{pokemon.customSize ?? species.data.size}</dd>
-	<DistancesDlItem label="Speed" values={speeds} tostring={asString.speed} />
-	<DistancesDlItem label="Senses" values={senses} tostring={asString.sense} />
+	<DistancesDlItem label="Speed" values={speeds} />
+	<DistancesDlItem label="Senses" values={senses} />
 	{#if pokemon.teraType != null}
 		<dt>Tera</dt>
 		<dd><TeraTypeTag type={pokemon.teraType} /></dd>
