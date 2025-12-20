@@ -5,7 +5,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
 	import { TextField, kebab } from "$lib/ui/forms"
-	import { matchNameOrType2 } from "$lib/creatures/filter"
+	import { matchNameOrType } from "$lib/creatures/filter"
 	import type { PokemonSpecies } from "./PokemonSpecies"
 	import { Button } from "$lib/ui/elements"
 	import { slide } from "svelte/transition"
@@ -25,7 +25,7 @@
 	let species = allSpecies?.find((it) => it.id.data === value)?.name ?? ""
 	let confirmed = species.length > 0
 	$: filteredPokemon = species.length > 0
-		? allSpecies?.filter(matchNameOrType2(species)) ?? []
+		? allSpecies?.filter(matchNameOrType(species)) ?? []
 		: [] // if we haven't typed anything, don't show the ENTIRE list
 
 	const confirm = (p: PokemonSpecies) => {

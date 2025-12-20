@@ -5,14 +5,14 @@
 	import { currentSorter, filterValue } from "../store"
 	import type { PokemonSpecies } from "./PokemonSpecies"
 	import * as asString from "../string"
-	import { matchNameOrType2 } from "../filter"
+	import { matchNameOrType } from "../filter"
 	import { TemporaryBannerMessage } from "$lib/ui/elements"
 	import { Url } from "$lib/url"
 	import { OfficialFakemonRemovedBanner, readdOfficialFakemon } from "$lib/fakemon/OfficialFakemonRemovedBanner"
 
 	export let pokemons: PokemonSpecies[]
 
-	$: filtered = pokemons.filter(matchNameOrType2($filterValue))
+	$: filtered = pokemons.filter(matchNameOrType($filterValue))
 
 	const byStringField = (field: (m: PokemonSpecies) => string) => (l: PokemonSpecies, r: PokemonSpecies) => field(l).localeCompare(field(r))
 	const byNumericField = (field: (m: PokemonSpecies) => number) => (l: PokemonSpecies, r: PokemonSpecies) => field(l) - field(r)
