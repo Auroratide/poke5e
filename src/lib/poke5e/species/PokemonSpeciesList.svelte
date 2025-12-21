@@ -2,7 +2,7 @@
 	import { base } from "$app/paths"
 	import { SearchField } from "$lib/ui/forms"
 	import { SortableTable, BubbleRow } from "$lib/ui/page"
-	import { currentSorter, filterValue } from "$lib/creatures/store"
+	import { pokemonFilter, pokemonSorter } from "$lib/site/stores"
 	import type { PokemonSpecies } from "./PokemonSpecies"
 	import { matchNameOrType } from "$lib/creatures/filter"
 	import { TemporaryBannerMessage } from "$lib/ui/elements"
@@ -11,19 +11,19 @@
 
 	export let pokemons: PokemonSpecies[]
 
-	$: filtered = pokemons.filter(matchNameOrType($filterValue))
+	$: filtered = pokemons.filter(matchNameOrType($pokemonFilter))
 
 	const byStringField = (field: (m: PokemonSpecies) => string) => (l: PokemonSpecies, r: PokemonSpecies) => field(l).localeCompare(field(r))
 	const byNumericField = (field: (m: PokemonSpecies) => number) => (l: PokemonSpecies, r: PokemonSpecies) => field(l) - field(r)
 </script>
 
 <div class="search-field">
-	<SearchField id="filter-moves" label="Search" bind:value={$filterValue} matched={filtered.length} max={pokemons.length} />
+	<SearchField id="filter-moves" label="Search" bind:value={$pokemonFilter} matched={filtered.length} max={pokemons.length} />
 </div>
 <TemporaryBannerMessage condition={OfficialFakemonRemovedBanner}>
 	Non-canon pokémon have been removed from this official list (Brawleon, Minereon, Droideon, Terreon, Specteon, Eeveon, Pesteon, Aereon, Drakeon, Toxeon, Rookite, Belseraph). You may <button class="link-button" on:click={readdOfficialFakemon}>re-add these to your list of Fakémon</button>, or you may add them later under <a href="{Url.settings()}">settings</a>.
 </TemporaryBannerMessage>
-<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$currentSorter} headers={[ {
+<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$pokemonSorter} headers={[ {
 	key: "name", name: "Name", ratio: 3, sort: byStringField(it => it.data.name),
 }, {
 	key: "type", name: "Type", ratio: 3, sort: byStringField(it => it.type.data.join(", ")),

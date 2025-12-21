@@ -4,7 +4,10 @@
 	import type { Writable } from "svelte/store"
 	import { afterNavigate } from "$app/navigation"
 	import * as Analytics from "$lib/site/analytics"
-	import { filterValue as pokemonFilter, currentSorter as pokemonSorter } from "$lib/creatures/store"
+	import {
+		pokemonFilter,
+		pokemonSorter
+	} from "$lib/site/stores"
 	import {
 		filterValue as movesFilter,
 		currentSorter as movesSorter,
