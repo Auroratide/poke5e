@@ -1,4 +1,4 @@
-import type { Pokemon } from "$lib/creatures/types"
+import type { Pokemon } from "$lib/poke5e/legacy-types"
 import type { Move, Tm } from "./types"
 
 export function pokemonWhoLearnThisMove(move: Move["id"], tms: Pick<Tm, "id" | "move">[], pokemon: Pick<Pokemon, "id" | "name" | "moves">[]): Pick<Pokemon, "id" | "name">[] {

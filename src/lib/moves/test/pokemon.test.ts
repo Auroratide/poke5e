@@ -1,6 +1,6 @@
 import { describe, test, expect } from "vitest"
 import { pokemonWhoLearnThisMove, pokemonWhoLearnThisTm } from "../pokemon"
-import { stubMovePool, stubPokemon } from "$lib/creatures/test/stubs"
+import { stubMovePool, stubPokemon } from "$lib/poke5e/test/stubs"
 import { stubTm } from "./stubs"
 
 describe("pokemonWhoLearnThisMove", () => {

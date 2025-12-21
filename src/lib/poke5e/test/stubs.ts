@@ -1,10 +1,10 @@
-import type { Pokemon, MovePool } from "../types"
+import type { Pokemon, MovePool } from "../legacy-types"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
 import { PokemonType } from "$lib/pokemon/types-2"
 import { HitDice } from "$lib/dnd/hit-dice"
 import { GenderRatio } from "../../pokemon/gender"
-import { SpeciesRating } from "../../poke5e/sr"
+import { SpeciesRating } from "../sr"
 import { stubEggGroup } from "../../pokemon/egg-group/test/stubs"
 
 export function stubMovePool(template: Partial<MovePool> = {}): MovePool {
