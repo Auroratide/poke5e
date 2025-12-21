@@ -41,6 +41,10 @@ export class PokemonSpecies extends DataClass<{
 	media: Data<SpeciesMedia<UploadedMedia>>,
 	notes?: MarkdownString,
 }> {
+	static readonly matchNameOrType = (value: string) => (pokemon: PokemonSpecies) =>
+		pokemon.data.name.toLocaleLowerCase().includes(value.toLocaleLowerCase()) ||
+			pokemon.type.toString().toLocaleLowerCase().includes(value.toLocaleLowerCase())
+
 	get id(): SpeciesIdentifier { return new SpeciesIdentifier(this.data.id) }
 	get name(): string { return this.data.name }
 	get number(): number { return this.data.number }

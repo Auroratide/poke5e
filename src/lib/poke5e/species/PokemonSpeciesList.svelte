@@ -3,15 +3,14 @@
 	import { SearchField } from "$lib/ui/forms"
 	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { pokemonFilter, pokemonSorter } from "$lib/site/stores"
-	import type { PokemonSpecies } from "./PokemonSpecies"
-	import { matchNameOrType } from "$lib/creatures/filter"
+	import { PokemonSpecies } from "./PokemonSpecies"
 	import { TemporaryBannerMessage } from "$lib/ui/elements"
 	import { Url } from "$lib/site/url"
 	import { OfficialFakemonRemovedBanner, readdOfficialFakemon } from "$lib/fakemon/OfficialFakemonRemovedBanner"
 
 	export let pokemons: PokemonSpecies[]
 
-	$: filtered = pokemons.filter(matchNameOrType($pokemonFilter))
+	$: filtered = pokemons.filter(PokemonSpecies.matchNameOrType($pokemonFilter))
 
 	const byStringField = (field: (m: PokemonSpecies) => string) => (l: PokemonSpecies, r: PokemonSpecies) => field(l).localeCompare(field(r))
 	const byNumericField = (field: (m: PokemonSpecies) => number) => (l: PokemonSpecies, r: PokemonSpecies) => field(l) - field(r)
