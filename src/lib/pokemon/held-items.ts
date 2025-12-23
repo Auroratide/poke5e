@@ -1,6 +1,6 @@
-import type { Item } from "$lib/items/types"
 import type { HeldItem } from "$lib/trainers/types"
 import HeldItemIcon from "$lib/items/held-item-icon.png"
+import type { Item } from "$lib/items"
 
 export type HeldItemDetails = {
 	name: string,

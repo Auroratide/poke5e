@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Fieldset } from "$lib/ui/forms"
-	import InventoryEditor from "$lib/items/InventoryEditor.svelte"
 	import type { HeldItem } from "$lib/trainers/types"
+	import { InventoryEditor } from "$lib/items"
 
 	export let items: HeldItem[]
 	export let disabled: boolean

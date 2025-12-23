@@ -9,7 +9,7 @@
 	import { createEventDispatcher } from "svelte"
 	import { getItemDetails } from "$lib/pokemon/held-items"
 	import type { HeldItem, MaybeQuantity } from "../types"
-	import { items as allItems } from "$lib/items/store"
+	import { ItemStore as allItems } from "$lib/items/store"
 	import {
 		NumericResourceField,
 		type NumericChangeDetail,

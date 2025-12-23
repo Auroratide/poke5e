@@ -1,7 +1,6 @@
 import { test, expect } from "vitest"
-import { groupByType } from "../group"
 import { stubItem } from "./stubs"
-import type { Item } from "../types"
+import { Item } from "../Item"
 
 const berry = stubItem({
 	id: "berry",
@@ -50,7 +49,7 @@ const ALL_ITEMS: Item[] = [
 
 test("default groups", () => {
 	// when
-	const result = groupByType(ALL_ITEMS, [])
+	const result = Item.groupByType(ALL_ITEMS, [])
 
 	// then
 	expect(result).toEqual([ {
@@ -76,7 +75,7 @@ test("default groups", () => {
 
 test("group order given", () => {
 	// when
-	const result = groupByType(ALL_ITEMS, ["medicine", "held item", "berry", "evolution", "pokeball", "trainer gear"])
+	const result = Item.groupByType(ALL_ITEMS, ["medicine", "held item", "berry", "evolution", "pokeball", "trainer gear"])
 
 	// then
 	expect(result).toEqual([ {
@@ -109,7 +108,7 @@ test("multiple items in a single group", () => {
 	]
 
 	// when
-	const result = groupByType(ALL_ITEMS.concat(moreBerries), [])
+	const result = Item.groupByType(ALL_ITEMS.concat(moreBerries), [])
 
 	// then
 	expect(result).toEqual([ {

@@ -1,7 +1,7 @@
 <script lang="ts" generics="TItem extends HeldItem">
+	import type { ItemType } from "./Item"
 	import { focusInputField } from "$lib/ui/forms"
 	import { Button } from "$lib/ui/elements"
-	import type { ItemType } from "./types"
 	import ItemEditor, { getItemFieldName } from "./ItemEditor.svelte"
 	import type { HeldItem } from "$lib/trainers/types"
 	

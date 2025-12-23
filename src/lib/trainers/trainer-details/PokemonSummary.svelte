@@ -2,7 +2,7 @@
 	import type { ReadWriteKey, TrainerPokemon } from "../types"
 	import { ResourceBar } from "$lib/ui/elements"
 	import { Url } from "$lib/site/url"
-	import { items } from "$lib/items/store"
+	import { ItemStore } from "$lib/items"
 	import { getItemDetails } from "$lib/pokemon/held-items"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 	import ItemSprite from "$lib/items/ItemSprite.svelte"
@@ -13,7 +13,7 @@
 	export let trainer: ReadWriteKey
 	export let pokemon: TrainerPokemon
 
-	$: heldItem = pokemon.items.length > 0 ? getItemDetails(pokemon.items[0], $items) : undefined
+	$: heldItem = pokemon.items.length > 0 ? getItemDetails(pokemon.items[0], $ItemStore) : undefined
 </script>
 
 <a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded">

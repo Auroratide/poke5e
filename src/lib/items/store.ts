@@ -1,14 +1,17 @@
-import type { Item } from "./types"
 import { readable, writable } from "svelte/store"
-import { base } from "$app/paths"
+import { resolve } from "$app/paths"
+import { Item } from "./Item"
+import type { Data } from "$lib/DataClass"
 
-export const items = readable<Item[]>(undefined, (set) => {
+export const ItemStore = readable<Item[]>(undefined, (set) => {
 	if (typeof window !== "undefined") {
-		fetch(`${base}/items.json`)
+		fetch(resolve("/items.json"))
 			.then(res => res.json())
-			.then(data => set(data.items))
+			.then((data) => data.items)
+			.then((items: Data<Item>[]) => items.map((it) => new Item(it)))
+			.then((items) => set(items))
 	}
 })
 
-export const filterValue = writable("")
-export const currentSorter = writable(() => 0)
+export const ItemFilterStore = writable("")
+export const ItemSorterStore = writable(() => 0)

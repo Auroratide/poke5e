@@ -1,24 +1,23 @@
 <script lang="ts">
-	import type { Item } from "./types"
 	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { SearchField } from "$lib/ui/forms"
-	import { matchNameOrType } from "./filter"
-	import { filterValue, currentSorter } from "./store"
+	import { ItemFilterStore, ItemSorterStore } from "./store"
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Url } from "$lib/site/url"
+	import { Item } from "./Item"
 
 	export let items: Item[]
 
-	$: filteredItems = items.filter(matchNameOrType($filterValue))
+	$: filteredItems = items.filter(Item.matchNameOrType($ItemFilterStore))
 
 	const byStringField = (field: (m: Item) => string) => (l: Item, r: Item) => field(l).localeCompare(field(r))
 	const byNumericField = (field: (m: Item) => number) => (l: Item, r: Item) => field(l) - field(r)
 </script>
 
 <div class="search-field">
-	<SearchField id="filter-items" label="Search" bind:value={$filterValue} matched={filteredItems.length} max={items.length} />
+	<SearchField id="filter-items" label="Search" bind:value={$ItemFilterStore} matched={filteredItems.length} max={items.length} />
 </div>
-<SortableTable let:item let:cellVisibility items={filteredItems} bind:currentSorter={$currentSorter} headers={[ {
+<SortableTable let:item let:cellVisibility items={filteredItems} bind:currentSorter={$ItemSorterStore} headers={[ {
 	key: "name", name: "Name", ratio: 3, sort: byStringField(it => it.name),
 }, {
 	key: "type", name: "Type", ratio: 2, sort: byStringField(it => it.type),

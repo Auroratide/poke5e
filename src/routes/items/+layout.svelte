@@ -3,13 +3,12 @@
 	import { Page } from "$lib/ui/layout"
 	import { BackpackIcon } from "$lib/ui/icons"
 	import { Loader } from "$lib/ui/elements"
-	import { items } from "$lib/items/store"
-	import ItemList from "$lib/items/ItemList.svelte"
 	import { ListPageHeading } from "$lib/ui/page"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
+	import { ItemList, ItemStore } from "$lib/items"
 
 	$: ssrItems = $page.data.itemsList
-	$: itemsToRender = ssrItems ?? $items
+	$: itemsToRender = ssrItems ?? $ItemStore
 </script>
 
 <Page theme="yellow">

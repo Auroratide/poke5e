@@ -1,10 +1,9 @@
 <script lang="ts">
 	import type { HeldItem } from "../types"
-	import { items } from "$lib/items/store"
+	import { ItemStore } from "$lib/items/store"
 	import { createEventDispatcher } from "svelte"
 	import { Button } from "$lib/ui/elements"
-	import type { ItemType } from "$lib/items/types"
-	import { groupByType } from "$lib/items/group"
+	import { Item, type ItemType } from "$lib/items"
 
 	const dispatch = createEventDispatcher()
 
@@ -12,7 +11,7 @@
 	export let groupOrder: ItemType[] = []
 	export let disabled: boolean = false
 
-	$: itemGroups = groupByType($items ?? [], groupOrder)
+	$: itemGroups = Item.groupByType($ItemStore ?? [], groupOrder)
 
 	const onRemove = () => {
 		dispatch("remove")

@@ -1,5 +1,4 @@
 <script lang="ts">
-	import type { Item } from "./types"
 	import { Card, SideArtCardSection } from "$lib/ui/page"
 	import FlatDl from "../ui/elements/FlatDl.svelte"
 	import { renderHtml } from "../ui/rendering/render"
@@ -9,6 +8,7 @@
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import { EvolutionStore } from "$lib/pokemon/evolution"
 	import { SpeciesStore } from "$lib/poke5e/species"
+	import type { Item } from "./Item"
 
 	const species = SpeciesStore.canonList()
 	const evolutions = EvolutionStore.canonList()

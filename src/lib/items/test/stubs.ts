@@ -1,7 +1,8 @@
-import type { Item } from "../types"
+import type { Data } from "$lib/DataClass"
+import { Item } from "../Item"
 
-export function stubItem(template: Partial<Item>): Item {
-	return {
+export function stubItem(template: Partial<Data<Item>>): Item {
+	return new Item({
 		id: "lum-berry",
 		name: "Lum Berry",
 		type: "berry",
@@ -13,5 +14,5 @@ export function stubItem(template: Partial<Item>): Item {
 			sprite: null,
 		},
 		...template,
-	}
+	})
 }
