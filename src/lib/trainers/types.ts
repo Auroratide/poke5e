@@ -2,7 +2,6 @@ import type { Attribute, Attributes } from "$lib/dnd/attributes"
 import type { CreatureSize } from "$lib/dnd/CreatureSize"
 import type { Pokemon } from "../poke5e/legacy-types"
 import type { Move } from "$lib/moves/types"
-import type { AbilityId } from "$lib/pokemon/types"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import type { StorageResource } from "./data"
 import type { Specializations } from "./specializations"
@@ -17,6 +16,7 @@ import type { PokemonTeraType, PokemonType } from "$lib/pokemon/types-2"
 import type { PokemonGender } from "$lib/pokemon/gender"
 import type { Nature } from "$lib/pokemon/nature"
 import type { SpeciesIdentifier } from "$lib/poke5e/species"
+import type { AbilityId } from "$lib/pokemon/ability"
 
 export type Resource = {
 	current: number,

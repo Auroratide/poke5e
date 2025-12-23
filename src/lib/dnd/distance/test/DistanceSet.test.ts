@@ -146,7 +146,7 @@ describe("formatString", () => {
 
 	test("senses", () => {
 		const senses = new Senses({
-			darkvision: 25
+			darkvision: 25,
 		})
 
 		const result = senses.formatString("darkvision")

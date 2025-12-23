@@ -7,6 +7,10 @@ export class Ability extends DataClass<{
 	name: string,
 	description: string,
 }> {
+	get id() { return this.data.id }
+	get name() { return this.data.name }
+	get description() { return this.data.description }
+
 	static readonly normalizeList = (allAbilities: Data<Ability>[]) => (pokemon: {
 		abilities: {
 			id: AbilityId,

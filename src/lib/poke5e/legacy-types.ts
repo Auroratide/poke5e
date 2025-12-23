@@ -1,4 +1,3 @@
-import type { Ability } from "../pokemon/types"
 import type { HitDice } from "$lib/dnd/hit-dice"
 import type { CreatureSize } from "$lib/dnd/CreatureSize"
 import type { Attributes, Attribute } from "$lib/dnd/attributes"
@@ -9,6 +8,14 @@ import type { PokemonType } from "$lib/pokemon/types-2"
 import type { GenderRatio } from "../pokemon/gender"
 import type { SpeciesRating } from "./sr"
 import type { EggGroup } from "../pokemon/egg-group"
+import type { AbilityId } from "$lib/pokemon/ability"
+
+export type Ability = {
+	id: AbilityId,
+	name: string,
+	description: string,
+	hidden?: boolean
+}
 
 export type PokemonMedia = {
 	main?: string,

@@ -6,7 +6,7 @@
 	import * as Analytics from "$lib/site/analytics"
 	import {
 		pokemonFilter,
-		pokemonSorter
+		pokemonSorter,
 	} from "$lib/site/stores"
 	import {
 		filterValue as movesFilter,
