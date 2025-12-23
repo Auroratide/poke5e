@@ -13,7 +13,7 @@ import type {
 import { SupabaseTrainerProvider } from "./supabase"
 import { supabase } from "$lib/supabase"
 import type { ChosenFeat } from "$lib/dnd/feats/ChosenFeat"
-import { userAssets } from "$lib/user-assets"
+import { userAssets } from "$lib/site/user-assets"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 
 export type TrainerData = {
