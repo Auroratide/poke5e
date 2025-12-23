@@ -10,7 +10,7 @@
 		type IntFieldChangeEvent,
 	} from "$lib/ui/forms"
 	import { Nature, NatureField } from "$lib/pokemon/nature"
-	import { PokemonTeraType } from "$lib/pokemon/types-2"
+	import { PokemonTeraType } from "$lib/pokemon/types"
 
 	const FIVE_HUNDRED_KB = 524288
 

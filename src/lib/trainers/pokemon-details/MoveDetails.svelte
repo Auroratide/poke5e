@@ -17,7 +17,7 @@
 	import { PlusMinus } from "$lib/ui/elements"
 	import { FlatDl } from "$lib/ui/elements"
 	import type { Level } from "$lib/dnd/level"
-	import type { PokemonType } from "$lib/pokemon/types-2"
+	import type { PokemonType } from "$lib/pokemon/types"
 
 	const dispatch = createEventDispatcher()
 

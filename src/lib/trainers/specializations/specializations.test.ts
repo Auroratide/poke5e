@@ -2,7 +2,7 @@ import { describe, test, expect } from "vitest"
 import { specializationDescription, skillModifiersFromSpecializations, hasSpecialization } from "./specializations"
 import { stubNoSpecializations, stubSpecializations } from "./test/stubs"
 import type { Skill } from "$lib/dnd/skills"
-import type { PokeType } from "$lib/pokemon/types-2"
+import type { PokeType } from "$lib/pokemon/types"
 
 describe("specializationDescription", () => {
 	test("single ASI", () => {

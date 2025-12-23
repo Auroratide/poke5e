@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { FlatDl } from "$lib/ui/elements"
 	import { Fieldset, CheckboxFields } from "$lib/ui/forms"
-	import { PokemonType, type PokeType } from "$lib/pokemon/types-2"
+	import { PokemonType, type PokeType } from "$lib/pokemon/types"
 
 	let types: PokeType[] = []
 

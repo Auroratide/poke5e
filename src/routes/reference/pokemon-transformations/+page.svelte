@@ -4,7 +4,7 @@
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
 	import { rulesVersion } from "$lib/site/rules-version"
-	import { TeraTypeTag } from "$lib/pokemon/types-2"
+	import { TeraTypeTag } from "$lib/pokemon/types"
 </script>
 
 <ReferencePage title="Pokémon Transformations">

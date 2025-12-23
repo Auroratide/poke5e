@@ -2,7 +2,7 @@
 	import { Button } from "$lib/ui/elements"
 	import { Tag } from "$lib/ui/elements"
 	import type { Move } from "$lib/moves/types"
-	import { TypeIcon } from "$lib/pokemon/types-2/icons"
+	import { TypeIcon } from "$lib/pokemon/types/icons"
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
 
 

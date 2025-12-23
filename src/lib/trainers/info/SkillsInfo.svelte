@@ -2,7 +2,7 @@
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import type { Level } from "$lib/dnd/level"
 	import { ProficiencyBlock, SkillRanks } from "$lib/dnd/skills"
-	import type { PokemonType } from "$lib/pokemon/types-2"
+	import type { PokemonType } from "$lib/pokemon/types"
 	import { skillModifiersFromSpecializations, type Specializations } from "../specializations"
 
 	export let level: Level

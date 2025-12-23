@@ -23,7 +23,7 @@
 	import BondFieldset from "$lib/pokemon/bond/BondFieldset.svelte"
 	import { Level } from "$lib/dnd/level"
 	import { SpeedsFieldset } from "$lib/dnd/movement"
-	import { PokemonTeraType, TypeField, type TeraType } from "$lib/pokemon/types-2"
+	import { PokemonTeraType, TypeField, type TeraType } from "$lib/pokemon/types"
 	import { GenderFieldset } from "$lib/pokemon/gender"
 	import { HitDice } from "$lib/dnd/hit-dice"
 	import type { PokemonSpecies } from "$lib/poke5e/species"

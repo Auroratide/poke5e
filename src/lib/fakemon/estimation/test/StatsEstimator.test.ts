@@ -1,6 +1,6 @@
 import { test, expect } from "vitest"
 import { StatsEstimator } from "../StatsEstimator"
-import { PokemonType } from "$lib/pokemon/types-2"
+import { PokemonType } from "$lib/pokemon/types"
 import { Bst } from "$lib/pokemon/bst"
 import { HitDice } from "$lib/dnd/hit-dice"
 

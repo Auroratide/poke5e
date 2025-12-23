@@ -2,7 +2,7 @@
 	import type { TrainerPokemon } from "../types"
 	import { FlatDl } from "$lib/ui/elements"
 	import { DistancesDlItem } from "$lib/dnd/distance"
-	import { TeraTypeTag } from "$lib/pokemon/types-2"
+	import { TeraTypeTag } from "$lib/pokemon/types"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 
 	export let pokemon: TrainerPokemon

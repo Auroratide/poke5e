@@ -5,7 +5,7 @@
 	import { Attributes } from "$lib/dnd/attributes"
 	import type { HitDice } from "$lib/dnd/hit-dice"
 	import { Bst } from "$lib/pokemon/bst"
-	import type { PokemonType } from "$lib/pokemon/types-2"
+	import type { PokemonType } from "$lib/pokemon/types"
 	import { StatsEstimator } from "./StatsEstimator"
 
 	export let level: number

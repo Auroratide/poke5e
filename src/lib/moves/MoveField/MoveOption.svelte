@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Tag } from "$lib/ui/elements"
 	import type { Move } from "$lib/moves/types"
-	import { TypeIcon } from "$lib/pokemon/types-2/icons"
+	import { TypeIcon } from "$lib/pokemon/types/icons"
 
 	export let value: Move
 	export let disabled = false

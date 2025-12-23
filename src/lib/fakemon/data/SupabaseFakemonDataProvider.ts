@@ -1,7 +1,7 @@
 import type { PostgrestError, SupabaseClient } from "@supabase/supabase-js"
 import { FakemonDataProviderError, FakemonPermissionError, type FakemonDataProvider, type ReadKey, type WriteKey } from "./FakemonDataProvider"
 import { Fakemon, type DraftFakemon } from "../Fakemon"
-import { PokemonType } from "$lib/pokemon/types-2"
+import { PokemonType } from "$lib/pokemon/types"
 import type { Attribute } from "$lib/dnd/attributes"
 import { isCreatureSize } from "$lib/dnd/CreatureSize"
 import type { Data } from "$lib/DataClass"

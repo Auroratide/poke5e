@@ -5,7 +5,7 @@ import { rulesVersion } from "$lib/site/rules-version"
 import { capitalize } from "$lib/utils/string"
 import type { Attribute } from "$lib/dnd/attributes"
 import type { Skill } from "$lib/dnd/skills"
-import type { PokeType } from "$lib/pokemon/types-2"
+import type { PokeType } from "$lib/pokemon/types"
 
 export type Specialization = {
 	id: string,

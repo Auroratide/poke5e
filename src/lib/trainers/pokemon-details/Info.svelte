@@ -16,7 +16,7 @@
 	import { FeatsInfo } from "$lib/dnd/feats"
 	import { AllFeats } from "$lib/poke5e/feats"
 	import BondInfo, { type UpdateDetail as BondUpdateDetail } from "$lib/pokemon/bond/BondInfo.svelte"
-	import { TypeEffectiveness } from "$lib/pokemon/types-2"
+	import { TypeEffectiveness } from "$lib/pokemon/types"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
 

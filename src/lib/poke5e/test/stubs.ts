@@ -1,7 +1,7 @@
 import type { Pokemon, MovePool } from "../legacy-types"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
-import { PokemonType } from "$lib/pokemon/types-2"
+import { PokemonType } from "$lib/pokemon/types"
 import { HitDice } from "$lib/dnd/hit-dice"
 import { GenderRatio } from "../../pokemon/gender"
 import { SpeciesRating } from "../sr"

@@ -1,5 +1,5 @@
 import type { Attribute } from "$lib/dnd/attributes"
-import type { PokeType } from "$lib/pokemon/types-2"
+import type { PokeType } from "$lib/pokemon/types"
 import type { Move } from "../types"
 
 export class MoveFilter {

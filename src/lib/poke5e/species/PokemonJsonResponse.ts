@@ -4,7 +4,7 @@ import type { HitDiceSize } from "$lib/dnd/hit-dice"
 import type { SpeedType } from "$lib/dnd/movement"
 import type { SenseType } from "$lib/dnd/senses"
 import type { Skill } from "$lib/dnd/skills"
-import type { PokeType } from "$lib/pokemon/types-2"
+import type { PokeType } from "$lib/pokemon/types"
 
 export type SinglePokemonJsonResponse = {
 	id: string,

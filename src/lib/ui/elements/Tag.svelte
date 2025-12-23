@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PokeType } from "$lib/pokemon/types-2"
+	import type { PokeType } from "$lib/pokemon/types"
 
 	export let color: PokeType | undefined = undefined
 	export let width: "auto" | "full" = "auto"

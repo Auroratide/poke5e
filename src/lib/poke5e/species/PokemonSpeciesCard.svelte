@@ -4,7 +4,7 @@
 	import { AttributeBlock } from "$lib/dnd/attributes"
 	import { DistancesDlItem } from "$lib/dnd/distance"
 	import { AbilityPoolInfo } from "$lib/pokemon/ability"
-	import { TypeEffectiveness, TypeTag } from "$lib/pokemon/types-2"
+	import { TypeEffectiveness, TypeTag } from "$lib/pokemon/types"
 	import { Markdown } from "$lib/ui/rendering"
 	import { GenderRatioDisplay } from "$lib/pokemon/gender"
 	import InlineMoveLinks from "$lib/moves/InlineMoveLinks.svelte"

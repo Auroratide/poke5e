@@ -2,7 +2,7 @@ import type { PokemonSpecies } from "$lib/poke5e/species"
 import type { Data } from "$lib/DataClass"
 import type { HitDice } from "$lib/dnd/hit-dice"
 import type { Bst } from "$lib/pokemon/bst"
-import { PokemonType } from "$lib/pokemon/types-2"
+import { PokemonType } from "$lib/pokemon/types"
 
 export class StatsEstimator {
 	private type: PokemonType = new PokemonType(["normal"])

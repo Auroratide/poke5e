@@ -2,7 +2,7 @@
 	import { SpecializationList, specializationDescription } from "$lib/trainers/specializations"
 	import { IconedCardHeading } from "$lib/ui/page"
 	import ReferencePage from "../ReferencePage.svelte"
-	import { TypeTag } from "$lib/pokemon/types-2"
+	import { TypeTag } from "$lib/pokemon/types"
 </script>
 
 <ReferencePage title="Specializations">

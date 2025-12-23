@@ -1,4 +1,4 @@
-import type { PokeType } from "$lib/pokemon/types-2"
+import type { PokeType } from "$lib/pokemon/types"
 import type { Specialization } from "../specializations"
 
 export const SpecializationList: Record<PokeType, Specialization> = {

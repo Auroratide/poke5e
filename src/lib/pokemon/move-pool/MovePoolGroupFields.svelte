@@ -6,7 +6,7 @@
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import { MoveFilter } from "$lib/moves/MoveFilter"
 	import type { Move } from "$lib/moves/types"
-	import { PokemonType, type PokeType } from "$lib/pokemon/types-2"
+	import { PokemonType, type PokeType } from "$lib/pokemon/types"
 	import MoveOption from "./MoveOption.svelte"
 	import SearchAndFilterField from "./SearchAndFilterField.svelte"
 

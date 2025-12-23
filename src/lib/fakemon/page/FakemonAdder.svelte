@@ -16,7 +16,7 @@
 		TextField,
 		type ImageInputValue,
 	} from "$lib/ui/forms"
-	import SimpleTypeField from "$lib/pokemon/types-2/SimpleTypeField.svelte"
+	import SimpleTypeField from "$lib/pokemon/types/SimpleTypeField.svelte"
 	import { createEventDispatcher } from "svelte"
 	import { Fakemon } from "../Fakemon"
 

@@ -6,7 +6,7 @@
 	import MoveDescription from "./MoveDescription.svelte"
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
-	import { TypeTag } from "$lib/pokemon/types-2"
+	import { TypeTag } from "$lib/pokemon/types"
 	import { SpeciesIdentifier } from "$lib/poke5e/species"
 
 	export let move: Move
