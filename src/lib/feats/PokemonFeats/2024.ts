@@ -48,7 +48,7 @@ export const PokemonFeats: Feat[] = [ {
 }, {
 	name: "Combo Master",
 	category: "General",
-	description: "Your Pokémon is an expert in combining strikes against a foe. When this feature is selected, moves that have the ability to hit more than once are guaranteed to hit at least twice. (Fury Swipes, Double Slap, etc.)",
+	description: "Your Pokémon is an expert in combining strikes against a foe. When this feat is selected, moves that have the ability to hit more than once, after the same attack roll, are guaranteed to hit at least twice. (Fury Swipes, Double Slap, Water Shuriken, etc.)",
 }, {
 	name: "Extra Move",
 	category: "General",
