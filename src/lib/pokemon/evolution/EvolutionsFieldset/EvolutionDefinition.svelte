@@ -18,7 +18,7 @@
 	import BenefitsField from "./BenefitsField.svelte"
 	import type { TypedEvolutionBenefitType } from "../EvolutionBenefit"
 	import { MoveField } from "$lib/moves"
-	import { moves } from "$lib/moves/store"
+	import { MovesStore } from "$lib/moves/store"
 
 	const dispatch = createEventDispatcher()
 
@@ -106,7 +106,7 @@
 				let:condition
 				{disabled}
 			>
-				<MoveField label="Required Move" name="{id}-move" value={condition.value} {disabled} moves={$moves} on:change={(e) => condition.value = e.detail.move.id} />
+				<MoveField label="Required Move" name="{id}-move" value={condition.value} {disabled} moves={$MovesStore} on:change={(e) => condition.value = e.detail.move.id} />
 			</ConditionField>
 			<ConditionField
 				{id}

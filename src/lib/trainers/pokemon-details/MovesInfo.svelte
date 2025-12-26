@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Loader } from "$lib/ui/elements"
-	import { moves } from "$lib/moves/store"
+	import { MovesStore } from "$lib/moves/store"
 	import { createEventDispatcher } from "svelte"
 	import type { LearnedMove, TrainerPokemon } from "../types"
 	import type { UpdatePpDetail } from "./MoveDetails.svelte"
@@ -23,11 +23,11 @@
 </script>
 
 {#if pokemon.moves.length > 0}
-	{#if $moves}
+	{#if $MovesStore}
 		<h2>Moves</h2>
 		<ul style:list-style="none" style:padding="0">
 			{#each pokemon.moves as move}
-				{@const moveData = $moves.find((it) => it.id === move.moveId)}
+				{@const moveData = $MovesStore.find((it) => it.id === move.moveId)}
 				<li>
 					<MoveDetails {move} {moveData} {editable} level={pokemon.level} attributes={pokemon.attributes} pokemonType={pokemon.type} on:update={onUpdate(move)} />
 				</li>

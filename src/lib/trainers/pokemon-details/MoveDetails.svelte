@@ -11,13 +11,13 @@
 	import type { Attributes } from "$lib/dnd/attributes"
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
 	import { deriveMovePowers } from "$lib/moves/MovePowers"
-	import type { Move } from "$lib/moves/types"
 	import { createEventDispatcher } from "svelte"
 	import type { LearnedMove } from "../types"
 	import { PlusMinus } from "$lib/ui/elements"
 	import { FlatDl } from "$lib/ui/elements"
 	import type { Level } from "$lib/dnd/level"
 	import type { PokemonType } from "$lib/pokemon/types"
+	import type { Move } from "$lib/moves/Move"
 
 	const dispatch = createEventDispatcher()
 

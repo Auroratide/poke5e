@@ -3,8 +3,7 @@
 </script>
 
 <script lang="ts">
-	import { moves, tms } from "$lib/moves/store"
-	import { groupByLearnability } from "$lib/moves/group"
+	import { MovesStore } from "$lib/moves/store"
 	import {
 		MarkdownField,
 		Removable,
@@ -13,21 +12,23 @@
 	} from "$lib/ui/forms"
 	import type { LearnedMove } from "$lib/trainers/types"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
+	import { LearnableMoves } from "./LearnableMoves"
+	import type { Level } from "$lib/dnd/level"
 
 	export let value: LearnedMove
 	export let species: PokemonSpecies
-	export let level: number
+	export let level: Level
 	export let disabled: boolean = false
 
-	$: moveGroups = groupByLearnability($moves ?? [], $tms ?? [], species, level)
-	$: moveOptions = moveGroups.map((it) => ({
+	$: learnableMoves = LearnableMoves.groupMoves($MovesStore ?? [], species, level)
+	$: moveOptions = learnableMoves.nonemptyGroups().map((it) => ({
 		name: it.name,
 		values: it.moves.map((it) => ({ name: it.name, value: it.id })),
 	}))
 	$: moveFieldName = getMoveFieldName(value.id)
 
 	const onMoveChange = () => {
-		const pp = $moves.find((it) => it.id === value.moveId)?.pp ?? 0
+		const pp = $MovesStore.find((it) => it.id === value.moveId)?.pp ?? 0
 		value.pp.current = pp
 		value.pp.max = pp
 	}

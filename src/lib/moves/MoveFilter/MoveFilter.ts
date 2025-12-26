@@ -1,6 +1,6 @@
 import type { Attribute } from "$lib/dnd/attributes"
 import type { PokeType } from "$lib/pokemon/types"
-import type { Move } from "../types"
+import type { Move } from "../Move"
 
 export class MoveFilter {
 	private filters: {
@@ -38,7 +38,7 @@ export class MoveFilter {
 	apply = (move: Move): boolean => {
 		return move.name.toLocaleLowerCase().includes(this.filters.name.toLocaleLowerCase())
 			&& (this.filters.type === "" || move.type === this.filters.type)
-			&& (this.filters.power === "" || move.power.includes(this.filters.power))
+			&& (this.filters.power === "" || move.power.appliesToAttribute(this.filters.power))
 			&& !this.filters.not.includes(move.id)
 	}
 }

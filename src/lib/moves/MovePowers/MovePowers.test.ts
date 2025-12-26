@@ -1,5 +1,5 @@
 import { test, expect } from "vitest"
-import { stubMove } from "../test/stubs"
+import { stubMove } from "../test/stubs-2"
 import { deriveMovePowers } from "./MovePowers"
 import type { Attributes } from "$lib/dnd/attributes"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"

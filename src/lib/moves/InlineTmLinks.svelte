@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { base } from "$app/paths"
-	import { tms as allTms } from "./store"
+	import { TmsStore as allTms } from "./store"
 
 	export let tms: number[]
 
-	const name = (tm: number) => $allTms.find(it => it.id === tm)?.moveInfo?.name
+	const name = (tm: number) => $allTms.find(it => it.tm.id === tm)?.name
 </script>
 
 {#if $allTms !== undefined}

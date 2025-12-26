@@ -1,24 +1,27 @@
 <script lang="ts">
-	import type { Move } from "./types"
 	import { Card } from "$lib/ui/page"
 	import { FlatDl } from "$lib/ui/elements"
-	import { powerAsString } from "./string"
 	import MoveDescription from "./MoveDescription.svelte"
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import { TypeTag } from "$lib/pokemon/types"
-	import { SpeciesIdentifier } from "$lib/poke5e/species"
+	import { PokemonSpecies } from "$lib/poke5e/species"
+	import type { Move } from "./Move"
 
 	export let move: Move
+	export let pokemon: PokemonSpecies[] = []
+	export let tm: boolean = false
+
+	$: pokemonWhoLearnThisMove = move.pokemonWhoLearnThis(pokemon)
 </script>
 
-<Card title={move.name}>
+<Card title={tm ? move.tmName() : move.name}>
 	<TypeTag slot="header-extra" type={[move.type]}></TypeTag>
 	<section class="info">
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<FlatDl>
 			<dt>Move Power</dt>
-			<dd class="power">{powerAsString(move.power)}</dd>
+			<dd class="power">{move.power.toString()}</dd>
 			<dt>Move Time</dt>
 			<dd>{move.time}</dd>
 			<dt><abbr title="Power Points">PP</abbr></dt>
@@ -32,11 +35,11 @@
 	<section class="description">
 		<MoveDescription {move} />
 	</section>
-	{#if move.pokemon != null && move.pokemon.length > 0}
+	{#if pokemonWhoLearnThisMove.length > 0}
 		<section>
 			<h2>Can learn this move:</h2>
-			<SimplePokemonList pokemon={move.pokemon.map((it) => ({
-				id: SpeciesIdentifier.fromSpeciesName(it.id),
+			<SimplePokemonList pokemon={pokemonWhoLearnThisMove.map((it) => ({
+				id: it.id,
 				name: it.name,
 			}))} />
 		</section>

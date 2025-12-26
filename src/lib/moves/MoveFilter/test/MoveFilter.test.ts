@@ -1,6 +1,6 @@
 import { test, expect } from "vitest"
 import { MoveFilter } from "../MoveFilter"
-import { stubMove } from "$lib/moves/test/stubs"
+import { stubMove } from "$lib/moves/test/stubs-2"
 
 const moves = [
 	stubMove({

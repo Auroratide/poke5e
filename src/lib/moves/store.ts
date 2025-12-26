@@ -1,36 +1,28 @@
-import type { Move, Tm } from "./types"
-import { derived, readable, writable } from "svelte/store"
-import { base } from "$app/paths"
+import { derived, readable, writable, type Readable } from "svelte/store"
+import { resolve } from "$app/paths"
+import { Move } from "./Move"
+import type { Tm } from "./Tm"
+import type { Data } from "$lib/DataClass"
+import { TmDetails } from "./TmDetails"
 
-export const moves = readable<Move[]>(undefined, (set) => {
+export const MovesStore = readable<Move[]>(undefined, (set) => {
 	if (typeof window !== "undefined") {
-		fetch(`${base}/moves.json`)
+		fetch(resolve("/moves.json"))
 			.then(res => res.json())
-			.then(data => set(data.moves))
+			.then(data => data.moves)
+			.then((moves: Data<Move>[]) => moves.map((it) => new Move(it)))
+			.then((moves) => set(moves))
 	}
 })
 
-export const tms = readable<Tm[]>(undefined, (set) => {
-	if (typeof window !== "undefined") {
-		fetch(`${base}/tms.json`)
-			.then(res => res.json())
-			.then(data => set(data.items))
-	}
+export const TmsStore: Readable<Tm[]> = derived(MovesStore, (moves) => {
+	return moves
+		?.filter((it) => it.isTm())
+		.sort(TmDetails.byTmId)
 })
 
-export const tmMoves = derived([moves, tms], ([moves, tms]) => {
-	return tms?.map((tm) => {
-		const move = moves?.find((it) => it.id === tm.moveInfo.id)
-		return {
-			...move,
-			id: tm.id.toString(),
-			name: tm.moveInfo.name,
-		}
-	})
-})
+export const MovesFilterStore = writable("")
+export const MovesSorterStore = writable(() => 0)
 
-export const filterValue = writable("")
-export const currentSorter = writable(() => 0)
-
-export const filterTmValue = writable("")
-export const currentTmSorter = writable(() => 0)
+export const TmsFilterStore = writable("")
+export const TmsSorterStore = writable(() => 0)

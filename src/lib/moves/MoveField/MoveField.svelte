@@ -6,14 +6,14 @@
 	import { createEventDispatcher } from "svelte"
 	import { slide } from "svelte/transition"
 	import { MoveFilter } from "../MoveFilter"
-	import type { Move } from "../types"
 	import MoveOption from "./MoveOption.svelte"
 	import { TextField } from "$lib/ui/forms"
+	import type { Move, MoveId } from "../Move"
 
 	const dispatch = createEventDispatcher()
 
 	export let label: string
-	export let value: Move["id"]
+	export let value: MoveId
 	export let name: string
 	export let moves: Move[]
 	export let disabled = false

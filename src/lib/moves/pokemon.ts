@@ -1,7 +1,9 @@
 import type { Pokemon } from "$lib/poke5e/legacy-types"
-import type { Move, Tm } from "./types"
+import type { MoveId } from "./Move"
+import type { TmId } from "./TmDetails"
+import type { Tm } from "./types"
 
-export function pokemonWhoLearnThisMove(move: Move["id"], tms: Pick<Tm, "id" | "move">[], pokemon: Pick<Pokemon, "id" | "name" | "moves">[]): Pick<Pokemon, "id" | "name">[] {
+export function pokemonWhoLearnThisMove(move: MoveId, tms: Pick<Tm, "id" | "move">[], pokemon: Pick<Pokemon, "id" | "name" | "moves">[]): Pick<Pokemon, "id" | "name">[] {
 	const relevantTmIds = tms
 		.filter(tm => tm.move === move)
 		.map(tm => tm.id)
@@ -28,7 +30,7 @@ export function pokemonWhoLearnThisMove(move: Move["id"], tms: Pick<Tm, "id" | "
 	})
 }
 
-export function pokemonWhoLearnThisTm(tm: Tm["id"], pokemon: Pick<Pokemon, "id" | "name" | "moves">[]): Pick<Pokemon, "id" | "name">[] {
+export function pokemonWhoLearnThisTm(tm: TmId, pokemon: Pick<Pokemon, "id" | "name" | "moves">[]): Pick<Pokemon, "id" | "name">[] {
 	return pokemon.filter(poke => {
 		const tmMoves = poke.moves.tm ?? []
 		return tmMoves.includes(tm)

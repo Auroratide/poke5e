@@ -9,10 +9,10 @@
 		pokemonSorter,
 	} from "$lib/site/stores"
 	import {
-		filterValue as movesFilter,
-		currentSorter as movesSorter,
-		filterTmValue as tmsFilter,
-		currentTmSorter as tmsSorter,
+		MovesFilterStore as movesFilter,
+		MovesSorterStore as movesSorter,
+		TmsFilterStore as tmsFilter,
+		TmsSorterStore as tmsSorter,
 	} from "$lib/moves/store"
 	import {
 		trainerListFilterValue,

@@ -121,7 +121,7 @@
 	<BondFieldset bind:value={bond} {disabled} />
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
-	<MovesFieldset bind:values={moves} {species} {level} {disabled} />
+	<MovesFieldset bind:values={moves} {species} level={new Level(level)} {disabled} />
 	<FeatsFieldset feats={$DndAndPokemonFeats} bind:values={feats} {disabled} />
 	<HeldItemsFieldset bind:items {disabled} />
 	<Fieldset title="General">

@@ -1,9 +1,10 @@
 import { test, expect } from "vitest"
-import { groupByLearnability } from "../group"
-import { stubMove, stubTm } from "./stubs"
-import type { Move, Tm } from "../types"
-import { measureTime } from "$lib/test/time"
+import { LearnableMoves } from "../LearnableMoves"
+import { stubMove, stubTm, stubTmDetails } from "./stubs-2"
+import type { Move } from "../Move"
 import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
+import { Level } from "$lib/dnd/level"
+import { measureTime } from "$lib/test/time"
 
 const flamethrower = stubMove({
 	id: "flamethrower",
@@ -20,20 +21,17 @@ const tackle = stubMove({
 	name: "Tackle",
 })
 
-const thunderbolt = stubMove({
+const thunderbolt = stubTm({
 	id: "thunderbolt",
 	name: "Thunderbolt",
+	tm: stubTmDetails({
+		id: 7,
+	}),
 })
 
 const waterGun = stubMove({
 	id: "water-gun",
 	name: "Water Gun",
-})
-
-const thunderboltTm = stubTm({
-	id: 7,
-	move: thunderbolt.id,
-	moveInfo: thunderbolt,
 })
 
 const ALL_MOVES: Move[] = [
@@ -44,8 +42,6 @@ const ALL_MOVES: Move[] = [
 	waterGun,
 ]
 
-const ALL_TMS: Tm[] = [thunderboltTm]
-
 test("pokemon cannot learn any moves", () => {
 	// given
 	const pokemon = stubPokemonSpecies({
@@ -55,10 +51,10 @@ test("pokemon cannot learn any moves", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 20)
+	const result = LearnableMoves.groupMoves(ALL_MOVES, pokemon, new Level(20))
 
 	// then: only non-empty groups show
-	expect(result).toEqual([ {
+	expect(result.nonemptyGroups()).toEqual([ {
 		name: "All Other Moves",
 		moves: ALL_MOVES,
 	} ])
@@ -73,10 +69,10 @@ test("pokemon can learn some moves", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 20)
+	const result = LearnableMoves.groupMoves(ALL_MOVES, pokemon, new Level(20))
 
 	// then
-	expect(result).toEqual([ {
+	expect(result.nonemptyGroups()).toEqual([ {
 		name: "Learnable at Current Level",
 		moves: [flamethrower, tackle],
 	}, {
@@ -95,10 +91,10 @@ test("pokemon can learn moves at different levels", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 3)
+	const result = LearnableMoves.groupMoves(ALL_MOVES, pokemon, new Level(3))
 
 	// then: order is alphabetical
-	expect(result).toEqual([ {
+	expect(result.nonemptyGroups()).toEqual([ {
 		name: "Learnable at Current Level",
 		moves: [flamethrower, tackle],
 	}, {
@@ -120,10 +116,10 @@ test("pokemon can learn moves from every available level", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 10)
+	const result = LearnableMoves.groupMoves(ALL_MOVES, pokemon, new Level(10))
 
 	// then: order is alphabetical
-	expect(result).toEqual([ {
+	expect(result.nonemptyGroups()).toEqual([ {
 		name: "Learnable at Current Level",
 		moves: [flamethrower, razorLeaf, tackle, waterGun],
 	}, {
@@ -142,10 +138,10 @@ test("pokemon can learn egg moves", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 20)
+	const result = LearnableMoves.groupMoves(ALL_MOVES, pokemon, new Level(20))
 
 	// then
-	expect(result).toEqual([ {
+	expect(result.nonemptyGroups()).toEqual([ {
 		name: "Learnable at Current Level",
 		moves: [flamethrower, tackle],
 	}, {
@@ -167,10 +163,10 @@ test("egg move is also a learnable move", () => {
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 20)
+	const result = LearnableMoves.groupMoves(ALL_MOVES, pokemon, new Level(20))
 
 	// then
-	expect(result).toEqual([ {
+	expect(result.nonemptyGroups()).toEqual([ {
 		name: "Learnable at Current Level",
 		moves: [flamethrower, tackle],
 	}, {
@@ -187,15 +183,15 @@ test("pokemon can learn TMs", () => {
 	const pokemon = stubPokemonSpecies({
 		moves: {
 			start: [tackle.id, flamethrower.id],
-			tm: [thunderboltTm.id],
+			tm: [thunderbolt.tm.id],
 		},
 	})
 
 	// when
-	const result = groupByLearnability(ALL_MOVES, ALL_TMS, pokemon, 20)
+	const result = LearnableMoves.groupMoves(ALL_MOVES, pokemon, new Level(20))
 
 	// then
-	expect(result).toEqual([ {
+	expect(result.nonemptyGroups()).toEqual([ {
 		name: "Learnable at Current Level",
 		moves: [flamethrower, tackle],
 	}, {
@@ -216,32 +212,10 @@ test("moves list is empty", () => {
 	})
 
 	// when
-	const result = groupByLearnability([], ALL_TMS, pokemon, 20)
+	const result = LearnableMoves.groupMoves([], pokemon, new Level(20))
 
 	// then
-	expect(result).toEqual([])
-})
-
-test("tms list is empty", () => {
-	// given
-	const pokemon = stubPokemonSpecies({
-		moves: {
-			start: [tackle.id, flamethrower.id],
-			tm: [thunderboltTm.id],
-		},
-	})
-
-	// when
-	const result = groupByLearnability(ALL_MOVES, [], pokemon, 20)
-
-	// then
-	expect(result).toEqual([ {
-		name: "Learnable at Current Level",
-		moves: [flamethrower, tackle],
-	}, {
-		name: "All Other Moves",
-		moves: [razorLeaf, thunderbolt, waterGun],
-	} ])
+	expect(result.nonemptyGroups()).toEqual([])
 })
 
 test("performance is not garbage", () => {
@@ -254,11 +228,10 @@ test("performance is not garbage", () => {
 	})
 
 	const thousandsOfMoves = Array(5000).map((_, i) => stubMove({ id: `${i}` }))
-	const hundredsOfTms = Array(500).map((_, i) => stubTm({ id: i, move: `${i}` }))
 
 	// when
 	const { elapsedMs } = measureTime(() => {
-		groupByLearnability(thousandsOfMoves, hundredsOfTms, pokemon, 20)
+		LearnableMoves.groupMoves(thousandsOfMoves, pokemon, new Level(20)).nonemptyGroups()
 	})
 
 	// then

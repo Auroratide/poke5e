@@ -3,12 +3,13 @@
 	import { Button } from "$lib/ui/elements"
 	import { Fieldset, focusInputField } from "$lib/ui/forms"
 	import MoveEditor, { getMoveFieldName } from "$lib/moves/MoveEditor.svelte"
-	import { moves } from "$lib/moves/store"
+	import { MovesStore } from "$lib/moves/store"
 	import type { LearnedMove } from "$lib/trainers/types"
+	import type { Level } from "$lib/dnd/level"
 
 	export let values: LearnedMove[]
 	export let species: PokemonSpecies
-	export let level: number
+	export let level: Level
 	export let disabled: boolean
 
 	let newMoveId = -1001
@@ -20,7 +21,7 @@
 
 	const addMove = () => {
 		const newMove = species?.moves?.data?.start?.[0] ?? "tackle"
-		const pp = $moves?.find((it) => it.id === newMove)?.pp ?? 20
+		const pp = $MovesStore?.find((it) => it.id === newMove)?.pp ?? 20
 		const nextId = nextNewMoveId()
 
 		values = [...values, {

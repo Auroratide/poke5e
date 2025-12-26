@@ -1,7 +1,7 @@
 import type { Attributes, Attribute } from "$lib/dnd/attributes"
 import type { Level } from "$lib/dnd/level"
 import type { PokeType } from "$lib/pokemon/types"
-import type { Move } from "../types"
+import type { Move } from "../Move"
 
 export type MovePowers = {
 	toHit: number,
@@ -18,11 +18,11 @@ export type MovePowerDependencies = {
 const maxBy = <T>(val: (o: T) => number) => (max: T, cur: T) => val(cur) > val(max) ? cur : max
 
 export function deriveMovePowers(move: Move, deps: MovePowerDependencies): MovePowers | undefined {
-	if (move.power === "none" || move.power === "varies") return undefined
+	if (move.power.data === "none" || move.power.data === "varies") return undefined
 
-	const power: Attribute[] = move.power === "any"
+	const power: Attribute[] = move.power.data === "any"
 		? ["str", "dex", "con", "int", "wis", "cha"]
-		: move.power
+		: move.power.data
 
 	const bestPower = power.reduce(maxBy((power) => deps.attributes[power].score))
 	const attributeMod = deps.attributes[bestPower].modifier

@@ -13,6 +13,8 @@ export const GET: RequestHandler = async ({ params }) => {
 	const move = {
 		...selected,
 		contest,
+
+		// kept for backward compatibility
 		pokemon: pokemon.map(it => ({
 			id: it.id,
 			name: it.name,

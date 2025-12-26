@@ -4,12 +4,12 @@
 	import TmList from "$lib/moves/TmList.svelte"
 	import { DiscIcon } from "$lib/ui/icons"
 	import { Loader } from "$lib/ui/elements"
-	import { tms } from "$lib/moves/store"
+	import { TmsStore } from "$lib/moves/store"
 	import { ListPageHeading } from "$lib/ui/page"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 
 	$: ssrTms = $page.data.tmsList
-	$: tmsToRender = ssrTms ?? $tms
+	$: tmsToRender = ssrTms ?? $TmsStore
 </script>
 
 <Page theme="purple">
