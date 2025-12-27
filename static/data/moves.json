@@ -7709,7 +7709,7 @@
       "time": "1 action",
       "pp": 3,
       "duration": "instantaneous",
-      "range": "self (40ft radius)",
+      "range": "self (20ft radius)",
       "description": [
         "You create a deafening, explosive sound that damages all creatures within 20 feet of you. Force any creature in range to make a CON save against your Move DC, taking 2d12 + MOVE electric damage on a failure, or half as much on a success."
       ],
