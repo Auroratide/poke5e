@@ -3,7 +3,7 @@ import { error } from "@sveltejs/kit"
 import { resolve } from "$app/paths"
 import type { Data } from "$lib/DataClass"
 import { Move } from "$lib/moves/Move"
-import type { Tm } from "$lib/moves/Tm"
+import type { Tm } from "$lib/moves/tms/Tm"
 
 export const load: PageLoad = async ({ fetch, params }) => {
 	return fetch(resolve("/moves.json")).then(async (res) => {

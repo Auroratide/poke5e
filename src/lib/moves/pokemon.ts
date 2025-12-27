@@ -1,6 +1,6 @@
 import type { Pokemon } from "$lib/poke5e/legacy-types"
 import type { MoveId } from "./Move"
-import type { TmId } from "./TmDetails"
+import type { TmId } from "./tms/TmDetails"
 import type { Tm } from "./types"
 
 export function pokemonWhoLearnThisMove(move: MoveId, tms: Pick<Tm, "id" | "move">[], pokemon: Pick<Pokemon, "id" | "name" | "moves">[]): Pick<Pokemon, "id" | "name">[] {
