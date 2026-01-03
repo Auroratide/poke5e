@@ -1,7 +1,7 @@
 import type { Data } from "$lib/DataClass"
 import { Move } from "../Move"
-import type { Tm } from "../Tm"
-import { TmDetails } from "../TmDetails"
+import type { Tm } from "../tms/Tm"
+import { TmDetails } from "../tms/TmDetails"
 
 export function stubMove(template: Partial<Data<Move>> = {}): Move {
 	return new Move({

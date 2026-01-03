@@ -2,10 +2,10 @@ import { DataClass, type Data } from "$lib/DataClass"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import type { PokeType } from "$lib/pokemon/types"
 import type { BodyText } from "$lib/ui/rendering/types"
-import { ContestDetails } from "./ContestDetails"
+import { ContestDetails } from "./contest/ContestDetails"
 import { MovePower } from "./MovePower"
-import type { Tm } from "./Tm"
-import { TmDetails } from "./TmDetails"
+import type { Tm } from "./tms/Tm"
+import { TmDetails } from "./tms/TmDetails"
 
 export type MoveId = string
 

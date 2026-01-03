@@ -1,9 +1,9 @@
 import { test, expect } from "vitest"
-import { stubMove } from "../test/stubs-2"
-import { deriveMovePowers } from "./MovePowers"
+import { stubMove } from "./stubs-2"
 import type { Attributes } from "$lib/dnd/attributes"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { Level } from "$lib/dnd/level"
+import { deriveMoveStats } from "../MoveStats"
 
 const ATTRIBUTES: Attributes = stubAttributes({
 	str: 8,
@@ -21,7 +21,7 @@ test("single attribute", () => {
 	})
 
 	// +2 from int, +2 from level
-	const result = deriveMovePowers(move, {
+	const result = deriveMoveStats(move, {
 		attributes: ATTRIBUTES,
 		level: new Level(1),
 		type: ["psychic"],
@@ -41,7 +41,7 @@ test("multiple attribute", () => {
 	})
 
 	// +0 from dex, +2 from level
-	const result = deriveMovePowers(move, {
+	const result = deriveMoveStats(move, {
 		attributes: ATTRIBUTES,
 		level: new Level(1),
 		type: ["psychic"],
@@ -61,7 +61,7 @@ test("any attribute", () => {
 	})
 
 	// +4 from cha, +2 from level
-	const result = deriveMovePowers(move, {
+	const result = deriveMoveStats(move, {
 		attributes: ATTRIBUTES,
 		level: new Level(1),
 		type: ["psychic"],
@@ -80,7 +80,7 @@ test("no attribute", () => {
 		type: "normal",
 	})
 
-	const result = deriveMovePowers(move, {
+	const result = deriveMoveStats(move, {
 		attributes: ATTRIBUTES,
 		level: new Level(1),
 		type: ["psychic"],
@@ -95,7 +95,7 @@ test("varies attribute", () => {
 		type: "normal",
 	})
 
-	const result = deriveMovePowers(move, {
+	const result = deriveMoveStats(move, {
 		attributes: ATTRIBUTES,
 		level: new Level(1),
 		type: ["psychic"],
@@ -111,7 +111,7 @@ test("has STAB", () => {
 	})
 
 	// +2 from int, +2 from level, +2 from STAB
-	const result = deriveMovePowers(move, {
+	const result = deriveMoveStats(move, {
 		attributes: ATTRIBUTES,
 		level: new Level(1),
 		type: ["psychic"],
@@ -131,7 +131,7 @@ test("higher level", () => {
 	})
 
 	// +2 from int, +6 from level
-	const result = deriveMovePowers(move, {
+	const result = deriveMoveStats(move, {
 		attributes: ATTRIBUTES,
 		level: new Level(20),
 		type: ["psychic"],
@@ -151,7 +151,7 @@ test("multiple types with STAB", () => {
 	})
 
 	// +2 from int, +2 from level, +2 from STAB
-	const result = deriveMovePowers(move, {
+	const result = deriveMoveStats(move, {
 		attributes: ATTRIBUTES,
 		level: new Level(1),
 		type: ["psychic", "normal"],

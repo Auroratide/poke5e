@@ -1,6 +1,6 @@
 import { DataClass } from "$lib/DataClass"
 import type { Move, MoveId } from "$lib/moves/Move"
-import type { TmId } from "$lib/moves/TmDetails"
+import type { TmId } from "$lib/moves/tms/TmDetails"
 
 export class MovePool extends DataClass<{
 	start: MoveId[],

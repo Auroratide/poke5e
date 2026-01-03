@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { SearchField } from "$lib/ui/forms"
-	import { TmsFilterStore, TmsSorterStore } from "./store"
-	import { formatMoney } from "../pokemon/money"
-	import { Move } from "./Move"
+	import { TmsFilterStore, TmsSorterStore } from "../store"
+	import { formatMoney } from "../../pokemon/money"
+	import { Move } from "../Move"
 	import { Url } from "$lib/site/url"
 	import type { Tm } from "./Tm"
 

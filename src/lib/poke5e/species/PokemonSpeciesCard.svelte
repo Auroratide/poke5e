@@ -8,7 +8,7 @@
 	import { Markdown } from "$lib/ui/rendering"
 	import { GenderRatioDisplay } from "$lib/pokemon/gender"
 	import InlineMoveLinks from "$lib/moves/InlineMoveLinks.svelte"
-	import InlineTmLinks from "$lib/moves/InlineTmLinks.svelte"
+	import InlineTmLinks from "$lib/moves/tms/InlineTmLinks.svelte"
 	import type { PokemonSpecies } from "./PokemonSpecies"
 	import { Card, SideArtCardSection } from "$lib/ui/page"
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"

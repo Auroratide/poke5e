@@ -1,9 +1,9 @@
 import { derived, readable, writable, type Readable } from "svelte/store"
 import { resolve } from "$app/paths"
 import { Move } from "./Move"
-import type { Tm } from "./Tm"
+import type { Tm } from "./tms/Tm"
 import type { Data } from "$lib/DataClass"
-import { TmDetails } from "./TmDetails"
+import { TmDetails } from "./tms/TmDetails"
 
 export const MovesStore = readable<Move[]>(undefined, (set) => {
 	if (typeof window !== "undefined") {

@@ -10,7 +10,7 @@
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import type { Attributes } from "$lib/dnd/attributes"
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
-	import { deriveMovePowers } from "$lib/moves/MovePowers"
+	import { deriveMoveStats } from "$lib/moves/MoveStats"
 	import { createEventDispatcher } from "svelte"
 	import type { LearnedMove } from "../types"
 	import { PlusMinus } from "$lib/ui/elements"
@@ -30,7 +30,7 @@
 
 	$: currentPp = move.pp.current
 
-	$: movePowers = deriveMovePowers(moveData, {
+	$: movePowers = deriveMoveStats(moveData, {
 		attributes: attributes,
 		level: level,
 		type: pokemonType.data,
