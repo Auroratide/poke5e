@@ -32,11 +32,15 @@
 		values = values.toSpliced(i, 1)
 	}
 
+	$: console.log(values)
+
 	let nameFilter = ""
 	let typeFilter: PokeType | "" = ""
 	let powerFilter: Attribute | "" = ""
+	$: tmFilter = parseInt(nameFilter)
 	$: moveFilter = new MoveFilter()
-		.name(nameFilter)
+		.name(isNaN(tmFilter) ? nameFilter : "")
+		.tm(isNaN(tmFilter) ? undefined : tmFilter)
 		.type(typeFilter)
 		.power(powerFilter)
 		.not(values)
@@ -68,7 +72,7 @@
 				{#each values as value, index}
 					{@const move = moves.find((it) => it.id === value)}
 					<li>
-						<MoveOption idPrefix="{id}" value={move}>
+						<MoveOption idPrefix="{id}" value={move} {useTmName}>
 							<Button variant="danger" on:click={remove(index)}><strong><span aria-hidden="true">&times;</span><VisuallyHidden inline>remove</VisuallyHidden></strong></Button>
 						</MoveOption>
 					</li>

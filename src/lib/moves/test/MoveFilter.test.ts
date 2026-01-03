@@ -1,6 +1,6 @@
 import { test, expect } from "vitest"
 import { MoveFilter } from "../MoveFilter"
-import { stubMove } from "$lib/moves/test/stubs-2"
+import { stubMove, stubTmDetails } from "$lib/moves/test/stubs-2"
 
 const moves = [
 	stubMove({
@@ -39,6 +39,14 @@ const moves = [
 		type: "fire",
 		power: ["dex", "cha"],
 	}),
+	stubMove({
+		name: "Lychee",
+		type: "fairy",
+		power: ["int"],
+		tm: stubTmDetails({
+			id: 18,
+		}),
+	})
 ]
 
 test("name only", () => {
@@ -159,4 +167,33 @@ test("empty power", () => {
 	const result = moves.filter(filter.apply)
 
 	expect(result.length).toEqual(moves.length)
+})
+
+test("exact tm number", () => {
+	const filter = new MoveFilter()
+		.tm(18)
+	
+	const result = moves.filter(filter.apply)
+
+	expect(result.length).toEqual(1)
+	expect(result[0]).toEqual(moves[7])
+})
+
+test("partial tm number", () => {
+	const filter = new MoveFilter()
+		.tm(1)
+	
+	const result = moves.filter(filter.apply)
+
+	expect(result.length).toEqual(1)
+	expect(result[0]).toEqual(moves[7])
+})
+
+test("not a matching tm number", () => {
+	const filter = new MoveFilter()
+		.tm(28)
+	
+	const result = moves.filter(filter.apply)
+
+	expect(result.length).toEqual(0)
 })

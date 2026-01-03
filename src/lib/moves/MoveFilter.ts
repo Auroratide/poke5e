@@ -7,12 +7,14 @@ export class MoveFilter {
 		name: string,
 		type: PokeType | "",
 		power: Attribute | "",
+		tm: number | undefined,
 		not: string[],
 	} = {
 			name: "",
 			type: "",
 			power: "",
 			not: [],
+			tm: undefined
 		}
 
 	name(value: string): MoveFilter {
@@ -30,6 +32,11 @@ export class MoveFilter {
 		return this
 	}
 
+	tm(value: number | undefined): MoveFilter {
+		this.filters.tm = value
+		return this
+	}
+
 	not(ids: string[]): MoveFilter {
 		this.filters.not = ids
 		return this
@@ -39,6 +46,7 @@ export class MoveFilter {
 		return move.name.toLocaleLowerCase().includes(this.filters.name.toLocaleLowerCase())
 			&& (this.filters.type === "" || move.type === this.filters.type)
 			&& (this.filters.power === "" || move.power.appliesToAttribute(this.filters.power))
+			&& (this.filters.tm == null || move.tm?.id.toString().startsWith(this.filters.tm.toString()))
 			&& !this.filters.not.includes(move.id)
 	}
 }
