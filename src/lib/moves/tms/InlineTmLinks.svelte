@@ -4,7 +4,7 @@
 
 	export let tms: number[]
 
-	const name = (tm: number) => $allTms.find(it => it.tm.id === tm)?.name
+	const name = (tm: number) => $allTms.find(it => it.tm.id === tm)?.tmName()
 </script>
 
 {#if $allTms !== undefined}
