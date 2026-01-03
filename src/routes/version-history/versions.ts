@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.9.3",
+		description: [
+			"Bugfix: Correct \"Skill Master\" feat to \"Skill Expert\", which allows it to appear in the list of feats Pokémon can learn.",
+		],
+	}, {
 		name: "v1.9.2",
 		description: [
 			"Pokémon: Removed unofficial pokémon from the official pokémon list (Brawleon, Minereon, Droideon, Terreon, Specteon, Eeveon, Pesteon, Aereon, Drakeon, Toxeon, Rookite, and Belseraph). They can be added to your Fakémon library in the Settings menu.",
