@@ -130,7 +130,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 	features: {
 		level2: {
-			description: ["You have a nurturing touch and a skill for mentoring Pokémon to bring out the best in them. You gain proficiency in the Medicine skill. Every time you use an item or ability to heal a Pokémon, that Pokémon regains addtional hit points equal to your Wisdom modifier (minimum one)."],
+			description: ["You have a nurturing touch and a skill for mentoring Pokémon to bring out the best in them. You gain proficiency in the Medicine skill. Every time you use an item or ability to heal a Pokémon, that Pokémon regains additional hit points equal to your Wisdom modifier (minimum one)."],
 		},
 		level5: {
 			name: "Pokéchef",

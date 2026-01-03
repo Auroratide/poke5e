@@ -44,7 +44,7 @@ export const PokemonFeats: Feat[] = [ {
 }, {
 	name: "Ambidextrous",
 	category: "General",
-	description: "Your Pokémon can hold an addtional held item. This feat can only be taken once.",
+	description: "Your Pokémon can hold an additional held item. This feat can only be taken once.",
 }, {
 	name: "Combo Master",
 	category: "General",
@@ -68,7 +68,7 @@ export const PokemonFeats: Feat[] = [ {
 }, {
 	name: "Natural Mount",
 	category: "General",
-	description: "While this Pokémon is mounted, if the creature mounting it is attacked, it can force the attack to target itself instead. Addtionally, if this Pokémon or its mounter are forced to make a Dexterity saving throw that would result in half damage on success, it can deploy additional defenses. This Pokémon can choose either itself or its mounter to take no damage if they succeed on the saving throw, and only half damage if they fail.",
+	description: "While this Pokémon is mounted, if the creature mounting it is attacked, it can force the attack to target itself instead. Additionally, if this Pokémon or its mounter are forced to make a Dexterity saving throw that would result in half damage on success, it can deploy additional defenses. This Pokémon can choose either itself or its mounter to take no damage if they succeed on the saving throw, and only half damage if they fail.",
 }, {
 	name: "Power Sculpter",
 	category: "General",
