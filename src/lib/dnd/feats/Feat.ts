@@ -6,6 +6,7 @@ export type Feat = {
 	category: FeatCategory,
 	prerequisites?: Prerequisite[],
 	description: MarkdownString,
+	removed?: boolean,
 }
 
 export type FeatCategory = "Origin" | "General" | "Fighting Style" | "Epic Boon"

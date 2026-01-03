@@ -289,6 +289,12 @@ export const DndFeats: Feat[] = [ {
 	category: "General",
 	prerequisites: [level(4)],
 	description: seePhb(207),
+	removed: true,
+}, {
+	name: "Skill Expert",
+	category: "General",
+	prerequisites: [level(4)],
+	description: seePhb(207),
 }, {
 	name: "Skilled",
 	category: "Origin",
