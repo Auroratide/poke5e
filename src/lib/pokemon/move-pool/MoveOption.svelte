@@ -5,9 +5,9 @@
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
 	import type { Move } from "$lib/moves/Move"
 
-
 	export let idPrefix: string
 	export let value: Move
+	export let useTmName: boolean = false
 
 	let showInfo = false
 	$: infoId = `${idPrefix}-${value.id}-info`
@@ -18,7 +18,7 @@
 		<Tag color={value.type}>
 			<TypeIcon type={value.type} slot="icon" />
 			<span class="full-row">
-				<span class="full align-center">{value.name}</span>
+				<span class="full align-center">{useTmName ? value.tmName() : value.name}</span>
 				<span class="smaller no-round button-row">
 					<Button bind:expanded={showInfo} controls="{infoId}"><span class="smaller">{#if showInfo}-{:else}+{/if} Info</span></Button>
 					<slot></slot>

@@ -14,6 +14,7 @@
 	export let values: string[]
 	export let disabled = false
 	export let moves: Move[] = []
+	export let useTmName: boolean = false
 
 	$: id = title.replaceAll(/\s/g, "-").toLocaleLowerCase()
 
@@ -85,7 +86,7 @@
 			<ul class="scrollable">
 				{#each filteredMoves as move (move.id)}
 					<li>
-						<MoveOption idPrefix="{id}" value={move}>
+						<MoveOption idPrefix="{id}" value={move} {useTmName}>
 							<Button variant="success" on:click={add(move.id)}><strong><span aria-hidden="true">+</span><VisuallyHidden inline>add</VisuallyHidden></strong></Button>
 						</MoveOption>
 					</li>

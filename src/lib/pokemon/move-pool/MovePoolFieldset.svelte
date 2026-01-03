@@ -19,5 +19,5 @@
 	<MovePoolGroupFields title="Level 14 Moves" bind:values={value.data.level14} moves={$MovesStore} {disabled} />
 	<MovePoolGroupFields title="Level 18 Moves" bind:values={value.data.level18} moves={$MovesStore} {disabled} />
 	<MovePoolGroupFields title="Egg Moves" bind:values={value.data.egg} moves={$MovesStore} {disabled} />
-	<MovePoolGroupFields title="TMs" bind:values={tmString} moves={$TmsStore} {disabled} />
+	<MovePoolGroupFields title="TMs" bind:values={tmString} moves={$TmsStore} {disabled} useTmName />
 </Fieldset>
