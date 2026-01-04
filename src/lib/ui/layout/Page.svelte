@@ -1,23 +1,10 @@
 <script lang="ts">
-	import Backdrop from "./Backdrop.svelte"
-	import IconShadow from "./IconShadow.svelte"
-	import { MAIN_CONTENT_ID } from "./SkipLinks.svelte"
-	import { afterUpdate } from "svelte"
-	import { type ThemeColor, Theme } from "$lib/ui/theme"
+	import { type ThemeColor, Theme } from "$lib/ui/theme";
+	import Backdrop from "./Backdrop.svelte";
+	import IconShadow from "./IconShadow.svelte";
+	import { MAIN_CONTENT_ID } from "./SkipLinks.svelte";
 
 	export let theme: ThemeColor
-
-	let mainEl: HTMLElement
-	let isMainEmpty = true
-	let sideEl: HTMLElement
-	let isSideEmpty = true
-
-	// I ended up doing this over simply using :empty because Safari
-	// wasn't actually redrawing the screen
-	afterUpdate(() => {
-		isMainEmpty = mainEl.textContent.length === 0
-		isSideEmpty = sideEl.textContent.length === 0
-	})
 </script>
 
 <Theme id="page-theme" {theme}>
@@ -25,11 +12,11 @@
 		<slot name="icon"></slot>
 	</IconShadow>
 	<Backdrop />
-	<div class="page" class:main-empty={isMainEmpty} class:side-empty={isSideEmpty}>
-		<div bind:this={sideEl} class="side">
+	<div class="page">
+		<div class="side">
 			<slot name="side"></slot>
 		</div>
-		<main bind:this={mainEl} id="{MAIN_CONTENT_ID}">
+		<main id="{MAIN_CONTENT_ID}">
 			<slot></slot>
 		</main>
 	</div>
@@ -50,18 +37,18 @@
 	.page .side {
 		height: 33%;
 		view-transition-name: pageside;
-	} .page.main-empty .side {
+	} .page:has(main:empty) .side {
 		height: 100%;
-	} .page.side-empty .side {
+	} .page .side:empty {
 		height: 0;
 	}
 
 	.page main {
 		height: 67%;
 		view-transition-name: pagemain;
-	} .page.main-empty main {
+	} .page main:empty {
 		height: 0%;
-	} .page.side-empty main {
+	} .page:has(.side:empty) main {
 		height: calc(100% - 1em);
 	}
 
@@ -80,9 +67,9 @@
 			height: 100%;
 		}
 
-		.page.side-empty .side {
+		.page .side:empty {
 			display: none;
-		} .page.side-empty main {
+		} .page:has(.side:empty) main {
 			max-inline-size: 37.5em;
 		}
 	}
