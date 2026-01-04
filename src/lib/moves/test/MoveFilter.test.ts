@@ -46,7 +46,7 @@ const moves = [
 		tm: stubTmDetails({
 			id: 18,
 		}),
-	})
+	}),
 ]
 
 test("name only", () => {

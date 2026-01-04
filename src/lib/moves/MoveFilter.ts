@@ -14,7 +14,7 @@ export class MoveFilter {
 			type: "",
 			power: "",
 			not: [],
-			tm: undefined
+			tm: undefined,
 		}
 
 	name(value: string): MoveFilter {

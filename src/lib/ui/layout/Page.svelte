@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { type ThemeColor, Theme } from "$lib/ui/theme";
-	import Backdrop from "./Backdrop.svelte";
-	import IconShadow from "./IconShadow.svelte";
-	import { MAIN_CONTENT_ID } from "./SkipLinks.svelte";
+	import { type ThemeColor, Theme } from "$lib/ui/theme"
+	import Backdrop from "./Backdrop.svelte"
+	import IconShadow from "./IconShadow.svelte"
+	import { MAIN_CONTENT_ID } from "./SkipLinks.svelte"
 
 	export let theme: ThemeColor
 </script>
