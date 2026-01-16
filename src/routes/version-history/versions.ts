@@ -12,6 +12,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.9.4",
+		description: [
+			"Bugfix: Decidueye level 10 moves are now starting moves, since min level is 10.",
+			"Pokémon: Marshtomp and Swampert inherit the blindsight of Mudkip.",
+			"New: Can now see the Move Power of moves on trainer pokémon, along with which power is being used for calculations.",
+		],
+	}, {
 		name: "v1.9.3",
 		description: [
 			"Bugfix: Correct \"Skill Master\" feat to \"Skill Expert\", which allows it to appear in the list of feats Pokémon can learn.",
