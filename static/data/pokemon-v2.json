@@ -33249,7 +33249,12 @@
 				"str",
 				"con"
 			],
-			"senses": [],
+			"senses": [
+				{
+					"type": "blindsight",
+					"value": 10
+				}
+			],
 			"abilities": [
 				{
 					"id": "torrent",
@@ -33372,7 +33377,12 @@
 				"str",
 				"con"
 			],
-			"senses": [],
+			"senses": [
+				{
+					"type": "blindsight",
+					"value": 10
+				}
+			],
 			"abilities": [
 				{
 					"id": "torrent",
