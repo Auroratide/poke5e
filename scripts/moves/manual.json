@@ -1,0 +1,1894 @@
+{
+	"moves": [
+		{
+			"id": "acid-armor",
+			"name": "Acid Armor",
+			"type": "poison",
+			"power": [
+				"con"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "1 minute, concentration",
+			"range": "self",
+			"description": [
+				"You are surrounded by a shield of thick acid for the duration. During this time, your AC increases by 2, and any creature that hits you with a melee attack must succeed on a CON save or take 1d6 poison damage."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 10.",
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d6",
+					"10": "2d6",
+					"17": "2d6"
+				},
+				"modifier": 0,
+				"type": [
+					"poison"
+				]
+			},
+			"save": {
+				"attribute": [
+					"con"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
+			"id": "arm-thrust",
+			"name": "Arm Thrust",
+			"type": "fighting",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You unleash a flurry of fists on a creature. Make a melee attack roll, doing 1d4 + MOVE fighting damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 fighting damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d8 at level 10, and 2d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d4",
+					"5": "1d6",
+					"10": "1d8",
+					"17": "2d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"fighting"
+				]
+			},
+			"attack": {
+				"scope": "melee"
+			}
+		},
+		{
+			"id": "barrage",
+			"name": "Barrage",
+			"type": "normal",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "30ft",
+			"description": [
+				"Make a ranged attack on a creature, rolling 1d4 on a hit. You attack with a barrage of ranged strikes equal to the number shown. Each projectile deals 1d4 normal damage."
+			],
+			"higherLevels": "Each projectile that hits deals 1d6 at level 5, 2d4 at level 10, and 2d6 at level 17.",
+			"attack": {
+				"scope": "ranged"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d4",
+					"5": "1d6",
+					"10": "2d4",
+					"17": "2d6"
+				},
+				"modifier": 0,
+				"type": [
+					"normal"
+				]
+			}
+		},
+		{
+			"id": "beak-blast",
+			"name": "Beak Blast",
+			"type": "flying",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You heat up your beak and strike out at a target. When you activate this move, you spend your action to charge up your beak. If you are hit with a melee attack before the action of your next turn, the target is burned. On your next turn, spend an action to make a melee attack on a creature, dealing 3d8 + MOVE flying damage on a hit."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "3d8",
+					"5": "5d6",
+					"10": "4d12",
+					"17": "8d8"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"flying"
+				]
+			}
+		},
+		{
+			"id": "beat-up",
+			"name": "Beat Up",
+			"type": "dark",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You use strength in numbers to attack a creature. Make a melee attack on a creature, and an additional attack for any other conscious creature your trainer is currently carrying, dealing 2d6 dark damage on each hit."
+			],
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "2d6",
+					"5": "2d6",
+					"10": "2d6",
+					"17": "2d6"
+				},
+				"modifier": 0,
+				"type": [
+					"dark"
+				]
+			}
+		},
+		{
+			"id": "bind",
+			"name": "Bind",
+			"type": "normal",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 15,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You attempt to grapple a target into submission. Make a melee attack roll. On a hit, the target takes 1d4 + MOVE normal damage and is grappled. At the beginning of each of its turns, it may attempt to escape with a STR save against your Move DC. While a creature is grappled, you may continue this move, as a bonus action, to do an automatic 1d4 normal damage without having to make an attack roll."
+			],
+			"higherLevels": "The damage dice rolls for this move change to 1d6 at level 5, 1d8 at level 10, and 2d6 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d4",
+					"5": "1d6",
+					"10": "1d8",
+					"17": "2d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"normal"
+				]
+			}
+		},
+		{
+			"id": "comeuppance",
+			"name": "Comeuppance",
+			"type": "dark",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 reaction",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"When you are hit by a melee attack, you can use your reaction to make a melee attack against the creature, doing 1d4 + MOVE dark damage on a successful hit."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d8 at level 10, and 2d6 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d4",
+					"5": "1d6",
+					"10": "1d8",
+					"17": "2d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"dark"
+				]
+			}
+		},
+		{
+			"id": "counter",
+			"name": "Counter",
+			"type": "fighting",
+			"power": [
+				"dex",
+				"str"
+			],
+			"time": "1 reaction",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"When you are hit by a melee attack, you can use your reaction to make a melee attack against the creature, doing 1d4 + MOVE fighting damage on a successful hit."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d8 at level 10, and 2d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d4",
+					"5": "1d6",
+					"10": "1d8",
+					"17": "2d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"fighting"
+				]
+			},
+			"attack": {
+				"scope": "melee"
+			}
+		},
+		{
+			"id": "curse",
+			"name": "Curse",
+			"type": "ghost",
+			"power": [
+				"wis",
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "1 minute, concentration",
+			"range": "10ft",
+			"description": [
+				"This Move has a different effect based on your creature type.",
+				"If you are ghost-type: You attempt to put a curse on a creature. Force a target in range to make a WIS saving throw against your Move DC. On a fail, the target is cursed. You take 1d6 damage initially and the target takes 1d6 ghost damage at the end of each of its turns for the duration.",
+				"If you are any other type: You place a curse on yourself. For the duration, your STR and CON scores increase by 2, but your DEX score decreases by 4."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d4 at level 5, 1d12 at level 10, and 4d4 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "2d4",
+					"10": "1d12",
+					"17": "4d4"
+				},
+				"modifier": 0,
+				"type": [
+					"ghost"
+				]
+			},
+			"save": {
+				"attribute": [
+					"wis"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
+			"id": "doom-desire",
+			"name": "Doom Desire",
+			"type": "steel",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "2 turns, concentration",
+			"range": "30ft",
+			"description": [
+				"You promise doom upon a creature. When you activate this move, select a target and make an attack roll. On a hit, at the beginning of the third round after you activate this move, the target takes 2d12 + MOVE damage of no specific type. If the target is switched out, the damage is done to the trainer's current active Pokémon."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 3d10 at level 5, 7d6 at level 10, and 8d8 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "2d12",
+					"5": "3d10",
+					"10": "7d6",
+					"17": "8d8"
+				},
+				"modifier": "MOVE",
+				"type": "typeless"
+			},
+			"attack": {
+				"scope": "ranged"
+			}
+		},
+		{
+			"id": "double-slap",
+			"name": "Double Slap",
+			"type": "normal",
+			"power": [
+				"str",
+				"dex",
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You reach out with quick slaps. Make a melee attack roll, doing 1d4 + MOVE normal damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 normal damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits."
+			],
+			"higherLevels": "The damage dice rolls for this move change to 1d6 at level 5, 1d8 at level 10, and 2d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d4",
+					"5": "1d6",
+					"10": "1d8",
+					"17": "2d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"normal"
+				]
+			},
+			"attack": {
+				"scope": "melee"
+			}
+		},
+		{
+			"id": "dragon-energy",
+			"name": "Dragon Energy",
+			"type": "dragon",
+			"power": [
+				"str",
+				"con"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "30ft",
+			"description": [
+				"You convert your life force into power. Make a ranged attack against a target in range, doing 1d6 + MOVE dragon damage on a hit. For every 20 HP you currently have (excluding temporary HP), deal an additional 1d6 dragon damage."
+			],
+			"attack": {
+				"scope": "ranged"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d6",
+					"10": "1d6",
+					"17": "1d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"dragon"
+				]
+			}
+		},
+		{
+			"id": "flying-press",
+			"name": "Flying Press",
+			"type": "fighting",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You dive at a creature with quick reaction speed, able to change the type of attack when you reach them. Make a melee attack against a target, dealing 4d4 + MOVE flying OR fighting damage, depending on your choice. STAB can only added to this move if its type is fighting."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "4d4",
+					"5": "2d12",
+					"10": "4d8",
+					"17": "8d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"flying",
+					"fighting"
+				]
+			}
+		},
+		{
+			"id": "force-palm",
+			"name": "Force Palm",
+			"type": "fighting",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee/20ft",
+			"description": [
+				"You thrust your palm outward with such strength that a shockwave is sent towards a creature. Make a ranged or melee attack roll, depending on your target. If used as a melee attack, deal 1d10 + MOVE fighting damage on a hit. On a natural attack roll of 16 or higher, the target is paralyzed. If used as a ranged attack, the damage is halved with no chance to paralyze."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d10",
+					"5": "2d8",
+					"10": "5d4",
+					"17": "4d8"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"fighting"
+				]
+			}
+		},
+		{
+			"id": "glare",
+			"name": "Glare",
+			"type": "normal",
+			"power": [
+				"str",
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "1 minute",
+			"range": "60ft",
+			"description": [
+				"You stare into the depths of a creature’s eyes with intense ferocity. The creature must make a WIS saving throw against your Move DC or become frightened for the duration. A creature frightened in this way must make a WIS save against your Move DC at the end of each of its turns to remove the effect."
+			],
+			"save": {
+				"attribute": [
+					"wis"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
+			"id": "hidden-power",
+			"name": "Hidden Power",
+			"type": "normal",
+			"power": "any",
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "30ft",
+			"description": [
+				"You unleash a wave of force of unknown power at a creature in range. Make a ranged attack on a creature, doing 1d10 + MOVE damage of a random type. Roll a d20 to determine which type of damage is dealt.",
+				{
+					"type": "table",
+					"headers": [
+						"d20",
+						"Type",
+						"d20",
+						"Type"
+					],
+					"rows": [
+						[
+							"1",
+							"Normal",
+							"11",
+							"Psychic"
+						],
+						[
+							"2",
+							"Fire",
+							"12",
+							"Bug"
+						],
+						[
+							"3",
+							"Water",
+							"13",
+							"Rock"
+						],
+						[
+							"4",
+							"Electric",
+							"14",
+							"Ghost"
+						],
+						[
+							"5",
+							"Grass",
+							"15",
+							"Dragon"
+						],
+						[
+							"6",
+							"Ice",
+							"16",
+							"Dark"
+						],
+						[
+							"7",
+							"Fighting",
+							"17",
+							"Steel"
+						],
+						[
+							"8",
+							"Poison",
+							"18",
+							"Fairy"
+						],
+						[
+							"9",
+							"Ground",
+							"19",
+							"Typeless"
+						],
+						[
+							"10",
+							"Flying",
+							"20",
+							"Your choice"
+						]
+					]
+				}
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
+			"tm": {
+				"id": 10,
+				"cost": 5200
+			},
+			"attack": {
+				"scope": "ranged"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d10",
+					"5": "2d8",
+					"10": "5d4",
+					"17": "4d8"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"normal",
+					"fighting",
+					"flying",
+					"poison",
+					"ground",
+					"rock",
+					"bug",
+					"ghost",
+					"steel",
+					"fire",
+					"water",
+					"grass",
+					"electric",
+					"psychic",
+					"ice",
+					"dragon",
+					"dark",
+					"fairy"
+				]
+			}
+		},
+		{
+			"id": "hyperspace-fury",
+			"name": "Hyperspace Fury",
+			"type": "dark",
+			"power": "none",
+			"time": "1 action",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "60ft",
+			"description": [
+				"Using your many arms, you send a barrage of three balls of furious energy at any creature(s) in range. Each ball automatically deals 1d6 dark damage to any creature(s) you choose. Reactions that negate damage such as Protect or Detect cannot be used. After activating this move, any attacks against you, until the beginning of your next turn, are rolled at advantage."
+			],
+			"higherLevels": "You can fire 4 projectiles at level 5, 5 projectiles at level 10, and 6 projectiles at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d6",
+					"10": "1d6",
+					"17": "1d6"
+				},
+				"modifier": 0,
+				"type": [
+					"dark"
+				]
+			}
+		},
+		{
+			"id": "judgment",
+			"name": "Judgment",
+			"type": "varies",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "100ft",
+			"description": [
+				"You send powerful missiles of pure energy to rain down on any creature in an 80 foot circle, centered on a point in range. Any creature caught in the area must make a DEX save against your Move DC, taking 5d6 + MOVE damage on a failure, or half as much on a success. The type of the damage depends on the kind of plate the user is holding."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 4d10 at level 5, 6d10 at level 10, and 8d12 at level 17.",
+			"save": {
+				"attribute": [
+					"dex"
+				],
+				"dc": "MOVE"
+			},
+			"damage": {
+				"dice": {
+					"1": "5d6",
+					"5": "4d10",
+					"10": "6d10",
+					"17": "8d12"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"normal",
+					"fighting",
+					"flying",
+					"poison",
+					"ground",
+					"rock",
+					"bug",
+					"ghost",
+					"steel",
+					"fire",
+					"water",
+					"grass",
+					"electric",
+					"psychic",
+					"ice",
+					"dragon",
+					"dark",
+					"fairy"
+				]
+			}
+		},
+		{
+			"id": "last-respects",
+			"name": "Last Respects",
+			"type": "ghost",
+			"power": [
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "30ft",
+			"description": [
+				"You avenge your allies with a powerful attack. Make a ranged attack, dealing 1d6 + MOVE ghost damage on a hit. Increase the damage dice by 2d6 for each of your currently downed allies this combat, up to a maximum of 10d6."
+			],
+			"attack": {
+				"scope": "ranged"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d6",
+					"10": "1d6",
+					"17": "1d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"ghost"
+				]
+			}
+		},
+		{
+			"id": "light-screen",
+			"name": "Light Screen",
+			"type": "psychic",
+			"power": "none",
+			"time": "1 reaction",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "self",
+			"description": [
+				"When you are subject to a ranged attack, use your reaction to take half the damage dealt now and on any ranged attack that targets you until the beginning of your next turn."
+			],
+			"tm": {
+				"id": 16,
+				"cost": 4400
+			}
+		},
+		{
+			"id": "metal-burst",
+			"name": "Metal Burst",
+			"type": "steel",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 reaction",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You lash out in retaliation with a bust of harsh metal shards. As a reaction, when you are hit with a melee attack that deals damage, make a melee attack roll against your attacker, with disadvantage. On a hit, deal the same amount of steel type damage back at your attacker (maximum of 5x your current level)."
+			],
+			"attack": {
+				"scope": "melee"
+			}
+		},
+		{
+			"id": "mirror-coat",
+			"name": "Mirror Coat",
+			"type": "psychic",
+			"power": [
+				"con",
+				"wis"
+			],
+			"time": "1 reaction",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "40ft",
+			"description": [
+				"When subject to a ranged attack, you can attempt to decrease the damage and send some back at the attacker in range. Using this reaction, the damage is decreased by 1d6 + MOVE. If this causes the damage to fall below zero, the attack is deflected and you may make a ranged attack roll to send it back at the attacker for 1d6 + MOVE psychic damage."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d12",
+					"10": "2d8",
+					"17": "4d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"psychic"
+				]
+			},
+			"attack": {
+				"scope": "ranged"
+			}
+		},
+		{
+			"id": "multi-attack",
+			"name": "Multi-Attack",
+			"type": "varies",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You strike out with inner power, depending on your type. Make a melee attack on a target, dealing 2d8 + MOVE damage of your current type."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "2d8",
+					"5": "2d10",
+					"10": "3d10",
+					"17": "4d12"
+				},
+				"modifier": "MOVE",
+				"type": []
+			},
+			"attack": {
+				"scope": "melee"
+			}
+		},
+		{
+			"id": "natural-gift",
+			"name": "Natural Gift",
+			"type": "varies",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "40ft",
+			"description": [
+				"You draw in power from your held berry, releasing it into a ranged attack. Make a ranged attack, dealing 1d12 + MOVE damage on a hit. The type is dependant on what berry you are holding, according to the chart below:",
+				{
+					"type": "table",
+					"headers": [
+						"Type",
+						"Berry",
+						"Type",
+						"Berry"
+					],
+					"rows": [
+						[
+							"Normal",
+							"Chilan",
+							"Flying",
+							"Lum, Coba"
+						],
+						[
+							"Fire",
+							"Cherri, Occa",
+							"Psychic",
+							"Sitrus, Payapa"
+						],
+						[
+							"Water",
+							"Chesto, Passho",
+							"Bug",
+							"Tanga"
+						],
+						[
+							"Electric",
+							"Pecha, Waccan",
+							"Rock",
+							"Charti"
+						],
+						[
+							"Grass",
+							"Rawst, Rindo",
+							"Ghost",
+							"Kasib"
+						],
+						[
+							"Ice",
+							"Aspear, Yache",
+							"Dragon",
+							"Haban"
+						],
+						[
+							"Fighting",
+							"Leppa, Chople",
+							"Dark",
+							"Colbur"
+						],
+						[
+							"Poison",
+							"Oran, Kebia",
+							"Steel",
+							"Babiri, Razz"
+						],
+						[
+							"Ground",
+							"Persim, Shucca",
+							"Fairy",
+							"Roseli"
+						]
+					]
+				}
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d12",
+					"5": "2d8",
+					"10": "2d12",
+					"17": "6d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"normal",
+					"fighting",
+					"flying",
+					"poison",
+					"ground",
+					"rock",
+					"bug",
+					"ghost",
+					"steel",
+					"fire",
+					"water",
+					"grass",
+					"electric",
+					"psychic",
+					"ice",
+					"dragon",
+					"dark",
+					"fairy"
+				]
+			},
+			"attack": {
+				"scope": "ranged"
+			}
+		},
+		{
+			"id": "outrage",
+			"name": "Outrage",
+			"type": "dragon",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "3 rounds, concentration",
+			"range": "melee",
+			"description": [
+				"You go into a rampage, doing several attacks without control for three rounds. This move automatically hits for 1d6 + MOVE dragon damage in the first round, 2d6 + MOVE dragon damage in the second round, and 4d6 + MOVE dragon damage in the third round. When this move ends, either after the third round or from breaking concentration, you become confused. This attack stops if concentration is broken, or the user becomes incapacitated."
+			],
+			"higherLevels": "The dice used for this move changes to a d8 at level 5, a d10 at level 10, and a d12 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "Rd6",
+					"5": "Rd8",
+					"10": "Rd10",
+					"17": "Rd12"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"dragon"
+				]
+			}
+		},
+		{
+			"id": "powder",
+			"name": "Powder",
+			"type": "bug",
+			"power": [
+				"con"
+			],
+			"time": "1 reaction",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "30ft",
+			"description": [
+				"You quickly coat a creature in an explosive powder. When a creature in range activates a fire-type move, you may use your reaction to release a spray of flammable powder that explodes and automatically deals 2d8 + MOVE typeless damage to the target."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "2d8",
+					"5": "2d10",
+					"10": "3d10",
+					"17": "4d12"
+				},
+				"modifier": "MOVE",
+				"type": "typeless"
+			}
+		},
+		{
+			"id": "raging-bull",
+			"name": "Raging Bull",
+			"type": "normal",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You tackle like a raging bull. Make a melee attack roll, doing 1d12 + MOVE damage on a hit. This move ignores the effects of moves that would reduce its damage (Harden, Reflect, etc.).",
+				"The type of damage dealt by this move depends on the breed of its user.",
+				{
+					"type": "table",
+					"headers": [
+						"Breed",
+						"Damage Type"
+					],
+					"rows": [
+						[
+							"Unspecified",
+							"Normal"
+						],
+						[
+							"Combat Breed",
+							"Fighting"
+						],
+						[
+							"Blaze Breed",
+							"Fire"
+						],
+						[
+							"Aqua Breed",
+							"Water"
+						]
+					]
+				}
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d12",
+					"5": "2d8",
+					"10": "2d12",
+					"17": "6d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"normal",
+					"fighting",
+					"fire",
+					"water"
+				]
+			}
+		},
+		{
+			"id": "raging-fury",
+			"name": "Raging Fury",
+			"type": "fire",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "3 rounds, concentration",
+			"range": "15ft",
+			"description": [
+				"You go into a rampage, spewing flames about for three rounds. For up to three rounds while concentrating, make a ranged attack against a creature, dealing 2d10 + MOVE fire damage on a hit. Concentration ends at the end of the third round after activing this move, when you miss with this move, or fail to use this move; you cannot lose concentration on Raging Fury as a result of taking damage, and you cannot willingly drop concentration. While concentrating, you may only attack with Raging Fury.",
+				"When concentration ends, you become confused."
+			],
+			"higherLevels": "The dice used for this move changes to a 3d8 at level 5, a 4d10 at level 10, and a 7d8 at level 17.",
+			"attack": {
+				"scope": "ranged"
+			},
+			"damage": {
+				"dice": {
+					"1": "2d10",
+					"5": "3d8",
+					"10": "4d10",
+					"17": "7d8"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"fire"
+				]
+			}
+		},
+		{
+			"id": "reflect",
+			"name": "Reflect",
+			"type": "psychic",
+			"power": "none",
+			"time": "1 reaction",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "self",
+			"description": [
+				"When you are subject to a melee attack, use your reaction to take half the damage dealt now and on any melee attack that targets you until the beginning of your next turn."
+			],
+			"tm": {
+				"id": 33,
+				"cost": 8000
+			}
+		},
+		{
+			"id": "return",
+			"name": "Return",
+			"type": "normal",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You lash out at a creature, in hopes it will please your trainer. Make a melee attack roll against a creature, doing 1d6 + MOVE normal damage on a hit. When you make this attack, add an additional bonus to hit and damage equal to the number of levels you are above zero on the Loyalty Chart."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17.",
+			"tm": {
+				"id": 27,
+				"cost": 5200
+			},
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d12",
+					"10": "2d8",
+					"17": "4d6"
+				},
+				"modifier": "MOVE + LOYALTY",
+				"type": [
+					"normal"
+				]
+			}
+		},
+		{
+			"id": "revelation-dance",
+			"name": "Revelation Dance",
+			"type": "normal",
+			"power": [
+				"dex",
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You strike out at a target with an aggressive dance.  Make a melee attack, dealing 2d8 + MOVE damage on a hit. Revelation Dance deals damage with a different type depending on the style of Oricorio:",
+				{
+					"type": "table",
+					"headers": [
+						"Style",
+						"Damage Type"
+					],
+					"rows": [
+						[
+							"Baile Style",
+							"Fire"
+						],
+						[
+							"Pom-Pom Style",
+							"Electric"
+						],
+						[
+							"Pa'u Style",
+							"Psychic"
+						],
+						[
+							"Sensu Style",
+							"Ghost"
+						]
+					]
+				}
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "2d8",
+					"5": "2d10",
+					"10": "3d10",
+					"17": "4d12"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"fire",
+					"electric",
+					"psychic",
+					"ghost"
+				]
+			}
+		},
+		{
+			"id": "revenge",
+			"name": "Revenge",
+			"type": "fighting",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 reaction",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You invoke a fight within to retaliate against a creature that damages you. As a reaction, when you are hit with a melee attack that deals damage, make a melee attack roll against your attacker, with disadvantage. On a hit, deal the same amount of fighting type damage back at your attacker (maximum of 5x your current level)."
+			],
+			"attack": {
+				"scope": "melee"
+			}
+		},
+		{
+			"id": "roar",
+			"name": "Roar",
+			"type": "normal",
+			"power": [
+				"str",
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "self (15ft radius)",
+			"description": [
+				"You release an intimidating roar at all opponents within 15 feet of you. Opponents that can hear you must make a WIS save against your Move DC. On a fail, the creature is frightened and is forced to immediately move up to its speed in a straight line away from you, or until met with an impeding force (does not provoke attacks of opportunity). A creature frightened in this way must make a WIS save against your Move DC at the end of each of its turns to remove the effect."
+			],
+			"tm": {
+				"id": 5,
+				"cost": 4000
+			},
+			"save": {
+				"attribute": [
+					"wis"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
+			"id": "rock-tomb",
+			"name": "Rock Tomb",
+			"type": "rock",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "30ft",
+			"description": [
+				"You summon a collection of boulders that attempt to surround a target. Force a creature in range to make a STR saving throw against your Move DC, taking 1d10 + MOVE rock damage and becoming restrained on a failure, or half as much without being restrained on a success. If it fails, at the beginning of each of its turns, it may attempt to escape with a STR save against your Move DC. While a creature is restrained, you may continue this move, as an action, to deal an automatic 1d10 + MOVE rock damage."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
+			"tm": {
+				"id": 39,
+				"cost": 5200
+			},
+			"save": {
+				"attribute": [
+					"str"
+				],
+				"dc": "MOVE"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d10",
+					"5": "2d8",
+					"10": "5d4",
+					"17": "4d8"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"rock"
+				]
+			}
+		},
+		{
+			"id": "rollout",
+			"name": "Rollout",
+			"type": "rock",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You roll into a target, repeatedly making attacks with increasing strength. Make a melee attack on a creature, dealing 1d6 + MOVE rock damage on a hit. If you use this move on your turn in consecutive rounds, double the dice on each successful attack for a maximum of 5 attacks, in which case the damage would reset. Ex: 1d6 on first hit, 2d6 on second, 4d6, 8d6, 16d6. The damage resets if any of the attacks fail to damage a creature, if your speed is reduced to 0, or if you are incapacitated."
+			],
+			"higherLevels": "The damage dice changes to a d8 at level 5, a d10 at level 10, and a d12 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "Rd6",
+					"5": "Rd8",
+					"10": "Rd10",
+					"17": "Rd12"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"rock"
+				]
+			}
+		},
+		{
+			"id": "sand-tomb",
+			"name": "Sand Tomb",
+			"type": "ground",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "30ft",
+			"description": [
+				"You attempt to summon a wave of sand that surrounds the target. Force a creature in range to make a STR saving throw against your Move DC, taking 1d10 + MOVE ground damage and becoming restrained on a failure, or half as much without being restrained on a success. If it fails, at the beginning of each of its turns, it may attempt to escape with a STR save against your Move DC. While a creature is restrained, you may continue this move, as an action, to deal an automatic 1d10 + MOVE ground damage."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
+			"save": {
+				"attribute": [
+					"str"
+				],
+				"dc": "MOVE"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d10",
+					"5": "2d8",
+					"10": "5d4",
+					"17": "4d8"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"ground"
+				]
+			}
+		},
+		{
+			"id": "scary-face",
+			"name": "Scary Face",
+			"type": "normal",
+			"power": [
+				"str",
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "1 minute",
+			"range": "60ft",
+			"description": [
+				"You put on your scariest face, attempting to frighten a creature. The creature must make a WIS saving throw against your Move DC or become frightened for the duration. A creature frightened in this way must make a WIS save against your Move DC at the end of each of its turns to remove the effect."
+			],
+			"save": {
+				"attribute": [
+					"wis"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
+			"id": "shed-tail",
+			"name": "Shed Tail",
+			"type": "normal",
+			"power": "none",
+			"time": "1 reaction",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "self",
+			"description": [
+				"When hit with an attack, you may use your reaction to take 2d6 typeless damage in order to negate the damage and effects of the attack. If you do, you must switch out of battle as a free action."
+			]
+		},
+		{
+			"id": "skitter-smack",
+			"name": "Skitter Smack",
+			"type": "bug",
+			"power": [
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You skitter behind the target to attack. Make a melee attack roll against a target, doing 1d6 + MOVE bug damage on a hit. If the attack roll was made with advantage, you deal an extra Xd6 bug damage, where X is your current level divided by two, rounded up (e.g. at level 11, you deal an additional 6d6 damage).",
+				"You don't need Advantage on the attack roll if at least one of your allies is within 5 feet of the target, the ally doesn't have the Incapacitated condition, and you don't have Disadvantage on the attack roll."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d10",
+					"10": "2d8",
+					"17": "5d4"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"bug"
+				]
+			}
+		},
+		{
+			"id": "strength-sap",
+			"name": "Strength Sap",
+			"type": "grass",
+			"power": [
+				"con"
+			],
+			"time": "1 reaction",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "15ft",
+			"description": [
+				"If a creature attempts to use a move that boosts its stats, you may use your reaction to negate the increase and convert it into healing energy, recovering regain 1d10 + MOVE hit points.  This includes critical hit bonuses, AC increases, speed, attack and damage boosts, etc."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d10",
+					"5": "2d8",
+					"10": "5d4",
+					"17": "4d8"
+				},
+				"modifier": "MOVE",
+				"type": "healing"
+			}
+		},
+		{
+			"id": "sucker-punch",
+			"name": "Sucker Punch",
+			"type": "dark",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 reaction",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You lay in a quick punch before a creature has a chance to attack. When targeted by a melee attack, you may use your reaction to attempt to strike a creature before its attack is rolled. Make a melee attack, dealing 1d6 + MOVE dark damage on a hit."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d12",
+					"10": "2d8",
+					"17": "4d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"dark"
+				]
+			}
+		},
+		{
+			"id": "surging-strikes",
+			"name": "Surging Strikes",
+			"type": "water",
+			"power": [
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You strike the target three times in a single fluid motion. Make three melee attacks against a single target, each with -5 to your attack roll. On a hit, you deal 1d6 + 5 + MOVE water damage."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d8 at level 5, 1d12 at level 10, and 3d6 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d8",
+					"10": "1d12",
+					"17": "3d6"
+				},
+				"modifier": "MOVE + 5",
+				"type": [
+					"water"
+				]
+			}
+		},
+		{
+			"id": "swift",
+			"name": "Swift",
+			"type": "normal",
+			"power": "none",
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "60ft",
+			"description": [
+				"You fire two projectiles at any creature you choose in range. They do not have to target the same creature. Each hit for 1d4 normal damage. This move also targets creature during the invulnerable stages of Dig, Fly, Bounce, etc."
+			],
+			"higherLevels": "You fire 4 projectiles at level 5, 5 projectiles at level 10, and 6 projectiles at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d4",
+					"5": "1d4",
+					"10": "1d4",
+					"17": "1d4"
+				},
+				"modifier": 0,
+				"type": [
+					"normal"
+				]
+			}
+		},
+		{
+			"id": "swords-dance",
+			"name": "Swords Dance",
+			"type": "normal",
+			"power": [
+				"dex",
+				"wis"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "1 minute, concentration",
+			"range": "self",
+			"description": [
+				"When you activate this move, a sword appears and dances around you, increasing your AC by 1. As a bonus action on a future turn, you may drop concentration to release this sword and roll a ranged attack at a target within 30 feet of you, dealing 2d6 + MOVE normal damage on a hit."
+			],
+			"higherLevels": "The damage dice for this move changes to 2d8 at level 5. At level 10, you can now create two swords for +2 to AC and two ranged attacks. At level 17, the damage dice for each sword increases to 3d8.",
+			"tm": {
+				"id": 75,
+				"cost": 8000
+			},
+			"attack": {
+				"scope": "ranged"
+			},
+			"damage": {
+				"dice": {
+					"1": "2d6",
+					"5": "2d8",
+					"10": "2d8",
+					"17": "3d8"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"normal"
+				]
+			}
+		},
+		{
+			"id": "syrup-bomb",
+			"name": "Syrup Bomb",
+			"type": "grass",
+			"power": [
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "3 rounds",
+			"range": "60ft",
+			"description": [
+				"You set off an explosion of sticky candy syrup at a point within range. Each creature within 5ft of that point must make a DEX save against your Move DC, taking 1d10 + MOVE grass damage on failure, half on success. On failure, the creature also falls Prone.",
+				"Syrup then covers the ground within 5ft of the target point for the duration. A creature that enters the area or ends its turn there must make a DEX save against your Move DC, falling Prone on failure."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
+			"save": {
+				"attribute": [
+					"dex"
+				],
+				"dc": "MOVE"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d10",
+					"5": "2d8",
+					"10": "5d4",
+					"17": "4d8"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"grass"
+				]
+			}
+		},
+		{
+			"id": "techno-blast",
+			"name": "Techno Blast",
+			"type": "normal",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "self (80ft line)",
+			"description": [
+				"You fire a powerful beam of pure light. The line is 80 feet long and 5 feet wide, and all creatues caught in the blast must make a DEX save against your Move DC, taking 3d10 + MOVE damage on a failure, or half as much on a success. The damage type is dependant on the Drive the user holds. (Burn Drive - Fire, Chill Drive - Ice, Douse Drive - Water, Shock Drive - Electric)"
+			],
+			"higherLevels": "The damage dice roll for this move changes to 6d6 at level 5, 8d6 at level 10, and 7d12 at level 17.",
+			"save": {
+				"attribute": [
+					"dex"
+				],
+				"dc": "MOVE"
+			},
+			"damage": {
+				"dice": {
+					"1": "3d10",
+					"5": "6d6",
+					"10": "8d6",
+					"17": "7d12"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"fire",
+					"ice",
+					"water",
+					"electric"
+				]
+			}
+		},
+		{
+			"id": "tera-blast",
+			"name": "Tera Blast",
+			"type": "normal",
+			"power": [
+				"dex",
+				"wis"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "40ft",
+			"description": [
+				"You unleash the power of your tera type as a focused beam of elemental energy. Make a ranged attack against a creature, doing 2d6 + MOVE damage on hit. If you are terastallized, the type of this damage is the same as your tera type. Otherwise, it is normal."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
+			"attack": {
+				"scope": "ranged"
+			},
+			"damage": {
+				"dice": {
+					"1": "2d6",
+					"5": "2d8",
+					"10": "4d6",
+					"17": "6d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"normal"
+				]
+			}
+		},
+		{
+			"id": "tera-starstorm",
+			"name": "Tera Starstorm",
+			"type": "stellar",
+			"power": [
+				"str",
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "240ft",
+			"description": [
+				"With the power of your crystals, you bombard and eliminate the target. Choose a point you can see within range. Each creature in a 20ft radius sphere centered on the point makes a DEX saving throw against your Move DC. A creature takes 2d12 + MOVE stellar damage on a failed save or half as much on a successful save.",
+				"Only Terapagos may use this move. If Terapagos is in its Stellar Form, then you may choose four points instead of one. A creature in an area of more than one tera sphere is affected only once.",
+				"Terastallized Pokémon are vulnerable to stellar-type damage. Otherwise, all creatures of any type take normal damage."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 3d10 at level 5, 7d6 at level 10, and 8d8 at level 17.",
+			"save": {
+				"attribute": [
+					"dex"
+				],
+				"dc": "MOVE"
+			},
+			"damage": {
+				"dice": {
+					"1": "2d12",
+					"5": "3d10",
+					"10": "7d6",
+					"17": "8d8"
+				},
+				"modifier": "MOVE",
+				"type": "stellar"
+			}
+		},
+		{
+			"id": "terrain-pulse",
+			"name": "Terrain Pulse",
+			"type": "normal",
+			"power": [
+				"wis",
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "varies",
+			"description": [
+				"You utilize the energy of the terrain to attack. When you are within the effects of a special terrain, you can target any number of creatures subject to the same terrain (up to a maximum range of 120ft). Each target creature makes a WIS save against your Move DC, taking 1d4 + MOVE damage on failure or half on success. The type of damage dealt depends on the type of terrain.",
+				"If you are not subject to any special terrain, then the range of this move is Self (30ft radius).",
+				{
+					"type": "table",
+					"headers": [
+						"Terrain",
+						"Damage Type"
+					],
+					"rows": [
+						[
+							"No Terrain",
+							"Normal"
+						],
+						[
+							"Electric Terrain",
+							"Electric"
+						],
+						[
+							"Grassy Terrain",
+							"Grass"
+						],
+						[
+							"Misty Terrain",
+							"Fairy"
+						],
+						[
+							"Psychic Terrain",
+							"Psychic"
+						]
+					]
+				}
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d4 at level 5, 1d12 at level 10, and 4d4 at level 17.",
+			"save": {
+				"attribute": [
+					"wis"
+				],
+				"dc": "MOVE"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d4",
+					"5": "2d4",
+					"10": "1d12",
+					"17": "4d4"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"normal",
+					"electric",
+					"grass",
+					"fairy",
+					"psychic"
+				]
+			}
+		},
+		{
+			"id": "thunderclap",
+			"name": "Thunderclap",
+			"type": "electric",
+			"power": [
+				"dex"
+			],
+			"time": "1 reaction",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "120ft",
+			"description": [
+				"As a reaction to being attacked with a ranged attack by a creature you can see in range, you may strike first with a jolt of electricity. Make a ranged attack against the attacker, dealing 1d6 + MOVE electric damage on a hit. Your roll happens before theirs."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17.",
+			"attack": {
+				"scope": "ranged"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d12",
+					"10": "2d8",
+					"17": "4d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"electric"
+				]
+			}
+		},
+		{
+			"id": "tickle",
+			"name": "Tickle",
+			"type": "normal",
+			"power": [
+				"dex"
+			],
+			"time": "1 bonus action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You turn your melee attack into a playful tickle. As a bonus action at the end of a turn in which you used a melee attack, force a creature to make a CON saving throw against your Move DC. On a failure, the target flinches."
+			],
+			"save": {
+				"attribute": [
+					"con"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
+			"id": "weather-ball",
+			"name": "Weather Ball",
+			"type": "normal",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "30ft",
+			"description": [
+				"You send a powerful ball of energy that changes type based on the surrounding weather, dealing 1d8 + MOVE damage of that type.",
+				{
+					"type": "table",
+					"headers": [
+						"Weather",
+						"Type"
+					],
+					"rows": [
+						[
+							"Harsh Sunlight",
+							"Fire"
+						],
+						[
+							"Rain",
+							"Water"
+						],
+						[
+							"Sandstorm",
+							"Rock"
+						],
+						[
+							"Hail or Snow",
+							"Ice"
+						],
+						[
+							"Foggy or Cloudy",
+							"Normal"
+						]
+					]
+				}
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d8",
+					"5": "2d6",
+					"10": "4d4",
+					"17": "3d10"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"fire",
+					"water",
+					"rock",
+					"ice",
+					"normal"
+				]
+			}
+		},
+		{
+			"id": "wicked-blow",
+			"name": "Wicked Blow",
+			"type": "dark",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You strike the target with a single, fierce blow. Make a melee attack with -5 to your attack roll. On a hit, you deal 1d12 + 10 + MOVE dark damage."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d12",
+					"5": "2d8",
+					"10": "2d12",
+					"17": "6d6"
+				},
+				"modifier": "MOVE + 10",
+				"type": [
+					"dark"
+				]
+			}
+		}
+	]
+}
