@@ -37661,7 +37661,12 @@
 				"str",
 				"con"
 			],
-			"senses": [],
+			"senses": [
+				{
+					"type": "blindsight",
+					"value": 10
+				}
+			],
 			"abilities": [
 				{
 					"id": "torrent",
@@ -37791,7 +37796,12 @@
 				"str",
 				"con"
 			],
-			"senses": [],
+			"senses": [
+				{
+					"type": "blindsight",
+					"value": 10
+				}
+			],
 			"abilities": [
 				{
 					"id": "torrent",
@@ -137957,9 +137967,7 @@
 					"synthesis",
 					"aerial-ace",
 					"roost",
-					"shadow-sneak"
-				],
-				"level10": [
+					"shadow-sneak",
 					"magical-leaf",
 					"pluck",
 					"aura-sphere",

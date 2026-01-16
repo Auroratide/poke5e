@@ -1188,7 +1188,7 @@
 		{
       "id": "sharpness",
       "name": "Sharpness",
-      "description": "Moves with 'Cut', 'Blade', 'Slash', 'Edge', 'Cleave', 'Razor', 'Sword', or 'Axe' in their name have their MOVE damage doubled."
+      "description": "Moves with 'Cut', 'Blade', 'Slash', 'Edge', 'Cleave', 'Razor', 'Sword', or 'Axe' in their name have their MOVE damage modifier doubled."
     },
     {
       "id": "shed-skin",
@@ -1373,7 +1373,7 @@
     {
       "id": "surge-surfer",
       "name": "Surge Surfer",
-      "description": "When this Pokémon begins its turn in the area of effect from Electric Terrain, its speed is doubled."
+      "description": "When this Pokémon begins its turn in the area of effect from Electric Terrain, its speed is doubled until the start of its next turn."
     },
     {
       "id": "swarm",
