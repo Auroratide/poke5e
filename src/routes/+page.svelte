@@ -12,10 +12,11 @@
 	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/site/url"
 	import { StaticPage } from "$lib/ui/layout"
+	import { m } from "$lib/paraglide/messages"
 </script>
 
 <Title />
-<StaticPage large title="Pokemon 5th Edition" subtitle="An online reference for pokemon dungeons and dragons homebrew!">
+<StaticPage large title="{m["home.title"]()}" subtitle="An online reference for pokemon dungeons and dragons homebrew!">
 	<ul>
 		<li class="theme-red">
 			<a href="{Url.pokemon()}">Pokemon</a>

@@ -1,9 +1,17 @@
+import { paraglideVitePlugin } from "@inlang/paraglide-js"
 import path from "node:path"
 import { sveltekit } from "@sveltejs/kit/vite"
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	plugins: [sveltekit()],
+	plugins: [
+		paraglideVitePlugin({
+			project: "./project.inlang",
+			outdir: "./src/lib/paraglide",
+			strategy: ["url", "baseLocale"],
+		}),
+		sveltekit(),
+	],
 	server: {
 		port: 3000,
 	},
