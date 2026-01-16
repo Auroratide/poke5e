@@ -36,6 +36,9 @@
 		type: pokemonType.data,
 	})
 
+	$: attributeList = moveData.power.attributeList()
+	$: bestPowers = moveData.power.bestAttribute(attributes)
+
 	const onChangePp = (e: CustomEvent<NumericChangeDetail>) => {
 		dispatch("update", {
 			value: e.detail.value ?? 0,
@@ -70,6 +73,21 @@
 	</div>
 	<div class="space-inner smaller-font">
 		<FlatDl columns={1}>
+			<dt>Power</dt>
+			<dd class="upper">
+				{#if attributeList.length === 0}
+					{moveData.power.toString()}
+				{:else}
+					{#each attributeList as attribute, i}
+						{@const needComma = i !== attributeList.length - 1}
+						{#if bestPowers.includes(attribute)}
+							<strong>{attribute}</strong>{#if needComma}<span>, </span>{/if}
+						{:else}
+							<span>{attribute}</span>{#if needComma}<span>, </span>{/if}
+						{/if}
+					{/each}
+				{/if}
+			</dd>
 			<dt>Range</dt>
 			<dd class="cap">{moveData.range}</dd>
 			<dt>Time</dt>

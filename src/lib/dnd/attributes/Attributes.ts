@@ -38,6 +38,10 @@ export class Attributes extends DataClass<{
 	get wis() { return this.score(this.data.wis) }
 	get cha() { return this.score(this.data.cha) }
 
+	entries(): [Attribute, number][] {
+		return Object.entries(this.data) as [Attribute, number][]
+	}
+
 	private score = (score: number) => ({
 		score,
 		modifier: Math.floor(score / 2) - 5,
