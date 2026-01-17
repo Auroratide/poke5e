@@ -18,3 +18,12 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm test:smoke
+        id: tests
+        continue-on-error: true
+
+      - name: Upload screenshots on failure
+        if: steps.tests.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots
+          path: test/smoke/screenshots

@@ -16,7 +16,6 @@ import {
 	readDescriptionDefinition,
 	below,
 	range,
-	near,
 	checkBox,
 	toRightOf,
 } from "./actions.js"

@@ -2,5 +2,5 @@
 export const observe = process.env.OBSERVE === "true"
 
 export const url = process.env.ENV === "prod"
-	? "https://auroratide.github.io/poke5e"
+	? "https://poke5e.app"
 	: "http://localhost:3000"
