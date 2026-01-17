@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let variant: "solid" | "ghost" | "danger" | "success" | "big" = "solid"
+	export let variant: "solid" | "ghost" | "danger" | "success" | "subtle" | "big" = "solid"
 	export let type: "submit" | "button" | "reset" = "button"
 	export let align: "center" | "left" = "center"
 	export let width: "auto" | "full" = "auto"
@@ -9,10 +9,11 @@
 
 	export let expanded: boolean | undefined = undefined
 	export let controls: string | undefined = undefined
+	export let reloadOnLink: boolean | undefined = false
 </script>
 
 {#if href != null}
-	<a {href} on:click class="button {variant} {align} {width}" class:disabled {title}>
+	<a {href} on:click class="button {variant} {align} {width}" class:disabled {title} data-sveltekit-reload={reloadOnLink}>
 		<slot></slot>
 	</a>
 {:else if controls != null && expanded != null}
@@ -54,6 +55,11 @@
 	.button.solid {
 		background-color: var(--skin-bg-dark);
 		color: var(--skin-bg-text);
+	}
+
+	.button.subtle {
+		background-color: var(--skin-input-bg);
+		color: var(--skin-bg-dark);
 	}
 
 	.button.ghost {
@@ -103,6 +109,7 @@
 	}
 
 	.button.full {
+		display: inline-block;
 		width: 100%;
 	}
 

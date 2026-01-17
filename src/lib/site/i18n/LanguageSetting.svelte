@@ -2,25 +2,21 @@
 	import { page } from "$app/state"
 	import { m } from "$lib/site/i18n/paraglide/messages"
 	import { getLocale, locales, localizeHref } from "$lib/site/i18n/paraglide/runtime"
-	import { RadioFields, type RadioFieldsChangeEvent } from "$lib/ui/forms"
-
-	const options = locales.map((locale) => ({
-		name: m.languageName({}, { locale }),
-		value: locale,
-	}))
-
-	const onChange = (e: RadioFieldsChangeEvent) => {
-		const locale = e.detail.checked
-		window.location.replace(localizeHref(page.url.pathname, { locale }))
-	}
+	import { Button } from "$lib/ui/elements"
 </script>
 
-<fieldset class="language-setting">
-	<legend>Select your preferred language:</legend>
-	<div class="options">
-		<RadioFields label="Select Language" checked={getLocale()} values={options} on:change={onChange} />
-	</div>
-</fieldset>
+<div class="language-setting">
+	<p id="language-setting-label">Select your preferred language:</p>
+	<ul role="listbox" tabindex="0" aria-labelledby="language-setting-label" aria-activedescendant="language-setting-option-{getLocale()}">
+		{#each locales as locale}
+			<li id="language-setting-option-{locale}" role="option" aria-selected="{getLocale() === locale}">
+				<Button href="{localizeHref(page.url.pathname, { locale })}" variant={getLocale() === locale ? "solid" : "subtle"} width="full" reloadOnLink>
+					{m.languageName({}, { locale })}
+				</Button>
+			</li>
+		{/each}
+	</ul>
+</div>
 
 <style>
 	.language-setting {
@@ -31,15 +27,18 @@
 		inline-size: 100%;
 	}
 
-	.language-setting legend {
-		display: block;
-		margin-block-end: 1em;
+	ul {
+		list-style: none;
+		padding: 0;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 0.75em;
+		text-align: center;
 	}
 
-	.options {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5em;
-		padding-inline-start: 0.75em;
+	li {
+		display: block;
+	} li[aria-selected="true"] {
+		font-weight: bold;
 	}
 </style>
