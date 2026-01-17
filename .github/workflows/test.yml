@@ -13,6 +13,7 @@ jobs:
   unit-tests:
     name: Unit Tests
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     env:
       PUBLIC_OFFLINE: false
       PUBLIC_ANALYTICS_ENABLED: false
