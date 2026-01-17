@@ -9,6 +9,19 @@ const config = {
 	preprocess: preprocess(),
 
 	kit: {
+		prerender: {
+			entries: [
+				"*",
+				// backward compatibility
+				"/pokemon.json",
+				"/pokemon/[id].json",
+			],
+			handleHttpError: ({ path, message }) => {
+				// idk why, but it likes to include this bit when scanning
+				if (path.includes("[id]")) return
+				throw new Error(message)
+			},
+		},
 		paths: {
 			relative: false,
 		},

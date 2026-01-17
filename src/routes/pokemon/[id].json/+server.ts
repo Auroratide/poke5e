@@ -15,3 +15,7 @@ export const GET: RequestHandler = async ({ params }) => {
 		})
 	}
 }
+
+export async function entries() {
+	return pokemon.items.map((it) => ({ id: it.id }))
+}
