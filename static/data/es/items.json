@@ -1,0 +1,18 @@
+{
+	"items": [
+		{
+			"id": "poke-ball",
+			"name": "Poké Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon."
+			]
+		},
+		{
+			"id": "great-ball",
+			"name": "Súper Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 5."
+			]
+		}
+	]
+}
