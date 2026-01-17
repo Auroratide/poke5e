@@ -62,10 +62,10 @@ export const Url = {
 		translations: () => "https://cryptpad.fr/sheet/#/2/sheet/edit/jkST5vKSm8OSzJjru3TF47xL/embed/",
 	},
 	api: {
-		pokemon: (id?: string) => id ? resolve("/pokemon/[id]/v2.json", { id }) : resolve("/pokemon/v2.json"),
-		evolutions: () => resolve("/evolutions/v1.json"),
-		items: (id?: string) => localizeUrl(id ? resolve("/items/[id].json", { id }) : resolve("/items.json")),
-		moves: (id?: string) => id ? resolve("/moves/[id].json", { id }) : resolve("/moves.json"),
-		abilities: () => resolve("/abilities.json"),
+		pokemon: (id?: string) => id ? resolve("/(api)/pokemon/[id]/v2.json", { id }) : resolve("/(api)/pokemon/v2.json"),
+		evolutions: () => resolve("/(api)/evolutions/v1.json"),
+		items: (id?: string) => localizeUrl(id ? resolve("/(api)/items/[id].json", { id }) : resolve("/(api)/items.json")),
+		moves: (id?: string) => id ? resolve("/(api)/moves/[id].json", { id }) : resolve("/(api)/moves.json"),
+		abilities: () => resolve("/(api)/abilities.json"),
 	},
 } as const
