@@ -1,4 +1,9 @@
+<script lang="ts" context="module">
+	export type RadioFieldsChangeEvent = CustomEvent<{ checked: string }>
+</script>
+
 <script lang="ts">
+	import { createEventDispatcher } from "svelte"
 	import { kebab } from "./kebab"
 
 	export let label: string
@@ -11,13 +16,19 @@
 	export let disabled: boolean = false
 	export let required: boolean = false
 
+	const dispatch = createEventDispatcher()
+
 	$: kebabName = name ?? kebab(label)
+
+	const onChange = (value: string) => () => {
+		dispatch("change", { checked: value })
+	}
 </script>
 
 {#each values as value}
 	{@const id = `${kebab(value.value)}-${kebabName}`}
 	<div class="radio-field">
-		<input {id} value={value.value} bind:group={checked} type="radio" name={kebabName} {disabled} {required} />
+		<input {id} value={value.value} bind:group={checked} type="radio" name={kebabName} {disabled} {required} on:change={onChange(value.value)} />
 		<label for="{id}" class="cap">{value.name}</label>
 	</div>
 {/each}

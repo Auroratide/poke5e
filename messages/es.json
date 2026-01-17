@@ -1,6 +1,10 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
+	"languageName": "Español",
 	"home": {
 		"title": "Pokémon 5th Edición"
+	},
+	"settings": {
+		"language": "Idioma"
 	}
 }

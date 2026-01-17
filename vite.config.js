@@ -7,7 +7,7 @@ const config = {
 	plugins: [
 		paraglideVitePlugin({
 			project: "./project.inlang",
-			outdir: "./src/lib/paraglide",
+			outdir: "./src/lib/site/i18n/paraglide",
 			strategy: ["url", "baseLocale"],
 		}),
 		sveltekit(),

@@ -6,6 +6,8 @@
 	import RulesVersionSection from "./RulesVersionSection.svelte"
 	import BackupsSection from "./BackupsSection.svelte"
 	import OfficialFakemonSection from "./OfficialFakemonSection.svelte"
+	import LanguageSection from "./LanguageSection.svelte"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 </script>
 
 <Title value="Settings" />
@@ -15,6 +17,9 @@
 		<section>
 			<p>In this section, you can update preferences and manage backups.</p>
 		</section>
+		{#if FeatureToggles.Localization()}
+			<LanguageSection />
+		{/if}
 		<RulesVersionSection />
 		<BackupsSection />
 		<OfficialFakemonSection />

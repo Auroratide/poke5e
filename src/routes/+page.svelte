@@ -12,7 +12,7 @@
 	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/site/url"
 	import { StaticPage } from "$lib/ui/layout"
-	import { m } from "$lib/paraglide/messages"
+	import { m } from "$lib/site/i18n"
 </script>
 
 <Title />

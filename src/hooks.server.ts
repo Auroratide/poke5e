@@ -1,5 +1,5 @@
 import type { Handle } from "@sveltejs/kit"
-import { paraglideMiddleware } from "$lib/paraglide/server"
+import { paraglideMiddleware } from "$lib/site/i18n/paraglide/server"
 
 const paraglideHandle: Handle = ({ event, resolve }) => {
 	return paraglideMiddleware(event.request, ({ request: localizedRequest, locale }) => {
@@ -7,7 +7,7 @@ const paraglideHandle: Handle = ({ event, resolve }) => {
 		return resolve(event, {
 			transformPageChunk: ({ html }) => {
 				return html.replace("%lang%", locale)
-			}
+			},
 		})
 	})
 }
