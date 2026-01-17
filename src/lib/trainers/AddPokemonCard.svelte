@@ -3,7 +3,6 @@
 	import { Button } from "$lib/ui/elements"
 	import type { TrainerStore } from "./trainers"
 	import { goto } from "$app/navigation"
-	import { base } from "$app/paths"
 	import { Title } from "$lib/ui/layout"
 	import { PokemonSpecies, SpeciesField } from "$lib/poke5e/species"
 	import { SearchFakemonById, type SearchFakemonByIdDetail } from "$lib/fakemon/search"
@@ -20,7 +19,7 @@
 	const onSelect = (p: PokemonSpecies) => () => {
 		saving = true
 		$trainer.update?.addToTeam(p).then(({ id }) => {
-			goto(`${base}/trainers?id=${readKey}&pokemon=${id}`)
+			goto(Url.trainers(readKey, id))
 		}).catch(() => {
 			saving = false
 		})

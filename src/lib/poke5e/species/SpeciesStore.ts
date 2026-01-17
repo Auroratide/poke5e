@@ -1,15 +1,15 @@
 import { derived, type Readable, type Unsubscriber } from "svelte/store"
 import { PokemonSpecies } from "./PokemonSpecies"
 import type { SpeciesIdentifier } from "./SpeciesIdentifier"
-import { base } from "$app/paths"
 import type { PokemonJsonResponse } from "./PokemonJsonResponse"
 import type { Data } from "$lib/DataClass"
 import { fakemonStore } from "$lib/fakemon/store"
 import { cachedReadable } from "$lib/utils/store"
+import { Url } from "$lib/site/url"
 
 export const allCanonSpecies = cachedReadable<PokemonSpecies[] | undefined>(undefined, (set) => {
 	if (typeof window !== "undefined") {
-		fetch(`${base}/pokemon/v2.json`)
+		fetch(Url.api.pokemon())
 			.then((res) => res.json())
 			.then((data: PokemonJsonResponse) => data.items.map((it) =>
 				PokemonSpecies.fromJson(it),

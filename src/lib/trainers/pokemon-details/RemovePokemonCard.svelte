@@ -4,11 +4,11 @@
 	import { Button } from "$lib/ui/elements"
 	import { ActionArea, Saveable } from "$lib/ui/forms"
 	import type { TrainerStore } from "../trainers"
-	import { base } from "$app/paths"
 	import { goto } from "$app/navigation"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
 	import { WithSpecies } from "$lib/poke5e/species"
+	import { Url } from "$lib/site/url"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
@@ -20,7 +20,7 @@
 	const remove = () => {
 		saving = true
 		$trainer.update?.removeFromTeam(id).then(() => {
-			goto(`${base}/trainers?id=${$trainer.info.readKey}`)
+			goto(Url.trainers($trainer.info.readKey))
 		}).catch(() => {
 			saving = false
 		})
@@ -41,7 +41,7 @@
 							</p>
 						{/if}
 						<ActionArea>
-							<Button href="{base}/trainers?id={$trainer.info.readKey}&pokemon={pokemon.id}" variant="ghost">Cancel</Button>
+							<Button href="{Url.trainers($trainer.info.readKey, pokemon.id)}" variant="ghost">Cancel</Button>
 							<Button on:click={remove} variant="danger">Delete</Button>
 						</ActionArea>
 					</section>
@@ -50,7 +50,7 @@
 				<section>
 					<p>You do not have permission to remove this pokemon.</p>
 					<ActionArea>
-						<Button href="{base}/trainers?id={$trainer.info.readKey}&pokemon={pokemon.id}">Go Back</Button>
+						<Button href="{Url.trainers($trainer.info.readKey, pokemon.id)}">Go Back</Button>
 					</ActionArea>
 				</section>
 			{/if}

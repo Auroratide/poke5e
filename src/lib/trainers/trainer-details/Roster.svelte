@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from "$app/paths"
 	import { SearchField } from "$lib/ui/forms"
 	import { filterValue } from "../store"
 	import type { TrainerStore } from "../trainers"
@@ -7,6 +6,7 @@
 	import { Button } from "$lib/ui/elements"
 	import PokemonSummary from "./PokemonSummary.svelte"
 	import { ListHeading } from "$lib/ui/page"
+	import { Url } from "$lib/site/url"
 
 	export let trainer: TrainerStore
 	export let currentPokemon: PokemonId | undefined
@@ -22,7 +22,7 @@
 	$: filtered = $trainer.pokemon
 		.filter(byNicknameOrSpecies($filterValue.toLocaleLowerCase()))
 		.sort(byStringField((it) => it.nickname))
-	$: baseTrainerUrl = `${base}/trainers?id=${$trainer.info.readKey}`
+	$: baseTrainerUrl = Url.trainers($trainer.info.readKey)
 </script>
 
 <ListHeading title="{$trainer.info.name}'s Pokemon" target="/trainers">
@@ -30,7 +30,7 @@
 		{#if currentPokemon}
 			<a href="{baseTrainerUrl}" class="dark-font">View trainer profile &gt;</a>
 		{:else}
-			<a href="{base}/trainers" class="dark-font">See Trainer List &gt;</a>
+			<a href="{Url.trainers()}" class="dark-font">See Trainer List &gt;</a>
 		{/if}
 	</span>
 	<span slot="action" style:visibility={editable ? "visible" : "hidden"} style:display="flex">

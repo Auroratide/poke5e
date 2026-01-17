@@ -1,12 +1,12 @@
 import type { PageLoad } from "./$types"
-import { base } from "$app/paths"
 import { Move } from "$lib/moves/Move"
 import type { Tm } from "$lib/moves/tms/Tm"
 import type { Data } from "$lib/DataClass"
 import { TmDetails } from "$lib/moves/tms/TmDetails"
+import { Url } from "$lib/site/url"
 
 export const load: PageLoad = async ({ fetch }) => {
-	const tms: Tm[] = await fetch(`${base}/moves.json`)
+	const tms: Tm[] = await fetch(Url.api.moves())
 		.then((res) => res.json())
 		.then((data) => data.moves)
 		.then((moves: Data<Move>[]) => moves.map((it) => new Move(it)))

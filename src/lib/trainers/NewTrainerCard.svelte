@@ -3,7 +3,6 @@
 	import { Button } from "$lib/ui/elements"
 	import { trainers } from "./trainers"
 	import { goto } from "$app/navigation"
-	import { base } from "$app/paths"
 	import {
 		ActionArea,
 		Form,
@@ -13,6 +12,7 @@
 		HintText,
 	} from "$lib/ui/forms"
 	import { Title } from "$lib/ui/layout"
+	import { Url } from "$lib/site/url"
 
 	let name = ""
 	let description = ""
@@ -25,14 +25,14 @@
 			name,
 			description,
 		}).then(({ info }) => {
-			goto(`${base}/trainers?id=${info.readKey}`)
+			goto(Url.trainers(info.readKey))
 		}).catch(() => {
 			saving = false
 		})
 	}
 
 	const cancel = () => {
-		goto(`${base}/trainers`)
+		goto(Url.trainers())
 	}
 </script>
 

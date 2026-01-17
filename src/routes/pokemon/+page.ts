@@ -1,7 +1,7 @@
 import { get } from "svelte/store"
-import { base } from "$app/paths"
 import { PokemonSpecies, SpeciesStore } from "$lib/poke5e/species"
 import type { PageLoad } from "./$types"
+import { Url } from "$lib/site/url"
 
 export const load: PageLoad = async ({ fetch }) => {
 	const cached = get(SpeciesStore.canonList())
@@ -10,7 +10,7 @@ export const load: PageLoad = async ({ fetch }) => {
 		return { pokemonList: cached }
 	}
 
-	const pokemon = await fetch(`${base}/pokemon/v2.json`)
+	const pokemon = await fetch(Url.api.pokemon())
 		.then(res => res.json())
 		.then((data) => data.items.map((it) => 
 			PokemonSpecies.fromJson(it),

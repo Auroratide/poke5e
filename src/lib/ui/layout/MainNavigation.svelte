@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { ComponentType } from "svelte"
-	import { base } from "$app/paths"
 	import type { ThemeColor } from "$lib/ui/theme"
 	import Container from "./Container.svelte"
 	import { MenuIcon } from "$lib/ui/icons"
@@ -10,6 +9,7 @@
 
 	export let items: {
 		id: string,
+		href: string,
 		name: string,
 		color: ThemeColor,
 		icon: ComponentType,
@@ -33,7 +33,7 @@
 		<ul class="no-list row space-large nav-list lg:show" style:gap="1.375em">
 			{#each firstFewItems as item}
 				<li class:active={active === item.id} class="theme-{item.color}">
-					<a class="row space-small" href="{base}/{item.id}" on:click={closeDialog}>
+					<a class="row space-small" href="{item.href}" on:click={closeDialog}>
 						<span class="icon" aria-hidden="true">
 							<svelte:component this={item.icon} />
 						</span>
@@ -63,7 +63,7 @@
 			<ul class="no-list grid">
 				{#each items as item}
 					<li class:active={active === item.id} class="theme-{item.color} transitioned">
-						<a href="{base}/{item.id}" class="center-column uppercase-link" on:click={closeDialog}>
+						<a href="{item.href}" class="center-column uppercase-link" on:click={closeDialog}>
 							<div class="bubble" aria-hidden="true">
 								<svelte:component this={item.icon} />
 							</div>

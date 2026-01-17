@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { page } from "$app/stores"
-	import { base } from "$app/paths"
+	import { page } from "$app/state"
 	import { MissingNo } from "$lib/ui/elements"
 	import { Title } from "$lib/ui/layout"
 	import { MAIN_CONTENT_ID } from "$lib/ui/layout"
+	import { Url } from "$lib/site/url"
 
-	const title = $page.status === 404
+	const title = page.status === 404
 		? "MissingNo."
 		: "We're sorry!"
 	
-	const message = $page.status === 404
+	const message = page.status === 404
 		? "Looks like there's nothing here!"
 		: "A problem seems to have occurred."
 </script>
@@ -19,7 +19,7 @@
 	<h1>{title}</h1>
 	<p>{message}</p>
 	<p class="missingno"><MissingNo /></p>
-	<p>Try <a href="{base}/">returning to the home page.</a></p>
+	<p>Try <a href="{Url.home()}">returning to the home page.</a></p>
 </main>
 
 <style>

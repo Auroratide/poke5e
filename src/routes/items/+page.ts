@@ -1,8 +1,8 @@
 import type { PageLoad } from "./$types"
-import { base } from "$app/paths"
+import { Url } from "$lib/site/url"
 
 export const load: PageLoad = async ({ fetch }) => {
-	const items = await fetch(`${base}/items.json`)
+	const items = await fetch(Url.api.items())
 		.then(res => res.json())
 		.then(data => data.items)
 

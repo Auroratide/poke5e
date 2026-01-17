@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from "$app/paths"
 	import { SearchField } from "$lib/ui/forms"
 	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { pokemonFilter, pokemonSorter } from "$lib/site/stores"
@@ -30,7 +29,7 @@
 	key: "sr", name: "SR", ratio: 1, sort: byNumericField(it => it.sr.data), largeScreenOnly: true,
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type.primary}-bg)">
-		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{base}/pokemon/{item.data.id}">{item.data.name}</a></BubbleRow.Cell>
+		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.pokemon(item.data.id)}">{item.data.name}</a></BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{item.type.toString()}</BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[2]}>{item.sr.toString()}</BubbleRow.Cell>
 	</BubbleRow.Row>

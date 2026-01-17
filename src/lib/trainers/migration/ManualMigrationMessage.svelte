@@ -1,13 +1,13 @@
 <script lang="ts">
-	import { base } from "$app/paths"
 	import { slide } from "svelte/transition"
 	import { seenTrainerRecovery } from "./store"
+	import { Url } from "$lib/site/url"
 
 	const dismiss = () => seenTrainerRecovery.set(true)
 </script>
 
 {#if !$seenTrainerRecovery}
-	<p transition:slide={{ axis: "y", duration: 200 }}>Trainers missing? <a href="{base}/trainer-recovery">Learn how to recover them</a>! Or, <button on:click={dismiss}>dismiss this message.</button></p>
+	<p transition:slide={{ axis: "y", duration: 200 }}>Trainers missing? <a href="{Url.trainerRecovery()}">Learn how to recover them</a>! Or, <button on:click={dismiss}>dismiss this message.</button></p>
 {/if}
 
 <style>

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { base } from "$app/paths"
 	import { MovesStore as allMoves } from "./store"
+	import { Url } from "$lib/site/url"
 
 	export let moves: string[]
 
@@ -10,7 +10,7 @@
 {#if $allMoves !== undefined}
 	<ul>
 		{#each moves as move}
-			<li><a href="{base}/moves/{move}">{name(move)}</a></li>
+			<li><a href="{Url.moves(move)}">{name(move)}</a></li>
 		{/each}
 	</ul>
 {:else}

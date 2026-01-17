@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from "$app/paths"
 	import { SearchField } from "$lib/ui/forms"
 	import { SortableTable, BubbleRow, ListHeading } from "$lib/ui/page"
 	import { trainerListFilterValue, trainerListSorter } from "./store"
@@ -22,7 +21,7 @@
 
 <ListHeading title="Trainer List" target="/trainers">
 	<a slot="link" href="{Url.trainers(undefined, undefined, PageAction.findTrainer)}" class="dark-font">Find by trainer ID &gt;</a>
-	<Button slot="action" href="{base}/trainers?action=new-trainer">+ New Trainer</Button>
+	<Button slot="action" href="{Url.trainers(undefined, undefined, PageAction.newTrainer)}">+ New Trainer</Button>
 </ListHeading>
 <div class="space-bottom">
 	<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} />
@@ -34,7 +33,7 @@
 		key: "name", name: "Name", ratio: 1, sort: byStringField(it => it.name),
 	} ]}>
 		<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
-			<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{base}/trainers?id={item.readKey}">{item.name}</a></BubbleRow.Cell>
+			<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.trainers(item.readKey)}">{item.name}</a></BubbleRow.Cell>
 		</BubbleRow.Row>
 	</SortableTable>
 {/if}

@@ -43,6 +43,7 @@
 		MAIN_SEARCH_ID,
 	} from "$lib/ui/layout"
 	import type { ThemeColor } from "$lib/ui/theme"
+	import { Url } from "$lib/site/url"
 	
 	if (browser) {
 		import("@auroratide/toggle-switch/lib/define.js")
@@ -80,46 +81,55 @@
 
 	const navItems: {
 		id: string,
+		href: string,
 		name: string,
 		color: ThemeColor,
 		icon: ComponentType,
 	}[] = [ {
 		id: "pokemon",
+		href: Url.pokemon(),
 		name: "Pokémon",
 		color: "red",
 		icon: PokeballIcon,
 	}, {
 		id: "moves",
+		href: Url.moves(),
 		name: "Moves",
 		color: "blue",
 		icon: HitIcon,
 	}, {
 		id: "tms",
+		href: Url.tms(),
 		name: "TMs",
 		color: "purple",
 		icon: DiscIcon,
 	}, {
 		id: "items",
+		href: Url.items(),
 		name: "Items",
 		color: "yellow",
 		icon: BackpackIcon,
 	}, {
 		id: "trainers",
+		href: Url.trainers(),
 		name: "Trainers",
 		color: "green",
 		icon: IdBadgeIcon,
 	}, {
 		id: "reference",
+		href: Url.reference.all(),
 		name: "Reference",
 		color: "navy",
 		icon: PencilNotesIcon,
 	}, {
 		id: "fakemon",
+		href: Url.fakemon(),
 		name: "Fakémon",
 		color: "pink",
 		icon: GreatballIcon,
 	}, {
 		id: "settings",
+		href: Url.settings(),
 		name: "Settings",
 		color: "grey",
 		icon: CogIcon,

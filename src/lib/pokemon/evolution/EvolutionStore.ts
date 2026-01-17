@@ -1,4 +1,3 @@
-import { base } from "$app/paths"
 import { derived, get, writable, type Readable, type Unsubscriber, type Writable } from "svelte/store"
 import { Evolution } from "./Evolution"
 import { EvolutionForest } from "./EvolutionForest"
@@ -9,10 +8,11 @@ import type { Data } from "$lib/DataClass"
 import type { EvolutionWriteKeys } from "./data/EvolutionDataProvider"
 import { cachedReadable } from "$lib/utils/store"
 import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
+import { Url } from "$lib/site/url"
 
 export const canonEvolutions = cachedReadable<EvolutionForest>(undefined, (set) => {
 	if (typeof window !== "undefined") {
-		fetch(`${base}/evolutions/v1.json`)
+		fetch(Url.api.evolutions())
 			.then((res) => res.json())
 			.then((data: EvolutionJsonResponse) => data.items.map((it) =>
 				Evolution.fromJson(it),

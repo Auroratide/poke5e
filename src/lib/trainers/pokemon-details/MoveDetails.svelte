@@ -5,7 +5,6 @@
 </script>
 
 <script lang="ts">
-	import { base } from "$app/paths"
 	import { NumericResourceField, type NumericChangeDetail } from "$lib/ui/forms"
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import type { Attributes } from "$lib/dnd/attributes"
@@ -18,6 +17,7 @@
 	import type { Level } from "$lib/dnd/level"
 	import type { PokemonType } from "$lib/pokemon/types"
 	import type { Move } from "$lib/moves/Move"
+	import { Url } from "$lib/site/url"
 
 	const dispatch = createEventDispatcher()
 
@@ -49,7 +49,7 @@
 <div class="vstack space-after">
 	<div class="vstack bg-by-type rounded space-inner" style:--bg="var(--skin-{moveData.type}-bg)">
 		<div class="hrow space-after-tiny">
-			<span class="flex-span"><a href="{base}/moves/{move.moveId}">{moveData.name}</a></span>
+			<span class="flex-span"><a href="{Url.moves(move.moveId)}">{moveData.name}</a></span>
 			<span class="pp">
 				<VisuallyHidden><label for="current-hp">{moveData.name} PP</label></VisuallyHidden>
 				<span class="current">

@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { base } from "$app/paths"
 	import { TmsStore as allTms } from "../store"
+	import { Url } from "$lib/site/url"
 
 	export let tms: number[]
 
@@ -10,7 +10,7 @@
 {#if $allTms !== undefined}
 	<ul>
 		{#each tms as tm}
-			<li><a href="{base}/tms/{tm}">{name(tm)}</a></li>
+			<li><a href="{Url.tms(tm.toString())}">{name(tm)}</a></li>
 		{/each}
 	</ul>
 {:else}
