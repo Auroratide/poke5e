@@ -1,7 +1,7 @@
 
 import type { RequestHandler } from "./$types"
-import data from "../../../static/data/moves.json"
-import contestData from "../../../static/data/contest.json"
+import data from "../../../../static/data/moves.json"
+import contestData from "../../../../static/data/contest.json"
 
 export const GET: RequestHandler = async () => {
 	const moves = data.moves.map(it => ({

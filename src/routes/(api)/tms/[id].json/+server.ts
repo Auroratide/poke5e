@@ -1,7 +1,7 @@
 import type { RequestHandler } from "./$types"
-import moves from "../../../../static/data/moves.json"
-import tms from "../../../../static/data/tms.json"
-import pokemon from "../../../../static/data/pokemon-v2.json"
+import moves from "../../../../../static/data/moves.json"
+import tms from "../../../../../static/data/tms.json"
+import pokemon from "../../../../../static/data/pokemon-v2.json"
 import { pokemonWhoLearnThisTm } from "$lib/moves/pokemon"
 
 export const GET: RequestHandler = async ({ params }) => {

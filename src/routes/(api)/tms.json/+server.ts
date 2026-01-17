@@ -1,6 +1,6 @@
 import type { RequestHandler } from "./$types"
-import moves from "../../../static/data/moves.json"
-import tms from "../../../static/data/tms.json"
+import moves from "../../../../static/data/moves.json"
+import tms from "../../../../static/data/tms.json"
 
 export const GET: RequestHandler = async () => {
 	const tmsWithMoveInfo = tms.tms.map(tm => {

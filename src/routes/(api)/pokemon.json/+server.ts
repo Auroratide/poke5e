@@ -1,6 +1,6 @@
 
 import type { RequestHandler } from "./$types"
-import pokemon from "../../../../static/data/pokemon-v2.json"
+import pokemon from "../../../../static/data/pokemon.json"
 import abilities from "../../../../static/data/abilities.json"
 import { Ability } from "$lib/pokemon/ability"
 

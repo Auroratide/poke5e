@@ -1,9 +1,7 @@
 import type { RequestHandler } from "./$types"
-import pokemon from "../../../../static/data/pokemon.json"
-import abilities from "../../../../static/data/abilities.json"
+import pokemon from "../../../../../../static/data/pokemon-v2.json"
+import abilities from "../../../../../../static/data/abilities.json"
 import { Ability } from "$lib/pokemon/ability"
-
-export const prerender = true
 
 export const GET: RequestHandler = async ({ params }) => {
 	const selectedPokemon = pokemon.items.find(it => it.id === params.id)
@@ -14,8 +12,4 @@ export const GET: RequestHandler = async ({ params }) => {
 			status: 404,
 		})
 	}
-}
-
-export async function entries() {
-	return pokemon.items.map((it) => ({ id: it.id }))
 }

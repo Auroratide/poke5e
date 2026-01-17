@@ -1,6 +1,6 @@
 
 import type { RequestHandler } from "./$types"
-import evolutions from "../../../../static/data/evolution.json"
+import evolutions from "../../../../../static/data/evolution.json"
 
 export const prerender = true
 

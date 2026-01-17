@@ -1,5 +1,5 @@
 import type { RequestHandler } from "./$types"
-import data from "../../../../static/data/items.json"
+import data from "../../../../../static/data/items.json"
 
 export const GET: RequestHandler = async ({ params }) => {
 	const item = data.items.find(it => it.id === params.id)
