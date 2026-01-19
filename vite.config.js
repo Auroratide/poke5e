@@ -5,18 +5,18 @@ import { sveltekit } from "@sveltejs/kit/vite"
 /** @type {import('vite').UserConfig} */
 const config = {
 	plugins: [
-		paraglideVitePlugin({
-			project: "./project.inlang",
-			outdir: "./src/lib/site/i18n/paraglide",
-			strategy: ["url", "baseLocale"],
-			exclude: [
-				/^\/src\/.*\.test\.js$/,
-				/^\/@vitest\//,
-				/^\/__vitest\//,
-				/^\/virtual:/,
-				/^\/@fs\//,
-			],
-		}),
+		// paraglideVitePlugin({
+		// 	project: "./project.inlang",
+		// 	outdir: "./src/lib/site/i18n/paraglide",
+		// 	strategy: ["url", "baseLocale"],
+		// 	exclude: [
+		// 		/^\/src\/.*\.test\.js$/,
+		// 		/^\/@vitest\//,
+		// 		/^\/__vitest\//,
+		// 		/^\/virtual:/,
+		// 		/^\/@fs\//,
+		// 	],
+		// }),
 		sveltekit(),
 	],
 	server: {
