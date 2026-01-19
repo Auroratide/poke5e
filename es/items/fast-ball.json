@@ -1,0 +1,1 @@
+{"id":"fast-ball","name":"Rapid Ball","type":"pokeball","cost":600,"description":["Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Permite ser lanzada como una reacción para capturar un Pokémon que está huyendo."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fast-ball.png"}}

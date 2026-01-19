@@ -1,0 +1,1 @@
+{"id":"light-ball","name":"Bola Luminosa","type":"held item","cost":1400,"description":["Cuando Pikachu lleva equipado este objeto, su modificador de Poder de Movimiento aumenta en 1."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/light-ball.png"}}

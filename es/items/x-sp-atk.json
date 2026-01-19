@@ -1,0 +1,1 @@
+{"id":"x-sp-atk","name":"Ataque Especial X","type":"medicine","cost":350,"description":["Un entrenador puede usar una acción para administrar este objeto a un Pokémon. Durante 1 minuto, el Pokémon obtiene +2 a las CD de sus movimientos."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-sp-atk.png"}}

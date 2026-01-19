@@ -1,0 +1,1 @@
+{"id":"max-revive","name":"Revivir Máximo","type":"medicine","cost":5000,"description":["Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon debilitado en una Pokéball. Se consume al usarse."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-revive.png"}}

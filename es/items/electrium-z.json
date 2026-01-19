@@ -1,0 +1,1 @@
+{"id":"electrium-z","name":"Electrostal Z","type":"held item","cost":null,"description":["Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Eléctrico. Tiene 1 carga, y recupera la carga al amanecer."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electrium-z--held.png"}}

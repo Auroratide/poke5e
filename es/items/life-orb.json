@@ -1,0 +1,1 @@
+{"id":"life-orb","name":"Vidaesfera","type":"held item","cost":2000,"description":["El portador añade su bonificador por competencia al daño que inflige, pero recibe la misma cantidad de daño sin tipo cada vez que lo hace."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png"}}

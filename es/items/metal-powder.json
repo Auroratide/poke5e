@@ -1,0 +1,1 @@
+{"id":"metal-powder","name":"Polvo Metálico","type":"held item","cost":1200,"description":["Cuando Ditto lleva equipado este objeto, obtiene +3 a su CA."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-powder.png"}}

@@ -1,0 +1,1 @@
+{"id":"assault-vest","name":"Chaleco Asalto","type":"held item","cost":2000,"description":["El portador obtiene +1 a su CA mientras lleve equipado este objeto, pero solo puede usar movimientos que causen daño."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/assault-vest.png"}}

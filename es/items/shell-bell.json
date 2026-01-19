@@ -1,0 +1,1 @@
+{"id":"shell-bell","name":"Campana Concha","type":"held item","cost":4400,"description":["Cuando el portador usa un movimiento que daña al menos a una criatura, el portador restaura puntos de golpe iguales a su bonificador por competencia."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shell-bell.png"}}

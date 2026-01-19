@@ -1,0 +1,1 @@
+{"id":"fresh-water","name":"Agua Fresca","type":"medicine","cost":200,"description":["Al consumirlo, restaura 7 puntos de golpe. Un entrenador puede usar una acción adicional para consumir este objeto, o una acción para administrarlo a un Pokémon adyacente."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fresh-water.png"}}

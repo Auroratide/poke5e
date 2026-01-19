@@ -1,0 +1,1 @@
+{"id":"x-accuracy","name":"Precisión X","type":"medicine","cost":350,"description":["Un entrenador puede usar una acción para administrar este objeto a un Pokémon. El Pokémon obtiene ventaja en sus siguientes tres tiradas de ataque."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-accuracy.png"}}

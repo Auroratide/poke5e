@@ -1,0 +1,1 @@
+{"id":"poke-ball","name":"Poké Ball","type":"pokeball","cost":250,"description":["Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"}}

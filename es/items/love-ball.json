@@ -1,0 +1,1 @@
+{"id":"love-ball","name":"Amor Ball","type":"pokeball","cost":1300,"description":["Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en base al doble del modificador de Carisma de tu Pokémon en uso."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/love-ball.png"}}

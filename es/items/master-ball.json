@@ -1,0 +1,1 @@
+{"id":"master-ball","name":"Master Ball","type":"pokeball","cost":null,"description":["Permite a un entrenador automáticamente acertar la tirada de Captura para capturar un Pokémon."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png"}}

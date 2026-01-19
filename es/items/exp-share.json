@@ -1,0 +1,1 @@
+{"id":"exp-share","name":"Repartir Experiencia","type":"held item","cost":7500,"description":["El Pokémon que lleve equipado este objeto recibe hasta la mitad de la experiencia total obtenida en cada combate mientras forme parte del equipo."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/exp-share.png"}}

@@ -1,0 +1,1 @@
+{"id":"revive","name":"Revivir","type":"medicine","cost":3000,"description":["Un entrenador puede usar una acción para restaurar 2d4 + 2 puntos de golpe a un Pokémon debilitado en una Pokéball. Se consume al usarse."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revive.png"}}

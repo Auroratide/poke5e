@@ -1,0 +1,1 @@
+{"id":"grass-memory-disc","name":"Disco Planta","type":"held item","cost":2000,"description":["Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Planta."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grass-memory.png"}}

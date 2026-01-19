@@ -1,0 +1,1 @@
+{"id":"burn-heal","name":"Antiquemar","type":"medicine","cost":200,"description":["Un entrenador puede usar una acción para curar a un Pokémon adyacente de la condición quemado. Se consume al usarse."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/burn-heal.png"}}

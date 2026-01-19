@@ -1,0 +1,1 @@
+{"id":"level-ball","name":"Nivel Ball","type":"pokeball","cost":400,"description":["Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura de captura en 5 si tu nivel de entrenador es mayor al nivel del Pokemon."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/level-ball.png"}}

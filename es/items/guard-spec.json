@@ -1,0 +1,1 @@
+{"id":"guard-spec","name":"Protección Especial","type":"medicine","cost":700,"description":["Un entrenador puede usar una acción para administrar este objeto a un Pokémon. Durante 1 minuto, el Pokémon no puede ser afectado por nuevas condiciones de estado."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/guard-spec.png"}}

@@ -1,0 +1,1 @@
+{"id":"great-ball","name":"Súper Ball","type":"pokeball","cost":500,"description":["Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 5."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"}}

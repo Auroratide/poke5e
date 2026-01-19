@@ -1,0 +1,1 @@
+{"id":"potion","name":"Poción","type":"medicine","cost":200,"description":["Un entrenador puede usar una acción para restaurar 2d4 + 2 puntos de golpe a un Pokémon adyacente. Se consume al usarse."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/potion.png"}}

@@ -1,0 +1,1 @@
+{"id":"muscle-band","name":"Cinta Fuerte","type":"held item","cost":4000,"description":["El portador añade su bonificador por competencia al daño que inflige de ataques cuerpo a cuerpo (una vez por movimiento)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png"}}

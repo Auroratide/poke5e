@@ -1,0 +1,1 @@
+{"id":"antidote","name":"Antídoto","type":"medicine","cost":200,"description":["Un entrenador puede usar una acción para curar a un Pokémon adyacente de la condición envenenado o gravemente envenenado. Se consume al usarse."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/antidote.png"}}

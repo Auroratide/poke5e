@@ -1,0 +1,1 @@
+{"id":"ability-capsule","name":"Cápsula Habilidad","type":"medicine","cost":5000,"description":["Cuando es consumida por un Pokémon durante un descanso largo, el Pokémon puede cambiar su habilidad no oculta (si hay más opciones)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ability-capsule.png"}}

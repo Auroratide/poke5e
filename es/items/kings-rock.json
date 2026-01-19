@@ -1,0 +1,1 @@
+{"id":"kings-rock","name":"King’s Rock","type":"held item","cost":4000,"description":["When a target is hit by a melee attack made by the holder, if the attack roll was a natural 19 or 20, the target flinches."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png"}}

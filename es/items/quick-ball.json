@@ -1,0 +1,1 @@
+{"id":"quick-ball","name":"Veloz Ball","type":"pokeball","cost":1000,"description":["Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 8 si es usada en la primera ronda de combate."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-ball.png"}}

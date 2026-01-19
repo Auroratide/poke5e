@@ -1,0 +1,1 @@
+{"id":"elixir","name":"Elixir","type":"medicine","cost":900,"description":["Un entrenador puede usar una acción para restaurar 5 PP de todos los movimientos de un Pokémon adyacente. Se consume al usarse."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/elixir.png"}}

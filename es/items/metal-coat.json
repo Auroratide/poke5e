@@ -1,0 +1,1 @@
+{"id":"metal-coat","name":"Revestimiento Metálico","type":"held item","cost":4000,"description":["El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Acero (una vez por movimiento)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-coat.png"}}

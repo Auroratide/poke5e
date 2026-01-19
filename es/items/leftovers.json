@@ -1,0 +1,1 @@
+{"id":"leftovers","name":"Restos","type":"held item","cost":4400,"description":["Este objeto tiene 10 cargas. El portador puede usar una acción adicional para usar gastar una carga y recuperar puntos de golpe iguales a su bonificador por competencia."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png"}}

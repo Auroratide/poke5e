@@ -1,0 +1,1 @@
+{"id":"escape-rope","name":"Cuerda Huida","type":"trainer gear","cost":150,"description":["Se consume para escapar automáticamente de un combate contra un Pokémon salvaje."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/escape-rope.png"}}

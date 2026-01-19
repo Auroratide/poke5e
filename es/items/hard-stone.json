@@ -1,0 +1,1 @@
+{"id":"hard-stone","name":"Piedra Dura","type":"held item","cost":4400,"description":["El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Roca (una vez por movimiento)."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hard-stone.png"}}

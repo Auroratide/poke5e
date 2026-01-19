@@ -1,0 +1,1 @@
+{"id":"sacred-ash","name":"Ceniza Sagrada","type":"medicine","cost":10000,"description":["Un entrenador puede gastar 5 minutos para revivir hasta seis Pokémon debilitados. Cada Pokémon revivido de esta forma restaura hasta la mitad de sus puntos de golpe máximos."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sacred-ash.png"}}

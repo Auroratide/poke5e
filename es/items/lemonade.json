@@ -1,0 +1,1 @@
+{"id":"lemonade","name":"Limonada","type":"medicine","cost":650,"description":["Al consumirlo, restaura 30 puntos de golpe. Un entrenador puede usar una acción adicional para consumir este objeto, o una acción para administrarlo a un Pokémon adyacente."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lemonade.png"}}

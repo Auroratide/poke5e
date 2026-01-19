@@ -1,0 +1,1 @@
+{"id":"max-elixir","name":"Elixir Máximo","type":"medicine","cost":3200,"description":["Un entrenador puede usar una acción para restaurar 10 PP de todos los movimientos de un Pokémon adyacente. Se consume al usarse."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-elixir.png"}}

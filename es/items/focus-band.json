@@ -1,0 +1,1 @@
+{"id":"focus-band","name":"Cinta Focus","type":"held item","cost":1000,"description":["Cuando el portador vaya a retroceder, tira un d20. En un resultado de 10 o más, el portador no retrocede."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-band.png"}}

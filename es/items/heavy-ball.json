@@ -1,0 +1,1 @@
+{"id":"heavy-ball","name":"Peso Ball","type":"pokeball","cost":1300,"description":["Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 10 si el objetivo es de tamaño mediano o grande."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heavy-ball.png"}}

@@ -1,0 +1,1 @@
+{"id":"lure-ball","name":"Cebo Ball","type":"pokeball","cost":1300,"description":["Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon, reduce la CD de Captura en 10 si se ha usado contra un Pokémon encontrado mediante la pesca."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lure-ball.png"}}

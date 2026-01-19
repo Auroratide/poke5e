@@ -1,0 +1,1 @@
+{"id":"dive-ball","name":"Buceo Ball","type":"pokeball","cost":800,"description":["Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 10 si el Pokémon se encuentra bajo el agua."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dive-ball.png"}}

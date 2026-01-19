@@ -1,0 +1,1 @@
+{"id":"berry-juice","name":"Zumo de Baya","type":"medicine","cost":500,"description":["Al consumirlo, restaura 20 puntos de golpe. Un entrenador puede usar una acción adicional para consumir este objeto, o una acción para administrarlo a un Pokémon adyacente."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berry-juice.png"}}

@@ -1,0 +1,1 @@
+{"id":"nest-ball","name":"Nido Ball","type":"pokeball","cost":400,"description":["Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon, reduce la CD de Captura en 5 si el Pokémon es nivel 5 o menos."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nest-ball.png"}}

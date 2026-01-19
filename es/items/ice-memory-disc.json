@@ -1,0 +1,1 @@
+{"id":"ice-memory-disc","name":"Disco Hielo","type":"held item","cost":2000,"description":["Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Hielo."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-memory.png"}}

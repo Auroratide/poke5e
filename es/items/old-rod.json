@@ -1,0 +1,1 @@
+{"id":"old-rod","name":"Caña Vieja","type":"trainer gear","cost":1000,"description":["Permite a un entrenador pescar Pokémon. Pescar toma una hora, y el Pokémon que captures es aleatorio.","La Caña Vieja solo permite capturar Magikarp."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-rod.png"}}
