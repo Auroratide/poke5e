@@ -5,12 +5,12 @@ import { defineConfig } from "vitest/config"
 
 export default defineConfig({
 	plugins: [
+		sveltekit(),
 		paraglideVitePlugin({
 			project: "./project.inlang",
 			outdir: "./src/lib/site/i18n/paraglide",
 			strategy: ["url", "baseLocale"],
 		}),
-		sveltekit(),
 	],
 	server: {
 		port: 3000,
