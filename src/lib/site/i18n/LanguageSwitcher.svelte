@@ -1,9 +1,11 @@
 <script lang="ts">
-	import { page } from "$app/state"
+	import { page } from "$app/stores"
 	import { locales, localizeHref, getLocale } from "$lib/site/i18n/paraglide/runtime"
 	import { m } from "$lib/site/i18n/paraglide/messages"
 	import LanguageIcon from "./LanguageIcon.svelte"
 	import { ChevronIcon } from "$lib/ui/icons"
+
+	$: pathname = $page.url.pathname
 </script>
 
 <nav aria-label="{m["settings.language"]()}">
@@ -18,7 +20,7 @@
 				<ul>
 					{#each locales as locale}
 						<li class:active={locale === getLocale()}>
-							<a href="{localizeHref(page.url.pathname, { locale })}" data-sveltekit-reload>
+							<a href="{localizeHref(pathname, { locale })}" data-sveltekit-reload>
 								{m.languageName({}, { locale })}
 							</a>
 						</li>
