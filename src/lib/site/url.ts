@@ -8,7 +8,8 @@ export const Url = {
 		if (key) params.append("id", key)
 		if (action) params.append("action", action)
 
-		return localizeUrl(resolve("/fakemon") + `?${params.toString()}`).pathname
+		const url = localizeUrl(resolve("/fakemon") + `?${params.toString()}`)
+		return url.pathname + url.search
 	},
 	items: (id?: string) => localizeUrl(id ? resolve("/items/[id]", { id }) : resolve("/items")).pathname,
 	pokemon: (id?: string) => localizeUrl(id ? resolve("/pokemon/[id]", { id }) : resolve("/pokemon")).pathname,
@@ -20,7 +21,8 @@ export const Url = {
 		if (pokemonId) params.append("pokemon", pokemonId)
 		if (action) params.append("action", action)
 
-		return localizeUrl(resolve("/trainers") + `?${params.toString()}`).pathname
+		const url = localizeUrl(resolve("/trainers") + `?${params.toString()}`)
+		return url.pathname + url.search
 	},
 	versionHistory: () => localizeUrl(resolve("/version-history")).pathname,
 	trainerRecovery: () => localizeUrl(resolve("/trainer-recovery")).pathname,
