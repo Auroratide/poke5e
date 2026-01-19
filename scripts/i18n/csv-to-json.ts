@@ -2,6 +2,13 @@ import fs from "node:fs/promises"
 import path from "node:path"
 import { parse } from "csv-parse/sync"
 
+function rowConversionRule(resource: string): (header: string, cell: string) => any {
+	switch (resource) {
+		case "items": return (h, c) => h === "description" ? c.split("\n").filter((it) => it.trim().length > 0) : c
+		default: return (h, c) => c
+	}
+}
+
 async function getEnglish(resource: string): Promise<any[]> {
 	const json = await fs.readFile(path.join("static", "data", `${resource}.json`), { encoding: "utf-8" })
 	const obj = JSON.parse(json)
@@ -15,7 +22,7 @@ async function getCsv(locale: string, resource: string): Promise<any[]> {
 	const [header, ...rows] = parse(csv)
 	return rows.map((row) => header.reduce((obj, h, i) => ({
 		...obj,
-		[h]: h === "description" ? row[i].split("\n").filter((it) => it.trim().length > 0) : row[i],
+		[h]: rowConversionRule(resource)(h, row[i]),
 	}), {}))
 }
 
