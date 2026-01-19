@@ -1,5 +1,4 @@
 import { readable, writable } from "svelte/store"
-import { resolve } from "$app/paths"
 import { Item } from "./Item"
 import type { Data } from "$lib/DataClass"
 import { Url } from "$lib/site/url"

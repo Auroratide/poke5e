@@ -9,7 +9,7 @@
 	import { shouldShowVersionHighlight } from "$lib/site/version-tracking"
 	import { browser } from "$app/environment"
 	import { LanguageSwitcher } from "$lib/site/i18n"
-	import { FeatureToggles } from "$lib/site/FeatureToggles";
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	export let currentVersion: string
 	export let versionHighlight: string = ""
