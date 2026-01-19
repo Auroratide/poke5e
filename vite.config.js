@@ -9,6 +9,13 @@ const config = {
 			project: "./project.inlang",
 			outdir: "./src/lib/site/i18n/paraglide",
 			strategy: ["url", "baseLocale"],
+			exclude: [
+				/^\/src\/.*\.test\.js$/,
+				/^\/@vitest\//,
+				/^\/__vitest\//,
+				/^\/virtual:/,
+				/^\/@fs\//,
+			],
 		}),
 		sveltekit(),
 	],

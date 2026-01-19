@@ -32,8 +32,8 @@ jobs:
           version: latest
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec playwright install
-      - run: cp ./supabase/functions/.env.example ./supabase/functions/.env
-      - run: pnpm services:start
-      - run: pnpm supabase db reset
+      # - run: cp ./supabase/functions/.env.example ./supabase/functions/.env
+      # - run: pnpm services:start
+      # - run: pnpm supabase db reset
       - name: Unit Test
         run: pnpm test:unit
