@@ -4,6 +4,7 @@
 	import Container from "./Container.svelte"
 	import { MenuIcon } from "$lib/ui/icons"
 	import { Url } from "$lib/site/url"
+	import { m } from "$lib/site/i18n"
 
 	const NUMBER_OF_UNMENUED_ITEMS = 6
 
@@ -28,7 +29,7 @@
 </script>
 
 <nav aria-label="Site" class="row space-between">
-	<p class="site-title"><a href="{Url.home()}">Pokémon 5e</a></p>
+	<p class="site-title"><a href="{Url.home()}">{m["universal.sitetitle"]()}</a></p>
 	<div class="nav-bar">
 		<ul class="no-list row space-large nav-list lg:show" style:gap="1.375em">
 			{#each firstFewItems as item}
@@ -44,8 +45,8 @@
 		</ul>
 		<button on:click={openDialog} class="menu-button row space-small" class:lg:hide={!exceedsUnmenued}>
 			<span class="icon no-rotate"><MenuIcon /></span>
-			<span class="lg:hide">Menu</span>
-			<span class="lg:show">More</span>
+			<span class="lg:hide">{m["universal.menu"]()}</span>
+			<span class="lg:show">{m["universal.more"]()}</span>
 		</button>
 	</div>
 </nav>
@@ -55,7 +56,7 @@
 	<div class="full-center">
 		<Container half>
 			<header class="row space-between transitioned">
-				<p class="title">Menu</p>
+				<p class="title">{m["universal.menu"]()}</p>
 				<form method="dialog">
 					<button class="close-button" aria-label="close">&times;</button>
 				</form>

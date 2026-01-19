@@ -44,6 +44,7 @@
 	} from "$lib/ui/layout"
 	import type { ThemeColor } from "$lib/ui/theme"
 	import { Url } from "$lib/site/url"
+	import { m } from "$lib/site/i18n"
 	
 	if (browser) {
 		import("@auroratide/toggle-switch/lib/define.js")
@@ -88,49 +89,49 @@
 	}[] = [ {
 		id: "pokemon",
 		href: Url.pokemon(),
-		name: "Pokémon",
+		name: m["pokemon.title"](),
 		color: "red",
 		icon: PokeballIcon,
 	}, {
 		id: "moves",
 		href: Url.moves(),
-		name: "Moves",
+		name: m["moves.title"](),
 		color: "blue",
 		icon: HitIcon,
 	}, {
 		id: "tms",
 		href: Url.tms(),
-		name: "TMs",
+		name: m["tms.title"](),
 		color: "purple",
 		icon: DiscIcon,
 	}, {
 		id: "items",
 		href: Url.items(),
-		name: "Items",
+		name: m["items.title"](),
 		color: "yellow",
 		icon: BackpackIcon,
 	}, {
 		id: "trainers",
 		href: Url.trainers(),
-		name: "Trainers",
+		name: m["trainers.title"](),
 		color: "green",
 		icon: IdBadgeIcon,
 	}, {
 		id: "reference",
 		href: Url.reference.all(),
-		name: "Reference",
+		name: m["reference.title"](),
 		color: "navy",
 		icon: PencilNotesIcon,
 	}, {
 		id: "fakemon",
 		href: Url.fakemon(),
-		name: "Fakémon",
+		name: m["fakemon.title"](),
 		color: "pink",
 		icon: GreatballIcon,
 	}, {
 		id: "settings",
 		href: Url.settings(),
-		name: "Settings",
+		name: m["settings.title"](),
 		color: "grey",
 		icon: CogIcon,
 	} ]

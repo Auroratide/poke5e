@@ -1,10 +1,37 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
 	"languageName": "English",
+	"universal": {
+		"sitetitle": "Pokémon 5e",
+		"more": "More",
+		"menu": "Menu"
+	},
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},
+	"pokemon": {
+		"title": "Pokémon"
+	},
+	"moves": {
+		"title": "Moves"
+	},
+	"tms": {
+		"title": "TMs"
+	},
+	"items": {
+		"title": "Items"
+	},
+	"trainers": {
+		"title": "Trainers"
+	},
+	"reference": {
+		"title": "Reference"
+	},
+	"fakemon": {
+		"title": "Fakémon"
+	},
 	"settings": {
+		"title": "Settings",
 		"language": "Language"
 	}
 }

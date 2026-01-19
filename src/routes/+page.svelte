@@ -19,35 +19,35 @@
 <StaticPage large title="{m["home.title"]()}" subtitle="An online reference for pokemon dungeons and dragons homebrew!">
 	<ul>
 		<li class="theme-red">
-			<a href="{Url.pokemon()}">Pokemon</a>
+			<a href="{Url.pokemon()}">{m["pokemon.title"]()}</a>
 			<span class="icon"><PokeballIcon /></span>
 		</li>
 		<li class="theme-blue">
-			<a href="{Url.moves()}">Moves</a>
+			<a href="{Url.moves()}">{m["moves.title"]()}</a>
 			<span class="icon"><HitIcon /></span>
 		</li>
 		<li class="theme-purple">
-			<a href="{Url.tms()}">TMs</a>
+			<a href="{Url.tms()}">{m["tms.title"]()}</a>
 			<span class="icon"><DiscIcon /></span>
 		</li>
 		<li class="theme-yellow">
-			<a href="{Url.items()}">Items</a>
+			<a href="{Url.items()}">{m["items.title"]()}</a>
 			<span class="icon"><BackpackIcon /></span>
 		</li>
 		<li class="theme-green">
-			<a href="{Url.trainers()}">Trainers</a>
+			<a href="{Url.trainers()}">{m["trainers.title"]()}</a>
 			<span class="icon"><IdBadgeIcon /></span>
 		</li>
 		<li class="theme-navy">
-			<a href="{Url.reference.all()}">Reference</a>
+			<a href="{Url.reference.all()}">{m["reference.title"]()}</a>
 			<span class="icon"><PencilNotesIcon /></span>
 		</li>
 		<li class="theme-pink">
-			<a href="{Url.fakemon()}">Fakémon</a>
+			<a href="{Url.fakemon()}">{m["fakemon.title"]()}</a>
 			<span class="icon"><GreatballIcon /></span>
 		</li>
 		<li class="theme-grey">
-			<a href="{Url.settings()}">Settings</a>
+			<a href="{Url.settings()}">{m["settings.title"]()}</a>
 			<span class="icon"><CogIcon /></span>
 		</li>
 	</ul>

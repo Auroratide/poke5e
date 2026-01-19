@@ -8,12 +8,13 @@
 	import OfficialFakemonSection from "./OfficialFakemonSection.svelte"
 	import LanguageSection from "./LanguageSection.svelte"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
+	import { m } from "$lib/site/i18n"
 </script>
 
-<Title value="Settings" />
+<Title value="{m["settings.title"]()}" />
 <Page theme="grey">
 	<CogIcon slot="icon" />
-	<Card title="Settings">
+	<Card title="{m["settings.title"]()}">
 		<section>
 			<p>In this section, you can update preferences and manage backups.</p>
 		</section>
