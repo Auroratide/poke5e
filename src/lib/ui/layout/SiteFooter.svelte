@@ -8,6 +8,8 @@
 	} from "$lib/ui/icons"
 	import { shouldShowVersionHighlight } from "$lib/site/version-tracking"
 	import { browser } from "$app/environment"
+	import { LanguageSwitcher } from "$lib/site/i18n"
+	import { FeatureToggles } from "$lib/site/FeatureToggles";
 
 	export let currentVersion: string
 	export let versionHighlight: string = ""
@@ -35,7 +37,13 @@
 						<span>{versionHighlight}</span>
 					{/if}
 				</a></p>
-				<button aria-expanded="{showMore}" aria-controls="site-footer-more" on:click={toggleMore}>{showMore ? "Less" : "More"} <span class="icon chevron-menu"><ChevronIcon.Menu label="" /></span></button>
+				<div class="right-side">
+					{#if FeatureToggles.Localization()}
+						<LanguageSwitcher />
+						<span>•</span>
+					{/if}
+					<button aria-expanded="{showMore}" aria-controls="site-footer-more" on:click={toggleMore}>{showMore ? "Less" : "More"} <span class="icon chevron-menu"><ChevronIcon.Menu label="" /></span></button>
+				</div>
 			</div>
 			<div id="site-footer-more" class="animate-height" hidden={!showMore} aria-hidden="{!showMore}">
 				<ul class="links">
@@ -63,6 +71,9 @@
 					<li><a href="{Url.privacyPolicy()}" on:click={close}>Privacy Policy</a></li>
 					<li><a href="{Url.external.github()}"><GithubIcon /> Github</a></li>
 					<li><a href="{Url.external.discord()}"><DiscordIcon /> Discord</a></li>
+					{#if FeatureToggles.Localization()}
+						<li><LanguageSwitcher /></li>
+					{/if}
 				</ul>
 			</div>
 			<p class="license"><small>Site by <a href="{Url.external.auroratide()}">Auroratide</a>. Content by the community. Pokémon and Pokémon character names are trademarks of Nintendo. Dungeons and Dragons is a trademark of Wizards of the Coast.</small></p>
@@ -176,6 +187,11 @@
 
 	.arrow {
 		font-size: var(--font-sz-mercury);
+	}
+
+	.right-side {
+		display: flex;
+		gap: 1em;
 	}
 
 	.animate-height {
