@@ -66,6 +66,6 @@ export const Url = {
 		evolutions: () => resolve("/(api)/evolutions/v1.json"),
 		items: (id?: string) => localizeUrl(id ? resolve("/(api)/items/[id].json", { id }) : resolve("/(api)/items.json")),
 		moves: (id?: string) => id ? resolve("/(api)/moves/[id].json", { id }) : resolve("/(api)/moves.json"),
-		abilities: () => resolve("/(api)/abilities.json"),
+		abilities: () => localizeUrl(resolve("/(api)/abilities.json")),
 	},
 } as const
