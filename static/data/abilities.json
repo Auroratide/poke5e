@@ -123,7 +123,7 @@
     {
       "id": "cheek-pouch",
       "name": "Cheek Pouch",
-      "description": "When this Pokémon eats any type of berry, is heals for an additional 10% of its maximum HP (rounded up to the nearest whole number)."
+      "description": "When this Pokémon eats any type of berry, it heals for an additional 10% of its maximum HP (rounded up to the nearest whole number)."
     },
 		{
       "id": "chilling-neigh",
@@ -1628,12 +1628,12 @@
     {
       "id": "zen-mode",
       "name": "Zen Mode",
-      "description": "When Darmanitan is below 50% of its HP, it enters Zen Mode. In Zen Mode, Darmanitan changes into the form of a solid statue. It's type changes to Fire/Psychic, it gains +4 to its AC, and its STR and WIS ability scores are swapped."
+      "description": "When Darmanitan is below 50% of its HP, it enters Zen Mode. In Zen Mode, Darmanitan changes into the form of a solid statue. Its type changes to Fire/Psychic, it gains +4 to its AC, and its STR and WIS ability scores are swapped."
     },
     {
       "id": "zen-mode-galarian",
       "name": "Zen Mode (Galarian)",
-      "description": "When Galarian Darmanitan is below 50% of its HP, it enters Zen Mode. In Zen Mode, Galarian Darmanitan changes into the form of a flaming snowman. It's type changes to Ice/Fire, and its STR and DEX each increase by +2."
+      "description": "When Galarian Darmanitan is below 50% of its HP, it enters Zen Mode. In Zen Mode, Galarian Darmanitan changes into the form of a flaming snowman. Its type changes to Ice/Fire, and its STR and DEX each increase by +2."
     },
 		{
       "id": "zero-to-hero",
