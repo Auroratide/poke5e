@@ -13,6 +13,2037 @@
 			"description": [
 				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 5."
 			]
+		},
+		{
+			"id": "ultra-ball",
+			"name": "Ultra Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 10."
+			]
+		},
+		{
+			"id": "master-ball",
+			"name": "Master Ball",
+			"description": [
+				"Permite a un entrenador automáticamente acertar la tirada de Captura para capturar un Pokémon."
+			]
+		},
+		{
+			"id": "safari-ball",
+			"name": "Safari Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en base a tu modificador de habilidad de Naturaleza."
+			]
+		},
+		{
+			"id": "fast-ball",
+			"name": "Rapid Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Permite ser lanzada como una reacción para capturar un Pokémon que está huyendo."
+			]
+		},
+		{
+			"id": "level-ball",
+			"name": "Nivel Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura de captura en 5 si tu nivel de entrenador es mayor al nivel del Pokemon."
+			]
+		},
+		{
+			"id": "lure-ball",
+			"name": "Cebo Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon, reduce la CD de Captura en 10 si se ha usado contra un Pokémon encontrado mediante la pesca."
+			]
+		},
+		{
+			"id": "heavy-ball",
+			"name": "Peso Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 10 si el objetivo es de tamaño mediano o grande."
+			]
+		},
+		{
+			"id": "love-ball",
+			"name": "Amor Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en base al doble del modificador de Carisma de tu Pokémon en uso."
+			]
+		},
+		{
+			"id": "friend-ball",
+			"name": "Amigo Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon, reduce la CD de Captura en base a tu modificador de habilidad de Persuasión."
+			]
+		},
+		{
+			"id": "moon-ball",
+			"name": "Luna Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 10 si el Pokémon puede evolucionar usando la Piedra Lunar."
+			]
+		},
+		{
+			"id": "sport-ball",
+			"name": "Competi Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en base a tu modificador de habilidad de atletismo."
+			]
+		},
+		{
+			"id": "net-ball",
+			"name": "Malla Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 10 si el Pokémon es tipo agua o bicho."
+			]
+		},
+		{
+			"id": "dive-ball",
+			"name": "Buceo Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 10 si el Pokémon se encuentra bajo el agua."
+			]
+		},
+		{
+			"id": "nest-ball",
+			"name": "Nido Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon, reduce la CD de Captura en 5 si el Pokémon es nivel 5 o menos."
+			]
+		},
+		{
+			"id": "repeat-ball",
+			"name": "Acopio Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 10 contra especies que ya hayas capturado antes."
+			]
+		},
+		{
+			"id": "timer-ball",
+			"name": "Turno Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Al realizar la acción de Lanzar Pokéball, en su lugar, puedes sostenerla y concentrarte. En el siguiente turno, cuando lances la Pokéball, reduce la CD de Captura en 1 por cada turno usado para concentrarte, hasta un máximo de 10."
+			]
+		},
+		{
+			"id": "luxury-ball",
+			"name": "Lujo Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Los Pokémon que residan dentro de una Lujo Ball obtienen +1 dado de golpe adicional."
+			]
+		},
+		{
+			"id": "premier-ball",
+			"name": "Honor Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Es un objeto raro, y a menudo es considerado un símbolo de estatus y elegancia."
+			]
+		},
+		{
+			"id": "dusk-ball",
+			"name": "Ocaso Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 10 mientras sea de noche o haya oscuridad."
+			]
+		},
+		{
+			"id": "heal-ball",
+			"name": "Sana Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Cuando el Pokémon dentro de la Sana Ball gaste un dado de golpe durante un descanso corto, puede lanzar dos veces y elegir el mayor resultado."
+			]
+		},
+		{
+			"id": "quick-ball",
+			"name": "Veloz Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 8 si es usada en la primera ronda de combate."
+			]
+		},
+		{
+			"id": "dream-ball",
+			"name": "Ensueño Ball",
+			"description": [
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 5 si el Pokémon se encuentra dormido."
+			]
+		},
+		{
+			"id": "potion",
+			"name": "Poción",
+			"description": [
+				"Un entrenador puede usar una acción para restaurar 2d4 + 2 puntos de golpe a un Pokémon adyacente. Se consume al usarse."
+			]
+		},
+		{
+			"id": "super-potion",
+			"name": "Súper Poción",
+			"description": [
+				"Un entrenador puede usar una acción para restaurar 3d6 + 6 puntos de golpe a un Pokémon adyacente. Se consume al usarse."
+			]
+		},
+		{
+			"id": "hyper-potion",
+			"name": "Híper Poción",
+			"description": [
+				"Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon adyacente. Se consume al usarse."
+			]
+		},
+		{
+			"id": "antidote",
+			"name": "Antídoto",
+			"description": [
+				"Un entrenador puede usar una acción para curar a un Pokémon adyacente de la condición envenenado o gravemente envenenado. Se consume al usarse."
+			]
+		},
+		{
+			"id": "burn-heal",
+			"name": "Antiquemar",
+			"description": [
+				"Un entrenador puede usar una acción para curar a un Pokémon adyacente de la condición quemado. Se consume al usarse."
+			]
+		},
+		{
+			"id": "ice-heal",
+			"name": "Antihielo",
+			"description": [
+				"Un entrenador puede usar una acción para curar a un Pokémon adyacente de la condición congelado. Se consume al usarse."
+			]
+		},
+		{
+			"id": "awakening",
+			"name": "Despertar",
+			"description": [
+				"Un entrenador puede usar una acción para curar a un Pokémon adyacente de la condición dormido. Se consume al usarse."
+			]
+		},
+		{
+			"id": "paralyze-heal",
+			"name": "Antiparalizador",
+			"description": [
+				"Un entrenador puede usar una acción para curar a un Pokémon adyacente de la condición paralizado. Se consume al usarse."
+			]
+		},
+		{
+			"id": "max-potion",
+			"name": "Poción Máxima",
+			"description": [
+				"Un entrenador puede usar una acción para administrar esta medicina a un Pokémon adyacente. 10 minutos después de consumirla, el Pokémon restaura 70 pultos de golpe. Se consume al usarse."
+			]
+		},
+		{
+			"id": "full-heal",
+			"name": "Cura Total",
+			"description": [
+				"Un entrenador puede usar una acción para administrar esta medicina a un Pokémon adyacente. 10 minutos después de consumirla, el Pokémon se cura de todas las condiciones de estado. Se consume al usarse."
+			]
+		},
+		{
+			"id": "full-restore",
+			"name": "Restaura Todo",
+			"description": [
+				"Un entrenador puede usar una acción para administrar esta medicina a un Pokémon adyacente. 10 minutos después de consumirla, el Pokémon restaura 70 pultos de golpe y se cura de todas las condiciones de estado. Se consume al usarse."
+			]
+		},
+		{
+			"id": "revive",
+			"name": "Revivir",
+			"description": [
+				"Un entrenador puede usar una acción para restaurar 2d4 + 2 puntos de golpe a un Pokémon debilitado en una Pokéball. Se consume al usarse."
+			]
+		},
+		{
+			"id": "max-revive",
+			"name": "Revivir Máximo",
+			"description": [
+				"Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon debilitado en una Pokéball. Se consume al usarse."
+			]
+		},
+		{
+			"id": "fresh-water",
+			"name": "Agua Fresca",
+			"description": [
+				"Al consumirlo, restaura 7 puntos de golpe. Un entrenador puede usar una acción adicional para consumir este objeto, o una acción para administrarlo a un Pokémon adyacente."
+			]
+		},
+		{
+			"id": "soda-pop",
+			"name": "Refresco",
+			"description": [
+				"Al consumirlo, restaura 10 puntos de golpe. Un entrenador puede usar una acción adicional para consumir este objeto, o una acción para administrarlo a un Pokémon adyacente."
+			]
+		},
+		{
+			"id": "berry-juice",
+			"name": "Zumo de Baya",
+			"description": [
+				"Al consumirlo, restaura 20 puntos de golpe. Un entrenador puede usar una acción adicional para consumir este objeto, o una acción para administrarlo a un Pokémon adyacente."
+			]
+		},
+		{
+			"id": "lemonade",
+			"name": "Limonada",
+			"description": [
+				"Al consumirlo, restaura 30 puntos de golpe. Un entrenador puede usar una acción adicional para consumir este objeto, o una acción para administrarlo a un Pokémon adyacente."
+			]
+		},
+		{
+			"id": "moomoo-milk",
+			"name": "Leche Moomoo",
+			"description": [
+				"Al consumirlo, restaura 50 puntos de golpe. Un entrenador puede usar una acción adicional para consumir este objeto, o una acción para administrarlo a un Pokémon adyacente."
+			]
+		},
+		{
+			"id": "energy-powder",
+			"name": "Polvo Energía",
+			"description": [
+				"Un entrenador puede usar una acción para restaurar 3d6 + 6 puntos de golpe a un Pokémon adyacente. Se consume al usarse. La mayoría de los Pokémon detestan el Polvo Energía, por lo que su uso excesivo puede provocar pérdida de lealtad (1/4 de probabilidad de reducir el nivel de Lealtad en 1)."
+			]
+		},
+		{
+			"id": "energy-root",
+			"name": "Raíz Energía",
+			"description": [
+				"Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon adyacente. Se consume al usarse. La mayoría de los Pokémon detestan la Raíz Energía, por lo que su uso excesivo puede provocar pérdida de lealtad (1/4 de probabilidad de reducir el nivel de Lealtad en 1)."
+			]
+		},
+		{
+			"id": "heal-powder",
+			"name": "Polvo Curación",
+			"description": [
+				"Un entrenador puede usar una acción para todas las condiciones de estado a un Pokémon adyacente. Se consume al usarse. La mayoría de los Pokémon detestan el Polvo Curación, por lo que su uso excesivo puede provocar pérdida de lealtad (1/4 de probabilidad de reducir el nivel de Lealtad en 1)."
+			]
+		},
+		{
+			"id": "revival-herb",
+			"name": "Hierba Revivir",
+			"description": [
+				"Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon debilitado en una Pokéball. Se consume al usarse. La mayoría de los Pokémon detestan la Hierba Revivir, por lo que su uso excesivo puede provocar pérdida de lealtad (1/4 de probabilidad de reducir el nivel de Lealtad en 1)."
+			]
+		},
+		{
+			"id": "ether",
+			"name": "Éter",
+			"description": [
+				"Un entrenador puede usar una acción para restaurar 5 PP de un solo movimiento de un Pokémon adyacente. Se consume al usarse."
+			]
+		},
+		{
+			"id": "max-ether",
+			"name": "Éter Máximo",
+			"description": [
+				"Un entrenador puede usar una acción para restaurar 10 PP de un solo movimiento de un Pokémon adyacente. Se consume al usarse."
+			]
+		},
+		{
+			"id": "elixir",
+			"name": "Elixir",
+			"description": [
+				"Un entrenador puede usar una acción para restaurar 5 PP de todos los movimientos de un Pokémon adyacente. Se consume al usarse."
+			]
+		},
+		{
+			"id": "max-elixir",
+			"name": "Elixir Máximo",
+			"description": [
+				"Un entrenador puede usar una acción para restaurar 10 PP de todos los movimientos de un Pokémon adyacente. Se consume al usarse."
+			]
+		},
+		{
+			"id": "sacred-ash",
+			"name": "Ceniza Sagrada",
+			"description": [
+				"Un entrenador puede gastar 5 minutos para revivir hasta seis Pokémon debilitados. Cada Pokémon revivido de esta forma restaura hasta la mitad de sus puntos de golpe máximos."
+			]
+		},
+		{
+			"id": "protein",
+			"name": "Proteína",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Fuerza del Pokémon aumenta 1.",
+				"Este objeto es una vitamina. Un Pokémon solo puede beneficiarse de los efectos de tres vitaminas en total."
+			]
+		},
+		{
+			"id": "iron",
+			"name": "Hierro",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Destreza del Pokémon aumenta 1.",
+				"Este objeto es una vitamina. Un Pokémon solo puede beneficiarse de los efectos de tres vitaminas en total."
+			]
+		},
+		{
+			"id": "carbos",
+			"name": "Carburante",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Carisma del Pokémon aumenta 1.",
+				"Este objeto es una vitamina. Un Pokémon solo puede beneficiarse de los efectos de tres vitaminas en total."
+			]
+		},
+		{
+			"id": "calcium",
+			"name": "Calcio",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Constitución del Pokémon aumenta 1.",
+				"Este objeto es una vitamina. Un Pokémon solo puede beneficiarse de los efectos de tres vitaminas en total."
+			]
+		},
+		{
+			"id": "zinc",
+			"name": "Zinc",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Sabiduría del Pokémon aumenta 1.",
+				"Este objeto es una vitamina. Un Pokémon solo puede beneficiarse de los efectos de tres vitaminas en total."
+			]
+		},
+		{
+			"id": "pp-up",
+			"name": "Más PP",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. Los PP máximos de uno de los movimientos de este Pokémon aumentan en 2.",
+				"Este objeto es una vitamina. Un Pokémon solo puede beneficiarse de los efectos de tres vitaminas en total."
+			]
+		},
+		{
+			"id": "ability-capsule",
+			"name": "Cápsula Habilidad",
+			"description": [
+				"Cuando es consumida por un Pokémon durante un descanso largo, el Pokémon puede cambiar su habilidad no oculta (si hay más opciones)."
+			]
+		},
+		{
+			"id": "guard-spec",
+			"name": "Protección Especial",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. Durante 1 minuto, el Pokémon no puede ser afectado por nuevas condiciones de estado."
+			]
+		},
+		{
+			"id": "dire-hit",
+			"name": "Directo",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. Durante 1 minuto, el rango de golpe crítico del Pokémon aumenta en 1.",
+				"Normalmente, esto significa que sus ataques realizan críticos con un 19 o 20 natural. Para movimientos como Corte, que ya amplían el rango de crítico, los críticos ocurren con 18, 19 o 20 natural."
+			]
+		},
+		{
+			"id": "x-attack",
+			"name": "Ataque X",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. Durante 1 minuto, el Pokémon +2 a sus tiradas de ataque."
+			]
+		},
+		{
+			"id": "x-defense",
+			"name": "Defensa X",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. Durante 1 minuto, el Pokémon obtiene +2 a su CA."
+			]
+		},
+		{
+			"id": "x-speed",
+			"name": "Velocidad X",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. Durante 1 minuto, la velocidad de movimiento del Pokémon aumenta en 10 pies."
+			]
+		},
+		{
+			"id": "x-accuracy",
+			"name": "Precisión X",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. El Pokémon obtiene ventaja en sus siguientes tres tiradas de ataque."
+			]
+		},
+		{
+			"id": "x-sp-atk",
+			"name": "Ataque Especial X",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. Durante 1 minuto, el Pokémon obtiene +2 a las CD de sus movimientos."
+			]
+		},
+		{
+			"id": "x-sp-def",
+			"name": "Defensa Especial X",
+			"description": [
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. Durante 1 minuto, el Pokémon obtiene +2 a las tiradas de salvación."
+			]
+		},
+		{
+			"id": "red-nectar",
+			"name": "Néctar Rojo",
+			"description": [
+				"Al consumir este objeto, un Oricorio cambia su forma a Oricorio Estilo Apasionado."
+			]
+		},
+		{
+			"id": "yellow-nectar",
+			"name": "Néctar Amarillo",
+			"description": [
+				"Al consumir este objeto, un Oricorio cambia su forma a Oricorio Estilo Animado."
+			]
+		},
+		{
+			"id": "pink-nectar",
+			"name": "Néctar Rosa",
+			"description": [
+				"Al consumir este objeto, un Oricorio cambia su forma a Oricorio Estilo Plácido."
+			]
+		},
+		{
+			"id": "purple-nectar",
+			"name": "Néctar Morado",
+			"description": [
+				"Al consumir este objeto, un Oricorio cambia su forma a Oricorio Estilo Refinado."
+			]
+		},
+		{
+			"id": "sun-stone",
+			"name": "Piedra Solar",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "moon-stone",
+			"name": "Piedra Lunar",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "fire-stone",
+			"name": "Piedra Fuego",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "thunder-stone",
+			"name": "Piedra Trueno",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "water-stone",
+			"name": "Piedra Agua",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "leaf-stone",
+			"name": "Piedra Hoja",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "shiny-stone",
+			"name": "Piedra Día",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "dusk-stone",
+			"name": "Piedra Noche",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "dawn-stone",
+			"name": "Piedra Alba",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "ice-stone",
+			"name": "Piedra Hielo",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "oval-stone",
+			"name": "Piedra Oval",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "alola-stone",
+			"name": "Piedra Alola",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "cheri-berry",
+			"name": "Baya Zreza",
+			"description": [
+				"Se consume para curar la parálisis. Puede consumirse como reacción al quedar paralizado."
+			]
+		},
+		{
+			"id": "chesto-berry",
+			"name": "Baya Atania",
+			"description": [
+				"Se consume para despertar del sueño. Puede consumirse como reacción al quedar dormido."
+			]
+		},
+		{
+			"id": "pecha-berry",
+			"name": "Baya Meloc",
+			"description": [
+				"Se consume para curar el envenenamiento. Puede consumirse como reacción al quedar envenenado o gravemente envenenado."
+			]
+		},
+		{
+			"id": "rawst-berry",
+			"name": "Baya Safre",
+			"description": [
+				"Se consume para curar la quemadura. Puede consumirse como reacción al quedar quemado."
+			]
+		},
+		{
+			"id": "aspear-berry",
+			"name": "Baya Perasi",
+			"description": [
+				"Se consume para curar la congelación. Puede consumirse como reacción al quedar congelado."
+			]
+		},
+		{
+			"id": "leppa-berry",
+			"name": "Baya Zanama",
+			"description": [
+				"Se consume para restaurar 10 PP de un movimiento. Puede consumirse como reacción al reducir los PP de un movimiento a 0."
+			]
+		},
+		{
+			"id": "oran-berry",
+			"name": "Baya Aranja",
+			"description": [
+				"Se consume para restaurar 2d4 + 2 puntos de golpe. Puede consumirse como reacción al quedar por debajo de la mitad de la salud máxima."
+			]
+		},
+		{
+			"id": "persim-berry",
+			"name": "Baya Caquic",
+			"description": [
+				"Se consume para curar la confusión. Puede consumirse como reacción al quedar confundido."
+			]
+		},
+		{
+			"id": "lum-berry",
+			"name": "Baya Ziuela",
+			"description": [
+				"Se consume para curar cualquier condición de estado. Puede consumirse como reacción al ser afectado por una condición de estado."
+			]
+		},
+		{
+			"id": "sitrus-berry",
+			"name": "Baya Zidra",
+			"description": [
+				"Se consume para restaurar 30 puntos de golpe. Puede consumirse como reacción al quedar por debajo de la mitad de la salud máxima."
+			]
+		},
+		{
+			"id": "occa-berry",
+			"name": "Baya Caoca",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Fuego. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "passho-berry",
+			"name": "Baya Pasio",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Agua. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "wacan-berry",
+			"name": "Baya Gualot",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Eléctrico. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "rindo-berry",
+			"name": "Baya Tamar",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Planta. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "yache-berry",
+			"name": "Baya Rimoya",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Hielo. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "chople-berry",
+			"name": "Baya Pomaro",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Lucha. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "kebia-berry",
+			"name": "Baya Kebia",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Veneno. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "shuca-berry",
+			"name": "Baya Acardo",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Tierra. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "coba-berry",
+			"name": "Baya Kouba",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Volador. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "payapa-berry",
+			"name": "Baya Payapa",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Psíquico. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "tanga-berry",
+			"name": "Baya Yecana",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Bicho. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "charti-berry",
+			"name": "Baya Alcho",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Roca. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "kasib-berry",
+			"name": "Baya Drasi",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Fantasma. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "haban-berry",
+			"name": "Baya Anjiro",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Dragón. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "colbur-berry",
+			"name": "Baya Dillo",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Siniestro. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "babiri-berry",
+			"name": "Baya Baribá",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Acero. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "chilan-berry",
+			"name": "Baya Chilan",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Normal. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "roseli-berry",
+			"name": "Baya Hibis",
+			"description": [
+				"Puede consumirse como reacción al recibir daño de tipo Hada. En su lugar, solo se recibe la mitad de ese daño."
+			]
+		},
+		{
+			"id": "air-balloon",
+			"name": "Globo Helio",
+			"description": [
+				"Mientras lleva equipado este objeto, el portador es inmune al daño de tipo Tierra. Cuando el portador recibe daño, el objeto revienta y deja de otorgar su beneficio.",
+				"El Globo Helio puede repararse durante un descanso corto."
+			]
+		},
+		{
+			"id": "assault-vest",
+			"name": "Chaleco Asalto",
+			"description": [
+				"El portador obtiene +1 a su CA mientras lleve equipado este objeto, pero solo puede usar movimientos que causen daño."
+			]
+		},
+		{
+			"id": "big-root",
+			"name": "Raíz Grande",
+			"description": [
+				"Los movimientos que infligen daño a un objetivo y curan al portador al mismo tiempo restauran 1d12 puntos de golpe adicionales al portador."
+			]
+		},
+		{
+			"id": "black-sludge",
+			"name": "Lodo Negro",
+			"description": [
+				"Este objeto tiene 10 cargas. Si el portador es un Pokémon de tipo Veneno, puede usar una acción adicional para gastar una carga y recuperar una cantidad de puntos de golpe igual a su bonificador por competencia.",
+				"Si el portador no es de tipo Veneno, recibe 1d6 de daño de tipo Veneno al final de cada uno de sus turnos."
+			]
+		},
+		{
+			"id": "eject-button",
+			"name": "Botón Escape",
+			"description": [
+				"Este objeto tiene 1 carga. Cuando el portador es dañado por un ataque, su entrenador puede realizar la acción de Cambio como acción gratuita consumiendo la carga.",
+				"El Botón Escape recupera su carga al amanecer."
+			]
+		},
+		{
+			"id": "eviolite",
+			"name": "Mineral Evolutivo",
+			"description": [
+				"Mientras lleve equipado este objeto, el portador no puede evolucionar. Si el Pokémon que lleve equipado este objeto no se encuentra en su forma evolutiva final, recibe 3 puntos menos de daño de cualquier fuente."
+			]
+		},
+		{
+			"id": "exp-share",
+			"name": "Repartir Experiencia",
+			"description": [
+				"El Pokémon que lleve equipado este objeto recibe hasta la mitad de la experiencia total obtenida en cada combate mientras forme parte del equipo."
+			]
+		},
+		{
+			"id": "focus-band",
+			"name": "Cinta Focus",
+			"description": [
+				"Cuando el portador vaya a retroceder, tira un d20. En un resultado de 10 o más, el portador no retrocede."
+			]
+		},
+		{
+			"id": "focus-sash",
+			"name": "Banda Focus",
+			"description": [
+				"Este objeto tiene 1 carga. Si el daño fuera a reducir al portador por debajo de 1 punto de golpe, en su lugar fija sus puntos de golpe en 1 y se consume la carga.",
+				"La Banda Focus recupera su carga al amanecer."
+			]
+		},
+		{
+			"id": "leftovers",
+			"name": "Restos",
+			"description": [
+				"Este objeto tiene 10 cargas. El portador puede usar una acción adicional para usar gastar una carga y recuperar puntos de golpe iguales a su bonificador por competencia."
+			]
+		},
+		{
+			"id": "muscle-band",
+			"name": "Cinta Fuerte",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques cuerpo a cuerpo (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "quick-claw",
+			"name": "Garra Rápida",
+			"description": [
+				"El portador añade +3 a sus tiradas de iniciativa."
+			]
+		},
+		{
+			"id": "razor-claw",
+			"name": "Garra Afilada",
+			"description": [
+				"El rango de golpe crítico del portador aumenta en 1.",
+				"Normalmente, esto significa que sus ataques realizan críticos con un 19 o 20 natural. Para movimientos como Corte, que ya amplían el rango de crítico, los críticos ocurren con 18, 19 o 20 natural."
+			]
+		},
+		{
+			"id": "scope-lens",
+			"name": "Periscopio",
+			"description": [
+				"El rango de golpe crítico del portador aumenta en 1.",
+				"Normalmente, esto significa que sus ataques realizan críticos con un 19 o 20 natural. Para movimientos como Corte, que ya amplían el rango de crítico, los críticos ocurren con 18, 19 o 20 natural."
+			]
+		},
+		{
+			"id": "shell-bell",
+			"name": "Campana Concha",
+			"description": [
+				"Cuando el portador usa un movimiento que daña al menos a una criatura, el portador restaura puntos de golpe iguales a su bonificador por competencia."
+			]
+		},
+		{
+			"id": "smoke-ball",
+			"name": "Bola Humo",
+			"description": [
+				"Garantiza escapar con éxito de combates con Pokémon salvajes."
+			]
+		},
+		{
+			"id": "wide-lens",
+			"name": "Lupa",
+			"description": [
+				"El portador obtiene +1 a sus tiradas de ataque."
+			]
+		},
+		{
+			"id": "wise-glasses",
+			"name": "Gafas Especiales",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques a distancia (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "megalite-stone",
+			"name": "Megalita",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a Megaevolucionar. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "normalium-z",
+			"name": "Normastal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Normal. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "fightinium-z",
+			"name": "Lizastal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Lucha. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "flyinium-z",
+			"name": "Aerostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Volador. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "poisonium-z",
+			"name": "Toxistal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Veneno. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "groundium-z",
+			"name": "Geostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Tierra. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "rockium-z",
+			"name": "Litostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Roca. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "buginium-z",
+			"name": "Insectostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Bicho. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "ghostium-z",
+			"name": "Espectrostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Fantasma. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "Steelium-z",
+			"name": "Metalostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Acero. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "firium-z",
+			"name": "Pirostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Fuego. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "waterium-z",
+			"name": "Hidrostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Agua. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "grassium-z",
+			"name": "Fitostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Planta. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "electrium-z",
+			"name": "Electrostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Eléctrico. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "psychium-z",
+			"name": "Psicostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Psíquico. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "icium-z",
+			"name": "Criostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Hielo. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "dragonium-z",
+			"name": "Dracostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Dragón. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "darkinium-z",
+			"name": "Nictostal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Siniestro. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "fairium-z",
+			"name": "Feeristal Z",
+			"description": [
+				"Permite al Pokémon que lleve equipado este objeto a usar un movimiento Z de tipo Hada. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "black-belt",
+			"name": "Cinturón Negro",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Lucha (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "black-glasses",
+			"name": "Gafas de Sol",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Siniestro (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "charcoal",
+			"name": "Carbón",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Fuego (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "dragon-fang",
+			"name": "Colmillo Dragón",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Dragón (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "fairy-feather",
+			"name": "Pluma Feérica",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Hada (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "hard-stone",
+			"name": "Piedra Dura",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Roca (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "magnet",
+			"name": "Imán",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Eléctrico (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "metal-coat",
+			"name": "Revestimiento Metálico",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Acero (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "miracle-seed",
+			"name": "Semilla Milagro",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Planta (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "mystic-water",
+			"name": "Agua Mística",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Agua (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "never-melt-ice",
+			"name": "Antiderretir",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Hielo (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "poison-barb",
+			"name": "Flecha Venenosa",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Veneno (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "sharp-beak",
+			"name": "Pico Afilado",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Volador (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "silk-scarf",
+			"name": "Pañuelo de Seda",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Normal (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "silver-powder",
+			"name": "Polvo Plateado",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Bicho (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "soft-sand",
+			"name": "Arena Fina",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Tierra (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "spell-tag",
+			"name": "Hechizo",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Fantasma (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "twisted-spoon",
+			"name": "Cuchara Torcida",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige de ataques de tipo Psíquico (una vez por movimiento)."
+			]
+		},
+		{
+			"id": "flame-orb",
+			"name": "Llamaesfera",
+			"description": [
+				"Al final del turno del portador, este queda quemado."
+			]
+		},
+		{
+			"id": "life-orb",
+			"name": "Vidaesfera",
+			"description": [
+				"El portador añade su bonificador por competencia al daño que inflige, pero recibe la misma cantidad de daño sin tipo cada vez que lo hace."
+			]
+		},
+		{
+			"id": "toxic-orb",
+			"name": "Toxiesfera",
+			"description": [
+				"Al final del turno del portador, este queda gravemente envenenado."
+			]
+		},
+		{
+			"id": "damp-rock",
+			"name": "Roca Lluvia",
+			"description": [
+				"El portador aumenta la duración de sus efectos de lluvia en 3 rondas."
+			]
+		},
+		{
+			"id": "heat-rock",
+			"name": "Roca Calor",
+			"description": [
+				"El portador aumenta la duración de sus efectos de sol intenso en 3 rondas."
+			]
+		},
+		{
+			"id": "icy-rock",
+			"name": "Roca Helada",
+			"description": [
+				"El portador aumenta la duración de sus efectos de granizo en 3 rondas."
+			]
+		},
+		{
+			"id": "smooth-rock",
+			"name": "Roca Suave",
+			"description": [
+				"El portador aumenta la duración de sus efectos de tormenta de arena en 3 rondas."
+			]
+		},
+		{
+			"id": "draco-plate",
+			"name": "Tabla Draco",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Dragón."
+			]
+		},
+		{
+			"id": "dread-plate",
+			"name": "Tabla Oscura",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Siniestro."
+			]
+		},
+		{
+			"id": "earth-plate",
+			"name": "Tabla Terrax",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Tierra."
+			]
+		},
+		{
+			"id": "Fist-plate",
+			"name": "Tabla Fuerte",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Lucha."
+			]
+		},
+		{
+			"id": "flame-plate",
+			"name": "Tabla Llama",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Fuego."
+			]
+		},
+		{
+			"id": "icicle-plate",
+			"name": "Tabla Helada",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Hielo."
+			]
+		},
+		{
+			"id": "insect-plate",
+			"name": "Tabla Bicho",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Bicho."
+			]
+		},
+		{
+			"id": "iron-plate",
+			"name": "Tabla Acero",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Acero."
+			]
+		},
+		{
+			"id": "meadow-plate",
+			"name": "Tabla Pradal",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Planta."
+			]
+		},
+		{
+			"id": "mind-plate",
+			"name": "Tabla Mental",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Psíquico."
+			]
+		},
+		{
+			"id": "pixie-plate",
+			"name": "Tabla Duende",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Hada."
+			]
+		},
+		{
+			"id": "sky-plate",
+			"name": "Tabla Cielo",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Volador."
+			]
+		},
+		{
+			"id": "splash-plate",
+			"name": "Tabla Linfa",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Agua."
+			]
+		},
+		{
+			"id": "spooky-plate",
+			"name": "Tabla Terror",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Fantasma."
+			]
+		},
+		{
+			"id": "stone-plate",
+			"name": "Tabla Pétrea",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Roca."
+			]
+		},
+		{
+			"id": "toxic-plate",
+			"name": "Tabla Tóxica",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Veneno."
+			]
+		},
+		{
+			"id": "zap-plate",
+			"name": "Tabla Trueno",
+			"description": [
+				"Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Eléctrico."
+			]
+		},
+		{
+			"id": "dna-splicer",
+			"name": "Punta ADN",
+			"description": [
+				"Mientras esté en presencia de un Reshiram o Zekrom dispuesto, Kyurem puede fusionarse con uno de ellos a voluntad con la ayuda de una Punta ADN. Este proceso es llamado Absofusión y da como resultado a un Kyurem Blanco (si se fusiona con Reshiram) o un Kyurem Negro (si se fusiona con Zekrom)."
+			]
+		},
+		{
+			"id": "deep-sea-scale",
+			"name": "Escama Marina",
+			"description": [
+				"Cuando Clamperl lleva equipado este objeto, su CA aumenta en 1."
+			]
+		},
+		{
+			"id": "deep-sea-tooth",
+			"name": "Diente Marino",
+			"description": [
+				"Cuando Clamperl lleva equipado este objeto, su bonificador por STAB aumenta en 1."
+			]
+		},
+		{
+			"id": "gracidea-flower",
+			"name": "Gracídea",
+			"description": [
+				"Cuando Shaymin lleva equipado este objeto, puede usar su acción para alternar entre su Forma Tierra y su Forma Cielo."
+			]
+		},
+		{
+			"id": "griseous-orb",
+			"name": "Griseosfera",
+			"description": [
+				"Cuando Giratina lleva equipado este objeto, puede usar su acción para alternar entre su Forma Modificada y su Forma Origen. El bonificador por STAB de sus movimientos de tipo Dragón y Fantasma se duplica."
+			]
+		},
+		{
+			"id": "leek",
+			"name": "Puerro",
+			"description": [
+				"Cuando Farfetch'd o Sirfetch'd lleva equipado este objeto, su rango de golpe crítico aumenta en 2.",
+				"Normalmente, esto significa que sus ataques realizan críticos con un 18, 19 o 20 natural. Para movimientos como Corte, que ya amplían el rango de crítico, los críticos ocurren con 17, 18, 19 o 20 natural."
+			]
+		},
+		{
+			"id": "light-ball",
+			"name": "Bola Luminosa",
+			"description": [
+				"Cuando Pikachu lleva equipado este objeto, su modificador de Poder de Movimiento aumenta en 1."
+			]
+		},
+		{
+			"id": "lucky-punch",
+			"name": "Puño Suerte",
+			"description": [
+				"Cuando Chansey lleva equipado este objeto, su rango de golpe crítico aumenta en 2.",
+				"Normalmente, esto significa que sus ataques realizan críticos con un 19 o 20 natural. Para movimientos como Corte, que ya amplían el rango de crítico, los críticos ocurren con 18, 19 o 20 natural."
+			]
+		},
+		{
+			"id": "metal-powder",
+			"name": "Polvo Metálico",
+			"description": [
+				"Cuando Ditto lleva equipado este objeto, obtiene +3 a su CA."
+			]
+		},
+		{
+			"id": "n-solarizer",
+			"name": "Necrosol",
+			"description": [
+				"Un entrenador con ambos Solgaleo y Necrozma puede usar una acción para fusionarlos en Necrozma Melena Crepuscular. El entrenador también puede usar una acción para separarlos de Necrozma Melena Crepuscular a Solgaleo y Necrozma."
+			]
+		},
+		{
+			"id": "n-lunarizer",
+			"name": "Necroluna",
+			"description": [
+				"Un entrenador con ambos Lunala y Necrozma puede usar una acción para fusionarlos en Necrozma Alas del Alba. El entrenador también puede usar una acción para separarlos de Necrozma Alas del Alba a Lunala y Necrozma."
+			]
+		},
+		{
+			"id": "prison-bottle",
+			"name": "Vasija Castigo",
+			"description": [
+				"Un entrenador puede usar su acción para liberar a un Hoopa cercano, cambiándolo de su Forma Contenido a su Forma Desatado durante tres días."
+			]
+		},
+		{
+			"id": "reveal-glass",
+			"name": "Espejo Veraz",
+			"description": [
+				"Cuando Thundurus, Landorus o Tornadus lleva equipado este objeto, puede usar su acción para alternar entre su Forma Avatar y su Forma Tótem."
+			]
+		},
+		{
+			"id": "thick-club",
+			"name": "Hueso Grueso",
+			"description": [
+				"Cuando Cubone, Marowak o Marowak de Alola lleva equipado este objeto, su bonificador por STAB aumenta en 1."
+			]
+		},
+		{
+			"id": "burn-drive",
+			"name": "PiroROM",
+			"description": [
+				"Cuando Genesect lleva equipado este objeto, cambia el tipo de su movimiento Tecno Shock al tipo Fuego."
+			]
+		},
+		{
+			"id": "chill-drive",
+			"name": "CrioROM",
+			"description": [
+				"Cuando Genesect lleva equipado este objeto, cambia el tipo de su movimiento Tecno Shock al tipo Hielo."
+			]
+		},
+		{
+			"id": "douse-drive",
+			"name": "HidroROM",
+			"description": [
+				"Cuando Genesect lleva equipado este objeto, cambia el tipo de su movimiento Tecno Shock al tipo Agua."
+			]
+		},
+		{
+			"id": "shock-drive",
+			"name": "FulgoROM",
+			"description": [
+				"Cuando Genesect lleva equipado este objeto, cambia el tipo de su movimiento Tecno Shock al tipo Eléctrico."
+			]
+		},
+		{
+			"id": "bug-memory-disc",
+			"name": "Disco Bicho",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Bicho."
+			]
+		},
+		{
+			"id": "dark-memory-disc",
+			"name": "Disco Siniestro",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Siniestro."
+			]
+		},
+		{
+			"id": "dragon-memory-disc",
+			"name": "Disco Dragón",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Dragón."
+			]
+		},
+		{
+			"id": "electric-memory-disc",
+			"name": "Disco Eléctrico",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Eléctrico."
+			]
+		},
+		{
+			"id": "fairy-memory-disc",
+			"name": "Disco Hada",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Hada."
+			]
+		},
+		{
+			"id": "fighting-memory-disc",
+			"name": "Disco Lucha",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Lucha."
+			]
+		},
+		{
+			"id": "fire-memory-disc",
+			"name": "Disco Fuego",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Fuego."
+			]
+		},
+		{
+			"id": "flying-memory-disc",
+			"name": "Disco Volador",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Volador."
+			]
+		},
+		{
+			"id": "ghost-memory-disc",
+			"name": "Disco Fantasma",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Fantasma."
+			]
+		},
+		{
+			"id": "grass-memory-disc",
+			"name": "Disco Planta",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Planta."
+			]
+		},
+		{
+			"id": "ground-memory-disc",
+			"name": "Disco Tierra",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Tierra."
+			]
+		},
+		{
+			"id": "ice-memory-disc",
+			"name": "Disco Hielo",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Hielo."
+			]
+		},
+		{
+			"id": "poison-memory-disc",
+			"name": "Disco Veneno",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Veneno."
+			]
+		},
+		{
+			"id": "psychic-memory-disc",
+			"name": "Disco Psíquico",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Psíquico."
+			]
+		},
+		{
+			"id": "rock-memory-disc",
+			"name": "Disco Roca",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Roca."
+			]
+		},
+		{
+			"id": "steel-memory-disc",
+			"name": "Disco Acero",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Acero."
+			]
+		},
+		{
+			"id": "water-memory-disc",
+			"name": "Disco Agua",
+			"description": [
+				"Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Agua."
+			]
+		},
+		{
+			"id": "dragon-scale",
+			"name": "Escama Dragón",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "up-grade",
+			"name": "Mejora",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "protector",
+			"name": "Protector",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "electirizer",
+			"name": "Electrizador",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "magmarizer",
+			"name": "Magmatizador",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "dubious-disc",
+			"name": "Disco Extraño",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "reaper-cloth",
+			"name": "Tela Terrible",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "prism-scale",
+			"name": "Escama Bella",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "whipped-dream",
+			"name": "Dulce de Nata",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "sachet",
+			"name": "Bolsita Fragante",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "sweet",
+			"name": "Dulce",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Está disponible en diferentes variantes, como fresa, amor, baya, trébol, flor, estrella y lazo.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "cracked-pot",
+			"name": "Tetera Agrietada",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "chipped-pot",
+			"name": "Tetera Rota",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar."
+			]
+		},
+		{
+			"id": "unremarkable-teacup",
+			"name": "Cuenco Mediocre",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "masterpiece-teacup",
+			"name": "Cuenco Exquisito",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar."
+			]
+		},
+		{
+			"id": "galarica-wreath",
+			"name": "Corona Galanuez",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "black-augurite",
+			"name": "Mineral Negro",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "peat-block",
+			"name": "Bloque de Turba",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "auspicious-armor",
+			"name": "Armadura Auspiciosa",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "malicious-armor",
+			"name": "Armadura Maldita",
+			"description": [
+				"Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.",
+				"Pokémon que evolucionan usando este objeto:"
+			]
+		},
+		{
+			"id": "pokedex",
+			"name": "Pokédex",
+			"description": [
+				"Un ordenador de mano con cámara avanzada y software de reconocimiento de imágenes. Un entrenador puede usar una acción adicional para identificar un Pokémon a 60 pies o menos usando el escáner de la Pokédex. Esto registra al Pokémon en la Pokédex y revela su RE (Ratio de Especie) junto con algunos datos breves sobre la especie."
+			]
+		},
+		{
+			"id": "old-rod",
+			"name": "Caña Vieja",
+			"description": [
+				"Permite a un entrenador pescar Pokémon. Pescar toma una hora, y el Pokémon que captures es aleatorio.",
+				"La Caña Vieja solo permite capturar Magikarp."
+			]
+		},
+		{
+			"id": "good-rod",
+			"name": "Caña Buena",
+			"description": [
+				"Permite a un entrenador pescar Pokémon. Pescar toma una hora, y el Pokémon que captures es aleatorio.",
+				"La Caña Buena permite capturar Alomomola, Azumarill, Barboach, Basculin, Bibarel, Briionne, Bruxish, Buizel, Carvanha, Chinchou, Clamperl, Clauncher, Corphish, Corsola, Crawdaunt, Croconaw, Dewpider, Dewott, Ducklett, Feebas, Finneon, Frillish, Froakie, Frogadier, Goldeen, Horsea, Inkay, Kabuto, Krabby, Lanturn, Lombre, Lotad, Luvdisc, Magikarp, Mantyke, Mareanie, Marill, Marshtomp, Mudkip, Octillery, Omanyte, Oshawott, Palpitoad, Piplup, Poliwag, Poliwhirl, Popplio, Prinplup, Psyduck, Pyukumuku, Quagsire, Qwilfish, Remoraid, Seel, Shellder, Shellos, Skrelp, Slowpoke, Spheal, Squirtle, Staryu, Stunfisk, Surskit, Tentacool, Tirtouga, Totodile, Tympole, Tynamo, Wailmer, Wartortle, Whiscash, Wimpod, Wingull, Wishiwashi y Wooper."
+			]
+		},
+		{
+			"id": "super-rod",
+			"name": "Súper Caña",
+			"description": [
+				"Permite a un entrenador pescar Pokémon. Pescar toma una hora, y el Pokémon que captures es aleatorio.",
+				"La Súer Caña permite capturar Araquanid, Blastoise, Carracosta, Clawitzer, Cloyster, Dewgong, Dragalge, Empoleon, Feraligatr, Floatzel, Gastrodon, Golduck, Golisopod, Gorebyss, Greninja, Gyarados, Huntail, Jellicent, Kabutops, Kingdra, Kingler, Lapras, Ludicolo, Lumineon, Malamar, Mantine, Milotic, Omastar, Politoed, Poliwrath, Primarina, Relicanth, Samurott, Seadra, Seaking, Sealeo, Seismitoad, Sharpedo, Slowbro, Slowking, Starmie, Swampert, Tentacruel, Toxapex, Wailord y Walrein."
+			]
+		},
+		{
+			"id": "escape-rope",
+			"name": "Cuerda Huida",
+			"description": [
+				"Se consume para escapar automáticamente de un combate contra un Pokémon salvaje."
+			]
+		},
+		{
+			"id": "honey",
+			"name": "Miel",
+			"description": [
+				"Puede usarse para atraer automáticamente a un solo Pokémon que habite en la zona. Qué Pokémon aparece queda a discreción del DM."
+			]
+		},
+		{
+			"id": "key-stone",
+			"name": "Piedra Activadora",
+			"description": [
+				"Permite a un entrenador a Megaevolucionar uno de sus Pokémon. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "z-ring",
+			"name": "Anillo Z",
+			"description": [
+				"Permite a un entrenador liberar el poder Z de sus Pokémon en forma de movimiento Z. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "dynamax-band",
+			"name": "Pulsera Dynamax",
+			"description": [
+				"Permite a un entrenador Dinamaxizar sus Pokémon. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "tera-orb",
+			"name": "Orbe Teracristal",
+			"description": [
+				"Permite a un entrenador Teracristalizar sus Pokémon. Tiene 1 carga, y recupera la carga al amanecer."
+			]
+		},
+		{
+			"id": "capture-styler",
+			"name": "Capturador",
+			"description": [
+				"Permite a un Ranger añadir +10 a sus tiradas de captura contra Pokémon a los que haya rodeado completamente usando su movimiento.",
+				"Solo puede ser usado por entrenadores que hayan elegido el arquetipo Ranger."
+			]
+		},
+		{
+			"id": "backpack",
+			"name": "Mochila",
+			"description": [
+				"Una mochila que puede contener hasta 30 libras de peso en objetos."
+			]
+		},
+		{
+			"id": "binoculars",
+			"name": "Prismáticos",
+			"description": [
+				"Permite ver objetos hasta el doble de su tamaño."
+			]
+		},
+		{
+			"id": "camping-kettle",
+			"name": "Tetera de Acampada",
+			"description": [
+				"Una tetera resistente que puede colocarse dentro o sobre una fogata para calentar líquidos."
+			]
+		},
+		{
+			"id": "camping-stove",
+			"name": "Parrilla de Acampada",
+			"description": [
+				"Una estufa ligera y portátil que se calienta usando astillas de madera."
+			]
+		},
+		{
+			"id": "canteen",
+			"name": "Cantimplora",
+			"description": [
+				"Una cantimplora de metal o plástico para transportar agua u otros líquidos."
+			]
+		},
+		{
+			"id": "energy-cell",
+			"name": "Batería",
+			"description": [
+				"Un pequeño disco plano utilizado para proveer energía a distintos objetos electrónicos o mecánicos."
+			]
+		},
+		{
+			"id": "flashlight",
+			"name": "Linterna",
+			"description": [
+				"Emite luz brillante en un cono de 15 pies y luz tenue en un área adicional de 30 pies. Requiere una nueva batería después de 4 horas de uso."
+			]
+		},
+		{
+			"id": "solar-flashlight",
+			"name": "Linterna Solar",
+			"description": [
+				"Emite luz brillante en un cono de 15 pies y luz tenue en un área adicional de 30 pies. Se carga con la luz solar: por cada hora expuesta al sol, gana una hora de uso, hasta un máximo de 4 horas."
+			]
+		},
+		{
+			"id": "flint-and-steel",
+			"name": "Mechero",
+			"description": [
+				"Un pedernal en forma de “D” de acero y un cuadrado de pedernal para generar chispas y encender fuego."
+			]
+		},
+		{
+			"id": "climbers-kit",
+			"name": "Kit de Escalada",
+			"description": [
+				"Incluye piolets especiales, punteras para botas, guantes y arnés. Obtienes ventaja en las pruebas de Escalar y no puedes caer más de 25 pies si fallas. Añade tu bonificador por competencia a las pruebas relacionadas."
+			]
+		},
+		{
+			"id": "cooking-kit",
+			"name": "Kit de Cocina",
+			"description": [
+				"Incluye ollas, sartenes, utensilios y moldes para cocinar. Se usa para preparar alimentos en una cocina o instalación similar. Añade tu bonificador por competencia a las pruebas relacionadas con cocinar."
+			]
+		},
+		{
+			"id": "divers-kit",
+			"name": "Kit de Buceo",
+			"description": [
+				"Incluye traje de buceo, cinturón, máscara, aletas y tanques de aire. Mientras lo llevas puesto, tu velocidad de movimiento se reduce en 20 pies, pero obtienes una velocidad de nadado de 30 pies. Además, dispones de 2 horas de aire, puedes bucear hasta 200 pies de profundidad, y no te afecta la temperatura del agua."
+			]
+		},
+		{
+			"id": "gardeners-kit",
+			"name": "Kit de Jardinería",
+			"description": [
+				"Incluye tijeras, guantes, una pala y un regador. Contiene todo lo necesario para recolectar y cuidar plantas, bayas y árboles de bonguri. Añade tu bonificador por competencia a las pruebas relacionadas."
+			]
+		},
+		{
+			"id": "lantern",
+			"name": "Lámpara",
+			"description": [
+				"Emite luz brillante en un radio de 30 pies y luz tenue en un área adicional de 30 pies. Requiere una nueva batería después de 4 horas de uso."
+			]
+		},
+		{
+			"id": "solar-lantern",
+			"name": "Lámpara Solar",
+			"description": [
+				"Emite luz brillante en un radio de 30 pies y luz tenue en un área adicional de 30 pies. Necesita recargarse a la luz del sol durante un descanso corto. Proporciona 4 horas de luz."
+			]
+		},
+		{
+			"id": "mess-kit",
+			"name": "Kit de Cubertería",
+			"description": [
+				"Esta caja de acero inoxidable contiene una taza y utensilios simples. La caja se cierra con un seguro, y un lado puede usarse como sartén para cocinar, mientras que el otro sirve como plato o cuenco poco profundo."
+			]
+		},
+		{
+			"id": "multi-tool",
+			"name": "Multi Herramienta",
+			"description": [
+				"Una herramienta multifuncional que incluye alicates, tijeras, cuchillo y otras herramientas básicas. Añade tu bonificador por competencia a las pruebas relacionadas."
+			]
+		},
+		{
+			"id": "pocket-knife",
+			"name": "Cuchillo de Cocina",
+			"description": [
+				"Un pequeño cuchillo de bolsillo que incluye microherramientas. Añade tu bonificador por competencia a las pruebas relacionadas."
+			]
+		},
+		{
+			"id": "camping-ration",
+			"name": "Ración de Comida",
+			"description": [
+				"Un paquete hermético de comida liofilizada. Añade agua caliente para reconstituirla. Proporciona una comida diaria para una persona."
+			]
+		},
+		{
+			"id": "rebreather",
+			"name": "Respirador",
+			"description": [
+				"Un pequeño aparato respiratorio que permite respirar bajo el agua. Su filtro debe reemplazarse después de 4 horas de uso."
+			]
+		},
+		{
+			"id": "rebreather-filter",
+			"name": "Filtro de Respirador",
+			"description": [
+				"Un filtro para el respirador."
+			]
+		},
+		{
+			"id": "sleeping-bag",
+			"name": "Saco de Dormir",
+			"description": [
+				"Un saco de dormir para una persona."
+			]
+		},
+		{
+			"id": "solar-charger",
+			"name": "Cargador Solar",
+			"description": [
+				"Un cargador solar que almacena la luz del sol en descanso corto durante el día. Puede usarse para cargar dos baterías en un descanso largo."
+			]
+		},
+		{
+			"id": "small-tent",
+			"name": "Tienda de Acampada Pequeña",
+			"description": [
+				"Una tienda de campaña para dos personas."
+			]
+		},
+		{
+			"id": "large-tent",
+			"name": "Tienda de Acampada Grande",
+			"description": [
+				"Una tienda de campaña para cuatro personas."
+			]
+		},
+		{
+			"id": "artisan-tools",
+			"name": "Herramientas de Artesano",
+			"description": [
+				"Herramientas utilizadas por oficios y artesanos, como calígrafos, artistas o herreros. Al comprarlas, elige un tipo de herramienta artesanal. Añade tu bonificador por competencia a las pruebas relacionadas."
+			]
+		},
+		{
+			"id": "thieves-tools",
+			"name": "Herramientas de Ladrón",
+			"description": [
+				"Puedes añadir tu bonificador por competencia a las pruebas al desactivar trampas o forzar cerraduras."
+			]
+		},
+		{
+			"id": "dungeoneers-pack",
+			"name": "Equipo de Explorador de Mazmorras",
+			"description": [
+				"Contiene una mochila, equipo de escalada, linterna, 5 baterías, pedernal y acero, 10 raciones de campamento, una cantimplora y 30 pies de cuerda."
+			]
+		},
+		{
+			"id": "explorers-pack",
+			"name": "Equipo de Explorador",
+			"description": [
+				"Contiene una mochila, bolsa de dormir, equipo de cocina, pedernal y acero, linterna, 5 baterías, 10 raciones de campamento, cantimplora y 30 pies de cuerda."
+			]
+		},
+		{
+			"id": "filchers-pack",
+			"name": "Equipo de Hurto",
+			"description": [
+				"Contiene una mochila, herramientas de ladrón, 20 pies de alambre, una campana, linterna, 3 baterías, 5 raciones de campamento, pedernal y acero, y cantimplora."
+			]
 		}
 	]
 }
