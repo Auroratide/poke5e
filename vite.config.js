@@ -1,16 +1,16 @@
 import { paraglideVitePlugin } from "@inlang/paraglide-js"
 import path from "node:path"
 import { sveltekit } from "@sveltejs/kit/vite"
+import { defineConfig } from "vitest/config"
 
-/** @type {import('vite').UserConfig} */
-const config = {
+export default defineConfig({
 	plugins: [
+		sveltekit(),
 		paraglideVitePlugin({
 			project: "./project.inlang",
 			outdir: "./src/lib/site/i18n/paraglide",
 			strategy: ["url", "baseLocale"],
 		}),
-		sveltekit(),
 	],
 	server: {
 		port: 3000,
@@ -29,6 +29,4 @@ const config = {
 			"**\/supabase/functions/**",
 		],
 	}
-}
-
-export default config
+})
