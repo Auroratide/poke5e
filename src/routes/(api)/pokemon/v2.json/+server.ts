@@ -11,5 +11,8 @@ export const GET: RequestHandler = async () => {
 		items: pokemon.items.map(Ability.normalizeList(abilities.items)),
 	}), {
 		status: 200,
+		headers: {
+			"Content-Type": "application/json",
+		},
 	})
 }

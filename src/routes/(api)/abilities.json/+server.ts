@@ -9,5 +9,10 @@ export const GET: RequestHandler = async () => {
 		async (locale) => (await import(`../../../../static/data/${locale}/abilities.json`)).items,
 	)
 
-	return new Response(JSON.stringify({ abilities }), { status: 200 })
+	return new Response(JSON.stringify({ abilities }), {
+		status: 200,
+		headers: {
+			"Content-Type": "application/json",
+		},
+	})
 }

@@ -9,5 +9,10 @@ export const GET: RequestHandler = async () => {
 		contest: contestData.items.find(c => c.id === it.id),
 	}))
 
-	return new Response(JSON.stringify({ moves }), { status: 200 })
+	return new Response(JSON.stringify({ moves }), {
+		status: 200,
+		headers: {
+			"Content-Type": "application/json",
+		},
+	})
 }

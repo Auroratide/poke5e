@@ -18,5 +18,8 @@ export const GET: RequestHandler = async () => {
 			.map(Evolution.normalizeList(evolutionItems)),
 	}), {
 		status: 200,
+		headers: {
+			"Content-Type": "application/json",
+		},
 	})
 }

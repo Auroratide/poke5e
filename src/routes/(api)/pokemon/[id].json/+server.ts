@@ -15,10 +15,18 @@ export const GET: RequestHandler = async ({ params }) => {
 
 		return new Response(JSON.stringify(
 			Evolution.normalizeList(evolutionItems)(Ability.normalizeList(abilities.items)(selectedPokemon)),
-		))
+		), {
+			status: 200,
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
 	} else {
 		return new Response(null, {
 			status: 404,
+			headers: {
+				"Content-Type": "application/json",
+			},
 		})
 	}
 }

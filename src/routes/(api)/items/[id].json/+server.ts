@@ -11,8 +11,18 @@ export const GET: RequestHandler = async ({ params }) => {
 			async (locale) => (await import(`../../../../../static/data/${locale}/items.json`)).items,
 		)
 
-		return new Response(JSON.stringify(translated[0]), { status: 200 })
+		return new Response(JSON.stringify(translated[0]), {
+			status: 200,
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
 	} else {
-		return new Response(null, { status: 404 })
+		return new Response(null, {
+			status: 404,
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
 	}
 }

@@ -27,8 +27,16 @@ export const GET: RequestHandler = async ({ params }) => {
 			})),
 		}), {
 			status: 200,
+			headers: {
+				"Content-Type": "application/json",
+			},
 		})
 	} else {
-		return new Response(null, { status: 404 })
+		return new Response(null, {
+			status: 404,
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
 	}
 }

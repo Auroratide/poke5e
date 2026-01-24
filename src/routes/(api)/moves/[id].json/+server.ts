@@ -22,8 +22,18 @@ export const GET: RequestHandler = async ({ params }) => {
 	}
 
 	if (selected !== undefined) {
-		return new Response(JSON.stringify(move), { status: 200 })
+		return new Response(JSON.stringify(move), {
+			status: 200,
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
 	} else {
-		return new Response(null, { status: 404 })
+		return new Response(null, {
+			status: 404,
+			headers: {
+				"Content-Type": "application/json",
+			},
+		})
 	}
 }

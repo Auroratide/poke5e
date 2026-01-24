@@ -21,5 +21,8 @@ export const GET: RequestHandler = async () => {
 		items: tmsWithMoveInfo,
 	}), {
 		status: 200,
+		headers: {
+			"Content-Type": "application/json",
+		},
 	})
 }
