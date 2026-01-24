@@ -13,7 +13,7 @@
 		name: it.name,
 		value: it.name,
 		placeholder: it.description,
-		disabled: it.removed ?? false,
+		deprecated: it.removed ?? false,
 	}))
 
 	let newId = -1001
@@ -44,22 +44,11 @@
 		} ]
 		focusInputField(`feat-name-${nextId}`)
 	}
-
-	/**
-	 * This function exists because Skill Expert was previously named Skill Master on accident.
-	 * For backward compatibilitiy, we will allow it to exist but not be selectable.
-	 * In the future, a migration will be run to rename all "Skill Master" values in the DB
-	 * to the corrected version. We MUST do this compatibility step first to ensure the
-	 * transition is smooth.
-	 */
-	function removeDisabledFeatsIfNotCurrent(opts: typeof options, chosenFeat: ChosenFeat): typeof options {
-		return opts.filter((it) => !it.disabled || chosenFeat.name === it.name)
-	}
 </script>
 
 <Fieldset title="Feats">
 	{#each values as value}
-		<FeatEditor {value} options={removeDisabledFeatsIfNotCurrent(options, value)} {disabled} custom={value.isCustom} on:remove={removeFeat(value.id)} />
+		<FeatEditor {value} options={options} {disabled} custom={value.isCustom} on:remove={removeFeat(value.id)} />
 	{/each}
 	<div class="row">
 		<Button on:click={addStandardFeat}>Add Feat</Button>

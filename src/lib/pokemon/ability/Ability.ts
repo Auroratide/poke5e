@@ -6,10 +6,12 @@ export class Ability extends DataClass<{
 	id: AbilityId,
 	name: string,
 	description: string,
+	deprecated?: boolean,
 }> {
 	get id() { return this.data.id }
 	get name() { return this.data.name }
 	get description() { return this.data.description }
+	get deprecated() { return this.data.deprecated ?? false }
 
 	static readonly normalizeList = (allAbilities: Data<Ability>[]) => <T extends HasAbilities>(pokemon: T) => ({
 		...pokemon,

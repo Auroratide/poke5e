@@ -14,13 +14,22 @@
 	$: nonstandardAbilities = $abilities?.filter((it) => !myAbilityIds.includes(it.id))
 	$: abilityOptions = [ {
 		name: "Learnable Abilities",
-		values: species.abilities.toList().map((it) => ({
-			name: $abilities?.find((ability) => ability.id === it.id)?.name + (it.hidden ? " (hidden)" : ""),
-			value: it.id,
-		})),
+		values: species.abilities.toList().map((it) => {
+			const info = $abilities?.find((ability) => ability.id === it.id)
+
+			return {
+				name: info?.name + (it.hidden ? " (hidden)" : ""),
+				value: it.id,
+				deprecated: info?.deprecated ?? false
+			}
+		}),
 	}, {
 		name: "All Other Abilities",
-		values: [noneOption].concat(nonstandardAbilities.map((it) => ({ name: it.name, value: it.id }))),
+		values: [noneOption].concat(nonstandardAbilities.map((it) => ({
+			name: it.name,
+			value: it.id,
+			deprecated: it.deprecated ?? false,
+		}))),
 	} ]
 </script>
 

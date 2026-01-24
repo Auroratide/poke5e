@@ -3,6 +3,7 @@
 		name: string,
 		value: string,
 		disabled?: boolean,
+		deprecated?: boolean,
 	}
 
 	export type SelectFieldOptionGroup = {
@@ -39,6 +40,10 @@
 	const handleChange = () => {
 		dispatch("change", { value, other })
 	}
+
+	function removeDeprecatedIfNotCurrent(opts: SelectFieldOption[], value: string): SelectFieldOption[] {
+		return opts.filter((it) => !it.deprecated || value === it.value)
+	}
 </script>
 
 <div class="select-field">
@@ -48,14 +53,14 @@
 			{#if isGroups(options)}
 				{#each options as group}
 					<optgroup label="{group.name}">
-						{#each group.values as option (option.value)}
-							<option value="{option.value}" disabled={option.disabled}>{option.name}</option>
+						{#each removeDeprecatedIfNotCurrent(group.values, value) as option (option.value)}
+							<option value="{option.value}" disabled={option.disabled || option.deprecated}>{option.name}</option>
 						{/each}
 					</optgroup>
 				{/each}
 			{:else}
-				{#each options as option (option.value)}
-					<option value="{option.value}" disabled={option.disabled}>{option.name}</option>
+				{#each removeDeprecatedIfNotCurrent(options, value) as option (option.value)}
+					<option value="{option.value}" disabled={option.disabled || option.deprecated}>{option.name}</option>
 				{/each}
 				{#if other != null}
 					<option value="{SelectFieldOther}">Other</option>
