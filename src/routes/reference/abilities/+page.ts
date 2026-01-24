@@ -7,6 +7,7 @@ export const load: PageLoad<{ abilities: Data<Ability>[] }> = async ({ fetch }) 
 	const abilities: Data<Ability>[] = await fetch(Url.api.abilities())
 		.then(res => res.json())
 		.then(data => data.abilities)
+		.then(abilities => abilities.filter((it) => !it.deprecated))
 
 	return { abilities }
 }
