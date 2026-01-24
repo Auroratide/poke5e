@@ -17,6 +17,7 @@
     },
     {
       "id": "air-slash",
+			"deprecated": true,
       "name": "Air Slash",
       "description": "This Pokémon knows Air Slash as a fifth move. The move is forgotten if it takes any other form."
     },
@@ -112,6 +113,7 @@
     },
     {
       "id": "blizzard",
+			"deprecated": true,
       "name": "Blizzard",
       "description": "This Pokémon knows Blizzard as a fifth move. The move is forgotten if it takes any other form."
     },
@@ -382,71 +384,85 @@
     },
     {
       "id": "form-change-arceus",
+			"deprecated": true,
       "name": "Form Change (Arceus)",
       "description": "Arceus' default type is Normal. It can change its type by holding an Elemental Plate. While holding this plate, the signature move, Judgment, also changes its type to match Arceus."
     },
     {
       "id": "form-change-cherrim",
+			"deprecated": true,
       "name": "Form Change (Cherrim)",
       "description": "Cherrim changes appearance depending on the weather. In strong sunlight, it blossoms into Sunshine Form."
     },
     {
       "id": "form-change-giratina",
+			"deprecated": true,
       "name": "Form Change (Giratina)",
       "description": "Giratina's default form is Altered Forme. When it is given a Griseous Orb to hold, or any time it is in its home plane, the Distortion World, it takes on the Origin Forme."
     },
     {
       "id": "form-change-hoopa",
+			"deprecated": true,
       "name": "Form Change (Hoopa)",
       "description": "When holding the Prison Bottle, Hoopa Confined changes form to Hoopa Unbound."
     },
     {
       "id": "form-change-keldeo",
+			"deprecated": true,
       "name": "Form Change (Keldeo)",
       "description": "Keldeo's standard form is Ordinary Form. When it learns the move Secret Sword, it changes into Resolute Form as long as the move is in its move list."
     },
     {
       "id": "form-change-kyurem",
+			"deprecated": true,
       "name": "Form Change (Kyurem)",
       "description": "While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom)."
     },
     {
       "id": "form-change-meloetta",
+			"deprecated": true,
       "name": "Form Change (Meloetta)",
       "description": "As long as Meloetta is outside of battle, it assumes Aria Forme. When the move Relic Song is used, Meloettta interchanges between Aria Forme and Pirouette Forme."
     },
     {
       "id": "form-change-necrozma",
+			"deprecated": true,
       "name": "Form Change (Necrozma)",
       "description": "Necrozma can fuse with a willing Solgaleo, at will, with the help of the N-Solarizer, or Lunala with the help of the N-Lunarizer. The fusion will result in a Dusk Mane Necrozma (if fused with Solgaleo) or Dawn Wings Necrozma (if fused with Lunala) with the same current HP."
     },
 		{
       "id": "form-change-ogerpon",
+			"deprecated": true,
       "name": "Form Change (Ogerpon)",
       "description": "Ogerpon's form changes depending on the type of mask it wears. The four masks it can wear are the Teal Mask (Grass), Wellspring Mask (Water), Heartflame Mask (Fire), and Cornerstone Mask (Rock). Additionally, when terastallized, Ogerpon's type changes to that of its mask, regardless of its Tera Type."
     },
     {
       "id": "form-change-oricorio",
+			"deprecated": true,
       "name": "Form Change (Oricorio)",
       "description": "This Pokémon's form can change by giving it a certain kind of Nectar. Red Nectar changes it to Baile Style, Pink Nectar changes it to Pa'u Style, Purple Nectar changes it to Sensu Style, and Yellow Nectar changes it to Pom-Pom Style."
     },
     {
       "id": "form-change-rotom",
+			"deprecated": true,
       "name": "Form Change (Rotom)",
       "description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form."
     },
     {
       "id": "form-change-shaymin",
+			"deprecated": true,
       "name": "Form Change (Shaymin)",
       "description": "Shaymin's default form is Land. When Given a Gracidea Flower to hold, it can change to Sky Form, taking on new typing, statistics, and moves"
     },
 		{
       "id": "form-change-terapagos",
+			"deprecated": true,
       "name": "Form Change (Terapagos)",
       "description": "Terapagos changes into its Stellar Form whenever it terastallizes. In Stellar Form, its type is Stellar regardless of its Tera Type. When its terastallization ends, it reverts back to either its Normal Form or Terastal Form, whichever it was when it terastallized."
     },
     {
       "id": "form-change-ultra-necrozma",
+			"deprecated": true,
       "name": "Form Change (Ultra Necrozma)",
       "description": "This Pokémon can transform into Ultra Necrozma as a bonus action on its turn. When it does, the transformation is treated as a permanent mega evolution, following the rules as stated in the Pokémon 5e Player Handbook."
     },
@@ -587,6 +603,7 @@
     },
     {
       "id": "hydro-pump",
+			"deprecated": true,
       "name": "Hydro Pump",
       "description": "This Pokémon knows Hydro Pump as a fifth move. The move is forgotten if it takes any other form."
     },
@@ -692,6 +709,7 @@
     },
     {
       "id": "leaf-storm",
+			"deprecated": true,
       "name": "Leaf Storm",
       "description": "This Pokémon knows Leaf Storm as a fifth move. The move is forgotten if it takes any other form."
     },
@@ -897,6 +915,7 @@
     },
     {
       "id": "overheat",
+			"deprecated": true,
       "name": "Overheat",
       "description": "This Pokémon knows Overheat as a fifth move. The move is forgotten if it takes any other form."
     },
