@@ -12,6 +12,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.9.5",
+		description: [
+			"Changed how pokémon forms are presented in stat blocks. Instead of being \"abilities\", the rules for how a pokémon's form changes is its own section. This helps clarify in the pokémon editor that pokémon may both have an ability and be able to change forms.",
+		],
+	}, {
 		name: "v1.9.4",
 		description: [
 			"Bugfix: Decidueye level 10 moves are now starting moves, since min level is 10.",
