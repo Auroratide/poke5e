@@ -11,6 +11,7 @@
 	$: options = $abilities?.map((it) => ({
 		name: it.name,
 		value: it.id,
+		deprecated: it.deprecated ?? false,
 	}))
 
 	const add = (e: SelectFieldChangeEvent) => {
