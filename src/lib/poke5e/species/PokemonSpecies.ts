@@ -16,6 +16,7 @@ import { MovePool } from "../../pokemon/move-pool"
 import { SpeciesRating } from "../sr"
 import type { SinglePokemonJsonResponse } from "./PokemonJsonResponse"
 import { SpeciesIdentifier } from "./SpeciesIdentifier"
+import { SpeciesForms } from "$lib/poke5e/forms"
 
 export class PokemonSpecies extends DataClass<{
 	id: Data<SpeciesIdentifier>,
@@ -38,6 +39,7 @@ export class PokemonSpecies extends DataClass<{
 	saves: Attribute[],
 	abilities: Data<AbilityPool>,
 	moves: Data<MovePool>,
+	forms?: Data<SpeciesForms>,
 	media: Data<SpeciesMedia<UploadedMedia>>,
 	notes?: MarkdownString,
 }> {
@@ -59,6 +61,7 @@ export class PokemonSpecies extends DataClass<{
 	get skills(): SkillRanks { return new SkillRanks(this.data.skills) }
 	get media(): SpeciesMedia<UploadedMedia> { return new SpeciesMedia(this.data.media) }
 	get moves(): MovePool { return new MovePool(this.data.moves) }
+	get forms(): SpeciesForms | undefined { return this.data.forms != null ? new SpeciesForms(this.data.forms) : undefined }
 	get abilities(): AbilityPool { return new AbilityPool(this.data.abilities) }
 
 	numberAsString(): string {
@@ -96,6 +99,7 @@ export class PokemonSpecies extends DataClass<{
 			saves: it.savingThrows,
 			abilities: AbilityPool.fromList(it.abilities).data,
 			moves: it.moves,
+			forms: it.forms,
 			media: {
 				values: {
 					normalPortrait: {

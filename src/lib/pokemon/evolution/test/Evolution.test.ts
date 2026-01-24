@@ -222,25 +222,25 @@ describe("normalizeList", () => {
 
 		const pokemon = [
 			stubPokemonSpecies({
-				id: "eevee"
+				id: "eevee",
 			}),
 			stubPokemonSpecies({
-				id: "flareon"
+				id: "flareon",
 			}),
 			stubPokemonSpecies({
-				id: "jolteon"
+				id: "jolteon",
 			}),
 			stubPokemonSpecies({
-				id: "charmander"
+				id: "charmander",
 			}),
 			stubPokemonSpecies({
-				id: "charmeleon"
+				id: "charmeleon",
 			}),
 			stubPokemonSpecies({
-				id: "charizard"
+				id: "charizard",
 			}),
 			stubPokemonSpecies({
-				id: "mimikyu"
+				id: "mimikyu",
 			}),
 		].map((it) => it.data)
 
@@ -272,7 +272,7 @@ describe("normalizeList", () => {
 					type: "asi",
 					value: 8,
 				} ],
-			} ]
+			} ],
 		})
 
 		expect(result[1].evolution).toEqual({
@@ -303,7 +303,7 @@ describe("normalizeList", () => {
 					type: "asi",
 					value: 10,
 				} ],
-			} ]
+			} ],
 		})
 
 		expect(result[4].evolution).toEqual({
@@ -320,7 +320,7 @@ describe("normalizeList", () => {
 					type: "asi",
 					value: 6,
 				} ],
-			} ]
+			} ],
 		})
 
 		expect(result[5].evolution).toEqual({

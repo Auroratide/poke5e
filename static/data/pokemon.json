@@ -54453,10 +54453,6 @@
 				{
 					"id": "flower-gift",
 					"hidden": false
-				},
-				{
-					"id": "form-change-cherrim",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -54508,6 +54504,9 @@
 					99,
 					100
 				]
+			},
+			"forms": {
+				"description": "Cherrim changes appearance depending on the weather. In strong sunlight, it blossoms into Sunshine Form."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/421.png",
@@ -62153,10 +62152,6 @@
 				{
 					"id": "levitate",
 					"hidden": false
-				},
-				{
-					"id": "form-change-rotom",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -62214,6 +62209,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/479.png",
@@ -62266,18 +62264,11 @@
 				{
 					"id": "levitate",
 					"hidden": false
-				},
-				{
-					"id": "overheat",
-					"hidden": false
-				},
-				{
-					"id": "form-change-rotom",
-					"hidden": false
 				}
 			],
 			"moves": {
 				"start": [
+					"overheat",
 					"astonish",
 					"confuse-ray",
 					"thunder-shock",
@@ -62331,6 +62322,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10008.png",
@@ -62382,18 +62376,11 @@
 				{
 					"id": "levitate",
 					"hidden": false
-				},
-				{
-					"id": "hydro-pump",
-					"hidden": false
-				},
-				{
-					"id": "form-change-rotom",
-					"hidden": false
 				}
 			],
 			"moves": {
 				"start": [
+					"hydro-pump",
 					"astonish",
 					"confuse-ray",
 					"thunder-shock",
@@ -62447,6 +62434,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10009.png",
@@ -62498,18 +62488,11 @@
 				{
 					"id": "levitate",
 					"hidden": false
-				},
-				{
-					"id": "blizzard",
-					"hidden": false
-				},
-				{
-					"id": "form-change-rotom",
-					"hidden": false
 				}
 			],
 			"moves": {
 				"start": [
+					"blizzard",
 					"astonish",
 					"confuse-ray",
 					"thunder-shock",
@@ -62563,6 +62546,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10010.png",
@@ -62614,18 +62600,11 @@
 				{
 					"id": "levitate",
 					"hidden": false
-				},
-				{
-					"id": "air-slash",
-					"hidden": false
-				},
-				{
-					"id": "form-change-rotom",
-					"hidden": false
 				}
 			],
 			"moves": {
 				"start": [
+					"air-slash",
 					"astonish",
 					"confuse-ray",
 					"thunder-shock",
@@ -62679,6 +62658,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10011.png",
@@ -62730,18 +62712,11 @@
 				{
 					"id": "levitate",
 					"hidden": false
-				},
-				{
-					"id": "leaf-storm",
-					"hidden": false
-				},
-				{
-					"id": "form-change-rotom",
-					"hidden": false
 				}
 			],
 			"moves": {
 				"start": [
+					"leaf-storm",
 					"astonish",
 					"confuse-ray",
 					"thunder-shock",
@@ -62795,6 +62770,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10012.png",
@@ -64183,6 +64161,9 @@
 					100
 				]
 			},
+			"forms": {
+				"description": "Giratina's default form is Altered Forme. When it is given a Griseous Orb to hold, or any time it is in its home plane, the Distortion World, it takes on the Origin Forme."
+			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/487.png",
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/487.png",
@@ -64253,10 +64234,6 @@
 				{
 					"id": "levitate",
 					"hidden": false
-				},
-				{
-					"id": "form-change-giratina",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -64320,6 +64297,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "Giratina's default form is Altered Forme. When it is given a Griseous Orb to hold, or any time it is in its home plane, the Distortion World, it takes on the Origin Forme."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10007.png",
@@ -64851,10 +64831,6 @@
 				{
 					"id": "natural-cure",
 					"hidden": false
-				},
-				{
-					"id": "form-change-shaymin",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -64901,6 +64877,9 @@
 					99,
 					100
 				]
+			},
+			"forms": {
+				"description": "Shaymin's default form is Land. When Given a Gracidea Flower to hold, it can change to Sky Form, taking on new typing, statistics, and moves."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/492.png",
@@ -64965,10 +64944,6 @@
 				{
 					"id": "serene-grace",
 					"hidden": false
-				},
-				{
-					"id": "form-change-shaymin",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -65015,6 +64990,9 @@
 					99,
 					100
 				]
+			},
+			"forms": {
+				"description": "Shaymin's default form is Land. When Given a Gracidea Flower to hold, it can change to Sky Form, taking on new typing, statistics, and moves."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10006.png",
@@ -65104,10 +65082,6 @@
 				{
 					"id": "multitype",
 					"hidden": false
-				},
-				{
-					"id": "form-change-arceus",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -65196,6 +65170,9 @@
 					98,
 					100
 				]
+			},
+			"forms": {
+				"description": "Arceus' default type is Normal. It can change its type by holding an Elemental Plate. While holding this plate, the signature move, Judgment, also changes its type to match Arceus."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/493.png",
@@ -84697,10 +84674,6 @@
 				{
 					"id": "pressure",
 					"hidden": false
-				},
-				{
-					"id": "form-change-kyurem",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -84762,6 +84735,9 @@
 					91,
 					100
 				]
+			},
+			"forms": {
+				"description": "While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom)."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/646.png",
@@ -84906,6 +84882,9 @@
 					101
 				]
 			},
+			"forms": {
+				"description": "While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom)."
+			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10023.png",
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10023.png",
@@ -85047,6 +85026,9 @@
 					91
 				]
 			},
+			"forms": {
+				"description": "While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom)."
+			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10022.png",
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10022.png",
@@ -85109,10 +85091,6 @@
 				{
 					"id": "justified",
 					"hidden": false
-				},
-				{
-					"id": "form-change-keldeo",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -85169,6 +85147,9 @@
 					94,
 					100
 				]
+			},
+			"forms": {
+				"description" : "Keldeo's standard form is Ordinary Form. When it learns the move Secret Sword, it changes into Resolute Form as long as the move is in its move list."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/647.png",
@@ -85237,10 +85218,6 @@
 				{
 					"id": "serene-grace",
 					"hidden": false
-				},
-				{
-					"id": "form-change-meloetta",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -85311,6 +85288,9 @@
 					99,
 					100
 				]
+			},
+			"forms": {
+				"description": "As long as Meloetta is outside of battle, it assumes Aria Forme. When the move Relic Song is used, Meloettta interchanges between Aria Forme and Pirouette Forme."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/648.png",
@@ -85379,10 +85359,6 @@
 				{
 					"id": "serene-grace",
 					"hidden": false
-				},
-				{
-					"id": "form-change-meloetta",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -85453,6 +85429,9 @@
 					99,
 					100
 				]
+			},
+			"forms": {
+				"description": "As long as Meloetta is outside of battle, it assumes Aria Forme. When the move Relic Song is used, Meloettta interchanges between Aria Forme and Pirouette Forme."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10018.png",
@@ -94900,10 +94879,6 @@
 				{
 					"id": "magician",
 					"hidden": false
-				},
-				{
-					"id": "form-change-hoopa",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -94971,6 +94946,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "When holding the Prison Bottle, Hoopa Confined changes form to Hoopa Unbound."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/720.png",
@@ -95101,6 +95079,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "When holding the Prison Bottle, Hoopa Confined changes form to Hoopa Unbound."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10086.png",
@@ -100059,10 +100040,6 @@
 				{
 					"id": "dancer",
 					"hidden": false
-				},
-				{
-					"id": "form-change-oricorio",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -100128,6 +100105,9 @@
 					"safeguard",
 					"tailwind"
 				]
+			},
+			"forms": {
+				"description": "This Pokémon's form can change by giving it a certain kind of Nectar. Red Nectar changes it to Baile Style, Pink Nectar changes it to Pa'u Style, Purple Nectar changes it to Sensu Style, and Yellow Nectar changes it to Pom-Pom Style."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/741.png",
@@ -100185,10 +100165,6 @@
 				{
 					"id": "dancer",
 					"hidden": false
-				},
-				{
-					"id": "form-change-oricorio",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -100254,6 +100230,9 @@
 					"safeguard",
 					"tailwind"
 				]
+			},
+			"forms": {
+				"description": "This Pokémon's form can change by giving it a certain kind of Nectar. Red Nectar changes it to Baile Style, Pink Nectar changes it to Pa'u Style, Purple Nectar changes it to Sensu Style, and Yellow Nectar changes it to Pom-Pom Style."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10123.png",
@@ -100311,10 +100290,6 @@
 				{
 					"id": "dancer",
 					"hidden": false
-				},
-				{
-					"id": "form-change-oricorio",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -100380,6 +100355,9 @@
 					"safeguard",
 					"tailwind"
 				]
+			},
+			"forms": {
+				"description": "This Pokémon's form can change by giving it a certain kind of Nectar. Red Nectar changes it to Baile Style, Pink Nectar changes it to Pa'u Style, Purple Nectar changes it to Sensu Style, and Yellow Nectar changes it to Pom-Pom Style."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10124.png",
@@ -100437,10 +100415,6 @@
 				{
 					"id": "dancer",
 					"hidden": false
-				},
-				{
-					"id": "form-change-oricorio",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -100506,6 +100480,9 @@
 					"safeguard",
 					"tailwind"
 				]
+			},
+			"forms": {
+				"description": "This Pokémon's form can change by giving it a certain kind of Nectar. Red Nectar changes it to Baile Style, Pink Nectar changes it to Pa'u Style, Purple Nectar changes it to Sensu Style, and Yellow Nectar changes it to Pom-Pom Style."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10125.png",
@@ -108190,10 +108167,6 @@
 				{
 					"id": "prism-armor",
 					"hidden": false
-				},
-				{
-					"id": "form-change-necrozma",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -108263,6 +108236,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "Necrozma can fuse with a willing Solgaleo, at will, with the help of the N-Solarizer, or Lunala with the help of the N-Lunarizer. The fusion will result in a Dusk Mane Necrozma (if fused with Solgaleo) or Dawn Wings Necrozma (if fused with Lunala) with the same current HP."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/800.png",
@@ -108329,10 +108305,6 @@
 				{
 					"id": "prism-armor",
 					"hidden": false
-				},
-				{
-					"id": "form-change-ultra-necrozma",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -108402,6 +108374,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "This Pokémon can transform into Ultra Necrozma as a bonus action on its turn. When it does, the transformation is treated as a permanent mega evolution, following the rules as stated in the Pokémon 5e Player Handbook."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10155.png",
@@ -108468,10 +108443,6 @@
 				{
 					"id": "prism-armor",
 					"hidden": false
-				},
-				{
-					"id": "form-change-ultra-necrozma",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -108541,6 +108512,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "This Pokémon can transform into Ultra Necrozma as a bonus action on its turn. When it does, the transformation is treated as a permanent mega evolution, following the rules as stated in the Pokémon 5e Player Handbook."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10156.png",
@@ -108680,6 +108654,9 @@
 					97,
 					100
 				]
+			},
+			"forms": {
+				"description": "This Pokémon can transform into Ultra Necrozma as a bonus action on its turn. When it does, the transformation is treated as a permanent mega evolution, following the rules as stated in the Pokémon 5e Player Handbook."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10157.png",
@@ -138138,10 +138115,6 @@
 					"hidden": false
 				},
 				{
-					"id": "form-change-ogerpon",
-					"hidden": false
-				},
-				{
 					"id": "embody-aspect-teal",
 					"hidden": true
 				}
@@ -138185,6 +138158,9 @@
 					89,
 					90
 				]
+			},
+			"forms": {
+				"description": "Ogerpon's form changes depending on the type of mask it wears. The four masks it can wear are the Teal Mask (Grass), Wellspring Mask (Water), Heartflame Mask (Fire), and Cornerstone Mask (Rock). Additionally, when terastallized, Ogerpon's type changes to that of its mask, regardless of its Tera Type."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1017.png",
@@ -138243,10 +138219,6 @@
 					"hidden": false
 				},
 				{
-					"id": "form-change-ogerpon",
-					"hidden": false
-				},
-				{
 					"id": "embody-aspect-wellspring",
 					"hidden": true
 				}
@@ -138290,6 +138262,9 @@
 					89,
 					90
 				]
+			},
+			"forms": {
+				"description": "Ogerpon's form changes depending on the type of mask it wears. The four masks it can wear are the Teal Mask (Grass), Wellspring Mask (Water), Heartflame Mask (Fire), and Cornerstone Mask (Rock). Additionally, when terastallized, Ogerpon's type changes to that of its mask, regardless of its Tera Type."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10273.png",
@@ -138348,10 +138323,6 @@
 					"hidden": false
 				},
 				{
-					"id": "form-change-ogerpon",
-					"hidden": false
-				},
-				{
 					"id": "embody-aspect-heartflame",
 					"hidden": true
 				}
@@ -138395,6 +138366,9 @@
 					89,
 					90
 				]
+			},
+			"forms": {
+				"description": "Ogerpon's form changes depending on the type of mask it wears. The four masks it can wear are the Teal Mask (Grass), Wellspring Mask (Water), Heartflame Mask (Fire), and Cornerstone Mask (Rock). Additionally, when terastallized, Ogerpon's type changes to that of its mask, regardless of its Tera Type."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10274.png",
@@ -138453,10 +138427,6 @@
 					"hidden": false
 				},
 				{
-					"id": "form-change-ogerpon",
-					"hidden": false
-				},
-				{
 					"id": "embody-aspect-cornerstone",
 					"hidden": true
 				}
@@ -138500,6 +138470,9 @@
 					89,
 					90
 				]
+			},
+			"forms": {
+				"description": "Ogerpon's form changes depending on the type of mask it wears. The four masks it can wear are the Teal Mask (Grass), Wellspring Mask (Water), Heartflame Mask (Fire), and Cornerstone Mask (Rock). Additionally, when terastallized, Ogerpon's type changes to that of its mask, regardless of its Tera Type."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10275.png",
@@ -139176,10 +139149,6 @@
 				{
 					"id": "tera-shift",
 					"hidden": false
-				},
-				{
-					"id": "form-change-terapagos",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -139224,6 +139193,9 @@
 					97,
 					99
 				]
+			},
+			"forms": {
+				"description": "Terapagos changes into its Stellar Form whenever it terastallizes. In Stellar Form, its type is Stellar regardless of its Tera Type. When its terastallization ends, it reverts back to either its Normal Form or Terastal Form, whichever it was when it terastallized."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1024.png",
@@ -139283,10 +139255,6 @@
 				{
 					"id": "tera-shell",
 					"hidden": false
-				},
-				{
-					"id": "form-change-terapagos",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -139331,6 +139299,9 @@
 					97,
 					99
 				]
+			},
+			"forms": {
+				"description": "Terapagos changes into its Stellar Form whenever it terastallizes. In Stellar Form, its type is Stellar regardless of its Tera Type. When its terastallization ends, it reverts back to either its Normal Form or Terastal Form, whichever it was when it terastallized."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10276.png",
@@ -139390,10 +139361,6 @@
 				{
 					"id": "teraform-zero",
 					"hidden": false
-				},
-				{
-					"id": "form-change-terapagos",
-					"hidden": false
 				}
 			],
 			"moves": {
@@ -139438,6 +139405,9 @@
 					97,
 					99
 				]
+			},
+			"forms": {
+				"description": "Terapagos changes into its Stellar Form whenever it terastallizes. In Stellar Form, its type is Stellar regardless of its Tera Type. When its terastallization ends, it reverts back to either its Normal Form or Terastal Form, whichever it was when it terastallized."
 			},
 			"media": {
 				"main": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10277.png",

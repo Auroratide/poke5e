@@ -14,7 +14,7 @@ export const GET: RequestHandler = async ({ params }) => {
 		const evolutionItems = evolutions.items as Data<Evolution>[]
 
 		return new Response(JSON.stringify(
-			Evolution.normalizeList(evolutionItems)(Ability.normalizeList(abilities.items)(selectedPokemon))
+			Evolution.normalizeList(evolutionItems)(Ability.normalizeList(abilities.items)(selectedPokemon)),
 		))
 	} else {
 		return new Response(null, {

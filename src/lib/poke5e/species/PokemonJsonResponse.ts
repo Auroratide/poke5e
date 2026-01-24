@@ -52,6 +52,9 @@ export type SinglePokemonJsonResponse = {
 		egg?: string[],
 		tm: number[],
 	},
+	forms?: {
+		description: string,
+	},
 	media: {
 		main: string,
 		sprite?: string,

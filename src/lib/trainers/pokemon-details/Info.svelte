@@ -19,6 +19,7 @@
 	import { TypeEffectiveness } from "$lib/pokemon/types"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
+	import { SpeciesFormsInfo } from "$lib/poke5e/forms"
 
 	const dispatch = createEventDispatcher()
 
@@ -106,6 +107,7 @@
 	<AbilitiesInfo {pokemon} />
 	<HeldItemsInfo {pokemon} />
 </section>
+<SpeciesFormsInfo value={species.forms} />
 {#if pokemon.feats.length > 0}
 	<section>
 		<h2>Feats</h2>

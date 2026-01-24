@@ -10,7 +10,8 @@
 		"title": "Pokémon 5th Edition"
 	},
 	"pokemon": {
-		"title": "Pokémon"
+		"title": "Pokémon",
+		"forms": "Forms"
 	},
 	"moves": {
 		"title": "Moves"

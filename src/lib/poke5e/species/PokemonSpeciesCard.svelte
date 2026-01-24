@@ -14,6 +14,7 @@
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
 	import { isNotBlank } from "$lib/utils/string"
 	import { EvolutionInfo, EvolutionStore } from "$lib/pokemon/evolution"
+	import { SpeciesFormsInfo } from "$lib/poke5e/forms"
 
 	export let value: PokemonSpecies
 	$: hasImage = value.media.data.values.normalPortrait != null
@@ -80,6 +81,7 @@
 			<AbilityPoolInfo value={value.abilities} />
 		{/if}
 	</section>
+	<SpeciesFormsInfo value={value.forms} />
 	{#if $evolutions?.hasEvolutionTree(value.id)}
 		<EvolutionInfo species={value.id} evolutions={$evolutions} />
 	{/if}
