@@ -3,6 +3,7 @@ import { DataClass, type Data } from "$lib/DataClass"
 import { EvolutionCondition, GenderCondition, LevelCondition, type EvolutionConditionType } from "./EvolutionCondition"
 import { EvolutionBenefit, type EvolutionBenefitType } from "./EvolutionBenefit"
 import type { SingleEvolutionJsonResponse } from "./EvolutionJsonResponse"
+import { EvolutionForest } from "./EvolutionForest"
 
 export type EvolutionId = string
 let currentId = 0
@@ -54,4 +55,44 @@ export class Evolution extends DataClass<{
 	static fromJson(json: SingleEvolutionJsonResponse): Evolution {
 		return new Evolution(json)
 	}
+
+	static readonly normalizeList = (allEvolutions: Data<Evolution>[]) => {
+		const forest = new EvolutionForest(allEvolutions.map((it) => new Evolution(it)))
+
+		return <T extends { id: string }>(pokemon: T): T & { evolution?: NormalizedEvolution } => {
+			const id = SpeciesIdentifier.fromSpeciesName(pokemon.id)
+			if (!forest.hasEvolutionTree(id)) return pokemon
+
+			return {
+				...pokemon,
+				evolution: {
+					stage: forest.currentStage(id),
+					maxStage: forest.maxStage(id),
+					to: forest.evolvesTo(id).map((it) => ({
+						id: it.to.data,
+						conditions: it.data.conditions,
+						effects: it.data.effects,
+					})),
+					from: forest.evolvesFrom(id).map((it) => it.from.data),
+				},
+			}
+		}
+	}
+}
+
+type NormalizedEvolution = {
+	stage: number,
+	maxStage: number,
+	to: {
+		id: string,
+		conditions: {
+			type: string,
+			value: unknown,
+		}[],
+		effects: {
+			type: string,
+			value: unknown,
+		}[],
+	}[],
+	from: string[],
 }

@@ -11,12 +11,7 @@ export class Ability extends DataClass<{
 	get name() { return this.data.name }
 	get description() { return this.data.description }
 
-	static readonly normalizeList = (allAbilities: Data<Ability>[]) => (pokemon: {
-		abilities: {
-			id: AbilityId,
-			hidden: boolean,
-		}[]
-	}) => ({
+	static readonly normalizeList = (allAbilities: Data<Ability>[]) => <T extends HasAbilities>(pokemon: T) => ({
 		...pokemon,
 		abilities: pokemon.abilities.map(ability => {
 			const matchedAbility = allAbilities.find(it => ability.id === it.id)
@@ -32,4 +27,11 @@ export class Ability extends DataClass<{
 			}
 		}),
 	})
+}
+
+type HasAbilities = {
+	abilities: {
+		id: AbilityId,
+		hidden: boolean,
+	}[]
 }

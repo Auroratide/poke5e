@@ -2,7 +2,7 @@ import type { RequestHandler } from "./$types"
 import data from "../../../../../static/data/moves.json"
 import tmData from "../../../../../static/data/tms.json"
 import contestData from "../../../../../static/data/contest.json"
-import pokemonData from "../../../../../static/data/pokemon-v2.json"
+import pokemonData from "../../../../../static/data/pokemon.json"
 import { pokemonWhoLearnThisMove } from "$lib/moves/pokemon"
 
 export const GET: RequestHandler = async ({ params }) => {
