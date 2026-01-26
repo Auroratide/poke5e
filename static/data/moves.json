@@ -2956,6 +2956,21 @@
 			}
 		},
 		{
+			"id": "clangorous-soul",
+			"name": "Clangorous Soul",
+			"type": "dragon",
+			"power": [
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "self",
+			"description": [
+				"You clap your scaled hands together to strengthen yourself. Take 3d6 typeless damage, and in exchange gain +1 to attack rolls, +1 to AC, and +1 to damage rolls for the remainder of the encounter or until switched out of combat. This can be stacked up to five times for a total bonus of +5 each."
+			]
+		},
+		{
 			"id": "clear-smog",
 			"name": "Clear Smog",
 			"type": "poison",
