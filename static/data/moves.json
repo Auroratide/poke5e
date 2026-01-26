@@ -18159,9 +18159,41 @@
 					"con"
 				],
 				"dc": "MOVE"
+			}
+		},
+		{
+			"id": "snap-trap",
+			"name": "Snap Trap",
+			"type": "grass",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You attempt to snare the target in a snap trap. One creature in melee range must make a DEX save against your Move DC. On failure, the target takes 1d6 + MOVE grass damage and is grappled by you.",
+				"When this move is used as an attack of opportunity against a creature moving out of your range, the target makes the save at disadvantage."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17.",
+			"save": {
+				"attribute": [
+					"dex"
+				],
+				"dc": "MOVE"
 			},
-			"attack": {
-				"scope": "ranged"
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d10",
+					"10": "2d8",
+					"17": "5d4"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"grass"
+				]
 			}
 		},
 		{
