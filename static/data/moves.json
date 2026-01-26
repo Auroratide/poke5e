@@ -2593,6 +2593,41 @@
 			}
 		},
 		{
+			"id": "burning-jealousy",
+			"name": "Burning Jealousy",
+			"type": "fire",
+			"power": [
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "self (30ft cone)",
+			"description": [
+				"You attack all creatures in a 30-foot cone with energy from jealousy. All creatures in the area must make a DEX save against your Move DC, taking 1d12 + MOVE fire damage and becoming burned on failure, or on success only taking half the damage.",
+				"Creatures who are currently benefiting from an increase to their AC, STR, DEX, CON, INT, WIS, or CHA have disadvantage on the save."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d12",
+					"5": "2d8",
+					"10": "2d12",
+					"17": "6d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"fire"
+				]
+			},
+			"save": {
+				"attribute": [
+					"dex"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
 			"id": "calm-mind",
 			"name": "Calm Mind",
 			"type": "psychic",
@@ -8241,6 +8276,38 @@
 			}
 		},
 		{
+			"id": "grassy-glide",
+			"name": "Grassy Glide",
+			"type": "grass",
+			"power": [
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You glide on the ground to strike a target. Make a melee attack, doing 1d8 + MOVE grass damage on a hit.",
+				"If you are on Grassy Terrain when this move is used, then until the start of your next turn you gain an additional 10ft of movement, and your movement no longer provokes attacks of opportunity."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d8",
+					"5": "2d6",
+					"10": "4d4",
+					"17": "3d10"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"grass"
+				]
+			},
+			"attack": {
+				"scope": "melee"
+			}
+		},
+		{
 			"id": "grassy-terrain",
 			"name": "Grassy Terrain",
 			"type": "grass",
@@ -10753,6 +10820,38 @@
 			]
 		},
 		{
+			"id": "lash-out",
+			"name": "Lash Out",
+			"type": "dark",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You lash out to vent your frustration toward the target. Make a melee attack, dealing 1d12 + MOVE dark damage on a hit.",
+				"If you are suffering from a non-volatile status condition, or any of your AC, STR, DEX, CON, INT, WIS, or CHA is currently lowered, then you make the attack with advantage and deal an additional MOVE dark damage."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d12",
+					"5": "2d8",
+					"10": "2d12",
+					"17": "6d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"dark"
+				]
+			},
+			"attack": {
+				"scope": "melee"
+			}
+		},
+		{
 			"id": "last-resort",
 			"name": "Last Resort",
 			"type": "normal",
@@ -12107,6 +12206,40 @@
 			}
 		},
 		{
+			"id": "meteor-beam",
+			"name": "Meteor Beam",
+			"type": "rock",
+			"power": [
+				"wis"
+			],
+			"time": "1 action, charge",
+			"pp": 5,
+			"duration": "1 round, concentration",
+			"range": "self (80ft line)",
+			"description": [
+				"When you use this move, soak in cosmic energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a 80 foot line of solar energy, 5 feet wide. Any creature caught in the line must succeed on a DEX save or take 3d8 + MOVE rock damage on a fail and half as much on a save."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "3d8",
+					"5": "5d6",
+					"10": "4d12",
+					"17": "8d8"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"rock"
+				]
+			},
+			"save": {
+				"attribute": [
+					"dex"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
 			"id": "meteor-mash",
 			"name": "Meteor Mash",
 			"type": "steel",
@@ -12448,6 +12581,40 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			}
+		},
+		{
+			"id": "misty-explosion",
+			"name": "Misty Explosion",
+			"type": "fairy",
+			"power": [
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "self (30ft radius)",
+			"description": [
+				"You release a massive explosion in a 30 foot radius, fainting immediately before the damage is dealt. Creatures in the area must make a DEX save against your Move DC. If your creature has at least half its hit points left or this move was used on Misty Terrain, anyone in range takes 5d6 + MOVE fairy damage on a fail, or half as much on a success. If your creature has less than half of its hit points left and was not on Misty Terrain, the damage is halved for a failed save, and quartered for a success."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 4d10 at level 5, 6d10 at level 10, and 8d12 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "5d6",
+					"5": "4d10",
+					"10": "6d10",
+					"17": "8d12"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"fairy"
+				]
+			},
+			"save": {
+				"attribute": [
+					"dex"
+				],
+				"dc": "MOVE"
 			}
 		},
 		{
@@ -14322,6 +14489,45 @@
 			}
 		},
 		{
+			"id": "poltergeist",
+			"name": "Poltergeist",
+			"type": "ghost",
+			"power": [
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "1 minute, concentration",
+			"range": "60ft",
+			"description": [
+				"You attack by controlling the target's item. The target must make a CHA save against your Move DC or lose a hold of their item. On a failed save, you may immediately make one melee attack against one creature within 5 feet of the item. On a hit, the target takes 1d8 + MOVE ghost damage.",
+				"As a Bonus Action on your later turns, you can repeat the attack against a creature within 5 feet of the item.",
+				"The item follows within 5 feet of its owner, hovering nearby. The creature cannot benefit from the item while you control it. The items's owner may use an action on its turn to try and regain control of the item by repeating the CHA save, ending the move's concentration on a successful save."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d8",
+					"5": "2d6",
+					"10": "4d4",
+					"17": "3d10"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"ghost"
+				]
+			},
+			"attack": {
+				"scope": "melee"
+			},
+			"save": {
+				"attribute": [
+					"cha"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
 			"id": "population-bomb",
 			"name": "Population Bomb",
 			"type": "normal",
@@ -14337,6 +14543,18 @@
 			],
 			"attack": {
 				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "1",
+					"5": "1",
+					"10": "1",
+					"17": "1"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"normal"
+				]
 			}
 		},
 		{
@@ -16723,6 +16941,38 @@
 			}
 		},
 		{
+			"id": "scale-shot",
+			"name": "Scale Shot",
+			"type": "dragon",
+			"power": [
+				"con"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "40ft",
+			"description": [
+				"You blast your scales at a foe in range. Make five ranged attacks against one target in range. On each hit, deal 1d4 dragon damage; if any attack hit, deal an additional MOVE dragon damage (maximum once).",
+				"Until the end of your next turn, you have +10ft of movement and -2 AC."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d8 at level 10, and 1d10 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d4",
+					"5": "1d6",
+					"10": "1d8",
+					"17": "1d10"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"dragon"
+				]
+			},
+			"attack": {
+				"scope": "ranged"
+			}
+		},
+		{
 			"id": "scary-face",
 			"name": "Scary Face",
 			"type": "normal",
@@ -19086,6 +19336,41 @@
 			},
 			"attack": {
 				"scope": "melee"
+			}
+		},
+		{
+			"id": "steel-beam",
+			"name": "Steel Beam",
+			"type": "steel",
+			"power": [
+				"wis"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "self (80ft line)",
+			"description": [
+				"You fire a beam of steel that is collected from your entire body in an 80-foot line, 5 feet wide. Any creature caught in the line must succeed on a DEX save or take 3d8 + MOVE steel damage on a fail and half as much on a save.",
+				"The recoil of using this move sends you backward 10 feet opposite of the direction the beam was targetted, and you fall prone. If you were grounded when using this move, you take 2d6 typeless damage. If you were flying or hovering, calculate fall damage accordingly."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "3d8",
+					"5": "5d6",
+					"10": "4d12",
+					"17": "8d8"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"steel"
+				]
+			},
+			"save": {
+				"attribute": [
+					"dex"
+				],
+				"dc": "MOVE"
 			}
 		},
 		{
