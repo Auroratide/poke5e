@@ -167,6 +167,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 113,
+				"cost": 3600
 			}
 		},
 		{
@@ -341,7 +345,11 @@
 			"range": "self",
 			"description": [
 				"You hone your abilities and feel a surge of speed course through your veins. Increase your movement speed by 20 feet for the duration. Applicable to any movement type the creature has."
-			]
+			],
+			"tm": {
+				"id": 105,
+				"cost": 8700
+			}
 		},
 		{
 			"id": "air-cutter",
@@ -372,6 +380,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 129,
+				"cost": 2500
 			}
 		},
 		{
@@ -403,6 +415,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 140,
+				"cost": 2500
 			}
 		},
 		{
@@ -440,6 +456,10 @@
 					"cha"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 254,
+				"cost": 4900
 			}
 		},
 		{
@@ -466,7 +486,11 @@
 			"range": "self",
 			"description": [
 				"Your mind elevates to a new level of focus. Add +2 to any saving throw you make for the duration, but select one of your moves that is not Amnesia. You forget that move and cannot use it for the duration."
-			]
+			],
+			"tm": {
+				"id": 177,
+				"cost": 3600
+			}
 		},
 		{
 			"id": "anchor-shot",
@@ -1002,6 +1026,10 @@
 				"type": [
 					"fighting"
 				]
+			},
+			"tm": {
+				"id": 167,
+				"cost": 9100
 			}
 		},
 		{
@@ -1127,6 +1155,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 132,
+				"cost": 6200
 			}
 		},
 		{
@@ -1287,7 +1319,11 @@
 			"range": "self",
 			"description": [
 				"As a bonus action, you may switch out, passing along all negative status effects and stat changes to the new creature. This includes existing battle effects from moves such as Substitute, Swords Dance, Ingrain, Aqua Ring, etc. Effects from moves that require concentration may also be transferred, with concentration now dependent on the new creature."
-			]
+			],
+			"tm": {
+				"id": 180,
+				"cost": 4900
+			}
 		},
 		{
 			"id": "beak-blast",
@@ -1663,6 +1699,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 193,
+				"cost": 14200
 			}
 		},
 		{
@@ -1883,6 +1923,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 151,
+				"cost": 4900
 			}
 		},
 		{
@@ -1920,6 +1964,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 141,
+				"cost": 6200
 			}
 		},
 		{
@@ -2208,6 +2256,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 200,
+				"cost": 12500
 			}
 		},
 		{
@@ -2243,6 +2295,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 249,
+				"cost": 9100
 			}
 		},
 		{
@@ -2443,6 +2499,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 212,
+				"cost": 4900
 			}
 		},
 		{
@@ -2478,6 +2538,10 @@
 					"con"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 199,
+				"cost": 4900
 			}
 		},
 		{
@@ -2596,6 +2660,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 136,
+				"cost": 2500
 			}
 		},
 		{
@@ -2698,6 +2766,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 224,
+				"cost": 9100
 			}
 		},
 		{
@@ -2801,7 +2873,11 @@
 			"range": "self",
 			"description": [
 				"Electricity surges through your body, charging up for your next attack. Until your next turn, boost your AC by 2. On your next turn, double your STAB bonus when dealing damage of your type."
-			]
+			],
+			"tm": {
+				"id": 206,
+				"cost": 2700
+			}
 		},
 		{
 			"id": "charge-beam",
@@ -2860,6 +2936,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 103,
+				"cost": 2500
 			}
 		},
 		{
@@ -2930,6 +3010,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 119,
+				"cost": 2500
 			}
 		},
 		{
@@ -3192,6 +3276,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 202,
+				"cost": 12500
 			}
 		},
 		{
@@ -3206,7 +3294,11 @@
 			"description": [
 				"You coach an ally on how to maximize their offense and defense. Choose one ally other than yourself within 60 feet who can hear you. For the duration, that ally can add +1 to their attack rolls and +1 to their AC."
 			],
-			"higherLevels": "The bonus for this move changes to +2 at level 10."
+			"higherLevels": "The bonus for this move changes to +2 at level 10.",
+			"tm": {
+				"id": 241,
+				"cost": 3000
+			}
 		},
 		{
 			"id": "coil",
@@ -3335,6 +3427,10 @@
 			],
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 116,
+				"cost": 3600
 			}
 		},
 		{
@@ -3841,6 +3937,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 163,
+				"cost": 9100
 			}
 		},
 		{
@@ -3940,6 +4040,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 251,
+				"cost": 2700
 			}
 		},
 		{
@@ -4247,6 +4351,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 135,
+				"cost": 3600
 			}
 		},
 		{
@@ -4338,6 +4446,10 @@
 				"type": [
 					"fairy"
 				]
+			},
+			"tm": {
+				"id": 117,
+				"cost": 3600
 			}
 		},
 		{
@@ -4659,6 +4771,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 232,
+				"cost": 3000
 			}
 		},
 		{
@@ -4726,6 +4842,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 203,
+				"cost": 14200
 			}
 		},
 		{
@@ -4848,7 +4968,11 @@
 				"You can use a bonus action to choose one ally other than yourself within 60 feet of you who can hear you. That ally's critical hit range is extended by 1 for the next minute or until they land a critical hit, whichever happens first. If the ally is Dragon-type, double the critical hit range extension. This bonus does not stack.",
 				"A critical hit range extension of 1 means a critical occurs on a natural 19 or 20."
 			],
-			"higherLevels": "The critical range extension changes to 2 at level 10."
+			"higherLevels": "The critical range extension changes to 2 at level 10.",
+			"tm": {
+				"id": 253,
+				"cost": 3600
+			}
 		},
 		{
 			"id": "dragon-claw",
@@ -4896,7 +5020,11 @@
 			"range": "self",
 			"description": [
 				"You perform a mystical dance, pumping yourself up. For the duration, double your proficiency bonus when making an attack."
-			]
+			],
+			"tm": {
+				"id": 158,
+				"cost": 6600
+			}
 		},
 		{
 			"id": "dragon-darts",
@@ -5027,6 +5155,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 169,
+				"cost": 9100
 			}
 		},
 		{
@@ -5159,6 +5291,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 147,
+				"cost": 2500
 			}
 		},
 		{
@@ -5191,6 +5327,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 128,
+				"cost": 2500
 			}
 		},
 		{
@@ -5287,6 +5427,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 162,
+				"cost": 9100
 			}
 		},
 		{
@@ -5386,6 +5530,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 226,
+				"cost": 6600
 			}
 		},
 		{
@@ -5480,6 +5628,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 181,
+				"cost": 10800
 			}
 		},
 		{
@@ -5576,6 +5728,10 @@
 					"con"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 155,
+				"cost": 2500
 			}
 		},
 		{
@@ -5640,7 +5796,11 @@
 			"range": "self (40ft radius)",
 			"description": [
 				"You electrify the ground around you to create a static field of electricity. For 3 turns, no grounded creatures inside the area can be asleep. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from electric-type moves activated inside the area"
-			]
+			],
+			"tm": {
+				"id": 183,
+				"cost": 4900
+			}
 		},
 		{
 			"id": "electrify",
@@ -5696,6 +5856,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 146,
+				"cost": 8700
 			}
 		},
 		{
@@ -5796,6 +5960,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 239,
+				"cost": 2700
 			}
 		},
 		{
@@ -5879,6 +6047,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 174,
+				"cost": 4900
 			}
 		},
 		{
@@ -5901,6 +6073,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 233,
+				"cost": 6600
 			}
 		},
 		{
@@ -5914,7 +6090,11 @@
 			"range": "self",
 			"description": [
 				"On an instance of taking damage that would otherwise cause you to faint, you may instead fall to 1HP on the first instance of this reaction. On future instances of this move in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful."
-			]
+			],
+			"tm": {
+				"id": 133,
+				"cost": 2500
+			}
 		},
 		{
 			"id": "energy-ball",
@@ -6106,6 +6286,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 245,
+				"cost": 10800
 			}
 		},
 		{
@@ -6320,6 +6504,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 104,
+				"cost": 8700
 			}
 		},
 		{
@@ -6413,6 +6601,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 243,
+				"cost": 2700
 			}
 		},
 		{
@@ -6715,6 +6907,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 108,
+				"cost": 8700
 			}
 		},
 		{
@@ -6784,6 +6980,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 189,
+				"cost": 9100
 			}
 		},
 		{
@@ -6816,6 +7016,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 142,
+				"cost": 6200
 			}
 		},
 		{
@@ -6847,6 +7051,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 120,
+				"cost": 2500
 			}
 		},
 		{
@@ -7132,6 +7340,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 201,
+				"cost": 12500
 			}
 		},
 		{
@@ -7333,6 +7545,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 225,
+				"cost": 6600
 			}
 		},
 		{
@@ -7543,6 +7759,10 @@
 				"type": [
 					"fighting"
 				]
+			},
+			"tm": {
+				"id": 221,
+				"cost": 2700
 			}
 		},
 		{
@@ -7651,6 +7871,10 @@
 			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 138,
+				"cost": 6200
 			}
 		},
 		{
@@ -7783,6 +8007,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 195,
+				"cost": 14200
 			}
 		},
 		{
@@ -8050,6 +8278,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 244,
+				"cost": 6600
 			}
 		},
 		{
@@ -8159,6 +8391,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 166,
+				"cost": 9100
 			}
 		},
 		{
@@ -8413,6 +8649,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 191,
+				"cost": 9100
 			}
 		},
 		{
@@ -8467,6 +8707,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 223,
+				"cost": 10800
 			}
 		},
 		{
@@ -8480,7 +8724,11 @@
 			"range": "self (40ft radius)",
 			"description": [
 				"Grass sprouts from the ground in a circle around you, coating the earth with healing energy. For 3 turns, all creatures in the affected area heal for an amount of hit points equal to their proficiency bonus at the end of their turn. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from grass-type moves activated inside the area."
-			]
+			],
+			"tm": {
+				"id": 184,
+				"cost": 4900
+			}
 		},
 		{
 			"id": "grav-apple",
@@ -8532,7 +8780,11 @@
 			"range": "self (20ft radius)",
 			"description": [
 				"You strengthen gravity in an 40 foot circle, centered on you. Any creature in the area cannot use moves like Fly or Bounce, flying types lose their ground immunity, and the Levitate ability is suppressed."
-			]
+			],
+			"tm": {
+				"id": 210,
+				"cost": 2700
+			}
 		},
 		{
 			"id": "growl",
@@ -8678,6 +8930,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 160,
+				"cost": 6600
 			}
 		},
 		{
@@ -8871,6 +9127,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 252,
+				"cost": 6600
 			}
 		},
 		{
@@ -8900,7 +9160,11 @@
 			"range": "self (30ft radius)",
 			"description": [
 				"You create a haze of light snow that washes over creatures in a 60 foot circle, centered on you. Any stat changes, status effects, shields or other outside forces affecting creatures in range are removed. This includes things like Leech Seed, Focus Energy, Substitute, Iron Defense, Disable, etc."
-			]
+			],
+			"tm": {
+				"id": 207,
+				"cost": 2700
+			}
 		},
 		{
 			"id": "head-charge",
@@ -9181,6 +9445,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 218,
+				"cost": 9100
 			}
 		},
 		{
@@ -9216,6 +9484,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 172,
+				"cost": 10800
 			}
 		},
 		{
@@ -9247,6 +9519,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 173,
+				"cost": 6600
 			}
 		},
 		{
@@ -9261,7 +9537,11 @@
 			"description": [
 				"You can use a bonus action on your turn to choose one ally other than yourself within 60 feet of you who can hear you. That ally can add a d6 to one ability check, attack roll, or saving throw it makes within the next 10 minutes, before the result of the roll is called by the DM. An ally being helped can only have one d6 available at a time."
 			],
-			"higherLevels": "The helping dice for this move changes to d8 at level 5, d10 at level 10, and d12 at level 17."
+			"higherLevels": "The helping dice for this move changes to d8 at level 5, d10 at level 10, and d12 at level 17.",
+			"tm": {
+				"id": 178,
+				"cost": 2700
+			}
 		},
 		{
 			"id": "hex",
@@ -9292,6 +9572,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 122,
+				"cost": 2500
 			}
 		},
 		{
@@ -9444,6 +9728,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 216,
+				"cost": 6600
 			}
 		},
 		{
@@ -9666,6 +9954,10 @@
 					"str"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 198,
+				"cost": 12500
 			}
 		},
 		{
@@ -9701,6 +9993,10 @@
 					"str"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 194,
+				"cost": 14200
 			}
 		},
 		{
@@ -9736,6 +10032,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 188,
+				"cost": 12500
 			}
 		},
 		{
@@ -9903,6 +10203,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 171,
+				"cost": 9100
 			}
 		},
 		{
@@ -10121,6 +10425,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 110,
+				"cost": 2500
 			}
 		},
 		{
@@ -10184,6 +10492,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 144,
+				"cost": 2500
 			}
 		},
 		{
@@ -10250,6 +10562,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 175,
+				"cost": 10800
 			}
 		},
 		{
@@ -10312,6 +10628,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 217,
+				"cost": 4900
 			}
 		},
 		{
@@ -10343,6 +10663,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 126,
+				"cost": 3600
 			}
 		},
 		{
@@ -10365,6 +10689,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 154,
+				"cost": 15000
 			}
 		},
 		{
@@ -10558,7 +10886,11 @@
 			"range": "self",
 			"description": [
 				"Your body temporarily becomes solid as steel plate. Until the end of your next turn, you gain + 6 to your AC and have resistance to all types of damage. If you were vulnerable, you now take regular damage. If you were already resistant, you become immune."
-			]
+			],
+			"tm": {
+				"id": 161,
+				"cost": 3600
+			}
 		},
 		{
 			"id": "iron-head",
@@ -10589,6 +10921,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 157,
+				"cost": 2500
 			}
 		},
 		{
@@ -10928,6 +11264,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 211,
+				"cost": 14200
 			}
 		},
 		{
@@ -11042,6 +11382,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 228,
+				"cost": 6600
 			}
 		},
 		{
@@ -11204,6 +11548,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 197,
+				"cost": 12500
 			}
 		},
 		{
@@ -11481,6 +11829,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 165,
+				"cost": 10800
 			}
 		},
 		{
@@ -11548,6 +11900,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 112,
+				"cost": 8700
 			}
 		},
 		{
@@ -11707,6 +12063,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 215,
+				"cost": 6600
 			}
 		},
 		{
@@ -11856,6 +12216,10 @@
 				"type": [
 					"grass"
 				]
+			},
+			"tm": {
+				"id": 125,
+				"cost": 3600
 			}
 		},
 		{
@@ -12369,6 +12733,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 123,
+				"cost": 2500
 			}
 		},
 		{
@@ -12391,6 +12759,10 @@
 					"con"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 250,
+				"cost": 3000
 			}
 		},
 		{
@@ -12456,6 +12828,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 247,
+				"cost": 15000
 			}
 		},
 		{
@@ -12501,7 +12877,11 @@
 			"range": "varies",
 			"description": [
 				"You summon a move at random to inflict against a creature. When you use this move, roll a d100. The resulting number is the TM number for the move you make. If the move is unable to be completed because of positioning, range, etc., Metronome fails."
-			]
+			],
+			"tm": {
+				"id": 149,
+				"cost": 2500
+			}
 		},
 		{
 			"id": "mighty-cleave",
@@ -12834,6 +13214,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 230,
+				"cost": 14200
 			}
 		},
 		{
@@ -12847,7 +13231,11 @@
 			"range": "self (60ft radius)",
 			"description": [
 				"You cover the ground in a thin, healing mist that surrounds a 120 foot circle, centered on you. For 3 turns, no grounded creatures inside the mist can suffer from new status conditions. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, grounded creatures in the terrain are resistant to dragon-type damage, or if they were vulnerable to dragon-type damage, they take regular damage instead."
-			]
+			],
+			"tm": {
+				"id": 186,
+				"cost": 4900
+			}
 		},
 		{
 			"id": "moonblast",
@@ -13090,6 +13478,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 127,
+				"cost": 3600
 			}
 		},
 		{
@@ -13135,6 +13527,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 106,
+				"cost": 8700
 			}
 		},
 		{
@@ -13167,6 +13563,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 237,
+				"cost": 10800
 			}
 		},
 		{
@@ -13272,7 +13672,11 @@
 			"range": "self",
 			"description": [
 				"You stimulate your brain with nasty thoughts. For the duration, you have advantage on any attacks with the Wisdom, Intelligence, or Charisma move power. If the attack requires a Wisdom, Intelligence, or Charisma saving throw, the target has disadvantage."
-			]
+			],
+			"tm": {
+				"id": 187,
+				"cost": 6600
+			}
 		},
 		{
 			"id": "natural-gift",
@@ -13561,6 +13965,10 @@
 			"higherLevels": "The damage dice roll for this move changes to 2d4+Level at level 5, 1d12+Level at level 10, and 4d4+Level at level 17.",
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 131,
+				"cost": 2500
 			}
 		},
 		{
@@ -13950,6 +14358,10 @@
 				"type": [
 					"dragon"
 				]
+			},
+			"tm": {
+				"id": 196,
+				"cost": 12500
 			}
 		},
 		{
@@ -14046,6 +14458,10 @@
 					"con"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 231,
+				"cost": 4900
 			}
 		},
 		{
@@ -14258,6 +14674,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 234,
+				"cost": 6600
 			}
 		},
 		{
@@ -14322,6 +14742,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 192,
+				"cost": 10800
 			}
 		},
 		{
@@ -14474,6 +14898,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 176,
+				"cost": 10800
 			}
 		},
 		{
@@ -14704,6 +15132,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 121,
+				"cost": 2500
 			}
 		},
 		{
@@ -14736,6 +15168,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 179,
+				"cost": 10800
 			}
 		},
 		{
@@ -14775,6 +15211,10 @@
 					"cha"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 227,
+				"cost": 14200
 			}
 		},
 		{
@@ -14964,6 +15404,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 159,
+				"cost": 9100
 			}
 		},
 		{
@@ -15280,6 +15724,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 115,
+				"cost": 2500
 			}
 		},
 		{
@@ -15397,6 +15845,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 139,
+				"cost": 8700
 			}
 		},
 		{
@@ -15432,6 +15884,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 255,
+				"cost": 4900
 			}
 		},
 		{
@@ -15445,7 +15901,11 @@
 			"range": "self (40ft radius)",
 			"description": [
 				"Psychic energy emerges from the ground in a 40ft, centered on you. Begininng at the end of your turn, for three rounds, all grounded creatures in the affected area are unable to use bonus actions. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from psychic-type moves activated inside the area."
-			]
+			],
+			"tm": {
+				"id": 185,
+				"cost": 4900
+			}
 		},
 		{
 			"id": "psycho-boost",
@@ -16475,6 +16935,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 182,
+				"cost": 4900
 			}
 		},
 		{
@@ -16616,6 +17080,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 148,
+				"cost": 3600
 			}
 		},
 		{
@@ -17183,6 +17651,10 @@
 				"type": [
 					"ground"
 				]
+			},
+			"tm": {
+				"id": 208,
+				"cost": 4900
 			}
 		},
 		{
@@ -17304,6 +17776,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 229,
+				"cost": 10800
 			}
 		},
 		{
@@ -17326,6 +17802,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 107,
+				"cost": 2500
 			}
 		},
 		{
@@ -17363,6 +17843,10 @@
 					"con"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 242,
+				"cost": 10800
 			}
 		},
 		{
@@ -17580,6 +18064,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 145,
+				"cost": 8700
 			}
 		},
 		{
@@ -18218,6 +18706,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 156,
+				"cost": 2500
 			}
 		},
 		{
@@ -18250,6 +18742,10 @@
 				"type": [
 					"bug"
 				]
+			},
+			"tm": {
+				"id": 246,
+				"cost": 4900
 			}
 		},
 		{
@@ -18951,7 +19447,11 @@
 			"description": [
 				"You cover the battlefield in a snowstorm. While concentrating, Ice-type creatures in range have +1 to AC."
 			],
-			"higherLevels": "The AC bonus for this move changes to +2 at level 5, +3 at level 10, and +4 at level 17."
+			"higherLevels": "The AC bonus for this move changes to +2 at level 5, +3 at level 10, and +4 at level 17.",
+			"tm": {
+				"id": 134,
+				"cost": 15000
+			}
 		},
 		{
 			"id": "soak",
@@ -19061,6 +19561,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 219,
+				"cost": 2700
 			}
 		},
 		{
@@ -19349,6 +19853,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 152,
+				"cost": 4900
 			}
 		},
 		{
@@ -19514,6 +20022,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 209,
+				"cost": 2500
 			}
 		},
 		{
@@ -19641,6 +20153,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 170,
+				"cost": 6600
 			}
 		},
 		{
@@ -19742,6 +20258,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 204,
+				"cost": 14200
 			}
 		},
 		{
@@ -19912,6 +20432,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 150,
+				"cost": 2500
 			}
 		},
 		{
@@ -20020,6 +20544,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 130,
+				"cost": 3600
 			}
 		},
 		{
@@ -20218,6 +20746,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 114,
+				"cost": 2500
 			}
 		},
 		{
@@ -20420,6 +20952,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 213,
+				"cost": 6600
 			}
 		},
 		{
@@ -20452,6 +20988,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 238,
+				"cost": 6600
 			}
 		},
 		{
@@ -20688,6 +21228,10 @@
 				"type": [
 					"normal"
 				]
+			},
+			"tm": {
+				"id": 124,
+				"cost": 3600
 			}
 		},
 		{
@@ -20971,7 +21515,11 @@
 			"range": "self (30ft radius)",
 			"description": [
 				"You whip up a turbulent whirlwind that boosts the speed of all allies in a 60 foot circle, centered on you. You and any ally that starts their turn inside the area has their speed doubled until the end of their turn."
-			]
+			],
+			"tm": {
+				"id": 168,
+				"cost": 6600
+			}
 		},
 		{
 			"id": "take-down",
@@ -21002,6 +21550,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 102,
+				"cost": 7400
 			}
 		},
 		{
@@ -21244,6 +21796,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 235,
+				"cost": 4900
 			}
 		},
 		{
@@ -21276,6 +21832,10 @@
 				"type": [
 					"normal"
 				]
+			},
+			"tm": {
+				"id": 205,
+				"cost": 9100
 			}
 		},
 		{
@@ -21554,6 +22114,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 248,
+				"cost": 6600
 			}
 		},
 		{
@@ -21662,6 +22226,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 109,
+				"cost": 8700
 			}
 		},
 		{
@@ -21694,6 +22262,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 143,
+				"cost": 6200
 			}
 		},
 		{
@@ -22023,6 +22595,10 @@
 					"con"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 153,
+				"cost": 4900
 			}
 		},
 		{
@@ -22073,6 +22649,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 118,
+				"cost": 15000
 			}
 		},
 		{
@@ -22139,6 +22719,10 @@
 			],
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 164,
+				"cost": 6600
 			}
 		},
 		{
@@ -22242,6 +22826,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 240,
+				"cost": 9100
 			}
 		},
 		{
@@ -22532,6 +23120,10 @@
 				"type": [
 					"fighting"
 				]
+			},
+			"tm": {
+				"id": 256,
+				"cost": 3600
 			}
 		},
 		{
@@ -22567,6 +23159,10 @@
 					"con"
 				],
 				"dc": "MOVE"
+			},
+			"tm": {
+				"id": 220,
+				"cost": 6600
 			}
 		},
 		{
@@ -22630,6 +23226,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 214,
+				"cost": 4900
 			}
 		},
 		{
@@ -22960,6 +23560,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 190,
+				"cost": 9100
 			}
 		},
 		{
@@ -22991,6 +23595,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 111,
+				"cost": 2500
 			}
 		},
 		{
@@ -23199,6 +23807,10 @@
 					"ice",
 					"normal"
 				]
+			},
+			"tm": {
+				"id": 222,
+				"cost": 3600
 			}
 		},
 		{
@@ -23236,6 +23848,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"tm": {
+				"id": 236,
+				"cost": 3600
 			}
 		},
 		{
@@ -23723,6 +24339,10 @@
 			},
 			"attack": {
 				"scope": "melee"
+			},
+			"tm": {
+				"id": 137,
+				"cost": 15000
 			}
 		},
 		{
