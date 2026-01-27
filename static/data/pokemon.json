@@ -62859,7 +62859,8 @@
 					"extrasensory",
 					"flail",
 					"natural-gift",
-					"memento"
+					"memento",
+					"mystical-power"
 				],
 				"tm": [
 					3,
@@ -62989,7 +62990,8 @@
 					"extrasensory",
 					"copycat",
 					"natural-gift",
-					"healing-wish"
+					"healing-wish",
+					"mystical-power"
 				],
 				"tm": [
 					3,
@@ -63120,7 +63122,8 @@
 					"extrasensory",
 					"last-resort",
 					"natural-gift",
-					"explosion"
+					"explosion",
+					"mystical-power"
 				],
 				"tm": [
 					3,
@@ -64380,7 +64383,8 @@
 					"future-sight",
 					"slash",
 					"psychic",
-					"moonblast"
+					"moonblast",
+					"lunar-blessing"
 				],
 				"tm": [
 					3,
@@ -64492,7 +64496,8 @@
 					"water-pulse",
 					"aqua-ring",
 					"dive",
-					"rain-dance"
+					"rain-dance",
+					"take-heart"
 				],
 				"tm": [
 					6,
@@ -64602,7 +64607,8 @@
 					"aqua-ring",
 					"dive",
 					"rain-dance",
-					"heart-swap"
+					"heart-swap",
+					"take-heart"
 				],
 				"tm": [
 					4,
@@ -83969,7 +83975,8 @@
 					"hurricane",
 					"dark-pulse",
 					"hammer-arm",
-					"thrash"
+					"thrash",
+					"bleakwind-storm"
 				],
 				"tm": [
 					6,
@@ -84107,7 +84114,8 @@
 					"thunder",
 					"dark-pulse",
 					"hammer-arm",
-					"thrash"
+					"thrash",
+					"wildbolt-storm"
 				],
 				"tm": [
 					6,
@@ -84549,7 +84557,8 @@
 					"fissure",
 					"stone-edge",
 					"hammer-arm",
-					"outrage"
+					"outrage",
+					"sandsear-storm"
 				],
 				"tm": [
 					4,

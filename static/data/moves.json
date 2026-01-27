@@ -1661,6 +1661,42 @@
 			}
 		},
 		{
+			"id": "bleakwind-storm",
+			"name": "Bleakwind Storm",
+			"type": "flying",
+			"power": [
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "1 minute, concentration",
+			"range": "100ft",
+			"description": [
+				"You create a storm with savagely cold winds that cause both body and spirit to tremble with the size of a 40-foot-cube centered on a point in range. Each enemy creature in the area makes a CON saving throw against your Move DC. On a failed save, it takes 4d4 + MOVE flying damage. On a successful save, it takes half the damage. The area is considered Difficult Terrain for enemy creatures.",
+				"A creature also makes that save if it enters the area or ends it turn there. A creature makes that save only once per turn.",
+				"When used during the rain, creatures have disadvantage on the save."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "4d4",
+					"5": "2d12",
+					"10": "4d8",
+					"17": "8d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"flying"
+				]
+			},
+			"save": {
+				"attribute": [
+					"con"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
 			"id": "blizzard",
 			"name": "Blizzard",
 			"type": "ice",
@@ -11483,6 +11519,32 @@
 			}
 		},
 		{
+			"id": "lunar-blessing",
+			"name": "Lunar Blessing",
+			"type": "psychic",
+			"power": [
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "1 minute, concentration",
+			"range": "self (100f radius)",
+			"description": [
+				"You bless the surrounding area with the light of a crescent moon. For the duration, when an allied creature (including yourself) starts its turn within 100 feet of you, they regain 2d4 + MOVE hit points and are cured of any negative Status Conditions."
+			],
+			"higherLevels": "The healing dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "2d4",
+					"5": "1d12",
+					"10": "2d8",
+					"17": "4d6"
+				},
+				"modifier": "MOVE",
+				"type": "healing"
+			}
+		},
+		{
 			"id": "lunar-dance",
 			"name": "Lunar Dance",
 			"type": "psychic",
@@ -13041,6 +13103,37 @@
 				"modifier": "MOVE",
 				"type": [
 					"fire"
+				]
+			},
+			"attack": {
+				"scope": "ranged"
+			}
+		},
+		{
+			"id": "mystical-power",
+			"name": "Mystical Power",
+			"type": "psychic",
+			"power": [
+				"wis"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "60ft",
+			"description": [
+				"You attack by emitting mystical power. Make a ranged attack, dealing 1d12 + MOVE psychic damage on a hit. If the attack hit, you gain +1 to all attack rolls made with WIS as the Move Power until the end of the encounter or until switched out. If the attack missed, you gain +1 AC until the end of the encounter or until switched out. The sum of these bonuses cap at +5 total."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d12",
+					"5": "2d8",
+					"10": "2d12",
+					"17": "6d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"psychic"
 				]
 			},
 			"attack": {
@@ -14751,6 +14844,19 @@
 			"attack": {
 				"scope": "ranged"
 			}
+		},
+		{
+			"id": "power-shift",
+			"name": "Power Shift",
+			"type": "normal",
+			"power": "none",
+			"time": "1 bonus action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "self",
+			"description": [
+				"You refocus your offense strategy. Until the start of your next turn, for the next Move you execute you may choose any attribute for its Move Power."
+			]
 		},
 		{
 			"id": "power-split",
@@ -16921,6 +17027,42 @@
 				"type": [
 					"ground"
 				]
+			}
+		},
+		{
+			"id": "sandsear-storm",
+			"name": "Sandsear Storm",
+			"type": "ground",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "1 minute, concentration",
+			"range": "100ft",
+			"description": [
+				"You create a storm of fierce winds and searingly hot sand with the size of a 40-foot-cube centered on a point in range. Each enemy creature in the area makes a STR saving throw against your Move DC. On a failed save, it takes 4d4 + MOVE ground damage and becomes Burned. On a successful save, it takes half the damage and does not become Burned.",
+				"A creature also makes that save if it enters the area or ends it turn there. A creature makes that save only once per turn.",
+				"When used during the rain, creatures have disadvantage on the save."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "4d4",
+					"5": "2d12",
+					"10": "4d8",
+					"17": "8d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"ground"
+				]
+			},
+			"save": {
+				"attribute": [
+					"str"
+				],
+				"dc": "MOVE"
 			}
 		},
 		{
@@ -20675,6 +20817,19 @@
 			}
 		},
 		{
+			"id": "take-heart",
+			"name": "Take Heart",
+			"type": "psychic",
+			"power": "none",
+			"time": "1 reaction",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "self",
+			"description": [
+				"As a reaction to receiving a negative Status Condition or becoming Frightened, heal yourself of that Condition and become immune to receiving new Status Conditions or becoming Frightened until the end of your next turn. Additionally, until the end of your next turn, you gain advantage on attack rolls made with WIS or CHA as the Move Power and on all WIS or CHA saving throws."
+			]
+		},
+		{
 			"id": "tar-shot",
 			"name": "Tar Shot",
 			"type": "rock",
@@ -22864,6 +23019,42 @@
 			"description": [
 				"You have the ability to guard your allies from area-of-effect moves. As a reaction, when a creature activates a damaging move that damages multiple allies within range, you may halve the damage dealt. On future instances of this reaction in the same combat, you must roll higher than a 15 on a d20 roll or forfeit the reaction with no effect"
 			]
+		},
+		{
+			"id": "wildbolt-storm",
+			"name": "Wildbolt Storm",
+			"type": "electric",
+			"power": [
+				"wis"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "1 minute, concentration",
+			"range": "100ft",
+			"description": [
+				"You create a thunderous tempest which savagely attacks with lightning and wind with the size of a 40-foot-cube centered on a point in range. Each enemy creature in the area makes a DEX saving throw against your Move DC. On a failed save, it takes 4d4 + MOVE electric damage and becomes Paralyzed. On a successful save, it takes half the damage and does not become Paralyzed.",
+				"A creature also makes that save if it enters the area or ends it turn there. A creature makes that save only once per turn.",
+				"When used during the rain, creatures have disadvantage on the save."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "4d4",
+					"5": "2d12",
+					"10": "4d8",
+					"17": "8d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"electric"
+				]
+			},
+			"save": {
+				"attribute": [
+					"dex"
+				],
+				"dc": "MOVE"
+			}
 		},
 		{
 			"id": "wild-charge",
