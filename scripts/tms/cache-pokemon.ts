@@ -13,6 +13,7 @@ type PokeApiListItem = {
 
 type PokeApiPokemon = {
 	id: number,
+	name: string,
 	moves: {
 		move: {
 			name: string,
@@ -44,6 +45,7 @@ async function main() {
 		const poke: PokeApiPokemon = await fetch(apiPokemon.url).then((res) => res.json())
 		pokemon.push({
 			id: poke.id,
+			name: poke.name,
 			moves: poke.moves,
 		})
 		console.log(`${++current} / ${total}`)
