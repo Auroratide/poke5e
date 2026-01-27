@@ -5,6 +5,7 @@ import { parse } from "csv-parse/sync"
 function rowConversionRule(resource: string): (header: string, cell: string) => any {
 	switch (resource) {
 		case "items": return (h, c) => h === "description" ? c.split("\n").filter((it) => it.trim().length > 0) : c
+		case "moves": return (h, c) => h === "description" ? c.split("\n").filter((it) => it.trim().length > 0) : c
 		default: return (h, c) => c
 	}
 }
@@ -20,10 +21,14 @@ async function getCsv(locale: string, resource: string): Promise<any[]> {
 	const csv = await fs.readFile(path.join("scripts", "i18n", locale, `${resource}.csv`), { encoding: "utf-8" })
 	
 	const [header, ...rows] = parse(csv)
-	return rows.map((row) => header.reduce((obj, h, i) => ({
-		...obj,
-		[h]: rowConversionRule(resource)(h, row[i]),
-	}), {}))
+	return rows.map((row) => header.reduce((obj, h, i) => {
+		if (row[i].trim().length === 0) return obj
+
+		return {
+			...obj,
+			[h]: rowConversionRule(resource)(h, row[i]),
+		}
+	}, {}))
 }
 
 async function writeTranslated(locale: string, resource: string, list: any[]) {

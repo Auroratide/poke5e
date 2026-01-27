@@ -4,6 +4,7 @@ import tmData from "../../../../../static/data/tms.json"
 import contestData from "../../../../../static/data/contest.json"
 import pokemonData from "../../../../../static/data/pokemon.json"
 import { pokemonWhoLearnThisMove } from "$lib/moves/pokemon"
+import { translateData } from "$lib/site/i18n"
 
 export const GET: RequestHandler = async ({ params }) => {
 	const selected = data.moves.find(it => it.id === params.id)
@@ -22,7 +23,12 @@ export const GET: RequestHandler = async ({ params }) => {
 	}
 
 	if (selected !== undefined) {
-		return new Response(JSON.stringify(move), {
+		const translated = await translateData(
+			[move],
+			async (locale) => (await import(`../../../../../static/data/${locale}/moves.json`)).moves,
+		)
+
+		return new Response(JSON.stringify(translated[0]), {
 			status: 200,
 			headers: {
 				"Content-Type": "application/json",

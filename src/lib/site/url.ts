@@ -67,7 +67,7 @@ export const Url = {
 		pokemon: (id?: string) => id ? resolve("/(api)/pokemon/[id]/v2.json", { id }) : resolve("/(api)/pokemon/v2.json"),
 		evolutions: () => resolve("/(api)/evolutions/v1.json"),
 		items: (id?: string) => localizeUrl(id ? resolve("/(api)/items/[id].json", { id }) : resolve("/(api)/items.json")).pathname,
-		moves: (id?: string) => id ? resolve("/(api)/moves/[id].json", { id }) : resolve("/(api)/moves.json"),
+		moves: (id?: string) => localizeUrl(id ? resolve("/(api)/moves/[id].json", { id }) : resolve("/(api)/moves.json")).pathname,
 		abilities: () => localizeUrl(resolve("/(api)/abilities.json")).pathname,
 	},
 } as const

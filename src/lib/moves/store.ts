@@ -1,13 +1,13 @@
 import { derived, readable, writable, type Readable } from "svelte/store"
-import { resolve } from "$app/paths"
 import { Move } from "./Move"
 import type { Tm } from "./tms/Tm"
 import type { Data } from "$lib/DataClass"
 import { TmDetails } from "./tms/TmDetails"
+import { Url } from "$lib/site/url"
 
 export const MovesStore = readable<Move[]>(undefined, (set) => {
 	if (typeof window !== "undefined") {
-		fetch(resolve("/moves.json"))
+		fetch(Url.api.moves())
 			.then(res => res.json())
 			.then(data => data.moves)
 			.then((moves: Data<Move>[]) => moves.map((it) => new Move(it)))
