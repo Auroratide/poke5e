@@ -3069,6 +3069,20 @@
 			}
 		},
 		{
+			"id": "coaching",
+			"name": "Coaching",
+			"type": "fighting",
+			"power": "none",
+			"time": "1 action",
+			"pp": 5,
+			"duration": "10 minutes, concentration",
+			"range": "60ft",
+			"description": [
+				"You coach an ally on how to maximize their offense and defense. Choose one ally other than yourself within 60 feet who can hear you. For the duration, that ally can add +1 to their attack rolls and +1 to their AC."
+			],
+			"higherLevels": "The bonus for this move changes to +2 at level 10."
+		},
+		{
 			"id": "coil",
 			"name": "Coil",
 			"type": "poison",
@@ -3372,6 +3386,28 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			}
+		},
+		{
+			"id": "corrosive-gas",
+			"name": "Corrosive Gas",
+			"type": "poison",
+			"power": [
+				"con"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "1 minute",
+			"range": "self (20ft radius)",
+			"description": [
+				"You surround yourself and everything within a 20-foot radius of you in highly acidic gas. The gas lasts for the duration or until strong wind (such as the one created by Gust) disperses it. Its area is Heavily Obscured.",
+				"All Held Berries in the area instantly melt away. Each non-poison-type creature that starts its turn in the sphere must succeed on a CON saving throw against your Move DC. On failure, until the end of the current turn, the creature has disadvantage on attack rolls and ability checks; additionally, if the creature's SR is below 15, then it cannot benefit from Held Items."
+			],
+			"save": {
+				"attribute": [
+					"con"
+				],
+				"dc": "MOVE"
 			}
 		},
 		{
@@ -16995,6 +17031,43 @@
 			}
 		},
 		{
+			"id": "scorching-sands",
+			"name": "Scorching Sands",
+			"type": "ground",
+			"power": [
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "40ft",
+			"description": [
+				"You throw scorching sand at a target to burn them. Make a ranged attack against a creature within 40 feet. On a hit, you deal 1d8 + MOVE ground damage, and the target must make a CON save against your Move DC, becoming Burned on a failure."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d8",
+					"5": "2d6",
+					"10": "4d4",
+					"17": "3d10"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"ground"
+				]
+			},
+			"attack": {
+				"scope": "ranged"
+			},
+			"save": {
+				"attribute": [
+					"con"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
 			"id": "scratch",
 			"name": "Scratch",
 			"type": "normal",
@@ -21731,6 +21804,38 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			}
+		},
+		{
+			"id": "triple-axel",
+			"name": "Triple Axel",
+			"type": "ice",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You strike out with three consecutive kicks. Make three melee attack rolls in order, doing 1d4 + MOVE ice damage on each hit. As soon as one attack misses, the move is over."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d6 at level 5, 1d8 at level 10, and 2d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d4",
+					"5": "1d6",
+					"10": "1d8",
+					"17": "2d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"ice"
+				]
+			},
+			"attack": {
+				"scope": "melee"
 			}
 		},
 		{
