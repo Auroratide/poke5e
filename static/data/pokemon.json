@@ -25461,7 +25461,8 @@
 					"growl",
 					"water-gun",
 					"confusion",
-					"disable"
+					"disable",
+					"chilly-reception"
 				],
 				"level10": [
 					"headbutt",
@@ -111212,7 +111213,8 @@
 					"growl",
 					"acid",
 					"confusion",
-					"disable"
+					"disable",
+					"chilly-reception"
 				],
 				"level10": [
 					"headbutt",

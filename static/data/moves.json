@@ -406,6 +406,43 @@
 			}
 		},
 		{
+			"id": "alluring-voice",
+			"name": "Alluring Voice",
+			"type": "fairy",
+			"power": [
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "40ft",
+			"description": [
+				"You use your angelic voice to confuse a target. Make a ranged attack against a target, dealing 2d6 + MOVE fairy damage. On a hit, the target must make a CHA save against your Move DC or become Confused."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "2d6",
+					"5": "2d8",
+					"10": "4d6",
+					"17": "6d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"fairy"
+				]
+			},
+			"attack": {
+				"scope": "ranged"
+			},
+			"save": {
+				"attribute": [
+					"cha"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
 			"id": "ally-switch",
 			"name": "Ally Switch",
 			"type": "psychic",
@@ -2856,6 +2893,59 @@
 			"attack": {
 				"scope": "ranged"
 			}
+		},
+		{
+			"id": "chilling-water",
+			"name": "Chilling Water",
+			"type": "water",
+			"power": [
+				"wis",
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "60ft",
+			"description": [
+				"You shower a creature with water that's so cold it saps the target's power. Make a ranged attack roll, doing 1d10 + MOVE water damage on a hit. On a hit, the target must succeed a WIS save against your Move DC or have disadvantage on any attack it makes on its next turn."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d10",
+					"5": "2d8",
+					"10": "5d4",
+					"17": "4d8"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"water"
+				]
+			},
+			"save": {
+				"attribute": [
+					"wis"
+				],
+				"dc": "MOVE"
+			},
+			"attack": {
+				"scope": "ranged"
+			}
+		},
+		{
+			"id": "chilly-reception",
+			"name": "Chilly Reception",
+			"type": "ice",
+			"power": [
+				"cha"
+			],
+			"time": "1 action",
+			"pp": 3,
+			"duration": "5 rounds",
+			"range": "self (60ft radius)",
+			"description": [
+				"You tell a chillingly bad joke. The weather is changed to Snow for 5 rounds. After this move is activated, the trainer must switch out the user as a free action (before they get booed off the stage!)."
+			]
 		},
 		{
 			"id": "chip-away",
@@ -8751,6 +8841,37 @@
 			"description": [
 				"You celebrate your impending victory with a little jig. Prize money awarded at the end of battle is doubled."
 			]
+		},
+		{
+			"id": "hard-press",
+			"name": "Hard Press",
+			"type": "steel",
+			"power": [
+				"con"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You crush a creature with an arm, a claw, or the like to inflict damage. Make a melee attack against a target, dealing 2d6 + MOVE steel damage. If the target is above 50% of its maximum health, add your proficiency bonus to the damage roll."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "2d6",
+					"5": "2d8",
+					"10": "4d6",
+					"17": "6d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"steel"
+				]
+			},
+			"attack": {
+				"scope": "melee"
+			}
 		},
 		{
 			"id": "harden",
@@ -15279,6 +15400,41 @@
 			}
 		},
 		{
+			"id": "psychic-noise",
+			"name": "Psychic Noise",
+			"type": "psychic",
+			"power": [
+				"int",
+				"wis"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "40ft",
+			"description": [
+				"You attack the target with unpleasant sound waves. The target must make a WIS save against your Move DC. On failure, the target takes 1d12 + MOVE psychic damage, and it can't regain Hit Points until the end of your next turn."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d12",
+					"5": "2d8",
+					"10": "2d12",
+					"17": "6d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"psychic"
+				]
+			},
+			"save": {
+				"attribute": [
+					"wis"
+				],
+				"dc": "MOVE"
+			}
+		},
+		{
 			"id": "psychic-terrain",
 			"name": "Psychic Terrain",
 			"type": "psychic",
@@ -20267,6 +20423,38 @@
 			}
 		},
 		{
+			"id": "supercell-slam",
+			"name": "Supercell Slam",
+			"type": "electric",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You electrify your body and drop onto the target. Make a melee attack, doing 2d8 + MOVE electric damage on a hit. On a miss, you take typeless damage equal to your proficiency bonus."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "2d8",
+					"5": "2d10",
+					"10": "3d10",
+					"17": "4d12"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"electric"
+				]
+			},
+			"attack": {
+				"scope": "melee"
+			}
+		},
+		{
 			"id": "superpower",
 			"name": "Superpower",
 			"type": "fighting",
@@ -21026,6 +21214,37 @@
 			"description": [
 				"You disappear from view and reappear at an unoccupied point within range. In wild creature battles, this move can be activated to automatically count as a single success in a group DEX check to run away."
 			]
+		},
+		{
+			"id": "temper-flare",
+			"name": "Temper Flare",
+			"type": "fire",
+			"power": [
+				"str"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"Spurred by desperation, you attack the target. Make a melee attack, dealing 2d4 + MOVE fire damage on a hit. If you missed an attack roll last turn, then add an additional damage die to your damage roll."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 2d8 at level 10, and 3d10 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "2d4",
+					"5": "2d6",
+					"10": "2d8",
+					"17": "3d10"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"fire"
+				]
+			},
+			"attack": {
+				"scope": "melee"
+			}
 		},
 		{
 			"id": "tera-blast",
@@ -21825,6 +22044,38 @@
 			}
 		},
 		{
+			"id": "trailblaze",
+			"name": "Trailblaze",
+			"type": "grass",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 action",
+			"pp": 10,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You attack suddenly as if leaping out from tall grass. Make a melee attack, dealing 1d8 + MOVE grass damage on a hit. With each successful hit from this move, increase your movement speed by 5 until you are incapacitated, are switched out, or the combat ends. (Maximum of +30 to movement speed)"
+			],
+			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d8",
+					"5": "2d6",
+					"10": "4d4",
+					"17": "3d10"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"grass"
+				]
+			},
+			"attack": {
+				"scope": "melee"
+			}
+		},
+		{
 			"id": "transform",
 			"name": "Transform",
 			"type": "normal",
@@ -22249,6 +22500,38 @@
 			},
 			"attack": {
 				"scope": "melee"
+			}
+		},
+		{
+			"id": "upper-hand",
+			"name": "Upper Hand",
+			"type": "fighting",
+			"power": [
+				"str",
+				"dex"
+			],
+			"time": "1 reaction",
+			"pp": 3,
+			"duration": "instantaneous",
+			"range": "melee",
+			"description": [
+				"You react to the target's movement and strike with the heel of your palm. When targeted by a melee attack, you may use your reaction to attempt to strike a creature before its attack is rolled. Make a melee attack, dealing 1d6 + MOVE fighting damage on a hit."
+			],
+			"higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17.",
+			"attack": {
+				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d12",
+					"10": "2d8",
+					"17": "4d6"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"fighting"
+				]
 			}
 		},
 		{
