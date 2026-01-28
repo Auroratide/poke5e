@@ -11,6 +11,7 @@ export type MoveId = string
 
 export class Move extends DataClass<{
 	id: MoveId,
+	beta?: boolean,
 	name: string,
 	type: PokeType,
 	power: Data<MovePower>,
@@ -25,6 +26,7 @@ export class Move extends DataClass<{
 	tm?: Data<TmDetails>,
 }> {
 	get id() { return this.data.id }
+	get beta() { return this.data.beta ?? false }
 	get name() { return this.data.name }
 	get type() { return this.data.type }
 	get power() { return new MovePower(this.data.power) }

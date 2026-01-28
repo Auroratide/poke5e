@@ -423,6 +423,7 @@
 		},
 		{
 			"id": "alluring-voice",
+			"beta": true,
 			"name": "Alluring Voice",
 			"type": "fairy",
 			"power": [
@@ -1739,6 +1740,7 @@
 		},
 		{
 			"id": "bleakwind-storm",
+			"beta": true,
 			"name": "Bleakwind Storm",
 			"type": "flying",
 			"power": [
@@ -2735,6 +2737,7 @@
 		},
 		{
 			"id": "burning-jealousy",
+			"beta": true,
 			"name": "Burning Jealousy",
 			"type": "fire",
 			"power": [
@@ -2976,6 +2979,7 @@
 		},
 		{
 			"id": "chilling-water",
+			"beta": true,
 			"name": "Chilling Water",
 			"type": "water",
 			"power": [
@@ -3018,6 +3022,7 @@
 		},
 		{
 			"id": "chilly-reception",
+			"beta": true,
 			"name": "Chilly Reception",
 			"type": "ice",
 			"power": [
@@ -3202,6 +3207,7 @@
 		},
 		{
 			"id": "clangorous-soul",
+			"beta": true,
 			"name": "Clangorous Soul",
 			"type": "dragon",
 			"power": [
@@ -3284,6 +3290,7 @@
 		},
 		{
 			"id": "coaching",
+			"beta": true,
 			"name": "Coaching",
 			"type": "fighting",
 			"power": "none",
@@ -3612,6 +3619,7 @@
 		},
 		{
 			"id": "corrosive-gas",
+			"beta": true,
 			"name": "Corrosive Gas",
 			"type": "poison",
 			"power": [
@@ -8679,6 +8687,7 @@
 		},
 		{
 			"id": "grassy-glide",
+			"beta": true,
 			"name": "Grassy Glide",
 			"type": "grass",
 			"power": [
@@ -9100,6 +9109,7 @@
 		},
 		{
 			"id": "hard-press",
+			"beta": true,
 			"name": "Hard Press",
 			"type": "steel",
 			"power": [
@@ -11354,6 +11364,7 @@
 		},
 		{
 			"id": "lash-out",
+			"beta": true,
 			"name": "Lash Out",
 			"type": "dark",
 			"power": [
@@ -11997,6 +12008,7 @@
 		},
 		{
 			"id": "lunar-blessing",
+			"beta": true,
 			"name": "Lunar Blessing",
 			"type": "psychic",
 			"power": [
@@ -12798,6 +12810,7 @@
 		},
 		{
 			"id": "meteor-beam",
+			"beta": true,
 			"name": "Meteor Beam",
 			"type": "rock",
 			"power": [
@@ -13184,6 +13197,7 @@
 		},
 		{
 			"id": "misty-explosion",
+			"beta": true,
 			"name": "Misty Explosion",
 			"type": "fairy",
 			"power": [
@@ -13632,6 +13646,7 @@
 		},
 		{
 			"id": "mystical-power",
+			"beta": true,
 			"name": "Mystical Power",
 			"type": "psychic",
 			"power": [
@@ -15176,6 +15191,7 @@
 		},
 		{
 			"id": "poltergeist",
+			"beta": true,
 			"name": "Poltergeist",
 			"type": "ghost",
 			"power": [
@@ -15412,6 +15428,7 @@
 		},
 		{
 			"id": "power-shift",
+			"beta": true,
 			"name": "Power Shift",
 			"type": "normal",
 			"power": "none",
@@ -15853,6 +15870,7 @@
 		},
 		{
 			"id": "psychic-noise",
+			"beta": true,
 			"name": "Psychic Noise",
 			"type": "psychic",
 			"power": [
@@ -17659,6 +17677,7 @@
 		},
 		{
 			"id": "sandsear-storm",
+			"beta": true,
 			"name": "Sandsear Storm",
 			"type": "ground",
 			"power": [
@@ -17748,6 +17767,7 @@
 		},
 		{
 			"id": "scale-shot",
+			"beta": true,
 			"name": "Scale Shot",
 			"type": "dragon",
 			"power": [
@@ -17810,6 +17830,7 @@
 		},
 		{
 			"id": "scorching-sands",
+			"beta": true,
 			"name": "Scorching Sands",
 			"type": "ground",
 			"power": [
@@ -19280,6 +19301,7 @@
 		},
 		{
 			"id": "snap-trap",
+			"beta": true,
 			"name": "Snap Trap",
 			"type": "grass",
 			"power": [
@@ -20227,6 +20249,7 @@
 		},
 		{
 			"id": "steel-beam",
+			"beta": true,
 			"name": "Steel Beam",
 			"type": "steel",
 			"power": [
@@ -20960,6 +20983,7 @@
 		},
 		{
 			"id": "supercell-slam",
+			"beta": true,
 			"name": "Supercell Slam",
 			"type": "electric",
 			"power": [
@@ -21558,6 +21582,7 @@
 		},
 		{
 			"id": "take-heart",
+			"beta": true,
 			"name": "Take Heart",
 			"type": "psychic",
 			"power": "none",
@@ -21769,6 +21794,7 @@
 		},
 		{
 			"id": "temper-flare",
+			"beta": true,
 			"name": "Temper Flare",
 			"type": "fire",
 			"power": [
@@ -22621,6 +22647,7 @@
 		},
 		{
 			"id": "trailblaze",
+			"beta": true,
 			"name": "Trailblaze",
 			"type": "grass",
 			"power": [
@@ -22798,6 +22825,7 @@
 		},
 		{
 			"id": "triple-axel",
+			"beta": true,
 			"name": "Triple Axel",
 			"type": "ice",
 			"power": [
@@ -23092,6 +23120,7 @@
 		},
 		{
 			"id": "upper-hand",
+			"beta": true,
 			"name": "Upper Hand",
 			"type": "fighting",
 			"power": [
@@ -23921,6 +23950,7 @@
 		},
 		{
 			"id": "wildbolt-storm",
+			"beta": true,
 			"name": "Wildbolt Storm",
 			"type": "electric",
 			"power": [

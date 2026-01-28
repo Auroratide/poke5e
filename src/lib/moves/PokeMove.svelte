@@ -1,12 +1,13 @@
 <script lang="ts">
 	import { Card } from "$lib/ui/page"
-	import { FlatDl } from "$lib/ui/elements"
+	import { FlatDl, Tag } from "$lib/ui/elements"
 	import MoveDescription from "./MoveDescription.svelte"
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import { TypeTag } from "$lib/pokemon/types"
 	import { PokemonSpecies } from "$lib/poke5e/species"
 	import type { Move } from "./Move"
+	import { Url } from "$lib/site/url"
 
 	export let move: Move
 	export let pokemon: PokemonSpecies[] = []
@@ -18,6 +19,9 @@
 <Card title={tm ? move.tmName() : move.name}>
 	<TypeTag slot="header-extra" type={[move.type]}></TypeTag>
 	<section class="info">
+		{#if move.beta}
+			<p class="beta"><Tag>New!</Tag><span>This move being playtested. If you have <a href="{Url.feedback()}">feedback</a>, let us know!</span></p>
+		{/if}
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<FlatDl>
 			<dt>Move Power</dt>
@@ -75,5 +79,11 @@
 		background-color: var(--contest-color);
 		padding-block-start: 1em;
 		padding-block-end: 0.5em;
+	}
+
+	.beta {
+		font-size: var(--font-sz-venus);
+	} .beta span {
+		padding-inline-start: 0.25em;
 	}
 </style>
