@@ -12,7 +12,7 @@
 		},
 		{
 			"id": "air-lock",
-			"name": "Esclusa de aire",
+			"name": "Esclusa de Aire",
 			"description": "Mientras este Pokémon está en combate, habilidades relacionadas con el clima no tienen efecto en los Pokémon que las posean."
 		},
 		{
@@ -133,7 +133,7 @@
 		{
 			"id": "chlorophyll",
 			"name": "Clorofila",
-			"description": "La velocidad de movimiento de este Pokémon se duplica bajo sol intenso."
+			"description": "La velocidad de movimiento de este Pokémon se duplica bajo sol abrasador."
 		},
 		{
 			"id": "clear-body",
@@ -197,7 +197,7 @@
 		},
 		{
 			"id": "curious-medicine",
-			"name": "Medicina extraña",
+			"name": "Medicina Extraña",
 			"description": "Como acción adicional, este Pokémon puede reiniciar cambios a las puntuaciones de característica, CA y modificadores de ataque de sí mismo o de un aliado a 30 pies o menos. Este Pokémon puede hacer esto un número de veces igual a su modificador de Inteligencia (como mínimo uno), y se reinicia con un descanso largo."
 		},
 		{
@@ -273,12 +273,12 @@
 		{
 			"id": "drought",
 			"name": "Sequía",
-			"description": "Cuando este Pokémon entra en combate en exteriores, el clima cambia inmediatamente a sol intenso durante 5 rondas. En caso de que otro Pokémon tenga una habilidad climática similar, el empate se resuelve a favor del Pokémon con la puntuación de Destreza más alta."
+			"description": "Cuando este Pokémon entra en combate en exteriores, el clima cambia inmediatamente a sol abrasador durante 5 rondas. En caso de que otro Pokémon tenga una habilidad climática similar, el empate se resuelve a favor del Pokémon con la puntuación de Destreza más alta."
 		},
 		{
 			"id": "dry-skin",
 			"name": "Piel Seca",
-			"description": "Al final de cada uno de los turnos de este Pokémon, sufre daño igual a su bonificador por competencia en sol intenso o se cura la misma cantidad durante lluvia."
+			"description": "Al final de cada uno de los turnos de este Pokémon, sufre daño igual a su bonificador por competencia en sol abrasador o se cura la misma cantidad durante lluvia."
 		},
 		{
 			"id": "early-bird",
@@ -358,7 +358,7 @@
 		{
 			"id": "flower-gift",
 			"name": "Don Floral",
-			"description": "Durante sol intenso, los Pokémon aliados a 30 pies o menos de este Pokémon añaden su bonificador por competencia a sus tiradas de ataque."
+			"description": "Durante sol abrasador, los Pokémon aliados a 30 pies o menos de este Pokémon añaden su bonificador por competencia a sus tiradas de ataque."
 		},
 		{
 			"id": "flower-veil",
@@ -373,7 +373,7 @@
 		{
 			"id": "forecast",
 			"name": "Predicción",
-			"description": "Este Pokémon cambia de forma con el clima. En lluvia pasa a ser tipo Agua, en sol intenso pasa a ser tipo Fuego, en condiciones frías y nevadas pasa a ser tipo Hielo. En todas las demás condiciones climáticas es tipo Normal. Su bonificador por STAB, resistencias, inmunidades y vulnerabilidades cambian a corde con el tipo actual."
+			"description": "Este Pokémon cambia de forma con el clima. En lluvia pasa a ser tipo Agua, en sol abrasador pasa a ser tipo Fuego, en condiciones frías y nevadas pasa a ser tipo Hielo. En todas las demás condiciones climáticas es tipo Normal. Su bonificador por STAB, resistencias, inmunidades y vulnerabilidades cambian a corde con el tipo actual."
 		},
 		{
 			"id": "forewarn",
@@ -388,7 +388,7 @@
 		{
 			"id": "form-change-cherrim",
 			"name": "Cambio de Forma (Cherrim)",
-			"description": "Cherrim cambia su apariencia dependiendo del clima. En sol intenso, florece en su Forma Soleada."
+			"description": "Cherrim cambia su apariencia dependiendo del clima. En sol abrasador, florece en su Forma Soleada."
 		},
 		{
 			"id": "form-change-giratina",
@@ -688,7 +688,7 @@
 		{
 			"id": "leaf-guard",
 			"name": "Defensa Hoja",
-			"description": "Este Pokémon no se ve afectado por efectos de estado negativos mientras esté bajo sol intenso."
+			"description": "Este Pokémon no se ve afectado por efectos de estado negativos mientras esté bajo sol abrasador."
 		},
 		{
 			"id": "leaf-storm",
@@ -883,7 +883,7 @@
 		{
 			"id": "orichalcum-pulse",
 			"name": "Latido Oricalco",
-			"description": "Como acción adicional, este Pokémon puede cambiar el clima a sol intenso por 5 rondas; esta acción adicional puede ser usada dos veces por descanso corto. En sol intenso, este Pokémon tiene ventaja en las tiradas de ataque usando Fuerza o Constitución como Poder de Movimiento."
+			"description": "Como acción adicional, este Pokémon puede cambiar el clima a sol abrasador por 5 rondas; esta acción adicional puede ser usada dos veces por descanso corto. En sol abrasador, este Pokémon tiene ventaja en las tiradas de ataque usando Fuerza o Constitución como Poder de Movimiento."
 		},
 		{
 			"id": "overcoat",
@@ -947,17 +947,17 @@
 		},
 		{
 			"id": "poison-point",
-			"name": "Punto tóxico",
+			"name": "Punto Tóxico",
 			"description": "Cuando este Pokémon es impactado por un ataque cuerpo a cuerpo, tira un d4. En un resultado de 4, el atacante recibe una cantidad de daño de Veneno igual al bonificador de competencia de este Pokémon."
 		},
 		{
 			"id": "poison-puppeteer",
-			"name": "Títere tóxico",
+			"name": "Títere Tóxico",
 			"description": "Cuando este Pokémon inflige la condición Envenenado o Gravemente envenenado, también impone la condición Hechizado. Las criaturas hechizadas de esta manera pueden intentar romper el hechizo al final de cada uno de sus turnos con una tirada de salvación de Carisma contra la CD de Carisma de este Pokémon."
 		},
 		{
 			"id": "poison-touch",
-			"name": "Toque tóxico",
+			"name": "Toque Tóxico",
 			"description": "En los ataques cuerpo a cuerpo realizados por este Pokémon, tira un d10 si aciertas. Si obtienes un 10, el objetivo queda envenenado."
 		},
 		{
@@ -1002,7 +1002,7 @@
 		},
 		{
 			"id": "propeller-tail",
-			"name": "Hélide caudal",
+			"name": "Hélide Caudal",
 			"description": "Este Pokémon ignora los efectos de los movimientos que alteran los objetivos de sus propios movimientos (como Señuelo)."
 		},
 		{
@@ -1013,7 +1013,7 @@
 		{
 			"id": "protosynthesis",
 			"name": "Paleosíntesis",
-			"description": "Este Pokémon puede tener una Fuerza y una Constitución de hasta 22. Bajo sol intenso, este Pokémon tiene ventaja en las tiradas de salvación de Fuerza y Constitución."
+			"description": "Este Pokémon puede tener una Fuerza y una Constitución de hasta 22. Bajo sol abrasador, este Pokémon tiene ventaja en las tiradas de salvación de Fuerza y Constitución."
 		},
 		{
 			"id": "psychic-surge",
@@ -1038,7 +1038,7 @@
 		{
 			"id": "quark-drive",
 			"name": "Carga Cuark",
-			"description": "Este Pokémon puede tener una Destreza y una Sabiduría de hasta 22. Bajo sol intenso, este Pokémon tiene ventaja en las tiradas de salvación de Destreza y Sabiduría."
+			"description": "Este Pokémon puede tener una Destreza y una Sabiduría de hasta 22. Bajo sol abrasador, este Pokémon tiene ventaja en las tiradas de salvación de Destreza y Sabiduría."
 		},
 		{
 			"id": "queenly-majesty",
@@ -1052,7 +1052,7 @@
 		},
 		{
 			"id": "quick-feet",
-			"name": "Pies rápidos",
+			"name": "Pies Rápidos",
 			"description": "Mientras sufre de una condición de estado negativa, la velocidad de movimiento de este Pokémon aumenta en 15 pies."
 		},
 		{
@@ -1253,7 +1253,7 @@
 		{
 			"id": "solar-power",
 			"name": "Poder Solar",
-			"description": "Las tiradas de daño de este Pokémon obtienen +2 bajo sol intenso."
+			"description": "Las tiradas de daño de este Pokémon obtienen +2 bajo sol abrasador."
 		},
 		{
 			"id": "solid-rock",
@@ -1637,7 +1637,7 @@
 		},
 		{
 			"id": "zero-to-hero",
-			"name": "Cambio heroico",
+			"name": "Cambio Heroico",
 			"description": "Cuando un aliado de Palafin, que no sea Pokémon, recibe daño de una fuente ajena a su control, Palafin puede adoptar su Forma Heroica. En Forma Heroica, su tamaño cambia a Mediano, su CA aumenta en 4 y sus puntuaciones de característica de Fuerza y Destreza aumentan en 4, hasta un máximo de 22. Puede hacer esto una vez por cada descanso largo. Regresa a su Forma Ingenua al final del combate."
 		}
 	]
