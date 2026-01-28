@@ -1,0 +1,1 @@
+function t(e){return()=>a(e)}function a(e){return localStorage.getItem(`feature-toggle::${e}`)!=null}function r(e,o){o?localStorage.setItem(`feature-toggle::${e}`,"true"):localStorage.removeItem(`feature-toggle::${e}`)}const l={Localization:t("Localization"),MoreTms:t("MoreTms")};export{l as F,a as i,r as s};

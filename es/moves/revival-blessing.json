@@ -1,0 +1,1 @@
+{"id":"revival-blessing","name":"Plegaria Vital","type":"normal","power":"none","time":"1 action","pp":1,"duration":"instantaneous","range":"melee","description":["Otorgas una bendición amorosa a un Pokémon debilitado como objetivo. El objetivo recupera la mitad de sus puntos de golpe máximos."],"pokemon":[{"id":"pawmot","name":"Pawmot"},{"id":"rabsca","name":"Rabsca"}]}
