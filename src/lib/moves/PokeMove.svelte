@@ -13,7 +13,9 @@
 	export let pokemon: PokemonSpecies[] = []
 	export let tm: boolean = false
 
-	$: pokemonWhoLearnThisMove = move.pokemonWhoLearnThis(pokemon)
+	$: pokemonWhoLearnThisMove = tm
+		? move.pokemonWhoLearnThisViaTm(pokemon)
+		: move.pokemonWhoLearnThis(pokemon)
 </script>
 
 <Card title={tm ? move.tmName() : move.name}>

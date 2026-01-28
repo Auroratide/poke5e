@@ -53,6 +53,10 @@ export class Move extends DataClass<{
 		return allPokemon.filter((pokemon) => pokemon.moves.canLearn(this))
 	}
 
+	pokemonWhoLearnThisViaTm(allPokemon: PokemonSpecies[]): PokemonSpecies[] {
+		return allPokemon.filter((pokemon) => pokemon.moves.canLearnViaTm(this))
+	}
+
 	static matchNameOrType = (value: string) => (move: Move) =>
 		move.name.toLocaleLowerCase().includes(value.toLocaleLowerCase()) ||
 			move.type.includes(value.toLocaleLowerCase())
