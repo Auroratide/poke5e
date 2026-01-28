@@ -1,0 +1,2488 @@
+{
+  "items": [
+    {
+      "id": "absorb",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "acid",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "acid-armor",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "acid-spray",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "acrobatics",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "acupressure",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "aerial-ace",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "aeroblast",
+      "effect": "Entusiasma mucho al público si se utiliza en último lugar."
+    },
+    {
+      "id": "after-you",
+      "effect": "Provoca que el usuario se mueva más tarde en el siguiente turno."
+    },
+    {
+      "id": "agility",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "air-cutter",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "air-slash",
+      "effect": "Asusta mucho al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "ally-switch",
+      "effect": "Altera el orden en el que los Pokémon actúan el siguiente turno."
+    },
+    {
+      "id": "amnesia",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "ancient-power",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "aqua-jet",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "aqua-ring",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "aqua-tail",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "arm-thrust",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "aromatherapy",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "aromatic-mist",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "assist",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "assurance",
+      "effect": "Funciona mejor cuanto más tarde se utilice durante un turno."
+    },
+    {
+      "id": "astonish",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "attack-order",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "attract",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "aura-sphere",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "aurora-beam",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "autotomize",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "avalanche",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "baby-doll-eyes",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "barrage",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "barrier",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "baton-pass",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "beat-up",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "belch",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "belly-drum",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "bestow",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "bide",
+      "effect": "Provoca que el usuario se mueva más tarde en el siguiente turno."
+    },
+    {
+      "id": "bind",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "bite",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "blast-burn",
+      "effect": "Asusta a todos los demás Pokémon y el usuario no puede actuar el siguiente turno."
+    },
+    {
+      "id": "blaze-kick",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "blizzard",
+      "effect": "Asusta mucho a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "block",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "blue-flare",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "body-slam",
+      "effect": "Asusta mucho al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "bolt-strike",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "bone-club",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "bone-rush",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "bonemerang",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "boomburst",
+      "effect": "Asusta a todos los demás Pokémon y el usuario no puede actuar el siguiente turno."
+    },
+    {
+      "id": "bounce",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "brave-bird",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "brick-break",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "brine",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "bubble",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "bubble-beam",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "bug-bite",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "bug-buzz",
+      "effect": "Asusta mucho al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "bulk-up",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "bulldoze",
+      "effect": "Asusta a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "bullet-punch",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "bullet-seed",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "calm-mind",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "camouflage",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como todos los movimientos realizados antes que él en este turno."
+    },
+    {
+      "id": "captivate",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "celebrate",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "charge",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "charge-beam",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "charm",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "chatter",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "chip-away",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "circle-throw",
+      "effect": "Provoca que el usuario se mueva más tarde en el siguiente turno."
+    },
+    {
+      "id": "clamp",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "clear-smog",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "close-combat",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "coil",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "comet-punch",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "confide",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "confuse-ray",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "confusion",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "constrict",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "conversion",
+      "effect": "Funciona bien si es del mismo tipo que el movimiento utilizado por el último Pokémon."
+    },
+    {
+      "id": "conversion-2",
+      "effect": "Funciona bien si es del mismo tipo que el movimiento utilizado por el último Pokémon."
+    },
+    {
+      "id": "copycat",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "cosmic-power",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "cotton-guard",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "cotton-spore",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "counter",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "covet",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "crabhammer",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "crafty-shield",
+      "effect": "Entusiasma mucho al público si se utiliza en primer lugar."
+    },
+    {
+      "id": "cross-chop",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "cross-poison",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "crunch",
+      "effect": "Asusta mucho al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "crush-claw",
+      "effect": "Asusta mucho al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "crush-grip",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "curse",
+      "effect": "Provoca que el usuario se mueva más tarde en el siguiente turno."
+    },
+    {
+      "id": "cut",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "dark-pulse",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "dark-void",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "dazzling-gleam",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "defend-order",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "defense-curl",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "defog",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "destiny-bond",
+      "effect": "Un movimiento de gran atractivo, pero usarlo impide que el usuario actúe más."
+    },
+    {
+      "id": "detect",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "diamond-storm",
+      "effect": "Entusiasma mucho al público si se utiliza en último lugar."
+    },
+    {
+      "id": "dig",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "disable",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "disarming-voice",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "discharge",
+      "effect": "Asusta a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "dive",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "dizzy-punch",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "doom-desire",
+      "effect": "Entusiasma mucho al público si se utiliza en último lugar."
+    },
+    {
+      "id": "double-hit",
+      "effect": "Asusta mucho a los Pokémon que usaron un movimiento del mismo tipo."
+    },
+    {
+      "id": "double-kick",
+      "effect": "Asusta mucho a los Pokémon que usaron un movimiento del mismo tipo."
+    },
+    {
+      "id": "double-slap",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "double-team",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "double-edge",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "draco-meteor",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "dragon-ascent",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "dragon-breath",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "dragon-claw",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "dragon-dance",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "dragon-pulse",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "dragon-rage",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "dragon-rush",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "dragon-tail",
+      "effect": "Provoca que el usuario se mueva más tarde en el siguiente turno."
+    },
+    {
+      "id": "drain-punch",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "draining-kiss",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como todos los movimientos realizados antes que él en este turno."
+    },
+    {
+      "id": "dream-eater",
+      "effect": "Funciona bien si es del mismo tipo que el movimiento utilizado por el último Pokémon."
+    },
+    {
+      "id": "drill-peck",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "drill-run",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "dual-chop",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "dynamic-punch",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "earth-power",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "earthquake",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "echoed-voice",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "eerie-impulse",
+      "effect": "Asusta mucho a todos los demás Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "egg-bomb",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "electric-terrain",
+      "effect": "Entusiasma mucho al público si se utiliza en primer lugar."
+    },
+    {
+      "id": "electrify",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "electro-ball",
+      "effect": "Entusiasma mucho al público si se utiliza en primer lugar."
+    },
+    {
+      "id": "electroweb",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "embargo",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "ember",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "encore",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "endeavor",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "endure",
+      "effect": "Provoca que el usuario se mueva más tarde en el siguiente turno."
+    },
+    {
+      "id": "energy-ball",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "entrainment",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "eruption",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "explosion",
+      "effect": "Un movimiento de gran atractivo, pero usarlo impide que el usuario actúe más."
+    },
+    {
+      "id": "extrasensory",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "extreme-speed",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "facade",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "fairy-lock",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "fairy-wind",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "fake-out",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "fake-tears",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "false-swipe",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "feather-dance",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "feint",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "feint-attack",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "fell-stinger",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "fiery-dance",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "final-gambit",
+      "effect": "Un movimiento de gran atractivo, pero usarlo impide que el usuario actúe más."
+    },
+    {
+      "id": "fire-blast",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "fire-fang",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "fire-pledge",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "fire-punch",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "fire-spin",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "fissure",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "flail",
+      "effect": "Funciona mejor cuanto más tarde se utilice durante un turno."
+    },
+    {
+      "id": "flame-burst",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "flame-charge",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "flame-wheel",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "flamethrower",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "flare-blitz",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "flash",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "flash-cannon",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "flatter",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "fling",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "flower-shield",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "fly",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "flying-press",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "focus-blast",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "focus-energy",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "focus-punch",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "follow-me",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "force-palm",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "foresight",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "forests-curse",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "foul-play",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "freeze-shock",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "freeze-dry",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "frenzy-plant",
+      "effect": "Asusta a todos los demás Pokémon y el usuario no puede actuar el siguiente turno."
+    },
+    {
+      "id": "frost-breath",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "frustration",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "fury-attack",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "fury-cutter",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "fury-swipes",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "fusion-bolt",
+      "effect": "Funciona mejor cuanto más tarde se utilice durante un turno."
+    },
+    {
+      "id": "fusion-flare",
+      "effect": "Funciona mejor cuanto más tarde se utilice durante un turno."
+    },
+    {
+      "id": "future-sight",
+      "effect": "Funciona bien si es del mismo tipo que el movimiento utilizado por el último Pokémon."
+    },
+    {
+      "id": "gastro-acid",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "gear-grind",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "geomancy",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "giga-drain",
+      "effect": "Asusta mucho al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "giga-impact",
+      "effect": "Asusta a todos los demás Pokémon y el usuario no puede actuar el siguiente turno."
+    },
+    {
+      "id": "glaciate",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "glare",
+      "effect": "Asusta mucho a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "grass-knot",
+      "effect": "Funciona mejor cuanto más tarde se utilice durante un turno."
+    },
+    {
+      "id": "grass-pledge",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "grass-whistle",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "grassy-terrain",
+      "effect": "Entusiasma mucho al público si se utiliza en primer lugar."
+    },
+    {
+      "id": "gravity",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "growl",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "growth",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "grudge",
+      "effect": "Asusta a todos los demás Pokémon y el usuario no puede actuar el siguiente turno."
+    },
+    {
+      "id": "guard-split",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como todos los movimientos realizados antes que él en este turno."
+    },
+    {
+      "id": "guard-swap",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como todos los movimientos realizados antes que él en este turno."
+    },
+    {
+      "id": "guillotine",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "gunk-shot",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "gust",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "gyro-ball",
+      "effect": "Funciona mejor cuanto más tarde se utilice durante un turno."
+    },
+    {
+      "id": "hail",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "hammer-arm",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "happy-hour",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "harden",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "haze",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "head-charge",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "head-smash",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "headbutt",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "heal-bell",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "heal-block",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "heal-order",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "heal-pulse",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "healing-wish",
+      "effect": "Un movimiento de gran atractivo, pero usarlo impide que el usuario actúe más."
+    },
+    {
+      "id": "heart-stamp",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "heart-swap",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como todos los movimientos realizados antes que él en este turno."
+    },
+    {
+      "id": "heat-crash",
+      "effect": "Entusiasma mucho al público si se utiliza en último lugar."
+    },
+    {
+      "id": "heat-wave",
+      "effect": "Asusta a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "heavy-slam",
+      "effect": "Entusiasma mucho al público si se utiliza en último lugar."
+    },
+    {
+      "id": "helping-hand",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "hex",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "hidden-power",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "high-jump-kick",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "hold-back",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "hold-hands",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "hone-claws",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "horn-attack",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "horn-drill",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "horn-leech",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "howl",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "hurricane",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "hydro-cannon",
+      "effect": "Asusta a todos los demás Pokémon y el usuario no puede actuar el siguiente turno."
+    },
+    {
+      "id": "hydro-pump",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "hyper-beam",
+      "effect": "Asusta a todos los demás Pokémon y el usuario no puede actuar el siguiente turno."
+    },
+    {
+      "id": "hyper-fang",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "hyper-voice",
+      "effect": "Asusta a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "hyperspace-fury",
+      "effect": "Entusiasma mucho al público si se utiliza en primer lugar."
+    },
+    {
+      "id": "hyperspace-hole",
+      "effect": "Entusiasma mucho al público si se utiliza en primer lugar."
+    },
+    {
+      "id": "hypnosis",
+      "effect": "Asusta mucho a todos los demás Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "ice-ball",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "ice-beam",
+      "effect": "Asusta mucho al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "ice-burn",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "ice-fang",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "ice-punch",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "ice-shard",
+      "effect": "Provoca que el usuario actúe más temprano en su siguiente turno."
+    },
+    {
+      "id": "icicle-crash",
+      "effect": "Entusiasma mucho al público si se utiliza en último lugar."
+    },
+    {
+      "id": "icicle-spear",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "icy-wind",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "imprison",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "incinerate",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "inferno",
+      "effect": "Asusta mucho al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "infestation",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "ingrain",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "ion-deluge",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "iron-defense",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "iron-head",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "iron-tail",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "judgment",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "jump-kick",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "karate-chop",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "kinesis",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "kings-shield",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "knock-off",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "lands-wrath",
+      "effect": "Asusta a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "last-resort",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "lava-plume",
+      "effect": "Asusta a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "leaf-blade",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "leaf-storm",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "leaf-tornado",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "leech-life",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "leech-seed",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "leer",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "lick",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "light-of-ruin",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "light-screen",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "lock-on",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "lovely-kiss",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "low-kick",
+      "effect": "Funciona mejor cuanto más tarde se utilice durante un turno."
+    },
+    {
+      "id": "low-sweep",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "lucky-chant",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "lunar-dance",
+      "effect": "Un movimiento de gran atractivo, pero usarlo impide que el usuario actúe más."
+    },
+    {
+      "id": "luster-purge",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "mach-punch",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "magic-coat",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "magic-room",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "magical-leaf",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "magma-storm",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "magnet-bomb",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "magnet-rise",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "magnetic-flux",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "magnitude",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "mat-block",
+      "effect": "Asusta mucho a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "me-first",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "mean-look",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "meditate",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "mega-drain",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "mega-kick",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "mega-punch",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "megahorn",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "memento",
+      "effect": "Un movimiento de gran atractivo, pero usarlo impide que el usuario actúe más."
+    },
+    {
+      "id": "metal-burst",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "metal-claw",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "metal-sound",
+      "effect": "Asusta mucho a todos los demás Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "meteor-mash",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "metronome",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "milk-drink",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "mimic",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "mind-reader",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "minimize",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "miracle-eye",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "mirror-coat",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "mirror-move",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "mirror-shot",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "mist",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "mist-ball",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "misty-terrain",
+      "effect": "Entusiasma mucho al público si se utiliza en primer lugar."
+    },
+    {
+      "id": "moonblast",
+      "effect": "Asusta mucho al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "moonlight",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "morning-sun",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "mud-bomb",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "mud-shot",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "mud-sport",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "mud-slap",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "muddy-water",
+      "effect": "Asusta a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "mystical-fire",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "nasty-plot",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "natural-gift",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "nature-power",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "needle-arm",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "night-daze",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "night-shade",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "night-slash",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "nightmare",
+      "effect": "Asusta mucho a todos los demás Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "noble-roar",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "nuzzle",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "oblivion-wing",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como todos los movimientos realizados antes que él en este turno."
+    },
+    {
+      "id": "octazooka",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "odor-sleuth",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "ominous-wind",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "origin-pulse",
+      "effect": "Entusiasma mucho al público si se utiliza en primer lugar."
+    },
+    {
+      "id": "outrage",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "overheat",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "pain-split",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como todos los movimientos realizados antes que él en este turno."
+    },
+    {
+      "id": "parabolic-charge",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como todos los movimientos realizados antes que él en este turno."
+    },
+    {
+      "id": "parting-shot",
+      "effect": "Entusiasma mucho al público si se utiliza en último lugar."
+    },
+    {
+      "id": "pay-day",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "payback",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "peck",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "perish-song",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "petal-blizzard",
+      "effect": "Asusta a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "petal-dance",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "phantom-force",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "pin-missile",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "play-nice",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "play-rough",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "pluck",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "poison-fang",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "poison-gas",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "poison-jab",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "poison-powder",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "poison-sting",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "poison-tail",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "pound",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "powder",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "powder-snow",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "power-gem",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "power-split",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como todos los movimientos realizados antes que él en este turno."
+    },
+    {
+      "id": "power-swap",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como todos los movimientos realizados antes que él en este turno."
+    },
+    {
+      "id": "power-trick",
+      "effect": "Funciona bien si es del mismo tipo que el movimiento utilizado por el último Pokémon."
+    },
+    {
+      "id": "power-whip",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "power-up-punch",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "precipice-blades",
+      "effect": "Entusiasma mucho al público si se utiliza en último lugar."
+    },
+    {
+      "id": "present",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "protect",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "psybeam",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "psych-up",
+      "effect": "Funciona bien si es del mismo tipo que el movimiento utilizado por el último Pokémon."
+    },
+    {
+      "id": "psychic",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "psycho-boost",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "psycho-cut",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "psycho-shift",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "psyshock",
+      "effect": "Asusta mucho al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "psystrike",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "psywave",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "punishment",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "pursuit",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "quash",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "quick-attack",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "quick-guard",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "quiver-dance",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "rage",
+      "effect": "Asusta mucho a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "rage-powder",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "rain-dance",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "rapid-spin",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "razor-leaf",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "razor-shell",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "razor-wind",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "recover",
+      "effect": "Funciona bien si es del mismo tipo que el movimiento utilizado por el último Pokémon."
+    },
+    {
+      "id": "recycle",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "reflect",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "reflect-type",
+      "effect": "Funciona bien si es del mismo tipo que el movimiento utilizado por el último Pokémon."
+    },
+    {
+      "id": "refresh",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "relic-song",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "rest",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "retaliate",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "return",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "revenge",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "reversal",
+      "effect": "Funciona mejor cuanto más tarde se utilice durante un turno."
+    },
+    {
+      "id": "roar",
+      "effect": "Provoca que el usuario se mueva más tarde en el siguiente turno."
+    },
+    {
+      "id": "roar-of-time",
+      "effect": "Asusta a todos los demás Pokémon y el usuario no puede actuar el siguiente turno."
+    },
+    {
+      "id": "rock-blast",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "rock-climb",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "rock-polish",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "rock-slide",
+      "effect": "Asusta a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "rock-smash",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "rock-throw",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "rock-tomb",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "rock-wrecker",
+      "effect": "Asusta a todos los demás Pokémon y el usuario no puede actuar el siguiente turno."
+    },
+    {
+      "id": "role-play",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "rolling-kick",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "rollout",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "roost",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "rototiller",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "round",
+      "effect": "Funciona bien si es del mismo tipo que el movimiento utilizado por el último Pokémon."
+    },
+    {
+      "id": "sacred-fire",
+      "effect": "Entusiasma mucho al público si se utiliza en último lugar."
+    },
+    {
+      "id": "sacred-sword",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "safeguard",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "sand-attack",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "sand-tomb",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "sandstorm",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "scald",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "scary-face",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "scratch",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "screech",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "searing-shot",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "secret-power",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "secret-sword",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "seed-bomb",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "seed-flare",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "seismic-toss",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "self-destruct",
+      "effect": "Un movimiento de gran atractivo, pero usarlo impide que el usuario actúe más."
+    },
+    {
+      "id": "shadow-ball",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "shadow-claw",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "shadow-force",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "shadow-punch",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "shadow-sneak",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "sharpen",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "sheer-cold",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "shell-smash",
+      "effect": "Entusiasma mucho al público si se utiliza en último lugar."
+    },
+    {
+      "id": "shift-gear",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "shock-wave",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "signal-beam",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "silver-wind",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "simple-beam",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "sing",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "sketch",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "skill-swap",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "skull-bash",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "sky-attack",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "sky-drop",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "sky-uppercut",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "slack-off",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "slam",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "slash",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "sleep-powder",
+      "effect": "Asusta mucho a todos los demás Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "sleep-talk",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "sludge",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "sludge-bomb",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "sludge-wave",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "smack-down",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "smelling-salts",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "smog",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "smokescreen",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "snarl",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "snatch",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "snore",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "soak",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "soft-boiled",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "solar-beam",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "sonic-boom",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "spacial-rend",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "spark",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "spider-web",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "spike-cannon",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "spikes",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "spiky-shield",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "spit-up",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "spite",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "splash",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "spore",
+      "effect": "Asusta mucho a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "stealth-rock",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "steam-eruption",
+      "effect": "Entusiasma mucho al público si se utiliza en último lugar."
+    },
+    {
+      "id": "steamroller",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "steel-wing",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "sticky-web",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "stockpile",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "stomp",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "stone-edge",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "stored-power",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "storm-throw",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "strength",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "string-shot",
+      "effect": "Asusta al último Pokémon que haya actuado antes que el usuario."
+    },
+    {
+      "id": "struggle",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "struggle-bug",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "stun-spore",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "submission",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "substitute",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "sucker-punch",
+      "effect": "Entusiasma mucho al público si se utiliza en primer lugar."
+    },
+    {
+      "id": "sunny-day",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "super-fang",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "superpower",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "supersonic",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "surf",
+      "effect": "Asusta a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "swagger",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "swallow",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "sweet-kiss",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "sweet-scent",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "swift",
+      "effect": "Funciona de maravilla si el usuario es el primero en actuar este turno."
+    },
+    {
+      "id": "switcheroo",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "swords-dance",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "synchronoise",
+      "effect": "Funciona bien si es del mismo tipo que el movimiento utilizado por el último Pokémon."
+    },
+    {
+      "id": "synthesis",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "tackle",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "tail-glow",
+      "effect": "Motiva al Pokémon y ayuda a evitar que se ponga nervioso."
+    },
+    {
+      "id": "tail-slap",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "tail-whip",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "tailwind",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "take-down",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "taunt",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "techno-blast",
+      "effect": "Funciona bien si el usuario está motivado."
+    },
+    {
+      "id": "teeter-dance",
+      "effect": "Asusta a todos los demás Pokémon y el usuario no puede actuar el siguiente turno."
+    },
+    {
+      "id": "telekinesis",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "teleport",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "thief",
+      "effect": "Exhibe el atractivo del Pokémon tan bien como el movimiento utilizado justo antes."
+    },
+    {
+      "id": "thousand-arrows",
+      "effect": "Asusta mucho a los Pokémon que usaron un movimiento del mismo tipo."
+    },
+    {
+      "id": "thousand-waves",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "thrash",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "thunder",
+      "effect": "Funciona mejor cuanto más entusiasmado esté el público."
+    },
+    {
+      "id": "thunder-fang",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "thunder-punch",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "thunder-shock",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "thunder-wave",
+      "effect": "Asusta mucho a todos los Pokémon que hayan actuado antes que el usuario."
+    },
+    {
+      "id": "thunderbolt",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "tickle",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "topsy-turvy",
+      "effect": "Altera el orden en el que los Pokémon actúan el siguiente turno."
+    },
+    {
+      "id": "torment",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "toxic",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "toxic-spikes",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "transform",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "tri-attack",
+      "effect": "La efectividad varía dependiendo de cuándo se utilice."
+    },
+    {
+      "id": "trick",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "trick-room",
+      "effect": "Altera el orden en el que los Pokémon actúan el siguiente turno."
+    },
+    {
+      "id": "trick-or-treat",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "triple-kick",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "trump-card",
+      "effect": "Funciona mejor cuanto más tarde se utilice durante un turno."
+    },
+    {
+      "id": "twineedle",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "twister",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "u-turn",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "uproar",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "v-create",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "vacuum-wave",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "venom-drench",
+      "effect": "Baja la energía de cualquier Pokémon que ya haya usado un movimiento este turno."
+    },
+    {
+      "id": "venoshock",
+      "effect": "Funciona bien si es del mismo tipo que el movimiento utilizado por el último Pokémon."
+    },
+    {
+      "id": "vice-grip",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "vine-whip",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "vital-throw",
+      "effect": "Funciona de maravilla si el usuario actúa en último lugar este turno."
+    },
+    {
+      "id": "volt-switch",
+      "effect": "Hace que el público se aburra rápidamente cuando un movimiento de exhibición tiene poco efecto."
+    },
+    {
+      "id": "volt-tackle",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "wake-up-slap",
+      "effect": "Se ve afectado por el éxito que haya tenido el movimiento del Pokémon anterior."
+    },
+    {
+      "id": "water-gun",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "water-pledge",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "water-pulse",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "water-shuriken",
+      "effect": "Provoca que el usuario se mueva antes en el siguiente turno."
+    },
+    {
+      "id": "water-sport",
+      "effect": "Entusiasma al público en cualquier tipo de concurso."
+    },
+    {
+      "id": "water-spout",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "waterfall",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "weather-ball",
+      "effect": "Un movimiento atractivo que puede usarse repetidamente sin aburrir al público."
+    },
+    {
+      "id": "whirlpool",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "whirlwind",
+      "effect": "Provoca que el usuario se mueva más tarde en el siguiente turno."
+    },
+    {
+      "id": "wide-guard",
+      "effect": "Evita que el usuario se asuste hasta que termine el turno."
+    },
+    {
+      "id": "wild-charge",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "will-o-wisp",
+      "effect": "Hace que el público espere poco de los demás concursantes."
+    },
+    {
+      "id": "wing-attack",
+      "effect": "Un movimiento bastante atractivo."
+    },
+    {
+      "id": "wish",
+      "effect": "Entusiasma mucho al público si se utiliza en último lugar."
+    },
+    {
+      "id": "withdraw",
+      "effect": "Evita que el usuario se asuste una vez durante este turno."
+    },
+    {
+      "id": "wonder-room",
+      "effect": "Altera el orden en el que los Pokémon actúan el siguiente turno."
+    },
+    {
+      "id": "wood-hammer",
+      "effect": "Un movimiento muy atractivo, pero tras usarlo, el usuario se asusta con más facilidad."
+    },
+    {
+      "id": "work-up",
+      "effect": "Entusiasma mucho al público si se utiliza en primer lugar."
+    },
+    {
+      "id": "worry-seed",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "wrap",
+      "effect": "Evita temporalmente que el público se entusiasme más."
+    },
+    {
+      "id": "wring-out",
+      "effect": "Asusta mucho a los Pokémon sobre los que el público tiene altas expectativas."
+    },
+    {
+      "id": "x-scissor",
+      "effect": "Asusta mucho a los Pokémon que han usado un movimiento del mismo tipo."
+    },
+    {
+      "id": "yawn",
+      "effect": "Pone nerviosos a los Pokémon restantes."
+    },
+    {
+      "id": "zap-cannon",
+      "effect": "Asusta mucho a todos los Pokémon que exhibieron su atractivo con éxito."
+    },
+    {
+      "id": "zen-headbutt",
+      "effect": "Un movimiento bastante atractivo."
+    }
+  ]
+}
