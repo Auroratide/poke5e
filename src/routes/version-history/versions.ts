@@ -12,6 +12,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.9.6",
+		description: [
+			"Added the following moves for playtesting from Generations 8 and 9: Clangorous Soul, Snap Trap, Steel Beam, Scale Shot, Meteor Beam, Misty Explosion, Grassy Glide, Burning Jealousy, Lash Out, Poltergeist, Corrosive Gas, Coaching, Triple Axel, Scorching Sands, Power Shift, Mystical Power, Bleakwind Storm, Wildbolt Storm, Sandsear Storm, Lunar Blessing, Take Heart, Chilly Reception, Trailblaze, Chilling Water, Hard Press, Alluring Voice, Temper Flare, Supercell Slam, Psychic Noise, Upper Hand.",
+			"Wicked Blow and Surging Strikes: Removed the -5 penalty on to-hit roll.",
+			"Bugfix: TM pages now show only the pokémon who learn the move as a TM.",
+		],
+	}, {
 		name: "v1.9.5",
 		description: [
 			"Changed how pokémon forms are presented in stat blocks. Instead of being \"abilities\", the rules for how a pokémon's form changes is its own section. This helps clarify in the pokémon editor that pokémon may both have an ability and be able to change forms.",
