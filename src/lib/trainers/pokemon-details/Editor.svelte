@@ -78,7 +78,7 @@
 				level: new Level(level),
 				ac,
 				hp: {
-					current: pokemon.hp.current + (maxHp - pokemon.hp.max),
+					current: Math.min(pokemon.hp.current + Math.max(0, maxHp - pokemon.hp.max), maxHp),
 					max: maxHp,
 				},
 				hitDice: {
