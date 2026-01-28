@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { TmsStore as allTms } from "../store"
 	import { Url } from "$lib/site/url"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	export let tms: number[]
 
@@ -10,7 +11,9 @@
 {#if $allTms !== undefined}
 	<ul>
 		{#each tms as tm}
-			<li><a href="{Url.tms(tm.toString())}">{name(tm)}</a></li>
+			{#if tm <= 101 || FeatureToggles.MoreTms()}
+				<li><a href="{Url.tms(tm.toString())}">{name(tm)}</a></li>
+			{/if}
 		{/each}
 	</ul>
 {:else}

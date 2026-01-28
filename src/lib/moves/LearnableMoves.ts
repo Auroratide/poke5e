@@ -1,5 +1,6 @@
 import type { Level } from "$lib/dnd/level"
 import type { PokemonSpecies } from "$lib/poke5e/species"
+import { FeatureToggles } from "$lib/site/FeatureToggles"
 import type { Move } from "./Move"
 
 export type MoveGroup = {
@@ -42,6 +43,7 @@ export class LearnableMoves {
 		).toSorted(alphabetize)
 
 		const tmMoves = species.moves.data.tm
+			?.filter((it) => it <= 101 || FeatureToggles.MoreTms())
 			?.map((it) => tms.find((m) => m.tm.id === it))
 			.map((it) => it?.id)
 			.filter((it) => it != null)
