@@ -21126,7 +21126,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You strike the target three times in a single fluid motion. Make three melee attacks against a single target, each with -5 to your attack roll. On a hit, you deal 1d6 + 5 + MOVE water damage."
+				"You strike the target three times in a single fluid motion. Make three melee attacks against a single target. On each hit, you deal 1d6 + 5 + MOVE water damage."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 1d8 at level 5, 1d12 at level 10, and 3d6 at level 17.",
 			"attack": {
@@ -23916,7 +23916,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You strike the target with a single, fierce blow. Make a melee attack with -5 to your attack roll. On a hit, you deal 1d12 + 10 + MOVE dark damage."
+				"You strike the target with a single, fierce blow. Make a melee attack. On a hit, you deal 1d12 + 10 + MOVE dark damage."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
 			"attack": {

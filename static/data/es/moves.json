@@ -5868,7 +5868,7 @@
 			"id": "surging-strikes",
 			"name": "Azote Torrencial",
 			"description": [
-				"Golpeas al objetivo tres veces en un único movimiento fluido. Realiza tres ataques cuerpo a cuerpo contra un único objetivo, cada uno con un penalizador de -5 a tu tirada de ataque. Si impactas, infliges 1d6 + 5 + MOV de daño de tipo Agua."
+				"Golpeas al objetivo tres veces en un único movimiento fluido. Realiza tres ataques cuerpo a cuerpo contra un único objetivo. Si impactas, infliges 1d6 + 5 + MOV de daño de tipo Agua."
 			],
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 1d8 al nivel 5, 1d12 al nivel 10 y 3d6 al nivel 17."
 		},
@@ -6608,7 +6608,7 @@
 			"id": "wicked-blow",
 			"name": "Golpe Oscuro",
 			"description": [
-				"Golpeas al objetivo con un único y feroz impacto. Realiza un ataque cuerpo a cuerpo contra un objetivo con un penalizador de -5 a tu tirada de ataque, infligiendo 1d12 + 10 + MOV de daño de tipo Siniestro si impactas."
+				"Golpeas al objetivo con un único y feroz impacto. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo 1d12 + 10 + MOV de daño de tipo Siniestro si impactas."
 			],
 			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d8 al nivel 5, 2d12 al nivel 10 y 6d6 al nivel 17."
 		},
