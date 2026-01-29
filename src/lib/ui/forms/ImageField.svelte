@@ -32,7 +32,6 @@
 
 	$: srcToShow = currentValue?.type === "remove" ? "" : (previewSrc ? previewSrc : previousValue)
 	$: canRemove = (previousValue != null || currentValue != null) && currentValue?.type !== "remove"
-	$: isDragging = false
 
 	const prettyPrintBytes = (bytes: number) => {
 		if (bytes < 1024) {
@@ -44,7 +43,17 @@
 		}
 	}
 
+	let prevError = error
+	let errorTimeoutId = -1
 	const loadFile = (file: File) => {
+		window.clearTimeout(errorTimeoutId)
+		if (!file.type.startsWith("image")) {
+			prevError = error
+			error = "Must be an image"
+			errorTimeoutId = window.setTimeout(() => error = prevError, 4000)
+			return
+		}
+
 		if (previewSrc) URL.revokeObjectURL(previewSrc)
 		if (file) previewSrc = URL.createObjectURL(file)
 		else previewSrc = ""
@@ -66,14 +75,15 @@
 	const onChange = (e: Event) => {
 		const input = e.target as HTMLInputElement
 		const [file] = input.files
-		loadFile(file);
+		loadFile(file)
 	}
 
+	let isDragging = false
 	const onDrop = (e: DragEvent) => {
 		e.preventDefault()
 		if (!e.dataTransfer) return
 		const [file] = e.dataTransfer.files
-		loadFile(file);
+		loadFile(file)
 		isDragging = false
 	}
 
@@ -88,6 +98,7 @@
 	}
 
 	const onRemove = () => {
+		window.clearTimeout(errorTimeoutId)
 		currentValue = {
 			type: "remove",
 		}
@@ -100,6 +111,7 @@
 	}
 
 	onDestroy(() => {
+		window.clearTimeout(errorTimeoutId)
 		if (previewSrc) URL.revokeObjectURL(previewSrc)
 	})
 </script>
@@ -107,19 +119,17 @@
 <div class="image-uploader-container">
 	<div class="image-uploader">
 		<div class="placeholder"></div>
-		{#if isDragging}
-			<div class="text">
+		<div class="text">
+			<label for="{id}">{label}</label>
+			{#if isDragging}
 				<span>Drop it here!</span>
-			</div>
-		{:else}
-			<div class="text">
-				<label for="{id}">{label}</label>
+			{:else}
 				<span>Select File</span>
 				{#if maxbytes}
 					<span class="smaller">(Max {prettyPrintBytes(maxbytes)})</span>
 				{/if}
-			</div>
-		{/if}
+			{/if}
+		</div>
 		<input bind:this={inputElem} {id} name="{kebabName}" type="file" accept="image/*" on:change={onChange} on:drop={onDrop} on:dragenter={onDragEnter} on:dragleave={onDragLeave} {disabled} />
 		{#if srcToShow && !isDragging}
 			<img src="{srcToShow}" alt="Upload Preview" />
