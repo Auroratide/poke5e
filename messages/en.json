@@ -31,6 +31,9 @@
 	"fakemon": {
 		"title": "Fakémon"
 	},
+	"encounterTool": {
+		"title": "Encounter Tool"
+	},
 	"settings": {
 		"title": "Settings",
 		"language": "Language"

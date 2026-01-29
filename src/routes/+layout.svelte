@@ -129,6 +129,12 @@
 		color: "pink",
 		icon: GreatballIcon,
 	}, {
+		id: "encounter-tool",
+		href: Url.encounterTool(),
+		name: m["encounterTool.title"](),
+		color: "grey",
+		icon: PokeballIcon,
+	}, {
 		id: "settings",
 		href: Url.settings(),
 		name: m["settings.title"](),
