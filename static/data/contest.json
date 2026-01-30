@@ -75,7 +75,7 @@
       "contest": "cool",
       "appeal": 4,
       "jam": 0,
-      "effect": "Quite an appealing move. d6 Effect 1 +1 to attack rolls 2 +2 to damage rolls 3 +10 temporary HP d6 Effect 4 +1 to saving throws 5 Critical Hit range +1 6 +1 to Armor Class"
+      "effect": "Quite an appealing move."
     },
     {
       "id": "air-slash",
@@ -2490,7 +2490,7 @@
       "contest": "clever",
       "appeal": 4,
       "jam": 0,
-      "effect": "Quite an appealing move. Type Berry Normal Chilan Fire Cherri, Occa Water Chesto, Passho Electric Pecha, Waccan Grass Rawst, Rindo Ice Aspear, Yache Fighting Leppa, Chople Poison Oran, Kebia Ground Persim, Shucca Type Berry Flying Lum, Coba Psychic Sitrus, Payapa Bug Tanga Rock Charti Ghost Kasib Dragon Haban Dark Colbur Steel Babiri, Razz Fairy Roseli"
+      "effect": "Quite an appealing move."
     },
     {
       "id": "night-daze",
