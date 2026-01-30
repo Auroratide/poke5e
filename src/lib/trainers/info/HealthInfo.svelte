@@ -8,7 +8,6 @@
 </script>
 
 <script lang="ts">
-	import type { Resource } from "../types"
 	import { createEventDispatcher } from "svelte"
 	import { VisuallyHidden, ResourceBar } from "$lib/ui/elements"
 	import {
@@ -23,6 +22,7 @@
 	import { HelpIcon } from "$lib/ui/icons"
 	import type { Level } from "$lib/dnd/level"
 	import type { HitDice } from "$lib/dnd/hit-dice"
+	import type { Resource } from "$lib/poke5e/resource"
 
 	const dispatch = createEventDispatcher()
 
