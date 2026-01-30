@@ -27,3 +27,4 @@ jobs:
         with:
           name: screenshots
           path: test/smoke/screenshots
+          retention-days: 1
