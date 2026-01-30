@@ -22,7 +22,7 @@
 	<TypeTag slot="header-extra" type={[move.type]}></TypeTag>
 	<section class="info">
 		{#if move.beta}
-			<p class="beta"><Tag>New!</Tag><span>This move being playtested. If you have <a href="{Url.feedback()}">feedback</a>, let us know!</span></p>
+			<p class="beta"><Tag>New!</Tag><span>This move is being playtested. If you have <a href="{Url.feedback()}">feedback</a>, let us know!</span></p>
 		{/if}
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<FlatDl>
