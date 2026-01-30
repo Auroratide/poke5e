@@ -2,6 +2,7 @@ import { get } from "svelte/store"
 import { PokemonSpecies, SpeciesStore } from "$lib/poke5e/species"
 import type { PageLoad } from "./$types"
 import { Url } from "$lib/site/url"
+import { error } from "@sveltejs/kit"
 
 export const load: PageLoad = async ({ fetch }) => {
 	const cached = get(SpeciesStore.canonList())
@@ -17,5 +18,14 @@ export const load: PageLoad = async ({ fetch }) => {
 		))
 		.then((pokemon: PokemonSpecies[]) => pokemon.filter((it) => !it.wasNonCanonNonFakemon()))
 
-	return { pokemonList: pokemon }
+	const themes = await fetch(Url.api.themes()).then(async res => {
+		if (res.status === 404)
+			error(404)
+		else
+			return {
+				item: await res.json(),
+			}
+	})
+
+	return { pokemonList: pokemon, themes }
 }
