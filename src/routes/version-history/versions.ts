@@ -12,6 +12,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.9.7",
+		description: [
+			"Image uploading now allows drag & drop from computer's files.",
+			"Bugfix: Reducing Max HP/Hit Dice on Pokémon and Trainers does not also decrease their current HP/Hit Dice.",
+			"Bugfix: Some typos in move contest descriptions.",
+		],
+	}, {
 		name: "v1.9.6",
 		description: [
 			"Added the following moves for playtesting from Generations 8 and 9: Clangorous Soul, Snap Trap, Steel Beam, Scale Shot, Meteor Beam, Misty Explosion, Grassy Glide, Burning Jealousy, Lash Out, Poltergeist, Corrosive Gas, Coaching, Triple Axel, Scorching Sands, Power Shift, Mystical Power, Bleakwind Storm, Wildbolt Storm, Sandsear Storm, Lunar Blessing, Take Heart, Chilly Reception, Trailblaze, Chilling Water, Hard Press, Alluring Voice, Temper Flare, Supercell Slam, Psychic Noise, Upper Hand.",
