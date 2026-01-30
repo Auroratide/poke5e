@@ -26,13 +26,7 @@
 		"title": "Trainers"
 	},
 	"reference": {
-		"title": "Reference",
-		"trainerClass": "Trainer Class",
-		"trainerPaths": "Trainer Paths",
-		"catchingPokemon": "Catching Pokémon",
-		"pokemonLeveling": "Pokémon Leveling",
-		"combat": "Combat",
-		"faintingRestingHealing": "Fainting, Resting, and Healing"
+		"title": "Reference"
 	},
 	"fakemon": {
 		"title": "Fakémon"
