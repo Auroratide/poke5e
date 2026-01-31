@@ -135,6 +135,14 @@
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 2d12 al nivel 10 y 6d6 al nivel 17."
 		},
 		{
+			"id": "alluring-voice",
+			"name": "Canto Encantador",
+			"description": [
+				"Utilizas tu voz angelical para confundir a una criatura. Realiza un ataque a distancia contra un objetivo, infligiendo 2d6 + MOV de daño de tipo Hada si impactas. Además, si el ataque impacta, el objetivo debe realizar una tirada de salvación de Carisma contra tu CD de Movimiento o quedará confundido."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d8 al nivel 5, 4d6 al nivel 10 y 6d6 al nivel 17."
+		},
+		{
 			"id": "ally-switch",
 			"name": "Cambio de Banda",
 			"description": [
@@ -504,6 +512,15 @@
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 4d6 al nivel 10 y 6d6 al nivel 17."
 		},
 		{
+			"id": "bleakwind-storm",
+			"name": "Vendaval Gélido",
+			"description": [
+				"Creas una tormenta con vientos salvajemente fríos que hacen temblar tanto el cuerpo como el espíritu en un cubo de 40 pies centrado en un punto dentro del alcance. Cada criatura enemiga en el área debe realizar una tirada de salvación de Constitución contra tu CD de Movimiento, recibiendo 4d4 + MOV de daño de tipo Volador si falla, o la mitad si la supera. El área se considera terreno difícil para las criaturas enemigas.",
+				"Una criatura también debe realizar esa salvación si entra en el área o termina su turno en ella. Solo realiza esta salvación una vez por turno. Cuando se utiliza bajo lluvia, las criaturas tienen desventaja en la tirada de salvación."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d12 al nivel 5, 4d8 al nivel 10 y 8d6 al nivel 17."
+		},
+		{
 			"id": "blizzard",
 			"name": "Ventisca",
 			"description": [
@@ -735,6 +752,15 @@
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 3d8 al nivel 10 y 4d8 al nivel 17."
 		},
 		{
+			"id": "burning-jealousy",
+			"name": "Envidia Ardiente",
+			"description": [
+				"Atacas a todas las criaturas en un cono de 30 pies con energía de celosía. Todas las criaturas en el área deben realizar una tirada de salvación de Destreza contra tu CD de Movimiento, recibiendo 1d12 + MOV de daño de tipo Fuego y quedando quemadas si fallan la tirada, o recibiendo solo la mitad del daño si la superan.",
+				"Las criaturas que actualmente se benefician de un aumento a su AC, Fuerza, Destreza, Constitución, Inteligencia, Sabiduría o Carisma tienen desventaja en la tirada."
+			],
+			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 2d12 al nivel 10 y 6d6 al nivel 17."
+		},
+		{
 			"id": "calm-mind",
 			"name": "Paz Mental",
 			"description": [
@@ -795,6 +821,21 @@
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 5d4 al nivel 10 y 4d8 al nivel 17."
 		},
 		{
+			"id": "chilling-water",
+			"name": "Agua Fría",
+			"description": [
+				"Rocías a una criatura con agua tan fría que drena el poder del objetivo. Realiza un ataque a distancia contra un objetivo, infligiendo 1d10 + MOV de daño de tipo Agua si impactas. Además, si el ataque impacta, el objetivo debe superar una tirada de salvación de Sabiduría contra tu CD de Movimiento o tendrá desventaja en cualquier ataque que realice en su próximo turno."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d8 al nivel 5, 5d4 al nivel 10 y 4d8 al nivel 17."
+		},
+		{
+			"id": "chilly-reception",
+			"name": "Fría Acogida",
+			"description": [
+				"Cuentas un chiste tan rematadamente malo que hiela la sangre. El clima cambia a nieve durante 5 rondas. Después de activar este movimiento, el entrenador debe intercambiar al usuario como una acción gratuita (¡Antes de que lo echen a patadas entre abucheos!)."
+			]
+		},
+		{
 			"id": "chip-away",
 			"name": "Guardia Baja",
 			"description": [
@@ -849,6 +890,14 @@
 				"Te acercas para asestar un golpe devastador, sacrificando tus defensas. Realiza un ataque cuerpo a cuerpo contra una criatura. Si impactas, inflige al objetivo 2d10 + MOV de daño de tipo Lucha. Tras activar este movimiento, el objetivo tiene ventaja en cualquier ataque que realice contra ti antes del comienzo de tu siguiente turno."
 			],
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 3d8 al nivel 5, 4d10 al nivel 10 y 7d8 al nivel 17."
+		},
+		{
+			"id": "coaching",
+			"name": "Motivación",
+			"description": [
+				"Instruyes a un aliado sobre cómo maximizar su ofensiva y defensiva. Elige a un aliado que no seas tú mismo, que se encuentre a 60 pies o menos y que pueda oírte. Mientras dure el efecto, ese aliado puede añadir +1 a sus tiradas de ataque y +1 a su CA."
+			],
+			"higherLevels": "El bonificador de este movimiento pasa a ser +2 al nivel 10."
 		},
 		{
 			"id": "coil",
@@ -963,6 +1012,14 @@
 				"Lanzas un láser concentrado que abrasa un patrón en forma de \"Z\" sobre un objetivo. Realiza un ataque a distancia contra una criatura. Si impactas, el objetivo recibe 4d4 + MOV de daño de tipo Dragón. Además, el objetivo debe superar una tirada de salvación de Constitución contra tu CD de Movimiento o perderá todos los efectos de sus habilidades hasta que sea retirado por su entrenador."
 			],
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d12 al nivel 5, 4d8 al nivel 10 y 8d6 al nivel 17."
+		},
+		{
+			"id": "corrosive-gas",
+			"name": "Gas Corrosivo",
+			"description": [
+				"Te rodeas a ti mismo y a todo lo que se encuentre en un radio de 20 pies de un gas altamente ácido. El gas dura mientras se mantenga el efecto o hasta que un viento fuerte (como el creado por Tornado) lo disperse. Su área se considera muy oscura.",
+				"Todas las bayas equipadas en el área se derriten instantáneamente. Cada criatura que no sea de tipo Veneno y que comience su turno dentro de la esfera debe superar una tirada de salvación de Constitución contra tu CD de Movimiento. Si falla, hasta el final del turno actual, la criatura tiene desventaja en los ataques y en las pruebas de característica. Además, si el RE de la criatura es inferior a 15, no podrá beneficiarse de los objetos equipados."
+			]
 		},
 		{
 			"id": "comeuppance",
@@ -2329,6 +2386,15 @@
 			]
 		},
 		{
+			"id": "grassy-glide",
+			"name": "Fitoimpulso",
+			"description": [
+				"Te deslizas por el suelo para golpear a un objetivo. Realiza un ataque cuerpo a cuerpo, infligiendo 1d8 + MOV de daño de tipo Planta si impactas.",
+				"Si estás sobre un Campo de Hierba cuando se usa este ataque, ganas 10 pies adicionales de movimiento hasta el inicio de tu siguiente turno, y tu movimiento ya no provoca ataques de oportunidad."
+			],
+			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d6 al nivel 5, 4d4 al nivel 10 y 3d10 al nivel 17."
+		},
+		{
 			"id": "grassy-terrain",
 			"name": "Campo de Hierba",
 			"description": [
@@ -2446,6 +2512,14 @@
 			"description": [
 				"Celebras tu inminente victoria con un pequeño baile. El dinero del premio otorgado al final de la batalla se duplica."
 			]
+		},
+		{
+			"id": "hard-press",
+			"name": "Prensa Metálica",
+			"description": [
+				"Aplastas a una criatura con un brazo, una garra o algo similar para infligir daño. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo 2d6 + MOV de daño de tipo Acero si impactas. Si el objetivo tiene más del 50% de sus puntos de golpe máximos, añade tu bonificador por competencia a la tirada de daño."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d8 al nivel 5, 4d6 al nivel 10 y 6d6 al nivel 17."
 		},
 		{
 			"id": "harden",
@@ -3120,6 +3194,15 @@
 			]
 		},
 		{
+			"id": "lash-out",
+			"name": "Desahogo",
+			"description": [
+				"Desahogas tu frustración contra el objetivo. Realiza un ataque cuerpo a cuerpo, infligiendo 1d12 + MOV de daño de tipo Siniestro si impactas.",
+				"Si estás sufriendo una condición de estado no volátil, o cualquiera de tus valores de AC, Fuerza, Destreza, Constitución, Inteligencia, Sabiduría o Carisma se encuentra reducido, realiza el ataque con ventaja e inflige daño adicional igual a tu MOV de tipo Siniestro."
+			],
+			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 2d12 al nivel 10 y 6d6 al nivel 17."
+		},
+		{
 			"id": "last-resort",
 			"name": "Última Baza",
 			"description": [
@@ -3280,6 +3363,14 @@
 				"Desatas una luz peculiar que afecta a la mente. Cada criatura dentro de un cono de 20 pies centrado en ti debe realizar una tirada de salvación de Sabiduría contra tu CD de Movimiento, sufriendo 2d6 + MOV de daño de tipo Psíquico si fallan, o la mitad si la superan. Cada criatura que falle también tendrá un penalizador de -2 en sus tiradas de salvación de Sabiduría hasta el final de tu siguiente turno."
 			],
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 4d6 al nivel 10 y 6d6 al nivel 17."
+		},
+		{
+			"id": "lunar-blessing",
+			"name": "Plegaria Lunar",
+			"description": [
+				"Bendices el área circundante con la luz de una luna creciente. Mientras dure el efecto, cuando una criatura aliada (incluyéndote a ti mismo) comience su turno a 100 pies o menos de ti, recupera 2d4 + MOV puntos de golpe y se cura de cualquier estado alterado negativo."
+			],
+			"higherLevels": "La tirada de dados de curación para este movimiento pasa a ser 1d12 al nivel 5, 2d8 al nivel 10 y 4d6 al nivel 17."
 		},
 		{
 			"id": "lunar-dance",
@@ -3542,6 +3633,14 @@
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 5d6 al nivel 5, 4d12 al nivel 10 y 8d8 al nivel 17."
 		},
 		{
+			"id": "meteor-beam",
+			"name": "Rayo Meteórico",
+			"description": [
+				"Al usar este movimiento, absorbes energía cósmica y te preparas para desatar un haz devastador. En tu siguiente turno, si mantienes la concentración, usa una acción para crear una línea de energía solar de 80 pies de largo y 5 pies de ancho. Cualquier criatura atrapada en la línea debe superar una tirada de salvación de Destreza contra tu CD de Movimiento, recibiendo 3d8 + MOV de daño de tipo Roca si falla, o la mitad si la supera."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 5d6 al nivel 5, 4d12 al nivel 10 y 8d8 al nivel 17."
+		},
+		{
 			"id": "meteor-mash",
 			"name": "Puño Meteoro",
 			"description": [
@@ -3675,6 +3774,14 @@
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 4d10 al nivel 5, 6d10 al nivel 10 y 8d12 al nivel 17."
 		},
 		{
+			"id": "misty-explosion",
+			"name": "Bruma Explosiva",
+			"description": [
+				"Desatas una explosión masiva en un radio de 30 pies y caes debilitado inmediatamente antes de que se inflija el daño. Las criaturas en el área deben realizar una tirada de salvación de Destreza contra tu CD de Movimiento. Si te quedan al menos la mitad de tus puntos de golpe o si este movimiento se utiliza en Campo de Niebla, las criaturas al alcance reciben 5d6 + MOV de daño de tipo Hada si fallan, o la mitad si la superan. Si te quedan menos de la mitad de tus puntos de golpe y no te encuentras en Campo de Niebla, el daño se reduce a la mitad si fallan la salvación, y a una cuarta parte si la superan."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 4d10 al nivel 5, 6d10 al nivel 10 y 8d12 al nivel 17."
+		},
+		{
 			"id": "misty-terrain",
 			"name": "Campo de Niebla",
 			"description": [
@@ -3784,6 +3891,14 @@
 				"Invocas un par de llamas místicas que danzan alrededor de un objetivo, infligiendo daño. Realiza una tirada de ataque a distancia contra un objetivo, infligiendo 1d12 + MOV de daño de tipo Fuego si impactas. Si el objetivo es alcanzado por este ataque, cualquier tirada de ataque que realice antes del final de su próximo turno se hace con desventaja."
 			],
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 2d12 al nivel 10 y 6d6 al nivel 17."
+		},
+		{
+			"id": "mystical-power",
+			"name": "Poder Místico",
+			"description": [
+				"Atacas emitiendo un poder místico. Realiza un ataque a distancia contra un objetivo, infligiendo 1d12 + MOV de daño Psíquico si impactas. Además, si el ataque impacta, obtienes +1 a todas las tiradas de ataque realizadas con Sabiduría como MOV hasta el final del encuentro o hasta que seas intercambiado. Si el ataque falla, obtienes +1 a tu CA hasta el final del encuentro o hasta que seas intercambiado. La suma de estos bonificadores tiene un límite máximo de +5."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d8 al nivel 5, 2d12 al nivel 10 y 6d6 al nivel 17."
 		},
 		{
 			"id": "nasty-plot",
@@ -4288,6 +4403,16 @@
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d10 al nivel 5, 3d10 al nivel 10 y 4d12 al nivel 17."
 		},
 		{
+			"id": "poltergeist",
+			"name": "Poltergeist",
+			"description": [
+				"Atacas controlando el objeto de una criatura. El objetivo debe superar una tirada de salvación de Carisma contra tu CD de Movimiento o dejará de tener equipado su objeto. Además, si falla la salvación, puedes realizar inmediatamente un ataque cuerpo a cuerpo contra una criatura que se encuentre a 5 pies o menos de dicho objeto, recibiendo 1d8 + MOV de daño de tipo Fantasma si impactas.",
+				"Como acción adicional en tus turnos posteriores, puedes repetir el ataque contra una criatura que esté a 5 pies o menos del objeto.",
+				"El objeto sigue al propietario a una distancia de 5 pies, flotando cerca de él. La criatura no puede beneficiarse del objeto mientras tú lo controles. El dueño del objeto puede usar una acción en su turno para intentar recuperar el control repitiendo la tirada de salvación de Carisma. Si la supera, termina la concentración del movimiento."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d6 al nivel 5, 4d4 al nivel 10 y 3d10 al nivel 17."
+		},
+		{
 			"id": "population-bomb",
 			"name": "Proliferación",
 			"description": [
@@ -4336,6 +4461,13 @@
 				"Un rayo de luz brota de tu gema, dañando a una criatura a tu alcance. Realiza un ataque a distancia contra un objetivo, infligiendo 2d6 + MOV de daño de tipo Roca si impactas."
 			],
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 4d6 al nivel 10 y 6d6 al nivel 17."
+		},
+		{
+			"id": "power-shift",
+			"name": "Cambiapoder",
+			"description": [
+				"Vuelves a centrar tu estrategia ofensiva. Hasta el comienzo de tu próximo turno, para el siguiente movimiento que ejecutes, puedes elegir cualquier atributo como tu MOV."
+			]
 		},
 		{
 			"id": "power-split",
@@ -4450,6 +4582,14 @@
 				"Materializas un conjunto de grandes colmillos que muerden a una criatura con energía psíquica. Realiza un ataque a distancia contra un objetivo, infligiendo 2d6 + MOV de daño de tipo Psíquico si impactas. Si aciertas, este movimiento ignora y finaliza el efecto de Velo Aurora, y no se ve afectado por Pantalla de Luz ni Reflejo."
 			],
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 4d6 al nivel 10 y 6d6 al nivel 17."
+		},
+		{
+			"id": "psychic-noise",
+			"name": "Psicorruido",
+			"description": [
+				"Atacas al objetivo con ondas sonoras desagradables. El objetivo debe realizar una tirada de salvación de Sabiduría contra tu CD de Movimiento. Si falla, el objetivo recibe 1d12 + MOV de daño de tipo Psíquico y no puede recuperar puntos de golpe hasta el final de tu siguiente turno."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d8 al nivel 5, 2d12 al nivel 10 y 6d6 al nivel 17."
 		},
 		{
 			"id": "psychic-terrain",
@@ -4993,6 +5133,16 @@
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 5d4 al nivel 10 y 4d8 al nivel 17."
 		},
 		{
+			"id": "sandsear-storm",
+			"name": "Simún de Arena",
+			"description": [
+				"Creas una tormenta de vientos feroces y arena abrasadora en un cubo de 40 pies centrado en un punto dentro del alcance. Cada criatura enemiga en el área debe realizar una tirada de salvación de Fuerza contra tu CD de Movimiento, recibiendo 4d4 + MOV de daño de tipo Tierra y quedando Quemada si falla. Si la supera, recibe la mitad del daño y no queda quemada.",
+				"Una criatura también debe realizar esa salvación si entra en el área o termina su turno en ella. Solo realiza esta salvación una vez por turno.",
+				"Cuando se utiliza bajo sol abrasador, las criaturas tienen desventaja en la tirada de salvación."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d12 al nivel 5, 4d8 al nivel 10 y 8d6 al nivel 17."
+		},
+		{
 			"id": "sandstorm",
 			"name": "Tormenta de Arena",
 			"description": [
@@ -5008,11 +5158,28 @@
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 4d6 al nivel 10 y 6d6 al nivel 17."
 		},
 		{
+			"id": "scale-shot",
+			"name": "Ráfaga Escamas",
+			"description": [
+				"Lanzas tus escamas como proyectiles contra un enemigo a tu alcance. Realiza cinco ataques a distancia contra un mismo objetivo. Con cada impacto, inflige 1d4 de daño de tipo Dragón. Si al menos uno de los ataques impacta, inflige un daño adicional igual a tu MOV de tipo Dragón (máximo una vez por uso).",
+				"Hasta el final de tu siguiente turno, tienes +10 pies de movimiento y -2 a tu CA."
+			],
+			"higherLevels": "El dado de daño de este movimiento pasa a ser 1d6 al nivel 5, 1d8 al nivel 10 y 1d10 al nivel 17."
+		},
+		{
 			"id": "scary-face",
 			"name": "Cara Susto",
 			"description": [
 				"Pones tu cara más aterradora para intentar asustar a una criatura. El objetivo debe realizar una tirada de salvación de Sabiduría contra tu CD de Movimiento o quedará asustado mientras dure el efecto. Una criatura asustada de esta manera debe realizar una tirada de salvación de Sabiduría contra tu CD de Movimiento al final de cada uno de sus turnos para eliminar el efecto."
 			]
+		},
+		{
+			"id": "scorching-sands",
+			"name": "Arenas Ardientes",
+			"description": [
+				"Lanzas arena abrasadora a un objetivo para quemarlo. Realiza un ataque a distancia contra una criatura a 40 pies o menos. Si impactas, inflige 1d8 + MOV de daño de tipo Tierra, y el objetivo debe superar una tirada de salvación de Constitución contra tu CD de Movimiento o quedará quemado."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d6 al nivel 5, 4d4 al nivel 10 y 3d10 al nivel 17."
 		},
 		{
 			"id": "scratch",
@@ -5686,6 +5853,15 @@
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 5d4 al nivel 10 y 4d8 al nivel 17."
 		},
 		{
+			"id": "steel-beam",
+			"name": "Metaláser",
+			"description": [
+				"Disparas un haz de acero acumulado de todo tu cuerpo en una línea de 80 pies de largo y 5 pies de ancho. Todas las criaturas atrapadas en la línea deben superar una tirada de salvación de Destreza contra tu CD de Movimiento, recibiendo 3d8 + MOV de daño de tipo Acero si fallan, o la mitad si la superan.",
+				"El retroceso al usar este movimiento te empuja 10 pies en dirección opuesta a la del haz de acero y caes derribado. Si estabas en el suelo al usar este movimiento, recibes 2d6 de daño sin tipo. Si estabas volando o levitando, calcula el daño por caída según corresponda."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 5d6 al nivel 5, 4d12 al nivel 10 y 8d8 al nivel 17."
+		},
+		{
 			"id": "steel-roller",
 			"name": "Allanador Férreo",
 			"description": [
@@ -5871,6 +6047,14 @@
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 4d6 al nivel 10 y 6d6 al nivel 17."
 		},
 		{
+			"id": "supercell-slam",
+			"name": "Plancha Voltaica",
+			"description": [
+				"Electrificas tu cuerpo y te dejas caer sobre una criatura. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo 2d8 + MOV de daño de tipo Eléctrico si impactas. Si fallas, recibes un daño sin tipo igual a tu bonificador por competencia."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d10 al nivel 5, 3d10 al nivel 10 y 4d12 al nivel 17."
+		},
+		{
 			"id": "superpower",
 			"name": "Fuerza Bruta",
 			"description": [
@@ -6036,6 +6220,13 @@
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d10 al nivel 5, 3d10 al nivel 10 y 4d12 al nivel 17."
 		},
 		{
+			"id": "take-heart",
+			"name": "Bálsamo Osado",
+			"description": [
+				"Como reacción al recibir un estado alterado negativo o quedar asustado, te curas de esa condición y te vuelves inmune a recibir nuevos estados alterados o quedar asustado hasta el final de tu siguiente turno. Además, hasta el final de tu siguiente turno, tienes ventaja en las tiradas de ataque realizadas con Sabiduría o Carisma como MOV y en todas las tiradas de salvación de Sabiduría o Carisma."
+			]
+		},
+		{
 			"id": "tar-shot",
 			"name": "Alquitranazo",
 			"description": [
@@ -6095,6 +6286,14 @@
 			"description": [
 				"Desapareces de la vista y reapareces en un punto desocupado a tu alcance. En batallas contra criaturas salvajes, este movimiento puede activarse para contar automáticamente como un único éxito en una prueba de Destreza grupal para huir."
 			]
+		},
+		{
+			"id": "temper-flare",
+			"name": "Cólera Ardiente",
+			"description": [
+				"Impulsado por la desesperación, atacas a una criatura. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo 2d4 + MOV de daño de tipo Fuego si impactas. Si fallaste un ataque el turno anterior a este, añade un dado de daño adicional a tu tirada de daño."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d6 al nivel 5, 2d8 al nivel 10 y 3d10 al nivel 17."
 		},
 		{
 			"id": "tera-blast",
@@ -6319,6 +6518,14 @@
 			]
 		},
 		{
+			"id": "trailblaze",
+			"name": "Abrecaminos",
+			"description": [
+				"Atacas de repente, como si saltaras desde la hierba alta. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo 1d8 + MOV de daño de tipo Planta si impactas. Con cada impacto con éxito de este movimiento, aumenta tu velocidad de movimiento en 5 pies hasta que quedes incapacitado, seas intercambiado o el combate termine (máximo de +30 pies a la velocidad de movimiento)."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d6 al nivel 5, 4d4 al nivel 10 y 3d10 al nivel 17."
+		},
+		{
 			"id": "transform",
 			"name": "Transformación",
 			"description": [
@@ -6361,6 +6568,14 @@
 				"Disparas tres flechas al objetivo. Realiza tres ataques a distancia contra el mismo objetivo a tu alcance, infligiendo cada uno 1d4 + MOV de daño de tipo Lucha si impactas. El primer ataque causa un golpe crítico con un resultado natural de 19 o 20. El segundo ataque reduce la CA del objetivo en 1 si impactas hasta el final del combate, efecto que se puede acumular hasta 5 veces. El tercer ataque hace que el objetivo retroceda si impactas."
 			],
 			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 1d6 al nivel 5, 1d8 al nivel 10 y 1d10 al nivel 17."
+		},
+		{
+			"id": "triple-axel",
+			"name": "Triple Axel",
+			"description": [
+				"Lanzas tres patadas consecutivas. Realiza tres ataques cuerpo a cuerpo en orden, infligiendo 1d4 + MOV de daño de tipo Hielo en cada impacto. En cuanto uno de los ataques falle, el movimiento termina."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 1d6 al nivel 5, 1d8 al nivel 10 y 2d6 al nivel 17."
 		},
 		{
 			"id": "triple-dive",
@@ -6425,6 +6640,14 @@
 				"Lanzas un ataque rápido antes de escapar. Realiza un ataque cuerpo a cuerpo, infligiendo 1d12 + MOV de daño de tipo Bicho si impactas. Después de que se active este movimiento, un entrenador debe cambiar al usuario como una acción gratuita."
 			],
 			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d8 al nivel 5, 2d12 al nivel 10 y 6d6 al nivel 17."
+		},
+		{
+			"id": "upper-hand",
+			"name": "Palma Rauda",
+			"description": [
+				"Reaccionas al movimiento del objetivo y golpeas con la base de la palma. Cuando seas el objetivo de un ataque cuerpo a cuerpo, puedes usar tu reacción para intentar golpear a la criatura antes de que se realice su tirada de ataque. Realiza un ataque cuerpo a cuerpo contra el objetivo, infligiendo 1d6 + MOV de daño de tipo Lucha si impactas."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 1d12 al nivel 5, 2d8 al nivel 10 y 4d6 al nivel 17."
 		},
 		{
 			"id": "uproar",
@@ -6650,6 +6873,16 @@
 			"description": [
 				"Tienes la capacidad de proteger a tus aliados de movimientos con efectos de área. Como una reacción, cuando una criatura activa un movimiento que inflige daño a múltiples aliados dentro del alcance, puedes reducir a la mitad el daño infligido. En futuras ocasiones en las que uses esta reacción en el mismo combate, debes obtener un resultado superior a 15 en una tirada de d20 o perderás la reacción sin que surta efecto."
 			]
+		},
+		{
+			"id": "wildbolt-storm",
+			"name": "Electormenta",
+			"description": [
+				"Creas una tempestad atronadora que ataca salvajemente con rayos y viento en un cubo de 40 pies centrado en un punto dentro del alcance. Cada criatura enemiga en el área debe realizar una tirada de salvación de Destreza contra tu CD de Movimiento, recibiendo 4d4 + MOV de daño de tipo Eléctrico y quedando paralizada si falla. Si la supera, recibe la mitad del daño y no queda paralizada.",
+				"Una criatura también debe realizar esa salvación si entra en el área o termina su turno en ella. Solo realiza esta salvación una vez por turno.",
+				"Cuando se utiliza bajo lluvia, las criaturas tienen desventaja en la tirada de salvación."
+			],
+			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 2d12 al nivel 5, 4d8 al nivel 10 y 8d6 al nivel 17."
 		},
 		{
 			"id": "wild-charge",
