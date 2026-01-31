@@ -18,7 +18,7 @@ export const load: PageLoad = async ({ fetch }) => {
 		))
 		.then((pokemon: PokemonSpecies[]) => pokemon.filter((it) => !it.wasNonCanonNonFakemon()))
 
-	const themes = await fetch(Url.api.themes()).then(async res => {
+	const biomes = await fetch(Url.api.biomes()).then(async res => {
 		if (res.status === 404)
 			error(404)
 		else
@@ -27,5 +27,5 @@ export const load: PageLoad = async ({ fetch }) => {
 			}
 	})
 
-	return { pokemonList: pokemon, themes }
+	return { pokemonList: pokemon, biomes }
 }

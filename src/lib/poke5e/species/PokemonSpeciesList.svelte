@@ -8,6 +8,17 @@
 	import { OfficialFakemonRemovedBanner, readdOfficialFakemon } from "$lib/fakemon/OfficialFakemonRemovedBanner"
 
 	export let pokemons: PokemonSpecies[]
+	export let onClick: (pokemon: PokemonSpecies, event: MouseEvent) => void = () => {}
+	export let disableLink: boolean = false
+
+	const handleOnClick = (pokemon: PokemonSpecies, event: MouseEvent) => {
+		if (disableLink) {
+			event.preventDefault()
+		}
+		if (onClick) {
+			onClick(pokemon, event)
+		}
+	}
 
 	$: filtered = pokemons.filter(PokemonSpecies.matchNameOrType($pokemonFilter))
 
@@ -29,7 +40,11 @@
 	key: "sr", name: "SR", ratio: 1, sort: byNumericField(it => it.sr.data), largeScreenOnly: true,
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type.primary}-bg)">
-		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.pokemon(item.data.id)}">{item.data.name}</a></BubbleRow.Cell>
+		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary>
+			<a on:click={(event) => handleOnClick(item, event)} href="{Url.pokemon(item.data.id)}">
+				{item.data.name}
+			</a>
+		</BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{item.type.toString()}</BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[2]}>{item.sr.toString()}</BubbleRow.Cell>
 	</BubbleRow.Row>
