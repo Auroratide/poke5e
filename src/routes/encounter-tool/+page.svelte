@@ -7,7 +7,7 @@
 	import { PokemonSpecies, PokemonSpeciesList, SpeciesStore } from "$lib/poke5e/species"
 	import Title from "$lib/ui/layout/Title.svelte";
 	import { SelectField, type SelectFieldOption } from "$lib/ui/forms";
-	import { PokemonType, type PokeType } from "$lib/pokemon/types";
+	import { PokemonType, TypeTag, type PokeType } from "$lib/pokemon/types";
 	import Card from "$lib/ui/page/Card.svelte";
 	import Stepper from "$lib/ui/elements/Stepper.svelte";
 
@@ -47,12 +47,11 @@
 	let trainerEncounter: string
 	let selectedPokemon: {data: PokemonSpecies, count: number}[] = []
 
-	const onClickPokemon = (pokemon: PokemonSpecies, event: MouseEvent) => {
-		event.preventDefault()
+	const onClickPokemon = (pokemon: PokemonSpecies) => {
 		const pokemonId = pokemon.data.id
+
 		// If already selected, increase count
 		const existing = selectedPokemon.find((poke) => String(poke.data.id.data) === pokemonId)
-		
 		if (existing) {
 			existing.count += 1
 			selectedPokemon = [...selectedPokemon]
@@ -67,6 +66,10 @@
 
 	const generateEncounter = () => {
 		console.log("GENERATE ENCOUNTER");
+	}
+
+	const clearEncounter = () => {
+		selectedPokemon = []
 	}
 </script>
 
@@ -97,24 +100,31 @@
 				{/if}
 			</div>
 		
+			<Button on:click={generateEncounter}>Generate Encounter</Button>
+			<p> </p>
+			
+		</section>
+		<section>
 			<div class="manual-pokemon-list">
 				{#if selectedPokemon.length > 0}
 					<div class="pokemon-list">
 						{#each selectedPokemon as pokemon (pokemon.data.id)}
 							<div class="pokemon-item">
-								<span>{pokemon.data.name}</span>
+								<div class="pokemon-info">
+									<p class="pokemon-name">{pokemon.data.name} <span class="pokemon-level">Lv. 1</span></p>
+									<p class="pokemon-stats">SR: {pokemon.data.sr}</p>
+									<TypeTag type={pokemon.data.data.type} />
+								</div>
 								<Stepper bind:value={pokemon.count} deleteOnZero={true} on:delete={() => onDelete(pokemon)} />
 							</div>
 						{/each}
 					</div>
 				{:else}
-					<p>No Pokémon selected</p>
+					<p>No Pokémon added.</p>
 				{/if}
+				<Button variant="success" on:click={clearEncounter}>Clear encounter</Button>
+				<p> </p>
 			</div>
-		</section>
-		<section>
-			<Button on:click={generateEncounter}>Generate Encounter</Button>
-			<p> </p>
 		</section>
 	</Card>
 
@@ -137,5 +147,32 @@
 	}
 	.simple-type-field :global(> *) {
 		flex: 1;
+	}
+
+	.pokemon-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		padding: 1em 0 2em;
+	}
+
+	.pokemon-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid var(--skin-bg-light);
+	}
+
+	.pokemon-info > p {
+		margin-bottom: 0;
+	}
+
+	.pokemon-name {
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+	.pokemon-level {
+		font-weight: normal;
+		font-size: .8em;
 	}
 </style>

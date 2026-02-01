@@ -12,9 +12,6 @@
 	export let disableLink: boolean = false
 
 	const handleOnClick = (pokemon: PokemonSpecies, event: MouseEvent) => {
-		if (disableLink) {
-			event.preventDefault()
-		}
 		if (onClick) {
 			onClick(pokemon, event)
 		}
@@ -41,9 +38,15 @@
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type.primary}-bg)">
 		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary>
-			<a on:click={(event) => handleOnClick(item, event)} href="{Url.pokemon(item.data.id)}">
-				{item.data.name}
-			</a>
+			{#if disableLink}
+				<button on:click={(event) => handleOnClick(item, event)} class="unliked-button">
+					{item.data.name}
+				</button>
+			{:else}
+				<a on:click={(event) => handleOnClick(item, event)} href="{Url.pokemon(item.data.id)}">
+					{item.data.name}
+				</a>
+			{/if}
 		</BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{item.type.toString()}</BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[2]}>{item.sr.toString()}</BubbleRow.Cell>
@@ -62,5 +65,24 @@
 		cursor: pointer;
 	} .link-button:hover, .link-button:focus {
 		text-decoration: none;
+	}
+
+	.unliked-button {
+		border: none;
+		color: var(--skin-bg-text);
+		cursor: pointer;
+		margin: 0;
+		padding: 0;
+		width: auto;
+		background: transparent;
+	}
+
+	.unliked-button::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 	}
 </style>
