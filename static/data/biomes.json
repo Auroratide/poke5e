@@ -1,0 +1,29 @@
+{
+  "items": [
+    { "id": "forest", "name": "Forest" },
+    { "id": "jungle", "name": "Jungle" },
+    { "id": "woodland", "name": "Woodland" },
+    { "id": "field", "name": "Field" },
+    { "id": "grassland", "name": "Grassland" },
+    { "id": "city", "name": "City" },
+    { "id": "industrial", "name": "Industrial" },
+    { "id": "volcano", "name": "Volcano" },
+    { "id": "cave", "name": "Cave" },
+    { "id": "mountain", "name": "Mountain" },
+    { "id": "desert", "name": "Desert" },
+    { "id": "badland", "name": "Badland" },
+    { "id": "pond", "name": "Pond" },
+    { "id": "lake", "name": "Lake" },
+    { "id": "river", "name": "River" },
+    { "id": "riverside", "name": "Riverside" },
+    { "id": "beach", "name": "Beach" },
+    { "id": "ocean", "name": "Ocean" },
+    { "id": "reef", "name": "Reef" },
+    { "id": "polar_sea", "name": "Polar Sea" },
+    { "id": "abyss", "name": "Abyss" },
+    { "id": "swamp", "name": "Swamp" },
+    { "id": "glacier", "name": "Glacier" },
+    { "id": "tundra", "name": "Tundra" },
+    { "id": "ruin", "name": "Ruin" }
+  ]
+}
