@@ -62,6 +62,9 @@ export type SinglePokemonJsonResponse = {
 		spriteShiny?: string,
 		attribution?: string,
 	},
+	habitat: {
+		biomes: string[],
+	}
 }
 
 export type PokemonJsonResponse = {

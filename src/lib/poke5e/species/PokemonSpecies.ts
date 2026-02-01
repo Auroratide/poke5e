@@ -42,6 +42,7 @@ export class PokemonSpecies extends DataClass<{
 	forms?: Data<SpeciesForms>,
 	media: Data<SpeciesMedia<UploadedMedia>>,
 	notes?: MarkdownString,
+	habitat: {biomes: string[]}
 }> {
 	static readonly matchNameOrType = (value: string) => (pokemon: PokemonSpecies) =>
 		pokemon.data.name.toLocaleLowerCase().includes(value.toLocaleLowerCase()) ||
@@ -136,6 +137,9 @@ export class PokemonSpecies extends DataClass<{
 					},
 				} : undefined,
 			},
+			habitat: {
+				biomes: it.habitat.biomes,
+			}
 		})
 	}
 }

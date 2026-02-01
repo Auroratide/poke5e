@@ -46,8 +46,9 @@
 	let wildEncounter: string
 	let trainerEncounter: string
 	let selectedPokemon: {data: PokemonSpecies, count: number}[] = []
+	let maxSrTotal = 5
 
-	const onClickPokemon = (pokemon: PokemonSpecies) => {
+	const addPokemonToEncounter = (pokemon: PokemonSpecies) => {
 		const pokemonId = pokemon.data.id
 
 		// If already selected, increase count
@@ -65,8 +66,72 @@
 	}
 
 	const generateEncounter = () => {
-		console.log("GENERATE ENCOUNTER");
+		selectedPokemon = []
+		const pokemonPool: PokemonSpecies[] = []
+
+		// Build pool by biome (and optional type)
+		for (let i = 0; i < pokemonToRender.length; i++) {
+			const pokemon = pokemonToRender[i]
+			const pokemonBiomes = pokemon.data.habitat.biomes
+
+			const hasBiome = pokemonBiomes.includes(biome)
+			console.log(pokemon.data.type);
+			
+			const hasType =
+				!pokemonType ||
+				pokemon.data.type.includes(pokemonType)
+
+			if (hasBiome && hasType) {
+				pokemonPool.push(pokemon)
+			}
+		}
+
+		if (pokemonPool.length === 0) return
+
+		let currentTotalSr = 0
+		// Safety to avoid infinite loops
+		let attempts = 0
+		const MAX_ATTEMPTS = 500
+
+		while (attempts < MAX_ATTEMPTS) {
+			attempts++
+
+			const randomPokemon =
+				pokemonPool[Math.floor(Math.random() * pokemonPool.length)]
+
+			const sr = Number(randomPokemon.data.sr)
+
+			// Would exceed limit → skip
+			if (currentTotalSr + sr > maxSrTotal) {
+				// Check if *any* pokemon can still fit
+				const canStillAdd = pokemonPool.some(
+					(p) => currentTotalSr + Number(p.data.sr) <= maxSrTotal
+				)
+
+				if (!canStillAdd) break
+
+				continue
+			}
+
+			// Add it
+			currentTotalSr += sr
+			const existing = selectedPokemon.find(
+				(p) => String(p.data.id.data) === randomPokemon.data.id
+			)
+			if (existing) {
+				existing.count += 1
+				selectedPokemon = [...selectedPokemon]
+			} else {
+				selectedPokemon = [
+					...selectedPokemon,
+					{ data: randomPokemon, count: 1 },
+				]
+			}
+			// Stop if we hit exactly
+			if (currentTotalSr === maxSrTotal) break
+		}
 	}
+
 
 	const clearEncounter = () => {
 		selectedPokemon = []
@@ -79,7 +144,7 @@
 	
 	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Pokémon List">
 		{#if pokemonToRender !== undefined}
-			<PokemonSpeciesList pokemons={pokemonToRender} onClick={onClickPokemon} disableLink={true} />
+			<PokemonSpeciesList pokemons={pokemonToRender} onClick={addPokemonToEncounter} disableLink={true} />
 		{:else}
 			<Loader />
 		{/if}
