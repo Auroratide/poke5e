@@ -14,7 +14,10 @@
 		"forms": "Forms"
 	},
 	"moves": {
-		"title": "Moves"
+		"title": "Moves",
+		"contest": "Contest",
+		"appeal": "Appeal",
+		"jam": "Jam"
 	},
 	"tms": {
 		"title": "TMs"

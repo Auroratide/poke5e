@@ -8,6 +8,7 @@
 	import { PokemonSpecies } from "$lib/poke5e/species"
 	import type { Move } from "./Move"
 	import { Url } from "$lib/site/url"
+	import { ContestInfo } from "./contest"
 
 	export let move: Move
 	export let pokemon: PokemonSpecies[] = []
@@ -52,19 +53,7 @@
 	{/if}
 	<slot name="extra"></slot>
 	{#if move.contest}
-		<section class="contest" style:--contest-color="var(--skin-contest-{move.contest.contest})">
-			<VisuallyHidden><h2>Context</h2></VisuallyHidden>
-			<FlatDl>
-				<dt>Contest</dt>
-				<dd class="contest-type">{move.contest.contest}</dd>
-				<dt>Appeal</dt>
-				<dd>{move.contest.appeal}</dd>
-				<dt>Jam</dt>
-				<dd>{move.contest.jam}</dd>
-				<dt>Effect</dt>
-				<dd>{move.contest.effect}</dd>
-			</FlatDl>
-		</section>
+		<ContestInfo value={move.contest} />
 	{/if}
 </Card>
 
@@ -73,14 +62,8 @@
 		text-transform: uppercase;
 	}
 
-	.duration, .range, .contest-type {
+	.duration, .range {
 		text-transform: capitalize;
-	}
-
-	.contest {
-		background-color: var(--contest-color);
-		padding-block-start: 1em;
-		padding-block-end: 0.5em;
 	}
 
 	.beta {
