@@ -1,6 +1,5 @@
 import type { PageLoad } from "./$types"
 import { getLocale } from "$lib/site/i18n"
-import EnContent, { metadata as enMetadata } from "./(content)/en.svx"
 
 export const load: PageLoad = async () => {
 	const locale = getLocale()
@@ -13,9 +12,11 @@ export const load: PageLoad = async () => {
 			metadata: content.metadata,
 		}
 	} catch (e) {
+		const content = await import(`./(content)/en.svx`)
+
 		return {
-			Content: EnContent,
-			metadata: enMetadata,
+			Content: content.default,
+			metadata: content.metadata,
 		}
 	}
 }
