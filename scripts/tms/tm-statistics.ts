@@ -65,10 +65,12 @@ type TmStatistics = {
 	},
 	averageLevel: number,
 	averageSr: number,
+	minLevel: number,
+	minSr: number
 }
 
 function statisticsToTable(statistics: TmStatistics[]): string[][] {
-	const header = ["tm", "% total", "% normal", "% fighting", "% flying", "% poison", "% ground", "% rock", "% bug", "% ghost", "% steel", "% fire", "% water", "% grass", "% electric", "% psychic", "% ice", "% dragon", "% dark", "% fairy", "avg level", "avg sr"]
+	const header = ["tm", "total", "normal", "fighting", "flying", "poison", "ground", "rock", "bug", "ghost", "steel", "fire", "water", "grass", "electric", "psychic", "ice", "dragon", "dark", "fairy", "avgLevel", "avgSr", "minLevel", "minSr"]
 
 	const rows = statistics.map((it) => [
 		it.id.toString(),
@@ -93,6 +95,8 @@ function statisticsToTable(statistics: TmStatistics[]): string[][] {
 		it.percentageByType.fairy.toString(),
 		it.averageLevel.toString(),
 		it.averageSr.toString(),
+		it.minLevel.toString(),
+		it.minSr.toString(),
 	])
 
 	return [header, ...rows]
@@ -151,6 +155,8 @@ async function main() {
 
 		let totalLevel = 0
 		let totalSr = 0
+		let minLevel = 999
+		let minSr = 999
 
 		for (const p of pokemon) {
 			if (p.moves.tm.includes(tm.tm.id)) {
@@ -159,6 +165,8 @@ async function main() {
 				if (p.type[1]) ++countByType[p.type[1]]
 				totalLevel += p.minLevel
 				totalSr += p.sr
+				minLevel = p.minLevel < minLevel ? p.minLevel : minLevel
+				minSr = p.sr < minSr ? p.sr : minSr
 			}
 		}
 
@@ -187,6 +195,8 @@ async function main() {
 			},
 			averageLevel: totalLevel / count,
 			averageSr: totalSr / count,
+			minLevel,
+			minSr,
 		})
 	}
 
