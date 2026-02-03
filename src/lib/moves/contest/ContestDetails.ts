@@ -1,8 +1,9 @@
 import { DataClass } from "$lib/DataClass"
 import type { ContestMoveEffect } from "./ContestMoveEffect"
+import type { ContestType } from "./ContestType"
 
 export class ContestDetails extends DataClass<{
-	contest: string,
+	contest: ContestType,
 	appeal: number,
 	jam: number,
 	effect: ContestMoveEffect,

@@ -17,7 +17,12 @@
 		"title": "Moves",
 		"contest": "Contest",
 		"appeal": "Appeal",
-		"jam": "Jam"
+		"jam": "Jam",
+		"cool": "Cool",
+		"beauty": "Beauty",
+		"cute": "Cute",
+		"clever": "Clever",
+		"tough": "Tough"
 	},
 	"tms": {
 		"title": "TMs"

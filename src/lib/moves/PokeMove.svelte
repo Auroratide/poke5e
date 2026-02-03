@@ -42,6 +42,9 @@
 	<section class="description">
 		<MoveDescription {move} />
 	</section>
+	{#if move.contest}
+		<ContestInfo value={move.contest} />
+	{/if}
 	{#if pokemonWhoLearnThisMove.length > 0}
 		<section>
 			<h2>Can learn this move:</h2>
@@ -52,9 +55,6 @@
 		</section>
 	{/if}
 	<slot name="extra"></slot>
-	{#if move.contest}
-		<ContestInfo value={move.contest} />
-	{/if}
 </Card>
 
 <style>

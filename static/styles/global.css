@@ -123,11 +123,11 @@
     --skin-bar-warning: hsl(45, 83%, 49%);
     --skin-bar-danger: hsl(355, 72%, 53%);
 
-    --skin-contest-cool: hsla(25, 86%, 72%, 0.5);
-    --skin-contest-beauty: hsla(222, 81%, 79%, 0.5);
-    --skin-contest-cute: hsla(342, 91%, 78%, 0.5);
-    --skin-contest-clever: hsla(100, 52%, 71%, 0.5);
-    --skin-contest-tough: hsla(48, 93%, 73%, 0.5);
+    --skin-contest-cool: oklch(0.5723 0.125 37.4);
+    --skin-contest-beauty: oklch(0.5629 0.1044 263.22);
+    --skin-contest-cute: oklch(0.577 0.1134 0.83);
+    --skin-contest-clever: oklch(0.55 0.1645 136.43);
+    --skin-contest-tough: oklch(0.5552 0.0895 81.99);
 
 	--skin-status-poisoned: oklch(70.5% 0.223 314);
 	--skin-status-badlypoisoned: linear-gradient(to bottom, oklch(60% 0.277 293), oklch(68% 0.251 305));
