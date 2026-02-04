@@ -3,6 +3,7 @@ import path from "node:path"
 import * as CSV from "csv-parse/sync"
 
 const POKEMON_PATH = path.join("static", "data", "pokemon.json")
+const EVOLUTIONS_PATH = path.join("static", "data", "evolution.json")
 const MOVES_PATH = path.join("static", "data", "moves.json")
 const REPORT_PATH = path.join("scripts", "tms", "out", "tm-report.json")
 const REPORT_TEXT_PATH = path.join("scripts", "tms", "out", "tm-report.txt")
@@ -100,6 +101,17 @@ async function getPokemonNeedingTms(): Promise<Pokemon[]> {
 	return pokemon.filter((it) => Math.max(...it.moves.tm) <= LAST_OG_TM)
 }
 
+async function getEvolveFroms(): Promise<Map<string, string>> {
+	const evolutions = (await readJsonFile(EVOLUTIONS_PATH)).items
+	const froms = new Map<string, string>()
+
+	for (const evo of evolutions) {
+		froms.set(evo.to, evo.from)
+	}
+
+	return froms
+}
+
 type Move = {
 	id: string
 	name: string,
@@ -158,6 +170,7 @@ async function main() {
 	const statistics = await getTmStatistics()
 	const tms = Array.from(statistics.entries())
 	const pokemon = await getPokemonNeedingTms()
+	const fromEvolutions = await getEvolveFroms()
 
 	const report: {
 		pokemon: string,
@@ -169,11 +182,17 @@ async function main() {
 		const numberOfDesiredTms = getNumberOfDesiredTms(p, sortedByProbability.length)
 
 		let tmsAdded: number[] = []
+		const fromEvo = fromEvolutions.get(p.id)
+		if (fromEvo != null) {
+			const previousEvoTms = report.find((it) => it.pokemon === fromEvo)?.tmsAdded ?? []
+			tmsAdded.push(...previousEvoTms)
+		}
+
 		let i = 0
 		while (tmsAdded.length < numberOfDesiredTms && i < sortedByProbability.length) {
 			const [currentTm, statistics] = sortedByProbability[i]
 
-			if (p.minLevel >= statistics.minLevel && p.sr >= statistics.minSr && passedRoll(probabilityForType(p.type, statistics))) {
+			if (!tmsAdded.includes(currentTm) && p.minLevel >= statistics.minLevel && p.sr >= statistics.minSr && passedRoll(probabilityForType(p.type, statistics))) {
 				tmsAdded.push(currentTm)
 			}
 
