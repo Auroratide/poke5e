@@ -6,7 +6,7 @@
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 	import { PokemonSpecies, PokemonSpeciesList, SpeciesStore } from "$lib/poke5e/species"
 	import Title from "$lib/ui/layout/Title.svelte";
-	import { SelectField, type SelectFieldOption } from "$lib/ui/forms";
+	import { IntField, Removable, SelectField } from "$lib/ui/forms";
 	import { PokemonType, TypeTag, type PokeType } from "$lib/pokemon/types";
 	import Card from "$lib/ui/page/Card.svelte";
 	import Stepper from "$lib/ui/elements/Stepper.svelte";
@@ -45,8 +45,19 @@
 	let encounterCategory: 'Wild' | 'Trainer' = 'Wild'
 	let wildEncounter: string
 	let trainerEncounter: string
-	let selectedPokemon: {data: PokemonSpecies, count: number}[] = []
+	let selectedPokemon: {data: PokemonSpecies, count: number, level: number}[] = []
 	let maxSrTotal = 5
+
+	let partyPlayers: { id: number, level: number, numberOfPokemon: number }[] = [];
+    let nextPlayerId = 1;
+
+    const addPlayer = () => {
+        partyPlayers = [...partyPlayers, { id: nextPlayerId++, level: 1, numberOfPokemon: 1 }];
+    }
+
+    const deletePlayer = (id: number) => {
+        partyPlayers = partyPlayers.filter(p => p.id !== id);
+    }
 
 	const addPokemonToEncounter = (pokemon: PokemonSpecies) => {
 		const pokemonId = pokemon.data.id
@@ -57,7 +68,7 @@
 			existing.count += 1
 			selectedPokemon = [...selectedPokemon]
 		} else {
-			selectedPokemon = [...selectedPokemon, { data: pokemon, count: 1 }]
+			selectedPokemon = [...selectedPokemon, { data: pokemon, count: 1, level: 1}]
 		}
 	}
 
@@ -115,18 +126,7 @@
 
 			// Add it
 			currentTotalSr += sr
-			const existing = selectedPokemon.find(
-				(p) => String(p.data.id.data) === randomPokemon.data.id
-			)
-			if (existing) {
-				existing.count += 1
-				selectedPokemon = [...selectedPokemon]
-			} else {
-				selectedPokemon = [
-					...selectedPokemon,
-					{ data: randomPokemon, count: 1 },
-				]
-			}
+			addPokemonToEncounter(randomPokemon)
 			// Stop if we hit exactly
 			if (currentTotalSr === maxSrTotal) break
 		}
@@ -152,6 +152,31 @@
 	
 	<Card title="Encounter Tool">
 		<section>
+			<p>Welcome to the Encounter Tool! Please, keep in mind that this system is being currently testing and might not be accurately balanced.</p>
+		</section>
+
+		<section>
+			<h2>Players</h2>
+			{#if partyPlayers.length > 0}
+				<div class="player-list">
+					{#each partyPlayers as player}
+						<div class="player-item">
+							<Removable on:remove={() => deletePlayer(player.id)}>
+								<div class="player-fields">
+									<IntField label="Level" bind:value={player.level} min={1} />
+									<IntField label="Pokémon" bind:value={player.numberOfPokemon} min={1} />
+								</div>
+							</Removable>
+						</div>
+					{/each}
+				</div>
+			{:else}
+				<p>No Players in the Party.</p>
+			{/if}
+			<Button variant="success" on:click={addPlayer}>Add Player</Button>
+		</section>
+		<section>
+			<h2>Configuration</h2>
 			<div class="simple-type-field">
 				<SelectField label="Biome" options={biomeOptions} bind:value={biome} />
 				<SelectField label="Type in common" options={primaryTypeOptions} bind:value={pokemonType}/>
@@ -166,17 +191,16 @@
 			</div>
 		
 			<Button on:click={generateEncounter}>Generate Encounter</Button>
-			<p> </p>
-			
 		</section>
 		<section>
+			<h2>Encounter</h2>
 			<div class="manual-pokemon-list">
 				{#if selectedPokemon.length > 0}
 					<div class="pokemon-list">
 						{#each selectedPokemon as pokemon (pokemon.data.id)}
 							<div class="pokemon-item">
 								<div class="pokemon-info">
-									<p class="pokemon-name">{pokemon.data.name} <span class="pokemon-level">Lv. 1</span></p>
+									<p class="pokemon-name">{pokemon.data.name} <span class="pokemon-level">Lv. <input type="number" bind:value={pokemon.level}></span></p>
 									<p class="pokemon-stats">SR: {pokemon.data.sr}</p>
 									<TypeTag type={pokemon.data.data.type} />
 								</div>
@@ -201,6 +225,15 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
+	}
+
+	.player-item {
+		margin-bottom: 1em;
+	}
+
+	.player-fields {
+		display: flex;
+		gap: 1em;
 	}
 
 	.simple-type-field {
