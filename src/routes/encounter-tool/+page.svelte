@@ -10,6 +10,7 @@
 	import { PokemonType, TypeTag, type PokeType } from "$lib/pokemon/types";
 	import Card from "$lib/ui/page/Card.svelte";
 	import Stepper from "$lib/ui/elements/Stepper.svelte";
+	import { experienceAwarded } from "$lib/poke5e/experience";
 
 
 	const NONE = ""
@@ -31,22 +32,48 @@
 		{name: "Grunt", value: "grunt"},
 		{name: "Random trainer", value: "random_trainer"},
 	]
+	const difficultyOptions = [
+		{name: "Low", value: "low"},
+		{name: "Moderate", value: "moderate"},
+		{name: "High", value: "high"},
+	]
+	const pokemonLimitOptions = [
+		{name: "No", value: "no"},
+		{name: "Yes", value: "yes"},
+	]
+	const difficultyMultipliers = {
+		low: 1,
+		moderate: 1.5,
+		high: 2,
+	};
 
 	$: biomes = $page.data.biomes
 	$: ssrPokemon = $page.data.pokemonList
 	$: pokemonToRender = ssrPokemon ?? $canonList
-	$: biomeOptions = (biomes.item.biomes ?? []).map((t: any) => ({
-		name: t.name,
-		value: t.id,
-	}))
+	$: biomeOptions = [
+			{ name: "- None -", value: "" },
+			...(biomes.item.biomes ?? []).map((t: any) => ({
+				name: t.name,
+				value: t.id,
+		}))
+	]
+	$: maxPlayerLevel = partyPlayers.length > 0 
+		? Math.max(...partyPlayers.map(p => p.level)) 
+		: 1;
+	$: minPlayerLevel = Math.max(1, maxPlayerLevel - 2)
+	$: totalPartyLevels = partyPlayers.reduce((sum, p) => sum + p.level, 0)
+	$: maxExpTotal = (totalPartyLevels * 50) * difficultyMultipliers[difficulty]
 
-	let biome = "forest"
+
+	let biome = ""
+	let difficulty: 'low' | 'moderate' | 'high' = 'low'
 	let pokemonType: PokeType
 	let encounterCategory: 'Wild' | 'Trainer' = 'Wild'
 	let wildEncounter: string
+	let arePokemonLimited: 'yes' | 'no' = 'no'
 	let trainerEncounter: string
+	let pokemonLimit: number = 1
 	let selectedPokemon: {data: PokemonSpecies, count: number, level: number}[] = []
-	let maxSrTotal = 5
 
 	let partyPlayers: { id: number, level: number, numberOfPokemon: number }[] = [];
     let nextPlayerId = 1;
@@ -59,7 +86,7 @@
         partyPlayers = partyPlayers.filter(p => p.id !== id);
     }
 
-	const addPokemonToEncounter = (pokemon: PokemonSpecies) => {
+	const addPokemonToEncounter = (pokemon: PokemonSpecies, level?: number) => {
 		const pokemonId = pokemon.data.id
 
 		// If already selected, increase count
@@ -68,7 +95,7 @@
 			existing.count += 1
 			selectedPokemon = [...selectedPokemon]
 		} else {
-			selectedPokemon = [...selectedPokemon, { data: pokemon, count: 1, level: 1}]
+			selectedPokemon = [...selectedPokemon, { data: pokemon, count: 1, level: level || 1}]
 		}
 	}
 
@@ -80,17 +107,10 @@
 		selectedPokemon = []
 		const pokemonPool: PokemonSpecies[] = []
 
-		// Build pool by biome (and optional type)
 		for (let i = 0; i < pokemonToRender.length; i++) {
 			const pokemon = pokemonToRender[i]
-			const pokemonBiomes = pokemon.data.habitat.biomes
-
-			const hasBiome = pokemonBiomes.includes(biome)
-			console.log(pokemon.data.type);
-			
-			const hasType =
-				!pokemonType ||
-				pokemon.data.type.includes(pokemonType)
+			const hasBiome = biome === "" || pokemon.data.habitat.biomes.includes(biome)
+			const hasType = !pokemonType || pokemon.data.type.includes(pokemonType)
 
 			if (hasBiome && hasType) {
 				pokemonPool.push(pokemon)
@@ -99,36 +119,47 @@
 
 		if (pokemonPool.length === 0) return
 
-		let currentTotalSr = 0
-		// Safety to avoid infinite loops
+		let currentTotalExp = 0
+		let currentPokemonCount = 0
 		let attempts = 0
 		const MAX_ATTEMPTS = 500
 
 		while (attempts < MAX_ATTEMPTS) {
 			attempts++
 
-			const randomPokemon =
-				pokemonPool[Math.floor(Math.random() * pokemonPool.length)]
+			if (arePokemonLimited === 'yes' && currentPokemonCount >= pokemonLimit) break
 
-			const sr = Number(randomPokemon.data.sr)
+			const remainingExp = maxExpTotal - currentTotalExp
+			if (remainingExp <= 0) break
 
-			// Would exceed limit → skip
-			if (currentTotalSr + sr > maxSrTotal) {
-				// Check if *any* pokemon can still fit
-				const canStillAdd = pokemonPool.some(
-					(p) => currentTotalSr + Number(p.data.sr) <= maxSrTotal
-				)
+			const possibleChoices = pokemonPool.map(p => {
+				const randomLevel = Math.floor(Math.random() * (maxPlayerLevel - minPlayerLevel + 1)) + minPlayerLevel
+				const exp = experienceAwarded(randomLevel, Number(p.data.sr))
+				return { pokemon: p, level: randomLevel, exp }
+			}).filter(opt => opt.exp <= remainingExp)
 
-				if (!canStillAdd) break
+			if (possibleChoices.length === 0) break
 
-				continue
+			let chosen: { pokemon: PokemonSpecies, level: number, exp: number }
+
+			if (arePokemonLimited === 'yes') {
+				const slotsLeft = pokemonLimit - currentPokemonCount
+				const targetExpPerPoke = remainingExp / slotsLeft
+
+				possibleChoices.sort((a, b) => 
+					Math.abs(a.exp - targetExpPerPoke) - Math.abs(b.exp - targetExpPerPoke)
+				);
+				
+				const topTier = possibleChoices.slice(0, 3)
+				chosen = topTier[Math.floor(Math.random() * topTier.length)]
+			} else {
+				chosen = possibleChoices[Math.floor(Math.random() * possibleChoices.length)]
 			}
 
-			// Add it
-			currentTotalSr += sr
-			addPokemonToEncounter(randomPokemon)
-			// Stop if we hit exactly
-			if (currentTotalSr === maxSrTotal) break
+			currentTotalExp += chosen.exp
+			currentPokemonCount += 1
+
+			addPokemonToEncounter(chosen.pokemon, chosen.level)
 		}
 	}
 
@@ -144,7 +175,7 @@
 	
 	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Pokémon List">
 		{#if pokemonToRender !== undefined}
-			<PokemonSpeciesList pokemons={pokemonToRender} onClick={addPokemonToEncounter} disableLink={true} />
+			<PokemonSpeciesList pokemons={pokemonToRender} onClick={(pokemon) => addPokemonToEncounter(pokemon)} disableLink={true} />
 		{:else}
 			<Loader />
 		{/if}
@@ -152,7 +183,7 @@
 	
 	<Card title="Encounter Tool">
 		<section>
-			<p>Welcome to the Encounter Tool! Please, keep in mind that this system is being currently testing and might not be accurately balanced.</p>
+			<p>Welcome to the Encounter Tool! Please, keep in mind that this system is being currently tested and might not be accurately balanced.</p>
 		</section>
 
 		<section>
@@ -187,6 +218,18 @@
 					<SelectField label="Encounter type" options={wildEncounterOptions} bind:value={wildEncounter}/>
 				{:else}
 					<SelectField label="Encounter type" options={trainerEncounterOptions} bind:value={trainerEncounter}/>
+				{/if}
+			</div>
+			<div class="simple-type-field">
+				<SelectField label="Difficulty" options={difficultyOptions} bind:value={difficulty}/>
+				<p class="xp-awarded">{maxExpTotal} XP</p>
+			</div>
+			<div class="simple-type-field">
+				<SelectField label="Pokémon Limit" options={pokemonLimitOptions} bind:value={arePokemonLimited}/>
+				{#if arePokemonLimited === 'yes'}
+					<IntField label="Limit" bind:value={pokemonLimit} min={1}/>
+				{:else}
+					<p></p>
 				{/if}
 			</div>
 		
@@ -245,6 +288,11 @@
 	}
 	.simple-type-field :global(> *) {
 		flex: 1;
+	}
+
+	.xp-awarded {
+		margin-bottom: 0;
+		margin-top: 1em;
 	}
 
 	.pokemon-list {
