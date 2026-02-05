@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { browser } from "$app/environment"
+	import { resolve } from "$app/paths";
 	import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 	import { TrainerLocalStorage } from "$lib/trainers/data/TrainerLocalStorage"
 	import { CodeBlock } from "$lib/ui/elements"
@@ -21,4 +22,5 @@
 	<p>To protect against this, it's a good idea to <strong>back up</strong> your list of trainers and fakémon so that you can recover them.</p>
 	<p>This will be improved in the future. For now, you can copy this list of trainer and fakémon IDs and save them somewhere on your device.</p>
 	<CodeBlock title="IDs and Access Keys" copiable>{toCopy}</CodeBlock>
+	<p hidden><a href="{resolve("/backups")}">Advanced Backups</a></p>
 </section>
