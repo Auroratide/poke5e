@@ -264,7 +264,7 @@
 				{/if}
 
 				{#if selectedPokemon.length > 0}
-                    <div class="encounter-summary">
+                    <div>
                         <p>
                             <strong>Total XP:</strong> {currentEncounterExp} ({currentEncounterExp / partyPlayers.length}/player)
                             <span class="difficulty-badge" style="background-color: {encounterDifficulty.color}">
@@ -361,18 +361,10 @@
 		padding-bottom: 1em;
 	}
 
-	.encounter-summary {
-        margin-top: 1em;
-        padding: 1em;
-        border-radius: 8px;
-        text-align: center;
-    }
-
     .difficulty-badge {
-        display: inline-block;
         padding: 0.2em 0.8em;
-        border-radius: 12px;
-        color: white;
+        border-radius: 100px;
+        color: var(--skin-bg-text);
         font-size: 0.9em;
         font-weight: bold;
         margin-left: 0.5em;
