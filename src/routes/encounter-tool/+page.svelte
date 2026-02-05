@@ -5,33 +5,19 @@
 	import { Button, Loader } from "$lib/ui/elements"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 	import { PokemonSpecies, PokemonSpeciesList, SpeciesStore } from "$lib/poke5e/species"
-	import Title from "$lib/ui/layout/Title.svelte";
-	import { IntField, Removable, SelectField } from "$lib/ui/forms";
-	import { PokemonType, TypeTag, type PokeType } from "$lib/pokemon/types";
-	import Card from "$lib/ui/page/Card.svelte";
-	import Stepper from "$lib/ui/elements/Stepper.svelte";
-	import { experienceAwarded } from "$lib/poke5e/experience";
+	import Title from "$lib/ui/layout/Title.svelte"
+	import { IntField, Removable, SelectField } from "$lib/ui/forms"
+	import { PokemonType, TypeTag, type PokeType } from "$lib/pokemon/types"
+	import Card from "$lib/ui/page/Card.svelte"
+	import Stepper from "$lib/ui/elements/Stepper.svelte"
+	import { experienceAwarded } from "$lib/poke5e/experience"
+	import { tick } from "svelte"
 
 
 	const NONE = ""
 	const canonList = SpeciesStore.canonList()
 	const noneOption = { name: "- None -", value: NONE }
 	const primaryTypeOptions = [noneOption].concat(PokemonType.list.map((it) => ({ name: it, value: it })))
-	const encounterCategoryOptions = [{name: "wild", value: "Wild"}, {name: "trainer", value: "Trainer"}]
-	const wildEncounterOptions = [
-		{name: "Random", value: "random"},
-		{name: "Boss", value: "boss"},
-		{name: "Boss with minions", value: "Boss_with_minions"},
-		{name: "Duo Pokémon", value: "Duo"},
-		{name: "Trio Pokémon", value: "Trio"},
-		{name: "Horde", value: "horde"},
-	]
-	const trainerEncounterOptions = [
-		{name: "Elite", value: "elite"},
-		{name: "Gym Leader", value: "gym_leader"},
-		{name: "Grunt", value: "grunt"},
-		{name: "Random trainer", value: "random_trainer"},
-	]
 	const difficultyOptions = [
 		{name: "Low", value: "low"},
 		{name: "Moderate", value: "moderate"},
@@ -45,7 +31,7 @@
 		low: 1,
 		moderate: 1.5,
 		high: 2,
-	};
+	}
 
 	$: biomes = $page.data.biomes
 	$: ssrPokemon = $page.data.pokemonList
@@ -59,31 +45,47 @@
 	]
 	$: maxPlayerLevel = partyPlayers.length > 0 
 		? Math.max(...partyPlayers.map(p => p.level)) 
-		: 1;
-	$: minPlayerLevel = Math.max(1, maxPlayerLevel - 2)
+		: 1
+	let minPlayerLevel = 1
 	$: totalPartyLevels = partyPlayers.reduce((sum, p) => sum + p.level, 0)
-	$: maxExpTotal = (totalPartyLevels * 50) * difficultyMultipliers[difficulty]
+	$: pokemonExtraModifier = partyPlayers.reduce((acc, p) => {
+		const extra = p.numberOfPokemon > 1 ? (p.numberOfPokemon - 1) * 0.1 : 0
+		return acc + extra
+	}, 0)
+	$: maxExpTotal = Math.round((totalPartyLevels * 50) * (1 + pokemonExtraModifier) * difficultyMultipliers[difficulty])
+	$: currentEncounterExp = selectedPokemon.reduce((sum, p) => {
+		const level = Number(p.level) || 1
+		const sr = Number(p.data.data?.sr) || Number(p.data.sr) || 0
+		const count = Number(p.count) || 1
+		const xp = experienceAwarded(level, sr)
+		return sum + ((isNaN(xp) ? 0 : xp) * count)
+	}, 0)
+	$: encounterDifficulty = (() => {
+		const ratio = currentEncounterExp / maxExpTotal
+		if (ratio < 0.9) return { label: 'Trivial', color: '#9e9e9e' }
+		if (ratio <= 1.15) return { label: 'Low', color: '#4caf50' }
+		if (ratio <= 1.5) return { label: 'Moderate', color: '#ff9800' }
+		if (ratio <= 2) return { label: 'High', color: '#f44336' }
+		return { label: 'Deadly', color: '#7b1fa2' }
+	})()
 
 
 	let biome = ""
 	let difficulty: 'low' | 'moderate' | 'high' = 'low'
 	let pokemonType: PokeType
-	let encounterCategory: 'Wild' | 'Trainer' = 'Wild'
-	let wildEncounter: string
 	let arePokemonLimited: 'yes' | 'no' = 'no'
-	let trainerEncounter: string
 	let pokemonLimit: number = 1
 	let selectedPokemon: {data: PokemonSpecies, count: number, level: number}[] = []
 
-	let partyPlayers: { id: number, level: number, numberOfPokemon: number }[] = [];
-    let nextPlayerId = 1;
+	let partyPlayers: { id: number, level: number, numberOfPokemon: number }[] = []
+    let nextPlayerId = 1
 
     const addPlayer = () => {
-        partyPlayers = [...partyPlayers, { id: nextPlayerId++, level: 1, numberOfPokemon: 1 }];
+        partyPlayers = [...partyPlayers, { id: nextPlayerId++, level: 1, numberOfPokemon: 1 }]
     }
 
     const deletePlayer = (id: number) => {
-        partyPlayers = partyPlayers.filter(p => p.id !== id);
+        partyPlayers = partyPlayers.filter(p => p.id !== id)
     }
 
 	const addPokemonToEncounter = (pokemon: PokemonSpecies, level?: number) => {
@@ -103,10 +105,20 @@
 		selectedPokemon = selectedPokemon.filter((poke) => poke !== pokemon)
 	}
 
-	const generateEncounter = () => {
+	const generateEncounter = async () => {
+		// Generate default party if there is none
+		if (!partyPlayers.length) {
+			for (let index = 0; index < 4; index++) {
+				addPlayer()
+			}
+			// So Svelte can trigger the changes in the side variables
+			await tick()
+		}
+		
 		selectedPokemon = []
 		const pokemonPool: PokemonSpecies[] = []
 
+		// Add Pokémon to the pool
 		for (let i = 0; i < pokemonToRender.length; i++) {
 			const pokemon = pokemonToRender[i]
 			const hasBiome = biome === "" || pokemon.data.habitat.biomes.includes(biome)
@@ -123,7 +135,8 @@
 		let currentPokemonCount = 0
 		let attempts = 0
 		const MAX_ATTEMPTS = 500
-
+		
+		// Choose between Pokémon in the pool
 		while (attempts < MAX_ATTEMPTS) {
 			attempts++
 
@@ -148,7 +161,7 @@
 
 				possibleChoices.sort((a, b) => 
 					Math.abs(a.exp - targetExpPerPoke) - Math.abs(b.exp - targetExpPerPoke)
-				);
+				)
 				
 				const topTier = possibleChoices.slice(0, 3)
 				chosen = topTier[Math.floor(Math.random() * topTier.length)]
@@ -213,14 +226,6 @@
 				<SelectField label="Type in common" options={primaryTypeOptions} bind:value={pokemonType}/>
 			</div>
 			<div class="simple-type-field">
-				<SelectField label="Encounter category" options={encounterCategoryOptions} bind:value={encounterCategory}/>
-				{#if encounterCategory === 'Wild'}
-					<SelectField label="Encounter type" options={wildEncounterOptions} bind:value={wildEncounter}/>
-				{:else}
-					<SelectField label="Encounter type" options={trainerEncounterOptions} bind:value={trainerEncounter}/>
-				{/if}
-			</div>
-			<div class="simple-type-field">
 				<SelectField label="Difficulty" options={difficultyOptions} bind:value={difficulty}/>
 				<p class="xp-awarded">{maxExpTotal} XP</p>
 			</div>
@@ -242,10 +247,13 @@
 					<div class="pokemon-list">
 						{#each selectedPokemon as pokemon (pokemon.data.id)}
 							<div class="pokemon-item">
-								<div class="pokemon-info">
-									<p class="pokemon-name">{pokemon.data.name} <span class="pokemon-level">Lv. <input type="number" bind:value={pokemon.level}></span></p>
-									<p class="pokemon-stats">SR: {pokemon.data.sr}</p>
-									<TypeTag type={pokemon.data.data.type} />
+								<div class="pokemon-data">
+									<img src="{pokemon.data.data.media.values.normalSprite.href}" alt="{pokemon.data.name}" class="pokemon-sprite">
+									<div class="pokemon-info">
+										<p class="pokemon-name">{pokemon.data.name} <span class="pokemon-level">Lv. <input type="number" bind:value={pokemon.level} /></span></p>
+										<p class="pokemon-stats">SR: {pokemon.data.sr} • XP: {experienceAwarded(pokemon.level, pokemon.data.data.sr)}</p>
+										<TypeTag type={pokemon.data.data.type} />
+									</div>
 								</div>
 								<Stepper bind:value={pokemon.count} deleteOnZero={true} on:delete={() => onDelete(pokemon)} />
 							</div>
@@ -254,7 +262,19 @@
 				{:else}
 					<p>No Pokémon added.</p>
 				{/if}
-				<Button variant="success" on:click={clearEncounter}>Clear encounter</Button>
+
+				{#if selectedPokemon.length > 0}
+                    <div class="encounter-summary">
+                        <p>
+                            <strong>Total XP:</strong> {currentEncounterExp} ({currentEncounterExp / partyPlayers.length}/player)
+                            <span class="difficulty-badge" style="background-color: {encounterDifficulty.color}">
+                                {encounterDifficulty.label}
+                            </span>
+                        </p>
+                    </div>
+                {/if}
+
+				<Button variant="danger" on:click={clearEncounter}>Clear encounter</Button>
 				<p> </p>
 			</div>
 		</section>
@@ -309,6 +329,10 @@
 		border-bottom: 1px solid var(--skin-bg-light);
 	}
 
+	.pokemon-data {
+		display: flex;
+	}
+
 	.pokemon-info > p {
 		margin-bottom: 0;
 	}
@@ -321,4 +345,37 @@
 		font-weight: normal;
 		font-size: .8em;
 	}
+	.pokemon-level>input {
+		width: 65px;
+	}
+
+	.pokemon-sprite {
+		display: block;
+		border: none;
+		box-shadow: none;
+		image-rendering: crisp-edges;
+		image-rendering: pixelated;
+		aspect-ratio: 1;
+		object-fit: contain;
+		width: 6em;
+		padding-bottom: 1em;
+	}
+
+	.encounter-summary {
+        margin-top: 1em;
+        padding: 1em;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+    .difficulty-badge {
+        display: inline-block;
+        padding: 0.2em 0.8em;
+        border-radius: 12px;
+        color: white;
+        font-size: 0.9em;
+        font-weight: bold;
+        margin-left: 0.5em;
+        text-transform: uppercase;
+    }
 </style>
