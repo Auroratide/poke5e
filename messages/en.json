@@ -22,7 +22,12 @@
 		"beauty": "Beauty",
 		"cute": "Cute",
 		"clever": "Clever",
-		"tough": "Tough"
+		"tough": "Tough",
+		"attack": "Attack",
+		"damage": "Damage",
+		"save": "Save",
+		"healing": "Healing",
+		"toHit": "to Hit"
 	},
 	"tms": {
 		"title": "TMs"

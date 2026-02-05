@@ -9,15 +9,14 @@
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import type { Attributes } from "$lib/dnd/attributes"
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
-	import { deriveMoveStats } from "$lib/moves/MoveStats"
 	import { createEventDispatcher } from "svelte"
 	import type { LearnedMove } from "../types"
-	import { PlusMinus } from "$lib/ui/elements"
 	import { FlatDl } from "$lib/ui/elements"
 	import type { Level } from "$lib/dnd/level"
 	import type { PokemonType } from "$lib/pokemon/types"
 	import type { Move } from "$lib/moves/Move"
 	import { Url } from "$lib/site/url"
+	import { MoveStatsInfo } from "$lib/moves"
 
 	const dispatch = createEventDispatcher()
 
@@ -30,7 +29,7 @@
 
 	$: currentPp = move.pp.current
 
-	$: movePowers = deriveMoveStats(moveData, {
+	$: moveStats = moveData.calculateMoveStats({
 		attributes: attributes,
 		level: level,
 		type: pokemonType.data,
@@ -49,7 +48,7 @@
 <div class="vstack space-after">
 	<div class="vstack bg-by-type rounded space-inner" style:--bg="var(--skin-{moveData.type}-bg)">
 		<div class="hrow space-after-tiny">
-			<span class="flex-span"><a href="{Url.moves(move.moveId)}">{moveData.name}</a></span>
+			<span class="flex-span bold"><a href="{Url.moves(move.moveId)}">{moveData.name}</a></span>
 			<span class="pp">
 				<VisuallyHidden><label for="current-hp">{moveData.name} PP</label></VisuallyHidden>
 				<span class="current">
@@ -64,13 +63,18 @@
 		</div>
 		<div class="hrow tiny-font">
 			<span class="capitalize flex-span">{moveData.type}</span>
-			<span>
-				{#if movePowers != null}
-					To Hit: <PlusMinus value={movePowers.toHit} />, DC: {movePowers.dc}, Dmg: <PlusMinus value={movePowers.dmg} />
+			<span class="capitalize">
+				{#if moveData.contest}
+					{moveData.contest.contest}
 				{/if}
 			</span>
 		</div>
 	</div>
+	{#if Object.keys(moveStats).length > 0}
+		<div class="move-stats">
+			<MoveStatsInfo value={moveStats} />
+		</div>
+	{/if}
 	<div class="space-inner smaller-font">
 		<FlatDl columns={1}>
 			<dt>Power</dt>
@@ -150,7 +154,9 @@
 	}
 
 	.rounded {
-		border-radius: 0.25rem;
+		border-radius: 0.25em;
+	} .rounded:has(+ .move-stats) {
+		border-radius: 0.25em 0.25em 0 0;
 	}
 
 	.space-inner {
@@ -167,5 +173,9 @@
 
 	.capitalize {
 		text-transform: capitalize;
+	}
+
+	.bold {
+		font-weight: bold;
 	}
 </style>

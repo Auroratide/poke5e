@@ -16838,7 +16838,7 @@
 					"10": "2d8",
 					"17": "4d6"
 				},
-				"modifier": "MOVE + LOYALTY",
+				"modifier": "MOVE",
 				"type": [
 					"normal"
 				]

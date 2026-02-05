@@ -19,7 +19,7 @@ export const GET: RequestHandler = async () => {
 
 		return {
 			...it,
-			contest: contest == null ? undefined : ContestMoveEffect.normalizeContestId(contest, contestEffects)
+			contest: contest == null ? undefined : ContestMoveEffect.normalizeContestId(contest, contestEffects),
 		}
 	})
 

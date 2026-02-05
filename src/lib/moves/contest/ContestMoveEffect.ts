@@ -20,5 +20,5 @@ export const ContestMoveEffect = {
 			...denormalized,
 			effect: effects.find((effect) => effect.id === denormalized.effect),
 		}
-	}
+	},
 }
