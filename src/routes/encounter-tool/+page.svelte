@@ -266,7 +266,7 @@
 				{#if selectedPokemon.length > 0}
                     <div>
                         <p>
-                            <strong>Total XP:</strong> {currentEncounterExp} ({currentEncounterExp / partyPlayers.length}/player)
+                            <strong>Total XP:</strong> {currentEncounterExp} ({Math.round(currentEncounterExp / partyPlayers.length)}/player)
                             <span class="difficulty-badge" style="background-color: {encounterDifficulty.color}">
                                 {encounterDifficulty.label}
                             </span>
