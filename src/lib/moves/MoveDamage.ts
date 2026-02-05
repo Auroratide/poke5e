@@ -1,6 +1,7 @@
 import { DataClass } from "$lib/DataClass"
 import type { Level } from "$lib/dnd/level"
 import type { PokeType } from "$lib/pokemon/types"
+import type { RulesVersion } from "$lib/site/rules-version"
 
 export class MoveDamage extends DataClass<{
 	dice: {
@@ -12,7 +13,7 @@ export class MoveDamage extends DataClass<{
 	modifier: string | number,
 	type: PokeType[] | "typeless" | "healing" | "stellar",
 }> {
-	damage(mod: number, hasStab: boolean, level: Level): {
+	damage(mod: number, hasStab: boolean, level: Level, rulesVersion: RulesVersion): {
 		dice: string,
 		mod: number,
 		isHealing: boolean,
@@ -24,7 +25,7 @@ export class MoveDamage extends DataClass<{
 		} else {
 			const patternMatch = modifierCode.match(/MOVE(\s*\+\s*(\d+))?/i)
 			if (patternMatch) {
-				trueModifier = mod + (hasStab ? mod : 0)
+				trueModifier = mod + (hasStab ? this.stab(level, mod, rulesVersion) : 0)
 				trueModifier += parseInt(patternMatch[2] ?? "0")
 			}
 		}
@@ -34,6 +35,12 @@ export class MoveDamage extends DataClass<{
 			mod: trueModifier,
 			isHealing: this.data.type === "healing",
 		}
+	}
+
+	private stab(level: Level, mod: number, rulesVersion: RulesVersion): number {
+		return rulesVersion === "2018"
+			? Math.floor((level.data + 1) / 4)
+			: Math.max(mod, 0)
 	}
 
 	private getDamageDice(level: number) {

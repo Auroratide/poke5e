@@ -3,6 +3,7 @@ import type { Attributes } from "$lib/dnd/attributes"
 import type { Level } from "$lib/dnd/level"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import type { PokeType } from "$lib/pokemon/types"
+import type { RulesVersion } from "$lib/site/rules-version"
 import type { BodyText } from "$lib/ui/rendering/types"
 import { ContestDetails } from "./contest/ContestDetails"
 import { MoveAttack } from "./MoveAttack"
@@ -69,7 +70,7 @@ export class Move extends DataClass<{
 		return allPokemon.filter((pokemon) => pokemon.moves.canLearnViaTm(this))
 	}
 
-	calculateMoveStats(forCharacter: {
+	calculateMoveStats(rulesVersion: RulesVersion, forCharacter: {
 		attributes: Attributes,
 		level: Level,
 		type: PokeType[],
@@ -88,7 +89,7 @@ export class Move extends DataClass<{
 
 		result.toHit = this.attack?.toHit(pb, attributeMod)
 		result.save = this.save?.withDc(pb, attributeMod)
-		result.damage = this.damage?.damage(attributeMod, hasStab, forCharacter.level)
+		result.damage = this.damage?.damage(attributeMod, hasStab, forCharacter.level, rulesVersion)
 
 		return result
 	}

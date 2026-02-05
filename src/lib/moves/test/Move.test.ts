@@ -191,7 +191,7 @@ describe("calculateMoveStats", () => {
 		})
 	
 		// +2 from int, +2 from level
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
@@ -221,7 +221,7 @@ describe("calculateMoveStats", () => {
 		})
 	
 		// +0 from dex, +2 from level
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
@@ -251,7 +251,7 @@ describe("calculateMoveStats", () => {
 		})
 	
 		// +4 from cha, +2 from level
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
@@ -280,7 +280,7 @@ describe("calculateMoveStats", () => {
 			save: stubMoveSave().data,
 		})
 	
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
@@ -298,7 +298,7 @@ describe("calculateMoveStats", () => {
 			save: stubMoveSave().data,
 		})
 	
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
@@ -317,7 +317,7 @@ describe("calculateMoveStats", () => {
 		})
 	
 		// +2 from int, +2 from level, +2 from STAB
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
@@ -336,6 +336,36 @@ describe("calculateMoveStats", () => {
 			},
 		})
 	})
+
+	test("has STAB (2018)", () => {
+		const move = stubMove({
+			power: ["int"],
+			type: "psychic",
+			damage: stubMoveDamage().data,
+			attack: stubMoveAttack().data,
+			save: stubMoveSave().data,
+		})
+	
+		// +2 from int, +2 from level, +1 from STAB
+		const result = move.calculateMoveStats("2018", {
+			attributes: ATTRIBUTES,
+			level: new Level(4),
+			type: ["psychic"],
+		})
+	
+		expect(result).toEqual({
+			toHit: 4,
+			save: {
+				attribute: ["dex"],
+				dc: 12,
+			},
+			damage: {
+				dice: "1d4",
+				mod: 3,
+				isHealing: false,
+			},
+		})
+	})
 	
 	test("higher level", () => {
 		const move = stubMove({
@@ -347,7 +377,7 @@ describe("calculateMoveStats", () => {
 		})
 	
 		// +2 from int, +6 from level
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(20),
 			type: ["psychic"],
@@ -374,7 +404,7 @@ describe("calculateMoveStats", () => {
 			damage: stubMoveDamage().data,
 		})
 	
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(9),
 			type: ["psychic"],
@@ -398,7 +428,7 @@ describe("calculateMoveStats", () => {
 			}).data,
 		})
 	
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
@@ -422,7 +452,7 @@ describe("calculateMoveStats", () => {
 			}).data,
 		})
 	
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
@@ -447,7 +477,7 @@ describe("calculateMoveStats", () => {
 		})
 	
 		// +2 from int, +2 from level, +2 from STAB
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic", "normal"],
@@ -476,7 +506,7 @@ describe("calculateMoveStats", () => {
 			save: stubMoveSave().data,
 		})
 	
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
@@ -504,7 +534,7 @@ describe("calculateMoveStats", () => {
 			save: undefined,
 		})
 	
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
@@ -529,7 +559,7 @@ describe("calculateMoveStats", () => {
 			save: stubMoveSave().data,
 		})
 	
-		const result = move.calculateMoveStats({
+		const result = move.calculateMoveStats("2024", {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],

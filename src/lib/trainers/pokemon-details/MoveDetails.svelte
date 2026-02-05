@@ -17,6 +17,7 @@
 	import type { Move } from "$lib/moves/Move"
 	import { Url } from "$lib/site/url"
 	import { MoveStatsInfo } from "$lib/moves"
+	import { rulesVersion } from "$lib/site/rules-version"
 
 	const dispatch = createEventDispatcher()
 
@@ -29,7 +30,7 @@
 
 	$: currentPp = move.pp.current
 
-	$: moveStats = moveData.calculateMoveStats({
+	$: moveStats = moveData.calculateMoveStats($rulesVersion, {
 		attributes: attributes,
 		level: level,
 		type: pokemonType.data,
