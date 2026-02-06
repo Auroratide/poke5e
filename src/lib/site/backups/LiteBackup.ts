@@ -61,7 +61,10 @@ function validate(json: object): json is LiteBackup {
 	return true
 }
 
-async function restoreBackup(blob: Blob) {
+async function restoreBackup(blob: Blob): Promise<{
+	trainers: number,
+	fakemon: number,
+}> {
 	let backup: object = {}
 	try {
 		const rawData = await blob.text()
@@ -81,6 +84,11 @@ async function restoreBackup(blob: Blob) {
 			if (it.writeKey)
 				TrainerLocalStorage.addWriteKey(it.readKey, it.writeKey)
 		})
+
+		return {
+			trainers: backup.trainers.length,
+			fakemon: backup.fakemon.length,
+		}
 	}
 }
 

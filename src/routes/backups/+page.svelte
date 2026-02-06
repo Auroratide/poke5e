@@ -53,8 +53,8 @@
 		const file = (e.target as HTMLInputElement).files[0]
 		if (file) {
 			try {
-				await LiteBackup.restore(file)
-				showSuccess("Backup successfully restored!")
+				const stats = await LiteBackup.restore(file)
+				showSuccess(`Backup successfully restored! Found ${stats.trainers} trainers and ${stats.fakemon} fakémon.`)
 			} catch (e) {
 				showError(`Something went wrong restoring the backup. ${e.message}`)
 			}
