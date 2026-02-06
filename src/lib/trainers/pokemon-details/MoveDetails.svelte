@@ -71,7 +71,7 @@
 			</span>
 		</div>
 	</div>
-	{#if Object.keys(moveStats).length > 0}
+	{#if Object.values(moveStats).filter((it) => it != null).length > 0}
 		<div class="move-stats">
 			<MoveStatsInfo value={moveStats} />
 		</div>

@@ -28,7 +28,7 @@
 					{m["moves.damage"]()}
 				{/if}
 			</dt>
-			<dd>{value.damage.dice}{#if value.damage.mod > 0} + {value.damage.mod}{/if}</dd>
+			<dd>{value.damage.dice}{#if value.damage.mod > 0}&nbsp;+ {value.damage.mod}{/if}</dd>
 		</div>
 	{/if}
 </dl>

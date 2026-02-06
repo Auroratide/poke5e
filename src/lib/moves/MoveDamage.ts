@@ -24,7 +24,9 @@ export class MoveDamage extends DataClass<{
 			trueModifier = modifierCode
 		} else {
 			const patternMatch = modifierCode.match(/MOVE(\s*\+\s*(\d+))?/i)
-			if (patternMatch) {
+			if (modifierCode === "LEVEL") {
+				trueModifier = level.data
+			} else if (patternMatch) {
 				trueModifier = mod + (hasStab ? this.stab(level, mod, rulesVersion) : 0)
 				trueModifier += parseInt(patternMatch[2] ?? "0")
 			}
