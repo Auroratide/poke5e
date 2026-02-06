@@ -50,6 +50,9 @@
 	"fakemon": {
 		"title": "Fakémon"
 	},
+	"backups": {
+		"title": "Backups"
+	},
 	"settings": {
 		"title": "Settings",
 		"language": "Language"

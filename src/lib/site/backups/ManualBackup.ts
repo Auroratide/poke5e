@@ -9,7 +9,7 @@ function createBackup(): string {
 
 	const fakemon = FakemonLocalStorage.list()
 
-	const toCopy = `# Trainers\n\nTrainer ID   | Access Key\n-------------|-----------------\n${trainers.map((it) => `${it.readKey} | ${it.writeKey ?? ""}`).join("\n")}\n\n\n# Fakemon\n\nFakemon ID    | Access Key\n--------------|-----------------\n${fakemon.map((it) => `${it.readKey} | ${it.writeKey ?? ""}`).join("\n")}`
+	const toCopy = `# Trainers\n\nTrainer ID   | Access Key\n-------------|-----------------\n${trainers.map((it) => `${it.readKey} | ${it.writeKey ?? ""}`).join("\n")}\n\n\n# Fakemon\n\nFakemon ID      | Access Key\n----------------|-----------------\n${fakemon.map((it) => `F.${it.readKey} | ${it.writeKey ?? ""}`).join("\n")}`
 
 	return toCopy
 }

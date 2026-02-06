@@ -4,32 +4,32 @@
 
 <IconBase title="Backup">
 	<path class="stroke main-body" d="
-		M 15 10
-		L 75 10
-		L 90 25
-		L 90 85
-		Q 90 90 85 90
-		L 15 90
-		Q 10 90 10 85
-		L 10 15
-		Q 10 10 15 10
+		M 20 15
+		L 70 15
+		L 85 30
+		L 85 80
+		Q 85 85 80 85
+		L 20 85
+		Q 15 85 15 80
+		L 15 20
+		Q 15 15 20 15
 		Z
 	" />
-	<rect class="stroke top"
-		width="40"
-		height="30"
-		x="30"
-		y="10"
+	<rect class="stroke thin top"
+		width="35"
+		height="28"
+		x="32.5"
+		y="15"
 		rx="2.5"
 		ry="2.5"
 	/>
-	<rect class="stroke bottom"
+	<rect class="stroke thin bottom"
 		width="45"
 		height="28"
 		x="27.5"
-		y="61"
+		y="57"
 		rx="2.5"
 		ry="2.5"
 	/>
-	<line class="stroke" x1="58" y1="18" x2="58" y2="32" />
+	<line class="stroke" x1="58" y1="22" x2="58" y2="36" />
 </IconBase>

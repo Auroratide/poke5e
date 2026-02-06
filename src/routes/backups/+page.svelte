@@ -6,6 +6,7 @@
 	import { BackupIcon } from "$lib/ui/icons"
 	import { Button, CodeBlock, FileUploadButton } from "$lib/ui/elements"
 	import { LiteBackup, ManualBackup } from "$lib/site/backups"
+	import { browser } from "$app/environment"
 
 	const TRANSITION_DURATION_MS = 200
 
@@ -61,13 +62,13 @@
 		}
 	}
 
-	const manualBackup = ManualBackup.create()
+	const manualBackup = browser ? ManualBackup.create() : ""
 </script>
 
-<Title value="Backups" />
+<Title value="Backup and Restoration" />
 <Page theme="grey">
 	<BackupIcon slot="icon" />
-	<Card title="Backups">
+	<Card title="Backup and Restoration">
 		<section>
 			<p>All of the data for your trainers and custom pokemon are stored locally on your computer. This is why you don't need an account to use the Poké 5e app! Unfortunately, it also means you can lose your data if your browser's data gets cleared.</p>
 			<p>To protect against this, it's a good idea to <strong>back up</strong> your list of trainers and fakémon so that you can recover them, just in case.</p>
