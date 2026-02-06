@@ -14,6 +14,8 @@ const config = {
 		prerender: {
 			entries: [
 				"*",
+				// hidden pages
+				"/backups/schemas/2026-02",
 				// backward compatibility
 				"/pokemon.json",
 				"/pokemon/[id].json"
