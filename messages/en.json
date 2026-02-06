@@ -57,6 +57,7 @@
 		"downloadDescription": "This will download a <code>.poke5e</code> file containing the IDs and Access Keys of all your Trainers and Fakémon.",
 		"downloadSuccessful": "Backup successfully downloaded!",
 		"restore": "Restore Backup File",
+		"restoring": "Restoring...",
 		"restoreDescription": "Choose a <code>.poke5e</code> file on your device. This adds the Trainers and Fakémon in the file to this site.",
 		"restoreSuccessful": "Backup successfully restored! Found {trainers} trainers and {fakemon} fakémon.",
 		"restoreError": "Something went wrong restoring the backup. {message}",

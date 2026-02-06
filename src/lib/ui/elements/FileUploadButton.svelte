@@ -9,7 +9,7 @@
 	export let accept: string | undefined = undefined
 </script>
 
-<label class="button {variant} {align} {width}" for="{id}"><slot></slot></label>
+<label class="button {variant} {align} {width}" class:disabled for="{id}"><slot></slot></label>
 <VisuallyHidden inline>
 	<input {id} type="file" on:change {accept} {disabled} />
 </VisuallyHidden>
