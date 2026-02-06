@@ -1,3 +1,5 @@
+import { Url } from "$lib/site/url"
+
 export type VersionHistory = {
 	versions: {
 		name: `v${number}.${number}.${number}`,
@@ -12,6 +14,14 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.9.8",
+		description: [
+			`New! On the <a href="${Url.backups.home()}">Backups Page</a>, You can back up your trainers and fakémon to a file, and restore your trainers and fakémon from backup files, in case they get lost.`,
+			"Trainer Pokémon moves now show which dice to use based on the pokémon's level. Additionally, STAB now accounts for 2018 vs 2024 rulesets.",
+			"Trainer Pokémon moves now only show the rolls necessary to execute the move (i.e. hide Save DC if the move does not call for a saving throw).",
+			"Moves with Contest Rules now show the actual contest mechanics associated with the move's description. Note: Contest Rules will be coming soon on the Reference!",
+		],
+	}, {
 		name: "v1.9.7",
 		description: [
 			"Image uploading now allows drag & drop from computer's files.",
