@@ -29,6 +29,12 @@ export const Url = {
 	feedback: () => localizeUrl(resolve("/feedback")).pathname,
 	accessibility: () => localizeUrl(resolve("/accessibility")).pathname,
 	privacyPolicy: () => localizeUrl(resolve("/privacy-policy")).pathname,
+	backups: {
+		home: () => localizeUrl(resolve("/backups")).pathname,
+		schemas: {
+			"202602": () => resolve("/backups/schemas/2026-02"),
+		},
+	},
 	reference: {
 		all: () => localizeUrl(resolve("/reference")).pathname,
 		introduction: () => localizeUrl(resolve("/reference/introduction")).pathname,
