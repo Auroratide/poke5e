@@ -1,1 +1,0 @@
-import{w as i,g as t}from"./CfLLFfri.js";import{F as r}from"./DpUmkZHt.js";import{U as n}from"./Dbn7Z9Ox.js";const a="OfficialFakemonRemovedBanner",m=localStorage.getItem(a)==="true",e=i(m);e.subscribe(o=>localStorage.setItem(a,o.toString()));function c(){r.initializeOriginalOfficialFakemon(),e.set(!0),t(n.fakemon())}export{e as O,c as r};
