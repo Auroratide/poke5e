@@ -4,8 +4,8 @@
 	import { Page } from "$lib/ui/layout"
 	import { Title } from "$lib/ui/layout"
 	import { BackupIcon } from "$lib/ui/icons"
-	import { Button, FileUploadButton } from "$lib/ui/elements"
-	import { LiteBackup } from "$lib/site/backups"
+	import { Button, CodeBlock, FileUploadButton } from "$lib/ui/elements"
+	import { LiteBackup, ManualBackup } from "$lib/site/backups"
 
 	const TRANSITION_DURATION_MS = 200
 
@@ -60,6 +60,8 @@
 			}
 		}
 	}
+
+	const manualBackup = ManualBackup.create()
 </script>
 
 <Title value="Backups" />
@@ -92,6 +94,12 @@
 				<p>{status.message}</p>
 			</section>
 		{/if}
+		<section>
+			<h2>Manual Backup</h2>
+			<p>If you wish to manually keep your trainer IDs and Fakémon somewhere, you may copy them from below.</p>
+			<CodeBlock title="IDs and Access Keys" copiable>{manualBackup}</CodeBlock>
+			<p><strong>Note:</strong> The manual backup cannot be uploaded to automatically restore missing trainers and fakémon.</p>
+		</section>
 	</Card>
 </Page>
 
