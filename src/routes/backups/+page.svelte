@@ -1,34 +1,62 @@
 <script lang="ts">
+	import { slide } from "svelte/transition"
 	import { Card } from "$lib/ui/page"
 	import { Page } from "$lib/ui/layout"
 	import { Title } from "$lib/ui/layout"
-	import { CogIcon } from "$lib/ui/icons"
-	import { Button } from "$lib/ui/elements"
+	import { BackupIcon } from "$lib/ui/icons"
+	import { Button, FileUploadButton } from "$lib/ui/elements"
 	import { LiteBackup } from "$lib/site/backups"
+
+	const TRANSITION_DURATION_MS = 200
+
+	let status: undefined | {
+		type: "success" | "error",
+		message: string,
+	} = undefined
+	let statusTimeout = -1
+	const showStatus = (type: "success" | "error") => (message: string) => {
+		window.clearTimeout(statusTimeout)
+		if (status != null) {
+			status = undefined
+			statusTimeout = window.setTimeout(() => {
+				status = { type, message }
+			}, TRANSITION_DURATION_MS + 10)
+		} else {
+			status = { type, message }
+		}
+	}
+	const hideStatus = () => {
+		window.clearTimeout(statusTimeout)
+		status = undefined
+	}
+
+	const showSuccess = showStatus("success")
+	const showError = showStatus("error")
 
 	const onSaveBackup = async () => {
 		const backup = await LiteBackup.create()
 		const url = URL.createObjectURL(backup)
+		const date = new Date()
+		const filename = `backup-${date.getFullYear()}${(date.getMonth() + 1).toString().padStart(2, "0")}${date.getDate().toString().padStart(2, "0")}${date.getHours().toString().padStart(2, "0")}${date.getMinutes().toString().padStart(2, "0")}${date.getSeconds().toString().padStart(2, "0")}.poke5e`
 
 		const link = document.createElement("a")
 		link.href = url
-		link.download = `backup-${new Date().toISOString()}.poke5e`
+		link.download = filename
 		link.click()
 
 		URL.revokeObjectURL(url)
-	}
 
-	let succeeded = false
-	let error: string | undefined = undefined
+		showSuccess("Backup successfully downloaded!")
+	}
 
 	const onRestoreBackup = async (e: Event) => {
 		const file = (e.target as HTMLInputElement).files[0]
 		if (file) {
 			try {
 				await LiteBackup.restore(file)
-				succeeded = true
+				showSuccess("Backup successfully restored!")
 			} catch (e) {
-				error = e.message
+				showError(`Something went wrong restoring the backup. ${e.message}`)
 			}
 		}
 	}
@@ -36,25 +64,88 @@
 
 <Title value="Backups" />
 <Page theme="grey">
-	<CogIcon slot="icon" />
+	<BackupIcon slot="icon" />
 	<Card title="Backups">
 		<section>
-			<p>This is a work in progress.</p>
+			<p>All of the data for your trainers and custom pokemon are stored locally on your computer. This is why you don't need an account to use the Poké 5e app! Unfortunately, it also means you can lose your data if your browser's data gets cleared.</p>
+			<p>To protect against this, it's a good idea to <strong>back up</strong> your list of trainers and fakémon so that you can recover them, just in case.</p>
 		</section>
-		<section>
-			<h2>Save Backup</h2>
-			<Button on:click={onSaveBackup}>Download Backup File</Button>
-		</section>
-		<section style:margin-block-end="1em">
-			<h2>Restore Backup</h2>
-			<label for="restore-backup">Upload Backup File</label>
-			<input id="restore-backup" type="file" on:change={onRestoreBackup} accept=".poke5e" />
-			{#if succeeded}
-				<p>Backup is restored!</p>
-			{/if}
-			{#if error}
-				<p><strong>Error:</strong> {error}</p>
-			{/if}
-		</section>
+		<div class="row">
+			<section>
+				<p class="button-wrapper">
+					<Button on:click={onSaveBackup}>Download Backup File</Button>
+				</p>
+				<p class="description">This will download a <code>.poke5e</code> file containing the IDs and Access Keys of all your Trainers and Fakémon.</p>
+			</section>
+			<section>
+				<p class="button-wrapper">
+					<FileUploadButton id="restore-backup" on:change={onRestoreBackup} accept=".poke5e">
+						Restore Backup File
+					</FileUploadButton>
+				</p>
+				<p class="description">Choose a <code>.poke5e</code> file on your device. This adds the Trainers and Fakémon in the file to this site.</p>
+			</section>
+		</div>
+		{#if status}
+			<section aria-live="assertive" class="status status-{status.type}" transition:slide={{ duration: TRANSITION_DURATION_MS }}>
+				<button class="close-button" aria-label="dismiss" on:click={hideStatus}>&times;</button>
+				<p>{status.message}</p>
+			</section>
+		{/if}
 	</Card>
 </Page>
+
+<style>
+	code { font-size: var(--font-sz-venus); }
+	.row {
+		text-align: center;
+		padding-block: 1em;
+		display: flex;
+		flex-direction: column;
+		row-gap: 1.5em;
+	}
+
+	.button-wrapper { font-size: var(--font-sz-neptune); }
+	.description { font-size: var(--font-sz-venus); }
+
+	.status {
+		text-align: center;
+		padding: 1em;
+		margin-block-end: 1.5em;
+		border: 0.25em solid;
+		margin-inline: auto;
+		max-inline-size: 25em;
+		box-shadow: var(--elev-stratus);
+		border-radius: 0.5em;
+		position: relative;
+	} .status.status-success {
+		border-color: var(--skin-success-bg);
+		background: var(--skin-success-light);
+	} .status.status-error {
+		border-color: var(--skin-danger-bg);
+		background: var(--skin-danger-light);
+	} .status p {
+		margin: 0;
+	}
+
+	.close-button {
+		position: absolute;
+		inset: 0 0 auto auto;
+		font-size: 1em;
+		border: none;
+		background: none;
+		border-radius: 1em;
+		cursor: pointer;
+	} .close-button:hover, .close-button:focus {
+		background: oklch(0 0 0 / 0.125);
+	}
+
+	@media screen and (min-width: 37.5rem) {
+		.row {
+			display: flex;
+			flex-direction: row;
+		} .row > * {
+			flex: 1;
+		}
+	}
+</style>
