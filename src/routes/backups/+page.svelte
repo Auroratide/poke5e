@@ -8,6 +8,7 @@
 	import { LiteBackup, ManualBackup } from "$lib/site/backups"
 	import { browser } from "$app/environment"
 	import { m } from "$lib/site/i18n"
+	import * as Analytics from "$lib/site/analytics"
 
 	const TRANSITION_DURATION_MS = 200
 
@@ -57,8 +58,10 @@
 			try {
 				const stats = await LiteBackup.restore(file)
 				showSuccess(m["backups.restoreSuccessful"](stats))
+				Analytics.createBackupRecoveryEvent("success")
 			} catch (e) {
 				showError(m["backups.restoreError"]({ message: e.message }))
+				Analytics.createBackupRecoveryEvent("error")
 			}
 		}
 	}
