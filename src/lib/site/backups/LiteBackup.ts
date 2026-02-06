@@ -5,6 +5,8 @@ import { TrainerLocalStorage } from "$lib/trainers/data/TrainerLocalStorage"
 import type { Trainer, WithWriteKey } from "$lib/trainers/types"
 import { Url } from "../url"
 import { BackupError } from "./BackupError"
+import { fakemonStore } from "$lib/fakemon/store"
+import { trainers } from "$lib/trainers/trainers"
 
 export type LiteBackup = {
 	$schema: string,
@@ -85,9 +87,17 @@ async function restoreBackup(blob: Blob): Promise<{
 				TrainerLocalStorage.addWriteKey(it.readKey, it.writeKey)
 		})
 
+		const foundFakemon = (await Promise.all(backup.fakemon.map((it) => {
+			return fakemonStore.get(it.readKey)
+		}))).filter((it) => it != null)
+
+		const foundtrainers = (await Promise.all(backup.trainers.map((it) => {
+			return trainers.get(it.readKey)
+		}))).filter((it) => it != null)
+
 		return {
-			trainers: backup.trainers.length,
-			fakemon: backup.fakemon.length,
+			trainers: foundtrainers.length,
+			fakemon: foundFakemon.length,
 		}
 	}
 }
