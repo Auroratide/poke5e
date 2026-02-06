@@ -7,6 +7,7 @@
 	import { Button, CodeBlock, FileUploadButton } from "$lib/ui/elements"
 	import { LiteBackup, ManualBackup } from "$lib/site/backups"
 	import { browser } from "$app/environment"
+	import { m } from "$lib/site/i18n"
 
 	const TRANSITION_DURATION_MS = 200
 
@@ -47,7 +48,7 @@
 
 		URL.revokeObjectURL(url)
 
-		showSuccess("Backup successfully downloaded!")
+		showSuccess(m["backups.downloadSuccessful"]())
 	}
 
 	const onRestoreBackup = async (e: Event) => {
@@ -55,9 +56,9 @@
 		if (file) {
 			try {
 				const stats = await LiteBackup.restore(file)
-				showSuccess(`Backup successfully restored! Found ${stats.trainers} trainers and ${stats.fakemon} fakémon.`)
+				showSuccess(m["backups.restoreSuccessful"](stats))
 			} catch (e) {
-				showError(`Something went wrong restoring the backup. ${e.message}`)
+				showError(m["backups.restoreError"]({ message: e.message }))
 			}
 		}
 	}
@@ -70,23 +71,26 @@
 	<BackupIcon slot="icon" />
 	<Card title="Backup and Restoration">
 		<section>
-			<p>All of the data for your trainers and custom pokemon are stored locally on your computer. This is why you don't need an account to use the Poké 5e app! Unfortunately, it also means you can lose your data if your browser's data gets cleared.</p>
-			<p>To protect against this, it's a good idea to <strong>back up</strong> your list of trainers and fakémon so that you can recover them, just in case.</p>
+			{@html m["backups.introduction"]()}
 		</section>
 		<div class="row">
 			<section>
 				<p class="button-wrapper">
-					<Button on:click={onSaveBackup}>Download Backup File</Button>
+					<Button on:click={onSaveBackup}>{m["backups.download"]()}</Button>
 				</p>
-				<p class="description">This will download a <code>.poke5e</code> file containing the IDs and Access Keys of all your Trainers and Fakémon.</p>
+				<p class="description">
+					{@html m["backups.downloadDescription"]()}
+				</p>
 			</section>
 			<section>
 				<p class="button-wrapper">
 					<FileUploadButton id="restore-backup" on:change={onRestoreBackup} accept=".poke5e">
-						Restore Backup File
+						{m["backups.restore"]()}
 					</FileUploadButton>
 				</p>
-				<p class="description">Choose a <code>.poke5e</code> file on your device. This adds the Trainers and Fakémon in the file to this site.</p>
+				<p class="description">
+					{@html m["backups.restoreDescription"]()}
+				</p>
 			</section>
 		</div>
 		{#if status}
@@ -96,16 +100,16 @@
 			</section>
 		{/if}
 		<section>
-			<h2>Manual Backup</h2>
-			<p>If you wish to manually keep your trainer IDs and Fakémon somewhere, you may copy them from below.</p>
-			<CodeBlock title="IDs and Access Keys" copiable>{manualBackup}</CodeBlock>
-			<p><strong>Note:</strong> The manual backup cannot be uploaded to automatically restore missing trainers and fakémon.</p>
+			<h2>{m["backups.manual"]()}</h2>
+			<p>{m["backups.manualDescription"]()}</p>
+			<CodeBlock title="{m["backups.manualCodeBlockTitle"]()}" copiable>{manualBackup}</CodeBlock>
+			<p>{@html m["backups.manualDisclaimer"]()}</p>
 		</section>
 	</Card>
 </Page>
 
 <style>
-	code { font-size: var(--font-sz-venus); }
+	section :global(code) { font-size: var(--font-sz-venus); }
 	.row {
 		text-align: center;
 		padding-block: 1em;
