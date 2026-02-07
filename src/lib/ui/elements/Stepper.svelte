@@ -45,13 +45,13 @@
     on:click={decrement}
     disabled={disabled || value <= min}
 	  class={canBeDeleted ? 'can-be-deleted' : ''}
-    aria-label="Decrease"
+    aria-label={canBeDeleted ? 'Remove' : 'Decrease'}
   >
   	{#if canBeDeleted}
-		x
-	{:else}
-		-
-	{/if}
+		  &times;
+    {:else}
+      -
+    {/if}
   </button>
 </div>
 

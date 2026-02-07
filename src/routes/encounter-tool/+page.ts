@@ -7,8 +7,17 @@ import { error } from "@sveltejs/kit"
 export const load: PageLoad = async ({ fetch }) => {
 	const cached = get(SpeciesStore.canonList())
 
+	const biomes = await fetch(Url.api.biomes()).then(async res => {
+		if (res.status === 404)
+			error(404)
+		else
+			return {
+				item: await res.json(),
+			}
+	})
+
 	if (cached != null && cached.length > 0) {
-		return { pokemonList: cached }
+		return { pokemonList: cached, biomes }
 	}
 
 	const pokemon = await fetch(Url.api.pokemon())
@@ -18,14 +27,6 @@ export const load: PageLoad = async ({ fetch }) => {
 		))
 		.then((pokemon: PokemonSpecies[]) => pokemon.filter((it) => !it.wasNonCanonNonFakemon()))
 
-	const biomes = await fetch(Url.api.biomes()).then(async res => {
-		if (res.status === 404)
-			error(404)
-		else
-			return {
-				item: await res.json(),
-			}
-	})
 
 	return { pokemonList: pokemon, biomes }
 }

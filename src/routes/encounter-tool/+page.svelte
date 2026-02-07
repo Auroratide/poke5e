@@ -12,6 +12,7 @@
 	import { experienceAwarded } from "$lib/poke5e/experience"
 	import { tick } from "svelte"
 	import Stepper from "$lib/ui/elements/Stepper.svelte";
+	import { SpeciesSprite } from "$lib/poke5e/species/media";
 
 
 	const NONE = ""
@@ -61,7 +62,7 @@
 		return sum + ((isNaN(xp) ? 0 : xp) * count)
 	}, 0)
 	$: encounterDifficulty = (() => {
-		const ratio = currentEncounterExp / maxExpTotal
+		const ratio = currentEncounterExp / maxExpTotal * difficultyMultipliers[difficulty]
 		if (ratio < 0.9) return { label: 'Trivial', color: '#9e9e9e' }
 		if (ratio <= 1.15) return { label: 'Low', color: '#4caf50' }
 		if (ratio <= 1.5) return { label: 'Moderate', color: '#ff9800' }
@@ -76,7 +77,7 @@
 	let arePokemonLimited: 'yes' | 'no' = 'no'
 	let pokemonLimit: number = 1
 	let selectedPokemon: {data: PokemonSpecies, count: number, level: number}[] = []
-
+	let noMatches = false
 	let partyPlayers: { id: number, level: number, numberOfPokemon: number }[] = []
     let nextPlayerId = 1
 
@@ -89,6 +90,10 @@
     }
 
 	const addPokemonToEncounter = (pokemon: PokemonSpecies, level?: number) => {
+		if (!partyPlayers.length) {
+			addPlayer()
+		}
+
 		const pokemonId = pokemon.data.id
 
 		// If already selected, increase count
@@ -99,6 +104,8 @@
 		} else {
 			selectedPokemon = [...selectedPokemon, { data: pokemon, count: 1, level: level || 1}]
 		}
+
+		noMatches = false
 	}
 
 	const onDelete = (pokemon: {data: PokemonSpecies, count: number}) => {
@@ -129,7 +136,10 @@
 			}
 		}
 
-		if (pokemonPool.length === 0) return
+		if (pokemonPool.length === 0) {
+			noMatches = true
+			return
+		}
 
 		let currentTotalExp = 0
 		let currentPokemonCount = 0
@@ -145,13 +155,16 @@
 			const remainingExp = maxExpTotal - currentTotalExp
 			if (remainingExp <= 0) break
 
-			const possibleChoices = pokemonPool.map(p => {
-				const randomLevel = Math.floor(Math.random() * (maxPlayerLevel - minPlayerLevel + 1)) + minPlayerLevel
-				const exp = experienceAwarded(randomLevel, Number(p.data.sr))
-				return { pokemon: p, level: randomLevel, exp }
+			const possibleChoices = pokemonPool.map(pokemon => {
+				const randomLevel = Math.max(pokemon.data.minLevel, Math.floor(Math.random() * (maxPlayerLevel - minPlayerLevel + 1)) + minPlayerLevel)
+				const exp = experienceAwarded(randomLevel, Number(pokemon.data.sr))
+				return { pokemon, level: randomLevel, exp }
 			}).filter(opt => opt.exp <= remainingExp)
 
-			if (possibleChoices.length === 0) break
+			if (possibleChoices.length === 0) {
+				noMatches = true
+				break
+			}
 
 			let chosen: { pokemon: PokemonSpecies, level: number, exp: number }
 
@@ -245,12 +258,14 @@
 			<div class="manual-pokemon-list">
 				{#if selectedPokemon.length > 0}
 					<div class="pokemon-list">
-						{#each selectedPokemon as pokemon (pokemon.data.id)}
+						{#each selectedPokemon as pokemon (pokemon.data.name)}
 							<div class="pokemon-item">
 								<div class="pokemon-data">
-									<img src="{pokemon.data.data.media.values.normalSprite.href}" alt="{pokemon.data.name}" class="pokemon-sprite">
+									<div class="pokemon-sprite">
+										<SpeciesSprite media={pokemon.data.media} alt="{pokemon.data.name}" />
+									</div>
 									<div class="pokemon-info">
-										<p class="pokemon-name">{pokemon.data.name} <span class="pokemon-level">Lv. <input type="number" bind:value={pokemon.level} /></span></p>
+										<p class="pokemon-name">{pokemon.data.name} <label class="pokemon-level">Lv. <input type="number" min={1} bind:value={pokemon.level} /></label></p>
 										<p class="pokemon-stats">SR: {pokemon.data.sr} • XP: {experienceAwarded(pokemon.level, pokemon.data.data.sr)}</p>
 										<TypeTag type={pokemon.data.data.type} />
 									</div>
@@ -259,6 +274,8 @@
 							</div>
 						{/each}
 					</div>
+				{:else if noMatches}
+					<p class="no-matches">No Pokémon meet the criteria!</p>
 				{:else}
 					<p>No Pokémon added.</p>
 				{/if}
@@ -369,6 +386,11 @@
         margin-left: 0.5em;
         text-transform: uppercase;
     }
+
+	.no-matches {
+		color: var(--skin-danger-text);
+		font-style: italic;
+	}
 
 	@media screen and (min-width: 50rem) {
 		.pokemon-level>input {
