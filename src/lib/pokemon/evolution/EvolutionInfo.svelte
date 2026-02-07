@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { SpeciesIdentifier } from "$lib/poke5e/species"
+	import { m } from "$lib/site/i18n";
 	import { ResolveAsyncText } from "$lib/ui/rendering"
 	import type { EvolutionForest } from "./EvolutionForest"
 	import EvolutionStage from "./EvolutionStage.svelte"
@@ -14,7 +15,7 @@
 <section class="evolution">
 	<h2>
 		<span class="justify">
-			<span>Evolution</span>
+			<span>{m["universal.evolution"]()}</span>
 			<span class="smaller"><EvolutionStage {evolutions} {species} /></span>
 		</span>
 	</h2>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import VisuallyHidden from "../elements/VisuallyHidden.svelte"
 
 	export let id: string
@@ -11,7 +12,7 @@
 <div class="skew-container">
 	<search class="search-field">
 		<VisuallyHidden><label for={id}>{label}</label></VisuallyHidden>
-		<input {id} type="search" placeholder="Search..." bind:value />
+		<input {id} type="search" placeholder="{m["universal.search"]()}..." bind:value />
 		<VisuallyHidden><label for="results-{id}">Number of results</label></VisuallyHidden>
 		<span class="matched"><output id="results-{id}" class="text" aria-live="polite">{matched} / {max}</output></span>
 	</search>

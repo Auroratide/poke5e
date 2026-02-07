@@ -7,6 +7,7 @@
 		type ImageInputValue,
 	} from "$lib/ui/forms"
 	import type { TrainerBio } from "$lib/trainers/types"
+	import { m } from "$lib/site/i18n";
 
 	const FIVE_HUNDRED_KB = 524288
 
@@ -35,14 +36,14 @@
 	}
 </script>
 
-<Fieldset title="Biography">
+<Fieldset title="{m["universal.biography"]()}">
 	<div class="grid">
-		<div style:grid-area="field1"><TextField label="Species" bind:value={species} placeholder="e.g. Human" {disabled} /></div>
-		<div style:grid-area="field2"><TextField label="Gender" bind:value={gender} {disabled} /></div>
-		<div style:grid-area="field3"><IntField label="Age" bind:value={age} {disabled} /></div>
-		<div style:grid-area="field4"><TextField label="Home Region" bind:value={homeRegion} placeholder="e.g. Sinnoh" {disabled} /></div>
-		<div style:grid-area="field5"><TextField label="Background" bind:value={background} placeholder="e.g. Entertainer" {disabled} /></div>
-		<div style:grid-area="avatar" class="image-field"><ImageField label="Avatar" previousValue={originalAvatarSrc} bind:currentValue={avatar} maxbytes={FIVE_HUNDRED_KB} {disabled} bind:isValid /></div>
+		<div style:grid-area="field1"><TextField label="{m["universal.species"]()}" bind:value={species} placeholder="e.g. Human" {disabled} /></div>
+		<div style:grid-area="field2"><TextField label="{m["universal.gender"]()}" bind:value={gender} {disabled} /></div>
+		<div style:grid-area="field3"><IntField label="{m["universal.age"]()}" bind:value={age} {disabled} /></div>
+		<div style:grid-area="field4"><TextField label="{m["universal.homeRegion"]()}" bind:value={homeRegion} placeholder="{m["universal.eG"]()} Sinnoh" {disabled} /></div>
+		<div style:grid-area="field5"><TextField label="{m["universal.background"]()}" bind:value={background} placeholder="{m["universal.eG"]()} Entertainer" {disabled} /></div>
+		<div style:grid-area="avatar" class="image-field"><ImageField label="{m["universal.avatar"]()}" previousValue={originalAvatarSrc} bind:currentValue={avatar} maxbytes={FIVE_HUNDRED_KB} {disabled} bind:isValid /></div>
 	</div>
 </Fieldset>
 

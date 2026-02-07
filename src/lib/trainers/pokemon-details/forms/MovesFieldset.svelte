@@ -6,6 +6,7 @@
 	import { MovesStore } from "$lib/moves/store"
 	import type { LearnedMove } from "$lib/trainers/types"
 	import type { Level } from "$lib/dnd/level"
+	import { m } from "$lib/site/i18n";
 
 	export let values: LearnedMove[]
 	export let species: PokemonSpecies
@@ -38,12 +39,12 @@
 	}
 </script>
 
-<Fieldset title="Moves">
+<Fieldset title="{m["universal.moves"]()}">
 	{#each values as move (move.id)}
 		<MoveEditor value={move} {species} {disabled} on:remove={removeMove(move.id)} {level} />
 		<hr />
 	{/each}
-	<Button on:click={addMove}>Add Move</Button>
+	<Button on:click={addMove}>{m["universal.addMove"]()}</Button>
 </Fieldset>
 
 <style>

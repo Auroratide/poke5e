@@ -9,6 +9,7 @@
 	import { EvolutionStore } from "$lib/pokemon/evolution"
 	import { SpeciesStore } from "$lib/poke5e/species"
 	import type { Item } from "./Item"
+	import { m } from "$lib/site/i18n";
 
 	const species = SpeciesStore.canonList()
 	const evolutions = EvolutionStore.canonList()
@@ -24,9 +25,9 @@
 <Card title={item.name}>
 	<SideArtCardSection hasImage={item.media.sprite != null} size="clamp(4rem, 6.33vw, 4.75rem)">
 		<FlatDl>
-			<dt>Type</dt>
+			<dt>{m["universal.type"]()}</dt>
 			<dd class="cap">{item.type}</dd>
-			<dt>Cost</dt>
+			<dt>{m["universal.cost"]()}</dt>
 			<dd>{item.cost != null ? formatMoney(item.cost) : "-"}</dd>
 		</FlatDl>
 		<ItemSprite slot="art" src="{item.media.sprite}" alt="" />
@@ -34,10 +35,10 @@
 	<section class="description">
 		{@html renderHtml(item.description)}
 		{#if item.type === "pokeball"}
-			<p>See: <a href="{Url.reference.catchingPokemon()}">Catching Pokémon</a></p>
+			<p>{m["universal.see"]()}: <a href="{Url.reference.catchingPokemon()}">Catching Pokémon</a></p>
 		{/if}
 		{#if item.type === "evolution" && pokemonThatEvolve.length > 0}
-			<p>Pokemon that evolve using this item:</p>
+			<p>{m["universal.pokemonThatEvolveUsingThisItem"]()}:</p>
 			<SimplePokemonList pokemon={pokemonThatEvolve} />
 		{/if}
 	</section>

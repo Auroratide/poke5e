@@ -9,6 +9,7 @@
 	import MoveOption from "./MoveOption.svelte"
 	import SearchAndFilterField from "./SearchAndFilterField.svelte"
 	import type { Move } from "$lib/moves/Move"
+	import { m } from "$lib/site/i18n";
 
 	export let title: string
 	export let values: string[]
@@ -49,7 +50,7 @@
 	const countActiveFilters = (...filters: string[]) => filters.reduce((sum, cur) => sum + (cur === "" ? 0 : 1), 0)
 
 	const typeOptions = [ {
-		name: "- Any -",
+		name: `- ${m["universal.any"]()} -`,
 		value: "",
 	} ].concat(PokemonType.list.map((it) => ({
 		name: it,
@@ -57,7 +58,7 @@
 	})))
 
 	const movePowerOptions = [ {
-		name: "- Any -",
+		name: `- ${m["universal.any"]()} -`,
 		value: "",
 	} ].concat(Attributes.list.map((it) => ({
 		name: it.name,
@@ -73,25 +74,25 @@
 					{@const move = moves.find((it) => it.id === value)}
 					<li>
 						<MoveOption idPrefix="{id}" value={move} {useTmName}>
-							<Button variant="danger" on:click={remove(index)}><strong><span aria-hidden="true">&times;</span><VisuallyHidden inline>remove</VisuallyHidden></strong></Button>
+							<Button variant="danger" on:click={remove(index)}><strong><span aria-hidden="true">&times;</span><VisuallyHidden inline>{m["universal.remove"]()}</VisuallyHidden></strong></Button>
 						</MoveOption>
 					</li>
 				{/each}
 			</ul>
 		{:else}
-			<p>No moves added yet.</p>
+			<p>{m["universal.noMovesAddedYet"]()}</p>
 		{/if}
 
-		<Details title="Add Moves">
-			<SearchAndFilterField name="{id}-search" label="Find Move to Add" bind:value={nameFilter} {disabled} matches={filteredMoves.length} placeholder="e.g. Power Split" activeFilters={countActiveFilters(typeFilter, powerFilter)}>
-				<SelectField name="{id}-type-filter" label="Type" options={typeOptions} bind:value={typeFilter} />
-				<SelectField name="{id}-move-power-filter" label="Power" options={movePowerOptions} bind:value={powerFilter} />
+		<Details title={m["universal.addMoves"]()}>
+			<SearchAndFilterField name="{id}-search" label={m["universal.findMoveToAdd"]()} bind:value={nameFilter} {disabled} matches={filteredMoves.length} placeholder="{m["universal.eG"]()} Power Split" activeFilters={countActiveFilters(typeFilter, powerFilter)}>
+				<SelectField name="{id}-type-filter" label={m["universal.type"]()} options={typeOptions} bind:value={typeFilter} />
+				<SelectField name="{id}-move-power-filter" label={m["universal.power"]()} options={movePowerOptions} bind:value={powerFilter} />
 			</SearchAndFilterField>
 			<ul class="scrollable">
 				{#each filteredMoves as move (move.id)}
 					<li>
 						<MoveOption idPrefix="{id}" value={move} {useTmName}>
-							<Button variant="success" on:click={add(move.id)}><strong><span aria-hidden="true">+</span><VisuallyHidden inline>add</VisuallyHidden></strong></Button>
+							<Button variant="success" on:click={add(move.id)}><strong><span aria-hidden="true">+</span><VisuallyHidden inline>{m["universal.add"]()}</VisuallyHidden></strong></Button>
 						</MoveOption>
 					</li>
 				{/each}

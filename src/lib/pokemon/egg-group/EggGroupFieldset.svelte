@@ -2,6 +2,7 @@
 	import { CheckboxFields, Fieldset } from "$lib/ui/forms"
 	import { EggGroup } from "./EggGroup"
 	import { capitalizeAll } from "$lib/utils/string"
+	import { m } from "$lib/site/i18n";
 
 	const options = EggGroup.standardList.map((it) => ({
 		name: capitalizeAll(it),
@@ -12,6 +13,6 @@
 	export let disabled = false
 </script>
 
-<Fieldset title="Egg Groups" columns={2} columnsLg={3}>
-	<CheckboxFields label="Egg Groups" bind:checked={value.data} values={options} {disabled} />
+<Fieldset title="{m["universal.eggGroups"]()}" columns={2} columnsLg={3}>
+	<CheckboxFields label="{m["universal.eggGroups"]()}" bind:checked={value.data} values={options} {disabled} />
 </Fieldset>

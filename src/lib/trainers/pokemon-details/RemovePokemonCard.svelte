@@ -9,6 +9,7 @@
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
 	import { WithSpecies } from "$lib/poke5e/species"
 	import { Url } from "$lib/site/url"
+	import { m } from "$lib/site/i18n";
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
@@ -41,8 +42,8 @@
 							</p>
 						{/if}
 						<ActionArea>
-							<Button href="{Url.trainers($trainer.info.readKey, pokemon.id)}" variant="ghost">Cancel</Button>
-							<Button on:click={remove} variant="danger">Delete</Button>
+							<Button href="{Url.trainers($trainer.info.readKey, pokemon.id)}" variant="ghost">{m["universal.cancel"]()}</Button>
+							<Button on:click={remove} variant="danger">{m["universal.delete"]()}</Button>
 						</ActionArea>
 					</section>
 				</Saveable>

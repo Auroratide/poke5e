@@ -2,6 +2,7 @@
 	import { Fieldset, MoneyField } from "$lib/ui/forms"
 	import type { InventoryItem } from "$lib/trainers/types"
 	import { InventoryEditor } from "$lib/items"
+	import { m } from "$lib/site/i18n";
 
 	export let money: number
 	export let inventory: InventoryItem[]
@@ -23,7 +24,7 @@
 	})
 </script>
 
-<Fieldset title="Inventory">
-	<MoneyField label="Money" bind:value={money} {disabled}/>
+<Fieldset title="{m["universal.inventory"]()}">
+	<MoneyField label="{m["universal.money"]()}" bind:value={money} {disabled}/>
 	<InventoryEditor bind:values={inventory} {disabled} newStandardItem={addStandardItem} newCustomItem={addCustomItem} groupOrder={["pokeball", "medicine", "berry", "held item", "evolution"]} />
 </Fieldset>

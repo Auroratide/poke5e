@@ -3,6 +3,7 @@
 	import type { Level } from "$lib/dnd/level"
 	import { ProficiencyBlock, SkillRanks } from "$lib/dnd/skills"
 	import type { PokemonType } from "$lib/pokemon/types"
+	import { m } from "$lib/site/i18n";
 	import { skillModifiersFromSpecializations, type Specializations } from "../specializations"
 
 	export let level: Level
@@ -16,7 +17,7 @@
 	$: extraModifiers = type != null && specializations != null ? skillModifiersFromSpecializations(specializations, type.data) : undefined
 </script>
 
-<h3>Saves</h3>
+<h3>{m["universal.saves"]()}</h3>
 <div class="upper">
 	<ProficiencyBlock {level} {attributes} values={Attributes.list.map((attr) => ({
 		name: attr.abbr,
@@ -26,7 +27,7 @@
 	}))} columnsLg={3} columns={2} />
 </div>
 
-<h3>Skills</h3>
+<h3>{m["universal.skills"]()}</h3>
 <div class="cap">
 	<ProficiencyBlock {level} {attributes} values={SkillRanks.list.map((skill) => ({
 		name: skill.name,

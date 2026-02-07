@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { Fieldset, DoubleCheckboxFields, type DoubleCheckboxFieldsChangeEvent, InstructionText, CheckboxFields } from "$lib/ui/forms"
 	import { SkillRanks } from "./SkillRanks"
 
@@ -34,9 +35,9 @@
 	}
 </script>
 
-<Fieldset title="Proficiencies" columns={2}>
+<Fieldset title="{m["universal.proficiencies"]()}" columns={2}>
 	{#if !noexpertise}
-		<InstructionText>First checkbox is for proficiency. Second checkbox is for expertise.</InstructionText>
+		<InstructionText>{m["universal.firstCheckboxIsForProficiencySecondCheckBoxIsForExpertise"]()}</InstructionText>
 	{/if}
 	{#if noexpertise}
 		<CheckboxFields label="Proficiencies" bind:checked {disabled} values={singleOptions} />

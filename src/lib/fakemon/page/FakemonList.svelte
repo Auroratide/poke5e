@@ -8,6 +8,7 @@
 	import { PageAction } from "./actions"
 	import GetStarted from "./GetStarted.svelte"
 	import { fakemonListSorter, fakemonListFilter } from "./sort-and-filter"
+	import { m } from "$lib/site/i18n";
 
 	export let fakemon: FakemonListStore
 	export let showGetStarted = false
@@ -20,8 +21,8 @@
 </script>
 
 <ListHeading title="Fakémon" target="/fakemon">
-	<a slot="link" href="{Url.fakemon(undefined, PageAction.find)}" class="dark-font">Find by fakémon ID &gt;</a>
-	<Button slot="action" href="{Url.fakemon(undefined, PageAction.add)}">+ New Fakémon</Button>
+	<a slot="link" href="{Url.fakemon(undefined, PageAction.find)}" class="dark-font">{m["fakemon.findByFakemonID"]()} &gt;</a>
+	<Button slot="action" href="{Url.fakemon(undefined, PageAction.add)}">+ {m["universal.newFakemon"]()}</Button>
 </ListHeading>
 <div class="space-bottom">
 	<SearchField id="filter-fakemon" label="Search" bind:value={$fakemonListFilter} matched={filtered.length} max={$fakemon.length} />
@@ -30,7 +31,7 @@
 	{#if showGetStarted}<GetStarted />{/if}
 {:else}
 	<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$fakemonListSorter} headers={[ {
-		key: "name", name: "Name", ratio: 1, sort: byStringField(it => it.data.species.name),
+		key: "name", name: m["universal.name"](), ratio: 1, sort: byStringField(it => it.data.species.name),
 	} ]}>
 		<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
 			<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.fakemon(item.data.readKey)}">{item.data.species.name}</a></BubbleRow.Cell>

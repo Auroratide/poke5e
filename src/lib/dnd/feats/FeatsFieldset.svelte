@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { Button } from "$lib/ui/elements"
 	import { Fieldset, focusInputField } from "$lib/ui/forms"
 	import type { ChosenFeat } from "./ChosenFeat"
@@ -46,13 +47,13 @@
 	}
 </script>
 
-<Fieldset title="Feats">
+<Fieldset title="{m["universal.feats"]()}">
 	{#each values as value}
 		<FeatEditor {value} options={options} {disabled} custom={value.isCustom} on:remove={removeFeat(value.id)} />
 	{/each}
 	<div class="row">
-		<Button on:click={addStandardFeat}>Add Feat</Button>
-		<Button on:click={addCustomFeat}>Add Custom Feat</Button>
+		<Button on:click={addStandardFeat}>{m["universal.addFeat"]()}</Button>
+		<Button on:click={addCustomFeat}>{m["universal.addCustomFeat"]()}</Button>
 	</div>
 </Fieldset>
 

@@ -7,6 +7,7 @@
 	import PokemonSummary from "./PokemonSummary.svelte"
 	import { ListHeading } from "$lib/ui/page"
 	import { Url } from "$lib/site/url"
+	import { m } from "$lib/site/i18n";
 
 	export let trainer: TrainerStore
 	export let currentPokemon: PokemonId | undefined
@@ -28,13 +29,13 @@
 <ListHeading title="{$trainer.info.name}'s Pokemon" target="/trainers">
 	<span slot="link">
 		{#if currentPokemon}
-			<a href="{baseTrainerUrl}" class="dark-font">View trainer profile &gt;</a>
+			<a href="{baseTrainerUrl}" class="dark-font">{m["universal.viewTrainerProfile"]()} &gt;</a>
 		{:else}
-			<a href="{Url.trainers()}" class="dark-font">See Trainer List &gt;</a>
+			<a href="{Url.trainers()}" class="dark-font">{m["universal.seeTrainerList"]()} &gt;</a>
 		{/if}
 	</span>
 	<span slot="action" style:visibility={editable ? "visible" : "hidden"} style:display="flex">
-		<Button href="{baseTrainerUrl}&action=add-pokemon">+ Add Pokemon</Button>
+		<Button href="{baseTrainerUrl}&action=add-pokemon">+ {m["universal.addPokemon"]()}</Button>
 	</span>
 </ListHeading>
 <div class="space-bottom">

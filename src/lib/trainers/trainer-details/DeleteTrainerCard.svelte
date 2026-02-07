@@ -6,6 +6,7 @@
 	import { Url } from "$lib/site/url"
 	import { Title } from "$lib/ui/layout"
 	import { goto } from "$app/navigation"
+	import { m } from "$lib/site/i18n";
 	
 	export let trainer: TrainerStore
 
@@ -31,8 +32,8 @@
 					<p>Are you sure you want to retire {name}? This will delete all of their data, including all of their pokemon, from our records.</p>
 					<p><strong>This is permanent and cannot be undone!</strong></p>
 					<ActionArea>
-						<Button href="{Url.trainers($trainer?.info.readKey)}" variant="ghost">Cancel</Button>
-						<Button on:click={retire} variant="danger">Delete</Button>
+						<Button href="{Url.trainers($trainer?.info.readKey)}" variant="ghost">{m["universal.cancel"]()}</Button>
+						<Button on:click={retire} variant="danger">{m["universal.delete"]()}</Button>
 					</ActionArea>
 			</section>
 		</Saveable>

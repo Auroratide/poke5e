@@ -19,6 +19,7 @@
 	import SimpleTypeField from "$lib/pokemon/types/SimpleTypeField.svelte"
 	import { createEventDispatcher } from "svelte"
 	import { Fakemon } from "../Fakemon"
+	import { m } from "$lib/site/i18n";
 
 	const dispatch = createEventDispatcher()
 
@@ -48,13 +49,13 @@
 </script>
 
 <Form onsubmit={endEdit} {saving}>
-	<Fieldset title="Initial Info">
-		<TextField label="Species Name" bind:value={speciesName} {disabled} required />
+	<Fieldset title="{m["universal.initialInfo"]()}">
+		<TextField label="{m["universal.speciesName"]()}" bind:value={speciesName} {disabled} required />
 		<SimpleTypeField bind:value={type.data} {disabled} />
 	</Fieldset>
-	<HintText>Once your fakémon is created, you will be able to edit their stats, images, and details!</HintText>
+	<HintText>{m["fakemon.addFakemonHintText"]()}</HintText>
 	<ActionArea>
-		<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
-		<Button type="submit" {disabled}>Finish!</Button>
+		<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
+		<Button type="submit" {disabled}>{m["universal.finish"]()}</Button>
 	</ActionArea>
 </Form>

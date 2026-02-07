@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { CheckboxFields, Fieldset, SelectField } from "$lib/ui/forms"
 	import { type PokeType, PokemonType } from "./PokemonType"
 
@@ -32,13 +33,13 @@
 	}
 </script>
 
-<Fieldset title="Type">
-	<SelectField label="Primary" name="type-primary" options={primaryTypeOptions} bind:value={primary} {disabled} />
-	<SelectField label="Secondary" name="type-seconary" options={secondaryTypeOptions} bind:value={secondary} {disabled} />
+<Fieldset title="{m["universal.type"]()}">
+	<SelectField label="{m["universal.primary"]()}" name="type-primary" options={primaryTypeOptions} bind:value={primary} {disabled} />
+	<SelectField label="{m["universal.secondary"]()}" name="type-seconary" options={secondaryTypeOptions} bind:value={secondary} {disabled} />
 	<fieldset>
-		<legend>Additional Types</legend>
+		<legend>{m["universal.additionalTypes"]()}</legend>
 		<div class="three-columns">
-			<CheckboxFields label="Additional Types" name="type-additional" bind:checked={value} values={additionalTypeOptions} {disabled} />
+			<CheckboxFields label="{m["universal.additionalTypes"]()}" name="type-additional" bind:checked={value} values={additionalTypeOptions} {disabled} />
 		</div>
 	</fieldset>
 </Fieldset>

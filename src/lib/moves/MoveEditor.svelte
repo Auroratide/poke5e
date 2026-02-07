@@ -14,6 +14,7 @@
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { LearnableMoves } from "./LearnableMoves"
 	import type { Level } from "$lib/dnd/level"
+	import { m } from "$lib/site/i18n";
 
 	export let value: LearnedMove
 	export let species: PokemonSpecies
@@ -36,10 +37,10 @@
 
 <div class="move-editor">
 	<Removable on:remove>
-		<SelectField label="Move" name="{moveFieldName}" bind:value={value.moveId} options={moveOptions} {disabled} on:change={onMoveChange} />
+		<SelectField label="{m["universal.move"]()}" name="{moveFieldName}" bind:value={value.moveId} options={moveOptions} {disabled} on:change={onMoveChange} />
 	</Removable>
-	<IntField label="Max PP" name="move-pp-{value.id}" bind:value={value.pp.max} {disabled} />
-	<MarkdownField label="Notes" name="move-notes-{value.id}" bind:value={value.notes} {disabled} />
+	<IntField label="{m["universal.maxPp"]()}" name="move-pp-{value.id}" bind:value={value.pp.max} {disabled} />
+	<MarkdownField label="{m["universal.notes"]()}" name="move-notes-{value.id}" bind:value={value.notes} {disabled} />
 </div>
 
 <style>

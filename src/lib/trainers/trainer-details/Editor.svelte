@@ -26,6 +26,7 @@
 	import { FeatsFieldset } from "$lib/dnd/feats"
 	import { DndFeats } from "$lib/dnd/feats"
 	import { Level } from "$lib/dnd/level"
+	import { m } from "$lib/site/i18n";
 	
 	const dispatch = createEventDispatcher()
 
@@ -97,11 +98,11 @@
 	<TrainerPathsFieldset bind:value={trainerPath} {disabled} />
 	<FeatsFieldset feats={DndFeats} bind:values={feats} {disabled} />
 	<InventoryFieldset bind:money bind:inventory {disabled} />
-	<Fieldset title="General">
-		<MarkdownField label="Description" bind:value={description} placeholder="General info about this trainer..." {disabled} />
+	<Fieldset title="{m["universal.general"]()}">
+		<MarkdownField label="{m["universal.description"]()}" bind:value={description} placeholder="{m["trainers.generalInfoAboutThisTrainer"]()}..." {disabled} />
 	</Fieldset>
 	<ActionArea error={!isValid ? "One or more fields above have an issue." : undefined}>
-		<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
-		<Button type="submit" disabled={disabled || !isValid}>Finish!</Button>
+		<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
+		<Button type="submit" disabled={disabled || !isValid}>{m["universal.finish"]()}</Button>
 	</ActionArea>
 </Form>

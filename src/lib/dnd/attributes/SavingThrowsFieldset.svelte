@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { Fieldset, CheckboxFields } from "$lib/ui/forms"
 	import { Attributes, type Attribute } from "."
 
@@ -11,6 +12,6 @@
 	}))
 </script>
 
-<Fieldset title="Saving Throws" columns={2}>
+<Fieldset title="{m["universal.savingThrows"]()}" columns={2}>
 	<CheckboxFields label="Saving Throws" bind:checked={values} values={attributeNames} {disabled} />
 </Fieldset>

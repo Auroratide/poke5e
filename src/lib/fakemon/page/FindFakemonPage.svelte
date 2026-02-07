@@ -7,6 +7,7 @@
 	import { Title } from "$lib/ui/layout"
 	import SearchFakemonById from "../search/SearchFakemonById.svelte"
 	import type { SearchFakemonByIdDetail } from "../search"
+	import { m } from "$lib/site/i18n";
 
 	let searching = false
 	const onSubmit = (e: CustomEvent<SearchFakemonByIdDetail>) => {
@@ -14,8 +15,8 @@
 	}
 </script>
 
-<Title value="Find Fakémon by ID" />
-<Card title="Find Fakémon by ID">
+<Title value={m["fakemon.findFakemonByID"]()} />
+<Card title={m["fakemon.findFakemonByID"]()}>
 	<Saveable saving={searching} caption="Searching...">
 		<section>
 			<p>Enter the fakémon's unique ID below and click "Search".</p>

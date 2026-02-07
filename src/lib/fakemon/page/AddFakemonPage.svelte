@@ -7,6 +7,7 @@
 	import { fakemonStore } from "../store"
 	import FakemonAdder from "./FakemonAdder.svelte"
 	import { type SubmitDetail } from "./FakemonEditor.svelte"
+	import { m } from "$lib/site/i18n";
 
 	const draftFakemon = new Fakemon({
 		id: "",
@@ -113,7 +114,7 @@
 	}
 </script>
 
-<Title value="Add New Fakémon" />
-<Card title="Add New Fakémon">
+<Title value="{m["fakemon.addNewFakemon"]()}" />
+<Card title="{m["fakemon.addNewFakemon"]()}">
 	<FakemonAdder fakemon={draftFakemon} on:submit={onSubmit} on:cancel={onCancel} {saving} />
 </Card>

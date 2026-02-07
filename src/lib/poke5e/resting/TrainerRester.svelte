@@ -18,6 +18,7 @@
 	import { Art } from "$lib/ui/elements"
 	import type { Readable } from "svelte/store"
 	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/poke5e/species"
+	import { m } from "$lib/site/i18n";
 
 	const dispatch = createEventDispatcher()
 
@@ -75,7 +76,7 @@
 
 <Form onsubmit={endEdit} {saving}>
 	<div class="art-row">
-		<Fieldset title="Choose one" columns={1}>
+		<Fieldset title={m["universal.chooseOne"]()} columns={1}>
 			<RadioFields label="Rest Choices" bind:checked={restToPerform} values={options} required />
 		</Fieldset>
 		{#if trainer.info.avatar?.href}
@@ -128,7 +129,7 @@
 		{/if}
 	</section>
 	<ActionArea>
-		<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
+		<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
 		<Button type="submit" disabled={disabled || rest == null}>Rest!</Button>
 	</ActionArea>
 </Form>

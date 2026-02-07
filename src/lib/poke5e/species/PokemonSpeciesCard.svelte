@@ -15,6 +15,7 @@
 	import { isNotBlank } from "$lib/utils/string"
 	import { EvolutionInfo, EvolutionStore } from "$lib/pokemon/evolution"
 	import { SpeciesFormsInfo } from "$lib/poke5e/forms"
+	import { m } from "$lib/site/i18n";
 
 	export let value: PokemonSpecies
 	$: hasImage = value.media.data.values.normalPortrait != null
@@ -32,17 +33,17 @@
 	<SideArtCardSection {hasImage}>
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<FlatDl columns={hasImage ? 1 : 2}>
-			<dt>{useId ? "ID" : "Number"}</dt>
+			<dt>{useId ? "ID" : m["universal.number"]()}</dt>
 			<dd>{useId ? value.data.id : value.numberAsString()}</dd>
-			<dt>Size</dt>
+			<dt>{m["universal.size"]()}</dt>
 			<dd class="cap">{value.data.size}</dd>
-			<dt><abbr title="Species Rating">SR</abbr></dt>
+			<dt><abbr title="{m["universal.speciesRating"]()}">{m["universal.sr"]()}</abbr></dt>
 			<dd>{value.sr.toString()}</dd>
-			<dt>Egg Group</dt>
+			<dt>{m["universal.eggGroup"]()}</dt>
 			<dd class="cap">{value.eggGroups.toString()}</dd>
-			<dt>Min Level</dt>
+			<dt>{m["universal.minLevel"]()}</dt>
 			<dd>{value.data.minLevel}</dd>
-			<dt>Gender</dt>
+			<dt>{m["universal.gender"]()}</dt>
 			<dd><GenderRatioDisplay value={value.gender} /></dd>
 		</FlatDl>
 		<SpeciesPortrait slot="art" media={value.media} alt="" />
@@ -53,30 +54,30 @@
 		</div>
 	</section>
 	<section class="stats">
-		<h2>Stats</h2>
+		<h2>{m["universal.stats"]()}</h2>
 		<FlatDl>
-			<dt>Armor Class</dt>
+			<dt>{m["universal.armorClass"]()}</dt>
 			<dd>{value.data.ac}</dd>
-			<dt>Hit Points</dt>
+			<dt>{m["universal.hitPoints"]()}</dt>
 			<dd>{value.data.hp} ({value.data.hitDice})</dd>
-			<DistancesDlItem label="Speed" values={value.speed} />
-			<DistancesDlItem label="Senses" values={value.senses} />
+			<DistancesDlItem label="{m["universal.speed"]()}" values={value.speed} />
+			<DistancesDlItem label="{m["universal.senses"]()}" values={value.senses} />
 		</FlatDl>
 		<AttributeBlock attributes={value.attributes} />
 	</section>
 	<section class="skills">
 		<FlatDl>
-			<dt>Proficiencies</dt>
+			<dt>{m["universal.proficiencies"]()}</dt>
 			<dd class="cap">{value.skills.toString()}</dd>
-			<dt>Saving Throws</dt>
+			<dt>{m["universal.savingThrows"]()}</dt>
 			<dd class="upper">{value.data.saves.length > 0 ? value.data.saves.join(", ") : "none"}</dd>
 			<TypeEffectiveness type={value.type} />
 		</FlatDl>
 	</section>
 	<section class="abilities">
-		<h2>Abilities</h2>
+		<h2>{m["universal.abilities"]()}</h2>
 		{#if value.abilities.isEmpty()}
-			<p>No abilities provided.</p>
+			<p>{m["universal.noAbilitiesProvided"]()}</p>
 		{:else}
 			<AbilityPoolInfo value={value.abilities} />
 		{/if}
@@ -86,38 +87,38 @@
 		<EvolutionInfo species={value.id} evolutions={$evolutions} />
 	{/if}
 	<section class="moves">
-		<h2>Moves</h2>
+		<h2>{m["universal.moves"]()}</h2>
 		<FlatDl>
-			<dt>Starting</dt>
+			<dt>{m["universal.starting"]()}</dt>
 			<dd><InlineMoveLinks moves={value.data.moves.start} /></dd>
 			{#if exists(value.data.moves.level2)}
-				<dt>Level 2</dt>
+				<dt>{m["universal.level"]()} 2</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level2} /></dd>
 			{/if}
 			{#if exists(value.data.moves.level6)}
-				<dt>Level 6</dt>
+				<dt>{m["universal.level"]()} 6</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level6} /></dd>
 			{/if}
 			{#if exists(value.data.moves.level10)}
-				<dt>Level 10</dt>
+				<dt>{m["universal.level"]()} 10</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level10} /></dd>
 			{/if}
 			{#if exists(value.data.moves.level14)}
-				<dt>Level 14</dt>
+				<dt>{m["universal.level"]()} 14</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level14} /></dd>
 			{/if}
 			{#if exists(value.data.moves.level18)}
-				<dt>Level 18</dt>
+				<dt>{m["universal.level"]()} 18</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level18} /></dd>
 			{/if}
 		</FlatDl>
 		<FlatDl>
 			{#if exists(value.data.moves.egg)}
-				<dt class="space-after">Egg</dt>
+				<dt class="space-after">{m["universal.egg"]()}</dt>
 				<dd class="space-after"><InlineMoveLinks moves={value.data.moves.egg} /></dd>
 			{/if}
 			{#if exists(value.data.moves.tm)}
-				<dt>TM</dt>
+				<dt>{m["universal.tm"]()}</dt>
 				<dd><InlineTmLinks tms={value.data.moves.tm} /></dd>
 			{/if}
 		</FlatDl>

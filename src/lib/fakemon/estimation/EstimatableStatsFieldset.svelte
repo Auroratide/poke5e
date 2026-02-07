@@ -7,6 +7,7 @@
 	import { Bst } from "$lib/pokemon/bst"
 	import type { PokemonType } from "$lib/pokemon/types"
 	import { StatsEstimator } from "./StatsEstimator"
+	import { m } from "$lib/site/i18n";
 
 	export let level: number
 	export let hitDice: HitDice
@@ -38,26 +39,26 @@
 	}
 </script>
 
-<Fieldset title="Attributes" columns={6}>
+<Fieldset title="{m["universal.attributes"]()}" columns={6}>
 	<div class="span-all">
-		<Details title="Convert Poké Stats to D&D Stats">
+		<Details title="{m["fakemon.convertPokeStatsToDnDStats"]()}">
 			<div class="grid">
-				<InstructionText>Use these fields in order to convert Pokémon game base stats to D&D attributes. The conversion tool is merely an estimate, and no pokémon in the official guide follows this exactly. Tweak your fakémon's stats after using this tool!</InstructionText>
-				<IntField name="bst-hp" label="HP" min={0} bind:value={bst.data.hp} {disabled} />
-				<IntField name="bst-attack" label="Attack" min={0} bind:value={bst.data.attack} {disabled} />
-				<IntField name="bst-defense" label="Defense" min={0} bind:value={bst.data.defense} {disabled} />
-				<IntField name="bst-special-attack" label="Sp. Attack" min={0} bind:value={bst.data.specialAttack} {disabled} />
-				<IntField name="bst-special-defense" label="Sp. Defense" min={0} bind:value={bst.data.specialDefense} {disabled} />
-				<IntField name="bst-speed" label="Speed" min={0} bind:value={bst.data.speed} {disabled} />
+				<InstructionText>{m["fakemon.convertTutorialText"]()}</InstructionText>
+				<IntField name="bst-hp" label="{m["universal.hp"]()}" min={0} bind:value={bst.data.hp} {disabled} />
+				<IntField name="bst-attack" label="{m["universal.attack"]()}" min={0} bind:value={bst.data.attack} {disabled} />
+				<IntField name="bst-defense" label="{m["universal.defense"]()}" min={0} bind:value={bst.data.defense} {disabled} />
+				<IntField name="bst-special-attack" label="{m["universal.spAttack"]()}" min={0} bind:value={bst.data.specialAttack} {disabled} />
+				<IntField name="bst-special-defense" label="{m["universal.spDefense"]()}" min={0} bind:value={bst.data.specialDefense} {disabled} />
+				<IntField name="bst-speed" label="{m["universal.speed"]()}" min={0} bind:value={bst.data.speed} {disabled} />
 				<div class="span-all text-center">
-					<Button on:click={convert}>Convert</Button>
+					<Button on:click={convert}>{m["universal.convert"]()}</Button>
 				</div>
 			</div>
 			<hr />
 		</Details>
 	</div>
-	<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} span={3} required />
-	<IntField label="HP" bind:value={hp} min={0} {disabled} span={3} required />
+	<IntField label="{m["universal.ac"]()}" bind:value={ac} min={0} max={99} {disabled} span={3} required />
+	<IntField label="{m["universal.hp"]()}" bind:value={hp} min={0} {disabled} span={3} required />
 	{#each Attributes.list as attr}
 		<IntField label="{attr.abbr.toLocaleUpperCase()}" min={0} max={30} bind:value={attributes.data[attr.abbr]} span={2} {disabled} />
 	{/each}

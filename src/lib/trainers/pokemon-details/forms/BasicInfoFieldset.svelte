@@ -11,6 +11,7 @@
 	} from "$lib/ui/forms"
 	import { Nature, NatureField } from "$lib/pokemon/nature"
 	import { PokemonTeraType } from "$lib/pokemon/types"
+	import { m } from "$lib/site/i18n";
 
 	const FIVE_HUNDRED_KB = 524288
 
@@ -41,17 +42,17 @@
 	}))
 </script>
 
-<Fieldset title="Basic Info">
+<Fieldset title="{m["universal.basicInfo"]()}">
 	<div class="grid">
-		<div style:grid-area="field1"><TextField label="Nickname" bind:value={nickname} {disabled} /></div>
-		<div style:grid-area="field2"><SelectField label="Tera" options={teraOptions} bind:value={tera.data} {disabled} /></div>
+		<div style:grid-area="field1"><TextField label="{m["universal.nickname"]()}" bind:value={nickname} {disabled} /></div>
+		<div style:grid-area="field2"><SelectField label="{m["universal.tera"]()}" options={teraOptions} bind:value={tera.data} {disabled} /></div>
 		<div style:grid-area="field3"><NatureField bind:value={nature} {disabled} /></div>
-		<IntField label="Level" value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
-		<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} />
-		<IntField label="Max HP" bind:value={maxHp} min={0} {disabled} />
-		<IntField label="Max Hit Dice" bind:value={maxHitDice} min={0} max={20} {disabled} />
-		<ToggleSwitchField label="Shiny" bind:value={isShiny} {disabled} />
-		<div style:grid-area="avatar" class="image-field"><ImageField label="Custom Image" previousValue={originalAvatarSrc} bind:currentValue={avatar} maxbytes={FIVE_HUNDRED_KB} {disabled} bind:isValid /></div>
+		<IntField label="{m["universal.level"]()}" value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
+		<IntField label="{m["universal.ac"]()}" bind:value={ac} min={0} max={99} {disabled} />
+		<IntField label="{m["universal.maxHp"]()}" bind:value={maxHp} min={0} {disabled} />
+		<IntField label="{m["universal.maxHitDice"]()}" bind:value={maxHitDice} min={0} max={20} {disabled} />
+		<ToggleSwitchField label="{m["universal.shiny"]()}" bind:value={isShiny} {disabled} />
+		<div style:grid-area="avatar" class="image-field"><ImageField label="{m["universal.customImage"]()}" previousValue={originalAvatarSrc} bind:currentValue={avatar} maxbytes={FIVE_HUNDRED_KB} {disabled} bind:isValid /></div>
 	</div>
 </Fieldset>
 

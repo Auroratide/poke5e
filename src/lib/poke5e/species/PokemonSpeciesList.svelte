@@ -6,6 +6,7 @@
 	import { TemporaryBannerMessage } from "$lib/ui/elements"
 	import { Url } from "$lib/site/url"
 	import { OfficialFakemonRemovedBanner, readdOfficialFakemon } from "$lib/fakemon/OfficialFakemonRemovedBanner"
+	import { m } from "$lib/site/i18n";
 
 	export let pokemons: PokemonSpecies[]
 
@@ -22,11 +23,11 @@
 	Non-canon pokémon have been removed from this official list (Brawleon, Minereon, Droideon, Terreon, Specteon, Eeveon, Pesteon, Aereon, Drakeon, Toxeon, Rookite, Belseraph). You may <button class="link-button" on:click={readdOfficialFakemon}>re-add these to your list of Fakémon</button>, or you may add them later under <a href="{Url.settings()}">settings</a>.
 </TemporaryBannerMessage>
 <SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$pokemonSorter} headers={[ {
-	key: "name", name: "Name", ratio: 3, sort: byStringField(it => it.data.name),
+	key: "name", name: m["universal.name"](), ratio: 3, sort: byStringField(it => it.data.name),
 }, {
-	key: "type", name: "Type", ratio: 3, sort: byStringField(it => it.type.data.join(", ")),
+	key: "type", name: m["universal.type"](), ratio: 3, sort: byStringField(it => it.type.data.join(", ")),
 }, {
-	key: "sr", name: "SR", ratio: 1, sort: byNumericField(it => it.sr.data), largeScreenOnly: true,
+	key: "sr", name: m["universal.sr"](), ratio: 1, sort: byNumericField(it => it.sr.data), largeScreenOnly: true,
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type.primary}-bg)">
 		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.pokemon(item.data.id)}">{item.data.name}</a></BubbleRow.Cell>

@@ -2,6 +2,7 @@
 	import { Fieldset } from "$lib/ui/forms"
 	import type { HeldItem } from "$lib/trainers/types"
 	import { InventoryEditor } from "$lib/items"
+	import { m } from "$lib/site/i18n";
 
 	export let items: HeldItem[]
 	export let disabled: boolean
@@ -20,6 +21,6 @@
 	})
 </script>
 
-<Fieldset title="Inventory">
+<Fieldset title="{m["universal.inventory"]()}">
 	<InventoryEditor bind:values={items} {disabled} newStandardItem={addStandardItem} newCustomItem={addCustomItem} groupOrder={["berry", "held item", "evolution", "medicine", "pokeball"]} />
 </Fieldset>

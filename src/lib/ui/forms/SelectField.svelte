@@ -21,6 +21,7 @@
 	import { kebab } from "./kebab"
 	import { createEventDispatcher } from "svelte"
 	import { ChevronIcon } from "$lib/ui/icons"
+	import { m } from "$lib/site/i18n";
 
 	export let label: string
 	export let value: string
@@ -63,7 +64,7 @@
 					<option value="{option.value}" disabled={option.disabled || option.deprecated}>{option.name}</option>
 				{/each}
 				{#if other != null}
-					<option value="{SelectFieldOther}">Other</option>
+					<option value="{SelectFieldOther}">{m["universal.other"]()}</option>
 				{/if}
 			{/if}
 		</select>

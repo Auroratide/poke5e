@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { Fieldset, RadioFields } from "$lib/ui/forms"
 	import { GenderRatio } from "./GenderRatio"
 
@@ -30,11 +31,11 @@
 		name: "100% ♂",
 		value: "0:1",
 	}, {
-		name: "Genderless",
+		name: m["universal.genderless"](),
 		value: "0:0",
 	} ]
 </script>
 
-<Fieldset title="Gender Ratio" columns={2}>
-	<RadioFields label="Gender" bind:checked values={possibleRatios} {disabled} />
+<Fieldset title="{m["universal.genderRatio"]()}" columns={2}>
+	<RadioFields label="{m["universal.gender"]()}" bind:checked values={possibleRatios} {disabled} />
 </Fieldset>

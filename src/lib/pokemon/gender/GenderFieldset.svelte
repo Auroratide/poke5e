@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { Fieldset, RadioFields } from "$lib/ui/forms"
 	import { PokemonGender } from "./PokemonGender"
 
@@ -16,6 +17,6 @@
 	}))
 </script>
 
-<Fieldset title="Gender" columns={4}>
-	<RadioFields label="Gender" bind:checked={value} values={genders} {disabled} />
+<Fieldset title="{m["universal.gender"]()}" columns={4}>
+	<RadioFields label="{m["universal.gender"]()}" bind:checked={value} values={genders} {disabled} />
 </Fieldset>

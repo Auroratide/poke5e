@@ -15,6 +15,7 @@
 	import { PlusMinus } from "$lib/ui/elements"
 	import { BondEffects } from "./BondEffects"
 	import { Popover } from "$lib/ui/elements"
+	import { m } from "$lib/site/i18n";
 
 	const dispatch = createEventDispatcher()
 
@@ -37,19 +38,19 @@
 		<Popover id="bond-effect-popover" block>
 			<p class="row" slot="activator">
 				<span class="icon"><BondIcon level={value.level} /></span>
-				<strong class="small-text dotted">Bond: <PlusMinus value={value.level} /></strong>
+				<strong class="small-text dotted">{m["universal.bond"]()}: <PlusMinus value={value.level} /></strong>
 			</p>
 			<p class="small-text">{bondEffect}</p>
 		</Popover>
 	{:else}
 		<p class="row">
 			<span class="icon"><BondIcon level={value.level} /></span>
-			<strong class="small-text">Bond: <PlusMinus value={value.level} /></strong>
+			<strong class="small-text">{m["universal.bond"]()}: <PlusMinus value={value.level} /></strong>
 		</p>
 	{/if}
 	{#if value.points.max > 0}
 		<p class="bond-points smaller-text row">
-			<label for="current-bond-points">Points:</label>
+			<label for="current-bond-points">{m["universal.points"]()}:</label>
 			<span>
 				{#if editable}
 					<NumericResourceField id="current-bond-points" value={bondCur} on:change={onChangeBondPoints} />

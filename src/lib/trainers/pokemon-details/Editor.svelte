@@ -27,6 +27,7 @@
 	import { GenderFieldset } from "$lib/pokemon/gender"
 	import { HitDice } from "$lib/dnd/hit-dice"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
+	import { m } from "$lib/site/i18n";
 
 	const dispatch = createEventDispatcher()
 
@@ -124,17 +125,17 @@
 	<MovesFieldset bind:values={moves} {species} level={new Level(level)} {disabled} />
 	<FeatsFieldset feats={$DndAndPokemonFeats} bind:values={feats} {disabled} />
 	<HeldItemsFieldset bind:items {disabled} />
-	<Fieldset title="General">
-		<MarkdownField label="Notes" bind:value={notes} placeholder="Use this for any general notes not covered by the above fields..." {disabled} />
+	<Fieldset title="{m["universal.general"]()}">
+		<MarkdownField label="{m["universal.notes"]()}" bind:value={notes} placeholder="{m["universal.generalNotesPlaceholder"]()}" {disabled} />
 	</Fieldset>
 	<FormDetails title="Advanced">
 		<TypeField bind:value={type.data} {disabled} />
 		<CustomBasicInfoFieldset bind:customSize bind:customHitDiceSize {disabled} />
 		<SpeedsFieldset bind:values={speeds} {disabled} />
 		<SensesFieldset bind:values={senses} {disabled} />
-	</FormDetails>
-	<ActionArea error={!isValid ? "One or more fields above have an issue." : undefined}>
-		<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
-		<Button type="submit" disabled={disabled || !isValid}>Finish!</Button>
+	</FormDetails>oneOrMoreFieldsAboveHaveAnIssue
+	<ActionArea error={!isValid ? m["universal.oneOrMoreFieldsAboveHaveAnIssue"]() : undefined}>
+		<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
+		<Button type="submit" disabled={disabled || !isValid}>{m["universal.finish"]()}</Button>
 	</ActionArea>
 </Form>

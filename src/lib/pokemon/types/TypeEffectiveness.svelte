@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PokemonType } from "./PokemonType"
 	import { InlineTypeName } from "."
+	import { m } from "$lib/site/i18n";
 
 	export let type: PokemonType
 
@@ -9,28 +10,28 @@
 	$: imm = type.immunities()
 </script>
 
-<dt>Vulnerabilities</dt>
+<dt>{m["universal.vulnerabilities"]()}</dt>
 <div>
 	{#if vul.length === 0}
-		<dd class="none">None</dd>
+		<dd class="none">{m["universal.noneFemenine"]()}</dd>
 	{/if}
 	{#each vul as value}
 		<dd><InlineTypeName {value} /></dd>
 	{/each}
 </div>
-<dt>Resistances</dt>
+<dt>{m["universal.resistances"]()}</dt>
 <div>
 	{#if res.length === 0}
-		<dd class="none">None</dd>
+		<dd class="none">{m["universal.noneFemenine"]()}</dd>
 	{/if}
 	{#each res as value}
 		<dd><InlineTypeName {value} /></dd>
 	{/each}
 </div>
-<dt>Immunities</dt>
+<dt>{m["universal.immunities"]()}</dt>
 <div>
 	{#if imm.length === 0}
-		<dd class="none">None</dd>
+		<dd class="none">{m["universal.noneFemenine"]()}</dd>
 	{/if}
 	{#each imm as value}
 		<dd><InlineTypeName {value} /></dd>

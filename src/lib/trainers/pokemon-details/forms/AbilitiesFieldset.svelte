@@ -2,6 +2,7 @@
 	import { Fieldset, SelectField } from "$lib/ui/forms"
 	import { abilities } from "$lib/pokemon/store"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
+	import { m } from "$lib/site/i18n";
 
 	const NONE = ""
 	const noneOption = { name: "- None -", value: NONE }
@@ -33,6 +34,6 @@
 	} ]
 </script>
 
-<Fieldset title="Ability">
-	<SelectField label="Ability" options={abilityOptions} bind:value={ability} {disabled} />
+<Fieldset title="{m["universal.ability"]()}">
+	<SelectField label="{m["universal.ability"]()}" options={abilityOptions} bind:value={ability} {disabled} />
 </Fieldset>

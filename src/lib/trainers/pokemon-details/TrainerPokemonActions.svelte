@@ -7,6 +7,7 @@
 	import { PageAction } from "../page-action"
 	import type { TrainerStore } from "../trainers"
 	import type { TrainerPokemon } from "../types"
+	import { m } from "$lib/site/i18n";
 
 	const evolutions = EvolutionStore.all()
 
@@ -16,10 +17,10 @@
 </script>
 
 <ActionArea>
-	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="ghost">Remove</Button>
+	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="ghost">{m["universal.remove"]()}</Button>
 	{#if $evolutions?.evolvesTo(species.id).length > 0}
-		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="ghost">Evolve</Button>
+		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="ghost">{m["universal.evolve"]()}</Button>
 	{/if}
-	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.restPokemon)}" variant="success">Rest</Button>
-	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.editPokemon)}">Edit</Button>
+	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.restPokemon)}" variant="success">{m["universal.rest"]()}</Button>
+	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.editPokemon)}">{m["universal.edit"]()}</Button>
 </ActionArea>
