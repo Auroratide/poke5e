@@ -59,7 +59,7 @@
   .stepper {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.1rem;
   }
 
   button {
@@ -87,4 +87,10 @@
     text-align: center;
     font-weight: 600;
   }
+
+  @media screen and (min-width: 50rem) {
+		.stepper {
+			gap: 0.5rem;
+		}
+	}
 </style>

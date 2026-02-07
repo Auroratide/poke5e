@@ -9,9 +9,9 @@
 	import { IntField, Removable, SelectField } from "$lib/ui/forms"
 	import { PokemonType, TypeTag, type PokeType } from "$lib/pokemon/types"
 	import Card from "$lib/ui/page/Card.svelte"
-	import Stepper from "$lib/ui/elements/Stepper.svelte"
 	import { experienceAwarded } from "$lib/poke5e/experience"
 	import { tick } from "svelte"
+	import Stepper from "$lib/ui/elements/Stepper.svelte";
 
 
 	const NONE = ""
@@ -327,6 +327,7 @@
 		justify-content: space-between;
 		align-items: center;
 		border-bottom: 1px solid var(--skin-bg-light);
+		padding-bottom: 1em;
 	}
 
 	.pokemon-data {
@@ -346,18 +347,16 @@
 		font-size: .8em;
 	}
 	.pokemon-level>input {
-		width: 65px;
+		width: 40px;
 	}
 
 	.pokemon-sprite {
 		display: block;
 		border: none;
 		box-shadow: none;
-		image-rendering: crisp-edges;
-		image-rendering: pixelated;
 		aspect-ratio: 1;
 		object-fit: contain;
-		width: 6em;
+		width: 4em;
 		padding-bottom: 1em;
 	}
 
@@ -370,4 +369,16 @@
         margin-left: 0.5em;
         text-transform: uppercase;
     }
+
+	@media screen and (min-width: 50rem) {
+		.pokemon-level>input {
+			width: 65px;
+		}
+		.pokemon-sprite {
+			width: 6em;
+		}
+		.pokemon-item {
+			padding-bottom: 0;
+		}
+	}
 </style>
