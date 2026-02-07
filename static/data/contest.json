@@ -1,4351 +1,4351 @@
 {
-  "items": [
-    {
-      "id": "absorb",
-      "contest": "clever",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "acid",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "acid-armor",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "acid-spray",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "acrobatics",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "acupressure",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "aerial-ace",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "aeroblast",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used last."
-    },
-    {
-      "id": "after-you",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move later on the next turn."
-    },
-    {
-      "id": "agility",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "air-cutter",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move. d6 Effect 1 +1 to attack rolls 2 +2 to damage rolls 3 +10 temporary HP d6 Effect 4 +1 to saving throws 5 Critical Hit range +1 6 +1 to Armor Class"
-    },
-    {
-      "id": "air-slash",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 4,
-      "effect": "Badly startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "ally-switch",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Scrambles the order in which Pokemon will move next turn."
-    },
-    {
-      "id": "amnesia",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "ancient-power",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "aqua-jet",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "aqua-ring",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "aqua-tail",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "arm-thrust",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "aromatherapy",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "aromatic-mist",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "assist",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "assurance",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the later it is used in a turn."
-    },
-    {
-      "id": "astonish",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "attack-order",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "attract",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "aura-sphere",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "aurora-beam",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "autotomize",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "avalanche",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokémon’s move went."
-    },
-    {
-      "id": "baby-doll-eyes",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "barrage",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "barrier",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "baton-pass",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "beat-up",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "belch",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "belly-drum",
-      "contest": "cute",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "bestow",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "bide",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move later on the next turn."
-    },
-    {
-      "id": "bind",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "bite",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "blast-burn",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 4,
-      "effect": "Startles all other Pokemon. User cannot act in the next turn."
-    },
-    {
-      "id": "blaze-kick",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "blizzard",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 3,
-      "effect": "Badly startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "block",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "blue-flare",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "body-slam",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 4,
-      "effect": "Badly startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "bolt-strike",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "bone-club",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "bone-rush",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "bonemerang",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "boomburst",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 4,
-      "effect": "Startles all other Pokemon. User cannot act in the next turn."
-    },
-    {
-      "id": "bounce",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "brave-bird",
-      "contest": "cool",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "brick-break",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "brine",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "bubble",
-      "contest": "cute",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "bubble-beam",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "bug-bite",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "bug-buzz",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 4,
-      "effect": "Badly startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "bulk-up",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "bulldoze",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 2,
-      "effect": "Startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "bullet-punch",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "bullet-seed",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "calm-mind",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "camouflage",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as all the moves before it this turn."
-    },
-    {
-      "id": "captivate",
-      "contest": "cute",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "celebrate",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "charge",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "charge-beam",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "charm",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "chatter",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "chip-away",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "circle-throw",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move later on the next turn."
-    },
-    {
-      "id": "clamp",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "clear-smog",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "close-combat",
-      "contest": "tough",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "coil",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "comet-punch",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "confide",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "confuse-ray",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "confusion",
-      "contest": "clever",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "constrict",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "conversion",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works well if it is the same type as the move used by the last Pokemon."
-    },
-    {
-      "id": "conversion-2",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works well if it is the same type as the move used by the last Pokemon."
-    },
-    {
-      "id": "copycat",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "cosmic-power",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "cotton-guard",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "cotton-spore",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "counter",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "covet",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "crabhammer",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "crafty-shield",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used first."
-    },
-    {
-      "id": "cross-chop",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "cross-poison",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "crunch",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 4,
-      "effect": "Badly startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "crush-claw",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 4,
-      "effect": "Badly startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "crush-grip",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "curse",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move later on the next turn."
-    },
-    {
-      "id": "cut",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "dark-pulse",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "dark-void",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "dazzling-gleam",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "defend-order",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "defense-curl",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "defog",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "destiny-bond",
-      "contest": "clever",
-      "appeal": 8,
-      "jam": 0,
-      "effect": "A move of huge appeal, but using it prevents the user from taking further contest moves."
-    },
-    {
-      "id": "detect",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "diamond-storm",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used last."
-    },
-    {
-      "id": "dig",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "disable",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "disarming-voice",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "discharge",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 2,
-      "effect": "Startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "dive",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "dizzy-punch",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes audience expect little of other contestants."
-    },
-    {
-      "id": "doom-desire",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used last."
-    },
-    {
-      "id": "double-hit",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokémon that used a move of the same type."
-    },
-    {
-      "id": "double-kick",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokémon that used a move of the same type."
-    },
-    {
-      "id": "double-slap",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "double-team",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "double-edge",
-      "contest": "tough",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "draco-meteor",
-      "contest": "beauty",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "dragon-ascent",
-      "contest": "beauty",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "dragon-breath",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokémon to act before the user."
-    },
-    {
-      "id": "dragon-claw",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "dragon-dance",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "dragon-pulse",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "dragon-rage",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "dragon-rush",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "dragon-tail",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move later on the next turn."
-    },
-    {
-      "id": "drain-punch",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "draining-kiss",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as all the moves before it this turn."
-    },
-    {
-      "id": "dream-eater",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works well if it is the same type as the move used by the last Pokemon."
-    },
-    {
-      "id": "drill-peck",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "drill-run",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "dual-chop",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "dynamic-punch",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "earth-power",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "earthquake",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "echoed-voice",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "eerie-impulse",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 3,
-      "effect": "Badly startles all of the other Pokemon to act before the user."
-    },
-    {
-      "id": "egg-bomb",
-      "contest": "cute",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "electric-terrain",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used first."
-    },
-    {
-      "id": "electrify",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "electro-ball",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used first."
-    },
-    {
-      "id": "electroweb",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "embargo",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "ember",
-      "contest": "cute",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "encore",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "endeavor",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "endure",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move later on the next turn."
-    },
-    {
-      "id": "energy-ball",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "entrainment",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "eruption",
-      "contest": "beauty",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "explosion",
-      "contest": "beauty",
-      "appeal": 8,
-      "jam": 0,
-      "effect": "A move of huge appeal, but using it prevents the user from taking further contest moves."
-    },
-    {
-      "id": "extrasensory",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "extreme-speed",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "facade",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "fairy-lock",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "fairy-wind",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "fake-out",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "fake-tears",
-      "contest": "cute",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "false-swipe",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "feather-dance",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "feint",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "feint-attack",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "fell-stinger",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "fiery-dance",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "final-gambit",
-      "contest": "tough",
-      "appeal": 8,
-      "jam": 0,
-      "effect": "A move of huge appeal, but using it prevents the user from taking further contest moves."
-    },
-    {
-      "id": "fire-blast",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "fire-fang",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "fire-pledge",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "fire-punch",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "fire-spin",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "fissure",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "flail",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the later it is used in a turn."
-    },
-    {
-      "id": "flame-burst",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes the audience expect little of the other contestants."
-    },
-    {
-      "id": "flame-charge",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "flame-wheel",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokémon’s move went."
-    },
-    {
-      "id": "flamethrower",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "flare-blitz",
-      "contest": "cool",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "flash",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes audience expect little of other contestants."
-    },
-    {
-      "id": "flash-cannon",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "flatter",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokémon nervous."
-    },
-    {
-      "id": "fling",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "flower-shield",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "fly",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "flying-press",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "focus-blast",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "focus-energy",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "focus-punch",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "follow-me",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "force-palm",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "foresight",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "forests-curse",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "foul-play",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "freeze-shock",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokémon’s move went."
-    },
-    {
-      "id": "freeze-dry",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "frenzy-plant",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 4,
-      "effect": "Startles all other Pokemon. User cannot act in the next turn."
-    },
-    {
-      "id": "frost-breath",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "frustration",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "fury-attack",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "fury-cutter",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "fury-swipes",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "fusion-bolt",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the later it is used in a turn."
-    },
-    {
-      "id": "fusion-flare",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the later it is used in a turn."
-    },
-    {
-      "id": "future-sight",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works well if it is the same type as the move used by the last Pokémon."
-    },
-    {
-      "id": "gastro-acid",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "gear-grind",
-      "contest": "clever",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "geomancy",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "giga-drain",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 4,
-      "effect": "Badly startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "giga-impact",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 4,
-      "effect": "Startles all other Pokemon. User cannot act in the next turn."
-    },
-    {
-      "id": "glaciate",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "glare",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 3,
-      "effect": "Badly startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "grass-knot",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the later it is used in a turn."
-    },
-    {
-      "id": "grass-pledge",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "grass-whistle",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "grassy-terrain",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used first."
-    },
-    {
-      "id": "gravity",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "growl",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "growth",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "grudge",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 4,
-      "effect": "Startles all other Pokemon. User cannot act in the next turn."
-    },
-    {
-      "id": "guard-split",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as all the moves before it this turn."
-    },
-    {
-      "id": "guard-swap",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as all the moves before it this turn."
-    },
-    {
-      "id": "guillotine",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "gunk-shot",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "gust",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "gyro-ball",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the later it is used in a turn."
-    },
-    {
-      "id": "hail",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "hammer-arm",
-      "contest": "tough",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "happy-hour",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "harden",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "haze",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "head-charge",
-      "contest": "tough",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "head-smash",
-      "contest": "tough",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "headbutt",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "heal-bell",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "heal-block",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "heal-order",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "heal-pulse",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "healing-wish",
-      "contest": "beauty",
-      "appeal": 8,
-      "jam": 0,
-      "effect": "A move of huge appeal, but using it prevents the user from taking further contest moves."
-    },
-    {
-      "id": "heart-stamp",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "heart-swap",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as all the moves before it this turn."
-    },
-    {
-      "id": "heat-crash",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used last."
-    },
-    {
-      "id": "heat-wave",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 2,
-      "effect": "Startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "heavy-slam",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used last."
-    },
-    {
-      "id": "helping-hand",
-      "contest": "clever",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "hex",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "hidden-power",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "high-jump-kick",
-      "contest": "cool",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "hold-back",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "hold-hands",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "hone-claws",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "horn-attack",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "horn-drill",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "horn-leech",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "howl",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "hurricane",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "hydro-cannon",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 4,
-      "effect": "Startles all other Pokemon. User cannot act in the next turn."
-    },
-    {
-      "id": "hydro-pump",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "hyper-beam",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 4,
-      "effect": "Startles all other Pokemon. User cannot act in the next turn."
-    },
-    {
-      "id": "hyper-fang",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "hyper-voice",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 2,
-      "effect": "Startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "hyperspace-fury",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used first."
-    },
-    {
-      "id": "hyperspace-hole",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used first."
-    },
-    {
-      "id": "hypnosis",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 3,
-      "effect": "Badly startles all of the other Pokemon to act before the user."
-    },
-    {
-      "id": "ice-ball",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "ice-beam",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 4,
-      "effect": "Badly startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "ice-burn",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokémon’s move went."
-    },
-    {
-      "id": "ice-fang",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "ice-punch",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "ice-shard",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on their next turn."
-    },
-    {
-      "id": "icicle-crash",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used last."
-    },
-    {
-      "id": "icicle-spear",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "icy-wind",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "imprison",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "incinerate",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes audience expect little of other contestants."
-    },
-    {
-      "id": "inferno",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 4,
-      "effect": "Badly startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "infestation",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "ingrain",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "ion-deluge",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "iron-defense",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "iron-head",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "iron-tail",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "judgment",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "jump-kick",
-      "contest": "cool",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "karate-chop",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "kinesis",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "kings-shield",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "knock-off",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "lands-wrath",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 2,
-      "effect": "Startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "last-resort",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "lava-plume",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 2,
-      "effect": "Startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "leaf-blade",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "leaf-storm",
-      "contest": "beauty",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "leaf-tornado",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "leech-life",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "leech-seed",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokémon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "leer",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles the Pokémon that the audience has high expectations of."
-    },
-    {
-      "id": "lick",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokémon to act before the user."
-    },
-    {
-      "id": "light-of-ruin",
-      "contest": "beauty",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "light-screen",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "lock-on",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "lovely-kiss",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "low-kick",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the later it is used in a turn."
-    },
-    {
-      "id": "low-sweep",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "lucky-chant",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "lunar-dance",
-      "contest": "beauty",
-      "appeal": 8,
-      "jam": 0,
-      "effect": "A move of huge appeal, but using it prevents the user from taking further contest moves."
-    },
-    {
-      "id": "luster-purge",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "mach-punch",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "magic-coat",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "magic-room",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "magical-leaf",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "magma-storm",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "magnet-bomb",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "magnet-rise",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "magnetic-flux",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "magnitude",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "mat-block",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 3,
-      "effect": "Badly startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "me-first",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "mean-look",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "meditate",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "mega-drain",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "mega-kick",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "mega-punch",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "megahorn",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "memento",
-      "contest": "tough",
-      "appeal": 8,
-      "jam": 0,
-      "effect": "A move of huge appeal, but using it prevents the user from taking further contest moves."
-    },
-    {
-      "id": "metal-burst",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "metal-claw",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "metal-sound",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 3,
-      "effect": "Badly startles all of the other Pokemon to act before the user."
-    },
-    {
-      "id": "meteor-mash",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "metronome",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "milk-drink",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "mimic",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "mind-reader",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "minimize",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "miracle-eye",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "mirror-coat",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "mirror-move",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "mirror-shot",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "mist",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "mist-ball",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "misty-terrain",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used first."
-    },
-    {
-      "id": "moonblast",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 4,
-      "effect": "Badly startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "moonlight",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "morning-sun",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "mud-bomb",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "mud-shot",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "mud-sport",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "mud-slap",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "muddy-water",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 2,
-      "effect": "Startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "mystical-fire",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "nasty-plot",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "natural-gift",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "nature-power",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "needle-arm",
-      "contest": "clever",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move. Type Berry Normal Chilan Fire Cherri, Occa Water Chesto, Passho Electric Pecha, Waccan Grass Rawst, Rindo Ice Aspear, Yache Fighting Leppa, Chople Poison Oran, Kebia Ground Persim, Shucca Type Berry Flying Lum, Coba Psychic Sitrus, Payapa Bug Tanga Rock Charti Ghost Kasib Dragon Haban Dark Colbur Steel Babiri, Razz Fairy Roseli"
-    },
-    {
-      "id": "night-daze",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "night-shade",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "night-slash",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "nightmare",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 3,
-      "effect": "Badly startles all of the other Pokemon to act before the user."
-    },
-    {
-      "id": "noble-roar",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "nuzzle",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "oblivion-wing",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as all the moves before it this turn."
-    },
-    {
-      "id": "octazooka",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "odor-sleuth",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "ominous-wind",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "origin-pulse",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used first."
-    },
-    {
-      "id": "outrage",
-      "contest": "cool",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "overheat",
-      "contest": "beauty",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "pain-split",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as all the moves before it this turn."
-    },
-    {
-      "id": "parabolic-charge",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as all the moves before it this turn."
-    },
-    {
-      "id": "parting-shot",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used last."
-    },
-    {
-      "id": "pay-day",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "payback",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "peck",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "perish-song",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "petal-blizzard",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 2,
-      "effect": "Startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "petal-dance",
-      "contest": "beauty",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "phantom-force",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "pin-missile",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "play-nice",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "play-rough",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "pluck",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "poison-fang",
-      "contest": "clever",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "poison-gas",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes audience expect little of other contestants."
-    },
-    {
-      "id": "poison-jab",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "poison-powder",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "poison-sting",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "poison-tail",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "pound",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "powder",
-      "contest": "clever",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "powder-snow",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "power-gem",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "power-split",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as all the moves before it this turn."
-    },
-    {
-      "id": "power-swap",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as all the moves before it this turn."
-    },
-    {
-      "id": "power-trick",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works well if it is the same type as the move used by the last Pokemon."
-    },
-    {
-      "id": "power-whip",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "power-up-punch",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "precipice-blades",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used last."
-    },
-    {
-      "id": "present",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "protect",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "psybeam",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes the audience expect little of the other contestants."
-    },
-    {
-      "id": "psych-up",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works well if it is the same type as the move used by the last Pokemon."
-    },
-    {
-      "id": "psychic",
-      "contest": "clever",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "psycho-boost",
-      "contest": "clever",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "psycho-cut",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "psycho-shift",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "psyshock",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 4,
-      "effect": "Badly startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "psystrike",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "psywave",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "punishment",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "pursuit",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "quash",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "quick-attack",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "quick-guard",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "quiver-dance",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "rage",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 3,
-      "effect": "Badly startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "rage-powder",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "rain-dance",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "rapid-spin",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "razor-leaf",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "razor-shell",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "razor-wind",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "recover",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works well if it is the same type as the move used by the last Pokemon."
-    },
-    {
-      "id": "recycle",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "reflect",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "reflect-type",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works well if it is the same type as the move used by the last Pokemon."
-    },
-    {
-      "id": "refresh",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "relic-song",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "rest",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "retaliate",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "return",
-      "contest": "cute",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "revenge",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "reversal",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the later it is used in a turn."
-    },
-    {
-      "id": "roar",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move later on the next turn."
-    },
-    {
-      "id": "roar-of-time",
-      "contest": "beauty",
-      "appeal": 4,
-      "jam": 4,
-      "effect": "Startles all other Pokemon. User cannot act in the next turn."
-    },
-    {
-      "id": "rock-blast",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "rock-climb",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes audience expect little of other contestants."
-    },
-    {
-      "id": "rock-polish",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "rock-slide",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 2,
-      "effect": "Startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "rock-smash",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "rock-throw",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "rock-tomb",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes audience expect little of other contestants."
-    },
-    {
-      "id": "rock-wrecker",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 4,
-      "effect": "Startles all other Pokemon. User cannot act in the next turn."
-    },
-    {
-      "id": "role-play",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "rolling-kick",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "rollout",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "roost",
-      "contest": "clever",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "rototiller",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "round",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works well if it is the same type as the move used by the last Pokemon."
-    },
-    {
-      "id": "sacred-fire",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used last."
-    },
-    {
-      "id": "sacred-sword",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "safeguard",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "sand-attack",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes audience expect little of other contestants."
-    },
-    {
-      "id": "sand-tomb",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "sandstorm",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "scald",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "scary-face",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "scratch",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "screech",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes audience expect little of other contestants."
-    },
-    {
-      "id": "searing-shot",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "secret-power",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "secret-sword",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "seed-bomb",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "seed-flare",
-      "contest": "beauty",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "seismic-toss",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "self-destruct",
-      "contest": "beauty",
-      "appeal": 8,
-      "jam": 0,
-      "effect": "A move of huge appeal, but using it prevents the user from taking further contest moves."
-    },
-    {
-      "id": "shadow-ball",
-      "contest": "clever",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "shadow-claw",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move"
-    },
-    {
-      "id": "shadow-force",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "shadow-punch",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "shadow-sneak",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "sharpen",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "sheer-cold",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "shell-smash",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used last."
-    },
-    {
-      "id": "shift-gear",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "shock-wave",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "signal-beam",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes the audience expect little of the other contestants."
-    },
-    {
-      "id": "silver-wind",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "simple-beam",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "sing",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "sketch",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "skill-swap",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "skull-bash",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "sky-attack",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "sky-drop",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "sky-uppercut",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "slack-off",
-      "contest": "cute",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "slam",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "slash",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move"
-    },
-    {
-      "id": "sleep-powder",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 3,
-      "effect": "Badly startles all of the other Pokemon to act before the user."
-    },
-    {
-      "id": "sleep-talk",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "sludge",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "sludge-bomb",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "sludge-wave",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "smack-down",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "smelling-salts",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "smog",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "smokescreen",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "snarl",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "snatch",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "snore",
-      "contest": "cute",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "soak",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "soft-boiled",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "solar-beam",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "sonic-boom",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "spacial-rend",
-      "contest": "beauty",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "spark",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "spider-web",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "spike-cannon",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "spikes",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "spiky-shield",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "spit-up",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "spite",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "splash",
-      "contest": "cute",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "spore",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 3,
-      "effect": "Badly startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "stealth-rock",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "steam-eruption",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used last."
-    },
-    {
-      "id": "steamroller",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "steel-wing",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "sticky-web",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "stockpile",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "stomp",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "stone-edge",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "stored-power",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "storm-throw",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "strength",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "string-shot",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 3,
-      "effect": "Startles the last Pokemon to act before the user."
-    },
-    {
-      "id": "struggle",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "struggle-bug",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "stun-spore",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "submission",
-      "contest": "cool",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "substitute",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "sucker-punch",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used first."
-    },
-    {
-      "id": "sunny-day",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "super-fang",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "superpower",
-      "contest": "tough",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "supersonic",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes audience expect little of other contestants."
-    },
-    {
-      "id": "surf",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 2,
-      "effect": "Startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "swagger",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "swallow",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "sweet-kiss",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "sweet-scent",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "swift",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes first this turn."
-    },
-    {
-      "id": "switcheroo",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "swords-dance",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "synchronoise",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works well if it is the same type as the move used by the last Pokemon."
-    },
-    {
-      "id": "synthesis",
-      "contest": "clever",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "tackle",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "tail-glow",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Gets the Pokemon pumped up. Helps prevent nervousness, too."
-    },
-    {
-      "id": "tail-slap",
-      "contest": "cute",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "tail-whip",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "tailwind",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "take-down",
-      "contest": "tough",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "taunt",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "techno-blast",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works well if the user is pumped up."
-    },
-    {
-      "id": "teeter-dance",
-      "contest": "cute",
-      "appeal": 4,
-      "jam": 4,
-      "effect": "Startles all other Pokemon. User cannot act in the next turn."
-    },
-    {
-      "id": "telekinesis",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "teleport",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "thief",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Shows off the Pokemon’s appeal about as well as the move used just before it."
-    },
-    {
-      "id": "thousand-arrows",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokémon that used a move of the same type."
-    },
-    {
-      "id": "thousand-waves",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "thrash",
-      "contest": "tough",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "thunder",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the more excited the crowd is."
-    },
-    {
-      "id": "thunder-fang",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move"
-    },
-    {
-      "id": "thunder-punch",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "thunder-shock",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "thunder-wave",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 3,
-      "effect": "Badly startles all of the Pokemon to act before the user."
-    },
-    {
-      "id": "thunderbolt",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "tickle",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "topsy-turvy",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Scrambles the order in which Pokemon will move next turn."
-    },
-    {
-      "id": "torment",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "toxic",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "toxic-spikes",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "transform",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "tri-attack",
-      "contest": "beauty",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Effectiveness varies depending on when it is used."
-    },
-    {
-      "id": "trick",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "trick-room",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Scrambles the order in which Pokemon will move next turn."
-    },
-    {
-      "id": "trick-or-treat",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "triple-kick",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "trump-card",
-      "contest": "cool",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Works better the later it is used in a turn."
-    },
-    {
-      "id": "twineedle",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "twister",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "u-turn",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "uproar",
-      "contest": "cute",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "v-create",
-      "contest": "cool",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "vacuum-wave",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "venom-drench",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Brings down the energy of any Pokemon that have already used a move this turn."
-    },
-    {
-      "id": "venoshock",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works well if it is the same type as the move used by the last Pokemon."
-    },
-    {
-      "id": "vice-grip",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "vine-whip",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "vital-throw",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Works great if the user goes last this turn."
-    },
-    {
-      "id": "volt-switch",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Makes the audience quickly grow bored when an appeal move has little effect."
-    },
-    {
-      "id": "volt-tackle",
-      "contest": "cool",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "wake-up-slap",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Affected by how well the previous Pokemon’s move went."
-    },
-    {
-      "id": "water-gun",
-      "contest": "cute",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "water-pledge",
-      "contest": "beauty",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "water-pulse",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes the audience expect little of the other contestants."
-    },
-    {
-      "id": "water-shuriken",
-      "contest": "cool",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move earlier on the next turn."
-    },
-    {
-      "id": "water-sport",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Excites the audience in any kind of contest."
-    },
-    {
-      "id": "water-spout",
-      "contest": "beauty",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "waterfall",
-      "contest": "tough",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    },
-    {
-      "id": "weather-ball",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "An appealing move that can be used repeatedly without boring the audience."
-    },
-    {
-      "id": "whirlpool",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "whirlwind",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Causes the user to move later on the next turn."
-    },
-    {
-      "id": "wide-guard",
-      "contest": "tough",
-      "appeal": 1,
-      "jam": 0,
-      "effect": "Prevents the user from being startled until the turn ends."
-    },
-    {
-      "id": "wild-charge",
-      "contest": "tough",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "will-o-wisp",
-      "contest": "beauty",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Makes the audience expect little of the other contestants."
-    },
-    {
-      "id": "wing-attack",
-      "contest": "cool",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move"
-    },
-    {
-      "id": "wish",
-      "contest": "cute",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used last."
-    },
-    {
-      "id": "withdraw",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Prevents the user from being startled one time this turn."
-    },
-    {
-      "id": "wonder-room",
-      "contest": "clever",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Scrambles the order in which Pokemon will move next turn."
-    },
-    {
-      "id": "wood-hammer",
-      "contest": "tough",
-      "appeal": 6,
-      "jam": 0,
-      "effect": "A very appealing move, but after using this move, the user is more easily startled."
-    },
-    {
-      "id": "work-up",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Excites the audience a lot if used first."
-    },
-    {
-      "id": "worry-seed",
-      "contest": "clever",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "wrap",
-      "contest": "tough",
-      "appeal": 3,
-      "jam": 0,
-      "effect": "Temporarily stops the crowd from growing excited."
-    },
-    {
-      "id": "wring-out",
-      "contest": "tough",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that the audience has high expectations of."
-    },
-    {
-      "id": "x-scissor",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles Pokemon that used a move of the same type."
-    },
-    {
-      "id": "yawn",
-      "contest": "cute",
-      "appeal": 2,
-      "jam": 0,
-      "effect": "Makes the remaining Pokemon nervous."
-    },
-    {
-      "id": "zap-cannon",
-      "contest": "cool",
-      "appeal": 2,
-      "jam": 1,
-      "effect": "Badly startles all Pokemon that successfully showed their appeal."
-    },
-    {
-      "id": "zen-headbutt",
-      "contest": "clever",
-      "appeal": 4,
-      "jam": 0,
-      "effect": "Quite an appealing move."
-    }
-  ]
+	"items": [
+		{
+			"id": "absorb",
+			"contest": "clever",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "acid",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "acid-armor",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "acid-spray",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "acrobatics",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "acupressure",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "aerial-ace",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "aeroblast",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "15"
+		},
+		{
+			"id": "after-you",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "12"
+		},
+		{
+			"id": "agility",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "air-cutter",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "air-slash",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 4,
+			"effect": "9"
+		},
+		{
+			"id": "ally-switch",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "24"
+		},
+		{
+			"id": "amnesia",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "ancient-power",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "aqua-jet",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "aqua-ring",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "aqua-tail",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "arm-thrust",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "aromatherapy",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "aromatic-mist",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "assist",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "assurance",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "31"
+		},
+		{
+			"id": "astonish",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "attack-order",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "attract",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "aura-sphere",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "aurora-beam",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "autotomize",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "avalanche",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "baby-doll-eyes",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "barrage",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "barrier",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "baton-pass",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "beat-up",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "belch",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "belly-drum",
+			"contest": "cute",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "bestow",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "bide",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "12"
+		},
+		{
+			"id": "bind",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "bite",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "blast-burn",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 4,
+			"effect": "28"
+		},
+		{
+			"id": "blaze-kick",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "blizzard",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 3,
+			"effect": "5"
+		},
+		{
+			"id": "block",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "blue-flare",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "body-slam",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 4,
+			"effect": "9"
+		},
+		{
+			"id": "bolt-strike",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "bone-club",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "bone-rush",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "bonemerang",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "boomburst",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 4,
+			"effect": "28"
+		},
+		{
+			"id": "bounce",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "brave-bird",
+			"contest": "cool",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "brick-break",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "brine",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "bubble",
+			"contest": "cute",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "bubble-beam",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "bug-bite",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "bug-buzz",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 4,
+			"effect": "9"
+		},
+		{
+			"id": "bulk-up",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "bulldoze",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 2,
+			"effect": "27"
+		},
+		{
+			"id": "bullet-punch",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "bullet-seed",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "calm-mind",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "camouflage",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "25"
+		},
+		{
+			"id": "captivate",
+			"contest": "cute",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "celebrate",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "charge",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "charge-beam",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "charm",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "chatter",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "chip-away",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "circle-throw",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "12"
+		},
+		{
+			"id": "clamp",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "clear-smog",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "close-combat",
+			"contest": "tough",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "coil",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "comet-punch",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "confide",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "confuse-ray",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "confusion",
+			"contest": "clever",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "constrict",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "conversion",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "35"
+		},
+		{
+			"id": "conversion-2",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "35"
+		},
+		{
+			"id": "copycat",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "cosmic-power",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "cotton-guard",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "cotton-spore",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "counter",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "covet",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "crabhammer",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "crafty-shield",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "14"
+		},
+		{
+			"id": "cross-chop",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "cross-poison",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "crunch",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 4,
+			"effect": "9"
+		},
+		{
+			"id": "crush-claw",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 4,
+			"effect": "9"
+		},
+		{
+			"id": "crush-grip",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "curse",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "12"
+		},
+		{
+			"id": "cut",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "dark-pulse",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "dark-void",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "dazzling-gleam",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "defend-order",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "defense-curl",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "defog",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "destiny-bond",
+			"contest": "clever",
+			"appeal": 8,
+			"jam": 0,
+			"effect": "1"
+		},
+		{
+			"id": "detect",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "diamond-storm",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "15"
+		},
+		{
+			"id": "dig",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "disable",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "disarming-voice",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "discharge",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 2,
+			"effect": "27"
+		},
+		{
+			"id": "dive",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "dizzy-punch",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "doom-desire",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "15"
+		},
+		{
+			"id": "double-hit",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "double-kick",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "double-slap",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "double-team",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "double-edge",
+			"contest": "tough",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "draco-meteor",
+			"contest": "beauty",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "dragon-ascent",
+			"contest": "beauty",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "dragon-breath",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "dragon-claw",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "dragon-dance",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "dragon-pulse",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "dragon-rage",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "dragon-rush",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "dragon-tail",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "12"
+		},
+		{
+			"id": "drain-punch",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "draining-kiss",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "25"
+		},
+		{
+			"id": "dream-eater",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "35"
+		},
+		{
+			"id": "drill-peck",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "drill-run",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "dual-chop",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "dynamic-punch",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "earth-power",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "earthquake",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "echoed-voice",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "eerie-impulse",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 3,
+			"effect": "5"
+		},
+		{
+			"id": "egg-bomb",
+			"contest": "cute",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "electric-terrain",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "14"
+		},
+		{
+			"id": "electrify",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "electro-ball",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "14"
+		},
+		{
+			"id": "electroweb",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "embargo",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "ember",
+			"contest": "cute",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "encore",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "endeavor",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "endure",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "12"
+		},
+		{
+			"id": "energy-ball",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "entrainment",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "eruption",
+			"contest": "beauty",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "explosion",
+			"contest": "beauty",
+			"appeal": 8,
+			"jam": 0,
+			"effect": "1"
+		},
+		{
+			"id": "extrasensory",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "extreme-speed",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "facade",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "fairy-lock",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "fairy-wind",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "fake-out",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "fake-tears",
+			"contest": "cute",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "false-swipe",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "feather-dance",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "feint",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "feint-attack",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "fell-stinger",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "fiery-dance",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "final-gambit",
+			"contest": "tough",
+			"appeal": 8,
+			"jam": 0,
+			"effect": "1"
+		},
+		{
+			"id": "fire-blast",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "fire-fang",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "fire-pledge",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "fire-punch",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "fire-spin",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "fissure",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "flail",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "31"
+		},
+		{
+			"id": "flame-burst",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "flame-charge",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "flame-wheel",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "flamethrower",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "flare-blitz",
+			"contest": "cool",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "flash",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "flash-cannon",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "flatter",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "fling",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "flower-shield",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "fly",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "flying-press",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "focus-blast",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "focus-energy",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "focus-punch",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "follow-me",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "force-palm",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "foresight",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "forests-curse",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "foul-play",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "freeze-shock",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "freeze-dry",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "frenzy-plant",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 4,
+			"effect": "28"
+		},
+		{
+			"id": "frost-breath",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "frustration",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "fury-attack",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "fury-cutter",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "fury-swipes",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "fusion-bolt",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "31"
+		},
+		{
+			"id": "fusion-flare",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "31"
+		},
+		{
+			"id": "future-sight",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "35"
+		},
+		{
+			"id": "gastro-acid",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "gear-grind",
+			"contest": "clever",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "geomancy",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "giga-drain",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 4,
+			"effect": "9"
+		},
+		{
+			"id": "giga-impact",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 4,
+			"effect": "28"
+		},
+		{
+			"id": "glaciate",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "glare",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 3,
+			"effect": "5"
+		},
+		{
+			"id": "grass-knot",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "31"
+		},
+		{
+			"id": "grass-pledge",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "grass-whistle",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "grassy-terrain",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "14"
+		},
+		{
+			"id": "gravity",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "growl",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "growth",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "grudge",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 4,
+			"effect": "28"
+		},
+		{
+			"id": "guard-split",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "25"
+		},
+		{
+			"id": "guard-swap",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "25"
+		},
+		{
+			"id": "guillotine",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "gunk-shot",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "gust",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "gyro-ball",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "31"
+		},
+		{
+			"id": "hail",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "hammer-arm",
+			"contest": "tough",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "happy-hour",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "harden",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "haze",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "head-charge",
+			"contest": "tough",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "head-smash",
+			"contest": "tough",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "headbutt",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "heal-bell",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "heal-block",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "heal-order",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "heal-pulse",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "healing-wish",
+			"contest": "beauty",
+			"appeal": 8,
+			"jam": 0,
+			"effect": "1"
+		},
+		{
+			"id": "heart-stamp",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "heart-swap",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "25"
+		},
+		{
+			"id": "heat-crash",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "15"
+		},
+		{
+			"id": "heat-wave",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 2,
+			"effect": "27"
+		},
+		{
+			"id": "heavy-slam",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "15"
+		},
+		{
+			"id": "helping-hand",
+			"contest": "clever",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "hex",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "hidden-power",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "high-jump-kick",
+			"contest": "cool",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "hold-back",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "hold-hands",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "hone-claws",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "horn-attack",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "horn-drill",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "horn-leech",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "howl",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "hurricane",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "hydro-cannon",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 4,
+			"effect": "28"
+		},
+		{
+			"id": "hydro-pump",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "hyper-beam",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 4,
+			"effect": "28"
+		},
+		{
+			"id": "hyper-fang",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "hyper-voice",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 2,
+			"effect": "27"
+		},
+		{
+			"id": "hyperspace-fury",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "14"
+		},
+		{
+			"id": "hyperspace-hole",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "14"
+		},
+		{
+			"id": "hypnosis",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 3,
+			"effect": "5"
+		},
+		{
+			"id": "ice-ball",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "ice-beam",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 4,
+			"effect": "9"
+		},
+		{
+			"id": "ice-burn",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "ice-fang",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "ice-punch",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "ice-shard",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "icicle-crash",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "15"
+		},
+		{
+			"id": "icicle-spear",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "icy-wind",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "imprison",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "incinerate",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "inferno",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 4,
+			"effect": "9"
+		},
+		{
+			"id": "infestation",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "ingrain",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "ion-deluge",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "iron-defense",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "iron-head",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "iron-tail",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "judgment",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "jump-kick",
+			"contest": "cool",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "karate-chop",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "kinesis",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "kings-shield",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "knock-off",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "lands-wrath",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 2,
+			"effect": "27"
+		},
+		{
+			"id": "last-resort",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "lava-plume",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 2,
+			"effect": "27"
+		},
+		{
+			"id": "leaf-blade",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "leaf-storm",
+			"contest": "beauty",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "leaf-tornado",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "leech-life",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "leech-seed",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "leer",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "lick",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "light-of-ruin",
+			"contest": "beauty",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "light-screen",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "lock-on",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "lovely-kiss",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "low-kick",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "31"
+		},
+		{
+			"id": "low-sweep",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "lucky-chant",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "lunar-dance",
+			"contest": "beauty",
+			"appeal": 8,
+			"jam": 0,
+			"effect": "1"
+		},
+		{
+			"id": "luster-purge",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "mach-punch",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "magic-coat",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "magic-room",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "magical-leaf",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "magma-storm",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "magnet-bomb",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "magnet-rise",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "magnetic-flux",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "magnitude",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "mat-block",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 3,
+			"effect": "5"
+		},
+		{
+			"id": "me-first",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "mean-look",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "meditate",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "mega-drain",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "mega-kick",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "mega-punch",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "megahorn",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "memento",
+			"contest": "tough",
+			"appeal": 8,
+			"jam": 0,
+			"effect": "1"
+		},
+		{
+			"id": "metal-burst",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "metal-claw",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "metal-sound",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 3,
+			"effect": "5"
+		},
+		{
+			"id": "meteor-mash",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "metronome",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "milk-drink",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "mimic",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "mind-reader",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "minimize",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "miracle-eye",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "mirror-coat",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "mirror-move",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "mirror-shot",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "mist",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "mist-ball",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "misty-terrain",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "14"
+		},
+		{
+			"id": "moonblast",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 4,
+			"effect": "9"
+		},
+		{
+			"id": "moonlight",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "morning-sun",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "mud-bomb",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "mud-shot",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "mud-sport",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "mud-slap",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "muddy-water",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 2,
+			"effect": "27"
+		},
+		{
+			"id": "mystical-fire",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "nasty-plot",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "natural-gift",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "nature-power",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "needle-arm",
+			"contest": "clever",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "night-daze",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "night-shade",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "night-slash",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "nightmare",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 3,
+			"effect": "5"
+		},
+		{
+			"id": "noble-roar",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "nuzzle",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "oblivion-wing",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "25"
+		},
+		{
+			"id": "octazooka",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "odor-sleuth",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "ominous-wind",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "origin-pulse",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "14"
+		},
+		{
+			"id": "outrage",
+			"contest": "cool",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "overheat",
+			"contest": "beauty",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "pain-split",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "25"
+		},
+		{
+			"id": "parabolic-charge",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "25"
+		},
+		{
+			"id": "parting-shot",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "15"
+		},
+		{
+			"id": "pay-day",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "payback",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "peck",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "perish-song",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "petal-blizzard",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 2,
+			"effect": "27"
+		},
+		{
+			"id": "petal-dance",
+			"contest": "beauty",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "phantom-force",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "pin-missile",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "play-nice",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "play-rough",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "pluck",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "poison-fang",
+			"contest": "clever",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "poison-gas",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "poison-jab",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "poison-powder",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "poison-sting",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "poison-tail",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "pound",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "powder",
+			"contest": "clever",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "powder-snow",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "power-gem",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "power-split",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "25"
+		},
+		{
+			"id": "power-swap",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "25"
+		},
+		{
+			"id": "power-trick",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "35"
+		},
+		{
+			"id": "power-whip",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "power-up-punch",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "precipice-blades",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "15"
+		},
+		{
+			"id": "present",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "protect",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "psybeam",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "psych-up",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "35"
+		},
+		{
+			"id": "psychic",
+			"contest": "clever",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "psycho-boost",
+			"contest": "clever",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "psycho-cut",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "psycho-shift",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "psyshock",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 4,
+			"effect": "9"
+		},
+		{
+			"id": "psystrike",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "psywave",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "punishment",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "pursuit",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "quash",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "quick-attack",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "quick-guard",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "quiver-dance",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "rage",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 3,
+			"effect": "5"
+		},
+		{
+			"id": "rage-powder",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "rain-dance",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "rapid-spin",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "razor-leaf",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "razor-shell",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "razor-wind",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "recover",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "35"
+		},
+		{
+			"id": "recycle",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "reflect",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "reflect-type",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "35"
+		},
+		{
+			"id": "refresh",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "relic-song",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "rest",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "retaliate",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "return",
+			"contest": "cute",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "revenge",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "reversal",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "31"
+		},
+		{
+			"id": "roar",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "12"
+		},
+		{
+			"id": "roar-of-time",
+			"contest": "beauty",
+			"appeal": 4,
+			"jam": 4,
+			"effect": "28"
+		},
+		{
+			"id": "rock-blast",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "rock-climb",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "rock-polish",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "rock-slide",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 2,
+			"effect": "27"
+		},
+		{
+			"id": "rock-smash",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "rock-throw",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "rock-tomb",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "rock-wrecker",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 4,
+			"effect": "28"
+		},
+		{
+			"id": "role-play",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "rolling-kick",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "rollout",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "roost",
+			"contest": "clever",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "rototiller",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "round",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "35"
+		},
+		{
+			"id": "sacred-fire",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "15"
+		},
+		{
+			"id": "sacred-sword",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "safeguard",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "sand-attack",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "sand-tomb",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "sandstorm",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "scald",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "scary-face",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "scratch",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "screech",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "searing-shot",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "secret-power",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "secret-sword",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "seed-bomb",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "seed-flare",
+			"contest": "beauty",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "seismic-toss",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "self-destruct",
+			"contest": "beauty",
+			"appeal": 8,
+			"jam": 0,
+			"effect": "1"
+		},
+		{
+			"id": "shadow-ball",
+			"contest": "clever",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "shadow-claw",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "shadow-force",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "shadow-punch",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "shadow-sneak",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "sharpen",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "sheer-cold",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "shell-smash",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "15"
+		},
+		{
+			"id": "shift-gear",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "shock-wave",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "signal-beam",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "silver-wind",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "simple-beam",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "sing",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "sketch",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "skill-swap",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "skull-bash",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "sky-attack",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "sky-drop",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "sky-uppercut",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "slack-off",
+			"contest": "cute",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "slam",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "slash",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "sleep-powder",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 3,
+			"effect": "5"
+		},
+		{
+			"id": "sleep-talk",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "sludge",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "sludge-bomb",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "sludge-wave",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "smack-down",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "smelling-salts",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "smog",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "smokescreen",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "snarl",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "snatch",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "snore",
+			"contest": "cute",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "soak",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "soft-boiled",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "solar-beam",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "sonic-boom",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "spacial-rend",
+			"contest": "beauty",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "spark",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "spider-web",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "spike-cannon",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "spikes",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "spiky-shield",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "spit-up",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "spite",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "splash",
+			"contest": "cute",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "spore",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 3,
+			"effect": "5"
+		},
+		{
+			"id": "stealth-rock",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "steam-eruption",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "15"
+		},
+		{
+			"id": "steamroller",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "steel-wing",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "sticky-web",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "stockpile",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "stomp",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "stone-edge",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "stored-power",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "storm-throw",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "strength",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "string-shot",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 3,
+			"effect": "29"
+		},
+		{
+			"id": "struggle",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "struggle-bug",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "stun-spore",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "submission",
+			"contest": "cool",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "substitute",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "sucker-punch",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "14"
+		},
+		{
+			"id": "sunny-day",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "super-fang",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "superpower",
+			"contest": "tough",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "supersonic",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "surf",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 2,
+			"effect": "27"
+		},
+		{
+			"id": "swagger",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "swallow",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "sweet-kiss",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "sweet-scent",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "swift",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "33"
+		},
+		{
+			"id": "switcheroo",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "swords-dance",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "synchronoise",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "35"
+		},
+		{
+			"id": "synthesis",
+			"contest": "clever",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "tackle",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "tail-glow",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "17"
+		},
+		{
+			"id": "tail-slap",
+			"contest": "cute",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "tail-whip",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "tailwind",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "take-down",
+			"contest": "tough",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "taunt",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "techno-blast",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "36"
+		},
+		{
+			"id": "teeter-dance",
+			"contest": "cute",
+			"appeal": 4,
+			"jam": 4,
+			"effect": "28"
+		},
+		{
+			"id": "telekinesis",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "teleport",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "thief",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "26"
+		},
+		{
+			"id": "thousand-arrows",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "thousand-waves",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "thrash",
+			"contest": "tough",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "thunder",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "32"
+		},
+		{
+			"id": "thunder-fang",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "thunder-punch",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "thunder-shock",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "thunder-wave",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 3,
+			"effect": "5"
+		},
+		{
+			"id": "thunderbolt",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "tickle",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "topsy-turvy",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "24"
+		},
+		{
+			"id": "torment",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "toxic",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "toxic-spikes",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "transform",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "tri-attack",
+			"contest": "beauty",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "13"
+		},
+		{
+			"id": "trick",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "trick-room",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "24"
+		},
+		{
+			"id": "trick-or-treat",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "triple-kick",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "trump-card",
+			"contest": "cool",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "31"
+		},
+		{
+			"id": "twineedle",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "twister",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "u-turn",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "uproar",
+			"contest": "cute",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "v-create",
+			"contest": "cool",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "vacuum-wave",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "venom-drench",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "10"
+		},
+		{
+			"id": "venoshock",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "35"
+		},
+		{
+			"id": "vice-grip",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "vine-whip",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "vital-throw",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "34"
+		},
+		{
+			"id": "volt-switch",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "19"
+		},
+		{
+			"id": "volt-tackle",
+			"contest": "cool",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "wake-up-slap",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "3"
+		},
+		{
+			"id": "water-gun",
+			"contest": "cute",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "water-pledge",
+			"contest": "beauty",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "water-pulse",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "water-shuriken",
+			"contest": "cool",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "11"
+		},
+		{
+			"id": "water-sport",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "16"
+		},
+		{
+			"id": "water-spout",
+			"contest": "beauty",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "waterfall",
+			"contest": "tough",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "weather-ball",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "4"
+		},
+		{
+			"id": "whirlpool",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "whirlwind",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "12"
+		},
+		{
+			"id": "wide-guard",
+			"contest": "tough",
+			"appeal": 1,
+			"jam": 0,
+			"effect": "22"
+		},
+		{
+			"id": "wild-charge",
+			"contest": "tough",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "will-o-wisp",
+			"contest": "beauty",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "18"
+		},
+		{
+			"id": "wing-attack",
+			"contest": "cool",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		},
+		{
+			"id": "wish",
+			"contest": "cute",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "15"
+		},
+		{
+			"id": "withdraw",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "21"
+		},
+		{
+			"id": "wonder-room",
+			"contest": "clever",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "24"
+		},
+		{
+			"id": "wood-hammer",
+			"contest": "tough",
+			"appeal": 6,
+			"jam": 0,
+			"effect": "2"
+		},
+		{
+			"id": "work-up",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "14"
+		},
+		{
+			"id": "worry-seed",
+			"contest": "clever",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "wrap",
+			"contest": "tough",
+			"appeal": 3,
+			"jam": 0,
+			"effect": "30"
+		},
+		{
+			"id": "wring-out",
+			"contest": "tough",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "7"
+		},
+		{
+			"id": "x-scissor",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "8"
+		},
+		{
+			"id": "yawn",
+			"contest": "cute",
+			"appeal": 2,
+			"jam": 0,
+			"effect": "20"
+		},
+		{
+			"id": "zap-cannon",
+			"contest": "cool",
+			"appeal": 2,
+			"jam": 1,
+			"effect": "6"
+		},
+		{
+			"id": "zen-headbutt",
+			"contest": "clever",
+			"appeal": 4,
+			"jam": 0,
+			"effect": "23"
+		}
+	]
 }

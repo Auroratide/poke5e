@@ -423,6 +423,7 @@
 		},
 		{
 			"id": "alluring-voice",
+			"beta": true,
 			"name": "Alluring Voice",
 			"type": "fairy",
 			"power": [
@@ -1739,6 +1740,7 @@
 		},
 		{
 			"id": "bleakwind-storm",
+			"beta": true,
 			"name": "Bleakwind Storm",
 			"type": "flying",
 			"power": [
@@ -2735,6 +2737,7 @@
 		},
 		{
 			"id": "burning-jealousy",
+			"beta": true,
 			"name": "Burning Jealousy",
 			"type": "fire",
 			"power": [
@@ -2976,6 +2979,7 @@
 		},
 		{
 			"id": "chilling-water",
+			"beta": true,
 			"name": "Chilling Water",
 			"type": "water",
 			"power": [
@@ -3018,6 +3022,7 @@
 		},
 		{
 			"id": "chilly-reception",
+			"beta": true,
 			"name": "Chilly Reception",
 			"type": "ice",
 			"power": [
@@ -3202,6 +3207,7 @@
 		},
 		{
 			"id": "clangorous-soul",
+			"beta": true,
 			"name": "Clangorous Soul",
 			"type": "dragon",
 			"power": [
@@ -3284,6 +3290,7 @@
 		},
 		{
 			"id": "coaching",
+			"beta": true,
 			"name": "Coaching",
 			"type": "fighting",
 			"power": "none",
@@ -3612,6 +3619,7 @@
 		},
 		{
 			"id": "corrosive-gas",
+			"beta": true,
 			"name": "Corrosive Gas",
 			"type": "poison",
 			"power": [
@@ -8679,6 +8687,7 @@
 		},
 		{
 			"id": "grassy-glide",
+			"beta": true,
 			"name": "Grassy Glide",
 			"type": "grass",
 			"power": [
@@ -9100,6 +9109,7 @@
 		},
 		{
 			"id": "hard-press",
+			"beta": true,
 			"name": "Hard Press",
 			"type": "steel",
 			"power": [
@@ -9330,7 +9340,17 @@
 			"description": [
 				"You summon forth your underlings to heal your wounds. Regain 4d4 + MOVE hit points."
 			],
-			"higherLevels": "The healing dice roll for this move changes to 3d6 at level 5, 5d6 at level 10, and 8d6 at level 17."
+			"higherLevels": "The healing dice roll for this move changes to 3d6 at level 5, 5d6 at level 10, and 8d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "4d4",
+					"5": "3d6",
+					"10": "5d6",
+					"17": "8d6"
+				},
+				"modifier": "MOVE",
+				"type": "healing"
+			}
 		},
 		{
 			"id": "heal-pulse",
@@ -9347,7 +9367,17 @@
 			"description": [
 				"You emit a healing pulse that restores a target's HP. Choose a target in range (cannot be yourself). The target regains 4d4 + MOVE hit points."
 			],
-			"higherLevels": "The healing dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17."
+			"higherLevels": "The healing dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "4d4",
+					"5": "2d12",
+					"10": "4d8",
+					"17": "8d6"
+				},
+				"modifier": "MOVE",
+				"type": "healing"
+			}
 		},
 		{
 			"id": "healing-wish",
@@ -11172,7 +11202,17 @@
 			"description": [
 				"You become one with the jungle. You and all allies withing 15 ft of you regain 1d4 + MOVE hit points and are cured of any negative status conditions."
 			],
-			"higherLevels": "The healing dice roll for this move changes to 2d4 at level 5, 2d8 at level 10, and 4d6 at level 17."
+			"higherLevels": "The healing dice roll for this move changes to 2d4 at level 5, 2d8 at level 10, and 4d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d4",
+					"5": "2d4",
+					"10": "2d8",
+					"17": "4d6"
+				},
+				"modifier": "MOVE",
+				"type": "healing"
+			}
 		},
 		{
 			"id": "karate-chop",
@@ -11354,6 +11394,7 @@
 		},
 		{
 			"id": "lash-out",
+			"beta": true,
 			"name": "Lash Out",
 			"type": "dark",
 			"power": [
@@ -11751,7 +11792,17 @@
 			"description": [
 				"You scatter mysterious water around yourself. You and all allies withing 15 ft of you regain 1d4 + MOVE hit points."
 			],
-			"higherLevels": "The healing dice roll for this move changes to 2d4 at level 5, 2d8 at level 10, and 4d6 at level 17."
+			"higherLevels": "The healing dice roll for this move changes to 2d4 at level 5, 2d8 at level 10, and 4d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d4",
+					"5": "2d8",
+					"10": "2d8",
+					"17": "4d6"
+				},
+				"modifier": "MOVE",
+				"type": "healing"
+			}
 		},
 		{
 			"id": "light-of-ruin",
@@ -11997,6 +12048,7 @@
 		},
 		{
 			"id": "lunar-blessing",
+			"beta": true,
 			"name": "Lunar Blessing",
 			"type": "psychic",
 			"power": [
@@ -12368,6 +12420,18 @@
 					"dex"
 				],
 				"dc": "MOVE"
+			},
+			"damage": {
+				"dice": {
+					"1": "dice",
+					"5": "2×dice",
+					"10": "3×dice",
+					"17": "4×dice"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"ground"
+				]
 			}
 		},
 		{
@@ -12798,6 +12862,7 @@
 		},
 		{
 			"id": "meteor-beam",
+			"beta": true,
 			"name": "Meteor Beam",
 			"type": "rock",
 			"power": [
@@ -13184,6 +13249,7 @@
 		},
 		{
 			"id": "misty-explosion",
+			"beta": true,
 			"name": "Misty Explosion",
 			"type": "fairy",
 			"power": [
@@ -13632,6 +13698,7 @@
 		},
 		{
 			"id": "mystical-power",
+			"beta": true,
 			"name": "Mystical Power",
 			"type": "psychic",
 			"power": [
@@ -13969,6 +14036,18 @@
 			"tm": {
 				"id": 131,
 				"cost": 2500
+			},
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "2d4",
+					"10": "1d12",
+					"17": "4d4"
+				},
+				"modifier": "LEVEL",
+				"type": [
+					"ghost"
+				]
 			}
 		},
 		{
@@ -15176,6 +15255,7 @@
 		},
 		{
 			"id": "poltergeist",
+			"beta": true,
 			"name": "Poltergeist",
 			"type": "ghost",
 			"power": [
@@ -15412,6 +15492,7 @@
 		},
 		{
 			"id": "power-shift",
+			"beta": true,
 			"name": "Power Shift",
 			"type": "normal",
 			"power": "none",
@@ -15853,6 +15934,7 @@
 		},
 		{
 			"id": "psychic-noise",
+			"beta": true,
 			"name": "Psychic Noise",
 			"type": "psychic",
 			"power": [
@@ -16645,7 +16727,17 @@
 			"description": [
 				"You extend a healing energy to recover the hit points of a creature in range. The target regains 1d6 + MOVE hit points."
 			],
-			"higherLevels": "The dice roll for healing increases to 2d6 at level 5, 4d6 at level 10, and 6d6 at level 17."
+			"higherLevels": "The dice roll for healing increases to 2d6 at level 5, 4d6 at level 10, and 6d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "2d6",
+					"10": "4d6",
+					"17": "6d6"
+				},
+				"modifier": "MOVE",
+				"type": "healing"
+			}
 		},
 		{
 			"id": "recycle",
@@ -16757,6 +16849,16 @@
 			"tm": {
 				"id": 44,
 				"cost": 6000
+			},
+			"damage": {
+				"dice": {
+					"1": "4d6",
+					"5": "6d6",
+					"10": "8d6",
+					"17": "8d10"
+				},
+				"modifier": "MOVE",
+				"type": "healing"
 			}
 		},
 		{
@@ -16820,7 +16922,7 @@
 					"10": "2d8",
 					"17": "4d6"
 				},
-				"modifier": "MOVE + LOYALTY",
+				"modifier": "MOVE",
 				"type": [
 					"normal"
 				]
@@ -17659,6 +17761,7 @@
 		},
 		{
 			"id": "sandsear-storm",
+			"beta": true,
 			"name": "Sandsear Storm",
 			"type": "ground",
 			"power": [
@@ -17748,6 +17851,7 @@
 		},
 		{
 			"id": "scale-shot",
+			"beta": true,
 			"name": "Scale Shot",
 			"type": "dragon",
 			"power": [
@@ -17810,6 +17914,7 @@
 		},
 		{
 			"id": "scorching-sands",
+			"beta": true,
 			"name": "Scorching Sands",
 			"type": "ground",
 			"power": [
@@ -19280,6 +19385,7 @@
 		},
 		{
 			"id": "snap-trap",
+			"beta": true,
 			"name": "Snap Trap",
 			"type": "grass",
 			"power": [
@@ -19587,6 +19693,18 @@
 					"con"
 				],
 				"dc": "MOVE"
+			},
+			"damage": {
+				"dice": {
+					"1": 16,
+					"5": 16,
+					"10": 16,
+					"17": 16
+				},
+				"modifier": 0,
+				"type": [
+					"normal"
+				]
 			}
 		},
 		{
@@ -20227,6 +20345,7 @@
 		},
 		{
 			"id": "steel-beam",
+			"beta": true,
 			"name": "Steel Beam",
 			"type": "steel",
 			"power": [
@@ -20960,6 +21079,7 @@
 		},
 		{
 			"id": "supercell-slam",
+			"beta": true,
 			"name": "Supercell Slam",
 			"type": "electric",
 			"power": [
@@ -21102,7 +21222,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You strike the target three times in a single fluid motion. Make three melee attacks against a single target, each with -5 to your attack roll. On a hit, you deal 1d6 + 5 + MOVE water damage."
+				"You strike the target three times in a single fluid motion. Make three melee attacks against a single target. On each hit, you deal 1d6 + 5 + MOVE water damage."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 1d8 at level 5, 1d12 at level 10, and 3d6 at level 17.",
 			"attack": {
@@ -21161,7 +21281,17 @@
 			"description": [
 				"You absorb your Stockpiled energy to heal your wounds. When activated after using Stockpile, regain a base 1d6 + Move hit points. The dice roll is doubled if two rounds of energy were Stockpiled. The dice roll is tripled if three rounds of energy were Stockpiled."
 			],
-			"higherLevels": "The base healing dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17."
+			"higherLevels": "The base healing dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "1d12",
+					"10": "2d8",
+					"17": "4d6"
+				},
+				"modifier": "MOVE",
+				"type": "healing"
+			}
 		},
 		{
 			"id": "sweet-kiss",
@@ -21558,6 +21688,7 @@
 		},
 		{
 			"id": "take-heart",
+			"beta": true,
 			"name": "Take Heart",
 			"type": "psychic",
 			"power": "none",
@@ -21769,6 +21900,7 @@
 		},
 		{
 			"id": "temper-flare",
+			"beta": true,
 			"name": "Temper Flare",
 			"type": "fire",
 			"power": [
@@ -22621,6 +22753,7 @@
 		},
 		{
 			"id": "trailblaze",
+			"beta": true,
 			"name": "Trailblaze",
 			"type": "grass",
 			"power": [
@@ -22798,6 +22931,7 @@
 		},
 		{
 			"id": "triple-axel",
+			"beta": true,
 			"name": "Triple Axel",
 			"type": "ice",
 			"power": [
@@ -23092,6 +23226,7 @@
 		},
 		{
 			"id": "upper-hand",
+			"beta": true,
 			"name": "Upper Hand",
 			"type": "fighting",
 			"power": [
@@ -23887,7 +24022,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You strike the target with a single, fierce blow. Make a melee attack with -5 to your attack roll. On a hit, you deal 1d12 + 10 + MOVE dark damage."
+				"You strike the target with a single, fierce blow. Make a melee attack. On a hit, you deal 1d12 + 10 + MOVE dark damage."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
 			"attack": {
@@ -23921,6 +24056,7 @@
 		},
 		{
 			"id": "wildbolt-storm",
+			"beta": true,
 			"name": "Wildbolt Storm",
 			"type": "electric",
 			"power": [

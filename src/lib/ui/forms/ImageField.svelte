@@ -43,9 +43,17 @@
 		}
 	}
 
-	const onChange = (e: Event) => {
-		const input = e.target as HTMLInputElement
-		const [file] = input.files
+	let prevError = error
+	let errorTimeoutId = -1
+	const loadFile = (file: File) => {
+		window.clearTimeout(errorTimeoutId)
+		if (!file.type.startsWith("image")) {
+			prevError = error
+			error = "Must be an image"
+			errorTimeoutId = window.setTimeout(() => error = prevError, 4000)
+			return
+		}
+
 		if (previewSrc) URL.revokeObjectURL(previewSrc)
 		if (file) previewSrc = URL.createObjectURL(file)
 		else previewSrc = ""
@@ -64,7 +72,33 @@
 		}
 	}
 
+	const onChange = (e: Event) => {
+		const input = e.target as HTMLInputElement
+		const [file] = input.files
+		loadFile(file)
+	}
+
+	let isDragging = false
+	const onDrop = (e: DragEvent) => {
+		e.preventDefault()
+		if (!e.dataTransfer) return
+		const [file] = e.dataTransfer.files
+		loadFile(file)
+		isDragging = false
+	}
+
+	const onDragEnter = (e: DragEvent) => {
+		e.preventDefault()
+		isDragging = true
+	}
+
+	const onDragLeave = (e: DragEvent) => {
+		e.preventDefault()
+		isDragging = false
+	}
+
 	const onRemove = () => {
+		window.clearTimeout(errorTimeoutId)
 		currentValue = {
 			type: "remove",
 		}
@@ -77,6 +111,7 @@
 	}
 
 	onDestroy(() => {
+		window.clearTimeout(errorTimeoutId)
 		if (previewSrc) URL.revokeObjectURL(previewSrc)
 	})
 </script>
@@ -86,13 +121,17 @@
 		<div class="placeholder"></div>
 		<div class="text">
 			<label for="{id}">{label}</label>
-			<span>Select File</span>
-			{#if maxbytes}
-				<span class="smaller">(Max {prettyPrintBytes(maxbytes)})</span>
+			{#if isDragging}
+				<span>Drop it here!</span>
+			{:else}
+				<span>Select File</span>
+				{#if maxbytes}
+					<span class="smaller">(Max {prettyPrintBytes(maxbytes)})</span>
+				{/if}
 			{/if}
 		</div>
-		<input bind:this={inputElem} {id} name="{kebabName}" type="file" accept="image/*" on:change={onChange} {disabled} />
-		{#if srcToShow}
+		<input bind:this={inputElem} {id} name="{kebabName}" type="file" accept="image/*" on:change={onChange} on:drop={onDrop} on:dragenter={onDragEnter} on:dragleave={onDragLeave} {disabled} />
+		{#if srcToShow && !isDragging}
 			<img src="{srcToShow}" alt="Upload Preview" />
 		{/if}
 		{#if error}

@@ -1,3 +1,5 @@
+import { Url } from "$lib/site/url"
+
 export type VersionHistory = {
 	versions: {
 		name: `v${number}.${number}.${number}`,
@@ -12,6 +14,28 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.9.8",
+		description: [
+			`New! On the <a href="${Url.backups.home()}">Backups Page</a>, You can back up your trainers and fakémon to a file, and restore your trainers and fakémon from backup files, in case they get lost.`,
+			"Trainer Pokémon moves now show which dice to use based on the pokémon's level. Additionally, STAB now accounts for 2018 vs 2024 rulesets.",
+			"Trainer Pokémon moves now only show the rolls necessary to execute the move (i.e. hide Save DC if the move does not call for a saving throw).",
+			"Moves with Contest Rules now show the actual contest mechanics associated with the move's description. Note: Contest Rules will be coming soon on the Reference!",
+		],
+	}, {
+		name: "v1.9.7",
+		description: [
+			"Image uploading now allows drag & drop from computer's files.",
+			"Bugfix: Reducing Max HP/Hit Dice on Pokémon and Trainers does not also decrease their current HP/Hit Dice.",
+			"Bugfix: Some typos in move contest descriptions.",
+		],
+	}, {
+		name: "v1.9.6",
+		description: [
+			"Added the following moves for playtesting from Generations 8 and 9: Clangorous Soul, Snap Trap, Steel Beam, Scale Shot, Meteor Beam, Misty Explosion, Grassy Glide, Burning Jealousy, Lash Out, Poltergeist, Corrosive Gas, Coaching, Triple Axel, Scorching Sands, Power Shift, Mystical Power, Bleakwind Storm, Wildbolt Storm, Sandsear Storm, Lunar Blessing, Take Heart, Chilly Reception, Trailblaze, Chilling Water, Hard Press, Alluring Voice, Temper Flare, Supercell Slam, Psychic Noise, Upper Hand.",
+			"Wicked Blow and Surging Strikes: Removed the -5 penalty on to-hit roll.",
+			"Bugfix: TM pages now show only the pokémon who learn the move as a TM.",
+		],
+	}, {
 		name: "v1.9.5",
 		description: [
 			"Changed how pokémon forms are presented in stat blocks. Instead of being \"abilities\", the rules for how a pokémon's form changes is its own section. This helps clarify in the pokémon editor that pokémon may both have an ability and be able to change forms.",

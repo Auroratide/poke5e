@@ -28,3 +28,9 @@ export const createTrainerRecoveryEvent = usingEnvironment("create_pageview_even
 		_path: `/trainer-recovery/${status}`,
 	})
 })
+
+export const createBackupRecoveryEvent = usingEnvironment("create_pageview_event", async (status: string) => {
+	await supabase.rpc("create_pageview_event", {
+		_path: `/backups/${status}`,
+	})
+})

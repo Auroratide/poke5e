@@ -27,6 +27,7 @@
 	import { GenderFieldset } from "$lib/pokemon/gender"
 	import { HitDice } from "$lib/dnd/hit-dice"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
+	import { Resource } from "$lib/poke5e/resource"
 
 	const dispatch = createEventDispatcher()
 
@@ -77,14 +78,8 @@
 				teraType: tera,
 				level: new Level(level),
 				ac,
-				hp: {
-					current: pokemon.hp.current + (maxHp - pokemon.hp.max),
-					max: maxHp,
-				},
-				hitDice: {
-					current: pokemon.hitDice.current + (maxHitDice - pokemon.hitDice.max),
-					max: maxHitDice,
-				},
+				hp: Resource.adjustMax(pokemon.hp, maxHp),
+				hitDice: Resource.adjustMax(pokemon.hitDice, maxHitDice),
 				gender,
 				isShiny,
 				attributes,
@@ -101,10 +96,7 @@
 				senses,
 				bond: {
 					...bond,
-					points: {
-						current: Math.max(0, pokemon.bond.points.current + (bond.points.max - pokemon.bond.points.max)),
-						max: bond.points.max,
-					},
+					points: Resource.adjustMax(pokemon.bond.points, bond.points.max),
 				},
 				avatar: originalAvatar,
 			},

@@ -4,6 +4,7 @@ import type { Tm } from "./tms/Tm"
 import type { Data } from "$lib/DataClass"
 import { TmDetails } from "./tms/TmDetails"
 import { Url } from "$lib/site/url"
+import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 export const MovesStore = readable<Move[]>(undefined, (set) => {
 	if (typeof window !== "undefined") {
@@ -18,6 +19,7 @@ export const MovesStore = readable<Move[]>(undefined, (set) => {
 export const TmsStore: Readable<Tm[]> = derived(MovesStore, (moves) => {
 	return moves
 		?.filter((it) => it.isTm())
+		.filter((it) => it.tm.id <= 101 || FeatureToggles.MoreTms())
 		.sort(TmDetails.byTmId)
 })
 

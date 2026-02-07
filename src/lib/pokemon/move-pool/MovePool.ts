@@ -32,8 +32,12 @@ export class MovePool extends DataClass<{
 		].includes(move.id)
 		
 		const learnsAsEgg = (this.egg ?? []).includes(move.id)
-		const learnsViaTm = move.tm != null ? (this.tm ?? []).includes(move.tm.id) : false
+		const learnsViaTm = this.canLearnViaTm(move)
 		
 		return learnsAtLevel || learnsAsEgg || learnsViaTm
+	}
+
+	canLearnViaTm(move: Move): boolean {
+		return move.tm != null ? (this.tm ?? []).includes(move.tm.id) : false
 	}
 }

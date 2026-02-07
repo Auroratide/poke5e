@@ -1,0 +1,43 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"title": "Poke5e Backup",
+	"description": "Backup of a user's data",
+	"type": "object",
+	"properties": {
+		"createdAt": {
+			"type": "string",
+			"format": "date-time"
+		},
+		"fakemon": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"readKey": {
+						"type": "string"
+					},
+					"writeKey": {
+						"type": "string"
+					}
+				}
+			}
+		},
+		"trainers": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"readKey": {
+						"type": "string"
+					},
+					"writeKey": {
+						"type": "string"
+					}
+				}
+			}
+		}
+	}
+}
