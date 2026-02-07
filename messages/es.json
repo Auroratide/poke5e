@@ -33,6 +33,9 @@
 	"encounterTool": {
 		"title": "Encuentros"
 	},
+	"backups": {
+		"title": "Copias de seguridad"
+	},
 	"settings": {
 		"title": "Ajustes",
 		"language": "Idioma"

@@ -32,6 +32,7 @@
 		PencilNotesIcon,
 		PokeballIcon,
 		BackupIcon,
+		VsIcon,
 	} from "$lib/ui/icons"
 	import { page } from "$app/stores"
 	import type { ComponentType } from "svelte"
@@ -133,8 +134,8 @@
 		id: "encounter-tool",
 		href: Url.encounterTool(),
 		name: m["encounterTool.title"](),
-		color: "grey",
-		icon: PokeballIcon,
+		color: "forest",
+		icon: VsIcon,
   }, {
 		id: "backups",
 		href: Url.backups.home(),

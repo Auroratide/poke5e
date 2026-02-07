@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/stores"
 	import { Page } from "$lib/ui/layout"
-	import { PokeballIcon } from "$lib/ui/icons"
+	import { VsIcon } from "$lib/ui/icons"
 	import { Button, Loader } from "$lib/ui/elements"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 	import { PokemonSpecies, PokemonSpeciesList, SpeciesStore } from "$lib/poke5e/species"
@@ -182,9 +182,9 @@
 	}
 </script>
 
-<Page theme="grey">
+<Page theme="forest">
 	<Title value="Encounter Tool" />
-	<PokeballIcon slot="icon" />
+	<VsIcon slot="icon" />
 	
 	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Pokémon List">
 		{#if pokemonToRender !== undefined}

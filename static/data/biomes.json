@@ -19,7 +19,7 @@
     { "id": "beach", "name": "Beach" },
     { "id": "ocean", "name": "Ocean" },
     { "id": "reef", "name": "Reef" },
-    { "id": "polar_sea", "name": "Polar Sea" },
+    { "id": "polar-sea", "name": "Polar Sea" },
     { "id": "abyss", "name": "Abyss" },
     { "id": "swamp", "name": "Swamp" },
     { "id": "glacier", "name": "Glacier" },
