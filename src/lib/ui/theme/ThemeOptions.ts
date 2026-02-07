@@ -3,6 +3,7 @@ export type ThemeColor =
 	| "red"
 	| "purple"
 	| "green"
+	| "forest"
 	| "navy"
 	| "yellow"
 	| "pink"
