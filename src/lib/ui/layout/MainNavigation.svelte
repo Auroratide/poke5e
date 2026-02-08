@@ -68,7 +68,7 @@
 							<div class="bubble" aria-hidden="true">
 								<svelte:component this={item.icon} />
 							</div>
-							<span>{item.name}</span>
+							<span class="bubble-title">{item.name}</span>
 						</a>
 					</li>
 				{/each}
@@ -203,6 +203,10 @@
 	} .bubble :global(svg) {
 		inline-size: 100%;
 		block-size: 100%;
+	}
+
+	.bubble-title {
+		text-align: center;
 	}
 
 	.center-column {
