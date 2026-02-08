@@ -4,7 +4,7 @@ export type SenseType = "darkvision" | "blindsight" | "tremorsense" | "truesight
 
 export class Senses extends DistanceSet<SenseType> {
 	static readonly types = {
-		Darkvision: "asd",
+		Darkvision: "darkvision",
 		Blindsight: "blindsight",
 		Tremorsense: "tremorsense",
 		Truesight: "truesight",
