@@ -122,19 +122,13 @@
 		<div class="placeholder"></div>
 		<div class="text">
 			<label for="{id}">{label}</label>
-<<<<<<< i18n/keywords
-			<span>{m["universal.selectFile"]()}</span>
-			{#if maxbytes}
-				<span class="smaller">({m["universal.max"]()} {prettyPrintBytes(maxbytes)})</span>
-=======
 			{#if isDragging}
-				<span>Drop it here!</span>
+				<span>{m["universal.dropItHere"]()}</span>
 			{:else}
-				<span>Select File</span>
+				<span>{m["universal.selectFile"]()}</span>
 				{#if maxbytes}
-					<span class="smaller">(Max {prettyPrintBytes(maxbytes)})</span>
+					<span class="smaller">({m["universal.max"]()} {prettyPrintBytes(maxbytes)})</span>
 				{/if}
->>>>>>> main
 			{/if}
 		</div>
 		<input bind:this={inputElem} {id} name="{kebabName}" type="file" accept="image/*" on:change={onChange} on:drop={onDrop} on:dragenter={onDragEnter} on:dragleave={onDragLeave} {disabled} />

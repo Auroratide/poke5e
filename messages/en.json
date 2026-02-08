@@ -140,6 +140,7 @@
 		"shinySprite": "Shiny Sprite",
 		"shinyHueShift": "Shiny Hue Shift",
 		"selectFile": "Select File",
+		"dropItHere": "Drop it Here!",
 		"fileIsTooLargeMustBeLessThan": "File is too large. Must be less than",
 		"sourceOf": "{name} Source",
 		"humanDrawn": "Human Drawn",

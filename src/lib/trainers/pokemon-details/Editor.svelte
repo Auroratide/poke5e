@@ -27,11 +27,8 @@
 	import { GenderFieldset } from "$lib/pokemon/gender"
 	import { HitDice } from "$lib/dnd/hit-dice"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
-<<<<<<< i18n/keywords
 	import { m } from "$lib/site/i18n";
-=======
 	import { Resource } from "$lib/poke5e/resource"
->>>>>>> main
 
 	const dispatch = createEventDispatcher()
 

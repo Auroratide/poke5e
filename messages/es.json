@@ -80,10 +80,6 @@
 		"range": "Rango",
 		"atHigherLevels": "A Niveles Superiores",
 		"canLearnThisMove": "Pueden aprender este movimiento",
-		"contest": "Concurso",
-		"appeal": "Exhibición",
-		"jam": "Inhibición",
-		"effect": "Efecto",
 		"see": "Ver",
 		"attributes": "Atributos",
 		"firstCheckboxIsForProficiencySecondCheckBoxIsForExpertise": "La primera casilla es para competencia. La segunda es para pericia.",
@@ -140,6 +136,7 @@
 		"shinySprite": "Sprite Variocolor",
 		"shinyHueShift": "Cambio de Tono del Varicolor",
 		"selectFile": "Elige Archivo",
+		"dropItHere": "¡Suéltalo Aquí!",
 		"fileIsTooLargeMustBeLessThan": "El archivo es demasiado grande. Debe pesar menos de",
 		"sourceOf": "Fuente de {name}",
 		"humanDrawn": "Dibujado a mano",
@@ -184,7 +181,20 @@
 		"title": "Pokémon"
 	},
 	"moves": {
-		"title": "Movimientos"
+		"title": "Movimientos",
+		"contest": "Concurso",
+		"appeal": "Exhibición",
+		"jam": "Inhibición",
+		"cool": "Carisma",
+		"beauty": "Belleza",
+		"cute": "Dulzura",
+		"clever": "Ingenio",
+		"tough": "Dureza",
+		"attack": "Ataque",
+		"damage": "Daño",
+		"save": "Salvación",
+		"healing": "Curación",
+		"toHit": "al Ataque"
 	},
 	"tms": {
 		"title": "MTs"
