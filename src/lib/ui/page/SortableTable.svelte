@@ -13,6 +13,7 @@
 	export let currentSorter: Sorter = noSort
 
 	let reversed = false
+	let tbodyElement: HTMLElement;
 	$: sorted = items
 		.slice(0)
 		.sort((l, r) => currentSorter(l, r) * (reversed ? -1 : 1))
@@ -23,6 +24,7 @@
 		largeScreenOnly: it.largeScreenOnly,
 		lastVisibleCell: headers.slice(i + 1).every((it2) => it2.largeScreenOnly),
 	}))
+	$: scrollbarWidth = tbodyElement ? tbodyElement.offsetWidth - tbodyElement.clientWidth : 15 // 15 is the standard scrollbar width in px
 
 	const toggle = (sort: Sorter) => () => {
 		if (sort === currentSorter && !reversed) {
@@ -39,7 +41,7 @@
 
 <!-- svelte-ignore a11y-no-redundant-roles -->
 <table role="table" style:--large-table-columns={largeColumns} style:--small-table-columns={smallColumns}>
-	<thead role="rowgroup">
+	<thead role="rowgroup" style:padding-right="{scrollbarWidth}px">
 		<tr role="row">{#each headers as header (header.key)}
 			<th role="columnheader" style="--alignment: var(--{header.key}-alignment);" class:large-screen-only={header.largeScreenOnly}>{#if header.sort !== undefined}
 				<button on:click={toggle(header.sort)}>
@@ -53,7 +55,7 @@
 			{/if}</th>
 		{/each}</tr>
 	</thead>
-	<tbody role="rowgroup">
+	<tbody role="rowgroup" bind:this={tbodyElement}>
 		{#each sorted as item}
 			<slot {item} {cellVisibility}><tr></tr></slot>
 		{/each}
