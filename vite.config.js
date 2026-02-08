@@ -15,6 +15,9 @@ export default defineConfig({
 	server: {
 		port: 3000,
 	},
+	optimizeDeps: {
+		exclude: ["fsevents"],
+	},
 	test: {
 		setupFiles: [path.join("src", "test", "setup.ts")],
 		browser: {

@@ -21,7 +21,7 @@
 			return {
 				name: info?.name + (it.hidden ? " (hidden)" : ""),
 				value: it.id,
-				deprecated: info?.deprecated ?? false
+				deprecated: info?.deprecated ?? false,
 			}
 		}),
 	}, {

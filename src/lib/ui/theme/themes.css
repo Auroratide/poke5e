@@ -26,6 +26,13 @@
 	--theme-light: oklch(0.8705 0.206 125.72);
 }
 
+.theme-forest {
+	--theme-main: oklch(0.7 0.173 155);
+	--theme-dark: oklch(0.62 0.174 157);
+	--theme-text: oklch(0.52 0.171 153);
+	--theme-light: oklch(0.7 0.173 155);
+}
+
 .theme-navy {
 	--theme-main: oklch(0.71 0.1587 248.61);
 	--theme-dark: oklch(0.6478 0.1741 248.68);

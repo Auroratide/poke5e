@@ -27,6 +27,7 @@
 	import { DndFeats } from "$lib/dnd/feats"
 	import { Level } from "$lib/dnd/level"
 	import { m } from "$lib/site/i18n";
+	import { Resource } from "$lib/poke5e/resource"
 	
 	const dispatch = createEventDispatcher()
 
@@ -64,14 +65,8 @@
 				description,
 				level: new Level(level),
 				ac,
-				hp: {
-					current: trainer.hp.current + (maxHp - trainer.hp.max),
-					max: maxHp,
-				},
-				hitDice: {
-					current: trainer.hitDice.current + (maxHitDice - trainer.hitDice.max),
-					max: maxHitDice,
-				},
+				hp: Resource.adjustMax(trainer.hp, maxHp),
+				hitDice: Resource.adjustMax(trainer.hitDice, maxHitDice),
 				attributes,
 				proficiencies,
 				savingThrows,

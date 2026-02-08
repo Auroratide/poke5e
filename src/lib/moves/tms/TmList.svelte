@@ -7,10 +7,13 @@
 	import { Url } from "$lib/site/url"
 	import type { Tm } from "./Tm"
 	import { m } from "$lib/site/i18n";
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	export let tms: Tm[]
 
-	$: filtered = tms.filter((tm) => Move.matchNameOrType($TmsFilterStore)(tm))
+	$: filtered = tms
+		.filter((tm) => Move.matchNameOrType($TmsFilterStore)(tm))
+		.filter((tm) => tm.tm.id <= 101 || FeatureToggles.MoreTms())
 
 	const byStringField = (field: (m: Tm) => string) => (l: Tm, r: Tm) => field(l).localeCompare(field(r))
 	const byNumericField = (field: (m: Tm) => number) => (l: Tm, r: Tm) => field(l) - field(r)

@@ -87,6 +87,7 @@ const createStore = () => {
 			if (promises[readKey] == null) {
 				promises[readKey] = provider.getTrainer(readKey).then((data) => {
 					if (data == null) return undefined
+					storeUpdateOne(data.info.readKey, () => data)
 
 					const createUpdate = (data: TrainerData) => ({
 						info: async (info: TrainerInfo, options: UpdaterOptions & AvatarUploadOptions = {}) => {

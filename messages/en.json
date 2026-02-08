@@ -185,7 +185,20 @@
 		"forms": "Forms"
 	},
 	"moves": {
-		"title": "Moves"
+		"title": "Moves",
+		"contest": "Contest",
+		"appeal": "Appeal",
+		"jam": "Jam",
+		"cool": "Cool",
+		"beauty": "Beauty",
+		"cute": "Cute",
+		"clever": "Clever",
+		"tough": "Tough",
+		"attack": "Attack",
+		"damage": "Damage",
+		"save": "Save",
+		"healing": "Healing",
+		"toHit": "to Hit"
 	},
 	"tms": {
 		"title": "TMs"
@@ -202,7 +215,13 @@
 		"generalInfoAboutThisTrainer": "General info about this trainer"
 	},
 	"reference": {
-		"title": "Reference"
+		"title": "Reference",
+		"trainerClass": "Trainer Class",
+		"trainerPaths": "Trainer Paths",
+		"catchingPokemon": "Catching Pokémon",
+		"pokemonLeveling": "Pokémon Leveling",
+		"combat": "Combat",
+		"faintingRestingHealing": "Fainting, Resting, and Healing"
 	},
 	"fakemon": {
 		"title": "Fakémon",
@@ -219,6 +238,22 @@
 		"evolutionNoteText": "You can only customize evolutions between Fakémon you own or official Pokémon.",
 		"thisFakemonDesNotEvolveIntoAnything": "This Fakémon does not evolve into anything.",
 		"thisFakemonDesNotEvolveFromAnything": "This Fakémon does not evolve from anything."
+	},
+	"backups": {
+		"title": "Backups",
+		"introduction": "<p>All of the data for your trainers and custom pokemon are stored locally on your computer. This is why you don't need an account to use the Poké 5e app! Unfortunately, it also means you can lose your data if your browser's data gets cleared.</p><p>To protect against this, it's a good idea to <strong>back up</strong> your list of trainers and fakémon so that you can recover them, just in case.</p>",
+		"download": "Download Backup File",
+		"downloadDescription": "This will download a <code>.poke5e</code> file containing the IDs and Access Keys of all your Trainers and Fakémon.",
+		"downloadSuccessful": "Backup successfully downloaded!",
+		"restore": "Restore Backup File",
+		"restoring": "Restoring...",
+		"restoreDescription": "Choose a <code>.poke5e</code> file on your device. This adds the Trainers and Fakémon in the file to this site.",
+		"restoreSuccessful": "Backup successfully restored! Found {trainers} trainers and {fakemon} fakémon.",
+		"restoreError": "Something went wrong restoring the backup. {message}",
+		"manual": "Manual Backup",
+		"manualDescription": "If you wish to manually keep your trainer IDs and Fakémon somewhere, you may copy them from below.",
+		"manualDisclaimer": "<strong>Note:</strong> The manual backup cannot be uploaded to automatically restore missing trainers and fakémon.",
+		"manualCodeBlockTitle": "IDs and Access Keys"
 	},
 	"settings": {
 		"title": "Settings",

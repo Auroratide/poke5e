@@ -17,7 +17,7 @@
 							<h3>{version.name}</h3>
 							<ul>
 								{#each version.description as point}
-									<li>{point}</li>
+									<li>{@html point}</li>
 								{/each}
 							</ul>
 						{/each}

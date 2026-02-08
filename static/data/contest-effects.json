@@ -1,0 +1,184 @@
+{
+	"items": [
+		{
+			"id": "1",
+			"name": "A move of huge appeal, but using it prevents the user from taking further contest moves.",
+			"effect": "Pokemon is unable to perform for the remainder of the Appeal Rounds."
+		},
+		{
+			"id": "2",
+			"name": "A very appealing move, but after using this move, the user is more easily startled.",
+			"effect": "Pokemon has disadvantage on all CHA Saving Throws for the remainder of the Appeal Rounds."
+		},
+		{
+			"id": "3",
+			"name": "Affected by how well the previous Pokémon's move went.",
+			"effect": "4 if previous Pokémon’s move was a Nat 20 and raised the crowd meter, 3 appeal if previous Pokémon’s move raised crowd meter, 2 if previous Pokémon’s move kept crowd meter the same, 1 if previous Pokémon’s move lowered the crowd meter."
+		},
+		{
+			"id": "4",
+			"name": "An appealing move that can be used repeatedly without boring the audience.",
+			"effect": "No penalty applied for repeating the move."
+		},
+		{
+			"id": "5",
+			"name": "Badly startles all of the other Pokémon to act before the user.",
+			"effect": "All Pokemon that acted before the user must make CHA Saving Throws against Intimidation/Persuasion DC."
+		},
+		{
+			"id": "6",
+			"name": "Badly startles all Pokémon that successfully showed their appeal.",
+			"effect": "All Pokemon that succeeded the Judge DC and gained appeal points must make CHA Saving Throws against Intimidation/Persuasion DC."
+		},
+		{
+			"id": "7",
+			"name": "Badly startles Pokémon that the audience has high expectations of.",
+			"effect": "Pokemon that has the highest Visual Round score must make a CHA Saving Throw against Intimidation/Persuasion DC."
+		},
+		{
+			"id": "8",
+			"name": "Badly startles Pokémon that used a move of the same type.",
+			"effect": "Pokemon that used a move of the same contest type must make a CHA Saving Throw against Intimidation/Persuasion DC."
+		},
+		{
+			"id": "9",
+			"name": "Badly startles the last Pokémon to act before the user.",
+			"effect": "Pokemon that acted immediately before the user must make a CHA Saving Throw against Intimidation/Persuasion DC."
+		},
+		{
+			"id": "10",
+			"name": "Brings down the energy of any Pokémon that have already used a move this turn.",
+			"effect": "Lowers the crowd meter by the number of Pokemon that raised the crowd meter this turn."
+		},
+		{
+			"id": "11",
+			"name": "Causes the user to move earlier on the next turn.",
+			"effect": "Pokemon goes first on the next turn. In the event two similar moves are used in the same turn, the last to use the move goes first. The first to use the move in this case would go second."
+		},
+		{
+			"id": "12",
+			"name": "Causes the user to move later on the next turn.",
+			"effect": "Pokemon goes last on the next turn. In the event two similar moves are used in the same turn, the last to use the move goes last. The first to use the move in this case would go second to last."
+		},
+		{
+			"id": "13",
+			"name": "Effectiveness varies depending on when it is used.",
+			"effect": "3 Appeal points if move is not performed first or last, 1 Appeal point if move is performed first or last."
+		},
+		{
+			"id": "14",
+			"name": "Excites the audience a lot if used first.",
+			"effect": "Raises the crowd meter by 2 if successfully performed first in correct contest, raises the crowd meter by 1 if successfully performed first in complementary contest."
+		},
+		{
+			"id": "15",
+			"name": "Excites the audience a lot if used last.",
+			"effect": "Raises the crowd meter by 2 if successfully performed last in correct contest, raises the crowd meter by 1 if successfully performed last in complementary contest."
+		},
+		{
+			"id": "16",
+			"name": "Excites the audience in any kind of contest.",
+			"effect": "Raises the crowd meter if successfully performed, regardless of which contest."
+		},
+		{
+			"id": "17",
+			"name": "Gets the Pokémon pumped up. Helps prevent nervousness, too.",
+			"effect": "Doubles the Appeal Points of a successful move in the next round. Pokemon also has advantage on CHA Saving Throws until after their move next round is performed."
+		},
+		{
+			"id": "18",
+			"name": "Makes the audience expect little of the other contestants.",
+			"effect": "If successfully performed, increase Judge DC by Pokémon’s Charisma modifier for the remainder of the round."
+		},
+		{
+			"id": "19",
+			"name": "Makes the audience quickly grow bored when an appeal move has little effect.",
+			"effect": "Moves that get 2 Appeal points or less do not increase the crowd meter until the end of your next turn."
+		},
+		{
+			"id": "20",
+			"name": "Makes the remaining Pokémon nervous.",
+			"effect": "Pokemon that perform after you this round have disadvantage on Performance rolls and CHA Saving Throws."
+		},
+		{
+			"id": "21",
+			"name": "Prevents the user from being startled one time this turn.",
+			"effect": "You are immune to first CHA Saving Throw you would have to make this round."
+		},
+		{
+			"id": "22",
+			"name": "Prevents the user from being startled until the turn ends.",
+			"effect": "You are immune to CHA Saving Throws for the remainder of this round."
+		},
+		{
+			"id": "23",
+			"name": "Quite an appealing move.",
+			"effect": "A crowd favorite. No extra effects."
+		},
+		{
+			"id": "24",
+			"name": "Scrambles the order in which Pokémon will move on the next turn.",
+			"effect": "Each Pokemon rolls a d20 for a new turn initiative. No bonuses. Roll for tie-breakers."
+		},
+		{
+			"id": "25",
+			"name": "Shows off the Pokémon's appeal about as well as all the moves before it this turn.",
+			"effect": "Average all moves that were successfully performed before your turn and gain that many Appeal points."
+		},
+		{
+			"id": "26",
+			"name": "Shows off the Pokémon's appeal about as well as the move used just before it.",
+			"effect": "Gain Appeal points equal to the move performed immediately before your turn minus one."
+		},
+		{
+			"id": "27",
+			"name": "Startles all of the Pokémon to act before the user.",
+			"effect": "All Pokemon that acted before you turn must make a CHA Saving Throw against your Intimidation/Persuasion DC."
+		},
+		{
+			"id": "28",
+			"name": "Startles all other Pokémon. User cannot act in the next turn.",
+			"effect": "All Pokemon must make a CHA Saving Throw against your Intimidation/Persuasion DC."
+		},
+		{
+			"id": "29",
+			"name": "Startles the last Pokémon to act before the user.",
+			"effect": "The Pokemon that acted immediately before you must make a CHA Saving Throw against your Intimidation/Persuasion DC."
+		},
+		{
+			"id": "30",
+			"name": "Temporarily stops the crowd from growing excited.",
+			"effect": "The crowd meter can’t be raised for the next 1d4 turns."
+		},
+		{
+			"id": "31",
+			"name": "Works better the later it is used in a turn.",
+			"effect": "1 Appeal point if used first, 2 Appeal points if used second, 3 Appeal points if used third, 4 Appeal points if used last."
+		},
+		{
+			"id": "32",
+			"name": "Works better the more excited the crowd is.",
+			"effect": "You gain Appeal points equal to the crowd meter level plus 1."
+		},
+		{
+			"id": "33",
+			"name": "Works great if the user goes first this turn.",
+			"effect": "4 Appeal points if used first this turn, 2 Appeal points if not used first this turn."
+		},
+		{
+			"id": "34",
+			"name": "Works great if the user goes last this turn.",
+			"effect": "4 Appeal points if used last this turn, 2 Appeal points if not used last this turn."
+		},
+		{
+			"id": "35",
+			"name": "Works well if it is the same type as the move used by the last Pokémon.",
+			"effect": "4 Appeal points if the move used immediately before it was the same contest type, 2 Appeal points if not."
+		},
+		{
+			"id": "36",
+			"name": "Works well if the user is pumped up.",
+			"effect": "4 Appeal points if the Pokemon is pumped up from the previous round, 1 Appeal point if not."
+		}
+	]
+}

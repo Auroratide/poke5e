@@ -18,11 +18,7 @@ import type { SpeciesIdentifier } from "$lib/poke5e/species"
 import type { AbilityId } from "$lib/pokemon/ability"
 import type { Move } from "$lib/moves/Move"
 import type { Data } from "$lib/DataClass"
-
-export type Resource = {
-	current: number,
-	max: number,
-}
+import type { Resource } from "$lib/poke5e/resource"
 
 export type LearnedMove = {
 	id: string,

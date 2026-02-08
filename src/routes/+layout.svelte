@@ -31,6 +31,7 @@
 		IdBadgeIcon,
 		PencilNotesIcon,
 		PokeballIcon,
+		BackupIcon,
 	} from "$lib/ui/icons"
 	import { page } from "$app/stores"
 	import type { ComponentType } from "svelte"
@@ -128,6 +129,12 @@
 		name: m["fakemon.title"](),
 		color: "pink",
 		icon: GreatballIcon,
+	}, {
+		id: "backups",
+		href: Url.backups.home(),
+		name: m["backups.title"](),
+		color: "grey",
+		icon: BackupIcon,
 	}, {
 		id: "settings",
 		href: Url.settings(),
