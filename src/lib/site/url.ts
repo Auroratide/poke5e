@@ -62,6 +62,7 @@ export const Url = {
 		transformations: () => localizeUrl(resolve("/reference/pokemon-transformations")).pathname,
 		weather: () => localizeUrl(resolve("/reference/weather")).pathname,
 	},
+	encounterTool: () => localizeUrl(resolve("/encounter-tool")).pathname,
 	settings: () => localizeUrl(resolve("/settings")).pathname,
 	external: {
 		auroratide: () => "https://auroratide.com",
@@ -76,5 +77,6 @@ export const Url = {
 		items: (id?: string) => localizeUrl(id ? resolve("/(api)/items/[id].json", { id }) : resolve("/(api)/items.json")).pathname,
 		moves: (id?: string) => localizeUrl(id ? resolve("/(api)/moves/[id].json", { id }) : resolve("/(api)/moves.json")).pathname,
 		abilities: () => localizeUrl(resolve("/(api)/abilities.json")).pathname,
+		biomes: () => localizeUrl(resolve("/(api)/biomes.json")).pathname,
 	},
 } as const

@@ -50,6 +50,9 @@
 	"fakemon": {
 		"title": "Fakémon"
 	},
+	"encounterTool": {
+		"title": "Encounters"
+  },
 	"backups": {
 		"title": "Backups",
 		"introduction": "<p>All of the data for your trainers and custom pokemon are stored locally on your computer. This is why you don't need an account to use the Poké 5e app! Unfortunately, it also means you can lose your data if your browser's data gets cleared.</p><p>To protect against this, it's a good idea to <strong>back up</strong> your list of trainers and fakémon so that you can recover them, just in case.</p>",

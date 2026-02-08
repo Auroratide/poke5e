@@ -327,6 +327,8 @@
 		animation-delay: 0.28s;
 	} .open-transition li.transitioned:nth-child(9) a {
 		animation-delay: 0.32s;
+	} .open-transition li.transitioned:nth-child(10) a {
+		animation-delay: 0.36s;
 	}
 
 	.open-transition[open] li.transitioned:nth-child(1) a {
@@ -347,6 +349,8 @@
 		animation-delay: 0.28s;
 	} .open-transition[open] li.transitioned:nth-child(9) a {
 		animation-delay: 0.32s;
+	} .open-transition[open] li.transitioned:nth-child(10) a {
+		animation-delay: 0.36s;
 	}
 
 	@keyframes appear {
