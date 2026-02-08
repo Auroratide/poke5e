@@ -1744,7 +1744,7 @@
 			"id": "explosion",
 			"name": "Explosión",
 			"description": [
-				"Creas una esfera de energía que alberga una explosión concentrada y devastadora. Elige a un objetivo a tu alcance y lanza 1d20. Con un 20, la explosión se detona y todas las criaturas a 5 pies de ese punto caen debilitadas automáticamente. Con cualquier otro resultado, la explosión no llega a producirse y este movimiento no tiene efecto. Si el nivel del objetivo es 10 niveles superior al tuyo, o si su RE (Ratio de Especie) es 15, este movimiento falla automáticamente."
+				"Creas una esfera de energía que alberga una explosión concentrada y devastadora. Elige a un objetivo a tu alcance y lanza 1d20. Con un 20, la explosión se detona y todas las criaturas a 5 pies de ese punto caen debilitadas automáticamente. Con cualquier otro resultado, la explosión no llega a producirse y este movimiento no tiene efecto. Si el nivel del objetivo es 10 niveles superior al tuyo, o si su RE (Rango de Especie) es 15, este movimiento falla automáticamente."
 			]
 		},
 		{
@@ -2226,7 +2226,7 @@
 			"id": "frustration",
 			"name": "Frustración",
 			"description": [
-				"Arremetes contra una criatura descargando la frustración que sientes hacia tu entrenador. Realiza una tirada de ataque cuerpo a cuerpo contra una criatura, infligiendo 1d6 + MOV de daño de tipo Normal si impactas. Cuando realices este ataque, añade un bonificador adicional al impacto y al daño igual al número de niveles que te encuentres por debajo de cero en la Tabla de Lealtad. Este movimiento ignora la tirada de penalización por Lealtad, a excepción de las criaturas incontrolables según las limitaciones de RE."
+				"Arremetes contra una criatura descargando la frustración que sientes hacia tu entrenador. Realiza una tirada de ataque cuerpo a cuerpo contra una criatura, infligiendo 1d6 + MOV de daño de tipo Normal si impactas. Cuando realices este ataque, añade un bonificador adicional al impacto y al daño igual al número de niveles que te encuentres por debajo de cero en la Tabla de Vínculo. Este movimiento ignora la tirada de penalización por Vínculo, a excepción de las criaturas incontrolables según las limitaciones de RE."
 			],
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 1d10 al nivel 5, 2d8 al nivel 10 y 5d4 al nivel 17."
 		},
@@ -4882,7 +4882,7 @@
 			"id": "return",
 			"name": "Retribución",
 			"description": [
-				"Arremetes contra una criatura con la esperanza de complacer a tu entrenador. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo 1d6 + MOV de daño si impactas. Cuando realices este ataque, añade un bonificador adicional al impacto y al daño igual al número de niveles que estés por encima de cero en la Tabla de Lealtad."
+				"Arremetes contra una criatura con la esperanza de complacer a tu entrenador. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo 1d6 + MOV de daño si impactas. Cuando realices este ataque, añade un bonificador adicional al impacto y al daño igual al número de niveles que estés por encima de cero en la Tabla de Vínculo."
 			],
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 1d12 al nivel 5, 2d8 al nivel 10 y 4d6 al nivel 17."
 		},

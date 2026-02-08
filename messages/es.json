@@ -13,7 +13,7 @@
 		"type": "Tipo",
 		"cost": "Precio",
 		"sr": "RE",
-		"speciesRating": "Ratio de Especie",
+		"speciesRating": "Rango de Especie",
 		"power": "Poder",
 		"pp": "PP",
 		"powerPoints": "Puntos de Poder",
@@ -84,8 +84,8 @@
 		"attributes": "Atributos",
 		"firstCheckboxIsForProficiencySecondCheckBoxIsForExpertise": "La primera casilla es para competencia. La segunda es para pericia.",
 		"specializations": "Especializaciones",
-		"trainerPath": "Arquetipo de Entrenador",
-		"pathName": "Nombre del Arquetipo",
+		"trainerPath": "Senda de Entrenador",
+		"pathName": "Nombre de la Senda",
 		"feats": "Dotes",
 		"addFeat": "Añadir Dote",
 		"addCustomFeat": "Añadir Dote Personalizado",
@@ -112,9 +112,9 @@
 		"skills": "Habilidades",
 		"nature": "Naturaleza",
 		"tera": "Tera",
-		"bond": "Lealtad",
-		"bondLevel": "Nivel de Lealtad",
-		"maxBondPoints": "Puntos de Lealtad Máximos",
+		"bond": "Vínculo",
+		"bondLevel": "Nivel de Vínculo",
+		"maxBondPoints": "Puntos de Vínculo Máximos",
 		"maxPp": "PP Máximos",
 		"points": "Puntos",
 		"initialInfo": "Información Inicial",
@@ -211,7 +211,13 @@
 		"generalInfoAboutThisTrainer": "Información general sobre este entrenador"
 	},
 	"reference": {
-		"title": "Referencias"
+		"title": "Referencias",
+		"trainerClass": "Clase de Entrenador",
+		"trainerPaths": "Sendas de Entrenador",
+		"catchingPokemon": "Capturar Pokémon",
+		"pokemonLeveling": "Subir Pokémon de Nivel",
+		"combat": "Combate",
+		"faintingRestingHealing": "Debilitar, Descansar y Curación"
 	},
 	"fakemon": {
 		"title": "Fakémon",
