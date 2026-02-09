@@ -13,6 +13,7 @@
 	import { tick } from "svelte"
 	import Stepper from "$lib/ui/elements/Stepper.svelte"
 	import { SpeciesSprite } from "$lib/poke5e/species/media"
+	import { Encounter } from "$lib/poke5e/encounters"
 
 	const NONE = ""
 	const canonList = SpeciesStore.canonList()
@@ -46,20 +47,24 @@
 	$: maxPlayerLevel = partyPlayers.length > 0 
 		? Math.max(...partyPlayers.map(p => p.level)) 
 		: 1
-	let minPlayerLevel = 1
 	$: totalPartyLevels = partyPlayers.reduce((sum, p) => sum + p.level, 0)
 	$: pokemonExtraModifier = partyPlayers.reduce((acc, p) => {
 		const extra = p.numberOfPokemon > 1 ? (p.numberOfPokemon - 1) * 0.1 : 0
 		return acc + extra
 	}, 0)
 	$: maxExpTotal = Math.round((totalPartyLevels * 50) * (1 + pokemonExtraModifier) * difficultyMultipliers[difficulty])
-	$: currentEncounterExp = selectedPokemon.reduce((sum, p) => {
-		const level = Number(p.level) || 1
-		const sr = Number(p.data.data?.sr) || Number(p.data.sr) || 0
-		const count = Number(p.count) || 1
-		const xp = experienceAwarded(level, sr)
-		return sum + ((isNaN(xp) ? 0 : xp) * count)
-	}, 0)
+
+	let biome = ""
+	let difficulty: "low" | "moderate" | "high" = "low"
+	let pokemonType: PokeType
+	let arePokemonLimited: "yes" | "no" = "no"
+	let pokemonLimit: number = 1
+	let encounter = Encounter.createEmpty()
+	let noMatches = false
+	let partyPlayers: { id: number, level: number, numberOfPokemon: number }[] = []
+	let nextPlayerId = 1
+
+	$: currentEncounterExp = Encounter.totalExp(encounter)
 	$: encounterDifficulty = (() => {
 		const ratio = currentEncounterExp / maxExpTotal * difficultyMultipliers[difficulty]
 		if (ratio < 0.9) return { label: "Trivial", color: "#9e9e9e" }
@@ -69,46 +74,26 @@
 		return { label: "Deadly", color: "#7b1fa2" }
 	})()
 
+	const addPlayer = () => {
+		partyPlayers = [...partyPlayers, { id: nextPlayerId++, level: 1, numberOfPokemon: 1 }]
+	}
 
-	let biome = ""
-	let difficulty: "low" | "moderate" | "high" = "low"
-	let pokemonType: PokeType
-	let arePokemonLimited: "yes" | "no" = "no"
-	let pokemonLimit: number = 1
-	let selectedPokemon: {data: PokemonSpecies, count: number, level: number}[] = []
-	let noMatches = false
-	let partyPlayers: { id: number, level: number, numberOfPokemon: number }[] = []
-    let nextPlayerId = 1
-
-    const addPlayer = () => {
-    	partyPlayers = [...partyPlayers, { id: nextPlayerId++, level: 1, numberOfPokemon: 1 }]
-    }
-
-    const deletePlayer = (id: number) => {
-    	partyPlayers = partyPlayers.filter(p => p.id !== id)
-    }
+	const deletePlayer = (id: number) => {
+		partyPlayers = partyPlayers.filter(p => p.id !== id)
+	}
 
 	const addPokemonToEncounter = (pokemon: PokemonSpecies, level?: number) => {
 		if (!partyPlayers.length) {
 			addPlayer()
 		}
 
-		const pokemonId = pokemon.data.id
-
-		// If already selected, increase count
-		const existing = selectedPokemon.find((poke) => String(poke.data.id.data) === pokemonId)
-		if (existing) {
-			existing.count += 1
-			selectedPokemon = [...selectedPokemon]
-		} else {
-			selectedPokemon = [...selectedPokemon, { data: pokemon, count: 1, level: level || 1}]
-		}
-
+		encounter = Encounter.addPokemon(encounter, pokemon, level ?? 1)
+		console.log("??")
 		noMatches = false
 	}
 
 	const onDelete = (pokemon: {data: PokemonSpecies, count: number}) => {
-		selectedPokemon = selectedPokemon.filter((poke) => poke !== pokemon)
+		encounter = Encounter.removePokemon(encounter, pokemon.data)
 	}
 
 	const generateEncounter = async () => {
@@ -121,7 +106,6 @@
 			await tick()
 		}
 		
-		selectedPokemon = []
 		const pokemonPool: PokemonSpecies[] = []
 
 		// Add Pokémon to the pool
@@ -140,57 +124,20 @@
 			return
 		}
 
-		let currentTotalExp = 0
-		let currentPokemonCount = 0
-		let attempts = 0
-		const MAX_ATTEMPTS = 500
-		
-		// Choose between Pokémon in the pool
-		while (attempts < MAX_ATTEMPTS) {
-			attempts++
+		encounter = Encounter.generate({
+			pool: pokemonPool,
+			targetExp: maxExpTotal,
+			pokemonLimit: arePokemonLimited === "yes" ? pokemonLimit : Infinity,
+			maxLevel: maxPlayerLevel,
+		})
 
-			if (arePokemonLimited === "yes" && currentPokemonCount >= pokemonLimit) break
-
-			const remainingExp = maxExpTotal - currentTotalExp
-			if (remainingExp <= 0) break
-
-			const possibleChoices = pokemonPool.map(pokemon => {
-				const randomLevel = Math.max(pokemon.data.minLevel, Math.floor(Math.random() * (maxPlayerLevel - minPlayerLevel + 1)) + minPlayerLevel)
-				const exp = experienceAwarded(randomLevel, Number(pokemon.data.sr))
-				return { pokemon, level: randomLevel, exp }
-			}).filter(opt => opt.exp <= remainingExp)
-
-			if (possibleChoices.length === 0) {
-				noMatches = true
-				break
-			}
-
-			let chosen: { pokemon: PokemonSpecies, level: number, exp: number }
-
-			if (arePokemonLimited === "yes") {
-				const slotsLeft = pokemonLimit - currentPokemonCount
-				const targetExpPerPoke = remainingExp / slotsLeft
-
-				possibleChoices.sort((a, b) => 
-					Math.abs(a.exp - targetExpPerPoke) - Math.abs(b.exp - targetExpPerPoke),
-				)
-				
-				const topTier = possibleChoices.slice(0, 3)
-				chosen = topTier[Math.floor(Math.random() * topTier.length)]
-			} else {
-				chosen = possibleChoices[Math.floor(Math.random() * possibleChoices.length)]
-			}
-
-			currentTotalExp += chosen.exp
-			currentPokemonCount += 1
-
-			addPokemonToEncounter(chosen.pokemon, chosen.level)
+		if (encounter.pokemon.length === 0) {
+			noMatches = true
 		}
 	}
 
-
 	const clearEncounter = () => {
-		selectedPokemon = []
+		encounter = Encounter.createEmpty()
 	}
 </script>
 
@@ -255,9 +202,9 @@
 		<section>
 			<h2>Encounter</h2>
 			<div class="manual-pokemon-list">
-				{#if selectedPokemon.length > 0}
+				{#if encounter.pokemon.length > 0}
 					<div class="pokemon-list">
-						{#each selectedPokemon as pokemon (pokemon.data.name)}
+						{#each encounter.pokemon as pokemon (pokemon.data.id.data)}
 							<div class="pokemon-item">
 								<div class="pokemon-data">
 									<div class="pokemon-sprite">
@@ -279,16 +226,16 @@
 					<p>No Pokémon added.</p>
 				{/if}
 
-				{#if selectedPokemon.length > 0}
-                    <div>
-                        <p>
-                            <strong>Total XP:</strong> {currentEncounterExp} ({Math.round(currentEncounterExp / partyPlayers.length)}/player)
-                            <span class="difficulty-badge" style="background-color: {encounterDifficulty.color}">
-                                {encounterDifficulty.label}
-                            </span>
-                        </p>
-                    </div>
-                {/if}
+				{#if encounter.pokemon.length > 0}
+					<div>
+						<p>
+							<strong>Total XP:</strong> {currentEncounterExp} ({Math.round(currentEncounterExp / partyPlayers.length)}/player)
+							<span class="difficulty-badge" style="background-color: {encounterDifficulty.color}">
+								{encounterDifficulty.label}
+							</span>
+							</p>
+					</div>
+				{/if}
 
 				<Button variant="danger" on:click={clearEncounter}>Clear encounter</Button>
 				<p> </p>

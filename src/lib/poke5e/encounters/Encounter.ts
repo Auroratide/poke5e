@@ -14,36 +14,54 @@ export type EncounterGenerationOptions = {
 	maxLevel?: number,
 }
 
-export class Encounter {
-	private pokemon: EncounterActor[]
+export type Encounter = {
+	pokemon: EncounterActor[]
+}
 
-	constructor(pokemon: EncounterActor[]) {
-		this.pokemon = pokemon
-	}
+export const Encounter = {
+	createEmpty(): Encounter {
+		return {
+			pokemon: []
+		}
+	},
 
-	totalExp(): number {
-		return this.pokemon.reduce((sum, p) => {
+	totalExp(encounter: Encounter): number {
+		return encounter.pokemon.reduce((sum, p) => {
 			const xp = experienceAwarded(p.level, p.data.sr.data)
 			return sum + (isNaN(xp) ? 0 : xp) * p.count
 		}, 0)
-	}
+	},
 
-	addPokemon(species: PokemonSpecies, level: number) {
-		const existing = this.pokemon.find((poke) => poke.data.id.data === species.id.data)
+	addPokemon(encounter: Encounter, species: PokemonSpecies, level: number): Encounter {
+		const existing = encounter.pokemon.find((poke) => poke.data.id.data === species.id.data)
 		if (existing) {
 			existing.count += 1
 		} else {
-			this.pokemon.push({ data: species, count: 1, level: level })
+			encounter.pokemon.push({ data: species, count: 1, level: level })
 		}
-	}
 
-	static generate({
+		return {
+			...encounter,
+			pokemon: [...encounter.pokemon]
+		}
+	},
+
+	removePokemon(encounter: Encounter, species: PokemonSpecies) {
+		return {
+			...encounter,
+			pokemon: encounter.pokemon.filter((it) => it.data.id.data !== species.data.id),
+		}
+	},
+
+	generate({
 		pool,
 		targetExp,
 		pokemonLimit = Infinity,
 		maxLevel = 20,
 	}: EncounterGenerationOptions): Encounter {
-		const encounter = new Encounter([])
+		const encounter: Encounter = {
+			pokemon: [],
+		}
 
 		let currentTotalExp = 0
 		let currentPokemonCount = 0
@@ -88,9 +106,94 @@ export class Encounter {
 			currentTotalExp += chosen.exp
 			currentPokemonCount += 1
 
-			encounter.addPokemon(chosen.pokemon, chosen.level)
+			Encounter.addPokemon(encounter, chosen.pokemon, chosen.level)
 		}
 
 		return encounter
 	}
-}
+} as const
+
+// export class Encounter {
+// 	pokemon: EncounterActor[]
+
+// 	constructor(pokemon: EncounterActor[]) {
+// 		this.pokemon = pokemon
+// 	}
+
+// 	totalExp(): number {
+// 		return this.pokemon.reduce((sum, p) => {
+// 			const xp = experienceAwarded(p.level, p.data.sr.data)
+// 			return sum + (isNaN(xp) ? 0 : xp) * p.count
+// 		}, 0)
+// 	}
+
+// 	addPokemon(species: PokemonSpecies, level: number) {
+// 		const existing = this.pokemon.find((poke) => poke.data.id.data === species.id.data)
+// 		if (existing) {
+// 			existing.count += 1
+// 		} else {
+// 			this.pokemon.push({ data: species, count: 1, level: level })
+// 		}
+// 	}
+
+// 	removePokemon(species: PokemonSpecies) {
+// 		this.pokemon = this.pokemon.filter((it) => it.data.id.data !== species.data.id)
+// 	}
+
+// 	static generate({
+// 		pool,
+// 		targetExp,
+// 		pokemonLimit = Infinity,
+// 		maxLevel = 20,
+// 	}: EncounterGenerationOptions): Encounter {
+// 		const encounter = new Encounter([])
+
+// 		let currentTotalExp = 0
+// 		let currentPokemonCount = 0
+// 		let attempts = 0
+// 		const MAX_ATTEMPTS = 500
+		
+// 		// Choose between Pokémon in the pool
+// 		while (attempts < MAX_ATTEMPTS) {
+// 			attempts++
+
+// 			if (currentPokemonCount >= pokemonLimit) break
+
+// 			const remainingExp = targetExp - currentTotalExp
+// 			if (remainingExp <= 0) break
+
+// 			const possibleChoices = pool.map(pokemon => {
+// 				const randomLevel = Math.max(pokemon.data.minLevel, Math.floor(Math.random() * maxLevel) + 1)
+// 				const exp = experienceAwarded(randomLevel, Number(pokemon.data.sr))
+// 				return { pokemon, level: randomLevel, exp }
+// 			}).filter(opt => opt.exp <= remainingExp)
+
+// 			if (possibleChoices.length === 0) {
+// 				break
+// 			}
+
+// 			let chosen: { pokemon: PokemonSpecies, level: number, exp: number }
+
+// 			if (pokemonLimit < Infinity) {
+// 				const slotsLeft = pokemonLimit - currentPokemonCount
+// 				const targetExpPerPoke = remainingExp / slotsLeft
+
+// 				possibleChoices.sort((a, b) => 
+// 					Math.abs(a.exp - targetExpPerPoke) - Math.abs(b.exp - targetExpPerPoke),
+// 				)
+				
+// 				const topTier = possibleChoices.slice(0, 3)
+// 				chosen = topTier[Math.floor(Math.random() * topTier.length)]
+// 			} else {
+// 				chosen = possibleChoices[Math.floor(Math.random() * possibleChoices.length)]
+// 			}
+
+// 			currentTotalExp += chosen.exp
+// 			currentPokemonCount += 1
+
+// 			encounter.addPokemon(chosen.pokemon, chosen.level)
+// 		}
+
+// 		return encounter
+// 	}
+// }
