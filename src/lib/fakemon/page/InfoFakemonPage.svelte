@@ -6,6 +6,7 @@
 	import { Url } from "$lib/site/url"
 	import type { SingleFakemonStore } from "../store/SingleFakemonStore"
 	import { PageAction } from "./actions"
+	import { m } from "$lib/site/i18n";
 
 	export let fakemon: SingleFakemonStore
 	$: canEdit = $fakemon.update != null
@@ -15,10 +16,10 @@
 <PokemonSpeciesCard value={$fakemon.value.species}>
 	<div slot="footer">
 		<ActionArea>
-			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.accessKey)}" variant="ghost">Access Key</Button>
-			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.remove)}" variant="ghost">Remove</Button>
+			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.accessKey)}" variant="ghost">{m["universal.accessKey"]()}</Button>
+			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.remove)}" variant="ghost">{m["universal.remove"]()}</Button>
 			{#if canEdit}
-				<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.edit)}">Edit</Button>
+				<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.edit)}">{m["universal.edit"]()}</Button>
 			{/if}
 		</ActionArea>
 	</div>

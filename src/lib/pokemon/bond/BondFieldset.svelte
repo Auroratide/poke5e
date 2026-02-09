@@ -6,6 +6,7 @@
 	} from "$lib/ui/forms"
 	import { RanksField } from "$lib/ui/forms"
 	import type { PokemonBond } from "$lib/trainers/types"
+	import { m } from "$lib/site/i18n";
 
 	export let value: PokemonBond
 	export let disabled: boolean = false
@@ -19,7 +20,7 @@
 	}
 </script>
 
-<Fieldset title="Bond" columns={2}>
-	<RanksField label="Bond Level" min={-3} max={3} value={value.level} on:input={onBondLevelChange} {disabled} />
-	<IntField label="Max Bond Points" min={0} bind:value={value.points.max} {disabled} />
+<Fieldset title="{m["universal.bond"]()}" columns={2}>
+	<RanksField label="{m["universal.bondLevel"]()}" min={-3} max={3} value={value.level} on:input={onBondLevelChange} {disabled} />
+	<IntField label="{m["universal.maxBondPoints"]()}" min={0} bind:value={value.points.max} {disabled} />
 </Fieldset>

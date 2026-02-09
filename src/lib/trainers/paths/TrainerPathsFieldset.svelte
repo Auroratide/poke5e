@@ -4,6 +4,7 @@
 	import PathFeatureFields from "./PathFeatureFields.svelte"
 	import type { ChosenTrainerPath } from "./ChosenTrainerPath"
 	import { isStandardTrainerPath } from "./TrainerPath"
+	import { m } from "$lib/site/i18n";
 
 	export let value: ChosenTrainerPath
 	export let disabled: boolean = false
@@ -28,8 +29,8 @@
 	})))
 </script>
 
-<Fieldset title="Trainer Path">
-	<SelectField label="Path Name" {options} bind:value={path} bind:other={pathCustom} {disabled} />
+<Fieldset title="{m["universal.trainerPath"]()}">
+	<SelectField label="{m["universal.pathName"]()}" {options} bind:value={path} bind:other={pathCustom} {disabled} />
 	{#if path === SelectFieldOther}
 		<hr />
 		<PathFeatureFields level="2" bind:description={value.customFeatures.level2.description} {disabled} />

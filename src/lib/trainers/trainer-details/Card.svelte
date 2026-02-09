@@ -9,6 +9,7 @@
 	import { Title } from "$lib/ui/layout"
 	import { Level } from "$lib/ui/elements"
 	import type { InventoryItem, TrainerInfo } from "../types"
+	import { m } from "$lib/site/i18n";
 
 	export let trainer: TrainerStore
 	$: canEdit = $trainer.update != null
@@ -33,11 +34,11 @@
 	</div>
 	<Info trainer={$trainer.info} editable={canEdit} on:update={onUpdate} on:update-item={onUpdateItem} />
 	<ActionArea>
-		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="ghost">Access Key</Button>
-		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.removeTrainer)}" variant="ghost">Remove</Button>
+		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="ghost">{m["universal.accessKey"]()}</Button>
+		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.removeTrainer)}" variant="ghost">{m["universal.remove"]()}</Button>
 		{#if $trainer.update}
-			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.restTrainer)}" variant="success">Rest</Button>
-			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.editTrainer)}">Edit</Button>
+			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.restTrainer)}" variant="success">{m["universal.rest"]()}</Button>
+			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.editTrainer)}">{m["universal.edit"]()}</Button>
 		{/if}
 	</ActionArea>
 </Card>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { SelectField } from "$lib/ui/forms"
 	import { SpeciesRating } from "./SpeciesRating"
 
@@ -65,4 +66,4 @@
 	} ]
 </script>
 
-<SelectField label="SR" bind:value={selected} {options} {disabled} />
+<SelectField label="{m["universal.sr"]()}" bind:value={selected} {options} {disabled} />

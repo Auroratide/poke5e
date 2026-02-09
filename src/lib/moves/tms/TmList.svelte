@@ -6,6 +6,7 @@
 	import { Move } from "../Move"
 	import { Url } from "$lib/site/url"
 	import type { Tm } from "./Tm"
+	import { m } from "$lib/site/i18n";
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	export let tms: Tm[]
@@ -22,11 +23,11 @@
 	<SearchField id="filter-moves" label="Search" bind:value={$TmsFilterStore} matched={filtered.length} max={tms.length} />
 </div>
 <SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$TmsSorterStore} headers={[ {
-	key: "name", name: "Name", ratio: 3, sort: byStringField(it => it.name),
+	key: "name", name: m["universal.name"](), ratio: 3, sort: byStringField(it => it.name),
 }, {
-	key: "type", name: "Type", ratio: 2, sort: byStringField(it => it.type),
+	key: "type", name: m["universal.type"](), ratio: 2, sort: byStringField(it => it.type),
 }, {
-	key: "cost", name: "Cost", ratio: 2, sort: byNumericField(it => it.tm.cost), largeScreenOnly: true,
+	key: "cost", name: m["universal.cost"](), ratio: 2, sort: byNumericField(it => it.tm.cost), largeScreenOnly: true,
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type}-bg)">
 		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.tms(item.tm.id.toString())}">{item.tmName()}</a></BubbleRow.Cell>

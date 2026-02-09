@@ -1,4 +1,6 @@
 <script lang="ts" generics="TItem extends HeldItem">
+	import { m } from "$lib/site/i18n";
+
 	import type { ItemType } from "./Item"
 	import { focusInputField } from "$lib/ui/forms"
 	import { Button } from "$lib/ui/elements"
@@ -36,8 +38,8 @@
 		<ItemEditor value={item} {disabled} {groupOrder} on:remove={removeItem(item.id)} />
 	{/each}
 	<div class="row">
-		<Button on:click={addStandardItem}>Add Item</Button>
-		<Button on:click={addCustomItem}>Add Custom Item</Button>
+		<Button on:click={addStandardItem}>{m["universal.addItem"]()}</Button>
+		<Button on:click={addCustomItem}>{m["universal.addCustomItem"]()}</Button>
 	</div>
 </div>
 

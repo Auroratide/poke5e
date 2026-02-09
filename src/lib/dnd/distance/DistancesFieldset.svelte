@@ -1,4 +1,5 @@
 <script lang="ts" generics="DistanceTypes extends Readonly<Record<string, string>>">
+	import { m } from "$lib/site/i18n";
 	import { Fieldset, IntField, InstructionText } from "$lib/ui/forms"
 	
 	export let title: string
@@ -9,7 +10,7 @@
 </script>
 
 <Fieldset title="{title}" {columns}>
-	<InstructionText>Distance is in feet. Leave a field blank to use this Pokémon's default for that type, or use 0 disable that type.</InstructionText>
+	<InstructionText>{m["universal.distancesTutorialText"]()}</InstructionText>
 	{#each Object.values(types) as type}
 		<div class="cap">
 			<IntField label="{type}" min={0} bind:value={values[type]} {disabled} optional />

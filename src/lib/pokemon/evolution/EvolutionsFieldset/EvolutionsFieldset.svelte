@@ -6,6 +6,7 @@
 	import { Evolution, tmpEvolutionId } from "../Evolution"
 	import EvolutionDefinition from "./EvolutionDefinition.svelte"
 	import { Tab } from "$lib/ui/elements"
+	import { m } from "$lib/site/i18n";
 
 	export let species: SpeciesIdentifier
 	export let evolutions: Evolution[]
@@ -38,12 +39,12 @@
 	}
 </script>
 
-<Fieldset title="Evolution">
-	<InstructionText><strong>Note:</strong> You can only customize evolutions between fakémon you own or official pokémon.</InstructionText>
+<Fieldset title={m["universal.evolution"]()}>
+	<InstructionText><strong>{m["universal.note"]()}:</strong> {m["fakemon.evolutionNoteText"]()}</InstructionText>
 	<div>
 		<Tab.List activation="automatic">
-			<Tab.Item selected for="evolves-to-tabpanel">Evolves To...</Tab.Item>
-			<Tab.Item for="evolves-from-tabpanel">Evolves From...</Tab.Item>
+			<Tab.Item selected for="evolves-to-tabpanel">{m["universal.evolvesTo"]()}</Tab.Item>
+			<Tab.Item for="evolves-from-tabpanel">{m["universal.evolvesFrom"]()}</Tab.Item>
 		</Tab.List>
 		<Tab.Panel id="evolves-to-tabpanel">
 			{#each evolvesTo as evolution (evolution.data.id)}
@@ -52,9 +53,9 @@
 				</div>
 			{/each}
 			{#if evolvesTo.length === 0}
-				<HintText>This fakémon does not evolve into anything.</HintText>
+				<HintText>{m["fakemon.thisFakemonDesNotEvolveIntoAnything"]()}</HintText>
 			{/if}
-			<Button width="full" on:click={addEvolution("to")}>Add Evolution</Button>
+			<Button width="full" on:click={addEvolution("to")}>{m["universal.addEvolution"]()}</Button>
 		</Tab.Panel>
 		<Tab.Panel id="evolves-from-tabpanel">
 			{#each evolvesFrom as evolution (evolution.data.id)}
@@ -63,9 +64,9 @@
 				</div>
 			{/each}
 			{#if evolvesFrom.length === 0}
-				<HintText>This fakémon does not evolve from anything.</HintText>
+				<HintText>{m["fakemon.thisFakemonDesNotEvolveFromAnything"]()}</HintText>
 			{/if}
-			<Button width="full" on:click={addEvolution("from")}>Add Evolution</Button>
+			<Button width="full" on:click={addEvolution("from")}>{m["universal.addEvolution"]()}</Button>
 		</Tab.Panel>
 	</div>
 </Fieldset>

@@ -4,6 +4,7 @@
 	import { createEventDispatcher } from "svelte"
 	import { Button } from "$lib/ui/elements"
 	import { Item, type ItemType } from "$lib/items"
+	import { m } from "$lib/site/i18n";
 
 	const dispatch = createEventDispatcher()
 
@@ -30,13 +31,13 @@
 				</optgroup>
 			{/each}
 		</select>
-		<Button on:click={onRemove}>Remove</Button>
+		<Button on:click={onRemove}>{m["universal.remove"]()}</Button>
 	</div>
 {:else}
 	<label for="item-name-input-{value.id}">Name</label>
 	<div class="flex-row">
 		<input id="item-name-input-{value.id}" type="text" bind:value={value.name} style:flex="1" {disabled} />
-		<Button on:click={onRemove}>Remove</Button>
+		<Button on:click={onRemove}>{m["universal.remove"]()}</Button>
 	</div>
 	<label for="item-description-input-{value.id}" style:place-self="start">Desc.</label>
 	<textarea id="item-description-input-{value.id}" rows="4" bind:value={value.description} {disabled}></textarea>

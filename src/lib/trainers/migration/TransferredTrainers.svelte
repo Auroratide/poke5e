@@ -2,6 +2,7 @@
 	import type { TrainerListStore } from "../trainers"
 	import { Button } from "$lib/ui/elements"
 	import { OLD_ORIGIN } from "./origins"
+	import { m } from "$lib/site/i18n";
 
 	export let trainers: TrainerListStore
 
@@ -13,13 +14,13 @@
 	<form method="dialog">
 		<div class="center">
 			<Button href="{OLD_ORIGIN}/storage-migration/poke5e">View Trainer IDs</Button>
-			<Button type="submit">Finish</Button>
+			<Button type="submit">{m["universal.finish"]()}</Button>
 		</div>
 	</form>
 {:else}
 	<p class="success">Successfully transferred {trainerNames.join(", ")}! You may now close this dialog.</p>
 	<form method="dialog">
-		<div class="center"><Button type="submit">Finish</Button></div>
+		<div class="center"><Button type="submit">{m["universal.finish"]()}</Button></div>
 	</form>
 {/if}
 

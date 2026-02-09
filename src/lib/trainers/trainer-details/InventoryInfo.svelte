@@ -14,6 +14,7 @@
 	import InventoryList, { type UpdateQuantityDetail } from "../info/InventoryList.svelte"
 	import type { InventoryItem } from "../types"
 	import { error } from "$lib/site/errors"
+	import { m } from "$lib/site/i18n";
 
 	const dispatch = createEventDispatcher()
 
@@ -43,9 +44,9 @@
 	}
 </script>
 
-<h2>Inventory</h2>
+<h2>{m["universal.inventory"]()}</h2>
 <p class="row" style:gap="0.5em">
-	<label for="current-money">Money:</label>
+	<label for="current-money">{m["universal.money"]()}:</label>
 	<span style:flex="1">
 		{#if editable}
 			<span class="row" style:gap="0.25em">

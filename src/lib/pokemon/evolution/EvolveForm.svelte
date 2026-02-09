@@ -13,6 +13,7 @@
 	import type { Readable } from "svelte/store"
 	import { EvolutionEffect } from "./EvolutionEffect"
 	import type { EvolutionForest } from "./EvolutionForest"
+	import { m } from "$lib/site/i18n";
 
 	const dispatch = createEventDispatcher()
 
@@ -45,7 +46,7 @@
 
 <Form onsubmit={endEdit} {saving}>
 	{#if evolveToOptions?.length > 0}
-		<Fieldset title="Choose one" columns={2}>
+		<Fieldset title={m["universal.chooseOne"]()} columns={2}>
 			<RadioFields label="Evolution Choices" bind:checked={chosenEvolutionId} values={evolveToOptionIds?.map((id) => ({ name: getName(id), value: id })) ?? []} required />
 		</Fieldset>
 		<section style:min-height="12em">
@@ -63,8 +64,8 @@
 			{/if}
 		</section>
 		<ActionArea>
-			<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
-			<Button type="submit" {disabled}>Evolve!</Button>
+			<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
+			<Button type="submit" {disabled}>{m["universal.evolve"]()}</Button>
 		</ActionArea>
 	{/if}
 </Form>

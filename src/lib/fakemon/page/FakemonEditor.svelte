@@ -38,6 +38,7 @@
 	import { EstimatableStatsFieldset } from "../estimation"
 	import { Evolution, EvolutionForest, EvolutionsFieldset } from "$lib/pokemon/evolution"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
+	import { m } from "$lib/site/i18n";
 
 	const dispatch = createEventDispatcher()
 
@@ -126,14 +127,14 @@
 </script>
 
 <Form onsubmit={endEdit} {saving}>
-	<Fieldset title="Basic Info" columns={2}>
-		<TextField label="Species Name" bind:value={speciesName} {disabled} required />
-		<IntField label="Min Level" bind:value={minLevel} min={1} max={20} {disabled} required />
-		<SelectField label="Hit Dice" options={hitDiceOptions} bind:value={hitDice} {disabled} />
-		<SelectField label="Size" options={sizeOptions} bind:value={size} {disabled} />
+	<Fieldset title="{m["universal.basicInfo"]()}" columns={2}>
+		<TextField label={m["universal.speciesName"]()} bind:value={speciesName} {disabled} required />
+		<IntField label={m["universal.minLevel"]()} bind:value={minLevel} min={1} max={20} {disabled} required />
+		<SelectField label={m["universal.hitDice"]()} options={hitDiceOptions} bind:value={hitDice} {disabled} />
+		<SelectField label="{m["universal.size"]()}" options={sizeOptions} bind:value={size} {disabled} />
 		<SrField bind:value={sr} {disabled} />
 		<div style:grid-column="span 2">
-			<TextareaField label="Description" bind:value={description} {disabled} placeholder="The ______ Pokémon. It is known for this one rather cool thing." />
+			<TextareaField label="{m["universal.description"]()}" bind:value={description} {disabled} placeholder="{m["fakemon.descriptionPlaceholder"]()}" />
 		</div>
 	</Fieldset>
 	<EstimatableStatsFieldset level={minLevel} hitDice={new HitDice(hitDice)} type={type} bind:hp bind:ac bind:attributes {disabled} />
@@ -148,11 +149,11 @@
 	<AbilityPoolFieldset bind:value={abilityPool} {disabled} />
 	<MovePoolFieldset bind:value={movePool} {disabled} />
 	<EvolutionsFieldset species={species.id} bind:evolutions={evolutions} {allSpecies} {disabled} />
-	<Fieldset title="Other">
-		<MarkdownField label="General Notes" bind:value={notes} {disabled} placeholder="Any other important notes." rows={6} />
+	<Fieldset title={m["universal.description"]()}>
+		<MarkdownField label={m["universal.generalNotes"]()} bind:value={notes} {disabled} placeholder={m["universal.anyOtherImportantNotes"]()} rows={6} />
 	</Fieldset>
 	<ActionArea>
-		<Button on:click={cancel} variant="ghost" {disabled}>Cancel</Button>
-		<Button type="submit" {disabled}>Finish!</Button>
+		<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
+		<Button type="submit" {disabled}>{m["universal.finish"]()}</Button>
 	</ActionArea>
 </Form>

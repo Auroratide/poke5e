@@ -12,6 +12,7 @@
 	import { onDestroy } from "svelte"
 	import { Button } from "$lib/ui/elements"
 	import { kebab } from "./kebab"
+	import { m } from "$lib/site/i18n";
 
 	const DEFAULT_MAX_BYTES = 524288 // 500 KB
 
@@ -65,7 +66,7 @@
 
 		if (file.size > maxbytes) {
 			isValid = false
-			error = `File is too large. Must be less than ${prettyPrintBytes(maxbytes)}.`
+			error = `${m["universal.fileIsTooLargeMustBeLessThan"]()} ${prettyPrintBytes(maxbytes)}.`
 		} else {
 			isValid = true
 			error = undefined
@@ -122,11 +123,11 @@
 		<div class="text">
 			<label for="{id}">{label}</label>
 			{#if isDragging}
-				<span>Drop it here!</span>
+				<span>{m["universal.dropItHere"]()}</span>
 			{:else}
-				<span>Select File</span>
+				<span>{m["universal.selectFile"]()}</span>
 				{#if maxbytes}
-					<span class="smaller">(Max {prettyPrintBytes(maxbytes)})</span>
+					<span class="smaller">({m["universal.max"]()} {prettyPrintBytes(maxbytes)})</span>
 				{/if}
 			{/if}
 		</div>
@@ -141,7 +142,7 @@
 		{/if}
 	</div>
 	<div class="remove-image" class:hide={!canRemove}>
-		<Button variant="ghost" on:click={onRemove}>Remove Avatar</Button>
+		<Button variant="ghost" on:click={onRemove}>{m["universal.removeAvatar"]()}</Button>
 	</div>
 </div>
 

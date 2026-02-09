@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { FormGroup, Removable, SelectField, type SelectFieldChangeEvent, kebab } from "$lib/ui/forms"
 	import { abilities } from "../store"
 
@@ -40,7 +41,7 @@
 			<li>
 				<!-- key is a workaround to ensure the field is always empty -->
 				{#key values}
-					<SelectField label="Add Ability" name="{id}-add-ability" value="" {options} on:change={add} {disabled} />
+					<SelectField label={m["universal.addAbility"]()} name="{id}-add-ability" value="" {options} on:change={add} {disabled} />
 				{/key}
 			</li>
 		</ul>

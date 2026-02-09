@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { renderHtml } from "$lib/ui/rendering"
 	import type { Move } from "./Move"
 
@@ -8,7 +9,7 @@
 <div class="description">
 	{@html renderHtml(move.description)}
 	{#if move.higherLevels !== undefined}
-		<p><strong>At Higher Levels: </strong>{move.higherLevels}</p>
+		<p><strong>{m["universal.atHigherLevels"]()}: </strong>{move.higherLevels}</p>
 	{/if}
 	{#if move.optional !== undefined}
 		<p class="optional-heading"><strong>Optional Rules:</strong></p>

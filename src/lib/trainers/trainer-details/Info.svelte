@@ -16,6 +16,7 @@
 	import { trainerHitDiceSize } from "../hit-dice"
 	import { FeatsInfo } from "$lib/dnd/feats"
 	import { AllFeats } from "$lib/poke5e/feats"
+	import { m } from "$lib/site/i18n";
 
 	const dispatch = createEventDispatcher()
 
@@ -62,7 +63,7 @@
 
 <SideArtCardSection {hasImage}>
 	<FlatDl columns={2}>
-		<dt>Trainer Id</dt>
+		<dt>{m["trainers.trainerId"]()}</dt>
 		<dd>{trainer.readKey}</dd>
 	</FlatDl>
 	<div class="column">

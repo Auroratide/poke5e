@@ -7,6 +7,7 @@
 	import type { HeldItem } from "$lib/trainers/types"
 	import { ItemStore } from "./store"
 	import { Item, type ItemType } from "./Item"
+	import { m } from "$lib/site/i18n";
 
 	export let value: HeldItem
 	export let groupOrder: ItemType[] = []
@@ -30,7 +31,7 @@
 	</Removable>
 {:else}
 	<Removable on:remove>
-		<TextField label="Name" name="{itemFieldName}" bind:value={value.name} {disabled} />
+		<TextField label={m["universal.name"]()} name="{itemFieldName}" bind:value={value.name} {disabled} />
 	</Removable>
 	<MarkdownField label="Item Description" name="item-description-{value.id}" bind:value={value.description} {disabled} />
 {/if}

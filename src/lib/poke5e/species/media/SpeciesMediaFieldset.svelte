@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { Fieldset, ImageField, InstructionText, type ImageInputValue, HueField } from "$lib/ui/forms"
 	import MediaAttributionFields from "./MediaAttributionFields.svelte"
 	import type { SpeciesMedia, UploadedMedia } from "./SpeciesMedia"
@@ -24,18 +25,18 @@
 	$: originals.data.customization.shinyHue = hueShift
 </script>
 
-<Fieldset title="Images" columns={2}>
-	<InstructionText>A square image with a transparent background works best. If you don't upload shiny variations, you can use the Hue Slider to draft one.</InstructionText>
-	<ImageField label="Normal Portrait" previousValue={originals.data.values.normalPortrait?.href} bind:currentValue={updated.data.values.normalPortrait} {disabled} />
-	<ImageField label="Shiny Portrait" previousValue={originals.data.values.shinyPortrait?.href} bind:currentValue={updated.data.values.shinyPortrait} {disabled} />
-	<MediaAttributionFields id="portrait" bind:value={originals.data.attribution.portrait} />
+<Fieldset title="{m["universal.images"]()}" columns={2}>
+	<InstructionText>{m["fakemon.portraitTutorialText"]()}</InstructionText>
+	<ImageField label="{m["universal.normalPortrait"]()}" previousValue={originals.data.values.normalPortrait?.href} bind:currentValue={updated.data.values.normalPortrait} {disabled} />
+	<ImageField label="{m["universal.shinyPortrait"]()}" previousValue={originals.data.values.shinyPortrait?.href} bind:currentValue={updated.data.values.shinyPortrait} {disabled} />
+	<MediaAttributionFields id="{m["universal.portrait"]()}" bind:value={originals.data.attribution.portrait} />
 	<hr />
-	<InstructionText>A square 96 &times; 96 image with a transparent background works best for sprites. If you don't upload sprites, then a downsized version of the portrait will be used.</InstructionText>
-	<ImageField label="Normal Sprite" previousValue={originals.data.values.normalSprite?.href} bind:currentValue={updated.data.values.normalSprite} {disabled} />
-	<ImageField label="Shiny Sprite" previousValue={originals.data.values.shinySprite?.href} bind:currentValue={updated.data.values.shinySprite} {disabled} />
-	<MediaAttributionFields id="sprite" bind:value={originals.data.attribution.sprite} />
+	<InstructionText>{m["fakemon.spriteTutorialText"]()}</InstructionText>
+	<ImageField label="{m["universal.normalSprite"]()}" previousValue={originals.data.values.normalSprite?.href} bind:currentValue={updated.data.values.normalSprite} {disabled} />
+	<ImageField label="{m["universal.shinySprite"]()}" previousValue={originals.data.values.shinySprite?.href} bind:currentValue={updated.data.values.shinySprite} {disabled} />
+	<MediaAttributionFields id="{m["universal.sprite"]()}" bind:value={originals.data.attribution.sprite} />
 	<hr />
-	<InstructionText>If you don't upload shiny variations, use this hue slider to make one.</InstructionText>
-	<HueField label="Shiny Hue Shift" bind:value={hueShift} />
+	<InstructionText>{m["fakemon.hueTutorialText"]()}</InstructionText>
+	<HueField label="{m["universal.shinyHueShift"]()}" bind:value={hueShift} />
 	<SpeciesPortrait media={huePreview} alt="" shiny />
 </Fieldset>

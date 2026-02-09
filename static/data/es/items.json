@@ -298,28 +298,28 @@
 			"id": "energy-powder",
 			"name": "Polvo Energía",
 			"description": [
-				"Un entrenador puede usar una acción para restaurar 3d6 + 6 puntos de golpe a un Pokémon adyacente. Se consume al usarse. La mayoría de los Pokémon detestan el Polvo Energía, por lo que su uso excesivo puede provocar pérdida de lealtad (1/4 de probabilidad de reducir el nivel de Lealtad en 1)."
+				"Un entrenador puede usar una acción para restaurar 3d6 + 6 puntos de golpe a un Pokémon adyacente. Se consume al usarse. La mayoría de los Pokémon detestan el Polvo Energía, por lo que su uso excesivo puede provocar pérdida de vínculo (1/4 de probabilidad de reducir el nivel de Vínculo en 1)."
 			]
 		},
 		{
 			"id": "energy-root",
 			"name": "Raíz Energía",
 			"description": [
-				"Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon adyacente. Se consume al usarse. La mayoría de los Pokémon detestan la Raíz Energía, por lo que su uso excesivo puede provocar pérdida de lealtad (1/4 de probabilidad de reducir el nivel de Lealtad en 1)."
+				"Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon adyacente. Se consume al usarse. La mayoría de los Pokémon detestan la Raíz Energía, por lo que su uso excesivo puede provocar pérdida de vínculo (1/4 de probabilidad de reducir el nivel de Vínculo en 1)."
 			]
 		},
 		{
 			"id": "heal-powder",
 			"name": "Polvo Curación",
 			"description": [
-				"Un entrenador puede usar una acción para todas las condiciones de estado a un Pokémon adyacente. Se consume al usarse. La mayoría de los Pokémon detestan el Polvo Curación, por lo que su uso excesivo puede provocar pérdida de lealtad (1/4 de probabilidad de reducir el nivel de Lealtad en 1)."
+				"Un entrenador puede usar una acción para todas las condiciones de estado a un Pokémon adyacente. Se consume al usarse. La mayoría de los Pokémon detestan el Polvo Curación, por lo que su uso excesivo puede provocar pérdida de vínculo (1/4 de probabilidad de reducir el nivel de Vínculo en 1)."
 			]
 		},
 		{
 			"id": "revival-herb",
 			"name": "Hierba Revivir",
 			"description": [
-				"Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon debilitado en una Pokéball. Se consume al usarse. La mayoría de los Pokémon detestan la Hierba Revivir, por lo que su uso excesivo puede provocar pérdida de lealtad (1/4 de probabilidad de reducir el nivel de Lealtad en 1)."
+				"Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon debilitado en una Pokéball. Se consume al usarse. La mayoría de los Pokémon detestan la Hierba Revivir, por lo que su uso excesivo puede provocar pérdida de vínculo (1/4 de probabilidad de reducir el nivel de Vínculo en 1)."
 			]
 		},
 		{
@@ -1758,7 +1758,7 @@
 			"id": "pokedex",
 			"name": "Pokédex",
 			"description": [
-				"Un ordenador de mano con cámara avanzada y software de reconocimiento de imágenes. Un entrenador puede usar una acción adicional para identificar un Pokémon a 60 pies o menos usando el escáner de la Pokédex. Esto registra al Pokémon en la Pokédex y revela su RE (Ratio de Especie) junto con algunos datos breves sobre la especie."
+				"Un ordenador de mano con cámara avanzada y software de reconocimiento de imágenes. Un entrenador puede usar una acción adicional para identificar un Pokémon a 60 pies o menos usando el escáner de la Pokédex. Esto registra al Pokémon en la Pokédex y revela su RE (Rango de Especie) junto con algunos datos breves sobre la especie."
 			]
 		},
 		{
@@ -1832,7 +1832,7 @@
 			"name": "Capturador",
 			"description": [
 				"Permite a un Ranger añadir +10 a sus tiradas de captura contra Pokémon a los que haya rodeado completamente usando su movimiento.",
-				"Solo puede ser usado por entrenadores que hayan elegido el arquetipo Ranger."
+				"Solo puede ser usado por entrenadores que hayan elegido la senda Ranger."
 			]
 		},
 		{

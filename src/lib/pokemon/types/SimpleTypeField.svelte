@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { SelectField } from "$lib/ui/forms"
 	import { type PokeType, PokemonType } from "./PokemonType"
 
@@ -32,8 +33,8 @@
 </script>
 
 <div class="simple-type-field">
-	<SelectField label="Primary Type" name="type-primary" options={primaryTypeOptions} bind:value={primary} {disabled} />
-	<SelectField label="Secondary Type" name="type-seconary" options={secondaryTypeOptions} bind:value={secondary} {disabled} />
+	<SelectField label="{m["universal.primaryType"]()}" name="type-primary" options={primaryTypeOptions} bind:value={primary} {disabled} />
+	<SelectField label="{m["universal.secondaryType"]()}" name="type-seconary" options={secondaryTypeOptions} bind:value={secondary} {disabled} />
 </div>
 
 <style>

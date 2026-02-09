@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { Loader } from "$lib/ui/elements"
 	import { Tag } from "$lib/ui/elements"
 	import { abilities } from "../store"
@@ -18,7 +19,7 @@
 	{/each}
 	{#each value.data.hidden as id}
 		{@const ability = $abilities?.find((it) => id === it.id)}
-		<p class="no-margin"><Tag>Hidden</Tag></p>
+		<p class="no-margin"><Tag>{m["universal.hidden"]()}</Tag></p>
 		<p><strong>{ability.name}:</strong> {ability.description}</p>	
 	{/each}
 {/if}

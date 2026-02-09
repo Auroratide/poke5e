@@ -9,6 +9,7 @@
 	import type { Move } from "./Move"
 	import { Url } from "$lib/site/url"
 	import { ContestInfo } from "./contest"
+	import { m } from "$lib/site/i18n";
 
 	export let move: Move
 	export let pokemon: PokemonSpecies[] = []
@@ -27,15 +28,15 @@
 		{/if}
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<FlatDl>
-			<dt>Move Power</dt>
+			<dt>{m["universal.movePower"]()}</dt>
 			<dd class="power">{move.power.toString()}</dd>
-			<dt>Move Time</dt>
+			<dt>{m["universal.moveTime"]()}</dt>
 			<dd>{move.time}</dd>
-			<dt><abbr title="Power Points">PP</abbr></dt>
+			<dt><abbr title="{m["universal.powerPoints"]()}">{m["universal.pp"]()}</abbr></dt>
 			<dd>{move.pp}</dd>
-			<dt>Duration</dt>
+			<dt>{m["universal.duration"]()}</dt>
 			<dd class="duration">{move.duration}</dd>
-			<dt>Range</dt>
+			<dt>{m["universal.range"]()}</dt>
 			<dd class="range">{move.range}</dd>
 		</FlatDl>
 	</section>
@@ -47,7 +48,7 @@
 	{/if}
 	{#if pokemonWhoLearnThisMove.length > 0}
 		<section>
-			<h2>Can learn this move:</h2>
+			<h2>{m["universal.canLearnThisMove"]()}:</h2>
 			<SimplePokemonList pokemon={pokemonWhoLearnThisMove.map((it) => ({
 				id: it.id,
 				name: it.name,

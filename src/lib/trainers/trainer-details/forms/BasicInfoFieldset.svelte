@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { Fieldset, IntField, TextField, type IntFieldChangeEvent } from "$lib/ui/forms"
 
 	export let name: string
@@ -17,10 +18,10 @@
 	}
 </script>
 
-<Fieldset title="Basic Info" columns={2}>
-	<TextField label="Name" bind:value={name} {disabled} />
-	<IntField label="Level" value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
-	<IntField label="AC" bind:value={ac} min={0} max={99} {disabled} />
-	<IntField label="Max HP" bind:value={maxHp} min={0} {disabled} />
-	<IntField label="Max Hit Dice" bind:value={maxHitDice} min={0} max={20} {disabled} />
+<Fieldset title="{m["universal.basicInfo"]()}" columns={2}>
+	<TextField label={m["universal.name"]()} bind:value={name} {disabled} />
+	<IntField label={m["universal.level"]()} value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
+	<IntField label={m["universal.ac"]()} bind:value={ac} min={0} max={99} {disabled} />
+	<IntField label={m["universal.maxHp"]()} bind:value={maxHp} min={0} {disabled} />
+	<IntField label={m["universal.maxHitDice"]()} bind:value={maxHitDice} min={0} max={20} {disabled} />
 </Fieldset>

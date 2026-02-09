@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { TrainerInfo } from "../types"
 	import { FlatDl } from "$lib/ui/elements"
+	import { m } from "$lib/site/i18n";
 
 	export let trainer: TrainerInfo
 
@@ -10,35 +11,35 @@
 <div class="two-columns">
 	<div>
 		<FlatDl columns={1}>
-			<dt><abbr title="Armor Class">AC</abbr></dt>
+			<dt><abbr title="{m["universal.armorClass"]()}">{m["universal.ac"]()}</abbr></dt>
 			<dd>{trainer.ac}</dd>
-			<dt>Bonus</dt>
+			<dt>{m["universal.bonus"]()}</dt>
 			<dd>+{pb}</dd>
 		</FlatDl>
 	</div>
 	<div>
 		<FlatDl columns={1}>
 			{#if trainer.biography.species}
-				<dt>Species</dt>
+				<dt>{m["universal.species"]()}</dt>
 				<dd>{trainer.biography.species}</dd>
 			{/if}
 			{#if trainer.biography.gender}
-				<dt>Gender</dt>
+				<dt>{m["universal.gender"]()}</dt>
 				<dd>{trainer.biography.gender}</dd>
 				<dt></dt><dd></dd>
 			{/if}
 			{#if trainer.biography.age}
-				<dt>Age</dt>
+				<dt>{m["universal.age"]()}</dt>
 				<dd>{trainer.biography.age}</dd>
 				<dt></dt><dd></dd>
 			{/if}
 			{#if trainer.biography.homeRegion}
-				<dt>Home Region</dt>
+				<dt>{m["universal.homeRegion"]()}</dt>
 				<dd>{trainer.biography.homeRegion}</dd>
 				<dt></dt><dd></dd>
 			{/if}
 			{#if trainer.biography.background}
-				<dt>Background</dt>
+				<dt>{m["universal.background"]()}</dt>
 				<dd>{trainer.biography.background}</dd>
 				<dt></dt><dd></dd>
 			{/if}

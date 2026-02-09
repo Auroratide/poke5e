@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Introducción
 ---
 
 <script lang="ts">
@@ -7,25 +7,86 @@ title: Introduction
 	import TableOfContents from "../TableOfContents.svelte"
 </script>
 
-Hola, y bienvenido a Pokémon 5e! Esta es una guía y herramienta en línea para jugar a D&D en el universo de Pokémon junto a tus amigos.
+¡Hola, y bienvenido a Pokémon 5e! Esta es una guía y herramienta online para jugar D&D en el universo de Pokémon con tus amigos.
 
-Estas páginas de referencia contienen las reglas básicas para jugar. El único requisito previo para comprender el contenido de este sitio es conocer las reglas de Dungeons & Dragons tal y como aparecen en su Manual del Jugador. Las reglas que normalmente se encontrarían en el manual de D&D **no** se reproducen aquí, por lo que se recomienda disponer de una copia para aprovechar Pokémon 5e al máximo.
+Estas páginas de referencia proporcionan las reglas fundamentales para jugar. El único prerrequisito para entender el contenido de este sitio es comprender las reglas de Dungeons & Dragons que se encuentran en su Manual del Jugador. Las reglas que ya se encuentran en el Manual del Jugador de D&D **no** se reimprimirán en este sitio, por lo que se recomienda tener una copia para sacar el máximo provecho de Pokémon 5e.
 
-Si estás empezando, te recomendamos comenzar con estas páginas:
+Si acabas de empezar, te recomendamos comenzar por estas páginas:
 
 <TableOfContents />
 
 ## Aviso sobre versiones
 
-Las reglas que aparecen en esta referencia no son definitivas ni inmutables. A medida que la comunidad identifica problemas de balance, estas reglas pueden actualizarse. Cualquier cambio que se realice quedará reflejado en la página de [Historial de Versiones]({Url.versionHistory()}).
+Las reglas precisas que se encuentran en esta referencia no son necesariamente permanentes ni están grabadas en piedra. Las reglas pueden actualizarse a medida que la comunidad identifica problemas de balance. Cualquier cambio realizado se identificará en la página de [Historial de Versiones]({Url.versionHistory()}).
 
-Además, si tu grupo considera que alguna regla podría mejorarse, recuerda que esto es un homebrew. Siéntete libre de modificarlo todo lo que quieras para que la experiencia de juego sea lo más divertida posible.
+Además, si hay reglas que tu grupo considera que podrían ser mejores, ¡esto es Homebrew! Modifícalo tanto como quieras para que el juego sea lo más divertido posible.
 
-<h2 id="rulesets">Conjuntos de reglas 2018 vs 2024</h2>
+<h2 id="rulesets">Reglamentos 2018 vs 2024</h2>
 
-Las reglas de Pokémon 5e se publicaron originalmente como un manual del jugador y un bestiario en 2018, pero más adelante fueron descontinuadas.
+Las reglas de Pokémon 5e se publicaron originalmente como un manual del jugador y un manual de monstruos en 2018, pero finalmente se descontinuaron.
 
-La versión de las reglas que se encuentra en este sitio web está ligeramente actualizada respecto a la versión original de 2018. Esto permite a la comunidad adoptar nuevas mecánicas de Pokémon, reducir la complejidad, mejorar el balance y adaptarse a las reglas de D&D 2024, entre otros cambios.
+La versión de las reglas que se encuentra en este sitio web está ligeramente actualizada respecto a la versión publicada originalmente en 2018. Esto es para que la comunidad pueda adoptar nuevas mecánicas de Pokémon, reducir la complejidad, mejorar el balance, adaptarse a las reglas de D&D 2024, etc.
 
-Dicho esto, si prefieres las reglas originales, puedes usar el selector que aparece en el encabezado de cada página de reglas.
-El conjunto original se denomina reglas 2018, y el actualizado se denomina reglas 2024.
+Dicho esto, si prefieres las reglas originales, puedes usar el interruptor que se encuentra en el título de cada página de reglas. El reglamento original se denomina reglas "2018", y las reglas actualizadas se denominan reglas "2024".
+
+### Resumen de actualizaciones
+
+Las reglas de 2018 y 2024 son casi idénticas, con las siguientes notas:
+
+- Los Niveles de Lealtad pasaron a llamarse Niveles de Vínculo, con mecánicas más sencillas.
+- Cálculo de CD ligeramente modificado para realizar capturas.
+- Reglas de combate actualizadas para permitir combates dobles.
+- STAB simplificado, aunque mejorado en niveles bajos.
+- Se añadieron reglas para la muerte de Pokémon.
+- Se adaptaron las dotes a las reglas de D&D 2024 y se añadieron un par de dotes nuevas.
+- Se actualizó la tabla de naturalezas para incluir todas las naturalezas reales de Pokémon.
+- Se simplificaron los premios de experiencia para Pokémon.
+- Se otorgó a los Pokémon un rasgo de nivel 20 (capstone) muy épico.
+- Se añadieron Movimientos Z, Dinamax y Teracristalización.
+- Se rediseñaron las especializaciones de entrenador para que coincidan con los nombres de las clases de entrenador de Pokémon y para que sus beneficios sean más simétricos.
+- El estado Dormido ahora es una condición volátil, se añadió el Envenenamiento Grave y se rediseñó la Confusión para que funcione de forma más similar al conjuro *Confusión*.
+- Se cambió el dado de golpe del entrenador a d6, ya que son básicamente lanzadores de conjuros completos.
+- Se añadió potencial de multiclase.
+- Se añadió la Dote de Don Épico a nivel 19 en lugar de la Mejora de Puntuación de Característica para ajustarse al tema del manual de D&D 2024.
+- Se simplificó el clima para que su efecto sea más sutil y porque las tablas de 2018 asumían solo un tipo específico de bioma.
+
+### Actualizaciones de las Sendas del Entrenador
+
+Además, se retocaron varias sendas de entrenador:
+
+- **Entrenador de Élite**
+  - Los Dados de Batalla ahora mejoran con el nivel.
+  - Potencial Máximo → Maestría Táctica: Más general para permitir Entrenadores de Élite basados en INT, SAB o CAR.
+- **Aficionado**
+  - Los Dados de Pericia ahora mejoran con el nivel.
+  - Muchas Caras → Generalista: Elegir un rasgo de otra senda no siempre funcionaba de forma natural, ya que las sendas suelen construirse sobre sí mismas.
+  - Cambio de Habilidad → Multitalento: Cambiado para enfatizar la importancia de traer un equipo Pokémon equilibrado.
+- **Poké Mentor**
+  - Pokéchef → Retención: Se convirtió a Pokéchef en un rasgo de Enfermero y se reemplazó por algo centrado en mejorar el set de movimientos de los Pokémon.
+- **Investigador**
+  - Profesor: Mejora el rasgo de Analista para enfatizar la personalidad de recopilación de datos del investigador en lugar de su destreza en combate.
+- **Coleccionista Pokémon**
+  - Golpes Disciplinados pasó a ser un rasgo de nivel 9, tanto para que Rastreador Experto pudiera ser el rasgo de nivel 15, como para que se use más.
+  - Experto en Captura → Rastreador Experto: El encuentro automático con un Pokémon de tu elección solía estar disponible para todos los entrenadores con el rasgo de clase Rastreador. Ahora es la especialidad del coleccionista.
+- **Enfermero**
+  - Corazón Puro → Pokéchef: El Enfermero heredó la habilidad de chef del Poké Mentor para ser la senda exclusiva con curación mejorada.
+  - Espíritu Curativo → Médico de Campo: Le da al Enfermero una forma adicional de mantener a sus Pokémon sanos en combate.
+  - Joy → En Forma Óptima: Cambiado para enfatizar el cuidado continuo del Enfermero hacia sus Pokémon.
+- **Maestro de Tipo**
+  - Sin cambios.
+- **Comandante**
+  - Actualizado generalmente para enfocarse en su vínculo con sus Pokémon y para hacer más uso de los Puntos de Vínculo de sus Pokémon.
+- **Recluta**
+  - Se renombraron sus rasgos para que coincidan con el nombre de las habilidades que obtienen.
+  - Copiar a Meowth → Escalonamiento Nefasto: Más directo, y el aturdimiento es un poco más "malvado" desde una perspectiva de juego.
+- **Táctico**
+  - Sube tus Defensas: Mejorado para incluir tiradas de salvación, ya que de lo contrario era equivalente a la habilidad Sabotaje de nivel 2 del Recluta.
+- **Ranger**
+  - Rediseñado por completo para ajustarse más a los Rangers en el lore de Pokémon y para tener en cuenta que las reglas de 2024 permiten controlar hasta dos Pokémon.
+  - Conexión Profunda → Capturador: En lugar de poder lanzar un conjuro literal, se enfoca en la forma única en que los Rangers calman a los Pokémon salvajes.
+  - Vínculo Fuerte → Compañeros: Los Pokémon acompañantes también son una firma de los Rangers en el lore.
+  - Mejores Amigos → Poké Ayuda: La Poké Ayuda es una habilidad insignia de los Rangers en el lore.
+- **Gurú**
+  - Se simplificó el concepto de mejora de RE (Rango de Especie) potenciando directamente el RE controlable del Gurú.
+- **Criador**
+  - Maestro de Rasgos → Diversidad Mejorada: Evita la moralidad de los "bebés de diseño" y lo reemplaza con una forma de fomentar un potencial más creativo.

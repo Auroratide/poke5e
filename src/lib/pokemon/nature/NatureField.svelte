@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { SelectField } from "$lib/ui/forms"
 	import { Nature } from "./Nature"
 	import { StandardNatures } from "./StandardNature"
@@ -19,4 +20,4 @@
 	$: value = new Nature(nature === OtherNature ? natureCustom : nature)
 </script>
 
-<SelectField label="Nature" {options} bind:value={nature} bind:other={natureCustom} {disabled} />
+<SelectField label="{m["universal.nature"]()}" {options} bind:value={nature} bind:other={natureCustom} {disabled} />

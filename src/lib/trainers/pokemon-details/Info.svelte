@@ -20,6 +20,7 @@
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
 	import { SpeciesFormsInfo } from "$lib/poke5e/forms"
+	import { m } from "$lib/site/i18n";
 
 	const dispatch = createEventDispatcher()
 
@@ -103,7 +104,7 @@
 	</FlatDl>
 </section>
 <section>
-	<h2>Abilities & Items</h2>
+	<h2>{m["universal.abilities&Items"]()}</h2>
 	<AbilitiesInfo {pokemon} />
 	<HeldItemsInfo {pokemon} />
 </section>
