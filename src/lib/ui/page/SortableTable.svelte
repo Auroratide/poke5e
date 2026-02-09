@@ -75,9 +75,16 @@
 		width: 100%;
 	}
 
+	thead {
+		overflow-y: auto;
+		height: 1.75em;
+		scrollbar-gutter: stable;
+		scrollbar-color: transparent transparent;
+	}
+
 	tbody {
 		height: 100%;
-		overflow: auto;
+		overflow-y: scroll;
 	}
 
 	table :global(tr) {
