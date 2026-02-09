@@ -8,6 +8,8 @@ on:
     paths:
       - src/**
       - static/**
+  pull_request:
+    type: [opened, synchronize, reopened]
 
 jobs:
   unit-tests:
