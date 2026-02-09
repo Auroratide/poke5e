@@ -13,20 +13,20 @@
   const dispatch = createEventDispatcher()
 
   function increment() {
-    if (value + step <= max) {
-      value += step
-      dispatch("change", value)
-    }
+  	if (value + step <= max) {
+  		value += step
+  		dispatch("change", value)
+  	}
   }
 
   function decrement() {
-	if (deleteOnZero && value - step <= 0) {
-		dispatch("delete")
-	}
-    if (value - step >= min) {
-      value -= step;
-      dispatch("change", value)
-    }
+  	if (deleteOnZero && value - step <= 0) {
+  		dispatch("delete")
+  	}
+  	if (value - step >= min) {
+  		value -= step
+  		dispatch("change", value)
+  	}
   }
 </script>
 
@@ -44,8 +44,8 @@
   <button
     on:click={decrement}
     disabled={disabled || value <= min}
-	  class={canBeDeleted ? 'can-be-deleted' : ''}
-    aria-label={canBeDeleted ? 'Remove' : 'Decrease'}
+	  class={canBeDeleted ? "can-be-deleted" : ""}
+    aria-label={canBeDeleted ? "Remove" : "Decrease"}
   >
   	{#if canBeDeleted}
 		  &times;

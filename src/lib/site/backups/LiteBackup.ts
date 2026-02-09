@@ -30,7 +30,7 @@ async function createBackup(): Promise<Blob> {
 		trainers,
 	}
 
-	return new Blob([JSON.stringify(backup)], { type: 'application/json' })
+	return new Blob([JSON.stringify(backup)], { type: "application/json" })
 }
 
 function validate(json: object): json is LiteBackup {

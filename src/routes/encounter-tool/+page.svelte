@@ -11,9 +11,8 @@
 	import Card from "$lib/ui/page/Card.svelte"
 	import { experienceAwarded } from "$lib/poke5e/experience"
 	import { tick } from "svelte"
-	import Stepper from "$lib/ui/elements/Stepper.svelte";
-	import { SpeciesSprite } from "$lib/poke5e/species/media";
-
+	import Stepper from "$lib/ui/elements/Stepper.svelte"
+	import { SpeciesSprite } from "$lib/poke5e/species/media"
 
 	const NONE = ""
 	const canonList = SpeciesStore.canonList()
@@ -38,11 +37,11 @@
 	$: ssrPokemon = $page.data.pokemonList
 	$: pokemonToRender = ssrPokemon ?? $canonList
 	$: biomeOptions = [
-			{ name: "- None -", value: "" },
-			...(biomes.item.biomes ?? []).map((t: any) => ({
-				name: t.name,
-				value: t.id,
-		}))
+		{ name: "- None -", value: "" },
+		...(biomes.item.biomes ?? []).map((t: { name: string, id: string }) => ({
+			name: t.name,
+			value: t.id,
+		})),
 	]
 	$: maxPlayerLevel = partyPlayers.length > 0 
 		? Math.max(...partyPlayers.map(p => p.level)) 
@@ -63,18 +62,18 @@
 	}, 0)
 	$: encounterDifficulty = (() => {
 		const ratio = currentEncounterExp / maxExpTotal * difficultyMultipliers[difficulty]
-		if (ratio < 0.9) return { label: 'Trivial', color: '#9e9e9e' }
-		if (ratio <= 1.15) return { label: 'Low', color: '#4caf50' }
-		if (ratio <= 1.5) return { label: 'Moderate', color: '#ff9800' }
-		if (ratio <= 2) return { label: 'High', color: '#f44336' }
-		return { label: 'Deadly', color: '#7b1fa2' }
+		if (ratio < 0.9) return { label: "Trivial", color: "#9e9e9e" }
+		if (ratio <= 1.15) return { label: "Low", color: "#4caf50" }
+		if (ratio <= 1.5) return { label: "Moderate", color: "#ff9800" }
+		if (ratio <= 2) return { label: "High", color: "#f44336" }
+		return { label: "Deadly", color: "#7b1fa2" }
 	})()
 
 
 	let biome = ""
-	let difficulty: 'low' | 'moderate' | 'high' = 'low'
+	let difficulty: "low" | "moderate" | "high" = "low"
 	let pokemonType: PokeType
-	let arePokemonLimited: 'yes' | 'no' = 'no'
+	let arePokemonLimited: "yes" | "no" = "no"
 	let pokemonLimit: number = 1
 	let selectedPokemon: {data: PokemonSpecies, count: number, level: number}[] = []
 	let noMatches = false
@@ -82,11 +81,11 @@
     let nextPlayerId = 1
 
     const addPlayer = () => {
-        partyPlayers = [...partyPlayers, { id: nextPlayerId++, level: 1, numberOfPokemon: 1 }]
+    	partyPlayers = [...partyPlayers, { id: nextPlayerId++, level: 1, numberOfPokemon: 1 }]
     }
 
     const deletePlayer = (id: number) => {
-        partyPlayers = partyPlayers.filter(p => p.id !== id)
+    	partyPlayers = partyPlayers.filter(p => p.id !== id)
     }
 
 	const addPokemonToEncounter = (pokemon: PokemonSpecies, level?: number) => {
@@ -150,7 +149,7 @@
 		while (attempts < MAX_ATTEMPTS) {
 			attempts++
 
-			if (arePokemonLimited === 'yes' && currentPokemonCount >= pokemonLimit) break
+			if (arePokemonLimited === "yes" && currentPokemonCount >= pokemonLimit) break
 
 			const remainingExp = maxExpTotal - currentTotalExp
 			if (remainingExp <= 0) break
@@ -168,12 +167,12 @@
 
 			let chosen: { pokemon: PokemonSpecies, level: number, exp: number }
 
-			if (arePokemonLimited === 'yes') {
+			if (arePokemonLimited === "yes") {
 				const slotsLeft = pokemonLimit - currentPokemonCount
 				const targetExpPerPoke = remainingExp / slotsLeft
 
 				possibleChoices.sort((a, b) => 
-					Math.abs(a.exp - targetExpPerPoke) - Math.abs(b.exp - targetExpPerPoke)
+					Math.abs(a.exp - targetExpPerPoke) - Math.abs(b.exp - targetExpPerPoke),
 				)
 				
 				const topTier = possibleChoices.slice(0, 3)
@@ -244,7 +243,7 @@
 			</div>
 			<div class="simple-type-field">
 				<SelectField label="Pokémon Limit" options={pokemonLimitOptions} bind:value={arePokemonLimited}/>
-				{#if arePokemonLimited === 'yes'}
+				{#if arePokemonLimited === "yes"}
 					<IntField label="Limit" bind:value={pokemonLimit} min={1}/>
 				{:else}
 					<p></p>

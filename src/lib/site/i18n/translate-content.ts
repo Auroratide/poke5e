@@ -20,7 +20,7 @@ export async function translateContent(getTranslatedContent: (locale: string) =>
 			Content: content.default,
 			metadata: content.metadata as ContentMetadata,
 		}
-	} catch (e) {
+	} catch {
 		const content = await getTranslatedContent("en")
 
 		return {

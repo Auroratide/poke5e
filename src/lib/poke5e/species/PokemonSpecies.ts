@@ -140,7 +140,7 @@ export class PokemonSpecies extends DataClass<{
 			},
 			habitat: {
 				biomes: it.habitat?.biomes ?? [],
-			}
+			},
 		})
 	}
 }

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { VisuallyHidden } from "$lib/ui/elements"
-import { HeartIcon } from "$lib/ui/icons"
+	import { HeartIcon } from "$lib/ui/icons"
 
 	export let value: number
 	export let filled = false
@@ -10,7 +10,7 @@ import { HeartIcon } from "$lib/ui/icons"
 <span>
 	<VisuallyHidden inline>{value}</VisuallyHidden>
 	<span class="row" aria-hidden="true">
-		{#each count as _}
+		{#each count as i (i)}
 			<HeartIcon {filled} />
 		{/each}
 	</span>

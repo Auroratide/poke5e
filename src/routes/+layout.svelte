@@ -136,7 +136,7 @@
 		name: m["encounterTool.title"](),
 		color: "forest",
 		icon: VsIcon,
-  }, {
+	}, {
 		id: "backups",
 		href: Url.backups.home(),
 		name: m["backups.title"](),

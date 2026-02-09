@@ -1,5 +1,5 @@
 <script lang="ts">
-	import VisuallyHidden from "./VisuallyHidden.svelte";
+	import VisuallyHidden from "./VisuallyHidden.svelte"
 
 	export let id: string
 	export let variant: "solid" | "ghost" | "danger" | "success" | "subtle" | "big" = "solid"

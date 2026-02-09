@@ -100,14 +100,14 @@ test("existing records are not overwritten", async () => {
 })
 
 describe("bad formats", () => {
-	const createBackup = (json: object) => new Blob([JSON.stringify(json)], { type: 'application/json' })
+	const createBackup = (json: object) => new Blob([JSON.stringify(json)], { type: "application/json" })
 
 	test("fakemon is not a list", async () => {
 		const backup = createBackup({
 			fakemon: {
 				id: "0",
 				readKey: "r",
-				writeKey: "w"
+				writeKey: "w",
 			},
 			trainers: [],
 		})
@@ -119,7 +119,7 @@ describe("bad formats", () => {
 		const backup = createBackup({
 			trainers: {
 				readKey: "r",
-				writeKey: "w"
+				writeKey: "w",
 			},
 			fakemon: [],
 		})
@@ -130,7 +130,7 @@ describe("bad formats", () => {
 	test("fakemon missing read keys", async () => {
 		const backup = createBackup({
 			fakemon: [ {
-				id: "id"
+				id: "id",
 			} ],
 			trainers: [],
 		})
@@ -148,7 +148,7 @@ describe("bad formats", () => {
 	})
 
 	test("is not a json object", async () => {
-		const backup = new Blob(["data"], { type: 'image/png' })
+		const backup = new Blob(["data"], { type: "image/png" })
 
 		await expect(LiteBackup.restore(backup)).rejects.toThrow(BackupError)
 	})
