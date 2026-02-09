@@ -47,6 +47,9 @@ export function stubPokemonSpecies(template: Partial<Data<PokemonSpecies>> = {})
 		moves: stubMovePool().data,
 		media: stubSpeciesMedia().data,
 		notes: "",
+		habitat: {
+			biomes: [],
+		},
 		...template,
 	})
 }

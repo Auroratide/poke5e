@@ -17,6 +17,7 @@ import { SpeciesRating } from "../sr"
 import type { SinglePokemonJsonResponse } from "./PokemonJsonResponse"
 import { SpeciesIdentifier } from "./SpeciesIdentifier"
 import { SpeciesForms } from "$lib/poke5e/forms"
+import type { Habitat } from "$lib/poke5e/habitat"
 
 export class PokemonSpecies extends DataClass<{
 	id: Data<SpeciesIdentifier>,
@@ -42,7 +43,7 @@ export class PokemonSpecies extends DataClass<{
 	forms?: Data<SpeciesForms>,
 	media: Data<SpeciesMedia<UploadedMedia>>,
 	notes?: MarkdownString,
-	habitat: {biomes: string[]}
+	habitat: Habitat,
 }> {
 	static readonly matchNameOrType = (value: string) => (pokemon: PokemonSpecies) =>
 		pokemon.data.name.toLocaleLowerCase().includes(value.toLocaleLowerCase()) ||
@@ -138,7 +139,7 @@ export class PokemonSpecies extends DataClass<{
 				} : undefined,
 			},
 			habitat: {
-				biomes: it.habitat.biomes,
+				biomes: it.habitat?.biomes ?? [],
 			}
 		})
 	}

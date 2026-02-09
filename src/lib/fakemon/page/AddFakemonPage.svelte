@@ -95,6 +95,9 @@
 					},
 				},
 			},
+			habitat: {
+				biomes: [],
+			},
 		},
 	})
 	let saving = false

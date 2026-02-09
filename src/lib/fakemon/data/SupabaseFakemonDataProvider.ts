@@ -448,6 +448,9 @@ function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) => Upl
 				},
 			},
 			notes: row.notes ?? "",
+			habitat: {
+				biomes: [],
+			},
 		},
 	})
 }
