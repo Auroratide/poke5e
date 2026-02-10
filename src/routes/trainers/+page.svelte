@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/stores"
 	import { browser } from "$app/environment"
+	import { replaceState } from "$app/navigation"
 	import { Page } from "$lib/ui/layout"
 	import { IdBadgeIcon } from "$lib/ui/icons"
 	import { Title } from "$lib/ui/layout"
@@ -29,8 +30,6 @@
 	import RestTrainerCard from "$lib/trainers/trainer-details/RestTrainerCard.svelte"
 	import type { Readable } from "svelte/store"
 	import { SpeciesStore, type PokemonSpecies } from "$lib/poke5e/species"
-	import { setWriteKey } from "$lib/trainers/data/TrainerLocalStorage"
-	import type { ReadWriteKey } from "$lib/trainers/types"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: accessKey = browser ? $page.url.searchParams.get("access_key") : undefined
@@ -40,23 +39,23 @@
 	let trainerList: Promise<undefined | TrainerListStore> | undefined
 	let trainer: Promise<undefined | TrainerStore> | undefined
 	let allSpecies: Promise<Readable<PokemonSpecies[]>> = browser ? SpeciesStore.completeList() : undefined
-	let trainerEditAccess = false
 	
 	$: {
 		if (trainerId && browser) {
 			trainerList = undefined
 			trainer = trainers.get(trainerId)
 			if (accessKey) {
-				accessKey = accessKey.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "");
-				// Save the key to localStorage or send a warning to the console if invalid
-				if (!trainer.verifyAccess(accessKey)) {
-					console.warn("Access Key provided is invalid for this trainer.")
-				}
-			// Optional: Clean the URL so the key isn't visible in the address bar
-			const url = new URL($page.url);
-			url.searchParams.delete('access_key');
-			window.history.replaceState({}, '', url.toString());	
-		}
+				accessKey = accessKey.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "")
+				trainer?.then(t => {
+					if (t) {
+						if (!(t.verifyAccess(accessKey))) {
+							console.warn("Access Key provided is invalid for this trainer.");
+						}
+					});
+				const url = new URL($page.url);
+				url.searchParams.delete('access_key');
+				replaceState(url, $page.state);
+			}
 		} else if (!trainerId && browser) {
 			trainerList = trainers.all()
 			trainer = undefined
