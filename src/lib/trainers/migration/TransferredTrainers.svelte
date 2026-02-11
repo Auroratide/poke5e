@@ -2,7 +2,7 @@
 	import type { TrainerListStore } from "../trainers"
 	import { Button } from "$lib/ui/elements"
 	import { OLD_ORIGIN } from "./origins"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let trainers: TrainerListStore
 

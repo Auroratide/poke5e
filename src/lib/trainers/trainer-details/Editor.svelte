@@ -26,7 +26,7 @@
 	import { FeatsFieldset } from "$lib/dnd/feats"
 	import { DndFeats } from "$lib/dnd/feats"
 	import { Level } from "$lib/dnd/level"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	import { Resource } from "$lib/poke5e/resource"
 	
 	const dispatch = createEventDispatcher()

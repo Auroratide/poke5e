@@ -13,7 +13,7 @@
 	import type { Readable } from "svelte/store"
 	import { EvolutionEffect } from "./EvolutionEffect"
 	import type { EvolutionForest } from "./EvolutionForest"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const dispatch = createEventDispatcher()
 

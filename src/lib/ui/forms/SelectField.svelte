@@ -21,7 +21,7 @@
 	import { kebab } from "./kebab"
 	import { createEventDispatcher } from "svelte"
 	import { ChevronIcon } from "$lib/ui/icons"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let label: string
 	export let value: string

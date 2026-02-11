@@ -7,7 +7,7 @@
 	import { PageAction } from "../page-action"
 	import type { TrainerStore } from "../trainers"
 	import type { TrainerPokemon } from "../types"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const evolutions = EvolutionStore.all()
 

@@ -6,7 +6,7 @@
 	import { Move } from "../Move"
 	import { Url } from "$lib/site/url"
 	import type { Tm } from "./Tm"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	export let tms: Tm[]

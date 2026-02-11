@@ -6,7 +6,7 @@
 	} from "$lib/ui/forms"
 	import { RanksField } from "$lib/ui/forms"
 	import type { PokemonBond } from "$lib/trainers/types"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let value: PokemonBond
 	export let disabled: boolean = false

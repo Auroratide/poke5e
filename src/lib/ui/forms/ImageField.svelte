@@ -12,7 +12,7 @@
 	import { onDestroy } from "svelte"
 	import { Button } from "$lib/ui/elements"
 	import { kebab } from "./kebab"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const DEFAULT_MAX_BYTES = 524288 // 500 KB
 

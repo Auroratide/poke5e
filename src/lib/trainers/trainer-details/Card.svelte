@@ -9,7 +9,7 @@
 	import { Title } from "$lib/ui/layout"
 	import { Level } from "$lib/ui/elements"
 	import type { InventoryItem, TrainerInfo } from "../types"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let trainer: TrainerStore
 	$: canEdit = $trainer.update != null

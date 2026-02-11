@@ -4,7 +4,7 @@
 	import { DistancesDlItem } from "$lib/dnd/distance"
 	import { TeraTypeTag } from "$lib/pokemon/types"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let pokemon: TrainerPokemon
 	export let species: PokemonSpecies

@@ -38,7 +38,7 @@
 	import { EstimatableStatsFieldset } from "../estimation"
 	import { Evolution, EvolutionForest, EvolutionsFieldset } from "$lib/pokemon/evolution"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const dispatch = createEventDispatcher()
 

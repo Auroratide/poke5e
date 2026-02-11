@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { TrainerInfo } from "../types"
 	import { FlatDl } from "$lib/ui/elements"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let trainer: TrainerInfo
 

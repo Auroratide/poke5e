@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	import { Fieldset, DoubleCheckboxFields, type DoubleCheckboxFieldsChangeEvent, InstructionText, CheckboxFields } from "$lib/ui/forms"
 	import { SkillRanks } from "./SkillRanks"
 

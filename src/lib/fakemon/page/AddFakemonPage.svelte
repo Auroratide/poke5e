@@ -7,7 +7,7 @@
 	import { fakemonStore } from "../store"
 	import FakemonAdder from "./FakemonAdder.svelte"
 	import { type SubmitDetail } from "./FakemonEditor.svelte"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const draftFakemon = new Fakemon({
 		id: "",

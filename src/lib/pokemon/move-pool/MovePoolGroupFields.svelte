@@ -9,7 +9,7 @@
 	import MoveOption from "./MoveOption.svelte"
 	import SearchAndFilterField from "./SearchAndFilterField.svelte"
 	import type { Move } from "$lib/moves/Move"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let title: string
 	export let values: string[]

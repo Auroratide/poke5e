@@ -7,7 +7,7 @@
 	import { Title } from "$lib/ui/layout"
 	import SearchFakemonById from "../search/SearchFakemonById.svelte"
 	import type { SearchFakemonByIdDetail } from "../search"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	let searching = false
 	const onSubmit = (e: CustomEvent<SearchFakemonByIdDetail>) => {

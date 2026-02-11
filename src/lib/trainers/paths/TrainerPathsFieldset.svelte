@@ -4,7 +4,7 @@
 	import PathFeatureFields from "./PathFeatureFields.svelte"
 	import type { ChosenTrainerPath } from "./ChosenTrainerPath"
 	import { isStandardTrainerPath } from "./TrainerPath"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let value: ChosenTrainerPath
 	export let disabled: boolean = false

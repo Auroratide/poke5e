@@ -21,7 +21,7 @@ export type Encounter = {
 export const Encounter = {
 	createEmpty(): Encounter {
 		return {
-			pokemon: []
+			pokemon: [],
 		}
 	},
 
@@ -42,7 +42,7 @@ export const Encounter = {
 
 		return {
 			...encounter,
-			pokemon: [...encounter.pokemon]
+			pokemon: [...encounter.pokemon],
 		}
 	},
 
@@ -110,7 +110,7 @@ export const Encounter = {
 		}
 
 		return encounter
-	}
+	},
 } as const
 
 // export class Encounter {

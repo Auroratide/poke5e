@@ -7,7 +7,7 @@
 	import { Bst } from "$lib/pokemon/bst"
 	import type { PokemonType } from "$lib/pokemon/types"
 	import { StatsEstimator } from "./StatsEstimator"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let level: number
 	export let hitDice: HitDice

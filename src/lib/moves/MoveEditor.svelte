@@ -14,7 +14,7 @@
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { LearnableMoves } from "./LearnableMoves"
 	import type { Level } from "$lib/dnd/level"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let value: LearnedMove
 	export let species: PokemonSpecies

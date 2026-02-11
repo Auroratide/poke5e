@@ -2,7 +2,7 @@
 	import { Fieldset, MoneyField } from "$lib/ui/forms"
 	import type { InventoryItem } from "$lib/trainers/types"
 	import { InventoryEditor } from "$lib/items"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let money: number
 	export let inventory: InventoryItem[]

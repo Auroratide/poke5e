@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	import { FormGroup, Removable, SelectField, type SelectFieldChangeEvent, kebab } from "$lib/ui/forms"
 	import { abilities } from "../store"
 

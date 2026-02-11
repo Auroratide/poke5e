@@ -8,7 +8,7 @@
 	import { Url } from "$lib/site/url"
 	import { PageAction } from "./page-action"
 	import GetStarted from "./GetStarted.svelte"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let trainers: TrainerListStore
 	export let showGetStarted = false

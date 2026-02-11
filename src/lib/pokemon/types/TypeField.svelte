@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	import { CheckboxFields, Fieldset, SelectField } from "$lib/ui/forms"
 	import { type PokeType, PokemonType } from "./PokemonType"
 

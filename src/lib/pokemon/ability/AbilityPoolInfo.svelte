@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	import { Loader } from "$lib/ui/elements"
 	import { Tag } from "$lib/ui/elements"
 	import { abilities } from "../store"

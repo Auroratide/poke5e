@@ -13,7 +13,7 @@
 	} from "$lib/ui/forms"
 	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/site/url"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	let name = ""
 	let description = ""

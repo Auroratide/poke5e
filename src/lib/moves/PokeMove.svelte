@@ -9,7 +9,7 @@
 	import type { Move } from "./Move"
 	import { Url } from "$lib/site/url"
 	import { ContestInfo } from "./contest"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let move: Move
 	export let pokemon: PokemonSpecies[] = []

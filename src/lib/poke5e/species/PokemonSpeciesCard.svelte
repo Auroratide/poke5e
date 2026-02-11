@@ -15,7 +15,7 @@
 	import { isNotBlank } from "$lib/utils/string"
 	import { EvolutionInfo, EvolutionStore } from "$lib/pokemon/evolution"
 	import { SpeciesFormsInfo } from "$lib/poke5e/forms"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let value: PokemonSpecies
 	$: hasImage = value.media.data.values.normalPortrait != null

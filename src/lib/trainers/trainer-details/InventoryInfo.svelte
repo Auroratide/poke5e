@@ -14,7 +14,7 @@
 	import InventoryList, { type UpdateQuantityDetail } from "../info/InventoryList.svelte"
 	import type { InventoryItem } from "../types"
 	import { error } from "$lib/site/errors"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const dispatch = createEventDispatcher()
 

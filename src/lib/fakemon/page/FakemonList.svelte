@@ -8,7 +8,7 @@
 	import { PageAction } from "./actions"
 	import GetStarted from "./GetStarted.svelte"
 	import { fakemonListSorter, fakemonListFilter } from "./sort-and-filter"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let fakemon: FakemonListStore
 	export let showGetStarted = false

@@ -6,7 +6,7 @@
 	import { MovesStore } from "$lib/moves/store"
 	import type { LearnedMove } from "$lib/trainers/types"
 	import type { Level } from "$lib/dnd/level"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let values: LearnedMove[]
 	export let species: PokemonSpecies

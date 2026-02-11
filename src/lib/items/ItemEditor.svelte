@@ -7,7 +7,7 @@
 	import type { HeldItem } from "$lib/trainers/types"
 	import { ItemStore } from "./store"
 	import { Item, type ItemType } from "./Item"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let value: HeldItem
 	export let groupOrder: ItemType[] = []

@@ -1,5 +1,5 @@
 <script lang="ts" generics="TItem extends HeldItem">
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	import type { ItemType } from "./Item"
 	import { focusInputField } from "$lib/ui/forms"

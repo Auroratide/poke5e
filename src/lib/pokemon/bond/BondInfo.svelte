@@ -15,7 +15,7 @@
 	import { PlusMinus } from "$lib/ui/elements"
 	import { BondEffects } from "./BondEffects"
 	import { Popover } from "$lib/ui/elements"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const dispatch = createEventDispatcher()
 

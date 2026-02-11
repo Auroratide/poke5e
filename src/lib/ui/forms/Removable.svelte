@@ -1,7 +1,7 @@
 <script>
 	import { createEventDispatcher } from "svelte"
 	import WithButton from "./WithButton.svelte"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	
 	const dispatch = createEventDispatcher()
 

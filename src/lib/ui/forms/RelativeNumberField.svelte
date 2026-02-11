@@ -3,10 +3,10 @@
 
 	export function relativeNumberCompare(relative: RelativeValue, lhs: number, rhs: number): boolean {
 		switch (relative) {
-			case "<": return lhs < rhs
-			case "=": return lhs === rhs
-			case ">": return lhs > rhs
-			default: return lhs === rhs
+		case "<": return lhs < rhs
+		case "=": return lhs === rhs
+		case ">": return lhs > rhs
+		default: return lhs === rhs
 		}
 	}
 </script>

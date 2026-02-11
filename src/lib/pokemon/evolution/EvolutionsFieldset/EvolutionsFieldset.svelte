@@ -6,7 +6,7 @@
 	import { Evolution, tmpEvolutionId } from "../Evolution"
 	import EvolutionDefinition from "./EvolutionDefinition.svelte"
 	import { Tab } from "$lib/ui/elements"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let species: SpeciesIdentifier
 	export let evolutions: Evolution[]

@@ -11,7 +11,7 @@
 	} from "$lib/ui/forms"
 	import { Nature, NatureField } from "$lib/pokemon/nature"
 	import { PokemonTeraType } from "$lib/pokemon/types"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const FIVE_HUNDRED_KB = 524288
 

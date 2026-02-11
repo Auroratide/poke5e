@@ -19,7 +19,7 @@
 	import SimpleTypeField from "$lib/pokemon/types/SimpleTypeField.svelte"
 	import { createEventDispatcher } from "svelte"
 	import { Fakemon } from "../Fakemon"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const dispatch = createEventDispatcher()
 

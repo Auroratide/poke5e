@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	import { renderHtml } from "$lib/ui/rendering"
 	import type { Move } from "./Move"
 

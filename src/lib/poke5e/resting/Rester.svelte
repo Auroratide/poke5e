@@ -7,7 +7,7 @@
 	import { rulesVersion } from "$lib/site/rules-version"
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const dispatch = createEventDispatcher()
 

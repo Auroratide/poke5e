@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	import { DistancesFieldset } from "../distance"
 	import { Speeds } from "./Speeds"
 	

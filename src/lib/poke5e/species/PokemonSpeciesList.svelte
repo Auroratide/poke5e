@@ -6,13 +6,13 @@
 	import { TemporaryBannerMessage } from "$lib/ui/elements"
 	import { Url } from "$lib/site/url"
 	import { OfficialFakemonRemovedBanner, readdOfficialFakemon } from "$lib/fakemon/OfficialFakemonRemovedBanner"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	import { CreatureSizes, type CreatureSize } from "$lib/dnd/CreatureSize"
 	import { capitalize } from "$lib/utils/string"
 	import { SpeciesFilter } from "./SpeciesFilter"
 	import { PokemonType, type PokeType } from "$lib/pokemon/types"
 	import { BiomesStore } from "$lib/poke5e/habitat"
-	import { EggGroup } from "$lib/pokemon/egg-group";
+	import { EggGroup } from "$lib/pokemon/egg-group"
 
 	export let pokemons: PokemonSpecies[]
 	export let onClick: (pokemon: PokemonSpecies, event: MouseEvent) => void = () => {}

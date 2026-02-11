@@ -6,7 +6,7 @@
 	import { Url } from "$lib/site/url"
 	import type { SingleFakemonStore } from "../store/SingleFakemonStore"
 	import { PageAction } from "./actions"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let fakemon: SingleFakemonStore
 	$: canEdit = $fakemon.update != null

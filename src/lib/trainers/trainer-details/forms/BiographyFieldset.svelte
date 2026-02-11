@@ -7,7 +7,7 @@
 		type ImageInputValue,
 	} from "$lib/ui/forms"
 	import type { TrainerBio } from "$lib/trainers/types"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const FIVE_HUNDRED_KB = 524288
 

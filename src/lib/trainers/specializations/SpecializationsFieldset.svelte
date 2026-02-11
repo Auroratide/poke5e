@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Fieldset, RanksField } from "$lib/ui/forms"
 	import { SpecializationList, type Specializations } from "$lib/trainers/specializations"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let values: Specializations
 	export let disabled: boolean = false

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	import { RadioFields, TextField } from "$lib/ui/forms"
 	import { capitalize } from "$lib/utils/string"
 	import { SpeciesMedia, type SpeciesMediaTypeAttribution } from "./SpeciesMedia"

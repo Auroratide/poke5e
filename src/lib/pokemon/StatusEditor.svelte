@@ -8,7 +8,7 @@
 	import { createEventDispatcher } from "svelte"
 	import { NonVolatileStatus } from "$lib/pokemon/status"
 	import VisuallyHidden from "../ui/elements/VisuallyHidden.svelte"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const dispatch = createEventDispatcher()
 	const statusList = Object.values(NonVolatileStatus)

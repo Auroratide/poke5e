@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PokemonType } from "./PokemonType"
 	import { InlineTypeName } from "."
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let type: PokemonType
 

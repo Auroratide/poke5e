@@ -4,7 +4,7 @@
 	import { MovesFilterStore, MovesSorterStore } from "./store"
 	import { Move } from "./Move"
 	import { Url } from "$lib/site/url"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let moves: Move[]
 

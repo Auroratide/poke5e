@@ -2,7 +2,7 @@
 	import { Fieldset } from "$lib/ui/forms"
 	import type { HeldItem } from "$lib/trainers/types"
 	import { InventoryEditor } from "$lib/items"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let items: HeldItem[]
 	export let disabled: boolean

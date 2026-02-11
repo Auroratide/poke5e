@@ -3,7 +3,7 @@
 	import type { MovePool } from "./MovePool"
 	import MovePoolGroupFields from "./MovePoolGroupFields.svelte"
 	import { MovesStore, TmsStore } from "$lib/moves/store"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let value: MovePool
 	export let disabled = false

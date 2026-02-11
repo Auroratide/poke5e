@@ -1,5 +1,5 @@
 <script lang="ts" generics="DistanceTypes extends Readonly<Record<string, string>>">
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	import { Fieldset, IntField, InstructionText } from "$lib/ui/forms"
 	
 	export let title: string

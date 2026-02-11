@@ -22,7 +22,7 @@ describe("totalExp", () => {
 				}),
 				level: 1,
 				count: 5,
-			} ]
+			} ],
 		}
 
 		const result = Encounter.totalExp(encounter)
@@ -44,7 +44,7 @@ describe("totalExp", () => {
 				}),
 				level: 2,
 				count: 1,
-			} ]
+			} ],
 		}
 
 		const result = Encounter.totalExp(encounter)
@@ -54,7 +54,7 @@ describe("totalExp", () => {
 
 	test("count is 0 somehow", () => {
 		const encounter: Encounter = {
-				pokemon: [ {
+			pokemon: [ {
 				data: stubPokemonSpecies({
 					sr: 1,
 				}),

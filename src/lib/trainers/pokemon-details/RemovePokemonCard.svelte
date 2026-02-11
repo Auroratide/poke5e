@@ -9,7 +9,7 @@
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
 	import { WithSpecies } from "$lib/poke5e/species"
 	import { Url } from "$lib/site/url"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId

@@ -4,7 +4,7 @@
 	import { createEventDispatcher } from "svelte"
 	import { Button } from "$lib/ui/elements"
 	import { Item, type ItemType } from "$lib/items"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const dispatch = createEventDispatcher()
 

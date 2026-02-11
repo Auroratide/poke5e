@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { SpeciesIdentifier } from "$lib/poke5e/species"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 	import { ResolveAsyncText } from "$lib/ui/rendering"
 	import type { EvolutionForest } from "./EvolutionForest"
 	import EvolutionStage from "./EvolutionStage.svelte"

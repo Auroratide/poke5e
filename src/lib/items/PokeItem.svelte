@@ -9,7 +9,7 @@
 	import { EvolutionStore } from "$lib/pokemon/evolution"
 	import { SpeciesStore } from "$lib/poke5e/species"
 	import type { Item } from "./Item"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	const species = SpeciesStore.canonList()
 	const evolutions = EvolutionStore.canonList()
