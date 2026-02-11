@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SearchField } from "$lib/ui/forms"
+	import { RelativeNumberField, SearchField, SelectField, type RelativeValue } from "$lib/ui/forms"
 	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { pokemonFilter, pokemonSorter } from "$lib/site/stores"
 	import { PokemonSpecies } from "./PokemonSpecies"
@@ -7,6 +7,9 @@
 	import { Url } from "$lib/site/url"
 	import { OfficialFakemonRemovedBanner, readdOfficialFakemon } from "$lib/fakemon/OfficialFakemonRemovedBanner"
 	import { m } from "$lib/site/i18n";
+	import { CreatureSizes, type CreatureSize } from "$lib/dnd/CreatureSize"
+	import { capitalize } from "$lib/utils/string"
+	import { SpeciesFilter } from "./SpeciesFilter"
 
 	export let pokemons: PokemonSpecies[]
 	export let onClick: (pokemon: PokemonSpecies, event: MouseEvent) => void = () => {}
@@ -18,14 +21,34 @@
 		}
 	}
 
-	$: filtered = pokemons.filter(PokemonSpecies.matchNameOrType($pokemonFilter))
+	let filteredSize: CreatureSize | "" = ""
+	const sizeOptions = [ {
+		name: `- ${m["universal.any"]()} -`,
+		value: "",
+	} ].concat(Object.values(CreatureSizes).map((it) => ({
+		value: it,
+		name: capitalize(it),
+	})))
+
+	let filteredSr: number | undefined = undefined
+	let filteredSrRelative: RelativeValue = "="
+
+	$: filter = new SpeciesFilter()
+		.name($pokemonFilter)
+		.size(filteredSize)
+		.sr(filteredSrRelative, filteredSr)
+
+	$: filtered = pokemons.filter(filter.apply)
 
 	const byStringField = (field: (m: PokemonSpecies) => string) => (l: PokemonSpecies, r: PokemonSpecies) => field(l).localeCompare(field(r))
 	const byNumericField = (field: (m: PokemonSpecies) => number) => (l: PokemonSpecies, r: PokemonSpecies) => field(l) - field(r)
 </script>
 
 <div class="search-field">
-	<SearchField id="filter-moves" label="Search" bind:value={$pokemonFilter} matched={filtered.length} max={pokemons.length} />
+	<SearchField id="filter-moves" label="Search" bind:value={$pokemonFilter} matched={filtered.length} max={pokemons.length} activeFilters={filter.count()}>
+		<SelectField label="{m["universal.size"]()}" bind:value={filteredSize} options={sizeOptions} />
+		<RelativeNumberField label="{m["universal.sr"]()}" bind:value={filteredSr} bind:relative={filteredSrRelative} min={0} max={15} placeholder="{m["universal.number"]()}" />
+	</SearchField>
 </div>
 <TemporaryBannerMessage condition={OfficialFakemonRemovedBanner}>
 	Non-canon pokémon have been removed from this official list (Brawleon, Minereon, Droideon, Terreon, Specteon, Eeveon, Pesteon, Aereon, Drakeon, Toxeon, Rookite, Belseraph). You may <button class="link-button" on:click={readdOfficialFakemon}>re-add these to your list of Fakémon</button>, or you may add them later under <a href="{Url.settings()}">settings</a>.
