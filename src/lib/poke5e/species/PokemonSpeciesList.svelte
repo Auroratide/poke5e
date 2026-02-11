@@ -10,6 +10,9 @@
 	import { CreatureSizes, type CreatureSize } from "$lib/dnd/CreatureSize"
 	import { capitalize } from "$lib/utils/string"
 	import { SpeciesFilter } from "./SpeciesFilter"
+	import { PokemonType, type PokeType } from "$lib/pokemon/types"
+	import { BiomesStore } from "$lib/poke5e/habitat"
+	import { EggGroup } from "$lib/pokemon/egg-group";
 
 	export let pokemons: PokemonSpecies[]
 	export let onClick: (pokemon: PokemonSpecies, event: MouseEvent) => void = () => {}
@@ -21,11 +24,19 @@
 		}
 	}
 
-	let filteredSize: CreatureSize | "" = ""
-	const sizeOptions = [ {
+	const AnyOption = [ {
 		name: `- ${m["universal.any"]()} -`,
 		value: "",
-	} ].concat(Object.values(CreatureSizes).map((it) => ({
+	} ]
+
+	let filteredType: PokeType | "" = ""
+	let typeOptions = AnyOption.concat(Object.values(PokemonType.list).map((it) => ({
+		value: it,
+		name: capitalize(it),
+	})))
+
+	let filteredSize: CreatureSize | "" = ""
+	const sizeOptions = AnyOption.concat(Object.values(CreatureSizes).map((it) => ({
 		value: it,
 		name: capitalize(it),
 	})))
@@ -33,21 +44,55 @@
 	let filteredSr: number | undefined = undefined
 	let filteredSrRelative: RelativeValue = "="
 
+	let filteredMinLevel: number | undefined = undefined
+	let filteredMinLevelRelative: RelativeValue = "="
+
+	let filteredEggGroup: string = ""
+	let eggGroupOptions = AnyOption.concat(EggGroup.standardList.map((it) => ({
+		value: it,
+		name: capitalize(it),
+	})))
+
+	let filteredBiome: string = ""
+	$: biomeOptions = AnyOption.concat($BiomesStore?.map((it) => ({
+		value: it.id,
+		name: it.name,
+	})) ?? [])
+
+	$: textFilterIsPokemonType = PokemonType.list.includes($pokemonFilter.toLocaleLowerCase() as PokeType)
+
 	$: filter = new SpeciesFilter()
-		.name($pokemonFilter)
+		.name(textFilterIsPokemonType ? "" : $pokemonFilter)
+		.type(filteredType !== "" ? filteredType : textFilterIsPokemonType ? $pokemonFilter : "")
 		.size(filteredSize)
 		.sr(filteredSrRelative, filteredSr)
+		.minLevel(filteredMinLevelRelative, filteredMinLevel)
+		.eggGroup(filteredEggGroup)
+		.biome(filteredBiome)
 
 	$: filtered = pokemons.filter(filter.apply)
 
 	const byStringField = (field: (m: PokemonSpecies) => string) => (l: PokemonSpecies, r: PokemonSpecies) => field(l).localeCompare(field(r))
 	const byNumericField = (field: (m: PokemonSpecies) => number) => (l: PokemonSpecies, r: PokemonSpecies) => field(l) - field(r)
+
+	const resetFilters = () => {
+		filteredType = ""
+		filteredSize = ""
+		filteredSr = undefined
+		filteredMinLevel = undefined
+		filteredEggGroup = ""
+		filteredBiome = ""
+	}
 </script>
 
 <div class="search-field">
-	<SearchField id="filter-moves" label="Search" bind:value={$pokemonFilter} matched={filtered.length} max={pokemons.length} activeFilters={filter.count()}>
+	<SearchField id="filter-moves" label="Search" bind:value={$pokemonFilter} matched={filtered.length} max={pokemons.length} activeFilters={filter.count() - ($pokemonFilter !== "" ? 1 : 0)} on:reset={resetFilters}>
+		<SelectField label="{m["universal.type"]()}" bind:value={filteredType} options={typeOptions} />
 		<SelectField label="{m["universal.size"]()}" bind:value={filteredSize} options={sizeOptions} />
 		<RelativeNumberField label="{m["universal.sr"]()}" bind:value={filteredSr} bind:relative={filteredSrRelative} min={0} max={15} placeholder="{m["universal.number"]()}" />
+		<RelativeNumberField label="{m["universal.minLevel"]()}" bind:value={filteredMinLevel} bind:relative={filteredMinLevelRelative} min={0} max={20} placeholder="{m["universal.number"]()}" />
+		<SelectField label="{m["universal.eggGroup"]()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
+		<SelectField label="{m["universal.biome"]()}" bind:value={filteredBiome} options={biomeOptions} />
 	</SearchField>
 </div>
 <TemporaryBannerMessage condition={OfficialFakemonRemovedBanner}>

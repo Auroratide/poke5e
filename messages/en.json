@@ -176,7 +176,9 @@
 		"customImage": "Custom Image",
 		"nickname": "Nickname",
 		"generalNotesPlaceholder": "Use this for any general notes not covered by the above fields...",
-		"oneOrMoreFieldsAboveHaveAnIssue": "One or more fields above have an issue."
+		"oneOrMoreFieldsAboveHaveAnIssue": "One or more fields above have an issue.",
+		"biome": "Biome",
+		"resetFilters": "Reset Filters"
 	},
 	"home": {
 		"title": "Pokémon 5th Edition"

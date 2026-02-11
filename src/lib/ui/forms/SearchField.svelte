@@ -1,8 +1,12 @@
 <script lang="ts">
+	import { createEventDispatcher } from "svelte"
 	import { m } from "$lib/site/i18n"
 	import { slide } from "svelte/transition"
 	import VisuallyHidden from "../elements/VisuallyHidden.svelte"
-	import { FilterIcon } from "$lib/ui/icons";
+	import { FilterIcon } from "$lib/ui/icons"
+	import { Button } from "$lib/ui/elements"
+
+	const dispatch = createEventDispatcher()
 
 	export let id: string
 	export let label: string
@@ -16,6 +20,10 @@
 	const toggleFilter = () => showFilter = !showFilter
 	const closeFilter = () => {
 		showFilter = false
+	}
+
+	const onReset = () => {
+		dispatch("reset")
 	}
 </script>
 
@@ -40,6 +48,9 @@
 		<form on:submit|preventDefault={closeFilter} class="filter-options" transition:slide={{ duration: 200 }}>
 			<div class="invert-colors two-columns">
 				<slot></slot>
+			</div>
+			<div class="align-end">
+				<Button variant="danger" on:click={onReset}>{m["universal.resetFilters"]()}</Button>
 			</div>
 		</form>
 	{/if}
@@ -147,6 +158,11 @@
 	.two-columns {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 0.5em;
+		gap: 0.75em 0.5em;
+	}
+
+	.align-end {
+		margin-block-start: 0.75em;
+		text-align: end;
 	}
 </style>

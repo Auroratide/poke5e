@@ -5,18 +5,36 @@ import { SpeciesFilter } from "../SpeciesFilter"
 const species = [
 	stubPokemonSpecies({
 		name: "Raspberry",
+		type: ["normal"],
 		size: "small",
 		sr: 1,
+		minLevel: 1,
+		eggGroups: ["field"],
+		habitat: {
+			biomes: ["cave"],
+		},
 	}),
 	stubPokemonSpecies({
 		name: "Blueberry",
+		type: ["fairy", "normal"],
 		size: "medium",
 		sr: 3,
+		minLevel: 3,
+		eggGroups: ["water 1"],
+		habitat: {
+			biomes: ["cave"],
+		},
 	}),
 	stubPokemonSpecies({
 		name: "Watermelon",
+		type: ["water"],
 		size: "large",
 		sr: 5,
+		minLevel: 5,
+		eggGroups: ["water 1"],
+		habitat: {
+			biomes: ["volcano"],
+		},
 	}),
 ]
 
@@ -78,6 +96,65 @@ test("sr: <", () => {
 	const result = species.filter(filter.apply)
 
 	expect(result.length).toEqual(0)
+})
+
+test("minLevel: >", () => {
+	const filter = new SpeciesFilter()
+		.minLevel(">", 1)
+	
+	const result = species.filter(filter.apply)
+
+	expect(result.length).toEqual(2)
+	expect(result).toEqual([species[1], species[2]])
+})
+
+test("minLevel: =", () => {
+	const filter = new SpeciesFilter()
+		.minLevel("=", 1)
+	
+	const result = species.filter(filter.apply)
+
+	expect(result.length).toEqual(1)
+	expect(result).toEqual([species[0]])
+})
+
+test("minLevel: <", () => {
+	const filter = new SpeciesFilter()
+		.minLevel("<", 1)
+	
+	const result = species.filter(filter.apply)
+
+	expect(result.length).toEqual(0)
+})
+
+test("type", () => {
+	const filter = new SpeciesFilter()
+		.type("normal")
+	
+	const result = species.filter(filter.apply)
+
+	expect(result.length).toEqual(2)
+	expect(result).toEqual([species[0], species[1]])
+})
+
+test("egg group", () => {
+	const filter = new SpeciesFilter()
+		.eggGroup("field")
+	
+	const result = species.filter(filter.apply)
+
+	expect(result.length).toEqual(1)
+	expect(result).toEqual([species[0]])
+})
+
+test("biome", () => {
+	const filter = new SpeciesFilter()
+		.biome("volcano")
+	
+	const result = species.filter(filter.apply)
+
+	expect(result.length).toEqual(1)
+	expect(result).toEqual([species[2]])
 })
 
 test("name and size", () => {

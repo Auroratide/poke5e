@@ -28,6 +28,8 @@ export class EggGroup extends DataClass<string[]> {
 		return this.data.map(callback)
 	}
 
+	includes = (name: string): boolean => this.data.includes(name)
+
 	toString = () => this.data.join(", ")
 
 	static groupBy<T extends { eggGroups: EggGroup }>(items: T[]): Map<string, GroupedByEggGroup<T>> {

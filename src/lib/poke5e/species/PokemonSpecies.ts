@@ -56,6 +56,7 @@ export class PokemonSpecies extends DataClass<{
 	get size(): CreatureSize { return this.data.size }
 	get gender(): GenderRatio { return new GenderRatio(this.data.gender) }
 	get sr(): SpeciesRating { return new SpeciesRating(this.data.sr) }
+	get minLevel(): number { return this.data.minLevel }
 	get eggGroups(): EggGroup { return new EggGroup(this.data.eggGroups) }
 	get hitDice(): HitDice { return new HitDice(this.data.hitDice) }
 	get speed(): Speeds { return new Speeds(this.data.speed) }
@@ -66,6 +67,7 @@ export class PokemonSpecies extends DataClass<{
 	get moves(): MovePool { return new MovePool(this.data.moves) }
 	get forms(): SpeciesForms | undefined { return this.data.forms != null ? new SpeciesForms(this.data.forms) : undefined }
 	get abilities(): AbilityPool { return new AbilityPool(this.data.abilities) }
+	get habitat(): Habitat { return this.data.habitat }
 
 	numberAsString(): string {
 		return `#${this.data.number.toString().padStart(4, "0")}`
