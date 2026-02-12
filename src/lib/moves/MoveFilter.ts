@@ -20,6 +20,10 @@ export class MoveFilter {
 			relative: RelativeValue,
 			value: number,
 		},
+		cost: undefined | {
+			relative: RelativeValue,
+			value: number,
+		},
 		contest: string | "",
 	} = {
 			name: "",
@@ -30,6 +34,7 @@ export class MoveFilter {
 			time: "",
 			range: undefined,
 			pp: undefined,
+			cost: undefined,
 			contest: "",
 		}
 
@@ -84,6 +89,14 @@ export class MoveFilter {
 		return this
 	}
 
+	cost(relative: RelativeValue, value: number | undefined): MoveFilter {
+		this.filters.cost = value != null ? {
+			relative,
+			value,
+		} : undefined
+		return this
+	}
+
 	contest(value: string): MoveFilter {
 		this.filters.contest = value
 		return this
@@ -101,5 +114,6 @@ export class MoveFilter {
 			&& (this.filters.range == null || relativeNumberCompare(this.filters.range.relative, MoveRange.asNumberOfFeet(move.range), this.filters.range.value))
 			&& (this.filters.pp == null || relativeNumberCompare(this.filters.pp.relative, move.pp, this.filters.pp.value))
 			&& (this.filters.contest === "" || this.filters.contest === move.contest?.contest)
+			&& (this.filters.cost == null || (move.tm != null && relativeNumberCompare(this.filters.cost.relative, move.tm.cost, this.filters.cost.value)))
 	}
 }
