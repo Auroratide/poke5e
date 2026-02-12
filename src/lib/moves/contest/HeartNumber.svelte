@@ -4,7 +4,8 @@
 
 	export let value: number
 	export let filled = false
-	$: count = Array(value)
+	$: count = Array(value).fill(0).map((_, i) => i)
+	$: console.log(count)
 </script>
 
 <span>

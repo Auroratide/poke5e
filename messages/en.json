@@ -178,7 +178,11 @@
 		"generalNotesPlaceholder": "Use this for any general notes not covered by the above fields...",
 		"oneOrMoreFieldsAboveHaveAnIssue": "One or more fields above have an issue.",
 		"biome": "Biome",
-		"resetFilters": "Reset Filters"
+		"resetFilters": "Reset Filters",
+		"action": "Action",
+		"bonusAction": "Bonus Action",
+		"reaction": "Reaction",
+		"use0ForMelee": "use 0 for melee"
 	},
 	"home": {
 		"title": "Pokémon 5th Edition"

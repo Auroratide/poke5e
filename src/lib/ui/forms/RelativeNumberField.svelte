@@ -63,6 +63,7 @@
 
 	input {
 		flex: 1;
+		inline-size: 100%;
 	}
 
 	.row {
