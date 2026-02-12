@@ -15,9 +15,6 @@ const moves = [
 		contest: stubContestDetails({
 			contest: "beauty",
 		}),
-		tm: stubTmDetails({
-			cost: 2000,
-		}),
 	}),
 	stubMove({
 		name: "Orange",
@@ -28,9 +25,6 @@ const moves = [
 		pp: 10,
 		contest: stubContestDetails({
 			contest: "beauty",
-		}),
-		tm: stubTmDetails({
-			cost: 6000,
 		}),
 	}),
 	stubMove({
@@ -81,6 +75,10 @@ const moves = [
 		name: "Peach",
 		type: "fire",
 		power: ["dex", "cha"],
+		tm: stubTmDetails({
+			id: 20,
+			cost: 4000,
+		}),
 		time: "1 reaction",
 		range: "self (20ft line)",
 		pp: 20,
@@ -94,6 +92,7 @@ const moves = [
 		power: ["int"],
 		tm: stubTmDetails({
 			id: 18,
+			cost: 6000,
 		}),
 		time: "1 minute",
 		range: "melee",
@@ -196,12 +195,12 @@ test("pp", () => {
 
 test("cost", () => {
 	const filter = new MoveFilter()
-		.pp(">", 5000)
+		.cost(">", 5000)
 
 	const result = moves.filter(filter.apply)
 
 	expect(result.length).toEqual(1)
-	expect(result[0]).toEqual(moves[1])
+	expect(result[0]).toEqual(moves[7])
 })
 
 test("contest only", () => {
