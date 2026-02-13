@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { page } from "$app/stores"
 	import { browser } from "$app/environment"
+	import { replaceState } from "$app/navigation"
 	import { Page } from "$lib/ui/layout"
 	import { IdBadgeIcon } from "$lib/ui/icons"
 	import { Title } from "$lib/ui/layout"
@@ -31,17 +32,30 @@
 	import { SpeciesStore, type PokemonSpecies } from "$lib/poke5e/species"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
+	$: accessKey = browser ? $page.url.searchParams.get("access_key") : undefined
 	$: pokemonId = browser ? $page.url.searchParams.get("pokemon") : undefined
 	$: action = browser ? $page.url.searchParams.get("action") : undefined
 
 	let trainerList: Promise<undefined | TrainerListStore> | undefined
 	let trainer: Promise<undefined | TrainerStore> | undefined
 	let allSpecies: Promise<Readable<PokemonSpecies[]>> = browser ? SpeciesStore.completeList() : undefined
-
+	
 	$: {
 		if (trainerId && browser) {
 			trainerList = undefined
 			trainer = trainers.get(trainerId)
+			if (accessKey) {
+				accessKey = accessKey.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "")
+				trainer?.then(t => {
+					if (t) {
+						if (!(t.verifyAccess(accessKey))) {
+							console.warn("Access Key provided is invalid for this trainer.");
+						}
+					});
+				const url = new URL($page.url);
+				url.searchParams.delete('access_key');
+				replaceState(url, $page.state);
+			}
 		} else if (!trainerId && browser) {
 			trainerList = trainers.all()
 			trainer = undefined
