@@ -13,7 +13,7 @@
 	export let value: string
 	export let matched: number
 	export let max: number
-	export let activeFilters: number
+	export let activeFilters: number = 0
 
 	let showFilter = false
 	$: filterId = `${id}-filter-options`
@@ -25,19 +25,23 @@
 	const onReset = () => {
 		dispatch("reset")
 	}
+
+	$: hasFilters = $$slots.default
 </script>
 
 <search class="search-field">
 	<div class="skew-container">
 		<div class="search-bar">
-			<span class="filter"><button class="filter-button" type="button" aria-expanded="{showFilter}" aria-controls="{filterId}" aria-label="Filter Options" title="Filter Options" on:click={toggleFilter}>
-				<span class="filter-icon">
-					<FilterIcon />
-				</span>
-				{#if activeFilters > 0}
-					<span class="active-filters">{activeFilters}</span>
-				{/if}
-			</button></span>
+			{#if hasFilters}
+				<span class="filter"><button class="filter-button" type="button" aria-expanded="{showFilter}" aria-controls="{filterId}" aria-label="Filter Options" title="Filter Options" on:click={toggleFilter}>
+					<span class="filter-icon">
+						<FilterIcon />
+					</span>
+					{#if activeFilters > 0}
+						<span class="active-filters">{activeFilters}</span>
+					{/if}
+				</button></span>
+			{/if}
 			<VisuallyHidden><label for={id}>{label}</label></VisuallyHidden>
 			<input {id} type="search" placeholder="{m["universal.search"]()}..." bind:value />
 			<VisuallyHidden><label for="results-{id}">Number of results</label></VisuallyHidden>
