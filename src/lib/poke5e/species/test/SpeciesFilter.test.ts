@@ -69,9 +69,9 @@ test("size only", () => {
 	expect(result[0]).toEqual(species[1])
 })
 
-test("sr: >", () => {
+test("sr: ≥", () => {
 	const filter = new SpeciesFilter()
-		.sr(">", 1)
+		.sr("≥", 3)
 	
 	const result = species.filter(filter.apply)
 
@@ -89,18 +89,18 @@ test("sr: =", () => {
 	expect(result).toEqual([species[0]])
 })
 
-test("sr: <", () => {
+test("sr: ≤", () => {
 	const filter = new SpeciesFilter()
-		.sr("<", 1)
+		.sr("≤", 0.5)
 	
 	const result = species.filter(filter.apply)
 
 	expect(result.length).toEqual(0)
 })
 
-test("minLevel: >", () => {
+test("minLevel: ≥", () => {
 	const filter = new SpeciesFilter()
-		.minLevel(">", 1)
+		.minLevel("≥", 2)
 	
 	const result = species.filter(filter.apply)
 
@@ -118,9 +118,9 @@ test("minLevel: =", () => {
 	expect(result).toEqual([species[0]])
 })
 
-test("minLevel: <", () => {
+test("minLevel: ≤", () => {
 	const filter = new SpeciesFilter()
-		.minLevel("<", 1)
+		.minLevel("≤", 0)
 	
 	const result = species.filter(filter.apply)
 

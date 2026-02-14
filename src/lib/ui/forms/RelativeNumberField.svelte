@@ -1,11 +1,11 @@
 <script lang="ts" context="module">
-	export type RelativeValue = "<" | "=" | ">"
+	export type RelativeValue = "≤" | "=" | "≥"
 
 	export function relativeNumberCompare(relative: RelativeValue, lhs: number, rhs: number): boolean {
 		switch (relative) {
-		case "<": return lhs < rhs
+		case "≤": return lhs <= rhs
 		case "=": return lhs === rhs
-		case ">": return lhs > rhs
+		case "≥": return lhs >= rhs
 		default: return lhs === rhs
 		}
 	}
@@ -38,9 +38,9 @@
 			<label for="{relativeId}">Relative</label>
 		</VisuallyHidden>
 		<select id="{relativeId}" bind:value={relative}>
-			<option value="<">&lt;</option>
+			<option value="≤">≤</option>
 			<option value="=">=</option>
-			<option value=">">&gt;</option>
+			<option value="≥">≥</option>
 		</select>
 		<input type="number" {id} name="{kebabName}" {placeholder} {min} {max} bind:value {disabled} {required} />
 	</div>

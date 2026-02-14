@@ -195,7 +195,7 @@ test("pp", () => {
 
 test("cost", () => {
 	const filter = new MoveFilter()
-		.cost(">", 5000)
+		.cost("≥", 5000)
 
 	const result = moves.filter(filter.apply)
 

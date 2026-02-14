@@ -42,7 +42,7 @@ test("type only", () => {
 
 test("cost", () => {
 	const filter = new ItemFilter()
-		.cost(">", 400)
+		.cost("≥", 400)
 
 	const result = items.filter(filter.apply)
 
