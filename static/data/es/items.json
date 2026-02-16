@@ -158,7 +158,7 @@
 			"id": "quick-ball",
 			"name": "Veloz Ball",
 			"description": [
-				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 8 si es usada en la primera ronda de combate."
+				"Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 15 si es usada en la primera ronda de combate."
 			]
 		},
 		{
