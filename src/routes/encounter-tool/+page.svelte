@@ -6,7 +6,7 @@
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 	import { PokemonSpecies, PokemonSpeciesList, SpeciesStore } from "$lib/poke5e/species"
 	import Title from "$lib/ui/layout/Title.svelte"
-	import { IntField, Removable, SelectField } from "$lib/ui/forms"
+	import { ActionArea, InstructionText, IntField, Removable, Saveable, SelectField } from "$lib/ui/forms"
 	import { PokemonType, TypeTag, type PokeType } from "$lib/pokemon/types"
 	import Card from "$lib/ui/page/Card.svelte"
 	import { experienceAwarded } from "$lib/poke5e/experience"
@@ -14,6 +14,9 @@
 	import Stepper from "$lib/ui/elements/Stepper.svelte"
 	import { SpeciesSprite } from "$lib/poke5e/species/media"
 	import { Encounter } from "$lib/poke5e/encounters"
+	import { goto } from "$app/navigation"
+	import { Url } from "$lib/site/url"
+	import { error } from "$lib/site/errors"
 
 	const NONE = ""
 	const canonList = SpeciesStore.canonList()
@@ -139,6 +142,19 @@
 	const clearEncounter = () => {
 		encounter = Encounter.createEmpty()
 	}
+
+	let saving = false
+	const useEncounter = async () => {
+		saving = true
+		try {
+			const created = await Encounter.saveToTrainers(encounter)
+			goto(Url.trainers(created.info.readKey))
+		} catch (e) {
+			error.show(e.message)
+		} finally {
+			saving = false
+		}
+	}
 </script>
 
 <Page theme="forest">
@@ -154,96 +170,101 @@
 	</nav>
 	
 	<Card title="Encounter Tool">
-		<section>
-			<p>Welcome to the Encounter Tool! Please, keep in mind that this system is being currently tested and might not be accurately balanced.</p>
-		</section>
+		<Saveable {saving}>
+			<section>
+				<p>Welcome to the Encounter Tool! Please, keep in mind that this system is being currently tested and might not be accurately balanced.</p>
+			</section>
 
-		<section>
-			<h2>Players</h2>
-			{#if partyPlayers.length > 0}
-				<div class="player-list">
-					{#each partyPlayers as player}
-						<div class="player-item">
-							<Removable on:remove={() => deletePlayer(player.id)}>
-								<div class="player-fields">
-									<IntField label="Level" bind:value={player.level} min={1} />
-									<IntField label="Pokémon" bind:value={player.numberOfPokemon} min={1} />
-								</div>
-							</Removable>
-						</div>
-					{/each}
-				</div>
-			{:else}
-				<p>No Players in the Party.</p>
-			{/if}
-			<Button variant="success" on:click={addPlayer}>Add Player</Button>
-		</section>
-		<section>
-			<h2>Configuration</h2>
-			<div class="simple-type-field">
-				<SelectField label="Biome" options={biomeOptions} bind:value={biome} />
-				<SelectField label="Type in common" options={primaryTypeOptions} bind:value={pokemonType}/>
-			</div>
-			<div class="simple-type-field">
-				<SelectField label="Difficulty" options={difficultyOptions} bind:value={difficulty}/>
-				<p class="xp-awarded">{maxExpTotal} XP</p>
-			</div>
-			<div class="simple-type-field">
-				<SelectField label="Pokémon Limit" options={pokemonLimitOptions} bind:value={arePokemonLimited}/>
-				{#if arePokemonLimited === "yes"}
-					<IntField label="Limit" bind:value={pokemonLimit} min={1}/>
-				{:else}
-					<p></p>
-				{/if}
-			</div>
-		
-			<Button on:click={generateEncounter}>Generate Encounter</Button>
-		</section>
-		<section>
-			<h2>Encounter</h2>
-			<div class="manual-pokemon-list">
-				{#if encounter.pokemon.length > 0}
-					<div class="pokemon-list">
-						{#each encounter.pokemon as pokemon (pokemon.data.id.data)}
-							<div class="pokemon-item">
-								<div class="pokemon-data">
-									<div class="pokemon-sprite">
-										<SpeciesSprite media={pokemon.data.media} alt="{pokemon.data.name}" />
+			<section>
+				<h2>Players</h2>
+				{#if partyPlayers.length > 0}
+					<div class="player-list">
+						{#each partyPlayers as player}
+							<div class="player-item">
+								<Removable on:remove={() => deletePlayer(player.id)}>
+									<div class="player-fields">
+										<IntField label="Level" bind:value={player.level} min={1} />
+										<IntField label="Pokémon" bind:value={player.numberOfPokemon} min={1} />
 									</div>
-									<div class="pokemon-info">
-										<p class="pokemon-name">{pokemon.data.name} <label class="pokemon-level">Lv. <input type="number" min={1} bind:value={pokemon.level} /></label></p>
-										<p class="pokemon-stats">SR: {pokemon.data.sr} • XP: {experienceAwarded(pokemon.level, pokemon.data.data.sr)}</p>
-										<TypeTag type={pokemon.data.data.type} />
-									</div>
-								</div>
-								<Stepper bind:value={pokemon.count} deleteOnZero={true} on:delete={() => onDelete(pokemon)} />
+								</Removable>
 							</div>
 						{/each}
 					</div>
-				{:else if noMatches}
-					<p class="no-matches">No Pokémon meet the criteria!</p>
 				{:else}
-					<p>No Pokémon added.</p>
+					<p>No Players in the Party.</p>
 				{/if}
+				<Button variant="success" on:click={addPlayer} width="full">Add Player</Button>
+			</section>
+			<section>
+				<h2>Configuration</h2>
+				<div class="simple-type-field">
+					<SelectField label="Biome" options={biomeOptions} bind:value={biome} />
+					<SelectField label="Type in common" options={primaryTypeOptions} bind:value={pokemonType}/>
+				</div>
+				<div class="simple-type-field">
+					<SelectField label="Difficulty" options={difficultyOptions} bind:value={difficulty}/>
+					<p class="xp-awarded">{maxExpTotal} XP</p>
+				</div>
+				<div class="simple-type-field">
+					<SelectField label="Pokémon Limit" options={pokemonLimitOptions} bind:value={arePokemonLimited}/>
+					{#if arePokemonLimited === "yes"}
+						<IntField label="Limit" bind:value={pokemonLimit} min={1}/>
+					{:else}
+						<p></p>
+					{/if}
+				</div>
+			
+				<p class="larger">
+					<Button on:click={generateEncounter} width="full">Generate Encounter</Button>
+				</p>
+			</section>
+			<section>
+				<h2>Encounter</h2>
+				<div class="manual-pokemon-list">
+					{#if encounter.pokemon.length > 0}
+						<div class="pokemon-list">
+							{#each encounter.pokemon as pokemon (pokemon.data.id.data)}
+								<div class="pokemon-item">
+									<div class="pokemon-data">
+										<div class="pokemon-sprite">
+											<SpeciesSprite media={pokemon.data.media} alt="{pokemon.data.name}" />
+										</div>
+										<div class="pokemon-info">
+											<p class="pokemon-name">{pokemon.data.name} <label class="pokemon-level">Lv. <input type="number" min={1} bind:value={pokemon.level} /></label></p>
+											<p class="pokemon-stats">SR: {pokemon.data.sr} • XP: {experienceAwarded(pokemon.level, pokemon.data.data.sr)}</p>
+											<TypeTag type={pokemon.data.data.type} />
+										</div>
+									</div>
+									<Stepper bind:value={pokemon.count} deleteOnZero={true} on:delete={() => onDelete(pokemon)} />
+								</div>
+							{/each}
+						</div>
+					{:else if noMatches}
+						<p class="no-matches">No Pokémon meet the criteria!</p>
+					{:else}
+						<p>No Pokémon added.</p>
+					{/if}
 
-				{#if encounter.pokemon.length > 0}
-					<div>
-						<p>
-							<strong>Total XP:</strong> {currentEncounterExp} ({Math.round(currentEncounterExp / partyPlayers.length)}/player)
-							<span class="difficulty-badge" style="background-color: {encounterDifficulty.color}">
-								{encounterDifficulty.label}
-							</span>
-							</p>
-					</div>
-				{/if}
+					{#if encounter.pokemon.length > 0}
+						<div>
+							<p>
+								<strong>Total XP:</strong> {currentEncounterExp} ({Math.round(currentEncounterExp / partyPlayers.length)}/player)
+								<span class="difficulty-badge" style="background-color: {encounterDifficulty.color}">
+									{encounterDifficulty.label}
+								</span>
+								</p>
+						</div>
+					{/if}
 
-				<Button variant="danger" on:click={clearEncounter}>Clear encounter</Button>
-				<p> </p>
-			</div>
-		</section>
+				</div>
+				<InstructionText>"Use Encounter" will add this to Trainers, allowing you to track HP, add moves, and manage the details.</InstructionText>
+			</section>
+			<ActionArea>
+				<Button variant="danger" on:click={clearEncounter}>Clear</Button>
+				<Button on:click={useEncounter}>Use Encounter</Button>
+			</ActionArea>
+		</Saveable>
 	</Card>
-
-	
 </Page>
 
 <style>
@@ -336,6 +357,10 @@
 	.no-matches {
 		color: var(--skin-danger-text);
 		font-style: italic;
+	}
+
+	.larger {
+		font-size: var(--font-sz-neptune);
 	}
 
 	@media screen and (min-width: 50rem) {

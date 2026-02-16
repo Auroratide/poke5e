@@ -4,6 +4,7 @@ import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import rawPokemonData from "./sample-pool.json"
 import { PokemonSpecies } from "$lib/poke5e/species"
 import type { SinglePokemonJsonResponse } from "$lib/poke5e/species/PokemonJsonResponse"
+import { provider } from "$lib/trainers/data"
 
 describe("totalExp", () => {
 	test("empty encounter", () => {
@@ -88,5 +89,40 @@ describe("generate", () => {
 			// expect(result.totalExp()).toBeGreaterThanOrEqual(targetExp * (1 - TOLERANCE))
 			expect(Encounter.totalExp(result)).toBeLessThanOrEqual(targetExp * (1 + TOLERANCE))
 		}
+	})
+})
+
+describe("saveToTrainers", () => {
+	test("no pokemon in encounter", async () => {
+		const encounter = Encounter.createEmpty()
+
+		await expect(Encounter.saveToTrainers(encounter)).rejects.toThrow()
+	})
+
+	test("encounter has pokemon", async () => {
+		const encounter: Encounter = {
+			pokemon: [ {
+				data: stubPokemonSpecies({
+					name: "Eevee",
+					sr: 1,
+				}),
+				level: 3,
+				count: 2,
+			}, {
+				data: stubPokemonSpecies({
+					name: "Umbreon",
+					sr: 2,
+				}),
+				level: 8,
+				count: 1,
+			} ],
+		}
+
+		const result = await Encounter.saveToTrainers(encounter)
+
+		expect(result.pokemon.length).toEqual(3)
+
+		const fromStorage = await provider.getTrainer(result.info.readKey)
+		expect(fromStorage).toBeDefined()
 	})
 })
