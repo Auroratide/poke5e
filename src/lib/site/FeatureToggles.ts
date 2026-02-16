@@ -1,9 +1,9 @@
 import { browser } from "$app/environment"
 
  
-function toggle(name: string) {
-	return () => isFeatureActive(name)
-}
+// function toggle(name: string) {
+// 	return () => isFeatureActive(name)
+// }
 
 export function isFeatureActive(feature: string): boolean {
 	return browser ? localStorage.getItem(`feature-toggle::${feature}`) != null : false
@@ -20,5 +20,5 @@ export function setFeatureActive(feature: string, isActive: boolean) {
 
 // example: FakemonEvolutions: toggle("FakemonEvolutions"),
 export const FeatureToggles = {
-	MoreTms: toggle("MoreTms"),
+	MoreTms: () => true,
 }
