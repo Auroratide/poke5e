@@ -9,7 +9,6 @@
 	import { shouldShowVersionHighlight } from "$lib/site/version-tracking"
 	import { browser } from "$app/environment"
 	import { LanguageSwitcher } from "$lib/site/i18n"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	export let currentVersion: string
 	export let versionHighlight: string = ""
@@ -38,10 +37,8 @@
 					{/if}
 				</a></p>
 				<div class="right-side">
-					{#if FeatureToggles.Localization()}
-						<LanguageSwitcher />
-						<span>•</span>
-					{/if}
+					<LanguageSwitcher />
+					<span>•</span>
 					<button aria-expanded="{showMore}" aria-controls="site-footer-more" on:click={toggleMore}>{showMore ? "Less" : "More"} <span class="icon chevron-menu"><ChevronIcon.Menu label="" /></span></button>
 				</div>
 			</div>
@@ -71,7 +68,7 @@
 					<li><a href="{Url.privacyPolicy()}" on:click={close}>Privacy Policy</a></li>
 					<li><a href="{Url.external.github()}"><GithubIcon /> Github</a></li>
 					<li><a href="{Url.external.discord()}"><DiscordIcon /> Discord</a></li>
-					<li class:hidden={!FeatureToggles.Localization()}><LanguageSwitcher /></li>
+					<li><LanguageSwitcher /></li>
 				</ul>
 			</div>
 			<p class="license"><small>Site by <a href="{Url.external.auroratide()}">Auroratide</a>. Content by the community. Pokémon and Pokémon character names are trademarks of Nintendo. Dungeons and Dragons is a trademark of Wizards of the Coast.</small></p>
@@ -217,6 +214,4 @@
 			display: none;
 		}
 	}
-
-	.hidden { display: none !important; }
 </style>

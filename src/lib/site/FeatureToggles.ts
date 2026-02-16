@@ -20,6 +20,5 @@ export function setFeatureActive(feature: string, isActive: boolean) {
 
 // example: FakemonEvolutions: toggle("FakemonEvolutions"),
 export const FeatureToggles = {
-	Localization: toggle("Localization"),
 	MoreTms: toggle("MoreTms"),
 }
