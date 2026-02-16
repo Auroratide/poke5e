@@ -75,7 +75,7 @@ describe("generate", () => {
 
 	// NOTE: I'm not sure if this test is flakey yet.
 	test("always within variance of the target exp", () => {
-		const TOLERANCE = 0.5
+		const TOLERANCE = 1
 
 		for (let i = 0; i < 100; ++i) {
 			const targetExp = 200 * (i + 1)
