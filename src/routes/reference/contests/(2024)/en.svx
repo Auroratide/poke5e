@@ -1,0 +1,209 @@
+---
+title: Contests
+---
+
+<script lang="ts">
+	import { Url } from "$lib/site/url"
+  import { Formula, InfoTable, Tag } from "$lib/ui/elements"
+  import type { ContestMoveEffect } from "$lib/moves/contest"
+  import EffectsList from "../EffectsList.svelte"
+
+  export let effects: ContestMoveEffect
+</script>
+
+<p class="beta"><Tag>New!</Tag><span>The 2024 version of the rules are being playtested. If you have <a href="{Url.feedback()}">feedback</a>, let us know!</span></p>
+
+Follow these guidelines to become the best Pokémon Coordinator!
+
+Pokémon Contests are a type of competition often contrasted with Pokémon battles and held in Contest Halls. Pokémon are judged on their condition and moves in two rounds to determine which one is the best of its category. A Coordinator enters a Pokémon in one of five categories: Beauty, Clever, Cool, Cute, or Tough and competes against other Coordinators in two rounds:
+
+* The Introduction Round (Primary Judging)
+* The Talent Round (Secondary Judging)
+
+For each category, there are four participating Pokémon and their respective Coordinators.
+
+## Introduction Round
+
+In the first round, each of the four participating Pokémon individually appeals to the crowd, who then vote on who looks the coolest, most beautiful, cutest, most clever, or toughest, depending on the contest category.
+
+You will accumulate a number of **Visual Points** depending on three rolls your Pokémon makes.
+
+### The Scene
+
+Each participating Pokémon rolls **Initiative** to determine the order of introduction. Then, the DM sets the scene, and in order each Coordinator conducts a performance with their participating Pokémon. Creatively narrate your performance! You may get advantage on your performance rolls for a novel or impressive performance.
+
+### Visual Points
+
+How well your performance appeals to the crowd is determined by three rolls made against the crowd's DC. The DM may choose a different DC for each of the three rolls:
+
+1. **Accuracy**: Make a Performance check.
+2. **Impact**: Make a Persuasion check.
+3. **Distinction**: Depending on the category, choose the check that fits your Pokémon's strength (see below).
+
+For the third roll: 
+* **Cool**: Make an Acrobatics or Intimidation check.
+* **Beauty**: Make a Perception or Performance check.
+* **Cute**: Make a Insight or Persuasion check.
+* **Clever**: Make an Sleight of Hand or Deception check.
+* **Tough**: Make an Athletics or Intimidation check.
+
+For each roll, you gain a number of visual points depending on whether you met the crowd's DC:
+
+* 0 Visual Points if you failed to meet the DC.
+* 3 Visual Points if you met the DC.
+* 3 _additional_ Visual Points if you met the DC by 5 or more, or rolled a Natural 20.
+
+### Crowd DC
+
+As the DM, you may set the crowd's DC based on how easy or hard it is to impress them. Are they lenient or critics? The below are suggested DCs:
+
+* Easy: DC 8
+* Medium: DC 11
+* Hard: DC 14
+
+## Talent Round
+
+In the secondary judging, the four Pokémon take turns using moves in front of an appointed judge. All the Pokémon perform together, meaning their moves may affect each other's performances. Take advantage of this by making your opponents nervous!
+
+The Talent Round happens over the course of **4 turns**. You will accumulate a number of **Appeal Points** based on the moves you use.
+
+### Turns
+
+Each Pokémon acts in order of **Initiative**, though note that the turn order may change depending on the moves used.
+
+On your turn, choose a move to perform. Each move is labelled with type of contest it is compatible with, though you may perform moves that are of a different contest type if you wish.
+
+To perform a move, make a check against the judge's DC. The check may use either your Performance proficiency, or an attribute indicated by the move's Move Power (plus proficiency bonus). For example, if you use Acid, you may either roll Dex + Proficiency Bonus, or Performance.
+
+**Note**: If you used the same move on your last turn, then you make the check at disadvantage unless stated otherwise. Keep things interesting for the crowd!
+
+### Appeal Points
+
+What happens depends on the roll result and the move's compatibility with the current contest:
+
+* **Compatible Move**:
+  * Nat 20: Gain double Appeal Points. Crowd Meter increases by 1.
+  * Success: Gain Appeal Points. Crowd Meter increases by 1.
+  * Failure: Gain half Appeal Points, rounded up.
+  * Nat 1: Do not gain any Appeal Points.
+* **Complementary Move**:
+  * Success: Gain Appeal Points.
+  * Failure: Do not gain any Appeal Points. Crowd Meter decreases by 1.
+  * Nat 1: Lose Appeal Points. Crowd Meter decreases by 1.
+* **Incompatible Move**:
+  * Success: Do not gain any Appeal Points. Crowd Meter decreases by 1.
+  * Failure: Lose Appeal Points. Crowd Meter decreases by 1.
+
+The number of **Appeal Points** gained is indicated on the move you use. If you maxed out the Crowd Meter, then you gain an additional 5 bonus Appeal Points.
+
+### Jam
+
+When a Move has Jam, then after the roll for Appeal Points has been made, target an opposing Pokémon. The target of your Jam must make a CHA saving throw against your move's DC. If your Appeal Roll was a Natural 20, then the target makes their save at disadvantage.
+
+* Successful Save: Lose no Appeal Points.
+* Failed Save: Lose Appeal Points equal to the Jam.
+* Nat 1: Lose Appeal Points equal to double the Jam.
+
+You may choose your Move's DC to be either its normal DC as determined by its Move Power, or using your Intimidation proficiency. Essentially, choose between:
+
+<Formula equals="DC" expression="8 + Move Power Mod + Prof. Bonus" />
+<Formula equals="DC" expression="8 + Intimidation Bonus" />
+
+### Move Contest Effects
+
+Certain moves may have additional or modified effects. Most effects resolve after making the Appeal Check and Jam Save above, though some effects apply to the checks or alter the number of Appeal Points awarded.
+
+Be sure to check the move's Contest Effect to see how things play out.
+
+### Crowd Meter
+
+The Crowd Meter is a gauge of the crowd's excitement. The Pokémon that maxes out the Crowd Meter will earn **5 bonus Appeal Points**. In a standard Move Contest with four contestants the Crowd Meter maxes out at 5. In a showdown between two Pokémon the Crowd Meter maxes out at 3.
+
+When a Pokémon successfully performs a move that is compatible with the contest category the crowd will get excited, increasing the Crowd Meter. Performing a move that is complementary with the contest category will not increase the Crowd Meter. Finally, performing a move that is incompatible with the contest category will decrease the Crowd Meter.
+
+### Move Compatibility
+
+Use the table below to determine the result of your Appeal Check.
+
+<InfoTable label="Move Compatibility">
+  <thead>
+    <tr>
+      <th></th>
+      <th>Compatible</th>
+      <th>Complementary</th>
+      <th>Incompatible</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Beauty</th>
+      <td>Beauty</td>
+      <td>Cool, Cute</td>
+      <td>Clever, Tough</td>
+    </tr>
+    <tr>
+      <th>Cool</th>
+      <td>Cool</td>
+      <td>Beauty, Tough</td>
+      <td>Clever, Cute</td>
+    </tr>
+    <tr>
+      <th>Clever</th>
+      <td>Clever</td>
+      <td>Cute, Tough</td>
+      <td>Beauty, Cool</td>
+    </tr>
+    <tr>
+      <th>Cute</th>
+      <td>Cute</td>
+      <td>Beauty, Clever</td>
+      <td>Cool, Tough</td>
+    </tr>
+    <tr>
+      <th>Tough</th>
+      <td>Tough</td>
+      <td>Clever, Cool</td>
+      <td>Beauty, Cute</td>
+    </tr>
+  </tbody>
+</InfoTable>
+
+## Final Scoring
+
+After the Talent Round is complete, tally up your points to determine placement.
+
+<Formula equals="Score" expression="Visual Points + 2 × Appeal Points" />
+
+Ribbons are awarded to winning contestants.
+
+## Advanced Topics
+
+The following are **optional rules** to make Contests a little more interesting once you have the basics practiced.
+
+### Status Effects
+
+- **Calm**: A Pokémon with this status is immune to CHA saving throws.
+- **Nervous**: A Pokémon with this status has disadvantage of CHA saving throws.
+- **Startled**: A Pokémon with this status has disadvantage on Move attack rolls and targets of it's Moves have advantage on CHA saving throws.
+
+### Stage Position
+
+- **Front Stage**: With the entire crowd’s attention, the pressure is on. Pokemon have disadvantage on all Intimidation, Performance, and Persuasion rolls. However, if successful, Appeal and Jam points gained or lost are doubled.
+- **Mid Stage**: With the crowd expecting nothing more or less, there is no advantage or disadvantage for this position.
+- **Back Stage**: With minimal crowd attention, the pressure is off. Pokemon have advantage on all Intimidation, Performance, and Persuasion rolls. However, if successful, Appeal and Jam points gained or lost are halved (rounded down). Optional, the crowd meter can’t be raised from back stage.
+
+### Pokéblocks
+
+Consuming Pokéblocks provides the Pokémon with Performance Energy, or PE. A Pokémon may use 50 PE to gain advantage on a single roll during a contest. This includes Performance, Persuasion, and Intimdation rolls during the Introduction Round. If used during the Talent Rounds, PE may be used to give advantage on moves that require an attack roll or to give disadvantage on moves that require a saving throw. Finally, PE may also be used to gain advantage on a saving throw.
+
+## Move Effects
+
+<EffectsList {effects} />
+
+<style>
+	.beta {
+		font-size: var(--font-sz-venus);
+	} .beta span {
+		padding-inline-start: 0.25em;
+	}
+</style>

@@ -79,5 +79,6 @@ export const Url = {
 		moves: (id?: string) => localizeUrl(id ? resolve("/(api)/moves/[id].json", { id }) : resolve("/(api)/moves.json")).pathname,
 		abilities: () => localizeUrl(resolve("/(api)/abilities.json")).pathname,
 		biomes: () => localizeUrl(resolve("/(api)/biomes.json")).pathname,
+		contestEffects: () => localizeUrl(resolve("/(api)/contest-effects.json")).pathname,
 	},
 } as const

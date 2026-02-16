@@ -4,6 +4,10 @@ title: Contests
 
 <script lang="ts">
 	import { Url } from "$lib/site/url"
+  import type { ContestMoveEffect } from "$lib/moves/contest"
+  import EffectsList from "../EffectsList.svelte"
+
+  export let effects: ContestMoveEffect
 </script>
 
 Follow these guidelines to become the best Pokémon Coordinator!
@@ -32,7 +36,7 @@ The Talent Round happens over the course of 5 turns.
 
 Order is determined by results of Visual Round. Successfully perform a move of contest type and crowd meter goes up. Fail to perform a move of contest type, crowd stays the same, get half Appeal. Zero on Nat 1. Successfully perform move of complementary type and meter stays the same. Perform move of opposite type or fail to perform move of complementary type and crowd meter goes down.
 
-Perform move. Make a Performance roll against the CHA DC of the crowd. Successful, get Appeal points. Failure, get zero Appeal points. Nat 1, lose Appeal points. Nat 20, get double Appeal points.\
+Perform move. Make a Performance roll against the CHA DC of the crowd. Successful, get Appeal points. Failure, get zero Appeal points. Nat 1, lose Appeal points. Nat 20, get double Appeal points.
 
 When move has Jam, Performance roll is done first, then an Intimidation/Persuasion roll is made. Pokemon affected by Jam make CHA saves against Intimidation/Persuasion DC. On a success, lose zero Appeal points. On a failure, lose Appeal equal to Jam points. Nat 20 on Intimidation/Persuasion DC or Nat 1 on CHA Saving Throw results in double Appeal points lost. Only exception is if both roll Nat 20 or Nat 1. In that case, lose half appeal points (rounded down).
 
@@ -81,15 +85,13 @@ Jam Points are deducted from the Appeal Points of Pokémon that are targeted and
 
 - **Calm**: A Pokémon with this status is immune to CHA saving throws.
 - **Nervous**: A Pokémon with this status has disadvantage of CHA saving throws.
-- **Startled**: A Pokémon with this status has disadvantage on Move attack rolls and targets of it's Moves have advantage on CHA saving
-throws.
+- **Startled**: A Pokémon with this status has disadvantage on Move attack rolls and targets of it's Moves have advantage on CHA saving throws.
 
 ### Stage Position
 
 - **Front Stage**: With the entire crowd’s attention, the pressure is on. Pokemon have disadvantage on all Intimidation, Performance, and Persuasion rolls. However, if successful, Appeal and Jam points gained or lost are doubled.
 - **Mid Stage**: With the crowd expecting nothing more or less, there is no advantage or disadvantage for this position.
-- **Back Stage**: With minimal crowd attention, the pressure is off. Pokemon have advantage on all Intimidation, Performance, and
-Persuasion rolls. However, if successful, Appeal and Jam points gained or lost are halved (rounded down). Optional, the crowd meter can’t be raised from back stage.
+- **Back Stage**: With minimal crowd attention, the pressure is off. Pokemon have advantage on all Intimidation, Performance, and Persuasion rolls. However, if successful, Appeal and Jam points gained or lost are halved (rounded down). Optional, the crowd meter can’t be raised from back stage.
 
 ### Natures
 
@@ -108,4 +110,4 @@ Ribbons are awarded to winning contestants. Similar to Gym Battles they, are oft
 
 ## Move Effects
 
-To be added.
+<EffectsList {effects} />

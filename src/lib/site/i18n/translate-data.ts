@@ -6,7 +6,12 @@ export async function translateData<T extends HasId>(items: T[], getTranslatedIt
 	locale = locale ?? getLocale()
 	if (locale === "en") return items
 
-	const translatedItems = await getTranslatedItems(locale)
+	let translatedItems: Partial<T>[] = []
+	try {
+		translatedItems = await getTranslatedItems(locale)
+	} catch (_) {
+		translatedItems = items
+	}
 
 	return items.map((item) => {
 		const translatedItem = translatedItems.find((it) => it.id === item.id)
