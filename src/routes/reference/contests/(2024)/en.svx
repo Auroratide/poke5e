@@ -5,7 +5,7 @@ title: Contests
 <script lang="ts">
 	import { Url } from "$lib/site/url"
   import { Formula, InfoTable, Tag } from "$lib/ui/elements"
-  import type { ContestMoveEffect } from "$lib/moves/contest"
+  import { type ContestMoveEffect, ContestInfo, ContestDetails } from "$lib/moves/contest"
   import EffectsList from "../EffectsList.svelte"
 
   export let effects: ContestMoveEffect
@@ -175,6 +175,25 @@ After the Talent Round is complete, tally up your points to determine placement.
 <Formula equals="Score" expression="Visual Points + 2 × Appeal Points" />
 
 Ribbons are awarded to winning contestants.
+
+## Moves Missing Contest Definitions
+
+Some moves have not (yet) been assigned contest defintions. For these moves, you may either decide as a table what the effect should be or use the default card below:
+
+<ContestInfo value={new ContestDetails({
+  contest: "cute",
+	appeal: 4,
+	jam: 0,
+	effect: effects.find(function (it) { return it.id === "23" }),
+})} />
+
+The move's type can be used as a proxy for the Contest Type:
+
+* **Cool**: Normal, Flying, Rock, Bug
+* **Beauty**: Ghost, Steel, Electric, Ice
+* **Cute**: Water, Grass, Fairy
+* **Clever**: Poison, Fire, Psychic, Dark
+* **Tough**: Fighting, Ground, Dragon
 
 ## Advanced Topics
 

@@ -44,7 +44,10 @@
 		<MoveDescription {move} />
 	</section>
 	{#if move.contest}
-		<ContestInfo value={move.contest} />
+		<section class="contest">
+			<h2>{m["moves.contest"]()}</h2>
+			<ContestInfo value={move.contest} />
+		</section>
 	{/if}
 	{#if pokemonWhoLearnThisMove.length > 0}
 		<section>

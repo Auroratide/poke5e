@@ -14,28 +14,25 @@
 	}
 </script>
 
-<section class="contest" style:--skin-contest="var(--skin-contest-{value.contest}">
-	<h2>{m["moves.contest"]()}</h2>
-	<div class="multi-tag">
-		<div class="header">
-			<p><strong>{translations[value.contest]()}</strong></p>
-		</div>
-		<div class="main">
-			<dl>
-				<div>
-					<dt>{m["moves.appeal"]()}</dt>
-					<dd><HeartNumber filled value={value.appeal} /></dd>
-				</div>
-				<div>
-					<dt>{m["moves.jam"]()}</dt>
-					<dd><HeartNumber value={value.jam} /></dd>
-				</div>
-			</dl>
-			<p class="footer">{value.effect.name}</p>
-		</div>
+<div class="multi-tag" style:--skin-contest="var(--skin-contest-{value.contest}">
+	<div class="header">
+		<p><strong>{translations[value.contest]()}</strong></p>
 	</div>
-	<p>{value.effect.effect}</p>
-</section>
+	<div class="main">
+		<dl>
+			<div>
+				<dt>{m["moves.appeal"]()}</dt>
+				<dd><HeartNumber filled value={value.appeal} /></dd>
+			</div>
+			<div>
+				<dt>{m["moves.jam"]()}</dt>
+				<dd><HeartNumber value={value.jam} /></dd>
+			</div>
+		</dl>
+		<p class="footer">{value.effect.name}</p>
+	</div>
+</div>
+<p>{value.effect.effect}</p>
 
 <style>
 	.multi-tag {
