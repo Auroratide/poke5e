@@ -35,6 +35,8 @@
 	}
 
 	.page .side {
+		position: relative;
+		z-index: 2;
 		height: 33%;
 		view-transition-name: pageside;
 	} .page:has(main:empty) .side {
@@ -44,6 +46,8 @@
 	}
 
 	.page main {
+		position: relative;
+		z-index: 1;
 		height: 67%;
 		view-transition-name: pagemain;
 	} .page main:empty {

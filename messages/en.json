@@ -182,7 +182,8 @@
 		"action": "Action",
 		"bonusAction": "Bonus Action",
 		"reaction": "Reaction",
-		"use0ForMelee": "use 0 for melee"
+		"use0ForMelee": "use 0 for melee",
+		"close": "Close"
 	},
 	"home": {
 		"title": "Pokémon 5th Edition"

@@ -26,6 +26,10 @@
 		dispatch("reset")
 	}
 
+	const onClose = () => {
+		showFilter = false
+	}
+
 	$: hasFilters = $$slots.default
 </script>
 
@@ -53,7 +57,8 @@
 			<div class="invert-colors two-columns">
 				<slot></slot>
 			</div>
-			<div class="align-end">
+			<div class="action-area">
+				<Button on:click={onClose}>{m["universal.close"]()}</Button>
 				<Button variant="danger" on:click={onReset}>{m["universal.resetFilters"]()}</Button>
 			</div>
 		</form>
@@ -134,6 +139,16 @@
 		background: var(--skin-bg);
 		padding: 0.75em;
 		margin-block-start: 0.5em;
+		position: relative;
+		z-index: 2;
+		box-shadow: var(--elev-cirrus);
+		margin-inline: -0.5em;
+	}
+
+	@media screen and (min-width: 37.5rem) {
+		.filter-options {
+			margin-inline: 0;
+		}
 	}
 
 	.invert-colors {
@@ -165,8 +180,10 @@
 		gap: 0.75em 0.5em;
 	}
 
-	.align-end {
+	.action-area {
+		display: flex;
+		gap: 0.5em;
+		justify-content: flex-end;
 		margin-block-start: 0.75em;
-		text-align: end;
 	}
 </style>
