@@ -20,7 +20,7 @@
 	import FindTrainerCard from "$lib/trainers/FindTrainerCard.svelte"
 	import EditTrainerCard from "$lib/trainers/trainer-details/EditTrainerCard.svelte"
 	import DeleteTrainerCard from "$lib/trainers/trainer-details/DeleteTrainerCard.svelte"
-	import AccessKeyCard from "$lib/trainers/trainer-details/AccessKeyCard.svelte"
+	import TransferTrainerCard from "$lib/trainers/trainer-details/TransferTrainerCard.svelte"
 	import RemoveTrainerCard from "$lib/trainers/trainer-details/RemoveTrainerCard.svelte"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 	import JavascriptRequired from "$lib/trainers/JavascriptRequired.svelte"
@@ -29,8 +29,10 @@
 	import RestTrainerCard from "$lib/trainers/trainer-details/RestTrainerCard.svelte"
 	import type { Readable } from "svelte/store"
 	import { SpeciesStore, type PokemonSpecies } from "$lib/poke5e/species"
+	import { error } from "$lib/site/errors"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
+	$: accessKey = browser ? $page.url.searchParams.get("access_key")?.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "") : undefined
 	$: pokemonId = browser ? $page.url.searchParams.get("pokemon") : undefined
 	$: action = browser ? $page.url.searchParams.get("action") : undefined
 
@@ -42,6 +44,24 @@
 		if (trainerId && browser) {
 			trainerList = undefined
 			trainer = trainers.get(trainerId)
+
+			if (accessKey) {
+				trainer?.then((t) => {
+					return t?.verifyAccess(accessKey)
+				}).then((verified) => {
+					if (!verified) {
+						console.log($page.url)
+						error.show("Trainer transfer failed: Access Key was invalid.")
+					}
+				}).finally(() => {
+					const url = new URL($page.url)
+					url.searchParams.delete("access_key")
+					window.history.replaceState(window.history.state, "", url)
+					// WARNING: For some reason doing it the "svelte way" causes an infinite rerender loop
+					// I'm not sure why $page after the replacement remembers the original query params
+					// replaceState(url, $page.state)
+				})
+			}
 		} else if (!trainerId && browser) {
 			trainerList = trainers.all()
 			trainer = undefined
@@ -120,7 +140,7 @@
 			{:else if action === PageAction.retireTrainer}
 				<DeleteTrainerCard {trainer} />
 			{:else if action === PageAction.accessKey}
-				<AccessKeyCard {trainer} />
+				<TransferTrainerCard {trainer} />
 			{:else}
 				<TrainerCard {trainer} />
 			{/if}

@@ -15,11 +15,12 @@ export const Url = {
 	pokemon: (id?: string) => localizeUrl(id ? resolve("/pokemon/[id]", { id }) : resolve("/pokemon")).pathname,
 	moves: (id?: string) => localizeUrl(id ? resolve("/moves/[id]", { id }) : resolve("/moves")).pathname,
 	tms: (id?: string) => localizeUrl(id ? resolve("/tms/[id]", { id }) : resolve("/tms")).pathname,
-	trainers: (trainerKey?: string, pokemonId?: string, action?: string) => {
+	trainers: (trainerKey?: string, pokemonId?: string, action?: string, accessKey?: string) => {
 		const params = new URLSearchParams()
 		if (trainerKey) params.append("id", trainerKey)
 		if (pokemonId) params.append("pokemon", pokemonId)
 		if (action) params.append("action", action)
+		if (accessKey) params.append("access_key", accessKey)
 
 		const url = localizeUrl(resolve("/trainers") + `?${params.toString()}`)
 		return url.pathname + url.search

@@ -5,9 +5,12 @@
 	import { Button } from "$lib/ui/elements"
 	import { Url } from "$lib/site/url"
 	import { Title } from "$lib/ui/layout"
-	import findAccessKey from "./find-access-key.png"
+	import findTransfer from "./find-transfer.webp"
+	import { browser } from "$app/environment"
 	
 	export let trainer: TrainerStore
+
+	const domain = browser ? window.location.origin : "https://poke5e.app"
 
 	let accessKey = ""
 	$: accessKey = accessKey.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "")
@@ -32,8 +35,8 @@
 	$: canEdit = $trainer.update != null
 </script>
 
-<Title value="{name}'s Access Key" />
-<Card title="{name}'s Access Key">
+<Title value="Transfer {name}" />
+<Card title="Transfer {name}">
 	{#if success}
 		<section>
 			<p><strong>Success!</strong></p>
@@ -43,13 +46,27 @@
 			</ActionArea>
 		</section>
 	{:else}
+		{#if canEdit}
+			<section>
+				<p>You can <strong>transfer</strong> this trainer to another player or device using one of the two links below.</p>
+				<p>The <strong>Read-Only Link</strong> allows the other player or device to look at a trainer and their pokémon without being able to edit them. This kind of transfer is useful for things like sharing character sheets to the DM or other players.</p>
+				<p>
+					<PasswordField label="Read-Only Link" value="{domain}{Url.trainers($trainer.info.readKey)}" disabled copiable />
+				</p>
+				<p>The <strong>Edit Access Link</strong> allows the other player or device to edit the trainer and their pokémon. This kind of transfer is useful for managing a trainer on multiple devices, or allowing the DM to hand over control of a pre-made player character.</p>
+				<p>
+					<PasswordField label="Edit Access Link" value="{domain}{Url.trainers($trainer.info.readKey, undefined, undefined, $trainer.writeKey)}" disabled copiable />
+				</p>
+			</section>
+		{/if}
 		<section>
+			{#if canEdit}<h2>Access Key</h2>{/if}
 			<p>A trainer's <dfn>Access Key</dfn> is a special code that allows you to manage a trainer's info and their pokemon. Each trainer has a unique key, and the key must be saved to each device from which you want to manage the trainer.</p>
 		</section>
 		{#if canEdit}
 			<section>
-				<p>You currently have {name}'s access key saved to this device. To share this key, press Reveal below.</p>
-				<PasswordField label="Access Key" value={$trainer.writeKey} disabled />
+				<p>You currently have {name}'s access key saved to this device. To share this key, press Show below.</p>
+				<PasswordField label="Access Key" value={$trainer.writeKey} disabled copiable />
 			</section>
 		{:else}
 			<Saveable saving={searching} caption="Searching...">
@@ -66,9 +83,9 @@
 				</section>
 				<hr />
 				<section>
-					<p>If you are managing {name} from another device, you can find their access code from the trainer's page.</p>
+					<p>If you are managing {name} from another device, you can find their access key from the trainer's page, or conduct a link-based transfer.</p>
 					<figure class="spaced-lg">
-						<img src={findAccessKey} alt="'Access Key' is a button at the bottom of the trainer's page." width="800" height="250" />
+						<img src={findTransfer} alt="'Transfer' is a button at the bottom of the trainer's page." width="800" height="250" />
 						<figcaption>Click this button to get the access key</figcaption>
 					</figure>
 				</section>
