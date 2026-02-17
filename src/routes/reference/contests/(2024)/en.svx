@@ -94,7 +94,7 @@ What happens depends on the roll result and the move's compatibility with the cu
   * Success: Do not gain any Appeal Points. Crowd Meter decreases by 1.
   * Failure: Lose Appeal Points. Crowd Meter decreases by 1.
 
-The number of **Appeal Points** gained is indicated on the move you use. If you maxed out the Crowd Meter, then you gain an additional 5 bonus Appeal Points.
+The number of **Appeal Points** gained is indicated on the move you use. If you maxed out the Crowd Meter, then you gain an additional 5 bonus Appeal Points, and the Crowd Meter resets to 0.
 
 ### Jam
 
@@ -111,15 +111,15 @@ You may choose your Move's DC to be either its normal DC as determined by its Mo
 
 ### Move Contest Effects
 
-Certain moves may have additional or modified effects. Most effects resolve after making the Appeal Check and Jam Save above, though some effects apply to the checks or alter the number of Appeal Points awarded.
+Certain moves may have additional effects. Most effects resolve after making the Appeal Check and Jam Save above, though some effects apply to the checks or alter the number of Appeal Points awarded.
 
 Be sure to check the move's Contest Effect to see how things play out.
 
 ### Crowd Meter
 
-The Crowd Meter is a gauge of the crowd's excitement. The Pokémon that maxes out the Crowd Meter will earn **5 bonus Appeal Points**. In a standard Move Contest with four contestants the Crowd Meter maxes out at 5. In a showdown between two Pokémon the Crowd Meter maxes out at 3.
+The Crowd Meter is a gauge of the crowd's excitement. The Pokémon that maxes out the Crowd Meter will earn **5 bonus Appeal Points**, and the meter resets to 0. The Crowd Meter may max out multiple times in the same contest, each time awarding bonus Appeal.
 
-When a Pokémon successfully performs a move that is compatible with the contest category the crowd will get excited, increasing the Crowd Meter. Performing a move that is complementary with the contest category will not increase the Crowd Meter. Finally, performing a move that is incompatible with the contest category will decrease the Crowd Meter.
+In a standard Move Contest with four contestants the Crowd Meter maxes out at 5. In a showdown between two Pokémon the Crowd Meter maxes out at 3.
 
 ### Move Compatibility
 
