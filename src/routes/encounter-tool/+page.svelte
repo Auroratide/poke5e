@@ -13,7 +13,7 @@
 	import { tick } from "svelte"
 	import Stepper from "$lib/ui/elements/Stepper.svelte"
 	import { SpeciesSprite } from "$lib/poke5e/species/media"
-	import { Encounter } from "$lib/poke5e/encounters"
+	import { Encounter, ENCOUNTER_SIZE_LIMIT } from "$lib/poke5e/encounters"
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/site/url"
 	import { error } from "$lib/site/errors"
@@ -155,6 +155,12 @@
 			saving = false
 		}
 	}
+
+	$: saveEncounterIssues = Encounter.count(encounter) === 0
+		? "Add Pokémon to this encounter to save it."
+		: Encounter.count(encounter) > ENCOUNTER_SIZE_LIMIT
+		? `Reduce the number of Pokémon in this encounter to ${ENCOUNTER_SIZE_LIMIT} or less to save it.`
+		: undefined
 </script>
 
 <Page theme="forest">
@@ -259,9 +265,9 @@
 				</div>
 				<InstructionText>"Use Encounter" will add this to Trainers, allowing you to track HP, add moves, and manage the details.</InstructionText>
 			</section>
-			<ActionArea>
+			<ActionArea error={saveEncounterIssues}>
 				<Button variant="danger" on:click={clearEncounter}>Clear</Button>
-				<Button on:click={useEncounter}>Use Encounter</Button>
+				<Button on:click={useEncounter} disabled={saveEncounterIssues != null}>Use Encounter</Button>
 			</ActionArea>
 		</Saveable>
 	</Card>

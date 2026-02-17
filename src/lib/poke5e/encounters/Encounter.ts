@@ -21,6 +21,8 @@ export type Encounter = {
 	pokemon: EncounterActor[]
 }
 
+export const ENCOUNTER_SIZE_LIMIT = 20
+
 export const Encounter = {
 	createEmpty(): Encounter {
 		return {
@@ -32,6 +34,12 @@ export const Encounter = {
 		return encounter.pokemon.reduce((sum, p) => {
 			const xp = experienceAwarded(p.level, p.data.sr.data)
 			return sum + (isNaN(xp) ? 0 : xp) * p.count
+		}, 0)
+	},
+
+	count(encounter: Encounter): number {
+		return encounter.pokemon.reduce((sum, p) => {
+			return sum + p.count
 		}, 0)
 	},
 
@@ -116,8 +124,12 @@ export const Encounter = {
 	},
 
 	async saveToTrainers(encounter: Encounter): Promise<TrainerData & WithWriteKey> {
-		if (encounter.pokemon.length === 0) {
+		if (Encounter.count(encounter) === 0) {
 			throw new Error("Cannot save an empty encounter. Please add pokémon to it.")
+		}
+
+		if (Encounter.count(encounter) > ENCOUNTER_SIZE_LIMIT) {
+			throw new Error(`Cannot save encounter with more than ${ENCOUNTER_SIZE_LIMIT} pokémon.`)
 		}
 
 		const trainer = await trainerProvider.newTrainer({

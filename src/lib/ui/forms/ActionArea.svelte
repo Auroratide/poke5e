@@ -30,5 +30,6 @@
 		font-weight: bold;
 		font-size: var(--font-sz-venus);
 		text-align: end;
+		text-wrap: balance;
 	}
 </style>
