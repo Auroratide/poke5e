@@ -5760,7 +5760,13 @@
 			"higherLevels": "The additional PP cost becomes 2 at level 10.",
 			"optional": [
 				"If the target is a spellcaster, spells cast by the target require 1 additional spell slot (2 at level 10)."
-			]
+			],
+			"save": {
+				"attribute": [
+					"int"
+				],
+				"dc": "MOVE"
+			}
 		},
 		{
 			"id": "egg-bomb",
@@ -21306,8 +21312,14 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You lay a kiss on a creature, attempting to confuse them. The target must make an CHA saving throw against your Move DC or become confused."
-			]
+				"You lay a kiss on a creature, attempting to confuse them. The target must make a CHA saving throw against your Move DC or become confused."
+			],
+			"save": {
+				"attribute": [
+					"cha"
+				],
+				"dc": "MOVE"
+			}
 		},
 		{
 			"id": "sweet-scent",
