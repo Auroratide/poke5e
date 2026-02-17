@@ -14,6 +14,18 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.10.0",
+		description: [
+			`<strong>New!</strong> The <a href="${Url.encounterTool()}">Encounter Tool</a> lets you generate and set up random encounters for your players. Feedback is appreciated for its balance.`,
+			`<strong>New!</strong> Spanish translations provided for many things on the site, including Abilities, Moves, and Items. You can change your preferred language in <a href="${Url.settings()}">Settings</a> or in the footer.`,
+			"TMs: 155 new TMs added according to the list, and most Pokémons' TM lists have been updated according. Note: Some Pokémon still need new TMs added to them.",
+			"Dipplin can finally learn Dragon Cheer as a TM.",
+			"Trainers: 'Transfer' option added, allowing the transfer of edit access of a trainer to another player or different device.",
+			"Reference: Contest rules are added to the Reference. Note: Some moves do not (yet) have contest definitions defined.",
+			"Pokémon, Moves, TMs, Items, and Fakémon now have advanced filtering options, allowing you to filter by SR, biome, type, and more.",
+			"Items: Adjust Quick Ball DC modifier to -15, buffed from -8.",
+		],
+	}, {
 		name: "v1.9.8",
 		description: [
 			`New! On the <a href="${Url.backups.home()}">Backups Page</a>, You can back up your trainers and fakémon to a file, and restore your trainers and fakémon from backup files, in case they get lost.`,
@@ -510,6 +522,10 @@ export const versionHistory: VersionHistory = {
 		],
 	} ],
 	groups: [ {
+		name: "v1.10",
+		highlight: "Encounters, Translations, TMs!",
+		description: "This marks the start of four different things coming together thanks to help from the community: an Encounter Tool for creating random wild encounters, different language translations, TM update incorporating new generations, and rules for Pokémon Contests.",
+	}, {
 		name: "v1.9",
 		highlight: "Custom Evolutions!",
 		description: "Fakémon can now be given custom evolution lines! Fakémon can evolve into other fakémon or integrate with canon pokémon. Additionally, you can specify a number of possible conditions for evolution (such as by level, with an item, and more).",
