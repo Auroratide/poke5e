@@ -1,0 +1,1 @@
+function o(e){return localStorage.getItem(`feature-toggle::${e}`)!=null}function r(e,t){t?localStorage.setItem(`feature-toggle::${e}`,"true"):localStorage.removeItem(`feature-toggle::${e}`)}const a={MoreTms:()=>!0};export{a as F,o as i,r as s};

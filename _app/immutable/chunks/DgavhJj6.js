@@ -1,0 +1,1 @@
+import{D as t}from"./Bf-g66YD.js";class s extends t{get contest(){return this.data.contest}get appeal(){return this.data.appeal}get jam(){return this.data.jam}get effect(){return this.data.effect}}export{s as C};

@@ -1,0 +1,1 @@
+import{g as n}from"./BxlXVsHr.js";const t=()=>"Move Power",a=()=>"Poder de Movimiento",v=(r={},e={})=>(e.locale??n())==="en"?t():a(),s=()=>"Move Time",l=()=>"Tiempo de Lanzamiento",m=(r={},e={})=>(e.locale??n())==="en"?s():l(),u=()=>"Range",i=()=>"Rango",_=(r={},e={})=>(e.locale??n())==="en"?u():i();export{m as a,_ as b,v as u};
