@@ -117,7 +117,7 @@
 		font-size: 0.75em;
 	}
 
-	@media screen and (max-width: 75rem) {
+	@media screen and (max-width: 50rem) {
 		table :global(tr) {
 			grid-template-columns: var(--small-table-columns);
 		}

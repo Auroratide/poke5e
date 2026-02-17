@@ -11,7 +11,7 @@
 </td>
 
 <style>
-	@media screen and (max-width: 75rem) {
+	@media screen and (max-width: 50rem) {
 		.large-screen-only {
 			display: none;
 		}
