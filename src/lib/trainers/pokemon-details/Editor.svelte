@@ -125,7 +125,7 @@
 		<CustomBasicInfoFieldset bind:customSize bind:customHitDiceSize {disabled} />
 		<SpeedsFieldset bind:values={speeds} {disabled} />
 		<SensesFieldset bind:values={senses} {disabled} />
-	</FormDetails>oneOrMoreFieldsAboveHaveAnIssue
+	</FormDetails>
 	<ActionArea error={!isValid ? m["universal.oneOrMoreFieldsAboveHaveAnIssue"]() : undefined}>
 		<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
 		<Button type="submit" disabled={disabled || !isValid}>{m["universal.finish"]()}</Button>
