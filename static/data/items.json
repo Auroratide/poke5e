@@ -734,7 +734,7 @@
 			"cost": 400,
 			"description": [
 				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon's critical hit range increases by one.",
-				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands crticial hit range, criticals can happen on natural 18, 19, or 20."
+				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dire-hit.png"
@@ -1906,7 +1906,7 @@
 			"cost": 4000,
 			"description": [
 				"The holder's critical hit range increases by one.",
-				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands crticial hit range, criticals can happen on natural 18, 19, or 20."
+				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-claw.png"
@@ -1984,7 +1984,7 @@
 			"cost": 2500,
 			"description": [
 				"The holder's critical hit range increases by one.",
-				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands crticial hit range, criticals can happen on natural 18, 19, or 20."
+				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/scope-lens.png"
@@ -3142,7 +3142,7 @@
 			"cost": 1200,
 			"description": [
 				"When held by a Farfetch'd or Sirfetch'd, the holder's critical hit range increases by two.",
-				"Most of the time, this means attacks can critical on a natural 18, 19, or 20. For a move like Slash which already expands crticial hit range, criticals can happen on natural 17, 18, 19, or 20."
+				"Most of the time, this means attacks can critical on a natural 18, 19, or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 17, 18, 19, or 20."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/stick.png"
@@ -3167,7 +3167,7 @@
 			"cost": 1200,
 			"description": [
 				"When held by a Chansey, its critical hit range increases by one.",
-				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands crticial hit range, criticals can happen on natural 18, 19, or 20."
+				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lucky-punch.png"
