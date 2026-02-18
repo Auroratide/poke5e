@@ -33,8 +33,6 @@
 		values = values.toSpliced(i, 1)
 	}
 
-	$: console.log(values)
-
 	let nameFilter = ""
 	let typeFilter: PokeType | "" = ""
 	let powerFilter: Attribute | "" = ""

@@ -91,7 +91,6 @@
 		}
 
 		encounter = Encounter.addPokemon(encounter, pokemon, level ?? 1)
-		console.log("??")
 		noMatches = false
 	}
 
