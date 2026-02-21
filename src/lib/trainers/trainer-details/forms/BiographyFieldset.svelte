@@ -36,14 +36,14 @@
 	}
 </script>
 
-<Fieldset title="{m["universal.biography"]()}">
+<Fieldset title="{m.biography()}">
 	<div class="grid">
-		<div style:grid-area="field1"><TextField label="{m["universal.species"]()}" bind:value={species} placeholder="e.g. Human" {disabled} /></div>
-		<div style:grid-area="field2"><TextField label="{m["universal.gender"]()}" bind:value={gender} {disabled} /></div>
-		<div style:grid-area="field3"><IntField label="{m["universal.age"]()}" bind:value={age} {disabled} /></div>
-		<div style:grid-area="field4"><TextField label="{m["universal.homeRegion"]()}" bind:value={homeRegion} placeholder="{m["universal.eG"]()} Sinnoh" {disabled} /></div>
-		<div style:grid-area="field5"><TextField label="{m["universal.background"]()}" bind:value={background} placeholder="{m["universal.eG"]()} Entertainer" {disabled} /></div>
-		<div style:grid-area="avatar" class="image-field"><ImageField label="{m["universal.avatar"]()}" previousValue={originalAvatarSrc} bind:currentValue={avatar} maxbytes={FIVE_HUNDRED_KB} {disabled} bind:isValid /></div>
+		<div style:grid-area="field1"><TextField label="{m.species()}" bind:value={species} placeholder="e.g. Human" {disabled} /></div>
+		<div style:grid-area="field2"><TextField label="{m.gender()}" bind:value={gender} {disabled} /></div>
+		<div style:grid-area="field3"><IntField label="{m.age()}" bind:value={age} {disabled} /></div>
+		<div style:grid-area="field4"><TextField label="{m.homeRegion()}" bind:value={homeRegion} placeholder="{m.eG()} Sinnoh" {disabled} /></div>
+		<div style:grid-area="field5"><TextField label="{m.background()}" bind:value={background} placeholder="{m.eG()} Entertainer" {disabled} /></div>
+		<div style:grid-area="avatar" class="image-field"><ImageField label="{m.avatar()}" previousValue={originalAvatarSrc} bind:currentValue={avatar} maxbytes={FIVE_HUNDRED_KB} {disabled} bind:isValid /></div>
 	</div>
 </Fieldset>
 

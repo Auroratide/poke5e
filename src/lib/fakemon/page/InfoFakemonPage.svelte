@@ -16,10 +16,10 @@
 <PokemonSpeciesCard value={$fakemon.value.species}>
 	<div slot="footer">
 		<ActionArea>
-			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.accessKey)}" variant="ghost">{m["universal.accessKey"]()}</Button>
-			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.remove)}" variant="ghost">{m["universal.remove"]()}</Button>
+			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.accessKey)}" variant="ghost">{m.accessKey()}</Button>
+			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.remove)}" variant="ghost">{m.remove()}</Button>
 			{#if canEdit}
-				<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.edit)}">{m["universal.edit"]()}</Button>
+				<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.edit)}">{m.edit()}</Button>
 			{/if}
 		</ActionArea>
 	</div>

@@ -31,7 +31,7 @@
 	{#if showGetStarted}<GetStarted />{/if}
 {:else}
 	<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$trainerListSorter} headers={[ {
-		key: "name", name: m["universal.name"](), ratio: 1, sort: byStringField(it => it.name),
+		key: "name", name: m.name(), ratio: 1, sort: byStringField(it => it.name),
 	} ]}>
 		<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
 			<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.trainers(item.readKey)}">{item.name}</a></BubbleRow.Cell>

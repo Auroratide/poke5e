@@ -33,8 +33,8 @@
 </script>
 
 <div class="simple-type-field">
-	<SelectField label="{m["universal.primaryType"]()}" name="type-primary" options={primaryTypeOptions} bind:value={primary} {disabled} />
-	<SelectField label="{m["universal.secondaryType"]()}" name="type-seconary" options={secondaryTypeOptions} bind:value={secondary} {disabled} />
+	<SelectField label="{m.primaryType()}" name="type-primary" options={primaryTypeOptions} bind:value={primary} {disabled} />
+	<SelectField label="{m.secondaryType()}" name="type-seconary" options={secondaryTypeOptions} bind:value={secondary} {disabled} />
 </div>
 
 <style>

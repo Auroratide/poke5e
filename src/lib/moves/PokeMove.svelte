@@ -28,15 +28,15 @@
 		{/if}
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<FlatDl>
-			<dt>{m["universal.movePower"]()}</dt>
+			<dt>{m.movePower()}</dt>
 			<dd class="power">{move.power.toString()}</dd>
-			<dt>{m["universal.moveTime"]()}</dt>
+			<dt>{m.moveTime()}</dt>
 			<dd>{move.time}</dd>
-			<dt><abbr title="{m["universal.powerPoints"]()}">{m["universal.pp"]()}</abbr></dt>
+			<dt><abbr title="{m.powerPoints()}">{m.pp()}</abbr></dt>
 			<dd>{move.pp}</dd>
-			<dt>{m["universal.duration"]()}</dt>
+			<dt>{m.duration()}</dt>
 			<dd class="duration">{move.duration}</dd>
-			<dt>{m["universal.range"]()}</dt>
+			<dt>{m.range()}</dt>
 			<dd class="range">{move.range}</dd>
 		</FlatDl>
 	</section>
@@ -45,13 +45,13 @@
 	</section>
 	{#if move.contest}
 		<section class="contest">
-			<h2>{m["moves.contest"]()}</h2>
+			<h2>{m["movesSection.contest"]()}</h2>
 			<ContestInfo value={move.contest} />
 		</section>
 	{/if}
 	{#if pokemonWhoLearnThisMove.length > 0}
 		<section>
-			<h2>{m["universal.canLearnThisMove"]()}:</h2>
+			<h2>{m.canLearnThisMove()}:</h2>
 			<SimplePokemonList pokemon={pokemonWhoLearnThisMove.map((it) => ({
 				id: it.id,
 				name: it.name,

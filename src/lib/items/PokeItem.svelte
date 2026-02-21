@@ -25,9 +25,9 @@
 <Card title={item.name}>
 	<SideArtCardSection hasImage={item.media.sprite != null} size="clamp(4rem, 6.33vw, 4.75rem)">
 		<FlatDl>
-			<dt>{m["universal.type"]()}</dt>
+			<dt>{m.type()}</dt>
 			<dd class="cap">{item.type}</dd>
-			<dt>{m["universal.cost"]()}</dt>
+			<dt>{m.cost()}</dt>
 			<dd>{item.cost != null ? formatMoney(item.cost) : "-"}</dd>
 		</FlatDl>
 		<ItemSprite slot="art" src="{item.media.sprite}" alt="" />
@@ -35,10 +35,10 @@
 	<section class="description">
 		{@html renderHtml(item.description)}
 		{#if item.type === "pokeball"}
-			<p>{m["universal.see"]()}: <a href="{Url.reference.catchingPokemon()}">Catching Pokémon</a></p>
+			<p>{m.see()}: <a href="{Url.reference.catchingPokemon()}">Catching Pokémon</a></p>
 		{/if}
 		{#if item.type === "evolution" && pokemonThatEvolve.length > 0}
-			<p>{m["universal.pokemonThatEvolveUsingThisItem"]()}:</p>
+			<p>{m.pokemonThatEvolveUsingThisItem()}:</p>
 			<SimplePokemonList pokemon={pokemonThatEvolve} />
 		{/if}
 	</section>

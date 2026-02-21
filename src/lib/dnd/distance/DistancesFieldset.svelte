@@ -10,7 +10,7 @@
 </script>
 
 <Fieldset title="{title}" {columns}>
-	<InstructionText>{m["universal.distancesTutorialText"]()}</InstructionText>
+	<InstructionText>{m.distancesTutorialText()}</InstructionText>
 	{#each Object.values(types) as type}
 		<div class="cap">
 			<IntField label="{type}" min={0} bind:value={values[type]} {disabled} optional />

@@ -29,13 +29,13 @@
 <ListHeading title="{$trainer.info.name}'s Pokemon" target="/trainers">
 	<span slot="link">
 		{#if currentPokemon}
-			<a href="{baseTrainerUrl}" class="dark-font">{m["universal.viewTrainerProfile"]()} &gt;</a>
+			<a href="{baseTrainerUrl}" class="dark-font">{m.viewTrainerProfile()} &gt;</a>
 		{:else}
-			<a href="{Url.trainers()}" class="dark-font">{m["universal.seeTrainerList"]()} &gt;</a>
+			<a href="{Url.trainers()}" class="dark-font">{m.seeTrainerList()} &gt;</a>
 		{/if}
 	</span>
 	<span slot="action" style:visibility={editable ? "visible" : "hidden"} style:display="flex">
-		<Button href="{baseTrainerUrl}&action=add-pokemon">+ {m["universal.addPokemon"]()}</Button>
+		<Button href="{baseTrainerUrl}&action=add-pokemon">+ {m.addPokemon()}</Button>
 	</span>
 </ListHeading>
 <div class="space-bottom">

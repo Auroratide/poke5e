@@ -31,11 +31,11 @@
 		name: "100% ♂",
 		value: "0:1",
 	}, {
-		name: m["universal.genderless"](),
+		name: m.genderless(),
 		value: "0:0",
 	} ]
 </script>
 
-<Fieldset title="{m["universal.genderRatio"]()}" columns={2}>
-	<RadioFields label="{m["universal.gender"]()}" bind:checked values={possibleRatios} {disabled} />
+<Fieldset title="{m.genderRatio()}" columns={2}>
+	<RadioFields label="{m.gender()}" bind:checked values={possibleRatios} {disabled} />
 </Fieldset>

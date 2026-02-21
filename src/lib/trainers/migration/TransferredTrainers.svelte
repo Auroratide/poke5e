@@ -14,13 +14,13 @@
 	<form method="dialog">
 		<div class="center">
 			<Button href="{OLD_ORIGIN}/storage-migration/poke5e">View Trainer IDs</Button>
-			<Button type="submit">{m["universal.finish"]()}</Button>
+			<Button type="submit">{m.finish()}</Button>
 		</div>
 	</form>
 {:else}
 	<p class="success">Successfully transferred {trainerNames.join(", ")}! You may now close this dialog.</p>
 	<form method="dialog">
-		<div class="center"><Button type="submit">{m["universal.finish"]()}</Button></div>
+		<div class="center"><Button type="submit">{m.finish()}</Button></div>
 	</form>
 {/if}
 

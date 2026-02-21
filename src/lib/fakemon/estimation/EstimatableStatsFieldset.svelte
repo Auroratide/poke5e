@@ -39,26 +39,26 @@
 	}
 </script>
 
-<Fieldset title="{m["universal.attributes"]()}" columns={6}>
+<Fieldset title="{m.attributes()}" columns={6}>
 	<div class="span-all">
 		<Details title="{m["fakemon.convertPokeStatsToDnDStats"]()}">
 			<div class="grid">
 				<InstructionText>{m["fakemon.convertTutorialText"]()}</InstructionText>
-				<IntField name="bst-hp" label="{m["universal.hp"]()}" min={0} bind:value={bst.data.hp} {disabled} />
-				<IntField name="bst-attack" label="{m["universal.attack"]()}" min={0} bind:value={bst.data.attack} {disabled} />
-				<IntField name="bst-defense" label="{m["universal.defense"]()}" min={0} bind:value={bst.data.defense} {disabled} />
-				<IntField name="bst-special-attack" label="{m["universal.spAttack"]()}" min={0} bind:value={bst.data.specialAttack} {disabled} />
-				<IntField name="bst-special-defense" label="{m["universal.spDefense"]()}" min={0} bind:value={bst.data.specialDefense} {disabled} />
-				<IntField name="bst-speed" label="{m["universal.speed"]()}" min={0} bind:value={bst.data.speed} {disabled} />
+				<IntField name="bst-hp" label="{m.hp()}" min={0} bind:value={bst.data.hp} {disabled} />
+				<IntField name="bst-attack" label="{m.attack()}" min={0} bind:value={bst.data.attack} {disabled} />
+				<IntField name="bst-defense" label="{m.defense()}" min={0} bind:value={bst.data.defense} {disabled} />
+				<IntField name="bst-special-attack" label="{m.spAttack()}" min={0} bind:value={bst.data.specialAttack} {disabled} />
+				<IntField name="bst-special-defense" label="{m.spDefense()}" min={0} bind:value={bst.data.specialDefense} {disabled} />
+				<IntField name="bst-speed" label="{m.speed()}" min={0} bind:value={bst.data.speed} {disabled} />
 				<div class="span-all text-center">
-					<Button on:click={convert}>{m["universal.convert"]()}</Button>
+					<Button on:click={convert}>{m.convert()}</Button>
 				</div>
 			</div>
 			<hr />
 		</Details>
 	</div>
-	<IntField label="{m["universal.ac"]()}" bind:value={ac} min={0} max={99} {disabled} span={3} required />
-	<IntField label="{m["universal.hp"]()}" bind:value={hp} min={0} {disabled} span={3} required />
+	<IntField label="{m.ac()}" bind:value={ac} min={0} max={99} {disabled} span={3} required />
+	<IntField label="{m.hp()}" bind:value={hp} min={0} {disabled} span={3} required />
 	{#each Attributes.list as attr}
 		<IntField label="{attr.abbr.toLocaleUpperCase()}" min={0} max={30} bind:value={attributes.data[attr.abbr]} span={2} {disabled} />
 	{/each}

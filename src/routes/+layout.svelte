@@ -97,13 +97,13 @@
 	}, {
 		id: "moves",
 		href: Url.moves(),
-		name: m["moves.title"](),
+		name: m["movesSection.title"](),
 		color: "blue",
 		icon: HitIcon,
 	}, {
 		id: "tms",
 		href: Url.tms(),
-		name: m["tms.title"](),
+		name: m["tmsSection.title"](),
 		color: "purple",
 		icon: DiscIcon,
 	}, {

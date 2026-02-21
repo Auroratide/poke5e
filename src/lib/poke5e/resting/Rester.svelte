@@ -44,7 +44,7 @@
 
 <Form onsubmit={endEdit} {saving}>
 	<div class="art-row">
-		<Fieldset title={m["universal.chooseOne"]()} columns={1}>
+		<Fieldset title={m.chooseOne()} columns={1}>
 			<RadioFields label="Rest Choices" bind:checked={restToPerform} values={options} required />
 		</Fieldset>
 		<SpeciesPortrait avatar={pokemon.avatar} media={species.media} shiny={pokemon.isShiny} alt="{pokemon.nickname ?? species.data.name}" />
@@ -72,7 +72,7 @@
 		{/if}
 	</section>
 	<ActionArea>
-		<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
+		<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>
 		<Button type="submit" disabled={disabled || rest == null}>Rest!</Button>
 	</ActionArea>
 </Form>

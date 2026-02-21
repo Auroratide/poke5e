@@ -64,7 +64,7 @@
 					<option value="{option.value}" disabled={option.disabled || option.deprecated}>{option.name}</option>
 				{/each}
 				{#if other != null}
-					<option value="{SelectFieldOther}">{m["universal.other"]()}</option>
+					<option value="{SelectFieldOther}">{m.other()}</option>
 				{/if}
 			{/if}
 		</select>

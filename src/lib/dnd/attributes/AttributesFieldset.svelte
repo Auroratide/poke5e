@@ -7,7 +7,7 @@
 	export let disabled: boolean
 </script>
 
-<Fieldset title="{m["universal.attributes"]()}" columns={3}>
+<Fieldset title="{m.attributes()}" columns={3}>
 	{#each Attributes.list as attr}
 		<div class="upper">
 			<IntField label="{attr.abbr}" min={0} max={30} bind:value={values.data[attr.abbr]} {disabled} />

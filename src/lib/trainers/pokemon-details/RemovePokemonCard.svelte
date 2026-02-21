@@ -42,8 +42,8 @@
 							</p>
 						{/if}
 						<ActionArea>
-							<Button href="{Url.trainers($trainer.info.readKey, pokemon.id)}" variant="ghost">{m["universal.cancel"]()}</Button>
-							<Button on:click={remove} variant="danger">{m["universal.delete"]()}</Button>
+							<Button href="{Url.trainers($trainer.info.readKey, pokemon.id)}" variant="ghost">{m.cancel()}</Button>
+							<Button on:click={remove} variant="danger">{m.delete()}</Button>
 						</ActionArea>
 					</section>
 				</Saveable>

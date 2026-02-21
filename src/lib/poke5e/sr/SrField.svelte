@@ -66,4 +66,4 @@
 	} ]
 </script>
 
-<SelectField label="{m["universal.sr"]()}" bind:value={selected} {options} {disabled} />
+<SelectField label="{m.sr()}" bind:value={selected} {options} {disabled} />

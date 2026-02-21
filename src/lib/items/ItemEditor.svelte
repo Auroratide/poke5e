@@ -31,7 +31,7 @@
 	</Removable>
 {:else}
 	<Removable on:remove>
-		<TextField label={m["universal.name"]()} name="{itemFieldName}" bind:value={value.name} {disabled} />
+		<TextField label={m.name()} name="{itemFieldName}" bind:value={value.name} {disabled} />
 	</Removable>
 	<MarkdownField label="Item Description" name="item-description-{value.id}" bind:value={value.description} {disabled} />
 {/if}

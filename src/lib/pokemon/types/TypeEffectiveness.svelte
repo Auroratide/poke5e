@@ -10,28 +10,28 @@
 	$: imm = type.immunities()
 </script>
 
-<dt>{m["universal.vulnerabilities"]()}</dt>
+<dt>{m.vulnerabilities()}</dt>
 <div>
 	{#if vul.length === 0}
-		<dd class="none">{m["universal.noneFemenine"]()}</dd>
+		<dd class="none">{m.noneFemenine()}</dd>
 	{/if}
 	{#each vul as value}
 		<dd><InlineTypeName {value} /></dd>
 	{/each}
 </div>
-<dt>{m["universal.resistances"]()}</dt>
+<dt>{m.resistances()}</dt>
 <div>
 	{#if res.length === 0}
-		<dd class="none">{m["universal.noneFemenine"]()}</dd>
+		<dd class="none">{m.noneFemenine()}</dd>
 	{/if}
 	{#each res as value}
 		<dd><InlineTypeName {value} /></dd>
 	{/each}
 </div>
-<dt>{m["universal.immunities"]()}</dt>
+<dt>{m.immunities()}</dt>
 <div>
 	{#if imm.length === 0}
-		<dd class="none">{m["universal.noneFemenine"]()}</dd>
+		<dd class="none">{m.noneFemenine()}</dd>
 	{/if}
 	{#each imm as value}
 		<dd><InlineTypeName {value} /></dd>

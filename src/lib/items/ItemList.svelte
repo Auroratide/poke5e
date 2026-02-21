@@ -12,7 +12,7 @@
 	export let items: Item[]
 
 	const AnyOption = [ {
-		name: `- ${m["universal.any"]()} -`,
+		name: `- ${m.any()} -`,
 		value: "",
 	} ]
 
@@ -45,8 +45,8 @@
 
 <div class="search-field">
 	<SearchField id="filter-items" label="Search" bind:value={$ItemFilterStore} matched={filteredItems.length} max={items.length} activeFilters={filter.count() - ($ItemFilterStore !== "" ? 1 : 0)} on:reset={resetFilters}>
-		<SelectField label="{m["universal.type"]()}" bind:value={filteredType} options={typeOptions} />
-		<RelativeNumberField label="{m["universal.cost"]()}" bind:value={filteredCost} bind:relative={filteredCostRelative} min={0} placeholder="{m["universal.number"]()}" />
+		<SelectField label="{m.type()}" bind:value={filteredType} options={typeOptions} />
+		<RelativeNumberField label="{m.cost()}" bind:value={filteredCost} bind:relative={filteredCostRelative} min={0} placeholder="{m.number()}" />
 	</SearchField>
 </div>
 <SortableTable let:item let:cellVisibility items={filteredItems} bind:currentSorter={$ItemSorterStore} headers={[ {

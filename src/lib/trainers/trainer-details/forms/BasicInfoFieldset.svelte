@@ -18,10 +18,10 @@
 	}
 </script>
 
-<Fieldset title="{m["universal.basicInfo"]()}" columns={2}>
-	<TextField label={m["universal.name"]()} bind:value={name} {disabled} />
-	<IntField label={m["universal.level"]()} value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
-	<IntField label={m["universal.ac"]()} bind:value={ac} min={0} max={99} {disabled} />
-	<IntField label={m["universal.maxHp"]()} bind:value={maxHp} min={0} {disabled} />
-	<IntField label={m["universal.maxHitDice"]()} bind:value={maxHitDice} min={0} max={20} {disabled} />
+<Fieldset title="{m.basicInfo()}" columns={2}>
+	<TextField label={m.name()} bind:value={name} {disabled} />
+	<IntField label={m.level()} value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
+	<IntField label={m.ac()} bind:value={ac} min={0} max={99} {disabled} />
+	<IntField label={m.maxHp()} bind:value={maxHp} min={0} {disabled} />
+	<IntField label={m.maxHitDice()} bind:value={maxHitDice} min={0} max={20} {disabled} />
 </Fieldset>

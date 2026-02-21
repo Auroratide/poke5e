@@ -49,13 +49,13 @@
 </script>
 
 <Form onsubmit={endEdit} {saving}>
-	<Fieldset title="{m["universal.initialInfo"]()}">
-		<TextField label="{m["universal.speciesName"]()}" bind:value={speciesName} {disabled} required />
+	<Fieldset title="{m.initialInfo()}">
+		<TextField label="{m.speciesName()}" bind:value={speciesName} {disabled} required />
 		<SimpleTypeField bind:value={type.data} {disabled} />
 	</Fieldset>
 	<HintText>{m["fakemon.addFakemonHintText"]()}</HintText>
 	<ActionArea>
-		<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
-		<Button type="submit" {disabled}>{m["universal.finish"]()}</Button>
+		<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>
+		<Button type="submit" {disabled}>{m.finish()}</Button>
 	</ActionArea>
 </Form>

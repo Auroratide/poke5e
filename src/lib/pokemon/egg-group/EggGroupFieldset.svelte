@@ -13,6 +13,6 @@
 	export let disabled = false
 </script>
 
-<Fieldset title="{m["universal.eggGroups"]()}" columns={2} columnsLg={3}>
-	<CheckboxFields label="{m["universal.eggGroups"]()}" bind:checked={value.data} values={options} {disabled} />
+<Fieldset title="{m.eggGroups()}" columns={2} columnsLg={3}>
+	<CheckboxFields label="{m.eggGroups()}" bind:checked={value.data} values={options} {disabled} />
 </Fieldset>

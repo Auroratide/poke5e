@@ -35,9 +35,9 @@
 	}
 </script>
 
-<Fieldset title="{m["universal.proficiencies"]()}" columns={2}>
+<Fieldset title="{m.proficiencies()}" columns={2}>
 	{#if !noexpertise}
-		<InstructionText>{m["universal.firstCheckboxIsForProficiencySecondCheckBoxIsForExpertise"]()}</InstructionText>
+		<InstructionText>{m.firstCheckboxIsForProficiencySecondCheckBoxIsForExpertise()}</InstructionText>
 	{/if}
 	{#if noexpertise}
 		<CheckboxFields label="Proficiencies" bind:checked {disabled} values={singleOptions} />

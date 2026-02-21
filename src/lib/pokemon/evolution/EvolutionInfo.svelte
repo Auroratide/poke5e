@@ -15,7 +15,7 @@
 <section class="evolution">
 	<h2>
 		<span class="justify">
-			<span>{m["universal.evolution"]()}</span>
+			<span>{m.evolution()}</span>
 			<span class="smaller"><EvolutionStage {evolutions} {species} /></span>
 		</span>
 	</h2>

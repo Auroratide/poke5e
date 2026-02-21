@@ -47,13 +47,13 @@
 	}
 </script>
 
-<Fieldset title="{m["universal.feats"]()}">
+<Fieldset title="{m.feats()}">
 	{#each values as value}
 		<FeatEditor {value} options={options} {disabled} custom={value.isCustom} on:remove={removeFeat(value.id)} />
 	{/each}
 	<div class="row">
-		<Button on:click={addStandardFeat}>{m["universal.addFeat"]()}</Button>
-		<Button on:click={addCustomFeat}>{m["universal.addCustomFeat"]()}</Button>
+		<Button on:click={addStandardFeat}>{m.addFeat()}</Button>
+		<Button on:click={addCustomFeat}>{m.addCustomFeat()}</Button>
 	</div>
 </Fieldset>
 

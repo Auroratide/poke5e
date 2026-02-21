@@ -9,7 +9,7 @@
 <div class="description">
 	{@html renderHtml(move.description)}
 	{#if move.higherLevels !== undefined}
-		<p><strong>{m["universal.atHigherLevels"]()}: </strong>{move.higherLevels}</p>
+		<p><strong>{m.atHigherLevels()}: </strong>{move.higherLevels}</p>
 	{/if}
 	{#if move.optional !== undefined}
 		<p class="optional-heading"><strong>Optional Rules:</strong></p>

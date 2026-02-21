@@ -12,6 +12,6 @@
 	}))
 </script>
 
-<Fieldset title="{m["universal.savingThrows"]()}" columns={2}>
+<Fieldset title="{m.savingThrows()}" columns={2}>
 	<CheckboxFields label="Saving Throws" bind:checked={values} values={attributeNames} {disabled} />
 </Fieldset>

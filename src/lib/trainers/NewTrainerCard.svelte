@@ -40,14 +40,14 @@
 <Title value="Create Trainer" />
 <Card title="Create a New Trainer">
 	<Form onsubmit={onCreate} {saving}>
-		<Fieldset title="{m["universal.basicInfo"]()}">
-			<TextField label={m["universal.name"]()} bind:value={name} {disabled} required />
+		<Fieldset title="{m.basicInfo()}">
+			<TextField label={m.name()} bind:value={name} {disabled} required />
 			<MarkdownField label="Description" bind:value={description} rows={6} {disabled} />
 		</Fieldset>
 		<HintText>Once your trainer is created, you will be able to edit their stats, Pokémon, and inventory!</HintText>
 		<ActionArea>
-			<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
-			<Button type="submit" {disabled}>{m["universal.finish"]()}</Button>
+			<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>
+			<Button type="submit" {disabled}>{m.finish()}</Button>
 		</ActionArea>
 	</Form>
 </Card>

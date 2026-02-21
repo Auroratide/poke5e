@@ -93,11 +93,11 @@
 	<TrainerPathsFieldset bind:value={trainerPath} {disabled} />
 	<FeatsFieldset feats={DndFeats} bind:values={feats} {disabled} />
 	<InventoryFieldset bind:money bind:inventory {disabled} />
-	<Fieldset title="{m["universal.general"]()}">
-		<MarkdownField label="{m["universal.description"]()}" bind:value={description} placeholder="{m["trainers.generalInfoAboutThisTrainer"]()}..." {disabled} />
+	<Fieldset title="{m.general()}">
+		<MarkdownField label="{m.description()}" bind:value={description} placeholder="{m["trainers.generalInfoAboutThisTrainer"]()}..." {disabled} />
 	</Fieldset>
 	<ActionArea error={!isValid ? "One or more fields above have an issue." : undefined}>
-		<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
-		<Button type="submit" disabled={disabled || !isValid}>{m["universal.finish"]()}</Button>
+		<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>
+		<Button type="submit" disabled={disabled || !isValid}>{m.finish()}</Button>
 	</ActionArea>
 </Form>

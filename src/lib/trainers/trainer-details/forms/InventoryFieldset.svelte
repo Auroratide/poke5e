@@ -24,7 +24,7 @@
 	})
 </script>
 
-<Fieldset title="{m["universal.inventory"]()}">
-	<MoneyField label="{m["universal.money"]()}" bind:value={money} {disabled}/>
+<Fieldset title="{m.inventory()}">
+	<MoneyField label="{m.money()}" bind:value={money} {disabled}/>
 	<InventoryEditor bind:values={inventory} {disabled} newStandardItem={addStandardItem} newCustomItem={addCustomItem} groupOrder={["pokeball", "medicine", "berry", "held item", "evolution"]} />
 </Fieldset>

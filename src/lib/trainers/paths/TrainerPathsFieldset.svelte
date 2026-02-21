@@ -29,8 +29,8 @@
 	})))
 </script>
 
-<Fieldset title="{m["universal.trainerPath"]()}">
-	<SelectField label="{m["universal.pathName"]()}" {options} bind:value={path} bind:other={pathCustom} {disabled} />
+<Fieldset title="{m.trainerPath()}">
+	<SelectField label="{m.pathName()}" {options} bind:value={path} bind:other={pathCustom} {disabled} />
 	{#if path === SelectFieldOther}
 		<hr />
 		<PathFeatureFields level="2" bind:description={value.customFeatures.level2.description} {disabled} />

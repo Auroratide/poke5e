@@ -33,17 +33,17 @@
 	<SideArtCardSection {hasImage}>
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<FlatDl columns={hasImage ? 1 : 2}>
-			<dt>{useId ? "ID" : m["universal.number"]()}</dt>
+			<dt>{useId ? "ID" : m.number()}</dt>
 			<dd>{useId ? value.data.id : value.numberAsString()}</dd>
-			<dt>{m["universal.size"]()}</dt>
+			<dt>{m.size()}</dt>
 			<dd class="cap">{value.data.size}</dd>
-			<dt><abbr title="{m["universal.speciesRating"]()}">{m["universal.sr"]()}</abbr></dt>
+			<dt><abbr title="{m.speciesRating()}">{m.sr()}</abbr></dt>
 			<dd>{value.sr.toString()}</dd>
-			<dt>{m["universal.eggGroup"]()}</dt>
+			<dt>{m.eggGroup()}</dt>
 			<dd class="cap">{value.eggGroups.toString()}</dd>
-			<dt>{m["universal.minLevel"]()}</dt>
+			<dt>{m.minLevel()}</dt>
 			<dd>{value.data.minLevel}</dd>
-			<dt>{m["universal.gender"]()}</dt>
+			<dt>{m.gender()}</dt>
 			<dd><GenderRatioDisplay value={value.gender} /></dd>
 		</FlatDl>
 		<SpeciesPortrait slot="art" media={value.media} alt="" />
@@ -54,30 +54,30 @@
 		</div>
 	</section>
 	<section class="stats">
-		<h2>{m["universal.stats"]()}</h2>
+		<h2>{m.stats()}</h2>
 		<FlatDl>
-			<dt>{m["universal.armorClass"]()}</dt>
+			<dt>{m.armorClass()}</dt>
 			<dd>{value.data.ac}</dd>
-			<dt>{m["universal.hitPoints"]()}</dt>
+			<dt>{m.hitPoints()}</dt>
 			<dd>{value.data.hp} ({value.data.hitDice})</dd>
-			<DistancesDlItem label="{m["universal.speed"]()}" values={value.speed} />
-			<DistancesDlItem label="{m["universal.senses"]()}" values={value.senses} />
+			<DistancesDlItem label="{m.speed()}" values={value.speed} />
+			<DistancesDlItem label="{m.senses()}" values={value.senses} />
 		</FlatDl>
 		<AttributeBlock attributes={value.attributes} />
 	</section>
 	<section class="skills">
 		<FlatDl>
-			<dt>{m["universal.proficiencies"]()}</dt>
+			<dt>{m.proficiencies()}</dt>
 			<dd class="cap">{value.skills.toString()}</dd>
-			<dt>{m["universal.savingThrows"]()}</dt>
+			<dt>{m.savingThrows()}</dt>
 			<dd class="upper">{value.data.saves.length > 0 ? value.data.saves.join(", ") : "none"}</dd>
 			<TypeEffectiveness type={value.type} />
 		</FlatDl>
 	</section>
 	<section class="abilities">
-		<h2>{m["universal.abilities"]()}</h2>
+		<h2>{m.abilities()}</h2>
 		{#if value.abilities.isEmpty()}
-			<p>{m["universal.noAbilitiesProvided"]()}</p>
+			<p>{m.noAbilitiesProvided()}</p>
 		{:else}
 			<AbilityPoolInfo value={value.abilities} />
 		{/if}
@@ -87,38 +87,38 @@
 		<EvolutionInfo species={value.id} evolutions={$evolutions} />
 	{/if}
 	<section class="moves">
-		<h2>{m["universal.moves"]()}</h2>
+		<h2>{m.moves()}</h2>
 		<FlatDl>
-			<dt>{m["universal.starting"]()}</dt>
+			<dt>{m.starting()}</dt>
 			<dd><InlineMoveLinks moves={value.data.moves.start} /></dd>
 			{#if exists(value.data.moves.level2)}
-				<dt>{m["universal.level"]()} 2</dt>
+				<dt>{m.level()} 2</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level2} /></dd>
 			{/if}
 			{#if exists(value.data.moves.level6)}
-				<dt>{m["universal.level"]()} 6</dt>
+				<dt>{m.level()} 6</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level6} /></dd>
 			{/if}
 			{#if exists(value.data.moves.level10)}
-				<dt>{m["universal.level"]()} 10</dt>
+				<dt>{m.level()} 10</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level10} /></dd>
 			{/if}
 			{#if exists(value.data.moves.level14)}
-				<dt>{m["universal.level"]()} 14</dt>
+				<dt>{m.level()} 14</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level14} /></dd>
 			{/if}
 			{#if exists(value.data.moves.level18)}
-				<dt>{m["universal.level"]()} 18</dt>
+				<dt>{m.level()} 18</dt>
 				<dd><InlineMoveLinks moves={value.data.moves.level18} /></dd>
 			{/if}
 		</FlatDl>
 		<FlatDl>
 			{#if exists(value.data.moves.egg)}
-				<dt class="space-after">{m["universal.egg"]()}</dt>
+				<dt class="space-after">{m.egg()}</dt>
 				<dd class="space-after"><InlineMoveLinks moves={value.data.moves.egg} /></dd>
 			{/if}
 			{#if exists(value.data.moves.tm)}
-				<dt>{m["universal.tm"]()}</dt>
+				<dt>{m.tm()}</dt>
 				<dd><InlineTmLinks tms={value.data.moves.tm} /></dd>
 			{/if}
 		</FlatDl>

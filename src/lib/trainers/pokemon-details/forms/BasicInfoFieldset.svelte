@@ -42,17 +42,17 @@
 	}))
 </script>
 
-<Fieldset title="{m["universal.basicInfo"]()}">
+<Fieldset title="{m.basicInfo()}">
 	<div class="grid">
-		<div style:grid-area="field1"><TextField label="{m["universal.nickname"]()}" bind:value={nickname} {disabled} /></div>
-		<div style:grid-area="field2"><SelectField label="{m["universal.tera"]()}" options={teraOptions} bind:value={tera.data} {disabled} /></div>
+		<div style:grid-area="field1"><TextField label="{m.nickname()}" bind:value={nickname} {disabled} /></div>
+		<div style:grid-area="field2"><SelectField label="{m.tera()}" options={teraOptions} bind:value={tera.data} {disabled} /></div>
 		<div style:grid-area="field3"><NatureField bind:value={nature} {disabled} /></div>
-		<IntField label="{m["universal.level"]()}" value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
-		<IntField label="{m["universal.ac"]()}" bind:value={ac} min={0} max={99} {disabled} />
-		<IntField label="{m["universal.maxHp"]()}" bind:value={maxHp} min={0} {disabled} />
-		<IntField label="{m["universal.maxHitDice"]()}" bind:value={maxHitDice} min={0} max={20} {disabled} />
-		<ToggleSwitchField label="{m["universal.shiny"]()}" bind:value={isShiny} {disabled} />
-		<div style:grid-area="avatar" class="image-field"><ImageField label="{m["universal.customImage"]()}" previousValue={originalAvatarSrc} bind:currentValue={avatar} maxbytes={FIVE_HUNDRED_KB} {disabled} bind:isValid /></div>
+		<IntField label="{m.level()}" value={level} on:change={onLevelChange} min={1} max={20} {disabled} />
+		<IntField label="{m.ac()}" bind:value={ac} min={0} max={99} {disabled} />
+		<IntField label="{m.maxHp()}" bind:value={maxHp} min={0} {disabled} />
+		<IntField label="{m.maxHitDice()}" bind:value={maxHitDice} min={0} max={20} {disabled} />
+		<ToggleSwitchField label="{m.shiny()}" bind:value={isShiny} {disabled} />
+		<div style:grid-area="avatar" class="image-field"><ImageField label="{m.customImage()}" previousValue={originalAvatarSrc} bind:currentValue={avatar} maxbytes={FIVE_HUNDRED_KB} {disabled} bind:isValid /></div>
 	</div>
 </Fieldset>
 

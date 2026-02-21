@@ -6,13 +6,13 @@ export const MoveTime = {
 	options() {
 		return [ {
 			value: "action",
-			name: () => m["universal.action"](),
+			name: () => m.action(),
 		}, {
 			value: "bonus action",
-			name: () => m["universal.bonusAction"](),
+			name: () => m.bonusAction(),
 		}, {
 			value: "reaction",
-			name: () => m["universal.reaction"](),
+			name: () => m.reaction(),
 		} ]
 	},
 

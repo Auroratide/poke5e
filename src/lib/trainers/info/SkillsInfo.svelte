@@ -17,7 +17,7 @@
 	$: extraModifiers = type != null && specializations != null ? skillModifiersFromSpecializations(specializations, type.data) : undefined
 </script>
 
-<h3>{m["universal.saves"]()}</h3>
+<h3>{m.saves()}</h3>
 <div class="upper">
 	<ProficiencyBlock {level} {attributes} values={Attributes.list.map((attr) => ({
 		name: attr.abbr,
@@ -27,7 +27,7 @@
 	}))} columnsLg={3} columns={2} />
 </div>
 
-<h3>{m["universal.skills"]()}</h3>
+<h3>{m.skills()}</h3>
 <div class="cap">
 	<ProficiencyBlock {level} {attributes} values={SkillRanks.list.map((skill) => ({
 		name: skill.name,

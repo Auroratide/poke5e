@@ -33,13 +33,13 @@
 	}
 </script>
 
-<Fieldset title="{m["universal.type"]()}">
-	<SelectField label="{m["universal.primary"]()}" name="type-primary" options={primaryTypeOptions} bind:value={primary} {disabled} />
-	<SelectField label="{m["universal.secondary"]()}" name="type-seconary" options={secondaryTypeOptions} bind:value={secondary} {disabled} />
+<Fieldset title="{m.type()}">
+	<SelectField label="{m.primary()}" name="type-primary" options={primaryTypeOptions} bind:value={primary} {disabled} />
+	<SelectField label="{m.secondary()}" name="type-seconary" options={secondaryTypeOptions} bind:value={secondary} {disabled} />
 	<fieldset>
-		<legend>{m["universal.additionalTypes"]()}</legend>
+		<legend>{m.additionalTypes()}</legend>
 		<div class="three-columns">
-			<CheckboxFields label="{m["universal.additionalTypes"]()}" name="type-additional" bind:checked={value} values={additionalTypeOptions} {disabled} />
+			<CheckboxFields label="{m.additionalTypes()}" name="type-additional" bind:checked={value} values={additionalTypeOptions} {disabled} />
 		</div>
 	</fieldset>
 </Fieldset>

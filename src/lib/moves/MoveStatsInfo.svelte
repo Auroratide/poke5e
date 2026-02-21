@@ -9,13 +9,13 @@
 <dl class="move-stats-info">
 	{#if value.toHit}
 		<div>
-			<dt>{m["moves.attack"]()}</dt>
-			<dd><PlusMinus value={value.toHit} /> {m["moves.toHit"]()}</dd>
+			<dt>{m["movesSection.attack"]()}</dt>
+			<dd><PlusMinus value={value.toHit} /> {m["movesSection.toHit"]()}</dd>
 		</div>
 	{/if}
 	{#if value.save}
 		<div>
-			<dt><span class="upper">{value.save.attribute.join("/")}</span> {m["moves.save"]()}</dt>
+			<dt><span class="upper">{value.save.attribute.join("/")}</span> {m["movesSection.save"]()}</dt>
 			<dd>DC {value.save.dc}</dd>
 		</div>
 	{/if}
@@ -23,9 +23,9 @@
 		<div>
 			<dt>
 				{#if value.damage.isHealing}
-					{m["moves.healing"]()}
+					{m["movesSection.healing"]()}
 				{:else}
-					{m["moves.damage"]()}
+					{m["movesSection.damage"]()}
 				{/if}
 			</dt>
 			<dd>{value.damage.dice}{#if value.damage.mod > 0}&nbsp;+ {value.damage.mod}{/if}</dd>

@@ -17,6 +17,6 @@
 	}))
 </script>
 
-<Fieldset title="{m["universal.gender"]()}" columns={4}>
-	<RadioFields label="{m["universal.gender"]()}" bind:checked={value} values={genders} {disabled} />
+<Fieldset title="{m.gender()}" columns={4}>
+	<RadioFields label="{m.gender()}" bind:checked={value} values={genders} {disabled} />
 </Fieldset>

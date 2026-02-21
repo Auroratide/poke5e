@@ -41,7 +41,7 @@
 			<li>
 				<!-- key is a workaround to ensure the field is always empty -->
 				{#key values}
-					<SelectField label={m["universal.addAbility"]()} name="{id}-add-ability" value="" {options} on:change={add} {disabled} />
+					<SelectField label={m.addAbility()} name="{id}-add-ability" value="" {options} on:change={add} {disabled} />
 				{/key}
 			</li>
 		</ul>

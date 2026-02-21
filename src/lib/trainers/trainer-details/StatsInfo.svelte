@@ -11,35 +11,35 @@
 <div class="two-columns">
 	<div>
 		<FlatDl columns={1}>
-			<dt><abbr title="{m["universal.armorClass"]()}">{m["universal.ac"]()}</abbr></dt>
+			<dt><abbr title="{m.armorClass()}">{m.ac()}</abbr></dt>
 			<dd>{trainer.ac}</dd>
-			<dt>{m["universal.bonus"]()}</dt>
+			<dt>{m.bonus()}</dt>
 			<dd>+{pb}</dd>
 		</FlatDl>
 	</div>
 	<div>
 		<FlatDl columns={1}>
 			{#if trainer.biography.species}
-				<dt>{m["universal.species"]()}</dt>
+				<dt>{m.species()}</dt>
 				<dd>{trainer.biography.species}</dd>
 			{/if}
 			{#if trainer.biography.gender}
-				<dt>{m["universal.gender"]()}</dt>
+				<dt>{m.gender()}</dt>
 				<dd>{trainer.biography.gender}</dd>
 				<dt></dt><dd></dd>
 			{/if}
 			{#if trainer.biography.age}
-				<dt>{m["universal.age"]()}</dt>
+				<dt>{m.age()}</dt>
 				<dd>{trainer.biography.age}</dd>
 				<dt></dt><dd></dd>
 			{/if}
 			{#if trainer.biography.homeRegion}
-				<dt>{m["universal.homeRegion"]()}</dt>
+				<dt>{m.homeRegion()}</dt>
 				<dd>{trainer.biography.homeRegion}</dd>
 				<dt></dt><dd></dd>
 			{/if}
 			{#if trainer.biography.background}
-				<dt>{m["universal.background"]()}</dt>
+				<dt>{m.background()}</dt>
 				<dd>{trainer.biography.background}</dd>
 				<dt></dt><dd></dd>
 			{/if}

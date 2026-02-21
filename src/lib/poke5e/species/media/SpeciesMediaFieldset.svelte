@@ -25,18 +25,18 @@
 	$: originals.data.customization.shinyHue = hueShift
 </script>
 
-<Fieldset title="{m["universal.images"]()}" columns={2}>
+<Fieldset title="{m.images()}" columns={2}>
 	<InstructionText>{m["fakemon.portraitTutorialText"]()}</InstructionText>
-	<ImageField label="{m["universal.normalPortrait"]()}" previousValue={originals.data.values.normalPortrait?.href} bind:currentValue={updated.data.values.normalPortrait} {disabled} />
-	<ImageField label="{m["universal.shinyPortrait"]()}" previousValue={originals.data.values.shinyPortrait?.href} bind:currentValue={updated.data.values.shinyPortrait} {disabled} />
-	<MediaAttributionFields id="{m["universal.portrait"]()}" bind:value={originals.data.attribution.portrait} />
+	<ImageField label="{m.normalPortrait()}" previousValue={originals.data.values.normalPortrait?.href} bind:currentValue={updated.data.values.normalPortrait} {disabled} />
+	<ImageField label="{m.shinyPortrait()}" previousValue={originals.data.values.shinyPortrait?.href} bind:currentValue={updated.data.values.shinyPortrait} {disabled} />
+	<MediaAttributionFields id="{m.portrait()}" bind:value={originals.data.attribution.portrait} />
 	<hr />
 	<InstructionText>{m["fakemon.spriteTutorialText"]()}</InstructionText>
-	<ImageField label="{m["universal.normalSprite"]()}" previousValue={originals.data.values.normalSprite?.href} bind:currentValue={updated.data.values.normalSprite} {disabled} />
-	<ImageField label="{m["universal.shinySprite"]()}" previousValue={originals.data.values.shinySprite?.href} bind:currentValue={updated.data.values.shinySprite} {disabled} />
-	<MediaAttributionFields id="{m["universal.sprite"]()}" bind:value={originals.data.attribution.sprite} />
+	<ImageField label="{m.normalSprite()}" previousValue={originals.data.values.normalSprite?.href} bind:currentValue={updated.data.values.normalSprite} {disabled} />
+	<ImageField label="{m.shinySprite()}" previousValue={originals.data.values.shinySprite?.href} bind:currentValue={updated.data.values.shinySprite} {disabled} />
+	<MediaAttributionFields id="{m.sprite()}" bind:value={originals.data.attribution.sprite} />
 	<hr />
 	<InstructionText>{m["fakemon.hueTutorialText"]()}</InstructionText>
-	<HueField label="{m["universal.shinyHueShift"]()}" bind:value={hueShift} />
+	<HueField label="{m.shinyHueShift()}" bind:value={hueShift} />
 	<SpeciesPortrait media={huePreview} alt="" shiny />
 </Fieldset>

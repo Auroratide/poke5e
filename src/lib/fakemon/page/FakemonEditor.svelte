@@ -127,14 +127,14 @@
 </script>
 
 <Form onsubmit={endEdit} {saving}>
-	<Fieldset title="{m["universal.basicInfo"]()}" columns={2}>
-		<TextField label={m["universal.speciesName"]()} bind:value={speciesName} {disabled} required />
-		<IntField label={m["universal.minLevel"]()} bind:value={minLevel} min={1} max={20} {disabled} required />
-		<SelectField label={m["universal.hitDice"]()} options={hitDiceOptions} bind:value={hitDice} {disabled} />
-		<SelectField label="{m["universal.size"]()}" options={sizeOptions} bind:value={size} {disabled} />
+	<Fieldset title="{m.basicInfo()}" columns={2}>
+		<TextField label={m.speciesName()} bind:value={speciesName} {disabled} required />
+		<IntField label={m.minLevel()} bind:value={minLevel} min={1} max={20} {disabled} required />
+		<SelectField label={m.hitDice()} options={hitDiceOptions} bind:value={hitDice} {disabled} />
+		<SelectField label="{m.size()}" options={sizeOptions} bind:value={size} {disabled} />
 		<SrField bind:value={sr} {disabled} />
 		<div style:grid-column="span 2">
-			<TextareaField label="{m["universal.description"]()}" bind:value={description} {disabled} placeholder="{m["fakemon.descriptionPlaceholder"]()}" />
+			<TextareaField label="{m.description()}" bind:value={description} {disabled} placeholder="{m["fakemon.descriptionPlaceholder"]()}" />
 		</div>
 	</Fieldset>
 	<EstimatableStatsFieldset level={minLevel} hitDice={new HitDice(hitDice)} type={type} bind:hp bind:ac bind:attributes {disabled} />
@@ -149,11 +149,11 @@
 	<AbilityPoolFieldset bind:value={abilityPool} {disabled} />
 	<MovePoolFieldset bind:value={movePool} {disabled} />
 	<EvolutionsFieldset species={species.id} bind:evolutions={evolutions} {allSpecies} {disabled} />
-	<Fieldset title={m["universal.description"]()}>
-		<MarkdownField label={m["universal.generalNotes"]()} bind:value={notes} {disabled} placeholder={m["universal.anyOtherImportantNotes"]()} rows={6} />
+	<Fieldset title={m.description()}>
+		<MarkdownField label={m.generalNotes()} bind:value={notes} {disabled} placeholder={m.anyOtherImportantNotes()} rows={6} />
 	</Fieldset>
 	<ActionArea>
-		<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
-		<Button type="submit" {disabled}>{m["universal.finish"]()}</Button>
+		<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>
+		<Button type="submit" {disabled}>{m.finish()}</Button>
 	</ActionArea>
 </Form>

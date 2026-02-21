@@ -36,15 +36,15 @@
 	<ActionArea>
 		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="ghost">
 			{#if $trainer.update}
-				{m["universal.transfer"]()}
+				{m.transfer()}
 			{:else}
-				{m["universal.accessKey"]()}
+				{m.accessKey()}
 			{/if}
 		</Button>
-		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.removeTrainer)}" variant="ghost">{m["universal.remove"]()}</Button>
+		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.removeTrainer)}" variant="ghost">{m.remove()}</Button>
 		{#if $trainer.update}
-			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.restTrainer)}" variant="success">{m["universal.rest"]()}</Button>
-			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.editTrainer)}">{m["universal.edit"]()}</Button>
+			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.restTrainer)}" variant="success">{m.rest()}</Button>
+			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.editTrainer)}">{m.edit()}</Button>
 		{/if}
 	</ActionArea>
 </Card>

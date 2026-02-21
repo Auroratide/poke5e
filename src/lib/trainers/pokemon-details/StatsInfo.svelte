@@ -15,18 +15,18 @@
 </script>
 
 <FlatDl columns={2}>
-	<dt><abbr title="{m["universal.armorClass"]()}">{m["universal.ac"]()}</abbr></dt>
+	<dt><abbr title="{m.armorClass()}">{m.ac()}</abbr></dt>
 	<dd>{pokemon.ac}</dd>
-	<dt>{m["universal.nature"]()}</dt>
+	<dt>{m.nature()}</dt>
 	<dd class="cap">{pokemon.nature.data}</dd>
-	<dt>{m["universal.bonus"]()}</dt>
+	<dt>{m.bonus()}</dt>
 	<dd>+{pb}</dd>
-	<dt>{m["universal.size"]()}</dt>
+	<dt>{m.size()}</dt>
 	<dd class="cap">{pokemon.customSize ?? species.data.size}</dd>
-	<DistancesDlItem label="{m["universal.speed"]()}" values={speeds} />
-	<DistancesDlItem label="{m["universal.senses"]()}" values={senses} />
+	<DistancesDlItem label="{m.speed()}" values={speeds} />
+	<DistancesDlItem label="{m.senses()}" values={senses} />
 	{#if pokemon.teraType != null}
-		<dt>{m["universal.tera"]()}</dt>
+		<dt>{m.tera()}</dt>
 		<dd><TeraTypeTag type={pokemon.teraType} /></dd>
 	{/if}
 </FlatDl>

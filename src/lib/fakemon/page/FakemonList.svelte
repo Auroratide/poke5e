@@ -22,7 +22,7 @@
 	$: hasNoFakemon = $fakemon.length === 0
 
 	const AnyOption = [ {
-		name: `- ${m["universal.any"]()} -`,
+		name: `- ${m.any()} -`,
 		value: "",
 	} ]
 
@@ -84,23 +84,23 @@
 
 <ListHeading title="Fakémon" target="/fakemon">
 	<a slot="link" href="{Url.fakemon(undefined, PageAction.find)}" class="dark-font">{m["fakemon.findByFakemonID"]()} &gt;</a>
-	<Button slot="action" href="{Url.fakemon(undefined, PageAction.add)}">+ {m["universal.newFakemon"]()}</Button>
+	<Button slot="action" href="{Url.fakemon(undefined, PageAction.add)}">+ {m.newFakemon()}</Button>
 </ListHeading>
 <div class="space-bottom">
 	<SearchField id="filter-fakemon" label="Search" bind:value={$fakemonListFilter} matched={filtered.length} max={$fakemon.length} activeFilters={filter.count() - ($fakemonListFilter !== "" ? 1 : 0)} on:reset={resetFilters}>
-		<SelectField label="{m["universal.type"]()}" bind:value={filteredType} options={typeOptions} />
-		<SelectField label="{m["universal.size"]()}" bind:value={filteredSize} options={sizeOptions} />
-		<RelativeNumberField label="{m["universal.sr"]()}" bind:value={filteredSr} bind:relative={filteredSrRelative} min={0} max={15} placeholder="{m["universal.number"]()}" />
-		<RelativeNumberField label="{m["universal.minLevel"]()}" bind:value={filteredMinLevel} bind:relative={filteredMinLevelRelative} min={0} max={20} placeholder="{m["universal.number"]()}" />
-		<SelectField label="{m["universal.eggGroup"]()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
-		<SelectField label="{m["universal.biome"]()}" bind:value={filteredBiome} options={biomeOptions} />
+		<SelectField label="{m.type()}" bind:value={filteredType} options={typeOptions} />
+		<SelectField label="{m.size()}" bind:value={filteredSize} options={sizeOptions} />
+		<RelativeNumberField label="{m.sr()}" bind:value={filteredSr} bind:relative={filteredSrRelative} min={0} max={15} placeholder="{m.number()}" />
+		<RelativeNumberField label="{m.minLevel()}" bind:value={filteredMinLevel} bind:relative={filteredMinLevelRelative} min={0} max={20} placeholder="{m.number()}" />
+		<SelectField label="{m.eggGroup()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
+		<SelectField label="{m.biome()}" bind:value={filteredBiome} options={biomeOptions} />
 	</SearchField>
 </div>
 {#if hasNoFakemon}
 	{#if showGetStarted}<GetStarted />{/if}
 {:else}
 	<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$fakemonListSorter} headers={[ {
-		key: "name", name: m["universal.name"](), ratio: 1, sort: byStringField(it => it.data.species.name),
+		key: "name", name: m.name(), ratio: 1, sort: byStringField(it => it.data.species.name),
 	} ]}>
 		<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
 			<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.fakemon(item.data.readKey)}">{item.data.species.name}</a></BubbleRow.Cell>

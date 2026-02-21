@@ -21,6 +21,6 @@
 	})
 </script>
 
-<Fieldset title="{m["universal.inventory"]()}">
+<Fieldset title="{m.inventory()}">
 	<InventoryEditor bind:values={items} {disabled} newStandardItem={addStandardItem} newCustomItem={addCustomItem} groupOrder={["berry", "held item", "evolution", "medicine", "pokeball"]} />
 </Fieldset>

@@ -30,8 +30,8 @@
 			<p>Are you sure you want to remove <strong>{name}</strong>? This will remove {name} from your list of fakémon.</p>
 			<p>This is not a permanent removal. The fakémon can still be accessed via their access code, and they will continue to exist on other devices' lists until removed from those devices explicitly.</p>
 			<ActionArea>
-				<Button href="{Url.fakemon($fakemon?.value.data.readKey)}" variant="ghost">{m["universal.cancel"]()}</Button>
-				<Button on:click={remove} variant="danger">{m["universal.remove"]()}</Button>
+				<Button href="{Url.fakemon($fakemon?.value.data.readKey)}" variant="ghost">{m.cancel()}</Button>
+				<Button on:click={remove} variant="danger">{m.remove()}</Button>
 			</ActionArea>
 		</section>
 	</Saveable>

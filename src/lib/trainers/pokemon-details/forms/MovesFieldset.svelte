@@ -39,12 +39,12 @@
 	}
 </script>
 
-<Fieldset title="{m["universal.moves"]()}">
+<Fieldset title="{m.moves()}">
 	{#each values as move (move.id)}
 		<MoveEditor value={move} {species} {disabled} on:remove={removeMove(move.id)} {level} />
 		<hr />
 	{/each}
-	<Button on:click={addMove}>{m["universal.addMove"]()}</Button>
+	<Button on:click={addMove}>{m.addMove()}</Button>
 </Fieldset>
 
 <style>

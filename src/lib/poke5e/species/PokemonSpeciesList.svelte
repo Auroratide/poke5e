@@ -25,7 +25,7 @@
 	}
 
 	const AnyOption = [ {
-		name: `- ${m["universal.any"]()} -`,
+		name: `- ${m.any()} -`,
 		value: "",
 	} ]
 
@@ -87,23 +87,23 @@
 
 <div class="search-field">
 	<SearchField id="filter-moves" label="Search" bind:value={$pokemonFilter} matched={filtered.length} max={pokemons.length} activeFilters={filter.count() - ($pokemonFilter !== "" ? 1 : 0)} on:reset={resetFilters}>
-		<SelectField label="{m["universal.type"]()}" bind:value={filteredType} options={typeOptions} />
-		<SelectField label="{m["universal.size"]()}" bind:value={filteredSize} options={sizeOptions} />
-		<RelativeNumberField label="{m["universal.sr"]()}" bind:value={filteredSr} bind:relative={filteredSrRelative} min={0} max={15} placeholder="{m["universal.number"]()}" />
-		<RelativeNumberField label="{m["universal.minLevel"]()}" bind:value={filteredMinLevel} bind:relative={filteredMinLevelRelative} min={0} max={20} placeholder="{m["universal.number"]()}" />
-		<SelectField label="{m["universal.eggGroup"]()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
-		<SelectField label="{m["universal.biome"]()}" bind:value={filteredBiome} options={biomeOptions} />
+		<SelectField label="{m.type()}" bind:value={filteredType} options={typeOptions} />
+		<SelectField label="{m.size()}" bind:value={filteredSize} options={sizeOptions} />
+		<RelativeNumberField label="{m.sr()}" bind:value={filteredSr} bind:relative={filteredSrRelative} min={0} max={15} placeholder="{m.number()}" />
+		<RelativeNumberField label="{m.minLevel()}" bind:value={filteredMinLevel} bind:relative={filteredMinLevelRelative} min={0} max={20} placeholder="{m.number()}" />
+		<SelectField label="{m.eggGroup()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
+		<SelectField label="{m.biome()}" bind:value={filteredBiome} options={biomeOptions} />
 	</SearchField>
 </div>
 <TemporaryBannerMessage condition={OfficialFakemonRemovedBanner}>
 	Non-canon pokémon have been removed from this official list (Brawleon, Minereon, Droideon, Terreon, Specteon, Eeveon, Pesteon, Aereon, Drakeon, Toxeon, Rookite, Belseraph). You may <button class="link-button" on:click={readdOfficialFakemon}>re-add these to your list of Fakémon</button>, or you may add them later under <a href="{Url.settings()}">settings</a>.
 </TemporaryBannerMessage>
 <SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$pokemonSorter} headers={[ {
-	key: "name", name: m["universal.name"](), ratio: 3, sort: byStringField(it => it.data.name),
+	key: "name", name: m.name(), ratio: 3, sort: byStringField(it => it.data.name),
 }, {
-	key: "type", name: m["universal.type"](), ratio: 3, sort: byStringField(it => it.type.data.join(", ")),
+	key: "type", name: m.type(), ratio: 3, sort: byStringField(it => it.type.data.join(", ")),
 }, {
-	key: "sr", name: m["universal.sr"](), ratio: 1, sort: byNumericField(it => it.sr.data), largeScreenOnly: true,
+	key: "sr", name: m.sr(), ratio: 1, sort: byNumericField(it => it.sr.data), largeScreenOnly: true,
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type.primary}-bg)">
 		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary>

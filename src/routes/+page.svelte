@@ -23,11 +23,11 @@
 			<span class="icon"><PokeballIcon /></span>
 		</li>
 		<li class="theme-blue">
-			<a href="{Url.moves()}">{m["moves.title"]()}</a>
+			<a href="{Url.moves()}">{m["movesSection.title"]()}</a>
 			<span class="icon"><HitIcon /></span>
 		</li>
 		<li class="theme-purple">
-			<a href="{Url.tms()}">{m["tms.title"]()}</a>
+			<a href="{Url.tms()}">{m["tmsSection.title"]()}</a>
 			<span class="icon"><DiscIcon /></span>
 		</li>
 		<li class="theme-yellow">

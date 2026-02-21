@@ -66,7 +66,7 @@
 
 		if (file.size > maxbytes) {
 			isValid = false
-			error = `${m["universal.fileIsTooLargeMustBeLessThan"]()} ${prettyPrintBytes(maxbytes)}.`
+			error = `${m.fileIsTooLargeMustBeLessThan()} ${prettyPrintBytes(maxbytes)}.`
 		} else {
 			isValid = true
 			error = undefined
@@ -123,11 +123,11 @@
 		<div class="text">
 			<label for="{id}">{label}</label>
 			{#if isDragging}
-				<span>{m["universal.dropItHere"]()}</span>
+				<span>{m.dropItHere()}</span>
 			{:else}
-				<span>{m["universal.selectFile"]()}</span>
+				<span>{m.selectFile()}</span>
 				{#if maxbytes}
-					<span class="smaller">({m["universal.max"]()} {prettyPrintBytes(maxbytes)})</span>
+					<span class="smaller">({m.max()} {prettyPrintBytes(maxbytes)})</span>
 				{/if}
 			{/if}
 		</div>
@@ -142,7 +142,7 @@
 		{/if}
 	</div>
 	<div class="remove-image" class:hide={!canRemove}>
-		<Button variant="ghost" on:click={onRemove}>{m["universal.removeAvatar"]()}</Button>
+		<Button variant="ghost" on:click={onRemove}>{m.removeAvatar()}</Button>
 	</div>
 </div>
 

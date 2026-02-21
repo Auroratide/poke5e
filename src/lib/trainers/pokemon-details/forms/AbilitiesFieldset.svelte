@@ -34,6 +34,6 @@
 	} ]
 </script>
 
-<Fieldset title="{m["universal.ability"]()}">
-	<SelectField label="{m["universal.ability"]()}" options={abilityOptions} bind:value={ability} {disabled} />
+<Fieldset title="{m.ability()}">
+	<SelectField label="{m.ability()}" options={abilityOptions} bind:value={ability} {disabled} />
 </Fieldset>

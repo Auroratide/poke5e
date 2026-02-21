@@ -38,19 +38,19 @@
 		<Popover id="bond-effect-popover" block>
 			<p class="row" slot="activator">
 				<span class="icon"><BondIcon level={value.level} /></span>
-				<strong class="small-text dotted">{m["universal.bond"]()}: <PlusMinus value={value.level} /></strong>
+				<strong class="small-text dotted">{m.bond()}: <PlusMinus value={value.level} /></strong>
 			</p>
 			<p class="small-text">{bondEffect}</p>
 		</Popover>
 	{:else}
 		<p class="row">
 			<span class="icon"><BondIcon level={value.level} /></span>
-			<strong class="small-text">{m["universal.bond"]()}: <PlusMinus value={value.level} /></strong>
+			<strong class="small-text">{m.bond()}: <PlusMinus value={value.level} /></strong>
 		</p>
 	{/if}
 	{#if value.points.max > 0}
 		<p class="bond-points smaller-text row">
-			<label for="current-bond-points">{m["universal.points"]()}:</label>
+			<label for="current-bond-points">{m.points()}:</label>
 			<span>
 				{#if editable}
 					<NumericResourceField id="current-bond-points" value={bondCur} on:change={onChangeBondPoints} />

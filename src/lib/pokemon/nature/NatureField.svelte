@@ -20,4 +20,4 @@
 	$: value = new Nature(nature === OtherNature ? natureCustom : nature)
 </script>
 
-<SelectField label="{m["universal.nature"]()}" {options} bind:value={nature} bind:other={natureCustom} {disabled} />
+<SelectField label="{m.nature()}" {options} bind:value={nature} bind:other={natureCustom} {disabled} />

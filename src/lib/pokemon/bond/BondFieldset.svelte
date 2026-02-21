@@ -20,7 +20,7 @@
 	}
 </script>
 
-<Fieldset title="{m["universal.bond"]()}" columns={2}>
-	<RanksField label="{m["universal.bondLevel"]()}" min={-3} max={3} value={value.level} on:input={onBondLevelChange} {disabled} />
-	<IntField label="{m["universal.maxBondPoints"]()}" min={0} bind:value={value.points.max} {disabled} />
+<Fieldset title="{m.bond()}" columns={2}>
+	<RanksField label="{m.bondLevel()}" min={-3} max={3} value={value.level} on:input={onBondLevelChange} {disabled} />
+	<IntField label="{m.maxBondPoints()}" min={0} bind:value={value.points.max} {disabled} />
 </Fieldset>

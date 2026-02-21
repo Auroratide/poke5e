@@ -10,6 +10,6 @@
 	}
 </script>
 
-<WithButton label="{m["universal.remove"]()}" on:click={handleClick} variant="danger">
+<WithButton label="{m.remove()}" on:click={handleClick} variant="danger">
 	<slot></slot>
 </WithButton>

@@ -8,7 +8,7 @@
 	export let disabled = false
 </script>
 
-<Fieldset title={m["universal.abilityPool"]()}>
-	<AbilityPoolGroupFields title={m["universal.nonHiddenAbilities"]()} bind:values={value.data.normal} {disabled} />
-	<AbilityPoolGroupFields title={m["universal.hiddenAbilities"]()} bind:values={value.data.hidden} {disabled} />
+<Fieldset title={m.abilityPool()}>
+	<AbilityPoolGroupFields title={m.nonHiddenAbilities()} bind:values={value.data.normal} {disabled} />
+	<AbilityPoolGroupFields title={m.hiddenAbilities()} bind:values={value.data.hidden} {disabled} />
 </Fieldset>

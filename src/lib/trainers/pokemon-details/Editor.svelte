@@ -117,8 +117,8 @@
 	<MovesFieldset bind:values={moves} {species} level={new Level(level)} {disabled} />
 	<FeatsFieldset feats={$DndAndPokemonFeats} bind:values={feats} {disabled} />
 	<HeldItemsFieldset bind:items {disabled} />
-	<Fieldset title="{m["universal.general"]()}">
-		<MarkdownField label="{m["universal.notes"]()}" bind:value={notes} placeholder="{m["universal.generalNotesPlaceholder"]()}" {disabled} />
+	<Fieldset title="{m.general()}">
+		<MarkdownField label="{m.notes()}" bind:value={notes} placeholder="{m.generalNotesPlaceholder()}" {disabled} />
 	</Fieldset>
 	<FormDetails title="Advanced">
 		<TypeField bind:value={type.data} {disabled} />
@@ -126,8 +126,8 @@
 		<SpeedsFieldset bind:values={speeds} {disabled} />
 		<SensesFieldset bind:values={senses} {disabled} />
 	</FormDetails>
-	<ActionArea error={!isValid ? m["universal.oneOrMoreFieldsAboveHaveAnIssue"]() : undefined}>
-		<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
-		<Button type="submit" disabled={disabled || !isValid}>{m["universal.finish"]()}</Button>
+	<ActionArea error={!isValid ? m.oneOrMoreFieldsAboveHaveAnIssue() : undefined}>
+		<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>
+		<Button type="submit" disabled={disabled || !isValid}>{m.finish()}</Button>
 	</ActionArea>
 </Form>

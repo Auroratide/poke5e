@@ -7,4 +7,4 @@
 	export let disabled: boolean
 </script>
 
-<DistancesFieldset title="{m["universal.speedTypes"]()}" types={Speeds.types} values={values.data} {disabled} columns={3} />
+<DistancesFieldset title="{m.speedTypes()}" types={Speeds.types} values={values.data} {disabled} columns={3} />

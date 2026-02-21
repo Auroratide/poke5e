@@ -46,7 +46,7 @@
 
 <Form onsubmit={endEdit} {saving}>
 	{#if evolveToOptions?.length > 0}
-		<Fieldset title={m["universal.chooseOne"]()} columns={2}>
+		<Fieldset title={m.chooseOne()} columns={2}>
 			<RadioFields label="Evolution Choices" bind:checked={chosenEvolutionId} values={evolveToOptionIds?.map((id) => ({ name: getName(id), value: id })) ?? []} required />
 		</Fieldset>
 		<section style:min-height="12em">
@@ -64,8 +64,8 @@
 			{/if}
 		</section>
 		<ActionArea>
-			<Button on:click={cancel} variant="ghost" {disabled}>{m["universal.cancel"]()}</Button>
-			<Button type="submit" {disabled}>{m["universal.evolve"]()}</Button>
+			<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>
+			<Button type="submit" {disabled}>{m.evolve()}</Button>
 		</ActionArea>
 	{/if}
 </Form>

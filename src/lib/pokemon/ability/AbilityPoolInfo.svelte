@@ -19,7 +19,7 @@
 	{/each}
 	{#each value.data.hidden as id}
 		{@const ability = $abilities?.find((it) => id === it.id)}
-		<p class="no-margin"><Tag>{m["universal.hidden"]()}</Tag></p>
+		<p class="no-margin"><Tag>{m.hidden()}</Tag></p>
 		<p><strong>{ability.name}:</strong> {ability.description}</p>	
 	{/each}
 {/if}

@@ -6,11 +6,11 @@ export const ContestType = {
 	list: ["cool", "beauty", "cute", "clever", "tough"] as ContestType[],
 	name(type: ContestType): string {
 		return {
-			cool: () => m["moves.cool"](),
-			beauty: () => m["moves.beauty"](),
-			cute: () => m["moves.cute"](),
-			clever: () => m["moves.clever"](),
-			tough: () => m["moves.tough"](),
+			cool: () => m["movesSection.cool"](),
+			beauty: () => m["movesSection.beauty"](),
+			cute: () => m["movesSection.cute"](),
+			clever: () => m["movesSection.clever"](),
+			tough: () => m["movesSection.tough"](),
 		}[type]()
 	},
 }

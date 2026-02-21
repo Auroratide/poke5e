@@ -47,7 +47,7 @@
 				</button></span>
 			{/if}
 			<VisuallyHidden><label for={id}>{label}</label></VisuallyHidden>
-			<input {id} type="search" placeholder="{m["universal.search"]()}..." bind:value />
+			<input {id} type="search" placeholder="{m.search()}..." bind:value />
 			<VisuallyHidden><label for="results-{id}">Number of results</label></VisuallyHidden>
 			<span class="matched"><output id="results-{id}" class="text" aria-live="polite">{matched} / {max}</output></span>
 		</div>
@@ -58,8 +58,8 @@
 				<slot></slot>
 			</div>
 			<div class="action-area">
-				<Button on:click={onClose}>{m["universal.close"]()}</Button>
-				<Button variant="danger" on:click={onReset}>{m["universal.resetFilters"]()}</Button>
+				<Button on:click={onClose}>{m.close()}</Button>
+				<Button variant="danger" on:click={onReset}>{m.resetFilters()}</Button>
 			</div>
 		</form>
 	{/if}

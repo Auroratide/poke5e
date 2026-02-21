@@ -6,11 +6,11 @@
 	export let value: ContestDetails
 
 	const translations = {
-		cool: () => m["moves.cool"](),
-		beauty: () => m["moves.beauty"](),
-		cute: () => m["moves.cute"](),
-		clever: () => m["moves.clever"](),
-		tough: () => m["moves.tough"](),
+		cool: () => m["movesSection.cool"](),
+		beauty: () => m["movesSection.beauty"](),
+		cute: () => m["movesSection.cute"](),
+		clever: () => m["movesSection.clever"](),
+		tough: () => m["movesSection.tough"](),
 	}
 </script>
 
@@ -21,11 +21,11 @@
 	<div class="main">
 		<dl>
 			<div>
-				<dt>{m["moves.appeal"]()}</dt>
+				<dt>{m["movesSection.appeal"]()}</dt>
 				<dd><HeartNumber filled value={value.appeal} /></dd>
 			</div>
 			<div>
-				<dt>{m["moves.jam"]()}</dt>
+				<dt>{m["movesSection.jam"]()}</dt>
 				<dd><HeartNumber value={value.jam} /></dd>
 			</div>
 		</dl>

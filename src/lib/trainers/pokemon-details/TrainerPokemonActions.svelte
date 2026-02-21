@@ -17,10 +17,10 @@
 </script>
 
 <ActionArea>
-	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="ghost">{m["universal.remove"]()}</Button>
+	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="ghost">{m.remove()}</Button>
 	{#if $evolutions?.evolvesTo(species.id).length > 0}
-		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="ghost">{m["universal.evolve"]()}</Button>
+		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="ghost">{m.evolve()}</Button>
 	{/if}
-	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.restPokemon)}" variant="success">{m["universal.rest"]()}</Button>
-	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.editPokemon)}">{m["universal.edit"]()}</Button>
+	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.restPokemon)}" variant="success">{m.rest()}</Button>
+	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.editPokemon)}">{m.edit()}</Button>
 </ActionArea>

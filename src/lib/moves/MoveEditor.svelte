@@ -37,10 +37,10 @@
 
 <div class="move-editor">
 	<Removable on:remove>
-		<SelectField label="{m["universal.move"]()}" name="{moveFieldName}" bind:value={value.moveId} options={moveOptions} {disabled} on:change={onMoveChange} />
+		<SelectField label="{m.move()}" name="{moveFieldName}" bind:value={value.moveId} options={moveOptions} {disabled} on:change={onMoveChange} />
 	</Removable>
-	<IntField label="{m["universal.maxPp"]()}" name="move-pp-{value.id}" bind:value={value.pp.max} {disabled} />
-	<MarkdownField label="{m["universal.notes"]()}" name="move-notes-{value.id}" bind:value={value.notes} {disabled} />
+	<IntField label="{m.maxPp()}" name="move-pp-{value.id}" bind:value={value.pp.max} {disabled} />
+	<MarkdownField label="{m.notes()}" name="move-notes-{value.id}" bind:value={value.notes} {disabled} />
 </div>
 
 <style>

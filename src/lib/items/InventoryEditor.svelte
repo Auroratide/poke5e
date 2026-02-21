@@ -38,8 +38,8 @@
 		<ItemEditor value={item} {disabled} {groupOrder} on:remove={removeItem(item.id)} />
 	{/each}
 	<div class="row">
-		<Button on:click={addStandardItem}>{m["universal.addItem"]()}</Button>
-		<Button on:click={addCustomItem}>{m["universal.addCustomItem"]()}</Button>
+		<Button on:click={addStandardItem}>{m.addItem()}</Button>
+		<Button on:click={addCustomItem}>{m.addCustomItem()}</Button>
 	</div>
 </div>
 

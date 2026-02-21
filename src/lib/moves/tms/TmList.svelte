@@ -17,7 +17,7 @@
 	export let tms: Tm[]
 
 	const AnyOption = [ {
-		name: `- ${m["universal.any"]()} -`,
+		name: `- ${m.any()} -`,
 		value: "",
 	} ]
 
@@ -81,20 +81,20 @@
 
 <div class="search-field">
 	<SearchField id="filter-moves" label="Search" bind:value={$TmsFilterStore} matched={filtered.length} max={tms.length} activeFilters={filter.count() - ($TmsFilterStore !== "" ? 1 : 0)} on:reset={resetFilters}>
-		<SelectField label="{m["universal.type"]()}" bind:value={filteredType} options={typeOptions} />
-		<SelectField label="{m["universal.movePower"]()}" bind:value={filteredPower} options={powerOptions} />
-		<SelectField label="{m["universal.moveTime"]()}" bind:value={filteredTime} options={timeOptions} />
-		<SelectField label="{m["universal.contest"]()}" bind:value={filteredContest} options={contestOptions} />
-		<RelativeNumberField label="{m["universal.range"]()}" bind:value={filteredRange} bind:relative={filteredRangeRelative} min={0} placeholder="{m["universal.use0ForMelee"]()}" />
-		<RelativeNumberField label="{m["universal.cost"]()}" bind:value={filteredCost} bind:relative={filteredCostRelative} min={0} placeholder="{m["universal.number"]()}" />
+		<SelectField label="{m.type()}" bind:value={filteredType} options={typeOptions} />
+		<SelectField label="{m.movePower()}" bind:value={filteredPower} options={powerOptions} />
+		<SelectField label="{m.moveTime()}" bind:value={filteredTime} options={timeOptions} />
+		<SelectField label="{m.contest()}" bind:value={filteredContest} options={contestOptions} />
+		<RelativeNumberField label="{m.range()}" bind:value={filteredRange} bind:relative={filteredRangeRelative} min={0} placeholder="{m.use0ForMelee()}" />
+		<RelativeNumberField label="{m.cost()}" bind:value={filteredCost} bind:relative={filteredCostRelative} min={0} placeholder="{m.number()}" />
 	</SearchField>
 </div>
 <SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$TmsSorterStore} headers={[ {
-	key: "name", name: m["universal.name"](), ratio: 3, sort: byStringField(it => it.name),
+	key: "name", name: m.name(), ratio: 3, sort: byStringField(it => it.name),
 }, {
-	key: "type", name: m["universal.type"](), ratio: 2, sort: byStringField(it => it.type),
+	key: "type", name: m.type(), ratio: 2, sort: byStringField(it => it.type),
 }, {
-	key: "cost", name: m["universal.cost"](), ratio: 2, sort: byNumericField(it => it.tm.cost), largeScreenOnly: true,
+	key: "cost", name: m.cost(), ratio: 2, sort: byNumericField(it => it.tm.cost), largeScreenOnly: true,
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type}-bg)">
 		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.tms(item.tm.id.toString())}">{item.tmName()}</a></BubbleRow.Cell>
