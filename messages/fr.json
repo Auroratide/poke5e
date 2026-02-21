@@ -1,0 +1,127 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"languageName": "French",
+	"sitetitle": "Pokémon 5e",
+	"more": "Plus",
+	"menu": "Menu",
+	"type": "Type",
+	"number": "Numéro",
+	"size": "Taille",
+	"sr": "CE",
+	"eggGroup": "Groupe d'oeuf",
+	"minLevel": "Niveau Min",
+	"gender": "Genre",
+	"stats": "Statistiques",
+	"armorClass": "Classe d'Armure",
+	"hitPoints": "Points de Vie",
+	"speed": "Vitesse",
+	"proficiencies": "Maîtrises",
+	"savingThrows": "Jets de sauvegarde",
+	"vulnerabilities": "Vulnérabilités",
+	"resistances": "Résistances",
+	"immunities": "Immunités",
+	"abilities": "Talents",
+	"evolution": "Évolution",
+	"starting": "Départ",
+	"egg": "Oeuf",
+	"tm": "CT",
+	"movePower": "Puissance",
+	"moveTime": "Temps d'exécution",
+	"pp": "PP",
+	"duration": "Durée",
+	"range": "Portée",
+	"contest": "Compétition",
+	"appeal": "Charme",
+	"jam": "Blocage",
+	"effect": "Effet",
+	"cost": "Coût",
+	"basicInfo": "Information de base",
+	"description": "Description",
+	"ac": "CA",
+	"species": "Espèce",
+	"bonus": "Maîtrise",
+	"saves": "Sauvegardes",
+	"skills": "Compétences",
+	"nature": "Nature",
+	"inventory": "Inventaire",
+	"money": "Argent",
+	"accessKey": "Clé d'accès",
+	"remove": "Retirer",
+	"rest": "Repos",
+	"edit": "Modifier",
+	"level": "Niveau",
+	"maxHp": "PV Max",
+	"maxHitDice": "Dé de vie Max",
+	"biography": "Biographie",
+	"age": "Âge",
+	"homeRegion": "Région d'origine",
+	"background": "Antécédents",
+	"avatar": "Avatar",
+	"selectFile": "Choisir le dossier",
+	"attributes": "Attributs",
+	"specializations": "Spécialisation",
+	"trainerPath": "Voie de dresseur",
+	"pathName": "Nom de voie",
+	"other": "Autre",
+	"feats": "Dons",
+	"addFeat": "Ajouter un don",
+	"addCustomFeat": "Ajouter un don personnalisé",
+	"addItem": "Ajouter un objet personnalisé",
+	"addCustomItem": "Ajouter un objet personnalisé",
+	"general": "Général",
+	"bond": "Attachement",
+	"abilities&Items": "Compétences et Objets",
+	"addStatus": "Ajouter un statut",
+	"tera": "Tera",
+	"evolve": "Évolue",
+	"shiny": "Chromatique",
+	"action": "Action",
+	"bonusAction": "Action Bonus",
+	"reaction": "Réaction",
+	"name": "Nom",
+	"tms": "CTs",
+	"moves": "Capacités",
+	"search": "Recherche",
+	"levelXMoves": "Niveau {level} Capacités",
+	"seeTrainerList": "Voir liste des dresseurs",
+	"firstCheckboxIsForProficiencySecondCheckBoxIsForExpertise": "Première boîte pour la maîtrise, deuxième boîte pour l'expertise",
+	"noneMasculine": "Rien",
+	"noneFemenine": "Rien",
+	"addPokemon": "Ajouter un Pokémon",
+	"home": {
+		"title": "Pokémon 5th Edition"
+	},
+	"pokemon": {
+		"title": "Pokémon"
+	},
+	"movesSection": {
+		"title": "Capacités"
+	},
+	"tmsSection": {
+		"title": "CTs"
+	},
+	"items": {
+		"title": "Objets"
+	},
+	"trainers": {
+		"title": "Dresseurs",
+		"findByTrainerID": "Trouver par ID de dresseur",
+		"newTrainer": "Ajouter un dresseur",
+		"trainerId": "ID du dresseur"
+	},
+	"reference": {
+		"title": "Références"
+	},
+	"fakemon": {
+		"title": "Fakémon"
+	},
+	"encounterTool": {
+		"title": "Encounters"
+  },
+	"backups": {
+		"title": "Backups"
+	},
+	"settings": {
+		"title": "Paramètres"
+	}
+}
