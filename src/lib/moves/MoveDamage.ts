@@ -18,16 +18,16 @@ export class MoveDamage extends DataClass<{
 		mod: number,
 		isHealing: boolean,
 	} {
-		let trueModifier = 0
+		let trueModifier = hasStab ? this.stab(level, mod, rulesVersion) : 0
 		const modifierCode = this.data.modifier
 		if (typeof modifierCode === "number") {
-			trueModifier = modifierCode
+			trueModifier += modifierCode
 		} else {
 			const patternMatch = modifierCode.match(/MOVE(\s*\+\s*(\d+))?/i)
 			if (modifierCode === "LEVEL") {
-				trueModifier = level.data
+				trueModifier += level.data
 			} else if (patternMatch) {
-				trueModifier = mod + (hasStab ? this.stab(level, mod, rulesVersion) : 0)
+				trueModifier += mod
 				trueModifier += parseInt(patternMatch[2] ?? "0")
 			}
 		}
