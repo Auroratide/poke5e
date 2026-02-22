@@ -7,7 +7,7 @@
 
 <ReferencePage title="Specializations">
 	<section>
-		<p>At levels 1, 7, and 18, trainers may choose a specialization from the following list, granting them bonuses depending on the type of Pokemon they train. Specializations can be stacked for an additional +1 bonus to skill checks each time it is chosen.</p>
+		<p>At levels 1, 7, and 18, trainers may choose a specialization from the following list, granting them bonuses depending on the type of Pokemon they train. Specializations can be stacked for an additional +1 bonus to skill checks each time it is chosen, as well as re-receiving the benefits specified by the specialization.</p>
 
 		<h2>Options</h2>
 		{#each Object.values($SpecializationList) as specialization}
