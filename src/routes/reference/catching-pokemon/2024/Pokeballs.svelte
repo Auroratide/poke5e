@@ -100,7 +100,7 @@
 		</tr>
 		<tr>
 			<td>Quick Ball</td>
-			<td>Reduce the capture DC by 8 if used during the first round of combat.</td>
+			<td>Reduce the capture DC by 15 if used during the first round of combat.</td>
 		</tr>
 		<tr>
 			<td>Dream Ball</td>
