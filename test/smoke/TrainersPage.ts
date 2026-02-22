@@ -50,7 +50,7 @@ export class TrainersPage {
 	async addPokemon(species: string) {
 		console.log(`  Adding ${species}...`)
 		const searchQuery = species.toLocaleLowerCase().substring(0, 4)
-		await this.ui.link("Add Pokemon").click()
+		await this.ui.link("+ Add Pokémon").click()
 		await this.ui.textBox("Species").fill(searchQuery)
 		await this.ui.button(species).click()
 
@@ -87,7 +87,7 @@ export class TrainersPage {
 		await this.ui.link(nickname).click()
 		await this.ui.link("Evolve").click()
 		await this.ui.radio(into).check()
-		await this.ui.button("Evolve!").click()
+		await this.ui.button("Evolve").click()
 
 		await expect(this.ui.heading(nickname)).toBeVisible()
 		await expect(this.ui.text(into)).toBeVisible()
