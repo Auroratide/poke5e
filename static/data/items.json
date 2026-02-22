@@ -402,7 +402,7 @@
 			"type": "medicine",
 			"cost": 450,
 			"description": [
-				"A trainer may use an action to administor this medicine to an adjacent Pokémon. 10 minutes after consumption, the Pokémon is cured of all status conditions. Consumed on use."
+				"A trainer may use an action to cure an adjacent Pokémon of all status conditions, and grants them immunity to all statuses for one round. Consumed on use."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-heal.png"
@@ -426,7 +426,7 @@
 			"type": "medicine",
 			"cost": 3000,
 			"description": [
-				"A trainer may use an action to restore 2d4 + 2 HP to a fainted Pokémon in a Pokéball. Consumed on use."
+				"A trainer may use an action to restore 2d4 + 2 HP to a fainted Pokémon. Consumed on use."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revive.png"
@@ -438,7 +438,7 @@
 			"type": "medicine",
 			"cost": 5000,
 			"description": [
-				"A trainer may use an action to restore 4d12 + 10 HP to a fainted Pokémon in a Pokéball. Consumed on use."
+				"A trainer may use an action to restore 4d12 + 10 HP to a fainted Pokémon. Consumed on use."
 			],
 			"media": {
 				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-revive.png"
@@ -874,8 +874,10 @@
 			"id": "health-candy",
 			"name": "Health Candy",
 			"type": "medicine",
-			"cost": 20,
-			"description": null,
+			"cost": 1000,
+			"description": [
+				"When consumed by a Pokémon, it gains 20 temp HP for 1 minute. A Pokémon may only benefit from one Candy item at a time."
+			],
 			"media": {
 				"sprite": null
 			}
@@ -884,8 +886,10 @@
 			"id": "mighty-candy",
 			"name": "Mighty Candy",
 			"type": "medicine",
-			"cost": 20,
-			"description": null,
+			"cost": 1000,
+			"description": [
+				"When consumed by a Pokémon, its STR increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time."
+			],
 			"media": {
 				"sprite": null
 			}
@@ -894,8 +898,10 @@
 			"id": "tough-candy",
 			"name": "Tough Candy",
 			"type": "medicine",
-			"cost": 20,
-			"description": null,
+			"cost": 1000,
+			"description": [
+				"When consumed by a Pokémon, its AC increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time."
+			],
 			"media": {
 				"sprite": null
 			}
@@ -904,8 +910,10 @@
 			"id": "smart-candy",
 			"name": "Smart Candy",
 			"type": "medicine",
-			"cost": 20,
-			"description": null,
+			"cost": 1000,
+			"description": [
+				"When consumed by a Pokémon, its INT increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time."
+			],
 			"media": {
 				"sprite": null
 			}
@@ -914,8 +922,10 @@
 			"id": "courage-candy",
 			"name": "Courage Candy",
 			"type": "medicine",
-			"cost": 20,
-			"description": null,
+			"cost": 1000,
+			"description": [
+				"When consumed by a Pokémon, its WIS increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time."
+			],
 			"media": {
 				"sprite": null
 			}
@@ -924,8 +934,10 @@
 			"id": "quick-candy",
 			"name": "Quick Candy",
 			"type": "medicine",
-			"cost": 20,
-			"description": null,
+			"cost": 1000,
+			"description": [
+				"When consumed by a Pokémon, its DEX increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time."
+			],
 			"media": {
 				"sprite": null
 			}
