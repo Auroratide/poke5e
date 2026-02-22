@@ -20909,9 +20909,6 @@
 					"con"
 				],
 				"dc": "MOVE"
-			},
-			"attack": {
-				"scope": "melee"
 			}
 		},
 		{
