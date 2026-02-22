@@ -14,6 +14,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.10.1",
+		description: [
+			"<strong>Bugfix</strong>: Fix STAB calculation on moves whose native modifier was 0.",
+			"<strong>Bugfix</strong>: Fix some moves which incorrectly showed a to-hit modifier, or did not show damage calculation.",
+			"<strong>Items</strong>: Correct some items to match the original Player Handbook.",
+		],
+	}, {
 		name: "v1.10.0",
 		description: [
 			`<strong>New!</strong> The <a href="${Url.encounterTool()}">Encounter Tool</a> lets you generate and set up random encounters for your players. Feedback is appreciated for its balance.`,
