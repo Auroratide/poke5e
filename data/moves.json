@@ -18232,6 +18232,18 @@
 			"higherLevels": "The damage dice roll for this move changes to 2d4+Level at level 5, 1d12+Level at level 10, and 4d4+Level at level 17.",
 			"attack": {
 				"scope": "melee"
+			},
+			"damage": {
+				"dice": {
+					"1": "1d6",
+					"5": "2d4",
+					"10": "1d12",
+					"17": "4d4"
+				},
+				"modifier": "LEVEL",
+				"type": [
+					"fighting"
+				]
 			}
 		},
 		{
@@ -20909,9 +20921,6 @@
 					"con"
 				],
 				"dc": "MOVE"
-			},
-			"attack": {
-				"scope": "melee"
 			}
 		},
 		{

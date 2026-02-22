@@ -235,7 +235,7 @@
 			"id": "full-heal",
 			"name": "Cura Total",
 			"description": [
-				"Un entrenador puede usar una acción para administrar esta medicina a un Pokémon adyacente. 10 minutos después de consumirla, el Pokémon se cura de todas las condiciones de estado. Se consume al usarse."
+				"Un entrenador puede usar una acción para curar a un Pokémon adyacente de todos los estados y le otorga inmunidad a todos ellos durante una ronda. Se consume al usarse."
 			]
 		},
 		{
@@ -249,14 +249,14 @@
 			"id": "revive",
 			"name": "Revivir",
 			"description": [
-				"Un entrenador puede usar una acción para restaurar 2d4 + 2 puntos de golpe a un Pokémon debilitado en una Pokéball. Se consume al usarse."
+				"Un entrenador puede usar una acción para restaurar 2d4 + 2 puntos de golpe a un Pokémon debilitado. Se consume al usarse."
 			]
 		},
 		{
 			"id": "max-revive",
 			"name": "Revivir Máximo",
 			"description": [
-				"Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon debilitado en una Pokéball. Se consume al usarse."
+				"Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon debilitado. Se consume al usarse."
 			]
 		},
 		{
