@@ -860,7 +860,7 @@
 			"id": "leftovers",
 			"name": "Restos",
 			"description": [
-				"Este objeto tiene 10 cargas. El portador puede usar una acción adicional para usar gastar una carga y recuperar puntos de golpe iguales a su bonificador por competencia."
+				"Este objeto tiene 10 cargas. El portador puede usar una acción adicional para usar gastar una carga y recuperar puntos de golpe iguales a su bonificador por competencia. Recupera sus cargas al amanecer."
 			]
 		},
 		{
