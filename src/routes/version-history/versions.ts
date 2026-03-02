@@ -14,6 +14,17 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.10.2",
+		description: [
+			"<strong>Bugfix</strong>: Encounter tool now generates upleveled pokémon with HP values for that level.",
+			"<strong>Bugfix</strong>: Encounter tool XP estimation now accounts for rules version (2018 vs 2024).",
+			"<strong>Encounters</strong>: Encounter tool will now select up to 4 random moves from pokemon being generated.",
+			"<strong>Pokémon</strong>: Weezing abilities Neutralizing Gas, Stench, and Misty Surge added.",
+			"<strong>Pokémon</strong>: Lowered Snorlax Min Level to 8 to match Munchlax's evolution requirement.",
+			"<strong>Items</strong>: Leftovers now recovers its charges.",
+			"Can now select > or < in various filters.",
+		],
+	}, {
 		name: "v1.10.1",
 		description: [
 			"<strong>Bugfix</strong>: Fix STAB calculation on moves whose native modifier was 0.",
