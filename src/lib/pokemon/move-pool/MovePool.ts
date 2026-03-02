@@ -1,4 +1,5 @@
 import { DataClass } from "$lib/DataClass"
+import type { Level } from "$lib/dnd/level"
 import type { Move, MoveId } from "$lib/moves/Move"
 import type { TmId } from "$lib/moves/tms/TmDetails"
 
@@ -39,5 +40,14 @@ export class MovePool extends DataClass<{
 
 	canLearnViaTm(move: Move): boolean {
 		return move.tm != null ? (this.tm ?? []).includes(move.tm.id) : false
+	}
+
+	availableAtLevel(level: Level): MoveId[] {
+		return this.start
+			.concat(level.data >= 2 ? this.level2 ?? [] : [])
+			.concat(level.data >= 6 ? this.level6 ?? [] : [])
+			.concat(level.data >= 10 ? this.level10 ?? [] : [])
+			.concat(level.data >= 14 ? this.level14 ?? [] : [])
+			.concat(level.data >= 18 ? this.level18 ?? [] : [])
 	}
 }

@@ -3,6 +3,8 @@ import "vitest"
 
 interface CustomMatchers<R = unknown> {
 	toEqualData: (expected: unknown) => R
+	toSubset: (expected: unknown[]) => R
+  	toExclude: (expected: unknown[]) => R;
 }
 
 declare module "vitest" {

@@ -17,6 +17,7 @@
 	import { goto } from "$app/navigation"
 	import { Url } from "$lib/site/url"
 	import { error } from "$lib/site/errors"
+	import { MovesStore } from "$lib/moves/store"
 
 	const NONE = ""
 	const canonList = SpeciesStore.canonList()
@@ -146,7 +147,7 @@
 	const useEncounter = async () => {
 		saving = true
 		try {
-			const created = await Encounter.saveToTrainers(encounter)
+			const created = await Encounter.saveToTrainers(encounter, $MovesStore)
 			goto(Url.trainers(created.info.readKey))
 		} catch (e) {
 			error.show(e.message)

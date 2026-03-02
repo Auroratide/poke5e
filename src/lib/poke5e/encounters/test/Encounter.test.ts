@@ -5,6 +5,8 @@ import rawPokemonData from "./sample-pool.json"
 import { PokemonSpecies } from "$lib/poke5e/species"
 import type { SinglePokemonJsonResponse } from "$lib/poke5e/species/PokemonJsonResponse"
 import { provider } from "$lib/trainers/data"
+import { stubMovePool } from "$lib/pokemon/move-pool/test/stubs"
+import { stubMove } from "$lib/moves/test/stubs-2"
 
 describe("totalExp", () => {
 	test("empty encounter", () => {
@@ -149,10 +151,19 @@ describe("generate", () => {
 })
 
 describe("saveToTrainers", () => {
+	const moves = [
+		stubMove({
+			id: "tackle",
+		}),
+		stubMove({
+			id: "quick-attack",
+		}),
+	]
+
 	test("no pokemon in encounter", async () => {
 		const encounter = Encounter.createEmpty()
 
-		await expect(Encounter.saveToTrainers(encounter)).rejects.toThrow()
+		await expect(Encounter.saveToTrainers(encounter, moves)).rejects.toThrow()
 	})
 
 	test("encounter has pokemon", async () => {
@@ -174,7 +185,7 @@ describe("saveToTrainers", () => {
 			} ],
 		}
 
-		const result = await Encounter.saveToTrainers(encounter)
+		const result = await Encounter.saveToTrainers(encounter, moves)
 
 		expect(result.pokemon.length).toEqual(3)
 
@@ -194,7 +205,7 @@ describe("saveToTrainers", () => {
 			} ],
 		}
 
-		await expect(Encounter.saveToTrainers(encounter)).rejects.toThrow()
+		await expect(Encounter.saveToTrainers(encounter, moves)).rejects.toThrow()
 	})
 
 	test("a pokemon is upleveled", async () => {
@@ -211,7 +222,7 @@ describe("saveToTrainers", () => {
 			} ],
 		}
 
-		const result = await Encounter.saveToTrainers(encounter)
+		const result = await Encounter.saveToTrainers(encounter, moves)
 
 		expect(result.pokemon[0].hp.max).toBeGreaterThan(16)
 	})
@@ -230,8 +241,33 @@ describe("saveToTrainers", () => {
 			} ],
 		}
 
-		const result = await Encounter.saveToTrainers(encounter)
+		const result = await Encounter.saveToTrainers(encounter, moves)
 
 		expect(result.pokemon[0].hp.max).toBeLessThan(40)
+	})
+
+	test("pokemon have moves too", async () => {
+		const encounter: Encounter = {
+			pokemon: [ {
+				data: stubPokemonSpecies({
+					name: "Eevee",
+					sr: 1,
+					moves: stubMovePool({
+						start: ["tackle"],
+						level2: ["quick-attack"],
+					}),
+				}),
+				level: 3,
+				count: 1,
+			} ],
+		}
+
+		const result = await Encounter.saveToTrainers(encounter, moves)
+
+		const fromStorage = await provider.getTrainer(result.info.readKey)
+		const eevee = fromStorage.pokemon[0]
+
+		expect(eevee.moves).toHaveLength(2)
+		expect(eevee.moves.map((it) => it.moveId)).toSubset(["tackle", "quick-attack"])
 	})
 })

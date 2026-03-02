@@ -58,5 +58,53 @@ expect.extend({
 				`expected data not to be equal (DataClass instances compared by their .data property)\nReceived: ${this.utils.printReceived(transformedReceived)}\nExpected: ${this.utils.printExpected(transformedExpected)}`,
 		}
 	},
+
+	/**
+ 	 * Passes if every element in `actual` is found in `expected`.
+	 * i.e. actual is a subset of expected.
+	 */
+	toSubset(actual: unknown[], expected: unknown[]) {
+		if (!Array.isArray(actual)) {
+			return {
+				pass: false,
+				message: () => `expected value to be an array, but got ${typeof actual}`,
+			}
+		}
+
+		const outliers = actual.filter((item) => !expected.includes(item))
+		const pass = outliers.length === 0
+
+		return {
+			pass,
+			message: () =>
+				pass
+					? `expected array not to be a subset of [${expected}]`
+					: `expected all elements to be in [${expected}], but found unexpected: [${outliers}]`,
+		}
+	},
+
+	/**
+	 * Passes if no element in `actual` is found in `expected`.
+	 * i.e. actual and expected are disjoint.
+	 */
+	toExclude(actual: unknown[], expected: unknown[]) {
+		if (!Array.isArray(actual)) {
+			return {
+				pass: false,
+				message: () => `expected value to be an array, but got ${typeof actual}`,
+			}
+		}
+
+		const found = actual.filter((item) => expected.includes(item))
+		const pass = found.length === 0
+
+		return {
+			pass,
+			message: () =>
+				pass
+					? `expected array not to exclude [${expected}], but none were found`
+					: `expected no elements from [${expected}], but found: [${found}]`,
+		}
+	},
 })
 

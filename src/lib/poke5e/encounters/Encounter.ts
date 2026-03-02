@@ -1,8 +1,10 @@
 import { DynamicLeveler, Level } from "$lib/dnd/level"
+import { MovesetGenerator } from "$lib/moves/MovesetGenerator"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import { provider as trainerProvider, type TrainerData } from "$lib/trainers/data"
-import type { WithWriteKey } from "$lib/trainers/types"
+import type { LearnedMove, WithWriteKey } from "$lib/trainers/types"
 import { experienceAwarded } from "../experience"
+import type { Move } from "$lib/moves/Move"
 
 export type EncounterActor = {
 	data: PokemonSpecies,
@@ -123,7 +125,7 @@ export const Encounter = {
 		return encounter
 	},
 
-	async saveToTrainers(encounter: Encounter): Promise<TrainerData & WithWriteKey> {
+	async saveToTrainers(encounter: Encounter, possibleMoves: Move[]): Promise<TrainerData & WithWriteKey> {
 		if (Encounter.count(encounter) === 0) {
 			throw new Error("Cannot save an empty encounter. Please add pokémon to it.")
 		}
@@ -141,12 +143,15 @@ export const Encounter = {
 			return await Promise.all(Array(pokemon.count).fill(0).map(async () => {
 				const added = await trainerProvider.addPokemonToTeam(trainer.writeKey, trainer.info.id, pokemon.data)
 
+				const targetLevel = new Level(pokemon.level)
+
+				// STATS
 				const withAdjustedStats = DynamicLeveler.adjustStats({
 					hp: pokemon.data.hp,
 					level: new Level(pokemon.data.minLevel),
 					hitDice: pokemon.data.hitDice,
 					attributes: pokemon.data.attributes,
-				}, new Level(pokemon.level))
+				}, targetLevel)
 	
 				added.level = withAdjustedStats.level
 				added.hp.current = withAdjustedStats.hp
@@ -154,6 +159,24 @@ export const Encounter = {
 				added.attributes = withAdjustedStats.attributes
 	
 				await trainerProvider.updatePokemon(trainer.writeKey, added)
+
+				// MOVES
+				const chosenMoves = MovesetGenerator.chooseMoves(pokemon.data.moves, targetLevel)
+				const learnedMoves: LearnedMove[] = chosenMoves.map((it) => {
+					const matchingMove = possibleMoves?.find((moveData) => it === moveData.id)
+					return {
+						id: "",
+						moveId: it,
+						pp: {
+							current: matchingMove?.pp ?? 5,
+							max: matchingMove?.pp ?? 5,
+						},
+						notes: "",
+					}
+				})
+
+				const updatedMoveset = await trainerProvider.updateMoveset(trainer.writeKey, added.id, learnedMoves)
+				added.moves = updatedMoveset
 
 				return added
 			}))
@@ -164,3 +187,5 @@ export const Encounter = {
 		return trainer
 	},
 } as const
+
+
