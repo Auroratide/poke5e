@@ -21371,7 +21371,7 @@
 			],
 			"size": "large",
 			"sr": 14,
-			"minLevel": 10,
+			"minLevel": 8,
 			"eggGroup": [
 				"monster"
 			],
