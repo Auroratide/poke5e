@@ -1,4 +1,4 @@
-import { Level } from "$lib/dnd/level"
+import { DynamicLeveler, Level } from "$lib/dnd/level"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import { provider as trainerProvider, type TrainerData } from "$lib/trainers/data"
 import type { WithWriteKey } from "$lib/trainers/types"
@@ -140,8 +140,18 @@ export const Encounter = {
 		const pokemon = (await Promise.all(encounter.pokemon.map(async (pokemon) => {
 			return await Promise.all(Array(pokemon.count).fill(0).map(async () => {
 				const added = await trainerProvider.addPokemonToTeam(trainer.writeKey, trainer.info.id, pokemon.data)
+
+				const withAdjustedStats = DynamicLeveler.adjustStats({
+					hp: pokemon.data.hp,
+					level: new Level(pokemon.data.minLevel),
+					hitDice: pokemon.data.hitDice,
+					attributes: pokemon.data.attributes,
+				}, new Level(pokemon.level))
 	
-				added.level = new Level(pokemon.level)
+				added.level = withAdjustedStats.level
+				added.hp.current = withAdjustedStats.hp
+				added.hp.max = withAdjustedStats.hp
+				added.attributes = withAdjustedStats.attributes
 	
 				await trainerProvider.updatePokemon(trainer.writeKey, added)
 

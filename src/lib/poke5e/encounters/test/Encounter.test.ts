@@ -196,4 +196,42 @@ describe("saveToTrainers", () => {
 
 		await expect(Encounter.saveToTrainers(encounter)).rejects.toThrow()
 	})
+
+	test("a pokemon is upleveled", async () => {
+		const encounter: Encounter = {
+			pokemon: [ {
+				data: stubPokemonSpecies({
+					name: "Eevee",
+					minLevel: 1,
+					hp: 16,
+					hitDice: "d8",
+				}),
+				level: 10,
+				count: 1,
+			} ],
+		}
+
+		const result = await Encounter.saveToTrainers(encounter)
+
+		expect(result.pokemon[0].hp.max).toBeGreaterThan(16)
+	})
+
+	test("a pokemon is downleveled", async () => {
+		const encounter: Encounter = {
+			pokemon: [ {
+				data: stubPokemonSpecies({
+					name: "Umbreon",
+					minLevel: 5,
+					hp: 40,
+					hitDice: "d10",
+				}),
+				level: 1,
+				count: 1,
+			} ],
+		}
+
+		const result = await Encounter.saveToTrainers(encounter)
+
+		expect(result.pokemon[0].hp.max).toBeLessThan(40)
+	})
 })

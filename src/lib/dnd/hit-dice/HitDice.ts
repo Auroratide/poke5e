@@ -11,4 +11,6 @@ export class HitDice extends DataClass<HitDiceSize> {
 	}
 
 	sizeAsInt = (): number => parseInt(this.data.slice(1))
+
+	averageValue = (): number => Math.ceil(0.5 + this.sizeAsInt() / 2)
 }

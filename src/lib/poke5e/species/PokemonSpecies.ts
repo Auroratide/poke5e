@@ -56,6 +56,7 @@ export class PokemonSpecies extends DataClass<{
 	get size(): CreatureSize { return this.data.size }
 	get gender(): GenderRatio { return new GenderRatio(this.data.gender) }
 	get sr(): SpeciesRating { return new SpeciesRating(this.data.sr) }
+	get hp(): number { return this.data.hp }
 	get minLevel(): number { return this.data.minLevel }
 	get eggGroups(): EggGroup { return new EggGroup(this.data.eggGroups) }
 	get hitDice(): HitDice { return new HitDice(this.data.hitDice) }

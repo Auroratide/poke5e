@@ -158,8 +158,8 @@
 	$: saveEncounterIssues = Encounter.count(encounter) === 0
 		? "Add Pokémon to this encounter to save it."
 		: Encounter.count(encounter) > ENCOUNTER_SIZE_LIMIT
-		? `Reduce the number of Pokémon in this encounter to ${ENCOUNTER_SIZE_LIMIT} or less to save it.`
-		: undefined
+			? `Reduce the number of Pokémon in this encounter to ${ENCOUNTER_SIZE_LIMIT} or less to save it.`
+			: undefined
 </script>
 
 <Page theme="forest">
