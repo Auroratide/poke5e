@@ -9624,7 +9624,7 @@
 			"duration": "instantaneous",
 			"range": "30ft",
 			"description": [
-				"You unleash a wave of force of unknown power at a creature in range. Make a ranged attack on a creature, doing 1d10 + MOVE damage of a random type. Roll a d20 to determine which type of damage is dealt.",
+				"You unleash a wave of force of unknown power at a creature in range. Make a ranged attack on a creature, on a hit doing 1d10 + MOVE damage of a random type. Roll a d20 to determine which type of damage is dealt.",
 				{
 					"type": "table",
 					"headers": [

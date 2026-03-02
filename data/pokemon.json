@@ -16530,14 +16530,6 @@
 				{
 					"type": "hover",
 					"value": 30
-				},
-				{
-					"id": "neutralizing-gas",
-					"hidden": false
-				},
-				{
-					"id": "stench",
-					"hidden": true
 				}
 			],
 			"attributes": {
@@ -16559,6 +16551,14 @@
 				{
 					"id": "levitate",
 					"hidden": false
+				},
+				{
+					"id": "neutralizing-gas",
+					"hidden": false
+				},
+				{
+					"id": "stench",
+					"hidden": true
 				}
 			],
 			"moves": {
@@ -21371,7 +21371,7 @@
 			],
 			"size": "large",
 			"sr": 14,
-			"minLevel": 10,
+			"minLevel": 8,
 			"eggGroup": [
 				"monster"
 			],
@@ -131189,6 +131189,14 @@
 				{
 					"id": "neutralizing-gas",
 					"hidden": false
+				},
+				{
+					"id": "neutralizing-gas",
+					"hidden": false
+				},
+				{
+					"id": "misty-surge",
+					"hidden": true
 				}
 			],
 			"moves": {
