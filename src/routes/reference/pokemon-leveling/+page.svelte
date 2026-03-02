@@ -1,5 +1,5 @@
 <script>
-	import { experienceAwarded, experienceAwareded2018 } from "$lib/poke5e/experience"
+	import { experienceAwarded2024, experienceAwareded2018 } from "$lib/poke5e/experience"
 	import { FlatDl } from "$lib/ui/elements"
 	import { rulesVersion } from "$lib/site/rules-version"
 	import ReferencePage from "../ReferencePage.svelte"
@@ -8,7 +8,7 @@
 	import ExperienceTable from "./ExperienceTable.svelte"
 	import ExperienceTool from "./ExperienceTool.svelte"
 
-	$: expFormula = $rulesVersion === "2018" ? experienceAwareded2018 : experienceAwarded
+	$: expFormula = $rulesVersion === "2018" ? experienceAwareded2018 : experienceAwarded2024
 </script>
 
 <ReferencePage title="Pokémon Leveling">

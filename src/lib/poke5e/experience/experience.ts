@@ -1,3 +1,6 @@
+import { get } from "svelte/store"
+import { rulesVersion } from "$lib/site/rules-version"
+
 export const ExperienceNeededPerLevel = [
 	0,
 	200,
@@ -34,7 +37,7 @@ export function experienceNeededUntilLevelUp(exp: number, currentLevel: number):
 	return Math.max(0, experienceNeededAtLevel(currentLevel + 1) - exp)
 }
 
-export function experienceAwarded(level: number, sr: number): number {
+export function experienceAwarded2024(level: number, sr: number): number {
 	return 200 * level * sr
 }
 
@@ -66,4 +69,8 @@ export function experienceAwareded2018(level: number, sr: number): number | null
 
 	const srIndex = sr < 1 ? Math.log2(sr) + 3 : sr + 2
 	return EXPERIENCE_MATRIX_2018[level - 1][srIndex]
+}
+
+export function experienceAwarded(level: number, sr: number): number {
+	return (get(rulesVersion) === "2018" ? experienceAwareded2018 : experienceAwarded2024)(level, sr)
 }
