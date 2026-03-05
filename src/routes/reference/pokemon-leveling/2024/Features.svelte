@@ -2,6 +2,9 @@
 	import { Url } from "$lib/site/url"
 </script>
 
+<h3>Starting Moves</h3>
+<p>At its minimum level, a Pokémon may know up to four of its Starting Moves.</p>
+
 <h3>New Moves</h3>
 <p>Pokémon cannot know more than 4 moves at one time. Every time your Pokémon levels up, you may replace any one move it knows with any of the moves listed on its stat block at its level or lower. At levels 2, 6, 10, 14, and 18, your Pokémon gains access to new moves.</p>
 <p>After evolving, a Pokémon retains all the moves it currently knows, even if its known moves are no longer listed on the evolved form's stat block. However, when switching a move upon level up, it may not learn a move from its previous evolutionary forms; only moves from its current form may be learned.</p>
