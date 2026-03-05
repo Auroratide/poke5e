@@ -138,6 +138,32 @@
 	--skin-status-asleep: oklch(80% 0.105 247);
 	--skin-status-text: oklch(0% 0 0);
 
+	--skin-forest-bg: oklch(0.4206 0.1039 147.99);
+	--skin-jungle-bg: oklch(0.4645 0.1337 143.04);
+	--skin-woodland-bg: oklch(0.4803 0.0682 138.46);
+	--skin-field-bg: oklch(0.5323 0.1273 134.96);
+	--skin-grassland-bg: oklch(0.5363 0.1224 127.17);
+	--skin-city-bg: oklch(0.4153 0.0265 285.19);
+	--skin-industrial-bg: oklch(0.4209 0.0333 66.71);
+	--skin-volcano-bg: oklch(0.4139 0.151388 33.3365);
+	--skin-cave-bg: oklch(0.2688 0.0329 305.78);
+	--skin-mountain-bg: oklch(0.4735 0.0256 285.38);
+	--skin-desert-bg: oklch(0.5184 0.0994 72.5);
+	--skin-badland-bg: oklch(0.4263 0.0996 45.01);
+	--skin-pond-bg: oklch(0.4712 0.0935 161.36);
+	--skin-lake-bg: oklch(0.4025 0.0959 251.5);
+	--skin-river-bg: oklch(0.4531 0.1019 246.28);
+	--skin-riverside-bg: oklch(0.4791 0.0758 167.89);
+	--skin-beach-bg: oklch(0.5409 0.1041 84.45);
+	--skin-ocean-bg: oklch(0.3791 0.1105 251.08);
+	--skin-reef-bg: oklch(0.4779 0.081571 194.769);
+	--skin-polar-sea-bg: oklch(0.449 0.074 240.39);
+	--skin-abyss-bg: oklch(0.1866 0.0535 279.88);
+	--skin-swamp-bg: oklch(0.3835 0.0742 125.25);
+	--skin-glacier-bg: oklch(0.4617 0.0712 233.45);
+	--skin-tundra-bg: oklch(0.4494 0.0457 230.78);
+	--skin-ruin-bg: oklch(0.4175 0.0522 83.68);
+
 	--red-hsl: 355 72% 53%;
 	--red-main: hsl(355 72% 53%);
     --red-dark: hsl(355 66% 45%);

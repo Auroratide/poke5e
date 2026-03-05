@@ -1,12 +1,12 @@
 <script lang="ts">
-	import type { PokeType } from "$lib/pokemon/types"
-
-	export let color: PokeType | undefined = undefined
+	export let color: string | undefined = undefined
 	export let width: "auto" | "full" = "auto"
+
+	$: hasIcon = $$slots.icon
 </script>
 
-<span class="tag" style:--color="var(--skin-{color}-bg)" class:full-width={width === "full"}>
-	{#if $$slots.icon}
+<span class="tag" style:--color="var(--skin-{color}-bg)" class:full-width={width === "full"} class:has-icon={hasIcon}>
+	{#if hasIcon}
 		<span class="icon" aria-hidden="true">
 			<slot name="icon"></slot>
 		</span>
@@ -46,9 +46,13 @@
 		flex: 1;
 		display: flex;
 		align-items: center;
-		background: var(--skin-bg);
+		background: var(--color);
 		padding-inline: 0.375em;
 		padding-block: 0.0625em;
 		font-weight: bold;
+	}
+
+	.has-icon .name {
+		background: var(--skin-bg);
 	}
 </style>

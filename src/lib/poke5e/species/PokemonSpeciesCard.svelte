@@ -16,6 +16,7 @@
 	import { EvolutionInfo, EvolutionStore } from "$lib/pokemon/evolution"
 	import { SpeciesFormsInfo } from "$lib/poke5e/forms"
 	import { m } from "$lib/site/i18n"
+	import { BiomeTags } from "../habitat"
 
 	export let value: PokemonSpecies
 	$: hasImage = value.media.data.values.normalPortrait != null
@@ -123,6 +124,15 @@
 			{/if}
 		</FlatDl>
 	</section>
+	{#if (value.habitat?.biomes ?? []).length > 0}
+		<section>
+			<h2>{m.otherInfo()}</h2>
+			<FlatDl>
+				<dt>{m.biomes()}</dt>
+				<dd><BiomeTags values={value.habitat?.biomes ?? []} /></dd>
+			</FlatDl>
+		</section>
+	{/if}
 	{#if isNotBlank(value.data.notes)}
 		<section>
 			<h2>Notes</h2>
