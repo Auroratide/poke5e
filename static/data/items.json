@@ -1593,7 +1593,7 @@
 			"type": "held item",
 			"cost": 2000,
 			"description": [
-				"This item has 10 charges. If the holder is a poison-type Pokémon, they may use a bonus action to use a charge, healing HP equal to their proficiency bonus.",
+				"This item has 10 charges. If the holder is a poison-type Pokémon, they may use a bonus action to use a charge, healing HP equal to their proficiency bonus. It recovers its charges at dawn each day.",
 				"If the holder is not a poison-type Pokémon, they take 1d6 poison damage at the end of each of their turns."
 			],
 			"media": {
