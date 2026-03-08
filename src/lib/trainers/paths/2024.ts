@@ -62,7 +62,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 		},
 		level5: {
 			name: "Retention",
-			description: ["The Extra Move feat now costs one ASI point instead of two at levels 4, 8, 12, 16, or 20. If any of your Pokémon already has this feature, they may gain one ASI at this time."],
+			description: ["The Extra Move feat now costs one ASI point instead of two at levels 4, 8, 12, 16, or 20. If any of your Pokémon already has this feature, they may gain one ASI point at this time."],
 		},
 		level9: {
 			name: "Cheerleader",
@@ -274,7 +274,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 		},
 		level9: {
 			name: "Body",
-			description: ["You have trained your Pokémon to focus deep within themselves to unleash their full potential. At level 9, all of your Pokémon have access to two of their abilities (if two are available). In addition, the Tireless feat now costs one ASI point instead of two at levels 4, 8, 12, 16, or 20. If any of your Pokémon already has this feature, they may gain one ASI at this time."],
+			description: ["You have trained your Pokémon to focus deep within themselves to unleash their full potential. At level 9, all of your Pokémon have access to two of their abilities (if two are available). In addition, the Tireless feat now costs one ASI point instead of two at levels 4, 8, 12, 16, or 20. If any of your Pokémon already has this feature, they may gain one ASI point at this time."],
 		},
 		level15: {
 			name: "Spirit",
