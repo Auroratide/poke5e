@@ -815,7 +815,7 @@
 			"id": "black-sludge",
 			"name": "Lodo Negro",
 			"description": [
-				"Este objeto tiene 10 cargas. Si el portador es un Pokémon de tipo Veneno, puede usar una acción adicional para gastar una carga y recuperar una cantidad de puntos de golpe igual a su bonificador por competencia.",
+				"Este objeto tiene 10 cargas. Si el portador es un Pokémon de tipo Veneno, puede usar una acción adicional para gastar una carga y recuperar una cantidad de puntos de golpe igual a su bonificador por competencia. Recupera sus cargas al amanecer.",
 				"Si el portador no es de tipo Veneno, recibe 1d6 de daño de tipo Veneno al final de cada uno de sus turnos."
 			]
 		},
