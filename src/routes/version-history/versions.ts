@@ -14,6 +14,15 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.10.3",
+		description: [
+			"<strong>Pokémon</strong>: Biomes now shown on pokémon stat blocks.",
+			"<strong>Items</strong>: Black Sludge now recovers its charges.",
+			"<strong>Reference</strong>: Peak Power may be used to take a Feat.",
+			"<strong>Bugfix</strong>: Misdreavus does not need Spite as an egg move since it has it as a starting move.",
+			"Errors now emit an ID which when reported can be used to help support identify issues.",
+		],
+	}, {
 		name: "v1.10.2",
 		description: [
 			"<strong>Bugfix</strong>: Encounter tool now generates upleveled pokémon with HP values for that level.",
