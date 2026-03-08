@@ -1229,6 +1229,10 @@ test("no direct access allowed", async () => {
 	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
 		supabase.schema("private").from("fakemon").select()
 	)
+
+	await expectError(UNAUTHORIZED_SCHEMA, async (supabase) =>
+		supabase.schema("private").from("errors").select()
+	)
 })
 
 test("uploading files", async () => {
@@ -1280,6 +1284,20 @@ test("uploading files", async () => {
 	const { data: deleteOldKeyResult } = await supabase.storage.from("trainer_avatars").remove([avatarFilename])
 
 	expect(deleteOldKeyResult?.length).toEqual(1)
+})
+
+test("reporting errors", async () => {
+	const {
+		ret_id: errorId
+	} = await call<{
+		ret_id: string
+	}>("report_error", {
+		_device_id: "AUTOMATED_TEST",
+		_action: "running the test",
+		_message: "test message",
+	})
+
+	expect(errorId).toBeDefined()
 })
 
 export const Iris = () => ({

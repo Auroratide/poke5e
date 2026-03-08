@@ -980,6 +980,225 @@ test("updating fakemon", async () => {
 	})
 })
 
+test("updating fakemon evolution lines", async () => {
+	const {
+		ret_id: drakeonId,
+		ret_read_key: drakeonReadKey,
+		ret_write_key: drakeonWriteKey
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_fakemon", Drakeon())
+
+	const drakeonFkey = `F.${drakeonReadKey}`
+
+	const {
+		ret_id: ascendeonId,
+		ret_read_key: ascendeonReadKey,
+		ret_write_key: ascendeonWriteKey
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_fakemon", {
+		...Drakeon(),
+		_species_name: "Ascendeon",
+		_type: ["Normal"],
+	})
+
+	const ascendeonFkey = `F.${ascendeonReadKey}`
+
+	const drakeonEvoId = await call("add_fakemon_evolution", {
+		_from_id: "eevee",
+		_from_write_key: null,
+		_to_id: drakeonFkey,
+		_to_write_key: drakeonWriteKey,
+		_conditions: JSON.stringify([ {
+			type: "level",
+			value: 8,
+		} ]),
+		_effects: JSON.stringify([ {
+			type: "asi",
+			value: 10,
+		} ]),
+	})
+
+	const ascendeonEvoId = await call("add_fakemon_evolution", {
+		_from_id: drakeonFkey,
+		_from_write_key: drakeonWriteKey,
+		_to_id: ascendeonFkey,
+		_to_write_key: ascendeonWriteKey,
+		_conditions: JSON.stringify([ {
+			type: "level",
+			value: 15,
+		} ]),
+		_effects: JSON.stringify([ {
+			type: "asi",
+			value: 6,
+		} ]),
+	})
+
+	// Check we can get fakemon evolutions
+	const drakeonEvolutions = await callAll<any>("get_fakemon_evolutions", {
+		_fakemon_id: drakeonFkey,
+	})
+
+	expect(drakeonEvolutions.length).toEqual(2)
+	const eeveeToDrakeon = drakeonEvolutions[0]
+	const drakeonToAscendeon = drakeonEvolutions[1]
+	expect(eeveeToDrakeon.from_id).toEqual("eevee")
+	expect(eeveeToDrakeon.to_id).toEqual(drakeonFkey)
+	expect(eeveeToDrakeon.from_write_key).toBeUndefined()
+	expect(eeveeToDrakeon.to_write_key).toBeUndefined()
+	expect(JSON.parse(eeveeToDrakeon.conditions)).toEqual([ {
+		type: "level",
+		value: 8,
+	} ])
+	expect(JSON.parse(eeveeToDrakeon.effects)).toEqual([ {
+		type: "asi",
+		value: 10,
+	} ])
+	expect(drakeonToAscendeon.from_id).toEqual(drakeonFkey)
+	expect(drakeonToAscendeon.to_id).toEqual(ascendeonFkey)
+
+	const ascendeonEvolutions = await callAll<any>("get_fakemon_evolutions", {
+		_fakemon_id: ascendeonFkey,
+	})
+
+	expect(ascendeonEvolutions.length).toEqual(1)
+	const drakeonToAscendeon2 = ascendeonEvolutions[0]
+	expect(drakeonToAscendeon2.from_id).toEqual(drakeonFkey)
+	expect(drakeonToAscendeon2.to_id).toEqual(ascendeonFkey)
+
+	// We should not be allowed to duplicate evolutions
+	await expect(call("add_fakemon_evolution", {
+		_from_id: drakeonFkey,
+		_from_write_key: drakeonWriteKey,
+		_to_id: ascendeonFkey,
+		_to_write_key: ascendeonWriteKey,
+		_conditions: JSON.stringify([ {
+			type: "level",
+			value: 15,
+		} ]),
+		_effects: JSON.stringify([ {
+			type: "asi",
+			value: 6,
+		} ]),
+	})).rejects.toThrow()
+
+	// Cannot add without correct write key
+	await expect(call("add_fakemon_evolution", {
+		_from_id: "eevee",
+		_from_write_key: null,
+		_to_id: ascendeonFkey,
+		_to_write_key: "INCORRECTKEY",
+		_conditions: JSON.stringify([ {
+			type: "level",
+			value: 15,
+		} ]),
+		_effects: JSON.stringify([ {
+			type: "asi",
+			value: 6,
+		} ]),
+	})).rejects.toThrow()
+
+	// updating an evolution
+	await call("update_fakemon_evolution", {
+		_id: drakeonEvoId,
+		_original_from_write_key: null,
+		_original_to_write_key: drakeonWriteKey,
+		_from_id: "eevee",
+		_from_write_key: null,
+		_to_id: drakeonFkey,
+		_to_write_key: drakeonWriteKey,
+		_conditions: JSON.stringify([ {
+			type: "level",
+			value: 10,
+		} ]),
+		_effects: JSON.stringify([ {
+			type: "asi",
+			value: 8,
+		} ]),
+	})
+
+	await call("update_fakemon_evolution", {
+		_id: ascendeonEvoId,
+		_original_from_write_key: drakeonWriteKey,
+		_original_to_write_key: ascendeonWriteKey,
+		_from_id: "eevee",
+		_from_write_key: null,
+		_to_id: ascendeonFkey,
+		_to_write_key: ascendeonWriteKey,
+		_conditions: JSON.stringify([ {
+			type: "level",
+			value: 10,
+		} ]),
+		_effects: JSON.stringify([ {
+			type: "asi",
+			value: 8,
+		} ]),
+	})
+
+	const drakeonEvolutionsAfterUpdate = await callAll<any>("get_fakemon_evolutions", {
+		_fakemon_id: drakeonFkey,
+	})
+
+	expect(drakeonEvolutionsAfterUpdate.length).toEqual(1)
+	const eeveeToDrakeonAfterUpdate = drakeonEvolutionsAfterUpdate[0]
+	expect(JSON.parse(eeveeToDrakeonAfterUpdate.conditions)).toEqual([ {
+		type: "level",
+		value: 10,
+	} ])
+	expect(JSON.parse(eeveeToDrakeonAfterUpdate.effects)).toEqual([ {
+		type: "asi",
+		value: 8,
+	} ])
+
+	const ascendeonEvolutionsAfterUpdate = await callAll<any>("get_fakemon_evolutions", {
+		_fakemon_id: ascendeonFkey,
+	})
+
+	expect(ascendeonEvolutionsAfterUpdate.length).toEqual(1)
+	const eeveeToAscendeonAfterUpdate = ascendeonEvolutionsAfterUpdate[0]
+	expect(eeveeToAscendeonAfterUpdate.from_id).toEqual("eevee")
+	expect(eeveeToAscendeonAfterUpdate.to_id).toEqual(ascendeonFkey)
+
+	// Cannot update without correct write keys
+	const cannotUpdateResult = await call("update_fakemon_evolution", {
+		_id: drakeonEvoId,
+		_original_from_write_key: null,
+		_original_to_write_key: "INCORRECTKEY",
+		_from_id: "eevee",
+		_from_write_key: null,
+		_to_id: drakeonFkey,
+		_to_write_key: drakeonWriteKey,
+		_conditions: JSON.stringify([ {
+			type: "level",
+			value: 20,
+		} ]),
+		_effects: JSON.stringify([ {
+			type: "asi",
+			value: 100,
+		} ]),
+	})
+
+	expect(cannotUpdateResult).toEqual(0)
+
+	// removing an evolution
+	await call("remove_fakemon_evolution", {
+		_id: ascendeonEvoId,
+		_original_from_write_key: null,
+		_original_to_write_key: ascendeonWriteKey,
+	})
+
+	const ascendeonEvolutionsAfterRemoval = await callAll<any>("get_fakemon_evolutions", {
+		_fakemon_id: ascendeonFkey,
+	})
+
+	expect(ascendeonEvolutionsAfterRemoval.length).toEqual(0)
+})
+
 test("no direct access allowed", async () => {
 	const UNAUTHORIZED_SCHEMA = "PGRST106"
 
