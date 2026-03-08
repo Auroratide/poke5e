@@ -150,7 +150,7 @@
 			const created = await Encounter.saveToTrainers(encounter, $MovesStore)
 			goto(Url.trainers(created.info.readKey))
 		} catch (e) {
-			error.show(e.message)
+			error.show("Encounter.saveToTrainers", e)
 		} finally {
 			saving = false
 		}

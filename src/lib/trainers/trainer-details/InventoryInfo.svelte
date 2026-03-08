@@ -31,7 +31,7 @@
 	const onChangeQuantity = (e: CustomEvent<UpdateQuantityDetail>) => {
 		const originalItem = inventory.find((it) => it.id === e.detail.id)
 		if (originalItem == null) {
-			error.show("Could not update item quantity. It seems to be missing?")
+			error.show("InventoryInfo.onChangeQuantity", new Error("Could not update item quantity. It seems to be missing?"))
 			return
 		}
 

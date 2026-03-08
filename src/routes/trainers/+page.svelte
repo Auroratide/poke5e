@@ -50,7 +50,7 @@
 					return t?.verifyAccess(accessKey)
 				}).then((verified) => {
 					if (!verified) {
-						error.show("Trainer transfer failed: Access Key was invalid.")
+						error.show("verifyAccess", new Error("Trainer transfer failed: Access Key was invalid."))
 					}
 				}).finally(() => {
 					const url = new URL($page.url)

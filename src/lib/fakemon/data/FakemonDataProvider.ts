@@ -1,5 +1,7 @@
 import type { SpeciesMedia, UploadedMedia } from "$lib/poke5e/species/media"
+import { DetailedError } from "$lib/site/errors"
 import type { ImageInputValue } from "$lib/ui/forms"
+import type { PostgrestError } from "@supabase/supabase-js"
 import type { DraftFakemon, Fakemon } from "../Fakemon"
 
 /**
@@ -21,9 +23,9 @@ export interface FakemonDataProvider {
 	verifyWriteKey(fakemon: Fakemon, writeKey: WriteKey): Promise<boolean>
 }
 
-export class FakemonDataProviderError extends Error {
-	constructor(message: string) {
-		super(message)
+export class FakemonDataProviderError extends DetailedError {
+	constructor(message: string, readonly diagnostics?: PostgrestError) {
+		super(message, diagnostics ? `Code: ${diagnostics.code}; ${diagnostics.message}` : "")
 	}
 }
 

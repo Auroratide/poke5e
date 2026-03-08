@@ -97,12 +97,12 @@ const createStore = () => {
 							if (options.updateAvatar != null) {
 								if (options.updateAvatar.type === "new") {
 									avatar = await provider.updateTrainerAvatar(data.writeKey, options.updateAvatar.value, info.avatar).catch((e) => {
-										error.show(e.message)
+										error.show("updateTrainerAvatar", e)
 										throw e
 									})
 								} else {
 									await provider.removeTrainerAvatar(data.writeKey, info.avatar).catch((e) => {
-										error.show(e.message)
+										error.show("removeTrainerAvatar", e)
 										throw e
 									})
 									avatar = null
@@ -123,14 +123,14 @@ const createStore = () => {
 
 								return provider.updateTrainerInfo(data.writeKey, info).then(() => {}).catch((e) => {
 									updateStore(original)
-									error.show(e.message)
+									error.show("updateTrainerInfo", e)
 									throw e
 								})
 							} else {
 								return provider.updateTrainerInfo(data.writeKey, info).then(() => {
 									updateStore(info)
 								}).catch((e: Error) => {
-									error.show(e.message)
+									error.show("updateTrainerInfo", e)
 									throw e
 								})
 							}
@@ -145,7 +145,7 @@ const createStore = () => {
 									},
 								}))
 							}).catch((e: Error) => {
-								error.show(e.message)
+								error.show("updateTrainerInventory", e)
 								throw e
 							})
 						},
@@ -169,14 +169,14 @@ const createStore = () => {
 
 								return provider.updateTrainerItem(data.writeKey, info).then(() => {}).catch((e) => {
 									updateStore(original)
-									error.show(e.message)
+									error.show("updateTrainerItem", e)
 									throw e
 								})
 							} else {
 								return provider.updateTrainerItem(data.writeKey, info).then(() => {
 									updateStore(info)
 								}).catch((e: Error) => {
-									error.show(e.message)
+									error.show("updateTrainerItem", e)
 									throw e
 								})
 							}
@@ -191,7 +191,7 @@ const createStore = () => {
 									},
 								}))
 							}).catch((e: Error) => {
-								error.show(e.message)
+								error.show("updateTrainerFeats", e)
 								throw e
 							})
 						},
@@ -203,7 +203,7 @@ const createStore = () => {
 									return rest
 								})
 							}).catch((e: Error) => {
-								error.show(e.message)
+								error.show("deleteTrainer", e)
 								throw e
 							})
 						},
@@ -214,12 +214,12 @@ const createStore = () => {
 							if (options.updateAvatar != null) {
 								if (options.updateAvatar.type === "new") {
 									avatar = await provider.updatePokemonAvatar(data.writeKey, info, options.updateAvatar.value).catch((e) => {
-										error.show(e.message)
+										error.show("updatePokemonAvatar", e)
 										throw e
 									})
 								} else {
 									await provider.removePokemonAvatar(data.writeKey, info).catch((e) => {
-										error.show(e.message)
+										error.show("removePokemonAvatar", e)
 										throw e
 									})
 									avatar = null
@@ -247,14 +247,14 @@ const createStore = () => {
 
 								return provider.updatePokemon(data.writeKey, info).then(() => {}).catch((e) => {
 									updateStore(original)
-									error.show(e.message)
+									error.show("updatePokemon", e)
 									throw e
 								})
 							} else {
 								return provider.updatePokemon(data.writeKey, info).then(() => {
 									updateStore(info)
 								}).catch((e: Error) => {
-									error.show(e.message)
+									error.show("updatePokemon", e)
 									throw e
 								})
 							}
@@ -275,7 +275,7 @@ const createStore = () => {
 									}
 								})
 							}).catch((e: Error) => {
-								error.show(e.message)
+								error.show("updateMoveset", e)
 								throw e
 							})
 						},
@@ -304,14 +304,14 @@ const createStore = () => {
 
 								return provider.updateOneMove(data.writeKey, info).then(() => {}).catch((e) => {
 									updateStore(original)
-									error.show(e.message)
+									error.show("updateOneMove", e)
 									throw e
 								})
 							} else {
 								return provider.updateOneMove(data.writeKey, info).then(() => {
 									updateStore(info)
 								}).catch((e: Error) => {
-									error.show(e.message)
+									error.show("updateOneMove", e)
 									throw e
 								})
 							}
@@ -332,7 +332,7 @@ const createStore = () => {
 									}
 								})
 							}).catch((e: Error) => {
-								error.show(e.message)
+								error.show("updateAllHeldItems", e)
 								throw e
 							})
 						},
@@ -352,7 +352,7 @@ const createStore = () => {
 									}
 								})
 							}).catch((e: Error) => {
-								error.show(e.message)
+								error.show("updatePokemonFeats", e)
 								throw e
 							})
 						},
@@ -369,7 +369,7 @@ const createStore = () => {
 
 								return result
 							}).catch((e: Error) => {
-								error.show(e.message)
+								error.show("addPokemonToTeam", e)
 								throw e
 							})
 						},
@@ -384,7 +384,7 @@ const createStore = () => {
 									}
 								})
 							}).catch((e: Error) => {
-								error.show(e.message)
+								error.show("removePokemon", e)
 								throw e
 							})
 						},
@@ -476,6 +476,8 @@ const createStore = () => {
 				storeUpdateOne(result.info.readKey, () => result)
 
 				return result
+			}).catch((e: Error) => {
+				error.show("newTrainer", e)
 			})
 		},
 	}

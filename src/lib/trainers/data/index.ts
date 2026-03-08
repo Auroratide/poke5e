@@ -15,6 +15,8 @@ import { supabase } from "$lib/supabase"
 import type { ChosenFeat } from "$lib/dnd/feats/ChosenFeat"
 import { userAssets } from "$lib/site/user-assets"
 import type { PokemonSpecies } from "$lib/poke5e/species"
+import { DetailedError } from "$lib/site/errors"
+import type { PostgrestError } from "@supabase/supabase-js"
 
 export type TrainerData = {
 	info: Trainer,
@@ -27,14 +29,9 @@ export type StorageResource = {
 	href: string,
 }
 
-export type ErrorDiagnostics = {
-	code?: string,
-	details?: string,
-}
-
-export class TrainerDataProviderError extends Error {
-	constructor(message: string, readonly diagnostics?: ErrorDiagnostics) {
-		super(message + (diagnostics?.code ? ` Code: ${diagnostics.code}` : ""))
+export class TrainerDataProviderError extends DetailedError {
+	constructor(message: string, readonly diagnostics?: PostgrestError) {
+		super(message + (diagnostics?.code ? ` Code: ${diagnostics?.code}` : ""), diagnostics ? `Code: ${diagnostics.code}; ${diagnostics.message}` : "")
 	}
 }
 

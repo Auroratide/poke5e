@@ -40,7 +40,7 @@ export class FakemonStoreUpdater {
 				},
 			}))
 		} catch (e) {
-			error.show(e.message)
+			error.show("FakemonStoreUpdater.info", e)
 			throw e
 		}
 	}

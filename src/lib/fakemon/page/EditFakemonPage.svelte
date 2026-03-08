@@ -64,7 +64,7 @@
 		}).then(() => {
 			goto(Url.fakemon($fakemon.value.data.readKey))
 		}).catch((e: Error) => {
-			error.show(e.message)
+			error.show("$fakemon.update", e)
 			saving = false
 		})
 	}

@@ -102,7 +102,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		}).single<number>()
 
 		if (error) {
-			throw new FakemonDataProviderError("Could not verify fakemon.")
+			throw new FakemonDataProviderError("Could not verify fakemon.", error)
 		}
 
 		if (data > 0) {
@@ -118,9 +118,8 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 	private validateError(message: string, e: PostgrestError | undefined) {
 		if (e) {
-			 
 			console.error(e)
-			throw new FakemonDataProviderError(message)
+			throw new FakemonDataProviderError(message, e)
 		}
 	}
 

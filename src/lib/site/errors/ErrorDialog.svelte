@@ -8,6 +8,9 @@
 	<section>
 		<p><strong>Something went wrong...</strong></p>
 		<p class="font-sm">{$error.message}</p>
+		{#if $error.referenceId}
+			<p class="font-sm">ID: {$error.referenceId}</p>
+		{/if}
 		<p class="font-sm">You can help by <a href="https://github.com/Auroratide/poke5e/issues/new">reporting this error</a>!</p>
 	</section>
 	<button on:click={close} class="close" aria-label="close" title="close">&times;</button>
