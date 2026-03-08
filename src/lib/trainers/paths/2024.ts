@@ -266,7 +266,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 	features: {
 		level2: {
-			description: ["You and your Pokémon are connected by way of more than just trainer and beast. Your past has trained you to be in complete control of your Mind, Body, and Spirit, and you transfer that aura to your Pokémon. When you choose this path at level 2, your Max SR you can control increases by 1."],
+			description: ["You and your Pokémon are connected by way of more than just trainer and beast. Your past has trained you to be in complete control of your Mind, Body, and Spirit, and you transfer that aura to your Pokémon. When you choose this path at level 2, your Max SR you can control permanently increases by 1."],
 		},
 		level5: {
 			name: "Mind",
