@@ -46,7 +46,7 @@
 		flex: 1;
 		display: flex;
 		align-items: center;
-		background: var(--color);
+		background: var(--color, var(--skin-bg));
 		padding-inline: 0.375em;
 		padding-block: 0.0625em;
 		font-weight: bold;
