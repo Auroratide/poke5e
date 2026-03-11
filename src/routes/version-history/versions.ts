@@ -14,6 +14,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.10.4",
+		description: [
+			"<strong>Pokémon</strong>: Egg moves added for the following Pokémon: Tauros, Rufflet, Grookey, Scorbunny, Sobble, Skwovet, Rookidee, Applin, Eiscue, Indeedee, Morpeko, Bloodmoon Ursaluna.",
+			"<strong>Pokémon</strong>: Adjusted evolution requirement for Gimmighoul to be only optionally grindy.",
+			"<strong>Items</strong>: Added Gimmighoul Coin as an item.",
+		],
+	}, {
 		name: "v1.10.3",
 		description: [
 			"<strong>Pokémon</strong>: Biomes now shown on pokémon stat blocks.",
