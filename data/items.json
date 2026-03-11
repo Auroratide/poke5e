@@ -3751,6 +3751,18 @@
 			}
 		},
 		{
+			"id": "gimmighoul-coin",
+			"name": "Gimmighoul Coin",
+			"type": "evolution",
+			"cost": 100,
+			"description": [
+				"Wild Gimmighoul (Roaming) Pokémon carry 1d4 Gimmighoul Coins. Wild Gimmighoul (Chest) Pokèmon carry 1d20 + 10 Gimmighoul Coins."
+			],
+			"media": {
+				"sprite": "/assets/items/gimmighoul-coin.png"
+			}
+		},
+		{
 			"id": "trainers-license",
 			"name": "Trainer's License",
 			"type": "trainer gear",

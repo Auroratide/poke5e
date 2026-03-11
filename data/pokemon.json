@@ -1,4 +1,4 @@
-﻿{
+{
 	"items": [
 		{
 			"id": "bulbasaur",
@@ -19371,6 +19371,10 @@
 					233,
 					248,
 					251
+				],
+				"egg": [
+					"curse",
+					"endeavor"
 				]
 			},
 			"media": {
@@ -97752,6 +97756,10 @@
 					226,
 					232,
 					243
+				],
+				"egg": [
+					"rock-smash",
+					"roost"
 				]
 			},
 			"media": {
@@ -133224,6 +133232,15 @@
 					220,
 					223,
 					233
+				],
+				"egg": [
+					"fake-out",
+					"growth",
+					"hammer-arm",
+					"leech-seed",
+					"nature-power",
+					"strength",
+					"worry-seed"
 				]
 			},
 			"media": {
@@ -133640,6 +133657,12 @@
 					224,
 					232,
 					235
+				],
+				"egg": [
+					"high-jump-kick",
+					"sand-attack",
+					"sucker-punch",
+					"super-fang"
 				]
 			},
 			"media": {
@@ -134043,6 +134066,15 @@
 					222,
 					236,
 					237
+				],
+				"egg": [
+					"aqua-jet",
+					"aqua-ring",
+					"double-team",
+					"fell-stinger",
+					"haze",
+					"ice-shard",
+					"mist"
 				]
 			},
 			"media": {
@@ -134445,6 +134477,12 @@
 					232,
 					233,
 					251
+				],
+				"egg": [
+					"belly-drum",
+					"defense-curl",
+					"last-resort",
+					"rollout"
 				]
 			},
 			"media": {
@@ -134717,6 +134755,15 @@
 					205,
 					209,
 					226
+				],
+				"egg": [
+					"defog",
+					"rock-smash",
+					"roost",
+					"sand-attack",
+					"sky-attack",
+					"spite",
+					"tailwind"
 				]
 			},
 			"media": {
@@ -137051,6 +137098,12 @@
 					45,
 					101,
 					205
+				],
+				"egg": [
+					"defense-curl",
+					"recycle",
+					"rollout",
+					"sucker-punch"
 				]
 			},
 			"media": {
@@ -141982,6 +142035,14 @@
 					232,
 					236,
 					243
+				],
+				"egg": [
+					"aqua-ring",
+					"belly-drum",
+					"double-edge",
+					"head-smash",
+					"icicle-crash",
+					"soak"
 				]
 			},
 			"media": {
@@ -142116,6 +142177,11 @@
 					210,
 					245,
 					255
+				],
+				"egg": [
+					"extrasensory",
+					"fake-out",
+					"psych-up"
 				]
 			},
 			"media": {
@@ -142254,6 +142320,12 @@
 					210,
 					245,
 					255
+				],
+				"egg": [
+					"fake-out",
+					"heal-pulse",
+					"psych-up",
+					"psycho-shift"
 				]
 			},
 			"media": {
@@ -142395,6 +142467,16 @@
 					232,
 					233,
 					239
+				],
+				"egg": [
+					"charge",
+					"fake-out",
+					"parting-shot",
+					"quash",
+					"rapid-spin",
+					"super-fang",
+					"swagger",
+					"tickle"
 				]
 			},
 			"media": {
@@ -149054,6 +149136,9 @@
 					221,
 					232,
 					252
+				],
+				"egg": [
+					"moonlight"
 				]
 			},
 			"media": {
@@ -149954,6 +150039,10 @@
 					233,
 					248,
 					251
+				],
+				"egg": [
+					"curse",
+					"endeavor"
 				]
 			},
 			"media": {
@@ -150114,6 +150203,10 @@
 					233,
 					235,
 					251
+				],
+				"egg": [
+					"curse",
+					"endeavor"
 				]
 			},
 			"media": {
@@ -150273,6 +150366,10 @@
 					233,
 					236,
 					251
+				],
+				"egg": [
+					"curse",
+					"endeavor"
 				]
 			},
 			"media": {

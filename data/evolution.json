@@ -9736,11 +9736,11 @@
 			"conditions": [
 				{
 					"type": "level",
-					"value": 5
+					"value": 10
 				},
 				{
 					"type": "special",
-					"value": "when this Pokémon has collected 999 gimmighoul coins (chest form starts with 50+1d100, roaming form starts with 1d20)"
+					"value": "OR earlier than level 10 if given ₽9,999 to consume"
 				}
 			],
 			"effects": [
@@ -9757,11 +9757,11 @@
 			"conditions": [
 				{
 					"type": "level",
-					"value": 5
+					"value": 10
 				},
 				{
 					"type": "special",
-					"value": "when this Pokémon has collected 999 gimmighoul coins (chest form starts with 50+1d100, roaming form starts with 1d20)"
+					"value": "OR earlier than level 10 if given ₽9,999 to consume"
 				}
 			],
 			"effects": [
