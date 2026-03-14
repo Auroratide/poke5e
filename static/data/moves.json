@@ -2066,6 +2066,9 @@
 				"type": [
 					"ground"
 				]
+			},
+			"attack": {
+				"scope": "melee"
 			}
 		},
 		{
