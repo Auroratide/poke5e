@@ -14,6 +14,15 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.10.5",
+		description: [
+			"<strong>Pokémon</strong>: Added Therian Forms and Primal Forms.",
+			"<strong>Items</strong>: Added Blue Orb and Red Orb.",
+			"<strong>Reference</strong>: Buff AC Up Feat to +2 AC.",
+			"French translations for Pokémon abilities added.",
+			"Image assets are now self-served rather than borrowed from a third-party repository.",
+		],
+	}, {
 		name: "v1.10.4",
 		description: [
 			"<strong>Pokémon</strong>: Egg moves added for the following Pokémon: Tauros, Rufflet, Grookey, Scorbunny, Sobble, Skwovet, Rookidee, Applin, Eiscue, Indeedee, Morpeko, Bloodmoon Ursaluna.",
