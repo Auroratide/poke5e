@@ -40,7 +40,7 @@ export const PokemonFeats: Feat[] = [ {
 }, {
 	name: "AC Up",
 	category: "General",
-	description: "Your Pokémon’s AC increases by 1. This bonus is included through a Pokémon’s evolutions.",
+	description: "Your Pokémon’s AC increases by 2. This bonus is included through a Pokémon’s evolutions.",
 }, {
 	name: "Ambidextrous",
 	category: "General",
