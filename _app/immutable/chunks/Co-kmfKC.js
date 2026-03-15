@@ -1,1 +1,0 @@
-import{g as n}from"./BxlXVsHr.js";const t=()=>"SR",l=()=>"RE",i=(r={},e={})=>(e.locale??n())==="en"?t():l(),s=()=>"Min Level",c=()=>"Nivel Mínimo",p=(r={},e={})=>(e.locale??n())==="en"?s():c(),u=()=>"Egg Group",a=()=>"Grupo Huevo",m=(r={},e={})=>(e.locale??n())==="en"?u():a();export{m as e,p as m,i as s};

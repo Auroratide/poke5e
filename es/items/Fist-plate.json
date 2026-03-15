@@ -1,1 +1,1 @@
-{"id":"Fist-plate","name":"Tabla Fuerte","type":"held item","cost":null,"description":["Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Lucha."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fist-plate.png"}}
+{"id":"Fist-plate","name":"Tabla Fuerte","type":"held item","cost":null,"description":["Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Lucha."],"media":{"sprite":"/assets/items/Fist-plate/sprite.png"}}

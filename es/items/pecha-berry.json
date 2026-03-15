@@ -1,1 +1,1 @@
-{"id":"pecha-berry","name":"Baya Meloc","type":"berry","cost":200,"description":["Se consume para curar el envenenamiento. Puede consumirse como reacción al quedar envenenado o gravemente envenenado."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pecha-berry.png"}}
+{"id":"pecha-berry","name":"Baya Meloc","type":"berry","cost":200,"description":["Se consume para curar el envenenamiento. Puede consumirse como reacción al quedar envenenado o gravemente envenenado."],"media":{"sprite":"/assets/items/pecha-berry/sprite.png"}}

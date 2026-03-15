@@ -1,1 +1,1 @@
-{"id":"bug-memory-disc","name":"Disco Bicho","type":"held item","cost":2000,"description":["Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Bicho."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bug-memory.png"}}
+{"id":"bug-memory-disc","name":"Disco Bicho","type":"held item","cost":2000,"description":["Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Bicho."],"media":{"sprite":"/assets/items/bug-memory-disc/sprite.png"}}

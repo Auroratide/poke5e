@@ -247,6 +247,11 @@
       "name": "Defiant",
       "description": "While this Pokémon is suffering from a negative status effect or stat change imposed by an opponent, it gains +2 to all attack rolls."
     },
+		{
+      "id": "desolate-land",
+      "name": "Desolate Land",
+      "description": "For as long as this Pokémon is engaged in combat, the weather is Extremely Harsh Sunlight and cannot be changed. Extremely Harsh Sunlight is the same as Harsh Sunlight, with the additional effect that Water-type damage is nullified. If Primordial Sea is also active, then the weather is simultaneously Extremely Harsh Sunlight and Heavy Rain."
+    },
     {
       "id": "disguise",
       "name": "Disguise",
@@ -1013,6 +1018,11 @@
       "id": "pressure",
       "name": "Pressure",
       "description": "Any move targeting this Pokémon directly (non-area of effect moves) reduces its PP by two when activated."
+    },
+		{
+      "id": "primordial-sea",
+      "name": "Primordial Sea",
+      "description": "For as long as this Pokémon is engaged in combat, the weather is Heavy Rain and cannot be changed. Heavy Rain is the same as Rain, with the additional effect that Fire-type damage is nullified. If Desolate Land is also active, then the weather is simultaneously Extremely Harsh Sunlight and Heavy Rain."
     },
     {
       "id": "prism-armor",

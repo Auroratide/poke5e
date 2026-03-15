@@ -2066,6 +2066,9 @@
 				"type": [
 					"ground"
 				]
+			},
+			"attack": {
+				"scope": "melee"
 			}
 		},
 		{
@@ -10989,6 +10992,9 @@
 				"type": [
 					"steel"
 				]
+			},
+			"attack": {
+				"scope": "melee"
 			}
 		},
 		{

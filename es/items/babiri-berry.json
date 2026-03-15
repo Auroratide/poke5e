@@ -1,1 +1,1 @@
-{"id":"babiri-berry","name":"Baya Baribá","type":"berry","cost":200,"description":["Puede consumirse como reacción al recibir daño de tipo Acero. En su lugar, solo se recibe la mitad de ese daño."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/babiri-berry.png"}}
+{"id":"babiri-berry","name":"Baya Baribá","type":"berry","cost":200,"description":["Puede consumirse como reacción al recibir daño de tipo Acero. En su lugar, solo se recibe la mitad de ese daño."],"media":{"sprite":"/assets/items/babiri-berry/sprite.png"}}

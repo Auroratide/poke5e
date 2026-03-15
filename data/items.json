@@ -9,7 +9,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poke-ball.png"
+				"sprite": "/assets/items/poke-ball/sprite.png"
 			}
 		},
 		{
@@ -21,7 +21,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 5."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/great-ball.png"
+				"sprite": "/assets/items/great-ball/sprite.png"
 			}
 		},
 		{
@@ -33,7 +33,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 10."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ultra-ball.png"
+				"sprite": "/assets/items/ultra-ball/sprite.png"
 			}
 		},
 		{
@@ -45,7 +45,7 @@
 				"Lets a trainer automatically succeed on a Capture Roll to catch a Pokémon."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/master-ball.png"
+				"sprite": "/assets/items/master-ball/sprite.png"
 			}
 		},
 		{
@@ -57,7 +57,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Nature skill modifier."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/safari-ball.png"
+				"sprite": "/assets/items/safari-ball/sprite.png"
 			}
 		},
 		{
@@ -69,7 +69,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Can throw as a reaction to a fleeing Pokémon."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fast-ball.png"
+				"sprite": "/assets/items/fast-ball/sprite.png"
 			}
 		},
 		{
@@ -81,7 +81,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 5 if your trainer level is higher than the target Pokémon's level."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/level-ball.png"
+				"sprite": "/assets/items/level-ball/sprite.png"
 			}
 		},
 		{
@@ -93,7 +93,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 if used while fishing."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lure-ball.png"
+				"sprite": "/assets/items/lure-ball/sprite.png"
 			}
 		},
 		{
@@ -105,7 +105,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 if the target Pokémon is size medium or larger."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heavy-ball.png"
+				"sprite": "/assets/items/heavy-ball/sprite.png"
 			}
 		},
 		{
@@ -117,7 +117,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by twice your active Pokémon's Charisma modifier."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/love-ball.png"
+				"sprite": "/assets/items/love-ball/sprite.png"
 			}
 		},
 		{
@@ -129,7 +129,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Persuasion skill modifier."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/friend-ball.png"
+				"sprite": "/assets/items/friend-ball/sprite.png"
 			}
 		},
 		{
@@ -141,7 +141,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against Pokémon that can evolve using a Moon Stone."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moon-ball.png"
+				"sprite": "/assets/items/moon-ball/sprite.png"
 			}
 		},
 		{
@@ -153,7 +153,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Athletics skill modifier."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sport-ball.png"
+				"sprite": "/assets/items/sport-ball/sprite.png"
 			}
 		},
 		{
@@ -165,7 +165,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against Water- or Bug-type Pokémon."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/net-ball.png"
+				"sprite": "/assets/items/net-ball/sprite.png"
 			}
 		},
 		{
@@ -177,7 +177,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 while underwater."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dive-ball.png"
+				"sprite": "/assets/items/dive-ball/sprite.png"
 			}
 		},
 		{
@@ -189,7 +189,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 5 if target Pokémon is level 5 or lower."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/nest-ball.png"
+				"sprite": "/assets/items/nest-ball/sprite.png"
 			}
 		},
 		{
@@ -201,7 +201,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against a species you have already caught before."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/repeat-ball.png"
+				"sprite": "/assets/items/repeat-ball/sprite.png"
 			}
 		},
 		{
@@ -213,7 +213,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. When you use the Throw Pokéball action, you may instead hold the ball and start concentrating. At a later round, when you throw the ball, reduce the capture DC by 1 for each turn spent concentrating, to a max of 10."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/timer-ball.png"
+				"sprite": "/assets/items/timer-ball/sprite.png"
 			}
 		},
 		{
@@ -225,7 +225,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Pokémon residing in a Luxury Ball gain +1 to their max hit dice."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/luxury-ball.png"
+				"sprite": "/assets/items/luxury-ball/sprite.png"
 			}
 		},
 		{
@@ -237,7 +237,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Rare, and often considered a token of class."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/premier-ball.png"
+				"sprite": "/assets/items/premier-ball/sprite.png"
 			}
 		},
 		{
@@ -249,7 +249,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 while at night or in darkness."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-ball.png"
+				"sprite": "/assets/items/dusk-ball/sprite.png"
 			}
 		},
 		{
@@ -261,7 +261,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. When the Pokémon in the Heal Ball spends a hit die during a short rest, it may roll twice and take the higher result."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-ball.png"
+				"sprite": "/assets/items/heal-ball/sprite.png"
 			}
 		},
 		{
@@ -273,7 +273,7 @@
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 15 if used during the first round of combat."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-ball.png"
+				"sprite": "/assets/items/quick-ball/sprite.png"
 			}
 		},
 		{
@@ -285,7 +285,7 @@
 				"Reduce the capture DC by 5 if used on a Pokémon affected by the Sleep condition."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dream-ball.png"
+				"sprite": "/assets/items/dream-ball/sprite.png"
 			}
 		},
 		{
@@ -297,7 +297,7 @@
 				"A trainer may use an action to restore 2d4 + 2 HP to an adjacent Pokémon. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/potion.png"
+				"sprite": "/assets/items/potion/sprite.png"
 			}
 		},
 		{
@@ -309,7 +309,7 @@
 				"A trainer may use an action to restore 3d6 + 6 HP to an adjacent Pokémon. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-potion.png"
+				"sprite": "/assets/items/super-potion/sprite.png"
 			}
 		},
 		{
@@ -321,7 +321,7 @@
 				"A trainer may use an action to restore 4d12 + 10 HP to an adjacent Pokémon. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hyper-potion.png"
+				"sprite": "/assets/items/hyper-potion/sprite.png"
 			}
 		},
 		{
@@ -333,7 +333,7 @@
 				"A trainer may use an action to cure an adjacent Pokémon of the Poisoned or Badly Poisoned conditions. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/antidote.png"
+				"sprite": "/assets/items/antidote/sprite.png"
 			}
 		},
 		{
@@ -345,7 +345,7 @@
 				"A trainer may use an action to cure an adjacent Pokémon of the Burned condition. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/burn-heal.png"
+				"sprite": "/assets/items/burn-heal/sprite.png"
 			}
 		},
 		{
@@ -357,7 +357,7 @@
 				"A trainer may use an action to cure an adjacent Pokémon of the Frozen condition. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-heal.png"
+				"sprite": "/assets/items/ice-heal/sprite.png"
 			}
 		},
 		{
@@ -369,7 +369,7 @@
 				"A trainer may use an action to cure an adjacent Pokémon of the Asleep condition. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/awakening.png"
+				"sprite": "/assets/items/awakening/sprite.png"
 			}
 		},
 		{
@@ -381,7 +381,7 @@
 				"A trainer may use an action to cure an adjacent Pokémon of the Paralysis condition. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/paralyze-heal.png"
+				"sprite": "/assets/items/paralyze-heal/sprite.png"
 			}
 		},
 		{
@@ -393,7 +393,7 @@
 				"A trainer may use an action to administor this medicine to an adjacent Pokémon. 10 minutes after consumption, the Pokémon regains 70 HP. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-potion.png"
+				"sprite": "/assets/items/max-potion/sprite.png"
 			}
 		},
 		{
@@ -405,7 +405,7 @@
 				"A trainer may use an action to cure an adjacent Pokémon of all status conditions, and grants them immunity to all statuses for one round. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-heal.png"
+				"sprite": "/assets/items/full-heal/sprite.png"
 			}
 		},
 		{
@@ -417,7 +417,7 @@
 				"A trainer may use an action to administor this medicine to an adjacent Pokémon. 10 minutes after consumption, the Pokémon regains 70 HP and is cured of all status conditions. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-restore.png"
+				"sprite": "/assets/items/full-restore/sprite.png"
 			}
 		},
 		{
@@ -429,7 +429,7 @@
 				"A trainer may use an action to restore 2d4 + 2 HP to a fainted Pokémon. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revive.png"
+				"sprite": "/assets/items/revive/sprite.png"
 			}
 		},
 		{
@@ -441,7 +441,7 @@
 				"A trainer may use an action to restore 4d12 + 10 HP to a fainted Pokémon. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-revive.png"
+				"sprite": "/assets/items/max-revive/sprite.png"
 			}
 		},
 		{
@@ -453,7 +453,7 @@
 				"When consumed, restores 7 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fresh-water.png"
+				"sprite": "/assets/items/fresh-water/sprite.png"
 			}
 		},
 		{
@@ -465,7 +465,7 @@
 				"When consumed, restores 10 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soda-pop.png"
+				"sprite": "/assets/items/soda-pop/sprite.png"
 			}
 		},
 		{
@@ -477,7 +477,7 @@
 				"When consumed, restores 20 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/berry-juice.png"
+				"sprite": "/assets/items/berry-juice/sprite.png"
 			}
 		},
 		{
@@ -489,7 +489,7 @@
 				"When consumed, restores 30 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lemonade.png"
+				"sprite": "/assets/items/lemonade/sprite.png"
 			}
 		},
 		{
@@ -501,7 +501,7 @@
 				"When consumed, restores 50 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moomoo-milk.png"
+				"sprite": "/assets/items/moomoo-milk/sprite.png"
 			}
 		},
 		{
@@ -513,7 +513,7 @@
 				"A trainer may use an action to restore 3d6 + 6 HP to an adjacent Pokémon. Consumed on use. Most Pokémon dislike Energy Powder, so overuse may result in loss of bond (1/4 chance to lower Bond level by 1)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-powder.png"
+				"sprite": "/assets/items/energy-powder/sprite.png"
 			}
 		},
 		{
@@ -525,7 +525,7 @@
 				"A trainer may use an action to restore 4d12 + 10 HP to an adjacent Pokémon. Consumed on use. Most Pokémon dislike Energy Root, so overuse may result in loss of bond (1/4 chance to lower Bond level by 1)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/energy-root.png"
+				"sprite": "/assets/items/energy-root/sprite.png"
 			}
 		},
 		{
@@ -537,7 +537,7 @@
 				"A trainer may use an action to cure an adjacent Pokémon of all status conditions. Consumed on use. Most Pokémon dislike Heal Powder, so overuse may result in loss of bond (1/4 chance to lower Bond level by 1)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heal-powder.png"
+				"sprite": "/assets/items/heal-powder/sprite.png"
 			}
 		},
 		{
@@ -549,7 +549,7 @@
 				"A trainer may use an action to restore 4d12 + 10 HP to a fainted Pokémon in a Pokéball. Consumed on use. Most Pokémon dislike Revival Herbs, so overuse may result in loss of bond (1/4 chance to lower Bond level by 1)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/revival-herb.png"
+				"sprite": "/assets/items/revival-herb/sprite.png"
 			}
 		},
 		{
@@ -561,7 +561,7 @@
 				"A trainer may use an action to restore 5 PP to a single move of an adjacent Pokémon. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ether.png"
+				"sprite": "/assets/items/ether/sprite.png"
 			}
 		},
 		{
@@ -573,7 +573,7 @@
 				"A trainer may use an action to restore 10 PP to a single moves of an adjacent Pokémon. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-ether.png"
+				"sprite": "/assets/items/max-ether/sprite.png"
 			}
 		},
 		{
@@ -585,7 +585,7 @@
 				"A trainer may use an action to restore 5 PP to all moves of an adjacent Pokémon. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/elixir.png"
+				"sprite": "/assets/items/elixir/sprite.png"
 			}
 		},
 		{
@@ -597,7 +597,7 @@
 				"A trainer may use an action to restore 10 PP to all moves of an adjacent Pokémon. Consumed on use."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/max-elixir.png"
+				"sprite": "/assets/items/max-elixir/sprite.png"
 			}
 		},
 		{
@@ -609,7 +609,7 @@
 				"A trainer may spend 5 minutes to revive up to six fainted Pokémon. Each Pokémon revived this way is restored to half their max HP."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sacred-ash.png"
+				"sprite": "/assets/items/sacred-ash/sprite.png"
 			}
 		},
 		{
@@ -622,7 +622,7 @@
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hp-up.png"
+				"sprite": "/assets/items/hp-up/sprite.png"
 			}
 		},
 		{
@@ -635,7 +635,7 @@
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protein.png"
+				"sprite": "/assets/items/protein/sprite.png"
 			}
 		},
 		{
@@ -648,7 +648,7 @@
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron.png"
+				"sprite": "/assets/items/iron/sprite.png"
 			}
 		},
 		{
@@ -661,7 +661,7 @@
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/carbos.png"
+				"sprite": "/assets/items/carbos/sprite.png"
 			}
 		},
 		{
@@ -674,7 +674,7 @@
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/calcium.png"
+				"sprite": "/assets/items/calcium/sprite.png"
 			}
 		},
 		{
@@ -687,7 +687,7 @@
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zinc.png"
+				"sprite": "/assets/items/zinc/sprite.png"
 			}
 		},
 		{
@@ -700,7 +700,7 @@
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pp-up.png"
+				"sprite": "/assets/items/pp-up/sprite.png"
 			}
 		},
 		{
@@ -712,7 +712,7 @@
 				"When consumed by a Pokémon during a long rest, the Pokémon may switch its non-hidden ability it knows (if two options are available)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ability-capsule.png"
+				"sprite": "/assets/items/ability-capsule/sprite.png"
 			}
 		},
 		{
@@ -724,7 +724,7 @@
 				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon cannot be affected by new status conditions."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/guard-spec.png"
+				"sprite": "/assets/items/guard-spec/sprite.png"
 			}
 		},
 		{
@@ -737,7 +737,7 @@
 				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dire-hit.png"
+				"sprite": "/assets/items/dire-hit/sprite.png"
 			}
 		},
 		{
@@ -749,7 +749,7 @@
 				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to their attack rolls."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-attack.png"
+				"sprite": "/assets/items/x-attack/sprite.png"
 			}
 		},
 		{
@@ -761,7 +761,7 @@
 				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to AC."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-defense.png"
+				"sprite": "/assets/items/x-defense/sprite.png"
 			}
 		},
 		{
@@ -773,7 +773,7 @@
 				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon's movement speed is increased by 10ft."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-speed.png"
+				"sprite": "/assets/items/x-speed/sprite.png"
 			}
 		},
 		{
@@ -785,7 +785,7 @@
 				"A trainer may use an action to administer this to a Pokémon. The Pokémon gains advantage on its next three attack rolls."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-accuracy.png"
+				"sprite": "/assets/items/x-accuracy/sprite.png"
 			}
 		},
 		{
@@ -797,7 +797,7 @@
 				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to its Move DC."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-sp-atk.png"
+				"sprite": "/assets/items/x-sp-atk/sprite.png"
 			}
 		},
 		{
@@ -809,7 +809,7 @@
 				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to saving throws."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/x-sp-def.png"
+				"sprite": "/assets/items/x-sp-def/sprite.png"
 			}
 		},
 		{
@@ -821,7 +821,7 @@
 				"When fed to an Oricorio, it changes form to Oricorio Baile Style."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-nectar.png"
+				"sprite": "/assets/items/red-nectar/sprite.png"
 			}
 		},
 		{
@@ -833,7 +833,7 @@
 				"When fed to an Oricorio, it changes form to Oricorio Pom-Pom Style."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yellow-nectar.png"
+				"sprite": "/assets/items/yellow-nectar/sprite.png"
 			}
 		},
 		{
@@ -845,7 +845,7 @@
 				"When fed to an Oricorio, it changes form to Oricorio Pa'u Style."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pink-nectar.png"
+				"sprite": "/assets/items/pink-nectar/sprite.png"
 			}
 		},
 		{
@@ -857,7 +857,7 @@
 				"When fed to an Oricorio, it changes form to Oricorio Sensu Style."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/purple-nectar.png"
+				"sprite": "/assets/items/purple-nectar/sprite.png"
 			}
 		},
 		{
@@ -949,7 +949,7 @@
 			"cost": 300,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/health-wing.png"
+				"sprite": "/assets/items/health-wing/sprite.png"
 			},
 			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's HP effort by 1."
 		},
@@ -960,7 +960,7 @@
 			"cost": 300,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-wing.png"
+				"sprite": "/assets/items/muscle-wing/sprite.png"
 			},
 			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Attack effort by 1."
 		},
@@ -971,7 +971,7 @@
 			"cost": 300,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/resist-wing.png"
+				"sprite": "/assets/items/resist-wing/sprite.png"
 			},
 			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Defense effort by 1."
 		},
@@ -982,7 +982,7 @@
 			"cost": 300,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/genius-wing.png"
+				"sprite": "/assets/items/genius-wing/sprite.png"
 			},
 			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Special Attack effort by 1."
 		},
@@ -993,7 +993,7 @@
 			"cost": 300,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/clever-wing.png"
+				"sprite": "/assets/items/clever-wing/sprite.png"
 			},
 			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Special Defense effort by 1."
 		},
@@ -1004,7 +1004,7 @@
 			"cost": 300,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/swift-wing.png"
+				"sprite": "/assets/items/swift-wing/sprite.png"
 			},
 			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Speed effort by 1."
 		},
@@ -1047,7 +1047,7 @@
 				"Some Pokémon may consume the power of this stone to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sun-stone.png"
+				"sprite": "/assets/items/sun-stone/sprite.png"
 			}
 		},
 		{
@@ -1059,7 +1059,7 @@
 				"Some Pokémon may consume the power of this stone to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/moon-stone.png"
+				"sprite": "/assets/items/moon-stone/sprite.png"
 			}
 		},
 		{
@@ -1071,7 +1071,7 @@
 				"Some Pokémon may consume the power of this stone to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fire-stone.png"
+				"sprite": "/assets/items/fire-stone/sprite.png"
 			}
 		},
 		{
@@ -1083,7 +1083,7 @@
 				"Some Pokémon may consume the power of this stone to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thunder-stone.png"
+				"sprite": "/assets/items/thunder-stone/sprite.png"
 			}
 		},
 		{
@@ -1095,7 +1095,7 @@
 				"Some Pokémon may consume the power of this stone to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/water-stone.png"
+				"sprite": "/assets/items/water-stone/sprite.png"
 			}
 		},
 		{
@@ -1107,7 +1107,7 @@
 				"Some Pokémon may consume the power of this stone to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leaf-stone.png"
+				"sprite": "/assets/items/leaf-stone/sprite.png"
 			}
 		},
 		{
@@ -1119,7 +1119,7 @@
 				"Some Pokémon may consume the power of this stone to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shiny-stone.png"
+				"sprite": "/assets/items/shiny-stone/sprite.png"
 			}
 		},
 		{
@@ -1131,7 +1131,7 @@
 				"Some Pokémon may consume the power of this stone to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dusk-stone.png"
+				"sprite": "/assets/items/dusk-stone/sprite.png"
 			}
 		},
 		{
@@ -1143,7 +1143,7 @@
 				"Some Pokémon may consume the power of this stone to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dawn-stone.png"
+				"sprite": "/assets/items/dawn-stone/sprite.png"
 			}
 		},
 		{
@@ -1155,7 +1155,7 @@
 				"Some Pokémon may consume the power of this stone to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-stone.png"
+				"sprite": "/assets/items/ice-stone/sprite.png"
 			}
 		},
 		{
@@ -1167,7 +1167,7 @@
 				"Some Pokémon may consume the power of this stone to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oval-stone.png"
+				"sprite": "/assets/items/oval-stone/sprite.png"
 			}
 		},
 		{
@@ -1191,7 +1191,7 @@
 				"Consume to cure paralysis. Can be consumed as a reaction to becoming paralyzed."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cheri-berry.png"
+				"sprite": "/assets/items/cheri-berry/sprite.png"
 			}
 		},
 		{
@@ -1203,7 +1203,7 @@
 				"Consume to cure sleep. Can be consumed as a reaction to becoming asleep."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chesto-berry.png"
+				"sprite": "/assets/items/chesto-berry/sprite.png"
 			}
 		},
 		{
@@ -1215,7 +1215,7 @@
 				"Consume to cure poison. Can be consumed as a reaction to becoming poisoned or badly poisoned."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pecha-berry.png"
+				"sprite": "/assets/items/pecha-berry/sprite.png"
 			}
 		},
 		{
@@ -1227,7 +1227,7 @@
 				"Consume to cure burn. Can be consumed as a reaction to becoming burned."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rawst-berry.png"
+				"sprite": "/assets/items/rawst-berry/sprite.png"
 			}
 		},
 		{
@@ -1239,7 +1239,7 @@
 				"Consume to cure freeze. Can be consumed as a reaction to becoming frozen."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/aspear-berry.png"
+				"sprite": "/assets/items/aspear-berry/sprite.png"
 			}
 		},
 		{
@@ -1251,7 +1251,7 @@
 				"Consume to restore 10 PP to a move. Can be consumed as a reaction to a move reaching 0 PP."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leppa-berry.png"
+				"sprite": "/assets/items/leppa-berry/sprite.png"
 			}
 		},
 		{
@@ -1263,7 +1263,7 @@
 				"Consume to restore 2d4 + 2 HP. Can be consumed as a reaction to dropping below half health."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/oran-berry.png"
+				"sprite": "/assets/items/oran-berry/sprite.png"
 			}
 		},
 		{
@@ -1275,7 +1275,7 @@
 				"Consume to cure confusion. Can be consumed as a reaction to becoming confused."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/persim-berry.png"
+				"sprite": "/assets/items/persim-berry/sprite.png"
 			}
 		},
 		{
@@ -1287,7 +1287,7 @@
 				"Consume to cure any single status condition. Can be consumed as a reaction to becoming being afflicted with a status condition."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lum-berry.png"
+				"sprite": "/assets/items/lum-berry/sprite.png"
 			}
 		},
 		{
@@ -1299,7 +1299,7 @@
 				"Consume to restore 30 HP. Can be consumed as a reaction to dropping below half health."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sitrus-berry.png"
+				"sprite": "/assets/items/sitrus-berry/sprite.png"
 			}
 		},
 		{
@@ -1311,7 +1311,7 @@
 				"Can be consumed as a reaction to taking fire-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/occa-berry.png"
+				"sprite": "/assets/items/occa-berry/sprite.png"
 			}
 		},
 		{
@@ -1323,7 +1323,7 @@
 				"Can be consumed as a reaction to taking water-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/passho-berry.png"
+				"sprite": "/assets/items/passho-berry/sprite.png"
 			}
 		},
 		{
@@ -1335,7 +1335,7 @@
 				"Can be consumed as a reaction to taking electric-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wacan-berry.png"
+				"sprite": "/assets/items/wacan-berry/sprite.png"
 			}
 		},
 		{
@@ -1347,7 +1347,7 @@
 				"Can be consumed as a reaction to taking grass-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rindo-berry.png"
+				"sprite": "/assets/items/rindo-berry/sprite.png"
 			}
 		},
 		{
@@ -1359,7 +1359,7 @@
 				"Can be consumed as a reaction to taking ice-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/yache-berry.png"
+				"sprite": "/assets/items/yache-berry/sprite.png"
 			}
 		},
 		{
@@ -1371,7 +1371,7 @@
 				"Can be consumed as a reaction to taking fighting-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chople-berry.png"
+				"sprite": "/assets/items/chople-berry/sprite.png"
 			}
 		},
 		{
@@ -1383,7 +1383,7 @@
 				"Can be consumed as a reaction to taking poison-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kebia-berry.png"
+				"sprite": "/assets/items/kebia-berry/sprite.png"
 			}
 		},
 		{
@@ -1395,7 +1395,7 @@
 				"Can be consumed as a reaction to taking ground-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shuca-berry.png"
+				"sprite": "/assets/items/shuca-berry/sprite.png"
 			}
 		},
 		{
@@ -1407,7 +1407,7 @@
 				"Can be consumed as a reaction to taking flying-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/coba-berry.png"
+				"sprite": "/assets/items/coba-berry/sprite.png"
 			}
 		},
 		{
@@ -1419,7 +1419,7 @@
 				"Can be consumed as a reaction to taking psychic-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/payapa-berry.png"
+				"sprite": "/assets/items/payapa-berry/sprite.png"
 			}
 		},
 		{
@@ -1431,7 +1431,7 @@
 				"Can be consumed as a reaction to taking bug-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/tanga-berry.png"
+				"sprite": "/assets/items/tanga-berry/sprite.png"
 			}
 		},
 		{
@@ -1443,7 +1443,7 @@
 				"Can be consumed as a reaction to taking rock-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charti-berry.png"
+				"sprite": "/assets/items/charti-berry/sprite.png"
 			}
 		},
 		{
@@ -1455,7 +1455,7 @@
 				"Can be consumed as a reaction to taking ghost-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kasib-berry.png"
+				"sprite": "/assets/items/kasib-berry/sprite.png"
 			}
 		},
 		{
@@ -1467,7 +1467,7 @@
 				"Can be consumed as a reaction to taking dragon-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/haban-berry.png"
+				"sprite": "/assets/items/haban-berry/sprite.png"
 			}
 		},
 		{
@@ -1479,7 +1479,7 @@
 				"Can be consumed as a reaction to taking dark-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/colbur-berry.png"
+				"sprite": "/assets/items/colbur-berry/sprite.png"
 			}
 		},
 		{
@@ -1491,7 +1491,7 @@
 				"Can be consumed as a reaction to taking steel-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/babiri-berry.png"
+				"sprite": "/assets/items/babiri-berry/sprite.png"
 			}
 		},
 		{
@@ -1503,7 +1503,7 @@
 				"Can be consumed as a reaction to taking normal-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chilan-berry.png"
+				"sprite": "/assets/items/chilan-berry/sprite.png"
 			}
 		},
 		{
@@ -1515,7 +1515,7 @@
 				"Can be consumed as a reaction to taking fairy-type damage. You take half that damage instead."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/roseli-berry.png"
+				"sprite": "/assets/items/roseli-berry/sprite.png"
 			}
 		},
 		{
@@ -1535,7 +1535,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/absorb-bulb.png"
+				"sprite": "/assets/items/absorb-bulb/sprite.png"
 			},
 			"_ingameEffect": "Held\n:   When the holder takes water-type damage from a move, its Special Attack rises by one stage and this item is consumed."
 		},
@@ -1549,7 +1549,7 @@
 				"The Air Balloon can be freely repaired during a short rest."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/air-balloon.png"
+				"sprite": "/assets/items/air-balloon/sprite.png"
 			}
 		},
 		{
@@ -1561,7 +1561,7 @@
 				"The holder has +1 to their AC, but may only use damaging moves."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/assault-vest.png"
+				"sprite": "/assets/items/assault-vest/sprite.png"
 			}
 		},
 		{
@@ -1573,7 +1573,7 @@
 				"Moves that simultaneously deal damage to a target and heal the holder restore an additional 1d12 HP to the holder."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/big-root.png"
+				"sprite": "/assets/items/big-root/sprite.png"
 			}
 		},
 		{
@@ -1583,7 +1583,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/binding-band.png"
+				"sprite": "/assets/items/binding-band/sprite.png"
 			},
 			"_ingameEffect": "Held\n:   Moves used by the holder that trap and damage a target for multiple turns (e.g. bind, fire spin) inflict twice their usual per-turn damage."
 		},
@@ -1597,7 +1597,7 @@
 				"If the holder is not a poison-type Pokémon, they take 1d6 poison damage at the end of each of their turns."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-sludge.png"
+				"sprite": "/assets/items/black-sludge/sprite.png"
 			}
 		},
 		{
@@ -1627,7 +1627,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bright-powder.png"
+				"sprite": "/assets/items/bright-powder/sprite.png"
 			},
 			"_ingameEffect": "Held in battle\n:   Moves targeting the holder have 0.9× chance to hit."
 		},
@@ -1638,7 +1638,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/cell-battery.png"
+				"sprite": "/assets/items/cell-battery/sprite.png"
 			},
 			"_ingameEffect": "Held\n:   When the holder takes electric-type damage from a move, its Attack rises by one stage and this item is consumed."
 		},
@@ -1669,7 +1669,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/destiny-knot.png"
+				"sprite": "/assets/items/destiny-knot/sprite.png"
 			},
 			"_ingameEffect": "Held: When the holder becomes Attracted, the Pokémon it is Attracted to becomes Attracted back."
 		},
@@ -1683,7 +1683,7 @@
 				"The Eject Button regains its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/eject-button.png"
+				"sprite": "/assets/items/eject-button/sprite.png"
 			}
 		},
 		{
@@ -1705,7 +1705,7 @@
 				"The holder is prevented from evolving. If the Pokémon holding this is not a final evolutionary form, they take 3 less damage from all damage sources."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/eviolite.png"
+				"sprite": "/assets/items/eviolite/sprite.png"
 			}
 		},
 		{
@@ -1717,7 +1717,7 @@
 				"A Pokémon holding this item receives up to half of the total experience gained in each combat while in the party."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/exp-share.png"
+				"sprite": "/assets/items/exp-share/sprite.png"
 			}
 		},
 		{
@@ -1727,7 +1727,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/expert-belt.png"
+				"sprite": "/assets/items/expert-belt/sprite.png"
 			},
 			"_ingameEffect": "Held: When the holder hits with a super-effective move, its power is raised by 20%."
 		},
@@ -1738,7 +1738,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/float-stone.png"
+				"sprite": "/assets/items/float-stone/sprite.png"
 			},
 			"_ingameEffect": "Held\n:   Holder has 0.5× weight."
 		},
@@ -1751,7 +1751,7 @@
 				"When the holder would become flinched, roll a d20. On a 10 or higher, the holder does not flinch."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-band.png"
+				"sprite": "/assets/items/focus-band/sprite.png"
 			}
 		},
 		{
@@ -1764,7 +1764,7 @@
 				"The Focus Sash regains its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/focus-sash.png"
+				"sprite": "/assets/items/focus-sash/sprite.png"
 			}
 		},
 		{
@@ -1774,7 +1774,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grip-claw.png"
+				"sprite": "/assets/items/grip-claw/sprite.png"
 			},
 			"_ingameEffect": "Held: Increases the duration of the holder's multiturn (2-5 turn) moves by three turns."
 		},
@@ -1797,7 +1797,7 @@
 				"This item has 10 charges. The holder may use a bonus action to use a charge, healing HP equal to their proficiency bonus. It recovers its charges at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/leftovers.png"
+				"sprite": "/assets/items/leftovers/sprite.png"
 			}
 		},
 		{
@@ -1807,7 +1807,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/luminous-moss.png"
+				"sprite": "/assets/items/luminous-moss/sprite.png"
 			},
 			"_ingameEffect": "Held: If the holder is hit by a damaging Water move, it consumes this item and raises its Special Defense by one stage."
 		},
@@ -1820,7 +1820,7 @@
 				"When a target is hit by a melee attack made by the holder, if the attack roll was a natural 19 or 20, the target flinches."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/kings-rock.png"
+				"sprite": "/assets/items/kings-rock/sprite.png"
 			}
 		},
 		{
@@ -1830,7 +1830,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lagging-tail.png"
+				"sprite": "/assets/items/lagging-tail/sprite.png"
 			},
 			"_ingameEffect": "Held: The holder will go last within its move's priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
 		},
@@ -1841,7 +1841,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/light-clay.png"
+				"sprite": "/assets/items/light-clay/sprite.png"
 			},
 			"_ingameEffect": "Held: The holder's Reflect and Light Screen will create effects lasting for eight turns rather than five.  As this item affects the move rather than the barrier itself, the effect is not lost if the holder leaves battle or drops this item."
 		},
@@ -1862,7 +1862,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metronome.png"
+				"sprite": "/assets/items/metronome/sprite.png"
 			},
 			"_ingameEffect": "Held: Each time the holder uses the same move consecutively, its power is increased by another 10% of its original, to a maximum of 100%."
 		},
@@ -1875,7 +1875,7 @@
 				"The holder adds its proficiency bonus to damage it deals from melee attacks (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/muscle-band.png"
+				"sprite": "/assets/items/muscle-band/sprite.png"
 			}
 		},
 		{
@@ -1885,7 +1885,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protective-pads.png"
+				"sprite": "/assets/items/protective-pads/sprite.png"
 			},
 			"_ingameEffect": "Held: Prevents side effects of contact moves used on the holder."
 		},
@@ -1908,7 +1908,7 @@
 				"The holder adds +3 to their initiative rolls."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/quick-claw.png"
+				"sprite": "/assets/items/quick-claw/sprite.png"
 			}
 		},
 		{
@@ -1921,7 +1921,7 @@
 				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-claw.png"
+				"sprite": "/assets/items/razor-claw/sprite.png"
 			}
 		},
 		{
@@ -1931,7 +1931,7 @@
 			"cost": 5000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/razor-fang.png"
+				"sprite": "/assets/items/razor-fang/sprite.png"
 			},
 			"_ingameEffect": "Held: When the holder attacks with most damaging moves, provides an extra 11.7% (30/256) chance for the target to flinch.\nHeld by Gligar: Evolves the holder into Gliscor when it levels up."
 		},
@@ -1942,7 +1942,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/red-card.png"
+				"sprite": "/assets/items/red-card/sprite.png"
 			},
 			"_ingameEffect": "Held\n:   When the holder takes damage directly from a move and does not faint, it switches out for another random, non-fainted Pokémon in its party.\nThis effect does not activate if another effect prevents the holder from switching out."
 		},
@@ -1953,7 +1953,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ring-target.png"
+				"sprite": "/assets/items/ring-target/sprite.png"
 			},
 			"_ingameEffect": "Held\n:   When one of the user's types would render it immune to damage, that type is ignored for damage calculation."
 		},
@@ -1964,7 +1964,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rocky-helmet.png"
+				"sprite": "/assets/items/rocky-helmet/sprite.png"
 			},
 			"_ingameEffect": "Held\n:   When the holder is hit by a contact move, the attacking Pokémon takes 1/6 its max HP in damage."
 		},
@@ -1985,7 +1985,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/safety-goggles.png"
+				"sprite": "/assets/items/safety-goggles/sprite.png"
 			},
 			"_ingameEffect": "Held: Prevents damage from powder moves and the damage from Hail and Sandstorm."
 		},
@@ -1999,7 +1999,7 @@
 				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/scope-lens.png"
+				"sprite": "/assets/items/scope-lens/sprite.png"
 			}
 		},
 		{
@@ -2009,7 +2009,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shed-shell.png"
+				"sprite": "/assets/items/shed-shell/sprite.png"
 			},
 			"_ingameEffect": "Held: The holder is unaffected by any moves or abilities that would prevent it from actively leaving battle."
 		},
@@ -2022,7 +2022,7 @@
 				"When the holder uses a move that damages at least one creature, the holder restores HP equal to its proficiency bonus."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shell-bell.png"
+				"sprite": "/assets/items/shell-bell/sprite.png"
 			}
 		},
 		{
@@ -2034,7 +2034,7 @@
 				"Guarantees a success in an attempt to flee from wild Pokémon battles."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smoke-ball.png"
+				"sprite": "/assets/items/smoke-ball/sprite.png"
 			}
 		},
 		{
@@ -2044,7 +2044,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/snowball.png"
+				"sprite": "/assets/items/snowball/sprite.png"
 			},
 			"_ingameEffect": "Held: If the holder is hit by a damaging Ice move, raises its Attack by one stage."
 		},
@@ -2055,7 +2055,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sticky-barb.png"
+				"sprite": "/assets/items/sticky-barb/sprite.png"
 			},
 			"_ingameEffect": "Held: Damaged the holder for 1/8 its max HP.  When the holder is struck by a contact move, damages the attacker for 1/8 its max HP; if the attacker is not holding an item, it will take this item."
 		},
@@ -2086,7 +2086,7 @@
 			"cost": 1000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/weakness-policy.png"
+				"sprite": "/assets/items/weakness-policy/sprite.png"
 			},
 			"_ingameEffect": "Held: When the holder is hit by a super effective move, its Attack and Special Attack raise by two stages."
 		},
@@ -2099,7 +2099,7 @@
 				"The holder gains +1 to attack rolls."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wide-lens.png"
+				"sprite": "/assets/items/wide-lens/sprite.png"
 			}
 		},
 		{
@@ -2111,7 +2111,7 @@
 				"The holder adds its proficiency bonus to damage it deals from ranged attacks (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wise-glasses.png"
+				"sprite": "/assets/items/wise-glasses/sprite.png"
 			}
 		},
 		{
@@ -2121,7 +2121,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zoom-lens.png"
+				"sprite": "/assets/items/zoom-lens/sprite.png"
 			},
 			"_ingameEffect": "Held: Raises the holder's Accuracy by 20% when it goes last.\nIngame description is incorrect."
 		},
@@ -2134,7 +2134,7 @@
 				"Allows the Pokémon holding this to Mega Evolve. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charizardite-y.png"
+				"sprite": "/assets/items/megalite-stone/sprite.png"
 			}
 		},
 		{
@@ -2146,7 +2146,7 @@
 				"Allows the Pokémon holding this to use a normal-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/normalium-z--held.png"
+				"sprite": "/assets/items/normalium-z/sprite.png"
 			}
 		},
 		{
@@ -2158,7 +2158,7 @@
 				"Allows the Pokémon holding this to use a fighting-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fightinium-z--held.png"
+				"sprite": "/assets/items/fightinium-z/sprite.png"
 			}
 		},
 		{
@@ -2170,7 +2170,7 @@
 				"Allows the Pokémon holding this to use a flying-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flyinium-z--held.png"
+				"sprite": "/assets/items/flyinium-z/sprite.png"
 			}
 		},
 		{
@@ -2182,7 +2182,7 @@
 				"Allows the Pokémon holding this to use a poison-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poisonium-z--held.png"
+				"sprite": "/assets/items/poisonium-z/sprite.png"
 			}
 		},
 		{
@@ -2194,7 +2194,7 @@
 				"Allows the Pokémon holding this to use a ground-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/groundium-z--held.png"
+				"sprite": "/assets/items/groundium-z/sprite.png"
 			}
 		},
 		{
@@ -2206,7 +2206,7 @@
 				"Allows the Pokémon holding this to use a rock-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rockium-z--held.png"
+				"sprite": "/assets/items/rockium-z/sprite.png"
 			}
 		},
 		{
@@ -2218,7 +2218,7 @@
 				"Allows the Pokémon holding this to use a bug-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/buginium-z--held.png"
+				"sprite": "/assets/items/buginium-z/sprite.png"
 			}
 		},
 		{
@@ -2230,7 +2230,7 @@
 				"Allows the Pokémon holding this to use a ghost-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ghostium-z--held.png"
+				"sprite": "/assets/items/ghostium-z/sprite.png"
 			}
 		},
 		{
@@ -2242,7 +2242,7 @@
 				"Allows the Pokémon holding this to use a steel-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/steelium-z--held.png"
+				"sprite": "/assets/items/Steelium-z/sprite.png"
 			}
 		},
 		{
@@ -2254,7 +2254,7 @@
 				"Allows the Pokémon holding this to use a fire-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/firium-z--held.png"
+				"sprite": "/assets/items/firium-z/sprite.png"
 			}
 		},
 		{
@@ -2266,7 +2266,7 @@
 				"Allows the Pokémon holding this to use a water-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/waterium-z--held.png"
+				"sprite": "/assets/items/waterium-z/sprite.png"
 			}
 		},
 		{
@@ -2278,7 +2278,7 @@
 				"Allows the Pokémon holding this to use a grass-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grassium-z--held.png"
+				"sprite": "/assets/items/grassium-z/sprite.png"
 			}
 		},
 		{
@@ -2290,7 +2290,7 @@
 				"Allows the Pokémon holding this to use a electric-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electrium-z--held.png"
+				"sprite": "/assets/items/electrium-z/sprite.png"
 			}
 		},
 		{
@@ -2302,7 +2302,7 @@
 				"Allows the Pokémon holding this to use a psychic-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/psychium-z--held.png"
+				"sprite": "/assets/items/psychium-z/sprite.png"
 			}
 		},
 		{
@@ -2314,7 +2314,7 @@
 				"Allows the Pokémon holding this to use a ice-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/icium-z--held.png"
+				"sprite": "/assets/items/icium-z/sprite.png"
 			}
 		},
 		{
@@ -2326,7 +2326,7 @@
 				"Allows the Pokémon holding this to use a dragon-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragonium-z--held.png"
+				"sprite": "/assets/items/dragonium-z/sprite.png"
 			}
 		},
 		{
@@ -2338,7 +2338,7 @@
 				"Allows the Pokémon holding this to use a dark-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/darkinium-z--held.png"
+				"sprite": "/assets/items/darkinium-z/sprite.png"
 			}
 		},
 		{
@@ -2350,7 +2350,7 @@
 				"Allows the Pokémon holding this to use a fairy-type Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fairium-z--held.png"
+				"sprite": "/assets/items/fairium-z/sprite.png"
 			}
 		},
 		{
@@ -2360,7 +2360,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mental-herb.png"
+				"sprite": "/assets/items/mental-herb/sprite.png"
 			},
 			"_ingameEffect": "Held in battle\n:   When the holder is attracted, it consumes this item to cure the attraction."
 		},
@@ -2381,7 +2381,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/power-herb.png"
+				"sprite": "/assets/items/power-herb/sprite.png"
 			},
 			"_ingameEffect": "Held: Whenever the holder uses a move that requires a turn to charge first (Bounce, Dig, Dive, Fly, Razor Wind, Skull Bash, Sky Attack, or Solarbeam), this item is consumed and the charge is skipped.  Skull Bash still provides a Defense boost."
 		},
@@ -2392,7 +2392,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/white-herb.png"
+				"sprite": "/assets/items/white-herb/sprite.png"
 			},
 			"_ingameEffect": "Held in battle\n:   At the end of each turn, if any of the holder's stats have a negative stat modifier, the holder consumes this item to remove the modifiers from those stats."
 		},
@@ -2403,7 +2403,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-band.png"
+				"sprite": "/assets/items/choice-band/sprite.png"
 			},
 			"_ingameEffect": "Held in battle\n:   Holder has 1.5× its Attack.  When the holder attempts to use a move, all its other moves are disabled until it leaves battle or loses this item.\n\n    The restriction ends even if this item is swapped for another Choice item\nvia trick or switcheroo."
 		},
@@ -2414,7 +2414,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-scarf.png"
+				"sprite": "/assets/items/choice-scarf/sprite.png"
 			},
 			"_ingameEffect": "Held: Increases the holder's Speed by 50%, but restricts it to the first move it uses until it leaves battle or loses this item.  If this item is swapped for another Choice item via Trick or Switcheroo, the holder's restriction is still lifted, but it will again be restricted to the next move it uses.\n(Quirk: If the holder is switched in by U-Turn and it also knows U-Turn, U-Turn becomes its restricted move.)"
 		},
@@ -2425,7 +2425,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/choice-specs.png"
+				"sprite": "/assets/items/choice-specs/sprite.png"
 			},
 			"_ingameEffect": "Held: Increases the holder's Special Attack by 50%, but restricts it to the first move it uses until it leaves battle or loses this item.  If this item is swapped for another Choice item via Trick or Switcheroo, the holder's restriction is still lifted, but it will again be restricted to the next move it uses.\n(Quirk: If the holder is switched in by U-Turn and it also knows U-Turn, U-Turn becomes its restricted move.)"
 		},
@@ -2438,7 +2438,7 @@
 				"The holder adds its proficiency bonus to fighting-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-belt.png"
+				"sprite": "/assets/items/black-belt/sprite.png"
 			}
 		},
 		{
@@ -2450,7 +2450,7 @@
 				"The holder adds its proficiency bonus to dark-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/black-glasses.png"
+				"sprite": "/assets/items/black-glasses/sprite.png"
 			}
 		},
 		{
@@ -2462,7 +2462,7 @@
 				"The holder adds its proficiency bonus to fire-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/charcoal.png"
+				"sprite": "/assets/items/charcoal/sprite.png"
 			}
 		},
 		{
@@ -2474,7 +2474,7 @@
 				"The holder adds its proficiency bonus to dragon-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-fang.png"
+				"sprite": "/assets/items/dragon-fang/sprite.png"
 			}
 		},
 		{
@@ -2498,7 +2498,7 @@
 				"The holder adds its proficiency bonus to rock-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/hard-stone.png"
+				"sprite": "/assets/items/hard-stone/sprite.png"
 			}
 		},
 		{
@@ -2510,7 +2510,7 @@
 				"The holder adds its proficiency bonus to electric-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magnet.png"
+				"sprite": "/assets/items/magnet/sprite.png"
 			}
 		},
 		{
@@ -2522,7 +2522,7 @@
 				"The holder adds its proficiency bonus to steel-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-coat.png"
+				"sprite": "/assets/items/metal-coat/sprite.png"
 			}
 		},
 		{
@@ -2534,7 +2534,7 @@
 				"The holder adds its proficiency bonus to grass-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/miracle-seed.png"
+				"sprite": "/assets/items/miracle-seed/sprite.png"
 			}
 		},
 		{
@@ -2546,7 +2546,7 @@
 				"The holder adds its proficiency bonus to water-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mystic-water.png"
+				"sprite": "/assets/items/mystic-water/sprite.png"
 			}
 		},
 		{
@@ -2558,7 +2558,7 @@
 				"The holder adds its proficiency bonus to ice-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/never-melt-ice.png"
+				"sprite": "/assets/items/never-melt-ice/sprite.png"
 			}
 		},
 		{
@@ -2570,7 +2570,7 @@
 				"The holder adds its proficiency bonus to poison-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poison-barb.png"
+				"sprite": "/assets/items/poison-barb/sprite.png"
 			}
 		},
 		{
@@ -2582,7 +2582,7 @@
 				"The holder adds its proficiency bonus to flying-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sharp-beak.png"
+				"sprite": "/assets/items/sharp-beak/sprite.png"
 			}
 		},
 		{
@@ -2594,7 +2594,7 @@
 				"The holder adds its proficiency bonus to normal-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silk-scarf.png"
+				"sprite": "/assets/items/silk-scarf/sprite.png"
 			}
 		},
 		{
@@ -2606,7 +2606,7 @@
 				"The holder adds its proficiency bonus to bug-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/silver-powder.png"
+				"sprite": "/assets/items/silver-powder/sprite.png"
 			}
 		},
 		{
@@ -2618,7 +2618,7 @@
 				"The holder adds its proficiency bonus to ground-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/soft-sand.png"
+				"sprite": "/assets/items/soft-sand/sprite.png"
 			}
 		},
 		{
@@ -2630,7 +2630,7 @@
 				"The holder adds its proficiency bonus to ghost-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/spell-tag.png"
+				"sprite": "/assets/items/spell-tag/sprite.png"
 			}
 		},
 		{
@@ -2642,7 +2642,7 @@
 				"The holder adds its proficiency bonus to psychic-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/twisted-spoon.png"
+				"sprite": "/assets/items/twisted-spoon/sprite.png"
 			}
 		},
 		{
@@ -2652,7 +2652,7 @@
 			"cost": 5000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/full-incense.png"
+				"sprite": "/assets/items/full-incense/sprite.png"
 			},
 			"_ingameEffect": "Held: The holder will go last within its move's priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
 		},
@@ -2663,7 +2663,7 @@
 			"cost": 5000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lax-incense.png"
+				"sprite": "/assets/items/lax-incense/sprite.png"
 			},
 			"_ingameEffect": "Held: Increases the holder's Evasion by 5%."
 		},
@@ -2674,7 +2674,7 @@
 			"cost": 2000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/odd-incense.png"
+				"sprite": "/assets/items/odd-incense/sprite.png"
 			},
 			"_ingameEffect": "Held: Increases the power of the holder's Psychic moves by 20%."
 		},
@@ -2685,7 +2685,7 @@
 			"cost": 2000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rock-incense.png"
+				"sprite": "/assets/items/rock-incense/sprite.png"
 			},
 			"_ingameEffect": "Held: Increases the power of the holder's Rock moves by 20%."
 		},
@@ -2696,7 +2696,7 @@
 			"cost": 2000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rose-incense.png"
+				"sprite": "/assets/items/rose-incense/sprite.png"
 			},
 			"_ingameEffect": "Held: Increases the power of the holder's Grass moves by 20%."
 		},
@@ -2707,7 +2707,7 @@
 			"cost": 2000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sea-incense.png"
+				"sprite": "/assets/items/sea-incense/sprite.png"
 			},
 			"_ingameEffect": "Held: Increases the power of the holder's Water moves by 20%."
 		},
@@ -2718,7 +2718,7 @@
 			"cost": 2000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/wave-incense.png"
+				"sprite": "/assets/items/wave-incense/sprite.png"
 			},
 			"_ingameEffect": "Held: Increases the power of the holder's Water moves by 20%."
 		},
@@ -2729,7 +2729,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/adrenaline-orb.png"
+				"sprite": "/assets/items/adrenaline-orb/sprite.png"
 			},
 			"_ingameEffect": "Makes wild Pokémon more likely to summon allies.  Held: increases the holder's Speed by one stage when affected by Intimidate."
 		},
@@ -2742,7 +2742,7 @@
 				"At the end of the holder's turn, the holder becomes burned."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-orb.png"
+				"sprite": "/assets/items/flame-orb/sprite.png"
 			}
 		},
 		{
@@ -2752,7 +2752,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron-ball.png"
+				"sprite": "/assets/items/iron-ball/sprite.png"
 			},
 			"_ingameEffect": "Held: Decreases the holder's Speed by 50%.  If the holder is Flying or has Levitate, it takes regular damage from Ground attacks and is suspectible to Spikes and Toxic Spikes."
 		},
@@ -2765,7 +2765,7 @@
 				"The holder adds its proficiency bonus to damage it deals, but takes the same amount of typeless-damage each time."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/life-orb.png"
+				"sprite": "/assets/items/life-orb/sprite.png"
 			}
 		},
 		{
@@ -2777,7 +2777,7 @@
 				"At the end of the holder's turn, the holder becomes badly poisoned."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-orb.png"
+				"sprite": "/assets/items/toxic-orb/sprite.png"
 			}
 		},
 		{
@@ -2789,7 +2789,7 @@
 				"The holder increases the duration of their Rain effects by 3 rounds."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/damp-rock.png"
+				"sprite": "/assets/items/damp-rock/sprite.png"
 			}
 		},
 		{
@@ -2801,7 +2801,7 @@
 				"The holder increases the duration of their Harsh Sunlight effects by 3 rounds."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/heat-rock.png"
+				"sprite": "/assets/items/heat-rock/sprite.png"
 			}
 		},
 		{
@@ -2813,7 +2813,7 @@
 				"The holder increases the duration of their Hail and Snow effects by 3 rounds."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/icy-rock.png"
+				"sprite": "/assets/items/icy-rock/sprite.png"
 			}
 		},
 		{
@@ -2825,7 +2825,7 @@
 				"The holder increases the duration of their Sandstorm effects by 3 rounds."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/smooth-rock.png"
+				"sprite": "/assets/items/smooth-rock/sprite.png"
 			}
 		},
 		{
@@ -2835,7 +2835,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/terrain-extender.png"
+				"sprite": "/assets/items/terrain-extender/sprite.png"
 			},
 			"_ingameEffect": "Held: When the holder changes the Terrain (whether by move or ability), it will last  8 turns instead of 5."
 		},
@@ -2846,7 +2846,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electric-seed.png"
+				"sprite": "/assets/items/electric-seed/sprite.png"
 			},
 			"_ingameEffect": "Held: If the holder enters battle during Electric Terrain, or if Electric Terrain is activated while the holder is in battle, this item is consumed and the holder's Defense raises by one stage."
 		},
@@ -2857,7 +2857,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grassy-seed.png"
+				"sprite": "/assets/items/grassy-seed/sprite.png"
 			},
 			"_ingameEffect": "Held: If the holder enters battle during Grassy Terrain, or if Grassy Terrain is activated while the holder is in battle, this item is consumed and the holder's Defense raises by one stage."
 		},
@@ -2868,7 +2868,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/misty-seed.png"
+				"sprite": "/assets/items/misty-seed/sprite.png"
 			},
 			"_ingameEffect": "Held: If the holder enters battle during Misty Terrain, or if Misty Terrain is activated while the holder is in battle, this item is consumed and the holder's Special Defense raises by one stage."
 		},
@@ -2879,7 +2879,7 @@
 			"cost": 4000,
 			"description": null,
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/psychic-seed.png"
+				"sprite": "/assets/items/psychic-seed/sprite.png"
 			},
 			"_ingameEffect": "Held: If the holder enters battle during Psychic Terrain, or if Psychic Terrain is activated while the holder is in battle, this item is consumed and the holder's Special Defense raises by one stage."
 		},
@@ -2892,7 +2892,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Dragon."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/draco-plate.png"
+				"sprite": "/assets/items/draco-plate/sprite.png"
 			}
 		},
 		{
@@ -2904,7 +2904,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Dark."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dread-plate.png"
+				"sprite": "/assets/items/dread-plate/sprite.png"
 			}
 		},
 		{
@@ -2916,7 +2916,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Earth."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/earth-plate.png"
+				"sprite": "/assets/items/earth-plate/sprite.png"
 			}
 		},
 		{
@@ -2928,7 +2928,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Fighting."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fist-plate.png"
+				"sprite": "/assets/items/Fist-plate/sprite.png"
 			}
 		},
 		{
@@ -2940,7 +2940,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Fire."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flame-plate.png"
+				"sprite": "/assets/items/flame-plate/sprite.png"
 			}
 		},
 		{
@@ -2952,7 +2952,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Ice."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/icicle-plate.png"
+				"sprite": "/assets/items/icicle-plate/sprite.png"
 			}
 		},
 		{
@@ -2964,7 +2964,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Bug."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/insect-plate.png"
+				"sprite": "/assets/items/insect-plate/sprite.png"
 			}
 		},
 		{
@@ -2976,7 +2976,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Steel."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/iron-plate.png"
+				"sprite": "/assets/items/iron-plate/sprite.png"
 			}
 		},
 		{
@@ -2988,7 +2988,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Grass."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/meadow-plate.png"
+				"sprite": "/assets/items/meadow-plate/sprite.png"
 			}
 		},
 		{
@@ -3000,7 +3000,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Psychic."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/mind-plate.png"
+				"sprite": "/assets/items/mind-plate/sprite.png"
 			}
 		},
 		{
@@ -3012,7 +3012,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Fairy."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/pixie-plate.png"
+				"sprite": "/assets/items/pixie-plate/sprite.png"
 			}
 		},
 		{
@@ -3024,7 +3024,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Flying."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sky-plate.png"
+				"sprite": "/assets/items/sky-plate/sprite.png"
 			}
 		},
 		{
@@ -3036,7 +3036,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Water."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/splash-plate.png"
+				"sprite": "/assets/items/splash-plate/sprite.png"
 			}
 		},
 		{
@@ -3048,7 +3048,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Ghost."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/spooky-plate.png"
+				"sprite": "/assets/items/spooky-plate/sprite.png"
 			}
 		},
 		{
@@ -3060,7 +3060,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Rock."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/stone-plate.png"
+				"sprite": "/assets/items/stone-plate/sprite.png"
 			}
 		},
 		{
@@ -3072,7 +3072,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Poison."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/toxic-plate.png"
+				"sprite": "/assets/items/toxic-plate/sprite.png"
 			}
 		},
 		{
@@ -3084,7 +3084,7 @@
 				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Electric."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/zap-plate.png"
+				"sprite": "/assets/items/zap-plate/sprite.png"
 			}
 		},
 		{
@@ -3096,7 +3096,7 @@
 				"While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom)."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dna-splicers.png"
+				"sprite": "/assets/items/dna-splicer/sprite.png"
 			}
 		},
 		{
@@ -3108,7 +3108,7 @@
 				"When held by a Clamperl, its AC is increased by 1."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/deep-sea-scale.png"
+				"sprite": "/assets/items/deep-sea-scale/sprite.png"
 			}
 		},
 		{
@@ -3120,7 +3120,7 @@
 				"When held by a Clamperl, its STAB is increased by 1."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/deep-sea-tooth.png"
+				"sprite": "/assets/items/deep-sea-tooth/sprite.png"
 			}
 		},
 		{
@@ -3132,7 +3132,7 @@
 				"When held by a Shaymin, the Shaymin may use its action to change between its Land and Sky forms."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/gracidea.png"
+				"sprite": "/assets/items/gracidea-flower/sprite.png"
 			}
 		},
 		{
@@ -3144,7 +3144,7 @@
 				"When held by a Giratina, the Giratina may use its action to change between its Altered and Origin forms. Its Dragon- and Ghost-type moves have double STAB."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/griseous-orb.png"
+				"sprite": "/assets/items/griseous-orb/sprite.png"
 			}
 		},
 		{
@@ -3157,7 +3157,7 @@
 				"Most of the time, this means attacks can critical on a natural 18, 19, or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 17, 18, 19, or 20."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/stick.png"
+				"sprite": "/assets/items/leek/sprite.png"
 			}
 		},
 		{
@@ -3169,7 +3169,7 @@
 				"When held by a Pikachu, raises its MOVE power modifier by +1."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/light-ball.png"
+				"sprite": "/assets/items/light-ball/sprite.png"
 			}
 		},
 		{
@@ -3182,7 +3182,7 @@
 				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/lucky-punch.png"
+				"sprite": "/assets/items/lucky-punch/sprite.png"
 			}
 		},
 		{
@@ -3194,7 +3194,7 @@
 				"When held by a Ditto, its CON score increases by +3."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/metal-powder.png"
+				"sprite": "/assets/items/metal-powder/sprite.png"
 			}
 		},
 		{
@@ -3230,7 +3230,7 @@
 				"A trainer may use their action to unconfine a nearby Hoopa, changing it from its Confined form to Unconfimed form for three days."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/prison-bottle.png"
+				"sprite": "/assets/items/prison-bottle/sprite.png"
 			}
 		},
 		{
@@ -3239,10 +3239,10 @@
 			"type": "held item",
 			"cost": null,
 			"description": [
-				"When held by a Thundurus, Landorus, or Tornadus, the holder may use its action to change between its Incarnate and Therian forms."
+				"When held by a Thundurus, Landorus, Tornadus, or Enamorus, the holder may use its action to change between its Incarnate and Therian forms."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/reveal-glass.png"
+				"sprite": "/assets/items/reveal-glass/sprite.png"
 			}
 		},
 		{
@@ -3254,7 +3254,7 @@
 				"When held by a Cubone, Marowak, or Alolan Marowak, the holder's STAB is doubled."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/thick-club.png"
+				"sprite": "/assets/items/thick-club/sprite.png"
 			}
 		},
 		{
@@ -3266,7 +3266,7 @@
 				"When held by a Genesect, changes the type of its move Techno Blast to Fire."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/burn-drive.png"
+				"sprite": "/assets/items/burn-drive/sprite.png"
 			}
 		},
 		{
@@ -3278,7 +3278,7 @@
 				"When held by a Genesect, changes the type of its move Techno Blast to Ice."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/chill-drive.png"
+				"sprite": "/assets/items/chill-drive/sprite.png"
 			}
 		},
 		{
@@ -3290,7 +3290,7 @@
 				"When held by a Genesect, changes the type of its move Techno Blast to Water."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/douse-drive.png"
+				"sprite": "/assets/items/douse-drive/sprite.png"
 			}
 		},
 		{
@@ -3302,7 +3302,7 @@
 				"When held by a Genesect, changes the type of its move Techno Blast to Electric."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/shock-drive.png"
+				"sprite": "/assets/items/shock-drive/sprite.png"
 			}
 		},
 		{
@@ -3314,7 +3314,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Bug."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/bug-memory.png"
+				"sprite": "/assets/items/bug-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3326,7 +3326,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Dark."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dark-memory.png"
+				"sprite": "/assets/items/dark-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3338,7 +3338,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Dragon."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-memory.png"
+				"sprite": "/assets/items/dragon-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3350,7 +3350,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Electric."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electric-memory.png"
+				"sprite": "/assets/items/electric-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3362,7 +3362,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Fairy."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fairy-memory.png"
+				"sprite": "/assets/items/fairy-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3374,7 +3374,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Fighting."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fighting-memory.png"
+				"sprite": "/assets/items/fighting-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3386,7 +3386,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Fire."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/fire-memory.png"
+				"sprite": "/assets/items/fire-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3398,7 +3398,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Flying."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/flying-memory.png"
+				"sprite": "/assets/items/flying-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3410,7 +3410,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Ghost."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ghost-memory.png"
+				"sprite": "/assets/items/ghost-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3422,7 +3422,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Grass."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/grass-memory.png"
+				"sprite": "/assets/items/grass-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3434,7 +3434,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Ground."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ground-memory.png"
+				"sprite": "/assets/items/ground-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3446,7 +3446,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Ice."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/ice-memory.png"
+				"sprite": "/assets/items/ice-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3458,7 +3458,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Poison."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/poison-memory.png"
+				"sprite": "/assets/items/poison-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3470,7 +3470,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Psychic."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/psychic-memory.png"
+				"sprite": "/assets/items/psychic-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3482,7 +3482,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Rock."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rock-memory.png"
+				"sprite": "/assets/items/rock-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3494,7 +3494,7 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Steel."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/steel-memory.png"
+				"sprite": "/assets/items/steel-memory-disc/sprite.png"
 			}
 		},
 		{
@@ -3506,7 +3506,31 @@
 				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Water."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/water-memory.png"
+				"sprite": "/assets/items/water-memory-disc/sprite.png"
+			}
+		},
+		{
+			"id": "blue-orb",
+			"name": "Blue Orb",
+			"type": "held item",
+			"cost": null,
+			"description": [
+				"When held by Kyogre, allows it to revert to its Primal form as a free action."
+			],
+			"media": {
+				"sprite": "/assets/items/blue-orb/sprite.png"
+			}
+		},
+		{
+			"id": "red-orb",
+			"name": "Red Orb",
+			"type": "held item",
+			"cost": null,
+			"description": [
+				"When held by Groudon, allows it to revert to its Primal form as a free action."
+			],
+			"media": {
+				"sprite": "/assets/items/red-orb/sprite.png"
 			}
 		},
 		{
@@ -3518,7 +3542,7 @@
 				"Some Pokémon may consume the power of this item to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dragon-scale.png"
+				"sprite": "/assets/items/dragon-scale/sprite.png"
 			}
 		},
 		{
@@ -3530,7 +3554,7 @@
 				"Some Pokémon may consume the power of this item to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/up-grade.png"
+				"sprite": "/assets/items/up-grade/sprite.png"
 			}
 		},
 		{
@@ -3542,7 +3566,7 @@
 				"Some Pokémon may consume the power of this item to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/protector.png"
+				"sprite": "/assets/items/protector/sprite.png"
 			}
 		},
 		{
@@ -3554,7 +3578,7 @@
 				"Some Pokémon may consume the power of this item to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/electirizer.png"
+				"sprite": "/assets/items/electirizer/sprite.png"
 			}
 		},
 		{
@@ -3566,7 +3590,7 @@
 				"Some Pokémon may consume the power of this item to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/magmarizer.png"
+				"sprite": "/assets/items/magmarizer/sprite.png"
 			}
 		},
 		{
@@ -3578,7 +3602,7 @@
 				"Some Pokémon may consume the power of this item to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/dubious-disc.png"
+				"sprite": "/assets/items/dubious-disc/sprite.png"
 			}
 		},
 		{
@@ -3590,7 +3614,7 @@
 				"Some Pokémon may consume the power of this item to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/reaper-cloth.png"
+				"sprite": "/assets/items/reaper-cloth/sprite.png"
 			}
 		},
 		{
@@ -3602,7 +3626,7 @@
 				"Some Pokémon may consume the power of this item to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/prism-scale.png"
+				"sprite": "/assets/items/prism-scale/sprite.png"
 			}
 		},
 		{
@@ -3614,7 +3638,7 @@
 				"Some Pokémon may consume the power of this item to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/whipped-dream.png"
+				"sprite": "/assets/items/whipped-dream/sprite.png"
 			}
 		},
 		{
@@ -3626,7 +3650,7 @@
 				"Some Pokémon may consume the power of this item to evolve."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/sachet.png"
+				"sprite": "/assets/items/sachet/sprite.png"
 			}
 		},
 		{
@@ -3772,7 +3796,7 @@
 				"Trainers can lose their license for attacking other trainers or their Pokémon, or failing to take care of their own Pokémon."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/permit.png"
+				"sprite": "/assets/items/trainers-license/sprite.png"
 			}
 		},
 		{
@@ -3797,7 +3821,7 @@
 				"The Old Rod allows you to catch only Magikarp."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/old-rod.png"
+				"sprite": "/assets/items/old-rod/sprite.png"
 			}
 		},
 		{
@@ -3810,7 +3834,7 @@
 				"The Good Rod allows you to catch Alomomola, Azumarill, Barboach, Basculin, Bibarel, Briionne, Bruxish, Buizel, Carvanha, Chinchou, Clamperl, Clauncher, Corphish, Corsola, Crawdaunt, Croconaw, Dewpider, Dewott, Ducklett, Feebas, Finneon, Frillish, Froakie, Frogadier, Goldeen, Horsea, Inkay, Kabuto, Krabby, Lanturn, Lombre, Lotad, Luvdisc, Magikarp, Mantyke, Mareanie, Marill, Marshtomp, Mudkip, Octillery, Omanyte, Oshawott, Palpitoad, Piplup, Poliwag, Poliwhirl, Popplio, Prinplup, Psyduck, Pyukumuku, Quagsire, Qwilfish, Remoraid, Seel, Shellder, Shellos, Skrelp, Slowpoke, Spheal, Squirtle, Staryu, Stunfisk, Surskit, Tentacool, Tirtouga, Totodile, Tympole, Tynamo, Wailmer, Wartortle, Whiscash, Wimpod, Wingull, Wishiwashi, or Wooper."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/good-rod.png"
+				"sprite": "/assets/items/good-rod/sprite.png"
 			}
 		},
 		{
@@ -3823,7 +3847,7 @@
 				"The Super Rod allows you to catch Araquanid, Blastoise, Carracosta, Clawitzer, Cloyster, Dewgong, Dragalge, Empoleon, Feraligatr, Floatzel, Gastrodon, Golduck, Golisopod, Gorebyss, Greninja, Gyarados, Huntail, Jellicent, Kabutops, Kingdra, Kingler, Lapras, Ludicolo, Lumineon, Malamar, Mantine, Milotic, Omastar, Politoed, Poliwrath, Primarina, Relicanth, Samurott, Seadra, Seaking, Sealeo, Seismitoad, Sharpedo, Slowbro, Slowking, Starmie, Swampert, Tentacruel, Toxapex, Wailord, Walrein."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/super-rod.png"
+				"sprite": "/assets/items/super-rod/sprite.png"
 			}
 		},
 		{
@@ -3835,7 +3859,7 @@
 				"Consume in order to automatically succeed in fleeing from a wild Pokémon battle."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/escape-rope.png"
+				"sprite": "/assets/items/escape-rope/sprite.png"
 			}
 		},
 		{
@@ -3847,7 +3871,7 @@
 				"Can be used to automatically attract a single Pokémon that resides in the area. Which Pokémon is up to the DM's discretion."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/honey.png"
+				"sprite": "/assets/items/honey/sprite.png"
 			}
 		},
 		{
@@ -3859,7 +3883,7 @@
 				"Allows a trainer to Mega Evolve their Pokémon. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/key-stone.png"
+				"sprite": "/assets/items/key-stone/sprite.png"
 			}
 		},
 		{
@@ -3871,7 +3895,7 @@
 				"Allows a trainer to unleash their Pokémon's Z-Power in the form of a Z-Move. Has one charge, and recovers its charge at dawn each day."
 			],
 			"media": {
-				"sprite": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/z-ring.png"
+				"sprite": "/assets/items/z-ring/sprite.png"
 			}
 		},
 		{

@@ -1,1 +1,1 @@
-{"id":"rock-memory-disc","name":"Disco Roca","type":"held item","cost":2000,"description":["Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Roca."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/rock-memory.png"}}
+{"id":"rock-memory-disc","name":"Disco Roca","type":"held item","cost":2000,"description":["Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Roca."],"media":{"sprite":"/assets/items/rock-memory-disc/sprite.png"}}

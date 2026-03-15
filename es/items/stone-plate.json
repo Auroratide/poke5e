@@ -1,1 +1,1 @@
-{"id":"stone-plate","name":"Tabla Pétrea","type":"held item","cost":null,"description":["Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Roca."],"media":{"sprite":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/items/stone-plate.png"}}
+{"id":"stone-plate","name":"Tabla Pétrea","type":"held item","cost":null,"description":["Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Roca."],"media":{"sprite":"/assets/items/stone-plate/sprite.png"}}
