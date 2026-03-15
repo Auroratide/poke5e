@@ -24,38 +24,38 @@ const activate = async () => {
 }
 self.addEventListener("activate", (e) => e.waitUntil(activate()))
 
-self.addEventListener("fetch", (e) => {
-	if (e.request.method !== "GET") return
+self.addEventListener("fetch", () => {
+	// if (e.request.method !== "GET") return
 
-	async function respond() {
-		const url = new URL(e.request.url)
-		const cache = await caches.open(cacheName)
+	// async function respond() {
+	// 	const url = new URL(e.request.url)
+	// 	const cache = await caches.open(cacheName)
 
-		if (ASSETS.includes(url.pathname)) {
-			const response = await cache.match(url.pathname)
-			if (response) return response
-		}
+	// 	if (ASSETS.includes(url.pathname)) {
+	// 		const response = await cache.match(url.pathname)
+	// 		if (response) return response
+	// 	}
 
-		try {
-			const response = await fetch(e.request)
+	// 	try {
+	// 		const response = await fetch(e.request)
 
-			if (!(response instanceof Response)) {
-				throw new Error("Invalid response from fetch")
-			}
+	// 		if (!(response instanceof Response)) {
+	// 			throw new Error("Invalid response from fetch")
+	// 		}
 
-			if (response.status === 200) {
-				cache.put(e.request, response.clone())
-			}
+	// 		if (response.status === 200) {
+	// 			cache.put(e.request, response.clone())
+	// 		}
 
-			return response
-		} catch (err) {
-			const response = await cache.match(e.request)
+	// 		return response
+	// 	} catch (err) {
+	// 		const response = await cache.match(e.request)
 
-			if (response) return response
+	// 		if (response) return response
 
-			throw err
-		}
-	}
+	// 		throw err
+	// 	}
+	// }
 
-	e.respondWith(respond())
+	// e.respondWith(respond())
 })
