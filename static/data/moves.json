@@ -10992,6 +10992,9 @@
 				"type": [
 					"steel"
 				]
+			},
+			"attack": {
+				"scope": "melee"
 			}
 		},
 		{
