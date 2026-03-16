@@ -114773,9 +114773,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"field",
-					"volcano",
-					"ruin"
+					"glacier"
 				]
 			}
 		},
@@ -114915,9 +114913,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"field",
-					"volcano",
-					"ruin"
+					"glacier"
 				]
 			}
 		},
