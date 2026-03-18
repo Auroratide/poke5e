@@ -197,7 +197,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 		level2: {
 			description: [
 				"Whether current or aspiring evil team member, your goal is to cast down all goody two shoe trainers and rise up in the ranks! Beginning at level 2, gain a pool of <strong>“Shadow Points”</strong> equal to your level. Your point pool increases with each level, and resets on each long rest.",
-				"At level 2, you gain access to the <strong>“Sabotage”</strong> ability. As a reaction, you may spend any number of points to decrease the total result of an attack roll including modifiers) that hits your Pokémon if it would cause the attack to miss. The natural attack roll is unaffected by this ability for purposes of move effects, and attacks with a natural roll of 20 may not be decreased at all."],
+				"At level 2, you gain access to the <strong>“Sabotage”</strong> ability. As a reaction, you may spend any number of points to decrease the total result of an attack roll (including modifiers) that hits your Pokémon if it would cause the attack to miss. The natural attack roll is unaffected by this ability for purposes of move effects, and attacks with a natural roll of 20 may not be decreased at all."],
 		},
 		level5: {
 			name: "Dark Advantage",
