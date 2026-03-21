@@ -14,6 +14,14 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.10.6",
+		description: [
+			"<strong>Pokémon</strong>: Correct Alolan Vulpix's biomes.",
+			"<strong>Pokémon</strong>: Allow Cubone to learn Tackle as a starting move.",
+			"<strong>Moves</strong>: Clarify Recover can target self.",
+			"<strong>Items</strong>: Added Mirror Herb.",
+		],
+	}, {
 		name: "v1.10.5",
 		description: [
 			"<strong>Pokémon</strong>: Added Therian Forms and Primal Forms.",
