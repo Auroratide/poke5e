@@ -631,7 +631,7 @@
 			"type": "medicine",
 			"cost": 4900,
 			"description": [
-				"A trainer may use an action to administer this to a Pokémon. That Pokémon's STR increases by 1.",
+				"A trainer may use an action to administer this to a Pokémon. That Pokémon's STR increases by 1. This cannot increase the Pokémon's ability score above 20.",
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
@@ -644,7 +644,7 @@
 			"type": "medicine",
 			"cost": 4900,
 			"description": [
-				"A trainer may use an action to administer this to a Pokémon. That Pokémon's DEX increases by 1.",
+				"A trainer may use an action to administer this to a Pokémon. That Pokémon's DEX increases by 1. This cannot increase the Pokémon's ability score above 20.",
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
@@ -657,7 +657,7 @@
 			"type": "medicine",
 			"cost": 4900,
 			"description": [
-				"A trainer may use an action to administer this to a Pokémon. That Pokémon's CHA increases by 1.",
+				"A trainer may use an action to administer this to a Pokémon. That Pokémon's CHA increases by 1. This cannot increase the Pokémon's ability score above 20.",
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
@@ -670,7 +670,7 @@
 			"type": "medicine",
 			"cost": 4900,
 			"description": [
-				"A trainer may use an action to administer this to a Pokémon. That Pokémon's CON increases by 1.",
+				"A trainer may use an action to administer this to a Pokémon. That Pokémon's CON increases by 1. This cannot increase the Pokémon's ability score above 20.",
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
@@ -683,7 +683,7 @@
 			"type": "medicine",
 			"cost": 4900,
 			"description": [
-				"A trainer may use an action to administer this to a Pokémon. That Pokémon's WIS increases by 1.",
+				"A trainer may use an action to administer this to a Pokémon. That Pokémon's WIS increases by 1. This cannot increase the Pokémon's ability score above 20.",
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
@@ -2368,10 +2368,13 @@
 			"id": "mirror-herb",
 			"name": "Mirror Herb",
 			"type": "held item",
-			"cost": 30000,
-			"description": null,
+			"cost": 4200,
+			"description": [
+				"While in combat, as a reaction to seeing another Pokémon raise any of its ability scores, attack roll modifier, AC, or saving throw modifier, the Pokémon holding this herb may consume it to copy the effect on itself. The raised attributes reset at the end of or upon being switched out of combat.",
+				"During a long rest, two Pokémon may share and consume a Mirror Herb. If the first Pokémon knows a move that the second Pokémon can learn as an Egg Move, then the second Pokémon may replace one of its moves with the Egg Move, even if they do not share an Egg Group or are the same gender."
+			],
 			"media": {
-				"sprite": null
+				"sprite": "/assets/items/mirror-herb/sprite.png"
 			}
 		},
 		{

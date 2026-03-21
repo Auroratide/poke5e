@@ -15658,7 +15658,8 @@
 			"moves": {
 				"start": [
 					"growl",
-					"tail-whip"
+					"tail-whip",
+					"tackle"
 				],
 				"level2": [
 					"bone-club",
@@ -114773,9 +114774,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"field",
-					"volcano",
-					"ruin"
+					"glacier"
 				]
 			}
 		},
@@ -114915,9 +114914,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"field",
-					"volcano",
-					"ruin"
+					"glacier"
 				]
 			}
 		},
