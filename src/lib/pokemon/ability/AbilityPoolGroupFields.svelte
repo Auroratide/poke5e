@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { m } from "$lib/site/i18n"
 	import { FormGroup, Removable, SelectField, type SelectFieldChangeEvent, kebab } from "$lib/ui/forms"
-	import { abilities } from "../store"
+	import { AbilityStore } from "./AbilityStore"
 
 	export let title: string
 	export let values: string[]
@@ -9,7 +9,7 @@
 
 	$: id = kebab(title)
 
-	$: options = $abilities?.map((it) => ({
+	$: options = $AbilityStore?.map((it) => ({
 		name: it.name,
 		value: it.id,
 		deprecated: it.deprecated ?? false,

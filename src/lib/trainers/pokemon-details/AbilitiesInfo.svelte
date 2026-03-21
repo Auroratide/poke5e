@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { TrainerPokemon } from "../types"
-	import { abilities } from "$lib/pokemon/store"
+	import { AbilityStore } from "$lib/pokemon/ability"
 
 	export let pokemon: TrainerPokemon
 
-	$: ability = $abilities?.find((it) => it.id === pokemon.ability)
+	$: ability = $AbilityStore?.find((it) => it.id === pokemon.ability)
 </script>
 
 {#if ability}
