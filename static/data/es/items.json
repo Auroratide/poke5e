@@ -361,7 +361,7 @@
 			"id": "protein",
 			"name": "Proteína",
 			"description": [
-				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Fuerza del Pokémon aumenta 1.",
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Fuerza del Pokémon aumenta 1. Esto no puede aumentar la puntuación de habilidad del Pokémon por encima de 20.",
 				"Este objeto es una vitamina. Un Pokémon solo puede beneficiarse de los efectos de tres vitaminas en total."
 			]
 		},
@@ -369,7 +369,7 @@
 			"id": "iron",
 			"name": "Hierro",
 			"description": [
-				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Destreza del Pokémon aumenta 1.",
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Destreza del Pokémon aumenta 1. Esto no puede aumentar la puntuación de habilidad del Pokémon por encima de 20.",
 				"Este objeto es una vitamina. Un Pokémon solo puede beneficiarse de los efectos de tres vitaminas en total."
 			]
 		},
@@ -377,7 +377,7 @@
 			"id": "carbos",
 			"name": "Carburante",
 			"description": [
-				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Carisma del Pokémon aumenta 1.",
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Carisma del Pokémon aumenta 1. Esto no puede aumentar la puntuación de habilidad del Pokémon por encima de 20.",
 				"Este objeto es una vitamina. Un Pokémon solo puede beneficiarse de los efectos de tres vitaminas en total."
 			]
 		},
@@ -385,7 +385,7 @@
 			"id": "calcium",
 			"name": "Calcio",
 			"description": [
-				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Constitución del Pokémon aumenta 1.",
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Constitución del Pokémon aumenta 1. Esto no puede aumentar la puntuación de habilidad del Pokémon por encima de 20.",
 				"Este objeto es una vitamina. Un Pokémon solo puede beneficiarse de los efectos de tres vitaminas en total."
 			]
 		},
@@ -393,7 +393,7 @@
 			"id": "zinc",
 			"name": "Zinc",
 			"description": [
-				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Sabiduría del Pokémon aumenta 1.",
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. La puntuación de característica de Sabiduría del Pokémon aumenta 1. Esto no puede aumentar la puntuación de habilidad del Pokémon por encima de 20.",
 				"Este objeto es una vitamina. Un Pokémon solo puede beneficiarse de los efectos de tres vitaminas en total."
 			]
 		},
