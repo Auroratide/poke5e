@@ -1361,7 +1361,7 @@ const rowToPokemon = async (row: PokemonRow, getStorageResource: (name: string) 
 		max: row.hit_dice_max,
 	},
 	ability: row.ability,
-	abilities: [await Ability.resolveDescription(row.ability)],
+	abilities: row.ability ? [await Ability.resolveDescription(row.ability)] : [],
 	proficiencies: consolidateSkillRankProfAndRank({
 		"athletics": [row.prof_athletics, row.rank_athletics],
 		"acrobatics": [row.prof_acrobatics, row.rank_acrobatics ],

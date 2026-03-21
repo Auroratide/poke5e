@@ -21,6 +21,7 @@
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
 	import { SpeciesFormsInfo } from "$lib/poke5e/forms"
 	import { m } from "$lib/site/i18n"
+	import { KnownAbilitiesInfo } from "$lib/pokemon/ability";
 
 	const dispatch = createEventDispatcher()
 
@@ -105,7 +106,8 @@
 </section>
 <section>
 	<h2>{m.abilitiesAndItems()}</h2>
-	<AbilitiesInfo {pokemon} />
+	<KnownAbilitiesInfo value={pokemon.abilities} />
+	<!-- <AbilitiesInfo {pokemon} /> -->
 	<HeldItemsInfo {pokemon} />
 </section>
 <SpeciesFormsInfo value={species.forms} />
