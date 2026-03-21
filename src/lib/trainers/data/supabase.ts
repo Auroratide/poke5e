@@ -31,6 +31,7 @@ import { Nature, StandardNatures } from "$lib/pokemon/nature"
 import { get } from "svelte/store"
 import { PokemonSpecies, SpeciesIdentifier } from "$lib/poke5e/species"
 import { TrainerLocalStorage } from "./TrainerLocalStorage"
+import { Ability } from "$lib/pokemon/ability"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -98,7 +99,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					throw new TrainerDataProviderError("Could not trainer's pokemon.", error)
 				}
 
-				return data.map((it) => rowToPokemon(it, this.getUserAssetResource))
+				return Promise.all(data.map((it) => rowToPokemon(it, this.getUserAssetResource)))
 			})
 			.then((pokemon) => Promise.all(pokemon.map((thePokemon) => {
 				return this.getMoveset(thePokemon.id).then((moves) => ({
@@ -593,6 +594,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			attributes: pokemon.attributes,
 			ac: pokemon.data.ac,
 			ability: pokemon.abilities.toList()[0]?.id,
+			abilities: [],
 			hp: {
 				current: pokemon.data.hp,
 				max: pokemon.data.hp,
@@ -1308,7 +1310,7 @@ const consolidateSkillRankProfAndRank = (ranks: Record<Skill, [boolean, number]>
 		}), {} as Data<SkillRanks>),
 	)
 
-const rowToPokemon = (row: PokemonRow, getStorageResource: (name: string) => StorageResource): TrainerPokemon => ({
+const rowToPokemon = async (row: PokemonRow, getStorageResource: (name: string) => StorageResource): Promise<TrainerPokemon> => ({
 	id: row.id.toString(),
 	trainerId: row.trainer_id,
 	pokemonId: new SpeciesIdentifier(row.species),
@@ -1336,6 +1338,7 @@ const rowToPokemon = (row: PokemonRow, getStorageResource: (name: string) => Sto
 		max: row.hit_dice_max,
 	},
 	ability: row.ability,
+	abilities: [await Ability.resolveDescription(row.ability)],
 	proficiencies: consolidateSkillRankProfAndRank({
 		"athletics": [row.prof_athletics, row.rank_athletics],
 		"acrobatics": [row.prof_acrobatics, row.rank_acrobatics ],

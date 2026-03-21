@@ -1,4 +1,6 @@
 import { DataClass, type Data } from "$lib/DataClass"
+import { getWhenDefined } from "$lib/utils/store"
+import { AbilityStore } from "./AbilityStore"
 
 export type AbilityId = string
 
@@ -12,6 +14,11 @@ export class Ability extends DataClass<{
 	get name() { return this.data.name }
 	get description() { return this.data.description }
 	get deprecated() { return this.data.deprecated ?? false }
+
+	static readonly resolveDescription = async (id: AbilityId): Promise<Ability> => {
+		const abilityList = await getWhenDefined(AbilityStore)
+		return abilityList.find((it) => it.id === id)
+	}
 
 	static readonly normalizeList = (allAbilities: Data<Ability>[]) => <T extends HasAbilities>(pokemon: T) => ({
 		...pokemon,

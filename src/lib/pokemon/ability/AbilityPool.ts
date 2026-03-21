@@ -2,12 +2,12 @@ import type { PokemonSpecies } from "$lib/poke5e/species"
 import { DataClass } from "$lib/DataClass"
 import type { AbilityId } from "./Ability"
 
-export type AbilityItem = {
+type AbilityItem = {
 	id: string,
 	hidden: boolean,
 }
 
-export type AbilityList = AbilityItem[]
+type AbilityList = AbilityItem[]
 
 export type FindIndexResult = {
 	exists: boolean,
@@ -15,6 +15,9 @@ export type FindIndexResult = {
 	hidden: number,
 }
 
+/**
+ * Represents a list of POSSIBLE abilities a species may have
+ */
 export class AbilityPool extends DataClass<{
 	normal: AbilityId[],
 	hidden: AbilityId[],

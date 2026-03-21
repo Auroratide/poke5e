@@ -1,7 +1,25 @@
-import { test, expect } from "vitest"
+import { test, expect, beforeEach, afterEach, vi } from "vitest"
 import { provider } from ".."
 import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import { Level } from "$lib/dnd/level"
+import { stubAbility } from "$lib/pokemon/ability/test/stubs"
+import { ApiStub } from "$lib/test/ApiStub"
+
+const ABILITIES = {
+	disguise: stubAbility({
+		id: "disguise",
+		name: "Disguise",
+		description: "Grants a disguise.",
+	})
+}
+
+beforeEach(() => {
+	ApiStub.abilities = Object.values(ABILITIES)
+})
+
+afterEach(() => {
+	vi.resetAllMocks()
+})
 
 test("add, get, update", async () => {
 	const trainerToAdd = {
@@ -37,4 +55,29 @@ test("add, get, update", async () => {
 
 	expect(trainerAfterUpdate.info.level).toEqualData(new Level(10))
 	expect(firstPokemonAfterUpdate.bond.level).toEqual(3)
+})
+
+test("getting abilities", async () => {
+	const trainerToAdd = {
+		name: "Renibel",
+		description: "Likes cryptids.",
+	}
+
+	const speciesToAdd = stubPokemonSpecies({
+		id: "mimikyu",
+		abilities: {
+			normal: [ABILITIES.disguise.id],
+			hidden: [],
+		},
+	})
+
+	const addedTrainer = await provider.newTrainer(trainerToAdd)
+	await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, speciesToAdd)
+
+	const receivedTrainer = await provider.getTrainer(addedTrainer.info.readKey)
+	const receivedPokemon = receivedTrainer.pokemon[0]
+
+	expect(receivedPokemon.ability).toEqual("disguise")
+	expect(receivedPokemon.abilities).toHaveLength(1)
+	expect(receivedPokemon.abilities[0]).toEqualData(ABILITIES.disguise)
 })
