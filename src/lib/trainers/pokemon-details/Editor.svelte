@@ -13,7 +13,6 @@
 	import { createEventDispatcher } from "svelte"
 	import { type TrainerPokemon } from "../types"
 	import BasicInfoFieldset from "./forms/BasicInfoFieldset.svelte"
-	import AbilitiesFieldset from "./forms/AbilitiesFieldset.svelte"
 	import HeldItemsFieldset from "./forms/HeldItemsFieldset.svelte"
 	import MovesFieldset from "./forms/MovesFieldset.svelte"
 	import { FeatsFieldset } from "$lib/dnd/feats"
@@ -31,6 +30,7 @@
 	import { Resource } from "$lib/poke5e/resource"
 	import { StabFieldset } from "$lib/pokemon/stab"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
+	import { KnownAbilitiesFieldset } from "$lib/pokemon/ability"
 
 	const dispatch = createEventDispatcher()
 
@@ -49,6 +49,7 @@
 	let gender = pokemon.gender
 	let attributes = pokemon.attributes.copy()
 	let ability = pokemon.ability
+	let abilities = pokemon.abilities
 	let proficiencies = pokemon.proficiencies.copy()
 	let savingThrows = [...pokemon.savingThrows]
 	let notes = pokemon.notes
@@ -88,6 +89,7 @@
 				isShiny,
 				attributes,
 				ability,
+				abilities,
 				proficiencies,
 				savingThrows,
 				moves,
@@ -114,7 +116,7 @@
 	<BasicInfoFieldset bind:nickname bind:nature bind:tera={tera} bind:level bind:ac bind:maxHp bind:maxHitDice bind:isShiny originalAvatarSrc={originalAvatar?.href} bind:avatar={avatarToUpload} bind:isValid {disabled} />
 	<GenderFieldset bind:value={gender} {disabled} />
 	<AttributesFieldset bind:values={attributes} {disabled} />
-	<AbilitiesFieldset bind:ability {species} {disabled} />
+	<KnownAbilitiesFieldset bind:values={abilities} {species} {disabled} />
 	<BondFieldset bind:value={bond} {disabled} />
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />

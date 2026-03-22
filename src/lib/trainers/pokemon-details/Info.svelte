@@ -8,7 +8,6 @@
 	import { FlatDl } from "$lib/ui/elements"
 	import { AttributeBlock } from "$lib/dnd/attributes"
 	import MovesInfo from "./MovesInfo.svelte"
-	import AbilitiesInfo from "./AbilitiesInfo.svelte"
 	import NotesInfo from "./NotesInfo.svelte"
 	import { SideArtCardSection } from "$lib/ui/page"
 	import HeldItemsInfo from "./HeldItemsInfo.svelte"
@@ -107,7 +106,6 @@
 <section>
 	<h2>{m.abilitiesAndItems()}</h2>
 	<KnownAbilitiesInfo value={pokemon.abilities} />
-	<!-- <AbilitiesInfo {pokemon} /> -->
 	<HeldItemsInfo {pokemon} />
 </section>
 <SpeciesFormsInfo value={species.forms} />

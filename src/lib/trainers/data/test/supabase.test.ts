@@ -7,7 +7,7 @@ import { ApiStub } from "$lib/test/ApiStub"
 
 const ABILITIES = {
 	disguise: stubAbility({
-		id: "disguise",
+		referenceId: "disguise",
 		name: "Disguise",
 		description: "Grants a disguise.",
 	}),
@@ -72,14 +72,16 @@ test("getting abilities", async () => {
 	})
 
 	const addedTrainer = await provider.newTrainer(trainerToAdd)
-	await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, speciesToAdd)
+	const addedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, speciesToAdd)
+	await provider.updateAllAbilities(addedTrainer.writeKey, addedPokemon.id, [ABILITIES.disguise])
 
 	const receivedTrainer = await provider.getTrainer(addedTrainer.info.readKey)
 	const receivedPokemon = receivedTrainer.pokemon[0]
 
 	expect(receivedPokemon.ability).toEqual("disguise")
 	expect(receivedPokemon.abilities).toHaveLength(1)
-	expect(receivedPokemon.abilities[0]).toEqualData(ABILITIES.disguise)
+	expect(receivedPokemon.abilities[0].referenceId).toEqual(ABILITIES.disguise.referenceId)
+	expect(receivedPokemon.abilities[0].name).toEqual(ABILITIES.disguise.name)
 })
 
 test("reordering pokemon", async () => {

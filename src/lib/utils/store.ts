@@ -27,8 +27,9 @@ export function cachedReadable<T>(value: T, start: StartStopNotifier<T>): Readab
 
 export async function getWhenDefined<T>(store: Readable<T>): Promise<T> {
 	return new Promise((resolve) => {
-		store.subscribe((value) => {
+		const unsubscribe = store.subscribe((value) => {
 			if (value != null) {
+				// unsubscribe?()
 				resolve(value)
 			}
 		})

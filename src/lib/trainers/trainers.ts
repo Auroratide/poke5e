@@ -31,6 +31,7 @@ type TrainerUpdater = {
 	pokemon: (info: TrainerPokemon, options?: UpdaterOptions & AvatarUploadOptions) => Promise<void>
 	moveset: (info: TrainerPokemon) => Promise<void>
 	heldItems: (info: TrainerPokemon) => Promise<void>
+	abilities: (info: TrainerPokemon) => Promise<void>
 	pokemonFeats: (info: TrainerPokemon) => Promise<void>
 	move: (info: LearnedMove, options?: UpdaterOptions) => Promise<void>
 	addToTeam: (pokemon: PokemonSpecies) => Promise<TrainerPokemon>
@@ -334,6 +335,26 @@ const createStore = () => {
 								})
 							}).catch((e: Error) => {
 								error.show("updateAllHeldItems", e)
+								throw e
+							})
+						},
+						abilities: (info: TrainerPokemon) => {
+							return provider.updateAllAbilities(data.writeKey, info.id, info.abilities).then((newAbilities) => {
+								storeUpdateOne(readKey, (prev) => {
+									const pokemonList = [...prev.pokemon]
+									const pokeIndex = pokemonList.findIndex((it) => it.id === info.id)
+									pokemonList[pokeIndex] = {
+										...prev.pokemon[pokeIndex],
+										abilities: newAbilities,
+									}
+
+									return {
+										...prev,
+										pokemon: pokemonList,
+									}
+								})
+							}).catch((e: Error) => {
+								error.show("updateAllAbilities", e)
 								throw e
 							})
 						},
