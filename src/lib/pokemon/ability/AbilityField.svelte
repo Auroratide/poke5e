@@ -39,7 +39,12 @@
 	} ]
 
 	const handleSelectChange = async (e: SelectFieldChangeEvent) => {
-		value = await ReferenceAbility.resolve(value.id, e.detail.value)
+		const newAbility = await ReferenceAbility.resolve(value.id, e.detail.value)
+		if (newAbility) {
+			value.data.name = newAbility.name
+			value.data.description = newAbility.description
+			value.data.referenceId = newAbility.referenceId
+		}
 	}
 </script>
 
