@@ -581,7 +581,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 	}
 
-	addPokemonToTeam = async (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: PokemonSpecies): Promise<TrainerPokemon> => {
+	addPokemonToTeam = async (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: PokemonSpecies, rank?: number): Promise<TrainerPokemon> => {
 		const trainerPokemon: Omit<TrainerPokemon, "id"> = {
 			trainerId: trainerId,
 			pokemonId: pokemon.id,
@@ -690,6 +690,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_bond_level: 0,
 			_bond_points_cur: 0,
 			_bond_points_max: 0,
+			_rank: rank,
 		}).single<number>()
     
 		if (error) {
