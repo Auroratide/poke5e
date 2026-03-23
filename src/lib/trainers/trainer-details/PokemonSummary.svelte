@@ -9,6 +9,7 @@
 	import { GenderIcon } from "$lib/pokemon/gender"
 	import { SpeciesSprite } from "$lib/poke5e/species/media"
 	import { WithSpecies } from "$lib/poke5e/species"
+	import { DragIcon } from "$lib/ui/icons";
 
 	export let trainer: ReadWriteKey
 	export let pokemon: TrainerPokemon
@@ -16,28 +17,33 @@
 	$: heldItem = pokemon.items.length > 0 ? getItemDetails(pokemon.items[0], $ItemStore) : undefined
 </script>
 
-<a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded">
-	<span style:grid-area="sprite" class="max-height holding-item jumping-animation">
-		<WithSpecies let:species ids={[pokemon.pokemonId]}>
-			<div slot="loader"></div>
-			<SpeciesSprite media={species?.media} alt={species?.data.name} shiny={pokemon.isShiny} />
-			{#if species?.media.sprite().value != null}
-				<span class="shadow"></span>
+<div class="side-by-side">
+	<a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded" data-ignore-reorder>
+		<span style:grid-area="sprite" class="max-height holding-item jumping-animation" data-ignore-reorder>
+			<WithSpecies let:species ids={[pokemon.pokemonId]}>
+				<div slot="loader"></div>
+				<SpeciesSprite media={species?.media} alt={species?.data.name} shiny={pokemon.isShiny} />
+				{#if species?.media.sprite().value != null}
+					<span class="shadow"></span>
+				{/if}
+			</WithSpecies>
+			{#if heldItem != null}
+				<span class="held-item">
+					<ItemSprite src="{heldItem.media.sprite}" alt="Holding {heldItem.name}" />
+				</span>
 			{/if}
-		</WithSpecies>
-		{#if heldItem != null}
-			<span class="held-item">
-				<ItemSprite src="{heldItem.media.sprite}" alt="Holding {heldItem.name}" />
-			</span>
-		{/if}
-	</span>
-	<span style:grid-area="name">{pokemon.nickname}</span>
-	<span style:grid-area="gender" class="right away-from-edge flex"><GenderIcon gender={pokemon.gender} /></span>
-	<span style:grid-area="hpbar" class="away-from-edge"><ResourceBar current={pokemon.hp.current} max={pokemon.hp.max} /></span>
-	<span style:grid-area="hp">{pokemon.hp.current}/{pokemon.hp.max}</span>
-	<span style:grid-area="status" class="smaller-text">{#if pokemon.status != null}<StatusTag abbr value={pokemon.status} />{/if}</span>
-	<span style:grid-area="lv" class="right">Lv. {pokemon.level.data}</span>
-</a>
+		</span>
+		<span style:grid-area="name" data-ignore-reorder>{pokemon.nickname}</span>
+		<span style:grid-area="gender" class="right away-from-edge flex" data-ignore-reorder><GenderIcon gender={pokemon.gender} /></span>
+		<span style:grid-area="hpbar" class="away-from-edge" data-ignore-reorder><ResourceBar current={pokemon.hp.current} max={pokemon.hp.max} /></span>
+		<span style:grid-area="hp" data-ignore-reorder>{pokemon.hp.current}/{pokemon.hp.max}</span>
+		<span style:grid-area="status" class="smaller-text" data-ignore-reorder>{#if pokemon.status != null}<StatusTag abbr value={pokemon.status} />{/if}</span>
+		<span style:grid-area="lv" class="right" data-ignore-reorder>Lv. {pokemon.level.data}</span>
+	</a>
+	<div class="drag-container">
+		<span class="drag-icon"><DragIcon /></span>
+	</div>
+</div>
 
 <style>
 	.gridded {
@@ -115,6 +121,29 @@
 	a:hover .jumping-animation > :global(img),
 	a:focus .jumping-animation > :global(img) {
 		animation: jump 0.75s infinite;
+	}
+
+	.side-by-side {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 1em;
+	} .side-by-side > :first-child {
+		flex: 3.5;
+	} .side-by-side > :last-child {
+		flex: 1;
+	}
+
+	.drag-container:hover .drag-icon {
+		opacity: 1;
+	}
+
+	.drag-icon {
+		display: flex;
+		inline-size: 1.5em;
+		opacity: 0.667;
+		align-items: center;
+		justify-content: center;
 	}
 
 	@keyframes jump {

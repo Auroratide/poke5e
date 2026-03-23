@@ -702,6 +702,19 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 	}
 
+	reorderPokemonTeam = async (writeKey: ReadWriteKey, order: TrainerPokemon[]): Promise<boolean> => {
+		const { error } = await this.supabase.rpc("reorder_pokemon", {
+			_write_key: writeKey,
+			_ids: order.map((it) => it.id),
+		}).single<number>()
+
+		if (error) {
+			throw new TrainerDataProviderError("Could not reorder pokemon.", error)
+		}
+
+		return true
+	}
+
 	removePokemon = async (writeKey: string, id: string): Promise<boolean> => {
 		const { data, error } = await this.supabase.rpc("remove_pokemon", {
 			_write_key: writeKey,

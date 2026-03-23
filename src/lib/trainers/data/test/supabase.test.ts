@@ -81,3 +81,35 @@ test("getting abilities", async () => {
 	expect(receivedPokemon.abilities).toHaveLength(1)
 	expect(receivedPokemon.abilities[0]).toEqualData(ABILITIES.disguise)
 })
+
+test("reordering pokemon", async () => {
+	// given
+	const trainerToAdd = {
+		name: "Renibel",
+		description: "Likes cryptids.",
+	}
+
+	const firstSpeciesToAdd = stubPokemonSpecies({
+		id: "mimikyu",
+	})
+	const secondSpeciesToAdd = stubPokemonSpecies({
+		id: "kirlia",
+	})
+	const thirdSpeciesToAdd = stubPokemonSpecies({
+		id: "litwick",
+	})
+
+	const addedTrainer = await provider.newTrainer(trainerToAdd)
+	const firstAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, firstSpeciesToAdd)
+	const secondAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, secondSpeciesToAdd)
+	const thirdAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, thirdSpeciesToAdd)
+
+	// when
+	await provider.reorderPokemonTeam(addedTrainer.writeKey, [secondAddedPokemon, thirdAddedPokemon, firstAddedPokemon])
+
+	// then
+	const receivedTrainer = await provider.getTrainer(addedTrainer.info.readKey)
+	const receivedPokemon = receivedTrainer.pokemon.map((it) => it.pokemonId.data)
+
+	expect(receivedPokemon).toEqual(["kirlia", "litwick", "mimikyu"])
+})

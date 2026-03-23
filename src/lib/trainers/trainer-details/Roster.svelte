@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SearchField } from "$lib/ui/forms"
+	import { Saveable, SearchField } from "$lib/ui/forms"
 	import { filterValue } from "../store"
 	import type { TrainerStore } from "../trainers"
 	import type { PokemonId, TrainerPokemon } from "../types"
@@ -8,22 +8,29 @@
 	import { ListHeading } from "$lib/ui/page"
 	import { Url } from "$lib/site/url"
 	import { m } from "$lib/site/i18n"
+	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
+	import * as list from "$lib/utils/list"
 
 	export let trainer: TrainerStore
 	export let currentPokemon: PokemonId | undefined
 
 	$: editable = $trainer.update != null
 
-	const byStringField = (field: (m: TrainerPokemon) => string) =>
-		(l: TrainerPokemon, r: TrainerPokemon) => field(l).localeCompare(field(r))
-
 	const byNicknameOrSpecies = (filterValue: string) => (it: TrainerPokemon) =>
 		it.nickname.toLocaleLowerCase().includes(filterValue) || it.pokemonId.data.replace("-", " ").includes(filterValue)
 
 	$: filtered = $trainer.pokemon
 		.filter(byNicknameOrSpecies($filterValue.toLocaleLowerCase()))
-		.sort(byStringField((it) => it.nickname))
 	$: baseTrainerUrl = Url.trainers($trainer.info.readKey)
+
+	let reordering = false
+	const onReorder = (e: CustomEvent<ReorderListChangeEventDetail>) => {
+		reordering = true
+		const newList = list.reorderOne($trainer.pokemon, e.detail.oldIndex, e.detail.newIndex)
+		$trainer.update.reorderTeam(newList).finally(() => {
+			reordering = false
+		})
+	}
 </script>
 
 <ListHeading title="{$trainer.info.name}'s Pokemon" target="/trainers">
@@ -42,15 +49,17 @@
 	<SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} />
 </div>
 <div class="relative"><!-- Needed for the > indicators to appear outside the scroll box -->
-	<div class="scrollable">
-		<ul class="nolist no-space partial-width">
-			{#each filtered as p (p.id)}
-					<li class="space-after">
+	<Saveable saving={reordering}>
+		<div class="scrollable">
+			<reorder-list class="nolist no-space full-width" on:commit={onReorder}>
+				{#each filtered as p (p.id)}
+					<reorder-item class="space-after">
 						<PokemonSummary trainer={$trainer.info.readKey} pokemon={p} />
-					</li>
-			{/each}
-		</ul>
-	</div>
+					</reorder-item>
+				{/each}
+			</reorder-list>
+		</div>
+	</Saveable>
 </div>
 
 <style>
@@ -75,8 +84,8 @@
 		margin-bottom: 0.5em;
 	}
 
-	.partial-width {
-		width: 75%;
+	.full-width {
+		width: 100%;
 	}
 
 	.relative {

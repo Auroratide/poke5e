@@ -11,6 +11,9 @@ importers:
       '@auroratide/pokemon-types':
         specifier: ^0.1.0
         version: 0.1.0
+      '@auroratide/reorder-list':
+        specifier: ^0.4.0
+        version: 0.4.0
       '@auroratide/tab-list':
         specifier: ^0.2.6
         version: 0.2.6
@@ -138,6 +141,9 @@ packages:
 
   '@auroratide/pokemon-types@0.1.0':
     resolution: {integrity: sha512-jVr8JLnAT8mbd20/SIhgtVWPftA8iP/X8rz6dWZPo7KvAKZifLEnA3crRkgs60pf7Mq3STVqZ+kPXJjZSTvVpA==}
+
+  '@auroratide/reorder-list@0.4.0':
+    resolution: {integrity: sha512-DX0ywS3+usFxUNS2W49M8HIP/boAXSvPOeUJLAfvdi2rZYrRdvC8iEHukaQ5CBynuEFC8/s8parkmBfaR1WaGQ==}
 
   '@auroratide/tab-list@0.2.6':
     resolution: {integrity: sha512-bfG9DFB7KgPqoTW9SIRvg0ouqPsMeNwxe2V/VrpympF9qvlG8DQHqjbSyr7pmb895Ay1pL5KzRfwbn1hseNI8A==}
@@ -3048,6 +3054,8 @@ snapshots:
       '@jridgewell/trace-mapping': 0.3.31
 
   '@auroratide/pokemon-types@0.1.0': {}
+
+  '@auroratide/reorder-list@0.4.0': {}
 
   '@auroratide/tab-list@0.2.6': {}
 

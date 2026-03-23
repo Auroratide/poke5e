@@ -21,3 +21,15 @@ export function shuffleArray<T>(array: T[]): T[] {
 
 	return array
 }
+
+export function reorderOne<T>(array: T[], from: number, to: number): T[] {
+	if (from < 0 || from >= array.length || to < 0 || to >= array.length) {
+		throw new Error(`Attempted to reorder list of size ${array.length} from ${from} to ${to}`)
+	}
+
+	const newList = [...array]
+	const [reordered] = newList.splice(from, 1)
+	newList.splice(to, 0, reordered)
+
+	return newList
+}

@@ -6,7 +6,7 @@
 </script>
 
 <div class="relative">
-	<div class:muted={saving}>
+	<div class:muted={saving} inert={saving}>
 		<slot></slot>
 	</div>
 	{#if saving}

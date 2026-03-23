@@ -12,6 +12,7 @@ export const ChevronIcon = {
 export { default as CogIcon } from "./CogIcon.svelte"
 export { default as DiscIcon } from "./DiscIcon.svelte"
 export { default as DiscordIcon } from "./DiscordIcon.svelte"
+export { default as DragIcon } from "./DragIcon.svelte"
 export { default as FilterIcon } from "./FilterIcon.svelte"
 export { default as GithubIcon } from "./GithubIcon.svelte"
 export { default as GreatballIcon } from "./GreatballIcon.svelte"

@@ -49,6 +49,7 @@
 	import { m } from "$lib/site/i18n"
 	
 	if (browser) {
+		import("@auroratide/reorder-list/lib/define.js")
 		import("@auroratide/toggle-switch/lib/define.js")
 		import("@auroratide/tab-list/lib/define.js")
 	}

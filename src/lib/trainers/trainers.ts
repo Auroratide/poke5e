@@ -34,6 +34,7 @@ type TrainerUpdater = {
 	pokemonFeats: (info: TrainerPokemon) => Promise<void>
 	move: (info: LearnedMove, options?: UpdaterOptions) => Promise<void>
 	addToTeam: (pokemon: PokemonSpecies) => Promise<TrainerPokemon>
+	reorderTeam: (info: TrainerPokemon[]) => Promise<void>
 	removeFromTeam: (id: string) => Promise<void>
 }
 type WithUpdater = {
@@ -370,6 +371,19 @@ const createStore = () => {
 								return result
 							}).catch((e: Error) => {
 								error.show("addPokemonToTeam", e)
+								throw e
+							})
+						},
+						reorderTeam: (order: TrainerPokemon[]) => {
+							return provider.reorderPokemonTeam(data.writeKey, order).then(() => {
+								storeUpdateOne(readKey, (prev) => {
+									return {
+										...prev,
+										pokemon: order,
+									}
+								})
+							}).catch((e: Error) => {
+								error.show("reorderPokemonTeam", e)
 								throw e
 							})
 						},
