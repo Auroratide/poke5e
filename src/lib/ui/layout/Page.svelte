@@ -38,6 +38,7 @@
 		position: relative;
 		z-index: 2;
 		height: 33%;
+		transition: height 0.25s ease-in-out;
 		view-transition-name: pageside;
 	} .page:has(main:empty) .side {
 		height: 100%;
@@ -49,6 +50,7 @@
 		position: relative;
 		z-index: 1;
 		height: 67%;
+		transition: height 0.25s ease-in-out;
 		view-transition-name: pagemain;
 	} .page main:empty {
 		height: 0%;

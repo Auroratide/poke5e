@@ -17,8 +17,10 @@
 	import { SpeciesFormsInfo } from "$lib/poke5e/forms"
 	import { m } from "$lib/site/i18n"
 	import { BiomeTags } from "../habitat"
+	import { Url } from "$lib/site/url";
 
 	export let value: PokemonSpecies
+	export let dismissToHref: string
 	$: hasImage = value.media.data.values.normalPortrait != null
 	$: useId = value.data.number <= 0
 
@@ -29,7 +31,7 @@
 	const exists = <T>(arr: T[] | undefined) => arr != null && arr.length > 0
 </script>
 
-<Card title={value.data.name}>
+<Card title={value.data.name} {dismissToHref}>
 	<TypeTag slot="header-extra" type={value.type.data} />
 	<SideArtCardSection {hasImage}>
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>

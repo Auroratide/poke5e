@@ -3,6 +3,7 @@
 	import PokeMove from "$lib/moves/PokeMove.svelte"
 	import { Title } from "$lib/ui/layout"
 	import { SpeciesStore } from "$lib/poke5e/species"
+	import { Url } from "$lib/site/url";
 
 	const pokemon = SpeciesStore.canonList()
 
@@ -11,4 +12,4 @@
 </script>
 
 <Title value={move.name} />
-<PokeMove move={move} pokemon={$pokemon} />
+<PokeMove move={move} pokemon={$pokemon} dismissToHref="{Url.moves()}" />

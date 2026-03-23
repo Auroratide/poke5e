@@ -13,7 +13,7 @@
 </script>
 
 <Title value="{$fakemon.value.data.species.name}" />
-<PokemonSpeciesCard value={$fakemon.value.species}>
+<PokemonSpeciesCard value={$fakemon.value.species} dismissToHref="{Url.fakemon()}">
 	<div slot="footer">
 		<ActionArea>
 			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.accessKey)}" variant="ghost">{m.accessKey()}</Button>

@@ -14,13 +14,14 @@
 	export let move: Move
 	export let pokemon: PokemonSpecies[] = []
 	export let tm: boolean = false
+	export let dismissToHref: string
 
 	$: pokemonWhoLearnThisMove = tm
 		? move.pokemonWhoLearnThisViaTm(pokemon)
 		: move.pokemonWhoLearnThis(pokemon)
 </script>
 
-<Card title={tm ? move.tmName() : move.name}>
+<Card title={tm ? move.tmName() : move.name} {dismissToHref}>
 	<TypeTag slot="header-extra" type={[move.type]}></TypeTag>
 	<section class="info">
 		{#if move.beta}

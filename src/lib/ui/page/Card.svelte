@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { afterNavigate } from "$app/navigation"
+	import { ChevronIcon } from "../icons";
 
 	export let title: string
 	export let level: 1 | 2 | 3 | 4 | 5 | 6 = 1
 	export let inline = false
+	export let dismissToHref: string | undefined = undefined
 
 	$: leveltag = `h${level}`
 
@@ -21,6 +23,9 @@
 		<header>
 			<svelte:element this={leveltag}>{title}</svelte:element>
 			<slot name="header-extra"></slot>
+			{#if dismissToHref}
+				<a class="dismiss" href="{dismissToHref}"><ChevronIcon.Menu /></a>
+			{/if}
 		</header>
 		<div bind:this={scrollElem} class="scrollable">
 			<slot></slot>
@@ -111,5 +116,19 @@
 
 	article :global(.loader) {
 		--skin-local-color: var(--skin-content-text);
+	}
+
+	.dismiss {
+		display: inline-block;
+		color: var(--skin-bg-text);
+		inline-size: 1.125em;
+		margin-inline: 0.5em -0.25em;
+		transform: rotate(180deg);
+	}
+
+	@media screen and (min-width: 37.5rem) {
+		.dismiss {
+			display: none;
+		}
 	}
 </style>

@@ -22,7 +22,7 @@
 	}) ?? false) ?? [] : []
 </script>
 
-<Card title={item.name}>
+<Card title={item.name} dismissToHref="{Url.items()}">
 	<SideArtCardSection hasImage={item.media.sprite != null} size="clamp(4rem, 6.33vw, 4.75rem)">
 		<FlatDl>
 			<dt>{m.type()}</dt>
