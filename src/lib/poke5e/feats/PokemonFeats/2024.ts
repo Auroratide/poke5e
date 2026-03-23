@@ -88,5 +88,5 @@ export const PokemonFeats: Feat[] = [ {
 }, {
 	name: "Wrangler",
 	category: "General",
-	description: "You have developed a unique set of skills that give you the ability to grapple and hold an opponent down with steady and strong hands. You gain the following benefits:\n\n- You have Advantage on attack rolls against a creature Grappled by you.\n- You don't have to spend extra movement to move a creature Grappled by you if the creature is your size or smaller.\n- When you hit a creature with a melee move that uses the DEX move power as part of the Attack action on your turn, you can use both the Damage and the Grapple option. You can use this benefit only once per turn.",
+	description: "You have developed a unique set of skills that give you the ability to grapple and hold an opponent down with steady and strong hands. You gain the following benefits:\n\n- You have Advantage on attack rolls against a creature Grappled by you.\n- You don't have to spend extra movement to move a creature Grappled by you if the creature is your size or smaller.\n- When you hit a creature with a single-target melee move that uses the STR move power as part of the Attack action on your turn, you may simultaneously attempt to Grapple the target. You can use this benefit only once per turn.",
 } ]
