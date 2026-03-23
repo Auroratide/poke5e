@@ -450,6 +450,7 @@ test("updating pokemon", async () => {
 		_bond_level: 3,
 		_bond_points_cur: 2,
 		_bond_points_max: 3,
+		_rank: undefined,
 	})
 
 	// Updating the avatar
@@ -552,6 +553,95 @@ test("updating pokemon", async () => {
 		_trainer_id: trainerId,
 	})
 	expect(noMorePokemon.length).toEqual(0)
+})
+
+test("reordering pokemon", async () => {
+	const {
+		ret_id: trainerId,
+		ret_read_key: readKey,
+		ret_write_key: writeKey
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const sunnyYellowId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+		_rank: 0,
+	})
+
+	const rosyRedId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+		_nickname: "Rosy Red",
+		_rank: 1,
+	})
+
+	const skyBlueId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+		_nickname: "Sky Blue",
+		_rank: 2,
+	})
+
+	// Reorder
+	await call("reorder_pokemon", {
+		_write_key: writeKey,
+		_ids: [rosyRedId, skyBlueId, sunnyYellowId],
+	}, {
+		assertNull: true,
+	})
+
+	const receivedPokemon = await callAll<any>("get_pokemon", {
+		_trainer_id: trainerId,
+	})
+
+	expect(receivedPokemon).toHaveLength(3)
+	expect(receivedPokemon[0].id).toEqual(rosyRedId)
+	expect(receivedPokemon[1].id).toEqual(skyBlueId)
+	expect(receivedPokemon[2].id).toEqual(sunnyYellowId)
+
+	// Second trainer, testing for id validity
+	const {
+		ret_id: secondTrainerId,
+		ret_read_key: secondTrainerReadKey,
+		ret_write_key: secondTrainerWriteKey,
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const secondTrainerPokemonId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+		_rank: 0,
+	})
+
+	await expect(call("reorder_pokemon", {
+		_write_key: secondTrainerWriteKey,
+		_ids: [sunnyYellowId, secondTrainerPokemonId],
+	})).rejects.toThrow()
+
+	// Cleanup
+	await call("remove_pokemon", {
+		_write_key: writeKey,
+		_id: sunnyYellowId,
+	})
+	await call("remove_pokemon", {
+		_write_key: writeKey,
+		_id: rosyRedId,
+	})
+	await call("remove_pokemon", {
+		_write_key: writeKey,
+		_id: skyBlueId,
+	})
+	await call("delete_trainer", {
+		_write_key: writeKey,
+		_id: trainerId,
+	})
 })
 
 test("updating movesets", async () => {
@@ -1688,6 +1778,7 @@ export const SunnyYellow = () => ({
 	_rank_intimidation: 0,
 	_rank_performance: 0,
 	_rank_persuasion: 1,
+	_rank: 0,
 })
 
 const Drakeon = () => ({
