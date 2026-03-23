@@ -17,7 +17,7 @@
 	$: heldItem = pokemon.items.length > 0 ? getItemDetails(pokemon.items[0], $ItemStore) : undefined
 </script>
 
-<div class="side-by-side">
+<div class="side-by-side" data-ignore-reorder>
 	<a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded" data-ignore-reorder>
 		<span style:grid-area="sprite" class="max-height holding-item jumping-animation" data-ignore-reorder>
 			<WithSpecies let:species ids={[pokemon.pokemonId]}>
