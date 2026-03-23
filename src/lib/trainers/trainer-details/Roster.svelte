@@ -49,8 +49,8 @@
 	<SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} />
 </div>
 <div class="relative"><!-- Needed for the > indicators to appear outside the scroll box -->
-	<Saveable saving={reordering}>
-		<div class="scrollable">
+	<div class="scrollable">
+		<Saveable saving={reordering}>
 			<reorder-list class="nolist no-space full-width" on:commit={onReorder}>
 				{#each filtered as p (p.id)}
 					<reorder-item class="space-after">
@@ -58,8 +58,8 @@
 					</reorder-item>
 				{/each}
 			</reorder-list>
-		</div>
-	</Saveable>
+		</Saveable>
+	</div>
 </div>
 
 <style>
