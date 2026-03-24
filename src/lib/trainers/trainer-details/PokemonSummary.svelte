@@ -17,9 +17,9 @@
 	$: heldItem = pokemon.items.length > 0 ? getItemDetails(pokemon.items[0], $ItemStore) : undefined
 </script>
 
-<div class="side-by-side" data-ignore-reorder>
-	<a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded" data-ignore-reorder>
-		<span style:grid-area="sprite" class="max-height holding-item jumping-animation" data-ignore-reorder>
+<div class="side-by-side">
+	<a href="{Url.trainers(trainer, pokemon.id)}" class="selectable-bubble gridded">
+		<span style:grid-area="sprite" class="max-height holding-item jumping-animation">
 			<WithSpecies let:species ids={[pokemon.pokemonId]}>
 				<div slot="loader"></div>
 				<SpeciesSprite media={species?.media} alt={species?.data.name} shiny={pokemon.isShiny} />
@@ -33,16 +33,16 @@
 				</span>
 			{/if}
 		</span>
-		<span style:grid-area="name" data-ignore-reorder>{pokemon.nickname}</span>
-		<span style:grid-area="gender" class="right away-from-edge flex" data-ignore-reorder><GenderIcon gender={pokemon.gender} /></span>
-		<span style:grid-area="hpbar" class="away-from-edge" data-ignore-reorder><ResourceBar current={pokemon.hp.current} max={pokemon.hp.max} /></span>
-		<span style:grid-area="hp" data-ignore-reorder>{pokemon.hp.current}/{pokemon.hp.max}</span>
-		<span style:grid-area="status" class="smaller-text" data-ignore-reorder>{#if pokemon.status != null}<StatusTag abbr value={pokemon.status} />{/if}</span>
-		<span style:grid-area="lv" class="right" data-ignore-reorder>Lv. {pokemon.level.data}</span>
+		<span style:grid-area="name">{pokemon.nickname}</span>
+		<span style:grid-area="gender" class="right away-from-edge flex"><GenderIcon gender={pokemon.gender} /></span>
+		<span style:grid-area="hpbar" class="away-from-edge"><ResourceBar current={pokemon.hp.current} max={pokemon.hp.max} /></span>
+		<span style:grid-area="hp">{pokemon.hp.current}/{pokemon.hp.max}</span>
+		<span style:grid-area="status" class="smaller-text">{#if pokemon.status != null}<StatusTag abbr value={pokemon.status} />{/if}</span>
+		<span style:grid-area="lv" class="right">Lv. {pokemon.level.data}</span>
 	</a>
-	<div class="drag-container">
+	<reorder-handle class="drag-container">
 		<span class="drag-icon"><DragIcon /></span>
-	</div>
+	</reorder-handle>
 </div>
 
 <style>
@@ -128,10 +128,14 @@
 		flex-direction: row;
 		align-items: center;
 		gap: 1em;
-	} .side-by-side > :first-child {
-		flex: 3.5;
-	} .side-by-side > :last-child {
+	}
+
+	.selectable-bubble {
 		flex: 1;
+		max-inline-size: 75%;
+	}
+	.drag-container {
+		padding: 0.5em;
 	}
 
 	.drag-container:hover .drag-icon {
