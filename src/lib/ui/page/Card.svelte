@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { afterNavigate } from "$app/navigation"
 	import { ChevronIcon } from "../icons";
+	import { m } from "$lib/site/i18n"
 
 	export let title: string
 	export let level: 1 | 2 | 3 | 4 | 5 | 6 = 1
@@ -24,7 +25,7 @@
 			<svelte:element this={leveltag}>{title}</svelte:element>
 			<slot name="header-extra"></slot>
 			{#if dismissToHref}
-				<a class="dismiss" href="{dismissToHref}"><ChevronIcon.Menu /></a>
+				<a class="dismiss" href="{dismissToHref}" aria-label="{m.dismiss()}"><ChevronIcon.Menu /></a>
 			{/if}
 		</header>
 		<div bind:this={scrollElem} class="scrollable">
