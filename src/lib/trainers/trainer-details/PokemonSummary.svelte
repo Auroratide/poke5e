@@ -13,6 +13,7 @@
 
 	export let trainer: ReadWriteKey
 	export let pokemon: TrainerPokemon
+	export let editable: boolean = false
 
 	$: heldItem = pokemon.items.length > 0 ? getItemDetails(pokemon.items[0], $ItemStore) : undefined
 </script>
@@ -40,9 +41,11 @@
 		<span style:grid-area="status" class="smaller-text">{#if pokemon.status != null}<StatusTag abbr value={pokemon.status} />{/if}</span>
 		<span style:grid-area="lv" class="right">Lv. {pokemon.level.data}</span>
 	</a>
-	<reorder-handle class="drag-container">
-		<span class="drag-icon"><DragIcon /></span>
-	</reorder-handle>
+	{#if editable}
+		<reorder-handle class="drag-container">
+			<span class="drag-icon"><DragIcon /></span>
+		</reorder-handle>
+	{/if}
 </div>
 
 <style>

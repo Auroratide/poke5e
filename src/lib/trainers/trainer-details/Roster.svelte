@@ -53,15 +53,25 @@
 </div>
 <div class="relative"><!-- Needed for the > indicators to appear outside the scroll box -->
 	<div class="scrollable">
-		<Saveable saving={reordering}>
-			<reorder-list class="nolist no-space full-width" on:commit={onReorder}>
+		{#if editable}
+			<Saveable saving={reordering}>
+				<reorder-list class="nolist no-space full-width" on:commit={onReorder} on:change={onChange} >
+					{#each filtered as p (p.id)}
+						<reorder-item class="space-after">
+							<PokemonSummary trainer={$trainer.info.readKey} pokemon={p} editable />
+						</reorder-item>
+					{/each}
+				</reorder-list>
+			</Saveable>
+		{:else}
+			<ul class="nolist no-space full-width">
 				{#each filtered as p (p.id)}
-					<reorder-item class="space-after">
+					<li class="space-after">
 						<PokemonSummary trainer={$trainer.info.readKey} pokemon={p} />
-					</reorder-item>
+					</li>
 				{/each}
-			</reorder-list>
-		</Saveable>
+			</ul>
+		{/if}
 	</div>
 </div>
 
