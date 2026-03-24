@@ -11,4 +11,5 @@ export const PageAction = {
 	retireTrainer: "retire-trainer",
 	removeTrainer: "remove-trainer",
 	accessKey: "access-key",
+	fullList: "full-list",
 }

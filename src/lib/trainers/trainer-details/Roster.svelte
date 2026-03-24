@@ -13,6 +13,7 @@
 
 	export let trainer: TrainerStore
 	export let currentPokemon: PokemonId | undefined
+	export let isFullList: boolean = false
 
 	$: editable = $trainer.update != null
 
@@ -35,7 +36,7 @@
 
 <ListHeading title="{$trainer.info.name}'s Pokemon" target="/trainers">
 	<span slot="link">
-		{#if currentPokemon}
+		{#if currentPokemon || isFullList}
 			<a href="{baseTrainerUrl}" class="dark-font">{m.viewTrainerProfile()} &gt;</a>
 		{:else}
 			<a href="{Url.trainers()}" class="dark-font">{m.seeTrainerList()} &gt;</a>

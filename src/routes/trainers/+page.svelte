@@ -81,7 +81,7 @@
 				<Loader />
 			{:then trainer}
 				{#if trainer}
-					<TrainerRoster {trainer} currentPokemon={pokemonId} />
+					<TrainerRoster {trainer} currentPokemon={pokemonId} isFullList={action === PageAction.fullList} />
 				{:else}
 					<NoTrainer trainerKey={trainerId} />
 				{/if}
@@ -112,6 +112,8 @@
 				{:then allSpecies}
 					<AddPokemonCard {trainer} {allSpecies} />
 				{/await}
+			{:else if action === PageAction.fullList}
+				<!-- empty -->
 			{:else if action === PageAction.editPokemon}
 				<EditPokemonCard {trainer} id={pokemonId} />
 			{:else if action === PageAction.evolvePokemon}

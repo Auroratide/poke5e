@@ -28,7 +28,7 @@
 </script>
 
 <Title value="{$trainer.info.name}" />
-<Card title={$trainer.info.name}>
+<Card title={$trainer.info.name} dismissToHref="{Url.trainers($trainer.info.readKey, undefined, PageAction.fullList)}">
 	<div slot="header-extra" style:padding-inline-end="0.5em">
 		<Level value={$trainer.info.level.data} />
 	</div>

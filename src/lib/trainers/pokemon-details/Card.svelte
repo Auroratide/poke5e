@@ -7,6 +7,8 @@
 	import Info from "./Info.svelte"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import TrainerPokemonActions from "./TrainerPokemonActions.svelte"
+	import { Url } from "$lib/site/url";
+	import { PageAction } from "../page-action";
 
 	export let trainer: TrainerStore
 	export let id: PokemonId
@@ -35,7 +37,7 @@
 
 <RequirePokemon trainer={$trainer} {id}>
 	<WithSpecies let:species ids={[pokemon?.pokemonId]}>
-		<Card title={pokemon.nickname}>
+		<Card title={pokemon.nickname} dismissToHref="{Url.trainers($trainer.info.readKey, undefined, PageAction.fullList)}">
 			<TypeTag slot="header-extra" type={pokemon.type.data} />
 			<Info trainer={$trainer.info} {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} on:update-bond={onUpdateBond} />
 			{#if canEdit}
