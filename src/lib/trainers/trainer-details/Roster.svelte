@@ -26,6 +26,8 @@
 
 	let reordering = false
 	const onReorder = (e: CustomEvent<ReorderListChangeEventDetail>) => {
+		if (e.detail.oldIndex === e.detail.newIndex) return
+
 		reordering = true
 		const newList = list.reorderOne($trainer.pokemon, e.detail.oldIndex, e.detail.newIndex)
 		$trainer.update.reorderTeam(newList).finally(() => {
