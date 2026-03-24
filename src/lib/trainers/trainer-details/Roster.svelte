@@ -55,7 +55,7 @@
 	<div class="scrollable">
 		{#if editable}
 			<Saveable saving={reordering}>
-				<reorder-list class="nolist no-space full-width" on:commit={onReorder} on:change={onChange} >
+				<reorder-list class="nolist no-space full-width" on:commit={onReorder}>
 					{#each filtered as p (p.id)}
 						<reorder-item class="space-after">
 							<PokemonSummary trainer={$trainer.info.readKey} pokemon={p} editable />

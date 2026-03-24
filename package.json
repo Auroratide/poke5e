@@ -69,7 +69,7 @@
 	},
 	"dependencies": {
 		"@auroratide/pokemon-types": "^0.1.0",
-		"@auroratide/reorder-list": "^0.5.0",
+		"@auroratide/reorder-list": "^0.5.1",
 		"@auroratide/tab-list": "^0.2.6",
 		"@auroratide/toggle-switch": "^0.3.1",
 		"@floating-ui/dom": "^1.7.4",

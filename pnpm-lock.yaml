@@ -12,8 +12,8 @@ importers:
         specifier: ^0.1.0
         version: 0.1.0
       '@auroratide/reorder-list':
-        specifier: ^0.5.0
-        version: 0.5.0
+        specifier: ^0.5.1
+        version: 0.5.1
       '@auroratide/tab-list':
         specifier: ^0.2.6
         version: 0.2.6
@@ -142,8 +142,8 @@ packages:
   '@auroratide/pokemon-types@0.1.0':
     resolution: {integrity: sha512-jVr8JLnAT8mbd20/SIhgtVWPftA8iP/X8rz6dWZPo7KvAKZifLEnA3crRkgs60pf7Mq3STVqZ+kPXJjZSTvVpA==}
 
-  '@auroratide/reorder-list@0.5.0':
-    resolution: {integrity: sha512-oAfpT+kq+KY1up6tNKeMeluhItyLYIgjEEduw3aLsqzGfnqol/2zxHuQT1OenwlVnfHrrbBjcBHOAvCw/xJ5DA==}
+  '@auroratide/reorder-list@0.5.1':
+    resolution: {integrity: sha512-F6zyDrzmU977BD70f3chG/EUiQYp4u9A7VaafJasyBRYjykmtT3vpTp+0TWPxOY1TBv+LtNJzKDU4gs5XrTnDw==}
 
   '@auroratide/tab-list@0.2.6':
     resolution: {integrity: sha512-bfG9DFB7KgPqoTW9SIRvg0ouqPsMeNwxe2V/VrpympF9qvlG8DQHqjbSyr7pmb895Ay1pL5KzRfwbn1hseNI8A==}
@@ -3055,7 +3055,7 @@ snapshots:
 
   '@auroratide/pokemon-types@0.1.0': {}
 
-  '@auroratide/reorder-list@0.5.0': {}
+  '@auroratide/reorder-list@0.5.1': {}
 
   '@auroratide/tab-list@0.2.6': {}
 
