@@ -401,7 +401,7 @@
 			"id": "pp-up",
 			"name": "Más PP",
 			"description": [
-				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. Los PP máximos de uno de los movimientos de este Pokémon aumentan en 2.",
+				"Un entrenador puede usar una acción para administrar este objeto a un Pokémon. Los PP máximos de uno de los movimientos de este Pokémon aumentan en 2. Esto no puede aumentar los PP del movimiento a más del doble de sus PP base.",
 				"Este objeto es una vitamina. Un Pokémon solo puede beneficiarse de los efectos de tres vitaminas en total."
 			]
 		},

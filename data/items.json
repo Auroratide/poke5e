@@ -696,7 +696,7 @@
 			"type": "medicine",
 			"cost": 8800,
 			"description": [
-				"A trainer may use an action to administer this to a Pokémon. The max PP of one of this Pokémon's moves increases by 2.",
+				"A trainer may use an action to administer this to a Pokémon. The max PP of one of this Pokémon's moves increases by 2. This cannot increase the move's PP to above twice its baseline PP.",
 				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
 			],
 			"media": {
