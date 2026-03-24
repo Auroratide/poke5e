@@ -12,6 +12,7 @@
 	svg {
 		overflow: visible;
 		display: inline-block;
+		inline-size: 100%;
 	}
 
 	svg :global(.stroke) {
