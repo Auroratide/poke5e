@@ -14,6 +14,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.10.7",
+		description: [
+			"<strong>New</strong>: Can now reorder pokemon in trainer roster!",
+			"<strong>Reference</strong>: On Wrangler Feat, replace DEX move power requirement with STR, so it synergizes with grapple.",
+			"<strong>Items</strong>: Add restriction to PP Up, that it can't be used to increase a move's PP to more than twice the original PP.",
+		],
+	}, {
 		name: "v1.10.6",
 		description: [
 			"<strong>Pokémon</strong>: Correct Alolan Vulpix's biomes.",
