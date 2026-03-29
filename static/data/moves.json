@@ -24281,6 +24281,9 @@
 				"type": [
 					"grass"
 				]
+			},
+			"attack": {
+				"scope": "melee"
 			}
 		},
 		{
