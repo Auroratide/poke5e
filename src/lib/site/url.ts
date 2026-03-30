@@ -59,6 +59,7 @@ export const Url = {
 		tms: () => localizeUrl(resolve("/reference/tms")).pathname,
 		trainerClass: () => localizeUrl(resolve("/reference/trainer-class")).pathname,
 		trainerLeveling: () => localizeUrl(resolve("/reference/trainer-leveling")).pathname,
+		trainerOrigins: () => localizeUrl(resolve("/reference/trainer-origins")).pathname,
 		trainerPaths: () => localizeUrl(resolve("/reference/trainer-paths")).pathname,
 		transformations: () => localizeUrl(resolve("/reference/pokemon-transformations")).pathname,
 		weather: () => localizeUrl(resolve("/reference/weather")).pathname,
@@ -80,5 +81,6 @@ export const Url = {
 		abilities: () => localizeUrl(resolve("/(api)/abilities.json")).pathname,
 		biomes: () => localizeUrl(resolve("/(api)/biomes.json")).pathname,
 		contestEffects: () => localizeUrl(resolve("/(api)/contest-effects.json")).pathname,
+		origins: () => localizeUrl(resolve("/(api)/origins.json")).pathname,
 	},
 } as const

@@ -31,6 +31,9 @@ export class Attributes extends DataClass<{
 			name: "Charisma",
 		} ]
 
+	static readonly getName = (attr: Attribute): string =>
+		Attributes.list.find((it) => it.abbr === attr).name
+
 	get str() { return this.score(this.data.str) }
 	get dex() { return this.score(this.data.dex) }
 	get con() { return this.score(this.data.con) }

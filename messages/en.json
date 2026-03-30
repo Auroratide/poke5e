@@ -187,6 +187,11 @@
 	"close": "Close",
 	"otherInfo": "Other Info",
 	"dismiss": "Dismiss",
+	"yourScoreIncreases": "Your {scorePlus2} score increases by 2, and your {scorePlus1} increases by 1.",
+	"anyTwoScoresIncrease": "Two ability scores of your choice increase by 1.",
+	"youGainProficiency": "You gain proficiency in {skills}.",
+	"languages": "Languages",
+	"youKnowTwoLanguages": "You know the {one} and {two} languages.",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},
