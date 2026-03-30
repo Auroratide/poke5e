@@ -14,6 +14,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.10.8",
+		description: [
+			"<strong>Bugfix</strong>: Re-add cost to TMs pages.",
+			"<strong>Bugfix</strong>: Add to-hit to Wood Hammer.",
+		],
+	}, {
 		name: "v1.10.7",
 		description: [
 			"<strong>New</strong>: Can now reorder pokemon in trainer roster!",
