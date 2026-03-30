@@ -10,6 +10,7 @@
 	import { Url } from "$lib/site/url"
 	import { ContestInfo } from "./contest"
 	import { m } from "$lib/site/i18n"
+	import { formatMoney } from "$lib/pokemon/money";
 
 	export let move: Move
 	export let pokemon: PokemonSpecies[] = []
@@ -39,6 +40,10 @@
 			<dd class="duration">{move.duration}</dd>
 			<dt>{m.range()}</dt>
 			<dd class="range">{move.range}</dd>
+			{#if tm}
+				<dt>{m.cost()}</dt>
+				<dd>{formatMoney(move.tm?.cost ?? 0)}</dd>
+			{/if}
 		</FlatDl>
 	</section>
 	<section class="description">
