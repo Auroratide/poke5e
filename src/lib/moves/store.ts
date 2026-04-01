@@ -19,7 +19,6 @@ export const MovesStore = readable<Move[]>(undefined, (set) => {
 export const TmsStore: Readable<Tm[]> = derived(MovesStore, (moves) => {
 	return moves
 		?.filter((it) => it.isTm())
-		.filter((it) => it.tm.id <= 101 || FeatureToggles.MoreTms())
 		.sort(TmDetails.byTmId)
 })
 

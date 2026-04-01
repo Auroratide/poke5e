@@ -11,9 +11,7 @@
 {#if $allTms !== undefined}
 	<ul>
 		{#each tms as tm}
-			{#if tm <= 101 || FeatureToggles.MoreTms()}
-				<li><a href="{Url.tms(tm.toString())}">{name(tm)}</a></li>
-			{/if}
+			<li><a href="{Url.tms(tm.toString())}">{name(tm)}</a></li>
 		{/each}
 	</ul>
 {:else}

@@ -64,7 +64,6 @@
 
 	$: filtered = tms
 		.filter(filter.apply)
-		.filter((tm) => tm.tm.id <= 101 || FeatureToggles.MoreTms())
 
 	const byStringField = (field: (m: Tm) => string) => (l: Tm, r: Tm) => field(l).localeCompare(field(r))
 	const byNumericField = (field: (m: Tm) => number) => (l: Tm, r: Tm) => field(l) - field(r)

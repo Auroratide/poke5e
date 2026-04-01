@@ -43,7 +43,6 @@ export class LearnableMoves {
 		).toSorted(alphabetize)
 
 		const tmMoves = species.moves.data.tm
-			?.filter((it) => it <= 101 || FeatureToggles.MoreTms())
 			?.map((it) => tms.find((m) => m.tm.id === it))
 			.map((it) => it?.id)
 			.filter((it) => it != null)
