@@ -17,7 +17,10 @@
 	export let allSpecies: PokemonSpecies[]
 	export let disabled = false
 	export let isSpeciesDisabled: (species: PokemonSpecies) => string | false = () => false // return string is the reason for being disabled
+	export let required = false
 	export let explicitSubmit = false
+
+	$: errorMessage = required ? "Please select a valid pokemon" : "Please select a valid pokemon or leave blank"
 
 	$: id = name ?? kebab(label)
 
@@ -31,6 +34,12 @@
 		species = p.name
 		confirmed = true
 		dispatch("change", { species: p })
+	}
+
+	const removeSelection = () => {
+		species = ""
+		confirmed = false
+		dispatch("change", { species: undefined })
 	}
 
 	const onSelect = (p: PokemonSpecies) => () => {
@@ -48,19 +57,25 @@
 		if (explicitSubmit) return
 
 		if (!(e.currentTarget as HTMLElement)?.contains(e.relatedTarget as Node)) {
+			if (species === "") {
+				removeSelection()
+				return
+			}
+
 			const exactMatch = filteredPokemon.find((it) => it.name.toLocaleLowerCase() === species.toLocaleLowerCase())
 
 			if (!confirmed && exactMatch != null && !isSpeciesDisabled(exactMatch)) {
 				confirm(exactMatch)
 			}
 		}
-
 	}
+
+	$: isValid = confirmed || (!required && species.length === 0)
 </script>
 
 <div class="species-field" on:focusout={onFocusOut}>
 	<div class="field">
-		<TextField {label} name={id} bind:value={species} {disabled} on:focus={onFocus} customError={confirmed ? undefined : "Please select a valid pokemon"} />
+		<TextField {label} name={id} bind:value={species} {disabled} on:focus={onFocus} customError={isValid ? undefined : errorMessage} />
 	</div>
 	{#if filteredPokemon.length === 0 && species.length > 0}
 		<p class="muted center fixed-height" transition:slide>No matched pokemon</p>

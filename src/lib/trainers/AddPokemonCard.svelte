@@ -37,7 +37,7 @@
 		<section>
 			<p>Start typing the pokemon's species, then select from the provided list.</p>
 			<div class="font-lg">
-				<SpeciesField label="Species" value="" name="species" allSpecies={$allSpecies} disabled={saving} on:change={(e) => onSelect(e.detail.species)()} explicitSubmit />
+				<SpeciesField label="Species" value="" name="species" allSpecies={$allSpecies} disabled={saving} on:change={(e) => onSelect(e.detail.species)()} explicitSubmit required />
 			</div>
 		</section>
 		<section>

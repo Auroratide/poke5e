@@ -8,6 +8,8 @@
 	import FakemonAdder from "./FakemonAdder.svelte"
 	import { type SubmitDetail } from "./FakemonEditor.svelte"
 	import { m } from "$lib/site/i18n"
+	import { SpeciesStore } from "$lib/poke5e/species";
+	import { Loader } from "$lib/ui/elements";
 
 	const draftFakemon = new Fakemon({
 		id: "",
@@ -115,9 +117,15 @@
 			saving = false
 		})
 	}
+
+	const allSpecies = SpeciesStore.completeList()
 </script>
 
 <Title value="{m["fakemon.addNewFakemon"]()}" />
 <Card title="{m["fakemon.addNewFakemon"]()}">
-	<FakemonAdder fakemon={draftFakemon} on:submit={onSubmit} on:cancel={onCancel} {saving} />
+	{#await allSpecies}
+		<Loader />
+	{:then allSpecies}
+		<FakemonAdder fakemon={draftFakemon} {allSpecies} on:submit={onSubmit} on:cancel={onCancel} {saving} />
+	{/await}
 </Card>

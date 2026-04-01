@@ -267,7 +267,9 @@
 		"hueTutorialText": "If you don't upload shiny variations, use this hue slider to make one.",
 		"evolutionNoteText": "You can only customize evolutions between Fakémon you own or official Pokémon.",
 		"thisFakemonDesNotEvolveIntoAnything": "This Fakémon does not evolve into anything.",
-		"thisFakemonDesNotEvolveFromAnything": "This Fakémon does not evolve from anything."
+		"thisFakemonDesNotEvolveFromAnything": "This Fakémon does not evolve from anything.",
+		"templateSpecies": "Optional: Template Species",
+		"templateSpeciesInstructions": "Choosing a template species will fill in all the stats and moves of your fakemon using the chosen species as a reference. This is optional."
 	},
 	"encounterTool": {
 		"title": "Encounters"

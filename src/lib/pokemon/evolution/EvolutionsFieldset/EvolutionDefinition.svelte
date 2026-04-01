@@ -61,7 +61,7 @@
 
 <div class="evolution-definition">
 	<FormGroup>
-		<SpeciesField label="Evolves {capitalize(direction)}..." value={value.data[direction]} name="{id}" {allSpecies} {isSpeciesDisabled} on:change={onSpeciesChange} />
+		<SpeciesField label="Evolves {capitalize(direction)}..." value={value.data[direction]} name="{id}" {allSpecies} {isSpeciesDisabled} on:change={onSpeciesChange} required />
 		<p class="title">Conditions</p>
 		<div class="columns">
 			<ConditionField

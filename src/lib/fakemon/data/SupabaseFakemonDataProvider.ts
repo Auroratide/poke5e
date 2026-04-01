@@ -11,7 +11,7 @@ import type { UserAssets } from "$lib/site/user-assets"
 import type { ImageInputValue } from "$lib/ui/forms"
 import { SpeciesMedia, type SpeciesMediaTypeAttribution, type UploadedMedia } from "$lib/poke5e/species/media"
 import { SpeciesIdentifier } from "$lib/poke5e/species"
-import { Ability, AbilityPool } from "$lib/pokemon/ability"
+import { Ability } from "$lib/pokemon/ability"
 
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	constructor(
@@ -183,14 +183,14 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 				normal: fakemon.abilities.normal.map((it) => it.referenceId ? { referenceId: it.referenceId } : { name: it.name, description: it.description }),
 				hidden: fakemon.abilities.hidden.map((it) => it.referenceId ? { referenceId: it.referenceId } : { name: it.name, description: it.description })
 			},
-			_moves_start: fakemon.moves.start,
-			_moves_level2: fakemon.moves.level2,
-			_moves_level6: fakemon.moves.level6,
-			_moves_level10: fakemon.moves.level10,
-			_moves_level14: fakemon.moves.level14,
-			_moves_level18: fakemon.moves.level18,
-			_moves_egg: fakemon.moves.egg,
-			_moves_tm: fakemon.moves.tm,
+			_moves_start: fakemon.moves.start ?? [],
+			_moves_level2: fakemon.moves.level2 ?? [],
+			_moves_level6: fakemon.moves.level6 ?? [],
+			_moves_level10: fakemon.moves.level10 ?? [],
+			_moves_level14: fakemon.moves.level14 ?? [],
+			_moves_level18: fakemon.moves.level18 ?? [],
+			_moves_egg: fakemon.moves.egg ?? [],
+			_moves_tm: fakemon.moves.tm ?? [],
 			_art_attribution_type: fakemon.media.attribution?.portrait?.type ?? null,
 			_art_attribution_name: fakemon.media.attribution?.portrait?.name ?? null,
 			_art_attribution_href: fakemon.media.attribution?.portrait?.href ?? null,
