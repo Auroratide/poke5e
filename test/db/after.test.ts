@@ -451,6 +451,8 @@ test("updating pokemon", async () => {
 		_bond_points_cur: 2,
 		_bond_points_max: 3,
 		_rank: undefined,
+		_stab_base: "movepower",
+		_stab_bonus: 2
 	})
 
 	// Updating the avatar
@@ -537,6 +539,9 @@ test("updating pokemon", async () => {
 	expect(vivillon.rank_intimidation).toEqual(0)
 	expect(vivillon.rank_performance).toEqual(0)
 	expect(vivillon.rank_persuasion).toEqual(1)
+
+	expect(vivillon.stab_base).toEqual("movepower")
+	expect(vivillon.stab_bonus).toEqual(2)
 
 	expect(vivillon.avatar_filename).toEqual(avatarFilename)
 
@@ -1779,6 +1784,8 @@ export const SunnyYellow = () => ({
 	_rank_performance: 0,
 	_rank_persuasion: 1,
 	_rank: 0,
+	_stab_base: "default",
+	_stab_bonus: 0,
 })
 
 const Drakeon = () => ({
