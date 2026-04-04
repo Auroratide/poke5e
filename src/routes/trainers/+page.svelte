@@ -30,6 +30,7 @@
 	import type { Readable } from "svelte/store"
 	import { SpeciesStore, type PokemonSpecies } from "$lib/poke5e/species"
 	import { error } from "$lib/site/errors"
+	import { MaintenanceAnnouncement, MaintenanceOverlay } from "$lib/site/maintenance";
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: accessKey = browser ? $page.url.searchParams.get("access_key")?.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "") : undefined
@@ -72,92 +73,95 @@
 </script>
 
 <Title value="Trainers" />
-<Page theme="green">
-	<IdBadgeIcon slot="icon" />
-	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Pokemon List">
-		<JavascriptRequired />
+<MaintenanceOverlay>
+	<Page theme="green">
+		<IdBadgeIcon slot="icon" />
+		<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Pokemon List">
+			<JavascriptRequired />
+			<MaintenanceAnnouncement />
+			{#if trainerId}
+				{#await trainer}
+					<Loader />
+				{:then trainer}
+					{#if trainer}
+						<TrainerRoster {trainer} currentPokemon={pokemonId} isFullList={action === PageAction.fullList} />
+					{:else}
+						<NoTrainer trainerKey={trainerId} />
+					{/if}
+				{:catch error}
+					<ErrorMessage error="{error}" />
+				{/await}
+			{:else}
+				{#await trainerList}
+					<Loader />
+				{:then trainerList}
+					{#if trainerList}
+						<TrainerList trainers={trainerList} showGetStarted={action == null} />
+					{/if}
+				{:catch error}
+					<ErrorMessage error="{error}" />
+				{/await}
+			{/if}
+		</nav>
 		{#if trainerId}
 			{#await trainer}
 				<Loader />
 			{:then trainer}
-				{#if trainer}
-					<TrainerRoster {trainer} currentPokemon={pokemonId} isFullList={action === PageAction.fullList} />
+				{#if !trainer}
+					<br />
+				{:else if action === PageAction.addPokemon}
+					{#await allSpecies}
+						<Loader />
+					{:then allSpecies}
+						<AddPokemonCard {trainer} {allSpecies} />
+					{/await}
+				{:else if action === PageAction.fullList}
+					<!-- empty -->
+				{:else if action === PageAction.editPokemon}
+					<EditPokemonCard {trainer} id={pokemonId} />
+				{:else if action === PageAction.evolvePokemon}
+					{#await allSpecies}
+						<Loader />
+					{:then allSpecies}
+						<EvolvePokemonCard {trainer} id={pokemonId} {allSpecies} />
+					{/await}
+				{:else if action === PageAction.restPokemon}
+					<RestPokemonCard {trainer} id={pokemonId} />
+				{:else if action === PageAction.removePokemon}
+					<RemovePokemonCard {trainer} id={pokemonId} />
+				{:else if pokemonId}
+					<PokemonCard {trainer} id={pokemonId} />
+				{:else if action === PageAction.restTrainer}
+					{#await allSpecies}
+						<Loader />
+					{:then allSpecies}
+						<RestTrainerCard {trainer} {allSpecies} />
+					{/await}
+				{:else if action === PageAction.editTrainer}
+					<EditTrainerCard {trainer} />
+				{:else if action === PageAction.removeTrainer}
+					<RemoveTrainerCard {trainer} />
+				{:else if action === PageAction.retireTrainer}
+					<DeleteTrainerCard {trainer} />
+				{:else if action === PageAction.accessKey}
+					<TransferTrainerCard {trainer} />
 				{:else}
-					<NoTrainer trainerKey={trainerId} />
+					<TrainerCard {trainer} />
 				{/if}
 			{:catch error}
 				<ErrorMessage error="{error}" />
 			{/await}
 		{:else}
-			{#await trainerList}
-				<Loader />
-			{:then trainerList}
-				{#if trainerList}
-					<TrainerList trainers={trainerList} showGetStarted={action == null} />
-				{/if}
-			{:catch error}
-				<ErrorMessage error="{error}" />
-			{/await}
-		{/if}
-	</nav>
-	{#if trainerId}
-		{#await trainer}
-			<Loader />
-		{:then trainer}
-			{#if !trainer}
-				<br />
-			{:else if action === PageAction.addPokemon}
-				{#await allSpecies}
-					<Loader />
-				{:then allSpecies}
-					<AddPokemonCard {trainer} {allSpecies} />
-				{/await}
-			{:else if action === PageAction.fullList}
-				<!-- empty -->
-			{:else if action === PageAction.editPokemon}
-				<EditPokemonCard {trainer} id={pokemonId} />
-			{:else if action === PageAction.evolvePokemon}
-				{#await allSpecies}
-					<Loader />
-				{:then allSpecies}
-					<EvolvePokemonCard {trainer} id={pokemonId} {allSpecies} />
-				{/await}
-			{:else if action === PageAction.restPokemon}
-				<RestPokemonCard {trainer} id={pokemonId} />
-			{:else if action === PageAction.removePokemon}
-				<RemovePokemonCard {trainer} id={pokemonId} />
-			{:else if pokemonId}
-				<PokemonCard {trainer} id={pokemonId} />
-			{:else if action === PageAction.restTrainer}
-				{#await allSpecies}
-					<Loader />
-				{:then allSpecies}
-					<RestTrainerCard {trainer} {allSpecies} />
-				{/await}
-			{:else if action === PageAction.editTrainer}
-				<EditTrainerCard {trainer} />
-			{:else if action === PageAction.removeTrainer}
-				<RemoveTrainerCard {trainer} />
-			{:else if action === PageAction.retireTrainer}
-				<DeleteTrainerCard {trainer} />
-			{:else if action === PageAction.accessKey}
-				<TransferTrainerCard {trainer} />
+			{#if action === PageAction.newTrainer}
+				<NewTrainerCard />
+			{:else if action === PageAction.findTrainer}
+				<FindTrainerCard />
 			{:else}
-				<TrainerCard {trainer} />
+				<Title value="Trainers" />
 			{/if}
-		{:catch error}
-			<ErrorMessage error="{error}" />
-		{/await}
-	{:else}
-		{#if action === PageAction.newTrainer}
-			<NewTrainerCard />
-		{:else if action === PageAction.findTrainer}
-			<FindTrainerCard />
-		{:else}
-			<Title value="Trainers" />
 		{/if}
-	{/if}
-</Page>
+	</Page>
+</MaintenanceOverlay>
 
 <style>
 	nav {

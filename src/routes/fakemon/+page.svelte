@@ -26,6 +26,7 @@
 	import { onMount } from "svelte"
 	import { type Readable } from "svelte/store"
 	import { SpeciesStore, type PokemonSpecies } from "$lib/poke5e/species"
+	import { MaintenanceAnnouncement, MaintenanceOverlay } from "$lib/site/maintenance";
 
 	$: fakemonId = browser ? $page.url.searchParams.get("id") : undefined
 	$: action = browser ? $page.url.searchParams.get("action") : undefined
@@ -53,51 +54,54 @@
 </script>
 
 <Title value="Fakémon" />
-<Page theme="pink">
-	<GreatballIcon slot="icon" />
-	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Fakémon List">
-		{#await list}
-			<Loader />
-		{:then list}
-			{#if list}
-				<FakemonList fakemon={list} showGetStarted={action == null} />
-			{/if}
-		{:catch error}
-			<ErrorMessage error="{error}" />
-		{/await}
-	</nav>
-	{#if fakemonId}
-		{#await fakemon}
-			<Loader />
-		{:then fakemon}
-			{#if !fakemon}
-				<br />
-			{:else if action === PageAction.edit}
-				{#await allSpecies}
-					<Loader />
-				{:then allSpecies}
-					<EditFakemonPage {fakemon} {allSpecies} />
-				{/await}
-			{:else if action === PageAction.accessKey}
-				<AccessKeyPage {fakemon} />
-			{:else if action === PageAction.remove}
-				<RemoveFakemonPage {fakemon} />
-			{:else}
-				<InfoFakemonPage {fakemon} />
-			{/if}
-		{:catch error}
-			<ErrorMessage error="{error}" />
-		{/await}
-	{:else}
-		{#if action === PageAction.add}
-			<AddFakemonPage />
-		{:else if action === PageAction.find}
-			<FindFakemonPage />
+<MaintenanceOverlay>
+	<Page theme="pink">
+		<GreatballIcon slot="icon" />
+		<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Fakémon List">
+			<MaintenanceAnnouncement />
+			{#await list}
+				<Loader />
+			{:then list}
+				{#if list}
+					<FakemonList fakemon={list} showGetStarted={action == null} />
+				{/if}
+			{:catch error}
+				<ErrorMessage error="{error}" />
+			{/await}
+		</nav>
+		{#if fakemonId}
+			{#await fakemon}
+				<Loader />
+			{:then fakemon}
+				{#if !fakemon}
+					<br />
+				{:else if action === PageAction.edit}
+					{#await allSpecies}
+						<Loader />
+					{:then allSpecies}
+						<EditFakemonPage {fakemon} {allSpecies} />
+					{/await}
+				{:else if action === PageAction.accessKey}
+					<AccessKeyPage {fakemon} />
+				{:else if action === PageAction.remove}
+					<RemoveFakemonPage {fakemon} />
+				{:else}
+					<InfoFakemonPage {fakemon} />
+				{/if}
+			{:catch error}
+				<ErrorMessage error="{error}" />
+			{/await}
 		{:else}
-			<Title value="Fakémon" />
+			{#if action === PageAction.add}
+				<AddFakemonPage />
+			{:else if action === PageAction.find}
+				<FindFakemonPage />
+			{:else}
+				<Title value="Fakémon" />
+			{/if}
 		{/if}
-	{/if}
-</Page>
+	</Page>
+</MaintenanceOverlay>
 
 <style>
 	nav {
