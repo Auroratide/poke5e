@@ -29,7 +29,7 @@
 			{#each pokemon.moves as move}
 				{@const moveData = $MovesStore.find((it) => it.id === move.moveId)}
 				<li>
-					<MoveDetails {move} {moveData} {editable} level={pokemon.level} attributes={pokemon.attributes} pokemonType={pokemon.type} on:update={onUpdate(move)} />
+					<MoveDetails {move} {moveData} {editable} level={pokemon.level} attributes={pokemon.attributes} pokemonType={pokemon.type} stab={pokemon.stab} on:update={onUpdate(move)} />
 				</li>
 			{/each}
 		</ul>

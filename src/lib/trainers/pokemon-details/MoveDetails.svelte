@@ -18,12 +18,14 @@
 	import { Url } from "$lib/site/url"
 	import { MoveStatsInfo } from "$lib/moves"
 	import { rulesVersion } from "$lib/site/rules-version"
+	import type { Stab } from "$lib/pokemon/stab"
 
 	const dispatch = createEventDispatcher()
 
 	export let move: LearnedMove
 	export let moveData: Move
 	export let level: Level
+	export let stab: Stab
 	export let pokemonType: PokemonType
 	export let attributes: Attributes
 	export let editable: boolean
@@ -34,6 +36,7 @@
 		attributes: attributes,
 		level: level,
 		type: pokemonType.data,
+		stab: stab,
 	})
 
 	$: attributeList = moveData.power.attributeList()

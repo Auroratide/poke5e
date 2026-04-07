@@ -75,6 +75,7 @@ export class Move extends DataClass<{
 		attributes: Attributes,
 		level: Level,
 		type: PokeType[],
+		stab: Stab,
 	}): MoveStats {
 		const result: MoveStats = {}
 
@@ -91,8 +92,8 @@ export class Move extends DataClass<{
 		result.toHit = this.attack?.toHit(pb, attributeMod)
 		result.save = this.save?.withDc(pb, attributeMod)
 
-		const stab = new Stab({ base: "default", bonus: 0 })
-		result.damage = this.damage?.damage(stab, attributeMod, hasStab, forCharacter.level, rulesVersion)
+		const stabToUse = forCharacter.stab ?? new Stab({ base: "default", bonus: 0 })
+		result.damage = this.damage?.damage(stabToUse, attributeMod, hasStab, forCharacter.level, rulesVersion)
 
 		return result
 	}

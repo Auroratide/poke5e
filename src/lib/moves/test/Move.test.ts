@@ -4,6 +4,7 @@ import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import type { Attributes } from "$lib/dnd/attributes"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { Level } from "$lib/dnd/level"
+import { Stab } from "$lib/pokemon/stab"
 
 describe("pokemonWhoLearnThis", () => {
 	const allPokemon = [
@@ -180,6 +181,8 @@ describe("calculateMoveStats", () => {
 		wis: 16,
 		cha: 18,
 	})
+
+	const DEFAULT_STAB = new Stab({ base: "default", bonus: 0 })
 	
 	test("single attribute", () => {
 		const move = stubMove({
@@ -195,6 +198,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -225,6 +229,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -255,6 +260,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -284,6 +290,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({})
@@ -302,6 +309,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({})
@@ -321,6 +329,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -351,6 +360,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(4),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -381,6 +391,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(20),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -408,6 +419,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(9),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -432,6 +444,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -456,6 +469,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -480,6 +494,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(12),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -505,6 +520,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic", "normal"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -534,6 +550,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -562,6 +579,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -587,6 +605,7 @@ describe("calculateMoveStats", () => {
 			attributes: ATTRIBUTES,
 			level: new Level(1),
 			type: ["psychic"],
+			stab: DEFAULT_STAB,
 		})
 	
 		expect(result).toEqual({
@@ -594,6 +613,37 @@ describe("calculateMoveStats", () => {
 			save: {
 				attribute: ["dex"],
 				dc: 12,
+			},
+		})
+	})
+
+	test("customized stab", () => {
+		const move = stubMove({
+			power: ["int"],
+			type: "normal",
+			damage: stubMoveDamage().data,
+			attack: stubMoveAttack().data,
+			save: stubMoveSave().data,
+		})
+	
+		// dmg: +4 from pb, +3 from bonus, +2 from non-stab mod
+		const result = move.calculateMoveStats("2024", {
+			attributes: ATTRIBUTES,
+			level: new Level(10),
+			type: ["normal"],
+			stab: new Stab({ base: "proficiency", bonus: 3 }),
+		})
+	
+		expect(result).toEqual({
+			toHit: 6,
+			save: {
+				attribute: ["dex"],
+				dc: 14,
+			},
+			damage: {
+				dice: "3d4",
+				mod: 9,
+				isHealing: false,
 			},
 		})
 	})
