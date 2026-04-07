@@ -192,6 +192,16 @@
 	"youGainProficiency": "You gain proficiency in {skills}.",
 	"languages": "Languages",
 	"youKnowTwoLanguages": "You know the {one} and {two} languages.",
+	"customStabInstructions": "STAB Base determines what general rule is used to calculate this pokémon's STAB. The Bonus adds to that.",
+	"default": "Default",
+	"proficiencyBonus": "Proficiency Bonus",
+	"ruleset18": "'18 Ruleset",
+	"customStabDefaultDescription": "Default STAB rules (table for '18, move power for '24).",
+	"customStabMovePowerDescription": "Uses the move's best Move Power.",
+	"customStabProficiencyDescription": "Uses Proficiency Bonus, dependent on level.",
+	"customStabRuleset18Description": "Uses the '18 ruleset's STAB table, dependent on level.",
+	"customStabNoneDescription": "STAB is 0, rely entirely on the provided Bonus below.",
+	"none": "None",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},
