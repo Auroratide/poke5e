@@ -17,7 +17,6 @@ export class FakemonStoreUpdater {
 	) {}
 
 	info = async (updatedFakemon: Fakemon, options: UpdateInfoOptions) => {
-		let start = new Date().getTime()
 		try {
 			if (options.media != null) {
 				const updatedMedia = await this.provider.updateMedia(updatedFakemon.data.writeKey, options.media)
