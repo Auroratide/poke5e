@@ -17,14 +17,15 @@ export class FakemonStoreUpdater {
 	) {}
 
 	info = async (updatedFakemon: Fakemon, options: UpdateInfoOptions) => {
+		let start = new Date().getTime()
 		try {
 			if (options.media != null) {
 				const updatedMedia = await this.provider.updateMedia(updatedFakemon.data.writeKey, options.media)
 
 				SpeciesMedia.types.forEach((type) => {
-					if (options.media.data.values[type]?.type === "remove") {
+					if (options.media?.data.values[type]?.type === "remove") {
 						updatedFakemon.data.species.media.values[type] = undefined
-					} else if (options.media.data.values[type]?.type === "new") {
+					} else if (options.media?.data.values[type]?.type === "new") {
 						updatedFakemon.data.species.media.values[type] = updatedMedia.data.values[type]
 					}
 				})
@@ -40,7 +41,7 @@ export class FakemonStoreUpdater {
 				},
 			}))
 		} catch (e) {
-			error.show("FakemonStoreUpdater.info", e)
+			error.show("FakemonStoreUpdater.info", e as Error)
 			throw e
 		}
 	}

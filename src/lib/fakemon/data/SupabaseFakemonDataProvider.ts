@@ -160,7 +160,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_prof_history: fakemon.skills["history"] > 0,
 			_prof_investigation: fakemon.skills["investigation"] > 0,
 			_prof_nature: fakemon.skills["nature"] > 0,
-			_prof_religion: fakemon.skills["religion fakemon"] > 0,
+			_prof_religion: fakemon.skills["religion"] > 0,
 			_prof_animal_handling: fakemon.skills["animal handling"] > 0,
 			_prof_insight: fakemon.skills["insight"] > 0,
 			_prof_medicine: fakemon.skills["medicine"] > 0,
@@ -213,6 +213,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		})
 
 		if (error) {
+			console.error(error)
 			throw new FakemonDataProviderError("Could not upload file(s) for fakemon.")
 		}
 
@@ -244,6 +245,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		})
 
 		if (error) {
+			console.error(error)
 			throw new FakemonDataProviderError("Could not remove file(s) for fakemon.")
 		}
 	}

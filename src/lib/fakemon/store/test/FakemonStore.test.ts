@@ -186,7 +186,7 @@ test("updating with new media", async () => {
 	const storedValueAfterUpdate = get(singleStoreAfterUpdate)
 
 	// O.O
-	expect(storedValueAfterUpdate.value.species.media.data.values.normalPortrait.name).toBeDefined()
+	expect(storedValueAfterUpdate.value.species.media.data.values.normalPortrait?.name).toBeDefined()
 })
 
 test("listing fakemon", async () => {
