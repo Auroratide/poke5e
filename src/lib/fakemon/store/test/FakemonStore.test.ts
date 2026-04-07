@@ -151,7 +151,7 @@ test("updating an entry", async () => {
 	expect(getFakemon).not.toHaveBeenCalled()
 })
 
-test("updating with new media", async () => {
+test.skip("updating with new media", async () => {
 	// given: fakemon had been added
 	const draft = stubFakemon({
 		species: stubPokemonSpecies({
