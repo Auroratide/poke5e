@@ -1,3 +1,6 @@
 {
-	"status": "none"
+	"status": "upcoming",
+	"scheduledStart": "2026-04-08T13:00:00.000Z",
+	"duration": "1 hour",
+	"reason": "The server is being upgraded to increase the site's bandwidth."
 }
