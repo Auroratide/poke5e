@@ -46,6 +46,7 @@ export function stubTrainerPokemon(template: Partial<TrainerPokemon> = {}): Trai
 			max: 4,
 		},
 		ability: "run-away",
+		abilities: [],
 		proficiencies: stubSkillProficiencies(),
 		savingThrows: ["dex"],
 		moves: [],

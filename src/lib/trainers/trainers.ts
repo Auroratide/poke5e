@@ -492,6 +492,7 @@ const createStore = () => {
 				return result
 			}).catch((e: Error) => {
 				error.show("newTrainer", e)
+				throw e
 			})
 		},
 	}
