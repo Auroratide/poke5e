@@ -2,6 +2,7 @@ import { DataClass, type Data } from "$lib/DataClass"
 import type { Attributes } from "$lib/dnd/attributes"
 import type { Level } from "$lib/dnd/level"
 import type { PokemonSpecies } from "$lib/poke5e/species"
+import { Stab } from "$lib/pokemon/stab"
 import type { PokeType } from "$lib/pokemon/types"
 import type { RulesVersion } from "$lib/site/rules-version"
 import type { BodyText } from "$lib/ui/rendering/types"
@@ -89,7 +90,9 @@ export class Move extends DataClass<{
 
 		result.toHit = this.attack?.toHit(pb, attributeMod)
 		result.save = this.save?.withDc(pb, attributeMod)
-		result.damage = this.damage?.damage(attributeMod, hasStab, forCharacter.level, rulesVersion)
+
+		const stab = new Stab({ base: "default", bonus: 0 })
+		result.damage = this.damage?.damage(stab, attributeMod, hasStab, forCharacter.level, rulesVersion)
 
 		return result
 	}
