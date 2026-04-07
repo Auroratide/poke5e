@@ -17,7 +17,6 @@
 	import { SpeciesFormsInfo } from "$lib/poke5e/forms"
 	import { m } from "$lib/site/i18n"
 	import { BiomeTags } from "../habitat"
-	import { Url } from "$lib/site/url";
 
 	export let value: PokemonSpecies
 	export let dismissToHref: string

@@ -1,6 +1,5 @@
 import type { Level } from "$lib/dnd/level"
 import type { PokemonSpecies } from "$lib/poke5e/species"
-import { FeatureToggles } from "$lib/site/FeatureToggles"
 import type { Move } from "./Move"
 
 export type MoveGroup = {

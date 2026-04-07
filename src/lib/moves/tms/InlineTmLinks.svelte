@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { TmsStore as allTms } from "../store"
 	import { Url } from "$lib/site/url"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	export let tms: number[]
 

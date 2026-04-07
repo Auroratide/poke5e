@@ -10,7 +10,7 @@ const ABILITIES = {
 		id: "disguise",
 		name: "Disguise",
 		description: "Grants a disguise.",
-	})
+	}),
 }
 
 beforeEach(() => {

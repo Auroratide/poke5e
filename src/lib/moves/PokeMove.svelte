@@ -10,7 +10,7 @@
 	import { Url } from "$lib/site/url"
 	import { ContestInfo } from "./contest"
 	import { m } from "$lib/site/i18n"
-	import { formatMoney } from "$lib/pokemon/money";
+	import { formatMoney } from "$lib/pokemon/money"
 
 	export let move: Move
 	export let pokemon: PokemonSpecies[] = []

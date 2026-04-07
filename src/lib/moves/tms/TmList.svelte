@@ -6,7 +6,6 @@
 	import { Url } from "$lib/site/url"
 	import type { Tm } from "./Tm"
 	import { m } from "$lib/site/i18n"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import { MoveFilter } from "../MoveFilter"
 	import { PokemonType, type PokeType } from "$lib/pokemon/types"
 	import { MoveTime } from "../MoveTime"

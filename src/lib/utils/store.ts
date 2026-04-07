@@ -1,4 +1,4 @@
-import { get, readable, type Readable, type StartStopNotifier } from "svelte/store"
+import { readable, type Readable, type StartStopNotifier } from "svelte/store"
 
 /**
  * This store caches the read result so we don't require a re-fetch every time

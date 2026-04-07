@@ -26,7 +26,7 @@
 	import { onMount } from "svelte"
 	import { type Readable } from "svelte/store"
 	import { SpeciesStore, type PokemonSpecies } from "$lib/poke5e/species"
-	import { MaintenanceAnnouncement, MaintenanceOverlay } from "$lib/site/maintenance";
+	import { MaintenanceAnnouncement, MaintenanceOverlay } from "$lib/site/maintenance"
 
 	$: fakemonId = browser ? $page.url.searchParams.get("id") : undefined
 	$: action = browser ? $page.url.searchParams.get("action") : undefined

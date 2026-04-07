@@ -30,7 +30,7 @@
 	import type { Readable } from "svelte/store"
 	import { SpeciesStore, type PokemonSpecies } from "$lib/poke5e/species"
 	import { error } from "$lib/site/errors"
-	import { MaintenanceAnnouncement, MaintenanceOverlay } from "$lib/site/maintenance";
+	import { MaintenanceAnnouncement, MaintenanceOverlay } from "$lib/site/maintenance"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: accessKey = browser ? $page.url.searchParams.get("access_key")?.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "") : undefined

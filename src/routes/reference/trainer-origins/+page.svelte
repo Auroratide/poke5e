@@ -1,12 +1,12 @@
 <script lang="ts">
-	import { Markdown } from "$lib/ui/rendering";
-	import ReferencePage from "../ReferencePage.svelte";
-	import type { PageData } from "./$types";
+	import { Markdown } from "$lib/ui/rendering"
+	import ReferencePage from "../ReferencePage.svelte"
+	import type { PageData } from "./$types"
 	import { m } from "$lib/site/i18n"
-	import { capitalize } from "$lib/utils/string";
-	import { Attributes } from "$lib/dnd/attributes";
-	import { ColumnedList } from "$lib/ui/elements";
-	import { TrainerOrigin } from "$lib/trainers/origins";
+	import { capitalize } from "$lib/utils/string"
+	import { Attributes } from "$lib/dnd/attributes"
+	import { ColumnedList } from "$lib/ui/elements"
+	import { TrainerOrigin } from "$lib/trainers/origins"
 
 	export let data: PageData
 </script>

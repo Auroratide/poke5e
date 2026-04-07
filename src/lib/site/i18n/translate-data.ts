@@ -9,7 +9,7 @@ export async function translateData<T extends HasId>(items: T[], getTranslatedIt
 	let translatedItems: Partial<T>[] = []
 	try {
 		translatedItems = await getTranslatedItems(locale)
-	} catch (_) {
+	} catch {
 		translatedItems = items
 	}
 

@@ -4,7 +4,6 @@ import type { Tm } from "./tms/Tm"
 import type { Data } from "$lib/DataClass"
 import { TmDetails } from "./tms/TmDetails"
 import { Url } from "$lib/site/url"
-import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 export const MovesStore = readable<Move[]>(undefined, (set) => {
 	if (typeof window !== "undefined") {

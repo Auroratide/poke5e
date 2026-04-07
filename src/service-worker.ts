@@ -1,5 +1,5 @@
 /// <reference lib="WebWorker" />
-import { build, files, version } from "$service-worker"
+import { build, version } from "$service-worker"
 declare const self: ServiceWorkerGlobalScope
 
 const cacheName = `poke5e-${version}`

@@ -77,7 +77,7 @@
 		"dompurify": "^3.3.0",
 		"marked": "^15.0.12"
 	},
-	"packageManager": "pnpm@10.6.2",
+	"packageManager": "pnpm@10.33.0",
 	"engines": {
 		"pnpm": "^10.0.0"
 	},

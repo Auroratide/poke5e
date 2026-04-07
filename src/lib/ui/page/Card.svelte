@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { afterNavigate } from "$app/navigation"
-	import { ChevronIcon } from "../icons";
+	import { ChevronIcon } from "../icons"
 	import { m } from "$lib/site/i18n"
 
 	export let title: string

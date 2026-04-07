@@ -9,7 +9,7 @@
 	import { GenderIcon } from "$lib/pokemon/gender"
 	import { SpeciesSprite } from "$lib/poke5e/species/media"
 	import { WithSpecies } from "$lib/poke5e/species"
-	import { DragIcon } from "$lib/ui/icons";
+	import { DragIcon } from "$lib/ui/icons"
 
 	export let trainer: ReadWriteKey
 	export let pokemon: TrainerPokemon

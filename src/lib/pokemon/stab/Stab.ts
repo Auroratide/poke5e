@@ -1,4 +1,4 @@
-import { DataClass } from "$lib/DataClass";
+import { DataClass } from "$lib/DataClass"
 
 export type StabBase = "default" | "movepower" | "proficiency" | "ruleset18" | "none"
 

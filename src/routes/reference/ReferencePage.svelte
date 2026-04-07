@@ -2,7 +2,7 @@
 	import { Card } from "$lib/ui/page"
 	import { RulesVersionToggle } from "$lib/site/rules-version"
 	import { Title } from "$lib/ui/layout"
-	import { Url } from "$lib/site/url";
+	import { Url } from "$lib/site/url"
 
 	export let title: string
 </script>

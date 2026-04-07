@@ -7,8 +7,8 @@
 	import Info from "./Info.svelte"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import TrainerPokemonActions from "./TrainerPokemonActions.svelte"
-	import { Url } from "$lib/site/url";
-	import { PageAction } from "../page-action";
+	import { Url } from "$lib/site/url"
+	import { PageAction } from "../page-action"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId

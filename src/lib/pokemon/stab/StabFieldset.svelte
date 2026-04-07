@@ -9,19 +9,19 @@
 		name: string,
 	}[] = [ {
 		value: "default",
-		name: "Default"
+		name: "Default",
 	}, {
 		value: "movepower",
-		name: "Move Power"
+		name: "Move Power",
 	}, {
 		value: "proficiency",
 		name: "Proficiency Bonus",
 	}, {
 		value: "ruleset18",
-		name: "'18 Ruleset"
+		name: "'18 Ruleset",
 	}, {
 		value: "none",
-		name: "None"
+		name: "None",
 	} ]
 </script>
 

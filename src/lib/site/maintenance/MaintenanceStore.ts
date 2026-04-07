@@ -13,7 +13,7 @@ type MaintenanceWindowJson = {
 
 function getMaintenanceWindow(): Promise<MaintenanceWindow> {
 	return fetch("/system/maintenance.json", {
-		cache: "no-store"
+		cache: "no-store",
 	}).then((res) => res.json()).then((maintenance: MaintenanceWindowJson) => {
 		return {
 			status: maintenance.status,
@@ -30,7 +30,7 @@ function getMaintenanceWindow(): Promise<MaintenanceWindow> {
 }
 
 export const MaintenanceStore = readable<MaintenanceWindow>({
-	status: "none"
+	status: "none",
 }, (set) => {
 	if (browser) {
 		getMaintenanceWindow().then((maintenance) => set(maintenance))
