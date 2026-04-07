@@ -29,6 +29,7 @@
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { m } from "$lib/site/i18n"
 	import { Resource } from "$lib/poke5e/resource"
+	import { Stab, StabFieldset } from "$lib/pokemon/stab"
 
 	const dispatch = createEventDispatcher()
 
@@ -58,6 +59,7 @@
 	let speeds = pokemon.speeds.copy()
 	let senses = pokemon.senses.copy()
 	let bond = structuredClone(pokemon.bond)
+	let stab = pokemon.stab.copy()
 	let originalAvatar = pokemon.avatar
 	let avatarToUpload: ImageInputValue | undefined = undefined
 	let isValid = true
@@ -99,6 +101,7 @@
 					...bond,
 					points: Resource.adjustMax(pokemon.bond.points, bond.points.max),
 				},
+				stab,
 				avatar: originalAvatar,
 			},
 			updateAvatar: avatarToUpload,
@@ -125,6 +128,7 @@
 		<CustomBasicInfoFieldset bind:customSize bind:customHitDiceSize {disabled} />
 		<SpeedsFieldset bind:values={speeds} {disabled} />
 		<SensesFieldset bind:values={senses} {disabled} />
+		<StabFieldset bind:value={stab} {disabled} />
 	</FormDetails>
 	<ActionArea error={!isValid ? m.oneOrMoreFieldsAboveHaveAnIssue() : undefined}>
 		<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>

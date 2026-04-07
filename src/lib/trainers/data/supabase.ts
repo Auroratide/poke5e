@@ -32,6 +32,7 @@ import { get } from "svelte/store"
 import { PokemonSpecies, SpeciesIdentifier } from "$lib/poke5e/species"
 import { TrainerLocalStorage } from "./TrainerLocalStorage"
 import { Ability } from "$lib/pokemon/ability"
+import { Stab, type StabBase } from "$lib/pokemon/stab"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -527,6 +528,8 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_bond_level: info.bond.level,
 			_bond_points_cur: info.bond.points.current,
 			_bond_points_max: info.bond.points.max,
+			_stab_base: info.stab.base,
+			_stab_bonus: info.stab.bonus,
 		}).single<number>()
 
 		if (error) {
@@ -623,6 +626,10 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					max: 0,
 				},
 			},
+			stab: new Stab({
+				base: "default",
+				bonus: 0,
+			}),
 		}
 
 		const { data, error } = await this.supabase.rpc("add_pokemon", {
@@ -1305,6 +1312,8 @@ type PokemonRow = {
 	rank_performance: number,
 	rank_persuasion: number,
 	avatar_filename?: string,
+	stab_base: string,
+	stab_bonus: number,
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -1411,6 +1420,10 @@ const rowToPokemon = async (row: PokemonRow, getStorageResource: (name: string) 
 			max: row.bond_points_max,
 		},
 	},
+	stab: new Stab({
+		base: row.stab_base as StabBase,
+		bonus: row.stab_bonus,
+	}),
 	avatar: row.avatar_filename ? getStorageResource(row.avatar_filename) : undefined,
 })
 

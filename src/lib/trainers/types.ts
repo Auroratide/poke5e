@@ -19,6 +19,7 @@ import type { Ability, AbilityId } from "$lib/pokemon/ability"
 import type { Move } from "$lib/moves/Move"
 import type { Data } from "$lib/DataClass"
 import type { Resource } from "$lib/poke5e/resource"
+import type { Stab } from "$lib/pokemon/stab"
 
 export type LearnedMove = {
 	id: string,
@@ -78,6 +79,7 @@ export type TrainerPokemon = {
 	speeds: Speeds,
 	senses: Senses,
 	bond: PokemonBond,
+	stab: Stab,
 	avatar?: StorageResource,
 }
 

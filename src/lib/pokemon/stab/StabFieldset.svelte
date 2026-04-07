@@ -1,8 +1,9 @@
 <script lang="ts">
-	import { Fieldset, InstructionText, IntField, RadioFields } from "$lib/ui/forms"
+	import { Fieldset, InstructionText, IntField, SelectField } from "$lib/ui/forms"
 	import type { Stab, StabBase } from "./Stab"
 
 	export let value: Stab
+	export let disabled = false
 
 	const baseOptions: {
 		value: StabBase,
@@ -27,6 +28,6 @@
 
 <Fieldset title="STAB Customization">
 	<InstructionText>Hi this is what this is.</InstructionText>
-	<RadioFields label="STAB Base" bind:checked={value.data.base} values={baseOptions} />
-	<IntField label="STAB Bonus" bind:value={value.data.bonus} />
+	<SelectField label="STAB Base" bind:value={value.data.base} options={baseOptions} {disabled} />
+	<IntField label="STAB Bonus" bind:value={value.data.bonus} {disabled} />
 </Fieldset>
