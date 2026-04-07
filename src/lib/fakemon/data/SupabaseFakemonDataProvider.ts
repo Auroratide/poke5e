@@ -1,4 +1,4 @@
-import type { PostgrestError, SupabaseClient } from "@supabase/supabase-js"
+import { FunctionsHttpError, type PostgrestError, type SupabaseClient } from "@supabase/supabase-js"
 import { FakemonDataProviderError, FakemonPermissionError, type FakemonDataProvider, type ReadKey, type WriteKey } from "./FakemonDataProvider"
 import { Fakemon, type DraftFakemon } from "../Fakemon"
 import { PokemonType } from "$lib/pokemon/types"
@@ -213,7 +213,17 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		})
 
 		if (error) {
-			console.error(error)
+			if (error instanceof FunctionsHttpError) {
+				const res = error.context
+
+				console.log("Status:", res.status)
+				console.log("Status text:", res.statusText)
+
+				const text = await res.text() // or res.json() if JSON
+				console.log("Body:", text)
+			} else {
+				console.error(error)
+			}
 			throw new FakemonDataProviderError("Could not upload file(s) for fakemon.")
 		}
 
@@ -245,7 +255,17 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		})
 
 		if (error) {
-			console.error(error)
+			if (error instanceof FunctionsHttpError) {
+				const res = error.context
+
+				console.log("Status:", res.status)
+				console.log("Status text:", res.statusText)
+
+				const text = await res.text() // or res.json() if JSON
+				console.log("Body:", text)
+			} else {
+				console.error(error)
+			}console.error(error)
 			throw new FakemonDataProviderError("Could not remove file(s) for fakemon.")
 		}
 	}
