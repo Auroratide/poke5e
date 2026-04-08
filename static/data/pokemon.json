@@ -17338,8 +17338,7 @@
 					"natural-gift",
 					"nature-power",
 					"power-swap",
-					"rage",
-					"powder",
+					"rage-powder",
 					"reflect"
 				]
 			},
@@ -71145,7 +71144,7 @@
 					"rage-powder",
 					"razor-leaf",
 					"slam",
-					"powder",
+					"sleep-powder",
 					"stun-spore",
 					"synthesis",
 					"worry-seed"
