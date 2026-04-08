@@ -74149,7 +74149,7 @@
 			],
 			"size": "medium",
 			"sr": 12,
-			"minLevel": 8,
+			"minLevel": 10,
 			"eggGroup": [
 				"human-like",
 				"amorphous"
