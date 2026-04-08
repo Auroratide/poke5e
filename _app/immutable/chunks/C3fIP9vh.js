@@ -1,0 +1,1 @@
+import{g as r}from"./Z_sNnh9e.js";const o=()=>"Move Time",s=()=>"Tiempo de Lanzamiento",a=()=>"Temps d'exécution",l=(t={},n={})=>{const e=n.locale??r();return e==="en"?o():e==="es"?s():a()},c=()=>"Range",i=()=>"Rango",m=()=>"Portée",g=(t={},n={})=>{const e=n.locale??r();return e==="en"?c():e==="es"?i():m()};export{l as m,g as r};
