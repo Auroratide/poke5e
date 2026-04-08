@@ -142439,8 +142439,8 @@
 				"bug"
 			],
 			"size": "small",
-			"sr": 7,
-			"minLevel": 8,
+			"sr": 5,
+			"minLevel": 5,
 			"eggGroup": [
 				"bug"
 			],
@@ -142460,13 +142460,13 @@
 			],
 			"attributes": {
 				"str": 13,
-				"dex": 14,
+				"dex": 13,
 				"con": 14,
 				"int": 6,
-				"wis": 15,
-				"cha": 10
+				"wis": 12,
+				"cha": 11
 			},
-			"hp": 76,
+			"hp": 48,
 			"skills": [
 				"survival"
 			],
