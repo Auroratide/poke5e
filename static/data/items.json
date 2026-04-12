@@ -1914,7 +1914,7 @@
 		{
 			"id": "razor-claw",
 			"name": "Razor Claw",
-			"type": "held item",
+			"type": "evolution",
 			"cost": 4000,
 			"description": [
 				"The holder's critical hit range increases by one.",
@@ -1927,13 +1927,14 @@
 		{
 			"id": "razor-fang",
 			"name": "Razor Fang",
-			"type": "held item",
-			"cost": 5000,
-			"description": null,
+			"type": "evolution",
+			"cost": 4000,
+			"description": [
+				"When a target is hit by a melee attack made by the holder, if the attack roll was a natural 19 or 20, the target flinches."
+			],
 			"media": {
 				"sprite": "/assets/items/razor-fang/sprite.png"
-			},
-			"_ingameEffect": "Held: When the holder attacks with most damaging moves, provides an extra 11.7% (30/256) chance for the target to flinch.\nHeld by Gligar: Evolves the holder into Gliscor when it levels up."
+			}
 		},
 		{
 			"id": "red-card",

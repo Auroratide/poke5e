@@ -2661,7 +2661,11 @@
 				},
 				{
 					"type": "item",
-					"value": "Razor Fang at night"
+					"value": "Razor Fang"
+				},
+				{
+					"type": "time",
+					"value": "night"
 				}
 			],
 			"effects": [
@@ -2699,7 +2703,11 @@
 				},
 				{
 					"type": "item",
-					"value": "Razor Claw at night"
+					"value": "Razor Claw"
+				},
+				{
+					"type": "time",
+					"value": "night"
 				}
 			],
 			"effects": [
