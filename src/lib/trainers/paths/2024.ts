@@ -172,7 +172,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 		},
 		level5: {
 			name: "Follow Me",
-			description: ["You have a firm hand, but a trusting presence. When you reach level 5, any new Pokémon you catch get a +1 bonus to Bond Level (max Bond Level +2). In addition, your Pokémon's Bond Level cannot be decreased by losing a battle."],
+			description: ["You have a firm hand, but a trusting presence. When you reach level 5, any new Pokémon you catch or hatch get a +1 bonus to Bond Level (max Bond Level +2). In addition, your Pokémon's Bond Level cannot be decreased by losing a battle."],
 		},
 		level9: {
 			name: "Show Me What You've Got",
