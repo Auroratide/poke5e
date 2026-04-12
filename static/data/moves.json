@@ -16943,7 +16943,7 @@
 		{
 			"id": "revelation-dance",
 			"name": "Revelation Dance",
-			"type": "normal",
+			"type": "varies",
 			"power": [
 				"dex",
 				"cha"
@@ -16953,32 +16953,8 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You strike out at a target with an aggressive dance.  Make a melee attack, dealing 2d8 + MOVE damage on a hit. Revelation Dance deals damage with a different type depending on the style of Oricorio:",
-				{
-					"type": "table",
-					"headers": [
-						"Style",
-						"Damage Type"
-					],
-					"rows": [
-						[
-							"Baile Style",
-							"Fire"
-						],
-						[
-							"Pom-Pom Style",
-							"Electric"
-						],
-						[
-							"Pa'u Style",
-							"Psychic"
-						],
-						[
-							"Sensu Style",
-							"Ghost"
-						]
-					]
-				}
+				"You strike out at a target with an aggressive dance. Make a melee attack, dealing 2d8 + MOVE damage on a hit. The type of this move and its damage matches the user's current Primary Type, receiving STAB accordingly. If the Primary Type is lost (for example, due to Burn Up), then the Secondary Type is used instead, if it has one, or typeless (with no STAB bonus) if it doesn't.",
+				"If the user is terastallized with a non-Stellar type, then the type and damage of this move becomes that of the user's Tera Type instead."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
 			"attack": {
@@ -16993,10 +16969,24 @@
 				},
 				"modifier": "MOVE",
 				"type": [
+					"normal",
+					"fighting",
+					"flying",
+					"poison",
+					"ground",
+					"rock",
+					"bug",
+					"ghost",
+					"steel",
 					"fire",
+					"water",
+					"grass",
 					"electric",
 					"psychic",
-					"ghost"
+					"ice",
+					"dragon",
+					"dark",
+					"fairy"
 				]
 			}
 		},
