@@ -30,7 +30,7 @@
 			<dt>Time</dt>
 			<dd>1 Action</dd>
 			<dt>Range</dt>
-			<dd>30ft/60ft</dd>
+			<dd>60ft</dd>
 			<dt>Consumes</dt>
 			<dd>1 Pokéball variant</dd>
 		</FlatDl>
