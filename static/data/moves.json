@@ -17312,6 +17312,9 @@
 				"type": [
 					"fighting"
 				]
+			},
+			"attack": {
+				"scope": "melee"
 			}
 		},
 		{
