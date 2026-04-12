@@ -14,6 +14,19 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.10.9",
+		description: [
+			"<strong>Pokémon</strong>: Update Gallade's minimum level to match Gardevoir.",
+			"<strong>Pokémon</strong>: Reduce Frosmoth's minimum level to be closer to Snom's evolution requirement.",
+			"<strong>Pokémon</strong>: Fix the egg moves lists of various Pokémon.",
+			"<strong>Moves</strong>: Rework Revelation Dance so it can be used by any Pokémon, and so it correctly confers STAB.",
+			"<strong>Moves</strong>: Reword Brutal Swing to clarify its range of effect.",
+			"<strong>Items</strong>: Added Razor Fang.",
+			"<strong>Reference</strong>: Change Throw Pokéball range from 30ft/60ft to a flat 60ft, to match the original PHB.",
+			"<strong>Reference</strong>: Clarify that Commander's Follow Me feature applies to hatched pokémon as well.",
+			"<strong>Bugfix</strong>: Add to-hit to Rock Smash.",
+		],
+	}, {
 		name: "v1.10.8",
 		description: [
 			"<strong>Bugfix</strong>: Re-add cost to TMs pages.",
