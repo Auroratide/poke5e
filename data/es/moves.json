@@ -667,7 +667,7 @@
 			"id": "brutal-swing",
 			"name": "Giro Vil",
 			"description": [
-				"Agitas los brazos violentamente, atacando a todo lo que se encuentre dentro de una esfera de 10 pies centrado en ti. Todas las criaturas en el área deben realizar una tirada de salvación de Destreza contra tu CD de Movimiento, sufriendo 1d10 + MOV de daño de tipo Siniestro si fallan, o la mitad del daño si la superan."
+				"Agitas los brazos violentamente, atacando a todo lo que se cosa a menos de 5 pies de ti. Todas las criaturas en el área deben realizar una tirada de salvación de Destreza contra tu CD de Movimiento, sufriendo 1d10 + MOV de daño de tipo Siniestro si fallan, o la mitad del daño si la superan."
 			],
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 5d4 al nivel 10 y 4d8 al nivel 17."
 		},

@@ -2068,7 +2068,7 @@
 					"air-slash",
 					"brave-bird",
 					"defog",
-					"feint",
+					"feint-attack",
 					"foresight",
 					"pursuit",
 					"steel-wing",
@@ -12376,7 +12376,7 @@
 					"leaf-blade",
 					"mirror-move",
 					"mud-slap",
-					"slash",
+					"night-slash",
 					"quick-attack",
 					"revenge",
 					"roost",
@@ -12532,7 +12532,7 @@
 					"assurance",
 					"brave-bird",
 					"endeavor",
-					"feint",
+					"feint-attack",
 					"flail",
 					"haze",
 					"mirror-move",
@@ -14344,7 +14344,7 @@
 					"defense-curl",
 					"explosion",
 					"flail",
-					"slam",
+					"heavy-slam",
 					"rock-blast",
 					"rock-climb",
 					"rock-slide",
@@ -16828,7 +16828,7 @@
 					"rototiller",
 					"skull-bash",
 					"swords-dance",
-					"thunder"
+					"thunder-fang"
 				]
 			},
 			"media": {
@@ -17338,8 +17338,7 @@
 					"natural-gift",
 					"nature-power",
 					"power-swap",
-					"rage",
-					"powder",
+					"rage-powder",
 					"reflect"
 				]
 			},
@@ -17640,7 +17639,7 @@
 					"aurora-beam",
 					"clear-smog",
 					"disable",
-					"rage",
+					"dragon-rage",
 					"dragon-breath",
 					"flail",
 					"muddy-water",
@@ -29813,7 +29812,7 @@
 					"acid-spray",
 					"after-you",
 					"ancient-power",
-					"slam",
+					"body-slam",
 					"counter",
 					"curse",
 					"double-kick",
@@ -35901,7 +35900,7 @@
 					"fissure",
 					"focus-energy",
 					"head-smash",
-					"slam",
+					"heavy-slam",
 					"ice-shard",
 					"mud-slap",
 					"play-rough",
@@ -71145,7 +71144,7 @@
 					"rage-powder",
 					"razor-leaf",
 					"slam",
-					"powder",
+					"sleep-powder",
 					"stun-spore",
 					"synthesis",
 					"worry-seed"
@@ -74149,7 +74148,7 @@
 			],
 			"size": "medium",
 			"sr": 12,
-			"minLevel": 8,
+			"minLevel": 10,
 			"eggGroup": [
 				"human-like",
 				"amorphous"
@@ -79374,7 +79373,7 @@
 					"covet",
 					"curse",
 					"endeavor",
-					"slam",
+					"heavy-slam",
 					"magnitude",
 					"sleep-talk",
 					"sucker-punch",
@@ -86381,7 +86380,7 @@
 					"charm",
 					"endure",
 					"grass-whistle",
-					"wish",
+					"healing-wish",
 					"ingrain",
 					"natural-gift",
 					"sweet-scent",
@@ -92636,7 +92635,7 @@
 					"body-slam",
 					"defense-curl",
 					"endure",
-					"acid",
+					"gastro-acid",
 					"growth",
 					"poison-powder",
 					"rollout",
@@ -130382,8 +130381,7 @@
 				],
 				"level18": [
 					"fell-stinger",
-					"air-slash",
-					"dragon-pulse"
+					"air-slash"
 				],
 				"tm": [
 					2,
@@ -142440,8 +142438,8 @@
 				"bug"
 			],
 			"size": "small",
-			"sr": 7,
-			"minLevel": 8,
+			"sr": 5,
+			"minLevel": 5,
 			"eggGroup": [
 				"bug"
 			],
@@ -142461,13 +142459,13 @@
 			],
 			"attributes": {
 				"str": 13,
-				"dex": 14,
+				"dex": 13,
 				"con": 14,
 				"int": 6,
-				"wis": 15,
-				"cha": 10
+				"wis": 12,
+				"cha": 11
 			},
-			"hp": 76,
+			"hp": 48,
 			"skills": [
 				"survival"
 			],
