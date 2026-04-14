@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { Url } from "$lib/site/url";
 	import { InfoTable } from "$lib/ui/elements"
 </script>
 
@@ -20,11 +21,11 @@
 		</tr>
 		<tr>
 			<td>Sandstorm</td>
-			<td>Lightly obscured. Rock-type Pokémon add +1 to their AC. If triggered by a Pokémon, the sandstorm my deal damage over time.</td>
+			<td>Lightly obscured. Rock-type Pokémon add +1 to their AC. If triggered by a Pokémon, the sandstorm deals rock damage each turn equal to half that pokémon's level. See <a href="{Url.moves("sandstorm")}">Sandstorm</a>.</td>
 		</tr>
 		<tr>
 			<td>Hail</td>
-			<td>If triggered by a Pokémon, the hail may deal damage over time.</td>
+			<td>If triggered by a Pokémon, the hail deals ice damage each turn equal to half that pokémon's level. See <a href="{Url.moves("hail")}">Hail</a>.</td>
 		</tr>
 		<tr>
 			<td>Snow</td>
