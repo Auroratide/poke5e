@@ -2398,7 +2398,7 @@
 			"id": "grassy-terrain",
 			"name": "Campo de Hierba",
 			"description": [
-				"La hierba brota del suelo en un círculo a tu alrededor, cubriendo la tierra con energía curativa. Durante 3 turnos, todas las criaturas en el área afectada recuperan una cantidad de puntos de vida igual a su bonificador por competencia al final de su turno. Se considera que una criatura está en contacto con el suelo si no tiene velocidad de vuelo ni posee la habilidad Levitación, Levitón o una capacidad similar. Además, las criaturas pueden duplicar su modificador de MOV en las tiradas de daño de los movimientos de tipo Planta activados dentro del área."
+				"La hierba brota del suelo en un círculo a tu alrededor, cubriendo la tierra con energía curativa. Durante 3 turnos, todas las criaturas en el suelo dentro del área afectada recuperan una cantidad de puntos de vida igual a su bonificador por competencia al final de su turno. Se considera que una criatura está en contacto con el suelo si no tiene velocidad de vuelo ni posee la habilidad Levitación, Levitón o una capacidad similar. Además, las criaturas pueden duplicar su modificador de MOV en las tiradas de daño de los movimientos de tipo Planta activados dentro del área."
 			]
 		},
 		{
