@@ -5471,7 +5471,7 @@
 				"Te deslizas rápidamente detrás del objetivo para atacar. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo 1d6 + MOV de daño de tipo Bicho si impactas. Si la tirada de ataque se realizó con ventaja, infliges un daño adicional de Xd6 de tipo Bicho, donde X es tu nivel actual dividido entre dos, redondeado hacia arriba (por ejemplo, al nivel 11, infliges 6d6 de daño adicional).\r",
 				"No necesitas tener ventaja en la tirada de ataque si al menos uno de tus aliados se encuentra a 5 pies del objetivo, el aliado no tiene la condición de Incapacitado y tú no tienes desventaja en la tirada de ataque."
 			],
-			"higherLevels": "La tirada de daño de este movimiento pasa a ser 1d10 al nivel 5, 2d8 al nivel 10 y 5d4 al nivel 17."
+			"higherLevels": "La tirada de daño de este movimiento pasa a ser 1d10 al nivel 5, 2d8 al nivel 10 y 5d4 al nivel 17. Este cambio en los dados NO se aplica al daño adicional de Xd6 infligido al activarse."
 		},
 		{
 			"id": "skull-bash",
