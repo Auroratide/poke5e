@@ -13061,7 +13061,7 @@
 			"duration": "instantaneous",
 			"range": "self (15ft radius)",
 			"description": [
-				"You fill your head with hot fire that explodes around you. Force all creaatures within 15 feet of you to make a DEX save against your Move DC, taking 4d6 + MOVE fire damage on a failure, or half as much on a success. After activating this move, you take an amount of typless damage equal to the full damage as if you failed the save."
+				"You fill your head with hot fire that explodes around you. Force all creatures within 15 feet of you to make a DEX save against your Move DC, taking 4d6 + MOVE fire damage on a failure, or half as much on a success. After activating this move, you take an amount of typless damage equal to the full damage as if you failed the save."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 6d8 at level 10, and 6d12 at level 17.",
 			"damage": {
@@ -23457,7 +23457,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You crush a creature with a forceful, gripping attack. Make a melee attack, doing 1d8 + MOVE normal damage on a hit, grappling the target. On each successive turn, if the creature is still grappled, you may use this move again (as an action) and automatically hit. A creature may attempt to excape the grapple at the beginning of its turns with a STR save against your Move DC."
+				"You crush a creature with a forceful, gripping attack. Make a melee attack, doing 1d8 + MOVE normal damage on a hit, grappling the target. On each successive turn, if the creature is still grappled, you may use this move again (as an action) and automatically hit. A creature may attempt to escape the grapple at the beginning of its turns with a STR save against your Move DC."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
 			"damage": {
