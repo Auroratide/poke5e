@@ -129,10 +129,11 @@ describe("count", () => {
 })
 
 describe("generate", () => {
-	const ALL_POKEMON = rawPokemonData.items.map((it) => PokemonSpecies.fromJson(it as SinglePokemonJsonResponse))
+	const getAllPokemon = () => Promise.all(rawPokemonData.items.map((it) => PokemonSpecies.fromJson(it as SinglePokemonJsonResponse)))
 
 	// NOTE: I'm not sure if this test is flakey yet.
-	test("always within variance of the target exp", () => {
+	test("always within variance of the target exp", async () => {
+		const ALL_POKEMON = await getAllPokemon()
 		const TOLERANCE = 1
 
 		for (let i = 0; i < 100; ++i) {

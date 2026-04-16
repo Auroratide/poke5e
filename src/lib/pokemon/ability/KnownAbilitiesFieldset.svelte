@@ -3,13 +3,14 @@
 	import { Ability } from "./Ability";
 	import { m } from "$lib/site/i18n"
 	import { Button } from "$lib/ui/elements";
-	import { AbilityField } from ".";
 	import type { PokemonSpecies } from "$lib/poke5e/species";
-	import { getAbilityFieldName } from "./AbilityField.svelte";
+	import SpeciesAbilityField, { getAbilityFieldName } from "./SpeciesAbilityField.svelte";
 
 	export let values: Ability[]
 	export let species: PokemonSpecies
 	export let disabled: boolean = false
+
+	$: firstSpeciesAbility = species.abilities.normal[0]
 
 	let newId = -1001
 	const nextNewId = () => (--newId).toString()
@@ -46,7 +47,7 @@
 
 <Fieldset title="{m.abilities()}">
 	{#each withIds as ability (ability.id)}
-		<AbilityField id={ability.id} value={ability.value} {disabled} on:remove={remove(ability.id)} {species} />
+		<SpeciesAbilityField id={ability.id} value={ability.value} {disabled} on:remove={remove(ability.id)} {species} />
 	{/each}
 	{#if values.length === 0}
 		<HintText>{m.noAbilities()}</HintText>

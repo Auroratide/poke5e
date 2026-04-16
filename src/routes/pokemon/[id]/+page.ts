@@ -11,7 +11,7 @@ export const load: PageLoad = async ({ fetch, params }) => {
 			const pokemonData = await res.json()
 
 			return {
-				pokemon: PokemonSpecies.fromJson(pokemonData),
+				pokemon: await PokemonSpecies.fromJson(pokemonData),
 			}
 		}
 	})

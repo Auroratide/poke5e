@@ -83,7 +83,7 @@ export class PokemonSpecies extends DataClass<{
 		return !this.id.isFakemon() && this.number === 0
 	}
 
-	static fromJson(it: SinglePokemonJsonResponse): PokemonSpecies {
+	static async fromJson(it: SinglePokemonJsonResponse): Promise<PokemonSpecies> {
 		return new PokemonSpecies({
 			id: SpeciesIdentifier.fromSpeciesName(it.id).data,
 			name: it.name,
@@ -103,7 +103,7 @@ export class PokemonSpecies extends DataClass<{
 			attributes: it.attributes,
 			skills: SkillRanks.fromList(it.skills).data,
 			saves: it.savingThrows,
-			abilities: AbilityPool.fromList(it.abilities).data,
+			abilities: (await AbilityPool.fromList(it.abilities)).data,
 			moves: it.moves,
 			forms: it.forms,
 			media: {

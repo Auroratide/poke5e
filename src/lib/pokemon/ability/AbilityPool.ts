@@ -1,13 +1,11 @@
 import type { PokemonSpecies } from "$lib/poke5e/species"
-import { DataClass } from "$lib/DataClass"
-import type { ReferenceAbilityId } from "./Ability"
+import { DataClass, type Data } from "$lib/DataClass"
+import { Ability, type ReferenceAbilityId } from "./Ability"
 
-type AbilityItem = {
-	id: string,
+type AvailableAbility = {
+	value: Ability,
 	hidden: boolean,
 }
-
-type AbilityList = AbilityItem[]
 
 export type FindIndexResult = {
 	exists: boolean,
@@ -19,15 +17,18 @@ export type FindIndexResult = {
  * Represents a list of POSSIBLE abilities a species may have
  */
 export class AbilityPool extends DataClass<{
-	normal: ReferenceAbilityId[],
-	hidden: ReferenceAbilityId[],
+	normal: Data<Ability>[],
+	hidden: Data<Ability>[],
 }> {
-	toList(): AbilityList {
+	get normal() { return this.data.normal.map((it) => new Ability(it)) }
+	get hidden() { return this.data.hidden.map((it) => new Ability(it)) }
+
+	toList(): AvailableAbility[] {
 		return this.data.normal.map((it) => ({
-			id: it,
+			value: new Ability(it),
 			hidden: false,
 		})).concat(this.data.hidden.map((it) => ({
-			id: it,
+			value: new Ability(it),
 			hidden: true,
 		})))
 	}
@@ -36,32 +37,32 @@ export class AbilityPool extends DataClass<{
 	 * This is not a strict get by index. It uses some heuristics to find the ability
 	 * that most applies. This logic is used for evolution.
 	 */
-	findApplicableAbility(result: Pick<FindIndexResult, "normal" | "hidden">): AbilityItem | undefined {
-		const ns = this.data.normal
-		const hs = this.data.hidden
+	findApplicableAbility(result: Pick<FindIndexResult, "normal" | "hidden">): AvailableAbility | undefined {
+		const ns = this.normal
+		const hs = this.hidden
 		const normal = result.normal >= 0 ? ns[Math.min(ns.length - 1, result.normal)] : undefined
 		const hidden = result.hidden >= 0 ? hs[Math.min(hs.length - 1, result.hidden)] : undefined
 
 		if (result.hidden >= 0 && hidden == null) {
 			const lastNormal = ns[ns.length - 1]
 			return lastNormal ? {
-				id: lastNormal,
+				value: lastNormal,
 				hidden: false,
 			} : undefined
 		}
 
 		return normal ? {
-			id: normal,
+			value: normal,
 			hidden: false,
 		} : hidden ? {
-			id: hidden,
+			value: hidden,
 			hidden: true,
 		} : undefined
 	}
 
-	findIndex(ability: ReferenceAbilityId): FindIndexResult {
-		const normal = this.data.normal.indexOf(ability)
-		const hidden = this.data.hidden.indexOf(ability)
+	findIndex(ability: Ability): FindIndexResult {
+		const normal = this.indexInAbilityList(this.data.normal, ability.data)
+		const hidden = this.indexInAbilityList(this.data.hidden, ability.data)
 
 		return {
 			exists: normal >= 0 || hidden >= 0,
@@ -70,14 +71,33 @@ export class AbilityPool extends DataClass<{
 		}
 	}
 
+	private indexInAbilityList(list: Data<Ability>[], ability: Data<Ability>): number {
+		for (let i = 0; i < list.length; ++i) {
+			const inList = list[i]
+			if ((ability.referenceId != null && ability.referenceId === inList.referenceId) || (ability.referenceId == null && ability.name === inList.name && ability.description === inList.description)) {
+				return i
+			}
+		}
+
+		return -1
+	}
+
 	isEmpty(): boolean {
 		return this.data.normal.length === 0 && this.data.hidden.length === 0
 	}
 
-	static fromList(list: AbilityList): AbilityPool {
+	static async fromList(list: { id: ReferenceAbilityId, hidden: boolean }[]): Promise<AbilityPool> {
+		const normal = await Promise.all(
+			list.filter((it) => !it.hidden).map((it) => Ability.resolve(it.id)),
+		)
+
+		const hidden = await Promise.all(
+			list.filter((it) => it.hidden).map((it) => Ability.resolve(it.id)),
+		)
+
 		return new AbilityPool({
-			normal: list.filter((it) => !it.hidden).map((it) => it.id),
-			hidden: list.filter((it) => it.hidden).map((it) => it.id),
+			normal: normal.map((it) => it.data),
+			hidden: hidden.map((it) => it.data),
 		})
 	}
 
@@ -86,7 +106,7 @@ export class AbilityPool extends DataClass<{
 			return {}
 	
 		const pokemonHasAbility = (ability: ReferenceAbilityId) => (pokemon: PokemonSpecies) =>
-			pokemon.abilities.findIndex(ability).exists
+			pokemon.abilities.findIndex(new Ability({ referenceId: ability, name: "", description: "" })).exists
 	
 		return abilities.reduce((all, ability) => ({
 			...all,

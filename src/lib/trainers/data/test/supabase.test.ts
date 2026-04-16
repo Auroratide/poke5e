@@ -2,7 +2,7 @@ import { test, expect, beforeEach, afterEach, vi } from "vitest"
 import { provider } from ".."
 import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import { Level } from "$lib/dnd/level"
-import { stubAbility } from "$lib/pokemon/ability/test/stubs"
+import { stubAbility, stubAbilityPool } from "$lib/pokemon/ability/test/stubs"
 import { ApiStub } from "$lib/test/ApiStub"
 
 const ABILITIES = {
@@ -70,10 +70,10 @@ test("getting abilities", async () => {
 
 	const speciesToAdd = stubPokemonSpecies({
 		id: "mimikyu",
-		abilities: {
-			normal: [ABILITIES.disguise.referenceId],
+		abilities: stubAbilityPool({
+			normal: [ABILITIES.disguise],
 			hidden: [],
-		},
+		}),
 	})
 
 	const addedTrainer = await provider.newTrainer(trainerToAdd)

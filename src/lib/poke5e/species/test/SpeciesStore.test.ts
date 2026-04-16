@@ -6,6 +6,7 @@ import { stubPokemonJsonResponse, stubPokemonSpecies, stubSinglePokemonJsonRespo
 import { stubFakemon } from "$lib/fakemon/test/stubs"
 import { provider } from "$lib/fakemon/data"
 import { waitForStore } from "$lib/test/store"
+import { ApiStub } from "$lib/test/ApiStub"
 
 beforeEach(async () => {
 	const eevee = stubSinglePokemonJsonResponse({
@@ -14,16 +15,7 @@ beforeEach(async () => {
 	})
 
 	const pokemon = stubPokemonJsonResponse(eevee)
-
-	vi.stubGlobal("fetch", vi.fn(async (url: string) => {
-		if (url.includes("pokemon/v2.json")) {
-			return new Response(JSON.stringify(pokemon))
-		} else {
-			return new Response("", {
-				status: 404,
-			})
-		}
-	}))
+	ApiStub.pokemon = pokemon
 
 	await waitForStore(allCanonSpecies)
 })

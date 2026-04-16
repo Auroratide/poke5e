@@ -12,9 +12,9 @@ export const load: PageLoad = async ({ fetch }) => {
 
 	const pokemon = await fetch(Url.api.pokemon())
 		.then(res => res.json())
-		.then((data) => data.items.map((it) => 
+		.then((data) => Promise.all(data.items.map((it) => 
 			PokemonSpecies.fromJson(it),
-		))
+		)))
 		.then((pokemon: PokemonSpecies[]) => pokemon.filter((it) => !it.wasNonCanonNonFakemon()))
 
 	return { pokemonList: pokemon }

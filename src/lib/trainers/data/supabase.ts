@@ -507,12 +507,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_wis: info.savingThrows.includes("wis"),
 			_save_cha: info.savingThrows.includes("cha"),
 			_ability: null, // deprecated
-			_abilities: info.abilities.map((ability) => ability.referenceId?.length > 0 ? {
-				referenceId: ability.referenceId,
-			} : {
-				name: ability.name,
-				description: ability.description,
-			}),
+			_abilities: info.abilities.map((ability) => ability.collapse()),
 			_notes: info.notes,
 			_tera_type: info.teraType.data,
 			_exp: info.exp,
@@ -590,7 +585,9 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 	}
 
-	addPokemonToTeam = async (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: PokemonSpecies, rank?: number): Promise<TrainerPokemon> => {
+	addPokemonToTeam = async (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: PokemonSpecies, rank: number = 0): Promise<TrainerPokemon> => {
+		const defaultAbility = pokemon.abilities.normal[0]
+
 		const trainerPokemon: Omit<TrainerPokemon, "id"> = {
 			trainerId: trainerId,
 			pokemonId: pokemon.id,
@@ -602,8 +599,8 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			gender: PokemonGender.None,
 			attributes: pokemon.attributes,
 			ac: pokemon.data.ac,
-			ability: pokemon.abilities.toList()[0]?.id,
-			abilities: [],
+			ability: undefined,
+			abilities: defaultAbility ? [defaultAbility] : [],
 			hp: {
 				current: pokemon.data.hp,
 				max: pokemon.data.hp,
@@ -681,7 +678,8 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_int: pokemon.data.saves.includes("int"),
 			_save_wis: pokemon.data.saves.includes("wis"),
 			_save_cha: pokemon.data.saves.includes("cha"),
-			_ability: pokemon.abilities.toList()[0]?.id ?? "",
+			_ability: null,
+			_abilities: trainerPokemon.abilities.map((it) => it.collapse()),
 			_notes: trainerPokemon.notes ?? "",
 			_tera_type: pokemon.type.primary,
 			_exp: trainerPokemon.exp,
@@ -704,9 +702,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_bond_points_cur: 0,
 			_bond_points_max: 0,
 			_rank: rank,
+			_stab_base: "default",
+			_stab_bonus: 0,
 		}).single<number>()
     
 		if (error) {
+			console.error(error)
 			throw new TrainerDataProviderError("Could not add pokemon.", error)
 		}
 

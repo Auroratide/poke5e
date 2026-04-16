@@ -1,14 +1,22 @@
 <script lang="ts">
 	import { m } from "$lib/site/i18n"
 	import { Fieldset } from "$lib/ui/forms"
-	import type { AbilityPool } from "./AbilityPool"
+	import { AbilityPool } from "./AbilityPool"
 	import AbilityPoolGroupFields from "./AbilityPoolGroupFields.svelte"
 
 	export let value: AbilityPool
 	export let disabled = false
+
+	let normal = value.normal
+	let hidden = value.hidden
+
+	$: value = new AbilityPool({
+		normal: normal.map((it) => it.data),
+		hidden: hidden.map((it) => it.data),
+	})
 </script>
 
 <Fieldset title={m.abilityPool()}>
-	<AbilityPoolGroupFields title={m.nonHiddenAbilities()} bind:values={value.data.normal} {disabled} />
-	<AbilityPoolGroupFields title={m.hiddenAbilities()} bind:values={value.data.hidden} {disabled} />
+	<AbilityPoolGroupFields title={m.nonHiddenAbilities()} bind:values={normal} {disabled} />
+	<AbilityPoolGroupFields title={m.hiddenAbilities()} bind:values={hidden} {disabled} />
 </Fieldset>

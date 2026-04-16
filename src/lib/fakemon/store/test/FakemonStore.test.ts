@@ -11,6 +11,7 @@ import { SpeciesMedia } from "$lib/poke5e/species/media"
 import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 import { stubEvolution } from "$lib/pokemon/evolution/test/stubs"
 import { waitForStore } from "$lib/test/store"
+import { ApiStub } from "$lib/test/ApiStub"
 
 let fakemonStore: FakemonStore
 

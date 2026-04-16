@@ -7,6 +7,7 @@ import type { Skill } from "$lib/dnd/skills"
 import { capitalize, uppercase } from "$lib/utils/string"
 import type { Attribute } from "$lib/dnd/attributes"
 import type { ReferenceAbilityId } from "../ability"
+import { Ability } from "$lib/pokemon/ability"
 
 export interface EvolutionEffect {
 	apply: (pokemon: TrainerPokemon) => TrainerPokemon
@@ -25,30 +26,44 @@ export const EvolutionEffect = {
 
 export class AbilityChangeEffect implements EvolutionEffect {
 	constructor(
-		private readonly oldAbility: ReferenceAbilityId,
-		private readonly newAbility: ReferenceAbilityId,
+		private readonly changes: { old: Ability, new: Ability }[],
 	) {}
 
 	apply(pokemon: TrainerPokemon): TrainerPokemon {
 		return {
 			...pokemon,
-			ability: this.newAbility,
+			abilities: pokemon.abilities.map((formerAbility) => {
+				const matchingAbility = this.changes.find((change) => change.old.isSameAs(formerAbility))
+
+				return matchingAbility ? matchingAbility.new : formerAbility
+			}),
 		}
 	}
 
 	toString(): string {
-		return `Ability will change from {{ability:${this.oldAbility}}} to {{ability:${this.newAbility}}}`
+		return this.changes.map((it) => `Ability will change from ${it.old.name} to ${it.new.name}.`).join(" ")
 	}
 
 	static createIfApplicable(pokemon: TrainerPokemon, evolveFrom: PokemonSpecies, evolveTo: PokemonSpecies): AbilityChangeEffect | undefined {
-		const original = evolveFrom.abilities.findIndex(pokemon.ability)
-		if (!original.exists) return undefined
-		
-		const newAbility = evolveTo.abilities.findApplicableAbility(original)
-		if (newAbility == null) return undefined
-		if (pokemon.ability === newAbility.id) return undefined
+		const changes = pokemon.abilities.map((ability) => {
+			const original = evolveFrom.abilities.findIndex(ability)
+			if (!original.exists) return undefined
 
-		return new AbilityChangeEffect(pokemon.ability, newAbility.id)
+			const newAbility = evolveTo.abilities.findApplicableAbility(original)
+			if (newAbility == null) return undefined
+			if (ability.isSameAs(newAbility.value)) return undefined
+
+			return {
+				old: ability,
+				new: newAbility.value,
+			}
+		}).filter((it) => it != null)
+
+		if (changes.length > 0) {
+			return new AbilityChangeEffect(changes)
+		} else {
+			return undefined
+		}
 	}
 }
 

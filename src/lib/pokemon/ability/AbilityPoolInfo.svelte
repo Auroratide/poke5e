@@ -13,12 +13,10 @@
 		<Loader caption="Finding abilities..." />
 	</div>
 {:else}
-	{#each value.data.normal as id}
-		{@const ability = $AbilityStore?.find((it) => id === it.referenceId)}
+	{#each value.data.normal as ability}
 		<p><strong>{ability.name}:</strong> {ability.description}</p>	
 	{/each}
-	{#each value.data.hidden as id}
-		{@const ability = $AbilityStore?.find((it) => id === it.referenceId)}
+	{#each value.data.hidden as ability}
 		<p class="no-margin"><Tag>{m.hidden()}</Tag></p>
 		<p><strong>{ability.name}:</strong> {ability.description}</p>	
 	{/each}

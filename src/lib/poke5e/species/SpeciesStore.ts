@@ -11,9 +11,9 @@ export const allCanonSpecies = cachedReadable<PokemonSpecies[] | undefined>(unde
 	if (typeof window !== "undefined") {
 		fetch(Url.api.pokemon())
 			.then((res) => res.json())
-			.then((data: PokemonJsonResponse) => data.items.map((it) =>
-				PokemonSpecies.fromJson(it),
-			))
+			.then((data: PokemonJsonResponse) => Promise.all(data.items.map((it) =>
+				PokemonSpecies.fromJson(it)
+			)))
 			.then((pokemon) => set(pokemon))
 	}
 })

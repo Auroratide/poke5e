@@ -1,64 +1,67 @@
 <script lang="ts">
+	import { Button } from "$lib/ui/elements";
+	import { focusInputField, FormGroup, HintText } from "$lib/ui/forms"
+	import { AllAbilityField } from ".";
+	import { Ability } from "./Ability";
 	import { m } from "$lib/site/i18n"
-	import { FormGroup, Removable, SelectField, type SelectFieldChangeEvent, kebab } from "$lib/ui/forms"
-	import { AbilityStore } from "./AbilityStore"
+	import { getAbilityFieldName } from "./AllAbilityField.svelte";
 
 	export let title: string
-	export let values: string[]
+	export let values: Ability[]
 	export let disabled = false
 
-	$: id = kebab(title)
+	let newId = -1001
+	const nextNewId = () => (--newId).toString()
 
-	$: options = $AbilityStore?.map((it) => ({
-		name: it.name,
-		value: it.referenceId,
-		deprecated: it.deprecated ?? false,
+	let withIds = values.map((it) => ({
+		id: nextNewId(),
+		value: it,
 	}))
 
-	const add = (e: SelectFieldChangeEvent) => {
-		values = [...values, e.detail.value]
+	const remove = (id: string) => () => {
+		withIds = withIds.filter((it) => it.id !== id)
 	}
 
-	const remove = (i: number) => () => {
-		values = values.toSpliced(i, 1)
+	const addStandard = () => {
+		const nextId = nextNewId()
+		withIds = [...withIds, {
+			id: nextId,
+			value: Ability.createNewStandard("disguise")
+		} ],
+		focusInputField(getAbilityFieldName(nextId))
 	}
 
-	const update = (i: number) => (e: SelectFieldChangeEvent) => {
-		values = values.toSpliced(i, 1, e.detail.value)
+	const addCustom = () => {
+		const nextId = nextNewId()
+		withIds = [...withIds, {
+			id: nextId,
+			value: Ability.createNewCustom(),
+		} ],
+		focusInputField(getAbilityFieldName(nextId))
 	}
+
+	$: values = withIds.map((it) => it.value)
 </script>
 
-{#if options != null}
-	<FormGroup {title}>
-		<ul>
-			{#each values as value, index}
-				<li class="no-label">
-					<Removable on:remove={remove(index)}>
-						<SelectField label="{index + 1}." name="{id}-{index}" {value} {options} on:change={update(index)} {disabled} />
-					</Removable>
-				</li>
-			{/each}
-			<li>
-				<!-- key is a workaround to ensure the field is always empty -->
-				{#key values}
-					<SelectField label={m.addAbility()} name="{id}-add-ability" value="" {options} on:change={add} {disabled} />
-				{/key}
-			</li>
-		</ul>
-	</FormGroup>
-{/if}
+<FormGroup {title}>
+	{#each withIds as ability (ability.id)}
+		<AllAbilityField id={ability.id} value={ability.value} {disabled} on:remove={remove(ability.id)} />
+	{/each}
+	{#if values.length === 0}
+		<HintText>{m.noAbilities()}</HintText>
+	{/if}
+	<div class="row">
+		<Button on:click={addStandard}>{m.addAbility()}</Button>
+		<Button on:click={addCustom}>{m.addCustomAbility()}</Button>
+	</div>
+</FormGroup>
+
 
 <style>
-	ul {
-		list-style: none;
-		padding: 0;
-		margin: 0;
+	.row {
 		display: flex;
-		flex-direction: column;
-		gap: 0.75em;
-	}
-
-	.no-label :global(label) {
-		font-size: 0.1px;
+		gap: 0.5em;
+	} .row > :global(*) {
+		flex: 1;
 	}
 </style>

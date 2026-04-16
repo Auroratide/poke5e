@@ -1,6 +1,6 @@
 import type { PostgrestError, SupabaseClient } from "@supabase/supabase-js"
 import { FakemonDataProviderError, FakemonPermissionError, type FakemonDataProvider, type ReadKey, type WriteKey } from "./FakemonDataProvider"
-import { Fakemon, type DraftFakemon } from "../Fakemon"
+import { Fakemon, type DraftFakemon, type FakemonId } from "../Fakemon"
 import { PokemonType } from "$lib/pokemon/types"
 import type { Attribute } from "$lib/dnd/attributes"
 import { isCreatureSize } from "$lib/dnd/CreatureSize"
@@ -11,6 +11,7 @@ import type { UserAssets } from "$lib/site/user-assets"
 import type { ImageInputValue } from "$lib/ui/forms"
 import { SpeciesMedia, type SpeciesMediaTypeAttribution, type UploadedMedia } from "$lib/poke5e/species/media"
 import { SpeciesIdentifier } from "$lib/poke5e/species"
+import { Ability, AbilityPool } from "$lib/pokemon/ability"
 
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	constructor(
@@ -29,12 +30,12 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	async getByReadKey(readKey: ReadKey): Promise<Fakemon | undefined> {
 		return this.supabase.rpc("get_fakemon", { _read_key: readKey })
 			.maybeSingle<FakemonRow>()
-			.then(({ data, error }) => {
+			.then(async ({ data, error }) => {
 				this.validateError("Could not get fakemon.", error)
 
 				if (!data) return undefined
 
-				const fakemon = rowToFakemon(data, this.getUserAssetResource)
+				const fakemon = await rowToFakemon(data, this.getUserAssetResource)
 
 				const inStorage = FakemonLocalStorage.get(readKey)
 				fakemon.data.writeKey = inStorage?.writeKey
@@ -176,8 +177,12 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_save_int: fakemon.saves.includes("int"),
 			_save_wis: fakemon.saves.includes("wis"),
 			_save_cha: fakemon.saves.includes("cha"),
-			_abilities: fakemon.abilities.normal,
-			_hidden_abilities: fakemon.abilities.hidden,
+			_abilities: [], // deprecated
+			_hidden_abilities: [], // deprecated
+			_ability_pool: {
+				normal: fakemon.abilities.normal.map((it) => it.referenceId ? { referenceId: it.referenceId } : { name: it.name, description: it.description }),
+				hidden: fakemon.abilities.hidden.map((it) => it.referenceId ? { referenceId: it.referenceId } : { name: it.name, description: it.description })
+			},
 			_moves_start: fakemon.moves.start,
 			_moves_level2: fakemon.moves.level2,
 			_moves_level6: fakemon.moves.level6,
@@ -258,6 +263,17 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 type Uuid = string
 
+type AbilityPoolRowItem = {
+	referenceId: string
+} | {
+	name: string,
+	description: string,
+}
+
+function isReferenceAbility(it: AbilityPoolRowItem): it is { referenceId: string } {
+	return "referenceId" in it && it.referenceId.length > 0
+}
+
 type FakemonRow = {
 	id: Uuid,
 	read_key: string,
@@ -315,6 +331,10 @@ type FakemonRow = {
 	save_cha: boolean,
 	abilities: string[],
 	hidden_abilities: string[],
+	ability_pool: {
+		normal: AbilityPoolRowItem[],
+		hidden: AbilityPoolRowItem[],
+	},
 	moves_start: string[],
 	moves_level2: string[],
 	moves_level6: string[],
@@ -342,7 +362,7 @@ const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
 		.filter(([, val]) => val)
 		.map(([key]) => key as T)
 
-function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) => UploadedMedia): Fakemon {
+async function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) => UploadedMedia): Promise<Fakemon> {
 	return new Fakemon({
 		id: row.id,
 		readKey: row.read_key,
@@ -412,8 +432,26 @@ function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) => Upl
 				cha: row.save_cha,
 			}),
 			abilities: {
-				normal: row.abilities,
-				hidden: row.hidden_abilities,
+				normal: await Promise.all(row.ability_pool.normal.map(async (it) => {
+					if (isReferenceAbility(it)) {
+						return (await Ability.resolve(it.referenceId)).data
+					} else {
+						return {
+							name: it.name,
+							description: it.description
+						}
+					}
+				})),
+				hidden: await Promise.all(row.ability_pool.hidden.map(async (it) => {
+					if (isReferenceAbility(it)) {
+						return (await Ability.resolve(it.referenceId)).data
+					} else {
+						return {
+							name: it.name,
+							description: it.description
+						}
+					}
+				})),
 			},
 			moves: {
 				start: row.moves_start,

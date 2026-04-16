@@ -17,6 +17,8 @@ import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import { PokemonType } from "$lib/pokemon/types"
 import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
 import type { PokemonSpecies } from "$lib/poke5e/species"
+import { stubAbility, stubAbilityPool } from "$lib/pokemon/ability/test/stubs"
+import { Ability } from "$lib/pokemon/ability"
 
 let eevee: PokemonSpecies
 let flareon: PokemonSpecies
@@ -31,10 +33,15 @@ beforeEach(() => {
 			acrobatics: 1,
 		}).data,
 		saves: ["dex"],
-		abilities: {
-			normal: ["run-away", "adaptability"],
-			hidden: ["anticipation"],
-		},
+		abilities: stubAbilityPool({
+			normal: [
+				stubAbility({ referenceId: "run-away", name: "Run Away" }).data,
+				stubAbility({ referenceId: "adaptability", name: "Adaptability" }).data,
+			],
+			hidden: [
+				stubAbility({ referenceId: "anticipation", name: "Anticipation" }).data,
+			],
+		}).data,
 	})
 	
 	flareon = stubPokemonSpecies({
@@ -49,8 +56,12 @@ beforeEach(() => {
 		}).data,
 		saves: ["dex", "cha"],
 		abilities: {
-			normal: ["flash-fire"],
-			hidden: ["guts"],
+			normal: [
+				stubAbility({ referenceId: "flash-fire", name: "Flash Fire" }).data,
+			],
+			hidden: [
+				stubAbility({ referenceId: "guts", name: "Guts" }).data,
+			],
 		},
 	})
 })
@@ -58,69 +69,69 @@ beforeEach(() => {
 describe("AbilityChangeEffect", () => {
 	test("applicable", () => {
 		const pokemon = stubTrainerPokemon({
-			ability: eevee.abilities.data.normal[0],
+			abilities: [new Ability(eevee.abilities.data.normal[0])]
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
 		const result = effect.apply(pokemon)
 
-		expect(result.ability).toEqual(flareon.abilities.data.normal[0])
-		expect(effect.toString()).toEqual("Ability will change from {{ability:run-away}} to {{ability:flash-fire}}")
+		expect(result.abilities[0].data).toEqual(flareon.abilities.data.normal[0])
+		expect(effect.toString()).toEqual("Ability will change from Run Away to Flash Fire.")
 	})
 
 	test("applicable: prevo has second ability, but evo does not", () => {
 		const pokemon = stubTrainerPokemon({
-			ability: eevee.abilities.data.normal[1],
+			abilities: [new Ability(eevee.abilities.data.normal[1])]
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
 		const result = effect.apply(pokemon)
 
-		expect(result.ability).toEqual(flareon.abilities.data.normal[0])
-		expect(effect.toString()).toEqual("Ability will change from {{ability:adaptability}} to {{ability:flash-fire}}")
+		expect(result.abilities[0].data).toEqual(flareon.abilities.data.normal[0])
+		expect(effect.toString()).toEqual("Ability will change from Adaptability to Flash Fire.")
 	})
 
 	test("applicable: hidden ability", () => {
 		const pokemon = stubTrainerPokemon({
-			ability: eevee.abilities.data.hidden[0],
+			abilities: [new Ability(eevee.abilities.data.hidden[0])]
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
 		const result = effect.apply(pokemon)
 
-		expect(result.ability).toEqual(flareon.abilities.data.hidden[0])
-		expect(effect.toString()).toEqual("Ability will change from {{ability:anticipation}} to {{ability:guts}}")
+		expect(result.abilities[0].data).toEqual(flareon.abilities.data.hidden[0])
+		expect(effect.toString()).toEqual("Ability will change from Anticipation to Guts.")
 	})
 
 	test("applicable: evo does not have hidden ability", () => {
 		const specialFlareon = flareon.copy({
 			abilities: {
-				normal: ["flash-fire"],
+				normal: [stubAbility({ referenceId: "flash-fire", name: "Flash Fire" }).data],
 				hidden: [],
 			},
 		})
 
 		const pokemon = stubTrainerPokemon({
-			ability: eevee.abilities.data.hidden[0],
+			abilities: [new Ability(eevee.abilities.data.hidden[0])]
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, specialFlareon)
 		const result = effect.apply(pokemon)
 
-		expect(result.ability).toEqual(flareon.abilities.data.normal[0])
-		expect(effect.toString()).toEqual("Ability will change from {{ability:anticipation}} to {{ability:flash-fire}}")
+		expect(result.abilities[0].data).toEqual(flareon.abilities.data.normal[0])
+		expect(effect.toString()).toEqual("Ability will change from Anticipation to Flash Fire.")
 	})
 
 	test("not applicable: evo does not have normal ability", () => {
 		const specialFlareon = flareon.copy({
 			abilities: {
 				normal: [],
-				hidden: ["guts"],
+				hidden: [stubAbility({ referenceId: "guts" })],
 			},
 		})
 
 		const pokemon = stubTrainerPokemon({
-			ability: eevee.abilities.data.normal[0],
+			abilities: [new Ability(eevee.abilities.data.normal[0])]
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, specialFlareon)
@@ -130,7 +141,7 @@ describe("AbilityChangeEffect", () => {
 
 	test("not applicable: ability is already the same", () => {
 		const pokemon = stubTrainerPokemon({
-			ability: flareon.abilities.data.normal[0],
+			abilities: [new Ability(flareon.abilities.data.normal[0])]
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, flareon, flareon)
@@ -140,11 +151,158 @@ describe("AbilityChangeEffect", () => {
 
 	test("not applicable: ability is not in prevo's list, thereby customized", () => {
 		const pokemon = stubTrainerPokemon({
-			ability: "something-else",
+			abilities: [stubAbility({ referenceId: "damp" })]
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
 
+		expect(effect).toBeUndefined()
+	})
+
+	test("not applicable: no abilities", () => {
+		const pokemon = stubTrainerPokemon({
+			abilities: []
+		})
+
+		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
+
+		expect(effect).toBeUndefined()
+	})
+
+	test("applicable: multiple abilities", () => {
+		const pokemon = stubTrainerPokemon({
+			abilities: [
+				new Ability(eevee.abilities.data.normal[0]),
+				new Ability(eevee.abilities.data.hidden[0]),
+			]
+		})
+
+		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
+		const result = effect.apply(pokemon)
+
+		expect(result.abilities[0].data).toEqual(flareon.abilities.data.normal[0])
+		expect(result.abilities[1].data).toEqual(flareon.abilities.data.hidden[0])
+		expect(effect.toString()).toEqual("Ability will change from Run Away to Flash Fire. Ability will change from Anticipation to Guts.")
+	})
+
+	test("applicable: multiple abilities, but only one of them changes", () => {
+		const specialFlareon = flareon.copy({
+			abilities: {
+				normal: [
+					stubAbility({ referenceId: "flash-fire", name: "Flash Fire" }).data,
+					stubAbility({ referenceId: "adaptability", name: "Adaptability" }).data,
+				],
+				hidden: [],
+			},
+		})
+
+		const pokemon = stubTrainerPokemon({
+			abilities: [
+				new Ability(eevee.abilities.data.normal[0]),
+				new Ability(eevee.abilities.data.normal[1]),
+			]
+		})
+
+		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, specialFlareon)
+		const result = effect.apply(pokemon)
+
+		expect(result.abilities[0].data).toEqual(specialFlareon.abilities.data.normal[0])
+		expect(result.abilities[1].data).toEqual(specialFlareon.abilities.data.normal[1])
+		expect(effect.toString()).toEqual("Ability will change from Run Away to Flash Fire.")
+	})
+
+	test("applicable: evolving to a custom ability", () => {
+		const specialFlareon = flareon.copy({
+			abilities: {
+				normal: [stubAbility({ referenceId: undefined, name: "Custom Ability" })],
+				hidden: [],
+			},
+		})
+
+		const pokemon = stubTrainerPokemon({
+			abilities: [
+				new Ability(eevee.abilities.data.normal[0]),
+			]
+		})
+
+		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, specialFlareon)
+		const result = effect.apply(pokemon)
+
+		expect(result.abilities[0].data).toEqual(specialFlareon.abilities.data.normal[0])
+		expect(effect.toString()).toEqual("Ability will change from Run Away to Custom Ability.")
+	})
+
+	test("applicable: evolving from a custom ability", () => {
+		const specialEevee = eevee.copy({
+			abilities: {
+				normal: [stubAbility({ referenceId: undefined, name: "Custom Ability" })],
+				hidden: [],
+			},
+		})
+
+		const pokemon = stubTrainerPokemon({
+			abilities: [
+				new Ability(specialEevee.abilities.data.normal[0]),
+			]
+		})
+
+		const effect = AbilityChangeEffect.createIfApplicable(pokemon, specialEevee, flareon)
+		const result = effect.apply(pokemon)
+
+		expect(result.abilities[0].data).toEqual(flareon.abilities.data.normal[0])
+		expect(effect.toString()).toEqual("Ability will change from Custom Ability to Flash Fire.")
+	})
+
+	test("applicable: evolving between custom abilities", () => {
+		const specialEevee = eevee.copy({
+			abilities: {
+				normal: [stubAbility({ referenceId: undefined, name: "Super Eevee" })],
+				hidden: [],
+			},
+		})
+
+		const specialFlareon = flareon.copy({
+			abilities: {
+				normal: [stubAbility({ referenceId: undefined, name: "Super Flare" })],
+				hidden: [],
+			},
+		})
+
+		const pokemon = stubTrainerPokemon({
+			abilities: [
+				new Ability(specialEevee.abilities.data.normal[0]),
+			]
+		})
+
+		const effect = AbilityChangeEffect.createIfApplicable(pokemon, specialEevee, specialFlareon)
+		const result = effect.apply(pokemon)
+
+		expect(result.abilities[0].data).toEqual(specialFlareon.abilities.data.normal[0])
+		expect(effect.toString()).toEqual("Ability will change from Super Eevee to Super Flare.")
+	})
+
+	test("not applicable: custom ability does not change", () => {
+		const specialEevee = eevee.copy({
+			abilities: {
+				normal: [stubAbility({ referenceId: undefined, name: "Custom Ability" })],
+				hidden: [],
+			},
+		})
+
+		const specialFlareon = flareon.copy({
+			abilities: {
+				normal: [stubAbility({ referenceId: undefined, name: "Custom Ability" })],
+				hidden: [],
+			},
+		})
+
+		const pokemon = stubTrainerPokemon({
+			abilities: [
+				new Ability(specialEevee.abilities.data.normal[0]),
+			]
+		})
+
+		const effect = AbilityChangeEffect.createIfApplicable(pokemon, specialEevee, specialFlareon)
 		expect(effect).toBeUndefined()
 	})
 })
@@ -400,7 +558,7 @@ describe("EvolutionEffect", () => {
 			pokemonId: eevee.id, // will change
 			nickname: "Ganymede", // will NOT change
 			type: eevee.type, // will change
-			ability: eevee.abilities.data.normal[0], // will change
+			abilities: [new Ability(eevee.abilities.data.normal[0])], // will change
 			ac: eevee.data.ac, // will change
 			level: new Level(7), // will affect HP
 			proficiencies: flareon.skills, // will NOT change

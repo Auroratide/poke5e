@@ -4,6 +4,14 @@ import { AbilityStore, type AbilityJson } from "./AbilityStore"
 
 export type ReferenceAbilityId = string
 
+// useful for db storage
+export type CollapsedAbility = {
+	referenceId: ReferenceAbilityId,
+} | {
+	name: string,
+	description: string,
+}
+
 export class Ability extends DataClass<{
 	referenceId?: ReferenceAbilityId
 	name: string,
@@ -15,6 +23,23 @@ export class Ability extends DataClass<{
 	get description() { return this.data.description }
 	get deprecated() { return this.data.deprecated ?? false }
 	get custom() { return this.data.referenceId == null }
+
+	isSameAs(other: Ability): boolean {
+		if (this.referenceId != null || other.referenceId != null) {
+			return this.referenceId === other.referenceId
+		} else {
+			return this.name === other.name
+		}
+	}
+
+	collapse(): CollapsedAbility {
+		return this.data.referenceId ? {
+			referenceId: this.data.referenceId,
+		} : {
+			name: this.data.name,
+			description: this.data.description,
+		}
+	}
 
 	static readonly resolve = async (referenceId: ReferenceAbilityId): Promise<Ability> => {
 		const abilityList = await getWhenDefined(AbilityStore)

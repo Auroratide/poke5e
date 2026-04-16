@@ -5,6 +5,7 @@ import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
 import type { PokemonJsonResponse, SinglePokemonJsonResponse } from "../PokemonJsonResponse"
 import { PokemonSpecies } from "../PokemonSpecies"
+import { stubAbilityPool } from "$lib/pokemon/ability/test/stubs"
 
 export function stubPokemonSpecies(template: Partial<Data<PokemonSpecies>> = {}): PokemonSpecies {
 	return new PokemonSpecies({
@@ -40,10 +41,7 @@ export function stubPokemonSpecies(template: Partial<Data<PokemonSpecies>> = {})
 			intimidation: 1,
 		}).data,
 		saves: ["dex"],
-		abilities: {
-			normal: ["intimidate"],
-			hidden: ["inner-focus"],
-		},
+		abilities: stubAbilityPool().data,
 		moves: stubMovePool().data,
 		media: stubSpeciesMedia().data,
 		notes: "",
