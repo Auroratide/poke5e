@@ -451,6 +451,8 @@ test("updating pokemon", async () => {
 		_bond_points_cur: 2,
 		_bond_points_max: 3,
 		_rank: undefined,
+		_stab_base: "movepower",
+		_stab_bonus: 2
 	})
 
 	// Updating the avatar
@@ -537,6 +539,9 @@ test("updating pokemon", async () => {
 	expect(vivillon.rank_intimidation).toEqual(0)
 	expect(vivillon.rank_performance).toEqual(0)
 	expect(vivillon.rank_persuasion).toEqual(1)
+
+	expect(vivillon.stab_base).toEqual("movepower")
+	expect(vivillon.stab_bonus).toEqual(2)
 
 	expect(vivillon.avatar_filename).toEqual(avatarFilename)
 
@@ -846,7 +851,6 @@ test("updating abilities on pokemon", async () => {
 	const technician = await call<string>("add_ability", {
 		_write_key: writeKey,
 		_pokemon_id: pokemonId,
-		_fakemon_id: null,
 		_ability_id: "technician",
 		_custom_name: null,
 		_description: null,
@@ -856,7 +860,6 @@ test("updating abilities on pokemon", async () => {
 	const customAbilityId = await call<string>("add_ability", {
 		_write_key: writeKey,
 		_pokemon_id: pokemonId,
-		_fakemon_id: null,
 		_ability_id: null,
 		_custom_name: "Hyperpower",
 		_description: "The universe blows up when any move is used.",
@@ -914,164 +917,6 @@ test("updating abilities on pokemon", async () => {
 	})
 	await call("delete_trainer", {
 		_write_key: writeKey,
-		_id: trainerId,
-	})
-})
-
-test("updating abilities on fakemon", async () => {
-	const {
-		ret_id: fakemonId,
-		ret_read_key: readKey,
-		ret_write_key: writeKey
-	} = await call<{
-		ret_id: string,
-		ret_read_key: string,
-		ret_write_key: string,
-	}>("new_fakemon", Drakeon())
-
-	const technician = await call<string>("add_ability", {
-		_write_key: writeKey,
-		_pokemon_id: null,
-		_fakemon_id: fakemonId,
-		_ability_id: "technician",
-		_custom_name: null,
-		_description: null,
-		_rank: 0,
-	})
-
-	const customAbilityId = await call<string>("add_ability", {
-		_write_key: writeKey,
-		_pokemon_id: null,
-		_fakemon_id: fakemonId,
-		_ability_id: null,
-		_custom_name: "Hyperpower",
-		_description: "The universe blows up when any move is used.",
-		_rank: 1,
-	})
-
-	// Update
-	const x = await call("update_ability", {
-		_write_key: writeKey,
-		_id: technician,
-		_ability_id: "volt-absorb",
-		_custom_name: null,
-		_description: null,
-		_rank: 1,
-	})
-	
-	await call("update_ability", {
-		_write_key: writeKey,
-		_id: customAbilityId,
-		_ability_id: null,
-		_custom_name: "Hyperpower",
-		_description: "The multiverse blows up instead.",
-		_rank: 0,
-	})
-
-	// Assert
-	const drakeonAbilities = await callAll<any>("get_abilities", {
-		_fakemon_id: fakemonId,
-	})
-
-	const voltAbsorb = drakeonAbilities[1]
-	const customAbility = drakeonAbilities[0]
-	expect(voltAbsorb?.ability_id).toEqual("volt-absorb")
-	expect(customAbility?.custom_name).toEqual("Hyperpower")
-	expect(customAbility?.description).toEqual("The multiverse blows up instead.")
-
-	// Cleanup
-	await call("remove_ability", {
-		_write_key: writeKey,
-		_id: technician,
-	})
-	await call("remove_ability", {
-		_write_key: writeKey,
-		_id: customAbilityId,
-	})
-	const noMoreAbilities = await callAll<any>("get_abilities", {
-		_fakemon_id: fakemonId,
-	})
-
-	expect(noMoreAbilities.length).toEqual(0)
-
-	await call("delete_fakemon", {
-		_write_key: writeKey,
-		_id: fakemonId,
-	})
-})
-
-test("cannot use write key of trainer to update ability of fakemon (and vice versa)", async () => {
-	const {
-		ret_id: trainerId,
-		ret_read_key: trainerReadKey,
-		ret_write_key: trainerWriteKey
-	} = await call<{
-		ret_id: string,
-		ret_read_key: string,
-		ret_write_key: string,
-	}>("new_trainer", Iris())
-
-	const pokemonId = await call<number>("add_pokemon", {
-		_write_key: trainerWriteKey,
-		...SunnyYellow(),
-	})
-	
-	const {
-		ret_id: fakemonId,
-		ret_read_key: fakemonReadKey,
-		ret_write_key: fakemonWriteKey
-	} = await call<{
-		ret_id: string,
-		ret_read_key: string,
-		ret_write_key: string,
-	}>("new_fakemon", Drakeon())
-
-	await call<string>("add_ability", {
-		_write_key: trainerWriteKey,
-		_pokemon_id: null,
-		_fakemon_id: fakemonId,
-		_ability_id: "technician",
-		_custom_name: null,
-		_description: null,
-		_rank: 0,
-	}, {
-		assertNull: true,
-	})
-
-	await call<string>("add_ability", {
-		_write_key: fakemonWriteKey,
-		_pokemon_id: pokemonId,
-		_fakemon_id: null,
-		_ability_id: "technician",
-		_custom_name: null,
-		_description: null,
-		_rank: 0,
-	}, {
-		assertNull: true,
-	})
-
-	const notAddedToFakemon = await callAll<any>("get_abilities", {
-		_fakemon_id: fakemonId,
-	})
-	expect(notAddedToFakemon.length).toEqual(0)
-
-	const notAddedToPokemon = await callAll<any>("get_abilities", {
-		_pokemon_id: pokemonId,
-	})
-	expect(notAddedToPokemon.length).toEqual(0)
-
-	// Cleanup
-	await call("delete_fakemon", {
-		_write_key: fakemonWriteKey,
-		_id: fakemonId,
-	})
-
-	await call("remove_pokemon", {
-		_write_key: trainerWriteKey,
-		_id: pokemonId,
-	})
-	await call("delete_trainer", {
-		_write_key: trainerWriteKey,
 		_id: trainerId,
 	})
 })
@@ -1779,6 +1624,8 @@ export const SunnyYellow = () => ({
 	_rank_performance: 0,
 	_rank_persuasion: 1,
 	_rank: 0,
+	_stab_base: "default",
+	_stab_bonus: 0,
 })
 
 const Drakeon = () => ({
