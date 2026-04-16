@@ -1,6 +1,6 @@
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import { DataClass } from "$lib/DataClass"
-import type { AbilityId } from "./Ability"
+import type { ReferenceAbilityId } from "./Ability"
 
 type AbilityItem = {
 	id: string,
@@ -19,8 +19,8 @@ export type FindIndexResult = {
  * Represents a list of POSSIBLE abilities a species may have
  */
 export class AbilityPool extends DataClass<{
-	normal: AbilityId[],
-	hidden: AbilityId[],
+	normal: ReferenceAbilityId[],
+	hidden: ReferenceAbilityId[],
 }> {
 	toList(): AbilityList {
 		return this.data.normal.map((it) => ({
@@ -59,7 +59,7 @@ export class AbilityPool extends DataClass<{
 		} : undefined
 	}
 
-	findIndex(ability: AbilityId): FindIndexResult {
+	findIndex(ability: ReferenceAbilityId): FindIndexResult {
 		const normal = this.data.normal.indexOf(ability)
 		const hidden = this.data.hidden.indexOf(ability)
 
@@ -81,11 +81,11 @@ export class AbilityPool extends DataClass<{
 		})
 	}
 
-	static groupSpeciesByAbility(abilities: AbilityId[], pokemon: PokemonSpecies[]): Record<AbilityId, PokemonSpecies[]> {
+	static groupSpeciesByAbility(abilities: ReferenceAbilityId[], pokemon: PokemonSpecies[]): Record<ReferenceAbilityId, PokemonSpecies[]> {
 		if (abilities == null || pokemon == null || abilities?.length === 0 || pokemon?.length === 0)
 			return {}
 	
-		const pokemonHasAbility = (ability: AbilityId) => (pokemon: PokemonSpecies) =>
+		const pokemonHasAbility = (ability: ReferenceAbilityId) => (pokemon: PokemonSpecies) =>
 			pokemon.abilities.findIndex(ability).exists
 	
 		return abilities.reduce((all, ability) => ({

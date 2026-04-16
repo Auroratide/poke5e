@@ -1,35 +1,71 @@
-import { DataClass } from "$lib/DataClass"
-import type { ReferenceAbilityId } from "./ReferenceAbility"
+import { DataClass, type Data } from "$lib/DataClass"
+import { getWhenDefined } from "$lib/utils/store"
+import { AbilityStore, type AbilityJson } from "./AbilityStore"
 
-export type AbilityId = string
+export type ReferenceAbilityId = string
 
 export class Ability extends DataClass<{
-	id: AbilityId,
 	referenceId?: ReferenceAbilityId
 	name: string,
 	description: string,
+	deprecated?: boolean,
 }> {
-	get id() { return this.data.id }
 	get referenceId() { return this.data.referenceId }
 	get name() { return this.data.name }
 	get description() { return this.data.description }
+	get deprecated() { return this.data.deprecated ?? false }
 	get custom() { return this.data.referenceId == null }
 
-	static readonly createNewStandard = (tmpId: AbilityId, referenceId: ReferenceAbilityId): Ability => {
+	static readonly resolve = async (referenceId: ReferenceAbilityId): Promise<Ability> => {
+		const abilityList = await getWhenDefined(AbilityStore)
+		const referenceAbility = abilityList.find((it) => it.referenceId === referenceId)
+
+		if (!referenceAbility) return undefined
+
 		return new Ability({
-			id: tmpId,
+			referenceId: referenceId,
+			name: referenceAbility.name,
+			description: referenceAbility.description,
+		})
+	}
+
+	static readonly createNewStandard = (referenceId: ReferenceAbilityId): Ability => {
+		return new Ability({
 			referenceId: referenceId,
 			name: "",
 			description: "",
 		})
 	}
 
-	static readonly createNewCustom = (tmpId: AbilityId): Ability => {
+	static readonly createNewCustom = (): Ability => {
 		return new Ability({
-			id: tmpId,
 			referenceId: undefined,
 			name: "",
 			description: "",
 		})
 	}
+
+	static readonly normalizeList = (allAbilities: AbilityJson[]) => <T extends HasAbilities>(pokemon: T) => ({
+		...pokemon,
+		abilities: pokemon.abilities.map(ability => {
+			const matchedAbility = allAbilities.find(it => ability.id === it.id)
+			if (matchedAbility == null) {
+				console.warn(`Missing ability: ${ability.id}`)
+			}
+
+			return {
+				id: ability.id,
+				name: matchedAbility.name,
+				description: matchedAbility.description,
+				hidden: ability.hidden,
+			}
+		}),
+	})
+}
+
+type HasAbilities = {
+	abilities: {
+		id: ReferenceAbilityId,
+		hidden: boolean,
+	}[]
 }

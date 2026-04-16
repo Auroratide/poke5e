@@ -10,6 +10,7 @@ import { PokemonTeraType, PokemonType } from "$lib/pokemon/types"
 import { createEmptyChosenTrainerPath } from "../paths"
 import { stubSpecializations } from "../specializations/test/stubs"
 import type { LearnedMove, Trainer, TrainerBio, TrainerPokemon } from "../types"
+import { Stab } from "$lib/pokemon/stab"
 
 export function stubLearnedMove(template: Partial<LearnedMove> = {}): LearnedMove {
 	return {
@@ -67,6 +68,7 @@ export function stubTrainerPokemon(template: Partial<TrainerPokemon> = {}): Trai
 				max: 2,
 			},
 		},
+		stab: new Stab({ base: "default", bonus: 0 }),
 		...template,
 	}
 }

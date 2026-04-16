@@ -6,7 +6,7 @@ import * as list from "$lib/utils/list"
 import type { Skill } from "$lib/dnd/skills"
 import { capitalize, uppercase } from "$lib/utils/string"
 import type { Attribute } from "$lib/dnd/attributes"
-import type { AbilityId } from "$lib/pokemon/ability"
+import type { ReferenceAbilityId } from "../ability"
 
 export interface EvolutionEffect {
 	apply: (pokemon: TrainerPokemon) => TrainerPokemon
@@ -25,8 +25,8 @@ export const EvolutionEffect = {
 
 export class AbilityChangeEffect implements EvolutionEffect {
 	constructor(
-		private readonly oldAbility: AbilityId,
-		private readonly newAbility: AbilityId,
+		private readonly oldAbility: ReferenceAbilityId,
+		private readonly newAbility: ReferenceAbilityId,
 	) {}
 
 	apply(pokemon: TrainerPokemon): TrainerPokemon {

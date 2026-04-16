@@ -1,9 +1,9 @@
-import { Ability } from "../Ability"
 import type { Data } from "$lib/DataClass"
+import { Ability } from "../Ability"
 
 export function stubAbility(template: Partial<Data<Ability>> = {}): Ability {
 	return new Ability({
-		id: "disguise",
+		referenceId: "disguise",
 		name: "Disguse",
 		description: "Grants a disguise.",
 		...template,

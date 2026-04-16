@@ -11,7 +11,7 @@
 
 	$: options = $AbilityStore?.map((it) => ({
 		name: it.name,
-		value: it.id,
+		value: it.referenceId,
 		deprecated: it.deprecated ?? false,
 	}))
 

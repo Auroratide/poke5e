@@ -8,10 +8,10 @@ import type { PokemonType } from "$lib/pokemon/types"
 import type { GenderRatio } from "../pokemon/gender"
 import type { SpeciesRating } from "./sr"
 import type { EggGroup } from "../pokemon/egg-group"
-import type { AbilityId } from "$lib/pokemon/ability"
+import type { ReferenceAbilityId } from "$lib/pokemon/ability"
 
 export type Ability = {
-	id: AbilityId,
+	id: ReferenceAbilityId,
 	name: string,
 	description: string,
 	hidden?: boolean

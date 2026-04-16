@@ -25,7 +25,6 @@
 			return Promise.all([
 				$trainer.update?.moveset(e.detail.pokemon) ?? Promise.resolve(),
 				$trainer.update?.heldItems(e.detail.pokemon) ?? Promise.resolve(),
-				$trainer.update?.abilities(e.detail.pokemon) ?? Promise.resolve(),
 				$trainer.update?.pokemonFeats(e.detail.pokemon) ?? Promise.resolve(),
 			])
 		}).then(() => {

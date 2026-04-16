@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset, focusInputField, HintText, InstructionText } from "$lib/ui/forms";
+	import { Fieldset, focusInputField, HintText } from "$lib/ui/forms";
 	import { Ability } from "./Ability";
 	import { m } from "$lib/site/i18n"
 	import { Button } from "$lib/ui/elements";
@@ -14,26 +14,39 @@
 	let newId = -1001
 	const nextNewId = () => (--newId).toString()
 
+	let withIds = values.map((it) => ({
+		id: nextNewId(),
+		value: it,
+	}))
+
 	const remove = (id: string) => () => {
-		values = values.filter((it) => it.id !== id)
+		withIds = withIds.filter((it) => it.id !== id)
 	}
 
 	const addStandard = () => {
 		const nextId = nextNewId()
-		values = [...values, Ability.createNewStandard(nextId, "disguise") ]
+		withIds = [...withIds, {
+			id: nextId,
+			value: Ability.createNewStandard("disguise")
+		} ],
 		focusInputField(getAbilityFieldName(nextId))
 	}
 
 	const addCustom = () => {
 		const nextId = nextNewId()
-		values = [...values, Ability.createNewCustom(nextId) ]
+		withIds = [...withIds, {
+			id: nextId,
+			value: Ability.createNewCustom(),
+		} ],
 		focusInputField(getAbilityFieldName(nextId))
 	}
+
+	$: values = withIds.map((it) => it.value)
 </script>
 
 <Fieldset title="{m.abilities()}">
-	{#each values as ability (ability.id)}
-		<AbilityField value={ability} {disabled} on:remove={remove(ability.id)} {species} />
+	{#each withIds as ability (ability.id)}
+		<AbilityField id={ability.id} value={ability.value} {disabled} on:remove={remove(ability.id)} {species} />
 	{/each}
 	{#if values.length === 0}
 		<HintText>{m.noAbilities()}</HintText>

@@ -11,6 +11,11 @@ const ABILITIES = {
 		name: "Disguise",
 		description: "Grants a disguise.",
 	}),
+	intimidate: stubAbility({
+		referenceId: "intimidate",
+		name: "Intimidate",
+		description: "Angy",
+	}),
 }
 
 beforeEach(() => {
@@ -66,22 +71,27 @@ test("getting abilities", async () => {
 	const speciesToAdd = stubPokemonSpecies({
 		id: "mimikyu",
 		abilities: {
-			normal: [ABILITIES.disguise.id],
+			normal: [ABILITIES.disguise.referenceId],
 			hidden: [],
 		},
 	})
 
 	const addedTrainer = await provider.newTrainer(trainerToAdd)
 	const addedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, speciesToAdd)
-	await provider.updateAllAbilities(addedTrainer.writeKey, addedPokemon.id, [ABILITIES.disguise])
+	
+	addedPokemon.abilities = [ABILITIES.disguise, ABILITIES.intimidate]
+
+	await provider.updatePokemon(addedTrainer.writeKey, addedPokemon)
 
 	const receivedTrainer = await provider.getTrainer(addedTrainer.info.readKey)
 	const receivedPokemon = receivedTrainer.pokemon[0]
 
-	expect(receivedPokemon.ability).toEqual("disguise")
-	expect(receivedPokemon.abilities).toHaveLength(1)
+	expect(receivedPokemon.ability).toBeNull() // deprecated
+	expect(receivedPokemon.abilities).toHaveLength(2)
 	expect(receivedPokemon.abilities[0].referenceId).toEqual(ABILITIES.disguise.referenceId)
 	expect(receivedPokemon.abilities[0].name).toEqual(ABILITIES.disguise.name)
+	expect(receivedPokemon.abilities[1].referenceId).toEqual(ABILITIES.intimidate.referenceId)
+	expect(receivedPokemon.abilities[1].name).toEqual(ABILITIES.intimidate.name)
 })
 
 test("reordering pokemon", async () => {

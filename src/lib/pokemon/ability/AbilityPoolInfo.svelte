@@ -14,11 +14,11 @@
 	</div>
 {:else}
 	{#each value.data.normal as id}
-		{@const ability = $AbilityStore?.find((it) => id === it.id)}
+		{@const ability = $AbilityStore?.find((it) => id === it.referenceId)}
 		<p><strong>{ability.name}:</strong> {ability.description}</p>	
 	{/each}
 	{#each value.data.hidden as id}
-		{@const ability = $AbilityStore?.find((it) => id === it.id)}
+		{@const ability = $AbilityStore?.find((it) => id === it.referenceId)}
 		<p class="no-margin"><Tag>{m.hidden()}</Tag></p>
 		<p><strong>{ability.name}:</strong> {ability.description}</p>	
 	{/each}

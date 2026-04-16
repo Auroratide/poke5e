@@ -7,7 +7,10 @@ class ApiStubDefinition {
 	resolve = (url: string): Response | undefined => {
 		if (url.includes(Url.api.abilities())) {
 			return new Response(JSON.stringify({
-				abilities: this.abilities.map((it) => it.data),
+				abilities: this.abilities.map((it) => ({
+					...it.data,
+					id: it.referenceId,
+				})),
 			}))
 		} else {
 			return undefined

@@ -4,24 +4,24 @@
 
 <script lang="ts">
 	import { Divider, MarkdownField, Removable, SelectField, TextField, type SelectFieldChangeEvent } from "$lib/ui/forms"
-	import type { Ability } from "./Ability"
+	import { Ability } from "./Ability"
 	import { m } from "$lib/site/i18n"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { AbilityStore } from "./AbilityStore";
-	import { ReferenceAbility } from "./ReferenceAbility";
 
+	export let id: string
 	export let value: Ability
 	export let species: PokemonSpecies
 	export let disabled: boolean = false
 
-	$: fieldName = getAbilityFieldName(value.id)
+	$: fieldName = getAbilityFieldName(id)
 
 	$: myAbilityIds = species.abilities.toList().map((it) => it.id)
-	$: nonstandardAbilities = $AbilityStore?.filter((it) => !myAbilityIds.includes(it.id))
+	$: nonstandardAbilities = $AbilityStore?.filter((it) => !myAbilityIds.includes(it.referenceId))
 	$: abilityOptions = [ {
 		name: "Learnable Abilities",
 		values: species.abilities.toList().map((it) => {
-			const info = $AbilityStore?.find((ability) => ability.id === it.id)
+			const info = $AbilityStore?.find((ability) => ability.referenceId === it.id)
 
 			return {
 				name: info?.name + (it.hidden ? " (hidden)" : ""),
@@ -33,13 +33,13 @@
 		name: "All Other Abilities",
 		values: nonstandardAbilities?.map((it) => ({
 			name: it.name,
-			value: it.id,
+			value: it.referenceId,
 			deprecated: it.deprecated ?? false,
 		})) ?? [],
 	} ]
 
 	const handleSelectChange = async (e: SelectFieldChangeEvent) => {
-		const newAbility = await ReferenceAbility.resolve(value.id, e.detail.value)
+		const newAbility = await Ability.resolve(e.detail.value)
 		if (newAbility) {
 			value.data.name = newAbility.name
 			value.data.description = newAbility.description

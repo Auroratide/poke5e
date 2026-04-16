@@ -11,7 +11,7 @@
 
 	export let data: PageData
 	$: abilities = data.abilities
-	$: associatedPokemon = AbilityPool.groupSpeciesByAbility(abilities.map((it) => it.id), $pokemon)
+	$: associatedPokemon = AbilityPool.groupSpeciesByAbility(abilities.map((it) => it.referenceId), $pokemon)
 
 	let abilityFilter = ""
 
@@ -27,11 +27,11 @@
 		<h2>Ability List</h2>
 		<Filter bind:value={abilityFilter} matches={filteredAbilities?.length ?? 0} />
 		{#if abilities != null && associatedPokemon != null}
-			{#each abilities as ability (ability.id)}
+			{#each abilities as ability (ability.referenceId)}
 				<div class="ability" class:hide={!filteredAbilities.includes(ability)}>
 					<h3>{ability.name}</h3>
 					<p>{ability.description}</p>
-					<SimplePokemonList pokemon={associatedPokemon[ability.id] ?? []} />
+					<SimplePokemonList pokemon={associatedPokemon[ability.referenceId] ?? []} />
 				</div>
 			{/each}
 		{:else}

@@ -15,7 +15,7 @@ import type { PokemonTeraType, PokemonType } from "$lib/pokemon/types"
 import type { PokemonGender } from "$lib/pokemon/gender"
 import type { Nature } from "$lib/pokemon/nature"
 import type { SpeciesIdentifier } from "$lib/poke5e/species"
-import type { Ability, AbilityId } from "$lib/pokemon/ability"
+import type { Ability, ReferenceAbilityId } from "$lib/pokemon/ability"
 import type { Move } from "$lib/moves/Move"
 import type { Data } from "$lib/DataClass"
 import type { Resource } from "$lib/poke5e/resource"
@@ -63,7 +63,7 @@ export type TrainerPokemon = {
 	ac: number,
 	hp: Resource,
 	hitDice: Resource,
-	ability: AbilityId,
+	ability: ReferenceAbilityId,
 	abilities: Ability[],
 	proficiencies: SkillRanks,
 	savingThrows: Attribute[],

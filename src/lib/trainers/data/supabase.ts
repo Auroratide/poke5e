@@ -32,7 +32,7 @@ import { get } from "svelte/store"
 import { PokemonSpecies, SpeciesIdentifier } from "$lib/poke5e/species"
 import { TrainerLocalStorage } from "./TrainerLocalStorage"
 import { Stab, type StabBase } from "$lib/pokemon/stab"
-import { Ability, ReferenceAbility } from "$lib/pokemon/ability"
+import { Ability } from "$lib/pokemon/ability"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -112,12 +112,6 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 				return this.getHeldItems(thePokemon.id).then((items) => ({
 					...thePokemon,
 					items,
-				}))
-			})))
-			.then((pokemon) => Promise.all(pokemon.map((thePokemon) => {
-				return this.getAbilities(thePokemon.id).then((abilities) => ({
-					...thePokemon,
-					abilities,
 				}))
 			})))
 			.then((pokemon) => Promise.all(pokemon.map((thePokemon) => {
@@ -512,7 +506,13 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_save_int: info.savingThrows.includes("int"),
 			_save_wis: info.savingThrows.includes("wis"),
 			_save_cha: info.savingThrows.includes("cha"),
-			_ability: info.ability ?? "",
+			_ability: null, // deprecated
+			_abilities: info.abilities.map((ability) => ability.referenceId?.length > 0 ? {
+				referenceId: ability.referenceId,
+			} : {
+				name: ability.name,
+				description: ability.description,
+			}),
 			_notes: info.notes,
 			_tera_type: info.teraType.data,
 			_exp: info.exp,
@@ -870,32 +870,6 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}),
 	})
 
-	updateAllAbilities = async (writeKey: ReadWriteKey, pokemonId: PokemonId, newAbilities: Ability[]) => {
-		const unwrap = (it: Ability) => it.data
-
-		const abilityData = await this.updateListOfThings<Data<Ability>>({
-			thingName: "ability",
-			writeKey: writeKey,
-			newThings: newAbilities.map(unwrap),
-			getExistingThings: () => this.getAbilities(pokemonId).then((list) => list.map(unwrap)),
-			removeFunctionName: "remove_ability",
-			updateFunctionName: "update_ability",
-			addFunctionName: "add_ability",
-			mapThingToDbArgument: (ability, index, type) => ({
-				_write_key: writeKey,
-				_pokemon_id: type === "add" ? pokemonId : undefined,
-				_fakemon_id: type === "add" ? null : undefined,
-				_id: type === "update" ? ability.id : undefined,
-				_ability_id: ability.referenceId ?? null,
-				_custom_name: ability.referenceId == null ? ability.name : null,
-				_description: ability.referenceId == null ? ability.description : null,
-				_rank: index,
-			}),
-		})
-
-		return abilityData.map((it) => new Ability(it))
-	}
-
 	updateTrainerInventory = async (writeKey: ReadWriteKey, newInventory: InventoryItem[]) => this.updateListOfThings<InventoryItem>({
 		thingName: "inventory item",
 		writeKey: writeKey,
@@ -1010,17 +984,6 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 
 		return data?.map((row) => rowToHeldItem(row)) ?? []
-	}
-
-	private getAbilities = async (id: PokemonId): Promise<Ability[]> => {
-		const { data, error } = await this.supabase.rpc("get_abilities", { _pokemon_id: id })
-			.select()
-
-		if (error) {
-			throw new TrainerDataProviderError("Could not get abilities.", error)
-		}
-
-		return Promise.all(data?.map((row) => rowToAbility(row)) ?? [])
 	}
 
 	private getTrainerInventory = async (readKey: ReadWriteKey): Promise<InventoryItem[]> => {
@@ -1270,6 +1233,17 @@ const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name
 	feats: [],
 })
 
+type AbilityItem = {
+	referenceId: string,
+} | {
+	name: string,
+	description: string,
+}
+
+function isReferenceAbility(it: AbilityItem): it is { referenceId: string } {
+	return "referenceId" in it && it.referenceId.length > 0
+}
+
 type PokemonRow = {
 	id: number,
 	trainer_id: string,
@@ -1315,6 +1289,7 @@ type PokemonRow = {
 	save_wis: boolean,
 	save_cha: boolean,
 	ability: string,
+	abilities: AbilityItem[],
 	notes: string,
 	tera_type: string,
 	exp: number,
@@ -1404,7 +1379,18 @@ const rowToPokemon = async (row: PokemonRow, getStorageResource: (name: string) 
 		max: row.hit_dice_max,
 	},
 	ability: row.ability,
-	abilities: row.ability ? [await ReferenceAbility.resolve("-1001", row.ability)] : [],
+	abilities: row.ability
+		? [await Ability.resolve(row.ability)]
+		: await Promise.all(row.abilities.map(async (it) => {
+			if (isReferenceAbility(it)) {
+				return Ability.resolve(it.referenceId)
+			} else {
+				return new Ability({
+					name: it.name,
+					description: it.description
+				})
+			}
+		})),
 	proficiencies: consolidateSkillRankProfAndRank({
 		"athletics": [row.prof_athletics, row.rank_athletics],
 		"acrobatics": [row.prof_acrobatics, row.rank_acrobatics ],
@@ -1502,26 +1488,6 @@ const rowToHeldItem = (row: HeldItemRow): HeldItem => ({
 	name: row.custom_name,
 	description: row.description,
 })
-
-type AbilityRow = {
-	id: string,
-	ability_id: string | null,
-	custom_name: string | null,
-	description: string | null,
-	rank: number,
-}
-
-const rowToAbility = async (row: AbilityRow): Promise<Ability> => {
-	if (row.ability_id != null) {
-		return await ReferenceAbility.resolve(row.id, row.ability_id)
-	} else {
-		return new Ability({
-			id: row.id,
-			name: row.custom_name,
-			description: row.description,
-		})
-	}
-}
 
 type InventoryItemRow = {
 	id: string,

@@ -5,7 +5,7 @@
 </script>
 
 <ul class="known-abilities-info">
-	{#each value as ability (ability.id)}
+	{#each value as ability}
 		<li><strong>{ability.name}</strong>: {ability.description}</li>
 	{/each}
 </ul>
