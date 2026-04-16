@@ -832,95 +832,6 @@ test("updating held items", async () => {
 	})
 })
 
-test("updating abilities on pokemon", async () => {
-	const {
-		ret_id: trainerId,
-		ret_read_key: readKey,
-		ret_write_key: writeKey
-	} = await call<{
-		ret_id: string,
-		ret_read_key: string,
-		ret_write_key: string,
-	}>("new_trainer", Iris())
-
-	const pokemonId = await call<number>("add_pokemon", {
-		_write_key: writeKey,
-		...SunnyYellow(),
-	})
-
-	const technician = await call<string>("add_ability", {
-		_write_key: writeKey,
-		_pokemon_id: pokemonId,
-		_ability_id: "technician",
-		_custom_name: null,
-		_description: null,
-		_rank: 0,
-	})
-
-	const customAbilityId = await call<string>("add_ability", {
-		_write_key: writeKey,
-		_pokemon_id: pokemonId,
-		_ability_id: null,
-		_custom_name: "Hyperpower",
-		_description: "The universe blows up when any move is used.",
-		_rank: 1,
-	})
-
-	// Update
-	await call("update_ability", {
-		_write_key: writeKey,
-		_id: technician,
-		_ability_id: "volt-absorb",
-		_custom_name: null,
-		_description: null,
-		_rank: 1,
-	})
-
-	await call("update_ability", {
-		_write_key: writeKey,
-		_id: customAbilityId,
-		_ability_id: null,
-		_custom_name: "Hyperpower",
-		_description: "The multiverse blows up instead.",
-		_rank: 0,
-	})
-
-	// Assert
-	const sunnyAbilities = await callAll<any>("get_abilities", {
-		_pokemon_id: pokemonId,
-	})
-
-	const voltAbsorb = sunnyAbilities[1]
-	const customAbility = sunnyAbilities[0]
-	expect(voltAbsorb?.ability_id).toEqual("volt-absorb")
-	expect(customAbility?.custom_name).toEqual("Hyperpower")
-	expect(customAbility?.description).toEqual("The multiverse blows up instead.")
-
-	// Cleanup
-	await call("remove_ability", {
-		_write_key: writeKey,
-		_id: technician,
-	})
-	await call("remove_ability", {
-		_write_key: writeKey,
-		_id: customAbilityId,
-	})
-	const noMoreAbilities = await callAll<any>("get_abilities", {
-		_pokemon_id: pokemonId,
-	})
-
-	expect(noMoreAbilities.length).toEqual(0)
-
-	await call("remove_pokemon", {
-		_write_key: writeKey,
-		_id: pokemonId,
-	})
-	await call("delete_trainer", {
-		_write_key: writeKey,
-		_id: trainerId,
-	})
-})
-
 test("updating fakemon", async () => {
 	const {
 		ret_id: fakemonId,
@@ -992,8 +903,19 @@ test("updating fakemon", async () => {
 		_save_int: false,
 		_save_wis: false,
 		_save_cha: true,
-		_abilities: ["intimidate"],
-		_hidden_abilities: ["inner-focus"],
+		_abilities: [],
+		_hidden_abilities: [],
+		_ability_pool: {
+			normal: [ {
+				referenceId: "intimidate"
+			}, {
+				name: "Custom Ability",
+				description: "Does everything you want it to.",
+			} ],
+			hidden: [ {
+				referenceId: "inner-focus"
+			} ],
+		},
 		_moves_start: ["helping-hand", "tackle", "tail-whip", "dragon-breath", "sand-attack", "baby-doll-eyes"],
 		_moves_level2: [],
 		_moves_level6: ["flamethrower", "dragon-claw"],
@@ -1055,8 +977,19 @@ test("updating fakemon", async () => {
 	expect(drakeon.save_int).toEqual(false)
 	expect(drakeon.save_wis).toEqual(false)
 	expect(drakeon.save_cha).toEqual(true)
-	expect(drakeon.abilities).toEqual(["intimidate"])
-	expect(drakeon.hidden_abilities).toEqual(["inner-focus"])
+	expect(drakeon.abilities).toEqual([])
+	expect(drakeon.hidden_abilities).toEqual([])
+	expect(drakeon.ability_pool).toEqual({
+		normal: [ {
+			referenceId: "intimidate"
+		}, {
+			name: "Custom Ability",
+			description: "Does everything you want it to.",
+		} ],
+		hidden: [ {
+			referenceId: "inner-focus"
+		} ],
+	})
 	expect(drakeon.moves_start).toEqual(["helping-hand", "tackle", "tail-whip", "dragon-breath", "sand-attack", "baby-doll-eyes"]) 
 	expect(drakeon.moves_level2).toEqual([])
 	expect(drakeon.moves_level6).toEqual(["flamethrower", "dragon-claw"])
