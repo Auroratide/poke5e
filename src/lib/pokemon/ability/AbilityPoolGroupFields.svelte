@@ -6,12 +6,13 @@
 	import { m } from "$lib/site/i18n"
 	import { getAbilityFieldName } from "./AllAbilityField.svelte";
 
+	export let idPrefix: string
 	export let title: string
 	export let values: Ability[]
 	export let disabled = false
 
 	let newId = -1001
-	const nextNewId = () => (--newId).toString()
+	const nextNewId = () => idPrefix + (--newId).toString()
 
 	let withIds = values.map((it) => ({
 		id: nextNewId(),
@@ -45,7 +46,9 @@
 
 <FormGroup {title}>
 	{#each withIds as ability (ability.id)}
-		<AllAbilityField id={ability.id} value={ability.value} {disabled} on:remove={remove(ability.id)} />
+		<div class="space-between-fields">
+			<AllAbilityField id={ability.id} value={ability.value} {disabled} on:remove={remove(ability.id)} />
+		</div>
 	{/each}
 	{#if values.length === 0}
 		<HintText>{m.noAbilities()}</HintText>
@@ -63,5 +66,11 @@
 		gap: 0.5em;
 	} .row > :global(*) {
 		flex: 1;
+	}
+
+	.space-between-fields {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
 	}
 </style>

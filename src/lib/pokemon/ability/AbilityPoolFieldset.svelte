@@ -17,6 +17,6 @@
 </script>
 
 <Fieldset title={m.abilityPool()}>
-	<AbilityPoolGroupFields title={m.nonHiddenAbilities()} bind:values={normal} {disabled} />
-	<AbilityPoolGroupFields title={m.hiddenAbilities()} bind:values={hidden} {disabled} />
+	<AbilityPoolGroupFields idPrefix="nonhidden" title={m.nonHiddenAbilities()} bind:values={normal} {disabled} />
+	<AbilityPoolGroupFields idPrefix="hidden" title={m.hiddenAbilities()} bind:values={hidden} {disabled} />
 </Fieldset>
