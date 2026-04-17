@@ -24,11 +24,19 @@ export class Ability extends DataClass<{
 	get deprecated() { return this.data.deprecated ?? false }
 	get custom() { return this.data.referenceId == null }
 
-	isSameAs(other: Ability): boolean {
+	isSameName(other: Ability): boolean {
 		if (this.referenceId != null || other.referenceId != null) {
 			return this.referenceId === other.referenceId
 		} else {
 			return this.name === other.name
+		}
+	}
+
+	isExactlyTheSame(other: Ability): boolean {
+		if (this.referenceId != null || other.referenceId != null) {
+			return this.referenceId === other.referenceId
+		} else {
+			return this.name === other.name && this.description === other.description
 		}
 	}
 

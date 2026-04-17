@@ -33,7 +33,7 @@ export class AbilityChangeEffect implements EvolutionEffect {
 		return {
 			...pokemon,
 			abilities: pokemon.abilities.map((formerAbility) => {
-				const matchingAbility = this.changes.find((change) => change.old.isSameAs(formerAbility))
+				const matchingAbility = this.changes.find((change) => change.old.isSameName(formerAbility))
 
 				return matchingAbility ? matchingAbility.new : formerAbility
 			}),
@@ -51,7 +51,7 @@ export class AbilityChangeEffect implements EvolutionEffect {
 
 			const newAbility = evolveTo.abilities.findApplicableAbility(original)
 			if (newAbility == null) return undefined
-			if (ability.isSameAs(newAbility.value)) return undefined
+			if (ability.isSameName(newAbility.value)) return undefined
 
 			return {
 				old: ability,

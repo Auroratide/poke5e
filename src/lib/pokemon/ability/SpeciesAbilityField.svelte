@@ -17,6 +17,14 @@
 	$: fieldName = getAbilityFieldName(id)
 
 	$: abilitiesAsList = species.abilities.toList()
+
+	// This accounts for whether the ability is a canon ability or chosen off the fakemon list
+	// Custom abilites from fakemon are frozen on the pokemon, to prevent surprise edits to
+	// potential 3rd party fakemon users. However, for convenience we want it to appear in the
+	// select menu if it is exactly the same.
+	$: currentAbilityIndex = abilitiesAsList.findIndex((it) => it.value.isExactlyTheSame(value))
+	$: currentSelectValue = value.referenceId ?? (currentAbilityIndex >= 0 ? currentAbilityIndex.toString() : undefined)
+
 	$: myAbilityIds = species.abilities.toList().map((it) => it.value.referenceId).filter((it) => it != null)
 	$: nonstandardAbilities = $AbilityStore?.filter((it) => !myAbilityIds.includes(it.referenceId))
 	$: abilityOptions = [ {
@@ -56,14 +64,14 @@
 	}
 </script>
 
-{#if value.custom}
+{#if currentSelectValue}
+	<Removable on:remove>
+		<SelectField label="{m.ability()}" name="{fieldName}" options={abilityOptions} value={currentSelectValue} {disabled} on:change={handleSelectChange} />
+	</Removable>
+{:else}
 	<Removable on:remove>
 		<TextField label="{m.name()}" name="{fieldName}" bind:value={value.data.name} {disabled} />
 	</Removable>
 	<MarkdownField label="{m.description()}" name="{fieldName}-description" bind:value={value.data.description} {disabled} />
-{:else}
-	<Removable on:remove>
-		<SelectField label="{m.ability()}" name="{fieldName}" options={abilityOptions} value={value.referenceId} {disabled} on:change={handleSelectChange} />
-	</Removable>
 {/if}
 <Divider />
