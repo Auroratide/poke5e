@@ -28,7 +28,7 @@
 		const nextId = nextNewId()
 		withIds = [...withIds, {
 			id: nextId,
-			value: firstSpeciesAbility ?? Ability.createNewStandard("adaptability"),
+			value: firstSpeciesAbility.copy() ?? Ability.createNewStandard("adaptability"),
 		} ],
 		focusInputField(getAbilityFieldName(nextId))
 	}

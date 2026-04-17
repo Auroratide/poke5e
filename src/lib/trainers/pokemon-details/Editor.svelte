@@ -73,8 +73,6 @@
 		dispatch("cancel")
 	}
 
-	$: console.log(abilities)
-
 	const endEdit = () => {
 		dispatch("update", {
 			pokemon: {
