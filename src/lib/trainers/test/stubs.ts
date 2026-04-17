@@ -11,6 +11,7 @@ import { createEmptyChosenTrainerPath } from "../paths"
 import { stubSpecializations } from "../specializations/test/stubs"
 import type { LearnedMove, Trainer, TrainerBio, TrainerPokemon } from "../types"
 import { Stab } from "$lib/pokemon/stab"
+import { stubAbility } from "$lib/pokemon/ability/test/stubs"
 
 export function stubLearnedMove(template: Partial<LearnedMove> = {}): LearnedMove {
 	return {
@@ -46,8 +47,8 @@ export function stubTrainerPokemon(template: Partial<TrainerPokemon> = {}): Trai
 			current: 4,
 			max: 4,
 		},
-		ability: "run-away",
-		abilities: [],
+		ability: undefined,
+		abilities: [stubAbility({ referenceId: "run-away" })],
 		proficiencies: stubSkillProficiencies(),
 		savingThrows: ["dex"],
 		moves: [],

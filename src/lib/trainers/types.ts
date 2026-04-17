@@ -63,6 +63,9 @@ export type TrainerPokemon = {
 	ac: number,
 	hp: Resource,
 	hitDice: Resource,
+	/**
+	 * @deprecated Use abilities instead
+	 */
 	ability: ReferenceAbilityId,
 	abilities: Ability[],
 	proficiencies: SkillRanks,

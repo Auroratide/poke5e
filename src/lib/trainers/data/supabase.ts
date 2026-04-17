@@ -1379,7 +1379,7 @@ const rowToPokemon = async (row: PokemonRow, getStorageResource: (name: string) 
 		current: row.hit_dice_cur,
 		max: row.hit_dice_max,
 	},
-	ability: row.ability,
+	ability: null,
 	abilities: row.ability
 		? [await Ability.resolve(row.ability)]
 		: await Promise.all(row.abilities.map(async (it) => {

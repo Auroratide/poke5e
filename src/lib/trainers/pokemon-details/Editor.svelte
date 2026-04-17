@@ -48,7 +48,6 @@
 	let maxHitDice = pokemon.hitDice.max
 	let gender = pokemon.gender
 	let attributes = pokemon.attributes.copy()
-	let ability = pokemon.ability
 	let abilities = pokemon.abilities
 	let proficiencies = pokemon.proficiencies.copy()
 	let savingThrows = [...pokemon.savingThrows]
@@ -88,7 +87,7 @@
 				gender,
 				isShiny,
 				attributes,
-				ability,
+				ability: undefined,
 				abilities,
 				proficiencies,
 				savingThrows,

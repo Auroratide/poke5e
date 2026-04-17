@@ -362,6 +362,26 @@ const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
 		.filter(([, val]) => val)
 		.map(([key]) => key as T)
 
+/**
+ * Falls back onto the deprecated oldlist if it is non-empty and newlist is empty
+ */
+async function resolveAbilityList(oldList: string[], newList: AbilityPoolRowItem[]): Promise<Data<Ability>[]> {
+	if (oldList?.length > 0 && newList.length === 0) {
+		return Promise.all(oldList.map((referenceId) => Ability.resolve(referenceId).then((it) => it.data)))
+	}
+
+	return Promise.all(newList.map(async (it) => {
+		if (isReferenceAbility(it)) {
+			return (await Ability.resolve(it.referenceId)).data
+		} else {
+			return {
+				name: it.name,
+				description: it.description
+			}
+		}
+	}))
+}
+
 async function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) => UploadedMedia): Promise<Fakemon> {
 	return new Fakemon({
 		id: row.id,
@@ -432,26 +452,8 @@ async function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) 
 				cha: row.save_cha,
 			}),
 			abilities: {
-				normal: await Promise.all(row.ability_pool.normal.map(async (it) => {
-					if (isReferenceAbility(it)) {
-						return (await Ability.resolve(it.referenceId)).data
-					} else {
-						return {
-							name: it.name,
-							description: it.description
-						}
-					}
-				})),
-				hidden: await Promise.all(row.ability_pool.hidden.map(async (it) => {
-					if (isReferenceAbility(it)) {
-						return (await Ability.resolve(it.referenceId)).data
-					} else {
-						return {
-							name: it.name,
-							description: it.description
-						}
-					}
-				})),
+				normal: await resolveAbilityList(row.abilities, row.ability_pool.normal),
+				hidden: await resolveAbilityList(row.hidden_abilities, row.ability_pool.hidden),
 			},
 			moves: {
 				start: row.moves_start,
