@@ -53,12 +53,10 @@ export class Ability extends DataClass<{
 		const abilityList = await getWhenDefined(AbilityStore)
 		const referenceAbility = abilityList.find((it) => it.referenceId === referenceId)
 
-		if (!referenceAbility) return undefined
-
 		return new Ability({
 			referenceId: referenceId,
-			name: referenceAbility.name,
-			description: referenceAbility.description,
+			name: referenceAbility?.name ?? referenceId,
+			description: referenceAbility?.description ?? "",
 		})
 	}
 

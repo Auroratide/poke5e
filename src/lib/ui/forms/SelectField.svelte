@@ -33,7 +33,7 @@
 	const dispatch = createEventDispatcher()
 
 	const isGroups = (options: SelectFieldOptionGroup[] | SelectFieldOption[]): options is SelectFieldOptionGroup[] =>
-		"values" in options[0]
+		options[0] != null && "values" in options[0]
 
 	$: kebabName = name ?? kebab(label)
 	$: id = `${kebabName}-input`

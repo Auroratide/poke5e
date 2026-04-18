@@ -1,6 +1,6 @@
 import { Url } from "$lib/site/url"
-import { readable } from "svelte/store"
 import { Ability } from "."
+import { cachedReadable } from "$lib/utils/store"
 
 export type AbilityJson = {
 	id: string,
@@ -9,7 +9,7 @@ export type AbilityJson = {
 	deprecated?: boolean,
 }
 
-export const AbilityStore = readable<Ability[]>(undefined, (set) => {
+export const AbilityStore = cachedReadable<Ability[]>(undefined, (set) => {
 	if (typeof window !== "undefined") {
 		fetch(Url.api.abilities())
 			.then(res => res.json())

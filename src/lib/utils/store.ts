@@ -1,4 +1,4 @@
-import { readable, type Readable, type StartStopNotifier } from "svelte/store"
+import { readable, type Readable, type StartStopNotifier, get } from "svelte/store"
 
 /**
  * This store caches the read result so we don't require a re-fetch every time
@@ -26,10 +26,15 @@ export function cachedReadable<T>(value: T, start: StartStopNotifier<T>): Readab
 }
 
 export async function getWhenDefined<T>(store: Readable<T>): Promise<T> {
+	const current = get(store)
+	if (current != null) return current
+
+	// overly safe tbh
+	let unsubscribe: () => void = undefined
 	return new Promise((resolve) => {
-		const unsubscribe = store.subscribe((value) => {
+		unsubscribe = store.subscribe((value) => {
 			if (value != null) {
-				// unsubscribe?()
+				unsubscribe?.()
 				resolve(value)
 			}
 		})
