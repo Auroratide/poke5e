@@ -14,6 +14,17 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.0",
+		description: [
+			"<strong>Custom Abilities!</strong> Custom Abilities may now be added to Fakémon and Trainer Pokémon.",
+			"<strong>Multiple Abilities!</strong> Trainer Pokémon now specify more than one ability. Useful for the Guru Trainer Path or taking the Hidden Ability feat.",
+			"<strong>STAB Update</strong>: After lots of feedback, STAB has been changed from using 'Move Power' to using 'Proficiency Bonus'.",
+			"<strong>STAB Customization</strong>: STAB can be customized in two ways. You can change its base ruleset (for example, if you want to continue using Move Power as STAB). And, you can apply an arbitrary bonus to STAB if it is boosted by something, for example by a custom Trainer Path.",
+			"<strong>Moves</strong>: Gunk Shot base damage updated.",
+			"<strong>Moves</strong>: Grassy Terrain now correctly specifies groundedness condition.",
+			"<strong>Pokémon</strong>: Wattrel and Kilowattrel given walking speeds, like the other birds.",
+		],
+	}, {
 		name: "v1.10.9",
 		description: [
 			"<strong>Pokémon</strong>: Update Gallade's minimum level to match Gardevoir.",
@@ -599,6 +610,10 @@ export const versionHistory: VersionHistory = {
 		],
 	} ],
 	groups: [ {
+		name: "v1.11",
+		highlight: "Custom Abilities & STAB!",
+		description: "Custom Abilities can now be created for Fakémon, and multiple abilities can be assigned to trainers' pokémon. Additionally, thanks to community feedback, STAB has been updated to use Proficiency Bonus. Plus, it can be customized now.",
+	}, {
 		name: "v1.10",
 		highlight: "Encounters, Translations, TMs!",
 		description: "This marks the start of four different things coming together thanks to help from the community: an Encounter Tool for creating random wild encounters, different language translations, TM update incorporating new generations, and rules for Pokémon Contests.",
