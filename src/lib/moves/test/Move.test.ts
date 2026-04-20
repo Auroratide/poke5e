@@ -211,6 +211,7 @@ describe("calculateMoveStats", () => {
 				dice: "1d4",
 				mod: 2,
 				isHealing: false,
+				stabApplied: false,
 			},
 		})
 	})
@@ -242,6 +243,7 @@ describe("calculateMoveStats", () => {
 				dice: "1d4",
 				mod: 0,
 				isHealing: false,
+				stabApplied: false,
 			},
 		})
 	})
@@ -273,6 +275,7 @@ describe("calculateMoveStats", () => {
 				dice: "1d4",
 				mod: 4,
 				isHealing: false,
+				stabApplied: false,
 			},
 		})
 	})
@@ -342,6 +345,7 @@ describe("calculateMoveStats", () => {
 				dice: "1d4",
 				mod: 4,
 				isHealing: false,
+				stabApplied: true,
 			},
 		})
 	})
@@ -373,6 +377,7 @@ describe("calculateMoveStats", () => {
 				dice: "1d4",
 				mod: 3,
 				isHealing: false,
+				stabApplied: true,
 			},
 		})
 	})
@@ -404,6 +409,7 @@ describe("calculateMoveStats", () => {
 				dice: "4d4",
 				mod: 2,
 				isHealing: false,
+				stabApplied: false,
 			},
 		})
 	})
@@ -427,6 +433,7 @@ describe("calculateMoveStats", () => {
 				dice: "2d4",
 				mod: 2,
 				isHealing: false,
+				stabApplied: false,
 			},
 		})
 	})
@@ -452,6 +459,7 @@ describe("calculateMoveStats", () => {
 				dice: "1d4",
 				mod: 0,
 				isHealing: false,
+				stabApplied: false,
 			},
 		})
 	})
@@ -477,6 +485,7 @@ describe("calculateMoveStats", () => {
 				dice: "1d4",
 				mod: 6, // 2 from attribute, 4 from modifier
 				isHealing: false,
+				stabApplied: false,
 			},
 		})
 	})
@@ -502,6 +511,7 @@ describe("calculateMoveStats", () => {
 				dice: "3d4",
 				mod: 12,
 				isHealing: false,
+				stabApplied: false,
 			},
 		})
 	})
@@ -533,6 +543,7 @@ describe("calculateMoveStats", () => {
 				dice: "1d4",
 				mod: 4,
 				isHealing: false,
+				stabApplied: true,
 			},
 		})
 	})
@@ -562,6 +573,7 @@ describe("calculateMoveStats", () => {
 				dice: "1d4",
 				mod: 2,
 				isHealing: false,
+				stabApplied: false,
 			},
 		})
 	})
@@ -588,6 +600,7 @@ describe("calculateMoveStats", () => {
 				dice: "1d4",
 				mod: 2,
 				isHealing: false,
+				stabApplied: false,
 			},
 		})
 	})
@@ -644,6 +657,7 @@ describe("calculateMoveStats", () => {
 				dice: "3d4",
 				mod: 9,
 				isHealing: false,
+				stabApplied: true,
 			},
 		})
 	})
