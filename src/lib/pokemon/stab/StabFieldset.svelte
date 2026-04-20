@@ -11,7 +11,7 @@
 		name: string,
 	}[] = [ {
 		value: "default",
-		name: m.default(),
+		name: m.defaultText(),
 	}, {
 		value: "movepower",
 		name: m.movePower(),

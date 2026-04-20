@@ -195,7 +195,7 @@
 	"languages": "Languages",
 	"youKnowTwoLanguages": "You know the {one} and {two} languages.",
 	"customStabInstructions": "STAB Base determines what general rule is used to calculate this pokémon's STAB. The Bonus adds to that.",
-	"default": "Default",
+	"defaultText": "Default",
 	"proficiencyBonus": "Proficiency Bonus",
 	"ruleset18": "'18 Ruleset",
 	"customStabDefaultDescription": "Default STAB rules (table for '18, move power for '24).",
