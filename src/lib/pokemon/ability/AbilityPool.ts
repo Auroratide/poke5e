@@ -24,13 +24,18 @@ export class AbilityPool extends DataClass<{
 	get hidden() { return this.data.hidden.map((it) => new Ability(it)) }
 
 	toList(): AvailableAbility[] {
-		return this.data.normal.map((it) => ({
+		const list = this.data.normal.map((it) => ({
 			value: new Ability(it),
 			hidden: false,
 		})).concat(this.data.hidden.map((it) => ({
 			value: new Ability(it),
 			hidden: true,
 		})))
+
+		// remove duplicates
+		return list.filter((a, i) =>
+			list.findIndex((b) => a.value.isExactlyTheSame(b.value)) === i
+		)
 	}
 
 	/**
