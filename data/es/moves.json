@@ -2398,7 +2398,7 @@
 			"id": "grassy-terrain",
 			"name": "Campo de Hierba",
 			"description": [
-				"La hierba brota del suelo en un círculo a tu alrededor, cubriendo la tierra con energía curativa. Durante 3 turnos, todas las criaturas en el área afectada recuperan una cantidad de puntos de vida igual a su bonificador por competencia al final de su turno. Se considera que una criatura está en contacto con el suelo si no tiene velocidad de vuelo ni posee la habilidad Levitación, Levitón o una capacidad similar. Además, las criaturas pueden duplicar su modificador de MOV en las tiradas de daño de los movimientos de tipo Planta activados dentro del área."
+				"La hierba brota del suelo en un círculo a tu alrededor, cubriendo la tierra con energía curativa. Durante 3 turnos, todas las criaturas en el suelo dentro del área afectada recuperan una cantidad de puntos de vida igual a su bonificador por competencia al final de su turno. Se considera que una criatura está en contacto con el suelo si no tiene velocidad de vuelo ni posee la habilidad Levitación, Levitón o una capacidad similar. Además, las criaturas pueden duplicar su modificador de MOV en las tiradas de daño de los movimientos de tipo Planta activados dentro del área."
 			]
 		},
 		{
@@ -5471,7 +5471,7 @@
 				"Te deslizas rápidamente detrás del objetivo para atacar. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo 1d6 + MOV de daño de tipo Bicho si impactas. Si la tirada de ataque se realizó con ventaja, infliges un daño adicional de Xd6 de tipo Bicho, donde X es tu nivel actual dividido entre dos, redondeado hacia arriba (por ejemplo, al nivel 11, infliges 6d6 de daño adicional).\r",
 				"No necesitas tener ventaja en la tirada de ataque si al menos uno de tus aliados se encuentra a 5 pies del objetivo, el aliado no tiene la condición de Incapacitado y tú no tienes desventaja en la tirada de ataque."
 			],
-			"higherLevels": "La tirada de daño de este movimiento pasa a ser 1d10 al nivel 5, 2d8 al nivel 10 y 5d4 al nivel 17."
+			"higherLevels": "La tirada de daño de este movimiento pasa a ser 1d10 al nivel 5, 2d8 al nivel 10 y 5d4 al nivel 17. Este cambio en los dados NO se aplica al daño adicional de Xd6 infligido al activarse."
 		},
 		{
 			"id": "skull-bash",

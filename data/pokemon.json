@@ -156273,6 +156273,10 @@
 			"hitDice": "d8",
 			"speed": [
 				{
+					"type": "walking",
+					"value": 20
+				},
+				{
 					"type": "flying",
 					"value": 30
 				}
@@ -156412,6 +156416,10 @@
 			"ac": 16,
 			"hitDice": "d10",
 			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				},
 				{
 					"type": "flying",
 					"value": 45

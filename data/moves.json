@@ -8741,7 +8741,7 @@
 			"duration": "3 rounds",
 			"range": "self (40ft radius)",
 			"description": [
-				"Grass sprouts from the ground in a circle around you, coating the earth with healing energy. For 3 turns, all creatures in the affected area heal for an amount of hit points equal to their proficiency bonus at the end of their turn. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from grass-type moves activated inside the area."
+				"Grass sprouts from the ground in a circle around you, coating the earth with healing energy. For 3 turns, grounded creatures in the affected area heal for an amount of hit points equal to their proficiency bonus at the end of their turn. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from grass-type moves activated inside the area."
 			],
 			"tm": {
 				"id": 184,
@@ -8931,7 +8931,7 @@
 			"duration": "instantaneous",
 			"range": "30ft",
 			"description": [
-				"You fire a wad of icky gunk at a creature. Make a ranged attack, dealing 1d10 + MOVE poison damage on a hit. On a natural attack roll of 16 or higher, the target is poisoned."
+				"You fire a wad of icky gunk at a creature. Make a ranged attack, dealing 2d10 + MOVE poison damage on a hit. On a natural attack roll of 16 or higher, the target is poisoned."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 4d10 at level 10, and 7d8 at level 17.",
 			"damage": {
@@ -13061,7 +13061,7 @@
 			"duration": "instantaneous",
 			"range": "self (15ft radius)",
 			"description": [
-				"You fill your head with hot fire that explodes around you. Force all creaatures within 15 feet of you to make a DEX save against your Move DC, taking 4d6 + MOVE fire damage on a failure, or half as much on a success. After activating this move, you take an amount of typless damage equal to the full damage as if you failed the save."
+				"You fill your head with hot fire that explodes around you. Force all creatures within 15 feet of you to make a DEX save against your Move DC, taking 4d6 + MOVE fire damage on a failure, or half as much on a success. After activating this move, you take an amount of typless damage equal to the full damage as if you failed the save."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 6d8 at level 10, and 6d12 at level 17.",
 			"damage": {
@@ -18849,7 +18849,7 @@
 				"You skitter behind the target to attack. Make a melee attack roll against a target, doing 1d6 + MOVE bug damage on a hit. If the attack roll was made with advantage, you deal an extra Xd6 bug damage, where X is your current level divided by two, rounded up (e.g. at level 11, you deal an additional 6d6 damage).",
 				"You don't need Advantage on the attack roll if at least one of your allies is within 5 feet of the target, the ally doesn't have the Incapacitated condition, and you don't have Disadvantage on the attack roll."
 			],
-			"higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17.",
+			"higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17. This dice change does NOT apply to the extra Xd6 damage dealt when triggered.",
 			"attack": {
 				"scope": "melee"
 			},
@@ -22558,7 +22558,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You overwhelm the target with lightning-like movement before delivering a kick. Make a melee attack against a target in range, dealing 2d8 + MOVE fighting damage on a hit. On a hit, the target must make a CON save against your Move DC, being knocked prone and knocked back up to 15 ft on failure."
+				"You overwhelm the target with lightning-like movement before delivering a kick. Make a melee attack against a target, dealing 2d8 + MOVE fighting damage on a hit. On a hit, the target must make a CON save against your Move DC, being knocked prone and knocked back up to 15 ft on failure."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
 			"damage": {
@@ -23457,7 +23457,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You crush a creature with a forceful, gripping attack. Make a melee attack, doing 1d8 + MOVE normal damage on a hit, grappling the target. On each successive turn, if the creature is still grappled, you may use this move again (as an action) and automatically hit. A creature may attempt to excape the grapple at the beginning of its turns with a STR save against your Move DC."
+				"You crush a creature with a forceful, gripping attack. Make a melee attack, doing 1d8 + MOVE normal damage on a hit, grappling the target. On each successive turn, if the creature is still grappled, you may use this move again (as an action) and automatically hit. A creature may attempt to escape the grapple at the beginning of its turns with a STR save against your Move DC."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
 			"damage": {
