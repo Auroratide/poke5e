@@ -50,7 +50,7 @@ export class Ability extends DataClass<{
 	}
 
 	static readonly resolve = async (referenceId: ReferenceAbilityId): Promise<Ability> => {
-		const abilityList = await getWhenDefined(AbilityStore)
+		const abilityList = await getWhenDefined(AbilityStore, [])
 		const referenceAbility = abilityList.find((it) => it.referenceId === referenceId)
 
 		return new Ability({

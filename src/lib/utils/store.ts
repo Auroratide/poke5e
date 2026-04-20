@@ -1,3 +1,4 @@
+import { browser } from "$app/environment"
 import { readable, type Readable, type StartStopNotifier, get } from "svelte/store"
 
 /**
@@ -25,7 +26,9 @@ export function cachedReadable<T>(value: T, start: StartStopNotifier<T>): Readab
 	})
 }
 
-export async function getWhenDefined<T>(store: Readable<T>): Promise<T> {
+export async function getWhenDefined<T>(store: Readable<T>, serverValue: T): Promise<T> {
+	if (!browser) return serverValue
+
 	const current = get(store)
 	if (current != null) return current
 

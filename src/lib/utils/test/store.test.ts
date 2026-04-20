@@ -12,7 +12,7 @@ describe("getWhenDefined", () => {
 			}
 		})
 
-		const promisedValue = getWhenDefined(someAsyncStore)
+		const promisedValue = getWhenDefined(someAsyncStore, "server value")
 		defineStore("Expected Value")
 
 		const actualValue = await promisedValue
