@@ -600,7 +600,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			attributes: pokemon.attributes,
 			ac: pokemon.data.ac,
 			ability: undefined,
-			abilities: defaultAbility ? [defaultAbility] : [],
+			abilities: defaultAbility ? [defaultAbility.copy()] : [],
 			hp: {
 				current: pokemon.data.hp,
 				max: pokemon.data.hp,
