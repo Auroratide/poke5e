@@ -185,6 +185,34 @@ describe("AbilityChangeEffect", () => {
 		expect(effect.toString()).toEqual("Ability will change from Run Away to Flash Fire. Ability will change from Anticipation to Guts.")
 	})
 
+	test("applicable: multiple abilities, but two resolve to one", () => {
+		const pokemon = stubTrainerPokemon({
+			abilities: [
+				new Ability(eevee.abilities.data.normal[0]),
+				new Ability(eevee.abilities.data.normal[1]), // flareon only has one ability, keep this
+			]
+		})
+
+		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
+		const result = effect.apply(pokemon)
+
+		expect(result.abilities[0].data).toEqual(flareon.abilities.data.normal[0])
+		expect(result.abilities[1].data).toEqual(eevee.abilities.data.normal[1])
+		expect(effect.toString()).toEqual("Ability will change from Run Away to Flash Fire.")
+	})
+
+	test("not applicable: multiple abilities, but already has the evolved form's ability", () => {
+		const pokemon = stubTrainerPokemon({
+			abilities: [
+				new Ability(eevee.abilities.data.normal[0]), // already have flash fire, keep this
+				new Ability(flareon.abilities.data.normal[0]),
+			]
+		})
+
+		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
+		expect(effect).toBeUndefined()
+	})
+
 	test("applicable: multiple abilities, but only one of them changes", () => {
 		const specialFlareon = flareon.copy({
 			abilities: {

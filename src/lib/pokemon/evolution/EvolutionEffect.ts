@@ -45,6 +45,8 @@ export class AbilityChangeEffect implements EvolutionEffect {
 	}
 
 	static createIfApplicable(pokemon: TrainerPokemon, evolveFrom: PokemonSpecies, evolveTo: PokemonSpecies): AbilityChangeEffect | undefined {
+		const addingTheseAbilities: Ability[] = []
+
 		const changes = pokemon.abilities.map((ability) => {
 			const original = evolveFrom.abilities.findIndex(ability)
 			if (!original.exists) return undefined
@@ -52,6 +54,14 @@ export class AbilityChangeEffect implements EvolutionEffect {
 			const newAbility = evolveTo.abilities.findApplicableAbility(original)
 			if (newAbility == null) return undefined
 			if (ability.isSameName(newAbility.value)) return undefined
+
+			const alreadyHasAbility = pokemon.abilities.find((it) => it.isSameName(newAbility.value))
+			if (alreadyHasAbility) return undefined
+
+			const alreadyAddingAbility = addingTheseAbilities.find((it) => it.isSameName(newAbility.value))
+			if (alreadyAddingAbility) return undefined
+
+			addingTheseAbilities.push(newAbility.value)
 
 			return {
 				old: ability,
