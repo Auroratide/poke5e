@@ -2,6 +2,7 @@ import ChevronDownIcon from "./ChevronDownIcon.svelte"
 import ChevronMenuIcon from "./ChevronMenuIcon.svelte"
 import ChevronUpIcon from "./ChevronUpIcon.svelte"
 
+export { default as AlertIcon } from "./AlertIcon.svelte"
 export { default as BackpackIcon } from "./BackpackIcon.svelte"
 export { default as BackupIcon } from "./BackupIcon.svelte"
 export const ChevronIcon = {

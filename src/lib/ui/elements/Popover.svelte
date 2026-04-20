@@ -79,6 +79,11 @@
 		display: block;
 	}
 
+	.popover {
+		display: flex;
+		align-items: center;
+	}
+
 	.popover .content {
 		border: none;
 		background: var(--skin-bg-dark);

@@ -10,5 +10,6 @@ export type MoveStats = {
 		dice: string,
 		mod: number,
 		isHealing: boolean,
+		stabApplied: boolean,
 	},
 }

@@ -21,7 +21,7 @@ export class Stab extends DataClass<{
 				if (rulesVersion === "2018")
 					return this.byRuleset18(level)
 				else
-					return this.byMovepower(moveModifier)
+					return this.byProficiency(level)
 			case "movepower":
 				return this.byMovepower(moveModifier)
 			case "proficiency":

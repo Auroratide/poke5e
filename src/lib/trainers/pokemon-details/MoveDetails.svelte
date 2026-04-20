@@ -76,7 +76,7 @@
 	</div>
 	{#if Object.values(moveStats).filter((it) => it != null).length > 0}
 		<div class="move-stats">
-			<MoveStatsInfo value={moveStats} />
+			<MoveStatsInfo id={move.id} value={moveStats} />
 		</div>
 	{/if}
 	<div class="space-inner smaller-font">

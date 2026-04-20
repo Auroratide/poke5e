@@ -18,6 +18,7 @@ export class MoveDamage extends DataClass<{
 		dice: string,
 		mod: number,
 		isHealing: boolean,
+		stabApplied: boolean,
 	} {
 		let trueModifier = hasStab ? stab.calculate(mod, level, rulesVersion) : 0
 		const modifierCode = this.data.modifier
@@ -37,6 +38,7 @@ export class MoveDamage extends DataClass<{
 			dice: this.getDamageDice(level.data),
 			mod: trueModifier,
 			isHealing: this.data.type === "healing",
+			stabApplied: hasStab,
 		}
 	}
 
