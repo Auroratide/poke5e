@@ -29,7 +29,12 @@ export class FakemonPage {
 		await this.ui.radio("50% ♀ : 50% ♂").check()
 		await this.ui.checkbox("Athletics").check()
 		await this.ui.checkbox("Intelligence").check()
-		await this.ui.formGroup("Non-Hidden Abilities").getByLabel("Add Ability").selectOption("aftermath")
+		await this.ui.formGroup("Non-Hidden Abilities").getByRole("button", { name: "Add Ability" }).click()
+		await this.ui.formGroup("Non-Hidden Abilities").getByLabel("Ability").selectOption("aftermath")
+
+		await this.ui.formGroup("Non-Hidden Abilities").getByRole("button", { name: "Add Custom Ability" }).click()
+		await this.ui.formGroup("Non-Hidden Abilities").getByLabel("Name").fill("Evosmite")
+		await this.ui.formGroup("Non-Hidden Abilities").getByLabel("Description").fill("Deals +3 dmg to evolved pokemon.")
 
 		await this.ui.formGroup("Starting Moves")
 			.getByText("Add Moves")
