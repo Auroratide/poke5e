@@ -1,0 +1,1 @@
+function r(e){return()=>a(e)}function a(e){return localStorage.getItem(`feature-toggle::${e}`)!=null}function o(e,t){t?localStorage.setItem(`feature-toggle::${e}`,"true"):localStorage.removeItem(`feature-toggle::${e}`)}const n={OverrideMaintenance:r("OverrideMaintenance"),CustomStab:()=>!0};export{n as F,a as i,o as s};
