@@ -3,9 +3,7 @@
 	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { pokemonFilter, pokemonSorter } from "$lib/site/stores"
 	import { PokemonSpecies } from "./PokemonSpecies"
-	import { TemporaryBannerMessage } from "$lib/ui/elements"
 	import { Url } from "$lib/site/url"
-	import { OfficialFakemonRemovedBanner, readdOfficialFakemon } from "$lib/fakemon/OfficialFakemonRemovedBanner"
 	import { m } from "$lib/site/i18n"
 	import { CreatureSizes, type CreatureSize } from "$lib/dnd/CreatureSize"
 	import { capitalize } from "$lib/utils/string"
@@ -95,9 +93,6 @@
 		<SelectField label="{m.biome()}" bind:value={filteredBiome} options={biomeOptions} />
 	</SearchField>
 </div>
-<TemporaryBannerMessage condition={OfficialFakemonRemovedBanner}>
-	Non-canon pokémon have been removed from this official list (Brawleon, Minereon, Droideon, Terreon, Specteon, Eeveon, Pesteon, Aereon, Drakeon, Toxeon, Rookite, Belseraph). You may <button class="link-button" on:click={readdOfficialFakemon}>re-add these to your list of Fakémon</button>, or you may add them later under <a href="{Url.settings()}">settings</a>.
-</TemporaryBannerMessage>
 <SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$pokemonSorter} headers={[ {
 	key: "name", name: m.name(), ratio: 3, sort: byStringField(it => it.data.name),
 }, {
@@ -125,15 +120,6 @@
 <style>
 	.search-field {
 		margin-bottom: 0.5em;
-	}
-
-	.link-button {
-		all: unset;
-		text-decoration: underline;
-		color: var(--theme-text);
-		cursor: pointer;
-	} .link-button:hover, .link-button:focus {
-		text-decoration: none;
 	}
 
 	.unliked-button {
