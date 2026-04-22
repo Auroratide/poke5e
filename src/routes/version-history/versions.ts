@@ -664,4 +664,4 @@ export const currentVersion = versionHistory.versions[0].name
 export const currentHighlight = versionHistory.groups[0].highlight
 
 export const getVersionsForGroup = (group: VersionHistory["groups"][number]): VersionHistory["versions"] =>
-	versionHistory.versions.filter((it) => it.name.startsWith(group.name))
+	versionHistory.versions.filter((it) => it.name.startsWith(`${group.name}.`))
