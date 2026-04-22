@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test"
+import type { Page } from "@playwright/test"
 import { Ui } from "./Ui"
 import { FakemonPage } from "./FakemonPage"
 import { TrainersPage } from "./TrainersPage"

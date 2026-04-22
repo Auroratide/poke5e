@@ -11,6 +11,7 @@ import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import { EvolutionForest } from "../EvolutionForest"
 import { tmpEvolutionId } from "../Evolution"
 import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
+import { ApiStub } from "$lib/test/ApiStub"
 
 beforeEach(async () => {
 	const eeveeToFlareon = stubSingleEvolutionJsonResponse({
@@ -23,16 +24,7 @@ beforeEach(async () => {
 	})
 
 	const evolutions = stubEvolutionJsonResponse(eeveeToFlareon)
-
-	vi.stubGlobal("fetch", vi.fn(async (url: string) => {
-		if (url.includes("evolutions/v1.json")) {
-			return new Response(JSON.stringify(evolutions))
-		} else {
-			return new Response("", {
-				status: 404,
-			})
-		}
-	}))
+	ApiStub.evolutions = evolutions
 
 	await waitForStore(canonEvolutions)
 })

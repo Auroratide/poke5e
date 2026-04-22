@@ -1,6 +1,7 @@
 import type { PokemonJsonResponse } from "$lib/poke5e/species/PokemonJsonResponse"
 import type { Ability } from "$lib/pokemon/ability"
 import { stubAbility } from "$lib/pokemon/ability/test/stubs"
+import type { EvolutionJsonResponse } from "$lib/pokemon/evolution/EvolutionJsonResponse"
 import { Url } from "$lib/site/url"
 import abilitiesSample from "./abilities-sample.json"
 
@@ -15,6 +16,10 @@ class ApiStubDefinition {
 		items: [],
 	}
 
+	evolutions: EvolutionJsonResponse = {
+		items: [],
+	}
+
 	resolve = (url: string): Response | undefined => {
 		if (url.includes(Url.api.abilities())) {
 			return new Response(JSON.stringify({
@@ -25,6 +30,8 @@ class ApiStubDefinition {
 			}))
 		} else if (url.includes(Url.api.pokemon())) {
 			return new Response(JSON.stringify(this.pokemon))
+		} else if (url.includes(Url.api.evolutions())) {
+			return new Response(JSON.stringify(this.evolutions))
 		} else {
 			return undefined
 		}
