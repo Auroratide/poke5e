@@ -38506,6 +38506,10 @@
 				{
 					"type": "flying",
 					"value": 60
+				},
+				{
+					"type": "swimming",
+					"value": 60
 				}
 			],
 			"attributes": {
