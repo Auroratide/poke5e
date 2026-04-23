@@ -5,6 +5,7 @@
 	import Rules2024 from "./2024"
 	import { rulesVersion } from "$lib/site/rules-version"
 	import { TeraTypeTag } from "$lib/pokemon/types"
+	import { PokemonTeraType } from "$lib/pokemon/types"
 </script>
 
 <ReferencePage title="Pokémon Transformations">
@@ -102,7 +103,7 @@
 		</ul>
 		<IconedCardHeading>
 			Stellar Type
-			<TeraTypeTag slot="icon" type="stellar" />
+			<TeraTypeTag slot="icon" type={new PokemonTeraType("stellar")} />
 		</IconedCardHeading>
 		<p>Some pokemon may terastallize into the Stellar Type.</p>
 		<p>Pokemon with the Stellar tera type retain the vulnerabilities and resistances of their original type when terastallized.</p>
