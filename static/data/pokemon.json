@@ -105874,6 +105874,135 @@
 			}
 		},
 		{
+			"id": "floette-eternal",
+			"name": "Floette (Eternal Flower)",
+			"number": 670,
+			"type": [
+				"fairy"
+			],
+			"size": "tiny",
+			"sr": 14,
+			"minLevel": 15,
+			"eggGroup": [
+				"undiscovered"
+			],
+			"gender": "1:0",
+			"description": "The Single Bloom Pokémon. Terrifying energy is concealed within its ominous flower, but Floette still swings it about innocently.",
+			"ac": 17,
+			"hitDice": "d10",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 15
+				},
+				{
+					"type": "hover",
+					"value": 30
+				}
+			],
+			"attributes": {
+				"str": 14,
+				"dex": 18,
+				"con": 15,
+				"int": 6,
+				"wis": 17,
+				"cha": 20
+			},
+			"hp": 155,
+			"skills": ["medicine", "survival", "history"],
+			"savingThrows": ["cha"],
+			"senses": [],
+			"abilities": [
+				{
+					"id": "flower-veil",
+					"hidden": false
+				},
+				{
+					"id": "symbiosis",
+					"hidden": true
+				}
+			],
+			"moves": {
+				"start": [
+					"vine-whip",
+					"tackle",
+					"lucky-chant",
+					"fairy-wind",
+					"razor-leaf",
+					"wish",
+					"magical-leaf",
+					"grassy-terrain",
+					"petal-blizzard",
+					"aromatherapy",
+					"misty-terrain",
+					"light-of-ruin"
+				],
+				"level18": [
+					"solar-beam",
+					"petal-dance",
+					"moonblast"
+				],
+				"tm": [
+					4,
+					6,
+					10,
+					11,
+					15,
+					16,
+					17,
+					18,
+					20,
+					21,
+					22,
+					27,
+					29,
+					32,
+					42,
+					44,
+					45,
+					48,
+					49,
+					53,
+					86,
+					87,
+					88,
+					90,
+					96,
+					99,
+					100,
+					103,
+					117,
+					118,
+					119,
+					124,
+					125,
+					128,
+					130,
+					133,
+					145,
+					149,
+					156,
+					164,
+					166,
+					178,
+					179,
+					180,
+					184,
+					186,
+					205,
+					233,
+					234,
+					254
+				]
+			},
+			"media": {
+				"main": "/assets/pokemon/floette-eternal/main.png",
+				"mainShiny": "/assets/pokemon/floette-eternal/main-shiny.png",
+				"sprite": "/assets/pokemon/floette-eternal/sprite.png",
+				"spriteShiny": "/assets/pokemon/floette-eternal/sprite-shiny.png"
+			}
+		},
+		{
 			"id": "skiddo",
 			"name": "Skiddo",
 			"number": 672,
