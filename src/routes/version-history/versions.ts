@@ -14,6 +14,16 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.1",
+		description: [
+			"<strong>Pokémon</strong>: Added Eternal Flower Floette.",
+			"<strong>Pokémon</strong>: Lugia given a swim speed.",
+			"<strong>Pokémon</strong>: Kartana's size changed to Tiny.",
+			"<strong>Bugfix</strong>: Stellar Type tera tag was broken in some places.",
+			"<strong>Bugfix</strong>: Remove duplicate moves on Alolan Muk and Zekrom.",
+			"<strong>Bugfix</strong>: Fix how the version history page (this page) lists subversions.",
+		],
+	}, {
 		name: "v1.11.0",
 		description: [
 			"<strong>Custom Abilities!</strong> Custom Abilities may now be added to Fakémon and Trainer Pokémon.",
