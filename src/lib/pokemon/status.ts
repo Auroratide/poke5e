@@ -57,14 +57,14 @@ const Confused: StatusDescription = {
 	id: "Confused",
 	name: "Confused",
 	abbr: "CON",
-	effect: "Cannot take reactions. Lasts three rounds. At the start of the creature's turn, roll a d8. On 1-4, the creature chooses its behavior. On 5, the creature doesn't move or take actions. On 6, the creature takes the Struggle action against itself and automatically hits. On 7, the creature takes the Struggle action against the nearest Pokemon target. On 8, the condition ends.",
+	effect: "Cannot take reactions. Lasts three rounds. At the start of the creature's turn, roll a d8 and refer to the table below.\n|d8|Effect|\n|-----|-----|\n|1|The creature takes the Struggle action against itself and automatically hits.|\n|2|The creature takes the Struggle action against the nearest Pokémon target. If there are no valid targets, it takes the Struggle action against itself instead, and hits.|\n|3|The creature doesn't move or take actions.\n|<span class=\"nowrap\">4-7</span>|The creature chooses its behavior.\n|8|The condition ends.|",
 }
 
 const Confused2018: StatusDescription = {
 	id: "Confused",
 	name: "Confused",
 	abbr: "CON",
-	effect: "Cannot take reactions and speed is halved. Lasts three rounds. At the start of the creature's turn, roll a d8. When a Confused Pokémon uses an action or bonus action on its turn, it must first roll a d20. On a result of 10 or lower, the Pokémon drops concentration, hurts itself for an amount of typeless damage equal to its proficiency modifier, and the move fails. On a roll of 16 or higher, the status ends immediately.",
+	effect: "Cannot take reactions and speed is halved. Lasts three rounds. When a Confused Pokémon uses an action or bonus action on its turn, it must first roll a d20. On a result of 10 or lower, the Pokémon drops concentration, hurts itself for an amount of typeless damage equal to its proficiency modifier, and the move fails. On a roll of 16 or higher, the status ends immediately.",
 }
 
 const Flinched: StatusDescription = {

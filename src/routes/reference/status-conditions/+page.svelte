@@ -9,6 +9,7 @@
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { rulesVersion } from "$lib/site/rules-version"
+	import { Markdown } from "$lib/ui/rendering";
 
 	$: nonVolatileList = $rulesVersion === "2018" ? Object.values(NonVolatileStatus2018) : Object.values(NonVolatileStatus)
 	$: volatileList = $rulesVersion === "2018" ? Object.values(VolatileStatus2018) : Object.values(VolatileStatus)
@@ -44,7 +45,7 @@
 		{#each volatileList as status}
 			<div class="status-block">
 				<h3>{status.name}</h3>
-				<p>{status.effect}</p>
+				<Markdown value="{status.effect}" />
 				{#if status.immunity}
 					<p>{status.immunity}</p>
 				{/if}
