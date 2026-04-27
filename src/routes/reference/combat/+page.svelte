@@ -48,6 +48,30 @@
 		{/if}
 	</section>
 	<section>
+		<h2>Flying, Hovering, and Burrowing</h2>
+		<p>Flying and Hovering Pokémon have nearly unlimited height potential with their speeds. As such, they have a decent-sized advantage on the battlefield, able to often take away melee attacks in one on one situations with the right strategy. Here are some Pokémon 5e-specific rules when facing or using Pokémon with a fly speed.</p>
+		<ul>
+			<li>Maintaining flight while accurately attacking at range requires a good deal of focus and energy for a creature. Any ranged attacks used by Pokémon in mid flight have <strong>disadvantage if the target is beyond half the move’s maximum range</strong>. If the move requires a saving throw, those Pokémon beyond half the maximum range have advantage on the roll. A Pokémon with “hover” is only considered in “mid-flight” if it is more than 10 feet off the ground.</li>
+			<li>If a flying or hovering Pokémon's flying or hover speed is reduced to zero (by becoming restrained, incapacitated by a status, hit with a move that forces the Pokémon to fall prone, etc.), the Pokémon will fall to the ground. Those with a flying speed will take 1d6 typeless damage for every 10 feet they fall, up to a maximum of 20d6. Those with a hover speed will fall, but slow enough that they do not take fall damage.</li>
+		</ul>
+		<p>Some Pokémon are natural-born diggers, able to churn through sand, mud, dirt, snow, and ice more easily than other creatures.</p>
+		<ul>
+			<li>A Pokémon can use its full burrow speed to move parallel to the ground, just below the surface, in dirt, mud, sand, snow, or ice. A creature that moves in this way is still able to be targeted by attacks and attacks of opportunity as if it would be above ground. If the Pokémon attempts to descend further, it is treated as difficult terrain. A burrowing creature leaves a tunnel in its path which is considered difficult terrain for any creature without a burrowing speed.</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Raised/Grounded</h2>
+		<p>Certain moves affect "Raised" and "Grounded" creatures differently.</p>
+		<ul>
+			<li>A "<dfn>Raised</dfn>" creature is any creature currently utilizing its flying or hover speed, or those with the "Levitate" ability, holding an "Air Balloon", or under the effect of the "Magnet Rise" or "Telekinesis" moves.</li>
+			<li>A "<dfn>Grounded</dfn>" creature is any creature without or not currently utilizing a flying or hover speed, or one that is knocked prone or has its flying or hover speed reduced to zero.</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Reach</h2>
+		<p>The "Reach" of a Pokémon is the maximum distance the Pokémon can attack a target in melee range. If a creature leaves the reach of a Pokémon, an attack of opportunity is triggered. In Pokémon 5e, creatures that are "Large" or smaller have a standard 5 feet of reach, while those bigger than "Large" have 10 feet of reach.</p>
+	</section>
+	<section>
 		<h2>Attacks of Opportunity</h2>
 		<p>If a Pokémon leaves the melee range of another creature without using the Disengage action, or when not returning to a Pokéball, the opponent may use a melee move that has a move time of 1 action immediately as a reaction targeting the fleeing Pokémon. The move costs the normal amount of PP.</p>
 	</section>
