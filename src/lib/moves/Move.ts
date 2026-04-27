@@ -2,6 +2,7 @@ import { DataClass, type Data } from "$lib/DataClass"
 import type { Attributes } from "$lib/dnd/attributes"
 import type { Level } from "$lib/dnd/level"
 import type { PokemonSpecies } from "$lib/poke5e/species"
+import type { MoveLearnMethod } from "$lib/pokemon/move-pool"
 import { Stab } from "$lib/pokemon/stab"
 import type { PokeType } from "$lib/pokemon/types"
 import type { RulesVersion } from "$lib/site/rules-version"
@@ -63,8 +64,16 @@ export class Move extends DataClass<{
 		return this.tm != null
 	}
 
-	pokemonWhoLearnThis(allPokemon: PokemonSpecies[]): PokemonSpecies[] {
-		return allPokemon.filter((pokemon) => pokemon.moves.canLearn(this))
+	pokemonWhoLearnThis(allPokemon: PokemonSpecies[]): Record<MoveLearnMethod, PokemonSpecies[]> {
+		const result: Record<MoveLearnMethod, PokemonSpecies[]> = {
+			level: [],
+			egg: [],
+			tm: [],
+		}
+
+		allPokemon.forEach((pokemon) => pokemon.moves.canLearnVia(this).forEach((method) => result[method].push(pokemon)))
+
+		return result
 	}
 
 	pokemonWhoLearnThisViaTm(allPokemon: PokemonSpecies[]): PokemonSpecies[] {

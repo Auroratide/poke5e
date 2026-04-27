@@ -218,3 +218,91 @@ describe("availableAtLevel", () => {
 		expect(result).toEqual(pool.start)
 	})
 })
+
+describe("canLearnVia", () => {
+	const pool = new MovePool({
+		start: ["at-start"],
+		level6: ["on-level"],
+		egg: ["as-egg"],
+		tm: [2],
+	})
+
+	test("start", () => {
+		const move = stubMove({
+			id: "at-start",
+		})
+
+		const result = pool.canLearnVia(move)
+
+		expect(result).toContain("level")
+		expect(result).not.toContain("egg")
+		expect(result).not.toContain("tm")
+	})
+
+	test("on level", () => {
+		const move = stubMove({
+			id: "on-level",
+		})
+
+		const result = pool.canLearnVia(move)
+
+		expect(result).toContain("level")
+		expect(result).not.toContain("egg")
+		expect(result).not.toContain("tm")
+	})
+
+	test("egg", () => {
+		const move = stubMove({
+			id: "as-egg",
+		})
+
+		const result = pool.canLearnVia(move)
+
+		expect(result).not.toContain("level")
+		expect(result).toContain("egg")
+		expect(result).not.toContain("tm")
+	})
+
+	test("tm", () => {
+		const move = stubMove({
+			id: "tm",
+			tm: stubTmDetails({
+				id: 2,
+			}).data,
+		})
+
+		const result = pool.canLearnVia(move)
+
+		expect(result).not.toContain("level")
+		expect(result).not.toContain("egg")
+		expect(result).toContain("tm")
+	})
+
+	test("via multiple", () => {
+		const move = stubMove({
+			id: "on-level",
+			tm: stubTmDetails({
+				id: 2,
+			}).data,
+		})
+
+		const result = pool.canLearnVia(move)
+
+		expect(result).toContain("level")
+		expect(result).not.toContain("egg")
+		expect(result).toContain("tm")
+	})
+
+	test("does not learn", () => {
+		const move = stubMove({
+			id: "cannot-learn",
+			tm: stubTmDetails({
+				id: 999,
+			}).data,
+		})
+
+		const result = pool.canLearnVia(move)
+
+		expect(result).toEqual([])
+	})
+})

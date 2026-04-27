@@ -17,9 +17,7 @@
 	export let tm: boolean = false
 	export let dismissToHref: string
 
-	$: pokemonWhoLearnThisMove = tm
-		? move.pokemonWhoLearnThisViaTm(pokemon)
-		: move.pokemonWhoLearnThis(pokemon)
+	$: pokemonWhoLearnThisMove = move.pokemonWhoLearnThis(pokemon)
 </script>
 
 <Card title={tm ? move.tmName() : move.name} {dismissToHref}>
@@ -55,10 +53,28 @@
 			<ContestInfo value={move.contest} />
 		</section>
 	{/if}
-	{#if pokemonWhoLearnThisMove.length > 0}
+	{#if !tm && pokemonWhoLearnThisMove.level.length > 0}
 		<section>
-			<h2>{m.canLearnThisMove()}:</h2>
-			<SimplePokemonList pokemon={pokemonWhoLearnThisMove.map((it) => ({
+			<h2>{m.learnsByLevelUp()}:</h2>
+			<SimplePokemonList pokemon={pokemonWhoLearnThisMove.level.map((it) => ({
+				id: it.id,
+				name: it.name,
+			}))} />
+		</section>
+	{/if}
+	{#if pokemonWhoLearnThisMove.tm.length > 0}
+		<section>
+			<h2>{m.learnsByTM()}:</h2>
+			<SimplePokemonList pokemon={pokemonWhoLearnThisMove.tm.map((it) => ({
+				id: it.id,
+				name: it.name,
+			}))} />
+		</section>
+	{/if}
+	{#if !tm && pokemonWhoLearnThisMove.egg.length > 0}
+		<section>
+			<h2>{m.learnsByEggMove()}:</h2>
+			<SimplePokemonList pokemon={pokemonWhoLearnThisMove.egg.map((it) => ({
 				id: it.id,
 				name: it.name,
 			}))} />

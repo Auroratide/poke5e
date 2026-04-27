@@ -2,6 +2,7 @@ import { DataClass } from "$lib/DataClass"
 import type { Level } from "$lib/dnd/level"
 import type { Move, MoveId } from "$lib/moves/Move"
 import type { TmId } from "$lib/moves/tms/TmDetails"
+import type { MoveLearnMethod } from "./MoveLearnMethod"
 
 export class MovePool extends DataClass<{
 	start: MoveId[],
@@ -40,6 +41,30 @@ export class MovePool extends DataClass<{
 
 	canLearnViaTm(move: Move): boolean {
 		return move.tm != null ? (this.tm ?? []).includes(move.tm.id) : false
+	}
+
+	canLearnVia(move: Move): MoveLearnMethod[] {
+		const via = []
+		if ([
+			...(this.start ?? []),
+			...(this.level2 ?? []),
+			...(this.level6 ?? []),
+			...(this.level10 ?? []),
+			...(this.level14 ?? []),
+			...(this.level18 ?? []),
+		].includes(move.id)) {
+			via.push("level")
+		}
+
+		if ((this.egg ?? []).includes(move.id)) {
+			via.push("egg")
+		}
+
+		if (move.tm != null ? (this.tm ?? []).includes(move.tm.id) : false) {
+			via.push("tm")
+		}
+
+		return via
 	}
 
 	availableAtLevel(level: Level): MoveId[] {

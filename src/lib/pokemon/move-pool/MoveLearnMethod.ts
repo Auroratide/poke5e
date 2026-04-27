@@ -1,0 +1,1 @@
+export type MoveLearnMethod = "level" | "egg" | "tm"

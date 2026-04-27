@@ -71,7 +71,9 @@ describe("pokemonWhoLearnThis", () => {
 
 		const result = move.pokemonWhoLearnThis(allPokemon)
 
-		expect(result).toEqual([])
+		expect(result.level.map((it) => it.id.data)).toEqual([])
+		expect(result.egg.map((it) => it.id.data)).toEqual([])
+		expect(result.tm.map((it) => it.id.data)).toEqual([])
 	})
 
 	test("some pokemon learn this", () => {
@@ -83,9 +85,10 @@ describe("pokemonWhoLearnThis", () => {
 		})
 
 		const result = move.pokemonWhoLearnThis(allPokemon)
-		const ids = result.map((it) => it.id.data)
 
-		expect(ids).toEqual(["p1", "p2", "p3", "p4"])
+		expect(result.level.map((it) => it.id.data)).toEqual(["p1", "p2"])
+		expect(result.egg.map((it) => it.id.data)).toEqual(["p3"])
+		expect(result.tm.map((it) => it.id.data)).toEqual(["p4"])
 	})
 })
 
