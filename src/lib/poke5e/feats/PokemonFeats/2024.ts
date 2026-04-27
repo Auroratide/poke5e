@@ -84,7 +84,7 @@ export const PokemonFeats: Feat[] = [ {
 }, {
 	name: "Tireless",
 	category: "General",
-	description: "Your Pokémon endures hours of rigorous training which keep it in battle longer than the average Pokémon. Gain +1 PP for every move.",
+	description: "Your Pokémon endures hours of rigorous training which keep it in battle longer than the average Pokémon. Gain +1 PP on all current moves. If you replace one of these moves, your new moves also gain +1 PP.",
 }, {
 	name: "Wrangler",
 	category: "General",
