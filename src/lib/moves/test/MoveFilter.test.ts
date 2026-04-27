@@ -101,6 +101,17 @@ const moves = [
 			contest: "beauty",
 		}),
 	}),
+	stubMove({
+		name: "Lychee",
+		type: "varies",
+		power: ["int"],
+		time: "1 minute",
+		range: "melee",
+		pp: 20,
+		contest: stubContestDetails({
+			contest: "beauty",
+		}),
+	}),
 ]
 
 test("name only", () => {
@@ -121,6 +132,16 @@ test("type only", () => {
 
 	expect(result.length).toEqual(1)
 	expect(result[0]).toEqual(moves[5])
+})
+
+test("other only", () => {
+	const filter = new MoveFilter()
+		.type("varies")
+
+	const result = moves.filter(filter.apply)
+
+	expect(result.length).toEqual(1)
+	expect(result[0]).toEqual(moves[8])
 })
 
 test("power only", () => {
@@ -159,8 +180,9 @@ test("time (other)", () => {
 
 	const result = moves.filter(filter.apply)
 
-	expect(result.length).toEqual(1)
+	expect(result.length).toEqual(2)
 	expect(result[0]).toEqual(moves[7])
+	expect(result[1]).toEqual(moves[8])
 })
 
 test("rangeInFeet", () => {
@@ -180,7 +202,7 @@ test("rangeInFeet: melee", () => {
 
 	const result = moves.filter(filter.apply)
 
-	expect(result.length).toEqual(6)
+	expect(result.length).toEqual(7)
 })
 
 test("pp", () => {

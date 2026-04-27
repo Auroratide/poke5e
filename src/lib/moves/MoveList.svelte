@@ -19,11 +19,16 @@
 		value: "",
 	} ]
 
-	let filteredType: PokeType | "" = ""
+	const OtherOption = [ {
+		name: `- ${m.other()} -`,
+		value: "varies",
+	} ]
+
+	let filteredType: PokeType | "varies" | "" = ""
 	const typeOptions = AnyOption.concat(Object.values(PokemonType.list).map((it) => ({
 		value: it,
 		name: capitalize(it),
-	})))
+	}))).concat(OtherOption)
 
 	let filteredPower: Attribute | "" = ""
 	const powerOptions = AnyOption.concat(Object.values(Attributes.list).map((it) => ({

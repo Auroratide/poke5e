@@ -4,7 +4,7 @@ import type { Level } from "$lib/dnd/level"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import type { MoveLearnMethod } from "$lib/pokemon/move-pool"
 import { Stab } from "$lib/pokemon/stab"
-import type { PokeType } from "$lib/pokemon/types"
+import { PokemonType, type PokeType, type TeraType } from "$lib/pokemon/types"
 import type { RulesVersion } from "$lib/site/rules-version"
 import type { BodyText } from "$lib/ui/rendering/types"
 import { ContestDetails } from "./contest/ContestDetails"
@@ -22,7 +22,7 @@ export class Move extends DataClass<{
 	id: MoveId,
 	beta?: boolean,
 	name: string,
-	type: PokeType,
+	type: TeraType | "varies" | "typeless",
 	power: Data<MovePower>,
 	time: string,
 	pp: number,
@@ -96,7 +96,7 @@ export class Move extends DataClass<{
 		const attributeMod = forCharacter.attributes[bestPower].modifier
 
 		const pb = forCharacter.level.proficiencyBonus
-		const hasStab = forCharacter.type.includes(this.type)
+		const hasStab = PokemonType.isPokeType(this.type) ? forCharacter.type.includes(this.type) : false
 
 		result.toHit = this.attack?.toHit(pb, attributeMod)
 		result.save = this.save?.withDc(pb, attributeMod)

@@ -1,4 +1,5 @@
 import type { Attribute } from "$lib/dnd/attributes"
+import { PokemonType } from "$lib/pokemon/types"
 import { relativeNumberCompare, type RelativeValue } from "$lib/ui/forms"
 import type { Move } from "./Move"
 import { MoveRange } from "./MoveRange"
@@ -104,7 +105,7 @@ export class MoveFilter {
 
 	apply = (move: Move): boolean => {
 		return move.name.toLocaleLowerCase().includes(this.filters.name.toLocaleLowerCase())
-			&& (this.filters.type === "" || move.type === this.filters.type)
+			&& (this.filters.type === "" || move.type === this.filters.type || (!PokemonType.isPokeType(move.type) && this.filters.type === "varies"))
 			&& (this.filters.power === "" || move.power.appliesToAttribute(this.filters.power))
 			&& (this.filters.tm == null || move.tm?.id.toString().startsWith(this.filters.tm.toString()))
 			&& !this.filters.not.includes(move.id)
