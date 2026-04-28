@@ -14,6 +14,19 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.2",
+		description: [
+			`<strong>Reference</strong>: Added the original handbook's rules around flying/burrowing speed, reach, and raised/grounded. This can be seen on the <a href="${Url.reference.combat()}">Combat page</a>.`,
+			"<strong>Fakémon</strong>: Can now create Fakémon off of a template pokémon, so making variants is much easier.",
+			"<strong>Abilities</strong>: Restrict Opportunist to enemies, to better align with the games.",
+			"<strong>Moves</strong>: On move pages, list the pokémon that learn the move by level, TM, and breeding.",
+			"<strong>Moves</strong>: Allow filtering by the 'varies' move type on the moves list.",
+			"<strong>Trainers</strong>: Can see \"DM Info\" on trainer pokémon, which shows the pokémon's catch rate and exp award.",
+			"<strong>Bugfix</strong>: Many pokémon erroneously had the \"Ice\" biome. This has been changed to \"Glacier\".",
+			"<strong>Bugfix</strong>: Upgrade Corviknight's hit dice to d12 from d8.",
+			"<strong>Bugfix</strong>: Give Orbeetle the correct starting HP for its level.",
+		],
+	}, {
 		name: "v1.11.1",
 		description: [
 			"<strong>Pokémon</strong>: Added Eternal Flower Floette.",
