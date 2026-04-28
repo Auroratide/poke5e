@@ -136188,7 +136188,7 @@
 			"gender": "1:1",
 			"description": "The Seven Spot Pokémon. It's famous for its high level of intelligence, and the large size of its brain is proof that it also possesses immense psychic power.",
 			"ac": 16,
-			"hp": 20,
+			"hp": 49,
 			"hitDice": "d10",
 			"speed": [
 				{
