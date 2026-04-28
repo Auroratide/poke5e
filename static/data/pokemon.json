@@ -18792,7 +18792,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -33373,7 +33373,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -34198,7 +34198,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -34351,7 +34351,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -34950,7 +34950,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -36904,7 +36904,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -56252,7 +56252,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -56403,7 +56403,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -56548,7 +56548,7 @@
 			"habitat": {
 				"biomes": [
 					"polar-sea",
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -56675,7 +56675,7 @@
 			"habitat": {
 				"biomes": [
 					"polar-sea",
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -56806,7 +56806,7 @@
 			"habitat": {
 				"biomes": [
 					"polar-sea",
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -71780,7 +71780,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -71938,7 +71938,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -72119,7 +72119,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -73634,7 +73634,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -73983,7 +73983,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -74857,7 +74857,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -91554,7 +91554,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -91671,7 +91671,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -91787,7 +91787,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -95946,7 +95946,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -96124,7 +96124,7 @@
 			"habitat": {
 				"biomes": [
 					"polar-sea",
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -96260,7 +96260,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -105909,8 +105909,14 @@
 				"cha": 20
 			},
 			"hp": 155,
-			"skills": ["medicine", "survival", "history"],
-			"savingThrows": ["cha"],
+			"skills": [
+				"medicine",
+				"survival",
+				"history"
+			],
+			"savingThrows": [
+				"cha"
+			],
 			"senses": [],
 			"abilities": [
 				{
@@ -106000,6 +106006,9 @@
 				"mainShiny": "/assets/pokemon/floette-eternal/main-shiny.png",
 				"sprite": "/assets/pokemon/floette-eternal/sprite.png",
 				"spriteShiny": "/assets/pokemon/floette-eternal/sprite-shiny.png"
+			},
+			"habitat": {
+				"biomes": []
 			}
 		},
 		{
@@ -112107,7 +112116,7 @@
 			"habitat": {
 				"biomes": [
 					"polar-sea",
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -112261,7 +112270,7 @@
 			"habitat": {
 				"biomes": [
 					"polar-sea",
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -114568,9 +114577,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"grassland",
-					"cave",
-					"desert"
+					"glacier"
 				]
 			}
 		},
@@ -114730,9 +114737,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"grassland",
-					"cave",
-					"desert"
+					"glacier"
 				]
 			}
 		},
@@ -119918,7 +119923,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -125778,7 +125783,7 @@
 					"field",
 					"mountain",
 					"desert",
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -125925,7 +125930,7 @@
 					"field",
 					"mountain",
 					"desert",
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -141395,7 +141400,7 @@
 				"biomes": [
 					"riverside",
 					"beach",
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -141823,7 +141828,7 @@
 			"habitat": {
 				"biomes": [
 					"city",
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -142552,7 +142557,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -142693,7 +142698,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -148061,7 +148066,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -149268,7 +149273,7 @@
 			"habitat": {
 				"biomes": [
 					"polar-sea",
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -150515,7 +150520,7 @@
 			"habitat": {
 				"biomes": [
 					"mountain",
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -161232,7 +161237,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -161365,7 +161370,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice"
+					"glacier"
 				]
 			}
 		},
@@ -164321,7 +164326,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -164441,7 +164446,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
@@ -164579,7 +164584,7 @@
 			},
 			"habitat": {
 				"biomes": [
-					"ice",
+					"glacier",
 					"tundra"
 				]
 			}
