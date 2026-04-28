@@ -104,7 +104,17 @@ export class PokemonSpecies extends DataClass<{
 			skills: SkillRanks.fromList(it.skills).data,
 			saves: it.savingThrows,
 			abilities: (await AbilityPool.fromList(it.abilities)).data,
-			moves: it.moves,
+			moves: {
+				...it.moves,
+				start: it.moves.start ?? [],
+				level2: it.moves.level2 ?? [],
+				level6: it.moves.level6 ?? [],
+				level10: it.moves.level10 ?? [],
+				level14: it.moves.level14 ?? [],
+				level18: it.moves.level18 ?? [],
+				egg: it.moves.egg ?? [],
+				tm: it.moves.tm ?? [],
+			},
 			forms: it.forms,
 			media: {
 				values: {
