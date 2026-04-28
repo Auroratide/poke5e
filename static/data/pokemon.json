@@ -135851,8 +135851,8 @@
 			"gender": "1:1",
 			"description": "The Raven Pokémon. With their great intellect and flying skills, the black luster of its steel body could drive terror into the heart of any foe.",
 			"ac": 17,
-			"hp": 80,
-			"hitDice": "d8",
+			"hp": 87,
+			"hitDice": "d12",
 			"speed": [
 				{
 					"type": "walking",
