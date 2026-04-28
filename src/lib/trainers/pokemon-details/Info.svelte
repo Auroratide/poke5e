@@ -5,7 +5,7 @@
 	import HealthInfo, { type UpdateDetail as HealthUpdateDetail } from "../info/HealthInfo.svelte"
 	import StatsInfo from "./StatsInfo.svelte"
 	import SkillsInfo from "../info/SkillsInfo.svelte"
-	import { FlatDl } from "$lib/ui/elements"
+	import { Details, FlatDl } from "$lib/ui/elements"
 	import { AttributeBlock } from "$lib/dnd/attributes"
 	import MovesInfo from "./MovesInfo.svelte"
 	import NotesInfo from "./NotesInfo.svelte"
@@ -21,6 +21,7 @@
 	import { SpeciesFormsInfo } from "$lib/poke5e/forms"
 	import { m } from "$lib/site/i18n"
 	import { KnownAbilitiesInfo } from "$lib/pokemon/ability";
+	import DmInfo from "./DmInfo.svelte";
 
 	const dispatch = createEventDispatcher()
 
@@ -124,6 +125,11 @@
 		<NotesInfo {pokemon} />
 	</section>
 {/if}
+<section style:margin-block-start="1.5em">
+	<Details title="DM Info">
+		<DmInfo {pokemon} {species} />
+	</Details>
+</section>
 
 <style>
 	section {
