@@ -1,0 +1,8 @@
+import{s as d,n as y,d as i,i as u,f as s,l as h,h as p,m as $,o as _,p as x}from"./B174ZEAr.js";import{S as b,i as g,d as I,t as k,a as E,m as v,c as w,b as B}from"./DIa7DxCc.js";import{I as C}from"./CH_yLADT.js";function L(m){let e,l,t,r,n,f,c;return{c(){e=_("rect"),l=x(),t=_("line"),r=x(),n=_("line"),f=x(),c=_("path"),this.h()},l(a){e=h(a,"rect",{class:!0,x:!0,y:!0,width:!0,height:!0,rx:!0}),p(e).forEach(i),l=$(a),t=h(a,"line",{class:!0,x1:!0,y1:!0,x2:!0,y2:!0}),p(t).forEach(i),r=$(a),n=h(a,"line",{class:!0,x1:!0,y1:!0,x2:!0,y2:!0}),p(n).forEach(i),f=$(a),c=h(a,"path",{class:!0,d:!0}),p(c).forEach(i),this.h()},h(){s(e,"class","stroke"),s(e,"x","15"),s(e,"y","10"),s(e,"width","70"),s(e,"height","80"),s(e,"rx","10"),s(t,"class","stroke thin"),s(t,"x1","50"),s(t,"y1","79"),s(t,"x2","75"),s(t,"y2","79"),s(n,"class","stroke thin"),s(n,"x1","15"),s(n,"y1","75"),s(n,"x2","85"),s(n,"y2","65"),s(c,"class","stroke thin"),s(c,"d",`
+		M 35 72
+		L 35 57
+		C 35 50 39 46 42 45
+		A 12.5 12.5 0 1 1 58 45
+		C 61 46 65 50 65 57
+		L 65 68
+	`)},m(a,o){u(a,e,o),u(a,l,o),u(a,t,o),u(a,r,o),u(a,n,o),u(a,f,o),u(a,c,o)},p:y,d(a){a&&(i(e),i(l),i(t),i(r),i(n),i(f),i(c))}}}function S(m){let e,l;return e=new C({props:{title:m[0],$$slots:{default:[L]},$$scope:{ctx:m}}}),{c(){B(e.$$.fragment)},l(t){w(e.$$.fragment,t)},m(t,r){v(e,t,r),l=!0},p(t,[r]){const n={};r&1&&(n.title=t[0]),r&2&&(n.$$scope={dirty:r,ctx:t}),e.$set(n)},i(t){l||(E(e.$$.fragment,t),l=!0)},o(t){k(e.$$.fragment,t),l=!1},d(t){I(e,t)}}}function q(m,e,l){let{label:t="Id Badge"}=e;return m.$$set=r=>{"label"in r&&l(0,t=r.label)},[t]}class z extends b{constructor(e){super(),g(this,e,q,S,d,{label:0})}}export{z as I};

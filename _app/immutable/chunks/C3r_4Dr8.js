@@ -1,1 +1,0 @@
-var r=Object.defineProperty;var o=(t,s,l)=>s in t?r(t,s,{enumerable:!0,configurable:!0,writable:!0,value:l}):t[s]=l;var c=(t,s,l)=>o(t,typeof s!="symbol"?s+"":s,l);import{D as n}from"./Bf-g66YD.js";import{P as p}from"./B2OLR38e.js";const d="stellar",a=class a extends n{};c(a,"list",[].concat(p.list).concat(d)),c(a,"isTeraType",s=>a.list.includes(s));let i=a;export{i as P};
