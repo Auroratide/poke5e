@@ -31,20 +31,37 @@
 	$: fakemonId = browser ? $page.url.searchParams.get("id") : undefined
 	$: action = browser ? $page.url.searchParams.get("action") : undefined
 
-	let list: Promise<undefined | FakemonListStore> | undefined
 	let fakemon: Promise<undefined | SingleFakemonStore> | undefined
 	let allSpecies: Promise<Readable<PokemonSpecies[]>> = browser ? SpeciesStore.completeList() : undefined
 
+	// We don't use {#await} tag because that causes unnecessary reassignment = rerendering
+	let list: FakemonListStore | undefined = undefined
+	let listLoading = true
+	let listError: Error | string | undefined = undefined
+
+	const refreshList = () => {
+		fakemonStore.all().then((it) => {
+			list = it
+			listError = undefined
+		}).catch((error) => {
+			listError = error
+		}).finally(() => {
+			listLoading = false
+		})
+	}
+
 	$: {
 		if (fakemonId && browser) {
-			list = fakemonStore.all()
+			refreshList()
 			fakemon = fakemonStore.get(fakemonId)
 		} else if (!fakemonId && browser) {
-			list = fakemonStore.all()
+			refreshList()
 			fakemon = undefined
 		} else {
 			fakemon = undefined
 			list = undefined
+			listLoading = true
+			listError = undefined
 		}
 	}
 
@@ -59,15 +76,15 @@
 		<GreatballIcon slot="icon" />
 		<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Fakémon List">
 			<MaintenanceAnnouncement />
-			{#await list}
-				<Loader />
-			{:then list}
-				{#if list}
-					<FakemonList fakemon={list} showGetStarted={action == null} />
+			{#if list}
+				<FakemonList fakemon={list} showGetStarted={action == null} />
+			{:else}
+				{#if listLoading}
+					<Loader />
+				{:else if listError}
+					<ErrorMessage error={listError} />
 				{/if}
-			{:catch error}
-				<ErrorMessage error="{error}" />
-			{/await}
+			{/if}
 		</nav>
 		{#if fakemonId}
 			{#await fakemon}
