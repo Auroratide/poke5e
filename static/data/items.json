@@ -2490,7 +2490,7 @@
 				"The holder adds its proficiency bonus to fairy-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": null
+				"sprite": "/assets/items/fairy-feather/sprite.png"
 			}
 		},
 		{
