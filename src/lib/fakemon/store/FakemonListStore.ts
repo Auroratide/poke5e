@@ -7,6 +7,15 @@ export type FakemonListStore = {
 	subscribe: (run: (value: Fakemon[]) => void) => Unsubscriber
 }
 
+export function emptyFakemonListStore(): FakemonListStore {
+	return {
+		subscribe: (run: (value: Fakemon[]) => void) => {
+			run([])
+			return () => {}
+		}
+	}
+}
+
 export function createFakemonListStore(fakemon: Fakemon[], fakemonStore: Writable<StoredFakemon>): FakemonListStore {
 	let updated = false
 	return {

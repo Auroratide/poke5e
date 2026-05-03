@@ -6,6 +6,7 @@ import type { Data } from "$lib/DataClass"
 import { fakemonStore } from "$lib/fakemon/store"
 import { cachedReadable } from "$lib/utils/store"
 import { Url } from "$lib/site/url"
+import { emptyFakemonListStore } from "$lib/fakemon/store/FakemonListStore"
 
 export const allCanonSpecies = cachedReadable<PokemonSpecies[] | undefined>(undefined, (set) => {
 	if (typeof window !== "undefined") {
@@ -59,7 +60,7 @@ function createStore(): SpeciesStore {
 			return derived(allCanonSpecies, (species) => species?.filter((it) => !it.wasNonCanonNonFakemon()))
 		},
 		completeList: async () => {
-			const fakemon = await fakemonStore.all()
+			const fakemon = await fakemonStore.all().catch(() => emptyFakemonListStore())
 
 			return derived([allCanonSpecies, fakemon], ([normalSpecies, fakemon]) => {
 				return normalSpecies?.concat(fakemon.map((it) => it.species))
