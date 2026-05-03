@@ -21958,10 +21958,7 @@
 			"id": "tera-blast",
 			"name": "Tera Blast",
 			"type": "normal",
-			"power": [
-				"dex",
-				"wis"
-			],
+			"power": "any",
 			"time": "1 action",
 			"pp": 5,
 			"duration": "instantaneous",
