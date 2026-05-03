@@ -35,11 +35,10 @@
 			</thead>
 			<tbody>
 				{#each data.tmList as tm}
-					{@const tmNameNoNumber = tm.moveInfo.name.substring(tm.moveInfo.name.indexOf("-") + 2)}
 					<tr>
-						<td>{tm.id.toString().padStart(2, "0")}</td>
-						<td><a href="{Url.tms(tm.id.toString())}">{tmNameNoNumber}</a></td>
-						<td>{formatMoney(tm.cost)}</td>
+						<td>{tm.tm.id.toString().padStart(3, "0")}</td>
+						<td><a href="{Url.tms(tm.tm.id.toString())}">{tm.name}</a></td>
+						<td>{formatMoney(tm.tm.cost)}</td>
 					</tr>
 				{/each}
 			</tbody>
