@@ -7680,7 +7680,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You dive at a creature with quick reaction speed, able to change the type of attack when you reach them. Make a melee attack against a target, dealing 4d4 + MOVE flying OR fighting damage, depending on your choice. STAB can only added to this move if its type is fighting."
+				"You dive at a creature with quick reaction speed, able to change the type of attack when you reach them. Make a melee attack against a target, dealing 4d4 + MOVE flying OR fighting damage, depending on your choice. STAB can only added to this move if you are fighting type."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17.",
 			"attack": {
