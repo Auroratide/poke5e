@@ -23915,7 +23915,7 @@
 			"duration": "instantaneous",
 			"range": "30ft",
 			"description": [
-				"You send a powerful ball of energy that changes type based on the surrounding weather, dealing 1d8 + MOVE damage of that type.",
+				"You send a powerful ball of energy that changes type based on the surrounding weather. Make a ranged attack, dealing 1d8 + MOVE normal damage on a hit. If any of the following weather conditions are active, then double the damage dice and change the type of damage to the respective type indicated in the table.",
 				{
 					"type": "table",
 					"headers": [
@@ -23966,6 +23966,9 @@
 			"tm": {
 				"id": 222,
 				"cost": 3600
+			},
+			"attack": {
+				"scope": "ranged"
 			}
 		},
 		{

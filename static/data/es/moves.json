@@ -6811,7 +6811,7 @@
 			"id": "weather-ball",
 			"name": "Meteorobola",
 			"description": [
-				"Lanzas una poderosa bola de energía que cambia de tipo según el clima, infligiendo 1d8 + MOV de daño de dicho tipo.",
+				"Lanzas una poderosa esfera de energía cuyo tipo cambia según el clima circundante. Realiza un ataque a distancia que inflige 1d8 + MOV de daño normal al impactar. Si alguna de las siguientes condiciones climáticas está activa, duplica los dados de daño y cambia el tipo de daño al tipo respectivo indicado en la tabla.",
 				{
 					"type": "table",
 					"headers": [
