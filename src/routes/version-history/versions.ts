@@ -14,6 +14,18 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.3",
+		description: [
+			`<strong>Moves</strong>: Tera Blast now accepts any move power. Changed since every pokémon can learn it, and like Hidden Power they should be able to all use it equally well.`,
+			`<strong>Moves</strong>: Buff Shell Trap damage from 1d10 to 3d8, to match its later level damage curve better.`,
+			`<strong>Moves</strong>: Buff Zing Zap damage from 1d10 to 2d6, to match its later level damage curve better.`,
+			`<strong>Moves</strong>: Added that Weather Ball is a ranged attack roll. Additionally, Weather Ball now deals extra damage when used inside of weather.`,
+			`<strong>Items</strong>: Added Egg Incubators to items list.`,
+			"<strong>Bugfix</strong>: Less erratic scrolling on the Fakemon page.",
+			"<strong>Bugfix</strong>: Pokemon evolutions show even when the backend system is down.",
+			"<strong>Bugfix</strong>: TM reference page now shows all TMs.",
+		],
+	}, {
 		name: "v1.11.2",
 		description: [
 			`<strong>Reference</strong>: Added the original handbook's rules around flying/burrowing speed, reach, and raised/grounded. This can be seen on the <a href="${Url.reference.combat()}">Combat page</a>.`,
