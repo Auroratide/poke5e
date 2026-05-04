@@ -10161,7 +10161,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You crash into a creature, spinning your body like a drill. Make a melee attack, dealing 2d8 + MOVE ground damage on a hit. This attack pierces through defensive moves such as Protect or Detect and ignores AC bonuses from spells such as Shield."
+				"You crash into a creature, spinning your body like a drill. Make a melee attack, dealing 2d8 + MOVE normal damage on a hit. This attack pierces through defensive moves such as Protect or Detect and ignores AC bonuses from spells such as Shield."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
 			"damage": {
@@ -10173,7 +10173,7 @@
 				},
 				"modifier": "MOVE",
 				"type": [
-					"ground"
+					"normal"
 				]
 			},
 			"attack": {
