@@ -1242,7 +1242,7 @@
 			"duration": "instantaneous",
 			"range": "self (15ft radius)",
 			"description": [
-				"You launch a countless toxic barbs in all directions. Each creature in range must make a DEX save against your Move DC, taking 1d6 + MOVE poison damage on a hit and becoming poisoned. If the target is already poisoned, double your MOVE modifier when adding damage."
+				"You launch a countless toxic barbs in all directions. Each creature in range must make a DEX save against your Move DC, taking 1d6 + MOVE poison damage and becoming poisoned on a failed save. If the target is already poisoned, double your MOVE modifier when adding damage."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 7d4 at level 17.",
 			"damage": {
@@ -7680,7 +7680,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You dive at a creature with quick reaction speed, able to change the type of attack when you reach them. Make a melee attack against a target, dealing 4d4 + MOVE flying OR fighting damage, depending on your choice. STAB can only added to this move if its type is fighting."
+				"You dive at a creature with quick reaction speed, able to change the type of attack when you reach them. Make a melee attack against a target, dealing 4d4 + MOVE flying OR fighting damage, depending on your choice. STAB can only added to this move if you are fighting type."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17.",
 			"attack": {
@@ -10161,7 +10161,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You crash into a creature, spinning your body like a drill. Make a melee attack, dealing 2d8 + MOVE ground damage on a hit. This attack pierces through defensive moves such as Protect or Detect and ignores AC bonuses from spells such as Shield."
+				"You crash into a creature, spinning your body like a drill. Make a melee attack, dealing 2d8 + MOVE normal damage on a hit. This attack pierces through defensive moves such as Protect or Detect and ignores AC bonuses from spells such as Shield."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
 			"damage": {
@@ -10173,7 +10173,7 @@
 				},
 				"modifier": "MOVE",
 				"type": [
-					"ground"
+					"normal"
 				]
 			},
 			"attack": {
@@ -14166,7 +14166,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You touch a creature with your electrified cheeks, sending electricity coursing through their veins. Make an attack roll against a creature. On a hit, the target takes 1d4 + MOVE electric damage and is forced to make a CON save against your Move DC, becoming paralyzed on a failure."
+				"You touch a creature with your electrified cheeks, sending electricity coursing through their veins. Make a melee attack roll against a creature. On a hit, the target takes 1d4 + MOVE electric damage and is forced to make a CON save against your Move DC, becoming paralyzed on a failure."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d4 at level 5, 1d12 at level 10, and 4d4 at level 17.",
 			"damage": {
@@ -14186,6 +14186,9 @@
 					"con"
 				],
 				"dc": "MOVE"
+			},
+			"attack": {
+				"scope": "melee"
 			}
 		},
 		{
@@ -17288,7 +17291,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You strike out with a rock-crushing attack that may lower a user’s defense. Make an attack roll against a creature, doing 1d6 + MOVE fighting damage on a hit. If the natural attack roll is 19 or 20, the target’s AC decreases by 1 while it remains in battle."
+				"You strike out with a rock-crushing attack that may lower a user’s defense. Make a melee attack roll against a creature, doing 1d6 + MOVE fighting damage on a hit. If the natural attack roll is 19 or 20, the target’s AC decreases by 1 while it remains in battle."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17.",
 			"damage": {
@@ -18581,12 +18584,12 @@
 			"duration": "instantaneous",
 			"range": "self (5ft radius)",
 			"description": [
-				"You set a shell trap that explodes in a 5ft radius. As a bonus action on the initial activation of this move, you set a trap on yourself. Only one trap may be set at a time. When you are hit by an attack, you can use a reaction to detonate the trap. Creatures within 5 feet of you must succeed on a DEX save against your Move DC, rolling at disadvantage, taking 1d10 + MOVE fire damage on a failure, or half as much on a success."
+				"You set a shell trap that explodes in a 5ft radius. As a bonus action on the initial activation of this move, you set a trap on yourself. Only one trap may be set at a time. When you are hit by an attack, you can use a reaction to detonate the trap. Creatures within 5 feet of you must succeed on a DEX save against your Move DC, rolling at disadvantage, taking 3d8 + MOVE fire damage on a failure, or half as much on a success."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17.",
 			"damage": {
 				"dice": {
-					"1": "1d10",
+					"1": "3d8",
 					"5": "5d6",
 					"10": "4d12",
 					"17": "8d8"
@@ -21958,10 +21961,7 @@
 			"id": "tera-blast",
 			"name": "Tera Blast",
 			"type": "normal",
-			"power": [
-				"dex",
-				"wis"
-			],
+			"power": "any",
 			"time": "1 action",
 			"pp": 5,
 			"duration": "instantaneous",
@@ -23915,7 +23915,7 @@
 			"duration": "instantaneous",
 			"range": "30ft",
 			"description": [
-				"You send a powerful ball of energy that changes type based on the surrounding weather, dealing 1d8 + MOVE damage of that type.",
+				"You send a powerful ball of energy that changes type based on the surrounding weather. Make a ranged attack, dealing 1d8 + MOVE normal damage on a hit. If any of the following weather conditions are active, then double the damage dice and change the type of damage to the respective type indicated in the table.",
 				{
 					"type": "table",
 					"headers": [
@@ -23966,6 +23966,9 @@
 			"tm": {
 				"id": 222,
 				"cost": 3600
+			},
+			"attack": {
+				"scope": "ranged"
 			}
 		},
 		{
@@ -24516,12 +24519,12 @@
 			"duration": "instantaneous",
 			"range": "30ft",
 			"description": [
-				"A strong electric blast crashes down on two unique targets in range, giving them an electric shock.  Make two ranged attacks, dealing 1d10 + MOVE electric damage on a hit.  If the natural attack roll is 18 or higher, the target flinches."
+				"A strong electric blast crashes down on two unique targets in range, giving them an electric shock.  Make two ranged attacks, dealing 2d6 + MOVE electric damage on a hit.  If the natural attack roll is 18 or higher, the target flinches."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
 			"damage": {
 				"dice": {
-					"1": "1d10",
+					"1": "2d6",
 					"5": "2d8",
 					"10": "4d6",
 					"17": "6d6"

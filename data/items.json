@@ -2490,7 +2490,7 @@
 				"The holder adds its proficiency bonus to fairy-type damage it deals (once per move)."
 			],
 			"media": {
-				"sprite": null
+				"sprite": "/assets/items/fairy-feather/sprite.png"
 			}
 		},
 		{
@@ -4297,6 +4297,42 @@
 			],
 			"media": {
 				"sprite": null
+			}
+		},
+		{
+			"id": "egg-incubator",
+			"name": "Egg Incubator",
+			"type": "trainer gear",
+			"cost": 1000,
+			"description": [
+				"When an Egg is placed inside, it reduces the Hatch Time by 1d20 each day. Once the egg hatches, the incubator loses its effectiveness."
+			],
+			"media": {
+				"sprite": "/assets/items/egg-incubator/sprite.png"
+			}
+		},
+		{
+			"id": "egg-incubator-plus",
+			"name": "Egg Incubator Plus",
+			"type": "trainer gear",
+			"cost": 3000,
+			"description": [
+				"When an Egg is placed inside, it reduces the Hatch Time by 2d20 each day. Once the egg hatches, the incubator loses its effectiveness."
+			],
+			"media": {
+				"sprite": "/assets/items/egg-incubator-plus/sprite.png"
+			}
+		},
+		{
+			"id": "egg-incubator-super",
+			"name": "Egg Incubator Super",
+			"type": "trainer gear",
+			"cost": 10000,
+			"description": [
+				"When an Egg is placed inside, it reduces the Hatch Time by 3d20 each day. Once the egg hatches, the incubator loses its effectiveness."
+			],
+			"media": {
+				"sprite": "/assets/items/egg-incubator-super/sprite.png"
 			}
 		}
 	]
