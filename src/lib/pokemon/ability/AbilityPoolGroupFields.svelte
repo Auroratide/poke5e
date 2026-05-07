@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { Button } from "$lib/ui/elements";
+	import { Button } from "$lib/ui/elements"
 	import { focusInputField, FormGroup, HintText } from "$lib/ui/forms"
-	import { AllAbilityField } from ".";
-	import { Ability } from "./Ability";
+	import { AllAbilityField } from "."
+	import { Ability } from "./Ability"
 	import { m } from "$lib/site/i18n"
-	import { getAbilityFieldName } from "./AllAbilityField.svelte";
+	import { getAbilityFieldName } from "./AllAbilityField.svelte"
 
 	export let idPrefix: string
 	export let title: string
@@ -27,8 +27,8 @@
 		const nextId = nextNewId()
 		withIds = [...withIds, {
 			id: nextId,
-			value: Ability.createNewStandard("adaptability")
-		} ],
+			value: Ability.createNewStandard("adaptability"),
+		} ]
 		focusInputField(getAbilityFieldName(nextId))
 	}
 
@@ -37,7 +37,7 @@
 		withIds = [...withIds, {
 			id: nextId,
 			value: Ability.createNewCustom(),
-		} ],
+		} ]
 		focusInputField(getAbilityFieldName(nextId))
 	}
 

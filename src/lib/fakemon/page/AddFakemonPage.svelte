@@ -8,8 +8,8 @@
 	import FakemonAdder from "./FakemonAdder.svelte"
 	import { type SubmitDetail } from "./FakemonEditor.svelte"
 	import { m } from "$lib/site/i18n"
-	import { SpeciesStore } from "$lib/poke5e/species";
-	import { Loader } from "$lib/ui/elements";
+	import { SpeciesStore } from "$lib/poke5e/species"
+	import { Loader } from "$lib/ui/elements"
 
 	const draftFakemon = new Fakemon({
 		id: "",

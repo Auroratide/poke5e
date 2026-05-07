@@ -7,7 +7,7 @@
 	import { Ability } from "./Ability"
 	import { m } from "$lib/site/i18n"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
-	import { AbilityStore } from "./AbilityStore";
+	import { AbilityStore } from "./AbilityStore"
 
 	export let id: string
 	export let value: Ability

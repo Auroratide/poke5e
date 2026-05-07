@@ -21,8 +21,8 @@
 	import { createEventDispatcher } from "svelte"
 	import { Fakemon } from "../Fakemon"
 	import { m } from "$lib/site/i18n"
-	import { PokemonSpecies, SpeciesField, type SpeciesFieldChangeEvent } from "$lib/poke5e/species";
-	import type { Readable } from "svelte/store";
+	import { PokemonSpecies, SpeciesField, type SpeciesFieldChangeEvent } from "$lib/poke5e/species"
+	import type { Readable } from "svelte/store"
 
 	const dispatch = createEventDispatcher()
 

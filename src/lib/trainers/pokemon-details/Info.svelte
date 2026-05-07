@@ -20,8 +20,8 @@
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
 	import { SpeciesFormsInfo } from "$lib/poke5e/forms"
 	import { m } from "$lib/site/i18n"
-	import { KnownAbilitiesInfo } from "$lib/pokemon/ability";
-	import DmInfo from "./DmInfo.svelte";
+	import { KnownAbilitiesInfo } from "$lib/pokemon/ability"
+	import DmInfo from "./DmInfo.svelte"
 
 	const dispatch = createEventDispatcher()
 

@@ -13,7 +13,7 @@
 		level: pokemon.level,
 		sr: species.sr,
 		hp: pokemon.hp,
-		version: $rulesVersion
+		version: $rulesVersion,
 	})
 	$: exp = formatExp(experienceAwarded(pokemon.level.data, species.sr.data))
 </script>

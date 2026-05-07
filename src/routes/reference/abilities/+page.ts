@@ -17,4 +17,3 @@ export const load: PageLoad<{ abilities: Data<Ability>[] }> = async ({ fetch }) 
 
 	return { abilities }
 }
-``

@@ -12,7 +12,7 @@ export function emptyFakemonListStore(): FakemonListStore {
 		subscribe: (run: (value: Fakemon[]) => void) => {
 			run([])
 			return () => {}
-		}
+		},
 	}
 }
 

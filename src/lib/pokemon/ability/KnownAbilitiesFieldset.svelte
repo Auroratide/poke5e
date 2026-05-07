@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { Fieldset, focusInputField, HintText } from "$lib/ui/forms";
-	import { Ability } from "./Ability";
+	import { Fieldset, focusInputField, HintText } from "$lib/ui/forms"
+	import { Ability } from "./Ability"
 	import { m } from "$lib/site/i18n"
-	import { Button } from "$lib/ui/elements";
-	import type { PokemonSpecies } from "$lib/poke5e/species";
-	import SpeciesAbilityField, { getAbilityFieldName } from "./SpeciesAbilityField.svelte";
+	import { Button } from "$lib/ui/elements"
+	import type { PokemonSpecies } from "$lib/poke5e/species"
+	import SpeciesAbilityField, { getAbilityFieldName } from "./SpeciesAbilityField.svelte"
 
 	export let values: Ability[]
 	export let species: PokemonSpecies
@@ -29,7 +29,7 @@
 		withIds = [...withIds, {
 			id: nextId,
 			value: firstSpeciesAbility?.copy() ?? Ability.createNewStandard("adaptability"),
-		} ],
+		} ]
 		focusInputField(getAbilityFieldName(nextId))
 	}
 
@@ -38,7 +38,7 @@
 		withIds = [...withIds, {
 			id: nextId,
 			value: Ability.createNewCustom(),
-		} ],
+		} ]
 		focusInputField(getAbilityFieldName(nextId))
 	}
 

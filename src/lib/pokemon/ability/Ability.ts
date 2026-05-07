@@ -1,4 +1,4 @@
-import { DataClass, type Data } from "$lib/DataClass"
+import { DataClass } from "$lib/DataClass"
 import { getWhenDefined } from "$lib/utils/store"
 import { AbilityStore, type AbilityJson } from "./AbilityStore"
 

@@ -6,7 +6,6 @@ import * as list from "$lib/utils/list"
 import type { Skill } from "$lib/dnd/skills"
 import { capitalize, uppercase } from "$lib/utils/string"
 import type { Attribute } from "$lib/dnd/attributes"
-import type { ReferenceAbilityId } from "../ability"
 import { Ability } from "$lib/pokemon/ability"
 
 export interface EvolutionEffect {

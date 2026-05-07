@@ -9,7 +9,7 @@
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { rulesVersion } from "$lib/site/rules-version"
-	import { Markdown } from "$lib/ui/rendering";
+	import { Markdown } from "$lib/ui/rendering"
 
 	$: nonVolatileList = $rulesVersion === "2018" ? Object.values(NonVolatileStatus2018) : Object.values(NonVolatileStatus)
 	$: volatileList = $rulesVersion === "2018" ? Object.values(VolatileStatus2018) : Object.values(VolatileStatus)

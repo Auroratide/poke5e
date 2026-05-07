@@ -1,6 +1,6 @@
 import type { PostgrestError, SupabaseClient } from "@supabase/supabase-js"
 import { FakemonDataProviderError, FakemonPermissionError, type FakemonDataProvider, type ReadKey, type WriteKey } from "./FakemonDataProvider"
-import { Fakemon, type DraftFakemon, type FakemonId } from "../Fakemon"
+import { Fakemon, type DraftFakemon } from "../Fakemon"
 import { PokemonType } from "$lib/pokemon/types"
 import type { Attribute } from "$lib/dnd/attributes"
 import { isCreatureSize } from "$lib/dnd/CreatureSize"
@@ -21,7 +21,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 	async getAllKnown(): Promise<Fakemon[]> {
 		return Promise.all(FakemonLocalStorage.list().map((it) =>
-			this.getByReadKey(it.readKey)
+			this.getByReadKey(it.readKey),
 		)).then((maybeFakemon) => {
 			return maybeFakemon.filter((it) => it != null)
 		})
@@ -181,7 +181,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_hidden_abilities: [], // deprecated
 			_ability_pool: {
 				normal: fakemon.abilities.normal.map((it) => it.referenceId ? { referenceId: it.referenceId } : { name: it.name, description: it.description }),
-				hidden: fakemon.abilities.hidden.map((it) => it.referenceId ? { referenceId: it.referenceId } : { name: it.name, description: it.description })
+				hidden: fakemon.abilities.hidden.map((it) => it.referenceId ? { referenceId: it.referenceId } : { name: it.name, description: it.description }),
 			},
 			_moves_start: fakemon.moves.start ?? [],
 			_moves_level2: fakemon.moves.level2 ?? [],
@@ -376,7 +376,7 @@ async function resolveAbilityList(oldList: string[], newList: AbilityPoolRowItem
 		} else {
 			return {
 				name: it.name,
-				description: it.description
+				description: it.description,
 			}
 		}
 	}))

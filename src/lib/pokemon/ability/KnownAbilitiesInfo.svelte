@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Ability } from "./Ability";
+	import type { Ability } from "./Ability"
 
 	export let value: Ability[]
 </script>

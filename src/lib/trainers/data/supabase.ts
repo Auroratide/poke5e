@@ -1388,7 +1388,7 @@ const rowToPokemon = async (row: PokemonRow, getStorageResource: (name: string) 
 			} else {
 				return new Ability({
 					name: it.name,
-					description: it.description
+					description: it.description,
 				})
 			}
 		})),

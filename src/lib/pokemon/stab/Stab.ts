@@ -17,24 +17,24 @@ export class Stab extends DataClass<{
 
 	private getBaseStab(moveModifier: number, level: Level, rulesVersion: RulesVersion): number {
 		switch (this.base) {
-			case "default":
-				if (rulesVersion === "2018")
-					return this.byRuleset18(level)
-				else
-					return this.byProficiency(level)
-			case "movepower":
-				return this.byMovepower(moveModifier)
-			case "proficiency":
-				return this.byProficiency(level)
-			case "ruleset18":
+		case "default":
+			if (rulesVersion === "2018")
 				return this.byRuleset18(level)
-			case "none":
-				return this.byNone()
-			default:
-				if (rulesVersion === "2018")
-					return this.byRuleset18(level)
-				else
-					return this.byMovepower(moveModifier)
+			else
+				return this.byProficiency(level)
+		case "movepower":
+			return this.byMovepower(moveModifier)
+		case "proficiency":
+			return this.byProficiency(level)
+		case "ruleset18":
+			return this.byRuleset18(level)
+		case "none":
+			return this.byNone()
+		default:
+			if (rulesVersion === "2018")
+				return this.byRuleset18(level)
+			else
+				return this.byMovepower(moveModifier)
 		}
 	}
 

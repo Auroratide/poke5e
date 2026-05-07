@@ -69,7 +69,7 @@ beforeEach(() => {
 describe("AbilityChangeEffect", () => {
 	test("applicable", () => {
 		const pokemon = stubTrainerPokemon({
-			abilities: [new Ability(eevee.abilities.data.normal[0])]
+			abilities: [new Ability(eevee.abilities.data.normal[0])],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
@@ -81,7 +81,7 @@ describe("AbilityChangeEffect", () => {
 
 	test("applicable: prevo has second ability, but evo does not", () => {
 		const pokemon = stubTrainerPokemon({
-			abilities: [new Ability(eevee.abilities.data.normal[1])]
+			abilities: [new Ability(eevee.abilities.data.normal[1])],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
@@ -93,7 +93,7 @@ describe("AbilityChangeEffect", () => {
 
 	test("applicable: hidden ability", () => {
 		const pokemon = stubTrainerPokemon({
-			abilities: [new Ability(eevee.abilities.data.hidden[0])]
+			abilities: [new Ability(eevee.abilities.data.hidden[0])],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
@@ -112,7 +112,7 @@ describe("AbilityChangeEffect", () => {
 		})
 
 		const pokemon = stubTrainerPokemon({
-			abilities: [new Ability(eevee.abilities.data.hidden[0])]
+			abilities: [new Ability(eevee.abilities.data.hidden[0])],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, specialFlareon)
@@ -131,7 +131,7 @@ describe("AbilityChangeEffect", () => {
 		})
 
 		const pokemon = stubTrainerPokemon({
-			abilities: [new Ability(eevee.abilities.data.normal[0])]
+			abilities: [new Ability(eevee.abilities.data.normal[0])],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, specialFlareon)
@@ -141,7 +141,7 @@ describe("AbilityChangeEffect", () => {
 
 	test("not applicable: ability is already the same", () => {
 		const pokemon = stubTrainerPokemon({
-			abilities: [new Ability(flareon.abilities.data.normal[0])]
+			abilities: [new Ability(flareon.abilities.data.normal[0])],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, flareon, flareon)
@@ -151,7 +151,7 @@ describe("AbilityChangeEffect", () => {
 
 	test("not applicable: ability is not in prevo's list, thereby customized", () => {
 		const pokemon = stubTrainerPokemon({
-			abilities: [stubAbility({ referenceId: "damp" })]
+			abilities: [stubAbility({ referenceId: "damp" })],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
@@ -161,7 +161,7 @@ describe("AbilityChangeEffect", () => {
 
 	test("not applicable: no abilities", () => {
 		const pokemon = stubTrainerPokemon({
-			abilities: []
+			abilities: [],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
@@ -174,7 +174,7 @@ describe("AbilityChangeEffect", () => {
 			abilities: [
 				new Ability(eevee.abilities.data.normal[0]),
 				new Ability(eevee.abilities.data.hidden[0]),
-			]
+			],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
@@ -190,7 +190,7 @@ describe("AbilityChangeEffect", () => {
 			abilities: [
 				new Ability(eevee.abilities.data.normal[0]),
 				new Ability(eevee.abilities.data.normal[1]), // flareon only has one ability, keep this
-			]
+			],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
@@ -206,7 +206,7 @@ describe("AbilityChangeEffect", () => {
 			abilities: [
 				new Ability(eevee.abilities.data.normal[0]), // already have flash fire, keep this
 				new Ability(flareon.abilities.data.normal[0]),
-			]
+			],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, flareon)
@@ -228,7 +228,7 @@ describe("AbilityChangeEffect", () => {
 			abilities: [
 				new Ability(eevee.abilities.data.normal[0]),
 				new Ability(eevee.abilities.data.normal[1]),
-			]
+			],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, specialFlareon)
@@ -250,7 +250,7 @@ describe("AbilityChangeEffect", () => {
 		const pokemon = stubTrainerPokemon({
 			abilities: [
 				new Ability(eevee.abilities.data.normal[0]),
-			]
+			],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, eevee, specialFlareon)
@@ -271,7 +271,7 @@ describe("AbilityChangeEffect", () => {
 		const pokemon = stubTrainerPokemon({
 			abilities: [
 				new Ability(specialEevee.abilities.data.normal[0]),
-			]
+			],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, specialEevee, flareon)
@@ -299,7 +299,7 @@ describe("AbilityChangeEffect", () => {
 		const pokemon = stubTrainerPokemon({
 			abilities: [
 				new Ability(specialEevee.abilities.data.normal[0]),
-			]
+			],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, specialEevee, specialFlareon)
@@ -327,7 +327,7 @@ describe("AbilityChangeEffect", () => {
 		const pokemon = stubTrainerPokemon({
 			abilities: [
 				new Ability(specialEevee.abilities.data.normal[0]),
-			]
+			],
 		})
 
 		const effect = AbilityChangeEffect.createIfApplicable(pokemon, specialEevee, specialFlareon)

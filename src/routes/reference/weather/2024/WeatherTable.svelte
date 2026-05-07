@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Url } from "$lib/site/url";
+	import { Url } from "$lib/site/url"
 	import { InfoTable } from "$lib/ui/elements"
 </script>
 

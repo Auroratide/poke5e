@@ -34,7 +34,7 @@ export class AbilityPool extends DataClass<{
 
 		// remove duplicates
 		return list.filter((a, i) =>
-			list.findIndex((b) => a.value.isExactlyTheSame(b.value)) === i
+			list.findIndex((b) => a.value.isExactlyTheSame(b.value)) === i,
 		)
 	}
 
