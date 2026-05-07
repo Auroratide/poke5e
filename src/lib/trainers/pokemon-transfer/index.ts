@@ -1,0 +1,1 @@
+export { default as TransferPokemonPage } from "./TransferPokemonPage.svelte"

@@ -31,6 +31,7 @@
 	import { SpeciesStore, type PokemonSpecies } from "$lib/poke5e/species"
 	import { error } from "$lib/site/errors"
 	import { MaintenanceAnnouncement, MaintenanceOverlay } from "$lib/site/maintenance"
+	import { TransferPokemonPage } from "$lib/trainers/pokemon-transfer"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: accessKey = browser ? $page.url.searchParams.get("access_key")?.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "") : undefined
@@ -129,6 +130,8 @@
 					<RestPokemonCard {trainer} id={pokemonId} />
 				{:else if action === PageAction.removePokemon}
 					<RemovePokemonCard {trainer} id={pokemonId} />
+				{:else if pokemonId && action === PageAction.transferPokemon}
+					<TransferPokemonPage {trainer} id={pokemonId} />
 				{:else if pokemonId}
 					<PokemonCard {trainer} id={pokemonId} />
 				{:else if action === PageAction.restTrainer}

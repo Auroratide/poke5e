@@ -12,4 +12,5 @@ export const PageAction = {
 	removeTrainer: "remove-trainer",
 	accessKey: "access-key",
 	fullList: "full-list",
+	transferPokemon: "transfer-pokemon",
 }
