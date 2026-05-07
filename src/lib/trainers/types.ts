@@ -66,7 +66,7 @@ export type TrainerPokemon = {
 	/**
 	 * @deprecated Use abilities instead
 	 */
-	ability: ReferenceAbilityId,
+	ability?: ReferenceAbilityId,
 	abilities: Ability[],
 	proficiencies: SkillRanks,
 	savingThrows: Attribute[],

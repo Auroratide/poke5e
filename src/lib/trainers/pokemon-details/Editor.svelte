@@ -29,7 +29,6 @@
 	import { m } from "$lib/site/i18n"
 	import { Resource } from "$lib/poke5e/resource"
 	import { StabFieldset } from "$lib/pokemon/stab"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import { KnownAbilitiesFieldset } from "$lib/pokemon/ability"
 
 	const dispatch = createEventDispatcher()
@@ -130,9 +129,7 @@
 		<CustomBasicInfoFieldset bind:customSize bind:customHitDiceSize {disabled} />
 		<SpeedsFieldset bind:values={speeds} {disabled} />
 		<SensesFieldset bind:values={senses} {disabled} />
-		{#if FeatureToggles.CustomStab()}
-			<StabFieldset bind:value={stab} {disabled} />
-		{/if}
+		<StabFieldset bind:value={stab} {disabled} />
 	</FormDetails>
 	<ActionArea error={!isValid ? m.oneOrMoreFieldsAboveHaveAnIssue() : undefined}>
 		<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>
