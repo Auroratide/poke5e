@@ -288,8 +288,8 @@ describe("calculateMoveStats", () => {
 			power: "none",
 			type: "normal",
 			damage: stubMoveDamage().data,
-			attack: stubMoveAttack().data,
-			save: stubMoveSave().data,
+			attack: undefined,
+			save: undefined,
 		})
 	
 		const result = move.calculateMoveStats("2024", {
@@ -299,7 +299,14 @@ describe("calculateMoveStats", () => {
 			stab: DEFAULT_STAB,
 		})
 	
-		expect(result).toEqual({})
+		expect(result).toEqual({
+			damage: {
+				dice: "1d4",
+				mod: 0,
+				isHealing: false,
+				stabApplied: false,
+			},
+		})
 	})
 	
 	test("varies attribute", () => {
@@ -307,8 +314,8 @@ describe("calculateMoveStats", () => {
 			power: "varies",
 			type: "normal",
 			damage: stubMoveDamage().data,
-			attack: stubMoveAttack().data,
-			save: stubMoveSave().data,
+			attack: undefined,
+			save: undefined,
 		})
 	
 		const result = move.calculateMoveStats("2024", {
@@ -318,7 +325,14 @@ describe("calculateMoveStats", () => {
 			stab: DEFAULT_STAB,
 		})
 	
-		expect(result).toEqual({})
+		expect(result).toEqual({
+			damage: {
+				dice: "1d4",
+				mod: 0,
+				isHealing: false,
+				stabApplied: false,
+			},
+		})
 	})
 	
 	test("has STAB", () => {

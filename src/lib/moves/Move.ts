@@ -88,12 +88,9 @@ export class Move extends DataClass<{
 	}): MoveStats {
 		const result: MoveStats = {}
 
-		if (this.power.data === "none" || this.power.data === "varies") return result
-
 		const bestPower = this.power.bestAttribute(forCharacter.attributes)[0]
-		if (bestPower == null) return result
 
-		const attributeMod = forCharacter.attributes[bestPower].modifier
+		const attributeMod = bestPower == null ? 0 : forCharacter.attributes[bestPower].modifier
 
 		const pb = forCharacter.level.proficiencyBonus
 		const hasStab = PokemonType.isPokeType(this.type) ? forCharacter.type.includes(this.type) : false
