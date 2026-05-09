@@ -14,6 +14,15 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.4",
+		description: [
+			"<strong>Moves</strong>: Clarify the range of moves with circular radius (only specify radius, not diameter <em>and</em> radius).",
+			"<strong>Moves</strong>: Add an optional rule to Metronome to allow for rolling the rest of the 256 TMs.",
+			"<strong>Reference</strong>: Clarify the wording of the Poison Heal ability.",
+			"<strong>Bugfix</strong>: Show damage calculations for moves with no specific move power.",
+			"<strong>Bugfix</strong>: Fakémon created from a template now show the correct ID.",
+		],
+	}, {
 		name: "v1.11.3",
 		description: [
 			"<strong>Moves</strong>: Tera Blast now accepts any move power. Changed since every pokémon can learn it, and like Hidden Power they should be able to all use it equally well.",
