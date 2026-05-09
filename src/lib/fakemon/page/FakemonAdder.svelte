@@ -47,6 +47,7 @@
 				species: templateSpecies.copy({
 					name: speciesName,
 					type: type.data,
+					number: 0,
 					media: {
 						values: {
 							normalPortrait: undefined,
