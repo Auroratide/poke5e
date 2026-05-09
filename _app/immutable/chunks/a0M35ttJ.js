@@ -1,0 +1,1 @@
+function t(e){return()=>o(e)}function o(e){return localStorage.getItem(`feature-toggle::${e}`)!=null}function a(e,r){r?localStorage.setItem(`feature-toggle::${e}`,"true"):localStorage.removeItem(`feature-toggle::${e}`)}const n={OverrideMaintenance:t("OverrideMaintenance"),TransferPokemon:t("TransferPokemon")};export{n as F,o as i,a as s};
