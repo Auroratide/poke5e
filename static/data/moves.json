@@ -811,7 +811,7 @@
 			"duration": "instantaneous",
 			"range": "self (10ft radius)",
 			"description": [
-				"You release a pleasant aroma that empowers your allies. All allies within a 20 foot circle, centered on you, are cured of all negative status ailments."
+				"You release a pleasant aroma that empowers your allies. All allies within 10 feet of you are cured of all negative status ailments."
 			]
 		},
 		{
@@ -2578,7 +2578,7 @@
 			"duration": "instantaneous",
 			"range": "self (15ft radius)",
 			"description": [
-				"You strike the ground so hard that it ripples out from you in a 30 foot circle. Any creature caught in the area must make a DEX save against your Move DC, taking 1d10 + MOVE ground damage on a failure, or half as much on a success. Raised creatures are immune to the effects and damage of this move."
+				"You strike the ground so hard that it ripples out from you in a 15-foot-radius circle. Any creature caught in the area must make a DEX save against your Move DC, taking 1d10 + MOVE ground damage on a failure, or half as much on a success. Raised creatures are immune to the effects and damage of this move."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
 			"tm": {
@@ -4475,7 +4475,7 @@
 			"duration": "instantaneous",
 			"range": "self (10ft radius)",
 			"description": [
-				"You let loose a flare of electricity in a 20 foot circle, centered on you, striking all creatures around you. Creatures in the area must make a DEX saving throw against your Move DC. On a fail, a creature takes 2d6 + MOVE electric damage. If a creature fails the save by 5 or more, it is paralyzed."
+				"You let loose a flare of electricity in a 10-foot-radius circle, centered on you, striking all creatures around you. Creatures in the area must make a DEX saving throw against your Move DC. On a fail, a creature takes 2d6 + MOVE electric damage. If a creature fails the save by 5 or more, it is paralyzed."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
 			"damage": {
@@ -6434,7 +6434,7 @@
 			"duration": "1 round",
 			"range": "self (40ft radius)",
 			"description": [
-				"You summon forth a mystical power that locks down the battlefield. Creatures within an 80 foot circle, centered on you, may not flee or be switched out on their next turn."
+				"You summon forth a mystical power that locks down the battlefield. Creatures within 40 feet of you may not flee or be switched out on their next turn."
 			]
 		},
 		{
@@ -6764,7 +6764,7 @@
 			"duration": "instantaneous",
 			"range": "self (15ft radius)",
 			"description": [
-				"You dance and flap your wings, sending flames in a 30 foot circle, centered on you. Anyone caught in the blaze must make a DEX save against your Move DC, taking 2d6 + MOVE fire damage on a failure, or half as much on a success. If a creature fails the save by 5 or more, double the MOVE modifier when adding damage"
+				"You dance and flap your wings, sending flames in a 15-foot-radius circle, centered on you. Anyone caught in the blaze must make a DEX save against your Move DC, taking 2d6 + MOVE fire damage on a failure, or half as much on a success. If a creature fails the save by 5 or more, double the MOVE modifier when adding damage"
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
 			"damage": {
@@ -7594,7 +7594,7 @@
 			"duration": "1 minute, concentration",
 			"range": "self (15ft radius)",
 			"description": [
-				"Large flowers sprout from any grass-type allies in range, boosting their defense. For one minute, as long as you keep your concentration, grass-type allies in a 30 foot circle, centered on you, gain +2 to their AC."
+				"Large flowers sprout from any grass-type allies in range, boosting their defense. For one minute, as long as you keep your concentration, grass-type allies within 15 feet of you gain +2 to their AC."
 			]
 		},
 		{
@@ -8004,7 +8004,7 @@
 			"duration": "instantaneous",
 			"range": "self (15ft radius)",
 			"description": [
-				"You summon a whirlwind of jagged branches and razor sharp leaves that batter all creatures in a 30 foot circle, centered on you. All creature caught in the flurry must make a DEX saving throw against your Move DC, taking 3d8 + MOVE grass damage on a failure, and half as much on a success. This move saps you of energy, and may not activate it again until after the end of your next turn."
+				"You summon a whirlwind of jagged branches and razor sharp leaves that batter all creatures in a 15-foot-radius circle, centered on you. All creature caught in the flurry must make a DEX saving throw against your Move DC, taking 3d8 + MOVE grass damage on a failure, and half as much on a success. This move saps you of energy, and may not activate it again until after the end of your next turn."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17.",
 			"damage": {
@@ -8797,7 +8797,7 @@
 			"duration": "1 minute, concentration",
 			"range": "self (20ft radius)",
 			"description": [
-				"You strengthen gravity in an 40 foot circle, centered on you. Any creature in the area cannot use moves like Fly or Bounce, flying types lose their ground immunity, and the Levitate ability is suppressed."
+				"You strengthen gravity in an 20-foot-radius circle, centered on you. Any creature in the area cannot use moves like Fly or Bounce, flying types lose their ground immunity, and the Levitate ability is suppressed."
 			],
 			"tm": {
 				"id": 210,
@@ -9178,7 +9178,7 @@
 			"duration": "instantaneous",
 			"range": "self (30ft radius)",
 			"description": [
-				"You create a haze of light snow that washes over creatures in a 60 foot circle, centered on you. Any stat changes, status effects, shields or other outside forces affecting creatures in range are removed. This includes things like Leech Seed, Focus Energy, Substitute, Iron Defense, Disable, etc."
+				"You create a haze of light snow that washes over creatures in a 30-foot-radius circle, centered on you. Any stat changes, status effects, shields or other outside forces affecting creatures in range are removed. This includes things like Leech Seed, Focus Energy, Substitute, Iron Defense, Disable, etc."
 			],
 			"tm": {
 				"id": 207,
@@ -9319,7 +9319,7 @@
 			"duration": "instantaneous",
 			"range": "self (60ft radius)",
 			"description": [
-				"You ring a bell that chimes beautifully across the battlefield. All active allied creature in a 120 foot circle, centered on you, are healed of their negative status effects."
+				"You ring a bell that chimes beautifully across the battlefield. All active allied creatures within 60 feet of you are healed of their negative status effects."
 			]
 		},
 		{
@@ -9503,7 +9503,7 @@
 			"duration": "instantaneous",
 			"range": "self (15ft radius)",
 			"description": [
-				"You exhale a wave of hot breath in a 30ft. circle, centered on you. Creatures caught in the area must make a DEX save against your Move DC, taking 2d8 + MOVE fire damage on failure, or half as much on a success. If the creature fails the save by 5 or more, it is burned."
+				"You exhale a wave of hot breath in a 15-foot-radius circle, centered on you. Creatures caught in the area must make a DEX save against your Move DC, taking 2d8 + MOVE fire damage on failure, or half as much on a success. If the creature fails the save by 5 or more, it is burned."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
 			"damage": {
@@ -10412,7 +10412,7 @@
 			"duration": "1 round, concentration",
 			"range": "self (30ft radius)",
 			"description": [
-				"When you use this move, you charge up an intense power within your body. On your next turn’s action, if you keep your concentration, you unleash an ultracold, freezing wind in a 60 foot circle all around you. Anyone caught in the blast must make a DEX save against your Move DC, taking 2d12 + MOVE ice damage on a failure, or half as much on a success. If any creature fails the save by 5 or more, it is burned."
+				"When you use this move, you charge up an intense power within your body. On your next turn’s action, if you keep your concentration, you unleash an ultracold, freezing wind in a 30-foot-radius circle all around you. Anyone caught in the blast must make a DEX save against your Move DC, taking 2d12 + MOVE ice damage on a failure, or half as much on a success. If any creature fails the save by 5 or more, it is burned."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 3d10 at level 5, 7d6 at level 10, and 8d8 at level 17.",
 			"damage": {
@@ -12248,7 +12248,7 @@
 			"duration": "5 rounds, concentration",
 			"range": "self (50ft radius)",
 			"description": [
-				"You employ your psychic power to suppress the effect of all held items in a 100 foot circle, centered on you."
+				"You employ your psychic power to suppress the effect of all held items within 50 feet of you"
 			]
 		},
 		{
@@ -13308,7 +13308,7 @@
 			"duration": "3 rounds",
 			"range": "self (60ft radius)",
 			"description": [
-				"You cover the ground in a thin, healing mist that surrounds a 120 foot circle, centered on you. For 3 turns, no grounded creatures inside the mist can suffer from new status conditions. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, grounded creatures in the terrain are resistant to dragon-type damage, or if they were vulnerable to dragon-type damage, they take regular damage instead."
+				"You cover the ground in a thin, healing mist that surrounds a 60-foot-radius circle, centered on you. For 3 turns, no grounded creatures inside the mist can suffer from new status conditions. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, grounded creatures in the terrain are resistant to dragon-type damage, or if they were vulnerable to dragon-type damage, they take regular damage instead."
 			],
 			"tm": {
 				"id": 186,
@@ -14107,7 +14107,7 @@
 			"duration": "instantaneous",
 			"range": "self (60ft radius)",
 			"description": [
-				"You create a horrible nightmare in the mind of any sleeping creature in a 120 foot circle around you, inflicting 3d6 + MOVE ghost damage automatically. This move does not wake a sleeping creature."
+				"You create a horrible nightmare in the mind of any sleeping creature in a 60-foot-radius circle around you, inflicting 3d6 + MOVE ghost damage automatically. This move does not wake a sleeping creature."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 4d6 at level 5, 5d6 at level 10, and 6d6 at level 17.",
 			"damage": {
@@ -14506,7 +14506,7 @@
 			"duration": "instantaneous",
 			"range": "self (15ft radius)",
 			"description": [
-				"With a roar, flames burst from your body in a 30 foot circle, centered on you. Any creature in range must roll a DEX saving throw against your Move DC, taking 5d4 + MOVE fire damage on a failure, or half as much on a success. The power of the move exhausts you, and your next attack is done at disadvantage. If your next attack requires a creature saving throw, they have advantage."
+				"With a roar, flames burst from your body in a 15-foot-radius circle, centered on you. Any creature in range must roll a DEX saving throw against your Move DC, taking 5d4 + MOVE fire damage on a failure, or half as much on a success. The power of the move exhausts you, and your next attack is done at disadvantage. If your next attack requires a creature saving throw, they have advantage."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 3d10 at level 5, 5d8 at level 10, and 8d8 at level 17.",
 			"tm": {
@@ -14571,7 +14571,7 @@
 			"duration": "instantaneous",
 			"range": "self (30ft radius)",
 			"description": [
-				"A sweeping electric charge arcs around you, stealing some of the target's energy. Force all creatures in a 60 foot circle, centered on you, to make a CON save against your Move DC, taking 1d10 + MOVE electric damage on a failure. Recover hit points equal to half the total damage dealt, but no more than 5 times your level."
+				"A sweeping electric charge arcs around you, stealing some of the target's energy. Force all creatures within 30 feet of you to make a CON save against your Move DC, taking 1d10 + MOVE electric damage on a failure. Recover hit points equal to half the total damage dealt, but no more than 5 times your level."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
 			"damage": {
@@ -14748,7 +14748,7 @@
 			"duration": "instantaneous",
 			"range": "self (30ft radius)",
 			"description": [
-				"You stir up a blizzard of sharp petals that swirl around you. Any creature in a 60 foot circle, centered on you, must make a DEX save against your Move DC, taking 2d8 + MOVE grass damage on a failure, or half as much on a success."
+				"You stir up a blizzard of sharp petals that swirl around you. Any creature within 30 feet of you must make a DEX save against your Move DC, taking 2d8 + MOVE grass damage on a failure, or half as much on a success."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
 			"damage": {
@@ -15997,7 +15997,7 @@
 			"duration": "3 rounds",
 			"range": "self (40ft radius)",
 			"description": [
-				"Psychic energy emerges from the ground in a 40ft, centered on you. Begininng at the end of your turn, for three rounds, all grounded creatures in the affected area are unable to use bonus actions. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from psychic-type moves activated inside the area."
+				"Psychic energy emerges from the ground in a 40-foot-radius circle, centered on you. Begininng at the end of your turn, for three rounds, all grounded creatures in the affected area are unable to use bonus actions. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from psychic-type moves activated inside the area."
 			],
 			"tm": {
 				"id": 185,
@@ -16823,7 +16823,7 @@
 			"duration": "instantaneous",
 			"range": "self (20ft radius)",
 			"description": [
-				"You sing an ancient song that damages creatures in range with the chance to put them asleep. Any creature in a 40 foot circle, centered on you, must make a CON save against your Move DC, taking 1d12 + MOVE normal damage on a failure, or half as much ona success. Any creature that fails the save by 5 or more is put to sleep."
+				"You sing an ancient song that damages creatures in range with the chance to put them asleep. Any creature within 20 feet of you must make a CON save against your Move DC, taking 1d12 + MOVE normal damage on a failure, or half as much ona success. Any creature that fails the save by 5 or more is put to sleep."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
 			"damage": {
@@ -18028,7 +18028,7 @@
 			"duration": "instantaneous",
 			"range": "self (10ft radius)",
 			"description": [
-				"Searing hot flames lick out at creatures in a 20 foot circle, centered on you. Any creature in range must make a DEX save against your Move DC, taking 4d4 + MOVE fire damage on a failure, or half as much on a success. If a target fails the save by 5 or more, it is burned."
+				"Searing hot flames lick out at creatures in a 10-foot-radius circle, centered on you. Any creature in range must make a DEX save against your Move DC, taking 4d4 + MOVE fire damage on a failure, or half as much on a success. If a target fails the save by 5 or more, it is burned."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17.",
 			"damage": {
@@ -19706,7 +19706,7 @@
 			"duration": "instantaneous",
 			"range": "self (20ft radius)",
 			"description": [
-				"You unleash a deafening sound that harms creature in a 40 foot circle, centered on you. Creatures in range must make a CON save against your Move DC, taking 16 flat normal damage on a fail, or half as much on a success."
+				"You unleash a deafening sound that harms creature in a 20-foot-radius circle, centered on you. Creatures in range must make a CON save against your Move DC, taking 16 flat normal damage on a fail, or half as much on a success."
 			],
 			"save": {
 				"attribute": [
@@ -19807,7 +19807,7 @@
 			"duration": "instantaneous",
 			"range": "self (10ft radius)",
 			"description": [
-				"You burst into song, unleashing a flurry of bubbles in a 20 foot circle, centered on you. All creatures in range must make a DEX save or take 2d8 + MOVE water damage on a fail and half as much on a save. Any creature suffering from the burned condition will be cured upon touching the bubbles."
+				"You burst into song, unleashing a flurry of bubbles in a 10-foot-radius circle, centered on you. All creatures in range must make a DEX save or take 2d8 + MOVE water damage on a fail and half as much on a save. Any creature suffering from the burned condition will be cured upon touching the bubbles."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
 			"damage": {
@@ -21457,7 +21457,7 @@
 			"duration": "instantaneous",
 			"range": "self (20ft radius)",
 			"description": [
-				"You emit a strange soundwave that only damages creature that share a type with you. Any creature within a 40 foot circle that shares at least one of your types must make a CON save against your Move DC, taking 2d10 + MOVE psychic damage on a failure, or half as much on a success."
+				"You emit a strange soundwave that only damages creature that share a type with you. Any creature within 20 feet of you that shares at least one of your types must make a CON save against your Move DC, taking 2d10 + MOVE psychic damage on a failure, or half as much on a success."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 4d10 at level 10, and 7d8 at level 17.",
 			"damage": {
@@ -21667,7 +21667,7 @@
 			"duration": "1 minute, concentration",
 			"range": "self (30ft radius)",
 			"description": [
-				"You whip up a turbulent whirlwind that boosts the speed of all allies in a 60 foot circle, centered on you. You and any ally that starts their turn inside the area has their speed doubled until the end of their turn."
+				"You whip up a turbulent whirlwind that boosts the speed of all allies in a 30-foot-radius circle, centered on you. You and any ally that starts their turn inside the area has their speed doubled until the end of their turn."
 			],
 			"tm": {
 				"id": 168,
@@ -21877,7 +21877,7 @@
 			"duration": "instantaneous",
 			"range": "self (20ft radius)",
 			"description": [
-				"You start to perform a difficult dance, confusing all creatures in range. Creatures in a 40 foot circle around you must make a WIS save against your Move DC, becoming confused on a fail."
+				"You start to perform a difficult dance, confusing all creatures in range. Creatures within 20 feet of you must make a WIS save against your Move DC, becoming confused on a fail."
 			],
 			"save": {
 				"attribute": [
@@ -23294,7 +23294,7 @@
 			"duration": "3 rounds, concentration",
 			"range": "self (30ft radius)",
 			"description": [
-				"You cause an uproar on the battlefield in a 60 foot circle, centered on you, for three rounds of combat. During the uproar, your action is spent continuing the move (without spending PP), and any creature in range wakes and is prevented from falling asleep. (This include creatures that would purposefully fall asleep using moves like Rest) In addition, creatures in the area at the start of their turns must make a CON save against your Move DC, taking 2d8 + MOVE normal damage on a fail, or half as much on a success."
+				"You cause an uproar on the battlefield in a 30-foot-radius circle, centered on you, for three rounds of combat. During the uproar, your action is spent continuing the move (without spending PP), and any creature in range wakes and is prevented from falling asleep. (This include creatures that would purposefully fall asleep using moves like Rest) In addition, creatures in the area at the start of their turns must make a CON save against your Move DC, taking 2d8 + MOVE normal damage on a fail, or half as much on a success."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
 			"damage": {
@@ -24248,7 +24248,7 @@
 			"duration": "1 minute, concentration",
 			"range": "self (50ft radius)",
 			"description": [
-				"You create a bizarre vibe in the air in a 100 foot circle, centered on you. For the duration, all WIS saves become CON saves and all CON saves become WIS saves."
+				"You create a bizarre vibe in the air in a 50-foot-radius circle, centered on you. For the duration, all WIS saves become CON saves and all CON saves become WIS saves."
 			]
 		},
 		{
