@@ -12955,6 +12955,10 @@
 			"description": [
 				"You summon a move at random to inflict against a creature. When you use this move, roll a d100. The resulting number is the TM number for the move you make. If the move is unable to be completed because of positioning, range, etc., Metronome fails."
 			],
+			"optional": [
+				"Instead of a d100, roll a d256.",
+				"If using real dice, roll a d4 and two d10s; for the d4, treat a result of \"4\" as \"0\" instead. The d4 result represents the hundred's place, the first d10 represents the ten's place, and the second d10 represents the one's place. This combined number is the TM number for Metronome. If no such TM exists, reroll all three dice until it does."
+			],
 			"tm": {
 				"id": 149,
 				"cost": 2500
