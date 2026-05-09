@@ -967,7 +967,7 @@
     {
       "id": "poison-heal",
       "name": "Poison Heal",
-      "description": "This Pokémon does not suffer the disadvantage effects of the poisoned status. In addition, this Pokémon recovers half of all poison damage it would take, including the damage at each of the end of its turns."
+      "description": "This Pokémon does not suffer the disadvantage effects of the poisoned status condition. Additionally, when this pokemon would take poison-type damage or damage from the poisoned condition, it instead recovers HP equal to half the damage it would have taken."
     },
     {
       "id": "poison-point",
