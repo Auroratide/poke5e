@@ -94,7 +94,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 		},
 		level15: {
 			name: "Professor",
-			description: ["At level 15, you are an expert in your field. You many now use your Analyst ability as a bonus action. Additionally, your Analyst ability now reveals either one additional ability or move the target Pokémon has."],
+			description: ["At level 15, you are an expert in your field. You may now use your Analyst ability as a bonus action. Additionally, your Analyst ability now reveals either one additional ability or move the target Pokémon has."],
 		},
 	},
 }, {
