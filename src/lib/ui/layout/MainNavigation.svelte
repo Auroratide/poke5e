@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ComponentType } from "svelte"
+	import type { Component } from "svelte"
 	import type { ThemeColor } from "$lib/ui/theme"
 	import Container from "./Container.svelte"
 	import { MenuIcon } from "$lib/ui/icons"
@@ -13,7 +13,7 @@
 		href: string,
 		name: string,
 		color: ThemeColor,
-		icon: ComponentType,
+		icon: Component,
 	}[]
 
 	$: firstFewItems = items.slice(0, NUMBER_OF_UNMENUED_ITEMS)

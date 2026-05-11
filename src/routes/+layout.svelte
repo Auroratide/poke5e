@@ -35,7 +35,7 @@
 		VsIcon,
 	} from "$lib/ui/icons"
 	import { page } from "$app/stores"
-	import type { ComponentType } from "svelte"
+	import type { Component, Snippet } from "svelte"
 	import {
 		Container,
 		MainNavigation,
@@ -43,6 +43,7 @@
 		SkipLinks,
 		MAIN_CONTENT_ID,
 		MAIN_SEARCH_ID,
+		ErrorPage,
 	} from "$lib/ui/layout"
 	import type { ThemeColor } from "$lib/ui/theme"
 	import { Url } from "$lib/site/url"
@@ -54,13 +55,20 @@
 		import("@auroratide/tab-list/lib/define.js")
 	}
 
-	export let data: LayoutData
-	$: activeSection = data.activeSection
+	let {
+		data,
+		resetStores = (filter?: Writable<string>, sorter?: Writable<() => number>) => () => {
+			filter?.set("")
+			sorter?.set(() => 0)
+		},
+		children,
+	}: {
+		data: LayoutData,
+		resetStores: (filter?: Writable<string>, sorter?: Writable<() => number>) => () => void,
+		children?: Snippet,
+	} = $props()
 
-	export let resetStores = (filter?: Writable<string>, sorter?: Writable<() => number>) => () => {
-		filter?.set("")
-		sorter?.set(() => 0)
-	}
+	let activeSection = $derived(data.activeSection)
 
 	// Deactivated due to major performance issues on mobile and Safari; needs to be revisited
 	// initializeTransitions()
@@ -80,15 +88,15 @@
 	})
 
 	// Sort of an abusive way to make sure this is always right
-	$: hasContent = browser && $page.url != null ? (document.querySelector(`#${MAIN_CONTENT_ID}`)?.textContent?.length ?? 0) > 0 : false
-	$: hasSearch = browser && $page.url != null ? (document.querySelector(`#${MAIN_SEARCH_ID}`)?.textContent?.length ?? 0) > 0 : false
+	let hasContent = $derived(browser && $page.url != null ? (document.querySelector(`#${MAIN_CONTENT_ID}`)?.textContent?.length ?? 0) > 0 : false)
+	let hasSearch = $derived(browser && $page.url != null ? (document.querySelector(`#${MAIN_SEARCH_ID}`)?.textContent?.length ?? 0) > 0 : false)
 
 	const navItems: {
 		id: string,
 		href: string,
 		name: string,
 		color: ThemeColor,
-		icon: ComponentType,
+		icon: Component,
 	}[] = [ {
 		id: "pokemon",
 		href: Url.pokemon(),
@@ -160,7 +168,13 @@
 		</Container>
 	</header>
 	<div class="content">
-		<slot></slot>
+		<svelte:boundary>
+			{@render children?.()}
+
+			{#snippet failed(error)}
+				<ErrorPage title="Something went wrong..." {error} action="rendering {$page.url}" />
+			{/snippet}
+		</svelte:boundary>
 	</div>
 	<SiteFooter {currentVersion} versionHighlight={currentHighlight} />
 	<ErrorDialog />

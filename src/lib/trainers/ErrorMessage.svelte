@@ -8,7 +8,7 @@
 	let referenceId: string | undefined = undefined
 
 	onMount(() => {
-		ErrorsDb.report(action, error instanceof DetailedError ? error.details : error instanceof Error ? error.message : error).then((id) => {
+		ErrorsDb.report(action ?? "", error instanceof DetailedError ? error.details : error instanceof Error ? error.message : error).then((id) => {
 			referenceId = id
 		})
 	})
