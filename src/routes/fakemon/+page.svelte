@@ -82,7 +82,7 @@
 				{#if listLoading}
 					<Loader />
 				{:else if listError}
-					<ErrorMessage error={listError} />
+					<ErrorMessage error={listError} action="Loading Fakemon List" />
 				{/if}
 			{/if}
 		</nav>
@@ -106,7 +106,7 @@
 					<InfoFakemonPage {fakemon} />
 				{/if}
 			{:catch error}
-				<ErrorMessage error="{error}" />
+				<ErrorMessage error="{error}" action="Loading Fakemon {fakemonId}" />
 			{/await}
 		{:else}
 			{#if action === PageAction.add}

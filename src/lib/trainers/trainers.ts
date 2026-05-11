@@ -97,12 +97,12 @@ const createStore = () => {
 							let avatar = info.avatar
 							if (options.updateAvatar != null) {
 								if (options.updateAvatar.type === "new") {
-									avatar = await provider.updateTrainerAvatar(data.writeKey, options.updateAvatar.value, info.avatar).catch((e) => {
+									avatar = await provider.updateTrainerAvatar(data.writeKey, data.info.readKey, options.updateAvatar.value, info.avatar).catch((e) => {
 										error.show("updateTrainerAvatar", e)
 										throw e
 									})
 								} else {
-									await provider.removeTrainerAvatar(data.writeKey, info.avatar).catch((e) => {
+									await provider.removeTrainerAvatar(data.writeKey, data.info.readKey, info.avatar).catch((e) => {
 										error.show("removeTrainerAvatar", e)
 										throw e
 									})
@@ -122,13 +122,13 @@ const createStore = () => {
 							if (options.optimistic) {
 								updateStore(info)
 
-								return provider.updateTrainerInfo(data.writeKey, info).then(() => {}).catch((e) => {
+								return provider.updateTrainerInfo(data.writeKey, data.info.readKey, info).then(() => {}).catch((e) => {
 									updateStore(original)
 									error.show("updateTrainerInfo", e)
 									throw e
 								})
 							} else {
-								return provider.updateTrainerInfo(data.writeKey, info).then(() => {
+								return provider.updateTrainerInfo(data.writeKey, data.info.readKey, info).then(() => {
 									updateStore(info)
 								}).catch((e: Error) => {
 									error.show("updateTrainerInfo", e)
@@ -137,7 +137,7 @@ const createStore = () => {
 							}
 						},
 						inventory: (info: TrainerInfo) => {
-							return provider.updateTrainerInventory(data.writeKey, info.inventory).then((newInventory) => {
+							return provider.updateTrainerInventory(data.writeKey, data.info.readKey, info.inventory).then((newInventory) => {
 								storeUpdateOne(readKey, (prev) => ({
 									...prev,
 									info: {
@@ -183,7 +183,7 @@ const createStore = () => {
 							}
 						},
 						trainerFeats: (info: TrainerInfo) => {
-							return provider.updateTrainerFeats(data.writeKey, info.feats).then((newFeats) => {
+							return provider.updateTrainerFeats(data.writeKey, data.info.readKey, info.feats).then((newFeats) => {
 								storeUpdateOne(readKey, (prev) => ({
 									...prev,
 									info: {
@@ -214,12 +214,12 @@ const createStore = () => {
 							let avatar = info.avatar
 							if (options.updateAvatar != null) {
 								if (options.updateAvatar.type === "new") {
-									avatar = await provider.updatePokemonAvatar(data.writeKey, info, options.updateAvatar.value).catch((e) => {
+									avatar = await provider.updatePokemonAvatar(data.writeKey, data.info.readKey, info, options.updateAvatar.value).catch((e) => {
 										error.show("updatePokemonAvatar", e)
 										throw e
 									})
 								} else {
-									await provider.removePokemonAvatar(data.writeKey, info).catch((e) => {
+									await provider.removePokemonAvatar(data.writeKey, data.info.readKey, info).catch((e) => {
 										error.show("removePokemonAvatar", e)
 										throw e
 									})
@@ -246,13 +246,13 @@ const createStore = () => {
 							if (options.optimistic) {
 								updateStore(info)
 
-								return provider.updatePokemon(data.writeKey, info).then(() => {}).catch((e) => {
+								return provider.updatePokemon(data.writeKey, data.info.readKey, info).then(() => {}).catch((e) => {
 									updateStore(original)
 									error.show("updatePokemon", e)
 									throw e
 								})
 							} else {
-								return provider.updatePokemon(data.writeKey, info).then(() => {
+								return provider.updatePokemon(data.writeKey, data.info.readKey,  info).then(() => {
 									updateStore(info)
 								}).catch((e: Error) => {
 									error.show("updatePokemon", e)
@@ -261,7 +261,7 @@ const createStore = () => {
 							}
 						},
 						moveset: (info: TrainerPokemon) => {
-							return provider.updateMoveset(data.writeKey, info.id, info.moves).then((newMoves) => {
+							return provider.updateMoveset(data.writeKey, data.info.readKey, info.id, info.moves).then((newMoves) => {
 								storeUpdateOne(readKey, (prev) => {
 									const pokemonList = [...prev.pokemon]
 									const pokeIndex = pokemonList.findIndex((it) => it.id === info.id)
@@ -358,7 +358,7 @@ const createStore = () => {
 							})
 						},
 						addToTeam: (pokemon: PokemonSpecies) => {
-							return provider.addPokemonToTeam(data.writeKey, data.info.id, pokemon, data.pokemon.length).then((result) => {
+							return provider.addPokemonToTeam(data.writeKey, data.info.readKey, data.info.id, pokemon, data.pokemon.length).then((result) => {
 								storeUpdateOne(readKey, (prev) => {
 									const pokemonList = [...prev.pokemon, result]
 
@@ -375,7 +375,7 @@ const createStore = () => {
 							})
 						},
 						reorderTeam: (order: TrainerPokemon[]) => {
-							return provider.reorderPokemonTeam(data.writeKey, order).then(() => {
+							return provider.reorderPokemonTeam(data.writeKey, data.info.readKey, order).then(() => {
 								storeUpdateOne(readKey, (prev) => {
 									return {
 										...prev,
@@ -388,7 +388,7 @@ const createStore = () => {
 							})
 						},
 						removeFromTeam: (id: string) => {
-							return provider.removePokemon(data.writeKey, id).then(() => {
+							return provider.removePokemon(data.writeKey, data.info.readKey, id).then(() => {
 								storeUpdateOne(readKey, (prev) => {
 									const pokemonList = prev.pokemon.filter((it) => it.id !== id)
 

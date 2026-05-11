@@ -141,7 +141,7 @@ export const Encounter = {
 
 		const pokemon = (await Promise.all(encounter.pokemon.map(async (pokemon) => {
 			return await Promise.all(Array(pokemon.count).fill(0).map(async (_, i) => {
-				const added = await trainerProvider.addPokemonToTeam(trainer.writeKey, trainer.info.id, pokemon.data, i)
+				const added = await trainerProvider.addPokemonToTeam(trainer.writeKey, trainer.info.readKey, trainer.info.id, pokemon.data, i)
 
 				const targetLevel = new Level(pokemon.level)
 
@@ -158,7 +158,7 @@ export const Encounter = {
 				added.hp.max = withAdjustedStats.hp
 				added.attributes = withAdjustedStats.attributes
 	
-				await trainerProvider.updatePokemon(trainer.writeKey, added)
+				await trainerProvider.updatePokemon(trainer.writeKey, trainer.info.readKey, added)
 
 				// MOVES
 				const chosenMoves = MovesetGenerator.chooseMoves(pokemon.data.moves, targetLevel)
@@ -175,7 +175,7 @@ export const Encounter = {
 					}
 				})
 
-				const updatedMoveset = await trainerProvider.updateMoveset(trainer.writeKey, added.id, learnedMoves)
+				const updatedMoveset = await trainerProvider.updateMoveset(trainer.writeKey, trainer.info.readKey, added.id, learnedMoves)
 				added.moves = updatedMoveset
 
 				return added

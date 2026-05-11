@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { DetailedError, ErrorsDb } from "$lib/site/errors"
+	import { ErrorMessages, ErrorsDb } from "$lib/site/errors"
 	import { onMount } from "svelte"
 
-	export let error: Error | string
-	export let action: string | null = null
+	export let error: unknown
+	export let action: string
 
 	let referenceId: string | undefined = undefined
 
 	onMount(() => {
-		ErrorsDb.report(action ?? "", error instanceof DetailedError ? error.details : error instanceof Error ? error.message : error).then((id) => {
+		ErrorsDb.report(action ?? "", error).then((id) => {
 			referenceId = id
 		})
 	})
@@ -16,9 +16,9 @@
 
 <section>
 	<p class="large"><strong>Something went wrong...</strong></p>
-	<blockquote>{error instanceof Error ? error.message : error}</blockquote>
+	<blockquote>{ErrorMessages.simple(error)}</blockquote>
 	{#if referenceId != null}
-		<p><strong>ID</strong>: {referenceId}</p>
+		<p><strong>Error ID</strong>: <code>{referenceId}</code></p>
 	{/if}
 	<p>If you are seeing this error, then something may be wrong with one of the downstream systems. Please check back later to see if this is still an issue!</p>
 	<p class="font-sm">You can also help by <a class="error" href="https://github.com/Auroratide/poke5e/issues/new">reporting this error</a>!</p>

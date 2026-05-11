@@ -25,7 +25,7 @@ export interface FakemonDataProvider {
 
 export class FakemonDataProviderError extends DetailedError {
 	constructor(message: string, readonly diagnostics?: PostgrestError) {
-		super(message, diagnostics ? `Code: ${diagnostics.code}; ${diagnostics.message}` : "")
+		super(message, diagnostics ? `Code: ${diagnostics.code}; ${diagnostics.message}` : "", { cause: diagnostics })
 	}
 }
 

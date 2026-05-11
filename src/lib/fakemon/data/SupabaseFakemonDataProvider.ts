@@ -31,7 +31,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		return this.supabase.rpc("get_fakemon", { _read_key: readKey })
 			.maybeSingle<FakemonRow>()
 			.then(async ({ data, error }) => {
-				this.validateError("Could not get fakemon.", error)
+				this.validateError(`Could not get fakemon (${readKey}).`, error)
 
 				if (!data) return undefined
 
@@ -82,7 +82,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			...this.toQuery(fakemon.data.species),
 		}).single<number>()
 
-		this.validateError("Could not edit fakemon.", error)
+		this.validateError(`Could not edit fakemon (${fakemon.data.readKey}).`, error)
 
 		return data > 0
 	}

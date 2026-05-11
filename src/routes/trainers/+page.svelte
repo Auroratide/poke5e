@@ -90,7 +90,7 @@
 						<NoTrainer trainerKey={trainerId} />
 					{/if}
 				{:catch error}
-					<ErrorMessage error="{error}" />
+					<ErrorMessage error="{error}" action="Loading Trainer {trainerId}" />
 				{/await}
 			{:else}
 				{#await trainerList}
@@ -100,7 +100,7 @@
 						<TrainerList trainers={trainerList} showGetStarted={action == null} />
 					{/if}
 				{:catch error}
-					<ErrorMessage error="{error}" />
+					<ErrorMessage error="{error}" action="Loading Trainer List" />
 				{/await}
 			{/if}
 		</nav>
@@ -152,7 +152,7 @@
 					<TrainerCard {trainer} />
 				{/if}
 			{:catch error}
-				<ErrorMessage error="{error}" />
+				<ErrorMessage error="{error}" action="Loading Trainer {trainerId}" />
 			{/await}
 		{:else}
 			{#if action === PageAction.newTrainer}

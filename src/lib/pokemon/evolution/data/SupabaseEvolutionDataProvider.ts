@@ -13,13 +13,14 @@ export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 		if (seen.includes(species.data)) return []
 
 		const { data, error } = await this.supabase.rpc("get_fakemon_evolutions", { _fakemon_id: species.data }).select<"*", EvolutionRow>()
+		const dataAsArray = Array.isArray(data) ? data : [data]
 
-		this.validateError("Could not get evolutions.", error)
+		this.validateError(`Could not get evolutions for ${species.data}.`, error)
 
 		seen.push(species.data)
 
 		const dedupMap = new Map<EvolutionId, Evolution>()
-		for (const evo of data) {
+		for (const evo of dataAsArray) {
 			const convertedEvolution = rowToEvolution(evo)
 			dedupMap.set(convertedEvolution.id, convertedEvolution)
 
@@ -41,10 +42,10 @@ export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 			this.toQuery(draft, writeKeys),
 		).single<number>()
 
-		this.validateError("Could not add evolution", error, draft)
+		this.validateError(`Could not add evolution (${draft.from} to ${draft.to})`, error, draft)
 
 		if (data == null) {
-			throw new EvolutionDataProviderError("Could not add evolution", draft)
+			throw new EvolutionDataProviderError(`Could not add evolution (${draft.from} to ${draft.to})`, draft)
 		}
 
 		return new Evolution({
@@ -61,9 +62,9 @@ export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 			...this.toQuery(evolution.data, writeKeys),
 		}).single<number>()
 
-		this.validateError("Could not update evolution.", error, evolution.data)
+		this.validateError(`Could not update evolution (${evolution.from.data} to ${evolution.to.data}).`, error, evolution.data)
 		if (data < 1) {
-			throw new EvolutionDataProviderError("Could not update evolution.", evolution.data)
+			throw new EvolutionDataProviderError(`Could not update evolution (${evolution.from.data} to ${evolution.to.data}).`, evolution.data)
 		}
 
 		return evolution
@@ -76,10 +77,10 @@ export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 			_original_to_write_key: writeKeys.to ?? null,
 		}).single<number>()
 
-		this.validateError("Could not remove evolution.", error)
+		this.validateError(`Could not remove evolution (${evolution}).`, error)
 
 		if (data < 1) {
-			throw new EvolutionDataProviderError("Could not remove evolution.")
+			throw new EvolutionDataProviderError(`Could not remove evolution (${evolution}).`)
 		}
 	}
 
@@ -102,7 +103,7 @@ export class SupabaseEvolutionDataProvider implements EvolutionDataProvider {
 				throw new DuplicateEvolutionError(evolution)
 			}
 
-			throw new EvolutionDataProviderError(message, evolution)
+			throw new EvolutionDataProviderError(message, evolution, e)
 		}
 	}
 }

@@ -1,6 +1,6 @@
 import { writable } from "svelte/store"
 import { ErrorsDb } from "./ErrorsDb"
-import { DetailedError } from "./DetailedError"
+import { ErrorMessages } from "./ErrorMessages"
 
 export type ErrorMessage = {
 	hasError: boolean,
@@ -15,13 +15,10 @@ const { subscribe, set, update } = writable<ErrorMessage>({
 export const error = {
 	subscribe,
 	show: (action: string, error: Error) => {
-		const simpleMessage = error.message
-		const detailedMessage = error instanceof DetailedError ? error.details : simpleMessage
-
-		ErrorsDb.report(action, detailedMessage).then((id) => {
+		ErrorsDb.report(action, error).then((id) => {
 			set({
 				hasError: true,
-				message: simpleMessage,
+				message: ErrorMessages.simple(error),
 				referenceId: id,
 			})
 		})

@@ -2,23 +2,23 @@
 	import { onMount } from "svelte"
 	import Container from "./Container.svelte"
 	import { MAIN_CONTENT_ID } from "./SkipLinks.svelte"
-	import { DetailedError, ErrorsDb } from "$lib/site/errors";
+	import { ErrorMessages, ErrorsDb } from "$lib/site/errors"
 	import { Url } from "$lib/site/url"
 
 	let {
 		title,
 		error,
-		action = null,
+		action,
 	}: {
 		title: string,
 		error: unknown,
-		action?: string | null,
+		action: string,
 	} = $props()
 
 	let referenceId: string | undefined = $state(undefined)
 
 	onMount(() => {
-		ErrorsDb.report(action ?? "", error instanceof DetailedError ? error.details : error instanceof Error ? error.message : typeof error === "string" ? error : "Unknown Error").then((id) => {
+		ErrorsDb.report(action, error).then((id) => {
 			referenceId = id
 		})
 	})
@@ -29,7 +29,7 @@
 		<header>
 			<h1>{title}</h1>
 		</header>
-		<blockquote>{error instanceof Error ? error.message : error}</blockquote>
+		<blockquote>{ErrorMessages.simple(error)}</blockquote>
 		{#if referenceId != null}
 			<p><strong>Error ID</strong>: <code>{referenceId}</code></p>
 		{/if}

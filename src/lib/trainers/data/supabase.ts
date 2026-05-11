@@ -55,7 +55,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 		TrainerLocalStorage.addReadKey(readKey)
     
-		const pokemon: TrainerPokemon[] = await this.getTrainersPokemon(trainer.id)
+		const pokemon: TrainerPokemon[] = await this.getTrainersPokemon(trainer.id, readKey)
 
 		const writeKey = TrainerLocalStorage.getWriteKey(readKey)
     
@@ -71,7 +71,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			.maybeSingle<TrainerRow>()
 			.then(({ data, error }) => {
 				if (error) {
-					throw new TrainerDataProviderError("Could not get trainer.", error)
+					throw new TrainerDataProviderError(`Could not get trainer (${readKey}).`, error)
 				}
 
 				if (!data) return undefined
@@ -92,12 +92,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return trainer
 	}
 
-	private getTrainersPokemon = async (trainerId: string): Promise<TrainerPokemon[]> => {
+	private getTrainersPokemon = async (trainerId: string, readKey: ReadWriteKey): Promise<TrainerPokemon[]> => {
 		return await this.supabase.rpc("get_pokemon", { _trainer_id: trainerId })
 			.select()
 			.then(({ data, error }) => {
 				if (error) {
-					throw new TrainerDataProviderError("Could not trainer's pokemon.", error)
+					throw new TrainerDataProviderError(`Could not trainer's pokemon (${readKey}).`, error)
 				}
 
 				return Promise.all(data.map((it) => rowToPokemon(it, this.getUserAssetResource)))
@@ -294,7 +294,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 	}
 
-	updateTrainerInfo = async (writeKey: ReadWriteKey, info: TrainerInfo): Promise<boolean> => {
+	updateTrainerInfo = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, info: TrainerInfo): Promise<boolean> => {
 		const { data, error } = await this.supabase.rpc("update_trainer", {
 			_write_key: writeKey,
 			_name: info.name,
@@ -372,7 +372,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}).single<number>()
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not update trainer.", error)
+			throw new TrainerDataProviderError(`Could not update trainer (${readKey}).`, error)
 		}
 
 		if (data <= 0) {
@@ -382,13 +382,13 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return data > 0
 	}
 
-	updateTrainerAvatar = async (writeKey: ReadWriteKey, newAvatar: File, oldResource?: StorageResource): Promise<StorageResource> => {
+	updateTrainerAvatar = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, newAvatar: File, oldResource?: StorageResource): Promise<StorageResource> => {
 		const filename = await this.generateTrainerAvatarFilename(writeKey, newAvatar)
 
 		const { error: uploadError } = await this.supabase.storage.from(TRAINER_AVATARS_BUCKET).upload(filename, newAvatar)
 
 		if (uploadError) {
-			throw new TrainerDataProviderError("Could not upload file for trainer.")
+			throw new TrainerDataProviderError(`Could not upload file for trainer (${readKey}).`)
 		}
 
 		await this.removeOldTrainerAvatar(oldResource)
@@ -396,7 +396,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return this.getStorageResource(TRAINER_AVATARS_BUCKET, filename)
 	}
 
-	removeTrainerAvatar = async (writeKey: ReadWriteKey, oldResource?: StorageResource): Promise<void> => {
+	removeTrainerAvatar = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, oldResource?: StorageResource): Promise<void> => {
 		const { data, error } = await this.supabase.rpc("remove_trainer_avatar", {
 			_write_key: writeKey,
 		}).single<number>()
@@ -406,7 +406,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not remove trainer's avatar image", error)
+			throw new TrainerDataProviderError(`Could not remove trainer's avatar image (${readKey})`, error)
 		}
 
 		await this.removeOldTrainerAvatar(oldResource)
@@ -461,7 +461,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return data > 0
 	}
 
-	updatePokemon = async (writeKey: ReadWriteKey, info: TrainerPokemon): Promise<boolean> => {
+	updatePokemon = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, info: TrainerPokemon): Promise<boolean> => {
 		const { data, error } = await this.supabase.rpc("update_pokemon", {
 			_write_key: writeKey,
 			_id: parseInt(info.id),
@@ -534,7 +534,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}).single<number>()
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not update pokemon.", error)
+			throw new TrainerDataProviderError(`Could not update pokemon (${readKey} ${info.id}).`, error)
 		}
 
 		if (data <= 0) {
@@ -544,7 +544,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return data > 0
 	}
 
-	updatePokemonAvatar = async (writeKey: ReadWriteKey, info: TrainerPokemon, newAvatar: File): Promise<StorageResource> => {
+	updatePokemonAvatar = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, info: TrainerPokemon, newAvatar: File): Promise<StorageResource> => {
 		const { data, error } = await this.supabase.functions.invoke<PostUserAssetsResponseBody>("user-assets", {
 			method: "POST",
 			body: {
@@ -559,7 +559,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		})
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not upload file for pokemon.")
+			throw new TrainerDataProviderError(`Could not upload file for pokemon (${readKey} ${info.id}).`)
 		}
 
 		await this.userAssets.upload(data.values.uploadUrl, newAvatar)
@@ -567,7 +567,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return this.getUserAssetResource(data.values.filename)
 	}
 
-	removePokemonAvatar = async (writeKey: ReadWriteKey, info: TrainerPokemon): Promise<void> => {
+	removePokemonAvatar = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, info: TrainerPokemon): Promise<void> => {
 		const { error } = await this.supabase.functions.invoke("user-assets", {
 			method: "DELETE",
 			body: {
@@ -581,11 +581,11 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 		if (error) {
 			console.error(error)
-			throw new TrainerDataProviderError("Could not delete file for pokemon.")
+			throw new TrainerDataProviderError(`Could not delete file for pokemon (${readKey} ${info.id}).`)
 		}
 	}
 
-	addPokemonToTeam = async (writeKey: ReadWriteKey, trainerId: TrainerId, pokemon: PokemonSpecies, rank: number = 0): Promise<TrainerPokemon> => {
+	addPokemonToTeam = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, trainerId: TrainerId, pokemon: PokemonSpecies, rank: number = 0): Promise<TrainerPokemon> => {
 		const defaultAbility = pokemon.abilities.normal[0]
 
 		const trainerPokemon: Omit<TrainerPokemon, "id"> = {
@@ -708,7 +708,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
     
 		if (error) {
 			console.error(error)
-			throw new TrainerDataProviderError("Could not add pokemon.", error)
+			throw new TrainerDataProviderError(`Could not add pokemon (${readKey}).`, error)
 		}
 
 		return {
@@ -717,27 +717,27 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 	}
 
-	reorderPokemonTeam = async (writeKey: ReadWriteKey, order: TrainerPokemon[]): Promise<boolean> => {
+	reorderPokemonTeam = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, order: TrainerPokemon[]): Promise<boolean> => {
 		const { error } = await this.supabase.rpc("reorder_pokemon", {
 			_write_key: writeKey,
 			_ids: order.map((it) => it.id),
 		}).single<number>()
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not reorder pokemon.", error)
+			throw new TrainerDataProviderError(`Could not reorder pokemon (${readKey}).`, error)
 		}
 
 		return true
 	}
 
-	removePokemon = async (writeKey: string, id: string): Promise<boolean> => {
+	removePokemon = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, id: string): Promise<boolean> => {
 		const { data, error } = await this.supabase.rpc("remove_pokemon", {
 			_write_key: writeKey,
 			_id: id,
 		}).single<number>()
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not remove pokemon.", error)
+			throw new TrainerDataProviderError(`Could not remove pokemon (${readKey} ${id}).`, error)
 		}
 
 		return data > 0
@@ -746,6 +746,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 	private updateListOfThings = async <T extends { id: string }>({
 		thingName,
 		writeKey,
+		errorDisplayId,
 		newThings,
 		getExistingThings,
 		removeFunctionName,
@@ -755,6 +756,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 	}: {
 		thingName: string,
 		writeKey: ReadWriteKey,
+		errorDisplayId: string,
 		newThings: T[],
 		getExistingThings: () => Promise<T[]>,
 		removeFunctionName: string,
@@ -773,7 +775,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_id: id,
 		}).single<number>().then(({ data, error }) => {
 			if (error) {
-				throw new TrainerDataProviderError(`Could not delete ${thingName}.`, error)
+				throw new TrainerDataProviderError(`Could not delete ${thingName} (${errorDisplayId}).`, error)
 			}
 
 			if (data <= 0) {
@@ -787,7 +789,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			if (existingIds.includes(thing.id)) {
 				return this.supabase.rpc(updateFunctionName, mapThingToDbArgument(thing, index, "update")).single<number>().then(({ data, error }) => {
 					if (error) {
-						throw new TrainerDataProviderError(`Could not update ${thingName}.`, error)
+						throw new TrainerDataProviderError(`Could not update ${thingName} (${errorDisplayId}).`, error)
 					}
 
 					if (data <= 0) {
@@ -811,9 +813,10 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}))
 	}
 
-	updateMoveset = async (writeKey: ReadWriteKey, pokemonId: PokemonId, newMoveset: LearnedMove[]) => this.updateListOfThings<LearnedMove>({
+	updateMoveset = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, pokemonId: PokemonId, newMoveset: LearnedMove[]) => this.updateListOfThings<LearnedMove>({
 		thingName: "move",
 		writeKey: writeKey,
+		errorDisplayId: readKey,
 		newThings: newMoveset,
 		getExistingThings: () => this.getMoveset(pokemonId),
 		removeFunctionName: "remove_move",
@@ -842,7 +845,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}).single<number>()
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not update pokemon.", error)
+			throw new TrainerDataProviderError(`Could not update move on pokemon (${move.id}).`, error)
 		}
 
 		if (data <= 0) {
@@ -855,6 +858,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 	updateAllHeldItems = async (writeKey: ReadWriteKey, pokemonId: PokemonId, newHeldItems: HeldItem[]) => this.updateListOfThings<HeldItem>({
 		thingName: "held item",
 		writeKey: writeKey,
+		errorDisplayId: pokemonId,
 		newThings: newHeldItems,
 		getExistingThings: () => this.getHeldItems(pokemonId),
 		removeFunctionName: "remove_held_item",
@@ -871,9 +875,10 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}),
 	})
 
-	updateTrainerInventory = async (writeKey: ReadWriteKey, newInventory: InventoryItem[]) => this.updateListOfThings<InventoryItem>({
+	updateTrainerInventory = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, newInventory: InventoryItem[]) => this.updateListOfThings<InventoryItem>({
 		thingName: "inventory item",
 		writeKey: writeKey,
+		errorDisplayId: readKey,
 		newThings: newInventory,
 		getExistingThings: () => this.getTrainerInventory(TrainerLocalStorage.getReadKey(writeKey)),
 		removeFunctionName: "remove_inventory_item",
@@ -890,9 +895,10 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}),
 	})
 
-	updateTrainerFeats = async (writeKey: ReadWriteKey, newFeats: ChosenFeat[]) => this.updateListOfThings<ChosenFeat>({
+	updateTrainerFeats = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, newFeats: ChosenFeat[]) => this.updateListOfThings<ChosenFeat>({
 		thingName: "feat",
 		writeKey: writeKey,
+		errorDisplayId: readKey,
 		newThings: newFeats,
 		getExistingThings: () => this.getTrainerFeats(TrainerLocalStorage.getReadKey(writeKey)),
 		removeFunctionName: "remove_trainer_feat",
@@ -911,6 +917,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 	updatePokemonFeats = async (writeKey: ReadWriteKey, pokemonId: PokemonId, newFeats: ChosenFeat[]) => this.updateListOfThings<ChosenFeat>({
 		thingName: "feat",
 		writeKey: writeKey,
+		errorDisplayId: pokemonId,
 		newThings: newFeats,
 		getExistingThings: () => this.getPokemonFeats(pokemonId),
 		removeFunctionName: "remove_pokemon_feat",
@@ -938,7 +945,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}).single<number>()
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not update inventory item.", error)
+			throw new TrainerDataProviderError(`Could not update inventory item (${item.id}).`, error)
 		}
 
 		if (data <= 0) {
@@ -970,7 +977,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			.select()
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not get moveset.", error)
+			throw new TrainerDataProviderError(`Could not get moveset (${id}).`, error)
 		}
 
 		return data?.map((move) => rowToMove(move)) ?? []
@@ -981,7 +988,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			.select()
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not get held items.", error)
+			throw new TrainerDataProviderError(`Could not get held items (${id}).`, error)
 		}
 
 		return data?.map((row) => rowToHeldItem(row)) ?? []
@@ -992,7 +999,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			.select()
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not get inventory items.", error)
+			throw new TrainerDataProviderError(`Could not get inventory items (${readKey}).`, error)
 		}
 
 		return data?.map((row) => rowToInventoryItem(row)) ?? []
@@ -1003,7 +1010,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			.select()
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not get trainer feats.", error)
+			throw new TrainerDataProviderError(`Could not get trainer feats (${readKey}).`, error)
 		}
 
 		return data?.map((row) => rowToTrainerFeat(row)) ?? []
@@ -1014,7 +1021,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			.select()
 
 		if (error) {
-			throw new TrainerDataProviderError("Could not get pokemon feats.", error)
+			throw new TrainerDataProviderError(`Could not get pokemon feats (${pokemonId}).`, error)
 		}
 
 		return data?.map((row) => rowToPokemonFeat(row)) ?? []

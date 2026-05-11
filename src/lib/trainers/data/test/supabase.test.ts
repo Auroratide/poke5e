@@ -43,8 +43,8 @@ test("add, get, update", async () => {
 	})
 
 	const addedTrainer = await provider.newTrainer(trainerToAdd)
-	const firstAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, firstSpeciesToAdd)
-	const secondAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, secondSpeciesToAdd)
+	const firstAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, firstSpeciesToAdd)
+	const secondAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, secondSpeciesToAdd)
 
 	const receivedTrainer = await provider.getTrainer(addedTrainer.info.readKey)
 	const receivedPokemonIds = receivedTrainer.pokemon.map((it) => it.id)
@@ -54,9 +54,9 @@ test("add, get, update", async () => {
 	expect(receivedPokemonIds).toContain(secondAddedPokemon.id)
 
 	firstAddedPokemon.bond.level = 3
-	await provider.updatePokemon(addedTrainer.writeKey, firstAddedPokemon)
+	await provider.updatePokemon(addedTrainer.writeKey, addedTrainer.info.readKey, firstAddedPokemon)
 	addedTrainer.info.level = new Level(10)
-	await provider.updateTrainerInfo(addedTrainer.writeKey, addedTrainer.info)
+	await provider.updateTrainerInfo(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info)
 
 	const trainerAfterUpdate = await provider.getTrainer(addedTrainer.info.readKey)
 	const firstPokemonAfterUpdate = trainerAfterUpdate.pokemon.find((it) => it.id === firstAddedPokemon.id)
@@ -80,11 +80,11 @@ test("getting abilities", async () => {
 	})
 
 	const addedTrainer = await provider.newTrainer(trainerToAdd)
-	const addedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, speciesToAdd)
+	const addedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, speciesToAdd)
 	
 	addedPokemon.abilities = [ABILITIES.disguise, ABILITIES.intimidate]
 
-	await provider.updatePokemon(addedTrainer.writeKey, addedPokemon)
+	await provider.updatePokemon(addedTrainer.writeKey, addedTrainer.info.readKey, addedPokemon)
 
 	const receivedTrainer = await provider.getTrainer(addedTrainer.info.readKey)
 	const receivedPokemon = receivedTrainer.pokemon[0]
@@ -139,12 +139,12 @@ test("reordering pokemon", async () => {
 	})
 
 	const addedTrainer = await provider.newTrainer(trainerToAdd)
-	const firstAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, firstSpeciesToAdd)
-	const secondAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, secondSpeciesToAdd)
-	const thirdAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.id, thirdSpeciesToAdd)
+	const firstAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, firstSpeciesToAdd)
+	const secondAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, secondSpeciesToAdd)
+	const thirdAddedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, thirdSpeciesToAdd)
 
 	// when
-	await provider.reorderPokemonTeam(addedTrainer.writeKey, [secondAddedPokemon, thirdAddedPokemon, firstAddedPokemon])
+	await provider.reorderPokemonTeam(addedTrainer.writeKey, addedTrainer.info.readKey, [secondAddedPokemon, thirdAddedPokemon, firstAddedPokemon])
 
 	// then
 	const receivedTrainer = await provider.getTrainer(addedTrainer.info.readKey)

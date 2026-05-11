@@ -1,14 +1,18 @@
 import { supabase } from "$lib/supabase"
+import { DeviceId } from "../device"
+import { ErrorMessages } from "./ErrorMessages"
 
 export type ErrorDbId = string
 
 export const ErrorsDb = {
-	async report(action: string, message: string): Promise<ErrorDbId | undefined> {
+	async report(action: string, e: unknown): Promise<ErrorDbId | undefined> {
 		try {
+			const deviceId = DeviceId.get()
+
 			const { data, error } = await supabase.rpc("report_error", {
-				_device_id: null, // future idea
+				_device_id: deviceId,
 				_action: action,
-				_message: message,
+				_message: ErrorMessages.detailed(e),
 			}).single<{
 				ret_id: string,
 			}>()
