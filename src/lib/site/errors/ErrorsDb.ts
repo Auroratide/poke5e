@@ -12,6 +12,7 @@ export const ErrorsDb = {
 			const { data, error } = await supabase.rpc("report_error", {
 				_device_id: deviceId,
 				_action: action,
+				_user_agent: navigator.userAgent ?? null,
 				_message: ErrorMessages.detailed(e),
 			}).single<{
 				ret_id: string,
