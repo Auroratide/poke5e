@@ -452,7 +452,13 @@ test("updating pokemon", async () => {
 		_bond_points_max: 3,
 		_rank: undefined,
 		_stab_base: "movepower",
-		_stab_bonus: 2
+		_stab_bonus: 2,
+		_abilities: [ {
+			referenceId: "intimidate",
+		}, {
+			name: "Custom Ability",
+			description: "You can do whatever you want.",
+		} ],
 	})
 
 	// Updating the avatar
@@ -542,6 +548,13 @@ test("updating pokemon", async () => {
 
 	expect(vivillon.stab_base).toEqual("movepower")
 	expect(vivillon.stab_bonus).toEqual(2)
+
+	expect(vivillon.abilities).toEqual([ {
+		referenceId: "intimidate",
+	}, {
+		name: "Custom Ability",
+		description: "You can do whatever you want.",
+	} ])
 
 	expect(vivillon.avatar_filename).toEqual(avatarFilename)
 
@@ -1517,6 +1530,7 @@ export const SunnyYellow = () => ({
 	_save_wis: false,
 	_save_cha: false,
 	_ability: "shield-dust",
+	_abilities: [],
 	_notes: "",
 	_tera_type: "fairy",
 	_exp: 5400,

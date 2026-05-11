@@ -1424,6 +1424,7 @@ test("reporting errors", async () => {
 	}>("report_error", {
 		_device_id: "AUTOMATED_TEST",
 		_action: "running the test",
+		_user_agent: "user agent",
 		_message: "test message",
 	})
 
