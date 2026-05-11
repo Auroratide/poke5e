@@ -93,13 +93,12 @@ export class Move extends DataClass<{
 		const attributeMod = bestPower == null ? 0 : forCharacter.attributes[bestPower].modifier
 
 		const pb = forCharacter.level.proficiencyBonus
-		const hasStab = PokemonType.isPokeType(this.type) ? forCharacter.type.includes(this.type) : false
 
 		result.toHit = this.attack?.toHit(pb, attributeMod)
 		result.save = this.save?.withDc(pb, attributeMod)
 
 		const stabToUse = forCharacter.stab ?? new Stab({ base: "default", bonus: 0 })
-		result.damage = this.damage?.damage(stabToUse, attributeMod, hasStab, forCharacter.level, rulesVersion)
+		result.damage = this.damage?.damage(stabToUse, attributeMod, this.type, forCharacter.type, forCharacter.level, rulesVersion)
 
 		return result
 	}
