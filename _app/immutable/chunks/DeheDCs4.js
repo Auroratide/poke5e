@@ -1,0 +1,1 @@
+var e=e=>`₽${e.toLocaleString(`en-US`)}`;export{e as t};
