@@ -2,6 +2,7 @@ import { paraglideVitePlugin } from "@inlang/paraglide-js"
 import path from "node:path"
 import { sveltekit } from "@sveltejs/kit/vite"
 import { defineConfig } from "vitest/config"
+import { playwright } from "@vitest/browser-playwright"
 
 export default defineConfig({
 	plugins: [
@@ -21,7 +22,7 @@ export default defineConfig({
 	test: {
 		setupFiles: [path.join("src", "test", "setup.ts")],
 		browser: {
-			provider: "playwright",
+			provider: playwright(),
 			enabled: true,
 			headless: true,
 			instances: [ { browser: "chromium" } ],

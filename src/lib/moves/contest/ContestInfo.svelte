@@ -14,7 +14,7 @@
 	}
 </script>
 
-<div class="multi-tag" style:--skin-contest="var(--skin-contest-{value.contest}">
+<div class="multi-tag" style:--skin-contest="var(--skin-contest-{value.contest})">
 	<div class="header">
 		<p><strong>{translations[value.contest]()}</strong></p>
 	</div>
