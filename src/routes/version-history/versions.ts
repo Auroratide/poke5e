@@ -14,6 +14,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.5",
+		description: [
+			"<strong>Bugfix</strong>: Healing moves do not have STAB.",
+			"Enhanced error reporting so it is easier to debug issues.",
+		],
+	}, {
 		name: "v1.11.4",
 		description: [
 			"<strong>Moves</strong>: Clarify the range of moves with circular radius (only specify radius, not diameter <em>and</em> radius).",
