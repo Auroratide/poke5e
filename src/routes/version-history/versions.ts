@@ -14,6 +14,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.6",
+		description: [
+			"<strong>Bugfix</strong>: Fix issue where Edit button was unreachable on mobile.",
+		],
+	}, {
 		name: "v1.11.5",
 		description: [
 			"<strong>Bugfix</strong>: Healing moves do not have STAB.",
