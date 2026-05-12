@@ -33,7 +33,7 @@
 			mainObserver?.observe(mainEl, {
 				childList: true,
 				attributes: false,
-				subtree: false,
+				subtree: true,
 			})
 		}
 
@@ -41,7 +41,7 @@
 			sideObserver?.observe(sideEl, {
 				childList: true,
 				attributes: false,
-				subtree: false,
+				subtree: true,
 			})
 		}
 	})
