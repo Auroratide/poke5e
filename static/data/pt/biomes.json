@@ -1,0 +1,29 @@
+{
+  "items": [
+    { "id": "forest", "name": "Floresta" },
+    { "id": "jungle", "name": "Selva" },
+    { "id": "woodland", "name": "Bosque" },
+    { "id": "field", "name": "Campo" },
+    { "id": "grassland", "name": "Pradaria" },
+    { "id": "city", "name": "Cidade" },
+    { "id": "industrial", "name": "Industrial" },
+    { "id": "volcano", "name": "Vulcão" },
+    { "id": "cave", "name": "Caverna" },
+    { "id": "mountain", "name": "Montanha" },
+    { "id": "desert", "name": "Deserto" },
+    { "id": "badland", "name": "Terras Áridas" },
+    { "id": "pond", "name": "Lagoa" },
+    { "id": "lake", "name": "Lago" },
+    { "id": "river", "name": "Rio" },
+    { "id": "riverside", "name": "Margem do Rio" },
+    { "id": "beach", "name": "Praia" },
+    { "id": "ocean", "name": "Oceano" },
+    { "id": "reef", "name": "Recife" },
+    { "id": "polar-sea", "name": "Mar Polar" },
+    { "id": "abyss", "name": "Abismo" },
+    { "id": "swamp", "name": "Pântano" },
+    { "id": "glacier", "name": "Geleira" },
+    { "id": "tundra", "name": "Tundra" },
+    { "id": "ruin", "name": "Ruína" }
+  ]
+}
