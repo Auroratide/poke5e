@@ -5,6 +5,7 @@ function getCauseMessage(error: Error): string {
 	if (cause == null) return "No antecedent cause"
 	if (cause instanceof Error) return cause.message
 	if (typeof cause === "string") return cause
+	if (typeof cause === "object" && "message" in cause) return cause.message as string
 
 	return "Unknown cause message"
 }

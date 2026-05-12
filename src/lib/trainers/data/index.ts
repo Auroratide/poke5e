@@ -31,7 +31,7 @@ export type StorageResource = {
 
 export class TrainerDataProviderError extends DetailedError {
 	constructor(message: string, readonly diagnostics?: PostgrestError) {
-		super(message + (diagnostics?.code ? ` Code: ${diagnostics?.code}` : ""), diagnostics ? `Code: ${diagnostics.code}; ${diagnostics.message}` : "", { cause: diagnostics })
+		super(message + (diagnostics?.code ? ` Code: ${diagnostics?.code}` : ""), diagnostics ? `Code: ${diagnostics.code}; ${diagnostics.message}` : "", diagnostics)
 	}
 }
 
