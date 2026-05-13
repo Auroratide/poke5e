@@ -6,13 +6,11 @@
             "description": "Você cresceu no paraíso tropical de Alola. As pessoas lá compartilham uma conexão profunda tanto com os Pokémon quanto com a natureza. Suas tradições e cultura são completamente diferentes de qualquer outra região e você se orgulha disso.\n\nAlola é uma pequena nação insular ao sul de Hoenn e a sudoeste da região de Johto. Eles abriram-se apenas recentemente para o resto do mundo e são relativamente pequenos comparados a potências como Kalos, Sinnoh e a região de Kanto. Não deixe que esse fato o engane, no entanto. Devido à sua profunda conexão com a natureza, Alola abriga alguns dos magos mais talentosos do mundo, que são capazes de estudar e treinar com seus Pokémon de uma forma que nenhuma outra região pode oferecer.",
             "abilityScores": {
                 "name": "Estilo de Vida",
-                "description": "Você cresceu em uma cultura profundamente conectada às suas raízes espirituais e não tem receio de explicar às pessoas por que isso não é algo ruim.",
-                "values": ["int", "cha"]
+                "description": "Você cresceu em uma cultura profundamente conectada às suas raízes espirituais e não tem receio de explicar às pessoas por que isso não é algo ruim."
             },
             "proficiencies": {
                 "name": "Um com a Natureza",
-                "description": "Seu lar insular teve apenas um fragmento de sua beleza natural tocado pelo homem.",
-                "values": ["natureza"]
+                "description": "Seu lar insular teve apenas um fragmento de sua beleza natural tocado pelo homem."
             },
             "feats": {
                 "name": "Um Elo Diferente",
@@ -29,16 +27,11 @@
             "description": "Você cresceu na região isolada de Galar. Acostumados a fazer as coisas do seu próprio jeito, os Galarianos podem parecer frios ou intimidantes. No entanto, isso muitas vezes está longe de ser verdade.\n\nIsolados do resto do continente por cadeias de montanhas rigorosas, os Galarianos desenvolveram sua própria maneira de agir. Esta pequena nação do norte está unida há muito tempo, frequentemente tentando invadir as montanhas ocidentais e reivindicar alguns dos recursos naturais de Kalos como seus. Os próprios Galarianos são conhecidos por serem um grupo barulhento, mas bem-intencionados quando você os conhece.",
             "abilityScores": {
                 "name": "Uma Boa e Velha Briga",
-                "description": "Galarianos nunca são de recusar uma luta. Desde o momento em que conseguem andar, costumam brincar de lutar ou enfrentar seus rivais.",
-                "values": [
-                    ["for", "des"],
-                    ["des", "for"]
-                ]
+                "description": "Galarianos nunca são de recusar uma luta. Desde o momento em que conseguem andar, costumam brincar de lutar ou enfrentar seus rivais."
             },
             "proficiencies": {
                 "name": "O Que Foi, Parceiro?",
-                "description": "Devido às suas naturezas barulhentas, ranzinzas e geralmente frias, os Galarianos tendem a ser naturalmente mantidos à distância pelo resto do mundo.",
-                "values": ["intimidação"]
+                "description": "Devido às suas naturezas barulhentas, ranzinzas e geralmente frias, os Galarianos tendem a ser naturalmente mantidos à distância pelo resto do mundo."
             },
             "feats": {
                 "name": "Minha Mãe Bate Mais Forte",
@@ -55,13 +48,11 @@
             "description": "Você cresceu na região arquipelágica de Hoenn. De florestas extensas, crateras meteóricas e mares abertos, você parece equipado para lidar com qualquer coisa.\n\nHoenn é uma região grande com uma variedade de ambientes e culturas diferentes. Coletivamente, eles são uma das maiores nações do mundo, mas a natureza arquipelágica da nação torna difícil ser verdadeiramente unida, e sofre em termos de presença internacional por causa disso.",
             "abilityScores": {
                 "name": "Já Vi de Tudo",
-                "description": "Os ambientes variados de sua terra natal lhe deram uma boa compreensão sobre os caminhos do mundo.",
-                "values": ["sab", "int"]
+                "description": "Os ambientes variados de sua terra natal lhe deram uma boa compreensão sobre os caminhos do mundo."
             },
             "proficiencies": {
                 "name": "Bem Equipado",
-                "description": "Depois de anos lidando com climas imprevisíveis e terrenos acidentados, você descobriu alguns dos truques do ofício quando se trata de viajar.",
-                "values": ["sobrevivência"]
+                "description": "Depois de anos lidando com climas imprevisíveis e terrenos acidentados, você descobriu alguns dos truques do ofício quando se trata de viajar."
             },
             "feats": {
                 "name": "Lugar Nenhum como Nosso Lar",
@@ -78,13 +69,11 @@
             "description": "Você cresceu na região de Johto. Rica em história e significado cultural, os cidadãos de Johto geralmente compartilham uma conexão profunda com a história e as tradições de sua terra natal.\n\nInfelizmente, a própria Johto é uma nação volátil e devastada pela guerra. Depois de se rebelar contra a ideia de um imperador unificador de Kanto, Johto lutou pelo seu direito de ser uma nação livre, e agora a porção ocidental do continente está presa em um vácuo de poder, com muitos senhores da guerra tentando reivindicar o cobiçado posto de imperador Johtoano.",
             "abilityScores": {
                 "name": "Imerso em Tradição",
-                "description": "Você viu e ouviu inúmeras histórias da história e cultura de sua região ao longo de sua vida.",
-                "values": ["int", "for"]
+                "description": "Você viu e ouviu inúmeras histórias da história e cultura de sua região ao longo de sua vida."
             },
             "proficiencies": {
                 "name": "Instruído",
-                "description": "Você conhece bem a história do mundo.",
-                "values": ["história"]
+                "description": "Você conhece bem a história do mundo."
             },
             "feats": {
                 "name": "Golpes Praticados",
@@ -101,13 +90,11 @@
             "description": "Você cresceu na região de Kalos. Transbordando beleza natural e uma história rica, Kalos é uma região descontraída cujos cidadãos estão sempre prontos para trocar histórias e mostrar seus talentos.\n\nRica em recursos naturais, com um layout fácil de unificar, Kalos está atualmente em uma era de ouro, desfrutando de um momento passageiro de paz de suas inúmeras escaramuças com a região de Galar. Eles são uma potência militar e mercantil.",
             "abilityScores": {
                 "name": "C'ést la vie",
-                "description": "Você foi cercado por histórias encantadoras e pessoas decentes durante toda a sua vida. Situações sociais fluem para você com facilidade.",
-                "values": ["cha", "int"]
+                "description": "Você foi cercado por histórias encantadoras e pessoas decentes durante toda a sua vida. Situações sociais fluem para você com facilidade."
             },
             "proficiencies": {
                 "name": "Lábia",
-                "description": "Você geralmente consegue encantar os outros e sair de qualquer situação na conversa.",
-                "values": ["persuasão"]
+                "description": "Você geralmente consegue encantar os outros e sair de qualquer situação na conversa."
             },
             "feats": {
                 "name": "Bon Chance",
@@ -129,8 +116,7 @@
             },
             "proficiencies": {
                 "name": "Intuitivo",
-                "description": "Você se orgulha de ser capaz de aprender na prática com facilidade.",
-                "values": ["investigação"]
+                "description": "Você se orgulha de ser capaz de aprender na prática com facilidade."
             },
             "feats": {
                 "name": "Minha Hora de Brilhar",
@@ -147,13 +133,11 @@
             "description": "Você cresceu na região norte de Sinnoh. Acostumados a temperaturas e ambientes nortistas implacáveis, os cidadãos de Sinnoh têm vontades de ferro, com força tanto no corpo quanto na mente.\n\nBem ao norte de Kanto e Johto fica Sinnoh, o norte gélido e militarista. Uma região montanhosa, Sinnoh não tem escassez dos recursos naturais necessários para campanhas militares bem-sucedidas. A região é uma meritocracia governada por um único rei, embora existam muitas casas nobres que desejariam vê-lo cair. Além de suas exportações de metal, a principal exportação de Sinnoh são mercenários, que são altamente cobiçados por sua habilidade e força.",
             "abilityScores": {
                 "name": "Resistente",
-                "description": "Anos vivendo em uma região hostil endureceram sua vontade.",
-                "values": ["con", "for"]
+                "description": "Anos vivendo em uma região hostil endureceram sua vontade."
             },
             "proficiencies": {
                 "name": "Eu Consigo",
-                "description": "Os cidadãos de Sinnoh são geralmente conhecidos como alguns dos mais fortes do mundo. Uma dieta e cultura robustas lhe deram mais força do que a média das pessoas.",
-                "values": ["atletismo"]
+                "description": "Os cidadãos de Sinnoh são geralmente conhecidos como alguns dos mais fortes do mundo. Uma dieta e cultura robustas lhe deram mais força do que a média das pessoas."
             },
             "feats": {
                 "name": "Corpo e Mente",
@@ -170,13 +154,11 @@
             "description": "Você cresceu na vasta região de Unova. Repleta de espíritos pioneiros e da agitação das grandes cidades, os Unovanos geralmente parecem rápidos e de mente afiada.\n\nUma nação de estados mercantis unidos, as pessoas são livres para escolher seu próprio caminho em Unova. Se você tem uma ideia que acha que pode render um ouro rápido, então tem uma chance de fazer um milhão fácil. Unova é a capital mercantil do mundo, e eles usam suas vastas terras para fornecer a outras nações o que quer que precisem no momento. Os Unovanos tendem a fazer o que sentem vontade quando sentem vontade, e ninguém lhes dirá o contrário.",
             "abilityScores": {
                 "name": "Mais um Dia de Vida",
-                "description": "Seja você de uma metrópole agitada ou de um rancho no interior, todos os Unovanos se movem com propósito e objetivos em mente.",
-                "values": ["des", "sab"]
+                "description": "Seja você de uma metrópole agitada ou de um rancho no interior, todos os Unovanos se movem com propósito e objetivos em mente."
             },
             "proficiencies": {
                 "name": "Você Não Pode Estar Falando Sério",
-                "description": "Você tende a ter um senso aguçado para quando alguém está brincando com você ou tentando te enganar.",
-                "values": ["intuição"]
+                "description": "Você tende a ter um senso aguçado para quando alguém está brincando com você ou tentando te enganar."
             },
             "feats": {
                 "name": "Muitos Talentos",

@@ -1,11 +1,16 @@
 import { test, expect } from "vitest"
 import { translateData } from "../translate-data"
+import type { DeepPartial } from "$lib/utils/types"
 
 type Item = {
 	id: string,
 	name: string,
 	description: string,
 	cost: number,
+	action?: { // test deep references
+		name: string,
+		attribute: string,
+	},
 }
 
 const items: Item[] = [ {
@@ -18,6 +23,10 @@ const items: Item[] = [ {
 	name: "Great Ball",
 	description: "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 5.",
 	cost: 500,
+	action: {
+		name: "Throw",
+		attribute: "dex",
+	},
 }, {
 	id: "ultra-ball",
 	name: "Ultra Ball",
@@ -25,7 +34,7 @@ const items: Item[] = [ {
 	cost: 1000,
 } ]
 
-const spanishItems: Partial<Item>[] = [ {
+const spanishItems: DeepPartial<Item>[] = [ {
 	id: "poke-ball",
 	name: "Poke Ball",
 	description: "Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon.",
@@ -33,6 +42,9 @@ const spanishItems: Partial<Item>[] = [ {
 	id: "great-ball",
 	name: "Súper Ball",
 	description: "Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 5.",
+	action: {
+		name: "Tirar",
+	},
 } ]
 
 test("english", async () => {
@@ -52,6 +64,10 @@ test("english", async () => {
 		name: "Great Ball",
 		description: "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 5.",
 		cost: 500,
+		action: {
+			name: "Throw",
+			attribute: "dex",
+		},
 	}, {
 		id: "ultra-ball",
 		name: "Ultra Ball",
@@ -78,6 +94,10 @@ test("spanish", async () => {
 		name: "Súper Ball",
 		description: "Permite a un entrenador hacer una tirada de Captura para atrapar un Pokémon. Reduce la CD de Captura en 5.",
 		cost: 500,
+		action: {
+			name: "Tirar",
+			attribute: "dex",
+		},
 	}, {
 		id: "ultra-ball",
 		name: "Ultra Ball",
