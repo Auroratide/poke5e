@@ -12,13 +12,13 @@
 		<li><strong>2024</strong>: The current version, updated to follow D&D 2024 and include newer Pokémon content and mechanics.</li>
 	</ul>
 	<p>You may change version using the toggle below. Refer to the <a href="{Url.reference.introduction()}">Reference</a> for more details.</p>
-	<p class="centered larger">
+	<div class="centered larger">
 		<RulesVersionToggle>
 			<VisuallyHidden slot="legend">
 				Change Version
 			</VisuallyHidden>
 		</RulesVersionToggle>
-	</p>
+	</div>
 </section>
 
 <style>
