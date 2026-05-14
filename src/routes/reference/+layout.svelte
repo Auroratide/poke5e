@@ -4,7 +4,7 @@
 	import { page } from "$app/state"
 	import { SearchField } from "$lib/ui/forms"
 	import { filterValue } from "./store"
-	import { search, Preamble, Chapters } from "./references"
+	import { search, Preamble, CoreRules, Appendix, Supplements } from "./references"
 	import { ListPageHeading } from "$lib/ui/page"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 	import type { Snippet } from "svelte"
@@ -25,10 +25,10 @@
 		})
 	})
 
-	let filteredCoreRules = $derived(search(Chapters.CoreRules, $filterValue))
-	let filteredAppendix = $derived(search(Chapters.Appendix, $filterValue))
-	let filteredSupplements = $derived(search(Chapters.Supplements, $filterValue))
-	const totalCount = Chapters.CoreRules.length + Chapters.Appendix.length + Chapters.Supplements.length
+	let filteredCoreRules = $derived(search($CoreRules, $filterValue))
+	let filteredAppendix = $derived(search($Appendix, $filterValue))
+	let filteredSupplements = $derived(search($Supplements, $filterValue))
+	let totalCount = $derived($CoreRules.length + $Appendix.length + $Supplements.length)
 	let filteredCount = $derived(filteredCoreRules.length + filteredAppendix.length + filteredSupplements.length)
 </script>
 

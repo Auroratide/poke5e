@@ -11,6 +11,6 @@
 	</section>
 	<section>
 		<h2>Table of Contents</h2>
-		<TableOfContents items={Appendix} />
+		<TableOfContents items={$Appendix} />
 	</section>
 </ReferencePage>

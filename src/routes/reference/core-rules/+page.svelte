@@ -12,6 +12,6 @@
 	</section>
 	<section>
 		<h2>Table of Contents</h2>
-		<TableOfContents items={CoreRules} />
+		<TableOfContents items={$CoreRules} />
 	</section>
 </ReferencePage>

@@ -12,6 +12,6 @@
 	</section>
 	<section>
 		<h2>Table of Contents</h2>
-		<TableOfContents items={Supplements} />
+		<TableOfContents items={$Supplements} />
 	</section>
 </ReferencePage>
