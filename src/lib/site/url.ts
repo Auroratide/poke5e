@@ -39,6 +39,9 @@ export const Url = {
 	reference: {
 		all: () => localizeUrl(resolve("/reference")).pathname,
 		introduction: () => localizeUrl(resolve("/reference/introduction")).pathname,
+		coreRules: () => localizeUrl(resolve("/reference/core-rules")).pathname,
+		appendix: () => localizeUrl(resolve("/reference/appendix")).pathname,
+		supplements: () => localizeUrl(resolve("/reference/supplements")).pathname,
 		abilities: () => localizeUrl(resolve("/reference/abilities")).pathname,
 		bonds: () => localizeUrl(resolve("/reference/bonds")).pathname,
 		breeding: () => localizeUrl(resolve("/reference/breeding")).pathname,

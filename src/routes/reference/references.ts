@@ -6,70 +6,64 @@ export type ReferenceInfo = {
 	keywords: string[],
 }
 
-export const References = [ {
+export const Preamble = [ {
 	name: "Introduction",
 	url: Url.reference.introduction(),
 	keywords: ["introduction", "rules", "version", "2018", "2024", "original", "handbook", "updates"],
+} ]
+
+export const CoreRules = [ {
+	name: "Core Rules",
+	url: Url.reference.coreRules(),
+	keywords: [],
 }, {
-	name: "Abilities",
-	url: Url.reference.abilities(),
-	keywords: ["ability", "pokemon", "feature", "list", "filter"],
+	name: "Trainer Class",
+	url: Url.reference.trainerClass(),
+	keywords: ["class", "traits", "abilities", "equipment", "multiclass", "table", "features", "specializations", "paths", "license", "pokedex", "pokeslots", "control upgrade", "trainer's resolve", "pokemon tracker", "master trainer"],
 }, {
-	name: "Bonds",
-	url: Url.reference.bonds(),
-	keywords: ["bond", "bond level", "loyalty", "relationship", "disloyal", "disobey", "trust"],
+	name: "Trainer Leveling",
+	url: Url.reference.trainerLeveling(),
+	keywords: ["class", "trainer", "table", "experience", "milestones", "pokedex", "registered", "pokeslots", "levels"],
 }, {
-	name: "Breeding",
-	url: Url.reference.breeding(),
-	keywords: ["breed", "egg", "baby", "babies", "incubate", "incubation", "hatch", "egg moves"],
-}, {
-	name: "Catching Pokémon",
-	url: Url.reference.catchingPokemon(),
-	keywords: ["catch", "capture", "capturing", "pokeball", "ball", "throw", "great ball", "ultra ball", "master ball", "safari ball", "level ball", "fast ball", "lure ball", "heavy ball", "love ball", "friend ball", "moon ball", "sport ball", "net ball", "dive ball", "nest ball", "repeat ball", "timer ball", "luxury ball", "premier ball", "dusk ball", "heal ball", "quick ball", "dream ball"],
-}, {
-	name: "Combat",
-	url: Url.reference.combat(),
-	keywords: ["combat", "battle", "intitiative", "command", "moves", "move power", "power points", "pp", "attack roll", "save dc", "saving throw dc", "stab", "same type attack bonus", "same-type attack bonus", "damage bonus", "struggle", "switching", "recalling", "attack of opportunity", "ready an action", "readying actions", "reach", "flying", "hovering", "burrowing", "raised", "grounded", "speed"],
-}, {
-	name: "Contests",
-	url: Url.reference.contests(),
-	keywords: ["contest", "coordinator", "coordinate", "spectacular", "pokeblock", "beauty", "cool", "clever", "cute", "tough", "judge", "judging", "talent", "ribbon", "appeal", "jam", "performance", "crowd meter", "stage"],
-}, {
-	name: "Damage Types",
-	url: Url.reference.damageTypes(),
-	keywords: ["damage", "type", "resistance", "vulnerability", "immunity", "bludgeoning", "slashing", "piercing", "fire", "cold", "lightning", "force", "radiant", "necrotic", "thunder", "acid", "poison", "calculator", "convert", "conversion", "magic"],
-}, {
-	name: "Encounters",
-	url: Url.reference.encounters(),
-	keywords: ["wild", "trainer", "battle", "gym leader", "badge", "money", "award", "expedition", "sr", "cr", "challenge rating", "species rating", "double battle", "team battle", "balance"],
-}, {
-	name: "Fainting, Resting, and Healing",
-	url: Url.reference.faintingRestingHealing(),
-	keywords: ["fainting", "downed", "short rest", "long rest", "heal", "pokecenter", "potions", "food", "0 hp", "death", "lethal", "stabilization", "stabilize", "restore"],
-}, {
-	name: "Feats",
-	url: Url.reference.feats(),
-	keywords: ["ambidextrous", "combo master", "extra ac", "extra move", "gifted", "natural mount", "power sculptor", "terrain adept", "tireless"],
-}, {
-	name: "Legendary/Boss Battles",
-	url: Url.reference.legendaryBattles(),
-	keywords: ["legendary", "boss", "grit", "resilience", "resistance", "attack", "energy", "nimbleness", "speed", "toughness", "reflexes", "knowledge", "armor"],
-}, {
-	name: "Natures",
-	url: Url.reference.natures(),
-	keywords: ["nature", "personality", "hardy", "lonely", "brave", "adamant", "naughty", "bold", "docile", "relaxed", "impish", "lax", "timid", "hasty", "serious", "jolly", "naive", "modest", "mild", "quiet", "bashful", "rash", "calm", "gentle", "sassy", "careful", "quirky"],
+	name: "Trainer Paths",
+	url: Url.reference.trainerPaths(),
+	keywords: ["ace trainer", "battle master", "rapid switching", "tactical mastery", "hobbyist", "versatile", "generalist", "multitalented", "nurse", "pokechef", "warning words", "tip-top shape", "tip top shape", "researcher", "analyst", "evolution expert", "professor", "ranger", "capture styler", "partners", "poke assist"],
 }, {
 	name: "Pokémon Leveling",
 	url: Url.reference.pokemonLeveling(),
 	keywords: ["pokemon leveling", "class", "table", "experience", "evolution", "evolve", "moves", "peak power", "milestones", "armor", "ac"],
 }, {
-	name: "Pokémon Transformations",
-	url: Url.reference.transformations(),
-	keywords: ["pokemon transformations", "mega evolution", "z-move", "z move", "dynamax", "gigantamax", "terastallization", "terastallize", "stellar", "tera"],
+	name: "Combat",
+	url: Url.reference.combat(),
+	keywords: ["combat", "battle", "intitiative", "command", "moves", "move power", "power points", "pp", "attack roll", "save dc", "saving throw dc", "stab", "same type attack bonus", "same-type attack bonus", "damage bonus", "struggle", "switching", "recalling", "attack of opportunity", "ready an action", "readying actions", "reach", "flying", "hovering", "burrowing", "raised", "grounded", "speed"],
 }, {
-	name: "Shiny Pokémon",
-	url: Url.reference.shinyPokemon(),
-	keywords: ["shiny", "shinies", "encounter", "wild"],
+	name: "Damage Types",
+	url: Url.reference.damageTypes(),
+	keywords: ["damage", "type", "resistance", "vulnerability", "immunity", "bludgeoning", "slashing", "piercing", "fire", "cold", "lightning", "force", "radiant", "necrotic", "thunder", "acid", "poison", "calculator", "convert", "conversion", "magic"],
+}, {
+	name: "Catching Pokémon",
+	url: Url.reference.catchingPokemon(),
+	keywords: ["catch", "capture", "capturing", "pokeball", "ball", "throw", "great ball", "ultra ball", "master ball", "safari ball", "level ball", "fast ball", "lure ball", "heavy ball", "love ball", "friend ball", "moon ball", "sport ball", "net ball", "dive ball", "nest ball", "repeat ball", "timer ball", "luxury ball", "premier ball", "dusk ball", "heal ball", "quick ball", "dream ball"],
+}, {
+	name: "Fainting, Resting, and Healing",
+	url: Url.reference.faintingRestingHealing(),
+	keywords: ["fainting", "downed", "short rest", "long rest", "heal", "pokecenter", "potions", "food", "0 hp", "death", "lethal", "stabilization", "stabilize", "restore"],
+} ] satisfies ReferenceInfo[]
+
+
+
+export const Appendix = [ {
+	name: "Appendix",
+	url: Url.reference.appendix(),
+	keywords: [],
+}, {
+	name: "Abilities",
+	url: Url.reference.abilities(),
+	keywords: ["ability", "pokemon", "feature", "list", "filter"],
+}, {
+	name: "Natures",
+	url: Url.reference.natures(),
+	keywords: ["nature", "personality", "hardy", "lonely", "brave", "adamant", "naughty", "bold", "docile", "relaxed", "impish", "lax", "timid", "hasty", "serious", "jolly", "naive", "modest", "mild", "quiet", "bashful", "rash", "calm", "gentle", "sassy", "careful", "quirky"],
 }, {
 	name: "Specializations",
 	url: Url.reference.specializations(),
@@ -87,38 +81,73 @@ export const References = [ {
 	url: Url.reference.tms(),
 	keywords: ["tm", "technical machine", "moves", "teach", "learn"],
 }, {
-	name: "Trainer Class",
-	url: Url.reference.trainerClass(),
-	keywords: ["class", "traits", "abilities", "equipment", "multiclass", "table", "features", "specializations", "paths", "license", "pokedex", "pokeslots", "control upgrade", "trainer's resolve", "pokemon tracker", "master trainer"],
-}, {
-	name: "Trainer Leveling",
-	url: Url.reference.trainerLeveling(),
-	keywords: ["class", "trainer", "table", "experience", "milestones", "pokedex", "registered", "pokeslots", "levels"],
-}, {
-// 	name: "Trainer Origins",
-// 	url: Url.reference.trainerOrigins(),
-// 	keywords: ["origins", "races", "alolan", "galarian", "hoennian", "johtoan", "kalosian", "kantoan", "sinnoan", "unovan", "way of life", "one with nature", "a different bond", "a good old fashioned brawl", "you wot mate", "me mum hits me harder", "seen it all", "well equipped", "no place like home", "steeped in tradition", "well learned", "practiced strikes", "c'est la vie", "silver tongue", "bon chance", "forge your path", "intuitive", "my time to shine", "hardy", "i can get that", "body and mind", "another day in the life", "you can't be serious", "many talents"],
-// }, {
-	name: "Trainer Paths",
-	url: Url.reference.trainerPaths(),
-	keywords: ["ace trainer", "battle master", "rapid switching", "tactical mastery", "hobbyist", "versatile", "generalist", "multitalented", "nurse", "pokechef", "warning words", "tip-top shape", "tip top shape", "researcher", "analyst", "evolution expert", "professor", "ranger", "capture styler", "partners", "poke assist"],
-}, {
 	name: "Weather",
 	url: Url.reference.weather(),
 	keywords: ["weather", "harsh sunlight", "rain", "sandstorm", "hail", "snow", "fog"],
 } ] satisfies ReferenceInfo[]
 
-export function search(value: string): ReferenceInfo[] {
-	const lowerValue = value.trim().toLocaleLowerCase()
-	if (lowerValue === "") return References
 
-	const byTitle = References.filter((it) => includesEachOther(it.name.toLocaleLowerCase(), lowerValue))
-	const byKeyword = References.filter((it) => it.keywords.some((keyword) => includesEachOther(keyword, lowerValue)))
+
+export const Supplements = [ {
+	name: "Supplements",
+	url: Url.reference.supplements(),
+	keywords: [],
+}, {
+	name: "Bonds",
+	url: Url.reference.bonds(),
+	keywords: ["bond", "bond level", "loyalty", "relationship", "disloyal", "disobey", "trust"],
+}, {
+	name: "Breeding",
+	url: Url.reference.breeding(),
+	keywords: ["breed", "egg", "baby", "babies", "incubate", "incubation", "hatch", "egg moves"],
+}, {
+	name: "Contests",
+	url: Url.reference.contests(),
+	keywords: ["contest", "coordinator", "coordinate", "spectacular", "pokeblock", "beauty", "cool", "clever", "cute", "tough", "judge", "judging", "talent", "ribbon", "appeal", "jam", "performance", "crowd meter", "stage"],
+}, {
+	name: "Encounters",
+	url: Url.reference.encounters(),
+	keywords: ["wild", "trainer", "battle", "gym leader", "badge", "money", "award", "expedition", "sr", "cr", "challenge rating", "species rating", "double battle", "team battle", "balance"],
+}, {
+	name: "Feats",
+	url: Url.reference.feats(),
+	keywords: ["ambidextrous", "combo master", "extra ac", "extra move", "gifted", "natural mount", "power sculptor", "terrain adept", "tireless"],
+}, {
+	name: "Legendary/Boss Battles",
+	url: Url.reference.legendaryBattles(),
+	keywords: ["legendary", "boss", "grit", "resilience", "resistance", "attack", "energy", "nimbleness", "speed", "toughness", "reflexes", "knowledge", "armor"],
+}, {
+	name: "Pokémon Transformations",
+	url: Url.reference.transformations(),
+	keywords: ["pokemon transformations", "mega evolution", "z-move", "z move", "dynamax", "gigantamax", "terastallization", "terastallize", "stellar", "tera"],
+}, {
+	name: "Shiny Pokémon",
+	url: Url.reference.shinyPokemon(),
+	keywords: ["shiny", "shinies", "encounter", "wild"],
+}, {
+	name: "Trainer Origins",
+	url: Url.reference.trainerOrigins(),
+	keywords: ["origins", "races", "alolan", "galarian", "hoennian", "johtoan", "kalosian", "kantoan", "sinnoan", "unovan", "way of life", "one with nature", "a different bond", "a good old fashioned brawl", "you wot mate", "me mum hits me harder", "seen it all", "well equipped", "no place like home", "steeped in tradition", "well learned", "practiced strikes", "c'est la vie", "silver tongue", "bon chance", "forge your path", "intuitive", "my time to shine", "hardy", "i can get that", "body and mind", "another day in the life", "you can't be serious", "many talents"],
+} ] satisfies ReferenceInfo[]
+
+export const Chapters = {
+	CoreRules, Appendix, Supplements,
+} as const
+
+
+export function search(list: ReferenceInfo[], value: string): ReferenceInfo[] {
+	// always include the first item, it's the title
+	const [first, ...rest] = list
+	const lowerValue = value.trim().toLocaleLowerCase()
+	if (lowerValue === "") return list
+
+	const byTitle = rest.filter((it) => includesEachOther(it.name.toLocaleLowerCase(), lowerValue))
+	const byKeyword = rest.filter((it) => it.keywords.some((keyword) => includesEachOther(keyword, lowerValue)))
 
 	// prioritize title search over keyword search
 	const noDuplicates = new Set([...byTitle, ...byKeyword])
 
-	return [...noDuplicates]
+	return noDuplicates.size > 0 ? [first, ...noDuplicates] : []
 }
 
 function includesEachOther(left: string, right: string) {

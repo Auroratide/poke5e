@@ -208,6 +208,7 @@
 	"customStabRuleset18Description": "Uses the '18 ruleset's STAB table, dependent on level.",
 	"customStabNoneDescription": "STAB is 0, rely entirely on the provided Bonus below.",
 	"none": "None",
+	"tableOfContents": "Table of Contents",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},
