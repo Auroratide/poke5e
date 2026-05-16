@@ -267,3 +267,10 @@ dfn {
 	padding: 0;
 	position: absolute;
 }
+
+@media print {
+	body {
+		overflow: visible;
+		background: none;
+	}
+}

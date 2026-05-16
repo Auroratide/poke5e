@@ -1,0 +1,1 @@
+{"id":"shell-bell","name":"Shell Bell","type":"held item","cost":4400,"description":["When the holder uses a move that damages at least one creature, the holder restores HP equal to its proficiency bonus."],"media":{"sprite":"/assets/items/shell-bell/sprite.png"}}

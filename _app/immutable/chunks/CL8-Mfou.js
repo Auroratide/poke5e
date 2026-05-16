@@ -1,0 +1,1 @@
+import{d as e}from"./GrSMgcCp.js";function t(t,n){throw new e(t,n)}export{t};
