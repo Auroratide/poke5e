@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ReferenceInfo } from "./references"
+	import type { ReferenceInfo } from "$lib/poke5e/reference"
 	import { m } from "$lib/site/i18n"
 
 	let {

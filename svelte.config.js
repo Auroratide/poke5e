@@ -29,6 +29,9 @@ const config = {
 			}
 		},
 		paths: { relative: false },
+		alias: {
+			"$reference/*": "src/routes/reference/*",
+		},
 		adapter: adapter({ fallback: "404.html" })
 	},
 	extensions: [".svelte", ".svx"]

@@ -28,12 +28,7 @@ import { meta as TrainerOriginsPage } from "./trainer-origins/meta"
 import { meta as TrainerPathsPage } from "./trainer-paths/meta"
 import { meta as WeatherPage } from "./weather/meta"
 import { rulesVersion } from "$lib/site/rules-version"
-
-export type ReferenceInfo = {
-	name: string,
-	url: string,
-	keywords: string[],
-}
+import type { ReferenceInfo } from "$lib/poke5e/reference"
 
 export const Preamble = [
 	IntroductionPage,

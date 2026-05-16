@@ -23,6 +23,9 @@
 	{#each paths as path}
 		<section>
 			<h2 id="{asId(path.name)}">{path.name}{#if $rulesVersion === "2018"}<sub>'18</sub>{/if}</h2>
+			{#if path.supplement}
+				<p><strong>Requires Supplement:</strong> <a href="{path.supplement.url}">{path.supplement.name}</a></p>
+			{/if}
 			{@html renderHtml(path.features.level2.description)}
 			<h3>{path.features.level5.name}</h3>
 			{@html renderHtml(path.features.level5.description)}

@@ -1,5 +1,7 @@
 import { Url } from "$lib/site/url"
 import type { TrainerPath } from "./TrainerPath"
+import { meta as BondsPage } from "$reference/bonds/meta"
+import { meta as BreedingPage } from "$reference/breeding/meta"
 
 export const TrainerPaths: TrainerPath[] = [ {
 	name: "Ace Trainer",
@@ -166,6 +168,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Commander",
+	supplement: BondsPage,
 	features: {
 		level2: {
 			description: ["You rule over your Pokémon with an iron fist, demanding respect and forming an unbreakable bond with your team. When you choose this path at level 2, your starter’s Bond Level becomes +2. In addition, all of your Pokémon with a positive Bond Level have 1 additional Bond Point."],
@@ -283,6 +286,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 }, {
 	name: "Pokémon Breeder",
+	supplement: BreedingPage,
 	features: {
 		level2: {
 			description: ["You have a fascination with Pokémon that has led you down the path of raising them carefully to create specific improvements in their species. Beginning at level 2, when you attempt to breed two Pokémon, you may add your WIS modifier to the d20 roll for a successful attempt."],
