@@ -4,10 +4,11 @@
 	import { page } from "$app/state"
 	import { SearchField } from "$lib/ui/forms"
 	import { filterValue } from "./store"
-	import { search, Preamble, CoreRules, Appendix, Supplements } from "./references"
+	import { search, Preamble, CoreRules, Appendix, Supplements, OriginalList } from "./references"
 	import { ListPageHeading } from "$lib/ui/page"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 	import type { Snippet } from "svelte"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	let {
 		children,
@@ -28,8 +29,10 @@
 	let filteredCoreRules = $derived(search($CoreRules, $filterValue))
 	let filteredAppendix = $derived(search($Appendix, $filterValue))
 	let filteredSupplements = $derived(search($Supplements, $filterValue))
-	let totalCount = $derived($CoreRules.length + $Appendix.length + $Supplements.length)
-	let filteredCount = $derived(filteredCoreRules.length + filteredAppendix.length + filteredSupplements.length)
+	let filteredAll = $derived(search(OriginalList, $filterValue))
+
+	let totalCount = $derived(FeatureToggles.NewReferenceList() ? $CoreRules.length + $Appendix.length + $Supplements.length : OriginalList.length)
+	let filteredCount = $derived(FeatureToggles.NewReferenceList() ? filteredCoreRules.length + filteredAppendix.length + filteredSupplements.length : filteredAll.length)
 </script>
 
 <Page theme="navy">
@@ -38,13 +41,21 @@
 		<ListPageHeading title="Reference" target="/reference" />
 		<SearchField id="reference-search" label="Search" bind:value={$filterValue} matched={filteredCount} max={totalCount} />
 		<div class="lists-container" bind:this={listsElem}>
-			{#each [Preamble, filteredCoreRules, filteredAppendix, filteredSupplements] as chapter}
+			{#if FeatureToggles.NewReferenceList()}
+				{#each [Preamble, filteredCoreRules, filteredAppendix, filteredSupplements] as chapter}
+					<ul>
+						{#each chapter as reference (reference.name)}
+							<li><a href="{reference.url}" data-pathname="{reference.url}">{reference.name}</a></li>
+						{/each}
+					</ul>
+				{/each}
+			{:else}
 				<ul>
-					{#each chapter as reference (reference.name)}
+					{#each filteredAll as reference (reference.name)}
 						<li><a href="{reference.url}" data-pathname="{reference.url}">{reference.name}</a></li>
 					{/each}
 				</ul>
-			{/each}
+			{/if}
 		</div>
 	</nav>
 	{@render children?.()}

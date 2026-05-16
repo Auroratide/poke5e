@@ -21,4 +21,5 @@ export function setFeatureActive(feature: string, isActive: boolean) {
 export const FeatureToggles = {
 	OverrideMaintenance: toggle("OverrideMaintenance"),
 	TransferPokemon: toggle("TransferPokemon"),
+	NewReferenceList: toggle("NewReferenceList"),
 }

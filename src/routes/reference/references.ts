@@ -112,6 +112,34 @@ const Supplements2024 = [
 	TrainerOriginsPage
 ]
 
+export const OriginalList = [
+	IntroductionPage,
+	AbilitiesPage,
+	BondsPage,
+	BreedingPage,
+	CatchingPokemonPage,
+	CombatPage,
+	ContestsPage,
+	DamageTypesPage,
+	EncountersPage,
+	FaintingPage,
+	FeatsPage,
+	LegendaryBattlesPage,
+	NaturesPage,
+	PokemonLevelingPage,
+	PokemonTransformationsPage,
+	ShinyPage,
+	SpecializationsPage,
+	StatusConditionsPage,
+	TerrainEffectsPage,
+	TmsPage,
+	TrainerClassPage,
+	TrainerLevelingPage,
+	TrainerPathsPage,
+	// TrainerOriginsPage,
+	WeatherPage,
+]
+
 export const CoreRules = derived(rulesVersion, (version) =>
 	version === "2018" ? CoreRules2018 : CoreRules2024
 )
