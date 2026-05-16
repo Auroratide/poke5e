@@ -4,6 +4,7 @@
 	import { rulesVersion } from "$lib/site/rules-version"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
+	import { Url } from "$lib/site/url";
 </script>
 
 <ReferencePage title="Catching Pokémon">
@@ -59,4 +60,17 @@
 			<Rules2024.Examples />
 		{/if}
 	</section>
+	{#if $rulesVersion === "2024"}
+		<section>
+			<h2>Where to Catch Pokémon</h2>
+			<p>The only hard rule is that a Pokémon cannot be captured via a pokéball if its been registered to a trainer via one of their own pokéballs. Otherwise, wild Pokémon can be found in many contexts:</p>
+			<ul>
+				<li>In undeveloped wildlands, their natural habitat</li>
+				<li>Throughout cities, living amongst people</li>
+				<li>In designated parks or safari zones</li>
+			</ul>
+			<p>Pokémon stat blocks reference biomes in which they are most usually found.</p>
+			<p>If you're a DM, read more about <a href="{Url.reference.encounters()}">Building Encounters</a>.</p>
+		</section>
+	{/if}
 </ReferencePage>

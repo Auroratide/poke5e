@@ -5,30 +5,41 @@
 	import one from "./1v1.webp"
 	import two from "./2v2.webp"
 	import four from "./4v4.webp"
+	import { BiomeTags } from "$lib/poke5e/habitat";
+	import { Url } from "$lib/site/url";
 </script>
 
-<ReferencePage title="Encounters">
+<ReferencePage title="Building Encounters">
 	{#if $rulesVersion === "2018"}
 		<section>
-			<p>There will be essentially two types of encounters in Pokémon 5e: Wild Pokémon encounters and Trainer Battles.</p>
+			<p>As a Dungeon Master, one of the ways you can challenge your players is through <strong>encounters</strong>, battles between the players' pokémon and other pokémon. There are essentially two types of encounters in Pokémon 5e:</p>
+			<ul>
+				<li><a href="#wild-pokemon">Wild Pokémon</a></li>
+				<li><a href="#trainer-battles">Trainer Battles</a></li>
+			</ul>
 		</section>
 		<section>
-			<h2>Wild Pokémon</h2>
+			<h2 id="wild-pokemon">Wild Pokémon</h2>
 			<p>Wild Pokémon encounters should be treated with caution. As a DM, you have a responsibility to continually introduce your players to new Pokémon of various levels throughout the campaign. Your trainers will want to go out into the wilderness to gain experience fighting as well as catching new Pokémon. Clusters of Pokémon should contain those of high and low levels, and the players should not know what those levels are until they have successfully captured a Pokémon. It is important to remember that Pokémon of higher levels cannot be caught until the trainer has also reached that level, and higher leveled Pokémon help players progress through their levels without having to do much training. As such, capture-focused expeditions should contain several Pokémon of lower levels, while battle-focused encounters should contain high level Pokémon to present a challenge to the player, perhaps even 1 or 2 Pokémon of much higher level than the players.</p>
 			<p>Experience for wild Pokémon encounters should be given out at the discretion of the DM, based on participation in the fight by each PC, or distributed equally among all players.</p>
 		</section>
 		<section>
-			<h2>Trainer Pokémon</h2>
+			<h2 id="trainer-battles">Trainer Pokémon</h2>
 			<p>Often in a campaign, your players will come across other trainers that will want to engage in a Pokémon battle. Combat for these fights are similar to wild Pokémon encounters with the exception that an enemy trainer’s Pokémon cannot be caught by any means.</p>
 			<p>Additionally, Pokémon that belong to an enemy trainer are usually stronger than those found in the wild. When building trainer Pokémon, consider the fact that their Pokémon may have started at level 1 and have gone through an evolution or two with that trainer. Advance the enemy Pokémon just the same as a PC would advance their own Pokémon.</p>
 			<p>It may be a good idea to give the entire party experience and money for defeating a trainer, in addition to experience gained from each defeated Pokémon.</p>
 		</section>
 	{:else}
 		<section>
-			<p>There will be essentially three types of encounters in Pokémon 5e: Wild Pokémon encounters, Trainer Battles, and Gym Battles.</p>
+			<p>As a Dungeon Master, one of the ways you can challenge your players is through <strong>encounters</strong>, battles between the players' pokémon and other pokémon. There are essentially three types of encounters in Pokémon 5e: Wild Pokémon encounters, Trainer Battles, and Gym Battles.</p>
+			<ul>
+				<li><a href="#wild-pokemon">Wild Pokémon</a></li>
+				<li><a href="#trainer-battles">Trainer Battles</a></li>
+				<li><a href="#gym-battles">Gym Battles</a></li>
+			</ul>
 		</section>
 		<section>
-			<h2>Wild Pokémon</h2>
+			<h2 id="wild-pokemon">Wild Pokémon</h2>
 			<p>Encountering Pokémon in the wild can be dangerous! Players may venture into the wilderness to gain experience, catch new pokémon, or just as a part of travel. As a DM, you will want to balance the kinds of pokémon and their strength levels that players face throughout the campaign, both to create a feeling of risk and help players build an awesome team.</p>
 			<p>When designing encounters with wild pokemon, keep the following in mind:</p>
 			<ul>
@@ -40,9 +51,12 @@
 			<p>Experience for wild Pokémon encounters should be given out at the discretion of the DM, based on participation in the fight by each PC, or distributed equally among all players.</p>
 			<h3>A Note on SR vs CR</h3>
 			<p>SR (Species Rating) is <strong>not</strong> equivalent to CR (Challenge Rating)! The guidance on designing properly challenging encounters is to use pokémon levels. Pokémon of the same level will be similarly strong.</p>
+			<h3>A Note on Biomes</h3>
+			<p>Pokémon stat blocks reference biomes within which those Pokémon are most usually found. For example, Eevees are usually found in <BiomeTags values={["forest"]} /> or <BiomeTags values={["city"]} /> biomes.</p>
+			<p>The <a href="{Url.encounterTool()}">Encounter Tool</a> can help you create random encounters themed to where your players are!</p>
 		</section>
 		<section>
-			<h2>Trainer Pokémon</h2>
+			<h2 id="trainer-battles">Trainer Pokémon</h2>
 			<p>Trainers battle one another in order to become stronger! Trainer battles can be initiated by either the players or trainers they encounter. Running a trainer battle is similar to running wild pokémon battles, with two exceptions: the opposing trainer's pokémon cannot be captured with pokéballs, and the trainer's actions may be limited depending on the rules of the contest.</p>
 			<p>When designing encounters with trainers, keep the following in mind:</p>
 			<ul>
@@ -60,7 +74,7 @@
 			<p>Besides battles, get creative with other ways players can earn some cash: bounties, odd jobs, official contests, gym battles, and so on!</p>
 		</section>
 		<section>
-			<h2>Gym Battles</h2>
+			<h2 id="gym-battles">Gym Battles</h2>
 			<p>Gym battles are an official assessment of a trainer's strength and readiness to face the Pokémon League. They are much like trainer battles, but generally more challenging and with official rules.</p>
 			<ul>
 				<li>Gym Leaders usually structure their teams around either a pokémon type (like Fire) or theme.</li>

@@ -68,6 +68,7 @@ const CoreRules2024 = [
 	DamageTypesPage,
 	CatchingPokemonPage,
 	FaintingPage,
+	EncountersPage,
 ]
 
 const Appendix2018 = [
@@ -84,6 +85,7 @@ const Appendix2018 = [
 const Appendix2024 = [
 	AppendixPage,
 	AbilitiesPage,
+	FeatsPage,
 	NaturesPage,
 	SpecializationsPage,
 	StatusConditionsPage,
@@ -104,8 +106,6 @@ const Supplements2024 = [
 	BondsPage,
 	BreedingPage,
 	ContestsPage,
-	EncountersPage,
-	FeatsPage,
 	LegendaryBattlesPage,
 	PokemonTransformationsPage,
 	ShinyPage,
