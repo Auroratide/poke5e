@@ -126,4 +126,14 @@
 			max-inline-size: 37.5em;
 		}
 	}
+
+	@media print {
+		.page {
+			height: auto;
+		}
+
+		.side {
+			display: none;
+		}
+	}
 </style>

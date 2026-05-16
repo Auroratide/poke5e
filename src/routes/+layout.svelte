@@ -192,4 +192,19 @@
 		flex: 1;
 		overflow: hidden;
 	}
+
+	@media print {
+		.page {
+			height: auto;
+			overflow: visible;
+		}
+
+		.content {
+			overflow: visible;
+		}
+
+		header {
+			display: none;
+		}
+	}
 </style>

@@ -26,4 +26,10 @@
 		background-color: var(--theme-main);
 		box-shadow: var(--elev-cirrus);
 	}
+
+	@media print {
+		.window {
+			display: none;
+		}
+	}
 </style>

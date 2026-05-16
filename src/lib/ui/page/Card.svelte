@@ -132,4 +132,11 @@
 			display: none;
 		}
 	}
+
+	@media print {
+		article {
+			box-shadow: none;
+			border-radius: 0;
+		}
+	}
 </style>
