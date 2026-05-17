@@ -142624,7 +142624,9 @@
 					"helping-hand",
 					"struggle-bug",
 					"stun-spore",
-					"infestation",
+					"infestation"
+				],
+				"level6": [
 					"mist",
 					"defog"
 				],
@@ -142635,14 +142637,14 @@
 					"snowscape"
 				],
 				"level14": [
-					"bug-buzz"
+					"bug-buzz",
+					"aurora-veil",
+					"blizzard"
 				],
 				"level18": [
-					"blizzard",
 					"tailwind",
 					"wide-guard",
-					"quiver-dance",
-					"aurora-veil"
+					"quiver-dance"
 				],
 				"tm": [
 					4,
