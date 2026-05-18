@@ -5705,6 +5705,106 @@
 			]
 		},
 		{
+			"id": "basculin-to-basculegion-m",
+			"from": "basculin-blue-striped",
+			"to": "basculegion-m",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "gender",
+					"value": "male"
+				},
+				{
+					"type": "special",
+					"value": "after fainting to damage taken from a melee attack"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"id": "basculin-to-basculegion-f",
+			"from": "basculin-blue-striped",
+			"to": "basculegion-f",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "gender",
+					"value": "female"
+				},
+				{
+					"type": "special",
+					"value": "after fainting to damage taken from a melee attack"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"id": "basculin-to-basculegion-m",
+			"from": "basculin-white-striped",
+			"to": "basculegion-m",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "gender",
+					"value": "male"
+				},
+				{
+					"type": "special",
+					"value": "after fainting from recoil damage"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
+			"id": "basculin-to-basculegion-f",
+			"from": "basculin-white-striped",
+			"to": "basculegion-f",
+			"conditions": [
+				{
+					"type": "level",
+					"value": 10
+				},
+				{
+					"type": "gender",
+					"value": "female"
+				},
+				{
+					"type": "special",
+					"value": "after fainting from recoil damage"
+				}
+			],
+			"effects": [
+				{
+					"type": "asi",
+					"value": 12
+				}
+			]
+		},
+		{
 			"id": "sandile-to-krokorok",
 			"from": "sandile",
 			"to": "krokorok",
