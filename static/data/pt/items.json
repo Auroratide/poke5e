@@ -1,0 +1,3447 @@
+{
+  "items": [
+    {
+      "id": "poke-ball",
+      "name": "Poké Bola",
+      "type": "pokeball",
+      "cost": 250,
+      "description": ["Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon."],
+      "media": { "sprite": "/assets/items/poke-ball/sprite.png" }
+    },
+    {
+      "id": "great-ball",
+      "name": "Super Bola",
+      "type": "pokeball",
+      "cost": 500,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 5."
+      ],
+      "media": { "sprite": "/assets/items/great-ball/sprite.png" }
+    },
+    {
+      "id": "ultra-ball",
+      "name": "Ultra Bola",
+      "type": "pokeball",
+      "cost": 1000,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10."
+      ],
+      "media": { "sprite": "/assets/items/ultra-ball/sprite.png" }
+    },
+    {
+      "id": "master-ball",
+      "name": "Master Ball",
+      "type": "pokeball",
+      "cost": null,
+      "description": ["Permite que um treinador capture automaticamente um Pokémon em uma Jogada de Captura."],
+      "media": { "sprite": "/assets/items/master-ball/sprite.png" }
+    },
+    {
+      "id": "safari-ball",
+      "name": "Safari Ball",
+      "type": "pokeball",
+      "cost": 800,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura pelo modificador de habilidade Natureza."
+      ],
+      "media": { "sprite": "/assets/items/safari-ball/sprite.png" }
+    },
+    {
+      "id": "fast-ball",
+      "name": "Fast Ball",
+      "type": "pokeball",
+      "cost": 600,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Pode ser arremessada como reação contra um Pokémon em fuga."
+      ],
+      "media": { "sprite": "/assets/items/fast-ball/sprite.png" }
+    },
+    {
+      "id": "level-ball",
+      "name": "Level Ball",
+      "type": "pokeball",
+      "cost": 400,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 5 se o nível do treinador for maior que o nível do Pokémon alvo."
+      ],
+      "media": { "sprite": "/assets/items/level-ball/sprite.png" }
+    },
+    {
+      "id": "lure-ball",
+      "name": "Lure Ball",
+      "type": "pokeball",
+      "cost": 1300,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 se usado durante pesca."
+      ],
+      "media": { "sprite": "/assets/items/lure-ball/sprite.png" }
+    },
+    {
+      "id": "heavy-ball",
+      "name": "Heavy Ball",
+      "type": "pokeball",
+      "cost": 1300,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 se o Pokémon alvo for Médio ou maior."
+      ],
+      "media": { "sprite": "/assets/items/heavy-ball/sprite.png" }
+    },
+    {
+      "id": "love-ball",
+      "name": "Love Ball",
+      "type": "pokeball",
+      "cost": 1300,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em duas vezes o modificador de Carisma do Pokémon ativo."
+      ],
+      "media": { "sprite": "/assets/items/love-ball/sprite.png" }
+    },
+    {
+      "id": "friend-ball",
+      "name": "Friend Ball",
+      "type": "pokeball",
+      "cost": 800,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura pelo modificador de Persuasão."
+      ],
+      "media": { "sprite": "/assets/items/friend-ball/sprite.png" }
+    },
+    {
+      "id": "moon-ball",
+      "name": "Moon Ball",
+      "type": "pokeball",
+      "cost": 800,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 contra Pokémon que evoluem com uma Pedra da Lua."
+      ],
+      "media": { "sprite": "/assets/items/moon-ball/sprite.png" }
+    },
+    {
+      "id": "sport-ball",
+      "name": "Sport Ball",
+      "type": "pokeball",
+      "cost": 800,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura pelo modificador de Atletismo."
+      ],
+      "media": { "sprite": "/assets/items/sport-ball/sprite.png" }
+    },
+    {
+      "id": "net-ball",
+      "name": "Net Ball",
+      "type": "pokeball",
+      "cost": 800,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 contra Pokémon do tipo Água ou Inseto."
+      ],
+      "media": { "sprite": "/assets/items/net-ball/sprite.png" }
+    },
+    {
+      "id": "dive-ball",
+      "name": "Dive Ball",
+      "type": "pokeball",
+      "cost": 800,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 debaixo d’água."
+      ],
+      "media": { "sprite": "/assets/items/dive-ball/sprite.png" }
+    },
+    {
+      "id": "nest-ball",
+      "name": "Nest Ball",
+      "type": "pokeball",
+      "cost": 400,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 5 se o Pokémon alvo for nível 5 ou menor."
+      ],
+      "media": { "sprite": "/assets/items/nest-ball/sprite.png" }
+    },
+    {
+      "id": "repeat-ball",
+      "name": "Repeat Ball",
+      "type": "pokeball",
+      "cost": 800,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 contra uma espécie já capturada anteriormente."
+      ],
+      "media": { "sprite": "/assets/items/repeat-ball/sprite.png" }
+    },
+    {
+      "id": "timer-ball",
+      "name": "Timer Ball",
+      "type": "pokeball",
+      "cost": 600,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Ao usar a ação de lançar Pokébola, você pode segurar a bola e começar a se concentrar. Em um turno posterior, ao arremessar a bola, reduza a CD de captura em 1 por turno de concentração, até um máximo de 10."
+      ],
+      "media": { "sprite": "/assets/items/timer-ball/sprite.png" }
+    },
+    {
+      "id": "luxury-ball",
+      "name": "Luxury Ball",
+      "type": "pokeball",
+      "cost": 800,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Pokémon em uma Luxury Ball ganham +1 no máximo de dados de vida."
+      ],
+      "media": { "sprite": "/assets/items/luxury-ball/sprite.png" }
+    },
+    {
+      "id": "premier-ball",
+      "name": "Premier Ball",
+      "type": "pokeball",
+      "cost": 2000,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Rara e frequentemente considerada um símbolo de classe."
+      ],
+      "media": { "sprite": "/assets/items/premier-ball/sprite.png" }
+    },
+    {
+      "id": "dusk-ball",
+      "name": "Dusk Ball",
+      "type": "pokeball",
+      "cost": 800,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 durante a noite ou em locais escuros."
+      ],
+      "media": { "sprite": "/assets/items/dusk-ball/sprite.png" }
+    },
+    {
+      "id": "heal-ball",
+      "name": "Heal Ball",
+      "type": "pokeball",
+      "cost": 1000,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Quando o Pokémon na Heal Ball gastar um dado de vida durante um descanso curto, pode rolar duas vezes e ficar com o melhor resultado."
+      ],
+      "media": { "sprite": "/assets/items/heal-ball/sprite.png" }
+    },
+    {
+      "id": "quick-ball",
+      "name": "Quick Ball",
+      "type": "pokeball",
+      "cost": 1000,
+      "description": [
+        "Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 15 se usada no primeiro turno de combate."
+      ],
+      "media": { "sprite": "/assets/items/quick-ball/sprite.png" }
+    },
+    {
+      "id": "dream-ball",
+      "name": "Dream Ball",
+      "type": "pokeball",
+      "cost": 500,
+      "description": ["Reduz a CD de captura em 5 se usada em um Pokémon afetado pela condição de Sono."],
+      "media": { "sprite": "/assets/items/dream-ball/sprite.png" }
+    },
+    {
+      "id": "potion",
+      "name": "Poção",
+      "type": "medicine",
+      "cost": 200,
+      "description": [
+        "Um treinador pode usar uma ação para restaurar 2d4 + 2 de HP a um Pokémon adjacente. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/potion/sprite.png" }
+    },
+    {
+      "id": "super-potion",
+      "name": "Super Poção",
+      "type": "medicine",
+      "cost": 500,
+      "description": [
+        "Um treinador pode usar uma ação para restaurar 3d6 + 6 de HP a um Pokémon adjacente. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/super-potion/sprite.png" }
+    },
+    {
+      "id": "hyper-potion",
+      "name": "Hiper Poção",
+      "type": "medicine",
+      "cost": 800,
+      "description": [
+        "Um treinador pode usar uma ação para restaurar 4d12 + 10 de HP a um Pokémon adjacente. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/hyper-potion/sprite.png" }
+    },
+    {
+      "id": "antidote",
+      "name": "Antídoto",
+      "type": "medicine",
+      "cost": 200,
+      "description": [
+        "Um treinador pode usar uma ação para curar um Pokémon adjacente das condições Envenenado ou Gravemente Envenenado. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/antidote/sprite.png" }
+    },
+    {
+      "id": "burn-heal",
+      "name": "Cura Queimadura",
+      "type": "medicine",
+      "cost": 200,
+      "description": [
+        "Um treinador pode usar uma ação para curar um Pokémon adjacente da condição Queimado. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/burn-heal/sprite.png" }
+    },
+    {
+      "id": "ice-heal",
+      "name": "Cura Congelamento",
+      "type": "medicine",
+      "cost": 200,
+      "description": [
+        "Um treinador pode usar uma ação para curar um Pokémon adjacente da condição Congelado. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/ice-heal/sprite.png" }
+    },
+    {
+      "id": "awakening",
+      "name": "Despertar",
+      "type": "medicine",
+      "cost": 200,
+      "description": [
+        "Um treinador pode usar uma ação para curar um Pokémon adjacente da condição Dormindo. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/awakening/sprite.png" }
+    },
+    {
+      "id": "paralyze-heal",
+      "name": "Cura Paralisia",
+      "type": "medicine",
+      "cost": 200,
+      "description": [
+        "Um treinador pode usar uma ação para curar um Pokémon adjacente da condição Paralisado. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/paralyze-heal/sprite.png" }
+    },
+    {
+      "id": "max-potion",
+      "name": "Poção Máxima",
+      "type": "medicine",
+      "cost": 2500,
+      "description": [
+        "Um treinador pode usar uma ação para administrar este item a um Pokémon adjacente. Após 10 minutos, o Pokémon recupera 70 HP. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/max-potion/sprite.png" }
+    },
+    {
+      "id": "full-heal",
+      "name": "Cura Total",
+      "type": "medicine",
+      "cost": 450,
+      "description": [
+        "Um treinador pode usar uma ação para curar um Pokémon adjacente de todas as condições de status e concede imunidade a status por um turno."
+      ],
+      "media": { "sprite": "/assets/items/full-heal/sprite.png" }
+    },
+    {
+      "id": "full-restore",
+      "name": "Restauração Total",
+      "type": "medicine",
+      "cost": 3000,
+      "description": [
+        "Um treinador pode usar uma ação para administrar este item a um Pokémon adjacente. Após 10 minutos, o Pokémon recupera 70 HP e é curado de todas as condições de status."
+      ],
+      "media": { "sprite": "/assets/items/full-restore/sprite.png" }
+    },
+    {
+      "id": "revive",
+      "name": "Reviver",
+      "type": "medicine",
+      "cost": 3000,
+      "description": [
+        "Um treinador pode usar uma ação para restaurar 2d4 + 2 de HP a um Pokémon desmaiado. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/revive/sprite.png" }
+    },
+    {
+      "id": "max-revive",
+      "name": "Reviver Máximo",
+      "type": "medicine",
+      "cost": 5000,
+      "description": [
+        "Um treinador pode usar uma ação para restaurar 4d12 + 10 de HP a um Pokémon desmaiado. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/max-revive/sprite.png" }
+    },
+    {
+      "id": "fresh-water",
+      "name": "Água Fresca",
+      "type": "medicine",
+      "cost": 200,
+      "description": [
+        "Quando consumido, restaura 7 HP. Pode ser usado como ação bônus ou administrado como ação completa a um Pokémon adjacente."
+      ],
+      "media": { "sprite": "/assets/items/fresh-water/sprite.png" }
+    },
+    {
+      "id": "soda-pop",
+      "name": "Refrigerante",
+      "type": "medicine",
+      "cost": 275,
+      "description": [
+        "Quando consumido, restaura 10 HP. Pode ser usado como ação bônus ou administrado como ação completa a um Pokémon adjacente."
+      ],
+      "media": { "sprite": "/assets/items/soda-pop/sprite.png" }
+    },
+    {
+      "id": "berry-juice",
+      "name": "Suco de Berry",
+      "type": "medicine",
+      "cost": 500,
+      "description": [
+        "Quando consumido, restaura 20 HP. Pode ser usado como ação bônus ou administrado como ação completa a um Pokémon adjacente."
+      ],
+      "media": { "sprite": "/assets/items/berry-juice/sprite.png" }
+    },
+    {
+      "id": "lemonade",
+      "name": "Limonada",
+      "type": "medicine",
+      "cost": 650,
+      "description": [
+        "Quando consumido, restaura 30 HP. Pode ser usado como ação bônus ou administrado como ação completa a um Pokémon adjacente."
+      ],
+      "media": { "sprite": "/assets/items/lemonade/sprite.png" }
+    },
+    {
+      "id": "moomoo-milk",
+      "name": "Leite Mumu",
+      "type": "medicine",
+      "cost": 1200,
+      "description": [
+        "Quando consumido, restaura 50 HP. Pode ser usado como ação bônus ou administrado como ação completa a um Pokémon adjacente."
+      ],
+      "media": { "sprite": "/assets/items/moomoo-milk/sprite.png" }
+    },
+    {
+      "id": "energy-powder",
+      "name": "Pó de Energia",
+      "type": "medicine",
+      "cost": 300,
+      "description": [
+        "Um treinador pode usar uma ação para restaurar 3d6 + 6 de HP a um Pokémon adjacente. Consumido no uso. A maioria dos Pokémon não gosta de Pó de Energia, então o uso excessivo pode reduzir o vínculo (25% de chance de diminuir o nível de vínculo em 1)."
+      ],
+      "media": { "sprite": "/assets/items/energy-powder/sprite.png" }
+    },
+    {
+      "id": "energy-root",
+      "name": "Raiz de Energia",
+      "type": "medicine",
+      "cost": 700,
+      "description": [
+        "Um treinador pode usar uma ação para restaurar 4d12 + 10 de HP a um Pokémon adjacente. Consumido no uso. A maioria dos Pokémon não gosta de Raiz de Energia, então o uso excessivo pode reduzir o vínculo (25% de chance de diminuir o nível de vínculo em 1)."
+      ],
+      "media": { "sprite": "/assets/items/energy-root/sprite.png" }
+    },
+    {
+      "id": "heal-powder",
+      "name": "Pó de Cura",
+      "type": "medicine",
+      "cost": 300,
+      "description": [
+        "Um treinador pode usar uma ação para curar um Pokémon adjacente de todas as condições de status. Consumido no uso. A maioria dos Pokémon não gosta de Pó de Cura, então o uso excessivo pode reduzir o vínculo (25% de chance de diminuir o nível de vínculo em 1)."
+      ],
+      "media": { "sprite": "/assets/items/heal-powder/sprite.png" }
+    },
+    {
+      "id": "revival-herb",
+      "name": "Erva Reviver",
+      "type": "medicine",
+      "cost": 4200,
+      "description": [
+        "Um treinador pode usar uma ação para restaurar 4d12 + 10 de HP a um Pokémon desmaiado dentro de uma Pokébola. Consumido no uso. A maioria dos Pokémon não gosta de Erva Reviver, então o uso excessivo pode reduzir o vínculo (25% de chance de diminuir o nível de vínculo em 1)."
+      ],
+      "media": { "sprite": "/assets/items/revival-herb/sprite.png" }
+    },
+    {
+      "id": "ether",
+      "name": "Éter",
+      "type": "medicine",
+      "cost": 500,
+      "description": [
+        "Um treinador pode usar uma ação para restaurar 5 PP de um movimento de um Pokémon adjacente. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/ether/sprite.png" }
+    },
+    {
+      "id": "max-ether",
+      "name": "Éter Máximo",
+      "type": "medicine",
+      "cost": 1800,
+      "description": [
+        "Um treinador pode usar uma ação para restaurar 10 PP de um movimento de um Pokémon adjacente. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/max-ether/sprite.png" }
+    },
+    {
+      "id": "elixir",
+      "name": "Elixir",
+      "type": "medicine",
+      "cost": 900,
+      "description": [
+        "Um treinador pode usar uma ação para restaurar 5 PP de todos os movimentos de um Pokémon adjacente. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/elixir/sprite.png" }
+    },
+    {
+      "id": "max-elixir",
+      "name": "Elixir Máximo",
+      "type": "medicine",
+      "cost": 3200,
+      "description": [
+        "Um treinador pode usar uma ação para restaurar 10 PP de todos os movimentos de um Pokémon adjacente. Consumido no uso."
+      ],
+      "media": { "sprite": "/assets/items/max-elixir/sprite.png" }
+    },
+    {
+      "id": "sacred-ash",
+      "name": "Cinzas Sagradas",
+      "type": "medicine",
+      "cost": 10000,
+      "description": [
+        "Um treinador pode gastar 5 minutos para reviver até seis Pokémon desmaiados. Cada Pokémon revivido desta forma recupera metade do HP máximo."
+      ],
+      "media": { "sprite": "/assets/items/sacred-ash/sprite.png" }
+    },
+    {
+      "id": "hp-up",
+      "name": "Aumento de HP",
+      "type": "medicine",
+      "cost": 8800,
+      "description": [
+        "Um treinador pode usar uma ação para administrar este item a um Pokémon. O HP máximo desse Pokémon aumenta pelo valor máximo de um de seus dados de vida.",
+        "Isto é uma vitamina. Pokémon podem se beneficiar de no máximo três vitaminas no total."
+      ],
+      "media": { "sprite": "/assets/items/hp-up/sprite.png" }
+    },
+    {
+      "id": "protein",
+      "name": "Proteína",
+      "type": "medicine",
+      "cost": 4900,
+      "description": [
+        "Um treinador pode usar uma ação para administrar este item a um Pokémon. O atributo FOR desse Pokémon aumenta em 1. Isso não pode ultrapassar 20.",
+        "Isto é uma vitamina. Pokémon podem se beneficiar de no máximo três vitaminas no total."
+      ],
+      "media": { "sprite": "/assets/items/protein/sprite.png" }
+    },
+    {
+      "id": "iron",
+      "name": "Ferro",
+      "type": "medicine",
+      "cost": 4900,
+      "description": [
+        "Um treinador pode usar uma ação para administrar este item a um Pokémon. O atributo DES desse Pokémon aumenta em 1. Isso não pode ultrapassar 20.",
+        "Isto é uma vitamina. Pokémon podem se beneficiar de no máximo três vitaminas no total."
+      ],
+      "media": { "sprite": "/assets/items/iron/sprite.png" }
+    },
+    {
+      "id": "carbos",
+      "name": "Carbos",
+      "type": "medicine",
+      "cost": 4900,
+      "description": [
+        "Um treinador pode usar uma ação para administrar este item a um Pokémon. O atributo CAR desse Pokémon aumenta em 1. Isso não pode ultrapassar 20.",
+        "Isto é uma vitamina. Pokémon podem se beneficiar de no máximo três vitaminas no total."
+      ],
+      "media": { "sprite": "/assets/items/carbos/sprite.png" }
+    },
+    {
+      "id": "calcium",
+      "name": "Cálcio",
+      "type": "medicine",
+      "cost": 4900,
+      "description": [
+        "Um treinador pode usar uma ação para administrar este item a um Pokémon. O atributo CON desse Pokémon aumenta em 1. Isso não pode ultrapassar 20.",
+        "Isto é uma vitamina. Pokémon podem se beneficiar de no máximo três vitaminas no total."
+      ],
+      "media": { "sprite": "/assets/items/calcium/sprite.png" }
+    },
+    {
+      "id": "zinc",
+      "name": "Zinco",
+      "type": "medicine",
+      "cost": 4900,
+      "description": [
+        "Um treinador pode usar uma ação para administrar este item a um Pokémon. O atributo SAB desse Pokémon aumenta em 1. Isso não pode ultrapassar 20.",
+        "Isto é uma vitamina. Pokémon podem se beneficiar de no máximo três vitaminas no total."
+      ],
+      "media": { "sprite": "/assets/items/zinc/sprite.png" }
+    },
+    {
+      "id": "pp-up",
+      "name": "Aumento de PP",
+      "type": "medicine",
+      "cost": 8800,
+      "description": [
+        "Um treinador pode usar uma ação para administrar este item a um Pokémon. O PP máximo de um movimento aumenta em 2. Não pode ultrapassar o dobro do PP base.",
+        "Isto é uma vitamina. Pokémon podem se beneficiar de no máximo três vitaminas no total."
+      ],
+      "media": { "sprite": "/assets/items/pp-up/sprite.png" }
+    },
+    {
+      "id": "ability-capsule",
+      "name": "Cápsula de Habilidade",
+      "type": "medicine",
+      "cost": 5000,
+      "description": [
+        "Quando consumido por um Pokémon durante um descanso longo, ele pode trocar sua habilidade não oculta conhecida (se houver duas opções)."
+      ],
+      "media": { "sprite": "/assets/items/ability-capsule/sprite.png" }
+    },
+    {
+      "id": "guard-spec",
+      "name": "Guard Spec",
+      "type": "medicine",
+      "cost": 700,
+      "description": [
+        "Um treinador pode usar uma ação para administrar este item a um Pokémon. Por 1 minuto, esse Pokémon não pode ser afetado por novas condições de status."
+      ],
+      "media": { "sprite": "/assets/items/guard-spec/sprite.png" }
+    },
+    {
+      "id": "dire-hit",
+      "name": "Golpe Crítico",
+      "type": "medicine",
+      "cost": 400,
+      "description": [
+        "Um treinador pode usar uma ação para administrar isso a um Pokémon. Por 1 minuto, o intervalo de acerto crítico desse Pokémon aumenta em um.",
+        "Na maioria das vezes, isso significa que os ataques podem causar acerto crítico com um 19 natural ou 20. Para um movimento como Slash que já amplia o intervalo de crítico, os críticos podem acontecer com 18, 19 ou 20 naturais."
+      ],
+      "media": { "sprite": "/assets/items/dire-hit/sprite.png" }
+    },
+    {
+      "id": "x-attack",
+      "name": "X Ataque",
+      "type": "medicine",
+      "cost": 350,
+      "description": [
+        "Um treinador pode usar uma ação para administrar isso a um Pokémon. Por 1 minuto, esse Pokémon adiciona +2 às suas jogadas de ataque."
+      ],
+      "media": { "sprite": "/assets/items/x-attack/sprite.png" }
+    },
+    {
+      "id": "x-defense",
+      "name": "X Defesa",
+      "type": "medicine",
+      "cost": 350,
+      "description": [
+        "Um treinador pode usar uma ação para administrar isso a um Pokémon. Por 1 minuto, esse Pokémon adiciona +2 à Classe de Armadura."
+      ],
+      "media": { "sprite": "/assets/items/x-defense/sprite.png" }
+    },
+    {
+      "id": "x-speed",
+      "name": "X Velocidade",
+      "type": "medicine",
+      "cost": 350,
+      "description": [
+        "Um treinador pode usar uma ação para administrar isso a um Pokémon. Por 1 minuto, a velocidade de movimento desse Pokémon é aumentada em 10 pés."
+      ],
+      "media": { "sprite": "/assets/items/x-speed/sprite.png" }
+    },
+    {
+      "id": "x-accuracy",
+      "name": "X Precisão",
+      "type": "medicine",
+      "cost": 350,
+      "description": ["O Pokémon ganha vantagem nas próximas três jogadas de ataque."],
+      "media": { "sprite": "/assets/items/x-accuracy/sprite.png" }
+    },
+    {
+      "id": "x-sp-atk",
+      "name": "X Atq. Esp.",
+      "type": "medicine",
+      "cost": 350,
+      "description": [
+        "Um treinador pode usar uma ação para administrar isso a um Pokémon. Por 1 minuto, esse Pokémon adiciona +2 à CD de seus movimentos."
+      ],
+      "media": { "sprite": "/assets/items/x-sp-atk/sprite.png" }
+    },
+    {
+      "id": "x-sp-def",
+      "name": "X Def. Esp.",
+      "type": "medicine",
+      "cost": 350,
+      "description": [
+        "Um treinador pode usar uma ação para administrar isso a um Pokémon. Por 1 minuto, esse Pokémon adiciona +2 aos testes de resistência."
+      ],
+      "media": { "sprite": "/assets/items/x-sp-def/sprite.png" }
+    },
+    {
+      "id": "red-nectar",
+      "name": "Néctar Vermelho",
+      "type": "medicine",
+      "cost": 400,
+      "description": ["Quando dado a um Oricorio, ele muda de forma para Oricorio Estilo Baile."],
+      "media": { "sprite": "/assets/items/red-nectar/sprite.png" }
+    },
+    {
+      "id": "yellow-nectar",
+      "name": "Néctar Amarelo",
+      "type": "medicine",
+      "cost": 400,
+      "description": ["Quando dado a um Oricorio, ele muda de forma para Oricorio Estilo Pom-Pom."],
+      "media": { "sprite": "/assets/items/yellow-nectar/sprite.png" }
+    },
+    {
+      "id": "pink-nectar",
+      "name": "Néctar Rosa",
+      "type": "medicine",
+      "cost": 400,
+      "description": ["Quando dado a um Oricorio, ele muda de forma para Oricorio Estilo Pa'u."],
+      "media": { "sprite": "/assets/items/pink-nectar/sprite.png" }
+    },
+    {
+      "id": "purple-nectar",
+      "name": "Néctar Roxo",
+      "type": "medicine",
+      "cost": 400,
+      "description": ["Quando dado a um Oricorio, ele muda de forma para Oricorio Estilo Sensu."],
+      "media": { "sprite": "/assets/items/purple-nectar/sprite.png" }
+    },
+    {
+      "id": "pewter-crunchies",
+      "name": "Crocantes de Pewter",
+      "type": "medicine",
+      "cost": 250,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "health-candy",
+      "name": "Doce de Saúde",
+      "type": "medicine",
+      "cost": 1000,
+      "description": [
+        "Quando consumido por um Pokémon, ele ganha 20 PV temporários por 1 minuto. Um Pokémon só pode se beneficiar de um item Doce por vez."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "mighty-candy",
+      "name": "Doce Poderoso",
+      "type": "medicine",
+      "cost": 1000,
+      "description": [
+        "Quando consumido por um Pokémon, seu FOR aumenta em 1 por 1 minuto. Um Pokémon só pode se beneficiar de um item Doce por vez."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "tough-candy",
+      "name": "Doce Resistente",
+      "type": "medicine",
+      "cost": 1000,
+      "description": [
+        "Quando consumido por um Pokémon, sua CA aumenta em 1 por 1 minuto. Um Pokémon só pode se beneficiar de um item Doce por vez."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "smart-candy",
+      "name": "Doce Inteligente",
+      "type": "medicine",
+      "cost": 1000,
+      "description": [
+        "Quando consumido por um Pokémon, sua INT aumenta em 1 por 1 minuto. Um Pokémon só pode se beneficiar de um item Doce por vez."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "courage-candy",
+      "name": "Doce de Coragem",
+      "type": "medicine",
+      "cost": 1000,
+      "description": [
+        "Quando consumido por um Pokémon, sua SAB aumenta em 1 por 1 minuto. Um Pokémon só pode se beneficiar de um item Doce por vez."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "quick-candy",
+      "name": "Doce Rápido",
+      "type": "medicine",
+      "cost": 1000,
+      "description": [
+        "Quando consumido por um Pokémon, sua DES aumenta em 1 por 1 minuto. Um Pokémon só pode se beneficiar de um item Doce por vez."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "health-wing",
+      "name": "Pena de Saúde",
+      "type": "medicine",
+      "cost": 300,
+      "description": null,
+      "media": { "sprite": "/assets/items/health-wing/sprite.png" },
+      "_ingameEffect": "Usado em um Pokémon da equipe\n:   Aumenta o esforço de HP do alvo em 1."
+    },
+    {
+      "id": "muscle-wing",
+      "name": "Pena Muscular",
+      "type": "medicine",
+      "cost": 300,
+      "description": null,
+      "media": { "sprite": "/assets/items/muscle-wing/sprite.png" },
+      "_ingameEffect": "Usado em um Pokémon da equipe\n:   Aumenta o esforço de Ataque do alvo em 1."
+    },
+    {
+      "id": "resist-wing",
+      "name": "Pena de Resistência",
+      "type": "medicine",
+      "cost": 300,
+      "description": null,
+      "media": { "sprite": "/assets/items/resist-wing/sprite.png" },
+      "_ingameEffect": "Usado em um Pokémon da equipe\n:   Aumenta o esforço de Defesa do alvo em 1."
+    },
+    {
+      "id": "genius-wing",
+      "name": "Pena Genial",
+      "type": "medicine",
+      "cost": 300,
+      "description": null,
+      "media": { "sprite": "/assets/items/genius-wing/sprite.png" },
+      "_ingameEffect": "Usado em um Pokémon da equipe\n:   Aumenta o esforço de Ataque Especial do alvo em 1."
+    },
+    {
+      "id": "clever-wing",
+      "name": "Pena Inteligente",
+      "type": "medicine",
+      "cost": 300,
+      "description": null,
+      "media": { "sprite": "/assets/items/clever-wing/sprite.png" },
+      "_ingameEffect": "Usado em um Pokémon da equipe\n:   Aumenta o esforço de Defesa Especial do alvo em 1."
+    },
+    {
+      "id": "swift-wing",
+      "name": "Pena Veloz",
+      "type": "medicine",
+      "cost": 300,
+      "description": null,
+      "media": { "sprite": "/assets/items/swift-wing/sprite.png" },
+      "_ingameEffect": "Usado em um Pokémon da equipe\n:   Aumenta o esforço de Velocidade do alvo em 1."
+    },
+    {
+      "id": "max-honey",
+      "name": "Mel Máximo",
+      "type": "medicine",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "max-mushrooms",
+      "name": "Cogumelos Máximos",
+      "type": "medicine",
+      "cost": 6000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "ability-patch",
+      "name": "Patch de Habilidade",
+      "type": "medicine",
+      "cost": 20,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "sun-stone",
+      "name": "Pedra Solar",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],
+      "media": { "sprite": "/assets/items/sun-stone/sprite.png" }
+    },
+    {
+      "id": "moon-stone",
+      "name": "Pedra da Lua",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],
+      "media": { "sprite": "/assets/items/moon-stone/sprite.png" }
+    },
+    {
+      "id": "fire-stone",
+      "name": "Pedra do Fogo",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],
+      "media": { "sprite": "/assets/items/fire-stone/sprite.png" }
+    },
+    {
+      "id": "thunder-stone",
+      "name": "Pedra do Trovão",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],
+      "media": { "sprite": "/assets/items/thunder-stone/sprite.png" }
+    },
+    {
+      "id": "water-stone",
+      "name": "Pedra da Água",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],
+      "media": { "sprite": "/assets/items/water-stone/sprite.png" }
+    },
+    {
+      "id": "leaf-stone",
+      "name": "Pedra da Folha",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],
+      "media": { "sprite": "/assets/items/leaf-stone/sprite.png" }
+    },
+    {
+      "id": "shiny-stone",
+      "name": "Pedra Brilhante",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],
+      "media": { "sprite": "/assets/items/shiny-stone/sprite.png" }
+    },
+    {
+      "id": "dusk-stone",
+      "name": "Pedra Noturna",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],
+      "media": { "sprite": "/assets/items/dusk-stone/sprite.png" }
+    },
+    {
+      "id": "dawn-stone",
+      "name": "Pedra do Amanhecer",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],
+      "media": { "sprite": "/assets/items/dawn-stone/sprite.png" }
+    },
+    {
+      "id": "ice-stone",
+      "name": "Pedra do Gelo",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],
+      "media": { "sprite": "/assets/items/ice-stone/sprite.png" }
+    },
+    {
+      "id": "oval-stone",
+      "name": "Pedra Oval",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],
+      "media": { "sprite": "/assets/items/oval-stone/sprite.png" }
+    },
+    {
+      "id": "alola-stone",
+      "name": "Pedra de Alola",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "cheri-berry",
+      "name": "Baga Cheri",
+      "type": "berry",
+      "cost": 200,
+      "description": ["Consumir para curar paralisia. Pode ser consumida como reação ao ficar paralisado."],
+      "media": { "sprite": "/assets/items/cheri-berry/sprite.png" }
+    },
+    {
+      "id": "chesto-berry",
+      "name": "Baga Chesto",
+      "type": "berry",
+      "cost": 200,
+      "description": ["Consumir para curar sono. Pode ser consumida como reação ao ficar adormecido."],
+      "media": { "sprite": "/assets/items/chesto-berry/sprite.png" }
+    },
+    {
+      "id": "pecha-berry",
+      "name": "Baga Pecha",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Consumir para curar envenenamento. Pode ser consumida como reação ao ficar envenenado ou gravemente envenenado."
+      ],
+      "media": { "sprite": "/assets/items/pecha-berry/sprite.png" }
+    },
+    {
+      "id": "rawst-berry",
+      "name": "Baga Rawst",
+      "type": "berry",
+      "cost": 200,
+      "description": ["Consumir para curar queimadura. Pode ser consumida como reação ao ficar queimado."],
+      "media": { "sprite": "/assets/items/rawst-berry/sprite.png" }
+    },
+    {
+      "id": "aspear-berry",
+      "name": "Baga Aspear",
+      "type": "berry",
+      "cost": 200,
+      "description": ["Consumir para curar congelamento. Pode ser consumida como reação ao ficar congelado."],
+      "media": { "sprite": "/assets/items/aspear-berry/sprite.png" }
+    },
+    {
+      "id": "leppa-berry",
+      "name": "Baga Leppa",
+      "type": "berry",
+      "cost": 500,
+      "description": [
+        "Consumir para restaurar 10 PP de um movimento. Pode ser consumida como reação quando um movimento chega a 0 PP."
+      ],
+      "media": { "sprite": "/assets/items/leppa-berry/sprite.png" }
+    },
+    {
+      "id": "oran-berry",
+      "name": "Baga Oran",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Consumir para restaurar 2d4 + 2 PV. Pode ser consumida como reação ao cair abaixo da metade da vida."
+      ],
+      "media": { "sprite": "/assets/items/oran-berry/sprite.png" }
+    },
+    {
+      "id": "persim-berry",
+      "name": "Baga Persim",
+      "type": "berry",
+      "cost": 200,
+      "description": ["Consumir para curar confusão. Pode ser consumida como reação ao ficar confuso."],
+      "media": { "sprite": "/assets/items/persim-berry/sprite.png" }
+    },
+    {
+      "id": "lum-berry",
+      "name": "Baga Lum",
+      "type": "berry",
+      "cost": 400,
+      "description": [
+        "Consumir para curar uma única condição de status. Pode ser consumida como reação ao ser afetado por uma condição de status."
+      ],
+      "media": { "sprite": "/assets/items/lum-berry/sprite.png" }
+    },
+    {
+      "id": "sitrus-berry",
+      "name": "Baga Sitrus",
+      "type": "berry",
+      "cost": 800,
+      "description": ["Consumir para restaurar 30 PV. Pode ser consumida como reação ao cair abaixo da metade da vida."],
+      "media": { "sprite": "/assets/items/sitrus-berry/sprite.png" }
+    },
+    {
+      "id": "occa-berry",
+      "name": "Occa Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo fogo. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/occa-berry/sprite.png" }
+    },
+    {
+      "id": "passho-berry",
+      "name": "Passho Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo água. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/passho-berry/sprite.png" }
+    },
+    {
+      "id": "wacan-berry",
+      "name": "Wacan Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo elétrico. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/wacan-berry/sprite.png" }
+    },
+    {
+      "id": "rindo-berry",
+      "name": "Rindo Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo grama. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/rindo-berry/sprite.png" }
+    },
+    {
+      "id": "yache-berry",
+      "name": "Yache Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo gelo. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/yache-berry/sprite.png" }
+    },
+    {
+      "id": "chople-berry",
+      "name": "Chople Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo lutador. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/chople-berry/sprite.png" }
+    },
+    {
+      "id": "kebia-berry",
+      "name": "Kebia Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo veneno. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/kebia-berry/sprite.png" }
+    },
+    {
+      "id": "shuca-berry",
+      "name": "Shuca Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo terra. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/shuca-berry/sprite.png" }
+    },
+    {
+      "id": "coba-berry",
+      "name": "Coba Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo voador. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/coba-berry/sprite.png" }
+    },
+    {
+      "id": "payapa-berry",
+      "name": "Payapa Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo psíquico. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/payapa-berry/sprite.png" }
+    },
+    {
+      "id": "tanga-berry",
+      "name": "Tanga Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo inseto. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/tanga-berry/sprite.png" }
+    },
+    {
+      "id": "charti-berry",
+      "name": "Charti Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo pedra. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/charti-berry/sprite.png" }
+    },
+    {
+      "id": "kasib-berry",
+      "name": "Kasib Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo fantasma. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/kasib-berry/sprite.png" }
+    },
+    {
+      "id": "haban-berry",
+      "name": "Haban Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo dragão. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/haban-berry/sprite.png" }
+    },
+    {
+      "id": "colbur-berry",
+      "name": "Colbur Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo sombrio. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/colbur-berry/sprite.png" }
+    },
+    {
+      "id": "babiri-berry",
+      "name": "Babiri Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo aço. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/babiri-berry/sprite.png" }
+    },
+    {
+      "id": "chilan-berry",
+      "name": "Chilan Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo normal. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/chilan-berry/sprite.png" }
+    },
+    {
+      "id": "roseli-berry",
+      "name": "Roseli Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como uma reação ao sofrer dano do tipo fada. Você recebe apenas metade desse dano em vez disso."
+      ],
+      "media": { "sprite": "/assets/items/roseli-berry/sprite.png" }
+    },
+    {
+      "id": "roseli-berry",
+      "name": "Roseli Berry",
+      "type": "berry",
+      "cost": 200,
+      "description": [
+        "Pode ser consumido como reação ao receber dano do tipo Fada. Você recebe apenas metade desse dano."
+      ],
+      "media": { "sprite": "/assets/items/roseli-berry/sprite.png" }
+    },
+    {
+      "id": "ability-shield",
+      "name": "Ability Shield",
+      "type": "held item",
+      "cost": 20000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "absorb-bulb",
+      "name": "Absorb Bulb",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/absorb-bulb/sprite.png" },
+      "_ingameEffect": "Segurado\n:   Quando o portador recebe dano do tipo Água de um movimento, seu Ataque Especial aumenta em um estágio e este item é consumido."
+    },
+    {
+      "id": "air-balloon",
+      "name": "Air Balloon",
+      "type": "held item",
+      "cost": 1000,
+      "description": [
+        "O portador é imune a dano do tipo Terra. Quando o portador sofre dano, o item estoura e perde seu efeito.",
+        "O Air Balloon pode ser reparado livremente durante um descanso curto."
+      ],
+      "media": { "sprite": "/assets/items/air-balloon/sprite.png" }
+    },
+    {
+      "id": "assault-vest",
+      "name": "Assault Vest",
+      "type": "held item",
+      "cost": 2000,
+      "description": ["O portador recebe +1 na sua CA, mas só pode usar movimentos ofensivos."],
+      "media": { "sprite": "/assets/items/assault-vest/sprite.png" }
+    },
+    {
+      "id": "big-root",
+      "name": "Big Root",
+      "type": "held item",
+      "cost": 4400,
+      "description": [
+        "Movimentos que causam dano e curam o usuário ao mesmo tempo restauram 1d12 HP adicional ao portador."
+      ],
+      "media": { "sprite": "/assets/items/big-root/sprite.png" }
+    },
+    {
+      "id": "binding-band",
+      "name": "Binding Band",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/binding-band/sprite.png" },
+      "_ingameEffect": "Segurado\n:   Movimentos usados pelo portador que prendem e causam dano por múltiplos turnos (ex: bind, fire spin) causam o dobro do dano por turno."
+    },
+    {
+      "id": "black-sludge",
+      "name": "Black Sludge",
+      "type": "held item",
+      "cost": 2000,
+      "description": [
+        "Este item tem 10 cargas. Se o portador for do tipo Poison, ele pode usar uma ação bônus para gastar uma carga, curando HP igual ao seu bônus de proficiência. As cargas são restauradas ao amanhecer.",
+        "Se o portador não for do tipo Poison, ele sofre 1d6 de dano venenoso ao final de cada turno."
+      ],
+      "media": { "sprite": "/assets/items/black-sludge/sprite.png" }
+    },
+    {
+      "id": "blunder-policy",
+      "name": "Blunder Policy",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "booster-energy",
+      "name": "Booster Energy",
+      "type": "held item",
+      "cost": null,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "bright-powder",
+      "name": "Bright Powder",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/bright-powder/sprite.png" },
+      "_ingameEffect": "Segurado em batalha\n:   Movimentos que têm como alvo o portador têm 0,9× de chance de acertar."
+    },
+    {
+      "id": "cell-battery",
+      "name": "Cell Battery",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/cell-battery/sprite.png" },
+      "_ingameEffect": "Segurado\n:   Quando o portador recebe dano do tipo Elétrico de um movimento, seu Ataque aumenta em um estágio e este item é consumido."
+    },
+    {
+      "id": "clear-amulet",
+      "name": "Clear Amulet",
+      "type": "held item",
+      "cost": 30000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "covert-cloak",
+      "name": "Covert Cloak",
+      "type": "held item",
+      "cost": 20000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "destiny-knot",
+      "name": "Destiny Knot",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/destiny-knot/sprite.png" },
+      "_ingameEffect": "Segurado: Quando o portador fica Apaixonado, o Pokémon pelo qual ele está Apaixonado também fica Apaixonado."
+    },
+    {
+      "id": "eject-button",
+      "name": "Eject Button",
+      "type": "held item",
+      "cost": 4000,
+      "description": [
+        "Este item tem 1 carga. Quando o portador sofre dano de um ataque, seu treinador pode realizar uma troca como ação livre, consumindo a carga.",
+        "O Eject Button recupera sua carga ao amanhecer."
+      ],
+      "media": { "sprite": "/assets/items/eject-button/sprite.png" }
+    },
+    {
+      "id": "eject-pack",
+      "name": "Eject Pack",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "eviolite",
+      "name": "Eviolite",
+      "type": "held item",
+      "cost": 4000,
+      "description": [
+        "O portador é impedido de evoluir. Se o Pokémon não for de sua última evolução, ele recebe 3 de dano a menos de todas as fontes."
+      ],
+      "media": { "sprite": "/assets/items/eviolite/sprite.png" }
+    },
+    {
+      "id": "exp-share",
+      "name": "Exp Share",
+      "type": "held item",
+      "cost": 7500,
+      "description": [
+        "Um Pokémon segurando este item recebe até metade da experiência total obtida em cada combate enquanto estiver no grupo."
+      ],
+      "media": { "sprite": "/assets/items/exp-share/sprite.png" }
+    },
+    {
+      "id": "expert-belt",
+      "name": "Expert Belt",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/expert-belt/sprite.png" },
+      "_ingameEffect": "Segurado: Quando o portador acerta um movimento super-efetivo, seu poder aumenta em 20%."
+    },
+    {
+      "id": "float-stone",
+      "name": "Float Stone",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/float-stone/sprite.png" },
+      "_ingameEffect": "Segurado\n:   O portador tem peso 0,5×."
+    },
+    {
+      "id": "focus-band",
+      "name": "Focus Band",
+      "type": "held item",
+      "cost": 1000,
+      "description": ["Quando o portador ficaria flinchado, role um d20. Em 10 ou mais, ele não sofre flinch."],
+      "media": { "sprite": "/assets/items/focus-band/sprite.png" }
+    },
+    {
+      "id": "focus-sash",
+      "name": "Focus Sash",
+      "type": "held item",
+      "cost": 4000,
+      "description": [
+        "Este item tem 1 carga. Se um dano reduzir o HP do portador a menos de 1, ele permanece com 1 HP, consumindo a carga.",
+        "O Focus Sash recupera sua carga ao amanhecer."
+      ],
+      "media": { "sprite": "/assets/items/focus-sash/sprite.png" }
+    },
+    {
+      "id": "grip-claw",
+      "name": "Grip Claw",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/grip-claw/sprite.png" },
+      "_ingameEffect": "Segurado: Aumenta a duração de movimentos multi-turno (2–5 turnos) em três turnos."
+    },
+    {
+      "id": "heavy-duty-boots",
+      "name": "Heavy-Duty Boots",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "leftovers",
+      "name": "Leftovers",
+      "type": "held item",
+      "cost": 4400,
+      "description": [
+        "Este item tem 10 cargas. O portador pode usar uma ação bônus para gastar uma carga, curando HP igual ao seu bônus de proficiência. Ele recupera suas cargas ao amanhecer."
+      ],
+      "media": { "sprite": "/assets/items/leftovers/sprite.png" }
+    },
+    {
+      "id": "luminous-moss",
+      "name": "Luminous Moss",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/luminous-moss/sprite.png" },
+      "_ingameEffect": "Segurado: Se o portador for atingido por um movimento do tipo Água, este item é consumido e seu Sp. Defesa aumenta em um estágio."
+    },
+    {
+      "id": "kings-rock",
+      "name": "King’s Rock",
+      "type": "held item",
+      "cost": 4000,
+      "description": [
+        "Quando um alvo é atingido por um ataque corpo a corpo do portador, se a rolagem de ataque for natural 19 ou 20, o alvo fica flinchado."
+      ],
+      "media": { "sprite": "/assets/items/kings-rock/sprite.png" }
+    },
+    {
+      "id": "lagging-tail",
+      "name": "Lagging Tail",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/lagging-tail/sprite.png" },
+      "_ingameEffect": "Segurado: O portador sempre age por último dentro de sua prioridade de movimento, independentemente da Velocidade. Se houver múltiplos afetados, o mais lento age primeiro. Ignora Trick Room."
+    },
+    {
+      "id": "light-clay",
+      "name": "Light Clay",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/light-clay/sprite.png" },
+      "_ingameEffect": "Segurado: Reflect e Light Screen duram 8 turnos em vez de 5."
+    },
+    {
+      "id": "loaded-dice",
+      "name": "Loaded Dice",
+      "type": "held item",
+      "cost": 20000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "metronome",
+      "name": "Metronome",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/metronome/sprite.png" },
+      "_ingameEffect": "Segurado: Cada vez que o portador usa o mesmo movimento consecutivamente, o poder aumenta em 10% do original, até um máximo de 100%."
+    },
+    {
+      "id": "muscle-band",
+      "name": "Muscle Band",
+      "type": "held item",
+      "cost": 4000,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano de ataques corpo a corpo (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/muscle-band/sprite.png" }
+    },
+    {
+      "id": "protective-pads",
+      "name": "Protective Pads",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/protective-pads/sprite.png" },
+      "_ingameEffect": "Segurado: Impede efeitos secundários de movimentos de contato usados contra o portador."
+    },
+    {
+      "id": "punching-glove",
+      "name": "Punching Glove",
+      "type": "held item",
+      "cost": 15000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "quick-claw",
+      "name": "Quick Claw",
+      "type": "held item",
+      "cost": 1000,
+      "description": ["O portador recebe +3 em suas rolagens de iniciativa."],
+      "media": { "sprite": "/assets/items/quick-claw/sprite.png" }
+    },
+    {
+      "id": "razor-claw",
+      "name": "Razor Claw",
+      "type": "evolution",
+      "cost": 4000,
+      "description": [
+        "A faixa de crítico do portador aumenta em um.",
+        "Na maioria dos casos, isso significa crítico em 19 ou 20 natural. Em movimentos como Slash, pode ser 18–20."
+      ],
+      "media": { "sprite": "/assets/items/razor-claw/sprite.png" }
+    },
+    {
+      "id": "razor-fang",
+      "name": "Razor Fang",
+      "type": "evolution",
+      "cost": 4000,
+      "description": [
+        "Quando um alvo é atingido por um ataque corpo a corpo do portador, se o ataque for natural 19 ou 20, o alvo fica flinchado."
+      ],
+      "media": { "sprite": "/assets/items/razor-fang/sprite.png" }
+    },
+    {
+      "id": "red-card",
+      "name": "Red Card",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/red-card/sprite.png" },
+      "_ingameEffect": "Segurado\n:   Quando o portador sofre dano direto de um movimento e não é nocauteado, ele é trocado por um Pokémon aleatório não derrotado do time. Não ativa se a troca for impedida."
+    },
+    {
+      "id": "ring-target",
+      "name": "Ring Target",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/ring-target/sprite.png" },
+      "_ingameEffect": "Segurado\n:   Tipos que normalmente tornariam o portador imune passam a causar dano normalmente."
+    },
+    {
+      "id": "rocky-helmet",
+      "name": "Rocky Helmet",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/rocky-helmet/sprite.png" },
+      "_ingameEffect": "Segurado\n:   Quando o portador é atingido por um movimento de contato, o atacante sofre dano igual a 1/6 do seu HP máximo."
+    },
+    {
+      "id": "room-service",
+      "name": "Room Service",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "safety-goggles",
+      "name": "Safety Goggles",
+      "type": "held item",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/safety-goggles/sprite.png" },
+      "_ingameEffect": "Segurado: Impede dano de movimentos de pó e de clima como granizo e tempestade de areia."
+    },
+    {
+      "id": "scope-lens",
+      "name": "Scope Lens",
+      "type": "held item",
+      "cost": 2500,
+      "description": [
+        "A faixa de crítico do portador aumenta em um.",
+        "Na maioria dos casos, isso significa crítico em 19 ou 20 natural. Em movimentos como Slash, pode ser 18–20."
+      ],
+      "media": { "sprite": "/assets/items/scope-lens/sprite.png" }
+    },
+    {
+      "id": "shed-shell",
+      "name": "Casco Desprendido",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/shed-shell/sprite.png" },
+      "_ingameEffect": "Segurado: O portador não é afetado por movimentos ou habilidades que o impeçam de sair ativamente da batalha."
+    },
+    {
+      "id": "shell-bell",
+      "name": "Sino Concha",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "Quando o portador usa um movimento que causa dano a pelo menos uma criatura, ele restaura PV igual ao seu bônus de proficiência."
+      ],
+      "media": { "sprite": "/assets/items/shell-bell/sprite.png" }
+    },
+    {
+      "id": "smoke-ball",
+      "name": "Bola de Fumaça",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": ["Garante sucesso ao tentar fugir de batalhas contra Pokémon selvagens."],
+      "media": { "sprite": "/assets/items/smoke-ball/sprite.png" }
+    },
+    {
+      "id": "snowball",
+      "name": "Bola de Neve",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/snowball/sprite.png" },
+      "_ingameEffect": "Segurado: Se o portador for atingido por um movimento de Gelo que cause dano, aumenta seu Ataque em um estágio."
+    },
+    {
+      "id": "sticky-barb",
+      "name": "Farpa Grudenta",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/sticky-barb/sprite.png" },
+      "_ingameEffect": "Segurado: Causa dano ao portador equivalente a 1/8 de seu PV máximo. Quando o portador é atingido por um movimento de contato, causa dano ao atacante equivalente a 1/8 do PV máximo dele; se o atacante não estiver segurando um item, ele passa a segurar este item."
+    },
+    {
+      "id": "throat-spray",
+      "name": "Spray de Garganta",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "utility-umbrella",
+      "name": "Guarda-Chuva Utilitário",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": null }
+    },
+    {
+      "id": "weakness-policy",
+      "name": "Política de Fraqueza",
+      "type": "item segurado",
+      "cost": 1000,
+      "description": null,
+      "media": { "sprite": "/assets/items/weakness-policy/sprite.png" },
+      "_ingameEffect": "Segurado: Quando o portador é atingido por um movimento super efetivo, seu Ataque e Ataque Especial aumentam em dois estágios."
+    },
+    {
+      "id": "wide-lens",
+      "name": "Lente Ampla",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": ["O portador recebe +1 nas jogadas de ataque."],
+      "media": { "sprite": "/assets/items/wide-lens/sprite.png" }
+    },
+    {
+      "id": "wise-glasses",
+      "name": "Óculos Sábios",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano causado por ataques à distância (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/wise-glasses/sprite.png" }
+    },
+    {
+      "id": "zoom-lens",
+      "name": "Lente de Zoom",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/zoom-lens/sprite.png" },
+      "_ingameEffect": "Segurado: Aumenta a Precisão do portador em 20% quando ele age por último.\nA descrição do jogo está incorreta."
+    },
+    {
+      "id": "megalite-stone",
+      "name": "Pedra Megalite",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item Mega Evolua. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/megalite-stone/sprite.png" }
+    },
+    {
+      "id": "normalium-z",
+      "name": "Normalium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo normal. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/normalium-z/sprite.png" }
+    },
+    {
+      "id": "fightinium-z",
+      "name": "Fightinium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo lutador. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/fightinium-z/sprite.png" }
+    },
+    {
+      "id": "flyinium-z",
+      "name": "Flyinium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo voador. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/flyinium-z/sprite.png" }
+    },
+    {
+      "id": "poisonium-z",
+      "name": "Poisonium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo venenoso. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/poisonium-z/sprite.png" }
+    },
+    {
+      "id": "groundium-z",
+      "name": "Groundium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo terrestre. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/groundium-z/sprite.png" }
+    },
+    {
+      "id": "rockium-z",
+      "name": "Rockium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo pedra. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/rockium-z/sprite.png" }
+    },
+    {
+      "id": "buginium-z",
+      "name": "Buginium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo inseto. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/buginium-z/sprite.png" }
+    },
+    {
+      "id": "ghostium-z",
+      "name": "Ghostium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo fantasma. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/ghostium-z/sprite.png" }
+    },
+    {
+      "id": "Steelium-z",
+      "name": "Steelium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo aço. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/Steelium-z/sprite.png" }
+    },
+    {
+      "id": "firium-z",
+      "name": "Firium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo fogo. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/firium-z/sprite.png" }
+    },
+    {
+      "id": "waterium-z",
+      "name": "Waterium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo água. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/waterium-z/sprite.png" }
+    },
+    {
+      "id": "grassium-z",
+      "name": "Grassium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo grama. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/grassium-z/sprite.png" }
+    },
+    {
+      "id": "electrium-z",
+      "name": "Electrium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo elétrico. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/electrium-z/sprite.png" }
+    },
+    {
+      "id": "psychium-z",
+      "name": "Psychium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo psíquico. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/psychium-z/sprite.png" }
+    },
+    {
+      "id": "icium-z",
+      "name": "Icium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo gelo. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/icium-z/sprite.png" }
+    },
+    {
+      "id": "dragonium-z",
+      "name": "Draconium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo dragão. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/dragonium-z/sprite.png" }
+    },
+    {
+      "id": "darkinium-z",
+      "name": "Darkinium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo sombrio. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/darkinium-z/sprite.png" }
+    },
+    {
+      "id": "fairium-z",
+      "name": "Fairium Z",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo fada. Possui uma carga e recupera sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/fairium-z/sprite.png" }
+    },
+    {
+      "id": "mental-herb",
+      "name": "Erva Mental",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/mental-herb/sprite.png" },
+      "_ingameEffect": "Segurado em batalha: Quando o portador fica atraído, ele consome este item para curar a atração."
+    },
+    {
+      "id": "mirror-herb",
+      "name": "Erva Espelho",
+      "type": "item segurado",
+      "cost": 4200,
+      "description": [
+        "Enquanto em combate, como reação ao ver outro Pokémon aumentar qualquer uma de suas estatísticas, modificador de ataque, CA ou testes de resistência, o Pokémon que estiver segurando esta erva pode consumi-la para copiar o efeito em si mesmo. Os atributos aumentados retornam ao normal ao final do combate ou ao ser retirado da batalha.",
+        "Durante um descanso longo, dois Pokémon podem compartilhar e consumir uma Erva Espelho. Se o primeiro Pokémon conhece um movimento que o segundo pode aprender como Movimento Ovo, o segundo pode substituir um de seus movimentos por esse Movimento Ovo, mesmo que não compartilhem Grupo de Ovos ou gênero."
+      ],
+      "media": { "sprite": "/assets/items/mirror-herb/sprite.png" }
+    },
+    {
+      "id": "power-herb",
+      "name": "Erva Poderosa",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/power-herb/sprite.png" },
+      "_ingameEffect": "Segurado: Sempre que o portador usa um movimento que exige um turno de carregamento (Bounce, Dig, Dive, Fly, Razor Wind, Skull Bash, Sky Attack ou Solar Beam), este item é consumido e o carregamento é ignorado. Skull Bash ainda fornece aumento de Defesa."
+    },
+    {
+      "id": "white-herb",
+      "name": "Erva Branca",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/white-herb/sprite.png" },
+      "_ingameEffect": "Segurado em batalha: Ao final de cada turno, se qualquer estatística do portador estiver com modificador negativo, o item é consumido para remover esses modificadores."
+    },
+    {
+      "id": "choice-band",
+      "name": "Faixa de Escolha",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/choice-band/sprite.png" },
+      "_ingameEffect": "Segurado em batalha: O portador tem 1,5× seu Ataque. Ao usar um movimento, todos os outros movimentos são desativados até ele sair da batalha ou perder o item. A restrição termina mesmo se o item for trocado por outro item de Escolha via Trick ou Switcheroo."
+    },
+    {
+      "id": "choice-scarf",
+      "name": "Cachecol de Escolha",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/choice-scarf/sprite.png" },
+      "_ingameEffect": "Segurado: Aumenta a Velocidade do portador em 50%, mas o restringe ao primeiro movimento usado até sair da batalha ou perder o item. Se for trocado por outro item de Escolha, a restrição ainda é removida, mas será aplicada ao próximo movimento usado."
+    },
+    {
+      "id": "choice-specs",
+      "name": "Óculos de Escolha",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/choice-specs/sprite.png" },
+      "_ingameEffect": "Segurado: Aumenta o Ataque Especial do portador em 50%, mas o restringe ao primeiro movimento usado até sair da batalha ou perder o item. Se for trocado por outro item de Escolha, a restrição ainda é removida, mas será aplicada ao próximo movimento usado."
+    },
+    {
+      "id": "black-belt",
+      "name": "Faixa Preta",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano de movimentos do tipo lutador (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/black-belt/sprite.png" }
+    },
+    {
+      "id": "black-glasses",
+      "name": "Óculos Escuros",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano de movimentos do tipo sombrio (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/black-glasses/sprite.png" }
+    },
+    {
+      "id": "charcoal",
+      "name": "Carvão",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo fogo que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/charcoal/sprite.png" }
+    },
+    {
+      "id": "dragon-fang",
+      "name": "Presa de Dragão",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo dragão que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/dragon-fang/sprite.png" }
+    },
+    {
+      "id": "fairy-feather",
+      "name": "Pluma Fada",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo fada que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/fairy-feather/sprite.png" }
+    },
+    {
+      "id": "hard-stone",
+      "name": "Pedra Dura",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo pedra que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/hard-stone/sprite.png" }
+    },
+    {
+      "id": "magnet",
+      "name": "Ímã",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo elétrico que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/magnet/sprite.png" }
+    },
+    {
+      "id": "metal-coat",
+      "name": "Revestimento Metálico",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo aço que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/metal-coat/sprite.png" }
+    },
+    {
+      "id": "miracle-seed",
+      "name": "Semente Milagrosa",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo grama que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/miracle-seed/sprite.png" }
+    },
+    {
+      "id": "mystic-water",
+      "name": "Água Mística",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo água que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/mystic-water/sprite.png" }
+    },
+    {
+      "id": "never-melt-ice",
+      "name": "Gelo que Nunca Derrete",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo gelo que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/never-melt-ice/sprite.png" }
+    },
+    {
+      "id": "poison-barb",
+      "name": "Farpa Venenosa",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo veneno que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/poison-barb/sprite.png" }
+    },
+    {
+      "id": "sharp-beak",
+      "name": "Bico Afiado",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo voador que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/sharp-beak/sprite.png" }
+    },
+    {
+      "id": "silk-scarf",
+      "name": "Lenço de Seda",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo normal que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/silk-scarf/sprite.png" }
+    },
+    {
+      "id": "silver-powder",
+      "name": "Pó de Prata",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo inseto que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/silver-powder/sprite.png" }
+    },
+    {
+      "id": "soft-sand",
+      "name": "Areia Fofa",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo terra que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/soft-sand/sprite.png" }
+    },
+    {
+      "id": "spell-tag",
+      "name": "Etiqueta de Feitiço",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo fantasma que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/spell-tag/sprite.png" }
+    },
+    {
+      "id": "twisted-spoon",
+      "name": "Colher Torcida",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano do tipo psíquico que ele causa (uma vez por movimento)."
+      ],
+      "media": { "sprite": "/assets/items/twisted-spoon/sprite.png" }
+    },
+    {
+      "id": "full-incense",
+      "name": "Incenso Cheio",
+      "type": "item segurado",
+      "cost": 5000,
+      "description": null,
+      "media": { "sprite": "/assets/items/full-incense/sprite.png" },
+      "_ingameEffect": "Segurado: O portador agirá por último dentro do seu nível de prioridade de movimento, independentemente da Velocidade. Se múltiplos Pokémon no mesmo nível de prioridade estiverem sob esse efeito, o Pokémon mais lento age primeiro. O portador agirá depois de Pokémon com Stall. Se o portador tiver Stall, Stall é ignorado. Este item ignora o Trick Room."
+    },
+    {
+      "id": "lax-incense",
+      "name": "Incenso Laxo",
+      "type": "item segurado",
+      "cost": 5000,
+      "description": null,
+      "media": { "sprite": "/assets/items/lax-incense/sprite.png" },
+      "_ingameEffect": "Segurado: Aumenta a Evasão do portador em 5%."
+    },
+    {
+      "id": "odd-incense",
+      "name": "Incenso Estranho",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": null,
+      "media": { "sprite": "/assets/items/odd-incense/sprite.png" },
+      "_ingameEffect": "Segurado: Aumenta o poder dos movimentos Psíquicos do portador em 20%."
+    },
+    {
+      "id": "rock-incense",
+      "name": "Incenso de Pedra",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": null,
+      "media": { "sprite": "/assets/items/rock-incense/sprite.png" },
+      "_ingameEffect": "Segurado: Aumenta o poder dos movimentos do tipo Pedra do portador em 20%."
+    },
+    {
+      "id": "rose-incense",
+      "name": "Incenso de Rosa",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": null,
+      "media": { "sprite": "/assets/items/rose-incense/sprite.png" },
+      "_ingameEffect": "Segurado: Aumenta o poder dos movimentos do tipo Grama do portador em 20%."
+    },
+    {
+      "id": "sea-incense",
+      "name": "Incenso Marinho",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": null,
+      "media": { "sprite": "/assets/items/sea-incense/sprite.png" },
+      "_ingameEffect": "Segurado: Aumenta o poder dos movimentos do tipo Água do portador em 20%."
+    },
+    {
+      "id": "wave-incense",
+      "name": "Incenso de Onda",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": null,
+      "media": { "sprite": "/assets/items/wave-incense/sprite.png" },
+      "_ingameEffect": "Segurado: Aumenta o poder dos movimentos do tipo Água do portador em 20%."
+    },
+    {
+      "id": "adrenaline-orb",
+      "name": "Orbe de Adrenalina",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/adrenaline-orb/sprite.png" },
+      "_ingameEffect": "Torna Pokémon selvagens mais propensos a chamar aliados. Segurado: aumenta o Velocidade do portador em um estágio quando afetado por Intimidação."
+    },
+    {
+      "id": "flame-orb",
+      "name": "Orbe Flamejante",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": ["No final do turno do portador, ele fica queimado."],
+      "media": { "sprite": "/assets/items/flame-orb/sprite.png" }
+    },
+    {
+      "id": "iron-ball",
+      "name": "Bola de Ferro",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/iron-ball/sprite.png" },
+      "_ingameEffect": "Segurado: reduz a Velocidade do portador em 50%. Se o portador for do tipo Voador ou tiver Levitate, recebe dano normal de ataques do tipo Terra e fica suscetível a Spikes e Toxic Spikes."
+    },
+    {
+      "id": "life-orb",
+      "name": "Orbe da Vida",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": [
+        "O portador adiciona seu bônus de proficiência ao dano que causa, mas recebe a mesma quantidade de dano de tipo neutro cada vez."
+      ],
+      "media": { "sprite": "/assets/items/life-orb/sprite.png" }
+    },
+    {
+      "id": "toxic-orb",
+      "name": "Orbe Venenoso",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": ["No final do turno do portador, ele fica gravemente envenenado."],
+      "media": { "sprite": "/assets/items/toxic-orb/sprite.png" }
+    },
+    {
+      "id": "damp-rock",
+      "name": "Pedra Úmida",
+      "type": "item segurado",
+      "cost": 2500,
+      "description": ["O portador aumenta a duração dos efeitos de Chuva em 3 rodadas."],
+      "media": { "sprite": "/assets/items/damp-rock/sprite.png" }
+    },
+    {
+      "id": "heat-rock",
+      "name": "Pedra de Calor",
+      "type": "item segurado",
+      "cost": 2500,
+      "description": ["O portador aumenta a duração dos efeitos de Sol Forte em 3 rodadas."],
+      "media": { "sprite": "/assets/items/heat-rock/sprite.png" }
+    },
+    {
+      "id": "icy-rock",
+      "name": "Pedra Gelada",
+      "type": "item segurado",
+      "cost": 2500,
+      "description": ["O portador aumenta a duração dos efeitos de Granizo e Neve em 3 rodadas."],
+      "media": { "sprite": "/assets/items/icy-rock/sprite.png" }
+    },
+    {
+      "id": "smooth-rock",
+      "name": "Pedra Lisa",
+      "type": "item segurado",
+      "cost": 2500,
+      "description": ["O portador aumenta a duração dos efeitos de Tempestade de Areia em 3 rodadas."],
+      "media": { "sprite": "/assets/items/smooth-rock/sprite.png" }
+    },
+    {
+      "id": "terrain-extender",
+      "name": "Extensor de Terreno",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/terrain-extender/sprite.png" },
+      "_ingameEffect": "Segurado: Quando o portador altera o Terreno (seja por movimento ou habilidade), ele durará 8 turnos em vez de 5."
+    },
+    {
+      "id": "electric-seed",
+      "name": "Semente Elétrica",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/electric-seed/sprite.png" },
+      "_ingameEffect": "Segurado: Se o portador entrar em batalha durante o Terreno Elétrico, ou se o Terreno Elétrico for ativado enquanto o portador estiver em batalha, este item é consumido e a Defesa do portador aumenta em um estágio."
+    },
+    {
+      "id": "grassy-seed",
+      "name": "Semente de Grama",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/grassy-seed/sprite.png" },
+      "_ingameEffect": "Segurado: Se o portador entrar em batalha durante o Terreno de Grama, ou se o Terreno de Grama for ativado enquanto o portador estiver em batalha, este item é consumido e a Defesa do portador aumenta em um estágio."
+    },
+    {
+      "id": "misty-seed",
+      "name": "Semente Nebulosa",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/misty-seed/sprite.png" },
+      "_ingameEffect": "Segurado: Se o portador entrar em batalha durante o Terreno Nebuloso, ou se o Terreno Nebuloso for ativado enquanto o portador estiver em batalha, este item é consumido e a Defesa Especial do portador aumenta em um estágio."
+    },
+    {
+      "id": "psychic-seed",
+      "name": "Semente Psíquica",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": null,
+      "media": { "sprite": "/assets/items/psychic-seed/sprite.png" },
+      "_ingameEffect": "Segurado: Se o portador entrar em batalha durante o Terreno Psíquico, ou se o Terreno Psíquico for ativado enquanto o portador estiver em batalha, este item é consumido e a Defesa Especial do portador aumenta em um estágio."
+    },
+    {
+      "id": "draco-plate",
+      "name": "Placa Dragão",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Dragão."
+      ],
+      "media": { "sprite": "/assets/items/draco-plate/sprite.png" }
+    },
+    {
+      "id": "dread-plate",
+      "name": "Placa Sombria",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Sombrio."
+      ],
+      "media": { "sprite": "/assets/items/dread-plate/sprite.png" }
+    },
+    {
+      "id": "earth-plate",
+      "name": "Placa Terra",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Terra."
+      ],
+      "media": { "sprite": "/assets/items/earth-plate/sprite.png" }
+    },
+    {
+      "id": "Fist-plate",
+      "name": "Placa Lutador",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Lutador."
+      ],
+      "media": { "sprite": "/assets/items/Fist-plate/sprite.png" }
+    },
+    {
+      "id": "flame-plate",
+      "name": "Placa de Fogo",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Fogo."
+      ],
+      "media": { "sprite": "/assets/items/flame-plate/sprite.png" }
+    },
+    {
+      "id": "icicle-plate",
+      "name": "Placa Gelo",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Gelo."
+      ],
+      "media": { "sprite": "/assets/items/icicle-plate/sprite.png" }
+    },
+    {
+      "id": "insect-plate",
+      "name": "Placa Inseto",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Inseto."
+      ],
+      "media": { "sprite": "/assets/items/insect-plate/sprite.png" }
+    },
+    {
+      "id": "iron-plate",
+      "name": "Placa de Aço",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Aço."
+      ],
+      "media": { "sprite": "/assets/items/iron-plate/sprite.png" }
+    },
+    {
+      "id": "meadow-plate",
+      "name": "Placa Pradaria",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Grama."
+      ],
+      "media": { "sprite": "/assets/items/meadow-plate/sprite.png" }
+    },
+    {
+      "id": "mind-plate",
+      "name": "Placa Psíquica",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Psíquico."
+      ],
+      "media": { "sprite": "/assets/items/mind-plate/sprite.png" }
+    },
+    {
+      "id": "pixie-plate",
+      "name": "Placa Fada",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Fada."
+      ],
+      "media": { "sprite": "/assets/items/pixie-plate/sprite.png" }
+    },
+    {
+      "id": "sky-plate",
+      "name": "Placa do Céu",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Voador."
+      ],
+      "media": { "sprite": "/assets/items/sky-plate/sprite.png" }
+    },
+    {
+      "id": "splash-plate",
+      "name": "Placa d'Água",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Água."
+      ],
+      "media": { "sprite": "/assets/items/splash-plate/sprite.png" }
+    },
+    {
+      "id": "spooky-plate",
+      "name": "Placa Espectral",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Fantasma."
+      ],
+      "media": { "sprite": "/assets/items/spooky-plate/sprite.png" }
+    },
+    {
+      "id": "stone-plate",
+      "name": "Placa Rocha",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Rocha."
+      ],
+      "media": { "sprite": "/assets/items/stone-plate/sprite.png" }
+    },
+    {
+      "id": "toxic-plate",
+      "name": "Placa Venenosa",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Venenoso."
+      ],
+      "media": { "sprite": "/assets/items/toxic-plate/sprite.png" }
+    },
+    {
+      "id": "zap-plate",
+      "name": "Placa Elétrica",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Elétrico."
+      ],
+      "media": { "sprite": "/assets/items/zap-plate/sprite.png" }
+    },
+    {
+      "id": "dna-splicer",
+      "name": "Divisor de DNA",
+      "type": "equipamento de treinador",
+      "cost": null,
+      "description": [
+        "Na presença de um Reshiram ou Zekrom disposto, Kyurem pode se fundir com um desses Pokémon com a ajuda de um Divisor de DNA. Esse processo é chamado de Absofusão e resulta em um Kyurem Branco (se fundido com Reshiram) ou Kyurem Preto (se fundido com Zekrom)."
+      ],
+      "media": { "sprite": "/assets/items/dna-splicer/sprite.png" }
+    },
+    {
+      "id": "deep-sea-scale",
+      "name": "Escama do Mar Profundo",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": ["Quando segurado por um Clamperl, sua CA aumenta em 1."],
+      "media": { "sprite": "/assets/items/deep-sea-scale/sprite.png" }
+    },
+    {
+      "id": "deep-sea-tooth",
+      "name": "Dente do Mar Profundo",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": ["Quando segurado por um Clamperl, seu STAB aumenta em 1."],
+      "media": { "sprite": "/assets/items/deep-sea-tooth/sprite.png" }
+    },
+    {
+      "id": "gracidea-flower",
+      "name": "Flor Gracidea",
+      "type": "item segurado",
+      "cost": 1400,
+      "description": [
+        "Quando segurado por um Shaymin, ele pode usar sua ação para alternar entre suas formas Terrestre e Celeste."
+      ],
+      "media": { "sprite": "/assets/items/gracidea-flower/sprite.png" }
+    },
+    {
+      "id": "griseous-orb",
+      "name": "Orbe Gríseo",
+      "type": "item segurado",
+      "cost": 7000,
+      "description": [
+        "Quando segurado por um Giratina, ele pode usar sua ação para alternar entre suas formas Alterada e Origem. Seus movimentos do tipo Dragão e Fantasma têm STAB dobrado."
+      ],
+      "media": { "sprite": "/assets/items/griseous-orb/sprite.png" }
+    },
+    {
+      "id": "leek",
+      "name": "Alho-poró",
+      "type": "item segurado",
+      "cost": 1200,
+      "description": [
+        "Quando segurado por um Farfetch'd ou Sirfetch'd, o alcance de acerto crítico do portador aumenta em dois.",
+        "Na maioria das vezes, isso significa que ataques podem acertar crítico em 18, 19 ou 20 naturais. Para movimentos como Corte, que já expandem a faixa de crítico, os críticos podem acontecer em 17, 18, 19 ou 20 naturais."
+      ],
+      "media": { "sprite": "/assets/items/leek/sprite.png" }
+    },
+    {
+      "id": "light-ball",
+      "name": "Bola de Luz",
+      "type": "item segurado",
+      "cost": 1400,
+      "description": ["Quando segurado por um Pikachu, aumenta seu modificador de poder de MOVES em +1."],
+      "media": { "sprite": "/assets/items/light-ball/sprite.png" }
+    },
+    {
+      "id": "lucky-punch",
+      "name": "Soco da Sorte",
+      "type": "item segurado",
+      "cost": 1200,
+      "description": [
+        "Quando segurado por um Chansey, seu alcance de acerto crítico aumenta em um.",
+        "Na maioria das vezes, isso significa que ataques podem acertar crítico em 19 ou 20 naturais. Para movimentos como Corte, que já expandem a faixa de crítico, os críticos podem acontecer em 18, 19 ou 20 naturais."
+      ],
+      "media": { "sprite": "/assets/items/lucky-punch/sprite.png" }
+    },
+    {
+      "id": "metal-powder",
+      "name": "Pó Metálico",
+      "type": "item segurado",
+      "cost": 1200,
+      "description": ["Quando segurado por um Ditto, seu atributo CON aumenta em +3."],
+      "media": { "sprite": "/assets/items/metal-powder/sprite.png" }
+    },
+    {
+      "id": "n-solarizer",
+      "name": "N-Solarizador",
+      "type": "equipamento de treinador",
+      "cost": null,
+      "description": [
+        "Um treinador com um Solgaleo e Necrozma pode usar uma ação para fundi-los em um Necrozma Asas do Amanhecer. O treinador também pode usar uma ação para separar um Necrozma Asas do Amanhecer em um Solgaleo e um Necrozma."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "n-lunarizer",
+      "name": "N-Lunarizer",
+      "type": "equipamento de treinador",
+      "cost": null,
+      "description": [
+        "Um treinador com tanto Lunala quanto Necrozma pode usar uma ação para fundi-los em um Necrozma Asas do Amanhecer. O treinador também pode usar uma ação para separar um Necrozma Asas do Amanhecer em um Lunala e um Necrozma."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "prison-bottle",
+      "name": "Prison Bottle",
+      "type": "equipamento de treinador",
+      "cost": null,
+      "description": [
+        "Um treinador pode usar sua ação para libertar um Hoopa próximo, mudando-o de sua forma Contida para sua forma Desconfinada por três dias."
+      ],
+      "media": { "sprite": "/assets/items/prison-bottle/sprite.png" }
+    },
+    {
+      "id": "reveal-glass",
+      "name": "Reveal Glass",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Quando segurado por Thundurus, Landorus, Tornadus ou Enamorus, o portador pode usar sua ação para alternar entre suas formas Encarnada e Teriã."
+      ],
+      "media": { "sprite": "/assets/items/reveal-glass/sprite.png" }
+    },
+    {
+      "id": "thick-club",
+      "name": "Thick Club",
+      "type": "item segurado",
+      "cost": 4400,
+      "description": ["Quando segurado por Cubone, Marowak ou Marowak de Alola, o STAB do portador é dobrado."],
+      "media": { "sprite": "/assets/items/thick-club/sprite.png" }
+    },
+    {
+      "id": "burn-drive",
+      "name": "Burn Drive",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": ["Quando segurado por um Genesect, muda o tipo do movimento Techno Blast para Fogo."],
+      "media": { "sprite": "/assets/items/burn-drive/sprite.png" }
+    },
+    {
+      "id": "chill-drive",
+      "name": "Chill Drive",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": ["Quando segurado por um Genesect, muda o tipo do movimento Techno Blast para Gelo."],
+      "media": { "sprite": "/assets/items/chill-drive/sprite.png" }
+    },
+    {
+      "id": "douse-drive",
+      "name": "Douse Drive",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": ["Quando segurado por um Genesect, muda o tipo do movimento Techno Blast para Água."],
+      "media": { "sprite": "/assets/items/douse-drive/sprite.png" }
+    },
+    {
+      "id": "shock-drive",
+      "name": "Shock Drive",
+      "type": "item segurado",
+      "cost": 4000,
+      "description": ["Quando segurado por um Genesect, muda o tipo do movimento Techno Blast para Elétrico."],
+      "media": { "sprite": "/assets/items/shock-drive/sprite.png" }
+    },
+    {
+      "id": "bug-memory-disc",
+      "name": "Bug Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": [
+        "Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Inseto."
+      ],
+      "media": { "sprite": "/assets/items/bug-memory-disc/sprite.png" }
+    },
+    {
+      "id": "dark-memory-disc",
+      "name": "Dark Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": [
+        "Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Sombrio."
+      ],
+      "media": { "sprite": "/assets/items/dark-memory-disc/sprite.png" }
+    },
+    {
+      "id": "dragon-memory-disc",
+      "name": "Dragon Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": [
+        "Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Dragão."
+      ],
+      "media": { "sprite": "/assets/items/dragon-memory-disc/sprite.png" }
+    },
+    {
+      "id": "electric-memory-disc",
+      "name": "Electric Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": [
+        "Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Elétrico."
+      ],
+      "media": { "sprite": "/assets/items/electric-memory-disc/sprite.png" }
+    },
+    {
+      "id": "fairy-memory-disc",
+      "name": "Fairy Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": ["Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Fada."],
+      "media": { "sprite": "/assets/items/fairy-memory-disc/sprite.png" }
+    },
+    {
+      "id": "fighting-memory-disc",
+      "name": "Fighting Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": [
+        "Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Lutador."
+      ],
+      "media": { "sprite": "/assets/items/fighting-memory-disc/sprite.png" }
+    },
+    {
+      "id": "fire-memory-disc",
+      "name": "Fire Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": ["Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Fogo."],
+      "media": { "sprite": "/assets/items/fire-memory-disc/sprite.png" }
+    },
+    {
+      "id": "flying-memory-disc",
+      "name": "Flying Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": [
+        "Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Voador."
+      ],
+      "media": { "sprite": "/assets/items/flying-memory-disc/sprite.png" }
+    },
+    {
+      "id": "ghost-memory-disc",
+      "name": "Ghost Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": [
+        "Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Fantasma."
+      ],
+      "media": { "sprite": "/assets/items/ghost-memory-disc/sprite.png" }
+    },
+    {
+      "id": "grass-memory-disc",
+      "name": "Grass Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": ["Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Grama."],
+      "media": { "sprite": "/assets/items/grass-memory-disc/sprite.png" }
+    },
+    {
+      "id": "ground-memory-disc",
+      "name": "Ground Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": ["Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Terra."],
+      "media": { "sprite": "/assets/items/ground-memory-disc/sprite.png" }
+    },
+    {
+      "id": "ice-memory-disc",
+      "name": "Ice Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": ["Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Gelo."],
+      "media": { "sprite": "/assets/items/ice-memory-disc/sprite.png" }
+    },
+    {
+      "id": "poison-memory-disc",
+      "name": "Poison Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": [
+        "Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Veneno."
+      ],
+      "media": { "sprite": "/assets/items/poison-memory-disc/sprite.png" }
+    },
+    {
+      "id": "psychic-memory-disc",
+      "name": "Psychic Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": [
+        "Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Psíquico."
+      ],
+      "media": { "sprite": "/assets/items/psychic-memory-disc/sprite.png" }
+    },
+    {
+      "id": "rock-memory-disc",
+      "name": "Rock Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": ["Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Pedra."],
+      "media": { "sprite": "/assets/items/rock-memory-disc/sprite.png" }
+    },
+    {
+      "id": "steel-memory-disc",
+      "name": "Steel Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": ["Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Aço."],
+      "media": { "sprite": "/assets/items/steel-memory-disc/sprite.png" }
+    },
+    {
+      "id": "water-memory-disc",
+      "name": "Water Memory Disc",
+      "type": "item segurado",
+      "cost": 2000,
+      "description": ["Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Água."],
+      "media": { "sprite": "/assets/items/water-memory-disc/sprite.png" }
+    },
+    {
+      "id": "blue-orb",
+      "name": "Blue Orb",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Quando segurado por Kyogre, permite que ele reverta para sua forma Primitiva como uma ação livre."
+      ],
+      "media": { "sprite": "/assets/items/blue-orb/sprite.png" }
+    },
+    {
+      "id": "red-orb",
+      "name": "Red Orb",
+      "type": "item segurado",
+      "cost": null,
+      "description": [
+        "Quando segurado por Groudon, permite que ele reverta para sua forma Primitiva como uma ação livre."
+      ],
+      "media": { "sprite": "/assets/items/red-orb/sprite.png" }
+    },
+    {
+      "id": "dragon-scale",
+      "name": "Dragon Scale",
+      "type": "evolução",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": "/assets/items/dragon-scale/sprite.png" }
+    },
+    {
+      "id": "up-grade",
+      "name": "Upgrade",
+      "type": "evolução",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": "/assets/items/up-grade/sprite.png" }
+    },
+    {
+      "id": "protector",
+      "name": "Protector",
+      "type": "evolução",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": "/assets/items/protector/sprite.png" }
+    },
+    {
+      "id": "electirizer",
+      "name": "Electirizer",
+      "type": "evolução",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": "/assets/items/electirizer/sprite.png" }
+    },
+    {
+      "id": "magmarizer",
+      "name": "Magmarizer",
+      "type": "evolução",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": "/assets/items/magmarizer/sprite.png" }
+    },
+    {
+      "id": "dubious-disc",
+      "name": "Dubious Disc",
+      "type": "evolução",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": "/assets/items/dubious-disc/sprite.png" }
+    },
+    {
+      "id": "reaper-cloth",
+      "name": "Reaper Cloth",
+      "type": "evolução",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": "/assets/items/reaper-cloth/sprite.png" }
+    },
+    {
+      "id": "prism-scale",
+      "name": "Prism Scale",
+      "type": "evolução",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": "/assets/items/prism-scale/sprite.png" }
+    },
+    {
+      "id": "whipped-dream",
+      "name": "Whipped Dream",
+      "type": "evolução",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": "/assets/items/whipped-dream/sprite.png" }
+    },
+    {
+      "id": "sachet",
+      "name": "Sachet",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": "/assets/items/sachet/sprite.png" }
+    },
+    {
+      "id": "sweet",
+      "name": "Sweet",
+      "type": "evolution",
+      "cost": 500,
+      "description": [
+        "Alguns Pokémon podem consumir o poder deste item para evoluir.",
+        "Vem em diferentes sabores, como morango, amor, fruta, trevo, flor, estrela e fita."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "cracked-pot",
+      "name": "Cracked Pot",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "chipped-pot",
+      "name": "Chipped Pot",
+      "type": "evolution",
+      "cost": 38000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "unremarkable-teacup",
+      "name": "Unremarkable Teacup",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "masterpiece-teacup",
+      "name": "Masterpiece Teacup",
+      "type": "evolution",
+      "cost": 9500,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "galarica-wreath",
+      "name": "Galarica Wreath",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "black-augurite",
+      "name": "Black Augurite",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "peat-block",
+      "name": "Peat Block",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "auspicious-armor",
+      "name": "Auspicious Armor",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "malicious-armor",
+      "name": "Malicious Armor",
+      "type": "evolution",
+      "cost": 4000,
+      "description": ["Alguns Pokémon podem consumir o poder deste item para evoluir."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "gimmighoul-coin",
+      "name": "Gimmighoul Coin",
+      "type": "evolution",
+      "cost": 100,
+      "description": [
+        "Gimmighoul selvagens (Forma Andante) carregam 1d4 Gimmighoul Coins. Gimmighoul selvagens (Forma Baú) Pokèmon carregam 1d20 + 10 Gimmighoul Coins."
+      ],
+      "media": { "sprite": "/assets/items/gimmighoul-coin.png" }
+    },
+    {
+      "id": "trainers-license",
+      "name": "Trainer's License",
+      "type": "trainer gear",
+      "cost": null,
+      "description": [
+        "Apenas treinadores licenciados têm permissão para capturar Pokémon, e esta licença identifica você como possuindo tal autorização. Ela também permite que treinadores tenham acesso a serviços especiais nos Centros Pokémon e comprem itens no Poké Mart.",
+        "Treinadores podem perder sua licença por atacar outros treinadores ou seus Pokémon, ou por não cuidar de seus próprios Pokémon."
+      ],
+      "media": { "sprite": "/assets/items/trainers-license/sprite.png" }
+    },
+    {
+      "id": "pokedex",
+      "name": "Pokédex",
+      "type": "trainer gear",
+      "cost": 10000,
+      "description": [
+        "Um computador portátil com uma câmera avançada e software de reconhecimento de imagem. Um treinador pode usar uma ação bônus para identificar um Pokémon em até 60 pés usando o scanner da Pokédex. Isso registra o Pokémon na Pokédex e revela o SR base e alguns fatos breves sobre a espécie."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "old-rod",
+      "name": "Old Rod",
+      "type": "trainer gear",
+      "cost": 1000,
+      "description": [
+        "Permite que você pesque Pokémon. Pescar Pokémon leva uma hora e o Pokémon que você encontra é aleatório.",
+        "A Old Rod permite que você capture apenas Magikarp."
+      ],
+      "media": { "sprite": "/assets/items/old-rod/sprite.png" }
+    },
+    {
+      "id": "good-rod",
+      "name": "Good Rod",
+      "type": "trainer gear",
+      "cost": 5000,
+      "description": [
+        "Permite que você pesque Pokémon. Pescar Pokémon leva uma hora e o Pokémon que você encontra é aleatório.",
+        "A Good Rod permite que você capture Alomomola, Azumarill, Barboach, Basculin, Bibarel, Briionne, Bruxish, Buizel, Carvanha, Chinchou, Clamperl, Clauncher, Corphish, Corsola, Crawdaunt, Croconaw, Dewpider, Dewott, Ducklett, Feebas, Finneon, Frillish, Froakie, Frogadier, Goldeen, Horsea, Inkay, Kabuto, Krabby, Lanturn, Lombre, Lotad, Luvdisc, Magikarp, Mantyke, Mareanie, Marill, Marshtomp, Mudkip, Octillery, Omanyte, Oshawott, Palpitoad, Piplup, Poliwag, Poliwhirl, Popplio, Prinplup, Psyduck, Pyukumuku, Quagsire, Qwilfish, Remoraid, Seel, Shellder, Shellos, Skrelp, Slowpoke, Spheal, Squirtle, Staryu, Stunfisk, Surskit, Tentacool, Tirtouga, Totodile, Tympole, Tynamo, Wailmer, Wartortle, Whiscash, Wimpod, Wingull, Wishiwashi ou Wooper."
+      ],
+      "media": { "sprite": "/assets/items/good-rod/sprite.png" }
+    },
+    {
+      "id": "super-rod",
+      "name": "Super Rod",
+      "type": "trainer gear",
+      "cost": 15000,
+      "description": [
+        "Permite que você pesque Pokémon. Pescar Pokémon leva uma hora e o Pokémon que você encontra é aleatório.",
+        "A Super Rod permite que você capture Araquanid, Blastoise, Carracosta, Clawitzer, Cloyster, Dewgong, Dragalge, Empoleon, Feraligatr, Floatzel, Gastrodon, Golduck, Golisopod, Gorebyss, Greninja, Gyarados, Huntail, Jellicent, Kabutops, Kingdra, Kingler, Lapras, Ludicolo, Lumineon, Malamar, Mantine, Milotic, Omastar, Politoed, Poliwrath, Primarina, Relicanth, Samurott, Seadra, Seaking, Sealeo, Seismitoad, Sharpedo, Slowbro, Slowking, Starmie, Swampert, Tentacruel, Toxapex, Wailord ou Walrein."
+      ],
+      "media": { "sprite": "/assets/items/super-rod/sprite.png" }
+    },
+    {
+      "id": "escape-rope",
+      "name": "Escape Rope",
+      "type": "trainer gear",
+      "cost": 150,
+      "description": ["Consuma para automaticamente ter sucesso ao fugir de uma batalha contra um Pokémon selvagem."],
+      "media": { "sprite": "/assets/items/escape-rope/sprite.png" }
+    },
+    {
+      "id": "honey",
+      "name": "Honey",
+      "type": "trainer gear",
+      "cost": 1000,
+      "description": [
+        "Pode ser usado para atrair automaticamente um único Pokémon que reside na área. Qual Pokémon aparece fica a critério do mestre (DM)."
+      ],
+      "media": { "sprite": "/assets/items/honey/sprite.png" }
+    },
+    {
+      "id": "key-stone",
+      "name": "Key Stone",
+      "type": "trainer gear",
+      "cost": null,
+      "description": [
+        "Permite que um treinador faça seu Pokémon Mega Evoluir. Possui uma carga e recarrega sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/key-stone/sprite.png" }
+    },
+    {
+      "id": "z-ring",
+      "name": "Z-Ring",
+      "type": "trainer gear",
+      "cost": null,
+      "description": [
+        "Permite que um treinador libere o Z-Poder de seu Pokémon na forma de um Z-Move. Possui uma carga e recarrega sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": "/assets/items/z-ring/sprite.png" }
+    },
+    {
+      "id": "dynamax-band",
+      "name": "Dynamax Band",
+      "type": "trainer gear",
+      "cost": null,
+      "description": [
+        "Permite que um treinador Dynamaxize seu Pokémon. Possui uma carga e recarrega sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "tera-orb",
+      "name": "Tera Orb",
+      "type": "trainer gear",
+      "cost": null,
+      "description": [
+        "Permite que um treinador Terastalize seu Pokémon. Possui uma carga e recarrega sua carga ao amanhecer todos os dias."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "capture-styler",
+      "name": "Capture Styler",
+      "type": "trainer gear",
+      "cost": null,
+      "description": [
+        "Permite que um Pokémon Ranger adicione +10 às suas jogadas de captura contra Pokémon que ele tenha totalmente cercado com seu movimento.",
+        "Utilizável apenas por treinadores que seguem a classe Ranger."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "backpack",
+      "name": "Backpack",
+      "type": "trainer gear",
+      "cost": 150,
+      "description": ["Uma mochila que pode carregar até 30 libras."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "binoculars",
+      "name": "Binoculars",
+      "type": "trainer gear",
+      "cost": 250,
+      "description": ["Você pode ver objetos até o dobro do seu tamanho."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "camping-kettle",
+      "name": "Camping Kettle",
+      "type": "trainer gear",
+      "cost": 100,
+      "description": ["Uma chaleira que pode ser colocada em ou acima de uma fogueira para aquecer líquidos."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "camping-stove",
+      "name": "Fogão de camping",
+      "type": "equipamento de treinador",
+      "cost": 250,
+      "description": ["Um fogão leve e portátil que é aquecido por cavacos de madeira."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "canteen",
+      "name": "Cantil",
+      "type": "equipamento de treinador",
+      "cost": 50,
+      "description": ["Um cantil de metal ou plástico para carregar água ou outros líquidos."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "energy-cell",
+      "name": "Célula de energia",
+      "type": "equipamento de treinador",
+      "cost": 20,
+      "description": ["Um pequeno disco plano usado para fornecer energia para diversos dispositivos elétricos."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "flashlight",
+      "name": "Lanterna",
+      "type": "equipamento de treinador",
+      "cost": 50,
+      "description": [
+        "Emite luz intensa em um cone de 15 pés e luz fraca por mais 30 pés. Requer uma nova célula de energia após 4 horas de uso."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "solar-flashlight",
+      "name": "Lanterna solar",
+      "type": "equipamento de treinador",
+      "cost": 120,
+      "description": [
+        "Emite luz intensa em um cone de 15 pés e luz fraca por mais 30 pés. Carrega sob a luz solar; para cada hora nesse processo, ganha uma hora de uso, até 4 horas."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "flint-and-steel",
+      "name": "Pederneira e aço",
+      "type": "equipamento de treinador",
+      "cost": 100,
+      "description": ["Uma peça de aço em forma de 'D' e um pedaço de sílex para produzir faíscas e iniciar um fogo."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "climbers-kit",
+      "name": "Kit de escalada",
+      "type": "equipamento de treinador",
+      "cost": 500,
+      "description": [
+        "Inclui pitons especiais, pontas para botas, luvas e um arnês. Você tem vantagem em testes de escalada e não pode cair mais de 25 pés se falhar. Adicione seu modificador de proficiência a testes relacionados."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "cooking-kit",
+      "name": "Kit de cozinha",
+      "type": "equipamento de treinador",
+      "cost": 500,
+      "description": [
+        "Inclui panelas, frigideiras, utensílios e formas para cozinhar. Usado para preparar alimentos em uma cozinha ou instalação similar. Adicione seu modificador de proficiência a testes relacionados."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "divers-kit",
+      "name": "Kit de mergulho",
+      "type": "equipamento de treinador",
+      "cost": 750,
+      "description": [
+        "Inclui uma roupa de mergulho, cinto de mergulho, máscara, nadadeiras e tanques de ar. Enquanto usado, reduz sua velocidade de movimento em 20 pés, mas concede uma velocidade de natação de 30 pés. Além disso, você tem 2 horas de ar, pode mergulhar até 200 pés de profundidade e não é afetado pela temperatura da água."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "gardeners-kit",
+      "name": "Kit de jardinagem",
+      "type": "equipamento de treinador",
+      "cost": 350,
+      "description": [
+        "Inclui tesouras de poda, luvas, uma pá e um regador. É tudo o que é necessário para coletar e cuidar de plantas, berries e árvores de apricorn. Adicione seu modificador de proficiência a testes relacionados."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "lantern",
+      "name": "Lanterna",
+      "type": "equipamento de treinador",
+      "cost": 100,
+      "description": [
+        "Emite luz intensa em um raio de 30 pés e luz fraca por mais 30 pés adicionais. Requer uma nova célula de energia após 4 horas de uso."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "solar-lantern",
+      "name": "Lanterna solar",
+      "type": "equipamento de treinador",
+      "cost": 150,
+      "description": [
+        "Emite luz intensa em um raio de 30 pés e luz fraca por mais 30 pés adicionais. Precisa recarregar sob luz solar durante um descanso curto, mas fornece 4 horas de luz."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "mess-kit",
+      "name": "Kit de refeição",
+      "type": "equipamento de treinador",
+      "cost": 150,
+      "description": [
+        "Esta caixa de aço inoxidável contém um copo e talheres simples. A caixa se encaixa, e um lado pode ser usado como frigideira, e o outro como prato ou tigela rasa."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "multi-tool",
+      "name": "Ferramenta multifuncional",
+      "type": "equipamento de treinador",
+      "cost": 150,
+      "description": [
+        "Uma ferramenta com alicates, tesoura, faca e outras ferramentas básicas. Adicione seu modificador de proficiência a testes relacionados."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "pocket-knife",
+      "name": "Canivete",
+      "type": "equipamento de treinador",
+      "cost": 50,
+      "description": [
+        "Um pequeno canivete com microferramentas. Adicione seu modificador de proficiência a testes relacionados."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "camping-ration",
+      "name": "Ração de camping",
+      "type": "equipamento de treinador",
+      "cost": 50,
+      "description": [
+        "Um pacote hermético de comida liofilizada. Adicione água quente para reidratar. Fornece uma refeição diária para uma pessoa."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "rebreather",
+      "name": "Rebreather",
+      "type": "equipamento de treinador",
+      "cost": 500,
+      "description": [
+        "Um pequeno aparelho respiratório que permite respirar debaixo d’água. Seu filtro precisa ser substituído após 4 horas de uso."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "rebreather-filter",
+      "name": "Filtro de rebreather",
+      "type": "equipamento de treinador",
+      "cost": 50,
+      "description": ["Um filtro para um rebreather."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "sleeping-bag",
+      "name": "Saco de dormir",
+      "type": "equipamento de treinador",
+      "cost": 250,
+      "description": ["Um saco de dormir para uma pessoa."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "solar-charger",
+      "name": "Carregador solar",
+      "type": "equipamento de treinador",
+      "cost": 250,
+      "description": [
+        "Um carregador solar armazena luz solar durante um descanso curto durante o dia e pode ser usado para carregar duas células de energia durante um descanso longo."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "small-tent",
+      "name": "Barraca pequena",
+      "type": "equipamento de treinador",
+      "cost": 250,
+      "description": ["Uma barraca para duas pessoas."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "large-tent",
+      "name": "Barraca grande",
+      "type": "equipamento de treinador",
+      "cost": 500,
+      "description": ["Uma barraca para quatro pessoas."],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "artisan-tools",
+      "name": "Ferramentas de artesão",
+      "type": "equipamento de treinador",
+      "cost": 350,
+      "description": [
+        "Ferramentas usadas por artesãos, como calígrafos, artistas ou ferreiros. Escolha um tipo de ferramenta de artesão ao comprar. Adicione seu modificador de proficiência a testes relacionados."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "thieves-tools",
+      "name": "Ferramentas de ladrão",
+      "type": "equipamento de treinador",
+      "cost": 500,
+      "description": [
+        "Você pode adicionar seu modificador de proficiência a testes ao desarmar armadilhas ou abrir fechaduras."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "dungeoneers-pack",
+      "name": "Pacote de masmorras",
+      "type": "equipamento de treinador",
+      "cost": 1200,
+      "description": [
+        "Contém uma mochila, kit de escalada, lanterna, 5 células de energia, pederneira e aço, 10 rações de camping, um cantil e 30 pés de corda."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "explorers-pack",
+      "name": "Pacote do explorador",
+      "type": "equipamento de treinador",
+      "cost": 1200,
+      "description": [
+        "Contém uma mochila, saco de dormir, kit de refeição, pederneira e aço, lanterna, 5 células de energia, 10 rações de camping, um cantil e 30 pés de corda."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "filchers-pack",
+      "name": "Pacote do ladrão",
+      "type": "equipamento de treinador",
+      "cost": 1200,
+      "description": [
+        "Contém uma mochila, ferramentas de ladrão, 20 pés de arame, um sino, uma lanterna, 3 células de energia, 5 rações de camping, pederneira e aço e um cantil."
+      ],
+      "media": { "sprite": null }
+    },
+    {
+      "id": "egg-incubator",
+      "name": "Incubadora de ovos",
+      "type": "equipamento de treinador",
+      "cost": 1000,
+      "description": [
+        "Quando um ovo é colocado dentro, reduz o tempo de incubação em 1d20 por dia. Uma vez que o ovo choca, a incubadora perde sua eficácia."
+      ],
+      "media": { "sprite": "/assets/items/egg-incubator/sprite.png" }
+    },
+    {
+      "id": "egg-incubator-plus",
+      "name": "Incubadora de ovos plus",
+      "type": "equipamento de treinador",
+      "cost": 3000,
+      "description": [
+        "Quando um ovo é colocado dentro, reduz o tempo de incubação em 2d20 por dia. Uma vez que o ovo choca, a incubadora perde sua eficácia."
+      ],
+      "media": { "sprite": "/assets/items/egg-incubator-plus/sprite.png" }
+    },
+    {
+      "id": "egg-incubator-super",
+      "name": "Incubadora de ovos super",
+      "type": "equipamento de treinador",
+      "cost": 10000,
+      "description": [
+        "Quando um ovo é colocado dentro, reduz o tempo de incubação em 3d20 por dia. Uma vez que o ovo choca, a incubadora perde sua eficácia."
+      ],
+      "media": { "sprite": "/assets/items/egg-incubator-super/sprite.png" }
+    }
+  ]
+}
