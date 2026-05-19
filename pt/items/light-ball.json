@@ -1,1 +1,1 @@
-{"id":"light-ball","name":"Light Ball","type":"held item","cost":1400,"description":["When held by a Pikachu, raises its MOVE power modifier by +1."],"media":{"sprite":"/assets/items/light-ball/sprite.png"}}
+{"id":"light-ball","name":"Bola de Luz","type":"held item","cost":1400,"description":["Quando segurado por um Pikachu, aumenta seu modificador de poder de MOVES em +1."],"media":{"sprite":"/assets/items/light-ball/sprite.png"}}

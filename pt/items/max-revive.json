@@ -1,1 +1,1 @@
-{"id":"max-revive","name":"Max Revive","type":"medicine","cost":5000,"description":["A trainer may use an action to restore 4d12 + 10 HP to a fainted Pokémon. Consumed on use."],"media":{"sprite":"/assets/items/max-revive/sprite.png"}}
+{"id":"max-revive","name":"Reviver Máximo","type":"medicine","cost":5000,"description":["Um treinador pode usar uma ação para restaurar 4d12 + 10 de HP a um Pokémon desmaiado. Consumido no uso."],"media":{"sprite":"/assets/items/max-revive/sprite.png"}}

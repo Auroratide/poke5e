@@ -1,1 +1,1 @@
-{"id":"twisted-spoon","name":"Twisted Spoon","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to psychic-type damage it deals (once per move)."],"media":{"sprite":"/assets/items/twisted-spoon/sprite.png"}}
+{"id":"twisted-spoon","name":"Colher Torcida","type":"held item","cost":4400,"description":["O portador adiciona seu bônus de proficiência ao dano do tipo psíquico que ele causa (uma vez por movimento)."],"media":{"sprite":"/assets/items/twisted-spoon/sprite.png"}}

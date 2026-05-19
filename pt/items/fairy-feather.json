@@ -1,1 +1,1 @@
-{"id":"fairy-feather","name":"Fairy Feather","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to fairy-type damage it deals (once per move)."],"media":{"sprite":"/assets/items/fairy-feather/sprite.png"}}
+{"id":"fairy-feather","name":"Pluma Fada","type":"held item","cost":4400,"description":["O portador adiciona seu bônus de proficiência ao dano do tipo fada que ele causa (uma vez por movimento)."],"media":{"sprite":"/assets/items/fairy-feather/sprite.png"}}

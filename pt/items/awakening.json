@@ -1,1 +1,1 @@
-{"id":"awakening","name":"Awakening","type":"medicine","cost":200,"description":["A trainer may use an action to cure an adjacent Pokémon of the Asleep condition. Consumed on use."],"media":{"sprite":"/assets/items/awakening/sprite.png"}}
+{"id":"awakening","name":"Despertar","type":"medicine","cost":200,"description":["Um treinador pode usar uma ação para curar um Pokémon adjacente da condição Dormindo. Consumido no uso."],"media":{"sprite":"/assets/items/awakening/sprite.png"}}

@@ -1,1 +1,1 @@
-{"id":"damp-rock","name":"Damp Rock","type":"held item","cost":2500,"description":["The holder increases the duration of their Rain effects by 3 rounds."],"media":{"sprite":"/assets/items/damp-rock/sprite.png"}}
+{"id":"damp-rock","name":"Pedra Úmida","type":"held item","cost":2500,"description":["O portador aumenta a duração dos efeitos de Chuva em 3 rodadas."],"media":{"sprite":"/assets/items/damp-rock/sprite.png"}}

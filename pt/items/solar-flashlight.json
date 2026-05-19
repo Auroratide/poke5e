@@ -1,1 +1,1 @@
-{"id":"solar-flashlight","name":"Solar Flashlight","type":"trainer gear","cost":120,"description":["Casts bright light in a 15-foot cone and dim light for an additional 30 feet. Charges in the sunlight; for each hour doing so, it gains an hour of use, up to 4 hours."],"media":{"sprite":null}}
+{"id":"solar-flashlight","name":"Lanterna solar","type":"trainer gear","cost":120,"description":["Emite luz intensa em um cone de 15 pés e luz fraca por mais 30 pés. Carrega sob a luz solar; para cada hora nesse processo, ganha uma hora de uso, até 4 horas."],"media":{"sprite":null}}

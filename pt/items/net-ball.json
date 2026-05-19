@@ -1,1 +1,1 @@
-{"id":"net-ball","name":"Net Ball","type":"pokeball","cost":800,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against Water- or Bug-type Pokémon."],"media":{"sprite":"/assets/items/net-ball/sprite.png"}}
+{"id":"net-ball","name":"Net Ball","type":"pokeball","cost":800,"description":["Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 contra Pokémon do tipo Água ou Inseto."],"media":{"sprite":"/assets/items/net-ball/sprite.png"}}

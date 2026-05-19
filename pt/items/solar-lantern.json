@@ -1,1 +1,1 @@
-{"id":"solar-lantern","name":"Solar Lantern","type":"trainer gear","cost":150,"description":["Casts bright light in a 30-foot radius and dim light for an aditional 30 feet. Needs to recharge in the sunlight for a short rest, but otherwise provides 4 hours of light."],"media":{"sprite":null}}
+{"id":"solar-lantern","name":"Lanterna solar","type":"trainer gear","cost":150,"description":["Emite luz intensa em um raio de 30 pés e luz fraca por mais 30 pés adicionais. Precisa recarregar sob luz solar durante um descanso curto, mas fornece 4 horas de luz."],"media":{"sprite":null}}

@@ -1,1 +1,1 @@
-{"id":"charti-berry","name":"Charti Berry","type":"berry","cost":200,"description":["Can be consumed as a reaction to taking rock-type damage. You take half that damage instead."],"media":{"sprite":"/assets/items/charti-berry/sprite.png"}}
+{"id":"charti-berry","name":"Charti Berry","type":"berry","cost":200,"description":["Pode ser consumido como uma reação ao sofrer dano do tipo pedra. Você recebe apenas metade desse dano em vez disso."],"media":{"sprite":"/assets/items/charti-berry/sprite.png"}}

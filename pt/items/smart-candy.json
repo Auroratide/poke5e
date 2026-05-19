@@ -1,1 +1,1 @@
-{"id":"smart-candy","name":"Smart Candy","type":"medicine","cost":1000,"description":["When consumed by a Pokémon, its INT increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time."],"media":{"sprite":null}}
+{"id":"smart-candy","name":"Doce Inteligente","type":"medicine","cost":1000,"description":["Quando consumido por um Pokémon, sua INT aumenta em 1 por 1 minuto. Um Pokémon só pode se beneficiar de um item Doce por vez."],"media":{"sprite":null}}

@@ -1,1 +1,1 @@
-{"id":"black-glasses","name":"Black Glasses","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to dark-type damage it deals (once per move)."],"media":{"sprite":"/assets/items/black-glasses/sprite.png"}}
+{"id":"black-glasses","name":"Óculos Escuros","type":"held item","cost":4400,"description":["O portador adiciona seu bônus de proficiência ao dano de movimentos do tipo sombrio (uma vez por movimento)."],"media":{"sprite":"/assets/items/black-glasses/sprite.png"}}

@@ -1,1 +1,1 @@
-{"id":"flashlight","name":"Flashlight","type":"trainer gear","cost":50,"description":["Casts bright light in a 15-foot cone and dim light for an additional 30 feet. Requires a new energy cell after 4 hours of use."],"media":{"sprite":null}}
+{"id":"flashlight","name":"Lanterna","type":"trainer gear","cost":50,"description":["Emite luz intensa em um cone de 15 pés e luz fraca por mais 30 pés. Requer uma nova célula de energia após 4 horas de uso."],"media":{"sprite":null}}

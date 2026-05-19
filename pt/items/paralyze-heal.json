@@ -1,1 +1,1 @@
-{"id":"paralyze-heal","name":"Paralyze Heal","type":"medicine","cost":200,"description":["A trainer may use an action to cure an adjacent Pokémon of the Paralysis condition. Consumed on use."],"media":{"sprite":"/assets/items/paralyze-heal/sprite.png"}}
+{"id":"paralyze-heal","name":"Cura Paralisia","type":"medicine","cost":200,"description":["Um treinador pode usar uma ação para curar um Pokémon adjacente da condição Paralisado. Consumido no uso."],"media":{"sprite":"/assets/items/paralyze-heal/sprite.png"}}

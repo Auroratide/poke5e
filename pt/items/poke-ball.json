@@ -1,1 +1,1 @@
-{"id":"poke-ball","name":"Poké Ball","type":"pokeball","cost":250,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon."],"media":{"sprite":"/assets/items/poke-ball/sprite.png"}}
+{"id":"poke-ball","name":"Poké Bola","type":"pokeball","cost":250,"description":["Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon."],"media":{"sprite":"/assets/items/poke-ball/sprite.png"}}

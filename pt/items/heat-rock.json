@@ -1,1 +1,1 @@
-{"id":"heat-rock","name":"Heat Rock","type":"held item","cost":2500,"description":["The holder increases the duration of their Harsh Sunlight effects by 3 rounds."],"media":{"sprite":"/assets/items/heat-rock/sprite.png"}}
+{"id":"heat-rock","name":"Pedra de Calor","type":"held item","cost":2500,"description":["O portador aumenta a duração dos efeitos de Sol Forte em 3 rodadas."],"media":{"sprite":"/assets/items/heat-rock/sprite.png"}}

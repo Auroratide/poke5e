@@ -1,1 +1,1 @@
-{"id":"repeat-ball","name":"Repeat Ball","type":"pokeball","cost":800,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against a species you have already caught before."],"media":{"sprite":"/assets/items/repeat-ball/sprite.png"}}
+{"id":"repeat-ball","name":"Repeat Ball","type":"pokeball","cost":800,"description":["Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 contra uma espécie já capturada anteriormente."],"media":{"sprite":"/assets/items/repeat-ball/sprite.png"}}

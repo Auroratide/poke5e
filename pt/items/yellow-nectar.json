@@ -1,1 +1,1 @@
-{"id":"yellow-nectar","name":"Yellow Nectar","type":"medicine","cost":400,"description":["When fed to an Oricorio, it changes form to Oricorio Pom-Pom Style."],"media":{"sprite":"/assets/items/yellow-nectar/sprite.png"}}
+{"id":"yellow-nectar","name":"Néctar Amarelo","type":"medicine","cost":400,"description":["Quando dado a um Oricorio, ele muda de forma para Oricorio Estilo Pom-Pom."],"media":{"sprite":"/assets/items/yellow-nectar/sprite.png"}}

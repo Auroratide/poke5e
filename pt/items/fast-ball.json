@@ -1,1 +1,1 @@
-{"id":"fast-ball","name":"Fast Ball","type":"pokeball","cost":600,"description":["Lets a trainer attempt a Capture Roll to catch a Pokémon. Can throw as a reaction to a fleeing Pokémon."],"media":{"sprite":"/assets/items/fast-ball/sprite.png"}}
+{"id":"fast-ball","name":"Fast Ball","type":"pokeball","cost":600,"description":["Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Pode ser arremessada como reação contra um Pokémon em fuga."],"media":{"sprite":"/assets/items/fast-ball/sprite.png"}}

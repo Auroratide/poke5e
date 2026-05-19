@@ -1,1 +1,1 @@
-{"id":"quick-claw","name":"Quick Claw","type":"held item","cost":1000,"description":["The holder adds +3 to their initiative rolls."],"media":{"sprite":"/assets/items/quick-claw/sprite.png"}}
+{"id":"quick-claw","name":"Quick Claw","type":"held item","cost":1000,"description":["O portador recebe +3 em suas rolagens de iniciativa."],"media":{"sprite":"/assets/items/quick-claw/sprite.png"}}

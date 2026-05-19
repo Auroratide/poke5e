@@ -1,1 +1,1 @@
-{"id":"chilan-berry","name":"Chilan Berry","type":"berry","cost":200,"description":["Can be consumed as a reaction to taking normal-type damage. You take half that damage instead."],"media":{"sprite":"/assets/items/chilan-berry/sprite.png"}}
+{"id":"chilan-berry","name":"Chilan Berry","type":"berry","cost":200,"description":["Pode ser consumido como uma reação ao sofrer dano do tipo normal. Você recebe apenas metade desse dano em vez disso."],"media":{"sprite":"/assets/items/chilan-berry/sprite.png"}}

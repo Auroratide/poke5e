@@ -1,1 +1,1 @@
-{"id":"charcoal","name":"Charcoal","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to fire-type damage it deals (once per move)."],"media":{"sprite":"/assets/items/charcoal/sprite.png"}}
+{"id":"charcoal","name":"Carvão","type":"held item","cost":4400,"description":["O portador adiciona seu bônus de proficiência ao dano do tipo fogo que ele causa (uma vez por movimento)."],"media":{"sprite":"/assets/items/charcoal/sprite.png"}}

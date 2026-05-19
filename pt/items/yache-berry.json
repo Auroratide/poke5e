@@ -1,1 +1,1 @@
-{"id":"yache-berry","name":"Yache Berry","type":"berry","cost":200,"description":["Can be consumed as a reaction to taking ice-type damage. You take half that damage instead."],"media":{"sprite":"/assets/items/yache-berry/sprite.png"}}
+{"id":"yache-berry","name":"Yache Berry","type":"berry","cost":200,"description":["Pode ser consumido como uma reação ao sofrer dano do tipo gelo. Você recebe apenas metade desse dano em vez disso."],"media":{"sprite":"/assets/items/yache-berry/sprite.png"}}

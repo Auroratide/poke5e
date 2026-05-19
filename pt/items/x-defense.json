@@ -1,1 +1,1 @@
-{"id":"x-defense","name":"X Defense","type":"medicine","cost":350,"description":["A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to AC."],"media":{"sprite":"/assets/items/x-defense/sprite.png"}}
+{"id":"x-defense","name":"X Defesa","type":"medicine","cost":350,"description":["Um treinador pode usar uma ação para administrar isso a um Pokémon. Por 1 minuto, esse Pokémon adiciona +2 à Classe de Armadura."],"media":{"sprite":"/assets/items/x-defense/sprite.png"}}

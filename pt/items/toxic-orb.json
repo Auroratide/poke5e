@@ -1,1 +1,1 @@
-{"id":"toxic-orb","name":"Toxic Orb","type":"held item","cost":2000,"description":["At the end of the holder's turn, the holder becomes badly poisoned."],"media":{"sprite":"/assets/items/toxic-orb/sprite.png"}}
+{"id":"toxic-orb","name":"Orbe Venenoso","type":"held item","cost":2000,"description":["No final do turno do portador, ele fica gravemente envenenado."],"media":{"sprite":"/assets/items/toxic-orb/sprite.png"}}

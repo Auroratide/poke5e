@@ -1,1 +1,1 @@
-{"id":"x-sp-def","name":"X Sp. Def","type":"medicine","cost":350,"description":["A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to saving throws."],"media":{"sprite":"/assets/items/x-sp-def/sprite.png"}}
+{"id":"x-sp-def","name":"X Def. Esp.","type":"medicine","cost":350,"description":["Um treinador pode usar uma ação para administrar isso a um Pokémon. Por 1 minuto, esse Pokémon adiciona +2 aos testes de resistência."],"media":{"sprite":"/assets/items/x-sp-def/sprite.png"}}

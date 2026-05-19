@@ -1,1 +1,1 @@
-{"id":"kasib-berry","name":"Kasib Berry","type":"berry","cost":200,"description":["Can be consumed as a reaction to taking ghost-type damage. You take half that damage instead."],"media":{"sprite":"/assets/items/kasib-berry/sprite.png"}}
+{"id":"kasib-berry","name":"Kasib Berry","type":"berry","cost":200,"description":["Pode ser consumido como uma reação ao sofrer dano do tipo fantasma. Você recebe apenas metade desse dano em vez disso."],"media":{"sprite":"/assets/items/kasib-berry/sprite.png"}}

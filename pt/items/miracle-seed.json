@@ -1,1 +1,1 @@
-{"id":"miracle-seed","name":"Miracle Seed","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to grass-type damage it deals (once per move)."],"media":{"sprite":"/assets/items/miracle-seed/sprite.png"}}
+{"id":"miracle-seed","name":"Semente Milagrosa","type":"held item","cost":4400,"description":["O portador adiciona seu bônus de proficiência ao dano do tipo grama que ele causa (uma vez por movimento)."],"media":{"sprite":"/assets/items/miracle-seed/sprite.png"}}

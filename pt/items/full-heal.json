@@ -1,1 +1,1 @@
-{"id":"full-heal","name":"Full Heal","type":"medicine","cost":450,"description":["A trainer may use an action to cure an adjacent Pokémon of all status conditions, and grants them immunity to all statuses for one round. Consumed on use."],"media":{"sprite":"/assets/items/full-heal/sprite.png"}}
+{"id":"full-heal","name":"Cura Total","type":"medicine","cost":450,"description":["Um treinador pode usar uma ação para curar um Pokémon adjacente de todas as condições de status e concede imunidade a status por um turno."],"media":{"sprite":"/assets/items/full-heal/sprite.png"}}

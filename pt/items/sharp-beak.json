@@ -1,1 +1,1 @@
-{"id":"sharp-beak","name":"Sharp Beak","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to flying-type damage it deals (once per move)."],"media":{"sprite":"/assets/items/sharp-beak/sprite.png"}}
+{"id":"sharp-beak","name":"Bico Afiado","type":"held item","cost":4400,"description":["O portador adiciona seu bônus de proficiência ao dano do tipo voador que ele causa (uma vez por movimento)."],"media":{"sprite":"/assets/items/sharp-beak/sprite.png"}}

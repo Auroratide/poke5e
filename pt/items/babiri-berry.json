@@ -1,1 +1,1 @@
-{"id":"babiri-berry","name":"Babiri Berry","type":"berry","cost":200,"description":["Can be consumed as a reaction to taking steel-type damage. You take half that damage instead."],"media":{"sprite":"/assets/items/babiri-berry/sprite.png"}}
+{"id":"babiri-berry","name":"Babiri Berry","type":"berry","cost":200,"description":["Pode ser consumido como uma reação ao sofrer dano do tipo aço. Você recebe apenas metade desse dano em vez disso."],"media":{"sprite":"/assets/items/babiri-berry/sprite.png"}}

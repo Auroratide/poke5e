@@ -1,1 +1,1 @@
-{"id":"berry-juice","name":"Berry Juice","type":"medicine","cost":500,"description":["When consumed, restores 20 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."],"media":{"sprite":"/assets/items/berry-juice/sprite.png"}}
+{"id":"berry-juice","name":"Suco de Berry","type":"medicine","cost":500,"description":["Quando consumido, restaura 20 HP. Pode ser usado como ação bônus ou administrado como ação completa a um Pokémon adjacente."],"media":{"sprite":"/assets/items/berry-juice/sprite.png"}}

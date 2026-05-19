@@ -1,1 +1,1 @@
-{"id":"x-accuracy","name":"X Accuracy","type":"medicine","cost":350,"description":["A trainer may use an action to administer this to a Pokémon. The Pokémon gains advantage on its next three attack rolls."],"media":{"sprite":"/assets/items/x-accuracy/sprite.png"}}
+{"id":"x-accuracy","name":"X Precisão","type":"medicine","cost":350,"description":["O Pokémon ganha vantagem nas próximas três jogadas de ataque."],"media":{"sprite":"/assets/items/x-accuracy/sprite.png"}}

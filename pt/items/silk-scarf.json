@@ -1,1 +1,1 @@
-{"id":"silk-scarf","name":"Silk Scarf","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to normal-type damage it deals (once per move)."],"media":{"sprite":"/assets/items/silk-scarf/sprite.png"}}
+{"id":"silk-scarf","name":"Lenço de Seda","type":"held item","cost":4400,"description":["O portador adiciona seu bônus de proficiência ao dano do tipo normal que ele causa (uma vez por movimento)."],"media":{"sprite":"/assets/items/silk-scarf/sprite.png"}}

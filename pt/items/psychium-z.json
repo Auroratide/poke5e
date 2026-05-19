@@ -1,1 +1,1 @@
-{"id":"psychium-z","name":"Psychium Z","type":"held item","cost":null,"description":["Allows the Pokémon holding this to use a psychic-type Z-Move. Has one charge, and recovers its charge at dawn each day."],"media":{"sprite":"/assets/items/psychium-z/sprite.png"}}
+{"id":"psychium-z","name":"Psychium Z","type":"held item","cost":null,"description":["Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo psíquico. Possui uma carga e recupera sua carga ao amanhecer todos os dias."],"media":{"sprite":"/assets/items/psychium-z/sprite.png"}}

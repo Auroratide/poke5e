@@ -1,1 +1,1 @@
-{"id":"focus-band","name":"Focus Band","type":"held item","cost":1000,"description":["When the holder would become flinched, roll a d20. On a 10 or higher, the holder does not flinch."],"media":{"sprite":"/assets/items/focus-band/sprite.png"}}
+{"id":"focus-band","name":"Focus Band","type":"held item","cost":1000,"description":["Quando o portador ficaria flinchado, role um d20. Em 10 ou mais, ele não sofre flinch."],"media":{"sprite":"/assets/items/focus-band/sprite.png"}}

@@ -1,1 +1,1 @@
-{"id":"health-candy","name":"Health Candy","type":"medicine","cost":1000,"description":["When consumed by a Pokémon, it gains 20 temp HP for 1 minute. A Pokémon may only benefit from one Candy item at a time."],"media":{"sprite":null}}
+{"id":"health-candy","name":"Doce de Saúde","type":"medicine","cost":1000,"description":["Quando consumido por um Pokémon, ele ganha 20 PV temporários por 1 minuto. Um Pokémon só pode se beneficiar de um item Doce por vez."],"media":{"sprite":null}}

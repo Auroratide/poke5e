@@ -1,1 +1,1 @@
-{"id":"wise-glasses","name":"Wise Glasses","type":"held item","cost":4000,"description":["The holder adds its proficiency bonus to damage it deals from ranged attacks (once per move)."],"media":{"sprite":"/assets/items/wise-glasses/sprite.png"}}
+{"id":"wise-glasses","name":"Óculos Sábios","type":"held item","cost":4000,"description":["O portador adiciona seu bônus de proficiência ao dano causado por ataques à distância (uma vez por movimento)."],"media":{"sprite":"/assets/items/wise-glasses/sprite.png"}}

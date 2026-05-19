@@ -1,1 +1,1 @@
-{"id":"leaf-stone","name":"Leaf Stone","type":"evolution","cost":4000,"description":["Some Pokémon may consume the power of this stone to evolve."],"media":{"sprite":"/assets/items/leaf-stone/sprite.png"}}
+{"id":"leaf-stone","name":"Pedra da Folha","type":"evolution","cost":4000,"description":["Alguns Pokémon podem consumir o poder desta pedra para evoluir."],"media":{"sprite":"/assets/items/leaf-stone/sprite.png"}}

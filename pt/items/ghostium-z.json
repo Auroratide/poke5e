@@ -1,1 +1,1 @@
-{"id":"ghostium-z","name":"Ghostium Z","type":"held item","cost":null,"description":["Allows the Pokémon holding this to use a ghost-type Z-Move. Has one charge, and recovers its charge at dawn each day."],"media":{"sprite":"/assets/items/ghostium-z/sprite.png"}}
+{"id":"ghostium-z","name":"Ghostium Z","type":"held item","cost":null,"description":["Permite que o Pokémon que estiver segurando este item use um Z-Move do tipo fantasma. Possui uma carga e recupera sua carga ao amanhecer todos os dias."],"media":{"sprite":"/assets/items/ghostium-z/sprite.png"}}

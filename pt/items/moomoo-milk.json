@@ -1,1 +1,1 @@
-{"id":"moomoo-milk","name":"Moomoo Milk","type":"medicine","cost":1200,"description":["When consumed, restores 50 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."],"media":{"sprite":"/assets/items/moomoo-milk/sprite.png"}}
+{"id":"moomoo-milk","name":"Leite Mumu","type":"medicine","cost":1200,"description":["Quando consumido, restaura 50 HP. Pode ser usado como ação bônus ou administrado como ação completa a um Pokémon adjacente."],"media":{"sprite":"/assets/items/moomoo-milk/sprite.png"}}

@@ -1,1 +1,1 @@
-{"id":"smooth-rock","name":"Smooth Rock","type":"held item","cost":2500,"description":["The holder increases the duration of their Sandstorm effects by 3 rounds."],"media":{"sprite":"/assets/items/smooth-rock/sprite.png"}}
+{"id":"smooth-rock","name":"Pedra Lisa","type":"held item","cost":2500,"description":["O portador aumenta a duração dos efeitos de Tempestade de Areia em 3 rodadas."],"media":{"sprite":"/assets/items/smooth-rock/sprite.png"}}

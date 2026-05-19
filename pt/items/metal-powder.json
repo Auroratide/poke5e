@@ -1,1 +1,1 @@
-{"id":"metal-powder","name":"Metal Powder","type":"held item","cost":1200,"description":["When held by a Ditto, its CON score increases by +3."],"media":{"sprite":"/assets/items/metal-powder/sprite.png"}}
+{"id":"metal-powder","name":"Pó Metálico","type":"held item","cost":1200,"description":["Quando segurado por um Ditto, seu atributo CON aumenta em +3."],"media":{"sprite":"/assets/items/metal-powder/sprite.png"}}

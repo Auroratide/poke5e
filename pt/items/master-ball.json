@@ -1,1 +1,1 @@
-{"id":"master-ball","name":"Master Ball","type":"pokeball","cost":null,"description":["Lets a trainer automatically succeed on a Capture Roll to catch a Pokémon."],"media":{"sprite":"/assets/items/master-ball/sprite.png"}}
+{"id":"master-ball","name":"Master Ball","type":"pokeball","cost":null,"description":["Permite que um treinador capture automaticamente um Pokémon em uma Jogada de Captura."],"media":{"sprite":"/assets/items/master-ball/sprite.png"}}

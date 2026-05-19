@@ -1,1 +1,1 @@
-{"id":"poison-barb","name":"Poison Barb","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to poison-type damage it deals (once per move)."],"media":{"sprite":"/assets/items/poison-barb/sprite.png"}}
+{"id":"poison-barb","name":"Farpa Venenosa","type":"held item","cost":4400,"description":["O portador adiciona seu bônus de proficiência ao dano do tipo veneno que ele causa (uma vez por movimento)."],"media":{"sprite":"/assets/items/poison-barb/sprite.png"}}

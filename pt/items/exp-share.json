@@ -1,1 +1,1 @@
-{"id":"exp-share","name":"Exp Share","type":"held item","cost":7500,"description":["A Pokémon holding this item receives up to half of the total experience gained in each combat while in the party."],"media":{"sprite":"/assets/items/exp-share/sprite.png"}}
+{"id":"exp-share","name":"Exp Share","type":"held item","cost":7500,"description":["Um Pokémon segurando este item recebe até metade da experiência total obtida em cada combate enquanto estiver no grupo."],"media":{"sprite":"/assets/items/exp-share/sprite.png"}}

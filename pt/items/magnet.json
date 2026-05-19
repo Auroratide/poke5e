@@ -1,1 +1,1 @@
-{"id":"magnet","name":"Magnet","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to electric-type damage it deals (once per move)."],"media":{"sprite":"/assets/items/magnet/sprite.png"}}
+{"id":"magnet","name":"Ímã","type":"held item","cost":4400,"description":["O portador adiciona seu bônus de proficiência ao dano do tipo elétrico que ele causa (uma vez por movimento)."],"media":{"sprite":"/assets/items/magnet/sprite.png"}}

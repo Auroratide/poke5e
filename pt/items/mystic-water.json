@@ -1,1 +1,1 @@
-{"id":"mystic-water","name":"Mystic Water","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to water-type damage it deals (once per move)."],"media":{"sprite":"/assets/items/mystic-water/sprite.png"}}
+{"id":"mystic-water","name":"Água Mística","type":"held item","cost":4400,"description":["O portador adiciona seu bônus de proficiência ao dano do tipo água que ele causa (uma vez por movimento)."],"media":{"sprite":"/assets/items/mystic-water/sprite.png"}}

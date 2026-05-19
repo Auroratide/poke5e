@@ -1,1 +1,1 @@
-{"id":"life-orb","name":"Life Orb","type":"held item","cost":2000,"description":["The holder adds its proficiency bonus to damage it deals, but takes the same amount of typeless-damage each time."],"media":{"sprite":"/assets/items/life-orb/sprite.png"}}
+{"id":"life-orb","name":"Orbe da Vida","type":"held item","cost":2000,"description":["O portador adiciona seu bônus de proficiência ao dano que causa, mas recebe a mesma quantidade de dano de tipo neutro cada vez."],"media":{"sprite":"/assets/items/life-orb/sprite.png"}}

@@ -1,1 +1,1 @@
-{"id":"muscle-band","name":"Muscle Band","type":"held item","cost":4000,"description":["The holder adds its proficiency bonus to damage it deals from melee attacks (once per move)."],"media":{"sprite":"/assets/items/muscle-band/sprite.png"}}
+{"id":"muscle-band","name":"Muscle Band","type":"held item","cost":4000,"description":["O portador adiciona seu bônus de proficiência ao dano de ataques corpo a corpo (uma vez por movimento)."],"media":{"sprite":"/assets/items/muscle-band/sprite.png"}}

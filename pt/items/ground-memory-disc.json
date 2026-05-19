@@ -1,1 +1,1 @@
-{"id":"ground-memory-disc","name":"Ground Memory Disc","type":"held item","cost":2000,"description":["When held by a Pokémon with the RKS System ability, changes the type of the holder to Ground."],"media":{"sprite":"/assets/items/ground-memory-disc/sprite.png"}}
+{"id":"ground-memory-disc","name":"Ground Memory Disc","type":"held item","cost":2000,"description":["Quando segurado por um Pokémon com a habilidade Sistema RKS, muda o tipo do portador para Terra."],"media":{"sprite":"/assets/items/ground-memory-disc/sprite.png"}}
