@@ -39,13 +39,20 @@
 	$: action = browser ? $page.url.searchParams.get("action") : undefined
 
 	let trainerList: Promise<undefined | TrainerListStore> | undefined
+
+	let deltas: {
+		lastTrainer?: Promise<undefined | TrainerStore> | undefined
+	} = {}
 	let trainer: Promise<undefined | TrainerStore> | undefined
 	let allSpecies: Promise<Readable<PokemonSpecies[]>> = browser ? SpeciesStore.completeList() : undefined
 
 	$: {
 		if (trainerId && browser) {
 			trainerList = undefined
-			trainer = trainers.get(trainerId)
+			if (!(trainer === deltas.lastTrainer && trainer != null)) {
+				trainer = trainers.get(trainerId)
+				deltas.lastTrainer = trainer
+			}
 
 			if (accessKey) {
 				trainer?.then((t) => {
