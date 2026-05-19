@@ -4228,7 +4228,7 @@
 			"duration": "1 minute",
 			"range": "melee",
 			"description": [
-				"You decorate the target. The target has advantage on attack rolls. When the target takes damage, it must make a concentration CON save; on failure, the decorate effect ends immediately."
+				"You decorate the target. The target has advantage on attack rolls. When the target takes damage, it must make a CON save. The DC equals 10 or half the damage taken (round down), whichever number is higher, up to a maximum DC of 30. On failure, the decorate effect ends immediately."
 			]
 		},
 		{

@@ -1490,7 +1490,7 @@
 			"time": "1 ação",
 			"duration": "1 minuto",
 			"description": [
-				"Você decora o alvo. O alvo tem vantagem nas jogadas de ataque. Quando o alvo sofre dano, deve fazer uma salvaguarda de CON para manter a concentração; em caso de falha, o efeito termina."
+				"Você decora o alvo. O alvo tem vantagem nas jogadas de ataque. Quando o alvo sofrer danos, deve fazer uma proteção de CON. A CD é igual a 10 ou à metade do dano sofrido (arredondado para baixo), o que for maior, até uma CD máxima de 30. Em caso de falha, o efeito termina."
 			]
 		},
 		{
