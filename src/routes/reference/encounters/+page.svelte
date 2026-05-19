@@ -5,8 +5,8 @@
 	import one from "./1v1.webp"
 	import two from "./2v2.webp"
 	import four from "./4v4.webp"
-	import { BiomeTags } from "$lib/poke5e/habitat";
-	import { Url } from "$lib/site/url";
+	import { BiomeTags } from "$lib/poke5e/habitat"
+	import { Url } from "$lib/site/url"
 </script>
 
 <ReferencePage title="Building Encounters">

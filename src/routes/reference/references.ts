@@ -104,7 +104,7 @@ const Supplements2024 = [
 	LegendaryBattlesPage,
 	PokemonTransformationsPage,
 	ShinyPage,
-	TrainerOriginsPage
+	TrainerOriginsPage,
 ]
 
 export const OriginalList = [
@@ -136,15 +136,15 @@ export const OriginalList = [
 ]
 
 export const CoreRules = derived(rulesVersion, (version) =>
-	version === "2018" ? CoreRules2018 : CoreRules2024
+	version === "2018" ? CoreRules2018 : CoreRules2024,
 )
 
 export const Appendix = derived(rulesVersion, (version) =>
-	version === "2018" ? Appendix2018 : Appendix2024
+	version === "2018" ? Appendix2018 : Appendix2024,
 )
 
 export const Supplements = derived(rulesVersion, (version) =>
-	version === "2018" ? Supplements2018 : Supplements2024
+	version === "2018" ? Supplements2018 : Supplements2024,
 )
 
 export function search(list: ReferenceInfo[], value: string): ReferenceInfo[] {

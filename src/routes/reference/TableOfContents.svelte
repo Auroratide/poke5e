@@ -8,6 +8,7 @@
 		items: ReferenceInfo[],
 	} = $props()
 
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
 	let [_, ...rest] = $derived(items)
 </script>
 

@@ -1,5 +1,5 @@
 <script>
-	import { Url } from "$lib/site/url";
+	import { Url } from "$lib/site/url"
 	import ReferencePage from "../ReferencePage.svelte"
 	import TableOfContents from "../TableOfContents.svelte"
 	import { Supplements } from "../references"

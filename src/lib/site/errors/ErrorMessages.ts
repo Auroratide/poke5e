@@ -20,7 +20,7 @@ export const ErrorMessages = {
 	},
 	detailed(error: unknown): string {
 		if (typeof error === "string") return error
-		if (error instanceof DetailedError) `${error.message}; ${error.details}; Cause: ${getCauseMessage(error)}`
+		if (error instanceof DetailedError) return `${error.message}; ${error.details}; Cause: ${getCauseMessage(error)}`
 		if (error instanceof Error) return `${error.message}; Cause: ${getCauseMessage(error)}`
 
 		return `${error}`
