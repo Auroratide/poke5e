@@ -1,6 +1,6 @@
 {
 	"name": "poke5e",
-	"version": "1.11.6",
+	"version": "1.11.7",
 	"scripts": {
 		"start": "vite preview",
 		"dev": "vite dev",

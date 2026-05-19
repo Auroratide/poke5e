@@ -14,6 +14,16 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.7",
+		description: [
+			"Portuguese translations added!",
+			"<strong>Pokémon</strong>: Added Basculin (Blue) and Basculin (White).",
+			"<strong>Pokémon</strong>: Tweaked Basculegion ♂ and Basculegion ♀ stats so the totals are equal.",
+			"<strong>Moves</strong>: Clarify the DC of Decorate.",
+			"<strong>Bugfix</strong>: Frosmoth at min level 5 should have level 6 moves.",
+			"<strong>Bugfix</strong>: No longer resets the scroll position of the pokémon list when navigating a trainer's pokémon.",
+		],
+	}, {
 		name: "v1.11.6",
 		description: [
 			"<strong>Bugfix</strong>: Fix issue where Edit button was unreachable on mobile.",
