@@ -4,6 +4,7 @@
 	import { TypeIcon } from "$lib/pokemon/types/icons"
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
 	import type { Move } from "$lib/moves/Move"
+	import { PokemonType } from "../types"
 
 	export let idPrefix: string
 	export let value: Move
@@ -16,7 +17,9 @@
 <div class="option">
 	<div class="tag">
 		<Tag color={value.type}>
-			<TypeIcon type={value.type} slot="icon" />
+			{#if PokemonType.isPokeType(value.type)}
+				<TypeIcon type={value.type} slot="icon" />
+			{/if}
 			<span class="full-row">
 				<span class="full align-center">{useTmName ? value.tmName() : value.name}</span>
 				<span class="smaller no-round button-row">
