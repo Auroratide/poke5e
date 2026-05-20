@@ -2,6 +2,7 @@
 	import { Tag } from "$lib/ui/elements"
 	import { TypeIcon } from "$lib/pokemon/types/icons"
 	import type { Move } from "../Move"
+	import { PokemonType } from "$lib/pokemon/types"
 
 	export let value: Move
 	export let disabled = false
@@ -9,7 +10,9 @@
 
 <button class="move-option" on:click aria-label="{value.name}" type="button" {disabled}>
 	<Tag color={value.type} width="full">
-		<TypeIcon type={value.type} slot="icon" />
+		{#if PokemonType.isPokeType(value.type)}
+			<TypeIcon type={value.type} slot="icon" />
+		{/if}
 		<span class="full-row">
 			<span class="full align-center">{value.name}</span>
 		</span>
