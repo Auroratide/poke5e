@@ -13,6 +13,7 @@ import { MoveDamage } from "./MoveDamage"
 import { MovePower } from "./MovePower"
 import { MoveSave } from "./MoveSave"
 import type { MoveStats } from "./MoveStats"
+import type { MoveType } from "./type"
 import type { Tm } from "./tms/Tm"
 import { TmDetails } from "./tms/TmDetails"
 
@@ -22,7 +23,7 @@ export class Move extends DataClass<{
 	id: MoveId,
 	beta?: boolean,
 	name: string,
-	type: TeraType | "varies" | "typeless",
+	type: MoveType,
 	power: Data<MovePower>,
 	time: string,
 	pp: number,

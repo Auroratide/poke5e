@@ -4,7 +4,7 @@
 	import MoveDescription from "./MoveDescription.svelte"
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
-	import { TypeTag } from "$lib/pokemon/types"
+	import { MoveTypeTag } from "./type"
 	import { PokemonSpecies } from "$lib/poke5e/species"
 	import type { Move } from "./Move"
 	import { Url } from "$lib/site/url"
@@ -21,7 +21,7 @@
 </script>
 
 <Card title={tm ? move.tmName() : move.name} {dismissToHref}>
-	<TypeTag slot="header-extra" type={[move.type]}></TypeTag>
+	<MoveTypeTag slot="header-extra" value={move.type} />
 	<section class="info">
 		{#if move.beta}
 			<p class="beta"><Tag>New!</Tag><span>This move is being playtested. If you have <a href="{Url.feedback()}">feedback</a>, let us know!</span></p>

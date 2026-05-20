@@ -1,9 +1,11 @@
 <script lang="ts">
-	import type { PokeType } from "./PokemonType"
+	let {
+		type,
+	}: {
+		type: string[]
+	} = $props()
 
-	export let type: PokeType[]
-
-	let showAll = false
+	let showAll = $state(false)
 	const toggleShowAll = () => showAll = !showAll
 </script>
 
@@ -24,7 +26,7 @@
 		<span class="skew type middle" style:--skin-local-bg="var(--skin-{type[1]}-bg)">
 			<span class="unskew">{type[1]}</span>
 		</span>
-		<button on:click={toggleShowAll} aria-expanded="{showAll}" aria-controls="additional-types-expansion" aria-label="More Types" title="More Types" class="skew type right" style:--skin-local-bg="var(--skin-varies-bg)">
+		<button onclick={toggleShowAll} aria-expanded="{showAll}" aria-controls="additional-types-expansion" aria-label="More Types" title="More Types" class="skew type right" style:--skin-local-bg="var(--skin-varies-bg)">
 			<span class="unskew" style:width="1ch">{showAll ? "-" : "+"}</span>
 		</button>
 	{/if}
