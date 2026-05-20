@@ -57,6 +57,7 @@ test("updating trainers", async () => {
 		_path_rank_3_desc: "",
 		_path_rank_4_name: "",
 		_path_rank_4_desc: "",
+		_tags: ["female", "nurse"],
 	})
 
 	await call("update_trainer", {
@@ -131,6 +132,7 @@ test("updating trainers", async () => {
 	expect(irisInfo.rank_intimidation).toEqual(0)
 	expect(irisInfo.rank_performance).toEqual(0)
 	expect(irisInfo.rank_persuasion).toEqual(0)
+	expect(irisInfo.tags).toEqual(["female", "nurse"])
 
 	// Custom Trainer Path
 	await call("update_trainer", {
@@ -459,6 +461,7 @@ test("updating pokemon", async () => {
 			name: "Custom Ability",
 			description: "You can do whatever you want.",
 		} ],
+		_tags: ["bug", "evolved"],
 	})
 
 	// Updating the avatar
@@ -555,6 +558,8 @@ test("updating pokemon", async () => {
 		name: "Custom Ability",
 		description: "You can do whatever you want.",
 	} ])
+
+	expect(vivillon.tags).toEqual(["bug", "evolved"])
 
 	expect(vivillon.avatar_filename).toEqual(avatarFilename)
 
@@ -945,6 +950,8 @@ test("updating fakemon", async () => {
 		_sprite_attribution_name: "",
 		_sprite_attribution_href: "",
 		_notes: "Additional notes.",
+		_biomes: ["forest", "city"],
+		_tags: ["dragon", "something"],
 	})
 
 	await call("update_fakemon", {
@@ -1037,6 +1044,9 @@ test("updating fakemon", async () => {
 	expect(drakeon.prof_intimidation).toEqual(true)
 	expect(drakeon.prof_performance).toEqual(false)
 	expect(drakeon.prof_persuasion).toEqual(false)
+
+	expect(drakeon.biomes).toEqual(["forest", "city"])
+	expect(drakeon.tags).toEqual(["dragon", "something"])
 
 	expect(drakeon.notes).toEqual("Additional notes.")
 
