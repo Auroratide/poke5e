@@ -12,7 +12,7 @@ import type { ImageInputValue } from "$lib/ui/forms"
 import { SpeciesMedia, type SpeciesMediaTypeAttribution, type UploadedMedia } from "$lib/poke5e/species/media"
 import { SpeciesIdentifier } from "$lib/poke5e/species"
 import { Ability } from "$lib/pokemon/ability"
-import { TagList } from "$lib/poke5e/tags"
+import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
 
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	constructor(
@@ -41,6 +41,10 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 				const inStorage = FakemonLocalStorage.get(readKey)
 				fakemon.data.writeKey = inStorage?.writeKey
 				FakemonLocalStorage.add(fakemon.data)
+
+				if (!fakemon.data.writeKey) {
+					fakemon.data.tags = TagsLocalStorage.get(fakemon.data.readKey)
+				}
 
 				return fakemon
 			})

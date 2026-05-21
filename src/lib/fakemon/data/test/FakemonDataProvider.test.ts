@@ -11,7 +11,7 @@ import { supabase } from "$lib/supabase"
 import { Fakemon } from "$lib/fakemon"
 import { SpeciesIdentifier, type PokemonSpecies } from "$lib/poke5e/species"
 import { stubAbility, stubAbilityPool } from "$lib/pokemon/ability/test/stubs"
-import { TagList } from "$lib/poke5e/tags"
+import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
 
 test("add, get, and update", async () => {
 	const draft = stubFakemon({
@@ -208,6 +208,25 @@ test("tags", async () => {
 
 	const afterUpdate = await provider.getByReadKey(added.data.readKey)
 	expect(afterUpdate.tags).toEqual(TagList.from(["eeveelution"]))
+})
+
+test("tags: do not own fakemon", async () => {
+	const draft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Droideon",
+		}).data,
+		tags: TagList.empty(),
+	})
+
+	const added = await provider.add(draft.data.species)
+	added.data.tags = TagList.add(added.data.tags, "eeveelution")
+	await provider.update(added)
+
+	FakemonLocalStorage.remove(added.data.readKey)
+	TagsLocalStorage.set(added.data.readKey, TagList.from(["locally stored"]))
+
+	const afterUpdate = await provider.getByReadKey(added.data.readKey)
+	expect(afterUpdate.tags).toEqual(TagList.from(["locally stored"]))
 })
 
 async function addFakemonWithDeprecatedAbilityField(pokemon: PokemonSpecies) {
