@@ -4,10 +4,12 @@ import type { StoredFakemon } from "./FakemonStore"
 import { FakemonStoreUpdater } from "./FakemonUpdater"
 import { provider } from "../data"
 import { FakemonLocalStorage } from "../data/FakemonLocalStorage"
+import { FakemonTags } from "./FakemonTags"
 
 export type SingleStoredFakemon = {
 	value: Fakemon,
 	update?: FakemonStoreUpdater,
+	tags: FakemonTags,
 }
 
 export type SingleFakemonStore = {
@@ -23,6 +25,7 @@ export function createStoredFakemon(fakemon: Fakemon, fakemonStore: Writable<Sto
 			provider,
 			fakemonStore,
 		) : undefined,
+		tags: new FakemonTags(provider, fakemonStore),
 	}
 }
 

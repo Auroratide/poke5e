@@ -7,11 +7,18 @@
 	import type { SingleFakemonStore } from "../store/SingleFakemonStore"
 	import { PageAction } from "./actions"
 	import { m } from "$lib/site/i18n"
-	import { TagListInfo } from "$lib/poke5e/tags"
+	import { TagList, TagListInfo } from "$lib/poke5e/tags"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	export let fakemon: SingleFakemonStore
 	$: canEdit = $fakemon.update != null
+
+	const onSaveTags = async (newList: TagList) => {
+		const updated = $fakemon.value.copy({
+			tags: newList,
+		})
+		await $fakemon.tags.update(updated)
+	}
 </script>
 
 <Title value="{$fakemon.value.data.species.name}" />
@@ -19,7 +26,7 @@
 	<div slot="footer">
 		{#if FeatureToggles.Tagging()}
 			<section>
-				<TagListInfo value={$fakemon.value.tags} />
+				<TagListInfo value={$fakemon.value.tags} onsave={onSaveTags} />
 			</section>
 		{/if}
 		<ActionArea>

@@ -7,6 +7,9 @@ export const TagList = {
 	from(tags: string[]): TagList {
 		return tags.reduce((list, tag) => TagList.add(list, tag), [])
 	},
+	copy(list: TagList): TagList {
+		return [...list]
+	},
 	has(list: TagList, tag: string): boolean {
 		return list.includes(tag.toLocaleLowerCase())
 	},

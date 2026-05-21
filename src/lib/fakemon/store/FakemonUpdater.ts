@@ -37,6 +37,7 @@ export class FakemonStoreUpdater {
 				[updatedFakemon.data.readKey]: {
 					value: updatedFakemon,
 					update: this,
+					tags: prev[updatedFakemon.data.readKey].tags,
 				},
 			}))
 		} catch (e) {

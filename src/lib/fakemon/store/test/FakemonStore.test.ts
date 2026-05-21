@@ -11,7 +11,7 @@ import { SpeciesMedia } from "$lib/poke5e/species/media"
 import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 import { stubEvolution } from "$lib/pokemon/evolution/test/stubs"
 import { waitForStore } from "$lib/test/store"
-import { TagList } from "$lib/poke5e/tags"
+import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
 
 let fakemonStore: FakemonStore
 
@@ -271,7 +271,7 @@ test("removal", async () => {
 	expect(fromStorage).toBeUndefined()
 })
 
-test("tags", async () => {
+test("getting all tags", async () => {
 	// given: a couple of fakemon in the db, some with tags
 	const eeveon = await provider.add(stubFakemon({
 		species: stubPokemonSpecies({
@@ -310,4 +310,53 @@ test("tags", async () => {
 	expect(TagList.equal(allTags, TagList.from([
 		"eeveelution", "normal", "dragon", "bug"
 	]))).toBe(true)
+})
+
+test("updating tags on fakemon you own", async () => {
+	// given: fakemon had been added
+	const draft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Eeveon",
+		}).data,
+	})
+
+	const addedResult = await fakemonStore.new(draft.data.species)
+	const singleStore = await fakemonStore.get(addedResult.data.readKey)
+	const storedValue = get(singleStore)
+
+	// when: updated
+	const updatedFakemon = storedValue.value.copy({
+		tags: TagList.from(["eeveelution"])
+	})
+	await storedValue.tags.update(updatedFakemon)
+
+	// then: stored value updates
+	const fromStorage = await provider.getByReadKey(addedResult.data.readKey)
+	expect(TagList.equal(fromStorage.tags, TagList.from(["eeveelution"]))).toBe(true)
+})
+
+test("updating tags on fakemon you do not own", async () => {
+	// given: fakemon had been added
+	const draft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Eeveon",
+		}).data,
+	})
+
+	const addedResult = await fakemonStore.new(draft.data.species)
+	FakemonLocalStorage.remove(addedResult.data.readKey) // REMOVE WRITE KEY
+
+	const singleStore = await fakemonStore.get(addedResult.data.readKey)
+	const storedValue = get(singleStore)
+	storedValue.value.data.writeKey = undefined
+
+	// when: updated
+	const updatedFakemon = storedValue.value.copy({
+		tags: TagList.from(["eeveelution"])
+	})
+	await storedValue.tags.update(updatedFakemon)
+
+	// then: local value updates
+	const fromStorage = TagsLocalStorage.get(addedResult.data.readKey)
+	expect(TagList.equal(fromStorage, TagList.from(["eeveelution"]))).toBe(true)
 })
