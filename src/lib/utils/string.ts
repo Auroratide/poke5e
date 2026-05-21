@@ -17,3 +17,9 @@ export function isUrl(str: string): boolean {
 export function isNotBlank(str: string | undefined | null): str is string {
 	return str != null && str.trim() !== ""
 }
+
+export function stringsAlike(a: string, b: string): boolean {
+	const aLower = a.toLocaleLowerCase()
+	const bLower = b.toLocaleLowerCase()
+	return aLower.includes(bLower) || bLower.includes(aLower)
+}
