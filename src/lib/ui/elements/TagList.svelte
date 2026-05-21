@@ -3,8 +3,7 @@
 </span>
 
 <style>
-	.tag-list {
-		display: inline-flex;
-		gap: 0.25em;
+	.tag-list > :global(*) {
+		margin-inline: 0.125em;
 	}
 </style>
