@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { TagList } from "./TagList"
 	import { Tag, TagList as ListOfTags, Button } from "$lib/ui/elements"
-	import { PencilNotesIcon } from "$lib/ui/icons"
+	import { EditIcon } from "$lib/ui/icons"
 	import TagListField from "./TagListField.svelte"
 
 	let {
@@ -43,8 +43,8 @@
 			{/each}
 			{#if onsave}
 				<button onclick={onEdit}>
-					<Tag color="grass">
-						<PencilNotesIcon slot="icon" />
+					<Tag color="success">
+						<EditIcon slot="icon" />
 						<span>Edit</span>
 					</Tag>
 				</button>
