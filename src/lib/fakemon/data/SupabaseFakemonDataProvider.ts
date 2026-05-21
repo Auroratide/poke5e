@@ -12,6 +12,7 @@ import type { ImageInputValue } from "$lib/ui/forms"
 import { SpeciesMedia, type SpeciesMediaTypeAttribution, type UploadedMedia } from "$lib/poke5e/species/media"
 import { SpeciesIdentifier } from "$lib/poke5e/species"
 import { Ability } from "$lib/pokemon/ability"
+import { TagList } from "$lib/poke5e/tags"
 
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	constructor(
@@ -47,7 +48,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 	async add(draft: DraftFakemon): Promise<Fakemon> {
 		const { data, error } = await this.supabase.rpc("new_fakemon",
-			this.toQuery(draft),
+			this.toQuery(draft, TagList.empty()),
 		).single<{
 			ret_id: string,
 			ret_read_key: string,
@@ -69,6 +70,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 				...draft,
 				id: SpeciesIdentifier.fromFakemonReadKey(identifyingInfo.readKey).data,
 			},
+			tags: TagList.empty(),
 			...identifyingInfo,
 		})
 	}
@@ -79,7 +81,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 		const { data, error } = await this.supabase.rpc("update_fakemon", {
 			_write_key: writeKey,
-			...this.toQuery(fakemon.data.species),
+			...this.toQuery(fakemon.data.species, fakemon.tags),
 		}).single<number>()
 
 		this.validateError(`Could not edit fakemon (${fakemon.data.readKey}).`, error)
@@ -124,7 +126,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		}
 	}
 
-	private toQuery(fakemon: Omit<Data<Fakemon>["species"], "id">): object {
+	private toQuery(fakemon: Omit<Data<Fakemon>["species"], "id">, tags: TagList): object {
 		return {
 			_species_name: fakemon.name,
 			_type: fakemon.type,
@@ -199,6 +201,8 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_sprite_attribution_href: fakemon.media.attribution?.sprite?.href ?? null,
 			_shiny_hue_rotation: fakemon.media.customization?.shinyHue ?? 0,
 			_notes: fakemon.notes ?? "",
+			_biomes: [],
+			_tags: tags,
 		}
 	}
 
@@ -355,6 +359,7 @@ type FakemonRow = {
 	sprite_attribution_href?: string,
 	shiny_hue_rotation: number,
 	notes?: string,
+	tags: string[],
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -493,6 +498,7 @@ async function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) 
 				biomes: [],
 			},
 		},
+		tags: TagList.from(row.tags),
 	})
 }
 

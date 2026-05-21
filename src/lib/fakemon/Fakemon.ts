@@ -1,5 +1,6 @@
 import { PokemonSpecies } from "$lib/poke5e/species"
 import { DataClass, type Data } from "$lib/DataClass"
+import type { TagList } from "$lib/poke5e/tags"
 
 export type FakemonId = string
 export type ReadKey = string
@@ -10,8 +11,10 @@ export class Fakemon extends DataClass<{
 	readKey: ReadKey,
 	writeKey?: WriteKey,
 	species: Data<PokemonSpecies>,
+	tags: TagList,
 }> {
 	get species(): PokemonSpecies { return new PokemonSpecies(this.data.species) }
+	get tags(): TagList { return this.data.tags }
 
 	static alphabetical = (a: Fakemon, b: Fakemon) => a.data.species.name.localeCompare(b.data.species.name)
 }

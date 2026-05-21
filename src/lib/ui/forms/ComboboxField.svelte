@@ -71,33 +71,33 @@
 
 	const onkeydown = (e: KeyboardEvent) => {
 		switch (e.key) {
-			case "Enter":
-				if (currentFocus >= 0) {
-					showList = false
-					value = filteredOptions[currentFocus]
-					resetFocus()
-				}
-
-				confirm()
-				e.preventDefault()
-				break
-			case "ArrowDown":
-				showList = true
-				currentFocus = Math.min(currentFocus + 1, filteredOptions.length - 1)
-				scrollOptionIntoView(currentFocus, false)
-				e.preventDefault()
-				break
-			case "ArrowUp":
-				showList = true
-				currentFocus = currentFocus < 0 ? filteredOptions.length - 1 : Math.max(currentFocus - 1, 0)
-				scrollOptionIntoView(currentFocus, true)
-				e.preventDefault()
-				break
-			case "Escape":
+		case "Enter":
+			if (currentFocus >= 0) {
 				showList = false
+				value = filteredOptions[currentFocus]
 				resetFocus()
-				e.preventDefault()
-				break;
+			}
+
+			confirm()
+			e.preventDefault()
+			break
+		case "ArrowDown":
+			showList = true
+			currentFocus = Math.min(currentFocus + 1, filteredOptions.length - 1)
+			scrollOptionIntoView(currentFocus, false)
+			e.preventDefault()
+			break
+		case "ArrowUp":
+			showList = true
+			currentFocus = currentFocus < 0 ? filteredOptions.length - 1 : Math.max(currentFocus - 1, 0)
+			scrollOptionIntoView(currentFocus, true)
+			e.preventDefault()
+			break
+		case "Escape":
+			showList = false
+			resetFocus()
+			e.preventDefault()
+			break
 		}
 	}
 </script>

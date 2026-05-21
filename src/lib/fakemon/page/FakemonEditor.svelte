@@ -39,6 +39,8 @@
 	import { Evolution, EvolutionForest, EvolutionsFieldset } from "$lib/pokemon/evolution"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { m } from "$lib/site/i18n"
+	import { TagListField } from "$lib/poke5e/tags"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	const dispatch = createEventDispatcher()
 
@@ -79,6 +81,7 @@
 	let movePool = species.moves.copy()
 	let notes = species.data.notes ?? ""
 	let evolutions = allEvolutions?.allEvolutions(species.id)?.map((it) => it.copy()) ?? []
+	let tags = fakemon.tags
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -109,6 +112,7 @@
 					media: originalMedia.data,
 					notes,
 				}).data,
+				tags: tags,
 			}),
 			newMedia: updatedMedia,
 			evolutions: evolutions,
@@ -151,6 +155,9 @@
 	<EvolutionsFieldset species={species.id} bind:evolutions={evolutions} {allSpecies} {disabled} />
 	<Fieldset title={m.description()}>
 		<MarkdownField label={m.generalNotes()} bind:value={notes} {disabled} placeholder={m.anyOtherImportantNotes()} rows={6} />
+		{#if FeatureToggles.Tagging()}
+			<TagListField label="Tags" bind:value={tags} possibleTags={[]} />
+		{/if}
 	</Fieldset>
 	<ActionArea>
 		<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>

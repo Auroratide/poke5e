@@ -7,6 +7,8 @@
 	import type { SingleFakemonStore } from "../store/SingleFakemonStore"
 	import { PageAction } from "./actions"
 	import { m } from "$lib/site/i18n"
+	import { TagListInfo } from "$lib/poke5e/tags"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	export let fakemon: SingleFakemonStore
 	$: canEdit = $fakemon.update != null
@@ -15,6 +17,11 @@
 <Title value="{$fakemon.value.data.species.name}" />
 <PokemonSpeciesCard value={$fakemon.value.species} dismissToHref="{Url.fakemon()}">
 	<div slot="footer">
+		{#if FeatureToggles.Tagging()}
+			<section>
+				<TagListInfo value={$fakemon.value.tags} />
+			</section>
+		{/if}
 		<ActionArea>
 			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.accessKey)}" variant="ghost">{m.accessKey()}</Button>
 			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.remove)}" variant="ghost">{m.remove()}</Button>

@@ -11,6 +11,7 @@ import { supabase } from "$lib/supabase"
 import { Fakemon } from "$lib/fakemon"
 import { SpeciesIdentifier, type PokemonSpecies } from "$lib/poke5e/species"
 import { stubAbility, stubAbilityPool } from "$lib/pokemon/ability/test/stubs"
+import { TagList } from "$lib/poke5e/tags"
 
 test("add, get, and update", async () => {
 	const draft = stubFakemon({
@@ -191,6 +192,24 @@ test("backwards compatibility of abilities", async () => {
 	expect(fakemonFromProvider.species.abilities.hidden[0]).toEqualData(adaptability)
 })
 
+test("tags", async () => {
+	const draft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Droideon",
+		}).data,
+		tags: TagList.empty(),
+	})
+
+	const added = await provider.add(draft.data.species)
+
+	added.data.tags = TagList.add(added.data.tags, "eeveelution")
+	const didUpdate = await provider.update(added)
+	expect(didUpdate).toBe(true)
+
+	const afterUpdate = await provider.getByReadKey(added.data.readKey)
+	expect(afterUpdate.tags).toEqual(TagList.from(["eeveelution"]))
+})
+
 async function addFakemonWithDeprecatedAbilityField(pokemon: PokemonSpecies) {
 	const { data, error } = await supabase.rpc("new_fakemon", {
 		_species_name: pokemon.name,
@@ -288,6 +307,7 @@ async function addFakemonWithDeprecatedAbilityField(pokemon: PokemonSpecies) {
 			...pokemon.data,
 			id: SpeciesIdentifier.fromFakemonReadKey(identifyingInfo.readKey).data,
 		},
+		tags: TagList.empty(),
 		...identifyingInfo,
 	})
 }
