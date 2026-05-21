@@ -22,4 +22,5 @@ export const FeatureToggles = {
 	OverrideMaintenance: toggle("OverrideMaintenance"),
 	TransferPokemon: toggle("TransferPokemon"),
 	NewReferenceList: toggle("NewReferenceList"),
+	Tagging: toggle("Tagging"),
 }
