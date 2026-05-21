@@ -39,3 +39,27 @@ test("from array", () => {
 	expect(TagList.from(["one", "two"])).toEqual(["one", "two"])
 	expect(TagList.from(["one", "oNe"])).toEqual(["one"])
 })
+
+test("equality", () => {
+	const base = TagList.from(["one", "two", "three"])
+	const sameAsBase = TagList.from(["one", "two", "three"])
+	const differentOrder = TagList.from(["two", "one", "three"])
+	const missingTag = TagList.from(["two", "three"])
+	const extraTag = TagList.from(["one", "two", "three", "four"])
+
+	expect(TagList.equal(base, sameAsBase)).toBe(true)
+	expect(TagList.equal(base, differentOrder)).toBe(true)
+	expect(TagList.equal(base, missingTag)).toBe(false)
+	expect(TagList.equal(base, extraTag)).toBe(false)
+
+	expect(TagList.equal(TagList.empty(), TagList.empty())).toBe(true)
+})
+
+test("merge", () => {
+	const a = TagList.from(["one", "two", "three"])
+	const b = TagList.from(["three", "four", "five"])
+
+	const result = TagList.merge(a, b)
+
+	expect(TagList.equal(result, TagList.from(["one", "two", "three", "four", "five"]))).toBe(true)
+})

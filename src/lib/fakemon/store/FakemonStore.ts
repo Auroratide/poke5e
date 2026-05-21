@@ -1,10 +1,11 @@
-import { writable } from "svelte/store"
+import { derived, writable, type Readable } from "svelte/store"
 import type { DraftFakemon, Fakemon, ReadKey, WriteKey } from "../Fakemon"
 import { createSingleFakemonStore, createStoredFakemon, type SingleFakemonStore, type SingleStoredFakemon } from "./SingleFakemonStore"
 import { provider } from "../data"
 import { createFakemonListStore, type FakemonListStore } from "./FakemonListStore"
 import { FakemonLocalStorage } from "../data/FakemonLocalStorage"
 import { provider as evoProvider } from "$lib/pokemon/evolution/data"
+import { TagList } from "$lib/poke5e/tags"
 
 export type StoredFakemon = Record<ReadKey, SingleStoredFakemon>
 
@@ -12,6 +13,7 @@ export interface FakemonStore {
 	get: (key: ReadKey) => Promise<SingleFakemonStore>
 	new: (fakemon: DraftFakemon) => Promise<Fakemon>
 	all: () => Promise<FakemonListStore>
+	tags: () => Readable<TagList>,
 	getWriteKey: (key: ReadKey) => WriteKey | undefined
 	reset: () => Promise<void>
 }
@@ -93,6 +95,14 @@ export function createStore(): FakemonStore {
 			}
 
 			return listPromise
+		},
+
+		tags: () => {
+			return derived(fakemonStore, (fakemon) => {
+				return Object.values(fakemon).reduce((tags, f) =>
+					TagList.merge(tags, f.value.tags), TagList.empty()
+				)
+			})
 		},
 
 		getWriteKey: (key: ReadKey): WriteKey | undefined => {

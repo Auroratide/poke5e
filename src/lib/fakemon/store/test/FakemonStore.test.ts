@@ -11,6 +11,7 @@ import { SpeciesMedia } from "$lib/poke5e/species/media"
 import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 import { stubEvolution } from "$lib/pokemon/evolution/test/stubs"
 import { waitForStore } from "$lib/test/store"
+import { TagList } from "$lib/poke5e/tags"
 
 let fakemonStore: FakemonStore
 
@@ -268,4 +269,45 @@ test("removal", async () => {
 	// then: it is no longer stored
 	const fromStorage = FakemonLocalStorage.get(eeveon.data.readKey)
 	expect(fromStorage).toBeUndefined()
+})
+
+test("tags", async () => {
+	// given: a couple of fakemon in the db, some with tags
+	const eeveon = await provider.add(stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Eeveon",
+		}).data,
+	}).species.data)
+
+	const drakeon = await provider.add(stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Drakeon",
+		}).data,
+	}).species.data)
+
+	const wyrmish = await provider.add(stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Wyrmish",
+		}).data,
+	}).species.data)
+
+	eeveon.data.tags = TagList.from(["eeveelution", "normal"])
+	drakeon.data.tags = TagList.from(["eeveelution", "dragon"])
+	wyrmish.data.tags = TagList.from(["bug", "dragon"])
+
+	await provider.update(eeveon)
+	await provider.update(drakeon)
+	await provider.update(wyrmish)
+
+	// load then in
+	get(await fakemonStore.all())
+
+	// when: I get the tags
+	const tagStore = fakemonStore.tags()
+	const allTags = get(tagStore)
+
+	// then it combines all of the tags together
+	expect(TagList.equal(allTags, TagList.from([
+		"eeveelution", "normal", "dragon", "bug"
+	]))).toBe(true)
 })

@@ -15,7 +15,13 @@ export const TagList = {
 			return list
 		return [...list, tag.toLocaleLowerCase()]
 	},
+	merge(a: TagList, b: TagList): TagList {
+		return Array.from(new Set([...a, ...b]))
+	},
 	remove(list: TagList, tag: string): TagList {
 		return list.filter((it) => it !== tag.toLocaleLowerCase())
+	},
+	equal(a: TagList, b: TagList): boolean {
+		return a.every((a) => b.includes(a)) && b.every((b) => a.includes(b))
 	},
 } as const

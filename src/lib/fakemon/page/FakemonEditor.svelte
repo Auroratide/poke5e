@@ -41,6 +41,9 @@
 	import { m } from "$lib/site/i18n"
 	import { TagListField } from "$lib/poke5e/tags"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
+	import { fakemonStore } from "../store"
+
+	const allTags = fakemonStore.tags()
 
 	const dispatch = createEventDispatcher()
 
@@ -156,7 +159,7 @@
 	<Fieldset title={m.description()}>
 		<MarkdownField label={m.generalNotes()} bind:value={notes} {disabled} placeholder={m.anyOtherImportantNotes()} rows={6} />
 		{#if FeatureToggles.Tagging()}
-			<TagListField label="Tags" bind:value={tags} possibleTags={[]} />
+			<TagListField label="Tags" bind:value={tags} possibleTags={$allTags} />
 		{/if}
 	</Fieldset>
 	<ActionArea>
