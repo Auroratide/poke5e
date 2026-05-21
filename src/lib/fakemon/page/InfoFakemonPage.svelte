@@ -9,6 +9,9 @@
 	import { m } from "$lib/site/i18n"
 	import { TagList, TagListInfo } from "$lib/poke5e/tags"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
+	import { fakemonStore } from "../store"
+
+	const allTags = fakemonStore.tags()
 
 	export let fakemon: SingleFakemonStore
 	$: canEdit = $fakemon.update != null
@@ -26,7 +29,7 @@
 	<div slot="footer">
 		{#if FeatureToggles.Tagging()}
 			<section>
-				<TagListInfo value={$fakemon.value.tags} onsave={onSaveTags} />
+				<TagListInfo value={$fakemon.value.tags} onsave={onSaveTags} possibleTags={$allTags} />
 			</section>
 		{/if}
 		<ActionArea>

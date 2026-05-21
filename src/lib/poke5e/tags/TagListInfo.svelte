@@ -3,12 +3,15 @@
 	import { Tag, TagList as ListOfTags, Button } from "$lib/ui/elements"
 	import { EditIcon } from "$lib/ui/icons"
 	import TagListField from "./TagListField.svelte"
+	import { ActionArea, FormGroup } from "$lib/ui/forms";
 
 	let {
 		value,
+		possibleTags,
 		onsave,
 	}: {
 		value: TagList,
+		possibleTags: string[],
 		onsave?: (newList: TagList) => Promise<void>,
 	} = $props()
 
@@ -31,9 +34,13 @@
 </script>
 
 {#if showEditor}
-	<TagListField label="Tags" bind:value={valueToEdit} possibleTags={[]} />
-	<Button variant="ghost" on:click={onCancel}>Cancel</Button>
-	<Button on:click={onSave}>Save</Button>
+	<FormGroup>
+		<TagListField label="Tags" bind:value={valueToEdit} {possibleTags} />
+		<div class="action-row">
+			<Button variant="ghost" on:click={onCancel}>Cancel</Button>
+			<Button on:click={onSave}>Save Tags</Button>
+		</div>
+	</FormGroup>
 {:else}
 	<p>
 		<strong>Tags:</strong>
@@ -66,5 +73,12 @@
 
 	button:hover, button:focus {
 		filter: brightness(1.25);
+	}
+
+	.action-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em;
+		justify-content: flex-end;
 	}
 </style>
