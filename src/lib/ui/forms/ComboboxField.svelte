@@ -159,6 +159,7 @@
 		max-block-size: 7.5em;
 		overflow-y: auto;
 		overscroll-behavior: none;
+		z-index: 9;
 	}
 
 	.listbox[hidden] {
