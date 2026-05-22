@@ -105468,7 +105468,7 @@
 			"eggGroup": [
 				"field"
 			],
-			"gender": "1:1",
+			"gender": "7:1",
 			"description": "The Lion Cub Pokémon. The stronger the opponent it faces, the more heat surges from its mane and the more power flows through its body.",
 			"ac": 13,
 			"hp": 19,
@@ -105624,7 +105624,7 @@
 			"eggGroup": [
 				"field"
 			],
-			"gender": "1:1",
+			"gender": "7:1",
 			"description": "The Royal Pokémon. The male with the largest mane of fire is the leader of the pride.",
 			"ac": 15,
 			"hp": 63,
