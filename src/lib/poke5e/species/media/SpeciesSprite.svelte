@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { assets } from "$app/paths"
+	import { asset } from "$app/paths"
 	import type { SpeciesMedia, UploadedMedia } from "./SpeciesMedia"
 
 	export let media: SpeciesMedia<UploadedMedia>
@@ -8,7 +8,7 @@
 
 	$: value = media.sprite({ shiny })
 	$: isExternal = /^http/.test(value.value?.href)
-	$: src = isExternal ? value.value?.href : `${assets}${value.value?.href}`
+	$: src = isExternal ? value.value?.href : `${asset(value.value?.href)}`
 </script>
 
 {#if value.value?.href != null}

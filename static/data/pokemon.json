@@ -93261,7 +93261,11 @@
 				"main": "/assets/pokemon/frillish/main.png",
 				"sprite": "/assets/pokemon/frillish/sprite.png",
 				"mainShiny": "/assets/pokemon/frillish/main-shiny.png",
-				"spriteShiny": "/assets/pokemon/frillish/sprite-shiny.png"
+				"spriteShiny": "/assets/pokemon/frillish/sprite-shiny.png",
+				"mainF": "/assets/pokemon/frillish/main-f.png",
+				"spriteF": "/assets/pokemon/frillish/sprite-f.png",
+				"mainShinyF": "/assets/pokemon/frillish/main-shiny-f.png",
+				"spriteShinyF": "/assets/pokemon/frillish/sprite-shiny-f.png"
 			},
 			"habitat": {
 				"biomes": [
