@@ -61,7 +61,7 @@
 
 	$: textFilterIsPokemonType = PokemonType.list.includes($fakemonListFilter.toLocaleLowerCase() as PokeType)
 
-	let tagFilter: string[] = []
+	let filteredTags: string[] = []
 
 	$: filter = new SpeciesFilter()
 		.name(textFilterIsPokemonType ? "" : $fakemonListFilter)
@@ -73,7 +73,7 @@
 		.biome(filteredBiome)
 
 	$: filtered = $fakemon
-		.filter((it) => tagFilter.length === 0 || TagList.overlaps(it.tags, tagFilter))
+		.filter((it) => filteredTags.length === 0 || TagList.overlaps(it.tags, filteredTags))
 		.filter((it) => filter.apply(it.species))
 
 	const byStringField = (field: (m: Fakemon) => string) =>
@@ -86,6 +86,7 @@
 		filteredMinLevel = undefined
 		filteredEggGroup = ""
 		filteredBiome = ""
+		filteredTags = []
 	}
 </script>
 
@@ -94,16 +95,16 @@
 	<Button slot="action" href="{Url.fakemon(undefined, PageAction.add)}">+ {m.newFakemon()}</Button>
 </ListHeading>
 <div class="space-bottom">
-	<SearchField id="filter-fakemon" label="Search" bind:value={$fakemonListFilter} matched={filtered.length} max={$fakemon.length} activeFilters={filter.count() - ($fakemonListFilter !== "" ? 1 : 0)} on:reset={resetFilters}>
+	<SearchField id="filter-fakemon" label="Search" bind:value={$fakemonListFilter} matched={filtered.length} max={$fakemon.length} activeFilters={filter.count() + (filteredTags.length > 0 ? 1 : 0) - ($fakemonListFilter !== "" ? 1 : 0)} on:reset={resetFilters}>
 		<SelectField label="{m.type()}" bind:value={filteredType} options={typeOptions} />
 		<SelectField label="{m.size()}" bind:value={filteredSize} options={sizeOptions} />
 		<RelativeNumberField label="{m.sr()}" bind:value={filteredSr} bind:relative={filteredSrRelative} min={0} max={15} placeholder="{m.number()}" />
 		<RelativeNumberField label="{m.minLevel()}" bind:value={filteredMinLevel} bind:relative={filteredMinLevelRelative} min={0} max={20} placeholder="{m.number()}" />
 		<SelectField label="{m.eggGroup()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
 		<SelectField label="{m.biome()}" bind:value={filteredBiome} options={biomeOptions} />
+		<TagSelection bind:checked={filteredTags} tags={$allTags} />
 	</SearchField>
 </div>
-<TagSelection bind:checked={tagFilter} tags={$allTags} />
 {#if hasNoFakemon}
 	{#if showGetStarted}<GetStarted />{/if}
 {:else}

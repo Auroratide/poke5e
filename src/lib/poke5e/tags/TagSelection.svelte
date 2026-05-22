@@ -13,7 +13,7 @@
 
 <div class="tag-selection">
 <fieldset>
-	<legend class="visually-hidden">Tags Filter</legend>
+	<legend>Tags Filter</legend>
 	<div class="tags">
 		{#each tags as tag}
 			<input id="tag-selection-{kebab(tag)}" class="visually-hidden" type="checkbox" bind:group={checked} value="{tag}" />
@@ -28,10 +28,7 @@
 
 <style>
 	.tag-selection {
-		/* background: oklch(1 0 0 / 0.25);
-		border: 0.125em solid oklch(1 0 0 / 0.1); */
 		position: relative;
-		/* padding: 0.5em; */
 		margin-block-end: 0.5em;
 		grid-column: span 2;
 	}
@@ -68,7 +65,6 @@
 		line-height: 1;
 		padding-inline: 0.375em;
 		padding-block: 0.125em;
-		opacity: 0.9;
 		background: var(--skin-input-bg);
 		color: var(--skin-bg);
 		cursor: pointer;
