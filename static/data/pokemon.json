@@ -105764,7 +105764,11 @@
 				"main": "/assets/pokemon/pyroar/main.png",
 				"sprite": "/assets/pokemon/pyroar/sprite.png",
 				"mainShiny": "/assets/pokemon/pyroar/main-shiny.png",
-				"spriteShiny": "/assets/pokemon/pyroar/sprite-shiny.png"
+				"spriteShiny": "/assets/pokemon/pyroar/sprite-shiny.png",
+				"mainF": "/assets/pokemon/pyroar/main-f.png",
+				"spriteF": "/assets/pokemon/pyroar/sprite-f.png",
+				"mainShinyF": "/assets/pokemon/pyroar/main-shiny-f.png",
+				"spriteShinyF": "/assets/pokemon/pyroar/sprite-shiny-f.png"
 			},
 			"habitat": {
 				"biomes": [
