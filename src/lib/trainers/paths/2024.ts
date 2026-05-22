@@ -273,7 +273,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 		},
 		level5: {
 			name: "Mind",
-			description: ["Your presence in battle keeps your Pokémon at ease, so that they can fully focus on the task at hand without distraction. At level 5, all of your Pokémon are proficient in Wisdom saving throws and have advantage on the roll to avoid failing confusion."],
+			description: ["Your presence in battle keeps your Pokémon at ease, so that they can fully focus on the task at hand without distraction. At level 5, all of your Pokémon are proficient in Wisdom saving throws. Additionally, when your pokémon are confused and rolling on the confusion table, they make roll twice and take the higher result."],
 		},
 		level9: {
 			name: "Body",
