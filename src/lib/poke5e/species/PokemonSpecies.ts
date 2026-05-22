@@ -134,6 +134,22 @@ export class PokemonSpecies extends DataClass<{
 						name: it.media.spriteShiny,
 						href: it.media.spriteShiny,
 					} : undefined,
+					normalPortraitF: it.media.mainF ? {
+						name: it.media.mainF,
+						href: it.media.mainF,
+					} : undefined,
+					normalSpriteF: it.media.spriteF ? {
+						name: it.media.spriteF,
+						href: it.media.spriteF,
+					} : undefined,
+					shinyPortraitF: it.media.mainShinyF ? {
+						name: it.media.mainShinyF,
+						href: it.media.mainShinyF,
+					} : undefined,
+					shinySpriteF: it.media.spriteShinyF ? {
+						name: it.media.spriteShinyF,
+						href: it.media.spriteShinyF,
+					} : undefined,
 				},
 				customization: {
 					shinyHue: 0,

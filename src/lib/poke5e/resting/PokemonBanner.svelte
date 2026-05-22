@@ -5,16 +5,16 @@
 
 	export let pokemon: TrainerPokemon[]
 	export let darken: boolean = false
-
-	$: ids = pokemon.map((it) => it.pokemonId)
 </script>
 
 <figure aria-hidden="true" class:darken>
-	<WithSpecies let:species {ids}>
-		<div class="img-container">
-			<SpeciesSprite media={species.media} alt="" />
-		</div>
-	</WithSpecies>
+	{#each pokemon as p (p.id)}
+		<WithSpecies let:species ids={[p.pokemonId]}>
+			<div class="img-container">
+				<SpeciesSprite media={species.media} alt="" shiny={p.isShiny} gender={p.gender} />
+			</div>
+		</WithSpecies>
+	{/each}
 </figure>
 
 <style>

@@ -38,7 +38,7 @@
 						<p>Removal is permanent and cannot be undone!</p>
 						{#if species.media?.data.values.normalPortrait}
 							<p class="centered greyscale">
-								<SpeciesPortrait media={species.media} alt={species.data.name} />
+								<SpeciesPortrait media={species.media} alt={species.data.name} gender={pokemon?.gender} />
 							</p>
 						{/if}
 						<ActionArea>

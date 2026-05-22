@@ -23,7 +23,7 @@
 		<span style:grid-area="sprite" class="max-height holding-item jumping-animation">
 			<WithSpecies let:species ids={[pokemon.pokemonId]}>
 				<div slot="loader"></div>
-				<SpeciesSprite media={species?.media} alt={species?.data.name} shiny={pokemon.isShiny} />
+				<SpeciesSprite media={species?.media} alt={species?.data.name} shiny={pokemon.isShiny} gender={pokemon.gender} />
 				{#if species?.media.sprite().value != null}
 					<span class="shadow"></span>
 				{/if}

@@ -47,7 +47,7 @@
 		<Fieldset title={m.chooseOne()} columns={1}>
 			<RadioFields label="Rest Choices" bind:checked={restToPerform} values={options} required />
 		</Fieldset>
-		<SpeciesPortrait avatar={pokemon.avatar} media={species.media} shiny={pokemon.isShiny} alt="{pokemon.nickname ?? species.data.name}" />
+		<SpeciesPortrait avatar={pokemon.avatar} media={species.media} shiny={pokemon.isShiny} alt="{pokemon.nickname ?? species.data.name}" gender={pokemon.gender} />
 	</div>
 	<section style:min-height="8em">
 		{#if rest != null}

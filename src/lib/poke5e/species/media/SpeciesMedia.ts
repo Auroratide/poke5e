@@ -1,4 +1,5 @@
 import { DataClass, type Data } from "$lib/DataClass"
+import { PokemonGender } from "$lib/pokemon/gender"
 
 export type UploadedMedia = {
 	name: string,
@@ -32,6 +33,10 @@ export class SpeciesMedia<T> extends DataClass<{
 		normalSprite?: T,
 		shinyPortrait?: T,
 		shinySprite?: T,
+		normalPortraitF?: T,
+		normalSpriteF?: T,
+		shinyPortraitF?: T,
+		shinySpriteF?: T,
 	},
 	customization?: SpeciesMediaCustomization,
 	attribution?: SpeciesMediaAttribution,
@@ -57,61 +62,65 @@ export class SpeciesMedia<T> extends DataClass<{
 			value: "other",
 		} ]
 
-	portrait({ shiny = false }: { shiny?: boolean } = {}): {
+	portrait({ shiny = false, gender }: { shiny?: boolean, gender?: PokemonGender } = {}): {
 		value: T,
 		hueRotate: number,
 	} {
-		if (shiny && this.data.values.shinyPortrait !== undefined) {
+		const set = this.setByGender(gender)
+
+		if (shiny && set.shinyPortrait !== undefined) {
 			return {
-				value: this.data.values.shinyPortrait,
+				value: set.shinyPortrait,
 				hueRotate: 0,
 			}
 		}
 		
-		if (shiny && this.data.values.shinyPortrait === undefined) {
+		if (shiny && set.shinyPortrait === undefined) {
 			return {
-				value: this.data.values.normalPortrait!,
+				value: set.normalPortrait!,
 				hueRotate: this.customization.shinyHue,
 			}
 		}
 		
 		return {
-			value: this.data.values.normalPortrait!,
+			value: set.normalPortrait!,
 			hueRotate: 0,
 		}
 	}
 
-	sprite({ shiny = false }: { shiny?: boolean } = {}): {
+	sprite({ shiny = false, gender }: { shiny?: boolean, gender?: PokemonGender } = {}): {
 		value: T,
 		hueRotate: number,
 		portraitFallback: boolean,
 	} {
-		if (shiny && this.data.values.shinySprite !== undefined) {
+		const set = this.setByGender(gender)
+
+		if (shiny && set.shinySprite !== undefined) {
 			return {
-				value: this.data.values.shinySprite,
+				value: set.shinySprite,
 				hueRotate: 0,
 				portraitFallback: false,
 			}
 		}
 		
-		if (this.data.values.normalSprite !== undefined) {
+		if (set.normalSprite !== undefined) {
 			return {
-				value: this.data.values.normalSprite,
+				value: set.normalSprite,
 				hueRotate: shiny ? this.customization.shinyHue : 0,
 				portraitFallback: false,
 			}
 		}
 		
-		if (shiny && this.data.values.shinyPortrait !== undefined) {
+		if (shiny && set.shinyPortrait !== undefined) {
 			return {
-				value: this.data.values.shinyPortrait,
+				value: set.shinyPortrait,
 				hueRotate: 0,
 				portraitFallback: true,
 			}
 		}
 		
 		return {
-			value: this.data.values.normalPortrait!,
+			value: set.normalPortrait!,
 			hueRotate: shiny ? this.customization.shinyHue : 0,
 			portraitFallback: true,
 		}
@@ -134,5 +143,28 @@ export class SpeciesMedia<T> extends DataClass<{
 				[type]: fn(type),
 			}), {}),
 		})
+	}
+
+	private setByGender(gender: PokemonGender = PokemonGender.Male): {
+		normalPortrait?: T,
+		normalSprite?: T,
+		shinyPortrait?: T,
+		shinySprite?: T,
+	} {
+		if (gender === PokemonGender.Female) {
+			return {
+				normalPortrait: this.data.values.normalPortraitF ?? this.data.values.normalPortrait,
+				normalSprite: this.data.values.normalSpriteF ?? this.data.values.normalSprite,
+				shinyPortrait: this.data.values.shinyPortraitF ?? this.data.values.shinyPortrait,
+				shinySprite: this.data.values.shinySpriteF ?? this.data.values.shinySprite,
+			}
+		} else {
+			return {
+				normalPortrait: this.data.values.normalPortrait,
+				normalSprite: this.data.values.normalSprite,
+				shinyPortrait: this.data.values.shinyPortrait,
+				shinySprite: this.data.values.shinySprite,
+			}
+		}
 	}
 }

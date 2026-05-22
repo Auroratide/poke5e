@@ -61,6 +61,10 @@ export type SinglePokemonJsonResponse = {
 		sprite?: string,
 		mainShiny?: string,
 		spriteShiny?: string,
+		mainF?: string,
+		spriteF?: string,
+		mainShinyF?: string,
+		spriteShinyF?: string,
 		attribution?: string,
 	},
 	habitat?: {

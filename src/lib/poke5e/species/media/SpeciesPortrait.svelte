@@ -1,24 +1,26 @@
 <script lang="ts">
 	import { browser } from "$app/environment"
-	import { assets } from "$app/paths"
+	import { asset } from "$app/paths"
 	import { Art } from "$lib/ui/elements"
 	import type { StorageResource } from "$lib/trainers/data"
 	import type { SpeciesMedia, SpeciesMediaTypeAttribution, UploadedMedia } from "./SpeciesMedia"
+	import type { PokemonGender } from "$lib/pokemon/gender";
 
 	export let media: SpeciesMedia<UploadedMedia>
 	export let avatar: StorageResource | undefined = undefined
 	export let alt: string
 	export let shiny: boolean = false
+	export let gender: PokemonGender | undefined = undefined
 
-	$: value = media.portrait({ shiny })
+	$: value = media.portrait({ shiny, gender })
 	$: isExternal = /^http/.test(value.value?.href)
-	$: src = isExternal ? value.value?.href : `${assets}${value.value?.href}`
+	$: src = isExternal ? value.value?.href : `${asset(value.value?.href)}`
 
 	let attribution: Promise<SpeciesMediaTypeAttribution> | undefined = undefined
 	$: {
 		// legacy support
 		if (browser && media.data.attribution?.href) {
-			attribution = fetch(`${assets}${media.data.attribution.href}`)
+			attribution = fetch(`${asset(media.data.attribution.href)}`)
 				.then((res) => res.json())
 				.then((data) => ({
 					type: "human",

@@ -1,5 +1,6 @@
 import { test, expect, describe } from "vitest"
 import { stubSpeciesMedia } from "./stubs"
+import { PokemonGender } from "$lib/pokemon/gender"
 
 describe("portrait", () => {
 	test("non-shiny", () => {
@@ -62,6 +63,52 @@ describe("portrait", () => {
 		expect(result).toEqual({
 			value: "normal portrait",
 			hueRotate: 100,
+		})
+	})
+
+	test("female, but no female sprites", () => {
+		const media = stubSpeciesMedia<string>({
+			values: {
+				normalPortrait: "normal portrait",
+				shinyPortrait: "shiny portrait",
+				normalSprite: "normal sprite",
+				shinySprite: "shiny sprite",
+			},
+			customization: {
+				shinyHue: 100,
+			},
+		})
+
+		const result = media.portrait({ shiny: false, gender: PokemonGender.Female })
+
+		expect(result).toEqual({
+			value: "normal portrait",
+			hueRotate: 0,
+		})
+	})
+
+	test("female, with sprites", () => {
+		const media = stubSpeciesMedia<string>({
+			values: {
+				normalPortrait: "normal portrait",
+				shinyPortrait: "shiny portrait",
+				normalSprite: "normal sprite",
+				shinySprite: "shiny sprite",
+				normalPortraitF: "female normal portrait",
+				shinyPortraitF: "female shiny portrait",
+				normalSpriteF: "female normal sprite",
+				shinySpriteF: "female shiny sprite",
+			},
+			customization: {
+				shinyHue: 100,
+			},
+		})
+
+		const result = media.portrait({ shiny: false, gender: PokemonGender.Female })
+
+		expect(result).toEqual({
+			value: "female normal portrait",
+			hueRotate: 0,
 		})
 	})
 })
@@ -217,6 +264,54 @@ describe("sprite", () => {
 		expect(result).toEqual({
 			value: "normal sprite",
 			hueRotate: 100,
+			portraitFallback: false,
+		})
+	})
+
+	test("female, but no female sprites", () => {
+		const media = stubSpeciesMedia<string>({
+			values: {
+				normalPortrait: "normal portrait",
+				shinyPortrait: "shiny portrait",
+				normalSprite: "normal sprite",
+				shinySprite: "shiny sprite",
+			},
+			customization: {
+				shinyHue: 100,
+			},
+		})
+
+		const result = media.sprite({ shiny: false, gender: PokemonGender.Female })
+
+		expect(result).toEqual({
+			value: "normal sprite",
+			hueRotate: 0,
+			portraitFallback: false,
+		})
+	})
+
+	test("female, with sprites", () => {
+		const media = stubSpeciesMedia<string>({
+			values: {
+				normalPortrait: "normal portrait",
+				shinyPortrait: "shiny portrait",
+				normalSprite: "normal sprite",
+				shinySprite: "shiny sprite",
+				normalPortraitF: "female normal portrait",
+				shinyPortraitF: "female shiny portrait",
+				normalSpriteF: "female normal sprite",
+				shinySpriteF: "female shiny sprite",
+			},
+			customization: {
+				shinyHue: 100,
+			},
+		})
+
+		const result = media.sprite({ shiny: false, gender: PokemonGender.Female })
+
+		expect(result).toEqual({
+			value: "female normal sprite",
+			hueRotate: 0,
 			portraitFallback: false,
 		})
 	})

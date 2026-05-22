@@ -1,12 +1,14 @@
 <script lang="ts">
 	import { asset } from "$app/paths"
+	import type { PokemonGender } from "$lib/pokemon/gender";
 	import type { SpeciesMedia, UploadedMedia } from "./SpeciesMedia"
 
 	export let media: SpeciesMedia<UploadedMedia>
 	export let alt: string
 	export let shiny: boolean = false
+	export let gender: PokemonGender | undefined = undefined
 
-	$: value = media.sprite({ shiny })
+	$: value = media.sprite({ shiny, gender })
 	$: isExternal = /^http/.test(value.value?.href)
 	$: src = isExternal ? value.value?.href : `${asset(value.value?.href)}`
 </script>
