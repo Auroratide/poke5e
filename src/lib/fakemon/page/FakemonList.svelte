@@ -4,7 +4,7 @@
 	import { RelativeNumberField, SearchField, SelectField, type RelativeValue } from "$lib/ui/forms"
 	import { Url } from "$lib/site/url"
 	import type { Fakemon } from "../Fakemon"
-	import type { FakemonListStore } from "../store"
+	import { fakemonStore, type FakemonListStore } from "../store"
 	import { PageAction } from "./actions"
 	import GetStarted from "./GetStarted.svelte"
 	import { fakemonListSorter, fakemonListFilter } from "./sort-and-filter"
@@ -15,6 +15,9 @@
 	import { capitalize } from "$lib/utils/string"
 	import { EggGroup } from "$lib/pokemon/egg-group"
 	import { BiomesStore } from "$lib/poke5e/habitat"
+	import { TagList, TagSelection } from "$lib/poke5e/tags"
+
+	const allTags = fakemonStore.tags()
 
 	export let fakemon: FakemonListStore
 	export let showGetStarted = false
@@ -58,6 +61,8 @@
 
 	$: textFilterIsPokemonType = PokemonType.list.includes($fakemonListFilter.toLocaleLowerCase() as PokeType)
 
+	let tagFilter: string[] = []
+
 	$: filter = new SpeciesFilter()
 		.name(textFilterIsPokemonType ? "" : $fakemonListFilter)
 		.type(filteredType !== "" ? filteredType : textFilterIsPokemonType ? $fakemonListFilter : "")
@@ -67,7 +72,9 @@
 		.eggGroup(filteredEggGroup)
 		.biome(filteredBiome)
 
-	$: filtered = $fakemon.filter((it) => filter.apply(it.species))
+	$: filtered = $fakemon
+		.filter((it) => tagFilter.length === 0 || TagList.overlaps(it.tags, tagFilter))
+		.filter((it) => filter.apply(it.species))
 
 	const byStringField = (field: (m: Fakemon) => string) =>
 		(l: Fakemon, r: Fakemon) => field(l).localeCompare(field(r))
@@ -96,6 +103,7 @@
 		<SelectField label="{m.biome()}" bind:value={filteredBiome} options={biomeOptions} />
 	</SearchField>
 </div>
+<TagSelection bind:checked={tagFilter} tags={$allTags} />
 {#if hasNoFakemon}
 	{#if showGetStarted}<GetStarted />{/if}
 {:else}

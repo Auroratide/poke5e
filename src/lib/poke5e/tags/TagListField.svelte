@@ -73,7 +73,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		padding: 0;
-		gap: 0.5em;
+		gap: 0.125em 0.25em;
 		font-size: 1.125em;
 	}
 </style>

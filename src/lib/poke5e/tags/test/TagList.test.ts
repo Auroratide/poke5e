@@ -63,3 +63,17 @@ test("merge", () => {
 
 	expect(TagList.equal(result, TagList.from(["one", "two", "three", "four", "five"]))).toBe(true)
 })
+
+test("overlaps", () => {
+	const a = TagList.from(["one", "two", "three"])
+	const b = TagList.from(["three", "four", "five"])
+	const c = TagList.from(["five", "six", "seven"])
+
+	expect(TagList.overlaps(a, b)).toBe(true)
+	expect(TagList.overlaps(b, c)).toBe(true)
+	expect(TagList.overlaps(a, c)).toBe(false)
+
+	expect(TagList.overlaps(b, a)).toBe(true)
+	expect(TagList.overlaps(c, b)).toBe(true)
+	expect(TagList.overlaps(c, a)).toBe(false)
+})

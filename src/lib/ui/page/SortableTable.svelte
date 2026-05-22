@@ -1,5 +1,5 @@
 <script lang="ts" generics="T">
-	type Sorter<S = unknown> = (l: S, r: S) => number
+	type Sorter = (l: T, r: T) => number
 	const noSort = () => 0
 
 	export let items: T[]

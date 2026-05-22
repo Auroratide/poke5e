@@ -13,6 +13,9 @@ export const TagList = {
 	has(list: TagList, tag: string): boolean {
 		return list.includes(tag.toLocaleLowerCase())
 	},
+	overlaps(a: TagList, b: TagList): boolean {
+		return a.some((a) => b.includes(a))
+	},
 	add(list: TagList, tag: string): TagList {
 		if (TagList.has(list, tag))
 			return list
