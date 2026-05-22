@@ -12105,7 +12105,7 @@
 			"time": "1 action",
 			"pp": 10,
 			"duration": "instantaneous",
-			"range": "15ft",
+			"range": "melee (15ft reach)",
 			"description": [
 				"You make a lunge at the target, attacking with full force.  Make a melee attack, doing 2d6 + MOVE bug damage on a hit.  If the natural attack roll is 15 or more, the target has disadvantage on its next attack."
 			],

@@ -1,1 +1,0 @@
-function e(e){return()=>t(e)}function t(e){return localStorage.getItem(`feature-toggle::${e}`)!=null}function n(e,t){t?localStorage.setItem(`feature-toggle::${e}`,`true`):localStorage.removeItem(`feature-toggle::${e}`)}var r={OverrideMaintenance:e(`OverrideMaintenance`),TransferPokemon:e(`TransferPokemon`),NewReferenceList:e(`NewReferenceList`)};export{t as n,n as r,r as t};
