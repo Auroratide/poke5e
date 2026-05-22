@@ -14,12 +14,14 @@
 
 <figure>
 	{#key src}
-		<img {src} {alt} class:smaller={hasAttribution} class:shimmer={shimmer} style:--hue-rotate="{hue}deg" />
+		<img-zoom>
+			<img {src} {alt} class:smaller={hasAttribution} class:shimmer={shimmer} style:--hue-rotate="{hue}deg" />
+		</img-zoom>
 	{/key}
 	{#if hasAttribution}
 		{#if typeof attribution === "string"}
 			<figcaption>{attribution}</figcaption>
-		{:else}
+		{:else if attribution}
 			<figcaption><ArtAttribution value={attribution} /></figcaption>
 		{/if}
 	{/if}
@@ -71,5 +73,14 @@
 			mask: none;
 			animation: none;
 		}
+	}
+
+	img-zoom {
+		display: block;
+		inline-size: 100%;
+		block-size: 100%;
+	}
+	img-zoom:focus {
+		outline: 0.125em solid var(--skin-focus);
 	}
 </style>

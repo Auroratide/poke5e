@@ -69,6 +69,7 @@
 		"url": "https://auroratide.com"
 	},
 	"dependencies": {
+		"@auroratide/img-zoom": "^0.1.9",
 		"@auroratide/pokemon-types": "^0.1.0",
 		"@auroratide/reorder-list": "^0.5.1",
 		"@auroratide/tab-list": "^0.2.6",
