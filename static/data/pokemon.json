@@ -93405,7 +93405,11 @@
 				"main": "/assets/pokemon/jellicent/main.png",
 				"sprite": "/assets/pokemon/jellicent/sprite.png",
 				"mainShiny": "/assets/pokemon/jellicent/main-shiny.png",
-				"spriteShiny": "/assets/pokemon/jellicent/sprite-shiny.png"
+				"spriteShiny": "/assets/pokemon/jellicent/sprite-shiny.png",
+				"mainF": "/assets/pokemon/jellicent/main-f.png",
+				"spriteF": "/assets/pokemon/jellicent/sprite-f.png",
+				"mainShinyF": "/assets/pokemon/jellicent/main-shiny-f.png",
+				"spriteShinyF": "/assets/pokemon/jellicent/sprite-shiny-f.png"
 			},
 			"habitat": {
 				"biomes": [
