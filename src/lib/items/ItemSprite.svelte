@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { Art } from "$lib/ui/elements"
-
 	export let src: string
 	export let alt: string
 </script>
@@ -10,10 +8,10 @@
 </div>
 
 <style>
-	.pixelated {
+	/* .pixelated {
 		image-rendering: crisp-edges;
 		image-rendering: pixelated;
-	}
+	} */
 
 	img {
 		display: block;

@@ -24,8 +24,8 @@
 		margin: 0 auto;
 		border: none;
 		box-shadow: none;
-		image-rendering: crisp-edges;
-		image-rendering: pixelated;
+		/* image-rendering: crisp-edges;
+		image-rendering: pixelated; */
 		filter: hue-rotate(var(--hue-rotate));
 		aspect-ratio: 1;
 		object-fit: contain;
