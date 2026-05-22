@@ -16,6 +16,7 @@
 	import { EggGroup } from "$lib/pokemon/egg-group"
 	import { BiomesStore } from "$lib/poke5e/habitat"
 	import { TagList, TagSelection } from "$lib/poke5e/tags"
+	import { FeatureToggles } from "$lib/site/FeatureToggles";
 
 	const allTags = fakemonStore.tags()
 
@@ -102,7 +103,9 @@
 		<RelativeNumberField label="{m.minLevel()}" bind:value={filteredMinLevel} bind:relative={filteredMinLevelRelative} min={0} max={20} placeholder="{m.number()}" />
 		<SelectField label="{m.eggGroup()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
 		<SelectField label="{m.biome()}" bind:value={filteredBiome} options={biomeOptions} />
-		<TagSelection bind:checked={filteredTags} tags={$allTags} />
+		{#if FeatureToggles.Tagging()}
+			<TagSelection bind:checked={filteredTags} tags={$allTags} />
+		{/if}
 	</SearchField>
 </div>
 {#if hasNoFakemon}
