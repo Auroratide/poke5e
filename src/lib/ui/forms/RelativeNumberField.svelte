@@ -19,7 +19,7 @@
 
 	export let label: string
 	export let relative: RelativeValue
-	export let value: number
+	export let value: number | undefined
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
 	export let required: boolean = false

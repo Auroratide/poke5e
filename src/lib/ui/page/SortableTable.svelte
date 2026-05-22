@@ -20,7 +20,7 @@
 	$: smallColumns = headers.filter((it) => !it.largeScreenOnly).map(it => `${it.ratio}fr`).join(" ")
 	$: largeColumns = headers.map(it => `${it.ratio}fr`).join(" ")
 	$: cellVisibility = headers.map((it, i) => ({
-		largeScreenOnly: it.largeScreenOnly,
+		largeScreenOnly: it.largeScreenOnly ?? false,
 		lastVisibleCell: headers.slice(i + 1).every((it2) => it2.largeScreenOnly),
 	}))
 
