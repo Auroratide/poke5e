@@ -14,6 +14,15 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.8",
+		description: [
+			"Can now click to zoom in on pokemon and trainer images.",
+			"<strong>Pokémon</strong>: Added sprites for female Frillish, Jellicent, and Pyroar.",
+			"<strong>Moves</strong>: Specify that Lunge's range has reach.",
+			"<strong>Reference</strong>: Clarify Trainer Path Guru's Mind feature when rolling on the confusion table.",
+			"<strong>Bugfix</strong>: Fix Litleo and Pyroar gender ration from 1:1 to 7:1.",
+		],
+	}, {
 		name: "v1.11.7",
 		description: [
 			"Portuguese translations added!",
