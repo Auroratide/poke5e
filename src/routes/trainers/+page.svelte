@@ -87,29 +87,31 @@
 		<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Pokemon List">
 			<JavascriptRequired />
 			<MaintenanceAnnouncement />
-			{#if trainerId}
-				{#await trainer}
-					<Loader />
-				{:then trainer}
-					{#if trainer}
-						<TrainerRoster {trainer} currentPokemon={pokemonId} isFullList={action === PageAction.fullList} />
-					{:else}
-						<NoTrainer trainerKey={trainerId} />
-					{/if}
-				{:catch error}
-					<ErrorMessage error="{error}" action="Loading Trainer {trainerId}" />
-				{/await}
-			{:else}
-				{#await trainerList}
-					<Loader />
-				{:then trainerList}
-					{#if trainerList}
-						<TrainerList trainers={trainerList} showGetStarted={action == null} />
-					{/if}
-				{:catch error}
-					<ErrorMessage error="{error}" action="Loading Trainer List" />
-				{/await}
-			{/if}
+			{#key trainerId}
+				{#if trainerId}
+					{#await trainer}
+						<Loader />
+					{:then trainer}
+						{#if trainer}
+							<TrainerRoster {trainer} currentPokemon={pokemonId} isFullList={action === PageAction.fullList} />
+						{:else}
+							<NoTrainer trainerKey={trainerId} />
+						{/if}
+					{:catch error}
+						<ErrorMessage error="{error}" action="Loading Trainer {trainerId}" />
+					{/await}
+				{:else}
+					{#await trainerList}
+						<Loader />
+					{:then trainerList}
+						{#if trainerList}
+							<TrainerList trainers={trainerList} showGetStarted={action == null} />
+						{/if}
+					{:catch error}
+						<ErrorMessage error="{error}" action="Loading Trainer List" />
+					{/await}
+				{/if}
+			{/key}
 		</nav>
 		{#if trainerId}
 			{#await trainer}
