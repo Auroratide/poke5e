@@ -63,7 +63,7 @@
 		<ul>
 			<li>It gains temporary HP equal to its current HP.</li>
 			<li>Its size becomes Gargantuan.</li>
-			<li>It becomes immune to all non-volatile status conditions (flinching, confusion, prone).</li>
+			<li>It becomes immune to all volatile status conditions (flinching, confusion, prone).</li>
 			<li>It cannot be voluntarily nor forcibly switched out.</li>
 			<li>Damage rolls it makes are rolled twice, and it may choose either result.</li>
 		</ul>
