@@ -64,7 +64,7 @@
 
 	.button.ghost {
 		background-color: transparent;
-		color: var(--skin-bg-dark);
+		color: var(--skin-content-text);
 	}
 
 	.button.ghost:hover,

@@ -173,16 +173,182 @@
 	interpolate-size: allow-keywords;
 }
 
+.dark-mode {
+	--skin-bg: hsl(0, 0%, 25%);
+    --skin-bg-text: hsl(0, 0%, 95%);
+    --skin-bg-dark: hsl(251, 13%, 12%);
+    --skin-bg-softtext: hsla(0, 0%, 100%, 0.667);
+	--skin-bg-light: hsl(0, 0%, 30%);
+
+    --skin-shade: hsla(0, 0%, 0%, 0.667);
+
+    --skin-content: hsl(0, 0%, 18%);
+    --skin-content-text: hsl(0, 0%, 73%);
+
+    --skin-input-bg: hsl(0, 0%, 25%);
+	--skin-focus: hsl(205 90% 50%);
+
+    --skin-footer: hsl(0, 0%, 0%);
+    --skin-footer-text: hsl(0, 0%, 100%);
+
+    --skin-danger-bg: oklch(0.405 0.137 22.46);
+    --skin-danger-text: oklch(0.405 0.137 22.46);
+    --skin-danger-light: hsl(355, 85%, 98%);
+
+	--skin-success-bg: hsl(77 50% 28%);
+	--skin-success-text: hsl(85 58% 24%);
+	--skin-success-light: hsl(77 85% 97%);
+
+    --skin-normal-bg: hsl(60, 26%, 32%);
+    --skin-fighting-bg: hsl(3, 47%, 30%);
+    --skin-flying-bg: hsl(255, 35%, 50%);
+    --skin-poison-bg: hsl(300, 39%, 33%);
+    --skin-ground-bg: hsl(44, 53%, 32%);
+    --skin-rock-bg: hsl(49, 61%, 29%);
+    --skin-bug-bg: hsl(66, 72%, 23%);
+    --skin-ghost-bg: hsl(263, 27%, 37%);
+    --skin-steel-bg: hsl(240, 10%, 44%);
+    --skin-fire-bg: hsl(25, 83%, 33%);
+    --skin-water-bg: hsl(222, 62%, 42%);
+    --skin-grass-bg: hsl(100, 45%, 28%);
+    --skin-electric-bg: hsl(48, 100%, 26%);
+    --skin-psychic-bg: hsl(342, 45%, 42%);
+    --skin-ice-bg: hsl(180, 42%, 29%);
+    --skin-dragon-bg: hsl(258, 58%, 46%);
+    --skin-dark-bg: hsl(24, 30%, 27%);
+    --skin-fairy-bg: hsl(347, 28%, 40%);
+    --skin-typeless-bg: hsl(0, 0%, 36%);
+    --skin-varies-bg: hsl(0, 0%, 36%);
+    --skin-stellar-bg: conic-gradient(
+        var(--skin-electric-bg) 20deg,
+        var(--skin-fire-bg) 20deg 40deg,
+        var(--skin-fighting-bg) 40deg 60deg,
+        var(--skin-fairy-bg) 60deg 80deg,
+        var(--skin-psychic-bg) 80deg 100deg,
+        var(--skin-poison-bg) 100deg 120deg,
+        var(--skin-ghost-bg) 120deg 140deg,
+        var(--skin-steel-bg) 140deg 160deg,
+        var(--skin-normal-bg) 160deg 180deg,
+        var(--skin-dark-bg) 180deg 200deg,
+        var(--skin-dragon-bg) 200deg 220deg,
+        var(--skin-flying-bg) 220deg 240deg,
+        var(--skin-ice-bg) 240deg 260deg,
+        var(--skin-water-bg) 260deg 280deg,
+        var(--skin-grass-bg) 280deg 300deg,
+        var(--skin-bug-bg) 300deg 320deg,
+        var(--skin-rock-bg) 320deg 340deg,
+        var(--skin-ground-bg) 340deg 360deg
+    );
+
+    --skin-male-bg: hsl(227, 70%, 40%);
+    --skin-female-bg: hsl(354, 90%, 32%);
+    --skin-agender-bg: hsl(0, 0%, 40%);
+    --skin-none-bg: hsl(0, 0%, 40%);
+    --skin-other-bg: hsl(0, 0%, 40%);
+    --skin-gender-text: hsl(0, 0%, 100%);
+
+	/* Dark variants needed, filter brightness does not work on svg elements in Safari */
+	--skin-bond-disloyal-bg: oklch(0.5421 0.1092 28.2);
+	--skin-bond-disloyal-bg-dark: oklch(0.3421 0.1092 28.2);
+	--skin-bond-indifferent-bg: oklch(0.6 0.1157 74);
+	--skin-bond-indifferent-bg-dark: oklch(0.4 0.1157 74);
+	--skin-bond-upset-bg: oklch(0.6599 0.1218 105.4);
+	--skin-bond-upset-bg-dark: oklch(0.4599 0.1218 105.4);
+	--skin-bond-neutral-bg: oklch(0.6221 0.0251 312);
+	--skin-bond-neutral-bg-dark: oklch(0.4221 0.0251 312);
+	--skin-bond-content-bg: oklch(0.6067 0.1427 143.5);
+	--skin-bond-content-bg-dark: oklch(0.4067 0.1427 143.5);
+	--skin-bond-pleased-bg: oklch(0.607 0.0921 182.5);
+	--skin-bond-pleased-bg-dark: oklch(0.407 0.0921 182.5);
+	--skin-bond-loyal-bg: oklch(0.5613 0.1217 335);
+	--skin-bond-loyal-bg-dark: oklch(0.3613 0.1217 335);
+
+	--skin-pokeball-bg: hsl(355 55% 30%);
+	--skin-medicine-bg: hsl(249, 40%, 45%);
+	--skin-berry-bg: hsl(205 48% 30%);
+	--skin-held-item-bg: hsl(176, 50%, 27%);
+	--skin-evolution-bg: hsl(77, 45%, 26%);
+	--skin-trainer-gear-bg: hsl(28 48% 27%);
+
+    --skin-bar-bg: hsl(330, 1%, 38%);
+    --skin-bar-healthy: hsl(119, 100%, 32%);
+    --skin-bar-secondary: hsl(197, 91%, 44%);
+	--skin-bar-tertiary: hsl(330, 1%, 65%);
+    --skin-bar-warning: hsl(45, 83%, 39%);
+    --skin-bar-danger: hsl(355, 72%, 40%);
+
+    --skin-contest-cool: oklch(0.4723 0.125 37.4);
+    --skin-contest-beauty: oklch(0.4629 0.1044 263.22);
+    --skin-contest-cute: oklch(0.477 0.1134 0.83);
+    --skin-contest-clever: oklch(0.45 0.1645 136.43);
+    --skin-contest-tough: oklch(0.4552 0.0895 81.99);
+
+	--skin-status-poisoned: oklch(45% 0.193 314);
+	--skin-status-badlypoisoned: linear-gradient(to bottom, oklch(38% 0.227 293), oklch(42% 0.211 305));
+	--skin-status-frozen: oklch(47% 0.126 177);
+	--skin-status-burned: oklch(45% 0.127 51);
+	--skin-status-paralysis: oklch(50% 0.109 92);
+	--skin-status-asleep: oklch(50% 0.115 247);
+	--skin-status-text: oklch(90% 0 0);
+
+	--skin-forest-bg: oklch(0.4206 0.1039 147.99);
+	--skin-jungle-bg: oklch(0.4645 0.1337 143.04);
+	--skin-woodland-bg: oklch(0.4803 0.0682 138.46);
+	--skin-field-bg: oklch(0.5323 0.1273 134.96);
+	--skin-grassland-bg: oklch(0.5363 0.1224 127.17);
+	--skin-city-bg: oklch(0.4153 0.0265 285.19);
+	--skin-industrial-bg: oklch(0.4209 0.0333 66.71);
+	--skin-volcano-bg: oklch(0.4139 0.151388 33.3365);
+	--skin-cave-bg: oklch(0.2688 0.0329 305.78);
+	--skin-mountain-bg: oklch(0.4735 0.0256 285.38);
+	--skin-desert-bg: oklch(0.5184 0.0994 72.5);
+	--skin-badland-bg: oklch(0.4263 0.0996 45.01);
+	--skin-pond-bg: oklch(0.4712 0.0935 161.36);
+	--skin-lake-bg: oklch(0.4025 0.0959 251.5);
+	--skin-river-bg: oklch(0.4531 0.1019 246.28);
+	--skin-riverside-bg: oklch(0.4791 0.0758 167.89);
+	--skin-beach-bg: oklch(0.5409 0.1041 84.45);
+	--skin-ocean-bg: oklch(0.3791 0.1105 251.08);
+	--skin-reef-bg: oklch(0.4779 0.081571 194.769);
+	--skin-polar-sea-bg: oklch(0.449 0.074 240.39);
+	--skin-abyss-bg: oklch(0.1866 0.0535 279.88);
+	--skin-swamp-bg: oklch(0.3835 0.0742 125.25);
+	--skin-glacier-bg: oklch(0.4617 0.0712 233.45);
+	--skin-tundra-bg: oklch(0.4494 0.0457 230.78);
+	--skin-ruin-bg: oklch(0.4175 0.0522 83.68);
+
+	--red-hsl: 355 72% 53%;
+	--red-main: oklch(0.305 0.0937 22.46);
+    --red-dark: oklch(0.254 0.090 22.68);
+    --red-text: oklch(0.7 0.195 22.68);
+    --red-light: oklch(0.82 0.1854 18.57);
+}
+
 body {
     font-family: var(--font-reg);
     font-size: var(--font-sz-base);
     background-image:
-        radial-gradient(circle at 5vw 70vh, hsla(321, 86%, 91%, 0.5), hsla(321, 86%, 91%, 0) 67%),
-        radial-gradient(circle at 50vw 5vh, hsla(120, 50%, 75%, 0.25), hsla(120, 50%, 75%, 0) 67%),
-        radial-gradient(circle at 80vw 95vh, hsla(45, 80%, 65%, 0.25), hsla(45, 50%, 65%, 0) 67%);
+        radial-gradient(circle at 5vw 70vh, oklch(0.9117 0.055 339.19 / 0.5), oklch(0.9117 0.055 339.19 / 0) 67%),
+        radial-gradient(circle at 50vw 5vh, oklch(0.8447 0.1088 144.54 / 0.25), oklch(0.8447 0.1088 144.54 / 0) 67%),
+        radial-gradient(circle at 80vw 95vh, oklch(0.8476 0.1317 90.92 / 0.25), oklch(0.8476 0.1317 90.92 / 0) 67%);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
     overflow: hidden;
+}
+
+body.dark-mode {
+	background-color: oklch(0.2 0 0);
+	background-image:
+        radial-gradient(circle at 5vw 70vh, oklch(0.3967 0.0358 339.19 / 0.5), oklch(0.3967 0.0358 339.19 / 0) 67%),
+        radial-gradient(circle at 50vw 5vh, oklch(0.3879 0.0337 144.54 / 0.25), oklch(0.3879 0.0337 144.54 / 0) 67%),
+        radial-gradient(circle at 80vw 95vh, oklch(0.4049 0.0362 90.92 / 0.25), oklch(0.4049 0.0362 90.92 / 0) 67%);
+	color: var(--skin-content-text);
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+	color: var(--skin-bg-text);
 }
 
 a {
@@ -254,6 +420,10 @@ hr {
 dfn {
     font-weight: bold;
     font-style: normal;
+}
+
+button {
+	color: var(--skin-context-text);
 }
 
 /* https://webaim.org/techniques/css/invisiblecontent/ */

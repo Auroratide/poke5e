@@ -58,6 +58,6 @@
 	}
 
 	main :global(a) {
-		color: var(--red-dark);
+		color: var(--red-text);
 	}
 </style>

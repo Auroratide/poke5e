@@ -71,16 +71,19 @@
 	} toggle-switch[checked]::before {
 		text-shadow: var(--shadow-on);
 		opacity: 1;
+		font-weight: bold;
 	}
 	
 	toggle-switch::after {
 		content: "Off";
 		opacity: 1;
 		text-shadow: var(--shadow-on);
-		color: var(--skin-bg-dark);
+		color: var(--skin-content-text);
 		transition: var(--transition);
+		font-weight: bold;
 	} toggle-switch[checked]::after {
 		text-shadow: none;
 		opacity: 0.4;
+		font-weight: normal;
 	}
 </style>

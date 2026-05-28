@@ -83,7 +83,7 @@
 	}
 
 	ul li {
-		color: var(--theme-main);
+		color: var(--theme-icon);
 		position: relative;
 		display: block;
 		font-size: var(--font-sz-uranus);

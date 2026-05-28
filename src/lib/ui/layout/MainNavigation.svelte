@@ -188,7 +188,7 @@
 	.bubble {
 		inline-size: 100%;
 		block-size: 100%;
-		color: var(--theme-main);
+		color: var(--theme-icon);
 		background: var(--skin-content);
 		border-radius: 100%;
 		aspect-ratio: 1;
