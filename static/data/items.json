@@ -1679,7 +1679,7 @@
 			"type": "held item",
 			"cost": 4000,
 			"description": [
-				"This item has 1 charge. When the holder is damaged by an attack, its trainer may perform a single Switch as a free action, consuming the charge.",
+				"This item has 1 charge. When the holder is damaged by an attack, its trainer may switch the holder for another of their pokémon as a free action, consuming the charge.",
 				"The Eject Button regains its charge at dawn each day."
 			],
 			"media": {
