@@ -19617,7 +19617,17 @@
 			"description": [
 				"Heal a creature in range for 2d6 + MOVE hitpoints."
 			],
-			"higherLevels": "The dice roll for healing changes to 4d6 at level 5, 6d6 at level 10, and 8d6 at level 17."
+			"higherLevels": "The dice roll for healing changes to 4d6 at level 5, 6d6 at level 10, and 8d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "2d6",
+					"5": "4d6",
+					"10": "6d6",
+					"17": "8d6"
+				},
+				"modifier": "MOVE",
+				"type": "healing"
+			}
 		},
 		{
 			"id": "solar-beam",
