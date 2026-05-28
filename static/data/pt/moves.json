@@ -6987,16 +6987,6 @@
 			]
 		},
 		{
-			"id": "tidy-up",
-			"name": "Arrumação",
-			"time": "1 ação",
-			"duration": "1 ação",
-			"description": [
-				"Você arruma e remove os efeitos de Spikes, Pedras Ocultas, Teia Pegajosa, Espinhos Tóxicos e Substituto dentro do alcance.",
-				"Além disso, a próxima jogada de ataque que você fizer será com vantagem."
-			]
-		},
-		{
 			"id": "topsy-turvy",
 			"name": "Inversão Caótica",
 			"time": "1 ação",

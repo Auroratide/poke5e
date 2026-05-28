@@ -22619,15 +22619,25 @@
 			"id": "tidy-up",
 			"name": "Tidy Up",
 			"type": "normal",
-			"power": "none",
+			"power": [
+				"dex",
+				"cha"
+			],
 			"time": "1 action",
 			"pp": 10,
-			"duration": "1 action",
-			"range": "30ft",
+			"duration": "1 minute",
+			"range": "self",
 			"description": [
-				"You tidy up and removes the effects of Spikes, Stealth Rock, Sticky Web, Toxic Spikes, and Substitute within range.",
-				"Additionally, the next attack roll you make is made with advantage."
-			]
+				"You do whatever it takes to keep this space clean. The next attack roll you make is made with advantage. Creatures of your choice within 80ft of you that you can see and are concentrating on Substitute must make a CON save against your Move DC, losing concentration on a failed save and ending Substitute's effects.",
+				"For the next minute, whenever a creature you can see within 80ft of you uses Spikes, Stealth Rock, Sticky Web, Toxic Spikes, or Substitute, you may use your reaction to force the creature to make a CON save against your Move DC. On a failed save, the move dissapates with no effect; the creature still spends a PP using their move. You may use this reaction even as you are being switched out or switched in."
+			],
+			"beta": true,
+			"save": {
+				"attribute": [
+					"con"
+				],
+				"dc": "MOVE"
+			}
 		},
 		{
 			"id": "topsy-turvy",
