@@ -191,7 +191,8 @@
 
 	.content {
 		flex: 1;
-		overflow: hidden;
+		height: 0;
+		overflow: clip;
 	}
 
 	@media print {

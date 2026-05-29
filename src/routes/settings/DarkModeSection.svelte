@@ -3,7 +3,7 @@
 </script>
 
 <section>
-	<h2>Light/Dark Colors</h2>
+	<h2 id="light-dark-colors">Light/Dark Colors</h2>
 	<p>This changes the overall theme of the website between what is commonly called "Dark Mode" and "Light Mode".</p>
 	<ul>
 		<li><strong>Day</strong>: Uses bright colors (default)</li>

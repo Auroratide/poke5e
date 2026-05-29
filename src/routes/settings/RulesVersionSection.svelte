@@ -5,7 +5,7 @@
 </script>
 
 <section>
-	<h2>Rules Version</h2>
+	<h2 id="rules-version">Rules Version</h2>
 	<p>There are two versions of Pokémon 5e:</p>
 	<ul>
 		<li><strong>2018</strong>: The original version maintained in 2018 that was eventually discontinued.</li>
