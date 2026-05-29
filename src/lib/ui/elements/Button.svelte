@@ -59,7 +59,7 @@
 
 	.button.subtle {
 		background-color: var(--skin-input-bg);
-		color: var(--skin-bg-dark);
+		color: var(--skin-content-text);
 	}
 
 	.button.ghost {
