@@ -19,5 +19,17 @@
 	</head>
 	<body>
 		<div>%sveltekit.body%</div>
+		<script>
+			// This is to prevent flash of light mode
+			function setDefaultDayNightMode() {
+				const mode = localStorage.getItem("daynight")
+
+				if (mode === "night") {
+					document.body.classList.add("dark-mode")
+				}
+			}
+
+			setDefaultDayNightMode()
+		</script>
 	</body>
 </html>

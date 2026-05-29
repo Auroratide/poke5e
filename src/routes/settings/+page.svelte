@@ -7,6 +7,7 @@
 	import BackupsSection from "./BackupsSection.svelte"
 	import OfficialFakemonSection from "./OfficialFakemonSection.svelte"
 	import LanguageSection from "./LanguageSection.svelte"
+	import DarkModeSection from "./DarkModeSection.svelte";
 	import { m } from "$lib/site/i18n"
 </script>
 
@@ -19,6 +20,7 @@
 		</section>
 		<LanguageSection />
 		<RulesVersionSection />
+		<DarkModeSection />
 		<BackupsSection />
 		<OfficialFakemonSection />
 	</Card>
