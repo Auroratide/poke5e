@@ -14,9 +14,11 @@
 	<p>You may change version using the toggle below. Refer to the <a href="{Url.reference.introduction()}">Reference</a> for more details.</p>
 	<div class="centered larger">
 		<RulesVersionToggle>
-			<VisuallyHidden slot="legend">
-				Change Version
-			</VisuallyHidden>
+			{#snippet legend()}
+				<VisuallyHidden>
+					Change Version
+				</VisuallyHidden>
+			{/snippet}
 		</RulesVersionToggle>
 	</div>
 </section>
