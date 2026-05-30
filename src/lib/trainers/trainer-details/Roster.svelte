@@ -10,17 +10,23 @@
 	import { m } from "$lib/site/i18n"
 	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
 	import * as list from "$lib/utils/list"
+	import { FeatureToggles } from "$lib/site/FeatureToggles";
+	import { TagList, TagSelection } from "$lib/poke5e/tags";
 
 	export let trainer: TrainerStore
 	export let currentPokemon: PokemonId | undefined
 	export let isFullList: boolean = false
 
 	$: editable = $trainer.update != null
+	$: pokemonTags = $trainer.tags.getForPokemon()
 
 	const byNicknameOrSpecies = (filterValue: string) => (it: TrainerPokemon) =>
 		it.nickname.toLocaleLowerCase().includes(filterValue) || it.pokemonId.data.replace("-", " ").includes(filterValue)
 
+	let filteredTags: string[] = []
+
 	$: filtered = $trainer.pokemon
+		.filter((it) => filteredTags.length === 0 || TagList.overlaps(it.tags, filteredTags))
 		.filter(byNicknameOrSpecies($filterValue.toLocaleLowerCase()))
 	$: baseTrainerUrl = Url.trainers($trainer.info.readKey)
 
@@ -30,9 +36,13 @@
 
 		reordering = true
 		const newList = list.reorderOne($trainer.pokemon, e.detail.oldIndex, e.detail.newIndex)
-		$trainer.update.reorderTeam(newList).finally(() => {
+		$trainer.update?.reorderTeam(newList).finally(() => {
 			reordering = false
 		})
+	}
+
+	const resetFilters = () => {
+		filteredTags = []
 	}
 </script>
 
@@ -49,7 +59,11 @@
 	</span>
 </ListHeading>
 <div class="space-bottom">
-	<SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} />
+	<SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
+		{#if FeatureToggles.Tagging()}
+			<TagSelection bind:checked={filteredTags} tags={pokemonTags} />
+		{/if}
+	</SearchField>
 </div>
 <div class="relative"><!-- Needed for the > indicators to appear outside the scroll box -->
 	<div class="scrollable">

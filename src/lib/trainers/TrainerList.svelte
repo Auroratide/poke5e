@@ -9,15 +9,28 @@
 	import { PageAction } from "./page-action"
 	import GetStarted from "./GetStarted.svelte"
 	import { m } from "$lib/site/i18n"
+	import { TagList, TagSelection } from "$lib/poke5e/tags"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
+	import { trainers as trainerStore } from "./trainers"
+
+	const allTags = trainerStore.tags()
 
 	export let trainers: TrainerListStore
 	export let showGetStarted = false
 
 	$: hasNoTrainers = $trainers.length === 0
-	$: filtered = $trainers.filter((it) => it.name.toLocaleLowerCase().includes($trainerListFilterValue.toLocaleLowerCase()))
+	let filteredTags: string[] = []
+
+	$: filtered = $trainers
+		.filter((it) => filteredTags.length === 0 || TagList.overlaps(it.tags, filteredTags))
+		.filter((it) => it.name.toLocaleLowerCase().includes($trainerListFilterValue.toLocaleLowerCase()))
 
 	const byStringField = (field: (m: Trainer) => string) =>
 		(l: Trainer, r: Trainer) => field(l).localeCompare(field(r))
+
+	const resetFilters = () => {
+		filteredTags = []
+	}
 </script>
 
 <ListHeading title="{m["trainers.trainerList"]()}" target="/trainers">
@@ -25,7 +38,11 @@
 	<Button slot="action" href="{Url.trainers(undefined, undefined, PageAction.newTrainer)}">+ {m["trainers.newTrainer"]()}</Button>
 </ListHeading>
 <div class="space-bottom">
-	<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} />
+	<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
+		{#if FeatureToggles.Tagging()}
+			<TagSelection bind:checked={filteredTags} tags={$allTags} />
+		{/if}
+	</SearchField>
 </div>
 {#if hasNoTrainers}
 	{#if showGetStarted}<GetStarted />{/if}
