@@ -59,11 +59,13 @@
 	</span>
 </ListHeading>
 <div class="space-bottom">
-	<SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
-		{#if FeatureToggles.Tagging()}
+	{#if FeatureToggles.Tagging()}
+		<SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
 			<TagSelection bind:checked={filteredTags} tags={pokemonTags} />
-		{/if}
-	</SearchField>
+		</SearchField>
+	{:else}
+		<SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters} />
+	{/if}
 </div>
 <div class="relative"><!-- Needed for the > indicators to appear outside the scroll box -->
 	<div class="scrollable">

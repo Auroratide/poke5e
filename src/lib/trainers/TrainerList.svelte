@@ -38,11 +38,13 @@
 	<Button slot="action" href="{Url.trainers(undefined, undefined, PageAction.newTrainer)}">+ {m["trainers.newTrainer"]()}</Button>
 </ListHeading>
 <div class="space-bottom">
-	<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
-		{#if FeatureToggles.Tagging()}
+	{#if FeatureToggles.Tagging()}
+		<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
 			<TagSelection bind:checked={filteredTags} tags={$allTags} />
-		{/if}
-	</SearchField>
+		</SearchField>
+	{:else}
+		<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters} />
+	{/if}
 </div>
 {#if hasNoTrainers}
 	{#if showGetStarted}<GetStarted />{/if}
