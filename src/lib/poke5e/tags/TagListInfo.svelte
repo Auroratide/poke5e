@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { TagList } from "./TagList"
-	import { Tag, TagList as ListOfTags, Button, ButtonRow } from "$lib/ui/elements"
+	import { Tag, TagList as ListOfTags, Button } from "$lib/ui/elements"
 	import { EditIcon } from "$lib/ui/icons"
 	import TagListField from "./TagListField.svelte"
 	import { FormGroup } from "$lib/ui/forms"
 	import { m } from "$lib/site/i18n"
-	import NoTags from "./NoTags.svelte";
+	import NoTags from "./NoTags.svelte"
 
 	let {
 		value,
@@ -19,29 +19,35 @@
 
 	let showEditor = $state(false)
 	let valueToEdit = $derived(TagList.copy(value))
+	let lastValue = $derived(TagList.copy(value))
 
 	const onEdit = () => {
 		showEditor = true
 		valueToEdit = TagList.copy(value)
 	}
 
-	const onCancel = () => {
+	const onClose = () => {
 		showEditor = false
 	}
 
-	const onSave = async () => {
-		await onsave?.(valueToEdit)
-		showEditor = false
+	const onSave = async (newValue: TagList) => {
+		await onsave?.(newValue)
 	}
+
+	$effect(() => {
+		if (!TagList.equal(valueToEdit, lastValue)) {
+			onSave(valueToEdit)
+			lastValue = TagList.copy(valueToEdit)
+		}
+	})
 </script>
 
 {#if showEditor}
 	<FormGroup>
 		<TagListField label={m.tags()} bind:value={valueToEdit} {possibleTags} />
-		<ButtonRow>
-			<Button variant="subtle" on:click={onCancel}>Cancel</Button>
-			<Button on:click={onSave}>Save Tags</Button>
-		</ButtonRow>
+		<div class="close-button">
+			<Button variant="subtle" on:click={onClose}>{m.close()}</Button>
+		</div>
 	</FormGroup>
 {:else}
 	<p>

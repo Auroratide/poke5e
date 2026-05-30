@@ -3,8 +3,7 @@
 	import { Tag } from "$lib/ui/elements"
 	import { ComboboxField, WithButton } from "$lib/ui/forms"
 	import { flip } from "svelte/animate"
-	import { m } from "$lib/site/i18n";
-	import NoTags from "./NoTags.svelte";
+	import NoTags from "./NoTags.svelte"
 
 	let {
 		label,
