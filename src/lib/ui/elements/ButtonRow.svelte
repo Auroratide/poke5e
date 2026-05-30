@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Snippet } from "svelte"
-	import { onMount, onDestroy } from "svelte"
+	import { onMount } from "svelte"
 
 	let {
 		children,
@@ -13,25 +13,25 @@
 	// the CSS is easier if this is NOT wrapping, hence the negative condition
 	let isNotWrapping = $state(true)
 
-	const resizer = new ResizeObserver((entries) => {
-		for (const entry of entries) {
-			const container = entry.target
-			const items = [...container.children]
-			const top = items[0]
-			if ("offsetTop" in top) {
-				isNotWrapping = !items.some((el) => "offsetTop" in el && el.offsetTop !== top.offsetTop)
-			}
-		}
-	})
-
 	onMount(() => {
+		const resizer = new ResizeObserver((entries) => {
+			for (const entry of entries) {
+				const container = entry.target
+				const items = [...container.children]
+				const top = items[0]
+				if ("offsetTop" in top) {
+					isNotWrapping = !items.some((el) => "offsetTop" in el && el.offsetTop !== top.offsetTop)
+				}
+			}
+		})
+
 		if (rowElem) {
 			resizer.observe(rowElem)
 		}
-	})
 
-	onDestroy(() => {
-		resizer.disconnect()
+		return () => {
+			resizer.disconnect()
+		}
 	})
 </script>
 
