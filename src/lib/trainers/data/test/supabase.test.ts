@@ -7,6 +7,8 @@ import { ApiStub } from "$lib/test/ApiStub"
 import { supabase } from "$lib/supabase"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import type { ReadWriteKey } from "$lib/trainers/types"
+import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
+import { TrainerLocalStorage } from "../TrainerLocalStorage"
 
 const ABILITIES = {
 	disguise: stubAbility({
@@ -151,6 +153,64 @@ test("reordering pokemon", async () => {
 	const receivedPokemon = receivedTrainer.pokemon.map((it) => it.pokemonId.data)
 
 	expect(receivedPokemon).toEqual(["kirlia", "litwick", "mimikyu"])
+})
+
+test("tags", async () => {
+	// given
+	const trainerToAdd = {
+		name: "Renibel",
+		description: "Likes cryptids.",
+	}
+
+	const firstSpeciesToAdd = stubPokemonSpecies({
+		id: "mimikyu",
+	})
+
+	const addedTrainer = await provider.newTrainer(trainerToAdd)
+	const addedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, firstSpeciesToAdd)
+
+	// when
+	addedTrainer.info.tags = TagList.add(addedTrainer.info.tags, "gym leader")
+	addedPokemon.tags = TagList.add(addedPokemon.tags, "male")
+
+	await provider.updateTrainerInfo(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info)
+	await provider.updatePokemon(addedTrainer.writeKey, addedTrainer.info.readKey, addedPokemon)
+
+	// then
+	const afterUpdate = await provider.getTrainer(addedTrainer.info.readKey)
+	expect(afterUpdate.info.tags).toEqual(TagList.from(["gym leader"]))
+	expect(afterUpdate.pokemon[0].tags).toEqual(TagList.from(["male"]))
+})
+
+test("tags: do not own trainer", async () => {
+	// given
+	const trainerToAdd = {
+		name: "Renibel",
+		description: "Likes cryptids.",
+	}
+
+	const firstSpeciesToAdd = stubPokemonSpecies({
+		id: "mimikyu",
+	})
+
+	const addedTrainer = await provider.newTrainer(trainerToAdd)
+	const addedPokemon = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, firstSpeciesToAdd)
+
+	addedTrainer.info.tags = TagList.add(addedTrainer.info.tags, "gym leader")
+	addedPokemon.tags = TagList.add(addedPokemon.tags, "male")
+
+	await provider.updateTrainerInfo(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info)
+	await provider.updatePokemon(addedTrainer.writeKey, addedTrainer.info.readKey, addedPokemon)
+
+	// when
+	TrainerLocalStorage.removeWriteKey(addedTrainer.info.readKey)
+	TrainerLocalStorage.tags.setTrainer(addedTrainer.info.readKey, TagList.from(["lass"]))
+	TrainerLocalStorage.tags.setPokemon(addedTrainer.info.readKey, addedPokemon.id, TagList.from(["ghost"]))
+
+	// then
+	const afterUpdate = await provider.getTrainer(addedTrainer.info.readKey)
+	expect(afterUpdate.info.tags).toEqual(TagList.from(["lass"]))
+	expect(afterUpdate.pokemon[0].tags).toEqual(TagList.from(["ghost"]))
 })
 
 async function addPokemonWithDeprecatedAbilityField(writeKey: ReadWriteKey, pokemon: PokemonSpecies) {

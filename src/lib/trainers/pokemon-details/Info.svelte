@@ -22,6 +22,8 @@
 	import { m } from "$lib/site/i18n"
 	import { KnownAbilitiesInfo } from "$lib/pokemon/ability"
 	import DmInfo from "./DmInfo.svelte"
+	import { TagList, TagListInfo } from "$lib/poke5e/tags"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	const dispatch = createEventDispatcher()
 
@@ -29,6 +31,7 @@
 	export let pokemon: TrainerPokemon
 	export let species: PokemonSpecies
 	export let editable: boolean
+	export let pokemonTags: TagList
 
 	$: hasImage = pokemon.avatar != null || species.media != null && species.media.hasAnyMedia()
 
@@ -62,6 +65,13 @@
 					max: pokemon.bond.points.max,
 				},
 			},
+		})
+	}
+
+	const onSaveTags = async (tags: TagList) => {
+		dispatch("update-tags", {
+			...pokemon,
+			tags: tags,
 		})
 	}
 </script>
@@ -130,6 +140,12 @@
 		<DmInfo {pokemon} {species} />
 	</Details>
 </section>
+
+{#if FeatureToggles.Tagging()}
+	<section>
+		<TagListInfo value={pokemon.tags} onsave={onSaveTags} possibleTags={pokemonTags} />
+	</section>
+{/if}
 
 <style>
 	section {

@@ -25,6 +25,10 @@
 			optimistic: true,
 		})
 	}
+
+	const onUpdateTags = (e: CustomEvent<TrainerInfo>) => {
+		$trainer.tags.trainer(e.detail)
+	}
 </script>
 
 <Title value="{$trainer.info.name}" />
@@ -32,7 +36,7 @@
 	<div slot="header-extra" style:padding-inline-end="0.5em">
 		<Level value={$trainer.info.level.data} />
 	</div>
-	<Info trainer={$trainer.info} editable={canEdit} on:update={onUpdate} on:update-item={onUpdateItem} />
+	<Info trainer={$trainer.info} editable={canEdit} on:update={onUpdate} on:update-item={onUpdateItem} on:update-tags={onUpdateTags} />
 	<ActionArea>
 		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="subtle">
 			{#if $trainer.update}

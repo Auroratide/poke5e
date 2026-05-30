@@ -33,6 +33,7 @@ import { PokemonSpecies, SpeciesIdentifier } from "$lib/poke5e/species"
 import { TrainerLocalStorage } from "./TrainerLocalStorage"
 import { Stab, type StabBase } from "$lib/pokemon/stab"
 import { Ability } from "$lib/pokemon/ability"
+import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -58,6 +59,13 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		const pokemon: TrainerPokemon[] = await this.getTrainersPokemon(trainer.id, readKey)
 
 		const writeKey = TrainerLocalStorage.getWriteKey(readKey)
+
+		if (!writeKey) {
+			trainer.tags = TrainerLocalStorage.tags.getTrainer(readKey)
+			pokemon.forEach((it) => {
+				it.tags = TrainerLocalStorage.tags.getPokemon(readKey, it.id)
+			})
+		}
     
 		return {
 			info: trainer,
@@ -195,6 +203,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			},
 			path: createEmptyChosenTrainerPath(),
 			feats: [],
+			tags: TagList.empty(),
 		}
 
 		const { data, error } = await this.supabase.rpc("new_trainer", {
@@ -270,6 +279,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_path_rank_3_desc: toCreate.path.customFeatures.level9.description,
 			_path_rank_4_name: toCreate.path.customFeatures.level15.name,
 			_path_rank_4_desc: toCreate.path.customFeatures.level15.description,
+			_tags: toCreate.tags,
 		}).single<{
 			ret_id: string,
 			ret_read_key: string,
@@ -369,6 +379,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_path_rank_3_desc: info.path.customFeatures.level9.description,
 			_path_rank_4_name: info.path.customFeatures.level15.name,
 			_path_rank_4_desc: info.path.customFeatures.level15.description,
+			_tags: info.tags,
 		}).single<number>()
 
 		if (error) {
@@ -531,6 +542,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_bond_points_max: info.bond.points.max,
 			_stab_base: info.stab.base,
 			_stab_bonus: info.stab.bonus,
+			_tags: info.tags,
 		}).single<number>()
 
 		if (error) {
@@ -633,6 +645,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 				base: "default",
 				bonus: 0,
 			}),
+			tags: TagList.empty(),
 		}
 
 		const { data, error } = await this.supabase.rpc("add_pokemon", {
@@ -704,6 +717,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_rank: rank,
 			_stab_base: "default",
 			_stab_bonus: 0,
+			_tags: trainerPokemon.tags,
 		}).single<number>()
     
 		if (error) {
@@ -1132,6 +1146,7 @@ type TrainerRow = {
 	rank_intimidation: number,
 	rank_performance: number,
 	rank_persuasion: number,
+	tags: string[],
 }
 
 const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name: string) => StorageResource) => ({
@@ -1239,6 +1254,7 @@ const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name
 		},
 	},
 	feats: [],
+	tags: row.tags,
 })
 
 type AbilityItem = {
@@ -1340,6 +1356,7 @@ type PokemonRow = {
 	avatar_filename?: string,
 	stab_base: string,
 	stab_bonus: number,
+	tags: string[],
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -1462,6 +1479,7 @@ const rowToPokemon = async (row: PokemonRow, getStorageResource: (name: string) 
 		bonus: row.stab_bonus,
 	}),
 	avatar: row.avatar_filename ? getStorageResource(row.avatar_filename) : undefined,
+	tags: row.tags,
 })
 
 type MoveRow = {

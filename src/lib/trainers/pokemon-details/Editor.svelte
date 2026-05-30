@@ -30,12 +30,15 @@
 	import { Resource } from "$lib/poke5e/resource"
 	import { StabFieldset } from "$lib/pokemon/stab"
 	import { KnownAbilitiesFieldset } from "$lib/pokemon/ability"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
+	import { TagList, TagListField } from "$lib/poke5e/tags"
 
 	const dispatch = createEventDispatcher()
 
 	export let pokemon: TrainerPokemon
 	export let species: PokemonSpecies
 	export let saving: boolean = false
+	export let pokemonTags: TagList
 	$: disabled = saving
 
 	let nickname = pokemon.nickname
@@ -63,6 +66,7 @@
 	let originalAvatar = pokemon.avatar
 	let avatarToUpload: ImageInputValue | undefined = undefined
 	let isValid = true
+	let tags = TagList.copy(pokemon.tags)
 
 	let moves = structuredClone(pokemon.moves)
 	let items = structuredClone(pokemon.items)
@@ -103,6 +107,7 @@
 					points: Resource.adjustMax(pokemon.bond.points, bond.points.max),
 				},
 				stab,
+				tags,
 				avatar: originalAvatar,
 			},
 			updateAvatar: avatarToUpload,
@@ -123,6 +128,9 @@
 	<HeldItemsFieldset bind:items {disabled} />
 	<Fieldset title="{m.general()}">
 		<MarkdownField label="{m.notes()}" bind:value={notes} placeholder="{m.generalNotesPlaceholder()}" {disabled} />
+		{#if FeatureToggles.Tagging()}
+			<TagListField label="Tags" bind:value={tags} possibleTags={pokemonTags} />
+		{/if}
 	</Fieldset>
 	<FormDetails title="Advanced">
 		<TypeField bind:value={type.data} {disabled} />

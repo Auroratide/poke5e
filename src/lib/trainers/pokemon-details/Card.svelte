@@ -15,6 +15,7 @@
 
 	$: canEdit = $trainer.update != null
 	$: pokemon = $trainer.pokemon.find((it) => it.id === id)
+	$: pokemonTags = $trainer.tags.getForPokemon()
 
 	const onUpdateHealth = (e: CustomEvent<TrainerPokemon>) => {
 		$trainer.update?.pokemon(e.detail, {
@@ -33,16 +34,22 @@
 			optimistic: true,
 		})
 	}
+
+	const onUpdateTags = (e: CustomEvent<TrainerPokemon>) => {
+		$trainer.tags.pokemon(e.detail)
+	}
 </script>
 
-<RequirePokemon trainer={$trainer} {id}>
-	<WithSpecies let:species ids={[pokemon?.pokemonId]}>
-		<Card title={pokemon.nickname} dismissToHref="{Url.trainers($trainer.info.readKey, undefined, PageAction.fullList)}">
-			<TypeTag slot="header-extra" type={pokemon.type.data} />
-			<Info trainer={$trainer.info} {pokemon} {species} editable={canEdit} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} on:update-bond={onUpdateBond} />
-			{#if canEdit}
-				<TrainerPokemonActions {trainer} {species} {pokemon} />
-			{/if}
-		</Card>
-	</WithSpecies>
-</RequirePokemon>
+{#if pokemon}
+	<RequirePokemon trainer={$trainer} {id}>
+		<WithSpecies let:species ids={[pokemon?.pokemonId]}>
+			<Card title={pokemon.nickname} dismissToHref="{Url.trainers($trainer.info.readKey, undefined, PageAction.fullList)}">
+				<TypeTag slot="header-extra" type={pokemon.type.data} />
+				<Info trainer={$trainer.info} {pokemon} {species} editable={canEdit} {pokemonTags} on:update-health={onUpdateHealth} on:update-pp={onUpdatePp} on:update-bond={onUpdateBond} on:update-tags={onUpdateTags} />
+				{#if canEdit}
+					<TrainerPokemonActions {trainer} {species} {pokemon} />
+				{/if}
+			</Card>
+		</WithSpecies>
+	</RequirePokemon>
+{/if}

@@ -15,6 +15,7 @@
 	
 	$: canEdit = $trainer.update != null
 	$: pokemon = $trainer.pokemon.find((it) => it.id === id)
+	$: pokemonTags = $trainer.tags.getForPokemon()
 
 	let saving = false
 	const update = (e: CustomEvent<UpdateDetail>) => {
@@ -39,19 +40,21 @@
 	}
 </script>
 
-<RequirePokemon trainer={$trainer} {id} titlePrefix="Edit">
-	<WithSpecies let:species ids={[pokemon?.pokemonId]}>
-		<Card title="Edit {pokemon.nickname}">
-			{#if canEdit}
-				<Editor {pokemon} {species} {saving} on:cancel={cancel} on:update={update} />
-			{:else}
-				<section>
-					<p>You do not have permission to edit this pokemon.</p>
-					<ActionArea>
-						<Button href="{Url.trainers($trainer.info.readKey, id)}">Go Back</Button>
-					</ActionArea>
-				</section>
-			{/if}
-		</Card>
-	</WithSpecies>
-</RequirePokemon>
+{#if pokemon}
+	<RequirePokemon trainer={$trainer} {id} titlePrefix="Edit">
+		<WithSpecies let:species ids={[pokemon.pokemonId]}>
+			<Card title="Edit {pokemon.nickname}">
+				{#if canEdit}
+					<Editor {pokemon} {species} {saving} {pokemonTags} on:cancel={cancel} on:update={update} />
+				{:else}
+					<section>
+						<p>You do not have permission to edit this pokemon.</p>
+						<ActionArea>
+							<Button href="{Url.trainers($trainer.info.readKey, id)}">Go Back</Button>
+						</ActionArea>
+					</section>
+				{/if}
+			</Card>
+		</WithSpecies>
+	</RequirePokemon>
+{/if}

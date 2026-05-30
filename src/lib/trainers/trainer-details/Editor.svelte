@@ -28,6 +28,11 @@
 	import { Level } from "$lib/dnd/level"
 	import { m } from "$lib/site/i18n"
 	import { Resource } from "$lib/poke5e/resource"
+	import { TagList, TagListField } from "$lib/poke5e/tags"
+	import { trainers } from "../trainers";
+	import { FeatureToggles } from "$lib/site/FeatureToggles";
+
+	const allTags = trainers.tags()
 	
 	const dispatch = createEventDispatcher()
 
@@ -52,6 +57,7 @@
 	let feats = trainer.feats.map((it) => structuredClone(it))
 	let avatarToUpload: ImageInputValue | undefined = undefined
 	let isValid = true
+	let tags = TagList.copy(trainer.tags)
 
 	let inventory = structuredClone(trainer.inventory)
 
@@ -77,6 +83,7 @@
 				specializations,
 				path: trainerPath,
 				feats,
+				tags,
 			},
 			updateAvatar: avatarToUpload,
 		})
@@ -95,6 +102,9 @@
 	<InventoryFieldset bind:money bind:inventory {disabled} />
 	<Fieldset title="{m.general()}">
 		<MarkdownField label="{m.description()}" bind:value={description} placeholder="{m["trainers.generalInfoAboutThisTrainer"]()}..." {disabled} />
+		{#if FeatureToggles.Tagging()}
+			<TagListField label="Tags" bind:value={tags} possibleTags={$allTags} />
+		{/if}
 	</Fieldset>
 	<ActionArea error={!isValid ? "One or more fields above have an issue." : undefined}>
 		<Button on:click={cancel} variant="subtle" {disabled}>{m.cancel()}</Button>

@@ -1,4 +1,5 @@
-import type { ReadWriteKey } from "../types"
+import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
+import type { PokemonId, ReadWriteKey } from "../types"
 
 const getReadKeys = (): ReadWriteKey[] =>
 	localStorage.getItem("trainers")?.split(",")?.filter((it) => it !== "") ?? []
@@ -29,6 +30,13 @@ const removeWriteKey = (readKey: ReadWriteKey) => {
 	localStorage.removeItem(`write:${readKey}`)
 }
 
+const tags = {
+	getTrainer: (readKey: ReadWriteKey) => TagsLocalStorage.get(readKey),
+	setTrainer: (readKey: ReadWriteKey, tags: TagList) => TagsLocalStorage.set(readKey, tags),
+	getPokemon: (readKey: ReadWriteKey, pokemon: PokemonId) => TagsLocalStorage.get(`${readKey}:${pokemon}`),
+	setPokemon: (readKey: ReadWriteKey, pokemon: PokemonId, tags: TagList) => TagsLocalStorage.set(`${readKey}:${pokemon}`, tags),
+} as const
+
 export const TrainerLocalStorage = {
 	getReadKeys,
 	addReadKey,
@@ -37,4 +45,5 @@ export const TrainerLocalStorage = {
 	getWriteKey,
 	addWriteKey,
 	removeWriteKey,
+	tags,
 } as const

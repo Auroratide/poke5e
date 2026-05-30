@@ -17,6 +17,11 @@
 	import { FeatsInfo } from "$lib/dnd/feats"
 	import { AllFeats } from "$lib/poke5e/feats"
 	import { m } from "$lib/site/i18n"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
+	import { TagList, TagListInfo } from "$lib/poke5e/tags"
+	import { trainers } from "../trainers"
+
+	const allTags = trainers.tags()
 
 	const dispatch = createEventDispatcher()
 
@@ -59,6 +64,13 @@
 	const onUpdateItem = (e: CustomEvent<InventoryItem>) => {
 		dispatch("update-item", e.detail)
 	}
+
+	const onSaveTags = async (newList: TagList) => {
+		dispatch("update-tags", {
+			...trainer,
+			tags: newList,
+		})
+	}
 </script>
 
 <SideArtCardSection {hasImage}>
@@ -70,7 +82,7 @@
 		<HealthInfo hp={trainer.hp} hitDice={trainer.hitDice} dieSize={$trainerHitDiceSize} {editable} on:update={onUpdateHealth} status={null} level={trainer.level} exp={0} />
 		<StatsInfo {trainer} />
 	</div>
-	<Art slot="art" src="{trainer.avatar.href}" alt="Trainer Avatar" />
+	<Art slot="art" src="{trainer.avatar?.href ?? ""}" alt="Trainer Avatar" />
 </SideArtCardSection>
 <section class="stats">
 	<AttributeBlock attributes={trainer.attributes} />
@@ -94,6 +106,11 @@
 	<section>
 		<h2>About</h2>
 		<Paragraphs value={trainer.description} />
+	</section>
+{/if}
+{#if FeatureToggles.Tagging()}
+	<section>
+		<TagListInfo value={trainer.tags} onsave={onSaveTags} possibleTags={$allTags} />
 	</section>
 {/if}
 

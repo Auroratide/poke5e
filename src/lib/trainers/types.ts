@@ -20,6 +20,7 @@ import type { Move } from "$lib/moves/Move"
 import type { Data } from "$lib/DataClass"
 import type { Resource } from "$lib/poke5e/resource"
 import type { Stab } from "$lib/pokemon/stab"
+import type { TagList } from "$lib/poke5e/tags"
 
 export type LearnedMove = {
 	id: string,
@@ -84,6 +85,7 @@ export type TrainerPokemon = {
 	bond: PokemonBond,
 	stab: Stab,
 	avatar?: StorageResource,
+	tags: TagList,
 }
 
 export type WithPokemonData = {
@@ -124,6 +126,7 @@ export type TrainerInfo = {
 	specializations: Specializations,
 	path: ChosenTrainerPath,
 	feats: ChosenFeat[],
+	tags: TagList,
 }
 export type Trainer = TrainerInfo & {
 	id: TrainerId,
