@@ -8,7 +8,7 @@ export const TagsLocalStorage = {
 	get(identifier: string): TagList {
 		const fromStorage = localStorage.getItem(key(identifier))
 		return TagList.from(
-			fromStorage ? JSON.parse(fromStorage) : []
+			fromStorage ? JSON.parse(fromStorage) : [],
 		)
 	},
 	set(identifier: string, list: TagList) {

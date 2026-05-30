@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ButtonRow } from "../elements";
+	import { ButtonRow } from "../elements"
 
 	export let error: string | undefined = undefined
 </script>

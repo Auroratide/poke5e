@@ -138,9 +138,9 @@ const createStore = () => {
 			},
 			getForPokemon: () => {
 				return Object.values(data.pokemon).reduce((tags, f) =>
-					TagList.merge(tags, f.tags), TagList.empty()
+					TagList.merge(tags, f.tags), TagList.empty(),
 				)
-			}
+			},
 		}
 	}
 
@@ -542,7 +542,7 @@ const createStore = () => {
 												info: cur,
 												pokemon: [],
 												remove: createRemoveTrainer(cur),
-												tags: createTagUpdater(data)
+												tags: createTagUpdater(data),
 											},
 											...newAll,
 										}
@@ -571,7 +571,7 @@ const createStore = () => {
 		tags: () => {
 			return derived(trainerStore, (trainers) => {
 				return Object.values(trainers).reduce((tags, f) =>
-					TagList.merge(tags, f.info.tags), TagList.empty()
+					TagList.merge(tags, f.info.tags), TagList.empty(),
 				)
 			})
 		},

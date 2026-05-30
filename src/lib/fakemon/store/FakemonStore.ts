@@ -100,7 +100,7 @@ export function createStore(): FakemonStore {
 		tags: () => {
 			return derived(fakemonStore, (fakemon) => {
 				return Object.values(fakemon).reduce((tags, f) =>
-					TagList.merge(tags, f.value.tags), TagList.empty()
+					TagList.merge(tags, f.value.tags), TagList.empty(),
 				)
 			})
 		},

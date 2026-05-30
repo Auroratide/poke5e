@@ -10,8 +10,8 @@
 	import { m } from "$lib/site/i18n"
 	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
 	import * as list from "$lib/utils/list"
-	import { FeatureToggles } from "$lib/site/FeatureToggles";
-	import { TagList, TagSelection } from "$lib/poke5e/tags";
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
+	import { TagList, TagSelection } from "$lib/poke5e/tags"
 
 	export let trainer: TrainerStore
 	export let currentPokemon: PokemonId | undefined

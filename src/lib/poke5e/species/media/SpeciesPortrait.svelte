@@ -4,7 +4,7 @@
 	import { Art } from "$lib/ui/elements"
 	import type { StorageResource } from "$lib/trainers/data"
 	import type { SpeciesMedia, SpeciesMediaTypeAttribution, UploadedMedia } from "./SpeciesMedia"
-	import type { PokemonGender } from "$lib/pokemon/gender";
+	import type { PokemonGender } from "$lib/pokemon/gender"
 
 	export let media: SpeciesMedia<UploadedMedia>
 	export let avatar: StorageResource | undefined = undefined

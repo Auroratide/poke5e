@@ -29,8 +29,8 @@
 	import { m } from "$lib/site/i18n"
 	import { Resource } from "$lib/poke5e/resource"
 	import { TagList, TagListField } from "$lib/poke5e/tags"
-	import { trainers } from "../trainers";
-	import { FeatureToggles } from "$lib/site/FeatureToggles";
+	import { trainers } from "../trainers"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	const allTags = trainers.tags()
 	

@@ -16,7 +16,7 @@
 	import { EggGroup } from "$lib/pokemon/egg-group"
 	import { BiomesStore } from "$lib/poke5e/habitat"
 	import { TagList, TagSelection } from "$lib/poke5e/tags"
-	import { FeatureToggles } from "$lib/site/FeatureToggles";
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	const allTags = fakemonStore.tags()
 

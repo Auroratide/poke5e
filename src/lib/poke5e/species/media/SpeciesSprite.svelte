@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { asset } from "$app/paths"
-	import type { PokemonGender } from "$lib/pokemon/gender";
+	import type { PokemonGender } from "$lib/pokemon/gender"
 	import type { SpeciesMedia, UploadedMedia } from "./SpeciesMedia"
 
 	export let media: SpeciesMedia<UploadedMedia>

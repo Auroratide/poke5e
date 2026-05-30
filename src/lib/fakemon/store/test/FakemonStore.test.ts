@@ -308,7 +308,7 @@ test("getting all tags", async () => {
 
 	// then it combines all of the tags together
 	expect(TagList.equal(allTags, TagList.from([
-		"eeveelution", "normal", "dragon", "bug"
+		"eeveelution", "normal", "dragon", "bug",
 	]))).toBe(true)
 })
 
@@ -326,7 +326,7 @@ test("updating tags on fakemon you own", async () => {
 
 	// when: updated
 	const updatedFakemon = storedValue.value.copy({
-		tags: TagList.from(["eeveelution"])
+		tags: TagList.from(["eeveelution"]),
 	})
 	await storedValue.tags.update(updatedFakemon)
 
@@ -352,7 +352,7 @@ test("updating tags on fakemon you do not own", async () => {
 
 	// when: updated
 	const updatedFakemon = storedValue.value.copy({
-		tags: TagList.from(["eeveelution"])
+		tags: TagList.from(["eeveelution"]),
 	})
 	await storedValue.tags.update(updatedFakemon)
 
