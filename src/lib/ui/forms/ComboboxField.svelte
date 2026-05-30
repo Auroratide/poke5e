@@ -64,7 +64,7 @@
 	}
 
 	const confirm = () => {
-		onconfirm?.(value)
+		onconfirm?.(value.trim())
 		showList = false
 		resetFocus()
 	}
@@ -78,7 +78,9 @@
 				resetFocus()
 			}
 
-			confirm()
+			if (value.trim()) {
+				confirm()
+			}
 			e.preventDefault()
 			break
 		case "ArrowDown":

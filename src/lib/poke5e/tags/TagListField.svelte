@@ -33,7 +33,7 @@
 </script>
 
 <div class="tag-list-field">
-	<WithButton label="Add" on:click={onAddViaButton} disabled={comboboxValue.length === 0}>
+	<WithButton label="Add" on:click={onAddViaButton} disabled={comboboxValue.trim().length === 0}>
 		<ComboboxField {label} bind:value={comboboxValue} options={comboboxOptions} onconfirm={onAdd} />
 	</WithButton>
 	<ul>
