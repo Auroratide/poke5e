@@ -129,7 +129,7 @@
 	<Fieldset title="{m.general()}">
 		<MarkdownField label="{m.notes()}" bind:value={notes} placeholder="{m.generalNotesPlaceholder()}" {disabled} />
 		{#if FeatureToggles.Tagging()}
-			<TagListField label="Tags" bind:value={tags} possibleTags={pokemonTags} />
+			<TagListField label="{m.tags()}" bind:value={tags} possibleTags={pokemonTags} />
 		{/if}
 	</Fieldset>
 	<FormDetails title="Advanced">

@@ -159,7 +159,7 @@
 	<Fieldset title={m.description()}>
 		<MarkdownField label={m.generalNotes()} bind:value={notes} {disabled} placeholder={m.anyOtherImportantNotes()} rows={6} />
 		{#if FeatureToggles.Tagging()}
-			<TagListField label="Tags" bind:value={tags} possibleTags={$allTags} />
+			<TagListField label="{m.tags()}" bind:value={tags} possibleTags={$allTags} />
 		{/if}
 	</Fieldset>
 	<ActionArea>

@@ -103,7 +103,7 @@
 	<Fieldset title="{m.general()}">
 		<MarkdownField label="{m.description()}" bind:value={description} placeholder="{m["trainers.generalInfoAboutThisTrainer"]()}..." {disabled} />
 		{#if FeatureToggles.Tagging()}
-			<TagListField label="Tags" bind:value={tags} possibleTags={$allTags} />
+			<TagListField label="{m.tags()}" bind:value={tags} possibleTags={$allTags} />
 		{/if}
 	</Fieldset>
 	<ActionArea error={!isValid ? "One or more fields above have an issue." : undefined}>

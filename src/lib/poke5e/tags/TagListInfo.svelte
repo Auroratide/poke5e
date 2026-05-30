@@ -4,6 +4,7 @@
 	import { EditIcon } from "$lib/ui/icons"
 	import TagListField from "./TagListField.svelte"
 	import { FormGroup } from "$lib/ui/forms"
+	import { m } from "$lib/site/i18n"
 
 	let {
 		value,
@@ -35,7 +36,7 @@
 
 {#if showEditor}
 	<FormGroup>
-		<TagListField label="Tags" bind:value={valueToEdit} {possibleTags} />
+		<TagListField label={m.tags()} bind:value={valueToEdit} {possibleTags} />
 		<ButtonRow>
 			<Button variant="subtle" on:click={onCancel}>Cancel</Button>
 			<Button on:click={onSave}>Save Tags</Button>
