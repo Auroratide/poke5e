@@ -5,6 +5,7 @@
 	import TagListField from "./TagListField.svelte"
 	import { FormGroup } from "$lib/ui/forms"
 	import { m } from "$lib/site/i18n"
+	import NoTags from "./NoTags.svelte";
 
 	let {
 		value,
@@ -49,6 +50,9 @@
 			{#each value as tag}
 				<Tag>{tag}</Tag>
 			{/each}
+			{#if value.length === 0}
+				<NoTags inline />
+			{/if}
 			{#if onsave}
 				<button onclick={onEdit}>
 					<Tag color="success">

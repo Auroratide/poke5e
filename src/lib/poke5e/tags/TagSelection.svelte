@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { TagList } from "./TagList"
 	import { kebab } from "$lib/ui/forms"
+	import { m } from "$lib/site/i18n";
+	import NoTags from "./NoTags.svelte";
 
 	let {
 		checked = $bindable(),
@@ -22,6 +24,9 @@
 				<span class="simulate-bold-space">{tag}</span>
 			</label>
 		{/each}
+		{#if tags.length === 0}
+			<NoTags />
+		{/if}
 	</div>
 </fieldset>
 </div>

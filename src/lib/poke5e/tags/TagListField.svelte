@@ -3,6 +3,8 @@
 	import { Tag } from "$lib/ui/elements"
 	import { ComboboxField, WithButton } from "$lib/ui/forms"
 	import { flip } from "svelte/animate"
+	import { m } from "$lib/site/i18n";
+	import NoTags from "./NoTags.svelte";
 
 	let {
 		label,
@@ -36,16 +38,20 @@
 	<WithButton label="Add" on:click={onAddViaButton} disabled={comboboxValue.trim().length === 0}>
 		<ComboboxField {label} bind:value={comboboxValue} options={comboboxOptions} onconfirm={onAdd} />
 	</WithButton>
-	<ul>
-		{#each value as tag (tag)}
-			<li animate:flip={{ duration: 125 }}>
-				<Tag>
-					<button slot="icon" onclick={onRemove(tag)}>&times;</button>
-					<span>{tag}</span>
-				</Tag>
-			</li>
-		{/each}
-	</ul>
+	{#if value.length === 0}
+		<NoTags />
+	{:else}
+		<ul>
+			{#each value as tag (tag)}
+				<li animate:flip={{ duration: 125 }}>
+					<Tag>
+						<button slot="icon" onclick={onRemove(tag)}>&times;</button>
+						<span>{tag}</span>
+					</Tag>
+				</li>
+			{/each}
+		</ul>
+	{/if}
 </div>
 
 <style>
