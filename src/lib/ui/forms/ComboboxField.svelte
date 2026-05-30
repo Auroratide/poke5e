@@ -59,8 +59,21 @@
 	}
 
 	const scrollOptionIntoView = (index: number, up: boolean) => {
-		const lis = Array.from(listbox?.querySelectorAll("li") ?? [])
-		lis[index]?.scrollIntoView(up)
+		const list = Array.from(listbox?.querySelectorAll("li") ?? [])
+		const li = list[index]
+		if (!li || !listbox) return
+
+		if (up) {
+			if (li.offsetTop < listbox.scrollTop) {
+					listbox.scrollTop = li.offsetTop
+			}
+		} else {
+			const liBottom = li.offsetTop + li.offsetHeight
+			const listboxBottom = listbox.scrollTop + listbox.clientHeight
+			if (liBottom > listboxBottom) {
+					listbox.scrollTop = liBottom - listbox.clientHeight
+			}
+		}
 	}
 
 	const confirm = () => {
