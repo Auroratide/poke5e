@@ -2934,7 +2934,7 @@
 			"duration": "1 minute",
 			"range": "80ft",
 			"description": [
-				"You attempt to charm a creature, sharply decreasing its attack. A target you choose in range must make a WIS save against your Move DC. On a fail, the target adds -2 to all attacks against you for the duration."
+				"You attempt to charm a creature, sharply decreasing its attack. A target you choose in range must make a WIS save against your Move DC. On a fail, the target adds -2 to all attack rolls against you for the duration."
 			],
 			"higherLevels": "The target adds -3 at level 5, -4 at level 10, and -5 at level 17.",
 			"save": {
@@ -4833,7 +4833,7 @@
 			"duration": "instantaneous",
 			"range": "80ft",
 			"description": [
-				"You summon forth a meteor shower that rains down onto the battlefield. All creatures in a 20 foot circle, centered on a point within range, must make a DEX save against your Move DC, taking 5d4 + MOVE dragon damage on a hit, or half as much on a save. After activating this move, your next attack is rolled at disadvantage. If that attack requires a saving throw, the target has advantage."
+				"You summon forth a meteor shower that rains down onto the battlefield. All creatures in a 10-foot-radius circle, centered on a point within range, must make a DEX save against your Move DC, taking 5d4 + MOVE dragon damage on a hit, or half as much on a save. After activating this move, your next attack is rolled at disadvantage. If that attack requires a saving throw, the target has advantage."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 3d10 at level 5, 5d8 at level 10, and 8d8 at level 17.",
 			"damage": {
@@ -6868,7 +6868,7 @@
 			"duration": "instantaneous",
 			"range": "40ft",
 			"description": [
-				"Two pillars of raging hot flames explode out from you and leap towards up to two creature in range. The creature(s) targeted must succeed on a DEX save against your Move DC for each pillar, taking 1d8 + MOVE fire damage on a failure, or half as much on a success. Creatures that fail the save by 5 or more become burned."
+				"Two pillars of raging hot flames explode out from you and leap towards up to two creatures in range. The creature(s) targeted must succeed on a DEX save against your Move DC for each pillar, taking 1d8 + MOVE fire damage on a failure, or half as much on a success. Creatures that fail the save by 5 or more become burned."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
 			"tm": {
@@ -7266,7 +7266,7 @@
 			"duration": "instantaneous",
 			"range": "self (10ft radius)",
 			"description": [
-				"A wheel of flame explodes out from you in a 10 foot radius. All creature in the area must succeed on a DEX save against your Move DC, taking 1d10 + MOVE fire damage on a fail and half as much on a save. If the user is frozen, this move can still be used, thawing out the creature during the attack"
+				"A wheel of flame explodes out from you in a 10 foot radius. All creatures in the area must succeed on a DEX save against your Move DC, taking 1d10 + MOVE fire damage on a fail and half as much on a save. If the user is frozen, this move can still be used, thawing out the creature during the attack"
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
 			"damage": {
@@ -8004,7 +8004,7 @@
 			"duration": "instantaneous",
 			"range": "self (15ft radius)",
 			"description": [
-				"You summon a whirlwind of jagged branches and razor sharp leaves that batter all creatures in a 15-foot-radius circle, centered on you. All creature caught in the flurry must make a DEX saving throw against your Move DC, taking 3d8 + MOVE grass damage on a failure, and half as much on a success. This move saps you of energy, and may not activate it again until after the end of your next turn."
+				"You summon a whirlwind of jagged branches and razor sharp leaves that batter all creatures in a 15-foot-radius circle, centered on you. All creatures caught in the flurry must make a DEX saving throw against your Move DC, taking 3d8 + MOVE grass damage on a failure, and half as much on a success. This move saps you of energy, and may not activate it again until after the end of your next turn."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17.",
 			"damage": {
@@ -11805,7 +11805,7 @@
 			"damage": {
 				"dice": {
 					"1": "1d4",
-					"5": "2d8",
+					"5": "2d4",
 					"10": "2d8",
 					"17": "4d6"
 				},
@@ -12384,7 +12384,7 @@
 			"duration": "instantaneous",
 			"range": "self (30ft radius)",
 			"description": [
-				"You shake the ground with an earth-shattering quake. All creature in range must make a DEX save against your Move DC, taking half damage on a success and full damage on a fail. Creatures in range that are burrowed or in the invulnerable stage of Dig take double damage from this move. Roll a d100 on the table below to determine damage. Raised creatures are immune to the effects and damage of this move.",
+				"You shake the ground with an earth-shattering quake. All creatures in range must make a DEX save against your Move DC, taking half damage on a success and full damage on a fail. Creatures in range that are burrowed or in the invulnerable stage of Dig take double damage from this move. Roll a d100 on the table below to determine damage. Raised creatures are immune to the effects and damage of this move.",
 				{
 					"type": "table",
 					"headers": [
@@ -17026,7 +17026,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You unleash an all out attack that is stronger the less HP you have. Make a melee attack roll against a creature, doing 1d6 + MOVE fighting damage on a hit. If you are below 50% of your maximum health, double the damage. If you are at 10% or below of your maximum health, triple the damage. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities."
+				"You unleash an all out attack that is stronger the less HP you have. Make a melee attack roll against a creature, doing 1d6 + MOVE fighting damage on a hit. If you are below 50% of your maximum health, double the damage. If you are at 10% or below of your maximum health, triple the damage instead. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 1d12 at level 5, 2d8 at level 10, and 4d6 at level 17.",
 			"damage": {
@@ -19544,7 +19544,7 @@
 			"duration": "instantaneous",
 			"range": "50ft",
 			"description": [
-				"While you are asleep, you may activate this move to create a harsh noise that damages all creature within range for 1d8 + MOVE normal damage."
+				"While you are asleep, you may activate this move to create a harsh noise that damages all creatures within range for 1d8 + MOVE normal damage."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
 			"damage": {
@@ -19617,7 +19617,17 @@
 			"description": [
 				"Heal a creature in range for 2d6 + MOVE hitpoints."
 			],
-			"higherLevels": "The dice roll for healing changes to 4d6 at level 5, 6d6 at level 10, and 8d6 at level 17."
+			"higherLevels": "The dice roll for healing changes to 4d6 at level 5, 6d6 at level 10, and 8d6 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "2d6",
+					"5": "4d6",
+					"10": "6d6",
+					"17": "8d6"
+				},
+				"modifier": "MOVE",
+				"type": "healing"
+			}
 		},
 		{
 			"id": "solar-beam",
@@ -19707,7 +19717,7 @@
 			"duration": "instantaneous",
 			"range": "self (20ft radius)",
 			"description": [
-				"You unleash a deafening sound that harms creature in a 20-foot-radius circle, centered on you. Creatures in range must make a CON save against your Move DC, taking 16 flat normal damage on a fail, or half as much on a success."
+				"You unleash a deafening sound that harms creatures in a 20-foot-radius circle, centered on you. Creatures in range must make a CON save against your Move DC, taking 16 normal damage on a fail, or half as much on a success. The damage dealt by this move can't be modified in any way, such as by resistance, bonus damage, or damage reduction (but can be prevented by immunity)."
 			],
 			"save": {
 				"attribute": [
@@ -22609,15 +22619,26 @@
 			"id": "tidy-up",
 			"name": "Tidy Up",
 			"type": "normal",
-			"power": "none",
+			"power": [
+				"dex",
+				"cha"
+			],
 			"time": "1 action",
 			"pp": 10,
-			"duration": "1 action",
-			"range": "30ft",
+			"duration": "1 minute",
+			"range": "self",
 			"description": [
-				"You tidy up and removes the effects of Spikes, Stealth Rock, Sticky Web, Toxic Spikes, and Substitute within range.",
-				"Additionally, the next attack roll you make is made with advantage."
-			]
+				"You do whatever it takes to keep this space clean. Until the end of your next turn, the next attack roll you make is made with advantage. Creatures of your choice within 80ft of you that you can see and are under the effect of Substitute must make a CON save against your Move DC, ending Substitute's effects on a failed save.",
+				"For the next minute, whenever a creature you can see within 80ft of you uses Spikes, Stealth Rock, Sticky Web, Toxic Spikes, or Substitute, you may use your reaction to force the creature to make a CON save against your Move DC. On a failed save, the move dissapates with no effect; the creature still spends a PP using their move.",
+				"Tidy Up's effect on its user persists even when switched out of combat. You may invoke Tidy Up's reaction even as you are being switched out or switched in. For example, if an enemy uses Spikes as a reaction to you switching out, you may invoke Tidy Up's reaction to attempt to dissapate Spikes before the switch completes."
+			],
+			"beta": true,
+			"save": {
+				"attribute": [
+					"con"
+				],
+				"dc": "MOVE"
+			}
 		},
 		{
 			"id": "topsy-turvy",

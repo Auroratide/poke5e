@@ -1,1 +1,1 @@
-{"id":"deep-sea-scale","name":"Escama do Mar Profundo","type":"held item","cost":4000,"description":["Quando segurado por um Clamperl, sua CA aumenta em 1."],"media":{"sprite":"/assets/items/deep-sea-scale/sprite.png"}}
+{"id":"deep-sea-scale","name":"Escama do Mar Profundo","type":"evolution","cost":4000,"description":["Quando segurado por um Clamperl, sua CA aumenta em 1."],"media":{"sprite":"/assets/items/deep-sea-scale/sprite.png"}}

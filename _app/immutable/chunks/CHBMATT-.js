@@ -1,1 +1,0 @@
-import{an as e,in as t,on as n,rn as r,sn as i}from"./CGUT6glx.js";var a={list:[`cool`,`beauty`,`cute`,`clever`,`tough`],name(a){return{cool:()=>i(),beauty:()=>n(),cute:()=>e(),clever:()=>t(),tough:()=>r()}[a]()}};export{a as t};

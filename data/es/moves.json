@@ -6468,13 +6468,6 @@
 			]
 		},
 		{
-			"id": "tidy-up",
-			"name": "Limpieza General",
-			"description": [
-				"Haces limpieza y eliminas los efectos de Púas, Trampa Rocas, Red Viscosa, Púas Tóxicas y Sustituto que se encuentren dentro del alcance. Además, el próximo ataque que realices se hace con ventaja."
-			]
-		},
-		{
 			"id": "topsy-turvy",
 			"name": "Reversión",
 			"description": [

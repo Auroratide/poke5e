@@ -1,1 +1,1 @@
-{"id":"metal-coat","name":"Revestimento Metálico","type":"held item","cost":4000,"description":["O portador adiciona seu bônus de proficiência ao dano do tipo aço que ele causa (uma vez por movimento)."],"media":{"sprite":"/assets/items/metal-coat/sprite.png"}}
+{"id":"metal-coat","name":"Revestimento Metálico","type":"evolution","cost":4000,"description":["O portador adiciona seu bônus de proficiência ao dano do tipo aço que ele causa (uma vez por movimento)."],"media":{"sprite":"/assets/items/metal-coat/sprite.png"}}

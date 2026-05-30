@@ -1679,7 +1679,7 @@
 			"type": "held item",
 			"cost": 4000,
 			"description": [
-				"This item has 1 charge. When the holder is damaged by an attack, its trainer may perform a single Switch as a free action, consuming the charge.",
+				"This item has 1 charge. When the holder is damaged by an attack, its trainer may switch the holder for another of their pokémon as a free action, consuming the charge.",
 				"The Eject Button regains its charge at dawn each day."
 			],
 			"media": {
@@ -1813,8 +1813,8 @@
 		},
 		{
 			"id": "kings-rock",
-			"name": "King’s Rock",
-			"type": "held item",
+			"name": "King's Rock",
+			"type": "evolution",
 			"cost": 4000,
 			"description": [
 				"When a target is hit by a melee attack made by the holder, if the attack roll was a natural 19 or 20, the target flinches."
@@ -2520,7 +2520,7 @@
 		{
 			"id": "metal-coat",
 			"name": "Metal Coat",
-			"type": "held item",
+			"type": "evolution",
 			"cost": 4000,
 			"description": [
 				"The holder adds its proficiency bonus to steel-type damage it deals (once per move)."
@@ -2917,7 +2917,7 @@
 			"type": "held item",
 			"cost": null,
 			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Earth."
+				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Ground."
 			],
 			"media": {
 				"sprite": "/assets/items/earth-plate/sprite.png"
@@ -3106,7 +3106,7 @@
 		{
 			"id": "deep-sea-scale",
 			"name": "Deep Sea Scale",
-			"type": "held item",
+			"type": "evolution",
 			"cost": 4000,
 			"description": [
 				"When held by a Clamperl, its AC is increased by 1."
@@ -3118,7 +3118,7 @@
 		{
 			"id": "deep-sea-tooth",
 			"name": "Deep Sea Tooth",
-			"type": "held item",
+			"type": "evolution",
 			"cost": 4000,
 			"description": [
 				"When held by a Clamperl, its STAB is increased by 1."
