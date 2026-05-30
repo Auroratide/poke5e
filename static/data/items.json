@@ -1813,8 +1813,8 @@
 		},
 		{
 			"id": "kings-rock",
-			"name": "King’s Rock",
-			"type": "held item",
+			"name": "King's Rock",
+			"type": "evolution",
 			"cost": 4000,
 			"description": [
 				"When a target is hit by a melee attack made by the holder, if the attack roll was a natural 19 or 20, the target flinches."
@@ -2520,7 +2520,7 @@
 		{
 			"id": "metal-coat",
 			"name": "Metal Coat",
-			"type": "held item",
+			"type": "evolution",
 			"cost": 4000,
 			"description": [
 				"The holder adds its proficiency bonus to steel-type damage it deals (once per move)."
@@ -3106,7 +3106,7 @@
 		{
 			"id": "deep-sea-scale",
 			"name": "Deep Sea Scale",
-			"type": "held item",
+			"type": "evolution",
 			"cost": 4000,
 			"description": [
 				"When held by a Clamperl, its AC is increased by 1."
@@ -3118,7 +3118,7 @@
 		{
 			"id": "deep-sea-tooth",
 			"name": "Deep Sea Tooth",
-			"type": "held item",
+			"type": "evolution",
 			"cost": 4000,
 			"description": [
 				"When held by a Clamperl, its STAB is increased by 1."
