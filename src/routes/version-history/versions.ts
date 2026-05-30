@@ -14,6 +14,20 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.9",
+		description: [
+			"<strong>New!</strong> Dark mode can now be set in the Settings Menu!",
+			"<strong>Moves:</strong> Overhaul the move Tidy Up to account for the moves it targeted being reactions and not field effects.",
+			"<strong>Moves:</strong> Clarify that Reversal only does times three damage at 10% HP.",
+			"<strong>Items:</strong> Clarify that Eject Button's switch only applies to the holder of the item.",
+			"<strong>Items:</strong> For Metal Coat, King's Rock, Deep Sea Scale, and Deep Sea Tooth, clarify what pokémon can evolve from them.",
+			"<strong>UI:</strong> Slight improvement to action buttons.",
+			"<strong>Bugfix:</strong> Added healing amount to Soft Boiled move.",
+			"<strong>Bugfix:</strong> Correct Life Dew's healing amount at levels 5-10.",
+			"<strong>Bugfix:</strong> Various grammatical errors in moves and items.",
+			"<strong>Bugfix:</strong> Stop trainer page from sometimes rendering the trainer list and pokemon list simultaneously.",
+		],
+	}, {
 		name: "v1.11.8",
 		description: [
 			"Can now click to zoom in on pokemon and trainer images.",
