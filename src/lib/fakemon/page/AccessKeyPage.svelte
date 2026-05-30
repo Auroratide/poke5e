@@ -75,7 +75,7 @@
 			</Saveable>
 		{/if}
 		<ActionArea>
-			<Button href="{Url.fakemon($fakemon?.value.data.readKey)}" variant="ghost">Go Back</Button>
+			<Button href="{Url.fakemon($fakemon?.value.data.readKey)}" variant="subtle">Go Back</Button>
 		</ActionArea>
 	{/if}
 </Card>

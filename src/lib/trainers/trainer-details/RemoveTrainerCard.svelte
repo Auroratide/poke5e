@@ -30,7 +30,7 @@
 			<p>Are you sure you want to remove {name}? This will remove {name} from your list of trainers.</p>
 			<p>This is not a permanent removal. The trainer can still be accessed via their access code, and they will continue to exist on other devices' lists until removed from those devices explicitly.</p>
 			<ActionArea>
-				<Button href="{Url.trainers($trainer?.info.readKey)}" variant="ghost">{m.cancel()}</Button>
+				<Button href="{Url.trainers($trainer?.info.readKey)}" variant="subtle">{m.cancel()}</Button>
 				<Button on:click={remove} variant="danger">{m.remove()}</Button>
 			</ActionArea>
 		</section>

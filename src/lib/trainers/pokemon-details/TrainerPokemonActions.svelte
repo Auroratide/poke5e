@@ -20,12 +20,12 @@
 </script>
 
 <ActionArea>
-	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="ghost">{m.remove()}</Button>
+	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="danger">{m.remove()}</Button>
 	{#if ($evolutions?.evolvesTo(species.id).length ?? 0) > 0}
-		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="ghost">{m.evolve()}</Button>
+		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="subtle">{m.evolve()}</Button>
 	{/if}
 	{#if FeatureToggles.TransferPokemon() && canEdit}
-		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.transferPokemon)}" variant="ghost">{m.transfer()}</Button>
+		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.transferPokemon)}" variant="subtle">{m.transfer()}</Button>
 	{/if}
 	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.restPokemon)}" variant="success">{m.rest()}</Button>
 	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.editPokemon)}">{m.edit()}</Button>

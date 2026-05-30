@@ -1,9 +1,9 @@
 <script lang="ts">
 	import { TagList } from "./TagList"
-	import { Tag, TagList as ListOfTags, Button } from "$lib/ui/elements"
+	import { Tag, TagList as ListOfTags, Button, ButtonRow } from "$lib/ui/elements"
 	import { EditIcon } from "$lib/ui/icons"
 	import TagListField from "./TagListField.svelte"
-	import { ActionArea, FormGroup } from "$lib/ui/forms";
+	import { FormGroup } from "$lib/ui/forms"
 
 	let {
 		value,
@@ -36,10 +36,10 @@
 {#if showEditor}
 	<FormGroup>
 		<TagListField label="Tags" bind:value={valueToEdit} {possibleTags} />
-		<div class="action-row">
-			<Button variant="ghost" on:click={onCancel}>Cancel</Button>
+		<ButtonRow>
+			<Button variant="subtle" on:click={onCancel}>Cancel</Button>
 			<Button on:click={onSave}>Save Tags</Button>
-		</div>
+		</ButtonRow>
 	</FormGroup>
 {:else}
 	<p>
@@ -73,12 +73,5 @@
 
 	button:hover, button:focus {
 		filter: brightness(1.25);
-	}
-
-	.action-row {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5em;
-		justify-content: flex-end;
 	}
 </style>

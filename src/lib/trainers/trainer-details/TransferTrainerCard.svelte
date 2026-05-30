@@ -92,7 +92,7 @@
 			</Saveable>
 		{/if}
 		<ActionArea>
-			<Button href="{Url.trainers($trainer?.info.readKey)}" variant="ghost">Go Back</Button>
+			<Button href="{Url.trainers($trainer?.info.readKey)}" variant="subtle">Go Back</Button>
 		</ActionArea>
 	{/if}
 </Card>

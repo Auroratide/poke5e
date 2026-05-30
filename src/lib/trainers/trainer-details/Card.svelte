@@ -34,14 +34,14 @@
 	</div>
 	<Info trainer={$trainer.info} editable={canEdit} on:update={onUpdate} on:update-item={onUpdateItem} />
 	<ActionArea>
-		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="ghost">
+		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="subtle">
 			{#if $trainer.update}
 				{m.transfer()}
 			{:else}
 				{m.accessKey()}
 			{/if}
 		</Button>
-		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.removeTrainer)}" variant="ghost">{m.remove()}</Button>
+		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.removeTrainer)}" variant="danger">{m.remove()}</Button>
 		{#if $trainer.update}
 			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.restTrainer)}" variant="success">{m.rest()}</Button>
 			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.editTrainer)}">{m.edit()}</Button>

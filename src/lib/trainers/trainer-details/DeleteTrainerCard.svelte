@@ -32,7 +32,7 @@
 					<p>Are you sure you want to retire {name}? This will delete all of their data, including all of their pokemon, from our records.</p>
 					<p><strong>This is permanent and cannot be undone!</strong></p>
 					<ActionArea>
-						<Button href="{Url.trainers($trainer?.info.readKey)}" variant="ghost">{m.cancel()}</Button>
+						<Button href="{Url.trainers($trainer?.info.readKey)}" variant="subtle">{m.cancel()}</Button>
 						<Button on:click={retire} variant="danger">{m.delete()}</Button>
 					</ActionArea>
 			</section>

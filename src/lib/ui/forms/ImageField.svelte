@@ -142,7 +142,7 @@
 		{/if}
 	</div>
 	<div class="remove-image" class:hide={!canRemove}>
-		<Button variant="ghost" on:click={onRemove}>{m.removeAvatar()}</Button>
+		<Button variant="subtle" on:click={onRemove}>{m.removeAvatar()}</Button>
 	</div>
 </div>
 

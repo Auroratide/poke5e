@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { ButtonRow } from "../elements";
+
 	export let error: string | undefined = undefined
 </script>
 
@@ -7,14 +9,16 @@
 		<p class="error">{error}</p>
 	{/if}
 	<div class="row">
-		<slot></slot>
+		<ButtonRow>
+			<slot></slot>
+		</ButtonRow>
 	</div>
 </div>
 
 <style>
 	.action-area {
 		margin: 1em 1em 0;
-		padding: 0.5em 0.25em 0.75em;
+		padding: 1em 0.25em 1.25em;
 		border-block-start: 0.0625em solid var(--skin-input-bg);
 	}
 

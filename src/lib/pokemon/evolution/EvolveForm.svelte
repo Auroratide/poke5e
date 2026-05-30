@@ -64,7 +64,7 @@
 			{/if}
 		</section>
 		<ActionArea>
-			<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>
+			<Button on:click={cancel} variant="subtle" {disabled}>{m.cancel()}</Button>
 			<Button type="submit" {disabled}>{m.evolve()}</Button>
 		</ActionArea>
 	{/if}

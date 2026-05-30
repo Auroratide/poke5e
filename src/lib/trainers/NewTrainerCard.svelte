@@ -46,7 +46,7 @@
 		</Fieldset>
 		<HintText>Once your trainer is created, you will be able to edit their stats, Pokémon, and inventory!</HintText>
 		<ActionArea>
-			<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>
+			<Button on:click={cancel} variant="subtle" {disabled}>{m.cancel()}</Button>
 			<Button type="submit" {disabled}>{m.finish()}</Button>
 		</ActionArea>
 	</Form>

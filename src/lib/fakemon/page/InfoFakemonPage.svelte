@@ -33,8 +33,8 @@
 			</section>
 		{/if}
 		<ActionArea>
-			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.accessKey)}" variant="ghost">{m.accessKey()}</Button>
-			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.remove)}" variant="ghost">{m.remove()}</Button>
+			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.accessKey)}" variant="subtle">{m.accessKey()}</Button>
+			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.remove)}" variant="danger">{m.remove()}</Button>
 			{#if canEdit}
 				<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.edit)}">{m.edit()}</Button>
 			{/if}

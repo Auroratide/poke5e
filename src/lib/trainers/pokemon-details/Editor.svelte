@@ -132,7 +132,7 @@
 		<StabFieldset bind:value={stab} {disabled} />
 	</FormDetails>
 	<ActionArea error={!isValid ? m.oneOrMoreFieldsAboveHaveAnIssue() : undefined}>
-		<Button on:click={cancel} variant="ghost" {disabled}>{m.cancel()}</Button>
+		<Button on:click={cancel} variant="subtle" {disabled}>{m.cancel()}</Button>
 		<Button type="submit" disabled={disabled || !isValid}>{m.finish()}</Button>
 	</ActionArea>
 </Form>
