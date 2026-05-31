@@ -42,6 +42,7 @@
 	import { TagListField } from "$lib/poke5e/tags"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import { fakemonStore } from "../store"
+	import { HabitatFieldset } from "$lib/poke5e/habitat";
 
 	const allTags = fakemonStore.tags()
 
@@ -85,6 +86,7 @@
 	let notes = species.data.notes ?? ""
 	let evolutions = allEvolutions?.allEvolutions(species.id)?.map((it) => it.copy()) ?? []
 	let tags = fakemon.tags
+	let habitat = structuredClone(fakemon.species.habitat)
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -113,6 +115,7 @@
 					abilities: abilityPool.data,
 					moves: movePool.data,
 					media: originalMedia.data,
+					habitat,
 					notes,
 				}).data,
 				tags: tags,
@@ -156,6 +159,7 @@
 	<AbilityPoolFieldset bind:value={abilityPool} {disabled} />
 	<MovePoolFieldset bind:value={movePool} {disabled} />
 	<EvolutionsFieldset species={species.id} bind:evolutions={evolutions} {allSpecies} {disabled} />
+	<HabitatFieldset bind:value={habitat} {disabled} />
 	<Fieldset title={m.description()}>
 		<MarkdownField label={m.generalNotes()} bind:value={notes} {disabled} placeholder={m.anyOtherImportantNotes()} rows={6} />
 		{#if FeatureToggles.Tagging()}

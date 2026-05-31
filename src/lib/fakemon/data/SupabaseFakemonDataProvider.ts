@@ -205,7 +205,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_sprite_attribution_href: fakemon.media.attribution?.sprite?.href ?? null,
 			_shiny_hue_rotation: fakemon.media.customization?.shinyHue ?? 0,
 			_notes: fakemon.notes ?? "",
-			_biomes: [],
+			_biomes: fakemon.habitat.biomes,
 			_tags: tags,
 		}
 	}

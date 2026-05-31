@@ -211,6 +211,8 @@
 	"tableOfContents": "Table of Contents",
 	"tags": "Tags",
 	"noTagsYet": "No tags yet",
+	"loading": "Loading",
+	"habitat": "Habitat",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},
