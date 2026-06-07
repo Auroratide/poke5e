@@ -159,7 +159,9 @@
 	<AbilityPoolFieldset bind:value={abilityPool} {disabled} />
 	<MovePoolFieldset bind:value={movePool} {disabled} />
 	<EvolutionsFieldset species={species.id} bind:evolutions={evolutions} {allSpecies} {disabled} />
-	<HabitatFieldset bind:value={habitat} {disabled} />
+	{#if FeatureToggles.FakemonBiomes()}
+		<HabitatFieldset bind:value={habitat} {disabled} />
+	{/if}
 	<Fieldset title={m.description()}>
 		<MarkdownField label={m.generalNotes()} bind:value={notes} {disabled} placeholder={m.anyOtherImportantNotes()} rows={6} />
 		{#if FeatureToggles.Tagging()}

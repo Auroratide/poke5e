@@ -23,4 +23,5 @@ export const FeatureToggles = {
 	TransferPokemon: toggle("TransferPokemon"),
 	NewReferenceList: toggle("NewReferenceList"),
 	Tagging: toggle("Tagging"),
+	FakemonBiomes: toggle("FakemonBiomes"),
 }
