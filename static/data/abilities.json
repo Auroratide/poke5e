@@ -1197,7 +1197,7 @@
 		{
       "id": "seed-sower",
       "name": "Seed Sower",
-      "description": "When hit by a damaging attack, this Pokémon may use its reaction to use the Grassy Terrain move. The Pokémon does not need to know this move, and it costs no PP to use."
+      "description": "When hit by a damaging attack, this Pokémon may use its reaction to use the Grassy Terrain move. The Pokémon does not need to know this move, and it costs no PP to use. This may be used up to three times per long rest."
     },
     {
       "id": "serene-grace",
