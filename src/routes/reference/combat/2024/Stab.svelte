@@ -2,7 +2,7 @@
 	import { Details } from "$lib/ui/elements"
 
 </script>
-<p><abbr>STAB</abbr> stands for "Same-Type Attack Bonus". When a Pokémon uses a move with the same type as one of its own types, it gets a STAB bonus added to damage rolls. Otherwise, STAB is 0.</p>
+<p><abbr>STAB</abbr> stands for "Same-Type Attack Bonus". When a Pokémon uses a move with the same type as one of its own types, it gets a STAB bonus added to damage rolls.</p>
 <p>When STAB applies, it is equal to the pokémon's <strong>Proficiency Bonus</strong>. Additionally, STAB cannot be negative; treat STAB as 0 in these cases.</p>
 <p>STAB may only be added once per move per target, even for moves that deal damage over time like Leech Seed and Smog, or moves that hit a target multiple times like Bubble and Fury Swipes.</p>
 <Details title="STAB Examples">
