@@ -9,6 +9,7 @@
 	import LanguageSection from "./LanguageSection.svelte"
 	import DarkModeSection from "./DarkModeSection.svelte"
 	import { m } from "$lib/site/i18n"
+	import BetaTestingSection from "./BetaTestingSection.svelte"
 </script>
 
 <Title value="{m["settings.title"]()}" />
@@ -23,6 +24,7 @@
 				<li><a href="#light-dark-colors">Light/Dark Colors</a></li>
 				<li><a href="#backups-and-restoration">Backups and Restoration</a></li>
 				<li><a href="#official-fakemon">"Official" Fakémon</a></li>
+				<li><a href="#beta-testing">Beta Testing</a></li>
 			</ul>
 		</section>
 		<LanguageSection />
@@ -30,5 +32,6 @@
 		<DarkModeSection />
 		<BackupsSection />
 		<OfficialFakemonSection />
+		<BetaTestingSection />
 	</Card>
 </Page>

@@ -69,6 +69,7 @@ export const Url = {
 	},
 	encounterTool: () => localizeUrl(resolve("/encounter-tool")).pathname,
 	settings: () => localizeUrl(resolve("/settings")).pathname,
+	betaTesting: () => localizeUrl(resolve("/beta-testing")).pathname,
 	external: {
 		auroratide: () => "https://auroratide.com",
 		github: () => "https://github.com/Auroratide/poke5e",
