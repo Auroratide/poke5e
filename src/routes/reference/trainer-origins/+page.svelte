@@ -5,13 +5,19 @@
 	import { m } from "$lib/site/i18n"
 	import { capitalize } from "$lib/utils/string"
 	import { Attributes } from "$lib/dnd/attributes"
-	import { ColumnedList } from "$lib/ui/elements"
+	import { ColumnedList, Tag } from "$lib/ui/elements"
 	import { TrainerOrigin } from "$lib/trainers/origins"
+	import { rulesVersion } from "$lib/site/rules-version";
 
 	export let data: PageData
 </script>
 
 <ReferencePage title="Trainer Origins">
+	{#if $rulesVersion === "2024"}
+		<section>
+			<p class="smaller"><Tag>Note!</Tag> This has not (yet) been updated for 5.5e's character origins rules.</p>
+		</section>
+	{/if}
 	<section>
 		<p>Trainers come from all walks of life. When you create a trainer, you may choose one of these origins, gaining its ability score bonuses, skill proficiencies, origin feat, and languages.</p>
 		<ColumnedList let:item items={data.items} columns={2}>
@@ -59,3 +65,7 @@
 		</section>
 	{/each}
 </ReferencePage>
+
+<style>
+	.smaller { font-size: var(--font-sz-venus); }
+</style>
