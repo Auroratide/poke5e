@@ -1,0 +1,1 @@
+import{lo as e}from"./D-y9XORc.js";var t=class extends e{get proficiencyBonus(){return 2+Math.floor((this.data-1)/4)}};export{t};
