@@ -14,6 +14,14 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.10",
+		description: [
+			"Beta testing options now available on Settings Page.",
+			"<strong>Reference</strong>: Amended STAB rules to remove 'STAB is 0' terminology, which now enables rules which were using STAB as a modifer.",
+			"<strong>Abilities</strong>: Add a limit to the uses of Seed Sower, to remove the potential for infinite healing.",
+			"<strong>Abilities</strong>: Wind Power is now properly affected by Tailwind and Aeroblast.",
+		],
+	}, {
 		name: "v1.11.9",
 		description: [
 			"<strong>New!</strong> Dark mode can now be set in the Settings Menu!",
