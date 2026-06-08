@@ -364,6 +364,7 @@ type FakemonRow = {
 	shiny_hue_rotation: number,
 	notes?: string,
 	tags: string[],
+	biomes: string[],
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -499,7 +500,7 @@ async function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) 
 			},
 			notes: row.notes ?? "",
 			habitat: {
-				biomes: [],
+				biomes: row.biomes,
 			},
 		},
 		tags: TagList.from(row.tags),

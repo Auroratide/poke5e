@@ -229,6 +229,24 @@ test("tags: do not own fakemon", async () => {
 	expect(afterUpdate.tags).toEqual(TagList.from(["locally stored"]))
 })
 
+test("biomes", async () => {
+	const draft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Droideon",
+		}).data,
+		tags: TagList.empty(),
+	})
+
+	const added = await provider.add(draft.data.species)
+
+	added.data.species.habitat.biomes = ["forest"]
+	const didUpdate = await provider.update(added)
+	expect(didUpdate).toBe(true)
+
+	const afterUpdate = await provider.getByReadKey(added.data.readKey)
+	expect(afterUpdate.species.habitat.biomes).toEqual(["forest"])
+})
+
 async function addFakemonWithDeprecatedAbilityField(pokemon: PokemonSpecies) {
 	const { data, error } = await supabase.rpc("new_fakemon", {
 		_species_name: pokemon.name,
