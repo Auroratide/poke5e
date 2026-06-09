@@ -1,0 +1,1 @@
+import{lo as e}from"./D3X7nUzv.js";var t=class extends e{get contest(){return this.data.contest}get appeal(){return this.data.appeal}get jam(){return this.data.jam}get effect(){return this.data.effect}};export{t};
