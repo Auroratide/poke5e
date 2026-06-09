@@ -24,4 +24,5 @@ export const FeatureToggles = {
 	NewReferenceList: toggle("NewReferenceList"),
 	Tagging: toggle("Tagging"),
 	FakemonBiomes: toggle("FakemonBiomes"),
+	LevelUp: toggle("LevelUp"),
 }

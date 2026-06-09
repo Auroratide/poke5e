@@ -1,0 +1,1 @@
+export { default as LevelUpTrainer } from "./LevelUpTrainer.svelte"

@@ -13,4 +13,5 @@ export const PageAction = {
 	accessKey: "access-key",
 	fullList: "full-list",
 	transferPokemon: "transfer-pokemon",
+	levelUp: "level-up",
 }

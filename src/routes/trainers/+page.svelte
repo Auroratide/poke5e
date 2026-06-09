@@ -32,6 +32,7 @@
 	import { error } from "$lib/site/errors"
 	import { MaintenanceAnnouncement, MaintenanceOverlay } from "$lib/site/maintenance"
 	import { TransferPokemonPage } from "$lib/trainers/pokemon-transfer"
+	import LevelUpPage from "$lib/trainers/LevelUpPage.svelte";
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: accessKey = browser ? $page.url.searchParams.get("access_key")?.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "") : undefined
@@ -141,6 +142,8 @@
 					<RemovePokemonCard {trainer} id={pokemonId} />
 				{:else if pokemonId && action === PageAction.transferPokemon}
 					<TransferPokemonPage {trainer} id={pokemonId} />
+				{:else if action === PageAction.levelUp}
+					<LevelUpPage {trainer} />
 				{:else if pokemonId}
 					<PokemonCard {trainer} id={pokemonId} />
 				{:else if action === PageAction.restTrainer}
