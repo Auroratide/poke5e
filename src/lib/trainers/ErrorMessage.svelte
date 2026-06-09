@@ -20,8 +20,11 @@
 	{#if referenceId != null}
 		<p><strong>Error ID</strong>: <code>{referenceId}</code></p>
 	{/if}
-	<p>If you are seeing this error, then something may be wrong with one of the downstream systems. Please check back later to see if this is still an issue!</p>
-	<p class="font-sm">You can also help by <a class="error" href="https://github.com/Auroratide/poke5e/issues/new">reporting this error</a>!</p>
+	<p><strong>There is a known issue currently happening with a downstream service.</strong></p>
+	<p>For now, status updates can be seen here: <a href="https://status.supabase.com/incidents/308hm84ntd47">Supabase Status Update</a></p>
+	<p>I have made a ticket to investigate what I can do to be more immune to this problem in the future. I apologize for the issue!</p>
+	<!-- <p>If you are seeing this error, then something may be wrong with one of the downstream systems. Please check back later to see if this is still an issue!</p> -->
+	<!-- <p class="font-sm">You can also help by <a class="error" href="https://github.com/Auroratide/poke5e/issues/new">reporting this error</a>!</p> -->
 </section>
 
 <style>
