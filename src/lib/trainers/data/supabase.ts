@@ -34,6 +34,7 @@ import { TrainerLocalStorage } from "./TrainerLocalStorage"
 import { Stab, type StabBase } from "$lib/pokemon/stab"
 import { Ability } from "$lib/pokemon/ability"
 import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
+import { TransferCode } from "../pokemon-transfer"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -134,6 +135,38 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 					feats,
 				}))
 			})))
+	}
+
+	private getOnePokemon = async (trainerId: string, pokemonId: PokemonId, readKey: ReadWriteKey): Promise<TrainerPokemon> => {
+		return await this.supabase.rpc("get_pokemon", { _trainer_id: trainerId })
+			.select()
+			.then(({ data, error }) => {
+				if (error) {
+					throw new TrainerDataProviderError(`Could not trainer's pokemon (${readKey}).`, error)
+				}
+
+				const theOne = data.find((it) => it.id.toString() === pokemonId.toString())
+				if (theOne == null) {
+					throw new TrainerDataProviderError(`Could not find trainer's pokemon (${readKey}) (${pokemonId}).`, error)
+				}
+
+				return rowToPokemon(theOne, this.getUserAssetResource)
+			})
+			.then((thePokemon) => this.getMoveset(thePokemon.id).then((moves) => ({
+					...thePokemon,
+					moves,
+				}))
+			)
+			.then((thePokemon) => this.getHeldItems(thePokemon.id).then((items) => ({
+					...thePokemon,
+					items,
+				}))
+			)
+			.then((thePokemon) => this.getPokemonFeats(thePokemon.id).then((feats) => ({
+					...thePokemon,
+					feats,
+				}))
+			)
 	}
 
 	newTrainer = async (info: Pick<TrainerInfo, "name" | "description">): Promise<TrainerData & WithWriteKey> => {
@@ -735,6 +768,20 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			...trainerPokemon,
 			id: data.toString(),
 		}
+	}
+
+	acceptPokemonTransfer = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, trainerId: TrainerId, transferCode: TransferCode): Promise<TrainerPokemon> => {
+		const { data, error } = await this.supabase.rpc("accept_pokemon_transfer", {
+			_write_key: writeKey,
+			_transfer_code: TransferCode.raw(transferCode),
+		}).single<string>()
+
+		if (error) {
+			console.error(error)
+			throw new TrainerDataProviderError(`Could not accept transfer of code (${transferCode}) for (${readKey}).`, error)
+		}
+
+		return await this.getOnePokemon(trainerId, data, readKey)
 	}
 
 	reorderPokemonTeam = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, order: TrainerPokemon[]): Promise<boolean> => {

@@ -6,6 +6,7 @@ import { error } from "$lib/site/errors"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import { TrainerLocalStorage } from "./data/TrainerLocalStorage"
 import { TagList } from "$lib/poke5e/tags"
+import type { TransferCode } from "./pokemon-transfer"
 
 type AllTrainers = {
 	[readKey: ReadWriteKey]: TrainerData & WithUpdater & WithRemover & WithTags
@@ -36,6 +37,7 @@ type TrainerUpdater = {
 	pokemonFeats: (info: TrainerPokemon) => Promise<void>
 	move: (info: LearnedMove, options?: UpdaterOptions) => Promise<void>
 	addToTeam: (pokemon: PokemonSpecies) => Promise<TrainerPokemon>
+	acceptTransfer: (code: TransferCode) => Promise<TrainerPokemon>
 	reorderTeam: (info: TrainerPokemon[]) => Promise<void>
 	removeFromTeam: (id: string) => Promise<void>
 }
@@ -432,6 +434,22 @@ const createStore = () => {
 								return result
 							}).catch((e: Error) => {
 								error.show("addPokemonToTeam", e)
+								throw e
+							})
+						},
+						acceptTransfer: (code: TransferCode) => {
+							return provider.acceptPokemonTransfer(data.writeKey, data.info.readKey, data.info.id, code).then((result) => {
+								storeUpdateOne(readKey, (prev) => {
+									const pokemonList = [...prev.pokemon, result]
+
+									return {
+										...prev,
+										pokemon: pokemonList,
+									}
+								})
+
+								return result
+							}).catch((e: Error) => {
 								throw e
 							})
 						},

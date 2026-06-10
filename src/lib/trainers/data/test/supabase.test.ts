@@ -9,6 +9,9 @@ import type { PokemonSpecies } from "$lib/poke5e/species"
 import type { ReadWriteKey } from "$lib/trainers/types"
 import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
 import { TrainerLocalStorage } from "../TrainerLocalStorage"
+import { provider as transferProvider } from "../../pokemon-transfer"
+import { stubMove } from "$lib/moves/test/stubs-2"
+import { stubLearnedMove } from "$lib/trainers/test/stubs"
 
 const ABILITIES = {
 	disguise: stubAbility({
@@ -211,6 +214,49 @@ test("tags: do not own trainer", async () => {
 	const afterUpdate = await provider.getTrainer(addedTrainer.info.readKey)
 	expect(afterUpdate.info.tags).toEqual(TagList.from(["lass"]))
 	expect(afterUpdate.pokemon[0].tags).toEqual(TagList.from(["ghost"]))
+})
+
+test("accepting a transfer", async () => {
+	// given
+	const firstTrainerToAdd = {
+		name: "Renibel",
+		description: "Likes cryptids.",
+	}
+
+	const secondTrainerToAdd = {
+		name: "Iris",
+		description: "Likes flowers.",
+	}
+
+	const firstSpeciesToAdd = stubPokemonSpecies({
+		id: "mimikyu",
+	})
+
+	const someMove = stubLearnedMove({
+		id: "tackle"
+	})
+
+	const addedFirstTrainer = await provider.newTrainer(firstTrainerToAdd)
+	const addedPokemon = await provider.addPokemonToTeam(addedFirstTrainer.writeKey, addedFirstTrainer.info.readKey, addedFirstTrainer.info.id, firstSpeciesToAdd)
+	
+	// given: some move set, to test that the transfer conducts these too
+	addedPokemon.moves.push(someMove)
+	await provider.updateMoveset(addedFirstTrainer.writeKey, addedFirstTrainer.info.readKey, addedPokemon.id, addedPokemon.moves)
+
+	const addedSecondTrainer = await provider.newTrainer(secondTrainerToAdd)
+
+	const transferCode = await transferProvider.generate(addedFirstTrainer.writeKey, addedPokemon.id)
+
+	// when
+	const transferedPokemon = await provider.acceptPokemonTransfer(addedSecondTrainer.writeKey, addedSecondTrainer.info.readKey, addedSecondTrainer.info.id, transferCode)
+
+	// then
+	const refreshedSecondTrainer = await provider.getTrainer(addedSecondTrainer.info.readKey)
+	expect(refreshedSecondTrainer.pokemon).toHaveLength(1)
+	expect(refreshedSecondTrainer.pokemon[0].pokemonId.data).toEqual("mimikyu")
+	expect(refreshedSecondTrainer.pokemon[0].moves[0].moveId).toEqual("tackle")
+	expect(transferedPokemon.pokemonId.data).toEqual("mimikyu")
+	expect(transferedPokemon.moves[0].moveId).toEqual("tackle")
 })
 
 async function addPokemonWithDeprecatedAbilityField(writeKey: ReadWriteKey, pokemon: PokemonSpecies) {
