@@ -1,10 +1,20 @@
+<script module>
+	export type LoaderSize = "auto" | "sm"
+</script>
+
 <script lang="ts">
 	import { PokeballIcon } from "$lib/ui/icons"
 
-	export let caption: string | undefined = undefined
+	let {
+		caption,
+		size = "auto",
+	}: {
+		caption?: string,
+		size?: LoaderSize
+	} = $props()
 </script>
 
-<div class="loader">
+<div class="loader size-{size}">
 	<div class="icon">
 		<PokeballIcon label={caption ?? "Loading"} />
 	</div>
@@ -34,6 +44,15 @@
 	p {
 		color: var(--skin-local-color, var(--skin-content));
 		font-size: 1.25em;
+	}
+
+	.size-sm .icon {
+		width: 1.5em;
+		height: 1.5em;
+	}
+
+	.size-sm p {
+		font-size: 1em;
 	}
 
 	@keyframes spin {

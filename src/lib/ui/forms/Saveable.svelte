@@ -1,18 +1,28 @@
 <script lang="ts">
-	import Loader from "../elements/Loader.svelte"
+	import type { Snippet } from "svelte";
+	import Loader, { type LoaderSize } from "../elements/Loader.svelte"
 
-	export let saving: boolean
-	export let caption: string = "Saving..."
+	let {
+		saving,
+		caption = "Saving...",
+		children,
+		size = "auto",
+	}: {
+		saving: boolean,
+		caption?: string,
+		children?: Snippet,
+		size?: LoaderSize
+	} = $props()
 </script>
 
 <div class="relative">
 	<div class:muted={saving} inert={saving}>
-		<slot></slot>
+		{@render children?.()}
 	</div>
 	{#if saving}
 		<div class="center-overlay" aria-live="assertive">
 			<div class="fixed">
-					<Loader {caption} />
+				<Loader {caption} {size} />
 			</div>
 		</div>
 	{/if}
