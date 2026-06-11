@@ -421,7 +421,7 @@ const createStore = () => {
 							})
 						},
 						addToTeam: (pokemon: PokemonSpecies) => {
-							return provider.addPokemonToTeam(data.writeKey, data.info.readKey, data.info.id, pokemon, data.pokemon.length).then((result) => {
+							return provider.addPokemonToTeam(data.writeKey, data.info.readKey, data.info.id, pokemon, data.pokemon.length + 1).then((result) => {
 								storeUpdateOne(readKey, (prev) => {
 									const pokemonList = [...prev.pokemon, result]
 
