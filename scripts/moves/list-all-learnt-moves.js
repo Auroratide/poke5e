@@ -83,7 +83,11 @@ function categorizeMoves(pokemon) {
       info.methods.add(key);
       if (key === 'levelup') {
         const lvl = detail.level_learned_at;
-        if (info.level === null || lvl < info.level) info.level = lvl;
+				const where = detail.version_group.name
+        if (info.level === null || lvl < info.level) { 
+					info.level = lvl;
+					info.where = where
+				}
       }
     }
   }
@@ -93,7 +97,7 @@ function categorizeMoves(pokemon) {
 function buildJsonEntry(name, moveInfo) {
   const buckets = { levelup: [], tm: [], egg: [] };
   for (const [move, info] of moveInfo) {
-    if (info.methods.has('levelup')) buckets.levelup.push([info.level, move]);
+    if (info.methods.has('levelup')) buckets.levelup.push([info.level, move, info.where]);
     if (info.methods.has('tm')) buckets.tm.push(move);
     if (info.methods.has('egg')) buckets.egg.push(move);
   }
@@ -101,19 +105,6 @@ function buildJsonEntry(name, moveInfo) {
   buckets.tm.sort();
   buckets.egg.sort();
   return { pokemon: name, moves: buckets };
-}
-
-function buildMarkdownSection(name, moveInfo) {
-  const lines = [`## ${name}`];
-  for (const move of [...moveInfo.keys()].sort()) {
-    const info = moveInfo.get(move);
-    const labels = [];
-    if (info.methods.has('levelup')) labels.push(`level up: ${info.level}`);
-    if (info.methods.has('tm')) labels.push('tm');
-    if (info.methods.has('egg')) labels.push('egg');
-    lines.push(`${move} (${labels.join(', ')})`);
-  }
-  return lines.join('\n');
 }
 
 async function main() {
@@ -128,20 +119,16 @@ async function main() {
     const moveInfo = categorizeMoves(data);
     return {
       json: buildJsonEntry(data.name, moveInfo),
-      md: buildMarkdownSection(data.name, moveInfo),
     };
   });
 
   const ok = entries.filter(Boolean);
   const jsonOut = ok.map((e) => e.json);
-  const mdOut = ok.map((e) => e.md).join('\n\n') + '\n';
 
-  await fs.writeFile('pokemon-moves.json', JSON.stringify(jsonOut, null, 2));
-  await fs.writeFile('pokemon-moves.md', mdOut);
+  await fs.writeFile('scripts/moves/out/pokemon-moves.json', JSON.stringify(jsonOut, null, "\t"));
 
   console.log('\nDone.');
   console.log(`  pokemon-moves.json  (${jsonOut.length} Pokemon)`);
-  console.log(`  pokemon-moves.md`);
 }
 
 main().catch((err) => {
