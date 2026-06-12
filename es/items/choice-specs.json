@@ -1,0 +1,1 @@
+{"id":"choice-specs","name":"Choice Specs","type":"held item","cost":4000,"beta":true,"description":["Doubles the holder's Move Power modifier for attack rolls and Save DCs. When the holder uses a move, then until the end of its next turn, it may not activate any move different from the one it just used."],"media":{"sprite":"/assets/items/choice-specs/sprite.png"}}

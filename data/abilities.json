@@ -1152,7 +1152,7 @@
     {
       "id": "sand-force",
       "name": "Sand Force",
-      "description": "During a Sandstorm, this Pokémon can double its STAB when it hits an opponent."
+      "description": "This Pokémon is immune to Sandstorm damage. During a Sandstorm, this Pokémon can double its STAB when it hits an opponent."
     },
     {
       "id": "sand-rush",
@@ -1622,7 +1622,7 @@
 		{
       "id": "well-baked-body",
       "name": "Well-Baked Body",
-      "description": "This Pokémon takes no damage from fire or fire-type attacks. Instead, its AC increases by 2 until it takes damage or after 1 minute, whichever happens first."
+      "description": "This Pokémon takes no damage from fire or fire-type attacks. Instead, its AC increases by 2 until it takes damage or after 1 minute, whichever happens first. This effect does not stack with itself."
     },
     {
       "id": "white-smoke",
