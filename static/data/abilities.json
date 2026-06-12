@@ -1152,7 +1152,7 @@
     {
       "id": "sand-force",
       "name": "Sand Force",
-      "description": "During a Sandstorm, this Pokémon can double its STAB when it hits an opponent."
+      "description": "This Pokémon is immune to Sandstorm damage. During a Sandstorm, this Pokémon can double its STAB when it hits an opponent."
     },
     {
       "id": "sand-rush",
