@@ -2405,33 +2405,36 @@
 			"name": "Choice Band",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"Doubles the holder's MOVE modifier for damage rolls. When the holder uses a move, then until the end of its next turn, it may not activate any move different from the one it just used."
+			],
 			"media": {
 				"sprite": "/assets/items/choice-band/sprite.png"
-			},
-			"_ingameEffect": "Held in battle\n:   Holder has 1.5× its Attack.  When the holder attempts to use a move, all its other moves are disabled until it leaves battle or loses this item.\n\n    The restriction ends even if this item is swapped for another Choice item\nvia trick or switcheroo."
+			}
 		},
 		{
 			"id": "choice-scarf",
 			"name": "Choice Scarf",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"After executing a move, the holder gains 10ft of movement, and attacks of opportunity against it have disadvantage. Until the end of its next turn, it may not activate any move different from the one it just used."
+			],
 			"media": {
 				"sprite": "/assets/items/choice-scarf/sprite.png"
-			},
-			"_ingameEffect": "Held: Increases the holder's Speed by 50%, but restricts it to the first move it uses until it leaves battle or loses this item.  If this item is swapped for another Choice item via Trick or Switcheroo, the holder's restriction is still lifted, but it will again be restricted to the next move it uses.\n(Quirk: If the holder is switched in by U-Turn and it also knows U-Turn, U-Turn becomes its restricted move.)"
+			}
 		},
 		{
 			"id": "choice-specs",
 			"name": "Choice Specs",
 			"type": "held item",
 			"cost": 4000,
-			"description": null,
+			"description": [
+				"Doubles the holder's Move Power modifier for attack rolls and Save DCs. When the holder uses a move, then until the end of its next turn, it may not activate any move different from the one it just used."
+			],
 			"media": {
 				"sprite": "/assets/items/choice-specs/sprite.png"
-			},
-			"_ingameEffect": "Held: Increases the holder's Special Attack by 50%, but restricts it to the first move it uses until it leaves battle or loses this item.  If this item is swapped for another Choice item via Trick or Switcheroo, the holder's restriction is still lifted, but it will again be restricted to the next move it uses.\n(Quirk: If the holder is switched in by U-Turn and it also knows U-Turn, U-Turn becomes its restricted move.)"
+			}
 		},
 		{
 			"id": "black-belt",
