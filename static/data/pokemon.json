@@ -162317,10 +162317,10 @@
 			"attributes": {
 				"str": 13,
 				"dex": 10,
-				"con": 17,
+				"con": 16,
 				"int": 6,
 				"wis": 14,
-				"cha": 10
+				"cha": 12
 			},
 			"hp": 69,
 			"skills": [
