@@ -14,6 +14,16 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.11",
+		description: [
+			"Made a backend change which should decrease occurrence of the trainers and fakemon pages being unavailable.",
+			"Show max SR and pokéslots on trainer sheet.",
+			"<strong>Items</strong>: Added Choice Scarf, Choice Band, and Choice Specs.",
+			"<strong>Abilities</strong>: Place a stacking limit on the AC bonus of Well-Baked Body so it cannot stack infinitely.",
+			"<strong>Abilities</strong>: Sand Force now grants Sandstorm immunity.",
+			"<strong>Pokémon</strong>: Reallocate Clodsire's attributes to accurately reflect Wooper's evolution ASI bonus.",
+		],
+	}, {
 		name: "v1.11.10",
 		description: [
 			"Beta testing options now available on Settings Page.",
