@@ -1,4 +1,5 @@
 export { default as Art } from "./Art.svelte"
+export { default as BetaStatement } from "./BetaStatement.svelte"
 export { default as Button } from "./Button.svelte"
 export { default as ButtonRow } from "./ButtonRow.svelte"
 export { default as CodeBlock } from "./CodeBlock.svelte"

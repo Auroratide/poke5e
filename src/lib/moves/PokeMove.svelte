@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Card } from "$lib/ui/page"
-	import { FlatDl, Tag } from "$lib/ui/elements"
+	import { BetaStatement, FlatDl, Tag } from "$lib/ui/elements"
 	import MoveDescription from "./MoveDescription.svelte"
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
@@ -24,7 +24,7 @@
 	<MoveTypeTag slot="header-extra" value={move.type} />
 	<section class="info">
 		{#if move.beta}
-			<p class="beta"><Tag>New!</Tag><span>This move is being playtested. If you have <a href="{Url.feedback()}">feedback</a>, let us know!</span></p>
+			<BetaStatement name="move" />
 		{/if}
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<FlatDl>
@@ -90,11 +90,5 @@
 
 	.duration, .range {
 		text-transform: capitalize;
-	}
-
-	.beta {
-		font-size: var(--font-sz-venus);
-	} .beta span {
-		padding-inline-start: 0.25em;
 	}
 </style>

@@ -18,6 +18,7 @@ export class Item extends DataClass<{
 	name: string,
 	type: ItemType,
 	cost: number | null,
+	beta?: boolean,
 	description?: string[],
 	media: {
 		sprite?: string,
@@ -27,6 +28,7 @@ export class Item extends DataClass<{
 	get name() { return this.data.name }
 	get type() { return this.data.type }
 	get cost() { return this.data.cost }
+	get beta() { return this.data.beta ?? false }
 	get description() { return this.data.description }
 	get media() { return this.data.media }
 

@@ -10,6 +10,7 @@
 	import { SpeciesStore } from "$lib/poke5e/species"
 	import type { Item } from "./Item"
 	import { m } from "$lib/site/i18n"
+	import { BetaStatement } from "$lib/ui/elements"
 
 	const species = SpeciesStore.canonList()
 	const evolutions = EvolutionStore.canonList()
@@ -23,6 +24,11 @@
 </script>
 
 <Card title={item.name} dismissToHref="{Url.items()}">
+	{#if item.beta}
+		<section>
+			<BetaStatement name="item" />
+		</section>
+	{/if}
 	<SideArtCardSection hasImage={item.media.sprite != null} size="clamp(4rem, 6.33vw, 4.75rem)">
 		<FlatDl>
 			<dt>{m.type()}</dt>
@@ -30,10 +36,16 @@
 			<dt>{m.cost()}</dt>
 			<dd>{item.cost != null ? formatMoney(item.cost) : "-"}</dd>
 		</FlatDl>
-		<ItemSprite slot="art" src="{item.media.sprite}" alt="" />
+		<div class="pixelated" slot="art">
+			<ItemSprite src="{item.media.sprite ?? ""}" alt="" />
+		</div>
 	</SideArtCardSection>
 	<section class="description">
-		{@html renderHtml(item.description)}
+		{#if item.description}
+			{@html renderHtml(item.description)}
+		{:else}
+			<p>No item description found.</p>
+		{/if}
 		{#if item.type === "pokeball"}
 			<p>{m.see()}: <a href="{Url.reference.catchingPokemon()}">Catching Pokémon</a></p>
 		{/if}
@@ -43,3 +55,10 @@
 		{/if}
 	</section>
 </Card>
+
+<style>
+	.pixelated {
+		image-rendering: pixelated;
+	}
+</style>
+
