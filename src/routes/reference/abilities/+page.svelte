@@ -11,7 +11,7 @@
 
 	export let data: PageData
 	$: abilities = data.abilities
-	$: associatedPokemon = AbilityPool.groupSpeciesByAbility(abilities.map((it) => it.referenceId), $pokemon)
+	$: associatedPokemon = AbilityPool.groupSpeciesByAbility(abilities.map((it) => it.referenceId).filter((it) => it != null), $pokemon ?? [])
 
 	let abilityFilter = ""
 
@@ -20,7 +20,7 @@
 
 <ReferencePage title="Abilities">
 	<section>
-		<p>Every Pokémon has one <dfn>ability</dfn>, a special feature that applies to it at all times. Each species has multiple possible abilities; when rolling a Pokémon of a given species, one of its species' abilities is assigned to it at random.</p>
+		<p>Every Pokémon has one <dfn>ability</dfn>, a special feature that applies to it at all times. Many species have multiple possible abilities; when rolling a Pokémon of a given species, one of its species' abilities is assigned to it at random.</p>
 		<p>Note that some moves or abilities can manipulate what ability a Pokémon has at a given time, such as with the Mummy ability. Unless specified, a Pokémon's normal ability is always restored to it after a long rest.</p>
 	</section>
 	<section>
@@ -31,7 +31,7 @@
 				<div class="ability" class:hide={!filteredAbilities.includes(ability)}>
 					<h3>{ability.name}</h3>
 					<p>{ability.description}</p>
-					<SimplePokemonList pokemon={associatedPokemon[ability.referenceId] ?? []} />
+					<SimplePokemonList pokemon={associatedPokemon[ability.referenceId ?? ""] ?? []} />
 				</div>
 			{/each}
 		{:else}
