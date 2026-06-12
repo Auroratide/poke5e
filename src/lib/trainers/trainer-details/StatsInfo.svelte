@@ -2,10 +2,18 @@
 	import type { TrainerInfo } from "../types"
 	import { FlatDl } from "$lib/ui/elements"
 	import { m } from "$lib/site/i18n"
+	import { SpeciesRating } from "$lib/poke5e/sr";
+	import { Pokeslots } from "$lib/poke5e/pokeslots";
 
-	export let trainer: TrainerInfo
+	let {
+		trainer,
+	}: {
+		trainer: TrainerInfo
+	} = $props()
 
-	$: pb = trainer.level.proficiencyBonus
+	let pb = $derived(trainer.level.proficiencyBonus)
+	let maxSr = $derived(SpeciesRating.maxAllowed(trainer.level))
+	let maxPokeslots = $derived(Pokeslots.maxAllowed(trainer.level))
 </script>
 
 <div class="two-columns">
@@ -15,6 +23,10 @@
 			<dd>{trainer.ac}</dd>
 			<dt>{m.bonus()}</dt>
 			<dd>+{pb}</dd>
+			<dt>{m.maxSr()}</dt>
+			<dd>{maxSr.toString()}</dd>
+			<dt>{m.pokeslots()}</dt>
+			<dd>{maxPokeslots}</dd>
 		</FlatDl>
 	</div>
 	<div>
