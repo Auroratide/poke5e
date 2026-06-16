@@ -8,6 +8,7 @@
 	import type { TrainerStore } from "./trainers";
 	import { LevelUp, LevelUpTrainer } from "$lib/poke5e/level-up";
 	import { TrainerLevelTable } from "$lib/poke5e/level-up/TrainerLevelTable";
+	import { goto } from "$app/navigation";
 
 	let {
 		trainer,
@@ -25,11 +26,13 @@
 
 	let saving = $state(false)
 	const applyLevelUp = async () => {
-		// saving = true
+		saving = true
 		const updatedTrainer = LevelUp.apply($trainer.info, template)
-		console.log(updatedTrainer)
-		// const updatedTrainer = trainer.levelUp
-		// $trainer.update?.info(updatedTrainer)
+		await $trainer.update?.info(updatedTrainer).then(() => {
+			goto(Url.trainers($trainer.info.readKey))
+		}).catch(() => {
+			saving = false
+		})
 	}
 </script>
 
