@@ -6,7 +6,7 @@
 	import { Card } from "$lib/ui/page"
 	import { m } from "$lib/site/i18n"
 	import type { TrainerStore } from "./trainers";
-	import { LevelUpTrainer } from "$lib/poke5e/level-up";
+	import { LevelUp, LevelUpTrainer } from "$lib/poke5e/level-up";
 	import { TrainerLevelTable } from "$lib/poke5e/level-up/TrainerLevelTable";
 
 	let {
@@ -26,9 +26,7 @@
 	let saving = $state(false)
 	const applyLevelUp = async () => {
 		// saving = true
-		const updatedTrainer = template.reduce((updated, effect) => {
-			return effect.apply(updated)
-		}, $trainer.info)
+		const updatedTrainer = LevelUp.apply($trainer.info, template)
 		console.log(updatedTrainer)
 		// const updatedTrainer = trainer.levelUp
 		// $trainer.update?.info(updatedTrainer)
