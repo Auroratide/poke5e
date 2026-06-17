@@ -5,6 +5,7 @@ import { IncreaseHpEffect } from "./effects/IncreaseHp"
 import { IncreaseLevelEffect } from "./effects/IncreaseLevel"
 import { MaxSrIncreaseEffect } from "./effects/MaxSrIncrease"
 import { NewTrainerPathEffect } from "./effects/NewTrainerPath"
+import { PokeslotIncreaseEffect } from "./effects/PokeslotIncrease"
 
 // const Level01 = () => []
 const Level02 = (trainer: Trainer) => [
@@ -22,6 +23,9 @@ const Level02 = (trainer: Trainer) => [
 		path: undefined,
 	}),
 	new MaxSrIncreaseEffect({
+		currentLevel: trainer.level,
+	}, {}),
+	new PokeslotIncreaseEffect({
 		currentLevel: trainer.level,
 	}, {}),
 ]

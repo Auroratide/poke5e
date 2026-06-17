@@ -228,7 +228,10 @@
 	"custom": "Custom",
 	"newPathInstructions": "Choose a trainer path, or choose \"- Custom -\" to define your own trainer path.",
 	"customPathInstructions": "After completing your level up, you can define the custom path's features by editing your trainer.",
+	"controlUpgrade": "Control Upgrade",
 	"maxSrIncreaseInstructions": "Your max SR has increased, meaning you can control more powerful pokémon!",
+	"additionalPokeslot": "Additional Pokéslot",
+	"pokeslotIncreaseInstructions": "You may now have one more pokémon in your active party.",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},

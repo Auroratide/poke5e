@@ -16,7 +16,7 @@
 	let after = $derived(SpeciesRating.maxAllowed(value.props.currentLevel.next()))
 </script>
 
-<Fieldset title="SR Increase">
+<Fieldset title={m.controlUpgrade()}>
 	<InstructionText>{m.maxSrIncreaseInstructions()}</InstructionText>
 	<CenterStage><FromTo from="{before.toString()} SR" to="{after.toString()} SR" /></CenterStage>
 </Fieldset>
