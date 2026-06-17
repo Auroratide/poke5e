@@ -1,8 +1,10 @@
 <script lang="ts">
-	import { Fieldset, InstructionText, IntField, WithButton } from "$lib/ui/forms"
-	import { FlatDl, PlusMinus } from "$lib/ui/elements"
-	import type { IncreaseHpEffect } from "./IncreaseHp"
 	import { m } from "$lib/site/i18n"
+	import { PlusMinus } from "$lib/ui/elements"
+	import { Fieldset, InstructionText, IntField, WithButton } from "$lib/ui/forms"
+	import CenterStage from "../CenterStage.svelte"
+	import FromTo from "../FromTo.svelte"
+	import type { IncreaseHpEffect } from "./IncreaseHp"
 
 	let {
 		value,
@@ -27,20 +29,18 @@
 
 <Fieldset title={m.hpIncrease()}>
 	<InstructionText>{m.levelUpHpInstructions()}</InstructionText>
-	<WithButton label={m.rollDice({ dice: value.props.hitDice.data })} on:click={onRoll}>
-		<IntField label={m.increaseHpBy()} bind:value={inputValue} />
-	</WithButton>
-	<FlatDl>
-		<dt>CON</dt>
-		<dd><PlusMinus value={value.props.attributes.con.modifier} /></dd>
-		<dt class="summary">{m.summary()}</dt>
-		<dd class="summary">{value.props.currentHp} → {resultHp}</dd>
-	</FlatDl>
+	<div class="field">
+		<WithButton label={m.rollDice({ dice: value.props.hitDice.data })} on:click={onRoll}>
+			<IntField label={m.increaseHpBy()} bind:value={inputValue} />
+		</WithButton>
+		<p class="modifiers"><strong>CON:</strong> <PlusMinus value={value.props.attributes.con.modifier} /></p>
+	</div>
+	<CenterStage><FromTo from="{value.props.currentHp} HP" to="{resultHp} HP" /></CenterStage>
 </Fieldset>
 
 <style>
-	.summary {
-		font-size: var(--font-sz-neptune);
+	.modifiers {
+		font-size: var(--font-sz-venus);
 		margin-block-start: 0.25em;
 	}
 </style>

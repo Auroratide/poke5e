@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { Level } from "$lib/ui/elements"
+	import CenterStage from "../CenterStage.svelte"
+	import FromTo from "../FromTo.svelte"
 	import type { IncreaseLevelEffect } from "./IncreaseLevel"
 
 	let {
@@ -10,14 +12,14 @@
 </script>
 
 <section>
-	<p class="center-stage"><Level value={value.props.currentLevel.data} /> → <Level value={value.props.currentLevel.next().data} /></p>
+	<CenterStage>
+		<FromTo>
+			{#snippet from()}
+				<Level value={value.props.currentLevel.data} />
+			{/snippet}
+			{#snippet to()}
+				<Level value={value.props.currentLevel.next().data} />
+			{/snippet}
+		</FromTo>
+	</CenterStage>
 </section>
-
-<style>
-	.center-stage {
-		font-size: var(--font-sz-neptune);
-		text-align: center;
-		font-weight: bold;
-		margin-block: 1.5em;
-	}
-</style>

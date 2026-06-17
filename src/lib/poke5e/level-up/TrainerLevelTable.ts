@@ -3,6 +3,7 @@ import type { Level } from "$lib/dnd/level"
 import type { Trainer } from "$lib/trainers/types"
 import { IncreaseHpEffect } from "./effects/IncreaseHp"
 import { IncreaseLevelEffect } from "./effects/IncreaseLevel"
+import { MaxSrIncreaseEffect } from "./effects/MaxSrIncrease"
 import { NewTrainerPathEffect } from "./effects/NewTrainerPath"
 
 // const Level01 = () => []
@@ -20,6 +21,9 @@ const Level02 = (trainer: Trainer) => [
 	new NewTrainerPathEffect({}, {
 		path: undefined,
 	}),
+	new MaxSrIncreaseEffect({
+		currentLevel: trainer.level,
+	}, {}),
 ]
 
 export const TrainerLevelTable = {
