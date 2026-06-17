@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n";
 	import { rulesVersion } from "$lib/site/rules-version";
 	import { TrainerPaths } from "$lib/trainers/paths";
 	import { Fieldset, InstructionText, SelectField } from "$lib/ui/forms";
@@ -17,7 +18,7 @@
 		name: path.name,
 	})).concat([{
 		value: "CUSTOM",
-		name: "- Custom -",
+		name: `- ${m.custom()} -`,
 	}]))
 	let chosenPathValue = $derived(possiblePaths[0].name)
 	let chosenPath = $derived(possiblePaths.find((path) => path.name === chosenPathValue))
@@ -29,9 +30,9 @@
 	})
 </script>
 
-<Fieldset title="Trainer Path">
-	<InstructionText>Average for hit dice is filled in automatically. Tap "Roll" to put yourself in fate's hands! Your constitution bonus is added in for you.</InstructionText>
-	<SelectField label="Trainer Path" options={pathOptions} bind:value={chosenPathValue} />
+<Fieldset title={m.trainerPath()}>
+	<InstructionText>{m.newPathInstructions()}</InstructionText>
+	<SelectField label={m.trainerPath()} options={pathOptions} bind:value={chosenPathValue} />
 	{#if chosenPath}
 		<div class="description">
 			{@html renderHtml(chosenPath.features.level2.description)}
@@ -43,7 +44,7 @@
 			{@html renderHtml(chosenPath.features.level15.description)}
 		</div>
 	{:else}
-		<InstructionText>After completing your level up, you can define the custom path's features by editing your trainer.</InstructionText>
+		<InstructionText>{m.customPathInstructions()}</InstructionText>
 	{/if}
 </Fieldset>
 

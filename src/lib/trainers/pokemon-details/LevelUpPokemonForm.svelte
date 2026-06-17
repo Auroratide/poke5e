@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { goto } from "$app/navigation";
-	import { LevelUp, LevelUpTrainer } from "$lib/poke5e/level-up";
+	import { LevelUp, LevelUpForm } from "$lib/poke5e/level-up";
 	import { PokemonLevelTable } from "$lib/poke5e/level-up/PokemonLevelTable";
 	import { PokemonSpecies } from "$lib/poke5e/species";
 	import { m } from "$lib/site/i18n";
@@ -38,22 +38,22 @@
 	}
 </script>
 
-<Title value="Level Up Pokemon" />
-<Card title="Level Up yay pokemon!">
+<Title value={m.levelUp()} />
+<Card title={m.levelUpName({ name: pokemon.nickname ?? species.name })}>
 	{#if canEdit}
 		<Saveable {saving}>
 			<section>
-				<p>Congratulations yay!</p>
+				<p>{m.levelUpInstructions()}</p>
 			</section>
-			<LevelUpTrainer trainer={$trainer.info} effects={template} />
+			<LevelUpForm effects={template} />
 			<ActionArea>
 				<Button href={Url.trainers($trainer.info.readKey, pokemon.id)} variant="subtle">{m.back()}</Button>
-				<Button on:click={applyLevelUp}>Confirm</Button>
+				<Button on:click={applyLevelUp}>{m.confirm()}</Button>
 			</ActionArea>
 		</Saveable>
 	{:else}
 		<section>
-			<p>You do not have permission to level up this pokémon.</p>
+			<p>{m.noLevelUpPermission()}</p>
 		</section>
 		<ActionArea>
 			<Button href={Url.trainers($trainer.info.readKey)} variant="subtle">{m.back()}</Button>

@@ -2,6 +2,7 @@
 	import { Fieldset, InstructionText, IntField, WithButton } from "$lib/ui/forms"
 	import { FlatDl, PlusMinus } from "$lib/ui/elements"
 	import type { IncreaseHpEffect } from "./IncreaseHp"
+	import { m } from "$lib/site/i18n";
 
 	let {
 		value,
@@ -24,15 +25,15 @@
 	})
 </script>
 
-<Fieldset title="HP Increase">
-	<InstructionText>Average for hit dice is filled in automatically. Tap "Roll" to put yourself in fate's hands! Your constitution bonus is added in for you.</InstructionText>
-	<WithButton label="Roll {value.props.hitDice.data}" on:click={onRoll}>
-		<IntField label="Increase HP by" bind:value={inputValue} />
+<Fieldset title={m.hpIncrease()}>
+	<InstructionText>{m.levelUpHpInstructions()}</InstructionText>
+	<WithButton label={m.rollDice({ dice: value.props.hitDice.data })} on:click={onRoll}>
+		<IntField label={m.increaseHpBy()} bind:value={inputValue} />
 	</WithButton>
 	<FlatDl>
 		<dt>CON</dt>
 		<dd><PlusMinus value={value.props.attributes.con.modifier} /></dd>
-		<dt class="summary">Summary</dt>
+		<dt class="summary">{m.summary()}</dt>
 		<dd class="summary">{value.props.currentHp} → {resultHp}</dd>
 	</FlatDl>
 </Fieldset>

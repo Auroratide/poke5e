@@ -6,7 +6,7 @@
 	import { Card } from "$lib/ui/page"
 	import { m } from "$lib/site/i18n"
 	import type { TrainerStore } from "../trainers";
-	import { LevelUp, LevelUpTrainer } from "$lib/poke5e/level-up";
+	import { LevelUp, LevelUpForm } from "$lib/poke5e/level-up";
 	import { TrainerLevelTable } from "$lib/poke5e/level-up/TrainerLevelTable";
 	import { goto } from "$app/navigation";
 
@@ -18,12 +18,12 @@
 
 	let canEdit = $derived($trainer.update != null)
 
-	const template = $derived(TrainerLevelTable.toLevel($trainer.info.level.next())($trainer.info))
+	const effects = $derived(TrainerLevelTable.toLevel($trainer.info.level.next())($trainer.info))
 
 	let saving = $state(false)
 	const applyLevelUp = async () => {
 		saving = true
-		const updatedTrainer = LevelUp.apply($trainer.info, template)
+		const updatedTrainer = LevelUp.apply($trainer.info, effects)
 		await $trainer.update?.info(updatedTrainer).then(() => {
 			goto(Url.trainers($trainer.info.readKey))
 		}).catch(() => {
@@ -32,22 +32,22 @@
 	}
 </script>
 
-<Title value="Level Up" />
-<Card title="Level Up yay!">
+<Title value={m.levelUp()} />
+<Card title={m.levelUpName({ name: $trainer.info.name })}>
 	{#if canEdit}
 		<Saveable {saving}>
 			<section>
-				<p>Congratulations yay!</p>
+				<p>{m.levelUpInstructions()}</p>
 			</section>
-			<LevelUpTrainer trainer={$trainer.info} effects={template} />
+			<LevelUpForm effects={effects} />
 			<ActionArea>
 				<Button href={Url.trainers($trainer.info.readKey)} variant="subtle">{m.back()}</Button>
-				<Button on:click={applyLevelUp}>Confirm</Button>
+				<Button on:click={applyLevelUp}>{m.confirm()}</Button>
 			</ActionArea>
 		</Saveable>
 	{:else}
 		<section>
-			<p>You do not have permission to level uo this trainer.</p>
+			<p>{m.noLevelUpPermission()}</p>
 		</section>
 		<ActionArea>
 			<Button href={Url.trainers($trainer.info.readKey)} variant="subtle">{m.back()}</Button>

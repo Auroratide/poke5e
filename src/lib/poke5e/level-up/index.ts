@@ -1,2 +1,2 @@
-export { default as LevelUpTrainer } from "./LevelUpTrainer.svelte"
+export { default as LevelUpForm } from "./LevelUpForm.svelte"
 export * from "./LevelUp"
