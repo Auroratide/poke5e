@@ -10,7 +10,7 @@
 	import { Level } from "$lib/ui/elements"
 	import type { InventoryItem, TrainerInfo } from "../types"
 	import { m } from "$lib/site/i18n"
-	import { FeatureToggles } from "$lib/site/FeatureToggles";
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	export let trainer: TrainerStore
 	$: canEdit = $trainer.update != null

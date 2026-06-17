@@ -4,6 +4,7 @@
 	let {
 		effects,
 	}: {
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		effects: LevelUpEffect<any, any>[],
 	} = $props()
 </script>

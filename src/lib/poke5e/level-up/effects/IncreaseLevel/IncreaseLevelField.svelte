@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { Level } from "$lib/ui/elements";
-	import type { IncreaseLevelEffect } from "./IncreaseLevel";
+	import { Level } from "$lib/ui/elements"
+	import type { IncreaseLevelEffect } from "./IncreaseLevel"
 
 	let {
 		value,

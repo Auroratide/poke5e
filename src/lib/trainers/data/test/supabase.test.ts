@@ -7,10 +7,9 @@ import { ApiStub } from "$lib/test/ApiStub"
 import { supabase } from "$lib/supabase"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import type { ReadWriteKey } from "$lib/trainers/types"
-import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
+import { TagList } from "$lib/poke5e/tags"
 import { TrainerLocalStorage } from "../TrainerLocalStorage"
 import { provider as transferProvider } from "../../pokemon-transfer"
-import { stubMove } from "$lib/moves/test/stubs-2"
 import { stubLearnedMove } from "$lib/trainers/test/stubs"
 
 const ABILITIES = {
@@ -233,7 +232,7 @@ test("accepting a transfer", async () => {
 	})
 
 	const someMove = stubLearnedMove({
-		id: "tackle"
+		id: "tackle",
 	})
 
 	const addedFirstTrainer = await provider.newTrainer(firstTrainerToAdd)

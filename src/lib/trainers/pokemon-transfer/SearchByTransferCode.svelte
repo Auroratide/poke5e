@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { TextField, WithButton } from "$lib/ui/forms";
-	import type { TransferCode } from "./TransferCode";
+	import { TextField, WithButton } from "$lib/ui/forms"
+	import type { TransferCode } from "./TransferCode"
 
 	let {
 		onsubmit,

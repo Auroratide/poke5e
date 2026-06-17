@@ -9,9 +9,9 @@
 	import type { Fakemon } from "$lib/fakemon"
 	import type { Readable } from "svelte/store"
 	import { Url } from "$lib/site/url"
-	import SearchByTransferCode from "./pokemon-transfer/SearchByTransferCode.svelte";
-	import { FeatureToggles } from "$lib/site/FeatureToggles";
-	import type { TransferCode } from "./pokemon-transfer";
+	import SearchByTransferCode from "./pokemon-transfer/SearchByTransferCode.svelte"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
+	import type { TransferCode } from "./pokemon-transfer"
 
 	export let trainer: TrainerStore
 	export let allSpecies: Readable<PokemonSpecies[]>

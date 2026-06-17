@@ -65,13 +65,13 @@
 
 		if (up) {
 			if (li.offsetTop < listbox.scrollTop) {
-					listbox.scrollTop = li.offsetTop
+				listbox.scrollTop = li.offsetTop
 			}
 		} else {
 			const liBottom = li.offsetTop + li.offsetHeight
 			const listboxBottom = listbox.scrollTop + listbox.clientHeight
 			if (liBottom > listboxBottom) {
-					listbox.scrollTop = liBottom - listbox.clientHeight
+				listbox.scrollTop = liBottom - listbox.clientHeight
 			}
 		}
 	}

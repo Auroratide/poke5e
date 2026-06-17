@@ -33,7 +33,7 @@ import { PokemonSpecies, SpeciesIdentifier } from "$lib/poke5e/species"
 import { TrainerLocalStorage } from "./TrainerLocalStorage"
 import { Stab, type StabBase } from "$lib/pokemon/stab"
 import { Ability } from "$lib/pokemon/ability"
-import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
+import { TagList } from "$lib/poke5e/tags"
 import { TransferCode } from "../pokemon-transfer"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
@@ -47,7 +47,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 	allTrainers = async (): Promise<Trainer[]> => {
 		return Promise.all(
 			TrainerLocalStorage.getReadKeys()
-				.map((key) => this.getOneTrainerInfo(key))
+				.map((key) => this.getOneTrainerInfo(key)),
 		).then((trainers) => trainers.filter((it) => it != null))
 	}
     
@@ -153,19 +153,19 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 				return rowToPokemon(theOne, this.getUserAssetResource)
 			})
 			.then((thePokemon) => this.getMoveset(thePokemon.id).then((moves) => ({
-					...thePokemon,
-					moves,
-				}))
+				...thePokemon,
+				moves,
+			})),
 			)
 			.then((thePokemon) => this.getHeldItems(thePokemon.id).then((items) => ({
-					...thePokemon,
-					items,
-				}))
+				...thePokemon,
+				items,
+			})),
 			)
 			.then((thePokemon) => this.getPokemonFeats(thePokemon.id).then((feats) => ({
-					...thePokemon,
-					feats,
-				}))
+				...thePokemon,
+				feats,
+			})),
 			)
 	}
 

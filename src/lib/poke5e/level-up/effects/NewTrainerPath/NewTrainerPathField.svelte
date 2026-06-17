@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { m } from "$lib/site/i18n";
-	import { rulesVersion } from "$lib/site/rules-version";
-	import { TrainerPaths } from "$lib/trainers/paths";
-	import { Fieldset, InstructionText, SelectField } from "$lib/ui/forms";
-	import { renderHtml } from "$lib/ui/rendering";
-	import type { NewTrainerPathEffect } from "./NewTrainerPath";
+	import { m } from "$lib/site/i18n"
+	import { rulesVersion } from "$lib/site/rules-version"
+	import { TrainerPaths } from "$lib/trainers/paths"
+	import { Fieldset, InstructionText, SelectField } from "$lib/ui/forms"
+	import { renderHtml } from "$lib/ui/rendering"
+	import type { NewTrainerPathEffect } from "./NewTrainerPath"
 
 	let {
 		value,

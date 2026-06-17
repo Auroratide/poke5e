@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { browser } from "$app/environment"
-	import { page } from "$app/stores"
+	import { page } from "$app/state"
 	import { GreatballIcon } from "$lib/ui/icons"
 	import { Loader } from "$lib/ui/elements"
 	import { Page } from "$lib/ui/layout"
@@ -28,16 +28,15 @@
 	import { SpeciesStore, type PokemonSpecies } from "$lib/poke5e/species"
 	import { MaintenanceAnnouncement, MaintenanceOverlay } from "$lib/site/maintenance"
 
-	$: fakemonId = browser ? $page.url.searchParams.get("id") : undefined
-	$: action = browser ? $page.url.searchParams.get("action") : undefined
+	let fakemonId = $derived(browser ? page.url.searchParams.get("id") : undefined)
+	let action = $derived(browser ? page.url.searchParams.get("action") : undefined)
 
-	let fakemon: Promise<undefined | SingleFakemonStore> | undefined
-	let allSpecies: Promise<Readable<PokemonSpecies[]>> = browser ? SpeciesStore.completeList() : undefined
+	let fakemon = $state<Promise<undefined | SingleFakemonStore> | undefined>(undefined)
+	let allSpecies = $state<Promise<Readable<PokemonSpecies[]>> | undefined>(browser ? SpeciesStore.completeList() : undefined)
 
-	// We don't use {#await} tag because that causes unnecessary reassignment = rerendering
-	let list: FakemonListStore | undefined = undefined
-	let listLoading = true
-	let listError: Error | string | undefined = undefined
+	let list = $state<FakemonListStore | undefined>(undefined)
+	let listLoading = $state(true)
+	let listError = $state<Error | string | undefined>(undefined)
 
 	const refreshList = () => {
 		fakemonStore.all().then((it) => {
@@ -50,7 +49,8 @@
 		})
 	}
 
-	$: {
+	$effect(() => {
+		console.log("effect")
 		if (fakemonId && browser) {
 			refreshList()
 			fakemon = fakemonStore.get(fakemonId)
@@ -63,7 +63,7 @@
 			listLoading = true
 			listError = undefined
 		}
-	}
+	})
 
 	onMount(() => {
 		CanCreateCustomPokemonBanner.set(true)
@@ -96,7 +96,9 @@
 					{#await allSpecies}
 						<Loader />
 					{:then allSpecies}
-						<EditFakemonPage {fakemon} {allSpecies} />
+						{#if allSpecies}
+							<EditFakemonPage {fakemon} {allSpecies} />
+						{/if}
 					{/await}
 				{:else if action === PageAction.accessKey}
 					<AccessKeyPage {fakemon} />
@@ -106,7 +108,7 @@
 					<InfoFakemonPage {fakemon} />
 				{/if}
 			{:catch error}
-				<ErrorMessage error="{error}" action="Loading Fakemon {fakemonId}" />
+				<ErrorMessage error={error} action="Loading Fakemon {fakemonId}" />
 			{/await}
 		{:else}
 			{#if action === PageAction.add}

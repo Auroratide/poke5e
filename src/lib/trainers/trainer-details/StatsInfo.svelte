@@ -2,8 +2,8 @@
 	import type { TrainerInfo } from "../types"
 	import { FlatDl } from "$lib/ui/elements"
 	import { m } from "$lib/site/i18n"
-	import { SpeciesRating } from "$lib/poke5e/sr";
-	import { Pokeslots } from "$lib/poke5e/pokeslots";
+	import { SpeciesRating } from "$lib/poke5e/sr"
+	import { Pokeslots } from "$lib/poke5e/pokeslots"
 
 	let {
 		trainer,

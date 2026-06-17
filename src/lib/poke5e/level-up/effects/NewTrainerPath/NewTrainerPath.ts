@@ -7,7 +7,7 @@ export type NewTrainerPathParams = {
 	path: TrainerPath | undefined
 }
 
-export class NewTrainerPathEffect extends LevelUpEffect<{}, NewTrainerPathParams> {
+export class NewTrainerPathEffect extends LevelUpEffect<Record<never, never>, NewTrainerPathParams> {
 	get Field() {
 		return IncreaseHpField
 	}

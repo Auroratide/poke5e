@@ -29,7 +29,7 @@ export class IncreaseHpEffect extends LevelUpEffect<IncreaseHpProps, IncreaseHpP
 			hp: {
 				current: subject.hp.current + this.params.increaseAmount,
 				max: subject.hp.max + this.params.increaseAmount,
-			}
+			},
 		}
 	}
 }

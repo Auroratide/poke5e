@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { WithSpecies } from "$lib/poke5e/species";
-	import type { TrainerStore } from "../trainers";
-	import type { PokemonId } from "../types";
-	import LevelUpPokemonForm from "./LevelUpPokemonForm.svelte";
-	import RequirePokemon from "./RequirePokemon.svelte";
+	import { WithSpecies } from "$lib/poke5e/species"
+	import type { TrainerStore } from "../trainers"
+	import type { PokemonId } from "../types"
+	import LevelUpPokemonForm from "./LevelUpPokemonForm.svelte"
+	import RequirePokemon from "./RequirePokemon.svelte"
 
 	let {
 		trainer,

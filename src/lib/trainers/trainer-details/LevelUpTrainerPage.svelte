@@ -5,10 +5,10 @@
 	import { Title } from "$lib/ui/layout"
 	import { Card } from "$lib/ui/page"
 	import { m } from "$lib/site/i18n"
-	import type { TrainerStore } from "../trainers";
-	import { LevelUp, LevelUpForm } from "$lib/poke5e/level-up";
-	import { TrainerLevelTable } from "$lib/poke5e/level-up/TrainerLevelTable";
-	import { goto } from "$app/navigation";
+	import type { TrainerStore } from "../trainers"
+	import { LevelUp, LevelUpForm } from "$lib/poke5e/level-up"
+	import { TrainerLevelTable } from "$lib/poke5e/level-up/TrainerLevelTable"
+	import { goto } from "$app/navigation"
 
 	let {
 		trainer,

@@ -42,7 +42,7 @@
 	import { TagListField } from "$lib/poke5e/tags"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import { fakemonStore } from "../store"
-	import { HabitatFieldset } from "$lib/poke5e/habitat";
+	import { HabitatFieldset } from "$lib/poke5e/habitat"
 
 	const allTags = fakemonStore.tags()
 

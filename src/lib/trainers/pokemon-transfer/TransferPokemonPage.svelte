@@ -1,16 +1,16 @@
 <script lang="ts">
-	import { WithSpecies } from "$lib/poke5e/species";
-	import { m } from "$lib/site/i18n";
-	import { Url } from "$lib/site/url";
-	import { Button, Loader } from "$lib/ui/elements";
-	import { ActionArea } from "$lib/ui/forms";
-	import Saveable from "$lib/ui/forms/Saveable.svelte";
-	import { Card } from "$lib/ui/page";
-	import RequirePokemon from "../pokemon-details/RequirePokemon.svelte";
-	import type { TrainerStore } from "../trainers";
-	import type { PokemonId } from "../types";
-	import { TransferCode } from "./TransferCode";
-	import { provider } from "./TransferCodeDataProvider";
+	import { WithSpecies } from "$lib/poke5e/species"
+	import { m } from "$lib/site/i18n"
+	import { Url } from "$lib/site/url"
+	import { Button, Loader } from "$lib/ui/elements"
+	import { ActionArea } from "$lib/ui/forms"
+	import Saveable from "$lib/ui/forms/Saveable.svelte"
+	import { Card } from "$lib/ui/page"
+	import RequirePokemon from "../pokemon-details/RequirePokemon.svelte"
+	import type { TrainerStore } from "../trainers"
+	import type { PokemonId } from "../types"
+	import { TransferCode } from "./TransferCode"
+	import { provider } from "./TransferCodeDataProvider"
 
 	let {
 		trainer,

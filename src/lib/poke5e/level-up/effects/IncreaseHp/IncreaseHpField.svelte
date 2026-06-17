@@ -2,7 +2,7 @@
 	import { Fieldset, InstructionText, IntField, WithButton } from "$lib/ui/forms"
 	import { FlatDl, PlusMinus } from "$lib/ui/elements"
 	import type { IncreaseHpEffect } from "./IncreaseHp"
-	import { m } from "$lib/site/i18n";
+	import { m } from "$lib/site/i18n"
 
 	let {
 		value,
@@ -20,7 +20,7 @@
 
 	$effect(() => {
 		value.params = {
-			increaseAmount
+			increaseAmount,
 		}
 	})
 </script>

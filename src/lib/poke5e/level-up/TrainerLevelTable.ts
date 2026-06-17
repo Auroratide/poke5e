@@ -5,7 +5,7 @@ import { IncreaseHpEffect } from "./effects/IncreaseHp"
 import { IncreaseLevelEffect } from "./effects/IncreaseLevel"
 import { NewTrainerPathEffect } from "./effects/NewTrainerPath"
 
-const Level01 = () => []
+// const Level01 = () => []
 const Level02 = (trainer: Trainer) => [
 	new IncreaseLevelEffect({
 		currentLevel: trainer.level,
@@ -19,11 +19,12 @@ const Level02 = (trainer: Trainer) => [
 	}),
 	new NewTrainerPathEffect({}, {
 		path: undefined,
-	})
+	}),
 ]
 
 export const TrainerLevelTable = {
 	toLevel(level: Level) {
+		console.log(level)
 		return Level02
 	},
 } as const

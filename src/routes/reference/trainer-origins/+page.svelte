@@ -7,7 +7,7 @@
 	import { Attributes } from "$lib/dnd/attributes"
 	import { ColumnedList, Tag } from "$lib/ui/elements"
 	import { TrainerOrigin } from "$lib/trainers/origins"
-	import { rulesVersion } from "$lib/site/rules-version";
+	import { rulesVersion } from "$lib/site/rules-version"
 
 	export let data: PageData
 </script>

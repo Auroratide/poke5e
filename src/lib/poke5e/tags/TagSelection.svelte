@@ -1,8 +1,7 @@
 <script lang="ts">
 	import type { TagList } from "./TagList"
 	import { kebab } from "$lib/ui/forms"
-	import { m } from "$lib/site/i18n";
-	import NoTags from "./NoTags.svelte";
+	import NoTags from "./NoTags.svelte"
 
 	let {
 		checked = $bindable(),

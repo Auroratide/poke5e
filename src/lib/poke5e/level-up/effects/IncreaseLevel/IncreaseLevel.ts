@@ -10,7 +10,7 @@ export type IncreaseLevelProps = {
 	currentLevel: Level,
 }
 
-export class IncreaseLevelEffect extends LevelUpEffect<IncreaseLevelProps, {}> {
+export class IncreaseLevelEffect extends LevelUpEffect<IncreaseLevelProps, Record<never, never>> {
 	get Field() {
 		return IncreaseLevelField
 	}
