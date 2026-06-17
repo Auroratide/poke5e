@@ -6,6 +6,7 @@ import { capitalize } from "$lib/utils/string"
 import type { Attribute } from "$lib/dnd/attributes"
 import type { Skill } from "$lib/dnd/skills"
 import type { PokeType } from "$lib/pokemon/types"
+import type { TrainerInfo } from "../types"
 
 export type Specialization = {
 	id: string,
@@ -82,4 +83,24 @@ export function skillModifiersFromSpecializations(specializations: Specializatio
 
 export function hasSpecialization(specializations: Specializations): boolean {
 	return Object.values(specializations).some((it) => it > 0)
+}
+
+export function applySpecialization(trainer: TrainerInfo, specialization: Specialization, choices: {
+	asi?: Attribute,
+	skill?: Skill,
+}): TrainerInfo {
+	trainer.specializations[specialization.type] = Math.min(5, trainer.specializations[specialization.type] + 1)
+
+	const asiToIncrease = choices.asi ?? specialization.effect.find((it) => it.type === "asi")?.value[0]
+	const skillToIncrease = choices.skill ?? specialization.effect.find((it) => it.type === "proficiency")?.value[0]
+
+	if (asiToIncrease != null) {
+		trainer.attributes.data[asiToIncrease] = Math.min(20, trainer.attributes.data[asiToIncrease] + 1)
+	}
+
+	if (skillToIncrease != null) {
+		trainer.proficiencies.data[skillToIncrease] = Math.min(2, trainer.proficiencies.data[skillToIncrease] + 1)
+	}
+
+	return trainer
 }

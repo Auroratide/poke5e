@@ -232,6 +232,10 @@
 	"maxSrIncreaseInstructions": "Your max SR has increased, meaning you can control more powerful pokémon!",
 	"additionalPokeslot": "Additional Pokéslot",
 	"pokeslotIncreaseInstructions": "You may now have one more pokémon in your active party.",
+	"chooseSpecialization": "Choose Specialization",
+	"chooseSpecializationInstructions": "You may choose a specialization for your trainer. The effect as shown will be applied to your trainer and Pokémon.",
+	"chooseAnAsi": "Choose an ASI",
+	"chooseAProficiency": "Choose a Proficiency",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},

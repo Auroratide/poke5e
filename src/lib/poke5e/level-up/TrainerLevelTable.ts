@@ -1,6 +1,7 @@
 import { HitDice } from "$lib/dnd/hit-dice"
 import type { Level } from "$lib/dnd/level"
 import type { Trainer } from "$lib/trainers/types"
+import { AdditionalSpecializationEffect } from "./effects/AdditionalSpecialization"
 import { IncreaseHpEffect } from "./effects/IncreaseHp"
 import { IncreaseLevelEffect } from "./effects/IncreaseLevel"
 import { MaxSrIncreaseEffect } from "./effects/MaxSrIncrease"
@@ -28,6 +29,11 @@ const Level02 = (trainer: Trainer) => [
 	new PokeslotIncreaseEffect({
 		currentLevel: trainer.level,
 	}, {}),
+	new AdditionalSpecializationEffect({}, {
+		specialization: undefined,
+		asi: undefined,
+		skill: undefined,
+	}),
 ]
 
 export const TrainerLevelTable = {

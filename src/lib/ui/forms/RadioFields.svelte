@@ -7,7 +7,7 @@
 	import { kebab } from "./kebab"
 
 	export let label: string
-	export let checked: string
+	export let checked: string | undefined
 	export let values: {
 		name: string,
 		value: string,
