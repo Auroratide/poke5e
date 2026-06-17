@@ -1,4 +1,4 @@
-import { derived, type Readable, type Unsubscriber } from "svelte/store"
+import { derived, readable, type Readable, type Unsubscriber } from "svelte/store"
 import { PokemonSpecies } from "./PokemonSpecies"
 import type { SpeciesIdentifier } from "./SpeciesIdentifier"
 import type { PokemonJsonResponse } from "./PokemonJsonResponse"
@@ -33,6 +33,8 @@ export interface SpeciesStore {
 	get: (id: SpeciesIdentifier) => Promise<SingleSpeciesStore | undefined>
 	canonList: () => Readable<PokemonSpecies[] | undefined>
 	completeList: () => Promise<Readable<PokemonSpecies[]>>
+	// This is used for SSR
+	emptyList: () => Readable<PokemonSpecies[]>
 }
 
 function createStore(): SpeciesStore {
@@ -65,6 +67,9 @@ function createStore(): SpeciesStore {
 			return derived([allCanonSpecies, fakemon], ([normalSpecies, fakemon]) => {
 				return normalSpecies?.concat(fakemon.map((it) => it.species))
 			})
+		},
+		emptyList: () => {
+			return readable([])
 		},
 	}
 }

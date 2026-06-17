@@ -32,7 +32,7 @@
 	let action = $derived(browser ? page.url.searchParams.get("action") : undefined)
 
 	let fakemon = $state<Promise<undefined | SingleFakemonStore> | undefined>(undefined)
-	let allSpecies = $state<Promise<Readable<PokemonSpecies[]>> | undefined>(browser ? SpeciesStore.completeList() : undefined)
+	let allSpecies = $state<Promise<Readable<PokemonSpecies[]>>>(browser ? SpeciesStore.completeList() : Promise.resolve(SpeciesStore.emptyList()))
 
 	let list = $state<FakemonListStore | undefined>(undefined)
 	let listLoading = $state(true)
@@ -50,7 +50,6 @@
 	}
 
 	$effect(() => {
-		console.log("effect")
 		if (fakemonId && browser) {
 			refreshList()
 			fakemon = fakemonStore.get(fakemonId)
@@ -96,9 +95,7 @@
 					{#await allSpecies}
 						<Loader />
 					{:then allSpecies}
-						{#if allSpecies}
-							<EditFakemonPage {fakemon} {allSpecies} />
-						{/if}
+						<EditFakemonPage {fakemon} {allSpecies} />
 					{/await}
 				{:else if action === PageAction.accessKey}
 					<AccessKeyPage {fakemon} />
