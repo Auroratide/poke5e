@@ -1,4 +1,6 @@
 export * from "./Attributes"
+export * from "./AbilityScoreImprovement"
+export { default as AsiField } from "./AsiField.svelte"
 export { default as AttributeBlock } from "./AttributeBlock.svelte"
 export { default as AttributesFieldset } from "./AttributesFieldset.svelte"
 export { default as SavingThrowsFieldset } from "./SavingThrowsFieldset.svelte"

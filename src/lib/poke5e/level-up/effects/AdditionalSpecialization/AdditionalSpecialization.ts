@@ -3,17 +3,17 @@ import type { Skill } from "$lib/dnd/skills"
 import { applySpecialization, type Specialization } from "$lib/trainers/specializations"
 import type { TrainerInfo } from "$lib/trainers/types"
 import { LevelUpEffect } from "../LevelUpEffect"
-import IncreaseHpField from "./AdditionalSpecializationField.svelte"
+import AdditionalSpecializationField from "./AdditionalSpecializationField.svelte"
 
-export type NewTrainerPathParams = {
+export type AdditionalSpecializationParams = {
 	specialization: Specialization | undefined
 	asi: Attribute | undefined,
 	skill: Skill | undefined,
 }
 
-export class AdditionalSpecializationEffect extends LevelUpEffect<Record<never, never>, NewTrainerPathParams> {
+export class AdditionalSpecializationEffect extends LevelUpEffect<Record<never, never>, AdditionalSpecializationParams> {
 	get Field() {
-		return IncreaseHpField
+		return AdditionalSpecializationField
 	}
 
 	apply(subject: TrainerInfo): TrainerInfo {

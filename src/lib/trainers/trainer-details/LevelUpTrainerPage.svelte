@@ -25,6 +25,8 @@
 		saving = true
 		const updatedTrainer = LevelUp.apply($trainer.info, effects)
 		await $trainer.update?.info(updatedTrainer).then(() => {
+			return $trainer.update?.trainerFeats(updatedTrainer) ?? Promise.resolve()
+		}).then(() => {
 			goto(Url.trainers($trainer.info.readKey))
 		}).catch(() => {
 			saving = false

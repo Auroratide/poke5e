@@ -1,7 +1,10 @@
+import { AbilityScoreImprovement } from "$lib/dnd/attributes"
+import { DndFeats } from "$lib/dnd/feats"
 import { HitDice } from "$lib/dnd/hit-dice"
 import type { Level } from "$lib/dnd/level"
 import type { Trainer } from "$lib/trainers/types"
 import { AdditionalSpecializationEffect } from "./effects/AdditionalSpecialization"
+import { AsiOrFeatEffect } from "./effects/AsiOrFeat"
 import { IncreaseHpEffect } from "./effects/IncreaseHp"
 import { IncreaseLevelEffect } from "./effects/IncreaseLevel"
 import { MaxSrIncreaseEffect } from "./effects/MaxSrIncrease"
@@ -33,6 +36,14 @@ const Level02 = (trainer: Trainer) => [
 		specialization: undefined,
 		asi: undefined,
 		skill: undefined,
+	}),
+	new AsiOrFeatEffect({
+		options: DndFeats,
+		pointsToSpend: 2,
+		attributes: trainer.attributes,
+	}, {
+		feat: undefined,
+		pointsSpent: AbilityScoreImprovement.zero(),
 	}),
 ]
 

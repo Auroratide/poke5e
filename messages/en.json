@@ -236,6 +236,9 @@
 	"chooseSpecializationInstructions": "You may choose a specialization for your trainer. The effect as shown will be applied to your trainer and Pokémon.",
 	"chooseAnAsi": "Choose an ASI",
 	"chooseAProficiency": "Choose a Proficiency",
+	"asiOrFeat": "ASI or Feat",
+	"asiOrFeatInstructions": "You may add 2 points to your ability scores, or select a feat from the dropdown.",
+	"asiFeatQualifier": "If this feat would increase an ability score, then you must increase it manually. Select the ability score improvement below, if applicable.",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},
