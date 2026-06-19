@@ -4,6 +4,7 @@ import type { PokemonSpecies } from "../species"
 import { DamageIncreaseEffect } from "./effects/DamageIncrease"
 import { IncreaseHpEffect } from "./effects/IncreaseHp"
 import { IncreaseLevelEffect } from "./effects/IncreaseLevel"
+import { NewMovesEffect } from "./effects/NewMoves"
 
 // const Level01 = () => []
 const Level02 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
@@ -20,6 +21,10 @@ const Level02 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 	new DamageIncreaseEffect({
 		currentLevel: pokemon.level,
 		moves: pokemon.moves,
+	}, {}),
+	new NewMovesEffect({
+		currentLevel: pokemon.level,
+		movePool: species.moves,
 	}, {}),
 ]
 

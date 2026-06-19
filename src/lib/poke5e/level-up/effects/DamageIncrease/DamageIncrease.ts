@@ -3,12 +3,12 @@ import type { LearnedMove } from "$lib/trainers/types"
 import { LevelUpEffect } from "../LevelUpEffect"
 import DamageIncreaseField from "./DamageIncreaseField.svelte"
 
-export type AcquiredPathFeatureProps = {
+export type DamageIncreaseProps = {
 	currentLevel: Level,
 	moves: LearnedMove[],
 }
 
-export class DamageIncreaseEffect extends LevelUpEffect<AcquiredPathFeatureProps, Record<never, never>> {
+export class DamageIncreaseEffect extends LevelUpEffect<DamageIncreaseProps, Record<never, never>> {
 	get Field() {
 		return DamageIncreaseField
 	}

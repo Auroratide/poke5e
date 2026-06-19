@@ -244,6 +244,8 @@
 	"damageIncrease": "Damage Increase",
 	"damageIncreaseInstructions": "The damage of moves you know has increased!",
 	"noDamagingMoves": "This pokémon does not know any damaging moves.",
+	"newMoves": "New Moves",
+	"newMovesInstructions": "New moves have been added to the list of moves your Pokémon can know! After finishing your level up, Edit the pokemon to adjust its moveset.",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},

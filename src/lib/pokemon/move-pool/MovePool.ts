@@ -76,3 +76,5 @@ export class MovePool extends DataClass<{
 			.concat(level.data >= 18 ? this.level18 ?? [] : [])
 	}
 }
+
+export type MovePoolLandmarks = "level2" | "level6" | "level10" | "level14" | "level18"

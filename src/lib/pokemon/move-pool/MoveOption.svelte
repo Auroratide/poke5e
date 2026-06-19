@@ -69,5 +69,6 @@
 
 	.padded {
 		padding-inline: 0.5em;
+		padding-block-start: 0.5em;
 	}
 </style>
