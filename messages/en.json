@@ -241,6 +241,9 @@
 	"asiFeatQualifier": "If this feat would increase an ability score, then you must increase it manually. Select the ability score improvement below, if applicable.",
 	"newPathFeature": "New Path Feature",
 	"newPathFeatureInstructions": "You have acquired a new feature on your chosen trainer path!",
+	"damageIncrease": "Damage Increase",
+	"damageIncreaseInstructions": "The damage of moves you know has increased!",
+	"noDamagingMoves": "This pokémon does not know any damaging moves.",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},

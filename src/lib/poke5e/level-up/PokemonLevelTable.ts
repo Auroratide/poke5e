@@ -1,6 +1,7 @@
 import type { Level } from "$lib/dnd/level"
 import type { TrainerPokemon } from "$lib/trainers/types"
 import type { PokemonSpecies } from "../species"
+import { DamageIncreaseEffect } from "./effects/DamageIncrease"
 import { IncreaseHpEffect } from "./effects/IncreaseHp"
 import { IncreaseLevelEffect } from "./effects/IncreaseLevel"
 
@@ -16,6 +17,10 @@ const Level02 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 	}, {
 		increaseAmount: 0,
 	}),
+	new DamageIncreaseEffect({
+		currentLevel: pokemon.level,
+		moves: pokemon.moves,
+	}, {}),
 ]
 
 export const PokemonLevelTable = {

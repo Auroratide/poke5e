@@ -44,7 +44,7 @@ export class MoveDamage extends DataClass<{
 		}
 	}
 
-	private getDamageDice(level: number) {
+	getDamageDice(level: number) {
 		const keys = Object.keys(this.data.dice).map(Number)
 		const validKeys = keys.filter(key => key <= level)
 		const closestKey = Math.max(...validKeys)
