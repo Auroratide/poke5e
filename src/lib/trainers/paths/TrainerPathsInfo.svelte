@@ -11,7 +11,7 @@
 	import { TrainerFeatureLevelLandmarks, TrainerPaths } from "."
 	import { NumericResourceField, type NumericChangeDetail } from "$lib/ui/forms"
 	import FeatureInfo from "./FeatureInfo.svelte"
-	import type { Level } from "$lib/dnd/level"
+	import { Level } from "$lib/dnd/level"
 
 	const dispatch = createEventDispatcher()
 
@@ -53,7 +53,7 @@
 		{/if}
 		{#each TrainerFeatureLevelLandmarks as landmarkLevel}
 			{#if level.data >= landmarkLevel}
-				<FeatureInfo {standardPath} customPath={value} level={landmarkLevel} />
+				<FeatureInfo path={value} level={new Level(landmarkLevel)} />
 			{/if}	
 		{/each}
 	</section>

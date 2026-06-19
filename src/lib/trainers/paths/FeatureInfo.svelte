@@ -1,25 +1,39 @@
 <script lang="ts">
-	import { renderHtml, Paragraphs } from "$lib/ui/rendering"
+	import type { Level } from "$lib/dnd/level"
+	import { rulesVersion } from "$lib/site/rules-version"
+	import { Paragraphs, renderHtml } from "$lib/ui/rendering"
+	import { isFeatureLandmarkLevel, TrainerPaths } from "."
 	import type { ChosenTrainerPath } from "./ChosenTrainerPath"
-	import { type TrainerPath, type TrainerFeatureLevelLandmark, TrainerFeatureLevelLandmarks } from "./TrainerPath"
 
-	export let standardPath: TrainerPath | undefined
-	export let customPath: ChosenTrainerPath
-	export let level: TrainerFeatureLevelLandmark
+	let {
+		path,
+		level,
+	}: {
+		path: ChosenTrainerPath,
+		level: Level,
+	} = $props()
 
-	$: key = `level${level}`
+	const standardPaths = $derived(TrainerPaths[$rulesVersion])
+	const standardPath = $derived(standardPaths.find((it) => it.name === path.name))
+	const levelKey = $derived(`level${level.data}` as keyof ChosenTrainerPath["customFeatures"])
 </script>
 
-{#if level !== TrainerFeatureLevelLandmarks[0]}
-	<h3>{standardPath?.features[key].name ?? customPath.customFeatures[key].name}</h3>
-{/if}
-<div class="smaller">
-	{#if standardPath != null}
-		{@html renderHtml(standardPath.features[key].description)}
-	{:else}
-		<Paragraphs value={customPath.customFeatures[key].description} />
+{#if isFeatureLandmarkLevel(level.data)}	
+	{#if standardPath != null && "name" in standardPath.features[levelKey]}
+		<h3>{standardPath?.features[levelKey].name}</h3>
+	{:else if "name" in path.customFeatures[levelKey]}
+		<h3>{path.customFeatures[levelKey].name}</h3>
 	{/if}
-</div>
+	<div class="smaller">
+		{#if standardPath != null}
+			{@html renderHtml(standardPath.features[levelKey].description)}
+		{:else}
+			<Paragraphs value={path.customFeatures[levelKey].description} />
+		{/if}
+	</div>
+{:else}
+	<p>No path feature found at level {level.data}.</p>
+{/if}
 
 <style>
 	.smaller {

@@ -3,6 +3,7 @@ import { DndFeats } from "$lib/dnd/feats"
 import { HitDice } from "$lib/dnd/hit-dice"
 import type { Level } from "$lib/dnd/level"
 import type { Trainer } from "$lib/trainers/types"
+import { AcquiredPathFeatureEffect } from "./effects/AcquiredPathFeature"
 import { AdditionalSpecializationEffect } from "./effects/AdditionalSpecialization"
 import { AsiOrFeatEffect } from "./effects/AsiOrFeat"
 import { IncreaseHpEffect } from "./effects/IncreaseHp"
@@ -45,6 +46,10 @@ const Level02 = (trainer: Trainer) => [
 		feat: undefined,
 		pointsSpent: AbilityScoreImprovement.zero(),
 	}),
+	new AcquiredPathFeatureEffect({
+		currentLevel: trainer.level,
+		path: trainer.path,
+	}, {}),
 ]
 
 export const TrainerLevelTable = {

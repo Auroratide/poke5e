@@ -29,3 +29,7 @@ export type TrainerPathFeature = {
 export function isStandardTrainerPath(pathName: string): boolean {
 	return TrainerPaths.map((it) => it.name).includes(pathName)
 }
+
+export function isFeatureLandmarkLevel(level: number): level is TrainerFeatureLevelLandmark {
+	return (TrainerFeatureLevelLandmarks as readonly number[]).includes(level)
+}

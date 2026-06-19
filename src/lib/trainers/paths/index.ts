@@ -12,4 +12,5 @@ export const TrainerPaths: Record<string, TrainerPath[]> = {
 
 export { default as TrainerPathsFieldset } from "./TrainerPathsFieldset.svelte"
 export { default as TrainerPathsInfo } from "./TrainerPathsInfo.svelte"
+export { default as FeatureInfo } from "./FeatureInfo.svelte"
 export * from "./TrainerPathsInfo.svelte"
