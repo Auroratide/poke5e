@@ -18,9 +18,11 @@
 	const newMoves = $derived(newMoveIds.map((id) => $MovesStore?.find((it) => it.id === id)).filter((it) => it != null))
 </script>
 
-<Fieldset title={m.newMoves()}>
-	<InstructionText>{m.newMovesInstructions()}</InstructionText>
-	{#each newMoves as move}
-		<MoveOption idPrefix="level-up" value={move} />
-	{/each}
-</Fieldset>
+{#if newMoves.length > 0}
+	<Fieldset title={m.newMoves()}>
+		<InstructionText>{m.newMovesInstructions()}</InstructionText>
+		{#each newMoves as move}
+			<MoveOption idPrefix="level-up" value={move} />
+		{/each}
+	</Fieldset>
+{/if}
