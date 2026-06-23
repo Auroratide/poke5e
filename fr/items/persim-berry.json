@@ -1,1 +1,1 @@
-{"id":"persim-berry","name":"Persim Berry","type":"berry","cost":200,"description":["Consume to cure confusion. Can be consumed as a reaction to becoming confused."],"media":{"sprite":"/assets/items/persim-berry/sprite.png"}}
+{"id":"persim-berry","name":"Persim Berry","type":"berry","cost":200,"description":["Consume to cure confusion. You may consume this berry as a reaction when you become confused."],"media":{"sprite":"/assets/items/persim-berry/sprite.png"}}

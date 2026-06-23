@@ -1,0 +1,1 @@
+import{Fn as e,In as t,Mn as n,Nn as r,Pn as i}from"./DNnFW_WK.js";var a={list:[`cool`,`beauty`,`cute`,`clever`,`tough`],name(a){return{cool:()=>t(),beauty:()=>e(),cute:()=>i(),clever:()=>r(),tough:()=>n()}[a]()}};export{a as t};

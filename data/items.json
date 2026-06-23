@@ -1188,7 +1188,7 @@
 			"type": "berry",
 			"cost": 200,
 			"description": [
-				"Consume to cure paralysis. Can be consumed as a reaction to becoming paralyzed."
+				"Consume to cure paralysis. You may consume this berry as a reaction when you become paralyzed."
 			],
 			"media": {
 				"sprite": "/assets/items/cheri-berry/sprite.png"
@@ -1200,7 +1200,7 @@
 			"type": "berry",
 			"cost": 200,
 			"description": [
-				"Consume to cure sleep. Can be consumed as a reaction to becoming asleep."
+				"Consume to cure sleep. You may consume this berry as a reaction when you fall asleep."
 			],
 			"media": {
 				"sprite": "/assets/items/chesto-berry/sprite.png"
@@ -1212,7 +1212,7 @@
 			"type": "berry",
 			"cost": 200,
 			"description": [
-				"Consume to cure poison. Can be consumed as a reaction to becoming poisoned or badly poisoned."
+				"Consume to cure poison. You may consume this berry as a reaction when you become poisoned or badly poisoned."
 			],
 			"media": {
 				"sprite": "/assets/items/pecha-berry/sprite.png"
@@ -1224,7 +1224,7 @@
 			"type": "berry",
 			"cost": 200,
 			"description": [
-				"Consume to cure burn. Can be consumed as a reaction to becoming burned."
+				"Consume to cure burn. You may consume this berry as a reaction when you become burned."
 			],
 			"media": {
 				"sprite": "/assets/items/rawst-berry/sprite.png"
@@ -1236,7 +1236,7 @@
 			"type": "berry",
 			"cost": 200,
 			"description": [
-				"Consume to cure freeze. Can be consumed as a reaction to becoming frozen."
+				"Consume to cure freeze. You may consume this berry as a reaction when you become frozen."
 			],
 			"media": {
 				"sprite": "/assets/items/aspear-berry/sprite.png"
@@ -1248,7 +1248,7 @@
 			"type": "berry",
 			"cost": 500,
 			"description": [
-				"Consume to restore 10 PP to a move. Can be consumed as a reaction to a move reaching 0 PP."
+				"Consume to restore 10 PP to a move. Can be consumed as a reaction to one of your moves reaching 0 PP."
 			],
 			"media": {
 				"sprite": "/assets/items/leppa-berry/sprite.png"
@@ -1272,7 +1272,7 @@
 			"type": "berry",
 			"cost": 200,
 			"description": [
-				"Consume to cure confusion. Can be consumed as a reaction to becoming confused."
+				"Consume to cure confusion. You may consume this berry as a reaction when you become confused."
 			],
 			"media": {
 				"sprite": "/assets/items/persim-berry/sprite.png"
@@ -1284,7 +1284,7 @@
 			"type": "berry",
 			"cost": 400,
 			"description": [
-				"Consume to cure any single status condition. Can be consumed as a reaction to becoming being afflicted with a status condition."
+				"Consume to cure any single status effect. You may consume this berry as a reaction when you become afflicted with a status effect."
 			],
 			"media": {
 				"sprite": "/assets/items/lum-berry/sprite.png"
@@ -2420,7 +2420,7 @@
 			"cost": 4000,
 			"beta": true,
 			"description": [
-				"After executing a move, the holder gains 10ft of movement, and attacks of opportunity against it have disadvantage. Until the end of its next turn, it may not activate any move different from the one it just used."
+				"After executing a move, until the end of its next turn, the holder gains 10ft of speed, and attacks of opportunity against it have disadvantage. Until the end of its next turn, it may not activate any move different from the one it just used."
 			],
 			"media": {
 				"sprite": "/assets/items/choice-scarf/sprite.png"

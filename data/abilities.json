@@ -1647,7 +1647,7 @@
     {
       "id": "wonder-guard",
       "name": "Wonder Guard",
-      "description": "This Pokémon is immune to damaging attacks from types that are not in its vulnerabilities list. (Shedinja only. Cannot be passed or swapped)"
+      "description": "This Pokémon is immune to damaging moves from types that are not in its vulnerabilities list. (Shedinja only. Cannot be passed or swapped)"
     },
     {
       "id": "wonder-skin",
