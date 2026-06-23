@@ -14,6 +14,19 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.12",
+		description: [
+			"<strong>Pokémon</strong>: Reduce the SR of Hisuian Voltorb and Hisuian Growlithe from 1 to ½ in order to match their non-Hisuian counterparts.",
+			"<strong>Pokémon</strong>: Wonder Guard now also specifies that it protects against any move (including saves), not just attack rolls.",
+			"<strong>Moves</strong>: Transform now also affects AC explicitly.",
+			"<strong>Moves</strong>: Leech Seed now ends when combat ends.",
+			"<strong>Moves</strong>: Disambiguate the charging rule on Megahorn and Horn Attack.",
+			"<strong>Moves</strong>: Sludge only requires its save against poison when the attack hits.",
+			"<strong>Items</strong>: Clarify wording on status-healing berries that they can be used when the status effect is obtained.",
+			"<strong>Items</strong>: Choice Scarf now specifies a duration on its effect.",
+			"<strong>Bugfix</strong>: Fixed bug where when Adaptability was added to Fakémon, it did not always show the name or description.",
+		],
+	}, {
 		name: "v1.11.11",
 		description: [
 			"Made a backend change which should decrease occurrence of the trainers and fakemon pages being unavailable.",
