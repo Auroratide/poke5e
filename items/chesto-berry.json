@@ -1,1 +1,1 @@
-{"id":"chesto-berry","name":"Chesto Berry","type":"berry","cost":200,"description":["Consume to cure sleep. You may consume this berry as a reaction when you fall asleep."],"media":{"sprite":"/assets/items/chesto-berry/sprite.png"}}
+{"id":"chesto-berry","name":"Chesto Berry","type":"berry","cost":200,"description":["Consume to cure sleep. You may consume this berry as a reaction when you fall asleep. You can still take this reaction even though the status would otherwise prevent you from taking it."],"media":{"sprite":"/assets/items/chesto-berry/sprite.png"}}
