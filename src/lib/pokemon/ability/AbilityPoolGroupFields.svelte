@@ -1,23 +1,32 @@
 <script lang="ts">
 	import { Button } from "$lib/ui/elements"
 	import { focusInputField, FormGroup, HintText } from "$lib/ui/forms"
-	import { AllAbilityField } from "."
+	import { AbilityStore, AllAbilityField } from "."
 	import { Ability } from "./Ability"
 	import { m } from "$lib/site/i18n"
 	import { getAbilityFieldName } from "./AllAbilityField.svelte"
 
-	export let idPrefix: string
-	export let title: string
-	export let values: Ability[]
-	export let disabled = false
+	let {
+		idPrefix,
+		title,
+		values = $bindable(),
+		disabled = false,
+	}: {
+		idPrefix: string,
+		title: string,
+		values: Ability[],
+		disabled?: boolean,
+	} = $props()
 
 	let newId = -1001
 	const nextNewId = () => idPrefix + (--newId).toString()
 
-	let withIds = values.map((it) => ({
+	let withIds = $state(values.map((it) => ({
 		id: nextNewId(),
 		value: it,
-	}))
+	})))
+
+	let defaultAbility = $derived($AbilityStore?.[0] ?? Ability.createNewStandard("adaptability"))
 
 	const remove = (id: string) => () => {
 		withIds = withIds.filter((it) => it.id !== id)
@@ -27,7 +36,7 @@
 		const nextId = nextNewId()
 		withIds = [...withIds, {
 			id: nextId,
-			value: Ability.createNewStandard("adaptability"),
+			value: defaultAbility,
 		} ]
 		focusInputField(getAbilityFieldName(nextId))
 	}
@@ -41,7 +50,9 @@
 		focusInputField(getAbilityFieldName(nextId))
 	}
 
-	$: values = withIds.map((it) => it.value)
+	$effect(() => {
+		values = withIds.map((it) => it.value)
+	})
 </script>
 
 <FormGroup {title}>
