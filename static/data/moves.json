@@ -12720,7 +12720,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You charge at a creature for a devastating horn attack. Make a melee attack roll, doing 2d10 + MOVE bug damage on a hit. If you moved 20 feet or more straight towards a target, immediately before activating this move, force a creature to make a STR save against your Move DC or be knocked prone."
+				"You charge at a creature for a devastating horn attack. Make a melee attack roll, doing 2d10 + MOVE bug damage on a hit. If you moved 20 feet or more straight towards a target immediately before activating this move, force a creature to make a STR save against your Move DC or be knocked prone."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 4d10 at level 10, and 7d8 at level 17.",
 			"damage": {
@@ -22840,7 +22840,7 @@
 			"duration": "1 minute, concentration",
 			"range": "50ft",
 			"description": [
-				"You attempt to morph into a near-exact copy of a creature in range. The base SR of the target must be able to be controlled by your trainer or the move fails. For the duration, you copy the target's type, ability scores, skills, speeds, senses, abilities, and current moves. You retain your own feats, level, and HP (Changed CON does not impact your HP)."
+				"You attempt to morph into a near-exact copy of a creature in range. The base SR of the target must be able to be controlled by your trainer or the move fails. For the duration, you copy the target's type, ability scores, AC, skills, speeds, senses, abilities, and current moves. You retain your own feats, level, and HP (Changed CON does not impact your HP)."
 			]
 		},
 		{
