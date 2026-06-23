@@ -147351,7 +147351,7 @@
 				"rock"
 			],
 			"size": "small",
-			"sr": 1,
+			"sr": 0.5,
 			"minLevel": 1,
 			"eggGroup": [
 				"field"
@@ -147654,7 +147654,7 @@
 				"grass"
 			],
 			"size": "tiny",
-			"sr": 1,
+			"sr": 0.5,
 			"minLevel": 1,
 			"eggGroup": [
 				"mineral"
