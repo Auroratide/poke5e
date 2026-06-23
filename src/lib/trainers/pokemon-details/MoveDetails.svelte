@@ -22,6 +22,9 @@
 
 	const dispatch = createEventDispatcher()
 
+	// needed because svelte strips away ending spaces
+	const COMMA_SPACE = ", "
+
 	export let move: LearnedMove
 	export let moveData: Move
 	export let level: Level
@@ -89,9 +92,9 @@
 					{#each attributeList as attribute, i}
 						{@const needComma = i !== attributeList.length - 1}
 						{#if bestPowers.includes(attribute)}
-							<strong>{attribute}</strong>{#if needComma}<span>, </span>{/if}
+							<strong>{attribute}</strong>{#if needComma}<span>{COMMA_SPACE}</span>{/if}
 						{:else}
-							<span>{attribute}</span>{#if needComma}<span>, </span>{/if}
+							<span>{attribute}</span>{#if needComma}<span>{COMMA_SPACE}</span>{/if}
 						{/if}
 					{/each}
 				{/if}
