@@ -1,10 +1,13 @@
 <script lang="ts">
+	import { RandomDiceRoller } from "$lib/dnd/dice"
 	import { m } from "$lib/site/i18n"
 	import { PlusMinus } from "$lib/ui/elements"
 	import { Fieldset, InstructionText, IntField, WithButton } from "$lib/ui/forms"
 	import CenterStage from "../CenterStage.svelte"
 	import FromTo from "../FromTo.svelte"
 	import type { IncreaseHpEffect } from "./IncreaseHp"
+
+	const dice = new RandomDiceRoller()
 
 	let {
 		value,
@@ -17,7 +20,7 @@
 	let resultHp = $derived(value.props.currentHp + increaseAmount)
 
 	const onRoll = () => {
-		inputValue = Math.floor(Math.random() * value.props.hitDice.sizeAsInt()) + 1
+		inputValue = dice.roll(value.props.hitDice.sizeAsInt())
 	}
 
 	$effect(() => {
