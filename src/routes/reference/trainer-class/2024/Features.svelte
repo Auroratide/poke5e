@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { m } from "$lib/site/i18n"
+</script>
+
 <h3>Trainer License</h3>
 <p>Only licensed trainers are permitted to capture Pokémon, and this license identifies you as having such authorization. It also allows trainers to gain access to special services at Pokémon centers and to purchase goods at the Poké Mart.</p>
 <p>Trainers can lose their license for attacking other trainers or their Pokémon, or failing to take care of their own Pokémon.</p>
@@ -18,9 +22,8 @@
 <h3>Trainer's Resolve</h3>
 <p>By the time you reach 10th level, you have had your fair share of experience in difficult battles and have emerged victorious and strong. You are now immune to being frightened, and may choose a second saving throw to become proficient in.</p>
 
-<h3>Pokemon Tracker</h3>
-<p>At level 13, you have already spent countless hours in the wild, searching for Pokémon high and low. Once per long rest you may search for Pokémon in the nearby area. You learn a list of wild Pokémon that can be found in the nearby area.</p>
-<p>Additionally, you gain Expertise in Animal Handling.</p>
+<h3>{m.pokemonTracker()}</h3>
+{@html m.pokemonTrackerDescriptionHtml()}
 
 <h3>Epic Boon</h3>
 <p>You gain an Epic Boon feat or another feat of your choice for which you qualify. Boon of Fate is recommended.</p>

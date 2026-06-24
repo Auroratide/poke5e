@@ -1,19 +1,19 @@
-import { describe, test, expect } from "vitest"
-import { TrainerLevelTable } from "../TrainerLevelTable"
+import { Attributes } from "$lib/dnd/attributes"
+import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { Level } from "$lib/dnd/level"
+import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
+import { TrainerPaths } from "$lib/trainers/paths/2024"
+import { SpecializationList } from "$lib/trainers/specializations/2024/SpecializationList"
+import { stubSpecializations } from "$lib/trainers/specializations/test/stubs"
 import { stubTrainer, stubTrainerPokemon } from "$lib/trainers/test/stubs"
+import { describe, expect, test } from "vitest"
+import type { AdditionalSpecializationEffect } from "../effects/AdditionalSpecialization"
+import type { AsiOrFeatEffect } from "../effects/AsiOrFeat"
 import type { IncreaseHpEffect } from "../effects/IncreaseHp"
 import type { NewTrainerPathEffect } from "../effects/NewTrainerPath"
-import { TrainerPaths } from "$lib/trainers/paths/2024"
 import { LevelUp } from "../LevelUp"
 import { PokemonLevelTable } from "../PokemonLevelTable"
-import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
-import type { AsiOrFeatEffect } from "../effects/AsiOrFeat"
-import { Attributes } from "$lib/dnd/attributes"
-import { stubSpecializations } from "$lib/trainers/specializations/test/stubs"
-import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
-import type { AdditionalSpecializationEffect } from "../effects/AdditionalSpecialization"
-import { SpecializationList } from "$lib/trainers/specializations/2024/SpecializationList"
+import { TrainerLevelTable } from "../TrainerLevelTable"
 
 describe("trainers", () => {
 	test("on any level up", () => {
@@ -199,6 +199,21 @@ describe("trainers", () => {
 			normal: 2,
 		}))
 		expect(result.attributes.cha.score).toEqual(13) // normal specialization increases CHA
+	})
+
+	test("pokemon tracker", () => {
+		// given
+		const trainer = stubTrainer({
+			level: new Level(12),
+		})
+
+		const effects = TrainerLevelTable.toLevel(new Level(13))(trainer)
+
+		// when
+		const result = LevelUp.apply(trainer, effects)
+
+		// then
+		expect(result.proficiencies.isExpert("animal handling")).toBe(true)
 	})
 })
 

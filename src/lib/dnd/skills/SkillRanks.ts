@@ -101,6 +101,16 @@ export class SkillRanks extends DataClass<{
 		return this
 	}
 
+	addExpertise = (skills: Skill[]): SkillRanks => {
+		for (const skill of skills) {
+			if (this.data[skill] < 2) {
+				this.data[skill] = 2
+			}
+		}
+
+		return this
+	}
+
 	isProficient = (skill: Skill): boolean => this.data[skill] > 0
 	isExpert = (skill: Skill): boolean => this.data[skill] > 1
 

@@ -12,6 +12,7 @@ import { MaxSrIncreaseEffect } from "./effects/MaxSrIncrease"
 import { NewTrainerPathEffect } from "./effects/NewTrainerPath"
 import { PokeslotIncreaseEffect } from "./effects/PokeslotIncrease"
 import { trainerHitDiceSize } from "$lib/trainers/hit-dice"
+import { PokemonTrackerEffect } from "./effects/PokemonTracker"
 
 const standardLevelUpEffects = (trainer: Trainer) => [
 	new IncreaseLevelEffect({
@@ -121,7 +122,7 @@ const Level12 = (trainer: Trainer) => [
 ]
 const Level13 = (trainer: Trainer) => [
 	...standardLevelUpEffects(trainer),
-	// POKEMON TRACKER???
+	new PokemonTrackerEffect({}, {}),
 ]
 const Level14 = (trainer: Trainer) => [
 	...standardLevelUpEffects(trainer),

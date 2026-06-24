@@ -246,6 +246,8 @@
 	"noDamagingMoves": "This pokémon does not know any damaging moves.",
 	"newMoves": "New Moves",
 	"newMovesInstructions": "New moves have been added to the list of moves your Pokémon can know! After finishing your level up, Edit the pokemon to adjust its moveset.",
+	"pokemonTracker": "Pokémon Tracker",
+	"pokemonTrackerDescriptionHtml": "<p>At level 13, you have already spent countless hours in the wild, searching for Pokémon high and low. Once per long rest you may search for Pokémon in the nearby area. You learn a list of wild Pokémon that can be found in the nearby area.</p><p>Additionally, you gain Expertise in Animal Handling.</p>",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},

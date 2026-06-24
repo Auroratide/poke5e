@@ -65,3 +65,64 @@ describe("addProficiencies", () => {
 		}))
 	})
 })
+
+describe("addExpertise", () => {
+	test("proficiency did not exist before", () => {
+		const ranks = stubSkillProficiencies({
+			athletics: 0,
+		})
+	
+		const newSkills: Skill[] = ["athletics"]
+	
+		const result = ranks.addExpertise(newSkills)
+	
+		expect(result).toEqualData(stubSkillProficiencies({
+			athletics: 2,
+		}))
+	})
+	
+	test("improving a proficiency", () => {
+		const ranks = stubSkillProficiencies({
+			athletics: 1,
+		})
+	
+		const newSkills: Skill[] = ["athletics"]
+	
+		const result = ranks.addExpertise(newSkills)
+	
+		expect(result).toEqualData(stubSkillProficiencies({
+			athletics: 2,
+		}))
+	})
+	
+	test("skills have expertise already", () => {
+		const ranks = stubSkillProficiencies({
+			athletics: 2,
+			acrobatics: 2,
+		})
+	
+		const newSkills: Skill[] = ["athletics", "persuasion"]
+	
+		const result = ranks.addExpertise(newSkills)
+	
+		expect(result).toEqualData(stubSkillProficiencies({
+			athletics: 2,
+			acrobatics: 2,
+			persuasion: 2,
+		}))
+	})
+	
+	test("adding nothing", () => {
+		const ranks = stubSkillProficiencies({
+			athletics: 1,
+		})
+	
+		const newSkills: Skill[] = []
+	
+		const result = ranks.addExpertise(newSkills)
+	
+		expect(result).toEqualData(stubSkillProficiencies({
+			athletics: 1,
+		}))
+	})
+})
