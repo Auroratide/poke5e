@@ -1,6 +1,8 @@
 import type { AbilityScoreImprovement, Attributes } from "$lib/dnd/attributes"
 import type { Feat } from "$lib/dnd/feats"
 import type { ChosenFeat } from "$lib/dnd/feats/ChosenFeat"
+import type { Level } from "$lib/dnd/level"
+import type { Resource } from "$lib/poke5e/resource"
 import { LevelUpEffect } from "../LevelUpEffect"
 import AsiOrFeatField from "./AsiOrFeatField.svelte"
 
@@ -15,9 +17,11 @@ export type AsiOrFeatParams = {
 	pointsSpent: AbilityScoreImprovement,
 }
 
-type HasAttributesAndFeats = {
+type HasAttributesFeatsLevelHp = {
+	level: Level,
 	feats: ChosenFeat[],
 	attributes: Attributes,
+	hp: Resource,
 }
 
 export class AsiOrFeatEffect extends LevelUpEffect<AsiOrFeatProps, AsiOrFeatParams> {
@@ -25,12 +29,22 @@ export class AsiOrFeatEffect extends LevelUpEffect<AsiOrFeatProps, AsiOrFeatPara
 		return AsiOrFeatField
 	}
 
-	apply<T extends HasAttributesAndFeats>(subject: T): T {
+	apply<T extends HasAttributesFeatsLevelHp>(subject: T): T {
 		const feat = this.params.feat
+
+		const originalCon = subject.attributes.con
+		const improvedAttributes = subject.attributes.improve(this.params.pointsSpent)
+		const differenceInConModifier = improvedAttributes.con.modifier - originalCon.modifier
+		const hpGain = subject.level.data * differenceInConModifier
+
 		return {
 			...subject,
-			attributes: subject.attributes.improve(this.params.pointsSpent),
+			attributes: improvedAttributes,
 			feats: feat != null ? [...subject.feats, feat] : subject.feats,
+			hp: {
+				current: subject.hp.current + hpGain,
+				max: subject.hp.max + hpGain,
+			},
 		}
 	}
 }

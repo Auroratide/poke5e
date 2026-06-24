@@ -134,6 +134,46 @@ describe("trainers", () => {
 		expect(result.feats).toEqual([feat])
 	})
 
+	test("increasing CON increases HP retroactively", () => {
+		// given
+		const trainer = stubTrainer({
+			level: new Level(7),
+			hp: {
+				current: 35,
+				max: 35,
+			},
+			attributes: new Attributes({
+				str: 10,
+				dex: 10,
+				con: 10,
+				int: 10,
+				wis: 10,
+				cha: 10,
+			}),
+		})
+
+		const effects = TrainerLevelTable.toLevel(new Level(8))(trainer)
+		const hpEffect = effects[1] as IncreaseHpEffect
+		const asiEffect = effects[2] as AsiOrFeatEffect
+
+		hpEffect.params.increaseAmount = 0
+
+		asiEffect.params.pointsSpent = {
+			str: 0,
+			dex: 0,
+			con: 2, // con modifier will go up by 1
+			int: 0,
+			wis: 0,
+			cha: 0,
+		}
+
+		// when
+		const result = LevelUp.apply(trainer, effects)
+
+		// then
+		expect(result.hp.max).toEqual(43)
+	})
+
 	test("specialization", () => {
 		// given
 		const trainer = stubTrainer({
