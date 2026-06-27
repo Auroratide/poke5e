@@ -24241,7 +24241,17 @@
 			"description": [
 				"You send forth a healing wish that takes time to come true. At the end of your next turn, as a free action, heal a target in range for 3d8 + MOVE hit points."
 			],
-			"higherLevels": "The healing dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17."
+			"higherLevels": "The healing dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "3d8",
+					"5": "5d6",
+					"10": "4d12",
+					"17": "8d8"
+				},
+				"modifier": "MOVE",
+				"type": "healing"
+			}
 		},
 		{
 			"id": "withdraw",
