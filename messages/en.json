@@ -252,6 +252,8 @@
 	"pokemonTrackerDescriptionHtml": "<p>At level 13, you have already spent countless hours in the wild, searching for Pokémon high and low. Once per long rest you may search for Pokémon in the nearby area. You learn a list of wild Pokémon that can be found in the nearby area.</p><p>Additionally, you gain Expertise in Animal Handling.</p>",
 	"masterTrainer": "Master Trainer",
 	"masterTrainerDescriptionHtml": "<p>You have finally achieved the title of Master Trainer. Your Pokémon are at peak fighting performance. When you or your Pokémon fail a saving throw, you may choose to succeed instead. This feature can be used twice per long rest.</p>",
+	"stabIncrease": "STAB Increase",
+	"stabIncreaseInstructions": "Your pokémon now deals additional STAB damage!",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},

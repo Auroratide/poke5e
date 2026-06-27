@@ -1,6 +1,7 @@
 import { AbilityScoreImprovement } from "$lib/dnd/attributes"
 import { DndFeats } from "$lib/dnd/feats"
 import type { Level } from "$lib/dnd/level"
+import { trainerHitDiceSize } from "$lib/trainers/hit-dice"
 import type { Trainer } from "$lib/trainers/types"
 import { get } from "svelte/store"
 import { AcquiredPathFeatureEffect } from "./effects/AcquiredPathFeature"
@@ -8,12 +9,11 @@ import { AdditionalSpecializationEffect } from "./effects/AdditionalSpecializati
 import { AsiOrFeatEffect } from "./effects/AsiOrFeat"
 import { IncreaseHpEffect } from "./effects/IncreaseHp"
 import { IncreaseLevelEffect } from "./effects/IncreaseLevel"
+import { MasterTrainerEffect } from "./effects/MasterTrainer"
 import { MaxSrIncreaseEffect } from "./effects/MaxSrIncrease"
 import { NewTrainerPathEffect } from "./effects/NewTrainerPath"
-import { PokeslotIncreaseEffect } from "./effects/PokeslotIncrease"
-import { trainerHitDiceSize } from "$lib/trainers/hit-dice"
 import { PokemonTrackerEffect } from "./effects/PokemonTracker"
-import { MasterTrainerEffect } from "./effects/MasterTrainer"
+import { PokeslotIncreaseEffect } from "./effects/PokeslotIncrease"
 import { TrainerResolveEffect } from "./effects/TrainerResolve"
 
 const standardLevelUpEffects = (trainer: Trainer) => [
