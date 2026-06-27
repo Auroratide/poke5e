@@ -16670,7 +16670,7 @@
 			"gender": "1:1",
 			"description": "The Spikes Pokémon. A Pokémon with a one-track mind. Once it charges, it won’t stop running until it falls asleep.",
 			"ac": 13,
-			"hp": 40,
+			"hp": 20,
 			"hitDice": "d8",
 			"speed": [
 				{
@@ -99666,7 +99666,7 @@
 			"gender": "1:1",
 			"description": "The Torch Pokémon. The base of volcanoes is where they make their homes. They shoot fire from their five horns to repel attacking enemies.",
 			"ac": 13,
-			"hp": 42,
+			"hp": 17,
 			"hitDice": "d6",
 			"speed": [
 				{
@@ -131459,7 +131459,7 @@
 			"gender": "1:1",
 			"description": "The Scratch Cat Pokémon. Living with a savage, seafaring people has toughened this Pokémon's body so much that parts of it have turned to iron.",
 			"ac": 14,
-			"hp": 17,
+			"hp": 16,
 			"hitDice": "d6",
 			"speed": [
 				{
@@ -132278,7 +132278,7 @@
 			"gender": "1:1",
 			"description": "The Wild Duck Pokémon. Farfetch'd always carries a leek that is twice as long and heavy as its own body and never lets go.",
 			"ac": 14,
-			"hp": 25,
+			"hp": 19,
 			"hitDice": "d8",
 			"speed": [
 				{
@@ -133831,7 +133831,7 @@
 			"gender": "1:1",
 			"description": "The Zen Charm Pokémon. It lived in snowy areas for so long that its fire sac cooled off and atrophied. It now has an organ that generates cold instead.",
 			"ac": 12,
-			"hp": 24,
+			"hp": 20,
 			"hitDice": "d8",
 			"speed": [
 				{
@@ -134816,7 +134816,7 @@
 			"gender": "1:7",
 			"description": "The Rabbit Pokémon. A warm-up of running around gets fire energy coursing through this Pokémon's body. Once that happens, it's ready to fight at full power.",
 			"ac": 12,
-			"hp": 17,
+			"hp": 16,
 			"hitDice": "d6",
 			"speed": [
 				{
@@ -135228,7 +135228,7 @@
 			"gender": "1:7",
 			"description": "The Water Lizard Pokémon. When scared, this Pokémon cries. Its tears pack the chemical punch of 100 onions, and attackers won't be able to resist weeping.",
 			"ac": 12,
-			"hp": 17,
+			"hp": 16,
 			"hitDice": "d6",
 			"speed": [
 				{
@@ -137138,7 +137138,7 @@
 			"gender": "1:1",
 			"description": "The Sheep Pokémon. Its curly fleece is such an effective cushion that this Pokémon could fall off a cliff and stand right back up at the bottom, unharmed.",
 			"ac": 13,
-			"hp": 17,
+			"hp": 16,
 			"hitDice": "d6",
 			"speed": [
 				{
@@ -138700,7 +138700,7 @@
 			"gender": "1:1",
 			"description": "The Sand Snake Pokémon. As it digs, it swallows sand and stores it in its neck pouch. The pouch can hold more than 17 pounds of sand.",
 			"ac": 13,
-			"hp": 17,
+			"hp": 16,
 			"hitDice": "d6",
 			"speed": [
 				{
@@ -139841,7 +139841,7 @@
 			"gender": "1:1",
 			"description": "The Radiator Pokémon. It wraps prey up with its heated body, cooking them in its coils. Once they're well-done, it will voraciously nibble them down to the last morsel.",
 			"ac": 13,
-			"hp": 18,
+			"hp": 17,
 			"hitDice": "d6",
 			"speed": [
 				{
@@ -143784,7 +143784,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 19,
+			"hp": 20,
 			"skills": [
 				"athletics"
 			],
@@ -145857,7 +145857,7 @@
 				"wis": 10,
 				"cha": 12
 			},
-			"hp": 19,
+			"hp": 16,
 			"skills": [
 				"athletics"
 			],
@@ -152424,7 +152424,7 @@
 				"wis": 10,
 				"cha": 11
 			},
-			"hp": 19,
+			"hp": 20,
 			"skills": [
 				"nature",
 				"performance"
@@ -154893,7 +154893,7 @@
 				"wis": 12,
 				"cha": 12
 			},
-			"hp": 17,
+			"hp": 18,
 			"skills": [
 				"perception"
 			],
@@ -155527,7 +155527,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 19,
+			"hp": 21,
 			"skills": [
 				"perception"
 			],
@@ -155670,7 +155670,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 18,
+			"hp": 20,
 			"skills": [
 				"athletics"
 			],
@@ -156097,7 +156097,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 17,
+			"hp": 18,
 			"skills": [
 				"intimidation"
 			],
@@ -156490,7 +156490,7 @@
 				"wis": 11,
 				"cha": 10
 			},
-			"hp": 18,
+			"hp": 19,
 			"skills": [
 				"perception"
 			],
@@ -156760,7 +156760,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 16,
+			"hp": 18,
 			"skills": [
 				"acrobatics"
 			],
@@ -157038,7 +157038,7 @@
 				"wis": 10,
 				"cha": 12
 			},
-			"hp": 18,
+			"hp": 20,
 			"skills": [
 				"perception",
 				"intimidation"
@@ -157311,7 +157311,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 16,
+			"hp": 18,
 			"skills": [
 				"stealth"
 			],
@@ -157615,7 +157615,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 17,
+			"hp": 18,
 			"skills": [
 				"nature"
 			],
@@ -158296,7 +158296,7 @@
 				"wis": 11,
 				"cha": 11
 			},
-			"hp": 17,
+			"hp": 16,
 			"skills": [
 				"nature"
 			],
@@ -158563,7 +158563,7 @@
 				"wis": 13,
 				"cha": 10
 			},
-			"hp": 17,
+			"hp": 16,
 			"skills": [
 				"insight"
 			],
@@ -158831,7 +158831,7 @@
 				"wis": 15,
 				"cha": 12
 			},
-			"hp": 16,
+			"hp": 15,
 			"skills": [
 				"perception"
 			],
@@ -159513,7 +159513,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 18,
+			"hp": 15,
 			"skills": [
 				"stealth",
 				"perception"
@@ -159942,7 +159942,7 @@
 				"wis": 11,
 				"cha": 10
 			},
-			"hp": 18,
+			"hp": 19,
 			"skills": [
 				"acrobatics",
 				"insight"
@@ -160209,7 +160209,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 17,
+			"hp": 19,
 			"skills": [
 				"athletics"
 			],
@@ -160767,7 +160767,7 @@
 				"wis": 13,
 				"cha": 10
 			},
-			"hp": 17,
+			"hp": 18,
 			"skills": [
 				"survival"
 			],
@@ -161473,7 +161473,7 @@
 				"wis": 11,
 				"cha": 10
 			},
-			"hp": 20,
+			"hp": 23,
 			"skills": [],
 			"savingThrows": [
 				"con"
@@ -164577,7 +164577,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 18,
+			"hp": 19,
 			"skills": [
 				"survival"
 			],
@@ -164958,7 +164958,7 @@
 				"wis": 11,
 				"cha": 12
 			},
-			"hp": 17,
+			"hp": 18,
 			"skills": [
 				"sleight of hand",
 				"deception"
@@ -165040,7 +165040,7 @@
 				"wis": 11,
 				"cha": 12
 			},
-			"hp": 17,
+			"hp": 15,
 			"skills": [
 				"sleight of hand",
 				"deception"
