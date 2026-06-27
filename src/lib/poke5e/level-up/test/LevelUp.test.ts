@@ -14,6 +14,7 @@ import type { NewTrainerPathEffect } from "../effects/NewTrainerPath"
 import { LevelUp } from "../LevelUp"
 import { PokemonLevelTable } from "../PokemonLevelTable"
 import { TrainerLevelTable } from "../TrainerLevelTable"
+import type { TrainerResolveEffect } from "../effects/TrainerResolve"
 
 describe("trainers", () => {
 	test("on any level up", () => {
@@ -214,6 +215,23 @@ describe("trainers", () => {
 
 		// then
 		expect(result.proficiencies.isExpert("animal handling")).toBe(true)
+	})
+
+	test("trainer resolve", () => {
+		// given
+		const trainer = stubTrainer({
+			level: new Level(9),
+		})
+
+		const effects = TrainerLevelTable.toLevel(new Level(10))(trainer)
+		const effect = effects[3] as TrainerResolveEffect
+		effect.params.savingThrows = ["str", "cha"]
+
+		// when
+		const result = LevelUp.apply(trainer, effects)
+
+		// then
+		expect(result.savingThrows).toEqual(["str", "cha"])
 	})
 })
 

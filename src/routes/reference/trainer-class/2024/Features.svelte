@@ -19,8 +19,8 @@
 <p>Each species of Pokemon is given its own <dfn>Species Rating</dfn> (<abbr>SR</abbr>). The stronger the Pokemon, the more difficult they are to control. The type of Pokemon you can control in the game depends on the level of your character (as seen in the Trainer Level Table).</p>
 <p>Without the proper level, a Pokemon with a higher SR than allowed will refuse to leave their Pokeball or obey the trainer's orders. The maximum SR you can control increases at levels 3, 6, 8, 11, 14, and 17.</p>
 
-<h3>Trainer's Resolve</h3>
-<p>By the time you reach 10th level, you have had your fair share of experience in difficult battles and have emerged victorious and strong. You are now immune to being frightened, and may choose a second saving throw to become proficient in.</p>
+<h3>{m.trainerResolve()}</h3>
+{@html m.trainerResolveDescriptionHtml()}
 
 <h3>{m.pokemonTracker()}</h3>
 {@html m.pokemonTrackerDescriptionHtml()}

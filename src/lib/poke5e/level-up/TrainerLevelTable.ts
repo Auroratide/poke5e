@@ -14,6 +14,7 @@ import { PokeslotIncreaseEffect } from "./effects/PokeslotIncrease"
 import { trainerHitDiceSize } from "$lib/trainers/hit-dice"
 import { PokemonTrackerEffect } from "./effects/PokemonTracker"
 import { MasterTrainerEffect } from "./effects/MasterTrainer"
+import { TrainerResolveEffect } from "./effects/TrainerResolve"
 
 const standardLevelUpEffects = (trainer: Trainer) => [
 	new IncreaseLevelEffect({
@@ -99,10 +100,14 @@ const Level09 = (trainer: Trainer) => [
 ]
 const Level10 = (trainer: Trainer) => [
 	...standardLevelUpEffects(trainer),
-	// RESOLVE???
 	new PokeslotIncreaseEffect({
 		currentLevel: trainer.level,
 	}, {}),
+	new TrainerResolveEffect({
+		savingThrows: trainer.savingThrows,
+	}, {
+		savingThrows: trainer.savingThrows,
+	}),
 ]
 const Level11 = (trainer: Trainer) => [
 	...standardLevelUpEffects(trainer),
