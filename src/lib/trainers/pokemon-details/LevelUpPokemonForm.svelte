@@ -3,6 +3,7 @@
 	import { LevelUp, LevelUpForm } from "$lib/poke5e/level-up"
 	import { PokemonLevelTable } from "$lib/poke5e/level-up/PokemonLevelTable"
 	import { PokemonSpecies } from "$lib/poke5e/species"
+	import { EvolutionStore } from "$lib/pokemon/evolution"
 	import { m } from "$lib/site/i18n"
 	import { Url } from "$lib/site/url"
 	import { Button } from "$lib/ui/elements"
@@ -23,8 +24,9 @@
 	} = $props()
 
 	let canEdit = $derived($trainer.update != null)
+	let evolutions = $derived(EvolutionStore.get(species.id))
 
-	const template = $derived(PokemonLevelTable.toLevel(pokemon.level.next())(pokemon, species))
+	const template = $derived(PokemonLevelTable.toLevel(pokemon.level.next())(pokemon, species, $evolutions))
 
 	let saving = $state(false)
 	const applyLevelUp = async () => {

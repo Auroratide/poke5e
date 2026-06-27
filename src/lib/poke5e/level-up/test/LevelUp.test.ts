@@ -15,6 +15,8 @@ import { LevelUp } from "../LevelUp"
 import { PokemonLevelTable } from "../PokemonLevelTable"
 import { TrainerLevelTable } from "../TrainerLevelTable"
 import type { TrainerResolveEffect } from "../effects/TrainerResolve"
+import { EvolutionForest } from "$lib/pokemon/evolution"
+import { stubEvolution } from "$lib/pokemon/evolution/test/stubs"
 
 describe("trainers", () => {
 	test("on any level up", () => {
@@ -236,7 +238,7 @@ describe("trainers", () => {
 })
 
 describe("pokemon", () => {
-	test("level 1 to level 2", () => {
+	test("on any level up", () => {
 		// given
 		const pokemon = stubTrainerPokemon({
 			level: new Level(1),
@@ -247,8 +249,9 @@ describe("pokemon", () => {
 		})
 
 		const species = stubPokemonSpecies()
+		const evolution = new EvolutionForest([])
 
-		const effects = PokemonLevelTable.toLevel(new Level(2))(pokemon, species)
+		const effects = PokemonLevelTable.toLevel(new Level(2))(pokemon, species, evolution)
 		const hpEffect = effects[1] as IncreaseHpEffect
 
 		hpEffect.params.increaseAmount = 3
@@ -262,5 +265,114 @@ describe("pokemon", () => {
 			current: 10,
 			max: 15,
 		})
+	})
+
+	test("asi for pokemon with 1 stage", () => {
+		// given
+		const pokemon = stubTrainerPokemon({
+			level: new Level(3),
+			attributes: new Attributes({
+				str: 10,
+				dex: 10,
+				con: 10,
+				int: 10,
+				wis: 10,
+				cha: 10,
+			}),
+		})
+
+		const species = stubPokemonSpecies()
+		const evolution = new EvolutionForest([])
+
+		const effects = PokemonLevelTable.toLevel(new Level(4))(pokemon, species, evolution)
+		const asiEffect = effects[2] as AsiOrFeatEffect
+
+		expect(asiEffect.props.pointsToSpend).toEqual(4)
+
+		asiEffect.params.feat = undefined
+		asiEffect.params.pointsSpent = {
+			str: 2,
+			dex: 1,
+			con: 0,
+			int: 0,
+			wis: 1,
+			cha: 0,
+		}
+
+		// when
+		const result = LevelUp.apply(pokemon, effects)
+
+		// then
+		expect(result.attributes).toEqualData(new Attributes({
+			str: 12,
+			dex: 11,
+			con: 10,
+			int: 10,
+			wis: 11,
+			cha: 10,
+		}))
+	})
+
+	test("asi for pokemon with 3 stages", () => {
+		// given
+		const pokemon = stubTrainerPokemon({
+			level: new Level(3),
+			attributes: new Attributes({
+				str: 10,
+				dex: 10,
+				con: 10,
+				int: 10,
+				wis: 10,
+				cha: 10,
+			}),
+		})
+
+		const species = stubPokemonSpecies({
+			id: "one",
+		})
+		const evolvesTo = stubPokemonSpecies({
+			id: "two",
+		})
+		const evolvesToTo = stubPokemonSpecies({
+			id: "three",
+		})
+		const evolution = new EvolutionForest([
+			stubEvolution({
+				from: species.id.data,
+				to: evolvesTo.id.data,
+			}),
+			stubEvolution({
+				from: evolvesTo.id.data,
+				to: evolvesToTo.id.data,
+			}),
+		])
+
+		const effects = PokemonLevelTable.toLevel(new Level(4))(pokemon, species, evolution)
+		const asiEffect = effects[2] as AsiOrFeatEffect
+
+		expect(asiEffect.props.pointsToSpend).toEqual(2)
+
+		asiEffect.params.feat = undefined
+		asiEffect.params.pointsSpent = {
+			str: 0,
+			dex: 1,
+			con: 0,
+			int: 0,
+			wis: 1,
+			cha: 0,
+		}
+
+		// when
+		const result = LevelUp.apply(pokemon, effects)
+
+		// then
+		expect(result.attributes).toEqualData(new Attributes({
+			str: 10,
+			dex: 11,
+			con: 10,
+			int: 10,
+			wis: 11,
+			cha: 10,
+		}))
 	})
 })

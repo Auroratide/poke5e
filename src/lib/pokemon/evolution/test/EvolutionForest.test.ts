@@ -233,6 +233,16 @@ test("remove", () => {
 	expect(charmanderStages).toEqual(2)
 })
 
+test("asi", () => {
+	const oneStage = forest.asi(SpeciesIdentifier.fromSpeciesName("palkia"))
+	const twoStages = forest.asi(SpeciesIdentifier.fromSpeciesName("eevee"))
+	const threeStages = forest.asi(SpeciesIdentifier.fromSpeciesName("charmander"))
+
+	expect(oneStage).toEqual(4)
+	expect(twoStages).toEqual(3)
+	expect(threeStages).toEqual(2)
+})
+
 describe("weird evolutions", () => {
 	test("cyclic evolution", () => {
 		// A > B > C > A
@@ -269,6 +279,9 @@ describe("weird evolutions", () => {
 
 		const currentStage  = forest.currentStage(heracross)
 		expect(currentStage).toEqual(0)
+
+		const asi  = forest.asi(heracross)
+		expect(asi).toEqual(2)
 	})
 
 	test("skipping a step", () => {

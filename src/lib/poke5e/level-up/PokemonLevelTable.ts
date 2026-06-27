@@ -10,6 +10,7 @@ import { IncreaseHpEffect } from "./effects/IncreaseHp"
 import { IncreaseLevelEffect } from "./effects/IncreaseLevel"
 import { NewMovesEffect } from "./effects/NewMoves"
 import { StabIncreaseEffect } from "./effects/StabIncrease"
+import type { EvolutionForest } from "$lib/pokemon/evolution"
 
 const standardLevelUpEffects = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 	new IncreaseLevelEffect({
@@ -39,11 +40,11 @@ const Level03 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 		stab: pokemon.stab,
 	}, {}),
 ]
-const Level04 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
+const Level04 = (pokemon: TrainerPokemon, species: PokemonSpecies, evolutions: EvolutionForest | undefined) => [
 	...standardLevelUpEffects(pokemon, species),
 	new AsiOrFeatEffect({
 		options: get(DndAndPokemonFeats),
-		pointsToSpend: 2,
+		pointsToSpend: evolutions?.asi(species.id) ?? 2,
 		attributes: pokemon.attributes,
 	}, {
 		feat: undefined,
@@ -75,11 +76,11 @@ const Level07 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 		stab: pokemon.stab,
 	}, {}),
 ]
-const Level08 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
+const Level08 = (pokemon: TrainerPokemon, species: PokemonSpecies, evolutions: EvolutionForest | undefined) => [
 	...standardLevelUpEffects(pokemon, species),
 	new AsiOrFeatEffect({
 		options: get(DndAndPokemonFeats),
-		pointsToSpend: 2,
+		pointsToSpend: evolutions?.asi(species.id) ?? 2,
 		attributes: pokemon.attributes,
 	}, {
 		feat: undefined,
@@ -111,11 +112,11 @@ const Level11 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 		stab: pokemon.stab,
 	}, {}),
 ]
-const Level12 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
+const Level12 = (pokemon: TrainerPokemon, species: PokemonSpecies, evolutions: EvolutionForest | undefined) => [
 	...standardLevelUpEffects(pokemon, species),
 	new AsiOrFeatEffect({
 		options: get(DndAndPokemonFeats),
-		pointsToSpend: 2,
+		pointsToSpend: evolutions?.asi(species.id) ?? 2,
 		attributes: pokemon.attributes,
 	}, {
 		feat: undefined,
@@ -143,11 +144,11 @@ const Level15 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 		stab: pokemon.stab,
 	}, {}),
 ]
-const Level16 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
+const Level16 = (pokemon: TrainerPokemon, species: PokemonSpecies, evolutions: EvolutionForest | undefined) => [
 	...standardLevelUpEffects(pokemon, species),
 	new AsiOrFeatEffect({
 		options: get(DndAndPokemonFeats),
-		pointsToSpend: 2,
+		pointsToSpend: evolutions?.asi(species.id) ?? 2,
 		attributes: pokemon.attributes,
 	}, {
 		feat: undefined,
@@ -179,11 +180,11 @@ const Level19 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 		stab: pokemon.stab,
 	}, {}),
 ]
-const Level20 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
+const Level20 = (pokemon: TrainerPokemon, species: PokemonSpecies, evolutions: EvolutionForest | undefined) => [
 	...standardLevelUpEffects(pokemon, species),
 	new AsiOrFeatEffect({
 		options: get(DndAndPokemonFeats),
-		pointsToSpend: 2,
+		pointsToSpend: evolutions?.asi(species.id) ?? 2,
 		attributes: pokemon.attributes,
 	}, {
 		feat: undefined,

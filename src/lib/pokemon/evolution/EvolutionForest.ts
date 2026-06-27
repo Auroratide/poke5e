@@ -83,6 +83,17 @@ export class EvolutionForest {
 		return currentStage + maxDepth
 	}
 
+	asi(species: SpeciesIdentifier): number {
+		const maxStage = this.maxStage(species)
+		if (maxStage === 1) {
+			return 4
+		} else if (maxStage === 2) {
+			return 3
+		} else {
+			return 2
+		}
+	}
+
 	addAll(evolutions: Evolution[]) {
 		const nonDuplicates = evolutions.filter((toAdd) => !this.evolutions.find((alreadyIn) => alreadyIn.isSame(toAdd)))
 		this.evolutions.push(...nonDuplicates)
