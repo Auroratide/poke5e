@@ -30,5 +30,5 @@
 <p>A list of Epic Boons can be found in the D&D Player Handbook, page 210.</p>
 <p>Be creative roleplaying boons that seem "magical" for a Pokémon universe. For example, perhaps Boon of Fate could be interpretted as your trainer giving a last-minute critical command that gets your Pokémon out of danger.</p>
 
-<h3>Master Trainer</h3>
-<p>You have finally achieved the title of Master Trainer. Your Pokémon are at peak fighting performance. When you or your Pokémon fail a saving throw, you may choose to succeed instead. This feature can be used twice per long rest.</p>
+<h3>{m.masterTrainer()}</h3>
+{@html m.masterTrainerDescriptionHtml()}

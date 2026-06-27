@@ -13,6 +13,7 @@ import { NewTrainerPathEffect } from "./effects/NewTrainerPath"
 import { PokeslotIncreaseEffect } from "./effects/PokeslotIncrease"
 import { trainerHitDiceSize } from "$lib/trainers/hit-dice"
 import { PokemonTrackerEffect } from "./effects/PokemonTracker"
+import { MasterTrainerEffect } from "./effects/MasterTrainer"
 
 const standardLevelUpEffects = (trainer: Trainer) => [
 	new IncreaseLevelEffect({
@@ -171,7 +172,7 @@ const Level19 = (trainer: Trainer) => [
 ]
 const Level20 = (trainer: Trainer) => [
 	...standardLevelUpEffects(trainer),
-	// MASTER TRAINER???
+	new MasterTrainerEffect({}, {}),
 ]
 
 const LEVELS = [
