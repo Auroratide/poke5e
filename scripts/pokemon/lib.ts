@@ -8,6 +8,7 @@ export type Pokemon = {
 	hitDice: string,
 	minLevel: number,
 	hp: number,
+	sr: number,
 	attributes: {
 		str: number,
 		dex: number,

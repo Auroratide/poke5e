@@ -1,23 +1,32 @@
 import { getPokemon, hitDiceAsInt, modifier, type Pokemon, writePokemon } from "./lib.ts"
 
-function startingLevel1Hp(p: Pokemon) {
-	return 10 + hitDiceAsInt(p.hitDice) + modifier(p.attributes.con)
+function startingHp(p: Pokemon) {
+	const maxDice = hitDiceAsInt(p.hitDice)
+	const averageDice = Math.floor(maxDice / 2) + 1
+	const mod = modifier(p.attributes.con)
+	return 10 + maxDice + mod + (p.minLevel - 1) * (averageDice + mod)
 }
 
 function shouldCorrect(p: Pokemon) {
-	return p.number >= 813 || p.name.includes("Galarian") || p.name.includes("Hisuian") || p.id === "rhyhorn" || p.id === "larvesta"
+	const exceptions = ["Regieleki", "Regidrago", "Enamorus (Incarnate)", "Enamorus (Therian)"]
+
+	return p.sr < 15 && (p.number >= 813 || p.name.includes("Galarian") || p.name.includes("Hisuian") || p.id === "rhyhorn" || p.id === "larvesta") && !exceptions.includes(p.name)
+}
+
+function percentDifference(v1: number, v2: number): number {
+	return Math.round(Math.abs(v1 - v2) / ((v1 + v2) / 2) * 100)
 }
 
 async function main() {
 	const pokemon = await getPokemon()
 
 	for (const p of pokemon) {
-		if (p.minLevel === 1 && shouldCorrect(p)) {
+		if (shouldCorrect(p)) {
 			const originalHp = p.hp
-			p.hp = startingLevel1Hp(p)
+			p.hp = startingHp(p)
 
 			if (originalHp !== p.hp) {
-				console.log(`- ${p.name}: ${originalHp} -> ${p.hp}`)
+				console.log(`- ${p.name}: ${originalHp} -> ${p.hp} (${percentDifference(originalHp, p.hp)}%)`)
 			}
 		}
 	}

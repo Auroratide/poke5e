@@ -131780,7 +131780,7 @@
 			"gender": "1:1",
 			"description": "The Unique Horn Pokémon. Fearless and proud, Rapidash uses Psychic powers stored in the flowing fur above its hooves to dash through the forest with ease.",
 			"ac": 16,
-			"hp": 98,
+			"hp": 94,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -132082,7 +132082,7 @@
 			"gender": "1:1",
 			"description": "The Hermit Crab Pokémon. A Shellder bite set off a chemical reaction with the spices inside Slowbro's body, causing Slowbro to become a Poison-type Pokémon.",
 			"ac": 15,
-			"hp": 97,
+			"hp": 94,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -132426,7 +132426,7 @@
 			"gender": "1:1",
 			"description": "The Poison Gas Pokémon. This Pokémon consumes particles that contaminate the air. Instead of leaving droppings, it expels clean air.",
 			"ac": 16,
-			"hp": 88,
+			"hp": 94,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -132581,7 +132581,7 @@
 			"gender": "1:1",
 			"description": "The Dancing Pokémon. Its talent is tap-dancing. It can also manipulate temperatures to create a floor of ice, which this Pokémon can kick up to use as a barrier.",
 			"ac": 17,
-			"hp": 52,
+			"hp": 33,
 			"hitDice": "d8",
 			"speed": [
 				{
@@ -133193,7 +133193,7 @@
 			"gender": "1:1",
 			"description": "The Hexpert Pokémon. A combination of toxins and the shock of evolving has increased Shellder's intelligence to the point that Shellder now controls Slowking.",
 			"ac": 16,
-			"hp": 97,
+			"hp": 94,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -133692,7 +133692,7 @@
 			"gender": "1:1",
 			"description": "The Rushing Pokémon. It uses its long tongue to taunt opponents. Once the opposition is enraged, this Pokémon hurls itself at the opponent, tackling them forcefully.",
 			"ac": 15,
-			"hp": 50,
+			"hp": 54,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -133969,7 +133969,7 @@
 			"gender": "1:1",
 			"description": "The Zen Mode Pokémon. On days when blizzards blow through, it comes down to where people live. It stashes food in the snowball on its head, taking it home for later.",
 			"ac": 14,
-			"hp": 101,
+			"hp": 103,
 			"hitDice": "d12",
 			"speed": [
 				{
@@ -134244,7 +134244,7 @@
 			"gender": "1:1",
 			"description": "The Trap Pokémon. Its conspicuous lips lure prey in as it lies in wait in the mud. When prey gets close, Stunfisk clamps its jagged steel fins down on them.",
 			"ac": 17,
-			"hp": 62,
+			"hp": 70,
 			"hitDice": "d12",
 			"speed": [
 				{
@@ -135082,7 +135082,7 @@
 			"gender": "1:7",
 			"description": "The Striker Pokémon. It juggles a pebble with its feet, turning it into a burning soccer ball. Its shots strike opponents hard and leave them scorched.",
 			"ac": 15,
-			"hp": 78,
+			"hp": 84,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -135363,7 +135363,7 @@
 			"gender": "1:7",
 			"description": "The Water Lizard Pokémon. A clever combatant, this Pokémon battles using water balloons created with moisture secreted from its palms.",
 			"ac": 13,
-			"hp": 37,
+			"hp": 38,
 			"hitDice": "d8",
 			"speed": [
 				{
@@ -135489,7 +135489,7 @@
 			"gender": "1:7",
 			"description": "The Secret Agent Pokémon. It has many hidden capabilities, such as fingertips that can shoot water and a membrane on its back that it can use to glide through the air.",
 			"ac": 15,
-			"hp": 76,
+			"hp": 84,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -135772,7 +135772,7 @@
 			"gender": "1:1",
 			"description": "The Greedy Pokémon. It stashes berries in its tail—so many berries that they fall out constantly. But this Pokémon is a bit slow-witted, so it doesn't notice the loss.",
 			"ac": 14,
-			"hp": 52,
+			"hp": 64,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -136054,7 +136054,7 @@
 			"gender": "1:1",
 			"description": "The Raven Pokémon. Smart enough to use tools in battle, these Pokémon have been seen picking up rocks and flinging them or using ropes to wrap up enemies.",
 			"ac": 13,
-			"hp": 45,
+			"hp": 43,
 			"hitDice": "d8",
 			"speed": [
 				{
@@ -136774,7 +136774,7 @@
 			"gender": "1:1",
 			"description": "The Fox Pokémon. It secretly marks potential targets with a scent. By following the scent, it stalks its targets and steals from them when they least expect it.",
 			"ac": 14,
-			"hp": 49,
+			"hp": 54,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -137021,7 +137021,7 @@
 			"gender": "1:1",
 			"description": "The Cotton Bloom Pokémon. The seeds attached to its cotton fluff are full of nutrients. It spreads them on the wind so that plants and other Pokémon can benefit from them.",
 			"ac": 15,
-			"hp": 50,
+			"hp": 54,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -137498,7 +137498,7 @@
 			"gender": "1:1",
 			"description": "The Bite Pokémon. With jaws that can shear through steel rods, this highly aggressive Pokémon chomps down on its unfortunate prey.",
 			"ac": 17,
-			"hp": 58,
+			"hp": 59,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -137770,7 +137770,7 @@
 			"gender": "1:1",
 			"description": "The Dog Pokémon. This Pokémon generates electricity and channels it into its legs to keep them going strong. Boltund can run nonstop for three full days.",
 			"ac": 14,
-			"hp": 52,
+			"hp": 49,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -138010,7 +138010,7 @@
 			"gender": "1:1",
 			"description": "The Coal Pokémon. By rapidly rolling its legs, it can travel at over 18 mph. The temperature of the flames it breathes exceeds 1,800 degrees Fahrenheit.",
 			"ac": 15,
-			"hp": 55,
+			"hp": 59,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -138152,7 +138152,7 @@
 			"gender": "1:1",
 			"description": "The Coal Pokémon. While it's engaged in battle, its mountain of coal will burn bright red, sending off sparks that scorch the surrounding area.",
 			"ac": 17,
-			"hp": 129,
+			"hp": 135,
 			"hitDice": "d12",
 			"speed": [
 				{
@@ -138393,7 +138393,7 @@
 			"gender": "1:1",
 			"description": "The Apple Wing Pokémon. It flies on wings of apple skin and spits a powerful acid. It can also change its shape into that of an apple.",
 			"ac": 15,
-			"hp": 44,
+			"hp": 49,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -138545,7 +138545,7 @@
 			"gender": "1:1",
 			"description": "The Apple Nectar Pokémon. Its body is covered in sweet nectar, and the skin on its back is especially yummy. A nectarous scent wafts from its body, luring in the bug Pokémon it preys on.",
 			"ac": 15,
-			"hp": 52,
+			"hp": 59,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -138844,7 +138844,7 @@
 			"gender": "1:1",
 			"description": "The Sand Snake Pokémon. When it contracts its body, over 220 pounds of sand sprays from its nose. If it ever runs out of sand, it becomes disheartened.",
 			"ac": 17,
-			"hp": 73,
+			"hp": 78,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -138991,7 +138991,7 @@
 			"gender": "1:1",
 			"description": "The Gulp Pokémon. This hungry Pokémon swallows Arrokuda whole. Occasionally, it makes a mistake and tries to swallow a Pokémon other than its preferred prey.",
 			"ac": 15,
-			"hp": 50,
+			"hp": 54,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -139269,7 +139269,7 @@
 			"gender": "1:1",
 			"description": "The Skewer Pokémon. It spins its tail fins to propel itself, surging forward at speeds of over 100 knots before ramming prey and spearing into them.",
 			"ac": 15,
-			"hp": 45,
+			"hp": 49,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -139503,7 +139503,7 @@
 			"gender": "1:1",
 			"description": "The Punk Pokémon. This short-tempered and aggressive Pokémon chugs stagnant water to absorb any toxins it might contain.",
 			"ac": 15,
-			"hp": 44,
+			"hp": 49,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -139672,7 +139672,7 @@
 			"gender": "1:1",
 			"description": "The Punk Pokémon. Capable of generating 15,000 volts of electricity, this Pokémon looks down on all that would challenge it.",
 			"ac": 15,
-			"hp": 44,
+			"hp": 49,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -139963,7 +139963,7 @@
 			"gender": "1:1",
 			"description": "The Radiator Pokémon. When it heats up, its body temperature reaches about 1,500 degrees Fahrenheit. It lashes its body like a whip and launches itself at enemies.",
 			"ac": 16,
-			"hp": 55,
+			"hp": 59,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -140205,7 +140205,7 @@
 			"gender": "1:1",
 			"description": "The Tantrum Pokémon. A body made up of nothing but muscle makes the grappling moves this Pokémon performs with its tentacles tremendously powerful.",
 			"ac": 16,
-			"hp": 58,
+			"hp": 54,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -140470,7 +140470,7 @@
 				"wis": 16,
 				"cha": 14
 			},
-			"hp": 68,
+			"hp": 69,
 			"skills": [
 				"stealth",
 				"deception"
@@ -140743,7 +140743,7 @@
 				"wis": 13,
 				"cha": 13
 			},
-			"hp": 42,
+			"hp": 37,
 			"skills": [
 				"insight",
 				"persuasion"
@@ -140877,7 +140877,7 @@
 				"wis": 16,
 				"cha": 16
 			},
-			"hp": 82,
+			"hp": 83,
 			"skills": [
 				"insight",
 				"persuasion"
@@ -141161,7 +141161,7 @@
 				"wis": 12,
 				"cha": 13
 			},
-			"hp": 42,
+			"hp": 43,
 			"skills": [
 				"sleight of hand",
 				"deception"
@@ -141300,7 +141300,7 @@
 				"wis": 13,
 				"cha": 15
 			},
-			"hp": 102,
+			"hp": 105,
 			"skills": [
 				"sleight of hand",
 				"deception"
@@ -141438,7 +141438,7 @@
 			"gender": "1:1",
 			"description": "The Blocking Pokémon. It evolved after experiencing numerous fights. While crossing its arms, it lets out a shout that would make any opponent flinch.",
 			"ac": 16,
-			"hp": 100,
+			"hp": 115,
 			"hitDice": "d12",
 			"speed": [
 				{
@@ -141575,7 +141575,7 @@
 			"gender": "1:1",
 			"description": "The Scratch Cat Pokémon. What appears to be an iron helmet is actually hardened hair. This Pokémon lives for the thrill of battle.",
 			"ac": 16,
-			"hp": 46,
+			"hp": 54,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -141758,7 +141758,7 @@
 			"gender": "3:1",
 			"description": "The Coral Pokémon. Its shell is overflowing with its heightened otherworldly energy. The ectoplasm serves as protection for this Pokémon's core spirit.",
 			"ac": 17,
-			"hp": 91,
+			"hp": 94,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -141897,7 +141897,7 @@
 			"gender": "1:1",
 			"description": "The Wild Duck Pokémon. Only Farfetch'd that have survived many battles can attain this evolution. When this Pokémon's leek withers, it will retire from combat.",
 			"ac": 17,
-			"hp": 71,
+			"hp": 78,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -142027,7 +142027,7 @@
 			"gender": "1:1",
 			"description": "The Dancing Pokémon. It's highly skilled at tap-dancing. It waves its cane of ice in time with its graceful movements.",
 			"ac": 17,
-			"hp": 85,
+			"hp": 64,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -142186,7 +142186,7 @@
 			"gender": "1:1",
 			"description": "The Grudge Pokémon. Never touch its shadowlike body, or you'll be shown the horrific memories behind the picture carved into it.",
 			"ac": 19,
-			"hp": 50,
+			"hp": 54,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -142421,7 +142421,7 @@
 			"gender": "1:0",
 			"description": "The Cream Pokémon. Alcremie can produce whipped cream, which becomes richer the happier Alcremie is feeling. Desserts made using this cream are invariably delicious, so many pastry chefs strive to have an Alcremie as their partner.",
 			"ac": 16,
-			"hp": 50,
+			"hp": 64,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -142550,7 +142550,7 @@
 			"gender": "0:0",
 			"description": "The Formation Pokémon. The leader, known as the brass, uses its extendible horn to issue orders to the others when it’s time to change formation.",
 			"ac": 16,
-			"hp": 50,
+			"hp": 59,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -142934,7 +142934,7 @@
 				"wis": 12,
 				"cha": 11
 			},
-			"hp": 48,
+			"hp": 54,
 			"skills": [
 				"survival"
 			],
@@ -143072,7 +143072,7 @@
 				"wis": 9,
 				"cha": 10
 			},
-			"hp": 74,
+			"hp": 65,
 			"skills": [
 				"history"
 			],
@@ -143214,7 +143214,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 56,
+			"hp": 48,
 			"skills": [
 				"nature",
 				"survival"
@@ -143348,7 +143348,7 @@
 				"wis": 16,
 				"cha": 12
 			},
-			"hp": 49,
+			"hp": 37,
 			"skills": [
 				"arcana",
 				"insight"
@@ -143488,7 +143488,7 @@
 				"wis": 15,
 				"cha": 12
 			},
-			"hp": 55,
+			"hp": 42,
 			"skills": [
 				"arcana",
 				"insight"
@@ -143633,7 +143633,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 41,
+			"hp": 37,
 			"skills": [
 				"perception"
 			],
@@ -143928,7 +143928,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 80,
+			"hp": 65,
 			"skills": [
 				"athletics"
 			],
@@ -144185,7 +144185,7 @@
 				"wis": 13,
 				"cha": 10
 			},
-			"hp": 84,
+			"hp": 86,
 			"skills": [
 				"intimidation"
 			],
@@ -144300,7 +144300,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 90,
+			"hp": 86,
 			"skills": [
 				"athletics"
 			],
@@ -144410,7 +144410,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 90,
+			"hp": 86,
 			"skills": [
 				"intimidation"
 			],
@@ -144515,7 +144515,7 @@
 				"wis": 18,
 				"cha": 11
 			},
-			"hp": 99,
+			"hp": 86,
 			"skills": [
 				"intimidation"
 			],
@@ -144772,7 +144772,7 @@
 				"wis": 11,
 				"cha": 10
 			},
-			"hp": 42,
+			"hp": 43,
 			"skills": [
 				"history"
 			],
@@ -144924,7 +144924,7 @@
 				"wis": 14,
 				"cha": 14
 			},
-			"hp": 142,
+			"hp": 149,
 			"skills": [
 				"stealth",
 				"history"
@@ -147522,7 +147522,7 @@
 				"wis": 14,
 				"cha": 10
 			},
-			"hp": 92,
+			"hp": 95,
 			"skills": [
 				"perception",
 				"deception"
@@ -147819,7 +147819,7 @@
 				"wis": 12,
 				"cha": 8
 			},
-			"hp": 50,
+			"hp": 54,
 			"skills": [
 				"stealth"
 			],
@@ -147960,7 +147960,7 @@
 				"wis": 15,
 				"cha": 10
 			},
-			"hp": 87,
+			"hp": 95,
 			"skills": [
 				"athletics"
 			],
@@ -148115,7 +148115,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 20,
+			"hp": 42,
 			"skills": [
 				"intimidation"
 			],
@@ -148279,7 +148279,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 30,
+			"hp": 43,
 			"skills": [
 				"stealth",
 				"deception",
@@ -148445,7 +148445,7 @@
 				"wis": 14,
 				"cha": 10
 			},
-			"hp": 107,
+			"hp": 115,
 			"skills": [
 				"survival",
 				"intimidation"
@@ -148591,7 +148591,7 @@
 				"wis": 11,
 				"cha": 11
 			},
-			"hp": 55,
+			"hp": 59,
 			"skills": [
 				"survival",
 				"nature"
@@ -148895,7 +148895,7 @@
 				"wis": 16,
 				"cha": 14
 			},
-			"hp": 72,
+			"hp": 78,
 			"skills": [
 				"deception",
 				"intimidation"
@@ -149055,7 +149055,7 @@
 				"wis": 15,
 				"cha": 11
 			},
-			"hp": 97,
+			"hp": 103,
 			"skills": [
 				"perception",
 				"survival"
@@ -149215,7 +149215,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 84,
+			"hp": 77,
 			"skills": [
 				"survival",
 				"perception"
@@ -149348,7 +149348,7 @@
 				"wis": 14,
 				"cha": 10
 			},
-			"hp": 140,
+			"hp": 135,
 			"skills": [
 				"survival",
 				"perception"
@@ -149505,7 +149505,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 93,
+			"hp": 95,
 			"skills": [
 				"survival"
 			],
@@ -149651,7 +149651,7 @@
 				"wis": 14,
 				"cha": 10
 			},
-			"hp": 112,
+			"hp": 115,
 			"skills": [
 				"acrobatics",
 				"nature"
@@ -149813,7 +149813,7 @@
 				"wis": 16,
 				"cha": 12
 			},
-			"hp": 112,
+			"hp": 105,
 			"skills": [
 				"athletics",
 				"intimidation"
@@ -149966,7 +149966,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 139,
+			"hp": 125,
 			"skills": [
 				"acrobatics",
 				"intimidation"
@@ -150117,7 +150117,7 @@
 				"wis": 14,
 				"cha": 11
 			},
-			"hp": 145,
+			"hp": 125,
 			"skills": [
 				"athletics",
 				"perception"
@@ -150284,7 +150284,7 @@
 				"wis": 20,
 				"cha": 13
 			},
-			"hp": 201,
+			"hp": 195,
 			"skills": [
 				"athletics",
 				"insight",
@@ -150449,7 +150449,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 112,
+			"hp": 115,
 			"skills": [
 				"intimidation"
 			],
@@ -150591,7 +150591,7 @@
 				"wis": 16,
 				"cha": 10
 			},
-			"hp": 112,
+			"hp": 115,
 			"skills": [
 				"intimidation"
 			],
@@ -150733,7 +150733,7 @@
 				"wis": 13,
 				"cha": 10
 			},
-			"hp": 80,
+			"hp": 78,
 			"skills": [
 				"stealth",
 				"sleight of hand",
@@ -150899,7 +150899,7 @@
 				"wis": 12,
 				"cha": 12
 			},
-			"hp": 90,
+			"hp": 86,
 			"skills": [
 				"intimidation"
 			],
@@ -152121,7 +152121,7 @@
 			"gender": "1:7",
 			"description": "The Grass Cat Pokémon. The hardness of Floragato’s fur depends on the Pokémon’s mood. When Floragato is prepared to battle, its fur becomes pointed and needle sharp.",
 			"ac": 15,
-			"hp": 45,
+			"hp": 43,
 			"hitDice": "d8",
 			"speed": [
 				{
@@ -152255,7 +152255,7 @@
 			"gender": "1:7",
 			"description": "The Magician Pokémon. With skillful misdirection, it rigs foes with pollen-packed flower bombs. Meowscarada sets off the bombs before its foes realize what’s going on.",
 			"ac": 15,
-			"hp": 102,
+			"hp": 105,
 			"hitDice": "d12",
 			"speed": [
 				{
@@ -152557,7 +152557,7 @@
 				"wis": 10,
 				"cha": 13
 			},
-			"hp": 47,
+			"hp": 48,
 			"skills": [
 				"nature",
 				"performance"
@@ -152684,7 +152684,7 @@
 				"wis": 10,
 				"cha": 17
 			},
-			"hp": 112,
+			"hp": 115,
 			"skills": [
 				"nature",
 				"persuasion",
@@ -152964,7 +152964,7 @@
 				"wis": 10,
 				"cha": 13
 			},
-			"hp": 47,
+			"hp": 48,
 			"skills": [
 				"survival",
 				"performance"
@@ -153095,7 +153095,7 @@
 				"wis": 12,
 				"cha": 16
 			},
-			"hp": 102,
+			"hp": 94,
 			"skills": [
 				"acrobatics",
 				"survival",
@@ -153377,7 +153377,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 62,
+			"hp": 60,
 			"skills": [
 				"survival"
 			],
@@ -153512,7 +153512,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 68,
+			"hp": 65,
 			"skills": [
 				"survival"
 			],
@@ -153783,7 +153783,7 @@
 				"wis": 11,
 				"cha": 10
 			},
-			"hp": 47,
+			"hp": 43,
 			"skills": [
 				"stealth",
 				"survival"
@@ -154037,7 +154037,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 41,
+			"hp": 49,
 			"skills": [
 				"survival"
 			],
@@ -154452,7 +154452,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 76,
+			"hp": 78,
 			"skills": [
 				"acrobatics",
 				"survival"
@@ -154755,7 +154755,7 @@
 				"wis": 14,
 				"cha": 10
 			},
-			"hp": 45,
+			"hp": 49,
 			"skills": [
 				"sleight of hand"
 			],
@@ -155028,7 +155028,7 @@
 				"wis": 15,
 				"cha": 15
 			},
-			"hp": 44,
+			"hp": 49,
 			"skills": [
 				"perception",
 				"insight"
@@ -155281,7 +155281,7 @@
 				"wis": 15,
 				"cha": 10
 			},
-			"hp": 44,
+			"hp": 48,
 			"skills": [
 				"survival"
 			],
@@ -155394,7 +155394,7 @@
 				"wis": 18,
 				"cha": 12
 			},
-			"hp": 102,
+			"hp": 104,
 			"skills": [
 				"medicine",
 				"survival"
@@ -155810,7 +155810,7 @@
 				"wis": 10,
 				"cha": 11
 			},
-			"hp": 48,
+			"hp": 59,
 			"skills": [
 				"athletics"
 			],
@@ -155947,7 +155947,7 @@
 				"wis": 10,
 				"cha": 13
 			},
-			"hp": 120,
+			"hp": 125,
 			"skills": [
 				"athletics",
 				"insight"
@@ -156209,7 +156209,7 @@
 				"wis": 15,
 				"cha": 10
 			},
-			"hp": 85,
+			"hp": 86,
 			"skills": [
 				"intimidation"
 			],
@@ -156352,7 +156352,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 75,
+			"hp": 78,
 			"skills": [
 				"acrobatics",
 				"intimidation"
@@ -156623,7 +156623,7 @@
 				"wis": 14,
 				"cha": 10
 			},
-			"hp": 85,
+			"hp": 65,
 			"skills": [
 				"perception"
 			],
@@ -156904,7 +156904,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 68,
+			"hp": 49,
 			"skills": [
 				"acrobatics"
 			],
@@ -157174,7 +157174,7 @@
 				"wis": 10,
 				"cha": 14
 			},
-			"hp": 84,
+			"hp": 86,
 			"skills": [
 				"perception",
 				"intimidation"
@@ -157464,7 +157464,7 @@
 				"wis": 10,
 				"cha": 14
 			},
-			"hp": 58,
+			"hp": 49,
 			"skills": [
 				"sleight of hand",
 				"stealth"
@@ -157746,7 +157746,7 @@
 				"wis": 14,
 				"cha": 10
 			},
-			"hp": 50,
+			"hp": 54,
 			"skills": [
 				"nature",
 				"deception"
@@ -158015,7 +158015,7 @@
 				"wis": 16,
 				"cha": 10
 			},
-			"hp": 61,
+			"hp": 49,
 			"skills": [
 				"survival"
 			],
@@ -158150,7 +158150,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 68,
+			"hp": 59,
 			"skills": [
 				"stealth",
 				"survival"
@@ -158426,7 +158426,7 @@
 				"wis": 14,
 				"cha": 12
 			},
-			"hp": 60,
+			"hp": 49,
 			"skills": [
 				"nature",
 				"intimidation"
@@ -158681,7 +158681,7 @@
 				"wis": 16,
 				"cha": 10
 			},
-			"hp": 60,
+			"hp": 49,
 			"skills": [
 				"arcana",
 				"insight"
@@ -158963,7 +158963,7 @@
 				"wis": 18,
 				"cha": 14
 			},
-			"hp": 80,
+			"hp": 70,
 			"skills": [
 				"perception",
 				"persuasion"
@@ -159249,7 +159249,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 47,
+			"hp": 48,
 			"skills": [
 				"athletics"
 			],
@@ -159380,7 +159380,7 @@
 				"wis": 14,
 				"cha": 12
 			},
-			"hp": 92,
+			"hp": 104,
 			"skills": [
 				"athletics",
 				"intimidation"
@@ -159647,7 +159647,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 42,
+			"hp": 43,
 			"skills": [
 				"stealth",
 				"perception"
@@ -159785,7 +159785,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 59,
+			"hp": 54,
 			"skills": [
 				"sleight of hand",
 				"perception"
@@ -160069,7 +160069,7 @@
 				"wis": 14,
 				"cha": 10
 			},
-			"hp": 92,
+			"hp": 95,
 			"skills": [
 				"acrobatics",
 				"insight"
@@ -160344,7 +160344,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 84,
+			"hp": 86,
 			"skills": [
 				"athletics",
 				"intimidation"
@@ -160482,7 +160482,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 58,
+			"hp": 54,
 			"skills": [
 				"athletics"
 			],
@@ -160628,7 +160628,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 74,
+			"hp": 59,
 			"skills": [
 				"stealth",
 				"survival"
@@ -160902,7 +160902,7 @@
 				"wis": 17,
 				"cha": 12
 			},
-			"hp": 84,
+			"hp": 86,
 			"skills": [
 				"survival"
 			],
@@ -161185,7 +161185,7 @@
 				"wis": 12,
 				"cha": 16
 			},
-			"hp": 66,
+			"hp": 54,
 			"skills": [
 				"perception",
 				"persuasion"
@@ -161333,7 +161333,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 50,
+			"hp": 49,
 			"skills": [
 				"acrobatics",
 				"nature"
@@ -161610,7 +161610,7 @@
 				"wis": 13,
 				"cha": 10
 			},
-			"hp": 85,
+			"hp": 70,
 			"skills": [
 				"survival"
 			],
@@ -161744,7 +161744,7 @@
 				"wis": 11,
 				"cha": 11
 			},
-			"hp": 61,
+			"hp": 59,
 			"skills": [
 				"insight"
 			],
@@ -161876,7 +161876,7 @@
 				"wis": 10,
 				"cha": 10
 			},
-			"hp": 112,
+			"hp": 111,
 			"skills": [
 				"athletics",
 				"nature"
@@ -162014,7 +162014,7 @@
 				"wis": 16,
 				"cha": 12
 			},
-			"hp": 56,
+			"hp": 61,
 			"skills": [
 				"stealth",
 				"insight",
@@ -162122,7 +162122,7 @@
 			"gender": "1:1",
 			"description": "The Rage Monkey Pokémon. When its anger rose beyond a critical point, this Pokémon gained power that is unfettered by the limits of its physical body.",
 			"ac": 16,
-			"hp": 70,
+			"hp": 86,
 			"hitDice": "d10",
 			"speed": [
 				{
@@ -162322,7 +162322,7 @@
 				"wis": 14,
 				"cha": 12
 			},
-			"hp": 69,
+			"hp": 65,
 			"skills": [
 				"survival",
 				"nature"
@@ -162471,7 +162471,7 @@
 				"wis": 16,
 				"cha": 12
 			},
-			"hp": 101,
+			"hp": 105,
 			"skills": [
 				"athletics",
 				"insight"
@@ -162615,7 +162615,7 @@
 			"gender": "1:1",
 			"description": "The Land Snake Pokémon. This Pokémon uses its hard tail to make its nest by boring holes into bedrock deep underground. The nest can reach lengths of over six miles.",
 			"ac": 15,
-			"hp": 97,
+			"hp": 103,
 			"hitDice": "d12",
 			"speed": [
 				{
@@ -162836,7 +162836,7 @@
 				"wis": 14,
 				"cha": 14
 			},
-			"hp": 168,
+			"hp": 165,
 			"skills": [
 				"athletics",
 				"intimidation"
@@ -162978,7 +162978,7 @@
 				"wis": 11,
 				"cha": 10
 			},
-			"hp": 174,
+			"hp": 180,
 			"skills": [
 				"athletics",
 				"survival"
@@ -163112,7 +163112,7 @@
 				"wis": 14,
 				"cha": 14
 			},
-			"hp": 160,
+			"hp": 180,
 			"skills": [
 				"performance",
 				"persuasion"
@@ -163265,7 +163265,7 @@
 				"wis": 14,
 				"cha": 10
 			},
-			"hp": 180,
+			"hp": 195,
 			"skills": [
 				"nature",
 				"deception"
@@ -163389,7 +163389,7 @@
 				"wis": 18,
 				"cha": 16
 			},
-			"hp": 130,
+			"hp": 103,
 			"skills": [
 				"stealth",
 				"deception"
@@ -163522,7 +163522,7 @@
 				"wis": 14,
 				"cha": 10
 			},
-			"hp": 152,
+			"hp": 165,
 			"skills": [
 				"nature",
 				"survival"
@@ -163652,7 +163652,7 @@
 				"wis": 17,
 				"cha": 8
 			},
-			"hp": 158,
+			"hp": 149,
 			"skills": [
 				"athletics",
 				"insight"
@@ -163780,7 +163780,7 @@
 				"wis": 13,
 				"cha": 10
 			},
-			"hp": 152,
+			"hp": 164,
 			"skills": [
 				"athletics",
 				"perception"
@@ -163907,7 +163907,7 @@
 				"wis": 14,
 				"cha": 14
 			},
-			"hp": 134,
+			"hp": 88,
 			"skills": [
 				"acrobatics",
 				"insight"
@@ -164023,7 +164023,7 @@
 				"wis": 12,
 				"cha": 10
 			},
-			"hp": 201,
+			"hp": 195,
 			"skills": [
 				"athletics",
 				"intimidation"
@@ -164155,7 +164155,7 @@
 				"wis": 19,
 				"cha": 10
 			},
-			"hp": 158,
+			"hp": 165,
 			"skills": [
 				"perception",
 				"intimidation"
@@ -164294,7 +164294,7 @@
 				"wis": 22,
 				"cha": 10
 			},
-			"hp": 137,
+			"hp": 134,
 			"skills": [
 				"investigation",
 				"survival"
@@ -164422,7 +164422,7 @@
 				"wis": 16,
 				"cha": 11
 			},
-			"hp": 172,
+			"hp": 195,
 			"skills": [
 				"athletics",
 				"history"
@@ -164702,7 +164702,7 @@
 				"wis": 13,
 				"cha": 10
 			},
-			"hp": 47,
+			"hp": 54,
 			"skills": [
 				"survival"
 			],
@@ -164822,7 +164822,7 @@
 				"wis": 15,
 				"cha": 12
 			},
-			"hp": 122,
+			"hp": 125,
 			"skills": [
 				"survival",
 				"intimidation"
@@ -165123,7 +165123,7 @@
 				"wis": 13,
 				"cha": 16
 			},
-			"hp": 45,
+			"hp": 54,
 			"skills": [
 				"sleight of hand",
 				"deception"
@@ -165253,7 +165253,7 @@
 				"wis": 16,
 				"cha": 21
 			},
-			"hp": 157,
+			"hp": 149,
 			"skills": [
 				"history",
 				"nature",
@@ -165388,7 +165388,7 @@
 				"wis": 13,
 				"cha": 16
 			},
-			"hp": 141,
+			"hp": 134,
 			"skills": [
 				"acrobatics",
 				"history",
@@ -165516,7 +165516,7 @@
 				"wis": 13,
 				"cha": 16
 			},
-			"hp": 190,
+			"hp": 195,
 			"skills": [
 				"athletics",
 				"history",
@@ -165652,7 +165652,7 @@
 				"wis": 21,
 				"cha": 16
 			},
-			"hp": 122,
+			"hp": 118,
 			"skills": [
 				"history",
 				"nature",
@@ -165785,7 +165785,7 @@
 				"wis": 13,
 				"cha": 10
 			},
-			"hp": 161,
+			"hp": 165,
 			"skills": [
 				"athletics",
 				"acrobatics"
@@ -165926,7 +165926,7 @@
 				"wis": 18,
 				"cha": 10
 			},
-			"hp": 142,
+			"hp": 149,
 			"skills": [
 				"acrobatics",
 				"persuasion"
@@ -166387,7 +166387,7 @@
 				"wis": 18,
 				"cha": 10
 			},
-			"hp": 148,
+			"hp": 165,
 			"skills": [
 				"stealth",
 				"perception"
@@ -166516,7 +166516,7 @@
 				"wis": 14,
 				"cha": 10
 			},
-			"hp": 139,
+			"hp": 149,
 			"skills": [
 				"athletics",
 				"nature"
@@ -166650,7 +166650,7 @@
 				"wis": 14,
 				"cha": 12
 			},
-			"hp": 50,
+			"hp": 59,
 			"skills": [
 				"stealth",
 				"deception"
@@ -166914,7 +166914,7 @@
 				"wis": 15,
 				"cha": 14
 			},
-			"hp": 74,
+			"hp": 69,
 			"skills": [
 				"stealth",
 				"deception"
@@ -167983,7 +167983,7 @@
 				"wis": 19,
 				"cha": 12
 			},
-			"hp": 123,
+			"hp": 125,
 			"skills": [
 				"athletics",
 				"intimidation"
@@ -168127,7 +168127,7 @@
 				"wis": 16,
 				"cha": 13
 			},
-			"hp": 112,
+			"hp": 125,
 			"skills": [
 				"stealth",
 				"deception"
@@ -168269,7 +168269,7 @@
 				"wis": 11,
 				"cha": 10
 			},
-			"hp": 161,
+			"hp": 180,
 			"skills": [
 				"survival",
 				"intimidation"
@@ -168404,7 +168404,7 @@
 				"wis": 18,
 				"cha": 10
 			},
-			"hp": 180,
+			"hp": 210,
 			"skills": [
 				"survival",
 				"intimidation"
@@ -168537,7 +168537,7 @@
 				"wis": 11,
 				"cha": 11
 			},
-			"hp": 152,
+			"hp": 165,
 			"skills": [
 				"athletics",
 				"survival"
@@ -168663,7 +168663,7 @@
 				"wis": 21,
 				"cha": 14
 			},
-			"hp": 142,
+			"hp": 149,
 			"skills": [
 				"insight",
 				"perception"
