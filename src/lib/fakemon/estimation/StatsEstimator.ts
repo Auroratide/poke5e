@@ -92,9 +92,9 @@ export class StatsEstimator {
 	}
 
 	private calculateHp(level: number, hitDice: number, con: number): number {
-		const diceValue = 1 + hitDice / 2
+		const avgDice = 1 + hitDice / 2
 		const conMod = Math.floor(con / 2) - 5
 
-		return 12 + level * (diceValue + conMod)
+		return 10 + hitDice + conMod + (level - 1) * (avgDice + conMod)
 	}
 }

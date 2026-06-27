@@ -96,3 +96,34 @@ test("charisma pokemon", () => {
 		},
 	})
 })
+
+test("higher-level pokemon", () => {
+	const estimator = new StatsEstimator()
+		.withType(new PokemonType(["fairy"]))
+		.withHitDice(new HitDice("d8"))
+		.withLevel(5)
+	
+	const sylveon = new Bst({
+		hp: 95,
+		attack: 65,
+		defense: 60,
+		specialAttack: 110,
+		specialDefense: 130,
+		speed: 60,
+	})
+
+	const result = estimator.fromBst(sylveon)
+
+	expect(result).toEqual({
+		hp: 48,
+		ac: 17,
+		attributes: {
+			str: 13,
+			dex: 14,
+			con: 15,
+			int: 6,
+			wis: 16,
+			cha: 15,
+		},
+	})
+})
