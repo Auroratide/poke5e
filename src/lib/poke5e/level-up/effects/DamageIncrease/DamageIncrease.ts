@@ -1,6 +1,6 @@
 import type { Level } from "$lib/dnd/level"
 import type { LearnedMove } from "$lib/trainers/types"
-import { LevelUpEffect } from "../LevelUpEffect"
+import { LevelUpEffect } from "../LevelUpEffect.svelte"
 import DamageIncreaseField from "./DamageIncreaseField.svelte"
 
 export type DamageIncreaseProps = {
@@ -11,6 +11,10 @@ export type DamageIncreaseProps = {
 export class DamageIncreaseEffect extends LevelUpEffect<DamageIncreaseProps, Record<never, never>> {
 	get Field() {
 		return DamageIncreaseField
+	}
+
+	hasError(): string | undefined {
+		return undefined
 	}
 
 	apply<T>(subject: T): T {

@@ -1,6 +1,6 @@
 import type { Level } from "$lib/dnd/level"
 import type { ChosenTrainerPath } from "$lib/trainers/paths"
-import { LevelUpEffect } from "../LevelUpEffect"
+import { LevelUpEffect } from "../LevelUpEffect.svelte"
 import AcquiredPathFeatureField from "./AcquiredPathFeature.svelte"
 
 type HasLevel = {
@@ -15,6 +15,10 @@ export type AcquiredPathFeatureProps = {
 export class AcquiredPathFeatureEffect extends LevelUpEffect<AcquiredPathFeatureProps, Record<never, never>> {
 	get Field() {
 		return AcquiredPathFeatureField
+	}
+
+	hasError(): string | undefined {
+		return undefined
 	}
 
 	apply<T extends HasLevel>(subject: T): T {

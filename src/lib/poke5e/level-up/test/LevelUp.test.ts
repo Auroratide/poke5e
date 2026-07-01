@@ -1,20 +1,21 @@
-import { Attributes } from "$lib/dnd/attributes"
+import { AbilityScoreImprovement, Attributes } from "$lib/dnd/attributes"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { Level } from "$lib/dnd/level"
 import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import { TrainerPaths } from "$lib/trainers/paths/2024"
 import { SpecializationList } from "$lib/trainers/specializations/2024/SpecializationList"
+import { SpecializationList as SpecializationList2018 } from "$lib/trainers/specializations/2018/SpecializationList"
 import { stubSpecializations } from "$lib/trainers/specializations/test/stubs"
 import { stubTrainer, stubTrainerPokemon } from "$lib/trainers/test/stubs"
 import { describe, expect, test } from "vitest"
-import type { AdditionalSpecializationEffect } from "../effects/AdditionalSpecialization"
-import type { AsiOrFeatEffect } from "../effects/AsiOrFeat"
+import { AdditionalSpecializationEffect } from "../effects/AdditionalSpecialization"
+import { AsiOrFeatEffect } from "../effects/AsiOrFeat"
 import type { IncreaseHpEffect } from "../effects/IncreaseHp"
-import type { NewTrainerPathEffect } from "../effects/NewTrainerPath"
+import { NewTrainerPathEffect } from "../effects/NewTrainerPath"
 import { LevelUp } from "../LevelUp"
 import { PokemonLevelTable } from "../PokemonLevelTable"
 import { TrainerLevelTable } from "../TrainerLevelTable"
-import type { TrainerResolveEffect } from "../effects/TrainerResolve"
+import { TrainerResolveEffect } from "../effects/TrainerResolve"
 import { EvolutionForest } from "$lib/pokemon/evolution"
 import { stubEvolution } from "$lib/pokemon/evolution/test/stubs"
 
@@ -374,5 +375,148 @@ describe("pokemon", () => {
 			wis: 11,
 			cha: 10,
 		}))
+	})
+})
+
+describe("errors", () => {
+	test("no specialization chosen", () => {
+		const effect = new AdditionalSpecializationEffect({}, {
+			specialization: undefined,
+			asi: undefined,
+			skill: undefined,
+		})
+
+		const error = effect.hasError()
+
+		expect(error).toEqual("Must choose a specialization.")
+	})
+
+	test("specialization requires asi", () => {
+		const effect = new AdditionalSpecializationEffect({}, {
+			specialization: SpecializationList2018.normal,
+			asi: undefined,
+			skill: undefined,
+		})
+
+		const error = effect.hasError()
+
+		expect(error).toEqual("Specialization requires choosing an ability or proficiency.")
+	})
+
+	test("specialization requires skill", () => {
+		const effect = new AdditionalSpecializationEffect({}, {
+			specialization: SpecializationList2018.dark,
+			asi: undefined,
+			skill: undefined,
+		})
+
+		const error = effect.hasError()
+
+		expect(error).toEqual("Specialization requires choosing an ability or proficiency.")
+	})
+
+	test("specialization requires asi, and asi provided", () => {
+		const effect = new AdditionalSpecializationEffect({}, {
+			specialization: SpecializationList2018.normal,
+			asi: "cha",
+			skill: undefined,
+		})
+
+		const error = effect.hasError()
+
+		expect(error).toBeUndefined()
+	})
+
+	test("specialization requires skill, and skill provided", () => {
+		const effect = new AdditionalSpecializationEffect({}, {
+			specialization: SpecializationList2018.dark,
+			asi: undefined,
+			skill: "deception",
+		})
+
+		const error = effect.hasError()
+
+		expect(error).toBeUndefined()
+	})
+
+	test("specialization only has one possible asi or skill", () => {
+		const effect = new AdditionalSpecializationEffect({}, {
+			specialization: SpecializationList.normal,
+			asi: undefined,
+			skill: undefined,
+		})
+
+		const error = effect.hasError()
+
+		expect(error).toBeUndefined()
+	})
+
+	test("asi not allocated", () => {
+		const effect = new AsiOrFeatEffect({
+			options: [],
+			pointsToSpend: 2,
+			attributes: stubAttributes(),
+		}, {
+			feat: undefined,
+			pointsSpent: AbilityScoreImprovement.zero(),
+		})
+
+		const error = effect.hasError()
+
+		expect(error).toEqual("Must allocate ability score improvement points.")
+	})
+
+	test("feat chosen instead of asi", () => {
+		const effect = new AsiOrFeatEffect({
+			options: [],
+			pointsToSpend: 2,
+			attributes: stubAttributes(),
+		}, {
+			feat: {
+				id: "",
+				name: "Feat",
+				description: "???",
+				isCustom: true,
+			},
+			pointsSpent: AbilityScoreImprovement.zero(),
+		})
+
+		const error = effect.hasError()
+
+		expect(error).toBeUndefined()
+	})
+
+	test("trainer path unspecified", () => {
+		const effect = new NewTrainerPathEffect({}, {
+			path: undefined,
+		})
+
+		const error = effect.hasError()
+
+		expect(error).toEqual("Must choose a trainer path.")
+	})
+
+	test("resolve needs a saving throw chosen", () => {
+		const effect = new TrainerResolveEffect({
+			savingThrows: ["cha"],
+		}, {
+			savingThrows: ["cha"],
+		})
+
+		const error = effect.hasError()
+
+		expect(error).toEqual("Choose a saving throw for Trainer's Resolve.")
+	})
+
+	test("already has all six saving throws", () => {
+		const effect = new TrainerResolveEffect({
+			savingThrows: ["str", "dex", "con", "int", "wis", "cha"],
+		}, {
+			savingThrows: ["str", "dex", "con", "int", "wis", "cha"],
+		})
+
+		const error = effect.hasError()
+
+		expect(error).toBeUndefined()
 	})
 })

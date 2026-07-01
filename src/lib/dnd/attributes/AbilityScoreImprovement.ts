@@ -19,4 +19,5 @@ export const AbilityScoreImprovement = {
 		...pointsSpent,
 		[attr]: pointsSpent[attr] + 1,
 	}),
+	totalPoints: (pointsSpent: AbilityScoreImprovement): number => Object.values(pointsSpent).reduce((sum, cur) => sum + cur, 0),
 } as const

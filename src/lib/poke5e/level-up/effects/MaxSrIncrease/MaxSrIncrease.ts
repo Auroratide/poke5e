@@ -1,5 +1,5 @@
 import type { Level } from "$lib/dnd/level"
-import { LevelUpEffect } from "../LevelUpEffect"
+import { LevelUpEffect } from "../LevelUpEffect.svelte"
 import MaxSrIncreaseField from "./MaxSrIncreaseField.svelte"
 
 type HasLevel = {
@@ -13,6 +13,10 @@ export type IncreaseLevelProps = {
 export class MaxSrIncreaseEffect extends LevelUpEffect<IncreaseLevelProps, Record<never, never>> {
 	get Field() {
 		return MaxSrIncreaseField
+	}
+
+	hasError(): string | undefined {
+		return undefined
 	}
 
 	apply<T extends HasLevel>(subject: T): T {

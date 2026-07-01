@@ -1,9 +1,9 @@
-import type { AbilityScoreImprovement, Attributes } from "$lib/dnd/attributes"
+import { AbilityScoreImprovement, type Attributes } from "$lib/dnd/attributes"
 import type { Feat } from "$lib/dnd/feats"
 import type { ChosenFeat } from "$lib/dnd/feats/ChosenFeat"
 import type { Level } from "$lib/dnd/level"
 import type { Resource } from "$lib/poke5e/resource"
-import { LevelUpEffect } from "../LevelUpEffect"
+import { LevelUpEffect } from "../LevelUpEffect.svelte"
 import AsiOrFeatField from "./AsiOrFeatField.svelte"
 
 export type AsiOrFeatProps = {
@@ -27,6 +27,14 @@ type HasAttributesFeatsLevelHp = {
 export class AsiOrFeatEffect extends LevelUpEffect<AsiOrFeatProps, AsiOrFeatParams> {
 	get Field() {
 		return AsiOrFeatField
+	}
+
+	hasError(): string | undefined {
+		if (this.params.feat == null && AbilityScoreImprovement.totalPoints(this.params.pointsSpent) < this.props.pointsToSpend) {
+			return "Must allocate ability score improvement points."
+		}
+
+		return undefined
 	}
 
 	apply<T extends HasAttributesFeatsLevelHp>(subject: T): T {

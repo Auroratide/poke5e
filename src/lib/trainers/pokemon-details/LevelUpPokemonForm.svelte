@@ -7,7 +7,7 @@
 	import { m } from "$lib/site/i18n"
 	import { Url } from "$lib/site/url"
 	import { Button } from "$lib/ui/elements"
-	import { ActionArea, Saveable } from "$lib/ui/forms"
+	import { ActionArea } from "$lib/ui/forms"
 	import { Title } from "$lib/ui/layout"
 	import { Card } from "$lib/ui/page"
 	import type { TrainerStore } from "../trainers"
@@ -43,16 +43,7 @@
 <Title value={m.levelUp()} />
 <Card title={m.levelUpName({ name: pokemon.nickname ?? species.name })}>
 	{#if canEdit}
-		<Saveable {saving}>
-			<section>
-				<p>{m.levelUpInstructions()}</p>
-			</section>
-			<LevelUpForm effects={template} />
-			<ActionArea>
-				<Button href={Url.trainers($trainer.info.readKey, pokemon.id)} variant="subtle">{m.back()}</Button>
-				<Button on:click={applyLevelUp}>{m.confirm()}</Button>
-			</ActionArea>
-		</Saveable>
+		<LevelUpForm {saving} backHref={Url.trainers($trainer.info.readKey, pokemon.id)} effects={template} onsubmit={applyLevelUp} />
 	{:else}
 		<section>
 			<p>{m.noLevelUpPermission()}</p>

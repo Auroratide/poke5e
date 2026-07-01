@@ -1,14 +1,14 @@
 <script lang="ts">
-	import { Url } from "$lib/site/url"
-	import { Button } from "$lib/ui/elements"
-	import { ActionArea, Saveable } from "$lib/ui/forms"
-	import { Title } from "$lib/ui/layout"
-	import { Card } from "$lib/ui/page"
-	import { m } from "$lib/site/i18n"
-	import type { TrainerStore } from "../trainers"
+	import { goto } from "$app/navigation"
 	import { LevelUp, LevelUpForm } from "$lib/poke5e/level-up"
 	import { TrainerLevelTable } from "$lib/poke5e/level-up/TrainerLevelTable"
-	import { goto } from "$app/navigation"
+	import { m } from "$lib/site/i18n"
+	import { Url } from "$lib/site/url"
+	import { Button } from "$lib/ui/elements"
+	import { ActionArea } from "$lib/ui/forms"
+	import { Title } from "$lib/ui/layout"
+	import { Card } from "$lib/ui/page"
+	import type { TrainerStore } from "../trainers"
 
 	let {
 		trainer,
@@ -37,16 +37,7 @@
 <Title value={m.levelUp()} />
 <Card title={m.levelUpName({ name: $trainer.info.name })}>
 	{#if canEdit}
-		<Saveable {saving}>
-			<section>
-				<p>{m.levelUpInstructions()}</p>
-			</section>
-			<LevelUpForm effects={effects} />
-			<ActionArea>
-				<Button href={Url.trainers($trainer.info.readKey)} variant="subtle">{m.back()}</Button>
-				<Button on:click={applyLevelUp}>{m.confirm()}</Button>
-			</ActionArea>
-		</Saveable>
+		<LevelUpForm {saving} backHref={Url.trainers($trainer.info.readKey)} effects={effects} onsubmit={applyLevelUp} />
 	{:else}
 		<section>
 			<p>{m.noLevelUpPermission()}</p>

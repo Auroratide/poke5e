@@ -1,6 +1,6 @@
 import { convertToChosenTrainerPath, createEmptyChosenTrainerPath, type TrainerPath } from "$lib/trainers/paths"
 import type { TrainerInfo } from "$lib/trainers/types"
-import { LevelUpEffect } from "../LevelUpEffect"
+import { LevelUpEffect } from "../LevelUpEffect.svelte"
 import NewTrainerPathField from "./NewTrainerPathField.svelte"
 
 export type NewTrainerPathParams = {
@@ -10,6 +10,14 @@ export type NewTrainerPathParams = {
 export class NewTrainerPathEffect extends LevelUpEffect<Record<never, never>, NewTrainerPathParams> {
 	get Field() {
 		return NewTrainerPathField
+	}
+
+	hasError(): string | undefined {
+		if (this.params.path == null) {
+			return "Must choose a trainer path."
+		}
+
+		return undefined
 	}
 
 	apply(subject: TrainerInfo): TrainerInfo {
