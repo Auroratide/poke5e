@@ -16,6 +16,9 @@ import { PokemonTrackerEffect } from "./effects/PokemonTracker"
 import { PokeslotIncreaseEffect } from "./effects/PokeslotIncrease"
 import { TrainerResolveEffect } from "./effects/TrainerResolve"
 import { EpicBoonFeat } from "./effects/EpicBoonFeat"
+import { rulesVersion } from "$lib/site/rules-version"
+
+const is2024 = () => get(rulesVersion) === "2024"
 
 const standardLevelUpEffects = (trainer: Trainer) => [
 	new IncreaseLevelEffect({
@@ -174,8 +177,15 @@ const Level18 = (trainer: Trainer) => [
 ]
 const Level19 = (trainer: Trainer) => [
 	...standardLevelUpEffects(trainer),
-	new EpicBoonFeat({
+	is2024() ? new EpicBoonFeat({
 		options: DndFeats.filter((it) => it.category === "Epic Boon"),
+		pointsToSpend: 2,
+		attributes: trainer.attributes,
+	}, {
+		feat: undefined,
+		pointsSpent: AbilityScoreImprovement.zero(),
+	}) : new AsiOrFeatEffect({
+		options: DndFeats,
 		pointsToSpend: 2,
 		attributes: trainer.attributes,
 	}, {
