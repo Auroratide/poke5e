@@ -237,7 +237,7 @@
 	"chooseAnAsi": "Choose an ASI",
 	"chooseAProficiency": "Choose a Proficiency",
 	"asiOrFeat": "ASI or Feat",
-	"asiOrFeatInstructions": "You may add 2 points to your ability scores, or select a feat from the dropdown.",
+	"asiOrFeatInstructions": "You may add {number} points to your ability scores, or select a feat from the dropdown.",
 	"asiFeatQualifier": "If this feat would increase an ability score, then you must increase it manually. Select the ability score improvement below, if applicable.",
 	"newPathFeature": "New Path Feature",
 	"newPathFeatureInstructions": "You have acquired a new feature on your chosen trainer path!",
@@ -254,6 +254,8 @@
 	"masterTrainerDescriptionHtml": "<p>You have finally achieved the title of Master Trainer. Your Pokémon are at peak fighting performance. When you or your Pokémon fail a saving throw, you may choose to succeed instead. This feature can be used twice per long rest.</p>",
 	"stabIncrease": "STAB Increase",
 	"stabIncreaseInstructions": "Your pokémon now deals additional STAB damage!",
+	"peakPower": "Peak Power",
+	"peakPowerInstructions": "One ability score of your choice for this Pokémon increases by 2, up to a maximum of 22. Alternatively, instead of increasing an ability score by 2, your Pokémon may take a Feat. If the Pokémon's SR is 15 or more, then it may increase an ability score up to a maximum of 30 instead.",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},

@@ -11,6 +11,7 @@ import { IncreaseLevelEffect } from "./effects/IncreaseLevel"
 import { NewMovesEffect } from "./effects/NewMoves"
 import { StabIncreaseEffect } from "./effects/StabIncrease"
 import type { EvolutionForest } from "$lib/pokemon/evolution"
+import { PeakPowerEffect } from "./effects/PeakPower"
 
 const standardLevelUpEffects = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 	new IncreaseLevelEffect({
@@ -182,7 +183,7 @@ const Level19 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 ]
 const Level20 = (pokemon: TrainerPokemon, species: PokemonSpecies, evolutions: EvolutionForest | undefined) => [
 	...standardLevelUpEffects(pokemon, species),
-	new AsiOrFeatEffect({
+	new PeakPowerEffect({
 		options: get(DndAndPokemonFeats),
 		pointsToSpend: evolutions?.asi(species.id) ?? 2,
 		attributes: pokemon.attributes,
