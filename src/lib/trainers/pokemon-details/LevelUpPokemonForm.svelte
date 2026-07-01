@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { goto } from "$app/navigation"
 	import { LevelUp, LevelUpForm } from "$lib/poke5e/level-up"
+	import type { LevelUpEffect } from "$lib/poke5e/level-up/effects/LevelUpEffect.svelte"
 	import { PokemonLevelTable } from "$lib/poke5e/level-up/PokemonLevelTable"
 	import { PokemonSpecies } from "$lib/poke5e/species"
 	import { EvolutionStore } from "$lib/pokemon/evolution"
@@ -26,7 +27,8 @@
 	let canEdit = $derived($trainer.update != null)
 	let evolutions = $derived(EvolutionStore.get(species.id))
 
-	const template = $derived(PokemonLevelTable.toLevel(pokemon.level.next())(pokemon, species, $evolutions))
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	const template = $derived(PokemonLevelTable.toLevel(pokemon.level.next())(pokemon, species, $evolutions) as LevelUpEffect<any, any, any>[])
 
 	let saving = $state(false)
 	const applyLevelUp = async () => {

@@ -6,4 +6,8 @@ export class Level extends DataClass<number> {
 	next() {
 		return new Level(this.data + 1)
 	}
+
+	isBelowMax() {
+		return this.data < 20
+	}
 }

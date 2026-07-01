@@ -21,8 +21,8 @@
 
 <ActionArea>
 	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="danger">{m.remove()}</Button>
-	{#if FeatureToggles.LevelUp()}
-		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.levelUp)}" variant="subtle">Level Up</Button>
+	{#if FeatureToggles.LevelUp() && pokemon.level.isBelowMax()}
+		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.levelUp)}" variant="subtle">{m.levelUp()}</Button>
 	{/if}
 	{#if ($evolutions?.evolvesTo(species.id).length ?? 0) > 0}
 		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="subtle">{m.evolve()}</Button>

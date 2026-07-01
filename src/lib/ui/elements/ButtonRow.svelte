@@ -52,6 +52,11 @@
 		flex: 1;
 	}
 
+	.button-row :global(button),
+	.button-row :global(a) {
+		white-space: pre;
+	}
+
 	.is-not-wrapping {
 		&.button-row {
 			gap: 0.5em 0.125em;

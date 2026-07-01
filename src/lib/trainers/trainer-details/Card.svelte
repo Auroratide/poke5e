@@ -39,8 +39,9 @@
 	</div>
 	<Info trainer={$trainer.info} editable={canEdit} on:update={onUpdate} on:update-item={onUpdateItem} on:update-tags={onUpdateTags} />
 	<ActionArea>
-		{#if FeatureToggles.LevelUp()}
-			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.levelUp)}" variant="subtle">Level Up</Button>
+		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.removeTrainer)}" variant="danger">{m.remove()}</Button>
+		{#if FeatureToggles.LevelUp() && $trainer.info.level.isBelowMax()}
+			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.levelUp)}" variant="subtle">{m.levelUp()}</Button>
 		{/if}
 		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="subtle">
 			{#if $trainer.update}
@@ -49,7 +50,6 @@
 				{m.accessKey()}
 			{/if}
 		</Button>
-		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.removeTrainer)}" variant="danger">{m.remove()}</Button>
 		{#if $trainer.update}
 			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.restTrainer)}" variant="success">{m.rest()}</Button>
 			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.editTrainer)}">{m.edit()}</Button>
