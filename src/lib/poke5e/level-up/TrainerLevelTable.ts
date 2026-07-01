@@ -15,6 +15,7 @@ import { NewTrainerPathEffect } from "./effects/NewTrainerPath"
 import { PokemonTrackerEffect } from "./effects/PokemonTracker"
 import { PokeslotIncreaseEffect } from "./effects/PokeslotIncrease"
 import { TrainerResolveEffect } from "./effects/TrainerResolve"
+import { EpicBoonFeat } from "./effects/EpicBoonFeat"
 
 const standardLevelUpEffects = (trainer: Trainer) => [
 	new IncreaseLevelEffect({
@@ -173,7 +174,14 @@ const Level18 = (trainer: Trainer) => [
 ]
 const Level19 = (trainer: Trainer) => [
 	...standardLevelUpEffects(trainer),
-	// EPIC BOON???
+	new EpicBoonFeat({
+		options: DndFeats.filter((it) => it.category === "Epic Boon"),
+		pointsToSpend: 2,
+		attributes: trainer.attributes,
+	}, {
+		feat: undefined,
+		pointsSpent: AbilityScoreImprovement.zero(),
+	}),
 ]
 const Level20 = (trainer: Trainer) => [
 	...standardLevelUpEffects(trainer),

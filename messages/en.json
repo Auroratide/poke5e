@@ -256,6 +256,8 @@
 	"stabIncreaseInstructions": "Your pokémon now deals additional STAB damage!",
 	"peakPower": "Peak Power",
 	"peakPowerInstructions": "One ability score of your choice for this Pokémon increases by 2, up to a maximum of 22. Alternatively, instead of increasing an ability score by 2, your Pokémon may take a Feat. If the Pokémon's SR is 15 or more, then it may increase an ability score up to a maximum of 30 instead.",
+	"epicBoonFeat": "Epic Boon Feat",
+	"epicBoonFeatInstructions": "You gain an Epic Boon feat or another feat of your choice for which you qualify. A list of Epic Boons can be found in the D&D Player Handbook, page 210.",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},
