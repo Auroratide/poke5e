@@ -10,7 +10,7 @@ function startingHp(p: Pokemon) {
 function shouldCorrect(p: Pokemon) {
 	const exceptions = ["Regieleki", "Regidrago", "Enamorus (Incarnate)", "Enamorus (Therian)"]
 
-	return p.sr < 15 && (p.number >= 813 || p.name.includes("Galarian") || p.name.includes("Hisuian") || p.id === "rhyhorn" || p.id === "larvesta") && !exceptions.includes(p.name)
+	return p.sr < 15 && (p.number >= 810 || p.name.includes("Galarian") || p.name.includes("Hisuian") || p.id === "rhyhorn" || p.id === "larvesta") && !exceptions.includes(p.name)
 }
 
 function percentDifference(v1: number, v2: number): number {
