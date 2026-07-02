@@ -18,6 +18,7 @@ import { TrainerLevelTable } from "../TrainerLevelTable"
 import { TrainerResolveEffect } from "../effects/TrainerResolve"
 import { EvolutionForest } from "$lib/pokemon/evolution"
 import { stubEvolution } from "$lib/pokemon/evolution/test/stubs"
+import { PokemonFeats } from "$lib/poke5e/feats/PokemonFeats/2024"
 
 describe("trainers", () => {
 	test("on any level up", () => {
@@ -312,6 +313,37 @@ describe("pokemon", () => {
 			wis: 11,
 			cha: 10,
 		}))
+	})
+
+	test("ac up feat", () => {
+		// given
+		const pokemon = stubTrainerPokemon({
+			level: new Level(3),
+			ac: 15,
+		})
+
+		const species = stubPokemonSpecies()
+		const evolution = new EvolutionForest([])
+
+		const effects = PokemonLevelTable.toLevel(new Level(4))(pokemon, species, evolution)
+		const asiEffect = effects[2] as AsiOrFeatEffect
+
+		expect(asiEffect.props.pointsToSpend).toEqual(4)
+
+		const acUpFeat = PokemonFeats.find((it) => it.name === "AC Up")
+		asiEffect.params.feat = {
+			id: "",
+			name: acUpFeat.name,
+			description: "",
+			isCustom: false,
+		}
+		asiEffect.params.featEffects = acUpFeat.effects
+
+		// when
+		const result = LevelUp.apply(pokemon, effects)
+
+		// then
+		expect(result.ac).toEqualData(17)
 	})
 
 	test("asi for pokemon with 3 stages", () => {

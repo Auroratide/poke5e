@@ -60,6 +60,7 @@
 				isCustom: true,
 			} : undefined,
 			pointsSpent: pointsSpent,
+			featEffects: chosenFeat != null ? chosenFeat.effects : undefined,
 		}
 	})
 </script>

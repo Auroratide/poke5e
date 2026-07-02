@@ -35,6 +35,8 @@
 		saving = true
 		const updatedPokemon = LevelUp.apply(pokemon, template)
 		await $trainer.update?.pokemon(updatedPokemon).then(() => {
+			return $trainer.update?.pokemonFeats(updatedPokemon) ?? Promise.resolve()
+		}).then(() => {
 			goto(Url.trainers($trainer.info.readKey, pokemon.id))
 		}).catch(() => {
 			saving = false

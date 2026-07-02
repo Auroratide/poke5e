@@ -1,3 +1,4 @@
+import type { BaseCharacter } from "$lib/dnd/BaseCharacter"
 import type { Feat } from "$lib/dnd/feats"
 import type { DndPokemonFeat } from "./DndPokemonFeat"
 
@@ -41,6 +42,12 @@ export const PokemonFeats: Feat[] = [ {
 	name: "AC Up",
 	category: "General",
 	description: "Your Pokémon’s AC increases by 1. This bonus is included through a Pokémon’s evolutions.",
+	effects: {
+		onAcquire: <T extends BaseCharacter>(subject: T): T => {
+			subject.ac += 1
+			return subject
+		},
+	},
 }, {
 	name: "Combo Master",
 	category: "General",

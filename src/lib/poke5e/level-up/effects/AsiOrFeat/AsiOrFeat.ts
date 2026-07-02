@@ -1,5 +1,5 @@
 import { AbilityScoreImprovement, type Attributes } from "$lib/dnd/attributes"
-import type { Feat } from "$lib/dnd/feats"
+import type { Feat, FeatEffects } from "$lib/dnd/feats"
 import type { ChosenFeat } from "$lib/dnd/feats/ChosenFeat"
 import type { Level } from "$lib/dnd/level"
 import type { Resource } from "$lib/poke5e/resource"
@@ -14,6 +14,7 @@ export type AsiOrFeatProps = {
 
 export type AsiOrFeatParams = {
 	feat: ChosenFeat | undefined,
+	featEffects?: FeatEffects,
 	pointsSpent: AbilityScoreImprovement,
 }
 
@@ -22,6 +23,7 @@ type HasAttributesFeatsLevelHp = {
 	feats: ChosenFeat[],
 	attributes: Attributes,
 	hp: Resource,
+	ac: number,
 }
 
 export class AsiOrFeatEffect extends LevelUpEffect<AsiOrFeatProps, AsiOrFeatParams> {
@@ -38,12 +40,17 @@ export class AsiOrFeatEffect extends LevelUpEffect<AsiOrFeatProps, AsiOrFeatPara
 	}
 
 	apply<T extends HasAttributesFeatsLevelHp>(subject: T): T {
-		const feat = this.params.feat
+		// this is necessary because otherwise the feat is a funky svelte proxy object
+		const feat = this.params.feat ? { ...this.params.feat } : undefined
 
 		const originalCon = subject.attributes.con
 		const improvedAttributes = subject.attributes.improve(this.params.pointsSpent)
 		const differenceInConModifier = improvedAttributes.con.modifier - originalCon.modifier
 		const hpGain = subject.level.data * differenceInConModifier
+
+		if (feat != null && this.params.featEffects != null) {
+			subject = this.params.featEffects?.onAcquire?.(subject) ?? subject
+		}
 
 		return {
 			...subject,
