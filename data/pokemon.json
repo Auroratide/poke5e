@@ -134386,7 +134386,7 @@
 			"gender": "1:7",
 			"description": "The Chimp Pokémon. Grookey attacks by beating with a stick. As the speed of its beats increases, Grookey's excitement does too.",
 			"ac": 13,
-			"hp": 17,
+			"hp": 16,
 			"hitDice": "d6",
 			"speed": [
 				{
@@ -134529,7 +134529,7 @@
 			"gender": "1:7",
 			"description": "The Beat Pokémon. The faster a Thwackey can beat out a rhythm with its two sticks, the more respect it wins from its peers.",
 			"ac": 15,
-			"hp": 48,
+			"hp": 43,
 			"hitDice": "d8",
 			"speed": [
 				{
@@ -134664,7 +134664,7 @@
 			"gender": "1:7",
 			"description": "The Drummer Pokémon. By drumming, it taps into the power of its special tree stump. The roots of the stump follow its direction in battle.",
 			"ac": 16,
-			"hp": 115,
+			"hp": 105,
 			"hitDice": "d12",
 			"speed": [
 				{
