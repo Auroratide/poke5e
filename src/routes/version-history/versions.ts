@@ -14,6 +14,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.13",
+		description: [
+			"<strong>Pokémon</strong>: Standardize the starting HP of all gen 8 and 9 pokémon to the same formula used for gens 1-7. Some pokémon's starting HP have increased, and some have decreased as a result.",
+			"<strong>Moves</strong>: Fix the damage curve of Barb Barrage (7d4 to 5d4 at final tier).",
+			"<strong>Bugfix</strong>: Add healing modifer to Wish.",
+		],
+	}, {
 		name: "v1.11.12",
 		description: [
 			"<strong>Pokémon</strong>: Reduce the SR of Hisuian Voltorb and Hisuian Growlithe from 1 to ½ in order to match their non-Hisuian counterparts.",
