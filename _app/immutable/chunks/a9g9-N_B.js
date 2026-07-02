@@ -1,0 +1,1 @@
+import"./I30Primp.js";
