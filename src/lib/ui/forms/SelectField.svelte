@@ -54,13 +54,13 @@
 			{#if isGroups(options)}
 				{#each options as group}
 					<optgroup label="{group.name}">
-						{#each removeDeprecatedIfNotCurrent(group.values, value) as option (option.value)}
+						{#each removeDeprecatedIfNotCurrent(group.values, value) as option}
 							<option value="{option.value}" disabled={option.disabled || option.deprecated}>{option.name}</option>
 						{/each}
 					</optgroup>
 				{/each}
 			{:else}
-				{#each removeDeprecatedIfNotCurrent(options, value) as option (option.value)}
+				{#each removeDeprecatedIfNotCurrent(options, value) as option}
 					<option value="{option.value}" disabled={option.disabled || option.deprecated}>{option.name}</option>
 				{/each}
 				{#if other != null}
