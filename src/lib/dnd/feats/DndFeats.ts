@@ -1,3 +1,4 @@
+import type { BaseCharacter } from "../BaseCharacter"
 import type { Feat } from "./Feat"
 import { level, oneOfAttributes } from "./Prerequisite"
 
@@ -341,6 +342,17 @@ export const DndFeats: Feat[] = [ {
 	name: "Tough",
 	category: "Origin",
 	description: seePhb(202),
+	effects: {
+		onAcquire: <T extends BaseCharacter>(subject: T): T => {
+			subject.hp = {
+				current: subject.hp.current + subject.level.data * 2,
+				max: subject.hp.max + subject.level.data * 2,
+			}
+
+			return subject
+		},
+		hpIncrease: 2,
+	},
 }, {
 	name: "Two-Weapon Fighting",
 	category: "Fighting Style",

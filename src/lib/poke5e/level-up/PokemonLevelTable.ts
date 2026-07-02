@@ -21,6 +21,7 @@ const standardLevelUpEffects = (pokemon: TrainerPokemon, species: PokemonSpecies
 		hitDice: species.hitDice,
 		attributes: pokemon.attributes,
 		currentHp: pokemon.hp.max,
+		feats: pokemon.feats,
 	}, {
 		increaseAmount: 0,
 	}),

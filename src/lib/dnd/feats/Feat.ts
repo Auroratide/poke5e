@@ -4,6 +4,7 @@ import type { Prerequisite } from "./Prerequisite"
 
 export type FeatEffects = {
 	onAcquire?: <T extends BaseCharacter>(subject: T) => T,
+	hpIncrease?: number,
 }
 
 export type Feat = {

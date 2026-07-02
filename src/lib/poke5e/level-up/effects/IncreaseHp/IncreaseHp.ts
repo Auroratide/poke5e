@@ -3,6 +3,7 @@ import type { HitDice } from "$lib/dnd/hit-dice"
 import type { Resource } from "$lib/poke5e/resource"
 import IncreaseHpField from "./IncreaseHpField.svelte"
 import { LevelUpEffect } from "../LevelUpEffect.svelte"
+import type { ChosenFeat } from "$lib/dnd/feats/ChosenFeat"
 
 type HasHp = {
 	hp: Resource
@@ -12,6 +13,7 @@ export type IncreaseHpProps = {
 	hitDice: HitDice
 	attributes: Attributes,
 	currentHp: number,
+	feats: ChosenFeat[],
 }
 
 export type IncreaseHpParams = {

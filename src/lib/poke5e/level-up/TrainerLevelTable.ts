@@ -28,6 +28,7 @@ const standardLevelUpEffects = (trainer: Trainer) => [
 		hitDice: get(trainerHitDiceSize),
 		attributes: trainer.attributes,
 		currentHp: trainer.hp.max,
+		feats: trainer.feats,
 	}, {
 		increaseAmount: 0,
 	}),
