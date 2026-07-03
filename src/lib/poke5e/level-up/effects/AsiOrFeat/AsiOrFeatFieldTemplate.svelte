@@ -76,13 +76,13 @@
 			<p>{chosenFeat.description}</p>
 			<p><Tag>{m.note()}!</Tag> {m.asiFeatQualifier()}</p>
 		</div>
-		<AsiField attributes={value.props.attributes} pointsToSpend={1} bind:pointsSpent />
+		<AsiField attributes={value.props.attributes} pointsToSpend={value.props.pointsToSpend - 1} bind:pointsSpent />
 	{/if}
 	{#if chosenOptionValue === CUSTOM_OPTION.value}
 		<TextField label={m.name()} bind:value={customFeatName} />
 		<TextareaField label={m.description()} bind:value={customFeatDescription} />
 		<p class="description"><Tag>{m.note()}!</Tag> {m.asiFeatQualifier()}</p>
-		<AsiField attributes={value.props.attributes} pointsToSpend={1} bind:pointsSpent />
+		<AsiField attributes={value.props.attributes} pointsToSpend={value.props.pointsToSpend - 1} bind:pointsSpent />
 	{/if}
 </Fieldset>
 
