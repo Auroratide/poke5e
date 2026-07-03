@@ -18,15 +18,17 @@
 	} = $props()
 
 	let canEdit = $derived($trainer.update != null)
+	let theTrainer = $trainer.info
 
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
-	const effects = $derived(TrainerLevelTable.toLevel($trainer.info.level.next())($trainer.info) as LevelUpEffect<any, any, any>[])
+	const effects = $derived(TrainerLevelTable.toLevel(theTrainer.level.next())(theTrainer) as LevelUpEffect<any, any, any>[])
 
 	let saving = $state(false)
 	const applyLevelUp = async () => {
 		saving = true
-		const updatedTrainer = LevelUp.apply($trainer.info, effects)
-		await $trainer.update?.info(updatedTrainer).then(() => {
+		const updatedTrainer = LevelUp.apply(theTrainer, effects)
+		await $trainer.update?.info(updatedTrainer).then(async () => {
+			await new Promise((resolve) => setTimeout(resolve, 2000))
 			return $trainer.update?.trainerFeats(updatedTrainer) ?? Promise.resolve()
 		}).then(() => {
 			goto(Url.trainers($trainer.info.readKey))
@@ -37,15 +39,15 @@
 </script>
 
 <Title value={m.levelUp()} />
-<Card title={m.levelUpName({ name: $trainer.info.name })}>
+<Card title={m.levelUpName({ name: theTrainer.name })}>
 	{#if canEdit}
-		<LevelUpForm {saving} backHref={Url.trainers($trainer.info.readKey)} effects={effects} onsubmit={applyLevelUp} />
+		<LevelUpForm {saving} backHref={Url.trainers(theTrainer.readKey)} effects={effects} onsubmit={applyLevelUp} />
 	{:else}
 		<section>
 			<p>{m.noLevelUpPermission()}</p>
 		</section>
 		<ActionArea>
-			<Button href={Url.trainers($trainer.info.readKey)} variant="subtle">{m.back()}</Button>
+			<Button href={Url.trainers(theTrainer.readKey)} variant="subtle">{m.back()}</Button>
 		</ActionArea>
 	{/if}
 </Card>
