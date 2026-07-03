@@ -1,1 +1,0 @@
-import{_ as e}from"./BRGnUu7N.js";function t(e,t){return async(...e)=>{try{await t(...e)}catch{}}}var n=t(`create_pageview_event`,async t=>{await e.rpc(`create_pageview_event`,{_path:t})}),r=t(`create_pageview_event`,async t=>{await e.rpc(`create_pageview_event`,{_path:`/backups/${t}`})});export{n,r as t};
