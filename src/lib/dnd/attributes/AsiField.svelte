@@ -7,10 +7,12 @@
 		attributes,
 		pointsToSpend,
 		pointsSpent = $bindable(),
+		maxPerScore = Infinity,
 	}: {
 		attributes: Attributes,
 		pointsToSpend: number,
 		pointsSpent: AbilityScoreImprovement,
+		maxPerScore?: number,
 	} = $props()
 
 	let totalSpent = $derived(Object.values(pointsSpent).reduce((sum, cur) => sum + cur, 0))
@@ -33,9 +35,9 @@
 			<div class="asi-row">
 				<strong>{abbr}</strong>
 				<div></div>
-				<button aria-label="Decrease {attribute.name}" class="subtract" onclick={decrease(abbr)} disabled={spent <= 0}>-</button>
+				<button type="button" aria-label="Decrease {attribute.name}" class="subtract" onclick={decrease(abbr)} disabled={spent <= 0}>-</button>
 				<span class="score" class:increased={spent > 0}>{total}</span>
-				<button aria-label="Increase {attribute.name}" class="add" onclick={increase(abbr)} disabled={totalSpent >= pointsToSpend || total >= Attributes.MAX_ABSOLUTE_VALUE}>+</button>
+				<button type="button" aria-label="Increase {attribute.name}" class="add" onclick={increase(abbr)} disabled={totalSpent >= pointsToSpend || total >= Attributes.MAX_ABSOLUTE_VALUE || spent >= maxPerScore}>+</button>
 				<div></div>
 			</div>
 		{/each}

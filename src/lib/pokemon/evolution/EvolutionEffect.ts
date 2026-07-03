@@ -5,7 +5,7 @@ import type { PokemonType } from "$lib/pokemon/types"
 import * as list from "$lib/utils/list"
 import type { Skill } from "$lib/dnd/skills"
 import { capitalize, uppercase } from "$lib/utils/string"
-import type { Attribute } from "$lib/dnd/attributes"
+import { AbilityScoreImprovement, type Attribute } from "$lib/dnd/attributes"
 import { Ability } from "$lib/pokemon/ability"
 
 export interface EvolutionEffect {
@@ -14,10 +14,14 @@ export interface EvolutionEffect {
 }
 
 export const EvolutionEffect = {
-	compute(pokemon: TrainerPokemon, evolveFrom: PokemonSpecies, evolveTo: PokemonSpecies): EvolutionEffect[] {
+	compute(pokemon: TrainerPokemon, evolveFrom: PokemonSpecies, evolveTo: PokemonSpecies, asi?: AbilityScoreImprovement): EvolutionEffect[] {
 		const effects = POSSIBLE_EFFECTS
 			.map((effect) => effect.createIfApplicable(pokemon, evolveFrom, evolveTo))
 			.filter((it) => it != null)
+
+		if (asi) {
+			effects.push(new AsiEffect(asi))
+		}
 
 		return effects
 	},
@@ -119,6 +123,19 @@ export class AdditionalHpEffect implements EvolutionEffect {
 
 	static createIfApplicable(pokemon: TrainerPokemon): AdditionalHpEffect | undefined {
 		return new AdditionalHpEffect(pokemon.level)
+	}
+}
+
+export class AsiEffect implements EvolutionEffect {
+	constructor(private readonly asi: AbilityScoreImprovement) {}
+
+	apply(pokemon: TrainerPokemon): TrainerPokemon {
+		pokemon.attributes.improve(this.asi)
+		return pokemon
+	}
+
+	toString(): string {
+		return ""
 	}
 }
 

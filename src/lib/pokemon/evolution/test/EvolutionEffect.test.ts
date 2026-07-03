@@ -3,6 +3,7 @@ import {
 	AbilityChangeEffect,
 	AddedAcEffect,
 	AdditionalHpEffect,
+	AsiEffect,
 	EvolutionEffect,
 	GainedProficienciesEffect,
 	GainedSavingThrowsEffect,
@@ -19,6 +20,7 @@ import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import { stubAbility, stubAbilityPool } from "$lib/pokemon/ability/test/stubs"
 import { Ability } from "$lib/pokemon/ability"
+import { stubAsi, stubAttributes } from "$lib/dnd/attributes/test/stubs"
 
 let eevee: PokemonSpecies
 let flareon: PokemonSpecies
@@ -593,8 +595,31 @@ describe("EvolutionEffect", () => {
 			savingThrows: eevee.data.saves, // will change
 		})
 
-		const effects = EvolutionEffect.compute(pokemon, eevee, flareon)
+		const asi = stubAsi()
 
-		expect(effects.length).toEqual(6)
+		const effects = EvolutionEffect.compute(pokemon, eevee, flareon, asi)
+
+		expect(effects.length).toEqual(7)
+	})
+})
+
+describe("AsiEffect", () => {
+	test("applicable", () => {
+		const pokemon = stubTrainerPokemon({
+			attributes: stubAttributes({
+				str: 10,
+				dex: 12,
+			}),
+		})
+
+		const effect = new AsiEffect(stubAsi({
+			str: 3,
+			dex: 2,
+		}))
+
+		const result = effect.apply(pokemon)
+
+		expect(result.attributes.str.score).toEqual(13)
+		expect(result.attributes.dex.score).toEqual(14)
 	})
 })

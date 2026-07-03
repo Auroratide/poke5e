@@ -14,6 +14,8 @@
 	import { EvolutionEffect } from "./EvolutionEffect"
 	import type { EvolutionForest } from "./EvolutionForest"
 	import { m } from "$lib/site/i18n"
+	import { AbilityScoreImprovement, AsiField } from "$lib/dnd/attributes"
+	import { AsiBenefit } from "./EvolutionBenefit"
 
 	const dispatch = createEventDispatcher()
 
@@ -30,7 +32,11 @@
 	$: chosenEvolutionId = evolveToOptionIds?.length === 1 ? evolveToOptionIds[0] : chosenEvolutionId
 	$: chosenEvolution = evolveToOptions?.find((it) => it.to.data === chosenEvolutionId)
 	$: chosenSpecies = $allSpecies?.find((it) => it.id.data === chosenEvolution?.to.data)
-	$: effects = chosenSpecies != null ? EvolutionEffect.compute(pokemon, species, chosenSpecies) : []
+
+	$: asiToSpend = chosenEvolution?.benefits.find((it) => it instanceof AsiBenefit)?.amount
+	let asiSpent = AbilityScoreImprovement.zero()
+
+	$: effects = chosenSpecies != null ? EvolutionEffect.compute(pokemon, species, chosenSpecies, asiSpent) : []
 
 	const cancel = () => {
 		dispatch("cancel")
@@ -63,6 +69,12 @@
 				</ul>
 			{/if}
 		</section>
+		<section style:min-height="12em">
+			{#if chosenEvolution && asiToSpend != null}
+				<p>Each ability score can be increased by at most 4.</p>
+				<AsiField attributes={pokemon.attributes} pointsToSpend={asiToSpend} bind:pointsSpent={asiSpent} maxPerScore={4} />
+			{/if}
+		</section>
 		<ActionArea>
 			<Button on:click={cancel} variant="subtle" {disabled}>{m.cancel()}</Button>
 			<Button type="submit" {disabled}>{m.evolve()}</Button>
@@ -73,5 +85,6 @@
 <style>
 	section {
 		font-size: var(--font-sz-venus);
+		margin-block-end: 1em;
 	}
 </style>
