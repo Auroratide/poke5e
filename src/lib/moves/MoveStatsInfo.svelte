@@ -1,10 +1,8 @@
 <script lang="ts">
-	import type { MoveStats } from "./MoveStats"
-	import { PlusMinus, Popover } from "$lib/ui/elements"
-	import { AlertIcon } from "$lib/ui/icons"
 	import { m } from "$lib/site/i18n"
+	import { PlusMinus } from "$lib/ui/elements"
+	import type { MoveStats } from "./MoveStats"
 
-	export let id: string
 	export let value: MoveStats
 </script>
 
@@ -32,12 +30,6 @@
 			</dt>
 			<dd class="row">
 				<span>{value.damage.dice}{#if value.damage.mod > 0}&nbsp;+ {value.damage.mod}{/if}</span>
-				{#if value.damage.stabApplied}
-					<Popover id="move-stats-popover-{id}">
-						<span class="alert-activator" slot="activator"><AlertIcon label="alert" /></span>
-						<p>STAB was recently changed from "Move Power" to "Proficiency Bonus". You may continue using "Move Power" by editing this pokémon's "STAB Customization" section, under Advanced.</p>
-					</Popover>
-				{/if}
 			</dd>
 		</div>
 	{/if}
@@ -70,10 +62,5 @@
 		align-items: center;
 		justify-content: center;
 		gap: 0.25em;
-	}
-
-	.alert-activator {
-		display: block;
-		font-size: var(--font-sz-venus);
 	}
 </style>
