@@ -27,8 +27,7 @@
 	const applyLevelUp = async () => {
 		saving = true
 		const updatedTrainer = LevelUp.apply(theTrainer, effects)
-		await $trainer.update?.info(updatedTrainer).then(async () => {
-			await new Promise((resolve) => setTimeout(resolve, 2000))
+		await $trainer.update?.info(updatedTrainer).then(() => {
 			return $trainer.update?.trainerFeats(updatedTrainer) ?? Promise.resolve()
 		}).then(() => {
 			goto(Url.trainers($trainer.info.readKey))
