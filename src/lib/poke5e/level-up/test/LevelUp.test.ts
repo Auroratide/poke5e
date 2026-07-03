@@ -29,6 +29,10 @@ describe("trainers", () => {
 				current: 7,
 				max: 12,
 			},
+			hitDice: {
+				current: 0,
+				max: 1,
+			},
 		})
 
 		const effects = TrainerLevelTable.toLevel(new Level(2))(trainer)
@@ -44,6 +48,10 @@ describe("trainers", () => {
 		expect(result.hp).toEqual({
 			current: 10,
 			max: 15,
+		})
+		expect(result.hitDice).toEqual({
+			current: 1,
+			max: 2,
 		})
 	})
 
@@ -248,6 +256,10 @@ describe("pokemon", () => {
 				current: 7,
 				max: 12,
 			},
+			hitDice: {
+				current: 0,
+				max: 1,
+			},
 		})
 
 		const species = stubPokemonSpecies()
@@ -266,6 +278,10 @@ describe("pokemon", () => {
 		expect(result.hp).toEqual({
 			current: 10,
 			max: 15,
+		})
+		expect(result.hitDice).toEqual({
+			current: 1,
+			max: 2,
 		})
 	})
 
