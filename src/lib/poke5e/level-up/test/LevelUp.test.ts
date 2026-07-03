@@ -534,16 +534,6 @@ describe("errors", () => {
 		expect(error).toBeUndefined()
 	})
 
-	test("trainer path unspecified", () => {
-		const effect = new NewTrainerPathEffect({}, {
-			path: undefined,
-		})
-
-		const error = effect.hasError()
-
-		expect(error).toEqual("Must choose a trainer path.")
-	})
-
 	test("resolve needs a saving throw chosen", () => {
 		const effect = new TrainerResolveEffect({
 			savingThrows: ["cha"],

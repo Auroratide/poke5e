@@ -13,10 +13,7 @@ export class NewTrainerPathEffect extends LevelUpEffect<Record<never, never>, Ne
 	}
 
 	hasError(): string | undefined {
-		if (this.params.path == null) {
-			return "Must choose a trainer path."
-		}
-
+		// if undefined, it's custom
 		return undefined
 	}
 
