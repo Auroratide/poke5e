@@ -28,8 +28,11 @@
 	let increaseAmount = $derived(Math.max(1, inputValue + value.props.attributes.con.modifier + contributingFeatAmount))
 	let resultHp = $derived(value.props.currentHp + increaseAmount)
 
-	const onRoll = () => {
-		inputValue = dice.roll(value.props.hitDice.sizeAsInt())
+	const onRoll = async () => {
+		for await (const result of dice.multiroll(value.props.hitDice.sizeAsInt(), 12)) {
+			inputValue = result
+			await new Promise((resolve) => setTimeout(resolve, 20))
+		}
 	}
 
 	$effect(() => {
