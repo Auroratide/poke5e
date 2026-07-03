@@ -40,7 +40,7 @@
 	<Info trainer={$trainer.info} editable={canEdit} on:update={onUpdate} on:update-item={onUpdateItem} on:update-tags={onUpdateTags} />
 	<ActionArea>
 		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.removeTrainer)}" variant="danger">{m.remove()}</Button>
-		{#if FeatureToggles.LevelUp() && $trainer.info.level.isBelowMax()}
+		{#if FeatureToggles.LevelUp() && $trainer.info.level.isBelowMax() && $trainer.update}
 			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.levelUp)}" variant="subtle">{m.levelUp()}</Button>
 		{/if}
 		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="subtle">
