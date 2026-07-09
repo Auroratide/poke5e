@@ -19,10 +19,12 @@
 	<dd>{pokemon.ac}</dd>
 	<dt>{m.nature()}</dt>
 	<dd class="cap">{pokemon.nature.data}</dd>
-	<dt>{m.bonus()}</dt>
-	<dd>+{pb}</dd>
+	<dt>{m.sr()}</dt>
+	<dd>{species.sr.toString()}</dd>
 	<dt>{m.size()}</dt>
 	<dd class="cap">{pokemon.customSize ?? species.data.size}</dd>
+	<dt>{m.bonus()}</dt>
+	<dd>+{pb}</dd>
 	<DistancesDlItem label="{m.speed()}" values={speeds} />
 	<DistancesDlItem label="{m.senses()}" values={senses} />
 	{#if pokemon.teraType != null}
