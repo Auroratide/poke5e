@@ -159930,6 +159930,10 @@
 			"hitDice": "d8",
 			"speed": [
 				{
+					"type": "walking",
+					"value": 5
+				},
+				{
 					"type": "swimming",
 					"value": 30
 				}
@@ -160056,6 +160060,10 @@
 			"ac": 14,
 			"hitDice": "d12",
 			"speed": [
+				{
+					"type": "walking",
+					"value": 5
+				},
 				{
 					"type": "swimming",
 					"value": 40
