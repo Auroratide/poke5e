@@ -2738,9 +2738,9 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você gira todo o corpo para atacar com seu enorme martelo. Faça uma jogada de ataque corpo a corpo, causando 3d8 + MOVE de dano do tipo steel em um acerto. Este movimento não pode ser usado em turnos consecutivos pelo mesmo criatura."
+				"Você gira todo o corpo para atacar com seu enorme martelo. Faça uma jogada de ataque corpo a corpo, causando 4d6 + MOVE de dano do tipo steel em um acerto. Este movimento não pode ser usado em turnos consecutivos pelo mesmo criatura."
 			],
-			"higherLevels": "Os dados de dano deste movimento mudam para 5d6 no nível 5, 4d12 no nível 10 e 8d8 no nível 17."
+			"higherLevels": "Os dados de dano deste movimento mudam para 5d6 no nível 5, 6d8 no nível 10 e 6d12 no nível 17."
 		},
 		{
 			"id": "glacial-lance",

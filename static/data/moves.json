@@ -8461,15 +8461,15 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You swing your whole body around to attack with your huge hammer. Make a melee attack roll, dealing 3d8 + MOVE steel damage on a hit. This move cannot be used on consecutive turns by the same creature."
+				"You swing your whole body around to attack with your huge hammer. Make a melee attack roll, dealing 4d6 + MOVE steel damage on a hit. This move cannot be used on consecutive turns by the same creature."
 			],
-			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17.",
+			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 6d8 at level 10, and 6d12 at level 17.",
 			"damage": {
 				"dice": {
-					"1": "3d8",
+					"1": "4d6",
 					"5": "5d6",
-					"10": "4d12",
-					"17": "8d8"
+					"10": "6d8",
+					"17": "6d12"
 				},
 				"modifier": "MOVE",
 				"type": [
