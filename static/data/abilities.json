@@ -1327,7 +1327,7 @@
     {
       "id": "stance-change",
       "name": "Stance Change",
-      "description": "Aegislash has two forms. When Aegislash uses King's Shield, it changes to Shield Forme, swapping its AC and DEX stats. When it uses a damaging move, Aegislash immediately returns to Blade Forme, returning its stats to normal."
+      "description": "Aegislash has two forms. When Aegislash uses King's Shield, even if the reaction is unsucessful, it changes to Shield Forme, swapping its AC and DEX stats. When it uses a damaging move, Aegislash immediately returns to Blade Forme, returning its stats to normal."
     },
     {
       "id": "static",
