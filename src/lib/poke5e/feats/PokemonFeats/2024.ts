@@ -67,7 +67,7 @@ export const PokemonFeats: Feat[] = [ {
 }, {
 	name: "Hidden Ability",
 	category: "General",
-	description: "Your Pokémon reaches inside itself to discover a new ability. It gains access to the Hidden Ability in its stat block.",
+	description: "Your Pokémon reaches inside itself to discover a new ability. It gains access to the Hidden Ability in its stat block in addition to its current standard ability.",
 }, {
 	name: "Melee Master",
 	category: "General",
