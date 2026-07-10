@@ -1327,7 +1327,7 @@
     {
       "id": "stance-change",
       "name": "Stance Change",
-      "description": "Aegislash has two forms. When Aegislash uses King's Shield, it changes to Shield Forme, swapping its AC and DEX stats. When it uses a damaging move, Aegislash immediately returns to Blade Forme, returning its stats to normal."
+      "description": "Aegislash has two forms. When Aegislash uses King's Shield, even if the reaction is unsucessful, it changes to Shield Forme, swapping its AC and DEX stats. When it uses a damaging move, Aegislash immediately returns to Blade Forme, returning its stats to normal."
     },
     {
       "id": "static",
@@ -1667,7 +1667,7 @@
 		{
       "id": "zero-to-hero",
       "name": "Zero to Hero",
-      "description": "When a non-Pokémon ally of Palafin takes damage from a source outside that ally's control, Palafin may enter its Hero Form. In Hero Form, Palafin's size changes to Medium, its AC increases by 4, and each of its STR and DEX scores increase by 4, up to a maximum of 22. It may do this once per long rest. It reverts to normal form at the end of combat."
+      "description": "When a non-Pokémon ally of Palafin takes damage from a source outside that ally's control, Palafin may enter its Hero Form. In Hero Form, Palafin's size changes to Medium, its AC increases by 4, its base walking speed becomes 30ft, and each of its STR and DEX scores increase by 4, up to a maximum of 22. It may do this once per long rest. It reverts to normal form at the end of combat."
     }
   ]
 }

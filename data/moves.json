@@ -6217,14 +6217,14 @@
 			"duration": "instantaneous",
 			"range": "60ft",
 			"description": [
-				"You slash out with aura-enriched wings. Make a ranged attack, doing 1d12 + MOVE psychic damage on a hit. Esper Wing results in a critical hit on 19s and 20s. With each successful hit from this move, increase your movement speed by 5ft until you are incapacitated, are switched out, or the combat ends (Maximum of +30ft to movement speed)."
+				"You slash out with aura-enriched wings. Make a ranged attack, doing 2d6 + MOVE psychic damage on a hit. Esper Wing results in a critical hit on 19s and 20s. With each successful hit from this move, increase your movement speed by 5ft until you are incapacitated, are switched out, or the combat ends (Maximum of +30ft to movement speed)."
 			],
-			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
 			"damage": {
 				"dice": {
-					"1": "1d12",
+					"1": "2d6",
 					"5": "2d8",
-					"10": "2d12",
+					"10": "4d6",
 					"17": "6d6"
 				},
 				"modifier": "MOVE",
@@ -8461,15 +8461,15 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You swing your whole body around to attack with your huge hammer. Make a melee attack roll, dealing 3d8 + MOVE steel damage on a hit. This move cannot be used on consecutive turns by the same creature."
+				"You swing your whole body around to attack with your huge hammer. Make a melee attack roll, dealing 4d6 + MOVE steel damage on a hit. This move cannot be used on consecutive turns by the same creature."
 			],
-			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 4d12 at level 10, and 8d8 at level 17.",
+			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 6d8 at level 10, and 6d12 at level 17.",
 			"damage": {
 				"dice": {
-					"1": "3d8",
+					"1": "4d6",
 					"5": "5d6",
-					"10": "4d12",
-					"17": "8d8"
+					"10": "6d8",
+					"17": "6d12"
 				},
 				"modifier": "MOVE",
 				"type": [
@@ -24468,7 +24468,7 @@
 			"duration": "1 round",
 			"range": "30ft",
 			"description": [
-				"You release a big yawn that causes a creature to become very drowsy. Choose a target in range. If that target is still in the battle after the end of its next turn, it falls asleep."
+				"You release a big yawn that causes a creature to become very drowsy. Choose a target in range. If that target is still in the battle at the end of its next turn, it falls asleep."
 			]
 		},
 		{

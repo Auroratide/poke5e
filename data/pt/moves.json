@@ -2159,9 +2159,9 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você desfere um corte com asas imbuídas de aura. Faça um ataque à distância, causando 1d12 + MOVE de dano psíquico em um acerto. Este movimento causa crítico em 19 e 20. A cada acerto, sua velocidade aumenta em 5 pés até ser incapacitado, trocado ou o combate terminar (máx. +30 pés)."
+				"Você desfere um corte com asas imbuídas de aura. Faça um ataque à distância, causando 2d6 + MOVE de dano psíquico em um acerto. Este movimento causa crítico em 19 e 20. A cada acerto, sua velocidade aumenta em 5 pés até ser incapacitado, trocado ou o combate terminar (máx. +30 pés)."
 			],
-			"higherLevels": "Os dados de dano deste movimento mudam para 2d8 no nível 5, 2d12 no nível 10 e 6d6 no nível 17."
+			"higherLevels": "Os dados de dano deste movimento mudam para 2d8 no nível 5, 4d6 no nível 10 e 6d6 no nível 17."
 		},
 		{
 			"id": "eternabeam",
@@ -2738,9 +2738,9 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você gira todo o corpo para atacar com seu enorme martelo. Faça uma jogada de ataque corpo a corpo, causando 3d8 + MOVE de dano do tipo steel em um acerto. Este movimento não pode ser usado em turnos consecutivos pelo mesmo criatura."
+				"Você gira todo o corpo para atacar com seu enorme martelo. Faça uma jogada de ataque corpo a corpo, causando 4d6 + MOVE de dano do tipo steel em um acerto. Este movimento não pode ser usado em turnos consecutivos pelo mesmo criatura."
 			],
-			"higherLevels": "Os dados de dano deste movimento mudam para 5d6 no nível 5, 4d12 no nível 10 e 8d8 no nível 17."
+			"higherLevels": "Os dados de dano deste movimento mudam para 5d6 no nível 5, 6d8 no nível 10 e 6d12 no nível 17."
 		},
 		{
 			"id": "glacial-lance",

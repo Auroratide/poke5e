@@ -1,0 +1,1 @@
+import{Fn as e,Mn as t,Nn as n,Pn as r,jn as i}from"./Z3syLv-N.js";var a={list:[`cool`,`beauty`,`cute`,`clever`,`tough`],name(a){return{cool:()=>e(),beauty:()=>r(),cute:()=>n(),clever:()=>t(),tough:()=>i()}[a]()}};export{a as t};
