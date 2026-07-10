@@ -14,6 +14,17 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.11.14",
+		description: [
+			"<strong>Pokémon</strong>: Gave Palafin line a walking speed to match other water-based pokémon.",
+			"<strong>Abilities</strong>: Clarify that King's Shield activates Stance Change even if it fails.",
+			"<strong>Moves</strong>: Slightly increase damage of Gigaton Hammer so it is stronger than Hyper Beam, since Gigaton Hammer is not AoE.",
+			"<strong>Trainers</strong>: Show SR of trainer's pokémon on their pages.",
+			"<strong>Feats</strong>: Clarify that Hidden Ability adds to the pokémon's existing ability.",
+			"<strong>Bugfix</strong>: Fix Quaxly's evolution ASI (10 → 6).",
+			"<strong>Bugfix</strong>: Fix Infernape's SR (12 → 13).",
+		],
+	}, {
 		name: "v1.11.13",
 		description: [
 			"<strong>Pokémon</strong>: Standardize the starting HP of all gen 8 and 9 pokémon to the same formula used for gens 1-7. Some pokémon's starting HP have increased, and some have decreased as a result.",
