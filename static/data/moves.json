@@ -16175,12 +16175,12 @@
 			"duration": "instantaneous",
 			"range": "30ft",
 			"description": [
-				"You materialize a psychic wave that shocks a creature. Make a ranged attack, dealing 2d6 + MOVE psychic damage on a hit."
+				"You materialize a psychic wave that shocks a creature. Make a ranged attack, dealing 4d4 + MOVE psychic damage on a hit."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17.",
 			"damage": {
 				"dice": {
-					"1": "2d6",
+					"1": "4d4",
 					"5": "2d12",
 					"10": "4d8",
 					"17": "8d6"
