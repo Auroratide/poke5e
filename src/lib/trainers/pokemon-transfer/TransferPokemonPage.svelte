@@ -61,17 +61,12 @@
 	}
 </script>
 
-<RequirePokemon trainer={$trainer} {id} titlePrefix="Transfer">
+<RequirePokemon trainer={$trainer} {id} titlePrefix={m.transfer()}>
 	<WithSpecies let:species ids={pokemon ? [pokemon.pokemonId] : []}>
-		<Card title="Transfer {pokemon?.nickname ?? species.name}">
+		<Card title="{m.transfer()} {pokemon?.nickname ?? species.name}">
 			{#if canEdit}
 				<section>
-					<p>This let's you transfer a <em>copy</em> of this pokémon to another Trainer.</p>
-					<ol>
-						<li>Generate a Transfer Code.</li>
-						<li>Share the Transfer Code.</li>
-						<li>Add the pokemon to the trainer using the Transfer Code.</li>
-					</ol>
+					{@html m.transferPokemonInstructionsHtml()}
 				</section>
 				
 				<section class="the-code">
@@ -80,19 +75,19 @@
 					{:else}
 						{#if transferCode == null}
 							<Saveable saving={generating} size="sm">
-								<p><Button on:click={generateCode} disabled={generating}>Generate Code</Button></p>
+								<p><Button on:click={generateCode} disabled={generating}>{m.generateCode()}</Button></p>
 							</Saveable>
 						{:else}
 							<Saveable saving={revoking} size="sm">
 								<p>Code:<br /><code>{transferCode}</code></p>
-								<p><Button on:click={revokeCode} variant="danger" disabled={revoking}>Revoke Code</Button></p>
+								<p><Button on:click={revokeCode} variant="danger" disabled={revoking}>{m.revokeCode()}</Button></p>
 							</Saveable>
 						{/if}
 					{/if}
 				</section>
 			{:else}
 				<section>
-					<p>You do not have permission to transfer this trainer's pokémon. You must be an owner of the trainer in order to transfer their pokémon.</p>
+					<p>{m.transferPermissionError()}</p>
 				</section>
 			{/if}
 			<ActionArea>
