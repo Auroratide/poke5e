@@ -95,6 +95,7 @@
 		padding: 0.125em;
 		aspect-ratio: 1;
 		cursor: pointer;
+		block-size: 100%;
 	}
 
 	button.subtract {
