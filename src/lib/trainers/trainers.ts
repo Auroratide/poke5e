@@ -575,7 +575,7 @@ const createStore = () => {
 			return listPromise
 		},
 
-		new: (info: Pick<TrainerInfo, "name" | "description">) => {
+		new: (info: Pick<TrainerInfo, "name" | "description" | "hp">) => {
 			return provider.newTrainer(info).then((result) => {
 				storeUpdateOne(result.info.readKey, () => result)
 

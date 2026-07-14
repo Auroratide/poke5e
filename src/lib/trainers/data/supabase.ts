@@ -169,12 +169,12 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			)
 	}
 
-	newTrainer = async (info: Pick<TrainerInfo, "name" | "description">): Promise<TrainerData & WithWriteKey> => {
+	newTrainer = async (info: Pick<TrainerInfo, "name" | "description" | "hp">): Promise<TrainerData & WithWriteKey> => {
 		const toCreate: TrainerInfo = {
 			...info,
 			level: new Level(1),
 			ac: 10,
-			hp: {
+			hp: info.hp ?? {
 				current: 8,
 				max: 8,
 			},

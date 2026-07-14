@@ -14,9 +14,12 @@
 	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/site/url"
 	import { m } from "$lib/site/i18n"
+	import { trainerHitDiceSize } from "./hit-dice"
 
 	let name = ""
 	let description = ""
+
+	$: startingHp = $trainerHitDiceSize.sizeAsInt()
 	
 	let saving = false
 	$: disabled = saving
@@ -25,6 +28,10 @@
 		trainers.new({
 			name,
 			description,
+			hp: {
+				current: startingHp,
+				max: startingHp,
+			},
 		}).then(({ info }) => {
 			goto(Url.trainers(info.readKey))
 		}).catch(() => {
