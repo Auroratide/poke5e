@@ -21,9 +21,17 @@
 	$: hasNoTrainers = $trainers.length === 0
 	let filteredTags: string[] = []
 
+	$: textFilterIsTagName = TagList.has($allTags, $trainerListFilterValue)
+
 	$: filtered = $trainers
-		.filter((it) => filteredTags.length === 0 || TagList.overlaps(it.tags, filteredTags))
-		.filter((it) => it.name.toLocaleLowerCase().includes($trainerListFilterValue.toLocaleLowerCase()))
+		.filter((it) => {
+			const noTagsSpecified = filteredTags.length === 0 && !textFilterIsTagName
+			const hasDesiredTag = TagList.overlaps(it.tags, filteredTags)
+			const tagIsExplicitlySearched = textFilterIsTagName && TagList.has(it.tags, $trainerListFilterValue)
+
+			return noTagsSpecified || hasDesiredTag || tagIsExplicitlySearched
+		})
+		.filter((it) => textFilterIsTagName || it.name.toLocaleLowerCase().includes($trainerListFilterValue.toLocaleLowerCase()))
 
 	const byStringField = (field: (m: Trainer) => string) =>
 		(l: Trainer, r: Trainer) => field(l).localeCompare(field(r))

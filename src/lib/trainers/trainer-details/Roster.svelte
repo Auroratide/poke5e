@@ -20,13 +20,21 @@
 	$: editable = $trainer.update != null
 	$: pokemonTags = $trainer.tags.getForPokemon()
 
-	const byNicknameOrSpecies = (filterValue: string) => (it: TrainerPokemon) =>
+	$: textFilterIsTagName = TagList.has(pokemonTags, $filterValue)
+
+	const byNicknameOrSpecies = (filterValue: string) => (it: TrainerPokemon) => textFilterIsTagName || 
 		it.nickname.toLocaleLowerCase().includes(filterValue) || it.pokemonId.data.replace("-", " ").includes(filterValue)
 
 	let filteredTags: string[] = []
 
 	$: filtered = $trainer.pokemon
-		.filter((it) => filteredTags.length === 0 || TagList.overlaps(it.tags, filteredTags))
+		.filter((it) => {
+			const noTagsSpecified = filteredTags.length === 0 && !textFilterIsTagName
+			const hasDesiredTag = TagList.overlaps(it.tags, filteredTags)
+			const tagIsExplicitlySearched = textFilterIsTagName && TagList.has(it.tags, $filterValue)
+
+			return noTagsSpecified || hasDesiredTag || tagIsExplicitlySearched
+		})
 		.filter(byNicknameOrSpecies($filterValue.toLocaleLowerCase()))
 	$: baseTrainerUrl = Url.trainers($trainer.info.readKey)
 

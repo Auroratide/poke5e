@@ -61,11 +61,12 @@
 	})) ?? [])
 
 	$: textFilterIsPokemonType = PokemonType.list.includes($fakemonListFilter.toLocaleLowerCase() as PokeType)
+	$: textFilterIsTagName = TagList.has($allTags, $fakemonListFilter)
 
 	let filteredTags: string[] = []
 
 	$: filter = new SpeciesFilter()
-		.name(textFilterIsPokemonType ? "" : $fakemonListFilter)
+		.name(textFilterIsPokemonType || textFilterIsTagName ? "" : $fakemonListFilter)
 		.type(filteredType !== "" ? filteredType : textFilterIsPokemonType ? $fakemonListFilter : "")
 		.size(filteredSize)
 		.sr(filteredSrRelative, filteredSr)
@@ -74,7 +75,13 @@
 		.biome(filteredBiome)
 
 	$: filtered = $fakemon
-		.filter((it) => filteredTags.length === 0 || TagList.overlaps(it.tags, filteredTags))
+		.filter((it) => {
+			const noTagsSpecified = filteredTags.length === 0 && !textFilterIsTagName
+			const hasDesiredTag = TagList.overlaps(it.tags, filteredTags)
+			const tagIsExplicitlySearched = textFilterIsTagName && TagList.has(it.tags, $fakemonListFilter)
+
+			return noTagsSpecified || hasDesiredTag || tagIsExplicitlySearched
+		})
 		.filter((it) => filter.apply(it.species))
 
 	const byStringField = (field: (m: Fakemon) => string) =>
