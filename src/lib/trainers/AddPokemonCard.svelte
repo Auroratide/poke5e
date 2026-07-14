@@ -12,6 +12,8 @@
 	import SearchByTransferCode from "./pokemon-transfer/SearchByTransferCode.svelte"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import type { TransferCode } from "./pokemon-transfer"
+	import { ActionArea } from "$lib/ui/forms"
+	import { m } from "$lib/site/i18n"
 
 	export let trainer: TrainerStore
 	export let allSpecies: Readable<PokemonSpecies[]>
@@ -80,6 +82,9 @@
 			<p>You do not have permission to add pokemon to this trainer.</p>
 		</section>
 	{/if}
+	<ActionArea>
+		<Button href={Url.trainers($trainer.info.readKey)} variant="subtle">{m.back()}</Button>
+	</ActionArea>
 </Card>
 
 <style>
