@@ -1,0 +1,1 @@
+import{At as e}from"./BgorEzA0.js";import"./_VD-Wcyg.js";var t=`migrationStatus`,n=e(localStorage.getItem(t)??`not started`);n.subscribe(e=>localStorage.setItem(t,e));var r=`seenTrainerRecovery`,i=e(localStorage.getItem(r)===`true`);i.subscribe(e=>localStorage.setItem(r,e.toString()));export{i as n,n as t};

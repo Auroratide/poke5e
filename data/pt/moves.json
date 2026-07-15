@@ -4888,7 +4888,7 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você materializa uma onda psíquica que atinge uma criatura. Faça um ataque à distância, causando 2d6 + MOVE de dano psíquico em caso de acerto."
+				"Você materializa uma onda psíquica que atinge uma criatura. Faça um ataque à distância, causando 4d4 + MOVE de dano psíquico em caso de acerto."
 			],
 			"higherLevels": "Os dados de dano deste movimento mudam para 2d12 no nível 5, 4d8 no nível 10 e 8d6 no nível 17."
 		},

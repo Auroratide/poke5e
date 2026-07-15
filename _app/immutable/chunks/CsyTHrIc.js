@@ -1,0 +1,1 @@
+import{rs as e}from"./8RfTJXLz.js";var t=class t extends e{get proficiencyBonus(){return 2+Math.floor((this.data-1)/4)}next(){return new t(this.data+1)}isBelowMax(){return this.data<20}};export{t};

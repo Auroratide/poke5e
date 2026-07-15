@@ -1,1 +1,1 @@
-{"id":"cheri-berry","name":"Cheri Berry","type":"berry","cost":200,"description":["Consume to cure paralysis. You may consume this berry as a reaction when you become paralyzed. You can still take this reaction even though the status would otherwise prevent you from taking it."],"media":{"sprite":"/assets/items/cheri-berry/sprite.png"}}
+{"id":"cheri-berry","name":"Cheri Berry","type":"berry","cost":200,"description":["Consume to cure paralysis. You may consume this berry as a reaction when you become paralyzed."],"media":{"sprite":"/assets/items/cheri-berry/sprite.png"}}

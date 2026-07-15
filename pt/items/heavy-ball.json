@@ -1,1 +1,1 @@
-{"id":"heavy-ball","name":"Heavy Ball","type":"pokeball","cost":1300,"description":["Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 se o Pokémon alvo for Médio ou maior."],"media":{"sprite":"/assets/items/heavy-ball/sprite.png"}}
+{"id":"heavy-ball","name":"Heavy Ball","type":"pokeball","cost":800,"description":["Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 se o Pokémon alvo for Médio ou maior."],"media":{"sprite":"/assets/items/heavy-ball/sprite.png"}}

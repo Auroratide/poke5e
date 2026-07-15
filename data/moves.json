@@ -16175,12 +16175,12 @@
 			"duration": "instantaneous",
 			"range": "30ft",
 			"description": [
-				"You materialize a psychic wave that shocks a creature. Make a ranged attack, dealing 2d6 + MOVE psychic damage on a hit."
+				"You materialize a psychic wave that shocks a creature. Make a ranged attack, dealing 4d4 + MOVE psychic damage on a hit."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17.",
 			"damage": {
 				"dice": {
-					"1": "2d6",
+					"1": "4d4",
 					"5": "2d12",
 					"10": "4d8",
 					"17": "8d6"
@@ -20742,7 +20742,7 @@
 			"time": "1 action",
 			"pp": 3,
 			"duration": "instantaneous",
-			"range": "40ft line",
+			"range": "Self (40ft line)",
 			"description": [
 				"The user attacks targets in the area by emitting steam. Each creature in the line must make a DEX saving throw. A creature takes 2d6 + MOVE fairy damage and becomes confused on a failed save. On a success, they take half damage and are not confused."
 			],
@@ -22157,7 +22157,7 @@
 			"time": "1 action",
 			"pp": 5,
 			"duration": "instantaneous",
-			"range": "100ft",
+			"range": "100ft (30ft radius)",
 			"description": [
 				"You summon forth a volley of green arrows to pierce creatures in range. All creatures in a 30 ft radius, centered on a point within range, must make a DEX save against your Move DC, taking 2d8 + MOVE ground damage on a hit, or half as much on a save. Flying-type creatures or ones with Levitate, Magnet Rise, or similar ability CAN be hit by this move. Any creature that fails the saving throw falls to the ground and is now grounded. Grounded creatures are susceptible to to ground-type moves until they raise up, regardless of their type or ability."
 			],

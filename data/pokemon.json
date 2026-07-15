@@ -133948,8 +133948,9 @@
 			},
 			"habitat": {
 				"biomes": [
-					"desert",
-					"ruin"
+					"glacier",
+					"tundra",
+					"glacier"
 				]
 			}
 		},
@@ -134083,8 +134084,9 @@
 			},
 			"habitat": {
 				"biomes": [
-					"desert",
-					"ruin"
+					"glacier",
+					"tundra",
+					"glacier"
 				]
 			}
 		},

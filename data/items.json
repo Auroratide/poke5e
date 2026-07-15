@@ -88,7 +88,7 @@
 			"id": "lure-ball",
 			"name": "Lure Ball",
 			"type": "pokeball",
-			"cost": 1300,
+			"cost": 800,
 			"description": [
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 if used while fishing."
 			],
@@ -100,7 +100,7 @@
 			"id": "heavy-ball",
 			"name": "Heavy Ball",
 			"type": "pokeball",
-			"cost": 1300,
+			"cost": 800,
 			"description": [
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 if the target Pokémon is size medium or larger."
 			],
@@ -112,7 +112,7 @@
 			"id": "love-ball",
 			"name": "Love Ball",
 			"type": "pokeball",
-			"cost": 1300,
+			"cost": 800,
 			"description": [
 				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by twice your active Pokémon's Charisma modifier."
 			],
@@ -1188,7 +1188,7 @@
 			"type": "berry",
 			"cost": 200,
 			"description": [
-				"Consume to cure paralysis. You may consume this berry as a reaction when you become paralyzed. You can still take this reaction even though the status would otherwise prevent you from taking it."
+				"Consume to cure paralysis. You may consume this berry as a reaction when you become paralyzed."
 			],
 			"media": {
 				"sprite": "/assets/items/cheri-berry/sprite.png"

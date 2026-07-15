@@ -1,1 +1,1 @@
-{"id":"lure-ball","name":"Lure Ball","type":"pokeball","cost":1300,"description":["Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 se usado durante pesca."],"media":{"sprite":"/assets/items/lure-ball/sprite.png"}}
+{"id":"lure-ball","name":"Lure Ball","type":"pokeball","cost":800,"description":["Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 10 se usado durante pesca."],"media":{"sprite":"/assets/items/lure-ball/sprite.png"}}
