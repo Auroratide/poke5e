@@ -14,6 +14,18 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.0",
+		description: [
+			"<strong>New!</strong>: Level Up trainers and pokémon! As of this version, it lets you roll for HP increase, select Ability Score Increases, choose Feats, choose trainer features, and review new moves.",
+			"<strong>New!</strong>: Pokémon can be copied from one trainer to another using the Transfer button. This lets trainers trade pokémon, or DMs give control of pokémon to trainers that caught them.",
+			"<strong>New!</strong>: Trainers, Pokémon, and Fakémon can now be Tagged using any number of descriptors. You can use tags as a filter, allowing you to organize things into categories you find useful.",
+			"<strong>Reference</strong>: The Reference pages have been reorganized into three categories: Core Rules, Appendix, and Supplements. The goal of the reorganization is to make it easier to learn the system, putting all the core rules up front in a logically readable order rather than mixing everything alphabetically.",
+			"<strong>Fakémon</strong>: Biomes can be added to fakémon.",
+			"<strong>Moves</strong>: Fix starting damage of Psystrike (2d6 → 4d4).",
+			"<strong>Pokémon</strong>: Fix biomes of Galarian Darumaka and Darmanitan to be snowy.",
+			"<strong>Items</strong>: Lowered the prices of Lure, Heavy, and Love balls to balance the value of their effects against the Ultra Ball standard.",
+		],
+	}, {
 		name: "v1.11.14",
 		description: [
 			"<strong>Pokémon</strong>: Gave Palafin line a walking speed to match other water-based pokémon.",
@@ -747,6 +759,10 @@ export const versionHistory: VersionHistory = {
 		],
 	} ],
 	groups: [ {
+		name: "v1.12",
+		highlight: "Level Up & Tags!",
+		description: "New Level Up button allows you to more easily level up trainers and pokémon, increasing their HP, allowing you to choose features and ability score increases, and review new perks. Other quality of life features include tagging trainers, pokémon, and fakémon for better organization, and a Transfer Pokémon option that lets trainers trade pokémon, or DMs transfer caught pokémon.",
+	}, {
 		name: "v1.11",
 		highlight: "Custom Abilities & STAB!",
 		description: "Custom Abilities can now be created for Fakémon, and multiple abilities can be assigned to trainers' pokémon. Additionally, thanks to community feedback, STAB has been updated to use Proficiency Bonus. Plus, it can be customized now.",
