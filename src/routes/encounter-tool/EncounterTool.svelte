@@ -1,0 +1,385 @@
+<script lang="ts">
+	import { goto } from "$app/navigation"
+	import { MovesStore } from "$lib/moves/store"
+	import { Encounter, ENCOUNTER_SIZE_LIMIT } from "$lib/poke5e/encounters"
+	import { experienceAwarded } from "$lib/poke5e/experience"
+	import type { Biome } from "$lib/poke5e/habitat"
+	import { PokemonSpecies, PokemonSpeciesList } from "$lib/poke5e/species"
+	import { SpeciesSprite } from "$lib/poke5e/species/media"
+	import { PokemonType, TypeTag, type PokeType } from "$lib/pokemon/types"
+	import { error } from "$lib/site/errors"
+	import { Url } from "$lib/site/url"
+	import { Button, Loader } from "$lib/ui/elements"
+	import Stepper from "$lib/ui/elements/Stepper.svelte"
+	import { ActionArea, InstructionText, IntField, Removable, Saveable, SelectField } from "$lib/ui/forms"
+	import { VsIcon } from "$lib/ui/icons"
+	import { Page } from "$lib/ui/layout"
+	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
+	import Card from "$lib/ui/page/Card.svelte"
+	import { tick } from "svelte"
+	import type { Readable } from "svelte/store"
+
+	const NONE = ""
+	const noneOption = { name: "- None -", value: NONE }
+	const primaryTypeOptions = [noneOption].concat(PokemonType.list.map((it) => ({ name: it, value: it })))
+	const difficultyOptions = [
+		{name: "Low", value: "low"},
+		{name: "Moderate", value: "moderate"},
+		{name: "High", value: "high"},
+	]
+	const pokemonLimitOptions = [
+		{name: "No", value: "no"},
+		{name: "Yes", value: "yes"},
+	]
+	const difficultyMultipliers = {
+		low: 1,
+		moderate: 1.5,
+		high: 2,
+	}
+
+	export let biomes: Biome[]
+	export let species: Readable<PokemonSpecies[] | undefined>
+
+	$: biomeOptions = [
+		{ name: "- None -", value: "" },
+		...(biomes ?? []).map((t: { name: string, id: string }) => ({
+			name: t.name,
+			value: t.id,
+		})),
+	]
+	$: maxPlayerLevel = partyPlayers.length > 0 
+		? Math.max(...partyPlayers.map(p => p.level)) 
+		: 1
+	$: totalPartyLevels = partyPlayers.reduce((sum, p) => sum + p.level, 0)
+	$: pokemonExtraModifier = partyPlayers.reduce((acc, p) => {
+		const extra = p.numberOfPokemon > 1 ? (p.numberOfPokemon - 1) * 0.1 : 0
+		return acc + extra
+	}, 0)
+	$: maxExpTotal = Math.round((totalPartyLevels * 50) * (1 + pokemonExtraModifier) * difficultyMultipliers[difficulty])
+
+	// This forces the fetching of moves so PP is accurate
+	$: possibleMoves = $MovesStore
+
+	let biome = ""
+	let difficulty: "low" | "moderate" | "high" = "low"
+	let pokemonType: PokeType
+	let arePokemonLimited: "yes" | "no" = "no"
+	let pokemonLimit: number = 1
+	let encounter = Encounter.createEmpty()
+	let noMatches = false
+	let partyPlayers: { id: number, level: number, numberOfPokemon: number }[] = []
+	let nextPlayerId = 1
+
+	$: currentEncounterExp = Encounter.totalExp(encounter)
+	$: encounterDifficulty = (() => {
+		const ratio = currentEncounterExp / maxExpTotal * difficultyMultipliers[difficulty]
+		if (ratio < 0.9) return { label: "Trivial", color: "#9e9e9e" }
+		if (ratio <= 1.15) return { label: "Low", color: "#4caf50" }
+		if (ratio <= 1.5) return { label: "Moderate", color: "#ff9800" }
+		if (ratio <= 2) return { label: "High", color: "#f44336" }
+		return { label: "Deadly", color: "#7b1fa2" }
+	})()
+
+	const addPlayer = () => {
+		partyPlayers = [...partyPlayers, { id: nextPlayerId++, level: 1, numberOfPokemon: 1 }]
+	}
+
+	const deletePlayer = (id: number) => {
+		partyPlayers = partyPlayers.filter(p => p.id !== id)
+	}
+
+	const addPokemonToEncounter = (pokemon: PokemonSpecies, level?: number) => {
+		if (!partyPlayers.length) {
+			addPlayer()
+		}
+
+		encounter = Encounter.addPokemon(encounter, pokemon, level ?? 1)
+		noMatches = false
+	}
+
+	const onDelete = (pokemon: {data: PokemonSpecies, count: number}) => {
+		encounter = Encounter.removePokemon(encounter, pokemon.data)
+	}
+
+	const generateEncounter = async () => {
+		// Generate default party if there is none
+		if (!partyPlayers.length) {
+			for (let index = 0; index < 4; index++) {
+				addPlayer()
+			}
+			// So Svelte can trigger the changes in the side variables
+			await tick()
+		}
+		
+		const pokemonPool: PokemonSpecies[] = []
+		const currentSpecies = $species ?? []
+
+		// Add Pokémon to the pool
+		for (let i = 0; i < currentSpecies.length; i++) {
+			const pokemon = currentSpecies[i]
+			const hasBiome = biome === "" || pokemon.data.habitat.biomes.includes(biome)
+			const hasType = !pokemonType || pokemon.data.type.includes(pokemonType)
+
+			if (hasBiome && hasType) {
+				pokemonPool.push(pokemon)
+			}
+		}
+
+		if (pokemonPool.length === 0) {
+			noMatches = true
+			return
+		}
+
+		encounter = Encounter.generate({
+			pool: pokemonPool,
+			targetExp: maxExpTotal,
+			pokemonLimit: arePokemonLimited === "yes" ? pokemonLimit : Infinity,
+			maxLevel: maxPlayerLevel,
+		})
+
+		if (encounter.pokemon.length === 0) {
+			noMatches = true
+		}
+	}
+
+	const clearEncounter = () => {
+		encounter = Encounter.createEmpty()
+	}
+
+	let saving = false
+	const useEncounter = async () => {
+		saving = true
+		try {
+			const created = await Encounter.saveToTrainers(encounter, possibleMoves)
+			goto(Url.trainers(created.info.readKey))
+		} catch (e) {
+			error.show("Encounter.saveToTrainers", e as Error)
+		} finally {
+			saving = false
+		}
+	}
+
+	$: saveEncounterIssues = Encounter.count(encounter) === 0
+		? "Add Pokémon to this encounter to save it."
+		: Encounter.count(encounter) > ENCOUNTER_SIZE_LIMIT
+			? `Reduce the number of Pokémon in this encounter to ${ENCOUNTER_SIZE_LIMIT} or less to save it.`
+			: undefined
+</script>
+
+<Page theme="forest">
+	<VsIcon slot="icon" />
+	
+	<nav id="{MAIN_SEARCH_ID}" slot="side" class="table" aria-label="Pokémon List">
+		{#if $species !== undefined}
+			<PokemonSpeciesList pokemons={$species ?? []} onClick={(pokemon) => addPokemonToEncounter(pokemon)} disableLink={true} />
+		{:else}
+			<Loader />
+		{/if}
+	</nav>
+	
+	<Card title="Encounter Tool">
+		<Saveable {saving}>
+			<section>
+				<p>Welcome to the Encounter Tool! Please, keep in mind that this system is being currently tested and might not be accurately balanced.</p>
+			</section>
+
+			<section>
+				<h2>Players</h2>
+				{#if partyPlayers.length > 0}
+					<div class="player-list">
+						{#each partyPlayers as player}
+							<div class="player-item">
+								<Removable on:remove={() => deletePlayer(player.id)}>
+									<div class="player-fields">
+										<IntField label="Level" bind:value={player.level} min={1} />
+										<IntField label="Pokémon" bind:value={player.numberOfPokemon} min={1} />
+									</div>
+								</Removable>
+							</div>
+						{/each}
+					</div>
+				{:else}
+					<p>No Players in the Party.</p>
+				{/if}
+				<Button variant="success" on:click={addPlayer} width="full">Add Player</Button>
+			</section>
+			<section>
+				<h2>Configuration</h2>
+				<div class="simple-type-field">
+					<SelectField label="Biome" options={biomeOptions} bind:value={biome} />
+					<SelectField label="Type in common" options={primaryTypeOptions} bind:value={pokemonType}/>
+				</div>
+				<div class="simple-type-field">
+					<SelectField label="Difficulty" options={difficultyOptions} bind:value={difficulty}/>
+					<p class="xp-awarded">{maxExpTotal} XP</p>
+				</div>
+				<div class="simple-type-field">
+					<SelectField label="Pokémon Limit" options={pokemonLimitOptions} bind:value={arePokemonLimited}/>
+					{#if arePokemonLimited === "yes"}
+						<IntField label="Limit" bind:value={pokemonLimit} min={1}/>
+					{:else}
+						<p></p>
+					{/if}
+				</div>
+			
+				<p class="larger">
+					<Button on:click={generateEncounter} width="full">Generate Encounter</Button>
+				</p>
+			</section>
+			<section>
+				<h2>Encounter</h2>
+				<div class="manual-pokemon-list">
+					{#if encounter.pokemon.length > 0}
+						<div class="pokemon-list">
+							{#each encounter.pokemon as pokemon (pokemon.data.id.data)}
+								<div class="pokemon-item">
+									<div class="pokemon-data">
+										<div class="pokemon-sprite">
+											<SpeciesSprite media={pokemon.data.media} alt="{pokemon.data.name}" />
+										</div>
+										<div class="pokemon-info">
+											<p class="pokemon-name">{pokemon.data.name} <label class="pokemon-level">Lv. <input type="number" min={1} bind:value={pokemon.level} /></label></p>
+											<p class="pokemon-stats">SR: {pokemon.data.sr} • XP: {experienceAwarded(pokemon.level, pokemon.data.data.sr)}</p>
+											<TypeTag type={pokemon.data.data.type} />
+										</div>
+									</div>
+									<Stepper bind:value={pokemon.count} deleteOnZero={true} on:delete={() => onDelete(pokemon)} />
+								</div>
+							{/each}
+						</div>
+					{:else if noMatches}
+						<p class="no-matches">No Pokémon meet the criteria!</p>
+					{:else}
+						<p>No Pokémon added.</p>
+					{/if}
+
+					{#if encounter.pokemon.length > 0}
+						<div>
+							<p>
+								<strong>Total XP:</strong> {currentEncounterExp} ({Math.round(currentEncounterExp / partyPlayers.length)}/player)
+								<span class="difficulty-badge" style="background-color: {encounterDifficulty.color}">
+									{encounterDifficulty.label}
+								</span>
+								</p>
+						</div>
+					{/if}
+
+				</div>
+				<InstructionText>"Use Encounter" will add this to Trainers, allowing you to track HP, add moves, and manage the details.</InstructionText>
+			</section>
+			<ActionArea error={saveEncounterIssues}>
+				<Button variant="danger" on:click={clearEncounter}>Clear</Button>
+				<Button on:click={useEncounter} disabled={saveEncounterIssues != null}>Use Encounter</Button>
+			</ActionArea>
+		</Saveable>
+	</Card>
+</Page>
+
+<style>
+	nav {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+
+	.player-item {
+		margin-bottom: 1em;
+	}
+
+	.player-fields {
+		display: flex;
+		gap: 1em;
+	}
+
+	.simple-type-field {
+		display: flex;
+		inline-size: 100%;
+		align-items: center;
+		gap: 1em;
+		margin-bottom: 1em;
+	}
+	.simple-type-field :global(> *) {
+		flex: 1;
+	}
+
+	.xp-awarded {
+		margin-bottom: 0;
+		margin-top: 1em;
+	}
+
+	.pokemon-list {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		padding: 1em 0 2em;
+	}
+
+	.pokemon-item {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid var(--skin-bg-light);
+		padding-bottom: 1em;
+	}
+
+	.pokemon-data {
+		display: flex;
+	}
+
+	.pokemon-info > p {
+		margin-bottom: 0;
+	}
+
+	.pokemon-name {
+		font-size: 1.2em;
+		font-weight: bold;
+	}
+	.pokemon-level {
+		font-weight: normal;
+		font-size: .8em;
+	}
+	.pokemon-level>input {
+		width: 40px;
+	}
+
+	.pokemon-sprite {
+		display: block;
+		border: none;
+		box-shadow: none;
+		aspect-ratio: 1;
+		object-fit: contain;
+		width: 4em;
+		padding-bottom: 1em;
+	}
+
+    .difficulty-badge {
+        padding: 0.2em 0.8em;
+        border-radius: 100px;
+        color: var(--skin-bg-text);
+        font-size: 0.9em;
+        font-weight: bold;
+        margin-left: 0.5em;
+        text-transform: uppercase;
+    }
+
+	.no-matches {
+		color: var(--skin-danger-text);
+		font-style: italic;
+	}
+
+	.larger {
+		font-size: var(--font-sz-neptune);
+	}
+
+	@media screen and (min-width: 50rem) {
+		.pokemon-level>input {
+			width: 65px;
+		}
+		.pokemon-sprite {
+			width: 6em;
+		}
+		.pokemon-item {
+			padding-bottom: 0;
+		}
+	}
+</style>
