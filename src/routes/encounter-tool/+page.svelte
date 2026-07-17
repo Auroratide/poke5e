@@ -58,6 +58,9 @@
 	}, 0)
 	$: maxExpTotal = Math.round((totalPartyLevels * 50) * (1 + pokemonExtraModifier) * difficultyMultipliers[difficulty])
 
+	// This forces the fetching of moves so PP is accurate
+	$: possibleMoves = $MovesStore
+
 	let biome = ""
 	let difficulty: "low" | "moderate" | "high" = "low"
 	let pokemonType: PokeType
@@ -147,7 +150,7 @@
 	const useEncounter = async () => {
 		saving = true
 		try {
-			const created = await Encounter.saveToTrainers(encounter, $MovesStore)
+			const created = await Encounter.saveToTrainers(encounter, possibleMoves)
 			goto(Url.trainers(created.info.readKey))
 		} catch (e) {
 			error.show("Encounter.saveToTrainers", e)
