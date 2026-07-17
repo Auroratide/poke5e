@@ -137,6 +137,10 @@ export const Encounter = {
 		const trainer = await trainerProvider.newTrainer({
 			name: "Encounter",
 			description: "Created using the encounter tool.",
+			hp: {
+				current: 1,
+				max: 1,
+			},
 		})
 
 		const pokemon = (await Promise.all(encounter.pokemon.map(async (pokemon) => {
