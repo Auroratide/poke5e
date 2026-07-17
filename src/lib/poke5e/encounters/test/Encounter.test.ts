@@ -226,6 +226,7 @@ describe("saveToTrainers", () => {
 		const result = await Encounter.saveToTrainers(encounter, moves)
 
 		expect(result.pokemon[0].hp.max).toBeGreaterThan(16)
+		expect(result.pokemon[0].hitDice.max).toEqual(10)
 	})
 
 	test("a pokemon is downleveled", async () => {

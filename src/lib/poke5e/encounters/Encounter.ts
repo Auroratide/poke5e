@@ -160,6 +160,8 @@ export const Encounter = {
 				added.level = withAdjustedStats.level
 				added.hp.current = withAdjustedStats.hp
 				added.hp.max = withAdjustedStats.hp
+				added.hitDice.current = withAdjustedStats.level.data
+				added.hitDice.max = withAdjustedStats.level.data
 				added.attributes = withAdjustedStats.attributes
 	
 				await trainerProvider.updatePokemon(trainer.writeKey, trainer.info.readKey, added)
