@@ -23,5 +23,5 @@
 <p>The damage of each damaging move increases at levels 5, 10, and 17, as shown in the move description.</p>
 
 <h3>Peak Power</h3>
-<p>At level 20 your Pokémon is at its pinnacle. One ability score of your choice for this Pokémon increases by 2, up to a maximum of 22. Alternatively, instead of increasing an ability score by 2, your Pokémon may take a Feat.</p>
-<p>If the Pokémon's SR is 15 or more, then it may increase an ability score up to a maximum of 30 instead.</p>
+<p>At level 20 your Pokémon is at its pinnacle. This Pokémon receives another Ability Score Improvement, but the points can be used to increase its ability scores up to a maximum of 22 instead of a maximum of 20. Up to 2 of these points may be used to acquire a Feat instead, as usual.</p>
+<p>If the Pokémon's SR is 15 or more, then it may increase its ability scores up to a maximum of 30 instead with this Ability Score Improvement.</p>
