@@ -163,6 +163,10 @@ export const Encounter = {
 				added.hitDice.current = withAdjustedStats.level.data
 				added.hitDice.max = withAdjustedStats.level.data
 				added.attributes = withAdjustedStats.attributes
+
+				// ABILITIES
+				const ability = pokemon.data.abilities.chooseRandom()
+				added.abilities = ability ? [ability] : []
 	
 				await trainerProvider.updatePokemon(trainer.writeKey, trainer.info.readKey, added)
 

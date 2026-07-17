@@ -91,6 +91,14 @@ export class AbilityPool extends DataClass<{
 		return this.data.normal.length === 0 && this.data.hidden.length === 0
 	}
 
+	chooseRandom(): Ability | undefined {
+		if (this.data.normal.length === 0) {
+			return undefined
+		}
+
+		return this.normal[Math.floor(Math.random() * (this.data.normal.length))]
+	}
+
 	static async fromList(list: { id: ReferenceAbilityId, hidden: boolean }[]): Promise<AbilityPool> {
 		const normal = await Promise.all(
 			list.filter((it) => !it.hidden).map((it) => Ability.resolve(it.id)),

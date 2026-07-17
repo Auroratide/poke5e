@@ -7,6 +7,7 @@ import type { SinglePokemonJsonResponse } from "$lib/poke5e/species/PokemonJsonR
 import { provider } from "$lib/trainers/data"
 import { stubMovePool } from "$lib/pokemon/move-pool/test/stubs"
 import { stubMove } from "$lib/moves/test/stubs-2"
+import { stubAbility, stubAbilityPool } from "$lib/pokemon/ability/test/stubs"
 
 describe("totalExp", () => {
 	test("empty encounter", () => {
@@ -271,5 +272,40 @@ describe("saveToTrainers", () => {
 
 		expect(eevee.moves).toHaveLength(2)
 		expect(eevee.moves.map((it) => it.moveId)).toSubset(["tackle", "quick-attack"])
+	})
+
+	// NOTE: This test might fail once every million times run due to
+	// randomness. This is acceptable for now.
+	test("abilities are randomized", async () => {
+		const encounter: Encounter = {
+			pokemon: [ {
+				data: stubPokemonSpecies({
+					name: "Eevee",
+					sr: 1,
+					abilities: stubAbilityPool({
+						normal: [stubAbility({
+							referenceId: "adaptability",
+						}).data, stubAbility({
+							referenceId: "aftermath",
+						}).data],
+					}).data,
+					moves: stubMovePool({
+						start: ["tackle"],
+						level2: ["quick-attack"],
+					}),
+				}),
+				level: 3,
+				count: 20,
+			} ],
+		}
+
+		const result = await Encounter.saveToTrainers(encounter, moves)
+
+		const fromStorage = await provider.getTrainer(result.info.readKey)
+		const abilities = fromStorage.pokemon.map((p) => p.abilities[0]).map((it) => it.name)
+
+		// then: it chooses abilities
+		expect(abilities).toContain("Adaptability")
+		expect(abilities).toContain("Aftermath")
 	})
 })
