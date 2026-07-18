@@ -2718,7 +2718,7 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você tenta drenar a força vital de um alvo. Faça um ataque à distância contra um alvo, causando 2d6 + MOVE de dano do tipo grass em um acerto. Metade do dano causado é restaurado ao usuário."
+				"Você tenta drenar a força vital de um alvo. Faça um ataque à distância contra um alvo, causando 1d12 + MOVE de dano do tipo grass em um acerto. Metade do dano causado é restaurado ao usuário."
 			],
 			"higherLevels": "Os dados de dano deste movimento mudam para 2d8 no nível 5, 2d12 no nível 10 e 6d6 no nível 17."
 		},
