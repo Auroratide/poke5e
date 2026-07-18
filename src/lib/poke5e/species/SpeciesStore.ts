@@ -65,7 +65,9 @@ function createStore(): SpeciesStore {
 			const fakemon = await fakemonStore.all().catch(() => emptyFakemonListStore())
 
 			return derived([allCanonSpecies, fakemon], ([normalSpecies, fakemon]) => {
-				return normalSpecies?.concat(fakemon.map((it) => it.species))
+				return normalSpecies
+					?.filter((it) => !it.wasNonCanonNonFakemon())
+					?.concat(fakemon.map((it) => it.species))
 			})
 		},
 		emptyList: () => {
