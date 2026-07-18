@@ -2311,7 +2311,7 @@
 			"id": "giga-drain",
 			"name": "Gigadrenado",
 			"description": [
-				"Intentas drenar la fuerza vital de una criatura. Realiza un ataque a distancia contra un objetivo, infligiendo 2d6 + MOV de daño de tipo Planta si impactas. El usuario recupera una cantidad de puntos de golpe igual a la mitad del daño infligido."
+				"Intentas drenar la fuerza vital de una criatura. Realiza un ataque a distancia contra un objetivo, infligiendo 1d12 + MOV de daño de tipo Planta si impactas. El usuario recupera una cantidad de puntos de golpe igual a la mitad del daño infligido."
 			],
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 2d12 al nivel 10 y 6d6 al nivel 17."
 		},
