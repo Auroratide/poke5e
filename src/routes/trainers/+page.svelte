@@ -34,6 +34,8 @@
 	import { TransferPokemonPage } from "$lib/trainers/pokemon-transfer"
 	import LevelUpTrainerPage from "$lib/trainers/trainer-details/LevelUpTrainerPage.svelte"
 	import LevelUpPokemonPage from "$lib/trainers/pokemon-details/LevelUpPokemonPage.svelte"
+	import { ensureDataPersistance } from "$lib/site/storage"
+	import { onMount } from "svelte"
 
 	$: trainerId = browser ? $page.url.searchParams.get("id") : undefined
 	$: accessKey = browser ? $page.url.searchParams.get("access_key")?.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "") : undefined
@@ -80,6 +82,10 @@
 			trainerList = undefined
 		}
 	}
+
+	onMount(() => {
+		ensureDataPersistance()
+	})
 </script>
 
 <Title value="Trainers" />

@@ -27,6 +27,7 @@
 	import { type Readable } from "svelte/store"
 	import { SpeciesStore, type PokemonSpecies } from "$lib/poke5e/species"
 	import { MaintenanceAnnouncement, MaintenanceOverlay } from "$lib/site/maintenance"
+	import { ensureDataPersistance } from "$lib/site/storage"
 
 	let fakemonId = $derived(browser ? page.url.searchParams.get("id") : undefined)
 	let action = $derived(browser ? page.url.searchParams.get("action") : undefined)
@@ -66,6 +67,7 @@
 
 	onMount(() => {
 		CanCreateCustomPokemonBanner.set(true)
+		ensureDataPersistance()
 	})
 </script>
 
