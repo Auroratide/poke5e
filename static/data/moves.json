@@ -13715,7 +13715,9 @@
 			"name": "Mystical Power",
 			"type": "psychic",
 			"power": [
-				"wis"
+				"int",
+				"wis",
+				"cha"
 			],
 			"time": "1 action",
 			"pp": 5,
