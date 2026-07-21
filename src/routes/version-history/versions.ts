@@ -14,6 +14,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.2",
+		description: [
+			"<strong>Bugfix</strong>: Fix for abilities sometimes getting duplicated in the Fakémon editor.",
+			"<strong>Moves</strong>: Allow Mystical Power to use Int, Wis, and Cha so each Lake Guardian benefits equally.",
+		],
+	}, {
 		name: "v1.12.1",
 		description: [
 			"<strong>Encounters</strong>: For pokémon with multiple possible abilities, randomize the ability.",
