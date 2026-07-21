@@ -7680,7 +7680,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You dive at a creature with quick reaction speed, able to change the type of attack when you reach them. Make a melee attack against a target, dealing 4d4 + MOVE flying OR fighting damage, depending on your choice. STAB can only added to this move if you are fighting type."
+				"You dive at a creature with quick reaction speed, able to change the type of attack when you reach them. Make a melee attack against a target, dealing 4d4 + MOVE flying OR fighting damage, depending on your choice. STAB can only be added to this move if you are fighting type."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d12 at level 5, 4d8 at level 10, and 8d6 at level 17.",
 			"attack": {
@@ -13715,7 +13715,9 @@
 			"name": "Mystical Power",
 			"type": "psychic",
 			"power": [
-				"wis"
+				"int",
+				"wis",
+				"cha"
 			],
 			"time": "1 action",
 			"pp": 5,
@@ -18400,7 +18402,7 @@
 			"duration": "instantaneous",
 			"range": "80ft",
 			"description": [
-				"You disappear from view and prepare to surprise a target with an attack. When you activate this move, you become invisible and immune to any attacks of opportunity. You cannot be targeted by attacks while you are invisible. On your next turn, you use may your action to reappear at a point within range and make a melee attack against a creature, with advantage, dealing 4d6 + MOVE ghost damage on a successful hit. Protect and Detect reactions may not be used when hit by this attack."
+				"You disappear from view and prepare to surprise a target with an attack. When you activate this move, you become invisible and immune to any attacks of opportunity. You cannot be targeted by attacks while you are invisible. On your next turn, you may use your action to reappear at a point within range and make a melee attack against a creature, with advantage, dealing 4d6 + MOVE ghost damage on a successful hit. Protect and Detect reactions may not be used when hit by this attack."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 5d6 at level 5, 6d8 at level 10, and 6d12 at level 17.",
 			"damage": {
@@ -23085,7 +23087,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You attempt to land an intense kick of tropical origins on the target.  Make a melee attack, dealing 1d12 + MOVE grass damage on a hit. On a natural role of 16 or more, the target adds -1 to any attack it makes for the remainder of combat.  This modifier can be stacked up to a maximum of -3."
+				"You attempt to land an intense kick of tropical origins on the target.  Make a melee attack, dealing 1d12 + MOVE grass damage on a hit. On a natural roll of 16 or more, the target adds -1 to any attack it makes for the remainder of combat.  This modifier can be stacked up to a maximum of -3."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
 			"damage": {
