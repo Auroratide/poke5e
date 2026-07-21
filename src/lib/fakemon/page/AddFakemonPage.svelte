@@ -10,10 +10,12 @@
 	import { m } from "$lib/site/i18n"
 	import { SpeciesStore } from "$lib/poke5e/species"
 	import { Loader } from "$lib/ui/elements"
+	import { TagList } from "$lib/poke5e/tags"
 
 	const draftFakemon = new Fakemon({
 		id: "",
 		readKey: "",
+		tags: TagList.empty(),
 		species: {
 			id: "",
 			name: "",

@@ -36,7 +36,7 @@
 		const nextId = nextNewId()
 		withIds = [...withIds, {
 			id: nextId,
-			value: defaultAbility,
+			value: defaultAbility?.copy(),
 		} ]
 		focusInputField(getAbilityFieldName(nextId))
 	}
