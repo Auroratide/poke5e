@@ -47,8 +47,8 @@
 		display: flex;
 		align-items: center;
 		background: var(--color, var(--skin-bg));
-		padding-inline: 0.375em;
-		padding-block: 0.0625em;
+		padding-inline: 0.5em;
+		padding-block: 0.25em;
 		font-weight: bold;
 	}
 

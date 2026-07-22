@@ -170,6 +170,8 @@ export class PokemonSpecies extends DataClass<{
 			},
 			habitat: {
 				biomes: it.habitat?.biomes ?? [],
+				nativeRegion: it.habitat?.nativeRegion ?? "",
+				regions: it.habitat?.regions ?? [],
 			},
 		})
 	}

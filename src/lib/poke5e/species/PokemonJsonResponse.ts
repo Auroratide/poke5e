@@ -69,6 +69,8 @@ export type SinglePokemonJsonResponse = {
 	},
 	habitat?: {
 		biomes: string[],
+		nativeRegion: string,
+		regions: string[],
 	}
 }
 

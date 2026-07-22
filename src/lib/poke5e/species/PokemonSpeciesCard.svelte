@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FlatDl } from "$lib/ui/elements"
+	import { FlatDl, Tag } from "$lib/ui/elements"
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import { AttributeBlock } from "$lib/dnd/attributes"
 	import { DistancesDlItem } from "$lib/dnd/distance"
@@ -16,7 +16,7 @@
 	import { EvolutionInfo, EvolutionStore } from "$lib/pokemon/evolution"
 	import { SpeciesFormsInfo } from "$lib/poke5e/forms"
 	import { m } from "$lib/site/i18n"
-	import { BiomeTags } from "../habitat"
+	import { BiomeTags, RegionTags } from "../habitat"
 
 	export let value: PokemonSpecies
 	export let dismissToHref: string
@@ -95,42 +95,52 @@
 			<dd><InlineMoveLinks moves={value.data.moves.start} /></dd>
 			{#if exists(value.data.moves.level2)}
 				<dt>{m.level()} 2</dt>
-				<dd><InlineMoveLinks moves={value.data.moves.level2} /></dd>
+				<dd><InlineMoveLinks moves={value.data.moves.level2 ?? []} /></dd>
 			{/if}
 			{#if exists(value.data.moves.level6)}
 				<dt>{m.level()} 6</dt>
-				<dd><InlineMoveLinks moves={value.data.moves.level6} /></dd>
+				<dd><InlineMoveLinks moves={value.data.moves.level6 ?? []} /></dd>
 			{/if}
 			{#if exists(value.data.moves.level10)}
 				<dt>{m.level()} 10</dt>
-				<dd><InlineMoveLinks moves={value.data.moves.level10} /></dd>
+				<dd><InlineMoveLinks moves={value.data.moves.level10 ?? []} /></dd>
 			{/if}
 			{#if exists(value.data.moves.level14)}
 				<dt>{m.level()} 14</dt>
-				<dd><InlineMoveLinks moves={value.data.moves.level14} /></dd>
+				<dd><InlineMoveLinks moves={value.data.moves.level14 ?? []} /></dd>
 			{/if}
 			{#if exists(value.data.moves.level18)}
 				<dt>{m.level()} 18</dt>
-				<dd><InlineMoveLinks moves={value.data.moves.level18} /></dd>
+				<dd><InlineMoveLinks moves={value.data.moves.level18 ?? []} /></dd>
 			{/if}
 		</FlatDl>
 		<FlatDl>
 			{#if exists(value.data.moves.egg)}
 				<dt class="space-after">{m.egg()}</dt>
-				<dd class="space-after"><InlineMoveLinks moves={value.data.moves.egg} /></dd>
+				<dd class="space-after"><InlineMoveLinks moves={value.data.moves.egg ?? []} /></dd>
 			{/if}
 			{#if exists(value.data.moves.tm)}
 				<dt>{m.tm()}</dt>
-				<dd><InlineTmLinks tms={value.data.moves.tm} /></dd>
+				<dd><InlineTmLinks tms={value.data.moves.tm ?? []} /></dd>
 			{/if}
 		</FlatDl>
 	</section>
-	{#if (value.habitat?.biomes ?? []).length > 0}
+	{#if value.habitat != null}
 		<section>
 			<h2>{m.otherInfo()}</h2>
-			<FlatDl>
-				<dt>{m.biomes()}</dt>
-				<dd><BiomeTags values={value.habitat?.biomes ?? []} /></dd>
+			<FlatDl gap="0.5em">
+				{#if value.habitat.nativeRegion}
+					<dt>{m.nativeTo()}</dt>
+					<dd><Tag>{value.habitat?.nativeRegion}</Tag></dd>
+				{/if}
+				{#if value.habitat.regions?.length > 0}
+					<dt>{m.regions()}</dt>
+					<dd><RegionTags values={value.habitat?.regions ?? []} /></dd>
+				{/if}
+				{#if value.habitat.biomes?.length > 0}
+					<dt>{m.biomes()}</dt>
+					<dd><BiomeTags values={value.habitat?.biomes ?? []} /></dd>
+				{/if}
 			</FlatDl>
 		</section>
 	{/if}

@@ -262,6 +262,8 @@
 	"generateCode": "Generate Code",
 	"revokeCode": "Revoke Code",
 	"transferPermissionError": "You do not have permission to transfer this trainer's pokémon. You must be an owner of the trainer in order to transfer their pokémon.",
+	"nativeTo": "Native to",
+	"regions": "Regions",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},
