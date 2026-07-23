@@ -14,6 +14,7 @@ import { meta as FeatsPage } from "./feats/meta"
 import { meta as IntroductionPage } from "./introduction/meta"
 import { meta as LegendaryBattlesPage } from "./legendary-battles/meta"
 import { meta as NaturesPage } from "./natures/meta"
+import { meta as OaksParcel } from "./oaks-parcel/meta"
 import { meta as PokemonLevelingPage } from "./pokemon-leveling/meta"
 import { meta as PokemonTransformationsPage } from "./pokemon-transformations/meta"
 import { meta as ShinyPage } from "./shiny-pokemon/meta"
@@ -91,6 +92,7 @@ const Appendix2024 = [
 const Supplements2018 = [
 	SupplementsPage,
 	ContestsPage,
+	OaksParcel,
 	ShinyPage,
 	TrainerOriginsPage,
 ]
@@ -102,6 +104,7 @@ const Supplements2024 = [
 	EncountersPage,
 	ContestsPage,
 	LegendaryBattlesPage,
+	OaksParcel,
 	PokemonTransformationsPage,
 	ShinyPage,
 	TrainerOriginsPage,

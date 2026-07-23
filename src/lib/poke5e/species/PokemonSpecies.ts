@@ -53,6 +53,7 @@ export class PokemonSpecies extends DataClass<{
 	get name(): string { return this.data.name }
 	get number(): number { return this.data.number }
 	get type(): PokemonType { return new PokemonType(this.data.type) }
+	get ac(): number { return this.data.ac }
 	get size(): CreatureSize { return this.data.size }
 	get gender(): GenderRatio { return new GenderRatio(this.data.gender) }
 	get sr(): SpeciesRating { return new SpeciesRating(this.data.sr) }
@@ -64,6 +65,7 @@ export class PokemonSpecies extends DataClass<{
 	get senses(): Senses { return new Senses(this.data.senses) }
 	get attributes(): Attributes { return new Attributes(this.data.attributes) }
 	get skills(): SkillRanks { return new SkillRanks(this.data.skills) }
+	get saves(): Attribute[] { return this.data.saves }
 	get media(): SpeciesMedia<UploadedMedia> { return new SpeciesMedia(this.data.media) }
 	get moves(): MovePool { return new MovePool(this.data.moves) }
 	get forms(): SpeciesForms | undefined { return this.data.forms != null ? new SpeciesForms(this.data.forms) : undefined }

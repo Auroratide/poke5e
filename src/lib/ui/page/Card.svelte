@@ -83,12 +83,29 @@
 	}
 
 	article :global(section p) {
-		line-height: 1.4;
+		line-height: 1.5;
+		margin-block-end: 1.25em;
 	}
 
 	article :global(section > :is(ul, ol) > li) {
-		margin-block-end: 0.25em;
-		line-height: 1.25;
+		margin-block-end: 0.375em;
+		line-height: 1.45;
+	}
+
+	article :global(section > ol li::marker) {
+		font-weight: bold;
+	}
+
+	article :global(section blockquote) {
+		background: var(--skin-bg);
+		color: var(--skin-bg-text);
+		margin: 2.5em 1em;
+		padding: 1em 1.5em;
+		clip-path: polygon(0 0, 100% 0, calc(100% - 0.5em) 50%, 100% 100%, 0 100%, 0.5em 50%);
+	}
+
+	article :global(section blockquote p:last-child) {
+		margin-block-end: 0;
 	}
 
 	article :global(section h2) {
@@ -98,7 +115,7 @@
 		z-index: 2;
 		color: var(--skin-bg-text);
 		padding: 0.25em 0;
-		margin-block: 1.5em 0.5em;
+		margin-block: 2em 0.625em;
 	} article :global(section h2::before) {
 		content: "";
 		display: block;
@@ -112,7 +129,7 @@
 	article :global(section h3) {
 		font-size: var(--font-sz-earth);
 		font-weight: bold;
-		margin-block-end: 0.5em;
+		margin-block: 1.5em 0.5em;
 	}
 
 	article :global(.loader) {

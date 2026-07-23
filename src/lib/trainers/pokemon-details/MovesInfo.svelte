@@ -1,38 +1,24 @@
 <script lang="ts">
-	import { Loader } from "$lib/ui/elements"
+	import { LearnedMovesListInfo } from "$lib/moves/learned"
 	import { MovesStore } from "$lib/moves/store"
+	import { Loader } from "$lib/ui/elements"
 	import { createEventDispatcher } from "svelte"
 	import type { LearnedMove, TrainerPokemon } from "../types"
-	import type { UpdatePpDetail } from "./MoveDetails.svelte"
-	import MoveDetails from "./MoveDetails.svelte"
 
 	const dispatch = createEventDispatcher()
 
 	export let pokemon: TrainerPokemon
 	export let editable: boolean = false
 
-	const onUpdate = (move: LearnedMove) => (e: CustomEvent<UpdatePpDetail>) => {
-		dispatch("update", {
-			...move,
-			pp: {
-				current: e.detail.value,
-				max: move.pp.max,
-			},
-		} as LearnedMove)
+	const onUpdate = (move: LearnedMove) => {
+		dispatch("update", { ...move } as LearnedMove)
 	}
 </script>
 
 {#if pokemon.moves.length > 0}
 	{#if $MovesStore}
 		<h2>Moves</h2>
-		<ul style:list-style="none" style:padding="0">
-			{#each pokemon.moves as move}
-				{@const moveData = $MovesStore.find((it) => it.id === move.moveId)}
-				<li>
-					<MoveDetails {move} {moveData} {editable} level={pokemon.level} attributes={pokemon.attributes} pokemonType={pokemon.type} stab={pokemon.stab} on:update={onUpdate(move)} />
-				</li>
-			{/each}
-		</ul>
+		<LearnedMovesListInfo {pokemon} {editable} onupdate={onUpdate} />
 	{:else}
 		<Loader />
 	{/if}

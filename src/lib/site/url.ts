@@ -54,6 +54,7 @@ export const Url = {
 		feats: () => localizeUrl(resolve("/reference/feats")).pathname,
 		legendaryBattles: () => localizeUrl(resolve("/reference/legendary-battles")).pathname,
 		natures: () => localizeUrl(resolve("/reference/natures")).pathname,
+		oaksParcel: () => localizeUrl(resolve("/reference/oaks-parcel")).pathname,
 		pokemonLeveling: () => localizeUrl(resolve("/reference/pokemon-leveling")).pathname,
 		shinyPokemon: () => localizeUrl(resolve("/reference/shiny-pokemon")).pathname,
 		specializations: () => localizeUrl(resolve("/reference/specializations")).pathname,

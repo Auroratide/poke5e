@@ -53,4 +53,8 @@ export class Stab extends DataClass<{
 	private byNone(): number {
 		return 0
 	}
+
+	static default(): Stab {
+		return new Stab({ base: "default", bonus: 0 })
+	}
 }

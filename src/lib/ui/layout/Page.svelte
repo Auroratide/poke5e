@@ -110,7 +110,7 @@
 			display: flex;
 			margin: auto;
 			justify-content: center;
-			max-width: 75rem;
+			max-width: var(--container-width);
 			height: 100%;
 		}
 

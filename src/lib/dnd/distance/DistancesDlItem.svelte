@@ -4,7 +4,7 @@
 	export let label: string
 	export let values: T
 
-	$: hasAnything = Object.values(values.data).find((it) => it > 0) != null
+	$: hasAnything = Object.values(values.data).find((it) => (it ?? 0) > 0) != null
 </script>
 
 {#if hasAnything}
