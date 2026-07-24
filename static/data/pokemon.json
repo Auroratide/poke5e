@@ -173407,7 +173407,7 @@
 					"value": 30
 				},
 				{
-					"type": "gliding",
+					"type": "flying",
 					"value": 60
 				}
 			],
@@ -173571,7 +173571,7 @@
 					"value": 30
 				},
 				{
-					"type": "gliding",
+					"type": "hover",
 					"value": 60
 				}
 			],
