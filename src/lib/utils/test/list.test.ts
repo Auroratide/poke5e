@@ -22,3 +22,61 @@ describe("reorderOne", () => {
 		expect(() => list.reorderOne(array, 2, 20)).toThrow()
 	})
 })
+
+describe("fromCommaOrNewlineString", () => {
+	test("empty string", () => {
+		const input = ""
+
+		const result = list.fromCommaOrNewlineString(input)
+
+		expect(result).toEqual([])
+	})
+
+	test("single item", () => {
+		const input = "one"
+
+		const result = list.fromCommaOrNewlineString(input)
+
+		expect(result).toEqual(["one"])
+	})
+
+	test("commas with no spaces", () => {
+		const input = "one,two,three"
+
+		const result = list.fromCommaOrNewlineString(input)
+
+		expect(result).toEqual(["one", "two" ,"three"])
+	})
+
+	test("commas with spaces", () => {
+		const input = "one, two, three"
+
+		const result = list.fromCommaOrNewlineString(input)
+
+		expect(result).toEqual(["one", "two", "three"])
+	})
+
+	test("newlines", () => {
+		const input = "one\ntwo\nthree"
+
+		const result = list.fromCommaOrNewlineString(input)
+
+		expect(result).toEqual(["one", "two", "three"])
+	})
+
+	test("newlines and commas", () => {
+		const input = "one, two,\nthree"
+
+		const result = list.fromCommaOrNewlineString(input)
+
+		expect(result).toEqual(["one", "two", "three"])
+	})
+
+	test("multiple commas", () => {
+		const input = "one,, two,, three"
+
+		const result = list.fromCommaOrNewlineString(input)
+
+		expect(result).toEqual(["one", "two", "three"])
+	})
+})

@@ -33,3 +33,10 @@ export function reorderOne<T>(array: T[], from: number, to: number): T[] {
 
 	return newList
 }
+
+export function fromCommaOrNewlineString(str: string): string[] {
+	return str
+		.split(/[,\n]/)
+		.map((it) => it.trim())
+		.filter((it) => it.length > 0)
+}

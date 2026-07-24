@@ -206,6 +206,8 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			_shiny_hue_rotation: fakemon.media.customization?.shinyHue ?? 0,
 			_notes: fakemon.notes ?? "",
 			_biomes: fakemon.habitat.biomes,
+			_regions: fakemon.habitat.regions ?? [],
+			_native_region: fakemon.habitat.nativeRegion ?? "",
 			_tags: tags,
 		}
 	}
@@ -365,6 +367,8 @@ type FakemonRow = {
 	notes?: string,
 	tags: string[],
 	biomes: string[],
+	native_region: string | null,
+	regions: string[],
 }
 
 const booleansToList = <T extends string>(obj: { [key in T]: boolean }): T[] =>
@@ -501,6 +505,8 @@ async function rowToFakemon(row: FakemonRow, getStorageResource: (name: string) 
 			notes: row.notes ?? "",
 			habitat: {
 				biomes: row.biomes,
+				nativeRegion: row.native_region ?? "",
+				regions: row.regions ?? [],
 			},
 		},
 		tags: TagList.from(row.tags),

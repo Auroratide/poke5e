@@ -263,7 +263,11 @@
 	"revokeCode": "Revoke Code",
 	"transferPermissionError": "You do not have permission to transfer this trainer's pokémon. You must be an owner of the trainer in order to transfer their pokémon.",
 	"nativeTo": "Native to",
+	"nativeRegion": "Native Region",
+	"nativeRegionPlaceholder": "e.g. Kalos",
 	"regions": "Regions",
+	"regionsPlaceholder": "e.g. Kanto, Johto, Hoenn",
+	"allRegionsCommaSeparated": "All Regions (Comma-Separated)",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},
