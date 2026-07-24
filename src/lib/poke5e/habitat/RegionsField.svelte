@@ -22,7 +22,7 @@
 </script>
 
 <Fieldset title="Regions">
-	<InstructionText>Native Region is the single region this Pokémon is from. Other Regions?</InstructionText>
+	<InstructionText>{m.regionsInstructions()}</InstructionText>
 	<TextField label={m.nativeRegion()} bind:value={nativeRegion} placeholder={m.nativeRegionPlaceholder()} {disabled} />
 	<TextareaField label={m.allRegionsCommaSeparated()} value={regionField} on:change={onRegionsChange} placeholder={m.regionsPlaceholder()} {disabled} />
 </Fieldset>
