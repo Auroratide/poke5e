@@ -151269,7 +151269,7 @@
 				"ghost"
 			],
 			"size": "tiny",
-			"sr": 0.5,
+			"sr": 1,
 			"minLevel": 1,
 			"eggGroup": [
 				"amorphous",
@@ -151385,7 +151385,7 @@
 				"ghost"
 			],
 			"size": "medium",
-			"sr": 3,
+			"sr": 7,
 			"minLevel": 5,
 			"eggGroup": [
 				"amorphous",
