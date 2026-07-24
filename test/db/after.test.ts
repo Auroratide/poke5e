@@ -952,6 +952,8 @@ test("updating fakemon", async () => {
 		_notes: "Additional notes.",
 		_biomes: ["forest", "city"],
 		_tags: ["dragon", "something"],
+		_native_region: "Fancy",
+		_regions: ["Fancy", "Kalos"],
 	})
 
 	await call("update_fakemon", {
@@ -1047,6 +1049,9 @@ test("updating fakemon", async () => {
 
 	expect(drakeon.biomes).toEqual(["forest", "city"])
 	expect(drakeon.tags).toEqual(["dragon", "something"])
+
+	expect(drakeon.native_region).toEqual("Fancy")
+	expect(drakeon.regions).toEqual(["Fancy", "Kalos"])
 
 	expect(drakeon.notes).toEqual("Additional notes.")
 

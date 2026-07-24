@@ -1339,6 +1339,94 @@ test("updating fakemon evolution lines", async () => {
 	expect(ascendeonEvolutionsAfterRemoval.length).toEqual(0)
 })
 
+test("transfering a pokemon", async () => {
+	const {
+		ret_id: irisId,
+		ret_read_key: irisReadKey,
+		ret_write_key: irisWriteKey,
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const {
+		ret_id: renibelId,
+		ret_read_key: renibelReadKey,
+		ret_write_key: renibelWriteKey,
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", {
+		...Iris(),
+		_name: "Renibel"
+	})
+
+	const pokemonId = await call<number>("add_pokemon", {
+		_write_key: irisWriteKey,
+		...SunnyYellow(),
+	})
+
+	// wrong trainer
+	await expect(() => call<string>("generate_transfer_code", {
+		_write_key: renibelWriteKey,
+		_pokemon_id: pokemonId,
+	})).rejects.toThrow()
+
+	// correct trainer
+	await call<string>("generate_transfer_code", {
+		_write_key: irisWriteKey,
+		_pokemon_id: pokemonId,
+	})
+
+	const transferCode = await call<string>("get_transfer_code", {
+		_write_key: irisWriteKey,
+		_pokemon_id: pokemonId,
+	})
+
+	await call<number>("accept_pokemon_transfer", {
+		_write_key: renibelWriteKey,
+		_transfer_code: transferCode,
+	})
+
+	const [vivillon] = await callAll<any>("get_pokemon", {
+		_trainer_id: renibelId,
+	})
+
+	expect(vivillon.nickname).toEqual("Sunny Yellow")
+
+	// revoking
+	await call("revoke_transfer_code", {
+		_write_key: irisWriteKey,
+		_pokemon_id: pokemonId,
+	})
+
+	await expect(() => call<string>("get_transfer_code", {
+		_write_key: irisWriteKey,
+		_pokemon_id: pokemonId,
+	})).rejects.toThrow()
+
+	// Cleanup
+	await call("remove_pokemon", {
+		_write_key: irisWriteKey,
+		_id: pokemonId,
+	})
+	await call("delete_trainer", {
+		_write_key: irisWriteKey,
+		_id: irisId,
+	})
+
+	await call("remove_pokemon", {
+		_write_key: renibelWriteKey,
+		_id: vivillon.id,
+	})
+	await call("delete_trainer", {
+		_write_key: renibelWriteKey,
+		_id: renibelId,
+	})
+})
+
 test("no direct access allowed", async () => {
 	const UNAUTHORIZED_SCHEMA = "PGRST106"
 
