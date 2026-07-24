@@ -1257,7 +1257,7 @@
     {
       "id": "slow-start",
       "name": "Slow Start",
-      "description": "This Pokémon's speed is halved and its attacks are made at disadvantage for the first two rounds of every combat."
+      "description": "During the first two rounds of each combat, this Pokémon's speed is halved and its attacks are made at disadvantage."
     },
     {
       "id": "slush-rush",
