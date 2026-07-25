@@ -1,7 +1,9 @@
 import type { CreatureSize } from "$lib/dnd/CreatureSize"
 import type { PokeType } from "$lib/pokemon/types"
 import { relativeNumberCompare, type RelativeValue } from "$lib/ui/forms"
+import type { Region } from "../habitat/Region"
 import type { PokemonSpecies } from "./PokemonSpecies"
+import * as strings from "$lib/utils/string"
 
 export class SpeciesFilter {
 	private filters: {
@@ -18,6 +20,7 @@ export class SpeciesFilter {
 		type: string,
 		eggGroup: string,
 		biome: string,
+		nativeRegion: Region,
 	} = {
 			name: "",
 			size: "",
@@ -26,6 +29,7 @@ export class SpeciesFilter {
 			type: "",
 			eggGroup: "",
 			biome: "",
+			nativeRegion: "",
 		}
 
 	count(): number {
@@ -73,6 +77,11 @@ export class SpeciesFilter {
 		return this
 	}
 
+	nativeRegion(value: Region): SpeciesFilter {
+		this.filters.nativeRegion = value
+		return this
+	}
+
 	apply = (species: PokemonSpecies): boolean => {
 		return species.name.toLocaleLowerCase().includes(this.filters.name.toLocaleLowerCase())
 			&& (this.filters.size === "" || species.size === this.filters.size)
@@ -81,5 +90,6 @@ export class SpeciesFilter {
 			&& (this.filters.type === "" || species.type.includes(this.filters.type.toLocaleLowerCase() as PokeType))
 			&& (this.filters.eggGroup === "" || species.eggGroups.includes(this.filters.eggGroup))
 			&& (this.filters.biome === "" || species.habitat.biomes.includes(this.filters.biome))
+			&& (this.filters.nativeRegion === "" || strings.caseInsensitiveEqual(this.filters.nativeRegion, species.habitat.nativeRegion))
 	}
 }

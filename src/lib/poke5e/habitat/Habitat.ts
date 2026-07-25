@@ -1,5 +1,7 @@
+import type { Region } from "./Region"
+
 export type Habitat = {
 	biomes: string[],
-	nativeRegion: string,
-	regions: string[],
+	nativeRegion: Region,
+	regions: Region[],
 }

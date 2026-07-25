@@ -23,3 +23,10 @@ export function stringsAlike(a: string, b: string): boolean {
 	const bLower = b.toLocaleLowerCase()
 	return aLower.includes(bLower) || bLower.includes(aLower)
 }
+
+export function caseInsensitiveEqual(a: string, b: string): boolean {
+	const aLower = a.toLocaleLowerCase()
+	const bLower = b.toLocaleLowerCase()
+
+	return aLower.localeCompare(bLower) === 0
+}

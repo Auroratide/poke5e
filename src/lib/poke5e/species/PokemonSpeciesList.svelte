@@ -11,6 +11,7 @@
 	import { PokemonType, type PokeType } from "$lib/pokemon/types"
 	import { BiomesStore } from "$lib/poke5e/habitat"
 	import { EggGroup } from "$lib/pokemon/egg-group"
+	import { Region } from "../habitat/Region"
 
 	export let pokemons: PokemonSpecies[]
 	export let onClick: (pokemon: PokemonSpecies, event: MouseEvent) => void = () => {}
@@ -57,6 +58,12 @@
 		name: it.name,
 	})) ?? [])
 
+	let filteredRegion: Region = ""
+	const regionOptions = AnyOption.concat(Region.CanonList.map((it) => ({
+		value: it,
+		name: it,
+	})))
+
 	$: textFilterIsPokemonType = PokemonType.list.includes($pokemonFilter.toLocaleLowerCase() as PokeType)
 
 	$: filter = new SpeciesFilter()
@@ -67,6 +74,7 @@
 		.minLevel(filteredMinLevelRelative, filteredMinLevel)
 		.eggGroup(filteredEggGroup)
 		.biome(filteredBiome)
+		.nativeRegion(filteredRegion)
 
 	$: filtered = pokemons.filter(filter.apply)
 
@@ -80,6 +88,7 @@
 		filteredMinLevel = undefined
 		filteredEggGroup = ""
 		filteredBiome = ""
+		filteredRegion = ""
 	}
 </script>
 
@@ -91,6 +100,7 @@
 		<RelativeNumberField label="{m.minLevel()}" bind:value={filteredMinLevel} bind:relative={filteredMinLevelRelative} min={0} max={20} placeholder="{m.number()}" />
 		<SelectField label="{m.eggGroup()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
 		<SelectField label="{m.biome()}" bind:value={filteredBiome} options={biomeOptions} />
+		<SelectField label="{m.nativeRegion()}" bind:value={filteredRegion} options={regionOptions} />
 	</SearchField>
 </div>
 <SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$pokemonSorter} headers={[ {

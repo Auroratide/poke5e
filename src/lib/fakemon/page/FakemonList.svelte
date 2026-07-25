@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Button } from "$lib/ui/elements"
 	import { SortableTable, BubbleRow, ListHeading } from "$lib/ui/page"
-	import { RelativeNumberField, SearchField, SelectField, type RelativeValue } from "$lib/ui/forms"
+	import { RelativeNumberField, SearchField, SelectField, TextField, type RelativeValue } from "$lib/ui/forms"
 	import { Url } from "$lib/site/url"
 	import type { Fakemon } from "../Fakemon"
 	import { fakemonStore, type FakemonListStore } from "../store"
@@ -14,7 +14,7 @@
 	import { CreatureSizes, type CreatureSize } from "$lib/dnd/CreatureSize"
 	import { capitalize } from "$lib/utils/string"
 	import { EggGroup } from "$lib/pokemon/egg-group"
-	import { BiomesStore } from "$lib/poke5e/habitat"
+	import { BiomesStore, Region } from "$lib/poke5e/habitat"
 	import { TagList, TagSelection } from "$lib/poke5e/tags"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
@@ -60,6 +60,8 @@
 		name: it.name,
 	})) ?? [])
 
+	let filteredRegion: Region = ""
+
 	$: textFilterIsPokemonType = PokemonType.list.includes($fakemonListFilter.toLocaleLowerCase() as PokeType)
 	$: textFilterIsTagName = TagList.has($allTags, $fakemonListFilter)
 
@@ -73,6 +75,7 @@
 		.minLevel(filteredMinLevelRelative, filteredMinLevel)
 		.eggGroup(filteredEggGroup)
 		.biome(filteredBiome)
+		.nativeRegion(filteredRegion)
 
 	$: filtered = $fakemon
 		.filter((it) => {
@@ -94,6 +97,7 @@
 		filteredMinLevel = undefined
 		filteredEggGroup = ""
 		filteredBiome = ""
+		filteredRegion = ""
 		filteredTags = []
 	}
 </script>
@@ -110,6 +114,7 @@
 		<RelativeNumberField label="{m.minLevel()}" bind:value={filteredMinLevel} bind:relative={filteredMinLevelRelative} min={0} max={20} placeholder="{m.number()}" />
 		<SelectField label="{m.eggGroup()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
 		<SelectField label="{m.biome()}" bind:value={filteredBiome} options={biomeOptions} />
+		<TextField label="{m.nativeRegion()}" bind:value={filteredRegion} />
 		{#if FeatureToggles.Tagging()}
 			<TagSelection bind:checked={filteredTags} tags={$allTags} />
 		{/if}

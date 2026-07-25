@@ -12,6 +12,8 @@ const species = [
 		eggGroups: ["field"],
 		habitat: {
 			biomes: ["cave"],
+			nativeRegion: "Red",
+			regions: ["Red", "Black"],
 		},
 	}),
 	stubPokemonSpecies({
@@ -23,6 +25,8 @@ const species = [
 		eggGroups: ["water 1"],
 		habitat: {
 			biomes: ["cave"],
+			nativeRegion: "Blue",
+			regions: ["Blue"],
 		},
 	}),
 	stubPokemonSpecies({
@@ -34,6 +38,8 @@ const species = [
 		eggGroups: ["water 1"],
 		habitat: {
 			biomes: ["volcano"],
+			nativeRegion: "Green",
+			regions: ["Red", "Green"],
 		},
 	}),
 ]
@@ -155,6 +161,16 @@ test("biome", () => {
 
 	expect(result.length).toEqual(1)
 	expect(result).toEqual([species[2]])
+})
+
+test("region", () => {
+	const filter = new SpeciesFilter()
+		.nativeRegion("red")
+	
+	const result = species.filter(filter.apply)
+
+	expect(result.length).toEqual(1)
+	expect(result).toEqual([species[0]])
 })
 
 test("name and size", () => {

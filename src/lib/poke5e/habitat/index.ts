@@ -1,6 +1,7 @@
 export * from "./Habitat"
 export * from "./Biome"
 export * from "./store"
+export * from "./Region"
 
 export { default as BiomeTags } from "./BiomeTags.svelte"
 export { default as BiomeField } from "./BiomeField.svelte"
