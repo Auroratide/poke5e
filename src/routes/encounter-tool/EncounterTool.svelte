@@ -11,13 +11,14 @@
 	import { Url } from "$lib/site/url"
 	import { Button, Loader } from "$lib/ui/elements"
 	import Stepper from "$lib/ui/elements/Stepper.svelte"
-	import { ActionArea, InstructionText, IntField, Removable, Saveable, SelectField } from "$lib/ui/forms"
+	import { ActionArea, InstructionText, IntField, Removable, Saveable, SelectField, TextField } from "$lib/ui/forms"
 	import { VsIcon } from "$lib/ui/icons"
 	import { Page } from "$lib/ui/layout"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 	import Card from "$lib/ui/page/Card.svelte"
 	import { tick } from "svelte"
 	import type { Readable } from "svelte/store"
+	import * as strings from "$lib/utils/string"
 
 	const NONE = ""
 	const noneOption = { name: "- None -", value: NONE }
@@ -36,6 +37,13 @@
 		moderate: 1.5,
 		high: 2,
 	}
+	const regionTypeOptions = [ {
+		name: "Native to",
+		value: "native",
+	}, {
+		name: "Found in",
+		value: "found in",
+	} ]
 
 	export let biomes: Biome[]
 	export let species: Readable<PokemonSpecies[] | undefined>
@@ -63,6 +71,8 @@
 	let biome = ""
 	let difficulty: "low" | "moderate" | "high" = "low"
 	let pokemonType: PokeType
+	let regionType: "native" | "found in"
+	let regionName: string
 	let arePokemonLimited: "yes" | "no" = "no"
 	let pokemonLimit: number = 1
 	let encounter = Encounter.createEmpty()
@@ -120,7 +130,14 @@
 			const hasBiome = biome === "" || pokemon.data.habitat.biomes.includes(biome)
 			const hasType = !pokemonType || pokemon.data.type.includes(pokemonType)
 
-			if (hasBiome && hasType) {
+			let hasRegion = true
+			if (regionType === "native") {
+				hasRegion = regionName === "" || strings.caseInsensitiveEqual(pokemon.data.habitat.nativeRegion, regionName)
+			} else if (regionType === "found in") {
+				hasRegion = regionName === "" || pokemon.data.habitat.regions.some((region) => strings.caseInsensitiveEqual(region, regionName))
+			}
+
+			if (hasBiome && hasType && hasRegion) {
 				pokemonPool.push(pokemon)
 			}
 		}
@@ -208,6 +225,10 @@
 				<div class="simple-type-field">
 					<SelectField label="Biome" options={biomeOptions} bind:value={biome} />
 					<SelectField label="Type in common" options={primaryTypeOptions} bind:value={pokemonType}/>
+				</div>
+				<div class="simple-type-field">
+					<SelectField label="Region Filter" options={regionTypeOptions} bind:value={regionType}/>
+					<TextField label="Region Name" bind:value={regionName} />
 				</div>
 				<div class="simple-type-field">
 					<SelectField label="Difficulty" options={difficultyOptions} bind:value={difficulty}/>
