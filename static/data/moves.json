@@ -2805,7 +2805,60 @@
 			"duration": "1 minute, concentration",
 			"range": "self",
 			"description": [
-				"You blend in with your surroundings, taking on a new type for resistances/vulnerabilities/immunities. The type is dependent on the terrain, and up to the DMs discretion. (Ex: Forest = Grass, Beach = Water, Desert = Ground/Fire, Mountain = Rock, etc.)"
+				"You blend in with your surroundings, replacing your current type with a new type. The type is dependent on the environment, and up to the DM's discretion. Some examples are included below.",
+				{
+					"type": "table",
+					"headers": [
+						"Enviroment",
+						"Types"
+					],
+					"rows": [
+						[
+							"Cities, Roads, Buildings",
+							"Normal, Steel"
+						],
+						[
+							"Caves",
+							"Rock"
+						],
+						[
+							"Sand, Dirt, Rock",
+							"Ground"
+						],
+						[
+							"Ocean, Rivers, Lakes",
+							"Water"
+						],
+						[
+							"Snow, Ice",
+							"Ice"
+						],
+						[
+							"Volcano",
+							"Fire"
+						],
+						[
+							"Forest, Fields, Grassy Terrain",
+							"Grass"
+						],
+						[
+							"Sky, Clouds",
+							"Flying"
+						],
+						[
+							"Misty Terrain",
+							"Fairy"
+						],
+						[
+							"Electric Terrain",
+							"Electric"
+						],
+						[
+							"Psychic Terrain",
+							"Psychic"
+						]
+					]
+				}
 			]
 		},
 		{
@@ -13884,11 +13937,11 @@
 			"duration": "varies",
 			"range": "varies",
 			"description": [
-				"You call upon the powers of nature nearby and activate a move based on the terrain. The DM gets final say on what move you activate, but here are example terrain types:",
+				"You call upon the powers of nature nearby and activate a move based on the environment. The DM gets final say on what move you activate, but here are example environment types:",
 				{
 					"type": "table",
 					"headers": [
-						"Terrain",
+						"Enviroment",
 						"Move"
 					],
 					"rows": [
