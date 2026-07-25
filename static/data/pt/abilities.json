@@ -306,7 +306,7 @@
     {
       "id": "ice-body",
       "name": "Corpo de Gelo",
-      "description": "Enquanto estiver nevando ou caindo granizo, este Pokémon se cura em quantidade de PV igual ao seu modificador de proficiência ao final de cada turno."
+      "description": "Enquanto estiver nevando ou caindo granizo, este Pokémon se cura em quantidade de PV igual ao seu modificador de proficiência ao final de cada turno. Este Pokémon não sofre dano de granizo."
     },
     {
       "id": "ice-face",

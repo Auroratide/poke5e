@@ -513,7 +513,7 @@
 		{
 			"id": "ice-body",
 			"name": "Corps Gel",
-			"description": "Si il neige ou grêle, ce Pokémon soigne un montant de PV égal à son bonus de maîtrise à la fin de chacun de ses tours."
+			"description": "Si il neige ou grêle, ce Pokémon soigne un montant de PV égal à son bonus de maîtrise à la fin de chacun de ses tours. Ce Pokémon ne subit aucun dégât dû à la grêle."
 		},
 		{
 			"id": "ice-face",

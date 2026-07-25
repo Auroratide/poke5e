@@ -598,7 +598,7 @@
 		{
 			"id": "ice-body",
 			"name": "Gélido",
-			"description": "Mientrás este nevando o granizando, este Pokémon se cura una cantidad de puntos de golpe igual a su bonificador por competencia al final de cada uno de sus turnos."
+			"description": "Mientrás este nevando o granizando, este Pokémon se cura una cantidad de puntos de golpe igual a su bonificador por competencia al final de cada uno de sus turnos. Esta Pokémon no recibe daño del granizo."
 		},
 		{
 			"id": "ice-face",
