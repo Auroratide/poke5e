@@ -15,6 +15,11 @@
 		<p>If a Pokémon is "immune" to a damage type, it is immune to all damage and secondary effects of damaging moves of that type, but still may be affected by non-damaging moves of that type. For example, a normal-type Pokémon is immune to damage and flinch chance of Astonish, but can be Confused by Confuse Ray.</p>
 	</section>
 	<section>
+		<h2>Changing Type</h2>
+		<p>Unless otherwise specified, when something would change or replace a pokémon's natural type, that pokémon's resistances, vulnerabilities, and immunities change to match that of the new type. Additionally, that pokémon calculates STAB using the new type.</p>
+		<p>Most effects have a set duration. If duration is unspecified and the effect is not permanent, a pokémon returns to its natural type after a long rest.</p>
+	</section>
+	<section>
 		<h2>Type Calculator</h2>
 		<p>This tool lets you view the resistances, vulnerabilities, and immunities of different type combinations. It lets you include more than two types, in case that's relevant for your campaign.</p>
 		<TypeCalculator />
