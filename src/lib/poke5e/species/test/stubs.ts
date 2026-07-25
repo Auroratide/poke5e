@@ -47,6 +47,8 @@ export function stubPokemonSpecies(template: Partial<Data<PokemonSpecies>> = {})
 		notes: "",
 		habitat: {
 			biomes: [],
+			nativeRegion: "",
+			regions: [],
 		},
 		...template,
 	})
