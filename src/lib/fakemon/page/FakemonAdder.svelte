@@ -73,6 +73,8 @@
 					},
 					habitat: {
 						biomes: [],
+						nativeRegion: "",
+						regions: [],
 					},
 				}).data,
 			}),

@@ -14,7 +14,7 @@
 		disabled?: boolean,
 	} = $props()
 
-	let regionField = $state(regions.join(", "))
+	let regionField = $state(regions?.join(", ") ?? "")
 
 	const onRegionsChange = (e: TextareaFieldChangeEvent) => {
 		regions = list.fromCommaOrNewlineString(e.detail.value)
