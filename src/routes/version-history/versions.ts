@@ -14,6 +14,20 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.3",
+		description: [
+			"<strong>Pokémon</strong>: Added region information to pokémon, and made native region a filter.",
+			"<strong>Fakémon</strong>: Region information can be added to Fakémon.",
+			"<strong>Encounter Tool</strong>: Region can now be used as a filter for generating encounters.",
+			"<strong>Pokémon</strong>: Update the SRs of Dreepy (½ → 1) and Drakloak (3 → 7) to match other pseudo-legendary SRs.",
+			"<strong>Pokémon</strong>: Changed size of Hisuian Arcanine to large, from medium.",
+			"<strong>Pokémon</strong>: Replaced Koraidon's and Miraidon's \"gliding\" speeds with flying and hover respectively.",
+			"<strong>Moves</strong>: Clarify wording on Camouflage that it replaces the pokemon's type, and depends on environment rather than terrain.",
+			"<strong>Abilities</strong>: Ice Body confers immunity to hail damage.",
+			"<strong>Reference</strong>: Added a clause in damage types that universalizes the effects of changing a pokémon's type.",
+			"<strong>Reference</strong>: Added the Oak's Parcel One-Shot Adventure to the Supplements.",
+		],
+	}, {
 		name: "v1.12.2",
 		description: [
 			"<strong>Bugfix</strong>: Fix for abilities sometimes getting duplicated in the Fakémon editor.",
