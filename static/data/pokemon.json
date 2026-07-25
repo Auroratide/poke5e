@@ -24554,11 +24554,10 @@
 				"biomes": [
 					"grassland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -24699,11 +24698,10 @@
 				"biomes": [
 					"grassland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -24855,11 +24853,10 @@
 				"biomes": [
 					"grassland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -25016,11 +25013,10 @@
 					"grassland",
 					"volcano"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hisui",
 					"Johto",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -25161,11 +25157,10 @@
 					"grassland",
 					"volcano"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hisui",
 					"Johto",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -25331,11 +25326,10 @@
 					"grassland",
 					"volcano"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hisui",
 					"Johto",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -25513,11 +25507,10 @@
 					"river",
 					"swamp"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -25681,11 +25674,10 @@
 					"river",
 					"swamp"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -25863,11 +25855,10 @@
 					"river",
 					"swamp"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -26050,11 +26041,10 @@
 					"grassland",
 					"tundra"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -26226,11 +26216,10 @@
 					"grassland",
 					"tundra"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -26413,13 +26402,12 @@
 					"woodland",
 					"tundra"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -26598,13 +26586,12 @@
 					"woodland",
 					"tundra"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -26754,12 +26741,11 @@
 					"jungle",
 					"woodland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
-					"Kalos",
-					"Kanto"
+					"Kalos"
 				]
 			}
 		},
@@ -26896,12 +26882,11 @@
 					"jungle",
 					"woodland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
-					"Kalos",
-					"Kanto"
+					"Kalos"
 				]
 			}
 		},
@@ -27074,12 +27059,11 @@
 					"forest",
 					"woodland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -27247,12 +27231,11 @@
 					"forest",
 					"woodland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -27389,7 +27372,7 @@
 					"forest",
 					"cave"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
@@ -27397,7 +27380,6 @@
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Sinnoh",
 					"Unova"
 				]
@@ -27568,14 +27550,13 @@
 					"reef",
 					"abyss"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -27734,14 +27715,13 @@
 					"reef",
 					"abyss"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -27889,7 +27869,7 @@
 					"city",
 					"industrial"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
@@ -27897,7 +27877,6 @@
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -28064,14 +28043,13 @@
 				"biomes": [
 					"mountain"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -28229,14 +28207,13 @@
 					"forest",
 					"field"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Unova"
 				]
@@ -28387,12 +28364,11 @@
 				"biomes": [
 					"forest"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Hisui",
 					"Johto",
-					"Kanto",
 					"Sinnoh"
 				]
 			}
@@ -28545,12 +28521,11 @@
 				"biomes": [
 					"forest"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Hisui",
 					"Johto",
-					"Kanto",
 					"Sinnoh"
 				]
 			}
@@ -28705,13 +28680,12 @@
 					"desert",
 					"ruin"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hoenn",
-					"Johto",
-					"Kanto"
+					"Johto"
 				]
 			}
 		},
@@ -28860,13 +28834,12 @@
 					"desert",
 					"ruin"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hoenn",
-					"Johto",
-					"Kanto"
+					"Johto"
 				]
 			}
 		},
@@ -29021,12 +28994,11 @@
 				"biomes": [
 					"field"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Unova"
 				]
@@ -29174,12 +29146,11 @@
 				"biomes": [
 					"field"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Unova"
 				]
@@ -29342,12 +29313,11 @@
 				"biomes": [
 					"field"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Unova"
 				]
@@ -29487,13 +29457,12 @@
 					"jungle",
 					"grassland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -29665,13 +29634,12 @@
 					"riverside",
 					"swamp"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -29846,13 +29814,12 @@
 					"riverside",
 					"swamp"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -30028,14 +29995,13 @@
 				"biomes": [
 					"forest"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -30190,13 +30156,12 @@
 					"riverside",
 					"swamp"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -30370,11 +30335,10 @@
 					"field",
 					"mountain"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -30531,11 +30495,10 @@
 					"field",
 					"mountain"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -30691,11 +30654,10 @@
 					"field",
 					"mountain"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -30879,12 +30841,11 @@
 					"forest",
 					"jungle"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Hisui",
 					"Johto",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -31045,10 +31006,9 @@
 				"biomes": [
 					"field"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
-					"Kanto",
 					"Paldea",
 					"Unova"
 				]
@@ -31201,10 +31161,9 @@
 				"biomes": [
 					"field"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Johto",
-					"Kanto",
 					"Paldea",
 					"Unova"
 				]
@@ -31370,12 +31329,11 @@
 					"woodland",
 					"swamp"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -31563,12 +31521,11 @@
 					"riverside",
 					"swamp"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -31748,12 +31705,11 @@
 					"riverside",
 					"swamp"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -31915,14 +31871,13 @@
 				"biomes": [
 					"city"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -32084,14 +32039,13 @@
 				"biomes": [
 					"city"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -32284,13 +32238,12 @@
 					"city",
 					"swamp"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -32486,13 +32439,12 @@
 					"riverside",
 					"beach"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -32677,12 +32629,11 @@
 					"cave",
 					"pond"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Hisui",
 					"Johto",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -32757,11 +32708,10 @@
 				"biomes": [
 					"ruin"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hisui",
 					"Johto",
-					"Kanto",
 					"Sinnoh"
 				]
 			}
@@ -32843,13 +32793,12 @@
 					"forest",
 					"cave"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Hoenn",
 					"Johto",
-					"Kalos",
-					"Kanto"
+					"Kalos"
 				]
 			}
 		},
@@ -33039,11 +32988,10 @@
 					"mountain",
 					"riverside"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hoenn",
 					"Johto",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -33209,11 +33157,10 @@
 				"biomes": [
 					"forest"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -33383,11 +33330,10 @@
 				"biomes": [
 					"forest"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -33605,13 +33551,12 @@
 				"biomes": [
 					"cave"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Unova"
 				]
@@ -33819,12 +33764,11 @@
 					"desert",
 					"badland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -33978,13 +33922,12 @@
 					"cave",
 					"mountain"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Sinnoh",
 					"Unova"
 				]
@@ -34181,12 +34124,11 @@
 					"forest",
 					"city"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -34372,12 +34314,11 @@
 					"forest",
 					"city"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -34560,13 +34501,12 @@
 					"ocean",
 					"reef"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -34736,14 +34676,13 @@
 					"woodland",
 					"grassland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -34888,12 +34827,11 @@
 					"mountain",
 					"beach"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Unova"
 				]
 			}
@@ -35081,7 +35019,7 @@
 				"biomes": [
 					"forest"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
@@ -35089,7 +35027,6 @@
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -35290,14 +35227,13 @@
 					"glacier",
 					"tundra"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -35476,12 +35412,11 @@
 					"swamp",
 					"tundra"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -35651,12 +35586,11 @@
 					"swamp",
 					"tundra"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -35820,12 +35754,11 @@
 				"biomes": [
 					"volcano"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -35983,12 +35916,11 @@
 				"biomes": [
 					"volcano"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -36159,13 +36091,12 @@
 					"glacier",
 					"tundra"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -36323,13 +36254,12 @@
 					"glacier",
 					"tundra"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -36492,14 +36422,13 @@
 				"biomes": [
 					"reef"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Unova"
 				]
 			}
@@ -36649,14 +36578,13 @@
 					"ocean",
 					"reef"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Sinnoh",
 					"Unova"
 				]
@@ -36796,14 +36724,13 @@
 					"ocean",
 					"reef"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Sinnoh",
 					"Unova"
 				]
@@ -36965,13 +36892,12 @@
 					"glacier",
 					"tundra"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Unova"
 				]
@@ -37111,14 +37037,13 @@
 					"ocean",
 					"reef"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Sinnoh",
 					"Unova"
 				]
@@ -37294,14 +37219,13 @@
 					"badland",
 					"tundra"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Unova"
 				]
@@ -37487,12 +37411,11 @@
 					"volcano",
 					"badland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -37665,12 +37588,11 @@
 					"volcano",
 					"badland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -37822,13 +37744,12 @@
 					"reef",
 					"abyss"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Hoenn",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -37989,11 +37910,10 @@
 					"grassland",
 					"badland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hoenn",
 					"Johto",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -38156,11 +38076,10 @@
 					"grassland",
 					"badland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hoenn",
 					"Johto",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -38306,14 +38225,13 @@
 				"biomes": [
 					"city"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -38495,11 +38413,10 @@
 					"mountain",
 					"tundra"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Hisui",
 					"Johto",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -38596,12 +38513,11 @@
 					"forest",
 					"city"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -38726,11 +38642,10 @@
 					"city",
 					"mountain"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Johto",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -38881,11 +38796,10 @@
 					"city",
 					"mountain"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Galar",
 					"Johto",
-					"Kanto",
 					"Paldea"
 				]
 			}
@@ -39031,13 +38945,12 @@
 				"biomes": [
 					"glacier"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Johto",
-					"Kalos",
-					"Kanto"
+					"Kalos"
 				]
 			}
 		},
@@ -39194,13 +39107,12 @@
 					"field",
 					"industrial"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -39356,13 +39268,12 @@
 				"biomes": [
 					"volcano"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
-					"Kanto",
 					"Paldea",
 					"Sinnoh",
 					"Unova"
@@ -39514,13 +39425,12 @@
 				"biomes": [
 					"grassland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Johto",
-					"Kalos",
-					"Kanto"
+					"Kalos"
 				]
 			}
 		},
@@ -39699,13 +39609,12 @@
 					"field",
 					"city"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Hisui",
 					"Johto",
-					"Kanto",
 					"Paldea",
 					"Sinnoh"
 				]
@@ -39854,10 +39763,9 @@
 			},
 			"habitat": {
 				"biomes": [],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
-					"Johto",
-					"Kanto"
+					"Johto"
 				]
 			}
 		},
@@ -40001,10 +39909,9 @@
 			},
 			"habitat": {
 				"biomes": [],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
-					"Johto",
-					"Kanto"
+					"Johto"
 				]
 			}
 		},
@@ -40150,10 +40057,9 @@
 			},
 			"habitat": {
 				"biomes": [],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
-					"Johto",
-					"Kanto"
+					"Johto"
 				]
 			}
 		},
@@ -40322,13 +40228,12 @@
 					"mountain",
 					"badland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Unova"
 				]
@@ -40484,13 +40389,12 @@
 					"mountain",
 					"badland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Unova"
 				]
@@ -40685,13 +40589,12 @@
 					"mountain",
 					"badland"
 				],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
 					"Alola",
 					"Galar",
 					"Johto",
 					"Kalos",
-					"Kanto",
 					"Paldea",
 					"Unova"
 				]
@@ -40870,10 +40773,9 @@
 			},
 			"habitat": {
 				"biomes": [],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
-					"Johto",
-					"Kanto"
+					"Johto"
 				]
 			}
 		},
@@ -41035,10 +40937,9 @@
 			},
 			"habitat": {
 				"biomes": [],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
-					"Johto",
-					"Kanto"
+					"Johto"
 				]
 			}
 		},
@@ -41169,10 +41070,9 @@
 			},
 			"habitat": {
 				"biomes": [],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Johto",
 				"regions": [
-					"Johto",
-					"Kanto"
+					"Johto"
 				]
 			}
 		},
@@ -110374,7 +110274,7 @@
 					"jungle",
 					"tundra"
 				],
-				"nativeRegion": "Alola",
+				"nativeRegion": "Kalos",
 				"regions": [
 					"Alola",
 					"Kalos",
@@ -110462,7 +110362,7 @@
 					"jungle",
 					"tundra"
 				],
-				"nativeRegion": "Alola",
+				"nativeRegion": "Kalos",
 				"regions": [
 					"Alola",
 					"Kalos",
@@ -118844,7 +118744,7 @@
 			},
 			"habitat": {
 				"biomes": [],
-				"nativeRegion": "Alola",
+				"nativeRegion": "Kalos",
 				"regions": [
 					"Alola",
 					"Kalos"
@@ -119130,7 +119030,7 @@
 			},
 			"habitat": {
 				"biomes": [],
-				"nativeRegion": "Alola",
+				"nativeRegion": "Kalos",
 				"regions": [
 					"Alola",
 					"Kalos"
@@ -119634,9 +119534,8 @@
 			},
 			"habitat": {
 				"biomes": [],
-				"nativeRegion": "Hoenn",
+				"nativeRegion": "Kalos",
 				"regions": [
-					"Hoenn",
 					"Kalos"
 				]
 			}
@@ -137493,8 +137392,9 @@
 			},
 			"habitat": {
 				"biomes": [],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Alola",
 				"regions": [
+					"Alola",
 					"Kalos",
 					"Kanto"
 				]
@@ -137598,8 +137498,9 @@
 			},
 			"habitat": {
 				"biomes": [],
-				"nativeRegion": "Kanto",
+				"nativeRegion": "Alola",
 				"regions": [
+					"Alola",
 					"Kalos",
 					"Kanto"
 				]

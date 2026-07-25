@@ -1,5 +1,5 @@
 import { PokemonApi } from "../pokemon-api/index.ts"
-import { getPokemonData, writePokemonData } from "./files.ts"
+import { getPokemonData, writePokemonData, type PokemonData } from "./files.ts"
 import { superconsole } from "../superconsole.ts"
 
 /**
@@ -59,11 +59,15 @@ async function getVersionGroup(versionGroupName: string): Promise<VersionGroupIn
 	}
 
 	const generation = await getGeneration(versionGroup.generation.name)
-	const [firstRegion] = versionGroup.regions
+
+	// Legends Arceus shares generation-viii with Sword/Shield, whose main_region is
+	// Galar, even though Legends Arceus itself takes place in Hisui -- special-case it.
+	const isHisui = versionGroup.regions.some((r) => r.name === "hisui")
+	const region = isHisui ? "Hisui" : generation.region
 
 	const info = {
 		generationId: generation.id,
-		region: firstRegion != null ? capitalize(firstRegion.name) : null,
+		region,
 	}
 	versionGroupCache.set(versionGroupName, info)
 	return info
@@ -99,6 +103,33 @@ async function getPokedex(pokedexName: string): Promise<PokedexInfo> {
 	return info
 }
 
+type RegionOverride = {
+	nativeRegion?: string,
+	regions?: string[],
+}
+
+/**
+ * Manual corrections for pokemon whose region the API gets wrong, or that need a
+ * judgment call the API can't make on its own. Keyed by pokemon id. Either field
+ * can be omitted to only override the other; whatever's omitted keeps the
+ * API-derived value.
+ */
+const EXCEPTIONS: Record<string, RegionOverride> = {
+	"kyogre-primal": { nativeRegion: "Hoenn" },
+	"groudon-primal": { nativeRegion: "Hoenn" },
+	"scatterbug": { nativeRegion: "Kalos" },
+	"spewpa": { nativeRegion: "Kalos" },
+	"zygarde-10-forme": { nativeRegion: "Kalos" },
+	"zygarde-complete-forme": { nativeRegion: "Kalos" },
+}
+
+function applyRegions(p: PokemonData, nativeRegion: string, regions: string[]) {
+	const exception = EXCEPTIONS[p.id]
+
+	p.habitat.nativeRegion = exception?.nativeRegion ?? nativeRegion
+	p.habitat.regions = exception?.regions ?? regions
+}
+
 async function main() {
 	const pokemon = await getPokemonData()
 
@@ -108,15 +139,13 @@ async function main() {
 
 		if (species == null) {
 			superconsole.failure(`Missing pokemon species for "${p.id}" -- skipping`)
-			p.habitat.nativeRegion = ""
-			p.habitat.regions = []
+			applyRegions(p, "", [])
 			continue
 		}
 
 		if (form == null) {
 			superconsole.failure(`Missing pokemon form for "${p.id}" -- skipping`)
-			p.habitat.nativeRegion = ""
-			p.habitat.regions = []
+			applyRegions(p, "", [])
 			continue
 		}
 
@@ -124,8 +153,7 @@ async function main() {
 
 		if (debut.region == null) {
 			superconsole.failure(`No debut region found for "${p.id}" (${p.name}) -- skipping`)
-			p.habitat.nativeRegion = ""
-			p.habitat.regions = []
+			applyRegions(p, "", [])
 			continue
 		}
 
@@ -138,8 +166,7 @@ async function main() {
 			}
 		}
 
-		p.habitat.nativeRegion = debut.region
-		p.habitat.regions = [...regions].sort()
+		applyRegions(p, debut.region, [...regions].sort())
 	}
 
 	await writePokemonData(pokemon)
