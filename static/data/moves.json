@@ -679,7 +679,8 @@
 			"name": "Aqua Step",
 			"type": "water",
 			"power": [
-				"str"
+				"str",
+				"cha"
 			],
 			"time": "1 action",
 			"pp": 5,
@@ -7655,7 +7656,8 @@
 			"name": "Flower Trick",
 			"type": "grass",
 			"power": [
-				"dex"
+				"dex",
+				"cha"
 			],
 			"time": "1 action",
 			"pp": 5,
@@ -22721,6 +22723,7 @@
 			"name": "Torch Song",
 			"type": "fire",
 			"power": [
+				"con",
 				"cha"
 			],
 			"time": "1 action",
