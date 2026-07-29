@@ -68,6 +68,7 @@
 		margin: 0;
 		padding: 0;
 		inline-size: 100%;
+		block-size: 100%;
 		cursor: pointer;
 	} button:hover, button:focus {
 		filter: brightness(1.5);

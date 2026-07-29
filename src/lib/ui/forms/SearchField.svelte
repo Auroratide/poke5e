@@ -153,6 +153,7 @@
 
 	.invert-colors {
 		filter: invert();
+		color: var(--skin-bg);
 	}
 
 	.active-filters {

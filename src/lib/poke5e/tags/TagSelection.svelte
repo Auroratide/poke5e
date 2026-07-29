@@ -62,6 +62,7 @@
 		font-size: var(--font-sz-venus);
 		display: inline-flex;
 		flex-direction: row;
+		background: var(--skin-bg-text);
 		color: var(--skin-bg);
 		text-transform: capitalize;
 		overflow: hidden;
@@ -69,8 +70,6 @@
 		line-height: 1;
 		padding-inline: 0.375em;
 		padding-block: 0.125em;
-		background: var(--skin-input-bg);
-		color: var(--skin-bg);
 		cursor: pointer;
 	}
 
