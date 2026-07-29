@@ -15,23 +15,28 @@
 
 	const allTags = trainerStore.tags()
 
-	export let trainers: TrainerListStore
-	export let showGetStarted = false
+	let {
+		trainers,
+		showGetStarted = false,
+	}: {
+		trainers: TrainerListStore,
+		showGetStarted?: boolean,
+	} = $props()
 
-	$: hasNoTrainers = $trainers.length === 0
-	let filteredTags: string[] = []
+	const hasNoTrainers = $derived($trainers.length === 0)
+	let filteredTags = $state<string[]>([])
+	const textFilterIsTagName = $derived(TagList.has($allTags, $trainerListFilterValue))
+	const filtered = $derived(
+		$trainers
+			.filter((it) => {
+				const noTagsSpecified = filteredTags.length === 0 && !textFilterIsTagName
+				const hasDesiredTag = TagList.overlaps(it.tags, filteredTags)
+				const tagIsExplicitlySearched = textFilterIsTagName && TagList.has(it.tags, $trainerListFilterValue)
 
-	$: textFilterIsTagName = TagList.has($allTags, $trainerListFilterValue)
-
-	$: filtered = $trainers
-		.filter((it) => {
-			const noTagsSpecified = filteredTags.length === 0 && !textFilterIsTagName
-			const hasDesiredTag = TagList.overlaps(it.tags, filteredTags)
-			const tagIsExplicitlySearched = textFilterIsTagName && TagList.has(it.tags, $trainerListFilterValue)
-
-			return noTagsSpecified || hasDesiredTag || tagIsExplicitlySearched
-		})
-		.filter((it) => textFilterIsTagName || it.name.toLocaleLowerCase().includes($trainerListFilterValue.toLocaleLowerCase()))
+				return noTagsSpecified || hasDesiredTag || tagIsExplicitlySearched
+			})
+			.filter((it) => textFilterIsTagName || it.name.toLocaleLowerCase().includes($trainerListFilterValue.toLocaleLowerCase())),
+	)
 
 	const byStringField = (field: (m: Trainer) => string) =>
 		(l: Trainer, r: Trainer) => field(l).localeCompare(field(r))
@@ -41,9 +46,9 @@
 	}
 </script>
 
-<ListHeading title="{m["trainers.trainerList"]()}" target="/trainers">
+<ListHeading title={m["trainers.trainerList"]()} target="/trainers">
 	<a slot="link" href="{Url.trainers(undefined, undefined, PageAction.findTrainer)}" class="dark-font">{m["trainers.findByTrainerID"]()} &gt;</a>
-	<Button slot="action" href="{Url.trainers(undefined, undefined, PageAction.newTrainer)}">+ {m["trainers.newTrainer"]()}</Button>
+	<Button slot="action" href={Url.trainers(undefined, undefined, PageAction.newTrainer)}>+ {m["trainers.newTrainer"]()}</Button>
 </ListHeading>
 <div class="space-bottom">
 	{#if FeatureToggles.Tagging()}
