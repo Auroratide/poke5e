@@ -13779,7 +13779,7 @@
 			"duration": "instantaneous",
 			"range": "60ft",
 			"description": [
-				"You attack by emitting mystical power. Make a ranged attack, dealing 1d12 + MOVE psychic damage on a hit. If the attack hit, you gain +1 to all attack rolls made with WIS as the Move Power until the end of the encounter or until switched out. If the attack missed, you gain +1 AC until the end of the encounter or until switched out. The sum of these bonuses cap at +5 total."
+				"You attack by emitting mystical power. Make a ranged attack, dealing 1d12 + MOVE psychic damage on a hit. If the attack hit, you gain +1 to all attack rolls made with INT, WIS, or CHA as the Move Power until the end of the encounter or until switched out. If the attack missed, you gain +1 AC until the end of the encounter or until switched out. The sum of these bonuses cap at +5 total."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
 			"damage": {
