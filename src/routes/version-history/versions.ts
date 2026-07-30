@@ -14,6 +14,13 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.4",
+		description: [
+			"<strong>Bugfix</strong>: Fix Encounter Tool not generating pokemon when no region specified.",
+			"<strong>Bugfix</strong>: Fix some unreadable text in Dark Mode.",
+			"<strong>Moves</strong>: Add CHA to Aqua Step and Flower Trick as a move power, and CON to Torch Song as a move power.",
+		],
+	}, {
 		name: "v1.12.3",
 		description: [
 			"<strong>Pokémon</strong>: Added region information to pokémon, and made native region a filter.",
