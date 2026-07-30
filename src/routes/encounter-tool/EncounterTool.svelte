@@ -71,8 +71,8 @@
 	let biome = ""
 	let difficulty: "low" | "moderate" | "high" = "low"
 	let pokemonType: PokeType
-	let regionType: "native" | "found in"
-	let regionName: string
+	let regionType: "native" | "found in" = "native"
+	let regionName: string = ""
 	let arePokemonLimited: "yes" | "no" = "no"
 	let pokemonLimit: number = 1
 	let encounter = Encounter.createEmpty()
@@ -132,9 +132,9 @@
 
 			let hasRegion = true
 			if (regionType === "native") {
-				hasRegion = regionName === "" || strings.caseInsensitiveEqual(pokemon.data.habitat.nativeRegion, regionName)
+				hasRegion = regionName?.trim() === "" || strings.caseInsensitiveEqual(pokemon.data.habitat.nativeRegion, regionName)
 			} else if (regionType === "found in") {
-				hasRegion = regionName === "" || pokemon.data.habitat.regions.some((region) => strings.caseInsensitiveEqual(region, regionName))
+				hasRegion = regionName?.trim() === "" || pokemon.data.habitat.regions.some((region) => strings.caseInsensitiveEqual(region, regionName))
 			}
 
 			if (hasBiome && hasType && hasRegion) {
