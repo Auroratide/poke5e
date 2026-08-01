@@ -1550,6 +1550,12 @@
 			"attack": {
 				"scope": "melee"
 			},
+			"save": {
+				"dc": "MOVE",
+				"attribute": [
+					"str"
+				]
+			},
 			"damage": {
 				"dice": {
 					"1": "1d4",
@@ -11894,6 +11900,12 @@
 				"modifier": "MOVE",
 				"type": [
 					"fairy"
+				]
+			},
+			"save": {
+				"dc": "MOVE",
+				"attribute": [
+					"dex"
 				]
 			}
 		},
