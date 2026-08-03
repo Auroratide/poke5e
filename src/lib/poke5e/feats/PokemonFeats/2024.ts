@@ -6,7 +6,7 @@ export const DndFeatsForPokemon: DndPokemonFeat[] = [ {
 	name: "Alert",
 }, {
 	name: "Charger",
-	qualifier: "when using melee attacks",
+	qualifier: "when using melee moves",
 }, {
 	name: "Durable",
 }, {
