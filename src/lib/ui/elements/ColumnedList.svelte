@@ -15,4 +15,8 @@
 		column-count: var(--column-count);
 		line-height: 1.25;
 	}
+
+	li {
+		break-inside: avoid;
+	}
 </style>
