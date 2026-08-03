@@ -5043,9 +5043,7 @@
 			"id": "dragon-cheer",
 			"name": "Dragon Cheer",
 			"type": "dragon",
-			"power": [
-				"cha"
-			],
+			"power": "none",
 			"time": "1 bonus action",
 			"pp": 5,
 			"duration": "1 minute",
@@ -14212,9 +14210,7 @@
 			"id": "no-retreat",
 			"name": "No Retreat",
 			"type": "fighting",
-			"power": [
-				"str"
-			],
+			"power": "none",
 			"time": "1 action",
 			"pp": 3,
 			"duration": "1 minute",
@@ -14227,10 +14223,7 @@
 			"id": "noble-roar",
 			"name": "Noble Roar",
 			"type": "normal",
-			"power": [
-				"str",
-				"cha"
-			],
+			"power": "none",
 			"time": "1 reaction",
 			"pp": 3,
 			"duration": "instantaneous",
