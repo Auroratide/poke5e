@@ -25,7 +25,7 @@ export const DndFeatsForPokemon: DndPokemonFeat[] = [ {
 	qualifier: "not Animal Handling",
 }, {
 	name: "Skilled",
-	qualifier: "only 1 skill, not Animal Handling",
+	qualifier: "not Animal Handling",
 }, {
 	name: "Skulker",
 }, {
