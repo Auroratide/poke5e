@@ -51,5 +51,8 @@
 
 		<h3>Legendary Armor (X/Day)</h3>
 		<p>As a reaction, this Pokémon may increase its AC by (1, 2, or 3) if it would cause an attack to miss.</p>
+
+		<h3>Legendary Feats</h3>
+		<p>This Pokémon may take up to (1, 2, or 3) feats in addition to feats it already has.</p>
 	</section>
 </ReferencePage>
