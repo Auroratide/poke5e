@@ -11081,7 +11081,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You strike with an ivy-wrapped cudgel. Make a melee attack, dealing 4d4 + MOVE grass damage on a hit. When used by Ogerpon, the type of this attack and damage changes to that of the mask it is wearing:",
+				"You strike with an ivy-wrapped cudgel. Make a melee attack, dealing 4d4 + MOVE grass damage on a hit. Ivy Cudgel scores a critical hit on 19s and 20s. When used by Ogerpon, the type of this attack and damage changes to that of the mask it is wearing:",
 				{
 					"type": "table",
 					"headers": [

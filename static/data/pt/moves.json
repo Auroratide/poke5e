@@ -3608,7 +3608,7 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você golpeia com uma clava envolta em hera. Faça um ataque corpo a corpo, causando 4d4 + MOVE de dano de grama em um acerto. Quando usado por Ogerpon, o tipo deste ataque e do dano muda de acordo com a máscara que ele está usando:",
+				"Você golpeia com uma clava envolta em hera. Faça um ataque corpo a corpo, causando 4d4 + MOVE de dano de grama em um acerto. Clava de Hera causa acerto crítico em 19 e 20. Quando usado por Ogerpon, o tipo deste ataque e do dano muda de acordo com a máscara que ele está usando:",
 				{
 					"type": "table",
 					"headers": [

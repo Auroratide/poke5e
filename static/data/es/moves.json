@@ -3070,7 +3070,7 @@
 			"id": "ivy-cudgel",
 			"name": "Garrote Liana",
 			"description": [
-				"Golpeas con un garrote envuelto en hiedra. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo 4d4 + MOV de daño de tipo Planta si impactas. Cuando este movimiento es utilizado por Ogerpon, el tipo de este ataque y el daño cambian al de la máscara que lleve puesta:",
+				"Golpeas con un garrote envuelto en hiedra. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo 4d4 + MOV de daño de tipo Planta si impactas. Garrote Liana logra un impacto crítico con un resultado de 19 o 20. Cuando este movimiento es utilizado por Ogerpon, el tipo de este ataque y el daño cambian al de la máscara que lleve puesta:",
 				{
 					"type": "table",
 					"headers": [
