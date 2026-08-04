@@ -290,7 +290,7 @@
     {
       "id": "early-bird",
       "name": "Early Bird",
-      "description": "This Pokémon has advantage on rolls to wake from sleep."
+      "description": "This Pokémon has advantage on the D20 roll to wake from the asleep condition."
     },
 		{
       "id": "earth-eater",
