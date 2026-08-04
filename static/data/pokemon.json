@@ -143158,7 +143158,7 @@
 				},
 				{
 					"type": "hover",
-					"value": 10
+					"value": 15
 				}
 			],
 			"attributes": {
@@ -143284,7 +143284,7 @@
 				},
 				{
 					"type": "hover",
-					"value": 20
+					"value": 25
 				}
 			],
 			"attributes": {
