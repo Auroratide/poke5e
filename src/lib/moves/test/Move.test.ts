@@ -507,6 +507,32 @@ describe("calculateMoveStats", () => {
 		})
 	})
 
+	test("move + stab damage modifier", () => {
+		const move = stubMove({
+			power: ["int"],
+			type: "normal",
+			damage: stubMoveDamage({
+				modifier: "MOVE + STAB",
+			}).data,
+		})
+	
+		const result = move.calculateMoveStats("2024", {
+			attributes: ATTRIBUTES,
+			level: new Level(1),
+			type: ["psychic"],
+			stab: DEFAULT_STAB,
+		})
+	
+		expect(result).toEqual({
+			damage: {
+				dice: "1d4",
+				mod: 4, // 2 from attribute, 2 from stab
+				isHealing: false,
+				stabApplied: true,
+			},
+		})
+	})
+
 	test("level damage modifier", () => {
 		const move = stubMove({
 			power: ["int"],

@@ -20,7 +20,7 @@ export class MoveDamage extends DataClass<{
 		isHealing: boolean,
 		stabApplied: boolean,
 	} {
-		const hasStab = this.data.type !== "healing" && PokemonType.isPokeType(moveType) ? pokemonType.includes(moveType) : false
+		let hasStab = this.data.type !== "healing" && PokemonType.isPokeType(moveType) ? pokemonType.includes(moveType) : false
 
 		let trueModifier = hasStab ? stab.calculate(mod, level, rulesVersion) : 0
 		const modifierCode = this.data.modifier
@@ -30,6 +30,9 @@ export class MoveDamage extends DataClass<{
 			const patternMatch = modifierCode.match(/MOVE(\s*\+\s*(\d+))?/i)
 			if (modifierCode === "LEVEL") {
 				trueModifier += level.data
+			} else if (modifierCode === "MOVE + STAB") {
+				trueModifier += mod + stab.calculate(mod, level, rulesVersion)
+				hasStab = true
 			} else if (patternMatch) {
 				trueModifier += mod
 				trueModifier += parseInt(patternMatch[2] ?? "0")

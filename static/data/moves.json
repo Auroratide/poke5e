@@ -17048,7 +17048,7 @@
 					"10": "3d10",
 					"17": "4d12"
 				},
-				"modifier": "MOVE",
+				"modifier": "MOVE + STAB",
 				"type": [
 					"normal",
 					"fighting",
