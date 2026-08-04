@@ -1565,7 +1565,28 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você ataca com garras destrutivas. Faça um ataque corpo a corpo, causando 2d6 + MOVIMENTO de dano de veneno em um acerto. O alvo deve fazer uma salvaguarda de CON; em falha, role 1d6: 1-2 envenenado, 3-4 paralisado, 5-6 adormecido."
+				"Você ataca com garras destrutivas. Faça um ataque corpo a corpo, causando 2d6 + MOVIMENTO de dano de veneno em um acerto. O alvo deve fazer uma salvaguarda de CON; em falha, role 1d6:",
+				{
+					"type": "table",
+					"headers": [
+						"d6",
+						"Status"
+					],
+					"rows": [
+						[
+							"1-2",
+							"Envenenado"
+						],
+						[
+							"3-4",
+							"Paralisado"
+						],
+						[
+							"5-6",
+							"Adormecido"
+						]
+					]
+				}
 			],
 			"higherLevels": "Os dados de dano deste movimento mudam para 2d8 no nível 5, 4d6 no nível 10 e 6d6 no nível 17."
 		},
@@ -7067,7 +7088,28 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você ataca com um triplo feixe simultâneo. Cada criatura em um cone de 9m deve fazer um teste de resistência de DEX contra sua CD de Move, sofrendo 2d6 + MOVE de dano normal em caso de falha, ou metade em caso de sucesso. Alvos que falharem por 5 ou mais rolam um d4 para sofrer um efeito de status: 1. queimado. 2. congelado. 3. paralisado. 4. rerrolar até sair outro número."
+				"Você ataca com um triplo feixe simultâneo. Cada criatura em um cone de 9m deve fazer um teste de resistência de DEX contra sua CD de Move, sofrendo 2d6 + MOVE de dano normal em caso de falha, ou metade em caso de sucesso. Alvos que falharem por 5 ou mais rolam um d4 para sofrer um efeito de status:",
+				{
+					"type": "table",
+					"headers": [
+						"d6",
+						"Status"
+					],
+					"rows": [
+						[
+							"1-2",
+							"Queimado"
+						],
+						[
+							"3-4",
+							"Congelado"
+						],
+						[
+							"5-6",
+							"Paralisado"
+						]
+					]
+				}
 			],
 			"higherLevels": "O dado de dano deste movimento muda para 2d8 no nível 5, 4d6 no nível 10 e 6d6 no nível 17."
 		},
