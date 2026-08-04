@@ -6670,7 +6670,7 @@
 			"id": "venom-drench",
 			"name": "Trampa Venenosa",
 			"description": [
-				"Empapas a una criatura con un extraño líquido venenoso. Obliga a una criatura a realizar una tirada de salvación de Constitución contra tu CD de Movimiento, quedando envenenada si falla. Si el objetivo ya está envenenado, este movimiento acierta automáticamente y hace que la criatura pase a recibir el doble del daño por veneno base al final de cada uno de sus turnos."
+				"Empapas a una criatura con un extraño líquido venenoso. Obliga a una criatura a realizar una tirada de salvación de Constitución contra tu CD de Movimiento, quedando envenenada si falla. Si el objetivo ya está envenenado, este movimiento acierta automáticamente y el objetivo reemplaza su estado de envenenado por el de gravemente envenenado."
 			]
 		},
 		{

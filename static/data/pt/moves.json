@@ -7247,7 +7247,7 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você cobre uma criatura com um líquido venenoso estranho. Force uma criatura a fazer um teste de CON contra sua CD de Movimento, ficando envenenada em caso de falha. Se o alvo já estiver envenenado, este movimento acerta automaticamente, fazendo com que a criatura passe a receber o dobro do dano base de veneno ao final de cada um de seus turnos."
+				"Você cobre uma criatura com um líquido venenoso estranho. Force uma criatura a fazer um teste de CON contra sua CD de Movimento, ficando envenenada em caso de falha. Se o alvo já estiver envenenado, este movimento acerta automaticamente, o alvo substitui sua condição de envenenado pela de gravemente envenenado."
 			]
 		},
 		{
