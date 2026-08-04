@@ -22337,9 +22337,12 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You focus in on an attack at the target’s throat. Make a melee attack, dealing 2d6 + MOVE dark damage on a hit. On hit, the target is unable to activate sound based attacks for its next 1d4 turns."
+				"You focus in on an attack at the target’s throat. Make a melee attack, dealing 2d6 + MOVE dark damage on a hit. On hit, the target is unable to activate sound-based moves for its next 1d4 turns."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
+			"optional": [
+				"On a hit, the target is unable to perform spells with verbal components for the same number of turns."
+			],
 			"damage": {
 				"dice": {
 					"1": "2d6",
