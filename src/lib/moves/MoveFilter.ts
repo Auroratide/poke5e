@@ -9,7 +9,7 @@ export class MoveFilter {
 	private filters: {
 		name: string,
 		type: string | "",
-		power: Attribute | "",
+		power: Attribute | "none" | "",
 		tm: number | undefined,
 		not: string[],
 		time: string | "",
@@ -54,7 +54,7 @@ export class MoveFilter {
 		return this
 	}
 
-	power(value: Attribute | ""): MoveFilter {
+	power(value: Attribute | "none" | ""): MoveFilter {
 		this.filters.power = value
 		return this
 	}
@@ -106,7 +106,7 @@ export class MoveFilter {
 	apply = (move: Move): boolean => {
 		return move.name.toLocaleLowerCase().includes(this.filters.name.toLocaleLowerCase())
 			&& (this.filters.type === "" || move.type === this.filters.type || (!PokemonType.isPokeType(move.type) && this.filters.type === "varies"))
-			&& (this.filters.power === "" || move.power.appliesToAttribute(this.filters.power))
+			&& (this.filters.power === "" || move.power.data === this.filters.power || move.power.appliesToAttribute(this.filters.power as Attribute))
 			&& (this.filters.tm == null || move.tm?.id.toString().startsWith(this.filters.tm.toString()))
 			&& !this.filters.not.includes(move.id)
 			&& (this.filters.time === "" || (

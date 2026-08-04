@@ -24,6 +24,11 @@
 		value: "varies",
 	} ]
 
+	const NoneOption = [ {
+		name: m.none(),
+		value: "none",
+	} ]
+
 	let filteredType: PokeType | "varies" | "" = ""
 	const typeOptions = AnyOption.concat(Object.values(PokemonType.list).map((it) => ({
 		value: it,
@@ -34,7 +39,7 @@
 	const powerOptions = AnyOption.concat(Object.values(Attributes.list).map((it) => ({
 		value: it.abbr,
 		name: uppercase(it.abbr),
-	})))
+	}))).concat(NoneOption)
 
 	let filteredTime: string | "" = ""
 	const timeOptions = AnyOption.concat(MoveTime.options().map((it) => ({

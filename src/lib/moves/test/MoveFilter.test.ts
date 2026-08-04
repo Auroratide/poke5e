@@ -112,6 +112,17 @@ const moves = [
 			contest: "beauty",
 		}),
 	}),
+	stubMove({
+		name: "Dragonfruit",
+		type: "steel",
+		power: "none",
+		time: "instantaneous",
+		range: "melee",
+		pp: 10,
+		contest: stubContestDetails({
+			contest: "beauty",
+		}),
+	}),
 ]
 
 test("name only", () => {
@@ -154,6 +165,16 @@ test("power only", () => {
 	expect(result[0]).toEqual(moves[2])
 })
 
+test("none power", () => {
+	const filter = new MoveFilter()
+		.power("none")
+
+	const result = moves.filter(filter.apply)
+
+	expect(result.length).toEqual(1)
+	expect(result[0]).toEqual(moves[9])
+})
+
 test("not only", () => {
 	const filter = new MoveFilter()
 		.not(["raspberry"])
@@ -180,9 +201,10 @@ test("time (other)", () => {
 
 	const result = moves.filter(filter.apply)
 
-	expect(result.length).toEqual(2)
+	expect(result.length).toEqual(3)
 	expect(result[0]).toEqual(moves[7])
 	expect(result[1]).toEqual(moves[8])
+	expect(result[2]).toEqual(moves[9])
 })
 
 test("rangeInFeet", () => {
@@ -202,7 +224,7 @@ test("rangeInFeet: melee", () => {
 
 	const result = moves.filter(filter.apply)
 
-	expect(result.length).toEqual(7)
+	expect(result.length).toEqual(8)
 })
 
 test("pp", () => {
