@@ -4456,7 +4456,28 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You lash out at your target with ruinous claws. Make a melee attack against a target, doing 2d6 + MOVE poison damage on a hit. On a hit, the creature must make a CON save against your Move DC. On failure, the target rolls a d6: on 1-2, the target is poisoned; on 3-4, the target is paralyzed; on 5-6, the target is put to sleep."
+				"You lash out at your target with ruinous claws. Make a melee attack against a target, doing 2d6 + MOVE poison damage on a hit. On a hit, the creature must make a CON save against your Move DC. On failure, the target rolls a d6, gaining the status condition as follows:",
+				{
+					"type": "table",
+					"headers": [
+						"d6",
+						"Condition"
+					],
+					"rows": [
+						[
+							"1-2",
+							"Poisoned"
+						],
+						[
+							"3-4",
+							"Paralyzed"
+						],
+						[
+							"5-6",
+							"Asleep"
+						]
+					]
+				}
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
 			"damage": {
@@ -22937,7 +22958,28 @@
 			"duration": "instantaneous",
 			"range": "self (30ft cone)",
 			"description": [
-				"You strike with a simultaneous three-beam attack. Each creature in a 30 foot cone, centered on you, must make a DEX save against your Move DC, taking 2d6 + MOVE normal damage on a fail, and half as much on a success. Targets that fail the save by 5 or more must roll a d4, gaining the status condition as follows: 1. The target becomes burned. 2. The target becomes frozen. 3. The target becomes paralyzed. 4. Must reroll until any number other than 4 appears."
+				"You strike with a simultaneous three-beam attack. Each creature in a 30 foot cone, centered on you, must make a DEX save against your Move DC, taking 2d6 + MOVE normal damage on a fail, and half as much on a success. Targets that fail the save by 5 or more must roll a d6, gaining the status condition as follows:",
+				{
+					"type": "table",
+					"headers": [
+						"d6",
+						"Conition"
+					],
+					"rows": [
+						[
+							"1-2",
+							"Burned"
+						],
+						[
+							"3-4",
+							"Frozen"
+						],
+						[
+							"5-6",
+							"Paralyzed"
+						]
+					]
+				}
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
 			"damage": {
