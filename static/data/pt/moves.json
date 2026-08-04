@@ -4386,7 +4386,7 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você golpeia com força em retaliação. Faça um ataque corpo a corpo, causando 1d8 + MOVE de dano sombrio em um acerto. Se o alvo causou dano a você no turno imediatamente anterior ao seu, dobre a rolagem de dano deste ataque."
+				"Você golpeia com força em retaliação. Faça um ataque corpo a corpo, causando 1d8 + MOVE de dano sombrio em um acerto. Se o alvo tiver causado qualquer dano a você desde o final do seu último turno, dobre o dano causado."
 			],
 			"higherLevels": "A rolagem de dado de dano deste movimento muda para 2d6 no nível 5, 4d4 no nível 10 e 3d10 no nível 17."
 		},
