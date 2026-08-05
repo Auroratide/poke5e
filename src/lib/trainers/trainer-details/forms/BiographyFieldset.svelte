@@ -5,15 +5,18 @@
 		TextField,
 		ImageField,
 		type ImageInputValue,
+		ColorField,
 	} from "$lib/ui/forms"
 	import type { TrainerBio } from "$lib/trainers/types"
 	import { m } from "$lib/site/i18n"
+	import type { Token } from "$lib/dnd/token"
 
 	const FIVE_HUNDRED_KB = 524288
 
 	export let biography: TrainerBio
 	export let originalAvatarSrc: string | undefined
 	export let avatar: ImageInputValue | undefined
+	export let token: Token
 	export let disabled: boolean = false
 	export let isValid = true
 
@@ -44,6 +47,9 @@
 		<div style:grid-area="field4"><TextField label="{m.homeRegion()}" bind:value={homeRegion} placeholder="{m.eG()} Sinnoh" {disabled} /></div>
 		<div style:grid-area="field5"><TextField label="{m.background()}" bind:value={background} placeholder="{m.eG()} Entertainer" {disabled} /></div>
 		<div style:grid-area="avatar" class="image-field"><ImageField label="{m.avatar()}" previousValue={originalAvatarSrc} bind:currentValue={avatar} maxbytes={FIVE_HUNDRED_KB} {disabled} bind:isValid /></div>
+	</div>
+	<div class="token-info">
+		<ColorField label="{m.tokenColor()}" bind:value={token.color} {disabled} />
 	</div>
 </Fieldset>
 

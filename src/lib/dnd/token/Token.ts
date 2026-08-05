@@ -1,3 +1,5 @@
+export const TOKEN_DEFAULTCOLOR = "#282631"
+
 export type Token = {
 	color: string,
 	crop: {
@@ -20,7 +22,7 @@ export type Token = {
 
 export const Token = {
 	create: (token: Partial<Token>): Token => ({
-		color: "#282631",
+		color: TOKEN_DEFAULTCOLOR,
 		crop: {
 			x: 0.5,
 			y: 0.5,

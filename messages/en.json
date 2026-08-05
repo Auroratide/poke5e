@@ -269,6 +269,7 @@
 	"regionsPlaceholder": "e.g. Kanto, Johto, Hoenn",
 	"allRegionsCommaSeparated": "All Regions (Comma-Separated)",
 	"regionsInstructions": "Native Region is the single region this Pokémon is from. All Regions includes other regions this pokémon has been found.",
+	"tokenColor": "Token Color",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},

@@ -3,6 +3,7 @@
 	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
 	import type { Trainer } from "./types"
 	import { Url } from "$lib/site/url"
+	import { TOKEN_DEFAULTCOLOR } from "$lib/dnd/token"
 
 	let {
 		list,
@@ -17,9 +18,11 @@
 	{#each list as trainer (trainer.id)}
 		<reorder-item>
 			<a class="bubble" href="{Url.trainers(trainer.readKey)}">
-				<div class="art">
+				<div class="art" style:--token-color="{trainer.token?.color ?? TOKEN_DEFAULTCOLOR}">
 					{#if trainer.avatar?.href}
-						<img class="img-avatar" src="{trainer.avatar?.href}" alt="{trainer.name}" />
+						<div class="img-avatar-container">
+							<img class="img-avatar" src="{trainer.avatar?.href}" alt="{trainer.name}" />
+						</div>
 					{:else}
 						<div class="default-avatar">{trainer.name.slice(0, 2)}</div>
 					{/if}
@@ -80,12 +83,20 @@
 		/* margin-inline-end: 0.5em; */
 	}
 
-	.art img {
+	.img-avatar-container {
+		background: var(--token-color);
 		display: block;
 		inline-size: 100%;
 		aspect-ratio: 1;
 		border-radius: 1.5em;
 		border: 0.125em solid var(--skin-bg);
+		overflow: hidden;
+	}
+
+	.img-avatar {
+		display: block;
+		inline-size: 100%;
+		aspect-ratio: 1;
 	}
 
 	.name {
@@ -119,7 +130,7 @@
 	}
 
 	.default-avatar {
-		background: red;
+		background: var(--token-color);
 		inline-size: 100%;
 		aspect-ratio: 1;
 		border-radius: 1.5em;

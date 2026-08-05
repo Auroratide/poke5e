@@ -95,7 +95,7 @@
 
 <Form onsubmit={endEdit} {saving}>
 	<BasicInfoFieldset bind:name bind:level bind:ac bind:maxHp bind:maxHitDice {disabled} />
-	<BiographyFieldset bind:biography bind:avatar={avatarToUpload} bind:isValid originalAvatarSrc={originalAvatar?.href} {disabled} />
+	<BiographyFieldset bind:biography bind:avatar={avatarToUpload} bind:token bind:isValid originalAvatarSrc={originalAvatar?.href} {disabled} />
 	<AttributesFieldset bind:values={attributes} {disabled} />
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} />
 	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
