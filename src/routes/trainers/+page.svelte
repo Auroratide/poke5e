@@ -11,7 +11,7 @@
 	import { trainers, type TrainerListStore, type TrainerStore } from "$lib/trainers/trainers"
 	import { PageAction } from "$lib/trainers/page-action"
 	import AddPokemonCard from "$lib/trainers/AddPokemonCard.svelte"
-	import TrainerList from "$lib/trainers/TrainerList.svelte"
+	import TrainerNavigation from "$lib/trainers/TrainerNavigation.svelte"
 	import NewTrainerCard from "$lib/trainers/NewTrainerCard.svelte"
 	import RemovePokemonCard from "$lib/trainers/pokemon-details/RemovePokemonCard.svelte"
 	import EditPokemonCard from "$lib/trainers/pokemon-details/EditPokemonCard.svelte"
@@ -113,7 +113,7 @@
 						<Loader />
 					{:then trainerList}
 						{#if trainerList}
-							<TrainerList trainers={trainerList} showGetStarted={action == null} />
+							<TrainerNavigation trainers={trainerList} showGetStarted={action == null} />
 						{/if}
 					{:catch error}
 						<ErrorMessage error="{error}" action="Loading Trainer List" />
