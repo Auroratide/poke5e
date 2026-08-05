@@ -11,6 +11,8 @@
 	import { m } from "$lib/site/i18n"
 	import { TagList, TagSelection } from "$lib/poke5e/tags"
 	import { trainers as trainerStore } from "./trainers"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
+	import TrainerList from "./TrainerList.svelte"
 
 	const allTags = trainerStore.tags()
 
@@ -57,14 +59,17 @@
 {#if hasNoTrainers}
 	{#if showGetStarted}<GetStarted />{/if}
 {:else}
-	<!-- <TrainerList list={filtered} onreorder={() => {}} /> -->
-	<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$trainerListSorter} headers={[ {
-		key: "name", name: m.name(), ratio: 1, sort: byStringField(it => it.name),
-	} ]}>
-		<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
-			<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.trainers(item.readKey)}">{item.name}</a></BubbleRow.Cell>
-		</BubbleRow.Row>
-	</SortableTable>
+	{#if FeatureToggles.SortableTrainers()}
+		<TrainerList list={filtered} onreorder={() => {}} />
+	{:else}
+		<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$trainerListSorter} headers={[ {
+			key: "name", name: m.name(), ratio: 1, sort: byStringField(it => it.name),
+		} ]}>
+			<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
+				<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.trainers(item.readKey)}">{item.name}</a></BubbleRow.Cell>
+			</BubbleRow.Row>
+		</SortableTable>
+	{/if}
 {/if}
 
 <style>
