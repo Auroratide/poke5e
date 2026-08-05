@@ -1550,6 +1550,12 @@
 			"attack": {
 				"scope": "melee"
 			},
+			"save": {
+				"dc": "MOVE",
+				"attribute": [
+					"str"
+				]
+			},
 			"damage": {
 				"dice": {
 					"1": "1d4",
@@ -2560,7 +2566,7 @@
 			"duration": "1 minute, concentration",
 			"range": "self",
 			"description": [
-				"You pump yourself up, increasing your adrenaline. For the next minute, choose to add +1 to your attack rolls OR +1 to AC. This move can be stacked to a maximum of +5 for either choice."
+				"You pump yourself up, increasing your adrenaline. For the next minute, choose to add +1 to your attack rolls OR +1 to AC. This move can be stacked to a maximum of +5 of the initial choice."
 			],
 			"tm": {
 				"id": 8,
@@ -4124,9 +4130,24 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You lash out at a target with vine or claw or blade. Make a melee roll on a target, doing 1d8 + MOVE on a successful hit."
+				"You lash out at a target with vine or claw or blade. Make a melee attack roll on a target, doing 1d8 + MOVE normal damage on a successful hit."
 			],
-			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17."
+			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
+			"damage": {
+				"dice": {
+					"1": "1d8",
+					"5": "2d6",
+					"10": "4d4",
+					"17": "3d10"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"normal"
+				]
+			},
+			"attack": {
+				"scope": "melee"
+			}
 		},
 		{
 			"id": "dark-pulse",
@@ -4399,7 +4420,7 @@
 			"duration": "1 round, charge",
 			"range": "80ft",
 			"description": [
-				"You burrow underground, disappearing from view before striking from underneath a target. When you activate this move, you use 10 feet of your movement to burrow underground (ignoring difficult terrain) and remain there until your next turn. During this time, you are immune to the damage and effects of any move. If you have no remaining movement or are grappled/restrained before activating this move, the move fails. On your next turn, you emerge from the ground and make a melee attack on a creature in range, with advantage, doing 2d8 + MOVE ground damage on a successful hit. If the target has Tremorsense, the attack is not rolled with advantage."
+				"You burrow underground, disappearing from view before striking from underneath a target. When you activate this move, you use 10 feet of your movement to burrow underground (ignoring difficult terrain) and remain there until your next turn. During this time, you are immune to the damage and effects of any move. If you have no remaining movement or are grappled/restrained before activating this move, the move fails. On your next turn, you use your action to emerge from the ground and make a melee attack on a creature in range, with advantage, doing 2d8 + MOVE ground damage on a successful hit. If the target has Tremorsense, the attack is not rolled with advantage."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
 			"damage": {
@@ -4435,7 +4456,28 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You lash out at your target with ruinous claws. Make a melee attack against a target, doing 2d6 + MOVE poison damage on a hit. On a hit, the creature must make a CON save against your Move DC. On failure, the target rolls a d6: on 1-2, the target is poisoned; on 3-4, the target is paralyzed; on 5-6, the target is put to sleep."
+				"You lash out at your target with ruinous claws. Make a melee attack against a target, doing 2d6 + MOVE poison damage on a hit. On a hit, the creature must make a CON save against your Move DC. On failure, the target rolls a d6, gaining the status condition as follows:",
+				{
+					"type": "table",
+					"headers": [
+						"d6",
+						"Condition"
+					],
+					"rows": [
+						[
+							"1-2",
+							"Poisoned"
+						],
+						[
+							"3-4",
+							"Paralyzed"
+						],
+						[
+							"5-6",
+							"Asleep"
+						]
+					]
+				}
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
 			"damage": {
@@ -5022,9 +5064,7 @@
 			"id": "dragon-cheer",
 			"name": "Dragon Cheer",
 			"type": "dragon",
-			"power": [
-				"cha"
-			],
+			"power": "none",
 			"time": "1 bonus action",
 			"pp": 5,
 			"duration": "1 minute",
@@ -7217,7 +7257,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You flail about with a wild strike that increases in power the more injured you are. Make a melee attack roll against a creature, doing 1d6 + MOVE normal damage on a hit. If you are below 50% of your maximum health, double the damage. If you are at 10% or below of your maximum health, triple the damage. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities."
+				"You flail about with a wild strike that increases in power the more injured you are. Make a melee attack roll against a creature, doing 1d6 + MOVE normal damage on a hit. If you are below 50% of your maximum health, double the damage. If you are at 10% or below of your maximum health, triple the damage instead. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17.",
 			"damage": {
@@ -11062,7 +11102,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You strike with an ivy-wrapped cudgel. Make a melee attack, dealing 4d4 + MOVE grass damage on a hit. When used by Ogerpon, the type of this attack and damage changes to that of the mask it is wearing:",
+				"You strike with an ivy-wrapped cudgel. Make a melee attack, dealing 4d4 + MOVE grass damage on a hit. Ivy Cudgel scores a critical hit on 19s and 20s. When used by Ogerpon, the type of this attack and damage changes to that of the mask it is wearing:",
 				{
 					"type": "table",
 					"headers": [
@@ -11894,6 +11934,12 @@
 				"modifier": "MOVE",
 				"type": [
 					"fairy"
+				]
+			},
+			"save": {
+				"dc": "MOVE",
+				"attribute": [
+					"dex"
 				]
 			}
 		},
@@ -13628,7 +13674,7 @@
 			"duration": "1 minute",
 			"range": "self (5ft radius)",
 			"description": [
-				"You cover yourself and all allies around you with thick mud, reducing the amount of electric damage taken for anyone affected. For the duration, you and any ally in range (when you initially activated this move) have resistance to electric-type attacks. If you were already resistant, you are now immune. If you were vulnerable, you now take regular damage. If you are immune to electric- type moves already, nothing happens."
+				"You cover yourself and all allies around you with thick mud, reducing the amount of electric damage taken for anyone affected. For the duration, you and any ally in range (when you initially activated this move) have resistance to electric-type attacks. If an affected creature was already resistant, it is now immune. If it was vulnerable, it now takes normal damage. If it was immune to electric-type moves already, nothing happens."
 			]
 		},
 		{
@@ -13779,7 +13825,7 @@
 			"duration": "instantaneous",
 			"range": "60ft",
 			"description": [
-				"You attack by emitting mystical power. Make a ranged attack, dealing 1d12 + MOVE psychic damage on a hit. If the attack hit, you gain +1 to all attack rolls made with WIS as the Move Power until the end of the encounter or until switched out. If the attack missed, you gain +1 AC until the end of the encounter or until switched out. The sum of these bonuses cap at +5 total."
+				"You attack by emitting mystical power. Make a ranged attack, dealing 1d12 + MOVE psychic damage on a hit. If the attack hit, you gain +1 to all attack rolls made with INT, WIS, or CHA as the Move Power until the end of the encounter or until switched out. If the attack missed, you gain +1 AC until the end of the encounter or until switched out. The sum of these bonuses cap at +5 total."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
 			"damage": {
@@ -14185,9 +14231,7 @@
 			"id": "no-retreat",
 			"name": "No Retreat",
 			"type": "fighting",
-			"power": [
-				"str"
-			],
+			"power": "none",
 			"time": "1 action",
 			"pp": 3,
 			"duration": "1 minute",
@@ -14200,10 +14244,7 @@
 			"id": "noble-roar",
 			"name": "Noble Roar",
 			"type": "normal",
-			"power": [
-				"str",
-				"cha"
-			],
+			"power": "none",
 			"time": "1 reaction",
 			"pp": 3,
 			"duration": "instantaneous",
@@ -14718,7 +14759,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You strike hard in retaliation. Make a melee attack, dealing 1d8 + MOVE dark damage on a hit. If the target damaged you on the turn immediately before yours, double the dice roll for the damage of this attack."
+				"You strike hard in retaliation. Make a melee attack, dealing 1d8 + MOVE dark damage on a hit. If the target has dealt any damage to you since the end of your last turn, double the damage you deal."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
 			"tm": {
@@ -17028,7 +17069,7 @@
 					"10": "3d10",
 					"17": "4d12"
 				},
-				"modifier": "MOVE",
+				"modifier": "MOVE + STAB",
 				"type": [
 					"normal",
 					"fighting",
@@ -22317,9 +22358,12 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You focus in on an attack at the target’s throat. Make a melee attack, dealing 2d6 + MOVE dark damage on a hit. On hit, the target is unable to activate sound based attacks for its next 1d4 turns."
+				"You focus in on an attack at the target’s throat. Make a melee attack, dealing 2d6 + MOVE dark damage on a hit. On hit, the target is unable to activate sound-based moves for its next 1d4 turns."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
+			"optional": [
+				"On a hit, the target is unable to perform spells with verbal components for the same number of turns."
+			],
 			"damage": {
 				"dice": {
 					"1": "2d6",
@@ -22914,7 +22958,28 @@
 			"duration": "instantaneous",
 			"range": "self (30ft cone)",
 			"description": [
-				"You strike with a simultaneous three-beam attack. Each creature in a 30 foot cone, centered on you, must make a DEX save against your Move DC, taking 2d6 + MOVE normal damage on a fail, and half as much on a success. Targets that fail the save by 5 or more must roll a d4, gaining the status condition as follows: 1. The target becomes burned. 2. The target becomes frozen. 3. The target becomes paralyzed. 4. Must reroll until any number other than 4 appears."
+				"You strike with a simultaneous three-beam attack. Each creature in a 30 foot cone, centered on you, must make a DEX save against your Move DC, taking 2d6 + MOVE normal damage on a fail, and half as much on a success. Targets that fail the save by 5 or more must roll a d6, gaining the status condition as follows:",
+				{
+					"type": "table",
+					"headers": [
+						"d6",
+						"Condition"
+					],
+					"rows": [
+						[
+							"1-2",
+							"Burned"
+						],
+						[
+							"3-4",
+							"Frozen"
+						],
+						[
+							"5-6",
+							"Paralyzed"
+						]
+					]
+				}
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
 			"damage": {
@@ -23480,7 +23545,7 @@
 			"duration": "instantaneous",
 			"range": "20ft",
 			"description": [
-				"You drench a creature with an odd, poisonous liquid. Force a creature to make a CON save against your Move DC, becoming poisoned on a failure. If the target is already poisoned, this move automatically hits, causing the creature to now take double the base poison damage at the end of each of its turns."
+				"You drench a creature with an odd, poisonous liquid. Force a creature to make a CON save against your Move DC, becoming poisoned on a failure. If the target is already poisoned, this move automatically hits, and the target replaces its poisoned condition with badly poisoned."
 			],
 			"save": {
 				"attribute": [
@@ -23877,7 +23942,7 @@
 			"duration": "1 minute",
 			"range": "self (5ft radius)",
 			"description": [
-				"You soak yourself and all allies with water, reducing the amount of fire damage taken for anyone affected. For the duration, you and any ally in range (when you initially activated this move) have resistance to fire-type attacks. If you were already resistant, you are now immune. If you were vulnerable, you now take normal damage. If you are immune to fire-type moves already, nothing happens."
+				"You soak yourself and all allies with water, reducing the amount of fire damage taken for anyone affected. For the duration, you and any ally in range (when you initially activated this move) have resistance to fire-type attacks. If an affected creature was already resistant, it is now immune. If it was vulnerable, it now takes normal damage. If it was immune to fire-type moves already, nothing happens."
 			]
 		},
 		{
@@ -24382,7 +24447,7 @@
 			"duration": "1 minute",
 			"range": "self",
 			"description": [
-				"You get your adrenaline pumping and go into a frenzy. While worked up, you add +2 to all attack rolls. Your worked up status ends if you are incapacitated or if you have not attacked a hostile target since your last turn, or taken any damage since then."
+				"You get your adrenaline pumping and go into a frenzy. While worked up, you add +2 to all attack rolls. Your worked up status ends if you are incapacitated or if your turn ends and you have not attacked a hostile target since your last turn, or taken any damage since then."
 			],
 			"tm": {
 				"id": 1,

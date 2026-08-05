@@ -1565,7 +1565,28 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você ataca com garras destrutivas. Faça um ataque corpo a corpo, causando 2d6 + MOVIMENTO de dano de veneno em um acerto. O alvo deve fazer uma salvaguarda de CON; em falha, role 1d6: 1-2 envenenado, 3-4 paralisado, 5-6 adormecido."
+				"Você ataca com garras destrutivas. Faça um ataque corpo a corpo, causando 2d6 + MOVIMENTO de dano de veneno em um acerto. O alvo deve fazer uma salvaguarda de CON; em falha, role 1d6:",
+				{
+					"type": "table",
+					"headers": [
+						"d6",
+						"Status"
+					],
+					"rows": [
+						[
+							"1-2",
+							"Envenenado"
+						],
+						[
+							"3-4",
+							"Paralisado"
+						],
+						[
+							"5-6",
+							"Adormecido"
+						]
+					]
+				}
 			],
 			"higherLevels": "Os dados de dano deste movimento mudam para 2d8 no nível 5, 4d6 no nível 10 e 6d6 no nível 17."
 		},
@@ -3608,7 +3629,7 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você golpeia com uma clava envolta em hera. Faça um ataque corpo a corpo, causando 4d4 + MOVE de dano de grama em um acerto. Quando usado por Ogerpon, o tipo deste ataque e do dano muda de acordo com a máscara que ele está usando:",
+				"Você golpeia com uma clava envolta em hera. Faça um ataque corpo a corpo, causando 4d4 + MOVE de dano de grama em um acerto. Clava de Hera causa acerto crítico em 19 e 20. Quando usado por Ogerpon, o tipo deste ataque e do dano muda de acordo com a máscara que ele está usando:",
 				{
 					"type": "table",
 					"headers": [
@@ -4386,7 +4407,7 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você golpeia com força em retaliação. Faça um ataque corpo a corpo, causando 1d8 + MOVE de dano sombrio em um acerto. Se o alvo causou dano a você no turno imediatamente anterior ao seu, dobre a rolagem de dano deste ataque."
+				"Você golpeia com força em retaliação. Faça um ataque corpo a corpo, causando 1d8 + MOVE de dano sombrio em um acerto. Se o alvo tiver causado qualquer dano a você desde o final do seu último turno, dobre o dano causado."
 			],
 			"higherLevels": "A rolagem de dado de dano deste movimento muda para 2d6 no nível 5, 4d4 no nível 10 e 3d10 no nível 17."
 		},
@@ -7067,7 +7088,28 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você ataca com um triplo feixe simultâneo. Cada criatura em um cone de 9m deve fazer um teste de resistência de DEX contra sua CD de Move, sofrendo 2d6 + MOVE de dano normal em caso de falha, ou metade em caso de sucesso. Alvos que falharem por 5 ou mais rolam um d4 para sofrer um efeito de status: 1. queimado. 2. congelado. 3. paralisado. 4. rerrolar até sair outro número."
+				"Você ataca com um triplo feixe simultâneo. Cada criatura em um cone de 9m deve fazer um teste de resistência de DEX contra sua CD de Move, sofrendo 2d6 + MOVE de dano normal em caso de falha, ou metade em caso de sucesso. Alvos que falharem por 5 ou mais rolam um d4 para sofrer um efeito de status:",
+				{
+					"type": "table",
+					"headers": [
+						"d6",
+						"Status"
+					],
+					"rows": [
+						[
+							"1-2",
+							"Queimado"
+						],
+						[
+							"3-4",
+							"Congelado"
+						],
+						[
+							"5-6",
+							"Paralisado"
+						]
+					]
+				}
 			],
 			"higherLevels": "O dado de dano deste movimento muda para 2d8 no nível 5, 4d6 no nível 10 e 6d6 no nível 17."
 		},
@@ -7247,7 +7289,7 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você cobre uma criatura com um líquido venenoso estranho. Force uma criatura a fazer um teste de CON contra sua CD de Movimento, ficando envenenada em caso de falha. Se o alvo já estiver envenenado, este movimento acerta automaticamente, fazendo com que a criatura passe a receber o dobro do dano base de veneno ao final de cada um de seus turnos."
+				"Você cobre uma criatura com um líquido venenoso estranho. Force uma criatura a fazer um teste de CON contra sua CD de Movimento, ficando envenenada em caso de falha. Se o alvo já estiver envenenado, este movimento acerta automaticamente, o alvo substitui sua condição de envenenado pela de gravemente envenenado."
 			]
 		},
 		{
