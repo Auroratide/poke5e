@@ -14,6 +14,28 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.5",
+		description: [
+			"<strong>Pokémon</strong>: Fix Carvanha's moveset. It learns Poison Fang instead of Poison Sting.",
+			"<strong>Pokémon</strong>: Add some base speed to Gossifleur and Eldegoss.",
+			"<strong>Moves</strong>: And INT an CHA to the list of attributes that Mystical Power buffs.",
+			"<strong>Moves</strong>: Specify that Dig requires an action to reappear, like Fly.",
+			"<strong>Moves</strong>: Ivy Cudgel now expands critical hit range.",
+			"<strong>Moves</strong>: Revelation Dance now properly confers STAB in its calculations.",
+			"<strong>Moves</strong>: Clarify that the stacks of Bulk Up apply only to one of to-hit or AC.",
+			"<strong>Moves</strong>: Clarify Payback's bonus damage and activation condition.",
+			"<strong>Moves</strong>: Clarify the ending condition of Work Up.",
+			"<strong>Moves</strong>: Expand Throat Chop's scope to include all moves (not just attacks), and to optionally affect spells with verbal components.",
+			"<strong>Moves</strong>: Updated the status condition table for Tri Attack so as not to require rerolls on a 4.",
+			"<strong>Moves</strong>: Venom Drench now confers Badly Poisoned when the target is already poisoned.",
+			"<strong>Moves</strong>: Clarify that Flail does x3 damage, not x6, when at low health.",
+			"<strong>Moves</strong>: Added 'None' to the Move Power filter, so it is possible to find moves that specify no move power.",
+			"<strong>Reference</strong>: The Skilled Feat now allows 3 skills on pokémon instead of one, since Skill Expert already added one skill proficiency.",
+			"<strong>Reference</strong>: Added Legendary Feats to the list of Legendary/Boss Abilities.",
+			"<strong>Bugfix</strong>: Remove move powers from moves that do not use it (Dragon Cheer, Noble Roar, No Retreat).",
+			"<strong>Bugfix</strong>: Add to-hit and damage indicators to Cut.",
+		],
+	}, {
 		name: "v1.12.4",
 		description: [
 			"<strong>Bugfix</strong>: Fix Encounter Tool not generating pokemon when no region specified.",
