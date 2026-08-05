@@ -35,6 +35,7 @@ import { Stab, type StabBase } from "$lib/pokemon/stab"
 import { Ability } from "$lib/pokemon/ability"
 import { TagList } from "$lib/poke5e/tags"
 import { TransferCode } from "../pokemon-transfer"
+import { Token } from "$lib/dnd/token"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -243,6 +244,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			path: createEmptyChosenTrainerPath(),
 			feats: [],
 			tags: TagList.empty(),
+			token: Token.create({}),
 		}
 
 		const { data, error } = await this.supabase.rpc("new_trainer", {
@@ -319,6 +321,11 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_path_rank_4_name: toCreate.path.customFeatures.level15.name,
 			_path_rank_4_desc: toCreate.path.customFeatures.level15.description,
 			_tags: toCreate.tags,
+			_hit_dice_size: null,
+			_token_color: toCreate.token.color,
+			_token_crop_x: toCreate.token.crop.x,
+			_token_crop_y: toCreate.token.crop.y,
+			_token_crop_size: toCreate.token.crop.size,
 		}).single<{
 			ret_id: string,
 			ret_read_key: string,
@@ -419,6 +426,11 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_path_rank_4_name: info.path.customFeatures.level15.name,
 			_path_rank_4_desc: info.path.customFeatures.level15.description,
 			_tags: info.tags,
+			_hit_dice_size: null,
+			_token_color: info.token.color,
+			_token_crop_x: info.token.crop.x,
+			_token_crop_y: info.token.crop.y,
+			_token_crop_size: info.token.crop.size,
 		}).single<number>()
 
 		if (error) {
@@ -1200,6 +1212,11 @@ type TrainerRow = {
 	rank_performance: number,
 	rank_persuasion: number,
 	tags: string[],
+	hit_dice_size: string,
+	token_color: string,
+	token_crop_x: number,
+	token_crop_y: number,
+	token_crop_size: number,
 }
 
 const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name: string) => StorageResource) => ({
@@ -1308,6 +1325,14 @@ const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name
 	},
 	feats: [],
 	tags: row.tags,
+	token: Token.create({
+		color: row.token_color,
+		crop: {
+			x: row.token_crop_x,
+			y: row.token_crop_y,
+			size: row.token_crop_size,
+		},
+	}),
 })
 
 type AbilityItem = {

@@ -57,6 +57,8 @@
 	let avatarToUpload: ImageInputValue | undefined = undefined
 	let isValid = true
 	let tags = TagList.copy(trainer.tags)
+	let hitDiceSize = null
+	let token = structuredClone(trainer.token)
 
 	let inventory = structuredClone(trainer.inventory)
 
@@ -83,6 +85,8 @@
 				path: trainerPath,
 				feats,
 				tags,
+				hitDiceSize,
+				token,
 			},
 			updateAvatar: avatarToUpload,
 		})
