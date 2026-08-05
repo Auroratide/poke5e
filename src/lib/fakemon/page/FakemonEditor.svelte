@@ -40,7 +40,6 @@
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { m } from "$lib/site/i18n"
 	import { TagListField } from "$lib/poke5e/tags"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import { fakemonStore } from "../store"
 	import { HabitatFieldset } from "$lib/poke5e/habitat"
 
@@ -159,14 +158,10 @@
 	<AbilityPoolFieldset bind:value={abilityPool} {disabled} />
 	<MovePoolFieldset bind:value={movePool} {disabled} />
 	<EvolutionsFieldset species={species.id} bind:evolutions={evolutions} {allSpecies} {disabled} />
-	{#if FeatureToggles.FakemonBiomes()}
-		<HabitatFieldset bind:value={habitat} {disabled} />
-	{/if}
+	<HabitatFieldset bind:value={habitat} {disabled} />
 	<Fieldset title={m.description()}>
 		<MarkdownField label={m.generalNotes()} bind:value={notes} {disabled} placeholder={m.anyOtherImportantNotes()} rows={6} />
-		{#if FeatureToggles.Tagging()}
-			<TagListField label="{m.tags()}" bind:value={tags} possibleTags={$allTags} />
-		{/if}
+		<TagListField label="{m.tags()}" bind:value={tags} possibleTags={$allTags} />
 	</Fieldset>
 	<ActionArea>
 		<Button on:click={cancel} variant="subtle" {disabled}>{m.cancel()}</Button>

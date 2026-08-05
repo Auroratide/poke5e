@@ -23,7 +23,6 @@
 	import { KnownAbilitiesInfo } from "$lib/pokemon/ability"
 	import DmInfo from "./DmInfo.svelte"
 	import { TagList, TagListInfo } from "$lib/poke5e/tags"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	const dispatch = createEventDispatcher()
 
@@ -140,12 +139,9 @@
 		<DmInfo {pokemon} {species} />
 	</Details>
 </section>
-
-{#if FeatureToggles.Tagging()}
-	<section>
-		<TagListInfo value={pokemon.tags} onsave={onSaveTags} possibleTags={pokemonTags} />
-	</section>
-{/if}
+<section>
+	<TagListInfo value={pokemon.tags} onsave={onSaveTags} possibleTags={pokemonTags} />
+</section>
 
 <style>
 	section {

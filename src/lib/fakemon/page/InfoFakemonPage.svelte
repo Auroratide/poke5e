@@ -8,7 +8,6 @@
 	import { PageAction } from "./actions"
 	import { m } from "$lib/site/i18n"
 	import { TagList, TagListInfo } from "$lib/poke5e/tags"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import { fakemonStore } from "../store"
 
 	const allTags = fakemonStore.tags()
@@ -27,11 +26,9 @@
 <Title value="{$fakemon.value.data.species.name}" />
 <PokemonSpeciesCard value={$fakemon.value.species} dismissToHref="{Url.fakemon()}">
 	<div slot="footer">
-		{#if FeatureToggles.Tagging()}
-			<section>
-				<TagListInfo value={$fakemon.value.tags} onsave={onSaveTags} possibleTags={$allTags} />
-			</section>
-		{/if}
+		<section>
+			<TagListInfo value={$fakemon.value.tags} onsave={onSaveTags} possibleTags={$allTags} />
+		</section>
 		<ActionArea>
 			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.accessKey)}" variant="subtle">{m.accessKey()}</Button>
 			<Button href="{Url.fakemon($fakemon.value.data.readKey, PageAction.remove)}" variant="danger">{m.remove()}</Button>

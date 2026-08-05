@@ -4,9 +4,9 @@ function toggle(name: string) {
 	return () => isFeatureActive(name)
 }
 
-function active() {
-	return () => true
-}
+// function active() {
+// 	return () => true
+// }
 
 export function isFeatureActive(feature: string): boolean {
 	return browser ? localStorage.getItem(`feature-toggle::${feature}`) != null : false
@@ -24,9 +24,4 @@ export function setFeatureActive(feature: string, isActive: boolean) {
 // example: FakemonEvolutions: toggle("FakemonEvolutions"),
 export const FeatureToggles = {
 	OverrideMaintenance: toggle("OverrideMaintenance"),
-	TransferPokemon: active(),
-	NewReferenceList: active(),
-	Tagging: active(),
-	FakemonBiomes: active(),
-	LevelUp: active(),
 }

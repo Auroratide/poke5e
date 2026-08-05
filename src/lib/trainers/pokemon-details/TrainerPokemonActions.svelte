@@ -8,7 +8,6 @@
 	import type { TrainerStore } from "../trainers"
 	import type { TrainerPokemon } from "../types"
 	import { m } from "$lib/site/i18n"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	const evolutions = EvolutionStore.all()
 
@@ -21,13 +20,13 @@
 
 <ActionArea>
 	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.removePokemon)}" variant="danger">{m.remove()}</Button>
-	{#if FeatureToggles.LevelUp() && pokemon.level.isBelowMax()}
+	{#if pokemon.level.isBelowMax()}
 		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.levelUp)}" variant="subtle">{m.levelUp()}</Button>
 	{/if}
 	{#if ($evolutions?.evolvesTo(species.id).length ?? 0) > 0}
 		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="subtle">{m.evolve()}</Button>
 	{/if}
-	{#if FeatureToggles.TransferPokemon() && canEdit}
+	{#if canEdit}
 		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.transferPokemon)}" variant="subtle">{m.transfer()}</Button>
 	{/if}
 	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.restPokemon)}" variant="success">{m.rest()}</Button>

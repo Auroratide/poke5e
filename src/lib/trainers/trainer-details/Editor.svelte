@@ -30,7 +30,6 @@
 	import { Resource } from "$lib/poke5e/resource"
 	import { TagList, TagListField } from "$lib/poke5e/tags"
 	import { trainers } from "../trainers"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	const allTags = trainers.tags()
 	
@@ -102,9 +101,7 @@
 	<InventoryFieldset bind:money bind:inventory {disabled} />
 	<Fieldset title="{m.general()}">
 		<MarkdownField label="{m.description()}" bind:value={description} placeholder="{m["trainers.generalInfoAboutThisTrainer"]()}..." {disabled} />
-		{#if FeatureToggles.Tagging()}
-			<TagListField label="{m.tags()}" bind:value={tags} possibleTags={$allTags} />
-		{/if}
+		<TagListField label="{m.tags()}" bind:value={tags} possibleTags={$allTags} />
 	</Fieldset>
 	<ActionArea error={!isValid ? "One or more fields above have an issue." : undefined}>
 		<Button on:click={cancel} variant="subtle" {disabled}>{m.cancel()}</Button>

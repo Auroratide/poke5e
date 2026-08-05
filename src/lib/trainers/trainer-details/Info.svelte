@@ -17,7 +17,6 @@
 	import { FeatsInfo } from "$lib/dnd/feats"
 	import { AllFeats } from "$lib/poke5e/feats"
 	import { m } from "$lib/site/i18n"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import { TagList, TagListInfo } from "$lib/poke5e/tags"
 	import { trainers } from "../trainers"
 
@@ -108,11 +107,9 @@
 		<Paragraphs value={trainer.description} />
 	</section>
 {/if}
-{#if FeatureToggles.Tagging()}
-	<section>
-		<TagListInfo value={trainer.tags} onsave={onSaveTags} possibleTags={$allTags} />
-	</section>
-{/if}
+<section>
+	<TagListInfo value={trainer.tags} onsave={onSaveTags} possibleTags={$allTags} />
+</section>
 
 <style>
 	.column {

@@ -30,7 +30,6 @@
 	import { Resource } from "$lib/poke5e/resource"
 	import { StabFieldset } from "$lib/pokemon/stab"
 	import { KnownAbilitiesFieldset } from "$lib/pokemon/ability"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import { TagList, TagListField } from "$lib/poke5e/tags"
 
 	const dispatch = createEventDispatcher()
@@ -128,9 +127,7 @@
 	<HeldItemsFieldset bind:items {disabled} />
 	<Fieldset title="{m.general()}">
 		<MarkdownField label="{m.notes()}" bind:value={notes} placeholder="{m.generalNotesPlaceholder()}" {disabled} />
-		{#if FeatureToggles.Tagging()}
-			<TagListField label="{m.tags()}" bind:value={tags} possibleTags={pokemonTags} />
-		{/if}
+		<TagListField label="{m.tags()}" bind:value={tags} possibleTags={pokemonTags} />
 	</Fieldset>
 	<FormDetails title="Advanced">
 		<TypeField bind:value={type.data} {disabled} />

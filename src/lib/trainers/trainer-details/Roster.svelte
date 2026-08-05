@@ -10,7 +10,6 @@
 	import { m } from "$lib/site/i18n"
 	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
 	import * as list from "$lib/utils/list"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import { TagList, TagSelection } from "$lib/poke5e/tags"
 
 	export let trainer: TrainerStore
@@ -67,13 +66,9 @@
 	</span>
 </ListHeading>
 <div class="space-bottom">
-	{#if FeatureToggles.Tagging()}
-		<SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
-			<TagSelection bind:checked={filteredTags} tags={pokemonTags} />
-		</SearchField>
-	{:else}
-		<SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters} />
-	{/if}
+	<SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
+		<TagSelection bind:checked={filteredTags} tags={pokemonTags} />
+	</SearchField>
 </div>
 <div class="relative"><!-- Needed for the > indicators to appear outside the scroll box -->
 	<div class="scrollable">

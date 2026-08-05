@@ -10,7 +10,6 @@
 	import { Level } from "$lib/ui/elements"
 	import type { InventoryItem, TrainerInfo } from "../types"
 	import { m } from "$lib/site/i18n"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	export let trainer: TrainerStore
 	$: canEdit = $trainer.update != null
@@ -40,7 +39,7 @@
 	<Info trainer={$trainer.info} editable={canEdit} on:update={onUpdate} on:update-item={onUpdateItem} on:update-tags={onUpdateTags} />
 	<ActionArea>
 		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.removeTrainer)}" variant="danger">{m.remove()}</Button>
-		{#if FeatureToggles.LevelUp() && $trainer.info.level.isBelowMax() && $trainer.update}
+		{#if $trainer.info.level.isBelowMax() && $trainer.update}
 			<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.levelUp)}" variant="subtle">{m.levelUp()}</Button>
 		{/if}
 		<Button href="{Url.trainers($trainer.info.readKey, undefined, PageAction.accessKey)}" variant="subtle">

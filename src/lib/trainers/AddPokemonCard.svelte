@@ -10,7 +10,6 @@
 	import type { Readable } from "svelte/store"
 	import { Url } from "$lib/site/url"
 	import SearchByTransferCode from "./pokemon-transfer/SearchByTransferCode.svelte"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import type { TransferCode } from "./pokemon-transfer"
 	import { ActionArea } from "$lib/ui/forms"
 	import { m } from "$lib/site/i18n"
@@ -69,14 +68,12 @@
 				{/if}
 			</div>
 		</section>
-		{#if FeatureToggles.TransferPokemon()}
-			<section>
-				<h2>Transfer Code</h2>
-				<p>Or, you can accept a pokemon from another trainer using a Transfer Code.</p>
-				<SearchByTransferCode onsubmit={onTransferSubmit} error={transferError} searching={saving} />
-				<div class="min-height"></div>
-			</section>
-		{/if}
+		<section>
+			<h2>Transfer Code</h2>
+			<p>Or, you can accept a pokemon from another trainer using a Transfer Code.</p>
+			<SearchByTransferCode onsubmit={onTransferSubmit} error={transferError} searching={saving} />
+			<div class="min-height"></div>
+		</section>
 	{:else}
 		<section>
 			<p>You do not have permission to add pokemon to this trainer.</p>

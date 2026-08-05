@@ -10,7 +10,6 @@
 	import GetStarted from "./GetStarted.svelte"
 	import { m } from "$lib/site/i18n"
 	import { TagList, TagSelection } from "$lib/poke5e/tags"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import { trainers as trainerStore } from "./trainers"
 
 	const allTags = trainerStore.tags()
@@ -51,13 +50,9 @@
 	<Button slot="action" href={Url.trainers(undefined, undefined, PageAction.newTrainer)}>+ {m["trainers.newTrainer"]()}</Button>
 </ListHeading>
 <div class="space-bottom">
-	{#if FeatureToggles.Tagging()}
-		<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
-			<TagSelection bind:checked={filteredTags} tags={$allTags} />
-		</SearchField>
-	{:else}
-		<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters} />
-	{/if}
+	<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
+		<TagSelection bind:checked={filteredTags} tags={$allTags} />
+	</SearchField>
 </div>
 {#if hasNoTrainers}
 	{#if showGetStarted}<GetStarted />{/if}
