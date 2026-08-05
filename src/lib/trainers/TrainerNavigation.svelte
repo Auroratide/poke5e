@@ -62,6 +62,7 @@
 {#if hasNoTrainers}
 	{#if showGetStarted}<GetStarted />{/if}
 {:else}
+	<!-- <TrainerList list={filtered} onreorder={() => {}} /> -->
 	<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$trainerListSorter} headers={[ {
 		key: "name", name: m.name(), ratio: 1, sort: byStringField(it => it.name),
 	} ]}>

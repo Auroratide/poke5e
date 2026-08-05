@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { ReadWriteKey, TrainerPokemon } from "../types"
-	import { ResourceBar } from "$lib/ui/elements"
+	import { DragHandle, ResourceBar } from "$lib/ui/elements"
 	import { Url } from "$lib/site/url"
 	import { ItemStore } from "$lib/items"
 	import { getItemDetails } from "$lib/pokemon/held-items"
@@ -9,7 +9,6 @@
 	import { GenderIcon } from "$lib/pokemon/gender"
 	import { SpeciesSprite } from "$lib/poke5e/species/media"
 	import { WithSpecies } from "$lib/poke5e/species"
-	import { DragIcon } from "$lib/ui/icons"
 
 	export let trainer: ReadWriteKey
 	export let pokemon: TrainerPokemon
@@ -42,9 +41,7 @@
 		<span style:grid-area="lv" class="right">Lv. {pokemon.level.data}</span>
 	</a>
 	{#if editable}
-		<reorder-handle class="drag-container">
-			<span class="drag-icon"><DragIcon /></span>
-		</reorder-handle>
+		<DragHandle />
 	{/if}
 </div>
 
@@ -136,21 +133,6 @@
 	.selectable-bubble {
 		flex: 1;
 		max-inline-size: 75%;
-	}
-	.drag-container {
-		padding: 0.5em;
-	}
-
-	.drag-container:hover .drag-icon {
-		opacity: 1;
-	}
-
-	.drag-icon {
-		display: flex;
-		inline-size: 1.5em;
-		opacity: 0.667;
-		align-items: center;
-		justify-content: center;
 	}
 
 	@keyframes jump {
