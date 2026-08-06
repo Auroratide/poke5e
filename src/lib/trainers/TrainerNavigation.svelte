@@ -13,6 +13,8 @@
 	import { trainers as trainerStore } from "./trainers"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import TrainerList from "./TrainerList.svelte"
+	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
+	import * as list from "$lib/utils/list"
 
 	const allTags = trainerStore.tags()
 
@@ -45,6 +47,17 @@
 	const resetFilters = () => {
 		filteredTags = []
 	}
+
+	let reordering = $state(false)
+	const onReorder = async (e: CustomEvent<ReorderListChangeEventDetail>) => {
+		if (e.detail.oldIndex === e.detail.newIndex) return
+
+		reordering = true
+		const newList = list.reorderOne($trainers, e.detail.oldIndex, e.detail.newIndex)
+		trainers.reorder(newList).finally(() => {
+			reordering = false
+		})
+	}
 </script>
 
 <ListHeading title={m["trainers.trainerList"]()} target="/trainers">
@@ -60,7 +73,7 @@
 	{#if showGetStarted}<GetStarted />{/if}
 {:else}
 	{#if FeatureToggles.SortableTrainers()}
-		<TrainerList list={filtered} onreorder={() => {}} />
+		<TrainerList list={filtered} onreorder={onReorder} saving={reordering} />
 	{:else}
 		<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$trainerListSorter} headers={[ {
 			key: "name", name: m.name(), ratio: 1, sort: byStringField(it => it.name),

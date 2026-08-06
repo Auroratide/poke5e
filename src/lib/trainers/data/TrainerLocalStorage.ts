@@ -4,6 +4,14 @@ import type { PokemonId, ReadWriteKey } from "../types"
 const getReadKeys = (): ReadWriteKey[] =>
 	localStorage.getItem("trainers")?.split(",")?.filter((it) => it !== "") ?? []
 
+const reorder = (readKeys: ReadWriteKey[]) => {
+	const existingKeys = getReadKeys()
+
+	const leftOut = existingKeys.filter((existing) => !readKeys.includes(existing))
+
+	localStorage.setItem("trainers", readKeys.concat(leftOut).join(","))
+}
+
 const addReadKey = (key: ReadWriteKey) => {
 	const previous = getReadKeys()
 	const newList = [...new Set(previous.concat(key))]
@@ -46,4 +54,5 @@ export const TrainerLocalStorage = {
 	addWriteKey,
 	removeWriteKey,
 	tags,
+	reorder,
 } as const

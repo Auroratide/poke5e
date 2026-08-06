@@ -350,6 +350,10 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 	}
 
+	reorderTrainers = async (orderReadKeys: ReadWriteKey[]) => {
+		TrainerLocalStorage.reorder(orderReadKeys)
+	}
+
 	updateTrainerInfo = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, info: TrainerInfo): Promise<boolean> => {
 		const { data, error } = await this.supabase.rpc("update_trainer", {
 			_write_key: writeKey,

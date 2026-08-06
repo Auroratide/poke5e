@@ -80,3 +80,118 @@ describe("fromCommaOrNewlineString", () => {
 		expect(result).toEqual(["one", "two", "three"])
 	})
 })
+
+describe("sortAccordingTo", () => {
+	test("", () => {
+		const originalList = [ {
+			id: "2",
+		}, {
+			id: "4",
+		}, {
+			id: "3",
+		}, {
+			id: "1",
+		} ]
+
+		const accordingTo = [ {
+			x: "1",
+		}, {
+			x: "4",
+		}, {
+			x: "3",
+		}, {
+			x: "2",
+		} ]
+
+		const result = list.sortAccordingTo(originalList, accordingTo, (it) => it.id, (it) => it.x)
+
+		expect(result).toEqual([ {
+			id: "1",
+		}, {
+			id: "4",
+		}, {
+			id: "3",
+		}, {
+			id: "2",
+		} ])
+	})
+})
+
+describe("replaceOrAddById", () => {
+	test("exists", () => {
+		const originalList = [ {
+			id: "2",
+			value: 5,
+		}, {
+			id: "4",
+			value: 6,
+		}, {
+			id: "3",
+			value: 7,
+		}, {
+			id: "1",
+			value: 8,
+		} ]
+
+		const replacement = {
+			id: "4",
+			value: 4,
+		}
+
+		const result = list.replaceOrAddById(originalList, replacement, (it) => it.id)
+
+		expect(result).toEqual([ {
+			id: "2",
+			value: 5,
+		}, {
+			id: "4",
+			value: 4,
+		}, {
+			id: "3",
+			value: 7,
+		}, {
+			id: "1",
+			value: 8,
+		} ])
+	})
+
+	test("not exists", () => {
+		const originalList = [ {
+			id: "2",
+			value: 5,
+		}, {
+			id: "4",
+			value: 6,
+		}, {
+			id: "3",
+			value: 7,
+		}, {
+			id: "1",
+			value: 8,
+		} ]
+
+		const replacement = {
+			id: "5",
+			value: 4,
+		}
+
+		const result = list.replaceOrAddById(originalList, replacement, (it) => it.id)
+
+		expect(result).toEqual([ {
+			id: "2",
+			value: 5,
+		}, {
+			id: "4",
+			value: 6,
+		}, {
+			id: "3",
+			value: 7,
+		}, {
+			id: "1",
+			value: 8,
+		}, {
+			id: "5",
+			value: 4,
+		} ])
+	})
+})

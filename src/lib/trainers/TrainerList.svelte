@@ -8,13 +8,15 @@
 	let {
 		list,
 		onreorder,
+		saving = false,
 	}: {
 		list: Trainer[],
 		onreorder: (event: CustomEvent<ReorderListChangeEventDetail>) => void,
+		saving?: boolean,
 	} = $props()
 </script>
 
-<reorder-list class="trainer-list" oncommit={onreorder}>
+<reorder-list class="trainer-list" oncommit={onreorder} class:saving>
 	{#each list as trainer (trainer.id)}
 		<reorder-item>
 			<a class="bubble" href="{Url.trainers(trainer.readKey)}">
@@ -36,7 +38,9 @@
 					{/if}
 				</div>
 			</a>
-			<DragHandle />
+			<div class="handle-container">
+				<DragHandle inert={saving} />
+			</div>
 		</reorder-item>
 	{/each}
 </reorder-list>
@@ -141,5 +145,13 @@
 		font-weight: bold;
 		border: 0.125em solid var(--skin-bg);
 		color: var(--skin-bg-text);
+	}
+
+	.saving {
+		opacity: 0.875;
+	}
+
+	.saving .handle-container {
+		cursor: wait;
 	}
 </style>

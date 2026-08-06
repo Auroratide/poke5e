@@ -37,6 +37,10 @@ test("add, get, update", async () => {
 	const trainerToAdd = {
 		name: "Renibel",
 		description: "Likes cryptids.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
 	}
 
 	const firstSpeciesToAdd = stubPokemonSpecies({
@@ -73,6 +77,10 @@ test("getting abilities", async () => {
 	const trainerToAdd = {
 		name: "Renibel",
 		description: "Likes cryptids.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
 	}
 
 	const speciesToAdd = stubPokemonSpecies({
@@ -104,6 +112,10 @@ test("backwards compatibility of abilities", async () => {
 	const trainerToAdd = {
 		name: "Renibel",
 		description: "Likes cryptids.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
 	}
 
 	const speciesToAdd = stubPokemonSpecies({
@@ -130,6 +142,10 @@ test("reordering pokemon", async () => {
 	const trainerToAdd = {
 		name: "Renibel",
 		description: "Likes cryptids.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
 	}
 
 	const firstSpeciesToAdd = stubPokemonSpecies({
@@ -162,6 +178,10 @@ test("tags", async () => {
 	const trainerToAdd = {
 		name: "Renibel",
 		description: "Likes cryptids.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
 	}
 
 	const firstSpeciesToAdd = stubPokemonSpecies({
@@ -189,6 +209,10 @@ test("tags: do not own trainer", async () => {
 	const trainerToAdd = {
 		name: "Renibel",
 		description: "Likes cryptids.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
 	}
 
 	const firstSpeciesToAdd = stubPokemonSpecies({
@@ -220,11 +244,19 @@ test("accepting a transfer", async () => {
 	const firstTrainerToAdd = {
 		name: "Renibel",
 		description: "Likes cryptids.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
 	}
 
 	const secondTrainerToAdd = {
 		name: "Iris",
 		description: "Likes flowers.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
 	}
 
 	const firstSpeciesToAdd = stubPokemonSpecies({
@@ -256,6 +288,87 @@ test("accepting a transfer", async () => {
 	expect(refreshedSecondTrainer.pokemon[0].moves[0].moveId).toEqual("tackle")
 	expect(transferedPokemon.pokemonId.data).toEqual("mimikyu")
 	expect(transferedPokemon.moves[0].moveId).toEqual("tackle")
+})
+
+test("reordering trainers", async () => {
+	const draft = (name: string) => ({
+		name: name,
+		description: "Likes stuff.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
+	})
+
+	// given
+	const renibelDraft = draft("Renibel")
+	const irisDraft = draft("Iris")
+	const blisDraft = draft("Blis")
+
+	const renibel = await provider.newTrainer(renibelDraft)
+	const iris = await provider.newTrainer(irisDraft)
+	const blis = await provider.newTrainer(blisDraft)
+
+	// initial order
+	const initialOrder = await provider.allTrainers()
+	expect(initialOrder.map((it) => it.readKey)).toEqual([
+		renibel.info.readKey,
+		iris.info.readKey,
+		blis.info.readKey,
+	])
+
+	// when
+	await provider.reorderTrainers([
+		blis.info.readKey,
+		renibel.info.readKey,
+		iris.info.readKey,
+	])
+
+	// then
+	const afterUpdate = await provider.allTrainers()
+	expect(afterUpdate.map((it) => it.readKey)).toEqual([
+		blis.info.readKey,
+		renibel.info.readKey,
+		iris.info.readKey,
+	])
+})
+
+test("trainer size mismatch when reordering", async () => {
+	const draft = (name: string) => ({
+		name: name,
+		description: "Likes stuff.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
+	})
+
+	// given
+	const renibel = await provider.newTrainer(draft("Renibel"))
+	const iris = await provider.newTrainer(draft("Iris"))
+	const blis = await provider.newTrainer(draft("Blis"))
+	const noon = await provider.newTrainer(draft("Noon"))
+	const punaraa = await provider.newTrainer(draft("Punaraa"))
+
+	// when
+	await provider.reorderTrainers([
+		noon.info.readKey,
+		blis.info.readKey,
+		renibel.info.readKey,
+	])
+
+	// then: it puts the sorted ones in front, and keeps the relative order of the rest
+	// NOTE: we cannot remove the unsorted ones, as we should never accidentally trainers
+	// We cannot error either; it is possible to end up in a situation where some of the
+	// trainer IDs are invalidated
+	const afterUpdate = await provider.allTrainers()
+	expect(afterUpdate.map((it) => it.readKey)).toEqual([
+		noon.info.readKey,
+		blis.info.readKey,
+		renibel.info.readKey,
+		iris.info.readKey,
+		punaraa.info.readKey,
+	])
 })
 
 async function addPokemonWithDeprecatedAbilityField(writeKey: ReadWriteKey, pokemon: PokemonSpecies) {

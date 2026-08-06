@@ -7,10 +7,9 @@ import type { PokemonSpecies } from "$lib/poke5e/species"
 import { TrainerLocalStorage } from "./data/TrainerLocalStorage"
 import { TagList } from "$lib/poke5e/tags"
 import type { TransferCode } from "./pokemon-transfer"
+import * as list from "$lib/utils/list"
 
-type AllTrainers = {
-	[readKey: ReadWriteKey]: TrainerData & WithUpdater & WithRemover & WithTags
-}
+type AllTrainers = (TrainerData & WithUpdater & WithRemover & WithTags)[]
 
 type UpdaterOptions = {
 	optimistic?: boolean
@@ -64,38 +63,38 @@ export type TrainerStore = {
 
 export type TrainerListStore = {
 	subscribe: (run: (value: Trainer[]) => void) => () => void,
+	reorder: (trainers: Trainer[]) => Promise<void>,
 }
 
 type AllTrainerFetchRequests = {
 	[readKey: ReadWriteKey]: Promise<TrainerStore | undefined>
 }
 
-const createStore = () => {
-	const trainerStore = writable<AllTrainers>({})
+export const createStore = () => {
+	const trainerStore = writable<AllTrainers>([])
 	const { subscribe: storeSubscribe, update: storeUpdate } = trainerStore
 	const promises: AllTrainerFetchRequests = {}
 	let listPromise: Promise<TrainerListStore> = undefined
 
 	const storeUpdateOne = (readKey: string, update: (prev: TrainerData) => TrainerData) => {
 		storeUpdate((prev) => {
-			const updated = update(prev[readKey])
-			return {
-				...prev,
-				[readKey]: {
-					...prev[readKey],
-					...updated,
-					tags: createTagUpdater(updated),
-				},
+			const prevEntry = prev.find((it) => it.info.readKey === readKey)
+			const updated = update(prevEntry)
+			const replacement = {
+				...prevEntry,
+				...updated,
+				tags: createTagUpdater(updated),
 			}
+
+			return list.replaceOrAddById(prev, replacement, (it) => it.info.readKey)
 		})
 	}
 
 	const createRemoveTrainer = (info: Trainer) => () => {
 		return provider.removeTrainer(info.id, info.readKey).then(() => {
 			storeUpdate((prev) => {
-				// eslint-disable-next-line @typescript-eslint/no-unused-vars
-				const { [info.readKey]: _, ...rest } = prev
-				return rest
+				 
+				return prev.filter((it) => it.info.readKey !== info.readKey)
 			})
 		})
 	}
@@ -262,9 +261,8 @@ const createStore = () => {
 						retire: () => {
 							return provider.deleteTrainer(data.writeKey, data.info.id, data.info.readKey).then(() => {
 								storeUpdate((prev) => {
-									// eslint-disable-next-line @typescript-eslint/no-unused-vars
-									const { [data.info.readKey]: _, ...rest } = prev
-									return rest
+									 
+									return prev.filter((it) => it.info.readKey !== data.info.readKey)
 								})
 							}).catch((e: Error) => {
 								error.show("deleteTrainer", e)
@@ -492,7 +490,8 @@ const createStore = () => {
 					return {
 						subscribe: (s: (value: TrainerData & WithUpdater & WithRemover & WithTags) => void) => {
 							return storeSubscribe((all) => {
-								s(all[readKey] ?? {
+								const cached = all.find((it) => it.info.readKey === readKey)
+								s(cached ?? {
 									...data,
 									update,
 									remove: createRemoveTrainer(data.info),
@@ -501,15 +500,15 @@ const createStore = () => {
 
 								if (!updated) {
 									updated = true
-									storeUpdate((prev) => ({
-										...prev,
-										[readKey]: {
+									storeUpdate((prev) => {
+										const replacement = {
 											...data,
 											update,
 											remove: createRemoveTrainer(data.info),
 											tags: createTagUpdater(data),
-										},
-									}))
+										}
+										return list.replaceOrAddById(prev, replacement, (it) => it.info.readKey)
+									})
 								}
 							})
 						},
@@ -544,28 +543,36 @@ const createStore = () => {
 					return {
 						subscribe: (s: (value: Trainer[]) => void) => {
 							return storeSubscribe((all) => {
-								s(Object.values(all).map((it) => it.info))
+								s(all.map((it) => it.info))
 
 								if (!updated) {
 									updated = true
-									storeUpdate((prev) => data.reduce((newAll, cur) => {
-										const data: TrainerData = {
-											info: cur,
-											pokemon: [],
-											writeKey: TrainerLocalStorage.getWriteKey(cur.readKey),
-										}
+									storeUpdate((prev) => {
+										return data.reduce((newAll, cur) => {
+											const data: TrainerData = {
+												info: cur,
+												pokemon: [],
+												writeKey: TrainerLocalStorage.getWriteKey(cur.readKey),
+											}
 
-										return {
-											[cur.readKey]: {
+											return list.replaceOrAddById(newAll, {
 												info: cur,
 												pokemon: [],
 												remove: createRemoveTrainer(cur),
 												tags: createTagUpdater(data),
-											},
-											...newAll,
-										}
-									}, prev))
+											}, (it) => it.info.readKey)
+										}, prev)
+									})
 								}
+							})
+						},
+
+						reorder: (trainers: Trainer[]) => {
+							const orderedReadKeys = trainers.map((it) => it.readKey)
+							return provider.reorderTrainers(orderedReadKeys).then(() => {
+								storeUpdate((prev) => {
+									return list.sortAccordingTo(prev, trainers, (it) => it.info.readKey, (it) => it.readKey)
+								})
 							})
 						},
 					}

@@ -1,8 +1,14 @@
 <script lang="ts">
 	import { DragIcon } from "../icons"
+
+	let {
+		inert = false,
+	}: {
+		inert?: boolean,
+	} = $props()
 </script>
 
-<reorder-handle class="drag-container">
+<reorder-handle class="drag-container" {inert}>
 	<span class="drag-icon"><DragIcon /></span>
 </reorder-handle>
 

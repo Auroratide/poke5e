@@ -40,3 +40,20 @@ export function fromCommaOrNewlineString(str: string): string[] {
 		.map((it) => it.trim())
 		.filter((it) => it.length > 0)
 }
+
+export function sortAccordingTo<T, U>(toSort: T[], accordingTo: U[], toSortId: (it: T) => string, accordingToId: (it: U) => string): T[] {
+	const order = new Map(accordingTo.map((item, i) => [accordingToId(item), i]))
+	return toSort.sort((a, b) => order.get(toSortId(a)) - order.get(toSortId(b)))
+}
+
+export function replaceOrAddById<T>(arr: T[], replacement: T, id: (it: T) => string): T[] {
+	const index = arr.findIndex((it) => id(it) === id(replacement))
+	if (index < 0) {
+		return [...arr, replacement]
+	}
+
+	const newList = [...arr]
+	newList[index] = replacement
+
+	return newList
+}
