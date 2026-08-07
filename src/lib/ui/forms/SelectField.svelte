@@ -1,7 +1,7 @@
 <script lang="ts" context="module">
 	export type SelectFieldOption = {
 		name: string,
-		value: string,
+		value: string | undefined,
 		disabled?: boolean,
 		deprecated?: boolean,
 	}
@@ -24,7 +24,7 @@
 	import { m } from "$lib/site/i18n"
 
 	export let label: string
-	export let value: string
+	export let value: string | undefined
 	export let options: SelectFieldOptionGroup[] | SelectFieldOption[]
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
@@ -42,7 +42,7 @@
 		dispatch("change", { value, other })
 	}
 
-	function removeDeprecatedIfNotCurrent(opts: SelectFieldOption[], value: string): SelectFieldOption[] {
+	function removeDeprecatedIfNotCurrent(opts: SelectFieldOption[], value: string | undefined): SelectFieldOption[] {
 		return opts.filter((it) => !it.deprecated || value === it.value)
 	}
 </script>

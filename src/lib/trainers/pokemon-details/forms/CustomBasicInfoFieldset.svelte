@@ -6,22 +6,23 @@
 	import { CreatureSizes, type CreatureSize } from "$lib/dnd/CreatureSize"
 	import { HitDice, HitDiceSize } from "$lib/dnd/hit-dice"
 	import { capitalize } from "$lib/utils/string"
+	import { m } from "$lib/site/i18n"
 
 	export let customSize: CreatureSize | undefined
 	export let customHitDiceSize: HitDiceSize | undefined
 	export let disabled: boolean = false
 
 	const sizeOptions = [ {
-		name: "— Default —",
-		value: undefined,
+		name: `— ${m.defaultText()} —`,
+		value: undefined as string | undefined,
 	} ].concat(Object.values(CreatureSizes).map((it) => ({
 		name: capitalize(it),
 		value: it,
 	})))
 
 	const hitDiceOptions = [ {
-		name: "— Default —",
-		value: undefined,
+		name: `— ${m.defaultText()} —`,
+		value: undefined as string | undefined,
 	} ].concat(HitDice.list.map((it) => ({
 		name: it,
 		value: it,
