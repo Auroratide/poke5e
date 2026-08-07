@@ -18,7 +18,7 @@ const standardLevelUpEffects = (pokemon: TrainerPokemon, species: PokemonSpecies
 		currentLevel: pokemon.level,
 	}, {}),
 	new IncreaseHpEffect({
-		hitDice: species.hitDice,
+		hitDice: pokemon.customHitDiceSize ?? species.hitDice,
 		attributes: pokemon.attributes,
 		currentHp: pokemon.hp.max,
 		feats: pokemon.feats,
