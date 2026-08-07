@@ -5,7 +5,9 @@
 	import { Url } from "$lib/site/url"
 	import findTrainerIdImg from "./find-trainer-id.png"
 	import { Title } from "$lib/ui/layout"
-	import { WithButton, TextField, Saveable } from "$lib/ui/forms"
+	import { WithButton, TextField, Saveable, ActionArea } from "$lib/ui/forms"
+	import { Button } from "$lib/ui/elements"
+	import { m } from "$lib/site/i18n"
 
 	let id = ""
 	$: id = id.toLocaleUpperCase().replace(/[^a-zA-Z0-9]/g, "")
@@ -49,6 +51,9 @@
 			</figure>
 			<p>Searching by a trainer's ID can allow you to view a friend's pokemon or view your own trainer's pokemon on different devices.</p>
 		</section>
+		<ActionArea>
+			<Button variant="subtle" href="{Url.trainers()}">{m.back()}</Button>
+		</ActionArea>
 	</Saveable>
 </Card>
 
