@@ -14,12 +14,12 @@
 	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/site/url"
 	import { m } from "$lib/site/i18n"
-	import { trainerHitDiceSize } from "./hit-dice"
+	import { getTrainerHitDice } from "./hit-dice"
 
 	let name = ""
 	let description = ""
 
-	$: startingHp = $trainerHitDiceSize.sizeAsInt()
+	$: startingHp = $getTrainerHitDice(undefined).sizeAsInt()
 	
 	let saving = false
 	$: disabled = saving

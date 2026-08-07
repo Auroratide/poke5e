@@ -128,6 +128,7 @@ export type TrainerInfo = {
 	path: ChosenTrainerPath,
 	feats: ChosenFeat[],
 	tags: TagList,
+	customHitDiceSize?: HitDice,
 	token: Token,
 }
 export type Trainer = TrainerInfo & {

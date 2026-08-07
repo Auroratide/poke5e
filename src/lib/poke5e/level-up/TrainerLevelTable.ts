@@ -1,7 +1,7 @@
 import { AbilityScoreImprovement } from "$lib/dnd/attributes"
 import { DndFeats } from "$lib/dnd/feats"
 import type { Level } from "$lib/dnd/level"
-import { trainerHitDiceSize } from "$lib/trainers/hit-dice"
+import { getTrainerHitDice } from "$lib/trainers/hit-dice"
 import type { Trainer } from "$lib/trainers/types"
 import { get } from "svelte/store"
 import { AcquiredPathFeatureEffect } from "./effects/AcquiredPathFeature"
@@ -25,7 +25,7 @@ const standardLevelUpEffects = (trainer: Trainer) => [
 		currentLevel: trainer.level,
 	}, {}),
 	new IncreaseHpEffect({
-		hitDice: get(trainerHitDiceSize),
+		hitDice: get(getTrainerHitDice)(trainer.customHitDiceSize),
 		attributes: trainer.attributes,
 		currentHp: trainer.hp.max,
 		feats: trainer.feats,

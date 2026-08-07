@@ -13,7 +13,7 @@
 	import SpecializationsInfo from "../specializations/SpecializationsInfo.svelte"
 	import { TrainerPathsInfo, type PathResourceUpdateDetail } from "../paths"
 	import { hasSpecialization } from "../specializations"
-	import { trainerHitDiceSize } from "../hit-dice"
+	import { getTrainerHitDice } from "../hit-dice"
 	import { FeatsInfo } from "$lib/dnd/feats"
 	import { AllFeats } from "$lib/poke5e/feats"
 	import { m } from "$lib/site/i18n"
@@ -28,6 +28,7 @@
 	export let editable: boolean
 
 	$: hasImage = trainer.avatar != null
+	$: trainerHitDiceSize = $getTrainerHitDice(trainer.customHitDiceSize)
 
 	const onUpdateHealth = (e: CustomEvent<HealthUpdateDetail>) => {
 		dispatch("update", {
@@ -78,7 +79,7 @@
 		<dd>{trainer.readKey}</dd>
 	</FlatDl>
 	<div class="column">
-		<HealthInfo hp={trainer.hp} hitDice={trainer.hitDice} dieSize={$trainerHitDiceSize} {editable} on:update={onUpdateHealth} status={null} level={trainer.level} exp={0} />
+		<HealthInfo hp={trainer.hp} hitDice={trainer.hitDice} dieSize={trainerHitDiceSize} {editable} on:update={onUpdateHealth} status={null} level={trainer.level} exp={0} />
 		<StatsInfo {trainer} />
 	</div>
 	<Art slot="art" src="{trainer.avatar?.href ?? ""}" alt="Trainer Avatar" />

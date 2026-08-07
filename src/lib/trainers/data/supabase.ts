@@ -1216,7 +1216,7 @@ type TrainerRow = {
 	rank_performance: number,
 	rank_persuasion: number,
 	tags: string[],
-	hit_dice_size: string,
+	hit_dice_size: string | null,
 	token_color: string,
 	token_crop_x: number,
 	token_crop_y: number,
@@ -1329,6 +1329,7 @@ const rowToTrainer = (row: TrainerRow, getStorageResource: (bucket: string, name
 	},
 	feats: [],
 	tags: row.tags,
+	customHitDiceSize: row.hit_dice_size && HitDice.isHitDice(row.hit_dice_size) ? new HitDice(row.hit_dice_size) : undefined,
 	token: Token.create({
 		color: row.token_color,
 		crop: {

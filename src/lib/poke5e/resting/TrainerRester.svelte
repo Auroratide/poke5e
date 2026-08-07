@@ -11,7 +11,7 @@
 	import { ActionArea, Fieldset, Form, IntField, RadioFields, HintText, CheckboxFields } from "$lib/ui/forms"
 	import { PokemonResting, TrainerResting, type RestType } from "./Rest"
 	import type { TrainerData } from "$lib/trainers/data"
-	import { trainerHitDiceSize } from "$lib/trainers/hit-dice"
+	import { getTrainerHitDice } from "$lib/trainers/hit-dice"
 	import PokemonBanner from "./PokemonBanner.svelte"
 	import { TrainerPaths } from "$lib/trainers/paths"
 	import { rulesVersion } from "$lib/site/rules-version"
@@ -31,7 +31,7 @@
 	const getSpecies = (pokemonId: SpeciesIdentifier) => $allSpecies.find((s) => s.id.data === pokemonId.data)
 
 	$: disabled = saving
-	$: hitDiceSize = $trainerHitDiceSize
+	$: hitDiceSize = $getTrainerHitDice(trainer.info.customHitDiceSize)
 
 	$: trainerPaths = TrainerPaths[$rulesVersion] 
 
