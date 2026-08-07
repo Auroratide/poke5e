@@ -51,8 +51,10 @@
 		padding: 0;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
 		gap: 0.5em;
+		flex: 1;
+		block-size: 0;
+		overflow-y: scroll;
 	}
 
 	reorder-item {
