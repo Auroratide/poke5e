@@ -14,6 +14,7 @@
 		MarkdownField,
 		ActionArea,
 		type ImageInputValue,
+		FormDetails,
 	} from "$lib/ui/forms"
 	import BasicInfoFieldset from "./forms/BasicInfoFieldset.svelte"
 	import BiographyFieldset from "./forms/BiographyFieldset.svelte"
@@ -30,6 +31,7 @@
 	import { Resource } from "$lib/poke5e/resource"
 	import { TagList, TagListField } from "$lib/poke5e/tags"
 	import { trainers } from "../trainers"
+	import { HitDice, HitDiceField } from "$lib/dnd/hit-dice"
 
 	const allTags = trainers.tags()
 	
@@ -57,7 +59,7 @@
 	let avatarToUpload: ImageInputValue | undefined = undefined
 	let isValid = true
 	let tags = TagList.copy(trainer.tags)
-	let hitDiceSize = null
+	let hitDiceSize = trainer.customHitDiceSize?.data
 	let token = structuredClone(trainer.token)
 
 	let inventory = structuredClone(trainer.inventory)
@@ -85,7 +87,7 @@
 				path: trainerPath,
 				feats,
 				tags,
-				hitDiceSize,
+				customHitDiceSize: hitDiceSize ? new HitDice(hitDiceSize) : undefined,
 				token,
 			},
 			updateAvatar: avatarToUpload,
@@ -107,6 +109,11 @@
 		<MarkdownField label="{m.description()}" bind:value={description} placeholder="{m["trainers.generalInfoAboutThisTrainer"]()}..." {disabled} />
 		<TagListField label="{m.tags()}" bind:value={tags} possibleTags={$allTags} />
 	</Fieldset>
+	<FormDetails title="{m.advanced()}">
+		<Fieldset title="{m.basicInfo()}">
+			<HitDiceField bind:value={hitDiceSize} {disabled} />
+		</Fieldset>
+	</FormDetails>
 	<ActionArea error={!isValid ? "One or more fields above have an issue." : undefined}>
 		<Button on:click={cancel} variant="subtle" {disabled}>{m.cancel()}</Button>
 		<Button type="submit" disabled={disabled || !isValid}>{m.finish()}</Button>

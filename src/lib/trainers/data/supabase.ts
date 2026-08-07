@@ -430,7 +430,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_path_rank_4_name: info.path.customFeatures.level15.name,
 			_path_rank_4_desc: info.path.customFeatures.level15.description,
 			_tags: info.tags,
-			_hit_dice_size: null,
+			_hit_dice_size: info.customHitDiceSize?.data ?? null,
 			_token_color: info.token.color,
 			_token_crop_x: info.token.crop.x,
 			_token_crop_y: info.token.crop.y,

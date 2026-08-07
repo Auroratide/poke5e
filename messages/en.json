@@ -270,6 +270,7 @@
 	"allRegionsCommaSeparated": "All Regions (Comma-Separated)",
 	"regionsInstructions": "Native Region is the single region this Pokémon is from. All Regions includes other regions this pokémon has been found.",
 	"tokenColor": "Token Color",
+	"advanced": "Advanced",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},
