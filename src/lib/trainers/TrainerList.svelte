@@ -103,6 +103,7 @@
 		display: block;
 		inline-size: 100%;
 		aspect-ratio: 1;
+		object-fit: contain;
 	}
 
 	.name {
