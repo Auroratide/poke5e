@@ -4,7 +4,7 @@
 		SelectField,
 	} from "$lib/ui/forms"
 	import { CreatureSizes, type CreatureSize } from "$lib/dnd/CreatureSize"
-	import { HitDice, HitDiceSize } from "$lib/dnd/hit-dice"
+	import { HitDiceField, HitDiceSize } from "$lib/dnd/hit-dice"
 	import { capitalize } from "$lib/utils/string"
 	import { m } from "$lib/site/i18n"
 
@@ -19,17 +19,9 @@
 		name: capitalize(it),
 		value: it,
 	})))
-
-	const hitDiceOptions = [ {
-		name: `— ${m.defaultText()} —`,
-		value: undefined as string | undefined,
-	} ].concat(HitDice.list.map((it) => ({
-		name: it,
-		value: it,
-	})))
 </script>
 
 <Fieldset title="Custom Basic Info" columns={2}>
 	<SelectField label="Size" options={sizeOptions} bind:value={customSize} {disabled} />
-	<SelectField label="Hit Dice" options={hitDiceOptions} bind:value={customHitDiceSize} {disabled} />
+	<HitDiceField bind:value={customHitDiceSize} {disabled} />
 </Fieldset>
