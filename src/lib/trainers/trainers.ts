@@ -548,20 +548,21 @@ export const createStore = () => {
 								if (!updated) {
 									updated = true
 									storeUpdate((prev) => {
-										return data.reduce((newAll, cur) => {
+										return data.map((cur) => {
+											const cached = prev.find((it) => it.info.readKey === cur.readKey)
 											const data: TrainerData = {
 												info: cur,
 												pokemon: [],
 												writeKey: TrainerLocalStorage.getWriteKey(cur.readKey),
 											}
 
-											return list.replaceOrAddById(newAll, {
+											return cached ?? {
 												info: cur,
 												pokemon: [],
 												remove: createRemoveTrainer(cur),
 												tags: createTagUpdater(data),
-											}, (it) => it.info.readKey)
-										}, prev)
+											}
+										})
 									})
 								}
 							})

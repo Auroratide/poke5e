@@ -35,40 +35,81 @@ const addPokemon = async (store: Awaited<ReturnType<typeof TrainersStore.get>>, 
 	}))
 }
 
-test("simple trainer flow", async () => {
-	// given: some trainers
-	const renibel = await provider.newTrainer(trainerDraft("Renibel"))
-	await provider.newTrainer(trainerDraft("Iris"))
-	await provider.newTrainer(trainerDraft("Blis"))
-
-	// when: get all
-	const allStore = await TrainersStore.all()
-	const allGotten = get(allStore)
-
-	// then: received them all
-	expect(allGotten.length).toEqual(3)
-	expect(list.equalUnordered(allGotten.map((it) => it.name))(["Renibel", "Iris", "Blis"]))
-
-	// when: getting one trainer
-	const singleStore = await TrainersStore.get(renibel.info.readKey)
-	const singleGotten = get(singleStore)
-
-	// then: received it
-	expect(singleGotten.info.name).toEqual("Renibel")
-
-	// when: pokemon added to trainer
-	const species = stubPokemonSpecies({
-		id: "mimikyu",
-		name: "Mimikyu",
+describe("basic flows", async () => {
+	test("list then single", async () => {
+		// given: some trainers
+		const store = createStore()
+		const renibel = await provider.newTrainer(trainerDraft("Renibel"))
+		await provider.newTrainer(trainerDraft("Iris"))
+		await provider.newTrainer(trainerDraft("Blis"))
+	
+		// when: get all
+		const allStore = await store.all()
+		const allGotten = get(allStore)
+	
+		// then: received them all
+		expect(allGotten.length).toEqual(3)
+		expect(allGotten.map((it) => it.name)).toEqual(["Renibel", "Iris", "Blis"])
+	
+		// when: getting one trainer
+		const singleStore = await store.get(renibel.info.readKey)
+		const singleGotten = get(singleStore)
+	
+		// then: received it
+		expect(singleGotten.info.name).toEqual("Renibel")
+	
+		// when: pokemon added to trainer
+		const species = stubPokemonSpecies({
+			id: "mimikyu",
+			name: "Mimikyu",
+		})
+		await singleGotten.update.addToTeam(species)
+		const singy = await store.get(renibel.info.readKey)
+		const singleAfterUpdate = get(singy)
+	
+		// then: the trainer has the pokemon
+		expect(singleAfterUpdate.pokemon.length).toEqual(1)
+		expect(singleAfterUpdate.pokemon[0].nickname).toEqual("Mimikyu")
 	})
-	await singleGotten.update.addToTeam(species)
-	const singy = await TrainersStore.get(renibel.info.readKey)
-	const singleAfterUpdate = get(singy)
 
-	// then: the trainer has the pokemon
-	expect(singleAfterUpdate.pokemon.length).toEqual(1)
-	expect(singleAfterUpdate.pokemon[0].nickname).toEqual("Mimikyu")
+	test("single then list", async () => {
+		// given: some trainers
+		const store = createStore()
+		await provider.newTrainer(trainerDraft("Renibel"))
+		await provider.newTrainer(trainerDraft("Iris"))
+		const blis = await provider.newTrainer(trainerDraft("Blis"))
+
+		// when: get one
+		const singleStore = await store.get(blis.info.readKey)
+		const singleGotten = get(singleStore)
+
+		// then: received it
+		expect(singleGotten.info.name).toEqual("Blis")
+	
+		// when: get all
+		const allStore = await store.all()
+		const allGotten = get(allStore)
+	
+		// then: received them all
+		expect(allGotten.length).toEqual(3)
+		expect(allGotten.map((it) => it.name)).toEqual(["Renibel", "Iris", "Blis"])
+	
+		// when: pokemon added to trainer
+		const gottenAgain = get(singleStore)
+		const species = stubPokemonSpecies({
+			id: "mimikyu",
+			name: "Mimikyu",
+		})
+		await gottenAgain.update.addToTeam(species)
+		const singy = await store.get(blis.info.readKey)
+		const singleAfterUpdate = get(singy)
+	
+		// then: the trainer has the pokemon
+		expect(singleAfterUpdate.pokemon.length).toEqual(1)
+		expect(singleAfterUpdate.pokemon[0].nickname).toEqual("Mimikyu")
+	})
 })
+
 
 describe("new", () => {
 	test("creates a trainer that is immediately editable", async () => {
