@@ -14,6 +14,15 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.6",
+		description: [
+			"<strong>Trainers</strong>: The trainer list can now be sorted, and it shows a few more details of the trainer.",
+			"<strong>Trainers</strong>: Trainer hit dice size can now be customized as an Advanced Option when editing.",
+			"<strong>Abilities</strong>: Clarify Stakeout's duration.",
+			"<strong>References</strong>: Reference headers now link, allowing direct links to them.",
+			"<strong>Bugfix</strong>: Pokemon level ups now use custom hit dice properly, if provided.",
+		],
+	}, {
 		name: "v1.12.5",
 		description: [
 			"<strong>Pokémon</strong>: Fix Carvanha's moveset. It learns Poison Fang instead of Poison Sting.",
