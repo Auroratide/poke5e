@@ -5,6 +5,7 @@ title: Introduction
 <script lang="ts">
 	import { Url } from "$lib/site/url"
 	import TableOfContents from "../TableOfContents.svelte"
+	import { Heading } from "$lib/ui/elements"
 </script>
 
 Hello, and welcome to Pokémon 5e! This is an online guide and tool for playing D&D in the Pokémon universe with your friends.
@@ -15,13 +16,13 @@ If you're just getting started, we recommended starting with these pages:
 
 <TableOfContents />
 
-## Versioning Disclaimer
+<Heading level="2" id="versioning-disclaimer">Versioning Disclaimer</Heading>
 
 The precise rules found in this reference are not necessarily permanent or set in stone. As the community identifies core balance issues, the rules may be updated. Any changes that are made will be identified on the [Version History]({Url.versionHistory()}) page.
 
 Additionally, if there are rules your group personally thinks could be better, this is a Homebrew! Remix it as much as you want to make the game as fun as possible.
 
-<h2 id="rulesets">2018 vs 2024 Rulesets</h2>
+<Heading level="2" id="rulesets">2018 vs 2024 Rulesets</Heading>
 
 The rules to Pokémon 5e were originally published as a handbook and monster manual in 2018, but was eventually discontinued.
 
@@ -29,7 +30,7 @@ The version of the rules found on this website are slightly updated from the ver
 
 That said, if you prefer the original rules, you can use the switch found in the title of each rules page. The original ruleset is called "2018" rules, and the updated rules are called "2024" rules.
 
-### Summary of updates
+<Heading level="3" id="summary-of-updates">Summary of updates</Heading>
 
 The 2018 and 2024 rules are almost identical, with these notes:
 
@@ -50,7 +51,7 @@ The 2018 and 2024 rules are almost identical, with these notes:
 - Added Epic Boon Feat at Level 19 in place of ASI to fit the theme of the 2024 D&D handbook.
 - Simplified weather, so its effect is more subtle, and because the 2018 tables assumed only a specific kind of biome.
 
-### Trainer Path Updates
+<Heading level="3" id="trainer-path-updates">Trainer Path Updates</Heading>
 
 Additionally, several trainer paths were tweaked:
 

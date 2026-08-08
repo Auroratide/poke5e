@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { formatMoney } from "$lib/pokemon/money"
-	import { InfoTable } from "$lib/ui/elements"
+	import { Heading, InfoTable } from "$lib/ui/elements"
 	import { Url } from "$lib/site/url"
 	import ReferencePage from "../ReferencePage.svelte"
 	import type { PageData } from "./$types"
@@ -14,7 +14,7 @@
 		<p>TMs (Technical Machines) are items that can be used to teach moves to your Pokémon, even if they do not learn them in their natural progression of leveling.</p>
 	</section>
 	<section>
-		<h2>Applying a TM</h2>
+		<Heading level="2" id="applying-a-tm">Applying a TM</Heading>
 		<div class="row">
 			<p>In the world of Pokémon, a TM is a small, compact disc upon which is stored all the information needed for a Pokémon to learn the contained move.</p>
 			<img class="cd" src="{TmImg}" alt="A CD" />
@@ -23,7 +23,7 @@
 		<p>The TM is destroyed during the process. Once used, the TM's move may only be relearned by purchasing another TM.</p>
 	</section>
 	<section>
-		<h2>List of TMs</h2>
+		<Heading level="2" id="list-of-tms">List of TMs</Heading>
 		<p>View the <strong><a href="{Url.tms()}">list of TMs</a></strong> or refer to the table below:</p>
 		<InfoTable label="List of TMs">
 			<thead>

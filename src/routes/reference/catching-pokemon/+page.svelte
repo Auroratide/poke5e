@@ -1,5 +1,5 @@
 <script>
-	import { FlatDl } from "$lib/ui/elements"
+	import { FlatDl, Heading } from "$lib/ui/elements"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { rulesVersion } from "$lib/site/rules-version"
 	import Rules2018 from "./2018"
@@ -26,7 +26,7 @@
 		<p>Pokéballs are not the only way to catch Pokémon. There may be Pokémon in the wild that are friendly and happy to join you in your adventures. Feel free to try narratively interesting ways of forming a team!</p>
 	</section>
 	<section>
-		<h2>Throw Pokéball Action</h2>
+		<Heading level="2" id="throw-pokeball-action">Throw Pokéball Action</Heading>
 		<FlatDl>
 			<dt>Time</dt>
 			<dd>1 Action</dd>
@@ -45,7 +45,7 @@
 		{/if}
 	</section>
 	<section>
-		<h2>Pokéball Types</h2>
+		<Heading level="2" id="pokeball-types">Pokéball Types</Heading>
 		{#if $rulesVersion === "2018"}
 			<Rules2018.Pokeballs />
 		{:else}
@@ -53,7 +53,7 @@
 		{/if}
 	</section>
 	<section>
-		<h2>Examples</h2>
+		<Heading level="2" id="examples">Examples</Heading>
 		{#if $rulesVersion === "2018"}
 			<Rules2018.Examples />
 		{:else}
@@ -62,7 +62,7 @@
 	</section>
 	{#if $rulesVersion === "2024"}
 		<section>
-			<h2>Where to Catch Pokémon</h2>
+			<Heading level="2" id="where-to-catch-pokemon">Where to Catch Pokémon</Heading>
 			<p>The only hard rule is that a Pokémon cannot be captured via a pokéball if its been registered to a trainer via one of their own pokéballs. Otherwise, wild Pokémon can be found in many contexts:</p>
 			<ul>
 				<li>In undeveloped wildlands, their natural habitat</li>

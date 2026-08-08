@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from "./$types"
 	import Filter from "./Filter.svelte"
-	import { Loader } from "$lib/ui/elements"
+	import { Loader, Heading } from "$lib/ui/elements"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { SpeciesStore } from "$lib/poke5e/species"
@@ -24,12 +24,16 @@
 		<p>Note that some moves or abilities can manipulate what ability a Pokémon has at a given time, such as with the Mummy ability. Unless specified, a Pokémon's normal ability is always restored to it after a long rest.</p>
 	</section>
 	<section>
-		<h2>Ability List</h2>
+		<Heading level="2" id="ability-list">Ability List</Heading>
 		<Filter bind:value={abilityFilter} matches={filteredAbilities?.length ?? 0} />
 		{#if abilities != null && associatedPokemon != null}
 			{#each abilities as ability (ability.referenceId)}
 				<div class="ability" class:hide={!filteredAbilities.includes(ability)}>
-					<h3>{ability.name}</h3>
+					{#if ability.referenceId}
+						<Heading level="3" id="{ability.referenceId}">{ability.name}</Heading>
+					{:else}
+						<h3>{ability.name}</h3>
+					{/if}
 					<p>{ability.description}</p>
 					<SimplePokemonList pokemon={associatedPokemon[ability.referenceId ?? ""] ?? []} />
 				</div>

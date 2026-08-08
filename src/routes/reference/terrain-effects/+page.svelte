@@ -1,6 +1,6 @@
 <script>
 	import ReferencePage from "../ReferencePage.svelte"
-	import { InfoTable } from "$lib/ui/elements"
+	import { Heading, InfoTable } from "$lib/ui/elements"
 	import { Url } from "$lib/site/url"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
@@ -18,7 +18,7 @@
 		<p><strong>Note</strong>: For the sake of terrain effects, <dfn>grounded creatures</dfn> include creatures that do not have a flying speed or Levitate, Magnet Rise, or similar ability.</p>
 	</section>
 	<section>
-		<h2>Extent and Duration</h2>
+		<Heading level="2" id="extent-and-duration">Extent and Duration</Heading>
 		<p>Certain Pokémon moves may induce terrain effects for a distance and duration depending on the move. Besides moves, terrain effects may be present by some environmental means, the cause, extent, and duration of which are determined by the DM.</p>
 		<InfoTable label="Terrain Extent">
 			<thead>

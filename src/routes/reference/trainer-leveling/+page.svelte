@@ -1,5 +1,6 @@
 <script>
 	import { FlatDl } from "$lib/ui/elements"
+	import { Heading } from "$lib/ui/elements"
 	import { InfoTable } from "$lib/ui/elements"
 	import { Url } from "$lib/site/url"
 	import ReferencePage from "../ReferencePage.svelte"
@@ -20,7 +21,7 @@
 		<p>The rest of this page details the different <strong>options</strong> for leveling up a trainer.</p>
 	</section>
 	<section>
-		<h2>By Pokémon Levels</h2>
+		<Heading level="2" id="by-pokemon-levels">By Pokémon Levels</Heading>
 		<p>The level of a character is determined by total levels of the character’s X highest leveled Pokémon, where X is the trainer’s current number of Pokéslots. The following table can be used as a guideline for PC leveling.</p>
 		<InfoTable label="Pokémon Levels Table">
 			<thead>
@@ -53,18 +54,18 @@
 		</InfoTable>
 		<p>The highest leveled Pokémon a trainer owns do not need to be carried by that trainer in order to level up.</p>
 		<p>It is important to note that Pokémon captured at a high level are typically not as strong as those caught at a lower level and trained up to that point. Capturing higher leveled Pokémon may be beneficial for player level changes, but a trainer with 3 recently captured Charizards is weaker than a trainer who has cared for 3 Charmanders through their evolutions.</p>
-		<h3>Example</h3>
+		<Heading level="3" id="by-pokemon-levels-example">Example</Heading>
 		<p>Renibel is currently level 4 and owns four Pokémon at levels 4, 4, 3, and 2. She is only given three Pokéslots at this level, so her total Pokémon levels for the purpose of leveling is the sum of her three highest, 4 + 4 + 3 = <strong>11</strong>.</p>
 		<p>If she were to level one of her level 4 Pokémon to level 5, then she would reach 5th level because her new total would be 5 + 4 + 3 = <strong>12</strong> (according to the table above).</p>
 		<p>Because at 5th level, she receives another Pokéslot, her total for leveling changes to 5 + 4 + 3 + 2 = <strong>14</strong>.</p>
 	</section>
 	<section>
-		<h2>By Milestone</h2>
+		<Heading level="2" id="by-milestone">By Milestone</Heading>
 		<p>For story-driven adventures, the DM may choose to level up the party when significant story beats have been met, such as defeating a gym leader and earning a badge.</p>
 		<p>There are no hard-set rules on when these milestones should be, so it's up to the table what makes the most sense for their adventure.</p>
 	</section>
 	<section>
-		<h2>By Pokédex Entries</h2>
+		<Heading level="2" id="by-pokedex-entries">By Pokédex Entries</Heading>
 		<p>The level of the trainer is based upon how many Pokémon the trainer has registered in their Pokédex. Alternatively, the DM can choose to allow trainers to register a Pokémon by reading a certain book, finding an artifact, speaking to a professor, etc. The following table can be used as a reference for levels based on number of Pokémon in a Pokédex.</p>
 		<InfoTable label="Pokédex Entries Table">
 			<thead>

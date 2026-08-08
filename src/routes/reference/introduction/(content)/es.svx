@@ -5,6 +5,7 @@ title: Introducción
 <script lang="ts">
 	import { Url } from "$lib/site/url"
 	import TableOfContents from "../TableOfContents.svelte"
+	import { Heading } from "$lib/ui/elements"
 </script>
 
 ¡Hola, y bienvenido a Pokémon 5e! Esta es una guía y herramienta online para jugar D&D en el universo de Pokémon con tus amigos.
@@ -15,13 +16,13 @@ Si acabas de empezar, te recomendamos comenzar por estas páginas:
 
 <TableOfContents />
 
-## Aviso sobre versiones
+<Heading level="2" id="versioning-disclaimer">Aviso sobre versiones</Heading>
 
 Las reglas precisas que se encuentran en esta referencia no son necesariamente permanentes ni están grabadas en piedra. Las reglas pueden actualizarse a medida que la comunidad identifica problemas de balance. Cualquier cambio realizado se identificará en la página de [Historial de Versiones]({Url.versionHistory()}).
 
 Además, si hay reglas que tu grupo considera que podrían ser mejores, ¡esto es Homebrew! Modifícalo tanto como quieras para que el juego sea lo más divertido posible.
 
-<h2 id="rulesets">Reglamentos 2018 vs 2024</h2>
+<Heading level="2" id="rulesets">Reglamentos 2018 vs 2024</Heading>
 
 Las reglas de Pokémon 5e se publicaron originalmente como un manual del jugador y un manual de monstruos en 2018, pero finalmente se descontinuaron.
 
@@ -29,7 +30,7 @@ La versión de las reglas que se encuentra en este sitio web está ligeramente a
 
 Dicho esto, si prefieres las reglas originales, puedes usar el interruptor que se encuentra en el título de cada página de reglas. El reglamento original se denomina reglas "2018", y las reglas actualizadas se denominan reglas "2024".
 
-### Resumen de actualizaciones
+<Heading level="3" id="summary-of-updates">Resumen de actualizaciones</Heading>
 
 Las reglas de 2018 y 2024 son casi idénticas, con las siguientes notas:
 
@@ -50,7 +51,7 @@ Las reglas de 2018 y 2024 son casi idénticas, con las siguientes notas:
 - Se añadió la Dote de Don Épico a nivel 19 en lugar de la Mejora de Puntuación de Característica para ajustarse al tema del manual de D&D 2024.
 - Se simplificó el clima para que su efecto sea más sutil y porque las tablas de 2018 asumían solo un tipo específico de bioma.
 
-### Actualizaciones de las Sendas del Entrenador
+<Heading level="3" id="trainer-path-updates">Actualizaciones de las Sendas del Entrenador</Heading>
 
 Además, se retocaron varias sendas de entrenador:
 

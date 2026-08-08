@@ -1,6 +1,6 @@
 <script>
 	import { experienceAwarded2024, experienceAwareded2018 } from "$lib/poke5e/experience"
-	import { FlatDl } from "$lib/ui/elements"
+	import { FlatDl, Heading } from "$lib/ui/elements"
 	import { rulesVersion } from "$lib/site/rules-version"
 	import ReferencePage from "../ReferencePage.svelte"
 	import Rules2018 from "./2018"
@@ -30,7 +30,7 @@
 		{/if}
 	</section>
 	<section>
-		<h2>Features</h2>
+		<Heading level="2" id="features">Features</Heading>
 		{#if $rulesVersion === "2018"}
 			<Rules2018.Features />
 		{:else}
@@ -38,12 +38,12 @@
 		{/if}
 	</section>
 	<section>
-		<h2>Experience</h2>
+		<Heading level="2" id="experience">Experience</Heading>
 		<p>Experience points are rewarded to Pokémon for successfully defeating other Pokémon, or given out at the DM’s discretion when the players complete a particularly difficult challenge or trainer battle. Catching a Pokémon also gives experience, but at 1/5 the normal amount.</p>
 		<p>XP can be distributed to a player’s Pokémon in any amount, but only Pokémon that took an action in the fight can be rewarded. Fainted Pokémon can also be given XP as long as they were in the fight. If two or more people battle against a single Pokémon, the XP given to each player to distribute is determined by the DM.</p>
 		<p>The following is a table containing the total experience a Pokémon needs at each level to level up:</p>
 		<ExperienceTable />
-		<h3>Awarding Experience</h3>
+		<Heading level="3" id="awarding-experience">Awarding Experience</Heading>
 		<p>Defeating a Pokémon confers experience according to its Level and Species Rating (<abbr>SR</abbr>). Use the tool below to determine how much experience a Pokémon should award.</p>
 		<ExperienceTool formula={expFormula} />
 		<br />
@@ -54,7 +54,7 @@
 		{/if}
 	</section>
 	<section>
-		<h2>Evolution</h2>
+		<Heading level="2" id="evolution">Evolution</Heading>
 		<p>Pokémon can evolve into a new form once they meet the condition detailed in their stat block. When a Pokémon evolves, the following occurs:</p>
 		{#if $rulesVersion === "2018"}
 			<Rules2018.Evolution />
@@ -63,7 +63,7 @@
 		{/if}
 	</section>
 	<section>
-		<h2>A Note on Armor Class</h2>
+		<Heading level="2" id="a-note-on-armor-class">A Note on Armor Class</Heading>
 		<p>A Pokémon's AC is not necessarily tied to their Dexterity. This is intended. AC was assigned with a more formulaic approach, blending each Pokémon's DEF, SP. DEF, and SPEED stats from the core games into a single number on a scale that fits the normal D&D AC range. Think of it as if each Pokémon gets its own unique "Natural Armor". Any ties to Dexterity are purely coincidental.</p>
 	</section>
 </ReferencePage>

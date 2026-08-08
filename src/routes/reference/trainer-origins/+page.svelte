@@ -5,7 +5,7 @@
 	import { m } from "$lib/site/i18n"
 	import { capitalize } from "$lib/utils/string"
 	import { Attributes } from "$lib/dnd/attributes"
-	import { ColumnedList, Tag } from "$lib/ui/elements"
+	import { ColumnedList, Heading, Tag } from "$lib/ui/elements"
 	import { TrainerOrigin } from "$lib/trainers/origins"
 	import { rulesVersion } from "$lib/site/rules-version"
 
@@ -26,10 +26,10 @@
 	</section>
 	{#each data.items as origin}
 		<section>
-			<h2 id="{origin.id}">{origin.name}</h2>
+			<Heading level="2" id="{origin.id}">{origin.name}</Heading>
 			<Markdown value={origin.description} />
 
-			<h3>{origin.abilityScores.name}</h3>
+			<Heading level="3" id="{origin.id}-ability-scores">{origin.abilityScores.name}</Heading>
 			<Markdown value={origin.abilityScores.description} />
 			{#if Array.isArray(origin.abilityScores.values)}
 				{#if TrainerOrigin.abilityScoresHasOptions(origin.abilityScores.values)}
@@ -52,15 +52,15 @@
 				<p>{m.anyTwoScoresIncrease()}</p>
 			{/if}
 
-			<h3>{origin.proficiencies.name}</h3>
+			<Heading level="3" id="{origin.id}-proficiencies">{origin.proficiencies.name}</Heading>
 			<Markdown value={origin.proficiencies.description} />
 			<p>{m.youGainProficiency({ skills: origin.proficiencies.values.map((it) => capitalize(it)).join(", ")})}</p>
 
-			<h3>{origin.feats.name}</h3>
+			<Heading level="3" id="{origin.id}-feats">{origin.feats.name}</Heading>
 			<Markdown value={origin.feats.description} />
 			<Markdown value={origin.feats.effect} />
 
-			<h3>{m.languages()}</h3>
+			<Heading level="3" id="{origin.id}-languages">{m.languages()}</Heading>
 			<p>{m.youKnowTwoLanguages({ one: origin.languages.values[0], two: origin.languages.values[1] })}</p>
 		</section>
 	{/each}

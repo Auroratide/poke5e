@@ -1,5 +1,5 @@
 <script>
-	import { FlatDl } from "$lib/ui/elements"
+	import { FlatDl, Heading } from "$lib/ui/elements"
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Button } from "$lib/ui/elements"
 	import { Url } from "$lib/site/url"
@@ -18,7 +18,7 @@
 		<p>For more on leveling up a trainer, see the <a href="{Url.reference.trainerLeveling()}">Trainer Leveling</a> page.</p>
 	</section>
 	<section>
-		<h2>Core Traits</h2>
+		<Heading level="2" id="core-traits">Core Traits</Heading>
 		<FlatDl>
 			<dt>Primary Ability</dt>
 			<dd>Charisma</dd>
@@ -30,7 +30,7 @@
 			<dd>{#if $rulesVersion === "2018"}1d8{:else}1d6{/if} + CON, or {#if $rulesVersion === "2018"}5{:else}4{/if} + CON</dd>
 		</FlatDl>
 
-		<h3>Proficiencies</h3>
+		<Heading level="3" id="proficiencies">Proficiencies</Heading>
 		<FlatDl>
 			<dt>Saving Throws</dt>
 			<dd>Charisma</dd>
@@ -44,7 +44,7 @@
 			<dd>Pokeballs</dd>
 		</FlatDl>
 
-		<h3>Starting Equipment</h3>
+		<Heading level="3" id="starting-equipment">Starting Equipment</Heading>
 		<ul class="small-font">
 			<li>5 Pokeballs</li>
 			<li>1 Potion</li>
@@ -55,7 +55,7 @@
 		</ul>
 
 		{#if $rulesVersion !== "2018"}
-			<h3>Multiclassing</h3>
+			<Heading level="3" id="multiclassing">Multiclassing</Heading>
 			<p class="small-font">To multiclass into Trainer, you must have an ability score of at least 13 in Charisma. When you gain your first level of Trainer, you gain proficiency in Animal Handling.</p>
 		{/if}
 	</section>
@@ -67,7 +67,7 @@
 		{/if}
 	</section>
 	<section>
-		<h2>Class Features</h2>
+		<Heading level="2" id="class-features">Class Features</Heading>
 		{#if $rulesVersion === "2018"}
 			<Rules2018.Features />
 		{:else}
@@ -75,12 +75,12 @@
 		{/if}
 	</section>
 	<section>
-		<h2>Specializations</h2>
+		<Heading level="2" id="specializations">Specializations</Heading>
 		<p>At levels 1, 7, and 18, players may choose a <dfn><a href="{Url.reference.specializations()}">specialization</a></dfn>, granting them bonuses depending on the type of Pokemon they train. Specializations can be stacked for an additional +1 bonus to skill checks each time it is chosen.</p>
 		<p><strong><a href="{Url.reference.specializations()}">View the list of specializations.</a></strong></p>
 	</section>
 	<section>
-		<h2>Trainer Paths</h2>
+		<Heading level="2" id="trainer-paths">Trainer Paths</Heading>
 		<p>There are many ways and reasons to train Pokémon. At the 2nd level, depending on your long term goals, choose a <dfn><a href="{Url.reference.trainerPaths()}">trainer path</a></dfn> which grants you class features at levels 2, 5, 9, and 15.</p>
 		<p><strong><a href="{Url.reference.trainerPaths()}">View the list of trainer paths.</a></strong></p>
 	</section>

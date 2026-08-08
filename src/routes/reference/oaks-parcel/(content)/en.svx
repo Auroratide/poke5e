@@ -8,6 +8,7 @@ title: Oak's Parcel One-Shot
   import { formatMoney } from "$lib/pokemon/money"
   import { OaksParcelEncounters, createEncounters } from "../encounters.svelte"
   import { CuratedEncounterInfo } from "$lib/poke5e/encounters"
+  import { Heading } from "$lib/ui/elements"
 
   onMount(() => {
     return createEncounters()
@@ -16,7 +17,7 @@ title: Oak's Parcel One-Shot
 
 This is a **one-shot adventure** designed to be a good introduction to the Pokémon 5e system! As a DM, you can run this with your friends in order to get accustomed to the mechanics of the game.
 
-## Adventure Overview
+<Heading level="2" id="adventure-overview">Adventure Overview</Heading>
 
 The World of Pokémon is a dangerous place, full of wonderfully unique creatures and determined trainers who
 raise them for battle or companionship.
@@ -25,7 +26,7 @@ Headquartered in his laboratory in Pallet Town, Professor Oak gets word that an 
 
 The road to Veridian is paved with difficulties, however. Strange beasts hide in the trees and the tall grass - and an evil lurks in the shadows, waiting for the right moment to reveal itself...
 
-## Using this Adventure
+<Heading level="2" id="using-this-adventure">Using this Adventure</Heading>
 
 The text below is meant to guide you through a single session of about four hours, introducing your players to the system through character creation, battles, and catching mechanics.
 
@@ -37,13 +38,13 @@ The majority of this guide will be an outline of the adventure, but occasionally
 
 One of the main quests in this adventure will require the players to go out and catch a variety of different species of Pokémon. Players will roll on a random table (shown later) to determine which Pokémon they encounter. For organizational purposes, the stat blocks of each of these possible Pokémon are in the appendix at the end of this manual.
 
-## Beginning the session
+<Heading level="2" id="beginning-the-session">Beginning the session</Heading>
 
 DMs should have the players create level 1 trainers without a Pokédex, selecting a Specialization and Starter Pokémon with a Nature of their choice. The Starters they can choose from include any Pokémon of Species Rating ½ or lower. The players will be given their Starter by Professor Oak, so should not be woven into any of the players backstories.
 
 Encourage players to think up interesting characteristics of their trainers and how they may know each other.
 
-## Chapter 1: The Lab
+<Heading level="2" id="chapter-1">Chapter 1: The Lab</Heading>
 
 To begin the adventure, the trainers should receive some sort of notice from Professor Oak about the help he needs. This can take the form of a letter sent to the trainers, a flyer on a Pallet Town bulletin board, an overheard rumor, etc. Think about your players backstories and what would work best, but eventually they should all end up at Oak's Lab around the same time.
 
@@ -53,7 +54,7 @@ To begin the adventure, the trainers should receive some sort of notice from Pro
 > 
 > On the far end of the lab, a tall, grey-haired man in a white coat studies over a table arranged with a collection of Pokéballs - the infamous Professor Oak.
 
-### Roleplaying Professor Oak
+<Heading level="3" id="roleplaying-professor-oak">Roleplaying Professor Oak</Heading>
 
 Professor Oak is an eccentric man in his mid-50s who has dedicated his life to the study of Pokémon. He is very excited about the creatures and is eager to learn anything and everything he can about them. The Professor is extremely intelligent - so much so that his speech is often quick and full of big words that may go over the head of the trainers. Even so, he is kind-hearted and slow to anger, unless someone is interrupting his precious Soap Opera-watching time.
 
@@ -68,7 +69,7 @@ Oak gives them each a Potion, ₱500 up front, and 5 Pokéballs and is eager for
 
 There is a Pokécenter in Pallet Town that they can always return to if their Pokémon faints, and another one once they reach Veridian City.
 
-## Chapter 2: Route 1
+<Heading level="2" id="chapter-2">Chapter 2: Route 1</Heading>
 
 Once the trainers have gotten acquainted with each other and their Starters, they should be ready to start their journey north through Route 1 to Veridian City.
 
@@ -82,7 +83,7 @@ There are two main terrain types within which they can search for Pokémon on th
 
 Stat blocks for the Pokémon within each encounter can be found in the Appendix. The DC to catch each of these Pokemon is 11 + Remaining HP/10 (rounded down), with the exception of Gastly whose DC is 14 + Remaining HP/10 (rounded down), and Beedrill, who is uncatchable at the trainer's current level.
 
-### Grass
+<Heading level="3" id="grass">Grass</Heading>
 
 <InfoTable label="Grass Encounters">
   <thead>
@@ -135,7 +136,7 @@ Stat blocks for the Pokémon within each encounter can be found in the Appendix.
   </tbody>
 </InfoTable>
 
-### Forest
+<Heading level="3" id="forest">Forest</Heading>
 
 <InfoTable label="Forest Encounters">
   <thead>
@@ -188,7 +189,7 @@ Stat blocks for the Pokémon within each encounter can be found in the Appendix.
   </tbody>
 </InfoTable>
 
-## Chapter 3: Veridian City
+<Heading level="3" id="chapter-3">Veridian City</Heading>
 
 When the trainers have had several Pokémon encounters and are ready for a rest, **allow them to level all their Pokémon to level two**, and lead them forward into Veridian City.
 
@@ -208,7 +209,7 @@ players decide to make conversation with the locals.
 
 All in all, these rumors mean nothing, but may offer some interesting conversation for the party. Feel free to make up your own.
 
-### Pokécenter
+<Heading level="3" id="pokecenter">Pokécenter</Heading>
 
 The Veridian City Pokémon Center is a great place for the trainers to visit after the long journey through Route 1, where they will surely want to heal their Pokémon. You should let them decide what to do naturally, but may want to encourage them to visit this place before the Pokémart (you will see why, shortly). Ways to do this include:
 
@@ -220,7 +221,7 @@ The Veridian City Pokémon Center is a great place for the trainers to visit aft
 
 Joy will heal the trainer's Pokémon free of charge, and as often as they like while they are in the city.
 
-### Pokémart
+<Heading level="3" id="pokemart">Pokémart</Heading>
 
 The Pokémart in Veridian City is where Trainers can purchase essential items for their adventures. When the trainer's enter the space for the first time, however, they witness a crime in progress.
 
@@ -230,7 +231,7 @@ The Pokémart in Veridian City is where Trainers can purchase essential items fo
 
 Giving chase, the trainers should catch up with the Team Rocket members in no time, as the back of the Pokémart is simply a long alley that ends in a tall wooden fence.
 
-### Roleplaying Rocket Grunts
+<Heading level="3" id="roleplaying-rocket-grunts">Roleplaying Rocket Grunts</Heading>
 
 The Team Rocket Grunt male is a purple-haired man with a dimwitted personality while the woman is red-headed and easy-to-anger. They were sent to steal Professor Oak's parcel from the Pokémart, and are determined to get away with it for fear of what their boss, Giovani, will do to them if they return empty-handed. Giovani doesn't know what's in the parcel, but knows Professor Oak is a genius when it comes to Pokémon technology, so he is sure whatever the package is will help him with whatever evil plans he is concocting.
 
@@ -241,12 +242,11 @@ The Team Rocket Grunt male is a purple-haired man with a dimwitted personality w
   <CuratedEncounterInfo value={OaksParcelEncounters.list.TeamRocketGrunts} />
 {/if}
 
-
-### If the players defeat the grunts
+<Heading level="3" id="defeat-the-grunts">If the players defeat the grunts</Heading>
 
 The Grunts drop the parcel and promise revenge before hopping over the fence and making their escape. As a reward for battling, **allow the players to level each of their Pokémon to level three**.
 
-### If the players are defeated
+<Heading level="3" id="players-defeated">If the players are defeated</Heading>
 
 The Grunts flee the scene with the parcel in hand. The shopkeeper runs out into the back alley with a sigh of relief, holding a package in his hands. The Grunts had stolen a decoy! As a reward for battling, **allow the players to level each of their Pokémon to level three**.
 
@@ -289,7 +289,7 @@ Team Rocket taken care of either way, the trainers are free to take a look at th
   </tbody>
 </InfoTable>
 
-## Chapter 4: The Road Home
+<Heading level="2" id="chapter-4">Chapter 4: The Road Home</Heading>
 
 By the time the trainers leave the Pokémart, its late afternoon. Make them aware that there is not much daylight left if they want to make it back to Pallet Town before nightfall. They will probably want to revisit the Pokécenter to heal up before heading back down Route 1.
 
@@ -299,7 +299,7 @@ The players, at some point, may wish to open Oak's Parcel to see what is inside.
 
 The road back should be quicker than the way in. If the players want to seek out more Pokémon in the forest or the grass, simply choose one of the scenarios from Chapter 2 that they did not encounter before.
 
-## Chapter 5: Oak in Trouble
+<Heading level="2" id="chapter-5">Chapter 5: Oak in Trouble</Heading>
 
 As the trainers return to Pallet Town, the sun has set.
 
@@ -327,7 +327,7 @@ Allow your players to get creative with how they handle the situation at hand, a
   <CuratedEncounterInfo value={OaksParcelEncounters.list.Giovanni} />
 {/if}
 
-## Chapter 6: Wrap up
+<Heading level="2" id="chapter-6">Chapter 6: Wrap up</Heading>
 
 With Giovanni and the Rocket Grunts taking care of, they blast off and flee the scene, swearing revenge. Professor Oak dusts himself off and thanks the trainers for their help. He offers them the original reward for bringing back the prototype, but as an added bonus, allows them to keep their starting Pokémon and all others they caught along the way, as long as he can spend a few hours with them studying their habits and skills.
 

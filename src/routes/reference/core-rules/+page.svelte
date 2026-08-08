@@ -3,6 +3,7 @@
 	import { Url } from "$lib/site/url"
 	import TableOfContents from "../TableOfContents.svelte"
 	import { CoreRules } from "../references"
+	import { Heading } from "$lib/ui/elements"
 </script>
 
 <ReferencePage title="Core Rules">
@@ -11,7 +12,7 @@
 		<p>Pokémon has many mechanics. To simplify the system, not every mechanic is represented in the Core Rules. However, the community has adapted many mechanics into D&D, listed as optional <a href="{Url.reference.supplements()}">Supplements</a>. Pokémon 5e is designed to be played with as many or as few of these supplements as you want!</p>
 	</section>
 	<section>
-		<h2>Table of Contents</h2>
+		<Heading level="2" id="table-of-contents">Table of Contents</Heading>
 		<TableOfContents items={$CoreRules} />
 	</section>
 </ReferencePage>

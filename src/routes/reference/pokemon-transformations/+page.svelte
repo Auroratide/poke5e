@@ -6,6 +6,7 @@
 	import { rulesVersion } from "$lib/site/rules-version"
 	import { TeraTypeTag } from "$lib/pokemon/types"
 	import { PokemonTeraType } from "$lib/pokemon/types"
+	import { Heading } from "$lib/ui/elements"
 </script>
 
 <ReferencePage title="Pokémon Transformations">
@@ -24,7 +25,7 @@
 		<p>Most sanctioned battles only allow a single transformation. Some venues only allow a specific kind of transformation. Others allow any, and yet others disallow them entirely.</p>
 	</section>
 	<section>
-		<h2 id="mega-evolution">Mega Evolution</h2>
+		<Heading level="2" id="mega-evolution">Mega Evolution</Heading>
 		{#if $rulesVersion === "2018"}
 			<Rules2018.MegaEvolution />
 		{:else}
@@ -32,7 +33,7 @@
 		{/if}
 	</section>
 	<section>
-		<h2 id="z-move">Z-Move{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</h2>
+		<Heading level="2" id="z-move">Z-Move{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</Heading>
 		<p>A pokemon empowered with Z-Power may unleash a single, ultra-powerful move.</p>
 		<p>A pokemon may only use a Z-Move if it meets all of these conditions:</p>
 		<ul>
@@ -51,7 +52,7 @@
 		</ul>
 	</section>
 	<section>
-		<h2 id="dynamax">Dynamax{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</h2>
+		<Heading level="2" id="dynamax">Dynamax{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</Heading>
 		<p>When a pokemon dynamaxes, it warps the space around it to gains tremendous size and strength.</p>
 		<p>A pokemon may only dynamax if it meets all of these conditions:</p>
 		<ul>
@@ -77,7 +78,7 @@
 		</ul>
 	</section>
 	<section>
-		<h2 id="terastallization">Terastallization{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</h2>
+		<Heading level="2" id="terastallization">Terastallization{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</Heading>
 		<p>When a pokemon terastallizes, it shimmers like a gem and changes its typing.</p>
 		<p>Each pokemon has a special <dfn>Tera Type</dfn> which is one of the 18 primary types or the Stellar type. For most pokemon, their Tera Type is the same as their primary type, but rarely, pokemon may possess a Tera Type that differs from their customary typing entirely.</p>
 		<p>A pokemon may only terastallize if it meets all of these conditions:</p>

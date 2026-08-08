@@ -10,6 +10,7 @@
 	import ReferencePage from "../ReferencePage.svelte"
 	import { rulesVersion } from "$lib/site/rules-version"
 	import { Markdown } from "$lib/ui/rendering"
+	import { Heading } from "$lib/ui/elements"
 
 	$: nonVolatileList = $rulesVersion === "2018" ? Object.values(NonVolatileStatus2018) : Object.values(NonVolatileStatus)
 	$: volatileList = $rulesVersion === "2018" ? Object.values(VolatileStatus2018) : Object.values(VolatileStatus)
@@ -20,11 +21,11 @@
 		<p>Status conditions affect a creature's ability to perform in combat. Conditions listed here are often inflicted by many different moves. Some moves may confer unique conditions, the details of which are provided in the move description.</p>
 	</section>
 	<section>
-		<h2>Grace Period</h2>
+		<Heading level="2" id="grace-period">Grace Period</Heading>
 		<p>When a Pokémon recovers from a status effect, they cannot succumb to the <strong>same</strong> effect until after the end of their next turn.</p>
 	</section>
 	<section>
-		<h2>Non-Volatile Conditions</h2>
+		<Heading level="2" id="non-volatile-conditions">Non-Volatile Conditions</Heading>
 		<p>A Pokémon can only be affected by one non-volatile status at a time. If a Pokémon is already affected by a non-volatile status, it cannot be affected by another until cured of the original status.</p>
 		{#each nonVolatileList as status}
 			<div class="status-block">
@@ -40,11 +41,11 @@
 		{/each}
 	</section>
 	<section>
-		<h2>Volatile Conditions</h2>
+		<Heading level="2" id="volatile-conditions">Volatile Conditions</Heading>
 		<p>A Pokémon can be affected by both a volatile and non-volatile condition. Volatile conditions immediately end outside of combat or when the Pokémon is switched out.</p>
 		{#each volatileList as status}
 			<div class="status-block">
-				<h3>{status.name}</h3>
+				<Heading level="3" id="{status.id}">{status.name}</Heading>
 				<Markdown value="{status.effect}" />
 				{#if status.immunity}
 					<p>{status.immunity}</p>

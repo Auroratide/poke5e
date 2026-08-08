@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { InfoTable } from "$lib/ui/elements"
+	import { Heading, InfoTable } from "$lib/ui/elements"
 </script>
 
 <p>Below is an example d100 table you can roll on at the beginning of each day to determine the weather. Alternatively, it may be fun to determine the weather by what is actually happening outside your game table!</p>
 <p>The effects in the table below are optional. Each type of move listed in the "Types Affected" can roll its damage rolls twice and take the higher result.</p>
-<h2>Spring/Summer</h2>
+<Heading level="2" id="spring-summer">Spring/Summer</Heading>
 <InfoTable label="Spring/Summer Table">
 	<thead>
 		<tr>
@@ -57,7 +57,7 @@
 	</tbody>
 </InfoTable>
 
-<h2>Fall/Winter</h2>
+<Heading level="2" id="fall-winter">Fall/Winter</Heading>
 <InfoTable label="Fall/Winter Table">
 	<thead>
 		<tr>
@@ -120,7 +120,7 @@
 	</tbody>
 </InfoTable>
 
-<h2>Hail and Sandstorm</h2>
+<Heading level="2" id="hail-and-sandstorm">Hail and Sandstorm</Heading>
 <p>These are special weather-related phenomenon that can occur naturally or in specific areas as the result of moves/abilities like Hail, Sandstorm, Snow Warning, and Sand Stream.</p>
 <InfoTable label="Hail and Sandstorm">
 	<thead>

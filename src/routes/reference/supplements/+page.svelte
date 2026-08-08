@@ -3,6 +3,7 @@
 	import ReferencePage from "../ReferencePage.svelte"
 	import TableOfContents from "../TableOfContents.svelte"
 	import { Supplements } from "../references"
+	import { Heading } from "$lib/ui/elements"
 </script>
 
 <ReferencePage title="Supplements">
@@ -11,7 +12,7 @@
 		<p>Pokémon 5e can be played with as many or as few of these supplements as you want! For the minimum rules necessary to play Pokémon 5e, refer to the <a href="{Url.reference.coreRules()}">Core Rules</a>.</p>
 	</section>
 	<section>
-		<h2>Table of Contents</h2>
+		<Heading level="2" id="table-of-contents">Table of Contents</Heading>
 		<TableOfContents items={$Supplements} />
 	</section>
 </ReferencePage>
