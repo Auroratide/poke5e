@@ -4294,10 +4294,7 @@
 			"id": "decorate",
 			"name": "Decorate",
 			"type": "fairy",
-			"power": [
-				"wis",
-				"cha"
-			],
+			"power": "none",
 			"time": "1 action",
 			"pp": 5,
 			"duration": "1 minute",

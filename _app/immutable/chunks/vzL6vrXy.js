@@ -1,0 +1,1 @@
+import{ms as e}from"./z11Bk7Kg.js";var t=class extends e{get contest(){return this.data.contest}get appeal(){return this.data.appeal}get jam(){return this.data.jam}get effect(){return this.data.effect}};export{t};

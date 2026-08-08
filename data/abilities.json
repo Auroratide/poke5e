@@ -1307,7 +1307,7 @@
     {
       "id": "stakeout",
       "name": "Stakeout",
-      "description": "When an opponent is switched out in battle, this Pokémon doubles the damage dealt if it targets the replacement on the first turn immediately following the switch."
+      "description": "When an opponent is switched out in battle, until the end of this Pokémon's next turn following the switch, it doubles the damage it deals to the replacement."
     },
     {
       "id": "stall",
