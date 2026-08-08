@@ -150,6 +150,12 @@
 		color: var(--skin-bg-text);
 	}
 
+	.handle-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
 	.saving {
 		opacity: 0.875;
 	}
