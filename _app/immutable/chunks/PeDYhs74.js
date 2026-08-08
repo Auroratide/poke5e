@@ -1,0 +1,1 @@
+function e(e){return()=>n(e)}function t(){return()=>!0}function n(e){return localStorage.getItem(`feature-toggle::${e}`)!=null}function r(e,t){t?localStorage.setItem(`feature-toggle::${e}`,`true`):localStorage.removeItem(`feature-toggle::${e}`)}var i={OverrideMaintenance:e(`OverrideMaintenance`),SortableTrainers:t()};export{n,r,i as t};
