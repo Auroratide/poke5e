@@ -12,11 +12,23 @@
 
 	let scrollElem: HTMLElement
 
-	afterNavigate(() => {
-		if (scrollElem != null) {
+	afterNavigate(({ to }) => {
+		if (scrollElem == null) return
+
+		// The browser scrolls to a linked heading on its own, but that happens before
+		// hydration, so resetting the scroll here would undo it. Jump to the heading instead.
+		const target = elementForHash(to?.url.hash)
+		if (target != null) {
+			target.scrollIntoView()
+		} else {
 			scrollElem.scrollTop = 0
 		}
 	})
+
+	function elementForHash(hash: string | undefined) {
+		const id = hash?.slice(1)
+		return id ? document.getElementById(decodeURIComponent(id)) : null
+	}
 </script>
 
 <div class="container" class:inline>
