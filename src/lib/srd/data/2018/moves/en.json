@@ -1,0 +1,34 @@
+{
+	"values": [
+		{
+			"id": "swords-dance",
+			"name": "Swords Dance",
+			"type": "normal",
+			"power": [
+				"dex",
+				"wis"
+			],
+			"time": "1 action",
+			"pp": 5,
+			"duration": "1 minute, concentration",
+			"range": "self",
+			"description": [
+				"You enter a frenetic dance to uplift your fighting spirit. For the duration, you gain a bonus equal to this move's MOVE modifer to your damage rolls made with melee attacks."
+			],
+			"higherLevels": null,
+			"attack": null,
+			"damage": {
+				"dice": {
+					"1": "0",
+					"5": "0",
+					"10": "0",
+					"17": "0"
+				},
+				"modifier": "MOVE",
+				"type": [
+					"normal"
+				]
+			}
+		}
+	]
+}
