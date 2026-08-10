@@ -1,10 +1,10 @@
 import type { EntryGenerator, RequestHandler } from "./$types"
-import { respond } from "$lib/srd/util"
+import { respond, SRD_ENABLED } from "$lib/srd/util"
 import { createEntryGenerator, isEdition } from "$lib/srd/editions"
 import { error } from "@sveltejs/kit"
 import { moves } from "$lib/srd/moves"
 
-export const prerender = true
+export const prerender = SRD_ENABLED
 export const entries: EntryGenerator = createEntryGenerator()
 
 export const GET: RequestHandler = async ({ params }) => {
