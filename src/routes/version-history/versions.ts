@@ -14,6 +14,12 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.7",
+		description: [
+			"<strong>Bugfix</strong>: Fix issue where leveling up a pokemon was sometimes duplicating its ASI to pokemon of the same species.",
+			"<strong>Accessibility</strong>: Improve keyboard-only and screenreader experience for reordering trainers and pokemon.",
+		],
+	}, {
 		name: "v1.12.6",
 		description: [
 			"<strong>Trainers</strong>: The trainer list can now be sorted, and it shows a few more details of the trainer.",
