@@ -22,11 +22,11 @@
 			<a class="bubble" href="{Url.trainers(trainer.readKey)}">
 				<div class="art" style:--token-color="{trainer.token?.color ?? TOKEN_DEFAULTCOLOR}">
 					{#if trainer.avatar?.href}
-						<div class="img-avatar-container">
+						<div class="img-avatar-container" aria-hidden="true">
 							<img class="img-avatar" src="{trainer.avatar?.href}" alt="{trainer.name}" />
 						</div>
 					{:else}
-						<div class="default-avatar">{trainer.name.slice(0, 2)}</div>
+						<div class="default-avatar" aria-hidden="true">{trainer.name.slice(0, 2)}</div>
 					{/if}
 				</div>
 				<div class="name">{trainer.name}</div>
