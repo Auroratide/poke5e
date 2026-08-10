@@ -80,7 +80,8 @@
 		"@floating-ui/dom": "^1.7.6",
 		"@supabase/supabase-js": "^2.104.0",
 		"dompurify": "^3.4.1",
-		"marked": "^15.0.12"
+		"marked": "^15.0.12",
+		"zod": "^4.4.3"
 	},
 	"packageManager": "pnpm@10.33.0",
 	"engines": {
