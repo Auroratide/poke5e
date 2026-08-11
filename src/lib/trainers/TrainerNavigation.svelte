@@ -1,20 +1,18 @@
 <script lang="ts">
-	import { SearchField } from "$lib/ui/forms"
-	import { SortableTable, BubbleRow, ListHeading } from "$lib/ui/page"
-	import { trainerListFilterValue, trainerListSorter } from "./store"
-	import type { TrainerListStore } from "./trainers"
-	import type { Trainer } from "./types"
-	import { Button } from "$lib/ui/elements"
-	import { Url } from "$lib/site/url"
-	import { PageAction } from "./page-action"
-	import GetStarted from "./GetStarted.svelte"
-	import { m } from "$lib/site/i18n"
 	import { TagList, TagSelection } from "$lib/poke5e/tags"
-	import { trainers as trainerStore } from "./trainers"
-	import { FeatureToggles } from "$lib/site/FeatureToggles"
-	import TrainerList from "./TrainerList.svelte"
-	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
+	import { m } from "$lib/site/i18n"
+	import { Url } from "$lib/site/url"
+	import { Button } from "$lib/ui/elements"
+	import { SearchField } from "$lib/ui/forms"
+	import { ListHeading } from "$lib/ui/page"
 	import * as list from "$lib/utils/list"
+	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
+	import GetStarted from "./GetStarted.svelte"
+	import { PageAction } from "./page-action"
+	import { trainerListFilterValue } from "./store"
+	import TrainerList from "./TrainerList.svelte"
+	import type { TrainerListStore } from "./trainers"
+	import { trainers as trainerStore } from "./trainers"
 
 	const allTags = trainerStore.tags()
 
@@ -40,9 +38,6 @@
 			})
 			.filter((it) => textFilterIsTagName || it.name.toLocaleLowerCase().includes($trainerListFilterValue.toLocaleLowerCase())),
 	)
-
-	const byStringField = (field: (m: Trainer) => string) =>
-		(l: Trainer, r: Trainer) => field(l).localeCompare(field(r))
 
 	const resetFilters = () => {
 		filteredTags = []
@@ -72,17 +67,7 @@
 {#if hasNoTrainers}
 	{#if showGetStarted}<GetStarted />{/if}
 {:else}
-	{#if FeatureToggles.SortableTrainers()}
 		<TrainerList list={filtered} onreorder={onReorder} saving={reordering} />
-	{:else}
-		<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$trainerListSorter} headers={[ {
-			key: "name", name: m.name(), ratio: 1, sort: byStringField(it => it.name),
-		} ]}>
-			<BubbleRow.Row interactive mainBg="var(--skin-bg-dark)">
-				<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.trainers(item.readKey)}">{item.name}</a></BubbleRow.Cell>
-			</BubbleRow.Row>
-		</SortableTable>
-	{/if}
 {/if}
 
 <style>
