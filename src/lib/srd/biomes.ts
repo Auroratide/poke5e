@@ -14,7 +14,7 @@ export const BiomesListJson = z.object({
 export type BiomeJson = z.infer<typeof BiomeJson>
 export type BiomesListJson = z.infer<typeof BiomesListJson>
 
-export async function biomes(): Promise<BiomesListJson> {
+async function all(): Promise<BiomesListJson> {
 	const values = await translateData(
 		en.values,
 		async (locale) => (await import(`./data/2024/biomes/${locale}.json`)).values,
@@ -22,3 +22,7 @@ export async function biomes(): Promise<BiomesListJson> {
 
 	return { values }
 }
+
+export const BiomesSrd = {
+	all,
+} as const

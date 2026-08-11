@@ -4,32 +4,36 @@ import en2024 from "./data/2024/moves/en.json"
 import en2018 from "./data/2018/moves/en.json"
 import { chooseEditionData, type Edition } from "./editions"
 
+const TableJson = z.object({
+	type: z.string(),
+	headers: z.array(z.string()),
+	rows: z.array(z.array(z.string())),
+})
+
 export const MoveJson = z.object({
 	id: z.string(),
 	name: z.string(),
 	type: z.string(),
 	power: z.union([
 		z.array(z.string()),
-		z.literal("none"),
-		z.literal("varies"),
-		z.literal("any"),
+		z.string(),
 	]),
 	time: z.string(),
 	pp: z.int(),
 	duration: z.string(),
 	range: z.string(),
-	description: z.array(z.string()),
+	description: z.array(z.union([z.string(), TableJson])),
 	higherLevels: z.optional(z.string()),
-	optional: z.optional(z.array(z.string())),
+	optional: z.optional(z.array(z.union([z.string(), TableJson]))),
 	damage: z.optional(z.object({
 		dice: z.object({
-			"1": z.string(),
-			"5": z.string(),
-			"10": z.string(),
-			"17": z.string(),
+			"1": z.union([z.int(), z.string()]),
+			"5": z.union([z.int(), z.string()]),
+			"10": z.union([z.int(), z.string()]),
+			"17": z.union([z.int(), z.string()]),
 		}),
 		modifier: z.union([z.number(), z.string()]),
-		type: z.array(z.string()),
+		type: z.union([z.string(), z.array(z.string())]),
 	})),
 	attack: z.optional(z.object({
 		scope: z.string(),
@@ -47,7 +51,7 @@ export const MovesListJson = z.object({
 export type MoveJson = z.infer<typeof MoveJson>
 export type MovesListJson = z.infer<typeof MovesListJson>
 
-export async function moves(edition: Edition): Promise<MovesListJson> {
+async function all(edition: Edition): Promise<MovesListJson> {
 	const values2024 = await translateData(
 		en2024.values,
 		async (locale) => (await import(`./data/2024/moves/${locale}.json`)).values,
@@ -65,14 +69,20 @@ export async function moves(edition: Edition): Promise<MovesListJson> {
 	return { values }
 }
 
-export function moveIds(): string[] {
+function ids(): string[] {
 	return en2024.values.map((it) => it.id)
 }
 
-export async function move(id: string, edition: Edition): Promise<MoveJson | undefined> {
-	const all = await moves(edition)
+async function one(id: string, edition: Edition): Promise<MoveJson | undefined> {
+	const moves = await all(edition)
 
-	const single = all.values.find((it) => it.id === id)
+	const single = moves.values.find((it) => it.id === id)
 
 	return single
 }
+
+export const MovesSrd = {
+	all,
+	one,
+	ids,
+} as const
