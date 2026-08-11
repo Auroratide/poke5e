@@ -1,7 +1,7 @@
-import { expect, test } from '@playwright/test'
+import { test } from '@playwright/test'
 import { Poke5eSite } from './Poke5eSite'
 
-test("testit", async ({ page }) => {
+test("trainer end to end flow", async ({ page }) => {
 	const site = await Poke5eSite.startJourney("A trainer manages their pokemon", page)
 
 	const trainerName = `Automated Tester ${Math.floor(Math.random() * 999999)}`

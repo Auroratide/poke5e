@@ -1,7 +1,6 @@
 import { defineConfig, devices } from "@playwright/test"
 
 export default defineConfig({
-	testDir: "./test/smoke",
 	fullyParallel: true,
 	forbidOnly: !!process.env.CI,
 	retries: 0,
@@ -13,8 +12,14 @@ export default defineConfig({
 	},
 	projects: [
 		{
-			name: "chromium",
+			name: "smoke",
+			testDir: "./test/smoke",
 			use: { ...devices["Desktop Chrome"] },
+		},
+		{
+			// Pure HTTP checks against the prerendered output — no browser needed.
+			name: "srd",
+			testDir: "./test/srd",
 		},
 	],
 
