@@ -16,6 +16,7 @@ import type { MoveStats } from "./MoveStats"
 import type { MoveType } from "./type"
 import type { Tm } from "./tms/Tm"
 import { TmDetails } from "./tms/TmDetails"
+import { includesSearch } from "$lib/utils/string"
 
 export type MoveId = string
 
@@ -23,6 +24,7 @@ export class Move extends DataClass<{
 	id: MoveId,
 	beta?: boolean,
 	name: string,
+	aliases?: string[],
 	type: MoveType,
 	power: Data<MovePower>,
 	time: string,
@@ -41,6 +43,7 @@ export class Move extends DataClass<{
 	get id() { return this.data.id }
 	get beta() { return this.data.beta ?? false }
 	get name() { return this.data.name }
+	get aliases() { return this.data.aliases ?? [] }
 	get type() { return this.data.type }
 	get power() { return new MovePower(this.data.power) }
 	get time() { return this.data.time }
@@ -105,6 +108,6 @@ export class Move extends DataClass<{
 	}
 
 	static matchNameOrType = (value: string) => (move: Move) =>
-		move.name.toLocaleLowerCase().includes(value.toLocaleLowerCase()) ||
+		includesSearch([move.name, ...move.aliases], value) ||
 			move.type.includes(value.toLocaleLowerCase())
 }

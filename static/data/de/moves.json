@@ -1,0 +1,5303 @@
+{
+	"moves": [
+		{
+			"id": "absorb",
+			"name": "Absorber",
+			"aliases": [
+				"Absorb"
+			]
+		},
+		{
+			"id": "accelerock",
+			"name": "Turbofelsen",
+			"aliases": [
+				"Accelerock"
+			]
+		},
+		{
+			"id": "acid",
+			"name": "Säure",
+			"aliases": [
+				"Acid"
+			]
+		},
+		{
+			"id": "acid-armor",
+			"name": "Säurepanzer",
+			"aliases": [
+				"Acid Armor"
+			]
+		},
+		{
+			"id": "acid-spray",
+			"name": "Säurespeier",
+			"aliases": [
+				"Acid Spray"
+			]
+		},
+		{
+			"id": "acrobatics",
+			"name": "Akrobatik",
+			"aliases": [
+				"Acrobatics"
+			]
+		},
+		{
+			"id": "acupressure",
+			"name": "Akupressur",
+			"aliases": [
+				"Acupressure"
+			]
+		},
+		{
+			"id": "aerial-ace",
+			"name": "Aero-Ass",
+			"aliases": [
+				"Aerial Ace"
+			]
+		},
+		{
+			"id": "aeroblast",
+			"name": "Luftstoß",
+			"aliases": [
+				"Aeroblast"
+			]
+		},
+		{
+			"id": "after-you",
+			"name": "Galanterie",
+			"aliases": [
+				"After You"
+			]
+		},
+		{
+			"id": "agility",
+			"name": "Agilität",
+			"aliases": [
+				"Agility"
+			]
+		},
+		{
+			"id": "air-cutter",
+			"name": "Windschnitt",
+			"aliases": [
+				"Air Cutter"
+			]
+		},
+		{
+			"id": "air-slash",
+			"name": "Luftschnitt",
+			"aliases": [
+				"Air Slash"
+			]
+		},
+		{
+			"id": "alluring-voice",
+			"name": "Lockstimme",
+			"aliases": [
+				"Alluring Voice"
+			]
+		},
+		{
+			"id": "ally-switch",
+			"name": "Seitentausch",
+			"aliases": [
+				"Ally Switch"
+			]
+		},
+		{
+			"id": "amnesia",
+			"name": "Amnesie",
+			"aliases": [
+				"Amnesia"
+			]
+		},
+		{
+			"id": "anchor-shot",
+			"name": "Ankerschuss",
+			"aliases": [
+				"Anchor Shot"
+			]
+		},
+		{
+			"id": "ancient-power",
+			"name": "Antik-Kraft",
+			"aliases": [
+				"Ancient Power"
+			]
+		},
+		{
+			"id": "apple-acid",
+			"name": "Apfelsäure",
+			"aliases": [
+				"Apple Acid"
+			]
+		},
+		{
+			"id": "aqua-jet",
+			"name": "Wasserdüse",
+			"aliases": [
+				"Aqua Jet"
+			]
+		},
+		{
+			"id": "aqua-ring",
+			"name": "Wasserring",
+			"aliases": [
+				"Aqua Ring"
+			]
+		},
+		{
+			"id": "aqua-tail",
+			"name": "Nassschweif",
+			"aliases": [
+				"Aqua Tail"
+			]
+		},
+		{
+			"id": "arm-thrust",
+			"name": "Armstoß",
+			"aliases": [
+				"Arm Thrust"
+			]
+		},
+		{
+			"id": "aromatherapy",
+			"name": "Aromakur",
+			"aliases": [
+				"Aromatherapy"
+			]
+		},
+		{
+			"id": "aromatic-mist",
+			"name": "Duftwolke",
+			"aliases": [
+				"Aromatic Mist"
+			]
+		},
+		{
+			"id": "assist",
+			"name": "Zuschuss",
+			"aliases": [
+				"Assist"
+			]
+		},
+		{
+			"id": "assurance",
+			"name": "Gewissheit",
+			"aliases": [
+				"Assurance"
+			]
+		},
+		{
+			"id": "astonish",
+			"name": "Erstauner",
+			"aliases": [
+				"Astonish"
+			]
+		},
+		{
+			"id": "astral-barrage",
+			"name": "Astralfragmente",
+			"aliases": [
+				"Astral Barrage"
+			]
+		},
+		{
+			"id": "attack-order",
+			"name": "Schlagbefehl",
+			"aliases": [
+				"Attack Order"
+			]
+		},
+		{
+			"id": "attract",
+			"name": "Anziehung",
+			"aliases": [
+				"Attract"
+			]
+		},
+		{
+			"id": "aura-sphere",
+			"name": "Aurasphäre",
+			"aliases": [
+				"Aura Sphere"
+			]
+		},
+		{
+			"id": "aura-wheel",
+			"name": "Aura-Rad",
+			"aliases": [
+				"Aura Wheel"
+			]
+		},
+		{
+			"id": "aurora-beam",
+			"name": "Aurorastrahl",
+			"aliases": [
+				"Aurora Beam"
+			]
+		},
+		{
+			"id": "aurora-veil",
+			"name": "Auroraschleier",
+			"aliases": [
+				"Aurora Veil"
+			]
+		},
+		{
+			"id": "autotomize",
+			"name": "Autotomie",
+			"aliases": [
+				"Autotomize"
+			]
+		},
+		{
+			"id": "avalanche",
+			"name": "Lawine",
+			"aliases": [
+				"Avalanche"
+			]
+		},
+		{
+			"id": "baby-doll-eyes",
+			"name": "Kulleraugen",
+			"aliases": [
+				"Baby-Doll Eyes"
+			]
+		},
+		{
+			"id": "baneful-bunker",
+			"name": "Bunker",
+			"aliases": [
+				"Baneful Bunker"
+			]
+		},
+		{
+			"id": "barrage",
+			"name": "Stakkato",
+			"aliases": [
+				"Barrage"
+			]
+		},
+		{
+			"id": "barrier",
+			"name": "Barriere",
+			"aliases": [
+				"Barrier"
+			]
+		},
+		{
+			"id": "baton-pass",
+			"name": "Stafette",
+			"aliases": [
+				"Baton Pass"
+			]
+		},
+		{
+			"id": "beak-blast",
+			"name": "Schnabelkanone",
+			"aliases": [
+				"Beak Blast"
+			]
+		},
+		{
+			"id": "beat-up",
+			"name": "Prügler",
+			"aliases": [
+				"Beat Up"
+			]
+		},
+		{
+			"id": "behemoth-bash",
+			"name": "Gigantenstoß",
+			"aliases": [
+				"Behemoth Bash"
+			]
+		},
+		{
+			"id": "behemoth-blade",
+			"name": "Gigantenhieb",
+			"aliases": [
+				"Behemoth Blade"
+			]
+		},
+		{
+			"id": "belch",
+			"name": "Rülpser",
+			"aliases": [
+				"Belch"
+			]
+		},
+		{
+			"id": "belly-drum",
+			"name": "Bauchtrommel",
+			"aliases": [
+				"Belly Drum"
+			]
+		},
+		{
+			"id": "bestow",
+			"name": "Offerte",
+			"aliases": [
+				"Bestow"
+			]
+		},
+		{
+			"id": "bide",
+			"name": "Geduld",
+			"aliases": [
+				"Bide"
+			]
+		},
+		{
+			"id": "bind",
+			"name": "Klammergriff",
+			"aliases": [
+				"Bind"
+			]
+		},
+		{
+			"id": "bite",
+			"name": "Biss",
+			"aliases": [
+				"Bite"
+			]
+		},
+		{
+			"id": "blast-burn",
+			"name": "Lohekanonade",
+			"aliases": [
+				"Blast Burn"
+			]
+		},
+		{
+			"id": "blaze-kick",
+			"name": "Feuerfeger",
+			"aliases": [
+				"Blaze Kick"
+			]
+		},
+		{
+			"id": "blizzard",
+			"name": "Blizzard",
+			"aliases": [
+				"Blizzard"
+			]
+		},
+		{
+			"id": "block",
+			"name": "Rückentzug",
+			"aliases": [
+				"Block"
+			]
+		},
+		{
+			"id": "blue-flare",
+			"name": "Blauflammen",
+			"aliases": [
+				"Blue Flare"
+			]
+		},
+		{
+			"id": "body-press",
+			"name": "Body Press",
+			"aliases": [
+				"Body Press"
+			]
+		},
+		{
+			"id": "body-slam",
+			"name": "Bodyslam",
+			"aliases": [
+				"Body Slam"
+			]
+		},
+		{
+			"id": "bolt-beak",
+			"name": "Schockschnabel",
+			"aliases": [
+				"Bolt Beak"
+			]
+		},
+		{
+			"id": "bolt-strike",
+			"name": "Blitzschlag",
+			"aliases": [
+				"Bolt Strike"
+			]
+		},
+		{
+			"id": "bone-club",
+			"name": "Knochenkeule",
+			"aliases": [
+				"Bone Club"
+			]
+		},
+		{
+			"id": "bone-rush",
+			"name": "Knochenhatz",
+			"aliases": [
+				"Bone Rush"
+			]
+		},
+		{
+			"id": "bonemerang",
+			"name": "Knochmerang",
+			"aliases": [
+				"Bonemerang"
+			]
+		},
+		{
+			"id": "boomburst",
+			"name": "Überschallknall",
+			"aliases": [
+				"Boomburst"
+			]
+		},
+		{
+			"id": "bounce",
+			"name": "Sprungfeder",
+			"aliases": [
+				"Bounce"
+			]
+		},
+		{
+			"id": "branch-poke",
+			"name": "Zweigstoß",
+			"aliases": [
+				"Branch Poke"
+			]
+		},
+		{
+			"id": "brave-bird",
+			"name": "Sturzflug",
+			"aliases": [
+				"Brave Bird"
+			]
+		},
+		{
+			"id": "breaking-swipe",
+			"name": "Breitseite",
+			"aliases": [
+				"Breaking Swipe"
+			]
+		},
+		{
+			"id": "brick-break",
+			"name": "Durchbruch",
+			"aliases": [
+				"Brick Break"
+			]
+		},
+		{
+			"id": "brine",
+			"name": "Lake",
+			"aliases": [
+				"Brine"
+			]
+		},
+		{
+			"id": "brutal-swing",
+			"name": "Wirbler",
+			"aliases": [
+				"Brutal Swing"
+			]
+		},
+		{
+			"id": "bubble",
+			"name": "Blubber",
+			"aliases": [
+				"Bubble"
+			]
+		},
+		{
+			"id": "bubble-beam",
+			"name": "Blubbstrahl",
+			"aliases": [
+				"Bubble Beam"
+			]
+		},
+		{
+			"id": "bug-bite",
+			"name": "Käferbiss",
+			"aliases": [
+				"Bug Bite"
+			]
+		},
+		{
+			"id": "bug-buzz",
+			"name": "Käfergebrumm",
+			"aliases": [
+				"Bug Buzz"
+			]
+		},
+		{
+			"id": "bulk-up",
+			"name": "Protzer",
+			"aliases": [
+				"Bulk Up"
+			]
+		},
+		{
+			"id": "bulldoze",
+			"name": "Dampfwalze",
+			"aliases": [
+				"Bulldoze"
+			]
+		},
+		{
+			"id": "bullet-punch",
+			"name": "Patronenhieb",
+			"aliases": [
+				"Bullet Punch"
+			]
+		},
+		{
+			"id": "bullet-seed",
+			"name": "Kugelsaat",
+			"aliases": [
+				"Bullet Seed"
+			]
+		},
+		{
+			"id": "burn-up",
+			"name": "Ausbrennen",
+			"aliases": [
+				"Burn Up"
+			]
+		},
+		{
+			"id": "burning-bulwark",
+			"name": "Flammenschild",
+			"aliases": [
+				"Burning Bulwark"
+			]
+		},
+		{
+			"id": "burning-jealousy",
+			"name": "Neidflammen",
+			"aliases": [
+				"Burning Jealousy"
+			]
+		},
+		{
+			"id": "calm-mind",
+			"name": "Gedankengut",
+			"aliases": [
+				"Calm Mind"
+			]
+		},
+		{
+			"id": "camouflage",
+			"name": "Tarnung",
+			"aliases": [
+				"Camouflage"
+			]
+		},
+		{
+			"id": "captivate",
+			"name": "Liebreiz",
+			"aliases": [
+				"Captivate"
+			]
+		},
+		{
+			"id": "charge",
+			"name": "Ladevorgang",
+			"aliases": [
+				"Charge"
+			]
+		},
+		{
+			"id": "charge-beam",
+			"name": "Ladestrahl",
+			"aliases": [
+				"Charge Beam"
+			]
+		},
+		{
+			"id": "charm",
+			"name": "Charme",
+			"aliases": [
+				"Charm"
+			]
+		},
+		{
+			"id": "chatter",
+			"name": "Geschwätz",
+			"aliases": [
+				"Chatter"
+			]
+		},
+		{
+			"id": "chip-away",
+			"name": "Zermürben",
+			"aliases": [
+				"Chip Away"
+			]
+		},
+		{
+			"id": "circle-throw",
+			"name": "Überkopfwurf",
+			"aliases": [
+				"Circle Throw"
+			]
+		},
+		{
+			"id": "clamp",
+			"name": "Schnapper",
+			"aliases": [
+				"Clamp"
+			]
+		},
+		{
+			"id": "clanging-scales",
+			"name": "Schuppenrasseln",
+			"aliases": [
+				"Clanging Scales"
+			]
+		},
+		{
+			"id": "clangorous-soul",
+			"name": "Seelentanz",
+			"aliases": [
+				"Clangorous Soul"
+			]
+		},
+		{
+			"id": "clear-smog",
+			"name": "Klärsmog",
+			"aliases": [
+				"Clear Smog"
+			]
+		},
+		{
+			"id": "close-combat",
+			"name": "Nahkampf",
+			"aliases": [
+				"Close Combat"
+			]
+		},
+		{
+			"id": "coaching",
+			"name": "Coaching",
+			"aliases": [
+				"Coaching"
+			]
+		},
+		{
+			"id": "coil",
+			"name": "Einrollen",
+			"aliases": [
+				"Coil"
+			]
+		},
+		{
+			"id": "comet-punch",
+			"name": "Kometenhieb",
+			"aliases": [
+				"Comet Punch"
+			]
+		},
+		{
+			"id": "confide",
+			"name": "Vertrauenssache",
+			"aliases": [
+				"Confide"
+			]
+		},
+		{
+			"id": "confuse-ray",
+			"name": "Konfusstrahl",
+			"aliases": [
+				"Confuse Ray"
+			]
+		},
+		{
+			"id": "confusion",
+			"name": "Konfusion",
+			"aliases": [
+				"Confusion"
+			]
+		},
+		{
+			"id": "constrict",
+			"name": "Umklammerung",
+			"aliases": [
+				"Constrict"
+			]
+		},
+		{
+			"id": "conversion",
+			"name": "Umwandlung",
+			"aliases": [
+				"Conversion"
+			]
+		},
+		{
+			"id": "conversion-2",
+			"name": "Umwandlung2",
+			"aliases": [
+				"Conversion 2"
+			]
+		},
+		{
+			"id": "copycat",
+			"name": "Imitator",
+			"aliases": [
+				"Copycat"
+			]
+		},
+		{
+			"id": "core-enforcer",
+			"name": "Sanktionskern",
+			"aliases": [
+				"Core Enforcer"
+			]
+		},
+		{
+			"id": "corrosive-gas",
+			"name": "Korrosionsgas",
+			"aliases": [
+				"Corrosive Gas"
+			]
+		},
+		{
+			"id": "cosmic-power",
+			"name": "Kosmik-Kraft",
+			"aliases": [
+				"Cosmic Power"
+			]
+		},
+		{
+			"id": "cotton-guard",
+			"name": "Watteschild",
+			"aliases": [
+				"Cotton Guard"
+			]
+		},
+		{
+			"id": "cotton-spore",
+			"name": "Baumwollsaat",
+			"aliases": [
+				"Cotton Spore"
+			]
+		},
+		{
+			"id": "counter",
+			"name": "Konter",
+			"aliases": [
+				"Counter"
+			]
+		},
+		{
+			"id": "court-change",
+			"name": "Seitenwechsel",
+			"aliases": [
+				"Court Change"
+			]
+		},
+		{
+			"id": "covet",
+			"name": "Bezirzer",
+			"aliases": [
+				"Covet"
+			]
+		},
+		{
+			"id": "crabhammer",
+			"name": "Krabbhammer",
+			"aliases": [
+				"Crabhammer"
+			]
+		},
+		{
+			"id": "crafty-shield",
+			"name": "Trickschutz",
+			"aliases": [
+				"Crafty Shield"
+			]
+		},
+		{
+			"id": "cross-chop",
+			"name": "Kreuzhieb",
+			"aliases": [
+				"Cross Chop"
+			]
+		},
+		{
+			"id": "cross-poison",
+			"name": "Giftstreich",
+			"aliases": [
+				"Cross Poison"
+			]
+		},
+		{
+			"id": "crunch",
+			"name": "Knirscher",
+			"aliases": [
+				"Crunch"
+			]
+		},
+		{
+			"id": "crush-claw",
+			"name": "Zermalmklaue",
+			"aliases": [
+				"Crush Claw"
+			]
+		},
+		{
+			"id": "crush-grip",
+			"name": "Quetschgriff",
+			"aliases": [
+				"Crush Grip"
+			]
+		},
+		{
+			"id": "curse",
+			"name": "Fluch",
+			"aliases": [
+				"Curse"
+			]
+		},
+		{
+			"id": "cut",
+			"name": "Zerschneider",
+			"aliases": [
+				"Cut"
+			]
+		},
+		{
+			"id": "dark-pulse",
+			"name": "Finsteraura",
+			"aliases": [
+				"Dark Pulse"
+			]
+		},
+		{
+			"id": "dark-void",
+			"name": "Schlummerort",
+			"aliases": [
+				"Dark Void"
+			]
+		},
+		{
+			"id": "darkest-lariat",
+			"name": "Dark Lariat",
+			"aliases": [
+				"Darkest Lariat"
+			]
+		},
+		{
+			"id": "dazzling-gleam",
+			"name": "Zauberschein",
+			"aliases": [
+				"Dazzling Gleam"
+			]
+		},
+		{
+			"id": "decorate",
+			"name": "Verzierung",
+			"aliases": [
+				"Decorate"
+			]
+		},
+		{
+			"id": "defend-order",
+			"name": "Blockbefehl",
+			"aliases": [
+				"Defend Order"
+			]
+		},
+		{
+			"id": "defense-curl",
+			"name": "Einigler",
+			"aliases": [
+				"Defense Curl"
+			]
+		},
+		{
+			"id": "defog",
+			"name": "Auflockern",
+			"aliases": [
+				"Defog"
+			]
+		},
+		{
+			"id": "destiny-bond",
+			"name": "Abgangsbund",
+			"aliases": [
+				"Destiny Bond"
+			]
+		},
+		{
+			"id": "detect",
+			"name": "Scanner",
+			"aliases": [
+				"Detect"
+			]
+		},
+		{
+			"id": "diamond-storm",
+			"name": "Diamantsturm",
+			"aliases": [
+				"Diamond Storm"
+			]
+		},
+		{
+			"id": "dig",
+			"name": "Schaufler",
+			"aliases": [
+				"Dig"
+			]
+		},
+		{
+			"id": "disable",
+			"name": "Aussetzer",
+			"aliases": [
+				"Disable"
+			]
+		},
+		{
+			"id": "disarming-voice",
+			"name": "Säuselstimme",
+			"aliases": [
+				"Disarming Voice"
+			]
+		},
+		{
+			"id": "discharge",
+			"name": "Ladungsstoß",
+			"aliases": [
+				"Discharge"
+			]
+		},
+		{
+			"id": "dive",
+			"name": "Taucher",
+			"aliases": [
+				"Dive"
+			]
+		},
+		{
+			"id": "dizzy-punch",
+			"name": "Irrschlag",
+			"aliases": [
+				"Dizzy Punch"
+			]
+		},
+		{
+			"id": "doom-desire",
+			"name": "Kismetwunsch",
+			"aliases": [
+				"Doom Desire"
+			]
+		},
+		{
+			"id": "double-hit",
+			"name": "Doppelschlag",
+			"aliases": [
+				"Double Hit"
+			]
+		},
+		{
+			"id": "double-iron-bash",
+			"name": "Panzerfäuste",
+			"aliases": [
+				"Double Iron Bash"
+			]
+		},
+		{
+			"id": "double-kick",
+			"name": "Doppelkick",
+			"aliases": [
+				"Double Kick"
+			]
+		},
+		{
+			"id": "double-slap",
+			"name": "Duplexhieb",
+			"aliases": [
+				"Double Slap"
+			]
+		},
+		{
+			"id": "double-team",
+			"name": "Doppelteam",
+			"aliases": [
+				"Double Team"
+			]
+		},
+		{
+			"id": "double-edge",
+			"name": "Risikotackle",
+			"aliases": [
+				"Double-Edge"
+			]
+		},
+		{
+			"id": "draco-meteor",
+			"name": "Draco Meteor",
+			"aliases": [
+				"Draco Meteor"
+			]
+		},
+		{
+			"id": "dragon-ascent",
+			"name": "Zenitstürmer",
+			"aliases": [
+				"Dragon Ascent"
+			]
+		},
+		{
+			"id": "dragon-breath",
+			"name": "Feuerodem",
+			"aliases": [
+				"Dragon Breath"
+			]
+		},
+		{
+			"id": "dragon-cheer",
+			"name": "Drachenschrei",
+			"aliases": [
+				"Dragon Cheer"
+			]
+		},
+		{
+			"id": "dragon-claw",
+			"name": "Drachenklaue",
+			"aliases": [
+				"Dragon Claw"
+			]
+		},
+		{
+			"id": "dragon-dance",
+			"name": "Drachentanz",
+			"aliases": [
+				"Dragon Dance"
+			]
+		},
+		{
+			"id": "dragon-darts",
+			"name": "Drachenpfeile",
+			"aliases": [
+				"Dragon Darts"
+			]
+		},
+		{
+			"id": "dragon-hammer",
+			"name": "Drachenhammer",
+			"aliases": [
+				"Dragon Hammer"
+			]
+		},
+		{
+			"id": "dragon-energy",
+			"name": "Drachenkräfte",
+			"aliases": [
+				"Dragon Energy"
+			]
+		},
+		{
+			"id": "dragon-pulse",
+			"name": "Drachenpuls",
+			"aliases": [
+				"Dragon Pulse"
+			]
+		},
+		{
+			"id": "dragon-rage",
+			"name": "Drachenwut",
+			"aliases": [
+				"Dragon Rage"
+			]
+		},
+		{
+			"id": "dragon-rush",
+			"name": "Drachenstoß",
+			"aliases": [
+				"Dragon Rush"
+			]
+		},
+		{
+			"id": "dragon-tail",
+			"name": "Drachenrute",
+			"aliases": [
+				"Dragon Tail"
+			]
+		},
+		{
+			"id": "drain-punch",
+			"name": "Ableithieb",
+			"aliases": [
+				"Drain Punch"
+			]
+		},
+		{
+			"id": "draining-kiss",
+			"name": "Diebeskuss",
+			"aliases": [
+				"Draining Kiss"
+			]
+		},
+		{
+			"id": "dream-eater",
+			"name": "Traumfresser",
+			"aliases": [
+				"Dream Eater"
+			]
+		},
+		{
+			"id": "drill-peck",
+			"name": "Bohrschnabel",
+			"aliases": [
+				"Drill Peck"
+			]
+		},
+		{
+			"id": "drill-run",
+			"name": "Schlagbohrer",
+			"aliases": [
+				"Drill Run"
+			]
+		},
+		{
+			"id": "drum-beating",
+			"name": "Trommelschläge",
+			"aliases": [
+				"Drum Beating"
+			]
+		},
+		{
+			"id": "dual-chop",
+			"name": "Doppelhieb",
+			"aliases": [
+				"Dual Chop"
+			]
+		},
+		{
+			"id": "dual-wingbeat",
+			"name": "Doppelflügel",
+			"aliases": [
+				"Dual Wingbeat"
+			]
+		},
+		{
+			"id": "dynamax-cannon",
+			"name": "Dynamax-Kanone",
+			"aliases": [
+				"Dynamax Cannon"
+			]
+		},
+		{
+			"id": "dynamic-punch",
+			"name": "Wuchtschlag",
+			"aliases": [
+				"Dynamic Punch"
+			]
+		},
+		{
+			"id": "earth-power",
+			"name": "Erdkräfte",
+			"aliases": [
+				"Earth Power"
+			]
+		},
+		{
+			"id": "earthquake",
+			"name": "Erdbeben",
+			"aliases": [
+				"Earthquake"
+			]
+		},
+		{
+			"id": "echoed-voice",
+			"name": "Widerhall",
+			"aliases": [
+				"Echoed Voice"
+			]
+		},
+		{
+			"id": "eerie-impulse",
+			"name": "Mystowellen",
+			"aliases": [
+				"Eerie Impulse"
+			]
+		},
+		{
+			"id": "eerie-spell",
+			"name": "Schauderspruch",
+			"aliases": [
+				"Eerie Spell"
+			]
+		},
+		{
+			"id": "egg-bomb",
+			"name": "Eierbombe",
+			"aliases": [
+				"Egg Bomb"
+			]
+		},
+		{
+			"id": "electric-terrain",
+			"name": "Elektrofeld",
+			"aliases": [
+				"Electric Terrain"
+			]
+		},
+		{
+			"id": "electrify",
+			"name": "Elektrifizierung",
+			"aliases": [
+				"Electrify"
+			]
+		},
+		{
+			"id": "electro-ball",
+			"name": "Elektroball",
+			"aliases": [
+				"Electro Ball"
+			]
+		},
+		{
+			"id": "electro-shot",
+			"name": "Stromstrahl",
+			"aliases": [
+				"Electro Shot"
+			]
+		},
+		{
+			"id": "electroweb",
+			"name": "Elektronetz",
+			"aliases": [
+				"Electroweb"
+			]
+		},
+		{
+			"id": "embargo",
+			"name": "Itemsperre",
+			"aliases": [
+				"Embargo"
+			]
+		},
+		{
+			"id": "ember",
+			"name": "Glut",
+			"aliases": [
+				"Ember"
+			]
+		},
+		{
+			"id": "encore",
+			"name": "Zugabe",
+			"aliases": [
+				"Encore"
+			]
+		},
+		{
+			"id": "endeavor",
+			"name": "Notsituation",
+			"aliases": [
+				"Endeavor"
+			]
+		},
+		{
+			"id": "endure",
+			"name": "Ausdauer",
+			"aliases": [
+				"Endure"
+			]
+		},
+		{
+			"id": "energy-ball",
+			"name": "Energieball",
+			"aliases": [
+				"Energy Ball"
+			]
+		},
+		{
+			"id": "entrainment",
+			"name": "Zwango",
+			"aliases": [
+				"Entrainment"
+			]
+		},
+		{
+			"id": "eruption",
+			"name": "Eruption",
+			"aliases": [
+				"Eruption"
+			]
+		},
+		{
+			"id": "eternabeam",
+			"name": "Unendynastrahlen",
+			"aliases": [
+				"Eternabeam"
+			]
+		},
+		{
+			"id": "expanding-force",
+			"name": "Flächenmacht",
+			"aliases": [
+				"Expanding Force"
+			]
+		},
+		{
+			"id": "explosion",
+			"name": "Explosion",
+			"aliases": [
+				"Explosion"
+			]
+		},
+		{
+			"id": "extrasensory",
+			"name": "Sondersensor",
+			"aliases": [
+				"Extrasensory"
+			]
+		},
+		{
+			"id": "extreme-speed",
+			"name": "Turbotempo",
+			"aliases": [
+				"Extreme Speed"
+			]
+		},
+		{
+			"id": "facade",
+			"name": "Fassade",
+			"aliases": [
+				"Facade"
+			]
+		},
+		{
+			"id": "fairy-lock",
+			"name": "Feenschloss",
+			"aliases": [
+				"Fairy Lock"
+			]
+		},
+		{
+			"id": "fairy-wind",
+			"name": "Feenbrise",
+			"aliases": [
+				"Fairy Wind"
+			]
+		},
+		{
+			"id": "fake-out",
+			"name": "Mogelhieb",
+			"aliases": [
+				"Fake Out"
+			]
+		},
+		{
+			"id": "fake-tears",
+			"name": "Trugträne",
+			"aliases": [
+				"Fake Tears"
+			]
+		},
+		{
+			"id": "false-surrender",
+			"name": "Kniefalltrick",
+			"aliases": [
+				"False Surrender"
+			]
+		},
+		{
+			"id": "false-swipe",
+			"name": "Trugschlag",
+			"aliases": [
+				"False Swipe"
+			]
+		},
+		{
+			"id": "feather-dance",
+			"name": "Daunenreigen",
+			"aliases": [
+				"Feather Dance"
+			]
+		},
+		{
+			"id": "feint",
+			"name": "Offenlegung",
+			"aliases": [
+				"Feint"
+			]
+		},
+		{
+			"id": "feint-attack",
+			"name": "Finte",
+			"aliases": [
+				"Feint Attack"
+			]
+		},
+		{
+			"id": "fell-stinger",
+			"name": "Stachelfinale",
+			"aliases": [
+				"Fell Stinger"
+			]
+		},
+		{
+			"id": "fickle-beam",
+			"name": "Launenlaser",
+			"aliases": [
+				"Fickle Beam"
+			]
+		},
+		{
+			"id": "fiery-dance",
+			"name": "Feuerreigen",
+			"aliases": [
+				"Fiery Dance"
+			]
+		},
+		{
+			"id": "fiery-wrath",
+			"name": "Brennender Zorn",
+			"aliases": [
+				"Fiery Wrath"
+			]
+		},
+		{
+			"id": "final-gambit",
+			"name": "Wagemut",
+			"aliases": [
+				"Final Gambit"
+			]
+		},
+		{
+			"id": "fire-blast",
+			"name": "Feuersturm",
+			"aliases": [
+				"Fire Blast"
+			]
+		},
+		{
+			"id": "fire-fang",
+			"name": "Feuerzahn",
+			"aliases": [
+				"Fire Fang"
+			]
+		},
+		{
+			"id": "fire-lash",
+			"name": "Feuerpeitsche",
+			"aliases": [
+				"Fire Lash"
+			]
+		},
+		{
+			"id": "fire-pledge",
+			"name": "Feuersäulen",
+			"aliases": [
+				"Fire Pledge"
+			]
+		},
+		{
+			"id": "fire-punch",
+			"name": "Feuerschlag",
+			"aliases": [
+				"Fire Punch"
+			]
+		},
+		{
+			"id": "fire-spin",
+			"name": "Feuerwirbel",
+			"aliases": [
+				"Fire Spin"
+			]
+		},
+		{
+			"id": "first-impression",
+			"name": "Überrumpler",
+			"aliases": [
+				"First Impression"
+			]
+		},
+		{
+			"id": "fishious-rend",
+			"name": "Kiemenbiss",
+			"aliases": [
+				"Fishious Rend"
+			]
+		},
+		{
+			"id": "fissure",
+			"name": "Geofissur",
+			"aliases": [
+				"Fissure"
+			]
+		},
+		{
+			"id": "flail",
+			"name": "Dreschflegel",
+			"aliases": [
+				"Flail"
+			]
+		},
+		{
+			"id": "flame-burst",
+			"name": "Funkenflug",
+			"aliases": [
+				"Flame Burst"
+			]
+		},
+		{
+			"id": "flame-charge",
+			"name": "Nitroladung",
+			"aliases": [
+				"Flame Charge"
+			]
+		},
+		{
+			"id": "flame-wheel",
+			"name": "Flammenrad",
+			"aliases": [
+				"Flame Wheel"
+			]
+		},
+		{
+			"id": "flamethrower",
+			"name": "Flammenwurf",
+			"aliases": [
+				"Flamethrower"
+			]
+		},
+		{
+			"id": "flare-blitz",
+			"name": "Flammenblitz",
+			"aliases": [
+				"Flare Blitz"
+			]
+		},
+		{
+			"id": "flash",
+			"name": "Blitz",
+			"aliases": [
+				"Flash"
+			]
+		},
+		{
+			"id": "flash-cannon",
+			"name": "Lichtkanone",
+			"aliases": [
+				"Flash Cannon"
+			]
+		},
+		{
+			"id": "flatter",
+			"name": "Schmeichler",
+			"aliases": [
+				"Flatter"
+			]
+		},
+		{
+			"id": "fleur-cannon",
+			"name": "Kanonenbouquet",
+			"aliases": [
+				"Fleur Cannon"
+			]
+		},
+		{
+			"id": "fling",
+			"name": "Schleuder",
+			"aliases": [
+				"Fling"
+			]
+		},
+		{
+			"id": "flip-turn",
+			"name": "Rollwende",
+			"aliases": [
+				"Flip Turn"
+			]
+		},
+		{
+			"id": "floral-healing",
+			"name": "Florakur",
+			"aliases": [
+				"Floral Healing"
+			]
+		},
+		{
+			"id": "flower-shield",
+			"name": "Floraschutz",
+			"aliases": [
+				"Flower Shield"
+			]
+		},
+		{
+			"id": "fly",
+			"name": "Fliegen",
+			"aliases": [
+				"Fly"
+			]
+		},
+		{
+			"id": "flying-press",
+			"name": "Flying Press",
+			"aliases": [
+				"Flying Press"
+			]
+		},
+		{
+			"id": "focus-blast",
+			"name": "Fokusstoß",
+			"aliases": [
+				"Focus Blast"
+			]
+		},
+		{
+			"id": "focus-energy",
+			"name": "Energiefokus",
+			"aliases": [
+				"Focus Energy"
+			]
+		},
+		{
+			"id": "focus-punch",
+			"name": "Power-Punch",
+			"aliases": [
+				"Focus Punch"
+			]
+		},
+		{
+			"id": "follow-me",
+			"name": "Spotlight",
+			"aliases": [
+				"Follow Me"
+			]
+		},
+		{
+			"id": "force-palm",
+			"name": "Kraftwelle",
+			"aliases": [
+				"Force Palm"
+			]
+		},
+		{
+			"id": "foresight",
+			"name": "Scharfblick",
+			"aliases": [
+				"Foresight"
+			]
+		},
+		{
+			"id": "forests-curse",
+			"name": "Waldesfluch",
+			"aliases": [
+				"Forest's Curse"
+			]
+		},
+		{
+			"id": "foul-play",
+			"name": "Schmarotzer",
+			"aliases": [
+				"Foul Play"
+			]
+		},
+		{
+			"id": "freeze-shock",
+			"name": "Frostvolt",
+			"aliases": [
+				"Freeze Shock"
+			]
+		},
+		{
+			"id": "freeze-dry",
+			"name": "Gefriertrockner",
+			"aliases": [
+				"Freeze-Dry"
+			]
+		},
+		{
+			"id": "freezing-glare",
+			"name": "Eisiger Blick",
+			"aliases": [
+				"Freezing Glare"
+			]
+		},
+		{
+			"id": "frenzy-plant",
+			"name": "Flora-Statue",
+			"aliases": [
+				"Frenzy Plant"
+			]
+		},
+		{
+			"id": "frost-breath",
+			"name": "Eisesodem",
+			"aliases": [
+				"Frost Breath"
+			]
+		},
+		{
+			"id": "frustration",
+			"name": "Frustration",
+			"aliases": [
+				"Frustration"
+			]
+		},
+		{
+			"id": "fury-attack",
+			"name": "Furienschlag",
+			"aliases": [
+				"Fury Attack"
+			]
+		},
+		{
+			"id": "fury-cutter",
+			"name": "Zornklinge",
+			"aliases": [
+				"Fury Cutter"
+			]
+		},
+		{
+			"id": "fury-swipes",
+			"name": "Kratzfurie",
+			"aliases": [
+				"Fury Swipes"
+			]
+		},
+		{
+			"id": "fusion-bolt",
+			"name": "Kreuzdonner",
+			"aliases": [
+				"Fusion Bolt"
+			]
+		},
+		{
+			"id": "fusion-flare",
+			"name": "Kreuzflamme",
+			"aliases": [
+				"Fusion Flare"
+			]
+		},
+		{
+			"id": "future-sight",
+			"name": "Seher",
+			"aliases": [
+				"Future Sight"
+			]
+		},
+		{
+			"id": "gastro-acid",
+			"name": "Magensäfte",
+			"aliases": [
+				"Gastro Acid"
+			]
+		},
+		{
+			"id": "gear-grind",
+			"name": "Klikkdiskus",
+			"aliases": [
+				"Gear Grind"
+			]
+		},
+		{
+			"id": "gear-up",
+			"name": "Hilfsmechanik",
+			"aliases": [
+				"Gear Up"
+			]
+		},
+		{
+			"id": "geomancy",
+			"name": "Geokontrolle",
+			"aliases": [
+				"Geomancy"
+			]
+		},
+		{
+			"id": "giga-drain",
+			"name": "Gigasauger",
+			"aliases": [
+				"Giga Drain"
+			]
+		},
+		{
+			"id": "giga-impact",
+			"name": "Gigastoß",
+			"aliases": [
+				"Giga Impact"
+			]
+		},
+		{
+			"id": "glacial-lance",
+			"name": "Blizzardlanze",
+			"aliases": [
+				"Glacial Lance"
+			]
+		},
+		{
+			"id": "glaciate",
+			"name": "Eiszeit",
+			"aliases": [
+				"Glaciate"
+			]
+		},
+		{
+			"id": "glare",
+			"name": "Schlangenblick",
+			"aliases": [
+				"Glare"
+			]
+		},
+		{
+			"id": "grass-knot",
+			"name": "Strauchler",
+			"aliases": [
+				"Grass Knot"
+			]
+		},
+		{
+			"id": "grass-pledge",
+			"name": "Pflanzensäulen",
+			"aliases": [
+				"Grass Pledge"
+			]
+		},
+		{
+			"id": "grass-whistle",
+			"name": "Grasflöte",
+			"aliases": [
+				"Grass Whistle"
+			]
+		},
+		{
+			"id": "grassy-glide",
+			"name": "Grasrutsche",
+			"aliases": [
+				"Grassy Glide"
+			]
+		},
+		{
+			"id": "grassy-terrain",
+			"name": "Grasfeld",
+			"aliases": [
+				"Grassy Terrain"
+			]
+		},
+		{
+			"id": "grav-apple",
+			"name": "Gravitation",
+			"aliases": [
+				"Grav Apple"
+			]
+		},
+		{
+			"id": "gravity",
+			"name": "Erdanziehung",
+			"aliases": [
+				"Gravity"
+			]
+		},
+		{
+			"id": "growl",
+			"name": "Heuler",
+			"aliases": [
+				"Growl"
+			]
+		},
+		{
+			"id": "growth",
+			"name": "Wachstum",
+			"aliases": [
+				"Growth"
+			]
+		},
+		{
+			"id": "grudge",
+			"name": "Nachspiel",
+			"aliases": [
+				"Grudge"
+			]
+		},
+		{
+			"id": "guard-split",
+			"name": "Schutzteiler",
+			"aliases": [
+				"Guard Split"
+			]
+		},
+		{
+			"id": "guard-swap",
+			"name": "Schutztausch",
+			"aliases": [
+				"Guard Swap"
+			]
+		},
+		{
+			"id": "guillotine",
+			"name": "Guillotine",
+			"aliases": [
+				"Guillotine"
+			]
+		},
+		{
+			"id": "gunk-shot",
+			"name": "Mülltreffer",
+			"aliases": [
+				"Gunk Shot"
+			]
+		},
+		{
+			"id": "gust",
+			"name": "Windstoß",
+			"aliases": [
+				"Gust"
+			]
+		},
+		{
+			"id": "gyro-ball",
+			"name": "Gyroball",
+			"aliases": [
+				"Gyro Ball"
+			]
+		},
+		{
+			"id": "hail",
+			"name": "Hagelsturm",
+			"aliases": [
+				"Hail"
+			]
+		},
+		{
+			"id": "hammer-arm",
+			"name": "Hammerarm",
+			"aliases": [
+				"Hammer Arm"
+			]
+		},
+		{
+			"id": "happy-hour",
+			"name": "Goldene Zeiten",
+			"aliases": [
+				"Happy Hour"
+			]
+		},
+		{
+			"id": "hard-press",
+			"name": "Stahlpresse",
+			"aliases": [
+				"Hard Press"
+			]
+		},
+		{
+			"id": "harden",
+			"name": "Härtner",
+			"aliases": [
+				"Harden"
+			]
+		},
+		{
+			"id": "haze",
+			"name": "Dunkelnebel",
+			"aliases": [
+				"Haze"
+			]
+		},
+		{
+			"id": "head-charge",
+			"name": "Steinschädel",
+			"aliases": [
+				"Head Charge"
+			]
+		},
+		{
+			"id": "head-smash",
+			"name": "Kopfstoß",
+			"aliases": [
+				"Head Smash"
+			]
+		},
+		{
+			"id": "headbutt",
+			"name": "Kopfnuss",
+			"aliases": [
+				"Headbutt"
+			]
+		},
+		{
+			"id": "heal-bell",
+			"name": "Vitalglocke",
+			"aliases": [
+				"Heal Bell"
+			]
+		},
+		{
+			"id": "heal-block",
+			"name": "Heilblockade",
+			"aliases": [
+				"Heal Block"
+			]
+		},
+		{
+			"id": "heal-order",
+			"name": "Heilbefehl",
+			"aliases": [
+				"Heal Order"
+			]
+		},
+		{
+			"id": "heal-pulse",
+			"name": "Heilwoge",
+			"aliases": [
+				"Heal Pulse"
+			]
+		},
+		{
+			"id": "healing-wish",
+			"name": "Heilopfer",
+			"aliases": [
+				"Healing Wish"
+			]
+		},
+		{
+			"id": "heart-stamp",
+			"name": "Herzstempel",
+			"aliases": [
+				"Heart Stamp"
+			]
+		},
+		{
+			"id": "heart-swap",
+			"name": "Statustausch",
+			"aliases": [
+				"Heart Swap"
+			]
+		},
+		{
+			"id": "heat-crash",
+			"name": "Brandstempel",
+			"aliases": [
+				"Heat Crash"
+			]
+		},
+		{
+			"id": "heat-wave",
+			"name": "Hitzewelle",
+			"aliases": [
+				"Heat Wave"
+			]
+		},
+		{
+			"id": "heavy-slam",
+			"name": "Rammboss",
+			"aliases": [
+				"Heavy Slam"
+			]
+		},
+		{
+			"id": "helping-hand",
+			"name": "Rechte Hand",
+			"aliases": [
+				"Helping Hand"
+			]
+		},
+		{
+			"id": "hex",
+			"name": "Bürde",
+			"aliases": [
+				"Hex"
+			]
+		},
+		{
+			"id": "hidden-power",
+			"name": "Kraftreserve",
+			"aliases": [
+				"Hidden Power"
+			]
+		},
+		{
+			"id": "high-horsepower",
+			"name": "Pferdestärke",
+			"aliases": [
+				"High Horsepower"
+			]
+		},
+		{
+			"id": "high-jump-kick",
+			"name": "Turmkick",
+			"aliases": [
+				"High Jump Kick"
+			]
+		},
+		{
+			"id": "hold-back",
+			"name": "Zurückhaltung",
+			"aliases": [
+				"Hold Back"
+			]
+		},
+		{
+			"id": "hold-hands",
+			"name": "Händchenhalten",
+			"aliases": [
+				"Hold Hands"
+			]
+		},
+		{
+			"id": "hone-claws",
+			"name": "Klauenwetzer",
+			"aliases": [
+				"Hone Claws"
+			]
+		},
+		{
+			"id": "howl",
+			"name": "Jauler",
+			"aliases": [
+				"Howl"
+			]
+		},
+		{
+			"id": "horn-attack",
+			"name": "Hornattacke",
+			"aliases": [
+				"Horn Attack"
+			]
+		},
+		{
+			"id": "horn-drill",
+			"name": "Hornbohrer",
+			"aliases": [
+				"Horn Drill"
+			]
+		},
+		{
+			"id": "horn-leech",
+			"name": "Holzgeweih",
+			"aliases": [
+				"Horn Leech"
+			]
+		},
+		{
+			"id": "hurricane",
+			"name": "Orkan",
+			"aliases": [
+				"Hurricane"
+			]
+		},
+		{
+			"id": "hydro-cannon",
+			"name": "Aquahaubitze",
+			"aliases": [
+				"Hydro Cannon"
+			]
+		},
+		{
+			"id": "hydro-pump",
+			"name": "Hydropumpe",
+			"aliases": [
+				"Hydro Pump"
+			]
+		},
+		{
+			"id": "hydro-steam",
+			"name": "Hydrodampf",
+			"aliases": [
+				"Hydro Steam"
+			]
+		},
+		{
+			"id": "hyper-beam",
+			"name": "Hyperstrahl",
+			"aliases": [
+				"Hyper Beam"
+			]
+		},
+		{
+			"id": "hyper-fang",
+			"name": "Hyperzahn",
+			"aliases": [
+				"Hyper Fang"
+			]
+		},
+		{
+			"id": "hyper-voice",
+			"name": "Schallwelle",
+			"aliases": [
+				"Hyper Voice"
+			]
+		},
+		{
+			"id": "hyperspace-fury",
+			"name": "Dimensionswahn",
+			"aliases": [
+				"Hyperspace Fury"
+			]
+		},
+		{
+			"id": "hyperspace-hole",
+			"name": "Dimensionsloch",
+			"aliases": [
+				"Hyperspace Hole"
+			]
+		},
+		{
+			"id": "hypnosis",
+			"name": "Hypnose",
+			"aliases": [
+				"Hypnosis"
+			]
+		},
+		{
+			"id": "ice-ball",
+			"name": "Frostbeule",
+			"aliases": [
+				"Ice Ball"
+			]
+		},
+		{
+			"id": "ice-beam",
+			"name": "Eisstrahl",
+			"aliases": [
+				"Ice Beam"
+			]
+		},
+		{
+			"id": "ice-burn",
+			"name": "Frosthauch",
+			"aliases": [
+				"Ice Burn"
+			]
+		},
+		{
+			"id": "ice-fang",
+			"name": "Eiszahn",
+			"aliases": [
+				"Ice Fang"
+			]
+		},
+		{
+			"id": "ice-hammer",
+			"name": "Eishammer",
+			"aliases": [
+				"Ice Hammer"
+			]
+		},
+		{
+			"id": "ice-punch",
+			"name": "Eishieb",
+			"aliases": [
+				"Ice Punch"
+			]
+		},
+		{
+			"id": "ice-shard",
+			"name": "Eissplitter",
+			"aliases": [
+				"Ice Shard"
+			]
+		},
+		{
+			"id": "icicle-crash",
+			"name": "Eiszapfhagel",
+			"aliases": [
+				"Icicle Crash"
+			]
+		},
+		{
+			"id": "icicle-spear",
+			"name": "Eisspeer",
+			"aliases": [
+				"Icicle Spear"
+			]
+		},
+		{
+			"id": "icy-wind",
+			"name": "Eissturm",
+			"aliases": [
+				"Icy Wind"
+			]
+		},
+		{
+			"id": "imprison",
+			"name": "Begrenzer",
+			"aliases": [
+				"Imprison"
+			]
+		},
+		{
+			"id": "incinerate",
+			"name": "Einäschern",
+			"aliases": [
+				"Incinerate"
+			]
+		},
+		{
+			"id": "inferno",
+			"name": "Inferno",
+			"aliases": [
+				"Inferno"
+			]
+		},
+		{
+			"id": "infestation",
+			"name": "Plage",
+			"aliases": [
+				"Infestation"
+			]
+		},
+		{
+			"id": "ingrain",
+			"name": "Verwurzler",
+			"aliases": [
+				"Ingrain"
+			]
+		},
+		{
+			"id": "instruct",
+			"name": "Kommando",
+			"aliases": [
+				"Instruct"
+			]
+		},
+		{
+			"id": "ion-deluge",
+			"name": "Plasmaschauer",
+			"aliases": [
+				"Ion Deluge"
+			]
+		},
+		{
+			"id": "iron-defense",
+			"name": "Eisenabwehr",
+			"aliases": [
+				"Iron Defense"
+			]
+		},
+		{
+			"id": "iron-head",
+			"name": "Eisenschädel",
+			"aliases": [
+				"Iron Head"
+			]
+		},
+		{
+			"id": "iron-tail",
+			"name": "Eisenschweif",
+			"aliases": [
+				"Iron Tail"
+			]
+		},
+		{
+			"id": "jaw-lock",
+			"name": "Fesselbiss",
+			"aliases": [
+				"Jaw Lock"
+			]
+		},
+		{
+			"id": "judgment",
+			"name": "Urteilskraft",
+			"aliases": [
+				"Judgment"
+			]
+		},
+		{
+			"id": "jump-kick",
+			"name": "Sprungkick",
+			"aliases": [
+				"Jump Kick"
+			]
+		},
+		{
+			"id": "jungle-healing",
+			"name": "Dschungelheilung",
+			"aliases": [
+				"Jungle Healing"
+			]
+		},
+		{
+			"id": "karate-chop",
+			"name": "Karateschlag",
+			"aliases": [
+				"Karate Chop"
+			]
+		},
+		{
+			"id": "kinesis",
+			"name": "Psykraft",
+			"aliases": [
+				"Kinesis"
+			]
+		},
+		{
+			"id": "kings-shield",
+			"name": "Königsschild",
+			"aliases": [
+				"King's Shield"
+			]
+		},
+		{
+			"id": "knock-off",
+			"name": "Abschlag",
+			"aliases": [
+				"Knock Off"
+			]
+		},
+		{
+			"id": "lands-wrath",
+			"name": "Bodengewalt",
+			"aliases": [
+				"Land's Wrath"
+			]
+		},
+		{
+			"id": "laser-focus",
+			"name": "Konzentration",
+			"aliases": [
+				"Laser Focus"
+			]
+		},
+		{
+			"id": "lash-out",
+			"name": "Frustventil",
+			"aliases": [
+				"Lash Out"
+			]
+		},
+		{
+			"id": "last-resort",
+			"name": "Zuflucht",
+			"aliases": [
+				"Last Resort"
+			]
+		},
+		{
+			"id": "lava-plume",
+			"name": "Flammensturm",
+			"aliases": [
+				"Lava Plume"
+			]
+		},
+		{
+			"id": "leaf-blade",
+			"name": "Laubklinge",
+			"aliases": [
+				"Leaf Blade"
+			]
+		},
+		{
+			"id": "leaf-storm",
+			"name": "Blättersturm",
+			"aliases": [
+				"Leaf Storm"
+			]
+		},
+		{
+			"id": "leaf-tornado",
+			"name": "Grasmixer",
+			"aliases": [
+				"Leaf Tornado"
+			]
+		},
+		{
+			"id": "leafage",
+			"name": "Blattwerk",
+			"aliases": [
+				"Leafage"
+			]
+		},
+		{
+			"id": "leech-life",
+			"name": "Blutsauger",
+			"aliases": [
+				"Leech Life"
+			]
+		},
+		{
+			"id": "leech-seed",
+			"name": "Egelsamen",
+			"aliases": [
+				"Leech Seed"
+			]
+		},
+		{
+			"id": "leer",
+			"name": "Silberblick",
+			"aliases": [
+				"Leer"
+			]
+		},
+		{
+			"id": "lick",
+			"name": "Schlecker",
+			"aliases": [
+				"Lick"
+			]
+		},
+		{
+			"id": "life-dew",
+			"name": "Lebenstropfen",
+			"aliases": [
+				"Life Dew"
+			]
+		},
+		{
+			"id": "light-of-ruin",
+			"name": "Lux Calamitatis",
+			"aliases": [
+				"Light of Ruin"
+			]
+		},
+		{
+			"id": "light-screen",
+			"name": "Lichtschild",
+			"aliases": [
+				"Light Screen"
+			]
+		},
+		{
+			"id": "liquidation",
+			"name": "Aquadurchstoß",
+			"aliases": [
+				"Liquidation"
+			]
+		},
+		{
+			"id": "lock-on",
+			"name": "Zielschuss",
+			"aliases": [
+				"Lock-On"
+			]
+		},
+		{
+			"id": "lovely-kiss",
+			"name": "Todeskuss",
+			"aliases": [
+				"Lovely Kiss"
+			]
+		},
+		{
+			"id": "low-kick",
+			"name": "Fußkick",
+			"aliases": [
+				"Low Kick"
+			]
+		},
+		{
+			"id": "low-sweep",
+			"name": "Fußtritt",
+			"aliases": [
+				"Low Sweep"
+			]
+		},
+		{
+			"id": "lucky-chant",
+			"name": "Beschwörung",
+			"aliases": [
+				"Lucky Chant"
+			]
+		},
+		{
+			"id": "lunar-dance",
+			"name": "Lunartanz",
+			"aliases": [
+				"Lunar Dance"
+			]
+		},
+		{
+			"id": "lunge",
+			"name": "Anfallen",
+			"aliases": [
+				"Lunge"
+			]
+		},
+		{
+			"id": "luster-purge",
+			"name": "Scheinwerfer",
+			"aliases": [
+				"Luster Purge"
+			]
+		},
+		{
+			"id": "mach-punch",
+			"name": "Tempohieb",
+			"aliases": [
+				"Mach Punch"
+			]
+		},
+		{
+			"id": "magic-coat",
+			"name": "Magiemantel",
+			"aliases": [
+				"Magic Coat"
+			]
+		},
+		{
+			"id": "magic-powder",
+			"name": "Magiepuder",
+			"aliases": [
+				"Magic Powder"
+			]
+		},
+		{
+			"id": "magic-room",
+			"name": "Magieraum",
+			"aliases": [
+				"Magic Room"
+			]
+		},
+		{
+			"id": "magical-leaf",
+			"name": "Zauberblatt",
+			"aliases": [
+				"Magical Leaf"
+			]
+		},
+		{
+			"id": "magma-storm",
+			"name": "Lavasturm",
+			"aliases": [
+				"Magma Storm"
+			]
+		},
+		{
+			"id": "magnet-bomb",
+			"name": "Magnetbombe",
+			"aliases": [
+				"Magnet Bomb"
+			]
+		},
+		{
+			"id": "magnet-rise",
+			"name": "Magnetflug",
+			"aliases": [
+				"Magnet Rise"
+			]
+		},
+		{
+			"id": "magnetic-flux",
+			"name": "Magnetregler",
+			"aliases": [
+				"Magnetic Flux"
+			]
+		},
+		{
+			"id": "magnitude",
+			"name": "Intensität",
+			"aliases": [
+				"Magnitude"
+			]
+		},
+		{
+			"id": "malignant-chain",
+			"name": "Giftkettung",
+			"aliases": [
+				"Malignant Chain"
+			]
+		},
+		{
+			"id": "mat-block",
+			"name": "Tatami-Schild",
+			"aliases": [
+				"Mat Block"
+			]
+		},
+		{
+			"id": "me-first",
+			"name": "Egotrip",
+			"aliases": [
+				"Me First"
+			]
+		},
+		{
+			"id": "mean-look",
+			"name": "Horrorblick",
+			"aliases": [
+				"Mean Look"
+			]
+		},
+		{
+			"id": "meditate",
+			"name": "Meditation",
+			"aliases": [
+				"Meditate"
+			]
+		},
+		{
+			"id": "mega-drain",
+			"name": "Megasauger",
+			"aliases": [
+				"Mega Drain"
+			]
+		},
+		{
+			"id": "mega-kick",
+			"name": "Megakick",
+			"aliases": [
+				"Mega Kick"
+			]
+		},
+		{
+			"id": "mega-punch",
+			"name": "Megahieb",
+			"aliases": [
+				"Mega Punch"
+			]
+		},
+		{
+			"id": "megahorn",
+			"name": "Vielender",
+			"aliases": [
+				"Megahorn"
+			]
+		},
+		{
+			"id": "memento",
+			"name": "Memento-Mori",
+			"aliases": [
+				"Memento"
+			]
+		},
+		{
+			"id": "metal-burst",
+			"name": "Metallstoß",
+			"aliases": [
+				"Metal Burst"
+			]
+		},
+		{
+			"id": "metal-claw",
+			"name": "Metallklaue",
+			"aliases": [
+				"Metal Claw"
+			]
+		},
+		{
+			"id": "metal-sound",
+			"name": "Metallsound",
+			"aliases": [
+				"Metal Sound"
+			]
+		},
+		{
+			"id": "meteor-assault",
+			"name": "Sternensturm",
+			"aliases": [
+				"Meteor Assault"
+			]
+		},
+		{
+			"id": "meteor-beam",
+			"name": "Meteorstrahl",
+			"aliases": [
+				"Meteor Beam"
+			]
+		},
+		{
+			"id": "meteor-mash",
+			"name": "Sternenhieb",
+			"aliases": [
+				"Meteor Mash"
+			]
+		},
+		{
+			"id": "metronome",
+			"name": "Metronom",
+			"aliases": [
+				"Metronome"
+			]
+		},
+		{
+			"id": "mighty-cleave",
+			"name": "Wuchtklinge",
+			"aliases": [
+				"Mighty Cleave"
+			]
+		},
+		{
+			"id": "milk-drink",
+			"name": "Milchgetränk",
+			"aliases": [
+				"Milk Drink"
+			]
+		},
+		{
+			"id": "mimic",
+			"name": "Mimikry",
+			"aliases": [
+				"Mimic"
+			]
+		},
+		{
+			"id": "mind-blown",
+			"name": "Knallkopf",
+			"aliases": [
+				"Mind Blown"
+			]
+		},
+		{
+			"id": "mind-reader",
+			"name": "Willensleser",
+			"aliases": [
+				"Mind Reader"
+			]
+		},
+		{
+			"id": "minimize",
+			"name": "Komprimator",
+			"aliases": [
+				"Minimize"
+			]
+		},
+		{
+			"id": "miracle-eye",
+			"name": "Wunderauge",
+			"aliases": [
+				"Miracle Eye"
+			]
+		},
+		{
+			"id": "mirror-coat",
+			"name": "Spiegelcape",
+			"aliases": [
+				"Mirror Coat"
+			]
+		},
+		{
+			"id": "mirror-move",
+			"name": "Spiegeltrick",
+			"aliases": [
+				"Mirror Move"
+			]
+		},
+		{
+			"id": "mirror-shot",
+			"name": "Spiegelsalve",
+			"aliases": [
+				"Mirror Shot"
+			]
+		},
+		{
+			"id": "mist",
+			"name": "Weißnebel",
+			"aliases": [
+				"Mist"
+			]
+		},
+		{
+			"id": "mist-ball",
+			"name": "Nebelball",
+			"aliases": [
+				"Mist Ball"
+			]
+		},
+		{
+			"id": "misty-explosion",
+			"name": "Nebelexplosion",
+			"aliases": [
+				"Misty Explosion"
+			]
+		},
+		{
+			"id": "misty-terrain",
+			"name": "Nebelfeld",
+			"aliases": [
+				"Misty Terrain"
+			]
+		},
+		{
+			"id": "moonblast",
+			"name": "Mondgewalt",
+			"aliases": [
+				"Moonblast"
+			]
+		},
+		{
+			"id": "moongeist-beam",
+			"name": "Schattenstrahl",
+			"aliases": [
+				"Moongeist Beam"
+			]
+		},
+		{
+			"id": "moonlight",
+			"name": "Mondschein",
+			"aliases": [
+				"Moonlight"
+			]
+		},
+		{
+			"id": "morning-sun",
+			"name": "Morgengrauen",
+			"aliases": [
+				"Morning Sun"
+			]
+		},
+		{
+			"id": "mud-bomb",
+			"name": "Schlammbombe",
+			"aliases": [
+				"Mud Bomb"
+			]
+		},
+		{
+			"id": "mud-shot",
+			"name": "Lehmschuss",
+			"aliases": [
+				"Mud Shot"
+			]
+		},
+		{
+			"id": "mud-sport",
+			"name": "Lehmsuhler",
+			"aliases": [
+				"Mud Sport"
+			]
+		},
+		{
+			"id": "mud-slap",
+			"name": "Lehmschelle",
+			"aliases": [
+				"Mud-Slap"
+			]
+		},
+		{
+			"id": "muddy-water",
+			"name": "Lehmbrühe",
+			"aliases": [
+				"Muddy Water"
+			]
+		},
+		{
+			"id": "multi-attack",
+			"name": "Multi-Angriff",
+			"aliases": [
+				"Multi-Attack"
+			]
+		},
+		{
+			"id": "mystical-fire",
+			"name": "Magieflamme",
+			"aliases": [
+				"Mystical Fire"
+			]
+		},
+		{
+			"id": "nasty-plot",
+			"name": "Ränkeschmied",
+			"aliases": [
+				"Nasty Plot"
+			]
+		},
+		{
+			"id": "natural-gift",
+			"name": "Beerenkräfte",
+			"aliases": [
+				"Natural Gift"
+			]
+		},
+		{
+			"id": "nature-power",
+			"name": "Natur-Kraft",
+			"aliases": [
+				"Nature Power"
+			]
+		},
+		{
+			"id": "natures-madness",
+			"name": "Naturzorn",
+			"aliases": [
+				"Nature's Madness"
+			]
+		},
+		{
+			"id": "needle-arm",
+			"name": "Nietenranke",
+			"aliases": [
+				"Needle Arm"
+			]
+		},
+		{
+			"id": "night-daze",
+			"name": "Nachtflut",
+			"aliases": [
+				"Night Daze"
+			]
+		},
+		{
+			"id": "night-shade",
+			"name": "Nachtnebel",
+			"aliases": [
+				"Night Shade"
+			]
+		},
+		{
+			"id": "night-slash",
+			"name": "Nachthieb",
+			"aliases": [
+				"Night Slash"
+			]
+		},
+		{
+			"id": "nightmare",
+			"name": "Nachtmahr",
+			"aliases": [
+				"Nightmare"
+			]
+		},
+		{
+			"id": "no-retreat",
+			"name": "Finalformation",
+			"aliases": [
+				"No Retreat"
+			]
+		},
+		{
+			"id": "noble-roar",
+			"name": "Kampfgebrüll",
+			"aliases": [
+				"Noble Roar"
+			]
+		},
+		{
+			"id": "nuzzle",
+			"name": "Wangenrubbler",
+			"aliases": [
+				"Nuzzle"
+			]
+		},
+		{
+			"id": "oblivion-wing",
+			"name": "Unheilsschwingen",
+			"aliases": [
+				"Oblivion Wing"
+			]
+		},
+		{
+			"id": "obstruct",
+			"name": "Abblocker",
+			"aliases": [
+				"Obstruct"
+			]
+		},
+		{
+			"id": "octazooka",
+			"name": "Octazooka",
+			"aliases": [
+				"Octazooka"
+			]
+		},
+		{
+			"id": "octolock",
+			"name": "Octoklammer",
+			"aliases": [
+				"Octolock"
+			]
+		},
+		{
+			"id": "odor-sleuth",
+			"name": "Schnüffler",
+			"aliases": [
+				"Odor Sleuth"
+			]
+		},
+		{
+			"id": "ominous-wind",
+			"name": "Unheilböen",
+			"aliases": [
+				"Ominous Wind"
+			]
+		},
+		{
+			"id": "origin-pulse",
+			"name": "Ursprungswoge",
+			"aliases": [
+				"Origin Pulse"
+			]
+		},
+		{
+			"id": "outrage",
+			"name": "Wutanfall",
+			"aliases": [
+				"Outrage"
+			]
+		},
+		{
+			"id": "overdrive",
+			"name": "Overdrive",
+			"aliases": [
+				"Overdrive"
+			]
+		},
+		{
+			"id": "overheat",
+			"name": "Hitzekoller",
+			"aliases": [
+				"Overheat"
+			]
+		},
+		{
+			"id": "pain-split",
+			"name": "Leidteiler",
+			"aliases": [
+				"Pain Split"
+			]
+		},
+		{
+			"id": "parabolic-charge",
+			"name": "Parabolladung",
+			"aliases": [
+				"Parabolic Charge"
+			]
+		},
+		{
+			"id": "parting-shot",
+			"name": "Abgangstirade",
+			"aliases": [
+				"Parting Shot"
+			]
+		},
+		{
+			"id": "pay-day",
+			"name": "Zahltag",
+			"aliases": [
+				"Pay Day"
+			]
+		},
+		{
+			"id": "payback",
+			"name": "Gegenstoß",
+			"aliases": [
+				"Payback"
+			]
+		},
+		{
+			"id": "peck",
+			"name": "Pikser",
+			"aliases": [
+				"Peck"
+			]
+		},
+		{
+			"id": "perish-song",
+			"name": "Abgesang",
+			"aliases": [
+				"Perish Song"
+			]
+		},
+		{
+			"id": "petal-blizzard",
+			"name": "Blütenwirbel",
+			"aliases": [
+				"Petal Blizzard"
+			]
+		},
+		{
+			"id": "petal-dance",
+			"name": "Blättertanz",
+			"aliases": [
+				"Petal Dance"
+			]
+		},
+		{
+			"id": "phantom-force",
+			"name": "Phantomkraft",
+			"aliases": [
+				"Phantom Force"
+			]
+		},
+		{
+			"id": "photon-geyser",
+			"name": "Photonen-Geysir",
+			"aliases": [
+				"Photon Geyser"
+			]
+		},
+		{
+			"id": "pin-missile",
+			"name": "Nadelrakete",
+			"aliases": [
+				"Pin Missile"
+			]
+		},
+		{
+			"id": "plasma-fists",
+			"name": "Plasmafäuste",
+			"aliases": [
+				"Plasma Fists"
+			]
+		},
+		{
+			"id": "play-nice",
+			"name": "Kameradschaft",
+			"aliases": [
+				"Play Nice"
+			]
+		},
+		{
+			"id": "play-rough",
+			"name": "Knuddler",
+			"aliases": [
+				"Play Rough"
+			]
+		},
+		{
+			"id": "pluck",
+			"name": "Pflücker",
+			"aliases": [
+				"Pluck"
+			]
+		},
+		{
+			"id": "poison-fang",
+			"name": "Giftzahn",
+			"aliases": [
+				"Poison Fang"
+			]
+		},
+		{
+			"id": "poison-gas",
+			"name": "Giftwolke",
+			"aliases": [
+				"Poison Gas"
+			]
+		},
+		{
+			"id": "poison-jab",
+			"name": "Gifthieb",
+			"aliases": [
+				"Poison Jab"
+			]
+		},
+		{
+			"id": "poison-powder",
+			"name": "Giftpuder",
+			"aliases": [
+				"Poison Powder"
+			]
+		},
+		{
+			"id": "poison-sting",
+			"name": "Giftstachel",
+			"aliases": [
+				"Poison Sting"
+			]
+		},
+		{
+			"id": "poison-tail",
+			"name": "Giftschweif",
+			"aliases": [
+				"Poison Tail"
+			]
+		},
+		{
+			"id": "pollen-puff",
+			"name": "Pollenknödel",
+			"aliases": [
+				"Pollen Puff"
+			]
+		},
+		{
+			"id": "poltergeist",
+			"name": "Poltergeist",
+			"aliases": [
+				"Poltergeist"
+			]
+		},
+		{
+			"id": "pound",
+			"name": "Klaps",
+			"aliases": [
+				"Pound"
+			]
+		},
+		{
+			"id": "powder",
+			"name": "Pulverschleuder",
+			"aliases": [
+				"Powder"
+			]
+		},
+		{
+			"id": "powder-snow",
+			"name": "Pulverschnee",
+			"aliases": [
+				"Powder Snow"
+			]
+		},
+		{
+			"id": "power-gem",
+			"name": "Juwelenkraft",
+			"aliases": [
+				"Power Gem"
+			]
+		},
+		{
+			"id": "power-split",
+			"name": "Kraftteiler",
+			"aliases": [
+				"Power Split"
+			]
+		},
+		{
+			"id": "power-swap",
+			"name": "Krafttausch",
+			"aliases": [
+				"Power Swap"
+			]
+		},
+		{
+			"id": "power-trick",
+			"name": "Krafttrick",
+			"aliases": [
+				"Power Trick"
+			]
+		},
+		{
+			"id": "power-trip",
+			"name": "Überheblichkeit",
+			"aliases": [
+				"Power Trip"
+			]
+		},
+		{
+			"id": "power-whip",
+			"name": "Blattgeißel",
+			"aliases": [
+				"Power Whip"
+			]
+		},
+		{
+			"id": "power-up-punch",
+			"name": "Steigerungshieb",
+			"aliases": [
+				"Power-Up Punch"
+			]
+		},
+		{
+			"id": "precipice-blades",
+			"name": "Abgrundsklinge",
+			"aliases": [
+				"Precipice Blades"
+			]
+		},
+		{
+			"id": "present",
+			"name": "Geschenk",
+			"aliases": [
+				"Present"
+			]
+		},
+		{
+			"id": "prismatic-laser",
+			"name": "Prisma-Laser",
+			"aliases": [
+				"Prismatic Laser"
+			]
+		},
+		{
+			"id": "protect",
+			"name": "Schutzschild",
+			"aliases": [
+				"Protect"
+			]
+		},
+		{
+			"id": "psybeam",
+			"name": "Psystrahl",
+			"aliases": [
+				"Psybeam"
+			]
+		},
+		{
+			"id": "psyblade",
+			"name": "Psychoschneide",
+			"aliases": [
+				"Psyblade"
+			]
+		},
+		{
+			"id": "psych-up",
+			"name": "Psycho-Plus",
+			"aliases": [
+				"Psych Up"
+			]
+		},
+		{
+			"id": "psychic",
+			"name": "Psychokinese",
+			"aliases": [
+				"Psychic"
+			]
+		},
+		{
+			"id": "psychic-fangs",
+			"name": "Psychobeißer",
+			"aliases": [
+				"Psychic Fangs"
+			]
+		},
+		{
+			"id": "psychic-noise",
+			"name": "Psycholärm",
+			"aliases": [
+				"Psychic Noise"
+			]
+		},
+		{
+			"id": "psychic-terrain",
+			"name": "Psychofeld",
+			"aliases": [
+				"Psychic Terrain"
+			]
+		},
+		{
+			"id": "psycho-boost",
+			"name": "Psyschub",
+			"aliases": [
+				"Psycho Boost"
+			]
+		},
+		{
+			"id": "psycho-cut",
+			"name": "Psychoklinge",
+			"aliases": [
+				"Psycho Cut"
+			]
+		},
+		{
+			"id": "psycho-shift",
+			"name": "Psybann",
+			"aliases": [
+				"Psycho Shift"
+			]
+		},
+		{
+			"id": "psyshock",
+			"name": "Psychoschock",
+			"aliases": [
+				"Psyshock"
+			]
+		},
+		{
+			"id": "psystrike",
+			"name": "Psychostoß",
+			"aliases": [
+				"Psystrike"
+			]
+		},
+		{
+			"id": "psywave",
+			"name": "Psywelle",
+			"aliases": [
+				"Psywave"
+			]
+		},
+		{
+			"id": "punishment",
+			"name": "Strafattacke",
+			"aliases": [
+				"Punishment"
+			]
+		},
+		{
+			"id": "purify",
+			"name": "Läuterung",
+			"aliases": [
+				"Purify"
+			]
+		},
+		{
+			"id": "pursuit",
+			"name": "Verfolgung",
+			"aliases": [
+				"Pursuit"
+			]
+		},
+		{
+			"id": "pyro-ball",
+			"name": "Feuerball",
+			"aliases": [
+				"Pyro Ball"
+			]
+		},
+		{
+			"id": "quash",
+			"name": "Verzögerung",
+			"aliases": [
+				"Quash"
+			]
+		},
+		{
+			"id": "quick-attack",
+			"name": "Ruckzuckhieb",
+			"aliases": [
+				"Quick Attack"
+			]
+		},
+		{
+			"id": "quick-guard",
+			"name": "Rapidschutz",
+			"aliases": [
+				"Quick Guard"
+			]
+		},
+		{
+			"id": "quiver-dance",
+			"name": "Falterreigen",
+			"aliases": [
+				"Quiver Dance"
+			]
+		},
+		{
+			"id": "rage",
+			"name": "Raserei",
+			"aliases": [
+				"Rage"
+			]
+		},
+		{
+			"id": "rage-powder",
+			"name": "Wutpulver",
+			"aliases": [
+				"Rage Powder"
+			]
+		},
+		{
+			"id": "rain-dance",
+			"name": "Regentanz",
+			"aliases": [
+				"Rain Dance"
+			]
+		},
+		{
+			"id": "rapid-spin",
+			"name": "Turbodreher",
+			"aliases": [
+				"Rapid Spin"
+			]
+		},
+		{
+			"id": "razor-leaf",
+			"name": "Rasierblatt",
+			"aliases": [
+				"Razor Leaf"
+			]
+		},
+		{
+			"id": "razor-shell",
+			"name": "Kalkklinge",
+			"aliases": [
+				"Razor Shell"
+			]
+		},
+		{
+			"id": "razor-wind",
+			"name": "Klingensturm",
+			"aliases": [
+				"Razor Wind"
+			]
+		},
+		{
+			"id": "recover",
+			"name": "Genesung",
+			"aliases": [
+				"Recover"
+			]
+		},
+		{
+			"id": "recycle",
+			"name": "Aufbereitung",
+			"aliases": [
+				"Recycle"
+			]
+		},
+		{
+			"id": "reflect",
+			"name": "Reflektor",
+			"aliases": [
+				"Reflect"
+			]
+		},
+		{
+			"id": "reflect-type",
+			"name": "Typenspiegel",
+			"aliases": [
+				"Reflect Type"
+			]
+		},
+		{
+			"id": "refresh",
+			"name": "Heilung",
+			"aliases": [
+				"Refresh"
+			]
+		},
+		{
+			"id": "relic-song",
+			"name": "Urgesang",
+			"aliases": [
+				"Relic Song"
+			]
+		},
+		{
+			"id": "rest",
+			"name": "Erholung",
+			"aliases": [
+				"Rest"
+			]
+		},
+		{
+			"id": "retaliate",
+			"name": "Heimzahlung",
+			"aliases": [
+				"Retaliate"
+			]
+		},
+		{
+			"id": "return",
+			"name": "Rückkehr",
+			"aliases": [
+				"Return"
+			]
+		},
+		{
+			"id": "revelation-dance",
+			"name": "Wecktanz",
+			"aliases": [
+				"Revelation Dance"
+			]
+		},
+		{
+			"id": "revenge",
+			"name": "Vergeltung",
+			"aliases": [
+				"Revenge"
+			]
+		},
+		{
+			"id": "reversal",
+			"name": "Gegenschlag",
+			"aliases": [
+				"Reversal"
+			]
+		},
+		{
+			"id": "rising-voltage",
+			"name": "Hochspannung",
+			"aliases": [
+				"Rising Voltage"
+			]
+		},
+		{
+			"id": "roar",
+			"name": "Brüller",
+			"aliases": [
+				"Roar"
+			]
+		},
+		{
+			"id": "roar-of-time",
+			"name": "Zeitenlärm",
+			"aliases": [
+				"Roar of Time"
+			]
+		},
+		{
+			"id": "rock-blast",
+			"name": "Felswurf",
+			"aliases": [
+				"Rock Blast"
+			]
+		},
+		{
+			"id": "rock-climb",
+			"name": "Kraxler",
+			"aliases": [
+				"Rock Climb"
+			]
+		},
+		{
+			"id": "rock-polish",
+			"name": "Steinpolitur",
+			"aliases": [
+				"Rock Polish"
+			]
+		},
+		{
+			"id": "rock-slide",
+			"name": "Steinhagel",
+			"aliases": [
+				"Rock Slide"
+			]
+		},
+		{
+			"id": "rock-smash",
+			"name": "Zertrümmerer",
+			"aliases": [
+				"Rock Smash"
+			]
+		},
+		{
+			"id": "rock-throw",
+			"name": "Steinwurf",
+			"aliases": [
+				"Rock Throw"
+			]
+		},
+		{
+			"id": "rock-tomb",
+			"name": "Felsgrab",
+			"aliases": [
+				"Rock Tomb"
+			]
+		},
+		{
+			"id": "rock-wrecker",
+			"name": "Felswerfer",
+			"aliases": [
+				"Rock Wrecker"
+			]
+		},
+		{
+			"id": "role-play",
+			"name": "Rollenspiel",
+			"aliases": [
+				"Role Play"
+			]
+		},
+		{
+			"id": "rolling-kick",
+			"name": "Fegekick",
+			"aliases": [
+				"Rolling Kick"
+			]
+		},
+		{
+			"id": "rollout",
+			"name": "Walzer",
+			"aliases": [
+				"Rollout"
+			]
+		},
+		{
+			"id": "roost",
+			"name": "Ruheort",
+			"aliases": [
+				"Roost"
+			]
+		},
+		{
+			"id": "rototiller",
+			"name": "Pflüger",
+			"aliases": [
+				"Rototiller"
+			]
+		},
+		{
+			"id": "round",
+			"name": "Kanon",
+			"aliases": [
+				"Round"
+			]
+		},
+		{
+			"id": "sacred-fire",
+			"name": "Läuterfeuer",
+			"aliases": [
+				"Sacred Fire"
+			]
+		},
+		{
+			"id": "sacred-sword",
+			"name": "Sanctoklinge",
+			"aliases": [
+				"Sacred Sword"
+			]
+		},
+		{
+			"id": "safeguard",
+			"name": "Bodyguard",
+			"aliases": [
+				"Safeguard"
+			]
+		},
+		{
+			"id": "sand-attack",
+			"name": "Sandwirbel",
+			"aliases": [
+				"Sand Attack"
+			]
+		},
+		{
+			"id": "sand-tomb",
+			"name": "Sandgrab",
+			"aliases": [
+				"Sand Tomb"
+			]
+		},
+		{
+			"id": "sandstorm",
+			"name": "Sandsturm",
+			"aliases": [
+				"Sandstorm"
+			]
+		},
+		{
+			"id": "scald",
+			"name": "Siedewasser",
+			"aliases": [
+				"Scald"
+			]
+		},
+		{
+			"id": "scale-shot",
+			"name": "Schuppenschuss",
+			"aliases": [
+				"Scale Shot"
+			]
+		},
+		{
+			"id": "scary-face",
+			"name": "Grimasse",
+			"aliases": [
+				"Scary Face"
+			]
+		},
+		{
+			"id": "scorching-sands",
+			"name": "Brandsand",
+			"aliases": [
+				"Scorching Sands"
+			]
+		},
+		{
+			"id": "scratch",
+			"name": "Kratzer",
+			"aliases": [
+				"Scratch"
+			]
+		},
+		{
+			"id": "screech",
+			"name": "Kreideschrei",
+			"aliases": [
+				"Screech"
+			]
+		},
+		{
+			"id": "searing-shot",
+			"name": "Flammenball",
+			"aliases": [
+				"Searing Shot"
+			]
+		},
+		{
+			"id": "secret-power",
+			"name": "Geheimpower",
+			"aliases": [
+				"Secret Power"
+			]
+		},
+		{
+			"id": "secret-sword",
+			"name": "Mystoschwert",
+			"aliases": [
+				"Secret Sword"
+			]
+		},
+		{
+			"id": "seed-bomb",
+			"name": "Samenbomben",
+			"aliases": [
+				"Seed Bomb"
+			]
+		},
+		{
+			"id": "seed-flare",
+			"name": "Schocksamen",
+			"aliases": [
+				"Seed Flare"
+			]
+		},
+		{
+			"id": "seismic-toss",
+			"name": "Geowurf",
+			"aliases": [
+				"Seismic Toss"
+			]
+		},
+		{
+			"id": "self-destruct",
+			"name": "Finale",
+			"aliases": [
+				"Self-Destruct"
+			]
+		},
+		{
+			"id": "shadow-ball",
+			"name": "Spukball",
+			"aliases": [
+				"Shadow Ball"
+			]
+		},
+		{
+			"id": "shadow-bone",
+			"name": "Schattenknochen",
+			"aliases": [
+				"Shadow Bone"
+			]
+		},
+		{
+			"id": "shadow-claw",
+			"name": "Dunkelklaue",
+			"aliases": [
+				"Shadow Claw"
+			]
+		},
+		{
+			"id": "shadow-force",
+			"name": "Schemenkraft",
+			"aliases": [
+				"Shadow Force"
+			]
+		},
+		{
+			"id": "shadow-punch",
+			"name": "Finsterfaust",
+			"aliases": [
+				"Shadow Punch"
+			]
+		},
+		{
+			"id": "shadow-sneak",
+			"name": "Schattenstoß",
+			"aliases": [
+				"Shadow Sneak"
+			]
+		},
+		{
+			"id": "sharpen",
+			"name": "Schärfer",
+			"aliases": [
+				"Sharpen"
+			]
+		},
+		{
+			"id": "sheer-cold",
+			"name": "Eiseskälte",
+			"aliases": [
+				"Sheer Cold"
+			]
+		},
+		{
+			"id": "shell-side-arm",
+			"name": "Muschelwaffe",
+			"aliases": [
+				"Shell Side Arm"
+			]
+		},
+		{
+			"id": "shell-smash",
+			"name": "Hausbruch",
+			"aliases": [
+				"Shell Smash"
+			]
+		},
+		{
+			"id": "shell-trap",
+			"name": "Panzerfalle",
+			"aliases": [
+				"Shell Trap"
+			]
+		},
+		{
+			"id": "shift-gear",
+			"name": "Gangwechsel",
+			"aliases": [
+				"Shift Gear"
+			]
+		},
+		{
+			"id": "shock-wave",
+			"name": "Schockwelle",
+			"aliases": [
+				"Shock Wave"
+			]
+		},
+		{
+			"id": "shore-up",
+			"name": "Sandsammler",
+			"aliases": [
+				"Shore Up"
+			]
+		},
+		{
+			"id": "signal-beam",
+			"name": "Ampelleuchte",
+			"aliases": [
+				"Signal Beam"
+			]
+		},
+		{
+			"id": "silver-wind",
+			"name": "Silberhauch",
+			"aliases": [
+				"Silver Wind"
+			]
+		},
+		{
+			"id": "simple-beam",
+			"name": "Wankelstrahl",
+			"aliases": [
+				"Simple Beam"
+			]
+		},
+		{
+			"id": "sing",
+			"name": "Gesang",
+			"aliases": [
+				"Sing"
+			]
+		},
+		{
+			"id": "sketch",
+			"name": "Nachahmer",
+			"aliases": [
+				"Sketch"
+			]
+		},
+		{
+			"id": "skill-swap",
+			"name": "Fähigkeitstausch",
+			"aliases": [
+				"Skill Swap"
+			]
+		},
+		{
+			"id": "skitter-smack",
+			"name": "Krabbelkracher",
+			"aliases": [
+				"Skitter Smack"
+			]
+		},
+		{
+			"id": "skull-bash",
+			"name": "Schädelwumme",
+			"aliases": [
+				"Skull Bash"
+			]
+		},
+		{
+			"id": "sky-attack",
+			"name": "Himmelsfeger",
+			"aliases": [
+				"Sky Attack"
+			]
+		},
+		{
+			"id": "sky-drop",
+			"name": "Freier Fall",
+			"aliases": [
+				"Sky Drop"
+			]
+		},
+		{
+			"id": "sky-uppercut",
+			"name": "Himmelhieb",
+			"aliases": [
+				"Sky Uppercut"
+			]
+		},
+		{
+			"id": "slack-off",
+			"name": "Tagedieb",
+			"aliases": [
+				"Slack Off"
+			]
+		},
+		{
+			"id": "slam",
+			"name": "Slam",
+			"aliases": [
+				"Slam"
+			]
+		},
+		{
+			"id": "slash",
+			"name": "Schlitzer",
+			"aliases": [
+				"Slash"
+			]
+		},
+		{
+			"id": "sleep-powder",
+			"name": "Schlafpuder",
+			"aliases": [
+				"Sleep Powder"
+			]
+		},
+		{
+			"id": "sleep-talk",
+			"name": "Schlafrede",
+			"aliases": [
+				"Sleep Talk"
+			]
+		},
+		{
+			"id": "sludge",
+			"name": "Schlammbad",
+			"aliases": [
+				"Sludge"
+			]
+		},
+		{
+			"id": "sludge-bomb",
+			"name": "Matschbombe",
+			"aliases": [
+				"Sludge Bomb"
+			]
+		},
+		{
+			"id": "sludge-wave",
+			"name": "Schlammwoge",
+			"aliases": [
+				"Sludge Wave"
+			]
+		},
+		{
+			"id": "smack-down",
+			"name": "Katapult",
+			"aliases": [
+				"Smack Down"
+			]
+		},
+		{
+			"id": "smart-strike",
+			"name": "Schmalhorn",
+			"aliases": [
+				"Smart Strike"
+			]
+		},
+		{
+			"id": "smelling-salts",
+			"name": "Riechsalz",
+			"aliases": [
+				"Smelling Salts"
+			]
+		},
+		{
+			"id": "smog",
+			"name": "Smog",
+			"aliases": [
+				"Smog"
+			]
+		},
+		{
+			"id": "smokescreen",
+			"name": "Rauchwolke",
+			"aliases": [
+				"Smokescreen"
+			]
+		},
+		{
+			"id": "snap-trap",
+			"name": "Fangeisen",
+			"aliases": [
+				"Snap Trap"
+			]
+		},
+		{
+			"id": "snarl",
+			"name": "Standpauke",
+			"aliases": [
+				"Snarl"
+			]
+		},
+		{
+			"id": "snatch",
+			"name": "Übernahme",
+			"aliases": [
+				"Snatch"
+			]
+		},
+		{
+			"id": "snipe-shot",
+			"name": "Präzisionsschuss",
+			"aliases": [
+				"Snipe Shot"
+			]
+		},
+		{
+			"id": "snore",
+			"name": "Schnarcher",
+			"aliases": [
+				"Snore"
+			]
+		},
+		{
+			"id": "soak",
+			"name": "Überflutung",
+			"aliases": [
+				"Soak"
+			]
+		},
+		{
+			"id": "soft-boiled",
+			"name": "Weichei",
+			"aliases": [
+				"Soft-Boiled"
+			]
+		},
+		{
+			"id": "solar-beam",
+			"name": "Solarstrahl",
+			"aliases": [
+				"Solar Beam"
+			]
+		},
+		{
+			"id": "solar-blade",
+			"name": "Solarklinge",
+			"aliases": [
+				"Solar Blade"
+			]
+		},
+		{
+			"id": "sonic-boom",
+			"name": "Ultraschall",
+			"aliases": [
+				"Sonic Boom"
+			]
+		},
+		{
+			"id": "spacial-rend",
+			"name": "Raumschlag",
+			"aliases": [
+				"Spacial Rend"
+			]
+		},
+		{
+			"id": "spark",
+			"name": "Funkensprung",
+			"aliases": [
+				"Spark"
+			]
+		},
+		{
+			"id": "sparkling-aria",
+			"name": "Schaumserenade",
+			"aliases": [
+				"Sparkling Aria"
+			]
+		},
+		{
+			"id": "spectral-thief",
+			"name": "Diebesschatten",
+			"aliases": [
+				"Spectral Thief"
+			]
+		},
+		{
+			"id": "speed-swap",
+			"name": "Initiativetausch",
+			"aliases": [
+				"Speed Swap"
+			]
+		},
+		{
+			"id": "spider-web",
+			"name": "Spinnennetz",
+			"aliases": [
+				"Spider Web"
+			]
+		},
+		{
+			"id": "spike-cannon",
+			"name": "Dornkanone",
+			"aliases": [
+				"Spike Cannon"
+			]
+		},
+		{
+			"id": "spikes",
+			"name": "Stachler",
+			"aliases": [
+				"Spikes"
+			]
+		},
+		{
+			"id": "spiky-shield",
+			"name": "Schutzstacheln",
+			"aliases": [
+				"Spiky Shield"
+			]
+		},
+		{
+			"id": "spirit-break",
+			"name": "Seelenbruch",
+			"aliases": [
+				"Spirit Break"
+			]
+		},
+		{
+			"id": "spirit-shackle",
+			"name": "Schattenfessel",
+			"aliases": [
+				"Spirit Shackle"
+			]
+		},
+		{
+			"id": "spit-up",
+			"name": "Entfessler",
+			"aliases": [
+				"Spit Up"
+			]
+		},
+		{
+			"id": "spite",
+			"name": "Groll",
+			"aliases": [
+				"Spite"
+			]
+		},
+		{
+			"id": "splash",
+			"name": "Platscher",
+			"aliases": [
+				"Splash"
+			]
+		},
+		{
+			"id": "spore",
+			"name": "Pilzspore",
+			"aliases": [
+				"Spore"
+			]
+		},
+		{
+			"id": "spotlight",
+			"name": "Rampenlicht",
+			"aliases": [
+				"Spotlight"
+			]
+		},
+		{
+			"id": "stealth-rock",
+			"name": "Tarnsteine",
+			"aliases": [
+				"Stealth Rock"
+			]
+		},
+		{
+			"id": "steam-eruption",
+			"name": "Dampfschwall",
+			"aliases": [
+				"Steam Eruption"
+			]
+		},
+		{
+			"id": "steamroller",
+			"name": "Quetschwalze",
+			"aliases": [
+				"Steamroller"
+			]
+		},
+		{
+			"id": "steel-beam",
+			"name": "Stahlstrahl",
+			"aliases": [
+				"Steel Beam"
+			]
+		},
+		{
+			"id": "steel-roller",
+			"name": "Eisenwalze",
+			"aliases": [
+				"Steel Roller"
+			]
+		},
+		{
+			"id": "steel-wing",
+			"name": "Stahlflügel",
+			"aliases": [
+				"Steel Wing"
+			]
+		},
+		{
+			"id": "sticky-web",
+			"name": "Klebenetz",
+			"aliases": [
+				"Sticky Web"
+			]
+		},
+		{
+			"id": "stockpile",
+			"name": "Horter",
+			"aliases": [
+				"Stockpile"
+			]
+		},
+		{
+			"id": "stomp",
+			"name": "Stampfer",
+			"aliases": [
+				"Stomp"
+			]
+		},
+		{
+			"id": "stomping-tantrum",
+			"name": "Fruststampfer",
+			"aliases": [
+				"Stomping Tantrum"
+			]
+		},
+		{
+			"id": "stone-edge",
+			"name": "Steinkante",
+			"aliases": [
+				"Stone Edge"
+			]
+		},
+		{
+			"id": "stored-power",
+			"name": "Kraftvorrat",
+			"aliases": [
+				"Stored Power"
+			]
+		},
+		{
+			"id": "storm-throw",
+			"name": "Bergsturm",
+			"aliases": [
+				"Storm Throw"
+			]
+		},
+		{
+			"id": "strange-steam",
+			"name": "Wunderdampf",
+			"aliases": [
+				"Strange Steam"
+			]
+		},
+		{
+			"id": "strength",
+			"name": "Stärke",
+			"aliases": [
+				"Strength"
+			]
+		},
+		{
+			"id": "strength-sap",
+			"name": "Kraftabsorber",
+			"aliases": [
+				"Strength Sap"
+			]
+		},
+		{
+			"id": "string-shot",
+			"name": "Fadenschuss",
+			"aliases": [
+				"String Shot"
+			]
+		},
+		{
+			"id": "struggle",
+			"name": "Verzweifler",
+			"aliases": [
+				"Struggle"
+			]
+		},
+		{
+			"id": "struggle-bug",
+			"name": "Käfertrutz",
+			"aliases": [
+				"Struggle Bug"
+			]
+		},
+		{
+			"id": "stuff-cheeks",
+			"name": "Backenstopfer",
+			"aliases": [
+				"Stuff Cheeks"
+			]
+		},
+		{
+			"id": "stun-spore",
+			"name": "Stachelspore",
+			"aliases": [
+				"Stun Spore"
+			]
+		},
+		{
+			"id": "submission",
+			"name": "Überroller",
+			"aliases": [
+				"Submission"
+			]
+		},
+		{
+			"id": "substitute",
+			"name": "Delegator",
+			"aliases": [
+				"Substitute"
+			]
+		},
+		{
+			"id": "sucker-punch",
+			"name": "Tiefschlag",
+			"aliases": [
+				"Sucker Punch"
+			]
+		},
+		{
+			"id": "sunny-day",
+			"name": "Sonnentag",
+			"aliases": [
+				"Sunny Day"
+			]
+		},
+		{
+			"id": "sunsteel-strike",
+			"name": "Stahlgestirn",
+			"aliases": [
+				"Sunsteel Strike"
+			]
+		},
+		{
+			"id": "super-fang",
+			"name": "Superzahn",
+			"aliases": [
+				"Super Fang"
+			]
+		},
+		{
+			"id": "supercell-slam",
+			"name": "Donnerstoß",
+			"aliases": [
+				"Supercell Slam"
+			]
+		},
+		{
+			"id": "superpower",
+			"name": "Kraftkoloss",
+			"aliases": [
+				"Superpower"
+			]
+		},
+		{
+			"id": "supersonic",
+			"name": "Superschall",
+			"aliases": [
+				"Supersonic"
+			]
+		},
+		{
+			"id": "surf",
+			"name": "Surfer",
+			"aliases": [
+				"Surf"
+			]
+		},
+		{
+			"id": "surging-strikes",
+			"name": "Trefferschwall",
+			"aliases": [
+				"Surging Strikes"
+			]
+		},
+		{
+			"id": "swagger",
+			"name": "Angeberei",
+			"aliases": [
+				"Swagger"
+			]
+		},
+		{
+			"id": "swallow",
+			"name": "Verzehrer",
+			"aliases": [
+				"Swallow"
+			]
+		},
+		{
+			"id": "sweet-kiss",
+			"name": "Bitterkuss",
+			"aliases": [
+				"Sweet Kiss"
+			]
+		},
+		{
+			"id": "sweet-scent",
+			"name": "Lockduft",
+			"aliases": [
+				"Sweet Scent"
+			]
+		},
+		{
+			"id": "swift",
+			"name": "Sternschauer",
+			"aliases": [
+				"Swift"
+			]
+		},
+		{
+			"id": "switcheroo",
+			"name": "Wechseldich",
+			"aliases": [
+				"Switcheroo"
+			]
+		},
+		{
+			"id": "swords-dance",
+			"name": "Schwerttanz",
+			"aliases": [
+				"Swords Dance"
+			]
+		},
+		{
+			"id": "synchronoise",
+			"name": "Synchrolärm",
+			"aliases": [
+				"Synchronoise"
+			]
+		},
+		{
+			"id": "synthesis",
+			"name": "Synthese",
+			"aliases": [
+				"Synthesis"
+			]
+		},
+		{
+			"id": "tachyon-cutter",
+			"name": "Tachyon-Schnitt",
+			"aliases": [
+				"Tachyon Cutter"
+			]
+		},
+		{
+			"id": "tackle",
+			"name": "Tackle",
+			"aliases": [
+				"Tackle"
+			]
+		},
+		{
+			"id": "tail-glow",
+			"name": "Schweifglanz",
+			"aliases": [
+				"Tail Glow"
+			]
+		},
+		{
+			"id": "tail-slap",
+			"name": "Kehrschelle",
+			"aliases": [
+				"Tail Slap"
+			]
+		},
+		{
+			"id": "tail-whip",
+			"name": "Rutenschlag",
+			"aliases": [
+				"Tail Whip"
+			]
+		},
+		{
+			"id": "tailwind",
+			"name": "Rückenwind",
+			"aliases": [
+				"Tailwind"
+			]
+		},
+		{
+			"id": "take-down",
+			"name": "Bodycheck",
+			"aliases": [
+				"Take Down"
+			]
+		},
+		{
+			"id": "tar-shot",
+			"name": "Teerschuss",
+			"aliases": [
+				"Tar Shot"
+			]
+		},
+		{
+			"id": "taunt",
+			"name": "Verhöhner",
+			"aliases": [
+				"Taunt"
+			]
+		},
+		{
+			"id": "tearful-look",
+			"name": "Tränendrüse",
+			"aliases": [
+				"Tearful Look"
+			]
+		},
+		{
+			"id": "teatime",
+			"name": "Teatime",
+			"aliases": [
+				"Teatime"
+			]
+		},
+		{
+			"id": "techno-blast",
+			"name": "Techblaster",
+			"aliases": [
+				"Techno Blast"
+			]
+		},
+		{
+			"id": "teeter-dance",
+			"name": "Taumeltanz",
+			"aliases": [
+				"Teeter Dance"
+			]
+		},
+		{
+			"id": "telekinesis",
+			"name": "Telekinese",
+			"aliases": [
+				"Telekinesis"
+			]
+		},
+		{
+			"id": "teleport",
+			"name": "Teleport",
+			"aliases": [
+				"Teleport"
+			]
+		},
+		{
+			"id": "temper-flare",
+			"name": "Frustflamme",
+			"aliases": [
+				"Temper Flare"
+			]
+		},
+		{
+			"id": "tera-starstorm",
+			"name": "Tera-Sternhagel",
+			"aliases": [
+				"Tera Starstorm"
+			]
+		},
+		{
+			"id": "terrain-pulse",
+			"name": "Feldimpuls",
+			"aliases": [
+				"Terrain Pulse"
+			]
+		},
+		{
+			"id": "thief",
+			"name": "Raub",
+			"aliases": [
+				"Thief"
+			]
+		},
+		{
+			"id": "thousand-arrows",
+			"name": "Tausend Pfeile",
+			"aliases": [
+				"Thousand Arrows"
+			]
+		},
+		{
+			"id": "thousand-waves",
+			"name": "Tausend Wellen",
+			"aliases": [
+				"Thousand Waves"
+			]
+		},
+		{
+			"id": "thrash",
+			"name": "Fuchtler",
+			"aliases": [
+				"Thrash"
+			]
+		},
+		{
+			"id": "throat-chop",
+			"name": "Neck Strike",
+			"aliases": [
+				"Throat Chop"
+			]
+		},
+		{
+			"id": "thunder",
+			"name": "Donner",
+			"aliases": [
+				"Thunder"
+			]
+		},
+		{
+			"id": "thunder-cage",
+			"name": "Blitzgefängnis",
+			"aliases": [
+				"Thunder Cage"
+			]
+		},
+		{
+			"id": "thunder-fang",
+			"name": "Donnerzahn",
+			"aliases": [
+				"Thunder Fang"
+			]
+		},
+		{
+			"id": "thunder-punch",
+			"name": "Donnerschlag",
+			"aliases": [
+				"Thunder Punch"
+			]
+		},
+		{
+			"id": "thunder-shock",
+			"name": "Donnerschock",
+			"aliases": [
+				"Thunder Shock"
+			]
+		},
+		{
+			"id": "thunder-wave",
+			"name": "Donnerwelle",
+			"aliases": [
+				"Thunder Wave"
+			]
+		},
+		{
+			"id": "thunderbolt",
+			"name": "Donnerblitz",
+			"aliases": [
+				"Thunderbolt"
+			]
+		},
+		{
+			"id": "thunderclap",
+			"name": "Sturmblitz",
+			"aliases": [
+				"Thunderclap"
+			]
+		},
+		{
+			"id": "thunderous-kick",
+			"name": "Donnernder Tritt",
+			"aliases": [
+				"Thunderous Kick"
+			]
+		},
+		{
+			"id": "tickle",
+			"name": "Spaßkanone",
+			"aliases": [
+				"Tickle"
+			]
+		},
+		{
+			"id": "topsy-turvy",
+			"name": "Invertigo",
+			"aliases": [
+				"Topsy-Turvy"
+			]
+		},
+		{
+			"id": "torment",
+			"name": "Folterknecht",
+			"aliases": [
+				"Torment"
+			]
+		},
+		{
+			"id": "toxic",
+			"name": "Toxin",
+			"aliases": [
+				"Toxic"
+			]
+		},
+		{
+			"id": "toxic-spikes",
+			"name": "Giftspitzen",
+			"aliases": [
+				"Toxic Spikes"
+			]
+		},
+		{
+			"id": "toxic-thread",
+			"name": "Giftfaden",
+			"aliases": [
+				"Toxic Thread"
+			]
+		},
+		{
+			"id": "transform",
+			"name": "Wandler",
+			"aliases": [
+				"Transform"
+			]
+		},
+		{
+			"id": "tri-attack",
+			"name": "Triplette",
+			"aliases": [
+				"Tri Attack"
+			]
+		},
+		{
+			"id": "trick",
+			"name": "Trickbetrug",
+			"aliases": [
+				"Trick"
+			]
+		},
+		{
+			"id": "trick-room",
+			"name": "Bizarroraum",
+			"aliases": [
+				"Trick Room"
+			]
+		},
+		{
+			"id": "trick-or-treat",
+			"name": "Halloween",
+			"aliases": [
+				"Trick-or-Treat"
+			]
+		},
+		{
+			"id": "triple-axel",
+			"name": "Dreifach-Axel",
+			"aliases": [
+				"Triple Axel"
+			]
+		},
+		{
+			"id": "triple-kick",
+			"name": "Dreifachkick",
+			"aliases": [
+				"Triple Kick"
+			]
+		},
+		{
+			"id": "trop-kick",
+			"name": "Tropenkick",
+			"aliases": [
+				"Trop Kick"
+			]
+		},
+		{
+			"id": "trump-card",
+			"name": "Trumpfkarte",
+			"aliases": [
+				"Trump Card"
+			]
+		},
+		{
+			"id": "twineedle",
+			"name": "Duonadel",
+			"aliases": [
+				"Twineedle"
+			]
+		},
+		{
+			"id": "twister",
+			"name": "Windhose",
+			"aliases": [
+				"Twister"
+			]
+		},
+		{
+			"id": "u-turn",
+			"name": "Kehrtwende",
+			"aliases": [
+				"U-Turn"
+			]
+		},
+		{
+			"id": "upper-hand",
+			"name": "Schnellkonter",
+			"aliases": [
+				"Upper Hand"
+			]
+		},
+		{
+			"id": "uproar",
+			"name": "Aufruhr",
+			"aliases": [
+				"Uproar"
+			]
+		},
+		{
+			"id": "v-create",
+			"name": "V-Generator",
+			"aliases": [
+				"V-Create"
+			]
+		},
+		{
+			"id": "vacuum-wave",
+			"name": "Vakuumwelle",
+			"aliases": [
+				"Vacuum Wave"
+			]
+		},
+		{
+			"id": "venom-drench",
+			"name": "Giftfalle",
+			"aliases": [
+				"Venom Drench"
+			]
+		},
+		{
+			"id": "venoshock",
+			"name": "Giftschock",
+			"aliases": [
+				"Venoshock"
+			]
+		},
+		{
+			"id": "vice-grip",
+			"name": "Klammer",
+			"aliases": [
+				"Vice Grip"
+			]
+		},
+		{
+			"id": "vine-whip",
+			"name": "Rankenhieb",
+			"aliases": [
+				"Vine Whip"
+			]
+		},
+		{
+			"id": "vital-throw",
+			"name": "Überwurf",
+			"aliases": [
+				"Vital Throw"
+			]
+		},
+		{
+			"id": "volt-switch",
+			"name": "Voltwechsel",
+			"aliases": [
+				"Volt Switch"
+			]
+		},
+		{
+			"id": "volt-tackle",
+			"name": "Volttackle",
+			"aliases": [
+				"Volt Tackle"
+			]
+		},
+		{
+			"id": "wake-up-slap",
+			"name": "Weckruf",
+			"aliases": [
+				"Wake-Up Slap"
+			]
+		},
+		{
+			"id": "water-gun",
+			"name": "Aquaknarre",
+			"aliases": [
+				"Water Gun"
+			]
+		},
+		{
+			"id": "water-pledge",
+			"name": "Wassersäulen",
+			"aliases": [
+				"Water Pledge"
+			]
+		},
+		{
+			"id": "water-pulse",
+			"name": "Aquawelle",
+			"aliases": [
+				"Water Pulse"
+			]
+		},
+		{
+			"id": "water-shuriken",
+			"name": "Wasser-Shuriken",
+			"aliases": [
+				"Water Shuriken"
+			]
+		},
+		{
+			"id": "water-sport",
+			"name": "Nassmacher",
+			"aliases": [
+				"Water Sport"
+			]
+		},
+		{
+			"id": "water-spout",
+			"name": "Fontränen",
+			"aliases": [
+				"Water Spout"
+			]
+		},
+		{
+			"id": "waterfall",
+			"name": "Kaskade",
+			"aliases": [
+				"Waterfall"
+			]
+		},
+		{
+			"id": "weather-ball",
+			"name": "Meteorologe",
+			"aliases": [
+				"Weather Ball"
+			]
+		},
+		{
+			"id": "whirlpool",
+			"name": "Whirlpool",
+			"aliases": [
+				"Whirlpool"
+			]
+		},
+		{
+			"id": "whirlwind",
+			"name": "Wirbelwind",
+			"aliases": [
+				"Whirlwind"
+			]
+		},
+		{
+			"id": "wicked-blow",
+			"name": "Finstertreffer",
+			"aliases": [
+				"Wicked Blow"
+			]
+		},
+		{
+			"id": "wide-guard",
+			"name": "Rundumschutz",
+			"aliases": [
+				"Wide Guard"
+			]
+		},
+		{
+			"id": "wild-charge",
+			"name": "Stromstoß",
+			"aliases": [
+				"Wild Charge"
+			]
+		},
+		{
+			"id": "will-o-wisp",
+			"name": "Irrlicht",
+			"aliases": [
+				"Will-O-Wisp"
+			]
+		},
+		{
+			"id": "wing-attack",
+			"name": "Flügelschlag",
+			"aliases": [
+				"Wing Attack"
+			]
+		},
+		{
+			"id": "wish",
+			"name": "Wunschtraum",
+			"aliases": [
+				"Wish"
+			]
+		},
+		{
+			"id": "withdraw",
+			"name": "Panzerschutz",
+			"aliases": [
+				"Withdraw"
+			]
+		},
+		{
+			"id": "wonder-room",
+			"name": "Wunderraum",
+			"aliases": [
+				"Wonder Room"
+			]
+		},
+		{
+			"id": "wood-hammer",
+			"name": "Holzhammer",
+			"aliases": [
+				"Wood Hammer"
+			]
+		},
+		{
+			"id": "work-up",
+			"name": "Kraftschub",
+			"aliases": [
+				"Work Up"
+			]
+		},
+		{
+			"id": "worry-seed",
+			"name": "Sorgensamen",
+			"aliases": [
+				"Worry Seed"
+			]
+		},
+		{
+			"id": "wrap",
+			"name": "Wickel",
+			"aliases": [
+				"Wrap"
+			]
+		},
+		{
+			"id": "wring-out",
+			"name": "Auswringen",
+			"aliases": [
+				"Wring Out"
+			]
+		},
+		{
+			"id": "x-scissor",
+			"name": "Kreuzschere",
+			"aliases": [
+				"X-Scissor"
+			]
+		},
+		{
+			"id": "yawn",
+			"name": "Gähner",
+			"aliases": [
+				"Yawn"
+			]
+		},
+		{
+			"id": "zap-cannon",
+			"name": "Blitzkanone",
+			"aliases": [
+				"Zap Cannon"
+			]
+		},
+		{
+			"id": "zen-headbutt",
+			"name": "Zen-Kopfstoß",
+			"aliases": [
+				"Zen Headbutt"
+			]
+		},
+		{
+			"id": "zing-zap",
+			"name": "Elektropikser",
+			"aliases": [
+				"Zing Zap"
+			]
+		}
+	]
+}

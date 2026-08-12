@@ -1,0 +1,2097 @@
+{
+	"items": [
+		{
+			"id": "adaptability",
+			"name": "Anpassung",
+			"aliases": [
+				"Adaptability"
+			]
+		},
+		{
+			"id": "aftermath",
+			"name": "Finalschlag",
+			"aliases": [
+				"Aftermath"
+			]
+		},
+		{
+			"id": "air-lock",
+			"name": "Klimaschutz",
+			"aliases": [
+				"Air Lock"
+			]
+		},
+		{
+			"id": "analytic",
+			"name": "Analyse",
+			"aliases": [
+				"Analytic"
+			]
+		},
+		{
+			"id": "anger-point",
+			"name": "Kurzschluss",
+			"aliases": [
+				"Anger Point"
+			]
+		},
+		{
+			"id": "anger-shell",
+			"name": "Wutpanzer",
+			"aliases": [
+				"Anger Shell"
+			]
+		},
+		{
+			"id": "anticipation",
+			"name": "Vorahnung",
+			"aliases": [
+				"Anticipation"
+			]
+		},
+		{
+			"id": "arena-trap",
+			"name": "Ausweglos",
+			"aliases": [
+				"Arena Trap"
+			]
+		},
+		{
+			"id": "armor-tail",
+			"name": "Schweifrüstung",
+			"aliases": [
+				"Armor Tail"
+			]
+		},
+		{
+			"id": "aroma-veil",
+			"name": "Dufthülle",
+			"aliases": [
+				"Aroma Veil"
+			]
+		},
+		{
+			"id": "aura-break",
+			"name": "Aura-Umkehr",
+			"aliases": [
+				"Aura Break"
+			]
+		},
+		{
+			"id": "bad-dreams",
+			"name": "Alptraum",
+			"aliases": [
+				"Bad Dreams"
+			]
+		},
+		{
+			"id": "ball-fetch",
+			"name": "Apport",
+			"aliases": [
+				"Ball Fetch"
+			]
+		},
+		{
+			"id": "battery",
+			"name": "Batterie",
+			"aliases": [
+				"Battery"
+			]
+		},
+		{
+			"id": "battle-armor",
+			"name": "Kampfpanzer",
+			"aliases": [
+				"Battle Armor"
+			]
+		},
+		{
+			"id": "beads-of-ruin",
+			"name": "Unheilsjuwelen",
+			"aliases": [
+				"Beads of Ruin"
+			]
+		},
+		{
+			"id": "beast-boost",
+			"name": "Bestien-Boost",
+			"aliases": [
+				"Beast Boost"
+			]
+		},
+		{
+			"id": "berserk",
+			"name": "Wutausbruch",
+			"aliases": [
+				"Berserk"
+			]
+		},
+		{
+			"id": "big-pecks",
+			"name": "Brustbieter",
+			"aliases": [
+				"Big Pecks"
+			]
+		},
+		{
+			"id": "blaze",
+			"name": "Großbrand",
+			"aliases": [
+				"Blaze"
+			]
+		},
+		{
+			"id": "bulletproof",
+			"name": "Kugelsicher",
+			"aliases": [
+				"Bulletproof"
+			]
+		},
+		{
+			"id": "cheek-pouch",
+			"name": "Backentaschen",
+			"aliases": [
+				"Cheek Pouch"
+			]
+		},
+		{
+			"id": "chilling-neigh",
+			"name": "Helles Wiehern",
+			"aliases": [
+				"Chilling Neigh"
+			]
+		},
+		{
+			"id": "chlorophyll",
+			"name": "Chlorophyll",
+			"aliases": [
+				"Chlorophyll"
+			]
+		},
+		{
+			"id": "clear-body",
+			"name": "Neutraltorso",
+			"aliases": [
+				"Clear Body"
+			]
+		},
+		{
+			"id": "cloud-nine",
+			"name": "Wolke Sieben",
+			"aliases": [
+				"Cloud Nine"
+			]
+		},
+		{
+			"id": "color-change",
+			"name": "Farbwechsel",
+			"aliases": [
+				"Color Change"
+			]
+		},
+		{
+			"id": "comatose",
+			"name": "Dauerschlaf",
+			"aliases": [
+				"Comatose"
+			]
+		},
+		{
+			"id": "commander",
+			"name": "Kommandant",
+			"aliases": [
+				"Commander"
+			]
+		},
+		{
+			"id": "competitive",
+			"name": "Unbeugsamkeit",
+			"aliases": [
+				"Competitive"
+			]
+		},
+		{
+			"id": "compound-eyes",
+			"name": "Facettenauge",
+			"aliases": [
+				"Compound Eyes"
+			]
+		},
+		{
+			"id": "contrary",
+			"name": "Umkehrung",
+			"aliases": [
+				"Contrary"
+			]
+		},
+		{
+			"id": "corrosion",
+			"name": "Korrosion",
+			"aliases": [
+				"Corrosion"
+			]
+		},
+		{
+			"id": "costar",
+			"name": "Synchronauftritt",
+			"aliases": [
+				"Costar"
+			]
+		},
+		{
+			"id": "cotton-down",
+			"name": "Wollflaum",
+			"aliases": [
+				"Cotton Down"
+			]
+		},
+		{
+			"id": "cud-chew",
+			"name": "Wiederkäuer",
+			"aliases": [
+				"Cud Chew"
+			]
+		},
+		{
+			"id": "curious-medicine",
+			"name": "Kuriose Arznei",
+			"aliases": [
+				"Curious Medicine"
+			]
+		},
+		{
+			"id": "cursed-body",
+			"name": "Tastfluch",
+			"aliases": [
+				"Cursed Body"
+			]
+		},
+		{
+			"id": "cute-charm",
+			"name": "Charmebolzen",
+			"aliases": [
+				"Cute Charm"
+			]
+		},
+		{
+			"id": "damp",
+			"name": "Feuchtigkeit",
+			"aliases": [
+				"Damp"
+			]
+		},
+		{
+			"id": "dancer",
+			"name": "Tänzer",
+			"aliases": [
+				"Dancer"
+			]
+		},
+		{
+			"id": "dark-aura",
+			"name": "Dunkelaura",
+			"aliases": [
+				"Dark Aura"
+			]
+		},
+		{
+			"id": "dauntless-shield",
+			"name": "Wackerer Schild",
+			"aliases": [
+				"Dauntless Shield"
+			]
+		},
+		{
+			"id": "dazzling",
+			"name": "Buntkörper",
+			"aliases": [
+				"Dazzling"
+			]
+		},
+		{
+			"id": "defeatist",
+			"name": "Schwächling",
+			"aliases": [
+				"Defeatist"
+			]
+		},
+		{
+			"id": "defiant",
+			"name": "Siegeswille",
+			"aliases": [
+				"Defiant"
+			]
+		},
+		{
+			"id": "desolate-land",
+			"name": "Endland",
+			"aliases": [
+				"Desolate Land"
+			]
+		},
+		{
+			"id": "disguise",
+			"name": "Kostümspuk",
+			"aliases": [
+				"Disguise"
+			]
+		},
+		{
+			"id": "download",
+			"name": "Download",
+			"aliases": [
+				"Download"
+			]
+		},
+		{
+			"id": "dragons-maw",
+			"name": "Drachenkiefer",
+			"aliases": [
+				"Dragon's Maw"
+			]
+		},
+		{
+			"id": "drizzle",
+			"name": "Niesel",
+			"aliases": [
+				"Drizzle"
+			]
+		},
+		{
+			"id": "drought",
+			"name": "Dürre",
+			"aliases": [
+				"Drought"
+			]
+		},
+		{
+			"id": "dry-skin",
+			"name": "Trockenheit",
+			"aliases": [
+				"Dry Skin"
+			]
+		},
+		{
+			"id": "early-bird",
+			"name": "Frühwecker",
+			"aliases": [
+				"Early Bird"
+			]
+		},
+		{
+			"id": "earth-eater",
+			"name": "Bodenschmaus",
+			"aliases": [
+				"Earth Eater"
+			]
+		},
+		{
+			"id": "effect-spore",
+			"name": "Sporenwirt",
+			"aliases": [
+				"Effect Spore"
+			]
+		},
+		{
+			"id": "electric-surge",
+			"name": "Elektro-Erzeuger",
+			"aliases": [
+				"Electric Surge"
+			]
+		},
+		{
+			"id": "electromorphosis",
+			"name": "Dynamo",
+			"aliases": [
+				"Electromorphosis"
+			]
+		},
+		{
+			"id": "emergency-exit",
+			"name": "Rückzug",
+			"aliases": [
+				"Emergency Exit"
+			]
+		},
+		{
+			"id": "fairy-aura",
+			"name": "Feenaura",
+			"aliases": [
+				"Fairy Aura"
+			]
+		},
+		{
+			"id": "filter",
+			"name": "Filter",
+			"aliases": [
+				"Filter"
+			]
+		},
+		{
+			"id": "flame-body",
+			"name": "Flammkörper",
+			"aliases": [
+				"Flame Body"
+			]
+		},
+		{
+			"id": "flare-boost",
+			"name": "Hitzewahn",
+			"aliases": [
+				"Flare Boost"
+			]
+		},
+		{
+			"id": "flash-fire",
+			"name": "Feuerfänger",
+			"aliases": [
+				"Flash Fire"
+			]
+		},
+		{
+			"id": "flower-gift",
+			"name": "Pflanzengabe",
+			"aliases": [
+				"Flower Gift"
+			]
+		},
+		{
+			"id": "flower-veil",
+			"name": "Blütenhülle",
+			"aliases": [
+				"Flower Veil"
+			]
+		},
+		{
+			"id": "fluffy",
+			"name": "Flauschigkeit",
+			"aliases": [
+				"Fluffy"
+			]
+		},
+		{
+			"id": "forecast",
+			"name": "Prognose",
+			"aliases": [
+				"Forecast"
+			]
+		},
+		{
+			"id": "forewarn",
+			"name": "Vorwarnung",
+			"aliases": [
+				"Forewarn"
+			]
+		},
+		{
+			"id": "friend-guard",
+			"name": "Freundeshut",
+			"aliases": [
+				"Friend Guard"
+			]
+		},
+		{
+			"id": "frisk",
+			"name": "Schnüffler",
+			"aliases": [
+				"Frisk"
+			]
+		},
+		{
+			"id": "full-metal-body",
+			"name": "Metallprotektor",
+			"aliases": [
+				"Full Metal Body"
+			]
+		},
+		{
+			"id": "fur-coat",
+			"name": "Fellkleid",
+			"aliases": [
+				"Fur Coat"
+			]
+		},
+		{
+			"id": "gale-wings",
+			"name": "Orkanschwingen",
+			"aliases": [
+				"Gale Wings"
+			]
+		},
+		{
+			"id": "galvanize",
+			"name": "Elektrohaut",
+			"aliases": [
+				"Galvanize"
+			]
+		},
+		{
+			"id": "gluttony",
+			"name": "Völlerei",
+			"aliases": [
+				"Gluttony"
+			]
+		},
+		{
+			"id": "good-as-gold",
+			"name": "Goldkörper",
+			"aliases": [
+				"Good as Gold"
+			]
+		},
+		{
+			"id": "gooey",
+			"name": "Viskosität",
+			"aliases": [
+				"Gooey"
+			]
+		},
+		{
+			"id": "gorilla-tactics",
+			"name": "Affenfokus",
+			"aliases": [
+				"Gorilla Tactics"
+			]
+		},
+		{
+			"id": "grass-pelt",
+			"name": "Pflanzenpelz",
+			"aliases": [
+				"Grass Pelt"
+			]
+		},
+		{
+			"id": "grassy-surge",
+			"name": "Gras-Erzeuger",
+			"aliases": [
+				"Grassy Surge"
+			]
+		},
+		{
+			"id": "grim-neigh",
+			"name": "Dunkles Wiehern",
+			"aliases": [
+				"Grim Neigh"
+			]
+		},
+		{
+			"id": "guard-dog",
+			"name": "Wachhund",
+			"aliases": [
+				"Guard Dog"
+			]
+		},
+		{
+			"id": "gulp-missile",
+			"name": "Würggeschoss",
+			"aliases": [
+				"Gulp Missile"
+			]
+		},
+		{
+			"id": "guts",
+			"name": "Adrenalin",
+			"aliases": [
+				"Guts"
+			]
+		},
+		{
+			"id": "hadron-engine",
+			"name": "Hadronen-Motor",
+			"aliases": [
+				"Hadron Engine"
+			]
+		},
+		{
+			"id": "harvest",
+			"name": "Reiche Ernte",
+			"aliases": [
+				"Harvest"
+			]
+		},
+		{
+			"id": "healer",
+			"name": "Heilherz",
+			"aliases": [
+				"Healer"
+			]
+		},
+		{
+			"id": "heatproof",
+			"name": "Hitzeschutz",
+			"aliases": [
+				"Heatproof"
+			]
+		},
+		{
+			"id": "heavy-metal",
+			"name": "Schwermetall",
+			"aliases": [
+				"Heavy Metal"
+			]
+		},
+		{
+			"id": "honey-gather",
+			"name": "Honigmaul",
+			"aliases": [
+				"Honey Gather"
+			]
+		},
+		{
+			"id": "hospitality",
+			"name": "Gastlichkeit",
+			"aliases": [
+				"Hospitality"
+			]
+		},
+		{
+			"id": "huge-power",
+			"name": "Kraftkoloss",
+			"aliases": [
+				"Huge Power"
+			]
+		},
+		{
+			"id": "hunger-switch",
+			"name": "Heißhunger",
+			"aliases": [
+				"Hunger Switch"
+			]
+		},
+		{
+			"id": "hustle",
+			"name": "Übereifer",
+			"aliases": [
+				"Hustle"
+			]
+		},
+		{
+			"id": "hydration",
+			"name": "Hydration",
+			"aliases": [
+				"Hydration"
+			]
+		},
+		{
+			"id": "hyper-cutter",
+			"name": "Scherenmacht",
+			"aliases": [
+				"Hyper Cutter"
+			]
+		},
+		{
+			"id": "ice-body",
+			"name": "Eishaut",
+			"aliases": [
+				"Ice Body"
+			]
+		},
+		{
+			"id": "ice-face",
+			"name": "Tiefkühlkopf",
+			"aliases": [
+				"Ice Face"
+			]
+		},
+		{
+			"id": "ice-scales",
+			"name": "Eisflügelstaub",
+			"aliases": [
+				"Ice Scales"
+			]
+		},
+		{
+			"id": "illuminate",
+			"name": "Erleuchtung",
+			"aliases": [
+				"Illuminate"
+			]
+		},
+		{
+			"id": "illusion",
+			"name": "Trugbild",
+			"aliases": [
+				"Illusion"
+			]
+		},
+		{
+			"id": "immunity",
+			"name": "Immunität",
+			"aliases": [
+				"Immunity"
+			]
+		},
+		{
+			"id": "imposter",
+			"name": "Doppelgänger",
+			"aliases": [
+				"Imposter"
+			]
+		},
+		{
+			"id": "infiltrator",
+			"name": "Schwebedurch",
+			"aliases": [
+				"Infiltrator"
+			]
+		},
+		{
+			"id": "innards-out",
+			"name": "Magenkrempler",
+			"aliases": [
+				"Innards Out"
+			]
+		},
+		{
+			"id": "inner-focus",
+			"name": "Konzentrator",
+			"aliases": [
+				"Inner Focus"
+			]
+		},
+		{
+			"id": "insomnia",
+			"name": "Insomnia",
+			"aliases": [
+				"Insomnia"
+			]
+		},
+		{
+			"id": "intimidate",
+			"name": "Bedroher",
+			"aliases": [
+				"Intimidate"
+			]
+		},
+		{
+			"id": "intrepid-sword",
+			"name": "Kühnes Schwert",
+			"aliases": [
+				"Intrepid Sword"
+			]
+		},
+		{
+			"id": "iron-barbs",
+			"name": "Eisenstachel",
+			"aliases": [
+				"Iron Barbs"
+			]
+		},
+		{
+			"id": "iron-fist",
+			"name": "Eisenfaust",
+			"aliases": [
+				"Iron Fist"
+			]
+		},
+		{
+			"id": "justified",
+			"name": "Redlichkeit",
+			"aliases": [
+				"Justified"
+			]
+		},
+		{
+			"id": "keen-eye",
+			"name": "Adlerauge",
+			"aliases": [
+				"Keen Eye"
+			]
+		},
+		{
+			"id": "klutz",
+			"name": "Tollpatsch",
+			"aliases": [
+				"Klutz"
+			]
+		},
+		{
+			"id": "leaf-guard",
+			"name": "Floraschild",
+			"aliases": [
+				"Leaf Guard"
+			]
+		},
+		{
+			"id": "levitate",
+			"name": "Schwebe",
+			"aliases": [
+				"Levitate"
+			]
+		},
+		{
+			"id": "libero",
+			"name": "Libero",
+			"aliases": [
+				"Libero"
+			]
+		},
+		{
+			"id": "light-metal",
+			"name": "Leichtmetall",
+			"aliases": [
+				"Light Metal"
+			]
+		},
+		{
+			"id": "lightning-rod",
+			"name": "Blitzfänger",
+			"aliases": [
+				"Lightning Rod"
+			]
+		},
+		{
+			"id": "limber",
+			"name": "Flexibilität",
+			"aliases": [
+				"Limber"
+			]
+		},
+		{
+			"id": "lingering-aroma",
+			"name": "Duftschwade",
+			"aliases": [
+				"Lingering Aroma"
+			]
+		},
+		{
+			"id": "liquid-ooze",
+			"name": "Kloakensoße",
+			"aliases": [
+				"Liquid Ooze"
+			]
+		},
+		{
+			"id": "liquid-voice",
+			"name": "Plätscherstimme",
+			"aliases": [
+				"Liquid Voice"
+			]
+		},
+		{
+			"id": "long-reach",
+			"name": "Langstrecke",
+			"aliases": [
+				"Long Reach"
+			]
+		},
+		{
+			"id": "magic-bounce",
+			"name": "Magiespiegel",
+			"aliases": [
+				"Magic Bounce"
+			]
+		},
+		{
+			"id": "magic-guard",
+			"name": "Magieschild",
+			"aliases": [
+				"Magic Guard"
+			]
+		},
+		{
+			"id": "magician",
+			"name": "Zauberer",
+			"aliases": [
+				"Magician"
+			]
+		},
+		{
+			"id": "magma-armor",
+			"name": "Magmapanzer",
+			"aliases": [
+				"Magma Armor"
+			]
+		},
+		{
+			"id": "magnet-pull",
+			"name": "Magnetfalle",
+			"aliases": [
+				"Magnet Pull"
+			]
+		},
+		{
+			"id": "marvel-scale",
+			"name": "Notschutz",
+			"aliases": [
+				"Marvel Scale"
+			]
+		},
+		{
+			"id": "mega-launcher",
+			"name": "Megawumme",
+			"aliases": [
+				"Mega Launcher"
+			]
+		},
+		{
+			"id": "merciless",
+			"name": "Quälerei",
+			"aliases": [
+				"Merciless"
+			]
+		},
+		{
+			"id": "mimicry",
+			"name": "Mimese",
+			"aliases": [
+				"Mimicry"
+			]
+		},
+		{
+			"id": "minds-eye",
+			"name": "Geistiges Auge",
+			"aliases": [
+				"Mind's Eye"
+			]
+		},
+		{
+			"id": "minus",
+			"name": "Minus",
+			"aliases": [
+				"Minus"
+			]
+		},
+		{
+			"id": "mirror-armor",
+			"name": "Spiegelrüstung",
+			"aliases": [
+				"Mirror Armor"
+			]
+		},
+		{
+			"id": "misty-surge",
+			"name": "Nebel-Erzeuger",
+			"aliases": [
+				"Misty Surge"
+			]
+		},
+		{
+			"id": "mold-breaker",
+			"name": "Überbrückung",
+			"aliases": [
+				"Mold Breaker"
+			]
+		},
+		{
+			"id": "moody",
+			"name": "Gefühlswippe",
+			"aliases": [
+				"Moody"
+			]
+		},
+		{
+			"id": "motor-drive",
+			"name": "Starthilfe",
+			"aliases": [
+				"Motor Drive"
+			]
+		},
+		{
+			"id": "moxie",
+			"name": "Hochmut",
+			"aliases": [
+				"Moxie"
+			]
+		},
+		{
+			"id": "multiscale",
+			"name": "Multischuppe",
+			"aliases": [
+				"Multiscale"
+			]
+		},
+		{
+			"id": "multitype",
+			"name": "Variabilität",
+			"aliases": [
+				"Multitype"
+			]
+		},
+		{
+			"id": "mummy",
+			"name": "Mumie",
+			"aliases": [
+				"Mummy"
+			]
+		},
+		{
+			"id": "mycelium-might",
+			"name": "Myzelienkraft",
+			"aliases": [
+				"Mycelium Might"
+			]
+		},
+		{
+			"id": "natural-cure",
+			"name": "Innere Kraft",
+			"aliases": [
+				"Natural Cure"
+			]
+		},
+		{
+			"id": "neuroforce",
+			"name": "Zerebralmacht",
+			"aliases": [
+				"Neuroforce"
+			]
+		},
+		{
+			"id": "neutralizing-gas",
+			"name": "Reaktionsgas",
+			"aliases": [
+				"Neutralizing Gas"
+			]
+		},
+		{
+			"id": "no-guard",
+			"name": "Schildlos",
+			"aliases": [
+				"No Guard"
+			]
+		},
+		{
+			"id": "normalize",
+			"name": "Regulierung",
+			"aliases": [
+				"Normalize"
+			]
+		},
+		{
+			"id": "oblivious",
+			"name": "Dösigkeit",
+			"aliases": [
+				"Oblivious"
+			]
+		},
+		{
+			"id": "opportunist",
+			"name": "Profiteur",
+			"aliases": [
+				"Opportunist"
+			]
+		},
+		{
+			"id": "orichalcum-pulse",
+			"name": "Orichalkum-Puls",
+			"aliases": [
+				"Orichalcum Pulse"
+			]
+		},
+		{
+			"id": "overcoat",
+			"name": "Partikelschutz",
+			"aliases": [
+				"Overcoat"
+			]
+		},
+		{
+			"id": "overgrow",
+			"name": "Notdünger",
+			"aliases": [
+				"Overgrow"
+			]
+		},
+		{
+			"id": "own-tempo",
+			"name": "Tempomacher",
+			"aliases": [
+				"Own Tempo"
+			]
+		},
+		{
+			"id": "pastel-veil",
+			"name": "Pastellhülle",
+			"aliases": [
+				"Pastel Veil"
+			]
+		},
+		{
+			"id": "perish-body",
+			"name": "Unheilskörper",
+			"aliases": [
+				"Perish Body"
+			]
+		},
+		{
+			"id": "pickpocket",
+			"name": "Langfinger",
+			"aliases": [
+				"Pickpocket"
+			]
+		},
+		{
+			"id": "pickup",
+			"name": "Mitnahme",
+			"aliases": [
+				"Pickup"
+			]
+		},
+		{
+			"id": "pixilate",
+			"name": "Feenschicht",
+			"aliases": [
+				"Pixilate"
+			]
+		},
+		{
+			"id": "plus",
+			"name": "Plus",
+			"aliases": [
+				"Plus"
+			]
+		},
+		{
+			"id": "poison-heal",
+			"name": "Aufheber",
+			"aliases": [
+				"Poison Heal"
+			]
+		},
+		{
+			"id": "poison-point",
+			"name": "Giftdorn",
+			"aliases": [
+				"Poison Point"
+			]
+		},
+		{
+			"id": "poison-puppeteer",
+			"name": "Giftpuppenspiel",
+			"aliases": [
+				"Poison Puppeteer"
+			]
+		},
+		{
+			"id": "poison-touch",
+			"name": "Giftgriff",
+			"aliases": [
+				"Poison Touch"
+			]
+		},
+		{
+			"id": "power-of-alchemy",
+			"name": "Chemiekraft",
+			"aliases": [
+				"Power of Alchemy"
+			]
+		},
+		{
+			"id": "power-spot",
+			"name": "Kraftquelle",
+			"aliases": [
+				"Power Spot"
+			]
+		},
+		{
+			"id": "prankster",
+			"name": "Strolch",
+			"aliases": [
+				"Prankster"
+			]
+		},
+		{
+			"id": "pressure",
+			"name": "Erzwinger",
+			"aliases": [
+				"Pressure"
+			]
+		},
+		{
+			"id": "primordial-sea",
+			"name": "Urmeer",
+			"aliases": [
+				"Primordial Sea"
+			]
+		},
+		{
+			"id": "prism-armor",
+			"name": "Prismarüstung",
+			"aliases": [
+				"Prism Armor"
+			]
+		},
+		{
+			"id": "propeller-tail",
+			"name": "Schraubflosse",
+			"aliases": [
+				"Propeller Tail"
+			]
+		},
+		{
+			"id": "protean",
+			"name": "Wandlungskunst",
+			"aliases": [
+				"Protean"
+			]
+		},
+		{
+			"id": "protosynthesis",
+			"name": "Paläosynthese",
+			"aliases": [
+				"Protosynthesis"
+			]
+		},
+		{
+			"id": "psychic-surge",
+			"name": "Psycho-Erzeuger",
+			"aliases": [
+				"Psychic Surge"
+			]
+		},
+		{
+			"id": "punk-rock",
+			"name": "Punk Rock",
+			"aliases": [
+				"Punk Rock"
+			]
+		},
+		{
+			"id": "pure-power",
+			"name": "Mentalkraft",
+			"aliases": [
+				"Pure Power"
+			]
+		},
+		{
+			"id": "purifying-salt",
+			"name": "Läutersalz",
+			"aliases": [
+				"Purifying Salt"
+			]
+		},
+		{
+			"id": "quark-drive",
+			"name": "Quantenantrieb",
+			"aliases": [
+				"Quark Drive"
+			]
+		},
+		{
+			"id": "queenly-majesty",
+			"name": "Majestät",
+			"aliases": [
+				"Queenly Majesty"
+			]
+		},
+		{
+			"id": "quick-draw",
+			"name": "Schnellschuss",
+			"aliases": [
+				"Quick Draw"
+			]
+		},
+		{
+			"id": "quick-feet",
+			"name": "Rasanz",
+			"aliases": [
+				"Quick Feet"
+			]
+		},
+		{
+			"id": "rain-dish",
+			"name": "Regengenuss",
+			"aliases": [
+				"Rain Dish"
+			]
+		},
+		{
+			"id": "rattled",
+			"name": "Hasenfuß",
+			"aliases": [
+				"Rattled"
+			]
+		},
+		{
+			"id": "receiver",
+			"name": "Receiver",
+			"aliases": [
+				"Receiver"
+			]
+		},
+		{
+			"id": "reckless",
+			"name": "Achtlos",
+			"aliases": [
+				"Reckless"
+			]
+		},
+		{
+			"id": "refrigerate",
+			"name": "Frostschicht",
+			"aliases": [
+				"Refrigerate"
+			]
+		},
+		{
+			"id": "regenerator",
+			"name": "Belebekraft",
+			"aliases": [
+				"Regenerator"
+			]
+		},
+		{
+			"id": "ripen",
+			"name": "Heranreifen",
+			"aliases": [
+				"Ripen"
+			]
+		},
+		{
+			"id": "rivalry",
+			"name": "Rivalität",
+			"aliases": [
+				"Rivalry"
+			]
+		},
+		{
+			"id": "rks-system",
+			"name": "Alpha-System",
+			"aliases": [
+				"RKS System"
+			]
+		},
+		{
+			"id": "rock-head",
+			"name": "Steinhaupt",
+			"aliases": [
+				"Rock Head"
+			]
+		},
+		{
+			"id": "rocky-payload",
+			"name": "Steinträger",
+			"aliases": [
+				"Rocky Payload"
+			]
+		},
+		{
+			"id": "rough-skin",
+			"name": "Rauhaut",
+			"aliases": [
+				"Rough Skin"
+			]
+		},
+		{
+			"id": "run-away",
+			"name": "Angsthase",
+			"aliases": [
+				"Run Away"
+			]
+		},
+		{
+			"id": "sand-force",
+			"name": "Sandgewalt",
+			"aliases": [
+				"Sand Force"
+			]
+		},
+		{
+			"id": "sand-rush",
+			"name": "Sandscharrer",
+			"aliases": [
+				"Sand Rush"
+			]
+		},
+		{
+			"id": "sand-spit",
+			"name": "Sandspeier",
+			"aliases": [
+				"Sand Spit"
+			]
+		},
+		{
+			"id": "sand-stream",
+			"name": "Sandsturm",
+			"aliases": [
+				"Sand Stream"
+			]
+		},
+		{
+			"id": "sand-veil",
+			"name": "Sandschleier",
+			"aliases": [
+				"Sand Veil"
+			]
+		},
+		{
+			"id": "sap-sipper",
+			"name": "Vegetarier",
+			"aliases": [
+				"Sap Sipper"
+			]
+		},
+		{
+			"id": "schooling",
+			"name": "Fischschwarm",
+			"aliases": [
+				"Schooling"
+			]
+		},
+		{
+			"id": "scrappy",
+			"name": "Rauflust",
+			"aliases": [
+				"Scrappy"
+			]
+		},
+		{
+			"id": "screen-cleaner",
+			"name": "Hemmungslos",
+			"aliases": [
+				"Screen Cleaner"
+			]
+		},
+		{
+			"id": "seed-sower",
+			"name": "Streusaat",
+			"aliases": [
+				"Seed Sower"
+			]
+		},
+		{
+			"id": "serene-grace",
+			"name": "Edelmut",
+			"aliases": [
+				"Serene Grace"
+			]
+		},
+		{
+			"id": "shadow-shield",
+			"name": "Phantomschutz",
+			"aliases": [
+				"Shadow Shield"
+			]
+		},
+		{
+			"id": "shadow-tag",
+			"name": "Wegsperre",
+			"aliases": [
+				"Shadow Tag"
+			]
+		},
+		{
+			"id": "sharpness",
+			"name": "Scharfkantig",
+			"aliases": [
+				"Sharpness"
+			]
+		},
+		{
+			"id": "shed-skin",
+			"name": "Expidermis",
+			"aliases": [
+				"Shed Skin"
+			]
+		},
+		{
+			"id": "sheer-force",
+			"name": "Rohe Gewalt",
+			"aliases": [
+				"Sheer Force"
+			]
+		},
+		{
+			"id": "shell-armor",
+			"name": "Panzerhaut",
+			"aliases": [
+				"Shell Armor"
+			]
+		},
+		{
+			"id": "shield-dust",
+			"name": "Puderabwehr",
+			"aliases": [
+				"Shield Dust"
+			]
+		},
+		{
+			"id": "shields-down",
+			"name": "Limitschild",
+			"aliases": [
+				"Shields Down"
+			]
+		},
+		{
+			"id": "simple",
+			"name": "Wankelmut",
+			"aliases": [
+				"Simple"
+			]
+		},
+		{
+			"id": "skill-link",
+			"name": "Wertelink",
+			"aliases": [
+				"Skill Link"
+			]
+		},
+		{
+			"id": "slow-start",
+			"name": "Saumselig",
+			"aliases": [
+				"Slow Start"
+			]
+		},
+		{
+			"id": "slush-rush",
+			"name": "Schneescharrer",
+			"aliases": [
+				"Slush Rush"
+			]
+		},
+		{
+			"id": "sniper",
+			"name": "Superschütze",
+			"aliases": [
+				"Sniper"
+			]
+		},
+		{
+			"id": "snow-cloak",
+			"name": "Schneemantel",
+			"aliases": [
+				"Snow Cloak"
+			]
+		},
+		{
+			"id": "snow-warning",
+			"name": "Hagelalarm",
+			"aliases": [
+				"Snow Warning"
+			]
+		},
+		{
+			"id": "solar-power",
+			"name": "Solarkraft",
+			"aliases": [
+				"Solar Power"
+			]
+		},
+		{
+			"id": "solid-rock",
+			"name": "Felskern",
+			"aliases": [
+				"Solid Rock"
+			]
+		},
+		{
+			"id": "soul-heart",
+			"name": "Seelenherz",
+			"aliases": [
+				"Soul-Heart"
+			]
+		},
+		{
+			"id": "soundproof",
+			"name": "Lärmschutz",
+			"aliases": [
+				"Soundproof"
+			]
+		},
+		{
+			"id": "speed-boost",
+			"name": "Temposchub",
+			"aliases": [
+				"Speed Boost"
+			]
+		},
+		{
+			"id": "stakeout",
+			"name": "Beschattung",
+			"aliases": [
+				"Stakeout"
+			]
+		},
+		{
+			"id": "stall",
+			"name": "Zeitspiel",
+			"aliases": [
+				"Stall"
+			]
+		},
+		{
+			"id": "stalwart",
+			"name": "Stahlrückgrat",
+			"aliases": [
+				"Stalwart"
+			]
+		},
+		{
+			"id": "stamina",
+			"name": "Zähigkeit",
+			"aliases": [
+				"Stamina"
+			]
+		},
+		{
+			"id": "stance-change",
+			"name": "Taktikwechsel",
+			"aliases": [
+				"Stance Change"
+			]
+		},
+		{
+			"id": "static",
+			"name": "Statik",
+			"aliases": [
+				"Static"
+			]
+		},
+		{
+			"id": "steadfast",
+			"name": "Felsenfest",
+			"aliases": [
+				"Steadfast"
+			]
+		},
+		{
+			"id": "steam-engine",
+			"name": "Dampfantrieb",
+			"aliases": [
+				"Steam Engine"
+			]
+		},
+		{
+			"id": "steelworker",
+			"name": "Stahlprofi",
+			"aliases": [
+				"Steelworker"
+			]
+		},
+		{
+			"id": "steely-spirit",
+			"name": "Stählerner Wille",
+			"aliases": [
+				"Steely Spirit"
+			]
+		},
+		{
+			"id": "stench",
+			"name": "Duftnote",
+			"aliases": [
+				"Stench"
+			]
+		},
+		{
+			"id": "sticky-hold",
+			"name": "Klebekörper",
+			"aliases": [
+				"Sticky Hold"
+			]
+		},
+		{
+			"id": "storm-drain",
+			"name": "Sturmsog",
+			"aliases": [
+				"Storm Drain"
+			]
+		},
+		{
+			"id": "strong-jaw",
+			"name": "Titankiefer",
+			"aliases": [
+				"Strong Jaw"
+			]
+		},
+		{
+			"id": "sturdy",
+			"name": "Robustheit",
+			"aliases": [
+				"Sturdy"
+			]
+		},
+		{
+			"id": "suction-cups",
+			"name": "Saugnapf",
+			"aliases": [
+				"Suction Cups"
+			]
+		},
+		{
+			"id": "super-luck",
+			"name": "Glückspilz",
+			"aliases": [
+				"Super Luck"
+			]
+		},
+		{
+			"id": "supersweet-syrup",
+			"name": "Süßer Nektar",
+			"aliases": [
+				"Supersweet Syrup"
+			]
+		},
+		{
+			"id": "supreme-overlord",
+			"name": "Feldherr",
+			"aliases": [
+				"Supreme Overlord"
+			]
+		},
+		{
+			"id": "surge-surfer",
+			"name": "Surf-Schweif",
+			"aliases": [
+				"Surge Surfer"
+			]
+		},
+		{
+			"id": "swarm",
+			"name": "Hexaplaga",
+			"aliases": [
+				"Swarm"
+			]
+		},
+		{
+			"id": "sweet-veil",
+			"name": "Zuckerhülle",
+			"aliases": [
+				"Sweet Veil"
+			]
+		},
+		{
+			"id": "swift-swim",
+			"name": "Wassertempo",
+			"aliases": [
+				"Swift Swim"
+			]
+		},
+		{
+			"id": "sword-of-ruin",
+			"name": "Unheilsschwert",
+			"aliases": [
+				"Sword of Ruin"
+			]
+		},
+		{
+			"id": "symbiosis",
+			"name": "Nutznießer",
+			"aliases": [
+				"Symbiosis"
+			]
+		},
+		{
+			"id": "synchronize",
+			"name": "Synchro",
+			"aliases": [
+				"Synchronize"
+			]
+		},
+		{
+			"id": "tablets-of-ruin",
+			"name": "Unheilstafeln",
+			"aliases": [
+				"Tablets of Ruin"
+			]
+		},
+		{
+			"id": "tangled-feet",
+			"name": "Fußangel",
+			"aliases": [
+				"Tangled Feet"
+			]
+		},
+		{
+			"id": "tangling-hair",
+			"name": "Lockenkopf",
+			"aliases": [
+				"Tangling Hair"
+			]
+		},
+		{
+			"id": "technician",
+			"name": "Techniker",
+			"aliases": [
+				"Technician"
+			]
+		},
+		{
+			"id": "telepathy",
+			"name": "Telepathie",
+			"aliases": [
+				"Telepathy"
+			]
+		},
+		{
+			"id": "tera-shell",
+			"name": "Tera-Panzer",
+			"aliases": [
+				"Tera Shell"
+			]
+		},
+		{
+			"id": "tera-shift",
+			"name": "Tera-Wandel",
+			"aliases": [
+				"Tera Shift"
+			]
+		},
+		{
+			"id": "teraform-zero",
+			"name": "Teraforming Null",
+			"aliases": [
+				"Teraform Zero"
+			]
+		},
+		{
+			"id": "teravolt",
+			"name": "Teravolt",
+			"aliases": [
+				"Teravolt"
+			]
+		},
+		{
+			"id": "thermal-exchange",
+			"name": "Thermowandel",
+			"aliases": [
+				"Thermal Exchange"
+			]
+		},
+		{
+			"id": "thick-fat",
+			"name": "Speckschicht",
+			"aliases": [
+				"Thick Fat"
+			]
+		},
+		{
+			"id": "tinted-lens",
+			"name": "Aufwertung",
+			"aliases": [
+				"Tinted Lens"
+			]
+		},
+		{
+			"id": "torrent",
+			"name": "Sturzbach",
+			"aliases": [
+				"Torrent"
+			]
+		},
+		{
+			"id": "tough-claws",
+			"name": "Krallenwucht",
+			"aliases": [
+				"Tough Claws"
+			]
+		},
+		{
+			"id": "toxic-boost",
+			"name": "Giftwahn",
+			"aliases": [
+				"Toxic Boost"
+			]
+		},
+		{
+			"id": "toxic-chain",
+			"name": "Giftkette",
+			"aliases": [
+				"Toxic Chain"
+			]
+		},
+		{
+			"id": "toxic-debris",
+			"name": "Giftbelag",
+			"aliases": [
+				"Toxic Debris"
+			]
+		},
+		{
+			"id": "trace",
+			"name": "Erfassen",
+			"aliases": [
+				"Trace"
+			]
+		},
+		{
+			"id": "transistor",
+			"name": "Transistor",
+			"aliases": [
+				"Transistor"
+			]
+		},
+		{
+			"id": "triage",
+			"name": "Heilwandel",
+			"aliases": [
+				"Triage"
+			]
+		},
+		{
+			"id": "truant",
+			"name": "Schnarchnase",
+			"aliases": [
+				"Truant"
+			]
+		},
+		{
+			"id": "turboblaze",
+			"name": "Turbobrand",
+			"aliases": [
+				"Turboblaze"
+			]
+		},
+		{
+			"id": "unaware",
+			"name": "Unkenntnis",
+			"aliases": [
+				"Unaware"
+			]
+		},
+		{
+			"id": "unburden",
+			"name": "Entlastung",
+			"aliases": [
+				"Unburden"
+			]
+		},
+		{
+			"id": "unnerve",
+			"name": "Anspannung",
+			"aliases": [
+				"Unnerve"
+			]
+		},
+		{
+			"id": "unseen-fist",
+			"name": "Verborgene Faust",
+			"aliases": [
+				"Unseen Fist"
+			]
+		},
+		{
+			"id": "vessel-of-ruin",
+			"name": "Unheilsgefäß",
+			"aliases": [
+				"Vessel of Ruin"
+			]
+		},
+		{
+			"id": "victory-star",
+			"name": "Triumphstern",
+			"aliases": [
+				"Victory Star"
+			]
+		},
+		{
+			"id": "vital-spirit",
+			"name": "Munterkeit",
+			"aliases": [
+				"Vital Spirit"
+			]
+		},
+		{
+			"id": "volt-absorb",
+			"name": "Voltabsorber",
+			"aliases": [
+				"Volt Absorb"
+			]
+		},
+		{
+			"id": "wandering-spirit",
+			"name": "Rastlose Seele",
+			"aliases": [
+				"Wandering Spirit"
+			]
+		},
+		{
+			"id": "water-absorb",
+			"name": "H2O-Absorber",
+			"aliases": [
+				"Water Absorb"
+			]
+		},
+		{
+			"id": "water-bubble",
+			"name": "Wasserblase",
+			"aliases": [
+				"Water Bubble"
+			]
+		},
+		{
+			"id": "water-compaction",
+			"name": "Verklumpen",
+			"aliases": [
+				"Water Compaction"
+			]
+		},
+		{
+			"id": "water-veil",
+			"name": "Aquahülle",
+			"aliases": [
+				"Water Veil"
+			]
+		},
+		{
+			"id": "weak-armor",
+			"name": "Bruchrüstung",
+			"aliases": [
+				"Weak Armor"
+			]
+		},
+		{
+			"id": "well-baked-body",
+			"name": "Knusperkruste",
+			"aliases": [
+				"Well-Baked Body"
+			]
+		},
+		{
+			"id": "white-smoke",
+			"name": "Pulverrauch",
+			"aliases": [
+				"White Smoke"
+			]
+		},
+		{
+			"id": "wimp-out",
+			"name": "Reißaus",
+			"aliases": [
+				"Wimp Out"
+			]
+		},
+		{
+			"id": "wind-power",
+			"name": "Windkraft",
+			"aliases": [
+				"Wind Power"
+			]
+		},
+		{
+			"id": "wind-rider",
+			"name": "Windreiter",
+			"aliases": [
+				"Wind Rider"
+			]
+		},
+		{
+			"id": "wonder-guard",
+			"name": "Wunderwache",
+			"aliases": [
+				"Wonder Guard"
+			]
+		},
+		{
+			"id": "wonder-skin",
+			"name": "Wunderhaut",
+			"aliases": [
+				"Wonder Skin"
+			]
+		},
+		{
+			"id": "zen-mode",
+			"name": "Trance-Modus",
+			"aliases": [
+				"Zen Mode"
+			]
+		},
+		{
+			"id": "zero-to-hero",
+			"name": "Superwechsel",
+			"aliases": [
+				"Zero to Hero"
+			]
+		}
+	]
+}

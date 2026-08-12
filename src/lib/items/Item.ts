@@ -1,5 +1,6 @@
 import { DataClass } from "$lib/DataClass"
 import { capitalizeAll } from "$lib/utils/string"
+import { includesSearch } from "$lib/utils/string"
 
 export type ItemId = string
 
@@ -16,6 +17,7 @@ const createGroup = (name: string): ItemGroup => ({ name, items: [] })
 export class Item extends DataClass<{
 	id: ItemId,
 	name: string,
+	aliases?: string[],
 	type: ItemType,
 	cost: number | null,
 	beta?: boolean,
@@ -26,6 +28,7 @@ export class Item extends DataClass<{
 }> {
 	get id() { return this.data.id }
 	get name() { return this.data.name }
+	get aliases() { return this.data.aliases ?? [] }
 	get type() { return this.data.type }
 	get cost() { return this.data.cost }
 	get beta() { return this.data.beta ?? false }
@@ -33,7 +36,7 @@ export class Item extends DataClass<{
 	get media() { return this.data.media }
 
 	static matchNameOrType = (value: string) => (item: Item) =>
-		item.name.toLocaleLowerCase().includes(value.toLocaleLowerCase()) ||
+		includesSearch([item.name, ...item.aliases], value) ||
 			item.type.includes(value.toLocaleLowerCase())
 	
 	static groupByType(items: Item[], typeOrder: ItemType[]): ItemGroup[] {

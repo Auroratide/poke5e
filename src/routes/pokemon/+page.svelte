@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { Title } from "$lib/ui/layout"
+	import { m } from "$lib/site/i18n"
 </script>
 
-<Title value="Pokemon" />
+<Title value="{m["pokemon.title"]()}" />

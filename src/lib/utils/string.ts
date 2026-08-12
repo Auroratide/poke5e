@@ -30,3 +30,9 @@ export function caseInsensitiveEqual(a: string, b: string): boolean {
 
 	return aLower.localeCompare(bLower) === 0
 }
+
+/** Unicode-aware matching for localized display names and canonical aliases. */
+export function includesSearch(values: string[], query: string): boolean {
+	const normalize = (value: string) => value.normalize("NFKC").toLocaleLowerCase()
+	return values.some((value) => normalize(value).includes(normalize(query)))
+}

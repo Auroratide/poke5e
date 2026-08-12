@@ -18,10 +18,12 @@ import type { SinglePokemonJsonResponse } from "./PokemonJsonResponse"
 import { SpeciesIdentifier } from "./SpeciesIdentifier"
 import { SpeciesForms } from "$lib/poke5e/forms"
 import type { Habitat } from "$lib/poke5e/habitat"
+import { includesSearch } from "$lib/utils/string"
 
 export class PokemonSpecies extends DataClass<{
 	id: Data<SpeciesIdentifier>,
 	name: string,
+	aliases?: string[],
 	number: number,
 	type: Data<PokemonType>,
 	size: CreatureSize,
@@ -46,11 +48,12 @@ export class PokemonSpecies extends DataClass<{
 	habitat: Habitat,
 }> {
 	static readonly matchNameOrType = (value: string) => (pokemon: PokemonSpecies) =>
-		pokemon.data.name.toLocaleLowerCase().includes(value.toLocaleLowerCase()) ||
+		includesSearch([pokemon.data.name, ...(pokemon.data.aliases ?? [])], value) ||
 			pokemon.type.toString().toLocaleLowerCase().includes(value.toLocaleLowerCase())
 
 	get id(): SpeciesIdentifier { return new SpeciesIdentifier(this.data.id) }
 	get name(): string { return this.data.name }
+	get aliases(): string[] { return this.data.aliases ?? [] }
 	get number(): number { return this.data.number }
 	get type(): PokemonType { return new PokemonType(this.data.type) }
 	get ac(): number { return this.data.ac }
@@ -89,6 +92,7 @@ export class PokemonSpecies extends DataClass<{
 		return new PokemonSpecies({
 			id: SpeciesIdentifier.fromSpeciesName(it.id).data,
 			name: it.name,
+			aliases: it.aliases,
 			number: it.number,
 			type: it.type,
 			size: it.size,
