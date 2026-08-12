@@ -2,7 +2,7 @@ import type { EntryGenerator, RequestHandler } from "./$types"
 import { respond, SRD_ENABLED } from "$lib/srd/util"
 import { createEntryGenerator, isEdition } from "$lib/srd/editions"
 import { error } from "@sveltejs/kit"
-import { MovesSrd } from "$lib/srd/moves"
+import { MovesSrd } from "$lib/srd/moves/server"
 
 export const prerender = SRD_ENABLED
 export const entries: EntryGenerator = createEntryGenerator()

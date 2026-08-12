@@ -173,6 +173,11 @@
 	interpolate-size: allow-keywords;
 }
 
+[data-edition-content="2018"] { display: none; }
+
+:root[data-edition="2018"] [data-edition-content="2018"] { display: contents; }
+:root[data-edition="2018"] [data-edition-content="2024"] { display: none; }
+
 .dark-mode {
 	--skin-bg: hsl(0, 0%, 25%);
     --skin-bg-text: hsl(0, 0%, 95%);

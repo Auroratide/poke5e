@@ -4,10 +4,10 @@ import type { Edition } from "../editions"
 import type { BiomesListJson } from "./schema"
 
 export class BiomesSrdClient {
-	constructor(readonly edition: Edition) {}
+	constructor(readonly edition: Edition, private readonly customFetch = fetch) {}
 
 	all(): Promise<BiomesListJson> {
-		return fetch(localizeUrl(resolve("/srd/v1/[edition]/biomes.json", { edition: this.edition })))
+		return this.customFetch(localizeUrl(resolve("/srd/v1/[edition]/biomes.json", { edition: this.edition })))
 			.then((res) => res.json())
 	}
 }

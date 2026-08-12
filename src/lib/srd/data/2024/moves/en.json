@@ -21527,22 +21527,18 @@
 			"duration": "1 minute, concentration",
 			"range": "self",
 			"description": [
-				"When you activate this move, a sword appears and dances around you, increasing your AC by 1. As a bonus action on a future turn, you may drop concentration to release this sword and roll a ranged attack at a target within 30 feet of you, dealing 2d6 + MOVE normal damage on a hit."
+				"You enter a frenetic dance to uplift your fighting spirit. For the duration, you gain a bonus equal to this move's MOVE modifer to your damage rolls made with melee attacks."
 			],
-			"higherLevels": "The damage dice for this move changes to 2d8 at level 5. At level 10, you can now create two swords for +2 to AC and two ranged attacks. At level 17, the damage dice for each sword increases to 3d8.",
 			"tm": {
 				"id": 75,
 				"cost": 8000
 			},
-			"attack": {
-				"scope": "ranged"
-			},
 			"damage": {
 				"dice": {
-					"1": "2d6",
-					"5": "2d8",
-					"10": "2d8",
-					"17": "3d8"
+					"1": "0",
+					"5": "0",
+					"10": "0",
+					"17": "0"
 				},
 				"modifier": "MOVE",
 				"type": [

@@ -1,6 +1,7 @@
 import { browser } from "$app/environment"
 import { writable } from "svelte/store"
 
+export const Editions = ["2018", "2024"] as const
 export type RulesVersion = "2018" | "2024"
 
 const RULES_VERSION_STORAGE_KEY = "rules-version"
@@ -16,5 +17,9 @@ export const rulesVersion = writable<RulesVersion>(getCurrentVersion() ?? "2024"
 if (browser) {
 	rulesVersion.subscribe((value) => {
 		localStorage.setItem(RULES_VERSION_STORAGE_KEY, value)
+	})
+
+	rulesVersion.subscribe((value) => {
+		document.documentElement.dataset.edition = value
 	})
 }

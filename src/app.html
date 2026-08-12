@@ -15,6 +15,18 @@
 		<link rel="stylesheet" href="%sveltekit.assets%/styles/global.css" />
 		<link rel="manifest" href="%sveltekit.assets%/poke5e.webmanifest" />
 
+		<script>
+			function setEdition() {
+				const v = localStorage.getItem("rules-version")
+				const beta = localStorage.getItem("feature-toggle::PreviewUpdatedMoves") != null
+				const edition = (v === "2018" || v === "2024") ? v : "2024"
+
+				document.documentElement.dataset.edition = beta ? edition : "2018"
+			}
+
+			setEdition()
+		</script>
+
 		%sveltekit.head%
 	</head>
 	<body>
