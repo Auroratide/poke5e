@@ -123,7 +123,7 @@
 		.page .side:empty {
 			display: none;
 		} .page:has(.side:empty) main {
-			max-inline-size: 37.5em;
+			max-inline-size: var(--container-half);
 		}
 	}
 
