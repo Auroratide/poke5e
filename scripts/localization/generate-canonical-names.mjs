@@ -41,8 +41,8 @@ for (const [filename, rootKey, entities, names] of categories) {
 		: entities === "abilities" ? "ability_id"
 		: `${entities.replace(/s$/, "")}_id`
 	const localized = await namesFor(entities, names, foreignKey)
-	const items = source.flatMap(({ id, name }) => localized.has(id)
-		? [{ id, name: localized.get(id), aliases: [name] }]
+	const items = source.flatMap(({ id }) => localized.has(id)
+		? [{ id, name: localized.get(id) }]
 		: [])
 	await writeFile(`static/data/${locale}/${filename}.json`, `${JSON.stringify({ [rootKey]: items }, null, "\t")}\n`)
 }

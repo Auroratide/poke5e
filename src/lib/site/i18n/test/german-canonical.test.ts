@@ -3,13 +3,18 @@ import pokemon from "../../../../../static/data/de/pokemon.json"
 import moves from "../../../../../static/data/de/moves.json"
 import abilities from "../../../../../static/data/de/abilities.json"
 import items from "../../../../../static/data/de/items.json"
+import englishPokemon from "../../../../../static/data/pokemon.json"
+import englishMoves from "../../../../../static/data/moves.json"
 import englishMessages from "../../../../../messages/en.json"
 import germanMessages from "../../../../../messages/de.json"
 import canonical from "../canonical/de.json"
+import { translateData } from "../translate-data"
 import { includesSearch } from "$lib/utils/string"
 
-const byId = (values: { id: string, name: string, aliases: string[] }[]) =>
+const byId = <T extends { id: string }>(values: T[]) =>
 	Object.fromEntries(values.map((value) => [value.id, value]))
+
+const searchable = (value: { name: string, aliases?: string[] }) => [value.name, ...(value.aliases ?? [])]
 
 const flatten = (value: Record<string, unknown>, prefix = ""): Record<string, string> =>
 	Object.fromEntries(Object.entries(value).flatMap(([key, child]) => {
@@ -32,13 +37,19 @@ test("uses official German canonical names from the generated PokéAPI overlays"
 	expect(canonical.natures.adamant).toBe("Hart")
 })
 
-test("localized names remain searchable by German and English names", () => {
-	const charizard = byId(pokemon.items).charizard
-	const thunderbolt = byId(moves.moves).thunderbolt
-	expect(includesSearch([charizard.name, ...charizard.aliases], "Glurak")).toBe(true)
-	expect(includesSearch([charizard.name, ...charizard.aliases], "charizard")).toBe(true)
-	expect(includesSearch([thunderbolt.name, ...thunderbolt.aliases], "Donnerblitz")).toBe(true)
-	expect(includesSearch([thunderbolt.name, ...thunderbolt.aliases], "thunderbolt")).toBe(true)
+test("localized names remain searchable by German and English names", async () => {
+	// The overlays carry German names only; the English name is retained as an alias when merging
+	const translatedPokemon = await translateData(englishPokemon.items, async () => pokemon.items, "de")
+	const translatedMoves = await translateData(englishMoves.moves, async () => moves.moves, "de")
+
+	const charizard = byId(translatedPokemon).charizard
+	const thunderbolt = byId(translatedMoves).thunderbolt
+	expect(charizard.name).toBe("Glurak")
+	expect(thunderbolt.name).toBe("Donnerblitz")
+	expect(includesSearch(searchable(charizard), "Glurak")).toBe(true)
+	expect(includesSearch(searchable(charizard), "charizard")).toBe(true)
+	expect(includesSearch(searchable(thunderbolt), "Donnerblitz")).toBe(true)
+	expect(includesSearch(searchable(thunderbolt), "thunderbolt")).toBe(true)
 })
 
 test("German messages match the English catalog and interpolation variables", () => {

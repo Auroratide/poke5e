@@ -2,2096 +2,1199 @@
 	"items": [
 		{
 			"id": "adaptability",
-			"name": "Anpassung",
-			"aliases": [
-				"Adaptability"
-			]
+			"name": "Anpassung"
 		},
 		{
 			"id": "aftermath",
-			"name": "Finalschlag",
-			"aliases": [
-				"Aftermath"
-			]
+			"name": "Finalschlag"
 		},
 		{
 			"id": "air-lock",
-			"name": "Klimaschutz",
-			"aliases": [
-				"Air Lock"
-			]
+			"name": "Klimaschutz"
 		},
 		{
 			"id": "analytic",
-			"name": "Analyse",
-			"aliases": [
-				"Analytic"
-			]
+			"name": "Analyse"
 		},
 		{
 			"id": "anger-point",
-			"name": "Kurzschluss",
-			"aliases": [
-				"Anger Point"
-			]
+			"name": "Kurzschluss"
 		},
 		{
 			"id": "anger-shell",
-			"name": "Wutpanzer",
-			"aliases": [
-				"Anger Shell"
-			]
+			"name": "Wutpanzer"
 		},
 		{
 			"id": "anticipation",
-			"name": "Vorahnung",
-			"aliases": [
-				"Anticipation"
-			]
+			"name": "Vorahnung"
 		},
 		{
 			"id": "arena-trap",
-			"name": "Ausweglos",
-			"aliases": [
-				"Arena Trap"
-			]
+			"name": "Ausweglos"
 		},
 		{
 			"id": "armor-tail",
-			"name": "Schweifrüstung",
-			"aliases": [
-				"Armor Tail"
-			]
+			"name": "Schweifrüstung"
 		},
 		{
 			"id": "aroma-veil",
-			"name": "Dufthülle",
-			"aliases": [
-				"Aroma Veil"
-			]
+			"name": "Dufthülle"
 		},
 		{
 			"id": "aura-break",
-			"name": "Aura-Umkehr",
-			"aliases": [
-				"Aura Break"
-			]
+			"name": "Aura-Umkehr"
 		},
 		{
 			"id": "bad-dreams",
-			"name": "Alptraum",
-			"aliases": [
-				"Bad Dreams"
-			]
+			"name": "Alptraum"
 		},
 		{
 			"id": "ball-fetch",
-			"name": "Apport",
-			"aliases": [
-				"Ball Fetch"
-			]
+			"name": "Apport"
 		},
 		{
 			"id": "battery",
-			"name": "Batterie",
-			"aliases": [
-				"Battery"
-			]
+			"name": "Batterie"
 		},
 		{
 			"id": "battle-armor",
-			"name": "Kampfpanzer",
-			"aliases": [
-				"Battle Armor"
-			]
+			"name": "Kampfpanzer"
 		},
 		{
 			"id": "beads-of-ruin",
-			"name": "Unheilsjuwelen",
-			"aliases": [
-				"Beads of Ruin"
-			]
+			"name": "Unheilsjuwelen"
 		},
 		{
 			"id": "beast-boost",
-			"name": "Bestien-Boost",
-			"aliases": [
-				"Beast Boost"
-			]
+			"name": "Bestien-Boost"
 		},
 		{
 			"id": "berserk",
-			"name": "Wutausbruch",
-			"aliases": [
-				"Berserk"
-			]
+			"name": "Wutausbruch"
 		},
 		{
 			"id": "big-pecks",
-			"name": "Brustbieter",
-			"aliases": [
-				"Big Pecks"
-			]
+			"name": "Brustbieter"
 		},
 		{
 			"id": "blaze",
-			"name": "Großbrand",
-			"aliases": [
-				"Blaze"
-			]
+			"name": "Großbrand"
 		},
 		{
 			"id": "bulletproof",
-			"name": "Kugelsicher",
-			"aliases": [
-				"Bulletproof"
-			]
+			"name": "Kugelsicher"
 		},
 		{
 			"id": "cheek-pouch",
-			"name": "Backentaschen",
-			"aliases": [
-				"Cheek Pouch"
-			]
+			"name": "Backentaschen"
 		},
 		{
 			"id": "chilling-neigh",
-			"name": "Helles Wiehern",
-			"aliases": [
-				"Chilling Neigh"
-			]
+			"name": "Helles Wiehern"
 		},
 		{
 			"id": "chlorophyll",
-			"name": "Chlorophyll",
-			"aliases": [
-				"Chlorophyll"
-			]
+			"name": "Chlorophyll"
 		},
 		{
 			"id": "clear-body",
-			"name": "Neutraltorso",
-			"aliases": [
-				"Clear Body"
-			]
+			"name": "Neutraltorso"
 		},
 		{
 			"id": "cloud-nine",
-			"name": "Wolke Sieben",
-			"aliases": [
-				"Cloud Nine"
-			]
+			"name": "Wolke Sieben"
 		},
 		{
 			"id": "color-change",
-			"name": "Farbwechsel",
-			"aliases": [
-				"Color Change"
-			]
+			"name": "Farbwechsel"
 		},
 		{
 			"id": "comatose",
-			"name": "Dauerschlaf",
-			"aliases": [
-				"Comatose"
-			]
+			"name": "Dauerschlaf"
 		},
 		{
 			"id": "commander",
-			"name": "Kommandant",
-			"aliases": [
-				"Commander"
-			]
+			"name": "Kommandant"
 		},
 		{
 			"id": "competitive",
-			"name": "Unbeugsamkeit",
-			"aliases": [
-				"Competitive"
-			]
+			"name": "Unbeugsamkeit"
 		},
 		{
 			"id": "compound-eyes",
-			"name": "Facettenauge",
-			"aliases": [
-				"Compound Eyes"
-			]
+			"name": "Facettenauge"
 		},
 		{
 			"id": "contrary",
-			"name": "Umkehrung",
-			"aliases": [
-				"Contrary"
-			]
+			"name": "Umkehrung"
 		},
 		{
 			"id": "corrosion",
-			"name": "Korrosion",
-			"aliases": [
-				"Corrosion"
-			]
+			"name": "Korrosion"
 		},
 		{
 			"id": "costar",
-			"name": "Synchronauftritt",
-			"aliases": [
-				"Costar"
-			]
+			"name": "Synchronauftritt"
 		},
 		{
 			"id": "cotton-down",
-			"name": "Wollflaum",
-			"aliases": [
-				"Cotton Down"
-			]
+			"name": "Wollflaum"
 		},
 		{
 			"id": "cud-chew",
-			"name": "Wiederkäuer",
-			"aliases": [
-				"Cud Chew"
-			]
+			"name": "Wiederkäuer"
 		},
 		{
 			"id": "curious-medicine",
-			"name": "Kuriose Arznei",
-			"aliases": [
-				"Curious Medicine"
-			]
+			"name": "Kuriose Arznei"
 		},
 		{
 			"id": "cursed-body",
-			"name": "Tastfluch",
-			"aliases": [
-				"Cursed Body"
-			]
+			"name": "Tastfluch"
 		},
 		{
 			"id": "cute-charm",
-			"name": "Charmebolzen",
-			"aliases": [
-				"Cute Charm"
-			]
+			"name": "Charmebolzen"
 		},
 		{
 			"id": "damp",
-			"name": "Feuchtigkeit",
-			"aliases": [
-				"Damp"
-			]
+			"name": "Feuchtigkeit"
 		},
 		{
 			"id": "dancer",
-			"name": "Tänzer",
-			"aliases": [
-				"Dancer"
-			]
+			"name": "Tänzer"
 		},
 		{
 			"id": "dark-aura",
-			"name": "Dunkelaura",
-			"aliases": [
-				"Dark Aura"
-			]
+			"name": "Dunkelaura"
 		},
 		{
 			"id": "dauntless-shield",
-			"name": "Wackerer Schild",
-			"aliases": [
-				"Dauntless Shield"
-			]
+			"name": "Wackerer Schild"
 		},
 		{
 			"id": "dazzling",
-			"name": "Buntkörper",
-			"aliases": [
-				"Dazzling"
-			]
+			"name": "Buntkörper"
 		},
 		{
 			"id": "defeatist",
-			"name": "Schwächling",
-			"aliases": [
-				"Defeatist"
-			]
+			"name": "Schwächling"
 		},
 		{
 			"id": "defiant",
-			"name": "Siegeswille",
-			"aliases": [
-				"Defiant"
-			]
+			"name": "Siegeswille"
 		},
 		{
 			"id": "desolate-land",
-			"name": "Endland",
-			"aliases": [
-				"Desolate Land"
-			]
+			"name": "Endland"
 		},
 		{
 			"id": "disguise",
-			"name": "Kostümspuk",
-			"aliases": [
-				"Disguise"
-			]
+			"name": "Kostümspuk"
 		},
 		{
 			"id": "download",
-			"name": "Download",
-			"aliases": [
-				"Download"
-			]
+			"name": "Download"
 		},
 		{
 			"id": "dragons-maw",
-			"name": "Drachenkiefer",
-			"aliases": [
-				"Dragon's Maw"
-			]
+			"name": "Drachenkiefer"
 		},
 		{
 			"id": "drizzle",
-			"name": "Niesel",
-			"aliases": [
-				"Drizzle"
-			]
+			"name": "Niesel"
 		},
 		{
 			"id": "drought",
-			"name": "Dürre",
-			"aliases": [
-				"Drought"
-			]
+			"name": "Dürre"
 		},
 		{
 			"id": "dry-skin",
-			"name": "Trockenheit",
-			"aliases": [
-				"Dry Skin"
-			]
+			"name": "Trockenheit"
 		},
 		{
 			"id": "early-bird",
-			"name": "Frühwecker",
-			"aliases": [
-				"Early Bird"
-			]
+			"name": "Frühwecker"
 		},
 		{
 			"id": "earth-eater",
-			"name": "Bodenschmaus",
-			"aliases": [
-				"Earth Eater"
-			]
+			"name": "Bodenschmaus"
 		},
 		{
 			"id": "effect-spore",
-			"name": "Sporenwirt",
-			"aliases": [
-				"Effect Spore"
-			]
+			"name": "Sporenwirt"
 		},
 		{
 			"id": "electric-surge",
-			"name": "Elektro-Erzeuger",
-			"aliases": [
-				"Electric Surge"
-			]
+			"name": "Elektro-Erzeuger"
 		},
 		{
 			"id": "electromorphosis",
-			"name": "Dynamo",
-			"aliases": [
-				"Electromorphosis"
-			]
+			"name": "Dynamo"
 		},
 		{
 			"id": "emergency-exit",
-			"name": "Rückzug",
-			"aliases": [
-				"Emergency Exit"
-			]
+			"name": "Rückzug"
 		},
 		{
 			"id": "fairy-aura",
-			"name": "Feenaura",
-			"aliases": [
-				"Fairy Aura"
-			]
+			"name": "Feenaura"
 		},
 		{
 			"id": "filter",
-			"name": "Filter",
-			"aliases": [
-				"Filter"
-			]
+			"name": "Filter"
 		},
 		{
 			"id": "flame-body",
-			"name": "Flammkörper",
-			"aliases": [
-				"Flame Body"
-			]
+			"name": "Flammkörper"
 		},
 		{
 			"id": "flare-boost",
-			"name": "Hitzewahn",
-			"aliases": [
-				"Flare Boost"
-			]
+			"name": "Hitzewahn"
 		},
 		{
 			"id": "flash-fire",
-			"name": "Feuerfänger",
-			"aliases": [
-				"Flash Fire"
-			]
+			"name": "Feuerfänger"
 		},
 		{
 			"id": "flower-gift",
-			"name": "Pflanzengabe",
-			"aliases": [
-				"Flower Gift"
-			]
+			"name": "Pflanzengabe"
 		},
 		{
 			"id": "flower-veil",
-			"name": "Blütenhülle",
-			"aliases": [
-				"Flower Veil"
-			]
+			"name": "Blütenhülle"
 		},
 		{
 			"id": "fluffy",
-			"name": "Flauschigkeit",
-			"aliases": [
-				"Fluffy"
-			]
+			"name": "Flauschigkeit"
 		},
 		{
 			"id": "forecast",
-			"name": "Prognose",
-			"aliases": [
-				"Forecast"
-			]
+			"name": "Prognose"
 		},
 		{
 			"id": "forewarn",
-			"name": "Vorwarnung",
-			"aliases": [
-				"Forewarn"
-			]
+			"name": "Vorwarnung"
 		},
 		{
 			"id": "friend-guard",
-			"name": "Freundeshut",
-			"aliases": [
-				"Friend Guard"
-			]
+			"name": "Freundeshut"
 		},
 		{
 			"id": "frisk",
-			"name": "Schnüffler",
-			"aliases": [
-				"Frisk"
-			]
+			"name": "Schnüffler"
 		},
 		{
 			"id": "full-metal-body",
-			"name": "Metallprotektor",
-			"aliases": [
-				"Full Metal Body"
-			]
+			"name": "Metallprotektor"
 		},
 		{
 			"id": "fur-coat",
-			"name": "Fellkleid",
-			"aliases": [
-				"Fur Coat"
-			]
+			"name": "Fellkleid"
 		},
 		{
 			"id": "gale-wings",
-			"name": "Orkanschwingen",
-			"aliases": [
-				"Gale Wings"
-			]
+			"name": "Orkanschwingen"
 		},
 		{
 			"id": "galvanize",
-			"name": "Elektrohaut",
-			"aliases": [
-				"Galvanize"
-			]
+			"name": "Elektrohaut"
 		},
 		{
 			"id": "gluttony",
-			"name": "Völlerei",
-			"aliases": [
-				"Gluttony"
-			]
+			"name": "Völlerei"
 		},
 		{
 			"id": "good-as-gold",
-			"name": "Goldkörper",
-			"aliases": [
-				"Good as Gold"
-			]
+			"name": "Goldkörper"
 		},
 		{
 			"id": "gooey",
-			"name": "Viskosität",
-			"aliases": [
-				"Gooey"
-			]
+			"name": "Viskosität"
 		},
 		{
 			"id": "gorilla-tactics",
-			"name": "Affenfokus",
-			"aliases": [
-				"Gorilla Tactics"
-			]
+			"name": "Affenfokus"
 		},
 		{
 			"id": "grass-pelt",
-			"name": "Pflanzenpelz",
-			"aliases": [
-				"Grass Pelt"
-			]
+			"name": "Pflanzenpelz"
 		},
 		{
 			"id": "grassy-surge",
-			"name": "Gras-Erzeuger",
-			"aliases": [
-				"Grassy Surge"
-			]
+			"name": "Gras-Erzeuger"
 		},
 		{
 			"id": "grim-neigh",
-			"name": "Dunkles Wiehern",
-			"aliases": [
-				"Grim Neigh"
-			]
+			"name": "Dunkles Wiehern"
 		},
 		{
 			"id": "guard-dog",
-			"name": "Wachhund",
-			"aliases": [
-				"Guard Dog"
-			]
+			"name": "Wachhund"
 		},
 		{
 			"id": "gulp-missile",
-			"name": "Würggeschoss",
-			"aliases": [
-				"Gulp Missile"
-			]
+			"name": "Würggeschoss"
 		},
 		{
 			"id": "guts",
-			"name": "Adrenalin",
-			"aliases": [
-				"Guts"
-			]
+			"name": "Adrenalin"
 		},
 		{
 			"id": "hadron-engine",
-			"name": "Hadronen-Motor",
-			"aliases": [
-				"Hadron Engine"
-			]
+			"name": "Hadronen-Motor"
 		},
 		{
 			"id": "harvest",
-			"name": "Reiche Ernte",
-			"aliases": [
-				"Harvest"
-			]
+			"name": "Reiche Ernte"
 		},
 		{
 			"id": "healer",
-			"name": "Heilherz",
-			"aliases": [
-				"Healer"
-			]
+			"name": "Heilherz"
 		},
 		{
 			"id": "heatproof",
-			"name": "Hitzeschutz",
-			"aliases": [
-				"Heatproof"
-			]
+			"name": "Hitzeschutz"
 		},
 		{
 			"id": "heavy-metal",
-			"name": "Schwermetall",
-			"aliases": [
-				"Heavy Metal"
-			]
+			"name": "Schwermetall"
 		},
 		{
 			"id": "honey-gather",
-			"name": "Honigmaul",
-			"aliases": [
-				"Honey Gather"
-			]
+			"name": "Honigmaul"
 		},
 		{
 			"id": "hospitality",
-			"name": "Gastlichkeit",
-			"aliases": [
-				"Hospitality"
-			]
+			"name": "Gastlichkeit"
 		},
 		{
 			"id": "huge-power",
-			"name": "Kraftkoloss",
-			"aliases": [
-				"Huge Power"
-			]
+			"name": "Kraftkoloss"
 		},
 		{
 			"id": "hunger-switch",
-			"name": "Heißhunger",
-			"aliases": [
-				"Hunger Switch"
-			]
+			"name": "Heißhunger"
 		},
 		{
 			"id": "hustle",
-			"name": "Übereifer",
-			"aliases": [
-				"Hustle"
-			]
+			"name": "Übereifer"
 		},
 		{
 			"id": "hydration",
-			"name": "Hydration",
-			"aliases": [
-				"Hydration"
-			]
+			"name": "Hydration"
 		},
 		{
 			"id": "hyper-cutter",
-			"name": "Scherenmacht",
-			"aliases": [
-				"Hyper Cutter"
-			]
+			"name": "Scherenmacht"
 		},
 		{
 			"id": "ice-body",
-			"name": "Eishaut",
-			"aliases": [
-				"Ice Body"
-			]
+			"name": "Eishaut"
 		},
 		{
 			"id": "ice-face",
-			"name": "Tiefkühlkopf",
-			"aliases": [
-				"Ice Face"
-			]
+			"name": "Tiefkühlkopf"
 		},
 		{
 			"id": "ice-scales",
-			"name": "Eisflügelstaub",
-			"aliases": [
-				"Ice Scales"
-			]
+			"name": "Eisflügelstaub"
 		},
 		{
 			"id": "illuminate",
-			"name": "Erleuchtung",
-			"aliases": [
-				"Illuminate"
-			]
+			"name": "Erleuchtung"
 		},
 		{
 			"id": "illusion",
-			"name": "Trugbild",
-			"aliases": [
-				"Illusion"
-			]
+			"name": "Trugbild"
 		},
 		{
 			"id": "immunity",
-			"name": "Immunität",
-			"aliases": [
-				"Immunity"
-			]
+			"name": "Immunität"
 		},
 		{
 			"id": "imposter",
-			"name": "Doppelgänger",
-			"aliases": [
-				"Imposter"
-			]
+			"name": "Doppelgänger"
 		},
 		{
 			"id": "infiltrator",
-			"name": "Schwebedurch",
-			"aliases": [
-				"Infiltrator"
-			]
+			"name": "Schwebedurch"
 		},
 		{
 			"id": "innards-out",
-			"name": "Magenkrempler",
-			"aliases": [
-				"Innards Out"
-			]
+			"name": "Magenkrempler"
 		},
 		{
 			"id": "inner-focus",
-			"name": "Konzentrator",
-			"aliases": [
-				"Inner Focus"
-			]
+			"name": "Konzentrator"
 		},
 		{
 			"id": "insomnia",
-			"name": "Insomnia",
-			"aliases": [
-				"Insomnia"
-			]
+			"name": "Insomnia"
 		},
 		{
 			"id": "intimidate",
-			"name": "Bedroher",
-			"aliases": [
-				"Intimidate"
-			]
+			"name": "Bedroher"
 		},
 		{
 			"id": "intrepid-sword",
-			"name": "Kühnes Schwert",
-			"aliases": [
-				"Intrepid Sword"
-			]
+			"name": "Kühnes Schwert"
 		},
 		{
 			"id": "iron-barbs",
-			"name": "Eisenstachel",
-			"aliases": [
-				"Iron Barbs"
-			]
+			"name": "Eisenstachel"
 		},
 		{
 			"id": "iron-fist",
-			"name": "Eisenfaust",
-			"aliases": [
-				"Iron Fist"
-			]
+			"name": "Eisenfaust"
 		},
 		{
 			"id": "justified",
-			"name": "Redlichkeit",
-			"aliases": [
-				"Justified"
-			]
+			"name": "Redlichkeit"
 		},
 		{
 			"id": "keen-eye",
-			"name": "Adlerauge",
-			"aliases": [
-				"Keen Eye"
-			]
+			"name": "Adlerauge"
 		},
 		{
 			"id": "klutz",
-			"name": "Tollpatsch",
-			"aliases": [
-				"Klutz"
-			]
+			"name": "Tollpatsch"
 		},
 		{
 			"id": "leaf-guard",
-			"name": "Floraschild",
-			"aliases": [
-				"Leaf Guard"
-			]
+			"name": "Floraschild"
 		},
 		{
 			"id": "levitate",
-			"name": "Schwebe",
-			"aliases": [
-				"Levitate"
-			]
+			"name": "Schwebe"
 		},
 		{
 			"id": "libero",
-			"name": "Libero",
-			"aliases": [
-				"Libero"
-			]
+			"name": "Libero"
 		},
 		{
 			"id": "light-metal",
-			"name": "Leichtmetall",
-			"aliases": [
-				"Light Metal"
-			]
+			"name": "Leichtmetall"
 		},
 		{
 			"id": "lightning-rod",
-			"name": "Blitzfänger",
-			"aliases": [
-				"Lightning Rod"
-			]
+			"name": "Blitzfänger"
 		},
 		{
 			"id": "limber",
-			"name": "Flexibilität",
-			"aliases": [
-				"Limber"
-			]
+			"name": "Flexibilität"
 		},
 		{
 			"id": "lingering-aroma",
-			"name": "Duftschwade",
-			"aliases": [
-				"Lingering Aroma"
-			]
+			"name": "Duftschwade"
 		},
 		{
 			"id": "liquid-ooze",
-			"name": "Kloakensoße",
-			"aliases": [
-				"Liquid Ooze"
-			]
+			"name": "Kloakensoße"
 		},
 		{
 			"id": "liquid-voice",
-			"name": "Plätscherstimme",
-			"aliases": [
-				"Liquid Voice"
-			]
+			"name": "Plätscherstimme"
 		},
 		{
 			"id": "long-reach",
-			"name": "Langstrecke",
-			"aliases": [
-				"Long Reach"
-			]
+			"name": "Langstrecke"
 		},
 		{
 			"id": "magic-bounce",
-			"name": "Magiespiegel",
-			"aliases": [
-				"Magic Bounce"
-			]
+			"name": "Magiespiegel"
 		},
 		{
 			"id": "magic-guard",
-			"name": "Magieschild",
-			"aliases": [
-				"Magic Guard"
-			]
+			"name": "Magieschild"
 		},
 		{
 			"id": "magician",
-			"name": "Zauberer",
-			"aliases": [
-				"Magician"
-			]
+			"name": "Zauberer"
 		},
 		{
 			"id": "magma-armor",
-			"name": "Magmapanzer",
-			"aliases": [
-				"Magma Armor"
-			]
+			"name": "Magmapanzer"
 		},
 		{
 			"id": "magnet-pull",
-			"name": "Magnetfalle",
-			"aliases": [
-				"Magnet Pull"
-			]
+			"name": "Magnetfalle"
 		},
 		{
 			"id": "marvel-scale",
-			"name": "Notschutz",
-			"aliases": [
-				"Marvel Scale"
-			]
+			"name": "Notschutz"
 		},
 		{
 			"id": "mega-launcher",
-			"name": "Megawumme",
-			"aliases": [
-				"Mega Launcher"
-			]
+			"name": "Megawumme"
 		},
 		{
 			"id": "merciless",
-			"name": "Quälerei",
-			"aliases": [
-				"Merciless"
-			]
+			"name": "Quälerei"
 		},
 		{
 			"id": "mimicry",
-			"name": "Mimese",
-			"aliases": [
-				"Mimicry"
-			]
+			"name": "Mimese"
 		},
 		{
 			"id": "minds-eye",
-			"name": "Geistiges Auge",
-			"aliases": [
-				"Mind's Eye"
-			]
+			"name": "Geistiges Auge"
 		},
 		{
 			"id": "minus",
-			"name": "Minus",
-			"aliases": [
-				"Minus"
-			]
+			"name": "Minus"
 		},
 		{
 			"id": "mirror-armor",
-			"name": "Spiegelrüstung",
-			"aliases": [
-				"Mirror Armor"
-			]
+			"name": "Spiegelrüstung"
 		},
 		{
 			"id": "misty-surge",
-			"name": "Nebel-Erzeuger",
-			"aliases": [
-				"Misty Surge"
-			]
+			"name": "Nebel-Erzeuger"
 		},
 		{
 			"id": "mold-breaker",
-			"name": "Überbrückung",
-			"aliases": [
-				"Mold Breaker"
-			]
+			"name": "Überbrückung"
 		},
 		{
 			"id": "moody",
-			"name": "Gefühlswippe",
-			"aliases": [
-				"Moody"
-			]
+			"name": "Gefühlswippe"
 		},
 		{
 			"id": "motor-drive",
-			"name": "Starthilfe",
-			"aliases": [
-				"Motor Drive"
-			]
+			"name": "Starthilfe"
 		},
 		{
 			"id": "moxie",
-			"name": "Hochmut",
-			"aliases": [
-				"Moxie"
-			]
+			"name": "Hochmut"
 		},
 		{
 			"id": "multiscale",
-			"name": "Multischuppe",
-			"aliases": [
-				"Multiscale"
-			]
+			"name": "Multischuppe"
 		},
 		{
 			"id": "multitype",
-			"name": "Variabilität",
-			"aliases": [
-				"Multitype"
-			]
+			"name": "Variabilität"
 		},
 		{
 			"id": "mummy",
-			"name": "Mumie",
-			"aliases": [
-				"Mummy"
-			]
+			"name": "Mumie"
 		},
 		{
 			"id": "mycelium-might",
-			"name": "Myzelienkraft",
-			"aliases": [
-				"Mycelium Might"
-			]
+			"name": "Myzelienkraft"
 		},
 		{
 			"id": "natural-cure",
-			"name": "Innere Kraft",
-			"aliases": [
-				"Natural Cure"
-			]
+			"name": "Innere Kraft"
 		},
 		{
 			"id": "neuroforce",
-			"name": "Zerebralmacht",
-			"aliases": [
-				"Neuroforce"
-			]
+			"name": "Zerebralmacht"
 		},
 		{
 			"id": "neutralizing-gas",
-			"name": "Reaktionsgas",
-			"aliases": [
-				"Neutralizing Gas"
-			]
+			"name": "Reaktionsgas"
 		},
 		{
 			"id": "no-guard",
-			"name": "Schildlos",
-			"aliases": [
-				"No Guard"
-			]
+			"name": "Schildlos"
 		},
 		{
 			"id": "normalize",
-			"name": "Regulierung",
-			"aliases": [
-				"Normalize"
-			]
+			"name": "Regulierung"
 		},
 		{
 			"id": "oblivious",
-			"name": "Dösigkeit",
-			"aliases": [
-				"Oblivious"
-			]
+			"name": "Dösigkeit"
 		},
 		{
 			"id": "opportunist",
-			"name": "Profiteur",
-			"aliases": [
-				"Opportunist"
-			]
+			"name": "Profiteur"
 		},
 		{
 			"id": "orichalcum-pulse",
-			"name": "Orichalkum-Puls",
-			"aliases": [
-				"Orichalcum Pulse"
-			]
+			"name": "Orichalkum-Puls"
 		},
 		{
 			"id": "overcoat",
-			"name": "Partikelschutz",
-			"aliases": [
-				"Overcoat"
-			]
+			"name": "Partikelschutz"
 		},
 		{
 			"id": "overgrow",
-			"name": "Notdünger",
-			"aliases": [
-				"Overgrow"
-			]
+			"name": "Notdünger"
 		},
 		{
 			"id": "own-tempo",
-			"name": "Tempomacher",
-			"aliases": [
-				"Own Tempo"
-			]
+			"name": "Tempomacher"
 		},
 		{
 			"id": "pastel-veil",
-			"name": "Pastellhülle",
-			"aliases": [
-				"Pastel Veil"
-			]
+			"name": "Pastellhülle"
 		},
 		{
 			"id": "perish-body",
-			"name": "Unheilskörper",
-			"aliases": [
-				"Perish Body"
-			]
+			"name": "Unheilskörper"
 		},
 		{
 			"id": "pickpocket",
-			"name": "Langfinger",
-			"aliases": [
-				"Pickpocket"
-			]
+			"name": "Langfinger"
 		},
 		{
 			"id": "pickup",
-			"name": "Mitnahme",
-			"aliases": [
-				"Pickup"
-			]
+			"name": "Mitnahme"
 		},
 		{
 			"id": "pixilate",
-			"name": "Feenschicht",
-			"aliases": [
-				"Pixilate"
-			]
+			"name": "Feenschicht"
 		},
 		{
 			"id": "plus",
-			"name": "Plus",
-			"aliases": [
-				"Plus"
-			]
+			"name": "Plus"
 		},
 		{
 			"id": "poison-heal",
-			"name": "Aufheber",
-			"aliases": [
-				"Poison Heal"
-			]
+			"name": "Aufheber"
 		},
 		{
 			"id": "poison-point",
-			"name": "Giftdorn",
-			"aliases": [
-				"Poison Point"
-			]
+			"name": "Giftdorn"
 		},
 		{
 			"id": "poison-puppeteer",
-			"name": "Giftpuppenspiel",
-			"aliases": [
-				"Poison Puppeteer"
-			]
+			"name": "Giftpuppenspiel"
 		},
 		{
 			"id": "poison-touch",
-			"name": "Giftgriff",
-			"aliases": [
-				"Poison Touch"
-			]
+			"name": "Giftgriff"
 		},
 		{
 			"id": "power-of-alchemy",
-			"name": "Chemiekraft",
-			"aliases": [
-				"Power of Alchemy"
-			]
+			"name": "Chemiekraft"
 		},
 		{
 			"id": "power-spot",
-			"name": "Kraftquelle",
-			"aliases": [
-				"Power Spot"
-			]
+			"name": "Kraftquelle"
 		},
 		{
 			"id": "prankster",
-			"name": "Strolch",
-			"aliases": [
-				"Prankster"
-			]
+			"name": "Strolch"
 		},
 		{
 			"id": "pressure",
-			"name": "Erzwinger",
-			"aliases": [
-				"Pressure"
-			]
+			"name": "Erzwinger"
 		},
 		{
 			"id": "primordial-sea",
-			"name": "Urmeer",
-			"aliases": [
-				"Primordial Sea"
-			]
+			"name": "Urmeer"
 		},
 		{
 			"id": "prism-armor",
-			"name": "Prismarüstung",
-			"aliases": [
-				"Prism Armor"
-			]
+			"name": "Prismarüstung"
 		},
 		{
 			"id": "propeller-tail",
-			"name": "Schraubflosse",
-			"aliases": [
-				"Propeller Tail"
-			]
+			"name": "Schraubflosse"
 		},
 		{
 			"id": "protean",
-			"name": "Wandlungskunst",
-			"aliases": [
-				"Protean"
-			]
+			"name": "Wandlungskunst"
 		},
 		{
 			"id": "protosynthesis",
-			"name": "Paläosynthese",
-			"aliases": [
-				"Protosynthesis"
-			]
+			"name": "Paläosynthese"
 		},
 		{
 			"id": "psychic-surge",
-			"name": "Psycho-Erzeuger",
-			"aliases": [
-				"Psychic Surge"
-			]
+			"name": "Psycho-Erzeuger"
 		},
 		{
 			"id": "punk-rock",
-			"name": "Punk Rock",
-			"aliases": [
-				"Punk Rock"
-			]
+			"name": "Punk Rock"
 		},
 		{
 			"id": "pure-power",
-			"name": "Mentalkraft",
-			"aliases": [
-				"Pure Power"
-			]
+			"name": "Mentalkraft"
 		},
 		{
 			"id": "purifying-salt",
-			"name": "Läutersalz",
-			"aliases": [
-				"Purifying Salt"
-			]
+			"name": "Läutersalz"
 		},
 		{
 			"id": "quark-drive",
-			"name": "Quantenantrieb",
-			"aliases": [
-				"Quark Drive"
-			]
+			"name": "Quantenantrieb"
 		},
 		{
 			"id": "queenly-majesty",
-			"name": "Majestät",
-			"aliases": [
-				"Queenly Majesty"
-			]
+			"name": "Majestät"
 		},
 		{
 			"id": "quick-draw",
-			"name": "Schnellschuss",
-			"aliases": [
-				"Quick Draw"
-			]
+			"name": "Schnellschuss"
 		},
 		{
 			"id": "quick-feet",
-			"name": "Rasanz",
-			"aliases": [
-				"Quick Feet"
-			]
+			"name": "Rasanz"
 		},
 		{
 			"id": "rain-dish",
-			"name": "Regengenuss",
-			"aliases": [
-				"Rain Dish"
-			]
+			"name": "Regengenuss"
 		},
 		{
 			"id": "rattled",
-			"name": "Hasenfuß",
-			"aliases": [
-				"Rattled"
-			]
+			"name": "Hasenfuß"
 		},
 		{
 			"id": "receiver",
-			"name": "Receiver",
-			"aliases": [
-				"Receiver"
-			]
+			"name": "Receiver"
 		},
 		{
 			"id": "reckless",
-			"name": "Achtlos",
-			"aliases": [
-				"Reckless"
-			]
+			"name": "Achtlos"
 		},
 		{
 			"id": "refrigerate",
-			"name": "Frostschicht",
-			"aliases": [
-				"Refrigerate"
-			]
+			"name": "Frostschicht"
 		},
 		{
 			"id": "regenerator",
-			"name": "Belebekraft",
-			"aliases": [
-				"Regenerator"
-			]
+			"name": "Belebekraft"
 		},
 		{
 			"id": "ripen",
-			"name": "Heranreifen",
-			"aliases": [
-				"Ripen"
-			]
+			"name": "Heranreifen"
 		},
 		{
 			"id": "rivalry",
-			"name": "Rivalität",
-			"aliases": [
-				"Rivalry"
-			]
+			"name": "Rivalität"
 		},
 		{
 			"id": "rks-system",
-			"name": "Alpha-System",
-			"aliases": [
-				"RKS System"
-			]
+			"name": "Alpha-System"
 		},
 		{
 			"id": "rock-head",
-			"name": "Steinhaupt",
-			"aliases": [
-				"Rock Head"
-			]
+			"name": "Steinhaupt"
 		},
 		{
 			"id": "rocky-payload",
-			"name": "Steinträger",
-			"aliases": [
-				"Rocky Payload"
-			]
+			"name": "Steinträger"
 		},
 		{
 			"id": "rough-skin",
-			"name": "Rauhaut",
-			"aliases": [
-				"Rough Skin"
-			]
+			"name": "Rauhaut"
 		},
 		{
 			"id": "run-away",
-			"name": "Angsthase",
-			"aliases": [
-				"Run Away"
-			]
+			"name": "Angsthase"
 		},
 		{
 			"id": "sand-force",
-			"name": "Sandgewalt",
-			"aliases": [
-				"Sand Force"
-			]
+			"name": "Sandgewalt"
 		},
 		{
 			"id": "sand-rush",
-			"name": "Sandscharrer",
-			"aliases": [
-				"Sand Rush"
-			]
+			"name": "Sandscharrer"
 		},
 		{
 			"id": "sand-spit",
-			"name": "Sandspeier",
-			"aliases": [
-				"Sand Spit"
-			]
+			"name": "Sandspeier"
 		},
 		{
 			"id": "sand-stream",
-			"name": "Sandsturm",
-			"aliases": [
-				"Sand Stream"
-			]
+			"name": "Sandsturm"
 		},
 		{
 			"id": "sand-veil",
-			"name": "Sandschleier",
-			"aliases": [
-				"Sand Veil"
-			]
+			"name": "Sandschleier"
 		},
 		{
 			"id": "sap-sipper",
-			"name": "Vegetarier",
-			"aliases": [
-				"Sap Sipper"
-			]
+			"name": "Vegetarier"
 		},
 		{
 			"id": "schooling",
-			"name": "Fischschwarm",
-			"aliases": [
-				"Schooling"
-			]
+			"name": "Fischschwarm"
 		},
 		{
 			"id": "scrappy",
-			"name": "Rauflust",
-			"aliases": [
-				"Scrappy"
-			]
+			"name": "Rauflust"
 		},
 		{
 			"id": "screen-cleaner",
-			"name": "Hemmungslos",
-			"aliases": [
-				"Screen Cleaner"
-			]
+			"name": "Hemmungslos"
 		},
 		{
 			"id": "seed-sower",
-			"name": "Streusaat",
-			"aliases": [
-				"Seed Sower"
-			]
+			"name": "Streusaat"
 		},
 		{
 			"id": "serene-grace",
-			"name": "Edelmut",
-			"aliases": [
-				"Serene Grace"
-			]
+			"name": "Edelmut"
 		},
 		{
 			"id": "shadow-shield",
-			"name": "Phantomschutz",
-			"aliases": [
-				"Shadow Shield"
-			]
+			"name": "Phantomschutz"
 		},
 		{
 			"id": "shadow-tag",
-			"name": "Wegsperre",
-			"aliases": [
-				"Shadow Tag"
-			]
+			"name": "Wegsperre"
 		},
 		{
 			"id": "sharpness",
-			"name": "Scharfkantig",
-			"aliases": [
-				"Sharpness"
-			]
+			"name": "Scharfkantig"
 		},
 		{
 			"id": "shed-skin",
-			"name": "Expidermis",
-			"aliases": [
-				"Shed Skin"
-			]
+			"name": "Expidermis"
 		},
 		{
 			"id": "sheer-force",
-			"name": "Rohe Gewalt",
-			"aliases": [
-				"Sheer Force"
-			]
+			"name": "Rohe Gewalt"
 		},
 		{
 			"id": "shell-armor",
-			"name": "Panzerhaut",
-			"aliases": [
-				"Shell Armor"
-			]
+			"name": "Panzerhaut"
 		},
 		{
 			"id": "shield-dust",
-			"name": "Puderabwehr",
-			"aliases": [
-				"Shield Dust"
-			]
+			"name": "Puderabwehr"
 		},
 		{
 			"id": "shields-down",
-			"name": "Limitschild",
-			"aliases": [
-				"Shields Down"
-			]
+			"name": "Limitschild"
 		},
 		{
 			"id": "simple",
-			"name": "Wankelmut",
-			"aliases": [
-				"Simple"
-			]
+			"name": "Wankelmut"
 		},
 		{
 			"id": "skill-link",
-			"name": "Wertelink",
-			"aliases": [
-				"Skill Link"
-			]
+			"name": "Wertelink"
 		},
 		{
 			"id": "slow-start",
-			"name": "Saumselig",
-			"aliases": [
-				"Slow Start"
-			]
+			"name": "Saumselig"
 		},
 		{
 			"id": "slush-rush",
-			"name": "Schneescharrer",
-			"aliases": [
-				"Slush Rush"
-			]
+			"name": "Schneescharrer"
 		},
 		{
 			"id": "sniper",
-			"name": "Superschütze",
-			"aliases": [
-				"Sniper"
-			]
+			"name": "Superschütze"
 		},
 		{
 			"id": "snow-cloak",
-			"name": "Schneemantel",
-			"aliases": [
-				"Snow Cloak"
-			]
+			"name": "Schneemantel"
 		},
 		{
 			"id": "snow-warning",
-			"name": "Hagelalarm",
-			"aliases": [
-				"Snow Warning"
-			]
+			"name": "Hagelalarm"
 		},
 		{
 			"id": "solar-power",
-			"name": "Solarkraft",
-			"aliases": [
-				"Solar Power"
-			]
+			"name": "Solarkraft"
 		},
 		{
 			"id": "solid-rock",
-			"name": "Felskern",
-			"aliases": [
-				"Solid Rock"
-			]
+			"name": "Felskern"
 		},
 		{
 			"id": "soul-heart",
-			"name": "Seelenherz",
-			"aliases": [
-				"Soul-Heart"
-			]
+			"name": "Seelenherz"
 		},
 		{
 			"id": "soundproof",
-			"name": "Lärmschutz",
-			"aliases": [
-				"Soundproof"
-			]
+			"name": "Lärmschutz"
 		},
 		{
 			"id": "speed-boost",
-			"name": "Temposchub",
-			"aliases": [
-				"Speed Boost"
-			]
+			"name": "Temposchub"
 		},
 		{
 			"id": "stakeout",
-			"name": "Beschattung",
-			"aliases": [
-				"Stakeout"
-			]
+			"name": "Beschattung"
 		},
 		{
 			"id": "stall",
-			"name": "Zeitspiel",
-			"aliases": [
-				"Stall"
-			]
+			"name": "Zeitspiel"
 		},
 		{
 			"id": "stalwart",
-			"name": "Stahlrückgrat",
-			"aliases": [
-				"Stalwart"
-			]
+			"name": "Stahlrückgrat"
 		},
 		{
 			"id": "stamina",
-			"name": "Zähigkeit",
-			"aliases": [
-				"Stamina"
-			]
+			"name": "Zähigkeit"
 		},
 		{
 			"id": "stance-change",
-			"name": "Taktikwechsel",
-			"aliases": [
-				"Stance Change"
-			]
+			"name": "Taktikwechsel"
 		},
 		{
 			"id": "static",
-			"name": "Statik",
-			"aliases": [
-				"Static"
-			]
+			"name": "Statik"
 		},
 		{
 			"id": "steadfast",
-			"name": "Felsenfest",
-			"aliases": [
-				"Steadfast"
-			]
+			"name": "Felsenfest"
 		},
 		{
 			"id": "steam-engine",
-			"name": "Dampfantrieb",
-			"aliases": [
-				"Steam Engine"
-			]
+			"name": "Dampfantrieb"
 		},
 		{
 			"id": "steelworker",
-			"name": "Stahlprofi",
-			"aliases": [
-				"Steelworker"
-			]
+			"name": "Stahlprofi"
 		},
 		{
 			"id": "steely-spirit",
-			"name": "Stählerner Wille",
-			"aliases": [
-				"Steely Spirit"
-			]
+			"name": "Stählerner Wille"
 		},
 		{
 			"id": "stench",
-			"name": "Duftnote",
-			"aliases": [
-				"Stench"
-			]
+			"name": "Duftnote"
 		},
 		{
 			"id": "sticky-hold",
-			"name": "Klebekörper",
-			"aliases": [
-				"Sticky Hold"
-			]
+			"name": "Klebekörper"
 		},
 		{
 			"id": "storm-drain",
-			"name": "Sturmsog",
-			"aliases": [
-				"Storm Drain"
-			]
+			"name": "Sturmsog"
 		},
 		{
 			"id": "strong-jaw",
-			"name": "Titankiefer",
-			"aliases": [
-				"Strong Jaw"
-			]
+			"name": "Titankiefer"
 		},
 		{
 			"id": "sturdy",
-			"name": "Robustheit",
-			"aliases": [
-				"Sturdy"
-			]
+			"name": "Robustheit"
 		},
 		{
 			"id": "suction-cups",
-			"name": "Saugnapf",
-			"aliases": [
-				"Suction Cups"
-			]
+			"name": "Saugnapf"
 		},
 		{
 			"id": "super-luck",
-			"name": "Glückspilz",
-			"aliases": [
-				"Super Luck"
-			]
+			"name": "Glückspilz"
 		},
 		{
 			"id": "supersweet-syrup",
-			"name": "Süßer Nektar",
-			"aliases": [
-				"Supersweet Syrup"
-			]
+			"name": "Süßer Nektar"
 		},
 		{
 			"id": "supreme-overlord",
-			"name": "Feldherr",
-			"aliases": [
-				"Supreme Overlord"
-			]
+			"name": "Feldherr"
 		},
 		{
 			"id": "surge-surfer",
-			"name": "Surf-Schweif",
-			"aliases": [
-				"Surge Surfer"
-			]
+			"name": "Surf-Schweif"
 		},
 		{
 			"id": "swarm",
-			"name": "Hexaplaga",
-			"aliases": [
-				"Swarm"
-			]
+			"name": "Hexaplaga"
 		},
 		{
 			"id": "sweet-veil",
-			"name": "Zuckerhülle",
-			"aliases": [
-				"Sweet Veil"
-			]
+			"name": "Zuckerhülle"
 		},
 		{
 			"id": "swift-swim",
-			"name": "Wassertempo",
-			"aliases": [
-				"Swift Swim"
-			]
+			"name": "Wassertempo"
 		},
 		{
 			"id": "sword-of-ruin",
-			"name": "Unheilsschwert",
-			"aliases": [
-				"Sword of Ruin"
-			]
+			"name": "Unheilsschwert"
 		},
 		{
 			"id": "symbiosis",
-			"name": "Nutznießer",
-			"aliases": [
-				"Symbiosis"
-			]
+			"name": "Nutznießer"
 		},
 		{
 			"id": "synchronize",
-			"name": "Synchro",
-			"aliases": [
-				"Synchronize"
-			]
+			"name": "Synchro"
 		},
 		{
 			"id": "tablets-of-ruin",
-			"name": "Unheilstafeln",
-			"aliases": [
-				"Tablets of Ruin"
-			]
+			"name": "Unheilstafeln"
 		},
 		{
 			"id": "tangled-feet",
-			"name": "Fußangel",
-			"aliases": [
-				"Tangled Feet"
-			]
+			"name": "Fußangel"
 		},
 		{
 			"id": "tangling-hair",
-			"name": "Lockenkopf",
-			"aliases": [
-				"Tangling Hair"
-			]
+			"name": "Lockenkopf"
 		},
 		{
 			"id": "technician",
-			"name": "Techniker",
-			"aliases": [
-				"Technician"
-			]
+			"name": "Techniker"
 		},
 		{
 			"id": "telepathy",
-			"name": "Telepathie",
-			"aliases": [
-				"Telepathy"
-			]
+			"name": "Telepathie"
 		},
 		{
 			"id": "tera-shell",
-			"name": "Tera-Panzer",
-			"aliases": [
-				"Tera Shell"
-			]
+			"name": "Tera-Panzer"
 		},
 		{
 			"id": "tera-shift",
-			"name": "Tera-Wandel",
-			"aliases": [
-				"Tera Shift"
-			]
+			"name": "Tera-Wandel"
 		},
 		{
 			"id": "teraform-zero",
-			"name": "Teraforming Null",
-			"aliases": [
-				"Teraform Zero"
-			]
+			"name": "Teraforming Null"
 		},
 		{
 			"id": "teravolt",
-			"name": "Teravolt",
-			"aliases": [
-				"Teravolt"
-			]
+			"name": "Teravolt"
 		},
 		{
 			"id": "thermal-exchange",
-			"name": "Thermowandel",
-			"aliases": [
-				"Thermal Exchange"
-			]
+			"name": "Thermowandel"
 		},
 		{
 			"id": "thick-fat",
-			"name": "Speckschicht",
-			"aliases": [
-				"Thick Fat"
-			]
+			"name": "Speckschicht"
 		},
 		{
 			"id": "tinted-lens",
-			"name": "Aufwertung",
-			"aliases": [
-				"Tinted Lens"
-			]
+			"name": "Aufwertung"
 		},
 		{
 			"id": "torrent",
-			"name": "Sturzbach",
-			"aliases": [
-				"Torrent"
-			]
+			"name": "Sturzbach"
 		},
 		{
 			"id": "tough-claws",
-			"name": "Krallenwucht",
-			"aliases": [
-				"Tough Claws"
-			]
+			"name": "Krallenwucht"
 		},
 		{
 			"id": "toxic-boost",
-			"name": "Giftwahn",
-			"aliases": [
-				"Toxic Boost"
-			]
+			"name": "Giftwahn"
 		},
 		{
 			"id": "toxic-chain",
-			"name": "Giftkette",
-			"aliases": [
-				"Toxic Chain"
-			]
+			"name": "Giftkette"
 		},
 		{
 			"id": "toxic-debris",
-			"name": "Giftbelag",
-			"aliases": [
-				"Toxic Debris"
-			]
+			"name": "Giftbelag"
 		},
 		{
 			"id": "trace",
-			"name": "Erfassen",
-			"aliases": [
-				"Trace"
-			]
+			"name": "Erfassen"
 		},
 		{
 			"id": "transistor",
-			"name": "Transistor",
-			"aliases": [
-				"Transistor"
-			]
+			"name": "Transistor"
 		},
 		{
 			"id": "triage",
-			"name": "Heilwandel",
-			"aliases": [
-				"Triage"
-			]
+			"name": "Heilwandel"
 		},
 		{
 			"id": "truant",
-			"name": "Schnarchnase",
-			"aliases": [
-				"Truant"
-			]
+			"name": "Schnarchnase"
 		},
 		{
 			"id": "turboblaze",
-			"name": "Turbobrand",
-			"aliases": [
-				"Turboblaze"
-			]
+			"name": "Turbobrand"
 		},
 		{
 			"id": "unaware",
-			"name": "Unkenntnis",
-			"aliases": [
-				"Unaware"
-			]
+			"name": "Unkenntnis"
 		},
 		{
 			"id": "unburden",
-			"name": "Entlastung",
-			"aliases": [
-				"Unburden"
-			]
+			"name": "Entlastung"
 		},
 		{
 			"id": "unnerve",
-			"name": "Anspannung",
-			"aliases": [
-				"Unnerve"
-			]
+			"name": "Anspannung"
 		},
 		{
 			"id": "unseen-fist",
-			"name": "Verborgene Faust",
-			"aliases": [
-				"Unseen Fist"
-			]
+			"name": "Verborgene Faust"
 		},
 		{
 			"id": "vessel-of-ruin",
-			"name": "Unheilsgefäß",
-			"aliases": [
-				"Vessel of Ruin"
-			]
+			"name": "Unheilsgefäß"
 		},
 		{
 			"id": "victory-star",
-			"name": "Triumphstern",
-			"aliases": [
-				"Victory Star"
-			]
+			"name": "Triumphstern"
 		},
 		{
 			"id": "vital-spirit",
-			"name": "Munterkeit",
-			"aliases": [
-				"Vital Spirit"
-			]
+			"name": "Munterkeit"
 		},
 		{
 			"id": "volt-absorb",
-			"name": "Voltabsorber",
-			"aliases": [
-				"Volt Absorb"
-			]
+			"name": "Voltabsorber"
 		},
 		{
 			"id": "wandering-spirit",
-			"name": "Rastlose Seele",
-			"aliases": [
-				"Wandering Spirit"
-			]
+			"name": "Rastlose Seele"
 		},
 		{
 			"id": "water-absorb",
-			"name": "H2O-Absorber",
-			"aliases": [
-				"Water Absorb"
-			]
+			"name": "H2O-Absorber"
 		},
 		{
 			"id": "water-bubble",
-			"name": "Wasserblase",
-			"aliases": [
-				"Water Bubble"
-			]
+			"name": "Wasserblase"
 		},
 		{
 			"id": "water-compaction",
-			"name": "Verklumpen",
-			"aliases": [
-				"Water Compaction"
-			]
+			"name": "Verklumpen"
 		},
 		{
 			"id": "water-veil",
-			"name": "Aquahülle",
-			"aliases": [
-				"Water Veil"
-			]
+			"name": "Aquahülle"
 		},
 		{
 			"id": "weak-armor",
-			"name": "Bruchrüstung",
-			"aliases": [
-				"Weak Armor"
-			]
+			"name": "Bruchrüstung"
 		},
 		{
 			"id": "well-baked-body",
-			"name": "Knusperkruste",
-			"aliases": [
-				"Well-Baked Body"
-			]
+			"name": "Knusperkruste"
 		},
 		{
 			"id": "white-smoke",
-			"name": "Pulverrauch",
-			"aliases": [
-				"White Smoke"
-			]
+			"name": "Pulverrauch"
 		},
 		{
 			"id": "wimp-out",
-			"name": "Reißaus",
-			"aliases": [
-				"Wimp Out"
-			]
+			"name": "Reißaus"
 		},
 		{
 			"id": "wind-power",
-			"name": "Windkraft",
-			"aliases": [
-				"Wind Power"
-			]
+			"name": "Windkraft"
 		},
 		{
 			"id": "wind-rider",
-			"name": "Windreiter",
-			"aliases": [
-				"Wind Rider"
-			]
+			"name": "Windreiter"
 		},
 		{
 			"id": "wonder-guard",
-			"name": "Wunderwache",
-			"aliases": [
-				"Wonder Guard"
-			]
+			"name": "Wunderwache"
 		},
 		{
 			"id": "wonder-skin",
-			"name": "Wunderhaut",
-			"aliases": [
-				"Wonder Skin"
-			]
+			"name": "Wunderhaut"
 		},
 		{
 			"id": "zen-mode",
-			"name": "Trance-Modus",
-			"aliases": [
-				"Zen Mode"
-			]
+			"name": "Trance-Modus"
 		},
 		{
 			"id": "zero-to-hero",
-			"name": "Superwechsel",
-			"aliases": [
-				"Zero to Hero"
-			]
+			"name": "Superwechsel"
 		}
 	]
 }

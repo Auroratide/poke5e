@@ -2,7066 +2,4039 @@
 	"items": [
 		{
 			"id": "bulbasaur",
-			"name": "Bisasam",
-			"aliases": [
-				"Bulbasaur"
-			]
+			"name": "Bisasam"
 		},
 		{
 			"id": "ivysaur",
-			"name": "Bisaknosp",
-			"aliases": [
-				"Ivysaur"
-			]
+			"name": "Bisaknosp"
 		},
 		{
 			"id": "venusaur",
-			"name": "Bisaflor",
-			"aliases": [
-				"Venusaur"
-			]
+			"name": "Bisaflor"
 		},
 		{
 			"id": "charmander",
-			"name": "Glumanda",
-			"aliases": [
-				"Charmander"
-			]
+			"name": "Glumanda"
 		},
 		{
 			"id": "charmeleon",
-			"name": "Glutexo",
-			"aliases": [
-				"Charmeleon"
-			]
+			"name": "Glutexo"
 		},
 		{
 			"id": "charizard",
-			"name": "Glurak",
-			"aliases": [
-				"Charizard"
-			]
+			"name": "Glurak"
 		},
 		{
 			"id": "squirtle",
-			"name": "Schiggy",
-			"aliases": [
-				"Squirtle"
-			]
+			"name": "Schiggy"
 		},
 		{
 			"id": "wartortle",
-			"name": "Schillok",
-			"aliases": [
-				"Wartortle"
-			]
+			"name": "Schillok"
 		},
 		{
 			"id": "blastoise",
-			"name": "Turtok",
-			"aliases": [
-				"Blastoise"
-			]
+			"name": "Turtok"
 		},
 		{
 			"id": "caterpie",
-			"name": "Raupy",
-			"aliases": [
-				"Caterpie"
-			]
+			"name": "Raupy"
 		},
 		{
 			"id": "metapod",
-			"name": "Safcon",
-			"aliases": [
-				"Metapod"
-			]
+			"name": "Safcon"
 		},
 		{
 			"id": "butterfree",
-			"name": "Smettbo",
-			"aliases": [
-				"Butterfree"
-			]
+			"name": "Smettbo"
 		},
 		{
 			"id": "weedle",
-			"name": "Hornliu",
-			"aliases": [
-				"Weedle"
-			]
+			"name": "Hornliu"
 		},
 		{
 			"id": "kakuna",
-			"name": "Kokuna",
-			"aliases": [
-				"Kakuna"
-			]
+			"name": "Kokuna"
 		},
 		{
 			"id": "beedrill",
-			"name": "Bibor",
-			"aliases": [
-				"Beedrill"
-			]
+			"name": "Bibor"
 		},
 		{
 			"id": "pidgey",
-			"name": "Taubsi",
-			"aliases": [
-				"Pidgey"
-			]
+			"name": "Taubsi"
 		},
 		{
 			"id": "pidgeotto",
-			"name": "Tauboga",
-			"aliases": [
-				"Pidgeotto"
-			]
+			"name": "Tauboga"
 		},
 		{
 			"id": "pidgeot",
-			"name": "Tauboss",
-			"aliases": [
-				"Pidgeot"
-			]
+			"name": "Tauboss"
 		},
 		{
 			"id": "rattata",
-			"name": "Rattfratz",
-			"aliases": [
-				"Rattata"
-			]
+			"name": "Rattfratz"
 		},
 		{
 			"id": "raticate",
-			"name": "Rattikarl",
-			"aliases": [
-				"Raticate"
-			]
+			"name": "Rattikarl"
 		},
 		{
 			"id": "spearow",
-			"name": "Habitak",
-			"aliases": [
-				"Spearow"
-			]
+			"name": "Habitak"
 		},
 		{
 			"id": "fearow",
-			"name": "Ibitak",
-			"aliases": [
-				"Fearow"
-			]
+			"name": "Ibitak"
 		},
 		{
 			"id": "ekans",
-			"name": "Rettan",
-			"aliases": [
-				"Ekans"
-			]
+			"name": "Rettan"
 		},
 		{
 			"id": "arbok",
-			"name": "Arbok",
-			"aliases": [
-				"Arbok"
-			]
+			"name": "Arbok"
 		},
 		{
 			"id": "pikachu",
-			"name": "Pikachu",
-			"aliases": [
-				"Pikachu"
-			]
+			"name": "Pikachu"
 		},
 		{
 			"id": "raichu",
-			"name": "Raichu",
-			"aliases": [
-				"Raichu"
-			]
+			"name": "Raichu"
 		},
 		{
 			"id": "sandshrew",
-			"name": "Sandan",
-			"aliases": [
-				"Sandshrew"
-			]
+			"name": "Sandan"
 		},
 		{
 			"id": "sandslash",
-			"name": "Sandamer",
-			"aliases": [
-				"Sandslash"
-			]
+			"name": "Sandamer"
 		},
 		{
 			"id": "nidoran-f",
-			"name": "Nidoran♀",
-			"aliases": [
-				"Nidoran ♀"
-			]
+			"name": "Nidoran♀"
 		},
 		{
 			"id": "nidorina",
-			"name": "Nidorina",
-			"aliases": [
-				"Nidorina"
-			]
+			"name": "Nidorina"
 		},
 		{
 			"id": "nidoqueen",
-			"name": "Nidoqueen",
-			"aliases": [
-				"Nidoqueen"
-			]
+			"name": "Nidoqueen"
 		},
 		{
 			"id": "nidoran-m",
-			"name": "Nidoran♂",
-			"aliases": [
-				"Nidoran ♂"
-			]
+			"name": "Nidoran♂"
 		},
 		{
 			"id": "nidorino",
-			"name": "Nidorino",
-			"aliases": [
-				"Nidorino"
-			]
+			"name": "Nidorino"
 		},
 		{
 			"id": "nidoking",
-			"name": "Nidoking",
-			"aliases": [
-				"Nidoking"
-			]
+			"name": "Nidoking"
 		},
 		{
 			"id": "clefairy",
-			"name": "Piepi",
-			"aliases": [
-				"Clefairy"
-			]
+			"name": "Piepi"
 		},
 		{
 			"id": "clefable",
-			"name": "Pixi",
-			"aliases": [
-				"Clefable"
-			]
+			"name": "Pixi"
 		},
 		{
 			"id": "vulpix",
-			"name": "Vulpix",
-			"aliases": [
-				"Vulpix"
-			]
+			"name": "Vulpix"
 		},
 		{
 			"id": "ninetales",
-			"name": "Vulnona",
-			"aliases": [
-				"Ninetales"
-			]
+			"name": "Vulnona"
 		},
 		{
 			"id": "jigglypuff",
-			"name": "Pummeluff",
-			"aliases": [
-				"Jigglypuff"
-			]
+			"name": "Pummeluff"
 		},
 		{
 			"id": "wigglytuff",
-			"name": "Knuddeluff",
-			"aliases": [
-				"Wigglytuff"
-			]
+			"name": "Knuddeluff"
 		},
 		{
 			"id": "zubat",
-			"name": "Zubat",
-			"aliases": [
-				"Zubat"
-			]
+			"name": "Zubat"
 		},
 		{
 			"id": "golbat",
-			"name": "Golbat",
-			"aliases": [
-				"Golbat"
-			]
+			"name": "Golbat"
 		},
 		{
 			"id": "oddish",
-			"name": "Myrapla",
-			"aliases": [
-				"Oddish"
-			]
+			"name": "Myrapla"
 		},
 		{
 			"id": "gloom",
-			"name": "Duflor",
-			"aliases": [
-				"Gloom"
-			]
+			"name": "Duflor"
 		},
 		{
 			"id": "vileplume",
-			"name": "Giflor",
-			"aliases": [
-				"Vileplume"
-			]
+			"name": "Giflor"
 		},
 		{
 			"id": "paras",
-			"name": "Paras",
-			"aliases": [
-				"Paras"
-			]
+			"name": "Paras"
 		},
 		{
 			"id": "parasect",
-			"name": "Parasek",
-			"aliases": [
-				"Parasect"
-			]
+			"name": "Parasek"
 		},
 		{
 			"id": "venonat",
-			"name": "Bluzuk",
-			"aliases": [
-				"Venonat"
-			]
+			"name": "Bluzuk"
 		},
 		{
 			"id": "venomoth",
-			"name": "Omot",
-			"aliases": [
-				"Venomoth"
-			]
+			"name": "Omot"
 		},
 		{
 			"id": "diglett",
-			"name": "Digda",
-			"aliases": [
-				"Diglett"
-			]
+			"name": "Digda"
 		},
 		{
 			"id": "dugtrio",
-			"name": "Digdri",
-			"aliases": [
-				"Dugtrio"
-			]
+			"name": "Digdri"
 		},
 		{
 			"id": "meowth",
-			"name": "Mauzi",
-			"aliases": [
-				"Meowth"
-			]
+			"name": "Mauzi"
 		},
 		{
 			"id": "persian",
-			"name": "Snobilikat",
-			"aliases": [
-				"Persian"
-			]
+			"name": "Snobilikat"
 		},
 		{
 			"id": "psyduck",
-			"name": "Enton",
-			"aliases": [
-				"Psyduck"
-			]
+			"name": "Enton"
 		},
 		{
 			"id": "golduck",
-			"name": "Entoron",
-			"aliases": [
-				"Golduck"
-			]
+			"name": "Entoron"
 		},
 		{
 			"id": "mankey",
-			"name": "Menki",
-			"aliases": [
-				"Mankey"
-			]
+			"name": "Menki"
 		},
 		{
 			"id": "primeape",
-			"name": "Rasaff",
-			"aliases": [
-				"Primeape"
-			]
+			"name": "Rasaff"
 		},
 		{
 			"id": "growlithe",
-			"name": "Fukano",
-			"aliases": [
-				"Growlithe"
-			]
+			"name": "Fukano"
 		},
 		{
 			"id": "arcanine",
-			"name": "Arkani",
-			"aliases": [
-				"Arcanine"
-			]
+			"name": "Arkani"
 		},
 		{
 			"id": "poliwag",
-			"name": "Quapsel",
-			"aliases": [
-				"Poliwag"
-			]
+			"name": "Quapsel"
 		},
 		{
 			"id": "poliwhirl",
-			"name": "Quaputzi",
-			"aliases": [
-				"Poliwhirl"
-			]
+			"name": "Quaputzi"
 		},
 		{
 			"id": "poliwrath",
-			"name": "Quappo",
-			"aliases": [
-				"Poliwrath"
-			]
+			"name": "Quappo"
 		},
 		{
 			"id": "abra",
-			"name": "Abra",
-			"aliases": [
-				"Abra"
-			]
+			"name": "Abra"
 		},
 		{
 			"id": "kadabra",
-			"name": "Kadabra",
-			"aliases": [
-				"Kadabra"
-			]
+			"name": "Kadabra"
 		},
 		{
 			"id": "alakazam",
-			"name": "Simsala",
-			"aliases": [
-				"Alakazam"
-			]
+			"name": "Simsala"
 		},
 		{
 			"id": "machop",
-			"name": "Machollo",
-			"aliases": [
-				"Machop"
-			]
+			"name": "Machollo"
 		},
 		{
 			"id": "machoke",
-			"name": "Maschock",
-			"aliases": [
-				"Machoke"
-			]
+			"name": "Maschock"
 		},
 		{
 			"id": "machamp",
-			"name": "Machomei",
-			"aliases": [
-				"Machamp"
-			]
+			"name": "Machomei"
 		},
 		{
 			"id": "bellsprout",
-			"name": "Knofensa",
-			"aliases": [
-				"Bellsprout"
-			]
+			"name": "Knofensa"
 		},
 		{
 			"id": "weepinbell",
-			"name": "Ultrigaria",
-			"aliases": [
-				"Weepinbell"
-			]
+			"name": "Ultrigaria"
 		},
 		{
 			"id": "victreebel",
-			"name": "Sarzenia",
-			"aliases": [
-				"Victreebel"
-			]
+			"name": "Sarzenia"
 		},
 		{
 			"id": "tentacool",
-			"name": "Tentacha",
-			"aliases": [
-				"Tentacool"
-			]
+			"name": "Tentacha"
 		},
 		{
 			"id": "tentacruel",
-			"name": "Tentoxa",
-			"aliases": [
-				"Tentacruel"
-			]
+			"name": "Tentoxa"
 		},
 		{
 			"id": "geodude",
-			"name": "Kleinstein",
-			"aliases": [
-				"Geodude"
-			]
+			"name": "Kleinstein"
 		},
 		{
 			"id": "graveler",
-			"name": "Georok",
-			"aliases": [
-				"Graveler"
-			]
+			"name": "Georok"
 		},
 		{
 			"id": "golem",
-			"name": "Geowaz",
-			"aliases": [
-				"Golem"
-			]
+			"name": "Geowaz"
 		},
 		{
 			"id": "ponyta",
-			"name": "Ponita",
-			"aliases": [
-				"Ponyta"
-			]
+			"name": "Ponita"
 		},
 		{
 			"id": "rapidash",
-			"name": "Gallopa",
-			"aliases": [
-				"Rapidash"
-			]
+			"name": "Gallopa"
 		},
 		{
 			"id": "slowpoke",
-			"name": "Flegmon",
-			"aliases": [
-				"Slowpoke"
-			]
+			"name": "Flegmon"
 		},
 		{
 			"id": "slowbro",
-			"name": "Lahmus",
-			"aliases": [
-				"Slowbro"
-			]
+			"name": "Lahmus"
 		},
 		{
 			"id": "magnemite",
-			"name": "Magnetilo",
-			"aliases": [
-				"Magnemite"
-			]
+			"name": "Magnetilo"
 		},
 		{
 			"id": "magneton",
-			"name": "Magneton",
-			"aliases": [
-				"Magneton"
-			]
+			"name": "Magneton"
 		},
 		{
 			"id": "farfetchd",
-			"name": "Porenta",
-			"aliases": [
-				"Farfetch'd"
-			]
+			"name": "Porenta"
 		},
 		{
 			"id": "doduo",
-			"name": "Dodu",
-			"aliases": [
-				"Doduo"
-			]
+			"name": "Dodu"
 		},
 		{
 			"id": "dodrio",
-			"name": "Dodri",
-			"aliases": [
-				"Dodrio"
-			]
+			"name": "Dodri"
 		},
 		{
 			"id": "seel",
-			"name": "Jurob",
-			"aliases": [
-				"Seel"
-			]
+			"name": "Jurob"
 		},
 		{
 			"id": "dewgong",
-			"name": "Jugong",
-			"aliases": [
-				"Dewgong"
-			]
+			"name": "Jugong"
 		},
 		{
 			"id": "grimer",
-			"name": "Sleima",
-			"aliases": [
-				"Grimer"
-			]
+			"name": "Sleima"
 		},
 		{
 			"id": "muk",
-			"name": "Sleimok",
-			"aliases": [
-				"Muk"
-			]
+			"name": "Sleimok"
 		},
 		{
 			"id": "shellder",
-			"name": "Muschas",
-			"aliases": [
-				"Shellder"
-			]
+			"name": "Muschas"
 		},
 		{
 			"id": "cloyster",
-			"name": "Austos",
-			"aliases": [
-				"Cloyster"
-			]
+			"name": "Austos"
 		},
 		{
 			"id": "gastly",
-			"name": "Nebulak",
-			"aliases": [
-				"Gastly"
-			]
+			"name": "Nebulak"
 		},
 		{
 			"id": "haunter",
-			"name": "Alpollo",
-			"aliases": [
-				"Haunter"
-			]
+			"name": "Alpollo"
 		},
 		{
 			"id": "gengar",
-			"name": "Gengar",
-			"aliases": [
-				"Gengar"
-			]
+			"name": "Gengar"
 		},
 		{
 			"id": "onix",
-			"name": "Onix",
-			"aliases": [
-				"Onix"
-			]
+			"name": "Onix"
 		},
 		{
 			"id": "drowzee",
-			"name": "Traumato",
-			"aliases": [
-				"Drowzee"
-			]
+			"name": "Traumato"
 		},
 		{
 			"id": "hypno",
-			"name": "Hypno",
-			"aliases": [
-				"Hypno"
-			]
+			"name": "Hypno"
 		},
 		{
 			"id": "krabby",
-			"name": "Krabby",
-			"aliases": [
-				"Krabby"
-			]
+			"name": "Krabby"
 		},
 		{
 			"id": "kingler",
-			"name": "Kingler",
-			"aliases": [
-				"Kingler"
-			]
+			"name": "Kingler"
 		},
 		{
 			"id": "voltorb",
-			"name": "Voltobal",
-			"aliases": [
-				"Voltorb"
-			]
+			"name": "Voltobal"
 		},
 		{
 			"id": "electrode",
-			"name": "Lektrobal",
-			"aliases": [
-				"Electrode"
-			]
+			"name": "Lektrobal"
 		},
 		{
 			"id": "exeggcute",
-			"name": "Owei",
-			"aliases": [
-				"Exeggcute"
-			]
+			"name": "Owei"
 		},
 		{
 			"id": "exeggutor",
-			"name": "Kokowei",
-			"aliases": [
-				"Exeggutor"
-			]
+			"name": "Kokowei"
 		},
 		{
 			"id": "cubone",
-			"name": "Tragosso",
-			"aliases": [
-				"Cubone"
-			]
+			"name": "Tragosso"
 		},
 		{
 			"id": "marowak",
-			"name": "Knogga",
-			"aliases": [
-				"Marowak"
-			]
+			"name": "Knogga"
 		},
 		{
 			"id": "hitmonlee",
-			"name": "Kicklee",
-			"aliases": [
-				"Hitmonlee"
-			]
+			"name": "Kicklee"
 		},
 		{
 			"id": "hitmonchan",
-			"name": "Nockchan",
-			"aliases": [
-				"Hitmonchan"
-			]
+			"name": "Nockchan"
 		},
 		{
 			"id": "lickitung",
-			"name": "Schlurp",
-			"aliases": [
-				"Lickitung"
-			]
+			"name": "Schlurp"
 		},
 		{
 			"id": "koffing",
-			"name": "Smogon",
-			"aliases": [
-				"Koffing"
-			]
+			"name": "Smogon"
 		},
 		{
 			"id": "weezing",
-			"name": "Smogmog",
-			"aliases": [
-				"Weezing"
-			]
+			"name": "Smogmog"
 		},
 		{
 			"id": "rhyhorn",
-			"name": "Rihorn",
-			"aliases": [
-				"Rhyhorn"
-			]
+			"name": "Rihorn"
 		},
 		{
 			"id": "rhydon",
-			"name": "Rizeros",
-			"aliases": [
-				"Rhydon"
-			]
+			"name": "Rizeros"
 		},
 		{
 			"id": "chansey",
-			"name": "Chaneira",
-			"aliases": [
-				"Chansey"
-			]
+			"name": "Chaneira"
 		},
 		{
 			"id": "tangela",
-			"name": "Tangela",
-			"aliases": [
-				"Tangela"
-			]
+			"name": "Tangela"
 		},
 		{
 			"id": "kangaskhan",
-			"name": "Kangama",
-			"aliases": [
-				"Kangaskhan"
-			]
+			"name": "Kangama"
 		},
 		{
 			"id": "horsea",
-			"name": "Seeper",
-			"aliases": [
-				"Horsea"
-			]
+			"name": "Seeper"
 		},
 		{
 			"id": "seadra",
-			"name": "Seemon",
-			"aliases": [
-				"Seadra"
-			]
+			"name": "Seemon"
 		},
 		{
 			"id": "goldeen",
-			"name": "Goldini",
-			"aliases": [
-				"Goldeen"
-			]
+			"name": "Goldini"
 		},
 		{
 			"id": "seaking",
-			"name": "Golking",
-			"aliases": [
-				"Seaking"
-			]
+			"name": "Golking"
 		},
 		{
 			"id": "staryu",
-			"name": "Sterndu",
-			"aliases": [
-				"Staryu"
-			]
+			"name": "Sterndu"
 		},
 		{
 			"id": "starmie",
-			"name": "Starmie",
-			"aliases": [
-				"Starmie"
-			]
+			"name": "Starmie"
 		},
 		{
 			"id": "mr-mime",
-			"name": "Pantimos",
-			"aliases": [
-				"Mr. Mime"
-			]
+			"name": "Pantimos"
 		},
 		{
 			"id": "scyther",
-			"name": "Sichlor",
-			"aliases": [
-				"Scyther"
-			]
+			"name": "Sichlor"
 		},
 		{
 			"id": "jynx",
-			"name": "Rossana",
-			"aliases": [
-				"Jynx"
-			]
+			"name": "Rossana"
 		},
 		{
 			"id": "electabuzz",
-			"name": "Elektek",
-			"aliases": [
-				"Electabuzz"
-			]
+			"name": "Elektek"
 		},
 		{
 			"id": "magmar",
-			"name": "Magmar",
-			"aliases": [
-				"Magmar"
-			]
+			"name": "Magmar"
 		},
 		{
 			"id": "pinsir",
-			"name": "Pinsir",
-			"aliases": [
-				"Pinsir"
-			]
+			"name": "Pinsir"
 		},
 		{
 			"id": "tauros",
-			"name": "Tauros",
-			"aliases": [
-				"Tauros"
-			]
+			"name": "Tauros"
 		},
 		{
 			"id": "magikarp",
-			"name": "Karpador",
-			"aliases": [
-				"Magikarp"
-			]
+			"name": "Karpador"
 		},
 		{
 			"id": "gyarados",
-			"name": "Garados",
-			"aliases": [
-				"Gyarados"
-			]
+			"name": "Garados"
 		},
 		{
 			"id": "lapras",
-			"name": "Lapras",
-			"aliases": [
-				"Lapras"
-			]
+			"name": "Lapras"
 		},
 		{
 			"id": "ditto",
-			"name": "Ditto",
-			"aliases": [
-				"Ditto"
-			]
+			"name": "Ditto"
 		},
 		{
 			"id": "eevee",
-			"name": "Evoli",
-			"aliases": [
-				"Eevee"
-			]
+			"name": "Evoli"
 		},
 		{
 			"id": "vaporeon",
-			"name": "Aquana",
-			"aliases": [
-				"Vaporeon"
-			]
+			"name": "Aquana"
 		},
 		{
 			"id": "jolteon",
-			"name": "Blitza",
-			"aliases": [
-				"Jolteon"
-			]
+			"name": "Blitza"
 		},
 		{
 			"id": "flareon",
-			"name": "Flamara",
-			"aliases": [
-				"Flareon"
-			]
+			"name": "Flamara"
 		},
 		{
 			"id": "porygon",
-			"name": "Porygon",
-			"aliases": [
-				"Porygon"
-			]
+			"name": "Porygon"
 		},
 		{
 			"id": "omanyte",
-			"name": "Amonitas",
-			"aliases": [
-				"Omanyte"
-			]
+			"name": "Amonitas"
 		},
 		{
 			"id": "omastar",
-			"name": "Amoroso",
-			"aliases": [
-				"Omastar"
-			]
+			"name": "Amoroso"
 		},
 		{
 			"id": "kabuto",
-			"name": "Kabuto",
-			"aliases": [
-				"Kabuto"
-			]
+			"name": "Kabuto"
 		},
 		{
 			"id": "kabutops",
-			"name": "Kabutops",
-			"aliases": [
-				"Kabutops"
-			]
+			"name": "Kabutops"
 		},
 		{
 			"id": "aerodactyl",
-			"name": "Aerodactyl",
-			"aliases": [
-				"Aerodactyl"
-			]
+			"name": "Aerodactyl"
 		},
 		{
 			"id": "snorlax",
-			"name": "Relaxo",
-			"aliases": [
-				"Snorlax"
-			]
+			"name": "Relaxo"
 		},
 		{
 			"id": "articuno",
-			"name": "Arktos",
-			"aliases": [
-				"Articuno"
-			]
+			"name": "Arktos"
 		},
 		{
 			"id": "zapdos",
-			"name": "Zapdos",
-			"aliases": [
-				"Zapdos"
-			]
+			"name": "Zapdos"
 		},
 		{
 			"id": "moltres",
-			"name": "Lavados",
-			"aliases": [
-				"Moltres"
-			]
+			"name": "Lavados"
 		},
 		{
 			"id": "dratini",
-			"name": "Dratini",
-			"aliases": [
-				"Dratini"
-			]
+			"name": "Dratini"
 		},
 		{
 			"id": "dragonair",
-			"name": "Dragonir",
-			"aliases": [
-				"Dragonair"
-			]
+			"name": "Dragonir"
 		},
 		{
 			"id": "dragonite",
-			"name": "Dragoran",
-			"aliases": [
-				"Dragonite"
-			]
+			"name": "Dragoran"
 		},
 		{
 			"id": "mewtwo",
-			"name": "Mewtu",
-			"aliases": [
-				"Mewtwo"
-			]
+			"name": "Mewtu"
 		},
 		{
 			"id": "mew",
-			"name": "Mew",
-			"aliases": [
-				"Mew"
-			]
+			"name": "Mew"
 		},
 		{
 			"id": "chikorita",
-			"name": "Endivie",
-			"aliases": [
-				"Chikorita"
-			]
+			"name": "Endivie"
 		},
 		{
 			"id": "bayleef",
-			"name": "Lorblatt",
-			"aliases": [
-				"Bayleef"
-			]
+			"name": "Lorblatt"
 		},
 		{
 			"id": "meganium",
-			"name": "Meganie",
-			"aliases": [
-				"Meganium"
-			]
+			"name": "Meganie"
 		},
 		{
 			"id": "cyndaquil",
-			"name": "Feurigel",
-			"aliases": [
-				"Cyndaquil"
-			]
+			"name": "Feurigel"
 		},
 		{
 			"id": "quilava",
-			"name": "Igelavar",
-			"aliases": [
-				"Quilava"
-			]
+			"name": "Igelavar"
 		},
 		{
 			"id": "typhlosion",
-			"name": "Tornupto",
-			"aliases": [
-				"Typhlosion"
-			]
+			"name": "Tornupto"
 		},
 		{
 			"id": "totodile",
-			"name": "Karnimani",
-			"aliases": [
-				"Totodile"
-			]
+			"name": "Karnimani"
 		},
 		{
 			"id": "croconaw",
-			"name": "Tyracroc",
-			"aliases": [
-				"Croconaw"
-			]
+			"name": "Tyracroc"
 		},
 		{
 			"id": "feraligatr",
-			"name": "Impergator",
-			"aliases": [
-				"Feraligatr"
-			]
+			"name": "Impergator"
 		},
 		{
 			"id": "sentret",
-			"name": "Wiesor",
-			"aliases": [
-				"Sentret"
-			]
+			"name": "Wiesor"
 		},
 		{
 			"id": "furret",
-			"name": "Wiesenior",
-			"aliases": [
-				"Furret"
-			]
+			"name": "Wiesenior"
 		},
 		{
 			"id": "hoothoot",
-			"name": "Hoothoot",
-			"aliases": [
-				"Hoothoot"
-			]
+			"name": "Hoothoot"
 		},
 		{
 			"id": "noctowl",
-			"name": "Noctuh",
-			"aliases": [
-				"Noctowl"
-			]
+			"name": "Noctuh"
 		},
 		{
 			"id": "ledyba",
-			"name": "Ledyba",
-			"aliases": [
-				"Ledyba"
-			]
+			"name": "Ledyba"
 		},
 		{
 			"id": "ledian",
-			"name": "Ledian",
-			"aliases": [
-				"Ledian"
-			]
+			"name": "Ledian"
 		},
 		{
 			"id": "spinarak",
-			"name": "Webarak",
-			"aliases": [
-				"Spinarak"
-			]
+			"name": "Webarak"
 		},
 		{
 			"id": "ariados",
-			"name": "Ariados",
-			"aliases": [
-				"Ariados"
-			]
+			"name": "Ariados"
 		},
 		{
 			"id": "crobat",
-			"name": "Iksbat",
-			"aliases": [
-				"Crobat"
-			]
+			"name": "Iksbat"
 		},
 		{
 			"id": "chinchou",
-			"name": "Lampi",
-			"aliases": [
-				"Chinchou"
-			]
+			"name": "Lampi"
 		},
 		{
 			"id": "lanturn",
-			"name": "Lanturn",
-			"aliases": [
-				"Lanturn"
-			]
+			"name": "Lanturn"
 		},
 		{
 			"id": "pichu",
-			"name": "Pichu",
-			"aliases": [
-				"Pichu"
-			]
+			"name": "Pichu"
 		},
 		{
 			"id": "cleffa",
-			"name": "Pii",
-			"aliases": [
-				"Cleffa"
-			]
+			"name": "Pii"
 		},
 		{
 			"id": "igglybuff",
-			"name": "Fluffeluff",
-			"aliases": [
-				"Igglybuff"
-			]
+			"name": "Fluffeluff"
 		},
 		{
 			"id": "togepi",
-			"name": "Togepi",
-			"aliases": [
-				"Togepi"
-			]
+			"name": "Togepi"
 		},
 		{
 			"id": "togetic",
-			"name": "Togetic",
-			"aliases": [
-				"Togetic"
-			]
+			"name": "Togetic"
 		},
 		{
 			"id": "natu",
-			"name": "Natu",
-			"aliases": [
-				"Natu"
-			]
+			"name": "Natu"
 		},
 		{
 			"id": "xatu",
-			"name": "Xatu",
-			"aliases": [
-				"Xatu"
-			]
+			"name": "Xatu"
 		},
 		{
 			"id": "mareep",
-			"name": "Voltilamm",
-			"aliases": [
-				"Mareep"
-			]
+			"name": "Voltilamm"
 		},
 		{
 			"id": "flaaffy",
-			"name": "Waaty",
-			"aliases": [
-				"Flaaffy"
-			]
+			"name": "Waaty"
 		},
 		{
 			"id": "ampharos",
-			"name": "Ampharos",
-			"aliases": [
-				"Ampharos"
-			]
+			"name": "Ampharos"
 		},
 		{
 			"id": "bellossom",
-			"name": "Blubella",
-			"aliases": [
-				"Bellossom"
-			]
+			"name": "Blubella"
 		},
 		{
 			"id": "marill",
-			"name": "Marill",
-			"aliases": [
-				"Marill"
-			]
+			"name": "Marill"
 		},
 		{
 			"id": "azumarill",
-			"name": "Azumarill",
-			"aliases": [
-				"Azumarill"
-			]
+			"name": "Azumarill"
 		},
 		{
 			"id": "sudowoodo",
-			"name": "Mogelbaum",
-			"aliases": [
-				"Sudowoodo"
-			]
+			"name": "Mogelbaum"
 		},
 		{
 			"id": "politoed",
-			"name": "Quaxo",
-			"aliases": [
-				"Politoed"
-			]
+			"name": "Quaxo"
 		},
 		{
 			"id": "hoppip",
-			"name": "Hoppspross",
-			"aliases": [
-				"Hoppip"
-			]
+			"name": "Hoppspross"
 		},
 		{
 			"id": "skiploom",
-			"name": "Hubelupf",
-			"aliases": [
-				"Skiploom"
-			]
+			"name": "Hubelupf"
 		},
 		{
 			"id": "jumpluff",
-			"name": "Papungha",
-			"aliases": [
-				"Jumpluff"
-			]
+			"name": "Papungha"
 		},
 		{
 			"id": "aipom",
-			"name": "Griffel",
-			"aliases": [
-				"Aipom"
-			]
+			"name": "Griffel"
 		},
 		{
 			"id": "sunkern",
-			"name": "Sonnkern",
-			"aliases": [
-				"Sunkern"
-			]
+			"name": "Sonnkern"
 		},
 		{
 			"id": "sunflora",
-			"name": "Sonnflora",
-			"aliases": [
-				"Sunflora"
-			]
+			"name": "Sonnflora"
 		},
 		{
 			"id": "yanma",
-			"name": "Yanma",
-			"aliases": [
-				"Yanma"
-			]
+			"name": "Yanma"
 		},
 		{
 			"id": "wooper",
-			"name": "Felino",
-			"aliases": [
-				"Wooper"
-			]
+			"name": "Felino"
 		},
 		{
 			"id": "quagsire",
-			"name": "Morlord",
-			"aliases": [
-				"Quagsire"
-			]
+			"name": "Morlord"
 		},
 		{
 			"id": "espeon",
-			"name": "Psiana",
-			"aliases": [
-				"Espeon"
-			]
+			"name": "Psiana"
 		},
 		{
 			"id": "umbreon",
-			"name": "Nachtara",
-			"aliases": [
-				"Umbreon"
-			]
+			"name": "Nachtara"
 		},
 		{
 			"id": "murkrow",
-			"name": "Kramurx",
-			"aliases": [
-				"Murkrow"
-			]
+			"name": "Kramurx"
 		},
 		{
 			"id": "slowking",
-			"name": "Laschoking",
-			"aliases": [
-				"Slowking"
-			]
+			"name": "Laschoking"
 		},
 		{
 			"id": "misdreavus",
-			"name": "Traunfugil",
-			"aliases": [
-				"Misdreavus"
-			]
+			"name": "Traunfugil"
 		},
 		{
 			"id": "unown",
-			"name": "Icognito",
-			"aliases": [
-				"Unown"
-			]
+			"name": "Icognito"
 		},
 		{
 			"id": "wobbuffet",
-			"name": "Woingenau",
-			"aliases": [
-				"Wobbuffet"
-			]
+			"name": "Woingenau"
 		},
 		{
 			"id": "girafarig",
-			"name": "Girafarig",
-			"aliases": [
-				"Girafarig"
-			]
+			"name": "Girafarig"
 		},
 		{
 			"id": "pineco",
-			"name": "Tannza",
-			"aliases": [
-				"Pineco"
-			]
+			"name": "Tannza"
 		},
 		{
 			"id": "forretress",
-			"name": "Forstellka",
-			"aliases": [
-				"Forretress"
-			]
+			"name": "Forstellka"
 		},
 		{
 			"id": "dunsparce",
-			"name": "Dummisel",
-			"aliases": [
-				"Dunsparce"
-			]
+			"name": "Dummisel"
 		},
 		{
 			"id": "gligar",
-			"name": "Skorgla",
-			"aliases": [
-				"Gligar"
-			]
+			"name": "Skorgla"
 		},
 		{
 			"id": "steelix",
-			"name": "Stahlos",
-			"aliases": [
-				"Steelix"
-			]
+			"name": "Stahlos"
 		},
 		{
 			"id": "snubbull",
-			"name": "Snubbull",
-			"aliases": [
-				"Snubbull"
-			]
+			"name": "Snubbull"
 		},
 		{
 			"id": "granbull",
-			"name": "Granbull",
-			"aliases": [
-				"Granbull"
-			]
+			"name": "Granbull"
 		},
 		{
 			"id": "qwilfish",
-			"name": "Baldorfish",
-			"aliases": [
-				"Qwilfish"
-			]
+			"name": "Baldorfish"
 		},
 		{
 			"id": "scizor",
-			"name": "Scherox",
-			"aliases": [
-				"Scizor"
-			]
+			"name": "Scherox"
 		},
 		{
 			"id": "shuckle",
-			"name": "Pottrott",
-			"aliases": [
-				"Shuckle"
-			]
+			"name": "Pottrott"
 		},
 		{
 			"id": "heracross",
-			"name": "Skaraborn",
-			"aliases": [
-				"Heracross"
-			]
+			"name": "Skaraborn"
 		},
 		{
 			"id": "sneasel",
-			"name": "Sniebel",
-			"aliases": [
-				"Sneasel"
-			]
+			"name": "Sniebel"
 		},
 		{
 			"id": "teddiursa",
-			"name": "Teddiursa",
-			"aliases": [
-				"Teddiursa"
-			]
+			"name": "Teddiursa"
 		},
 		{
 			"id": "ursaring",
-			"name": "Ursaring",
-			"aliases": [
-				"Ursaring"
-			]
+			"name": "Ursaring"
 		},
 		{
 			"id": "slugma",
-			"name": "Schneckmag",
-			"aliases": [
-				"Slugma"
-			]
+			"name": "Schneckmag"
 		},
 		{
 			"id": "magcargo",
-			"name": "Magcargo",
-			"aliases": [
-				"Magcargo"
-			]
+			"name": "Magcargo"
 		},
 		{
 			"id": "swinub",
-			"name": "Quiekel",
-			"aliases": [
-				"Swinub"
-			]
+			"name": "Quiekel"
 		},
 		{
 			"id": "piloswine",
-			"name": "Keifel",
-			"aliases": [
-				"Piloswine"
-			]
+			"name": "Keifel"
 		},
 		{
 			"id": "corsola",
-			"name": "Corasonn",
-			"aliases": [
-				"Corsola"
-			]
+			"name": "Corasonn"
 		},
 		{
 			"id": "remoraid",
-			"name": "Remoraid",
-			"aliases": [
-				"Remoraid"
-			]
+			"name": "Remoraid"
 		},
 		{
 			"id": "octillery",
-			"name": "Octillery",
-			"aliases": [
-				"Octillery"
-			]
+			"name": "Octillery"
 		},
 		{
 			"id": "delibird",
-			"name": "Botogel",
-			"aliases": [
-				"Delibird"
-			]
+			"name": "Botogel"
 		},
 		{
 			"id": "mantine",
-			"name": "Mantax",
-			"aliases": [
-				"Mantine"
-			]
+			"name": "Mantax"
 		},
 		{
 			"id": "skarmory",
-			"name": "Panzaeron",
-			"aliases": [
-				"Skarmory"
-			]
+			"name": "Panzaeron"
 		},
 		{
 			"id": "houndour",
-			"name": "Hunduster",
-			"aliases": [
-				"Houndour"
-			]
+			"name": "Hunduster"
 		},
 		{
 			"id": "houndoom",
-			"name": "Hundemon",
-			"aliases": [
-				"Houndoom"
-			]
+			"name": "Hundemon"
 		},
 		{
 			"id": "kingdra",
-			"name": "Seedraking",
-			"aliases": [
-				"Kingdra"
-			]
+			"name": "Seedraking"
 		},
 		{
 			"id": "phanpy",
-			"name": "Phanpy",
-			"aliases": [
-				"Phanpy"
-			]
+			"name": "Phanpy"
 		},
 		{
 			"id": "donphan",
-			"name": "Donphan",
-			"aliases": [
-				"Donphan"
-			]
+			"name": "Donphan"
 		},
 		{
 			"id": "porygon2",
-			"name": "Porygon2",
-			"aliases": [
-				"Porygon2"
-			]
+			"name": "Porygon2"
 		},
 		{
 			"id": "stantler",
-			"name": "Damhirplex",
-			"aliases": [
-				"Stantler"
-			]
+			"name": "Damhirplex"
 		},
 		{
 			"id": "smeargle",
-			"name": "Farbeagle",
-			"aliases": [
-				"Smeargle"
-			]
+			"name": "Farbeagle"
 		},
 		{
 			"id": "tyrogue",
-			"name": "Rabauz",
-			"aliases": [
-				"Tyrogue"
-			]
+			"name": "Rabauz"
 		},
 		{
 			"id": "hitmontop",
-			"name": "Kapoera",
-			"aliases": [
-				"Hitmontop"
-			]
+			"name": "Kapoera"
 		},
 		{
 			"id": "smoochum",
-			"name": "Kussilla",
-			"aliases": [
-				"Smoochum"
-			]
+			"name": "Kussilla"
 		},
 		{
 			"id": "elekid",
-			"name": "Elekid",
-			"aliases": [
-				"Elekid"
-			]
+			"name": "Elekid"
 		},
 		{
 			"id": "magby",
-			"name": "Magby",
-			"aliases": [
-				"Magby"
-			]
+			"name": "Magby"
 		},
 		{
 			"id": "miltank",
-			"name": "Miltank",
-			"aliases": [
-				"Miltank"
-			]
+			"name": "Miltank"
 		},
 		{
 			"id": "blissey",
-			"name": "Heiteira",
-			"aliases": [
-				"Blissey"
-			]
+			"name": "Heiteira"
 		},
 		{
 			"id": "raikou",
-			"name": "Raikou",
-			"aliases": [
-				"Raikou"
-			]
+			"name": "Raikou"
 		},
 		{
 			"id": "entei",
-			"name": "Entei",
-			"aliases": [
-				"Entei"
-			]
+			"name": "Entei"
 		},
 		{
 			"id": "suicune",
-			"name": "Suicune",
-			"aliases": [
-				"Suicune"
-			]
+			"name": "Suicune"
 		},
 		{
 			"id": "larvitar",
-			"name": "Larvitar",
-			"aliases": [
-				"Larvitar"
-			]
+			"name": "Larvitar"
 		},
 		{
 			"id": "pupitar",
-			"name": "Pupitar",
-			"aliases": [
-				"Pupitar"
-			]
+			"name": "Pupitar"
 		},
 		{
 			"id": "tyranitar",
-			"name": "Despotar",
-			"aliases": [
-				"Tyranitar"
-			]
+			"name": "Despotar"
 		},
 		{
 			"id": "lugia",
-			"name": "Lugia",
-			"aliases": [
-				"Lugia"
-			]
+			"name": "Lugia"
 		},
 		{
 			"id": "ho-oh",
-			"name": "Ho-Oh",
-			"aliases": [
-				"Ho-oh"
-			]
+			"name": "Ho-Oh"
 		},
 		{
 			"id": "celebi",
-			"name": "Celebi",
-			"aliases": [
-				"Celebi"
-			]
+			"name": "Celebi"
 		},
 		{
 			"id": "treecko",
-			"name": "Geckarbor",
-			"aliases": [
-				"Treecko"
-			]
+			"name": "Geckarbor"
 		},
 		{
 			"id": "grovyle",
-			"name": "Reptain",
-			"aliases": [
-				"Grovyle"
-			]
+			"name": "Reptain"
 		},
 		{
 			"id": "sceptile",
-			"name": "Gewaldro",
-			"aliases": [
-				"Sceptile"
-			]
+			"name": "Gewaldro"
 		},
 		{
 			"id": "torchic",
-			"name": "Flemmli",
-			"aliases": [
-				"Torchic"
-			]
+			"name": "Flemmli"
 		},
 		{
 			"id": "combusken",
-			"name": "Jungglut",
-			"aliases": [
-				"Combusken"
-			]
+			"name": "Jungglut"
 		},
 		{
 			"id": "blaziken",
-			"name": "Lohgock",
-			"aliases": [
-				"Blaziken"
-			]
+			"name": "Lohgock"
 		},
 		{
 			"id": "mudkip",
-			"name": "Hydropi",
-			"aliases": [
-				"Mudkip"
-			]
+			"name": "Hydropi"
 		},
 		{
 			"id": "marshtomp",
-			"name": "Moorabbel",
-			"aliases": [
-				"Marshtomp"
-			]
+			"name": "Moorabbel"
 		},
 		{
 			"id": "swampert",
-			"name": "Sumpex",
-			"aliases": [
-				"Swampert"
-			]
+			"name": "Sumpex"
 		},
 		{
 			"id": "poochyena",
-			"name": "Fiffyen",
-			"aliases": [
-				"Poochyena"
-			]
+			"name": "Fiffyen"
 		},
 		{
 			"id": "mightyena",
-			"name": "Magnayen",
-			"aliases": [
-				"Mightyena"
-			]
+			"name": "Magnayen"
 		},
 		{
 			"id": "zigzagoon",
-			"name": "Zigzachs",
-			"aliases": [
-				"Zigzagoon"
-			]
+			"name": "Zigzachs"
 		},
 		{
 			"id": "linoone",
-			"name": "Geradaks",
-			"aliases": [
-				"Linoone"
-			]
+			"name": "Geradaks"
 		},
 		{
 			"id": "wurmple",
-			"name": "Waumpel",
-			"aliases": [
-				"Wurmple"
-			]
+			"name": "Waumpel"
 		},
 		{
 			"id": "silcoon",
-			"name": "Schaloko",
-			"aliases": [
-				"Silcoon"
-			]
+			"name": "Schaloko"
 		},
 		{
 			"id": "beautifly",
-			"name": "Papinella",
-			"aliases": [
-				"Beautifly"
-			]
+			"name": "Papinella"
 		},
 		{
 			"id": "cascoon",
-			"name": "Panekon",
-			"aliases": [
-				"Cascoon"
-			]
+			"name": "Panekon"
 		},
 		{
 			"id": "dustox",
-			"name": "Pudox",
-			"aliases": [
-				"Dustox"
-			]
+			"name": "Pudox"
 		},
 		{
 			"id": "lotad",
-			"name": "Loturzel",
-			"aliases": [
-				"Lotad"
-			]
+			"name": "Loturzel"
 		},
 		{
 			"id": "lombre",
-			"name": "Lombrero",
-			"aliases": [
-				"Lombre"
-			]
+			"name": "Lombrero"
 		},
 		{
 			"id": "ludicolo",
-			"name": "Kappalores",
-			"aliases": [
-				"Ludicolo"
-			]
+			"name": "Kappalores"
 		},
 		{
 			"id": "seedot",
-			"name": "Samurzel",
-			"aliases": [
-				"Seedot"
-			]
+			"name": "Samurzel"
 		},
 		{
 			"id": "nuzleaf",
-			"name": "Blanas",
-			"aliases": [
-				"Nuzleaf"
-			]
+			"name": "Blanas"
 		},
 		{
 			"id": "shiftry",
-			"name": "Tengulist",
-			"aliases": [
-				"Shiftry"
-			]
+			"name": "Tengulist"
 		},
 		{
 			"id": "taillow",
-			"name": "Schwalbini",
-			"aliases": [
-				"Taillow"
-			]
+			"name": "Schwalbini"
 		},
 		{
 			"id": "swellow",
-			"name": "Schwalboss",
-			"aliases": [
-				"Swellow"
-			]
+			"name": "Schwalboss"
 		},
 		{
 			"id": "wingull",
-			"name": "Wingull",
-			"aliases": [
-				"Wingull"
-			]
+			"name": "Wingull"
 		},
 		{
 			"id": "pelipper",
-			"name": "Pelipper",
-			"aliases": [
-				"Pelipper"
-			]
+			"name": "Pelipper"
 		},
 		{
 			"id": "ralts",
-			"name": "Trasla",
-			"aliases": [
-				"Ralts"
-			]
+			"name": "Trasla"
 		},
 		{
 			"id": "kirlia",
-			"name": "Kirlia",
-			"aliases": [
-				"Kirlia"
-			]
+			"name": "Kirlia"
 		},
 		{
 			"id": "gardevoir",
-			"name": "Guardevoir",
-			"aliases": [
-				"Gardevoir"
-			]
+			"name": "Guardevoir"
 		},
 		{
 			"id": "surskit",
-			"name": "Gehweiher",
-			"aliases": [
-				"Surskit"
-			]
+			"name": "Gehweiher"
 		},
 		{
 			"id": "masquerain",
-			"name": "Maskeregen",
-			"aliases": [
-				"Masquerain"
-			]
+			"name": "Maskeregen"
 		},
 		{
 			"id": "shroomish",
-			"name": "Knilz",
-			"aliases": [
-				"Shroomish"
-			]
+			"name": "Knilz"
 		},
 		{
 			"id": "breloom",
-			"name": "Kapilz",
-			"aliases": [
-				"Breloom"
-			]
+			"name": "Kapilz"
 		},
 		{
 			"id": "slakoth",
-			"name": "Bummelz",
-			"aliases": [
-				"Slakoth"
-			]
+			"name": "Bummelz"
 		},
 		{
 			"id": "vigoroth",
-			"name": "Muntier",
-			"aliases": [
-				"Vigoroth"
-			]
+			"name": "Muntier"
 		},
 		{
 			"id": "slaking",
-			"name": "Letarking",
-			"aliases": [
-				"Slaking"
-			]
+			"name": "Letarking"
 		},
 		{
 			"id": "nincada",
-			"name": "Nincada",
-			"aliases": [
-				"Nincada"
-			]
+			"name": "Nincada"
 		},
 		{
 			"id": "ninjask",
-			"name": "Ninjask",
-			"aliases": [
-				"Ninjask"
-			]
+			"name": "Ninjask"
 		},
 		{
 			"id": "shedinja",
-			"name": "Ninjatom",
-			"aliases": [
-				"Shedinja"
-			]
+			"name": "Ninjatom"
 		},
 		{
 			"id": "whismur",
-			"name": "Flurmel",
-			"aliases": [
-				"Whismur"
-			]
+			"name": "Flurmel"
 		},
 		{
 			"id": "loudred",
-			"name": "Krakeelo",
-			"aliases": [
-				"Loudred"
-			]
+			"name": "Krakeelo"
 		},
 		{
 			"id": "exploud",
-			"name": "Krawumms",
-			"aliases": [
-				"Exploud"
-			]
+			"name": "Krawumms"
 		},
 		{
 			"id": "makuhita",
-			"name": "Makuhita",
-			"aliases": [
-				"Makuhita"
-			]
+			"name": "Makuhita"
 		},
 		{
 			"id": "hariyama",
-			"name": "Hariyama",
-			"aliases": [
-				"Hariyama"
-			]
+			"name": "Hariyama"
 		},
 		{
 			"id": "azurill",
-			"name": "Azurill",
-			"aliases": [
-				"Azurill"
-			]
+			"name": "Azurill"
 		},
 		{
 			"id": "nosepass",
-			"name": "Nasgnet",
-			"aliases": [
-				"Nosepass"
-			]
+			"name": "Nasgnet"
 		},
 		{
 			"id": "skitty",
-			"name": "Eneco",
-			"aliases": [
-				"Skitty"
-			]
+			"name": "Eneco"
 		},
 		{
 			"id": "delcatty",
-			"name": "Enekoro",
-			"aliases": [
-				"Delcatty"
-			]
+			"name": "Enekoro"
 		},
 		{
 			"id": "sableye",
-			"name": "Zobiris",
-			"aliases": [
-				"Sableye"
-			]
+			"name": "Zobiris"
 		},
 		{
 			"id": "mawile",
-			"name": "Flunkifer",
-			"aliases": [
-				"Mawile"
-			]
+			"name": "Flunkifer"
 		},
 		{
 			"id": "aron",
-			"name": "Stollunior",
-			"aliases": [
-				"Aron"
-			]
+			"name": "Stollunior"
 		},
 		{
 			"id": "lairon",
-			"name": "Stollrak",
-			"aliases": [
-				"Lairon"
-			]
+			"name": "Stollrak"
 		},
 		{
 			"id": "aggron",
-			"name": "Stolloss",
-			"aliases": [
-				"Aggron"
-			]
+			"name": "Stolloss"
 		},
 		{
 			"id": "meditite",
-			"name": "Meditie",
-			"aliases": [
-				"Meditite"
-			]
+			"name": "Meditie"
 		},
 		{
 			"id": "medicham",
-			"name": "Meditalis",
-			"aliases": [
-				"Medicham"
-			]
+			"name": "Meditalis"
 		},
 		{
 			"id": "electrike",
-			"name": "Frizelbliz",
-			"aliases": [
-				"Electrike"
-			]
+			"name": "Frizelbliz"
 		},
 		{
 			"id": "manectric",
-			"name": "Voltenso",
-			"aliases": [
-				"Manectric"
-			]
+			"name": "Voltenso"
 		},
 		{
 			"id": "plusle",
-			"name": "Plusle",
-			"aliases": [
-				"Plusle"
-			]
+			"name": "Plusle"
 		},
 		{
 			"id": "minun",
-			"name": "Minun",
-			"aliases": [
-				"Minun"
-			]
+			"name": "Minun"
 		},
 		{
 			"id": "volbeat",
-			"name": "Volbeat",
-			"aliases": [
-				"Volbeat"
-			]
+			"name": "Volbeat"
 		},
 		{
 			"id": "illumise",
-			"name": "Illumise",
-			"aliases": [
-				"Illumise"
-			]
+			"name": "Illumise"
 		},
 		{
 			"id": "roselia",
-			"name": "Roselia",
-			"aliases": [
-				"Roselia"
-			]
+			"name": "Roselia"
 		},
 		{
 			"id": "gulpin",
-			"name": "Schluppuck",
-			"aliases": [
-				"Gulpin"
-			]
+			"name": "Schluppuck"
 		},
 		{
 			"id": "swalot",
-			"name": "Schlukwech",
-			"aliases": [
-				"Swalot"
-			]
+			"name": "Schlukwech"
 		},
 		{
 			"id": "carvanha",
-			"name": "Kanivanha",
-			"aliases": [
-				"Carvanha"
-			]
+			"name": "Kanivanha"
 		},
 		{
 			"id": "sharpedo",
-			"name": "Tohaido",
-			"aliases": [
-				"Sharpedo"
-			]
+			"name": "Tohaido"
 		},
 		{
 			"id": "wailmer",
-			"name": "Wailmer",
-			"aliases": [
-				"Wailmer"
-			]
+			"name": "Wailmer"
 		},
 		{
 			"id": "wailord",
-			"name": "Wailord",
-			"aliases": [
-				"Wailord"
-			]
+			"name": "Wailord"
 		},
 		{
 			"id": "numel",
-			"name": "Camaub",
-			"aliases": [
-				"Numel"
-			]
+			"name": "Camaub"
 		},
 		{
 			"id": "camerupt",
-			"name": "Camerupt",
-			"aliases": [
-				"Camerupt"
-			]
+			"name": "Camerupt"
 		},
 		{
 			"id": "torkoal",
-			"name": "Qurtel",
-			"aliases": [
-				"Torkoal"
-			]
+			"name": "Qurtel"
 		},
 		{
 			"id": "spoink",
-			"name": "Spoink",
-			"aliases": [
-				"Spoink"
-			]
+			"name": "Spoink"
 		},
 		{
 			"id": "grumpig",
-			"name": "Groink",
-			"aliases": [
-				"Grumpig"
-			]
+			"name": "Groink"
 		},
 		{
 			"id": "spinda",
-			"name": "Pandir",
-			"aliases": [
-				"Spinda"
-			]
+			"name": "Pandir"
 		},
 		{
 			"id": "trapinch",
-			"name": "Knacklion",
-			"aliases": [
-				"Trapinch"
-			]
+			"name": "Knacklion"
 		},
 		{
 			"id": "vibrava",
-			"name": "Vibrava",
-			"aliases": [
-				"Vibrava"
-			]
+			"name": "Vibrava"
 		},
 		{
 			"id": "flygon",
-			"name": "Libelldra",
-			"aliases": [
-				"Flygon"
-			]
+			"name": "Libelldra"
 		},
 		{
 			"id": "cacnea",
-			"name": "Tuska",
-			"aliases": [
-				"Cacnea"
-			]
+			"name": "Tuska"
 		},
 		{
 			"id": "cacturne",
-			"name": "Noktuska",
-			"aliases": [
-				"Cacturne"
-			]
+			"name": "Noktuska"
 		},
 		{
 			"id": "swablu",
-			"name": "Wablu",
-			"aliases": [
-				"Swablu"
-			]
+			"name": "Wablu"
 		},
 		{
 			"id": "altaria",
-			"name": "Altaria",
-			"aliases": [
-				"Altaria"
-			]
+			"name": "Altaria"
 		},
 		{
 			"id": "zangoose",
-			"name": "Sengo",
-			"aliases": [
-				"Zangoose"
-			]
+			"name": "Sengo"
 		},
 		{
 			"id": "seviper",
-			"name": "Vipitis",
-			"aliases": [
-				"Seviper"
-			]
+			"name": "Vipitis"
 		},
 		{
 			"id": "lunatone",
-			"name": "Lunastein",
-			"aliases": [
-				"Lunatone"
-			]
+			"name": "Lunastein"
 		},
 		{
 			"id": "solrock",
-			"name": "Sonnfel",
-			"aliases": [
-				"Solrock"
-			]
+			"name": "Sonnfel"
 		},
 		{
 			"id": "barboach",
-			"name": "Schmerbe",
-			"aliases": [
-				"Barboach"
-			]
+			"name": "Schmerbe"
 		},
 		{
 			"id": "whiscash",
-			"name": "Welsar",
-			"aliases": [
-				"Whiscash"
-			]
+			"name": "Welsar"
 		},
 		{
 			"id": "corphish",
-			"name": "Krebscorps",
-			"aliases": [
-				"Corphish"
-			]
+			"name": "Krebscorps"
 		},
 		{
 			"id": "crawdaunt",
-			"name": "Krebutack",
-			"aliases": [
-				"Crawdaunt"
-			]
+			"name": "Krebutack"
 		},
 		{
 			"id": "baltoy",
-			"name": "Puppance",
-			"aliases": [
-				"Baltoy"
-			]
+			"name": "Puppance"
 		},
 		{
 			"id": "claydol",
-			"name": "Lepumentas",
-			"aliases": [
-				"Claydol"
-			]
+			"name": "Lepumentas"
 		},
 		{
 			"id": "lileep",
-			"name": "Liliep",
-			"aliases": [
-				"Lileep"
-			]
+			"name": "Liliep"
 		},
 		{
 			"id": "cradily",
-			"name": "Wielie",
-			"aliases": [
-				"Cradily"
-			]
+			"name": "Wielie"
 		},
 		{
 			"id": "anorith",
-			"name": "Anorith",
-			"aliases": [
-				"Anorith"
-			]
+			"name": "Anorith"
 		},
 		{
 			"id": "armaldo",
-			"name": "Armaldo",
-			"aliases": [
-				"Armaldo"
-			]
+			"name": "Armaldo"
 		},
 		{
 			"id": "feebas",
-			"name": "Barschwa",
-			"aliases": [
-				"Feebas"
-			]
+			"name": "Barschwa"
 		},
 		{
 			"id": "milotic",
-			"name": "Milotic",
-			"aliases": [
-				"Milotic"
-			]
+			"name": "Milotic"
 		},
 		{
 			"id": "castform",
-			"name": "Formeo",
-			"aliases": [
-				"Castform"
-			]
+			"name": "Formeo"
 		},
 		{
 			"id": "kecleon",
-			"name": "Kecleon",
-			"aliases": [
-				"Kecleon"
-			]
+			"name": "Kecleon"
 		},
 		{
 			"id": "shuppet",
-			"name": "Shuppet",
-			"aliases": [
-				"Shuppet"
-			]
+			"name": "Shuppet"
 		},
 		{
 			"id": "banette",
-			"name": "Banette",
-			"aliases": [
-				"Banette"
-			]
+			"name": "Banette"
 		},
 		{
 			"id": "duskull",
-			"name": "Zwirrlicht",
-			"aliases": [
-				"Duskull"
-			]
+			"name": "Zwirrlicht"
 		},
 		{
 			"id": "dusclops",
-			"name": "Zwirrklop",
-			"aliases": [
-				"Dusclops"
-			]
+			"name": "Zwirrklop"
 		},
 		{
 			"id": "tropius",
-			"name": "Tropius",
-			"aliases": [
-				"Tropius"
-			]
+			"name": "Tropius"
 		},
 		{
 			"id": "chimecho",
-			"name": "Palimpalim",
-			"aliases": [
-				"Chimecho"
-			]
+			"name": "Palimpalim"
 		},
 		{
 			"id": "absol",
-			"name": "Absol",
-			"aliases": [
-				"Absol"
-			]
+			"name": "Absol"
 		},
 		{
 			"id": "wynaut",
-			"name": "Isso",
-			"aliases": [
-				"Wynaut"
-			]
+			"name": "Isso"
 		},
 		{
 			"id": "snorunt",
-			"name": "Schneppke",
-			"aliases": [
-				"Snorunt"
-			]
+			"name": "Schneppke"
 		},
 		{
 			"id": "glalie",
-			"name": "Firnontor",
-			"aliases": [
-				"Glalie"
-			]
+			"name": "Firnontor"
 		},
 		{
 			"id": "spheal",
-			"name": "Seemops",
-			"aliases": [
-				"Spheal"
-			]
+			"name": "Seemops"
 		},
 		{
 			"id": "sealeo",
-			"name": "Seejong",
-			"aliases": [
-				"Sealeo"
-			]
+			"name": "Seejong"
 		},
 		{
 			"id": "walrein",
-			"name": "Walraisa",
-			"aliases": [
-				"Walrein"
-			]
+			"name": "Walraisa"
 		},
 		{
 			"id": "clamperl",
-			"name": "Perlu",
-			"aliases": [
-				"Clamperl"
-			]
+			"name": "Perlu"
 		},
 		{
 			"id": "huntail",
-			"name": "Aalabyss",
-			"aliases": [
-				"Huntail"
-			]
+			"name": "Aalabyss"
 		},
 		{
 			"id": "gorebyss",
-			"name": "Saganabyss",
-			"aliases": [
-				"Gorebyss"
-			]
+			"name": "Saganabyss"
 		},
 		{
 			"id": "relicanth",
-			"name": "Relicanth",
-			"aliases": [
-				"Relicanth"
-			]
+			"name": "Relicanth"
 		},
 		{
 			"id": "luvdisc",
-			"name": "Liebiskus",
-			"aliases": [
-				"Luvdisc"
-			]
+			"name": "Liebiskus"
 		},
 		{
 			"id": "bagon",
-			"name": "Kindwurm",
-			"aliases": [
-				"Bagon"
-			]
+			"name": "Kindwurm"
 		},
 		{
 			"id": "shelgon",
-			"name": "Draschel",
-			"aliases": [
-				"Shelgon"
-			]
+			"name": "Draschel"
 		},
 		{
 			"id": "salamence",
-			"name": "Brutalanda",
-			"aliases": [
-				"Salamence"
-			]
+			"name": "Brutalanda"
 		},
 		{
 			"id": "beldum",
-			"name": "Tanhel",
-			"aliases": [
-				"Beldum"
-			]
+			"name": "Tanhel"
 		},
 		{
 			"id": "metang",
-			"name": "Metang",
-			"aliases": [
-				"Metang"
-			]
+			"name": "Metang"
 		},
 		{
 			"id": "metagross",
-			"name": "Metagross",
-			"aliases": [
-				"Metagross"
-			]
+			"name": "Metagross"
 		},
 		{
 			"id": "regirock",
-			"name": "Regirock",
-			"aliases": [
-				"Regirock"
-			]
+			"name": "Regirock"
 		},
 		{
 			"id": "regice",
-			"name": "Regice",
-			"aliases": [
-				"Regice"
-			]
+			"name": "Regice"
 		},
 		{
 			"id": "registeel",
-			"name": "Registeel",
-			"aliases": [
-				"Registeel"
-			]
+			"name": "Registeel"
 		},
 		{
 			"id": "latias",
-			"name": "Latias",
-			"aliases": [
-				"Latias"
-			]
+			"name": "Latias"
 		},
 		{
 			"id": "latios",
-			"name": "Latios",
-			"aliases": [
-				"Latios"
-			]
+			"name": "Latios"
 		},
 		{
 			"id": "kyogre",
-			"name": "Kyogre",
-			"aliases": [
-				"Kyogre"
-			]
+			"name": "Kyogre"
 		},
 		{
 			"id": "groudon",
-			"name": "Groudon",
-			"aliases": [
-				"Groudon"
-			]
+			"name": "Groudon"
 		},
 		{
 			"id": "rayquaza",
-			"name": "Rayquaza",
-			"aliases": [
-				"Rayquaza"
-			]
+			"name": "Rayquaza"
 		},
 		{
 			"id": "jirachi",
-			"name": "Jirachi",
-			"aliases": [
-				"Jirachi"
-			]
+			"name": "Jirachi"
 		},
 		{
 			"id": "deoxys",
-			"name": "Deoxys",
-			"aliases": [
-				"Deoxys"
-			]
+			"name": "Deoxys"
 		},
 		{
 			"id": "turtwig",
-			"name": "Chelast",
-			"aliases": [
-				"Turtwig"
-			]
+			"name": "Chelast"
 		},
 		{
 			"id": "grotle",
-			"name": "Chelcarain",
-			"aliases": [
-				"Grotle"
-			]
+			"name": "Chelcarain"
 		},
 		{
 			"id": "torterra",
-			"name": "Chelterrar",
-			"aliases": [
-				"Torterra"
-			]
+			"name": "Chelterrar"
 		},
 		{
 			"id": "chimchar",
-			"name": "Panflam",
-			"aliases": [
-				"Chimchar"
-			]
+			"name": "Panflam"
 		},
 		{
 			"id": "monferno",
-			"name": "Panpyro",
-			"aliases": [
-				"Monferno"
-			]
+			"name": "Panpyro"
 		},
 		{
 			"id": "infernape",
-			"name": "Panferno",
-			"aliases": [
-				"Infernape"
-			]
+			"name": "Panferno"
 		},
 		{
 			"id": "piplup",
-			"name": "Plinfa",
-			"aliases": [
-				"Piplup"
-			]
+			"name": "Plinfa"
 		},
 		{
 			"id": "prinplup",
-			"name": "Pliprin",
-			"aliases": [
-				"Prinplup"
-			]
+			"name": "Pliprin"
 		},
 		{
 			"id": "empoleon",
-			"name": "Impoleon",
-			"aliases": [
-				"Empoleon"
-			]
+			"name": "Impoleon"
 		},
 		{
 			"id": "starly",
-			"name": "Staralili",
-			"aliases": [
-				"Starly"
-			]
+			"name": "Staralili"
 		},
 		{
 			"id": "staravia",
-			"name": "Staravia",
-			"aliases": [
-				"Staravia"
-			]
+			"name": "Staravia"
 		},
 		{
 			"id": "staraptor",
-			"name": "Staraptor",
-			"aliases": [
-				"Staraptor"
-			]
+			"name": "Staraptor"
 		},
 		{
 			"id": "bidoof",
-			"name": "Bidiza",
-			"aliases": [
-				"Bidoof"
-			]
+			"name": "Bidiza"
 		},
 		{
 			"id": "bibarel",
-			"name": "Bidifas",
-			"aliases": [
-				"Bibarel"
-			]
+			"name": "Bidifas"
 		},
 		{
 			"id": "kricketot",
-			"name": "Zirpurze",
-			"aliases": [
-				"Kricketot"
-			]
+			"name": "Zirpurze"
 		},
 		{
 			"id": "kricketune",
-			"name": "Zirpeise",
-			"aliases": [
-				"Kricketune"
-			]
+			"name": "Zirpeise"
 		},
 		{
 			"id": "shinx",
-			"name": "Sheinux",
-			"aliases": [
-				"Shinx"
-			]
+			"name": "Sheinux"
 		},
 		{
 			"id": "luxio",
-			"name": "Luxio",
-			"aliases": [
-				"Luxio"
-			]
+			"name": "Luxio"
 		},
 		{
 			"id": "luxray",
-			"name": "Luxtra",
-			"aliases": [
-				"Luxray"
-			]
+			"name": "Luxtra"
 		},
 		{
 			"id": "budew",
-			"name": "Knospi",
-			"aliases": [
-				"Budew"
-			]
+			"name": "Knospi"
 		},
 		{
 			"id": "roserade",
-			"name": "Roserade",
-			"aliases": [
-				"Roserade"
-			]
+			"name": "Roserade"
 		},
 		{
 			"id": "cranidos",
-			"name": "Koknodon",
-			"aliases": [
-				"Cranidos"
-			]
+			"name": "Koknodon"
 		},
 		{
 			"id": "rampardos",
-			"name": "Rameidon",
-			"aliases": [
-				"Rampardos"
-			]
+			"name": "Rameidon"
 		},
 		{
 			"id": "shieldon",
-			"name": "Schilterus",
-			"aliases": [
-				"Shieldon"
-			]
+			"name": "Schilterus"
 		},
 		{
 			"id": "bastiodon",
-			"name": "Bollterus",
-			"aliases": [
-				"Bastiodon"
-			]
+			"name": "Bollterus"
 		},
 		{
 			"id": "burmy",
-			"name": "Burmy",
-			"aliases": [
-				"Burmy"
-			]
+			"name": "Burmy"
 		},
 		{
 			"id": "mothim",
-			"name": "Moterpel",
-			"aliases": [
-				"Mothim"
-			]
+			"name": "Moterpel"
 		},
 		{
 			"id": "combee",
-			"name": "Wadribie",
-			"aliases": [
-				"Combee"
-			]
+			"name": "Wadribie"
 		},
 		{
 			"id": "vespiquen",
-			"name": "Honweisel",
-			"aliases": [
-				"Vespiquen"
-			]
+			"name": "Honweisel"
 		},
 		{
 			"id": "pachirisu",
-			"name": "Pachirisu",
-			"aliases": [
-				"Pachirisu"
-			]
+			"name": "Pachirisu"
 		},
 		{
 			"id": "buizel",
-			"name": "Bamelin",
-			"aliases": [
-				"Buizel"
-			]
+			"name": "Bamelin"
 		},
 		{
 			"id": "floatzel",
-			"name": "Bojelin",
-			"aliases": [
-				"Floatzel"
-			]
+			"name": "Bojelin"
 		},
 		{
 			"id": "cherubi",
-			"name": "Kikugi",
-			"aliases": [
-				"Cherubi"
-			]
+			"name": "Kikugi"
 		},
 		{
 			"id": "cherrim",
-			"name": "Kinoso",
-			"aliases": [
-				"Cherrim"
-			]
+			"name": "Kinoso"
 		},
 		{
 			"id": "shellos",
-			"name": "Schalellos",
-			"aliases": [
-				"Shellos"
-			]
+			"name": "Schalellos"
 		},
 		{
 			"id": "gastrodon",
-			"name": "Gastrodon",
-			"aliases": [
-				"Gastrodon"
-			]
+			"name": "Gastrodon"
 		},
 		{
 			"id": "ambipom",
-			"name": "Ambidiffel",
-			"aliases": [
-				"Ambipom"
-			]
+			"name": "Ambidiffel"
 		},
 		{
 			"id": "drifloon",
-			"name": "Driftlon",
-			"aliases": [
-				"Drifloon"
-			]
+			"name": "Driftlon"
 		},
 		{
 			"id": "drifblim",
-			"name": "Drifzepeli",
-			"aliases": [
-				"Drifblim"
-			]
+			"name": "Drifzepeli"
 		},
 		{
 			"id": "buneary",
-			"name": "Haspiror",
-			"aliases": [
-				"Buneary"
-			]
+			"name": "Haspiror"
 		},
 		{
 			"id": "lopunny",
-			"name": "Schlapor",
-			"aliases": [
-				"Lopunny"
-			]
+			"name": "Schlapor"
 		},
 		{
 			"id": "mismagius",
-			"name": "Traunmagil",
-			"aliases": [
-				"Mismagius"
-			]
+			"name": "Traunmagil"
 		},
 		{
 			"id": "honchkrow",
-			"name": "Kramshef",
-			"aliases": [
-				"Honchkrow"
-			]
+			"name": "Kramshef"
 		},
 		{
 			"id": "glameow",
-			"name": "Charmian",
-			"aliases": [
-				"Glameow"
-			]
+			"name": "Charmian"
 		},
 		{
 			"id": "purugly",
-			"name": "Shnurgarst",
-			"aliases": [
-				"Purugly"
-			]
+			"name": "Shnurgarst"
 		},
 		{
 			"id": "chingling",
-			"name": "Klingplim",
-			"aliases": [
-				"Chingling"
-			]
+			"name": "Klingplim"
 		},
 		{
 			"id": "stunky",
-			"name": "Skunkapuh",
-			"aliases": [
-				"Stunky"
-			]
+			"name": "Skunkapuh"
 		},
 		{
 			"id": "skuntank",
-			"name": "Skuntank",
-			"aliases": [
-				"Skuntank"
-			]
+			"name": "Skuntank"
 		},
 		{
 			"id": "bronzor",
-			"name": "Bronzel",
-			"aliases": [
-				"Bronzor"
-			]
+			"name": "Bronzel"
 		},
 		{
 			"id": "bronzong",
-			"name": "Bronzong",
-			"aliases": [
-				"Bronzong"
-			]
+			"name": "Bronzong"
 		},
 		{
 			"id": "bonsly",
-			"name": "Mobai",
-			"aliases": [
-				"Bonsly"
-			]
+			"name": "Mobai"
 		},
 		{
 			"id": "mime-jr",
-			"name": "Pantimimi",
-			"aliases": [
-				"Mime Jr."
-			]
+			"name": "Pantimimi"
 		},
 		{
 			"id": "happiny",
-			"name": "Wonneira",
-			"aliases": [
-				"Happiny"
-			]
+			"name": "Wonneira"
 		},
 		{
 			"id": "chatot",
-			"name": "Plaudagei",
-			"aliases": [
-				"Chatot"
-			]
+			"name": "Plaudagei"
 		},
 		{
 			"id": "spiritomb",
-			"name": "Kryppuk",
-			"aliases": [
-				"Spiritomb"
-			]
+			"name": "Kryppuk"
 		},
 		{
 			"id": "gible",
-			"name": "Kaumalat",
-			"aliases": [
-				"Gible"
-			]
+			"name": "Kaumalat"
 		},
 		{
 			"id": "gabite",
-			"name": "Knarksel",
-			"aliases": [
-				"Gabite"
-			]
+			"name": "Knarksel"
 		},
 		{
 			"id": "garchomp",
-			"name": "Knakrack",
-			"aliases": [
-				"Garchomp"
-			]
+			"name": "Knakrack"
 		},
 		{
 			"id": "munchlax",
-			"name": "Mampfaxo",
-			"aliases": [
-				"Munchlax"
-			]
+			"name": "Mampfaxo"
 		},
 		{
 			"id": "riolu",
-			"name": "Riolu",
-			"aliases": [
-				"Riolu"
-			]
+			"name": "Riolu"
 		},
 		{
 			"id": "lucario",
-			"name": "Lucario",
-			"aliases": [
-				"Lucario"
-			]
+			"name": "Lucario"
 		},
 		{
 			"id": "hippopotas",
-			"name": "Hippopotas",
-			"aliases": [
-				"Hippopotas"
-			]
+			"name": "Hippopotas"
 		},
 		{
 			"id": "hippowdon",
-			"name": "Hippoterus",
-			"aliases": [
-				"Hippowdon"
-			]
+			"name": "Hippoterus"
 		},
 		{
 			"id": "skorupi",
-			"name": "Pionskora",
-			"aliases": [
-				"Skorupi"
-			]
+			"name": "Pionskora"
 		},
 		{
 			"id": "drapion",
-			"name": "Piondragi",
-			"aliases": [
-				"Drapion"
-			]
+			"name": "Piondragi"
 		},
 		{
 			"id": "croagunk",
-			"name": "Glibunkel",
-			"aliases": [
-				"Croagunk"
-			]
+			"name": "Glibunkel"
 		},
 		{
 			"id": "toxicroak",
-			"name": "Toxiquak",
-			"aliases": [
-				"Toxicroak"
-			]
+			"name": "Toxiquak"
 		},
 		{
 			"id": "carnivine",
-			"name": "Venuflibis",
-			"aliases": [
-				"Carnivine"
-			]
+			"name": "Venuflibis"
 		},
 		{
 			"id": "finneon",
-			"name": "Finneon",
-			"aliases": [
-				"Finneon"
-			]
+			"name": "Finneon"
 		},
 		{
 			"id": "lumineon",
-			"name": "Lumineon",
-			"aliases": [
-				"Lumineon"
-			]
+			"name": "Lumineon"
 		},
 		{
 			"id": "mantyke",
-			"name": "Mantirps",
-			"aliases": [
-				"Mantyke"
-			]
+			"name": "Mantirps"
 		},
 		{
 			"id": "snover",
-			"name": "Shnebedeck",
-			"aliases": [
-				"Snover"
-			]
+			"name": "Shnebedeck"
 		},
 		{
 			"id": "abomasnow",
-			"name": "Rexblisar",
-			"aliases": [
-				"Abomasnow"
-			]
+			"name": "Rexblisar"
 		},
 		{
 			"id": "weavile",
-			"name": "Snibunna",
-			"aliases": [
-				"Weavile"
-			]
+			"name": "Snibunna"
 		},
 		{
 			"id": "magnezone",
-			"name": "Magnezone",
-			"aliases": [
-				"Magnezone"
-			]
+			"name": "Magnezone"
 		},
 		{
 			"id": "lickilicky",
-			"name": "Schlurplek",
-			"aliases": [
-				"Lickilicky"
-			]
+			"name": "Schlurplek"
 		},
 		{
 			"id": "rhyperior",
-			"name": "Rihornior",
-			"aliases": [
-				"Rhyperior"
-			]
+			"name": "Rihornior"
 		},
 		{
 			"id": "tangrowth",
-			"name": "Tangoloss",
-			"aliases": [
-				"Tangrowth"
-			]
+			"name": "Tangoloss"
 		},
 		{
 			"id": "electivire",
-			"name": "Elevoltek",
-			"aliases": [
-				"Electivire"
-			]
+			"name": "Elevoltek"
 		},
 		{
 			"id": "magmortar",
-			"name": "Magbrant",
-			"aliases": [
-				"Magmortar"
-			]
+			"name": "Magbrant"
 		},
 		{
 			"id": "togekiss",
-			"name": "Togekiss",
-			"aliases": [
-				"Togekiss"
-			]
+			"name": "Togekiss"
 		},
 		{
 			"id": "yanmega",
-			"name": "Yanmega",
-			"aliases": [
-				"Yanmega"
-			]
+			"name": "Yanmega"
 		},
 		{
 			"id": "leafeon",
-			"name": "Folipurba",
-			"aliases": [
-				"Leafeon"
-			]
+			"name": "Folipurba"
 		},
 		{
 			"id": "glaceon",
-			"name": "Glaziola",
-			"aliases": [
-				"Glaceon"
-			]
+			"name": "Glaziola"
 		},
 		{
 			"id": "gliscor",
-			"name": "Skorgro",
-			"aliases": [
-				"Gliscor"
-			]
+			"name": "Skorgro"
 		},
 		{
 			"id": "mamoswine",
-			"name": "Mamutel",
-			"aliases": [
-				"Mamoswine"
-			]
+			"name": "Mamutel"
 		},
 		{
 			"id": "porygon-z",
-			"name": "Porygon-Z",
-			"aliases": [
-				"Porygon-Z"
-			]
+			"name": "Porygon-Z"
 		},
 		{
 			"id": "gallade",
-			"name": "Galagladi",
-			"aliases": [
-				"Gallade"
-			]
+			"name": "Galagladi"
 		},
 		{
 			"id": "probopass",
-			"name": "Voluminas",
-			"aliases": [
-				"Probopass"
-			]
+			"name": "Voluminas"
 		},
 		{
 			"id": "dusknoir",
-			"name": "Zwirrfinst",
-			"aliases": [
-				"Dusknoir"
-			]
+			"name": "Zwirrfinst"
 		},
 		{
 			"id": "froslass",
-			"name": "Frosdedje",
-			"aliases": [
-				"Froslass"
-			]
+			"name": "Frosdedje"
 		},
 		{
 			"id": "rotom",
-			"name": "Rotom",
-			"aliases": [
-				"Rotom"
-			]
+			"name": "Rotom"
 		},
 		{
 			"id": "uxie",
-			"name": "Selfe",
-			"aliases": [
-				"Uxie"
-			]
+			"name": "Selfe"
 		},
 		{
 			"id": "mesprit",
-			"name": "Vesprit",
-			"aliases": [
-				"Mesprit"
-			]
+			"name": "Vesprit"
 		},
 		{
 			"id": "azelf",
-			"name": "Tobutz",
-			"aliases": [
-				"Azelf"
-			]
+			"name": "Tobutz"
 		},
 		{
 			"id": "dialga",
-			"name": "Dialga",
-			"aliases": [
-				"Dialga"
-			]
+			"name": "Dialga"
 		},
 		{
 			"id": "palkia",
-			"name": "Palkia",
-			"aliases": [
-				"Palkia"
-			]
+			"name": "Palkia"
 		},
 		{
 			"id": "heatran",
-			"name": "Heatran",
-			"aliases": [
-				"Heatran"
-			]
+			"name": "Heatran"
 		},
 		{
 			"id": "regigigas",
-			"name": "Regigigas",
-			"aliases": [
-				"Regigigas"
-			]
+			"name": "Regigigas"
 		},
 		{
 			"id": "cresselia",
-			"name": "Cresselia",
-			"aliases": [
-				"Cresselia"
-			]
+			"name": "Cresselia"
 		},
 		{
 			"id": "phione",
-			"name": "Phione",
-			"aliases": [
-				"Phione"
-			]
+			"name": "Phione"
 		},
 		{
 			"id": "manaphy",
-			"name": "Manaphy",
-			"aliases": [
-				"Manaphy"
-			]
+			"name": "Manaphy"
 		},
 		{
 			"id": "darkrai",
-			"name": "Darkrai",
-			"aliases": [
-				"Darkrai"
-			]
+			"name": "Darkrai"
 		},
 		{
 			"id": "arceus",
-			"name": "Arceus",
-			"aliases": [
-				"Arceus"
-			]
+			"name": "Arceus"
 		},
 		{
 			"id": "victini",
-			"name": "Victini",
-			"aliases": [
-				"Victini"
-			]
+			"name": "Victini"
 		},
 		{
 			"id": "snivy",
-			"name": "Serpifeu",
-			"aliases": [
-				"Snivy"
-			]
+			"name": "Serpifeu"
 		},
 		{
 			"id": "servine",
-			"name": "Efoserp",
-			"aliases": [
-				"Servine"
-			]
+			"name": "Efoserp"
 		},
 		{
 			"id": "serperior",
-			"name": "Serpiroyal",
-			"aliases": [
-				"Serperior"
-			]
+			"name": "Serpiroyal"
 		},
 		{
 			"id": "tepig",
-			"name": "Floink",
-			"aliases": [
-				"Tepig"
-			]
+			"name": "Floink"
 		},
 		{
 			"id": "pignite",
-			"name": "Ferkokel",
-			"aliases": [
-				"Pignite"
-			]
+			"name": "Ferkokel"
 		},
 		{
 			"id": "emboar",
-			"name": "Flambirex",
-			"aliases": [
-				"Emboar"
-			]
+			"name": "Flambirex"
 		},
 		{
 			"id": "oshawott",
-			"name": "Ottaro",
-			"aliases": [
-				"Oshawott"
-			]
+			"name": "Ottaro"
 		},
 		{
 			"id": "dewott",
-			"name": "Zwottronin",
-			"aliases": [
-				"Dewott"
-			]
+			"name": "Zwottronin"
 		},
 		{
 			"id": "samurott",
-			"name": "Admurai",
-			"aliases": [
-				"Samurott"
-			]
+			"name": "Admurai"
 		},
 		{
 			"id": "patrat",
-			"name": "Nagelotz",
-			"aliases": [
-				"Patrat"
-			]
+			"name": "Nagelotz"
 		},
 		{
 			"id": "watchog",
-			"name": "Kukmarda",
-			"aliases": [
-				"Watchog"
-			]
+			"name": "Kukmarda"
 		},
 		{
 			"id": "lillipup",
-			"name": "Yorkleff",
-			"aliases": [
-				"Lillipup"
-			]
+			"name": "Yorkleff"
 		},
 		{
 			"id": "herdier",
-			"name": "Terribark",
-			"aliases": [
-				"Herdier"
-			]
+			"name": "Terribark"
 		},
 		{
 			"id": "stoutland",
-			"name": "Bissbark",
-			"aliases": [
-				"Stoutland"
-			]
+			"name": "Bissbark"
 		},
 		{
 			"id": "purrloin",
-			"name": "Felilou",
-			"aliases": [
-				"Purrloin"
-			]
+			"name": "Felilou"
 		},
 		{
 			"id": "liepard",
-			"name": "Kleoparda",
-			"aliases": [
-				"Liepard"
-			]
+			"name": "Kleoparda"
 		},
 		{
 			"id": "pansage",
-			"name": "Vegimak",
-			"aliases": [
-				"Pansage"
-			]
+			"name": "Vegimak"
 		},
 		{
 			"id": "simisage",
-			"name": "Vegichita",
-			"aliases": [
-				"Simisage"
-			]
+			"name": "Vegichita"
 		},
 		{
 			"id": "pansear",
-			"name": "Grillmak",
-			"aliases": [
-				"Pansear"
-			]
+			"name": "Grillmak"
 		},
 		{
 			"id": "simisear",
-			"name": "Grillchita",
-			"aliases": [
-				"Simisear"
-			]
+			"name": "Grillchita"
 		},
 		{
 			"id": "panpour",
-			"name": "Sodamak",
-			"aliases": [
-				"Panpour"
-			]
+			"name": "Sodamak"
 		},
 		{
 			"id": "simipour",
-			"name": "Sodachita",
-			"aliases": [
-				"Simipour"
-			]
+			"name": "Sodachita"
 		},
 		{
 			"id": "munna",
-			"name": "Somniam",
-			"aliases": [
-				"Munna"
-			]
+			"name": "Somniam"
 		},
 		{
 			"id": "musharna",
-			"name": "Somnivora",
-			"aliases": [
-				"Musharna"
-			]
+			"name": "Somnivora"
 		},
 		{
 			"id": "pidove",
-			"name": "Dusselgurr",
-			"aliases": [
-				"Pidove"
-			]
+			"name": "Dusselgurr"
 		},
 		{
 			"id": "tranquill",
-			"name": "Navitaub",
-			"aliases": [
-				"Tranquill"
-			]
+			"name": "Navitaub"
 		},
 		{
 			"id": "unfezant",
-			"name": "Fasasnob",
-			"aliases": [
-				"Unfezant"
-			]
+			"name": "Fasasnob"
 		},
 		{
 			"id": "blitzle",
-			"name": "Elezeba",
-			"aliases": [
-				"Blitzle"
-			]
+			"name": "Elezeba"
 		},
 		{
 			"id": "zebstrika",
-			"name": "Zebritz",
-			"aliases": [
-				"Zebstrika"
-			]
+			"name": "Zebritz"
 		},
 		{
 			"id": "roggenrola",
-			"name": "Kiesling",
-			"aliases": [
-				"Roggenrola"
-			]
+			"name": "Kiesling"
 		},
 		{
 			"id": "boldore",
-			"name": "Sedimantur",
-			"aliases": [
-				"Boldore"
-			]
+			"name": "Sedimantur"
 		},
 		{
 			"id": "gigalith",
-			"name": "Brockoloss",
-			"aliases": [
-				"Gigalith"
-			]
+			"name": "Brockoloss"
 		},
 		{
 			"id": "woobat",
-			"name": "Fleknoil",
-			"aliases": [
-				"Woobat"
-			]
+			"name": "Fleknoil"
 		},
 		{
 			"id": "swoobat",
-			"name": "Fletiamo",
-			"aliases": [
-				"Swoobat"
-			]
+			"name": "Fletiamo"
 		},
 		{
 			"id": "drilbur",
-			"name": "Rotomurf",
-			"aliases": [
-				"Drilbur"
-			]
+			"name": "Rotomurf"
 		},
 		{
 			"id": "excadrill",
-			"name": "Stalobor",
-			"aliases": [
-				"Excadrill"
-			]
+			"name": "Stalobor"
 		},
 		{
 			"id": "audino",
-			"name": "Ohrdoch",
-			"aliases": [
-				"Audino"
-			]
+			"name": "Ohrdoch"
 		},
 		{
 			"id": "timburr",
-			"name": "Praktibalk",
-			"aliases": [
-				"Timburr"
-			]
+			"name": "Praktibalk"
 		},
 		{
 			"id": "gurdurr",
-			"name": "Strepoli",
-			"aliases": [
-				"Gurdurr"
-			]
+			"name": "Strepoli"
 		},
 		{
 			"id": "conkeldurr",
-			"name": "Meistagrif",
-			"aliases": [
-				"Conkeldurr"
-			]
+			"name": "Meistagrif"
 		},
 		{
 			"id": "tympole",
-			"name": "Schallquap",
-			"aliases": [
-				"Tympole"
-			]
+			"name": "Schallquap"
 		},
 		{
 			"id": "palpitoad",
-			"name": "Mebrana",
-			"aliases": [
-				"Palpitoad"
-			]
+			"name": "Mebrana"
 		},
 		{
 			"id": "seismitoad",
-			"name": "Branawarz",
-			"aliases": [
-				"Seismitoad"
-			]
+			"name": "Branawarz"
 		},
 		{
 			"id": "throh",
-			"name": "Jiutesto",
-			"aliases": [
-				"Throh"
-			]
+			"name": "Jiutesto"
 		},
 		{
 			"id": "sawk",
-			"name": "Karadonis",
-			"aliases": [
-				"Sawk"
-			]
+			"name": "Karadonis"
 		},
 		{
 			"id": "sewaddle",
-			"name": "Strawickl",
-			"aliases": [
-				"Sewaddle"
-			]
+			"name": "Strawickl"
 		},
 		{
 			"id": "swadloon",
-			"name": "Folikon",
-			"aliases": [
-				"Swadloon"
-			]
+			"name": "Folikon"
 		},
 		{
 			"id": "leavanny",
-			"name": "Matrifol",
-			"aliases": [
-				"Leavanny"
-			]
+			"name": "Matrifol"
 		},
 		{
 			"id": "venipede",
-			"name": "Toxiped",
-			"aliases": [
-				"Venipede"
-			]
+			"name": "Toxiped"
 		},
 		{
 			"id": "whirlipede",
-			"name": "Rollum",
-			"aliases": [
-				"Whirlipede"
-			]
+			"name": "Rollum"
 		},
 		{
 			"id": "scolipede",
-			"name": "Cerapendra",
-			"aliases": [
-				"Scolipede"
-			]
+			"name": "Cerapendra"
 		},
 		{
 			"id": "cottonee",
-			"name": "Waumboll",
-			"aliases": [
-				"Cottonee"
-			]
+			"name": "Waumboll"
 		},
 		{
 			"id": "whimsicott",
-			"name": "Elfun",
-			"aliases": [
-				"Whimsicott"
-			]
+			"name": "Elfun"
 		},
 		{
 			"id": "petilil",
-			"name": "Lilminip",
-			"aliases": [
-				"Petilil"
-			]
+			"name": "Lilminip"
 		},
 		{
 			"id": "lilligant",
-			"name": "Dressella",
-			"aliases": [
-				"Lilligant"
-			]
+			"name": "Dressella"
 		},
 		{
 			"id": "basculin",
-			"name": "Barschuft",
-			"aliases": [
-				"Basculin (Red)"
-			]
+			"name": "Barschuft"
 		},
 		{
 			"id": "sandile",
-			"name": "Ganovil",
-			"aliases": [
-				"Sandile"
-			]
+			"name": "Ganovil"
 		},
 		{
 			"id": "krokorok",
-			"name": "Rokkaiman",
-			"aliases": [
-				"Krokorok"
-			]
+			"name": "Rokkaiman"
 		},
 		{
 			"id": "krookodile",
-			"name": "Rabigator",
-			"aliases": [
-				"Krookodile"
-			]
+			"name": "Rabigator"
 		},
 		{
 			"id": "darumaka",
-			"name": "Flampion",
-			"aliases": [
-				"Darumaka"
-			]
+			"name": "Flampion"
 		},
 		{
 			"id": "darmanitan",
-			"name": "Flampivian",
-			"aliases": [
-				"Darmanitan"
-			]
+			"name": "Flampivian"
 		},
 		{
 			"id": "maractus",
-			"name": "Maracamba",
-			"aliases": [
-				"Maractus"
-			]
+			"name": "Maracamba"
 		},
 		{
 			"id": "dwebble",
-			"name": "Lithomith",
-			"aliases": [
-				"Dwebble"
-			]
+			"name": "Lithomith"
 		},
 		{
 			"id": "crustle",
-			"name": "Castellith",
-			"aliases": [
-				"Crustle"
-			]
+			"name": "Castellith"
 		},
 		{
 			"id": "scraggy",
-			"name": "Zurrokex",
-			"aliases": [
-				"Scraggy"
-			]
+			"name": "Zurrokex"
 		},
 		{
 			"id": "scrafty",
-			"name": "Irokex",
-			"aliases": [
-				"Scrafty"
-			]
+			"name": "Irokex"
 		},
 		{
 			"id": "sigilyph",
-			"name": "Symvolara",
-			"aliases": [
-				"Sigilyph"
-			]
+			"name": "Symvolara"
 		},
 		{
 			"id": "yamask",
-			"name": "Makabaja",
-			"aliases": [
-				"Yamask"
-			]
+			"name": "Makabaja"
 		},
 		{
 			"id": "cofagrigus",
-			"name": "Echnatoll",
-			"aliases": [
-				"Cofagrigus"
-			]
+			"name": "Echnatoll"
 		},
 		{
 			"id": "tirtouga",
-			"name": "Galapaflos",
-			"aliases": [
-				"Tirtouga"
-			]
+			"name": "Galapaflos"
 		},
 		{
 			"id": "carracosta",
-			"name": "Karippas",
-			"aliases": [
-				"Carracosta"
-			]
+			"name": "Karippas"
 		},
 		{
 			"id": "archen",
-			"name": "Flapteryx",
-			"aliases": [
-				"Archen"
-			]
+			"name": "Flapteryx"
 		},
 		{
 			"id": "archeops",
-			"name": "Aeropteryx",
-			"aliases": [
-				"Archeops"
-			]
+			"name": "Aeropteryx"
 		},
 		{
 			"id": "trubbish",
-			"name": "Unratütox",
-			"aliases": [
-				"Trubbish"
-			]
+			"name": "Unratütox"
 		},
 		{
 			"id": "garbodor",
-			"name": "Deponitox",
-			"aliases": [
-				"Garbodor"
-			]
+			"name": "Deponitox"
 		},
 		{
 			"id": "zorua",
-			"name": "Zorua",
-			"aliases": [
-				"Zorua"
-			]
+			"name": "Zorua"
 		},
 		{
 			"id": "zoroark",
-			"name": "Zoroark",
-			"aliases": [
-				"Zoroark"
-			]
+			"name": "Zoroark"
 		},
 		{
 			"id": "minccino",
-			"name": "Picochilla",
-			"aliases": [
-				"Minccino"
-			]
+			"name": "Picochilla"
 		},
 		{
 			"id": "cinccino",
-			"name": "Chillabell",
-			"aliases": [
-				"Cinccino"
-			]
+			"name": "Chillabell"
 		},
 		{
 			"id": "gothita",
-			"name": "Mollimorba",
-			"aliases": [
-				"Gothita"
-			]
+			"name": "Mollimorba"
 		},
 		{
 			"id": "gothorita",
-			"name": "Hypnomorba",
-			"aliases": [
-				"Gothorita"
-			]
+			"name": "Hypnomorba"
 		},
 		{
 			"id": "gothitelle",
-			"name": "Morbitesse",
-			"aliases": [
-				"Gothitelle"
-			]
+			"name": "Morbitesse"
 		},
 		{
 			"id": "solosis",
-			"name": "Monozyto",
-			"aliases": [
-				"Solosis"
-			]
+			"name": "Monozyto"
 		},
 		{
 			"id": "duosion",
-			"name": "Mitodos",
-			"aliases": [
-				"Duosion"
-			]
+			"name": "Mitodos"
 		},
 		{
 			"id": "reuniclus",
-			"name": "Zytomega",
-			"aliases": [
-				"Reuniclus"
-			]
+			"name": "Zytomega"
 		},
 		{
 			"id": "ducklett",
-			"name": "Piccolente",
-			"aliases": [
-				"Ducklett"
-			]
+			"name": "Piccolente"
 		},
 		{
 			"id": "swanna",
-			"name": "Swaroness",
-			"aliases": [
-				"Swanna"
-			]
+			"name": "Swaroness"
 		},
 		{
 			"id": "vanillite",
-			"name": "Gelatini",
-			"aliases": [
-				"Vanillite"
-			]
+			"name": "Gelatini"
 		},
 		{
 			"id": "vanillish",
-			"name": "Gelatroppo",
-			"aliases": [
-				"Vanillish"
-			]
+			"name": "Gelatroppo"
 		},
 		{
 			"id": "vanilluxe",
-			"name": "Gelatwino",
-			"aliases": [
-				"Vanilluxe"
-			]
+			"name": "Gelatwino"
 		},
 		{
 			"id": "deerling",
-			"name": "Sesokitz",
-			"aliases": [
-				"Deerling"
-			]
+			"name": "Sesokitz"
 		},
 		{
 			"id": "sawsbuck",
-			"name": "Kronjuwild",
-			"aliases": [
-				"Sawsbuck"
-			]
+			"name": "Kronjuwild"
 		},
 		{
 			"id": "emolga",
-			"name": "Emolga",
-			"aliases": [
-				"Emolga"
-			]
+			"name": "Emolga"
 		},
 		{
 			"id": "karrablast",
-			"name": "Laukaps",
-			"aliases": [
-				"Karrablast"
-			]
+			"name": "Laukaps"
 		},
 		{
 			"id": "escavalier",
-			"name": "Cavalanzas",
-			"aliases": [
-				"Escavalier"
-			]
+			"name": "Cavalanzas"
 		},
 		{
 			"id": "foongus",
-			"name": "Tarnpignon",
-			"aliases": [
-				"Foongus"
-			]
+			"name": "Tarnpignon"
 		},
 		{
 			"id": "amoonguss",
-			"name": "Hutsassa",
-			"aliases": [
-				"Amoonguss"
-			]
+			"name": "Hutsassa"
 		},
 		{
 			"id": "frillish",
-			"name": "Quabbel",
-			"aliases": [
-				"Frillish"
-			]
+			"name": "Quabbel"
 		},
 		{
 			"id": "jellicent",
-			"name": "Apoquallyp",
-			"aliases": [
-				"Jellicent"
-			]
+			"name": "Apoquallyp"
 		},
 		{
 			"id": "alomomola",
-			"name": "Mamolida",
-			"aliases": [
-				"Alomomola"
-			]
+			"name": "Mamolida"
 		},
 		{
 			"id": "joltik",
-			"name": "Wattzapf",
-			"aliases": [
-				"Joltik"
-			]
+			"name": "Wattzapf"
 		},
 		{
 			"id": "galvantula",
-			"name": "Voltula",
-			"aliases": [
-				"Galvantula"
-			]
+			"name": "Voltula"
 		},
 		{
 			"id": "ferroseed",
-			"name": "Kastadur",
-			"aliases": [
-				"Ferroseed"
-			]
+			"name": "Kastadur"
 		},
 		{
 			"id": "ferrothorn",
-			"name": "Tentantel",
-			"aliases": [
-				"Ferrothorn"
-			]
+			"name": "Tentantel"
 		},
 		{
 			"id": "klink",
-			"name": "Klikk",
-			"aliases": [
-				"Klink"
-			]
+			"name": "Klikk"
 		},
 		{
 			"id": "klang",
-			"name": "Kliklak",
-			"aliases": [
-				"Klang"
-			]
+			"name": "Kliklak"
 		},
 		{
 			"id": "klinklang",
-			"name": "Klikdiklak",
-			"aliases": [
-				"Klinklang"
-			]
+			"name": "Klikdiklak"
 		},
 		{
 			"id": "tynamo",
-			"name": "Zapplardin",
-			"aliases": [
-				"Tynamo"
-			]
+			"name": "Zapplardin"
 		},
 		{
 			"id": "eelektrik",
-			"name": "Zapplalek",
-			"aliases": [
-				"Eelektrik"
-			]
+			"name": "Zapplalek"
 		},
 		{
 			"id": "eelektross",
-			"name": "Zapplarang",
-			"aliases": [
-				"Eelektross"
-			]
+			"name": "Zapplarang"
 		},
 		{
 			"id": "elgyem",
-			"name": "Pygraulon",
-			"aliases": [
-				"Elgyem"
-			]
+			"name": "Pygraulon"
 		},
 		{
 			"id": "beheeyem",
-			"name": "Megalon",
-			"aliases": [
-				"Beheeyem"
-			]
+			"name": "Megalon"
 		},
 		{
 			"id": "litwick",
-			"name": "Lichtel",
-			"aliases": [
-				"Litwick"
-			]
+			"name": "Lichtel"
 		},
 		{
 			"id": "lampent",
-			"name": "Laternecto",
-			"aliases": [
-				"Lampent"
-			]
+			"name": "Laternecto"
 		},
 		{
 			"id": "chandelure",
-			"name": "Skelabra",
-			"aliases": [
-				"Chandelure"
-			]
+			"name": "Skelabra"
 		},
 		{
 			"id": "axew",
-			"name": "Milza",
-			"aliases": [
-				"Axew"
-			]
+			"name": "Milza"
 		},
 		{
 			"id": "fraxure",
-			"name": "Sharfax",
-			"aliases": [
-				"Fraxure"
-			]
+			"name": "Sharfax"
 		},
 		{
 			"id": "haxorus",
-			"name": "Maxax",
-			"aliases": [
-				"Haxorus"
-			]
+			"name": "Maxax"
 		},
 		{
 			"id": "cubchoo",
-			"name": "Petznief",
-			"aliases": [
-				"Cubchoo"
-			]
+			"name": "Petznief"
 		},
 		{
 			"id": "beartic",
-			"name": "Siberio",
-			"aliases": [
-				"Beartic"
-			]
+			"name": "Siberio"
 		},
 		{
 			"id": "cryogonal",
-			"name": "Frigometri",
-			"aliases": [
-				"Cryogonal"
-			]
+			"name": "Frigometri"
 		},
 		{
 			"id": "shelmet",
-			"name": "Schnuthelm",
-			"aliases": [
-				"Shelmet"
-			]
+			"name": "Schnuthelm"
 		},
 		{
 			"id": "accelgor",
-			"name": "Hydragil",
-			"aliases": [
-				"Accelgor"
-			]
+			"name": "Hydragil"
 		},
 		{
 			"id": "stunfisk",
-			"name": "Flunschlik",
-			"aliases": [
-				"Stunfisk"
-			]
+			"name": "Flunschlik"
 		},
 		{
 			"id": "mienfoo",
-			"name": "Lin-Fu",
-			"aliases": [
-				"Mienfoo"
-			]
+			"name": "Lin-Fu"
 		},
 		{
 			"id": "mienshao",
-			"name": "Wie-Shu",
-			"aliases": [
-				"Mienshao"
-			]
+			"name": "Wie-Shu"
 		},
 		{
 			"id": "druddigon",
-			"name": "Shardrago",
-			"aliases": [
-				"Druddigon"
-			]
+			"name": "Shardrago"
 		},
 		{
 			"id": "golett",
-			"name": "Golbit",
-			"aliases": [
-				"Golett"
-			]
+			"name": "Golbit"
 		},
 		{
 			"id": "golurk",
-			"name": "Golgantes",
-			"aliases": [
-				"Golurk"
-			]
+			"name": "Golgantes"
 		},
 		{
 			"id": "pawniard",
-			"name": "Gladiantri",
-			"aliases": [
-				"Pawniard"
-			]
+			"name": "Gladiantri"
 		},
 		{
 			"id": "bisharp",
-			"name": "Caesurio",
-			"aliases": [
-				"Bisharp"
-			]
+			"name": "Caesurio"
 		},
 		{
 			"id": "bouffalant",
-			"name": "Bisofank",
-			"aliases": [
-				"Bouffalant"
-			]
+			"name": "Bisofank"
 		},
 		{
 			"id": "rufflet",
-			"name": "Geronimatz",
-			"aliases": [
-				"Rufflet"
-			]
+			"name": "Geronimatz"
 		},
 		{
 			"id": "braviary",
-			"name": "Washakwil",
-			"aliases": [
-				"Braviary"
-			]
+			"name": "Washakwil"
 		},
 		{
 			"id": "vullaby",
-			"name": "Skallyk",
-			"aliases": [
-				"Vullaby"
-			]
+			"name": "Skallyk"
 		},
 		{
 			"id": "mandibuzz",
-			"name": "Grypheldis",
-			"aliases": [
-				"Mandibuzz"
-			]
+			"name": "Grypheldis"
 		},
 		{
 			"id": "heatmor",
-			"name": "Furnifraß",
-			"aliases": [
-				"Heatmor"
-			]
+			"name": "Furnifraß"
 		},
 		{
 			"id": "durant",
-			"name": "Fermicula",
-			"aliases": [
-				"Durant"
-			]
+			"name": "Fermicula"
 		},
 		{
 			"id": "deino",
-			"name": "Kapuno",
-			"aliases": [
-				"Deino"
-			]
+			"name": "Kapuno"
 		},
 		{
 			"id": "zweilous",
-			"name": "Duodino",
-			"aliases": [
-				"Zweilous"
-			]
+			"name": "Duodino"
 		},
 		{
 			"id": "hydreigon",
-			"name": "Trikephalo",
-			"aliases": [
-				"Hydreigon"
-			]
+			"name": "Trikephalo"
 		},
 		{
 			"id": "larvesta",
-			"name": "Ignivor",
-			"aliases": [
-				"Larvesta"
-			]
+			"name": "Ignivor"
 		},
 		{
 			"id": "volcarona",
-			"name": "Ramoth",
-			"aliases": [
-				"Volcarona"
-			]
+			"name": "Ramoth"
 		},
 		{
 			"id": "cobalion",
-			"name": "Kobalium",
-			"aliases": [
-				"Cobalion"
-			]
+			"name": "Kobalium"
 		},
 		{
 			"id": "terrakion",
-			"name": "Terrakium",
-			"aliases": [
-				"Terrakion"
-			]
+			"name": "Terrakium"
 		},
 		{
 			"id": "virizion",
-			"name": "Viridium",
-			"aliases": [
-				"Virizion"
-			]
+			"name": "Viridium"
 		},
 		{
 			"id": "tornadus",
-			"name": "Boreos",
-			"aliases": [
-				"Tornadus (Incarnate)"
-			]
+			"name": "Boreos"
 		},
 		{
 			"id": "thundurus",
-			"name": "Voltolos",
-			"aliases": [
-				"Thundurus (Incarnate)"
-			]
+			"name": "Voltolos"
 		},
 		{
 			"id": "reshiram",
-			"name": "Reshiram",
-			"aliases": [
-				"Reshiram"
-			]
+			"name": "Reshiram"
 		},
 		{
 			"id": "zekrom",
-			"name": "Zekrom",
-			"aliases": [
-				"Zekrom"
-			]
+			"name": "Zekrom"
 		},
 		{
 			"id": "landorus",
-			"name": "Demeteros",
-			"aliases": [
-				"Landorus (Incarnate)"
-			]
+			"name": "Demeteros"
 		},
 		{
 			"id": "kyurem",
-			"name": "Kyurem",
-			"aliases": [
-				"Kyurem"
-			]
+			"name": "Kyurem"
 		},
 		{
 			"id": "keldeo",
-			"name": "Keldeo",
-			"aliases": [
-				"Keldeo"
-			]
+			"name": "Keldeo"
 		},
 		{
 			"id": "genesect",
-			"name": "Genesect",
-			"aliases": [
-				"Genesect"
-			]
+			"name": "Genesect"
 		},
 		{
 			"id": "chespin",
-			"name": "Igamaro",
-			"aliases": [
-				"Chespin"
-			]
+			"name": "Igamaro"
 		},
 		{
 			"id": "quilladin",
-			"name": "Igastarnish",
-			"aliases": [
-				"Quilladin"
-			]
+			"name": "Igastarnish"
 		},
 		{
 			"id": "chesnaught",
-			"name": "Brigaron",
-			"aliases": [
-				"Chesnaught"
-			]
+			"name": "Brigaron"
 		},
 		{
 			"id": "fennekin",
-			"name": "Fynx",
-			"aliases": [
-				"Fennekin"
-			]
+			"name": "Fynx"
 		},
 		{
 			"id": "braixen",
-			"name": "Rutena",
-			"aliases": [
-				"Braixen"
-			]
+			"name": "Rutena"
 		},
 		{
 			"id": "delphox",
-			"name": "Fennexis",
-			"aliases": [
-				"Delphox"
-			]
+			"name": "Fennexis"
 		},
 		{
 			"id": "froakie",
-			"name": "Froxy",
-			"aliases": [
-				"Froakie"
-			]
+			"name": "Froxy"
 		},
 		{
 			"id": "frogadier",
-			"name": "Amphizel",
-			"aliases": [
-				"Frogadier"
-			]
+			"name": "Amphizel"
 		},
 		{
 			"id": "greninja",
-			"name": "Quajutsu",
-			"aliases": [
-				"Greninja"
-			]
+			"name": "Quajutsu"
 		},
 		{
 			"id": "bunnelby",
-			"name": "Scoppel",
-			"aliases": [
-				"Bunnelby"
-			]
+			"name": "Scoppel"
 		},
 		{
 			"id": "diggersby",
-			"name": "Grebbit",
-			"aliases": [
-				"Diggersby"
-			]
+			"name": "Grebbit"
 		},
 		{
 			"id": "fletchling",
-			"name": "Dartiri",
-			"aliases": [
-				"Fletchling"
-			]
+			"name": "Dartiri"
 		},
 		{
 			"id": "fletchinder",
-			"name": "Dartignis",
-			"aliases": [
-				"Fletchinder"
-			]
+			"name": "Dartignis"
 		},
 		{
 			"id": "talonflame",
-			"name": "Fiaro",
-			"aliases": [
-				"Talonflame"
-			]
+			"name": "Fiaro"
 		},
 		{
 			"id": "scatterbug",
-			"name": "Purmel",
-			"aliases": [
-				"Scatterbug"
-			]
+			"name": "Purmel"
 		},
 		{
 			"id": "spewpa",
-			"name": "Puponcho",
-			"aliases": [
-				"Spewpa"
-			]
+			"name": "Puponcho"
 		},
 		{
 			"id": "vivillon",
-			"name": "Vivillon",
-			"aliases": [
-				"Vivillon"
-			]
+			"name": "Vivillon"
 		},
 		{
 			"id": "litleo",
-			"name": "Leufeo",
-			"aliases": [
-				"Litleo"
-			]
+			"name": "Leufeo"
 		},
 		{
 			"id": "pyroar",
-			"name": "Pyroleo",
-			"aliases": [
-				"Pyroar"
-			]
+			"name": "Pyroleo"
 		},
 		{
 			"id": "flabebe",
-			"name": "Flabébé",
-			"aliases": [
-				"Flabébé"
-			]
+			"name": "Flabébé"
 		},
 		{
 			"id": "floette",
-			"name": "Floette",
-			"aliases": [
-				"Floette"
-			]
+			"name": "Floette"
 		},
 		{
 			"id": "florges",
-			"name": "Florges",
-			"aliases": [
-				"Florges"
-			]
+			"name": "Florges"
 		},
 		{
 			"id": "skiddo",
-			"name": "Mähikel",
-			"aliases": [
-				"Skiddo"
-			]
+			"name": "Mähikel"
 		},
 		{
 			"id": "gogoat",
-			"name": "Chevrumm",
-			"aliases": [
-				"Gogoat"
-			]
+			"name": "Chevrumm"
 		},
 		{
 			"id": "pancham",
-			"name": "Pam-Pam",
-			"aliases": [
-				"Pancham"
-			]
+			"name": "Pam-Pam"
 		},
 		{
 			"id": "pangoro",
-			"name": "Pandagro",
-			"aliases": [
-				"Pangoro"
-			]
+			"name": "Pandagro"
 		},
 		{
 			"id": "furfrou",
-			"name": "Coiffwaff",
-			"aliases": [
-				"Furfrou"
-			]
+			"name": "Coiffwaff"
 		},
 		{
 			"id": "espurr",
-			"name": "Psiau",
-			"aliases": [
-				"Espurr"
-			]
+			"name": "Psiau"
 		},
 		{
 			"id": "honedge",
-			"name": "Gramokles",
-			"aliases": [
-				"Honedge"
-			]
+			"name": "Gramokles"
 		},
 		{
 			"id": "doublade",
-			"name": "Duokles",
-			"aliases": [
-				"Doublade"
-			]
+			"name": "Duokles"
 		},
 		{
 			"id": "aegislash",
-			"name": "Durengard",
-			"aliases": [
-				"Aegislash"
-			]
+			"name": "Durengard"
 		},
 		{
 			"id": "spritzee",
-			"name": "Parfi",
-			"aliases": [
-				"Spritzee"
-			]
+			"name": "Parfi"
 		},
 		{
 			"id": "aromatisse",
-			"name": "Parfinesse",
-			"aliases": [
-				"Aromatisse"
-			]
+			"name": "Parfinesse"
 		},
 		{
 			"id": "swirlix",
-			"name": "Flauschling",
-			"aliases": [
-				"Swirlix"
-			]
+			"name": "Flauschling"
 		},
 		{
 			"id": "slurpuff",
-			"name": "Sabbaione",
-			"aliases": [
-				"Slurpuff"
-			]
+			"name": "Sabbaione"
 		},
 		{
 			"id": "inkay",
-			"name": "Iscalar",
-			"aliases": [
-				"Inkay"
-			]
+			"name": "Iscalar"
 		},
 		{
 			"id": "malamar",
-			"name": "Calamanero",
-			"aliases": [
-				"Malamar"
-			]
+			"name": "Calamanero"
 		},
 		{
 			"id": "binacle",
-			"name": "Bithora",
-			"aliases": [
-				"Binacle"
-			]
+			"name": "Bithora"
 		},
 		{
 			"id": "barbaracle",
-			"name": "Thanathora",
-			"aliases": [
-				"Barbaracle"
-			]
+			"name": "Thanathora"
 		},
 		{
 			"id": "skrelp",
-			"name": "Algitt",
-			"aliases": [
-				"Skrelp"
-			]
+			"name": "Algitt"
 		},
 		{
 			"id": "dragalge",
-			"name": "Tandrak",
-			"aliases": [
-				"Dragalge"
-			]
+			"name": "Tandrak"
 		},
 		{
 			"id": "clauncher",
-			"name": "Scampisto",
-			"aliases": [
-				"Clauncher"
-			]
+			"name": "Scampisto"
 		},
 		{
 			"id": "clawitzer",
-			"name": "Wummer",
-			"aliases": [
-				"Clawitzer"
-			]
+			"name": "Wummer"
 		},
 		{
 			"id": "helioptile",
-			"name": "Eguana",
-			"aliases": [
-				"Helioptile"
-			]
+			"name": "Eguana"
 		},
 		{
 			"id": "heliolisk",
-			"name": "Elezard",
-			"aliases": [
-				"Heliolisk"
-			]
+			"name": "Elezard"
 		},
 		{
 			"id": "tyrunt",
-			"name": "Balgoras",
-			"aliases": [
-				"Tyrunt"
-			]
+			"name": "Balgoras"
 		},
 		{
 			"id": "tyrantrum",
-			"name": "Monargoras",
-			"aliases": [
-				"Tyrantrum"
-			]
+			"name": "Monargoras"
 		},
 		{
 			"id": "amaura",
-			"name": "Amarino",
-			"aliases": [
-				"Amaura"
-			]
+			"name": "Amarino"
 		},
 		{
 			"id": "aurorus",
-			"name": "Amagarga",
-			"aliases": [
-				"Aurorus"
-			]
+			"name": "Amagarga"
 		},
 		{
 			"id": "sylveon",
-			"name": "Feelinara",
-			"aliases": [
-				"Sylveon"
-			]
+			"name": "Feelinara"
 		},
 		{
 			"id": "hawlucha",
-			"name": "Resladero",
-			"aliases": [
-				"Hawlucha"
-			]
+			"name": "Resladero"
 		},
 		{
 			"id": "dedenne",
-			"name": "Dedenne",
-			"aliases": [
-				"Dedenne"
-			]
+			"name": "Dedenne"
 		},
 		{
 			"id": "carbink",
-			"name": "Rocara",
-			"aliases": [
-				"Carbink"
-			]
+			"name": "Rocara"
 		},
 		{
 			"id": "goomy",
-			"name": "Viscora",
-			"aliases": [
-				"Goomy"
-			]
+			"name": "Viscora"
 		},
 		{
 			"id": "sliggoo",
-			"name": "Viscargot",
-			"aliases": [
-				"Sliggoo"
-			]
+			"name": "Viscargot"
 		},
 		{
 			"id": "goodra",
-			"name": "Viscogon",
-			"aliases": [
-				"Goodra"
-			]
+			"name": "Viscogon"
 		},
 		{
 			"id": "klefki",
-			"name": "Clavion",
-			"aliases": [
-				"Klefki"
-			]
+			"name": "Clavion"
 		},
 		{
 			"id": "phantump",
-			"name": "Paragoni",
-			"aliases": [
-				"Phantump"
-			]
+			"name": "Paragoni"
 		},
 		{
 			"id": "trevenant",
-			"name": "Trombork",
-			"aliases": [
-				"Trevenant"
-			]
+			"name": "Trombork"
 		},
 		{
 			"id": "pumpkaboo",
-			"name": "Irrbis",
-			"aliases": [
-				"Pumpkaboo"
-			]
+			"name": "Irrbis"
 		},
 		{
 			"id": "gourgeist",
-			"name": "Pumpdjinn",
-			"aliases": [
-				"Gourgeist"
-			]
+			"name": "Pumpdjinn"
 		},
 		{
 			"id": "bergmite",
-			"name": "Arktip",
-			"aliases": [
-				"Bergmite"
-			]
+			"name": "Arktip"
 		},
 		{
 			"id": "avalugg",
-			"name": "Arktilas",
-			"aliases": [
-				"Avalugg"
-			]
+			"name": "Arktilas"
 		},
 		{
 			"id": "noibat",
-			"name": "eF-eM",
-			"aliases": [
-				"Noibat"
-			]
+			"name": "eF-eM"
 		},
 		{
 			"id": "noivern",
-			"name": "UHaFnir",
-			"aliases": [
-				"Noivern"
-			]
+			"name": "UHaFnir"
 		},
 		{
 			"id": "xerneas",
-			"name": "Xerneas",
-			"aliases": [
-				"Xerneas"
-			]
+			"name": "Xerneas"
 		},
 		{
 			"id": "yveltal",
-			"name": "Yveltal",
-			"aliases": [
-				"Yveltal"
-			]
+			"name": "Yveltal"
 		},
 		{
 			"id": "diancie",
-			"name": "Diancie",
-			"aliases": [
-				"Diancie"
-			]
+			"name": "Diancie"
 		},
 		{
 			"id": "volcanion",
-			"name": "Volcanion",
-			"aliases": [
-				"Volcanion"
-			]
+			"name": "Volcanion"
 		},
 		{
 			"id": "rowlet",
-			"name": "Bauz",
-			"aliases": [
-				"Rowlet"
-			]
+			"name": "Bauz"
 		},
 		{
 			"id": "dartrix",
-			"name": "Arboretoss",
-			"aliases": [
-				"Dartrix"
-			]
+			"name": "Arboretoss"
 		},
 		{
 			"id": "decidueye",
-			"name": "Silvarro",
-			"aliases": [
-				"Decidueye"
-			]
+			"name": "Silvarro"
 		},
 		{
 			"id": "litten",
-			"name": "Flamiau",
-			"aliases": [
-				"Litten"
-			]
+			"name": "Flamiau"
 		},
 		{
 			"id": "torracat",
-			"name": "Miezunder",
-			"aliases": [
-				"Torracat"
-			]
+			"name": "Miezunder"
 		},
 		{
 			"id": "incineroar",
-			"name": "Fuegro",
-			"aliases": [
-				"Incineroar"
-			]
+			"name": "Fuegro"
 		},
 		{
 			"id": "popplio",
-			"name": "Robball",
-			"aliases": [
-				"Popplio"
-			]
+			"name": "Robball"
 		},
 		{
 			"id": "brionne",
-			"name": "Marikeck",
-			"aliases": [
-				"Brionne"
-			]
+			"name": "Marikeck"
 		},
 		{
 			"id": "primarina",
-			"name": "Primarene",
-			"aliases": [
-				"Primarina"
-			]
+			"name": "Primarene"
 		},
 		{
 			"id": "pikipek",
-			"name": "Peppeck",
-			"aliases": [
-				"Pikipek"
-			]
+			"name": "Peppeck"
 		},
 		{
 			"id": "trumbeak",
-			"name": "Trompeck",
-			"aliases": [
-				"Trumbeak"
-			]
+			"name": "Trompeck"
 		},
 		{
 			"id": "toucannon",
-			"name": "Tukanon",
-			"aliases": [
-				"Toucannon"
-			]
+			"name": "Tukanon"
 		},
 		{
 			"id": "yungoos",
-			"name": "Mangunior",
-			"aliases": [
-				"Yungoos"
-			]
+			"name": "Mangunior"
 		},
 		{
 			"id": "gumshoos",
-			"name": "Manguspektor",
-			"aliases": [
-				"Gumshoos"
-			]
+			"name": "Manguspektor"
 		},
 		{
 			"id": "grubbin",
-			"name": "Mabula",
-			"aliases": [
-				"Grubbin"
-			]
+			"name": "Mabula"
 		},
 		{
 			"id": "charjabug",
-			"name": "Akkup",
-			"aliases": [
-				"Charjabug"
-			]
+			"name": "Akkup"
 		},
 		{
 			"id": "vikavolt",
-			"name": "Donarion",
-			"aliases": [
-				"Vikavolt"
-			]
+			"name": "Donarion"
 		},
 		{
 			"id": "crabrawler",
-			"name": "Krabbox",
-			"aliases": [
-				"Crabrawler"
-			]
+			"name": "Krabbox"
 		},
 		{
 			"id": "crabominable",
-			"name": "Krawell",
-			"aliases": [
-				"Crabominable"
-			]
+			"name": "Krawell"
 		},
 		{
 			"id": "cutiefly",
-			"name": "Wommel",
-			"aliases": [
-				"Cutiefly"
-			]
+			"name": "Wommel"
 		},
 		{
 			"id": "ribombee",
-			"name": "Bandelby",
-			"aliases": [
-				"Ribombee"
-			]
+			"name": "Bandelby"
 		},
 		{
 			"id": "rockruff",
-			"name": "Wuffels",
-			"aliases": [
-				"Rockruff"
-			]
+			"name": "Wuffels"
 		},
 		{
 			"id": "mareanie",
-			"name": "Garstella",
-			"aliases": [
-				"Mareanie"
-			]
+			"name": "Garstella"
 		},
 		{
 			"id": "toxapex",
-			"name": "Aggrostella",
-			"aliases": [
-				"Toxapex"
-			]
+			"name": "Aggrostella"
 		},
 		{
 			"id": "mudbray",
-			"name": "Pampuli",
-			"aliases": [
-				"Mudbray"
-			]
+			"name": "Pampuli"
 		},
 		{
 			"id": "mudsdale",
-			"name": "Pampross",
-			"aliases": [
-				"Mudsdale"
-			]
+			"name": "Pampross"
 		},
 		{
 			"id": "dewpider",
-			"name": "Araqua",
-			"aliases": [
-				"Dewpider"
-			]
+			"name": "Araqua"
 		},
 		{
 			"id": "araquanid",
-			"name": "Aranestro",
-			"aliases": [
-				"Araquanid"
-			]
+			"name": "Aranestro"
 		},
 		{
 			"id": "fomantis",
-			"name": "Imantis",
-			"aliases": [
-				"Fomantis"
-			]
+			"name": "Imantis"
 		},
 		{
 			"id": "lurantis",
-			"name": "Mantidea",
-			"aliases": [
-				"Lurantis"
-			]
+			"name": "Mantidea"
 		},
 		{
 			"id": "morelull",
-			"name": "Bubungus",
-			"aliases": [
-				"Morelull"
-			]
+			"name": "Bubungus"
 		},
 		{
 			"id": "shiinotic",
-			"name": "Lamellux",
-			"aliases": [
-				"Shiinotic"
-			]
+			"name": "Lamellux"
 		},
 		{
 			"id": "salandit",
-			"name": "Molunk",
-			"aliases": [
-				"Salandit"
-			]
+			"name": "Molunk"
 		},
 		{
 			"id": "salazzle",
-			"name": "Amfira",
-			"aliases": [
-				"Salazzle"
-			]
+			"name": "Amfira"
 		},
 		{
 			"id": "stufful",
-			"name": "Velursi",
-			"aliases": [
-				"Stufful"
-			]
+			"name": "Velursi"
 		},
 		{
 			"id": "bewear",
-			"name": "Kosturso",
-			"aliases": [
-				"Bewear"
-			]
+			"name": "Kosturso"
 		},
 		{
 			"id": "bounsweet",
-			"name": "Frubberl",
-			"aliases": [
-				"Bounsweet"
-			]
+			"name": "Frubberl"
 		},
 		{
 			"id": "steenee",
-			"name": "Frubaila",
-			"aliases": [
-				"Steenee"
-			]
+			"name": "Frubaila"
 		},
 		{
 			"id": "tsareena",
-			"name": "Fruyal",
-			"aliases": [
-				"Tsareena"
-			]
+			"name": "Fruyal"
 		},
 		{
 			"id": "comfey",
-			"name": "Curelei",
-			"aliases": [
-				"Comfey"
-			]
+			"name": "Curelei"
 		},
 		{
 			"id": "oranguru",
-			"name": "Kommandutan",
-			"aliases": [
-				"Oranguru"
-			]
+			"name": "Kommandutan"
 		},
 		{
 			"id": "passimian",
-			"name": "Quartermak",
-			"aliases": [
-				"Passimian"
-			]
+			"name": "Quartermak"
 		},
 		{
 			"id": "wimpod",
-			"name": "Reißlaus",
-			"aliases": [
-				"Wimpod"
-			]
+			"name": "Reißlaus"
 		},
 		{
 			"id": "golisopod",
-			"name": "Tectass",
-			"aliases": [
-				"Golisopod"
-			]
+			"name": "Tectass"
 		},
 		{
 			"id": "sandygast",
-			"name": "Sankabuh",
-			"aliases": [
-				"Sandygast"
-			]
+			"name": "Sankabuh"
 		},
 		{
 			"id": "palossand",
-			"name": "Colossand",
-			"aliases": [
-				"Palossand"
-			]
+			"name": "Colossand"
 		},
 		{
 			"id": "pyukumuku",
-			"name": "Gufa",
-			"aliases": [
-				"Pyukumuku"
-			]
+			"name": "Gufa"
 		},
 		{
 			"id": "type-null",
-			"name": "Typ:Null",
-			"aliases": [
-				"Type: Null"
-			]
+			"name": "Typ:Null"
 		},
 		{
 			"id": "silvally",
-			"name": "Amigento",
-			"aliases": [
-				"Silvally"
-			]
+			"name": "Amigento"
 		},
 		{
 			"id": "komala",
-			"name": "Koalelu",
-			"aliases": [
-				"Komala"
-			]
+			"name": "Koalelu"
 		},
 		{
 			"id": "turtonator",
-			"name": "Tortunator",
-			"aliases": [
-				"Turtonator"
-			]
+			"name": "Tortunator"
 		},
 		{
 			"id": "togedemaru",
-			"name": "Togedemaru",
-			"aliases": [
-				"Togedemaru"
-			]
+			"name": "Togedemaru"
 		},
 		{
 			"id": "mimikyu",
-			"name": "Mimigma",
-			"aliases": [
-				"Mimikyu"
-			]
+			"name": "Mimigma"
 		},
 		{
 			"id": "bruxish",
-			"name": "Knirfish",
-			"aliases": [
-				"Bruxish"
-			]
+			"name": "Knirfish"
 		},
 		{
 			"id": "drampa",
-			"name": "Sen-Long",
-			"aliases": [
-				"Drampa"
-			]
+			"name": "Sen-Long"
 		},
 		{
 			"id": "dhelmise",
-			"name": "Moruda",
-			"aliases": [
-				"Dhelmise"
-			]
+			"name": "Moruda"
 		},
 		{
 			"id": "jangmo-o",
-			"name": "Miniras",
-			"aliases": [
-				"Jangmo-o"
-			]
+			"name": "Miniras"
 		},
 		{
 			"id": "hakamo-o",
-			"name": "Mediras",
-			"aliases": [
-				"Hakamo-o"
-			]
+			"name": "Mediras"
 		},
 		{
 			"id": "kommo-o",
-			"name": "Grandiras",
-			"aliases": [
-				"Kommo-o"
-			]
+			"name": "Grandiras"
 		},
 		{
 			"id": "tapu-koko",
-			"name": "Kapu-Riki",
-			"aliases": [
-				"Tapu Koko"
-			]
+			"name": "Kapu-Riki"
 		},
 		{
 			"id": "tapu-lele",
-			"name": "Kapu-Fala",
-			"aliases": [
-				"Tapu Lele"
-			]
+			"name": "Kapu-Fala"
 		},
 		{
 			"id": "tapu-bulu",
-			"name": "Kapu-Toro",
-			"aliases": [
-				"Tapu Bulu"
-			]
+			"name": "Kapu-Toro"
 		},
 		{
 			"id": "tapu-fini",
-			"name": "Kapu-Kime",
-			"aliases": [
-				"Tapu Fini"
-			]
+			"name": "Kapu-Kime"
 		},
 		{
 			"id": "cosmog",
-			"name": "Cosmog",
-			"aliases": [
-				"Cosmog"
-			]
+			"name": "Cosmog"
 		},
 		{
 			"id": "cosmoem",
-			"name": "Cosmovum",
-			"aliases": [
-				"Cosmoem"
-			]
+			"name": "Cosmovum"
 		},
 		{
 			"id": "solgaleo",
-			"name": "Solgaleo",
-			"aliases": [
-				"Solgaleo"
-			]
+			"name": "Solgaleo"
 		},
 		{
 			"id": "lunala",
-			"name": "Lunala",
-			"aliases": [
-				"Lunala"
-			]
+			"name": "Lunala"
 		},
 		{
 			"id": "nihilego",
-			"name": "Anego",
-			"aliases": [
-				"Nihilego"
-			]
+			"name": "Anego"
 		},
 		{
 			"id": "buzzwole",
-			"name": "Masskito",
-			"aliases": [
-				"Buzzwole"
-			]
+			"name": "Masskito"
 		},
 		{
 			"id": "pheromosa",
-			"name": "Schabelle",
-			"aliases": [
-				"Pheromosa"
-			]
+			"name": "Schabelle"
 		},
 		{
 			"id": "xurkitree",
-			"name": "Voltriant",
-			"aliases": [
-				"Xurkitree"
-			]
+			"name": "Voltriant"
 		},
 		{
 			"id": "celesteela",
-			"name": "Kaguron",
-			"aliases": [
-				"Celesteela"
-			]
+			"name": "Kaguron"
 		},
 		{
 			"id": "kartana",
-			"name": "Katagami",
-			"aliases": [
-				"Kartana"
-			]
+			"name": "Katagami"
 		},
 		{
 			"id": "guzzlord",
-			"name": "Schlingking",
-			"aliases": [
-				"Guzzlord"
-			]
+			"name": "Schlingking"
 		},
 		{
 			"id": "necrozma",
-			"name": "Necrozma",
-			"aliases": [
-				"Necrozma"
-			]
+			"name": "Necrozma"
 		},
 		{
 			"id": "magearna",
-			"name": "Magearna",
-			"aliases": [
-				"Magearna"
-			]
+			"name": "Magearna"
 		},
 		{
 			"id": "marshadow",
-			"name": "Marshadow",
-			"aliases": [
-				"Marshadow"
-			]
+			"name": "Marshadow"
 		},
 		{
 			"id": "poipole",
-			"name": "Venicro",
-			"aliases": [
-				"Poipole"
-			]
+			"name": "Venicro"
 		},
 		{
 			"id": "naganadel",
-			"name": "Agoyon",
-			"aliases": [
-				"Naganadel"
-			]
+			"name": "Agoyon"
 		},
 		{
 			"id": "stakataka",
-			"name": "Muramura",
-			"aliases": [
-				"Stakataka"
-			]
+			"name": "Muramura"
 		},
 		{
 			"id": "blacephalon",
-			"name": "Kopplosio",
-			"aliases": [
-				"Blacephalon"
-			]
+			"name": "Kopplosio"
 		},
 		{
 			"id": "zeraora",
-			"name": "Zeraora",
-			"aliases": [
-				"Zeraora"
-			]
+			"name": "Zeraora"
 		},
 		{
 			"id": "meltan",
-			"name": "Meltan",
-			"aliases": [
-				"Meltan"
-			]
+			"name": "Meltan"
 		},
 		{
 			"id": "melmetal",
-			"name": "Melmetal",
-			"aliases": [
-				"Melmetal"
-			]
+			"name": "Melmetal"
 		},
 		{
 			"id": "grookey",
-			"name": "Chimpep",
-			"aliases": [
-				"Grookey"
-			]
+			"name": "Chimpep"
 		},
 		{
 			"id": "thwackey",
-			"name": "Chimstix",
-			"aliases": [
-				"Thwackey"
-			]
+			"name": "Chimstix"
 		},
 		{
 			"id": "rillaboom",
-			"name": "Gortrom",
-			"aliases": [
-				"Rillaboom"
-			]
+			"name": "Gortrom"
 		},
 		{
 			"id": "scorbunny",
-			"name": "Hopplo",
-			"aliases": [
-				"Scorbunny"
-			]
+			"name": "Hopplo"
 		},
 		{
 			"id": "raboot",
-			"name": "Kickerlo",
-			"aliases": [
-				"Raboot"
-			]
+			"name": "Kickerlo"
 		},
 		{
 			"id": "cinderace",
-			"name": "Liberlo",
-			"aliases": [
-				"Cinderace"
-			]
+			"name": "Liberlo"
 		},
 		{
 			"id": "sobble",
-			"name": "Memmeon",
-			"aliases": [
-				"Sobble"
-			]
+			"name": "Memmeon"
 		},
 		{
 			"id": "drizzile",
-			"name": "Phlegleon",
-			"aliases": [
-				"Drizzile"
-			]
+			"name": "Phlegleon"
 		},
 		{
 			"id": "inteleon",
-			"name": "Intelleon",
-			"aliases": [
-				"Inteleon"
-			]
+			"name": "Intelleon"
 		},
 		{
 			"id": "skwovet",
-			"name": "Raffel",
-			"aliases": [
-				"Skwovet"
-			]
+			"name": "Raffel"
 		},
 		{
 			"id": "greedent",
-			"name": "Schlaraffel",
-			"aliases": [
-				"Greedent"
-			]
+			"name": "Schlaraffel"
 		},
 		{
 			"id": "rookidee",
-			"name": "Meikro",
-			"aliases": [
-				"Rookidee"
-			]
+			"name": "Meikro"
 		},
 		{
 			"id": "corvisquire",
-			"name": "Kranoviz",
-			"aliases": [
-				"Corvisquire"
-			]
+			"name": "Kranoviz"
 		},
 		{
 			"id": "corviknight",
-			"name": "Krarmor",
-			"aliases": [
-				"Corviknight"
-			]
+			"name": "Krarmor"
 		},
 		{
 			"id": "blipbug",
-			"name": "Sensect",
-			"aliases": [
-				"Blipbug"
-			]
+			"name": "Sensect"
 		},
 		{
 			"id": "dottler",
-			"name": "Keradar",
-			"aliases": [
-				"Dottler"
-			]
+			"name": "Keradar"
 		},
 		{
 			"id": "orbeetle",
-			"name": "Maritellit",
-			"aliases": [
-				"Orbeetle"
-			]
+			"name": "Maritellit"
 		},
 		{
 			"id": "nickit",
-			"name": "Kleptifux",
-			"aliases": [
-				"Nickit"
-			]
+			"name": "Kleptifux"
 		},
 		{
 			"id": "thievul",
-			"name": "Gaunux",
-			"aliases": [
-				"Thievul"
-			]
+			"name": "Gaunux"
 		},
 		{
 			"id": "gossifleur",
-			"name": "Cottini",
-			"aliases": [
-				"Gossifleur"
-			]
+			"name": "Cottini"
 		},
 		{
 			"id": "eldegoss",
-			"name": "Cottomi",
-			"aliases": [
-				"Eldegoss"
-			]
+			"name": "Cottomi"
 		},
 		{
 			"id": "wooloo",
-			"name": "Wolly",
-			"aliases": [
-				"Wooloo"
-			]
+			"name": "Wolly"
 		},
 		{
 			"id": "dubwool",
-			"name": "Zwollock",
-			"aliases": [
-				"Dubwool"
-			]
+			"name": "Zwollock"
 		},
 		{
 			"id": "chewtle",
-			"name": "Kamehaps",
-			"aliases": [
-				"Chewtle"
-			]
+			"name": "Kamehaps"
 		},
 		{
 			"id": "drednaw",
-			"name": "Kamalm",
-			"aliases": [
-				"Drednaw"
-			]
+			"name": "Kamalm"
 		},
 		{
 			"id": "yamper",
-			"name": "Voldi",
-			"aliases": [
-				"Yamper"
-			]
+			"name": "Voldi"
 		},
 		{
 			"id": "boltund",
-			"name": "Bellektro",
-			"aliases": [
-				"Boltund"
-			]
+			"name": "Bellektro"
 		},
 		{
 			"id": "rolycoly",
-			"name": "Klonkett",
-			"aliases": [
-				"Rolycoly"
-			]
+			"name": "Klonkett"
 		},
 		{
 			"id": "carkol",
-			"name": "Wagong",
-			"aliases": [
-				"Carkol"
-			]
+			"name": "Wagong"
 		},
 		{
 			"id": "coalossal",
-			"name": "Montecarbo",
-			"aliases": [
-				"Coalossal"
-			]
+			"name": "Montecarbo"
 		},
 		{
 			"id": "applin",
-			"name": "Knapfel",
-			"aliases": [
-				"Applin"
-			]
+			"name": "Knapfel"
 		},
 		{
 			"id": "flapple",
-			"name": "Drapfel",
-			"aliases": [
-				"Flapple"
-			]
+			"name": "Drapfel"
 		},
 		{
 			"id": "appletun",
-			"name": "Schlapfel",
-			"aliases": [
-				"Appletun"
-			]
+			"name": "Schlapfel"
 		},
 		{
 			"id": "silicobra",
-			"name": "Salanga",
-			"aliases": [
-				"Silicobra"
-			]
+			"name": "Salanga"
 		},
 		{
 			"id": "sandaconda",
-			"name": "Sanaconda",
-			"aliases": [
-				"Sandaconda"
-			]
+			"name": "Sanaconda"
 		},
 		{
 			"id": "cramorant",
-			"name": "Urgl",
-			"aliases": [
-				"Cramorant"
-			]
+			"name": "Urgl"
 		},
 		{
 			"id": "arrokuda",
-			"name": "Pikuda",
-			"aliases": [
-				"Arrokuda"
-			]
+			"name": "Pikuda"
 		},
 		{
 			"id": "barraskewda",
-			"name": "Barrakiefa",
-			"aliases": [
-				"Barraskewda"
-			]
+			"name": "Barrakiefa"
 		},
 		{
 			"id": "toxel",
-			"name": "Toxel",
-			"aliases": [
-				"Toxel"
-			]
+			"name": "Toxel"
 		},
 		{
 			"id": "sizzlipede",
-			"name": "Thermopod",
-			"aliases": [
-				"Sizzlipede"
-			]
+			"name": "Thermopod"
 		},
 		{
 			"id": "centiskorch",
-			"name": "Infernopod",
-			"aliases": [
-				"Centiskorch"
-			]
+			"name": "Infernopod"
 		},
 		{
 			"id": "clobbopus",
-			"name": "Klopptopus",
-			"aliases": [
-				"Clobbopus"
-			]
+			"name": "Klopptopus"
 		},
 		{
 			"id": "grapploct",
-			"name": "Kaocto",
-			"aliases": [
-				"Grapploct"
-			]
+			"name": "Kaocto"
 		},
 		{
 			"id": "sinistea",
-			"name": "Fatalitee",
-			"aliases": [
-				"Sinistea"
-			]
+			"name": "Fatalitee"
 		},
 		{
 			"id": "polteageist",
-			"name": "Mortipot",
-			"aliases": [
-				"Polteageist"
-			]
+			"name": "Mortipot"
 		},
 		{
 			"id": "hatenna",
-			"name": "Brimova",
-			"aliases": [
-				"Hatenna"
-			]
+			"name": "Brimova"
 		},
 		{
 			"id": "hattrem",
-			"name": "Brimano",
-			"aliases": [
-				"Hattrem"
-			]
+			"name": "Brimano"
 		},
 		{
 			"id": "hatterene",
-			"name": "Silembrim",
-			"aliases": [
-				"Hatterene"
-			]
+			"name": "Silembrim"
 		},
 		{
 			"id": "impidimp",
-			"name": "Bähmon",
-			"aliases": [
-				"Impidimp"
-			]
+			"name": "Bähmon"
 		},
 		{
 			"id": "morgrem",
-			"name": "Pelzebub",
-			"aliases": [
-				"Morgrem"
-			]
+			"name": "Pelzebub"
 		},
 		{
 			"id": "grimmsnarl",
-			"name": "Olangaar",
-			"aliases": [
-				"Grimmsnarl"
-			]
+			"name": "Olangaar"
 		},
 		{
 			"id": "obstagoon",
-			"name": "Barrikadax",
-			"aliases": [
-				"Obstagoon"
-			]
+			"name": "Barrikadax"
 		},
 		{
 			"id": "perrserker",
-			"name": "Mauzinger",
-			"aliases": [
-				"Perrserker"
-			]
+			"name": "Mauzinger"
 		},
 		{
 			"id": "cursola",
-			"name": "Gorgasonn",
-			"aliases": [
-				"Cursola"
-			]
+			"name": "Gorgasonn"
 		},
 		{
 			"id": "sirfetchd",
-			"name": "Lauchzelot",
-			"aliases": [
-				"Sirfetch'd"
-			]
+			"name": "Lauchzelot"
 		},
 		{
 			"id": "mr-rime",
-			"name": "Pantifrost",
-			"aliases": [
-				"Mr. Rime"
-			]
+			"name": "Pantifrost"
 		},
 		{
 			"id": "runerigus",
-			"name": "Oghnatoll",
-			"aliases": [
-				"Runerigus"
-			]
+			"name": "Oghnatoll"
 		},
 		{
 			"id": "milcery",
-			"name": "Hokumil",
-			"aliases": [
-				"Milcery"
-			]
+			"name": "Hokumil"
 		},
 		{
 			"id": "alcremie",
-			"name": "Pokusan",
-			"aliases": [
-				"Alcremie"
-			]
+			"name": "Pokusan"
 		},
 		{
 			"id": "falinks",
-			"name": "Legios",
-			"aliases": [
-				"Falinks"
-			]
+			"name": "Legios"
 		},
 		{
 			"id": "pincurchin",
-			"name": "Britzigel",
-			"aliases": [
-				"Pincurchin"
-			]
+			"name": "Britzigel"
 		},
 		{
 			"id": "snom",
-			"name": "Snomnom",
-			"aliases": [
-				"Snom"
-			]
+			"name": "Snomnom"
 		},
 		{
 			"id": "frosmoth",
-			"name": "Mottineva",
-			"aliases": [
-				"Frosmoth"
-			]
+			"name": "Mottineva"
 		},
 		{
 			"id": "stonjourner",
-			"name": "Humanolith",
-			"aliases": [
-				"Stonjourner"
-			]
+			"name": "Humanolith"
 		},
 		{
 			"id": "eiscue",
-			"name": "Kubuin",
-			"aliases": [
-				"Eiscue"
-			]
+			"name": "Kubuin"
 		},
 		{
 			"id": "morpeko",
-			"name": "Morpeko",
-			"aliases": [
-				"Morpeko"
-			]
+			"name": "Morpeko"
 		},
 		{
 			"id": "cufant",
-			"name": "Kupfanti",
-			"aliases": [
-				"Cufant"
-			]
+			"name": "Kupfanti"
 		},
 		{
 			"id": "copperajah",
-			"name": "Patinaraja",
-			"aliases": [
-				"Copperajah"
-			]
+			"name": "Patinaraja"
 		},
 		{
 			"id": "dracozolt",
-			"name": "Lectragon",
-			"aliases": [
-				"Dracozolt"
-			]
+			"name": "Lectragon"
 		},
 		{
 			"id": "arctozolt",
-			"name": "Lecryodon",
-			"aliases": [
-				"Arctozolt"
-			]
+			"name": "Lecryodon"
 		},
 		{
 			"id": "dracovish",
-			"name": "Pescragon",
-			"aliases": [
-				"Dracovish"
-			]
+			"name": "Pescragon"
 		},
 		{
 			"id": "arctovish",
-			"name": "Pescryodon",
-			"aliases": [
-				"Arctovish"
-			]
+			"name": "Pescryodon"
 		},
 		{
 			"id": "duraludon",
-			"name": "Duraludon",
-			"aliases": [
-				"Duraludon"
-			]
+			"name": "Duraludon"
 		},
 		{
 			"id": "dreepy",
-			"name": "Grolldra",
-			"aliases": [
-				"Dreepy"
-			]
+			"name": "Grolldra"
 		},
 		{
 			"id": "drakloak",
-			"name": "Phandra",
-			"aliases": [
-				"Drakloak"
-			]
+			"name": "Phandra"
 		},
 		{
 			"id": "dragapult",
-			"name": "Katapuldra",
-			"aliases": [
-				"Dragapult"
-			]
+			"name": "Katapuldra"
 		},
 		{
 			"id": "zacian",
-			"name": "Zacian",
-			"aliases": [
-				"Zacian"
-			]
+			"name": "Zacian"
 		},
 		{
 			"id": "zamazenta",
-			"name": "Zamazenta",
-			"aliases": [
-				"Zamazenta"
-			]
+			"name": "Zamazenta"
 		},
 		{
 			"id": "eternatus",
-			"name": "Endynalos",
-			"aliases": [
-				"Eternatus"
-			]
+			"name": "Endynalos"
 		},
 		{
 			"id": "kubfu",
-			"name": "Dakuma",
-			"aliases": [
-				"Kubfu"
-			]
+			"name": "Dakuma"
 		},
 		{
 			"id": "zarude",
-			"name": "Zarude",
-			"aliases": [
-				"Zarude"
-			]
+			"name": "Zarude"
 		},
 		{
 			"id": "regieleki",
-			"name": "Regieleki",
-			"aliases": [
-				"Regieleki"
-			]
+			"name": "Regieleki"
 		},
 		{
 			"id": "regidrago",
-			"name": "Regidrago",
-			"aliases": [
-				"Regidrago"
-			]
+			"name": "Regidrago"
 		},
 		{
 			"id": "glastrier",
-			"name": "Polaross",
-			"aliases": [
-				"Glastrier"
-			]
+			"name": "Polaross"
 		},
 		{
 			"id": "spectrier",
-			"name": "Phantoross",
-			"aliases": [
-				"Spectrier"
-			]
+			"name": "Phantoross"
 		},
 		{
 			"id": "calyrex",
-			"name": "Coronospa",
-			"aliases": [
-				"Calyrex"
-			]
+			"name": "Coronospa"
 		},
 		{
 			"id": "wyrdeer",
-			"name": "Damythir",
-			"aliases": [
-				"Wyrdeer"
-			]
+			"name": "Damythir"
 		},
 		{
 			"id": "kleavor",
-			"name": "Axantor",
-			"aliases": [
-				"Kleavor"
-			]
+			"name": "Axantor"
 		},
 		{
 			"id": "ursaluna",
-			"name": "Ursaluna",
-			"aliases": [
-				"Ursaluna"
-			]
+			"name": "Ursaluna"
 		},
 		{
 			"id": "sneasler",
-			"name": "Snieboss",
-			"aliases": [
-				"Sneasler"
-			]
+			"name": "Snieboss"
 		},
 		{
 			"id": "overqwil",
-			"name": "Myriador",
-			"aliases": [
-				"Overqwil"
-			]
+			"name": "Myriador"
 		},
 		{
 			"id": "enamorus",
-			"name": "Cupidos",
-			"aliases": [
-				"Enamorus (Incarnate)"
-			]
+			"name": "Cupidos"
 		},
 		{
 			"id": "sprigatito",
-			"name": "Felori",
-			"aliases": [
-				"Sprigatito"
-			]
+			"name": "Felori"
 		},
 		{
 			"id": "floragato",
-			"name": "Feliospa",
-			"aliases": [
-				"Floragato"
-			]
+			"name": "Feliospa"
 		},
 		{
 			"id": "meowscarada",
-			"name": "Maskagato",
-			"aliases": [
-				"Meowscarada"
-			]
+			"name": "Maskagato"
 		},
 		{
 			"id": "fuecoco",
-			"name": "Krokel",
-			"aliases": [
-				"Fuecoco"
-			]
+			"name": "Krokel"
 		},
 		{
 			"id": "crocalor",
-			"name": "Lokroko",
-			"aliases": [
-				"Crocalor"
-			]
+			"name": "Lokroko"
 		},
 		{
 			"id": "skeledirge",
-			"name": "Skelokrok",
-			"aliases": [
-				"Skeledirge"
-			]
+			"name": "Skelokrok"
 		},
 		{
 			"id": "quaxly",
-			"name": "Kwaks",
-			"aliases": [
-				"Quaxly"
-			]
+			"name": "Kwaks"
 		},
 		{
 			"id": "quaxwell",
-			"name": "Fuentente",
-			"aliases": [
-				"Quaxwell"
-			]
+			"name": "Fuentente"
 		},
 		{
 			"id": "quaquaval",
-			"name": "Bailonda",
-			"aliases": [
-				"Quaquaval"
-			]
+			"name": "Bailonda"
 		},
 		{
 			"id": "lechonk",
-			"name": "Ferkuli",
-			"aliases": [
-				"Lechonk"
-			]
+			"name": "Ferkuli"
 		},
 		{
 			"id": "tarountula",
-			"name": "Tarundel",
-			"aliases": [
-				"Tarountula"
-			]
+			"name": "Tarundel"
 		},
 		{
 			"id": "spidops",
-			"name": "Spinsidias",
-			"aliases": [
-				"Spidops"
-			]
+			"name": "Spinsidias"
 		},
 		{
 			"id": "nymble",
-			"name": "Micrick",
-			"aliases": [
-				"Nymble"
-			]
+			"name": "Micrick"
 		},
 		{
 			"id": "lokix",
-			"name": "Lextremo",
-			"aliases": [
-				"Lokix"
-			]
+			"name": "Lextremo"
 		},
 		{
 			"id": "pawmi",
-			"name": "Pamo",
-			"aliases": [
-				"Pawmi"
-			]
+			"name": "Pamo"
 		},
 		{
 			"id": "pawmo",
-			"name": "Pamamo",
-			"aliases": [
-				"Pawmo"
-			]
+			"name": "Pamamo"
 		},
 		{
 			"id": "pawmot",
-			"name": "Pamomamo",
-			"aliases": [
-				"Pawmot"
-			]
+			"name": "Pamomamo"
 		},
 		{
 			"id": "tandemaus",
-			"name": "Zwieps",
-			"aliases": [
-				"Tandemaus"
-			]
+			"name": "Zwieps"
 		},
 		{
 			"id": "maushold",
-			"name": "Famieps",
-			"aliases": [
-				"Maushold"
-			]
+			"name": "Famieps"
 		},
 		{
 			"id": "fidough",
-			"name": "Hefel",
-			"aliases": [
-				"Fidough"
-			]
+			"name": "Hefel"
 		},
 		{
 			"id": "dachsbun",
-			"name": "Backel",
-			"aliases": [
-				"Dachsbun"
-			]
+			"name": "Backel"
 		},
 		{
 			"id": "smoliv",
-			"name": "Olini",
-			"aliases": [
-				"Smoliv"
-			]
+			"name": "Olini"
 		},
 		{
 			"id": "dolliv",
-			"name": "Olivinio",
-			"aliases": [
-				"Dolliv"
-			]
+			"name": "Olivinio"
 		},
 		{
 			"id": "arboliva",
-			"name": "Olithena",
-			"aliases": [
-				"Arboliva"
-			]
+			"name": "Olithena"
 		},
 		{
 			"id": "squawkabilly",
-			"name": "Krawalloro",
-			"aliases": [
-				"Squawkabilly"
-			]
+			"name": "Krawalloro"
 		},
 		{
 			"id": "nacli",
-			"name": "Geosali",
-			"aliases": [
-				"Nacli"
-			]
+			"name": "Geosali"
 		},
 		{
 			"id": "naclstack",
-			"name": "Sedisal",
-			"aliases": [
-				"Naclstack"
-			]
+			"name": "Sedisal"
 		},
 		{
 			"id": "garganacl",
-			"name": "Saltigant",
-			"aliases": [
-				"Garganacl"
-			]
+			"name": "Saltigant"
 		},
 		{
 			"id": "charcadet",
-			"name": "Knarbon",
-			"aliases": [
-				"Charcadet"
-			]
+			"name": "Knarbon"
 		},
 		{
 			"id": "armarouge",
-			"name": "Crimanzo",
-			"aliases": [
-				"Armarouge"
-			]
+			"name": "Crimanzo"
 		},
 		{
 			"id": "ceruledge",
-			"name": "Azugladis",
-			"aliases": [
-				"Ceruledge"
-			]
+			"name": "Azugladis"
 		},
 		{
 			"id": "tadbulb",
-			"name": "Blipp",
-			"aliases": [
-				"Tadbulb"
-			]
+			"name": "Blipp"
 		},
 		{
 			"id": "bellibolt",
-			"name": "Wampitz",
-			"aliases": [
-				"Bellibolt"
-			]
+			"name": "Wampitz"
 		},
 		{
 			"id": "wattrel",
-			"name": "Voltrel",
-			"aliases": [
-				"Wattrel"
-			]
+			"name": "Voltrel"
 		},
 		{
 			"id": "kilowattrel",
-			"name": "Voltrean",
-			"aliases": [
-				"Kilowattrel"
-			]
+			"name": "Voltrean"
 		},
 		{
 			"id": "maschiff",
-			"name": "Mobtiff",
-			"aliases": [
-				"Maschiff"
-			]
+			"name": "Mobtiff"
 		},
 		{
 			"id": "mabosstiff",
-			"name": "Mastifioso",
-			"aliases": [
-				"Mabosstiff"
-			]
+			"name": "Mastifioso"
 		},
 		{
 			"id": "shroodle",
-			"name": "Sproxi",
-			"aliases": [
-				"Shroodle"
-			]
+			"name": "Sproxi"
 		},
 		{
 			"id": "grafaiai",
-			"name": "Affiti",
-			"aliases": [
-				"Grafaiai"
-			]
+			"name": "Affiti"
 		},
 		{
 			"id": "bramblin",
-			"name": "Weherba",
-			"aliases": [
-				"Bramblin"
-			]
+			"name": "Weherba"
 		},
 		{
 			"id": "brambleghast",
-			"name": "Horrerba",
-			"aliases": [
-				"Brambleghast"
-			]
+			"name": "Horrerba"
 		},
 		{
 			"id": "toedscool",
-			"name": "Tentagra",
-			"aliases": [
-				"Toedscool"
-			]
+			"name": "Tentagra"
 		},
 		{
 			"id": "toedscruel",
-			"name": "Tenterra",
-			"aliases": [
-				"Toedscruel"
-			]
+			"name": "Tenterra"
 		},
 		{
 			"id": "klawf",
-			"name": "Klibbe",
-			"aliases": [
-				"Klawf"
-			]
+			"name": "Klibbe"
 		},
 		{
 			"id": "capsakid",
-			"name": "Chilingel",
-			"aliases": [
-				"Capsakid"
-			]
+			"name": "Chilingel"
 		},
 		{
 			"id": "scovillain",
-			"name": "Halupenjo",
-			"aliases": [
-				"Scovillain"
-			]
+			"name": "Halupenjo"
 		},
 		{
 			"id": "rellor",
-			"name": "Relluk",
-			"aliases": [
-				"Rellor"
-			]
+			"name": "Relluk"
 		},
 		{
 			"id": "rabsca",
-			"name": "Skarabaks",
-			"aliases": [
-				"Rabsca"
-			]
+			"name": "Skarabaks"
 		},
 		{
 			"id": "flittle",
-			"name": "Flattutu",
-			"aliases": [
-				"Flittle"
-			]
+			"name": "Flattutu"
 		},
 		{
 			"id": "espathra",
-			"name": "Psiopatra",
-			"aliases": [
-				"Espathra"
-			]
+			"name": "Psiopatra"
 		},
 		{
 			"id": "tinkatink",
-			"name": "Forgita",
-			"aliases": [
-				"Tinkatink"
-			]
+			"name": "Forgita"
 		},
 		{
 			"id": "tinkatuff",
-			"name": "Tafforgita",
-			"aliases": [
-				"Tinkatuff"
-			]
+			"name": "Tafforgita"
 		},
 		{
 			"id": "tinkaton",
-			"name": "Granforgita",
-			"aliases": [
-				"Tinkaton"
-			]
+			"name": "Granforgita"
 		},
 		{
 			"id": "wiglett",
-			"name": "Schligda",
-			"aliases": [
-				"Wiglett"
-			]
+			"name": "Schligda"
 		},
 		{
 			"id": "wugtrio",
-			"name": "Schligdri",
-			"aliases": [
-				"Wugtrio"
-			]
+			"name": "Schligdri"
 		},
 		{
 			"id": "bombirdier",
-			"name": "Adebom",
-			"aliases": [
-				"Bombirdier"
-			]
+			"name": "Adebom"
 		},
 		{
 			"id": "finizen",
-			"name": "Normifin",
-			"aliases": [
-				"Finizen"
-			]
+			"name": "Normifin"
 		},
 		{
 			"id": "palafin",
-			"name": "Delfinator",
-			"aliases": [
-				"Palafin"
-			]
+			"name": "Delfinator"
 		},
 		{
 			"id": "varoom",
-			"name": "Knattox",
-			"aliases": [
-				"Varoom"
-			]
+			"name": "Knattox"
 		},
 		{
 			"id": "revavroom",
-			"name": "Knattatox",
-			"aliases": [
-				"Revavroom"
-			]
+			"name": "Knattatox"
 		},
 		{
 			"id": "cyclizar",
-			"name": "Mopex",
-			"aliases": [
-				"Cyclizar"
-			]
+			"name": "Mopex"
 		},
 		{
 			"id": "orthworm",
-			"name": "Schlurm",
-			"aliases": [
-				"Orthworm"
-			]
+			"name": "Schlurm"
 		},
 		{
 			"id": "glimmet",
-			"name": "Lumispross",
-			"aliases": [
-				"Glimmet"
-			]
+			"name": "Lumispross"
 		},
 		{
 			"id": "glimmora",
-			"name": "Lumiflora",
-			"aliases": [
-				"Glimmora"
-			]
+			"name": "Lumiflora"
 		},
 		{
 			"id": "greavard",
-			"name": "Gruff",
-			"aliases": [
-				"Greavard"
-			]
+			"name": "Gruff"
 		},
 		{
 			"id": "houndstone",
-			"name": "Friedwuff",
-			"aliases": [
-				"Houndstone"
-			]
+			"name": "Friedwuff"
 		},
 		{
 			"id": "flamigo",
-			"name": "Flaminkno",
-			"aliases": [
-				"Flamigo"
-			]
+			"name": "Flaminkno"
 		},
 		{
 			"id": "cetoddle",
-			"name": "Flaniwal",
-			"aliases": [
-				"Cetoddle"
-			]
+			"name": "Flaniwal"
 		},
 		{
 			"id": "cetitan",
-			"name": "Kolowal",
-			"aliases": [
-				"Cetitan"
-			]
+			"name": "Kolowal"
 		},
 		{
 			"id": "veluza",
-			"name": "Agiluza",
-			"aliases": [
-				"Veluza"
-			]
+			"name": "Agiluza"
 		},
 		{
 			"id": "dondozo",
-			"name": "Heerashai",
-			"aliases": [
-				"Dondozo"
-			]
+			"name": "Heerashai"
 		},
 		{
 			"id": "tatsugiri",
-			"name": "Nigiragi",
-			"aliases": [
-				"Tatsugiri"
-			]
+			"name": "Nigiragi"
 		},
 		{
 			"id": "annihilape",
-			"name": "Epitaff",
-			"aliases": [
-				"Annihilape"
-			]
+			"name": "Epitaff"
 		},
 		{
 			"id": "clodsire",
-			"name": "Suelord",
-			"aliases": [
-				"Clodsire"
-			]
+			"name": "Suelord"
 		},
 		{
 			"id": "farigiraf",
-			"name": "Farigiraf",
-			"aliases": [
-				"Farigiraf"
-			]
+			"name": "Farigiraf"
 		},
 		{
 			"id": "dudunsparce",
-			"name": "Dummimisel",
-			"aliases": [
-				"Dudunsparce"
-			]
+			"name": "Dummimisel"
 		},
 		{
 			"id": "kingambit",
-			"name": "Gladimperio",
-			"aliases": [
-				"Kingambit"
-			]
+			"name": "Gladimperio"
 		},
 		{
 			"id": "great-tusk",
-			"name": "Riesenzahn",
-			"aliases": [
-				"Great Tusk"
-			]
+			"name": "Riesenzahn"
 		},
 		{
 			"id": "scream-tail",
-			"name": "Brüllschweif",
-			"aliases": [
-				"Scream Tail"
-			]
+			"name": "Brüllschweif"
 		},
 		{
 			"id": "brute-bonnet",
-			"name": "Wutpilz",
-			"aliases": [
-				"Brute Bonnet"
-			]
+			"name": "Wutpilz"
 		},
 		{
 			"id": "flutter-mane",
-			"name": "Flatterhaar",
-			"aliases": [
-				"Flutter Mane"
-			]
+			"name": "Flatterhaar"
 		},
 		{
 			"id": "slither-wing",
-			"name": "Kriechflügel",
-			"aliases": [
-				"Slither Wing"
-			]
+			"name": "Kriechflügel"
 		},
 		{
 			"id": "sandy-shocks",
-			"name": "Sandfell",
-			"aliases": [
-				"Sandy Shocks"
-			]
+			"name": "Sandfell"
 		},
 		{
 			"id": "iron-treads",
-			"name": "Eisenrad",
-			"aliases": [
-				"Iron Treads"
-			]
+			"name": "Eisenrad"
 		},
 		{
 			"id": "iron-bundle",
-			"name": "Eisenbündel",
-			"aliases": [
-				"Iron Bundle"
-			]
+			"name": "Eisenbündel"
 		},
 		{
 			"id": "iron-hands",
-			"name": "Eisenhand",
-			"aliases": [
-				"Iron Hands"
-			]
+			"name": "Eisenhand"
 		},
 		{
 			"id": "iron-jugulis",
-			"name": "Eisenhals",
-			"aliases": [
-				"Iron Jugulis"
-			]
+			"name": "Eisenhals"
 		},
 		{
 			"id": "iron-moth",
-			"name": "Eisenfalter",
-			"aliases": [
-				"Iron Moth"
-			]
+			"name": "Eisenfalter"
 		},
 		{
 			"id": "iron-thorns",
-			"name": "Eisendorn",
-			"aliases": [
-				"Iron Thorns"
-			]
+			"name": "Eisendorn"
 		},
 		{
 			"id": "frigibax",
-			"name": "Frospino",
-			"aliases": [
-				"Frigibax"
-			]
+			"name": "Frospino"
 		},
 		{
 			"id": "arctibax",
-			"name": "Cryospino",
-			"aliases": [
-				"Arctibax"
-			]
+			"name": "Cryospino"
 		},
 		{
 			"id": "baxcalibur",
-			"name": "Espinodon",
-			"aliases": [
-				"Baxcalibur"
-			]
+			"name": "Espinodon"
 		},
 		{
 			"id": "gimmighoul",
-			"name": "Gierspenst",
-			"aliases": [
-				"Gimmighoul (Chest)"
-			]
+			"name": "Gierspenst"
 		},
 		{
 			"id": "gholdengo",
-			"name": "Monetigo",
-			"aliases": [
-				"Gholdengo"
-			]
+			"name": "Monetigo"
 		},
 		{
 			"id": "wo-chien",
-			"name": "Chongjian",
-			"aliases": [
-				"Wo-Chien"
-			]
+			"name": "Chongjian"
 		},
 		{
 			"id": "chien-pao",
-			"name": "Baojian",
-			"aliases": [
-				"Chien-Pao"
-			]
+			"name": "Baojian"
 		},
 		{
 			"id": "ting-lu",
-			"name": "Dinglu",
-			"aliases": [
-				"Ting-Lu"
-			]
+			"name": "Dinglu"
 		},
 		{
 			"id": "chi-yu",
-			"name": "Yuyu",
-			"aliases": [
-				"Chi-Yu"
-			]
+			"name": "Yuyu"
 		},
 		{
 			"id": "roaring-moon",
-			"name": "Donnersichel",
-			"aliases": [
-				"Roaring Moon"
-			]
+			"name": "Donnersichel"
 		},
 		{
 			"id": "iron-valiant",
-			"name": "Eisenkrieger",
-			"aliases": [
-				"Iron Valiant"
-			]
+			"name": "Eisenkrieger"
 		},
 		{
 			"id": "koraidon",
-			"name": "Koraidon",
-			"aliases": [
-				"Koraidon"
-			]
+			"name": "Koraidon"
 		},
 		{
 			"id": "miraidon",
-			"name": "Miraidon",
-			"aliases": [
-				"Miraidon"
-			]
+			"name": "Miraidon"
 		},
 		{
 			"id": "walking-wake",
-			"name": "Windewoge",
-			"aliases": [
-				"Walking Wake"
-			]
+			"name": "Windewoge"
 		},
 		{
 			"id": "iron-leaves",
-			"name": "Eisenblatt",
-			"aliases": [
-				"Iron Leaves"
-			]
+			"name": "Eisenblatt"
 		},
 		{
 			"id": "dipplin",
-			"name": "Sirapfel",
-			"aliases": [
-				"Dipplin"
-			]
+			"name": "Sirapfel"
 		},
 		{
 			"id": "poltchageist",
-			"name": "Mortcha",
-			"aliases": [
-				"Poltchageist"
-			]
+			"name": "Mortcha"
 		},
 		{
 			"id": "sinistcha",
-			"name": "Fatalitcha",
-			"aliases": [
-				"Sinistcha"
-			]
+			"name": "Fatalitcha"
 		},
 		{
 			"id": "okidogi",
-			"name": "Boninu",
-			"aliases": [
-				"Okidogi"
-			]
+			"name": "Boninu"
 		},
 		{
 			"id": "munkidori",
-			"name": "Benesaru",
-			"aliases": [
-				"Munkidori"
-			]
+			"name": "Benesaru"
 		},
 		{
 			"id": "fezandipiti",
-			"name": "Beatori",
-			"aliases": [
-				"Fezandipiti"
-			]
+			"name": "Beatori"
 		},
 		{
 			"id": "ogerpon",
-			"name": "Ogerpon",
-			"aliases": [
-				"Ogerpon (Teal Mask)"
-			]
+			"name": "Ogerpon"
 		},
 		{
 			"id": "archaludon",
-			"name": "Briduradon",
-			"aliases": [
-				"Archaludon"
-			]
+			"name": "Briduradon"
 		},
 		{
 			"id": "hydrapple",
-			"name": "Hydrapfel",
-			"aliases": [
-				"Hydrapple"
-			]
+			"name": "Hydrapfel"
 		},
 		{
 			"id": "gouging-fire",
-			"name": "Keilflamme",
-			"aliases": [
-				"Gouging Fire"
-			]
+			"name": "Keilflamme"
 		},
 		{
 			"id": "raging-bolt",
-			"name": "Furienblitz",
-			"aliases": [
-				"Raging Bolt"
-			]
+			"name": "Furienblitz"
 		},
 		{
 			"id": "iron-boulder",
-			"name": "Eisenfels",
-			"aliases": [
-				"Iron Boulder"
-			]
+			"name": "Eisenfels"
 		},
 		{
 			"id": "iron-crown",
-			"name": "Eisenhaupt",
-			"aliases": [
-				"Iron Crown"
-			]
+			"name": "Eisenhaupt"
 		},
 		{
 			"id": "terapagos",
-			"name": "Terapagos",
-			"aliases": [
-				"Terapagos"
-			]
+			"name": "Terapagos"
 		},
 		{
 			"id": "pecharunt",
-			"name": "Infamomo",
-			"aliases": [
-				"Pecharunt"
-			]
+			"name": "Infamomo"
 		}
 	]
 }

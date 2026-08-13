@@ -2,7 +2,7 @@
 
 Poké5e uses Inlang/Paraglide. English (`en`) is the base and fallback locale; UI messages live in `messages/{locale}.json`. Routes are locale-prefixed for non-English languages, so a selected language survives reloads and links without browser storage.
 
-Domain data uses stable English IDs. Locale overlays in `static/data/{locale}` are merged by `id`; missing files, entities, and properties fall back to English. An `aliases` entry retains the English display name so localized lists can be searched in either language.
+Domain data uses stable English IDs. Locale overlays in `static/data/{locale}` are merged by `id`; missing files, entities, and properties fall back to English. Whenever a merge replaces an entity's `name`, the English name is added to that entity's `aliases` so localized lists can be searched in either language. Overlays never need to declare this themselves; any `aliases` they do declare are kept alongside it.
 
 ## Canonical Pokémon names
 
@@ -16,4 +16,4 @@ The command requires network access and rewrites the generated German JSON files
 
 ## Adding a locale
 
-Add it to `project.inlang/settings.json`, create its message file, and add data overlays under `static/data/{locale}`. Keep IDs unchanged and put the English name in `aliases`. The shared merge helper provides property-level English fallback. Add representative message, entity-name, alias-search, and fallback tests.
+Add it to `project.inlang/settings.json`, create its message file, and add data overlays under `static/data/{locale}`. Keep IDs unchanged; the shared merge helper provides property-level English fallback and English-name aliases. Add representative message, entity-name, alias-search, and fallback tests.
