@@ -6,7 +6,7 @@
 </script>
 
 <Title value="Resources" />
-<StaticPage title="Resources" subtitle="This is a list of tools, documents, and supplements shared by members of the Pokémon 5e community!" theme="grey">
+<StaticPage title="Resources" subtitle="This is a list of tools, documents, and supplements shared by members of the Pokémon 5e community!" theme="orange">
 	{#snippet icon()}
 		<ExternalIcon />
 	{/snippet}

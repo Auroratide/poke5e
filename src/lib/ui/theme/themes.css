@@ -55,11 +55,11 @@
 }
 
 .theme-orange {
-	--theme-main: oklch(0.7168 0.1652 55.22);
-	--theme-dark: oklch(0.8745 0.1291 82.94);
-	--theme-text: oklch(0.4679 0.079 60.14);
-	--theme-light: oklch(0.8745 0.1291 82.94);
-	--theme-icon: oklch(0.7168 0.1652 55.22);
+	--theme-main: oklch(0.7085 0.1764 37.66);
+	--theme-dark: oklch(0.6581 0.202 31.03);
+	--theme-text: oklch(0.47 0.132 31.03);
+	--theme-light: oklch(0.7985 0.1564 37.66);
+	--theme-icon: oklch(17.54% 0.01102 39.179);
 }
 
 .theme-pink {
@@ -134,11 +134,11 @@
 }
 
 .dark-mode .theme-orange {
-	--theme-main: oklch(0.305 0.083 55.22);
-	--theme-dark: oklch(0.254 0.065 82.94);
-	--theme-text: oklch(0.70 0.074 60.14);
-	--theme-light: oklch(0.8745 0.1291 82.94);
-	--theme-icon: oklch(0.7168 0.1652 55.22);
+	--theme-main: oklch(0.30 0.0564 37.66);
+	--theme-dark: oklch(0.25 0.08 31.03);
+	--theme-text: oklch(0.70 0.11 31.03);
+	--theme-light: oklch(0.7985 0.1564 37.66);
+	--theme-icon: oklch(0.7085 0.1764 37.66);
 }
 
 .dark-mode .theme-pink {

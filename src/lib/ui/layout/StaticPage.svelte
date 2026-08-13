@@ -97,8 +97,4 @@
 		line-height: 1.4;
 		margin-block-end: 2em;
 	}
-
-	main :global(a) {
-		color: var(--red-text);
-	}
 </style>

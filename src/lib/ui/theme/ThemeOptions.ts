@@ -6,5 +6,6 @@ export type ThemeColor =
 	| "forest"
 	| "navy"
 	| "yellow"
+	| "orange"
 	| "pink"
 	| "grey"
