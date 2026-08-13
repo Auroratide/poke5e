@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { CogIcon } from "$lib/ui/icons"
+	import { ExternalIcon } from "$lib/ui/icons"
 	import { StaticPage, Title } from "$lib/ui/layout"
 	import { Resources } from "./Resource"
 	import ResourceCard from "./ResourceCard.svelte"
@@ -8,13 +8,14 @@
 <Title value="Resources" />
 <StaticPage title="Resources" subtitle="This is a list of tools, documents, and supplements shared by members of the Pokémon 5e community!" theme="grey">
 	{#snippet icon()}
-		<CogIcon />
+		<ExternalIcon />
 	{/snippet}
 	<div class="cards">
 		{#each Resources as resource}
 			<ResourceCard value={resource} />
 		{/each}
 	</div>
+
 </StaticPage>
 
 <style>
