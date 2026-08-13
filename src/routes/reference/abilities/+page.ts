@@ -10,6 +10,7 @@ export const load: PageLoad<{ abilities: Data<Ability>[] }> = async ({ fetch }) 
 		.then((abilities: AbilityJson[]) => abilities.map((it) => ({
 			referenceId: it.id,
 			name: it.name,
+			aliases: it.aliases,
 			description: it.description,
 			deprecated: it.deprecated,
 		})))

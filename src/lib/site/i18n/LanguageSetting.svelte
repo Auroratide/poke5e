@@ -6,7 +6,7 @@
 </script>
 
 <div class="language-setting">
-	<p id="language-setting-label">Select your preferred language:</p>
+	<p id="language-setting-label">{m["settings.preferredLanguage"]()}</p>
 	<ul role="listbox" tabindex="0" aria-labelledby="language-setting-label" aria-activedescendant="language-setting-option-{getLocale()}">
 		{#each locales as locale}
 			<li id="language-setting-option-{locale}" role="option" aria-selected="{getLocale() === locale}">

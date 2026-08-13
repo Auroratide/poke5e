@@ -17,14 +17,14 @@
 	<CogIcon slot="icon" />
 	<Card title="{m["settings.title"]()}">
 		<section>
-			<p>In this section, you can update preferences and manage backups.</p>
+			<p>{m["settings.intro"]()}</p>
 			<ul>
-				<li><a href="#language">Language</a></li>
-				<li><a href="#rules-version">Rules Version</a></li>
-				<li><a href="#light-dark-colors">Light/Dark Colors</a></li>
-				<li><a href="#backups-and-restoration">Backups and Restoration</a></li>
-				<li><a href="#official-fakemon">"Official" Fakémon</a></li>
-				<li><a href="#beta-testing">Beta Testing</a></li>
+				<li><a href="#language">{m["settings.language"]()}</a></li>
+				<li><a href="#rules-version">{m["settings.rulesVersion"]()}</a></li>
+				<li><a href="#light-dark-colors">{m["settings.colors"]()}</a></li>
+				<li><a href="#backups-and-restoration">{m["settings.backups"]()}</a></li>
+				<li><a href="#official-fakemon">{m["settings.officialFakemon"]()}</a></li>
+				<li><a href="#beta-testing">{m["settings.betaTesting"]()}</a></li>
 			</ul>
 		</section>
 		<LanguageSection />

@@ -4,6 +4,7 @@ import { relativeNumberCompare, type RelativeValue } from "$lib/ui/forms"
 import type { Move } from "./Move"
 import { MoveRange } from "./MoveRange"
 import { MoveTime } from "./MoveTime"
+import { includesSearch } from "$lib/utils/string"
 
 export class MoveFilter {
 	private filters: {
@@ -104,7 +105,7 @@ export class MoveFilter {
 	}
 
 	apply = (move: Move): boolean => {
-		return move.name.toLocaleLowerCase().includes(this.filters.name.toLocaleLowerCase())
+		return includesSearch([move.name, ...move.aliases], this.filters.name)
 			&& (this.filters.type === "" || move.type === this.filters.type || (!PokemonType.isPokeType(move.type) && this.filters.type === "varies"))
 			&& (this.filters.power === "" || move.power.data === this.filters.power || move.power.appliesToAttribute(this.filters.power as Attribute))
 			&& (this.filters.tm == null || move.tm?.id.toString().startsWith(this.filters.tm.toString()))

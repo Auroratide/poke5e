@@ -11,6 +11,7 @@
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import { MoveTime } from "./MoveTime"
 	import { ContestType } from "./contest/ContestType"
+	import { canonicalName } from "$lib/site/i18n"
 
 	export let moves: Move[]
 
@@ -32,7 +33,7 @@
 	let filteredType: PokeType | "varies" | "" = ""
 	const typeOptions = AnyOption.concat(Object.values(PokemonType.list).map((it) => ({
 		value: it,
-		name: capitalize(it),
+		name: capitalize(canonicalName("types", it)),
 	}))).concat(OtherOption)
 
 	let filteredPower: Attribute | "" = ""
@@ -106,7 +107,7 @@
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type}-bg)">
 		<BubbleRow.Cell primary cellVisibility={cellVisibility[0]}><a href="{Url.moves(item.id)}">{item.name}</a></BubbleRow.Cell>
-		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{item.type}</BubbleRow.Cell>
+		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{capitalize(canonicalName("types", item.type))}</BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[2]}>{item.power.toString()}</BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[3]}>{item.pp}</BubbleRow.Cell>
 	</BubbleRow.Row>

@@ -5,6 +5,7 @@ import { cachedReadable } from "$lib/utils/store"
 export type AbilityJson = {
 	id: string,
 	name: string,
+	aliases?: string[],
 	description: string,
 	deprecated?: boolean,
 }
@@ -17,6 +18,7 @@ export const AbilityStore = cachedReadable<Ability[]>(undefined, (set) => {
 			.then((abilities: AbilityJson[]) => abilities.map((it) => new Ability({
 				referenceId: it.id,
 				name: it.name,
+				aliases: it.aliases,
 				description: it.description,
 				deprecated: it.deprecated,
 			})))

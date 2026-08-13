@@ -83,7 +83,7 @@ export class SpeciesFilter {
 	}
 
 	apply = (species: PokemonSpecies): boolean => {
-		return species.name.toLocaleLowerCase().includes(this.filters.name.toLocaleLowerCase())
+		return strings.includesSearch([species.name, ...species.aliases], this.filters.name)
 			&& (this.filters.size === "" || species.size === this.filters.size)
 			&& (this.filters.sr == null || relativeNumberCompare(this.filters.sr.relative, species.sr.data, this.filters.sr.value))
 			&& (this.filters.minLevel == null || relativeNumberCompare(this.filters.minLevel.relative, species.minLevel, this.filters.minLevel.value))

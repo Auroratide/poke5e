@@ -14,6 +14,8 @@ For anyone who wants to dive into the code and stuff. Note: I'm assuming a lot o
 
 This site is a static [SvelteKit](https://kit.svelte.dev/) site that makes use of [Supabase](https://supabase.com/) for data storage.
 
+Localization architecture and canonical-name generation are documented in [docs/localization.md](docs/localization.md).
+
 ### Set up your environment
 
 The code is fitted with a fully local version of Supabase to make integrated development easy. Run `pnpm supabase start` to start it, and `pnpm supabase stop` to stop it.

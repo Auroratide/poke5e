@@ -1,5 +1,6 @@
 import { relativeNumberCompare, type RelativeValue } from "$lib/ui/forms"
 import type { Item } from "./Item"
+import { includesSearch } from "$lib/utils/string"
 
 export class ItemFilter {
 	private filters: {
@@ -39,7 +40,7 @@ export class ItemFilter {
 	}
 
 	apply = (item: Item): boolean => {
-		return item.name.toLocaleLowerCase().includes(this.filters.name.toLocaleLowerCase())
+		return includesSearch([item.name, ...(item.aliases ?? [])], this.filters.name)
 			&& (this.filters.type === "" || item.type === this.filters.type)
 			&& (this.filters.cost == null || (relativeNumberCompare(this.filters.cost.relative, item.cost ?? Infinity, this.filters.cost.value)))
 	}

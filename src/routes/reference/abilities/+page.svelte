@@ -6,6 +6,7 @@
 	import ReferencePage from "../ReferencePage.svelte"
 	import { SpeciesStore } from "$lib/poke5e/species"
 	import { AbilityPool } from "$lib/pokemon/ability"
+	import { includesSearch } from "$lib/utils/string"
 
 	const pokemon = SpeciesStore.canonList()
 
@@ -15,7 +16,7 @@
 
 	let abilityFilter = ""
 
-	$: filteredAbilities = abilities?.filter((it) => it.name.toLocaleLowerCase().includes(abilityFilter.toLocaleLowerCase()))
+	$: filteredAbilities = abilities?.filter((it) => includesSearch([it.name, ...(it.aliases ?? [])], abilityFilter))
 </script>
 
 <ReferencePage title="Abilities">

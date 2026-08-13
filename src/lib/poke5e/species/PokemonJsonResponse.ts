@@ -10,6 +10,7 @@ import type { PokeType } from "$lib/pokemon/types"
 export type SinglePokemonJsonResponse = {
 	id: string,
 	name: string,
+	aliases?: string[],
 	number: number,
 	type: PokeType[],
 	size: CreatureSize,

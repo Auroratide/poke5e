@@ -6,7 +6,7 @@
 <section>
 	<h2 id="language"><span aria-hidden="true"><LanguageIcon /></span> {m["settings.language"]()}</h2>
 	<LanguageSetting />
-	<p class="smaller"><strong>Note:</strong> Languages other than English may not have everything translated. If you would like to help translate Pokémon 5th Edition, let us know on our <a href="{Url.external.discord()}">Discord Server</a>!</p>
+	<p class="smaller">{m["settings.translationNote"]()} <a href="{Url.external.discord()}">Discord</a></p>
 </section>
 
 <style>

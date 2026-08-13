@@ -1,0 +1,1908 @@
+{
+	"items": [
+		{
+			"id": "poke-ball",
+			"name": "Pokéball",
+			"aliases": [
+				"Poké Ball"
+			]
+		},
+		{
+			"id": "great-ball",
+			"name": "Superball",
+			"aliases": [
+				"Great Ball"
+			]
+		},
+		{
+			"id": "ultra-ball",
+			"name": "Hyperball",
+			"aliases": [
+				"Ultra Ball"
+			]
+		},
+		{
+			"id": "master-ball",
+			"name": "Meisterball",
+			"aliases": [
+				"Master Ball"
+			]
+		},
+		{
+			"id": "safari-ball",
+			"name": "Safariball",
+			"aliases": [
+				"Safari Ball"
+			]
+		},
+		{
+			"id": "fast-ball",
+			"name": "Turboball",
+			"aliases": [
+				"Fast Ball"
+			]
+		},
+		{
+			"id": "level-ball",
+			"name": "Levelball",
+			"aliases": [
+				"Level Ball"
+			]
+		},
+		{
+			"id": "lure-ball",
+			"name": "Köderball",
+			"aliases": [
+				"Lure Ball"
+			]
+		},
+		{
+			"id": "heavy-ball",
+			"name": "Schwerball",
+			"aliases": [
+				"Heavy Ball"
+			]
+		},
+		{
+			"id": "love-ball",
+			"name": "Sympaball",
+			"aliases": [
+				"Love Ball"
+			]
+		},
+		{
+			"id": "friend-ball",
+			"name": "Freundesball",
+			"aliases": [
+				"Friend Ball"
+			]
+		},
+		{
+			"id": "moon-ball",
+			"name": "Mondball",
+			"aliases": [
+				"Moon Ball"
+			]
+		},
+		{
+			"id": "sport-ball",
+			"name": "Turnierball",
+			"aliases": [
+				"Sport Ball"
+			]
+		},
+		{
+			"id": "net-ball",
+			"name": "Netzball",
+			"aliases": [
+				"Net Ball"
+			]
+		},
+		{
+			"id": "dive-ball",
+			"name": "Tauchball",
+			"aliases": [
+				"Dive Ball"
+			]
+		},
+		{
+			"id": "nest-ball",
+			"name": "Nestball",
+			"aliases": [
+				"Nest Ball"
+			]
+		},
+		{
+			"id": "repeat-ball",
+			"name": "Wiederball",
+			"aliases": [
+				"Repeat Ball"
+			]
+		},
+		{
+			"id": "timer-ball",
+			"name": "Timerball",
+			"aliases": [
+				"Timer Ball"
+			]
+		},
+		{
+			"id": "luxury-ball",
+			"name": "Luxusball",
+			"aliases": [
+				"Luxury Ball"
+			]
+		},
+		{
+			"id": "premier-ball",
+			"name": "Premierball",
+			"aliases": [
+				"Premier Ball"
+			]
+		},
+		{
+			"id": "dusk-ball",
+			"name": "Finsterball",
+			"aliases": [
+				"Dusk Ball"
+			]
+		},
+		{
+			"id": "heal-ball",
+			"name": "Heilball",
+			"aliases": [
+				"Heal Ball"
+			]
+		},
+		{
+			"id": "quick-ball",
+			"name": "Flottball",
+			"aliases": [
+				"Quick Ball"
+			]
+		},
+		{
+			"id": "dream-ball",
+			"name": "Traumball",
+			"aliases": [
+				"Dream Ball"
+			]
+		},
+		{
+			"id": "potion",
+			"name": "Trank",
+			"aliases": [
+				"Potion"
+			]
+		},
+		{
+			"id": "super-potion",
+			"name": "Supertrank",
+			"aliases": [
+				"Super Potion"
+			]
+		},
+		{
+			"id": "hyper-potion",
+			"name": "Hypertrank",
+			"aliases": [
+				"Hyper Potion"
+			]
+		},
+		{
+			"id": "antidote",
+			"name": "Gegengift",
+			"aliases": [
+				"Antidote"
+			]
+		},
+		{
+			"id": "burn-heal",
+			"name": "Feuerheiler",
+			"aliases": [
+				"Burn Heal"
+			]
+		},
+		{
+			"id": "ice-heal",
+			"name": "Eisheiler",
+			"aliases": [
+				"Ice Heal"
+			]
+		},
+		{
+			"id": "awakening",
+			"name": "Aufwecker",
+			"aliases": [
+				"Awakening"
+			]
+		},
+		{
+			"id": "paralyze-heal",
+			"name": "Para-Heiler",
+			"aliases": [
+				"Paralyze Heal"
+			]
+		},
+		{
+			"id": "max-potion",
+			"name": "Top-Trank",
+			"aliases": [
+				"Max Potion"
+			]
+		},
+		{
+			"id": "full-heal",
+			"name": "Hyperheiler",
+			"aliases": [
+				"Full Heal"
+			]
+		},
+		{
+			"id": "full-restore",
+			"name": "Top-Genesung",
+			"aliases": [
+				"Full Restore"
+			]
+		},
+		{
+			"id": "revive",
+			"name": "Beleber",
+			"aliases": [
+				"Revive"
+			]
+		},
+		{
+			"id": "max-revive",
+			"name": "Top-Beleber",
+			"aliases": [
+				"Max Revive"
+			]
+		},
+		{
+			"id": "fresh-water",
+			"name": "Tafelwasser",
+			"aliases": [
+				"Fresh Water"
+			]
+		},
+		{
+			"id": "soda-pop",
+			"name": "Sprudel",
+			"aliases": [
+				"Soda Pop"
+			]
+		},
+		{
+			"id": "berry-juice",
+			"name": "Beerensaft",
+			"aliases": [
+				"Berry Juice"
+			]
+		},
+		{
+			"id": "lemonade",
+			"name": "Limonade",
+			"aliases": [
+				"Lemonade"
+			]
+		},
+		{
+			"id": "moomoo-milk",
+			"name": "Kuhmuh-Milch",
+			"aliases": [
+				"Moomoo Milk"
+			]
+		},
+		{
+			"id": "energy-powder",
+			"name": "Energiestaub",
+			"aliases": [
+				"Energy Powder"
+			]
+		},
+		{
+			"id": "energy-root",
+			"name": "Kraftwurzel",
+			"aliases": [
+				"Energy Root"
+			]
+		},
+		{
+			"id": "heal-powder",
+			"name": "Heilpuder",
+			"aliases": [
+				"Heal Powder"
+			]
+		},
+		{
+			"id": "revival-herb",
+			"name": "Vitalkraut",
+			"aliases": [
+				"Revival Herb"
+			]
+		},
+		{
+			"id": "ether",
+			"name": "Äther",
+			"aliases": [
+				"Ether"
+			]
+		},
+		{
+			"id": "max-ether",
+			"name": "Top-Äther",
+			"aliases": [
+				"Max Ether"
+			]
+		},
+		{
+			"id": "elixir",
+			"name": "Elixier",
+			"aliases": [
+				"Elixir"
+			]
+		},
+		{
+			"id": "max-elixir",
+			"name": "Top-Elixier",
+			"aliases": [
+				"Max Elixir"
+			]
+		},
+		{
+			"id": "sacred-ash",
+			"name": "Zauberasche",
+			"aliases": [
+				"Sacred Ash"
+			]
+		},
+		{
+			"id": "hp-up",
+			"name": "KP-Plus",
+			"aliases": [
+				"HP Up"
+			]
+		},
+		{
+			"id": "protein",
+			"name": "Protein",
+			"aliases": [
+				"Protein"
+			]
+		},
+		{
+			"id": "iron",
+			"name": "Eisen",
+			"aliases": [
+				"Iron"
+			]
+		},
+		{
+			"id": "carbos",
+			"name": "Carbon",
+			"aliases": [
+				"Carbos"
+			]
+		},
+		{
+			"id": "calcium",
+			"name": "Kalzium",
+			"aliases": [
+				"Calcium"
+			]
+		},
+		{
+			"id": "zinc",
+			"name": "Zink",
+			"aliases": [
+				"Zinc"
+			]
+		},
+		{
+			"id": "pp-up",
+			"name": "AP-Plus",
+			"aliases": [
+				"PP Up"
+			]
+		},
+		{
+			"id": "ability-capsule",
+			"name": "Fähigk.-Kapsel",
+			"aliases": [
+				"Ability Capsule"
+			]
+		},
+		{
+			"id": "guard-spec",
+			"name": "Megablock",
+			"aliases": [
+				"Guard Spec"
+			]
+		},
+		{
+			"id": "dire-hit",
+			"name": "Angriffplus",
+			"aliases": [
+				"Dire Hit"
+			]
+		},
+		{
+			"id": "x-attack",
+			"name": "X-Angriff",
+			"aliases": [
+				"X Attack"
+			]
+		},
+		{
+			"id": "x-defense",
+			"name": "X-Verteidigung",
+			"aliases": [
+				"X Defense"
+			]
+		},
+		{
+			"id": "x-speed",
+			"name": "X-Initiative",
+			"aliases": [
+				"X Speed"
+			]
+		},
+		{
+			"id": "x-accuracy",
+			"name": "X-Genauigkeit",
+			"aliases": [
+				"X Accuracy"
+			]
+		},
+		{
+			"id": "x-sp-atk",
+			"name": "X-Sp.-Ang.",
+			"aliases": [
+				"X Sp. Atk"
+			]
+		},
+		{
+			"id": "x-sp-def",
+			"name": "X-Sp.-Vert.",
+			"aliases": [
+				"X Sp. Def"
+			]
+		},
+		{
+			"id": "red-nectar",
+			"name": "Roter Nektar",
+			"aliases": [
+				"Red Nectar"
+			]
+		},
+		{
+			"id": "yellow-nectar",
+			"name": "Gelber Nektar",
+			"aliases": [
+				"Yellow Nectar"
+			]
+		},
+		{
+			"id": "pink-nectar",
+			"name": "Rosa Nektar",
+			"aliases": [
+				"Pink Nectar"
+			]
+		},
+		{
+			"id": "purple-nectar",
+			"name": "Purpurner Nektar",
+			"aliases": [
+				"Purple Nectar"
+			]
+		},
+		{
+			"id": "pewter-crunchies",
+			"name": "Marmoria-Kräcker",
+			"aliases": [
+				"Pewter Crunchies"
+			]
+		},
+		{
+			"id": "health-candy",
+			"name": "Energiebonbon",
+			"aliases": [
+				"Health Candy"
+			]
+		},
+		{
+			"id": "mighty-candy",
+			"name": "Stärkebonbon",
+			"aliases": [
+				"Mighty Candy"
+			]
+		},
+		{
+			"id": "tough-candy",
+			"name": "Robustbonbon",
+			"aliases": [
+				"Tough Candy"
+			]
+		},
+		{
+			"id": "smart-candy",
+			"name": "Gripsbonbon",
+			"aliases": [
+				"Smart Candy"
+			]
+		},
+		{
+			"id": "courage-candy",
+			"name": "Mentalbonbon",
+			"aliases": [
+				"Courage Candy"
+			]
+		},
+		{
+			"id": "quick-candy",
+			"name": "Flottbonbon",
+			"aliases": [
+				"Quick Candy"
+			]
+		},
+		{
+			"id": "health-wing",
+			"name": "Heilfeder",
+			"aliases": [
+				"Health Feather"
+			]
+		},
+		{
+			"id": "muscle-wing",
+			"name": "Kraftfeder",
+			"aliases": [
+				"Muscle Feather"
+			]
+		},
+		{
+			"id": "resist-wing",
+			"name": "Abwehrfeder",
+			"aliases": [
+				"Resist Feather"
+			]
+		},
+		{
+			"id": "genius-wing",
+			"name": "Geniefeder",
+			"aliases": [
+				"Genius Feather"
+			]
+		},
+		{
+			"id": "clever-wing",
+			"name": "Espritfeder",
+			"aliases": [
+				"Clever Feather"
+			]
+		},
+		{
+			"id": "swift-wing",
+			"name": "Flinkfeder",
+			"aliases": [
+				"Swift Feather"
+			]
+		},
+		{
+			"id": "max-honey",
+			"name": "Dyna-Honig",
+			"aliases": [
+				"Max Honey"
+			]
+		},
+		{
+			"id": "max-mushrooms",
+			"name": "Dyna-Pilz",
+			"aliases": [
+				"Max Mushrooms"
+			]
+		},
+		{
+			"id": "ability-patch",
+			"name": "Fähigk.-Pflaster",
+			"aliases": [
+				"Ability Patch"
+			]
+		},
+		{
+			"id": "sun-stone",
+			"name": "Sonnenstein",
+			"aliases": [
+				"Sun Stone"
+			]
+		},
+		{
+			"id": "moon-stone",
+			"name": "Mondstein",
+			"aliases": [
+				"Moon Stone"
+			]
+		},
+		{
+			"id": "fire-stone",
+			"name": "Feuerstein",
+			"aliases": [
+				"Fire Stone"
+			]
+		},
+		{
+			"id": "thunder-stone",
+			"name": "Donnerstein",
+			"aliases": [
+				"Thunder Stone"
+			]
+		},
+		{
+			"id": "water-stone",
+			"name": "Wasserstein",
+			"aliases": [
+				"Water Stone"
+			]
+		},
+		{
+			"id": "leaf-stone",
+			"name": "Blattstein",
+			"aliases": [
+				"Leaf Stone"
+			]
+		},
+		{
+			"id": "shiny-stone",
+			"name": "Leuchtstein",
+			"aliases": [
+				"Shiny Stone"
+			]
+		},
+		{
+			"id": "dusk-stone",
+			"name": "Finsterstein",
+			"aliases": [
+				"Dusk Stone"
+			]
+		},
+		{
+			"id": "dawn-stone",
+			"name": "Funkelstein",
+			"aliases": [
+				"Dawn Stone"
+			]
+		},
+		{
+			"id": "ice-stone",
+			"name": "Eisstein",
+			"aliases": [
+				"Ice Stone"
+			]
+		},
+		{
+			"id": "oval-stone",
+			"name": "Ovaler Stein",
+			"aliases": [
+				"Oval Stone"
+			]
+		},
+		{
+			"id": "cheri-berry",
+			"name": "Amrenabeere",
+			"aliases": [
+				"Cheri Berry"
+			]
+		},
+		{
+			"id": "chesto-berry",
+			"name": "Maronbeere",
+			"aliases": [
+				"Chesto Berry"
+			]
+		},
+		{
+			"id": "pecha-berry",
+			"name": "Pirsifbeere",
+			"aliases": [
+				"Pecha Berry"
+			]
+		},
+		{
+			"id": "rawst-berry",
+			"name": "Fragiabeere",
+			"aliases": [
+				"Rawst Berry"
+			]
+		},
+		{
+			"id": "aspear-berry",
+			"name": "Wilbirbeere",
+			"aliases": [
+				"Aspear Berry"
+			]
+		},
+		{
+			"id": "leppa-berry",
+			"name": "Jonagobeere",
+			"aliases": [
+				"Leppa Berry"
+			]
+		},
+		{
+			"id": "oran-berry",
+			"name": "Sinelbeere",
+			"aliases": [
+				"Oran Berry"
+			]
+		},
+		{
+			"id": "persim-berry",
+			"name": "Persimbeere",
+			"aliases": [
+				"Persim Berry"
+			]
+		},
+		{
+			"id": "lum-berry",
+			"name": "Prunusbeere",
+			"aliases": [
+				"Lum Berry"
+			]
+		},
+		{
+			"id": "sitrus-berry",
+			"name": "Tsitrubeere",
+			"aliases": [
+				"Sitrus Berry"
+			]
+		},
+		{
+			"id": "occa-berry",
+			"name": "Koakobeere",
+			"aliases": [
+				"Occa Berry"
+			]
+		},
+		{
+			"id": "passho-berry",
+			"name": "Foepasbeere",
+			"aliases": [
+				"Passho Berry"
+			]
+		},
+		{
+			"id": "wacan-berry",
+			"name": "Kerzalbeere",
+			"aliases": [
+				"Wacan Berry"
+			]
+		},
+		{
+			"id": "rindo-berry",
+			"name": "Grindobeere",
+			"aliases": [
+				"Rindo Berry"
+			]
+		},
+		{
+			"id": "yache-berry",
+			"name": "Kiroyabeere",
+			"aliases": [
+				"Yache Berry"
+			]
+		},
+		{
+			"id": "chople-berry",
+			"name": "Rospelbeere",
+			"aliases": [
+				"Chople Berry"
+			]
+		},
+		{
+			"id": "kebia-berry",
+			"name": "Grarzbeere",
+			"aliases": [
+				"Kebia Berry"
+			]
+		},
+		{
+			"id": "shuca-berry",
+			"name": "Schukebeere",
+			"aliases": [
+				"Shuca Berry"
+			]
+		},
+		{
+			"id": "coba-berry",
+			"name": "Kobabeere",
+			"aliases": [
+				"Coba Berry"
+			]
+		},
+		{
+			"id": "payapa-berry",
+			"name": "Pyapabeere",
+			"aliases": [
+				"Payapa Berry"
+			]
+		},
+		{
+			"id": "tanga-berry",
+			"name": "Tanigabeere",
+			"aliases": [
+				"Tanga Berry"
+			]
+		},
+		{
+			"id": "charti-berry",
+			"name": "Chiaribeere",
+			"aliases": [
+				"Charti Berry"
+			]
+		},
+		{
+			"id": "kasib-berry",
+			"name": "Zitarzbeere",
+			"aliases": [
+				"Kasib Berry"
+			]
+		},
+		{
+			"id": "haban-berry",
+			"name": "Terirobeere",
+			"aliases": [
+				"Haban Berry"
+			]
+		},
+		{
+			"id": "colbur-berry",
+			"name": "Burleobeere",
+			"aliases": [
+				"Colbur Berry"
+			]
+		},
+		{
+			"id": "babiri-berry",
+			"name": "Babiribeere",
+			"aliases": [
+				"Babiri Berry"
+			]
+		},
+		{
+			"id": "chilan-berry",
+			"name": "Latchibeere",
+			"aliases": [
+				"Chilan Berry"
+			]
+		},
+		{
+			"id": "roseli-berry",
+			"name": "Hibisbeere",
+			"aliases": [
+				"Roseli Berry"
+			]
+		},
+		{
+			"id": "absorb-bulb",
+			"name": "Knolle",
+			"aliases": [
+				"Absorb Bulb"
+			]
+		},
+		{
+			"id": "air-balloon",
+			"name": "Luftballon",
+			"aliases": [
+				"Air Balloon"
+			]
+		},
+		{
+			"id": "assault-vest",
+			"name": "Offensivweste",
+			"aliases": [
+				"Assault Vest"
+			]
+		},
+		{
+			"id": "big-root",
+			"name": "Großwurzel",
+			"aliases": [
+				"Big Root"
+			]
+		},
+		{
+			"id": "binding-band",
+			"name": "Klammerband",
+			"aliases": [
+				"Binding Band"
+			]
+		},
+		{
+			"id": "black-sludge",
+			"name": "Giftschleim",
+			"aliases": [
+				"Black Sludge"
+			]
+		},
+		{
+			"id": "blunder-policy",
+			"name": "Fehlschlagschutz",
+			"aliases": [
+				"Blunder Policy"
+			]
+		},
+		{
+			"id": "bright-powder",
+			"name": "Blendpuder",
+			"aliases": [
+				"Bright Powder"
+			]
+		},
+		{
+			"id": "cell-battery",
+			"name": "Akku",
+			"aliases": [
+				"Cell Battery"
+			]
+		},
+		{
+			"id": "destiny-knot",
+			"name": "Fatumknoten",
+			"aliases": [
+				"Destiny Knot"
+			]
+		},
+		{
+			"id": "eject-button",
+			"name": "Fluchtknopf",
+			"aliases": [
+				"Eject Button"
+			]
+		},
+		{
+			"id": "eject-pack",
+			"name": "Fluchttasche",
+			"aliases": [
+				"Eject Pack"
+			]
+		},
+		{
+			"id": "eviolite",
+			"name": "Evolith",
+			"aliases": [
+				"Eviolite"
+			]
+		},
+		{
+			"id": "exp-share",
+			"name": "EP-Teiler",
+			"aliases": [
+				"Exp Share"
+			]
+		},
+		{
+			"id": "expert-belt",
+			"name": "Expertengurt",
+			"aliases": [
+				"Expert Belt"
+			]
+		},
+		{
+			"id": "float-stone",
+			"name": "Leichtstein",
+			"aliases": [
+				"Float Stone"
+			]
+		},
+		{
+			"id": "focus-band",
+			"name": "Fokusband",
+			"aliases": [
+				"Focus Band"
+			]
+		},
+		{
+			"id": "focus-sash",
+			"name": "Fokusgurt",
+			"aliases": [
+				"Focus Sash"
+			]
+		},
+		{
+			"id": "grip-claw",
+			"name": "Griffklaue",
+			"aliases": [
+				"Grip Claw"
+			]
+		},
+		{
+			"id": "heavy-duty-boots",
+			"name": "Plateauschuhe",
+			"aliases": [
+				"Heavy-Duty Boots"
+			]
+		},
+		{
+			"id": "leftovers",
+			"name": "Überreste",
+			"aliases": [
+				"Leftovers"
+			]
+		},
+		{
+			"id": "luminous-moss",
+			"name": "Leuchtmoos",
+			"aliases": [
+				"Luminous Moss"
+			]
+		},
+		{
+			"id": "kings-rock",
+			"name": "King-Stein",
+			"aliases": [
+				"King's Rock"
+			]
+		},
+		{
+			"id": "lagging-tail",
+			"name": "Schwerschweif",
+			"aliases": [
+				"Lagging Tail"
+			]
+		},
+		{
+			"id": "light-clay",
+			"name": "Lichtlehm",
+			"aliases": [
+				"Light Clay"
+			]
+		},
+		{
+			"id": "metronome",
+			"name": "Metronom",
+			"aliases": [
+				"Metronome"
+			]
+		},
+		{
+			"id": "muscle-band",
+			"name": "Muskelband",
+			"aliases": [
+				"Muscle Band"
+			]
+		},
+		{
+			"id": "protective-pads",
+			"name": "Schutzpolster",
+			"aliases": [
+				"Protective Pads"
+			]
+		},
+		{
+			"id": "quick-claw",
+			"name": "Flinkklaue",
+			"aliases": [
+				"Quick Claw"
+			]
+		},
+		{
+			"id": "razor-claw",
+			"name": "Scharfklaue",
+			"aliases": [
+				"Razor Claw"
+			]
+		},
+		{
+			"id": "razor-fang",
+			"name": "Scharfzahn",
+			"aliases": [
+				"Razor Fang"
+			]
+		},
+		{
+			"id": "red-card",
+			"name": "Rote Karte",
+			"aliases": [
+				"Red Card"
+			]
+		},
+		{
+			"id": "ring-target",
+			"name": "Zielscheibe",
+			"aliases": [
+				"Ring Target"
+			]
+		},
+		{
+			"id": "rocky-helmet",
+			"name": "Beulenhelm",
+			"aliases": [
+				"Rocky Helmet"
+			]
+		},
+		{
+			"id": "room-service",
+			"name": "Bizarroservice",
+			"aliases": [
+				"Room Service"
+			]
+		},
+		{
+			"id": "safety-goggles",
+			"name": "Schutzbrille",
+			"aliases": [
+				"Safety Goggles"
+			]
+		},
+		{
+			"id": "scope-lens",
+			"name": "Scope-Linse",
+			"aliases": [
+				"Scope Lens"
+			]
+		},
+		{
+			"id": "shed-shell",
+			"name": "Wechselhülle",
+			"aliases": [
+				"Shed Shell"
+			]
+		},
+		{
+			"id": "shell-bell",
+			"name": "Muschelglocke",
+			"aliases": [
+				"Shell Bell"
+			]
+		},
+		{
+			"id": "smoke-ball",
+			"name": "Rauchball",
+			"aliases": [
+				"Smoke Ball"
+			]
+		},
+		{
+			"id": "snowball",
+			"name": "Schneeball",
+			"aliases": [
+				"Snowball"
+			]
+		},
+		{
+			"id": "sticky-barb",
+			"name": "Klettdorn",
+			"aliases": [
+				"Sticky Barb"
+			]
+		},
+		{
+			"id": "throat-spray",
+			"name": "Halsspray",
+			"aliases": [
+				"Throat Spray"
+			]
+		},
+		{
+			"id": "utility-umbrella",
+			"name": "Allzweckschirm",
+			"aliases": [
+				"Utility Umbrella"
+			]
+		},
+		{
+			"id": "weakness-policy",
+			"name": "Schwächenschutz",
+			"aliases": [
+				"Weakness Policy"
+			]
+		},
+		{
+			"id": "wide-lens",
+			"name": "Großlinse",
+			"aliases": [
+				"Wide Lens"
+			]
+		},
+		{
+			"id": "wise-glasses",
+			"name": "Schlaubrille",
+			"aliases": [
+				"Wise Glasses"
+			]
+		},
+		{
+			"id": "zoom-lens",
+			"name": "Zoomlinse",
+			"aliases": [
+				"Zoom Lens"
+			]
+		},
+		{
+			"id": "mental-herb",
+			"name": "Mentalkraut",
+			"aliases": [
+				"Mental Herb"
+			]
+		},
+		{
+			"id": "power-herb",
+			"name": "Energiekraut",
+			"aliases": [
+				"Power Herb"
+			]
+		},
+		{
+			"id": "white-herb",
+			"name": "Schlohkraut",
+			"aliases": [
+				"White Herb"
+			]
+		},
+		{
+			"id": "choice-band",
+			"name": "Wahlband",
+			"aliases": [
+				"Choice Band"
+			]
+		},
+		{
+			"id": "choice-scarf",
+			"name": "Wahlschal",
+			"aliases": [
+				"Choice Scarf"
+			]
+		},
+		{
+			"id": "choice-specs",
+			"name": "Wahlbrille",
+			"aliases": [
+				"Choice Specs"
+			]
+		},
+		{
+			"id": "black-belt",
+			"name": "Schwarzgurt",
+			"aliases": [
+				"Black Belt"
+			]
+		},
+		{
+			"id": "black-glasses",
+			"name": "Schattenbrille",
+			"aliases": [
+				"Black Glasses"
+			]
+		},
+		{
+			"id": "charcoal",
+			"name": "Holzkohle",
+			"aliases": [
+				"Charcoal"
+			]
+		},
+		{
+			"id": "dragon-fang",
+			"name": "Drachenzahn",
+			"aliases": [
+				"Dragon Fang"
+			]
+		},
+		{
+			"id": "hard-stone",
+			"name": "Granitstein",
+			"aliases": [
+				"Hard Stone"
+			]
+		},
+		{
+			"id": "magnet",
+			"name": "Magnet",
+			"aliases": [
+				"Magnet"
+			]
+		},
+		{
+			"id": "metal-coat",
+			"name": "Metallmantel",
+			"aliases": [
+				"Metal Coat"
+			]
+		},
+		{
+			"id": "miracle-seed",
+			"name": "Wundersaat",
+			"aliases": [
+				"Miracle Seed"
+			]
+		},
+		{
+			"id": "mystic-water",
+			"name": "Zauberwasser",
+			"aliases": [
+				"Mystic Water"
+			]
+		},
+		{
+			"id": "never-melt-ice",
+			"name": "Ewiges Eis",
+			"aliases": [
+				"Never-Melt Ice"
+			]
+		},
+		{
+			"id": "poison-barb",
+			"name": "Giftstich",
+			"aliases": [
+				"Poison Barb"
+			]
+		},
+		{
+			"id": "sharp-beak",
+			"name": "Spitzer Schnabel",
+			"aliases": [
+				"Sharp Beak"
+			]
+		},
+		{
+			"id": "silk-scarf",
+			"name": "Seidenschal",
+			"aliases": [
+				"Silk Scarf"
+			]
+		},
+		{
+			"id": "silver-powder",
+			"name": "Silberstaub",
+			"aliases": [
+				"Silver Powder"
+			]
+		},
+		{
+			"id": "soft-sand",
+			"name": "Pudersand",
+			"aliases": [
+				"Soft Sand"
+			]
+		},
+		{
+			"id": "spell-tag",
+			"name": "Bannsticker",
+			"aliases": [
+				"Spell Tag"
+			]
+		},
+		{
+			"id": "twisted-spoon",
+			"name": "Krummlöffel",
+			"aliases": [
+				"Twisted Spoon"
+			]
+		},
+		{
+			"id": "full-incense",
+			"name": "Lahmrauch",
+			"aliases": [
+				"Full Incense"
+			]
+		},
+		{
+			"id": "lax-incense",
+			"name": "Laxrauch",
+			"aliases": [
+				"Lax Incense"
+			]
+		},
+		{
+			"id": "odd-incense",
+			"name": "Schrägrauch",
+			"aliases": [
+				"Odd Incense"
+			]
+		},
+		{
+			"id": "rock-incense",
+			"name": "Steinrauch",
+			"aliases": [
+				"Rock Incense"
+			]
+		},
+		{
+			"id": "rose-incense",
+			"name": "Rosenrauch",
+			"aliases": [
+				"Rose Incense"
+			]
+		},
+		{
+			"id": "sea-incense",
+			"name": "Seerauch",
+			"aliases": [
+				"Sea Incense"
+			]
+		},
+		{
+			"id": "wave-incense",
+			"name": "Wellenrauch",
+			"aliases": [
+				"Wave Incense"
+			]
+		},
+		{
+			"id": "adrenaline-orb",
+			"name": "Zitterorb",
+			"aliases": [
+				"Adrenaline Orb"
+			]
+		},
+		{
+			"id": "flame-orb",
+			"name": "Heiß-Orb",
+			"aliases": [
+				"Flame Orb"
+			]
+		},
+		{
+			"id": "iron-ball",
+			"name": "Eisenkugel",
+			"aliases": [
+				"Iron Ball"
+			]
+		},
+		{
+			"id": "life-orb",
+			"name": "Leben-Orb",
+			"aliases": [
+				"Life Orb"
+			]
+		},
+		{
+			"id": "toxic-orb",
+			"name": "Toxik-Orb",
+			"aliases": [
+				"Toxic Orb"
+			]
+		},
+		{
+			"id": "damp-rock",
+			"name": "Nassbrocken",
+			"aliases": [
+				"Damp Rock"
+			]
+		},
+		{
+			"id": "heat-rock",
+			"name": "Heißbrocken",
+			"aliases": [
+				"Heat Rock"
+			]
+		},
+		{
+			"id": "icy-rock",
+			"name": "Eisbrocken",
+			"aliases": [
+				"Icy Rock"
+			]
+		},
+		{
+			"id": "smooth-rock",
+			"name": "Glattbrocken",
+			"aliases": [
+				"Smooth Rock"
+			]
+		},
+		{
+			"id": "terrain-extender",
+			"name": "Feldbeschichtung",
+			"aliases": [
+				"Terrain Extender"
+			]
+		},
+		{
+			"id": "electric-seed",
+			"name": "Elektro-Samen",
+			"aliases": [
+				"Electric Seed"
+			]
+		},
+		{
+			"id": "grassy-seed",
+			"name": "Gras-Samen",
+			"aliases": [
+				"Grassy Seed"
+			]
+		},
+		{
+			"id": "misty-seed",
+			"name": "Nebel-Samen",
+			"aliases": [
+				"Misty Seed"
+			]
+		},
+		{
+			"id": "psychic-seed",
+			"name": "Psycho-Samen",
+			"aliases": [
+				"Psychic Seed"
+			]
+		},
+		{
+			"id": "draco-plate",
+			"name": "Dracotafel",
+			"aliases": [
+				"Draco Plate"
+			]
+		},
+		{
+			"id": "dread-plate",
+			"name": "Furchttafel",
+			"aliases": [
+				"Dread Plate"
+			]
+		},
+		{
+			"id": "earth-plate",
+			"name": "Erdtafel",
+			"aliases": [
+				"Earth Plate"
+			]
+		},
+		{
+			"id": "flame-plate",
+			"name": "Feuertafel",
+			"aliases": [
+				"Flame Plate"
+			]
+		},
+		{
+			"id": "icicle-plate",
+			"name": "Frosttafel",
+			"aliases": [
+				"Icicle Plate"
+			]
+		},
+		{
+			"id": "insect-plate",
+			"name": "Käfertafel",
+			"aliases": [
+				"Insect Plate"
+			]
+		},
+		{
+			"id": "iron-plate",
+			"name": "Eisentafel",
+			"aliases": [
+				"Iron Plate"
+			]
+		},
+		{
+			"id": "meadow-plate",
+			"name": "Wiesentafel",
+			"aliases": [
+				"Meadow Plate"
+			]
+		},
+		{
+			"id": "mind-plate",
+			"name": "Hirntafel",
+			"aliases": [
+				"Mind Plate"
+			]
+		},
+		{
+			"id": "pixie-plate",
+			"name": "Feentafel",
+			"aliases": [
+				"Pixie Plate"
+			]
+		},
+		{
+			"id": "sky-plate",
+			"name": "Wolkentafel",
+			"aliases": [
+				"Sky Plate"
+			]
+		},
+		{
+			"id": "splash-plate",
+			"name": "Wassertafel",
+			"aliases": [
+				"Splash Plate"
+			]
+		},
+		{
+			"id": "spooky-plate",
+			"name": "Spuktafel",
+			"aliases": [
+				"Spooky Plate"
+			]
+		},
+		{
+			"id": "stone-plate",
+			"name": "Steintafel",
+			"aliases": [
+				"Stone Plate"
+			]
+		},
+		{
+			"id": "toxic-plate",
+			"name": "Gifttafel",
+			"aliases": [
+				"Toxic Plate"
+			]
+		},
+		{
+			"id": "zap-plate",
+			"name": "Blitztafel",
+			"aliases": [
+				"Zap Plate"
+			]
+		},
+		{
+			"id": "deep-sea-scale",
+			"name": "Abyssplatte",
+			"aliases": [
+				"Deep Sea Scale"
+			]
+		},
+		{
+			"id": "deep-sea-tooth",
+			"name": "Abysszahn",
+			"aliases": [
+				"Deep Sea Tooth"
+			]
+		},
+		{
+			"id": "griseous-orb",
+			"name": "Platinum-Orb",
+			"aliases": [
+				"Griseous Orb"
+			]
+		},
+		{
+			"id": "light-ball",
+			"name": "Kugelblitz",
+			"aliases": [
+				"Light Ball"
+			]
+		},
+		{
+			"id": "lucky-punch",
+			"name": "Lucky Punch",
+			"aliases": [
+				"Lucky Punch"
+			]
+		},
+		{
+			"id": "metal-powder",
+			"name": "Metallstaub",
+			"aliases": [
+				"Metal Powder"
+			]
+		},
+		{
+			"id": "prison-bottle",
+			"name": "Banngefäß",
+			"aliases": [
+				"Prison Bottle"
+			]
+		},
+		{
+			"id": "reveal-glass",
+			"name": "Wahrspiegel",
+			"aliases": [
+				"Reveal Glass"
+			]
+		},
+		{
+			"id": "thick-club",
+			"name": "Kampfknochen",
+			"aliases": [
+				"Thick Club"
+			]
+		},
+		{
+			"id": "burn-drive",
+			"name": "Flammenmodul",
+			"aliases": [
+				"Burn Drive"
+			]
+		},
+		{
+			"id": "chill-drive",
+			"name": "Gefriermodul",
+			"aliases": [
+				"Chill Drive"
+			]
+		},
+		{
+			"id": "douse-drive",
+			"name": "Aquamodul",
+			"aliases": [
+				"Douse Drive"
+			]
+		},
+		{
+			"id": "shock-drive",
+			"name": "Blitzmodul",
+			"aliases": [
+				"Shock Drive"
+			]
+		},
+		{
+			"id": "blue-orb",
+			"name": "Blauer Edelstein",
+			"aliases": [
+				"Blue Orb"
+			]
+		},
+		{
+			"id": "red-orb",
+			"name": "Roter Edelstein",
+			"aliases": [
+				"Red Orb"
+			]
+		},
+		{
+			"id": "dragon-scale",
+			"name": "Drachenhaut",
+			"aliases": [
+				"Dragon Scale"
+			]
+		},
+		{
+			"id": "up-grade",
+			"name": "Up-Grade",
+			"aliases": [
+				"Upgrade"
+			]
+		},
+		{
+			"id": "protector",
+			"name": "Schützer",
+			"aliases": [
+				"Protector"
+			]
+		},
+		{
+			"id": "electirizer",
+			"name": "Stromisierer",
+			"aliases": [
+				"Electirizer"
+			]
+		},
+		{
+			"id": "magmarizer",
+			"name": "Magmaisierer",
+			"aliases": [
+				"Magmarizer"
+			]
+		},
+		{
+			"id": "dubious-disc",
+			"name": "Dubiosdisc",
+			"aliases": [
+				"Dubious Disc"
+			]
+		},
+		{
+			"id": "reaper-cloth",
+			"name": "Düsterumhang",
+			"aliases": [
+				"Reaper Cloth"
+			]
+		},
+		{
+			"id": "prism-scale",
+			"name": "Schönschuppe",
+			"aliases": [
+				"Prism Scale"
+			]
+		},
+		{
+			"id": "whipped-dream",
+			"name": "Sahnehäubchen",
+			"aliases": [
+				"Whipped Dream"
+			]
+		},
+		{
+			"id": "sachet",
+			"name": "Duftbeutel",
+			"aliases": [
+				"Sachet"
+			]
+		},
+		{
+			"id": "cracked-pot",
+			"name": "Rissige Kanne",
+			"aliases": [
+				"Cracked Pot"
+			]
+		},
+		{
+			"id": "chipped-pot",
+			"name": "Löchrige Kanne",
+			"aliases": [
+				"Chipped Pot"
+			]
+		},
+		{
+			"id": "galarica-wreath",
+			"name": "Galarnuss-Kranz",
+			"aliases": [
+				"Galarica Wreath"
+			]
+		},
+		{
+			"id": "black-augurite",
+			"name": "Schwarzaugit",
+			"aliases": [
+				"Black Augurite"
+			]
+		},
+		{
+			"id": "peat-block",
+			"name": "Torfblock",
+			"aliases": [
+				"Peat Block"
+			]
+		},
+		{
+			"id": "old-rod",
+			"name": "Angel",
+			"aliases": [
+				"Old Rod"
+			]
+		},
+		{
+			"id": "good-rod",
+			"name": "Profiangel",
+			"aliases": [
+				"Good Rod"
+			]
+		},
+		{
+			"id": "super-rod",
+			"name": "Superangel",
+			"aliases": [
+				"Super Rod"
+			]
+		},
+		{
+			"id": "escape-rope",
+			"name": "Fluchtseil",
+			"aliases": [
+				"Escape Rope"
+			]
+		},
+		{
+			"id": "honey",
+			"name": "Honig",
+			"aliases": [
+				"Honey"
+			]
+		},
+		{
+			"id": "key-stone",
+			"name": "Schlüssel-Stein",
+			"aliases": [
+				"Key Stone"
+			]
+		},
+		{
+			"id": "z-ring",
+			"name": "Z-Ring",
+			"aliases": [
+				"Z-Ring"
+			]
+		},
+		{
+			"id": "dynamax-band",
+			"name": "Dynamax-Band",
+			"aliases": [
+				"Dynamax Band"
+			]
+		}
+	]
+}

@@ -15,11 +15,13 @@ export type CollapsedAbility = {
 export class Ability extends DataClass<{
 	referenceId?: ReferenceAbilityId
 	name: string,
+	aliases?: string[],
 	description: string,
 	deprecated?: boolean,
 }> {
 	get referenceId() { return this.data.referenceId }
 	get name() { return this.data.name }
+	get aliases() { return this.data.aliases ?? [] }
 	get description() { return this.data.description }
 	get deprecated() { return this.data.deprecated ?? false }
 	get custom() { return this.data.referenceId == null }
@@ -87,6 +89,7 @@ export class Ability extends DataClass<{
 			return {
 				id: ability.id,
 				name: matchedAbility.name,
+				aliases: matchedAbility.aliases,
 				description: matchedAbility.description,
 				hidden: ability.hidden,
 			}
