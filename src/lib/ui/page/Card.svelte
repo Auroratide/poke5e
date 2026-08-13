@@ -34,7 +34,7 @@
 <div class="container" class:inline>
 	<article aria-label="{title}">
 		<header>
-			<svelte:element this={leveltag}>{title}</svelte:element>
+			<svelte:element this={leveltag} class="title">{title}</svelte:element>
 			<slot name="header-extra"></slot>
 			{#if dismissToHref}
 				<a class="dismiss" href="{dismissToHref}" aria-label="{m.dismiss()}"><ChevronIcon.Menu /></a>
@@ -146,6 +146,10 @@
 
 	article :global(.loader) {
 		--skin-local-color: var(--skin-content-text);
+	}
+
+	article .title {
+		margin: 0;
 	}
 
 	.dismiss {

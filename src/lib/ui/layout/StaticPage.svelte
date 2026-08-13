@@ -1,23 +1,51 @@
 <script lang="ts">
+	import type { Snippet } from "svelte"
 	import Container from "./Container.svelte"
 	import { MAIN_CONTENT_ID } from "./SkipLinks.svelte"
+	import { Theme, type ThemeColor } from "../theme"
+	import IconShadow from "./IconShadow.svelte"
+	import Backdrop from "./Backdrop.svelte"
 
-	export let title: string
-	export let subtitle: string | undefined = undefined
-	export let large: boolean = false
-	export let containersize: "full" | "half" = "half"
-	export let height: "full" | "auto" = "auto"
+	let {
+		title,
+		subtitle = undefined,
+		large = false,
+		containersize = "half",
+		height = "auto",
+		children,
+		theme,
+		icon,
+	}: {
+		title: string,
+		subtitle?: string,
+		large?: boolean,
+		containersize?: "full" | "half",
+		height?: "full" | "auto",
+		children?: Snippet,
+		theme?: ThemeColor,
+		icon?: Snippet,
+	} = $props()
 </script>
 
-<main id="{MAIN_CONTENT_ID}" class:large>
-	<Container half={containersize === "half"} {height}>
-		<header>
-			<h1>{title}</h1>
-			{#if subtitle}<p>{subtitle}</p>{/if}
-		</header>
-		<slot></slot>
-	</Container>
-</main>
+<Theme id="page-theme" theme={theme ?? "red"}>
+	{#if icon != null}
+		<IconShadow>
+			{@render icon()}
+		</IconShadow>
+	{/if}
+	{#if theme != null}
+		<Backdrop />
+	{/if}
+	<main id="{MAIN_CONTENT_ID}" class:large>
+		<Container half={containersize === "half"} {height}>
+			<header class:has-theme={theme != null}>
+				<h1>{title}</h1>
+				{#if subtitle}<p>{subtitle}</p>{/if}
+			</header>
+			{@render children?.()}
+		</Container>
+	</main>
+</Theme>
 
 <style>
 	main {
@@ -39,6 +67,19 @@
 	} header h1 {
 		font-size: var(--font-sz-saturn);
 		margin-block-end: 0.5em;
+	} header.has-theme {
+		background: var(--skin-bg);
+		color: var(--skin-bg-text);
+		border-radius: 2em;
+		padding: 1.5em 1.5em;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		box-shadow: var(--elev-cumulus);
+		margin-block-end: 2em;
+	} header.has-theme p {
+		margin: 0;
+		text-wrap: balance;
 	}
 
 	.large header h1 {
