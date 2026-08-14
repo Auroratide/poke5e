@@ -622,4 +622,27 @@ describe("AsiEffect", () => {
 		expect(result.attributes.str.score).toEqual(13)
 		expect(result.attributes.dex.score).toEqual(14)
 	})
+
+	test("con increases hp", () => {
+		const pokemon = stubTrainerPokemon({
+			level: new Level(7),
+			hp: {
+				current: 20,
+				max: 30,
+			},
+			attributes: stubAttributes({
+				con: 12,
+			}),
+		})
+
+		const effect = new AsiEffect(stubAsi({
+			con: 4,
+		}))
+
+		const result = effect.apply(pokemon)
+
+		expect(result.attributes.con.score).toEqual(16)
+		expect(result.hp.current).toEqual(34)
+		expect(result.hp.max).toEqual(44)
+	})
 })

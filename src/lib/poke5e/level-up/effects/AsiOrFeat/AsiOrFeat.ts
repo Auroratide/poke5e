@@ -2,7 +2,7 @@ import { AbilityScoreImprovement, type Attributes } from "$lib/dnd/attributes"
 import type { Feat, FeatEffects } from "$lib/dnd/feats"
 import type { ChosenFeat } from "$lib/dnd/feats/ChosenFeat"
 import type { Level } from "$lib/dnd/level"
-import type { Resource } from "$lib/poke5e/resource"
+import { HitPoints, type Resource } from "$lib/poke5e/resource"
 import { LevelUpEffect } from "../LevelUpEffect.svelte"
 import AsiOrFeatField from "./AsiOrFeatField.svelte"
 
@@ -45,8 +45,8 @@ export class AsiOrFeatEffect extends LevelUpEffect<AsiOrFeatProps, AsiOrFeatPara
 
 		const originalCon = subject.attributes.con
 		const improvedAttributes = subject.attributes.improve(this.params.pointsSpent)
-		const differenceInConModifier = improvedAttributes.con.modifier - originalCon.modifier
-		const hpGain = subject.level.data * differenceInConModifier
+		const differenceInConScore = improvedAttributes.con.score - originalCon.score
+		const newHp = HitPoints.improveViaConIncrease(subject.hp, subject.level, differenceInConScore)
 
 		if (feat != null && this.params.featEffects != null) {
 			subject = this.params.featEffects?.onAcquire?.(subject) ?? subject
@@ -56,10 +56,7 @@ export class AsiOrFeatEffect extends LevelUpEffect<AsiOrFeatProps, AsiOrFeatPara
 			...subject,
 			attributes: improvedAttributes,
 			feats: feat != null ? [...subject.feats, feat] : subject.feats,
-			hp: {
-				current: subject.hp.current + hpGain,
-				max: subject.hp.max + hpGain,
-			},
+			hp: newHp,
 		}
 	}
 }

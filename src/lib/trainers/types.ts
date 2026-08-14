@@ -22,6 +22,7 @@ import type { Resource } from "$lib/poke5e/resource"
 import type { Stab } from "$lib/pokemon/stab"
 import type { TagList } from "$lib/poke5e/tags"
 import type { Token } from "$lib/dnd/token"
+import type { HitPoints } from "$lib/poke5e/resource/HitPoints"
 
 export type LearnedMove = {
 	id: string,
@@ -63,7 +64,7 @@ export type TrainerPokemon = {
 	gender: PokemonGender,
 	attributes: Attributes,
 	ac: number,
-	hp: Resource,
+	hp: HitPoints,
 	hitDice: Resource,
 	/**
 	 * @deprecated Use abilities instead
@@ -115,7 +116,7 @@ export type TrainerInfo = {
 	description: string,
 	level: Level,
 	ac: number,
-	hp: Resource,
+	hp: HitPoints,
 	hitDice: Resource,
 	attributes: Attributes,
 	proficiencies: SkillRanks,

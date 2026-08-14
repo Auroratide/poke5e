@@ -7,6 +7,7 @@ import type { Skill } from "$lib/dnd/skills"
 import { capitalize, uppercase } from "$lib/utils/string"
 import { AbilityScoreImprovement, type Attribute } from "$lib/dnd/attributes"
 import { Ability } from "$lib/pokemon/ability"
+import { HitPoints } from "$lib/poke5e/resource/HitPoints"
 
 export interface EvolutionEffect {
 	apply: (pokemon: TrainerPokemon) => TrainerPokemon
@@ -131,6 +132,7 @@ export class AsiEffect implements EvolutionEffect {
 
 	apply(pokemon: TrainerPokemon): TrainerPokemon {
 		pokemon.attributes.improve(this.asi)
+		pokemon.hp = HitPoints.improveViaConIncrease(pokemon.hp, pokemon.level, this.asi.con)
 		return pokemon
 	}
 
