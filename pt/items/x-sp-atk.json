@@ -1,1 +1,1 @@
-{"id":"x-sp-atk","name":"X Atq. Esp.","type":"medicine","cost":350,"description":["Um treinador pode usar uma ação para administrar isso a um Pokémon. Por 1 minuto, esse Pokémon adiciona +2 à CD de seus movimentos."],"media":{"sprite":"/assets/items/x-sp-atk/sprite.png"}}
+{"id":"x-sp-atk","name":"X Atq. Esp.","type":"medicine","cost":350,"description":["Um treinador pode usar uma ação para administrar isso a um Pokémon. Por 1 minuto, esse Pokémon adiciona +2 à CD de seus movimentos."],"media":{"sprite":"/assets/items/x-sp-atk/sprite.png"},"aliases":["X Sp. Atk"]}

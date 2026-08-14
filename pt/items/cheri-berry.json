@@ -1,1 +1,1 @@
-{"id":"cheri-berry","name":"Baga Cheri","type":"berry","cost":200,"description":["Consumir para curar paralisia. Pode ser consumida como reação ao ficar paralisado."],"media":{"sprite":"/assets/items/cheri-berry/sprite.png"}}
+{"id":"cheri-berry","name":"Baga Cheri","type":"berry","cost":200,"description":["Consumir para curar paralisia. Pode ser consumida como reação ao ficar paralisado."],"media":{"sprite":"/assets/items/cheri-berry/sprite.png"},"aliases":["Cheri Berry"]}

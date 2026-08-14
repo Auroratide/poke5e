@@ -1,1 +1,1 @@
-{"id":"lum-berry","name":"Baga Lum","type":"berry","cost":400,"description":["Consumir para curar uma única condição de status. Pode ser consumida como reação ao ser afetado por uma condição de status."],"media":{"sprite":"/assets/items/lum-berry/sprite.png"}}
+{"id":"lum-berry","name":"Baga Lum","type":"berry","cost":400,"description":["Consumir para curar uma única condição de status. Pode ser consumida como reação ao ser afetado por uma condição de status."],"media":{"sprite":"/assets/items/lum-berry/sprite.png"},"aliases":["Lum Berry"]}

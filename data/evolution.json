@@ -4846,7 +4846,7 @@
 			"effects": [
 				{
 					"type": "asi",
-					"value": 8
+					"value": 7
 				}
 			]
 		},
@@ -8186,7 +8186,7 @@
 			"effects": [
 				{
 					"type": "asi",
-					"value": 9
+					"value": 8
 				}
 			]
 		},
@@ -8644,7 +8644,7 @@
 			"effects": [
 				{
 					"type": "asi",
-					"value": 14
+					"value": 13
 				}
 			]
 		},

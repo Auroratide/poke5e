@@ -1,1 +1,1 @@
-{"id":"prism-scale","name":"Escama Bella","type":"evolution","cost":4000,"description":["Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.","Pokémon que evolucionan usando este objeto:"],"media":{"sprite":"/assets/items/prism-scale/sprite.png"}}
+{"id":"prism-scale","name":"Escama Bella","type":"evolution","cost":4000,"description":["Algunos Pokémon pueden consumir el poder de este objeto para evolucionar.","Pokémon que evolucionan usando este objeto:"],"media":{"sprite":"/assets/items/prism-scale/sprite.png"},"aliases":["Prism Scale"]}

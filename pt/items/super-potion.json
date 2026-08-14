@@ -1,1 +1,1 @@
-{"id":"super-potion","name":"Super Poção","type":"medicine","cost":500,"description":["Um treinador pode usar uma ação para restaurar 3d6 + 6 de HP a um Pokémon adjacente. Consumido no uso."],"media":{"sprite":"/assets/items/super-potion/sprite.png"}}
+{"id":"super-potion","name":"Super Poção","type":"medicine","cost":500,"description":["Um treinador pode usar uma ação para restaurar 3d6 + 6 de HP a um Pokémon adjacente. Consumido no uso."],"media":{"sprite":"/assets/items/super-potion/sprite.png"},"aliases":["Super Potion"]}

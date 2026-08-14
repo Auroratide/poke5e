@@ -1,1 +1,1 @@
-{"id":"toxic-plate","name":"Tabla Tóxica","type":"held item","cost":null,"description":["Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Veneno."],"media":{"sprite":"/assets/items/toxic-plate/sprite.png"}}
+{"id":"toxic-plate","name":"Tabla Tóxica","type":"held item","cost":null,"description":["Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Veneno."],"media":{"sprite":"/assets/items/toxic-plate/sprite.png"},"aliases":["Toxic Plate"]}

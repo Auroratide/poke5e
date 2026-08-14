@@ -1,1 +1,1 @@
-{"id":"kasib-berry","name":"Baya Drasi","type":"berry","cost":200,"description":["Puede consumirse como reacción al recibir daño de tipo Fantasma. En su lugar, solo se recibe la mitad de ese daño."],"media":{"sprite":"/assets/items/kasib-berry/sprite.png"}}
+{"id":"kasib-berry","name":"Baya Drasi","type":"berry","cost":200,"description":["Puede consumirse como reacción al recibir daño de tipo Fantasma. En su lugar, solo se recibe la mitad de ese daño."],"media":{"sprite":"/assets/items/kasib-berry/sprite.png"},"aliases":["Kasib Berry"]}

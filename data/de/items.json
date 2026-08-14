@@ -1,0 +1,1092 @@
+{
+	"items": [
+		{
+			"id": "poke-ball",
+			"name": "Pokéball"
+		},
+		{
+			"id": "great-ball",
+			"name": "Superball"
+		},
+		{
+			"id": "ultra-ball",
+			"name": "Hyperball"
+		},
+		{
+			"id": "master-ball",
+			"name": "Meisterball"
+		},
+		{
+			"id": "safari-ball",
+			"name": "Safariball"
+		},
+		{
+			"id": "fast-ball",
+			"name": "Turboball"
+		},
+		{
+			"id": "level-ball",
+			"name": "Levelball"
+		},
+		{
+			"id": "lure-ball",
+			"name": "Köderball"
+		},
+		{
+			"id": "heavy-ball",
+			"name": "Schwerball"
+		},
+		{
+			"id": "love-ball",
+			"name": "Sympaball"
+		},
+		{
+			"id": "friend-ball",
+			"name": "Freundesball"
+		},
+		{
+			"id": "moon-ball",
+			"name": "Mondball"
+		},
+		{
+			"id": "sport-ball",
+			"name": "Turnierball"
+		},
+		{
+			"id": "net-ball",
+			"name": "Netzball"
+		},
+		{
+			"id": "dive-ball",
+			"name": "Tauchball"
+		},
+		{
+			"id": "nest-ball",
+			"name": "Nestball"
+		},
+		{
+			"id": "repeat-ball",
+			"name": "Wiederball"
+		},
+		{
+			"id": "timer-ball",
+			"name": "Timerball"
+		},
+		{
+			"id": "luxury-ball",
+			"name": "Luxusball"
+		},
+		{
+			"id": "premier-ball",
+			"name": "Premierball"
+		},
+		{
+			"id": "dusk-ball",
+			"name": "Finsterball"
+		},
+		{
+			"id": "heal-ball",
+			"name": "Heilball"
+		},
+		{
+			"id": "quick-ball",
+			"name": "Flottball"
+		},
+		{
+			"id": "dream-ball",
+			"name": "Traumball"
+		},
+		{
+			"id": "potion",
+			"name": "Trank"
+		},
+		{
+			"id": "super-potion",
+			"name": "Supertrank"
+		},
+		{
+			"id": "hyper-potion",
+			"name": "Hypertrank"
+		},
+		{
+			"id": "antidote",
+			"name": "Gegengift"
+		},
+		{
+			"id": "burn-heal",
+			"name": "Feuerheiler"
+		},
+		{
+			"id": "ice-heal",
+			"name": "Eisheiler"
+		},
+		{
+			"id": "awakening",
+			"name": "Aufwecker"
+		},
+		{
+			"id": "paralyze-heal",
+			"name": "Para-Heiler"
+		},
+		{
+			"id": "max-potion",
+			"name": "Top-Trank"
+		},
+		{
+			"id": "full-heal",
+			"name": "Hyperheiler"
+		},
+		{
+			"id": "full-restore",
+			"name": "Top-Genesung"
+		},
+		{
+			"id": "revive",
+			"name": "Beleber"
+		},
+		{
+			"id": "max-revive",
+			"name": "Top-Beleber"
+		},
+		{
+			"id": "fresh-water",
+			"name": "Tafelwasser"
+		},
+		{
+			"id": "soda-pop",
+			"name": "Sprudel"
+		},
+		{
+			"id": "berry-juice",
+			"name": "Beerensaft"
+		},
+		{
+			"id": "lemonade",
+			"name": "Limonade"
+		},
+		{
+			"id": "moomoo-milk",
+			"name": "Kuhmuh-Milch"
+		},
+		{
+			"id": "energy-powder",
+			"name": "Energiestaub"
+		},
+		{
+			"id": "energy-root",
+			"name": "Kraftwurzel"
+		},
+		{
+			"id": "heal-powder",
+			"name": "Heilpuder"
+		},
+		{
+			"id": "revival-herb",
+			"name": "Vitalkraut"
+		},
+		{
+			"id": "ether",
+			"name": "Äther"
+		},
+		{
+			"id": "max-ether",
+			"name": "Top-Äther"
+		},
+		{
+			"id": "elixir",
+			"name": "Elixier"
+		},
+		{
+			"id": "max-elixir",
+			"name": "Top-Elixier"
+		},
+		{
+			"id": "sacred-ash",
+			"name": "Zauberasche"
+		},
+		{
+			"id": "hp-up",
+			"name": "KP-Plus"
+		},
+		{
+			"id": "protein",
+			"name": "Protein"
+		},
+		{
+			"id": "iron",
+			"name": "Eisen"
+		},
+		{
+			"id": "carbos",
+			"name": "Carbon"
+		},
+		{
+			"id": "calcium",
+			"name": "Kalzium"
+		},
+		{
+			"id": "zinc",
+			"name": "Zink"
+		},
+		{
+			"id": "pp-up",
+			"name": "AP-Plus"
+		},
+		{
+			"id": "ability-capsule",
+			"name": "Fähigk.-Kapsel"
+		},
+		{
+			"id": "guard-spec",
+			"name": "Megablock"
+		},
+		{
+			"id": "dire-hit",
+			"name": "Angriffplus"
+		},
+		{
+			"id": "x-attack",
+			"name": "X-Angriff"
+		},
+		{
+			"id": "x-defense",
+			"name": "X-Verteidigung"
+		},
+		{
+			"id": "x-speed",
+			"name": "X-Initiative"
+		},
+		{
+			"id": "x-accuracy",
+			"name": "X-Genauigkeit"
+		},
+		{
+			"id": "x-sp-atk",
+			"name": "X-Sp.-Ang."
+		},
+		{
+			"id": "x-sp-def",
+			"name": "X-Sp.-Vert."
+		},
+		{
+			"id": "red-nectar",
+			"name": "Roter Nektar"
+		},
+		{
+			"id": "yellow-nectar",
+			"name": "Gelber Nektar"
+		},
+		{
+			"id": "pink-nectar",
+			"name": "Rosa Nektar"
+		},
+		{
+			"id": "purple-nectar",
+			"name": "Purpurner Nektar"
+		},
+		{
+			"id": "pewter-crunchies",
+			"name": "Marmoria-Kräcker"
+		},
+		{
+			"id": "health-candy",
+			"name": "Energiebonbon"
+		},
+		{
+			"id": "mighty-candy",
+			"name": "Stärkebonbon"
+		},
+		{
+			"id": "tough-candy",
+			"name": "Robustbonbon"
+		},
+		{
+			"id": "smart-candy",
+			"name": "Gripsbonbon"
+		},
+		{
+			"id": "courage-candy",
+			"name": "Mentalbonbon"
+		},
+		{
+			"id": "quick-candy",
+			"name": "Flottbonbon"
+		},
+		{
+			"id": "health-wing",
+			"name": "Heilfeder"
+		},
+		{
+			"id": "muscle-wing",
+			"name": "Kraftfeder"
+		},
+		{
+			"id": "resist-wing",
+			"name": "Abwehrfeder"
+		},
+		{
+			"id": "genius-wing",
+			"name": "Geniefeder"
+		},
+		{
+			"id": "clever-wing",
+			"name": "Espritfeder"
+		},
+		{
+			"id": "swift-wing",
+			"name": "Flinkfeder"
+		},
+		{
+			"id": "max-honey",
+			"name": "Dyna-Honig"
+		},
+		{
+			"id": "max-mushrooms",
+			"name": "Dyna-Pilz"
+		},
+		{
+			"id": "ability-patch",
+			"name": "Fähigk.-Pflaster"
+		},
+		{
+			"id": "sun-stone",
+			"name": "Sonnenstein"
+		},
+		{
+			"id": "moon-stone",
+			"name": "Mondstein"
+		},
+		{
+			"id": "fire-stone",
+			"name": "Feuerstein"
+		},
+		{
+			"id": "thunder-stone",
+			"name": "Donnerstein"
+		},
+		{
+			"id": "water-stone",
+			"name": "Wasserstein"
+		},
+		{
+			"id": "leaf-stone",
+			"name": "Blattstein"
+		},
+		{
+			"id": "shiny-stone",
+			"name": "Leuchtstein"
+		},
+		{
+			"id": "dusk-stone",
+			"name": "Finsterstein"
+		},
+		{
+			"id": "dawn-stone",
+			"name": "Funkelstein"
+		},
+		{
+			"id": "ice-stone",
+			"name": "Eisstein"
+		},
+		{
+			"id": "oval-stone",
+			"name": "Ovaler Stein"
+		},
+		{
+			"id": "cheri-berry",
+			"name": "Amrenabeere"
+		},
+		{
+			"id": "chesto-berry",
+			"name": "Maronbeere"
+		},
+		{
+			"id": "pecha-berry",
+			"name": "Pirsifbeere"
+		},
+		{
+			"id": "rawst-berry",
+			"name": "Fragiabeere"
+		},
+		{
+			"id": "aspear-berry",
+			"name": "Wilbirbeere"
+		},
+		{
+			"id": "leppa-berry",
+			"name": "Jonagobeere"
+		},
+		{
+			"id": "oran-berry",
+			"name": "Sinelbeere"
+		},
+		{
+			"id": "persim-berry",
+			"name": "Persimbeere"
+		},
+		{
+			"id": "lum-berry",
+			"name": "Prunusbeere"
+		},
+		{
+			"id": "sitrus-berry",
+			"name": "Tsitrubeere"
+		},
+		{
+			"id": "occa-berry",
+			"name": "Koakobeere"
+		},
+		{
+			"id": "passho-berry",
+			"name": "Foepasbeere"
+		},
+		{
+			"id": "wacan-berry",
+			"name": "Kerzalbeere"
+		},
+		{
+			"id": "rindo-berry",
+			"name": "Grindobeere"
+		},
+		{
+			"id": "yache-berry",
+			"name": "Kiroyabeere"
+		},
+		{
+			"id": "chople-berry",
+			"name": "Rospelbeere"
+		},
+		{
+			"id": "kebia-berry",
+			"name": "Grarzbeere"
+		},
+		{
+			"id": "shuca-berry",
+			"name": "Schukebeere"
+		},
+		{
+			"id": "coba-berry",
+			"name": "Kobabeere"
+		},
+		{
+			"id": "payapa-berry",
+			"name": "Pyapabeere"
+		},
+		{
+			"id": "tanga-berry",
+			"name": "Tanigabeere"
+		},
+		{
+			"id": "charti-berry",
+			"name": "Chiaribeere"
+		},
+		{
+			"id": "kasib-berry",
+			"name": "Zitarzbeere"
+		},
+		{
+			"id": "haban-berry",
+			"name": "Terirobeere"
+		},
+		{
+			"id": "colbur-berry",
+			"name": "Burleobeere"
+		},
+		{
+			"id": "babiri-berry",
+			"name": "Babiribeere"
+		},
+		{
+			"id": "chilan-berry",
+			"name": "Latchibeere"
+		},
+		{
+			"id": "roseli-berry",
+			"name": "Hibisbeere"
+		},
+		{
+			"id": "absorb-bulb",
+			"name": "Knolle"
+		},
+		{
+			"id": "air-balloon",
+			"name": "Luftballon"
+		},
+		{
+			"id": "assault-vest",
+			"name": "Offensivweste"
+		},
+		{
+			"id": "big-root",
+			"name": "Großwurzel"
+		},
+		{
+			"id": "binding-band",
+			"name": "Klammerband"
+		},
+		{
+			"id": "black-sludge",
+			"name": "Giftschleim"
+		},
+		{
+			"id": "blunder-policy",
+			"name": "Fehlschlagschutz"
+		},
+		{
+			"id": "bright-powder",
+			"name": "Blendpuder"
+		},
+		{
+			"id": "cell-battery",
+			"name": "Akku"
+		},
+		{
+			"id": "destiny-knot",
+			"name": "Fatumknoten"
+		},
+		{
+			"id": "eject-button",
+			"name": "Fluchtknopf"
+		},
+		{
+			"id": "eject-pack",
+			"name": "Fluchttasche"
+		},
+		{
+			"id": "eviolite",
+			"name": "Evolith"
+		},
+		{
+			"id": "exp-share",
+			"name": "EP-Teiler"
+		},
+		{
+			"id": "expert-belt",
+			"name": "Expertengurt"
+		},
+		{
+			"id": "float-stone",
+			"name": "Leichtstein"
+		},
+		{
+			"id": "focus-band",
+			"name": "Fokusband"
+		},
+		{
+			"id": "focus-sash",
+			"name": "Fokusgurt"
+		},
+		{
+			"id": "grip-claw",
+			"name": "Griffklaue"
+		},
+		{
+			"id": "heavy-duty-boots",
+			"name": "Plateauschuhe"
+		},
+		{
+			"id": "leftovers",
+			"name": "Überreste"
+		},
+		{
+			"id": "luminous-moss",
+			"name": "Leuchtmoos"
+		},
+		{
+			"id": "kings-rock",
+			"name": "King-Stein"
+		},
+		{
+			"id": "lagging-tail",
+			"name": "Schwerschweif"
+		},
+		{
+			"id": "light-clay",
+			"name": "Lichtlehm"
+		},
+		{
+			"id": "metronome",
+			"name": "Metronom"
+		},
+		{
+			"id": "muscle-band",
+			"name": "Muskelband"
+		},
+		{
+			"id": "protective-pads",
+			"name": "Schutzpolster"
+		},
+		{
+			"id": "quick-claw",
+			"name": "Flinkklaue"
+		},
+		{
+			"id": "razor-claw",
+			"name": "Scharfklaue"
+		},
+		{
+			"id": "razor-fang",
+			"name": "Scharfzahn"
+		},
+		{
+			"id": "red-card",
+			"name": "Rote Karte"
+		},
+		{
+			"id": "ring-target",
+			"name": "Zielscheibe"
+		},
+		{
+			"id": "rocky-helmet",
+			"name": "Beulenhelm"
+		},
+		{
+			"id": "room-service",
+			"name": "Bizarroservice"
+		},
+		{
+			"id": "safety-goggles",
+			"name": "Schutzbrille"
+		},
+		{
+			"id": "scope-lens",
+			"name": "Scope-Linse"
+		},
+		{
+			"id": "shed-shell",
+			"name": "Wechselhülle"
+		},
+		{
+			"id": "shell-bell",
+			"name": "Muschelglocke"
+		},
+		{
+			"id": "smoke-ball",
+			"name": "Rauchball"
+		},
+		{
+			"id": "snowball",
+			"name": "Schneeball"
+		},
+		{
+			"id": "sticky-barb",
+			"name": "Klettdorn"
+		},
+		{
+			"id": "throat-spray",
+			"name": "Halsspray"
+		},
+		{
+			"id": "utility-umbrella",
+			"name": "Allzweckschirm"
+		},
+		{
+			"id": "weakness-policy",
+			"name": "Schwächenschutz"
+		},
+		{
+			"id": "wide-lens",
+			"name": "Großlinse"
+		},
+		{
+			"id": "wise-glasses",
+			"name": "Schlaubrille"
+		},
+		{
+			"id": "zoom-lens",
+			"name": "Zoomlinse"
+		},
+		{
+			"id": "mental-herb",
+			"name": "Mentalkraut"
+		},
+		{
+			"id": "power-herb",
+			"name": "Energiekraut"
+		},
+		{
+			"id": "white-herb",
+			"name": "Schlohkraut"
+		},
+		{
+			"id": "choice-band",
+			"name": "Wahlband"
+		},
+		{
+			"id": "choice-scarf",
+			"name": "Wahlschal"
+		},
+		{
+			"id": "choice-specs",
+			"name": "Wahlbrille"
+		},
+		{
+			"id": "black-belt",
+			"name": "Schwarzgurt"
+		},
+		{
+			"id": "black-glasses",
+			"name": "Schattenbrille"
+		},
+		{
+			"id": "charcoal",
+			"name": "Holzkohle"
+		},
+		{
+			"id": "dragon-fang",
+			"name": "Drachenzahn"
+		},
+		{
+			"id": "hard-stone",
+			"name": "Granitstein"
+		},
+		{
+			"id": "magnet",
+			"name": "Magnet"
+		},
+		{
+			"id": "metal-coat",
+			"name": "Metallmantel"
+		},
+		{
+			"id": "miracle-seed",
+			"name": "Wundersaat"
+		},
+		{
+			"id": "mystic-water",
+			"name": "Zauberwasser"
+		},
+		{
+			"id": "never-melt-ice",
+			"name": "Ewiges Eis"
+		},
+		{
+			"id": "poison-barb",
+			"name": "Giftstich"
+		},
+		{
+			"id": "sharp-beak",
+			"name": "Spitzer Schnabel"
+		},
+		{
+			"id": "silk-scarf",
+			"name": "Seidenschal"
+		},
+		{
+			"id": "silver-powder",
+			"name": "Silberstaub"
+		},
+		{
+			"id": "soft-sand",
+			"name": "Pudersand"
+		},
+		{
+			"id": "spell-tag",
+			"name": "Bannsticker"
+		},
+		{
+			"id": "twisted-spoon",
+			"name": "Krummlöffel"
+		},
+		{
+			"id": "full-incense",
+			"name": "Lahmrauch"
+		},
+		{
+			"id": "lax-incense",
+			"name": "Laxrauch"
+		},
+		{
+			"id": "odd-incense",
+			"name": "Schrägrauch"
+		},
+		{
+			"id": "rock-incense",
+			"name": "Steinrauch"
+		},
+		{
+			"id": "rose-incense",
+			"name": "Rosenrauch"
+		},
+		{
+			"id": "sea-incense",
+			"name": "Seerauch"
+		},
+		{
+			"id": "wave-incense",
+			"name": "Wellenrauch"
+		},
+		{
+			"id": "adrenaline-orb",
+			"name": "Zitterorb"
+		},
+		{
+			"id": "flame-orb",
+			"name": "Heiß-Orb"
+		},
+		{
+			"id": "iron-ball",
+			"name": "Eisenkugel"
+		},
+		{
+			"id": "life-orb",
+			"name": "Leben-Orb"
+		},
+		{
+			"id": "toxic-orb",
+			"name": "Toxik-Orb"
+		},
+		{
+			"id": "damp-rock",
+			"name": "Nassbrocken"
+		},
+		{
+			"id": "heat-rock",
+			"name": "Heißbrocken"
+		},
+		{
+			"id": "icy-rock",
+			"name": "Eisbrocken"
+		},
+		{
+			"id": "smooth-rock",
+			"name": "Glattbrocken"
+		},
+		{
+			"id": "terrain-extender",
+			"name": "Feldbeschichtung"
+		},
+		{
+			"id": "electric-seed",
+			"name": "Elektro-Samen"
+		},
+		{
+			"id": "grassy-seed",
+			"name": "Gras-Samen"
+		},
+		{
+			"id": "misty-seed",
+			"name": "Nebel-Samen"
+		},
+		{
+			"id": "psychic-seed",
+			"name": "Psycho-Samen"
+		},
+		{
+			"id": "draco-plate",
+			"name": "Dracotafel"
+		},
+		{
+			"id": "dread-plate",
+			"name": "Furchttafel"
+		},
+		{
+			"id": "earth-plate",
+			"name": "Erdtafel"
+		},
+		{
+			"id": "flame-plate",
+			"name": "Feuertafel"
+		},
+		{
+			"id": "icicle-plate",
+			"name": "Frosttafel"
+		},
+		{
+			"id": "insect-plate",
+			"name": "Käfertafel"
+		},
+		{
+			"id": "iron-plate",
+			"name": "Eisentafel"
+		},
+		{
+			"id": "meadow-plate",
+			"name": "Wiesentafel"
+		},
+		{
+			"id": "mind-plate",
+			"name": "Hirntafel"
+		},
+		{
+			"id": "pixie-plate",
+			"name": "Feentafel"
+		},
+		{
+			"id": "sky-plate",
+			"name": "Wolkentafel"
+		},
+		{
+			"id": "splash-plate",
+			"name": "Wassertafel"
+		},
+		{
+			"id": "spooky-plate",
+			"name": "Spuktafel"
+		},
+		{
+			"id": "stone-plate",
+			"name": "Steintafel"
+		},
+		{
+			"id": "toxic-plate",
+			"name": "Gifttafel"
+		},
+		{
+			"id": "zap-plate",
+			"name": "Blitztafel"
+		},
+		{
+			"id": "deep-sea-scale",
+			"name": "Abyssplatte"
+		},
+		{
+			"id": "deep-sea-tooth",
+			"name": "Abysszahn"
+		},
+		{
+			"id": "griseous-orb",
+			"name": "Platinum-Orb"
+		},
+		{
+			"id": "light-ball",
+			"name": "Kugelblitz"
+		},
+		{
+			"id": "lucky-punch",
+			"name": "Lucky Punch"
+		},
+		{
+			"id": "metal-powder",
+			"name": "Metallstaub"
+		},
+		{
+			"id": "prison-bottle",
+			"name": "Banngefäß"
+		},
+		{
+			"id": "reveal-glass",
+			"name": "Wahrspiegel"
+		},
+		{
+			"id": "thick-club",
+			"name": "Kampfknochen"
+		},
+		{
+			"id": "burn-drive",
+			"name": "Flammenmodul"
+		},
+		{
+			"id": "chill-drive",
+			"name": "Gefriermodul"
+		},
+		{
+			"id": "douse-drive",
+			"name": "Aquamodul"
+		},
+		{
+			"id": "shock-drive",
+			"name": "Blitzmodul"
+		},
+		{
+			"id": "blue-orb",
+			"name": "Blauer Edelstein"
+		},
+		{
+			"id": "red-orb",
+			"name": "Roter Edelstein"
+		},
+		{
+			"id": "dragon-scale",
+			"name": "Drachenhaut"
+		},
+		{
+			"id": "up-grade",
+			"name": "Up-Grade"
+		},
+		{
+			"id": "protector",
+			"name": "Schützer"
+		},
+		{
+			"id": "electirizer",
+			"name": "Stromisierer"
+		},
+		{
+			"id": "magmarizer",
+			"name": "Magmaisierer"
+		},
+		{
+			"id": "dubious-disc",
+			"name": "Dubiosdisc"
+		},
+		{
+			"id": "reaper-cloth",
+			"name": "Düsterumhang"
+		},
+		{
+			"id": "prism-scale",
+			"name": "Schönschuppe"
+		},
+		{
+			"id": "whipped-dream",
+			"name": "Sahnehäubchen"
+		},
+		{
+			"id": "sachet",
+			"name": "Duftbeutel"
+		},
+		{
+			"id": "cracked-pot",
+			"name": "Rissige Kanne"
+		},
+		{
+			"id": "chipped-pot",
+			"name": "Löchrige Kanne"
+		},
+		{
+			"id": "galarica-wreath",
+			"name": "Galarnuss-Kranz"
+		},
+		{
+			"id": "black-augurite",
+			"name": "Schwarzaugit"
+		},
+		{
+			"id": "peat-block",
+			"name": "Torfblock"
+		},
+		{
+			"id": "old-rod",
+			"name": "Angel"
+		},
+		{
+			"id": "good-rod",
+			"name": "Profiangel"
+		},
+		{
+			"id": "super-rod",
+			"name": "Superangel"
+		},
+		{
+			"id": "escape-rope",
+			"name": "Fluchtseil"
+		},
+		{
+			"id": "honey",
+			"name": "Honig"
+		},
+		{
+			"id": "key-stone",
+			"name": "Schlüssel-Stein"
+		},
+		{
+			"id": "z-ring",
+			"name": "Z-Ring"
+		},
+		{
+			"id": "dynamax-band",
+			"name": "Dynamax-Band"
+		}
+	]
+}

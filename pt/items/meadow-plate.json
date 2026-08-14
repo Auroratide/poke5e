@@ -1,1 +1,1 @@
-{"id":"meadow-plate","name":"Placa Pradaria","type":"held item","cost":null,"description":["Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Grama."],"media":{"sprite":"/assets/items/meadow-plate/sprite.png"}}
+{"id":"meadow-plate","name":"Placa Pradaria","type":"held item","cost":null,"description":["Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Grama."],"media":{"sprite":"/assets/items/meadow-plate/sprite.png"},"aliases":["Meadow Plate"]}

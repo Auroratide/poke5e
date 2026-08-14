@@ -1,1 +1,1 @@
-{"id":"thieves-tools","name":"Ferramentas de ladrão","type":"trainer gear","cost":500,"description":["Você pode adicionar seu modificador de proficiência a testes ao desarmar armadilhas ou abrir fechaduras."],"media":{"sprite":null}}
+{"id":"thieves-tools","name":"Ferramentas de ladrão","type":"trainer gear","cost":500,"description":["Você pode adicionar seu modificador de proficiência a testes ao desarmar armadilhas ou abrir fechaduras."],"media":{"sprite":null},"aliases":["Thieves' Tools"]}

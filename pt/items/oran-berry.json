@@ -1,1 +1,1 @@
-{"id":"oran-berry","name":"Baga Oran","type":"berry","cost":200,"description":["Consumir para restaurar 2d4 + 2 PV. Pode ser consumida como reação ao cair abaixo da metade da vida."],"media":{"sprite":"/assets/items/oran-berry/sprite.png"}}
+{"id":"oran-berry","name":"Baga Oran","type":"berry","cost":200,"description":["Consumir para restaurar 2d4 + 2 PV. Pode ser consumida como reação ao cair abaixo da metade da vida."],"media":{"sprite":"/assets/items/oran-berry/sprite.png"},"aliases":["Oran Berry"]}

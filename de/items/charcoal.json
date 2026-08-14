@@ -1,0 +1,1 @@
+{"id":"charcoal","name":"Holzkohle","type":"held item","cost":4400,"description":["The holder adds its proficiency bonus to fire-type damage it deals (once per move)."],"media":{"sprite":"/assets/items/charcoal/sprite.png"},"aliases":["Charcoal"]}

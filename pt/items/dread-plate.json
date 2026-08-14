@@ -1,1 +1,1 @@
-{"id":"dread-plate","name":"Placa Sombria","type":"held item","cost":null,"description":["Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Sombrio."],"media":{"sprite":"/assets/items/dread-plate/sprite.png"}}
+{"id":"dread-plate","name":"Placa Sombria","type":"held item","cost":null,"description":["Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Sombrio."],"media":{"sprite":"/assets/items/dread-plate/sprite.png"},"aliases":["Dread Plate"]}

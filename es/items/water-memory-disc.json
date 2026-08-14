@@ -1,1 +1,1 @@
-{"id":"water-memory-disc","name":"Disco Agua","type":"held item","cost":2000,"description":["Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Agua."],"media":{"sprite":"/assets/items/water-memory-disc/sprite.png"}}
+{"id":"water-memory-disc","name":"Disco Agua","type":"held item","cost":2000,"description":["Cuando un Pokémon con la habilidad Sistema Alfa lleva equipado este objeto, cambia al tipo Agua."],"media":{"sprite":"/assets/items/water-memory-disc/sprite.png"},"aliases":["Water Memory Disc"]}

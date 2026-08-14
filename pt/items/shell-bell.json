@@ -1,1 +1,1 @@
-{"id":"shell-bell","name":"Sino Concha","type":"held item","cost":4400,"description":["Quando o portador usa um movimento que causa dano a pelo menos uma criatura, ele restaura PV igual ao seu bônus de proficiência."],"media":{"sprite":"/assets/items/shell-bell/sprite.png"}}
+{"id":"shell-bell","name":"Sino Concha","type":"held item","cost":4400,"description":["Quando o portador usa um movimento que causa dano a pelo menos uma criatura, ele restaura PV igual ao seu bônus de proficiência."],"media":{"sprite":"/assets/items/shell-bell/sprite.png"},"aliases":["Shell Bell"]}

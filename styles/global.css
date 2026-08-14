@@ -1,6 +1,6 @@
 :root {
-    --container-width: 75rem;
-    --container-half: 37.5rem;
+    --container-width: 90rem;
+    --container-half: 45rem;
 
     --font-reg: 'Rubik', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans', 'Helvetica Neue', sans-serif;
     --font-sz-base: clamp(1rem, 1.5vw, 1.125rem);
@@ -172,6 +172,11 @@
 
 	interpolate-size: allow-keywords;
 }
+
+[data-edition-content="2018"] { display: none; }
+
+:root[data-edition="2018"] [data-edition-content="2018"] { display: contents; }
+:root[data-edition="2018"] [data-edition-content="2024"] { display: none; }
 
 .dark-mode {
 	--skin-bg: hsl(0, 0%, 25%);

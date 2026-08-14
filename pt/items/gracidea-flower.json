@@ -1,1 +1,1 @@
-{"id":"gracidea-flower","name":"Flor Gracidea","type":"held item","cost":1400,"description":["Quando segurado por um Shaymin, ele pode usar sua ação para alternar entre suas formas Terrestre e Celeste."],"media":{"sprite":"/assets/items/gracidea-flower/sprite.png"}}
+{"id":"gracidea-flower","name":"Flor Gracidea","type":"held item","cost":1400,"description":["Quando segurado por um Shaymin, ele pode usar sua ação para alternar entre suas formas Terrestre e Celeste."],"media":{"sprite":"/assets/items/gracidea-flower/sprite.png"},"aliases":["Gracidea Flower"]}

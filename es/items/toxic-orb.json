@@ -1,1 +1,1 @@
-{"id":"toxic-orb","name":"Toxiesfera","type":"held item","cost":2000,"description":["Al final del turno del portador, este queda gravemente envenenado."],"media":{"sprite":"/assets/items/toxic-orb/sprite.png"}}
+{"id":"toxic-orb","name":"Toxiesfera","type":"held item","cost":2000,"description":["Al final del turno del portador, este queda gravemente envenenado."],"media":{"sprite":"/assets/items/toxic-orb/sprite.png"},"aliases":["Toxic Orb"]}

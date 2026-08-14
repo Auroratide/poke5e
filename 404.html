@@ -15,28 +15,59 @@
 		<link rel="stylesheet" href="/styles/global.css" />
 		<link rel="manifest" href="/poke5e.webmanifest" />
 
-		<link href="/_app/immutable/entry/start.BYtGJuKU.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/BTxZMSRq.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/lLG_7kcw.js" rel="modulepreload">
-		<link href="/_app/immutable/entry/app.BTZx3eFS.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/ByvwXMFP.js" rel="modulepreload">
-		<link href="/_app/immutable/nodes/0.BgYRRw3m.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/2jWACDKK.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/BKyN8JsN.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/HvzpOxB1.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/FfRkJfYK.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/CCIR24kO.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/C4hqkTfr.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/DzEADH04.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/DgiexgTN.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/Bsk5z2hS.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/BEHaLypm.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/BDiFBHk0.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/wksgesJ0.js" rel="modulepreload">
-		<link href="/_app/immutable/chunks/Bw4_URp4.js" rel="modulepreload">
+		<script>
+			function setEdition() {
+				const v = localStorage.getItem("rules-version")
+				const beta = localStorage.getItem("feature-toggle::PreviewUpdatedMoves") != null
+				const edition = (v === "2018" || v === "2024") ? v : "2024"
+
+				document.documentElement.dataset.edition = beta ? edition : "2018"
+			}
+
+			function redirectToPreferredLanguage() {
+				// for key, see LanguagePreference.ts
+				const pref = localStorage.getItem("language-preference")
+				if (!pref) return
+
+				const baseLocale = "en"
+				const prefixed = ["en","es","fr","de","pt"].filter((l) => l !== baseLocale)
+
+				const path = location.pathname
+				const seg = path.split("/")[1]
+				const current = prefixed.includes(seg) ? seg : baseLocale
+				if (current === pref) return
+
+				const rest = current === baseLocale ? path : path.slice(seg.length + 1) || "/"
+				location.replace((pref === baseLocale ? "" : "/" + pref) + rest + location.search + location.hash)
+			}
+
+			redirectToPreferredLanguage()
+			setEdition()
+		</script>
+
+		<link href="/_app/immutable/entry/start.Cowecwyu.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/DxZqiH4l.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/D98_NbiL.js" rel="modulepreload">
+		<link href="/_app/immutable/entry/app.dxUCG3Ny.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CLt59Ghq.js" rel="modulepreload">
+		<link href="/_app/immutable/nodes/0.BA8_Twc7.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Bet1lk2r.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BDnw6x8O.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BxzS1sfy.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CbP_iJUj.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/D1hmUd2T.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BUB67dNr.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/CVpWfoaX.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/tnJ1ojwq.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/BANAsoep.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/ClFLemgt.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/Div9_Bve.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/jjh4Z1FN.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/50ubIVdu.js" rel="modulepreload">
+		<link href="/_app/immutable/chunks/bfMqamkP.js" rel="modulepreload">
 		
 		<link href="/_app/immutable/assets/elements.DNNldZr7.css" rel="stylesheet">
-		<link href="/_app/immutable/assets/layout.DW8P2EHp.css" rel="stylesheet">
+		<link href="/_app/immutable/assets/layout.BeBmk265.css" rel="stylesheet">
 		<link href="/_app/immutable/assets/types.X-b381hB.css" rel="stylesheet">
 		<link href="/_app/immutable/assets/0.igyz22Xd.css" rel="stylesheet">
 	</head>
@@ -44,15 +75,15 @@
 		<div>
 			<script>
 				{
-					__sveltekit_8v4u5a = {
+					__sveltekit_s3xkgq = {
 						base: ""
 					};
 
 					const element = document.currentScript.parentElement;
 
 					Promise.all([
-						import("/_app/immutable/entry/start.BYtGJuKU.js"),
-						import("/_app/immutable/entry/app.BTZx3eFS.js")
+						import("/_app/immutable/entry/start.Cowecwyu.js"),
+						import("/_app/immutable/entry/app.dxUCG3Ny.js")
 					]).then(([kit, app]) => {
 						kit.start(app, element);
 					});

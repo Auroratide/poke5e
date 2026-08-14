@@ -1,1 +1,1 @@
-{"id":"ice-heal","name":"Antihielo","type":"medicine","cost":200,"description":["Un entrenador puede usar una acción para curar a un Pokémon adyacente de la condición congelado. Se consume al usarse."],"media":{"sprite":"/assets/items/ice-heal/sprite.png"}}
+{"id":"ice-heal","name":"Antihielo","type":"medicine","cost":200,"description":["Un entrenador puede usar una acción para curar a un Pokémon adyacente de la condición congelado. Se consume al usarse."],"media":{"sprite":"/assets/items/ice-heal/sprite.png"},"aliases":["Ice Heal"]}

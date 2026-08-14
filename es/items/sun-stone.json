@@ -1,1 +1,1 @@
-{"id":"sun-stone","name":"Piedra Solar","type":"evolution","cost":4000,"description":["Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.","Pokémon que evolucionan usando este objeto:"],"media":{"sprite":"/assets/items/sun-stone/sprite.png"}}
+{"id":"sun-stone","name":"Piedra Solar","type":"evolution","cost":4000,"description":["Algunos Pokémon pueden consumir el poder de esta piedra para evolucionar.","Pokémon que evolucionan usando este objeto:"],"media":{"sprite":"/assets/items/sun-stone/sprite.png"},"aliases":["Sun Stone"]}

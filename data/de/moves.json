@@ -1,0 +1,3032 @@
+{
+	"moves": [
+		{
+			"id": "absorb",
+			"name": "Absorber"
+		},
+		{
+			"id": "accelerock",
+			"name": "Turbofelsen"
+		},
+		{
+			"id": "acid",
+			"name": "Säure"
+		},
+		{
+			"id": "acid-armor",
+			"name": "Säurepanzer"
+		},
+		{
+			"id": "acid-spray",
+			"name": "Säurespeier"
+		},
+		{
+			"id": "acrobatics",
+			"name": "Akrobatik"
+		},
+		{
+			"id": "acupressure",
+			"name": "Akupressur"
+		},
+		{
+			"id": "aerial-ace",
+			"name": "Aero-Ass"
+		},
+		{
+			"id": "aeroblast",
+			"name": "Luftstoß"
+		},
+		{
+			"id": "after-you",
+			"name": "Galanterie"
+		},
+		{
+			"id": "agility",
+			"name": "Agilität"
+		},
+		{
+			"id": "air-cutter",
+			"name": "Windschnitt"
+		},
+		{
+			"id": "air-slash",
+			"name": "Luftschnitt"
+		},
+		{
+			"id": "alluring-voice",
+			"name": "Lockstimme"
+		},
+		{
+			"id": "ally-switch",
+			"name": "Seitentausch"
+		},
+		{
+			"id": "amnesia",
+			"name": "Amnesie"
+		},
+		{
+			"id": "anchor-shot",
+			"name": "Ankerschuss"
+		},
+		{
+			"id": "ancient-power",
+			"name": "Antik-Kraft"
+		},
+		{
+			"id": "apple-acid",
+			"name": "Apfelsäure"
+		},
+		{
+			"id": "aqua-jet",
+			"name": "Wasserdüse"
+		},
+		{
+			"id": "aqua-ring",
+			"name": "Wasserring"
+		},
+		{
+			"id": "aqua-tail",
+			"name": "Nassschweif"
+		},
+		{
+			"id": "arm-thrust",
+			"name": "Armstoß"
+		},
+		{
+			"id": "aromatherapy",
+			"name": "Aromakur"
+		},
+		{
+			"id": "aromatic-mist",
+			"name": "Duftwolke"
+		},
+		{
+			"id": "assist",
+			"name": "Zuschuss"
+		},
+		{
+			"id": "assurance",
+			"name": "Gewissheit"
+		},
+		{
+			"id": "astonish",
+			"name": "Erstauner"
+		},
+		{
+			"id": "astral-barrage",
+			"name": "Astralfragmente"
+		},
+		{
+			"id": "attack-order",
+			"name": "Schlagbefehl"
+		},
+		{
+			"id": "attract",
+			"name": "Anziehung"
+		},
+		{
+			"id": "aura-sphere",
+			"name": "Aurasphäre"
+		},
+		{
+			"id": "aura-wheel",
+			"name": "Aura-Rad"
+		},
+		{
+			"id": "aurora-beam",
+			"name": "Aurorastrahl"
+		},
+		{
+			"id": "aurora-veil",
+			"name": "Auroraschleier"
+		},
+		{
+			"id": "autotomize",
+			"name": "Autotomie"
+		},
+		{
+			"id": "avalanche",
+			"name": "Lawine"
+		},
+		{
+			"id": "baby-doll-eyes",
+			"name": "Kulleraugen"
+		},
+		{
+			"id": "baneful-bunker",
+			"name": "Bunker"
+		},
+		{
+			"id": "barrage",
+			"name": "Stakkato"
+		},
+		{
+			"id": "barrier",
+			"name": "Barriere"
+		},
+		{
+			"id": "baton-pass",
+			"name": "Stafette"
+		},
+		{
+			"id": "beak-blast",
+			"name": "Schnabelkanone"
+		},
+		{
+			"id": "beat-up",
+			"name": "Prügler"
+		},
+		{
+			"id": "behemoth-bash",
+			"name": "Gigantenstoß"
+		},
+		{
+			"id": "behemoth-blade",
+			"name": "Gigantenhieb"
+		},
+		{
+			"id": "belch",
+			"name": "Rülpser"
+		},
+		{
+			"id": "belly-drum",
+			"name": "Bauchtrommel"
+		},
+		{
+			"id": "bestow",
+			"name": "Offerte"
+		},
+		{
+			"id": "bide",
+			"name": "Geduld"
+		},
+		{
+			"id": "bind",
+			"name": "Klammergriff"
+		},
+		{
+			"id": "bite",
+			"name": "Biss"
+		},
+		{
+			"id": "blast-burn",
+			"name": "Lohekanonade"
+		},
+		{
+			"id": "blaze-kick",
+			"name": "Feuerfeger"
+		},
+		{
+			"id": "blizzard",
+			"name": "Blizzard"
+		},
+		{
+			"id": "block",
+			"name": "Rückentzug"
+		},
+		{
+			"id": "blue-flare",
+			"name": "Blauflammen"
+		},
+		{
+			"id": "body-press",
+			"name": "Body Press"
+		},
+		{
+			"id": "body-slam",
+			"name": "Bodyslam"
+		},
+		{
+			"id": "bolt-beak",
+			"name": "Schockschnabel"
+		},
+		{
+			"id": "bolt-strike",
+			"name": "Blitzschlag"
+		},
+		{
+			"id": "bone-club",
+			"name": "Knochenkeule"
+		},
+		{
+			"id": "bone-rush",
+			"name": "Knochenhatz"
+		},
+		{
+			"id": "bonemerang",
+			"name": "Knochmerang"
+		},
+		{
+			"id": "boomburst",
+			"name": "Überschallknall"
+		},
+		{
+			"id": "bounce",
+			"name": "Sprungfeder"
+		},
+		{
+			"id": "branch-poke",
+			"name": "Zweigstoß"
+		},
+		{
+			"id": "brave-bird",
+			"name": "Sturzflug"
+		},
+		{
+			"id": "breaking-swipe",
+			"name": "Breitseite"
+		},
+		{
+			"id": "brick-break",
+			"name": "Durchbruch"
+		},
+		{
+			"id": "brine",
+			"name": "Lake"
+		},
+		{
+			"id": "brutal-swing",
+			"name": "Wirbler"
+		},
+		{
+			"id": "bubble",
+			"name": "Blubber"
+		},
+		{
+			"id": "bubble-beam",
+			"name": "Blubbstrahl"
+		},
+		{
+			"id": "bug-bite",
+			"name": "Käferbiss"
+		},
+		{
+			"id": "bug-buzz",
+			"name": "Käfergebrumm"
+		},
+		{
+			"id": "bulk-up",
+			"name": "Protzer"
+		},
+		{
+			"id": "bulldoze",
+			"name": "Dampfwalze"
+		},
+		{
+			"id": "bullet-punch",
+			"name": "Patronenhieb"
+		},
+		{
+			"id": "bullet-seed",
+			"name": "Kugelsaat"
+		},
+		{
+			"id": "burn-up",
+			"name": "Ausbrennen"
+		},
+		{
+			"id": "burning-bulwark",
+			"name": "Flammenschild"
+		},
+		{
+			"id": "burning-jealousy",
+			"name": "Neidflammen"
+		},
+		{
+			"id": "calm-mind",
+			"name": "Gedankengut"
+		},
+		{
+			"id": "camouflage",
+			"name": "Tarnung"
+		},
+		{
+			"id": "captivate",
+			"name": "Liebreiz"
+		},
+		{
+			"id": "charge",
+			"name": "Ladevorgang"
+		},
+		{
+			"id": "charge-beam",
+			"name": "Ladestrahl"
+		},
+		{
+			"id": "charm",
+			"name": "Charme"
+		},
+		{
+			"id": "chatter",
+			"name": "Geschwätz"
+		},
+		{
+			"id": "chip-away",
+			"name": "Zermürben"
+		},
+		{
+			"id": "circle-throw",
+			"name": "Überkopfwurf"
+		},
+		{
+			"id": "clamp",
+			"name": "Schnapper"
+		},
+		{
+			"id": "clanging-scales",
+			"name": "Schuppenrasseln"
+		},
+		{
+			"id": "clangorous-soul",
+			"name": "Seelentanz"
+		},
+		{
+			"id": "clear-smog",
+			"name": "Klärsmog"
+		},
+		{
+			"id": "close-combat",
+			"name": "Nahkampf"
+		},
+		{
+			"id": "coaching",
+			"name": "Coaching"
+		},
+		{
+			"id": "coil",
+			"name": "Einrollen"
+		},
+		{
+			"id": "comet-punch",
+			"name": "Kometenhieb"
+		},
+		{
+			"id": "confide",
+			"name": "Vertrauenssache"
+		},
+		{
+			"id": "confuse-ray",
+			"name": "Konfusstrahl"
+		},
+		{
+			"id": "confusion",
+			"name": "Konfusion"
+		},
+		{
+			"id": "constrict",
+			"name": "Umklammerung"
+		},
+		{
+			"id": "conversion",
+			"name": "Umwandlung"
+		},
+		{
+			"id": "conversion-2",
+			"name": "Umwandlung2"
+		},
+		{
+			"id": "copycat",
+			"name": "Imitator"
+		},
+		{
+			"id": "core-enforcer",
+			"name": "Sanktionskern"
+		},
+		{
+			"id": "corrosive-gas",
+			"name": "Korrosionsgas"
+		},
+		{
+			"id": "cosmic-power",
+			"name": "Kosmik-Kraft"
+		},
+		{
+			"id": "cotton-guard",
+			"name": "Watteschild"
+		},
+		{
+			"id": "cotton-spore",
+			"name": "Baumwollsaat"
+		},
+		{
+			"id": "counter",
+			"name": "Konter"
+		},
+		{
+			"id": "court-change",
+			"name": "Seitenwechsel"
+		},
+		{
+			"id": "covet",
+			"name": "Bezirzer"
+		},
+		{
+			"id": "crabhammer",
+			"name": "Krabbhammer"
+		},
+		{
+			"id": "crafty-shield",
+			"name": "Trickschutz"
+		},
+		{
+			"id": "cross-chop",
+			"name": "Kreuzhieb"
+		},
+		{
+			"id": "cross-poison",
+			"name": "Giftstreich"
+		},
+		{
+			"id": "crunch",
+			"name": "Knirscher"
+		},
+		{
+			"id": "crush-claw",
+			"name": "Zermalmklaue"
+		},
+		{
+			"id": "crush-grip",
+			"name": "Quetschgriff"
+		},
+		{
+			"id": "curse",
+			"name": "Fluch"
+		},
+		{
+			"id": "cut",
+			"name": "Zerschneider"
+		},
+		{
+			"id": "dark-pulse",
+			"name": "Finsteraura"
+		},
+		{
+			"id": "dark-void",
+			"name": "Schlummerort"
+		},
+		{
+			"id": "darkest-lariat",
+			"name": "Dark Lariat"
+		},
+		{
+			"id": "dazzling-gleam",
+			"name": "Zauberschein"
+		},
+		{
+			"id": "decorate",
+			"name": "Verzierung"
+		},
+		{
+			"id": "defend-order",
+			"name": "Blockbefehl"
+		},
+		{
+			"id": "defense-curl",
+			"name": "Einigler"
+		},
+		{
+			"id": "defog",
+			"name": "Auflockern"
+		},
+		{
+			"id": "destiny-bond",
+			"name": "Abgangsbund"
+		},
+		{
+			"id": "detect",
+			"name": "Scanner"
+		},
+		{
+			"id": "diamond-storm",
+			"name": "Diamantsturm"
+		},
+		{
+			"id": "dig",
+			"name": "Schaufler"
+		},
+		{
+			"id": "disable",
+			"name": "Aussetzer"
+		},
+		{
+			"id": "disarming-voice",
+			"name": "Säuselstimme"
+		},
+		{
+			"id": "discharge",
+			"name": "Ladungsstoß"
+		},
+		{
+			"id": "dive",
+			"name": "Taucher"
+		},
+		{
+			"id": "dizzy-punch",
+			"name": "Irrschlag"
+		},
+		{
+			"id": "doom-desire",
+			"name": "Kismetwunsch"
+		},
+		{
+			"id": "double-hit",
+			"name": "Doppelschlag"
+		},
+		{
+			"id": "double-iron-bash",
+			"name": "Panzerfäuste"
+		},
+		{
+			"id": "double-kick",
+			"name": "Doppelkick"
+		},
+		{
+			"id": "double-slap",
+			"name": "Duplexhieb"
+		},
+		{
+			"id": "double-team",
+			"name": "Doppelteam"
+		},
+		{
+			"id": "double-edge",
+			"name": "Risikotackle"
+		},
+		{
+			"id": "draco-meteor",
+			"name": "Draco Meteor"
+		},
+		{
+			"id": "dragon-ascent",
+			"name": "Zenitstürmer"
+		},
+		{
+			"id": "dragon-breath",
+			"name": "Feuerodem"
+		},
+		{
+			"id": "dragon-cheer",
+			"name": "Drachenschrei"
+		},
+		{
+			"id": "dragon-claw",
+			"name": "Drachenklaue"
+		},
+		{
+			"id": "dragon-dance",
+			"name": "Drachentanz"
+		},
+		{
+			"id": "dragon-darts",
+			"name": "Drachenpfeile"
+		},
+		{
+			"id": "dragon-hammer",
+			"name": "Drachenhammer"
+		},
+		{
+			"id": "dragon-energy",
+			"name": "Drachenkräfte"
+		},
+		{
+			"id": "dragon-pulse",
+			"name": "Drachenpuls"
+		},
+		{
+			"id": "dragon-rage",
+			"name": "Drachenwut"
+		},
+		{
+			"id": "dragon-rush",
+			"name": "Drachenstoß"
+		},
+		{
+			"id": "dragon-tail",
+			"name": "Drachenrute"
+		},
+		{
+			"id": "drain-punch",
+			"name": "Ableithieb"
+		},
+		{
+			"id": "draining-kiss",
+			"name": "Diebeskuss"
+		},
+		{
+			"id": "dream-eater",
+			"name": "Traumfresser"
+		},
+		{
+			"id": "drill-peck",
+			"name": "Bohrschnabel"
+		},
+		{
+			"id": "drill-run",
+			"name": "Schlagbohrer"
+		},
+		{
+			"id": "drum-beating",
+			"name": "Trommelschläge"
+		},
+		{
+			"id": "dual-chop",
+			"name": "Doppelhieb"
+		},
+		{
+			"id": "dual-wingbeat",
+			"name": "Doppelflügel"
+		},
+		{
+			"id": "dynamax-cannon",
+			"name": "Dynamax-Kanone"
+		},
+		{
+			"id": "dynamic-punch",
+			"name": "Wuchtschlag"
+		},
+		{
+			"id": "earth-power",
+			"name": "Erdkräfte"
+		},
+		{
+			"id": "earthquake",
+			"name": "Erdbeben"
+		},
+		{
+			"id": "echoed-voice",
+			"name": "Widerhall"
+		},
+		{
+			"id": "eerie-impulse",
+			"name": "Mystowellen"
+		},
+		{
+			"id": "eerie-spell",
+			"name": "Schauderspruch"
+		},
+		{
+			"id": "egg-bomb",
+			"name": "Eierbombe"
+		},
+		{
+			"id": "electric-terrain",
+			"name": "Elektrofeld"
+		},
+		{
+			"id": "electrify",
+			"name": "Elektrifizierung"
+		},
+		{
+			"id": "electro-ball",
+			"name": "Elektroball"
+		},
+		{
+			"id": "electro-shot",
+			"name": "Stromstrahl"
+		},
+		{
+			"id": "electroweb",
+			"name": "Elektronetz"
+		},
+		{
+			"id": "embargo",
+			"name": "Itemsperre"
+		},
+		{
+			"id": "ember",
+			"name": "Glut"
+		},
+		{
+			"id": "encore",
+			"name": "Zugabe"
+		},
+		{
+			"id": "endeavor",
+			"name": "Notsituation"
+		},
+		{
+			"id": "endure",
+			"name": "Ausdauer"
+		},
+		{
+			"id": "energy-ball",
+			"name": "Energieball"
+		},
+		{
+			"id": "entrainment",
+			"name": "Zwango"
+		},
+		{
+			"id": "eruption",
+			"name": "Eruption"
+		},
+		{
+			"id": "eternabeam",
+			"name": "Unendynastrahlen"
+		},
+		{
+			"id": "expanding-force",
+			"name": "Flächenmacht"
+		},
+		{
+			"id": "explosion",
+			"name": "Explosion"
+		},
+		{
+			"id": "extrasensory",
+			"name": "Sondersensor"
+		},
+		{
+			"id": "extreme-speed",
+			"name": "Turbotempo"
+		},
+		{
+			"id": "facade",
+			"name": "Fassade"
+		},
+		{
+			"id": "fairy-lock",
+			"name": "Feenschloss"
+		},
+		{
+			"id": "fairy-wind",
+			"name": "Feenbrise"
+		},
+		{
+			"id": "fake-out",
+			"name": "Mogelhieb"
+		},
+		{
+			"id": "fake-tears",
+			"name": "Trugträne"
+		},
+		{
+			"id": "false-surrender",
+			"name": "Kniefalltrick"
+		},
+		{
+			"id": "false-swipe",
+			"name": "Trugschlag"
+		},
+		{
+			"id": "feather-dance",
+			"name": "Daunenreigen"
+		},
+		{
+			"id": "feint",
+			"name": "Offenlegung"
+		},
+		{
+			"id": "feint-attack",
+			"name": "Finte"
+		},
+		{
+			"id": "fell-stinger",
+			"name": "Stachelfinale"
+		},
+		{
+			"id": "fickle-beam",
+			"name": "Launenlaser"
+		},
+		{
+			"id": "fiery-dance",
+			"name": "Feuerreigen"
+		},
+		{
+			"id": "fiery-wrath",
+			"name": "Brennender Zorn"
+		},
+		{
+			"id": "final-gambit",
+			"name": "Wagemut"
+		},
+		{
+			"id": "fire-blast",
+			"name": "Feuersturm"
+		},
+		{
+			"id": "fire-fang",
+			"name": "Feuerzahn"
+		},
+		{
+			"id": "fire-lash",
+			"name": "Feuerpeitsche"
+		},
+		{
+			"id": "fire-pledge",
+			"name": "Feuersäulen"
+		},
+		{
+			"id": "fire-punch",
+			"name": "Feuerschlag"
+		},
+		{
+			"id": "fire-spin",
+			"name": "Feuerwirbel"
+		},
+		{
+			"id": "first-impression",
+			"name": "Überrumpler"
+		},
+		{
+			"id": "fishious-rend",
+			"name": "Kiemenbiss"
+		},
+		{
+			"id": "fissure",
+			"name": "Geofissur"
+		},
+		{
+			"id": "flail",
+			"name": "Dreschflegel"
+		},
+		{
+			"id": "flame-burst",
+			"name": "Funkenflug"
+		},
+		{
+			"id": "flame-charge",
+			"name": "Nitroladung"
+		},
+		{
+			"id": "flame-wheel",
+			"name": "Flammenrad"
+		},
+		{
+			"id": "flamethrower",
+			"name": "Flammenwurf"
+		},
+		{
+			"id": "flare-blitz",
+			"name": "Flammenblitz"
+		},
+		{
+			"id": "flash",
+			"name": "Blitz"
+		},
+		{
+			"id": "flash-cannon",
+			"name": "Lichtkanone"
+		},
+		{
+			"id": "flatter",
+			"name": "Schmeichler"
+		},
+		{
+			"id": "fleur-cannon",
+			"name": "Kanonenbouquet"
+		},
+		{
+			"id": "fling",
+			"name": "Schleuder"
+		},
+		{
+			"id": "flip-turn",
+			"name": "Rollwende"
+		},
+		{
+			"id": "floral-healing",
+			"name": "Florakur"
+		},
+		{
+			"id": "flower-shield",
+			"name": "Floraschutz"
+		},
+		{
+			"id": "fly",
+			"name": "Fliegen"
+		},
+		{
+			"id": "flying-press",
+			"name": "Flying Press"
+		},
+		{
+			"id": "focus-blast",
+			"name": "Fokusstoß"
+		},
+		{
+			"id": "focus-energy",
+			"name": "Energiefokus"
+		},
+		{
+			"id": "focus-punch",
+			"name": "Power-Punch"
+		},
+		{
+			"id": "follow-me",
+			"name": "Spotlight"
+		},
+		{
+			"id": "force-palm",
+			"name": "Kraftwelle"
+		},
+		{
+			"id": "foresight",
+			"name": "Scharfblick"
+		},
+		{
+			"id": "forests-curse",
+			"name": "Waldesfluch"
+		},
+		{
+			"id": "foul-play",
+			"name": "Schmarotzer"
+		},
+		{
+			"id": "freeze-shock",
+			"name": "Frostvolt"
+		},
+		{
+			"id": "freeze-dry",
+			"name": "Gefriertrockner"
+		},
+		{
+			"id": "freezing-glare",
+			"name": "Eisiger Blick"
+		},
+		{
+			"id": "frenzy-plant",
+			"name": "Flora-Statue"
+		},
+		{
+			"id": "frost-breath",
+			"name": "Eisesodem"
+		},
+		{
+			"id": "frustration",
+			"name": "Frustration"
+		},
+		{
+			"id": "fury-attack",
+			"name": "Furienschlag"
+		},
+		{
+			"id": "fury-cutter",
+			"name": "Zornklinge"
+		},
+		{
+			"id": "fury-swipes",
+			"name": "Kratzfurie"
+		},
+		{
+			"id": "fusion-bolt",
+			"name": "Kreuzdonner"
+		},
+		{
+			"id": "fusion-flare",
+			"name": "Kreuzflamme"
+		},
+		{
+			"id": "future-sight",
+			"name": "Seher"
+		},
+		{
+			"id": "gastro-acid",
+			"name": "Magensäfte"
+		},
+		{
+			"id": "gear-grind",
+			"name": "Klikkdiskus"
+		},
+		{
+			"id": "gear-up",
+			"name": "Hilfsmechanik"
+		},
+		{
+			"id": "geomancy",
+			"name": "Geokontrolle"
+		},
+		{
+			"id": "giga-drain",
+			"name": "Gigasauger"
+		},
+		{
+			"id": "giga-impact",
+			"name": "Gigastoß"
+		},
+		{
+			"id": "glacial-lance",
+			"name": "Blizzardlanze"
+		},
+		{
+			"id": "glaciate",
+			"name": "Eiszeit"
+		},
+		{
+			"id": "glare",
+			"name": "Schlangenblick"
+		},
+		{
+			"id": "grass-knot",
+			"name": "Strauchler"
+		},
+		{
+			"id": "grass-pledge",
+			"name": "Pflanzensäulen"
+		},
+		{
+			"id": "grass-whistle",
+			"name": "Grasflöte"
+		},
+		{
+			"id": "grassy-glide",
+			"name": "Grasrutsche"
+		},
+		{
+			"id": "grassy-terrain",
+			"name": "Grasfeld"
+		},
+		{
+			"id": "grav-apple",
+			"name": "Gravitation"
+		},
+		{
+			"id": "gravity",
+			"name": "Erdanziehung"
+		},
+		{
+			"id": "growl",
+			"name": "Heuler"
+		},
+		{
+			"id": "growth",
+			"name": "Wachstum"
+		},
+		{
+			"id": "grudge",
+			"name": "Nachspiel"
+		},
+		{
+			"id": "guard-split",
+			"name": "Schutzteiler"
+		},
+		{
+			"id": "guard-swap",
+			"name": "Schutztausch"
+		},
+		{
+			"id": "guillotine",
+			"name": "Guillotine"
+		},
+		{
+			"id": "gunk-shot",
+			"name": "Mülltreffer"
+		},
+		{
+			"id": "gust",
+			"name": "Windstoß"
+		},
+		{
+			"id": "gyro-ball",
+			"name": "Gyroball"
+		},
+		{
+			"id": "hail",
+			"name": "Hagelsturm"
+		},
+		{
+			"id": "hammer-arm",
+			"name": "Hammerarm"
+		},
+		{
+			"id": "happy-hour",
+			"name": "Goldene Zeiten"
+		},
+		{
+			"id": "hard-press",
+			"name": "Stahlpresse"
+		},
+		{
+			"id": "harden",
+			"name": "Härtner"
+		},
+		{
+			"id": "haze",
+			"name": "Dunkelnebel"
+		},
+		{
+			"id": "head-charge",
+			"name": "Steinschädel"
+		},
+		{
+			"id": "head-smash",
+			"name": "Kopfstoß"
+		},
+		{
+			"id": "headbutt",
+			"name": "Kopfnuss"
+		},
+		{
+			"id": "heal-bell",
+			"name": "Vitalglocke"
+		},
+		{
+			"id": "heal-block",
+			"name": "Heilblockade"
+		},
+		{
+			"id": "heal-order",
+			"name": "Heilbefehl"
+		},
+		{
+			"id": "heal-pulse",
+			"name": "Heilwoge"
+		},
+		{
+			"id": "healing-wish",
+			"name": "Heilopfer"
+		},
+		{
+			"id": "heart-stamp",
+			"name": "Herzstempel"
+		},
+		{
+			"id": "heart-swap",
+			"name": "Statustausch"
+		},
+		{
+			"id": "heat-crash",
+			"name": "Brandstempel"
+		},
+		{
+			"id": "heat-wave",
+			"name": "Hitzewelle"
+		},
+		{
+			"id": "heavy-slam",
+			"name": "Rammboss"
+		},
+		{
+			"id": "helping-hand",
+			"name": "Rechte Hand"
+		},
+		{
+			"id": "hex",
+			"name": "Bürde"
+		},
+		{
+			"id": "hidden-power",
+			"name": "Kraftreserve"
+		},
+		{
+			"id": "high-horsepower",
+			"name": "Pferdestärke"
+		},
+		{
+			"id": "high-jump-kick",
+			"name": "Turmkick"
+		},
+		{
+			"id": "hold-back",
+			"name": "Zurückhaltung"
+		},
+		{
+			"id": "hold-hands",
+			"name": "Händchenhalten"
+		},
+		{
+			"id": "hone-claws",
+			"name": "Klauenwetzer"
+		},
+		{
+			"id": "howl",
+			"name": "Jauler"
+		},
+		{
+			"id": "horn-attack",
+			"name": "Hornattacke"
+		},
+		{
+			"id": "horn-drill",
+			"name": "Hornbohrer"
+		},
+		{
+			"id": "horn-leech",
+			"name": "Holzgeweih"
+		},
+		{
+			"id": "hurricane",
+			"name": "Orkan"
+		},
+		{
+			"id": "hydro-cannon",
+			"name": "Aquahaubitze"
+		},
+		{
+			"id": "hydro-pump",
+			"name": "Hydropumpe"
+		},
+		{
+			"id": "hydro-steam",
+			"name": "Hydrodampf"
+		},
+		{
+			"id": "hyper-beam",
+			"name": "Hyperstrahl"
+		},
+		{
+			"id": "hyper-fang",
+			"name": "Hyperzahn"
+		},
+		{
+			"id": "hyper-voice",
+			"name": "Schallwelle"
+		},
+		{
+			"id": "hyperspace-fury",
+			"name": "Dimensionswahn"
+		},
+		{
+			"id": "hyperspace-hole",
+			"name": "Dimensionsloch"
+		},
+		{
+			"id": "hypnosis",
+			"name": "Hypnose"
+		},
+		{
+			"id": "ice-ball",
+			"name": "Frostbeule"
+		},
+		{
+			"id": "ice-beam",
+			"name": "Eisstrahl"
+		},
+		{
+			"id": "ice-burn",
+			"name": "Frosthauch"
+		},
+		{
+			"id": "ice-fang",
+			"name": "Eiszahn"
+		},
+		{
+			"id": "ice-hammer",
+			"name": "Eishammer"
+		},
+		{
+			"id": "ice-punch",
+			"name": "Eishieb"
+		},
+		{
+			"id": "ice-shard",
+			"name": "Eissplitter"
+		},
+		{
+			"id": "icicle-crash",
+			"name": "Eiszapfhagel"
+		},
+		{
+			"id": "icicle-spear",
+			"name": "Eisspeer"
+		},
+		{
+			"id": "icy-wind",
+			"name": "Eissturm"
+		},
+		{
+			"id": "imprison",
+			"name": "Begrenzer"
+		},
+		{
+			"id": "incinerate",
+			"name": "Einäschern"
+		},
+		{
+			"id": "inferno",
+			"name": "Inferno"
+		},
+		{
+			"id": "infestation",
+			"name": "Plage"
+		},
+		{
+			"id": "ingrain",
+			"name": "Verwurzler"
+		},
+		{
+			"id": "instruct",
+			"name": "Kommando"
+		},
+		{
+			"id": "ion-deluge",
+			"name": "Plasmaschauer"
+		},
+		{
+			"id": "iron-defense",
+			"name": "Eisenabwehr"
+		},
+		{
+			"id": "iron-head",
+			"name": "Eisenschädel"
+		},
+		{
+			"id": "iron-tail",
+			"name": "Eisenschweif"
+		},
+		{
+			"id": "jaw-lock",
+			"name": "Fesselbiss"
+		},
+		{
+			"id": "judgment",
+			"name": "Urteilskraft"
+		},
+		{
+			"id": "jump-kick",
+			"name": "Sprungkick"
+		},
+		{
+			"id": "jungle-healing",
+			"name": "Dschungelheilung"
+		},
+		{
+			"id": "karate-chop",
+			"name": "Karateschlag"
+		},
+		{
+			"id": "kinesis",
+			"name": "Psykraft"
+		},
+		{
+			"id": "kings-shield",
+			"name": "Königsschild"
+		},
+		{
+			"id": "knock-off",
+			"name": "Abschlag"
+		},
+		{
+			"id": "lands-wrath",
+			"name": "Bodengewalt"
+		},
+		{
+			"id": "laser-focus",
+			"name": "Konzentration"
+		},
+		{
+			"id": "lash-out",
+			"name": "Frustventil"
+		},
+		{
+			"id": "last-resort",
+			"name": "Zuflucht"
+		},
+		{
+			"id": "lava-plume",
+			"name": "Flammensturm"
+		},
+		{
+			"id": "leaf-blade",
+			"name": "Laubklinge"
+		},
+		{
+			"id": "leaf-storm",
+			"name": "Blättersturm"
+		},
+		{
+			"id": "leaf-tornado",
+			"name": "Grasmixer"
+		},
+		{
+			"id": "leafage",
+			"name": "Blattwerk"
+		},
+		{
+			"id": "leech-life",
+			"name": "Blutsauger"
+		},
+		{
+			"id": "leech-seed",
+			"name": "Egelsamen"
+		},
+		{
+			"id": "leer",
+			"name": "Silberblick"
+		},
+		{
+			"id": "lick",
+			"name": "Schlecker"
+		},
+		{
+			"id": "life-dew",
+			"name": "Lebenstropfen"
+		},
+		{
+			"id": "light-of-ruin",
+			"name": "Lux Calamitatis"
+		},
+		{
+			"id": "light-screen",
+			"name": "Lichtschild"
+		},
+		{
+			"id": "liquidation",
+			"name": "Aquadurchstoß"
+		},
+		{
+			"id": "lock-on",
+			"name": "Zielschuss"
+		},
+		{
+			"id": "lovely-kiss",
+			"name": "Todeskuss"
+		},
+		{
+			"id": "low-kick",
+			"name": "Fußkick"
+		},
+		{
+			"id": "low-sweep",
+			"name": "Fußtritt"
+		},
+		{
+			"id": "lucky-chant",
+			"name": "Beschwörung"
+		},
+		{
+			"id": "lunar-dance",
+			"name": "Lunartanz"
+		},
+		{
+			"id": "lunge",
+			"name": "Anfallen"
+		},
+		{
+			"id": "luster-purge",
+			"name": "Scheinwerfer"
+		},
+		{
+			"id": "mach-punch",
+			"name": "Tempohieb"
+		},
+		{
+			"id": "magic-coat",
+			"name": "Magiemantel"
+		},
+		{
+			"id": "magic-powder",
+			"name": "Magiepuder"
+		},
+		{
+			"id": "magic-room",
+			"name": "Magieraum"
+		},
+		{
+			"id": "magical-leaf",
+			"name": "Zauberblatt"
+		},
+		{
+			"id": "magma-storm",
+			"name": "Lavasturm"
+		},
+		{
+			"id": "magnet-bomb",
+			"name": "Magnetbombe"
+		},
+		{
+			"id": "magnet-rise",
+			"name": "Magnetflug"
+		},
+		{
+			"id": "magnetic-flux",
+			"name": "Magnetregler"
+		},
+		{
+			"id": "magnitude",
+			"name": "Intensität"
+		},
+		{
+			"id": "malignant-chain",
+			"name": "Giftkettung"
+		},
+		{
+			"id": "mat-block",
+			"name": "Tatami-Schild"
+		},
+		{
+			"id": "me-first",
+			"name": "Egotrip"
+		},
+		{
+			"id": "mean-look",
+			"name": "Horrorblick"
+		},
+		{
+			"id": "meditate",
+			"name": "Meditation"
+		},
+		{
+			"id": "mega-drain",
+			"name": "Megasauger"
+		},
+		{
+			"id": "mega-kick",
+			"name": "Megakick"
+		},
+		{
+			"id": "mega-punch",
+			"name": "Megahieb"
+		},
+		{
+			"id": "megahorn",
+			"name": "Vielender"
+		},
+		{
+			"id": "memento",
+			"name": "Memento-Mori"
+		},
+		{
+			"id": "metal-burst",
+			"name": "Metallstoß"
+		},
+		{
+			"id": "metal-claw",
+			"name": "Metallklaue"
+		},
+		{
+			"id": "metal-sound",
+			"name": "Metallsound"
+		},
+		{
+			"id": "meteor-assault",
+			"name": "Sternensturm"
+		},
+		{
+			"id": "meteor-beam",
+			"name": "Meteorstrahl"
+		},
+		{
+			"id": "meteor-mash",
+			"name": "Sternenhieb"
+		},
+		{
+			"id": "metronome",
+			"name": "Metronom"
+		},
+		{
+			"id": "mighty-cleave",
+			"name": "Wuchtklinge"
+		},
+		{
+			"id": "milk-drink",
+			"name": "Milchgetränk"
+		},
+		{
+			"id": "mimic",
+			"name": "Mimikry"
+		},
+		{
+			"id": "mind-blown",
+			"name": "Knallkopf"
+		},
+		{
+			"id": "mind-reader",
+			"name": "Willensleser"
+		},
+		{
+			"id": "minimize",
+			"name": "Komprimator"
+		},
+		{
+			"id": "miracle-eye",
+			"name": "Wunderauge"
+		},
+		{
+			"id": "mirror-coat",
+			"name": "Spiegelcape"
+		},
+		{
+			"id": "mirror-move",
+			"name": "Spiegeltrick"
+		},
+		{
+			"id": "mirror-shot",
+			"name": "Spiegelsalve"
+		},
+		{
+			"id": "mist",
+			"name": "Weißnebel"
+		},
+		{
+			"id": "mist-ball",
+			"name": "Nebelball"
+		},
+		{
+			"id": "misty-explosion",
+			"name": "Nebelexplosion"
+		},
+		{
+			"id": "misty-terrain",
+			"name": "Nebelfeld"
+		},
+		{
+			"id": "moonblast",
+			"name": "Mondgewalt"
+		},
+		{
+			"id": "moongeist-beam",
+			"name": "Schattenstrahl"
+		},
+		{
+			"id": "moonlight",
+			"name": "Mondschein"
+		},
+		{
+			"id": "morning-sun",
+			"name": "Morgengrauen"
+		},
+		{
+			"id": "mud-bomb",
+			"name": "Schlammbombe"
+		},
+		{
+			"id": "mud-shot",
+			"name": "Lehmschuss"
+		},
+		{
+			"id": "mud-sport",
+			"name": "Lehmsuhler"
+		},
+		{
+			"id": "mud-slap",
+			"name": "Lehmschelle"
+		},
+		{
+			"id": "muddy-water",
+			"name": "Lehmbrühe"
+		},
+		{
+			"id": "multi-attack",
+			"name": "Multi-Angriff"
+		},
+		{
+			"id": "mystical-fire",
+			"name": "Magieflamme"
+		},
+		{
+			"id": "nasty-plot",
+			"name": "Ränkeschmied"
+		},
+		{
+			"id": "natural-gift",
+			"name": "Beerenkräfte"
+		},
+		{
+			"id": "nature-power",
+			"name": "Natur-Kraft"
+		},
+		{
+			"id": "natures-madness",
+			"name": "Naturzorn"
+		},
+		{
+			"id": "needle-arm",
+			"name": "Nietenranke"
+		},
+		{
+			"id": "night-daze",
+			"name": "Nachtflut"
+		},
+		{
+			"id": "night-shade",
+			"name": "Nachtnebel"
+		},
+		{
+			"id": "night-slash",
+			"name": "Nachthieb"
+		},
+		{
+			"id": "nightmare",
+			"name": "Nachtmahr"
+		},
+		{
+			"id": "no-retreat",
+			"name": "Finalformation"
+		},
+		{
+			"id": "noble-roar",
+			"name": "Kampfgebrüll"
+		},
+		{
+			"id": "nuzzle",
+			"name": "Wangenrubbler"
+		},
+		{
+			"id": "oblivion-wing",
+			"name": "Unheilsschwingen"
+		},
+		{
+			"id": "obstruct",
+			"name": "Abblocker"
+		},
+		{
+			"id": "octazooka",
+			"name": "Octazooka"
+		},
+		{
+			"id": "octolock",
+			"name": "Octoklammer"
+		},
+		{
+			"id": "odor-sleuth",
+			"name": "Schnüffler"
+		},
+		{
+			"id": "ominous-wind",
+			"name": "Unheilböen"
+		},
+		{
+			"id": "origin-pulse",
+			"name": "Ursprungswoge"
+		},
+		{
+			"id": "outrage",
+			"name": "Wutanfall"
+		},
+		{
+			"id": "overdrive",
+			"name": "Overdrive"
+		},
+		{
+			"id": "overheat",
+			"name": "Hitzekoller"
+		},
+		{
+			"id": "pain-split",
+			"name": "Leidteiler"
+		},
+		{
+			"id": "parabolic-charge",
+			"name": "Parabolladung"
+		},
+		{
+			"id": "parting-shot",
+			"name": "Abgangstirade"
+		},
+		{
+			"id": "pay-day",
+			"name": "Zahltag"
+		},
+		{
+			"id": "payback",
+			"name": "Gegenstoß"
+		},
+		{
+			"id": "peck",
+			"name": "Pikser"
+		},
+		{
+			"id": "perish-song",
+			"name": "Abgesang"
+		},
+		{
+			"id": "petal-blizzard",
+			"name": "Blütenwirbel"
+		},
+		{
+			"id": "petal-dance",
+			"name": "Blättertanz"
+		},
+		{
+			"id": "phantom-force",
+			"name": "Phantomkraft"
+		},
+		{
+			"id": "photon-geyser",
+			"name": "Photonen-Geysir"
+		},
+		{
+			"id": "pin-missile",
+			"name": "Nadelrakete"
+		},
+		{
+			"id": "plasma-fists",
+			"name": "Plasmafäuste"
+		},
+		{
+			"id": "play-nice",
+			"name": "Kameradschaft"
+		},
+		{
+			"id": "play-rough",
+			"name": "Knuddler"
+		},
+		{
+			"id": "pluck",
+			"name": "Pflücker"
+		},
+		{
+			"id": "poison-fang",
+			"name": "Giftzahn"
+		},
+		{
+			"id": "poison-gas",
+			"name": "Giftwolke"
+		},
+		{
+			"id": "poison-jab",
+			"name": "Gifthieb"
+		},
+		{
+			"id": "poison-powder",
+			"name": "Giftpuder"
+		},
+		{
+			"id": "poison-sting",
+			"name": "Giftstachel"
+		},
+		{
+			"id": "poison-tail",
+			"name": "Giftschweif"
+		},
+		{
+			"id": "pollen-puff",
+			"name": "Pollenknödel"
+		},
+		{
+			"id": "poltergeist",
+			"name": "Poltergeist"
+		},
+		{
+			"id": "pound",
+			"name": "Klaps"
+		},
+		{
+			"id": "powder",
+			"name": "Pulverschleuder"
+		},
+		{
+			"id": "powder-snow",
+			"name": "Pulverschnee"
+		},
+		{
+			"id": "power-gem",
+			"name": "Juwelenkraft"
+		},
+		{
+			"id": "power-split",
+			"name": "Kraftteiler"
+		},
+		{
+			"id": "power-swap",
+			"name": "Krafttausch"
+		},
+		{
+			"id": "power-trick",
+			"name": "Krafttrick"
+		},
+		{
+			"id": "power-trip",
+			"name": "Überheblichkeit"
+		},
+		{
+			"id": "power-whip",
+			"name": "Blattgeißel"
+		},
+		{
+			"id": "power-up-punch",
+			"name": "Steigerungshieb"
+		},
+		{
+			"id": "precipice-blades",
+			"name": "Abgrundsklinge"
+		},
+		{
+			"id": "present",
+			"name": "Geschenk"
+		},
+		{
+			"id": "prismatic-laser",
+			"name": "Prisma-Laser"
+		},
+		{
+			"id": "protect",
+			"name": "Schutzschild"
+		},
+		{
+			"id": "psybeam",
+			"name": "Psystrahl"
+		},
+		{
+			"id": "psyblade",
+			"name": "Psychoschneide"
+		},
+		{
+			"id": "psych-up",
+			"name": "Psycho-Plus"
+		},
+		{
+			"id": "psychic",
+			"name": "Psychokinese"
+		},
+		{
+			"id": "psychic-fangs",
+			"name": "Psychobeißer"
+		},
+		{
+			"id": "psychic-noise",
+			"name": "Psycholärm"
+		},
+		{
+			"id": "psychic-terrain",
+			"name": "Psychofeld"
+		},
+		{
+			"id": "psycho-boost",
+			"name": "Psyschub"
+		},
+		{
+			"id": "psycho-cut",
+			"name": "Psychoklinge"
+		},
+		{
+			"id": "psycho-shift",
+			"name": "Psybann"
+		},
+		{
+			"id": "psyshock",
+			"name": "Psychoschock"
+		},
+		{
+			"id": "psystrike",
+			"name": "Psychostoß"
+		},
+		{
+			"id": "psywave",
+			"name": "Psywelle"
+		},
+		{
+			"id": "punishment",
+			"name": "Strafattacke"
+		},
+		{
+			"id": "purify",
+			"name": "Läuterung"
+		},
+		{
+			"id": "pursuit",
+			"name": "Verfolgung"
+		},
+		{
+			"id": "pyro-ball",
+			"name": "Feuerball"
+		},
+		{
+			"id": "quash",
+			"name": "Verzögerung"
+		},
+		{
+			"id": "quick-attack",
+			"name": "Ruckzuckhieb"
+		},
+		{
+			"id": "quick-guard",
+			"name": "Rapidschutz"
+		},
+		{
+			"id": "quiver-dance",
+			"name": "Falterreigen"
+		},
+		{
+			"id": "rage",
+			"name": "Raserei"
+		},
+		{
+			"id": "rage-powder",
+			"name": "Wutpulver"
+		},
+		{
+			"id": "rain-dance",
+			"name": "Regentanz"
+		},
+		{
+			"id": "rapid-spin",
+			"name": "Turbodreher"
+		},
+		{
+			"id": "razor-leaf",
+			"name": "Rasierblatt"
+		},
+		{
+			"id": "razor-shell",
+			"name": "Kalkklinge"
+		},
+		{
+			"id": "razor-wind",
+			"name": "Klingensturm"
+		},
+		{
+			"id": "recover",
+			"name": "Genesung"
+		},
+		{
+			"id": "recycle",
+			"name": "Aufbereitung"
+		},
+		{
+			"id": "reflect",
+			"name": "Reflektor"
+		},
+		{
+			"id": "reflect-type",
+			"name": "Typenspiegel"
+		},
+		{
+			"id": "refresh",
+			"name": "Heilung"
+		},
+		{
+			"id": "relic-song",
+			"name": "Urgesang"
+		},
+		{
+			"id": "rest",
+			"name": "Erholung"
+		},
+		{
+			"id": "retaliate",
+			"name": "Heimzahlung"
+		},
+		{
+			"id": "return",
+			"name": "Rückkehr"
+		},
+		{
+			"id": "revelation-dance",
+			"name": "Wecktanz"
+		},
+		{
+			"id": "revenge",
+			"name": "Vergeltung"
+		},
+		{
+			"id": "reversal",
+			"name": "Gegenschlag"
+		},
+		{
+			"id": "rising-voltage",
+			"name": "Hochspannung"
+		},
+		{
+			"id": "roar",
+			"name": "Brüller"
+		},
+		{
+			"id": "roar-of-time",
+			"name": "Zeitenlärm"
+		},
+		{
+			"id": "rock-blast",
+			"name": "Felswurf"
+		},
+		{
+			"id": "rock-climb",
+			"name": "Kraxler"
+		},
+		{
+			"id": "rock-polish",
+			"name": "Steinpolitur"
+		},
+		{
+			"id": "rock-slide",
+			"name": "Steinhagel"
+		},
+		{
+			"id": "rock-smash",
+			"name": "Zertrümmerer"
+		},
+		{
+			"id": "rock-throw",
+			"name": "Steinwurf"
+		},
+		{
+			"id": "rock-tomb",
+			"name": "Felsgrab"
+		},
+		{
+			"id": "rock-wrecker",
+			"name": "Felswerfer"
+		},
+		{
+			"id": "role-play",
+			"name": "Rollenspiel"
+		},
+		{
+			"id": "rolling-kick",
+			"name": "Fegekick"
+		},
+		{
+			"id": "rollout",
+			"name": "Walzer"
+		},
+		{
+			"id": "roost",
+			"name": "Ruheort"
+		},
+		{
+			"id": "rototiller",
+			"name": "Pflüger"
+		},
+		{
+			"id": "round",
+			"name": "Kanon"
+		},
+		{
+			"id": "sacred-fire",
+			"name": "Läuterfeuer"
+		},
+		{
+			"id": "sacred-sword",
+			"name": "Sanctoklinge"
+		},
+		{
+			"id": "safeguard",
+			"name": "Bodyguard"
+		},
+		{
+			"id": "sand-attack",
+			"name": "Sandwirbel"
+		},
+		{
+			"id": "sand-tomb",
+			"name": "Sandgrab"
+		},
+		{
+			"id": "sandstorm",
+			"name": "Sandsturm"
+		},
+		{
+			"id": "scald",
+			"name": "Siedewasser"
+		},
+		{
+			"id": "scale-shot",
+			"name": "Schuppenschuss"
+		},
+		{
+			"id": "scary-face",
+			"name": "Grimasse"
+		},
+		{
+			"id": "scorching-sands",
+			"name": "Brandsand"
+		},
+		{
+			"id": "scratch",
+			"name": "Kratzer"
+		},
+		{
+			"id": "screech",
+			"name": "Kreideschrei"
+		},
+		{
+			"id": "searing-shot",
+			"name": "Flammenball"
+		},
+		{
+			"id": "secret-power",
+			"name": "Geheimpower"
+		},
+		{
+			"id": "secret-sword",
+			"name": "Mystoschwert"
+		},
+		{
+			"id": "seed-bomb",
+			"name": "Samenbomben"
+		},
+		{
+			"id": "seed-flare",
+			"name": "Schocksamen"
+		},
+		{
+			"id": "seismic-toss",
+			"name": "Geowurf"
+		},
+		{
+			"id": "self-destruct",
+			"name": "Finale"
+		},
+		{
+			"id": "shadow-ball",
+			"name": "Spukball"
+		},
+		{
+			"id": "shadow-bone",
+			"name": "Schattenknochen"
+		},
+		{
+			"id": "shadow-claw",
+			"name": "Dunkelklaue"
+		},
+		{
+			"id": "shadow-force",
+			"name": "Schemenkraft"
+		},
+		{
+			"id": "shadow-punch",
+			"name": "Finsterfaust"
+		},
+		{
+			"id": "shadow-sneak",
+			"name": "Schattenstoß"
+		},
+		{
+			"id": "sharpen",
+			"name": "Schärfer"
+		},
+		{
+			"id": "sheer-cold",
+			"name": "Eiseskälte"
+		},
+		{
+			"id": "shell-side-arm",
+			"name": "Muschelwaffe"
+		},
+		{
+			"id": "shell-smash",
+			"name": "Hausbruch"
+		},
+		{
+			"id": "shell-trap",
+			"name": "Panzerfalle"
+		},
+		{
+			"id": "shift-gear",
+			"name": "Gangwechsel"
+		},
+		{
+			"id": "shock-wave",
+			"name": "Schockwelle"
+		},
+		{
+			"id": "shore-up",
+			"name": "Sandsammler"
+		},
+		{
+			"id": "signal-beam",
+			"name": "Ampelleuchte"
+		},
+		{
+			"id": "silver-wind",
+			"name": "Silberhauch"
+		},
+		{
+			"id": "simple-beam",
+			"name": "Wankelstrahl"
+		},
+		{
+			"id": "sing",
+			"name": "Gesang"
+		},
+		{
+			"id": "sketch",
+			"name": "Nachahmer"
+		},
+		{
+			"id": "skill-swap",
+			"name": "Fähigkeitstausch"
+		},
+		{
+			"id": "skitter-smack",
+			"name": "Krabbelkracher"
+		},
+		{
+			"id": "skull-bash",
+			"name": "Schädelwumme"
+		},
+		{
+			"id": "sky-attack",
+			"name": "Himmelsfeger"
+		},
+		{
+			"id": "sky-drop",
+			"name": "Freier Fall"
+		},
+		{
+			"id": "sky-uppercut",
+			"name": "Himmelhieb"
+		},
+		{
+			"id": "slack-off",
+			"name": "Tagedieb"
+		},
+		{
+			"id": "slam",
+			"name": "Slam"
+		},
+		{
+			"id": "slash",
+			"name": "Schlitzer"
+		},
+		{
+			"id": "sleep-powder",
+			"name": "Schlafpuder"
+		},
+		{
+			"id": "sleep-talk",
+			"name": "Schlafrede"
+		},
+		{
+			"id": "sludge",
+			"name": "Schlammbad"
+		},
+		{
+			"id": "sludge-bomb",
+			"name": "Matschbombe"
+		},
+		{
+			"id": "sludge-wave",
+			"name": "Schlammwoge"
+		},
+		{
+			"id": "smack-down",
+			"name": "Katapult"
+		},
+		{
+			"id": "smart-strike",
+			"name": "Schmalhorn"
+		},
+		{
+			"id": "smelling-salts",
+			"name": "Riechsalz"
+		},
+		{
+			"id": "smog",
+			"name": "Smog"
+		},
+		{
+			"id": "smokescreen",
+			"name": "Rauchwolke"
+		},
+		{
+			"id": "snap-trap",
+			"name": "Fangeisen"
+		},
+		{
+			"id": "snarl",
+			"name": "Standpauke"
+		},
+		{
+			"id": "snatch",
+			"name": "Übernahme"
+		},
+		{
+			"id": "snipe-shot",
+			"name": "Präzisionsschuss"
+		},
+		{
+			"id": "snore",
+			"name": "Schnarcher"
+		},
+		{
+			"id": "soak",
+			"name": "Überflutung"
+		},
+		{
+			"id": "soft-boiled",
+			"name": "Weichei"
+		},
+		{
+			"id": "solar-beam",
+			"name": "Solarstrahl"
+		},
+		{
+			"id": "solar-blade",
+			"name": "Solarklinge"
+		},
+		{
+			"id": "sonic-boom",
+			"name": "Ultraschall"
+		},
+		{
+			"id": "spacial-rend",
+			"name": "Raumschlag"
+		},
+		{
+			"id": "spark",
+			"name": "Funkensprung"
+		},
+		{
+			"id": "sparkling-aria",
+			"name": "Schaumserenade"
+		},
+		{
+			"id": "spectral-thief",
+			"name": "Diebesschatten"
+		},
+		{
+			"id": "speed-swap",
+			"name": "Initiativetausch"
+		},
+		{
+			"id": "spider-web",
+			"name": "Spinnennetz"
+		},
+		{
+			"id": "spike-cannon",
+			"name": "Dornkanone"
+		},
+		{
+			"id": "spikes",
+			"name": "Stachler"
+		},
+		{
+			"id": "spiky-shield",
+			"name": "Schutzstacheln"
+		},
+		{
+			"id": "spirit-break",
+			"name": "Seelenbruch"
+		},
+		{
+			"id": "spirit-shackle",
+			"name": "Schattenfessel"
+		},
+		{
+			"id": "spit-up",
+			"name": "Entfessler"
+		},
+		{
+			"id": "spite",
+			"name": "Groll"
+		},
+		{
+			"id": "splash",
+			"name": "Platscher"
+		},
+		{
+			"id": "spore",
+			"name": "Pilzspore"
+		},
+		{
+			"id": "spotlight",
+			"name": "Rampenlicht"
+		},
+		{
+			"id": "stealth-rock",
+			"name": "Tarnsteine"
+		},
+		{
+			"id": "steam-eruption",
+			"name": "Dampfschwall"
+		},
+		{
+			"id": "steamroller",
+			"name": "Quetschwalze"
+		},
+		{
+			"id": "steel-beam",
+			"name": "Stahlstrahl"
+		},
+		{
+			"id": "steel-roller",
+			"name": "Eisenwalze"
+		},
+		{
+			"id": "steel-wing",
+			"name": "Stahlflügel"
+		},
+		{
+			"id": "sticky-web",
+			"name": "Klebenetz"
+		},
+		{
+			"id": "stockpile",
+			"name": "Horter"
+		},
+		{
+			"id": "stomp",
+			"name": "Stampfer"
+		},
+		{
+			"id": "stomping-tantrum",
+			"name": "Fruststampfer"
+		},
+		{
+			"id": "stone-edge",
+			"name": "Steinkante"
+		},
+		{
+			"id": "stored-power",
+			"name": "Kraftvorrat"
+		},
+		{
+			"id": "storm-throw",
+			"name": "Bergsturm"
+		},
+		{
+			"id": "strange-steam",
+			"name": "Wunderdampf"
+		},
+		{
+			"id": "strength",
+			"name": "Stärke"
+		},
+		{
+			"id": "strength-sap",
+			"name": "Kraftabsorber"
+		},
+		{
+			"id": "string-shot",
+			"name": "Fadenschuss"
+		},
+		{
+			"id": "struggle",
+			"name": "Verzweifler"
+		},
+		{
+			"id": "struggle-bug",
+			"name": "Käfertrutz"
+		},
+		{
+			"id": "stuff-cheeks",
+			"name": "Backenstopfer"
+		},
+		{
+			"id": "stun-spore",
+			"name": "Stachelspore"
+		},
+		{
+			"id": "submission",
+			"name": "Überroller"
+		},
+		{
+			"id": "substitute",
+			"name": "Delegator"
+		},
+		{
+			"id": "sucker-punch",
+			"name": "Tiefschlag"
+		},
+		{
+			"id": "sunny-day",
+			"name": "Sonnentag"
+		},
+		{
+			"id": "sunsteel-strike",
+			"name": "Stahlgestirn"
+		},
+		{
+			"id": "super-fang",
+			"name": "Superzahn"
+		},
+		{
+			"id": "supercell-slam",
+			"name": "Donnerstoß"
+		},
+		{
+			"id": "superpower",
+			"name": "Kraftkoloss"
+		},
+		{
+			"id": "supersonic",
+			"name": "Superschall"
+		},
+		{
+			"id": "surf",
+			"name": "Surfer"
+		},
+		{
+			"id": "surging-strikes",
+			"name": "Trefferschwall"
+		},
+		{
+			"id": "swagger",
+			"name": "Angeberei"
+		},
+		{
+			"id": "swallow",
+			"name": "Verzehrer"
+		},
+		{
+			"id": "sweet-kiss",
+			"name": "Bitterkuss"
+		},
+		{
+			"id": "sweet-scent",
+			"name": "Lockduft"
+		},
+		{
+			"id": "swift",
+			"name": "Sternschauer"
+		},
+		{
+			"id": "switcheroo",
+			"name": "Wechseldich"
+		},
+		{
+			"id": "swords-dance",
+			"name": "Schwerttanz"
+		},
+		{
+			"id": "synchronoise",
+			"name": "Synchrolärm"
+		},
+		{
+			"id": "synthesis",
+			"name": "Synthese"
+		},
+		{
+			"id": "tachyon-cutter",
+			"name": "Tachyon-Schnitt"
+		},
+		{
+			"id": "tackle",
+			"name": "Tackle"
+		},
+		{
+			"id": "tail-glow",
+			"name": "Schweifglanz"
+		},
+		{
+			"id": "tail-slap",
+			"name": "Kehrschelle"
+		},
+		{
+			"id": "tail-whip",
+			"name": "Rutenschlag"
+		},
+		{
+			"id": "tailwind",
+			"name": "Rückenwind"
+		},
+		{
+			"id": "take-down",
+			"name": "Bodycheck"
+		},
+		{
+			"id": "tar-shot",
+			"name": "Teerschuss"
+		},
+		{
+			"id": "taunt",
+			"name": "Verhöhner"
+		},
+		{
+			"id": "tearful-look",
+			"name": "Tränendrüse"
+		},
+		{
+			"id": "teatime",
+			"name": "Teatime"
+		},
+		{
+			"id": "techno-blast",
+			"name": "Techblaster"
+		},
+		{
+			"id": "teeter-dance",
+			"name": "Taumeltanz"
+		},
+		{
+			"id": "telekinesis",
+			"name": "Telekinese"
+		},
+		{
+			"id": "teleport",
+			"name": "Teleport"
+		},
+		{
+			"id": "temper-flare",
+			"name": "Frustflamme"
+		},
+		{
+			"id": "tera-starstorm",
+			"name": "Tera-Sternhagel"
+		},
+		{
+			"id": "terrain-pulse",
+			"name": "Feldimpuls"
+		},
+		{
+			"id": "thief",
+			"name": "Raub"
+		},
+		{
+			"id": "thousand-arrows",
+			"name": "Tausend Pfeile"
+		},
+		{
+			"id": "thousand-waves",
+			"name": "Tausend Wellen"
+		},
+		{
+			"id": "thrash",
+			"name": "Fuchtler"
+		},
+		{
+			"id": "throat-chop",
+			"name": "Neck Strike"
+		},
+		{
+			"id": "thunder",
+			"name": "Donner"
+		},
+		{
+			"id": "thunder-cage",
+			"name": "Blitzgefängnis"
+		},
+		{
+			"id": "thunder-fang",
+			"name": "Donnerzahn"
+		},
+		{
+			"id": "thunder-punch",
+			"name": "Donnerschlag"
+		},
+		{
+			"id": "thunder-shock",
+			"name": "Donnerschock"
+		},
+		{
+			"id": "thunder-wave",
+			"name": "Donnerwelle"
+		},
+		{
+			"id": "thunderbolt",
+			"name": "Donnerblitz"
+		},
+		{
+			"id": "thunderclap",
+			"name": "Sturmblitz"
+		},
+		{
+			"id": "thunderous-kick",
+			"name": "Donnernder Tritt"
+		},
+		{
+			"id": "tickle",
+			"name": "Spaßkanone"
+		},
+		{
+			"id": "topsy-turvy",
+			"name": "Invertigo"
+		},
+		{
+			"id": "torment",
+			"name": "Folterknecht"
+		},
+		{
+			"id": "toxic",
+			"name": "Toxin"
+		},
+		{
+			"id": "toxic-spikes",
+			"name": "Giftspitzen"
+		},
+		{
+			"id": "toxic-thread",
+			"name": "Giftfaden"
+		},
+		{
+			"id": "transform",
+			"name": "Wandler"
+		},
+		{
+			"id": "tri-attack",
+			"name": "Triplette"
+		},
+		{
+			"id": "trick",
+			"name": "Trickbetrug"
+		},
+		{
+			"id": "trick-room",
+			"name": "Bizarroraum"
+		},
+		{
+			"id": "trick-or-treat",
+			"name": "Halloween"
+		},
+		{
+			"id": "triple-axel",
+			"name": "Dreifach-Axel"
+		},
+		{
+			"id": "triple-kick",
+			"name": "Dreifachkick"
+		},
+		{
+			"id": "trop-kick",
+			"name": "Tropenkick"
+		},
+		{
+			"id": "trump-card",
+			"name": "Trumpfkarte"
+		},
+		{
+			"id": "twineedle",
+			"name": "Duonadel"
+		},
+		{
+			"id": "twister",
+			"name": "Windhose"
+		},
+		{
+			"id": "u-turn",
+			"name": "Kehrtwende"
+		},
+		{
+			"id": "upper-hand",
+			"name": "Schnellkonter"
+		},
+		{
+			"id": "uproar",
+			"name": "Aufruhr"
+		},
+		{
+			"id": "v-create",
+			"name": "V-Generator"
+		},
+		{
+			"id": "vacuum-wave",
+			"name": "Vakuumwelle"
+		},
+		{
+			"id": "venom-drench",
+			"name": "Giftfalle"
+		},
+		{
+			"id": "venoshock",
+			"name": "Giftschock"
+		},
+		{
+			"id": "vice-grip",
+			"name": "Klammer"
+		},
+		{
+			"id": "vine-whip",
+			"name": "Rankenhieb"
+		},
+		{
+			"id": "vital-throw",
+			"name": "Überwurf"
+		},
+		{
+			"id": "volt-switch",
+			"name": "Voltwechsel"
+		},
+		{
+			"id": "volt-tackle",
+			"name": "Volttackle"
+		},
+		{
+			"id": "wake-up-slap",
+			"name": "Weckruf"
+		},
+		{
+			"id": "water-gun",
+			"name": "Aquaknarre"
+		},
+		{
+			"id": "water-pledge",
+			"name": "Wassersäulen"
+		},
+		{
+			"id": "water-pulse",
+			"name": "Aquawelle"
+		},
+		{
+			"id": "water-shuriken",
+			"name": "Wasser-Shuriken"
+		},
+		{
+			"id": "water-sport",
+			"name": "Nassmacher"
+		},
+		{
+			"id": "water-spout",
+			"name": "Fontränen"
+		},
+		{
+			"id": "waterfall",
+			"name": "Kaskade"
+		},
+		{
+			"id": "weather-ball",
+			"name": "Meteorologe"
+		},
+		{
+			"id": "whirlpool",
+			"name": "Whirlpool"
+		},
+		{
+			"id": "whirlwind",
+			"name": "Wirbelwind"
+		},
+		{
+			"id": "wicked-blow",
+			"name": "Finstertreffer"
+		},
+		{
+			"id": "wide-guard",
+			"name": "Rundumschutz"
+		},
+		{
+			"id": "wild-charge",
+			"name": "Stromstoß"
+		},
+		{
+			"id": "will-o-wisp",
+			"name": "Irrlicht"
+		},
+		{
+			"id": "wing-attack",
+			"name": "Flügelschlag"
+		},
+		{
+			"id": "wish",
+			"name": "Wunschtraum"
+		},
+		{
+			"id": "withdraw",
+			"name": "Panzerschutz"
+		},
+		{
+			"id": "wonder-room",
+			"name": "Wunderraum"
+		},
+		{
+			"id": "wood-hammer",
+			"name": "Holzhammer"
+		},
+		{
+			"id": "work-up",
+			"name": "Kraftschub"
+		},
+		{
+			"id": "worry-seed",
+			"name": "Sorgensamen"
+		},
+		{
+			"id": "wrap",
+			"name": "Wickel"
+		},
+		{
+			"id": "wring-out",
+			"name": "Auswringen"
+		},
+		{
+			"id": "x-scissor",
+			"name": "Kreuzschere"
+		},
+		{
+			"id": "yawn",
+			"name": "Gähner"
+		},
+		{
+			"id": "zap-cannon",
+			"name": "Blitzkanone"
+		},
+		{
+			"id": "zen-headbutt",
+			"name": "Zen-Kopfstoß"
+		},
+		{
+			"id": "zing-zap",
+			"name": "Elektropikser"
+		}
+	]
+}

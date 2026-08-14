@@ -1,1 +1,1 @@
-{"id":"chesto-berry","name":"Baga Chesto","type":"berry","cost":200,"description":["Consumir para curar sono. Pode ser consumida como reação ao ficar adormecido."],"media":{"sprite":"/assets/items/chesto-berry/sprite.png"}}
+{"id":"chesto-berry","name":"Baga Chesto","type":"berry","cost":200,"description":["Consumir para curar sono. Pode ser consumida como reação ao ficar adormecido."],"media":{"sprite":"/assets/items/chesto-berry/sprite.png"},"aliases":["Chesto Berry"]}

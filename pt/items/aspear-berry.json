@@ -1,1 +1,1 @@
-{"id":"aspear-berry","name":"Baga Aspear","type":"berry","cost":200,"description":["Consumir para curar congelamento. Pode ser consumida como reação ao ficar congelado."],"media":{"sprite":"/assets/items/aspear-berry/sprite.png"}}
+{"id":"aspear-berry","name":"Baga Aspear","type":"berry","cost":200,"description":["Consumir para curar congelamento. Pode ser consumida como reação ao ficar congelado."],"media":{"sprite":"/assets/items/aspear-berry/sprite.png"},"aliases":["Aspear Berry"]}

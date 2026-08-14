@@ -1,1 +1,1 @@
-{"id":"potion","name":"Poção","type":"medicine","cost":200,"description":["Um treinador pode usar uma ação para restaurar 2d4 + 2 de HP a um Pokémon adjacente. Consumido no uso."],"media":{"sprite":"/assets/items/potion/sprite.png"}}
+{"id":"potion","name":"Poção","type":"medicine","cost":200,"description":["Um treinador pode usar uma ação para restaurar 2d4 + 2 de HP a um Pokémon adjacente. Consumido no uso."],"media":{"sprite":"/assets/items/potion/sprite.png"},"aliases":["Potion"]}

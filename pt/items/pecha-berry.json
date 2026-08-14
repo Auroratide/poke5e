@@ -1,1 +1,1 @@
-{"id":"pecha-berry","name":"Baga Pecha","type":"berry","cost":200,"description":["Consumir para curar envenenamento. Pode ser consumida como reação ao ficar envenenado ou gravemente envenenado."],"media":{"sprite":"/assets/items/pecha-berry/sprite.png"}}
+{"id":"pecha-berry","name":"Baga Pecha","type":"berry","cost":200,"description":["Consumir para curar envenenamento. Pode ser consumida como reação ao ficar envenenado ou gravemente envenenado."],"media":{"sprite":"/assets/items/pecha-berry/sprite.png"},"aliases":["Pecha Berry"]}

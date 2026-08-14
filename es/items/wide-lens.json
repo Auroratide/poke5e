@@ -1,1 +1,1 @@
-{"id":"wide-lens","name":"Lupa","type":"held item","cost":4400,"description":["El portador obtiene +1 a sus tiradas de ataque."],"media":{"sprite":"/assets/items/wide-lens/sprite.png"}}
+{"id":"wide-lens","name":"Lupa","type":"held item","cost":4400,"description":["El portador obtiene +1 a sus tiradas de ataque."],"media":{"sprite":"/assets/items/wide-lens/sprite.png"},"aliases":["Wide Lens"]}

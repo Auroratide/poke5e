@@ -1,1 +1,1 @@
-{"id":"pixie-plate","name":"Placa Fada","type":"held item","cost":null,"description":["Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Fada."],"media":{"sprite":"/assets/items/pixie-plate/sprite.png"}}
+{"id":"pixie-plate","name":"Placa Fada","type":"held item","cost":null,"description":["Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Fada."],"media":{"sprite":"/assets/items/pixie-plate/sprite.png"},"aliases":["Pixie Plate"]}

@@ -1,1 +1,1 @@
-{"id":"revive","name":"Reviver","type":"medicine","cost":3000,"description":["Um treinador pode usar uma ação para restaurar 2d4 + 2 de HP a um Pokémon desmaiado. Consumido no uso."],"media":{"sprite":"/assets/items/revive/sprite.png"}}
+{"id":"revive","name":"Reviver","type":"medicine","cost":3000,"description":["Um treinador pode usar uma ação para restaurar 2d4 + 2 de HP a um Pokémon desmaiado. Consumido no uso."],"media":{"sprite":"/assets/items/revive/sprite.png"},"aliases":["Revive"]}

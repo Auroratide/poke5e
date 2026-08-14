@@ -1,1 +1,1 @@
-{"id":"mind-plate","name":"Placa Psíquica","type":"held item","cost":null,"description":["Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Psíquico."],"media":{"sprite":"/assets/items/mind-plate/sprite.png"}}
+{"id":"mind-plate","name":"Placa Psíquica","type":"held item","cost":null,"description":["Permite que Arceus, a qualquer momento, altere seu tipo e o tipo do movimento Julgamento para Psíquico."],"media":{"sprite":"/assets/items/mind-plate/sprite.png"},"aliases":["Mind Plate"]}

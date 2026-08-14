@@ -1,1 +1,1 @@
-{"id":"smoke-ball","name":"Bola de Fumaça","type":"held item","cost":4400,"description":["Garante sucesso ao tentar fugir de batalhas contra Pokémon selvagens."],"media":{"sprite":"/assets/items/smoke-ball/sprite.png"}}
+{"id":"smoke-ball","name":"Bola de Fumaça","type":"held item","cost":4400,"description":["Garante sucesso ao tentar fugir de batalhas contra Pokémon selvagens."],"media":{"sprite":"/assets/items/smoke-ball/sprite.png"},"aliases":["Smoke Ball"]}

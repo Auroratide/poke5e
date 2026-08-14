@@ -1,1 +1,1 @@
-{"id":"hyper-potion","name":"Híper Poción","type":"medicine","cost":800,"description":["Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon adyacente. Se consume al usarse."],"media":{"sprite":"/assets/items/hyper-potion/sprite.png"}}
+{"id":"hyper-potion","name":"Híper Poción","type":"medicine","cost":800,"description":["Un entrenador puede usar una acción para restaurar 4d12 + 10 puntos de golpe a un Pokémon adyacente. Se consume al usarse."],"media":{"sprite":"/assets/items/hyper-potion/sprite.png"},"aliases":["Hyper Potion"]}

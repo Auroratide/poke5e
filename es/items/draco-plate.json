@@ -1,1 +1,1 @@
-{"id":"draco-plate","name":"Tabla Draco","type":"held item","cost":null,"description":["Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Dragón."],"media":{"sprite":"/assets/items/draco-plate/sprite.png"}}
+{"id":"draco-plate","name":"Tabla Draco","type":"held item","cost":null,"description":["Permite que Arceus cambie a voluntad su tipo y el tipo del movimiento Sentencia a Dragón."],"media":{"sprite":"/assets/items/draco-plate/sprite.png"},"aliases":["Draco Plate"]}

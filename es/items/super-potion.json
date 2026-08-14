@@ -1,1 +1,1 @@
-{"id":"super-potion","name":"Súper Poción","type":"medicine","cost":500,"description":["Un entrenador puede usar una acción para restaurar 3d6 + 6 puntos de golpe a un Pokémon adyacente. Se consume al usarse."],"media":{"sprite":"/assets/items/super-potion/sprite.png"}}
+{"id":"super-potion","name":"Súper Poción","type":"medicine","cost":500,"description":["Un entrenador puede usar una acción para restaurar 3d6 + 6 puntos de golpe a un Pokémon adyacente. Se consume al usarse."],"media":{"sprite":"/assets/items/super-potion/sprite.png"},"aliases":["Super Potion"]}

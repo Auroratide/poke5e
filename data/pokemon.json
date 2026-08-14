@@ -148473,7 +148473,7 @@
 				"dex": 15,
 				"con": 8,
 				"int": 14,
-				"wis": 15,
+				"wis": 14,
 				"cha": 16
 			},
 			"skills": [
@@ -173888,12 +173888,12 @@
 			"attributes": {
 				"str": 15,
 				"dex": 10,
-				"con": 16,
+				"con": 15,
 				"int": 6,
 				"wis": 14,
 				"cha": 12
 			},
-			"hp": 59,
+			"hp": 54,
 			"skills": [
 				"stealth",
 				"deception"

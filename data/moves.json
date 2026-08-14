@@ -11490,7 +11490,7 @@
 			"duration": "1 round, concentration",
 			"range": "self",
 			"description": [
-				"When activating this move, you spend your action concentrating intensely. If you keep your concentration, your first attack roll on your next turn always results in a critical hit."
+				"When activating this move, you spend your action concentrating intensely. If you keep your concentration, your first attack roll on your next turn always results in a Critical Hit."
 			]
 		},
 		{
@@ -13339,7 +13339,7 @@
 			"duration": "instantaneous",
 			"range": "100ft",
 			"description": [
-				"You fire an explosive ball of damaging mist at a creature in range. Make a ranged attack against a target, doing 5d6 + MOVE psychic damage on a hit. If the natural attack roll is higher than 10, the target has disadvantage on any attack it makes before the end of its next turn.."
+				"You fire an explosive ball of damaging mist at a creature in range. Make a ranged attack against a target, doing 5d6 + MOVE psychic damage on a hit. If the natural attack roll is 11 or higher, the target has disadvantage on any attack it makes before the end of its next turn."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 4d10 at level 5, 6d10 at level 10, and 8d12 at level 17.",
 			"damage": {
@@ -13638,7 +13638,7 @@
 			"duration": "instantaneous",
 			"range": "60ft",
 			"description": [
-				"You fire a glob of mud at a creature, dealing damage with a chance to hinder the target's movement. Make a ranged attack against a creature in range, dealing 1d8 + MOVE ground damage on a hit. If the natural attack roll is higher than 15, the target's speed becomes 0 until the end of its next turn."
+				"You fire a glob of mud at a creature, dealing damage with a chance to hinder the target's movement. Make a ranged attack against a creature in range, dealing 1d8 + MOVE ground damage on a hit. If the natural attack roll is 16 or higher, the target's speed becomes 0 until the end of its next turn."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
 			"damage": {
@@ -14340,9 +14340,6 @@
 					"con"
 				],
 				"dc": "MOVE"
-			},
-			"attack": {
-				"scope": "melee"
 			}
 		},
 		{
@@ -19548,7 +19545,7 @@
 			"duration": "instantaneous",
 			"range": "30ft",
 			"description": [
-				"You release a harsh growl at a creature, damaging their willpower. Force a creature to make a WIS save against your Move DC. On a failure, the target takes 1d8 + MOVE dark damage. If you are the target of its next attack, the attack is rolled at disadvantage."
+				"You release a harsh growl at a creature, damaging their willpower. Force a creature to make a WIS save against your Move DC. On a failure, the target takes 1d8 + MOVE dark damage, and if you are the target of its next attack, the attack is rolled at disadvantage."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
 			"tm": {
@@ -19637,7 +19634,7 @@
 			"time": "1 action",
 			"pp": 10,
 			"duration": "instantaneous",
-			"range": "50ft",
+			"range": "Self (50ft radius)",
 			"description": [
 				"While you are asleep, you may activate this move to create a harsh noise that damages all creatures within range for 1d8 + MOVE normal damage."
 			],

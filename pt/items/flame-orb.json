@@ -1,1 +1,1 @@
-{"id":"flame-orb","name":"Orbe Flamejante","type":"held item","cost":2000,"description":["No final do turno do portador, ele fica queimado."],"media":{"sprite":"/assets/items/flame-orb/sprite.png"}}
+{"id":"flame-orb","name":"Orbe Flamejante","type":"held item","cost":2000,"description":["No final do turno do portador, ele fica queimado."],"media":{"sprite":"/assets/items/flame-orb/sprite.png"},"aliases":["Flame Orb"]}
