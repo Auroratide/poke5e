@@ -403,7 +403,7 @@ describe("pokemon", () => {
 		expect(result.ac).toEqualData(17)
 	})
 
-	test.only("tough feat", () => {
+	test("tough feat", () => {
 		const pokemon = stubTrainerPokemon({
 			level: new Level(7),
 			hp: {
