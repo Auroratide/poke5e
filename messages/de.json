@@ -365,5 +365,28 @@
 		"backups": "Sicherung und Wiederherstellung",
 		"officialFakemon": "„Offizielle“ Fakémon",
 		"betaTesting": "Betatest"
+	},
+	"canonical": {
+		"types": {
+			"bug": "Käfer",
+			"dark": "Unlicht",
+			"dragon": "Drache",
+			"electric": "Elektro",
+			"fairy": "Fee",
+			"fighting": "Kampf",
+			"fire": "Feuer",
+			"flying": "Flug",
+			"ghost": "Geist",
+			"grass": "Pflanze",
+			"ground": "Boden",
+			"ice": "Eis",
+			"normal": "Normal",
+			"poison": "Gift",
+			"psychic": "Psycho",
+			"rock": "Gestein",
+			"steel": "Stahl",
+			"water": "Wasser",
+			"stellar": "Stellar"
+		}
 	}
 }

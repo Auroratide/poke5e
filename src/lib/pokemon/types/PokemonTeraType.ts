@@ -10,4 +10,8 @@ export class PokemonTeraType extends DataClass<TeraType> {
 
 	static readonly isTeraType = (value: string): value is PokeType =>
 		(PokemonTeraType.list as readonly string[]).includes(value)
+
+	toString(): string {
+		return PokemonType.name(this.data)
+	}
 }

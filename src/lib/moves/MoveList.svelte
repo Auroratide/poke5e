@@ -5,13 +5,12 @@
 	import { Move } from "./Move"
 	import { Url } from "$lib/site/url"
 	import { m } from "$lib/site/i18n"
-	import { capitalize, uppercase } from "$lib/utils/string"
+	import { uppercase } from "$lib/utils/string"
 	import { PokemonType, type PokeType } from "$lib/pokemon/types"
 	import { MoveFilter } from "./MoveFilter"
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import { MoveTime } from "./MoveTime"
 	import { ContestType } from "./contest/ContestType"
-	import { canonicalName } from "$lib/site/i18n"
 
 	export let moves: Move[]
 
@@ -33,7 +32,7 @@
 	let filteredType: PokeType | "varies" | "" = ""
 	const typeOptions = AnyOption.concat(Object.values(PokemonType.list).map((it) => ({
 		value: it,
-		name: capitalize(canonicalName("types", it)),
+		name: PokemonType.name(it),
 	}))).concat(OtherOption)
 
 	let filteredPower: Attribute | "" = ""
@@ -107,7 +106,7 @@
 } ]}>
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type}-bg)">
 		<BubbleRow.Cell primary cellVisibility={cellVisibility[0]}><a href="{Url.moves(item.id)}">{item.name}</a></BubbleRow.Cell>
-		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{capitalize(canonicalName("types", item.type))}</BubbleRow.Cell>
+		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{PokemonType.name(item.type)}</BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[2]}>{item.power.toString()}</BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[3]}>{item.pp}</BubbleRow.Cell>
 	</BubbleRow.Row>

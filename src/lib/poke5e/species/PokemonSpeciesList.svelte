@@ -12,7 +12,6 @@
 	import { BiomesStore } from "$lib/poke5e/habitat"
 	import { EggGroup } from "$lib/pokemon/egg-group"
 	import { Region } from "../habitat/Region"
-	import { canonicalName } from "$lib/site/i18n"
 
 	export let pokemons: PokemonSpecies[]
 	export let onClick: (pokemon: PokemonSpecies, event: MouseEvent) => void = () => {}
@@ -32,7 +31,7 @@
 	let filteredType: PokeType | "" = ""
 	let typeOptions = AnyOption.concat(Object.values(PokemonType.list).map((it) => ({
 		value: it,
-		name: capitalize(canonicalName("types", it)),
+		name: PokemonType.name(it),
 	})))
 
 	let filteredSize: CreatureSize | "" = ""

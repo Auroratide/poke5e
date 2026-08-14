@@ -5,7 +5,7 @@
 </script>
 
 <span class="tera-type-tag" style:--skin-local-bg="var(--skin-{type.data}-bg)">
-   {type.data}
+   {type.toString()}
 </span>
 
 <style>

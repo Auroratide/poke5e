@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { PokeType } from "./PokemonType"
+	import { PokemonType, type PokeType } from "./PokemonType"
 	import { TypeIcon } from "./icons"
 
 	export let value: PokeType
@@ -10,7 +10,7 @@
 		<TypeIcon type={value} />
 	</span>
 	<span class="name">
-		{value}
+		{PokemonType.name(value)}
 	</span>
 </span>
 

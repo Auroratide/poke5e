@@ -117,11 +117,34 @@
 	},
 	"encounterTool": {
 		"title": "Encounters"
-  },
+	},
 	"backups": {
 		"title": "Backups"
 	},
 	"settings": {
 		"title": "Paramètres"
+	},
+	"canonical": {
+		"types": {
+			"bug": "Insecte",
+			"dark": "Ténèbres",
+			"dragon": "Dragon",
+			"electric": "Électrik",
+			"fairy": "Fée",
+			"fighting": "Combat",
+			"fire": "Feu",
+			"flying": "Vol",
+			"ghost": "Spectre",
+			"grass": "Plante",
+			"ground": "Sol",
+			"ice": "Glace",
+			"normal": "Normal",
+			"poison": "Poison",
+			"psychic": "Psy",
+			"rock": "Roche",
+			"steel": "Acier",
+			"water": "Eau",
+			"stellar": "Stellaire"
+		}
 	}
 }

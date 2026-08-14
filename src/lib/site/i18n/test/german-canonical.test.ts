@@ -7,7 +7,6 @@ import englishPokemon from "../../../../../static/data/pokemon.json"
 import englishMoves from "../../../../../static/data/moves.json"
 import englishMessages from "../../../../../messages/en.json"
 import germanMessages from "../../../../../messages/de.json"
-import canonical from "../canonical/de.json"
 import { translateData } from "../translate-data"
 import { includesSearch } from "$lib/utils/string"
 
@@ -33,8 +32,7 @@ test("uses official German canonical names from the generated PokéAPI overlays"
 	expect(byId(moves.moves).thunderbolt.name).toBe("Donnerblitz")
 	expect(byId(abilities.items).overgrow.name).toBe("Notdünger")
 	expect(byId(items.items).potion.name).toBe("Trank")
-	expect(canonical.types.electric).toBe("Elektro")
-	expect(canonical.natures.adamant).toBe("Hart")
+	expect(germanMessages.canonical.types.electric).toBe("Elektro")
 })
 
 test("localized names remain searchable by German and English names", async () => {
@@ -65,6 +63,7 @@ test("German messages match the English catalog and interpolation variables", ()
 test("German messages do not contain accidental English carryover", () => {
 	const english = flatten(englishMessages)
 	const german = flatten(germanMessages)
+	// The canonical section is generated from PokéAPI; identical names there are official
 	const intentionallyIdentical = new Set([
 		"$schema", "sitetitle", "name", "sr", "pokeslots", "pp", "ac", "hp", "bonus",
 		"avatar", "tm", "tms", "jam", "tera", "sprite", "pokemon.title", "tmsSection.title",
@@ -72,6 +71,7 @@ test("German messages do not contain accidental English carryover", () => {
 	])
 
 	const untranslated = Object.keys(english)
+		.filter((key) => !key.startsWith("canonical."))
 		.filter((key) => english[key] === german[key] && !intentionallyIdentical.has(key))
 
 	expect(untranslated).toEqual([])

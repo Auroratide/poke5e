@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { PokemonType } from "./PokemonType"
+
 	let {
 		type,
 	}: {
@@ -11,20 +13,20 @@
 
 <span class="type-tag">
 	{#if type.length === 1}
-		<span class="type" style:--skin-local-bg="var(--skin-{type[0]}-bg)">{type[0]}</span>
+		<span class="type" style:--skin-local-bg="var(--skin-{type[0]}-bg)">{PokemonType.name(type[0])}</span>
 	{:else if type.length === 2}
 		<span class="skew type left" style:--skin-local-bg="var(--skin-{type[0]}-bg)">
-			<span class="unskew">{type[0]}</span>
+			<span class="unskew">{PokemonType.name(type[0])}</span>
 		</span>
 		<span class="skew type right" style:--skin-local-bg="var(--skin-{type[1]}-bg)">
-			<span class="unskew">{type[1]}</span>
+			<span class="unskew">{PokemonType.name(type[1])}</span>
 		</span>
 	{:else}
 		<span class="skew type left" style:--skin-local-bg="var(--skin-{type[0]}-bg)">
-			<span class="unskew">{type[0]}</span>
+			<span class="unskew">{PokemonType.name(type[0])}</span>
 		</span>
 		<span class="skew type middle" style:--skin-local-bg="var(--skin-{type[1]}-bg)">
-			<span class="unskew">{type[1]}</span>
+			<span class="unskew">{PokemonType.name(type[1])}</span>
 		</span>
 		<button onclick={toggleShowAll} aria-expanded="{showAll}" aria-controls="additional-types-expansion" aria-label="More Types" title="More Types" class="skew type right" style:--skin-local-bg="var(--skin-varies-bg)">
 			<span class="unskew" style:width="1ch">{showAll ? "-" : "+"}</span>
@@ -34,7 +36,7 @@
 {#if type.length > 2 && showAll}
 	<span id="additional-types-expansion" class="font-sm cap pad-top pad-in align-right row">
 		{#each type.slice(2) as t}
-			<span class="comma" style:color="var(--skin-{t}-bg)">{t}</span>
+			<span class="comma" style:color="var(--skin-{t}-bg)">{PokemonType.name(t)}</span>
 		{/each}
 	</span>
 {/if}
