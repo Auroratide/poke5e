@@ -3,6 +3,12 @@
 	import { m } from "$lib/site/i18n/paraglide/messages"
 	import { getLocale, locales, localizeHref } from "$lib/site/i18n/paraglide/runtime"
 	import { Button } from "$lib/ui/elements"
+	import { LanguagePreference } from "./LanguagePreference"
+
+	const onChangeOfPreference = (locale: string | undefined) => () => {
+		LanguagePreference.set(locale)
+		return true
+	}
 </script>
 
 <div class="language-setting">
@@ -10,7 +16,7 @@
 	<ul role="listbox" tabindex="0" aria-labelledby="language-setting-label" aria-activedescendant="language-setting-option-{getLocale()}">
 		{#each locales as locale}
 			<li id="language-setting-option-{locale}" role="option" aria-selected="{getLocale() === locale}">
-				<Button href="{localizeHref(page.url.pathname, { locale })}" variant={getLocale() === locale ? "solid" : "subtle"} width="full" reloadOnLink>
+				<Button href="{localizeHref(page.url.pathname, { locale })}" on:click={onChangeOfPreference(locale)} variant={getLocale() === locale ? "solid" : "subtle"} width="full" reloadOnLink>
 					{m.languageName({}, { locale })}
 				</Button>
 			</li>

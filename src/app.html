@@ -24,6 +24,24 @@
 				document.documentElement.dataset.edition = beta ? edition : "2018"
 			}
 
+			function redirectToPreferredLanguage() {
+				// for key, see LanguagePreference.ts
+				const pref = localStorage.getItem("language-preference")
+				if (!pref) return
+
+				const baseLocale = "%baseLocale%"
+				const prefixed = %locales%.filter((l) => l !== baseLocale)
+
+				const path = location.pathname
+				const seg = path.split("/")[1]
+				const current = prefixed.includes(seg) ? seg : baseLocale
+				if (current === pref) return
+
+				const rest = current === baseLocale ? path : path.slice(seg.length + 1) || "/"
+				location.replace((pref === baseLocale ? "" : "/" + pref) + rest + location.search + location.hash)
+			}
+
+			redirectToPreferredLanguage()
 			setEdition()
 		</script>
 
