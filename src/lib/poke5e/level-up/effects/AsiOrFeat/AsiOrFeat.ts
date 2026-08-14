@@ -45,8 +45,7 @@ export class AsiOrFeatEffect extends LevelUpEffect<AsiOrFeatProps, AsiOrFeatPara
 
 		const originalCon = subject.attributes.con
 		const improvedAttributes = subject.attributes.improve(this.params.pointsSpent)
-		const differenceInConScore = improvedAttributes.con.score - originalCon.score
-		const newHp = HitPoints.improveViaConIncrease(subject.hp, subject.level, differenceInConScore)
+		subject.hp = HitPoints.improveViaConIncrease(subject.hp, subject.level, originalCon.score, improvedAttributes.con.score)
 
 		if (feat != null && this.params.featEffects != null) {
 			subject = this.params.featEffects?.onAcquire?.(subject) ?? subject
@@ -56,7 +55,7 @@ export class AsiOrFeatEffect extends LevelUpEffect<AsiOrFeatProps, AsiOrFeatPara
 			...subject,
 			attributes: improvedAttributes,
 			feats: feat != null ? [...subject.feats, feat] : subject.feats,
-			hp: newHp,
+			hp: subject.hp,
 		}
 	}
 }

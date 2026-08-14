@@ -19,6 +19,7 @@ import { TrainerResolveEffect } from "../effects/TrainerResolve"
 import { EvolutionForest } from "$lib/pokemon/evolution"
 import { stubEvolution } from "$lib/pokemon/evolution/test/stubs"
 import { PokemonFeats } from "$lib/poke5e/feats/PokemonFeats/2024"
+import { DndFeats } from "$lib/dnd/feats"
 
 describe("trainers", () => {
 	test("on any level up", () => {
@@ -175,6 +176,46 @@ describe("trainers", () => {
 			str: 0,
 			dex: 0,
 			con: 2, // con modifier will go up by 1
+			int: 0,
+			wis: 0,
+			cha: 0,
+		}
+
+		// when
+		const result = LevelUp.apply(trainer, effects)
+
+		// then
+		expect(result.hp.max).toEqual(43)
+	})
+
+	test("increasing CON at a breakpoint increases HP retroactively", () => {
+		// given
+		const trainer = stubTrainer({
+			level: new Level(7),
+			hp: {
+				current: 35,
+				max: 35,
+			},
+			attributes: new Attributes({
+				str: 10,
+				dex: 10,
+				con: 11,
+				int: 10,
+				wis: 10,
+				cha: 10,
+			}),
+		})
+
+		const effects = TrainerLevelTable.toLevel(new Level(8))(trainer)
+		const hpEffect = effects[1] as IncreaseHpEffect
+		const asiEffect = effects[2] as AsiOrFeatEffect
+
+		hpEffect.params.increaseAmount = 0
+
+		asiEffect.params.pointsSpent = {
+			str: 1,
+			dex: 0,
+			con: 1, // con modifier will go up by 1
 			int: 0,
 			wis: 0,
 			cha: 0,
@@ -360,6 +401,43 @@ describe("pokemon", () => {
 
 		// then
 		expect(result.ac).toEqualData(17)
+	})
+
+	test.only("tough feat", () => {
+		const pokemon = stubTrainerPokemon({
+			level: new Level(7),
+			hp: {
+				current: 45,
+				max: 45,
+			},
+			attributes: stubAttributes({
+				con: 10,
+			}),
+		})
+
+		const species = stubPokemonSpecies()
+		const evolution = new EvolutionForest([])
+
+		const effects = PokemonLevelTable.toLevel(new Level(8))(pokemon, species, evolution)
+		const asiEffect = effects[2] as AsiOrFeatEffect
+
+		const toughFeat = DndFeats.find((it) => it.name === "Tough")
+		asiEffect.params.feat = {
+			id: "",
+			name: toughFeat.name,
+			description: "",
+			isCustom: false,
+		}
+		asiEffect.params.featEffects = toughFeat.effects
+
+		// when
+		const result = LevelUp.apply(pokemon, effects)
+
+		// then
+		expect(result.hp).toEqual({
+			current: 61,
+			max: 61,
+		})
 	})
 
 	test("asi for pokemon with 3 stages", () => {

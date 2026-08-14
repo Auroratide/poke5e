@@ -10,7 +10,7 @@ describe("improveViaConIncrease", () => {
 			max: 20,
 		}
 
-		const result = HitPoints.improveViaConIncrease(hp, new Level(4), 0)
+		const result = HitPoints.improveViaConIncrease(hp, new Level(4), 10, 10)
 
 		expect(result).toEqual({
 			current: 12,
@@ -24,11 +24,25 @@ describe("improveViaConIncrease", () => {
 			max: 20,
 		}
 
-		const result = HitPoints.improveViaConIncrease(hp, new Level(4), 1)
+		const result = HitPoints.improveViaConIncrease(hp, new Level(4), 10, 11)
 
 		expect(result).toEqual({
 			current: 12,
 			max: 20,
+		})
+	})
+
+	test("con increases by 1 at breakpoint", () => {
+		const hp = {
+			current: 12,
+			max: 20,
+		}
+
+		const result = HitPoints.improveViaConIncrease(hp, new Level(4), 11, 12)
+
+		expect(result).toEqual({
+			current: 16,
+			max: 24,
 		})
 	})
 
@@ -38,7 +52,7 @@ describe("improveViaConIncrease", () => {
 			max: 20,
 		}
 
-		const result = HitPoints.improveViaConIncrease(hp, new Level(4), 2)
+		const result = HitPoints.improveViaConIncrease(hp, new Level(4), 10, 12)
 
 		expect(result).toEqual({
 			current: 16,
@@ -52,7 +66,7 @@ describe("improveViaConIncrease", () => {
 			max: 20,
 		}
 
-		const result = HitPoints.improveViaConIncrease(hp, new Level(4), 4)
+		const result = HitPoints.improveViaConIncrease(hp, new Level(4), 10, 14)
 
 		expect(result).toEqual({
 			current: 20,
@@ -66,7 +80,7 @@ describe("improveViaConIncrease", () => {
 			max: 20,
 		}
 
-		const result = HitPoints.improveViaConIncrease(hp, new Level(4), -2)
+		const result = HitPoints.improveViaConIncrease(hp, new Level(4), 10, 8)
 
 		expect(result).toEqual({
 			current: 12,

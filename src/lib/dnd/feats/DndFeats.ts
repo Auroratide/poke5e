@@ -1,3 +1,4 @@
+import { Resource } from "$lib/poke5e/resource"
 import type { BaseCharacter } from "../BaseCharacter"
 import type { Feat } from "./Feat"
 import { level, oneOfAttributes } from "./Prerequisite"
@@ -344,10 +345,7 @@ export const DndFeats: Feat[] = [ {
 	description: seePhb(202),
 	effects: {
 		onAcquire: <T extends BaseCharacter>(subject: T): T => {
-			subject.hp = {
-				current: subject.hp.current + subject.level.data * 2,
-				max: subject.hp.max + subject.level.data * 2,
-			}
+			subject.hp = Resource.adjustMax(subject.hp, subject.hp.max + subject.level.data * 2)
 
 			return subject
 		},
