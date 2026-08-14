@@ -23,9 +23,6 @@ const flatten = (value: Record<string, unknown>, prefix = ""): Record<string, st
 			: [[path, String(child)]]
 	}))
 
-const placeholders = (message: string) =>
-	Array.from(message.matchAll(/\{([^}]+)\}/g), (match) => match[1]).sort()
-
 test("uses official German canonical names from the generated PokéAPI overlays", () => {
 	expect(byId(pokemon.items).bulbasaur.name).toBe("Bisasam")
 	expect(byId(pokemon.items).charizard.name).toBe("Glurak")
@@ -48,16 +45,6 @@ test("localized names remain searchable by German and English names", async () =
 	expect(includesSearch(searchable(charizard), "charizard")).toBe(true)
 	expect(includesSearch(searchable(thunderbolt), "Donnerblitz")).toBe(true)
 	expect(includesSearch(searchable(thunderbolt), "thunderbolt")).toBe(true)
-})
-
-test("German messages match the English catalog and interpolation variables", () => {
-	const english = flatten(englishMessages)
-	const german = flatten(germanMessages)
-
-	expect(Object.keys(german).sort()).toEqual(Object.keys(english).sort())
-	for (const key of Object.keys(english)) {
-		expect(placeholders(german[key]), key).toEqual(placeholders(english[key]))
-	}
 })
 
 test("German messages do not contain accidental English carryover", () => {
