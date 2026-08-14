@@ -14,6 +14,17 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.8",
+		description: [
+			"Widened the layout of the website so larger screens can take advantage of the space.",
+			`<strong>Resources</strong>: Added a new <a href="${Url.resources()}">Resources</a> section to the menu, which hosts externally created tools and documents.`,
+			"<strong>Pokémon</strong>: Adjust the ASI gained from evolving Mime Jr. to Galarian Mr. Mime (8 → 7), and Applin to Dipplin (14 → 13), in order to account for ASI not gained from leveling up due to number of evolution stages in their respective lines.",
+			"<strong>Language</strong>: Language preference is now saved, so subsequent site visits default to language of choice.",
+			"<strong>Language</strong>: Pokemon types are now translated.",
+			"<strong>Language</strong>: The beginning of a German translation added, mostly for terms.",
+			"<strong>Bugfix</strong>: Increasing CON on evolution now appropriately increases HP.",
+		],
+	}, {
 		name: "v1.12.7",
 		description: [
 			"<strong>Bugfix</strong>: Fix issue where leveling up a pokemon was sometimes duplicating its ASI to pokemon of the same species.",
