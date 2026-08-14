@@ -1,12 +1,13 @@
 <script lang="ts">
+	import { m } from "$lib/site/i18n"
 	import { ExternalIcon } from "$lib/ui/icons"
 	import { StaticPage, Title } from "$lib/ui/layout"
 	import { Resources } from "./Resource"
 	import ResourceCard from "./ResourceCard.svelte"
 </script>
 
-<Title value="Resources" />
-<StaticPage title="Resources" subtitle="This is a list of tools, documents, and supplements shared by members of the Pokémon 5e community!" theme="orange">
+<Title value="{m.resources()}" />
+<StaticPage title="{m.resources()}" subtitle="{m.resourcesDescription()}" theme="orange">
 	{#snippet icon()}
 		<ExternalIcon />
 	{/snippet}

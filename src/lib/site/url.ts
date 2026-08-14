@@ -68,6 +68,7 @@ export const Url = {
 		transformations: () => localizeUrl(resolve("/reference/pokemon-transformations")).pathname,
 		weather: () => localizeUrl(resolve("/reference/weather")).pathname,
 	},
+	resources: () => localizeUrl(resolve("/resources")).pathname,
 	encounterTool: () => localizeUrl(resolve("/encounter-tool")).pathname,
 	settings: () => localizeUrl(resolve("/settings")).pathname,
 	betaTesting: () => localizeUrl(resolve("/beta-testing")).pathname,

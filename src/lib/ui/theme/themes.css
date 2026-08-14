@@ -59,7 +59,7 @@
 	--theme-dark: oklch(0.6581 0.202 31.03);
 	--theme-text: oklch(0.47 0.132 31.03);
 	--theme-light: oklch(0.7985 0.1564 37.66);
-	--theme-icon: oklch(17.54% 0.01102 39.179);
+	--theme-icon: oklch(0.7085 0.1764 37.66);
 }
 
 .theme-pink {
@@ -138,7 +138,7 @@
 	--theme-dark: oklch(0.25 0.08 31.03);
 	--theme-text: oklch(0.70 0.11 31.03);
 	--theme-light: oklch(0.7985 0.1564 37.66);
-	--theme-icon: oklch(0.7085 0.1764 37.66);
+	--theme-icon: oklch(0.67 0.1764 37.66);
 }
 
 .dark-mode .theme-pink {

@@ -271,6 +271,8 @@
 	"regionsInstructions": "Native Region is the single region this Pokémon is from. All Regions includes other regions this pokémon has been found.",
 	"tokenColor": "Token Color",
 	"advanced": "Advanced",
+	"resources": "Resources",
+	"resourcesDescription": "This is a list of tools, documents, and supplements shared by members of the Pokémon 5e community!",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},

@@ -33,6 +33,7 @@
 		PokeballIcon,
 		BackupIcon,
 		VsIcon,
+		ExternalIcon,
 	} from "$lib/ui/icons"
 	import { page } from "$app/stores"
 	import type { Component, Snippet } from "svelte"
@@ -134,6 +135,12 @@
 		name: m["reference.title"](),
 		color: "navy",
 		icon: PencilNotesIcon,
+	}, {
+		id: "resources",
+		href: Url.resources(),
+		name: m.resources(),
+		color: "orange",
+		icon: ExternalIcon,
 	}, {
 		id: "fakemon",
 		href: Url.fakemon(),
