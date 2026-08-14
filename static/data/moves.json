@@ -19634,7 +19634,7 @@
 			"time": "1 action",
 			"pp": 10,
 			"duration": "instantaneous",
-			"range": "50ft",
+			"range": "Self (50ft radius)",
 			"description": [
 				"While you are asleep, you may activate this move to create a harsh noise that damages all creatures within range for 1d8 + MOVE normal damage."
 			],
