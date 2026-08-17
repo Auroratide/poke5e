@@ -1,5 +1,6 @@
 import { browser } from "$app/environment"
 import { writable } from "svelte/store"
+import { FeatureToggles } from "../FeatureToggles"
 
 export const Editions = ["2018", "2024"] as const
 export type RulesVersion = "2018" | "2024"
@@ -19,7 +20,9 @@ if (browser) {
 		localStorage.setItem(RULES_VERSION_STORAGE_KEY, value)
 	})
 
-	rulesVersion.subscribe((value) => {
-		document.documentElement.dataset.edition = value
-	})
+	if (FeatureToggles.PreviewUpdatedMoves()) {
+		rulesVersion.subscribe((value) => {
+			document.documentElement.dataset.edition = value
+		})
+	}
 }

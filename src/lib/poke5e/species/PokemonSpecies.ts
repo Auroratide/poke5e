@@ -6,19 +6,19 @@ import { HitDice } from "$lib/dnd/hit-dice"
 import { Speeds } from "$lib/dnd/movement"
 import { Senses } from "$lib/dnd/senses"
 import { SkillRanks } from "$lib/dnd/skills"
+import { SpeciesForms } from "$lib/poke5e/forms"
+import type { Habitat } from "$lib/poke5e/habitat"
 import { AbilityPool } from "$lib/pokemon/ability"
 import { PokemonType } from "$lib/pokemon/types"
 import type { MarkdownString } from "$lib/ui/rendering/markdown"
+import { includesSearch } from "$lib/utils/string"
 import { EggGroup } from "../../pokemon/egg-group"
 import { GenderRatio } from "../../pokemon/gender"
-import { SpeciesMedia, type UploadedMedia } from "./media"
 import { MovePool } from "../../pokemon/move-pool"
 import { SpeciesRating } from "../sr"
+import { SpeciesMedia, type UploadedMedia } from "./media"
 import type { SinglePokemonJsonResponse } from "./PokemonJsonResponse"
 import { SpeciesIdentifier } from "./SpeciesIdentifier"
-import { SpeciesForms } from "$lib/poke5e/forms"
-import type { Habitat } from "$lib/poke5e/habitat"
-import { includesSearch } from "$lib/utils/string"
 
 export class PokemonSpecies extends DataClass<{
 	id: Data<SpeciesIdentifier>,
@@ -181,4 +181,98 @@ export class PokemonSpecies extends DataClass<{
 			},
 		})
 	}
+
+	// static async fromJson2(it: PokemonJson): Promise<PokemonSpecies> {
+	// 	return new PokemonSpecies({
+	// 		id: SpeciesIdentifier.fromSpeciesName(it.id).data,
+	// 		name: it.name,
+	// 		// aliases: it.aliases,
+	// 		number: it.number,
+	// 		type: it.type,
+	// 		size: it.size,
+	// 		sr: it.sr,
+	// 		minLevel: it.minLevel,
+	// 		eggGroups: it.eggGroup,
+	// 		gender: it.gender,
+	// 		description: it.description,
+	// 		ac: it.ac,
+	// 		hp: it.hp,
+	// 		hitDice: it.hitDice,
+	// 		speed: DistanceSet.fromList(Speeds, it.speed).data,
+	// 		senses: DistanceSet.fromList(Senses, it.senses).data,
+	// 		attributes: it.attributes,
+	// 		skills: SkillRanks.fromList(it.skills).data,
+	// 		saves: it.savingThrows,
+	// 		abilities: (await AbilityPool.fromList(it.abilities)).data,
+	// 		moves: {
+	// 			...it.moves,
+	// 			start: it.moves.start ?? [],
+	// 			level2: it.moves.level2 ?? [],
+	// 			level6: it.moves.level6 ?? [],
+	// 			level10: it.moves.level10 ?? [],
+	// 			level14: it.moves.level14 ?? [],
+	// 			level18: it.moves.level18 ?? [],
+	// 			egg: it.moves.egg ?? [],
+	// 			tm: it.moves.tm ?? [],
+	// 		},
+	// 		// forms: it.forms,
+	// 		media: {
+	// 			values: {
+	// 				normalPortrait: {
+	// 					name: it.media.main,
+	// 					href: it.media.main,
+	// 				},
+	// 				normalSprite: it.media.sprite ? {
+	// 					name: it.media.sprite,
+	// 					href: it.media.sprite,
+	// 				} : undefined,
+	// 				shinyPortrait: it.media.mainShiny ? {
+	// 					name: it.media.mainShiny,
+	// 					href: it.media.mainShiny,
+	// 				} : undefined,
+	// 				shinySprite: it.media.spriteShiny ? {
+	// 					name: it.media.spriteShiny,
+	// 					href: it.media.spriteShiny,
+	// 				} : undefined,
+	// 				normalPortraitF: it.media.mainF ? {
+	// 					name: it.media.mainF,
+	// 					href: it.media.mainF,
+	// 				} : undefined,
+	// 				normalSpriteF: it.media.spriteF ? {
+	// 					name: it.media.spriteF,
+	// 					href: it.media.spriteF,
+	// 				} : undefined,
+	// 				shinyPortraitF: it.media.mainShinyF ? {
+	// 					name: it.media.mainShinyF,
+	// 					href: it.media.mainShinyF,
+	// 				} : undefined,
+	// 				shinySpriteF: it.media.spriteShinyF ? {
+	// 					name: it.media.spriteShinyF,
+	// 					href: it.media.spriteShinyF,
+	// 				} : undefined,
+	// 			},
+	// 			customization: {
+	// 				shinyHue: 0,
+	// 			},
+	// 			attribution: it.media.attribution ? {
+	// 				href: it.media.attribution,
+	// 				portrait: {
+	// 					type: "other",
+	// 					name: "",
+	// 					href: "",
+	// 				},
+	// 				sprite: {
+	// 					type: "other",
+	// 					name: "",
+	// 					href: "",
+	// 				},
+	// 			} : undefined,
+	// 		},
+	// 		habitat: {
+	// 			biomes: it.habitat?.biomes ?? [],
+	// 			nativeRegion: it.habitat?.nativeRegion ?? "",
+	// 			regions: it.habitat?.regions ?? [],
+	// 		},
+	// 	})
+	// }
 }

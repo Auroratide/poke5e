@@ -1,3 +1,35 @@
 {
-	"values": []
+	"values": [
+		{
+			"id": "bulbasaur",
+			"moves": {
+				"start": [
+					"tackle",
+					"growl"
+				],
+				"level2": [
+					"vine-whip",
+					"leech-seed"
+				],
+				"level6": [
+					"poison-powder",
+					"sleep-powder",
+					"take-down",
+					"razor-leaf"
+				],
+				"level10": [
+					"sweet-scent",
+					"growth",
+					"double-edge"
+				],
+				"level14": [
+					"worry-seed",
+					"synthesis"
+				],
+				"level18": [
+					"seed-bomb"
+				]
+			}
+		}
+	]
 }

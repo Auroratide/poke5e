@@ -19,6 +19,14 @@ export const allCanonSpecies = cachedReadable<PokemonSpecies[] | undefined>(unde
 	}
 })
 
+// const toSpecies = (json: PokemonListJson) =>
+// 	Promise.all(json.values.map(PokemonSpecies.fromJson2))
+
+// export const allCanonSpecies2 = srdStore<PokemonSpecies[]>((client) => {
+// 	return client.pokemon.all()
+// 		.then(toSpecies)
+// })
+
 export type StoredSpecies = Record<Data<SpeciesIdentifier>, SingleStoredSpecies>
 
 export type SingleStoredSpecies = {
@@ -60,6 +68,7 @@ function createStore(): SpeciesStore {
 		},
 		canonList: () => {
 			return derived(allCanonSpecies, (species) => species?.filter((it) => !it.wasNonCanonNonFakemon()))
+			// return derived(allCanonSpecies2, (species) => species.result?.filter((it) => !it.wasNonCanonNonFakemon()))
 		},
 		completeList: async () => {
 			const fakemon = await fakemonStore.all().catch(() => emptyFakemonListStore())
