@@ -30,7 +30,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "accelerock",
@@ -61,7 +62,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "acid",
@@ -95,7 +97,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "acid-armor",
@@ -129,7 +132,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "acid-spray",
@@ -171,7 +175,10 @@
 			"tm": {
 				"id": 113,
 				"cost": 3600
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "acrobatics",
@@ -206,7 +213,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "acupressure",
@@ -252,7 +260,8 @@
 						]
 					]
 				}
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "aerial-ace",
@@ -284,7 +293,10 @@
 				"type": [
 					"flying"
 				]
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "aeroblast",
@@ -319,7 +331,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "after-you",
@@ -332,7 +347,8 @@
 			"range": "50ft",
 			"description": [
 				"As a bonus action, choose a creature in range that has not yet taken its turn in the current round. The target must immediately take its turn now, and return to normal initiative order in the next round."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "agility",
@@ -349,7 +365,8 @@
 			"tm": {
 				"id": 105,
 				"cost": 8700
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "air-cutter",
@@ -384,7 +401,11 @@
 			"tm": {
 				"id": 129,
 				"cost": 2500
-			}
+			},
+			"categories": [
+				"slicing",
+				"wind"
+			]
 		},
 		{
 			"id": "air-slash",
@@ -419,7 +440,10 @@
 			"tm": {
 				"id": 140,
 				"cost": 2500
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "alluring-voice",
@@ -461,7 +485,10 @@
 			"tm": {
 				"id": 254,
 				"cost": 4900
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "ally-switch",
@@ -474,7 +501,8 @@
 			"range": "50ft",
 			"description": [
 				"You use a strange psychic power to teleport yourself and one willing creature in range, switching places on the battlefield."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "amnesia",
@@ -491,7 +519,8 @@
 			"tm": {
 				"id": 177,
 				"cost": 3600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "anchor-shot",
@@ -529,7 +558,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "ancient-power",
@@ -561,7 +591,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "apple-acid",
@@ -596,7 +627,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "aqua-cutter",
@@ -628,7 +660,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "aqua-jet",
@@ -659,7 +694,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "aqua-ring",
@@ -672,7 +708,8 @@
 			"range": "self",
 			"description": [
 				"You surround yourself with a veil of healing water. At the end of each of your turns, as long as you hold concentration, regain a number of hit points equal to your proficiency bonus."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "aqua-step",
@@ -704,7 +741,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"dance"
+			]
 		},
 		{
 			"id": "aqua-tail",
@@ -736,7 +776,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "arm-thrust",
@@ -768,7 +809,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"multistrike"
+			]
 		},
 		{
 			"id": "armor-cannon",
@@ -800,7 +844,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "aromatherapy",
@@ -813,7 +858,8 @@
 			"range": "self (10ft radius)",
 			"description": [
 				"You release a pleasant aroma that empowers your allies. All allies within 10 feet of you are cured of all negative status ailments."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "aromatic-mist",
@@ -827,7 +873,8 @@
 			"description": [
 				"You release an aroma that inspires your allies. When you activate this move, you and any ally within 5 feet of you may add a d4 to any saving throw they make for the duration."
 			],
-			"higherLevels": "The bonus dice roll for this move changes to a 1d6 at level 10"
+			"higherLevels": "The bonus dice roll for this move changes to a 1d6 at level 10",
+			"categories": []
 		},
 		{
 			"id": "assist",
@@ -840,7 +887,8 @@
 			"range": "varies",
 			"description": [
 				"You call upon the help of another active creature in your party. When activating this Move, another creature may immediately take an action in place of your own, if you have not already taken an action this turn."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "assurance",
@@ -872,7 +920,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "astonish",
@@ -907,7 +956,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "astral-barrage",
@@ -942,7 +992,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "attack-order",
@@ -974,7 +1025,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "attract",
@@ -999,7 +1051,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "aura-sphere",
@@ -1032,7 +1085,11 @@
 			"tm": {
 				"id": 167,
 				"cost": 9100
-			}
+			},
+			"categories": [
+				"ballistic",
+				"pulse"
+			]
 		},
 		{
 			"id": "aura-wheel",
@@ -1064,7 +1121,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "aurora-beam",
@@ -1096,7 +1154,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "aurora-veil",
@@ -1113,7 +1172,8 @@
 			"tm": {
 				"id": 70,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "autotomize",
@@ -1126,7 +1186,8 @@
 			"range": "self",
 			"description": [
 				"You shed away part of your body to make yourself lighter and increase your speed. For the duration, your speed increases by 10 feet. This move may be stacked to a maximum speed increase of 30 feet."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "avalanche",
@@ -1161,7 +1222,8 @@
 			"tm": {
 				"id": 132,
 				"cost": 6200
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "axe-kick",
@@ -1200,7 +1262,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "baby-doll-eyes",
@@ -1213,7 +1276,8 @@
 			"range": "30ft",
 			"description": [
 				"You quickly widen your eyes in an attempt to charm a creature, decreasing their will to fight. When you or an ally in range are targeted by a Move that requires an attack roll, you may use a reaction to impose disadvantage on the roll."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "baneful-bunker",
@@ -1229,7 +1293,8 @@
 			],
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "barb-barrage",
@@ -1263,7 +1328,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "barrage",
@@ -1295,7 +1361,11 @@
 				"type": [
 					"normal"
 				]
-			}
+			},
+			"categories": [
+				"ballistic",
+				"multistrike"
+			]
 		},
 		{
 			"id": "barrier",
@@ -1308,7 +1378,8 @@
 			"range": "self (5ft radius)",
 			"description": [
 				"You create a transparent shield of psychic energy. While active, the barrier grants +2 to AC for you and any companions within 5 feet of you for the duration."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "baton-pass",
@@ -1325,7 +1396,8 @@
 			"tm": {
 				"id": 180,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "beak-blast",
@@ -1357,7 +1429,10 @@
 				"type": [
 					"flying"
 				]
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "beat-up",
@@ -1387,7 +1462,8 @@
 				"type": [
 					"dark"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "behemoth-bash",
@@ -1418,7 +1494,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "behemoth-blade",
@@ -1449,7 +1526,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "belch",
@@ -1484,7 +1564,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "belly-drum",
@@ -1497,7 +1578,8 @@
 			"range": "self",
 			"description": [
 				"You sacrifice health for attack. When using this move, decrease your current HP by half your maximum, but increase your Strength score by 10 while you remain in battle. The effect ends if your current HP rises above half your maximum."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "bestow",
@@ -1510,7 +1592,8 @@
 			"range": "30ft",
 			"description": [
 				"As a bonus action, you may pass your held item to a willing creature in range, if the target is not currently holding an item."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "bide",
@@ -1530,7 +1613,8 @@
 			"higherLevels": "You may continue to stockpile damage for 2 turns at level 10 and above.",
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bind",
@@ -1567,7 +1651,8 @@
 				"type": [
 					"normal"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bite",
@@ -1602,7 +1687,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"biting"
+			]
 		},
 		{
 			"id": "bitter-blade",
@@ -1634,7 +1722,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "bitter-malice",
@@ -1672,7 +1763,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "blast-burn",
@@ -1711,7 +1803,8 @@
 			"tm": {
 				"id": 193,
 				"cost": 14200
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "blaze-kick",
@@ -1743,7 +1836,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bleakwind-storm",
@@ -1780,7 +1874,10 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "blizzard",
@@ -1819,7 +1916,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "block",
@@ -1832,7 +1932,8 @@
 			"range": "50ft",
 			"description": [
 				"If a creature within range attempts to flee or switch out, you may use your reaction to stop it dead in its tracks, keeping this from happening."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "blood-moon",
@@ -1866,7 +1967,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "blue-flare",
@@ -1901,7 +2003,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "body-press",
@@ -1936,7 +2039,8 @@
 			"tm": {
 				"id": 151,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "body-slam",
@@ -1977,7 +2081,8 @@
 			"tm": {
 				"id": 141,
 				"cost": 6200
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bolt-beak",
@@ -2009,7 +2114,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bolt-strike",
@@ -2044,7 +2150,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bone-club",
@@ -2076,7 +2183,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bone-rush",
@@ -2107,7 +2215,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"multistrike"
+			]
 		},
 		{
 			"id": "bonemerang",
@@ -2138,7 +2249,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "boomburst",
@@ -2173,7 +2285,10 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "bounce",
@@ -2204,7 +2319,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "branch-poke",
@@ -2236,7 +2352,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "brave-bird",
@@ -2272,7 +2389,8 @@
 			"tm": {
 				"id": 200,
 				"cost": 12500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "breaking-swipe",
@@ -2311,7 +2429,8 @@
 			"tm": {
 				"id": 249,
 				"cost": 9100
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "brick-break",
@@ -2346,7 +2465,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "brine",
@@ -2378,7 +2498,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "brutal-swing",
@@ -2416,7 +2537,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bubble",
@@ -2447,7 +2569,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bubble-beam",
@@ -2479,7 +2602,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bug-bite",
@@ -2515,7 +2639,8 @@
 			"tm": {
 				"id": 212,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bug-buzz",
@@ -2554,7 +2679,10 @@
 			"tm": {
 				"id": 199,
 				"cost": 4900
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "bulk-up",
@@ -2571,7 +2699,8 @@
 			"tm": {
 				"id": 8,
 				"cost": 6000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bulldoze",
@@ -2609,7 +2738,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "bullet-punch",
@@ -2641,7 +2771,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "bullet-seed",
@@ -2676,7 +2809,11 @@
 			"tm": {
 				"id": 136,
 				"cost": 2500
-			}
+			},
+			"categories": [
+				"ballistic",
+				"multistrike"
+			]
 		},
 		{
 			"id": "burn-up",
@@ -2711,7 +2848,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "burning-bulwark",
@@ -2743,7 +2881,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "burning-jealousy",
@@ -2783,7 +2922,8 @@
 			"tm": {
 				"id": 224,
 				"cost": 9100
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "calm-mind",
@@ -2800,7 +2940,8 @@
 			"tm": {
 				"id": 4,
 				"cost": 5500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "camouflage",
@@ -2866,7 +3007,8 @@
 						]
 					]
 				}
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "captivate",
@@ -2888,7 +3030,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "ceaseless-edge",
@@ -2926,7 +3069,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "charge",
@@ -2943,7 +3089,8 @@
 			"tm": {
 				"id": 206,
 				"cost": 2700
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "charge-beam",
@@ -2979,7 +3126,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "charm",
@@ -3006,7 +3154,8 @@
 			"tm": {
 				"id": 103,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "chatter",
@@ -3038,7 +3187,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "chilling-water",
@@ -3081,7 +3233,8 @@
 			"tm": {
 				"id": 119,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "chilly-reception",
@@ -3097,7 +3250,8 @@
 			"range": "self (60ft radius)",
 			"description": [
 				"You tell a chillingly bad joke. The weather is changed to Snow for 5 rounds. After this move is activated, the trainer must switch out the user as a free action (before they get booed off the stage!)."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "chip-away",
@@ -3129,7 +3283,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "chloroblast",
@@ -3163,7 +3318,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "circle-throw",
@@ -3194,7 +3350,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "clamp",
@@ -3231,7 +3388,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "clanging-scales",
@@ -3266,7 +3424,10 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "clangorous-soul",
@@ -3282,6 +3443,10 @@
 			"range": "self",
 			"description": [
 				"You clap your scaled hands together to strengthen yourself. Take 3d6 typeless damage, and in exchange gain +1 to attack rolls, +1 to AC, and +1 to damage rolls for the remainder of the encounter or until switched out of combat. This can be stacked up to five times for a total bonus of +5 each."
+			],
+			"categories": [
+				"dance",
+				"sound"
 			]
 		},
 		{
@@ -3314,7 +3479,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "close-combat",
@@ -3349,7 +3515,8 @@
 			"tm": {
 				"id": 202,
 				"cost": 12500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "coaching",
@@ -3368,7 +3535,8 @@
 			"tm": {
 				"id": 241,
 				"cost": 3000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "coil",
@@ -3381,7 +3549,8 @@
 			"range": "self",
 			"description": [
 				"You coil up and concentrate your power. For the duration, gain +1 to your attack rolls, damage rolls, and AC."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "collision-course",
@@ -3420,7 +3589,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "comet-punch",
@@ -3452,7 +3622,11 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"multistrike",
+				"punch"
+			]
 		},
 		{
 			"id": "confide",
@@ -3478,7 +3652,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "confuse-ray",
@@ -3501,7 +3678,8 @@
 			"tm": {
 				"id": 116,
 				"cost": 3600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "confusion",
@@ -3536,7 +3714,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "constrict",
@@ -3573,7 +3752,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "conversion",
@@ -3586,7 +3766,8 @@
 			"range": "self",
 			"description": [
 				"Until the beginning of your next turn, take on a new type for resistances/vulnerabilities/immunities equal to one of the types of a move you currently know."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "conversion-2",
@@ -3599,7 +3780,8 @@
 			"range": "self",
 			"description": [
 				"If you took damage from an attack since the end of your last turn, you may use a bonus action to change your type to any type that is resistant or immune to the type of move used against you. This effect lasts until the beginning of your next turn."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "copycat",
@@ -3640,7 +3822,8 @@
 						]
 					]
 				}
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "core-enforcer",
@@ -3678,7 +3861,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "corrosive-gas",
@@ -3701,7 +3885,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "comeuppance",
@@ -3733,7 +3918,8 @@
 				"type": [
 					"dark"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "cosmic-power",
@@ -3746,7 +3932,8 @@
 			"range": "self",
 			"description": [
 				"You call upon a mystic force to come to your aid. For the duration, you have advantage on all saving throws."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "cotton-guard",
@@ -3759,7 +3946,8 @@
 			"range": "self",
 			"description": [
 				"You protect yourself by wrapping your body up in thick, soft cotton. For the duration, boost your AC by +2."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "cotton-spore",
@@ -3781,7 +3969,10 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"powder"
+			]
 		},
 		{
 			"id": "counter",
@@ -3813,7 +4004,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "court-change",
@@ -3838,7 +4030,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "covet",
@@ -3869,7 +4062,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "crabhammer",
@@ -3900,7 +4094,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "crafty-shield",
@@ -3913,7 +4108,8 @@
 			"range": "5ft",
 			"description": [
 				"You summon forth a mysterious power that blocks an incoming status condition. When you or an ally within 5 feet of you are subject to a status condition from a move, you may use your reaction to nullify the condition."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "cross-chop",
@@ -3945,7 +4141,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "cross-poison",
@@ -3976,7 +4173,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "crunch",
@@ -4012,7 +4212,10 @@
 			"tm": {
 				"id": 163,
 				"cost": 9100
-			}
+			},
+			"categories": [
+				"biting"
+			]
 		},
 		{
 			"id": "crush-claw",
@@ -4043,7 +4246,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "crush-grip",
@@ -4074,7 +4278,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "curse",
@@ -4115,7 +4320,8 @@
 			"tm": {
 				"id": 251,
 				"cost": 2700
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "cut",
@@ -4147,7 +4353,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "dark-pulse",
@@ -4183,7 +4392,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"pulse"
+			]
 		},
 		{
 			"id": "dark-void",
@@ -4217,7 +4429,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "darkest-lariat",
@@ -4249,7 +4462,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dazzling-gleam",
@@ -4288,7 +4502,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "decorate",
@@ -4301,7 +4516,8 @@
 			"range": "melee",
 			"description": [
 				"You decorate the target. The target has advantage on attack rolls. When the target takes damage, it must make a CON save. The DC equals 10 or half the damage taken (round down), whichever number is higher, up to a maximum DC of 30. On failure, the decorate effect ends immediately."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "defend-order",
@@ -4315,7 +4531,8 @@
 			"description": [
 				"You summon forth your underlings to form a natural shield in front of you. For the duration, as long as you keep your concentration, gain +1 to your AC."
 			],
-			"higherLevels": "The AC boost for this move changes to +2 at level 5, +3 at level 10, and +4 at level 17."
+			"higherLevels": "The AC boost for this move changes to +2 at level 5, +3 at level 10, and +4 at level 17.",
+			"categories": []
 		},
 		{
 			"id": "defense-curl",
@@ -4328,7 +4545,8 @@
 			"range": "self",
 			"description": [
 				"You curl up into a tight ball, increasing your defensive stance. Until your next turn, you gain + 4 to your AC and have resistance to normal attacks."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "defog",
@@ -4341,7 +4559,8 @@
 			"range": "self (50ft radius)",
 			"description": [
 				"You summon a swift, magical breeze in a 50 foot radius, centered on you, that sweeps away foggy weather and obstacles. When activating this move, any area of effect moves that are still active end immediately (Examples: Misty Terrain, Fog Cloud, Smog, etc.)."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "destiny-bond",
@@ -4363,7 +4582,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "detect",
@@ -4376,7 +4596,8 @@
 			"range": "self",
 			"description": [
 				"You sense incoming danger and are able to quickly avoid it. When you are the recipient of the damage and/or effects of a move, you may automatically avoid the damage/effects on the first instance of this reaction. On future instances of this move in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful. This reaction may not be used to guard against the damage/effects that result from a natural 20 attack roll."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "diamond-storm",
@@ -4402,7 +4623,8 @@
 				"type": [
 					"rock"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dig",
@@ -4438,7 +4660,8 @@
 			"tm": {
 				"id": 135,
 				"cost": 3600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dire-claw",
@@ -4497,7 +4720,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "disable",
@@ -4519,7 +4743,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "disarming-voice",
@@ -4554,7 +4779,10 @@
 			"tm": {
 				"id": 117,
 				"cost": 3600
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "discharge",
@@ -4588,7 +4816,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dive",
@@ -4619,7 +4848,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dizzy-punch",
@@ -4651,7 +4881,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "doodle",
@@ -4664,7 +4897,8 @@
 			"range": "30ft",
 			"description": [
 				"You capture the very essence of the target in a sketch. Choose a target in range. You and each ally within 5ft of you change one of your abilities to an ability on the target. If you know the target's abilities, you may choose which ability to copy; otherwise, you obtain a random ability from the target."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "doom-desire",
@@ -4693,7 +4927,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "double-hit",
@@ -4725,7 +4960,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "double-iron-bash",
@@ -4756,7 +4992,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "double-kick",
@@ -4788,7 +5027,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "double-slap",
@@ -4821,7 +5061,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"multistrike"
+			]
 		},
 		{
 			"id": "double-team",
@@ -4843,7 +5086,8 @@
 			"tm": {
 				"id": 32,
 				"cost": 7000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "double-edge",
@@ -4879,7 +5123,8 @@
 			"tm": {
 				"id": 232,
 				"cost": 3000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "double-shock",
@@ -4912,7 +5157,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "draco-meteor",
@@ -4950,7 +5196,8 @@
 			"tm": {
 				"id": 203,
 				"cost": 14200
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "draco-power",
@@ -4982,7 +5229,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dragon-ascent",
@@ -5020,7 +5268,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dragon-breath",
@@ -5055,7 +5304,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dragon-cheer",
@@ -5074,7 +5324,8 @@
 			"tm": {
 				"id": 253,
 				"cost": 3600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dragon-claw",
@@ -5109,7 +5360,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dragon-dance",
@@ -5126,7 +5378,10 @@
 			"tm": {
 				"id": 158,
 				"cost": 6600
-			}
+			},
+			"categories": [
+				"dance"
+			]
 		},
 		{
 			"id": "dragon-darts",
@@ -5158,7 +5413,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dragon-hammer",
@@ -5195,7 +5451,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dragon-energy",
@@ -5226,7 +5483,8 @@
 				"type": [
 					"dragon"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dragon-pulse",
@@ -5261,7 +5519,10 @@
 			"tm": {
 				"id": 169,
 				"cost": 9100
-			}
+			},
+			"categories": [
+				"pulse"
+			]
 		},
 		{
 			"id": "dragon-rage",
@@ -5295,7 +5556,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dragon-rush",
@@ -5326,7 +5588,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dragon-tail",
@@ -5361,7 +5624,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "drain-punch",
@@ -5397,7 +5661,10 @@
 			"tm": {
 				"id": 147,
 				"cost": 2500
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "draining-kiss",
@@ -5433,7 +5700,8 @@
 			"tm": {
 				"id": 128,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dream-eater",
@@ -5465,7 +5733,8 @@
 				"type": [
 					"psychic"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "drill-peck",
@@ -5497,7 +5766,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "drill-run",
@@ -5533,7 +5803,8 @@
 			"tm": {
 				"id": 162,
 				"cost": 9100
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "drum-beating",
@@ -5568,7 +5839,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dual-chop",
@@ -5600,7 +5872,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dual-wingbeat",
@@ -5636,7 +5909,8 @@
 			"tm": {
 				"id": 226,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dynamax-cannon",
@@ -5667,7 +5941,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "dynamic-punch",
@@ -5699,7 +5974,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "earth-power",
@@ -5734,7 +6012,8 @@
 			"tm": {
 				"id": 181,
 				"cost": 10800
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "earthquake",
@@ -5772,7 +6051,8 @@
 					"str"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "echoed-voice",
@@ -5808,7 +6088,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "eerie-impulse",
@@ -5834,7 +6117,8 @@
 			"tm": {
 				"id": 155,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "eerie-spell",
@@ -5860,7 +6144,10 @@
 					"int"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "egg-bomb",
@@ -5891,7 +6178,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "electric-terrain",
@@ -5908,7 +6198,8 @@
 			"tm": {
 				"id": 183,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "electrify",
@@ -5933,7 +6224,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "electro-ball",
@@ -5968,7 +6260,10 @@
 			"tm": {
 				"id": 146,
 				"cost": 8700
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "electro-drift",
@@ -6001,7 +6296,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "electro-shot",
@@ -6036,7 +6332,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "electroweb",
@@ -6072,7 +6369,8 @@
 			"tm": {
 				"id": 239,
 				"cost": 2700
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "embargo",
@@ -6097,7 +6395,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "ember",
@@ -6132,7 +6431,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "encore",
@@ -6159,7 +6459,8 @@
 			"tm": {
 				"id": 174,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "endeavor",
@@ -6185,7 +6486,8 @@
 			"tm": {
 				"id": 233,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "endure",
@@ -6202,7 +6504,8 @@
 			"tm": {
 				"id": 133,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "energy-ball",
@@ -6237,7 +6540,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "entrainment",
@@ -6259,7 +6565,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "eruption",
@@ -6294,7 +6601,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "esper-wing",
@@ -6325,7 +6633,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "eternabeam",
@@ -6359,7 +6668,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "expanding-force",
@@ -6398,7 +6708,8 @@
 			"tm": {
 				"id": 245,
 				"cost": 10800
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "explosion",
@@ -6415,7 +6726,10 @@
 			"tm": {
 				"id": 64,
 				"cost": 14000
-			}
+			},
+			"categories": [
+				"explosive"
+			]
 		},
 		{
 			"id": "extrasensory",
@@ -6446,7 +6760,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "extreme-speed",
@@ -6477,7 +6792,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "facade",
@@ -6513,7 +6829,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fairy-lock",
@@ -6526,7 +6843,8 @@
 			"range": "self (40ft radius)",
 			"description": [
 				"You summon forth a mystical power that locks down the battlefield. Creatures within 40 feet of you may not flee or be switched out on their next turn."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "fairy-wind",
@@ -6558,7 +6876,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "fake-out",
@@ -6590,7 +6911,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fake-tears",
@@ -6616,7 +6938,8 @@
 			"tm": {
 				"id": 104,
 				"cost": 8700
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "false-surrender",
@@ -6651,7 +6974,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "false-swipe",
@@ -6687,7 +7011,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "feather-dance",
@@ -6713,7 +7038,10 @@
 			"tm": {
 				"id": 243,
 				"cost": 2700
-			}
+			},
+			"categories": [
+				"dance"
+			]
 		},
 		{
 			"id": "feint",
@@ -6744,7 +7072,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "feint-attack",
@@ -6777,7 +7106,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fell-stinger",
@@ -6809,7 +7139,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fickle-beam",
@@ -6840,7 +7171,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fiery-dance",
@@ -6875,7 +7207,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"dance"
+			]
 		},
 		{
 			"id": "fiery-wrath",
@@ -6910,7 +7245,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fillet-away",
@@ -6923,7 +7259,8 @@
 			"range": "self",
 			"description": [
 				"You fillet yourself to sharpen your senses. You take 10 typeless damage. Your next attack has advantage, and your movement speed increases by 15ft until the start of your next turn."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "final-gambit",
@@ -6944,7 +7281,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fire-blast",
@@ -6983,7 +7321,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fire-fang",
@@ -7019,7 +7358,10 @@
 			"tm": {
 				"id": 108,
 				"cost": 8700
-			}
+			},
+			"categories": [
+				"biting"
+			]
 		},
 		{
 			"id": "fire-lash",
@@ -7057,7 +7399,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fire-pledge",
@@ -7092,7 +7435,8 @@
 			"tm": {
 				"id": 189,
 				"cost": 9100
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fire-punch",
@@ -7128,7 +7472,10 @@
 			"tm": {
 				"id": 142,
 				"cost": 6200
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "fire-spin",
@@ -7163,7 +7510,8 @@
 			"tm": {
 				"id": 120,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "first-impression",
@@ -7194,7 +7542,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fishious-rend",
@@ -7226,7 +7575,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"biting"
+			]
 		},
 		{
 			"id": "fissure",
@@ -7239,7 +7591,8 @@
 			"range": "100ft",
 			"description": [
 				"You crack open the ground with devastating force. Choose a target in range and roll a d20. On a 20, the target falls into the crack and vanished into the abyss. On any other roll, or if targeting a flying creature, this move has no effect. The area in a 20 foot radius around the target becomes difficult terrain. If the target's level is 10 more than your own, this move automatically fails."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "flail",
@@ -7271,7 +7624,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "flame-burst",
@@ -7306,7 +7660,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "flame-charge",
@@ -7342,7 +7697,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "flame-wheel",
@@ -7377,7 +7733,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "flamethrower",
@@ -7416,7 +7773,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "flare-blitz",
@@ -7452,7 +7810,8 @@
 			"tm": {
 				"id": 201,
 				"cost": 12500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "flash",
@@ -7473,7 +7832,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "flash-cannon",
@@ -7509,7 +7869,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "flatter",
@@ -7531,7 +7892,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fleur-cannon",
@@ -7566,7 +7928,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fling",
@@ -7622,7 +7985,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "flip-turn",
@@ -7657,7 +8021,8 @@
 			"tm": {
 				"id": 225,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "floral-healing",
@@ -7673,7 +8038,8 @@
 			"description": [
 				"You extend a healing energy to recover the hit points of a creature in range. The target gains 2d8 + MOVE hit points. If the terrain is grassy, double your MOVE modifier."
 			],
-			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
+			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
+			"categories": []
 		},
 		{
 			"id": "flower-shield",
@@ -7686,7 +8052,8 @@
 			"range": "self (15ft radius)",
 			"description": [
 				"Large flowers sprout from any grass-type allies in range, boosting their defense. For one minute, as long as you keep your concentration, grass-type allies within 15 feet of you gain +2 to their AC."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "flower-trick",
@@ -7721,7 +8088,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fly",
@@ -7757,7 +8125,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "flying-press",
@@ -7790,7 +8159,8 @@
 					"flying",
 					"fighting"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "focus-blast",
@@ -7826,7 +8196,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "focus-energy",
@@ -7839,7 +8212,8 @@
 			"range": "self",
 			"description": [
 				"You shut your eyes and focus in on the energy inside you before striking. For the duration, increase your critical range by 2 (From 20 to 18+ , from 19+ to 17+, etc.). This move is not stackable."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "focus-punch",
@@ -7872,7 +8246,10 @@
 			"tm": {
 				"id": 221,
 				"cost": 2700
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "follow-me",
@@ -7894,7 +8271,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "force-palm",
@@ -7925,7 +8303,8 @@
 				"type": [
 					"fighting"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "foresight",
@@ -7938,7 +8317,8 @@
 			"range": "self",
 			"description": [
 				"You grant yourself a brief but incredible sixth sense. On the next ghost-, normal-, or fighting-type move you activate, ignore any immunities of the target creature(s) granted by their Pokémon type. If the target’s secondary type gives it vulnerability or resistance to the attack, it follows the secondary type for that effect."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "forests-curse",
@@ -7960,7 +8340,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "foul-play",
@@ -7984,7 +8365,8 @@
 			"tm": {
 				"id": 138,
 				"cost": 6200
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "freeze-shock",
@@ -8015,7 +8397,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "freeze-dry",
@@ -8047,7 +8430,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "freezing-glare",
@@ -8082,7 +8466,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "frenzy-plant",
@@ -8120,7 +8505,8 @@
 			"tm": {
 				"id": 195,
 				"cost": 14200
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "frost-breath",
@@ -8156,7 +8542,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "frustration",
@@ -8191,7 +8578,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fury-attack",
@@ -8223,7 +8611,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"multistrike"
+			]
 		},
 		{
 			"id": "fury-cutter",
@@ -8255,7 +8646,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "fury-swipes",
@@ -8287,7 +8681,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"multistrike"
+			]
 		},
 		{
 			"id": "fusion-bolt",
@@ -8321,7 +8718,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "fusion-flare",
@@ -8355,7 +8753,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "future-sight",
@@ -8391,7 +8790,8 @@
 			"tm": {
 				"id": 244,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "gastro-acid",
@@ -8410,7 +8810,8 @@
 			],
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "gear-grind",
@@ -8442,7 +8843,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "gear-up",
@@ -8455,7 +8857,8 @@
 			"range": "30ft",
 			"description": [
 				"You engage your gears to raise the attack of ally creatures in range with the Plus or Minus ability. While you maintain your concentration, Pokémon under the affects of Gear Up have advantage on all attack rolls."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "geomancy",
@@ -8468,7 +8871,8 @@
 			"range": "self",
 			"description": [
 				"You spend time to absorb the natural energy around you, sharply increasing your effect in battle. When you activate this move, your speed increases by 10 feet and all of your attacks and saving throws are rolled with advantage for three rounds."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "giga-drain",
@@ -8504,7 +8908,8 @@
 			"tm": {
 				"id": 166,
 				"cost": 9100
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "giga-impact",
@@ -8539,7 +8944,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "gigaton-hammer",
@@ -8570,7 +8976,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "glacial-lance",
@@ -8608,7 +9015,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "glaciate",
@@ -8639,7 +9047,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "glaive-rush",
@@ -8670,7 +9079,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "glare",
@@ -8692,7 +9102,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "grass-knot",
@@ -8727,7 +9138,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "grass-pledge",
@@ -8762,7 +9174,8 @@
 			"tm": {
 				"id": 191,
 				"cost": 9100
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "grass-whistle",
@@ -8784,7 +9197,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "grassy-glide",
@@ -8821,7 +9237,8 @@
 			"tm": {
 				"id": 223,
 				"cost": 10800
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "grassy-terrain",
@@ -8838,7 +9255,8 @@
 			"tm": {
 				"id": 184,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "grav-apple",
@@ -8877,7 +9295,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "gravity",
@@ -8894,7 +9313,8 @@
 			"tm": {
 				"id": 210,
 				"cost": 2700
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "growl",
@@ -8916,7 +9336,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "growth",
@@ -8930,7 +9353,8 @@
 			"description": [
 				"You increase the size of a target. When you use this move, a creature in range (or you) grows slightly larger, gaining the ability to add a d4 to any attack roll or saving throw for the duration."
 			],
-			"higherLevels": "The dice to add increases to 1d6 at level 10."
+			"higherLevels": "The dice to add increases to 1d6 at level 10.",
+			"categories": []
 		},
 		{
 			"id": "grudge",
@@ -8952,7 +9376,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "guard-split",
@@ -8974,7 +9399,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "guard-swap",
@@ -8996,7 +9422,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "guillotine",
@@ -9009,7 +9436,8 @@
 			"range": "melee",
 			"description": [
 				"You are filled with an incredible rage, grabbing the head of a target creature in an attempt to squeeze the life from it. Roll a d20. On a 20, you instantly cause the creature to faint. On any other roll, this move has no effect. If the target's level is 10 more than your own, this move automatically fails."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "gunk-shot",
@@ -9044,7 +9472,8 @@
 			"tm": {
 				"id": 160,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "gust",
@@ -9075,7 +9504,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "gyro-ball",
@@ -9111,7 +9543,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "hail",
@@ -9128,7 +9563,8 @@
 			"tm": {
 				"id": 7,
 				"cost": 8000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "halo-song",
@@ -9162,7 +9598,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hammer-arm",
@@ -9193,7 +9630,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "happy-hour",
@@ -9206,7 +9646,8 @@
 			"range": "melee",
 			"description": [
 				"You celebrate your impending victory with a little jig. Prize money awarded at the end of battle is doubled."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "hard-press",
@@ -9242,7 +9683,8 @@
 			"tm": {
 				"id": 252,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "harden",
@@ -9258,7 +9700,8 @@
 			"description": [
 				"You increase your defense, able to reduce incoming damage. After activating this move, reduce any damage dealt to you by 1d4 + MOVE until the beginning of your next turn."
 			],
-			"higherLevels": "The damage dice roll for this move changes to 1d8 at level 5, 1d10 at level 10, and 1d12 at level 17."
+			"higherLevels": "The damage dice roll for this move changes to 1d8 at level 5, 1d10 at level 10, and 1d12 at level 17.",
+			"categories": []
 		},
 		{
 			"id": "haze",
@@ -9275,7 +9718,8 @@
 			"tm": {
 				"id": 207,
 				"cost": 2700
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "head-charge",
@@ -9306,7 +9750,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "head-smash",
@@ -9337,7 +9782,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "headbutt",
@@ -9368,7 +9814,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "headlong-rush",
@@ -9399,7 +9846,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "heal-bell",
@@ -9412,6 +9862,9 @@
 			"range": "self (60ft radius)",
 			"description": [
 				"You ring a bell that chimes beautifully across the battlefield. All active allied creatures within 60 feet of you are healed of their negative status effects."
+			],
+			"categories": [
+				"sound"
 			]
 		},
 		{
@@ -9425,7 +9878,8 @@
 			"range": "40ft",
 			"description": [
 				"When a creature within range attempts to use an HP recovery move, item, or ability, you may use your reaction to send psychic waves into the mind of the target, preventing the recovery of health."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "heal-order",
@@ -9451,7 +9905,8 @@
 				},
 				"modifier": "MOVE",
 				"type": "healing"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "heal-pulse",
@@ -9478,7 +9933,10 @@
 				},
 				"modifier": "MOVE",
 				"type": "healing"
-			}
+			},
+			"categories": [
+				"pulse"
+			]
 		},
 		{
 			"id": "healing-wish",
@@ -9491,7 +9949,8 @@
 			"range": "self",
 			"description": [
 				"You sacrifice yourself for another one of your trainer's Pokémon. When activating this move, the user faints, but the next conscious creature released by its trainer is healed of all status effects and recovers an amount of HP equal to what the user lost by fainting."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "heart-stamp",
@@ -9523,7 +9982,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "heart-swap",
@@ -9545,7 +10005,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "heat-crash",
@@ -9580,7 +10041,8 @@
 			"tm": {
 				"id": 218,
 				"cost": 9100
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "heat-wave",
@@ -9619,7 +10081,10 @@
 			"tm": {
 				"id": 172,
 				"cost": 10800
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "heavy-slam",
@@ -9654,7 +10119,8 @@
 			"tm": {
 				"id": 173,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "helping-hand",
@@ -9672,7 +10138,8 @@
 			"tm": {
 				"id": 178,
 				"cost": 2700
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hex",
@@ -9707,7 +10174,8 @@
 			"tm": {
 				"id": 122,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hidden-power",
@@ -9828,7 +10296,8 @@
 					"dark",
 					"fairy"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "high-horsepower",
@@ -9863,7 +10332,8 @@
 			"tm": {
 				"id": 216,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "high-jump-kick",
@@ -9895,7 +10365,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hold-back",
@@ -9926,7 +10397,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hold-hands",
@@ -9939,7 +10411,8 @@
 			"range": "melee",
 			"description": [
 				"If you are within melee range of an ally, you grasp its hand to spread happiness. Use this reaction when an ally is attacking to add +1 to its attack rolls, or when it is targeted by an attack to add +1 to its AC. This reaction can be used only before the result of either attack roll (by ally or creature) is called."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "hone-claws",
@@ -9952,7 +10425,8 @@
 			"range": "self",
 			"description": [
 				"You sharpen your claws to increase the power of your attacks. For the duration, add an additional +1 to your attack and damage rolls. This move may be stacked to a maximum of +3 to attack and damage rolls."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "howl",
@@ -9965,6 +10439,9 @@
 			"range": "self",
 			"description": [
 				"You pierce the air with an intimidating howl. Until the end of your next turn, allies (and you) have advantage on any melee attack rolls they make against a creature within 5 feet of you."
+			],
+			"categories": [
+				"sound"
 			]
 		},
 		{
@@ -10002,7 +10479,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "horn-drill",
@@ -10015,7 +10493,8 @@
 			"range": "melee",
 			"description": [
 				"You attempt to drill your horn through a target creature with tremendous strength. Roll a d20. On a 20, the creature is impaled and immediately faints. On any other roll, you miss and this move fails. If the target's level is 10 more than your own, this move automatically fails."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "horn-leech",
@@ -10047,7 +10526,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hurricane",
@@ -10086,7 +10566,10 @@
 			"tm": {
 				"id": 198,
 				"cost": 12500
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "hydro-cannon",
@@ -10125,7 +10608,8 @@
 			"tm": {
 				"id": 194,
 				"cost": 14200
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hydro-pump",
@@ -10164,7 +10648,8 @@
 			"tm": {
 				"id": 188,
 				"cost": 12500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hydro-steam",
@@ -10196,7 +10681,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hyper-beam",
@@ -10235,7 +10721,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hyper-drill",
@@ -10267,7 +10754,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hyper-fang",
@@ -10299,7 +10787,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"biting"
+			]
 		},
 		{
 			"id": "hyper-voice",
@@ -10335,7 +10826,10 @@
 			"tm": {
 				"id": 171,
 				"cost": 9100
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "hyperspace-fury",
@@ -10361,7 +10855,8 @@
 				"type": [
 					"dark"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hyperspace-hole",
@@ -10393,7 +10888,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "hypnosis",
@@ -10415,7 +10911,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "ice-ball",
@@ -10447,7 +10944,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "ice-beam",
@@ -10486,7 +10986,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "ice-burn",
@@ -10521,7 +11022,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "ice-fang",
@@ -10557,7 +11059,10 @@
 			"tm": {
 				"id": 110,
 				"cost": 2500
-			}
+			},
+			"categories": [
+				"biting"
+			]
 		},
 		{
 			"id": "ice-hammer",
@@ -10588,7 +11093,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "ice-punch",
@@ -10624,7 +11132,10 @@
 			"tm": {
 				"id": 144,
 				"cost": 2500
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "ice-shard",
@@ -10655,7 +11166,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "ice-spinner",
@@ -10694,7 +11206,8 @@
 			"tm": {
 				"id": 175,
 				"cost": 10800
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "icicle-crash",
@@ -10725,7 +11238,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "icicle-spear",
@@ -10760,7 +11274,10 @@
 			"tm": {
 				"id": 217,
 				"cost": 4900
-			}
+			},
+			"categories": [
+				"multistrike"
+			]
 		},
 		{
 			"id": "icy-wind",
@@ -10795,7 +11312,10 @@
 			"tm": {
 				"id": 126,
 				"cost": 3600
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "imprison",
@@ -10821,7 +11341,8 @@
 			"tm": {
 				"id": 154,
 				"cost": 15000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "incinerate",
@@ -10853,7 +11374,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "infernal-parade",
@@ -10890,7 +11412,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "inferno",
@@ -10922,7 +11445,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "infestation",
@@ -10957,7 +11481,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "ingrain",
@@ -10973,7 +11498,8 @@
 			"description": [
 				"You pierce the ground with roots, absorbing natural energy and fixing you in place. At the end of each of your next three turns (including this one), heal yourself for 1d6 + MOVE hit points. For the duration of this move, your movement speed drops to zero and you may not flee or be switched out by your trainer unless forced by an opponent's moves or abilities."
 			],
-			"higherLevels": "The healing dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17."
+			"higherLevels": "The healing dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17.",
+			"categories": []
 		},
 		{
 			"id": "instruct",
@@ -10988,7 +11514,8 @@
 			"range": "60ft",
 			"description": [
 				"You instruct a creature to act again. As an action, choose a target in range. The target must immediately repeat the move they used in their last action or bonus action, without spending the PP."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "ion-deluge",
@@ -11001,7 +11528,8 @@
 			"range": "self (50ft radius)",
 			"description": [
 				"You disperse electric particles that charge the battlefield. Until the beginning of your next turn, any normal-type move activated within 50 feet of you is considered electric-type."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "iron-defense",
@@ -11018,7 +11546,8 @@
 			"tm": {
 				"id": 161,
 				"cost": 3600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "iron-head",
@@ -11053,7 +11582,8 @@
 			"tm": {
 				"id": 157,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "iron-tail",
@@ -11084,7 +11614,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "ivy-cudgel",
@@ -11141,7 +11672,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "jaw-lock",
@@ -11173,7 +11705,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"biting"
+			]
 		},
 		{
 			"id": "jet-punch",
@@ -11204,7 +11739,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "judgment",
@@ -11255,7 +11793,8 @@
 					"dark",
 					"fairy"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "jump-kick",
@@ -11287,7 +11826,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "jungle-healing",
@@ -11313,7 +11853,8 @@
 				},
 				"modifier": "MOVE",
 				"type": "healing"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "karate-chop",
@@ -11345,7 +11886,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "kinesis",
@@ -11361,7 +11903,8 @@
 			],
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "kings-shield",
@@ -11374,7 +11917,8 @@
 			"range": "self",
 			"description": [
 				"Your body is cloaked with a protective shield that negates all damage to you. When targeted by an attack, you may automatically avoid taking damage from this attack and any other damaging move until the beginning of your next turn. On future instances of this move in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "knock-off",
@@ -11409,7 +11953,8 @@
 			"tm": {
 				"id": 211,
 				"cost": 14200
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "kowtow-cleave",
@@ -11444,7 +11989,10 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "lands-wrath",
@@ -11478,7 +12026,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "laser-focus",
@@ -11491,7 +12040,8 @@
 			"range": "self",
 			"description": [
 				"When activating this move, you spend your action concentrating intensely. If you keep your concentration, your first attack roll on your next turn always results in a Critical Hit."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "lash-out",
@@ -11528,7 +12078,8 @@
 			"tm": {
 				"id": 228,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "last-resort",
@@ -11560,7 +12111,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "last-respects",
@@ -11590,7 +12142,8 @@
 				"type": [
 					"ghost"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "lava-plume",
@@ -11624,7 +12177,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "leaf-blade",
@@ -11655,7 +12209,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "leaf-storm",
@@ -11694,7 +12251,8 @@
 			"tm": {
 				"id": 197,
 				"cost": 12500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "leaf-tornado",
@@ -11726,7 +12284,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "leafage",
@@ -11757,7 +12316,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "leech-life",
@@ -11792,7 +12352,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "leech-seed",
@@ -11823,7 +12384,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "leer",
@@ -11845,7 +12407,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "lick",
@@ -11877,7 +12440,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "life-dew",
@@ -11903,7 +12467,8 @@
 				},
 				"modifier": "MOVE",
 				"type": "healing"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "light-of-ruin",
@@ -11938,7 +12503,8 @@
 				"attribute": [
 					"dex"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "light-screen",
@@ -11955,7 +12521,8 @@
 			"tm": {
 				"id": 16,
 				"cost": 4400
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "liquidation",
@@ -11991,7 +12558,8 @@
 			"tm": {
 				"id": 165,
 				"cost": 10800
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "lock-on",
@@ -12004,7 +12572,8 @@
 			"range": "60ft",
 			"description": [
 				"You hone in on your target, ready to strike. When this move is activated, a single attack roll you make next turn is guaranteed to hit. You may roll to see if you crit or cause an effect from a high roll. This move does not affect one-shot moves like Fissure, Guillotine, etc."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "lovely-kiss",
@@ -12026,7 +12595,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "low-kick",
@@ -12062,7 +12632,8 @@
 			"tm": {
 				"id": 112,
 				"cost": 8700
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "low-sweep",
@@ -12104,7 +12675,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "lucky-chant",
@@ -12117,7 +12689,8 @@
 			"range": "30ft",
 			"description": [
 				"When a creature scores a critical hit on you or an ally in range, you may use your reaction to quickly recite a magical incantation that treats the attack like a normal hit, preventing the extra damage and/or effect of the crit."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "lumina-crash",
@@ -12151,7 +12724,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "lunar-blessing",
@@ -12178,7 +12752,8 @@
 				},
 				"modifier": "MOVE",
 				"type": "healing"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "lunar-dance",
@@ -12191,6 +12766,9 @@
 			"range": "self",
 			"description": [
 				"You sacrifice yourself for another one of your trainer's Pokémon. When activating this move, the user faints, but the next creature released by its trainer is fully healed and cured of any status effects."
+			],
+			"categories": [
+				"dance"
 			]
 		},
 		{
@@ -12226,7 +12804,8 @@
 			"tm": {
 				"id": 215,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "luster-purge",
@@ -12261,7 +12840,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mach-punch",
@@ -12293,7 +12873,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "magic-coat",
@@ -12309,7 +12892,8 @@
 			"range": "50ft",
 			"description": [
 				"A flash of magical energy forms between you and a creature, reflecting negative energy back at an attacker in range. When an attack from a creature causes you to suffer from a negative status condition, they are also affected by the same condition."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "magic-powder",
@@ -12331,7 +12915,10 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"powder"
+			]
 		},
 		{
 			"id": "magic-room",
@@ -12344,7 +12931,8 @@
 			"range": "self (50ft radius)",
 			"description": [
 				"You employ your psychic power to suppress the effect of all held items within 50 feet of you"
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "magical-leaf",
@@ -12379,7 +12967,8 @@
 			"tm": {
 				"id": 125,
 				"cost": 3600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "magma-storm",
@@ -12413,7 +13002,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "magnet-bomb",
@@ -12442,7 +13032,10 @@
 				"type": [
 					"steel"
 				]
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "magnet-rise",
@@ -12455,7 +13048,8 @@
 			"range": "self",
 			"description": [
 				"You use magnetic power within yourself to raise yourself from the ground, becoming immune to ground moves for the duration."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "magnetic-flux",
@@ -12468,7 +13062,8 @@
 			"range": "Self (40-ft radius)",
 			"description": [
 				"You use your electric energy to manipulate magnetic fields. Until the beginning of your next turn, any creature in range with the Plus or Minus ability gains a bonus to their AC equal to your proficiency modifier, and any saving throw they are forced to make is rolled with advantage."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "magnitude",
@@ -12539,7 +13134,8 @@
 				"type": [
 					"ground"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "make-it-rain",
@@ -12574,7 +13170,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "malignant-chain",
@@ -12612,7 +13209,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mat-block",
@@ -12625,7 +13223,8 @@
 			"range": "self (15ft radius)",
 			"description": [
 				"You conjure up a ethereal, protective mat to shield you and your allies. Until the end of your next turn, any ally creature within 15 feet of you (including you) is immune to damage from damaging moves. Status-inducing moves can still affect their targets."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "matcha-gotcha",
@@ -12660,7 +13259,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "me-first",
@@ -12673,7 +13273,8 @@
 			"range": "40ft",
 			"description": [
 				"When targeted by or forced to make a saving throw from a single-target move, you may use your reaction to copy the creature’s move against it, after activation but before the effects. If the move requires an attack roll, you have disadvantage on the attack. If the move requires a saving throw, the target has advantage on the roll. If the move causes damage, double the damage dice. The damage/effect tier for the move is based off of your level, not the target's."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "mean-look",
@@ -12695,7 +13296,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "meditate",
@@ -12709,7 +13311,8 @@
 			"description": [
 				"You become one with your inner self. For the duration, you gain +1 to attack rolls and saving throws."
 			],
-			"higherLevels": "The bonus changes to +2 at level 5, +3 at level 10, and +4 at level 17."
+			"higherLevels": "The bonus changes to +2 at level 5, +3 at level 10, and +4 at level 17.",
+			"categories": []
 		},
 		{
 			"id": "mega-drain",
@@ -12741,7 +13344,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mega-kick",
@@ -12772,7 +13376,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mega-punch",
@@ -12803,7 +13408,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "megahorn",
@@ -12841,7 +13449,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "memento",
@@ -12854,7 +13463,8 @@
 			"range": "melee",
 			"description": [
 				"You sacrifice your life force to leave a lasting mark on a target. When you activate this move, you touch a creature and drop to 0 hit points. As a result, the target is incapacitated for 2 rounds. All attacks against it have advantage, it automatically fails all STR and DEX saving throws by the maximum amount, and it cannot attack, move, flee, or be switched out."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "metal-burst",
@@ -12873,7 +13483,8 @@
 			],
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "metal-claw",
@@ -12908,7 +13519,8 @@
 			"tm": {
 				"id": 123,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "metal-sound",
@@ -12934,7 +13546,10 @@
 			"tm": {
 				"id": 250,
 				"cost": 3000
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "meteor-assault",
@@ -12965,7 +13580,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "meteor-beam",
@@ -13004,7 +13620,8 @@
 			"tm": {
 				"id": 247,
 				"cost": 15000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "meteor-mash",
@@ -13036,7 +13653,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "metronome",
@@ -13057,7 +13677,8 @@
 			"tm": {
 				"id": 149,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mighty-cleave",
@@ -13088,7 +13709,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "milk-drink",
@@ -13104,7 +13728,8 @@
 			"description": [
 				"You create a tasty drink that heals your or an ally’s wounds. The recipient gains 2d6 + MOVE hit points."
 			],
-			"higherLevels": "The dice roll for this move changes to 3d6 at level 5, 5d6 at level 10, and 8d6 at level 17."
+			"higherLevels": "The dice roll for this move changes to 3d6 at level 5, 5d6 at level 10, and 8d6 at level 17.",
+			"categories": []
 		},
 		{
 			"id": "mimic",
@@ -13145,7 +13770,8 @@
 						]
 					]
 				}
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "mind-blown",
@@ -13180,7 +13806,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"explosive"
+			]
 		},
 		{
 			"id": "mind-reader",
@@ -13193,7 +13822,8 @@
 			"range": "self",
 			"description": [
 				"You sense the motives and moves of a creature around you. When this move is activated, a single attack roll you make next turn is guaranteed to hit. You may roll to see if you crit or cause an effect from a high roll. This move does not affect one-shot moves like Fissure, Guillotine, etc."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "minimize",
@@ -13206,7 +13836,8 @@
 			"range": "self",
 			"description": [
 				"You appear smaller to your creatures, increasing your evasion. For the duration, you gain an additional +2 to your AC."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "miracle-eye",
@@ -13228,7 +13859,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mirror-coat",
@@ -13260,7 +13892,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mirror-move",
@@ -13273,7 +13906,8 @@
 			"range": "50ft",
 			"description": [
 				"You mimic a target that you can see, in range. When you activate this move, choose a target in range and fully execute the most recent move used by the creature, using your own ability scores, level, and typing for saving throw DC, attack, and damage."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "mirror-shot",
@@ -13311,7 +13945,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mist",
@@ -13324,7 +13959,8 @@
 			"range": "30ft",
 			"description": [
 				"A light mist surrounds a target, offering a protective barrier. The target is immune to negative stat changes for the duration, but any current effects are still in place."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "mist-ball",
@@ -13356,7 +13992,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "misty-explosion",
@@ -13395,7 +14034,10 @@
 			"tm": {
 				"id": 230,
 				"cost": 14200
-			}
+			},
+			"categories": [
+				"explosive"
+			]
 		},
 		{
 			"id": "misty-terrain",
@@ -13412,7 +14054,8 @@
 			"tm": {
 				"id": 186,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "moonblast",
@@ -13444,7 +14087,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "moongeist-beam",
@@ -13479,7 +14123,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "moonlight",
@@ -13496,7 +14141,8 @@
 			"description": [
 				"A ray of moonlight shines upon you, basking you in healing light. The user gains 2d12 + MOVE hit points. If this move is activated during the day, halve the total healing."
 			],
-			"higherLevels": "The dice roll for healing changes to 3d10 at level 5, 7d6 at level 10, and 8d8 at level 17."
+			"higherLevels": "The dice roll for healing changes to 3d10 at level 5, 7d6 at level 10, and 8d8 at level 17.",
+			"categories": []
 		},
 		{
 			"id": "morning-sun",
@@ -13513,7 +14159,8 @@
 			"description": [
 				"A ray of sunlight shines upon you, basking you in healing light. The user gains 2d12 + MOVE hit points. If this move is activated at night, halve the total healing."
 			],
-			"higherLevels": "The healing dice roll for this move changes to 3d10 at level 5, 7d6 at level 10, and 8d8 at level 17."
+			"higherLevels": "The healing dice roll for this move changes to 3d10 at level 5, 7d6 at level 10, and 8d8 at level 17.",
+			"categories": []
 		},
 		{
 			"id": "mortal-spin",
@@ -13549,7 +14196,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mountain-gale",
@@ -13586,7 +14234,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mud-bomb",
@@ -13624,7 +14273,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "mud-shot",
@@ -13659,7 +14311,8 @@
 			"tm": {
 				"id": 127,
 				"cost": 3600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mud-sport",
@@ -13672,7 +14325,8 @@
 			"range": "self (5ft radius)",
 			"description": [
 				"You cover yourself and all allies around you with thick mud, reducing the amount of electric damage taken for anyone affected. For the duration, you and any ally in range (when you initially activated this move) have resistance to electric-type attacks. If an affected creature was already resistant, it is now immune. If it was vulnerable, it now takes normal damage. If it was immune to electric-type moves already, nothing happens."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "mud-slap",
@@ -13708,7 +14362,8 @@
 			"tm": {
 				"id": 106,
 				"cost": 8700
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "muddy-water",
@@ -13744,7 +14399,8 @@
 			"tm": {
 				"id": 237,
 				"cost": 10800
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "multi-attack",
@@ -13774,7 +14430,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mystical-fire",
@@ -13805,7 +14462,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "mystical-power",
@@ -13839,7 +14497,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "nasty-plot",
@@ -13856,7 +14515,8 @@
 			"tm": {
 				"id": 187,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "natural-gift",
@@ -13970,7 +14630,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "nature-power",
@@ -14040,7 +14701,8 @@
 			"tm": {
 				"id": 96,
 				"cost": 5000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "natures-madness",
@@ -14062,7 +14724,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "needle-arm",
@@ -14093,7 +14756,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "night-daze",
@@ -14125,7 +14789,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "night-shade",
@@ -14161,7 +14826,8 @@
 				"type": [
 					"ghost"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "night-slash",
@@ -14193,7 +14859,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "nightmare",
@@ -14222,7 +14891,8 @@
 				"type": [
 					"ghost"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "no-retreat",
@@ -14235,7 +14905,8 @@
 			"range": "self",
 			"description": [
 				"For the duration, you have advantage on attack rolls and saving throws. You cannot switch out or flee."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "noble-roar",
@@ -14248,6 +14919,9 @@
 			"range": "self",
 			"description": [
 				"You let out a stunning roar that intimidates a target. When targeted by an attack, use this reaction to impose disadvantage on the attack roll."
+			],
+			"categories": [
+				"sound"
 			]
 		},
 		{
@@ -14285,7 +14959,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "oblivion-wing",
@@ -14317,7 +14992,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "obstruct",
@@ -14340,7 +15016,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "octazooka",
@@ -14372,7 +15049,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "octolock",
@@ -14388,7 +15068,8 @@
 			"description": [
 				"Make a grapple check against the target. When you succeed, the target's AC is reduced by 1. At the beginning of each of your turns, you may use a free action to reduce the AC of a target grappled with this move by 1. This may stack up to 5 times, for a total reduction of -5 AC.",
 				"The target's AC reduction resets to 0 once the grapple is released or broken."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "odor-sleuth",
@@ -14401,7 +15082,8 @@
 			"range": "30ft, self",
 			"description": [
 				"When you activate this move, choose a target in range. For the duration, the target cannot activate any move that would increase its AC. If it has already activated such a move, the effect ends immediately. In addition, for the duration, no creature in range has immunity to your Ghost, Normal, or Fighting-type moves."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "ominous-wind",
@@ -14433,7 +15115,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "order-up",
@@ -14485,7 +15168,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "origin-pulse",
@@ -14517,7 +15201,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"pulse"
+			]
 		},
 		{
 			"id": "outrage",
@@ -14549,7 +15236,8 @@
 			"tm": {
 				"id": 196,
 				"cost": 12500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "overdrive",
@@ -14584,7 +15272,10 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "overheat",
@@ -14623,7 +15314,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "pain-split",
@@ -14649,7 +15341,8 @@
 			"tm": {
 				"id": 231,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "parabolic-charge",
@@ -14684,7 +15377,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "parting-shot",
@@ -14705,7 +15399,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "pay-day",
@@ -14738,7 +15435,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "payback",
@@ -14774,7 +15472,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "peck",
@@ -14806,7 +15505,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "perish-song",
@@ -14827,7 +15527,10 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "petal-blizzard",
@@ -14865,7 +15568,10 @@
 			"tm": {
 				"id": 234,
 				"cost": 6600
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "petal-dance",
@@ -14897,7 +15603,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"dance"
+			]
 		},
 		{
 			"id": "phantom-force",
@@ -14933,7 +15642,8 @@
 			"tm": {
 				"id": 192,
 				"cost": 10800
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "photon-geyser",
@@ -14968,7 +15678,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "pin-missile",
@@ -14999,7 +15710,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"multistrike"
+			]
 		},
 		{
 			"id": "plasma-fists",
@@ -15031,7 +15745,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "play-nice",
@@ -15052,7 +15769,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "play-rough",
@@ -15089,7 +15807,8 @@
 			"tm": {
 				"id": 176,
 				"cost": 10800
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "pluck",
@@ -15120,7 +15839,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "poison-fang",
@@ -15158,7 +15878,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"biting"
+			]
 		},
 		{
 			"id": "poison-gas",
@@ -15192,7 +15915,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "poison-jab",
@@ -15228,7 +15952,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "poison-powder",
@@ -15252,7 +15977,10 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"powder"
+			]
 		},
 		{
 			"id": "poison-sting",
@@ -15287,7 +16015,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "poison-tail",
@@ -15323,7 +16052,8 @@
 			"tm": {
 				"id": 121,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "pollen-puff",
@@ -15359,7 +16089,10 @@
 			"tm": {
 				"id": 179,
 				"cost": 10800
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "poltergeist",
@@ -15403,7 +16136,8 @@
 			"tm": {
 				"id": 227,
 				"cost": 14200
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "population-bomb",
@@ -15433,7 +16167,10 @@
 				"type": [
 					"normal"
 				]
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "pounce",
@@ -15468,7 +16205,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "pound",
@@ -15500,7 +16238,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "powder",
@@ -15526,7 +16265,10 @@
 				},
 				"modifier": "MOVE",
 				"type": "typeless"
-			}
+			},
+			"categories": [
+				"powder"
+			]
 		},
 		{
 			"id": "powder-snow",
@@ -15560,7 +16302,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "power-gem",
@@ -15596,7 +16339,8 @@
 			"tm": {
 				"id": 159,
 				"cost": 9100
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "power-shift",
@@ -15610,7 +16354,8 @@
 			"range": "self",
 			"description": [
 				"You refocus your offense strategy. Until the start of your next turn, for the next Move you execute you may choose any attribute for its Move Power."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "power-split",
@@ -15632,7 +16377,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "power-swap",
@@ -15654,7 +16400,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "power-trick",
@@ -15667,7 +16414,8 @@
 			"range": "self",
 			"description": [
 				"You employ your psychic power to switch your own attack and defense. Until the end of your next turn, switch your AC with an ability score of your choice (Constitution not included)"
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "power-trip",
@@ -15699,7 +16447,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "power-whip",
@@ -15731,7 +16480,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "power-up-punch",
@@ -15762,7 +16512,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "precipice-blades",
@@ -15793,7 +16546,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "present",
@@ -15825,7 +16579,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "prismatic-laser",
@@ -15860,7 +16615,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "protect",
@@ -15877,7 +16633,8 @@
 			"tm": {
 				"id": 17,
 				"cost": 8000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "psybeam",
@@ -15917,7 +16674,8 @@
 			"tm": {
 				"id": 115,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "psyblade",
@@ -15949,7 +16707,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "psych-up",
@@ -15966,7 +16727,8 @@
 			"tm": {
 				"id": 77,
 				"cost": 4500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "psychic",
@@ -16002,7 +16764,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "psychic-fangs",
@@ -16038,7 +16801,10 @@
 			"tm": {
 				"id": 139,
 				"cost": 8700
-			}
+			},
+			"categories": [
+				"biting"
+			]
 		},
 		{
 			"id": "psychic-noise",
@@ -16078,7 +16844,10 @@
 			"tm": {
 				"id": 255,
 				"cost": 4900
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "psychic-terrain",
@@ -16095,7 +16864,8 @@
 			"tm": {
 				"id": 185,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "psycho-boost",
@@ -16130,7 +16900,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "psycho-cut",
@@ -16162,7 +16933,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "psycho-shift",
@@ -16184,7 +16958,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "psyshield-bash",
@@ -16216,7 +16991,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "psyshock",
@@ -16252,7 +17028,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "psystrike",
@@ -16284,7 +17061,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "psywave",
@@ -16306,7 +17084,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "punishment",
@@ -16338,7 +17117,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "purify",
@@ -16351,7 +17131,8 @@
 			"range": "15ft",
 			"description": [
 				"You extend a healing energy to remove all status effects from a target. If a status effect is healed, it also restores the user's current hit points by twice its level. The user of this move cannot target itself."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "pursuit",
@@ -16383,7 +17164,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "pyro-ball",
@@ -16421,7 +17203,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "quash",
@@ -16447,7 +17232,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "quick-attack",
@@ -16478,7 +17264,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "quick-guard",
@@ -16491,7 +17278,8 @@
 			"range": "30ft",
 			"description": [
 				"You have the ability to rush to the aid of an ally at the start of combat. If an ally in range (or you) is attacked on the very first turn of the very first round of combat, you may use your reaction to negate any damage dealt."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "quiver-dance",
@@ -16505,7 +17293,10 @@
 			"description": [
 				"You lightly perform a mystical dance. For the duration, add +1 to your AC, attack rolls, and damage."
 			],
-			"higherLevels": "Add +2 to your AC at level 10 and above"
+			"higherLevels": "Add +2 to your AC at level 10 and above",
+			"categories": [
+				"dance"
+			]
 		},
 		{
 			"id": "rage",
@@ -16521,7 +17312,8 @@
 			"description": [
 				"You go into a fit of rage, attacking with relentless fury. While you are raging, you gain +1 on all damage rolls (only once per move), have resistance to normal damage, and have advantage on all Strength checks. Your rage ends if you drop concentration or if your turn ends and you have not attacked a hostile target since your last turn, or taken any damage since then."
 			],
-			"higherLevels": "For damage when raging, the bonus changes to +2 at level 5, +4 at level 10, and +6 at level 17."
+			"higherLevels": "For damage when raging, the bonus changes to +2 at level 5, +4 at level 10, and +6 at level 17.",
+			"categories": []
 		},
 		{
 			"id": "rage-fist",
@@ -16552,7 +17344,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "rage-powder",
@@ -16574,7 +17369,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"powder"
+			]
 		},
 		{
 			"id": "raging-bull",
@@ -16634,7 +17432,8 @@
 					"fire",
 					"water"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "raging-fury",
@@ -16667,7 +17466,8 @@
 				"type": [
 					"fire"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "rain-dance",
@@ -16684,7 +17484,8 @@
 			"tm": {
 				"id": 18,
 				"cost": 4400
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "rapid-spin",
@@ -16719,7 +17520,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "razor-leaf",
@@ -16751,7 +17553,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "razor-shell",
@@ -16783,7 +17588,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "razor-wind",
@@ -16818,7 +17626,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "recover",
@@ -16845,7 +17654,8 @@
 				},
 				"modifier": "MOVE",
 				"type": "healing"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "recycle",
@@ -16858,7 +17668,8 @@
 			"range": "self",
 			"description": [
 				"You summon a previously discarded item back into your hands. If you used a consumable held item any time within the last 5 turns, you can activate this move to take advantage of the same effect one last time. This move may not be used in the same round the held item was used."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "reflect",
@@ -16875,7 +17686,8 @@
 			"tm": {
 				"id": 33,
 				"cost": 8000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "reflect-type",
@@ -16888,7 +17700,8 @@
 			"range": "40ft",
 			"description": [
 				"Your body flashes into a mirror for just a moment. When it returns to normal, you take on the type of a creature in range."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "refresh",
@@ -16901,7 +17714,8 @@
 			"range": "self",
 			"description": [
 				"A wave of healing energy washes over you, curing poison, paralysis, and burn."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "relic-song",
@@ -16936,7 +17750,10 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "rest",
@@ -16967,7 +17784,8 @@
 				},
 				"modifier": "MOVE",
 				"type": "healing"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "retaliate",
@@ -16999,7 +17817,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "return",
@@ -17034,7 +17853,8 @@
 				"type": [
 					"normal"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "revelation-dance",
@@ -17084,7 +17904,10 @@
 					"dark",
 					"fairy"
 				]
-			}
+			},
+			"categories": [
+				"dance"
+			]
 		},
 		{
 			"id": "revenge",
@@ -17103,7 +17926,8 @@
 			],
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "reversal",
@@ -17139,7 +17963,8 @@
 			"tm": {
 				"id": 182,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "revival-blessing",
@@ -17152,7 +17977,8 @@
 			"range": "melee",
 			"description": [
 				"You bestow a loving blessing on a target feinted Pokémon. Half of the target's HP is restored."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "rising-voltage",
@@ -17188,7 +18014,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "roar",
@@ -17214,7 +18041,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "roar-of-time",
@@ -17249,7 +18079,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "rock-blast",
@@ -17284,7 +18115,11 @@
 			"tm": {
 				"id": 148,
 				"cost": 3600
-			}
+			},
+			"categories": [
+				"ballistic",
+				"multistrike"
+			]
 		},
 		{
 			"id": "rock-climb",
@@ -17315,7 +18150,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "rock-polish",
@@ -17332,7 +18168,8 @@
 			"tm": {
 				"id": 69,
 				"cost": 8000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "rock-slide",
@@ -17370,7 +18207,8 @@
 					"str"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "rock-smash",
@@ -17401,7 +18239,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "rock-throw",
@@ -17433,7 +18272,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "rock-tomb",
@@ -17471,7 +18311,8 @@
 				"type": [
 					"rock"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "rock-wrecker",
@@ -17502,7 +18343,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "role-play",
@@ -17523,7 +18367,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "rolling-kick",
@@ -17555,7 +18400,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "rollout",
@@ -17586,7 +18432,8 @@
 				"type": [
 					"rock"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "roost",
@@ -17606,7 +18453,8 @@
 			"tm": {
 				"id": 19,
 				"cost": 5600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "rototiller",
@@ -17619,7 +18467,8 @@
 			"range": "self (50ft radius)",
 			"description": [
 				"You imbue the ground around you with a mystical layer of natural energy, like tilling fresh soil. For three rounds, grass-type creatures double their STAB bonus when activating a grass-type move within the affected area."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "round",
@@ -17658,7 +18507,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "ruination",
@@ -17679,7 +18531,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sacred-fire",
@@ -17711,7 +18564,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sacred-sword",
@@ -17743,7 +18597,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "safeguard",
@@ -17760,7 +18617,8 @@
 			"tm": {
 				"id": 20,
 				"cost": 6000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "salt-cure",
@@ -17795,7 +18653,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sand-attack",
@@ -17820,7 +18679,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sand-tomb",
@@ -17858,7 +18718,8 @@
 			"tm": {
 				"id": 208,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sandsear-storm",
@@ -17895,7 +18756,10 @@
 					"str"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "sandstorm",
@@ -17912,7 +18776,10 @@
 			"tm": {
 				"id": 37,
 				"cost": 8400
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "scald",
@@ -17948,7 +18815,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "scale-shot",
@@ -17985,7 +18853,10 @@
 			"tm": {
 				"id": 229,
 				"cost": 10800
-			}
+			},
+			"categories": [
+				"multistrike"
+			]
 		},
 		{
 			"id": "scary-face",
@@ -18011,7 +18882,8 @@
 			"tm": {
 				"id": 107,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "scorching-sands",
@@ -18053,7 +18925,8 @@
 			"tm": {
 				"id": 242,
 				"cost": 10800
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "scratch",
@@ -18085,7 +18958,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "screech",
@@ -18107,7 +18981,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "searing-shot",
@@ -18141,7 +19018,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "secret-power",
@@ -18206,7 +19086,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "secret-sword",
@@ -18238,7 +19119,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "seed-bomb",
@@ -18274,7 +19158,10 @@
 			"tm": {
 				"id": 145,
 				"cost": 8700
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "seed-flare",
@@ -18308,7 +19195,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "seismic-toss",
@@ -18339,7 +19227,8 @@
 				"type": [
 					"fighting"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "self-destruct",
@@ -18373,7 +19262,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"explosive"
+			]
 		},
 		{
 			"id": "shadow-ball",
@@ -18409,7 +19301,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "shadow-bone",
@@ -18441,7 +19336,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "shadow-claw",
@@ -18477,7 +19373,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "shadow-force",
@@ -18509,7 +19406,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "shadow-punch",
@@ -18538,7 +19436,10 @@
 				"type": [
 					"ghost"
 				]
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "shadow-sneak",
@@ -18570,7 +19471,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sharpen",
@@ -18584,7 +19486,8 @@
 			"description": [
 				"You collect your focus, sharpening your combat skills. You may add 1d4 to all attack rolls for the duration."
 			],
-			"higherLevels": "The dice roll for this move changes to 1d6 at level 10."
+			"higherLevels": "The dice roll for this move changes to 1d6 at level 10.",
+			"categories": []
 		},
 		{
 			"id": "shed-tail",
@@ -18597,7 +19500,8 @@
 			"range": "self",
 			"description": [
 				"When hit with an attack, you may use your reaction to take 2d6 typeless damage in order to negate the damage and effects of the attack. If you do, you must switch out of battle as a free action."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "sheer-cold",
@@ -18610,7 +19514,8 @@
 			"range": "30ft",
 			"description": [
 				"You send a chill down the spine of a creature, freezing its core. Choose a target in range and roll a d20. On a 20, the target faints. On any other roll, this move has no effect. If the target's level is 10 more than your own, this move automatically fails."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "shell-side-arm",
@@ -18649,7 +19554,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "shell-smash",
@@ -18662,7 +19568,8 @@
 			"range": "self",
 			"description": [
 				"You break off a piece of your shell, lowering your defense but improving your attack. For the duration, lower your AC by 1, but add proficiency to all damage rolls (once per move). This move is not stackable."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "shell-trap",
@@ -18697,7 +19604,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "shelter",
@@ -18710,7 +19618,8 @@
 			"range": "self",
 			"description": [
 				"As a reaction to being hit by an attack, you make your skin as hard as an iron shield. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "shift-gear",
@@ -18723,7 +19632,8 @@
 			"range": "self",
 			"description": [
 				"You rotate your gears quickly, raising your attack and speed. When you activate this move, add +1 to your attack and damage rolls, and +10 to your speed for the duration."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "shock-wave",
@@ -18751,7 +19661,8 @@
 				"type": [
 					"electric"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "shore-up",
@@ -18767,7 +19678,8 @@
 			"description": [
 				"You use the power of the earth around you to help heal your wounds, recovering 2d8 + MOVE hit points.  If used during a Sandstorm, your MOVE modifier is doubled."
 			],
-			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17."
+			"higherLevels": "The damage dice roll for this move changes to 2d10 at level 5, 3d10 at level 10, and 4d12 at level 17.",
+			"categories": []
 		},
 		{
 			"id": "signal-beam",
@@ -18801,7 +19713,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "silk-trap",
@@ -18823,7 +19736,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "silver-wind",
@@ -18854,7 +19768,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "simple-beam",
@@ -18876,7 +19791,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sing",
@@ -18890,7 +19806,10 @@
 			"description": [
 				"You sing a beautiful song in an attempt to put creatures to to sleep. Roll 5d8; the total is how many hit points of creature this move can affect. creatures within 30 feet of you are affected in ascending order of their current hit points. Starting with the creature that has the lowest current hit points, each creature affected by this move falls asleep. Subtract each creature’s hit points from the total before moving on to the creature with the next lowest hit points. A creature’s hit points must be equal to or less than the remaining total for that creature to be affected."
 			],
-			"higherLevels": "The number of hit points affected changes to 7d8 at level 5, 6d12 at level 10, and 11d8 at level 17."
+			"higherLevels": "The number of hit points affected changes to 7d8 at level 5, 6d12 at level 10, and 11d8 at level 17.",
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "sketch",
@@ -18903,7 +19822,8 @@
 			"range": "self",
 			"description": [
 				"When any move is activated within sight of you, use a reaction to copy it to your move list, replacing it with one instance of Sketch in your current move list permanently. Sketch may not be used to copy a Signature or Legendary-only Move."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "skill-swap",
@@ -18928,7 +19848,8 @@
 			"tm": {
 				"id": 156,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "skitter-smack",
@@ -18964,7 +19885,8 @@
 			"tm": {
 				"id": 246,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "skull-bash",
@@ -19001,7 +19923,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sky-attack",
@@ -19033,7 +19956,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sky-drop",
@@ -19075,7 +19999,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sky-uppercut",
@@ -19107,7 +20032,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "slack-off",
@@ -19120,7 +20048,8 @@
 			"range": "self",
 			"description": [
 				"You give yourself a break, healing your wounds. When you activate this move, you become incapacitated immediately and through your next two turns. Your trainer may not switch you out during this time. At the end of the second turn, regain half of your maximum hit points and become stable once again."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "slam",
@@ -19151,7 +20080,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "slash",
@@ -19183,7 +20113,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "sleep-powder",
@@ -19204,7 +20137,10 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"powder"
+			]
 		},
 		{
 			"id": "sleep-talk",
@@ -19221,7 +20157,8 @@
 			"tm": {
 				"id": 88,
 				"cost": 4500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sludge",
@@ -19259,7 +20196,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sludge-bomb",
@@ -19301,7 +20239,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "sludge-wave",
@@ -19340,7 +20281,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "smack-down",
@@ -19375,7 +20317,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "smart-strike",
@@ -19408,7 +20351,8 @@
 				"type": [
 					"steel"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "smelling-salts",
@@ -19439,7 +20383,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "smog",
@@ -19473,7 +20418,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "smokescreen",
@@ -19494,7 +20440,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "snap-trap",
@@ -19530,7 +20477,8 @@
 				"type": [
 					"grass"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "snarl",
@@ -19569,7 +20517,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "snatch",
@@ -19590,7 +20541,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "snipe-shot",
@@ -19621,7 +20573,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "snore",
@@ -19650,7 +20603,10 @@
 				"type": [
 					"normal"
 				]
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "snowscape",
@@ -19670,7 +20626,8 @@
 			"tm": {
 				"id": 134,
 				"cost": 15000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "soak",
@@ -19692,7 +20649,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "soft-boiled",
@@ -19719,7 +20677,8 @@
 				},
 				"modifier": "MOVE",
 				"type": "healing"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "solar-beam",
@@ -19758,7 +20717,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "solar-blade",
@@ -19794,7 +20754,10 @@
 			"tm": {
 				"id": 219,
 				"cost": 2700
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "sonic-boom",
@@ -19828,7 +20791,8 @@
 				"type": [
 					"normal"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "spacial-rend",
@@ -19863,7 +20827,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "spark",
@@ -19895,7 +20860,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sparkling-aria",
@@ -19930,7 +20896,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "spectral-thief",
@@ -19962,7 +20931,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "speed-swap",
@@ -19984,7 +20954,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "spicy-extract",
@@ -20006,7 +20977,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "spider-web",
@@ -20030,7 +21002,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "spike-cannon",
@@ -20062,7 +21035,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"multistrike"
+			]
 		},
 		{
 			"id": "spikes",
@@ -20098,7 +21074,8 @@
 			"tm": {
 				"id": 152,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "spiky-shield",
@@ -20114,7 +21091,8 @@
 			],
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "spin-out",
@@ -20145,7 +21123,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "spirit-break",
@@ -20177,7 +21156,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "spirit-shackle",
@@ -20209,7 +21189,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "spit-up",
@@ -20241,7 +21222,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "spite",
@@ -20267,7 +21249,8 @@
 			"tm": {
 				"id": 209,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "splash",
@@ -20280,7 +21263,8 @@
 			"range": "self",
 			"description": [
 				"You flail around on the ground, doing no damage and looking ridiculous, but you can leap up to 50 feet in the air."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "spore",
@@ -20305,7 +21289,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"powder"
+			]
 		},
 		{
 			"id": "spotlight",
@@ -20327,7 +21314,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "springtide-storm",
@@ -20362,7 +21350,10 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "stealth-rock",
@@ -20398,7 +21389,8 @@
 			"tm": {
 				"id": 170,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "steam-eruption",
@@ -20433,7 +21425,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "steamroller",
@@ -20464,7 +21457,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "steel-beam",
@@ -20504,7 +21498,8 @@
 			"tm": {
 				"id": 204,
 				"cost": 14200
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "steel-roller",
@@ -20538,7 +21533,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "steel-wing",
@@ -20574,7 +21570,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sticky-web",
@@ -20598,7 +21595,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "stockpile",
@@ -20611,7 +21609,8 @@
 			"range": "self",
 			"description": [
 				"You use your action to store energy for a Spit Up or Swallow move, increasing your defense. Raise your AC by 1 until you use one of those two moves. This move may be stacked a maximum of 3 times before the energy is used."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "stomp",
@@ -20643,7 +21642,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "stomping-tantrum",
@@ -20678,7 +21678,8 @@
 			"tm": {
 				"id": 150,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "stone-axe",
@@ -20716,7 +21717,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "stone-edge",
@@ -20754,7 +21758,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "stored-power",
@@ -20790,7 +21795,8 @@
 			"tm": {
 				"id": 130,
 				"cost": 3600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "storm-throw",
@@ -20821,7 +21827,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "strange-steam",
@@ -20856,7 +21863,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "strength",
@@ -20887,7 +21895,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "strength-sap",
@@ -20913,7 +21922,8 @@
 				},
 				"modifier": "MOVE",
 				"type": "healing"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "string-shot",
@@ -20937,7 +21947,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "struggle",
@@ -20956,7 +21967,8 @@
 			],
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "struggle-bug",
@@ -20992,7 +22004,8 @@
 			"tm": {
 				"id": 114,
 				"cost": 2500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "stuff-cheeks",
@@ -21005,7 +22018,8 @@
 			"range": "self",
 			"description": [
 				"You consume a held food item, gaining its effects. In addition, your AC increases by 2 for 10 minutes. The max bonus AC you can gain this way is 4. This move works even in the presence of Unnerve or Magic Room."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "stun-spore",
@@ -21026,7 +22040,10 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"powder"
+			]
 		},
 		{
 			"id": "submission",
@@ -21063,7 +22080,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "substitute",
@@ -21080,7 +22098,8 @@
 			"tm": {
 				"id": 90,
 				"cost": 7500
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sucker-punch",
@@ -21112,7 +22131,8 @@
 				"type": [
 					"dark"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sunny-day",
@@ -21129,7 +22149,8 @@
 			"tm": {
 				"id": 11,
 				"cost": 4400
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sunsteel-strike",
@@ -21160,7 +22181,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "super-fang",
@@ -21195,7 +22217,8 @@
 			"tm": {
 				"id": 213,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "supercell-slam",
@@ -21232,7 +22255,8 @@
 			"tm": {
 				"id": 238,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "superpower",
@@ -21264,7 +22288,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "supersonic",
@@ -21289,7 +22314,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "surf",
@@ -21328,7 +22356,8 @@
 					"str"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "surging-strikes",
@@ -21359,7 +22388,10 @@
 				"type": [
 					"water"
 				]
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "swagger",
@@ -21385,7 +22417,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "swallow",
@@ -21411,7 +22444,8 @@
 				},
 				"modifier": "MOVE",
 				"type": "healing"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sweet-kiss",
@@ -21433,7 +22467,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "sweet-scent",
@@ -21458,7 +22493,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "swift",
@@ -21488,7 +22524,8 @@
 			"tm": {
 				"id": 124,
 				"cost": 3600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "switcheroo",
@@ -21509,7 +22546,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "swords-dance",
@@ -21545,7 +22583,10 @@
 				"type": [
 					"normal"
 				]
-			}
+			},
+			"categories": [
+				"dance"
+			]
 		},
 		{
 			"id": "synchronoise",
@@ -21580,7 +22621,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "synthesis",
@@ -21596,7 +22638,8 @@
 			"description": [
 				"You regenerate from the inside, healing some of your wounds. Heal yourself for 1d12 + MOVE hit points. If activated in harsh sunlight, double the healing dice."
 			],
-			"higherLevels": "The healing dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17."
+			"higherLevels": "The healing dice roll for this move changes to 2d8 at level 5, 2d12 at level 10, and 6d6 at level 17.",
+			"categories": []
 		},
 		{
 			"id": "syrup-bomb",
@@ -21631,7 +22674,10 @@
 				"type": [
 					"grass"
 				]
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "tachyon-cutter",
@@ -21659,7 +22705,10 @@
 				"type": [
 					"steel"
 				]
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "tackle",
@@ -21691,7 +22740,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "tail-glow",
@@ -21704,7 +22754,8 @@
 			"range": "self",
 			"description": [
 				"Your tail emits a flash of light, boosting your attack. For the duration, double your STAB damage."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "tail-slap",
@@ -21736,7 +22787,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"multistrike"
+			]
 		},
 		{
 			"id": "tail-whip",
@@ -21758,7 +22812,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "tailwind",
@@ -21775,7 +22830,10 @@
 			"tm": {
 				"id": 168,
 				"cost": 6600
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "take-down",
@@ -21810,7 +22868,8 @@
 			"tm": {
 				"id": 102,
 				"cost": 7400
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "take-heart",
@@ -21824,7 +22883,8 @@
 			"range": "self",
 			"description": [
 				"As a reaction to receiving a negative Status Condition or becoming Frightened, heal yourself of that Condition and become immune to receiving new Status Conditions or becoming Frightened until the end of your next turn. Additionally, until the end of your next turn, you gain advantage on attack rolls made with WIS or CHA as the Move Power and on all WIS or CHA saving throws."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "tar-shot",
@@ -21858,7 +22918,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "taunt",
@@ -21884,7 +22945,8 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "tearful-look",
@@ -21906,7 +22968,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "teatime",
@@ -21927,7 +22990,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "techno-blast",
@@ -21965,7 +23029,8 @@
 					"water",
 					"electric"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "teeter-dance",
@@ -21987,7 +23052,10 @@
 					"wis"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"dance"
+			]
 		},
 		{
 			"id": "telekinesis",
@@ -22009,7 +23077,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "teleport",
@@ -22022,7 +23091,8 @@
 			"range": "40ft",
 			"description": [
 				"You disappear from view and reappear at an unoccupied point within range. In wild creature battles, this move can be activated to automatically count as a single success in a group DEX check to run away."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "temper-flare",
@@ -22058,7 +23128,8 @@
 			"tm": {
 				"id": 235,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "tera-blast",
@@ -22091,7 +23162,8 @@
 			"tm": {
 				"id": 205,
 				"cost": 9100
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "tera-starstorm",
@@ -22126,7 +23198,8 @@
 				},
 				"modifier": "MOVE",
 				"type": "stellar"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "terrain-pulse",
@@ -22195,7 +23268,10 @@
 					"fairy",
 					"psychic"
 				]
-			}
+			},
+			"categories": [
+				"pulse"
+			]
 		},
 		{
 			"id": "thief",
@@ -22236,7 +23312,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "thousand-arrows",
@@ -22271,7 +23348,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "thousand-waves",
@@ -22306,7 +23384,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "thrash",
@@ -22337,7 +23416,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "throat-chop",
@@ -22376,7 +23456,8 @@
 			"tm": {
 				"id": 248,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "thunder",
@@ -22415,7 +23496,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "thunder-cage",
@@ -22452,7 +23534,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "thunder-fang",
@@ -22488,7 +23571,10 @@
 			"tm": {
 				"id": 109,
 				"cost": 8700
-			}
+			},
+			"categories": [
+				"biting"
+			]
 		},
 		{
 			"id": "thunder-punch",
@@ -22524,7 +23610,10 @@
 			"tm": {
 				"id": 143,
 				"cost": 6200
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "thunder-shock",
@@ -22556,7 +23645,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "thunder-wave",
@@ -22582,7 +23672,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "thunderbolt",
@@ -22618,7 +23709,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "thunderclap",
@@ -22649,7 +23741,8 @@
 				"type": [
 					"electric"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "thunderous-kick",
@@ -22687,7 +23780,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "tickle",
@@ -22708,7 +23802,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "tidy-up",
@@ -22733,7 +23828,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "topsy-turvy",
@@ -22754,7 +23850,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "torch-song",
@@ -22789,7 +23886,10 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "torment",
@@ -22818,7 +23918,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "toxic",
@@ -22843,7 +23944,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "toxic-spikes",
@@ -22869,7 +23971,8 @@
 			"tm": {
 				"id": 153,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "toxic-thread",
@@ -22887,7 +23990,8 @@
 			],
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "trailblaze",
@@ -22924,7 +24028,8 @@
 			"tm": {
 				"id": 118,
 				"cost": 15000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "transform",
@@ -22937,7 +24042,8 @@
 			"range": "50ft",
 			"description": [
 				"You attempt to morph into a near-exact copy of a creature in range. The base SR of the target must be able to be controlled by your trainer or the move fails. For the duration, you copy the target's type, ability scores, AC, skills, speeds, senses, abilities, and current moves. You retain your own feats, level, and HP (Changed CON does not impact your HP)."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "tri-attack",
@@ -22993,7 +24099,8 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "trick",
@@ -23015,7 +24122,8 @@
 			"tm": {
 				"id": 164,
 				"cost": 6600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "trick-room",
@@ -23032,7 +24140,8 @@
 			"tm": {
 				"id": 92,
 				"cost": 5000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "trick-or-treat",
@@ -23054,7 +24163,8 @@
 					"cha"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "triple-arrows",
@@ -23086,7 +24196,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "triple-axel",
@@ -23123,7 +24234,8 @@
 			"tm": {
 				"id": 240,
 				"cost": 9100
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "triple-dive",
@@ -23155,7 +24267,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "triple-kick",
@@ -23187,7 +24300,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "trop-kick",
@@ -23219,7 +24333,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "trump-card",
@@ -23251,7 +24366,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "twin-beam",
@@ -23283,7 +24399,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "twineedle",
@@ -23314,7 +24431,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "twister",
@@ -23346,7 +24464,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "u-turn",
@@ -23381,7 +24502,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "upper-hand",
@@ -23418,7 +24540,8 @@
 			"tm": {
 				"id": 256,
 				"cost": 3600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "uproar",
@@ -23457,7 +24580,10 @@
 			"tm": {
 				"id": 220,
 				"cost": 6600
-			}
+			},
+			"categories": [
+				"sound"
+			]
 		},
 		{
 			"id": "v-create",
@@ -23489,7 +24615,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "vacuum-wave",
@@ -23524,7 +24651,8 @@
 			"tm": {
 				"id": 214,
 				"cost": 4900
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "venom-drench",
@@ -23546,7 +24674,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "venoshock",
@@ -23582,7 +24711,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "vice-grip",
@@ -23619,7 +24749,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "victory-dance",
@@ -23633,7 +24764,10 @@
 			"description": [
 				"You perform an intense dance to usher victory. For the duration, add +1 to your AC, attack rolls, and saving throws."
 			],
-			"higherLevels": "Add +2 to your AC, attack rolls, and saving throws at level 10 and above"
+			"higherLevels": "Add +2 to your AC, attack rolls, and saving throws at level 10 and above",
+			"categories": [
+				"dance"
+			]
 		},
 		{
 			"id": "vine-whip",
@@ -23665,7 +24799,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "vital-throw",
@@ -23693,7 +24828,8 @@
 				"type": [
 					"fighting"
 				]
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "volt-switch",
@@ -23728,7 +24864,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "volt-tackle",
@@ -23760,7 +24897,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "wake-up-slap",
@@ -23792,7 +24930,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "water-gun",
@@ -23823,7 +24962,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "water-pledge",
@@ -23858,7 +24998,8 @@
 			"tm": {
 				"id": 190,
 				"cost": 9100
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "water-pulse",
@@ -23893,7 +25034,10 @@
 			"tm": {
 				"id": 111,
 				"cost": 2500
-			}
+			},
+			"categories": [
+				"pulse"
+			]
 		},
 		{
 			"id": "water-shuriken",
@@ -23924,7 +25068,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"multistrike"
+			]
 		},
 		{
 			"id": "water-sport",
@@ -23937,7 +25084,8 @@
 			"range": "self (5ft radius)",
 			"description": [
 				"You soak yourself and all allies with water, reducing the amount of fire damage taken for anyone affected. For the duration, you and any ally in range (when you initially activated this move) have resistance to fire-type attacks. If an affected creature was already resistant, it is now immune. If it was vulnerable, it now takes normal damage. If it was immune to fire-type moves already, nothing happens."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "water-spout",
@@ -23969,7 +25117,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "waterfall",
@@ -24008,7 +25157,8 @@
 					"str"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "wave-crash",
@@ -24039,7 +25189,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "weather-ball",
@@ -24108,7 +25259,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "whirlpool",
@@ -24149,7 +25303,8 @@
 			"tm": {
 				"id": 236,
 				"cost": 3600
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "whirlwind",
@@ -24170,7 +25325,10 @@
 					"str"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "wicked-blow",
@@ -24201,7 +25359,10 @@
 				"type": [
 					"dark"
 				]
-			}
+			},
+			"categories": [
+				"punch"
+			]
 		},
 		{
 			"id": "wide-guard",
@@ -24214,7 +25375,8 @@
 			"range": "50ft",
 			"description": [
 				"You have the ability to guard your allies from area-of-effect moves. As a reaction, when a creature activates a damaging move that damages multiple allies within range, you may halve the damage dealt. On future instances of this reaction in the same combat, you must roll higher than a 15 on a d20 roll or forfeit the reaction with no effect"
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "wildbolt-storm",
@@ -24251,7 +25413,10 @@
 					"dex"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": [
+				"wind"
+			]
 		},
 		{
 			"id": "wild-charge",
@@ -24286,7 +25451,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "will-o-wisp",
@@ -24309,7 +25475,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "wing-attack",
@@ -24341,7 +25508,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "wish",
@@ -24368,7 +25536,8 @@
 				},
 				"modifier": "MOVE",
 				"type": "healing"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "withdraw",
@@ -24385,7 +25554,8 @@
 			"higherLevels": "Increase your AC by +3 at level 10 and above.",
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "wonder-room",
@@ -24398,7 +25568,8 @@
 			"range": "self (50ft radius)",
 			"description": [
 				"You create a bizarre vibe in the air in a 50-foot-radius circle, centered on you. For the duration, all WIS saves become CON saves and all CON saves become WIS saves."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "wood-hammer",
@@ -24429,7 +25600,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "work-up",
@@ -24446,7 +25618,8 @@
 			"tm": {
 				"id": 1,
 				"cost": 8000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "worry-seed",
@@ -24468,7 +25641,8 @@
 					"con"
 				],
 				"dc": "MOVE"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "wrap",
@@ -24506,7 +25680,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "wring-out",
@@ -24537,7 +25712,8 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "x-scissor",
@@ -24573,7 +25749,10 @@
 			},
 			"attack": {
 				"scope": "melee"
-			}
+			},
+			"categories": [
+				"slicing"
+			]
 		},
 		{
 			"id": "yawn",
@@ -24586,7 +25765,8 @@
 			"range": "30ft",
 			"description": [
 				"You release a big yawn that causes a creature to become very drowsy. Choose a target in range. If that target is still in the battle at the end of its next turn, it falls asleep."
-			]
+			],
+			"categories": []
 		},
 		{
 			"id": "zap-cannon",
@@ -24618,7 +25798,10 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": [
+				"ballistic"
+			]
 		},
 		{
 			"id": "zen-headbutt",
@@ -24654,7 +25837,8 @@
 			"tm": {
 				"id": 137,
 				"cost": 15000
-			}
+			},
+			"categories": []
 		},
 		{
 			"id": "zing-zap",
@@ -24685,7 +25869,8 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			}
+			},
+			"categories": []
 		}
 	]
 }
