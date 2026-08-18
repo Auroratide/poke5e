@@ -34,7 +34,7 @@ This one-shot adventure is written assuming a party of 3 - 4 players, but can ha
 
 The majority of this guide will be an outline of the adventure, but occasionally there will be snippets of descriptions or encounters that you should read aloud.
 
-> Important things to read aloud your players will be in boxes like this one.
+> Important things to read aloud to your players will be in boxes like this one.
 
 One of the main quests in this adventure will require the players to go out and catch a variety of different species of Pokémon. Players will roll on a random table (shown later) to determine which Pokémon they encounter. For organizational purposes, the stat blocks of each of these possible Pokémon are in the appendix at the end of this manual.
 
