@@ -152,7 +152,7 @@ test("getting the entire fakemon's chain", async () => {
 	expect(stageThreeMaxStage).toEqual(3)
 })
 
-test("getting all locally registered fakemon evolitoons", async () => {
+test("getting all locally registered fakemon evolutions", async () => {
 	// given
 	const fakemonDraft = stubFakemon({
 		species: stubPokemonSpecies({

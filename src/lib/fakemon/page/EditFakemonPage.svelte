@@ -32,7 +32,7 @@
 		const originalEvolutions = $allEvolutions?.allEvolutions($fakemon.value.species.id)
 
 		const upsertedEvolutions: EvolutionUpdate[] = e.detail.evolutions.map((evolution) => {
-			const originalEvolution = originalEvolutions.find((it) => it.id === evolution.id)
+			const originalEvolution = originalEvolutions?.find((it) => it.id === evolution.id)
 
 			return {
 				type: "upsert",
@@ -48,7 +48,7 @@
 			}
 		})
 
-		const removedEvolutions: EvolutionUpdate[] = originalEvolutions.filter((original) => !e.detail.evolutions.find((it) => it.id === original.id)).map((evolution) => ({
+		const removedEvolutions: EvolutionUpdate[] = originalEvolutions?.filter((original) => !e.detail.evolutions.find((it) => it.id === original.id)).map((evolution) => ({
 			type: "remove",
 			evolution,
 			writeKeys: {

@@ -106,7 +106,7 @@ export function createStore(): FakemonStore {
 		},
 
 		getWriteKey: (key: ReadKey): WriteKey | undefined => {
-			return FakemonLocalStorage.get(key).writeKey
+			return FakemonLocalStorage.get(key)?.writeKey
 		},
 		
 		reset: async () => {
