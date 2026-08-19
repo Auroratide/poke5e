@@ -264,6 +264,97 @@ describe("updating", () => {
 		expect(minereonResult.length).toEqual(1)
 	})
 
+	test("with only one of two write keys", async () => {
+		// given: a fakemon-to-fakemon line, of which we've since lost one key
+		const ironTail = await fakemonProvider.add(stubFakemon({
+			species: stubPokemonSpecies({ name: "Iron Tail" }).data,
+		}).data.species)
+		const ironFlame = await fakemonProvider.add(stubFakemon({
+			species: stubPokemonSpecies({ name: "Iron Flame" }).data,
+		}).data.species)
+
+		const evolution = await evolutionProvider.add(stubEvolution({
+			from: ironTail.species.id.data,
+			to: ironFlame.species.id.data,
+		}).data, {
+			from: ironTail.data.writeKey,
+			to: ironFlame.data.writeKey,
+		})
+
+		// when: we repoint the end we lost, supplying only the key we still have
+		evolution.data.to = SpeciesIdentifier.fromSpeciesName("eevee").data
+		await evolutionProvider.update(evolution, {
+			from: ironTail.data.writeKey,
+		}, {
+			from: ironTail.data.writeKey,
+		})
+
+		// then
+		const result = await evolutionProvider.get(ironTail.species.id)
+		expect(result.length).toEqual(1)
+		expect(result[0].data.to).toEqual(SpeciesIdentifier.fromSpeciesName("eevee").data)
+
+		expect((await evolutionProvider.get(ironFlame.species.id)).length).toEqual(0)
+	})
+
+	test("with no write keys at all", async () => {
+		// given: a canon-to-fakemon line, whose stored from_write_key is NULL
+		const terreon = await fakemonProvider.add(stubFakemon({
+			species: stubPokemonSpecies({ name: "Terreon" }).data,
+		}).data.species)
+		const minereon = await fakemonProvider.add(stubFakemon({
+			species: stubPokemonSpecies({ name: "Minereon" }).data,
+		}).data.species)
+
+		const evolution = await evolutionProvider.add(stubEvolution({
+			from: SpeciesIdentifier.fromSpeciesName("eevee").data,
+			to: terreon.species.id.data,
+		}).data, {
+			to: terreon.data.writeKey,
+		})
+
+		// then: a NULL stored key must not count as proof of access
+		evolution.data.to = minereon.species.id.data
+		await expect(evolutionProvider.update(evolution, {
+			to: minereon.data.writeKey,
+		}, {})).rejects.toThrow(EvolutionDataProviderError)
+
+		expect((await evolutionProvider.get(terreon.species.id)).length).toEqual(1)
+	})
+
+	test("cannot repoint an end at a fakemon we do not own", async () => {
+		// given: a fakemon-to-fakemon line we hold one key for, and a fakemon we hold no key for
+		const ironTail = await fakemonProvider.add(stubFakemon({
+			species: stubPokemonSpecies({ name: "Iron Tail" }).data,
+		}).data.species)
+		const ironFlame = await fakemonProvider.add(stubFakemon({
+			species: stubPokemonSpecies({ name: "Iron Flame" }).data,
+		}).data.species)
+		const someoneElses = await fakemonProvider.add(stubFakemon({
+			species: stubPokemonSpecies({ name: "Someone Elses" }).data,
+		}).data.species)
+
+		const evolution = await evolutionProvider.add(stubEvolution({
+			from: ironTail.species.id.data,
+			to: ironFlame.species.id.data,
+		}).data, {
+			from: ironTail.data.writeKey,
+			to: ironFlame.data.writeKey,
+		})
+
+		// then: one key lets us sever or redirect our own link, not attach someone else's fakemon
+		evolution.data.to = someoneElses.species.id.data
+		await expect(evolutionProvider.update(evolution, {
+			from: ironTail.data.writeKey,
+		}, {
+			from: ironTail.data.writeKey,
+		})).rejects.toThrow(EvolutionDataProviderError)
+
+		const result = await evolutionProvider.get(ironTail.species.id)
+		expect(result.length).toEqual(1)
+		expect(result[0].data.to).toEqual(ironFlame.species.id.data)
+	})
+
 	test("original write keys were not known", async () => {
 		// given
 		const terreonDraft = stubFakemon({
@@ -328,6 +419,52 @@ describe("removal", () => {
 		// then
 		const result = await evolutionProvider.get(terreon.species.id)
 		expect(result.length).toEqual(0)
+	})
+
+	test("removing with only one of two write keys", async () => {
+		// given: a fakemon-to-fakemon line, of which we've since lost one key
+		const ironTail = await fakemonProvider.add(stubFakemon({
+			species: stubPokemonSpecies({ name: "Iron Tail" }).data,
+		}).data.species)
+		const ironFlame = await fakemonProvider.add(stubFakemon({
+			species: stubPokemonSpecies({ name: "Iron Flame" }).data,
+		}).data.species)
+
+		const evolution = await evolutionProvider.add(stubEvolution({
+			from: ironTail.species.id.data,
+			to: ironFlame.species.id.data,
+		}).data, {
+			from: ironTail.data.writeKey,
+			to: ironFlame.data.writeKey,
+		})
+
+		// when: we only supply the key we still have
+		await evolutionProvider.remove(evolution.id, {
+			from: ironTail.data.writeKey,
+		})
+
+		// then
+		expect((await evolutionProvider.get(ironTail.species.id)).length).toEqual(0)
+	})
+
+	test("removing with no write keys at all", async () => {
+		// given: a canon-to-fakemon line, whose stored from_write_key is NULL
+		const terreon = await fakemonProvider.add(stubFakemon({
+			species: stubPokemonSpecies({ name: "Terreon" }).data,
+		}).data.species)
+
+		const evolution = await evolutionProvider.add(stubEvolution({
+			from: SpeciesIdentifier.fromSpeciesName("eevee").data,
+			to: terreon.species.id.data,
+		}).data, {
+			to: terreon.data.writeKey,
+		})
+
+		// then: a NULL stored key must not count as proof of access
+		await expect(evolutionProvider.remove(evolution.id, {}))
+			.rejects.toThrow(EvolutionDataProviderError)
+
+		expect((await evolutionProvider.get(terreon.species.id)).length).toEqual(1)
 	})
 
 	test("non-existent id", async () => {

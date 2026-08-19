@@ -251,6 +251,50 @@ test("removing an evolution", async () => {
 	expect(toxeonEvolution.length).toEqual(0)
 })
 
+test("removing an evolution with only one write key", async () => {
+	// given
+	const toxeonDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Toxeon",
+		}).data,
+	})
+
+	const venomeonDraft = stubFakemon({
+		species: stubPokemonSpecies({
+			name: "Venomeon",
+		}).data,
+	})
+
+	const toxeon = await fakemonProvider.add(toxeonDraft.data.species)
+	const venomeon = await fakemonProvider.add(venomeonDraft.data.species)
+
+	const evolutionDraft = stubEvolution({
+		id: tmpEvolutionId(),
+		from: toxeon.species.id.data,
+		to: venomeon.species.id.data,
+	})
+
+	const evolution = await evolutionProvider.add(evolutionDraft.data, {
+		from: toxeon.data.writeKey,
+		to: venomeon.data.writeKey,
+	})
+
+	// when: we've since lost venomeon's write key
+	await EvolutionStore.update([{
+		type: "remove",
+		evolution: evolution,
+		writeKeys: {
+			from: toxeon.data.writeKey,
+			to: undefined,
+		},
+	}])
+
+	// then: the forest drops the edge from both ends
+	const storedValue = await waitForSpecies(toxeon.species.id)
+	expect(storedValue.evolvesTo(toxeon.species.id).length).toEqual(0)
+	expect(storedValue.evolvesFrom(venomeon.species.id).length).toEqual(0)
+})
+
 test("updating an existing evolution condition", async () => {
 	// given
 	const fakemonDraft = stubFakemon({
