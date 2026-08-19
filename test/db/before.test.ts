@@ -58,6 +58,11 @@ test("updating trainers", async () => {
 		_path_rank_4_name: "",
 		_path_rank_4_desc: "",
 		_tags: ["female", "nurse"],
+		_hit_dice_size: "d10",
+		_token_color: "#ff0000",
+		_token_crop_x: 0.5,
+		_token_crop_y: 0.5,
+		_token_crop_size: 0.75,
 	})
 
 	await call("update_trainer", {
@@ -133,6 +138,12 @@ test("updating trainers", async () => {
 	expect(irisInfo.rank_performance).toEqual(0)
 	expect(irisInfo.rank_persuasion).toEqual(0)
 	expect(irisInfo.tags).toEqual(["female", "nurse"])
+	expect(irisInfo.hit_dice_size).toEqual("d10")
+
+	expect(irisInfo.token_color).toEqual("#ff0000")
+	expect(irisInfo.token_crop_x).toEqual(0.5)
+	expect(irisInfo.token_crop_y).toEqual(0.5)
+	expect(irisInfo.token_crop_size).toEqual(0.75)
 
 	// Custom Trainer Path
 	await call("update_trainer", {
