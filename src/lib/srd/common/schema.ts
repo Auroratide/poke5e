@@ -19,7 +19,10 @@ export const PokeType = z.union([
 	z.literal("rock"),
 	z.literal("steel"),
 	z.literal("water"),
-])
+]).meta({
+	id: "PokeType",
+	title: "Pokemon Type",
+})
 
 export const CreatureSize = z.union([
 	z.literal("tiny"),
@@ -28,7 +31,10 @@ export const CreatureSize = z.union([
 	z.literal("large"),
 	z.literal("huge"),
 	z.literal("gargantuan"),
-])
+]).meta({
+	id: "CreatureSize",
+	title: "Creature Size",
+})
 
 export const HitDiceSize = z.union([
 	z.literal("d4"),
@@ -37,7 +43,11 @@ export const HitDiceSize = z.union([
 	z.literal("d10"),
 	z.literal("d12"),
 	z.literal("d20"),
-])
+]).meta({
+	id: "HitDiceSize",
+	title: "Hit Dice Size",
+})
+
 
 export const SpeedType = z.union([
 	z.literal("walking"),
@@ -46,7 +56,10 @@ export const SpeedType = z.union([
 	z.literal("flying"),
 	z.literal("hover"),
 	z.literal("burrowing"),
-])
+]).meta({
+	id: "SpeedType",
+	title: "Speed Type",
+})
 
 export const Attribute = z.union([
 	z.literal("str"),
@@ -55,7 +68,10 @@ export const Attribute = z.union([
 	z.literal("int"),
 	z.literal("wis"),
 	z.literal("cha"),
-])
+]).meta({
+	id: "Attribute",
+	title: "Attribute",
+})
 
 export const AttributeValues = z.object({
 	str: z.int(),
@@ -64,6 +80,9 @@ export const AttributeValues = z.object({
 	int: z.int(),
 	wis: z.int(),
 	cha: z.int(),
+}).meta({
+	id: "AttributeValues",
+	title: "Attribute Values",
 })
 
 export const Skill = z.union([
@@ -85,11 +104,17 @@ export const Skill = z.union([
 	z.literal("intimidation"),
 	z.literal("performance"),
 	z.literal("persuasion"),
-])
+]).meta({
+	id: "Skill",
+	title: "Skill",
+})
 
 export const SenseType = z.union([
 	z.literal("darkvision"),
 	z.literal("blindsight"),
 	z.literal("tremorsense"),
 	z.literal("truesight"),
-])
+]).meta({
+	id: "SenseType",
+	title: "Sense Type",
+})

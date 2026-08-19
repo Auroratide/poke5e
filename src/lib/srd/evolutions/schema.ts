@@ -12,10 +12,16 @@ export const EvolutionJson = z.object({
 		type: z.string(),
 		value: z.union([z.string(), z.number()]),
 	})),
+}).meta({
+	id: "Evolution",
+	title: "Evolution",
 })
 
 export const EvolutionListJson = z.object({
 	values: z.array(EvolutionJson),
+}).meta({
+	id: "EvolutionList",
+	title: "Evolution List",
 })
 
 export type EvolutionJson = z.infer<typeof EvolutionJson>

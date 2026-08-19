@@ -1,4 +1,4 @@
-const EDITIONS = ["2018", "2024"] as const
+export const EDITIONS = ["2018", "2024"] as const
 
 export type Edition = (typeof EDITIONS)[number]
 

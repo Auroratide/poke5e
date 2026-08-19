@@ -1,4 +1,5 @@
 import * as z from "zod"
+import { Attribute, PokeType } from "../common/schema"
 
 const TableJson = z.object({
 	type: z.string(),
@@ -9,9 +10,9 @@ const TableJson = z.object({
 export const MoveJson = z.object({
 	id: z.string(),
 	name: z.string(),
-	type: z.string(),
+	type: PokeType,
 	power: z.union([
-		z.array(z.string()),
+		z.array(Attribute),
 		z.string(),
 	]),
 	time: z.string(),
@@ -29,13 +30,13 @@ export const MoveJson = z.object({
 			"17": z.union([z.int(), z.string()]),
 		}),
 		modifier: z.union([z.number(), z.string()]),
-		type: z.union([z.string(), z.array(z.string())]),
+		type: z.union([z.string(), z.array(PokeType)]),
 	})),
 	attack: z.optional(z.object({
 		scope: z.string(),
 	})),
 	save: z.optional(z.object({
-		attribute: z.array(z.string()),
+		attribute: z.array(Attribute),
 		dc: z.string(),
 	})),
 	tm: z.optional(z.object({
@@ -43,10 +44,16 @@ export const MoveJson = z.object({
 		cost: z.int(),
 	})),
 	beta: z.optional(z.boolean()),
+}).meta({
+	id: "Move",
+	title: "Move",
 })
 
 export const MovesListJson = z.object({
 	values: z.array(MoveJson),
+}).meta({
+	id: "MoveList",
+	title: "Move List",
 })
 
 export type MoveJson = z.infer<typeof MoveJson>

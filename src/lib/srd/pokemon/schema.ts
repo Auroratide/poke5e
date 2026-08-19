@@ -51,10 +51,16 @@ export const PokemonJson = z.object({
 		nativeRegion: z.string(),
 		regions: z.array(z.string()),
 	}),
+}).meta({
+	id: "Pokemon",
+	title: "Pokemon",
 })
 
 export const PokemonListJson = z.object({
 	values: z.array(PokemonJson),
+}).meta({
+	id: "PokemonList",
+	title: "Pokemon List",
 })
 
 export type PokemonJson = z.infer<typeof PokemonJson>
