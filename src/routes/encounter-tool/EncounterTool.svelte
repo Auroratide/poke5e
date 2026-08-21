@@ -10,6 +10,7 @@
 	import { error } from "$lib/site/errors"
 	import { Url } from "$lib/site/url"
 	import { Button, Loader } from "$lib/ui/elements"
+	import { Level } from "$lib/dnd/level"
 	import Stepper from "$lib/ui/elements/Stepper.svelte"
 	import { ActionArea, InstructionText, IntField, Removable, Saveable, SelectField, TextField } from "$lib/ui/forms"
 	import { VsIcon } from "$lib/ui/icons"
@@ -208,7 +209,7 @@
 							<div class="player-item">
 								<Removable on:remove={() => deletePlayer(player.id)}>
 									<div class="player-fields">
-										<IntField label="Level" bind:value={player.level} min={1} />
+										<IntField label="Level" bind:value={player.level} min={Level.MIN} max={Level.MAX} />
 										<IntField label="Pokémon" bind:value={player.numberOfPokemon} min={1} />
 									</div>
 								</Removable>
@@ -259,7 +260,7 @@
 											<SpeciesSprite media={pokemon.data.media} alt="{pokemon.data.name}" />
 										</div>
 										<div class="pokemon-info">
-											<p class="pokemon-name">{pokemon.data.name} <label class="pokemon-level">Lv. <input type="number" min={1} bind:value={pokemon.level} /></label></p>
+											<p class="pokemon-name">{pokemon.data.name} <label class="pokemon-level">Lv. <input type="number" min={Level.MIN} max={Level.MAX} bind:value={pokemon.level} /></label></p>
 											<p class="pokemon-stats">SR: {pokemon.data.sr} • XP: {experienceAwarded(pokemon.level, pokemon.data.data.sr)}</p>
 											<TypeTag type={pokemon.data.data.type} />
 										</div>

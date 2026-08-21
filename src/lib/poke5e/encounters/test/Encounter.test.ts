@@ -210,6 +210,36 @@ describe("saveToTrainers", () => {
 		await expect(Encounter.saveToTrainers(encounter, moves)).rejects.toThrow()
 	})
 
+	test("pokemon level is too high", async () => {
+		const encounter: Encounter = {
+			pokemon: [ {
+				data: stubPokemonSpecies({
+					name: "Eevee",
+					sr: 1,
+				}),
+				level: 21,
+				count: 1,
+			} ],
+		}
+
+		await expect(Encounter.saveToTrainers(encounter, moves)).rejects.toThrow()
+	})
+
+	test("pokemon level is too low", async () => {
+		const encounter: Encounter = {
+			pokemon: [ {
+				data: stubPokemonSpecies({
+					name: "Eevee",
+					sr: 1,
+				}),
+				level: 0,
+				count: 1,
+			} ],
+		}
+
+		await expect(Encounter.saveToTrainers(encounter, moves)).rejects.toThrow()
+	})
+
 	test("a pokemon is upleveled", async () => {
 		const encounter: Encounter = {
 			pokemon: [ {

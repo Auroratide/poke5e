@@ -134,6 +134,10 @@ export const Encounter = {
 			throw new Error(`Cannot save encounter with more than ${ENCOUNTER_SIZE_LIMIT} pokémon.`)
 		}
 
+		if (encounter.pokemon.some((it) => !new Level(it.level).isValid())) {
+			throw new Error(`Pokémon in the encounter must have a level between ${Level.MIN} and ${Level.MAX}`)
+		}
+
 		const trainer = await trainerProvider.newTrainer({
 			name: "Encounter",
 			description: "Created using the encounter tool.",
