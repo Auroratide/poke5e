@@ -22,6 +22,7 @@
 	import { PageAction } from "../page-action"
 	import { matchesPokemonFilter } from "../pokemon-filter"
 	import PokemonSummary from "./PokemonSummary.svelte"
+	import StorageButton from "./StorageButton.svelte"
 	import type { PokemonId, Trainer, TrainerPokemon } from "../types"
 
 	const BAR_ID = "box-drawer-bar"
@@ -159,17 +160,16 @@
 						<PokemonSummary trainer={trainer.readKey} pokemon={p}>
 							<span slot="actions" class="row-actions">
 								{#if editable}
-									<!-- Withdrawing is reversible by the button next to it, so it
+									<!-- Withdrawing is reversible by the party's own button, so it
 									     acts straight away rather than through a confirmation
 									     card. Releasing is not, so that one still asks. -->
-									<button
-										type="button"
-										class="row-action"
-										title={m["trainers.withdrawPokemon"]({ name: p.nickname })}
-										aria-label={m["trainers.withdrawPokemon"]({ name: p.nickname })}
+									<StorageButton
+										label={m["trainers.party"]()}
+										destination="party"
+										description={m["trainers.withdrawPokemon"]({ name: p.nickname })}
 										disabled={withdrawing != null}
 										onclick={withdraw(p.id)}
-									><ChevronIcon.Up label="" /></button>
+									/>
 									<a
 										class="row-action danger"
 										href={Url.trainers(trainer.readKey, p.id, PageAction.removePokemon)}

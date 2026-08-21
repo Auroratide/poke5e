@@ -161,6 +161,19 @@ export class TrainersPage {
 		await this.expectBoxCount(expectedBoxCount)
 	}
 
+	/**
+	 * Deposits with the party row's own button, which is the short path -- no
+	 * navigation at all, the row just leaves the party.
+	 */
+	async depositFromRow(nickname: string, expectedBoxCount: number) {
+		console.log(`  Depositing ${nickname} from its row...`)
+
+		await this.ui.button(`Deposit ${nickname} into the Box`).click()
+
+		await this.expectBoxCount(expectedBoxCount)
+		await expect(this.ui.link(new RegExp(`^${nickname}`))).toBeHidden()
+	}
+
 	async withdraw(nickname: string, expectedBoxCount: number) {
 		console.log(`  Withdrawing ${nickname}...`)
 

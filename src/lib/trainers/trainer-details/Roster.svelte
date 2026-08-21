@@ -11,6 +11,7 @@
 	import type { PokemonId } from "../types"
 	import { Button, VisuallyHidden } from "$lib/ui/elements"
 	import PokemonSummary from "./PokemonSummary.svelte"
+	import StorageButton from "./StorageButton.svelte"
 	import TrainerSummary from "./TrainerSummary.svelte"
 	import { Url } from "$lib/site/url"
 	import { PageAction } from "../page-action"
@@ -85,6 +86,19 @@
 	const onWithdraw = (id: PokemonId) =>
 		$trainer.update?.setStorage(id, PokemonStorage.Party).catch(() => {}) ?? Promise.resolve()
 
+	// Depositing from the party row, the mirror of the Box row's withdraw. One
+	// flag for the whole list rather than per row: the row is about to leave the
+	// party anyway, so there is nothing finer to protect.
+	let depositing: PokemonId | undefined = undefined
+	const onDeposit = (id: PokemonId) => () => {
+		depositing = id
+		$trainer.update?.setStorage(id, PokemonStorage.Box)
+			.catch(() => {})
+			.finally(() => {
+				depositing = undefined
+			})
+	}
+
 	const resetFilters = () => {
 		filteredTags = []
 		filterTagMode = DefaultTagSelectionMode
@@ -124,7 +138,17 @@
 				<reorder-list class="nolist no-space full-width" on:commit={onReorder}>
 					{#each filtered as p (p.id)}
 						<reorder-item class="space-after">
-							<PokemonSummary trainer={$trainer.info.readKey} pokemon={p} editable />
+							<PokemonSummary trainer={$trainer.info.readKey} pokemon={p} editable>
+								<span slot="actions">
+									<StorageButton
+										label={m["trainers.box"]()}
+										destination="box"
+										description={m["trainers.depositPokemon"]({ name: p.nickname })}
+										disabled={depositing != null}
+										onclick={onDeposit(p.id)}
+									/>
+								</span>
+							</PokemonSummary>
 						</reorder-item>
 					{/each}
 				</reorder-list>
