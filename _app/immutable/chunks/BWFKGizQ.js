@@ -1,0 +1,1 @@
+import{Hs as e}from"./B3U99XCW.js";var t=class t extends e{static MIN=1;static MAX=20;get proficiencyBonus(){return 2+Math.floor((this.data-1)/4)}next(){return new t(this.data+1)}isValid(){return t.MIN<=this.data&&this.data<=t.MAX}isBelowMax(){return this.data<t.MAX}};export{t};
