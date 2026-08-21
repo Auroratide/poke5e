@@ -10,7 +10,7 @@
 	import { m } from "$lib/site/i18n"
 	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
 	import * as list from "$lib/utils/list"
-	import { TagList, TagSelection } from "$lib/poke5e/tags"
+	import { DefaultTagSelectionMode, TagList, TagSelection, type TagSelectionMode } from "$lib/poke5e/tags"
 
 	export let trainer: TrainerStore
 	export let currentPokemon: PokemonId | undefined
@@ -25,15 +25,11 @@
 		it.nickname.toLocaleLowerCase().includes(filterValue) || it.pokemonId.data.replace("-", " ").includes(filterValue)
 
 	let filteredTags: string[] = []
+	let filterTagMode: TagSelectionMode = DefaultTagSelectionMode
+	$: filteredTagsWithSearch = textFilterIsTagName ? filteredTags.concat([$filterValue]) : filteredTags
 
 	$: filtered = $trainer.pokemon
-		.filter((it) => {
-			const noTagsSpecified = filteredTags.length === 0 && !textFilterIsTagName
-			const hasDesiredTag = TagList.overlaps(it.tags, filteredTags)
-			const tagIsExplicitlySearched = textFilterIsTagName && TagList.has(it.tags, $filterValue)
-
-			return noTagsSpecified || hasDesiredTag || tagIsExplicitlySearched
-		})
+		.filter(TagList.filterBy(filteredTagsWithSearch, filterTagMode))
 		.filter(byNicknameOrSpecies($filterValue.toLocaleLowerCase()))
 	$: baseTrainerUrl = Url.trainers($trainer.info.readKey)
 
@@ -67,7 +63,7 @@
 </ListHeading>
 <div class="space-bottom">
 	<SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
-		<TagSelection bind:checked={filteredTags} tags={pokemonTags} />
+		<TagSelection bind:checked={filteredTags} bind:mode={filterTagMode} tags={pokemonTags} />
 	</SearchField>
 </div>
 <div class="relative"><!-- Needed for the > indicators to appear outside the scroll box -->

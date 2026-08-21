@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { TagList, TagSelection } from "$lib/poke5e/tags"
+	import { DefaultTagSelectionMode, TagList, TagSelection, type TagSelectionMode } from "$lib/poke5e/tags"
 	import { m } from "$lib/site/i18n"
 	import { Url } from "$lib/site/url"
 	import { Button } from "$lib/ui/elements"
@@ -26,16 +26,12 @@
 
 	const hasNoTrainers = $derived($trainers.length === 0)
 	let filteredTags = $state<string[]>([])
+	let filterTagMode = $state<TagSelectionMode>(DefaultTagSelectionMode)
 	const textFilterIsTagName = $derived(TagList.has($allTags, $trainerListFilterValue))
+	const filteredTagsWithSearch = $derived(textFilterIsTagName ? filteredTags.concat([$trainerListFilterValue]) : filteredTags)
 	const filtered = $derived(
 		$trainers
-			.filter((it) => {
-				const noTagsSpecified = filteredTags.length === 0 && !textFilterIsTagName
-				const hasDesiredTag = TagList.overlaps(it.tags, filteredTags)
-				const tagIsExplicitlySearched = textFilterIsTagName && TagList.has(it.tags, $trainerListFilterValue)
-
-				return noTagsSpecified || hasDesiredTag || tagIsExplicitlySearched
-			})
+			.filter(TagList.filterBy(filteredTagsWithSearch, filterTagMode))
 			.filter((it) => textFilterIsTagName || it.name.toLocaleLowerCase().includes($trainerListFilterValue.toLocaleLowerCase())),
 	)
 
@@ -61,7 +57,7 @@
 </ListHeading>
 <div class="space-bottom">
 	<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
-		<TagSelection bind:checked={filteredTags} tags={$allTags} />
+		<TagSelection bind:checked={filteredTags} bind:mode={filterTagMode} tags={$allTags} />
 	</SearchField>
 </div>
 {#if hasNoTrainers}

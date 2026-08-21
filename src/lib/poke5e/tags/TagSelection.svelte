@@ -2,32 +2,51 @@
 	import type { TagList } from "./TagList"
 	import { kebab } from "$lib/ui/forms"
 	import NoTags from "./NoTags.svelte"
+	import TogglePill from "$lib/ui/elements/TogglePill.svelte"
+	import VisuallyHidden from "$lib/ui/elements/VisuallyHidden.svelte"
+	import type { TagSelectionMode } from "./TagSelectionMode"
 
 	let {
 		checked = $bindable(),
+		mode = $bindable(),
 		tags,
 	}: {
 		checked: string[],
+		mode: TagSelectionMode,
 		tags: TagList,
 	} = $props()
 </script>
 
 <div class="tag-selection">
-<fieldset>
-	<legend>Tags Filter</legend>
-	<div class="tags">
-		{#each tags as tag}
-			<input id="tag-selection-{kebab(tag)}" class="visually-hidden" type="checkbox" bind:group={checked} value="{tag}" />
-			<label for="tag-selection-{kebab(tag)}" class="tag">
-				<span class="tag-text">{tag}</span>
-				<span class="simulate-bold-space">{tag}</span>
-			</label>
-		{/each}
-		{#if tags.length === 0}
-			<NoTags />
-		{/if}
-	</div>
-</fieldset>
+	<fieldset>
+		<legend>Tags Filter</legend>
+		<div class="mode-toggle">
+			<TogglePill
+				id="tag-selection-mode-toggle"
+				leftlabel="All"
+				leftvalue="all"
+				rightlabel="Any"
+				rightvalue="any"
+				bind:group={mode}
+			>
+				{#snippet legend()}
+					<VisuallyHidden>Tag Mode</VisuallyHidden>
+				{/snippet}
+			</TogglePill>
+		</div>
+		<div class="tags">
+			{#each tags as tag}
+				<input id="tag-selection-{kebab(tag)}" class="visually-hidden" type="checkbox" bind:group={checked} value="{tag}" />
+				<label for="tag-selection-{kebab(tag)}" class="tag">
+					<span class="tag-text">{tag}</span>
+					<span class="simulate-bold-space">{tag}</span>
+				</label>
+			{/each}
+			{#if tags.length === 0}
+				<NoTags />
+			{/if}
+		</div>
+	</fieldset>
 </div>
 
 <style>
@@ -35,12 +54,16 @@
 		position: relative;
 		margin-block-end: 0.5em;
 		grid-column: span 2;
+		display: grid;
+		grid-template-columns: auto 1fr;
+		row-gap: 0.5em;
 	}
 
 	fieldset {
 		border: none;
 		inline-size: 100%;
 		padding: 0;
+		display: contents;
 	}
 
 	legend {
@@ -48,13 +71,20 @@
 		padding: 0;
 		font-size: var(--font-sz-venus);
 		font-weight: bold;
-		margin-block-end: 0.5em;
+		margin-block-end: 0;
+		place-self: center;
+	}
+
+	.mode-toggle {
+		font-size: var(--font-sz-venus);
+		filter: invert(1);
 	}
 
 	.tags {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.25em;
+		grid-column: span 2;
 	}
 
 	.tag {
@@ -71,6 +101,10 @@
 		padding-inline: 0.375em;
 		padding-block: 0.125em;
 		cursor: pointer;
+	}
+
+	input:focus + .tag {
+		outline: 0.125em solid var(--skin-focus);
 	}
 
 	input:checked + .tag {

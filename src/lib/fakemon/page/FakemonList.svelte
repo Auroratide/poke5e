@@ -15,7 +15,7 @@
 	import { capitalize } from "$lib/utils/string"
 	import { EggGroup } from "$lib/pokemon/egg-group"
 	import { BiomesStore, Region } from "$lib/poke5e/habitat"
-	import { TagList, TagSelection } from "$lib/poke5e/tags"
+	import { DefaultTagSelectionMode, TagList, TagSelection, type TagSelectionMode } from "$lib/poke5e/tags"
 
 	const allTags = fakemonStore.tags()
 
@@ -65,6 +65,9 @@
 	$: textFilterIsTagName = TagList.has($allTags, $fakemonListFilter)
 
 	let filteredTags: string[] = []
+	let filterTagsMode: TagSelectionMode = DefaultTagSelectionMode
+
+	$: filteredTagsWithSearch = textFilterIsTagName ? filteredTags.concat([$fakemonListFilter]) : filteredTags
 
 	$: filter = new SpeciesFilter()
 		.name(textFilterIsPokemonType || textFilterIsTagName ? "" : $fakemonListFilter)
@@ -77,13 +80,7 @@
 		.nativeRegion(filteredRegion)
 
 	$: filtered = $fakemon
-		.filter((it) => {
-			const noTagsSpecified = filteredTags.length === 0 && !textFilterIsTagName
-			const hasDesiredTag = TagList.overlaps(it.tags, filteredTags)
-			const tagIsExplicitlySearched = textFilterIsTagName && TagList.has(it.tags, $fakemonListFilter)
-
-			return noTagsSpecified || hasDesiredTag || tagIsExplicitlySearched
-		})
+		.filter(TagList.filterBy(filteredTagsWithSearch, filterTagsMode))
 		.filter((it) => filter.apply(it.species))
 
 	const byStringField = (field: (m: Fakemon) => string) =>
@@ -98,6 +95,7 @@
 		filteredBiome = ""
 		filteredRegion = ""
 		filteredTags = []
+		filterTagsMode = DefaultTagSelectionMode
 	}
 </script>
 
@@ -114,7 +112,7 @@
 		<SelectField label="{m.eggGroup()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
 		<SelectField label="{m.biome()}" bind:value={filteredBiome} options={biomeOptions} />
 		<TextField label="{m.nativeRegion()}" bind:value={filteredRegion} />
-		<TagSelection bind:checked={filteredTags} tags={$allTags} />
+		<TagSelection bind:checked={filteredTags} bind:mode={filterTagsMode} tags={$allTags} />
 	</SearchField>
 </div>
 {#if hasNoFakemon}

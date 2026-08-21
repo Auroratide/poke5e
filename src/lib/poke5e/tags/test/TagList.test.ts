@@ -1,4 +1,4 @@
-import { test, expect } from "vitest"
+import { test, expect, describe } from "vitest"
 import { TagList } from "../TagList"
 
 test("no duplicates", () => {
@@ -76,4 +76,108 @@ test("overlaps", () => {
 	expect(TagList.overlaps(b, a)).toBe(true)
 	expect(TagList.overlaps(c, b)).toBe(true)
 	expect(TagList.overlaps(c, a)).toBe(false)
+})
+
+test("subsets", () => {
+	const a = TagList.from(["one", "two", "three"])
+	const b = TagList.from(["one", "three"])
+	const c = TagList.from(["one", "four"])
+	const d = TagList.from([])
+
+	expect(TagList.subsets(a, b)).toBe(false)
+	expect(TagList.subsets(b, a)).toBe(true)
+
+	expect(TagList.subsets(a, c)).toBe(false)
+	expect(TagList.subsets(c, a)).toBe(false)
+
+	expect(TagList.subsets(a, d)).toBe(false)
+	expect(TagList.subsets(d, a)).toBe(true)
+})
+
+describe("filterBy", () => {
+	const tagged = (...tags: string[]) => ({
+		tags: TagList.from(tags),
+	})
+
+	test("no tags specified", () => {
+		const apple = tagged("red")
+		const orange = tagged("orange")
+		const banana = tagged("yellow")
+
+		const list = [apple, orange, banana]
+
+		const filter = TagList.filterBy(TagList.empty(), "any")
+		const result = list.filter(filter)
+
+		expect(result).toEqual([apple, orange, banana])
+	})
+
+	test("has desired tag", () => {
+		const apple = tagged("red")
+		const orange = tagged("orange")
+		const banana = tagged("yellow")
+		const lemon = tagged("yellow")
+
+		const list = [apple, orange, banana, lemon]
+
+		const filter = TagList.filterBy(TagList.from(["yellow"]), "any")
+		const result = list.filter(filter)
+
+		expect(result).toEqual([banana, lemon])
+	})
+
+	test("none have desired tag", () => {
+		const apple = tagged("red")
+		const orange = tagged("orange")
+		const banana = tagged("yellow")
+
+		const list = [apple, orange, banana]
+
+		const filter = TagList.filterBy(TagList.from(["green"]), "any")
+		const result = list.filter(filter)
+
+		expect(result).toEqual([])
+	})
+
+	test("any mode: has one of the desired tags", () => {
+		const apple = tagged("red")
+		const orange = tagged("orange", "citrus")
+		const banana = tagged("yellow")
+		const lemon = tagged("yellow", "citrus")
+
+		const list = [apple, orange, banana, lemon]
+
+		const filter = TagList.filterBy(TagList.from(["yellow", "citrus"]), "any")
+		const result = list.filter(filter)
+
+		expect(result).toEqual([orange, banana, lemon])
+	})
+
+	test("all mode: has all of the desired tags", () => {
+		const apple = tagged("red")
+		const orange = tagged("orange", "citrus")
+		const banana = tagged("yellow")
+		const lemon = tagged("yellow", "citrus")
+
+		const list = [apple, orange, banana, lemon]
+
+		const filter = TagList.filterBy(TagList.from(["yellow", "citrus"]), "all")
+		const result = list.filter(filter)
+
+		expect(result).toEqual([lemon])
+	})
+
+	test("all mode: only has a subset of desired tags", () => {
+		const apple = tagged("red")
+		const orange = tagged("orange", "citrus")
+		const banana = tagged("yellow")
+		const lemon = tagged("yellow", "citrus")
+
+		const list = [apple, orange, banana, lemon]
+
+		const filter = TagList.filterBy(TagList.from(["red", "citrus"]), "all")
+		const result = list.filter(filter)
+
+		expect(result).toEqual([])
+	})
 })
