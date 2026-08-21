@@ -14,6 +14,15 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.9",
+		description: [
+			"<strong>Bugfix</strong>: Menu can now be scrolled on smaller mobile screens.",
+			"<strong>Bugfix</strong>: Encounter tool now properly restricts pokemon levels between 1 and 20.",
+			"<strong>Bugfix</strong>: Allow the removal of fakemon evolution lines of fakemon that have been previously removed.",
+			"<strong>Tags</strong>: When filtering by tags, can now specify whether 'Any' tag should be matched or 'All' tags should be matched.",
+			"<strong>Moves</strong>: Clarify that Volt Tackle is a melee move.",
+		],
+	}, {
 		name: "v1.12.8",
 		description: [
 			"Widened the layout of the website so larger screens can take advantage of the space.",
