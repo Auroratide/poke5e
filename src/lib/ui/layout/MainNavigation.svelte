@@ -54,25 +54,27 @@
 <dialog bind:this={dialog} class="open-transition">
 	<div class="backdrop"></div>
 	<div class="full-center">
-		<Container half>
-			<header class="row space-between transitioned">
-				<p class="title">{m.menu()}</p>
-				<form method="dialog">
-					<button class="close-button" aria-label="close">&times;</button>
-				</form>
-			</header>
-			<ul class="no-list grid">
-				{#each items as item}
-					<li class:active={active === item.id} class="theme-{item.color} transitioned">
-						<a href="{item.href}" class="center-column uppercase-link" on:click={closeDialog}>
-							<div class="bubble" aria-hidden="true">
-								<svelte:component this={item.icon} />
-							</div>
-							<span class="bubble-title">{item.name}</span>
-						</a>
-					</li>
-				{/each}
-			</ul>
+		<Container half height="full">
+			<div class="nav-flex-container">
+				<header class="row space-between transitioned">
+					<p class="title">{m.menu()}</p>
+					<form method="dialog">
+						<button class="close-button" aria-label="close">&times;</button>
+					</form>
+				</header>
+				<ul class="no-list grid scrollable">
+					{#each items as item}
+						<li class:active={active === item.id} class="theme-{item.color} transitioned">
+							<a href="{item.href}" class="center-column uppercase-link" on:click={closeDialog}>
+								<div class="bubble" aria-hidden="true">
+									<svelte:component this={item.icon} />
+								</div>
+								<span class="bubble-title">{item.name}</span>
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</div>
 		</Container>
 	</div>
 </dialog>
@@ -359,6 +361,18 @@
 		animation-delay: 0.36s;
 	} .open-transition[open] li.transitioned:nth-child(11) a {
 		animation-delay: 0.40s;
+	}
+
+	.nav-flex-container {
+		block-size: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.scrollable {
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 
 	@keyframes appear {
