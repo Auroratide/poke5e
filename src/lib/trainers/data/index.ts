@@ -18,6 +18,7 @@ import type { PokemonSpecies } from "$lib/poke5e/species"
 import { DetailedError } from "$lib/site/errors"
 import type { PostgrestError } from "@supabase/supabase-js"
 import type { TransferCode } from "../pokemon-transfer"
+import type { PokemonStorage } from "../pokemon-storage"
 
 export type TrainerData = {
 	info: Trainer,
@@ -53,6 +54,12 @@ export interface TrainerDataProvider {
 	acceptPokemonTransfer: (writeKey: ReadWriteKey, readKey: ReadWriteKey, trainerId: TrainerId, transferCode: TransferCode) => Promise<TrainerPokemon>
 	reorderPokemonTeam: (writeKey: ReadWriteKey, readKey: ReadWriteKey, order: TrainerPokemon[]) => Promise<boolean>
 	removePokemon: (writeKey: ReadWriteKey, readKey: ReadWriteKey, id: string) => Promise<boolean>
+	/**
+	 * Moves one pokemon between the party and the Box. Deliberately separate from
+	 * updatePokemon, which is handed a whole pokemon and would let a stale copy
+	 * relocate it; see the migration for the full reasoning.
+	 */
+	setPokemonStorage: (writeKey: ReadWriteKey, readKey: ReadWriteKey, id: PokemonId, storage: PokemonStorage) => Promise<boolean>
 	updateMoveset: (writeKey: ReadWriteKey, readKey: ReadWriteKey, pokemonId: PokemonId, moves: LearnedMove[]) => Promise<LearnedMove[]>
 	updateOneMove: (writeKey: ReadWriteKey, move: LearnedMove) => Promise<boolean>
 	updateAllHeldItems: (writeKey: ReadWriteKey, pokemonId: PokemonId, heldItems: HeldItem[]) => Promise<HeldItem[]>

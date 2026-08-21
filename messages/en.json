@@ -114,8 +114,6 @@
 	"notes": "Notes",
 	"addPokemon": "Add Pokémon",
 	"newFakemon": "New Fakémon",
-	"seeTrainerList": "See Trainer List",
-	"viewTrainerProfile": "View Trainer Profile",
 	"addStatus": "Add Status",
 	"editStatus": "Edit Status",
 	"abilitiesAndItems": "Abilities & Items",
@@ -308,7 +306,18 @@
 		"findByTrainerID": "Find By Trainer ID",
 		"newTrainer": "New Trainer",
 		"trainerId": "Trainer Id",
-		"generalInfoAboutThisTrainer": "General info about this trainer"
+		"generalInfoAboutThisTrainer": "General info about this trainer",
+		"pokemonOf": "{name}'s Pokémon",
+		"searchParty": "Search Pokémon",
+		"viewProfileOf": "View {name}'s profile",
+		"box": "Box",
+		"boxIsEmpty": "The Box is empty. Deposit a Pokémon to store it here.",
+		"noBoxMatches": "No Pokémon in the Box match this search.",
+		"searchBox": "Search the Box",
+		"deposit": "Deposit",
+		"withdraw": "Withdraw",
+		"withdrawPokemon": "Withdraw {name} from the Box",
+		"releasePokemon": "Release {name}"
 	},
 	"reference": {
 		"title": "Reference",

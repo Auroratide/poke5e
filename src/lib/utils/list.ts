@@ -34,6 +34,26 @@ export function reorderOne<T>(array: T[], from: number, to: number): T[] {
 	return newList
 }
 
+/**
+ * Applies a reordering that was observed within a rendered subset back onto the
+ * full list, leaving items outside the subset where they are.
+ *
+ * A drag handle only ever reports indices into what is actually on screen, so a
+ * filtered list -- or one split into a party and a box -- cannot hand those
+ * indices straight to the full array. Doing that was already wrong before the
+ * Box existed: dragging within a filtered roster moved whichever pokemon
+ * happened to sit at that index in the unfiltered list.
+ *
+ * `reorderedSubset` must be a permutation of `subset`; items are poured back
+ * into the slots the subset occupied, so anything outside it does not move.
+ */
+export function applyOrderToSubset<T>(all: T[], subset: T[], reorderedSubset: T[], id: (it: T) => string): T[] {
+	const subsetIds = new Set(subset.map(id))
+	const remaining = [...reorderedSubset]
+
+	return all.map((it) => subsetIds.has(id(it)) ? remaining.shift()! : it)
+}
+
 export function fromCommaOrNewlineString(str: string): string[] {
 	return str
 		.split(/[,\n]/)

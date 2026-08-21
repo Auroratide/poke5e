@@ -40,6 +40,10 @@
 		<span style:grid-area="status" class="smaller-text">{#if pokemon.status != null}<StatusTag abbr value={pokemon.status} />{/if}</span>
 		<span style:grid-area="lv" class="right">Lv. {pokemon.level.data}</span>
 	</a>
+	<!-- Trailing controls, outside the badge because the badge is a link and
+	     cannot contain them. The box puts withdraw and release here; the party
+	     passes nothing and its drag handle takes the space instead. -->
+	<slot name="actions"></slot>
 	{#if editable}
 		<DragHandle />
 	{/if}
@@ -132,7 +136,10 @@
 
 	.selectable-bubble {
 		flex: 1;
-		max-inline-size: 75%;
+		/* The party's existing inset, which is also where its drag handle sits.
+		   Lists with narrower trailing controls can hand the badge more of the
+		   row -- the box sets this to 100%. */
+		max-inline-size: var(--pokemon-summary-max-inline-size, 75%);
 	}
 
 	@keyframes jump {

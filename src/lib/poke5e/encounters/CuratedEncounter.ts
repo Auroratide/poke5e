@@ -5,6 +5,7 @@ import { PokemonGender } from "$lib/pokemon/gender"
 import { Nature } from "$lib/pokemon/nature"
 import { Stab } from "$lib/pokemon/stab"
 import { createEmptyChosenTrainerPath } from "$lib/trainers/paths"
+import { PokemonStorage } from "$lib/trainers/pokemon-storage"
 import type { TrainerInfo, TrainerPokemon } from "$lib/trainers/types"
 import { type PokemonSpecies } from "../species"
 import { TagList } from "../tags"
@@ -95,6 +96,9 @@ const defaultPokemon = (species: PokemonSpecies): TrainerPokemon => ({
 	},
 	stab: Stab.default(),
 	tags: TagList.empty(),
+	// Encounter pokemon are never boxed; they exist only for the duration of the
+	// encounter. Set explicitly because storage is a required field.
+	storage: PokemonStorage.Party,
 })
 
 class CuratedEncounterBuilder {

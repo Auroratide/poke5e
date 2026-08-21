@@ -8,6 +8,7 @@
 	import type { TrainerStore } from "../trainers"
 	import type { TrainerPokemon } from "../types"
 	import { m } from "$lib/site/i18n"
+	import { PokemonStorage, isInParty } from "../pokemon-storage"
 
 	const evolutions = EvolutionStore.all()
 
@@ -16,6 +17,22 @@
 	export let pokemon: TrainerPokemon
 
 	$: canEdit = $trainer.update != null
+	$: inParty = isInParty(pokemon)
+
+	// Moving a pokemon between the party and the box is undone by the very same
+	// button, so it happens on the spot instead of through a confirmation card.
+	// Removal, which cannot be undone, still gets one.
+	let moving = false
+	const move = () => {
+		moving = true
+		$trainer.update?.setStorage(pokemon.id, inParty ? PokemonStorage.Box : PokemonStorage.Party)
+			// setStorage has already surfaced the error; this only re-enables the
+			// button so the move can be retried.
+			.catch(() => {})
+			.finally(() => {
+				moving = false
+			})
+	}
 </script>
 
 <ActionArea>
@@ -28,6 +45,7 @@
 	{/if}
 	{#if canEdit}
 		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.transferPokemon)}" variant="subtle">{m.transfer()}</Button>
+		<Button on:click={move} disabled={moving} variant="subtle">{inParty ? m["trainers.deposit"]() : m["trainers.withdraw"]()}</Button>
 	{/if}
 	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.restPokemon)}" variant="success">{m.rest()}</Button>
 	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.editPokemon)}">{m.edit()}</Button>

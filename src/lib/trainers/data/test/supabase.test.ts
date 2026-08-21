@@ -11,6 +11,7 @@ import { TagList } from "$lib/poke5e/tags"
 import { TrainerLocalStorage } from "../TrainerLocalStorage"
 import { provider as transferProvider } from "../../pokemon-transfer"
 import { stubLearnedMove } from "$lib/trainers/test/stubs"
+import { PokemonStorage } from "../../pokemon-storage"
 
 const ABILITIES = {
 	disguise: stubAbility({
@@ -173,6 +174,70 @@ test("reordering pokemon", async () => {
 	expect(receivedPokemon).toEqual(["kirlia", "litwick", "mimikyu"])
 })
 
+test("moving pokemon between the party and the box", async () => {
+	// given
+	const trainerToAdd = {
+		name: "Renibel",
+		description: "Likes cryptids.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
+	}
+
+	// Explicit ranks: the stubs share a nickname, so without them ORDER BY
+	// rank, nickname has nothing to break the tie and the order is arbitrary.
+	const addedTrainer = await provider.newTrainer(trainerToAdd)
+	const first = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, stubPokemonSpecies({ id: "mimikyu" }), 1)
+	const second = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, stubPokemonSpecies({ id: "kirlia" }), 2)
+	const third = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, stubPokemonSpecies({ id: "litwick" }), 3)
+
+	// then: a newly caught pokemon joins the party
+	expect(first.storage).toEqual(PokemonStorage.Party)
+
+	// when: the middle one is deposited
+	await provider.setPokemonStorage(addedTrainer.writeKey, addedTrainer.info.readKey, second.id, PokemonStorage.Box)
+
+	// then: only it is boxed, and the party keeps its order
+	const afterDeposit = await provider.getTrainer(addedTrainer.info.readKey)
+	expect(afterDeposit.pokemon.filter((it) => it.storage === PokemonStorage.Box).map((it) => it.pokemonId.data)).toEqual(["kirlia"])
+	expect(afterDeposit.pokemon.filter((it) => it.storage === PokemonStorage.Party).map((it) => it.pokemonId.data)).toEqual(["mimikyu", "litwick"])
+
+	// when: it is withdrawn again
+	await provider.setPokemonStorage(addedTrainer.writeKey, addedTrainer.info.readKey, second.id, PokemonStorage.Party)
+
+	// then: it rejoins at the end of the party
+	const afterWithdraw = await provider.getTrainer(addedTrainer.info.readKey)
+	expect(afterWithdraw.pokemon.map((it) => it.pokemonId.data)).toEqual(["mimikyu", "litwick", "kirlia"])
+	expect(afterWithdraw.pokemon.every((it) => it.storage === PokemonStorage.Party)).toBe(true)
+
+	// and: an unknown location is refused outright
+	await expect(provider.setPokemonStorage(addedTrainer.writeKey, addedTrainer.info.readKey, third.id, "daycare" as PokemonStorage)).rejects.toThrow()
+})
+
+test("no permission to move a pokemon", async () => {
+	const draft = (name: string) => ({
+		name: name,
+		description: "Likes stuff.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
+	})
+
+	// given: a pokemon belonging to one trainer
+	const renibel = await provider.newTrainer(draft("Renibel"))
+	const iris = await provider.newTrainer(draft("Iris"))
+	const pokemon = await provider.addPokemonToTeam(renibel.writeKey, renibel.info.readKey, renibel.info.id, stubPokemonSpecies({ id: "mimikyu" }))
+
+	// when: another trainer's write key tries to move it
+	await expect(provider.setPokemonStorage(iris.writeKey, renibel.info.readKey, pokemon.id, PokemonStorage.Box)).rejects.toThrow()
+
+	// then: it stayed put
+	const afterAttempt = await provider.getTrainer(renibel.info.readKey)
+	expect(afterAttempt.pokemon[0].storage).toEqual(PokemonStorage.Party)
+})
+
 test("tags", async () => {
 	// given
 	const trainerToAdd = {
@@ -276,6 +341,9 @@ test("accepting a transfer", async () => {
 
 	const addedSecondTrainer = await provider.newTrainer(secondTrainerToAdd)
 
+	// given: the pokemon is in the sender's box, to prove where it lands
+	await provider.setPokemonStorage(addedFirstTrainer.writeKey, addedFirstTrainer.info.readKey, addedPokemon.id, PokemonStorage.Box)
+
 	const transferCode = await transferProvider.generate(addedFirstTrainer.writeKey, addedPokemon.id)
 
 	// when
@@ -288,6 +356,14 @@ test("accepting a transfer", async () => {
 	expect(refreshedSecondTrainer.pokemon[0].moves[0].moveId).toEqual("tackle")
 	expect(transferedPokemon.pokemonId.data).toEqual("mimikyu")
 	expect(transferedPokemon.moves[0].moveId).toEqual("tackle")
+
+	// then: a transferred pokemon arrives in the party even when it was boxed,
+	// and the sender's copy keeps its own place
+	expect(transferedPokemon.storage).toEqual(PokemonStorage.Party)
+	expect(refreshedSecondTrainer.pokemon[0].storage).toEqual(PokemonStorage.Party)
+
+	const refreshedFirstTrainer = await provider.getTrainer(addedFirstTrainer.info.readKey)
+	expect(refreshedFirstTrainer.pokemon[0].storage).toEqual(PokemonStorage.Box)
 })
 
 test("reordering trainers", async () => {
