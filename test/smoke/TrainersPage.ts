@@ -148,24 +148,11 @@ export class TrainersPage {
 	}
 
 	/**
-	 * Deposits from the pokemon's own page. The move happens on the spot, so the
-	 * page stays put and the button flips to its opposite.
+	 * Deposits with the party row's own button -- the only way in, now that the
+	 * pokemon's action menu no longer duplicates it. No navigation: the row just
+	 * leaves the party.
 	 */
 	async deposit(nickname: string, expectedBoxCount: number) {
-		console.log(`  Depositing ${nickname}...`)
-
-		await this.ui.link(nickname).click()
-		await this.storageAction("Deposit").click()
-
-		await expect(this.storageAction("Withdraw")).toBeVisible()
-		await this.expectBoxCount(expectedBoxCount)
-	}
-
-	/**
-	 * Deposits with the party row's own button, which is the short path -- no
-	 * navigation at all, the row just leaves the party.
-	 */
-	async depositFromRow(nickname: string, expectedBoxCount: number) {
 		console.log(`  Depositing ${nickname} from its row...`)
 
 		await this.ui.button(`Deposit ${nickname} into the Box`).click()
@@ -201,14 +188,6 @@ export class TrainersPage {
 		await expect(this.boxBadge(expectHidden)).toBeHidden()
 
 		await this.box.getByLabel("Search the Box").fill("")
-	}
-
-	/**
-	 * The pokemon page's own deposit/withdraw button. Scoped to the detail column,
-	 * because a box row in the side column carries "Withdraw <name> from the Box".
-	 */
-	private storageAction(name: "Deposit" | "Withdraw") {
-		return this.ui.page.locator("#main-content").getByRole("button", { name }).filter({ visible: true })
 	}
 
 	/**

@@ -315,8 +315,6 @@
 		"boxIsEmpty": "The Box is empty. Deposit a Pokémon to store it here.",
 		"noBoxMatches": "No Pokémon in the Box match this search.",
 		"searchBox": "Search the Box",
-		"deposit": "Deposit",
-		"withdraw": "Withdraw",
 		"depositPokemon": "Deposit {name} into the Box",
 		"withdrawPokemon": "Withdraw {name} from the Box",
 		"releasePokemon": "Release {name}"

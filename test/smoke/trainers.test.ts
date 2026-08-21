@@ -26,9 +26,9 @@ test("trainer end to end flow", async ({ page }) => {
 	await trainers.addPokemon("Appletun")
 	await trainers.expectType("grass", "dragon")
 
-	// The Box: once from the pokemon's own page, once from its party row
+	// The Box
 	await trainers.deposit("Fritz", 1)
-	await trainers.depositFromRow("Appletun", 2)
+	await trainers.deposit("Appletun", 2)
 	await trainers.openBox()
 	await trainers.expectInBox("Appletun")
 	await trainers.filterBox("apple", "Appletun", "Fritz")
