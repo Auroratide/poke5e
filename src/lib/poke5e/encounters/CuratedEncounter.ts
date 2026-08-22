@@ -1,6 +1,7 @@
 import { Attributes } from "$lib/dnd/attributes"
 import { Level } from "$lib/dnd/level"
 import { SkillRanks } from "$lib/dnd/skills"
+import { Token } from "$lib/dnd/token"
 import { PokemonGender } from "$lib/pokemon/gender"
 import { Nature } from "$lib/pokemon/nature"
 import { Stab } from "$lib/pokemon/stab"
@@ -62,6 +63,7 @@ const NO_TRAINER: TrainerInfo = {
 	path: createEmptyChosenTrainerPath(),
 	feats: [],
 	tags: TagList.empty(),
+	token: Token.create({}),
 }
 
 const defaultPokemon = (species: PokemonSpecies): TrainerPokemon => ({

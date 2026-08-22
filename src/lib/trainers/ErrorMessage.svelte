@@ -42,6 +42,4 @@
 	.large { font-size: var(--font-sz-neptune); }
 
 	p { line-height: 1.5; }
-
-	.error { color: var(--red-text); }
 </style>

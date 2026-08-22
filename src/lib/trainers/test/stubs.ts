@@ -12,6 +12,8 @@ import { stubSpecializations } from "../specializations/test/stubs"
 import type { LearnedMove, Trainer, TrainerBio, TrainerPokemon } from "../types"
 import { Stab } from "$lib/pokemon/stab"
 import { stubAbility } from "$lib/pokemon/ability/test/stubs"
+import { TagList } from "$lib/poke5e/tags"
+import { Token } from "$lib/dnd/token"
 
 export function stubLearnedMove(template: Partial<LearnedMove> = {}): LearnedMove {
 	return {
@@ -70,6 +72,7 @@ export function stubTrainerPokemon(template: Partial<TrainerPokemon> = {}): Trai
 			},
 		},
 		stab: new Stab({ base: "default", bonus: 0 }),
+		tags: TagList.empty(),
 		...template,
 	}
 }
@@ -110,6 +113,8 @@ export function stubTrainer(template: Partial<Trainer> = {}): Trainer {
 		specializations: stubSpecializations({}),
 		path: createEmptyChosenTrainerPath(),
 		feats: [],
+		tags: TagList.empty(),
+		token: Token.create({}),
 		...template,
 	}
 }
