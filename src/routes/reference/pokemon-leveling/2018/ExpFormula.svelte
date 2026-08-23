@@ -33,7 +33,7 @@
 		<tbody>
 			{#each EXPERIENCE_MATRIX_2018 as levelRow, level}
 				<tr>
-					<th>{level}</th>
+					<th>{level + 1}</th>
 					{#each levelRow as exp}
 						<td>{exp ?? ""}</td>
 					{/each}
