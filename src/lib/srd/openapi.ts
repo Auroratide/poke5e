@@ -8,9 +8,12 @@ import { EvolutionJson, EvolutionListJson } from "./evolutions/schema"
 import { ItemJson, ItemListJson } from "./items/schema"
 import { MoveJson, MovesListJson } from "./moves/schema"
 import { PokemonJson, PokemonListJson } from "./pokemon/schema"
+import type { OpenAPIV3_1 } from "openapi-types"
 
 const API_VERSION = "1.0.0"
 const ORIGIN = "https://poke5e.app"
+
+export type OpenApiSpecification = OpenAPIV3_1.Document
 
 type Resource = {
 	segment: string,
@@ -80,6 +83,10 @@ const RESOURCES: Resource[] = [
 	},
 ]
 
+function buildTags() {
+	return RESOURCES.map((it) => ({ name: it.segment }))
+}
+
 function idOf(schema: z.ZodType): string {
 	const id = z.globalRegistry.get(schema)?.id
 	if (id == null) throw new Error("SRD schema is missing a `.meta({ id })` — it cannot be referenced in the OpenAPI document.")
@@ -129,12 +136,13 @@ function buildPaths(): Record<string, object> {
 		paths[`/srd/v1/{edition}/${resource.segment}.json`] = {
 			get: {
 				operationId: resource.listOperationId,
-				summary: `List all ${resource.label}`,
+				summary: resource.list.meta()?.title ?? "",
+				description: resource.list.meta()?.description ?? "",
 				tags: [resource.segment],
 				parameters: [{ $ref: "#/components/parameters/Edition" }],
 				responses: {
 					"200": {
-						description: `Every ${resource.label.replace(/s$/, "")} in the requested edition.`,
+						description: resource.list.meta()?.description ?? "",
 						content: { "application/json": { schema: ref(resource.list) } },
 					},
 					"404": {
@@ -147,7 +155,8 @@ function buildPaths(): Record<string, object> {
 		paths[`/srd/v1/{edition}/${resource.segment}/{id}.json`] = {
 			get: {
 				operationId: resource.itemOperationId,
-				summary: `Fetch a single entry from ${resource.label}`,
+				summary: resource.item.meta()?.title ?? "",
+				description: resource.item.meta()?.description ?? "",
 				tags: [resource.segment],
 				parameters: [
 					{ $ref: "#/components/parameters/Edition" },
@@ -155,7 +164,7 @@ function buildPaths(): Record<string, object> {
 				],
 				responses: {
 					"200": {
-						description: "The requested entry.",
+						description: resource.item.meta()?.description ?? "",
 						content: { "application/json": { schema: ref(resource.item) } },
 					},
 					"404": {
@@ -169,32 +178,22 @@ function buildPaths(): Record<string, object> {
 	return paths
 }
 
-export function openApiDocument(): object {
+export function openApiDocument(): OpenApiSpecification {
 	return {
 		openapi: "3.1.0",
 		info: {
 			title: "Pokémon 5e SRD",
 			version: API_VERSION,
-			description: [
-				"Reference data for the Pokémon 5e tabletop system, served as static JSON.",
-				"",
-				"Every path is scoped to a rules `edition` (`2018` or `2024`). Editions are content,",
-				"not contract: both remain available indefinitely. The `/srd/v1` prefix is the",
-				"contract version and changes only on a breaking response-shape change.",
-				"",
-				"Responses may gain additional properties within v1. Clients should ignore",
-				"unrecognized keys rather than treat them as errors.",
-			].join("\n"),
+			description: "Reference data for the Pokémon 5e tabletop system, served as static JSON.",
 			license: {
 				name: "See repository",
 				url: "https://github.com/Auroratide/poke5e",
 			},
 		},
 		servers: [{ url: ORIGIN }],
-		// Explicitly "no authentication required" — an absent `security` key means
-		// "unspecified", which is a different and less useful statement.
+		// No auth needed
 		security: [],
-		tags: RESOURCES.map((it) => ({ name: it.segment })),
+		tags: buildTags(),
 		paths: buildPaths(),
 		components: {
 			parameters: {

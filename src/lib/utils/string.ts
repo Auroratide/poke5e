@@ -10,6 +10,10 @@ export function uppercase(word: string): string {
 	return word.toLocaleUpperCase()
 }
 
+export function kebabToTitleText(kebab: string): string {
+	return capitalizeAll(kebab.replaceAll("-", " "))
+}
+
 export function isUrl(str: string): boolean {
 	return /^https?:\/\//.test(str)
 }

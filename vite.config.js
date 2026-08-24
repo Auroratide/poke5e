@@ -20,17 +20,31 @@ export default defineConfig({
 		exclude: ["fsevents"],
 	},
 	test: {
-		setupFiles: [path.join("src", "test", "setup.ts")],
-		browser: {
-			provider: playwright(),
-			enabled: true,
-			headless: true,
-			instances: [ { browser: "chromium" } ],
-			screenshotFailures: false,
-		},
-		exclude: [
-			"**\/node_modules/**",
-			"**\/supabase/functions/**",
-		],
+		projects: [ {
+			extends: true,
+			test: {
+				name: "browser",
+				setupFiles: [path.join("src", "test", "setup.ts")],
+				browser: {
+					provider: playwright(),
+					enabled: true,
+					headless: true,
+					instances: [ { browser: "chromium" } ],
+					screenshotFailures: false,
+				},
+				exclude: [
+					"**\/node_modules/**",
+					"**\/supabase/functions/**",
+					"**/*.node.test.ts",
+				],
+			}
+		}, {
+			extends: true,
+			test: {
+				name: "buildtime",
+				environment: "node",
+				include: ["**/*.node.test.ts"]
+			},
+		} ]
 	}
 })
