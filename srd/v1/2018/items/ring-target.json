@@ -1,0 +1,1 @@
+{"id":"ring-target","name":"Ring Target","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/ring-target/sprite.png"},"_ingameEffect":"Held\n:   When one of the user's types would render it immune to damage, that type is ignored for damage calculation."}

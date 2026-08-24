@@ -1,0 +1,1 @@
+{"id":"bisharp-to-kingambit","from":"bisharp","to":"kingambit","conditions":[{"type":"level","value":15},{"type":"special","value":"after defeating an evolution of Pawniard that's holding a Leader's Crest one-on-one, while itself holding a Leader's Crest"}],"effects":[{"type":"asi","value":4}]}

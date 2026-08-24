@@ -1,0 +1,1 @@
+{"id":"drakloak-to-dragapult","from":"drakloak","to":"dragapult","conditions":[{"type":"level","value":16}],"effects":[{"type":"asi","value":10}]}

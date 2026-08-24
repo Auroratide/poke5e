@@ -1,0 +1,1 @@
+{"id":"shelmet-to-accelgor","from":"shelmet","to":"accelgor","conditions":[{"type":"level","value":10},{"type":"special","value":"while in the presence of a Karrablast"}],"effects":[{"type":"asi","value":14}]}

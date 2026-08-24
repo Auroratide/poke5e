@@ -1,0 +1,1 @@
+{"id":"magmar-to-magmortar","from":"magmar","to":"magmortar","conditions":[{"type":"level","value":15},{"type":"item","value":"Magmarizer"}],"effects":[{"type":"asi","value":6}]}

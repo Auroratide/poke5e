@@ -1,0 +1,1 @@
+{"id":"eevee-to-brawleon","from":"eevee","to":"brawleon","nonCanon":true,"conditions":[{"type":"level","value":8},{"type":"loyalty","value":2},{"type":"move-type","value":"fighting"}],"effects":[{"type":"asi","value":14}]}

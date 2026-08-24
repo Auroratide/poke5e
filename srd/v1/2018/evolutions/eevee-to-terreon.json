@@ -1,0 +1,1 @@
+{"id":"eevee-to-terreon","from":"eevee","to":"terreon","nonCanon":true,"conditions":[{"type":"level","value":8},{"type":"loyalty","value":2},{"type":"special","value":"while under ground or in a cave"}],"effects":[{"type":"asi","value":14}]}

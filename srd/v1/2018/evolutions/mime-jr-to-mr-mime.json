@@ -1,0 +1,1 @@
+{"id":"mime-jr-to-mr-mime","from":"mime-jr","to":"mr-mime","conditions":[{"type":"move","value":"mimic"}],"effects":[{"type":"asi","value":8}]}

@@ -1,0 +1,1 @@
+{"id":"eevee-to-specteon","from":"eevee","to":"specteon","nonCanon":true,"conditions":[{"type":"level","value":8},{"type":"special","value":"after taking non-zero ghost-type damage"}],"effects":[{"type":"asi","value":14}]}

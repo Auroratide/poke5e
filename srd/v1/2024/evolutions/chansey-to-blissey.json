@@ -1,0 +1,1 @@
+{"id":"chansey-to-blissey","from":"chansey","to":"blissey","conditions":[{"type":"level","value":14},{"type":"loyalty","value":2}],"effects":[{"type":"asi","value":8}]}

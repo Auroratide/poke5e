@@ -1,0 +1,1 @@
+{"id":"growlithe-to-arcanine","from":"growlithe","to":"arcanine","conditions":[{"type":"level","value":8},{"type":"item","value":"Fire Stone"}],"effects":[{"type":"asi","value":12}]}

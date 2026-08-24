@@ -1,0 +1,1 @@
+{"id":"eevee-to-minereon","from":"eevee","to":"minereon","nonCanon":true,"conditions":[{"type":"level","value":8},{"type":"special","value":"after using two different evolution stones simultaneously"}],"effects":[{"type":"asi","value":14}]}

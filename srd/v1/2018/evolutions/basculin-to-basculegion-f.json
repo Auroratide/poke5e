@@ -1,0 +1,1 @@
+{"id":"basculin-to-basculegion-f","from":"basculin","to":"basculegion-f","conditions":[{"type":"level","value":10},{"type":"gender","value":"female"},{"type":"special","value":"after fainting from recoil damage"}],"effects":[{"type":"asi","value":12}]}

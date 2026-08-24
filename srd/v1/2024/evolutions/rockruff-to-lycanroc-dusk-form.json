@@ -1,0 +1,1 @@
+{"id":"rockruff-to-lycanroc-dusk-form","from":"rockruff","to":"lycanroc-dusk-form","conditions":[{"type":"level","value":9},{"type":"time","value":"afternoon"}],"effects":[{"type":"asi","value":14}]}

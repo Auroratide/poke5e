@@ -1,0 +1,1 @@
+{"id":"eevee-to-umbreon","from":"eevee","to":"umbreon","conditions":[{"type":"level","value":8},{"type":"loyalty","value":2},{"type":"time","value":"night"}],"effects":[{"type":"asi","value":14}]}

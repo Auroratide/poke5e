@@ -1,0 +1,1 @@
+{"id":"machop-to-machoke","from":"machop","to":"machoke","conditions":[{"type":"level","value":8}],"effects":[{"type":"asi","value":6}]}

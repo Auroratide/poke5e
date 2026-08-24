@@ -1,0 +1,1 @@
+{"id":"tadbulb-to-bellibolt","from":"tadbulb","to":"bellibolt","conditions":[{"type":"level","value":6},{"type":"item","value":"Thunder Stone"}],"effects":[{"type":"asi","value":12}]}

@@ -1,0 +1,1 @@
+{"id":"clamperl-to-gorebyss","from":"clamperl","to":"gorebyss","conditions":[{"type":"level","value":8},{"type":"item","value":"Deep Sea Scale"}],"effects":[{"type":"asi","value":10}]}

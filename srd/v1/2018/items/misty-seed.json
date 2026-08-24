@@ -1,0 +1,1 @@
+{"id":"misty-seed","name":"Misty Seed","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/misty-seed/sprite.png"},"_ingameEffect":"Held: If the holder enters battle during Misty Terrain, or if Misty Terrain is activated while the holder is in battle, this item is consumed and the holder's Special Defense raises by one stage."}

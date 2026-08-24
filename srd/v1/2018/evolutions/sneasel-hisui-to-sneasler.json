@@ -1,0 +1,1 @@
+{"id":"sneasel-hisui-to-sneasler","from":"sneasel-hisui","to":"sneasler","conditions":[{"type":"level","value":10},{"type":"item","value":"Razor Claw"},{"type":"time","value":"day"}],"effects":[{"type":"asi","value":12}]}

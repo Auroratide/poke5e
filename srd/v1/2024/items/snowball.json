@@ -1,0 +1,1 @@
+{"id":"snowball","name":"Snowball","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/snowball/sprite.png"},"_ingameEffect":"Held: If the holder is hit by a damaging Ice move, raises its Attack by one stage."}

@@ -1,0 +1,1 @@
+{"id":"duraludon-to-archaludon","from":"duraludon","to":"archaludon","conditions":[{"type":"level","value":14},{"type":"item","value":"Metal Alloy"}],"effects":[{"type":"asi","value":8}]}

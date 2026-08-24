@@ -1,0 +1,1 @@
+{"id":"shieldon-to-bastiodon","from":"shieldon","to":"bastiodon","conditions":[{"type":"level","value":8}],"effects":[{"type":"asi","value":13}]}

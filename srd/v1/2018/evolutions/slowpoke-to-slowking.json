@@ -1,0 +1,1 @@
+{"id":"slowpoke-to-slowking","from":"slowpoke","to":"slowking","conditions":[{"type":"level","value":10},{"type":"item","value":"King's Rock"}],"effects":[{"type":"asi","value":14}]}

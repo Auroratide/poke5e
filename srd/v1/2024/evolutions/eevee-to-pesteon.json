@@ -1,0 +1,1 @@
+{"id":"eevee-to-pesteon","from":"eevee","to":"pesteon","nonCanon":true,"conditions":[{"type":"level","value":8},{"type":"loyalty","value":2},{"type":"move-type","value":"bug"}],"effects":[{"type":"asi","value":14}]}

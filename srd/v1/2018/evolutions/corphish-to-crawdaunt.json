@@ -1,0 +1,1 @@
+{"id":"corphish-to-crawdaunt","from":"corphish","to":"crawdaunt","conditions":[{"type":"level","value":8}],"effects":[{"type":"asi","value":11}]}

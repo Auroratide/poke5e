@@ -1,0 +1,1 @@
+{"id":"lickitung-to-lickilicky","from":"lickitung","to":"lickilicky","conditions":[{"type":"move","value":"rollout"}],"effects":[{"type":"asi","value":12}]}

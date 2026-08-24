@@ -1,0 +1,1 @@
+{"id":"eevee-to-jolteon","from":"eevee","to":"jolteon","conditions":[{"type":"level","value":8},{"type":"item","value":"Thunder Stone"}],"effects":[{"type":"asi","value":14}]}

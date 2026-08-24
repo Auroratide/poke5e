@@ -1,0 +1,1 @@
+{"id":"koffing-to-galarian-weezing","from":"koffing","to":"galarian-weezing","conditions":[{"type":"level","value":9},{"type":"special","value":"while in a region with significant anthropogenic pollution"}],"effects":[{"type":"asi","value":9}]}

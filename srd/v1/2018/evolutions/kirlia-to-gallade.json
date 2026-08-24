@@ -1,0 +1,1 @@
+{"id":"kirlia-to-gallade","from":"kirlia","to":"gallade","conditions":[{"type":"level","value":12},{"type":"gender","value":"male"},{"type":"item","value":"Dawn Stone"}],"effects":[{"type":"asi","value":11}]}

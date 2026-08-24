@@ -1,0 +1,1 @@
+{"id":"eevee-to-toxeon","from":"eevee","to":"toxeon","nonCanon":true,"conditions":[{"type":"level","value":8},{"type":"item","value":"Toxic Stone"}],"effects":[{"type":"asi","value":14}]}

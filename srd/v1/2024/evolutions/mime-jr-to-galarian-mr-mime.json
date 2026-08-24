@@ -1,0 +1,1 @@
+{"id":"mime-jr-to-galarian-mr-mime","from":"mime-jr","to":"galarian-mr-mime","conditions":[{"type":"move","value":"mimic"},{"type":"special","value":"in a region of typically cool climate"}],"effects":[{"type":"asi","value":7}]}

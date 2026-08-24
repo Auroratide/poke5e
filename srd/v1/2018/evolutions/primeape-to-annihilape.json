@@ -1,0 +1,1 @@
+{"id":"primeape-to-annihilape","from":"primeape","to":"annihilape","conditions":[{"type":"level","value":10},{"type":"special","value":"after using Rage Fist 10 times"}],"effects":[{"type":"asi","value":6}]}

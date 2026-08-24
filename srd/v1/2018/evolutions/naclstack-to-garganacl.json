@@ -1,0 +1,1 @@
+{"id":"naclstack-to-garganacl","from":"naclstack","to":"garganacl","conditions":[{"type":"level","value":14}],"effects":[{"type":"asi","value":10}]}

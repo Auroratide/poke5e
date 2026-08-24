@@ -6422,9 +6422,9 @@
 			"id": "thunder-cage",
 			"name": "Electrojaula",
 			"description": [
-				"Creas una jaula de electricidad que envuelve a una criatura a tu alcance. Realiza un ataque a distancia contra un objetivo, infligiendo 1d6 + MOV de daño eléctrico si impactas y el objetivo queda apresado. Al comienzo de cada uno de sus turnos, puede intentar escapar con una tirada de salvación de Destreza contra tu CD de Movimiento. En cada turno sucesivo, si la criatura sigue apresada, puedes usar este movimiento de nuevo (como una acción) e impactar automáticamente."
+				"Creas una jaula de electricidad que envuelve a una criatura a tu alcance. Realiza un ataque a distancia contra un objetivo, infligiendo 2d6 + MOV de daño eléctrico si impactas y el objetivo queda apresado. Al comienzo de cada uno de sus turnos, puede intentar escapar con una tirada de salvación de Destreza contra tu CD de Movimiento. En cada turno sucesivo, si la criatura sigue apresada, puedes usar este movimiento de nuevo (como una acción) e impactar automáticamente."
 			],
-			"higherLevels": "La tirada de dados de daño para este movimiento pasa a ser 1d10 al nivel 5, 2d8 al nivel 10 y 5d4 al nivel 17."
+			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 4d6 al nivel 10 y 6d6 al nivel 17."
 		},
 		{
 			"id": "thunder-fang",

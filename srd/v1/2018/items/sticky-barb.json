@@ -1,0 +1,1 @@
+{"id":"sticky-barb","name":"Sticky Barb","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/sticky-barb/sprite.png"},"_ingameEffect":"Held: Damaged the holder for 1/8 its max HP.  When the holder is struck by a contact move, damages the attacker for 1/8 its max HP; if the attacker is not holding an item, it will take this item."}

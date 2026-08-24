@@ -1,0 +1,1 @@
+{"id":"weakness-policy","name":"Weakness Policy","type":"held item","cost":1000,"description":null,"media":{"sprite":"/assets/items/weakness-policy/sprite.png"},"_ingameEffect":"Held: When the holder is hit by a super effective move, its Attack and Special Attack raise by two stages."}

@@ -1,0 +1,1 @@
+{"id":"sunkern-to-sunflora","from":"sunkern","to":"sunflora","conditions":[{"type":"level","value":7},{"type":"item","value":"Sun Stone"}],"effects":[{"type":"asi","value":13}]}

@@ -1,0 +1,1 @@
+{"id":"piloswine-to-mamoswine","from":"piloswine","to":"mamoswine","conditions":[{"type":"move","value":"ancient-power"}],"effects":[{"type":"asi","value":10}]}

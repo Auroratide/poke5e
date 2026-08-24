@@ -1,0 +1,1 @@
+{"id":"white-herb","name":"White Herb","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/white-herb/sprite.png"},"_ingameEffect":"Held in battle\n:   At the end of each turn, if any of the holder's stats have a negative stat modifier, the holder consumes this item to remove the modifiers from those stats."}

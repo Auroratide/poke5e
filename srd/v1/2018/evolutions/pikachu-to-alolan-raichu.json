@@ -1,0 +1,1 @@
+{"id":"pikachu-to-alolan-raichu","from":"pikachu","to":"alolan-raichu","conditions":[{"type":"level","value":8},{"type":"item","value":"Alola Stone"}],"effects":[{"type":"asi","value":9}]}

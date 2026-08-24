@@ -1,0 +1,1 @@
+{"id":"karrablast-to-escavalier","from":"karrablast","to":"escavalier","conditions":[{"type":"level","value":8},{"type":"special","value":"while in the presence of a Shelmet"}],"effects":[{"type":"asi","value":10}]}

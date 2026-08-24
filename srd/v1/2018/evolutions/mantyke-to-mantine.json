@@ -1,0 +1,1 @@
+{"id":"mantyke-to-mantine","from":"mantyke","to":"mantine","conditions":[{"type":"level","value":8},{"type":"special","value":"when Remoraid is also in the party"}],"effects":[{"type":"asi","value":6}]}

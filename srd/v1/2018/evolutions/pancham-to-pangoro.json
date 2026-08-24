@@ -1,0 +1,1 @@
+{"id":"pancham-to-pangoro","from":"pancham","to":"pangoro","conditions":[{"type":"level","value":9},{"type":"special","value":"its trainer has another dark-type Pokemon in their party"}],"effects":[{"type":"asi","value":11}]}

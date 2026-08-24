@@ -1,0 +1,1 @@
+{"id":"woobat-to-swoobat","from":"woobat","to":"swoobat","conditions":[{"type":"level","value":7},{"type":"loyalty","value":2}],"effects":[{"type":"asi","value":11}]}

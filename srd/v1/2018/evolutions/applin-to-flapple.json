@@ -1,0 +1,1 @@
+{"id":"applin-to-flapple","from":"applin","to":"flapple","conditions":[{"type":"level","value":5},{"type":"special","value":"inhabiting a green or gold apple"}],"effects":[{"type":"asi","value":14}]}

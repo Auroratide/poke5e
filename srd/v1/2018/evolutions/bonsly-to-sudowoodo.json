@@ -1,0 +1,1 @@
+{"id":"bonsly-to-sudowoodo","from":"bonsly","to":"sudowoodo","conditions":[{"type":"move","value":"mimic"}],"effects":[{"type":"asi","value":8}]}

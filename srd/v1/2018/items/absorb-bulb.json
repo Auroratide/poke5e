@@ -1,0 +1,1 @@
+{"id":"absorb-bulb","name":"Absorb Bulb","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/absorb-bulb/sprite.png"},"_ingameEffect":"Held\n:   When the holder takes water-type damage from a move, its Special Attack rises by one stage and this item is consumed."}

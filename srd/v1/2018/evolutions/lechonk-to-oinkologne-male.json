@@ -1,0 +1,1 @@
+{"id":"lechonk-to-oinkologne-male","from":"lechonk","to":"oinkologne-male","conditions":[{"type":"level","value":6},{"type":"gender","value":"male"}],"effects":[{"type":"asi","value":12}]}

@@ -1,0 +1,1 @@
+{"id":"dipplin-to-hydrapple","from":"dipplin","to":"hydrapple","conditions":[{"type":"level","value":10},{"type":"move","value":"dragon-cheer"}],"effects":[{"type":"asi","value":6}]}

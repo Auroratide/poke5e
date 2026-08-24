@@ -1,0 +1,1 @@
+{"id":"tangela-to-tangrowth","from":"tangela","to":"tangrowth","conditions":[{"type":"move","value":"ancient-power"}],"effects":[{"type":"asi","value":5}]}

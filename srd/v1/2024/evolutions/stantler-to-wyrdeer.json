@@ -1,0 +1,1 @@
+{"id":"stantler-to-wyrdeer","from":"stantler","to":"wyrdeer","conditions":[{"type":"level","value":10},{"type":"move","value":"psyshield-bash"}],"effects":[{"type":"asi","value":8}]}

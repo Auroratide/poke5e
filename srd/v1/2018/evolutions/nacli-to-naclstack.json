@@ -1,0 +1,1 @@
+{"id":"nacli-to-naclstack","from":"nacli","to":"naclstack","conditions":[{"type":"level","value":6}],"effects":[{"type":"asi","value":6}]}

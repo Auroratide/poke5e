@@ -1,0 +1,1 @@
+{"id":"basculin-to-basculegion-m","from":"basculin","to":"basculegion-m","conditions":[{"type":"level","value":10},{"type":"gender","value":"male"},{"type":"special","value":"after fainting from recoil damage"}],"effects":[{"type":"asi","value":12}]}

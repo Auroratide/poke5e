@@ -1,0 +1,1 @@
+{"id":"metronome","name":"Metronome","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/metronome/sprite.png"},"_ingameEffect":"Held: Each time the holder uses the same move consecutively, its power is increased by another 10% of its original, to a maximum of 100%."}

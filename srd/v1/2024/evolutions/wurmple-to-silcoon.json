@@ -1,0 +1,1 @@
+{"id":"wurmple-to-silcoon","from":"wurmple","to":"silcoon","conditions":[{"type":"level","value":4},{"type":"time","value":"day"}],"effects":[{"type":"asi","value":6}]}

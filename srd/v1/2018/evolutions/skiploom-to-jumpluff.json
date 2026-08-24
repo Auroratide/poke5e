@@ -1,0 +1,1 @@
+{"id":"skiploom-to-jumpluff","from":"skiploom","to":"jumpluff","conditions":[{"type":"level","value":12}],"effects":[{"type":"asi","value":7}]}

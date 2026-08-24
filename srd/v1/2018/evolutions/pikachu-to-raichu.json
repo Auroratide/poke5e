@@ -1,0 +1,1 @@
+{"id":"pikachu-to-raichu","from":"pikachu","to":"raichu","conditions":[{"type":"level","value":8},{"type":"item","value":"Thunder Stone"}],"effects":[{"type":"asi","value":9}]}

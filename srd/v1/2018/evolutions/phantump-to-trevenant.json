@@ -1,0 +1,1 @@
+{"id":"phantump-to-trevenant","from":"phantump","to":"trevenant","conditions":[{"type":"level","value":10}],"effects":[{"type":"asi","value":11}]}

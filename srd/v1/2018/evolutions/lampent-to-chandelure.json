@@ -1,0 +1,1 @@
+{"id":"lampent-to-chandelure","from":"lampent","to":"chandelure","conditions":[{"type":"level","value":15},{"type":"item","value":"Dusk Stone"}],"effects":[{"type":"asi","value":10}]}

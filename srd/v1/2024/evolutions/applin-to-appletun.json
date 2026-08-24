@@ -1,0 +1,1 @@
+{"id":"applin-to-appletun","from":"applin","to":"appletun","conditions":[{"type":"level","value":5},{"type":"special","value":"inhabiting a red apple"}],"effects":[{"type":"asi","value":14}]}

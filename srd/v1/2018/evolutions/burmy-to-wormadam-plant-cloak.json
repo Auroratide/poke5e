@@ -1,0 +1,1 @@
+{"id":"burmy-to-wormadam-plant-cloak","from":"burmy","to":"wormadam-plant-cloak","conditions":[{"type":"level","value":6},{"type":"gender","value":"female"},{"type":"special","value":"in a tall grass/forest"}],"effects":[{"type":"asi","value":9}]}

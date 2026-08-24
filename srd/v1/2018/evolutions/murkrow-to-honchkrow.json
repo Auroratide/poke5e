@@ -1,0 +1,1 @@
+{"id":"murkrow-to-honchkrow","from":"murkrow","to":"honchkrow","conditions":[{"type":"level","value":10},{"type":"item","value":"Dusk Stone"}],"effects":[{"type":"asi","value":8}]}

@@ -1,0 +1,1 @@
+{"id":"pansage-to-simisage","from":"pansage","to":"simisage","conditions":[{"type":"level","value":8},{"type":"item","value":"Leaf Stone"}],"effects":[{"type":"asi","value":11}]}

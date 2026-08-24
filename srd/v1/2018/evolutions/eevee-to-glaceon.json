@@ -1,0 +1,1 @@
+{"id":"eevee-to-glaceon","from":"eevee","to":"glaceon","conditions":[{"type":"level","value":8},{"type":"item","value":"Ice Stone"}],"effects":[{"type":"asi","value":14}]}

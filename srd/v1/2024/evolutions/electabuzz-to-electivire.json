@@ -1,0 +1,1 @@
+{"id":"electabuzz-to-electivire","from":"electabuzz","to":"electivire","conditions":[{"type":"level","value":15},{"type":"item","value":"Electirizer"}],"effects":[{"type":"asi","value":6}]}

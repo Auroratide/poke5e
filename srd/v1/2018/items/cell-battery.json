@@ -1,0 +1,1 @@
+{"id":"cell-battery","name":"Cell Battery","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/cell-battery/sprite.png"},"_ingameEffect":"Held\n:   When the holder takes electric-type damage from a move, its Attack rises by one stage and this item is consumed."}

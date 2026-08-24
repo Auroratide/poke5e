@@ -1,0 +1,1 @@
+{"id":"greavard-to-houndstone","from":"greavard","to":"houndstone","conditions":[{"type":"level","value":8},{"type":"time","value":"night"}],"effects":[{"type":"asi","value":10}]}

@@ -1,0 +1,1 @@
+{"id":"litleo-to-pyroar","from":"litleo","to":"pyroar","conditions":[{"type":"level","value":9}],"effects":[{"type":"asi","value":11}]}

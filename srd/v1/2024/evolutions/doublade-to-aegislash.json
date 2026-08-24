@@ -1,0 +1,1 @@
+{"id":"doublade-to-aegislash","from":"doublade","to":"aegislash","conditions":[{"type":"level","value":15},{"type":"item","value":"Dusk Stone"}],"effects":[{"type":"asi","value":12}]}

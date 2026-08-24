@@ -1,0 +1,1 @@
+{"id":"psychic-seed","name":"Psychic Seed","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/psychic-seed/sprite.png"},"_ingameEffect":"Held: If the holder enters battle during Psychic Terrain, or if Psychic Terrain is activated while the holder is in battle, this item is consumed and the holder's Special Defense raises by one stage."}

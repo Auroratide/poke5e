@@ -1,0 +1,1 @@
+{"id":"gimmighoul-roaming-to-gholdengo","from":"gimmighoul-roaming","to":"gholdengo","conditions":[{"type":"level","value":10},{"type":"special","value":"OR earlier than level 10 if given ₽9,999 to consume"}],"effects":[{"type":"asi","value":12}]}

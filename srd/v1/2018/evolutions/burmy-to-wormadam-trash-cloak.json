@@ -1,0 +1,1 @@
+{"id":"burmy-to-wormadam-trash-cloak","from":"burmy","to":"wormadam-trash-cloak","conditions":[{"type":"level","value":6},{"type":"gender","value":"female"},{"type":"special","value":"in a city or building"}],"effects":[{"type":"asi","value":9}]}

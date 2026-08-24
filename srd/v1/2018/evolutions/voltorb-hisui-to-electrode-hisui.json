@@ -1,0 +1,1 @@
+{"id":"voltorb-hisui-to-electrode-hisui","from":"voltorb-hisui","to":"electrode-hisui","conditions":[{"type":"level","value":8},{"type":"item","value":"Leaf Stone"}],"effects":[{"type":"asi","value":10}]}

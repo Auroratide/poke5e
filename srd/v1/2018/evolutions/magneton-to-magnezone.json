@@ -1,0 +1,1 @@
+{"id":"magneton-to-magnezone","from":"magneton","to":"magnezone","conditions":[{"type":"level","value":15}],"effects":[{"type":"asi","value":8}]}

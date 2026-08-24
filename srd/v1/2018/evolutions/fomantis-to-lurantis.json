@@ -1,0 +1,1 @@
+{"id":"fomantis-to-lurantis","from":"fomantis","to":"lurantis","conditions":[{"type":"level","value":9},{"type":"time","value":"day"}],"effects":[{"type":"asi","value":12}]}

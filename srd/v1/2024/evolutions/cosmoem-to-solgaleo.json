@@ -1,0 +1,1 @@
+{"id":"cosmoem-to-solgaleo","from":"cosmoem","to":"solgaleo","conditions":[{"type":"level","value":16},{"type":"time","value":"day"}],"effects":[{"type":"asi","value":14}]}

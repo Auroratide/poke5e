@@ -1,0 +1,1 @@
+{"id":"rocky-helmet","name":"Rocky Helmet","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/rocky-helmet/sprite.png"},"_ingameEffect":"Held\n:   When the holder is hit by a contact move, the attacking Pokémon takes 1/6 its max HP in damage."}

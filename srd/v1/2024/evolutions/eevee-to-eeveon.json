@@ -1,0 +1,1 @@
+{"id":"eevee-to-eeveon","from":"eevee","to":"eeveon","nonCanon":true,"conditions":[{"type":"level","value":8},{"type":"special","value":"and the only damage-dealing move it knows is Tackle"}],"effects":[{"type":"asi","value":12}]}

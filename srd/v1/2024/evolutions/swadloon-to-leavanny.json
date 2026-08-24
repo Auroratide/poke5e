@@ -1,0 +1,1 @@
+{"id":"swadloon-to-leavanny","from":"swadloon","to":"leavanny","conditions":[{"type":"level","value":12},{"type":"loyalty","value":2}],"effects":[{"type":"asi","value":13}]}

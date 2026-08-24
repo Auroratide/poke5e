@@ -1,0 +1,1 @@
+{"id":"rockruff-to-lycanroc-midnight-form","from":"rockruff","to":"lycanroc-midnight-form","conditions":[{"type":"level","value":9},{"type":"time","value":"night"}],"effects":[{"type":"asi","value":14}]}

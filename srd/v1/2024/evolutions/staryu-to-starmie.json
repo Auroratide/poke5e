@@ -1,0 +1,1 @@
+{"id":"staryu-to-starmie","from":"staryu","to":"starmie","conditions":[{"type":"level","value":9},{"type":"item","value":"Water Stone"}],"effects":[{"type":"asi","value":9}]}

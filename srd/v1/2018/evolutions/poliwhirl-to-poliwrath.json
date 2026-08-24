@@ -1,0 +1,1 @@
+{"id":"poliwhirl-to-poliwrath","from":"poliwhirl","to":"poliwrath","conditions":[{"type":"level","value":14},{"type":"item","value":"Water Stone"}],"effects":[{"type":"asi","value":12}]}

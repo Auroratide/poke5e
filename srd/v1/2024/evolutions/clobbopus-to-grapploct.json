@@ -1,0 +1,1 @@
+{"id":"clobbopus-to-grapploct","from":"clobbopus","to":"grapploct","conditions":[{"type":"level","value":5},{"type":"move","value":"taunt"}],"effects":[{"type":"asi","value":11}]}

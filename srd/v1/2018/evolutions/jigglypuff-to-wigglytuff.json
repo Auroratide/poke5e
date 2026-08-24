@@ -1,0 +1,1 @@
+{"id":"jigglypuff-to-wigglytuff","from":"jigglypuff","to":"wigglytuff","conditions":[{"type":"level","value":8},{"type":"item","value":"Moon Stone"}],"effects":[{"type":"asi","value":11}]}

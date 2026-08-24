@@ -1,0 +1,1 @@
+{"id":"float-stone","name":"Float Stone","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/float-stone/sprite.png"},"_ingameEffect":"Held\n:   Holder has 0.5× weight."}

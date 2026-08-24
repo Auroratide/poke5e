@@ -1,0 +1,1 @@
+{"id":"aipom-to-ambipom","from":"aipom","to":"ambipom","conditions":[{"type":"move","value":"double-hit"}],"effects":[{"type":"asi","value":8}]}

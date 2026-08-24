@@ -1,0 +1,1 @@
+{"id":"togetic-to-togekiss","from":"togetic","to":"togekiss","conditions":[{"type":"level","value":15},{"type":"item","value":"Shiny Stone"}],"effects":[{"type":"asi","value":15}]}

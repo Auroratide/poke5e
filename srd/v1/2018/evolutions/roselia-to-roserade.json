@@ -1,0 +1,1 @@
+{"id":"roselia-to-roserade","from":"roselia","to":"roserade","conditions":[{"type":"level","value":14},{"type":"item","value":"Shiny Stone"}],"effects":[{"type":"asi","value":12}]}

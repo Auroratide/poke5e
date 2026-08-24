@@ -1,0 +1,1 @@
+{"id":"riolu-to-lucario","from":"riolu","to":"lucario","conditions":[{"type":"level","value":8},{"type":"loyalty","value":2},{"type":"time","value":"day"}],"effects":[{"type":"asi","value":14}]}

@@ -1,0 +1,1 @@
+{"id":"snom-to-frosmoth","from":"snom","to":"frosmoth","conditions":[{"type":"level","value":4}],"effects":[{"type":"asi","value":12}]}

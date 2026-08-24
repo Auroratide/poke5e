@@ -1,0 +1,1 @@
+{"id":"tyrunt-to-tyrantrum","from":"tyrunt","to":"tyrantrum","conditions":[{"type":"level","value":10},{"type":"time","value":"day"}],"effects":[{"type":"asi","value":11}]}

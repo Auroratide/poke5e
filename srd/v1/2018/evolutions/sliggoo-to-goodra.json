@@ -1,0 +1,1 @@
+{"id":"sliggoo-to-goodra","from":"sliggoo","to":"goodra","conditions":[{"type":"level","value":16},{"type":"special","value":"while raining"}],"effects":[{"type":"asi","value":12}]}

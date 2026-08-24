@@ -1,0 +1,1 @@
+{"id":"snorunt-to-froslass","from":"snorunt","to":"froslass","conditions":[{"type":"level","value":14},{"type":"gender","value":"female"},{"type":"item","value":"Dawn Stone"}],"effects":[{"type":"asi","value":13}]}

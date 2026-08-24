@@ -1,0 +1,1 @@
+{"id":"nuzleaf-to-shiftry","from":"nuzleaf","to":"shiftry","conditions":[{"type":"level","value":10},{"type":"item","value":"Leaf Stone"}],"effects":[{"type":"asi","value":8}]}

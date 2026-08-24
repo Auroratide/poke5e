@@ -1,0 +1,1 @@
+{"id":"eevee-to-sylveon","from":"eevee","to":"sylveon","conditions":[{"type":"level","value":8},{"type":"loyalty","value":2},{"type":"move-type","value":"fairy"}],"effects":[{"type":"asi","value":14}]}

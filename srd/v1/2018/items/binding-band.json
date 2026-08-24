@@ -1,0 +1,1 @@
+{"id":"binding-band","name":"Binding Band","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/binding-band/sprite.png"},"_ingameEffect":"Held\n:   Moves used by the holder that trap and damage a target for multiple turns (e.g. bind, fire spin) inflict twice their usual per-turn damage."}

@@ -1,0 +1,1 @@
+{"id":"gloom-to-vileplume","from":"gloom","to":"vileplume","conditions":[{"type":"level","value":14},{"type":"item","value":"Leaf Stone"}],"effects":[{"type":"asi","value":10}]}

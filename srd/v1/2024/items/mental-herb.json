@@ -1,0 +1,1 @@
+{"id":"mental-herb","name":"Mental Herb","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/mental-herb/sprite.png"},"_ingameEffect":"Held in battle\n:   When the holder is attracted, it consumes this item to cure the attraction."}

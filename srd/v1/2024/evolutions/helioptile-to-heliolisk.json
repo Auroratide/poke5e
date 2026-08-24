@@ -1,0 +1,1 @@
+{"id":"helioptile-to-heliolisk","from":"helioptile","to":"heliolisk","conditions":[{"type":"level","value":9},{"type":"item","value":"Sun Stone"}],"effects":[{"type":"asi","value":15}]}

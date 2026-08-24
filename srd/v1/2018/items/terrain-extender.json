@@ -1,0 +1,1 @@
+{"id":"terrain-extender","name":"Terrain Extender","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/terrain-extender/sprite.png"},"_ingameEffect":"Held: When the holder changes the Terrain (whether by move or ability), it will last  8 turns instead of 5."}

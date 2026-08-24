@@ -1,0 +1,1 @@
+{"id":"eevee-to-aereon","from":"eevee","to":"aereon","nonCanon":true,"conditions":[{"type":"level","value":8},{"type":"loyalty","value":2},{"type":"special","value":"while above the clouds"}],"effects":[{"type":"asi","value":14}]}

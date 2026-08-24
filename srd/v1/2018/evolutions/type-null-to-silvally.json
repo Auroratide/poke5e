@@ -1,0 +1,1 @@
+{"id":"type-null-to-silvally","from":"type-null","to":"silvally","conditions":[{"type":"level","value":16},{"type":"loyalty","value":2}],"effects":[{"type":"asi","value":11}]}

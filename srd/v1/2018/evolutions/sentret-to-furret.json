@@ -1,0 +1,1 @@
+{"id":"sentret-to-furret","from":"sentret","to":"furret","conditions":[{"type":"level","value":5}],"effects":[{"type":"asi","value":10}]}

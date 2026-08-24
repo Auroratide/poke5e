@@ -1,0 +1,1 @@
+{"id":"burmy-to-wormadam-sand-cloak","from":"burmy","to":"wormadam-sand-cloak","conditions":[{"type":"level","value":6},{"type":"gender","value":"female"},{"type":"special","value":"in a tall cave/desert/mountain"}],"effects":[{"type":"asi","value":9}]}

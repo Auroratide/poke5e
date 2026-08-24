@@ -1,0 +1,1 @@
+{"id":"milk-drink","name":"Milk Drink","type":"normal","power":["con"],"time":"1 action","pp":5,"duration":"instantaneous","range":"10ft","description":["You create a tasty drink that heals your or an ally’s wounds. The recipient gains 2d6 + MOVE hit points."],"higherLevels":"The dice roll for this move changes to 3d6 at level 5, 5d6 at level 10, and 8d6 at level 17."}

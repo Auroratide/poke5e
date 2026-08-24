@@ -1,0 +1,1 @@
+{"id":"expert-belt","name":"Expert Belt","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/expert-belt/sprite.png"},"_ingameEffect":"Held: When the holder hits with a super-effective move, its power is raised by 20%."}

@@ -1,0 +1,1 @@
+{"id":"cubchoo-to-beartic","from":"cubchoo","to":"beartic","conditions":[{"type":"level","value":10}],"effects":[{"type":"asi","value":15}]}

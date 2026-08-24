@@ -1,0 +1,1 @@
+{"id":"clamperl-to-huntail","from":"clamperl","to":"huntail","conditions":[{"type":"level","value":8},{"type":"item","value":"Deep Sea Tooth"}],"effects":[{"type":"asi","value":10}]}

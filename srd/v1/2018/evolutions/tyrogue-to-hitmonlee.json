@@ -1,0 +1,1 @@
+{"id":"tyrogue-to-hitmonlee","from":"tyrogue","to":"hitmonlee","conditions":[{"type":"level","value":6},{"type":"special","value":"if its DEX is higher than its STR"}],"effects":[{"type":"asi","value":8}]}

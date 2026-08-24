@@ -1,0 +1,1 @@
+{"id":"iron-ball","name":"Iron Ball","type":"held item","cost":4000,"description":null,"media":{"sprite":"/assets/items/iron-ball/sprite.png"},"_ingameEffect":"Held: Decreases the holder's Speed by 50%.  If the holder is Flying or has Levitate, it takes regular damage from Ground attacks and is suspectible to Spikes and Toxic Spikes."}

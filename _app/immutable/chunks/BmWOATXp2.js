@@ -1,0 +1,1 @@
+import{f as e}from"./DeKPs-47.js";function t(t,n){throw new e(t,n)}export{t};

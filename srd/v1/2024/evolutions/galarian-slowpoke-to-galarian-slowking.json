@@ -1,0 +1,1 @@
+{"id":"galarian-slowpoke-to-galarian-slowking","from":"galarian-slowpoke","to":"galarian-slowking","conditions":[{"type":"level","value":10},{"type":"item","value":"Galarica Wreath"}],"effects":[{"type":"asi","value":14}]}

@@ -1,0 +1,1 @@
+{"id":"galarian-farfetchd-to-sirfetchd","from":"galarian-farfetchd","to":"sirfetchd","conditions":[{"type":"level","value":8},{"type":"special","value":"after enduring a single battle where it lands three critical hits"}],"effects":[{"type":"asi","value":11}]}

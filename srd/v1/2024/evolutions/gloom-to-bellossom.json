@@ -1,0 +1,1 @@
+{"id":"gloom-to-bellossom","from":"gloom","to":"bellossom","conditions":[{"type":"level","value":14},{"type":"item","value":"Sun Stone"}],"effects":[{"type":"asi","value":10}]}

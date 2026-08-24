@@ -1,0 +1,1 @@
+{"id":"shellder-to-cloyster","from":"shellder","to":"cloyster","conditions":[{"type":"level","value":8},{"type":"item","value":"Water Stone"}],"effects":[{"type":"asi","value":9}]}
