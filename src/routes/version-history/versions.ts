@@ -14,6 +14,14 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.10",
+		description: [
+			"<strong>TMs</strong>: Raise Ice Punch's monetary cost to match Thunder Punch and Fire Punch.",
+			"<strong>Reference</strong>: Started a Frequently Asked Questions page.",
+			"<strong>Reference</strong>: Clarify when MOVE and STAB applies to move damage in the Combat rules.",
+			"<strong>Bugfix</strong>: Fill in the remaining entries for experience in the 2018 edition of the ruleset. This fixed a bug in the Encounter Tool where numerous Snorlaxes could be generated without bound.",
+		],
+	}, {
 		name: "v1.12.9",
 		description: [
 			"<strong>Bugfix</strong>: Menu can now be scrolled on smaller mobile screens.",
