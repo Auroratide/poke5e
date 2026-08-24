@@ -51,6 +51,7 @@ export const Url = {
 		damageTypes: () => localizeUrl(resolve("/reference/damage-types")).pathname,
 		encounters: () => localizeUrl(resolve("/reference/encounters")).pathname,
 		faintingRestingHealing: () => localizeUrl(resolve("/reference/fainting-resting-and-healing")).pathname,
+		faq: () => localizeUrl(resolve("/reference/faq")).pathname,
 		feats: () => localizeUrl(resolve("/reference/feats")).pathname,
 		legendaryBattles: () => localizeUrl(resolve("/reference/legendary-battles")).pathname,
 		natures: () => localizeUrl(resolve("/reference/natures")).pathname,
