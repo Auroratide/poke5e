@@ -21,9 +21,18 @@
 		<p>Moves in Pokémon 5e work similarly to spells in 5e D&D. Instead of a single character having a set amount of spell slots, each move has a set amount of <dfn>Power Points</dfn> (<abbr>PP</abbr>). PP determines how many times the move can be used, one use per one PP. Refilling PP can be done by long resting or using an item such as Ether.</p>
 		<p>Most moves have a <dfn>Move Power</dfn> - the focused ability of that move. Move Powers can be any of the six main ability scores, and determine which ability to use for attack, damage, and saving throw DC. If a move specifies multiple move powers, you choose one of the move powers for calculations.</p>
 		<Formula equals="Attack Roll Bonus" expression="Move Power Mod + Prof. Mod" />
-		<Formula equals="Damage Bonus" expression="Move Power Mod + STAB" />
 		<Formula equals="Saving Throw DC" expression="8 + Move Power Mod + Prof. Mod" />
 		<p>Pokémon are proficient in all the moves they know.</p>
+
+		<Heading level="3" id="damage">Damage</Heading>
+		<p>Most of the time, there three components that determine the amount of damage dealt by a move:</p>
+		<ul>
+			<li><strong>Damage Dice</strong>: This is included in the move's description, and upgrades at levels 5, 10, and 17.</li>
+			<li><strong>MOVE Bonus</strong>: When a move specifies "+ MOVE" in its damage, then MOVE is a number equal to the Move Power's modifier. For example, if you used DEX to attack and hit, then you would add your DEX modifier to the damage.</li>
+			<li><strong>STAB</strong>: When the move's type matches one of the user's types, then STAB damage is added. See the following <a href="#stab">STAB</a> section for details.</li>
+		</ul>
+		<p>Note that not every move specifies "+ MOVE" in their damage. These moves do not benefit from the MOVE Bonus.</p>
+
 		<Heading level="3" id="stab">STAB</Heading>
 		{#if $rulesVersion === "2018"}
 			<Rules2018.Stab />
