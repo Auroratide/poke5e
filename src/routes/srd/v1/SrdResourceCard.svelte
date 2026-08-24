@@ -20,7 +20,7 @@
 <Card title={kebabToTitleText(tag)} level={2} inline>
 	{#each sections as s}
 		<section>
-			<h3>{s.specification.summary}</h3>
+			<h3 id="{s.specification.summary?.replaceAll(" ", "")}">{s.specification.summary}</h3>
 			<p class="endpoint"><Tag><span class="method">{s.method}</span></Tag> <code>{s.path}</code></p>
 			<p>{s.specification.description}</p>
 			{#if s.returns != null}
