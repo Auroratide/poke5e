@@ -62,7 +62,7 @@ describe("the schema an endpoint returns", () => {
 		// the item endpoint expands the shape rather than naming it
 		const itemTokens = SrdDocumentation.humanReadableSchema(item.returns!.schema)
 		expect(itemTokens.filter((it) => it.kind === "property").map((it) => it.text))
-			.toEqual(["id", "name", "aliases", "description", "deprecated"])
+			.toEqual(["id", "name", "description", "aliases", "deprecated"])
 	})
 
 	test("is declared by every endpoint in the document", () => {
@@ -131,7 +131,7 @@ describe("humanReadableSchema", () => {
 		const result = SrdDocumentation.humanReadableSchema(schemas.Ability)
 
 		expect(result.filter((it) => it.kind === "property").map((it) => it.text))
-			.toEqual(["id", "name", "aliases", "description", "deprecated"])
+			.toEqual(["id", "name", "description", "aliases", "deprecated"])
 		expect(result.filter((it) => it.kind === "type").map((it) => it.text))
 			.toEqual(["string", "string", "string", "string", "boolean"])
 	})
@@ -177,7 +177,7 @@ describe("humanReadableSchema", () => {
 
 			expect(render(result)).toEqual(`{
 	/**
-	 * Kebab-case unique identifier.
+	 * Unique identifier.
 	 */
 	id: string
 
@@ -187,15 +187,15 @@ describe("humanReadableSchema", () => {
 	name: string
 
 	/**
-	 * Alternative display names for searchability.
-	 * Usually the English name for localized output.
-	 */
-	aliases?: string[]
-
-	/**
 	 * Rules text for the ability. Plain text with no markup.
 	 */
 	description: string
+
+	/**
+	 * Alternative display names for searching.
+	 * Usually the English name for localized output.
+	 */
+	aliases?: string[]
 
 	/**
 	 * Ability is to no longer be used.
@@ -214,11 +214,11 @@ describe("humanReadableSchema", () => {
 
 			expect(doccomments.filter((it) => it.startsWith(" * ")))
 				.toEqual([
-					" * Kebab-case unique identifier.",
+					" * Unique identifier.",
 					" * Display name, localized.",
-					" * Alternative display names for searchability.",
-					" * Usually the English name for localized output.",
 					" * Rules text for the ability. Plain text with no markup.",
+					" * Alternative display names for searching.",
+					" * Usually the English name for localized output.",
 					" * Ability is to no longer be used.",
 				])
 		})
@@ -356,7 +356,7 @@ describe("humanReadableSchema", () => {
 
 			expect(render(result)).toEqual(`{
 	/**
-	 * Every ability available in the requested edition, sorted by id.
+	 * Every ability, sorted by id.
 	 */
 	values: Ability[]
 }`)
