@@ -30,13 +30,25 @@ test("all endpoints match the openapi schema", async ({ request }) => {
 	await Promise.all(items.flatMap(([path, methods]) => editions.map(async (edition) => {
 		const sampleId = sampleIds.get(`${methods.get.tags[0]}:${edition}`)
 		const truePath = path.replace("{edition}", edition).replace("{id}", sampleId)
-		const json = await validateEndpoint({
+		await validateEndpoint({
 			path: truePath,
 			request,
 			validatorFor,
 			methods,
 		})
 	})))
+})
+
+test("locations for SRD", async ({ request }) => {
+	const exampleLocalizations = ["es", "pt"]
+	const exampleEndpoints = ["/srd/v1/2018/abilities.json", "/srd/v1/2024/abilities.json"]
+
+	for (const locale of exampleLocalizations) {
+		for (const endpoint of exampleEndpoints) {
+			const response = await request.get(`/${locale}${endpoint}`)
+			expect(response.status(), endpoint).toBe(200)
+		}
+	}
 })
 
 function setupValidators(schema: object) {
