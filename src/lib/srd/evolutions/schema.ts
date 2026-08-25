@@ -12,6 +12,7 @@ export const EvolutionJson = z.object({
 		type: z.string(),
 		value: z.union([z.string(), z.number()]),
 	})),
+	nonCanon: z.boolean().optional(),
 }).meta({
 	id: "Evolution",
 	title: "Evolution",

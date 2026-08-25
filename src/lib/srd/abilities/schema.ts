@@ -13,6 +13,9 @@ export const AbilityJson = z.object({
 	description: z.string().meta({
 		description: "Rules text for the ability. Plain text with no markup.",
 	}),
+	deprecated: z.boolean().optional().meta({
+		description: "Ability is to no longer be used.",
+	}),
 }).meta({
 	id: "Ability",
 	title: "Ability",

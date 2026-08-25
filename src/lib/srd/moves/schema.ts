@@ -10,7 +10,7 @@ const TableJson = z.object({
 export const MoveJson = z.object({
 	id: z.string(),
 	name: z.string(),
-	type: PokeType,
+	type: z.union([PokeType, z.literal("varies"), z.literal("typeless"), z.literal("stellar")]),
 	power: z.union([
 		z.array(Attribute),
 		z.string(),
