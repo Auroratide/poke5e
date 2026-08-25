@@ -48,7 +48,13 @@
 	.code-block {
 		border-radius: 0.25em;
 		margin-block-end: 1em;
-		tab-size: 3;
+		tab-size: 2;
+	}
+
+	@media screen and (min-width: 37.5rem) {
+		.code-block {
+			tab-size: 3;
+		}
 	}
 
 	menu {
@@ -72,6 +78,8 @@
 
 	code {
 		display: block;
+		font-size: var(--font-sz-venus);
+		line-height: 1.25;
 	}
 
 	button {

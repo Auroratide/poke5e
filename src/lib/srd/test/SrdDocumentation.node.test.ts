@@ -1,4 +1,5 @@
 import { test, expect, describe } from "vitest"
+import type { OpenAPIV3_1 } from "openapi-types"
 import { SrdDocumentation, type SchemaToken } from "../SrdDocumentation"
 import { openApiDocument } from "../openapi"
 import * as CommonSchemas from "../common/schema"
@@ -61,7 +62,7 @@ describe("the schema an endpoint returns", () => {
 		// the item endpoint expands the shape rather than naming it
 		const itemTokens = SrdDocumentation.humanReadableSchema(item.returns!.schema)
 		expect(itemTokens.filter((it) => it.kind === "property").map((it) => it.text))
-			.toEqual(["id", "name", "aliases", "description"])
+			.toEqual(["id", "name", "aliases", "description", "deprecated"])
 	})
 
 	test("is declared by every endpoint in the document", () => {
@@ -116,34 +117,33 @@ describe("humanReadableSchema", () => {
 	})
 
 	test("marks optional properties and array types", () => {
-		const result = SrdDocumentation.humanReadableSchema(schemas.Ability)
+		// `Pokemon` carries no property descriptions, so the shape stands on its own
+		const result = SrdDocumentation.humanReadableSchema(schemas.Pokemon)
+		const text = render(result)
 
-		// `aliases` is the only property missing from the schema's `required` list
-		expect(render(result)).toEqual(`{
-	id: string
-	name: string
-	aliases?: string[]
-	description: string
-}`)
+		// `specialAbilityText` and `unofficial` are missing from `required`
+		expect(text).toContain("\tspecialAbilityText?: string")
+		expect(text).toContain("\tunofficial?: boolean")
+		expect(text).toContain("\teggGroup: string[]")
 	})
 
 	test("classifies tokens so they can be highlighted independently", () => {
 		const result = SrdDocumentation.humanReadableSchema(schemas.Ability)
 
 		expect(result.filter((it) => it.kind === "property").map((it) => it.text))
-			.toEqual(["id", "name", "aliases", "description"])
+			.toEqual(["id", "name", "aliases", "description", "deprecated"])
 		expect(result.filter((it) => it.kind === "type").map((it) => it.text))
-			.toEqual(["string", "string", "string", "string"])
+			.toEqual(["string", "string", "string", "string", "boolean"])
 	})
 
 	test("an array of references keeps the link target", () => {
-		const result = SrdDocumentation.humanReadableSchema(schemas.AbilityList)
+		const result = SrdDocumentation.humanReadableSchema(schemas.BiomeList)
 
 		expect(render(result)).toEqual(`{
-	values: Ability[]
+	values: Biome[]
 }`)
 		expect(result.filter((it) => it.kind === "reference"))
-			.toEqual([ { kind: "reference", text: "Ability", linkTo: "Ability" } ])
+			.toEqual([ { kind: "reference", text: "Biome", linkTo: "Biome" } ])
 	})
 
 	test("expands anonymous nested objects but leaves named ones as references", () => {
@@ -169,5 +169,226 @@ describe("humanReadableSchema", () => {
 		const result = SrdDocumentation.humanReadableSchema(schemas.AttributeValues)
 
 		expect(render(result)).not.toContain("9007199254740991")
+	})
+
+	describe("doccomments", () => {
+		test("a described property is preceded by its description", () => {
+			const result = SrdDocumentation.humanReadableSchema(schemas.Ability)
+
+			expect(render(result)).toEqual(`{
+	/**
+	 * Kebab-case unique identifier.
+	 */
+	id: string
+
+	/**
+	 * Display name, localized.
+	 */
+	name: string
+
+	/**
+	 * Alternative display names for searchability.
+	 * Usually the English name for localized output.
+	 */
+	aliases?: string[]
+
+	/**
+	 * Rules text for the ability. Plain text with no markup.
+	 */
+	description: string
+
+	/**
+	 * Ability is to no longer be used.
+	 */
+	deprecated?: boolean
+}`)
+		})
+
+		test("is its own token kind so it can be highlighted independently", () => {
+			const result = SrdDocumentation.humanReadableSchema(schemas.Ability)
+			const doccomments = result.filter((it) => it.kind === "doccomment").map((it) => it.text)
+
+			// one delimiter pair per described property
+			expect(doccomments.filter((it) => it === "/**")).toHaveLength(5)
+			expect(doccomments.filter((it) => it === " */")).toHaveLength(5)
+
+			expect(doccomments.filter((it) => it.startsWith(" * ")))
+				.toEqual([
+					" * Kebab-case unique identifier.",
+					" * Display name, localized.",
+					" * Alternative display names for searchability.",
+					" * Usually the English name for localized output.",
+					" * Rules text for the ability. Plain text with no markup.",
+					" * Ability is to no longer be used.",
+				])
+		})
+
+		test("a description with newlines becomes one comment line each", () => {
+			const wrapped: OpenAPIV3_1.SchemaObject = {
+				type: "object",
+				properties: {
+					field: { type: "string", description: "First line.\nSecond line." },
+				},
+				required: ["field"],
+			}
+
+			expect(render(SrdDocumentation.humanReadableSchema(wrapped))).toEqual(`{
+	/**
+	 * First line.
+	 * Second line.
+	 */
+	field: string
+}`)
+		})
+
+		test("a blank line keeps its asterisk but gains no trailing space", () => {
+			const paragraphs: OpenAPIV3_1.SchemaObject = {
+				type: "object",
+				properties: {
+					field: { type: "string", description: "First paragraph.\n\nSecond paragraph." },
+				},
+				required: ["field"],
+			}
+			const result = SrdDocumentation.humanReadableSchema(paragraphs)
+
+			expect(render(result)).toEqual(`{
+	/**
+	 * First paragraph.
+	 *
+	 * Second paragraph.
+	 */
+	field: string
+}`)
+			expect(result.filter((it) => it.kind === "doccomment").map((it) => it.text))
+				.not.toContain(" * ")
+		})
+
+		test("strips the indentation a template literal leaves behind", () => {
+			// `description: \`First line.
+			//     Second line.\`` carries the source file's tabs
+			const indented: OpenAPIV3_1.SchemaObject = {
+				type: "object",
+				properties: {
+					field: { type: "string", description: "\n\t\t\tFirst line.\n\t\t\tSecond line.\n\t\t" },
+				},
+				required: ["field"],
+			}
+
+			expect(render(SrdDocumentation.humanReadableSchema(indented))).toEqual(`{
+	/**
+	 * First line.
+	 * Second line.
+	 */
+	field: string
+}`)
+		})
+
+		test("a property with no description gets no doccomment", () => {
+			// No resource other than abilities annotates its properties yet
+			const result = SrdDocumentation.humanReadableSchema(schemas.Biome)
+
+			expect(result.filter((it) => it.kind === "doccomment")).toEqual([])
+			expect(render(result)).toEqual(`{
+	id: string
+	name: string
+}`)
+		})
+
+		test("is separated from the property above it, but not from the brace", () => {
+			const consecutive: OpenAPIV3_1.SchemaObject = {
+				type: "object",
+				properties: {
+					first: { type: "string", description: "The first one." },
+					second: { type: "string", description: "The second one." },
+				},
+				required: ["first", "second"],
+			}
+
+			expect(render(SrdDocumentation.humanReadableSchema(consecutive))).toEqual(`{
+	/**
+	 * The first one.
+	 */
+	first: string
+
+	/**
+	 * The second one.
+	 */
+	second: string
+}`)
+		})
+
+		test("an object with no descriptions gains no blank lines", () => {
+			const result = SrdDocumentation.humanReadableSchema(schemas.Biome)
+
+			expect(render(result)).not.toContain("\n\n")
+		})
+
+		test("only the described properties of a partially annotated object", () => {
+			// Hand-rolled: every real schema is currently all-or-nothing
+			const mixed: OpenAPIV3_1.SchemaObject = {
+				type: "object",
+				properties: {
+					annotated: { type: "string", description: "Has a description." },
+					bare: { type: "string" },
+				},
+				required: ["annotated", "bare"],
+			}
+
+			expect(render(SrdDocumentation.humanReadableSchema(mixed))).toEqual(`{
+	/**
+	 * Has a description.
+	 */
+	annotated: string
+	bare: string
+}`)
+		})
+
+		test("the schema's own description is not emitted", () => {
+			// `Ability` is described too, but that belongs to the card's prose,
+			// not to the inside of the code block
+			const result = SrdDocumentation.humanReadableSchema(schemas.Ability)
+
+			expect(render(result)).not.toContain("A Pokémon ability as defined by")
+		})
+
+		test("describes a property that renders as a reference", () => {
+			const result = SrdDocumentation.humanReadableSchema(schemas.AbilityList)
+
+			expect(render(result)).toEqual(`{
+	/**
+	 * Every ability available in the requested edition, sorted by id.
+	 */
+	values: Ability[]
+}`)
+		})
+
+		test("indents the doccomment alongside the property it describes", () => {
+			const nested: OpenAPIV3_1.SchemaObject = {
+				type: "object",
+				properties: {
+					outer: {
+						type: "object",
+						properties: {
+							inner: { type: "string", description: "Two levels deep." },
+						},
+						required: ["inner"],
+						description: "One level deep.",
+					},
+				},
+				required: ["outer"],
+			}
+
+			expect(render(SrdDocumentation.humanReadableSchema(nested))).toEqual(`{
+	/**
+	 * One level deep.
+	 */
+	outer: {
+		/**
+		 * Two levels deep.
+		 */
+		inner: string
+	}
+}`)
+		})
 	})
 })

@@ -23,3 +23,13 @@
 		{/if}
 	{/each}
 </CodeBlock>
+
+<style>
+	.property {
+		font-weight: bold;
+	}
+
+	.doccomment {
+		color: var(--skin-success-text);
+	}
+</style>

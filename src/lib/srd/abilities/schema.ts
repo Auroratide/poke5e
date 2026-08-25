@@ -8,7 +8,7 @@ export const AbilityJson = z.object({
 		description: "Display name, localized.",
 	}),
 	aliases: z.array(z.string()).optional().meta({
-		description: "Alternative display names for searchability. Usually the English name for localized output.",
+		description: "Alternative display names for searchability.\nUsually the English name for localized output.",
 	}),
 	description: z.string().meta({
 		description: "Rules text for the ability. Plain text with no markup.",

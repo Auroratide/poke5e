@@ -16,6 +16,7 @@ export type SchemaToken =
 	| { kind: "property", text: string }
 	| { kind: "type", text: string }
 	| { kind: "literal", text: string }
+	| { kind: "doccomment", text: string }
 	| { kind: "reference", text: string, linkTo: string }
 	| { kind: "line", indent: number }
 
@@ -74,12 +75,24 @@ function tokensFor(node: OpenAPIV3_1.SchemaObject, indent: number): SchemaToken[
 
 		return [
 			{ kind: "punctuation", text: "{" },
-			...Object.entries(node.properties).flatMap(([name, property]): SchemaToken[] => [
-				{ kind: "line", indent: indent + 1 },
-				{ kind: "property", text: name },
-				{ kind: "punctuation", text: required.includes(name) ? ": " : "?: " },
-				...tokensFor(property, indent + 1),
-			]),
+			...Object.entries(node.properties).flatMap(([name, property], index): SchemaToken[] => {
+				const doccomment = doccommentFor(property, indent + 1)
+
+				// A comment block needs air above it, but not against the opening brace.
+				// Indent zero so the blank line is genuinely empty rather than trailing tabs.
+				const separator: SchemaToken[] = index > 0 && doccomment.length > 0
+					? [ { kind: "line", indent: 0 } ]
+					: []
+
+				return [
+					...separator,
+					...doccomment,
+					{ kind: "line", indent: indent + 1 },
+					{ kind: "property", text: name },
+					{ kind: "punctuation", text: required.includes(name) ? ": " : "?: " },
+					...tokensFor(property, indent + 1),
+				]
+			}),
 			{ kind: "line", indent },
 			{ kind: "punctuation", text: "}" },
 		]
@@ -88,6 +101,34 @@ function tokensFor(node: OpenAPIV3_1.SchemaObject, indent: number): SchemaToken[
 	if (node.type == null) return [ { kind: "type", text: "unknown" } ]
 
 	return [ { kind: "type", text: Array.isArray(node.type) ? node.type.join(" | ") : node.type } ]
+}
+
+/**
+ * The description a property carries, rendered as a leading block comment.
+ *
+ * Only ever called with a *property* node: a schema's own `description` sits
+ * beside its `properties`, and belongs to the surrounding prose rather than
+ * the inside of the code block.
+ *
+ * Descriptions are authored as template literals, so each line is trimmed —
+ * the indentation of the source file is not part of the text.
+ */
+function doccommentFor(property: OpenAPIV3_1.SchemaObject, indent: number): SchemaToken[] {
+	const lines = (property.description ?? "").split("\n").map((line) => line.trim())
+
+	while (lines[0] === "") lines.shift()
+	while (lines[lines.length - 1] === "") lines.pop()
+	if (lines.length === 0) return []
+
+	const commentLine = (text: string): SchemaToken[] =>
+		[ { kind: "line", indent }, { kind: "doccomment", text } ]
+
+	return [
+		...commentLine("/**"),
+		// A blank line keeps its asterisk, but gains no trailing whitespace
+		...lines.flatMap((line) => commentLine(line === "" ? " *" : ` * ${line}`)),
+		...commentLine(" */"),
+	]
 }
 
 /** The id of the schema an operation returns on success, if it names one. */
