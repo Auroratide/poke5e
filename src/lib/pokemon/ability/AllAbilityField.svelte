@@ -14,7 +14,7 @@
 
 	$: fieldName = getAbilityFieldName(id)
 
-	$: abilityOptions = $AbilityStore?.map((it) => {
+	$: abilityOptions = $AbilityStore.result?.map((it) => {
 		return {
 			name: it.name,
 			value: it.referenceId,

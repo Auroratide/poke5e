@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { m } from "$lib/site/i18n"
-	import { Loader } from "$lib/ui/elements"
+	import { ErrorInline, Loader } from "$lib/ui/elements"
 	import { Tag } from "$lib/ui/elements"
 	import { AbilityStore } from "./AbilityStore"
 	import { AbilityPool } from "./AbilityPool"
@@ -8,10 +8,12 @@
 	export let value: AbilityPool
 </script>
 
-{#if $AbilityStore == null || $AbilityStore?.length === 0}
+{#if $AbilityStore.fetching}
 	<div class="smaller">
 		<Loader caption="Finding abilities..." />
 	</div>
+{:else if $AbilityStore.error}
+	<p><ErrorInline>Could not load abilities.</ErrorInline></p>
 {:else}
 	{#each value.data.normal as ability}
 		<p><strong>{ability.name}:</strong> {ability.description}</p>	

@@ -1,4 +1,5 @@
 import { browser } from "$app/environment"
+import type { Fetched } from "$lib/site/stores"
 import { readable, type Readable, type StartStopNotifier, get } from "svelte/store"
 
 /**
@@ -26,19 +27,19 @@ export function cachedReadable<T>(value: T, start: StartStopNotifier<T>): Readab
 	})
 }
 
-export async function getWhenDefined<T>(store: Readable<T>, serverValue: T): Promise<T> {
+export async function getWhenDefined<T>(store: Readable<Fetched<T>>, serverValue: T): Promise<T> {
 	if (!browser) return serverValue
 
 	const current = get(store)
-	if (current != null) return current
+	if (current.result != null) return current.result
 
 	// overly safe tbh
 	let unsubscribe: () => void = undefined
 	return new Promise((resolve) => {
 		unsubscribe = store.subscribe((value) => {
-			if (value != null) {
+			if (value.result != null) {
 				unsubscribe?.()
-				resolve(value)
+				resolve(value.result)
 			}
 		})
 	})

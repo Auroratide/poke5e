@@ -26,7 +26,7 @@
 	$: currentSelectValue = value.referenceId ?? (currentAbilityIndex >= 0 ? currentAbilityIndex.toString() : undefined)
 
 	$: myAbilityIds = species.abilities.toList().map((it) => it.value.referenceId).filter((it) => it != null)
-	$: nonstandardAbilities = $AbilityStore?.filter((it) => !myAbilityIds.includes(it.referenceId))
+	$: nonstandardAbilities = $AbilityStore.result?.filter((it) => !myAbilityIds.includes(it.referenceId ?? ""))
 	$: abilityOptions = [ {
 		name: "Learnable Abilities",
 		values: abilitiesAsList.map((ability, index) => {

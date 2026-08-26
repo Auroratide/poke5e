@@ -7,16 +7,23 @@
 	import { SpeciesStore } from "$lib/poke5e/species"
 	import { AbilityPool } from "$lib/pokemon/ability"
 	import { includesSearch } from "$lib/utils/string"
+	import { rulesVersion } from "$lib/site/rules-version"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	const pokemon = SpeciesStore.canonList()
 
-	export let data: PageData
-	$: abilities = data.abilities
-	$: associatedPokemon = AbilityPool.groupSpeciesByAbility(abilities.map((it) => it.referenceId).filter((it) => it != null), $pokemon ?? [])
+	let {
+		data,
+	}: {
+		data: PageData,
+	} = $props()
 
-	let abilityFilter = ""
+	const rulesVersionToUseForAbilities = $derived(FeatureToggles.PreviewUpdatedMoves() ? $rulesVersion : "2018")
+	const abilities = $derived(data.values[rulesVersionToUseForAbilities])
+	const associatedPokemon = $derived(AbilityPool.groupSpeciesByAbility(abilities.map((it) => it.referenceId).filter((it) => it != null), $pokemon ?? []))
 
-	$: filteredAbilities = abilities?.filter((it) => includesSearch([it.name, ...(it.aliases ?? [])], abilityFilter))
+	let abilityFilter = $state("")
+	const filteredAbilities = $derived(abilities?.filter((it) => includesSearch([it.name, ...(it.aliases ?? [])], abilityFilter)))
 </script>
 
 <ReferencePage title="Abilities">
@@ -31,7 +38,7 @@
 			{#each abilities as ability (ability.referenceId)}
 				<div class="ability" class:hide={!filteredAbilities.includes(ability)}>
 					{#if ability.referenceId}
-						<Heading level="3" id="{ability.referenceId}">{ability.name}</Heading>
+						<Heading level="3" id={ability.referenceId}>{ability.name}</Heading>
 					{:else}
 						<h3>{ability.name}</h3>
 					{/if}
