@@ -4,6 +4,7 @@ import { FeatureToggles } from "../FeatureToggles"
 
 export const Editions = ["2018", "2024"] as const
 export type RulesVersion = "2018" | "2024"
+const LATEST_VERSION = "2024"
 
 const RULES_VERSION_STORAGE_KEY = "rules-version"
 
@@ -26,3 +27,8 @@ if (browser) {
 		})
 	}
 }
+
+export const RulesVersion = {
+	abbr: (v: RulesVersion) => `'${v.substring(2)}`,
+	isLatest: (v: RulesVersion) => v === LATEST_VERSION,
+} as const
