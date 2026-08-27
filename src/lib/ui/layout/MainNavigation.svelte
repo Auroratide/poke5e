@@ -8,18 +8,22 @@
 
 	const NUMBER_OF_UNMENUED_ITEMS = 6
 
-	export let items: {
-		id: string,
-		href: string,
-		name: string,
-		color: ThemeColor,
-		icon: Component,
-	}[]
+	let {
+		items,
+		active,
+	}: {
+		items: {
+			id: string,
+			href: string,
+			name: string,
+			color: ThemeColor,
+			icon: Component,
+		}[],
+		active: string,
+	} = $props()
 
-	$: firstFewItems = items.slice(0, NUMBER_OF_UNMENUED_ITEMS)
-	$: exceedsUnmenued = items.length > NUMBER_OF_UNMENUED_ITEMS
-
-	export let active: string
+	const firstFewItems = $derived(items.slice(0, NUMBER_OF_UNMENUED_ITEMS))
+	const exceedsUnmenued = $derived(items.length > NUMBER_OF_UNMENUED_ITEMS)
 
 	let dialog: HTMLDialogElement
 
@@ -34,16 +38,16 @@
 		<ul class="no-list row space-large nav-list lg:show" style:gap="1.375em">
 			{#each firstFewItems as item}
 				<li class:active={active === item.id} class="theme-{item.color}">
-					<a class="row space-small" href="{item.href}" on:click={closeDialog}>
+					<a class="row space-small" href="{item.href}" onclick={closeDialog}>
 						<span class="icon" aria-hidden="true">
-							<svelte:component this={item.icon} />
+							<item.icon />
 						</span>
 						<span>{item.name}</span>
 					</a>
 				</li>
 			{/each}
 		</ul>
-		<button on:click={openDialog} class="menu-button row space-small" class:lg:hide={!exceedsUnmenued}>
+		<button onclick={openDialog} class="menu-button row space-small" class:lg:hide={!exceedsUnmenued}>
 			<span class="icon no-rotate"><MenuIcon /></span>
 			<span class="lg:hide">{m.menu()}</span>
 			<span class="lg:show">{m.more()}</span>
@@ -65,9 +69,9 @@
 				<ul class="no-list grid scrollable">
 					{#each items as item}
 						<li class:active={active === item.id} class="theme-{item.color} transitioned">
-							<a href="{item.href}" class="center-column uppercase-link" on:click={closeDialog}>
+							<a href="{item.href}" class="center-column uppercase-link" onclick={closeDialog}>
 								<div class="bubble" aria-hidden="true">
-									<svelte:component this={item.icon} />
+									<item.icon />
 								</div>
 								<span class="bubble-title">{item.name}</span>
 							</a>
