@@ -371,8 +371,9 @@
 	}
 
 	.scrollable {
-		overflow-x: hidden;
 		overflow-y: auto;
+		margin-inline: -2em;
+		padding-inline: 2em;
 	}
 
 	@keyframes appear {

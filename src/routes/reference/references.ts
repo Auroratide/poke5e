@@ -10,6 +10,7 @@ import { meta as CoreRulesPage } from "./core-rules/meta"
 import { meta as DamageTypesPage } from "./damage-types/meta"
 import { meta as EncountersPage } from "./encounters/meta"
 import { meta as FaintingPage } from "./fainting-resting-and-healing/meta"
+import { meta as FaqPage } from "./faq/meta"
 import { meta as FeatsPage } from "./feats/meta"
 import { meta as IntroductionPage } from "./introduction/meta"
 import { meta as LegendaryBattlesPage } from "./legendary-battles/meta"
@@ -75,6 +76,7 @@ const Appendix2018 = [
 	TerrainEffectsPage,
 	TmsPage,
 	WeatherPage,
+	FaqPage,
 ]
 
 const Appendix2024 = [
@@ -87,6 +89,7 @@ const Appendix2024 = [
 	TerrainEffectsPage,
 	TmsPage,
 	WeatherPage,
+	FaqPage,
 ]
 
 const Supplements2018 = [

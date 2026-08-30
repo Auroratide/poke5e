@@ -1,14 +1,23 @@
 import { readable } from "svelte/store"
 import { describe, test, expect } from "vitest"
 import { getWhenDefined } from "../store"
+import type { Fetched } from "$lib/site/stores"
 
 describe("getWhenDefined", () => {
 	test("waits for definition before returning", async () => {
 		let defineStore: (value: string) => void = () => {}
 
-		const someAsyncStore = readable<string | undefined>(undefined, (set) => {
+		const someAsyncStore = readable<Fetched<string>>({
+			result: undefined,
+			fetching: true,
+			error: undefined,
+		}, (set) => {
 			defineStore = (value: string) => {
-				set(value)
+				set({
+					result: value,
+					fetching: false,
+					error: undefined,
+				})
 			}
 		})
 

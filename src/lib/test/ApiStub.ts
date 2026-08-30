@@ -5,6 +5,10 @@ import type { EvolutionJsonResponse } from "$lib/pokemon/evolution/EvolutionJson
 import { Url } from "$lib/site/url"
 import abilitiesSample from "./abilities-sample.json"
 
+function isSrd(url: string, resource: string) {
+	return url.includes("srd") && url.includes(`${resource}.json`)
+}
+
 class ApiStubDefinition {
 	abilities: Ability[] = abilitiesSample.items.map((it) => stubAbility({
 		referenceId: it.id,
@@ -21,7 +25,14 @@ class ApiStubDefinition {
 	}
 
 	resolve = (url: string): Response | undefined => {
-		if (url.includes(Url.api.abilities())) {
+		if (isSrd(url, "abilities")) {
+			return new Response(JSON.stringify({
+				values: this.abilities.map((it) => ({
+					...it.data,
+					id: it.referenceId,
+				})),
+			}))
+		} else if (url.includes(Url.api.abilities())) {
 			return new Response(JSON.stringify({
 				abilities: this.abilities.map((it) => ({
 					...it.data,

@@ -13,6 +13,7 @@ import type { LearnedMove, Trainer, TrainerBio, TrainerPokemon } from "../types"
 import { Stab } from "$lib/pokemon/stab"
 import { stubAbility } from "$lib/pokemon/ability/test/stubs"
 import { TagList } from "$lib/poke5e/tags"
+import { Token } from "$lib/dnd/token"
 import { PokemonStorage } from "../pokemon-storage"
 
 export function stubLearnedMove(template: Partial<LearnedMove> = {}): LearnedMove {
@@ -116,6 +117,8 @@ export function stubTrainer(template: Partial<Trainer> = {}): Trainer {
 		specializations: stubSpecializations({}),
 		path: createEmptyChosenTrainerPath(),
 		feats: [],
+		tags: TagList.empty(),
+		token: Token.create({}),
 		...template,
 	}
 }

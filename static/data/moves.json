@@ -9369,7 +9369,7 @@
 			"duration": "instantaneous",
 			"range": "50ft",
 			"description": [
-				"When you take damage from a move that reduces you to zero hit points, you may use your reaction to force the attacker to make a WIS saving throw against your Move DC. On a failure, all PP from the move that caused you to faint is depleted ."
+				"The moment you would take damage from a move that reduces you to zero hit points, you may use your reaction to force the attacker to make a WIS saving throw against your Move DC. On a failure, all PP from the move that caused you to faint is depleted."
 			],
 			"save": {
 				"attribute": [
@@ -11131,7 +11131,7 @@
 			},
 			"tm": {
 				"id": 144,
-				"cost": 2500
+				"cost": 6200
 			},
 			"categories": [
 				"punch"
@@ -17327,7 +17327,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You convert your rage into energy to attack. You make a melee attack against a creature in range, doing 1d8 + MOVE ghost damage on a hit. This moves deals 1 additional damage for every 10 points of HP you have below your maximum HP."
+				"You convert your rage into energy to attack. You make a melee attack against a creature in range, doing 1d8 + MOVE ghost damage on a hit. This move deals 1 additional damage for every 10 points of HP you have below your maximum HP."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 5, 4d4 at level 10, and 3d10 at level 17.",
 			"damage": {
@@ -23511,15 +23511,15 @@
 			"duration": "instantaneous",
 			"range": "60ft",
 			"description": [
-				"You create a cage of electricity that envelopes a creature in range. Make a ranged attack roll. On a hit, the target takes 1d6 + MOVE electric damage and is restrained. At the beginning of each of its turns, it may attempt to escape with a DEX save against your Move DC. On each successive turn, if the creature is still restrained, you may use this move again (as an action) and automatically hit."
+				"You create a cage of electricity that envelopes a creature in range. Make a ranged attack roll. On a hit, the target takes 2d6 + MOVE electric damage and is restrained. At the beginning of each of its turns, it may attempt to escape with a DEX save against your Move DC. On each successive turn, if the creature is still restrained, you may use this move again (as an action) and automatically hit."
 			],
-			"higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17.",
+			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 4d6 at level 10, and 6d6 at level 17.",
 			"damage": {
 				"dice": {
-					"1": "1d6",
-					"5": "1d10",
-					"10": "2d8",
-					"17": "5d4"
+					"1": "2d6",
+					"5": "2d8",
+					"10": "4d6",
+					"17": "6d6"
 				},
 				"modifier": "MOVE",
 				"type": [

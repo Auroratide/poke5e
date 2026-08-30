@@ -6925,9 +6925,9 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você cria uma jaula de eletricidade que envolve uma criatura no alcance. Faça uma jogada de ataque à distância. Em um acerto, o alvo sofre 1d6 + MOVE de dano elétrico e fica restringido. No início de cada turno, ele pode tentar escapar com um teste de DES contra sua CD de Move. Em cada turno sucessivo, se ainda estiver restringido, você pode usar este movimento novamente (como ação) e acertar automaticamente."
+				"Você cria uma jaula de eletricidade que envolve uma criatura no alcance. Faça uma jogada de ataque à distância. Em um acerto, o alvo sofre 2d6 + MOVE de dano elétrico e fica restringido. No início de cada turno, ele pode tentar escapar com um teste de DES contra sua CD de Move. Em cada turno sucessivo, se ainda estiver restringido, você pode usar este movimento novamente (como ação) e acertar automaticamente."
 			],
-			"higherLevels": "A rolagem de dados de dano deste movimento muda para 1d10 no nível 5, 2d8 no nível 10 e 5d4 no nível 17."
+			"higherLevels": "O dado de dano deste movimento muda para 2d8 no nível 5, 4d6 no nível 10 e 6d6 no nível 17."
 		},
 		{
 			"id": "thunder-fang",

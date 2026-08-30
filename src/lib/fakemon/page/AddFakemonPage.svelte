@@ -102,6 +102,8 @@
 			},
 			habitat: {
 				biomes: [],
+				nativeRegion: "",
+				regions: [],
 			},
 		},
 	})

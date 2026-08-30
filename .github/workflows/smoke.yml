@@ -19,6 +19,10 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec playwright install
+      - run: pnpm test:srd
+        id: srd
+        env:
+          BASE_URL: https://poke5e.app
       - run: pnpm test:smoke
         id: tests
         env:

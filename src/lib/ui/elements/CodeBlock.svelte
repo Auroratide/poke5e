@@ -1,11 +1,21 @@
 <script lang="ts">
 	import { browser } from "$app/environment"
+	import type { Snippet } from "svelte"
 
-	export let title: string
-	export let copiable = false
+	let {
+		title,
+		copiable = false,
+		maxHeight = "none",
+		children,
+	}: {
+		title: string,
+		copiable?: boolean,
+		maxHeight?: string,
+		children?: Snippet,
+	} = $props()
 
 	let preElem: HTMLPreElement
-	let recentlyCopied = false
+	let recentlyCopied = $state(false)
 
 	const canCopy = browser ? "clipboard" in navigator : false
 
@@ -16,12 +26,12 @@
 	}
 </script>
 
-<div class="code-block">
+<div class="code-block" style:--max-height="{maxHeight}">
 	<div class="header">
 		<span class="title">{title}</span>
 		{#if copiable && canCopy}
 			<menu>
-				<li><button on:click={onCopy}>
+				<li><button onclick={onCopy}>
 					{#if recentlyCopied}
 						✓ Copied!
 					{:else}
@@ -31,13 +41,20 @@
 			</menu>
 		{/if}
 	</div>
-	<pre bind:this={preElem}><code class="max-height"><slot></slot></code></pre>
+	<pre bind:this={preElem}><code class="max-height">{@render children?.()}</code></pre>
 </div>
 
 <style>
 	.code-block {
 		border-radius: 0.25em;
 		margin-block-end: 1em;
+		tab-size: 2;
+	}
+
+	@media screen and (min-width: 37.5rem) {
+		.code-block {
+			tab-size: 3;
+		}
 	}
 
 	menu {
@@ -54,12 +71,15 @@
 		box-shadow: 0 0 0.25em oklch(0 0 0 / 0.25) inset;
 		overflow-x: auto;
 		padding: 0.5em;
-		max-block-size: 20em;
+		max-block-size: var(--max-height);
 		border-radius: 0 0 0.25em 0.25em;
+		min-block-size: 4em;
 	}
 
 	code {
 		display: block;
+		font-size: var(--font-sz-venus);
+		line-height: 1.25;
 	}
 
 	button {

@@ -44258,9 +44258,7 @@
 			"skills": [
 				"nature"
 			],
-			"savingThrows": [
-				"non"
-			],
+			"savingThrows": [],
 			"senses": [
 				{
 					"type": "tremorsense",
@@ -81208,12 +81206,6 @@
 				}
 			],
 			"moves": {
-				"formchange": [
-					"giratinas-default-form-is-altered-forme-when-it-is-given-a-griseous-orb-to-hold",
-					"or-any-time-it-is-in-its-home-plane",
-					"the-distortion-world",
-					"it-takes-on-the-origin-forme"
-				],
 				"start": [
 					"dragon-breath",
 					"scary-face",
@@ -94648,7 +94640,7 @@
 				"cha": 12
 			},
 			"skills": [
-				"persuaion"
+				"persuasion"
 			],
 			"savingThrows": [
 				"dex"
@@ -106761,7 +106753,12 @@
 				"persuasion"
 			],
 			"savingThrows": [
-				"all"
+				"str",
+				"dex",
+				"con",
+				"int",
+				"wis",
+				"cha"
 			],
 			"senses": [
 				{
@@ -106944,7 +106941,12 @@
 				"persuasion"
 			],
 			"savingThrows": [
-				"all"
+				"str",
+				"dex",
+				"con",
+				"int",
+				"wis",
+				"cha"
 			],
 			"senses": [
 				{
@@ -107126,7 +107128,12 @@
 				"persuasion"
 			],
 			"savingThrows": [
-				"all"
+				"str",
+				"dex",
+				"con",
+				"int",
+				"wis",
+				"cha"
 			],
 			"senses": [
 				{
@@ -125190,9 +125197,7 @@
 			"skills": [
 				"survival"
 			],
-			"savingThrows": [
-				"non"
-			],
+			"savingThrows": [],
 			"senses": [],
 			"abilities": [
 				{
@@ -162566,7 +162571,7 @@
 			],
 			"senses": [
 				{
-					"type": "tremmorsense",
+					"type": "tremorsense",
 					"value": 20
 				}
 			],
@@ -162711,7 +162716,7 @@
 			],
 			"senses": [
 				{
-					"type": "tremmorsense",
+					"type": "tremorsense",
 					"value": 20
 				}
 			],
@@ -162855,7 +162860,7 @@
 			],
 			"senses": [
 				{
-					"type": "tremmorsense",
+					"type": "tremorsense",
 					"value": 20
 				}
 			],
@@ -166537,7 +166542,7 @@
 			],
 			"senses": [
 				{
-					"type": "tremmorsense",
+					"type": "tremorsense",
 					"value": 60
 				}
 			],
@@ -166676,7 +166681,7 @@
 			],
 			"senses": [
 				{
-					"type": "tremmorsense",
+					"type": "tremorsense",
 					"value": 80
 				}
 			],
@@ -167693,7 +167698,7 @@
 			],
 			"senses": [
 				{
-					"type": "tremmorsense",
+					"type": "tremorsense",
 					"value": 120
 				}
 			],
@@ -170411,7 +170416,7 @@
 			],
 			"senses": [
 				{
-					"type": "tremmorsense",
+					"type": "tremorsense",
 					"value": 20
 				}
 			],
@@ -176785,7 +176790,7 @@
 			"skills": [
 				"religion",
 				"perception",
-				"persuaion"
+				"persuasion"
 			],
 			"savingThrows": [
 				"wis",

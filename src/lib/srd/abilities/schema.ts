@@ -2,16 +2,19 @@ import * as z from "zod"
 
 export const AbilityJson = z.object({
 	id: z.string().meta({
-		description: "Kebab-case unique identifier.",
+		description: "Unique identifier.",
 	}),
 	name: z.string().meta({
 		description: "Display name, localized.",
 	}),
-	aliases: z.array(z.string()).optional().meta({
-		description: "Alternative display names for searchability. Usually the English name for localized output.",
-	}),
 	description: z.string().meta({
 		description: "Rules text for the ability. Plain text with no markup.",
+	}),
+	aliases: z.array(z.string()).optional().meta({
+		description: "Alternative display names for searching.\nUsually the English name for localized output.",
+	}),
+	deprecated: z.boolean().optional().meta({
+		description: "Ability is to no longer be used.",
 	}),
 }).meta({
 	id: "Ability",
@@ -21,12 +24,12 @@ export const AbilityJson = z.object({
 
 export const AbilityListJson = z.object({
 	values: z.array(AbilityJson).meta({
-		description: "Every ability available in the requested edition, sorted by id.",
+		description: "Every ability, sorted by id.",
 	}),
 }).meta({
 	id: "AbilityList",
 	title: "Ability List",
-	description: "Collection of abilities.",
+	description: "Collection of all abilities.",
 })
 
 export type AbilityJson = z.infer<typeof AbilityJson>
