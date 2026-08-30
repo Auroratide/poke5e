@@ -1,20 +1,29 @@
+import { Ability } from "$lib/pokemon/ability"
+import { SrdClient } from "$lib/srd"
 import type { PageLoad } from "./$types"
-import type { Ability, AbilityJson } from "$lib/pokemon/ability"
-import type { Data } from "$lib/DataClass"
-import { Url } from "$lib/site/url"
 
-export const load: PageLoad<{ abilities: Data<Ability>[] }> = async ({ fetch }) => {
-	const abilities: Data<Ability>[] = await fetch(Url.api.abilities())
-		.then(res => res.json())
-		.then(data => data.abilities)
-		.then((abilities: AbilityJson[]) => abilities.map((it) => ({
-			referenceId: it.id,
-			name: it.name,
-			aliases: it.aliases,
-			description: it.description,
-			deprecated: it.deprecated,
-		})))
-		.then(abilities => abilities.filter((it) => !it.deprecated))
+export const load: PageLoad<{
+	values: {
+		"2018": Ability[],
+		"2024": Ability[],
+	},
+}> = async ({ fetch }) => {
+	const client2018 = new SrdClient("2018", fetch)
+	const client2024 = new SrdClient("2024", fetch)
 
-	return { abilities }
+	const [values2018, values2024] = await Promise.all([
+		client2018.abilities.all(),
+		client2024.abilities.all(),
+	])
+
+	return {
+		values: {
+			"2018": values2018.values
+				.filter((it) => !it.deprecated)
+				.map(Ability.fromJson),
+			"2024": values2024.values
+				.filter((it) => !it.deprecated)
+				.map(Ability.fromJson),
+		},
+	}
 }

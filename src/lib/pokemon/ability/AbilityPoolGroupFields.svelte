@@ -26,7 +26,7 @@
 		value: it,
 	})))
 
-	let defaultAbility = $derived($AbilityStore?.[0] ?? Ability.createNewStandard("adaptability"))
+	let defaultAbility = $derived($AbilityStore.result?.[0] ?? Ability.createNewStandard("adaptability"))
 
 	const remove = (id: string) => () => {
 		withIds = withIds.filter((it) => it.id !== id)

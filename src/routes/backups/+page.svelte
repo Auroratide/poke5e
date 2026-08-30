@@ -112,7 +112,7 @@
 		<section>
 			<h2>{m["backups.manual"]()}</h2>
 			<p>{m["backups.manualDescription"]()}</p>
-			<CodeBlock title="{m["backups.manualCodeBlockTitle"]()}" copiable>{manualBackup}</CodeBlock>
+			<CodeBlock title="{m["backups.manualCodeBlockTitle"]()}" copiable maxHeight="20em">{manualBackup}</CodeBlock>
 			<p>{@html m["backups.manualDisclaimer"]()}</p>
 		</section>
 	</Card>

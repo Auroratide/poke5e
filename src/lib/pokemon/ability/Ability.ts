@@ -1,6 +1,7 @@
 import { DataClass } from "$lib/DataClass"
 import { getWhenDefined } from "$lib/utils/store"
-import { AbilityStore, type AbilityJson } from "./AbilityStore"
+import { AbilityStore } from "./AbilityStore"
+import type { AbilityJson } from "$lib/srd/abilities/schema"
 
 export type ReferenceAbilityId = string
 
@@ -95,6 +96,13 @@ export class Ability extends DataClass<{
 			}
 		}),
 	})
+
+	static readonly fromJson = (json: AbilityJson): Ability => {
+		return new Ability({
+			referenceId: json.id,
+			...json,
+		})
+	}
 }
 
 type HasAbilities = {
