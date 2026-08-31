@@ -1,4 +1,5 @@
 import { DataClass } from "$lib/DataClass"
+import { PokemonGender } from "./PokemonGender"
 
 /**
  * Gender takes a ratio format:
@@ -14,6 +15,14 @@ export class GenderRatio extends DataClass<string> {
 
 	percentFemale = (): number => this.percentOf(0)
 	percentMale = (): number => this.percentOf(1)
+
+	random = (rng = Math.random): PokemonGender => {
+		if (this.isGenderless()) return PokemonGender.None
+
+		return 100 * rng() < this.percentFemale()
+			? PokemonGender.Female
+			: PokemonGender.Male
+	}
 
 	private ratio = (): [number, number] =>
 		this.data.split(":").map((it) => parseInt(it)) as [number, number]
