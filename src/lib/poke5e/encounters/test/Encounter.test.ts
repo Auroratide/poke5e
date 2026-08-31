@@ -8,6 +8,7 @@ import { provider } from "$lib/trainers/data"
 import { stubMovePool } from "$lib/pokemon/move-pool/test/stubs"
 import { stubMove } from "$lib/moves/test/stubs-2"
 import { stubAbility, stubAbilityPool } from "$lib/pokemon/ability/test/stubs"
+import { PokemonGender } from "$lib/pokemon/gender"
 
 describe("totalExp", () => {
 	test("empty encounter", () => {
@@ -337,5 +338,48 @@ describe("saveToTrainers", () => {
 		// then: it chooses abilities
 		expect(abilities).toContain("Adaptability")
 		expect(abilities).toContain("Aftermath")
+	})
+
+	test("gender is randomized", async () => {
+		const encounter: Encounter = {
+			pokemon: [ {
+				data: stubPokemonSpecies({
+					name: "Eevee",
+					sr: 1,
+					gender: "1:7",
+				}),
+				level: 1,
+				count: 1,
+			} ],
+		}
+
+		const result = await Encounter.saveToTrainers(encounter, moves)
+
+		const fromStorage = await provider.getTrainer(result.info.readKey)
+		const eevee = fromStorage.pokemon[0]
+
+		// then: gender is assigned
+		expect(eevee.gender === PokemonGender.Female || eevee.gender === PokemonGender.Male).toBe(true)
+	})
+
+	test("nature is randomized", async () => {
+		const encounter: Encounter = {
+			pokemon: [ {
+				data: stubPokemonSpecies({
+					name: "Eevee",
+					sr: 1,
+				}),
+				level: 1,
+				count: 20,
+			} ],
+		}
+
+		const result = await Encounter.saveToTrainers(encounter, moves)
+
+		const fromStorage = await provider.getTrainer(result.info.readKey)
+		const natures = fromStorage.pokemon.map((p) => p.nature).map((it) => it.data)
+
+		// then: natures are not all the same
+		expect(new Set(natures).size).toBeGreaterThan(1)
 	})
 })

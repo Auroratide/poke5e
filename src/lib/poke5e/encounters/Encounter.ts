@@ -5,6 +5,7 @@ import { provider as trainerProvider, type TrainerData } from "$lib/trainers/dat
 import type { LearnedMove, WithWriteKey } from "$lib/trainers/types"
 import { experienceAwarded } from "../experience"
 import type { Move } from "$lib/moves/Move"
+import { Nature } from "$lib/pokemon/nature"
 
 export type EncounterActor = {
 	data: PokemonSpecies,
@@ -168,9 +169,13 @@ export const Encounter = {
 				added.hitDice.max = withAdjustedStats.level.data
 				added.attributes = withAdjustedStats.attributes
 
-				// ABILITIES
+				// ABILITIES, GENDER, NATURE
 				const ability = pokemon.data.abilities.chooseRandom()
 				added.abilities = ability ? [ability] : []
+
+				added.gender = pokemon.data.gender.random()
+				added.nature = Nature.random()
+				added.attributes = added.nature.applyTo(added.attributes)
 	
 				await trainerProvider.updatePokemon(trainer.writeKey, trainer.info.readKey, added)
 
