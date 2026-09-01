@@ -14,6 +14,7 @@ import { Stab } from "$lib/pokemon/stab"
 import { stubAbility } from "$lib/pokemon/ability/test/stubs"
 import { TagList } from "$lib/poke5e/tags"
 import { Token } from "$lib/dnd/token"
+import { PokemonStorage } from "../pokemon-storage"
 
 export function stubLearnedMove(template: Partial<LearnedMove> = {}): LearnedMove {
 	return {
@@ -72,7 +73,10 @@ export function stubTrainerPokemon(template: Partial<TrainerPokemon> = {}): Trai
 			},
 		},
 		stab: new Stab({ base: "default", bonus: 0 }),
+		// tags was already required by TrainerPokemon but missing here, so this
+		// stub never type-checked; adding storage made that visible.
 		tags: TagList.empty(),
+		storage: PokemonStorage.Party,
 		...template,
 	}
 }

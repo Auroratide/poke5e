@@ -43,6 +43,10 @@ export class Ui {
 		return this.page.getByLabel(label).filter({ visible: true })
 	}
 
+	region(name: string | RegExp) {
+		return this.page.getByRole("region", { name }).filter({ visible: true })
+	}
+
 	heading(name: string | RegExp) {
 		return this.page.getByRole("heading", { name, exact: true }).filter({ visible: true })
 	}

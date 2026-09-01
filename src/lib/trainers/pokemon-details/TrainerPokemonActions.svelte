@@ -27,6 +27,8 @@
 		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.evolvePokemon)}" variant="subtle">{m.evolve()}</Button>
 	{/if}
 	{#if canEdit}
+		<!-- No deposit or withdraw here: every roster row carries its own move
+		     button, so this menu would only duplicate it a click further away. -->
 		<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.transferPokemon)}" variant="subtle">{m.transfer()}</Button>
 	{/if}
 	<Button href="{Url.trainers($trainer.info.readKey, pokemon.id, PageAction.restPokemon)}" variant="success">{m.rest()}</Button>

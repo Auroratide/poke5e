@@ -9,6 +9,7 @@
 	import { goto } from "$app/navigation"
 	import type { Readable } from "svelte/store"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
+	import { isInParty } from "../pokemon-storage"
 
 	export let trainer: TrainerStore
 	export let allSpecies: Readable<PokemonSpecies[]>
@@ -20,11 +21,15 @@
 		saving = true
 		const updates = [$trainer.update?.info(e.detail.trainer.info)]
 		if (e.detail.didUpdatePokemon) {
-			updates.push(...e.detail.trainer.pokemon.map((pokemon) =>
+			// Only the party is rested, so only the party is written back. Saving the
+			// whole roster would be two needless requests per boxed pokemon.
+			const rested = e.detail.trainer.pokemon.filter(isInParty)
+
+			updates.push(...rested.map((pokemon) =>
 				$trainer.update?.pokemon(pokemon),
 			))
 
-			updates.push(...e.detail.trainer.pokemon.map((pokemon) =>
+			updates.push(...rested.map((pokemon) =>
 				$trainer.update?.moveset(pokemon),
 			))
 		}

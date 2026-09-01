@@ -15,6 +15,12 @@
 		mode: TagSelectionMode,
 		tags: TagList,
 	} = $props()
+
+	// Every id below is namespaced per instance. Hardcoded ids were fine while
+	// only one of these existed per page, but the party filter and the Box filter
+	// now sit on the same page, and two inputs sharing an id means a label drives
+	// whichever one the document reaches first -- silently, with no error.
+	const uid = $props.id()
 </script>
 
 <div class="tag-selection">
@@ -22,7 +28,7 @@
 		<legend>Tags Filter</legend>
 		<div class="mode-toggle">
 			<TogglePill
-				id="tag-selection-mode-toggle"
+				id="{uid}-mode-toggle"
 				leftlabel="All"
 				leftvalue="all"
 				rightlabel="Any"
@@ -36,8 +42,8 @@
 		</div>
 		<div class="tags">
 			{#each tags as tag}
-				<input id="tag-selection-{kebab(tag)}" class="visually-hidden" type="checkbox" bind:group={checked} value="{tag}" />
-				<label for="tag-selection-{kebab(tag)}" class="tag">
+				<input id="{uid}-{kebab(tag)}" class="visually-hidden" type="checkbox" bind:group={checked} value="{tag}" />
+				<label for="{uid}-{kebab(tag)}" class="tag">
 					<span class="tag-text">{tag}</span>
 					<span class="simulate-bold-space">{tag}</span>
 				</label>

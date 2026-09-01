@@ -22,6 +22,7 @@ import type { Resource } from "$lib/poke5e/resource"
 import type { Stab } from "$lib/pokemon/stab"
 import type { TagList } from "$lib/poke5e/tags"
 import type { Token } from "$lib/dnd/token"
+import type { PokemonStorage } from "./pokemon-storage"
 import type { HitPoints } from "$lib/poke5e/resource/HitPoints"
 
 export type LearnedMove = {
@@ -88,6 +89,13 @@ export type TrainerPokemon = {
 	stab: Stab,
 	avatar?: StorageResource,
 	tags: TagList,
+	/**
+	 * Where the pokemon is kept -- the party or the Box. Only an explicit deposit
+	 * or withdrawal changes it: update_pokemon does not write the column, so
+	 * saving a pokemon from the editor, a rest or a tag change carries whatever
+	 * value it was loaded with and cannot relocate it. See ./pokemon-storage.
+	 */
+	storage: PokemonStorage,
 }
 
 export type WithPokemonData = {

@@ -103,6 +103,115 @@ export class TrainersPage {
 		await expect(this.ui.page.getByRole("listitem", { name: nickname })).not.toBeVisible()
 	}
 
+	async expectTrainerBadge(trainerName: string) {
+		console.log("  Checking the trainer badge...")
+
+		// The badge's accessible name carries the level and path too, so match on
+		// the trainer's name rather than the whole string.
+		await expect(this.ui.link(new RegExp(trainerName))).toBeVisible()
+		await expect(this.ui.link("Trainer List")).toBeVisible()
+	}
+
+	async openBox() {
+		console.log("  Opening the box...")
+
+		await expect(this.box).toBeHidden()
+		await this.boxBar.click()
+
+		await expect(this.boxBar).toHaveAttribute("aria-expanded", "true")
+		await expect(this.box).toBeVisible()
+	}
+
+	async closeBoxWithEscape() {
+		console.log("  Closing the box with Escape...")
+
+		// Focus explicitly: confirming an action navigates, which drops focus back
+		// to the body, and Escape is handled within the drawer rather than globally.
+		await this.boxBar.focus()
+		await this.ui.page.keyboard.press("Escape")
+
+		await expect(this.boxBar).toHaveAttribute("aria-expanded", "false")
+		await expect(this.box).toBeHidden()
+		await expect(this.boxBar).toBeFocused()
+	}
+
+	/**
+	 * The bar is named "Box <count>", which is the one thing that can be asserted
+	 * while the drawer is shut and its contents are hidden.
+	 */
+	async expectBoxCount(count: number) {
+		await expect(this.boxBar).toHaveAccessibleName(new RegExp(`Box\\s*${count}`))
+	}
+
+	async expectInBox(nickname: string) {
+		await expect(this.boxBadge(nickname)).toBeVisible()
+	}
+
+	/**
+	 * Deposits with the party row's own button -- the only way in, now that the
+	 * pokemon's action menu no longer duplicates it. No navigation: the row just
+	 * leaves the party.
+	 */
+	async deposit(nickname: string, expectedBoxCount: number) {
+		console.log(`  Depositing ${nickname} from its row...`)
+
+		await this.ui.button(`Deposit ${nickname} into the Box`).click()
+
+		await this.expectBoxCount(expectedBoxCount)
+		await expect(this.ui.link(new RegExp(`^${nickname}`))).toBeHidden()
+	}
+
+	async withdraw(nickname: string, expectedBoxCount: number) {
+		console.log(`  Withdrawing ${nickname}...`)
+
+		await this.box.getByRole("button", { name: `Withdraw ${nickname} from the Box` }).click()
+
+		await this.expectBoxCount(expectedBoxCount)
+		await expect(this.boxBadge(nickname)).toBeHidden()
+	}
+
+	async releaseFromBox(nickname: string, expectedBoxCount: number) {
+		console.log(`  Releasing ${nickname} from the box...`)
+
+		await this.box.getByRole("link", { name: `Release ${nickname}` }).click()
+		await this.ui.button("Delete").click()
+
+		await expect(this.ui.heading(this.currentTrainerName)).toBeVisible()
+		await this.expectBoxCount(expectedBoxCount)
+	}
+
+	async filterBox(query: string, expectVisible: string, expectHidden: string) {
+		console.log(`  Filtering the box by "${query}"...`)
+
+		await this.box.getByLabel("Search the Box").fill(query)
+		await expect(this.boxBadge(expectVisible)).toBeVisible()
+		await expect(this.boxBadge(expectHidden)).toBeHidden()
+
+		await this.box.getByLabel("Search the Box").fill("")
+	}
+
+	/**
+	 * A pokemon's badge inside the box. Anchored to the start of the accessible
+	 * name so it cannot also match the row's "Release <name>" link, which
+	 * contains the nickname too.
+	 */
+	private boxBadge(nickname: string) {
+		return this.box.getByRole("link", { name: new RegExp(`^${nickname}`) })
+	}
+
+	/**
+	 * Everything inside the drawer is looked up through here, because the
+	 * release control carries the nickname in its accessible name and would
+	 * otherwise collide with the pokemon's own badge link.
+	 */
+	private get box() {
+		return this.ui.region(/^Box/)
+	}
+
+	private get boxBar() {
+		return this.ui.button(/^Box/)
+	}
+
 	async removeTrainer(readKey: string) {
 		console.log("  Removing trainer...")
 

@@ -19,6 +19,7 @@
 	import type { Readable } from "svelte/store"
 	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/poke5e/species"
 	import { m } from "$lib/site/i18n"
+	import { isInParty } from "$lib/trainers/pokemon-storage"
 
 	const dispatch = createEventDispatcher()
 
@@ -27,6 +28,8 @@
 	export let trainer: TrainerData
 	export let saving: boolean = false
 	export let allSpecies: Readable<PokemonSpecies[]>
+
+	$: party = trainer.pokemon.filter(isInParty)
 
 	const getSpecies = (pokemonId: SpeciesIdentifier) => $allSpecies.find((s) => s.id.data === pokemonId.data)
 
@@ -56,7 +59,12 @@
 		trainer.info = afterResting
 
 		if (applyToPokemon) {
+			// Only the party rests. Boxed pokemon are stored away, and the rest
+			// effects mutate in place -- a short rest spends hit dice -- so they are
+			// left out of the map entirely rather than filtered from the result.
 			trainer.pokemon = trainer.pokemon.map((pokemon) => {
+				if (!isInParty(pokemon)) return pokemon
+
 				const hitDiceSize = pokemon.customHitDiceSize ?? getSpecies(pokemon.pokemonId).hitDice
 				const rest = PokemonResting[restToPerform]({ hitDiceToSpend, hitDiceSize, rulesVersion: $rulesVersion })
 				return rest.apply(pokemon)
@@ -88,7 +96,7 @@
 			name: `Apply to ${trainer.info.name}'s Pokémon also`,
 			value: APPLY_TO_POKEMON,
 		}]} bind:checked={pokemonOptions} {disabled} />
-		<PokemonBanner pokemon={trainer.pokemon} darken={!applyToPokemon} />
+		<PokemonBanner pokemon={party} darken={!applyToPokemon} />
 	</section>
 	<section style:min-height="8em">
 		{#if rest != null}
