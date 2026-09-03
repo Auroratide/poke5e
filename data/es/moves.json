@@ -261,7 +261,7 @@
 			"id": "assurance",
 			"name": "Buena Baza",
 			"description": [
-				"Golpeas a una criatura en donde ya le duele. Realiza un ataque cuerpo a cuerpo contra una criatura, infligiendo 1d10 + MOV de daño de tipo Siniestro si impactas. Si el objetivo ya ha recibido daño en la misma ronda, se duplican los dados de daño."
+				"Golpeas a una criatura en donde ya le duele. Realiza un ataque cuerpo a cuerpo contra una criatura, infligiendo 1d10 + MOV de daño de tipo Siniestro si impactas. Si el objetivo ha recibido daño desde el final de tu último turno, el daño se duplica."
 			],
 			"higherLevels": "La tirada de daño de este movimiento pasa a ser 2d8 al nivel 5, 5d4 al nivel 10 y 4d8 al nivel 17."
 		},

@@ -903,7 +903,7 @@
 			"duration": "instantaneous",
 			"range": "melee",
 			"description": [
-				"You strike a creature where it already hurts. Make a melee attack against a creature, dealing 1d10 + MOVE dark damage on a hit. If the target has already taken damage in the same round, double the damage dice."
+				"You strike a creature where it already hurts. Make a melee attack against a creature, dealing 1d10 + MOVE dark damage on a hit. If the target has alreay taken any damage since the end of your last turn, double the damage you deal."
 			],
 			"higherLevels": "The damage dice roll for this move changes to 2d8 at level 5, 5d4 at level 10, and 4d8 at level 17.",
 			"damage": {

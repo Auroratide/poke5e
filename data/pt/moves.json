@@ -322,7 +322,7 @@
 			"time": "1 ação",
 			"duration": "instantâneo",
 			"description": [
-				"Você atinge uma criatura onde ela já está ferida. Faça um ataque corpo a corpo contra uma criatura, causando 1d10 + MOVE de dano sombrio em um acerto. Se o alvo já tiver sofrido dano no mesmo turno, dobre o dano dos dados."
+				"Você atinge uma criatura onde ela já está ferida. Faça um ataque corpo a corpo contra uma criatura, causando 1d10 + MOVE de dano sombrio em um acerto. Se o alvo já tiver sofrido algum dano desde o final do seu último turno, dobre o dano causado."
 			],
 			"higherLevels": "O dado de dano deste movimento muda para 2d8 no nível 5, 5d4 no nível 10 e 4d8 no nível 17."
 		},
