@@ -6,6 +6,9 @@ export type MoveData = {
 	name: string,
 	type: string,
 	categories?: string[]
+	time: string,
+	range: string,
+	duration: string,
 }
 
 const PATH = path.join("static", "data", "moves.json")
