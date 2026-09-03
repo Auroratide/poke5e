@@ -16,6 +16,7 @@ test("trainer end to end flow", async ({ page }) => {
 	const trainers = await site.navToTrainers()
 	const readKey = await trainers.createTrainer(trainerName)
 	await trainers.editTrainer()
+	await trainers.expectTrainerBadge(trainerName)
 
 	// Managing Pokemon
 	await trainers.addPokemon("Charmander")
@@ -25,11 +26,28 @@ test("trainer end to end flow", async ({ page }) => {
 	await trainers.addPokemon("Appletun")
 	await trainers.expectType("grass", "dragon")
 
+	// The Box
+	await trainers.deposit("Fritz", 1)
+	await trainers.deposit("Appletun", 2)
+	await trainers.openBox()
+	await trainers.expectInBox("Appletun")
+	await trainers.filterBox("apple", "Appletun", "Fritz")
+	await trainers.withdraw("Fritz", 1)
+	await trainers.withdraw("Appletun", 0)
+	// Closed again so the open drawer cannot sit over the party badges below.
+	await trainers.closeBoxWithEscape()
+
 	await trainers.evolve("Fritz", "Charmeleon")
 	await trainers.removePokemon("Appletun")
 
 	await trainers.addPokemon(fakemonName)
 	await trainers.expectType("water", "grass")
+
+	// Releasing straight out of the box, then closing it by keyboard
+	await trainers.deposit(fakemonName, 1)
+	await trainers.openBox()
+	await trainers.releaseFromBox(fakemonName, 0)
+	await trainers.closeBoxWithEscape()
 
 	// Cleanup
 	await trainers.removeTrainer(readKey)

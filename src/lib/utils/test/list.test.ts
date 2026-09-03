@@ -23,6 +23,44 @@ describe("reorderOne", () => {
 	})
 })
 
+describe("applyOrderToSubset", () => {
+	const id = (it: string) => it
+
+	test("no items filtered out behaves like a plain reorder", () => {
+		const all = ["a", "b", "c"]
+
+		const result = list.applyOrderToSubset(all, all, ["c", "a", "b"], id)
+
+		expect(result).toEqual(["c", "a", "b"])
+	})
+
+	test("reorders within the visible subset only", () => {
+		const all = ["a", "hidden", "b", "c"]
+		const subset = ["a", "b", "c"]
+
+		const result = list.applyOrderToSubset(all, subset, ["c", "a", "b"], id)
+
+		expect(result).toEqual(["c", "hidden", "a", "b"])
+	})
+
+	test("items outside the subset keep their absolute positions", () => {
+		const all = ["boxed1", "a", "boxed2", "b"]
+		const subset = ["a", "b"]
+
+		const result = list.applyOrderToSubset(all, subset, ["b", "a"], id)
+
+		expect(result).toEqual(["boxed1", "b", "boxed2", "a"])
+	})
+
+	test("an empty subset leaves the list untouched", () => {
+		const all = ["a", "b"]
+
+		const result = list.applyOrderToSubset(all, [], [], id)
+
+		expect(result).toEqual(["a", "b"])
+	})
+})
+
 describe("fromCommaOrNewlineString", () => {
 	test("empty string", () => {
 		const input = ""

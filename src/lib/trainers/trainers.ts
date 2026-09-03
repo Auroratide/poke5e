@@ -1,13 +1,14 @@
 import { derived, writable } from "svelte/store"
 import type { TrainerData } from "./data"
 import { provider } from "./data"
-import type { InventoryItem, LearnedMove, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from "./types"
+import type { InventoryItem, LearnedMove, PokemonId, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from "./types"
 import { error } from "$lib/site/errors"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import { TrainerLocalStorage } from "./data/TrainerLocalStorage"
 import { TagList } from "$lib/poke5e/tags"
 import type { TransferCode } from "./pokemon-transfer"
 import * as list from "$lib/utils/list"
+import { PokemonStorage } from "./pokemon-storage"
 
 type AllTrainers = (TrainerData & WithUpdater & WithRemover & WithTags)[]
 
@@ -39,6 +40,7 @@ type TrainerUpdater = {
 	acceptTransfer: (code: TransferCode) => Promise<TrainerPokemon>
 	reorderTeam: (info: TrainerPokemon[]) => Promise<void>
 	removeFromTeam: (id: string) => Promise<void>
+	setStorage: (id: PokemonId, storage: PokemonStorage) => Promise<void>
 }
 type WithUpdater = {
 	update?: TrainerUpdater
@@ -452,6 +454,11 @@ export const createStore = () => {
 							})
 						},
 						reorderTeam: (order: TrainerPokemon[]) => {
+							// The whole roster, boxed pokemon included: reorder_pokemon
+							// renumbers only the ids it is given, so a party-only list would
+							// leave the box on stale ranks colliding with the party's new
+							// 1..N. Roster.svelte maps a drag within the visible party back
+							// onto the full list for exactly this reason.
 							return provider.reorderPokemonTeam(data.writeKey, data.info.readKey, order).then(() => {
 								storeUpdateOne(readKey, (prev) => {
 									return {
@@ -476,6 +483,34 @@ export const createStore = () => {
 								})
 							}).catch((e: Error) => {
 								error.show("removePokemon", e)
+								throw e
+							})
+						},
+						// Deposit and withdraw. The store keeps one flat roster, so this only
+						// flips a field and, where the server moved the pokemon, moves it to
+						// the matching place in the array. Getting that wrong would not lose
+						// anything, but the list would jump when the trainer is next loaded.
+						setStorage: (id: PokemonId, storage: PokemonStorage) => {
+							return provider.setPokemonStorage(data.writeKey, data.info.readKey, id, storage).then(() => {
+								storeUpdateOne(readKey, (prev) => {
+									const moved = prev.pokemon.find((it) => it.id === id)
+									if (moved == null) return prev
+
+									const updated = { ...moved, storage }
+
+									// set_pokemon_storage hands a pokemon rejoining the party
+									// rank MAX+1, so it comes back at the end. Leaving the party
+									// keeps its rank, and so its position -- which is what lets
+									// a deposit happen without renumbering the party.
+									return {
+										...prev,
+										pokemon: storage === PokemonStorage.Party
+											? [...prev.pokemon.filter((it) => it.id !== id), updated]
+											: prev.pokemon.map((it) => it.id === id ? updated : it),
+									}
+								})
+							}).catch((e: Error) => {
+								error.show("setPokemonStorage", e)
 								throw e
 							})
 						},

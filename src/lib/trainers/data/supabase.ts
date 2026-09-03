@@ -13,6 +13,7 @@ import {
 import { TrainerDataProviderError, type StorageResource, type TrainerData, type TrainerDataProvider } from "."
 import type { SupabaseClient } from "@supabase/supabase-js"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
+import { PokemonStorage } from "../pokemon-storage"
 import { createEmptyChosenTrainerPath } from "$lib/trainers/paths"
 import type { ChosenFeat } from "$lib/dnd/feats/ChosenFeat"
 import { isCreatureSize } from "$lib/dnd/CreatureSize"
@@ -701,6 +702,9 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 				bonus: 0,
 			}),
 			tags: TagList.empty(),
+			// A caught pokemon always joins the party; the add_pokemon RPC relies on
+			// the column default rather than taking a parameter for this.
+			storage: PokemonStorage.Party,
 		}
 
 		const { data, error } = await this.supabase.rpc("add_pokemon", {
@@ -808,6 +812,26 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 		if (error) {
 			throw new TrainerDataProviderError(`Could not reorder pokemon (${readKey}).`, error)
+		}
+
+		return true
+	}
+
+	setPokemonStorage = async (writeKey: ReadWriteKey, readKey: ReadWriteKey, id: PokemonId, storage: PokemonStorage): Promise<boolean> => {
+		const { data, error } = await this.supabase.rpc("set_pokemon_storage", {
+			_write_key: writeKey,
+			_id: id,
+			_storage: storage,
+		}).single<number>()
+
+		if (error) {
+			throw new TrainerDataProviderError(`Could not move pokemon (${readKey} ${id}) to ${storage}.`, error)
+		}
+
+		// Unlike removePokemon, a failed move is worth raising: the caller acts on
+		// it immediately rather than navigating away.
+		if (data <= 0) {
+			throw new TrainerDataProviderError("Either this pokemon does not exist or you do not have permission to edit them.")
 		}
 
 		return true
@@ -1401,6 +1425,7 @@ type PokemonRow = {
 	tera_type: string,
 	exp: number,
 	status: string | null,
+	storage: string,
 	held_item: string,
 	is_shiny: boolean,
 	custom_size: string | null,
@@ -1532,6 +1557,10 @@ const rowToPokemon = async (row: PokemonRow, getStorageResource: (name: string) 
 	notes: row.notes,
 	teraType: PokemonTeraType.isTeraType(row.tera_type) ? new PokemonTeraType(row.tera_type) : undefined,
 	status: row.status as NonVolatileStatus | null,
+	// Cast rather than guarded: the CHECK constraint on private.pokemon is what
+	// keeps this to a known location. That matters more here than for status or
+	// gender, because an unrecognised value would land a pokemon in neither list.
+	storage: row.storage as PokemonStorage,
 	isShiny: row.is_shiny,
 	feats: [],
 	customSize: isCreatureSize(row.custom_size) ? row.custom_size : undefined,
