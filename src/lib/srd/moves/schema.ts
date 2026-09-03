@@ -67,6 +67,7 @@ export const MoveJson = z.object({
 			z.literal("minute"),
 			z.literal("round"),
 			z.literal("instantaneous"),
+			z.literal("varies"),
 		]),
 		value: z.int().optional(),
 		concentration: z.boolean().optional(),
@@ -89,6 +90,9 @@ export const MoveJson = z.object({
 		z.object({
 			type: z.literal("self"),
 		}),
+		z.object({
+			type: z.literal("varies"),
+		}),
 	]).meta({
 		description: "Range of the move. If the move is a self area\nof effect move, the area of effect is described\nby `shape`.",
 	}),
@@ -108,7 +112,7 @@ export const MoveJson = z.object({
 		z.object({
 			class: DamageClass,
 			modifier: z.string(),
-			type: z.union([z.literal("damage"), z.literal("healing")]),
+			type: z.union([z.literal("damage"), z.literal("healing"), z.literal("reduction")]),
 		}),
 		z.object({
 			class: z.literal("custom"),
@@ -136,7 +140,7 @@ export const MoveJson = z.object({
 		description: "Present if the move is available as a TM.",
 	}),
 	description: z.string().meta({
-		description: "Rules text for the move, as markdown.\nSpecial text describes substitutions:\n{dice}: Damage dice depending on class.\n{type}: The move's type.",
+		description: "Rules text for the move, as markdown.\nSpecial text describes substitutions:\n{dice}: Damage dice depending on class.\n{type}: The move's type.\n{shape}: The move's AoE shape.\n{save}: Move's save description.",
 	}),
 	higherLevels: z.string().optional().meta({
 		description: "Used for custom text describing how the move upgrades\nwith level up. For moves with damage dice, the higher\nlevels text can be derived, and thus is not present.",
@@ -147,6 +151,7 @@ export const MoveJson = z.object({
 	categories: z.string().array().meta({
 		description: "Tags used by other moves or abilities to select this move.",
 	}),
+	optional: z.string().optional(),
 	aliases: z.string().array().optional().meta({
 		description: "Alternative display names for searching.\nUsually the English name for localized output.",
 	}),

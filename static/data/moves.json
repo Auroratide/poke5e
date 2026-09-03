@@ -9456,7 +9456,7 @@
 			"higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 4d10 at level 10, and 7d8 at level 17.",
 			"damage": {
 				"dice": {
-					"1": "1d10",
+					"1": "2d10",
 					"5": "3d8",
 					"10": "4d10",
 					"17": "7d8"
