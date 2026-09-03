@@ -678,6 +678,156 @@ test("reordering pokemon", async () => {
 	})
 })
 
+test("depositing and withdrawing pokemon", async () => {
+	const {
+		ret_id: trainerId,
+		ret_write_key: writeKey,
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const sunnyYellowId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+		_rank: 1,
+	})
+
+	const rosyRedId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+		_nickname: "Rosy Red",
+		_rank: 2,
+	})
+
+	const skyBlueId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+		_nickname: "Sky Blue",
+		_rank: 3,
+	})
+
+	// Everyone starts in the party
+	const initialPokemon = await callAll<any>("get_pokemon", {
+		_trainer_id: trainerId,
+	})
+	expect(initialPokemon.map((it) => it.storage)).toEqual(["party", "party", "party"])
+
+	// Depositing must not renumber the rest of the party
+	const deposited = await call<number>("set_pokemon_storage", {
+		_write_key: writeKey,
+		_id: rosyRedId,
+		_storage: "box",
+	})
+	expect(deposited).toEqual(1)
+
+	const afterDeposit = await callAll<any>("get_pokemon", {
+		_trainer_id: trainerId,
+	})
+	expect(afterDeposit.filter((it) => it.storage === "box").map((it) => it.id)).toEqual([rosyRedId])
+	expect(afterDeposit.filter((it) => it.storage === "party").map((it) => it.id)).toEqual([sunnyYellowId, skyBlueId])
+
+	// Reordering only the party leaves the boxed pokemon alone
+	await call("reorder_pokemon", {
+		_write_key: writeKey,
+		_ids: [skyBlueId, sunnyYellowId],
+	}, {
+		assertNull: true,
+	})
+
+	const afterReorder = await callAll<any>("get_pokemon", {
+		_trainer_id: trainerId,
+	})
+	expect(afterReorder).toHaveLength(3)
+	expect(afterReorder.find((it) => it.id === rosyRedId).storage).toEqual("box")
+
+	// Withdrawing rejoins the end of the party, so it takes MAX(rank) + 1
+	const withdrawn = await call<number>("set_pokemon_storage", {
+		_write_key: writeKey,
+		_id: rosyRedId,
+		_storage: "party",
+	})
+	expect(withdrawn).toEqual(1)
+
+	const afterWithdraw = await callAll<any>("get_pokemon", {
+		_trainer_id: trainerId,
+	})
+	expect(afterWithdraw.map((it) => it.id)).toEqual([skyBlueId, sunnyYellowId, rosyRedId])
+	const rankAfterWithdraw = afterWithdraw.find((it) => it.id === rosyRedId).rank
+
+	// Withdrawing again is a no-op; it must not march to the back a second time
+	await call<number>("set_pokemon_storage", {
+		_write_key: writeKey,
+		_id: rosyRedId,
+		_storage: "party",
+	})
+
+	const afterSecondWithdraw = await callAll<any>("get_pokemon", {
+		_trainer_id: trainerId,
+	})
+	expect(afterSecondWithdraw.find((it) => it.id === rosyRedId).rank).toEqual(rankAfterWithdraw)
+
+	// Unknown locations are rejected by the check constraint
+	await expect(call<number>("set_pokemon_storage", {
+		_write_key: writeKey,
+		_id: rosyRedId,
+		_storage: "daycare",
+	})).rejects.toThrow()
+
+	// Another trainer's write key changes nothing
+	const {
+		ret_id: otherTrainerId,
+		ret_write_key: otherWriteKey,
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const notAffected = await call<number>("set_pokemon_storage", {
+		_write_key: otherWriteKey,
+		_id: sunnyYellowId,
+		_storage: "box",
+	})
+	expect(notAffected).toEqual(0)
+
+	const afterForbidden = await callAll<any>("get_pokemon", {
+		_trainer_id: trainerId,
+	})
+	expect(afterForbidden.find((it) => it.id === sunnyYellowId).storage).toEqual("party")
+
+	// A boxed pokemon can still be released
+	await call<number>("set_pokemon_storage", {
+		_write_key: writeKey,
+		_id: skyBlueId,
+		_storage: "box",
+	})
+	const removed = await call<number>("remove_pokemon", {
+		_write_key: writeKey,
+		_id: skyBlueId,
+	})
+	expect(removed).toEqual(1)
+
+	// Cleanup
+	await call("remove_pokemon", {
+		_write_key: writeKey,
+		_id: sunnyYellowId,
+	})
+	await call("remove_pokemon", {
+		_write_key: writeKey,
+		_id: rosyRedId,
+	})
+	await call("delete_trainer", {
+		_write_key: writeKey,
+		_id: trainerId,
+	})
+	await call("delete_trainer", {
+		_write_key: otherWriteKey,
+		_id: otherTrainerId,
+	})
+})
+
 test("updating movesets", async () => {
 	const {
 		ret_id: trainerId,
@@ -1650,6 +1800,15 @@ test("transfering a pokemon", async () => {
 		_pokemon_id: pokemonId,
 	})).rejects.toThrow()
 
+	// A boxed pokemon must arrive in the recipient's party, not their box. The
+	// clone copies columns enumerated from information_schema, so storage has to
+	// be overridden explicitly.
+	await call<number>("set_pokemon_storage", {
+		_write_key: irisWriteKey,
+		_id: pokemonId,
+		_storage: "box",
+	})
+
 	// correct trainer
 	await call<string>("generate_transfer_code", {
 		_write_key: irisWriteKey,
@@ -1671,6 +1830,13 @@ test("transfering a pokemon", async () => {
 	})
 
 	expect(vivillon.nickname).toEqual("Sunny Yellow")
+	expect(vivillon.storage).toEqual("party")
+
+	// ...while the source keeps its own storage
+	const [sourcePokemon] = await callAll<any>("get_pokemon", {
+		_trainer_id: irisId,
+	})
+	expect(sourcePokemon.storage).toEqual("box")
 
 	// revoking
 	await call("revoke_transfer_code", {
