@@ -14,6 +14,15 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.11",
+		description: [
+			"When the site is set to the 2018 edition, this is now indicated in the site title.",
+			"<strong>Pokémon</strong>: Tweaks to the Orbeetle line: Dottler INT and WIS changed to 12 each; Orbeetle SR (9 → 6); Orbeetle CON (12 → 13) and INT (14 → 16); Orbeetle given a hover speed in place of its original climbing speed.",
+			"<strong>Moves</strong>: Assurance's bonus damage condition clarified to activate more reliably.",
+			"<strong>Encounters</strong>: Encounter tool now randomizes gender and nature. It applies the nature bonus.",
+			"<strong>Feats</strong>: Clarify that Melee Master activates once per move.",
+		],
+	}, {
 		name: "v1.12.10",
 		description: [
 			"<strong>TMs</strong>: Raise Ice Punch's monetary cost to match Thunder Punch and Fire Punch.",
