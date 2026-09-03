@@ -71,7 +71,7 @@ export const PokemonFeats: Feat[] = [ {
 }, {
 	name: "Melee Master",
 	category: "General",
-	description: "Your Pokémon is a master of close combat.\n\n- Gain advantage on all attacks of opportunity.\n- When you hit a creature with a melee move that uses STR as its move power as part of the Attack action on your turn, you can cause the attack to deal extra damage to the target. The extra damage equals your Proficiency Bonus.",
+	description: "Your Pokémon is a master of close combat.\n\n- Gain advantage on all attacks of opportunity.\n- When you use an attack roll to hit a creature with a melee move that uses STR as its move power as part of the Attack action on your turn, you can cause the attack to deal extra damage to the target. The extra damage equals your Proficiency Bonus, and can be applied once per move.",
 }, {
 	name: "Natural Mount",
 	category: "General",
