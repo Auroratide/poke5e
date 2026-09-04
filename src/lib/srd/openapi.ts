@@ -1,5 +1,5 @@
 import * as z from "zod"
-import { EDITIONS } from "./editions"
+import { Editions } from "./editions"
 import * as common from "./common/schema"
 import { AbilityJson, AbilityListJson } from "./abilities/schema"
 import { BiomeJson, BiomesListJson } from "./biomes/schema"
@@ -202,7 +202,7 @@ export function openApiDocument(): OpenApiSpecification {
 					in: "path",
 					required: true,
 					description: "Which ruleset the data should reflect.",
-					schema: { type: "string", enum: [...EDITIONS] },
+					schema: { type: "string", enum: [...Editions] },
 				},
 				Id: {
 					name: "id",

@@ -5,7 +5,8 @@
 	import { MenuIcon } from "$lib/ui/icons"
 	import { Url } from "$lib/site/url"
 	import { m } from "$lib/site/i18n"
-	import { currentEdition, Edition } from "$lib/site/edition"
+	import { currentEdition } from "$lib/site/edition"
+	import { Edition } from "$lib/srd/editions"
 
 	const NUMBER_OF_UNMENUED_ITEMS = 6
 

@@ -1,10 +1,7 @@
 import { browser } from "$app/environment"
 import { writable } from "svelte/store"
 import { FeatureToggles } from "../FeatureToggles"
-
-export const Editions = ["2018", "2024"] as const
-export type Edition = "2018" | "2024"
-const LATEST_EDITION = "2024"
+import { type Edition } from "$lib/srd/editions"
 
 const EDITION_STORAGE_KEY = "rules-version" // NOTE: use to be called rules version, and cannot change without breaking current users
 
@@ -27,8 +24,3 @@ if (browser) {
 		})
 	}
 }
-
-export const Edition = {
-	abbr: (v: Edition) => `'${v.substring(2)}`,
-	isLatest: (v: Edition) => v === LATEST_EDITION,
-} as const

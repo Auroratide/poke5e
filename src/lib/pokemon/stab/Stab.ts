@@ -1,6 +1,6 @@
 import { DataClass } from "$lib/DataClass"
 import type { Level } from "$lib/dnd/level"
-import type { Edition } from "$lib/site/edition"
+import type { Edition } from "$lib/srd/editions"
 
 export type StabBase = "default" | "movepower" | "proficiency" | "ruleset18" | "none"
 

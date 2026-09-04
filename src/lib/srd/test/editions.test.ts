@@ -1,5 +1,5 @@
 import { test, expect } from "vitest"
-import { chooseEditionData } from "../editions"
+import { chooseEditionData, Edition } from "../editions"
 
 const data = (id: string, name: string | undefined | null, age: number | undefined | null) => ({
 	id, name, age,
@@ -129,4 +129,14 @@ test("some values are deleted in the edition", () => {
 		data("iris", "Iris", undefined),
 		data("blis", "Blis", undefined),
 	])
+})
+
+test("abbr", () => {
+	expect(Edition.abbr("2018")).toEqual("'18")
+	expect(Edition.abbr("2024")).toEqual("'24")
+})
+
+test("isLatest", () => {
+	expect(Edition.isLatest("2018")).toBe(false)
+	expect(Edition.isLatest("2024")).toBe(true)
 })

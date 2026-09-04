@@ -1,7 +1,7 @@
 import type { Level } from "$lib/dnd/level"
 import type { Resource } from "$lib/poke5e/resource"
 import type { SpeciesRating } from "$lib/poke5e/sr"
-import type { Edition } from "$lib/site/edition"
+import type { Edition } from "$lib/srd/editions"
 
 export type CatchDc = number
 

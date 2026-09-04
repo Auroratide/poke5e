@@ -2,7 +2,7 @@ import { DataClass } from "$lib/DataClass"
 import type { Level } from "$lib/dnd/level"
 import type { Stab } from "$lib/pokemon/stab"
 import { PokemonType, type PokeType, type TeraType } from "$lib/pokemon/types"
-import type { Edition } from "$lib/site/edition"
+import type { Edition } from "$lib/srd/editions"
 
 export class MoveDamage extends DataClass<{
 	dice: {

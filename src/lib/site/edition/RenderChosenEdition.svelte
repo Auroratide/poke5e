@@ -1,6 +1,6 @@
 <script lang="ts" generics="T">
 	import type { Snippet } from "svelte"
-	import { Editions, type Edition } from "./Edition"
+	import { Editions, type Edition } from "$lib/srd/editions"
 
 	let {
 		values,

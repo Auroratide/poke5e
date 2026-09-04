@@ -1,12 +1,17 @@
-export const EDITIONS = ["2018", "2024"] as const
+export const Editions = ["2018", "2024"] as const
+export type Edition = (typeof Editions)[number]
+const LATEST_EDITION = "2024"
 
-export type Edition = (typeof EDITIONS)[number]
+export const Edition = {
+	abbr: (v: Edition) => `'${v.substring(2)}`,
+	isLatest: (v: Edition) => v === LATEST_EDITION,
+} as const
 
 export function isEdition(v: string): v is Edition {
-	return (EDITIONS as readonly string[]).includes(v)
+	return (Editions as readonly string[]).includes(v)
 }
 
-export const createEntryGenerator = () => () => EDITIONS.map((edition) => ({ edition }))
+export const createEntryGenerator = () => () => Editions.map((edition) => ({ edition }))
 
 /**
  * Entries for routes keyed by both edition and id, e.g. `[edition]/moves/[id].json`.
@@ -15,7 +20,7 @@ export const createEntryGenerator = () => () => EDITIONS.map((edition) => ({ edi
  */
 export const createIdEntryGenerator = (idsFor: (edition: Edition) => string[] | Promise<string[]>) => async () => {
 	const perEdition = await Promise.all(
-		EDITIONS.map(async (edition) => (await idsFor(edition)).map((id) => ({ edition, id }))),
+		Editions.map(async (edition) => (await idsFor(edition)).map((id) => ({ edition, id }))),
 	)
 
 	return perEdition.flat()

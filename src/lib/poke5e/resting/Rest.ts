@@ -1,4 +1,4 @@
-import type { Edition } from "$lib/site/edition"
+import type { Edition } from "$lib/srd/editions"
 import type { DiceRoller } from "$lib/dnd/dice"
 import type { HitDice } from "$lib/dnd/hit-dice"
 import type { TrainerPath } from "$lib/trainers/paths"
