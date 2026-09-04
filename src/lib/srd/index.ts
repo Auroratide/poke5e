@@ -25,4 +25,19 @@ export class SrdClient {
 		this.evolutions = new EvolutionsSrdClient(edition, customFetch)
 		this.items = new ItemsSrdClient(edition, customFetch)
 	}
+
+	static async forEachEdition<T>(f: (client: SrdClient) => Promise<T>, customFetch = fetch): Promise<Record<Edition, T>> {
+		const client2018 = new SrdClient("2018", customFetch)
+		const client2024 = new SrdClient("2024", customFetch)
+
+		const [result2018, result2024] = await Promise.all([
+			f(client2018),
+			f(client2024),
+		])
+
+		return {
+			"2018": result2018,
+			"2024": result2024,
+		}
+	}
 }

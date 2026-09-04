@@ -132,7 +132,7 @@ test("some values are deleted in the edition", () => {
 })
 
 test("abbr", () => {
-	expect(Edition.abbr("2018")).toEqual("'18")
+	expect(Edieion.abbr("2018")).toEqual("'18")
 	expect(Edition.abbr("2024")).toEqual("'24")
 })
 
