@@ -22369,6 +22369,7 @@
 			"name": "Swords Dance",
 			"type": "normal",
 			"power": [
+				"str",
 				"dex",
 				"wis"
 			],
@@ -22384,29 +22385,21 @@
 			"range": {
 				"type": "self"
 			},
-			"dice": {
-				"class": "custom",
-				"tiers": [
-					"2d6",
-					"2d8",
-					"2d8",
-					"3d8"
-				],
-				"modifier": "MOVE",
-				"type": "damage"
-			},
-			"attack": {
-				"scope": "ranged"
-			},
+			"description": "A frenetic dance uplifts your fighting spirit. Your movements create the mirage of 2 swords near you. For each mirage, you gain a +1 bonus to attack rolls. Once per move, when you hit with an attack roll, you may expend up to two mirages to deal additional damage equal to this move's MOVE modifier for each mirage spent.\n\nThis move ends when all sword mirages are expended.",
+			"higherLevels": "Your dance improves, granting you an additional sword mirage at each of levels 5, 10, and 17.",
 			"tm": {
 				"id": 75,
 				"cost": 8000
 			},
-			"description": "When you activate this move, a sword appears and dances around you, increasing your AC by 1. As a bonus action on a future turn, you may drop concentration to release this sword and roll a ranged attack at a target within 30 feet of you, dealing {dice} {type} damage on a hit.",
-			"higherLevels": "The damage dice for this move changes to 2d8 at level 5. At level 10, you can now create two swords for +2 to AC and two ranged attacks. At level 17, the damage dice for each sword increases to 3d8.",
+			"dice": {
+				"class": "0",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
 			"categories": [
 				"dance"
-			]
+			],
+			"beta": true
 		},
 		{
 			"id": "synchronoise",
