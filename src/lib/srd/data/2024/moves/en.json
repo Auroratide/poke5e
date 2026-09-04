@@ -478,8 +478,7 @@
 			"description": "You use your angelic voice to confuse a target. Make a ranged attack against a target, dealing {dice} {type} damage. On a hit, the target must make a {save} or become Confused.",
 			"categories": [
 				"sound"
-			],
-			"beta": true
+			]
 		},
 		{
 			"id": "ally-switch",
@@ -1868,8 +1867,7 @@
 			"description": "You create a storm with savagely cold winds that cause both body and spirit to tremble with the size of a 40-foot-cube centered on a point in range. Each enemy creature in the area makes a {save}. On a failed save, it takes {dice} {type} damage. On a successful save, it takes half the damage. The area is considered Difficult Terrain for enemy creatures.\n\nA creature also makes that save if it enters the area or ends it turn there. A creature makes that save only once per turn.\n\nWhen used during the rain, creatures have disadvantage on the save.",
 			"categories": [
 				"wind"
-			],
-			"beta": true
+			]
 		},
 		{
 			"id": "blizzard",
@@ -2861,8 +2859,7 @@
 				"cost": 9100
 			},
 			"description": "You attack all creatures in a {shape} with energy from jealousy. All creatures in the area must make a {save}, taking {dice} {type} damage and becoming burned on failure, or on success only taking half the damage.\n\nCreatures who are currently benefiting from an increase to their AC, STR, DEX, CON, INT, WIS, or CHA have disadvantage on the save.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "calm-mind",
@@ -3180,8 +3177,7 @@
 				"cost": 2500
 			},
 			"description": "You shower a creature with water that's so cold it saps the target's power. Make a ranged attack roll, doing {dice} {type} damage on a hit. On a hit, the target must succeed a {save} or have disadvantage on any attack it makes on its next turn.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "chilly-reception",
@@ -3207,8 +3203,7 @@
 				"unit": "feet"
 			},
 			"description": "You tell a chillingly bad joke. The weather is changed to Snow for 5 rounds. After this move is activated, the trainer must switch out the user as a free action (before they get booed off the stage!).",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "chip-away",
@@ -3389,8 +3384,7 @@
 			"categories": [
 				"dance",
 				"sound"
-			],
-			"beta": true
+			]
 		},
 		{
 			"id": "clear-smog",
@@ -3480,8 +3474,7 @@
 			},
 			"description": "You coach an ally on how to maximize their offense and defense. Choose one ally other than yourself within 60 feet who can hear you. For the duration, that ally can add +1 to their attack rolls and +1 to their AC.",
 			"higherLevels": "The bonus for this move changes to +2 at level 10.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "coil",
@@ -3812,8 +3805,7 @@
 				"attribute": "con"
 			},
 			"description": "You surround yourself and everything within a {shape} of you in highly acidic gas. The gas lasts for the duration or until strong wind (such as the one created by Gust) disperses it. Its area is Heavily Obscured.\n\nAll Held Berries in the area instantly melt away. Each non-poison-type creature that starts its turn in the sphere must succeed on a {save}. On failure, until the end of the current turn, the creature has disadvantage on attack rolls and ability checks; additionally, if the creature's SR is below 15, then it cannot benefit from Held Items.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "comeuppance",
@@ -9056,8 +9048,7 @@
 				"cost": 10800
 			},
 			"description": "You glide on the ground to strike a target. Make a melee attack, doing {dice} {type} damage on a hit.\n\nIf you are on Grassy Terrain when this move is used, then until the start of your next turn you gain an additional 10ft of movement, and your movement no longer provokes attacks of opportunity.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "grassy-terrain",
@@ -9548,8 +9539,7 @@
 				"cost": 6600
 			},
 			"description": "You crush a creature with an arm, a claw, or the like to inflict damage. Make a melee attack against a target, dealing {dice} {type} damage. If the target is above 50% of its maximum health, add your proficiency bonus to the damage roll.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "harden",
@@ -11895,8 +11885,7 @@
 				"cost": 6600
 			},
 			"description": "You lash out to vent your frustration toward the target. Make a melee attack, dealing {dice} {type} damage on a hit.\n\nIf you are suffering from a non-volatile status condition, or any of your AC, STR, DEX, CON, INT, WIS, or CHA is currently lowered, then you make the attack with advantage and deal an additional MOVE {type} damage.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "last-resort",
@@ -12580,8 +12569,7 @@
 				"type": "healing"
 			},
 			"description": "You bless the surrounding area with the light of a crescent moon. For the duration, when an allied creature (including yourself) starts its turn within 100 feet of you, they regain {dice} hit points and are cured of any negative Status Conditions.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "lunar-dance",
@@ -13490,8 +13478,7 @@
 				"cost": 15000
 			},
 			"description": "When you use this move, soak in cosmic energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a {shape} of solar energy, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "meteor-mash",
@@ -13910,8 +13897,7 @@
 			"description": "You release a massive explosion in a {shape}, fainting immediately before the damage is dealt. Creatures in the area must make a {save}. If your creature has at least half its hit points left or this move was used on Misty Terrain, anyone in range takes {dice} {type} damage on a fail, or half as much on a success. If your creature has less than half of its hit points left and was not on Misty Terrain, the damage is halved for a failed save, and quartered for a success.",
 			"categories": [
 				"explosive"
-			],
-			"beta": true
+			]
 		},
 		{
 			"id": "misty-terrain",
@@ -14373,8 +14359,7 @@
 				"scope": "ranged"
 			},
 			"description": "You attack by emitting mystical power. Make a ranged attack, dealing {dice} {type} damage on a hit. If the attack hit, you gain +1 to all attack rolls made with INT, WIS, or CHA as the Move Power until the end of the encounter or until switched out. If the attack missed, you gain +1 AC until the end of the encounter or until switched out. The sum of these bonuses cap at +5 total.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "nasty-plot",
@@ -15968,8 +15953,7 @@
 				"cost": 14200
 			},
 			"description": "You attack by controlling the target's item. The target must make a {save} or lose a hold of their item. On a failed save, you may immediately make one melee attack against one creature within 5 feet of the item. On a hit, the target takes {dice} {type} damage.\n\nAs a Bonus Action on your later turns, you can repeat the attack against a creature within 5 feet of the item.\n\nThe item follows within 5 feet of its owner, hovering nearby. The creature cannot benefit from the item while you control it. The items's owner may use an action on its turn to try and regain control of the item by repeating the {save}, ending the move's concentration on a successful save.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "population-bomb",
@@ -16179,8 +16163,7 @@
 				"type": "self"
 			},
 			"description": "You refocus your offense strategy. Until the start of your next turn, for the next Move you execute you may choose any attribute for its Move Power.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "power-split",
@@ -16671,8 +16654,7 @@
 			"description": "You attack the target with unpleasant sound waves. The target must make a {save}. On failure, the target takes {dice} {type} damage, and it can't regain Hit Points until the end of your next turn.",
 			"categories": [
 				"sound"
-			],
-			"beta": true
+			]
 		},
 		{
 			"id": "psychic-terrain",
@@ -18600,8 +18582,7 @@
 			"description": "You create a storm of fierce winds and searingly hot sand with the size of a 40-foot-cube centered on a point in range. Each enemy creature in the area makes a {save}. On a failed save, it takes {dice} {type} damage and becomes Burned. On a successful save, it takes half the damage and does not become Burned.\n\nA creature also makes that save if it enters the area or ends it turn there. A creature makes that save only once per turn.\n\nWhen used during the rain, creatures have disadvantage on the save.",
 			"categories": [
 				"wind"
-			],
-			"beta": true
+			]
 		},
 		{
 			"id": "sandstorm",
@@ -18700,8 +18681,7 @@
 			"description": "You blast your scales at a foe in range. Make five ranged attacks against one target in range. On each hit, deal 1d4 {type} damage; if any attack hit, deal an additional MOVE {type} damage (maximum once).\n\nUntil the end of your next turn, you have +10ft of movement and -2 AC.",
 			"categories": [
 				"multistrike"
-			],
-			"beta": true
+			]
 		},
 		{
 			"id": "scary-face",
@@ -18769,8 +18749,7 @@
 				"cost": 10800
 			},
 			"description": "You throw scorching sand at a target to burn them. Make a ranged attack against a creature within 40 feet. On a hit, you deal {dice} {type} damage, and the target must make a {save}, becoming Burned on a failure.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "scratch",
@@ -20324,8 +20303,7 @@
 				"attribute": "dex"
 			},
 			"description": "You attempt to snare the target in a snap trap. One creature in melee range must make a {save}. On failure, the target takes {dice} {type} damage and is grappled by you.\n\nWhen this move is used as an attack of opportunity against a creature moving out of your range, the target makes the save at disadvantage.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "snarl",
@@ -21364,8 +21342,7 @@
 				"cost": 14200
 			},
 			"description": "You fire a beam of steel that is collected from your entire body in an {shape}, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save.\n\nThe recoil of using this move sends you backward 10 feet opposite of the direction the beam was targetted, and you fall prone. If you were grounded when using this move, you take 2d6 typeless damage. If you were flying or hovering, calculate fall damage accordingly.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "steel-roller",
@@ -22088,8 +22065,7 @@
 				"cost": 6600
 			},
 			"description": "You electrify your body and drop onto the target. Make a melee attack, doing {dice} {type} damage on a hit. On a miss, you take typeless damage equal to your proficiency bonus.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "superpower",
@@ -22745,8 +22721,7 @@
 				"type": "self"
 			},
 			"description": "As a reaction to receiving a negative Status Condition or becoming Frightened, heal yourself of that Condition and become immune to receiving new Status Conditions or becoming Frightened until the end of your next turn. Additionally, until the end of your next turn, you gain advantage on attack rolls made with WIS or CHA as the Move Power and on all WIS or CHA saving throws.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "tar-shot",
@@ -23012,8 +22987,7 @@
 				"cost": 4900
 			},
 			"description": "Spurred by desperation, you attack the target. Make a melee attack, dealing {dice} {type} damage on a hit. If you missed an attack roll last turn, then add an additional damage die to your damage roll.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "tera-blast",
@@ -23663,8 +23637,7 @@
 				"attribute": "con"
 			},
 			"description": "You do whatever it takes to keep this space clean. Until the end of your next turn, the next attack roll you make is made with advantage. Creatures of your choice within 80ft of you that you can see and are under the effect of Substitute must make a {save}, ending Substitute's effects on a failed save.\n\nFor the next minute, whenever a creature you can see within 80ft of you uses Spikes, Stealth Rock, Sticky Web, Toxic Spikes, or Substitute, you may use your reaction to force the creature to make a {save}. On a failed save, the move dissapates with no effect; the creature still spends a PP using their move.\n\nTidy Up's effect on its user persists even when switched out of combat. You may invoke Tidy Up's reaction even as you are being switched out or switched in. For example, if an enemy uses Spikes as a reaction to you switching out, you may invoke Tidy Up's reaction to attempt to dissapate Spikes before the switch completes.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "topsy-turvy",
@@ -23881,8 +23854,7 @@
 				"cost": 15000
 			},
 			"description": "You attack suddenly as if leaping out from tall grass. Make a melee attack, dealing {dice} {type} damage on a hit. With each successful hit from this move, increase your movement speed by 5 until you are incapacitated, are switched out, or the combat ends. (Maximum of +30 to movement speed)",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "transform",
@@ -24098,8 +24070,7 @@
 				"cost": 9100
 			},
 			"description": "You strike out with three consecutive kicks. Make three melee attack rolls in order, doing {dice} {type} damage on each hit. As soon as one attack misses, the move is over.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "triple-dive",
@@ -24382,8 +24353,7 @@
 				"cost": 3600
 			},
 			"description": "You react to the target's movement and strike with the heel of your palm. When targeted by a melee attack, you may use your reaction to attempt to strike a creature before its attack is rolled. Make a melee attack, dealing {dice} {type} damage on a hit.",
-			"categories": [],
-			"beta": true
+			"categories": []
 		},
 		{
 			"id": "uproar",
@@ -25236,8 +25206,7 @@
 			"description": "You create a thunderous tempest which savagely attacks with lightning and wind with the size of a 40-foot-cube centered on a point in range. Each enemy creature in the area makes a {save}. On a failed save, it takes {dice} {type} damage and becomes Paralyzed. On a successful save, it takes half the damage and does not become Paralyzed.\n\nA creature also makes that save if it enters the area or ends it turn there. A creature makes that save only once per turn.\n\nWhen used during the rain, creatures have disadvantage on the save.",
 			"categories": [
 				"wind"
-			],
-			"beta": true
+			]
 		},
 		{
 			"id": "wild-charge",
