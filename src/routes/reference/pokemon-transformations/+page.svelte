@@ -3,7 +3,7 @@
 	import ReferencePage from "../ReferencePage.svelte"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { TeraTypeTag } from "$lib/pokemon/types"
 	import { PokemonTeraType } from "$lib/pokemon/types"
 	import { Heading } from "$lib/ui/elements"
@@ -14,11 +14,11 @@
 		<p>A <dfn>transformation</dfn> grants a pokemon a temporary, but potent, boost in power by altering its form and capabilities. Any pokemon can undergo one of four kinds of transformations:</p>
 		<ul>
 			<li><a href="#mega-evolution">Mega Evolution</a></li>
-			<li><a href="#z-move">Z-Move</a>{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</li>
-			<li><a href="#dynamax">Dynamax</a>{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</li>
-			<li><a href="#terastallization">Terastallization</a>{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</li>
+			<li><a href="#z-move">Z-Move</a>{#if $currentEdition === "2018"}<sub>'24</sub>{/if}</li>
+			<li><a href="#dynamax">Dynamax</a>{#if $currentEdition === "2018"}<sub>'24</sub>{/if}</li>
+			<li><a href="#terastallization">Terastallization</a>{#if $currentEdition === "2018"}<sub>'24</sub>{/if}</li>
 		</ul>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<p><strong>Note:</strong> Only Mega Evolution existed in the 2018 ruleset. The 2024 rules for the other forms are reprinted here for convenience.</p>
 		{/if}
 		<p>A pokemon may only undergo a single transformation per long rest. Additionally, due to the equipment needed to perform these transformations, a trainer may only induce each kind of transformation once per long rest.</p>
@@ -26,14 +26,14 @@
 	</section>
 	<section>
 		<Heading level="2" id="mega-evolution">Mega Evolution</Heading>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.MegaEvolution />
 		{:else}
 			<Rules2024.MegaEvolution />
 		{/if}
 	</section>
 	<section>
-		<Heading level="2" id="z-move">Z-Move{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</Heading>
+		<Heading level="2" id="z-move">Z-Move{#if $currentEdition === "2018"}<sub>'24</sub>{/if}</Heading>
 		<p>A pokemon empowered with Z-Power may unleash a single, ultra-powerful move.</p>
 		<p>A pokemon may only use a Z-Move if it meets all of these conditions:</p>
 		<ul>
@@ -52,7 +52,7 @@
 		</ul>
 	</section>
 	<section>
-		<Heading level="2" id="dynamax">Dynamax{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</Heading>
+		<Heading level="2" id="dynamax">Dynamax{#if $currentEdition === "2018"}<sub>'24</sub>{/if}</Heading>
 		<p>When a pokemon dynamaxes, it warps the space around it to gains tremendous size and strength.</p>
 		<p>A pokemon may only dynamax if it meets all of these conditions:</p>
 		<ul>
@@ -78,7 +78,7 @@
 		</ul>
 	</section>
 	<section>
-		<Heading level="2" id="terastallization">Terastallization{#if $rulesVersion === "2018"}<sub>'24</sub>{/if}</Heading>
+		<Heading level="2" id="terastallization">Terastallization{#if $currentEdition === "2018"}<sub>'24</sub>{/if}</Heading>
 		<p>When a pokemon terastallizes, it shimmers like a gem and changes its typing.</p>
 		<p>Each pokemon has a special <dfn>Tera Type</dfn> which is one of the 18 primary types or the Stellar type. For most pokemon, their Tera Type is the same as their primary type, but rarely, pokemon may possess a Tera Type that differs from their customary typing entirely.</p>
 		<p>A pokemon may only terastallize if it meets all of these conditions:</p>

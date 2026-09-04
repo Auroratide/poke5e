@@ -1,4 +1,4 @@
-import { rulesVersion } from "$lib/site/rules-version"
+import { currentEdition } from "$lib/site/edition"
 import { derived } from "svelte/store"
 import {
 	StandardNature as StandardNature2018,
@@ -10,9 +10,9 @@ import {
 } from "./StandardNature.2024"
 import { AbilityScoreImprovement } from "$lib/dnd/attributes"
 
-export const StandardNatures = derived(rulesVersion, (rulesVersion) => rulesVersion === "2018" ? StandardNatures2018 : StandardNatures2024)
+export const StandardNatures = derived(currentEdition, (rulesVersion) => rulesVersion === "2018" ? StandardNatures2018 : StandardNatures2024)
 
-export const NatureEffect = derived(rulesVersion, (rulesVersion) => (nature: string) => {
+export const NatureEffect = derived(currentEdition, (rulesVersion) => (nature: string) => {
 	const table = rulesVersion === "2018" ? StandardNature2018 : StandardNature2024
 	const effect: Partial<AbilityScoreImprovement> = table[nature]?.effect ?? {}
 	const asi = {

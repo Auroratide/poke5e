@@ -1,6 +1,6 @@
 import { DataClass } from "$lib/DataClass"
 import type { Level } from "$lib/dnd/level"
-import type { RulesVersion } from "$lib/site/rules-version"
+import type { Edition } from "$lib/site/edition"
 
 export type StabBase = "default" | "movepower" | "proficiency" | "ruleset18" | "none"
 
@@ -11,11 +11,11 @@ export class Stab extends DataClass<{
 	get base() { return this.data.base }
 	get bonus() { return this.data.bonus }
 
-	calculate(moveModifier: number, level: Level, rulesVersion: RulesVersion): number {
+	calculate(moveModifier: number, level: Level, rulesVersion: Edition): number {
 		return Math.max(0, this.getBaseStab(moveModifier, level, rulesVersion) + this.bonus)
 	}
 
-	private getBaseStab(moveModifier: number, level: Level, rulesVersion: RulesVersion): number {
+	private getBaseStab(moveModifier: number, level: Level, rulesVersion: Edition): number {
 		switch (this.base) {
 		case "default":
 			if (rulesVersion === "2018")

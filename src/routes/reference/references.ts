@@ -29,7 +29,7 @@ import { meta as TrainerLevelingPage } from "./trainer-leveling/meta"
 import { meta as TrainerOriginsPage } from "./trainer-origins/meta"
 import { meta as TrainerPathsPage } from "./trainer-paths/meta"
 import { meta as WeatherPage } from "./weather/meta"
-import { rulesVersion } from "$lib/site/rules-version"
+import { currentEdition } from "$lib/site/edition"
 import type { ReferenceInfo } from "$lib/poke5e/reference"
 
 export const Preamble = [
@@ -113,15 +113,15 @@ const Supplements2024 = [
 	TrainerOriginsPage,
 ]
 
-export const CoreRules = derived(rulesVersion, (version) =>
+export const CoreRules = derived(currentEdition, (version) =>
 	version === "2018" ? CoreRules2018 : CoreRules2024,
 )
 
-export const Appendix = derived(rulesVersion, (version) =>
+export const Appendix = derived(currentEdition, (version) =>
 	version === "2018" ? Appendix2018 : Appendix2024,
 )
 
-export const Supplements = derived(rulesVersion, (version) =>
+export const Supplements = derived(currentEdition, (version) =>
 	version === "2018" ? Supplements2018 : Supplements2024,
 )
 

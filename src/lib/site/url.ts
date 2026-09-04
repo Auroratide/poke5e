@@ -72,7 +72,7 @@ export const Url = {
 	resources: () => localizeUrl(resolve("/resources")).pathname,
 	encounterTool: () => localizeUrl(resolve("/encounter-tool")).pathname,
 	settings: () => localizeUrl(resolve("/settings")).pathname,
-	rulesVersion: () => localizeUrl(resolve("/settings")).pathname + "#rules-version",
+	edition: () => localizeUrl(resolve("/settings")).pathname + "#rules-version",
 	betaTesting: () => localizeUrl(resolve("/beta-testing")).pathname,
 	external: {
 		auroratide: () => "https://auroratide.com",

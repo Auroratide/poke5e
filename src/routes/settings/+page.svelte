@@ -3,7 +3,7 @@
 	import { Page } from "$lib/ui/layout"
 	import { Title } from "$lib/ui/layout"
 	import { CogIcon } from "$lib/ui/icons"
-	import RulesVersionSection from "./RulesVersionSection.svelte"
+	import RulesVersionSection from "./EditionSection.svelte"
 	import BackupsSection from "./BackupsSection.svelte"
 	import OfficialFakemonSection from "./OfficialFakemonSection.svelte"
 	import LanguageSection from "./LanguageSection.svelte"

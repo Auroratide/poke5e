@@ -4,7 +4,7 @@
 	import { FlatDl } from "$lib/ui/elements"
 	import type { TrainerPokemon } from "../types"
 	import { CatchDc } from "$lib/poke5e/catching"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 
 	export let pokemon: TrainerPokemon
 	export let species: PokemonSpecies
@@ -13,7 +13,7 @@
 		level: pokemon.level,
 		sr: species.sr,
 		hp: pokemon.hp,
-		version: $rulesVersion,
+		version: $currentEdition,
 	})
 	$: exp = formatExp(experienceAwarded(pokemon.level.data, species.sr.data))
 </script>

@@ -5,7 +5,7 @@
 	import { MenuIcon } from "$lib/ui/icons"
 	import { Url } from "$lib/site/url"
 	import { m } from "$lib/site/i18n"
-	import { rulesVersion, RulesVersion } from "$lib/site/rules-version"
+	import { currentEdition, Edition } from "$lib/site/edition"
 
 	const NUMBER_OF_UNMENUED_ITEMS = 6
 
@@ -25,7 +25,7 @@
 
 	const firstFewItems = $derived(items.slice(0, NUMBER_OF_UNMENUED_ITEMS))
 	const exceedsUnmenued = $derived(items.length > NUMBER_OF_UNMENUED_ITEMS)
-	const edition = $derived($rulesVersion)
+	const edition = $derived($currentEdition)
 
 	let dialog: HTMLDialogElement
 
@@ -37,8 +37,8 @@
 <nav aria-label="Site" class="row space-between">
 	<p class="site-title">
 		<a href="{Url.home()}">{m.sitetitle()}</a>
-		{#if !RulesVersion.isLatest(edition)}
-			<sub class="edition"><a href="{Url.rulesVersion()}">{RulesVersion.abbr(edition)}</a></sub>
+		{#if !Edition.isLatest(edition)}
+			<sub class="edition"><a href="{Url.edition()}">{Edition.abbr(edition)}</a></sub>
 		{/if}
 	</p>
 	<div class="nav-bar">

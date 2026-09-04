@@ -1,5 +1,5 @@
 import { get } from "svelte/store"
-import { rulesVersion } from "$lib/site/rules-version"
+import { currentEdition } from "$lib/site/edition"
 
 export const ExperienceNeededPerLevel = [
 	0,
@@ -72,5 +72,5 @@ export function experienceAwareded2018(level: number, sr: number): number | null
 }
 
 export function experienceAwarded(level: number, sr: number): number {
-	return (get(rulesVersion) === "2018" ? experienceAwareded2018 : experienceAwarded2024)(level, sr)
+	return (get(currentEdition) === "2018" ? experienceAwareded2018 : experienceAwarded2024)(level, sr)
 }

@@ -5,7 +5,7 @@
 	import MoveDescription from "$lib/moves/MoveDescription.svelte"
 	import type { Stab } from "$lib/pokemon/stab"
 	import type { PokemonType } from "$lib/pokemon/types"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { Url } from "$lib/site/url"
 	import { FlatDl, LoaderInline, VisuallyHidden } from "$lib/ui/elements"
 	import { NumericResourceField, type NumericChangeDetail } from "$lib/ui/forms"
@@ -35,7 +35,7 @@
 
 	const move = $derived($MovesStore?.find((it) => it.id === value.moveId))
 	const currentPp = $derived(value.pp.current)
-	const moveStats = $derived(move?.calculateMoveStats($rulesVersion, {
+	const moveStats = $derived(move?.calculateMoveStats($currentEdition, {
 		attributes: attributes,
 		level: level,
 		type: pokemonType.data,

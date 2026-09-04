@@ -1,4 +1,4 @@
-import type { RulesVersion } from "$lib/site/rules-version"
+import type { Edition } from "$lib/site/edition"
 import type { DiceRoller } from "$lib/dnd/dice"
 import type { HitDice } from "$lib/dnd/hit-dice"
 import type { TrainerPath } from "$lib/trainers/paths"
@@ -36,7 +36,7 @@ export const PokemonResting = {
 		new SpendHitDice(options.hitDiceToSpend, options.hitDiceSize, options.diceRoller),
 		new RestoreStatus(),
 	]),
-	Pokecenter: (options: { rulesVersion: RulesVersion }) => options.rulesVersion === "2018"
+	Pokecenter: (options: { rulesVersion: Edition }) => options.rulesVersion === "2018"
 		? new Rest("Pokécenter", [ 
 			new RestoreAllHp(),
 			new RestoreHitDice(),

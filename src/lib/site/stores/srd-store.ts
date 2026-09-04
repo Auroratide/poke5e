@@ -1,6 +1,6 @@
 import { SrdClient } from "$lib/srd"
 import { derived } from "svelte/store"
-import { rulesVersion } from "../rules-version"
+import { currentEdition } from "../edition"
 import { browser } from "$app/environment"
 import { FeatureToggles } from "../FeatureToggles"
 import type { Edition } from "$lib/srd/editions"
@@ -38,7 +38,7 @@ export function srdStore<T>(load: (client: SrdClient) => Promise<T>) {
 		return entry
 	}
 
-	return derived(rulesVersion, (edition, set) => {
+	return derived(currentEdition, (edition, set) => {
 		if (!browser) return
 
 		// Always defer to 2018 until this becomes official

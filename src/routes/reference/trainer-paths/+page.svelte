@@ -1,11 +1,11 @@
 <script lang="ts">
 	import { TrainerPaths } from "$lib/trainers/paths"
 	import { renderHtml } from "$lib/ui/rendering/render"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { ColumnedList, Heading } from "$lib/ui/elements"
 	import ReferencePage from "../ReferencePage.svelte"
 
-	$: paths = TrainerPaths[$rulesVersion] 
+	$: paths = TrainerPaths[$currentEdition] 
 
 	const asId = (name: string) => name.replaceAll(/[^a-zA-Z0-9]/g, "").toLocaleLowerCase()
 </script>
@@ -22,7 +22,7 @@
 	</aside>
 	{#each paths as path}
 		<section>
-			<Heading level="2" id="{asId(path.name)}">{path.name}{#if $rulesVersion === "2018"}<sub>'18</sub>{/if}</Heading>
+			<Heading level="2" id="{asId(path.name)}">{path.name}{#if $currentEdition === "2018"}<sub>'18</sub>{/if}</Heading>
 			{#if path.supplement}
 				<p><strong>Requires Supplement:</strong> <a href="{path.supplement.url}">{path.supplement.name}</a></p>
 			{/if}

@@ -2,7 +2,7 @@
 	import { Url } from "$lib/site/url"
 	import { HelpIcon } from "$lib/ui/icons"
 	import Popover from "../../ui/elements/Popover.svelte"
-	import { rulesVersion } from "./RulesVersion"
+	import { currentEdition } from "./Edition"
 	import { TogglePill } from "$lib/ui/elements"
 	import type { Snippet } from "svelte"
 
@@ -21,7 +21,7 @@
 	leftvalue="2018"
 	rightlabel="'24"
 	rightvalue="2024"
-	bind:group={$rulesVersion}
+	bind:group={$currentEdition}
 >
 	{#snippet legend()}
 		{#if l}

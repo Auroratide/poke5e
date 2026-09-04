@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Card } from "$lib/ui/page"
-	import { RulesVersionToggle } from "$lib/site/rules-version"
+	import { EditionToggle } from "$lib/site/edition"
 	import { Title } from "$lib/ui/layout"
 	import { Url } from "$lib/site/url"
 
@@ -9,6 +9,6 @@
 
 <Title value="{title}" />
 <Card title="{title}" dismissToHref="{Url.reference.all()}">
-	<RulesVersionToggle slot="header-extra" />
+	<EditionToggle slot="header-extra" />
 	<slot></slot>
 </Card>

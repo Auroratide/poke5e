@@ -1,14 +1,14 @@
 <script>
 	import { experienceAwarded2024, experienceAwareded2018 } from "$lib/poke5e/experience"
 	import { FlatDl, Heading } from "$lib/ui/elements"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import ReferencePage from "../ReferencePage.svelte"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
 	import ExperienceTable from "./ExperienceTable.svelte"
 	import ExperienceTool from "./ExperienceTool.svelte"
 
-	$: expFormula = $rulesVersion === "2018" ? experienceAwareded2018 : experienceAwarded2024
+	$: expFormula = $currentEdition === "2018" ? experienceAwareded2018 : experienceAwarded2024
 </script>
 
 <ReferencePage title="Pokémon Leveling">
@@ -23,7 +23,7 @@
 			<dd>Level always matches the trainer's level</dd>
 		</FlatDl>
 		<p>When a Pokémon levels up, it gains benefits outlined in the table below. Additionally, each time a Pokémon levels up, it gains HP equal to a roll of its hit dice + CON, retroactive with increased CON scores.</p>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.LevelTable />
 		{:else}
 			<Rules2024.LevelTable />
@@ -31,7 +31,7 @@
 	</section>
 	<section>
 		<Heading level="2" id="features">Features</Heading>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.Features />
 		{:else}
 			<Rules2024.Features />
@@ -47,7 +47,7 @@
 		<p>Defeating a Pokémon confers experience according to its Level and Species Rating (<abbr>SR</abbr>). Use the tool below to determine how much experience a Pokémon should award.</p>
 		<ExperienceTool formula={expFormula} />
 		<br />
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.ExpFormula />
 		{:else}
 			<Rules2024.ExpFormula />
@@ -56,7 +56,7 @@
 	<section>
 		<Heading level="2" id="evolution">Evolution</Heading>
 		<p>Pokémon can evolve into a new form once they meet the condition detailed in their stat block. When a Pokémon evolves, the following occurs:</p>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.Evolution />
 		{:else}
 			<Rules2024.Evolution />

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Level } from "$lib/dnd/level"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { Paragraphs, renderHtml } from "$lib/ui/rendering"
 	import { isFeatureLandmarkLevel, TrainerPaths } from "."
 	import type { ChosenTrainerPath } from "./ChosenTrainerPath"
@@ -13,7 +13,7 @@
 		level: Level,
 	} = $props()
 
-	const standardPaths = $derived(TrainerPaths[$rulesVersion])
+	const standardPaths = $derived(TrainerPaths[$currentEdition])
 	const standardPath = $derived(standardPaths.find((it) => it.name === path.name))
 	const levelKey = $derived(`level${level.data}` as keyof ChosenTrainerPath["customFeatures"])
 </script>

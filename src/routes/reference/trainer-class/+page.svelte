@@ -5,7 +5,7 @@
 	import { Url } from "$lib/site/url"
 	import { PageAction } from "$lib/trainers/page-action"
 	import ReferencePage from "../ReferencePage.svelte"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
 </script>
@@ -23,11 +23,11 @@
 			<dt>Primary Ability</dt>
 			<dd>Charisma</dd>
 			<dt>Hit Point Die</dt>
-			<dd>{#if $rulesVersion === "2018"}d8{:else}d6{/if} per Trainer Level</dd>
+			<dd>{#if $currentEdition === "2018"}d8{:else}d6{/if} per Trainer Level</dd>
 			<dt>HP at Level 1</dt>
 			<dd>6 + CON modifier</dd>
 			<dt>HP at higher levels</dt>
-			<dd>{#if $rulesVersion === "2018"}1d8{:else}1d6{/if} + CON, or {#if $rulesVersion === "2018"}5{:else}4{/if} + CON</dd>
+			<dd>{#if $currentEdition === "2018"}1d8{:else}1d6{/if} + CON, or {#if $currentEdition === "2018"}5{:else}4{/if} + CON</dd>
 		</FlatDl>
 
 		<Heading level="3" id="proficiencies">Proficiencies</Heading>
@@ -54,13 +54,13 @@
 			<li>{formatMoney(1000)} + {formatMoney(100)} &times; 4d4</li>
 		</ul>
 
-		{#if $rulesVersion !== "2018"}
+		{#if $currentEdition !== "2018"}
 			<Heading level="3" id="multiclassing">Multiclassing</Heading>
 			<p class="small-font">To multiclass into Trainer, you must have an ability score of at least 13 in Charisma. When you gain your first level of Trainer, you gain proficiency in Animal Handling.</p>
 		{/if}
 	</section>
 	<section>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.LevelTable />
 		{:else}
 			<Rules2024.LevelTable />
@@ -68,7 +68,7 @@
 	</section>
 	<section>
 		<Heading level="2" id="class-features">Class Features</Heading>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.Features />
 		{:else}
 			<Rules2024.Features />

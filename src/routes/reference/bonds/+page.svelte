@@ -3,13 +3,13 @@
 	import ReferencePage from "../ReferencePage.svelte"
 	import Table2018 from "./Table2018.svelte"
 	import Table2024 from "./Table2024.svelte"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { Heading } from "$lib/ui/elements"
 </script>
 
 <ReferencePage title="Bonds">
 	<section>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<p><strong>Note:</strong> In the 2018 edition of the rules, this was referred to as "Loyalty".</p>
 		{/if}
 		<p>The bond between a Pokémon and its trainer is not always stable; It can ebb and flow as the two parties interact with one another. In Pokémon 5e, the relationship between a Pokémon and its trainer moves through various <dfn>Bond Levels</dfn>. These levels each have different effects on the ability of a Pokémon, how well they listen to you, and even whether or not certain Pokémon can evolve.</p>
@@ -17,7 +17,7 @@
 	<section>
 		<Heading level="2" id="bond-levels">Bond Levels</Heading>
 		<p>The following table describes the effects of each Bond Level:</p>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Table2018 />
 		{:else}
 			<Table2024 />
@@ -28,7 +28,7 @@
 		<p>Lowering bond may involve catching a Pokémon in an undeserving way, leaving a Pokémon in the PC for too long, allowing a Pokémon to faint from poison instead of healing it with antidote, and more.</p>
 		<p>Keep in mind that every Pokémon has a personality. Discover how your Pokémon's <a href="{Url.reference.natures()}">Nature</a> interacts with your trainer's own personality!</p>
 	</section>
-	{#if $rulesVersion !== "2018"}
+	{#if $currentEdition !== "2018"}
 		<section>
 			<Heading level="2" id="bond-points">Bond Points</Heading>
 			<p>Pokémon with a good bond with their trainer may spend Bond Points equal to their Bond Level for the benefits below. Your Pokémon regains expended Bond Points at the end of a long rest.</p>

@@ -1,7 +1,7 @@
 import { derived } from "svelte/store"
 import { SpecializationList as List2018 } from "./2018/SpecializationList"
 import { SpecializationList as List2024 } from "./2024/SpecializationList"
-import { rulesVersion } from "$lib/site/rules-version"
+import { currentEdition } from "$lib/site/edition"
 import { capitalize } from "$lib/utils/string"
 import type { Attribute } from "$lib/dnd/attributes"
 import type { Skill } from "$lib/dnd/skills"
@@ -28,7 +28,7 @@ export type SpecializationEffect = {
 
 export type Specializations = Record<PokeType, number>
 
-export const SpecializationList = derived([rulesVersion], ([rulesVersion]) => 
+export const SpecializationList = derived([currentEdition], ([rulesVersion]) => 
 	rulesVersion === "2018" ? List2018 : List2024,
 )
 

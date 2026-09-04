@@ -16,9 +16,9 @@ import { PokemonTrackerEffect } from "./effects/PokemonTracker"
 import { PokeslotIncreaseEffect } from "./effects/PokeslotIncrease"
 import { TrainerResolveEffect } from "./effects/TrainerResolve"
 import { EpicBoonFeat } from "./effects/EpicBoonFeat"
-import { rulesVersion } from "$lib/site/rules-version"
+import { currentEdition } from "$lib/site/edition"
 
-const is2024 = () => get(rulesVersion) === "2024"
+const is2024 = () => get(currentEdition) === "2024"
 
 const standardLevelUpEffects = (trainer: Trainer) => [
 	new IncreaseLevelEffect({

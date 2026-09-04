@@ -5,7 +5,7 @@ import type { PokemonSpecies } from "$lib/poke5e/species"
 import type { MoveLearnMethod } from "$lib/pokemon/move-pool"
 import { Stab } from "$lib/pokemon/stab"
 import { type PokeType } from "$lib/pokemon/types"
-import type { RulesVersion } from "$lib/site/rules-version"
+import type { Edition } from "$lib/site/edition"
 import type { BodyText } from "$lib/ui/rendering/types"
 import { ContestDetails } from "./contest/ContestDetails"
 import { MoveAttack } from "./MoveAttack"
@@ -84,7 +84,7 @@ export class Move extends DataClass<{
 		return allPokemon.filter((pokemon) => pokemon.moves.canLearnViaTm(this))
 	}
 
-	calculateMoveStats(rulesVersion: RulesVersion, forCharacter: {
+	calculateMoveStats(rulesVersion: Edition, forCharacter: {
 		attributes: Attributes,
 		level: Level,
 		type: PokeType[],

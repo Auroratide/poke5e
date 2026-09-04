@@ -7,13 +7,13 @@
 	import { Attributes } from "$lib/dnd/attributes"
 	import { ColumnedList, Heading, Tag } from "$lib/ui/elements"
 	import { TrainerOrigin } from "$lib/trainers/origins"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 
 	export let data: PageData
 </script>
 
 <ReferencePage title="Trainer Origins">
-	{#if $rulesVersion === "2024"}
+	{#if $currentEdition === "2024"}
 		<section>
 			<p class="smaller"><Tag>Note!</Tag> This has not (yet) been updated for 5.5e's character origins rules.</p>
 		</section>

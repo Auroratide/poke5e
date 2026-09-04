@@ -4,13 +4,13 @@
 	import { Url } from "$lib/site/url"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 </script>
 
 <ReferencePage title="Terrain Effects">
 	<section>
 		<p>Certain Pokémon or environmental effects can empower the terrain with elemental energy, affecting creatures in the area. The effect of these types of terrains are provided below:</p>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.TerrainTable />
 		{:else}
 			<Rules2024.TerrainTable />

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { m } from "$lib/site/i18n"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { TrainerPaths } from "$lib/trainers/paths"
 	import { Fieldset, InstructionText, SelectField } from "$lib/ui/forms"
 	import { renderHtml } from "$lib/ui/rendering"
@@ -12,7 +12,7 @@
 		value: NewTrainerPathEffect,
 	} = $props()
 
-	let possiblePaths = $derived(TrainerPaths[$rulesVersion])
+	let possiblePaths = $derived(TrainerPaths[$currentEdition])
 	let pathOptions = $derived(possiblePaths.map((path) => ({
 		value: path.name,
 		name: path.name,

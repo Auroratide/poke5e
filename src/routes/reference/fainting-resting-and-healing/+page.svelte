@@ -2,7 +2,7 @@
 	import ReferencePage from "../ReferencePage.svelte"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { Heading } from "$lib/ui/elements"
 </script>
 
@@ -12,7 +12,7 @@
 	</section>
 	<section>
 		<Heading level="2" id="reaching-0-hp">Reaching 0 HP</Heading>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.Death />
 		{:else}
 			<Rules2024.Death />
@@ -27,7 +27,7 @@
 			<li>Give them potions or food.</li>
 		</ul>
 		<Heading level="3" id="pokecenters">Pokécenters</Heading>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.Pokecenters />
 		{:else}
 			<Rules2024.Pokecenters />

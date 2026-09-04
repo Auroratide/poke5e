@@ -7,7 +7,7 @@
 <script lang="ts">
 	import { createEventDispatcher } from "svelte"
 	import type { ChosenTrainerPath } from "./ChosenTrainerPath"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { TrainerFeatureLevelLandmarks, TrainerPaths } from "."
 	import { NumericResourceField, type NumericChangeDetail } from "$lib/ui/forms"
 	import FeatureInfo from "./FeatureInfo.svelte"
@@ -19,7 +19,7 @@
 	export let editable: boolean
 	export let level: Level
 
-	$: paths = TrainerPaths[$rulesVersion] 
+	$: paths = TrainerPaths[$currentEdition] 
 	$: standardPath = paths.find((it) => it.name === value.name)
 	$: resource = standardPath?.resource
 

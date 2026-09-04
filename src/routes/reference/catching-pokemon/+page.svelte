@@ -1,7 +1,7 @@
 <script>
 	import { FlatDl, Heading } from "$lib/ui/elements"
 	import ReferencePage from "../ReferencePage.svelte"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
 	import { Url } from "$lib/site/url"
@@ -38,7 +38,7 @@
 		<p>You hurl a Pokéball at a wild Pokémon in attempt to capture it. Make an Animal Handling skill check. You have advantage on the throw if the Pokémon is poisoned, restrained, asleep, burning, confused, paralyzed, or frozen.</p>
 		<p>If you succeed the DC, the wild Pokémon is captured.</p>
 		<p>The base DC is equal to:</p>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.Formula />
 		{:else}
 			<Rules2024.Formula />
@@ -46,7 +46,7 @@
 	</section>
 	<section>
 		<Heading level="2" id="pokeball-types">Pokéball Types</Heading>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.Pokeballs />
 		{:else}
 			<Rules2024.Pokeballs />
@@ -54,13 +54,13 @@
 	</section>
 	<section>
 		<Heading level="2" id="examples">Examples</Heading>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.Examples />
 		{:else}
 			<Rules2024.Examples />
 		{/if}
 	</section>
-	{#if $rulesVersion === "2024"}
+	{#if $currentEdition === "2024"}
 		<section>
 			<Heading level="2" id="where-to-catch-pokemon">Where to Catch Pokémon</Heading>
 			<p>The only hard rule is that a Pokémon cannot be captured via a pokéball if its been registered to a trainer via one of their own pokéballs. Otherwise, wild Pokémon can be found in many contexts:</p>

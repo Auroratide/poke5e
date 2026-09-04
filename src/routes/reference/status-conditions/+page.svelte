@@ -8,12 +8,12 @@
 	} from "$lib/pokemon/status"
 	import StatusTag from "$lib/pokemon/StatusTag.svelte"
 	import ReferencePage from "../ReferencePage.svelte"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { Markdown } from "$lib/ui/rendering"
 	import { Heading } from "$lib/ui/elements"
 
-	$: nonVolatileList = $rulesVersion === "2018" ? Object.values(NonVolatileStatus2018) : Object.values(NonVolatileStatus)
-	$: volatileList = $rulesVersion === "2018" ? Object.values(VolatileStatus2018) : Object.values(VolatileStatus)
+	$: nonVolatileList = $currentEdition === "2018" ? Object.values(NonVolatileStatus2018) : Object.values(NonVolatileStatus)
+	$: volatileList = $currentEdition === "2018" ? Object.values(VolatileStatus2018) : Object.values(VolatileStatus)
 </script>
 
 <ReferencePage title="Status Conditions">

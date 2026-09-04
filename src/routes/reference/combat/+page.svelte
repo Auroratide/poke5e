@@ -2,7 +2,7 @@
 	import ReferencePage from "../ReferencePage.svelte"
 	import Rules2018 from "./2018"
 	import Rules2024 from "./2024"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { Formula, Heading } from "$lib/ui/elements"
 </script>
 
@@ -10,7 +10,7 @@
 	<section>
 		<p>Being a master of your Pokémon in battle is one of the most important parts of this game. Pokémon have their own set of moves, stats, and levels to gain.</p>
 		<p>Combat rules are the same as in D&D 5e, with the following extensions:</p>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.Rules />
 		{:else}
 			<Rules2024.Rules />
@@ -34,7 +34,7 @@
 		<p>Note that not every move specifies "+ MOVE" in their damage. These moves do not benefit from the MOVE Bonus.</p>
 
 		<Heading level="3" id="stab">STAB</Heading>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.Stab />
 		{:else}
 			<Rules2024.Stab />
@@ -42,7 +42,7 @@
 		<Heading level="3" id="the-struggle-move">The Struggle Move</Heading>
 		<p>When a Pokémon runs out of PP on all of the moves it knows, the only action it may take is <strong><a href="/moves/struggle">Struggle</a></strong>. Struggle can be used at any time, regardless of PP remaining in other moves.</p>
 		<Heading level="3" id="moves-example">Example</Heading>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.Example />
 		{:else}
 			<Rules2024.Example />
@@ -50,7 +50,7 @@
 	</section>
 	<section>
 		<Heading level="2" id="switching-pokemon">Switching Pokémon</Heading>
-		{#if $rulesVersion === "2018"}
+		{#if $currentEdition === "2018"}
 			<Rules2018.Switching />
 		{:else}
 			<Rules2024.Switching />

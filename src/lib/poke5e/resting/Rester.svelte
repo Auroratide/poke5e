@@ -4,7 +4,7 @@
 	import { ActionArea, Fieldset, Form, IntField, RadioFields, HintText } from "$lib/ui/forms"
 	import { PokemonResting } from "./Rest"
 	import type { TrainerPokemon } from "$lib/trainers/types"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { SpeciesPortrait } from "$lib/poke5e/species/media"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { m } from "$lib/site/i18n"
@@ -22,12 +22,12 @@
 	$: rest = restToPerform ? PokemonResting[restToPerform]({
 		hitDiceToSpend,
 		hitDiceSize,
-		rulesVersion: $rulesVersion,
+		rulesVersion: $currentEdition,
 	}) : undefined
 	$: applicableEffects = rest?.effects.filter((it) => it.isApplicable(pokemon)) ?? []
 
 	const options = Object.entries(PokemonResting).map(([key, value]) => ({
-		name: value({ hitDiceToSpend: 0, hitDiceSize, rulesVersion: $rulesVersion }).name,
+		name: value({ hitDiceToSpend: 0, hitDiceSize, rulesVersion: $currentEdition }).name,
 		value: key,
 	}))
 

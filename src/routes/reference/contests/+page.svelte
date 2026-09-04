@@ -1,12 +1,12 @@
 <script lang="ts">
 	import ReferencePage from "../ReferencePage.svelte"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import type { PageData } from "./$types"
 
 	export let data: PageData
 
-	$: title = data[$rulesVersion].metadata.title
-	$: Content = data[$rulesVersion].Content
+	$: title = data[$currentEdition].metadata.title
+	$: Content = data[$currentEdition].Content
 </script>
 
 <ReferencePage title="{title}">

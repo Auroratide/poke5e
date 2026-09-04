@@ -7,7 +7,7 @@
 	import { SpeciesStore } from "$lib/poke5e/species"
 	import { AbilityPool } from "$lib/pokemon/ability"
 	import { includesSearch } from "$lib/utils/string"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	const pokemon = SpeciesStore.canonList()
@@ -18,7 +18,7 @@
 		data: PageData,
 	} = $props()
 
-	const rulesVersionToUseForAbilities = $derived(FeatureToggles.PreviewUpdatedMoves() ? $rulesVersion : "2018")
+	const rulesVersionToUseForAbilities = $derived(FeatureToggles.PreviewUpdatedMoves() ? $currentEdition : "2018")
 	const abilities = $derived(data.values[rulesVersionToUseForAbilities])
 	const associatedPokemon = $derived(AbilityPool.groupSpeciesByAbility(abilities.map((it) => it.referenceId).filter((it) => it != null), $pokemon ?? []))
 

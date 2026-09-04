@@ -1,12 +1,12 @@
 <script lang="ts" generics="T">
 	import type { Snippet } from "svelte"
-	import { Editions, type RulesVersion } from "./RulesVersion"
+	import { Editions, type Edition } from "./Edition"
 
 	let {
 		values,
 		render,
 	}: {
-		values: Record<RulesVersion, T>,
+		values: Record<Edition, T>,
 		render: Snippet<[T]>,
 	} = $props()
 </script>

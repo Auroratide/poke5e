@@ -1,7 +1,7 @@
 <script>
 	import { Formula, Heading } from "$lib/ui/elements"
 	import ReferencePage from "../ReferencePage.svelte"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import one from "./1v1.webp"
 	import two from "./2v2.webp"
 	import four from "./4v4.webp"
@@ -10,7 +10,7 @@
 </script>
 
 <ReferencePage title="Building Encounters">
-	{#if $rulesVersion === "2018"}
+	{#if $currentEdition === "2018"}
 		<section>
 			<p>As a Dungeon Master, one of the ways you can challenge your players is through <strong>encounters</strong>, battles between the players' pokémon and other pokémon. There are essentially two types of encounters in Pokémon 5e:</p>
 			<ul>

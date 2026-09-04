@@ -2,7 +2,7 @@ import { DataClass } from "$lib/DataClass"
 import type { Level } from "$lib/dnd/level"
 import type { Stab } from "$lib/pokemon/stab"
 import { PokemonType, type PokeType, type TeraType } from "$lib/pokemon/types"
-import type { RulesVersion } from "$lib/site/rules-version"
+import type { Edition } from "$lib/site/edition"
 
 export class MoveDamage extends DataClass<{
 	dice: {
@@ -14,7 +14,7 @@ export class MoveDamage extends DataClass<{
 	modifier: string | number,
 	type: PokeType[] | "typeless" | "healing" | "stellar",
 }> {
-	damage(stab: Stab, mod: number, moveType: TeraType | "varies" | "typeless", pokemonType: PokeType[], level: Level, rulesVersion: RulesVersion): {
+	damage(stab: Stab, mod: number, moveType: TeraType | "varies" | "typeless", pokemonType: PokeType[], level: Level, rulesVersion: Edition): {
 		dice: string,
 		mod: number,
 		isHealing: boolean,

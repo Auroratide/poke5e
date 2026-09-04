@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { m } from "$lib/site/i18n"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { PlusMinus } from "$lib/ui/elements"
 	import { Fieldset, InstructionText } from "$lib/ui/forms"
 	import CenterStage from "../CenterStage.svelte"
@@ -13,8 +13,8 @@
 		value: StabIncreaseEffect,
 	} = $props()
 
-	let before = $derived(value.props.stab.calculate(0, value.props.currentLevel, $rulesVersion))
-	let after = $derived(value.props.stab.calculate(0, value.props.currentLevel.next(), $rulesVersion))
+	let before = $derived(value.props.stab.calculate(0, value.props.currentLevel, $currentEdition))
+	let after = $derived(value.props.stab.calculate(0, value.props.currentLevel.next(), $currentEdition))
 </script>
 
 {#if after > before}

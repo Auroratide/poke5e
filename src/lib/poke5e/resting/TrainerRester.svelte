@@ -14,7 +14,7 @@
 	import { getTrainerHitDice } from "$lib/trainers/hit-dice"
 	import PokemonBanner from "./PokemonBanner.svelte"
 	import { TrainerPaths } from "$lib/trainers/paths"
-	import { rulesVersion } from "$lib/site/rules-version"
+	import { currentEdition } from "$lib/site/edition"
 	import { Art } from "$lib/ui/elements"
 	import type { Readable } from "svelte/store"
 	import type { PokemonSpecies, SpeciesIdentifier } from "$lib/poke5e/species"
@@ -33,7 +33,7 @@
 	$: disabled = saving
 	$: hitDiceSize = $getTrainerHitDice(trainer.info.customHitDiceSize)
 
-	$: trainerPaths = TrainerPaths[$rulesVersion] 
+	$: trainerPaths = TrainerPaths[$currentEdition] 
 
 	let restToPerform: RestType = undefined
 	let hitDiceToSpend = 0
@@ -58,7 +58,7 @@
 		if (applyToPokemon) {
 			trainer.pokemon = trainer.pokemon.map((pokemon) => {
 				const hitDiceSize = pokemon.customHitDiceSize ?? getSpecies(pokemon.pokemonId).hitDice
-				const rest = PokemonResting[restToPerform]({ hitDiceToSpend, hitDiceSize, rulesVersion: $rulesVersion })
+				const rest = PokemonResting[restToPerform]({ hitDiceToSpend, hitDiceSize, rulesVersion: $currentEdition })
 				return rest.apply(pokemon)
 			})
 		}
