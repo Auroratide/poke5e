@@ -1,6 +1,7 @@
 import { AbilitiesSrdClient } from "./abilities/client"
 import { BiomesSrdClient } from "./biomes/client"
 import { ContestEffectsSrdClient } from "./contest-effects/client"
+import { ContestSrdClient } from "./contest/client"
 import type { Edition } from "./editions"
 import { EvolutionsSrdClient } from "./evolutions/client"
 import { ItemsSrdClient } from "./items/client"
@@ -9,6 +10,7 @@ import { PokemonSrdClient } from "./pokemon/client"
 
 export class SrdClient {
 	readonly abilities: AbilitiesSrdClient
+	readonly contest: ContestSrdClient
 	readonly contestEffects: ContestEffectsSrdClient
 	readonly biomes: BiomesSrdClient
 	readonly moves: MovesSrdClient
@@ -18,6 +20,7 @@ export class SrdClient {
 
 	constructor(readonly edition: Edition, customFetch = fetch) {
 		this.abilities = new AbilitiesSrdClient(edition, customFetch)
+		this.contest = new ContestSrdClient(edition, customFetch)
 		this.contestEffects = new ContestEffectsSrdClient(edition, customFetch)
 		this.biomes = new BiomesSrdClient(edition, customFetch)
 		this.moves = new MovesSrdClient(edition, customFetch)

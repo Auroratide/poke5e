@@ -9,6 +9,7 @@ import { ItemJson, ItemListJson } from "./items/schema"
 import { MoveJson, MovesListJson } from "./moves/schema"
 import { PokemonJson, PokemonListJson } from "./pokemon/schema"
 import type { OpenAPIV3_1 } from "openapi-types"
+import { ContestJson, ContestListJson } from "./contest/schema"
 
 const API_VERSION = "1.0.0"
 const ORIGIN = "https://poke5e.app"
@@ -40,6 +41,14 @@ const RESOURCES: Resource[] = [
 		list: BiomesListJson,
 		listOperationId: "listBiomes",
 		itemOperationId: "getBiome",
+	},
+	{
+		segment: "contest",
+		label: "contest",
+		item: ContestJson,
+		list: ContestListJson,
+		listOperationId: "listContest",
+		itemOperationId: "getContest",
 	},
 	{
 		segment: "contest-effects",

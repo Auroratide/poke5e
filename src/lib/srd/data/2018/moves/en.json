@@ -23,7 +23,8 @@
 				],
 				"modifier": "MOVE",
 				"type": "damage"
-			}
+			},
+			"beta": false
 		}
 	]
 }

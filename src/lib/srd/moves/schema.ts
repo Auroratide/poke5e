@@ -124,7 +124,7 @@ export const MoveJson = z.object({
 		description: "Dice used for this move, whether for damage or healing.\nThe `class` field determines which set of dice\nto use.",
 	}),
 	attack: z.object({
-		scope: z.string(),
+		scope: z.union([z.literal("melee"), z.literal("ranged")]),
 	}).optional().meta({
 		description: "Present if the move has an attack roll.",
 	}),

@@ -1,0 +1,9 @@
+{
+	"values": [
+		{
+			"id": "swords-dance",
+			"description": "Cuando activas este movimiento, una espada aparece y danza a tu alrededor, aumentando tu CA en 1. Como acción adicional en un turno posterior, puedes dejar de concentrarte para liberar esta espada. Realiza un ataque a distancia contra un objetivo a 30 pies o menos de ti, infligiendo 2d6 + MOV de daño de tipo Normal si impactas.",
+			"higherLevels": "Los dados de daño para este movimiento pasan a ser 2d8 al nivel 5. Al nivel 10, ahora puedes crear dos espadas para un bonificador de +2 a la CA y dos ataques a distancia. Al nivel 17, los dados de daño de cada espada aumentan a 3d8."
+		}
+	]
+}

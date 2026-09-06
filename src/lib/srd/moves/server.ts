@@ -7,12 +7,12 @@ import en2018 from "../data/2018/moves/en.json"
 async function all(edition: Edition): Promise<MovesListJson> {
 	const values2024 = await translateData(
 		en2024.values,
-		async (locale) => (await import(`./data/2024/moves/${locale}.json`)).values,
+		async (locale) => (await import(`../data/2024/moves/${locale}.json`)).values,
 	)
 
 	const values2018 = await translateData(
 		en2018.values,
-		async (locale) => (await import(`./data/2018/moves/${locale}.json`)).values,
+		async (locale) => (await import(`../data/2018/moves/${locale}.json`)).values,
 	)
 
 	const values = chooseEditionData(edition, values2024, {
@@ -24,6 +24,13 @@ async function all(edition: Edition): Promise<MovesListJson> {
 
 function ids(): string[] {
 	return en2024.values.map((it) => it.id)
+}
+
+/** TM numbers, for routes keyed by TM rather than by move. */
+function tmIds(): string[] {
+	return en2024.values
+		.filter((it) => it.tm != null)
+		.map((it) => it.tm.id.toString())
 }
 
 async function one(id: string, edition: Edition): Promise<MoveJson | undefined> {
@@ -38,4 +45,5 @@ export const MovesSrd = {
 	all,
 	one,
 	ids,
+	tmIds,
 } as const

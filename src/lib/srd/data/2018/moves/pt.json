@@ -1,0 +1,9 @@
+{
+	"values": [
+		{
+			"id": "swords-dance",
+			"description": "Quando você ativa este movimento, uma espada aparece e dança ao seu redor, aumentando sua CA em 1. Como ação bônus em um turno futuro, você pode encerrar a concentração para lançar essa espada e fazer um ataque à distância contra um alvo a até 30 pés, causando 2d6 + MOVE de dano normal em um acerto.",
+			"higherLevels": "The damage dice for this move changes to 2d8 at level 5. At level 10, you can now create two swords for +2 to AC and two ranged attacks. At level 17, the damage dice for each sword increases to 3d8."
+		}
+	]
+}
