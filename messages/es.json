@@ -78,6 +78,7 @@
 	"duration": "Duración",
 	"range": "Rango",
 	"atHigherLevels": "A Niveles Superiores",
+	"atHigherLevelsDice": "La tirada de daño de este movimiento pasa a ser {t1} al nivel 5, {t2} al nivel 10 y {t3} al nivel 17.",
 	"canLearnThisMove": "Pueden aprender este movimiento",
 	"see": "Ver",
 	"attributes": "Atributos",

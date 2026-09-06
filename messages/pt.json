@@ -80,6 +80,7 @@
 	"duration": "Duração",
 	"range": "Alcance",
 	"atHigherLevels": "Em Níveis Maiores",
+	"atHigherLevelsDice": "O dado de dano deste movimento muda para {t1} no nível 5, {t2} no nível 10 e {t3} no nível 17.",
 	"canLearnThisMove": "Pode Aprender este Movimento",
 	"learnsByLevelUp": "Aprende por Nível",
 	"learnsByEggMove": "Aprende por Egg Move",
@@ -208,6 +209,24 @@
 	"customStabRuleset18Description": "Usa a tabela de STAB do conjunto de regras '18, dependente do nível.",
 	"customStabNoneDescription": "STAB é 0, depende inteiramente do bônus fornecido abaixo.",
 	"none": "Nenhum",
+	"instantaneous": "Instantâneo",
+	"minutes": [ {
+		"declarations": ["input value", "local valuePlural = value: plural"],
+		"selectors": ["valuePlural"],
+		"match": {
+			"valuePlural=one": "{value} Minuto",
+			"valuePlural=other": "{value} Minutos"
+		}
+	} ],
+	"rounds": [ {
+		"declarations": ["input value", "local valuePlural = value: plural"],
+		"selectors": ["valuePlural"],
+		"match": {
+			"valuePlural=one": "{value} Rodada",
+			"valuePlural=other": "{value} Rodadas"
+		}
+	} ],
+	"concentrationUpTo": "Concentração, até {value}",
 	"home": {
 		"title": "Pokémon 5ª Edição"
 	},

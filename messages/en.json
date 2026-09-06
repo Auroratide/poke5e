@@ -82,6 +82,8 @@
 	"duration": "Duration",
 	"range": "Range",
 	"atHigherLevels": "At Higher Levels",
+	"atHigherLevelsDice": "The {type} dice roll for this move changes to {t1} at level 5, {t2} at level 10, and {t3} at level 17.",
+	"saveAgainstMoveDc": "{attribute} save against your Move DC",
 	"canLearnThisMove": "Can Learn This Move",
 	"learnsByLevelUp": "Learns by Level Up",
 	"learnsByEggMove": "Learns by Egg Move",
@@ -273,6 +275,42 @@
 	"advanced": "Advanced",
 	"resources": "Resources",
 	"resourcesDescription": "This is a list of tools, documents, and supplements shared by members of the Pokémon 5e community!",
+	"instantaneous": "Instantaneous",
+	"minutes": [ {
+		"declarations": ["input value", "local valuePlural = value: plural"],
+		"selectors": ["valuePlural"],
+		"match": {
+			"valuePlural=one": "{value} Minute",
+			"valuePlural=other": "{value} Minutes"
+		}
+	} ],
+	"rounds": [ {
+		"declarations": ["input value", "local valuePlural = value: plural"],
+		"selectors": ["valuePlural"],
+		"match": {
+			"valuePlural=one": "{value} Round",
+			"valuePlural=other": "{value} Rounds"
+		}
+	} ],
+	"concentrationUpTo": "Concentration, up to {value}",
+	"varies": "Varies",
+	"self": "Self",
+	"melee": "Melee",
+	"reach": "reach {value}",
+	"feet": [ {
+		"declarations": ["input value", "local valuePlural = value: plural"],
+		"selectors": ["valuePlural"],
+		"match": {
+			"valuePlural=one": "{value} foot",
+			"valuePlural=other": "{value} feet"
+		}
+	} ],
+	"cone": "{value}-foot cone",
+	"emanation": "{value}-foot emanation",
+	"cube": "{value}-foot cube",
+	"line": "{value}-foot line",
+	"rangeWithShape": "{range} ({shape})",
+	"unknownShape": "<?> shape",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},
