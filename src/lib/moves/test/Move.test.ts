@@ -1,10 +1,10 @@
-import { describe, test, expect } from "vitest"
-import { stubMove, stubMoveAttack, stubMoveDamage, stubMoveSave, stubTmDetails } from "./stubs-2"
-import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import type { Attributes } from "$lib/dnd/attributes"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { Level } from "$lib/dnd/level"
+import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import { Stab } from "$lib/pokemon/stab"
+import { describe, expect, test } from "vitest"
+import { stubMove, stubMoveAttack, stubMoveDice, stubMoveSave, stubTmDetails } from "./stubs-2"
 
 describe("pokemonWhoLearnThis", () => {
 	const allPokemon = [
@@ -191,7 +191,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "normal",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 			attack: stubMoveAttack().data,
 			save: stubMoveSave().data,
 		})
@@ -223,7 +223,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["str", "dex"],
 			type: "normal",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 			attack: stubMoveAttack().data,
 			save: stubMoveSave().data,
 		})
@@ -255,7 +255,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: "any",
 			type: "normal",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 			attack: stubMoveAttack().data,
 			save: stubMoveSave().data,
 		})
@@ -287,7 +287,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: "none",
 			type: "normal",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 			attack: undefined,
 			save: undefined,
 		})
@@ -313,7 +313,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: "varies",
 			type: "normal",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 			attack: undefined,
 			save: undefined,
 		})
@@ -339,7 +339,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "psychic",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 			attack: stubMoveAttack().data,
 			save: stubMoveSave().data,
 		})
@@ -371,7 +371,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "psychic",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 			attack: stubMoveAttack().data,
 			save: stubMoveSave().data,
 		})
@@ -403,7 +403,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "normal",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 			attack: stubMoveAttack().data,
 			save: stubMoveSave().data,
 		})
@@ -435,7 +435,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "normal",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 		})
 	
 		const result = move.calculateMoveStats("2024", {
@@ -459,9 +459,9 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "normal",
-			damage: stubMoveDamage({
-				modifier: 0,
-			}).data,
+			dice: stubMoveDice({
+				modifier: "0",
+			}),
 		})
 	
 		const result = move.calculateMoveStats("2024", {
@@ -485,9 +485,9 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "normal",
-			damage: stubMoveDamage({
+			dice: stubMoveDice({
 				modifier: "MOVE + 4",
-			}).data,
+			}),
 		})
 	
 		const result = move.calculateMoveStats("2024", {
@@ -511,9 +511,9 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "normal",
-			damage: stubMoveDamage({
+			dice: stubMoveDice({
 				modifier: "MOVE + STAB",
-			}).data,
+			}),
 		})
 	
 		const result = move.calculateMoveStats("2024", {
@@ -537,9 +537,9 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "normal",
-			damage: stubMoveDamage({
+			dice: stubMoveDice({
 				modifier: "LEVEL",
-			}).data,
+			}),
 		})
 	
 		const result = move.calculateMoveStats("2024", {
@@ -563,7 +563,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "normal",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 			attack: stubMoveAttack().data,
 			save: stubMoveSave().data,
 		})
@@ -595,7 +595,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "normal",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 			attack: undefined,
 			save: stubMoveSave().data,
 		})
@@ -625,7 +625,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "normal",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 			attack: stubMoveAttack().data,
 			save: undefined,
 		})
@@ -652,7 +652,6 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "normal",
-			damage: undefined,
 			attack: stubMoveAttack().data,
 			save: stubMoveSave().data,
 		})
@@ -677,9 +676,9 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "psychic",
-			damage: stubMoveDamage({
+			dice: stubMoveDice({
 				type: "healing",
-			}).data,
+			}),
 			attack: stubMoveAttack().data,
 			save: stubMoveSave().data,
 		})
@@ -710,7 +709,7 @@ describe("calculateMoveStats", () => {
 		const move = stubMove({
 			power: ["int"],
 			type: "normal",
-			damage: stubMoveDamage().data,
+			dice: stubMoveDice(),
 			attack: stubMoveAttack().data,
 			save: stubMoveSave().data,
 		})
@@ -736,5 +735,173 @@ describe("calculateMoveStats", () => {
 				stabApplied: true,
 			},
 		})
+	})
+})
+
+describe("higherLevels", () => {
+	test("no dice or higherLevels", () => {
+		const move = stubMove({
+			higherLevels: null,
+			dice: null,
+		})
+
+		const result = move.higherLevels
+
+		expect(result).toBeUndefined()
+	})
+
+	test("has damage dice", () => {
+		const move = stubMove({
+			higherLevels: null,
+			dice: {
+				class: "custom",
+				tiers: ["1d4", "2d4", "3d4", "4d4"],
+				type: "damage",
+				modifier: "MOVE",
+			},
+		})
+
+		const result = move.higherLevels
+
+		expect(result).toEqual("The damage dice roll for this move changes to 2d4 at level 5, 3d4 at level 10, and 4d4 at level 17.")
+	})
+
+	test("has healing dice", () => {
+		const move = stubMove({
+			higherLevels: null,
+			dice: {
+				class: "custom",
+				tiers: ["1d4", "2d4", "3d4", "4d4"],
+				type: "healing",
+				modifier: "MOVE",
+			},
+		})
+
+		const result = move.higherLevels
+
+		expect(result).toEqual("The healing dice roll for this move changes to 2d4 at level 5, 3d4 at level 10, and 4d4 at level 17.")
+	})
+
+	test("has damage dice and higherLevels", () => {
+		const move = stubMove({
+			higherLevels: "custom higher levels text",
+			dice: {
+				class: "custom",
+				tiers: ["1d4", "2d4", "3d4", "4d4"],
+				type: "damage",
+				modifier: "MOVE",
+			},
+		})
+
+		const result = move.higherLevels
+
+		expect(result).toEqual("custom higher levels text")
+	})
+})
+
+describe("description", () => {
+	test("subbing dice", () => {
+		const move = stubMove({
+			description: "takes {dice} damage",
+			dice: {
+				class: "custom",
+				tiers: ["1d4", "2d4", "3d4", "4d4"],
+				type: "damage",
+				modifier: "MOVE",
+			},
+		})
+
+		const result = move.description
+
+		expect(result).toEqual("takes 1d4 + MOVE damage")
+	})
+
+	test("subbing dice, 0 modifier", () => {
+		const move = stubMove({
+			description: "takes {dice} damage",
+			dice: {
+				class: "custom",
+				tiers: ["1d4", "2d4", "3d4", "4d4"],
+				type: "damage",
+				modifier: "0",
+			},
+		})
+
+		const result = move.description
+
+		expect(result).toEqual("takes 1d4 damage")
+	})
+
+	test("subbing dice (but not provided)", () => {
+		const move = stubMove({
+			description: "takes {dice} damage",
+			dice: null,
+		})
+
+		const result = move.description
+
+		expect(result).toEqual("takes <?> damage")
+	})
+
+	test("subbing type", () => {
+		const move = stubMove({
+			description: "takes {type} damage",
+			type: "fire",
+		})
+
+		const result = move.description
+
+		expect(result).toEqual("takes fire damage")
+	})
+
+	test("subbing save", () => {
+		const move = stubMove({
+			description: "make a {save}",
+			save: {
+				attribute: ["str"],
+				dc: "MOVE",
+			},
+		})
+
+		const result = move.description
+
+		expect(result).toEqual("make a STR save against your Move DC")
+	})
+
+	test("subbing save (save not provided)", () => {
+		const move = stubMove({
+			description: "make a {save}",
+			save: null,
+		})
+
+		const result = move.description
+
+		expect(result).toEqual("make a <?> save against your Move DC")
+	})
+
+	test("subbing shape", () => {
+		const move = stubMove({
+			description: "in a {shape}",
+			shape: {
+				type: "emanation",
+				value: 20,
+				unit: "feet",
+			},
+		})
+
+		const result = move.description
+
+		expect(result).toEqual("in a 20-foot emanation")
+	})
+
+	test("subbing shape (not provided)", () => {
+		const move = stubMove({
+			description: "in a {shape}",
+			shape: null,
+		})
+
+		const result = move.description
+
+		expect(result).toEqual("in a <?> shape")
 	})
 })

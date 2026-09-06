@@ -26,13 +26,6 @@ function ids(): string[] {
 	return en2024.values.map((it) => it.id)
 }
 
-/** TM numbers, for routes keyed by TM rather than by move. */
-function tmIds(): string[] {
-	return en2024.values
-		.filter((it) => it.tm != null)
-		.map((it) => it.tm.id.toString())
-}
-
 async function one(id: string, edition: Edition): Promise<MoveJson | undefined> {
 	const moves = await all(edition)
 
@@ -45,5 +38,4 @@ export const MovesSrd = {
 	all,
 	one,
 	ids,
-	tmIds,
 } as const

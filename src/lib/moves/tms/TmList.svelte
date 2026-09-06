@@ -8,7 +8,7 @@
 	import { m } from "$lib/site/i18n"
 	import { MoveFilter } from "../MoveFilter"
 	import { PokemonType, type PokeType } from "$lib/pokemon/types"
-	import { MoveTime } from "../MoveTime"
+	import { MoveTime } from "../time"
 	import { ContestType } from "../contest"
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import { capitalize, uppercase } from "$lib/utils/string"

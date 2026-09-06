@@ -10,6 +10,9 @@
 	import { ContestInfo } from "./contest"
 	import { m } from "$lib/site/i18n"
 	import { formatMoney } from "$lib/pokemon/money"
+	import { MoveTime } from "./time"
+	import { MoveDuration } from "./duration"
+	import { MoveRange } from "./range"
 
 	export let move: Move
 	export let pokemon: PokemonSpecies[] = []
@@ -30,13 +33,13 @@
 			<dt>{m.movePower()}</dt>
 			<dd class="power">{move.power.toString()}</dd>
 			<dt>{m.moveTime()}</dt>
-			<dd>{move.time}</dd>
+			<dd>{MoveTime.display(move.time)}</dd>
 			<dt><abbr title="{m.powerPoints()}">{m.pp()}</abbr></dt>
 			<dd>{move.pp}</dd>
 			<dt>{m.duration()}</dt>
-			<dd class="duration">{move.duration}</dd>
+			<dd class="duration">{MoveDuration.display(move.duration)}</dd>
 			<dt>{m.range()}</dt>
-			<dd class="range">{move.range}</dd>
+			<dd class="range">{MoveRange.display(move.range, move.shape)}</dd>
 			{#if tm}
 				<dt>{m.cost()}</dt>
 				<dd>{formatMoney(move.tm?.cost ?? 0)}</dd>
@@ -85,9 +88,5 @@
 <style>
 	.power {
 		text-transform: uppercase;
-	}
-
-	.duration, .range {
-		text-transform: capitalize;
 	}
 </style>

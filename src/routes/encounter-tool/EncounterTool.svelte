@@ -67,7 +67,7 @@
 	$: maxExpTotal = Math.round((totalPartyLevels * 50) * (1 + pokemonExtraModifier) * difficultyMultipliers[difficulty])
 
 	// This forces the fetching of moves so PP is accurate
-	$: possibleMoves = $MovesStore
+	$: possibleMoves = $MovesStore.result ?? []
 
 	let biome = ""
 	let difficulty: "low" | "moderate" | "high" = "low"

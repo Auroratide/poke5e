@@ -15,7 +15,7 @@
 	const nextLevel = $derived(value.props.currentLevel.next())
 	const levelKey = $derived(`level${nextLevel.data}` as MovePoolLandmarks)
 	const newMoveIds = $derived(value.props.movePool[levelKey] ?? [])
-	const newMoves = $derived(newMoveIds.map((id) => $MovesStore?.find((it) => it.id === id)).filter((it) => it != null))
+	const newMoves = $derived(newMoveIds.map((id) => $MovesStore.result?.find((it) => it.id === id)).filter((it) => it != null))
 </script>
 
 {#if newMoves.length > 0}

@@ -4,10 +4,10 @@
 
 	export let tms: number[]
 
-	const name = (tm: number) => $allTms.find(it => it.tm.id === tm)?.tmName()
+	const name = (tm: number) => $allTms.result?.find(it => it.tm.id === tm)?.tmName()
 </script>
 
-{#if $allTms !== undefined}
+{#if $allTms.result !== undefined}
 	<ul>
 		{#each tms as tm}
 			<li><a href="{Url.tms(tm.toString())}">{name(tm)}</a></li>

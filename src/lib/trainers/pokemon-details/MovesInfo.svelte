@@ -16,7 +16,7 @@
 </script>
 
 {#if pokemon.moves.length > 0}
-	{#if $MovesStore}
+	{#if $MovesStore.result}
 		<h2>Moves</h2>
 		<LearnedMovesListInfo {pokemon} {editable} onupdate={onUpdate} />
 	{:else}

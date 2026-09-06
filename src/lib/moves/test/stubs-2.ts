@@ -1,7 +1,7 @@
 import type { Data } from "$lib/DataClass"
+import type { MoveDice } from "../dice"
 import { Move } from "../Move"
 import { MoveAttack } from "../MoveAttack"
-import { MoveDamage } from "../MoveDamage"
 import { MoveSave } from "../MoveSave"
 import type { Tm } from "../tms/Tm"
 import { TmDetails } from "../tms/TmDetails"
@@ -12,11 +12,18 @@ export function stubMove(template: Partial<Data<Move>> = {}): Move {
 		name: "Tackle",
 		type: "normal",
 		power: ["str", "dex"],
-		time: "1 action",
+		time: {
+			unit: "action",
+		},
 		pp: 20,
-		duration: "instantaneous",
-		range: "melee",
-		description: ["You rush forward and slam into a creature. Make a melee attack roll against a target, doing 1d6 + MOVE normal damage on a hit."],
+		duration: {
+			unit: "instantaneous",
+			concentration: false,
+		},
+		range: {
+			type: "melee",
+		},
+		description: "You rush forward and slam into a creature. Make a melee attack roll against a target, doing 1d6 + MOVE normal damage on a hit.",
 		...template,
 	})
 }
@@ -35,28 +42,31 @@ export function stubTm(template: Partial<Data<Move>>): Tm {
 		name: "Tackle",
 		type: "normal",
 		power: ["str", "dex"],
-		time: "1 action",
+		time: {
+			unit: "action",
+		},
 		pp: 20,
-		duration: "instantaneous",
-		range: "melee",
-		description: ["You rush forward and slam into a creature. Make a melee attack roll against a target, doing 1d6 + MOVE normal damage on a hit."],
+		duration: {
+			unit: "instantaneous",
+			concentration: false,
+		},
+		range: {
+			type: "melee",
+		},
+		description: "You rush forward and slam into a creature. Make a melee attack roll against a target, doing 1d6 + MOVE normal damage on a hit.",
 		tm: stubTmDetails(),
 		...template,
 	})
 }
 
-export function stubMoveDamage(template: Partial<Data<MoveDamage>> = {}): MoveDamage {
-	return new MoveDamage({
-		dice: {
-			"1": "1d4",
-			"5": "2d4",
-			"10": "3d4",
-			"17": "4d4",
-		},
+export function stubMoveDice(template: Partial<MoveDice> = {}): MoveDice {
+	return {
+		class: "custom",
+		tiers: ["1d4", "2d4", "3d4", "4d4"],
 		modifier: "MOVE",
-		type: ["normal"],
+		type: "damage",
 		...template,
-	})
+	}
 }
 
 export function stubMoveAttack(template: Partial<Data<MoveAttack>> = {}): MoveAttack {

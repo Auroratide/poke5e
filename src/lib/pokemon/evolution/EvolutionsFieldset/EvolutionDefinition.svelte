@@ -106,7 +106,7 @@
 				let:condition
 				{disabled}
 			>
-				<MoveField label="Required Move" name="{id}-move" value={condition.value} {disabled} moves={$MovesStore} on:change={(e) => condition.value = e.detail.move.id} />
+				<MoveField label="Required Move" name="{id}-move" value={condition.value} {disabled} moves={$MovesStore.result ?? []} on:change={(e) => condition.value = e.detail.move.id} />
 			</ConditionField>
 			<ConditionField
 				{id}

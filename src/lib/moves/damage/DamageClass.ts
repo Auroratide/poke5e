@@ -1,9 +1,7 @@
 export type DamageDice = `${number}d${number}`
-export type DamageClass = [DamageDice, DamageDice, DamageDice, DamageDice]
+export type DamageTier = readonly [DamageDice, DamageDice, DamageDice, DamageDice]
 
-const InvalidDamageClass: DamageClass = ["0d4", "0d4", "0d4", "0d4"]
-
-const DamageClasses: Record<string, DamageClass> = {
+const DamageClasses = {
 	"0": ["1d4", "1d6", "1d8", "1d10"],
 	"10": ["1d4", "1d6", "1d8", "2d6"],
 	"20": ["1d4", "2d4", "1d12", "4d4"],
@@ -23,8 +21,10 @@ const DamageClasses: Record<string, DamageClass> = {
 	"160": ["4d6", "5d6", "6d8", "6d12"],
 	"180": ["3d10", "6d6", "8d6", "7d12"],
 	"200": ["5d6", "4d10", "6d10", "8d12"],
-}
+} as const
+
+export type DamageClass = keyof typeof DamageClasses
 
 export const DamageClass = {
-	get: (cl: string): DamageClass => DamageClasses[cl] ?? InvalidDamageClass,
+	getTier: (cl: DamageClass): DamageTier => DamageClasses[cl],
 }

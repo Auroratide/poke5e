@@ -1,9 +1,9 @@
 import type { Attribute } from "$lib/dnd/attributes"
 import { PokemonType } from "$lib/pokemon/types"
 import { relativeNumberCompare, type RelativeValue } from "$lib/ui/forms"
-import type { Move } from "./Move"
-import { MoveRange } from "./MoveRange"
-import { MoveTime } from "./MoveTime"
+import type { MoveListing } from "./MoveListing"
+import { MoveRange } from "./range"
+import { MoveTime } from "./time"
 import { includesSearch } from "$lib/utils/string"
 
 export class MoveFilter {
@@ -104,16 +104,14 @@ export class MoveFilter {
 		return this
 	}
 
-	apply = (move: Move): boolean => {
+	apply = (move: MoveListing): boolean => {
 		return includesSearch([move.name, ...move.aliases], this.filters.name)
 			&& (this.filters.type === "" || move.type === this.filters.type || (!PokemonType.isPokeType(move.type) && this.filters.type === "varies"))
-			&& (this.filters.power === "" || move.power.data === this.filters.power || move.power.appliesToAttribute(this.filters.power as Attribute))
+			&& (this.filters.power === "" || move.power.data === this.filters.power || (this.filters.power === "none" && move.power.isNone()) || move.power.appliesToAttribute(this.filters.power as Attribute))
 			&& (this.filters.tm == null || move.tm?.id.toString().startsWith(this.filters.tm.toString()))
 			&& !this.filters.not.includes(move.id)
-			&& (this.filters.time === "" || (
-				this.filters.time === "other" ? (!MoveTime.options().some((it) => MoveTime.equals(it.value, move.time))) : MoveTime.equals(this.filters.time, move.time)
-			))
-			&& (this.filters.range == null || relativeNumberCompare(this.filters.range.relative, MoveRange.asNumberOfFeet(move.range), this.filters.range.value))
+			&& (this.filters.time === "" || MoveTime.is(move.time, this.filters.time))
+			&& (this.filters.range == null || relativeNumberCompare(this.filters.range.relative, MoveRange.asNumberOfFeet(move.range, move.shape), this.filters.range.value))
 			&& (this.filters.pp == null || relativeNumberCompare(this.filters.pp.relative, move.pp, this.filters.pp.value))
 			&& (this.filters.contest === "" || this.filters.contest === move.contest?.contest)
 			&& (this.filters.cost == null || (move.tm != null && relativeNumberCompare(this.filters.cost.relative, move.tm.cost, this.filters.cost.value)))

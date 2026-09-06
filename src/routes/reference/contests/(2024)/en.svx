@@ -8,8 +8,9 @@ title: Contests
   import { type ContestMoveEffect, ContestInfo, ContestDetails } from "$lib/moves/contest"
   import EffectsList from "../EffectsList.svelte"
   import { Heading } from "$lib/ui/elements"
+  import { Edition } from "$lib/srd/editions"
 
-  export let effects: ContestMoveEffect
+  export let effects: Record<Edition, ContestMoveEffect[]>
 </script>
 
 <p class="beta"><Tag>New!</Tag><span>The 2024 version of the rules are being playtested. If you have <a href="{Url.feedback()}">feedback</a>, let us know!</span></p>
@@ -185,7 +186,7 @@ Some moves have not (yet) been assigned contest defintions. For these moves, you
   contest: "cute",
 	appeal: 4,
 	jam: 0,
-	effect: effects.find(function (it) { return it.id === "23" }),
+	effect: effects["2024"].find(function (it) { return it.id === "23" }),
 })} />
 
 The move's type can be used as a proxy for the Contest Type:

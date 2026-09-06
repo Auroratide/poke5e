@@ -1,7 +1,12 @@
 import { DataClass } from "$lib/DataClass"
 import type { Attribute, Attributes } from "$lib/dnd/attributes"
+import { m } from "$lib/site/i18n"
 
 export class MovePower extends DataClass<Attribute[] | "none" | "any" | "varies"> {
+	isNone(): boolean {
+		return this.data.length === 0
+	}
+
 	appliesToAttribute(attribute: Attribute): boolean {
 		if (typeof this.data === "string") {
 			return this.data === "any" || this.data === "varies"
@@ -39,6 +44,14 @@ export class MovePower extends DataClass<Attribute[] | "none" | "any" | "varies"
 	}
 
 	toString(): string {
-		return typeof this.data === "string" ? this.data : this.data.join(", ")
+		if (typeof this.data === "string") {
+			return this.data
+		}
+
+		if (this.data.length === 0) {
+			return m.none()
+		}
+
+		return this.data.join(", ")
 	}
 }

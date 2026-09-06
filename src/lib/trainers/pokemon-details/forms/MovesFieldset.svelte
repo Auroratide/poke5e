@@ -22,7 +22,7 @@
 
 	const addMove = () => {
 		const newMove = species?.moves?.data?.start?.[0] ?? "tackle"
-		const pp = $MovesStore?.find((it) => it.id === newMove)?.pp ?? 20
+		const pp = $MovesStore.result?.find((it) => it.id === newMove)?.pp ?? 20
 		const nextId = nextNewMoveId()
 
 		values = [...values, {

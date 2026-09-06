@@ -5,6 +5,7 @@
 	import { Fieldset, HintText, InstructionText } from "$lib/ui/forms"
 	import FromTo from "../FromTo.svelte"
 	import type { DamageIncreaseEffect } from "./DamageIncrease"
+	import { MoveDice } from "$lib/moves/dice"
 
 	let {
 		value,
@@ -14,10 +15,10 @@
 
 	const moveDetails = $derived(
 		value.props.moves
-			.map((move) => $MovesStore?.find((it) => it.id === move.moveId))
+			.map((move) => $MovesStore.result?.find((it) => it.id === move.moveId))
 			.filter((it) => it != null),
 	)
-	const hasDamagingMoves = $derived(moveDetails.filter((it) => it.damage != null).length > 0)
+	const hasDamagingMoves = $derived(moveDetails.filter((it) => it.dice != null).length > 0)
 	const curLevel = $derived(value.props.currentLevel)
 	const nextLevel = $derived(value.props.currentLevel.next())
 </script>
@@ -28,9 +29,9 @@
 		<div class="moves">
 			<FlatDl>
 				{#each moveDetails as move}
-					{#if move.damage != null}
+					{#if move.dice != null}
 						<dt>{move.name}</dt>
-						<dd><FromTo from={move.damage.getDamageDice(curLevel.data)} to={move.damage.getDamageDice(nextLevel.data)} /></dd>
+						<dd><FromTo from={MoveDice.getDamageDice(move.dice, curLevel.data)} to={MoveDice.getDamageDice(move.dice, nextLevel.data)} /></dd>
 					{/if}
 				{/each}
 			</FlatDl>

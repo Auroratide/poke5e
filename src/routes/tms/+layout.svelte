@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { page } from "$app/stores"
 	import { Page } from "$lib/ui/layout"
 	import { TmList } from "$lib/moves/tms"
 	import { DiscIcon } from "$lib/ui/icons"
@@ -8,8 +7,7 @@
 	import { ListPageHeading } from "$lib/ui/page"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
 
-	$: ssrTms = $page.data.tmsList
-	$: tmsToRender = ssrTms ?? $TmsStore
+	$: tmsToRender = $TmsStore.result
 </script>
 
 <Page theme="purple">

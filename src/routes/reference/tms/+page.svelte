@@ -5,8 +5,13 @@
 	import ReferencePage from "../ReferencePage.svelte"
 	import type { PageData } from "./$types"
 	import TmImg from "./tm.png"
+	import { RenderChosenEdition } from "$lib/site/edition"
 
-	export let data: PageData
+	let {
+		data,
+	}: {
+		data: PageData,
+	} = $props()
 </script>
 
 <ReferencePage title="TMs">
@@ -25,24 +30,28 @@
 	<section>
 		<Heading level="2" id="list-of-tms">List of TMs</Heading>
 		<p>View the <strong><a href="{Url.tms()}">list of TMs</a></strong> or refer to the table below:</p>
-		<InfoTable label="List of TMs">
-			<thead>
-				<tr>
-					<th>TM</th>
-					<th>Move</th>
-					<th>Cost</th>
-				</tr>
-			</thead>
-			<tbody>
-				{#each data.tmList as tm}
-					<tr>
-						<td>{tm.tm.id.toString().padStart(3, "0")}</td>
-						<td><a href="{Url.tms(tm.tm.id.toString())}">{tm.name}</a></td>
-						<td>{formatMoney(tm.tm.cost)}</td>
-					</tr>
-				{/each}
-			</tbody>
-		</InfoTable>
+		<RenderChosenEdition values={data.tms}>
+			{#snippet render(tms)}
+				<InfoTable label="List of TMs">
+					<thead>
+						<tr>
+							<th>TM</th>
+							<th>Move</th>
+							<th>Cost</th>
+						</tr>
+					</thead>
+					<tbody>
+						{#each tms as tm}
+							<tr>
+								<td>{tm.id.toString().padStart(3, "0")}</td>
+								<td><a href="{Url.tms(tm.id.toString())}">{tm.name}</a></td>
+								<td>{formatMoney(tm.cost)}</td>
+							</tr>
+						{/each}
+					</tbody>
+				</InfoTable>
+			{/snippet}
+		</RenderChosenEdition>
 	</section>
 </ReferencePage>
 

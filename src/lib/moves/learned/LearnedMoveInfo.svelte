@@ -9,7 +9,10 @@
 	import { Url } from "$lib/site/url"
 	import { FlatDl, LoaderInline, VisuallyHidden } from "$lib/ui/elements"
 	import { NumericResourceField, type NumericChangeDetail } from "$lib/ui/forms"
+	import { MoveDuration } from "../duration"
+	import { MoveRange } from "../range"
 	import { MovesStore } from "../store"
+	import { MoveTime } from "../time"
 	import type { LearnedMove } from "./LearnedMove"
 
 	// needed because svelte strips away ending spaces
@@ -33,7 +36,7 @@
 		onupdatepp: (value: number) => void,
 	} = $props()
 
-	const move = $derived($MovesStore?.find((it) => it.id === value.moveId))
+	const move = $derived($MovesStore.result?.find((it) => it.id === value.moveId))
 	const currentPp = $derived(value.pp.current)
 	const moveStats = $derived(move?.calculateMoveStats($currentEdition, {
 		attributes: attributes,
@@ -99,11 +102,11 @@
 					{/if}
 				</dd>
 				<dt>Range</dt>
-				<dd class="cap">{move.range}</dd>
+				<dd>{MoveRange.display(move.range, move.shape)}</dd>
 				<dt>Time</dt>
-				<dd>{move.time}</dd>
+				<dd>{MoveTime.display(move.time)}</dd>
 				<dt>Duration</dt>
-				<dd class="cap">{move.duration}</dd>
+				<dd>{MoveDuration.display(move.duration)}</dd>
 			</FlatDl>
 			<div style:margin-block-end="0.5em"></div>
 			<MoveDescription move={move} />

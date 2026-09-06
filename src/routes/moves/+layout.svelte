@@ -1,15 +1,23 @@
 <script lang="ts">
-	import { page } from "$app/stores"
 	import { Page } from "$lib/ui/layout"
 	import MoveList from "$lib/moves/MoveList.svelte"
 	import { HitIcon } from "$lib/ui/icons"
 	import { Loader } from "$lib/ui/elements"
 	import { MovesStore } from "$lib/moves/store"
+	import { MoveListing } from "$lib/moves/MoveListing"
 	import { ListPageHeading } from "$lib/ui/page"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
+	import { page } from "$app/state"
+	import type { Snippet } from "svelte"
 
-	$: ssrMoves = $page.data.movesList
-	$: movesToRender = ssrMoves ?? $MovesStore
+	let {
+		children,
+	}: {
+		children: Snippet,
+	} = $props()
+
+	const ssrMoves = $derived(page.data.movesList?.map(MoveListing.fromJson))
+	const movesToRender = $derived($MovesStore.result ?? ssrMoves)
 </script>
 
 <Page theme="blue">
@@ -22,7 +30,7 @@
 			<Loader />
 		{/if}
 	</nav>
-	<slot></slot>
+	{@render children?.()}
 </Page>
 
 <style>

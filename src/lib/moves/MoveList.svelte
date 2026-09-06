@@ -2,17 +2,17 @@
 	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { RelativeNumberField, SearchField, SelectField, type RelativeValue } from "$lib/ui/forms"
 	import { MovesFilterStore, MovesSorterStore } from "./store"
-	import { Move } from "./Move"
+	import type { MoveListing } from "./MoveListing"
 	import { Url } from "$lib/site/url"
 	import { m } from "$lib/site/i18n"
 	import { uppercase } from "$lib/utils/string"
 	import { PokemonType, type PokeType } from "$lib/pokemon/types"
 	import { MoveFilter } from "./MoveFilter"
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
-	import { MoveTime } from "./MoveTime"
+	import { MoveTime } from "./time"
 	import { ContestType } from "./contest/ContestType"
 
-	export let moves: Move[]
+	export let moves: MoveListing[]
 
 	const AnyOption = [ {
 		name: `- ${m.any()} -`,
@@ -72,8 +72,8 @@
 
 	$: filteredMoves = moves.filter(filter.apply)
 
-	const byStringField = (field: (m: Move) => string) => (l: Move, r: Move) => field(l).localeCompare(field(r))
-	const byNumericField = (field: (m: Move) => number) => (l: Move, r: Move) => field(l) - field(r)
+	const byStringField = (field: (m: MoveListing) => string) => (l: MoveListing, r: MoveListing) => field(l).localeCompare(field(r))
+	const byNumericField = (field: (m: MoveListing) => number) => (l: MoveListing, r: MoveListing) => field(l) - field(r)
 
 	const resetFilters = () => {
 		filteredType = ""

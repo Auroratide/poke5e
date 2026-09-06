@@ -9,8 +9,8 @@ const moves = [
 		name: "Raspberry",
 		type: "fire",
 		power: ["str"],
-		time: "1 action",
-		range: "melee",
+		time: { unit: "action" },
+		range: { type: "melee" },
 		pp: 5,
 		contest: stubContestDetails({
 			contest: "beauty",
@@ -20,8 +20,8 @@ const moves = [
 		name: "Orange",
 		type: "fighting",
 		power: ["dex"],
-		time: "1 action",
-		range: "melee",
+		time: { unit: "action" },
+		range: { type: "melee" },
 		pp: 10,
 		contest: stubContestDetails({
 			contest: "beauty",
@@ -31,8 +31,8 @@ const moves = [
 		name: "Banana",
 		type: "electric",
 		power: ["con"],
-		time: "1 action",
-		range: "20ft",
+		time: { unit: "action" },
+		range: { type: "distance", value: 20, unit: "feet" },
 		pp: 15,
 		contest: stubContestDetails({
 			contest: "beauty",
@@ -42,8 +42,8 @@ const moves = [
 		name: "Lime",
 		type: "grass",
 		power: ["int"],
-		time: "1 bonus action",
-		range: "melee",
+		time: { unit: "bonus action" },
+		range: { type: "melee" },
 		pp: 20,
 		contest: stubContestDetails({
 			contest: "beauty",
@@ -53,8 +53,8 @@ const moves = [
 		name: "Blueberry",
 		type: "water",
 		power: ["wis"],
-		time: "1 action",
-		range: "melee",
+		time: { unit: "action" },
+		range: { type: "melee" },
 		pp: 20,
 		contest: stubContestDetails({
 			contest: "cute",
@@ -64,8 +64,8 @@ const moves = [
 		name: "Plum",
 		type: "dragon",
 		power: ["cha"],
-		time: "1 bonus action",
-		range: "melee",
+		time: { unit: "bonus action" },
+		range: { type: "melee" },
 		pp: 20,
 		contest: stubContestDetails({
 			contest: "cute",
@@ -79,8 +79,9 @@ const moves = [
 			id: 20,
 			cost: 4000,
 		}),
-		time: "1 reaction",
-		range: "self (20ft line)",
+		time: { unit: "reaction" },
+		range: { type: "self" },
+		shape: { type: "line", value: 20, unit: "feet" },
 		pp: 20,
 		contest: stubContestDetails({
 			contest: "beauty",
@@ -94,8 +95,8 @@ const moves = [
 			id: 18,
 			cost: 6000,
 		}),
-		time: "1 minute",
-		range: "melee",
+		time: { unit: "action" },
+		range: { type: "melee" },
 		pp: 20,
 		contest: stubContestDetails({
 			contest: "beauty",
@@ -105,8 +106,8 @@ const moves = [
 		name: "Lychee",
 		type: "varies",
 		power: ["int"],
-		time: "1 minute",
-		range: "melee",
+		time: { unit: "action" },
+		range: { type: "melee" },
 		pp: 20,
 		contest: stubContestDetails({
 			contest: "beauty",
@@ -115,9 +116,9 @@ const moves = [
 	stubMove({
 		name: "Dragonfruit",
 		type: "steel",
-		power: "none",
-		time: "instantaneous",
-		range: "melee",
+		power: [],
+		time: { unit: "action" },
+		range: { type: "melee" },
 		pp: 10,
 		contest: stubContestDetails({
 			contest: "beauty",
@@ -193,18 +194,6 @@ test("time only", () => {
 	expect(result.length).toEqual(2)
 	expect(result[0]).toEqual(moves[3])
 	expect(result[1]).toEqual(moves[5])
-})
-
-test("time (other)", () => {
-	const filter = new MoveFilter()
-		.time("other")
-
-	const result = moves.filter(filter.apply)
-
-	expect(result.length).toEqual(3)
-	expect(result[0]).toEqual(moves[7])
-	expect(result[1]).toEqual(moves[8])
-	expect(result[2]).toEqual(moves[9])
 })
 
 test("rangeInFeet", () => {

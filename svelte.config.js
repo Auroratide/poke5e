@@ -25,6 +25,12 @@ const config = {
 				// idk why, but it likes to include this bit when scanning
 				if (path.includes("[id]")) return;
 
+				// Most moves have no contest entry, so a move page asking for one
+				// is expected to 404; the page renders without contest info.
+				// This is necessary because, even if you swallow the 404, sveltekit
+				// does not, and there's literally no way around that
+				if (/\/srd\/v1\/[^/]+\/contest\/[^/]+\.json$/.test(path)) return;
+
 				throw new Error(message);
 			}
 		},

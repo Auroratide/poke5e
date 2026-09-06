@@ -21,7 +21,7 @@
 	export let level: Level
 	export let disabled: boolean = false
 
-	$: learnableMoves = LearnableMoves.groupMoves($MovesStore ?? [], species, level)
+	$: learnableMoves = LearnableMoves.groupMoves($MovesStore.result ?? [], species, level)
 	$: moveOptions = learnableMoves.nonemptyGroups().map((it) => ({
 		name: it.name,
 		values: it.moves.map((it) => ({ name: it.name, value: it.id })),
@@ -29,7 +29,7 @@
 	$: moveFieldName = getMoveFieldName(value.id)
 
 	const onMoveChange = () => {
-		const pp = $MovesStore.find((it) => it.id === value.moveId)?.pp ?? 0
+		const pp = $MovesStore.result?.find((it) => it.id === value.moveId)?.pp ?? 0
 		value.pp.current = pp
 		value.pp.max = pp
 	}

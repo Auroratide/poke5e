@@ -1,13 +1,20 @@
 <script lang="ts">
 	import { m } from "$lib/site/i18n"
-	import { renderHtml } from "$lib/ui/rendering"
+	import { Markdown, renderHtml } from "$lib/ui/rendering"
 	import type { Move } from "./Move"
 
-	export let move: Move
+	let {
+		move,
+	}: {
+		move: Move,
+	} = $props()
 </script>
 
 <div class="description">
-	{@html renderHtml(move.description)}
+	<Markdown value={move.description} />
+	{#if move.table}
+		{@html renderHtml([move.table])}
+	{/if}
 	{#if move.higherLevels !== undefined}
 		<p><strong>{m.atHigherLevels()}:</strong> {move.higherLevels}</p>
 	{/if}

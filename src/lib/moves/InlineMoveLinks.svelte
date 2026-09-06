@@ -4,10 +4,10 @@
 
 	export let moves: string[]
 
-	const name = (m: string) => $allMoves.find(it => it.id === m)?.name
+	const name = (m: string) => $allMoves.result?.find(it => it.id === m)?.name
 </script>
 
-{#if $allMoves !== undefined}
+{#if $allMoves.result !== undefined}
 	<ul>
 		{#each moves as move}
 			<li><a href="{Url.moves(move)}">{name(move)}</a></li>

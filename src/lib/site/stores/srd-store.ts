@@ -1,6 +1,6 @@
 import { SrdClient } from "$lib/srd"
 import { derived } from "svelte/store"
-import { currentEdition } from "../edition"
+import { currentEdition, DEFAULT_SRD_EDITION } from "../edition"
 import { browser } from "$app/environment"
 import { FeatureToggles } from "../FeatureToggles"
 import type { Edition } from "$lib/srd/editions"
@@ -41,8 +41,8 @@ export function srdStore<T>(load: (client: SrdClient) => Promise<T>) {
 	return derived(currentEdition, (edition, set) => {
 		if (!browser) return
 
-		// Always defer to 2018 until this becomes official
-		const editionToUse = FeatureToggles.PreviewUpdatedMoves() ? edition : "2018"
+		// Always defer to the SSR edition until 2024 becomes official
+		const editionToUse = FeatureToggles.PreviewUpdatedMoves() ? edition : DEFAULT_SRD_EDITION
 		const e = entryFor(editionToUse)
 
 		if (e.settled != null) {

@@ -37,10 +37,11 @@
 	const isFakemon = (id: string) => new SpeciesIdentifier(id).isFakemon()
 
 	$: abilities = $AbilityStore.result ?? []
+	$: moves = $MovesStore.result ?? []
 
 	$: toRender = value
 		.replaceAll(/{{pokemon:(:?)(.*?)}}/g, (_, link, id) => link !== "" ? `<a href="${isFakemon(id) ? Url.fakemon(new SpeciesIdentifier(id).toFakemonReadKey()) : Url.pokemon(id)}">${species?.find((it) => it.id.data === id)?.data.name}</a>` : species?.find((it) => it.id.data === id)?.data.name)
-		.replaceAll(/{{move:(:?)(.*?)}}/g, (_, link, id) => link !== "" ? `<a href="${Url.moves(id)}">${$MovesStore?.find((it) => it.id === id)?.name}</a>` : $MovesStore?.find((it) => it.id === id)?.name)
+		.replaceAll(/{{move:(:?)(.*?)}}/g, (_, link, id) => link !== "" ? `<a href="${Url.moves(id)}">${moves.find((it) => it.id === id)?.name}</a>` : moves.find((it) => it.id === id)?.name)
 		.replaceAll(/{{ability:(:?)(.*?)}}/g, (_, link, id) => link !== "" ? `<a href="${Url.reference.abilities()}#${id}">${abilities?.find((it) => it.referenceId === id)?.name}</a>` : abilities?.find((it) => it.referenceId === id)?.name)
 
 	$: sanitized = DomPurify.sanitize(toRender, {

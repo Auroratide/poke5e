@@ -7,12 +7,12 @@
 		render,
 	}: {
 		values: Record<Edition, T>,
-		render: Snippet<[T]>,
+		render: Snippet<[T, Edition]>,
 	} = $props()
 </script>
 
 {#each Editions as edition}
 	<div data-edition-content={edition}>
-		{@render render(values[edition])}
+		{@render render(values[edition], edition)}
 	</div>
 {/each}
