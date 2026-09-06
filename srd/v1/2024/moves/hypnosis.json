@@ -1,0 +1,1 @@
+{"id":"hypnosis","name":"Hypnosis","type":"psychic","power":["int","wis"],"time":{"unit":"action"},"pp":10,"duration":{"unit":"instantaneous"},"range":{"type":"distance","value":30,"unit":"feet"},"save":{"attribute":"wis"},"description":"You attempt to put the target to sleep. The target must make a {save}, falling asleep on a failure.","categories":[]}

@@ -1,0 +1,1 @@
+{"id":"magic-room","name":"Magic Room","type":"psychic","power":[],"time":{"unit":"action"},"pp":5,"duration":{"unit":"round","value":5,"concentration":true},"range":{"type":"self"},"shape":{"type":"emanation","value":50,"unit":"feet"},"description":"You employ your psychic power to suppress the effect of all held items within 50 feet of you","categories":[]}

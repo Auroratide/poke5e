@@ -1,0 +1,1 @@
+{"id":"dragon-dance","name":"Dragon Dance","type":"dragon","power":[],"time":{"unit":"action"},"pp":10,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"tm":{"id":158,"cost":6600},"description":"You perform a mystical dance, pumping yourself up. For the duration, double your proficiency bonus when making an attack.","categories":["dance"]}

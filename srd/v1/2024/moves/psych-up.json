@@ -1,0 +1,1 @@
+{"id":"psych-up","name":"Psych Up","type":"normal","power":[],"time":{"unit":"action"},"pp":5,"duration":{"unit":"instantaneous"},"range":{"type":"distance","value":40,"unit":"feet"},"tm":{"id":77,"cost":4500},"description":"You sync up with a creature, copying any positive or negative stat changes affecting them due to weather or moves this combat.","categories":[]}

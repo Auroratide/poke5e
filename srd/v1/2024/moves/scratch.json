@@ -1,0 +1,1 @@
+{"id":"scratch","name":"Scratch","type":"normal","power":["str","dex"],"time":{"unit":"action"},"pp":20,"duration":{"unit":"instantaneous"},"range":{"type":"melee"},"dice":{"class":"40","modifier":"MOVE","type":"damage"},"attack":{"scope":"melee"},"description":"You slash out at a creature in range. Make a melee attack, doing {dice} {type} damage on a hit.","categories":[]}

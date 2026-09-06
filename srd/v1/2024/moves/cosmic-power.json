@@ -1,0 +1,1 @@
+{"id":"cosmic-power","name":"Cosmic Power","type":"psychic","power":[],"time":{"unit":"action"},"pp":10,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"description":"You call upon a mystic force to come to your aid. For the duration, you have advantage on all saving throws.","categories":[]}

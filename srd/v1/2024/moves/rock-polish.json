@@ -1,0 +1,1 @@
+{"id":"rock-polish","name":"Rock Polish","type":"rock","power":[],"time":{"unit":"action"},"pp":3,"duration":{"unit":"round","value":3},"range":{"type":"self"},"tm":{"id":69,"cost":8000},"description":"You polish your body to a fine shine to reduce friction. When activating this move, increase your AC by 2 and your speed by 20 feet for three rounds.","categories":[]}

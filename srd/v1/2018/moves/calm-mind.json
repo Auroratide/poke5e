@@ -1,0 +1,1 @@
+{"id":"calm-mind","name":"Calm Mind","type":"psychic","power":[],"time":{"unit":"action"},"pp":10,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"tm":{"id":4,"cost":5500},"description":"You clear your mind of all distractions. For the duration, double your STAB bonus when dealing damage of your type.","categories":[]}

@@ -1,0 +1,1 @@
+{"id":"rain-dance","name":"Rain Dance","type":"water","power":[],"time":{"unit":"action"},"pp":3,"duration":{"unit":"round","value":5},"range":{"type":"self"},"tm":{"id":18,"cost":4400},"description":"You summon a heavy rainfall that covers the battlefield for 5 rounds.","categories":[]}

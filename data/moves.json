@@ -447,7 +447,6 @@
 		},
 		{
 			"id": "alluring-voice",
-			"beta": true,
 			"name": "Alluring Voice",
 			"type": "fairy",
 			"power": [
@@ -1841,7 +1840,6 @@
 		},
 		{
 			"id": "bleakwind-storm",
-			"beta": true,
 			"name": "Bleakwind Storm",
 			"type": "flying",
 			"power": [
@@ -2886,7 +2884,6 @@
 		},
 		{
 			"id": "burning-jealousy",
-			"beta": true,
 			"name": "Burning Jealousy",
 			"type": "fire",
 			"power": [
@@ -3194,7 +3191,6 @@
 		},
 		{
 			"id": "chilling-water",
-			"beta": true,
 			"name": "Chilling Water",
 			"type": "water",
 			"power": [
@@ -3238,7 +3234,6 @@
 		},
 		{
 			"id": "chilly-reception",
-			"beta": true,
 			"name": "Chilly Reception",
 			"type": "ice",
 			"power": [
@@ -3431,7 +3426,6 @@
 		},
 		{
 			"id": "clangorous-soul",
-			"beta": true,
 			"name": "Clangorous Soul",
 			"type": "dragon",
 			"power": [
@@ -3520,7 +3514,6 @@
 		},
 		{
 			"id": "coaching",
-			"beta": true,
 			"name": "Coaching",
 			"type": "fighting",
 			"power": "none",
@@ -3866,7 +3859,6 @@
 		},
 		{
 			"id": "corrosive-gas",
-			"beta": true,
 			"name": "Corrosive Gas",
 			"type": "poison",
 			"power": [
@@ -9204,7 +9196,6 @@
 		},
 		{
 			"id": "grassy-glide",
-			"beta": true,
 			"name": "Grassy Glide",
 			"type": "grass",
 			"power": [
@@ -9456,7 +9447,7 @@
 			"higherLevels": "The damage dice roll for this move changes to 3d8 at level 5, 4d10 at level 10, and 7d8 at level 17.",
 			"damage": {
 				"dice": {
-					"1": "1d10",
+					"1": "2d10",
 					"5": "3d8",
 					"10": "4d10",
 					"17": "7d8"
@@ -9651,7 +9642,6 @@
 		},
 		{
 			"id": "hard-press",
-			"beta": true,
 			"name": "Hard Press",
 			"type": "steel",
 			"power": [
@@ -12045,7 +12035,6 @@
 		},
 		{
 			"id": "lash-out",
-			"beta": true,
 			"name": "Lash Out",
 			"type": "dark",
 			"power": [
@@ -12729,7 +12718,6 @@
 		},
 		{
 			"id": "lunar-blessing",
-			"beta": true,
 			"name": "Lunar Blessing",
 			"type": "psychic",
 			"power": [
@@ -13585,7 +13573,6 @@
 		},
 		{
 			"id": "meteor-beam",
-			"beta": true,
 			"name": "Meteor Beam",
 			"type": "rock",
 			"power": [
@@ -13999,7 +13986,6 @@
 		},
 		{
 			"id": "misty-explosion",
-			"beta": true,
 			"name": "Misty Explosion",
 			"type": "fairy",
 			"power": [
@@ -14467,7 +14453,6 @@
 		},
 		{
 			"id": "mystical-power",
-			"beta": true,
 			"name": "Mystical Power",
 			"type": "psychic",
 			"power": [
@@ -16096,7 +16081,6 @@
 		},
 		{
 			"id": "poltergeist",
-			"beta": true,
 			"name": "Poltergeist",
 			"type": "ghost",
 			"power": [
@@ -16344,7 +16328,6 @@
 		},
 		{
 			"id": "power-shift",
-			"beta": true,
 			"name": "Power Shift",
 			"type": "normal",
 			"power": "none",
@@ -16808,7 +16791,6 @@
 		},
 		{
 			"id": "psychic-noise",
-			"beta": true,
 			"name": "Psychic Noise",
 			"type": "psychic",
 			"power": [
@@ -18723,7 +18705,6 @@
 		},
 		{
 			"id": "sandsear-storm",
-			"beta": true,
 			"name": "Sandsear Storm",
 			"type": "ground",
 			"power": [
@@ -18820,7 +18801,6 @@
 		},
 		{
 			"id": "scale-shot",
-			"beta": true,
 			"name": "Scale Shot",
 			"type": "dragon",
 			"power": [
@@ -18887,7 +18867,6 @@
 		},
 		{
 			"id": "scorching-sands",
-			"beta": true,
 			"name": "Scorching Sands",
 			"type": "ground",
 			"power": [
@@ -20445,7 +20424,6 @@
 		},
 		{
 			"id": "snap-trap",
-			"beta": true,
 			"name": "Snap Trap",
 			"type": "grass",
 			"power": [
@@ -21462,7 +21440,6 @@
 		},
 		{
 			"id": "steel-beam",
-			"beta": true,
 			"name": "Steel Beam",
 			"type": "steel",
 			"power": [
@@ -21937,7 +21914,7 @@
 			"duration": "1 minute",
 			"range": "60ft",
 			"description": [
-				"You unleash sticky string at a creature in range, slowing it down. Make a ranged attack roll against a target. On a hit, the target’s speed is reduced by 10 for the duration. The move is stackable to any amount. The target may take an action to attempt to get rid of any string with a STR save against your Move DC. If this reduction in speed causes their speed to be 0, they are restrained."
+				"You unleash sticky string at a creature in range, slowing it down. Make a ranged attack roll against a target. On a hit, the target’s speed is reduced by 10 for the duration. The move is stackable to any amount. The target may take an action to attempt to get rid of all accumulated string with a STR save against your Move DC. If this reduction in speed causes their speed to be 0, they are restrained."
 			],
 			"save": {
 				"attribute": [
@@ -22222,7 +22199,6 @@
 		},
 		{
 			"id": "supercell-slam",
-			"beta": true,
 			"name": "Supercell Slam",
 			"type": "electric",
 			"power": [
@@ -22873,7 +22849,6 @@
 		},
 		{
 			"id": "take-heart",
-			"beta": true,
 			"name": "Take Heart",
 			"type": "psychic",
 			"power": "none",
@@ -23096,7 +23071,6 @@
 		},
 		{
 			"id": "temper-flare",
-			"beta": true,
 			"name": "Temper Flare",
 			"type": "fire",
 			"power": [
@@ -23822,7 +23796,6 @@
 				"For the next minute, whenever a creature you can see within 80ft of you uses Spikes, Stealth Rock, Sticky Web, Toxic Spikes, or Substitute, you may use your reaction to force the creature to make a CON save against your Move DC. On a failed save, the move dissapates with no effect; the creature still spends a PP using their move.",
 				"Tidy Up's effect on its user persists even when switched out of combat. You may invoke Tidy Up's reaction even as you are being switched out or switched in. For example, if an enemy uses Spikes as a reaction to you switching out, you may invoke Tidy Up's reaction to attempt to dissapate Spikes before the switch completes."
 			],
-			"beta": true,
 			"save": {
 				"attribute": [
 					"con"
@@ -23995,7 +23968,6 @@
 		},
 		{
 			"id": "trailblaze",
-			"beta": true,
 			"name": "Trailblaze",
 			"type": "grass",
 			"power": [
@@ -24201,7 +24173,6 @@
 		},
 		{
 			"id": "triple-axel",
-			"beta": true,
 			"name": "Triple Axel",
 			"type": "ice",
 			"power": [
@@ -24507,7 +24478,6 @@
 		},
 		{
 			"id": "upper-hand",
-			"beta": true,
 			"name": "Upper Hand",
 			"type": "fighting",
 			"power": [
@@ -25380,7 +25350,6 @@
 		},
 		{
 			"id": "wildbolt-storm",
-			"beta": true,
 			"name": "Wildbolt Storm",
 			"type": "electric",
 			"power": [
