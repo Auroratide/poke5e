@@ -1,1 +1,0 @@
-import{f as e}from"./koi5L2Tv.js";function t(t,n){throw new e(t,n)}export{t};
