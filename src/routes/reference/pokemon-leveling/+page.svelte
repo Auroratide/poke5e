@@ -55,7 +55,6 @@
 	</section>
 	<section>
 		<Heading level="2" id="evolution">Evolution</Heading>
-		<p>Pokémon can evolve into a new form once they meet the condition detailed in their stat block. When a Pokémon evolves, the following occurs:</p>
 		{#if $currentEdition === "2018"}
 			<Rules2018.Evolution />
 		{:else}

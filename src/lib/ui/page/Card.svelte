@@ -144,6 +144,12 @@
 		margin-block: 1.5em 0.5em;
 	}
 
+	article :global(section h4) {
+		font-size: var(--font-sz-venus);
+		font-weight: bold;
+		margin-block: 1.5em 0.5em;
+	}
+
 	article :global(.loader) {
 		--skin-local-color: var(--skin-content-text);
 	}

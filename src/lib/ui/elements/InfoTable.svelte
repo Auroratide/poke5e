@@ -1,11 +1,21 @@
 <script lang="ts">
-	export let label: string
+	import type { Snippet } from "svelte"
+
+	let {
+		label,
+		center = false,
+		children,
+	}: {
+		label: string,
+		center?: boolean,
+		children?: Snippet,
+	} = $props()
 </script>
 
 <div class="scroll-container">
-	<table>
+	<table class:center>
 		<caption>{label}</caption>
-		<slot></slot>
+		{@render children?.()}
 	</table>
 </div>
 
@@ -26,6 +36,10 @@
 		color: var(--skin-bg-text);
 		border-bottom: 0.125em solid var(--skin-bg-text);
 		text-align: start;
+	}
+
+	table.center :global(th), table.center :global(td) {
+		text-align: center;
 	}
 
 	table :global(tbody th) {
