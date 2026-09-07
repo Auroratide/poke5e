@@ -1,4 +1,4 @@
-import type { RequestHandler } from "./$types"
+import type { EntryGenerator, RequestHandler } from "./$types"
 import data from "../../../../../static/data/moves.json"
 import tmData from "../../../../../static/data/tms.json"
 import contestData from "../../../../../static/data/contest.json"
@@ -7,6 +7,16 @@ import pokemonData from "../../../../../static/data/pokemon.json"
 import { pokemonWhoLearnThisMove } from "$lib/moves/pokemon"
 import { translateData } from "$lib/site/i18n"
 import { ContestMoveEffect } from "$lib/moves/contest"
+
+/**
+ * Prerendered explicitly for backward compatibility. This endpoint used to be
+ * written only because a page fetched it, and nothing does since the move pages
+ * moved to the SRD — but clients loaded before that deploy still ask for it.
+ */
+export const prerender = true
+
+/** The ids come from the legacy data this endpoint serves, not from the SRD. */
+export const entries: EntryGenerator = () => data.moves.map((it) => ({ id: it.id }))
 
 export const GET: RequestHandler = async ({ params }) => {
 	const selected = data.moves.find(it => it.id === params.id)

@@ -5,6 +5,22 @@ import adapter from "@sveltejs/adapter-static";
 
 import preprocess from "svelte-preprocess";
 
+import { readFileSync } from "node:fs";
+
+/**
+ * Kept for backwards compatibility for now.
+ */
+const settings = JSON.parse(readFileSync("project.inlang/settings.json", "utf-8"));
+const legacyMoveIds = JSON.parse(readFileSync("static/data/moves.json", "utf-8")).moves.map((it) => it.id);
+const legacyApiPaths = [
+	"/moves.json",
+	"/contest-effects.json",
+	...legacyMoveIds.map((id) => `/moves/${id}.json`),
+];
+const localizedLegacyApi = settings.locales
+	.filter((locale) => locale !== settings.baseLocale)
+	.flatMap((locale) => legacyApiPaths.map((path) => `/${locale}${path}`));
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
@@ -18,7 +34,8 @@ const config = {
 				"/backups/schemas/2026-02",
 				// backward compatibility
 				"/pokemon.json",
-				"/pokemon/[id].json"
+				"/pokemon/[id].json",
+				...localizedLegacyApi
 			],
 
 			handleHttpError: ({ path, message }) => {
