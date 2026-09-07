@@ -10,6 +10,7 @@ import { MoveJson, MovesListJson } from "./moves/schema"
 import { PokemonJson, PokemonListJson } from "./pokemon/schema"
 import type { OpenAPIV3_1 } from "openapi-types"
 import { ContestJson, ContestListJson } from "./contest/schema"
+import { TmJson, TmListJson } from "./tms/schema"
 
 const API_VERSION = "1.0.0"
 const ORIGIN = "https://poke5e.app"
@@ -89,6 +90,14 @@ const RESOURCES: Resource[] = [
 		list: PokemonListJson,
 		listOperationId: "listPokemon",
 		itemOperationId: "getPokemon",
+	},
+	{
+		segment: "tms",
+		label: "tms",
+		item: TmJson,
+		list: TmListJson,
+		listOperationId: "listTms",
+		itemOperationId: "getTm",
 	},
 ]
 

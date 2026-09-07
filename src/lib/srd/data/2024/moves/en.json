@@ -164,10 +164,6 @@
 			"save": {
 				"attribute": "con"
 			},
-			"tm": {
-				"id": 113,
-				"cost": 3600
-			},
 			"description": "You spit a spray of acidic fluid that works to melt away a creature's defense. Make a ranged attack against a target, dealing {dice} {type} damage on a hit. On a hit, the target must make a {save}. On a failure, the target's AC is reduced by 1 for the duration. This decrease may be stacked on a creature, up to a maximum of -3 to its AC.",
 			"categories": [
 				"ballistic"
@@ -197,10 +193,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 62,
-				"cost": 4400
 			},
 			"description": "You nimbly attack a target with acrobatic prowess. Make a melee attack, dealing {dice} {type} damage on a hit. If you are holding an item when you activate this move, the damage is halved.",
 			"categories": []
@@ -278,10 +270,6 @@
 				"class": "30",
 				"modifier": "MOVE",
 				"type": "damage"
-			},
-			"tm": {
-				"id": 40,
-				"cost": 5200
 			},
 			"description": "You dive at a creature with such speed that it is impossible for them to avoid. This move is guaranteed to hit for {dice} {type} damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves.",
 			"categories": [
@@ -361,10 +349,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 105,
-				"cost": 8700
-			},
 			"description": "You hone your abilities and feel a surge of speed course through your veins. Increase your movement speed by 20 feet for the duration. Applicable to any movement type the creature has.",
 			"categories": []
 		},
@@ -394,10 +378,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 129,
-				"cost": 2500
 			},
 			"description": "You create a gust of razor-like wind to slash a creature. Make a ranged attack against a creature, doing {dice} {type} damage on a hit. This move scores a critical hit on 19 and 20.",
 			"categories": [
@@ -431,10 +411,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 140,
-				"cost": 2500
 			},
 			"description": "You slash at a creature with a blade of sharp air. Make a ranged attack on a creature, dealing {dice} {type} damage on a hit. On a natural attack roll of 15 or higher, the target flinches.",
 			"categories": [
@@ -470,10 +446,6 @@
 			},
 			"save": {
 				"attribute": "cha"
-			},
-			"tm": {
-				"id": 254,
-				"cost": 4900
 			},
 			"description": "You use your angelic voice to confuse a target. Make a ranged attack against a target, dealing {dice} {type} damage. On a hit, the target must make a {save} or become Confused.",
 			"categories": [
@@ -515,10 +487,6 @@
 			},
 			"range": {
 				"type": "self"
-			},
-			"tm": {
-				"id": 177,
-				"cost": 3600
 			},
 			"description": "Your mind elevates to a new level of focus. Add +2 to any saving throw you make for the duration, but select one of your moves that is not Amnesia. You forget that move and cannot use it for the duration.",
 			"categories": []
@@ -1033,10 +1001,6 @@
 			"save": {
 				"attribute": "cha"
 			},
-			"tm": {
-				"id": 45,
-				"cost": 4000
-			},
 			"description": "As a reaction, when dealt damage by an attack, you may force the attacker to make a {save}. On a fail, the creature must roll the damage again and use the lower result.",
 			"categories": []
 		},
@@ -1064,10 +1028,6 @@
 				"class": "30",
 				"modifier": "MOVE",
 				"type": "damage"
-			},
-			"tm": {
-				"id": 167,
-				"cost": 9100
 			},
 			"description": "You focus your aura into a concentrated blast that strikes a creature in range. This move is guaranteed to hit for {dice} {type} damage, except when targeting a creature in the invulnerable stages of Fly, Dig, Bounce, etc.",
 			"categories": [
@@ -1157,10 +1117,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 70,
-				"cost": 2500
-			},
 			"description": "You use the environment to create a shield of ice around your body. Only able to be activated while it is hailing, this move can be used as a bonus action to halve all damage dealt to you for three rounds.",
 			"categories": []
 		},
@@ -1209,10 +1165,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 132,
-				"cost": 6200
 			},
 			"description": "You send forth a heap of powerful snow to pummel a creature. Make a ranged attack on a target, dealing {dice} {type} damage on a hit. If the target has dealt any damage to you since the end of your last turn, double the damage you deal.",
 			"categories": []
@@ -1409,10 +1361,6 @@
 			},
 			"range": {
 				"type": "self"
-			},
-			"tm": {
-				"id": 180,
-				"cost": 4900
 			},
 			"description": "As a bonus action, you may switch out, passing along all negative status effects and stat changes to the new creature. This includes existing battle effects from moves such as Substitute, Swords Dance, Ingrain, Aqua Ring, etc. Effects from moves that require concentration may also be transferred, with concentration now dependent on the new creature.",
 			"categories": []
@@ -1799,10 +1747,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 193,
-				"cost": 14200
-			},
 			"description": "Explosive projectiles rain down upon creatures in a 10 foot radius, centered on a point within range. Any creature caught in the blast must make a {save}, taking {dice} {type} damage on a fail and half as much on a success. This move saps you of energy, and may not activate it again until after the end of your next turn.",
 			"categories": []
 		},
@@ -1896,10 +1840,6 @@
 			},
 			"save": {
 				"attribute": "dex"
-			},
-			"tm": {
-				"id": 14,
-				"cost": 8400
 			},
 			"description": "Icy clouds form overhead and pelt the ground with hail and snow, centered on a point you choose within range. Each creature in a 30 ft radius, centered on a point within range, must make a {save}, taking {dice} {type} damage on a failed save, or half as much on a successful one. Targets that fail the save by 5 or more become frozen.",
 			"categories": [
@@ -2015,10 +1955,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 151,
-				"cost": 4900
-			},
 			"description": "You slam into your target with your body. Make a melee attack against a target, dealing {dice} {type} damage on a hit. If your size is at least one category greater than the target's size, deal an additional MOVE {type} damage.",
 			"categories": []
 		},
@@ -2049,10 +1985,6 @@
 			},
 			"save": {
 				"attribute": "str"
-			},
-			"tm": {
-				"id": 141,
-				"cost": 6200
 			},
 			"description": "You thrust yourself towards a creature in an attempt to crush them with your physical size. Make a melee attack on a target. On a hit, the target takes {dice} {type} damage, and must succeed on a {save} or be knocked prone.",
 			"categories": []
@@ -2334,10 +2266,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 200,
-				"cost": 12500
-			},
 			"description": "You tuck in your wings and dive at a creature. Make a melee attack, dealing {dice} {type} damage on a hit. On a hit, you also take a quarter of the total (rounded down) in typeless recoil damage.",
 			"categories": []
 		},
@@ -2372,10 +2300,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 249,
-				"cost": 9100
-			},
 			"description": "You swing your tail wildly around you. All creatures within 5ft must make a {save}, taking {dice} {type} damage on a fail, and half as much on a success. Creatures that fail the saving throw also have disadvantage on all of their attacks until the end of their next turn.",
 			"categories": []
 		},
@@ -2403,10 +2327,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 31,
-				"cost": 5600
 			},
 			"description": "You strike out with a powerful and focused punch. Make a melee attack roll on a creature, doing {dice} {type} damage on a hit. This move ignores the effects of moves that would reduce its damage (Harden, Reflect, etc.)",
 			"categories": []
@@ -2471,10 +2391,6 @@
 			},
 			"save": {
 				"attribute": "dex"
-			},
-			"tm": {
-				"id": 59,
-				"cost": 5200
 			},
 			"description": "You swing your arms around violently, attacking anything within 5 feet of you. All creatures in range must make a {save}, taking {dice} {type} damage on a failure, or half as much on a success.",
 			"categories": []
@@ -2572,10 +2488,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 212,
-				"cost": 4900
-			},
 			"description": "You lash out and bite a target. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. If the target is holding a berry when you hit, you immediately eat it and gain its effect.",
 			"categories": []
 		},
@@ -2610,10 +2522,6 @@
 			"save": {
 				"attribute": "con"
 			},
-			"tm": {
-				"id": 199,
-				"cost": 4900
-			},
 			"description": "You vibrate your wings, creating a harsh sound that damages any creature in range. All creatures within 20 feet of you must make a {save}, taking {dice} {type} damage on a fail. If a creature fails the save by 5 or more, they have disadvantage on their next attack.",
 			"categories": [
 				"sound"
@@ -2635,10 +2543,6 @@
 			},
 			"range": {
 				"type": "self"
-			},
-			"tm": {
-				"id": 8,
-				"cost": 6000
 			},
 			"description": "You pump yourself up, increasing your adrenaline. For the next minute, choose to add +1 to your attack rolls OR +1 to AC. This move can be stacked to a maximum of +5 of the initial choice.",
 			"categories": []
@@ -2672,10 +2576,6 @@
 			},
 			"save": {
 				"attribute": "dex"
-			},
-			"tm": {
-				"id": 78,
-				"cost": 5200
 			},
 			"description": "You strike the ground so hard that it ripples out from you in a {shape}. Any creature caught in the area must make a {save}, taking {dice} {type} damage on a failure, or half as much on a success. Raised creatures are immune to the effects and damage of this move.",
 			"categories": []
@@ -2743,10 +2643,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 136,
-				"cost": 2500
 			},
 			"description": "Your fire a series of high-speed seeds at a creature. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
 			"categories": [
@@ -2854,10 +2750,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 224,
-				"cost": 9100
-			},
 			"description": "You attack all creatures in a {shape} with energy from jealousy. All creatures in the area must make a {save}, taking {dice} {type} damage and becoming burned on failure, or on success only taking half the damage.\n\nCreatures who are currently benefiting from an increase to their AC, STR, DEX, CON, INT, WIS, or CHA have disadvantage on the save.",
 			"categories": []
 		},
@@ -2877,10 +2769,6 @@
 			},
 			"range": {
 				"type": "self"
-			},
-			"tm": {
-				"id": 4,
-				"cost": 5500
 			},
 			"description": "You clear your mind of all distractions. For the duration, double your STAB bonus when dealing damage of your type.",
 			"categories": []
@@ -3034,10 +2922,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 206,
-				"cost": 2700
-			},
 			"description": "Electricity surges through your body, charging up for your next attack. Until your next turn, boost your AC by 2. On your next turn, double your STAB bonus when dealing damage of your type.",
 			"categories": []
 		},
@@ -3069,10 +2953,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 57,
-				"cost": 4400
-			},
 			"description": "You send a beam of electric energy at a creature that has a chance to power you up. Make a ranged attack, dealing {dice} {type} damage on a hit. If the natural attack roll is 10 or higher and the attack hits, double your MOVE modifier for the damage of this move and any other move you activate before the end of your next turn.",
 			"categories": []
 		},
@@ -3099,10 +2979,6 @@
 			},
 			"save": {
 				"attribute": "wis"
-			},
-			"tm": {
-				"id": 103,
-				"cost": 2500
 			},
 			"description": "You attempt to charm a creature, sharply decreasing its attack. A target you choose in range must make a {save}. On a fail, the target adds -2 to all attack rolls against you for the duration.",
 			"higherLevels": "The target adds -3 at level 5, -4 at level 10, and -5 at level 17.",
@@ -3171,10 +3047,6 @@
 			},
 			"save": {
 				"attribute": "wis"
-			},
-			"tm": {
-				"id": 119,
-				"cost": 2500
 			},
 			"description": "You shower a creature with water that's so cold it saps the target's power. Make a ranged attack roll, doing {dice} {type} damage on a hit. On a hit, the target must succeed a {save} or have disadvantage on any attack it makes on its next turn.",
 			"categories": []
@@ -3442,10 +3314,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 202,
-				"cost": 12500
-			},
 			"description": "You get in close for a devastating strike, sacrificing your defenses. Make a melee attack on a creature, dealing {dice} {type} damage on a hit. After activating this move, the target has advantage on any attack it makes against you before the beginning of your next turn.",
 			"categories": []
 		},
@@ -3467,10 +3335,6 @@
 				"type": "distance",
 				"value": 60,
 				"unit": "feet"
-			},
-			"tm": {
-				"id": 241,
-				"cost": 3000
 			},
 			"description": "You coach an ally on how to maximize their offense and defense. Choose one ally other than yourself within 60 feet who can hear you. For the duration, that ally can add +1 to their attack rolls and +1 to their AC.",
 			"higherLevels": "The bonus for this move changes to +2 at level 10.",
@@ -3583,10 +3447,6 @@
 			"save": {
 				"attribute": "wis"
 			},
-			"tm": {
-				"id": 100,
-				"cost": 4400
-			},
 			"description": "You whisper an untold secret into the mind of a creature in range. The target must make a {save}, becoming confused on a failure.",
 			"categories": [
 				"sound"
@@ -3614,10 +3474,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 116,
-				"cost": 3600
 			},
 			"description": "You target a creature in range with a sinister ray of ghostly light. Make a ranged attack against a creature. On a hit, they become confused.",
 			"categories": []
@@ -4122,10 +3978,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 163,
-				"cost": 9100
-			},
 			"description": "You unleash a powerful blow that has a chance to temporarily lower a target’s defense. Make a melee attack against a target, doing {dice} {type} damage on a hit. On a natural attack roll of 18 or higher, the target’s AC is decreased by 1 for the remainder of combat. This decrease may be stacked, up to a maximum of -5 to AC.",
 			"categories": [
 				"biting"
@@ -4223,10 +4075,6 @@
 			"save": {
 				"attribute": "wis"
 			},
-			"tm": {
-				"id": 251,
-				"cost": 2700
-			},
 			"description": "This Move has a different effect based on your creature type.\n\nIf you are ghost-type: You attempt to put a curse on a creature. Force a target in range to make a {save}. On a fail, the target is cursed. You take {dice} damage initially and the target takes {dice} {type} damage at the end of each of its turns for the duration.\n\nIf you are any other type: You place a curse on yourself. For the duration, your STR and CON scores increase by 2, but your DEX score decreases by 4.",
 			"categories": []
 		},
@@ -4288,10 +4136,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 97,
-				"cost": 6000
 			},
 			"description": "You target a creature with a dark aura filled with horrible thoughts. Make a ranged attack on a creature, dealing {dice} {type} damage on a hit. On natural attack rolls of 17 or higher, the target flinches.",
 			"categories": [
@@ -4390,10 +4234,6 @@
 			},
 			"save": {
 				"attribute": "con"
-			},
-			"tm": {
-				"id": 99,
-				"cost": 6000
 			},
 			"description": "You emit a powerful flash that damages all creatures in range. Creatures within 20 feet of you must make a {save}, taking {dice} {type} damage on a failure, or half as much on a success.",
 			"categories": []
@@ -4581,10 +4421,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 135,
-				"cost": 3600
-			},
 			"description": "You burrow underground, disappearing from view before striking from underneath a target. When you activate this move, you use 10 feet of your movement to burrow underground (ignoring difficult terrain) and remain there until your next turn. During this time, you are immune to the damage and effects of any move. If you have no remaining movement or are grappled/restrained before activating this move, the move fails. On your next turn, you use your action to emerge from the ground and make a melee attack on a creature in range, with advantage, doing {dice} {type} damage on a successful hit. If the target has Tremorsense, the attack is not rolled with advantage.",
 			"categories": []
 		},
@@ -4695,10 +4531,6 @@
 				"class": "20",
 				"modifier": "MOVE",
 				"type": "damage"
-			},
-			"tm": {
-				"id": 117,
-				"cost": 3600
 			},
 			"description": "You let out a charming cry, dealing emotional damage to any creature in range that can hear you. This move automatically hits for {dice} {type} damage unless a creature is in the invulnerable stages of Fly, Dig, Bounce, etc.",
 			"categories": [
@@ -4998,10 +4830,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 32,
-				"cost": 7000
-			},
 			"description": "You create a duplicate image of yourself, 5 feet beside you. The image mimics you and attempt to fool your opponents into attacking it, instead.\n\nWhen subject to any move (attack or saving throw / damaging or non-damaging) with an area of effect of 5 feet wide or less, roll a d4. On a result of 3 or 4, the image absorbs the damage and/or effects of the attack and disappears. Creatures with Truesight bypass the effect of this move. If grappled or restrained by a creature while Double Team is active, Double Team has no effect. (Examples that would trigger the roll include Tackle, Thunder Wave, Rock Slide, etc.)",
 			"categories": [],
 			"optional": "When this move is used again before the duplicate is consumed, an additional duplicate is created, up to a maximum of three duplicates.\n\nWith two duplicates, the attacker must roll a 5 or 6 on a d6 to hit the target. With three duplicates, the attacker must roll a 7 or 8 on a d8."
@@ -5031,10 +4859,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 232,
-				"cost": 3000
 			},
 			"description": "You commit a massive attack against a creature. Make a melee attack against a target, doing {dice} {type} damage on a hit, but taking a quarter of the total damage (rounded down) in typeless recoil.",
 			"categories": []
@@ -5094,10 +4918,6 @@
 			},
 			"save": {
 				"attribute": "dex"
-			},
-			"tm": {
-				"id": 203,
-				"cost": 14200
 			},
 			"description": "You summon forth a meteor shower that rains down onto the battlefield. All creatures in a 10-foot-radius circle, centered on a point within range, must make a {save}, taking {dice} {type} damage on a hit, or half as much on a save. After activating this move, your next attack is rolled at disadvantage. If that attack requires a saving throw, the target has advantage.",
 			"categories": []
@@ -5225,10 +5045,6 @@
 				"value": 60,
 				"unit": "feet"
 			},
-			"tm": {
-				"id": 253,
-				"cost": 3600
-			},
 			"description": "You can use a bonus action to choose one ally other than yourself within 60 feet of you who can hear you. That ally's critical hit range is extended by 1 for the next minute or until they land a critical hit, whichever happens first. If the ally is Dragon-type, double the critical hit range extension. This bonus does not stack.\n\nA critical hit range extension of 1 means a critical occurs on a natural 19 or 20.",
 			"higherLevels": "The critical range extension changes to 2 at level 10.",
 			"categories": []
@@ -5258,10 +5074,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 2,
-				"cost": 6000
-			},
 			"description": "You strike out with a powerful claw attack. Make a melee attack on a creature, doing {dice} {type} damage on a hit.",
 			"categories": []
 		},
@@ -5281,10 +5093,6 @@
 			},
 			"range": {
 				"type": "self"
-			},
-			"tm": {
-				"id": 158,
-				"cost": 6600
 			},
 			"description": "You perform a mystical dance, pumping yourself up. For the duration, double your proficiency bonus when making an attack.",
 			"categories": [
@@ -5422,10 +5230,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 169,
-				"cost": 9100
-			},
 			"description": "You open your mouth and send a shockwave of draconic energy at a target in range. Make a ranged attack, dealing {dice} {type} damage on a hit.",
 			"categories": [
 				"pulse"
@@ -5517,10 +5321,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 82,
-				"cost": 5200
-			},
 			"description": "You whip your dragon tail at a creature in an attempt to send them away. Make a melee attack roll against a target, dealing {dice} {type} damage. In wild battles, the target takes the damage and flees from battle if its level is lower than that of the user. In trainer battles, the target takes the damage and must be immediately switched out for another creature in the trainer's party, if any remain.",
 			"categories": []
 		},
@@ -5549,10 +5349,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 147,
-				"cost": 2500
 			},
 			"description": "Your strike a target with an energy-draining punch. Make a melee attack, dealing {dice} {type} damage on a hit, gaining half the damage dealt (rounded down) in HP.",
 			"categories": [
@@ -5585,10 +5381,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 128,
-				"cost": 2500
-			},
 			"description": "You attempt to zap the target's energy with a kiss. Make a melee attack roll on a creature, dealing {dice} {type} damage on a hit. The user is then healed for half the damage dealt.",
 			"categories": []
 		},
@@ -5615,10 +5407,6 @@
 				"class": "100",
 				"modifier": "MOVE",
 				"type": "damage"
-			},
-			"tm": {
-				"id": 85,
-				"cost": 8000
 			},
 			"description": "You tap into a sleeping creature’s dreams, sucking from its energy pool. Instantly inflict {dice} {type} damage on a sleeping target in range, regaining half as many hitpoints to yourself. This move does not wake a sleeping creature.",
 			"categories": []
@@ -5677,10 +5465,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 162,
-				"cost": 9100
 			},
 			"description": "You crash into a creature, spinning your body like a drill. Make a melee attack, dealing {dice} {type} damage on a hit. This attack scores a critical hit on 19s and 20s.",
 			"categories": []
@@ -5775,10 +5559,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 226,
-				"cost": 6600
-			},
 			"description": "You slam a target with both of your wings. Make two melee attack rolls against a target, doing {dice} {type} damage on each hit.",
 			"categories": []
 		},
@@ -5870,10 +5650,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 181,
-				"cost": 10800
-			},
 			"description": "You cause the ground beneath a creature to erupt with power. Make a ranged attack, dealing {dice} {type} damage on a hit. If the natural attack roll is 19 or 20, the next attack against the target is rolled at advantage.",
 			"categories": []
 		},
@@ -5907,10 +5683,6 @@
 			"save": {
 				"attribute": "str"
 			},
-			"tm": {
-				"id": 26,
-				"cost": 8000
-			},
 			"description": "You create a tremor in the ground in a {shape}, centered on you. Each creature in the area must succeed on a {save}, taking {dice} {type} damage on a fail and be knocked prone. On a success, they take half as much damage and are not knocked prone. Creatures in range that are burrowed or in the invulnerable stage of Dig take double damage from this move. After the move is activated, the area becomes difficult terrain. Raised creatures are immune to the effects and damage of this move.",
 			"categories": []
 		},
@@ -5942,10 +5714,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 49,
-				"cost": 4000
-			},
 			"description": "You release a shout that echoes across the battlefield towards a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. Until the beginning of your next turn, if any other creature in range uses this move, they may double their damage dice on a hit. This multiplier can continue to stack to a maximum of 8x the damage dice, resetting if any of the attacks miss.",
 			"categories": [
 				"sound"
@@ -5976,10 +5744,6 @@
 			},
 			"save": {
 				"attribute": "con"
-			},
-			"tm": {
-				"id": 155,
-				"cost": 2500
 			},
 			"description": "Your body generates a strange pulsating sound that can disrupt creature's ability to attack. When you activate this move, any creature within 30 feet of you must make a {save}. Any creature that fails flinches for 1d4 rounds.",
 			"categories": []
@@ -6069,10 +5833,6 @@
 				"value": 40,
 				"unit": "feet"
 			},
-			"tm": {
-				"id": 183,
-				"cost": 4900
-			},
 			"description": "You electrify the ground around you to create a static field of electricity. For 3 turns, no grounded creatures inside the area can be asleep. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from electric-type moves activated inside the area",
 			"categories": []
 		},
@@ -6129,10 +5889,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 146,
-				"cost": 8700
 			},
 			"description": "You hurl an electric orb at a target in range. Make a ranged attack roll, dealing {dice} {type} damage on a hit. Compare the target and user's highest speed type (walking, flying, etc.). If the user's speed is higher, roll the next tier's damage dice for this move. In the case of level 17 or higher, double the damage dice.",
 			"categories": [
@@ -6232,10 +5988,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 239,
-				"cost": 2700
-			},
 			"description": "You unleash an electric net of web upon a creature. Make a ranged attack roll, dealing {dice} {type} damage on a hit, and reducing the target's speed by 5 feet. The target can use an action on its turn remove any web from its body. A target whose speed is reduced to 0 is restrained.",
 			"categories": []
 		},
@@ -6261,10 +6013,6 @@
 			},
 			"save": {
 				"attribute": "wis"
-			},
-			"tm": {
-				"id": 63,
-				"cost": 5000
 			},
 			"description": "You surround a creature in range with a dark aura. Force a creature to make a {save}. On a failure, the target cannot gain the effect of any held item or trainer item given to it for the duration.",
 			"categories": []
@@ -6324,10 +6072,6 @@
 			"save": {
 				"attribute": "wis"
 			},
-			"tm": {
-				"id": 174,
-				"cost": 4900
-			},
 			"description": "After being targeted by a move, force a creature to make a {save} as a reaction. On a fail, no other move may be activated by the target creature until after the end of its next turn.",
 			"higherLevels": "The number of turns the creature must use the move increases to 2 turns at level 10 and 3 turns at level 17.",
 			"categories": []
@@ -6355,10 +6099,6 @@
 			"save": {
 				"attribute": "wis"
 			},
-			"tm": {
-				"id": 233,
-				"cost": 6600
-			},
 			"description": "When you activate this move, select a creature in range. the target must make a {save}. On a failure, the target’s current HP is reduced to be equal to your own. The hit point reduction can be no more than 5x the target's level. This move can not be used in the first round of combat.",
 			"categories": []
 		},
@@ -6376,10 +6116,6 @@
 			},
 			"range": {
 				"type": "self"
-			},
-			"tm": {
-				"id": 133,
-				"cost": 2500
 			},
 			"description": "On an instance of taking damage that would otherwise cause you to faint, you may instead fall to 1HP on the first instance of this reaction. On future instances of this move in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful.",
 			"categories": []
@@ -6410,10 +6146,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 53,
-				"cost": 7200
 			},
 			"description": "You draw in power from nature in a concentrated ball that you send towards a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. On a natural attack roll of 19 or 20, the next attack against the target is rolled at advantage.",
 			"categories": [
@@ -6581,10 +6313,6 @@
 			"save": {
 				"attribute": "wis"
 			},
-			"tm": {
-				"id": 245,
-				"cost": 10800
-			},
 			"description": "You attack with psychic power. Choose a target in range. That target makes a {save}, taking {dice} {type} damage on failure or half damage on success. If you are under the effects of Psychic Terrain, then this move deals an additional 1d6 {type} damage, and you may choose any number of targets subject to the same terrain effect to make the save.",
 			"categories": []
 		},
@@ -6604,10 +6332,6 @@
 				"type": "distance",
 				"value": 80,
 				"unit": "feet"
-			},
-			"tm": {
-				"id": 64,
-				"cost": 14000
 			},
 			"description": "You create a sphere of energy that packs a concentrated and devastating explosion. Choose a target within range and roll a d20. On a 20, the explosion goes off and all creatures within 5 feet of that point faint. On any other roll, the explosion fails to go off and this move has no effect. If the target's level is 10 more than your own, or their SR is 15, this move automatically fails.",
 			"categories": [
@@ -6697,10 +6421,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 42,
-				"cost": 5600
 			},
 			"description": "You strike out at a creature with revenge. Make a melee attack roll against a target, dealing {dice} {type} damage on a hit. If you are poisoned, paralyzed, or burned, double the dice for the damage.",
 			"categories": []
@@ -6814,10 +6534,6 @@
 			"save": {
 				"attribute": "wis"
 			},
-			"tm": {
-				"id": 104,
-				"cost": 8700
-			},
 			"description": "You fake a creature out with superficial tears, lowering their defenses. When activating this move, a target must make a {save}. On a failure, all attack rolls against the target are given a +5 bonus until the end of your next turn.",
 			"categories": []
 		},
@@ -6876,10 +6592,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 54,
-				"cost": 4000
-			},
 			"description": "You swipe at a creature but hold back power slightly. Make a melee attack against a creature, doing {dice} {type} damage on a hit. If this attack would normally cause a creature to faint, it is reduced to 1HP instead.",
 			"categories": []
 		},
@@ -6907,10 +6619,6 @@
 			},
 			"save": {
 				"attribute": "wis"
-			},
-			"tm": {
-				"id": 243,
-				"cost": 2700
 			},
 			"description": "You distract a creature in range with a beautiful dance. The target must make a {save}. On a fail, the target cannot add proficiency to its attack rolls for the duration.",
 			"categories": [
@@ -7172,10 +6880,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 38,
-				"cost": 8400
-			},
 			"description": "Two pillars of raging hot flames explode out from you and leap towards up to two creatures in range. The creature(s) targeted must succeed on a {save} for each pillar, taking {dice} {type} damage on a failure, or half as much on a success. Creatures that fail the save by 5 or more become burned.",
 			"categories": []
 		},
@@ -7204,10 +6908,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 108,
-				"cost": 8700
 			},
 			"description": "You attempt to pierce a creature with flame- cloaked fangs. Make a melee attack, dealing {dice} {type} damage on a hit. On a natural attack roll of 19 or 20, the target is burned and flinches.",
 			"categories": [
@@ -7276,10 +6976,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 189,
-				"cost": 9100
-			},
 			"description": "You send a plume of flame towards a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. After you land a hit, any ally that uses another Pledge move in the same round automatically hits.",
 			"categories": []
 		},
@@ -7308,10 +7004,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 142,
-				"cost": 6200
 			},
 			"description": "You strike out with fire-infused fists. Make a melee attack roll, doing {dice} {type} damage on a hit. On a natural attack roll of 19 or 20, the target is burned.",
 			"categories": [
@@ -7346,10 +7038,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 120,
-				"cost": 2500
 			},
 			"description": "You release a series of moving flames that dance around a target. Make a ranged attack roll, doing {dice} {type} damage on a hit. as the flames swirl around it. As long as you maintain concentration, the target takes an additional 1d8 {type} damage at the end of each of its next three turns.",
 			"categories": []
@@ -7519,10 +7207,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 43,
-				"cost": 4400
-			},
 			"description": "You cloak yourself with flame and lash out at a creature. Make a melee attack, dealing {dice} {type} damage on a hit. With each successful hit from this move, increase your movement speed by 5 until you are incapacitated, are switched out, or the combat ends. (Maximum of +30 to movement speed)",
 			"categories": []
 		},
@@ -7591,10 +7275,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 35,
-				"cost": 7200
-			},
 			"description": "You shoot a concentrated gout of flame in an {shape}. Any creature caught in the cone must succeed on a {save}, taking {dice} {type} damage on a failure, or half damage on a success. Any creature that fails the save by 5 or more becomes burned.",
 			"categories": []
 		},
@@ -7623,10 +7303,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 201,
-				"cost": 12500
 			},
 			"description": "You cloak yourself in fire and charge at a creature with serious damage. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. On a hit, you take a quarter of the damage dealt in typeless recoil damage. On a natural attack roll of 19 or 20, the target is burned. If the user is frozen, this move can still be used, thawing out the creature during the attack",
 			"categories": []
@@ -7686,10 +7362,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 91,
-				"cost": 6000
 			},
 			"description": "You gather energy from the light around you and send a concentrated beam towards a creature in range. Make a ranged attack, dealing {dice} {type} damage on a hit. On a natural attack roll of 19 or 20, the next attack against the target is rolled at advantage.",
 			"categories": []
@@ -7777,10 +7449,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 56,
-				"cost": 4500
-			},
 			"description": "You sacrifice your held item to throw it a creature. Make a ranged attack. On a hit, the amount of dark damage dealt is equal to the price of the item in the manual, divided by 100 (rounded down), plus STAB (if applicable). In addition, certain items have additional effects on a successful hit with this move. After activating this move, on a hit or miss, the item disappears.",
 			"table": {
 				"type": "table",
@@ -7841,10 +7509,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 225,
-				"cost": 6600
 			},
 			"description": "You switch places with an ally after making an attack. Make a melee attack, dealing {dice} {type} damage on a hit. After this move is activated, a trainer must switch out the user as a free action.",
 			"categories": []
@@ -7961,10 +7625,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 76,
-				"cost": 7200
-			},
 			"description": "You fly high into the air to prepare for a dive bomb attack. When you activate this move, you use 10 feet of your movement to vanish and fly upwards, remaining in an invulnerable state until your next turn. During this time, you are immune to the damage and effects of any move. If you have no remaining movement or are grappled/restrained before activating this move, the move fails. On your next turn, you use your action to reappear and make a diving melee attack on a creature in range, with advantage, dealing {dice} {type} damage on a successful hit.",
 			"categories": []
 		},
@@ -8025,10 +7685,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 52,
-				"cost": 8800
-			},
 			"description": "You heighten your focus and unleash it upon a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. On a natural attack roll of 19 or 20, the next attack against the target is rolled at advantage.",
 			"categories": [
 				"ballistic"
@@ -8078,10 +7734,6 @@
 				"class": "150",
 				"modifier": "MOVE",
 				"type": "damage"
-			},
-			"tm": {
-				"id": 221,
-				"cost": 2700
 			},
 			"description": "When activating this move, you spend your action focusing your next attack. If you keep concentration, as an action on your next turn, make an attack roll against a creature, doing {dice} {type} damage on a hit.",
 			"categories": [
@@ -8207,10 +7859,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 138,
-				"cost": 6200
 			},
 			"description": "You turn a creature's own power against it. Make a melee attack roll using your MOVE power. On a hit, the target takes an amount of dark damage equal to {dice} + the target's level.",
 			"dice": {
@@ -8344,10 +7992,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 195,
-				"cost": 14200
-			},
 			"description": "You summon a whirlwind of jagged branches and razor sharp leaves that batter all creatures in a {shape}, centered on you. All creatures caught in the flurry must make a {save}, taking {dice} {type} damage on a failure, and half as much on a success. This move saps you of energy, and may not activate it again until after the end of your next turn.",
 			"categories": []
 		},
@@ -8379,10 +8023,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 79,
-				"cost": 5200
-			},
 			"description": "You blow a gust of freezing cold air at a creature in range. Make a ranged attack roll, dealing {dice} {type} damage on a hit. This move scores a critical hit on natural attack rolls of 16 and higher.",
 			"categories": []
 		},
@@ -8410,10 +8050,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 21,
-				"cost": 3600
 			},
 			"description": "You lash out at a creature, venting your frustration at your trainer. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. When you make this attack, add an additional bonus to hit and damage equal to the number of levels you are below zero on the Loyalty Chart. This move bypasses the Loyalty penalty roll, except for uncontrollable creatures based on SR limitations.",
 			"categories": []
@@ -8601,10 +8237,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 244,
-				"cost": 6600
-			},
 			"description": "You save an attack to unleash at a later time. When you activate this move, you may choose to attack on this turn, or delay the attack. You may use the attack as a free action at any time during the next three rounds. When you make the attack, make a ranged attack roll, dealing {dice} {type} damage on a hit.",
 			"categories": []
 		},
@@ -8736,10 +8368,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 166,
-				"cost": 9100
-			},
 			"description": "You attempt to drain the life force of a target. Make a ranged attack on a target, doing {dice} {type} damage on a hit. Half of the damage dealt is restored to the user.",
 			"categories": []
 		},
@@ -8767,10 +8395,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 68,
-				"cost": 10800
 			},
 			"description": "You charge at a creature with every ounce of your power. Make a melee attack, dealing {dice} {type} damage on a hit. This move cannot be used on consecutive turns by the same creature.",
 			"categories": []
@@ -8949,10 +8573,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 86,
-				"cost": 6500
-			},
 			"description": "You attempt to ensnare a creature with vines that sprout from the ground, causing it to trip. Make a ranged attack, dealing {dice} {type} damage on a hit. If the targets size is Large or bigger, double the dice roll for the damage. On a natural attack roll of 19 or 20, the target falls prone.",
 			"categories": []
 		},
@@ -8982,10 +8602,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 191,
-				"cost": 9100
 			},
 			"description": "You send a column of thick grass towards a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. After you land a hit, any ally that uses another Pledge move in the same round automatically hits.",
 			"categories": []
@@ -9043,10 +8659,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 223,
-				"cost": 10800
-			},
 			"description": "You glide on the ground to strike a target. Make a melee attack, doing {dice} {type} damage on a hit.\n\nIf you are on Grassy Terrain when this move is used, then until the start of your next turn you gain an additional 10ft of movement, and your movement no longer provokes attacks of opportunity.",
 			"categories": []
 		},
@@ -9070,10 +8682,6 @@
 				"type": "emanation",
 				"value": 40,
 				"unit": "feet"
-			},
-			"tm": {
-				"id": 184,
-				"cost": 4900
 			},
 			"description": "Grass sprouts from the ground in a circle around you, coating the earth with healing energy. For 3 turns, grounded creatures in the affected area heal for an amount of hit points equal to their proficiency bonus at the end of their turn. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from grass-type moves activated inside the area.",
 			"categories": []
@@ -9133,10 +8741,6 @@
 				"type": "emanation",
 				"value": 20,
 				"unit": "feet"
-			},
-			"tm": {
-				"id": 210,
-				"cost": 2700
 			},
 			"description": "You strengthen gravity in an {shape}, centered on you. Any creature in the area cannot use moves like Fly or Bounce, flying types lose their ground immunity, and the Levitate ability is suppressed.",
 			"categories": []
@@ -9320,10 +8924,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 160,
-				"cost": 6600
-			},
 			"description": "You fire a wad of icky gunk at a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. On a natural attack roll of 16 or higher, the target is poisoned.",
 			"categories": []
 		},
@@ -9385,10 +8985,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 74,
-				"cost": 5500
-			},
 			"description": "You tackle a creature with a high-speed spin. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. If your DEX score is lower than the target's, double the dice roll for damage.",
 			"categories": [
 				"ballistic"
@@ -9412,10 +9008,6 @@
 				"type": "distance",
 				"value": 100,
 				"unit": "feet"
-			},
-			"tm": {
-				"id": 7,
-				"cost": 8000
 			},
 			"description": "You stir up a massive hail storm in a 50 foot radius, centered on a point in range. When a non ice-type creature enters the area for the first time on their turn, or begins their turn inside the area, they take an amount of ice damage equal to half your level, rounded up. The hail storm lasts for 5 rounds.",
 			"categories": []
@@ -9534,10 +9126,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 252,
-				"cost": 6600
-			},
 			"description": "You crush a creature with an arm, a claw, or the like to inflict damage. Make a melee attack against a target, dealing {dice} {type} damage. If the target is above 50% of its maximum health, add your proficiency bonus to the damage roll.",
 			"categories": []
 		},
@@ -9585,10 +9173,6 @@
 				"type": "emanation",
 				"value": 30,
 				"unit": "feet"
-			},
-			"tm": {
-				"id": 207,
-				"cost": 2700
 			},
 			"description": "You create a haze of light snow that washes over creatures in a {shape}, centered on you. Any stat changes, status effects, shields or other outside forces affecting creatures in range are removed. This includes things like Leech Seed, Focus Energy, Substitute, Iron Defense, Disable, etc.",
 			"categories": []
@@ -9911,10 +9495,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 218,
-				"cost": 9100
-			},
 			"description": "You slam into a creature with your flaming body. Make a melee attack on a target, dealing a minimum of {dice} {type} damage on a hit. Add an additional bonus to damage equal to your MOVE modifier for each size level you are above a creature. (Sizes, in order, are: Tiny, Small, Medium, Large, Huge, Gargantuan)",
 			"categories": []
 		},
@@ -9949,10 +9529,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 172,
-				"cost": 10800
-			},
 			"description": "You exhale a wave of hot breath in a {shape}, centered on you. Creatures caught in the area must make a {save}, taking {dice} {type} damage on failure, or half as much on a success. If the creature fails the save by 5 or more, it is burned.",
 			"categories": [
 				"wind"
@@ -9983,10 +9559,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 173,
-				"cost": 6600
-			},
 			"description": "You slam into a creature with your heavy body. Make a melee attack on a target, dealing a minimum of {dice} {type} damage on a hit. Add an additional bonus to damage equal to your MOVE modifier for each size level you are above a creature. (Sizes, in order, are: Tiny, Small, Medium, Large, Huge, Gargantuan)",
 			"categories": []
 		},
@@ -10007,10 +9579,6 @@
 				"type": "distance",
 				"value": 60,
 				"unit": "feet"
-			},
-			"tm": {
-				"id": 178,
-				"cost": 2700
 			},
 			"description": "You can use a bonus action on your turn to choose one ally other than yourself within 60 feet of you who can hear you. That ally can add a d6 to one ability check, attack roll, or saving throw it makes within the next 10 minutes, before the result of the roll is called by the DM. An ally being helped can only have one d6 available at a time.",
 			"higherLevels": "The helping dice for this move changes to d8 at level 5, d10 at level 10, and d12 at level 17.",
@@ -10042,10 +9610,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 122,
-				"cost": 2500
 			},
 			"description": "You send a ghostly energy at a creature that does additional damage to those affected by status conditions. Make a ranged attack, dealing {dice} {type} damage on a hit. If the target is affected by a status condition, double your MOVE modifier when adding damage.",
 			"categories": []
@@ -10081,10 +9645,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 10,
-				"cost": 5200
 			},
 			"description": "You unleash a wave of force of unknown power at a creature in range. Make a ranged attack on a creature, on a hit doing {dice} damage of a random type. Roll a d20 to determine which type of damage is dealt.",
 			"table": {
@@ -10184,10 +9744,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 216,
-				"cost": 6600
 			},
 			"description": "You fiercely attack the target using your entire body.  Make a melee attack, dealing {dice} {type} damage on a hit.",
 			"categories": []
@@ -10413,10 +9969,6 @@
 			"save": {
 				"attribute": "str"
 			},
-			"tm": {
-				"id": 198,
-				"cost": 12500
-			},
 			"description": "You whip up a maelstrom of harsh winds. Each creature in a 30 ft radius, centered on a point within range, must make a {save}, taking {dice} {type} damage and knocked prone on a failure, or half as much damage without being knocked prone on a success. Targets that fail the saving throw by 5 or more become confused. If this attack is activated during rain, the targets roll their saving throws with disadvantage. If used during harsh sunlight, the targets roll their saves with advantage.",
 			"categories": [
 				"wind"
@@ -10453,10 +10005,6 @@
 			"save": {
 				"attribute": "str"
 			},
-			"tm": {
-				"id": 194,
-				"cost": 14200
-			},
 			"description": "You fire a powerful stream of high-speed water at creatures in a {shape}, 5 feet wide. Any creature caught in the blast must make a {save}, taking {dice} {type} damage on a failure, and half as much on a success. Creatures that fail the save also are pushed back 10 feet and fall prone. This move saps you of energy, and may not activate it again until after the end of your next turn.",
 			"categories": []
 		},
@@ -10490,10 +10038,6 @@
 			},
 			"save": {
 				"attribute": "dex"
-			},
-			"tm": {
-				"id": 188,
-				"cost": 12500
 			},
 			"description": "You send a surge of powerful water towards creatures in a {shape}, 5 feet wide. Creatures caught in the blast must succeed on a {save}, taking {dice} {type} damage on a failed save, and half as much on a success.",
 			"categories": []
@@ -10559,10 +10103,6 @@
 			},
 			"save": {
 				"attribute": "dex"
-			},
-			"tm": {
-				"id": 15,
-				"cost": 10800
 			},
 			"description": "You unleash a concentrated beam of pure energy in a {shape}, 5ft wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save. This move cannot be used on consecutive turns by the same creature.",
 			"categories": []
@@ -10654,10 +10194,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 171,
-				"cost": 9100
 			},
 			"description": "You release a loud and startling, high-pitched sound that only a creature can hear. Make a ranged attack roll against a creature in range, doing {dice} {type} damage on a hit.",
 			"categories": [
@@ -10821,10 +10357,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 13,
-				"cost": 7200
-			},
 			"description": "You create a {shape} of freezing ice, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a failure, or half as much on a success. Creatures that fail this save by 5 or more become frozen.",
 			"categories": []
 		},
@@ -10890,10 +10422,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 110,
-				"cost": 2500
-			},
 			"description": "You attempt to pierce a creature with ice- infused fangs. Make a melee attack, dealing {dice} {type} damage on a hit. On a natural attack roll of 19 or 20, the target is frozen and flinches.",
 			"categories": [
 				"biting"
@@ -10954,10 +10482,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 144,
-				"cost": 6200
 			},
 			"description": "You strike out with ice-infused fists. Make a melee attack roll, doing {dice} {type} damage on a hit. On a natural attack roll of 19 or 20, the target is frozen.",
 			"categories": [
@@ -11026,10 +10550,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 175,
-				"cost": 10800
-			},
 			"description": "You cover your feet in thin ice and twirl around. All creatures within melee range must make a {save}, taking {dice} {type} damage on a failure, or half as much on a success. Additionally, any active terrain you are in is removed.",
 			"categories": []
 		},
@@ -11090,10 +10610,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 217,
-				"cost": 4900
-			},
 			"description": "Your pummel a creature in range with multiple sharp shards of ice. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
 			"categories": [
 				"multistrike"
@@ -11126,10 +10642,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 126,
-				"cost": 3600
-			},
 			"description": "You create an icy wind that gusts towards a creature in range. Make a ranged attack against a creature, doing {dice} {type} damage on a hit. On a natural attack roll of 18 or more, the target falls prone.",
 			"categories": [
 				"wind"
@@ -11159,10 +10671,6 @@
 			},
 			"save": {
 				"attribute": "wis"
-			},
-			"tm": {
-				"id": 154,
-				"cost": 15000
 			},
 			"description": "You create psychic walls within the mind of a target in range. Force the target to make a {save}. On a failure, the target is unable to use any Move it knows that is the same as yours for the duration.",
 			"categories": []
@@ -11297,10 +10805,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 83,
-				"cost": 2800
-			},
 			"description": "You summon an infestation of tiny insects to attack a creature for multiple turns. Make a ranged attack on a target. On a hit, the target takes {dice} {type} damage and becomes infested with swarming bugs. As long as you maintain concentration, the target takes an additional 1d8 {type} damage at the end of each of its next three turns.",
 			"categories": []
 		},
@@ -11391,10 +10895,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 161,
-				"cost": 3600
-			},
 			"description": "Your body temporarily becomes solid as steel plate. Until the end of your next turn, you gain + 6 to your AC and have resistance to all types of damage. If you were vulnerable, you now take regular damage. If you were already resistant, you become immune.",
 			"categories": []
 		},
@@ -11422,10 +10922,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 157,
-				"cost": 2500
 			},
 			"description": "You slam into the target with your hard head. Make a melee attack, dealing {dice} {type} damage on a hit. On a natural attack roll of 16 or higher, the target flinches.",
 			"categories": []
@@ -11767,10 +11263,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 211,
-				"cost": 14200
-			},
 			"description": "You attempt to rid a creature of their held item for the rest of battle. Make a melee attack roll against a target. On a hit, deal {dice} {type} damage and any held item of the target disappears. The item appears back in the target's inventory when the battle is over.",
 			"categories": []
 		},
@@ -11879,10 +11371,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 228,
-				"cost": 6600
 			},
 			"description": "You lash out to vent your frustration toward the target. Make a melee attack, dealing {dice} {type} damage on a hit.\n\nIf you are suffering from a non-volatile status condition, or any of your AC, STR, DEX, CON, INT, WIS, or CHA is currently lowered, then you make the attack with advantage and deal an additional MOVE {type} damage.",
 			"categories": []
@@ -12040,10 +11528,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 197,
-				"cost": 12500
-			},
 			"description": "You whip up a powerful storm of leaves in a 40 foot circle, centered on a point within range. All creatures in the area must make a {save}, taking {dice} {type} damage on a fail, or half as much on a success. After activating this move, you are sapped of energy. On any damaging move you activate before the end of your next turn, reduce the damage dealt by your MOVE modifier.",
 			"categories": []
 		},
@@ -12132,10 +11616,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 28,
-				"cost": 6000
 			},
 			"description": "You attempt to suck away some of a creature’s life force. Make a melee attack roll, doing {dice} {type} damage on a hit. Half of the damage done is restored to the user.",
 			"categories": []
@@ -12317,10 +11797,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 16,
-				"cost": 4400
-			},
 			"description": "When you are subject to a ranged attack, use your reaction to take half the damage dealt now and on any ranged attack that targets you until the beginning of your next turn.",
 			"categories": []
 		},
@@ -12351,10 +11827,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 165,
-				"cost": 10800
 			},
 			"description": "You attempt to slam a full-force blast of water into a target in range.  Make a ranged attack, doing {dice} {type} damage on a hit.  If the natural attack roll is 18 or more, the target’s AC is reduced by 1 while it remains in battle. This decrease may be stacked up to a maximum of -5 to AC.",
 			"categories": []
@@ -12437,10 +11909,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 112,
-				"cost": 8700
-			},
 			"description": "You kick out at a creature’s lower half, dealing damage and attempting to knock it off balance. Make a melee attack, doing {dice} {type} damage on a hit. If the natural attack roll is 19 or 20, the target flinches.",
 			"categories": []
 		},
@@ -12472,10 +11940,6 @@
 			},
 			"save": {
 				"attribute": "str"
-			},
-			"tm": {
-				"id": 47,
-				"cost": 5200
 			},
 			"description": "You sweep your legs at the lower half of a creature's body. Make a melee attack roll, dealing {dice} {type} damage on a hit. On a hit, target must succeed on a {save} or be knocked prone.",
 			"categories": []
@@ -12619,10 +12083,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 215,
-				"cost": 6600
 			},
 			"description": "You make a lunge at the target, attacking with full force.  Make a melee attack, doing {dice} {type} damage on a hit.  If the natural attack roll is 15 or more, the target has disadvantage on its next attack.",
 			"categories": []
@@ -12799,10 +12259,6 @@
 				"class": "30",
 				"modifier": "MOVE",
 				"type": "damage"
-			},
-			"tm": {
-				"id": 125,
-				"cost": 3600
 			},
 			"description": "You summon a sharp, magical leaf that strikes a creature. This move is guaranteed to hit for {dice} {type} damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves.",
 			"categories": [],
@@ -13373,10 +12829,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 123,
-				"cost": 2500
-			},
 			"description": "You strike out with sharp claws. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. If the natural attack roll is 19 or 20, your next attack gets an additional +1 to hit.",
 			"categories": []
 		},
@@ -13403,10 +12855,6 @@
 			},
 			"save": {
 				"attribute": "con"
-			},
-			"tm": {
-				"id": 250,
-				"cost": 3000
 			},
 			"description": "You emit an ear-shattering high pitched sound that only your target can hear, leaving them in a defenseless state. When activating this move, a target must make a {save}. On a failure, all attack rolls against the target are given a +5 bonus until the end of your next turn.",
 			"categories": [
@@ -13473,10 +12921,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 247,
-				"cost": 15000
-			},
 			"description": "When you use this move, soak in cosmic energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a {shape} of solar energy, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save.",
 			"categories": []
 		},
@@ -13525,10 +12969,6 @@
 			},
 			"range": {
 				"type": "varies"
-			},
-			"tm": {
-				"id": 149,
-				"cost": 2500
 			},
 			"description": "You summon a move at random to inflict against a creature. When you use this move, roll a d100. The resulting number is the TM number for the move you make. If the move is unable to be completed because of positioning, range, etc., Metronome fails.",
 			"categories": [],
@@ -13890,10 +13330,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 230,
-				"cost": 14200
-			},
 			"description": "You release a massive explosion in a {shape}, fainting immediately before the damage is dealt. Creatures in the area must make a {save}. If your creature has at least half its hit points left or this move was used on Misty Terrain, anyone in range takes {dice} {type} damage on a fail, or half as much on a success. If your creature has less than half of its hit points left and was not on Misty Terrain, the damage is halved for a failed save, and quartered for a success.",
 			"categories": [
 				"explosive"
@@ -13919,10 +13355,6 @@
 				"type": "emanation",
 				"value": 60,
 				"unit": "feet"
-			},
-			"tm": {
-				"id": 186,
-				"cost": 4900
 			},
 			"description": "You cover the ground in a thin, healing mist that surrounds a {shape}, centered on you. For 3 turns, no grounded creatures inside the mist can suffer from new status conditions. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, grounded creatures in the terrain are resistant to dragon-type damage, or if they were vulnerable to dragon-type damage, they take regular damage instead.",
 			"categories": []
@@ -14169,10 +13601,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 127,
-				"cost": 3600
-			},
 			"description": "You fire a glob of mud at a creature, dealing damage with a chance to hinder the target's movement. Make a ranged attack against a creature in range, dealing {dice} {type} damage on a hit. If the natural attack roll is 16 or higher, the target's speed becomes 0 until the end of its next turn.",
 			"categories": []
 		},
@@ -14228,10 +13656,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 106,
-				"cost": 8700
-			},
 			"description": "You hurl mud at a target in range. Make a ranged attack roll, doing {dice} {type} damage on a hit. On a hit, the target adds -1 to its attack rolls for the rest of the encounter. This decrease may be stacked, up to a maximum of -5 to hit. The target may take an action to remove any mud from its face, resetting the effect.",
 			"categories": []
 		},
@@ -14262,10 +13686,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 237,
-				"cost": 10800
 			},
 			"description": "You fire a stream of muddy water at a creature in range. Make a ranged attack against a creature, dealing {dice} {type} damage. If the natural attack roll is 15 or higher, the target has disadvantage on its next attack.",
 			"categories": []
@@ -14377,10 +13797,6 @@
 			},
 			"range": {
 				"type": "self"
-			},
-			"tm": {
-				"id": 187,
-				"cost": 6600
 			},
 			"description": "You stimulate your brain with nasty thoughts. For the duration, you have advantage on any attacks with the Wisdom, Intelligence, or Charisma move power. If the attack requires a Wisdom, Intelligence, or Charisma saving throw, the target has disadvantage.",
 			"categories": []
@@ -14495,10 +13911,6 @@
 			},
 			"range": {
 				"type": "varies"
-			},
-			"tm": {
-				"id": 96,
-				"cost": 5000
 			},
 			"description": "You call upon the powers of nature nearby and activate a move based on the environment. The DM gets final say on what move you activate, but here are example environment types:",
 			"table": {
@@ -14674,10 +14086,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 131,
-				"cost": 2500
 			},
 			"description": "You hit a target with a necrotic wave of dark energy. Make a ranged attack against a target. On a hit, deal an amount of {type} damage equal to 1d6 + the user’s level.",
 			"categories": []
@@ -15095,10 +14503,6 @@
 				"modifier": "MOVE",
 				"type": "damage"
 			},
-			"tm": {
-				"id": 196,
-				"cost": 12500
-			},
 			"description": "You go into a rampage, doing several attacks without control for three rounds. This move automatically hits for 1d6 + MOVE {type} damage in the first round, 2d6 + MOVE {type} damage in the second round, and 4d6 + MOVE {type} damage in the third round. When this move ends, either after the third round or from breaking concentration, you become confused. This attack stops if concentration is broken, or the user becomes incapacitated.",
 			"categories": []
 		},
@@ -15175,10 +14579,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 50,
-				"cost": 10000
-			},
 			"description": "With a roar, flames burst from your body in a {shape}, centered on you. Any creature in range must roll a {save}, taking {dice} {type} damage on a failure, or half as much on a success. The power of the move exhausts you, and your next attack is done at disadvantage. If your next attack requires a creature saving throw, they have advantage.",
 			"categories": []
 		},
@@ -15204,10 +14604,6 @@
 			},
 			"save": {
 				"attribute": "con"
-			},
-			"tm": {
-				"id": 231,
-				"cost": 4900
 			},
 			"description": "You split pain from your injuries with your attacker. Target a creature in range, forcing them to make a {save}. On a fail, both you and your attacker change your current health points to the average of the two. If this causes either creature to go above maximum health, they take their maximum health instead.",
 			"categories": []
@@ -15329,10 +14725,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 66,
-				"cost": 4400
-			},
 			"description": "You strike hard in retaliation. Make a melee attack, dealing {dice} {type} damage on a hit. If the target has dealt any damage to you since the end of your last turn, double the damage you deal.",
 			"categories": []
 		},
@@ -15426,10 +14818,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 234,
-				"cost": 6600
-			},
 			"description": "You stir up a blizzard of sharp petals that swirl around you. Any creature within 30 feet of you must make a {save}, taking {dice} {type} damage on a failure, or half as much on a success.",
 			"categories": [
 				"wind"
@@ -15501,10 +14889,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 192,
-				"cost": 10800
 			},
 			"description": "You disappear from view and prepare to surprise your target with an attack. When you activate this move, you become invisible and immune to any attacks of opportunity. You cannot be targeted by attacks while you are invisible. On your next turn, you use your action to reappear at a point in range and make a melee attack against a creature, with advantage, dealing {dice} {type} damage on a successful hit. Protect and Detect reactions may not be used when hit by this attack.",
 			"categories": []
@@ -15655,10 +15039,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 176,
-				"cost": 10800
-			},
 			"description": "You fake a creature out with a playful attack that quickly becomes too rough. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. On natural attack rolls of 19 or 20, the target adds -1 to any attack it makes for the remainder of combat. This effect can be stacked to a maximum of -5 to hit.",
 			"categories": []
 		},
@@ -15781,10 +15161,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 84,
-				"cost": 6000
-			},
 			"description": "You stab a creature with an appendage steeped in poison. Make a melee attack on a creature, dealing {dice} {type} damage on a hit. On a natural attack roll of 16 or higher, the target is poisoned.",
 			"categories": []
 		},
@@ -15872,10 +15248,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 121,
-				"cost": 2500
-			},
 			"description": "Poisonous barbs sprout from your tail as you swing it at a creature. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. If the natural attack roll is a 19 or 20, the move scores a critical hit and the target is poisoned.",
 			"categories": []
 		},
@@ -15906,10 +15278,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 179,
-				"cost": 10800
 			},
 			"description": "You send forth a flurry of pollen at a target in range. Make a ranged attack roll, dealing {dice} {type} damage on a hit. If the target is an ally, this move automatically hits and heals for the amount of damage instead.",
 			"categories": [
@@ -15947,10 +15315,6 @@
 			},
 			"save": {
 				"attribute": "cha"
-			},
-			"tm": {
-				"id": 227,
-				"cost": 14200
 			},
 			"description": "You attack by controlling the target's item. The target must make a {save} or lose a hold of their item. On a failed save, you may immediately make one melee attack against one creature within 5 feet of the item. On a hit, the target takes {dice} {type} damage.\n\nAs a Bonus Action on your later turns, you can repeat the attack against a creature within 5 feet of the item.\n\nThe item follows within 5 feet of its owner, hovering nearby. The creature cannot benefit from the item while you control it. The items's owner may use an action on its turn to try and regain control of the item by repeating the {save}, ending the move's concentration on a successful save.",
 			"categories": []
@@ -16015,10 +15379,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 101,
-				"cost": 6400
 			},
 			"description": "You pounce at the target and leap away. Make a melee attack roll against a target, doing {dice} {type} damage on hit. If you hit, you may move an additional 10ft without invoking an attack of opportunity.",
 			"categories": []
@@ -16139,10 +15499,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 159,
-				"cost": 9100
 			},
 			"description": "A ray of light bursts out of your gemstone, damaging a creature in range. Make a ranged attack, dealing {dice} {type} damage on a hit.",
 			"categories": []
@@ -16449,10 +15805,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 17,
-				"cost": 8000
-			},
 			"description": "You sense incoming danger and are able to quickly avoid it. When you are the recipient of the damage and/or effects of a move, you may automatically avoid the damage/effects on the first instance of this reaction. On future instances of this move in the same combat, you must roll higher than a 15 on a d20 roll for the reaction to be successful. This reaction may not be used to guard against the damage/effects that result from a natural 20 attack roll.",
 			"categories": []
 		},
@@ -16484,10 +15836,6 @@
 			},
 			"save": {
 				"attribute": "wis"
-			},
-			"tm": {
-				"id": 115,
-				"cost": 2500
 			},
 			"description": "You send a beam of invisible, psychic energy at a target in range. The target must make a {save}, taking {dice} {type} damage on a fail, or half as much on a success. Creatures that fail the save by 5 or more become confused.",
 			"categories": []
@@ -16540,10 +15888,6 @@
 				"value": 40,
 				"unit": "feet"
 			},
-			"tm": {
-				"id": 77,
-				"cost": 4500
-			},
 			"description": "You sync up with a creature, copying any positive or negative stat changes affecting them due to weather or moves this combat.",
 			"categories": []
 		},
@@ -16575,10 +15919,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 29,
-				"cost": 7200
-			},
 			"description": "You tap into a target’s mind, damaging their will to fight. Make a ranged attack on a creature in range, doing {dice} {type} damage on a hit. If the natural attack roll is 18 or higher, the target becomes confused.",
 			"categories": []
 		},
@@ -16609,10 +15949,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 139,
-				"cost": 8700
 			},
 			"description": "You materialize a set of large fangs that bite at a creature with psychic energy. Make a ranged attack, dealing {dice} {type} damage on a hit.  On a hit, this move bypasses and ends Aurora Veil, and is not affected by Light Screen and Reflect.",
 			"categories": [
@@ -16647,10 +15983,6 @@
 			"save": {
 				"attribute": "wis"
 			},
-			"tm": {
-				"id": 255,
-				"cost": 4900
-			},
 			"description": "You attack the target with unpleasant sound waves. The target must make a {save}. On failure, the target takes {dice} {type} damage, and it can't regain Hit Points until the end of your next turn.",
 			"categories": [
 				"sound"
@@ -16676,10 +16008,6 @@
 				"type": "emanation",
 				"value": 40,
 				"unit": "feet"
-			},
-			"tm": {
-				"id": 185,
-				"cost": 4900
 			},
 			"description": "Psychic energy emerges from the ground in a {shape}, centered on you. Begininng at the end of your turn, for three rounds, all grounded creatures in the affected area are unable to use bonus actions. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from psychic-type moves activated inside the area.",
 			"categories": []
@@ -16833,10 +16161,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 3,
-				"cost": 6000
 			},
 			"description": "You materialize a psychic wave that shocks a creature. Make a ranged attack, dealing {dice} {type} damage on a hit.",
 			"categories": []
@@ -17053,10 +16377,6 @@
 			},
 			"save": {
 				"attribute": "wis"
-			},
-			"tm": {
-				"id": 60,
-				"cost": 5600
 			},
 			"description": "You send dark energy at a creature in range, reducing their will to fight. The target must make a {save}. On a failure, it must move to the bottom of the initiative order for this round only. Targets that have already taken their turn in this round are unaffected.",
 			"categories": []
@@ -17319,10 +16639,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 18,
-				"cost": 4400
-			},
 			"description": "You summon a heavy rainfall that covers the battlefield for 5 rounds.",
 			"categories": []
 		},
@@ -17522,10 +16838,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 33,
-				"cost": 8000
-			},
 			"description": "When you are subject to a melee attack, use your reaction to take half the damage dealt now and on any melee attack that targets you until the beginning of your next turn.",
 			"categories": []
 		},
@@ -17634,10 +16946,6 @@
 				"modifier": "MOVE",
 				"type": "healing"
 			},
-			"tm": {
-				"id": 44,
-				"cost": 6000
-			},
 			"description": "When you activate this move, you fall asleep after the end of your turn, but recover {dice} hit points in the process. You do not regain health if you do not fall asleep.",
 			"categories": []
 		},
@@ -17694,10 +17002,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 27,
-				"cost": 5200
 			},
 			"description": "You lash out at a creature, in hopes it will please your trainer. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. When you make this attack, add an additional bonus to hit and damage equal to the number of levels you are above zero on the Loyalty Chart.",
 			"categories": []
@@ -17783,10 +17087,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 182,
-				"cost": 4900
-			},
 			"description": "You unleash an all out attack that is stronger the less HP you have. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. If you are below 50% of your maximum health, double the damage. If you are at 10% or below of your maximum health, triple the damage instead. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities.",
 			"categories": []
 		},
@@ -17865,10 +17165,6 @@
 			"save": {
 				"attribute": "wis"
 			},
-			"tm": {
-				"id": 5,
-				"cost": 4000
-			},
 			"description": "You release an intimidating roar at all opponents within 15 feet of you. Opponents that can hear you must make a {save}. On a fail, the creature is frightened and is forced to immediately move up to its speed in a straight line away from you, or until met with an impeding force (does not provoke attacks of opportunity). A creature frightened in this way must make a {save} at the end of each of its turns to remove the effect.",
 			"categories": [
 				"sound"
@@ -17935,10 +17231,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 148,
-				"cost": 3600
-			},
 			"description": "You summon a series of rocks that fire their way towards a creature. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
 			"categories": [
 				"ballistic",
@@ -17989,10 +17281,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 69,
-				"cost": 8000
-			},
 			"description": "You polish your body to a fine shine to reduce friction. When activating this move, increase your AC by 2 and your speed by 20 feet for three rounds.",
 			"categories": []
 		},
@@ -18022,10 +17310,6 @@
 			},
 			"save": {
 				"attribute": "str"
-			},
-			"tm": {
-				"id": 80,
-				"cost": 5600
 			},
 			"description": "Large boulders appear above a target creature in range, crashing down on top of them. The target must make a {save}, taking {dice} {type} damage and falling prone on a failed save, and half as much without falling prone on a success.",
 			"categories": []
@@ -18115,10 +17399,6 @@
 			},
 			"save": {
 				"attribute": "str"
-			},
-			"tm": {
-				"id": 39,
-				"cost": 5200
 			},
 			"description": "You summon a collection of boulders that attempt to surround a target. Force a creature in range to make a {save}, taking {dice} {type} damage and becoming restrained on a failure, or half as much without being restrained on a success. If it fails, at the beginning of each of its turns, it may attempt to escape with a {save}. While a creature is restrained, you may continue this move, as an action, to deal an automatic {dice} {type} damage.",
 			"categories": []
@@ -18262,10 +17542,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 19,
-				"cost": 5600
-			},
 			"description": "You land on the ground to rest your body. When activated, your flying speed decreases to zero, and you lose your flying type for as long as you remain on the ground. At the beginning of your next turn, if you have not left the ground, recover {dice} hit points.",
 			"dice": {
 				"class": "custom",
@@ -18337,10 +17613,6 @@
 			},
 			"save": {
 				"attribute": "wis"
-			},
-			"tm": {
-				"id": 48,
-				"cost": 5200
 			},
 			"description": "You attack a creature's mind with a harsh song. Select a target in range and force them to make a {save}. On a failure, the target takes {dice} {type} damage. If an ally in range also knows this move, they can join in the song as a reaction to add an additional damage dice.",
 			"categories": [
@@ -18452,10 +17724,6 @@
 				"value": 50,
 				"unit": "feet"
 			},
-			"tm": {
-				"id": 20,
-				"cost": 6000
-			},
 			"description": "You and all allies in range boost their defense. For the duration, anyone affected is protected from any new negative status conditions.",
 			"categories": []
 		},
@@ -18543,10 +17811,6 @@
 			"save": {
 				"attribute": "str"
 			},
-			"tm": {
-				"id": 208,
-				"cost": 4900
-			},
 			"description": "You attempt to summon a wave of sand that surrounds the target. Force a creature in range to make a {save}, taking {dice} {type} damage and becoming restrained on a failure, or half as much without being restrained on a success. If it fails, at the beginning of each of its turns, it may attempt to escape with a {save}. While a creature is restrained, you may continue this move, as an action, to deal an automatic {dice} {type} damage.",
 			"categories": []
 		},
@@ -18603,10 +17867,6 @@
 				"value": 100,
 				"unit": "feet"
 			},
-			"tm": {
-				"id": 37,
-				"cost": 8400
-			},
 			"description": "You stir up a massive sandstorm in a 50 foot radius, centered on a point in range. When a non rock-, steel-, or ground-type creature enters the area for the first time on their turn, or begins their turn inside the area, they take an amount of rock damage equal to half your level, rounded up. The Sandstorm lasts for 5 rounds.",
 			"categories": [
 				"wind"
@@ -18640,10 +17900,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 55,
-				"cost": 6000
-			},
 			"description": "You instantly boil water within you to a damaging temperature, blasting a creature with its heat. Make a ranged attack, dealing {dice} {type} damage on a hit. On a natural attack roll of 16 or more, the target is burned.",
 			"categories": []
 		},
@@ -18674,10 +17930,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 229,
-				"cost": 10800
-			},
 			"description": "You blast your scales at a foe in range. Make five ranged attacks against one target in range. On each hit, deal 1d4 {type} damage; if any attack hit, deal an additional MOVE {type} damage (maximum once).\n\nUntil the end of your next turn, you have +10ft of movement and -2 AC.",
 			"categories": [
 				"multistrike"
@@ -18706,10 +17958,6 @@
 			},
 			"save": {
 				"attribute": "wis"
-			},
-			"tm": {
-				"id": 107,
-				"cost": 2500
 			},
 			"description": "You put on your scariest face, attempting to frighten a creature. The creature must make a {save} or become frightened for the duration. A creature frightened in this way must make a {save} at the end of each of its turns to remove the effect.",
 			"categories": []
@@ -18743,10 +17991,6 @@
 			},
 			"save": {
 				"attribute": "con"
-			},
-			"tm": {
-				"id": 242,
-				"cost": 10800
 			},
 			"description": "You throw scorching sand at a target to burn them. Make a ranged attack against a creature within 40 feet. On a hit, you deal {dice} {type} damage, and the target must make a {save}, becoming Burned on a failure.",
 			"categories": []
@@ -18968,10 +18212,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 145,
-				"cost": 8700
-			},
 			"description": "You fire a series of hard seeds that crash down on top of a creature in range. Make a ranged attack, dealing {dice} {type} damage on a hit.",
 			"categories": [
 				"ballistic"
@@ -19107,10 +18347,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 30,
-				"cost": 6000
-			},
 			"description": "You hurl a sphere of magical darkness at a creature. Make a ranged attack, doing {dice} {type} damage on a hit. On a hit, the ball expands and covers the creatures face, granting them a -2 to hit on any attack they make before the end of their next turn.",
 			"categories": [
 				"ballistic"
@@ -19172,10 +18408,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 65,
-				"cost": 5600
 			},
 			"description": "You strike with a sharp claw made from shadows in range. Make a ranged attack, dealing {dice} {type} damage on a hit. This moves scores a critical hit on natural attack rolls of 19 and 20.",
 			"categories": []
@@ -19694,10 +18926,6 @@
 			"save": {
 				"attribute": "wis"
 			},
-			"tm": {
-				"id": 156,
-				"cost": 2500
-			},
 			"description": "You attempt to swap abilities with a creature for the duration. Select a target in range and force them to make a {save}. On a failure, choose which abilities to switch for the duration.",
 			"categories": []
 		},
@@ -19725,10 +18953,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 246,
-				"cost": 4900
 			},
 			"description": "You skitter behind the target to attack. Make a melee attack roll against a target, doing {dice} {type} damage on a hit. If the attack roll was made with advantage, you deal an extra Xd6 {type} damage, where X is your current level divided by two, rounded up (e.g. at level 11, you deal an additional 6d6 damage).\n\nYou don't need Advantage on the attack roll if at least one of your allies is within 5 feet of the target, the ally doesn't have the Incapacitated condition, and you don't have Disadvantage on the attack roll.",
 			"higherLevels": "The damage dice roll for this move changes to 1d10 at level 5, 2d8 at level 10, and 5d4 at level 17. This dice change does NOT apply to the extra Xd6 damage dealt when triggered.",
@@ -19832,10 +19056,6 @@
 			},
 			"save": {
 				"attribute": "str"
-			},
-			"tm": {
-				"id": 58,
-				"cost": 5200
 			},
 			"description": "You reach out in an attempt to lift a creature up in the air for a slamming attack. When you activate this move, make a melee attack roll. On a hit, the target is grappled. The target may use its next action to attempt a {save} to get free. If it does not succeed, and you maintain your concentration, you may use your action on your next turn to lift the creature into the air, dropping it to the ground for {dice} {type} damage. Flying-type creatures or ones under the effect of Levitate, Magnet Rise or other similar abilities/moves are not damaged.",
 			"categories": []
@@ -19993,10 +19213,6 @@
 			"range": {
 				"type": "varies"
 			},
-			"tm": {
-				"id": 88,
-				"cost": 4500
-			},
 			"description": "This move can only be used if you are asleep. While asleep, activate a random move from your move list (not Sleep Talk) that has a move time of 1 action.",
 			"categories": []
 		},
@@ -20065,10 +19281,6 @@
 			"save": {
 				"attribute": "con"
 			},
-			"tm": {
-				"id": 36,
-				"cost": 7200
-			},
 			"description": "You hurl a mass of sludge that may poison creatures in its blast. Make a ranged attack roll against a target. On a hit, the target takes {dice} {type} damage and the area in a 5 foot radius around it is covered in sludge until the beginning of your next turn. Any creature that enters this area for the first time on their turn, or is in that area at the beginning of their turn must make a {save} or become poisoned.",
 			"categories": [
 				"ballistic"
@@ -20105,10 +19317,6 @@
 			"save": {
 				"attribute": "con"
 			},
-			"tm": {
-				"id": 34,
-				"cost": 7200
-			},
 			"description": "You summon a wave of poisonous sludge that crashes down on creatures in a {shape}. Any creature caught in the blast must make a {save}, taking {dice} {type} damage on a failure, or half as much on a success. If a creature fails the saving throw by 5 or more, it becomes poisoned.",
 			"categories": []
 		},
@@ -20139,10 +19347,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 23,
-				"cost": 4400
-			},
 			"description": "You throw a solid piece of stone at a creature in an attempt to bring them to the ground. Make a ranged attack, dealing {dice} {type} damage on a hit. On a hit, any \"Raised\" creature is knocked prone and loses its flying speed and immunity to ground-type moves until it can move again. This move can target creatures in the invulnerable stage of Fly or Bounce.",
 			"categories": []
 		},
@@ -20168,10 +19372,6 @@
 				"class": "30",
 				"modifier": "MOVE",
 				"type": "damage"
-			},
-			"tm": {
-				"id": 67,
-				"cost": 5600
 			},
 			"description": "You pinpoint the perfect place to strike a creature with a horn as strong as steel. This move is guaranteed to hit for {dice} {type} damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves.",
 			"categories": []
@@ -20333,10 +19533,6 @@
 			"save": {
 				"attribute": "wis"
 			},
-			"tm": {
-				"id": 95,
-				"cost": 4400
-			},
 			"description": "You release a harsh growl at a creature, damaging their willpower. Force a creature to make a {save}. On a failure, the target takes {dice} {type} damage, and if you are the target of its next attack, the attack is rolled at disadvantage.",
 			"categories": [
 				"sound"
@@ -20454,10 +19650,6 @@
 				"value": 60,
 				"unit": "feet"
 			},
-			"tm": {
-				"id": 134,
-				"cost": 15000
-			},
 			"description": "You cover the battlefield in a snowstorm. While concentrating, Ice-type creatures in range have +1 to AC.",
 			"higherLevels": "The AC bonus for this move changes to +2 at level 5, +3 at level 10, and +4 at level 17.",
 			"categories": []
@@ -20556,10 +19748,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 22,
-				"cost": 8800
-			},
 			"description": "When you use this move, soak in solar energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a {shape} of solar energy, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save. If this move is used in harsh sunlight, double your MOVE modifier for damage and it can be used on the turn it is activated, without concentration.",
 			"categories": []
 		},
@@ -20590,10 +19778,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 219,
-				"cost": 2700
 			},
 			"description": "When you activate this move, you use your action gathering in solar energy to prepare to strike with blades.  On your next turn, if you keep your concentration, use an action to make a melee attack, dealing {dice} {type} damage on a hit. If this move is used in harsh sunlight, double your MOVE modifier for damage and it can be used on the turn it is activated, without concentration.",
 			"categories": [
@@ -20918,10 +20102,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 152,
-				"cost": 4900
-			},
 			"description": "You set a trap of spikes that hurts creature that come into battle. If a trainer is in range and switches out a creature, you can spend a reaction to make a ranged attack on the incoming creature with spikes that come out of the ground, doing {dice} {type} damage on a hit.",
 			"categories": []
 		},
@@ -21087,10 +20267,6 @@
 			"save": {
 				"attribute": "wis"
 			},
-			"tm": {
-				"id": 209,
-				"cost": 2500
-			},
 			"description": "When hit with an attack, you can spend a reaction to attempt to drain the attacker’s PP, if they are in range. Force the attacker to make a {save}. On a fail, roll a d4. The PP of the move that attacked you is decreased by that number.",
 			"higherLevels": "PP is drained by 1d6 at level 5, 1d8 at level 10, and 1d10 at level 17.",
 			"categories": []
@@ -21238,10 +20414,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 170,
-				"cost": 6600
-			},
 			"description": "You quickly summon a trap of sharp rocks that hurts a creature entering the battle. When a creature is switched into battle, you may use your reaction to make a ranged attack, dealing {dice} {type} damage to the incoming creature on a hit.",
 			"categories": []
 		},
@@ -21337,10 +20509,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 204,
-				"cost": 14200
-			},
 			"description": "You fire a beam of steel that is collected from your entire body in an {shape}, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save.\n\nThe recoil of using this move sends you backward 10 feet opposite of the direction the beam was targetted, and you fall prone. If you were grounded when using this move, you take 2d6 typeless damage. If you were flying or hovering, calculate fall damage accordingly.",
 			"categories": []
 		},
@@ -21397,10 +20565,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 51,
-				"cost": 5600
 			},
 			"description": "You strike a target hard with outstretched wings. Make a melee attack on a creature, doing {dice} {type} damage on a hit. If the natural attack roll is 19 or 20, your AC is increased by 1 until the end of your next turn.",
 			"categories": []
@@ -21505,10 +20669,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 150,
-				"cost": 2500
-			},
 			"description": "Driven by frustration, you aggressively attack.  Make a melee attack, dealing {dice} {type} damage on a hit.  If you last attack missed, double the dice roll for damage.",
 			"categories": []
 		},
@@ -21572,10 +20732,6 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"tm": {
-				"id": 71,
-				"cost": 8000
-			},
 			"description": "The earth moves beneath a target’s feet as sharp stone pierce through the ground underneath them. Creatures in a 10 foot radius centered on a point you choose in range must make a {save}, taking {dice} {type} damage on a fail, or half as much on a save.",
 			"categories": []
 		},
@@ -21612,10 +20768,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 130,
-				"cost": 3600
 			},
 			"description": "You use your psychic energy to attack with stored power. Make a ranged attack, dealing {dice} {type} damage on a hit. Add an additional damage dice for each stat-changing effect currently applied to the user. (For example, if you or an ally has activated a move(s) that is currently boosting the user's AC, speed, and STAB, add three additional damage dice. A move that affects multiple ability scores is considered \"one\" effect for this boost)",
 			"categories": []
@@ -21816,10 +20968,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 114,
-				"cost": 2500
-			},
 			"description": "You resist an attack, fighting back against a creature. When hit by a melee attack, you may use a reaction to immediately retaliate with an attack roll of your own, dealing {dice} {type} damage on a hit.",
 			"categories": []
 		},
@@ -21915,10 +21063,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 90,
-				"cost": 7500
-			},
 			"description": "You surrender a quarter of your current HP (rounded down) into temporary hit points in the form of a shield. During this time, the shield grants you immunity to NEW negative conditions (including things like prone, restrained, etc.) and it absorbs all outside damage that you would normally take until it is destroyed. The shield is considered \"typeless\" for damage resistance, vulnerability, and immunities. The shield and user cannot be healed while active, and it does not absorb self-inflicted conditions or damage caused by pre-existing burn, poison, or confusion. The shield breaks when it is reduced to 0 hit points, and the user takes the overflow damage. Sound- based moves bypass the shield (Supersonic, Grass Whistle, etc.)",
 			"categories": []
 		},
@@ -21966,10 +21110,6 @@
 			},
 			"range": {
 				"type": "self"
-			},
-			"tm": {
-				"id": 11,
-				"cost": 4400
 			},
 			"description": "You change the weather to harsh sunlight for 5 rounds.",
 			"categories": []
@@ -22027,10 +21167,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 213,
-				"cost": 6600
-			},
 			"description": "You lash out with an incredible fang attack. Make a melee attack, doing {dice} {type} damage on a hit. On critical hits, instead of doubling the dice, you can choose to do damage equal to half the target’s current HP (up to a maximum of 5x your level)..",
 			"categories": []
 		},
@@ -22059,10 +21195,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 238,
-				"cost": 6600
 			},
 			"description": "You electrify your body and drop onto the target. Make a melee attack, doing {dice} {type} damage on a hit. On a miss, you take typeless damage equal to your proficiency bonus.",
 			"categories": []
@@ -22156,10 +21288,6 @@
 			"save": {
 				"attribute": "str"
 			},
-			"tm": {
-				"id": 94,
-				"cost": 7200
-			},
 			"description": "You summon a fast-moving wave in front of you that crashes down on creatures in a {shape}. Any creature caught in the blast must make a {save}, taking {dice} {type} damage and falling prone on a failure, or half as much without falling prone on a success.",
 			"categories": []
 		},
@@ -22221,10 +21349,6 @@
 			},
 			"save": {
 				"attribute": "wis"
-			},
-			"tm": {
-				"id": 87,
-				"cost": 5000
 			},
 			"description": "Force a target in range to make a {save}. On a fail, the target is confused, but it adds +2 to its attack rolls while confused.",
 			"categories": []
@@ -22333,10 +21457,6 @@
 				"modifier": "0",
 				"type": "damage"
 			},
-			"tm": {
-				"id": 124,
-				"cost": 3600
-			},
 			"description": "You fire two projectiles at any creature you choose in range. They do not have to target the same creature. Each hit for {dice} {type} damage. This move also targets creature during the invulnerable stages of Dig, Fly, Bounce, etc.",
 			"higherLevels": "You fire 4 projectiles at level 5, 5 projectiles at level 10, and 6 projectiles at level 17.",
 			"categories": []
@@ -22387,10 +21507,6 @@
 			},
 			"description": "A frenetic dance uplifts your fighting spirit. Your movements create the mirage of 2 swords near you. For each mirage, you gain a +1 bonus to attack rolls. Once per move, when you hit with an attack roll, you may expend up to two mirages to deal additional damage equal to this move's MOVE modifier for each mirage spent.\n\nThis move ends when all sword mirages are expended.",
 			"higherLevels": "Your dance improves, granting you an additional sword mirage at each of levels 5, 10, and 17.",
-			"tm": {
-				"id": 75,
-				"cost": 8000
-			},
 			"dice": {
 				"class": "0",
 				"modifier": "MOVE",
@@ -22657,10 +21773,6 @@
 				"value": 30,
 				"unit": "feet"
 			},
-			"tm": {
-				"id": 168,
-				"cost": 6600
-			},
 			"description": "You whip up a turbulent whirlwind that boosts the speed of all allies in a {shape}, centered on you. You and any ally that starts their turn inside the area has their speed doubled until the end of their turn.",
 			"categories": [
 				"wind"
@@ -22690,10 +21802,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 102,
-				"cost": 7400
 			},
 			"description": "You sacrifice your own position to take down a creature. Roll a melee attack roll. On a hit, you deal {dice} {type} damage, taking a quarter of the total damage (rounded down) in typeless recoil.",
 			"categories": []
@@ -22771,10 +21879,6 @@
 			},
 			"save": {
 				"attribute": "wis"
-			},
-			"tm": {
-				"id": 12,
-				"cost": 4400
 			},
 			"description": "You taunt a creature to only attack you with damaging attacks. Choose a target in range and force it to make a {save}. On a failure, the target can only use damaging attacks that target you for the duration.",
 			"categories": []
@@ -22975,10 +22079,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 235,
-				"cost": 4900
-			},
 			"description": "Spurred by desperation, you attack the target. Make a melee attack, dealing {dice} {type} damage on a hit. If you missed an attack roll last turn, then add an additional damage die to your damage roll.",
 			"categories": []
 		},
@@ -23013,10 +22113,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 205,
-				"cost": 9100
 			},
 			"description": "You unleash the power of your tera type as a focused beam of elemental energy. Make a ranged attack against a creature, doing {dice} damage on hit. If you are terastallized, the type of this damage is the same as your tera type. Otherwise, it is normal.",
 			"categories": []
@@ -23139,10 +22235,6 @@
 			},
 			"save": {
 				"attribute": "dex"
-			},
-			"tm": {
-				"id": 46,
-				"cost": 5200
 			},
 			"description": "You lash out with a quick attack that may steal a creature’s held item. Make a melee attack against a creature, doing {dice} {type} damage on a hit. If the user does not have an item held, the target must make a {save} or have their item stolen by the user.",
 			"categories": []
@@ -23277,10 +22369,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 248,
-				"cost": 6600
-			},
 			"description": "You focus in on an attack at the target’s throat. Make a melee attack, dealing {dice} {type} damage on a hit. On hit, the target is unable to activate sound-based moves for its next 1d4 turns.",
 			"categories": [],
 			"optional": "On a hit, the target is unable to perform spells with verbal components for the same number of turns."
@@ -23315,10 +22403,6 @@
 			},
 			"save": {
 				"attribute": "dex"
-			},
-			"tm": {
-				"id": 25,
-				"cost": 8400
 			},
 			"description": "Powerful electric energy arcs out from you, hitting any creature in a {shape}, centered on you. Creatures caught in the area must make a {save}, taking {dice} {type} damage on a fail, and half as much on a success. Creatures that fail the saving throw by 5 or more become paralyzed. Creatures in range that are in flight or in the invulnerable stage of Fly or Bounce take double damage from this move.",
 			"categories": []
@@ -23382,10 +22466,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 109,
-				"cost": 8700
-			},
 			"description": "You attempt to pierce a creature with electric fangs. Make a melee attack, dealing {dice} {type} damage on a hit. On a natural attack roll of 19 or 20, the target is paralyzed and flinches.",
 			"categories": [
 				"biting"
@@ -23416,10 +22496,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 143,
-				"cost": 6200
 			},
 			"description": "Your punches are imbued with electric energy. Make a melee attack on a target, doing {dice} {type} damage on a hit. On a natural attack roll of 19 or 20, the target is paralyzed.",
 			"categories": [
@@ -23480,10 +22556,6 @@
 			"save": {
 				"attribute": "con"
 			},
-			"tm": {
-				"id": 73,
-				"cost": 5000
-			},
 			"description": "You send a wave of electric energy that surrounds a creature in range. The target must make a {save} or become paralyzed.",
 			"categories": []
 		},
@@ -23514,10 +22586,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 24,
-				"cost": 7200
 			},
 			"description": "You send a powerful bolt of electricity at a target in range. Make a ranged attack roll, doing {dice} {type} damage on a hit. On a natural attack roll of 19 or 20, the target is paralyzed.",
 			"categories": []
@@ -23725,10 +22793,6 @@
 			"save": {
 				"attribute": "wis"
 			},
-			"tm": {
-				"id": 41,
-				"cost": 6000
-			},
 			"description": "You send a dark energy to torment a creature in range that attacks you. When hit by a melee or ranged attack, force the target to make a {save}. On a failure, the target cannot use the same move that hit you on its next turn.",
 			"categories": []
 		},
@@ -23753,10 +22817,6 @@
 			},
 			"save": {
 				"attribute": "con"
-			},
-			"tm": {
-				"id": 6,
-				"cost": 8000
 			},
 			"description": "You send a downpour of potent, poisonous rain in a 5 foot radius, centered on a point within range. Targets in the area must make a {save} or become badly poisoned.",
 			"categories": []
@@ -23783,10 +22843,6 @@
 			},
 			"save": {
 				"attribute": "con"
-			},
-			"tm": {
-				"id": 153,
-				"cost": 4900
 			},
 			"description": "You quickly summon a trap of poisonous spikes around a creature that enters the battle. When a creature is switched into battle, you may use your reaction to force a creature to make a {save}, becoming poisoned on a failure. If the creature fails by 5 or more, it becomes badly poisoned instead.",
 			"categories": []
@@ -23841,10 +22897,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 118,
-				"cost": 15000
 			},
 			"description": "You attack suddenly as if leaping out from tall grass. Make a melee attack, dealing {dice} {type} damage on a hit. With each successful hit from this move, increase your movement speed by 5 until you are incapacitated, are switched out, or the combat ends. (Maximum of +30 to movement speed)",
 			"categories": []
@@ -23946,10 +22998,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 164,
-				"cost": 6600
-			},
 			"description": "You move quickly to attempt to swap held items with a creature. Make a melee attack roll against a creature, swapping held items with them on a hit.",
 			"categories": []
 		},
@@ -23967,10 +23015,6 @@
 			},
 			"range": {
 				"type": "self"
-			},
-			"tm": {
-				"id": 92,
-				"cost": 5000
 			},
 			"description": "The world around you seems to spin for a moment, and the whole battlefield is hit with a bizarre feeling. Starting at the beginning of the next round of combat after you activate this move, the initiative order is permanently reversed.",
 			"categories": []
@@ -24057,10 +23101,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 240,
-				"cost": 9100
 			},
 			"description": "You strike out with three consecutive kicks. Make three melee attack rolls in order, doing {dice} {type} damage on each hit. As soon as one attack misses, the move is over.",
 			"categories": []
@@ -24308,10 +23348,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 89,
-				"cost": 5600
-			},
 			"description": "You lash out with a quick strike before you make a getaway. Make a melee attack, dealing {dice} {type} damage on a hit. After this move is activated, a trainer must switch out the user as a free action.",
 			"categories": []
 		},
@@ -24340,10 +23376,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 256,
-				"cost": 3600
 			},
 			"description": "You react to the target's movement and strike with the heel of your palm. When targeted by a melee attack, you may use your reaction to attempt to strike a creature before its attack is rolled. Make a melee attack, dealing {dice} {type} damage on a hit.",
 			"categories": []
@@ -24380,10 +23412,6 @@
 			},
 			"save": {
 				"attribute": "con"
-			},
-			"tm": {
-				"id": 220,
-				"cost": 6600
 			},
 			"description": "You cause an uproar on the battlefield in a {shape}, centered on you, for three rounds of combat. During the uproar, your action is spent continuing the move (without spending PP), and any creature in range wakes and is prevented from falling asleep. (This include creatures that would purposefully fall asleep using moves like Rest) In addition, creatures in the area at the start of their turns must make a {save}, taking {dice} {type} damage on a fail, or half as much on a success.",
 			"categories": [
@@ -24452,10 +23480,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 214,
-				"cost": 4900
-			},
 			"description": "You whirl your fists with a fast attack that pushes a quick burst of wind at a creature in range. Make a ranged attack on a creature, dealing {dice} {type} damage on a hit.",
 			"categories": []
 		},
@@ -24518,10 +23542,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 9,
-				"cost": 5200
 			},
 			"description": "You attempt to drench a creature in poisonous liquid. Make a ranged attack on a creature, dealing {dice} {type} damage on a hit. If the target is already poisoned, double the dice roll for the damage",
 			"categories": []
@@ -24663,10 +23683,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 72,
-				"cost": 5600
-			},
 			"description": "You lash out with a quick, electric strike before you make a getaway. Make a melee attack, dealing {dice} {type} damage on a hit. After this move is activated, a trainer must switch out the user as a free action.",
 			"categories": []
 		},
@@ -24785,10 +23801,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 190,
-				"cost": 9100
-			},
 			"description": "You send a column of water towards a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. After you land a hit, any ally that uses another Pledge move in the same round automatically hits.",
 			"categories": []
 		},
@@ -24818,10 +23830,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 111,
-				"cost": 2500
 			},
 			"description": "You send a wave of ultrasonic aquatic energy at a creature in range. Make a ranged attack roll, dealing {dice} {type} damage on a hit. On a natural attack roll of 17 or higher, the target is confused.",
 			"categories": [
@@ -24943,10 +23951,6 @@
 			"save": {
 				"attribute": "str"
 			},
-			"tm": {
-				"id": 98,
-				"cost": 6000
-			},
 			"description": "You create an intense waterfall that crashes down on creatures in a 10 foot radius, centered on a point within range. Creatures in the area must make a {save} or take {dice} {type} damage and fall prone on a fail, or half as much on a save.",
 			"categories": []
 		},
@@ -25012,10 +24016,6 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"tm": {
-				"id": 222,
-				"cost": 3600
-			},
 			"description": "You send a powerful ball of energy that changes type based on the surrounding weather. Make a ranged attack, dealing {dice} normal damage on a hit. If any of the following weather conditions are active, then double the damage dice and change the type of damage to the respective type indicated in the table.",
 			"table": {
 				"type": "table",
@@ -25079,10 +24079,6 @@
 			},
 			"save": {
 				"attribute": "str"
-			},
-			"tm": {
-				"id": 236,
-				"cost": 3600
 			},
 			"description": "You create a wave of water that swirls around a creature in range. Make a ranged attack roll. On a hit, the target takes {dice} {type} damage and is restrained. At the beginning of each of its turns, it may attempt to escape with a {save}. On each successive turn, if the creature is still restrained, you may use this move again (as an action) and automatically hit.",
 			"categories": []
@@ -25226,10 +24222,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 93,
-				"cost": 7200
-			},
 			"description": "You shroud yourself in electricity and charge at a creature. Make a melee attack, dealing {dice} {type} damage on a hit, but taking 1/4 of the damage (rounded down) in typeless recoil.",
 			"categories": []
 		},
@@ -25255,10 +24247,6 @@
 			},
 			"attack": {
 				"scope": "ranged"
-			},
-			"tm": {
-				"id": 61,
-				"cost": 6000
 			},
 			"description": "You send a sinister, white-hot flame at a creature attempting to inflict a burn. Make a ranged attack roll on a target, causing burn on a hit.",
 			"categories": []
@@ -25412,10 +24400,6 @@
 			"range": {
 				"type": "self"
 			},
-			"tm": {
-				"id": 1,
-				"cost": 8000
-			},
 			"description": "You get your adrenaline pumping and go into a frenzy. While worked up, you add +2 to all attack rolls. Your worked up status ends if you are incapacitated or if your turn ends and you have not attacked a hostile target since your last turn, or taken any damage since then.",
 			"categories": []
 		},
@@ -25532,10 +24516,6 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"tm": {
-				"id": 81,
-				"cost": 6000
-			},
 			"description": "You cross your claws for a scissor-like slashing attack. Make a melee attack against a creature, dealing {dice} {type} damage on a hit.",
 			"categories": [
 				"slicing"
@@ -25620,10 +24600,6 @@
 			},
 			"attack": {
 				"scope": "melee"
-			},
-			"tm": {
-				"id": 137,
-				"cost": 15000
 			},
 			"description": "You focus all of your willpower into your head and ram it into a creature. Make a melee attack, dealing {dice} {type} damage on a hit. If the natural attack roll is 17 or higher, the target flinches.",
 			"categories": []

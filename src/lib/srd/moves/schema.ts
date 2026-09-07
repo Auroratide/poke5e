@@ -133,12 +133,6 @@ export const MoveJson = z.object({
 	}).optional().meta({
 		description: "Present if the move has save.",
 	}),
-	tm: z.object({
-		id: z.int(),
-		cost: z.int(),
-	}).optional().meta({
-		description: "Present if the move is available as a TM.",
-	}),
 	description: z.string().meta({
 		description: "Rules text for the move, as markdown.\nSpecial text describes substitutions:\n{dice}: Damage dice depending on class.\n{type}: The move's type.\n{shape}: The move's AoE shape.\n{save}: Move's save description.",
 	}),

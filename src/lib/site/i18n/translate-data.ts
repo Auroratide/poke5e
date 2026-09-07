@@ -1,7 +1,7 @@
 import { getLocale } from "./paraglide/runtime"
 import type { DeepPartial } from "$lib/utils/types"
 
-type Translatable = { id: string, name?: string, aliases?: string[] }
+type Translatable = { id: string | number, name?: string, aliases?: string[] }
 
 export async function translateData<T extends Translatable>(items: T[], getTranslatedItems: (locale: string) => Promise<DeepPartial<T>[]>, locale?: string): Promise<T[]> {
 	locale = locale ?? getLocale()
