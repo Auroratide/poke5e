@@ -7,6 +7,7 @@ import { EvolutionsSrdClient } from "./evolutions/client"
 import { ItemsSrdClient } from "./items/client"
 import { MovesSrdClient } from "./moves/client"
 import { PokemonSrdClient } from "./pokemon/client"
+import { TmsSrdClient } from "./tms/client"
 
 export class SrdClient {
 	readonly abilities: AbilitiesSrdClient
@@ -17,6 +18,7 @@ export class SrdClient {
 	readonly pokemon: PokemonSrdClient
 	readonly evolutions: EvolutionsSrdClient
 	readonly items: ItemsSrdClient
+	readonly tms: TmsSrdClient
 
 	constructor(readonly edition: Edition, customFetch = fetch) {
 		this.abilities = new AbilitiesSrdClient(edition, customFetch)
@@ -27,6 +29,7 @@ export class SrdClient {
 		this.pokemon = new PokemonSrdClient(edition, customFetch)
 		this.evolutions = new EvolutionsSrdClient(edition, customFetch)
 		this.items = new ItemsSrdClient(edition, customFetch)
+		this.tms = new TmsSrdClient(edition, customFetch)
 	}
 
 	static async forEachEdition<T>(f: (client: SrdClient) => Promise<T>, customFetch = fetch): Promise<Record<Edition, T>> {
