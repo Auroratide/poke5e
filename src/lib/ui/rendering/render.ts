@@ -1,6 +1,5 @@
-import type { Renderer, PNode, TableNode } from "./types"
-
-const makeParagraph = (node: PNode) => `<p>${node}</p>`
+import { renderMarkdown } from "./markdown"
+import type { Renderer, TableNode } from "./types"
 
 const makeTable = (node: TableNode) => `<table>
 	<thead>
@@ -18,7 +17,7 @@ const makeTable = (node: TableNode) => `<table>
 export const renderHtml: Renderer = (text) =>
 	text.map(node => {
 		if (typeof node === "string") {
-			return makeParagraph(node)
+			return renderMarkdown(node)
 		} else if (typeof node === "object" && node.type === "table") {
 			return makeTable(node)
 		} else {

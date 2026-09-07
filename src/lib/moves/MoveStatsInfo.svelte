@@ -29,7 +29,7 @@
 				{/if}
 			</dt>
 			<dd class="row">
-				<span>{value.damage.dice}{#if value.damage.mod > 0}&nbsp;+ {value.damage.mod}{/if}</span>
+				<span>{#if value.damage.dice !== "0"}{value.damage.dice}{/if}{#if value.damage.mod > 0}&nbsp;+ {value.damage.mod}{/if}</span>
 			</dd>
 		</div>
 	{/if}
