@@ -1,0 +1,1 @@
+{"id":"calm-mind","name":"Paz Mental","type":"psychic","power":[],"time":{"unit":"action"},"pp":10,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"description":"Despejas tu mente de toda distracción. Durante la duración del movimiento, duplicas tu bonificador por STAB cuando infliges daño de tu tipo.","categories":[],"aliases":["Calm Mind"]}

@@ -1,0 +1,1 @@
+{"id":"mist","name":"Mist","type":"ice","power":[],"time":{"unit":"action"},"pp":15,"duration":{"unit":"minute","value":1},"range":{"type":"distance","value":30,"unit":"feet"},"description":"A light mist surrounds a target, offering a protective barrier. The target is immune to negative stat changes for the duration, but any current effects are still in place.","categories":[]}

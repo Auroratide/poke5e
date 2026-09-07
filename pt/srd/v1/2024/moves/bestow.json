@@ -1,0 +1,1 @@
+{"id":"bestow","name":"Conceder","type":"normal","power":[],"time":{"unit":"bonus action"},"pp":3,"duration":{"unit":"instantaneous"},"range":{"type":"distance","value":30,"unit":"feet"},"description":"Como uma ação bônus, você pode passar seu item segurado para uma criatura disposta no alcance, se o alvo não estiver segurando um item.","categories":[],"aliases":["Bestow"]}

@@ -1,0 +1,1 @@
+{"id":"dragon-dance","name":"Dança do Dragão","type":"dragon","power":[],"time":{"unit":"action"},"pp":10,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"description":"Você executa uma dança mística, fortalecendo-se. Pela duração, dobre seu bônus de proficiência ao fazer ataques.","categories":["dance"],"aliases":["Dragon Dance"]}

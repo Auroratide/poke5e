@@ -1,0 +1,1 @@
+{"id":"no-retreat","name":"Sem Retirada","type":"fighting","power":[],"time":{"unit":"action"},"pp":3,"duration":{"unit":"minute","value":1},"range":{"type":"self"},"description":"Durante a duração, você possui vantagem em rolagens de ataque e testes de resistência. Você não pode trocar ou fugir.","categories":[],"aliases":["No Retreat"]}

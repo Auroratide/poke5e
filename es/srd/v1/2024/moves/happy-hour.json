@@ -1,0 +1,1 @@
+{"id":"happy-hour","name":"Paga extra","type":"normal","power":[],"time":{"unit":"action"},"pp":15,"duration":{"unit":"instantaneous"},"range":{"type":"melee"},"description":"Celebras tu inminente victoria con un pequeño baile. El dinero del premio otorgado al final de la batalla se duplica.","categories":[],"aliases":["Happy Hour"]}

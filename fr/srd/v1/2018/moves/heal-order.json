@@ -1,0 +1,1 @@
+{"id":"heal-order","name":"Heal Order","type":"bug","power":["con"],"time":{"unit":"action"},"pp":5,"duration":{"unit":"instantaneous"},"range":{"type":"self"},"dice":{"class":"custom","tiers":["4d4","3d6","5d6","8d6"],"modifier":"MOVE","type":"healing"},"description":"You summon forth your underlings to heal your wounds. Regain {dice} hit points.","categories":[]}

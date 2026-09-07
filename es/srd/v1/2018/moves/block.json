@@ -1,0 +1,1 @@
+{"id":"block","name":"Bloqueo","type":"normal","power":[],"time":{"unit":"reaction"},"pp":3,"duration":{"unit":"instantaneous"},"range":{"type":"distance","value":50,"unit":"feet"},"description":"Si una criatura a tu alcance intenta huir o ser intercambiada, puedes usar tu reacción para detenerla en seco, impidiendo que esto ocurra.","categories":[],"aliases":["Block"]}

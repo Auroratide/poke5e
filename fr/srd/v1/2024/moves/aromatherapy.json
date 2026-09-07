@@ -1,0 +1,1 @@
+{"id":"aromatherapy","name":"Aromatherapy","type":"grass","power":[],"time":{"unit":"action"},"pp":3,"duration":{"unit":"instantaneous"},"range":{"type":"self"},"shape":{"type":"emanation","value":10,"unit":"feet"},"description":"You release a pleasant aroma that empowers your allies. All allies within 10 feet of you are cured of all negative status ailments.","categories":[]}

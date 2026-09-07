@@ -1,0 +1,1 @@
+{"id":"noble-roar","name":"Rugido Nobre","type":"normal","power":[],"time":{"unit":"reaction"},"pp":3,"duration":{"unit":"instantaneous"},"range":{"type":"self"},"description":"Você solta um rugido impressionante que intimida um alvo. Quando for alvo de um ataque, use esta reação para impor desvantagem na rolagem de ataque.","categories":["sound"],"aliases":["Noble Roar"]}

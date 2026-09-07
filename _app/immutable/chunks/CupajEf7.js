@@ -1,0 +1,1 @@
+import{oc as e}from"./nSaPc681.js";var t=class t extends e{get contest(){return this.data.contest}get appeal(){return this.data.appeal}get jam(){return this.data.jam}get effect(){return this.data.effect}static fromJson=(e,n)=>{if(!(e==null||n==null))return new t({contest:e.contest,appeal:e.appeal,jam:e.jam,effect:{id:n.id,name:n.name,effect:n.effect}})}};export{t};

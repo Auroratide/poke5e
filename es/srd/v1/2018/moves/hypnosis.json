@@ -1,0 +1,1 @@
+{"id":"hypnosis","name":"Hipnosis","type":"psychic","power":["int","wis"],"time":{"unit":"action"},"pp":10,"duration":{"unit":"instantaneous"},"range":{"type":"distance","value":30,"unit":"feet"},"save":{"attribute":"wis"},"description":"Intentas dormir a una criatura. El objetivo debe realizar una {save}. Si falla, queda dormido.","categories":[],"aliases":["Hypnosis"]}

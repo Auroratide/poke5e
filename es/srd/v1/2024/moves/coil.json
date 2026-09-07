@@ -1,0 +1,1 @@
+{"id":"coil","name":"Enrosque","type":"poison","power":[],"time":{"unit":"action"},"pp":3,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"description":"Te enroscas y concentras tu poder. Durante la duración, obtienes +1 a tus tiradas de ataque, tiradas de daño y a tu CA.","categories":[],"aliases":["Coil"]}

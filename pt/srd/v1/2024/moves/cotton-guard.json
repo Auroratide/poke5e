@@ -1,0 +1,1 @@
+{"id":"cotton-guard","name":"Manto de Algodão","type":"grass","power":[],"time":{"unit":"action"},"pp":5,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"description":"Você se protege envolvendo seu corpo em algodão espesso e macio. Pela duração, sua CA aumenta em +2.","categories":[],"aliases":["Cotton Guard"]}

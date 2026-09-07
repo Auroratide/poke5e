@@ -1,0 +1,1 @@
+{"id":"cosmic-power","name":"Masa Cósmica","type":"psychic","power":[],"time":{"unit":"action"},"pp":10,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"description":"Invocas una fuerza mística para que acuda en tu ayuda. Durante la duración, tienes ventaja en todas las tiradas de salvación.","categories":[],"aliases":["Cosmic Power"]}

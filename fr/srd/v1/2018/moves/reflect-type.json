@@ -1,0 +1,1 @@
+{"id":"reflect-type","name":"Reflect Type","type":"normal","power":[],"time":{"unit":"action"},"pp":3,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"distance","value":40,"unit":"feet"},"description":"Your body flashes into a mirror for just a moment. When it returns to normal, you take on the type of a creature in range.","categories":[]}

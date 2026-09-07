@@ -1,0 +1,1 @@
+{"id":"sunny-day","name":"Sonnentag","type":"fire","power":[],"time":{"unit":"action"},"pp":3,"duration":{"unit":"round","value":5},"range":{"type":"self"},"description":"You change the weather to harsh sunlight for 5 rounds.","categories":[],"aliases":["Sunny Day"]}

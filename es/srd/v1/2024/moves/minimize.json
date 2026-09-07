@@ -1,0 +1,1 @@
+{"id":"minimize","name":"Reducción","type":"normal","power":[],"time":{"unit":"action"},"pp":5,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"description":"Te vuelves más pequeño ante las criaturas, aumentando tu evasión. Mientras dure el efecto, obtienes un bonificador adicional de +2 a tu CA.","categories":[],"aliases":["Minimize"]}

@@ -1,0 +1,1 @@
+{"id":"defense-curl","name":"Encolher Defesa","type":"normal","power":[],"time":{"unit":"action"},"pp":20,"duration":{"unit":"instantaneous"},"range":{"type":"self"},"description":"Você se enrola em uma bola, aumentando sua defesa. Até seu próximo turno, você ganha +4 na CA e resistência contra ataques normais.","categories":[],"aliases":["Defense Curl"]}

@@ -1,0 +1,1 @@
+{"id":"mega-kick","name":"Mega Kick","type":"normal","power":["str"],"time":{"unit":"action"},"pp":10,"duration":{"unit":"instantaneous"},"range":{"type":"melee"},"dice":{"class":"120","modifier":"MOVE","type":"damage"},"attack":{"scope":"melee"},"description":"Make a melee attack against a target, doing {dice} {type} damage on a hit.","categories":[]}

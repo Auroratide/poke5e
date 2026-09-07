@@ -1,0 +1,1 @@
+{"id":"cosmic-power","name":"Poder Cósmico","type":"psychic","power":[],"time":{"unit":"action"},"pp":10,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"description":"Você invoca uma força mística para ajudá-lo. Pela duração, você tem vantagem em todas as salvaguardas.","categories":[],"aliases":["Cosmic Power"]}

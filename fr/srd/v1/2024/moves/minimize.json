@@ -1,0 +1,1 @@
+{"id":"minimize","name":"Minimize","type":"normal","power":[],"time":{"unit":"action"},"pp":5,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"description":"You appear smaller to your creatures, increasing your evasion. For the duration, you gain an additional +2 to your AC.","categories":[]}

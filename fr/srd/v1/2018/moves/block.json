@@ -1,0 +1,1 @@
+{"id":"block","name":"Block","type":"normal","power":[],"time":{"unit":"reaction"},"pp":3,"duration":{"unit":"instantaneous"},"range":{"type":"distance","value":50,"unit":"feet"},"description":"If a creature within range attempts to flee or switch out, you may use your reaction to stop it dead in its tracks, keeping this from happening.","categories":[]}

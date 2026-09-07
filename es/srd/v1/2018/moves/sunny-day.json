@@ -1,0 +1,1 @@
+{"id":"sunny-day","name":"Día Soleado","type":"fire","power":[],"time":{"unit":"action"},"pp":3,"duration":{"unit":"round","value":5},"range":{"type":"self"},"description":"Cambias el clima a sol abrasador durante 5 rondas.","categories":[],"aliases":["Sunny Day"]}

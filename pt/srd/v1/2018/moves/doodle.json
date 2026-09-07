@@ -1,0 +1,1 @@
+{"id":"doodle","name":"Rabisco","type":"normal","power":[],"time":{"unit":"action"},"pp":10,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"distance","value":30,"unit":"feet"},"description":"Você captura a essência de um alvo em um desenho. Você e aliados em até 5 pés copiam uma habilidade do alvo.","categories":[],"aliases":["Doodle"]}

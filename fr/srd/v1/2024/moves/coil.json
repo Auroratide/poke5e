@@ -1,0 +1,1 @@
+{"id":"coil","name":"Coil","type":"poison","power":[],"time":{"unit":"action"},"pp":3,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"description":"You coil up and concentrate your power. For the duration, gain +1 to your attack rolls, damage rolls, and AC.","categories":[]}

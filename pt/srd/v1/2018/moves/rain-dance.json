@@ -1,0 +1,1 @@
+{"id":"rain-dance","name":"Dança da Chuva","type":"water","power":[],"time":{"unit":"action"},"pp":3,"duration":{"unit":"round","value":5},"range":{"type":"self"},"description":"Você invoca uma chuva forte que cobre o campo de batalha por 5 rodadas.","categories":[],"aliases":["Rain Dance"]}

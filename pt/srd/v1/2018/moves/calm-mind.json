@@ -1,0 +1,1 @@
+{"id":"calm-mind","name":"Mente Serena","type":"psychic","power":[],"time":{"unit":"action"},"pp":10,"duration":{"unit":"minute","value":1,"concentration":true},"range":{"type":"self"},"description":"Você limpa sua mente de todas as distrações. Pela duração, dobre seu bônus de STAB ao causar dano do seu tipo.","categories":[],"aliases":["Calm Mind"]}

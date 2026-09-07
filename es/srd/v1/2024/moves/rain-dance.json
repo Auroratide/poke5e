@@ -1,0 +1,1 @@
+{"id":"rain-dance","name":"Danza Lluvia","type":"water","power":[],"time":{"unit":"action"},"pp":3,"duration":{"unit":"round","value":5},"range":{"type":"self"},"description":"Invocas una lluvia intensa que cubre el campo de batalla durante 5 rondas.","categories":[],"aliases":["Rain Dance"]}

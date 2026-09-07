@@ -1,0 +1,1 @@
+{"id":"bestow","name":"Bestow","type":"normal","power":[],"time":{"unit":"bonus action"},"pp":3,"duration":{"unit":"instantaneous"},"range":{"type":"distance","value":30,"unit":"feet"},"description":"As a bonus action, you may pass your held item to a willing creature in range, if the target is not currently holding an item.","categories":[]}

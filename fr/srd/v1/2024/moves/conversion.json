@@ -1,0 +1,1 @@
+{"id":"conversion","name":"Conversion","type":"normal","power":[],"time":{"unit":"bonus action"},"pp":10,"duration":{"unit":"round","value":1},"range":{"type":"self"},"description":"Until the beginning of your next turn, take on a new type for resistances/vulnerabilities/immunities equal to one of the types of a move you currently know.","categories":[]}
