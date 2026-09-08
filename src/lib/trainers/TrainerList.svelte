@@ -3,7 +3,7 @@
 	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
 	import type { Trainer } from "./types"
 	import { Url } from "$lib/site/url"
-	import { TOKEN_DEFAULTCOLOR } from "$lib/dnd/token"
+	import TrainerAvatar from "./TrainerAvatar.svelte"
 
 	let {
 		list,
@@ -20,14 +20,8 @@
 	{#each list as trainer (trainer.id)}
 		<reorder-item>
 			<a class="bubble" href="{Url.trainers(trainer.readKey)}">
-				<div class="art" style:--token-color="{trainer.token?.color ?? TOKEN_DEFAULTCOLOR}">
-					{#if trainer.avatar?.href}
-						<div class="img-avatar-container" aria-hidden="true">
-							<img class="img-avatar" src="{trainer.avatar?.href}" alt="{trainer.name}" />
-						</div>
-					{:else}
-						<div class="default-avatar" aria-hidden="true">{trainer.name.slice(0, 2)}</div>
-					{/if}
+				<div class="art">
+					<TrainerAvatar {trainer} />
 				</div>
 				<div class="name">{trainer.name}</div>
 				<div class="info">
@@ -89,23 +83,6 @@
 		/* margin-inline-end: 0.5em; */
 	}
 
-	.img-avatar-container {
-		background: var(--token-color);
-		display: block;
-		inline-size: 100%;
-		aspect-ratio: 1;
-		border-radius: 1.5em;
-		border: 0.125em solid var(--skin-bg);
-		overflow: hidden;
-	}
-
-	.img-avatar {
-		display: block;
-		inline-size: 100%;
-		aspect-ratio: 1;
-		object-fit: contain;
-	}
-
 	.name {
 		grid-area: name;
 		font-size: 1.125em;
@@ -134,20 +111,6 @@
 		grid-area: id;
 		display: flex;
 		align-items: center;
-	}
-
-	.default-avatar {
-		background: var(--token-color);
-		inline-size: 100%;
-		aspect-ratio: 1;
-		border-radius: 1.5em;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: var(--font-sz-neptune);
-		font-weight: bold;
-		border: 0.125em solid var(--skin-bg);
-		color: var(--skin-bg-text);
 	}
 
 	.handle-container {

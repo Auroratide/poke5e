@@ -1,13 +1,14 @@
 import { derived, writable } from "svelte/store"
 import type { TrainerData } from "./data"
 import { provider } from "./data"
-import type { InventoryItem, LearnedMove, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from "./types"
+import type { InventoryItem, LearnedMove, PokemonId, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from "./types"
 import { error } from "$lib/site/errors"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import { TrainerLocalStorage } from "./data/TrainerLocalStorage"
 import { TagList } from "$lib/poke5e/tags"
 import type { TransferCode } from "./pokemon-transfer"
 import * as list from "$lib/utils/list"
+import { PokemonStorage } from "./pokemon-storage"
 
 type AllTrainers = (TrainerData & WithUpdater & WithRemover & WithTags)[]
 
@@ -37,8 +38,9 @@ type TrainerUpdater = {
 	move: (info: LearnedMove, options?: UpdaterOptions) => Promise<void>
 	addToTeam: (pokemon: PokemonSpecies) => Promise<TrainerPokemon>
 	acceptTransfer: (code: TransferCode) => Promise<TrainerPokemon>
-	reorderTeam: (info: TrainerPokemon[]) => Promise<void>
+	reorderPokemon: (storage: PokemonStorage, order: TrainerPokemon[]) => Promise<void>
 	removeFromTeam: (id: string) => Promise<void>
+	setStorage: (id: PokemonId, storage: PokemonStorage) => Promise<void>
 }
 type WithUpdater = {
 	update?: TrainerUpdater
@@ -451,12 +453,24 @@ export const createStore = () => {
 								throw e
 							})
 						},
-						reorderTeam: (order: TrainerPokemon[]) => {
+						// One list at a time: `order` is the whole party or the whole box,
+						// never a mixture. reorder_pokemon counts from 1 within each
+						// storage, so neither list has to be told about the other, and the
+						// one that was not dragged keeps the ranks it had.
+						reorderPokemon: (storage: PokemonStorage, order: TrainerPokemon[]) => {
 							return provider.reorderPokemonTeam(data.writeKey, data.info.readKey, order).then(() => {
 								storeUpdateOne(readKey, (prev) => {
+									// The store keeps one flat roster, so the new order is poured
+									// back into the slots that storage already occupied, leaving
+									// the other list exactly where it is.
 									return {
 										...prev,
-										pokemon: order,
+										pokemon: list.applyOrderToSubset(
+											prev.pokemon,
+											prev.pokemon.filter((it) => it.storage === storage),
+											order,
+											(it) => it.id,
+										),
 									}
 								})
 							}).catch((e: Error) => {
@@ -476,6 +490,41 @@ export const createStore = () => {
 								})
 							}).catch((e: Error) => {
 								error.show("removePokemon", e)
+								throw e
+							})
+						},
+						// Deposit and withdraw. The store keeps one flat roster, so this only
+						// flips a field and moves the pokemon to where the server put it.
+						// Getting that wrong would not lose anything, but the list would jump
+						// when the trainer is next loaded.
+						setStorage: (id: PokemonId, storage: PokemonStorage) => {
+							return provider.setPokemonStorage(data.writeKey, data.info.readKey, id, storage).then(() => {
+								storeUpdateOne(readKey, (prev) => {
+									const moved = prev.pokemon.find((it) => it.id === id)
+									if (moved == null) return prev
+
+									const updated = { ...moved, storage }
+
+									// set_pokemon_storage hands an arriving pokemon MAX(rank) + 1
+									// among the list it joins, so it lands at the end of that
+									// list -- after the last pokemon already there, or at the end
+									// of the roster if it is the first. The list it left keeps
+									// its ranks, and so its order.
+									const rest = prev.pokemon.filter((it) => it.id !== id)
+									const lastInDestination = rest.reduce((last, it, i) => it.storage === storage ? i : last, -1)
+									const insertAt = lastInDestination < 0 ? rest.length : lastInDestination + 1
+
+									return {
+										...prev,
+										pokemon: [
+											...rest.slice(0, insertAt),
+											updated,
+											...rest.slice(insertAt),
+										],
+									}
+								})
+							}).catch((e: Error) => {
+								error.show("setPokemonStorage", e)
 								throw e
 							})
 						},
