@@ -26,12 +26,27 @@ test("trainer end to end flow", async ({ page }) => {
 	await trainers.addPokemon("Appletun")
 	await trainers.expectType("grass", "dragon")
 
+	// Reordering the party
+	await trainers.expectPartyOrder("Fritz", "Appletun")
+	await trainers.reorderDownInParty("Fritz")
+	await trainers.expectPartyOrder("Appletun", "Fritz")
+
 	// The Box
-	await trainers.deposit("Fritz", 1)
-	await trainers.deposit("Appletun", 2)
+	await trainers.deposit("Appletun", 1)
+	await trainers.deposit("Fritz", 2)
 	await trainers.openBox()
 	await trainers.expectInBox("Appletun")
 	await trainers.filterBox("apple", "Appletun", "Fritz")
+
+	// Reordering the box, which is ranked separately from the party
+	await trainers.expectBoxOrder("Appletun", "Fritz")
+	await trainers.reorderDownInBox("Appletun")
+	await trainers.expectBoxOrder("Fritz", "Appletun")
+	// Reloaded, because a box that counts its ranks from the party's would look
+	// right until the server was asked again
+	await trainers.reopenBox()
+	await trainers.expectBoxOrder("Fritz", "Appletun")
+
 	await trainers.withdraw("Fritz", 1)
 	await trainers.withdraw("Appletun", 0)
 	// Closed again so the open drawer cannot sit over the party badges below.

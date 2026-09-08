@@ -8,7 +8,7 @@
 	import { matchesPokemonFilter } from "../pokemon-filter"
 	import BoxDrawer from "./BoxDrawer.svelte"
 	import type { TrainerStore } from "../trainers"
-	import type { PokemonId } from "../types"
+	import type { PokemonId, TrainerPokemon } from "../types"
 	import { Button, VisuallyHidden } from "$lib/ui/elements"
 	import PokemonSummary from "./PokemonSummary.svelte"
 	import StorageButton from "./StorageButton.svelte"
@@ -53,13 +53,20 @@
 		reordering = true
 		// The drag reports indices into what is rendered -- the party, minus
 		// anything the filter hides -- so the move has to be mapped back onto the
-		// whole roster before it can be saved.
+		// whole party before it can be saved. The box is ranked separately and is
+		// not involved.
 		const reorderedVisible = list.reorderOne(filtered, e.detail.oldIndex, e.detail.newIndex)
-		const newList = list.applyOrderToSubset($trainer.pokemon, filtered, reorderedVisible, (it) => it.id)
-		$trainer.update?.reorderTeam(newList).finally(() => {
+		const newParty = list.applyOrderToSubset(party, filtered, reorderedVisible, (it) => it.id)
+		$trainer.update?.reorderPokemon(PokemonStorage.Party, newParty).finally(() => {
 			reordering = false
 		})
 	}
+
+	// The drawer has already mapped its own drag onto the whole box; all that is
+	// left is to say which list it belongs to. It shows its own saving state, so
+	// this resolves when the save settles either way.
+	const onBoxReorder = (order: TrainerPokemon[]) =>
+		$trainer.update?.reorderPokemon(PokemonStorage.Box, order).catch(() => {}) ?? Promise.resolve()
 
 	// On a narrow screen the box and the detail card cannot both be open: the side
 	// column is only a third of the viewport while a card is showing, leaving the
@@ -171,6 +178,7 @@
 		{editable}
 		onexpand={onBoxExpand}
 		onwithdraw={onWithdraw}
+		onreorder={onBoxReorder}
 	/>
 </div>
 

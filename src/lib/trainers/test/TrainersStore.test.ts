@@ -304,15 +304,15 @@ describe("update.pokemon", () => {
 		expect(after.pokemon[0].nickname).toEqual("Mimikyu")
 	})
 
-	test("reorders the team", async () => {
+	test("reorders the party", async () => {
 		// given: a trainer with two pokemon
 		const { store } = await createTrainer("Wisteria")
 		await addPokemon(store, "Eevee")
 		await addPokemon(store, "Mimikyu")
 		const original = get(store).pokemon
 
-		// when: the team is reordered
-		await get(store).update.reorderTeam(list.reorderOne(original, 1, 0))
+		// when: the party is reordered
+		await get(store).update.reorderPokemon(PokemonStorage.Party, list.reorderOne(original, 1, 0))
 
 		// then: the store reflects the new order
 		const after = get(store)
@@ -361,17 +361,34 @@ describe("update.setStorage", () => {
 		const boxed = await addPokemon(store, "Snorlax")
 		await get(store).update.setStorage(boxed.id, PokemonStorage.Box)
 
-		// when: the party alone is reordered, mapped back onto the whole roster the
-		// way the roster component does before saving
-		const roster = get(store).pokemon
-		const party = roster.filter(isInParty)
-		const reordered = list.reorderOne(party, 1, 0)
-		await get(store).update.reorderTeam(list.applyOrderToSubset(roster, party, reordered, (it) => it.id))
+		// when: the party alone is reordered
+		const party = get(store).pokemon.filter(isInParty)
+		await get(store).update.reorderPokemon(PokemonStorage.Party, list.reorderOne(party, 1, 0))
 
 		// then: the party order changed and the boxed pokemon is still there
 		const after = get(store)
 		expect(after.pokemon.filter(isInParty).map((it) => it.nickname)).toEqual(["Mimikyu", "Eevee"])
 		expect(after.pokemon.filter(isInBox).map((it) => it.nickname)).toEqual(["Snorlax"])
+	})
+
+	test("reorders the box without disturbing the party", async () => {
+		// given: a trainer with two of four pokemon in the box
+		const { store } = await createTrainer("Elderflower")
+		await addPokemon(store, "Eevee")
+		await addPokemon(store, "Mimikyu")
+		const firstBoxed = await addPokemon(store, "Snorlax")
+		const secondBoxed = await addPokemon(store, "Litwick")
+		await get(store).update.setStorage(firstBoxed.id, PokemonStorage.Box)
+		await get(store).update.setStorage(secondBoxed.id, PokemonStorage.Box)
+
+		// when: the box alone is reordered
+		const boxed = get(store).pokemon.filter(isInBox)
+		await get(store).update.reorderPokemon(PokemonStorage.Box, list.reorderOne(boxed, 1, 0))
+
+		// then: the box order changed and the party did not move
+		const after = get(store)
+		expect(after.pokemon.filter(isInBox).map((it) => it.nickname)).toEqual(["Litwick", "Snorlax"])
+		expect(after.pokemon.filter(isInParty).map((it) => it.nickname)).toEqual(["Eevee", "Mimikyu"])
 	})
 
 	test("releases a pokemon straight out of the box", async () => {

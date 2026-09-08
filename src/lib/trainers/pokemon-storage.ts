@@ -10,11 +10,13 @@ import type { TrainerPokemon } from "./types"
  *   decides which of the two on-screen lists a pokemon renders in. Roster.svelte
  *   splits that list with the predicates below, and it is the only place that
  *   does; everything downstream is handed a party or a box, never both.
- * - `rank`, the column that orders a roster, is shared by the two lists. A boxed
- *   pokemon keeps its rank while it sits in the box, so a deposit never
- *   renumbers the party; a withdrawal takes MAX(rank) + 1, so it rejoins at the
- *   end. That is why reorder_pokemon has to be handed the whole roster and never
- *   just the party -- see reorderTeam in trainers.ts.
+ * - `rank`, the column that orders a roster, counts from 1 within each of the
+ *   two lists rather than across both. A pokemon moving between them takes
+ *   MAX(rank) + 1 among the pokemon it joins, so it arrives at the end of that
+ *   list, and the list it left keeps its order. Two pokemon in different lists
+ *   sharing a rank is expected and means nothing. That is why reorder_pokemon is
+ *   handed one list at a time -- see reorderPokemon in trainers.ts -- and why
+ *   the party and the box are dragged independently.
  * - Only an explicit deposit or withdrawal moves a pokemon. update_pokemon does
  *   not write the column at all, so saving a stale copy of a pokemon (from the
  *   editor, a rest, a tag change) cannot relocate it.

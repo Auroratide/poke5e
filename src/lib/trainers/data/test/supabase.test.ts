@@ -172,6 +172,17 @@ test("reordering pokemon", async () => {
 	const receivedPokemon = receivedTrainer.pokemon.map((it) => it.pokemonId.data)
 
 	expect(receivedPokemon).toEqual(["kirlia", "litwick", "mimikyu"])
+
+	// when: two of them are boxed and the box alone is dragged
+	await provider.setPokemonStorage(addedTrainer.writeKey, addedTrainer.info.readKey, firstAddedPokemon.id, PokemonStorage.Box)
+	await provider.setPokemonStorage(addedTrainer.writeKey, addedTrainer.info.readKey, secondAddedPokemon.id, PokemonStorage.Box)
+	await provider.reorderPokemonTeam(addedTrainer.writeKey, addedTrainer.info.readKey, [secondAddedPokemon, firstAddedPokemon])
+
+	// then: the box takes the new order and the party, which was not sent, keeps
+	// the one it had
+	const afterBoxReorder = await provider.getTrainer(addedTrainer.info.readKey)
+	expect(afterBoxReorder.pokemon.filter((it) => it.storage === PokemonStorage.Box).map((it) => it.pokemonId.data)).toEqual(["kirlia", "mimikyu"])
+	expect(afterBoxReorder.pokemon.filter((it) => it.storage === PokemonStorage.Party).map((it) => it.pokemonId.data)).toEqual(["litwick"])
 })
 
 test("moving pokemon between the party and the box", async () => {

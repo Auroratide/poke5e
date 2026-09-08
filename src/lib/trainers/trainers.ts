@@ -38,7 +38,7 @@ type TrainerUpdater = {
 	move: (info: LearnedMove, options?: UpdaterOptions) => Promise<void>
 	addToTeam: (pokemon: PokemonSpecies) => Promise<TrainerPokemon>
 	acceptTransfer: (code: TransferCode) => Promise<TrainerPokemon>
-	reorderTeam: (info: TrainerPokemon[]) => Promise<void>
+	reorderPokemon: (storage: PokemonStorage, order: TrainerPokemon[]) => Promise<void>
 	removeFromTeam: (id: string) => Promise<void>
 	setStorage: (id: PokemonId, storage: PokemonStorage) => Promise<void>
 }
@@ -453,17 +453,24 @@ export const createStore = () => {
 								throw e
 							})
 						},
-						reorderTeam: (order: TrainerPokemon[]) => {
-							// The whole roster, boxed pokemon included: reorder_pokemon
-							// renumbers only the ids it is given, so a party-only list would
-							// leave the box on stale ranks colliding with the party's new
-							// 1..N. Roster.svelte maps a drag within the visible party back
-							// onto the full list for exactly this reason.
+						// One list at a time: `order` is the whole party or the whole box,
+						// never a mixture. reorder_pokemon counts from 1 within each
+						// storage, so neither list has to be told about the other, and the
+						// one that was not dragged keeps the ranks it had.
+						reorderPokemon: (storage: PokemonStorage, order: TrainerPokemon[]) => {
 							return provider.reorderPokemonTeam(data.writeKey, data.info.readKey, order).then(() => {
 								storeUpdateOne(readKey, (prev) => {
+									// The store keeps one flat roster, so the new order is poured
+									// back into the slots that storage already occupied, leaving
+									// the other list exactly where it is.
 									return {
 										...prev,
-										pokemon: order,
+										pokemon: list.applyOrderToSubset(
+											prev.pokemon,
+											prev.pokemon.filter((it) => it.storage === storage),
+											order,
+											(it) => it.id,
+										),
 									}
 								})
 							}).catch((e: Error) => {
@@ -487,9 +494,9 @@ export const createStore = () => {
 							})
 						},
 						// Deposit and withdraw. The store keeps one flat roster, so this only
-						// flips a field and, where the server moved the pokemon, moves it to
-						// the matching place in the array. Getting that wrong would not lose
-						// anything, but the list would jump when the trainer is next loaded.
+						// flips a field and moves the pokemon to where the server put it.
+						// Getting that wrong would not lose anything, but the list would jump
+						// when the trainer is next loaded.
 						setStorage: (id: PokemonId, storage: PokemonStorage) => {
 							return provider.setPokemonStorage(data.writeKey, data.info.readKey, id, storage).then(() => {
 								storeUpdateOne(readKey, (prev) => {
@@ -498,15 +505,22 @@ export const createStore = () => {
 
 									const updated = { ...moved, storage }
 
-									// set_pokemon_storage hands a pokemon rejoining the party
-									// rank MAX+1, so it comes back at the end. Leaving the party
-									// keeps its rank, and so its position -- which is what lets
-									// a deposit happen without renumbering the party.
+									// set_pokemon_storage hands an arriving pokemon MAX(rank) + 1
+									// among the list it joins, so it lands at the end of that
+									// list -- after the last pokemon already there, or at the end
+									// of the roster if it is the first. The list it left keeps
+									// its ranks, and so its order.
+									const rest = prev.pokemon.filter((it) => it.id !== id)
+									const lastInDestination = rest.reduce((last, it, i) => it.storage === storage ? i : last, -1)
+									const insertAt = lastInDestination < 0 ? rest.length : lastInDestination + 1
+
 									return {
 										...prev,
-										pokemon: storage === PokemonStorage.Party
-											? [...prev.pokemon.filter((it) => it.id !== id), updated]
-											: prev.pokemon.map((it) => it.id === id ? updated : it),
+										pokemon: [
+											...rest.slice(0, insertAt),
+											updated,
+											...rest.slice(insertAt),
+										],
 									}
 								})
 							}).catch((e: Error) => {

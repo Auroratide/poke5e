@@ -1,4 +1,4 @@
-import { expect } from "@playwright/test"
+import { expect, type Locator } from "@playwright/test"
 import { Ui } from "./Ui"
 
 export class TrainersPage {
@@ -122,6 +122,14 @@ export class TrainersPage {
 		await expect(this.box).toBeVisible()
 	}
 
+	/** Reloads the trainer, so what the box shows next came from the server. */
+	async reopenBox() {
+		console.log("  Reloading and opening the box again...")
+
+		await this.ui.page.reload()
+		await this.openBox()
+	}
+
 	async closeBoxWithEscape() {
 		console.log("  Closing the box with Escape...")
 
@@ -178,6 +186,69 @@ export class TrainersPage {
 
 		await expect(this.ui.heading(this.currentTrainerName)).toBeVisible()
 		await this.expectBoxCount(expectedBoxCount)
+	}
+
+	/**
+	 * The party and the box are ranked separately, so each is dragged on its own
+	 * and neither move may disturb the other.
+	 *
+	 * Driven by keyboard rather than by mouse: Alt+Arrow makes the same commit a
+	 * drag does, and is the only one a test can produce reliably. The save is
+	 * waited on so that a reload afterwards cannot race it.
+	 */
+	async reorderDownInParty(nickname: string) {
+		console.log(`  Moving ${nickname} down one place in the party...`)
+
+		await this.moveDown(this.partyList, nickname)
+	}
+
+	async reorderDownInBox(nickname: string) {
+		console.log(`  Moving ${nickname} down one place in the box...`)
+
+		await this.moveDown(this.boxList, nickname)
+	}
+
+	async expectPartyOrder(...nicknames: string[]) {
+		await this.expectOrder(this.partyList, nicknames)
+	}
+
+	async expectBoxOrder(...nicknames: string[]) {
+		await this.expectOrder(this.boxList, nicknames)
+	}
+
+	private async moveDown(list: Locator, nickname: string) {
+		const saved = this.ui.page.waitForResponse((res) => res.url().includes("reorder_pokemon"))
+
+		// The handle is named after the whole row, which leads with the species
+		// rather than the nickname, so the row is found first and the handle taken
+		// from it.
+		const row = list.locator("reorder-item").filter({ hasText: nickname })
+		await row.getByRole("button", { name: /^Reorder/ }).press("Alt+ArrowDown")
+
+		await saved
+	}
+
+	/**
+	 * By row text rather than by the badge's accessible name, which begins with
+	 * the sprite's species and so does not start with the nickname once a pokemon
+	 * has been renamed.
+	 */
+	private async expectOrder(list: Locator, nicknames: string[]) {
+		const rows = list.locator("reorder-item")
+
+		await expect(rows).toHaveCount(nicknames.length)
+		for (const [index, nickname] of nicknames.entries()) {
+			await expect(rows.nth(index)).toContainText(nickname)
+		}
+	}
+
+	/** The box's list carries a class of its own; the party's is the other one. */
+	private get boxList() {
+		return this.box.locator("reorder-list.box-list")
+	}
+
+	private get partyList() {
+		return this.ui.page.locator("reorder-list:not(.box-list)")
 	}
 
 	async filterBox(query: string, expectVisible: string, expectHidden: string) {

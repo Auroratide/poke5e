@@ -14,7 +14,7 @@
 	    on the positioned box this drawer anchors to.
 -->
 <script lang="ts">
-	import { SearchField } from "$lib/ui/forms"
+	import { Saveable, SearchField } from "$lib/ui/forms"
 	import { ChevronIcon } from "$lib/ui/icons"
 	import { DefaultTagSelectionMode, TagSelection, type TagList, type TagSelectionMode } from "$lib/poke5e/tags"
 	import { m } from "$lib/site/i18n"
@@ -24,6 +24,8 @@
 	import PokemonSummary from "./PokemonSummary.svelte"
 	import StorageButton from "./StorageButton.svelte"
 	import type { PokemonId, Trainer, TrainerPokemon } from "../types"
+	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
+	import * as list from "$lib/utils/list"
 
 	const BAR_ID = "box-drawer-bar"
 	const PANEL_ID = "box-drawer-panel"
@@ -36,6 +38,7 @@
 		editable = false,
 		onexpand,
 		onwithdraw,
+		onreorder,
 	}: {
 		/**
 		 * Owned by the roster, which closes the drawer when the detail column
@@ -53,6 +56,12 @@
 		 * reporting, so a rejection never reaches here.
 		 */
 		onwithdraw?: (id: PokemonId) => Promise<void>,
+		/**
+		 * The whole box in its new order. The box is ranked separately from the
+		 * party, so this never has to mention the party. Resolves once the save has
+		 * settled, either way; the roster owns the error reporting.
+		 */
+		onreorder?: (order: TrainerPokemon[]) => Promise<void>,
 	} = $props()
 
 	// Bound so closing the drawer can hand focus back to the control that opened
@@ -92,6 +101,22 @@
 			await onwithdraw?.(id)
 		} finally {
 			withdrawing = undefined
+		}
+	}
+
+	let reordering = $state(false)
+	const commitReorder = async (e: CustomEvent<ReorderListChangeEventDetail>) => {
+		if (e.detail.oldIndex === e.detail.newIndex) return
+
+		reordering = true
+		// The drag reports indices into what is rendered, so a move made while the
+		// box is filtered has to be mapped back onto the whole box before it is
+		// saved -- the same thing the party list does.
+		const reorderedVisible = list.reorderOne(filtered, e.detail.oldIndex, e.detail.newIndex)
+		try {
+			await onreorder?.(list.applyOrderToSubset(boxed, filtered, reorderedVisible, (it) => it.id))
+		} finally {
+			reordering = false
 		}
 	}
 
@@ -147,42 +172,55 @@
 		>
 			<TagSelection bind:checked={filteredTags} bind:mode={filterTagMode} {tags} />
 		</SearchField>
-		<!-- An empty list has two causes worth telling apart: nothing is stored, or
-		     the filter hid everything. -->
-		{#if filtered.length === 0}
-			<p class="empty">
-				{boxed.length === 0 ? m["trainers.boxIsEmpty"]() : m["trainers.noBoxMatches"]()}
-			</p>
-		{:else}
-			<ul class="box-list nolist">
-				{#each filtered as p (p.id)}
-					<li class="box-row">
-						<PokemonSummary trainer={trainer.readKey} pokemon={p}>
-							<span slot="actions" class="row-actions">
-								{#if editable}
-									<!-- Withdrawing is reversible by the party's own button, so it
-									     acts straight away rather than through a confirmation
-									     card. Releasing is not, so that one still asks. -->
-									<StorageButton
-										label={m["trainers.party"]()}
-										destination="party"
-										description={m["trainers.withdrawPokemon"]({ name: p.nickname })}
-										disabled={withdrawing != null}
-										onclick={withdraw(p.id)}
-									/>
-									<a
-										class="row-action danger"
-										href={Url.trainers(trainer.readKey, p.id, PageAction.removePokemon)}
-										title={m["trainers.releasePokemon"]({ name: p.nickname })}
-										aria-label={m["trainers.releasePokemon"]({ name: p.nickname })}
-									><span aria-hidden="true">&times;</span></a>
-								{/if}
-							</span>
-						</PokemonSummary>
-					</li>
-				{/each}
-			</ul>
-		{/if}
+		<!-- The scroll box is a wrapper rather than the list itself, because while a
+		     reorder is saving the list sits inside an overlay that would otherwise
+		     scroll away from the rows it is dimming. -->
+		<div class="box-scroll">
+			<!-- An empty list has two causes worth telling apart: nothing is stored,
+			     or the filter hid everything. -->
+			{#if filtered.length === 0}
+				<p class="empty">
+					{boxed.length === 0 ? m["trainers.boxIsEmpty"]() : m["trainers.noBoxMatches"]()}
+				</p>
+			{:else if editable}
+				<Saveable saving={reordering}>
+					<reorder-list class="box-list nolist" oncommit={commitReorder}>
+						{#each filtered as p (p.id)}
+							<reorder-item class="box-row">
+								<PokemonSummary trainer={trainer.readKey} pokemon={p} editable>
+									<span slot="actions" class="row-actions">
+										<!-- Withdrawing is reversible by the party's own button, so
+										     it acts straight away rather than through a confirmation
+										     card. Releasing is not, so that one still asks. -->
+										<StorageButton
+											label={m["trainers.party"]()}
+											destination="party"
+											description={m["trainers.withdrawPokemon"]({ name: p.nickname })}
+											disabled={withdrawing != null}
+											onclick={withdraw(p.id)}
+										/>
+										<a
+											class="row-action danger"
+											href={Url.trainers(trainer.readKey, p.id, PageAction.removePokemon)}
+											title={m["trainers.releasePokemon"]({ name: p.nickname })}
+											aria-label={m["trainers.releasePokemon"]({ name: p.nickname })}
+										><span aria-hidden="true">&times;</span></a>
+									</span>
+								</PokemonSummary>
+							</reorder-item>
+						{/each}
+					</reorder-list>
+				</Saveable>
+			{:else}
+				<ul class="box-list nolist">
+					{#each filtered as p (p.id)}
+						<li class="box-row">
+							<PokemonSummary trainer={trainer.readKey} pokemon={p} />
+						</li>
+					{/each}
+				</ul>
+			{/if}
+		</div>
 	</div>
 </section>
 
@@ -317,16 +355,15 @@
 		transition: visibility 0s 0s;
 	}
 
-	.box-list {
+	.box-scroll {
 		flex: 1;
 		min-block-size: 0;
 		overflow-y: auto;
+	}
+
+	.box-list {
 		margin: 0;
 		padding: 0;
-
-		/* No drag handles in the box, so the badges get the rest of the row
-		   instead of stopping at the party's 75%. */
-		--pokemon-summary-max-inline-size: 100%;
 	}
 
 	.box-row {
