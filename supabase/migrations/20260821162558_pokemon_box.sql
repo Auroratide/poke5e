@@ -11,9 +11,19 @@
 -- pokemon -- a daycare, a second box -- is a new value instead of a reshaped
 -- schema. Adding one means extending the constraint below.
 --
+-- rank is read as (storage, rank) from here on: each location orders itself,
+-- the party 1..N and the box 1..M, with gaps allowed. Two pokemon in different
+-- locations sharing a rank is expected and means nothing, because no list ever
+-- contains both of them. A single sequence spanning the two would have to be
+-- rewritten every time a pokemon crossed between them, and reordering either
+-- list would have to be handed the other one to avoid colliding with it.
+--
 -- get_pokemon RETURNS SETOF private.pokemon and SELECTs *, so the new column
 -- reaches the API with no signature change and no DROP FUNCTION -- the same
--- free ride the tags column got.
+-- free ride the tags column got. It still ORDERs BY rank alone, which now
+-- interleaves the two locations -- harmless, because the app filters the roster
+-- into a party and a box before showing it, and each of those comes out of the
+-- interleaving in its own order.
 
 -- Both clauses in one ALTER TABLE so the table is scanned once. On PG11+ a
 -- constant default is a catalog-only change, so no existing row is rewritten
@@ -30,8 +40,8 @@ ALTER TABLE private.pokemon
 -- Moving a pokemon is its own function rather than another parameter on
 -- update_pokemon. update_pokemon is handed a whole pokemon by the editor and by
 -- the tag updater, so threading the location through it would let any stale
--- copy of a pokemon silently relocate it. It also has to hand out a party rank
--- on the way in, and rank is deliberately something update_pokemon never
+-- copy of a pokemon silently relocate it. It also has to hand out a rank in the
+-- list being joined, and rank is deliberately something update_pokemon never
 -- touches -- only add_pokemon, reorder_pokemon and accept_pokemon_transfer do.
 --
 -- add_pokemon needs nothing: a caught pokemon always joins the party, which the
@@ -50,20 +60,23 @@ DECLARE affected_rows INT;
 BEGIN
 	UPDATE private.pokemon p SET
 		storage = _storage,
-		-- A pokemon rejoining the party goes to the end of it, the same rule
-		-- accept_pokemon_transfer uses. MAX, not COUNT, because gaps in the rank
-		-- sequence are allowed -- every deposit leaves one behind. The subquery
-		-- still sees this row's old rank, so the result is always greater than
-		-- every rank the trainer currently has.
+		-- A pokemon arriving anywhere goes to the end of the list it arrives in,
+		-- the same rule accept_pokemon_transfer uses for the party. Ranks are per
+		-- location, so only the destination's siblings are consulted: a deposit
+		-- takes MAX(rank) + 1 among the box, a withdrawal among the party. MAX,
+		-- not COUNT, because gaps are allowed -- every departure leaves one
+		-- behind. The subquery still sees this row in its old location, so it is
+		-- never counted among its new siblings.
 		--
 		-- The p.storage guard makes the call idempotent. Without it, moving a
-		-- pokemon that is already in the party (a double click, a stale tab)
-		-- would shunt it to the back again. Leaving the party never renumbers, so
-		-- the rest of the party keeps its order.
-		rank = CASE WHEN p.storage <> 'party' AND _storage = 'party' THEN (
+		-- pokemon to where it already is (a double click, a stale tab) would shunt
+		-- it to the back of its own list. Leaving a list never renumbers what
+		-- remains, so the pokemon left behind keep their order.
+		rank = CASE WHEN p.storage <> _storage THEN (
 			SELECT COALESCE(MAX(sibling.rank), 0) + 1
 			FROM private.pokemon sibling
 			WHERE sibling.trainer_id = p.trainer_id
+				AND sibling.storage = _storage
 		) ELSE p.rank END
 	FROM private.trainers t
 	WHERE
@@ -77,6 +90,67 @@ BEGIN
 	GET DIAGNOSTICS affected_rows := ROW_COUNT;
 
 	RETURN affected_rows;
+END $$ LANGUAGE PLPGSQL VOLATILE SECURITY DEFINER;
+
+-- Unchanged from 20260323132133_add_rank_to_pokemon.sql except for the final
+-- UPDATE. Now that each location orders itself, position in the array can no
+-- longer be the rank: renumbering a two-pokemon box 1, 2 while the party is
+-- also 1, 2 is correct, and renumbering the box 1..M from a party-sized offset
+-- would not be.
+--
+-- The caller says which pokemon to renumber and in what order; the storage
+-- column says which list each of them belongs to. Partitioning by it covers
+-- every case in one expression: a party-only call renumbers the party 1..N and
+-- leaves the box alone, a box-only call does the mirror of that, and a call
+-- carrying both splits them and numbers each from 1. The app only ever sends
+-- one list at a time -- the two are dragged separately -- but a mixed call is
+-- the natural thing to try and should not corrupt an ordering.
+--
+-- Pokemon the caller left out keep the rank they had, which is what makes a
+-- filtered list safe to drag: only what was on screen moves.
+CREATE OR REPLACE FUNCTION reorder_pokemon(
+	_write_key VARCHAR(32),
+	_ids INT[]
+) RETURNS VOID as $$
+DECLARE
+	_trainer_id UUID;
+	_mismatch_count INT;
+BEGIN
+	-- Resolve the trainer from the write key
+	SELECT id INTO _trainer_id
+	FROM private.trainers
+	WHERE write_key = _write_key;
+
+	IF NOT FOUND THEN
+		RAISE EXCEPTION 'Invalid write_key';
+	END IF;
+
+	-- Verify every supplied ID belongs to this trainer
+	SELECT COUNT(*) INTO _mismatch_count
+	FROM UNNEST(_ids) AS supplied_id
+	LEFT JOIN private.pokemon p ON p.id = supplied_id AND p.trainer_id = _trainer_id
+	WHERE p.id IS NULL;
+
+	IF _mismatch_count > 0 THEN
+		RAISE EXCEPTION 'Permission denied: % pokemon id(s) do not belong to this trainer', _mismatch_count;
+	END IF;
+
+	-- Reassign ranks by array position, counted from 1 within each location
+	UPDATE private.pokemon p
+	SET rank = ordered.rank
+	FROM (
+		SELECT
+			supplied.id,
+			ROW_NUMBER() OVER (
+				PARTITION BY existing.storage
+				ORDER BY supplied.position
+			) AS rank
+		FROM (
+			SELECT UNNEST(_ids) AS id, GENERATE_SUBSCRIPTS(_ids, 1) AS position
+		) AS supplied
+		JOIN private.pokemon existing ON existing.id = supplied.id
+	) AS ordered
+	WHERE p.id = ordered.id;
 END $$ LANGUAGE PLPGSQL VOLATILE SECURITY DEFINER;
 
 -- Unchanged from 20260609141522_transfer_codes.sql except for the storage

@@ -728,6 +728,12 @@ test("depositing and withdrawing pokemon", async () => {
 	expect(afterDeposit.filter((it) => it.storage === "box").map((it) => it.id)).toEqual([rosyRedId])
 	expect(afterDeposit.filter((it) => it.storage === "party").map((it) => it.id)).toEqual([sunnyYellowId, skyBlueId])
 
+	// Ranks count from 1 within a location, so the first pokemon in the box takes
+	// rank 1 no matter how big the party it left is
+	expect(afterDeposit.find((it) => it.id === rosyRedId).rank).toEqual(1)
+	expect(afterDeposit.find((it) => it.id === sunnyYellowId).rank).toEqual(1)
+	expect(afterDeposit.find((it) => it.id === skyBlueId).rank).toEqual(3)
+
 	// Reordering only the party leaves the boxed pokemon alone
 	await call("reorder_pokemon", {
 		_write_key: writeKey,
@@ -741,6 +747,7 @@ test("depositing and withdrawing pokemon", async () => {
 	})
 	expect(afterReorder).toHaveLength(3)
 	expect(afterReorder.find((it) => it.id === rosyRedId).storage).toEqual("box")
+	expect(afterReorder.find((it) => it.id === rosyRedId).rank).toEqual(1)
 
 	// Withdrawing rejoins the end of the party, so it takes MAX(rank) + 1
 	const withdrawn = await call<number>("set_pokemon_storage", {
@@ -754,19 +761,23 @@ test("depositing and withdrawing pokemon", async () => {
 		_trainer_id: trainerId,
 	})
 	expect(afterWithdraw.map((it) => it.id)).toEqual([skyBlueId, sunnyYellowId, rosyRedId])
-	const rankAfterWithdraw = afterWithdraw.find((it) => it.id === rosyRedId).rank
 
-	// Withdrawing again is a no-op; it must not march to the back a second time
+	// Withdrawing a pokemon that never left is a no-op. Sky Blue is at the front
+	// of the party, so a rule that sent every withdrawal to the back would be
+	// caught here: it has to stay exactly where it is.
+	const skyBlueRank = afterWithdraw.find((it) => it.id === skyBlueId).rank
+
 	await call<number>("set_pokemon_storage", {
 		_write_key: writeKey,
-		_id: rosyRedId,
+		_id: skyBlueId,
 		_storage: "party",
 	})
 
 	const afterSecondWithdraw = await callAll<any>("get_pokemon", {
 		_trainer_id: trainerId,
 	})
-	expect(afterSecondWithdraw.find((it) => it.id === rosyRedId).rank).toEqual(rankAfterWithdraw)
+	expect(afterSecondWithdraw.find((it) => it.id === skyBlueId).rank).toEqual(skyBlueRank)
+	expect(afterSecondWithdraw.map((it) => it.id)).toEqual([skyBlueId, sunnyYellowId, rosyRedId])
 
 	// Unknown locations are rejected by the check constraint
 	await expect(call<number>("set_pokemon_storage", {
@@ -825,6 +836,117 @@ test("depositing and withdrawing pokemon", async () => {
 	await call("delete_trainer", {
 		_write_key: otherWriteKey,
 		_id: otherTrainerId,
+	})
+})
+
+test("reordering pokemon within each storage", async () => {
+	const {
+		ret_id: trainerId,
+		ret_write_key: writeKey,
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const add = (nickname: string, rank: number) => call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+		_nickname: nickname,
+		_rank: rank,
+	})
+
+	const dahliaId = await add("Dahlia", 1)
+	const asterId = await add("Aster", 2)
+	const basilId = await add("Basil", 3)
+	const cedarId = await add("Cedar", 4)
+
+	const roster = async () => {
+		const pokemon = await callAll<any>("get_pokemon", {
+			_trainer_id: trainerId,
+		})
+
+		return {
+			party: pokemon.filter((it) => it.storage === "party"),
+			box: pokemon.filter((it) => it.storage === "box"),
+			rankOf: (id: number) => pokemon.find((it) => it.id === id).rank,
+		}
+	}
+
+	// Deposit, reorder, deposit -- the sequence that used to leave two boxed
+	// pokemon tied at the same rank, because the second deposit was handed a rank
+	// from the party's sequence rather than the box's.
+	await call<number>("set_pokemon_storage", {
+		_write_key: writeKey,
+		_id: basilId,
+		_storage: "box",
+	})
+
+	await call("reorder_pokemon", {
+		_write_key: writeKey,
+		_ids: [asterId, cedarId, dahliaId],
+	}, {
+		assertNull: true,
+	})
+
+	await call<number>("set_pokemon_storage", {
+		_write_key: writeKey,
+		_id: cedarId,
+		_storage: "box",
+	})
+
+	const afterDeposits = await roster()
+	expect(afterDeposits.box.map((it) => it.id)).toEqual([basilId, cedarId])
+	expect(afterDeposits.rankOf(basilId)).toEqual(1)
+	expect(afterDeposits.rankOf(cedarId)).toEqual(2)
+	// The party keeps the ranks the reorder gave it, gap and all
+	expect(afterDeposits.rankOf(asterId)).toEqual(1)
+	expect(afterDeposits.rankOf(dahliaId)).toEqual(3)
+
+	// The box reorders on its own, counting from 1, and the party does not move
+	await call("reorder_pokemon", {
+		_write_key: writeKey,
+		_ids: [cedarId, basilId],
+	}, {
+		assertNull: true,
+	})
+
+	const afterBoxReorder = await roster()
+	expect(afterBoxReorder.box.map((it) => it.id)).toEqual([cedarId, basilId])
+	expect(afterBoxReorder.rankOf(cedarId)).toEqual(1)
+	expect(afterBoxReorder.rankOf(basilId)).toEqual(2)
+	expect(afterBoxReorder.party.map((it) => it.id)).toEqual([asterId, dahliaId])
+	expect(afterBoxReorder.rankOf(asterId)).toEqual(1)
+	expect(afterBoxReorder.rankOf(dahliaId)).toEqual(3)
+
+	// A call carrying both lists at once splits them and numbers each from 1. The
+	// app never does this -- the two lists are dragged separately -- but it is the
+	// natural thing to try, so it must not scramble either ordering.
+	await call("reorder_pokemon", {
+		_write_key: writeKey,
+		_ids: [dahliaId, basilId, asterId, cedarId],
+	}, {
+		assertNull: true,
+	})
+
+	const afterMixedReorder = await roster()
+	expect(afterMixedReorder.party.map((it) => it.id)).toEqual([dahliaId, asterId])
+	expect(afterMixedReorder.rankOf(dahliaId)).toEqual(1)
+	expect(afterMixedReorder.rankOf(asterId)).toEqual(2)
+	expect(afterMixedReorder.box.map((it) => it.id)).toEqual([basilId, cedarId])
+	expect(afterMixedReorder.rankOf(basilId)).toEqual(1)
+	expect(afterMixedReorder.rankOf(cedarId)).toEqual(2)
+
+	// Cleanup
+	for (const id of [dahliaId, asterId, basilId, cedarId]) {
+		await call("remove_pokemon", {
+			_write_key: writeKey,
+			_id: id,
+		})
+	}
+	await call("delete_trainer", {
+		_write_key: writeKey,
+		_id: trainerId,
 	})
 })
 
