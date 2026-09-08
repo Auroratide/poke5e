@@ -189,13 +189,18 @@ BEGIN
 		RAISE EXCEPTION 'Invalid or expired transfer code';
 	END IF;
 
-	-- Next rank = highest existing rank for the destination trainer + 1.
+	-- Next rank = highest existing rank in the destination trainer's party + 1.
 	-- COALESCE handles the trainer's first pokemon (-> rank 1). We use MAX,
 	-- not COUNT, because gaps in the rank sequence are allowed.
+	--
+	-- The party alone, because ranks are counted within a location: a recipient
+	-- with a full box would otherwise hand the arriving pokemon a rank from a
+	-- list it is not joining.
 	SELECT COALESCE(MAX("rank"), 0) + 1
 	INTO _new_rank
 	FROM private.pokemon
-	WHERE trainer_id = _new_trainer_id;
+	WHERE trainer_id = _new_trainer_id
+		AND storage = 'party';
 
 	-- Build the list of pokemon columns to copy, skipping the identity id
 	-- (auto-generated), trainer_id and storage (which we override). This way we

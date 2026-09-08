@@ -1931,6 +1931,21 @@ test("transfering a pokemon", async () => {
 		_storage: "box",
 	})
 
+	// The recipient's only pokemon is a boxed one, so the rank the transfer hands
+	// out has to be counted from their empty party rather than from everything
+	// they own
+	const renibelBoxedId = await call<number>("add_pokemon", {
+		_write_key: renibelWriteKey,
+		...SunnyYellow(),
+		_nickname: "Renibel's Own",
+		_rank: 1,
+	})
+	await call<number>("set_pokemon_storage", {
+		_write_key: renibelWriteKey,
+		_id: renibelBoxedId,
+		_storage: "box",
+	})
+
 	// correct trainer
 	await call<string>("generate_transfer_code", {
 		_write_key: irisWriteKey,
@@ -1947,12 +1962,18 @@ test("transfering a pokemon", async () => {
 		_transfer_code: transferCode,
 	})
 
-	const [vivillon] = await callAll<any>("get_pokemon", {
+	// By nickname, not by position: the arrival and the boxed pokemon both hold
+	// rank 1, one in each list, so which of them comes first is a nickname tie
+	const renibelPokemon = await callAll<any>("get_pokemon", {
 		_trainer_id: renibelId,
 	})
+	const vivillon = renibelPokemon.find((it) => it.nickname === "Sunny Yellow")
 
-	expect(vivillon.nickname).toEqual("Sunny Yellow")
+	expect(vivillon).toBeDefined()
 	expect(vivillon.storage).toEqual("party")
+	// It starts the party rather than taking a number from the box
+	expect(vivillon.rank).toEqual(1)
+	expect(renibelPokemon.find((it) => it.id === renibelBoxedId).rank).toEqual(1)
 
 	// ...while the source keeps its own storage
 	const [sourcePokemon] = await callAll<any>("get_pokemon", {
@@ -1984,6 +2005,10 @@ test("transfering a pokemon", async () => {
 	await call("remove_pokemon", {
 		_write_key: renibelWriteKey,
 		_id: vivillon.id,
+	})
+	await call("remove_pokemon", {
+		_write_key: renibelWriteKey,
+		_id: renibelBoxedId,
 	})
 	await call("delete_trainer", {
 		_write_key: renibelWriteKey,
