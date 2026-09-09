@@ -5,7 +5,8 @@
 			"range": {
 				"type": "distance",
 				"value": 20,
-				"unit": "feet"
+				"unit": "feet",
+				"reach": null
 			},
 			"attack": {
 				"scope": "ranged"
