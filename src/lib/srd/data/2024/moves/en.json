@@ -21516,7 +21516,10 @@
 			"categories": [
 				"dance"
 			],
-			"beta": true
+			"updated": {
+				"tag": "Updated",
+				"details": "This move has been overhauled in the 2024 edition."
+			}
 		},
 		{
 			"id": "synchronoise",

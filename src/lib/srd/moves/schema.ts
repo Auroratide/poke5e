@@ -152,6 +152,12 @@ export const MoveJson = z.object({
 	beta: z.boolean().optional().meta({
 		description: "Present if the move is being playtested.",
 	}),
+	updated: z.object({
+		tag: z.string(),
+		details: z.string(),
+	}).optional().meta({
+		description: "When present, indicates the move is new or recently updated.",
+	}),
 }).meta({
 	id: "Move",
 	title: "Move",
