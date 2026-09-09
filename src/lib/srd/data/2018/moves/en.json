@@ -1,6 +1,18 @@
 {
 	"values": [
 		{
+			"id": "shadow-claw",
+			"range": {
+				"type": "distance",
+				"value": 20,
+				"unit": "feet"
+			},
+			"attack": {
+				"scope": "ranged"
+			},
+			"updated": null
+		},
+		{
 			"id": "swords-dance",
 			"name": "Swords Dance",
 			"type": "normal",
@@ -24,7 +36,7 @@
 				"modifier": "MOVE",
 				"type": "damage"
 			},
-			"beta": false
+			"updated": null
 		}
 	]
 }

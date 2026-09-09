@@ -18397,9 +18397,11 @@
 				"unit": "instantaneous"
 			},
 			"range": {
-				"type": "distance",
-				"value": 20,
-				"unit": "feet"
+				"type": "melee",
+				"reach": {
+					"value": 10,
+					"unit": "feet"
+				}
 			},
 			"dice": {
 				"class": "70",
@@ -18407,10 +18409,14 @@
 				"type": "damage"
 			},
 			"attack": {
-				"scope": "ranged"
+				"scope": "melee"
 			},
 			"description": "You strike with a sharp claw made from shadows in range. Make a ranged attack, dealing {dice} {type} damage on a hit. This moves scores a critical hit on natural attack rolls of 19 and 20.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "This move has been made melee."
+			}
 		},
 		{
 			"id": "shadow-force",
