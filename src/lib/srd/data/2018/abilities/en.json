@@ -1,8 +1,24 @@
 {
 	"values": [
 		{
+			"id": "aroma-veil",
+			"description": "Any ally within 15 feet of this Pokémon automatically passes any WIS save they are required to make.",
+			"updated": null
+		},
+		{
+			"id": "flower-veil",
+			"description": "Any grass-type ally within 15 feet of this Pokémon is immune to new status effects.",
+			"updated": null
+		},
+		{
 			"id": "serene-grace",
-			"description": "The Move DC to pass a saving throw against one of this Pokémon's moves is increased by 1."
+			"description": "The Move DC to pass a saving throw against one of this Pokémon's moves is increased by 1.",
+			"updated": null
+		},
+		{
+			"id": "sweet-veil",
+			"description": "Any ally within 15 feet of this Pokémon is immune to the sleep condition.",
+			"updated": null
 		}
 	]
 }

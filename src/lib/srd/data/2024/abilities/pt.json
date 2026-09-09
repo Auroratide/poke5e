@@ -54,7 +54,7 @@
 		{
 			"id": "aroma-veil",
 			"name": "Véu de Aroma",
-			"description": "Qualquer aliado a até 15 pés deste Pokémon passa automaticamente em qualquer teste de resistência de SAB que precise realizar."
+			"description": "Este Pokémon e seus aliados em um raio de 15 pés passam automaticamente em qualquer teste de resistência de SAB que precisem realizar."
 		},
 		{
 			"id": "as-one",
@@ -1098,7 +1098,7 @@
 		{
 			"id": "sweet-veil",
 			"name": "Véu Doce",
-			"description": "Aliados são imunes a sono."
+			"description": "Este Pokémon e seus aliados em um raio de 15 pés são imunes à condição de sono."
 		},
 		{
 			"id": "swift-swim",

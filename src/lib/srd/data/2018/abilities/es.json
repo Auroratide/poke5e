@@ -1,9 +1,20 @@
 {
 	"values": [
 		{
+			"id": "aroma-veil",
+			"description": "Cualquier aliado a 15 pies o menos de este Pokémon supera automáticamente cualquier tirada de salvación de Sabiduría que deba realizar."
+		},
+		{
+			"id": "flower-veil",
+			"description": "Cualquier aliado de tipo Planta a 15 pies o menos de este Pokémon es inmune a nuevos efectos de estado."
+		},
+		{
 			"id": "serene-grace",
-			"name": "Dicha",
 			"description": "La CD para superar una tirada de salvación contra un movimiento de este Pokémon aumenta en 1."
+		},
+		{
+			"id": "sweet-veil",
+			"description": "Cualquier aliado a 15 pies o menos de este Pokémon es inmune a quedarse dormido."
 		}
 	]
 }

@@ -48,7 +48,7 @@
 		{
 			"id": "aroma-veil",
 			"name": "Aroma Voile",
-			"description": "Tout allié de ce pokémon dans un rayon de 15 pied devant faire un jet de sauvegarde de SAG, réussit automatiquement ce jet."
+			"description": "Ce Pokémon et ses alliés situés dans un rayon de 15 pieds réussissent automatiquement tout jet de sauvegarde de SAG qu'ils doivent effectuer."
 		},
 		{
 			"id": "as-one",
@@ -353,7 +353,7 @@
 		{
 			"id": "flower-veil",
 			"name": "Flora voile",
-			"description": "Les alliés de ce Pokémon dans un rayon de 15 pieds ne peuvent être affligés de nouveux statutsé"
+			"description": "Les alliés de type Plante de ce Pokémon situés dans un rayon de 15 pieds (y compris lui-même, s'il est de type Plante) sont immunisés contre les nouvelles altérations d'état."
 		},
 		{
 			"id": "fluffy",
@@ -1288,7 +1288,7 @@
 		{
 			"id": "sweet-veil",
 			"name": "Gluco-Voile",
-			"description": "Les alliés de ce Pokémon à 15 pieds sont immunisés au statut sommeil."
+			"description": "Ce Pokémon et ses alliés situés dans un rayon de 15 pieds sont immunisés contre l'état de sommeil."
 		},
 		{
 			"id": "swift-swim",

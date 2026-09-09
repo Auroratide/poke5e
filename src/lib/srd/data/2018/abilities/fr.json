@@ -1,9 +1,20 @@
 {
 	"values": [
 		{
+			"id": "aroma-veil",
+			"description": "Tout allié de ce pokémon dans un rayon de 15 pied devant faire un jet de sauvegarde de SAG, réussit automatiquement ce jet."
+		},
+		{
+			"id": "flower-veil",
+			"description": "Les alliés de ce Pokémon dans un rayon de 15 pieds ne peuvent être affligés de nouveux statutsé"
+		},
+		{
 			"id": "serene-grace",
-			"name": "Sérénité",
 			"description": "Le degré de difficulté des jets de sauvegarde causés par les capacités de ce Pokémon est augmenté de 1."
+		},
+		{
+			"id": "sweet-veil",
+			"description": "Les alliés de ce Pokémon à 15 pieds sont immunisés au statut sommeil."
 		}
 	]
 }

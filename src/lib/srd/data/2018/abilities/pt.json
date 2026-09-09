@@ -1,9 +1,19 @@
 {
 	"values": [
 		{
+			"id": "aroma-veil",
+			"name": "Véu de Aroma",
+			"description": "Qualquer aliado a até 15 pés deste Pokémon passa automaticamente em qualquer teste de resistência de SAB que precise realizar."
+		},
+		{
 			"id": "serene-grace",
 			"name": "Graça Serena",
 			"description": "A CD de testes de resistência contra movimentos deste Pokémon aumenta em 1."
+		},
+		{
+			"id": "sweet-veil",
+			"name": "Véu Doce",
+			"description": "Aliados são imunes a sono."
 		}
 	]
 }

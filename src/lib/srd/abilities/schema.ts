@@ -16,6 +16,12 @@ export const AbilityJson = z.object({
 	deprecated: z.boolean().optional().meta({
 		description: "Ability is to no longer be used.",
 	}),
+	updated: z.object({
+		tag: z.string(),
+		details: z.string(),
+	}).optional().meta({
+		description: "When present, indicates the resource is new or recently updated.",
+	}),
 }).meta({
 	id: "Ability",
 	title: "Ability",

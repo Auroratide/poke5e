@@ -53,7 +53,7 @@
 		{
 			"id": "aroma-veil",
 			"name": "Velo Aroma",
-			"description": "Cualquier aliado a 15 pies o menos de este Pokémon supera automáticamente cualquier tirada de salvación de Sabiduría que deba realizar."
+			"description": "Este Pokémon y sus aliados en un radio de 15 pies superan automáticamente cualquier tirada de salvación de Sabiduría que deban realizar."
 		},
 		{
 			"id": "as-one",
@@ -363,7 +363,7 @@
 		{
 			"id": "flower-veil",
 			"name": "Velo Flor",
-			"description": "Cualquier aliado de tipo Planta a 15 pies o menos de este Pokémon es inmune a nuevos efectos de estado."
+			"description": "Los aliados de tipo Planta de este Pokémon que se encuentren en un radio de 15 pies (incluido el propio Pokémon, si es de tipo Planta) son inmunes a nuevos efectos de estado."
 		},
 		{
 			"id": "fluffy",
@@ -1383,7 +1383,7 @@
 		{
 			"id": "sweet-veil",
 			"name": "Velo Dulce",
-			"description": "Cualquier aliado a 15 pies o menos de este Pokémon es inmune a quedarse dormido."
+			"description": "Este Pokémon y sus aliados en un radio de 15 pies son inmunes a la condición de dormido."
 		},
 		{
 			"id": "swift-swim",
