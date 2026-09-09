@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Card } from "$lib/ui/page"
-	import { BetaStatement, FlatDl } from "$lib/ui/elements"
+	import { FlatDl } from "$lib/ui/elements"
 	import MoveDescription from "./MoveDescription.svelte"
 	import { VisuallyHidden } from "$lib/ui/elements"
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
@@ -13,6 +13,7 @@
 	import { MoveTime } from "./time"
 	import { MoveDuration } from "./duration"
 	import { MoveRange } from "./range"
+	import { BetaDetailsLine } from "$lib/site/beta"
 
 	export let move: Move
 	export let pokemon: PokemonSpecies[] = []
@@ -25,8 +26,8 @@
 <Card title={tm ? move.tmName() : move.name} {dismissToHref}>
 	<MoveTypeTag slot="header-extra" value={move.type} />
 	<section class="info">
-		{#if move.beta}
-			<BetaStatement name="move" />
+		{#if move.updated}
+			<BetaDetailsLine value={move.updated} />
 		{/if}
 		<VisuallyHidden><h2>Info</h2></VisuallyHidden>
 		<FlatDl>

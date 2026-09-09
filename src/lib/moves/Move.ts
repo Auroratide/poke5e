@@ -28,6 +28,7 @@ import { MoveDamage } from "./MoveDamage"
 import type { ContestJson } from "$lib/srd/contest/schema"
 import type { ContestEffectJson } from "$lib/srd/contest-effects/schema"
 import type { TmJson } from "$lib/srd/tms/schema"
+import type { BetaDetails } from "$lib/site/beta"
 
 export type MoveId = string
 
@@ -55,6 +56,7 @@ export class Move extends DataClass<{
 	damage?: Data<MoveDamage>,
 	attack?: Data<MoveAttack>,
 	save?: Data<MoveSave>,
+	updated?: BetaDetails,
 }> {
 	get id() { return this.data.id }
 	get beta() { return this.data.beta ?? false }
@@ -106,6 +108,7 @@ export class Move extends DataClass<{
 	get damage() { return this.data.damage  ? new MoveDamage(this.data.damage) : undefined }
 	get attack() { return this.data.attack ? new MoveAttack(this.data.attack) : undefined }
 	get save() { return this.data.save ? new MoveSave(this.data.save) : undefined }
+	get updated() { return this.data.updated }
 
 	private diceText(): string {
 		const dice = this.data.dice
@@ -221,6 +224,7 @@ export class Move extends DataClass<{
 			} : undefined,
 			contest: ContestDetails.fromJson(joins?.contest, joins?.contestEffect),
 			table: json.table as TableNode,
+			updated: json.updated,
 		})
 	}
 }
