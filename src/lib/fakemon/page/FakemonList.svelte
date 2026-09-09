@@ -7,7 +7,7 @@
 	import { fakemonStore, type FakemonListStore } from "../store"
 	import { PageAction } from "./actions"
 	import GetStarted from "./GetStarted.svelte"
-	import { fakemonListSorter, fakemonListFilter } from "./sort-and-filter"
+	import { fakemonListSorter, fakemonListFilter, fakemonListTagFilter } from "./sort-and-filter"
 	import { m } from "$lib/site/i18n"
 	import { SpeciesFilter } from "$lib/poke5e/species"
 	import { PokemonType, type PokeType } from "$lib/pokemon/types"
@@ -15,7 +15,7 @@
 	import { capitalize } from "$lib/utils/string"
 	import { EggGroup } from "$lib/pokemon/egg-group"
 	import { BiomesStore, Region } from "$lib/poke5e/habitat"
-	import { DefaultTagSelectionMode, TagList, TagSelection, type TagSelectionMode } from "$lib/poke5e/tags"
+	import { TagFilter, TagList, TagSelection } from "$lib/poke5e/tags"
 
 	const allTags = fakemonStore.tags()
 
@@ -64,8 +64,7 @@
 	$: textFilterIsPokemonType = PokemonType.list.includes($fakemonListFilter.toLocaleLowerCase() as PokeType)
 	$: textFilterIsTagName = TagList.has($allTags, $fakemonListFilter)
 
-	let filteredTags: string[] = []
-	let filterTagsMode: TagSelectionMode = DefaultTagSelectionMode
+	$: filteredTags = TagFilter.applicable($fakemonListTagFilter, $allTags)
 
 	$: filteredTagsWithSearch = textFilterIsTagName ? filteredTags.concat([$fakemonListFilter]) : filteredTags
 
@@ -80,7 +79,7 @@
 		.nativeRegion(filteredRegion)
 
 	$: filtered = $fakemon
-		.filter(TagList.filterBy(filteredTagsWithSearch, filterTagsMode))
+		.filter(TagList.filterBy(filteredTagsWithSearch, $fakemonListTagFilter.mode))
 		.filter((it) => filter.apply(it.species))
 
 	const byStringField = (field: (m: Fakemon) => string) =>
@@ -94,8 +93,7 @@
 		filteredEggGroup = ""
 		filteredBiome = ""
 		filteredRegion = ""
-		filteredTags = []
-		filterTagsMode = DefaultTagSelectionMode
+		TagFilter.reset(fakemonListTagFilter)
 	}
 </script>
 
@@ -112,7 +110,7 @@
 		<SelectField label="{m.eggGroup()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
 		<SelectField label="{m.biome()}" bind:value={filteredBiome} options={biomeOptions} />
 		<TextField label="{m.nativeRegion()}" bind:value={filteredRegion} />
-		<TagSelection bind:checked={filteredTags} bind:mode={filterTagsMode} tags={$allTags} />
+		<TagSelection bind:checked={$fakemonListTagFilter.tags} bind:mode={$fakemonListTagFilter.mode} tags={$allTags} />
 	</SearchField>
 </div>
 {#if hasNoFakemon}

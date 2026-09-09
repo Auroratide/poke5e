@@ -38,15 +38,11 @@ export const TagList = {
 	},
 
 	filterBy(filterTags: TagList, mode: TagSelectionMode): (hasTags: { tags: TagList }) => boolean {
-		const textFilterIsTagName = false
-		const $trainerListFilterValue = ""
-
 		return ({ tags }) => {
-			const noTagsSpecified = filterTags.length === 0 && !textFilterIsTagName
-			const hasDesiredTags = mode === "all" ? TagList.subsets(filterTags, tags) : TagList.overlaps(tags, filterTags) 
-			const tagIsExplicitlySearched = textFilterIsTagName && TagList.has(tags, $trainerListFilterValue)
+			const noTagsSpecified = filterTags.length === 0
+			const hasDesiredTags = mode === "all" ? TagList.subsets(filterTags, tags) : TagList.overlaps(tags, filterTags)
 
-			return noTagsSpecified || hasDesiredTags || tagIsExplicitlySearched
+			return noTagsSpecified || hasDesiredTags
 		}
 	},
 } as const

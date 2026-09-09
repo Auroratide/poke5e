@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { DefaultTagSelectionMode, TagList, TagSelection, type TagSelectionMode } from "$lib/poke5e/tags"
+	import { TagFilter, TagList, TagSelection } from "$lib/poke5e/tags"
 	import { m } from "$lib/site/i18n"
 	import { Url } from "$lib/site/url"
 	import { Button } from "$lib/ui/elements"
@@ -9,7 +9,7 @@
 	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
 	import GetStarted from "./GetStarted.svelte"
 	import { PageAction } from "./page-action"
-	import { trainerListFilterValue } from "./store"
+	import { trainerListFilterValue, trainerListTagFilter } from "./store"
 	import TrainerList from "./TrainerList.svelte"
 	import type { TrainerListStore } from "./trainers"
 	import { trainers as trainerStore } from "./trainers"
@@ -25,18 +25,17 @@
 	} = $props()
 
 	const hasNoTrainers = $derived($trainers.length === 0)
-	let filteredTags = $state<string[]>([])
-	let filterTagMode = $state<TagSelectionMode>(DefaultTagSelectionMode)
+	const filteredTags = $derived(TagFilter.applicable($trainerListTagFilter, $allTags))
 	const textFilterIsTagName = $derived(TagList.has($allTags, $trainerListFilterValue))
 	const filteredTagsWithSearch = $derived(textFilterIsTagName ? filteredTags.concat([$trainerListFilterValue]) : filteredTags)
 	const filtered = $derived(
 		$trainers
-			.filter(TagList.filterBy(filteredTagsWithSearch, filterTagMode))
+			.filter(TagList.filterBy(filteredTagsWithSearch, $trainerListTagFilter.mode))
 			.filter((it) => textFilterIsTagName || it.name.toLocaleLowerCase().includes($trainerListFilterValue.toLocaleLowerCase())),
 	)
 
 	const resetFilters = () => {
-		filteredTags = []
+		TagFilter.reset(trainerListTagFilter)
 	}
 
 	let reordering = $state(false)
@@ -57,7 +56,7 @@
 </ListHeading>
 <div class="space-bottom">
 	<SearchField id="filter-pokemon" label="Search" bind:value={$trainerListFilterValue} matched={filtered.length} max={$trainers.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
-		<TagSelection bind:checked={filteredTags} bind:mode={filterTagMode} tags={$allTags} />
+		<TagSelection bind:checked={$trainerListTagFilter.tags} bind:mode={$trainerListTagFilter.mode} tags={$allTags} />
 	</SearchField>
 </div>
 {#if hasNoTrainers}

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { Saveable, SearchField } from "$lib/ui/forms"
-	import { filterValue } from "../store"
+	import { filterValue, pokemonTagFilter } from "../store"
 	import type { TrainerStore } from "../trainers"
 	import type { PokemonId, TrainerPokemon } from "../types"
 	import { Button } from "$lib/ui/elements"
@@ -10,7 +10,7 @@
 	import { m } from "$lib/site/i18n"
 	import type { ReorderListChangeEventDetail } from "@auroratide/reorder-list/lib/events"
 	import * as list from "$lib/utils/list"
-	import { DefaultTagSelectionMode, TagList, TagSelection, type TagSelectionMode } from "$lib/poke5e/tags"
+	import { TagFilter, TagList, TagSelection } from "$lib/poke5e/tags"
 
 	export let trainer: TrainerStore
 	export let currentPokemon: PokemonId | undefined
@@ -24,12 +24,11 @@
 	const byNicknameOrSpecies = (filterValue: string) => (it: TrainerPokemon) => textFilterIsTagName || 
 		it.nickname.toLocaleLowerCase().includes(filterValue) || it.pokemonId.data.replace("-", " ").includes(filterValue)
 
-	let filteredTags: string[] = []
-	let filterTagMode: TagSelectionMode = DefaultTagSelectionMode
+	$: filteredTags = TagFilter.applicable($pokemonTagFilter, pokemonTags)
 	$: filteredTagsWithSearch = textFilterIsTagName ? filteredTags.concat([$filterValue]) : filteredTags
 
 	$: filtered = $trainer.pokemon
-		.filter(TagList.filterBy(filteredTagsWithSearch, filterTagMode))
+		.filter(TagList.filterBy(filteredTagsWithSearch, $pokemonTagFilter.mode))
 		.filter(byNicknameOrSpecies($filterValue.toLocaleLowerCase()))
 	$: baseTrainerUrl = Url.trainers($trainer.info.readKey)
 
@@ -45,7 +44,7 @@
 	}
 
 	const resetFilters = () => {
-		filteredTags = []
+		TagFilter.reset(pokemonTagFilter)
 	}
 </script>
 
@@ -63,7 +62,7 @@
 </ListHeading>
 <div class="space-bottom">
 	<SearchField id="filter-pokemon" label="Search" bind:value={$filterValue} matched={filtered.length} max={$trainer.pokemon.length} activeFilters={filteredTags.length > 0 ? 1 : 0} on:reset={resetFilters}>
-		<TagSelection bind:checked={filteredTags} bind:mode={filterTagMode} tags={pokemonTags} />
+		<TagSelection bind:checked={$pokemonTagFilter.tags} bind:mode={$pokemonTagFilter.mode} tags={pokemonTags} />
 	</SearchField>
 </div>
 <div class="relative"><!-- Needed for the > indicators to appear outside the scroll box -->

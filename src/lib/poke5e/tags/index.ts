@@ -1,6 +1,7 @@
 export { default as TagListField } from "./TagListField.svelte"
 export { default as TagListInfo } from "./TagListInfo.svelte"
 export { default as TagSelection } from "./TagSelection.svelte"
+export * from "./TagFilter"
 export * from "./TagList"
 export * from "./TagsLocalStorage"
 export * from "./TagSelectionMode"
