@@ -14,6 +14,7 @@
 		NumericResourceField,
 		type NumericChangeDetail,
 	} from "$lib/ui/forms"
+	import { Markdown } from "$lib/ui/rendering"
 	const dispatch = createEventDispatcher()
 
 	export let items: (HeldItem & MaybeQuantity)[]
@@ -43,10 +44,10 @@
 								<span>{details.quantity}</span>
 							{/if}
 						</span>
-						<p>{details.description}</p>
+						<div class="description"><Markdown inline value={details.description ?? ""} /></div>
 					</div>
 				{:else}
-					<strong>{details.name}</strong>: {details.description}
+					<span class="description"><strong>{details.name}</strong>: <Markdown inline value={details.description ?? ""} /></span>
 				{/if}
 			</li>
 		{/if}

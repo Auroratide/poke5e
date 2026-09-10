@@ -1,10 +1,16 @@
 <script lang="ts">
 	import { renderMarkdown, type MarkdownString } from "./markdown"
 
-	export let value: MarkdownString
+	let {
+		value,
+		inline = false,
+	}: {
+		value: MarkdownString,
+		inline?: boolean,
+	} = $props()
 </script>
 
-<div class="markdown">
+<div class="markdown" class:inline>
 	{@html renderMarkdown(value)}
 </div>
 
@@ -64,4 +70,8 @@
 	.markdown :global(.nowrap) {
 		white-space: nowrap;
 	}
+
+	.inline :global(p) { margin-block: 0 0.5em; }
+	.inline  :global(p:first-of-type) { display: inline; }
+	.inline  :global(p:last-of-type) { margin-block-end: 0; }
 </style>

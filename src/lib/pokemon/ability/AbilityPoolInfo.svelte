@@ -4,6 +4,7 @@
 	import { Tag } from "$lib/ui/elements"
 	import { AbilityStore } from "./AbilityStore"
 	import { AbilityPool } from "./AbilityPool"
+	import { Markdown } from "$lib/ui/rendering"
 
 	export let value: AbilityPool
 </script>
@@ -16,16 +17,22 @@
 	<p><ErrorInline>Could not load abilities.</ErrorInline></p>
 {:else}
 	{#each value.data.normal as ability}
-		<p><strong>{ability.name}:</strong> {ability.description}</p>	
+		<div class="ability"><strong>{ability.name}:</strong> <Markdown inline value={ability.description} /></div>
 	{/each}
 	{#each value.data.hidden as ability}
 		<p class="no-margin"><Tag>{m.hidden()}</Tag></p>
-		<p><strong>{ability.name}:</strong> {ability.description}</p>	
+		<div class="ability"><strong>{ability.name}:</strong> <Markdown inline value={ability.description} /></div>
 	{/each}
 {/if}
 
 <style>
 	.no-margin { margin: 0; }
 	p { font-size: var(--font-sz-venus); }
+
+	.ability {
+		font-size: var(--font-sz-venus);
+		margin-block: 1em;
+	}
+
 	.smaller { font-size: var(--font-sz-mars); }
 </style>

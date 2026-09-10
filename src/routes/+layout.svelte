@@ -55,6 +55,7 @@
 		import("@auroratide/reorder-list/lib/define.js")
 		import("@auroratide/toggle-switch/lib/define.js")
 		import("@auroratide/tab-list/lib/define.js")
+		import("@auroratide/textarea-markdown/lib/define.js")
 	}
 
 	let {

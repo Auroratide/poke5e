@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Markdown, Paragraphs } from "$lib/ui/rendering"
+	import { Markdown } from "$lib/ui/rendering"
 	import type { ChosenFeat } from "./ChosenFeat"
 	import type { Feat } from "./Feat"
 
@@ -16,7 +16,7 @@
 				<Markdown value={matchingFeat.description} />
 			{/if}
 			{#if feat.description.trim()}
-				<Paragraphs value={feat.description} />
+				<Markdown value={feat.description} />
 			{/if}
 			{#if matchingFeat == null && !feat.description.trim()}
 				<p>No description provided.</p>

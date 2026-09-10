@@ -8,6 +8,7 @@
 	import { currentEdition } from "$lib/site/edition"
 	import { Url } from "$lib/site/url"
 	import { FlatDl, LoaderInline, VisuallyHidden } from "$lib/ui/elements"
+	import { Markdown } from "$lib/ui/rendering"
 	import { NumericResourceField, type NumericChangeDetail } from "$lib/ui/forms"
 	import { MoveDuration } from "../duration"
 	import { MoveRange } from "../range"
@@ -113,7 +114,7 @@
 		</div>
 		{#if value.notes !== undefined && value.notes.length > 0}
 			<hr />
-			<div class="space-inner smaller-font">{value.notes}</div>
+			<div class="space-inner smaller-font notes"><Markdown value={value.notes} /></div>
 		{/if}
 	</div>
 {:else}
@@ -174,6 +175,9 @@
 	.space-inner {
 		padding: 0.5rem 1rem;
 	}
+
+	.notes :global(p:first-child) { margin-block-start: 0; }
+	.notes :global(p:last-child) { margin-block-end: 0; }
 
 	.smaller-font {
 		font-size: var(--font-sz-venus);

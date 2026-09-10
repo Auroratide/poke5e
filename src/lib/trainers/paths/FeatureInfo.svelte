@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Level } from "$lib/dnd/level"
 	import { currentEdition } from "$lib/site/edition"
-	import { Paragraphs, renderHtml } from "$lib/ui/rendering"
+	import { Markdown, renderHtml } from "$lib/ui/rendering"
 	import { isFeatureLandmarkLevel, TrainerPaths } from "."
 	import type { ChosenTrainerPath } from "./ChosenTrainerPath"
 
@@ -28,7 +28,7 @@
 		{#if standardPath != null}
 			{@html renderHtml(standardPath.features[levelKey].description)}
 		{:else}
-			<Paragraphs value={path.customFeatures[levelKey].description} />
+			<Markdown value={path.customFeatures[levelKey].description} />
 		{/if}
 	</div>
 {:else}

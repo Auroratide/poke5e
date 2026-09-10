@@ -2,7 +2,8 @@
 	import { AbilityScoreImprovement, AsiField } from "$lib/dnd/attributes"
 	import { m } from "$lib/site/i18n"
 	import { Tag } from "$lib/ui/elements"
-	import { Fieldset, InstructionText, SelectField, TextareaField, TextField } from "$lib/ui/forms"
+	import { Fieldset, InstructionText, MarkdownField, SelectField, TextField } from "$lib/ui/forms"
+	import { Markdown } from "$lib/ui/rendering"
 	import { type AsiOrFeatEffect } from "./AsiOrFeat"
 
 	let {
@@ -73,14 +74,14 @@
 	{/if}
 	{#if chosenFeat != null}
 		<div class="description">
-			<p>{chosenFeat.description}</p>
+			<Markdown value={chosenFeat.description} />
 			<p><Tag>{m.note()}!</Tag> {m.asiFeatQualifier()}</p>
 		</div>
 		<AsiField attributes={value.props.attributes} pointsToSpend={value.props.pointsToSpend - 1} bind:pointsSpent />
 	{/if}
 	{#if chosenOptionValue === CUSTOM_OPTION.value}
 		<TextField label={m.name()} bind:value={customFeatName} />
-		<TextareaField label={m.description()} bind:value={customFeatDescription} />
+		<MarkdownField label={m.description()} bind:value={customFeatDescription} />
 		<p class="description"><Tag>{m.note()}!</Tag> {m.asiFeatQualifier()}</p>
 		<AsiField attributes={value.props.attributes} pointsToSpend={value.props.pointsToSpend - 1} bind:pointsSpent />
 	{/if}

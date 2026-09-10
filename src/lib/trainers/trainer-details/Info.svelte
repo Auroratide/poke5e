@@ -2,7 +2,7 @@
 	import type { InventoryItem, Trainer, TrainerInfo } from "../types"
 	import { createEventDispatcher } from "svelte"
 	import { FlatDl } from "$lib/ui/elements"
-	import { Paragraphs } from "$lib/ui/rendering"
+	import { Markdown } from "$lib/ui/rendering"
 	import HealthInfo, { type UpdateDetail as HealthUpdateDetail } from "../info/HealthInfo.svelte"
 	import StatsInfo from "./StatsInfo.svelte"
 	import { AttributeBlock } from "$lib/dnd/attributes"
@@ -105,7 +105,7 @@
 {#if trainer.description}
 	<section>
 		<h2>About</h2>
-		<Paragraphs value={trainer.description} />
+		<Markdown value={trainer.description} />
 	</section>
 {/if}
 <section>

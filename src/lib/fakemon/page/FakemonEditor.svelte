@@ -16,7 +16,6 @@
 		IntField,
 		MarkdownField,
 		SelectField,
-		TextareaField,
 		TextField,
 		type ImageInputValue,
 	} from "$lib/ui/forms"
@@ -143,7 +142,7 @@
 		<SelectField label="{m.size()}" options={sizeOptions} bind:value={size} {disabled} />
 		<SrField bind:value={sr} {disabled} />
 		<div style:grid-column="span 2">
-			<TextareaField label="{m.description()}" bind:value={description} {disabled} placeholder="{m["fakemon.descriptionPlaceholder"]()}" />
+			<MarkdownField label="{m.description()}" bind:value={description} {disabled} placeholder="{m["fakemon.descriptionPlaceholder"]()}" />
 		</div>
 	</Fieldset>
 	<EstimatableStatsFieldset level={minLevel} hitDice={new HitDice(hitDice)} type={type} bind:hp bind:ac bind:attributes {disabled} />

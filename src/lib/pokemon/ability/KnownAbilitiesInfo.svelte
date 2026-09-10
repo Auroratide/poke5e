@@ -1,12 +1,13 @@
 <script lang="ts">
 	import type { Ability } from "./Ability"
+	import { Markdown } from "$lib/ui/rendering"
 
 	export let value: Ability[]
 </script>
 
 <ul class="known-abilities-info">
 	{#each value as ability}
-		<li><strong>{ability.name}</strong>: {ability.description}</li>
+		<li><strong>{ability.name}</strong>: <Markdown inline value={ability.description} /></li>
 	{/each}
 </ul>
 
