@@ -12879,7 +12879,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "150",
+				"class": "160",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
