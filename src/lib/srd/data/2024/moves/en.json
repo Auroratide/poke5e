@@ -578,7 +578,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "60",
+				"class": "80",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -940,7 +940,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "110",
+				"class": "120",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -1053,13 +1053,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "custom",
-				"tiers": [
-					"1d8",
-					"2d6",
-					"2d12",
-					"4d8"
-				],
+				"class": "110",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -1188,13 +1182,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "custom",
-				"tiers": [
-					"2d6",
-					"2d8",
-					"4d6",
-					"5d8"
-				],
+				"class": "120",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -1271,7 +1259,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "30",
+				"class": "60",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -1667,13 +1655,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "custom",
-				"tiers": [
-					"2d6",
-					"2d8",
-					"2d12",
-					"6d6"
-				],
+				"class": "90",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -1706,7 +1688,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "60",
+				"class": "70",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -1886,7 +1868,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "150",
+				"class": "140",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -3038,7 +3020,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "60",
+				"class": "50",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -5950,7 +5932,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "150",
+				"class": "130",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -6300,13 +6282,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "custom",
-				"tiers": [
-					"1d6",
-					"2d6",
-					"3d6",
-					"4d6"
-				],
+				"class": "80",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -7503,7 +7479,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "70",
+				"class": "60",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -8448,7 +8424,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "110",
+				"class": "120",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -10126,7 +10102,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "90",
+				"class": "100",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -10726,13 +10702,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "custom",
-				"tiers": [
-					"1d8",
-					"2d6",
-					"3d6",
-					"3d10"
-				],
+				"class": "60",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -12921,7 +12891,7 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"description": "When you use this move, soak in cosmic energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a {shape} of solar energy, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save.",
+			"description": "When you use this move, soak in cosmic energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a {shape} of cosmic energy, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save.",
 			"categories": []
 		},
 		{
@@ -13495,7 +13465,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "20",
+				"class": "30",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -14530,20 +14500,14 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "custom",
-				"tiers": [
-					"2d12",
-					"3d10",
-					"5d8",
-					"8d8"
-				],
+				"class": "80",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
 			"save": {
 				"attribute": "con"
 			},
-			"description": "You create a deafening, explosive sound that damages all creatures within 20 feet of you. Force any creature in range to make a {save}, taking {dice} {type} damage on a failure, or half as much on a success.",
+			"description": "You create a deafening, explosive sound that damages all creatures in a {shape}. Force any creature in range to make a {save}, taking {dice} {type} damage on a failure, or half as much on a success.",
 			"categories": [
 				"sound"
 			]
@@ -16334,13 +16298,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "custom",
-				"tiers": [
-					"2d8",
-					"2d10",
-					"3d8",
-					"4d10"
-				],
+				"class": "120",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -16555,7 +16513,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "70",
+				"class": "90",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -17747,7 +17705,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "20",
+				"class": "40",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -17923,7 +17881,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "0",
+				"class": "20",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -17982,7 +17940,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "50",
+				"class": "70",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -20179,7 +20137,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "90",
+				"class": "75",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -20508,7 +20466,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "150",
+				"class": "140",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -20830,7 +20788,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "80",
+				"class": "90",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -21195,7 +21153,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "90",
+				"class": "100",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -21315,13 +21273,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "custom",
-				"tiers": [
-					"1d6",
-					"1d8",
-					"1d12",
-					"3d6"
-				],
+				"class": "20",
 				"modifier": "MOVE + 5",
 				"type": "damage"
 			},
@@ -21639,13 +21591,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "custom",
-				"tiers": [
-					"1d4",
-					"1d6",
-					"1d10",
-					"2d8"
-				],
+				"class": "20",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -22078,10 +22024,10 @@
 			"dice": {
 				"class": "custom",
 				"tiers": [
-					"2d4",
 					"2d6",
-					"2d8",
-					"3d10"
+					"3d6",
+					"2d12",
+					"3d12"
 				],
 				"modifier": "MOVE",
 				"type": "damage"
@@ -22177,7 +22123,7 @@
 				"type": "varies"
 			},
 			"dice": {
-				"class": "20",
+				"class": "50",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -22759,13 +22705,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "custom",
-				"tiers": [
-					"1d10",
-					"2d6",
-					"5d4",
-					"5d6"
-				],
+				"class": "80",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -23134,7 +23074,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "40",
+				"class": "30",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -23982,13 +23922,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "custom",
-				"tiers": [
-					"3d8",
-					"3d10",
-					"5d8",
-					"7d8"
-				],
+				"class": "120",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
