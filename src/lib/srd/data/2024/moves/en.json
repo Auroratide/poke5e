@@ -12891,7 +12891,7 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"description": "When you use this move, soak in cosmic energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a {shape} of cosmic energy, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save.",
+			"description": "When you use this move, soak in cosmic energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a {shape} of cosmic energy, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save.\n\nAdditionally, on your next turn, saving throws you cause have their DC increased by 3.",
 			"categories": []
 		},
 		{
