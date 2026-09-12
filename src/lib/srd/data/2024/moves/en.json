@@ -1025,7 +1025,7 @@
 				"unit": "feet"
 			},
 			"dice": {
-				"class": "30",
+				"class": "40",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -20137,7 +20137,7 @@
 				"type": "melee"
 			},
 			"dice": {
-				"class": "75",
+				"class": "70",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
