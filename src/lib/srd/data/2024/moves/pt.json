@@ -1887,7 +1887,7 @@
 		{
 			"id": "infestation",
 			"name": "Infestação",
-			"description": "Você invoca uma infestação de pequenos insetos para atacar uma criatura por múltiplos turnos. Faça um ataque à distância no alvo. Em caso de acerto, o alvo sofre {dice} de dano de {type} e fica infestado por enxames. Enquanto você mantiver a concentração, o alvo sofre 1d8 de dano de {type} adicional ao final de cada um de seus próximos três turnos."
+			"description": "Você invoca uma infestação de pequenos insetos para atacar uma criatura por múltiplos turnos. Faça um ataque à distância no alvo. Em caso de acerto, o alvo sofre {dice} de dano de {type} e fica infestado por enxames. Enquanto você mantiver a concentração, o alvo sofre 1d6 de dano de {type} adicional ao final de cada um de seus próximos três turnos."
 		},
 		{
 			"id": "ingrain",

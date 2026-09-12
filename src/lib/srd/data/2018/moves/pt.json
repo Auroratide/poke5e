@@ -1,6 +1,11 @@
 {
 	"values": [
 		{
+			"id": "infestation",
+			"name": "Infestação",
+			"description": "Você invoca uma infestação de pequenos insetos para atacar uma criatura por múltiplos turnos. Faça um ataque à distância no alvo. Em caso de acerto, o alvo sofre {dice} de dano de {type} e fica infestado por enxames. Enquanto você mantiver a concentração, o alvo sofre 1d8 de dano de {type} adicional ao final de cada um de seus próximos três turnos."
+		},
+		{
 			"id": "swords-dance",
 			"description": "Quando você ativa este movimento, uma espada aparece e dança ao seu redor, aumentando sua CA em 1. Como ação bônus em um turno futuro, você pode encerrar a concentração para lançar essa espada e fazer um ataque à distância contra um alvo a até 30 pés, causando 2d6 + MOVE de dano normal em um acerto.",
 			"higherLevels": "The damage dice for this move changes to 2d8 at level 5. At level 10, you can now create two swords for +2 to AC and two ranged attacks. At level 17, the damage dice for each sword increases to 3d8."

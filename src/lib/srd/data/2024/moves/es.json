@@ -1255,7 +1255,7 @@
 		{
 			"id": "fire-spin",
 			"name": "Giro Fuego",
-			"description": "Liberas una serie de llamas móviles que danzan alrededor de un objetivo. Realiza una tirada de ataque a distancia, infligiendo {dice} de daño de tipo {type} si impactas al mismo tiempo que las llamas giran a su alrededor. Mientras mantengas la concentración, el objetivo recibe 1d8 de daño de {type} adicional al final de cada uno de sus siguientes tres turnos."
+			"description": "Liberas una serie de llamas móviles que danzan alrededor de un objetivo. Realiza una tirada de ataque a distancia, infligiendo {dice} de daño de tipo {type} si impactas al mismo tiempo que las llamas giran a su alrededor. Mientras mantengas la concentración, el objetivo recibe 1d6 de daño de {type} adicional al final de cada uno de sus siguientes tres turnos."
 		},
 		{
 			"id": "first-impression",
@@ -1997,7 +1997,7 @@
 		{
 			"id": "infestation",
 			"name": "Acoso",
-			"description": "Invocas una plaga de diminutos insectos para atacar a una criatura durante varios turnos. Realiza un ataque a distancia contra un objetivo. Si impactas, inflige {dice} de daño de tipo {type} y el objetivo queda infestado por el enjambre. Mientras mantengas la concentración, el objetivo recibe 1d8 de daño de tipo {type} adicional al final de cada uno de sus siguientes tres turnos."
+			"description": "Invocas una plaga de diminutos insectos para atacar a una criatura durante varios turnos. Realiza un ataque a distancia contra un objetivo. Si impactas, inflige {dice} de daño de tipo {type} y el objetivo queda infestado por el enjambre. Mientras mantengas la concentración, el objetivo recibe 1d6 de daño de tipo {type} adicional al final de cada uno de sus siguientes tres turnos."
 		},
 		{
 			"id": "ingrain",

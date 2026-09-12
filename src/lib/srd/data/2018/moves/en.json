@@ -1,6 +1,317 @@
 {
 	"values": [
 		{
+			"id": "aura-sphere",
+			"dice": {
+				"class": "30",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "beak-blast",
+			"dice": {
+				"class": "150",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "bone-rush",
+			"dice": {
+				"class": "20",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "bonemerang",
+			"dice": {
+				"class": "custom",
+				"tiers": [
+					"1d4",
+					"1d6",
+					"2d4",
+					"3d4"
+				],
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "bounce",
+			"dice": {
+				"class": "90",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "constrict",
+			"dice": {
+				"class": "20",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "crabhammer",
+			"dice": {
+				"class": "90",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "dig",
+			"dice": {
+				"class": "90",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "dive",
+			"dice": {
+				"class": "90",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "double-iron-bash",
+			"dice": {
+				"class": "custom",
+				"tiers": [
+					"1d6",
+					"2d6",
+					"4d4",
+					"3d10"
+				],
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "feint",
+			"dice": {
+				"class": "60",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "fire-lash",
+			"dice": {
+				"class": "80",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "fire-spin",
+			"dice": {
+				"class": "50",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"description": "You release a series of moving flames that dance around a target. Make a ranged attack roll, doing {dice} {type} damage on a hit. as the flames swirl around it. As long as you maintain concentration, the target takes an additional 1d8 {type} damage at the end of each of its next three turns.",
+			"updated": null
+		},
+		{
+			"id": "first-impression",
+			"dice": {
+				"class": "90",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "frost-breath",
+			"dice": {
+				"class": "70",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "high-jump-kick",
+			"dice": {
+				"class": "90",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "hyperspace-hole",
+			"dice": {
+				"class": "80",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "ice-ball",
+			"dice": {
+				"class": "custom",
+				"tiers": [
+					"1d6",
+					"1d8",
+					"1d10",
+					"1d12"
+				],
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "infestation",
+			"dice": {
+				"class": "50",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"description": "You summon an infestation of tiny insects to attack a creature for multiple turns. Make a ranged attack on a target. On a hit, the target takes {dice} {type} damage and becomes infested with swarming bugs. As long as you maintain concentration, the target takes an additional 1d8 {type} damage at the end of each of its next three turns.",
+			"updated": null
+		},
+		{
+			"id": "meteor-beam",
+			"dice": {
+				"class": "150",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "mind-blown",
+			"dice": {
+				"class": "160",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "multi-attack",
+			"dice": {
+				"class": "90",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "night-daze",
+			"dice": {
+				"class": "80",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "petal-dance",
+			"dice": {
+				"class": "custom",
+				"tiers": [
+					"1d10",
+					"2d6",
+					"3d6",
+					"4d6"
+				],
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "psybeam",
+			"dice": {
+				"class": "80",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "rapid-spin",
+			"dice": {
+				"class": "20",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "rock-wrecker",
+			"dice": {
+				"class": "180",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "rollout",
+			"dice": {
+				"class": "custom",
+				"tiers": [
+					"Rd6",
+					"Rd8",
+					"Rd10",
+					"Rd12"
+				],
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "sand-tomb",
+			"dice": {
+				"class": "60",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "secret-sword",
+			"dice": {
+				"class": "180",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "seed-flare",
+			"dice": {
+				"class": "150",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
 			"id": "shadow-claw",
 			"range": {
 				"type": "distance",
@@ -10,6 +321,126 @@
 			},
 			"attack": {
 				"scope": "ranged"
+			},
+			"updated": null
+		},
+		{
+			"id": "shock-wave",
+			"dice": {
+				"class": "10",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "sky-attack",
+			"dice": {
+				"class": "150",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "slash",
+			"dice": {
+				"class": "70",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "smelling-salts",
+			"dice": {
+				"class": "custom",
+				"tiers": [
+					"1d8",
+					"2d6",
+					"2d12",
+					"3d10"
+				],
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "smog",
+			"dice": {
+				"class": "custom",
+				"tiers": [
+					"1d6",
+					"2d4",
+					"1d12",
+					"4d4"
+				],
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "solar-beam",
+			"dice": {
+				"class": "150",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "solar-blade",
+			"dice": {
+				"class": "150",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "spectral-thief",
+			"dice": {
+				"class": "160",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "spirit-shackle",
+			"dice": {
+				"class": "80",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "struggle-bug",
+			"dice": {
+				"class": "30",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "sucker-punch",
+			"dice": {
+				"class": "40",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "superpower",
+			"dice": {
+				"class": "160",
+				"modifier": "MOVE",
+				"type": "damage"
 			},
 			"updated": null
 		},
@@ -33,6 +464,39 @@
 					"2d8",
 					"2d8",
 					"3d8"
+				],
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "tackle",
+			"dice": {
+				"class": "30",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "trop-kick",
+			"dice": {
+				"class": "70",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "venoshock",
+			"dice": {
+				"class": "custom",
+				"tiers": [
+					"1d10",
+					"2d6",
+					"2d12",
+					"3d10"
 				],
 				"modifier": "MOVE",
 				"type": "damage"

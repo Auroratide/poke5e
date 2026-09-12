@@ -91,7 +91,7 @@ export type MoveSrdData = {
 }
 
 const PATH = path.join("static", "data", "moves.json")
-const SRD_PATH = path.join("src", "lib", "srd", "data", "2024", "moves", "en.json")
+const srdPath = (edition: string) => path.join("src", "lib", "srd", "data", edition, "moves", "en.json")
 
 export async function getMoveData(): Promise<MoveData[]> {
 	const raw = await fs.readFile(PATH, { encoding: "utf-8" })
@@ -105,8 +105,14 @@ export async function writeMoveData(data: MoveData[]) {
 	await fs.writeFile(PATH, raw, { encoding: "utf-8" })
 }
 
-export async function writeMoveSrd(data: MoveSrdData[]) {
+export async function getMoveSrd(edition: string = "2024"): Promise<MoveSrdData[]> {
+	const raw = await fs.readFile(srdPath(edition), { encoding: "utf-8" })
+
+	return JSON.parse(raw).values
+}
+
+export async function writeMoveSrd(data: MoveSrdData[], edition: string = "2024") {
 	const raw = JSON.stringify({ values: data }, null, "\t")
 
-	await fs.writeFile(SRD_PATH, raw, { encoding: "utf-8" })
+	await fs.writeFile(srdPath(edition), raw, { encoding: "utf-8" })
 }
