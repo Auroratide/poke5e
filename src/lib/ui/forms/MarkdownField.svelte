@@ -13,7 +13,7 @@
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
 	export let placeholder: string = ""
-	export let rows: number = 4
+	export let rows: number = 6
 
 	let isReady = false
 
@@ -66,6 +66,8 @@
 		font-weight: bold;
 		font-size: var(--font-sz-venus);
 		letter-spacing: -0.04em;
+		position: relative;
+		z-index: 1;
 	}
 
 	textarea {
@@ -75,6 +77,7 @@
 
 	textarea-markdown {
 		font-size: var(--font-sz-venus);
+		margin-block-start: -1.5em;
 	}
 
 	/* The shadow root is out of reach of the global input styles, so they are restated here. */
@@ -105,5 +108,12 @@
 	textarea-markdown::part(button):focus {
 		background-color: var(--skin-input-bg);
 		opacity: 1;
+	}
+
+	textarea-markdown::part(menu) {
+		position: relative;
+		z-index: 2;
+		width: fit-content;
+		float: right;
 	}
 </style>

@@ -106,7 +106,7 @@
 	<FeatsFieldset feats={DndFeats} bind:values={feats} {disabled} />
 	<InventoryFieldset bind:money bind:inventory {disabled} />
 	<Fieldset title="{m.general()}">
-		<MarkdownField label="{m.description()}" bind:value={description} placeholder="{m["trainers.generalInfoAboutThisTrainer"]()}..." {disabled} />
+		<MarkdownField label="{m.description()}" bind:value={description} placeholder="{m["trainers.generalInfoAboutThisTrainer"]()}..." rows={12} {disabled} />
 		<TagListField label="{m.tags()}" bind:value={tags} possibleTags={$allTags} />
 	</Fieldset>
 	<FormDetails title="{m.advanced()}">
