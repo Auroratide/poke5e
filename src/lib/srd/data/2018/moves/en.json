@@ -322,6 +322,7 @@
 			"attack": {
 				"scope": "ranged"
 			},
+			"description": "You strike with a sharp claw made from shadows in range. Make a ranged attack, dealing {dice} {type} damage on a hit. This moves scores a critical hit on natural attack rolls of 19 and 20.",
 			"updated": null
 		},
 		{
