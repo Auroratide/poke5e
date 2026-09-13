@@ -6,6 +6,15 @@
 			"description": "When this Pokémon uses a move of its own type, it may roll the damage twice and choose either total."
 		},
 		{
+			"id": "aerilate",
+			"name": "Aerilate",
+			"description": "All of this Pokémon's normal-type moves become flying-type.",
+			"updated": {
+				"tag": "New",
+				"details": "This ability was recently added."
+			}
+		},
+		{
 			"id": "aftermath",
 			"name": "Aftermath",
 			"description": "This Pokémon deals damage to an attacker equal to half of the damage received when knocked out by a melee move."
@@ -69,6 +78,15 @@
 			"id": "aura-break",
 			"name": "Aura Break",
 			"description": "When this Pokémon is in battle, the boost of Fairy Aura and Dark Aura abilities is reversed, Any applicable move type activated within 100 feet deals half damage instead of double."
+		},
+		{
+			"id": "aura-guard",
+			"name": "Aura Guard",
+			"description": "This Pokemon takes half damage from any melee attack.",
+			"updated": {
+				"tag": "New",
+				"details":"This ability was recently added."
+			}
 		},
 		{
 			"id": "bad-dreams",
@@ -251,7 +269,16 @@
 			"name": "Defiant",
 			"description": "While this Pokémon is suffering from a negative status effect or stat change imposed by an opponent, it gains +2 to all attack rolls."
 		},
-			{
+		{
+			"id": "delta-stream",
+			"name": "Delta Stream",
+			"description": "For as long as this Pokémon is engaged in combat, the weather is Strong Winds and cannot be changed. In Strong Winds, Flying-type pokemon ignore their vulnerabilities granted by their flying type; if their secondary type grants vulnerability or resistance to one of those types, it follows the secondary type. If Primordial Sea or Desolate Land is also active, then the weather is simultaneously Strong Winds in addition to the weather caused by those abilities.",
+			"updated": {
+				"tag": "New",
+				"details":"This ability was recently added."
+			}
+		},
+		{
 			"id": "desolate-land",
 			"name": "Desolate Land",
 			"description": "For as long as this Pokémon is engaged in combat, the weather is Extremely Harsh Sunlight and cannot be changed. Extremely Harsh Sunlight is the same as Harsh Sunlight, with the additional effect that Water-type damage is nullified. If Primordial Sea is also active, then the weather is simultaneously Extremely Harsh Sunlight and Heavy Rain."
@@ -266,7 +293,16 @@
 			"name": "Download",
 			"description": "Once per short rest, this Pokémon can choose a different damage type for one of their normal attacks."
 		},
-			{
+		{
+			"id": "dragonize",
+			"name": "Dragonize",
+			"description": "All of this Pokémon's normal-type moves become dragon-type.",
+			"updated": {
+				"tag": "New",
+				"details":"This ability was recently added."
+			}
+		},
+		{
 			"id": "dragons-maw",
 			"name": "Dragon's Maw",
 			"description": "When this Pokémon uses a dragon-type move, it may roll the damage twice and choose either total."
@@ -300,6 +336,15 @@
 			"id": "earth-eater",
 			"name": "Earth Eater",
 			"description": "This Pokémon takes no damage from ground-type attacks. Instead, half of any ground damage done is absorbed, restoring the Pokémon's HP."
+		},
+		{
+			"id": "eelevate",
+			"name": "Spicy Spray",
+			"description": "This Pokémon is immune to ground moves. Upon causing an opponent to faint, this Pokémon increases the ability scores of its saving throw proficiencies by 2 until the end of combat. This is stackable up to a maximum of +10 to any one ability score.",
+			"updated": {
+				"tag": "New",
+				"details":"This ability was recently added."
+			}
 		},
 		{
 			"id": "effect-spore",
@@ -350,6 +395,15 @@
 			"id": "filter",
 			"name": "Filter",
 			"description": "When hit by a move type this Pokémon is vulnerable to, it may roll a d4. In a result of 4, it does not take the additional damage."
+		},
+		{
+			"id": "fire-mane",
+			"name": "Fire Mane",
+			"description": "This Pokémon adds its proficiency bonus to damage dealt by fire-type moves.",
+			"updated": {
+				"tag": "New",
+				"details":"This ability was recently added."
+			}
 		},
 		{
 			"id": "flame-body",
@@ -807,6 +861,15 @@
 			"description": "Aura and Pulse moves made by this Pokémon deal additional damage/healing equal to this Pokémon's proficiency bonus."
 		},
 		{
+			"id": "mega-sol",
+			"name": "Mega Sol",
+			"description": "All moves activated by this Pokémon behave as if during Harsh Sunlight, regardless of the actual weather conditions.",
+			"updated": {
+				"tag": "New",
+				"details":"This ability was recently added."
+			}
+		},
+		{
 			"id": "merciless",
 			"name": "Merciless",
 			"description": "This Pokémon doubles their damage dice when dealing damage to an opponent that is poisoned."
@@ -943,6 +1006,15 @@
 			"description": "This Pokémon always has a maximum HP of 1. (Shedinja only. Cannot be passed or swapped)"
 		},
 		{
+			"id": "parental-bond",
+			"name": "Parental Bond",
+			"description": "When you execute an instantaneous damaging move that requires at least one attack roll against one target, you may use your bonus action this turn to execute the same move again against the same target at no PP cost. If you do, the damage dealt by the second execution is halved and does not benefit from the MOVE modifier, STAB, or bonus damage from items, other abilities, feats, or from any other damage bonuses.",
+			"updated": {
+				"tag": "New",
+				"details":"This ability was recently added."
+			}
+		},
+		{
 			"id": "pastel-veil",
 			"name": "Pastel Veil",
 			"description": "This Pokémon and its allies cannot be poisoned for as long as it is in combat."
@@ -961,6 +1033,15 @@
 			"id": "pickup",
 			"name": "Pickup",
 			"description": "If an opponent uses a consumable held item in battle, this Pokémon gains a copy of it if it is not currently holding an item."
+		},
+		{
+			"id": "piercing-drill",
+			"name": "Piercing Drill",
+			"description": "Melee attacks this Pokémon make may damage through the opponent's use of Protect or Detect.",
+			"updated": {
+				"tag": "New",
+				"details":"This ability was recently added."
+			}
 		},
 		{
 			"id": "pixilate",
@@ -1311,6 +1392,15 @@
 			"id": "speed-boost",
 			"name": "Speed Boost",
 			"description": "This Pokémon's speed is increased by 10 feet while in an environment related to its type (DM Discretion)."
+		},
+		{
+			"id": "spicy-spray",
+			"name": "Spicy Spray",
+			"description": "When damaged by an attacker who is within 30 feet, you may use your reaction to attempt to burn the attacker. The attacker must make a DEX save, becoming burned on failure. The DC is 11 plus your proficiency bonus.",
+			"updated": {
+				"tag": "New",
+				"details":"This ability was recently added."
+			}
 		},
 		{
 			"id": "stakeout",
