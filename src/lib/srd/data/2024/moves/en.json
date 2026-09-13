@@ -1033,7 +1033,11 @@
 			"categories": [
 				"ballistic",
 				"pulse"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "aura-wheel",
@@ -2118,7 +2122,11 @@
 				"scope": "ranged"
 			},
 			"description": "You throw a boomerang and make two ranged attacks against a target. On each successful hit, do {dice} {type} damage.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "boomburst",
@@ -2185,7 +2193,11 @@
 				"scope": "melee"
 			},
 			"description": "When you activate this move, you use 10 feet of your movement to bounce upwards and disappear, remaining in an invulnerable state until your next turn. During this time, you are immune to the damage and effects of any move. If you have no remaining movement or are grappled/restrained before activating this move, the move fails. On your next turn, as an action, you reappear and attempt to slam down on top of a creature. Make a melee attack roll on a creature in range, with advantage, doing {dice} {type} damage on a hit. On a natural attack roll of 15 or more, the target is paralyzed.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "branch-poke",
@@ -3515,7 +3527,11 @@
 				"attribute": "str"
 			},
 			"description": "You wrap yourself around a creature, trying to squeeze the life from them. Make a melee attack roll. On a hit, the target takes {dice} {type} damage and is grappled. At the beginning of each of its turns, it may attempt to escape with a {save}. As long as the target is grappled on your subsequent turns, this move can be activated again as a bonus action with an automatic hit, dealing 1d4 {type} damage.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "conversion",
@@ -3847,7 +3863,11 @@
 				"scope": "melee"
 			},
 			"description": "You slam down onto a creature with a heavy claw. Make a melee attack roll on a target, dealing {dice} {type} damage on a hit. This move scores a critical hit on rolls of 19 or 20.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "crafty-shield",
@@ -4398,7 +4418,11 @@
 				"scope": "melee"
 			},
 			"description": "You burrow underground, disappearing from view before striking from underneath a target. When you activate this move, you use 10 feet of your movement to burrow underground (ignoring difficult terrain) and remain there until your next turn. During this time, you are immune to the damage and effects of any move. If you have no remaining movement or are grappled/restrained before activating this move, the move fails. On your next turn, you use your action to emerge from the ground and make a melee attack on a creature in range, with advantage, doing {dice} {type} damage on a successful hit. If the target has Tremorsense, the attack is not rolled with advantage.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "dire-claw",
@@ -4576,7 +4600,11 @@
 				"scope": "melee"
 			},
 			"description": "When you activate this move, you use 10 feet of your movement to disappear into a magical space beneath your feet, remaining in an invulnerable state until your next turn. During this time, you are immune to the damage and effects of any move. If you have no remaining movement or are grappled/restrained before activating this move, the move fails. On your next turn, as an action, you reappear and attempt to attack a creature from below. Make a melee attack roll on a creature in range, with advantage, doing {dice} {type} damage on a hit.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "dizzy-punch",
@@ -4720,7 +4748,11 @@
 			"description": "You punch twice with two devastating slams of your fist. Make two melee attack rolls, doing {dice} {type} damage on each successful hit. If any natural attack roll is 16 or higher, the target flinches.",
 			"categories": [
 				"punch"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "double-kick",
@@ -7004,7 +7036,11 @@
 				"scope": "ranged"
 			},
 			"description": "You release a series of moving flames that dance around a target. Make a ranged attack roll, doing {dice} {type} damage on a hit. as the flames swirl around it. As long as you maintain concentration, the target takes an additional 1d6 {type} damage at the end of each of its next three turns.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "first-impression",
@@ -7988,7 +8024,11 @@
 				"scope": "ranged"
 			},
 			"description": "You blow a gust of freezing cold air at a creature in range. Make a ranged attack roll, dealing {dice} {type} damage on a hit. This move scores a critical hit on natural attack rolls of 16 and higher.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "frustration",
@@ -10764,7 +10804,11 @@
 				"scope": "ranged"
 			},
 			"description": "You summon an infestation of tiny insects to attack a creature for multiple turns. Make a ranged attack on a target. On a hit, the target takes {dice} {type} damage and becomes infested with swarming bugs. As long as you maintain concentration, the target takes an additional 1d6 {type} damage at the end of each of its next three turns.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "ingrain",
@@ -12880,7 +12924,11 @@
 				"attribute": "dex"
 			},
 			"description": "When you use this move, soak in cosmic energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a {shape} of cosmic energy, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save.\n\nAdditionally, on your next turn, saving throws you cause have their DC increased by 3.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "meteor-mash",
@@ -13052,7 +13100,11 @@
 			"description": "You fill your head with hot fire that explodes around you. Force all creatures within 15 feet of you to make a {save}, taking {dice} {type} damage on a failure, or half as much on a success. After activating this move, you take an amount of typless damage equal to the full damage as if you failed the save.",
 			"categories": [
 				"explosive"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "mind-reader",
@@ -13675,7 +13727,11 @@
 				"scope": "melee"
 			},
 			"description": "You strike out with inner power, depending on your type. Make a melee attack on a target, dealing {dice} damage of your current type.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "mystical-fire",
@@ -15790,7 +15846,11 @@
 				"attribute": "wis"
 			},
 			"description": "You send a beam of invisible, psychic energy at a target in range. The target must make a {save}, taking {dice} {type} damage on a fail, or half as much on a success. Creatures that fail the save by 5 or more become confused.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "psyblade",
@@ -16615,7 +16675,11 @@
 				"attribute": "dex"
 			},
 			"description": "You strike out with an incredibly fast spinning move. All creatures within melee range must make a {save}, taking {dice} {type} damage on a failure, or half as much on a success. In addition, this move automatically frees the user from Leech Seed or anything causing it to be grappled or restrained. It is removed from these statuses before the saving throw is made.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "razor-leaf",
@@ -17379,7 +17443,11 @@
 			"description": "You summon a huge boulder and launch it at a target in range. Make a ranged attack, dealing {dice} {type} damage on a hit. This move saps you of energy, and may not activate it again until after the end of your next turn.",
 			"categories": [
 				"ballistic"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "role-play",
@@ -17758,7 +17826,11 @@
 				"attribute": "str"
 			},
 			"description": "You attempt to summon a wave of sand that surrounds the target. Force a creature in range to make a {save}, taking {dice} {type} damage and becoming restrained on a failure, or half as much without being restrained on a success. If it fails, at the beginning of each of its turns, it may attempt to escape with a {save}. While a creature is restrained, you may continue this move, as an action, to deal an automatic {dice} {type} damage.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "sandsear-storm",
@@ -18194,7 +18266,11 @@
 				"attribute": "con"
 			},
 			"description": "You release a bright shockwave from your body, damaging all creatures within 20 feet of you. Any creature in range must make a {save}, taking {dice} {type} damage on a failure, or half as much on a success. Until the end of your next turn, any attack roll made against a target that failed is rolled at advantage.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "seismic-toss",
@@ -18676,7 +18752,11 @@
 				"type": "damage"
 			},
 			"description": "A burst of electric energy glides forward, striking anything in a {shape}. This move is guaranteed to hit all creatures caught in the wave for {dice} {type} damage, unless during the invulnerable stage of Fly, Dig, Bounce, Dive, etc. moves.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "shore-up",
@@ -18976,7 +19056,11 @@
 				"scope": "melee"
 			},
 			"description": "When you use this move, you flap your wings menacingly and prepare to strike a creature within range. On your next turn’s action, if you keep your concentration, you dive at a creature in range, ignoring your flying speed and any opportunity attacks you may incur. Make a melee attack roll, doing {dice} {type} damage on a hit.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "sky-drop",
@@ -19356,7 +19440,11 @@
 				"scope": "ranged"
 			},
 			"description": "You procure a handful of strong smelling salt, damaging a creature's senses. Make a ranged attack against a target, dealing {dice} {type} damage on a hit. If the target is paralyzed, double the dice roll for the damage.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "smog",
@@ -19388,7 +19476,11 @@
 				"attribute": "con"
 			},
 			"description": "You release a toxic cloud of poisonous smog in a 10 foot radius, centered on a point within range. Any creature that starts their turn in this area must succeed on a {save}, taking {dice} {type} damage on a failure, or half as much on a success. Creatures that fail this save by 5 or more become poisoned.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "smokescreen",
@@ -19689,7 +19781,11 @@
 				"attribute": "dex"
 			},
 			"description": "When you use this move, soak in solar energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a {shape} of solar energy, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save. If this move is used in harsh sunlight, double your MOVE modifier for damage and it can be used on the turn it is activated, without concentration.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "solar-blade",
@@ -19722,7 +19818,11 @@
 			"description": "When you activate this move, you use your action gathering in solar energy to prepare to strike with blades.  On your next turn, if you keep your concentration, use an action to make a melee attack, dealing {dice} {type} damage on a hit. If this move is used in harsh sunlight, double your MOVE modifier for damage and it can be used on the turn it is activated, without concentration.",
 			"categories": [
 				"slicing"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "sonic-boom",
@@ -20909,7 +21009,11 @@
 				"scope": "melee"
 			},
 			"description": "You resist an attack, fighting back against a creature. When hit by a melee attack, you may use a reaction to immediately retaliate with an attack roll of your own, dealing {dice} {type} damage on a hit.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "stuff-cheeks",
@@ -21166,7 +21270,11 @@
 				"scope": "melee"
 			},
 			"description": "You strike a target with incredible power - but with great power comes great responsibility. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. This move exhausts you, and your STR and DEX ability scores are both reduced by 10 until after the end of your next turn.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "supersonic",
@@ -21603,7 +21711,11 @@
 				"scope": "melee"
 			},
 			"description": "You rush forward and slam into a creature. Make a melee attack roll against a target, doing {dice} {type} damage on a hit.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "tail-glow",
@@ -23464,7 +23576,11 @@
 				"scope": "ranged"
 			},
 			"description": "You attempt to drench a creature in poisonous liquid. Make a ranged attack on a creature, dealing {dice} {type} damage on a hit. If the target is already poisoned, double the dice roll for the damage",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Damage is updated."
+			}
 		},
 		{
 			"id": "vice-grip",
