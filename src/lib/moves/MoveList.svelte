@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { SortableTable, BubbleRow } from "$lib/ui/page"
-	import { RelativeNumberField, SearchField, SelectField, type RelativeValue } from "$lib/ui/forms"
+	import { RelativeNumberField, SearchField, SelectField, ToggleSwitchField, type RelativeValue } from "$lib/ui/forms"
 	import { MovesFilterStore, MovesSorterStore } from "./store"
 	import type { MoveListing } from "./MoveListing"
 	import { Url } from "$lib/site/url"
@@ -11,6 +11,7 @@
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import { MoveTime } from "./time"
 	import { ContestType } from "./contest/ContestType"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
 	export let moves: MoveListing[]
 
@@ -53,6 +54,8 @@
 		name: ContestType.name(it),
 	})))
 
+	let filteredUpdated: boolean = false
+
 	let filteredRange: number | undefined = undefined
 	let filteredRangeRelative: RelativeValue = "="
 
@@ -69,6 +72,7 @@
 		.contest(filteredContest)
 		.rangeInFeet(filteredRangeRelative, filteredRange)
 		.pp(filteredPpRelative, filteredPp)
+		.updated(filteredUpdated)
 
 	$: filteredMoves = moves.filter(filter.apply)
 
@@ -82,6 +86,7 @@
 		filteredContest = ""
 		filteredRange = undefined
 		filteredPp = undefined
+		filteredUpdated = false
 	}
 </script>
 
@@ -93,6 +98,9 @@
 		<SelectField label="{m.contest()}" bind:value={filteredContest} options={contestOptions} />
 		<RelativeNumberField label="{m.range()}" bind:value={filteredRange} bind:relative={filteredRangeRelative} min={0} placeholder="{m.use0ForMelee()}" />
 		<RelativeNumberField label="{m.pp()}" bind:value={filteredPp} bind:relative={filteredPpRelative} min={0} placeholder="{m.number()}" />
+		{#if FeatureToggles.PreviewUpdatedMoves()}
+			<ToggleSwitchField label="{m.updatedRecently()}" bind:value={filteredUpdated} />
+		{/if}
 	</SearchField>
 </div>
 <SortableTable let:item let:cellVisibility items={filteredMoves} bind:currentSorter={$MovesSorterStore} headers={[ {

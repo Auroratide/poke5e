@@ -311,6 +311,7 @@
 	"line": "{value}-foot line",
 	"rangeWithShape": "{range} ({shape})",
 	"unknownShape": "<?> shape",
+	"updatedRecently": "Updated Recently",
 	"home": {
 		"title": "Pokémon 5th Edition"
 	},

@@ -27,6 +27,7 @@ export class MoveFilter {
 			value: number,
 		},
 		contest: string | "",
+		updated: boolean,
 	} = {
 			name: "",
 			type: "",
@@ -38,10 +39,11 @@ export class MoveFilter {
 			pp: undefined,
 			cost: undefined,
 			contest: "",
+			updated: false,
 		}
 
 	count(): number {
-		const isFilterInactive = (filter: unknown) => filter == null || (Array.isArray(filter) ? filter.length === 0 : filter === "")
+		const isFilterInactive = (filter: unknown) => filter == null || (Array.isArray(filter) ? filter.length === 0 : typeof filter === "string" ? filter === "" : !filter)
 		return Object.values(this.filters).reduce<number>((sum, cur) => sum + (isFilterInactive(cur) ? 0 : 1), 0)
 	}
 
@@ -104,6 +106,11 @@ export class MoveFilter {
 		return this
 	}
 
+	updated(value: boolean): MoveFilter {
+		this.filters.updated = value
+		return this
+	}
+
 	apply = (move: MoveListing): boolean => {
 		return includesSearch([move.name, ...move.aliases], this.filters.name)
 			&& (this.filters.type === "" || move.type === this.filters.type || (!PokemonType.isPokeType(move.type) && this.filters.type === "varies"))
@@ -115,5 +122,6 @@ export class MoveFilter {
 			&& (this.filters.pp == null || relativeNumberCompare(this.filters.pp.relative, move.pp, this.filters.pp.value))
 			&& (this.filters.contest === "" || this.filters.contest === move.contest?.contest)
 			&& (this.filters.cost == null || (move.tm != null && relativeNumberCompare(this.filters.cost.relative, move.tm.cost, this.filters.cost.value)))
+			&& (!this.filters.updated || move.updated != null)
 	}
 }

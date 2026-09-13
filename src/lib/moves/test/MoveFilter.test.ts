@@ -123,6 +123,10 @@ const moves = [
 		contest: stubContestDetails({
 			contest: "beauty",
 		}),
+		updated: {
+			tag: "Updated",
+			details: "Made better",
+		},
 	}),
 ]
 
@@ -357,6 +361,15 @@ test("not a matching tm number", () => {
 	expect(result.length).toEqual(0)
 })
 
+test("move updated", () => {
+	const filter = new MoveFilter()
+		.updated(true)
+
+	const result = moves.filter(filter.apply)
+
+	expect(result.length).toEqual(1)
+})
+
 test("filters count", () => {
 	const none = new MoveFilter()
 	expect(none.count()).toEqual(0)
@@ -369,4 +382,10 @@ test("filters count", () => {
 		.name("?")
 		.not(["something"])
 	expect(two.count()).toEqual(2)
+
+	const three = new MoveFilter()
+		.name("?")
+		.not(["something"])
+		.updated(true)
+	expect(three.count()).toEqual(3)
 })

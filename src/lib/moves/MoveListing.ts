@@ -7,6 +7,7 @@ import { MoveShape } from "./shape"
 import { MoveTime } from "./time"
 import type { TmDetails } from "./tms/TmDetails"
 import type { MoveType } from "./type"
+import type { BetaDetails } from "$lib/site/beta"
 
 /**
  * Projection of Move to remove unused fields during SSR
@@ -24,6 +25,7 @@ export type MoveListing = {
 	/** Never populated by a listing: TMs are their own SRD resource, and the list shows none. */
 	tm?: TmDetails,
 	contest?: ContestListing,
+	updated?: BetaDetails,
 }
 
 /**
@@ -34,10 +36,10 @@ export type MoveListing = {
 export type ContestListing = Pick<ContestJson, "contest">
 
 export type MoveListingJson = Pick<MoveJson,
-	"id" | "name" | "aliases" | "type" | "power" | "pp" | "time" | "range" | "shape">
+	"id" | "name" | "aliases" | "type" | "power" | "pp" | "time" | "range" | "shape" | "updated">
 	& { contest?: ContestListing }
 
-const LISTING_FIELDS = ["id", "name", "aliases", "type", "power", "pp", "time", "range", "shape"] as const
+const LISTING_FIELDS = ["id", "name", "aliases", "type", "power", "pp", "time", "range", "shape", "updated"] as const
 
 export const MoveListing = {
 	/**
@@ -63,5 +65,6 @@ export const MoveListing = {
 		range: MoveRange.fromJson(json.range),
 		shape: MoveShape.fromJson(json.shape),
 		contest: json.contest,
+		updated: json.updated,
 	}),
 }
