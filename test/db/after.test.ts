@@ -2061,6 +2061,271 @@ test("transfering a pokemon", async () => {
 	})
 })
 
+test("cloning a trainer", async () => {
+	const {
+		ret_id: irisId,
+		ret_read_key: irisReadKey,
+		ret_write_key: irisWriteKey,
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const avatarFilename = await call<string>("new_trainer_avatar_filename", {
+		_write_key: irisWriteKey,
+		_extension: ".png",
+	})
+
+	await call<string>("add_inventory_item", {
+		_write_key: irisWriteKey,
+		_item_id: "potion",
+		_quantity: 2,
+		_custom_name: null,
+		_description: null,
+		_rank: 0,
+	})
+
+	await call<string>("add_trainer_feat", {
+		_write_key: irisWriteKey,
+		_feat_name: "Keen Mind",
+		_description: null,
+		_is_custom: false,
+		_rank: 0,
+	})
+
+	const sunnyYellowId = await call<number>("add_pokemon", {
+		_write_key: irisWriteKey,
+		...SunnyYellow(),
+		_rank: 1,
+	})
+
+	const rosyRedId = await call<number>("add_pokemon", {
+		_write_key: irisWriteKey,
+		...SunnyYellow(),
+		_nickname: "Rosy Red",
+		_rank: 2,
+	})
+
+	// Rosy Red is kept in the box, so the clone has a layout to reproduce and
+	// not merely a roster.
+	await call<number>("set_pokemon_storage", {
+		_write_key: irisWriteKey,
+		_id: rosyRedId,
+		_storage: "box",
+	})
+
+	await call<string>("add_move", {
+		_write_key: irisWriteKey,
+		_pokemon_id: sunnyYellowId,
+		_move_id: "psybeam",
+		_pp_cur: 9,
+		_pp_max: 10,
+		_notes: "",
+		_rank: 0,
+	})
+
+	await call<string>("add_held_item", {
+		_write_key: irisWriteKey,
+		_pokemon_id: sunnyYellowId,
+		_item_id: "miracle-seed",
+		_custom_name: null,
+		_description: null,
+		_rank: 0,
+	})
+
+	await call<string>("add_pokemon_feat", {
+		_write_key: irisWriteKey,
+		_pokemon_id: sunnyYellowId,
+		_feat_name: "Extra Move",
+		_description: null,
+		_is_custom: false,
+		_rank: 0,
+	})
+
+	// An offer outstanding at the moment of the clone
+	const transferCode = await call<string>("generate_transfer_code", {
+		_write_key: irisWriteKey,
+		_pokemon_id: sunnyYellowId,
+	})
+
+	// Both keys have to name the same trainer, so neither half of a stranger's
+	// pair is enough on its own.
+	const {
+		ret_id: renibelId,
+		ret_read_key: renibelReadKey,
+		ret_write_key: renibelWriteKey,
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", {
+		...Iris(),
+		_name: "Renibel",
+	})
+
+	await expect(() => call("clone_trainer", {
+		_read_key: irisReadKey,
+		_write_key: renibelWriteKey,
+	})).rejects.toThrow()
+
+	await expect(() => call("clone_trainer", {
+		_read_key: renibelReadKey,
+		_write_key: irisWriteKey,
+	})).rejects.toThrow()
+
+	// Clone
+	const {
+		ret_read_key: cloneReadKey,
+		ret_write_key: cloneWriteKey,
+	} = await call<{
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("clone_trainer", {
+		_read_key: irisReadKey,
+		_write_key: irisWriteKey,
+	})
+
+	expect(cloneReadKey).not.toEqual(irisReadKey)
+	expect(cloneWriteKey).not.toEqual(irisWriteKey)
+
+	// The new keys open only the copy
+	const opensTheOriginal = await call<number>("verify_write_key", {
+		_id: irisId,
+		_write_key: cloneWriteKey,
+	})
+	expect(opensTheOriginal).toEqual(0)
+
+	const clone = await call<any>("get_trainer", {
+		_read_key: cloneReadKey,
+	})
+
+	expect(clone.id).not.toEqual(irisId)
+	expect(clone.name).toEqual("Iris")
+	expect(clone.path_name).toEqual("Nurse")
+	expect(clone.special_grass).toEqual(1)
+	expect(clone.rank_acrobatics).toEqual(2)
+	expect(clone.prof_deception).toEqual(true)
+
+	// Both trainers name the same picture; the bucket only collects a file once
+	// nobody points at it.
+	expect(clone.avatar_filename).toEqual(avatarFilename)
+
+	const cloneInventory = await callAll<any>("get_inventory_items", {
+		_read_key: cloneReadKey,
+	})
+	expect(cloneInventory.map((it) => it.item_id)).toEqual(["potion"])
+	expect(cloneInventory[0].quantity).toEqual(2)
+
+	const cloneFeats = await callAll<any>("get_trainer_feats", {
+		_read_key: cloneReadKey,
+	})
+	expect(cloneFeats.map((it) => it.feat_name)).toEqual(["Keen Mind"])
+
+	const clonePokemon = await callAll<any>("get_pokemon", {
+		_trainer_id: clone.id,
+	})
+
+	// get_pokemon orders by rank then nickname, and both pokemon sit at rank 1
+	// of their own storage
+	expect(clonePokemon.map((it) => it.nickname)).toEqual(["Rosy Red", "Sunny Yellow"])
+
+	const cloneRosy = clonePokemon.find((it) => it.nickname === "Rosy Red")
+	const cloneSunny = clonePokemon.find((it) => it.nickname === "Sunny Yellow")
+
+	// Fresh rows rather than the originals handed over
+	expect(clonePokemon.map((it) => it.id)).not.toContain(sunnyYellowId)
+	expect(clonePokemon.map((it) => it.id)).not.toContain(rosyRedId)
+
+	// The party and the box come across as they were
+	expect(cloneSunny.storage).toEqual("party")
+	expect(cloneSunny.rank).toEqual(1)
+	expect(cloneRosy.storage).toEqual("box")
+	expect(cloneRosy.rank).toEqual(1)
+
+	expect(cloneSunny.exp).toEqual(5400)
+	expect(cloneSunny.tera_type).toEqual("fairy")
+	expect(cloneSunny.rank_persuasion).toEqual(1)
+
+	const cloneMoves = await callAll<any>("get_moveset", {
+		_pokemon_id: cloneSunny.id,
+	})
+	expect(cloneMoves.map((it) => it.move_id)).toEqual(["psybeam"])
+	expect(cloneMoves[0].pp_cur).toEqual(9)
+
+	const cloneHeldItems = await callAll<any>("get_held_items", {
+		_pokemon_id: cloneSunny.id,
+	})
+	expect(cloneHeldItems.map((it) => it.item_id)).toEqual(["miracle-seed"])
+
+	const clonePokemonFeats = await callAll<any>("get_pokemon_feats", {
+		_pokemon_id: cloneSunny.id,
+	})
+	expect(clonePokemonFeats.map((it) => it.feat_name)).toEqual(["Extra Move"])
+
+	// The children belong to the pokemon they were copied for, so the one that
+	// had nothing still has nothing
+	const rosyMoves = await callAll<any>("get_moveset", {
+		_pokemon_id: cloneRosy.id,
+	})
+	expect(rosyMoves).toHaveLength(0)
+
+	// The outstanding offer is not duplicated...
+	await expect(() => call<string>("get_transfer_code", {
+		_write_key: cloneWriteKey,
+		_pokemon_id: cloneSunny.id,
+	})).rejects.toThrow()
+
+	// ...and the original's still resolves to the original's pokemon
+	const originalTransferCode = await call<string>("get_transfer_code", {
+		_write_key: irisWriteKey,
+		_pokemon_id: sunnyYellowId,
+	})
+	expect(originalTransferCode).toEqual(transferCode)
+
+	// Editing the copy must not reach back to the original
+	await call<number>("set_pokemon_storage", {
+		_write_key: cloneWriteKey,
+		_id: cloneRosy.id,
+		_storage: "party",
+	})
+
+	const irisPokemon = await callAll<any>("get_pokemon", {
+		_trainer_id: irisId,
+	})
+	expect(irisPokemon.find((it) => it.id === rosyRedId).storage).toEqual("box")
+
+	const cloneAvatarFilename = await call<string>("new_trainer_avatar_filename", {
+		_write_key: cloneWriteKey,
+		_extension: ".png",
+	})
+	expect(cloneAvatarFilename).not.toEqual(avatarFilename)
+
+	const iris = await call<any>("get_trainer", {
+		_read_key: irisReadKey,
+	})
+	expect(iris.avatar_filename).toEqual(avatarFilename)
+
+	// Cleanup -- deleting the copy takes everything that was copied with it
+	await call("delete_trainer", {
+		_write_key: cloneWriteKey,
+		_id: clone.id,
+	})
+	const noMoreClonedPokemon = await callAll<any>("get_pokemon", {
+		_trainer_id: clone.id,
+	})
+	expect(noMoreClonedPokemon.length).toEqual(0)
+
+	await call("delete_trainer", {
+		_write_key: irisWriteKey,
+		_id: irisId,
+	})
+	await call("delete_trainer", {
+		_write_key: renibelWriteKey,
+		_id: renibelId,
+	})
+})
+
 test("no direct access allowed", async () => {
 	const UNAUTHORIZED_SCHEMA = "PGRST106"
 
