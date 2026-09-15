@@ -1,1 +1,1 @@
-{"id":"sweet-veil","name":"Sweet Veil","description":"Any ally within 15 feet of this Pokémon is immune to the sleep condition."}
+{"id":"sweet-veil","name":"Sweet Veil","description":"This Pokémon and its allies within 15 feet are immune to the sleep condition.","updated":{"tag":"Updated","details":"Added 'this Pokémon' as a beneficiary."}}

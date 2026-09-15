@@ -1,1 +1,1 @@
-{"id":"aroma-veil","name":"Aroma Veil","description":"Any ally within 15 feet of this Pokémon automatically passes any WIS save they are required to make."}
+{"id":"aroma-veil","name":"Aroma Veil","description":"This Pokémon and its allies within 15 feet automatically passes any WIS save they are required to make.","updated":{"tag":"Updated","details":"Added 'this Pokémon' as a beneficiary."}}

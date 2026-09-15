@@ -1,1 +1,1 @@
-{"id":"flower-veil","name":"Flower Veil","description":"Any grass-type ally within 15 feet of this Pokémon is immune to new status effects."}
+{"id":"flower-veil","name":"Flower Veil","description":"This Pokémon's grass-type allies within 15 feet (including itself if it is grass-type) are immune to new status effects.","updated":{"tag":"Updated","details":"Added 'this Pokémon' as a beneficiary."}}
