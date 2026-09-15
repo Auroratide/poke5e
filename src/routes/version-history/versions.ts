@@ -14,6 +14,50 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.12",
+		description: [
+			"Some fields, such as trainer description, now offer formatting options so text can contain bold or italicized text, or lists.",
+			"<strong>Tag Filters</strong>: Now persist from page to page so they do not need to be reapplied all the time.",
+			`<strong>Moves</strong>: The following generation 8 and 9 moves have been updated for consistency with mainline games and with the damage patterns of moves from generations 1 to 7:<ul>
+				<li><strong>Apple Acid</strong>: Damage increased.</li>
+				<li><strong>Astral Barrage</strong>: Damage increased.</li>
+				<li><strong>Aura Wheel</strong>: Damage increased.</li>
+				<li><strong>Axe Kick</strong>: Damage increased.</li>
+				<li><strong>Barb Barrage</strong>: Damage increased.</li>
+				<li><strong>Bitter Blade</strong>: Damage increased.</li>
+				<li><strong>Bitter Malice</strong>: Damage increased.</li>
+				<li><strong>Blood Moon</strong>: Damage decreased.</li>
+				<li><strong>Chilling Water</strong>: Damage decreased.</li>
+				<li><strong>Electro Shot</strong>: Damage decreased.</li>
+				<li><strong>Expanding Force</strong>: Damage increased.</li>
+				<li><strong>Flip Turn</strong>: Damage decreased.</li>
+				<li><strong>Glacial Lance</strong>: Damage increased.</li>
+				<li><strong>Hyper Drill</strong>: Damage increased.</li>
+				<li><strong>Infernal Parade</strong>: Damage increased.</li>
+				<li><strong>Meteor Beam</strong>: Given a secondary effect making saves against it harder.</li>
+				<li><strong>Mortal Spin</strong>: Damage increased.</li>
+				<li><strong>Overdrive</strong>: Damage decreased.</li>
+				<li><strong>Pyro Ball</strong>: Damage increased.</li>
+				<li><strong>Raging Bull</strong>: Damage increased.</li>
+				<li><strong>Salt Cure</strong>: Damage increased.</li>
+				<li><strong>Scale Shot</strong>: Damage increased.</li>
+				<li><strong>Scorching Sands</strong>: Damage increased.</li>
+				<li><strong>Spirit Break</strong>: Damage decreased.</li>
+				<li><strong>Steel Beam</strong>: Damage decreased.</li>
+				<li><strong>Strange Steam</strong>: Damage increased.</li>
+				<li><strong>Supercell Slam</strong>: Damage increased.</li>
+				<li><strong>Surging Strikes</strong>: Damage decreased.</li>
+				<li><strong>Tachyon Cutter</strong>: Damage increased.</li>
+				<li><strong>Temper Flare</strong>: Damage increased.</li>
+				<li><strong>Terrain Pulse</strong>: Damage increased.</li>
+				<li><strong>Thunder Cage</strong>: Damage increased.</li>
+				<li><strong>Torch Song</strong>: Damage increased.</li>
+				<li><strong>Triple Dive</strong>: Damage decreased.</li>
+				<li><strong>Wave Crash</strong>: Damage changed (increased or decreased depending on level).</li>
+			</ul>`,
+			"<strong>Abilities</strong>: Added the following abilities: Aerilate, Parental Bond, Delta Stream, Mega Sol, Dragonize, Piercing Drill, Spicy Spray, Eelevate, Fire Mane, Aura Guard.",
+		],
+	}, {
 		name: "v1.12.11",
 		description: [
 			"When the site is set to the 2018 edition, this is now indicated in the site title.",
