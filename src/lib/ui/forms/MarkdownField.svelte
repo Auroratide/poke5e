@@ -68,6 +68,7 @@
 		letter-spacing: -0.04em;
 		position: relative;
 		z-index: 1;
+		max-inline-size: 50%;
 	}
 
 	textarea {
