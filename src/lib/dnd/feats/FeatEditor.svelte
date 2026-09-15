@@ -19,7 +19,7 @@
 	{#if custom}
 		<MarkdownField label="Feat Description" name="feat-description-{value.id}" bind:value={value.description} placeholder="Provide a custom description" rows={6} {disabled} />
 	{:else}
-		<MarkdownField label="Notes" name="feat-description-{value.id}" bind:value={value.description} placeholder="Any additional notes" rows={3} {disabled} />
+		<MarkdownField label="Notes" name="feat-description-{value.id}" bind:value={value.description} placeholder="Any additional notes" rows={4} {disabled} />
 	{/if}
 	<Divider />
 </div>

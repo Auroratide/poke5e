@@ -78,6 +78,7 @@
 	textarea-markdown {
 		font-size: var(--font-sz-venus);
 		margin-block-start: -1.5em;
+		inline-size: 100%;
 	}
 
 	/* The shadow root is out of reach of the global input styles, so they are restated here. */
@@ -85,6 +86,7 @@
 		border: none;
 		background-color: var(--skin-input-bg);
 		padding: 0.5em 0.75em;
+		inline-size: 100%;
 	}
 
 	textarea-markdown::part(textarea):focus {
