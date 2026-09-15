@@ -123,8 +123,7 @@ export class TrainersPage {
 		await this.ui.fieldset("Inventory")
 			.getByLabel("Name")
 			.fill(name)
-		await this.ui.fieldset("Inventory")
-			.getByLabel("Item Description")
+		await this.ui.markdownBox("Item Description", this.ui.fieldset("Inventory"))
 			.fill(description)
 	}
 

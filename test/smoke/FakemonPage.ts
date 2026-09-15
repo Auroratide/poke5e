@@ -25,7 +25,7 @@ export class FakemonPage {
 
 		await this.ui.link("Edit").click()
 		await this.ui.textBox("Min Level").fill("5")
-		await this.ui.textBox("Description").fill("The Automated Test Pokemon. This pokemon was generated to test that the website still works correctly.")
+		await this.ui.markdownBox("Description").fill("The Automated Test Pokemon. This pokemon was generated to test that the website still works correctly.")
 		await this.ui.radio("50% ♀ : 50% ♂").check()
 		await this.ui.checkbox("Athletics").check()
 		await this.ui.checkbox("Intelligence").check()
@@ -34,7 +34,7 @@ export class FakemonPage {
 
 		await this.ui.formGroup("Non-Hidden Abilities").getByRole("button", { name: "Add Custom Ability" }).click()
 		await this.ui.formGroup("Non-Hidden Abilities").getByLabel("Name").fill("Evosmite")
-		await this.ui.formGroup("Non-Hidden Abilities").getByLabel("Description").fill("Deals +3 dmg to evolved pokemon.")
+		await this.ui.markdownBox("Description", this.ui.formGroup("Non-Hidden Abilities")).fill("Deals +3 dmg to evolved pokemon.")
 
 		await this.ui.formGroup("Starting Moves")
 			.getByText("Add Moves")

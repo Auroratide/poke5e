@@ -1,7 +1,15 @@
-import type { Page } from "@playwright/test"
+import type { Locator, Page } from "@playwright/test"
+
+// Matches a label's whole text, so "Description" does not also match "Item Description".
+const exactly = (text: string) =>
+	new RegExp(`^\\s*${text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*$`)
 
 export class Ui {
 	constructor(readonly page: Page) {}
+
+	pause() {
+		return this.page.pause()
+	}
 
 	text(text: string | RegExp) {
 		return this.page.getByText(text).filter({ visible: true })
@@ -17,6 +25,15 @@ export class Ui {
 
 	textBox(label: string | RegExp) {
 		return this.page.getByLabel(label).filter({ visible: true })
+	}
+
+	// Temporary, until the textarea-markdown component can be fixed to properly
+	// have the label point to the textbox. This is a bug in the component itself.
+	markdownBox(label: string, within: Page | Locator = this.page) {
+		return within.locator(".markdown-field")
+			.filter({ has: this.page.locator("label").filter({ hasText: exactly(label) }) })
+			.locator("textarea-markdown textarea")
+			.filter({ visible: true })
 	}
 
 	fieldset(name: string) {
