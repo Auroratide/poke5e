@@ -51,7 +51,7 @@ export const PokemonFeats: Feat[] = [ {
 }, {
 	name: "Ambidextrous",
 	category: "General",
-	description: "Your Pokémon can hold an additional held item. This feat can only be taken once.",
+	description: "Your Pokémon can hold an additional held item.",
 }, {
 	name: "Combo Master",
 	category: "General",
