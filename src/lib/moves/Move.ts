@@ -90,8 +90,13 @@ export class Move extends DataClass<{
 			return this.data.higherLevels
 		}
 
-		if (this.data.dice != null) {
-			const d = this.data.dice
+		const d = this.data.dice
+
+		if (d?.tiers?.length > 0 && d.tiers.every((it) => it === d.tiers[0])) {
+			return undefined
+		}
+
+		if (d != null) {
 			return m.atHigherLevelsDice({
 				type: d.type,
 				t1: d.tiers[1],

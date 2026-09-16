@@ -797,6 +797,22 @@ describe("higherLevels", () => {
 
 		expect(result).toEqual("custom higher levels text")
 	})
+
+	test("damage dice are all the same", () => {
+		const move = stubMove({
+			higherLevels: null,
+			dice: {
+				class: "custom",
+				tiers: ["1d4", "1d4", "1d4", "1d4"],
+				type: "damage",
+				modifier: "MOVE",
+			},
+		})
+
+		const result = move.higherLevels
+
+		expect(result).toBeUndefined()
+	})
 })
 
 describe("description", () => {
