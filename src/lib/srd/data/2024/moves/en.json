@@ -12923,7 +12923,7 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"description": "When you use this move, soak in cosmic energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, use an action to create a {shape} of cosmic energy, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save.\n\nAdditionally, on your next turn, saving throws you cause have their DC increased by 3.",
+			"description": "When you use this move, soak in cosmic energy and prepare to unleash a devastating beam. On your next turn, if you keep your concentration, saving throws you cause have their DC increased by 3, and you may use an action to create a {shape} of cosmic energy, 5 feet wide. Any creature caught in the line must succeed on a {save} or take {dice} {type} damage on a fail and half as much on a save.",
 			"categories": [],
 			"updated": {
 				"tag": "Updated",
@@ -17768,7 +17768,7 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"description": "You salt cure the target, dealing damage over time. Choose a target in range. The target must make a {save}. On failure, the target takes {dice} {type} damage, and it takes 1d4 {type} damage at the start of each of its turns until it is returned to a Pokéball or receives healing.\n\nWater- and Steel-type Pokémon are vulnerable to the damage dealt by this move.",
+			"description": "You salt cure the target, dealing damage over time. Choose a target in range. The target must make a {save}. On failure, the target takes {dice} {type} damage, and it takes 1d6 {type} damage at the start of each of its turns until it is returned to a Pokéball or receives healing.\n\nWater- and Steel-type Pokémon are vulnerable to the damage dealt by this move.",
 			"categories": []
 		},
 		{
