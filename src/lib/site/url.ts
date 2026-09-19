@@ -46,6 +46,7 @@ export const Url = {
 		bonds: () => localizeUrl(resolve("/reference/bonds")).pathname,
 		breeding: () => localizeUrl(resolve("/reference/breeding")).pathname,
 		catchingPokemon: () => localizeUrl(resolve("/reference/catching-pokemon")).pathname,
+		chainmailAndCharizards: () => localizeUrl(resolve("/reference/chainmail-and-charizards")).pathname,
 		combat: () => localizeUrl(resolve("/reference/combat")).pathname,
 		contests: () => localizeUrl(resolve("/reference/contests")).pathname,
 		damageTypes: () => localizeUrl(resolve("/reference/damage-types")).pathname,

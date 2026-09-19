@@ -4,6 +4,7 @@ import { meta as AppendixPage } from "./appendix/meta"
 import { meta as BondsPage } from "./bonds/meta"
 import { meta as BreedingPage } from "./breeding/meta"
 import { meta as CatchingPokemonPage } from "./catching-pokemon/meta"
+import { meta as ChainmailAndCharizards } from "./chainmail-and-charizards/meta"
 import { meta as CombatPage } from "./combat/meta"
 import { meta as ContestsPage } from "./contests/meta"
 import { meta as CoreRulesPage } from "./core-rules/meta"
@@ -94,6 +95,7 @@ const Appendix2024 = [
 
 const Supplements2018 = [
 	SupplementsPage,
+	ChainmailAndCharizards,
 	ContestsPage,
 	OaksParcel,
 	ShinyPage,
@@ -104,6 +106,7 @@ const Supplements2024 = [
 	SupplementsPage,
 	BondsPage,
 	BreedingPage,
+	ChainmailAndCharizards,
 	EncountersPage,
 	ContestsPage,
 	LegendaryBattlesPage,
