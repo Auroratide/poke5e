@@ -21,6 +21,20 @@ const localizedLegacyApi = settings.locales
 	.filter((locale) => locale !== settings.baseLocale)
 	.flatMap((locale) => legacyApiPaths.map((path) => `/${locale}${path}`));
 
+/**
+ * The only files from `static` the app shell needs in order to render. Everything
+ * else in there is pokemon art -- 300+MB of it -- which offline mode downloads on
+ * demand rather than precaching. Narrowing this keeps the entire list of static
+ * files from being inlined into service-worker.js.
+ */
+const serviceWorkerFiles = [
+	/^styles\/.+\.css$/,
+	/^fonts\/.+\.(?:css|woff2)$/,
+	/^icons\/.+\.png$/,
+	/^poke5e\.webmanifest$/,
+	/^missingno\.png$/,
+];
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	// Consult https://github.com/sveltejs/svelte-preprocess
@@ -50,6 +64,9 @@ const config = {
 
 				throw new Error(message);
 			}
+		},
+		serviceWorker: {
+			files: (filename) => serviceWorkerFiles.some((it) => it.test(filename)),
 		},
 		paths: { relative: false },
 		alias: {
