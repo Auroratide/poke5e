@@ -1,5 +1,5 @@
 import * as z from "zod"
-import { Attribute, PokeType } from "../common/schema"
+import { Attribute, PokeType, Updated } from "../common/schema"
 
 const TableJson = z.object({
 	type: z.string(),
@@ -152,12 +152,7 @@ export const MoveJson = z.object({
 	beta: z.boolean().optional().meta({
 		description: "Present if the move is being playtested.",
 	}),
-	updated: z.object({
-		tag: z.string(),
-		details: z.string(),
-	}).optional().meta({
-		description: "When present, indicates the move is new or recently updated.",
-	}),
+	updated: Updated.optional(),
 }).meta({
 	id: "Move",
 	title: "Move",

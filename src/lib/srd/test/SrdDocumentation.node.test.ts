@@ -62,7 +62,7 @@ describe("the schema an endpoint returns", () => {
 		// the item endpoint expands the shape rather than naming it
 		const itemTokens = SrdDocumentation.humanReadableSchema(item.returns!.schema)
 		expect(itemTokens.filter((it) => it.kind === "property").map((it) => it.text))
-			.toEqual(["id", "name", "description", "aliases", "deprecated", "updated", "tag", "details"])
+			.toEqual(["id", "name", "description", "aliases", "deprecated", "updated"])
 	})
 
 	test("is declared by every endpoint in the document", () => {
@@ -131,9 +131,9 @@ describe("humanReadableSchema", () => {
 		const result = SrdDocumentation.humanReadableSchema(schemas.Ability)
 
 		expect(result.filter((it) => it.kind === "property").map((it) => it.text))
-			.toEqual(["id", "name", "description", "aliases", "deprecated", "updated", "tag", "details"])
+			.toEqual(["id", "name", "description", "aliases", "deprecated", "updated"])
 		expect(result.filter((it) => it.kind === "type").map((it) => it.text))
-			.toEqual(["string", "string", "string", "string", "boolean", "string", "string"])
+			.toEqual(["string", "string", "string", "string", "boolean"])
 	})
 
 	test("an array of references keeps the link target", () => {
@@ -201,14 +201,7 @@ describe("humanReadableSchema", () => {
 	 * Ability is to no longer be used.
 	 */
 	deprecated?: boolean
-
-	/**
-	 * When present, indicates the resource is new or recently updated.
-	 */
-	updated?: {
-		tag: string
-		details: string
-	}
+	updated?: Updated
 }`)
 		})
 
@@ -217,8 +210,8 @@ describe("humanReadableSchema", () => {
 			const doccomments = result.filter((it) => it.kind === "doccomment").map((it) => it.text)
 
 			// one delimiter pair per described property
-			expect(doccomments.filter((it) => it === "/**")).toHaveLength(6)
-			expect(doccomments.filter((it) => it === " */")).toHaveLength(6)
+			expect(doccomments.filter((it) => it === "/**")).toHaveLength(5)
+			expect(doccomments.filter((it) => it === " */")).toHaveLength(5)
 
 			expect(doccomments.filter((it) => it.startsWith(" * ")))
 				.toEqual([
@@ -228,7 +221,6 @@ describe("humanReadableSchema", () => {
 					" * Alternative display names for searching.",
 					" * Usually the English name for localized output.",
 					" * Ability is to no longer be used.",
-					" * When present, indicates the resource is new or recently updated.",
 				])
 		})
 

@@ -118,3 +118,12 @@ export const SenseType = z.literal([
 	id: "SenseType",
 	title: "Sense Type",
 })
+
+export const Updated = z.object({
+	tag: z.string(),
+	details: z.string(),
+}).meta({
+	id: "Updated",
+	title: "Updated",
+	description: "When present, indicates the resource is new or recently updated.",
+})
