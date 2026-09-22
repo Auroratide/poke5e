@@ -26,7 +26,7 @@ export const createIdEntryGenerator = (idsFor: (edition: Edition) => string[] | 
 	return perEdition.flat()
 }
 
-type HasId = { id: string }
+export type HasId = { id: string }
 
 /**
  * An edition's diff against the primary edition. Every key is optional:
@@ -39,6 +39,10 @@ export type EditionOverride<T> = T extends readonly unknown[]
 	: T extends object
 		? { [P in keyof T]?: EditionOverride<T[P]> | null }
 		: T
+
+export type EditionOverrideList<T> = {
+	values: (EditionOverride<T> & HasId)[],
+}
 
 export function chooseEditionData<T extends HasId>(edition: Edition, primaryValues: T[], editions: Partial<Record<Edition, (EditionOverride<T> & HasId)[]>>): T[] {
 	const overrides = editions[edition]

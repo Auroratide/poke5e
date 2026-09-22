@@ -1,11 +1,11 @@
 import { translateData } from "$lib/site/i18n"
-import { chooseEditionData, type Edition } from "../editions"
+import { chooseEditionData, type Edition, type EditionOverrideList } from "../editions"
 import type { PokemonJson, PokemonListJson } from "./schema"
 import raw2024 from "../data/2024/pokemon/en.json"
 import raw2018 from "../data/2018/pokemon/en.json"
 
 const en2024 = raw2024 as PokemonListJson
-const en2018 = raw2018 as PokemonListJson
+const en2018 = raw2018 as EditionOverrideList<PokemonJson>
 
 async function all(edition: Edition): Promise<PokemonListJson> {
 	const values2024 = await translateData(
@@ -18,7 +18,7 @@ async function all(edition: Edition): Promise<PokemonListJson> {
 		async (locale) => (await import(`./data/2018/pokemon/${locale}.json`)).values,
 	)
 
-	const values = chooseEditionData(edition, values2024, {
+	const values = chooseEditionData<PokemonJson>(edition, values2024, {
 		"2018": values2018,
 	})
 
