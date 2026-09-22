@@ -19249,7 +19249,7 @@
 			"range": {
 				"type": "varies"
 			},
-			"description": "This move can only be used if you are asleep. While asleep, activate a random move from your move list (not Sleep Talk) that has a move time of 1 action.",
+			"description": "This move is usable while Asleep, and only while Asleep. Activate a random move from your move list (not Sleep Talk) that has a move time of 1 action.",
 			"categories": []
 		},
 		{
@@ -19653,7 +19653,7 @@
 				"modifier": "MOVE",
 				"type": "damage"
 			},
-			"description": "While you are asleep, you may activate this move to create a harsh noise that damages all creatures within range for {dice} {type} damage.",
+			"description": "This move is usable while Asleep, and only while Asleep. Create a harsh noise that damages all creatures within range for {dice} {type} damage.",
 			"categories": [
 				"sound"
 			]
