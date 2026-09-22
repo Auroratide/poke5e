@@ -6,19 +6,21 @@
 	import { TOKEN_DEFAULTCOLOR } from "$lib/dnd/token"
 
 	let {
-		list,
+		fullList,
+		filteredList,
 		onreorder,
 		saving = false,
 	}: {
-		list: Trainer[],
+		fullList: Trainer[],
+		filteredList: Trainer[],
 		onreorder: (event: CustomEvent<ReorderListChangeEventDetail>) => void,
 		saving?: boolean,
 	} = $props()
 </script>
 
 <reorder-list class="trainer-list" oncommit={onreorder} class:saving>
-	{#each list as trainer (trainer.id)}
-		<reorder-item>
+	{#each fullList as trainer (trainer.id)}
+		<reorder-item hidden={!filteredList.includes(trainer)}>
 			<a class="bubble" href="{Url.trainers(trainer.readKey)}">
 				<div class="art" style:--token-color="{trainer.token?.color ?? TOKEN_DEFAULTCOLOR}">
 					{#if trainer.avatar?.href}
@@ -59,6 +61,10 @@
 
 	reorder-item {
 		display: flex;
+	}
+
+	reorder-item[hidden] {
+		display: none;
 	}
 
 	.bubble {

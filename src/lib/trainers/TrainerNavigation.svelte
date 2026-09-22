@@ -62,7 +62,7 @@
 {#if hasNoTrainers}
 	{#if showGetStarted}<GetStarted />{/if}
 {:else}
-		<TrainerList list={filtered} onreorder={onReorder} saving={reordering} />
+	<TrainerList fullList={$trainers} filteredList={filtered} onreorder={onReorder} saving={reordering} />
 {/if}
 
 <style>
