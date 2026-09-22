@@ -140,7 +140,7 @@
 		<ul bind:this={listbox} class="listbox" hidden={!showList} role="listbox" aria-label="{label}" id="{id}-listbox">
 			{#each filteredOptions as option, i}
 				<li role="option" aria-selected="{i === currentFocus}" class:focused={i === currentFocus}>
-					<button tabindex="-1" onclick={onSelect(option)}>
+					<button type="button" tabindex="-1" onclick={onSelect(option)}>
 						{option}
 					</button>
 				</li>
