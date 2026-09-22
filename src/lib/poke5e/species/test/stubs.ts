@@ -3,9 +3,10 @@ import { stubMovePool } from "$lib/pokemon/move-pool/test/stubs"
 import type { Data } from "$lib/DataClass"
 import { stubAttributes } from "$lib/dnd/attributes/test/stubs"
 import { stubSkillProficiencies } from "$lib/dnd/skills/test/stubs"
-import type { PokemonJsonResponse, SinglePokemonJsonResponse } from "../PokemonJsonResponse"
 import { PokemonSpecies } from "../PokemonSpecies"
 import { stubAbilityPool } from "$lib/pokemon/ability/test/stubs"
+import type { PokemonJson, PokemonListJson } from "$lib/srd/pokemon/schema"
+import { stubHabitat } from "$lib/poke5e/habitat/test/stubs"
 
 export function stubPokemonSpecies(template: Partial<Data<PokemonSpecies>> = {}): PokemonSpecies {
 	return new PokemonSpecies({
@@ -54,13 +55,13 @@ export function stubPokemonSpecies(template: Partial<Data<PokemonSpecies>> = {})
 	})
 }
 
-export function stubPokemonJsonResponse(...pokemon: SinglePokemonJsonResponse[]): PokemonJsonResponse {
+export function stubPokemonJsonResponse(...pokemon: PokemonJson[]): PokemonListJson {
 	return {
-		items: pokemon,
+		values: pokemon,
 	}
 }
 
-export function stubSinglePokemonJsonResponse(template: Partial<SinglePokemonJsonResponse>): SinglePokemonJsonResponse {
+export function stubSinglePokemonJsonResponse(template: Partial<PokemonJson>): PokemonJson {
 	return {
 		id: "drakeon",
 		name: "Drakeon",
@@ -102,6 +103,7 @@ export function stubSinglePokemonJsonResponse(template: Partial<SinglePokemonJso
 		media: {
 			main: "",
 		},
+		habitat: stubHabitat(),
 		...template,
 	}
 }

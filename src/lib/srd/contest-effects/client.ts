@@ -7,12 +7,12 @@ export class ContestEffectsSrdClient {
 	constructor(readonly edition: Edition, private readonly customFetch = fetch) {}
 
 	all(): Promise<ContestEffectListJson> {
-		return this.customFetch(localizeUrl(resolve("/srd/v1/[edition]/contest-effects.json", { edition: this.edition })))
+		return this.customFetch(localizeUrl(resolve("/srd/v1/[edition]/contest-effects.json", { edition: this.edition })).pathname)
 			.then((res) => res.json())
 	}
 
 	one(id: string): Promise<ContestEffectJson | undefined> {
-		return this.customFetch(localizeUrl(resolve("/srd/v1/[edition]/contest-effects/[id].json", { edition: this.edition, id })))
+		return this.customFetch(localizeUrl(resolve("/srd/v1/[edition]/contest-effects/[id].json", { edition: this.edition, id })).pathname)
 			.then((res) => res.ok ? res.json() : Promise.resolve(undefined))
 	}
 }

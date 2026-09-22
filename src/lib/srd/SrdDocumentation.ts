@@ -59,6 +59,10 @@ function tokensFor(node: OpenAPIV3_1.SchemaObject, indent: number): SchemaToken[
 	if (reference != null) return [ { kind: "reference", text: reference, linkTo: reference } ]
 
 	if (node.const !== undefined) return [ { kind: "literal", text: JSON.stringify(node.const) } ]
+	if (node.enum !== undefined) return node.enum.flatMap<typeof node.enum[number], SchemaToken>((it, i) => [
+		{ kind: "literal", text: JSON.stringify(it) },
+		i !== node.enum.length - 1 ? { kind: "punctuation", text: " | " } : undefined,
+	]).filter((it) => it != null)
 
 	if (node.anyOf != null) {
 		return node.anyOf.flatMap((member, i) => i === 0

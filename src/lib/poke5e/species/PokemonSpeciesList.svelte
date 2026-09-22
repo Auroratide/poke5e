@@ -1,8 +1,8 @@
-<script lang="ts">
+<script lang="ts" generics="T extends PokemonListing">
 	import { RelativeNumberField, SearchField, SelectField, type RelativeValue } from "$lib/ui/forms"
 	import { SortableTable, BubbleRow } from "$lib/ui/page"
 	import { pokemonFilter, pokemonSorter } from "$lib/site/stores"
-	import { PokemonSpecies } from "./PokemonSpecies"
+	import type { PokemonListing } from "./PokemonListing"
 	import { Url } from "$lib/site/url"
 	import { m } from "$lib/site/i18n"
 	import { CreatureSizes, type CreatureSize } from "$lib/dnd/CreatureSize"
@@ -13,11 +13,11 @@
 	import { EggGroup } from "$lib/pokemon/egg-group"
 	import { Region } from "../habitat/Region"
 
-	export let pokemons: PokemonSpecies[]
-	export let onClick: (pokemon: PokemonSpecies, event: MouseEvent) => void = () => {}
+	export let pokemons: T[]
+	export let onClick: (pokemon: T, event: MouseEvent) => void = () => {}
 	export let disableLink: boolean = false
 
-	const handleOnClick = (pokemon: PokemonSpecies, event: MouseEvent) => {
+	const handleOnClick = (pokemon: T, event: MouseEvent) => {
 		if (onClick) {
 			onClick(pokemon, event)
 		}
@@ -78,8 +78,8 @@
 
 	$: filtered = pokemons.filter(filter.apply)
 
-	const byStringField = (field: (m: PokemonSpecies) => string) => (l: PokemonSpecies, r: PokemonSpecies) => field(l).localeCompare(field(r))
-	const byNumericField = (field: (m: PokemonSpecies) => number) => (l: PokemonSpecies, r: PokemonSpecies) => field(l) - field(r)
+	const byStringField = (field: (m: T) => string) => (l: T, r: T) => field(l).localeCompare(field(r))
+	const byNumericField = (field: (m: T) => number) => (l: T, r: T) => field(l) - field(r)
 
 	const resetFilters = () => {
 		filteredType = ""
@@ -104,7 +104,7 @@
 	</SearchField>
 </div>
 <SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$pokemonSorter} headers={[ {
-	key: "name", name: m.name(), ratio: 3, sort: byStringField(it => it.data.name),
+	key: "name", name: m.name(), ratio: 3, sort: byStringField(it => it.name),
 }, {
 	key: "type", name: m.type(), ratio: 3, sort: byStringField(it => it.type.data.join(", ")),
 }, {
@@ -114,11 +114,11 @@
 		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary>
 			{#if disableLink}
 				<button on:click={(event) => handleOnClick(item, event)} class="unliked-button">
-					{item.data.name}
+					{item.name}
 				</button>
 			{:else}
-				<a on:click={(event) => handleOnClick(item, event)} href="{Url.pokemon(item.data.id)}">
-					{item.data.name}
+				<a on:click={(event) => handleOnClick(item, event)} href="{Url.pokemon(item.id.data)}">
+					{item.name}
 				</a>
 			{/if}
 		</BubbleRow.Cell>

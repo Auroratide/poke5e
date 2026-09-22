@@ -5,7 +5,7 @@ import { get } from "svelte/store"
 import { stubPokemonJsonResponse, stubPokemonSpecies, stubSinglePokemonJsonResponse } from "./stubs"
 import { stubFakemon } from "$lib/fakemon/test/stubs"
 import { provider } from "$lib/fakemon/data"
-import { waitForStore } from "$lib/test/store"
+import { getWhenDefined } from "$lib/utils/store"
 import { ApiStub } from "$lib/test/ApiStub"
 
 beforeEach(async () => {
@@ -17,7 +17,7 @@ beforeEach(async () => {
 	const pokemon = stubPokemonJsonResponse(eevee)
 	ApiStub.pokemon = pokemon
 
-	await waitForStore(allCanonSpecies)
+	await getWhenDefined(allCanonSpecies, [])
 })
 
 afterEach(() => {

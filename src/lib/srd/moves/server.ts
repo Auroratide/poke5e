@@ -1,8 +1,11 @@
 import { translateData } from "$lib/site/i18n"
 import { chooseEditionData, type Edition } from "../editions"
 import type { MoveJson, MovesListJson } from "./schema"
-import en2024 from "../data/2024/moves/en.json"
-import en2018 from "../data/2018/moves/en.json"
+import raw2024 from "../data/2024/moves/en.json"
+import raw2018 from "../data/2018/moves/en.json"
+
+const en2024 = raw2024 as MovesListJson
+const en2018 = raw2018 as MovesListJson
 
 async function all(edition: Edition): Promise<MovesListJson> {
 	const values2024 = await translateData(

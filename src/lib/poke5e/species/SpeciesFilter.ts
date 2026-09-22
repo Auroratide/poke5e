@@ -2,7 +2,7 @@ import type { CreatureSize } from "$lib/dnd/CreatureSize"
 import type { PokeType } from "$lib/pokemon/types"
 import { relativeNumberCompare, type RelativeValue } from "$lib/ui/forms"
 import type { Region } from "../habitat/Region"
-import type { PokemonSpecies } from "./PokemonSpecies"
+import type { PokemonListing } from "./PokemonListing"
 import * as strings from "$lib/utils/string"
 
 export class SpeciesFilter {
@@ -82,7 +82,7 @@ export class SpeciesFilter {
 		return this
 	}
 
-	apply = (species: PokemonSpecies): boolean => {
+	apply = (species: PokemonListing): boolean => {
 		return strings.includesSearch([species.name, ...species.aliases], this.filters.name)
 			&& (this.filters.size === "" || species.size === this.filters.size)
 			&& (this.filters.sr == null || relativeNumberCompare(this.filters.sr.relative, species.sr.data, this.filters.sr.value))

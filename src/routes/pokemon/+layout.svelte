@@ -4,13 +4,13 @@
 	import { PokeballIcon } from "$lib/ui/icons"
 	import { Loader } from "$lib/ui/elements"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
-	import { PokemonSpeciesList, SpeciesStore } from "$lib/poke5e/species"
+	import { PokemonListing, PokemonSpeciesList, SpeciesStore } from "$lib/poke5e/species"
 	import { ListPageHeading } from "$lib/ui/page"
 
 	const canonList = SpeciesStore.canonList()
 
-	$: ssrPokemon = $page.data.pokemonList
-	$: pokemonToRender = ssrPokemon ?? $canonList
+	$: ssrPokemon = $page.data.pokemonList?.map(PokemonListing.fromJson)
+	$: pokemonToRender = $canonList ?? ssrPokemon
 </script>
 
 <Page theme="red">

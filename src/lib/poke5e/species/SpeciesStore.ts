@@ -1,31 +1,19 @@
 import { derived, readable, type Readable, type Unsubscriber } from "svelte/store"
 import { PokemonSpecies } from "./PokemonSpecies"
 import type { SpeciesIdentifier } from "./SpeciesIdentifier"
-import type { PokemonJsonResponse } from "./PokemonJsonResponse"
 import type { Data } from "$lib/DataClass"
 import { fakemonStore } from "$lib/fakemon/store"
-import { cachedReadable } from "$lib/utils/store"
-import { Url } from "$lib/site/url"
 import { emptyFakemonListStore } from "$lib/fakemon/store/FakemonListStore"
+import type { PokemonListJson } from "$lib/srd/pokemon/schema"
+import { srdStore } from "$lib/site/stores"
 
-export const allCanonSpecies = cachedReadable<PokemonSpecies[] | undefined>(undefined, (set) => {
-	if (typeof window !== "undefined") {
-		fetch(Url.api.pokemon())
-			.then((res) => res.json())
-			.then((data: PokemonJsonResponse) => Promise.all(data.items.map((it) =>
-				PokemonSpecies.fromJson(it),
-			)))
-			.then((pokemon) => set(pokemon))
-	}
+const toSpecies = (json: PokemonListJson) =>
+	Promise.all(json.values.map(PokemonSpecies.fromJson))
+
+export const allCanonSpecies = srdStore<PokemonSpecies[]>((client) => {
+	return client.pokemon.all()
+		.then(toSpecies)
 })
-
-// const toSpecies = (json: PokemonListJson) =>
-// 	Promise.all(json.values.map(PokemonSpecies.fromJson2))
-
-// export const allCanonSpecies2 = srdStore<PokemonSpecies[]>((client) => {
-// 	return client.pokemon.all()
-// 		.then(toSpecies)
-// })
 
 export type StoredSpecies = Record<Data<SpeciesIdentifier>, SingleStoredSpecies>
 
@@ -50,7 +38,7 @@ function createStore(): SpeciesStore {
 		get: async (id: SpeciesIdentifier): Promise<SingleSpeciesStore | undefined> => {
 			if (!id.isFakemon()) {
 				return derived(allCanonSpecies, (all) => {
-					const found = all?.find((it) => it.id.data === id.data)
+					const found = all.result?.find((it) => it.id.data === id.data)
 					if (found == null) return undefined
 					return {
 						value: found,
@@ -67,14 +55,13 @@ function createStore(): SpeciesStore {
 			}
 		},
 		canonList: () => {
-			return derived(allCanonSpecies, (species) => species?.filter((it) => !it.wasNonCanonNonFakemon()))
-			// return derived(allCanonSpecies2, (species) => species.result?.filter((it) => !it.wasNonCanonNonFakemon()))
+			return derived(allCanonSpecies, (species) => species.result?.filter((it) => !it.wasNonCanonNonFakemon()))
 		},
 		completeList: async () => {
 			const fakemon = await fakemonStore.all().catch(() => emptyFakemonListStore())
 
 			return derived([allCanonSpecies, fakemon], ([normalSpecies, fakemon]) => {
-				return normalSpecies
+				return normalSpecies.result
 					?.filter((it) => !it.wasNonCanonNonFakemon())
 					?.concat(fakemon.map((it) => it.species))
 			})

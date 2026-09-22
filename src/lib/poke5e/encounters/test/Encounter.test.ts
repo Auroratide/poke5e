@@ -1,14 +1,14 @@
-import { describe, test, expect } from "vitest"
-import { Encounter, ENCOUNTER_SIZE_LIMIT } from "../Encounter"
-import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
-import rawPokemonData from "./sample-pool.json"
-import { PokemonSpecies } from "$lib/poke5e/species"
-import type { SinglePokemonJsonResponse } from "$lib/poke5e/species/PokemonJsonResponse"
-import { provider } from "$lib/trainers/data"
-import { stubMovePool } from "$lib/pokemon/move-pool/test/stubs"
 import { stubMove } from "$lib/moves/test/stubs-2"
+import { PokemonSpecies } from "$lib/poke5e/species"
+import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import { stubAbility, stubAbilityPool } from "$lib/pokemon/ability/test/stubs"
 import { PokemonGender } from "$lib/pokemon/gender"
+import { stubMovePool } from "$lib/pokemon/move-pool/test/stubs"
+import type { PokemonJson } from "$lib/srd/pokemon/schema"
+import { provider } from "$lib/trainers/data"
+import { describe, expect, test } from "vitest"
+import { Encounter, ENCOUNTER_SIZE_LIMIT } from "../Encounter"
+import rawPokemonData from "./sample-pool.json"
 
 describe("totalExp", () => {
 	test("empty encounter", () => {
@@ -131,7 +131,7 @@ describe("count", () => {
 })
 
 describe("generate", () => {
-	const getAllPokemon = () => Promise.all(rawPokemonData.items.map((it) => PokemonSpecies.fromJson(it as SinglePokemonJsonResponse)))
+	const getAllPokemon = () => Promise.all(rawPokemonData.values.map((it) => PokemonSpecies.fromJson(it as PokemonJson)))
 
 	// NOTE: I'm not sure if this test is flakey yet.
 	test("always within variance of the target exp", async () => {

@@ -7,12 +7,12 @@ export class EvolutionsSrdClient {
 	constructor(readonly edition: Edition, private readonly customFetch = fetch) {}
 
 	all(): Promise<EvolutionListJson> {
-		return this.customFetch(localizeUrl(resolve("/srd/v1/[edition]/evolutions.json", { edition: this.edition })))
+		return this.customFetch(localizeUrl(resolve("/srd/v1/[edition]/evolutions.json", { edition: this.edition })).pathname)
 			.then((res) => res.json())
 	}
 
 	one(id: string): Promise<EvolutionJson | undefined> {
-		return this.customFetch(localizeUrl(resolve("/srd/v1/[edition]/evolutions/[id].json", { edition: this.edition, id })))
+		return this.customFetch(localizeUrl(resolve("/srd/v1/[edition]/evolutions/[id].json", { edition: this.edition, id })).pathname)
 			.then((res) => res.ok ? res.json() : Promise.resolve(undefined))
 	}
 }

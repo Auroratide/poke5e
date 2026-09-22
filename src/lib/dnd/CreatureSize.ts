@@ -5,6 +5,7 @@ export const CreatureSizes = {
 	Large: "large",
 	Huge: "huge",
 	Gargantuan: "gargantuan",
+	Varies: "varies",
 } as const
 export type CreatureSize = typeof CreatureSizes[keyof typeof CreatureSizes]
 

@@ -51,10 +51,10 @@ export const MoveJson = z.object({
 		description: "List of attributes used as this move's move power.\nA value of \"varies\" means the move power depends\n on a condition in the description.",
 	}),
 	time: z.object({
-		unit: z.union([
-			z.literal("action"),
-			z.literal("bonus action"),
-			z.literal("reaction"),
+		unit: z.literal([
+			"action",
+			"bonus action",
+			"reaction",
 		]),
 	}).meta({
 		description: "In-game time required to execute the move.",
@@ -63,11 +63,11 @@ export const MoveJson = z.object({
 		description: "Base max Power Points.",
 	}),
 	duration: z.object({
-		unit: z.union([
-			z.literal("minute"),
-			z.literal("round"),
-			z.literal("instantaneous"),
-			z.literal("varies"),
+		unit: z.literal([
+			"minute",
+			"round",
+			"instantaneous",
+			"varies",
 		]),
 		value: z.int().optional(),
 		concentration: z.boolean().optional(),
@@ -97,11 +97,11 @@ export const MoveJson = z.object({
 		description: "Range of the move. If the move is a self area\nof effect move, the area of effect is described\nby `shape`.",
 	}),
 	shape: z.object({
-		type: z.union([
-			z.literal("line"),
-			z.literal("cone"),
-			z.literal("emanation"),
-			z.literal("cube"),
+		type: z.literal([
+			"line",
+			"cone",
+			"emanation",
+			"cube",
 		]),
 		value: z.int(),
 		unit: z.literal("feet"),
