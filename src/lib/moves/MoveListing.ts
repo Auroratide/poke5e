@@ -39,19 +39,24 @@ export type MoveListingJson = Pick<MoveJson,
 	"id" | "name" | "aliases" | "type" | "power" | "pp" | "time" | "range" | "shape" | "updated">
 	& { contest?: ContestListing }
 
-const LISTING_FIELDS = ["id", "name", "aliases", "type", "power", "pp", "time", "range", "shape", "updated"] as const
-
 export const MoveListing = {
 	/**
 	 * strips the SRD json of things not needed during SSR to reduce payload size
 	 */
 	project: (json: MoveJson, contest?: ContestJson): MoveListingJson => ({
-		...Object.fromEntries(
-			LISTING_FIELDS
-				.filter((field) => json[field] !== undefined)
-				.map((field) => [field, json[field]]),
-		) as MoveListingJson,
-		contest: contest != null ? { contest: contest.contest } : undefined,
+		id: json.id,
+		name: json.name,
+		type: json.type,
+		power: json.power,
+		pp: json.pp,
+		time: json.time,
+		range: json.range,
+		// Spread rather than assign: an explicit `undefined` key still costs bytes
+		// once devalue serializes it, and omitting is the point of the projection.
+		...(json.aliases !== undefined && { aliases: json.aliases }),
+		...(json.shape !== undefined && { shape: json.shape }),
+		...(json.updated !== undefined && { updated: json.updated }),
+		...(contest != null && { contest: { contest: contest.contest } }),
 	}),
 
 	fromJson: (json: MoveListingJson): MoveListing => ({
