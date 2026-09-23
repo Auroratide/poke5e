@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { Card, SideArtCardSection } from "$lib/ui/page"
 	import FlatDl from "../ui/elements/FlatDl.svelte"
-	import { renderHtml } from "../ui/rendering/render"
+	import { Markdown } from "$lib/ui/rendering"
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Url } from "$lib/site/url"
 	import ItemSprite from "./ItemSprite.svelte"
@@ -10,7 +10,7 @@
 	import { SpeciesStore } from "$lib/poke5e/species"
 	import type { Item } from "./Item"
 	import { m } from "$lib/site/i18n"
-	import { BetaStatement } from "$lib/ui/elements"
+	import { BetaDetailsLine } from "$lib/site/beta"
 
 	const species = SpeciesStore.canonList()
 	const evolutions = EvolutionStore.canonList()
@@ -24,9 +24,9 @@
 </script>
 
 <Card title={item.name} dismissToHref="{Url.items()}">
-	{#if item.beta}
+	{#if item.updated}
 		<section>
-			<BetaStatement name="item" />
+			<BetaDetailsLine value={item.updated} />
 		</section>
 	{/if}
 	<SideArtCardSection hasImage={item.media.sprite != null} size="clamp(4rem, 6.33vw, 4.75rem)">
@@ -41,11 +41,7 @@
 		</div>
 	</SideArtCardSection>
 	<section class="description">
-		{#if item.description}
-			{@html renderHtml(item.description)}
-		{:else}
-			<p>No item description found.</p>
-		{/if}
+		<Markdown value={item.description} />
 		{#if item.type === "pokeball"}
 			<p>{m.see()}: <a href="{Url.reference.catchingPokemon()}">Catching Pokémon</a></p>
 		{/if}

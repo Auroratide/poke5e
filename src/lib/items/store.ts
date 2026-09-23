@@ -1,17 +1,17 @@
-import { readable, writable } from "svelte/store"
+import { derived, writable, type Readable } from "svelte/store"
 import { Item } from "./Item"
-import type { Data } from "$lib/DataClass"
-import { Url } from "$lib/site/url"
+import { srdStore } from "$lib/site/stores"
 
-export const ItemStore = readable<Item[]>(undefined, (set) => {
-	if (typeof window !== "undefined") {
-		fetch(Url.api.items())
-			.then(res => res.json())
-			.then((data) => data.items)
-			.then((items: Data<Item>[]) => items.map((it) => new Item(it)))
-			.then((items) => set(items))
-	}
-})
+const allItems = srdStore<Item[]>((client) =>
+	client.items.all()
+		.then((json) => json.values.map(Item.fromJson)),
+)
+
+/**
+ * Unwraps the fetch state: every consumer only cares whether the list has
+ * arrived, and renders a loader until it has.
+ */
+export const ItemStore: Readable<Item[] | undefined> = derived(allItems, (it) => it.result)
 
 export const ItemFilterStore = writable("")
 export const ItemSorterStore = writable(() => 0)

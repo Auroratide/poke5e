@@ -1,10 +1,11 @@
 import * as z from "zod"
-import { Updated } from "../common/schema"
+import { Aliases, ItemType, Updated } from "../common/schema"
 
 export const ItemJson = z.object({
 	id: z.string(),
 	name: z.string(),
-	type: z.string(),
+	aliases: Aliases.optional(),
+	type: ItemType,
 	cost: z.union([z.int(), z.null()]),
 	description: z.string(),
 	media: z.object({

@@ -5,10 +5,10 @@
 	import { Loader } from "$lib/ui/elements"
 	import { ListPageHeading } from "$lib/ui/page"
 	import { MAIN_SEARCH_ID } from "$lib/ui/layout/SkipLinks.svelte"
-	import { ItemList, ItemStore } from "$lib/items"
+	import { Item, ItemList, ItemStore } from "$lib/items"
 
-	$: ssrItems = $page.data.itemsList
-	$: itemsToRender = ssrItems ?? $ItemStore
+	$: ssrItems = $page.data.itemsList?.map(Item.fromJson)
+	$: itemsToRender = $ItemStore ?? ssrItems
 </script>
 
 <Page theme="yellow">

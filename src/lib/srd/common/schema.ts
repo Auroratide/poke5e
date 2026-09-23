@@ -119,6 +119,18 @@ export const SenseType = z.literal([
 	title: "Sense Type",
 })
 
+export const ItemType = z.literal([
+	"pokeball",
+	"medicine",
+	"berry",
+	"held item",
+	"evolution",
+	"trainer gear",
+]).meta({
+	id: "ItemType",
+	title: "Item Type",
+})
+
 export const Updated = z.object({
 	tag: z.string(),
 	details: z.string(),
