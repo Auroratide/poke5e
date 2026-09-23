@@ -34,13 +34,6 @@ class ApiStubDefinition {
 			}))
 		} else if (isSrd(url, "pokemon")) {
 			return new Response(JSON.stringify(this.pokemon))
-		} else if (url.includes(Url.api.abilities())) {
-			return new Response(JSON.stringify({
-				abilities: this.abilities.map((it) => ({
-					...it.data,
-					id: it.referenceId,
-				})),
-			}))
 		} else if (url.includes(Url.api.evolutions())) {
 			return new Response(JSON.stringify(this.evolutions))
 		} else {

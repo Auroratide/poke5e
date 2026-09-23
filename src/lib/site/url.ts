@@ -84,11 +84,7 @@ export const Url = {
 	},
 	api: {
 		evolutions: () => resolve("/(api)/evolutions/v1.json"),
-		items: (id?: string) => localizeUrl(id ? resolve("/(api)/items/[id].json", { id }) : resolve("/(api)/items.json")).pathname,
-		moves: (id?: string) => localizeUrl(id ? resolve("/(api)/moves/[id].json", { id }) : resolve("/(api)/moves.json")).pathname,
-		abilities: () => localizeUrl(resolve("/(api)/abilities.json")).pathname,
 		biomes: () => localizeUrl(resolve("/(api)/biomes.json")).pathname,
-		contestEffects: () => localizeUrl(resolve("/(api)/contest-effects.json")).pathname,
 		origins: () => localizeUrl(resolve("/(api)/origins.json")).pathname,
 	},
 } as const
