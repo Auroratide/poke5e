@@ -1,0 +1,1 @@
+{"id":"air-balloon","name":"Air Balloon","type":"held item","cost":1000,"description":"O portador é imune a dano do tipo Terra. Quando o portador sofre dano, o item estoura e perde seu efeito.\n\nO Air Balloon pode ser reparado livremente durante um descanso curto.","media":{"sprite":"/assets/items/air-balloon/sprite.png"}}

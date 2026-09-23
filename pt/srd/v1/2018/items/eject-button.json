@@ -1,0 +1,1 @@
+{"id":"eject-button","name":"Eject Button","type":"held item","cost":4000,"description":"Este item tem 1 carga. Quando o portador sofre dano de um ataque, seu treinador pode realizar uma troca como ação livre, consumindo a carga.\n\nO Eject Button recupera sua carga ao amanhecer.","media":{"sprite":"/assets/items/eject-button/sprite.png"}}

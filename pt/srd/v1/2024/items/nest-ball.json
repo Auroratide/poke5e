@@ -1,0 +1,1 @@
+{"id":"nest-ball","name":"Nest Ball","type":"pokeball","cost":400,"description":"Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 5 se o Pokémon alvo for nível 5 ou menor.","media":{"sprite":"/assets/items/nest-ball/sprite.png"}}

@@ -1,0 +1,1 @@
+{"id":"focus-sash","name":"Focus Sash","type":"held item","cost":4000,"description":"Este item tem 1 carga. Se um dano reduzir o HP do portador a menos de 1, ele permanece com 1 HP, consumindo a carga.\n\nO Focus Sash recupera sua carga ao amanhecer.","media":{"sprite":"/assets/items/focus-sash/sprite.png"}}

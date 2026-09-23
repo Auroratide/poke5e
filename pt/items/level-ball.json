@@ -1,1 +1,0 @@
-{"id":"level-ball","name":"Level Ball","type":"pokeball","cost":400,"description":["Permite que um treinador faça uma Jogada de Captura para capturar um Pokémon. Reduz a CD de captura em 5 se o nível do treinador for maior que o nível do Pokémon alvo."],"media":{"sprite":"/assets/items/level-ball/sprite.png"}}

@@ -1,0 +1,1 @@
+import{Ft as e,It as t,et as n,u as r,xt as i}from"../chunks/DI_rtLhN.js";import"../chunks/D54qxPeQ.js";import{t as a}from"../chunks/qhbRmU7v.js";import{gr as o}from"../chunks/BQtA2zD5.js";function s(s,c){t(c,!1),r();{let e=i(()=>o());a(s,{get value(){return n(e)}})}e()}export{s as component};
