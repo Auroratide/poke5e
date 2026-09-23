@@ -83,8 +83,6 @@ export const Url = {
 		translations: () => "https://cryptpad.fr/sheet/#/2/sheet/edit/jkST5vKSm8OSzJjru3TF47xL/embed/",
 	},
 	api: {
-		evolutions: () => resolve("/(api)/evolutions/v1.json"),
-		biomes: () => localizeUrl(resolve("/(api)/biomes.json")).pathname,
 		origins: () => localizeUrl(resolve("/(api)/origins.json")).pathname,
 	},
 } as const
