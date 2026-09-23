@@ -1,0 +1,1 @@
+import{Gt as e}from"../chunks/DI_rtLhN.js";import"../chunks/D54qxPeQ.js";import{t}from"../chunks/BRtTJh34.js";import{C as n}from"../chunks/DLrDwn3r.js";var r=e({load:()=>i}),i=async({fetch:e})=>({itemsList:await e(n.api.items()).then(e=>e.json()).then(e=>e.items)});function a(e){t(e,{value:`Pokemon Items`})}export{a as component,r as universal};
