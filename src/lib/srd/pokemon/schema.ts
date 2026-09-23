@@ -1,9 +1,10 @@
 import * as z from "zod"
-import { Attribute, AttributeValues, CreatureSize, HitDiceSize, PokeType, SenseType, Skill, SpeedType } from "../common/schema"
+import { Aliases, Attribute, AttributeValues, CreatureSize, HitDiceSize, PokeType, SenseType, Skill, SpeedType } from "../common/schema"
 
 export const PokemonJson = z.object({
 	id: z.string(),
 	name: z.string(),
+	aliases: Aliases.optional(),
 	number: z.int(),
 	type: z.array(PokeType),
 	size: z.union([CreatureSize, z.literal("varies")]),

@@ -127,3 +127,9 @@ export const Updated = z.object({
 	title: "Updated",
 	description: "When present, indicates the resource is new or recently updated.",
 })
+
+export const Aliases = z.string().array().meta({
+	id: "Aliases",
+	title: "Aliases",
+	description: "Alternative display names for searching.\nUsually the English name for localized output.",
+})

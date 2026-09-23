@@ -1,5 +1,5 @@
 import * as z from "zod"
-import { Attribute, PokeType, Updated } from "../common/schema"
+import { Aliases, Attribute, PokeType, Updated } from "../common/schema"
 
 const TableJson = z.object({
 	type: z.string(),
@@ -146,9 +146,7 @@ export const MoveJson = z.object({
 		description: "Tags used by other moves or abilities to select this move.",
 	}),
 	optional: z.string().optional(),
-	aliases: z.string().array().optional().meta({
-		description: "Alternative display names for searching.\nUsually the English name for localized output.",
-	}),
+	aliases: Aliases.optional(),
 	beta: z.boolean().optional().meta({
 		description: "Present if the move is being playtested.",
 	}),
