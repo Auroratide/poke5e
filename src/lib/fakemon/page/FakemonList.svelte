@@ -60,6 +60,7 @@
 	})) ?? [])
 
 	let filteredRegion: Region = ""
+	let filteredFoundIn: Region = ""
 
 	$: textFilterIsPokemonType = PokemonType.list.includes($fakemonListFilter.toLocaleLowerCase() as PokeType)
 	$: textFilterIsTagName = TagList.has($allTags, $fakemonListFilter)
@@ -77,6 +78,7 @@
 		.eggGroup(filteredEggGroup)
 		.biome(filteredBiome)
 		.nativeRegion(filteredRegion)
+		.foundInRegion(filteredFoundIn)
 
 	$: filtered = $fakemon
 		.filter(TagList.filterBy(filteredTagsWithSearch, $fakemonListTagFilter.mode))
@@ -93,6 +95,7 @@
 		filteredEggGroup = ""
 		filteredBiome = ""
 		filteredRegion = ""
+		filteredFoundIn = ""
 		TagFilter.reset(fakemonListTagFilter)
 	}
 </script>
@@ -110,6 +113,7 @@
 		<SelectField label="{m.eggGroup()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
 		<SelectField label="{m.biome()}" bind:value={filteredBiome} options={biomeOptions} />
 		<TextField label="{m.nativeRegion()}" bind:value={filteredRegion} />
+		<TextField label="{m.foundIn()}" bind:value={filteredFoundIn} />
 		<TagSelection bind:checked={$fakemonListTagFilter.tags} bind:mode={$fakemonListTagFilter.mode} tags={$allTags} />
 	</SearchField>
 </div>

@@ -64,6 +64,8 @@
 		name: it,
 	})))
 
+	let filteredFoundIn: Region = ""
+
 	$: textFilterIsPokemonType = PokemonType.list.includes($pokemonFilter.toLocaleLowerCase() as PokeType)
 
 	$: filter = new SpeciesFilter()
@@ -75,6 +77,7 @@
 		.eggGroup(filteredEggGroup)
 		.biome(filteredBiome)
 		.nativeRegion(filteredRegion)
+		.foundInRegion(filteredFoundIn)
 
 	$: filtered = pokemons.filter(filter.apply)
 
@@ -89,6 +92,7 @@
 		filteredEggGroup = ""
 		filteredBiome = ""
 		filteredRegion = ""
+		filteredFoundIn = ""
 	}
 </script>
 
@@ -101,6 +105,7 @@
 		<SelectField label="{m.eggGroup()}" bind:value={filteredEggGroup} options={eggGroupOptions} />
 		<SelectField label="{m.biome()}" bind:value={filteredBiome} options={biomeOptions} />
 		<SelectField label="{m.nativeRegion()}" bind:value={filteredRegion} options={regionOptions} />
+		<SelectField label="{m.foundIn()}" bind:value={filteredFoundIn} options={regionOptions} />
 	</SearchField>
 </div>
 <SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$pokemonSorter} headers={[ {

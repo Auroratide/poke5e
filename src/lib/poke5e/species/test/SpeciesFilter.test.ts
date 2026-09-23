@@ -173,6 +173,16 @@ test("region", () => {
 	expect(result).toEqual([species[0]])
 })
 
+test("found in", () => {
+	const filter = new SpeciesFilter()
+		.foundInRegion("red")
+	
+	const result = species.filter(filter.apply)
+
+	expect(result.length).toEqual(2)
+	expect(result).toEqual([species[0], species[2]])
+})
+
 test("name and size", () => {
 	const filter = new SpeciesFilter()
 		.name("berry")

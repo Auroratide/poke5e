@@ -21,6 +21,7 @@ export class SpeciesFilter {
 		eggGroup: string,
 		biome: string,
 		nativeRegion: Region,
+		foundInRegion: Region,
 	} = {
 			name: "",
 			size: "",
@@ -30,6 +31,7 @@ export class SpeciesFilter {
 			eggGroup: "",
 			biome: "",
 			nativeRegion: "",
+			foundInRegion: "",
 		}
 
 	count(): number {
@@ -82,6 +84,11 @@ export class SpeciesFilter {
 		return this
 	}
 
+	foundInRegion(value: Region): SpeciesFilter {
+		this.filters.foundInRegion = value
+		return this
+	}
+
 	apply = (species: PokemonListing): boolean => {
 		return strings.includesSearch([species.name, ...species.aliases], this.filters.name)
 			&& (this.filters.size === "" || species.size === this.filters.size)
@@ -91,5 +98,6 @@ export class SpeciesFilter {
 			&& (this.filters.eggGroup === "" || species.eggGroups.includes(this.filters.eggGroup))
 			&& (this.filters.biome === "" || species.habitat.biomes.includes(this.filters.biome))
 			&& (this.filters.nativeRegion === "" || strings.caseInsensitiveEqual(this.filters.nativeRegion, species.habitat.nativeRegion))
+			&& (this.filters.foundInRegion === "" || species.habitat.regions.map((it) => it.toLocaleLowerCase()).includes(this.filters.foundInRegion.toLocaleLowerCase()))
 	}
 }
