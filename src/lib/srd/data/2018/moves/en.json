@@ -481,6 +481,19 @@
 			"updated": null
 		},
 		{
+			"id": "teleport",
+			"time": {
+				"unit": "action"
+			},
+			"range": {
+				"type": "distance",
+				"value": 40,
+				"unit": "feet"
+			},
+			"description": "You disappear from view and reappear at an unoccupied point within range. In wild creature battles, this move can be activated to automatically count as a single success in a group DEX check to run away.",
+			"updated": null
+		},
+		{
 			"id": "trop-kick",
 			"dice": {
 				"class": "70",

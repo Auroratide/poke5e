@@ -4166,8 +4166,7 @@
 		},
 		{
 			"id": "teleport",
-			"name": "Teletransporte",
-			"description": "Desapareces de la vista y reapareces en un punto desocupado a tu alcance. En batallas contra criaturas salvajes, este movimiento puede activarse para contar automáticamente como un único éxito en una prueba de Destreza grupal para huir."
+			"name": "Teletransporte"
 		},
 		{
 			"id": "temper-flare",
