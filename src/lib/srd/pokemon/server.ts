@@ -10,12 +10,12 @@ const en2018 = raw2018 as EditionOverrideList<PokemonJson>
 async function all(edition: Edition): Promise<PokemonListJson> {
 	const values2024 = await translateData(
 		en2024.values,
-		async (locale) => (await import(`./data/2024/pokemon/${locale}.json`)).values,
+		async (locale) => (await import(`../data/2024/pokemon/${locale}.json`)).values,
 	)
 
 	const values2018 = await translateData(
 		en2018.values,
-		async (locale) => (await import(`./data/2018/pokemon/${locale}.json`)).values,
+		async (locale) => (await import(`../data/2018/pokemon/${locale}.json`)).values,
 	)
 
 	const values = chooseEditionData<PokemonJson>(edition, values2024, {

@@ -5,7 +5,7 @@ import adapter from "@sveltejs/adapter-static";
 
 import preprocess from "svelte-preprocess";
 
-import { readFileSync } from "node:fs";
+import { readdirSync, readFileSync } from "node:fs";
 
 /**
  * Kept for backwards compatibility for now.
@@ -20,6 +20,20 @@ const legacyApiPaths = [
 const localizedLegacyApi = settings.locales
 	.filter((locale) => locale !== settings.baseLocale)
 	.flatMap((locale) => legacyApiPaths.map((path) => `/${locale}${path}`));
+
+/**
+ * Entry generators only produce the base locale's SRD urls. Localized SRD files
+ * are otherwise only prerendered if the crawler happens to hit them, and the
+ * client-side stores fetch lists (e.g. /de/srd/v1/2018/pokemon.json) that no
+ * prerendered page references.
+ */
+const srdEditions = ["2018", "2024"];
+const srdListResources = readdirSync("src/routes/srd/v1/[edition]")
+	.filter((name) => name.endsWith(".json"));
+const localizedSrdLists = settings.locales
+	.filter((locale) => locale !== settings.baseLocale)
+	.flatMap((locale) => srdEditions.flatMap((edition) =>
+		srdListResources.map((resource) => `/${locale}/srd/v1/${edition}/${resource}`)));
 
 /**
  * The only files from `static` the app shell needs in order to render. Everything
@@ -49,7 +63,8 @@ const config = {
 				// backward compatibility
 				"/pokemon.json",
 				"/pokemon/[id].json",
-				...localizedLegacyApi
+				...localizedLegacyApi,
+				...localizedSrdLists
 			],
 
 			handleHttpError: ({ path, message }) => {
