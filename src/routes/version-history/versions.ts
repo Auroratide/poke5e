@@ -14,6 +14,17 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.13",
+		description: [
+			"<strong>Reference</strong>: Added the Chainmail and Charizards supplement, a set of modifications to the rules for blending pokémon with the D&D world and classes.",
+			"<strong>Moves</strong>: Sleep Talk and Snore more precisely define how they interact with the Asleep status effect.",
+			"<strong>Moves</strong>: Clarify that Baton Pass does not only apply to negative status effects.",
+			"<strong>Pokemon</strong>: Can now filter for pokemon found in a region, not just native to a region.",
+			"<strong>Bufgix</strong>: Fix issue where moves were showing 'at higher levels' when the damage in fact did not scale with level.",
+			"<strong>Bufgix</strong>: Selecting a tag while editing a trainer, pokemon, or fakemon no longer also completes the edit form.",
+			"<strong>Bufgix</strong>: Reordering a filtered list of trainers, pokemon, and fakemon now works as intended.",
+		],
+	}, {
 		name: "v1.12.12",
 		description: [
 			"Some fields, such as trainer description, now offer formatting options so text can contain bold or italicized text, or lists.",
