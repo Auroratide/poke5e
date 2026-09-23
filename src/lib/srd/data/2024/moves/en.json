@@ -1354,7 +1354,7 @@
 			"range": {
 				"type": "self"
 			},
-			"description": "As a bonus action, you may switch out, passing along all negative status effects and stat changes to the new creature. This includes existing battle effects from moves such as Substitute, Swords Dance, Ingrain, Aqua Ring, etc. Effects from moves that require concentration may also be transferred, with concentration now dependent on the new creature.",
+			"description": "As a bonus action, you may switch out, passing along all status effects and stat changes to the new creature. This includes existing battle effects from moves such as Substitute, Swords Dance, Ingrain, Aqua Ring, etc. Effects from moves that require concentration may also be transferred, with concentration now dependent on the new creature.",
 			"categories": []
 		},
 		{
