@@ -1,0 +1,659 @@
+{
+	"values": [
+		{
+			"id": "pewter-crunchies",
+			"name": "Pewter Crunchies",
+			"type": "medicine",
+			"cost": 250,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "health-wing",
+			"name": "Health Feather",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/health-wing/sprite.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's HP effort by 1."
+		},
+		{
+			"id": "muscle-wing",
+			"name": "Muscle Feather",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/muscle-wing/sprite.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Attack effort by 1."
+		},
+		{
+			"id": "resist-wing",
+			"name": "Resist Feather",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/resist-wing/sprite.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Defense effort by 1."
+		},
+		{
+			"id": "genius-wing",
+			"name": "Genius Feather",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/genius-wing/sprite.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Special Attack effort by 1."
+		},
+		{
+			"id": "clever-wing",
+			"name": "Clever Feather",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/clever-wing/sprite.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Special Defense effort by 1."
+		},
+		{
+			"id": "swift-wing",
+			"name": "Swift Feather",
+			"type": "medicine",
+			"cost": 300,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/swift-wing/sprite.png"
+			},
+			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Speed effort by 1."
+		},
+		{
+			"id": "max-honey",
+			"name": "Max Honey",
+			"type": "medicine",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "max-mushrooms",
+			"name": "Max Mushrooms",
+			"type": "medicine",
+			"cost": 6000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "ability-patch",
+			"name": "Ability Patch",
+			"type": "medicine",
+			"cost": 20,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "ability-shield",
+			"name": "Ability Shield",
+			"type": "held item",
+			"cost": 20000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "absorb-bulb",
+			"name": "Absorb Bulb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/absorb-bulb/sprite.png"
+			},
+			"_ingameEffect": "Held\n:   When the holder takes water-type damage from a move, its Special Attack rises by one stage and this item is consumed."
+		},
+		{
+			"id": "binding-band",
+			"name": "Binding Band",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/binding-band/sprite.png"
+			},
+			"_ingameEffect": "Held\n:   Moves used by the holder that trap and damage a target for multiple turns (e.g. bind, fire spin) inflict twice their usual per-turn damage."
+		},
+		{
+			"id": "blunder-policy",
+			"name": "Blunder Policy",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "booster-energy",
+			"name": "Booster Energy",
+			"type": "held item",
+			"cost": null,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "bright-powder",
+			"name": "Bright Powder",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/bright-powder/sprite.png"
+			},
+			"_ingameEffect": "Held in battle\n:   Moves targeting the holder have 0.9× chance to hit."
+		},
+		{
+			"id": "cell-battery",
+			"name": "Cell Battery",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/cell-battery/sprite.png"
+			},
+			"_ingameEffect": "Held\n:   When the holder takes electric-type damage from a move, its Attack rises by one stage and this item is consumed."
+		},
+		{
+			"id": "clear-amulet",
+			"name": "Clear Amulet",
+			"type": "held item",
+			"cost": 30000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "covert-cloak",
+			"name": "Covert Cloak",
+			"type": "held item",
+			"cost": 20000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "destiny-knot",
+			"name": "Destiny Knot",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/destiny-knot/sprite.png"
+			},
+			"_ingameEffect": "Held: When the holder becomes Attracted, the Pokémon it is Attracted to becomes Attracted back."
+		},
+		{
+			"id": "eject-pack",
+			"name": "Eject Pack",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "expert-belt",
+			"name": "Expert Belt",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/expert-belt/sprite.png"
+			},
+			"_ingameEffect": "Held: When the holder hits with a super-effective move, its power is raised by 20%."
+		},
+		{
+			"id": "float-stone",
+			"name": "Float Stone",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/float-stone/sprite.png"
+			},
+			"_ingameEffect": "Held\n:   Holder has 0.5× weight."
+		},
+		{
+			"id": "grip-claw",
+			"name": "Grip Claw",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/grip-claw/sprite.png"
+			},
+			"_ingameEffect": "Held: Increases the duration of the holder's multiturn (2-5 turn) moves by three turns."
+		},
+		{
+			"id": "heavy-duty-boots",
+			"name": "Heavy-Duty Boots",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "luminous-moss",
+			"name": "Luminous Moss",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/luminous-moss/sprite.png"
+			},
+			"_ingameEffect": "Held: If the holder is hit by a damaging Water move, it consumes this item and raises its Special Defense by one stage."
+		},
+		{
+			"id": "lagging-tail",
+			"name": "Lagging Tail",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/lagging-tail/sprite.png"
+			},
+			"_ingameEffect": "Held: The holder will go last within its move's priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
+		},
+		{
+			"id": "light-clay",
+			"name": "Light Clay",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/light-clay/sprite.png"
+			},
+			"_ingameEffect": "Held: The holder's Reflect and Light Screen will create effects lasting for eight turns rather than five.  As this item affects the move rather than the barrier itself, the effect is not lost if the holder leaves battle or drops this item."
+		},
+		{
+			"id": "loaded-dice",
+			"name": "Loaded Dice",
+			"type": "held item",
+			"cost": 20000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "metronome",
+			"name": "Metronome",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/metronome/sprite.png"
+			},
+			"_ingameEffect": "Held: Each time the holder uses the same move consecutively, its power is increased by another 10% of its original, to a maximum of 100%."
+		},
+		{
+			"id": "protective-pads",
+			"name": "Protective Pads",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/protective-pads/sprite.png"
+			},
+			"_ingameEffect": "Held: Prevents side effects of contact moves used on the holder."
+		},
+		{
+			"id": "punching-glove",
+			"name": "Punching Glove",
+			"type": "held item",
+			"cost": 15000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "red-card",
+			"name": "Red Card",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/red-card/sprite.png"
+			},
+			"_ingameEffect": "Held\n:   When the holder takes damage directly from a move and does not faint, it switches out for another random, non-fainted Pokémon in its party.\nThis effect does not activate if another effect prevents the holder from switching out."
+		},
+		{
+			"id": "ring-target",
+			"name": "Ring Target",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/ring-target/sprite.png"
+			},
+			"_ingameEffect": "Held\n:   When one of the user's types would render it immune to damage, that type is ignored for damage calculation."
+		},
+		{
+			"id": "rocky-helmet",
+			"name": "Rocky Helmet",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/rocky-helmet/sprite.png"
+			},
+			"_ingameEffect": "Held\n:   When the holder is hit by a contact move, the attacking Pokémon takes 1/6 its max HP in damage."
+		},
+		{
+			"id": "room-service",
+			"name": "Room Service",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "safety-goggles",
+			"name": "Safety Goggles",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/safety-goggles/sprite.png"
+			},
+			"_ingameEffect": "Held: Prevents damage from powder moves and the damage from Hail and Sandstorm."
+		},
+		{
+			"id": "shed-shell",
+			"name": "Shed Shell",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/shed-shell/sprite.png"
+			},
+			"_ingameEffect": "Held: The holder is unaffected by any moves or abilities that would prevent it from actively leaving battle."
+		},
+		{
+			"id": "snowball",
+			"name": "Snowball",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/snowball/sprite.png"
+			},
+			"_ingameEffect": "Held: If the holder is hit by a damaging Ice move, raises its Attack by one stage."
+		},
+		{
+			"id": "sticky-barb",
+			"name": "Sticky Barb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/sticky-barb/sprite.png"
+			},
+			"_ingameEffect": "Held: Damaged the holder for 1/8 its max HP.  When the holder is struck by a contact move, damages the attacker for 1/8 its max HP; if the attacker is not holding an item, it will take this item."
+		},
+		{
+			"id": "throat-spray",
+			"name": "Throat Spray",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "utility-umbrella",
+			"name": "Utility Umbrella",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": null
+			}
+		},
+		{
+			"id": "weakness-policy",
+			"name": "Weakness Policy",
+			"type": "held item",
+			"cost": 1000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/weakness-policy/sprite.png"
+			},
+			"_ingameEffect": "Held: When the holder is hit by a super effective move, its Attack and Special Attack raise by two stages."
+		},
+		{
+			"id": "zoom-lens",
+			"name": "Zoom Lens",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/zoom-lens/sprite.png"
+			},
+			"_ingameEffect": "Held: Raises the holder's Accuracy by 20% when it goes last.\nIngame description is incorrect."
+		},
+		{
+			"id": "mental-herb",
+			"name": "Mental Herb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/mental-herb/sprite.png"
+			},
+			"_ingameEffect": "Held in battle\n:   When the holder is attracted, it consumes this item to cure the attraction."
+		},
+		{
+			"id": "power-herb",
+			"name": "Power Herb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/power-herb/sprite.png"
+			},
+			"_ingameEffect": "Held: Whenever the holder uses a move that requires a turn to charge first (Bounce, Dig, Dive, Fly, Razor Wind, Skull Bash, Sky Attack, or Solarbeam), this item is consumed and the charge is skipped.  Skull Bash still provides a Defense boost."
+		},
+		{
+			"id": "white-herb",
+			"name": "White Herb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/white-herb/sprite.png"
+			},
+			"_ingameEffect": "Held in battle\n:   At the end of each turn, if any of the holder's stats have a negative stat modifier, the holder consumes this item to remove the modifiers from those stats."
+		},
+		{
+			"id": "full-incense",
+			"name": "Full Incense",
+			"type": "held item",
+			"cost": 5000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/full-incense/sprite.png"
+			},
+			"_ingameEffect": "Held: The holder will go last within its move's priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
+		},
+		{
+			"id": "lax-incense",
+			"name": "Lax Incense",
+			"type": "held item",
+			"cost": 5000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/lax-incense/sprite.png"
+			},
+			"_ingameEffect": "Held: Increases the holder's Evasion by 5%."
+		},
+		{
+			"id": "odd-incense",
+			"name": "Odd Incense",
+			"type": "held item",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/odd-incense/sprite.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Psychic moves by 20%."
+		},
+		{
+			"id": "rock-incense",
+			"name": "Rock Incense",
+			"type": "held item",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/rock-incense/sprite.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Rock moves by 20%."
+		},
+		{
+			"id": "rose-incense",
+			"name": "Rose Incense",
+			"type": "held item",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/rose-incense/sprite.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Grass moves by 20%."
+		},
+		{
+			"id": "sea-incense",
+			"name": "Sea Incense",
+			"type": "held item",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/sea-incense/sprite.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Water moves by 20%."
+		},
+		{
+			"id": "wave-incense",
+			"name": "Wave Incense",
+			"type": "held item",
+			"cost": 2000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/wave-incense/sprite.png"
+			},
+			"_ingameEffect": "Held: Increases the power of the holder's Water moves by 20%."
+		},
+		{
+			"id": "adrenaline-orb",
+			"name": "Adrenaline Orb",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/adrenaline-orb/sprite.png"
+			},
+			"_ingameEffect": "Makes wild Pokémon more likely to summon allies.  Held: increases the holder's Speed by one stage when affected by Intimidate."
+		},
+		{
+			"id": "iron-ball",
+			"name": "Iron Ball",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/iron-ball/sprite.png"
+			},
+			"_ingameEffect": "Held: Decreases the holder's Speed by 50%.  If the holder is Flying or has Levitate, it takes regular damage from Ground attacks and is suspectible to Spikes and Toxic Spikes."
+		},
+		{
+			"id": "terrain-extender",
+			"name": "Terrain Extender",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/terrain-extender/sprite.png"
+			},
+			"_ingameEffect": "Held: When the holder changes the Terrain (whether by move or ability), it will last  8 turns instead of 5."
+		},
+		{
+			"id": "electric-seed",
+			"name": "Electric Seed",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/electric-seed/sprite.png"
+			},
+			"_ingameEffect": "Held: If the holder enters battle during Electric Terrain, or if Electric Terrain is activated while the holder is in battle, this item is consumed and the holder's Defense raises by one stage."
+		},
+		{
+			"id": "grassy-seed",
+			"name": "Grassy Seed",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/grassy-seed/sprite.png"
+			},
+			"_ingameEffect": "Held: If the holder enters battle during Grassy Terrain, or if Grassy Terrain is activated while the holder is in battle, this item is consumed and the holder's Defense raises by one stage."
+		},
+		{
+			"id": "misty-seed",
+			"name": "Misty Seed",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/misty-seed/sprite.png"
+			},
+			"_ingameEffect": "Held: If the holder enters battle during Misty Terrain, or if Misty Terrain is activated while the holder is in battle, this item is consumed and the holder's Special Defense raises by one stage."
+		},
+		{
+			"id": "psychic-seed",
+			"name": "Psychic Seed",
+			"type": "held item",
+			"cost": 4000,
+			"description": null,
+			"media": {
+				"sprite": "/assets/items/psychic-seed/sprite.png"
+			},
+			"_ingameEffect": "Held: If the holder enters battle during Psychic Terrain, or if Psychic Terrain is activated while the holder is in battle, this item is consumed and the holder's Special Defense raises by one stage."
+		}
+	]
+}

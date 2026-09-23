@@ -1,16 +1,16 @@
 import * as z from "zod"
+import { Updated } from "../common/schema"
 
 export const ItemJson = z.object({
 	id: z.string(),
 	name: z.string(),
 	type: z.string(),
 	cost: z.union([z.int(), z.null()]),
-	description: z.union([z.array(z.string()), z.null()]),
+	description: z.string(),
 	media: z.object({
 		sprite: z.union([z.string(), z.null()]),
 	}),
-	beta: z.boolean().optional(),
-	_ingameEffect: z.string().optional(),
+	updated: Updated.optional(),
 }).meta({
 	id: "Item",
 	title: "Item",

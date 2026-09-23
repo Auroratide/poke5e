@@ -5,9 +5,7 @@
 			"name": "Poké Ball",
 			"type": "pokeball",
 			"cost": 250,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon.",
 			"media": {
 				"sprite": "/assets/items/poke-ball/sprite.png"
 			}
@@ -17,9 +15,7 @@
 			"name": "Great Ball",
 			"type": "pokeball",
 			"cost": 500,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 5."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 5.",
 			"media": {
 				"sprite": "/assets/items/great-ball/sprite.png"
 			}
@@ -29,9 +25,7 @@
 			"name": "Ultra Ball",
 			"type": "pokeball",
 			"cost": 1000,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 10."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 10.",
 			"media": {
 				"sprite": "/assets/items/ultra-ball/sprite.png"
 			}
@@ -41,9 +35,7 @@
 			"name": "Master Ball",
 			"type": "pokeball",
 			"cost": null,
-			"description": [
-				"Lets a trainer automatically succeed on a Capture Roll to catch a Pokémon."
-			],
+			"description": "Lets a trainer automatically succeed on a Capture Roll to catch a Pokémon.",
 			"media": {
 				"sprite": "/assets/items/master-ball/sprite.png"
 			}
@@ -53,9 +45,7 @@
 			"name": "Safari Ball",
 			"type": "pokeball",
 			"cost": 800,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Nature skill modifier."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Nature skill modifier.",
 			"media": {
 				"sprite": "/assets/items/safari-ball/sprite.png"
 			}
@@ -65,9 +55,7 @@
 			"name": "Fast Ball",
 			"type": "pokeball",
 			"cost": 600,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Can throw as a reaction to a fleeing Pokémon."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Can throw as a reaction to a fleeing Pokémon.",
 			"media": {
 				"sprite": "/assets/items/fast-ball/sprite.png"
 			}
@@ -77,9 +65,7 @@
 			"name": "Level Ball",
 			"type": "pokeball",
 			"cost": 400,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 5 if your trainer level is higher than the target Pokémon's level."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 5 if your trainer level is higher than the target Pokémon's level.",
 			"media": {
 				"sprite": "/assets/items/level-ball/sprite.png"
 			}
@@ -89,9 +75,7 @@
 			"name": "Lure Ball",
 			"type": "pokeball",
 			"cost": 800,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 if used while fishing."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 if used while fishing.",
 			"media": {
 				"sprite": "/assets/items/lure-ball/sprite.png"
 			}
@@ -101,9 +85,7 @@
 			"name": "Heavy Ball",
 			"type": "pokeball",
 			"cost": 800,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 if the target Pokémon is size medium or larger."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 if the target Pokémon is size medium or larger.",
 			"media": {
 				"sprite": "/assets/items/heavy-ball/sprite.png"
 			}
@@ -113,9 +95,7 @@
 			"name": "Love Ball",
 			"type": "pokeball",
 			"cost": 800,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by twice your active Pokémon's Charisma modifier."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by twice your active Pokémon's Charisma modifier.",
 			"media": {
 				"sprite": "/assets/items/love-ball/sprite.png"
 			}
@@ -125,9 +105,7 @@
 			"name": "Friend Ball",
 			"type": "pokeball",
 			"cost": 800,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Persuasion skill modifier."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Persuasion skill modifier.",
 			"media": {
 				"sprite": "/assets/items/friend-ball/sprite.png"
 			}
@@ -137,9 +115,7 @@
 			"name": "Moon Ball",
 			"type": "pokeball",
 			"cost": 800,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against Pokémon that can evolve using a Moon Stone."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against Pokémon that can evolve using a Moon Stone.",
 			"media": {
 				"sprite": "/assets/items/moon-ball/sprite.png"
 			}
@@ -149,9 +125,7 @@
 			"name": "Sport Ball",
 			"type": "pokeball",
 			"cost": 800,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Athletics skill modifier."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by your Athletics skill modifier.",
 			"media": {
 				"sprite": "/assets/items/sport-ball/sprite.png"
 			}
@@ -161,9 +135,7 @@
 			"name": "Net Ball",
 			"type": "pokeball",
 			"cost": 800,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against Water- or Bug-type Pokémon."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against Water- or Bug-type Pokémon.",
 			"media": {
 				"sprite": "/assets/items/net-ball/sprite.png"
 			}
@@ -173,9 +145,7 @@
 			"name": "Dive Ball",
 			"type": "pokeball",
 			"cost": 800,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 while underwater."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 while underwater.",
 			"media": {
 				"sprite": "/assets/items/dive-ball/sprite.png"
 			}
@@ -185,9 +155,7 @@
 			"name": "Nest Ball",
 			"type": "pokeball",
 			"cost": 400,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 5 if target Pokémon is level 5 or lower."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 5 if target Pokémon is level 5 or lower.",
 			"media": {
 				"sprite": "/assets/items/nest-ball/sprite.png"
 			}
@@ -197,9 +165,7 @@
 			"name": "Repeat Ball",
 			"type": "pokeball",
 			"cost": 800,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against a species you have already caught before."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 against a species you have already caught before.",
 			"media": {
 				"sprite": "/assets/items/repeat-ball/sprite.png"
 			}
@@ -209,9 +175,7 @@
 			"name": "Timer Ball",
 			"type": "pokeball",
 			"cost": 600,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. When you use the Throw Pokéball action, you may instead hold the ball and start concentrating. At a later round, when you throw the ball, reduce the capture DC by 1 for each turn spent concentrating, to a max of 10."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. When you use the Throw Pokéball action, you may instead hold the ball and start concentrating. At a later round, when you throw the ball, reduce the capture DC by 1 for each turn spent concentrating, to a max of 10.",
 			"media": {
 				"sprite": "/assets/items/timer-ball/sprite.png"
 			}
@@ -221,9 +185,7 @@
 			"name": "Luxury Ball",
 			"type": "pokeball",
 			"cost": 800,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Pokémon residing in a Luxury Ball gain +1 to their max hit dice."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Pokémon residing in a Luxury Ball gain +1 to their max hit dice.",
 			"media": {
 				"sprite": "/assets/items/luxury-ball/sprite.png"
 			}
@@ -233,9 +195,7 @@
 			"name": "Premier Ball",
 			"type": "pokeball",
 			"cost": 2000,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Rare, and often considered a token of class."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Rare, and often considered a token of class.",
 			"media": {
 				"sprite": "/assets/items/premier-ball/sprite.png"
 			}
@@ -245,9 +205,7 @@
 			"name": "Dusk Ball",
 			"type": "pokeball",
 			"cost": 800,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 while at night or in darkness."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce capture DC by 10 while at night or in darkness.",
 			"media": {
 				"sprite": "/assets/items/dusk-ball/sprite.png"
 			}
@@ -257,9 +215,7 @@
 			"name": "Heal Ball",
 			"type": "pokeball",
 			"cost": 1000,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. When the Pokémon in the Heal Ball spends a hit die during a short rest, it may roll twice and take the higher result."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. When the Pokémon in the Heal Ball spends a hit die during a short rest, it may roll twice and take the higher result.",
 			"media": {
 				"sprite": "/assets/items/heal-ball/sprite.png"
 			}
@@ -269,9 +225,7 @@
 			"name": "Quick Ball",
 			"type": "pokeball",
 			"cost": 1000,
-			"description": [
-				"Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 15 if used during the first round of combat."
-			],
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. Reduce the capture DC by 15 if used during the first round of combat.",
 			"media": {
 				"sprite": "/assets/items/quick-ball/sprite.png"
 			}
@@ -281,9 +235,7 @@
 			"name": "Dream Ball",
 			"type": "pokeball",
 			"cost": 500,
-			"description": [
-				"Reduce the capture DC by 5 if used on a Pokémon affected by the Sleep condition."
-			],
+			"description": "Reduce the capture DC by 5 if used on a Pokémon affected by the Sleep condition.",
 			"media": {
 				"sprite": "/assets/items/dream-ball/sprite.png"
 			}
@@ -293,9 +245,7 @@
 			"name": "Potion",
 			"type": "medicine",
 			"cost": 200,
-			"description": [
-				"A trainer may use an action to restore 2d4 + 2 HP to an adjacent Pokémon. Consumed on use."
-			],
+			"description": "A trainer may use an action to restore 2d4 + 2 HP to an adjacent Pokémon. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/potion/sprite.png"
 			}
@@ -305,9 +255,7 @@
 			"name": "Super Potion",
 			"type": "medicine",
 			"cost": 500,
-			"description": [
-				"A trainer may use an action to restore 3d6 + 6 HP to an adjacent Pokémon. Consumed on use."
-			],
+			"description": "A trainer may use an action to restore 3d6 + 6 HP to an adjacent Pokémon. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/super-potion/sprite.png"
 			}
@@ -317,9 +265,7 @@
 			"name": "Hyper Potion",
 			"type": "medicine",
 			"cost": 800,
-			"description": [
-				"A trainer may use an action to restore 4d12 + 10 HP to an adjacent Pokémon. Consumed on use."
-			],
+			"description": "A trainer may use an action to restore 4d12 + 10 HP to an adjacent Pokémon. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/hyper-potion/sprite.png"
 			}
@@ -329,9 +275,7 @@
 			"name": "Antidote",
 			"type": "medicine",
 			"cost": 200,
-			"description": [
-				"A trainer may use an action to cure an adjacent Pokémon of the Poisoned or Badly Poisoned conditions. Consumed on use."
-			],
+			"description": "A trainer may use an action to cure an adjacent Pokémon of the Poisoned or Badly Poisoned conditions. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/antidote/sprite.png"
 			}
@@ -341,9 +285,7 @@
 			"name": "Burn Heal",
 			"type": "medicine",
 			"cost": 200,
-			"description": [
-				"A trainer may use an action to cure an adjacent Pokémon of the Burned condition. Consumed on use."
-			],
+			"description": "A trainer may use an action to cure an adjacent Pokémon of the Burned condition. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/burn-heal/sprite.png"
 			}
@@ -353,9 +295,7 @@
 			"name": "Ice Heal",
 			"type": "medicine",
 			"cost": 200,
-			"description": [
-				"A trainer may use an action to cure an adjacent Pokémon of the Frozen condition. Consumed on use."
-			],
+			"description": "A trainer may use an action to cure an adjacent Pokémon of the Frozen condition. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/ice-heal/sprite.png"
 			}
@@ -365,9 +305,7 @@
 			"name": "Awakening",
 			"type": "medicine",
 			"cost": 200,
-			"description": [
-				"A trainer may use an action to cure an adjacent Pokémon of the Asleep condition. Consumed on use."
-			],
+			"description": "A trainer may use an action to cure an adjacent Pokémon of the Asleep condition. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/awakening/sprite.png"
 			}
@@ -377,9 +315,7 @@
 			"name": "Paralyze Heal",
 			"type": "medicine",
 			"cost": 200,
-			"description": [
-				"A trainer may use an action to cure an adjacent Pokémon of the Paralysis condition. Consumed on use."
-			],
+			"description": "A trainer may use an action to cure an adjacent Pokémon of the Paralysis condition. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/paralyze-heal/sprite.png"
 			}
@@ -389,9 +325,7 @@
 			"name": "Max Potion",
 			"type": "medicine",
 			"cost": 2500,
-			"description": [
-				"A trainer may use an action to administor this medicine to an adjacent Pokémon. 10 minutes after consumption, the Pokémon regains 70 HP. Consumed on use."
-			],
+			"description": "A trainer may use an action to administor this medicine to an adjacent Pokémon. 10 minutes after consumption, the Pokémon regains 70 HP. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/max-potion/sprite.png"
 			}
@@ -401,9 +335,7 @@
 			"name": "Full Heal",
 			"type": "medicine",
 			"cost": 450,
-			"description": [
-				"A trainer may use an action to cure an adjacent Pokémon of all status conditions, and grants them immunity to all statuses for one round. Consumed on use."
-			],
+			"description": "A trainer may use an action to cure an adjacent Pokémon of all status conditions, and grants them immunity to all statuses for one round. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/full-heal/sprite.png"
 			}
@@ -413,9 +345,7 @@
 			"name": "Full Restore",
 			"type": "medicine",
 			"cost": 3000,
-			"description": [
-				"A trainer may use an action to administor this medicine to an adjacent Pokémon. 10 minutes after consumption, the Pokémon regains 70 HP and is cured of all status conditions. Consumed on use."
-			],
+			"description": "A trainer may use an action to administor this medicine to an adjacent Pokémon. 10 minutes after consumption, the Pokémon regains 70 HP and is cured of all status conditions. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/full-restore/sprite.png"
 			}
@@ -425,9 +355,7 @@
 			"name": "Revive",
 			"type": "medicine",
 			"cost": 3000,
-			"description": [
-				"A trainer may use an action to restore 2d4 + 2 HP to a fainted Pokémon. Consumed on use."
-			],
+			"description": "A trainer may use an action to restore 2d4 + 2 HP to a fainted Pokémon. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/revive/sprite.png"
 			}
@@ -437,9 +365,7 @@
 			"name": "Max Revive",
 			"type": "medicine",
 			"cost": 5000,
-			"description": [
-				"A trainer may use an action to restore 4d12 + 10 HP to a fainted Pokémon. Consumed on use."
-			],
+			"description": "A trainer may use an action to restore 4d12 + 10 HP to a fainted Pokémon. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/max-revive/sprite.png"
 			}
@@ -449,9 +375,7 @@
 			"name": "Fresh Water",
 			"type": "medicine",
 			"cost": 200,
-			"description": [
-				"When consumed, restores 7 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
-			],
+			"description": "When consumed, restores 7 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon.",
 			"media": {
 				"sprite": "/assets/items/fresh-water/sprite.png"
 			}
@@ -461,9 +385,7 @@
 			"name": "Soda Pop",
 			"type": "medicine",
 			"cost": 275,
-			"description": [
-				"When consumed, restores 10 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
-			],
+			"description": "When consumed, restores 10 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon.",
 			"media": {
 				"sprite": "/assets/items/soda-pop/sprite.png"
 			}
@@ -473,9 +395,7 @@
 			"name": "Berry Juice",
 			"type": "medicine",
 			"cost": 500,
-			"description": [
-				"When consumed, restores 20 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
-			],
+			"description": "When consumed, restores 20 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon.",
 			"media": {
 				"sprite": "/assets/items/berry-juice/sprite.png"
 			}
@@ -485,9 +405,7 @@
 			"name": "Lemonade",
 			"type": "medicine",
 			"cost": 650,
-			"description": [
-				"When consumed, restores 30 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
-			],
+			"description": "When consumed, restores 30 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon.",
 			"media": {
 				"sprite": "/assets/items/lemonade/sprite.png"
 			}
@@ -497,9 +415,7 @@
 			"name": "Moomoo Milk",
 			"type": "medicine",
 			"cost": 1200,
-			"description": [
-				"When consumed, restores 50 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon."
-			],
+			"description": "When consumed, restores 50 HP. A trainer may use a bonus action to consume this item, or a full action to administer it to an adjacent Pokémon.",
 			"media": {
 				"sprite": "/assets/items/moomoo-milk/sprite.png"
 			}
@@ -509,9 +425,7 @@
 			"name": "Energy Powder",
 			"type": "medicine",
 			"cost": 300,
-			"description": [
-				"A trainer may use an action to restore 3d6 + 6 HP to an adjacent Pokémon. Consumed on use. Most Pokémon dislike Energy Powder, so overuse may result in loss of bond (1/4 chance to lower Bond level by 1)."
-			],
+			"description": "A trainer may use an action to restore 3d6 + 6 HP to an adjacent Pokémon. Consumed on use. Most Pokémon dislike Energy Powder, so overuse may result in loss of bond (1/4 chance to lower Bond level by 1).",
 			"media": {
 				"sprite": "/assets/items/energy-powder/sprite.png"
 			}
@@ -521,9 +435,7 @@
 			"name": "Energy Root",
 			"type": "medicine",
 			"cost": 700,
-			"description": [
-				"A trainer may use an action to restore 4d12 + 10 HP to an adjacent Pokémon. Consumed on use. Most Pokémon dislike Energy Root, so overuse may result in loss of bond (1/4 chance to lower Bond level by 1)."
-			],
+			"description": "A trainer may use an action to restore 4d12 + 10 HP to an adjacent Pokémon. Consumed on use. Most Pokémon dislike Energy Root, so overuse may result in loss of bond (1/4 chance to lower Bond level by 1).",
 			"media": {
 				"sprite": "/assets/items/energy-root/sprite.png"
 			}
@@ -533,9 +445,7 @@
 			"name": "Heal Powder",
 			"type": "medicine",
 			"cost": 300,
-			"description": [
-				"A trainer may use an action to cure an adjacent Pokémon of all status conditions. Consumed on use. Most Pokémon dislike Heal Powder, so overuse may result in loss of bond (1/4 chance to lower Bond level by 1)."
-			],
+			"description": "A trainer may use an action to cure an adjacent Pokémon of all status conditions. Consumed on use. Most Pokémon dislike Heal Powder, so overuse may result in loss of bond (1/4 chance to lower Bond level by 1).",
 			"media": {
 				"sprite": "/assets/items/heal-powder/sprite.png"
 			}
@@ -545,9 +455,7 @@
 			"name": "Revival Herb",
 			"type": "medicine",
 			"cost": 4200,
-			"description": [
-				"A trainer may use an action to restore 4d12 + 10 HP to a fainted Pokémon in a Pokéball. Consumed on use. Most Pokémon dislike Revival Herbs, so overuse may result in loss of bond (1/4 chance to lower Bond level by 1)."
-			],
+			"description": "A trainer may use an action to restore 4d12 + 10 HP to a fainted Pokémon in a Pokéball. Consumed on use. Most Pokémon dislike Revival Herbs, so overuse may result in loss of bond (1/4 chance to lower Bond level by 1).",
 			"media": {
 				"sprite": "/assets/items/revival-herb/sprite.png"
 			}
@@ -557,9 +465,7 @@
 			"name": "Ether",
 			"type": "medicine",
 			"cost": 500,
-			"description": [
-				"A trainer may use an action to restore 5 PP to a single move of an adjacent Pokémon. Consumed on use."
-			],
+			"description": "A trainer may use an action to restore 5 PP to a single move of an adjacent Pokémon. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/ether/sprite.png"
 			}
@@ -569,9 +475,7 @@
 			"name": "Max Ether",
 			"type": "medicine",
 			"cost": 1800,
-			"description": [
-				"A trainer may use an action to restore 10 PP to a single moves of an adjacent Pokémon. Consumed on use."
-			],
+			"description": "A trainer may use an action to restore 10 PP to a single moves of an adjacent Pokémon. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/max-ether/sprite.png"
 			}
@@ -581,9 +485,7 @@
 			"name": "Elixir",
 			"type": "medicine",
 			"cost": 900,
-			"description": [
-				"A trainer may use an action to restore 5 PP to all moves of an adjacent Pokémon. Consumed on use."
-			],
+			"description": "A trainer may use an action to restore 5 PP to all moves of an adjacent Pokémon. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/elixir/sprite.png"
 			}
@@ -593,9 +495,7 @@
 			"name": "Max Elixir",
 			"type": "medicine",
 			"cost": 3200,
-			"description": [
-				"A trainer may use an action to restore 10 PP to all moves of an adjacent Pokémon. Consumed on use."
-			],
+			"description": "A trainer may use an action to restore 10 PP to all moves of an adjacent Pokémon. Consumed on use.",
 			"media": {
 				"sprite": "/assets/items/max-elixir/sprite.png"
 			}
@@ -605,9 +505,7 @@
 			"name": "Sacred Ash",
 			"type": "medicine",
 			"cost": 10000,
-			"description": [
-				"A trainer may spend 5 minutes to revive up to six fainted Pokémon. Each Pokémon revived this way is restored to half their max HP."
-			],
+			"description": "A trainer may spend 5 minutes to revive up to six fainted Pokémon. Each Pokémon revived this way is restored to half their max HP.",
 			"media": {
 				"sprite": "/assets/items/sacred-ash/sprite.png"
 			}
@@ -617,10 +515,7 @@
 			"name": "HP Up",
 			"type": "medicine",
 			"cost": 8800,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. That Pokémon's maxiumum HP increases by the maximum roll of one of its hit dice.",
-				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. That Pokémon's maxiumum HP increases by the maximum roll of one of its hit dice.\n\nThis is a vitamin. Pokémon may only benefit from the effects of three vitamins total.",
 			"media": {
 				"sprite": "/assets/items/hp-up/sprite.png"
 			}
@@ -630,10 +525,7 @@
 			"name": "Protein",
 			"type": "medicine",
 			"cost": 4900,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. That Pokémon's STR increases by 1. This cannot increase the Pokémon's ability score above 20.",
-				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. That Pokémon's STR increases by 1. This cannot increase the Pokémon's ability score above 20.\n\nThis is a vitamin. Pokémon may only benefit from the effects of three vitamins total.",
 			"media": {
 				"sprite": "/assets/items/protein/sprite.png"
 			}
@@ -643,10 +535,7 @@
 			"name": "Iron",
 			"type": "medicine",
 			"cost": 4900,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. That Pokémon's DEX increases by 1. This cannot increase the Pokémon's ability score above 20.",
-				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. That Pokémon's DEX increases by 1. This cannot increase the Pokémon's ability score above 20.\n\nThis is a vitamin. Pokémon may only benefit from the effects of three vitamins total.",
 			"media": {
 				"sprite": "/assets/items/iron/sprite.png"
 			}
@@ -656,10 +545,7 @@
 			"name": "Carbos",
 			"type": "medicine",
 			"cost": 4900,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. That Pokémon's CHA increases by 1. This cannot increase the Pokémon's ability score above 20.",
-				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. That Pokémon's CHA increases by 1. This cannot increase the Pokémon's ability score above 20.\n\nThis is a vitamin. Pokémon may only benefit from the effects of three vitamins total.",
 			"media": {
 				"sprite": "/assets/items/carbos/sprite.png"
 			}
@@ -669,10 +555,7 @@
 			"name": "Calcium",
 			"type": "medicine",
 			"cost": 4900,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. That Pokémon's CON increases by 1. This cannot increase the Pokémon's ability score above 20.",
-				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. That Pokémon's CON increases by 1. This cannot increase the Pokémon's ability score above 20.\n\nThis is a vitamin. Pokémon may only benefit from the effects of three vitamins total.",
 			"media": {
 				"sprite": "/assets/items/calcium/sprite.png"
 			}
@@ -682,10 +565,7 @@
 			"name": "Zinc",
 			"type": "medicine",
 			"cost": 4900,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. That Pokémon's WIS increases by 1. This cannot increase the Pokémon's ability score above 20.",
-				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. That Pokémon's WIS increases by 1. This cannot increase the Pokémon's ability score above 20.\n\nThis is a vitamin. Pokémon may only benefit from the effects of three vitamins total.",
 			"media": {
 				"sprite": "/assets/items/zinc/sprite.png"
 			}
@@ -695,10 +575,7 @@
 			"name": "PP Up",
 			"type": "medicine",
 			"cost": 8800,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. The max PP of one of this Pokémon's moves increases by 2. This cannot increase the move's PP to above twice its baseline PP.",
-				"This is a vitamin. Pokémon may only benefit from the effects of three vitamins total."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. The max PP of one of this Pokémon's moves increases by 2. This cannot increase the move's PP to above twice its baseline PP.\n\nThis is a vitamin. Pokémon may only benefit from the effects of three vitamins total.",
 			"media": {
 				"sprite": "/assets/items/pp-up/sprite.png"
 			}
@@ -708,9 +585,7 @@
 			"name": "Ability Capsule",
 			"type": "medicine",
 			"cost": 5000,
-			"description": [
-				"When consumed by a Pokémon during a long rest, the Pokémon may switch its non-hidden ability it knows (if two options are available)."
-			],
+			"description": "When consumed by a Pokémon during a long rest, the Pokémon may switch its non-hidden ability it knows (if two options are available).",
 			"media": {
 				"sprite": "/assets/items/ability-capsule/sprite.png"
 			}
@@ -720,9 +595,7 @@
 			"name": "Guard Spec",
 			"type": "medicine",
 			"cost": 700,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon cannot be affected by new status conditions."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon cannot be affected by new status conditions.",
 			"media": {
 				"sprite": "/assets/items/guard-spec/sprite.png"
 			}
@@ -732,10 +605,7 @@
 			"name": "Dire Hit",
 			"type": "medicine",
 			"cost": 400,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon's critical hit range increases by one.",
-				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon's critical hit range increases by one.\n\nMost of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20.",
 			"media": {
 				"sprite": "/assets/items/dire-hit/sprite.png"
 			}
@@ -745,9 +615,7 @@
 			"name": "X Attack",
 			"type": "medicine",
 			"cost": 350,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to their attack rolls."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to their attack rolls.",
 			"media": {
 				"sprite": "/assets/items/x-attack/sprite.png"
 			}
@@ -757,9 +625,7 @@
 			"name": "X Defense",
 			"type": "medicine",
 			"cost": 350,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to AC."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to AC.",
 			"media": {
 				"sprite": "/assets/items/x-defense/sprite.png"
 			}
@@ -769,9 +635,7 @@
 			"name": "X Speed",
 			"type": "medicine",
 			"cost": 350,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon's movement speed is increased by 10ft."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon's movement speed is increased by 10ft.",
 			"media": {
 				"sprite": "/assets/items/x-speed/sprite.png"
 			}
@@ -781,9 +645,7 @@
 			"name": "X Accuracy",
 			"type": "medicine",
 			"cost": 350,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. The Pokémon gains advantage on its next three attack rolls."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. The Pokémon gains advantage on its next three attack rolls.",
 			"media": {
 				"sprite": "/assets/items/x-accuracy/sprite.png"
 			}
@@ -793,9 +655,7 @@
 			"name": "X Sp. Atk",
 			"type": "medicine",
 			"cost": 350,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to its Move DC."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to its Move DC.",
 			"media": {
 				"sprite": "/assets/items/x-sp-atk/sprite.png"
 			}
@@ -805,9 +665,7 @@
 			"name": "X Sp. Def",
 			"type": "medicine",
 			"cost": 350,
-			"description": [
-				"A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to saving throws."
-			],
+			"description": "A trainer may use an action to administer this to a Pokémon. For 1 minute, that Pokémon adds +2 to saving throws.",
 			"media": {
 				"sprite": "/assets/items/x-sp-def/sprite.png"
 			}
@@ -817,9 +675,7 @@
 			"name": "Red Nectar",
 			"type": "medicine",
 			"cost": 400,
-			"description": [
-				"When fed to an Oricorio, it changes form to Oricorio Baile Style."
-			],
+			"description": "When fed to an Oricorio, it changes form to Oricorio Baile Style.",
 			"media": {
 				"sprite": "/assets/items/red-nectar/sprite.png"
 			}
@@ -829,9 +685,7 @@
 			"name": "Yellow Nectar",
 			"type": "medicine",
 			"cost": 400,
-			"description": [
-				"When fed to an Oricorio, it changes form to Oricorio Pom-Pom Style."
-			],
+			"description": "When fed to an Oricorio, it changes form to Oricorio Pom-Pom Style.",
 			"media": {
 				"sprite": "/assets/items/yellow-nectar/sprite.png"
 			}
@@ -841,9 +695,7 @@
 			"name": "Pink Nectar",
 			"type": "medicine",
 			"cost": 400,
-			"description": [
-				"When fed to an Oricorio, it changes form to Oricorio Pa'u Style."
-			],
+			"description": "When fed to an Oricorio, it changes form to Oricorio Pa'u Style.",
 			"media": {
 				"sprite": "/assets/items/pink-nectar/sprite.png"
 			}
@@ -853,21 +705,9 @@
 			"name": "Purple Nectar",
 			"type": "medicine",
 			"cost": 400,
-			"description": [
-				"When fed to an Oricorio, it changes form to Oricorio Sensu Style."
-			],
+			"description": "When fed to an Oricorio, it changes form to Oricorio Sensu Style.",
 			"media": {
 				"sprite": "/assets/items/purple-nectar/sprite.png"
-			}
-		},
-		{
-			"id": "pewter-crunchies",
-			"name": "Pewter Crunchies",
-			"type": "medicine",
-			"cost": 250,
-			"description": null,
-			"media": {
-				"sprite": null
 			}
 		},
 		{
@@ -875,9 +715,7 @@
 			"name": "Health Candy",
 			"type": "medicine",
 			"cost": 1000,
-			"description": [
-				"When consumed by a Pokémon, it gains 20 temp HP for 1 minute. A Pokémon may only benefit from one Candy item at a time."
-			],
+			"description": "When consumed by a Pokémon, it gains 20 temp HP for 1 minute. A Pokémon may only benefit from one Candy item at a time.",
 			"media": {
 				"sprite": null
 			}
@@ -887,9 +725,7 @@
 			"name": "Mighty Candy",
 			"type": "medicine",
 			"cost": 1000,
-			"description": [
-				"When consumed by a Pokémon, its STR increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time."
-			],
+			"description": "When consumed by a Pokémon, its STR increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time.",
 			"media": {
 				"sprite": null
 			}
@@ -899,9 +735,7 @@
 			"name": "Tough Candy",
 			"type": "medicine",
 			"cost": 1000,
-			"description": [
-				"When consumed by a Pokémon, its AC increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time."
-			],
+			"description": "When consumed by a Pokémon, its AC increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time.",
 			"media": {
 				"sprite": null
 			}
@@ -911,9 +745,7 @@
 			"name": "Smart Candy",
 			"type": "medicine",
 			"cost": 1000,
-			"description": [
-				"When consumed by a Pokémon, its INT increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time."
-			],
+			"description": "When consumed by a Pokémon, its INT increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time.",
 			"media": {
 				"sprite": null
 			}
@@ -923,9 +755,7 @@
 			"name": "Courage Candy",
 			"type": "medicine",
 			"cost": 1000,
-			"description": [
-				"When consumed by a Pokémon, its WIS increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time."
-			],
+			"description": "When consumed by a Pokémon, its WIS increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time.",
 			"media": {
 				"sprite": null
 			}
@@ -935,105 +765,7 @@
 			"name": "Quick Candy",
 			"type": "medicine",
 			"cost": 1000,
-			"description": [
-				"When consumed by a Pokémon, its DEX increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time."
-			],
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "health-wing",
-			"name": "Health Feather",
-			"type": "medicine",
-			"cost": 300,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/health-wing/sprite.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's HP effort by 1."
-		},
-		{
-			"id": "muscle-wing",
-			"name": "Muscle Feather",
-			"type": "medicine",
-			"cost": 300,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/muscle-wing/sprite.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Attack effort by 1."
-		},
-		{
-			"id": "resist-wing",
-			"name": "Resist Feather",
-			"type": "medicine",
-			"cost": 300,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/resist-wing/sprite.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Defense effort by 1."
-		},
-		{
-			"id": "genius-wing",
-			"name": "Genius Feather",
-			"type": "medicine",
-			"cost": 300,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/genius-wing/sprite.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Special Attack effort by 1."
-		},
-		{
-			"id": "clever-wing",
-			"name": "Clever Feather",
-			"type": "medicine",
-			"cost": 300,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/clever-wing/sprite.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Special Defense effort by 1."
-		},
-		{
-			"id": "swift-wing",
-			"name": "Swift Feather",
-			"type": "medicine",
-			"cost": 300,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/swift-wing/sprite.png"
-			},
-			"_ingameEffect": "Used on a party Pokémon\n:   Increases the target's Speed effort by 1."
-		},
-		{
-			"id": "max-honey",
-			"name": "Max Honey",
-			"type": "medicine",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "max-mushrooms",
-			"name": "Max Mushrooms",
-			"type": "medicine",
-			"cost": 6000,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "ability-patch",
-			"name": "Ability Patch",
-			"type": "medicine",
-			"cost": 20,
-			"description": null,
+			"description": "When consumed by a Pokémon, its DEX increases by 1 for 1 minute. A Pokémon may only benefit from one Candy item at a time.",
 			"media": {
 				"sprite": null
 			}
@@ -1043,9 +775,7 @@
 			"name": "Sun Stone",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this stone to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this stone to evolve.",
 			"media": {
 				"sprite": "/assets/items/sun-stone/sprite.png"
 			}
@@ -1055,9 +785,7 @@
 			"name": "Moon Stone",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this stone to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this stone to evolve.",
 			"media": {
 				"sprite": "/assets/items/moon-stone/sprite.png"
 			}
@@ -1067,9 +795,7 @@
 			"name": "Fire Stone",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this stone to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this stone to evolve.",
 			"media": {
 				"sprite": "/assets/items/fire-stone/sprite.png"
 			}
@@ -1079,9 +805,7 @@
 			"name": "Thunder Stone",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this stone to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this stone to evolve.",
 			"media": {
 				"sprite": "/assets/items/thunder-stone/sprite.png"
 			}
@@ -1091,9 +815,7 @@
 			"name": "Water Stone",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this stone to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this stone to evolve.",
 			"media": {
 				"sprite": "/assets/items/water-stone/sprite.png"
 			}
@@ -1103,9 +825,7 @@
 			"name": "Leaf Stone",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this stone to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this stone to evolve.",
 			"media": {
 				"sprite": "/assets/items/leaf-stone/sprite.png"
 			}
@@ -1115,9 +835,7 @@
 			"name": "Shiny Stone",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this stone to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this stone to evolve.",
 			"media": {
 				"sprite": "/assets/items/shiny-stone/sprite.png"
 			}
@@ -1127,9 +845,7 @@
 			"name": "Dusk Stone",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this stone to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this stone to evolve.",
 			"media": {
 				"sprite": "/assets/items/dusk-stone/sprite.png"
 			}
@@ -1139,9 +855,7 @@
 			"name": "Dawn Stone",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this stone to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this stone to evolve.",
 			"media": {
 				"sprite": "/assets/items/dawn-stone/sprite.png"
 			}
@@ -1151,9 +865,7 @@
 			"name": "Ice Stone",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this stone to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this stone to evolve.",
 			"media": {
 				"sprite": "/assets/items/ice-stone/sprite.png"
 			}
@@ -1163,9 +875,7 @@
 			"name": "Oval Stone",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this stone to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this stone to evolve.",
 			"media": {
 				"sprite": "/assets/items/oval-stone/sprite.png"
 			}
@@ -1175,9 +885,7 @@
 			"name": "Alola Stone",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this stone to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this stone to evolve.",
 			"media": {
 				"sprite": null
 			}
@@ -1187,9 +895,7 @@
 			"name": "Cheri Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Consume to cure paralysis. You may consume this berry as a reaction when you become paralyzed."
-			],
+			"description": "Consume to cure paralysis. You may consume this berry as a reaction when you become paralyzed.",
 			"media": {
 				"sprite": "/assets/items/cheri-berry/sprite.png"
 			}
@@ -1199,9 +905,7 @@
 			"name": "Chesto Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Consume to cure sleep. You may consume this berry as a reaction when you fall asleep. You can still take this reaction even though the status would otherwise prevent you from taking it."
-			],
+			"description": "Consume to cure sleep. You may consume this berry as a reaction when you fall asleep. You can still take this reaction even though the status would otherwise prevent you from taking it.",
 			"media": {
 				"sprite": "/assets/items/chesto-berry/sprite.png"
 			}
@@ -1211,9 +915,7 @@
 			"name": "Pecha Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Consume to cure poison. You may consume this berry as a reaction when you become poisoned or badly poisoned."
-			],
+			"description": "Consume to cure poison. You may consume this berry as a reaction when you become poisoned or badly poisoned.",
 			"media": {
 				"sprite": "/assets/items/pecha-berry/sprite.png"
 			}
@@ -1223,9 +925,7 @@
 			"name": "Rawst Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Consume to cure burn. You may consume this berry as a reaction when you become burned."
-			],
+			"description": "Consume to cure burn. You may consume this berry as a reaction when you become burned.",
 			"media": {
 				"sprite": "/assets/items/rawst-berry/sprite.png"
 			}
@@ -1235,9 +935,7 @@
 			"name": "Aspear Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Consume to cure freeze. You may consume this berry as a reaction when you become frozen. You can still take this reaction even though the status would otherwise prevent you from taking it."
-			],
+			"description": "Consume to cure freeze. You may consume this berry as a reaction when you become frozen. You can still take this reaction even though the status would otherwise prevent you from taking it.",
 			"media": {
 				"sprite": "/assets/items/aspear-berry/sprite.png"
 			}
@@ -1247,9 +945,7 @@
 			"name": "Leppa Berry",
 			"type": "berry",
 			"cost": 500,
-			"description": [
-				"Consume to restore 10 PP to a move. Can be consumed as a reaction to one of your moves reaching 0 PP."
-			],
+			"description": "Consume to restore 10 PP to a move. Can be consumed as a reaction to one of your moves reaching 0 PP.",
 			"media": {
 				"sprite": "/assets/items/leppa-berry/sprite.png"
 			}
@@ -1259,9 +955,7 @@
 			"name": "Oran Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Consume to restore 2d4 + 2 HP. Can be consumed as a reaction to dropping below half health."
-			],
+			"description": "Consume to restore 2d4 + 2 HP. Can be consumed as a reaction to dropping below half health.",
 			"media": {
 				"sprite": "/assets/items/oran-berry/sprite.png"
 			}
@@ -1271,9 +965,7 @@
 			"name": "Persim Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Consume to cure confusion. You may consume this berry as a reaction when you become confused. You can still take this reaction even though the status would otherwise prevent you from taking it."
-			],
+			"description": "Consume to cure confusion. You may consume this berry as a reaction when you become confused. You can still take this reaction even though the status would otherwise prevent you from taking it.",
 			"media": {
 				"sprite": "/assets/items/persim-berry/sprite.png"
 			}
@@ -1283,9 +975,7 @@
 			"name": "Lum Berry",
 			"type": "berry",
 			"cost": 400,
-			"description": [
-				"Consume to cure any single status effect. You may consume this berry as a reaction when you become afflicted with a status effect. You can still take this reaction even if the status would otherwise prevent you from taking it."
-			],
+			"description": "Consume to cure any single status effect. You may consume this berry as a reaction when you become afflicted with a status effect. You can still take this reaction even if the status would otherwise prevent you from taking it.",
 			"media": {
 				"sprite": "/assets/items/lum-berry/sprite.png"
 			}
@@ -1295,9 +985,7 @@
 			"name": "Sitrus Berry",
 			"type": "berry",
 			"cost": 800,
-			"description": [
-				"Consume to restore 30 HP. Can be consumed as a reaction to dropping below half health."
-			],
+			"description": "Consume to restore 30 HP. Can be consumed as a reaction to dropping below half health.",
 			"media": {
 				"sprite": "/assets/items/sitrus-berry/sprite.png"
 			}
@@ -1307,9 +995,7 @@
 			"name": "Occa Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking fire-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking fire-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/occa-berry/sprite.png"
 			}
@@ -1319,9 +1005,7 @@
 			"name": "Passho Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking water-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking water-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/passho-berry/sprite.png"
 			}
@@ -1331,9 +1015,7 @@
 			"name": "Wacan Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking electric-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking electric-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/wacan-berry/sprite.png"
 			}
@@ -1343,9 +1025,7 @@
 			"name": "Rindo Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking grass-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking grass-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/rindo-berry/sprite.png"
 			}
@@ -1355,9 +1035,7 @@
 			"name": "Yache Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking ice-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking ice-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/yache-berry/sprite.png"
 			}
@@ -1367,9 +1045,7 @@
 			"name": "Chople Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking fighting-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking fighting-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/chople-berry/sprite.png"
 			}
@@ -1379,9 +1055,7 @@
 			"name": "Kebia Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking poison-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking poison-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/kebia-berry/sprite.png"
 			}
@@ -1391,9 +1065,7 @@
 			"name": "Shuca Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking ground-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking ground-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/shuca-berry/sprite.png"
 			}
@@ -1403,9 +1075,7 @@
 			"name": "Coba Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking flying-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking flying-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/coba-berry/sprite.png"
 			}
@@ -1415,9 +1085,7 @@
 			"name": "Payapa Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking psychic-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking psychic-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/payapa-berry/sprite.png"
 			}
@@ -1427,9 +1095,7 @@
 			"name": "Tanga Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking bug-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking bug-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/tanga-berry/sprite.png"
 			}
@@ -1439,9 +1105,7 @@
 			"name": "Charti Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking rock-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking rock-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/charti-berry/sprite.png"
 			}
@@ -1451,9 +1115,7 @@
 			"name": "Kasib Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking ghost-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking ghost-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/kasib-berry/sprite.png"
 			}
@@ -1463,9 +1125,7 @@
 			"name": "Haban Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking dragon-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking dragon-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/haban-berry/sprite.png"
 			}
@@ -1475,9 +1135,7 @@
 			"name": "Colbur Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking dark-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking dark-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/colbur-berry/sprite.png"
 			}
@@ -1487,9 +1145,7 @@
 			"name": "Babiri Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking steel-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking steel-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/babiri-berry/sprite.png"
 			}
@@ -1499,9 +1155,7 @@
 			"name": "Chilan Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking normal-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking normal-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/chilan-berry/sprite.png"
 			}
@@ -1511,43 +1165,17 @@
 			"name": "Roseli Berry",
 			"type": "berry",
 			"cost": 200,
-			"description": [
-				"Can be consumed as a reaction to taking fairy-type damage. You take half that damage instead."
-			],
+			"description": "Can be consumed as a reaction to taking fairy-type damage. You take half that damage instead.",
 			"media": {
 				"sprite": "/assets/items/roseli-berry/sprite.png"
 			}
-		},
-		{
-			"id": "ability-shield",
-			"name": "Ability Shield",
-			"type": "held item",
-			"cost": 20000,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "absorb-bulb",
-			"name": "Absorb Bulb",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/absorb-bulb/sprite.png"
-			},
-			"_ingameEffect": "Held\n:   When the holder takes water-type damage from a move, its Special Attack rises by one stage and this item is consumed."
 		},
 		{
 			"id": "air-balloon",
 			"name": "Air Balloon",
 			"type": "held item",
 			"cost": 1000,
-			"description": [
-				"The holder is immune to ground-type damage. When the holder takes damage, the item is popped and no longer confers its benefit.",
-				"The Air Balloon can be freely repaired during a short rest."
-			],
+			"description": "The holder is immune to ground-type damage. When the holder takes damage, the item is popped and no longer confers its benefit.\n\nThe Air Balloon can be freely repaired during a short rest.",
 			"media": {
 				"sprite": "/assets/items/air-balloon/sprite.png"
 			}
@@ -1557,9 +1185,7 @@
 			"name": "Assault Vest",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"The holder has +1 to their AC, but may only use damaging moves."
-			],
+			"description": "The holder has +1 to their AC, but may only use damaging moves.",
 			"media": {
 				"sprite": "/assets/items/assault-vest/sprite.png"
 			}
@@ -1569,131 +1195,29 @@
 			"name": "Big Root",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"Moves that simultaneously deal damage to a target and heal the holder restore an additional 1d12 HP to the holder."
-			],
+			"description": "Moves that simultaneously deal damage to a target and heal the holder restore an additional 1d12 HP to the holder.",
 			"media": {
 				"sprite": "/assets/items/big-root/sprite.png"
 			}
-		},
-		{
-			"id": "binding-band",
-			"name": "Binding Band",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/binding-band/sprite.png"
-			},
-			"_ingameEffect": "Held\n:   Moves used by the holder that trap and damage a target for multiple turns (e.g. bind, fire spin) inflict twice their usual per-turn damage."
 		},
 		{
 			"id": "black-sludge",
 			"name": "Black Sludge",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"This item has 10 charges. If the holder is a poison-type Pokémon, they may use a bonus action to use a charge, healing HP equal to their proficiency bonus. It recovers its charges at dawn each day.",
-				"If the holder is not a poison-type Pokémon, they take 1d6 poison damage at the end of each of their turns."
-			],
+			"description": "This item has 10 charges. If the holder is a poison-type Pokémon, they may use a bonus action to use a charge, healing HP equal to their proficiency bonus. It recovers its charges at dawn each day.\n\nIf the holder is not a poison-type Pokémon, they take 1d6 poison damage at the end of each of their turns.",
 			"media": {
 				"sprite": "/assets/items/black-sludge/sprite.png"
 			}
-		},
-		{
-			"id": "blunder-policy",
-			"name": "Blunder Policy",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "booster-energy",
-			"name": "Booster Energy",
-			"type": "held item",
-			"cost": null,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "bright-powder",
-			"name": "Bright Powder",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/bright-powder/sprite.png"
-			},
-			"_ingameEffect": "Held in battle\n:   Moves targeting the holder have 0.9× chance to hit."
-		},
-		{
-			"id": "cell-battery",
-			"name": "Cell Battery",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/cell-battery/sprite.png"
-			},
-			"_ingameEffect": "Held\n:   When the holder takes electric-type damage from a move, its Attack rises by one stage and this item is consumed."
-		},
-		{
-			"id": "clear-amulet",
-			"name": "Clear Amulet",
-			"type": "held item",
-			"cost": 30000,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "covert-cloak",
-			"name": "Covert Cloak",
-			"type": "held item",
-			"cost": 20000,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "destiny-knot",
-			"name": "Destiny Knot",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/destiny-knot/sprite.png"
-			},
-			"_ingameEffect": "Held: When the holder becomes Attracted, the Pokémon it is Attracted to becomes Attracted back."
 		},
 		{
 			"id": "eject-button",
 			"name": "Eject Button",
 			"type": "held item",
 			"cost": 4000,
-			"description": [
-				"This item has 1 charge. When the holder is damaged by an attack, its trainer may switch the holder for another of their pokémon as a free action, consuming the charge.",
-				"The Eject Button regains its charge at dawn each day."
-			],
+			"description": "This item has 1 charge. When the holder is damaged by an attack, its trainer may switch the holder for another of their pokémon as a free action, consuming the charge.\n\nThe Eject Button regains its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/eject-button/sprite.png"
-			}
-		},
-		{
-			"id": "eject-pack",
-			"name": "Eject Pack",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": null
 			}
 		},
 		{
@@ -1701,9 +1225,7 @@
 			"name": "Eviolite",
 			"type": "held item",
 			"cost": 4000,
-			"description": [
-				"The holder is prevented from evolving. If the Pokémon holding this is not a final evolutionary form, they take 3 less damage from all damage sources."
-			],
+			"description": "The holder is prevented from evolving. If the Pokémon holding this is not a final evolutionary form, they take 3 less damage from all damage sources.",
 			"media": {
 				"sprite": "/assets/items/eviolite/sprite.png"
 			}
@@ -1713,43 +1235,17 @@
 			"name": "Exp Share",
 			"type": "held item",
 			"cost": 7500,
-			"description": [
-				"A Pokémon holding this item receives up to half of the total experience gained in each combat while in the party."
-			],
+			"description": "A Pokémon holding this item receives up to half of the total experience gained in each combat while in the party.",
 			"media": {
 				"sprite": "/assets/items/exp-share/sprite.png"
 			}
-		},
-		{
-			"id": "expert-belt",
-			"name": "Expert Belt",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/expert-belt/sprite.png"
-			},
-			"_ingameEffect": "Held: When the holder hits with a super-effective move, its power is raised by 20%."
-		},
-		{
-			"id": "float-stone",
-			"name": "Float Stone",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/float-stone/sprite.png"
-			},
-			"_ingameEffect": "Held\n:   Holder has 0.5× weight."
 		},
 		{
 			"id": "focus-band",
 			"name": "Focus Band",
 			"type": "held item",
 			"cost": 1000,
-			"description": [
-				"When the holder would become flinched, roll a d20. On a 10 or higher, the holder does not flinch."
-			],
+			"description": "When the holder would become flinched, roll a d20. On a 10 or higher, the holder does not flinch.",
 			"media": {
 				"sprite": "/assets/items/focus-band/sprite.png"
 			}
@@ -1759,33 +1255,9 @@
 			"name": "Focus Sash",
 			"type": "held item",
 			"cost": 4000,
-			"description": [
-				"This item has 1 charge. If damage would bring the holder to below 1 HP, it instead brings the holder to 1 HP, consuming the charge.",
-				"The Focus Sash regains its charge at dawn each day."
-			],
+			"description": "This item has 1 charge. If damage would bring the holder to below 1 HP, it instead brings the holder to 1 HP, consuming the charge.\n\nThe Focus Sash regains its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/focus-sash/sprite.png"
-			}
-		},
-		{
-			"id": "grip-claw",
-			"name": "Grip Claw",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/grip-claw/sprite.png"
-			},
-			"_ingameEffect": "Held: Increases the duration of the holder's multiturn (2-5 turn) moves by three turns."
-		},
-		{
-			"id": "heavy-duty-boots",
-			"name": "Heavy-Duty Boots",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": null
 			}
 		},
 		{
@@ -1793,110 +1265,29 @@
 			"name": "Leftovers",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"This item has 10 charges. The holder may use a bonus action to use a charge, healing HP equal to their proficiency bonus. It recovers its charges at dawn each day."
-			],
+			"description": "This item has 10 charges. The holder may use a bonus action to use a charge, healing HP equal to their proficiency bonus. It recovers its charges at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/leftovers/sprite.png"
 			}
-		},
-		{
-			"id": "luminous-moss",
-			"name": "Luminous Moss",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/luminous-moss/sprite.png"
-			},
-			"_ingameEffect": "Held: If the holder is hit by a damaging Water move, it consumes this item and raises its Special Defense by one stage."
 		},
 		{
 			"id": "kings-rock",
 			"name": "King's Rock",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"When a target is hit by a melee attack made by the holder, if the attack roll was a natural 19 or 20, the target flinches."
-			],
+			"description": "When a target is hit by a melee attack made by the holder, if the attack roll was a natural 19 or 20, the target flinches.",
 			"media": {
 				"sprite": "/assets/items/kings-rock/sprite.png"
 			}
-		},
-		{
-			"id": "lagging-tail",
-			"name": "Lagging Tail",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/lagging-tail/sprite.png"
-			},
-			"_ingameEffect": "Held: The holder will go last within its move's priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
-		},
-		{
-			"id": "light-clay",
-			"name": "Light Clay",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/light-clay/sprite.png"
-			},
-			"_ingameEffect": "Held: The holder's Reflect and Light Screen will create effects lasting for eight turns rather than five.  As this item affects the move rather than the barrier itself, the effect is not lost if the holder leaves battle or drops this item."
-		},
-		{
-			"id": "loaded-dice",
-			"name": "Loaded Dice",
-			"type": "held item",
-			"cost": 20000,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "metronome",
-			"name": "Metronome",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/metronome/sprite.png"
-			},
-			"_ingameEffect": "Held: Each time the holder uses the same move consecutively, its power is increased by another 10% of its original, to a maximum of 100%."
 		},
 		{
 			"id": "muscle-band",
 			"name": "Muscle Band",
 			"type": "held item",
 			"cost": 4000,
-			"description": [
-				"The holder adds its proficiency bonus to damage it deals from melee attacks (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to damage it deals from melee attacks (once per move).",
 			"media": {
 				"sprite": "/assets/items/muscle-band/sprite.png"
-			}
-		},
-		{
-			"id": "protective-pads",
-			"name": "Protective Pads",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/protective-pads/sprite.png"
-			},
-			"_ingameEffect": "Held: Prevents side effects of contact moves used on the holder."
-		},
-		{
-			"id": "punching-glove",
-			"name": "Punching Glove",
-			"type": "held item",
-			"cost": 15000,
-			"description": null,
-			"media": {
-				"sprite": null
 			}
 		},
 		{
@@ -1904,9 +1295,7 @@
 			"name": "Quick Claw",
 			"type": "held item",
 			"cost": 1000,
-			"description": [
-				"The holder adds +3 to their initiative rolls."
-			],
+			"description": "The holder adds +3 to their initiative rolls.",
 			"media": {
 				"sprite": "/assets/items/quick-claw/sprite.png"
 			}
@@ -1916,10 +1305,7 @@
 			"name": "Razor Claw",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"The holder's critical hit range increases by one.",
-				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20."
-			],
+			"description": "The holder's critical hit range increases by one.\n\nMost of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20.",
 			"media": {
 				"sprite": "/assets/items/razor-claw/sprite.png"
 			}
@@ -1929,99 +1315,27 @@
 			"name": "Razor Fang",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"When a target is hit by a melee attack made by the holder, if the attack roll was a natural 19 or 20, the target flinches."
-			],
+			"description": "When a target is hit by a melee attack made by the holder, if the attack roll was a natural 19 or 20, the target flinches.",
 			"media": {
 				"sprite": "/assets/items/razor-fang/sprite.png"
 			}
-		},
-		{
-			"id": "red-card",
-			"name": "Red Card",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/red-card/sprite.png"
-			},
-			"_ingameEffect": "Held\n:   When the holder takes damage directly from a move and does not faint, it switches out for another random, non-fainted Pokémon in its party.\nThis effect does not activate if another effect prevents the holder from switching out."
-		},
-		{
-			"id": "ring-target",
-			"name": "Ring Target",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/ring-target/sprite.png"
-			},
-			"_ingameEffect": "Held\n:   When one of the user's types would render it immune to damage, that type is ignored for damage calculation."
-		},
-		{
-			"id": "rocky-helmet",
-			"name": "Rocky Helmet",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/rocky-helmet/sprite.png"
-			},
-			"_ingameEffect": "Held\n:   When the holder is hit by a contact move, the attacking Pokémon takes 1/6 its max HP in damage."
-		},
-		{
-			"id": "room-service",
-			"name": "Room Service",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "safety-goggles",
-			"name": "Safety Goggles",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/safety-goggles/sprite.png"
-			},
-			"_ingameEffect": "Held: Prevents damage from powder moves and the damage from Hail and Sandstorm."
 		},
 		{
 			"id": "scope-lens",
 			"name": "Scope Lens",
 			"type": "held item",
 			"cost": 2500,
-			"description": [
-				"The holder's critical hit range increases by one.",
-				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20."
-			],
+			"description": "The holder's critical hit range increases by one.\n\nMost of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20.",
 			"media": {
 				"sprite": "/assets/items/scope-lens/sprite.png"
 			}
-		},
-		{
-			"id": "shed-shell",
-			"name": "Shed Shell",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/shed-shell/sprite.png"
-			},
-			"_ingameEffect": "Held: The holder is unaffected by any moves or abilities that would prevent it from actively leaving battle."
 		},
 		{
 			"id": "shell-bell",
 			"name": "Shell Bell",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"When the holder uses a move that damages at least one creature, the holder restores HP equal to its proficiency bonus."
-			],
+			"description": "When the holder uses a move that damages at least one creature, the holder restores HP equal to its proficiency bonus.",
 			"media": {
 				"sprite": "/assets/items/shell-bell/sprite.png"
 			}
@@ -2031,74 +1345,17 @@
 			"name": "Smoke Ball",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"Guarantees a success in an attempt to flee from wild Pokémon battles."
-			],
+			"description": "Guarantees a success in an attempt to flee from wild Pokémon battles.",
 			"media": {
 				"sprite": "/assets/items/smoke-ball/sprite.png"
 			}
-		},
-		{
-			"id": "snowball",
-			"name": "Snowball",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/snowball/sprite.png"
-			},
-			"_ingameEffect": "Held: If the holder is hit by a damaging Ice move, raises its Attack by one stage."
-		},
-		{
-			"id": "sticky-barb",
-			"name": "Sticky Barb",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/sticky-barb/sprite.png"
-			},
-			"_ingameEffect": "Held: Damaged the holder for 1/8 its max HP.  When the holder is struck by a contact move, damages the attacker for 1/8 its max HP; if the attacker is not holding an item, it will take this item."
-		},
-		{
-			"id": "throat-spray",
-			"name": "Throat Spray",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "utility-umbrella",
-			"name": "Utility Umbrella",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": null
-			}
-		},
-		{
-			"id": "weakness-policy",
-			"name": "Weakness Policy",
-			"type": "held item",
-			"cost": 1000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/weakness-policy/sprite.png"
-			},
-			"_ingameEffect": "Held: When the holder is hit by a super effective move, its Attack and Special Attack raise by two stages."
 		},
 		{
 			"id": "wide-lens",
 			"name": "Wide Lens",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder gains +1 to attack rolls."
-			],
+			"description": "The holder gains +1 to attack rolls.",
 			"media": {
 				"sprite": "/assets/items/wide-lens/sprite.png"
 			}
@@ -2108,32 +1365,17 @@
 			"name": "Wise Glasses",
 			"type": "held item",
 			"cost": 4000,
-			"description": [
-				"The holder adds its proficiency bonus to damage it deals from ranged attacks (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to damage it deals from ranged attacks (once per move).",
 			"media": {
 				"sprite": "/assets/items/wise-glasses/sprite.png"
 			}
-		},
-		{
-			"id": "zoom-lens",
-			"name": "Zoom Lens",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/zoom-lens/sprite.png"
-			},
-			"_ingameEffect": "Held: Raises the holder's Accuracy by 20% when it goes last.\nIngame description is incorrect."
 		},
 		{
 			"id": "megalite-stone",
 			"name": "Megalite Stone",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to Mega Evolve. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to Mega Evolve. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/megalite-stone/sprite.png"
 			}
@@ -2143,9 +1385,7 @@
 			"name": "Normalium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a normal-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a normal-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/normalium-z/sprite.png"
 			}
@@ -2155,9 +1395,7 @@
 			"name": "Fightinium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a fighting-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a fighting-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/fightinium-z/sprite.png"
 			}
@@ -2167,9 +1405,7 @@
 			"name": "Flyinium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a flying-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a flying-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/flyinium-z/sprite.png"
 			}
@@ -2179,9 +1415,7 @@
 			"name": "Poisonium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a poison-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a poison-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/poisonium-z/sprite.png"
 			}
@@ -2191,9 +1425,7 @@
 			"name": "Groundium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a ground-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a ground-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/groundium-z/sprite.png"
 			}
@@ -2203,9 +1435,7 @@
 			"name": "Rockium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a rock-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a rock-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/rockium-z/sprite.png"
 			}
@@ -2215,9 +1445,7 @@
 			"name": "Buginium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a bug-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a bug-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/buginium-z/sprite.png"
 			}
@@ -2227,9 +1455,7 @@
 			"name": "Ghostium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a ghost-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a ghost-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/ghostium-z/sprite.png"
 			}
@@ -2239,9 +1465,7 @@
 			"name": "Steelium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a steel-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a steel-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/Steelium-z/sprite.png"
 			}
@@ -2251,9 +1475,7 @@
 			"name": "Firium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a fire-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a fire-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/firium-z/sprite.png"
 			}
@@ -2263,9 +1485,7 @@
 			"name": "Waterium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a water-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a water-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/waterium-z/sprite.png"
 			}
@@ -2275,9 +1495,7 @@
 			"name": "Grassium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a grass-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a grass-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/grassium-z/sprite.png"
 			}
@@ -2287,9 +1505,7 @@
 			"name": "Electrium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a electric-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a electric-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/electrium-z/sprite.png"
 			}
@@ -2299,9 +1515,7 @@
 			"name": "Psychium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a psychic-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a psychic-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/psychium-z/sprite.png"
 			}
@@ -2311,9 +1525,7 @@
 			"name": "Icium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a ice-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a ice-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/icium-z/sprite.png"
 			}
@@ -2323,9 +1535,7 @@
 			"name": "Draconium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a dragon-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a dragon-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/dragonium-z/sprite.png"
 			}
@@ -2335,9 +1545,7 @@
 			"name": "Darkinium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a dark-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a dark-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/darkinium-z/sprite.png"
 			}
@@ -2347,70 +1555,33 @@
 			"name": "Fairium Z",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows the Pokémon holding this to use a fairy-type Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows the Pokémon holding this to use a fairy-type Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/fairium-z/sprite.png"
 			}
-		},
-		{
-			"id": "mental-herb",
-			"name": "Mental Herb",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/mental-herb/sprite.png"
-			},
-			"_ingameEffect": "Held in battle\n:   When the holder is attracted, it consumes this item to cure the attraction."
 		},
 		{
 			"id": "mirror-herb",
 			"name": "Mirror Herb",
 			"type": "held item",
 			"cost": 4200,
-			"description": [
-				"While in combat, as a reaction to seeing another Pokémon raise any of its ability scores, attack roll modifier, AC, or saving throw modifier, the Pokémon holding this herb may consume it to copy the effect on itself. The raised attributes reset at the end of or upon being switched out of combat.",
-				"During a long rest, two Pokémon may share and consume a Mirror Herb. If the first Pokémon knows a move that the second Pokémon can learn as an Egg Move, then the second Pokémon may replace one of its moves with the Egg Move, even if they do not share an Egg Group or are the same gender."
-			],
+			"description": "While in combat, as a reaction to seeing another Pokémon raise any of its ability scores, attack roll modifier, AC, or saving throw modifier, the Pokémon holding this herb may consume it to copy the effect on itself. The raised attributes reset at the end of or upon being switched out of combat.\n\nDuring a long rest, two Pokémon may share and consume a Mirror Herb. If the first Pokémon knows a move that the second Pokémon can learn as an Egg Move, then the second Pokémon may replace one of its moves with the Egg Move, even if they do not share an Egg Group or are the same gender.",
 			"media": {
 				"sprite": "/assets/items/mirror-herb/sprite.png"
 			}
-		},
-		{
-			"id": "power-herb",
-			"name": "Power Herb",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/power-herb/sprite.png"
-			},
-			"_ingameEffect": "Held: Whenever the holder uses a move that requires a turn to charge first (Bounce, Dig, Dive, Fly, Razor Wind, Skull Bash, Sky Attack, or Solarbeam), this item is consumed and the charge is skipped.  Skull Bash still provides a Defense boost."
-		},
-		{
-			"id": "white-herb",
-			"name": "White Herb",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/white-herb/sprite.png"
-			},
-			"_ingameEffect": "Held in battle\n:   At the end of each turn, if any of the holder's stats have a negative stat modifier, the holder consumes this item to remove the modifiers from those stats."
 		},
 		{
 			"id": "choice-band",
 			"name": "Choice Band",
 			"type": "held item",
 			"cost": 4000,
-			"beta": true,
-			"description": [
-				"Doubles the holder's MOVE modifier for damage rolls. When the holder uses a move, then until the end of its next turn, it may not activate any move different from the one it just used."
-			],
+			"description": "Doubles the holder's MOVE modifier for damage rolls. When the holder uses a move, then until the end of its next turn, it may not activate any move different from the one it just used.",
 			"media": {
 				"sprite": "/assets/items/choice-band/sprite.png"
+			},
+			"updated": {
+				"tag": "New",
+				"details": "This item was recently updated."
 			}
 		},
 		{
@@ -2418,12 +1589,13 @@
 			"name": "Choice Scarf",
 			"type": "held item",
 			"cost": 4000,
-			"beta": true,
-			"description": [
-				"After executing a move, until the end of its next turn, the holder gains 10ft of speed, and attacks of opportunity against it have disadvantage. Until the end of its next turn, it may not activate any move different from the one it just used."
-			],
+			"description": "After executing a move, until the end of its next turn, the holder gains 10ft of speed, and attacks of opportunity against it have disadvantage. Until the end of its next turn, it may not activate any move different from the one it just used.",
 			"media": {
 				"sprite": "/assets/items/choice-scarf/sprite.png"
+			},
+			"updated": {
+				"tag": "New",
+				"details": "This item was recently updated."
 			}
 		},
 		{
@@ -2431,12 +1603,13 @@
 			"name": "Choice Specs",
 			"type": "held item",
 			"cost": 4000,
-			"beta": true,
-			"description": [
-				"Doubles the holder's Move Power modifier for attack rolls and Save DCs. When the holder uses a move, then until the end of its next turn, it may not activate any move different from the one it just used."
-			],
+			"description": "Doubles the holder's Move Power modifier for attack rolls and Save DCs. When the holder uses a move, then until the end of its next turn, it may not activate any move different from the one it just used.",
 			"media": {
 				"sprite": "/assets/items/choice-specs/sprite.png"
+			},
+			"updated": {
+				"tag": "New",
+				"details": "This item was recently updated."
 			}
 		},
 		{
@@ -2444,9 +1617,7 @@
 			"name": "Black Belt",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to fighting-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to fighting-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/black-belt/sprite.png"
 			}
@@ -2456,9 +1627,7 @@
 			"name": "Black Glasses",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to dark-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to dark-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/black-glasses/sprite.png"
 			}
@@ -2468,9 +1637,7 @@
 			"name": "Charcoal",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to fire-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to fire-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/charcoal/sprite.png"
 			}
@@ -2480,9 +1647,7 @@
 			"name": "Dragon Fang",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to dragon-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to dragon-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/dragon-fang/sprite.png"
 			}
@@ -2492,9 +1657,7 @@
 			"name": "Fairy Feather",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to fairy-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to fairy-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/fairy-feather/sprite.png"
 			}
@@ -2504,9 +1667,7 @@
 			"name": "Hard Stone",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to rock-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to rock-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/hard-stone/sprite.png"
 			}
@@ -2516,9 +1677,7 @@
 			"name": "Magnet",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to electric-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to electric-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/magnet/sprite.png"
 			}
@@ -2528,9 +1687,7 @@
 			"name": "Metal Coat",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"The holder adds its proficiency bonus to steel-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to steel-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/metal-coat/sprite.png"
 			}
@@ -2540,9 +1697,7 @@
 			"name": "Miracle Seed",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to grass-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to grass-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/miracle-seed/sprite.png"
 			}
@@ -2552,9 +1707,7 @@
 			"name": "Mystic Water",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to water-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to water-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/mystic-water/sprite.png"
 			}
@@ -2564,9 +1717,7 @@
 			"name": "Never-Melt Ice",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to ice-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to ice-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/never-melt-ice/sprite.png"
 			}
@@ -2576,9 +1727,7 @@
 			"name": "Poison Barb",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to poison-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to poison-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/poison-barb/sprite.png"
 			}
@@ -2588,9 +1737,7 @@
 			"name": "Sharp Beak",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to flying-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to flying-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/sharp-beak/sprite.png"
 			}
@@ -2600,9 +1747,7 @@
 			"name": "Silk Scarf",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to normal-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to normal-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/silk-scarf/sprite.png"
 			}
@@ -2612,9 +1757,7 @@
 			"name": "Silver Powder",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to bug-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to bug-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/silver-powder/sprite.png"
 			}
@@ -2624,9 +1767,7 @@
 			"name": "Soft Sand",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to ground-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to ground-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/soft-sand/sprite.png"
 			}
@@ -2636,9 +1777,7 @@
 			"name": "Spell Tag",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to ghost-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to ghost-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/spell-tag/sprite.png"
 			}
@@ -2648,132 +1787,27 @@
 			"name": "Twisted Spoon",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"The holder adds its proficiency bonus to psychic-type damage it deals (once per move)."
-			],
+			"description": "The holder adds its proficiency bonus to psychic-type damage it deals (once per move).",
 			"media": {
 				"sprite": "/assets/items/twisted-spoon/sprite.png"
 			}
-		},
-		{
-			"id": "full-incense",
-			"name": "Full Incense",
-			"type": "held item",
-			"cost": 5000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/full-incense/sprite.png"
-			},
-			"_ingameEffect": "Held: The holder will go last within its move's priority bracket, regardless of Speed.  If multiple Pokémon within the same priority bracket are subject to this effect, the slower Pokémon will go first.  The holder will move after Pokémon with Stall.  If the holder has Stall, Stall is ignored.  This item ignores Trick Room."
-		},
-		{
-			"id": "lax-incense",
-			"name": "Lax Incense",
-			"type": "held item",
-			"cost": 5000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/lax-incense/sprite.png"
-			},
-			"_ingameEffect": "Held: Increases the holder's Evasion by 5%."
-		},
-		{
-			"id": "odd-incense",
-			"name": "Odd Incense",
-			"type": "held item",
-			"cost": 2000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/odd-incense/sprite.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Psychic moves by 20%."
-		},
-		{
-			"id": "rock-incense",
-			"name": "Rock Incense",
-			"type": "held item",
-			"cost": 2000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/rock-incense/sprite.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Rock moves by 20%."
-		},
-		{
-			"id": "rose-incense",
-			"name": "Rose Incense",
-			"type": "held item",
-			"cost": 2000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/rose-incense/sprite.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Grass moves by 20%."
-		},
-		{
-			"id": "sea-incense",
-			"name": "Sea Incense",
-			"type": "held item",
-			"cost": 2000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/sea-incense/sprite.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Water moves by 20%."
-		},
-		{
-			"id": "wave-incense",
-			"name": "Wave Incense",
-			"type": "held item",
-			"cost": 2000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/wave-incense/sprite.png"
-			},
-			"_ingameEffect": "Held: Increases the power of the holder's Water moves by 20%."
-		},
-		{
-			"id": "adrenaline-orb",
-			"name": "Adrenaline Orb",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/adrenaline-orb/sprite.png"
-			},
-			"_ingameEffect": "Makes wild Pokémon more likely to summon allies.  Held: increases the holder's Speed by one stage when affected by Intimidate."
 		},
 		{
 			"id": "flame-orb",
 			"name": "Flame Orb",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"At the end of the holder's turn, the holder becomes burned."
-			],
+			"description": "At the end of the holder's turn, the holder becomes burned.",
 			"media": {
 				"sprite": "/assets/items/flame-orb/sprite.png"
 			}
-		},
-		{
-			"id": "iron-ball",
-			"name": "Iron Ball",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/iron-ball/sprite.png"
-			},
-			"_ingameEffect": "Held: Decreases the holder's Speed by 50%.  If the holder is Flying or has Levitate, it takes regular damage from Ground attacks and is suspectible to Spikes and Toxic Spikes."
 		},
 		{
 			"id": "life-orb",
 			"name": "Life Orb",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"The holder adds its proficiency bonus to damage it deals, but takes the same amount of typeless-damage each time."
-			],
+			"description": "The holder adds its proficiency bonus to damage it deals, but takes the same amount of typeless-damage each time.",
 			"media": {
 				"sprite": "/assets/items/life-orb/sprite.png"
 			}
@@ -2783,9 +1817,7 @@
 			"name": "Toxic Orb",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"At the end of the holder's turn, the holder becomes badly poisoned."
-			],
+			"description": "At the end of the holder's turn, the holder becomes badly poisoned.",
 			"media": {
 				"sprite": "/assets/items/toxic-orb/sprite.png"
 			}
@@ -2795,9 +1827,7 @@
 			"name": "Damp Rock",
 			"type": "held item",
 			"cost": 2500,
-			"description": [
-				"The holder increases the duration of their Rain effects by 3 rounds."
-			],
+			"description": "The holder increases the duration of their Rain effects by 3 rounds.",
 			"media": {
 				"sprite": "/assets/items/damp-rock/sprite.png"
 			}
@@ -2807,9 +1837,7 @@
 			"name": "Heat Rock",
 			"type": "held item",
 			"cost": 2500,
-			"description": [
-				"The holder increases the duration of their Harsh Sunlight effects by 3 rounds."
-			],
+			"description": "The holder increases the duration of their Harsh Sunlight effects by 3 rounds.",
 			"media": {
 				"sprite": "/assets/items/heat-rock/sprite.png"
 			}
@@ -2819,9 +1847,7 @@
 			"name": "Icy Rock",
 			"type": "held item",
 			"cost": 2500,
-			"description": [
-				"The holder increases the duration of their Hail and Snow effects by 3 rounds."
-			],
+			"description": "The holder increases the duration of their Hail and Snow effects by 3 rounds.",
 			"media": {
 				"sprite": "/assets/items/icy-rock/sprite.png"
 			}
@@ -2831,76 +1857,17 @@
 			"name": "Smooth Rock",
 			"type": "held item",
 			"cost": 2500,
-			"description": [
-				"The holder increases the duration of their Sandstorm effects by 3 rounds."
-			],
+			"description": "The holder increases the duration of their Sandstorm effects by 3 rounds.",
 			"media": {
 				"sprite": "/assets/items/smooth-rock/sprite.png"
 			}
-		},
-		{
-			"id": "terrain-extender",
-			"name": "Terrain Extender",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/terrain-extender/sprite.png"
-			},
-			"_ingameEffect": "Held: When the holder changes the Terrain (whether by move or ability), it will last  8 turns instead of 5."
-		},
-		{
-			"id": "electric-seed",
-			"name": "Electric Seed",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/electric-seed/sprite.png"
-			},
-			"_ingameEffect": "Held: If the holder enters battle during Electric Terrain, or if Electric Terrain is activated while the holder is in battle, this item is consumed and the holder's Defense raises by one stage."
-		},
-		{
-			"id": "grassy-seed",
-			"name": "Grassy Seed",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/grassy-seed/sprite.png"
-			},
-			"_ingameEffect": "Held: If the holder enters battle during Grassy Terrain, or if Grassy Terrain is activated while the holder is in battle, this item is consumed and the holder's Defense raises by one stage."
-		},
-		{
-			"id": "misty-seed",
-			"name": "Misty Seed",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/misty-seed/sprite.png"
-			},
-			"_ingameEffect": "Held: If the holder enters battle during Misty Terrain, or if Misty Terrain is activated while the holder is in battle, this item is consumed and the holder's Special Defense raises by one stage."
-		},
-		{
-			"id": "psychic-seed",
-			"name": "Psychic Seed",
-			"type": "held item",
-			"cost": 4000,
-			"description": null,
-			"media": {
-				"sprite": "/assets/items/psychic-seed/sprite.png"
-			},
-			"_ingameEffect": "Held: If the holder enters battle during Psychic Terrain, or if Psychic Terrain is activated while the holder is in battle, this item is consumed and the holder's Special Defense raises by one stage."
 		},
 		{
 			"id": "draco-plate",
 			"name": "Draco Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Dragon."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Dragon.",
 			"media": {
 				"sprite": "/assets/items/draco-plate/sprite.png"
 			}
@@ -2910,9 +1877,7 @@
 			"name": "Dread Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Dark."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Dark.",
 			"media": {
 				"sprite": "/assets/items/dread-plate/sprite.png"
 			}
@@ -2922,9 +1887,7 @@
 			"name": "Earth Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Ground."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Ground.",
 			"media": {
 				"sprite": "/assets/items/earth-plate/sprite.png"
 			}
@@ -2934,9 +1897,7 @@
 			"name": "Fist Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Fighting."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Fighting.",
 			"media": {
 				"sprite": "/assets/items/Fist-plate/sprite.png"
 			}
@@ -2946,9 +1907,7 @@
 			"name": "Flame Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Fire."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Fire.",
 			"media": {
 				"sprite": "/assets/items/flame-plate/sprite.png"
 			}
@@ -2958,9 +1917,7 @@
 			"name": "Icicle Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Ice."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Ice.",
 			"media": {
 				"sprite": "/assets/items/icicle-plate/sprite.png"
 			}
@@ -2970,9 +1927,7 @@
 			"name": "Insect Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Bug."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Bug.",
 			"media": {
 				"sprite": "/assets/items/insect-plate/sprite.png"
 			}
@@ -2982,9 +1937,7 @@
 			"name": "Iron Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Steel."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Steel.",
 			"media": {
 				"sprite": "/assets/items/iron-plate/sprite.png"
 			}
@@ -2994,9 +1947,7 @@
 			"name": "Meadow Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Grass."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Grass.",
 			"media": {
 				"sprite": "/assets/items/meadow-plate/sprite.png"
 			}
@@ -3006,9 +1957,7 @@
 			"name": "Mind Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Psychic."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Psychic.",
 			"media": {
 				"sprite": "/assets/items/mind-plate/sprite.png"
 			}
@@ -3018,9 +1967,7 @@
 			"name": "Pixie Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Fairy."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Fairy.",
 			"media": {
 				"sprite": "/assets/items/pixie-plate/sprite.png"
 			}
@@ -3030,9 +1977,7 @@
 			"name": "Sky Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Flying."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Flying.",
 			"media": {
 				"sprite": "/assets/items/sky-plate/sprite.png"
 			}
@@ -3042,9 +1987,7 @@
 			"name": "Splash Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Water."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Water.",
 			"media": {
 				"sprite": "/assets/items/splash-plate/sprite.png"
 			}
@@ -3054,9 +1997,7 @@
 			"name": "Spooky Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Ghost."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Ghost.",
 			"media": {
 				"sprite": "/assets/items/spooky-plate/sprite.png"
 			}
@@ -3066,9 +2007,7 @@
 			"name": "Stone Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Rock."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Rock.",
 			"media": {
 				"sprite": "/assets/items/stone-plate/sprite.png"
 			}
@@ -3078,9 +2017,7 @@
 			"name": "Toxic Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Poison."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Poison.",
 			"media": {
 				"sprite": "/assets/items/toxic-plate/sprite.png"
 			}
@@ -3090,9 +2027,7 @@
 			"name": "Zap Plate",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"Allows Arceus to, at will, change its typing and the typing of the move Judgment to Electric."
-			],
+			"description": "Allows Arceus to, at will, change its typing and the typing of the move Judgment to Electric.",
 			"media": {
 				"sprite": "/assets/items/zap-plate/sprite.png"
 			}
@@ -3102,9 +2037,7 @@
 			"name": "DNA Splicer",
 			"type": "trainer gear",
 			"cost": null,
-			"description": [
-				"While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom)."
-			],
+			"description": "While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom).",
 			"media": {
 				"sprite": "/assets/items/dna-splicer/sprite.png"
 			}
@@ -3114,9 +2047,7 @@
 			"name": "Deep Sea Scale",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"When held by a Clamperl, its AC is increased by 1."
-			],
+			"description": "When held by a Clamperl, its AC is increased by 1.",
 			"media": {
 				"sprite": "/assets/items/deep-sea-scale/sprite.png"
 			}
@@ -3126,9 +2057,7 @@
 			"name": "Deep Sea Tooth",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"When held by a Clamperl, its STAB is increased by 1."
-			],
+			"description": "When held by a Clamperl, its STAB is increased by 1.",
 			"media": {
 				"sprite": "/assets/items/deep-sea-tooth/sprite.png"
 			}
@@ -3138,9 +2067,7 @@
 			"name": "Gracidea Flower",
 			"type": "held item",
 			"cost": 1400,
-			"description": [
-				"When held by a Shaymin, the Shaymin may use its action to change between its Land and Sky forms."
-			],
+			"description": "When held by a Shaymin, the Shaymin may use its action to change between its Land and Sky forms.",
 			"media": {
 				"sprite": "/assets/items/gracidea-flower/sprite.png"
 			}
@@ -3150,9 +2077,7 @@
 			"name": "Griseous Orb",
 			"type": "held item",
 			"cost": 7000,
-			"description": [
-				"When held by a Giratina, the Giratina may use its action to change between its Altered and Origin forms. Its Dragon- and Ghost-type moves have double STAB."
-			],
+			"description": "When held by a Giratina, the Giratina may use its action to change between its Altered and Origin forms. Its Dragon- and Ghost-type moves have double STAB.",
 			"media": {
 				"sprite": "/assets/items/griseous-orb/sprite.png"
 			}
@@ -3162,10 +2087,7 @@
 			"name": "Leek",
 			"type": "held item",
 			"cost": 1200,
-			"description": [
-				"When held by a Farfetch'd or Sirfetch'd, the holder's critical hit range increases by two.",
-				"Most of the time, this means attacks can critical on a natural 18, 19, or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 17, 18, 19, or 20."
-			],
+			"description": "When held by a Farfetch'd or Sirfetch'd, the holder's critical hit range increases by two.\n\nMost of the time, this means attacks can critical on a natural 18, 19, or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 17, 18, 19, or 20.",
 			"media": {
 				"sprite": "/assets/items/leek/sprite.png"
 			}
@@ -3175,9 +2097,7 @@
 			"name": "Light Ball",
 			"type": "held item",
 			"cost": 1400,
-			"description": [
-				"When held by a Pikachu, raises its MOVE power modifier by +1."
-			],
+			"description": "When held by a Pikachu, raises its MOVE power modifier by +1.",
 			"media": {
 				"sprite": "/assets/items/light-ball/sprite.png"
 			}
@@ -3187,10 +2107,7 @@
 			"name": "Lucky Punch",
 			"type": "held item",
 			"cost": 1200,
-			"description": [
-				"When held by a Chansey, its critical hit range increases by one.",
-				"Most of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20."
-			],
+			"description": "When held by a Chansey, its critical hit range increases by one.\n\nMost of the time, this means attacks can critical on a natural 19 or 20. For a move like Slash which already expands critical hit range, criticals can happen on natural 18, 19, or 20.",
 			"media": {
 				"sprite": "/assets/items/lucky-punch/sprite.png"
 			}
@@ -3200,9 +2117,7 @@
 			"name": "Metal Powder",
 			"type": "held item",
 			"cost": 1200,
-			"description": [
-				"When held by a Ditto, its CON score increases by +3."
-			],
+			"description": "When held by a Ditto, its CON score increases by +3.",
 			"media": {
 				"sprite": "/assets/items/metal-powder/sprite.png"
 			}
@@ -3212,9 +2127,7 @@
 			"name": "N-Solarizer",
 			"type": "trainer gear",
 			"cost": null,
-			"description": [
-				"A trainer with both a Solgaleo and Necrozma may use an action to fuse them into a Dusk Mane Necrozma. The trainer may also use an action to separate a Dusk Mane Necrozma into a Solgaleo and Necrozma."
-			],
+			"description": "A trainer with both a Solgaleo and Necrozma may use an action to fuse them into a Dusk Mane Necrozma. The trainer may also use an action to separate a Dusk Mane Necrozma into a Solgaleo and Necrozma.",
 			"media": {
 				"sprite": null
 			}
@@ -3224,9 +2137,7 @@
 			"name": "N-Lunarizer",
 			"type": "trainer gear",
 			"cost": null,
-			"description": [
-				"A trainer with both a Lunala and Necrozma may use an action to fuse them into a Dawn Wings Necrozma. The trainer may also use an action to separate a Dawn Wings Necrozma into a Lunala and Necrozma."
-			],
+			"description": "A trainer with both a Lunala and Necrozma may use an action to fuse them into a Dawn Wings Necrozma. The trainer may also use an action to separate a Dawn Wings Necrozma into a Lunala and Necrozma.",
 			"media": {
 				"sprite": null
 			}
@@ -3236,9 +2147,7 @@
 			"name": "Prison Bottle",
 			"type": "trainer gear",
 			"cost": null,
-			"description": [
-				"A trainer may use their action to unconfine a nearby Hoopa, changing it from its Confined form to Unconfimed form for three days."
-			],
+			"description": "A trainer may use their action to unconfine a nearby Hoopa, changing it from its Confined form to Unconfimed form for three days.",
 			"media": {
 				"sprite": "/assets/items/prison-bottle/sprite.png"
 			}
@@ -3248,9 +2157,7 @@
 			"name": "Reveal Glass",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"When held by a Thundurus, Landorus, Tornadus, or Enamorus, the holder may use its action to change between its Incarnate and Therian forms."
-			],
+			"description": "When held by a Thundurus, Landorus, Tornadus, or Enamorus, the holder may use its action to change between its Incarnate and Therian forms.",
 			"media": {
 				"sprite": "/assets/items/reveal-glass/sprite.png"
 			}
@@ -3260,9 +2167,7 @@
 			"name": "Thick Club",
 			"type": "held item",
 			"cost": 4400,
-			"description": [
-				"When held by a Cubone, Marowak, or Alolan Marowak, the holder's STAB is doubled."
-			],
+			"description": "When held by a Cubone, Marowak, or Alolan Marowak, the holder's STAB is doubled.",
 			"media": {
 				"sprite": "/assets/items/thick-club/sprite.png"
 			}
@@ -3272,9 +2177,7 @@
 			"name": "Burn Drive",
 			"type": "held item",
 			"cost": 4000,
-			"description": [
-				"When held by a Genesect, changes the type of its move Techno Blast to Fire."
-			],
+			"description": "When held by a Genesect, changes the type of its move Techno Blast to Fire.",
 			"media": {
 				"sprite": "/assets/items/burn-drive/sprite.png"
 			}
@@ -3284,9 +2187,7 @@
 			"name": "Chill Drive",
 			"type": "held item",
 			"cost": 4000,
-			"description": [
-				"When held by a Genesect, changes the type of its move Techno Blast to Ice."
-			],
+			"description": "When held by a Genesect, changes the type of its move Techno Blast to Ice.",
 			"media": {
 				"sprite": "/assets/items/chill-drive/sprite.png"
 			}
@@ -3296,9 +2197,7 @@
 			"name": "Douse Drive",
 			"type": "held item",
 			"cost": 4000,
-			"description": [
-				"When held by a Genesect, changes the type of its move Techno Blast to Water."
-			],
+			"description": "When held by a Genesect, changes the type of its move Techno Blast to Water.",
 			"media": {
 				"sprite": "/assets/items/douse-drive/sprite.png"
 			}
@@ -3308,9 +2207,7 @@
 			"name": "Shock Drive",
 			"type": "held item",
 			"cost": 4000,
-			"description": [
-				"When held by a Genesect, changes the type of its move Techno Blast to Electric."
-			],
+			"description": "When held by a Genesect, changes the type of its move Techno Blast to Electric.",
 			"media": {
 				"sprite": "/assets/items/shock-drive/sprite.png"
 			}
@@ -3320,9 +2217,7 @@
 			"name": "Bug Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Bug."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Bug.",
 			"media": {
 				"sprite": "/assets/items/bug-memory-disc/sprite.png"
 			}
@@ -3332,9 +2227,7 @@
 			"name": "Dark Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Dark."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Dark.",
 			"media": {
 				"sprite": "/assets/items/dark-memory-disc/sprite.png"
 			}
@@ -3344,9 +2237,7 @@
 			"name": "Dragon Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Dragon."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Dragon.",
 			"media": {
 				"sprite": "/assets/items/dragon-memory-disc/sprite.png"
 			}
@@ -3356,9 +2247,7 @@
 			"name": "Electric Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Electric."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Electric.",
 			"media": {
 				"sprite": "/assets/items/electric-memory-disc/sprite.png"
 			}
@@ -3368,9 +2257,7 @@
 			"name": "Fairy Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Fairy."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Fairy.",
 			"media": {
 				"sprite": "/assets/items/fairy-memory-disc/sprite.png"
 			}
@@ -3380,9 +2267,7 @@
 			"name": "Fighting Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Fighting."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Fighting.",
 			"media": {
 				"sprite": "/assets/items/fighting-memory-disc/sprite.png"
 			}
@@ -3392,9 +2277,7 @@
 			"name": "Fire Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Fire."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Fire.",
 			"media": {
 				"sprite": "/assets/items/fire-memory-disc/sprite.png"
 			}
@@ -3404,9 +2287,7 @@
 			"name": "Flying Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Flying."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Flying.",
 			"media": {
 				"sprite": "/assets/items/flying-memory-disc/sprite.png"
 			}
@@ -3416,9 +2297,7 @@
 			"name": "Ghost Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Ghost."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Ghost.",
 			"media": {
 				"sprite": "/assets/items/ghost-memory-disc/sprite.png"
 			}
@@ -3428,9 +2307,7 @@
 			"name": "Grass Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Grass."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Grass.",
 			"media": {
 				"sprite": "/assets/items/grass-memory-disc/sprite.png"
 			}
@@ -3440,9 +2317,7 @@
 			"name": "Ground Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Ground."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Ground.",
 			"media": {
 				"sprite": "/assets/items/ground-memory-disc/sprite.png"
 			}
@@ -3452,9 +2327,7 @@
 			"name": "Ice Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Ice."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Ice.",
 			"media": {
 				"sprite": "/assets/items/ice-memory-disc/sprite.png"
 			}
@@ -3464,9 +2337,7 @@
 			"name": "Poison Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Poison."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Poison.",
 			"media": {
 				"sprite": "/assets/items/poison-memory-disc/sprite.png"
 			}
@@ -3476,9 +2347,7 @@
 			"name": "Psychic Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Psychic."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Psychic.",
 			"media": {
 				"sprite": "/assets/items/psychic-memory-disc/sprite.png"
 			}
@@ -3488,9 +2357,7 @@
 			"name": "Rock Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Rock."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Rock.",
 			"media": {
 				"sprite": "/assets/items/rock-memory-disc/sprite.png"
 			}
@@ -3500,9 +2367,7 @@
 			"name": "Steel Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Steel."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Steel.",
 			"media": {
 				"sprite": "/assets/items/steel-memory-disc/sprite.png"
 			}
@@ -3512,9 +2377,7 @@
 			"name": "Water Memory Disc",
 			"type": "held item",
 			"cost": 2000,
-			"description": [
-				"When held by a Pokémon with the RKS System ability, changes the type of the holder to Water."
-			],
+			"description": "When held by a Pokémon with the RKS System ability, changes the type of the holder to Water.",
 			"media": {
 				"sprite": "/assets/items/water-memory-disc/sprite.png"
 			}
@@ -3524,9 +2387,7 @@
 			"name": "Blue Orb",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"When held by Kyogre, allows it to revert to its Primal form as a free action."
-			],
+			"description": "When held by Kyogre, allows it to revert to its Primal form as a free action.",
 			"media": {
 				"sprite": "/assets/items/blue-orb/sprite.png"
 			}
@@ -3536,9 +2397,7 @@
 			"name": "Red Orb",
 			"type": "held item",
 			"cost": null,
-			"description": [
-				"When held by Groudon, allows it to revert to its Primal form as a free action."
-			],
+			"description": "When held by Groudon, allows it to revert to its Primal form as a free action.",
 			"media": {
 				"sprite": "/assets/items/red-orb/sprite.png"
 			}
@@ -3548,9 +2407,7 @@
 			"name": "Dragon Scale",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": "/assets/items/dragon-scale/sprite.png"
 			}
@@ -3560,9 +2417,7 @@
 			"name": "Upgrade",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": "/assets/items/up-grade/sprite.png"
 			}
@@ -3572,9 +2427,7 @@
 			"name": "Protector",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": "/assets/items/protector/sprite.png"
 			}
@@ -3584,9 +2437,7 @@
 			"name": "Electirizer",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": "/assets/items/electirizer/sprite.png"
 			}
@@ -3596,9 +2447,7 @@
 			"name": "Magmarizer",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": "/assets/items/magmarizer/sprite.png"
 			}
@@ -3608,9 +2457,7 @@
 			"name": "Dubious Disc",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": "/assets/items/dubious-disc/sprite.png"
 			}
@@ -3620,9 +2467,7 @@
 			"name": "Reaper Cloth",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": "/assets/items/reaper-cloth/sprite.png"
 			}
@@ -3632,9 +2477,7 @@
 			"name": "Prism Scale",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": "/assets/items/prism-scale/sprite.png"
 			}
@@ -3644,9 +2487,7 @@
 			"name": "Whipped Dream",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": "/assets/items/whipped-dream/sprite.png"
 			}
@@ -3656,9 +2497,7 @@
 			"name": "Sachet",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": "/assets/items/sachet/sprite.png"
 			}
@@ -3668,10 +2507,7 @@
 			"name": "Sweet",
 			"type": "evolution",
 			"cost": 500,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve.",
-				"Comes in different flavors, such as strawberry, love, berry, clover, flower, star, and ribbon."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.\n\nComes in different flavors, such as strawberry, love, berry, clover, flower, star, and ribbon.",
 			"media": {
 				"sprite": null
 			}
@@ -3681,9 +2517,7 @@
 			"name": "Cracked Pot",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": null
 			}
@@ -3693,9 +2527,7 @@
 			"name": "Chipped Pot",
 			"type": "evolution",
 			"cost": 38000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": null
 			}
@@ -3705,9 +2537,7 @@
 			"name": "Unremarkable Teacup",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": null
 			}
@@ -3717,9 +2547,7 @@
 			"name": "Masterpiece Teacup",
 			"type": "evolution",
 			"cost": 9500,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": null
 			}
@@ -3729,9 +2557,7 @@
 			"name": "Galarica Wreath",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": null
 			}
@@ -3741,9 +2567,7 @@
 			"name": "Black Augurite",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": null
 			}
@@ -3753,9 +2577,7 @@
 			"name": "Peat Block",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": null
 			}
@@ -3765,9 +2587,7 @@
 			"name": "Auspicious Armor",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": null
 			}
@@ -3777,9 +2597,7 @@
 			"name": "Malicious Armor",
 			"type": "evolution",
 			"cost": 4000,
-			"description": [
-				"Some Pokémon may consume the power of this item to evolve."
-			],
+			"description": "Some Pokémon may consume the power of this item to evolve.",
 			"media": {
 				"sprite": null
 			}
@@ -3789,9 +2607,7 @@
 			"name": "Gimmighoul Coin",
 			"type": "evolution",
 			"cost": 100,
-			"description": [
-				"Wild Gimmighoul (Roaming) Pokémon carry 1d4 Gimmighoul Coins. Wild Gimmighoul (Chest) Pokèmon carry 1d20 + 10 Gimmighoul Coins."
-			],
+			"description": "Wild Gimmighoul (Roaming) Pokémon carry 1d4 Gimmighoul Coins. Wild Gimmighoul (Chest) Pokèmon carry 1d20 + 10 Gimmighoul Coins.",
 			"media": {
 				"sprite": "/assets/items/gimmighoul-coin.png"
 			}
@@ -3801,10 +2617,7 @@
 			"name": "Trainer's License",
 			"type": "trainer gear",
 			"cost": null,
-			"description": [
-				"Only licensed trainers are permitted to capture Pokémon, and this license identifies you as having such authorization. It also allows trainers to gain access to special services at Pokémon centers and to purchase goods at the Poké Mart.",
-				"Trainers can lose their license for attacking other trainers or their Pokémon, or failing to take care of their own Pokémon."
-			],
+			"description": "Only licensed trainers are permitted to capture Pokémon, and this license identifies you as having such authorization. It also allows trainers to gain access to special services at Pokémon centers and to purchase goods at the Poké Mart.\n\nTrainers can lose their license for attacking other trainers or their Pokémon, or failing to take care of their own Pokémon.",
 			"media": {
 				"sprite": "/assets/items/trainers-license/sprite.png"
 			}
@@ -3814,9 +2627,7 @@
 			"name": "Pokédex",
 			"type": "trainer gear",
 			"cost": 10000,
-			"description": [
-				"A hand-held computer with an advanced camera and image recognition software. A trainer can use a bonus action to identify a Pokémon within 60 feet using the Pokédex's scanner. Doing so registers the Pokémon on the Pokedex, and reveals the base SR and some brief facts about the species."
-			],
+			"description": "A hand-held computer with an advanced camera and image recognition software. A trainer can use a bonus action to identify a Pokémon within 60 feet using the Pokédex's scanner. Doing so registers the Pokémon on the Pokedex, and reveals the base SR and some brief facts about the species.",
 			"media": {
 				"sprite": null
 			}
@@ -3826,10 +2637,7 @@
 			"name": "Old Rod",
 			"type": "trainer gear",
 			"cost": 1000,
-			"description": [
-				"Allows you to fish for Pokémon. Fishing for Pokémon takes one hour, and the Pokémon you catch is random.",
-				"The Old Rod allows you to catch only Magikarp."
-			],
+			"description": "Allows you to fish for Pokémon. Fishing for Pokémon takes one hour, and the Pokémon you catch is random.\n\nThe Old Rod allows you to catch only Magikarp.",
 			"media": {
 				"sprite": "/assets/items/old-rod/sprite.png"
 			}
@@ -3839,10 +2647,7 @@
 			"name": "Good Rod",
 			"type": "trainer gear",
 			"cost": 5000,
-			"description": [
-				"Allows you to fish for Pokémon. Fishing for Pokémon takes one hour, and the Pokémon you catch is random.",
-				"The Good Rod allows you to catch Alomomola, Azumarill, Barboach, Basculin, Bibarel, Briionne, Bruxish, Buizel, Carvanha, Chinchou, Clamperl, Clauncher, Corphish, Corsola, Crawdaunt, Croconaw, Dewpider, Dewott, Ducklett, Feebas, Finneon, Frillish, Froakie, Frogadier, Goldeen, Horsea, Inkay, Kabuto, Krabby, Lanturn, Lombre, Lotad, Luvdisc, Magikarp, Mantyke, Mareanie, Marill, Marshtomp, Mudkip, Octillery, Omanyte, Oshawott, Palpitoad, Piplup, Poliwag, Poliwhirl, Popplio, Prinplup, Psyduck, Pyukumuku, Quagsire, Qwilfish, Remoraid, Seel, Shellder, Shellos, Skrelp, Slowpoke, Spheal, Squirtle, Staryu, Stunfisk, Surskit, Tentacool, Tirtouga, Totodile, Tympole, Tynamo, Wailmer, Wartortle, Whiscash, Wimpod, Wingull, Wishiwashi, or Wooper."
-			],
+			"description": "Allows you to fish for Pokémon. Fishing for Pokémon takes one hour, and the Pokémon you catch is random.\n\nThe Good Rod allows you to catch Alomomola, Azumarill, Barboach, Basculin, Bibarel, Briionne, Bruxish, Buizel, Carvanha, Chinchou, Clamperl, Clauncher, Corphish, Corsola, Crawdaunt, Croconaw, Dewpider, Dewott, Ducklett, Feebas, Finneon, Frillish, Froakie, Frogadier, Goldeen, Horsea, Inkay, Kabuto, Krabby, Lanturn, Lombre, Lotad, Luvdisc, Magikarp, Mantyke, Mareanie, Marill, Marshtomp, Mudkip, Octillery, Omanyte, Oshawott, Palpitoad, Piplup, Poliwag, Poliwhirl, Popplio, Prinplup, Psyduck, Pyukumuku, Quagsire, Qwilfish, Remoraid, Seel, Shellder, Shellos, Skrelp, Slowpoke, Spheal, Squirtle, Staryu, Stunfisk, Surskit, Tentacool, Tirtouga, Totodile, Tympole, Tynamo, Wailmer, Wartortle, Whiscash, Wimpod, Wingull, Wishiwashi, or Wooper.",
 			"media": {
 				"sprite": "/assets/items/good-rod/sprite.png"
 			}
@@ -3852,10 +2657,7 @@
 			"name": "Super Rod",
 			"type": "trainer gear",
 			"cost": 15000,
-			"description": [
-				"Allows you to fish for Pokémon. Fishing for Pokémon takes one hour, and the Pokémon you catch is random.",
-				"The Super Rod allows you to catch Araquanid, Blastoise, Carracosta, Clawitzer, Cloyster, Dewgong, Dragalge, Empoleon, Feraligatr, Floatzel, Gastrodon, Golduck, Golisopod, Gorebyss, Greninja, Gyarados, Huntail, Jellicent, Kabutops, Kingdra, Kingler, Lapras, Ludicolo, Lumineon, Malamar, Mantine, Milotic, Omastar, Politoed, Poliwrath, Primarina, Relicanth, Samurott, Seadra, Seaking, Sealeo, Seismitoad, Sharpedo, Slowbro, Slowking, Starmie, Swampert, Tentacruel, Toxapex, Wailord, Walrein."
-			],
+			"description": "Allows you to fish for Pokémon. Fishing for Pokémon takes one hour, and the Pokémon you catch is random.\n\nThe Super Rod allows you to catch Araquanid, Blastoise, Carracosta, Clawitzer, Cloyster, Dewgong, Dragalge, Empoleon, Feraligatr, Floatzel, Gastrodon, Golduck, Golisopod, Gorebyss, Greninja, Gyarados, Huntail, Jellicent, Kabutops, Kingdra, Kingler, Lapras, Ludicolo, Lumineon, Malamar, Mantine, Milotic, Omastar, Politoed, Poliwrath, Primarina, Relicanth, Samurott, Seadra, Seaking, Sealeo, Seismitoad, Sharpedo, Slowbro, Slowking, Starmie, Swampert, Tentacruel, Toxapex, Wailord, Walrein.",
 			"media": {
 				"sprite": "/assets/items/super-rod/sprite.png"
 			}
@@ -3865,9 +2667,7 @@
 			"name": "Escape Rope",
 			"type": "trainer gear",
 			"cost": 150,
-			"description": [
-				"Consume in order to automatically succeed in fleeing from a wild Pokémon battle."
-			],
+			"description": "Consume in order to automatically succeed in fleeing from a wild Pokémon battle.",
 			"media": {
 				"sprite": "/assets/items/escape-rope/sprite.png"
 			}
@@ -3877,9 +2677,7 @@
 			"name": "Honey",
 			"type": "trainer gear",
 			"cost": 1000,
-			"description": [
-				"Can be used to automatically attract a single Pokémon that resides in the area. Which Pokémon is up to the DM's discretion."
-			],
+			"description": "Can be used to automatically attract a single Pokémon that resides in the area. Which Pokémon is up to the DM's discretion.",
 			"media": {
 				"sprite": "/assets/items/honey/sprite.png"
 			}
@@ -3889,9 +2687,7 @@
 			"name": "Key Stone",
 			"type": "trainer gear",
 			"cost": null,
-			"description": [
-				"Allows a trainer to Mega Evolve their Pokémon. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows a trainer to Mega Evolve their Pokémon. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/key-stone/sprite.png"
 			}
@@ -3901,9 +2697,7 @@
 			"name": "Z-Ring",
 			"type": "trainer gear",
 			"cost": null,
-			"description": [
-				"Allows a trainer to unleash their Pokémon's Z-Power in the form of a Z-Move. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows a trainer to unleash their Pokémon's Z-Power in the form of a Z-Move. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": "/assets/items/z-ring/sprite.png"
 			}
@@ -3913,9 +2707,7 @@
 			"name": "Dynamax Band",
 			"type": "trainer gear",
 			"cost": null,
-			"description": [
-				"Allows a trainer to Dynamax their Pokémon. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows a trainer to Dynamax their Pokémon. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": null
 			}
@@ -3925,9 +2717,7 @@
 			"name": "Tera Orb",
 			"type": "trainer gear",
 			"cost": null,
-			"description": [
-				"Allows a trainer to Terastallize their Pokémon. Has one charge, and recovers its charge at dawn each day."
-			],
+			"description": "Allows a trainer to Terastallize their Pokémon. Has one charge, and recovers its charge at dawn each day.",
 			"media": {
 				"sprite": null
 			}
@@ -3937,10 +2727,7 @@
 			"name": "Capture Styler",
 			"type": "trainer gear",
 			"cost": null,
-			"description": [
-				"Allows a Pokémon Ranger to add +10 to their capture rolls against Pokémon they have fully encircled using their movement.",
-				"Only useable by trainers who take the Ranger trainer path."
-			],
+			"description": "Allows a Pokémon Ranger to add +10 to their capture rolls against Pokémon they have fully encircled using their movement.\n\nOnly useable by trainers who take the Ranger trainer path.",
 			"media": {
 				"sprite": null
 			}
@@ -3950,9 +2737,7 @@
 			"name": "Backpack",
 			"type": "trainer gear",
 			"cost": 150,
-			"description": [
-				"A backpack that can hold up to 30 pounds."
-			],
+			"description": "A backpack that can hold up to 30 pounds.",
 			"media": {
 				"sprite": null
 			}
@@ -3962,9 +2747,7 @@
 			"name": "Binoculars",
 			"type": "trainer gear",
 			"cost": 250,
-			"description": [
-				"You can see objects up to double their size."
-			],
+			"description": "You can see objects up to double their size.",
 			"media": {
 				"sprite": null
 			}
@@ -3974,9 +2757,7 @@
 			"name": "Camping Kettle",
 			"type": "trainer gear",
 			"cost": 100,
-			"description": [
-				"A kettle that can be placed in or above a campfire for heating up liquids."
-			],
+			"description": "A kettle that can be placed in or above a campfire for heating up liquids.",
 			"media": {
 				"sprite": null
 			}
@@ -3986,9 +2767,7 @@
 			"name": "Camping Stove",
 			"type": "trainer gear",
 			"cost": 250,
-			"description": [
-				"A light, portable stove that is heated by wood chips."
-			],
+			"description": "A light, portable stove that is heated by wood chips.",
 			"media": {
 				"sprite": null
 			}
@@ -3998,9 +2777,7 @@
 			"name": "Canteen",
 			"type": "trainer gear",
 			"cost": 50,
-			"description": [
-				"A metal or plastic canteen to carry water or other liquids."
-			],
+			"description": "A metal or plastic canteen to carry water or other liquids.",
 			"media": {
 				"sprite": null
 			}
@@ -4010,9 +2787,7 @@
 			"name": "Energy Cell",
 			"type": "trainer gear",
 			"cost": 20,
-			"description": [
-				"A small, flat disc, used to provide energy for various powered objects."
-			],
+			"description": "A small, flat disc, used to provide energy for various powered objects.",
 			"media": {
 				"sprite": null
 			}
@@ -4022,9 +2797,7 @@
 			"name": "Flashlight",
 			"type": "trainer gear",
 			"cost": 50,
-			"description": [
-				"Casts bright light in a 15-foot cone and dim light for an additional 30 feet. Requires a new energy cell after 4 hours of use."
-			],
+			"description": "Casts bright light in a 15-foot cone and dim light for an additional 30 feet. Requires a new energy cell after 4 hours of use.",
 			"media": {
 				"sprite": null
 			}
@@ -4034,9 +2807,7 @@
 			"name": "Solar Flashlight",
 			"type": "trainer gear",
 			"cost": 120,
-			"description": [
-				"Casts bright light in a 15-foot cone and dim light for an additional 30 feet. Charges in the sunlight; for each hour doing so, it gains an hour of use, up to 4 hours."
-			],
+			"description": "Casts bright light in a 15-foot cone and dim light for an additional 30 feet. Charges in the sunlight; for each hour doing so, it gains an hour of use, up to 4 hours.",
 			"media": {
 				"sprite": null
 			}
@@ -4046,9 +2817,7 @@
 			"name": "Flint and Steel",
 			"type": "trainer gear",
 			"cost": 100,
-			"description": [
-				"A 'D'-shaped piece of steel and a square of flint to make a spark to start a fire."
-			],
+			"description": "A 'D'-shaped piece of steel and a square of flint to make a spark to start a fire.",
 			"media": {
 				"sprite": null
 			}
@@ -4058,9 +2827,7 @@
 			"name": "Climber's Kit",
 			"type": "trainer gear",
 			"cost": 500,
-			"description": [
-				"Includes special pitons, boot tips, gloves, and a harness. You have advantage on climbing checks and you can't fall more than 25 ft if you fail. Add your proficiency modifier to related checks."
-			],
+			"description": "Includes special pitons, boot tips, gloves, and a harness. You have advantage on climbing checks and you can't fall more than 25 ft if you fail. Add your proficiency modifier to related checks.",
 			"media": {
 				"sprite": null
 			}
@@ -4070,9 +2837,7 @@
 			"name": "Cooking Kit",
 			"type": "trainer gear",
 			"cost": 500,
-			"description": [
-				"Includes pots, pans, utensils, and molds for cooking. Used to make foods while in a kitchen or similar facility. Add your proficiency modifier to related checks."
-			],
+			"description": "Includes pots, pans, utensils, and molds for cooking. Used to make foods while in a kitchen or similar facility. Add your proficiency modifier to related checks.",
 			"media": {
 				"sprite": null
 			}
@@ -4082,9 +2847,7 @@
 			"name": "Diver's Kit",
 			"type": "trainer gear",
 			"cost": 750,
-			"description": [
-				"Includes a wetsuit, diving belt, mask, fins, and air tanks. While worn it reduces your movement speed by 20ft, but gives you a swimming speed of 30ft. In addition, you have 2 hours of air, can dive a depth of 200ft, and aren't affected by the water's temperature."
-			],
+			"description": "Includes a wetsuit, diving belt, mask, fins, and air tanks. While worn it reduces your movement speed by 20ft, but gives you a swimming speed of 30ft. In addition, you have 2 hours of air, can dive a depth of 200ft, and aren't affected by the water's temperature.",
 			"media": {
 				"sprite": null
 			}
@@ -4094,9 +2857,7 @@
 			"name": "Gardener's Kit",
 			"type": "trainer gear",
 			"cost": 350,
-			"description": [
-				"Includes clippers, gloves, a spade, and a watering pale. It's everything needed to gather and care for plants, berries, and apricorn trees. Add your proficiency modifier to related checks."
-			],
+			"description": "Includes clippers, gloves, a spade, and a watering pale. It's everything needed to gather and care for plants, berries, and apricorn trees. Add your proficiency modifier to related checks.",
 			"media": {
 				"sprite": null
 			}
@@ -4106,9 +2867,7 @@
 			"name": "Lantern",
 			"type": "trainer gear",
 			"cost": 100,
-			"description": [
-				"Casts bright light in a 30-foot radius and dim light for an aditional 30 feet. Requires a new energy cell after 4 hours of use."
-			],
+			"description": "Casts bright light in a 30-foot radius and dim light for an aditional 30 feet. Requires a new energy cell after 4 hours of use.",
 			"media": {
 				"sprite": null
 			}
@@ -4118,9 +2877,7 @@
 			"name": "Solar Lantern",
 			"type": "trainer gear",
 			"cost": 150,
-			"description": [
-				"Casts bright light in a 30-foot radius and dim light for an aditional 30 feet. Needs to recharge in the sunlight for a short rest, but otherwise provides 4 hours of light."
-			],
+			"description": "Casts bright light in a 30-foot radius and dim light for an aditional 30 feet. Needs to recharge in the sunlight for a short rest, but otherwise provides 4 hours of light.",
 			"media": {
 				"sprite": null
 			}
@@ -4130,9 +2887,7 @@
 			"name": "Mess Kit",
 			"type": "trainer gear",
 			"cost": 150,
-			"description": [
-				"This stainless steel box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan, and the other as a plate or shallow bowl."
-			],
+			"description": "This stainless steel box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan, and the other as a plate or shallow bowl.",
 			"media": {
 				"sprite": null
 			}
@@ -4142,9 +2897,7 @@
 			"name": "Multi-tool",
 			"type": "trainer gear",
 			"cost": 150,
-			"description": [
-				"A tool with pliers, scissors, knife, and other basic tools. Add your proficiency modifier to related checks."
-			],
+			"description": "A tool with pliers, scissors, knife, and other basic tools. Add your proficiency modifier to related checks.",
 			"media": {
 				"sprite": null
 			}
@@ -4154,9 +2907,7 @@
 			"name": "Pocket Knife",
 			"type": "trainer gear",
 			"cost": 50,
-			"description": [
-				"A small pocket knife with micro tools. Add your proficiency modifier to related checks."
-			],
+			"description": "A small pocket knife with micro tools. Add your proficiency modifier to related checks.",
 			"media": {
 				"sprite": null
 			}
@@ -4166,9 +2917,7 @@
 			"name": "Camping Ration",
 			"type": "trainer gear",
 			"cost": 50,
-			"description": [
-				"An air-tight packet of freeze-dried food. Add hot water to reconstitute. Provides a daily meal for one person."
-			],
+			"description": "An air-tight packet of freeze-dried food. Add hot water to reconstitute. Provides a daily meal for one person.",
 			"media": {
 				"sprite": null
 			}
@@ -4178,9 +2927,7 @@
 			"name": "Rebreather",
 			"type": "trainer gear",
 			"cost": 500,
-			"description": [
-				"A small breathing apparatus that allows breathing underwater. Its filter needs to be replaced after 4 hours of use."
-			],
+			"description": "A small breathing apparatus that allows breathing underwater. Its filter needs to be replaced after 4 hours of use.",
 			"media": {
 				"sprite": null
 			}
@@ -4190,9 +2937,7 @@
 			"name": "Rebreather Filter",
 			"type": "trainer gear",
 			"cost": 50,
-			"description": [
-				"A filter for a rebreather."
-			],
+			"description": "A filter for a rebreather.",
 			"media": {
 				"sprite": null
 			}
@@ -4202,9 +2947,7 @@
 			"name": "Sleeping Bag",
 			"type": "trainer gear",
 			"cost": 250,
-			"description": [
-				"A sleeping bag for one person."
-			],
+			"description": "A sleeping bag for one person.",
 			"media": {
 				"sprite": null
 			}
@@ -4214,9 +2957,7 @@
 			"name": "Solar Charger",
 			"type": "trainer gear",
 			"cost": 250,
-			"description": [
-				"A solar charger stores sunlight during a short rest during the day, and can be used to charge two energy cells during a long rest."
-			],
+			"description": "A solar charger stores sunlight during a short rest during the day, and can be used to charge two energy cells during a long rest.",
 			"media": {
 				"sprite": null
 			}
@@ -4226,9 +2967,7 @@
 			"name": "Small Tent",
 			"type": "trainer gear",
 			"cost": 250,
-			"description": [
-				"A tent for two people."
-			],
+			"description": "A tent for two people.",
 			"media": {
 				"sprite": null
 			}
@@ -4238,9 +2977,7 @@
 			"name": "Large Tent",
 			"type": "trainer gear",
 			"cost": 500,
-			"description": [
-				"A tent for four people."
-			],
+			"description": "A tent for four people.",
 			"media": {
 				"sprite": null
 			}
@@ -4250,9 +2987,7 @@
 			"name": "Artisan Tools",
 			"type": "trainer gear",
 			"cost": 350,
-			"description": [
-				"Tools used by tradesmen, such as calligraphers, artists, or smiths. Choose one type of artisan tool upon purchase. Add your proficiency modifier to related checks."
-			],
+			"description": "Tools used by tradesmen, such as calligraphers, artists, or smiths. Choose one type of artisan tool upon purchase. Add your proficiency modifier to related checks.",
 			"media": {
 				"sprite": null
 			}
@@ -4262,9 +2997,7 @@
 			"name": "Thieves' Tools",
 			"type": "trainer gear",
 			"cost": 500,
-			"description": [
-				"You can add your proficiency modifier to checks when disarming traps or opening locks."
-			],
+			"description": "You can add your proficiency modifier to checks when disarming traps or opening locks.",
 			"media": {
 				"sprite": null
 			}
@@ -4274,9 +3007,7 @@
 			"name": "Dungeoneer's Pack",
 			"type": "trainer gear",
 			"cost": 1200,
-			"description": [
-				"Contains a backpack, climber's kit, flashlight, 5 energy cells, flint and steel, 10 camping rations, a canteen, and 30 feet of rope."
-			],
+			"description": "Contains a backpack, climber's kit, flashlight, 5 energy cells, flint and steel, 10 camping rations, a canteen, and 30 feet of rope.",
 			"media": {
 				"sprite": null
 			}
@@ -4286,9 +3017,7 @@
 			"name": "Explorer's Pack",
 			"type": "trainer gear",
 			"cost": 1200,
-			"description": [
-				"Contains a backpack, sleeping bag, mess kit, flint and steel, flashlight, 5 energy cells, 10 camping rations, a canteen, and 30 feet of rope."
-			],
+			"description": "Contains a backpack, sleeping bag, mess kit, flint and steel, flashlight, 5 energy cells, 10 camping rations, a canteen, and 30 feet of rope.",
 			"media": {
 				"sprite": null
 			}
@@ -4298,9 +3027,7 @@
 			"name": "Filcher's Pack",
 			"type": "trainer gear",
 			"cost": 1200,
-			"description": [
-				"Contains a bacpack, thieves' tools, 20 feet of wire,a bell, a lantern, 3 energy cells, 5 camping rations, flint and steel, and a canteen."
-			],
+			"description": "Contains a bacpack, thieves' tools, 20 feet of wire,a bell, a lantern, 3 energy cells, 5 camping rations, flint and steel, and a canteen.",
 			"media": {
 				"sprite": null
 			}
@@ -4310,9 +3037,7 @@
 			"name": "Egg Incubator",
 			"type": "trainer gear",
 			"cost": 1000,
-			"description": [
-				"When an Egg is placed inside, it reduces the Hatch Time by 1d20 each day. Once the egg hatches, the incubator loses its effectiveness."
-			],
+			"description": "When an Egg is placed inside, it reduces the Hatch Time by 1d20 each day. Once the egg hatches, the incubator loses its effectiveness.",
 			"media": {
 				"sprite": "/assets/items/egg-incubator/sprite.png"
 			}
@@ -4322,9 +3047,7 @@
 			"name": "Egg Incubator Plus",
 			"type": "trainer gear",
 			"cost": 3000,
-			"description": [
-				"When an Egg is placed inside, it reduces the Hatch Time by 2d20 each day. Once the egg hatches, the incubator loses its effectiveness."
-			],
+			"description": "When an Egg is placed inside, it reduces the Hatch Time by 2d20 each day. Once the egg hatches, the incubator loses its effectiveness.",
 			"media": {
 				"sprite": "/assets/items/egg-incubator-plus/sprite.png"
 			}
@@ -4334,9 +3057,7 @@
 			"name": "Egg Incubator Super",
 			"type": "trainer gear",
 			"cost": 10000,
-			"description": [
-				"When an Egg is placed inside, it reduces the Hatch Time by 3d20 each day. Once the egg hatches, the incubator loses its effectiveness."
-			],
+			"description": "When an Egg is placed inside, it reduces the Hatch Time by 3d20 each day. Once the egg hatches, the incubator loses its effectiveness.",
 			"media": {
 				"sprite": "/assets/items/egg-incubator-super/sprite.png"
 			}
