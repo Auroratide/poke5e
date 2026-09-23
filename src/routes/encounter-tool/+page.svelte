@@ -11,7 +11,7 @@
 		data: PageData
 	} = $props()
 
-	let biomes: Biome[] = $derived(data.biomes?.item?.biomes ?? [])
+	let biomes: Biome[] = $derived(data.biomes)
 	const canonSpecies = SpeciesStore.canonList()
 	const allSpecies = SpeciesStore.completeList()
 </script>

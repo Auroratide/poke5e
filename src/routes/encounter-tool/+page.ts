@@ -1,16 +1,11 @@
-import { Url } from "$lib/site/url"
-import { error } from "@sveltejs/kit"
+import { DEFAULT_SRD_EDITION } from "$lib/site/edition"
+import { SrdClient } from "$lib/srd"
 import type { PageLoad } from "./$types"
 
 export const load: PageLoad = async ({ fetch }) => {
-	const biomes = await fetch(Url.api.biomes()).then(async res => {
-		if (res.status === 404)
-			error(404)
-		else
-			return {
-				item: await res.json(),
-			}
-	})
+	const client = new SrdClient(DEFAULT_SRD_EDITION, fetch)
 
-	return { biomes }
+	const biomes = await client.biomes.all()
+
+	return { biomes: biomes.values }
 }

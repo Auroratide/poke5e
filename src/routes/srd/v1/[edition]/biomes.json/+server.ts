@@ -10,5 +10,5 @@ export const entries: EntryGenerator = createEntryGenerator()
 export const GET: RequestHandler = async ({ params }) => {
 	if (!isEdition(params.edition)) error(404)
 	
-	return respond(await BiomesSrd.all())
+	return respond(await BiomesSrd.all(params.edition))
 }

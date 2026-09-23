@@ -1,13 +1,16 @@
-import { readable } from "svelte/store"
+import { derived, type Readable } from "svelte/store"
+import { srdStore } from "$lib/site/stores"
+import type { BiomesListJson } from "$lib/srd/biomes/schema"
+import { alphabeticalName } from "$lib/utils/sort"
 import type { Biome } from "./Biome"
-import { Url } from "$lib/site/url"
 
-export const BiomesStore = readable<Biome[]>(undefined, (set) => {
-	if (typeof window !== "undefined") {
-		fetch(Url.api.biomes())
-			.then(res => res.json())
-			.then((data) => data.biomes)
-			.then((biomes: Biome[]) => biomes.sort((a, b) => a.name.localeCompare(b.name)))
-			.then((biomes) => set(biomes))
-	}
-})
+const toBiomes = (json: BiomesListJson): Biome[] =>
+	json.values
+
+const allBiomes = srdStore((client) =>
+	client.biomes.all()
+		.then(toBiomes)
+		.then((biomes) => biomes.sort(alphabeticalName)),
+)
+
+export const BiomesStore: Readable<Biome[] | undefined> = derived(allBiomes, (it) => it.result)
