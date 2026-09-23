@@ -1,26 +1,22 @@
 import { derived, get, writable, type Readable, type Unsubscriber, type Writable } from "svelte/store"
 import { Evolution } from "./Evolution"
 import { EvolutionForest } from "./EvolutionForest"
-import type { EvolutionJsonResponse } from "./EvolutionJsonResponse"
 import { SpeciesIdentifier } from "$lib/poke5e/species"
 import { provider } from "./data"
 import type { Data } from "$lib/DataClass"
 import type { EvolutionWriteKeys } from "./data/EvolutionDataProvider"
 import { cachedReadable } from "$lib/utils/store"
 import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
-import { Url } from "$lib/site/url"
+import { srdStore } from "$lib/site/stores"
 
-export const canonEvolutions = cachedReadable<EvolutionForest>(undefined, (set) => {
-	if (typeof window !== "undefined") {
-		fetch(Url.api.evolutions())
-			.then((res) => res.json())
-			.then((data: EvolutionJsonResponse) => data.items.map((it) =>
-				Evolution.fromJson(it),
-			))
-			.then((evolution) => evolution.filter((it) => !it.nonCanon))
-			.then((evolution) => set(new EvolutionForest(evolution)))
-	}
-})
+const fetchedCanonEvolutions = srdStore<EvolutionForest>((client) =>
+	client.evolutions.all()
+		.then((json) => json.values.map(Evolution.fromJson))
+		.then((evolutions) => evolutions.filter((it) => !it.nonCanon))
+		.then((evolutions) => new EvolutionForest(evolutions)),
+)
+
+export const canonEvolutions: Readable<EvolutionForest | undefined> = derived(fetchedCanonEvolutions, (it) => it.result)
 
 export const allEvolutions = cachedReadable<EvolutionForest>(undefined, (set) => {
 	let unsub: Unsubscriber = undefined

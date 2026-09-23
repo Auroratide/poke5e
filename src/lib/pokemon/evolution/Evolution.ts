@@ -2,7 +2,7 @@ import { SpeciesIdentifier } from "$lib/poke5e/species"
 import { DataClass, type Data } from "$lib/DataClass"
 import { EvolutionCondition, GenderCondition, LevelCondition, type EvolutionConditionType } from "./EvolutionCondition"
 import { EvolutionBenefit, type EvolutionBenefitType } from "./EvolutionBenefit"
-import type { SingleEvolutionJsonResponse } from "./EvolutionJsonResponse"
+import type { EvolutionJson } from "$lib/srd/evolutions/schema"
 import { EvolutionForest } from "./EvolutionForest"
 
 export type EvolutionId = string
@@ -52,7 +52,7 @@ export class Evolution extends DataClass<{
 		return `${genderCondition ? genderCondition.toString() + " " : ""}{{pokemon:${link === "from" ? ":" : ""}${this.data.from}}} can evolve into {{pokemon:${link === "to" ? ":" : ""}${this.data.to}}} ${levelCondition ? levelCondition.toString() : ""}${otherconditions.length > 0 && levelCondition ? " " : ""}${otherconditions.map((it) => it.toString()).join(", ")}.${benefits.length > 0 ? " When it evolves, " : ""}${benefits.map((it) => it.toString()).join(", ")}${benefits.length > 0 ? "." : ""}`
 	}
 
-	static fromJson(json: SingleEvolutionJsonResponse): Evolution {
+	static fromJson(json: EvolutionJson): Evolution {
 		return new Evolution(json)
 	}
 

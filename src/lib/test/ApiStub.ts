@@ -1,8 +1,7 @@
 import type { Ability } from "$lib/pokemon/ability"
 import { stubAbility } from "$lib/pokemon/ability/test/stubs"
-import type { EvolutionJsonResponse } from "$lib/pokemon/evolution/EvolutionJsonResponse"
-import { Url } from "$lib/site/url"
 import type { PokemonListJson } from "$lib/srd/pokemon/schema"
+import type { EvolutionListJson } from "$lib/srd/evolutions/schema"
 import abilitiesSample from "./abilities-sample.json"
 
 function isSrd(url: string, resource: string) {
@@ -20,8 +19,8 @@ class ApiStubDefinition {
 		values: [],
 	}
 
-	evolutions: EvolutionJsonResponse = {
-		items: [],
+	evolutions: EvolutionListJson = {
+		values: [],
 	}
 
 	resolve = (url: string): Response | undefined => {
@@ -34,7 +33,7 @@ class ApiStubDefinition {
 			}))
 		} else if (isSrd(url, "pokemon")) {
 			return new Response(JSON.stringify(this.pokemon))
-		} else if (url.includes(Url.api.evolutions())) {
+		} else if (isSrd(url, "evolutions")) {
 			return new Response(JSON.stringify(this.evolutions))
 		} else {
 			return undefined

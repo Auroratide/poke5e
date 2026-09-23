@@ -1,6 +1,6 @@
 import type { Data } from "$lib/DataClass"
 import { Evolution } from "../Evolution"
-import type { EvolutionJsonResponse, SingleEvolutionJsonResponse } from "../EvolutionJsonResponse"
+import type { EvolutionJson, EvolutionListJson } from "$lib/srd/evolutions/schema"
 
 let evoId = 0
 const nextEvoId = () => `evo-${++evoId}`
@@ -22,7 +22,7 @@ export function stubEvolution(template: Partial<Data<Evolution>>): Evolution {
 	})
 }
 
-export function stubSingleEvolutionJsonResponse(template: Partial<SingleEvolutionJsonResponse>): SingleEvolutionJsonResponse {
+export function stubEvolutionJson(template: Partial<EvolutionJson>): EvolutionJson {
 	return {
 		id: nextEvoId(),
 		from: "eevee",
@@ -39,8 +39,8 @@ export function stubSingleEvolutionJsonResponse(template: Partial<SingleEvolutio
 	}
 }
 
-export function stubEvolutionJsonResponse(...values: SingleEvolutionJsonResponse[]): EvolutionJsonResponse {
+export function stubEvolutionListJson(...values: EvolutionJson[]): EvolutionListJson {
 	return {
-		items: values,
+		values,
 	}
 }

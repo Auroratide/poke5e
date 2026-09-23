@@ -1,7 +1,7 @@
 import { test, expect, vi, beforeEach, afterEach } from "vitest"
 import { get } from "svelte/store"
 import { waitForStore } from "$lib/test/store"
-import { stubEvolution, stubEvolutionJsonResponse, stubSingleEvolutionJsonResponse } from "./stubs"
+import { stubEvolution, stubEvolutionJson, stubEvolutionListJson } from "./stubs"
 import { canonEvolutions, EvolutionStore } from "../EvolutionStore"
 import { SpeciesIdentifier } from "$lib/poke5e/species"
 import { provider as fakemonProvider } from "$lib/fakemon/data"
@@ -14,7 +14,7 @@ import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 import { ApiStub } from "$lib/test/ApiStub"
 
 beforeEach(async () => {
-	const eeveeToFlareon = stubSingleEvolutionJsonResponse({
+	const eeveeToFlareon = stubEvolutionJson({
 		from: "eevee",
 		to: "flareon",
 		conditions: [ {
@@ -23,7 +23,7 @@ beforeEach(async () => {
 		} ],
 	})
 
-	const evolutions = stubEvolutionJsonResponse(eeveeToFlareon)
+	const evolutions = stubEvolutionListJson(eeveeToFlareon)
 	ApiStub.evolutions = evolutions
 
 	await waitForStore(canonEvolutions)
