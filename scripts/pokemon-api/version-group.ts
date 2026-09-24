@@ -4,6 +4,7 @@ import { superconsole } from "../superconsole.ts"
 
 export type VersionGroup = {
 	name: string,
+	order: number,
 	generation: {
 		name: string,
 	},

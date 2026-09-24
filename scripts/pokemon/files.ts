@@ -11,20 +11,27 @@ export type PokemonData = {
 		regions?: string[],
 	},
 	moves: {
-		tm: number[],
+		start: string[],
+		level2: string[],
+		level6: string[],
+		level10: string[],
+		level14: string[],
+		level18: string[],
+		egg?: string[],
+		tm?: number[],
 	},
 }
 
-const PATH = path.join("static", "data", "pokemon.json")
+const srdPath = (edition: string) => path.join("src", "lib", "srd", "data", edition, "pokemon", "en.json")
 
-export async function getPokemonData(): Promise<PokemonData[]> {
-	const raw = await fs.readFile(PATH, { encoding: "utf-8" })
+export async function getPokemonSrd(edition: string = "2024"): Promise<PokemonData[]> {
+	const raw = await fs.readFile(srdPath(edition), { encoding: "utf-8" })
 
-	return JSON.parse(raw).items
+	return JSON.parse(raw).values
 }
 
-export async function writePokemonData(data: PokemonData[]) {
-	const raw = JSON.stringify({ items: data }, null, "\t")
+export async function writePokemonSrd(data: PokemonData[], edition: string = "2024") {
+	const raw = JSON.stringify({ values: data }, null, "\t")
 
-	await fs.writeFile(PATH, raw, { encoding: "utf-8" })
+	await fs.writeFile(srdPath(edition), raw, { encoding: "utf-8" })
 }
