@@ -75,10 +75,10 @@
 				"level14": [
 					"worry-seed",
 					"synthesis",
-					"power-whip"
+					"seed-bomb"
 				],
 				"level18": [
-					"seed-bomb",
+					"power-whip",
 					"solar-beam"
 				],
 				"tm": [
@@ -242,9 +242,11 @@
 				"level14": [
 					"growth",
 					"double-edge",
-					"worry-seed"
+					"worry-seed",
+					"seed-bomb"
 				],
 				"level18": [
+					"power-whip",
 					"synthesis",
 					"solar-beam"
 				],
@@ -384,14 +386,17 @@
 					"sleep-powder",
 					"take-down",
 					"razor-leaf",
-					"sweet-scent"
+					"sweet-scent",
+					"amnesia"
 				],
 				"level14": [
 					"growth",
 					"double-edge",
-					"worry-seed"
+					"worry-seed",
+					"seed-bomb"
 				],
 				"level18": [
+					"power-whip",
 					"synthesis",
 					"solar-beam",
 					"petal-blizzard"

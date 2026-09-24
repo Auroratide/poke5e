@@ -30,6 +30,62 @@
 					"seed-bomb"
 				]
 			}
+		},
+		{
+			"id": "ivysaur",
+			"moves": {
+				"start": [
+					"tackle",
+					"growl",
+					"leech-seed",
+					"vine-whip"
+				],
+				"level6": [
+					"poison-powder",
+					"sleep-powder",
+					"take-down"
+				],
+				"level10": [
+					"razor-leaf",
+					"sweet-scent"
+				],
+				"level14": [
+					"growth",
+					"double-edge",
+					"worry-seed"
+				],
+				"level18": [
+					"synthesis",
+					"solar-beam"
+				]
+			}
+		},
+		{
+			"id": "venusaur",
+			"moves": {
+				"start": [
+					"tackle",
+					"growl",
+					"leech-seed",
+					"vine-whip",
+					"petal-dance",
+					"poison-powder",
+					"sleep-powder",
+					"take-down",
+					"razor-leaf",
+					"sweet-scent"
+				],
+				"level14": [
+					"growth",
+					"double-edge",
+					"worry-seed"
+				],
+				"level18": [
+					"synthesis",
+					"solar-beam",
+					"petal-blizzard"
+				]
+			}
 		}
 	]
 }
