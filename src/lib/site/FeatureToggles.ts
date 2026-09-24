@@ -25,4 +25,5 @@ export function setFeatureActive(feature: string, isActive: boolean) {
 export const FeatureToggles = {
 	OverrideMaintenance: toggle("OverrideMaintenance"),
 	PreviewUpdatedMoves: toggle("PreviewUpdatedMoves"),
+	CustomMoves: toggle("CustomMoves"),
 }
