@@ -19,5 +19,6 @@ export function initS3(): S3Client {
 			secretAccessKey,
 		},
 		forcePathStyle: true, // without this, I get MalformedXML errors.
+		requestChecksumCalculation: "WHEN_REQUIRED", // crashes seaweed otherwise
 	})
 }

@@ -93,7 +93,7 @@ test("getAllKnown, but one is invalid", async () => {
 	expect(resultNames).toContain("Drakeon")
 })
 
-test.skip("uploading new media", async () => {
+test("uploading new media", async () => {
 	const draft = stubFakemon({
 		species: stubPokemonSpecies({
 			name: "Droideon",
