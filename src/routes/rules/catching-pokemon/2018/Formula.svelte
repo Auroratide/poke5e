@@ -1,0 +1,2 @@
+<p style:text-align="center" style:text-wrap="balance"><code>10 + SR<sub>rounded down</sub> + Pokémon Level + Remaining HP / 10<sub>rounded down</sub></code></p>
+<p>Bonuses are added to your throw depending on which type of Pokéball you use. See the item list for the different types of Pokéballs.</p>

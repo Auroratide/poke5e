@@ -1,0 +1,92 @@
+<script>
+	import { FlatDl, Heading } from "$lib/ui/elements"
+	import { formatMoney } from "$lib/pokemon/money"
+	import { Button } from "$lib/ui/elements"
+	import { Url } from "$lib/site/url"
+	import { PageAction } from "$lib/trainers/page-action"
+	import ReferencePage from "../ReferencePage.svelte"
+	import { currentEdition } from "$lib/site/edition"
+	import Rules2018 from "./2018"
+	import Rules2024 from "./2024"
+</script>
+
+<ReferencePage title="Trainer Class">
+	<section>
+		<p>You want to be the very best like no one ever was? Follow these guidelines to create your Pokémon Trainer! These rules are built to accommodate any 5e race.</p>
+		<p>You can use this app's <a href="{Url.trainers()}">Trainer Tool</a> to create and manage trainers and their pokemon! Use the button below to get started:</p>
+		<p class="text-center"><Button href="{Url.trainers(null, null, PageAction.newTrainer)}">Create a Trainer</Button></p>
+		<p>For more on leveling up a trainer, see the <a href="{Url.reference.trainerLeveling()}">Trainer Leveling</a> page.</p>
+	</section>
+	<section>
+		<Heading level="2" id="core-traits">Core Traits</Heading>
+		<FlatDl>
+			<dt>Primary Ability</dt>
+			<dd>Charisma</dd>
+			<dt>Hit Point Die</dt>
+			<dd>{#if $currentEdition === "2018"}d8{:else}d6{/if} per Trainer Level</dd>
+			<dt>HP at Level 1</dt>
+			<dd>6 + CON modifier</dd>
+			<dt>HP at higher levels</dt>
+			<dd>{#if $currentEdition === "2018"}1d8{:else}1d6{/if} + CON, or {#if $currentEdition === "2018"}5{:else}4{/if} + CON</dd>
+		</FlatDl>
+
+		<Heading level="3" id="proficiencies">Proficiencies</Heading>
+		<FlatDl>
+			<dt>Saving Throws</dt>
+			<dd>Charisma</dd>
+			<dt>Skills</dt>
+			<dd>Animal Handling, and choose two from Acrobatics, Athletics, Insight, Intimidation, Investigation, Medicine, Nature, Perception, Performance, Persuasion, Sleight of Hand, Stealth, or Survival</dd>
+			<dt>Armor</dt>
+			<dd>None</dd>
+			<dt>Weapons</dt>
+			<dd>None</dd>
+			<dt>Tools</dt>
+			<dd>Pokeballs</dd>
+		</FlatDl>
+
+		<Heading level="3" id="starting-equipment">Starting Equipment</Heading>
+		<ul class="small-font">
+			<li>5 Pokeballs</li>
+			<li>1 Potion</li>
+			<li>Trainer's License</li>
+			<li>Pokedex</li>
+			<li>A starter Pokemon</li>
+			<li>{formatMoney(1000)} + {formatMoney(100)} &times; 4d4</li>
+		</ul>
+
+		{#if $currentEdition !== "2018"}
+			<Heading level="3" id="multiclassing">Multiclassing</Heading>
+			<p class="small-font">To multiclass into Trainer, you must have an ability score of at least 13 in Charisma. When you gain your first level of Trainer, you gain proficiency in Animal Handling.</p>
+		{/if}
+	</section>
+	<section>
+		{#if $currentEdition === "2018"}
+			<Rules2018.LevelTable />
+		{:else}
+			<Rules2024.LevelTable />
+		{/if}
+	</section>
+	<section>
+		<Heading level="2" id="class-features">Class Features</Heading>
+		{#if $currentEdition === "2018"}
+			<Rules2018.Features />
+		{:else}
+			<Rules2024.Features />
+		{/if}
+	</section>
+	<section>
+		<Heading level="2" id="specializations">Specializations</Heading>
+		<p>At levels 1, 7, and 18, players may choose a <dfn><a href="{Url.reference.specializations()}">specialization</a></dfn>, granting them bonuses depending on the type of Pokemon they train. Specializations can be stacked for an additional +1 bonus to skill checks each time it is chosen.</p>
+		<p><strong><a href="{Url.reference.specializations()}">View the list of specializations.</a></strong></p>
+	</section>
+	<section>
+		<Heading level="2" id="trainer-paths">Trainer Paths</Heading>
+		<p>There are many ways and reasons to train Pokémon. At the 2nd level, depending on your long term goals, choose a <dfn><a href="{Url.reference.trainerPaths()}">trainer path</a></dfn> which grants you class features at levels 2, 5, 9, and 15.</p>
+		<p><strong><a href="{Url.reference.trainerPaths()}">View the list of trainer paths.</a></strong></p>
+	</section>
+</ReferencePage>
+
+<style>
+	.small-font { font-size: var(--font-sz-venus); }
+	.text-center { text-align: center; }
+</style>

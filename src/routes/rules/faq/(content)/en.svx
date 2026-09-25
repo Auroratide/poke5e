@@ -1,0 +1,68 @@
+---
+title: Frequently Asked Questions
+---
+
+<script lang="ts">
+  import { Heading } from "$lib/ui/elements"
+  import { Url } from "$lib/site/url"
+
+  const questions = [
+    { id: "downloading-pdfs", text: "Where can I download PDFs of the rules?" },
+    { id: "app-for-phone", text: "Can I have this website as an app for my phone?" },
+    { id: "character-sheets", text: "Are there character sheets that I can print?" },
+    { id: "site-development-and-plan", text: "Is this site being developed? Can I see what's being planned?" },
+    { id: "running-gym-battles", text: "How should I run gym battles?" },
+  ]
+
+  const q = (id: string) => questions.find((it) => it.id === id)?.text ?? id
+</script>
+
+If you don't see your question here, feel free to ask us on our <a href={Url.external.discord()}>Discord Server</a>! We have lots of friendly community members who would be more than happy to help.
+
+<Heading level="2" id="questions">Questions</Heading>
+
+<ul>
+  {#each questions as question}
+    <li><a href="#{question.id}">{question.text}</a></li>
+  {/each}
+</ul>
+
+<Heading level="2" id="answers">Answers</Heading>
+
+<Heading level="3" id="downloading-pdfs">{q("downloading-pdfs")}</Heading>
+
+As of right now, there are no PDFs of this site's rules to download. The main reason is because the 2024 edition of the rules incrementally evolve with user feedback.
+
+In the future, it is planned for all of the site's materials to be available offline.
+
+----
+
+<Heading level="3" id="app-for-phone">{q("app-for-phone")}</Heading>
+
+Yes! Eventually, clear instructions will be created for how to install the site as an app. For now, you can refer to the following guides depending on your device:
+
+- [Android - Install a web app](https://support.google.com/chrome/answer/9658361?hl=en&co=GENIE.Platform%3DAndroid&oco=0)
+- [iOS - Turn website into an app](https://support.apple.com/guide/iphone/open-as-web-app-iphea86e5236/ios)
+
+----
+
+<Heading level="3" id="character-sheets">{q("character-sheets")}</Heading>
+
+Not yet, though it is planned.
+
+----
+
+<Heading level="3" id="site-development-and-plan">{q("site-development-and-plan")}</Heading>
+
+Yep! [Auroratide](https://auroratide.com) manages and improves the site in their free time. You can see a list of feedback items people in the community have brought up and a rough idea of an improvement plan here:
+
+- [Website Roadmap and Feedback](https://github.com/Auroratide/poke5e/issues)
+- [Have some feedback yourself? Let us know!](/feedback)
+
+----
+
+<Heading level="3" id="running-gym-battles">{q("running-gym-battles")}</Heading>
+
+Understandably, Dungeons and Dragons is typically a team-based game, whereas in the main Pokémon games, gym battles are one-on-one. The site has some suggestions on how you can run Gym Battles here:
+
+- [Running Gym Battles](/reference/encounters#gym-battles)
