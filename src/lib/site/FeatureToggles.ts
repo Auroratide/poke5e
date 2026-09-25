@@ -26,4 +26,5 @@ export const FeatureToggles = {
 	OverrideMaintenance: toggle("OverrideMaintenance"),
 	PreviewUpdatedMoves: toggle("PreviewUpdatedMoves"),
 	CustomMoves: toggle("CustomMoves"),
+	MoveCustomization: toggle("MoveCustomization"),
 }
