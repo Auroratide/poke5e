@@ -1,0 +1,1 @@
+export { default as MoveEditor } from "./MoveEditor.svelte"

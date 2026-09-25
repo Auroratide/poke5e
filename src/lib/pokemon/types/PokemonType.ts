@@ -59,6 +59,11 @@ export class PokemonType extends DataClass<PokeType[]> {
 	static readonly name = (type: string): string =>
 		type in LOCALIZED_NAMES ? LOCALIZED_NAMES[type]() : capitalize(type)
 
+	static readonly options = () => PokemonType.list.map((type) => ({
+		value: type,
+		name: PokemonType.name(type),
+	}))
+
 	get primary(): PokeType { return this.data[0] }
 	get secondary(): PokeType | undefined { return this.data[1] }
 
