@@ -31,7 +31,7 @@
 
 	.ability {
 		font-size: var(--font-sz-venus);
-		margin-block: 1em;
+		margin-block-end: 1em;
 	}
 
 	.smaller { font-size: var(--font-sz-mars); }
