@@ -1022,6 +1022,18 @@ test("updating movesets", async () => {
 		_pp_max: 10,
 		_notes: "",
 		_rank: 0,
+		_to_hit_modifier: 0,
+		_damage_modifier: 0,
+		_save_dc_modifier: 0,
+		_custom_type: null,
+		_custom_powers: null,
+		_custom_time: null,
+		_custom_duration_type: null,
+		_custom_duration_unit: null,
+		_custom_duration_value: null,
+		_custom_concentration: null,
+		_custom_range_type: null,
+		_custom_range_value: null,
 	})
 
 	const pounceId = await call<string>("add_move", {
@@ -1032,6 +1044,18 @@ test("updating movesets", async () => {
 		_pp_max: 10,
 		_notes: "",
 		_rank: 1,
+		_to_hit_modifier: 2,
+		_damage_modifier: 1,
+		_save_dc_modifier: 0,
+		_custom_type: "fire",
+		_custom_powers: ["wis"],
+		_custom_time: "bonus action",
+		_custom_duration_type: "time",
+		_custom_duration_unit: "minute",
+		_custom_duration_value: 2,
+		_custom_concentration: true,
+		_custom_range_type: "distance",
+		_custom_range_value: 120,
 	})
 
 	// Update
@@ -1043,6 +1067,18 @@ test("updating movesets", async () => {
 		_pp_max: 10,
 		_notes: "",
 		_rank: 1,
+		_to_hit_modifier: 0,
+		_damage_modifier: 0,
+		_save_dc_modifier: 0,
+		_custom_type: null,
+		_custom_powers: null,
+		_custom_time: null,
+		_custom_duration_type: null,
+		_custom_duration_unit: null,
+		_custom_duration_value: null,
+		_custom_concentration: null,
+		_custom_range_type: null,
+		_custom_range_value: null,
 	})
 
 	await call("update_move", {
@@ -1053,6 +1089,18 @@ test("updating movesets", async () => {
 		_pp_max: 10,
 		_notes: "",
 		_rank: 0,
+		_to_hit_modifier: 2,
+		_damage_modifier: 1,
+		_save_dc_modifier: 0,
+		_custom_type: "fire",
+		_custom_powers: ["wis"],
+		_custom_time: "bonus action",
+		_custom_duration_type: "time",
+		_custom_duration_unit: "minute",
+		_custom_duration_value: 2,
+		_custom_concentration: true,
+		_custom_range_type: "distance",
+		_custom_range_value: 120,
 	})
 
 	// Assert
@@ -1062,10 +1110,36 @@ test("updating movesets", async () => {
 
 	const psybeam = sunnyMoves[1]
 	const pounce = sunnyMoves[0]
+
 	expect(psybeam?.move_id).toEqual("psybeam")
 	expect(psybeam?.pp_cur).toEqual(9)
+	expect(psybeam?.to_hit_modifier).toEqual(0)
+	expect(psybeam?.damage_modifier).toEqual(0)
+	expect(psybeam?.save_dc_modifier).toEqual(0)
+	expect(psybeam?.custom_type).toBeNull()
+	expect(psybeam?.custom_powers).toBeNull()
+	expect(psybeam?.custom_time).toBeNull()
+	expect(psybeam?.custom_duration_type).toBeNull()
+	expect(psybeam?.custom_duration_unit).toBeNull()
+	expect(psybeam?.custom_duration_value).toBeNull()
+	expect(psybeam?.custom_concentration).toBeNull()
+	expect(psybeam?.custom_range_type).toBeNull()
+	expect(psybeam?.custom_range_value).toBeNull()
+
 	expect(pounce?.move_id).toEqual("pounce")
 	expect(pounce?.pp_cur).toEqual(10)
+	expect(pounce?.to_hit_modifier).toEqual(2)
+	expect(pounce?.damage_modifier).toEqual(1)
+	expect(pounce?.save_dc_modifier).toEqual(0)
+	expect(pounce?.custom_type).toEqual("fire")
+	expect(pounce?.custom_powers).toEqual(["wis"])
+	expect(pounce?.custom_time).toEqual("bonus action")
+	expect(pounce?.custom_duration_type).toEqual("time")
+	expect(pounce?.custom_duration_unit).toEqual("minute")
+	expect(pounce?.custom_duration_value).toEqual(2)
+	expect(pounce?.custom_concentration).toBe(true)
+	expect(pounce?.custom_range_type).toEqual("distance")
+	expect(pounce?.custom_range_value).toEqual(120)
 
 	// Cleanup
 	await call("remove_move", {
