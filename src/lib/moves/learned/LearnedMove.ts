@@ -1,6 +1,7 @@
 import type { Attribute } from "$lib/dnd/attributes"
 import type { Resource } from "$lib/poke5e/resource"
 import type { MoveDuration } from "../duration"
+import type { MoveStats } from "../MoveStats"
 import type { MoveRange } from "../range"
 import type { MoveTime } from "../time"
 import type { MoveType } from "../type"
@@ -44,4 +45,14 @@ export const LearnedMove = {
 		},
 		customization: {},
 	}),
+	applyToMoveStats: (learnedMove: LearnedMove, stats: MoveStats): MoveStats => {
+		if (stats.toHit)
+			stats.toHit += learnedMove.modifiers.toHit
+		if (stats.save)
+			stats.save.dc += learnedMove.modifiers.saveDc
+		if (stats.damage)
+			stats.damage.mod += learnedMove.modifiers.damage
+
+		return stats
+	},
 } as const

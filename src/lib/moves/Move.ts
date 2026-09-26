@@ -29,6 +29,7 @@ import type { ContestJson } from "$lib/srd/contest/schema"
 import type { ContestEffectJson } from "$lib/srd/contest-effects/schema"
 import type { TmJson } from "$lib/srd/tms/schema"
 import type { BetaDetails } from "$lib/site/beta"
+import { LearnedMove } from "./learned"
 
 export type MoveId = string
 
@@ -161,8 +162,9 @@ export class Move extends DataClass<{
 		level: Level,
 		type: PokeType[],
 		stab: Stab,
+		learnedMove: LearnedMove,
 	}): MoveStats {
-		const result: MoveStats = {}
+		let result: MoveStats = {}
 
 		const bestPower = this.power.bestAttribute(forCharacter.attributes)[0]
 
@@ -178,6 +180,8 @@ export class Move extends DataClass<{
 		if (result.damage == null) {
 			result.damage = this.damage?.damage(stabToUse, attributeMod, this.type, forCharacter.type, forCharacter.level, rulesVersion)
 		}
+
+		result = LearnedMove.applyToMoveStats(forCharacter.learnedMove, result)
 
 		return result
 	}

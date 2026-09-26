@@ -44,6 +44,7 @@
 		level: level,
 		type: pokemonType.data,
 		stab: stab,
+		learnedMove: value,
 	}))
 
 	const attributeList = $derived(move?.power.attributeList())

@@ -5,6 +5,7 @@ import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import { Stab } from "$lib/pokemon/stab"
 import { describe, expect, test } from "vitest"
 import { stubMove, stubMoveAttack, stubMoveDice, stubMoveSave, stubTmDetails } from "./stubs-2"
+import { stubLearnedMove } from "$lib/trainers/test/stubs"
 
 describe("pokemonWhoLearnThis", () => {
 	const allPokemon = [
@@ -202,6 +203,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -234,6 +236,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -266,6 +269,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -297,6 +301,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -323,6 +328,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -350,6 +356,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -382,6 +389,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(4),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -414,6 +422,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(20),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -443,6 +452,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(9),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -469,6 +479,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -495,6 +506,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -521,6 +533,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -547,6 +560,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(12),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -574,6 +588,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic", "normal"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -605,6 +620,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -635,6 +651,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -661,6 +678,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -688,6 +706,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(1),
 			type: ["psychic"],
 			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove(),
 		})
 
 		expect(result).toEqual({
@@ -720,6 +739,7 @@ describe("calculateMoveStats", () => {
 			level: new Level(10),
 			type: ["normal"],
 			stab: new Stab({ base: "proficiency", bonus: 3 }),
+			learnedMove: stubLearnedMove(),
 		})
 	
 		expect(result).toEqual({
@@ -733,6 +753,44 @@ describe("calculateMoveStats", () => {
 				mod: 9,
 				isHealing: false,
 				stabApplied: true,
+			},
+		})
+	})
+
+	test("learned move customizes modifiers", () => {
+		const move = stubMove({
+			power: ["int"],
+			type: "normal",
+			dice: stubMoveDice(),
+			attack: stubMoveAttack().data,
+			save: stubMoveSave().data,
+		})
+	
+		const result = move.calculateMoveStats("2024", {
+			attributes: ATTRIBUTES,
+			level: new Level(10),
+			type: ["psychic"],
+			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove({
+				modifiers: {
+					saveDc: 1,
+					toHit: 2,
+					damage: 3,
+				},
+			}),
+		})
+	
+		expect(result).toEqual({
+			toHit: 8, // 4 pb, 2 int, 2 custom
+			save: {
+				attribute: ["dex"],
+				dc: 15, // 8, 4 pb, 2 int, 1 custom
+			},
+			damage: {
+				dice: "3d4",
+				mod: 5, // 2 int, 3 custom
+				isHealing: false,
+				stabApplied: false,
 			},
 		})
 	})
