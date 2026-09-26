@@ -5,7 +5,6 @@ import {
 	type TrainerPokemon,
 	type TrainerInfo,
 	type WithWriteKey,
-	type LearnedMove,
 	type PokemonId,
 	type HeldItem,
 	type InventoryItem,
@@ -36,6 +35,7 @@ import { Ability } from "$lib/pokemon/ability"
 import { TagList } from "$lib/poke5e/tags"
 import { TransferCode } from "../pokemon-transfer"
 import { Token } from "$lib/dnd/token"
+import type { LearnedMove } from "$lib/moves/learned"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 

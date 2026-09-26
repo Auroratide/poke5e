@@ -1,7 +1,6 @@
 import type {
 	HeldItem,
 	InventoryItem,
-	LearnedMove,
 	PokemonId,
 	ReadWriteKey,
 	Trainer,
@@ -18,6 +17,7 @@ import type { PokemonSpecies } from "$lib/poke5e/species"
 import { DetailedError } from "$lib/site/errors"
 import type { PostgrestError } from "@supabase/supabase-js"
 import type { TransferCode } from "../pokemon-transfer"
+import type { LearnedMove } from "$lib/moves/learned"
 
 export type TrainerData = {
 	info: Trainer,

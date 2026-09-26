@@ -2,13 +2,14 @@
 	import { WithSpecies } from "$lib/poke5e/species"
 	import { Card } from "$lib/ui/page"
 	import { TypeTag } from "$lib/pokemon/types"
-	import type { LearnedMove, PokemonId, TrainerPokemon } from "$lib/trainers/types"
+	import type { PokemonId, TrainerPokemon } from "$lib/trainers/types"
 	import type { TrainerStore } from "../trainers"
 	import Info from "./Info.svelte"
 	import RequirePokemon from "./RequirePokemon.svelte"
 	import TrainerPokemonActions from "./TrainerPokemonActions.svelte"
 	import { Url } from "$lib/site/url"
 	import { PageAction } from "../page-action"
+	import type { LearnedMove } from "$lib/moves/learned"
 
 	export let trainer: TrainerStore
 	export let id: PokemonId

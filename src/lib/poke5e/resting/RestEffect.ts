@@ -2,8 +2,9 @@ import { RandomDiceRoller, type DiceRoller } from "$lib/dnd/dice"
 import type { HitDice } from "$lib/dnd/hit-dice"
 import type { NonVolatileStatus } from "$lib/pokemon/status"
 import type { TrainerPath } from "$lib/trainers/paths"
-import type { LearnedMove, PokemonBond, TrainerInfo } from "$lib/trainers/types"
+import type { PokemonBond, TrainerInfo } from "$lib/trainers/types"
 import type { Resource } from "$lib/poke5e/resource"
+import type { LearnedMove } from "$lib/moves/learned"
 
 export interface RestEffect<T> {
 	description: (creature: T) => string[]

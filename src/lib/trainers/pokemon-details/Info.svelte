@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { LearnedMove, Trainer, TrainerPokemon } from "../types"
+	import type { Trainer, TrainerPokemon } from "../types"
 	import { createEventDispatcher } from "svelte"
 	import BasicInfo from "./BasicInfo.svelte"
 	import HealthInfo, { type UpdateDetail as HealthUpdateDetail } from "../info/HealthInfo.svelte"
@@ -23,6 +23,7 @@
 	import { KnownAbilitiesInfo } from "$lib/pokemon/ability"
 	import DmInfo from "./DmInfo.svelte"
 	import { TagList, TagListInfo } from "$lib/poke5e/tags"
+	import type { LearnedMove } from "$lib/moves/learned"
 
 	const dispatch = createEventDispatcher()
 

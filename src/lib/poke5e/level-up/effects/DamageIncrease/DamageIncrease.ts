@@ -1,5 +1,5 @@
 import type { Level } from "$lib/dnd/level"
-import type { LearnedMove } from "$lib/trainers/types"
+import type { LearnedMove } from "$lib/moves/learned"
 import { LevelUpEffect } from "../LevelUpEffect.svelte"
 import DamageIncreaseField from "./DamageIncreaseField.svelte"
 

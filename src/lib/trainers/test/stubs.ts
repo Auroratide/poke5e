@@ -9,11 +9,12 @@ import { Nature } from "$lib/pokemon/nature"
 import { PokemonTeraType, PokemonType } from "$lib/pokemon/types"
 import { createEmptyChosenTrainerPath } from "../paths"
 import { stubSpecializations } from "../specializations/test/stubs"
-import type { LearnedMove, Trainer, TrainerBio, TrainerPokemon } from "../types"
+import type { Trainer, TrainerBio, TrainerPokemon } from "../types"
 import { Stab } from "$lib/pokemon/stab"
 import { stubAbility } from "$lib/pokemon/ability/test/stubs"
 import { TagList } from "$lib/poke5e/tags"
 import { Token } from "$lib/dnd/token"
+import type { LearnedMove } from "$lib/moves/learned"
 
 export function stubLearnedMove(template: Partial<LearnedMove> = {}): LearnedMove {
 	return {

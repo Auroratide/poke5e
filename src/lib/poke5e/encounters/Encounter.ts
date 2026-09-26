@@ -2,10 +2,11 @@ import { DynamicLeveler, Level } from "$lib/dnd/level"
 import { MovesetGenerator } from "$lib/moves/MovesetGenerator"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import { provider as trainerProvider, type TrainerData } from "$lib/trainers/data"
-import type { LearnedMove, WithWriteKey } from "$lib/trainers/types"
+import type { WithWriteKey } from "$lib/trainers/types"
 import { experienceAwarded } from "../experience"
 import type { Move } from "$lib/moves/Move"
 import { Nature } from "$lib/pokemon/nature"
+import type { LearnedMove } from "$lib/moves/learned"
 
 export type EncounterActor = {
 	data: PokemonSpecies,

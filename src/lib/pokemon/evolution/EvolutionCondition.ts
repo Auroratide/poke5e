@@ -1,7 +1,8 @@
 import type { PokemonGender } from "$lib/pokemon/gender"
 import type { Level } from "$lib/dnd/level"
-import type { LearnedMove, PokemonBond } from "$lib/trainers/types"
+import type { PokemonBond } from "$lib/trainers/types"
 import type { PokeType } from "../types"
+import type { LearnedMove } from "$lib/moves/learned"
 
 export interface EvolutionCondition<T> {
 	meetsCondition: (creature: T) => boolean

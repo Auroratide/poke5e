@@ -1,13 +1,14 @@
 import { derived, writable } from "svelte/store"
 import type { TrainerData } from "./data"
 import { provider } from "./data"
-import type { InventoryItem, LearnedMove, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from "./types"
+import type { InventoryItem, ReadWriteKey, Trainer, TrainerInfo, TrainerPokemon } from "./types"
 import { error } from "$lib/site/errors"
 import type { PokemonSpecies } from "$lib/poke5e/species"
 import { TrainerLocalStorage } from "./data/TrainerLocalStorage"
 import { TagList } from "$lib/poke5e/tags"
 import type { TransferCode } from "./pokemon-transfer"
 import * as list from "$lib/utils/list"
+import type { LearnedMove } from "$lib/moves/learned"
 
 type AllTrainers = (TrainerData & WithUpdater & WithRemover & WithTags)[]
 

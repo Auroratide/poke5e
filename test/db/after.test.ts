@@ -1028,7 +1028,6 @@ test("updating movesets", async () => {
 		_custom_type: null,
 		_custom_powers: null,
 		_custom_time: null,
-		_custom_duration_type: null,
 		_custom_duration_unit: null,
 		_custom_duration_value: null,
 		_custom_concentration: null,
@@ -1050,7 +1049,6 @@ test("updating movesets", async () => {
 		_custom_type: "fire",
 		_custom_powers: ["wis"],
 		_custom_time: "bonus action",
-		_custom_duration_type: "time",
 		_custom_duration_unit: "minute",
 		_custom_duration_value: 2,
 		_custom_concentration: true,
@@ -1073,7 +1071,6 @@ test("updating movesets", async () => {
 		_custom_type: null,
 		_custom_powers: null,
 		_custom_time: null,
-		_custom_duration_type: null,
 		_custom_duration_unit: null,
 		_custom_duration_value: null,
 		_custom_concentration: null,
@@ -1095,7 +1092,6 @@ test("updating movesets", async () => {
 		_custom_type: "fire",
 		_custom_powers: ["wis"],
 		_custom_time: "bonus action",
-		_custom_duration_type: "time",
 		_custom_duration_unit: "minute",
 		_custom_duration_value: 2,
 		_custom_concentration: true,
@@ -1119,7 +1115,6 @@ test("updating movesets", async () => {
 	expect(psybeam?.custom_type).toBeNull()
 	expect(psybeam?.custom_powers).toBeNull()
 	expect(psybeam?.custom_time).toBeNull()
-	expect(psybeam?.custom_duration_type).toBeNull()
 	expect(psybeam?.custom_duration_unit).toBeNull()
 	expect(psybeam?.custom_duration_value).toBeNull()
 	expect(psybeam?.custom_concentration).toBeNull()
@@ -1134,7 +1129,6 @@ test("updating movesets", async () => {
 	expect(pounce?.custom_type).toEqual("fire")
 	expect(pounce?.custom_powers).toEqual(["wis"])
 	expect(pounce?.custom_time).toEqual("bonus action")
-	expect(pounce?.custom_duration_type).toEqual("time")
 	expect(pounce?.custom_duration_unit).toEqual("minute")
 	expect(pounce?.custom_duration_value).toEqual(2)
 	expect(pounce?.custom_concentration).toBe(true)

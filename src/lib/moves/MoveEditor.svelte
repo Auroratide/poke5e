@@ -10,7 +10,6 @@
 		SelectField,
 		IntField,
 	} from "$lib/ui/forms"
-	import type { LearnedMove } from "$lib/trainers/types"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { LearnableMoves } from "./LearnableMoves"
 	import type { Level } from "$lib/dnd/level"
@@ -18,6 +17,7 @@
 	import { MoveOption } from "$lib/pokemon/move-pool"
 	import { Button, VisuallyHidden } from "$lib/ui/elements"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
+	import type { LearnedMove } from "./learned"
 
 	let {
 		value = $bindable(),

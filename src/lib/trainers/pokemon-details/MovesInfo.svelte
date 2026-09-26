@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { LearnedMovesListInfo } from "$lib/moves/learned"
+	import { LearnedMovesListInfo, type LearnedMove } from "$lib/moves/learned"
 	import { MovesStore } from "$lib/moves/store"
 	import { Loader } from "$lib/ui/elements"
 	import { createEventDispatcher } from "svelte"
-	import type { LearnedMove, TrainerPokemon } from "../types"
+	import type { TrainerPokemon } from "../types"
 
 	const dispatch = createEventDispatcher()
 

@@ -4,13 +4,13 @@
 	import { Fieldset, focusInputField } from "$lib/ui/forms"
 	import MoveEditor, { getMoveFieldName } from "$lib/moves/MoveEditor.svelte"
 	import { MovesStore } from "$lib/moves/store"
-	import type { LearnedMove } from "$lib/trainers/types"
 	import type { Level } from "$lib/dnd/level"
 	import { m } from "$lib/site/i18n"
 	import { LearnableMoves } from "$lib/moves/LearnableMoves"
 	import { MoveOption } from "$lib/pokemon/move-pool"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import type { Move } from "$lib/moves/Move"
+	import type { LearnedMove } from "$lib/moves/learned"
 
 	export let values: LearnedMove[]
 	export let species: PokemonSpecies

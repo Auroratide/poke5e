@@ -23,13 +23,7 @@ import type { Stab } from "$lib/pokemon/stab"
 import type { TagList } from "$lib/poke5e/tags"
 import type { Token } from "$lib/dnd/token"
 import type { HitPoints } from "$lib/poke5e/resource/HitPoints"
-
-export type LearnedMove = {
-	id: string,
-	moveId: string,
-	pp: Resource,
-	notes?: string,
-}
+import type { LearnedMove } from "$lib/moves/learned"
 
 export type StandardHeldItem = {
 	type: "standard",
