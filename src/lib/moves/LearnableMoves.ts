@@ -8,10 +8,19 @@ export type MoveGroup = {
 }
 
 const alphabetize = (a: string, b: string) => a.localeCompare(b)
+const byNumber = (a: Move, b: Move) => (a.tm?.id ?? 0) - (b.tm?.id ?? 0)
 const createGroup = (name: string): MoveGroup => ({ name, moves: [] })
 
 export class LearnableMoves {
 	constructor(private readonly groups: MoveGroup[]) {}
+
+	static readonly groups = {
+		LearnableCurrent: "Learnable at Current Level",
+		LearnableLater: "Learnable at Later Levels",
+		TMs: "TMs",
+		Egg: "Egg Moves",
+		Other: "All Other Moves",
+	} as const
 
 	nonemptyGroups(): MoveGroup[] {
 		return this.groups.filter((it) => it.moves.length > 0)
@@ -49,11 +58,11 @@ export class LearnableMoves {
 
 		const eggMoves = species.moves.data.egg?.toSorted(alphabetize) ?? []
 
-		const learnableNowGroup = createGroup("Learnable at Current Level")
-		const learnableLaterGroup = createGroup("Learnable at Later Levels")
-		const tmMovesGroup = createGroup("TMs")
-		const eggMovesGroup = createGroup("Egg Moves")
-		const otherMovesGroup = createGroup("All Other Moves")
+		const learnableNowGroup = createGroup(LearnableMoves.groups.LearnableCurrent)
+		const learnableLaterGroup = createGroup(LearnableMoves.groups.LearnableLater)
+		const tmMovesGroup = createGroup(LearnableMoves.groups.TMs)
+		const eggMovesGroup = createGroup(LearnableMoves.groups.Egg)
+		const otherMovesGroup = createGroup(LearnableMoves.groups.Other)
 
 		moves.forEach((move) => {
 			const addTo = []
@@ -79,6 +88,8 @@ export class LearnableMoves {
 				otherMovesGroup.moves.push(move)
 			}
 		})
+
+		tmMovesGroup.moves.sort(byNumber)
 
 		return new LearnableMoves([
 			learnableNowGroup,

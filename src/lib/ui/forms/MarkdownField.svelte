@@ -9,7 +9,7 @@
 	const dispatch = createEventDispatcher()
 
 	export let label: string
-	export let value: string
+	export let value: string | undefined
 	export let name: string | undefined = undefined
 	export let disabled: boolean = false
 	export let placeholder: string = ""

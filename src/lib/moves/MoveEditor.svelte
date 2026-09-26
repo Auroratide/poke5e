@@ -1,4 +1,4 @@
-<script lang="ts" context="module">
+<script lang="ts" module>
 	export const getMoveFieldName = (id: string) => `move-id-${id}`
 </script>
 
@@ -15,18 +15,35 @@
 	import { LearnableMoves } from "./LearnableMoves"
 	import type { Level } from "$lib/dnd/level"
 	import { m } from "$lib/site/i18n"
+	import { MoveOption } from "$lib/pokemon/move-pool"
+	import { Button, VisuallyHidden } from "$lib/ui/elements"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
 
-	export let value: LearnedMove
-	export let species: PokemonSpecies
-	export let level: Level
-	export let disabled: boolean = false
+	let {
+		value = $bindable(),
+		species,
+		level,
+		disabled = false,
+		onremove = () => {},
+	}: {
+		value: LearnedMove,
+		species: PokemonSpecies,
+		level: Level,
+		disabled?: boolean,
+		onremove?: () => void,
+	} = $props()
 
-	$: learnableMoves = LearnableMoves.groupMoves($MovesStore.result ?? [], species, level)
-	$: moveOptions = learnableMoves.nonemptyGroups().map((it) => ({
+	const advancedEditorId = $derived(`advanced-move-editor-${value.id}`)
+	let advancedEditorOpen = $state(false)
+
+	const learnableMoves = $derived(LearnableMoves.groupMoves($MovesStore.result ?? [], species, level))
+	const moveOptions = $derived(learnableMoves.nonemptyGroups().map((it) => ({
 		name: it.name,
 		values: it.moves.map((it) => ({ name: it.name, value: it.id })),
-	}))
-	$: moveFieldName = getMoveFieldName(value.id)
+	})))
+	const moveFieldName = $derived(getMoveFieldName(value.id))
+
+	const theMove = $derived($MovesStore.result?.find((it) => it.id === value.moveId))
 
 	const onMoveChange = () => {
 		const pp = $MovesStore.result?.find((it) => it.id === value.moveId)?.pp ?? 0
@@ -36,11 +53,28 @@
 </script>
 
 <div class="move-editor">
-	<Removable on:remove>
-		<SelectField label="{m.move()}" name="{moveFieldName}" bind:value={value.moveId} options={moveOptions} {disabled} on:change={onMoveChange} />
-	</Removable>
-	<IntField label="{m.maxPp()}" name="move-pp-{value.id}" bind:value={value.pp.max} {disabled} />
-	<MarkdownField label="{m.notes()}" name="move-notes-{value.id}" bind:value={value.notes} {disabled} />
+	{#if FeatureToggles.MoveCustomization()}
+		{#if theMove}
+			<MoveOption idPrefix="move-editor" value={theMove}>
+				<Button variant="subtle" controls={advancedEditorId} bind:expanded={advancedEditorOpen}>
+					<span class="smaller">{#if advancedEditorOpen}-{:else}+{/if} Edit</span>
+				</Button>
+				<Button variant="danger" on:click={onremove}>
+					<strong><span aria-hidden="true">-</span><VisuallyHidden inline>{m.remove()}</VisuallyHidden></strong>
+				</Button>
+			</MoveOption>
+			<div id={advancedEditorId} class="advanced-editor" hidden={!advancedEditorOpen}>
+				<IntField label={m.maxPp()} name="move-pp-{value.id}" bind:value={value.pp.max} {disabled} />
+				<MarkdownField label={m.notes()} name="move-notes-{value.id}" bind:value={value.notes} {disabled} />
+			</div>
+		{/if}
+	{:else}
+		<Removable on:remove={onremove}>
+			<SelectField label={m.move()} name={moveFieldName} bind:value={value.moveId} options={moveOptions} {disabled} on:change={onMoveChange} />
+		</Removable>
+		<IntField label={m.maxPp()} name="move-pp-{value.id}" bind:value={value.pp.max} {disabled} />
+		<MarkdownField label={m.notes()} name="move-notes-{value.id}" bind:value={value.notes} {disabled} />
+	{/if}
 </div>
 
 <style>
@@ -48,5 +82,20 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.5em;
+	}
+
+	.advanced-editor {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
+		padding: 0 0.5em 1em;
+	}
+
+	.advanced-editor[hidden] {
+		display: none;
+	}
+
+	.smaller {
+		font-size: var(--font-sz-venus);
 	}
 </style>

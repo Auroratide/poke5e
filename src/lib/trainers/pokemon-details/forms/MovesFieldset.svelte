@@ -1,12 +1,16 @@
 <script lang="ts">
 	import type { PokemonSpecies } from "$lib/poke5e/species"
-	import { Button } from "$lib/ui/elements"
+	import { Button, Details, VisuallyHidden } from "$lib/ui/elements"
 	import { Fieldset, focusInputField } from "$lib/ui/forms"
 	import MoveEditor, { getMoveFieldName } from "$lib/moves/MoveEditor.svelte"
 	import { MovesStore } from "$lib/moves/store"
 	import type { LearnedMove } from "$lib/trainers/types"
 	import type { Level } from "$lib/dnd/level"
 	import { m } from "$lib/site/i18n"
+	import { LearnableMoves } from "$lib/moves/LearnableMoves"
+	import { MoveOption } from "$lib/pokemon/move-pool"
+	import { FeatureToggles } from "$lib/site/FeatureToggles"
+	import type { Move } from "$lib/moves/Move"
 
 	export let values: LearnedMove[]
 	export let species: PokemonSpecies
@@ -37,14 +41,65 @@
 
 		focusInputField(getMoveFieldName(nextId))
 	}
+
+	const addSpecificMove = (move: Move) => () => {
+		const nextId = nextNewMoveId()
+
+		values = [...values, {
+			id: nextId,
+			moveId: move.id,
+			pp: {
+				current: move.pp,
+				max: move.pp,
+			},
+			notes: "",
+		} ]
+	}
+
+	$: learnableMoves = LearnableMoves.groupMoves($MovesStore.result ?? [], species, level)
 </script>
 
 <Fieldset title="{m.moves()}">
-	{#each values as move (move.id)}
-		<MoveEditor value={move} {species} {disabled} on:remove={removeMove(move.id)} {level} />
+	{#if FeatureToggles.MoveCustomization()}
+		<div>
+			<p><strong>Known Moves</strong></p>
+			<div class="move-list">
+				{#each values as move (move.id)}
+						<MoveEditor value={move} {species} {disabled} onremove={removeMove(move.id)} {level} />
+				{/each}
+			</div>
+		</div>
 		<hr />
-	{/each}
-	<Button on:click={addMove}>{m.addMove()}</Button>
+		<div>
+			<Details title="Add Moves">
+				{#each learnableMoves.nonemptyGroups() as group}
+					{#if group.name !== LearnableMoves.groups.Other}
+						<div class="move-group">
+							<p style:margin-top="1em"><strong>{group.name}</strong></p>
+							<div class="move-list">
+								{#each group.moves as move}
+									{#if !values.map((it) => it.moveId).includes(move.id)}
+										<MoveOption idPrefix="whatwhat" value={move} useTmName={group.name === LearnableMoves.groups.TMs}>
+											<Button variant="success" on:click={addSpecificMove(move)}>
+												<strong><span aria-hidden="true">+</span><VisuallyHidden inline>{m.add()}</VisuallyHidden></strong>
+											</Button>
+										</MoveOption>
+									{/if}
+								{/each}
+							</div>
+						</div>
+					{/if}
+				{/each}
+			</Details>
+		</div>
+	{:else}
+		{#each values as move (move.id)}
+			<MoveEditor value={move} {species} {disabled} onremove={removeMove(move.id)} {level} />
+			<hr />
+		{/each}
+		<Button on:click={addMove}>{m.addMove()}</Button>
+	{/if}
+
 </Fieldset>
 
 <style>
@@ -54,5 +109,15 @@
 		background: none;
 		border: none;
 		border-block-end: 0.0625em dotted var(--skin-bg);
+	}
+
+	.move-group {
+		margin-block-end: 1.75em;
+	}
+
+	.move-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5em;
 	}
 </style>
