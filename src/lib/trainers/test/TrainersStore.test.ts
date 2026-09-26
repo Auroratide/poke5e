@@ -6,6 +6,7 @@ import * as list from "$lib/utils/list"
 import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import { TrainerLocalStorage } from "../data/TrainerLocalStorage"
 import { TagList } from "$lib/poke5e/tags"
+import { LearnedMove } from "$lib/moves/learned"
 
 const trainerDraft = (name: string) => ({
 	name: name,
@@ -271,15 +272,11 @@ describe("update.pokemon", () => {
 		// when: moves are set
 		await get(store).update.moveset({
 			...pokemon,
-			moves: [ {
+			moves: [ LearnedMove.create({
 				id: "unsaved",
 				moveId: "tackle",
-				pp: {
-					current: 10,
-					max: 10,
-				},
-				notes: "",
-			} ],
+				pp: 10,
+			}) ],
 		})
 
 		// then: the store holds the saved moveset

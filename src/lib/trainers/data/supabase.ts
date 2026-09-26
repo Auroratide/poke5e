@@ -36,6 +36,10 @@ import { TagList } from "$lib/poke5e/tags"
 import { TransferCode } from "../pokemon-transfer"
 import { Token } from "$lib/dnd/token"
 import type { LearnedMove } from "$lib/moves/learned"
+import { MoveTime } from "$lib/moves/time"
+import { MoveType } from "$lib/moves/type"
+import { MoveRange } from "$lib/moves/range"
+import { MoveDuration } from "$lib/moves/duration"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
 
@@ -914,6 +918,17 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 			_pp_max: move.pp.max,
 			_notes: move.notes,
 			_rank: index,
+			_to_hit_modifier: move.modifiers.toHit,
+			_damage_modifier: move.modifiers.damage,
+			_save_dc_modifier: move.modifiers.saveDc,
+			_custom_type: move.customization.type ?? null,
+			_custom_powers: move.customization.powers ?? null,
+			_custom_time: move.customization.time?.unit ?? null,
+			_custom_duration_unit: move.customization.duration?.unit ?? null,
+			_custom_duration_value: move.customization.duration?.value ?? null,
+			_custom_concentration: move.customization.duration?.concentration ?? null,
+			_custom_range_type: move.customization.range?.type ?? null,
+			_custom_range_value: (move.customization.range?.type === "melee" ? move.customization.range?.reach?.value : move.customization.range?.type === "distance" ? move.customization.range?.value : undefined) ?? null,
 		}),
 	})
 
@@ -1571,6 +1586,17 @@ type MoveRow = {
 	pp_cur: number,
 	pp_max: number,
 	notes: string | undefined,
+	to_hit_modifier: number,
+	damage_modifier: number,
+	save_dc_modifier: number,
+	custom_type: string | null,
+	custom_powers: string[] | null,
+	custom_time: string | null,
+	custom_duration_unit: string | null,
+	custom_duration_value: number | null,
+	custom_concentration: boolean | null,
+	custom_range_type: string | null,
+	custom_range_value: number | null,
 }
 
 const rowToMove = (row: MoveRow): LearnedMove => ({
@@ -1581,6 +1607,18 @@ const rowToMove = (row: MoveRow): LearnedMove => ({
 		max: row.pp_max,
 	},
 	notes: row.notes,
+	modifiers: {
+		toHit: row.to_hit_modifier ?? 0,
+		damage: row.damage_modifier ?? 0,
+		saveDc: row.save_dc_modifier ?? 0,
+	},
+	customization: {
+		type: MoveType.isMoveType(row.custom_type) ? row.custom_type : undefined,
+		powers: Array.isArray(row.custom_powers) ? row.custom_powers.filter((it) => Attributes.isAttribute(it)) : undefined,
+		time: MoveTime.isMoveTimeUnit(row.custom_time) ? { unit: row.custom_time } : undefined,
+		duration: MoveDuration.fromTypeAndValue(row.custom_duration_unit ?? "", row.custom_duration_value, row.custom_concentration),
+		range: MoveRange.fromTypeAndValue(row.custom_range_type ?? "", row.custom_range_value),
+	},
 })
 
 type HeldItemRow = {

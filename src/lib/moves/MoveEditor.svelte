@@ -66,6 +66,9 @@
 			<div id={advancedEditorId} class="advanced-editor" hidden={!advancedEditorOpen}>
 				<IntField label={m.maxPp()} name="move-pp-{value.id}" bind:value={value.pp.max} {disabled} />
 				<MarkdownField label={m.notes()} name="move-notes-{value.id}" bind:value={value.notes} {disabled} />
+				<IntField label="To Hit Modifier" name="move-tohit-{value.id}" bind:value={value.modifiers.toHit} {disabled} />
+				<IntField label="Damage Modifier" name="move-damage-{value.id}" bind:value={value.modifiers.damage} {disabled} />
+				<IntField label="Save DC Modifier" name="move-savedc-{value.id}" bind:value={value.modifiers.saveDc} {disabled} />
 			</div>
 		{/if}
 	{:else}
@@ -87,7 +90,7 @@
 	.advanced-editor {
 		display: flex;
 		flex-direction: column;
-		gap: 0.5em;
+		gap: 1em;
 		padding: 0 0.5em 1em;
 	}
 

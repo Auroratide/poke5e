@@ -6,7 +6,7 @@ import type { WithWriteKey } from "$lib/trainers/types"
 import { experienceAwarded } from "../experience"
 import type { Move } from "$lib/moves/Move"
 import { Nature } from "$lib/pokemon/nature"
-import type { LearnedMove } from "$lib/moves/learned"
+import { LearnedMove } from "$lib/moves/learned"
 
 export type EncounterActor = {
 	data: PokemonSpecies,
@@ -184,15 +184,11 @@ export const Encounter = {
 				const chosenMoves = MovesetGenerator.chooseMoves(pokemon.data.moves, targetLevel)
 				const learnedMoves: LearnedMove[] = chosenMoves.map((it) => {
 					const matchingMove = possibleMoves?.find((moveData) => it === moveData.id)
-					return {
+					return LearnedMove.create({
 						id: "",
 						moveId: it,
-						pp: {
-							current: matchingMove?.pp ?? 5,
-							max: matchingMove?.pp ?? 5,
-						},
-						notes: "",
-					}
+						pp: matchingMove?.pp ?? 5,
+					})
 				})
 
 				const updatedMoveset = await trainerProvider.updateMoveset(trainer.writeKey, trainer.info.readKey, added.id, learnedMoves)

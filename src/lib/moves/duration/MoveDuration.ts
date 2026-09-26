@@ -26,6 +26,21 @@ export const MoveDuration = {
 		value: json.value,
 		concentration: json.concentration ?? false,
 	}),
+	fromTypeAndValue: (unit: string, value?: number, concentration?: boolean): MoveDuration | undefined => {
+		if (unit === "round" || unit === "minute" && value != null) {
+			return {
+				unit: unit,
+				value: value,
+				concentration: concentration ?? false,
+			}
+		}
+
+		if (unit === "instantaneous" || unit === "varies") {
+			return { unit, concentration: concentration ?? false }
+		}
+
+		return undefined
+	},
 	display: (duration: MoveDuration): string => {
 		const unit = displayUnit(duration)
 		return duration.concentration ? m.concentrationUpTo({ value: unit }) : unit

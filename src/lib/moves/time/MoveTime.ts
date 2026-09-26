@@ -22,6 +22,7 @@ export const MoveTime = {
 		name: () => m.reaction(),
 	} ],
 	is: (time: MoveTime, unit: string): boolean => time.unit === unit,
+	isMoveTimeUnit: (unit: string): unit is MoveTimeUnit => unit === "action" || unit === "bonus action" || unit === "reaction",
 	display: (time: MoveTime) => {
 		switch (time.unit) {
 		case "action": return m.action()

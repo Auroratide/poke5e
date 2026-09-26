@@ -32,6 +32,31 @@ const displayDistance = (distance: Distance): string => {
 
 export const MoveRange = {
 	fromJson: (json: MoveJson["range"]): MoveRange => json,
+	fromTypeAndValue: (type: string, value?: number): MoveRange | undefined => {
+		if (type === "distance" && value != null) {
+			return {
+				type: "distance",
+				value: value,
+				unit: "feet",
+			}
+		}
+
+		if (type === "melee" && value != null) {
+			return {
+				type: "melee",
+				reach: {
+					value: value,
+					unit: "feet",
+				},
+			}
+		}
+
+		if (type === "melee" || type === "self" || type === "varies") {
+			return { type }
+		}
+
+		return undefined
+	},
 	/**
 	 * How far the move reaches, for the sake of filtering. A self move covers
 	 * whatever its area of effect covers.

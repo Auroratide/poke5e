@@ -10,7 +10,7 @@
 	import { MoveOption } from "$lib/pokemon/move-pool"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import type { Move } from "$lib/moves/Move"
-	import type { LearnedMove } from "$lib/moves/learned"
+	import { LearnedMove } from "$lib/moves/learned"
 
 	export let values: LearnedMove[]
 	export let species: PokemonSpecies
@@ -29,15 +29,11 @@
 		const pp = $MovesStore.result?.find((it) => it.id === newMove)?.pp ?? 20
 		const nextId = nextNewMoveId()
 
-		values = [...values, {
+		values = [...values, LearnedMove.create({
 			id: nextId,
-			moveId: species?.moves?.data?.start?.[0] ?? "tackle",
-			pp: {
-				current: pp,
-				max: pp,
-			},
-			notes: "",
-		} ]
+			moveId: newMove,
+			pp: pp,
+		})]
 
 		focusInputField(getMoveFieldName(nextId))
 	}
@@ -45,15 +41,11 @@
 	const addSpecificMove = (move: Move) => () => {
 		const nextId = nextNewMoveId()
 
-		values = [...values, {
+		values = [...values, LearnedMove.create({
 			id: nextId,
 			moveId: move.id,
-			pp: {
-				current: move.pp,
-				max: move.pp,
-			},
-			notes: "",
-		} ]
+			pp: move.pp,
+		})]
 	}
 
 	$: learnableMoves = LearnableMoves.groupMoves($MovesStore.result ?? [], species, level)
@@ -65,7 +57,7 @@
 			<p><strong>Known Moves</strong></p>
 			<div class="move-list">
 				{#each values as move (move.id)}
-						<MoveEditor value={move} {species} {disabled} onremove={removeMove(move.id)} {level} />
+					<MoveEditor value={move} {species} {disabled} onremove={removeMove(move.id)} {level} />
 				{/each}
 			</div>
 		</div>

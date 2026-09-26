@@ -2,6 +2,66 @@ import { test, expect, describe } from "vitest"
 import { MoveRange } from "../MoveRange"
 import type { MoveShape } from "$lib/moves/shape"
 
+describe("fromTypeAndValue", () => {
+	test("melee", () => {
+		const result = MoveRange.fromTypeAndValue("melee")
+
+		expect(result).toEqual({
+			type: "melee",
+		})
+	})
+
+	test("melee, reach", () => {
+		const result = MoveRange.fromTypeAndValue("melee", 10)
+
+		expect(result).toEqual({
+			type: "melee",
+			reach: {
+				value: 10,
+				unit: "feet",
+			},
+		})
+	})
+
+	test("distance", () => {
+		const result = MoveRange.fromTypeAndValue("distance", 30)
+
+		expect(result).toEqual({
+			type: "distance",
+			value: 30,
+			unit: "feet",
+		})
+	})
+
+	test("distance, no value", () => {
+		const result = MoveRange.fromTypeAndValue("distance")
+
+		expect(result).toBeUndefined()
+	})
+
+	test("self", () => {
+		const result = MoveRange.fromTypeAndValue("self")
+
+		expect(result).toEqual({
+			type: "self",
+		})
+	})
+
+	test("varies", () => {
+		const result = MoveRange.fromTypeAndValue("varies")
+
+		expect(result).toEqual({
+			type: "varies",
+		})
+	})
+
+	test("invalid type", () => {
+		const result = MoveRange.fromTypeAndValue("invalid")
+
+		expect(result).toBeUndefined()
+	})
+})
+
 describe("display", () => {
 	test("melee", () => {
 		const range: MoveRange = {

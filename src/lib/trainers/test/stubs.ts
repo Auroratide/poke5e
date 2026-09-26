@@ -25,6 +25,12 @@ export function stubLearnedMove(template: Partial<LearnedMove> = {}): LearnedMov
 			max: 10,
 		},
 		notes: "",
+		modifiers: {
+			toHit: 0,
+			damage: 0,
+			saveDc: 0,
+		},
+		customization: {},
 		...template,
 	}
 }
