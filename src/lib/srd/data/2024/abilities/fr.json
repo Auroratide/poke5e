@@ -1527,7 +1527,7 @@
 		{
 			"id": "wonder-skin",
 			"name": "Peau Miracle",
-			"description": "Ce Pokémon à avantage sur les jets de sauvegarde contre les conditions brûlure, gelée, empoisonnement ou paralysie."
+			"description": "Ce Pokémon à avantage sur les jets de sauvegarde contre les conditions brûlure, gelée, empoisonnement, paralysie ou sommeil."
 		},
 		{
 			"id": "zen-mode",

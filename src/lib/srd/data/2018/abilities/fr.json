@@ -19,6 +19,11 @@
 		{
 			"id": "sweet-veil",
 			"description": "Les alliés de ce Pokémon à 15 pieds sont immunisés au statut sommeil."
+		},
+		{
+			"id": "wonder-skin",
+			"name": "Peau Miracle",
+			"description": "Ce Pokémon à avantage sur les jets de sauvegarde contre les conditions brûlure, gelée, empoisonnement ou paralysie."
 		}
 	]
 }

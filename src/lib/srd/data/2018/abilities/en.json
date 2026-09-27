@@ -24,6 +24,10 @@
 			"id": "sweet-veil",
 			"description": "Any ally within 15 feet of this Pokémon is immune to the sleep condition.",
 			"updated": null
+		},
+		{
+			"id": "wonder-skin",
+			"description": "This Pokémon has advantage on all saving throws against being burned, frozen, poisoned, or paralyzed."
 		}
 	]
 }

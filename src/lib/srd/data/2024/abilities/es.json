@@ -1622,7 +1622,7 @@
 		{
 			"id": "wonder-skin",
 			"name": "Piel Milagro",
-			"description": "Este Pokémon tiene ventaja en todas las tiradas de salvación contra quemaduras, congelamiento, envenenamiento o parálisis."
+			"description": "Este Pokémon tiene ventaja en todas las tiradas de salvación contra quemaduras, congelamiento, envenenamiento, parálisis o dormido."
 		},
 		{
 			"id": "zen-mode",

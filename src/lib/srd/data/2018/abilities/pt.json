@@ -18,6 +18,10 @@
 			"id": "sweet-veil",
 			"name": "Véu Doce",
 			"description": "Aliados são imunes a sono."
+		},
+		{
+			"id": "wonder-skin",
+			"description": "Este Pokémon tem vantagem em todos os testes de resistência contra queimadura, congelamento, envenenamento ou paralisia."
 		}
 	]
 }

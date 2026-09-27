@@ -1337,7 +1337,7 @@
 		{
 			"id": "wonder-skin",
 			"name": "Pele Maravilhosa",
-			"description": "Este Pokémon tem vantagem em todos os testes de resistência contra queimadura, congelamento, envenenamento ou paralisia."
+			"description": "Este Pokémon tem vantagem em todos os testes de resistência contra queimadura, congelamento, envenenamento, paralisia ou adormecido."
 		},
 		{
 			"id": "zen-mode",
