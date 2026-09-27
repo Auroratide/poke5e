@@ -383,6 +383,12 @@
 			"updated": null
 		},
 		{
+			"id": "snore",
+			"save": null,
+			"description": "This move is usable while Asleep, and only while Asleep. Create a harsh noise that damages all creatures within range for {dice} {type} damage.",
+			"updated": null
+		},
+		{
 			"id": "solar-beam",
 			"dice": {
 				"class": "150",

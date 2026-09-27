@@ -3744,7 +3744,7 @@
 		{
 			"id": "snore",
 			"name": "Ronquido",
-			"description": "Mientras estás dormido, puedes activar este movimiento para emitir un ruido estridente que inflige {dice} de daño de tipo {type} a todas las criaturas a tu alcance."
+			"description": "Mientras estás dormido, puedes activar este movimiento para emitir un ruido estridente que inflige {dice} de daño de tipo {type} a todas las criaturas a tu alcance. Una criatura que reciba cualquiera de estos daños debe superar una {save} o se estremecerá."
 		},
 		{
 			"id": "snowscape",

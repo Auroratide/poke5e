@@ -19653,10 +19653,17 @@
 				"modifier": "MOVE",
 				"type": "damage"
 			},
-			"description": "This move is usable while Asleep, and only while Asleep. Create a harsh noise that damages all creatures within range for {dice} {type} damage.",
+			"save": {
+				"attribute": "con"
+			},
+			"description": "This move is usable while Asleep, and only while Asleep. Create a harsh noise that damages all creatures within range for {dice} {type} damage. A creature that takes any of this damage must succeed on a {save} or it flinches.",
 			"categories": [
 				"sound"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "Added flinch chance."
+			}
 		},
 		{
 			"id": "snowscape",
