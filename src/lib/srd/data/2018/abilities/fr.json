@@ -9,6 +9,10 @@
 			"description": "Les alliés de ce Pokémon dans un rayon de 15 pieds ne peuvent être affligés de nouveux statutsé"
 		},
 		{
+			"id": "prankster",
+			"description": "Une fois par repos court, si ce Pokémon planifie utiliser une capacité affectant ou infligeant un statut, il peut se déplacer à la première position de l'initiative pour ce tour."
+		},
+		{
 			"id": "serene-grace",
 			"description": "Le degré de difficulté des jets de sauvegarde causés par les capacités de ce Pokémon est augmenté de 1."
 		},

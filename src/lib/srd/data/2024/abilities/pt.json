@@ -697,8 +697,7 @@
 		},
 		{
 			"id": "prankster",
-			"name": "Travessura",
-			"description": "Uma vez por descanso curto, este Pokémon pode ir para o topo da ordem de iniciativa em uma rodada, mas deve usar um movimento de status no turno."
+			"name": "Travessura"
 		},
 		{
 			"id": "pressure",

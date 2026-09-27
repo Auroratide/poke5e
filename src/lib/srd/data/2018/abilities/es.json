@@ -9,6 +9,10 @@
 			"description": "Cualquier aliado de tipo Planta a 15 pies o menos de este Pokémon es inmune a nuevos efectos de estado."
 		},
 		{
+			"id": "prankster",
+			"description": "Una vez por descanso corto, este Pokémon puede pasar al primer lugar del orden de iniciativa en una sola ronda, pero debe usar un Movimiento de Estado en su turno."
+		},
+		{
 			"id": "serene-grace",
 			"description": "La CD para superar una tirada de salvación contra un movimiento de este Pokémon aumenta en 1."
 		},

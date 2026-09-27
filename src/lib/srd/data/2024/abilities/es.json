@@ -987,8 +987,7 @@
 		},
 		{
 			"id": "prankster",
-			"name": "Bromista",
-			"description": "Una vez por descanso corto, este Pokémon puede pasar al primer lugar del orden de iniciativa en una sola ronda, pero debe usar un Movimiento de Estado en su turno."
+			"name": "Bromista"
 		},
 		{
 			"id": "pressure",

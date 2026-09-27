@@ -6,6 +6,10 @@
 			"description": "Qualquer aliado a até 15 pés deste Pokémon passa automaticamente em qualquer teste de resistência de SAB que precise realizar."
 		},
 		{
+			"id": "prankster",
+			"description": "Uma vez por descanso curto, este Pokémon pode ir para o topo da ordem de iniciativa em uma rodada, mas deve usar um movimento de status no turno."
+		},
+		{
 			"id": "serene-grace",
 			"name": "Graça Serena",
 			"description": "A CD de testes de resistência contra movimentos deste Pokémon aumenta em 1."

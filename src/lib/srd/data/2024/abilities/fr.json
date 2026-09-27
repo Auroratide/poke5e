@@ -892,8 +892,7 @@
 		},
 		{
 			"id": "prankster",
-			"name": "Farceur",
-			"description": "Une fois par repos court, si ce Pokémon planifie utiliser une capacité affectant ou infligeant un statut, il peut se déplacer à la première position de l'initiative pour ce tour."
+			"name": "Farceur"
 		},
 		{
 			"id": "pressure",

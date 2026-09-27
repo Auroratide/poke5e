@@ -11,6 +11,11 @@
 			"updated": null
 		},
 		{
+			"id": "prankster",
+			"description": "Once per short rest, this Pokémon can move to the top of initiative order in a single round, but must use a status-affecting move on its turn.",
+			"updated": null
+		},
+		{
 			"id": "serene-grace",
 			"description": "The Move DC to pass a saving throw against one of this Pokémon's moves is increased by 1.",
 			"updated": null
