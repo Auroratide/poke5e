@@ -1,15 +1,13 @@
 <script lang="ts">
-	import { Button } from "$lib/ui/elements"
-	import { Details } from "$lib/ui/elements"
-	import { FormGroup, SelectField } from "$lib/ui/forms"
-	import { VisuallyHidden } from "$lib/ui/elements"
-	import { Attributes, type Attribute } from "$lib/dnd/attributes"
-	import { MoveFilter } from "$lib/moves/MoveFilter"
-	import { PokemonType, type PokeType } from "$lib/pokemon/types"
-	import MoveOption from "./MoveOption.svelte"
-	import SearchAndFilterField from "./SearchAndFilterField.svelte"
+	import { type Attribute } from "$lib/dnd/attributes"
+	import { MoveSearchAndFilter } from "$lib/moves/form"
 	import type { Move } from "$lib/moves/Move"
+	import { MoveFilter } from "$lib/moves/MoveFilter"
+	import { type PokeType } from "$lib/pokemon/types"
 	import { m } from "$lib/site/i18n"
+	import { Button, Details, VisuallyHidden } from "$lib/ui/elements"
+	import { FormGroup } from "$lib/ui/forms"
+	import MoveOption from "./MoveOption.svelte"
 
 	export let title: string
 	export let values: string[]
@@ -44,24 +42,6 @@
 		.power(powerFilter)
 		.not(values)
 	$: filteredMoves = (nameFilter === "" && typeFilter === "" && powerFilter === "") ? [] : moves.filter(moveFilter.apply)
-
-	const countActiveFilters = (...filters: string[]) => filters.reduce((sum, cur) => sum + (cur === "" ? 0 : 1), 0)
-
-	const typeOptions = [ {
-		name: `- ${m.any()} -`,
-		value: "",
-	} ].concat(PokemonType.list.map((it) => ({
-		name: it,
-		value: it,
-	})))
-
-	const movePowerOptions = [ {
-		name: `- ${m.any()} -`,
-		value: "",
-	} ].concat(Attributes.list.map((it) => ({
-		name: it.name,
-		value: it.abbr,
-	})))
 </script>
 
 {#if options.length > 0}
@@ -82,10 +62,15 @@
 		{/if}
 
 		<Details title={m.addMoves()}>
-			<SearchAndFilterField name="{id}-search" label={m.findMoveToAdd()} bind:value={nameFilter} {disabled} matches={filteredMoves.length} placeholder="{m.eG()} Power Split" activeFilters={countActiveFilters(typeFilter, powerFilter)}>
-				<SelectField name="{id}-type-filter" label={m.type()} options={typeOptions} bind:value={typeFilter} />
-				<SelectField name="{id}-move-power-filter" label={m.power()} options={movePowerOptions} bind:value={powerFilter} />
-			</SearchAndFilterField>
+			<MoveSearchAndFilter
+				idPrefix="moves-to-add"
+				label={m.findMoveToAdd()}
+				matches={filteredMoves.length}
+				bind:nameFilter={nameFilter}
+				bind:typeFilter={typeFilter}
+				bind:powerFilter={powerFilter}
+				{disabled}
+			/>
 			<ul class="scrollable">
 				{#each filteredMoves as move (move.id)}
 					<li>
