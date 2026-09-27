@@ -98,13 +98,20 @@
 							<p style:margin-top="1em"><strong>{group.name}</strong></p>
 							<div class="move-list">
 								{#each group.moves as move}
-									{#if !values.map((it) => it.moveId).includes(move.id)}
+									{@const isAdded = values.map((it) => it.moveId).includes(move.id)}
+									<div class="move-option" class:added={isAdded}>
 										<MoveOption idPrefix="moves-to-add" value={move} useTmName={group.name === LearnableMoves.groups.TMs}>
-											<Button variant="success" on:click={addSpecificMove(move)}>
-												<strong><span aria-hidden="true">+</span><VisuallyHidden inline>{m.add()}</VisuallyHidden></strong>
-											</Button>
+											{#if isAdded}
+												<Button variant="subtle" disabled>
+													<span class="smaller">Added</span>
+												</Button>
+											{:else}
+												<Button variant="success" on:click={addSpecificMove(move)}>
+													<strong><span aria-hidden="true">+</span><VisuallyHidden inline>{m.add()}</VisuallyHidden></strong>
+												</Button>
+											{/if}
 										</MoveOption>
-									{/if}
+									</div>
 								{/each}
 							</div>
 						</div>
@@ -140,4 +147,6 @@
 		flex-direction: column;
 		gap: 0.5em;
 	}
+
+	.smaller { font-size: var(--font-sz-venus); }
 </style>
