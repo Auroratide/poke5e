@@ -19,7 +19,6 @@ export default [
 		files: ["**/*.svelte", "**/*.svelte.js", "**/*.svelte.ts"],
 		languageOptions: {
 			parserOptions: {
-				projectService: true,
 				extraFileExtensions: [".svelte"],
 				parser: typescript.parser,
 				svelteConfig,
