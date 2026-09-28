@@ -15,6 +15,11 @@
 			"description": "Você invoca uma infestação de pequenos insetos para atacar uma criatura por múltiplos turnos. Faça um ataque à distância no alvo. Em caso de acerto, o alvo sofre {dice} de dano de {type} e fica infestado por enxames. Enquanto você mantiver a concentração, o alvo sofre 1d8 de dano de {type} adicional ao final de cada um de seus próximos três turnos."
 		},
 		{
+			"id": "roost",
+			"name": "Roost",
+			"description": "Você pousa no chão para descansar seu corpo. Ao ativar este movimento, sua velocidade de voo se torna zero e você perde o tipo voador enquanto permanecer no solo. No início do seu próximo turno, se não tiver deixado o chão, recupere {dice} de pontos de vida."
+		},
+		{
 			"id": "snore",
 			"description": "Enquanto você estiver dormindo, você pode ativar este movimento para criar um som estrondoso que causa dano a todas as criaturas em alcance de {dice} de dano {type}."
 		},

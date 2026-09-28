@@ -18,6 +18,10 @@
 			"description": "Invocas una plaga de diminutos insectos para atacar a una criatura durante varios turnos. Realiza un ataque a distancia contra un objetivo. Si impactas, inflige {dice} de daño de tipo {type} y el objetivo queda infestado por el enjambre. Mientras mantengas la concentración, el objetivo recibe 1d8 de daño de tipo {type} adicional al final de cada uno de sus siguientes tres turnos."
 		},
 		{
+			"id": "roost",
+			"description": "Te posas en el suelo para descansar tu cuerpo. Al activarlo, tu velocidad de vuelo se reduce a cero y pierdes tu tipo Volador mientras permanezcas en el suelo. Al comienzo de tu próximo turno, si no has abandonado el suelo, recuperas {dice} puntos de salud."
+		},
+		{
 			"id": "snore",
 			"description": "Mientras estás dormido, puedes activar este movimiento para emitir un ruido estridente que inflige {dice} de daño de tipo {type} a todas las criaturas a tu alcance."
 		},

@@ -17558,25 +17558,22 @@
 			},
 			"pp": 5,
 			"duration": {
-				"unit": "round",
-				"value": 1
+				"unit": "instantaneous"
 			},
 			"range": {
 				"type": "self"
 			},
-			"description": "You land on the ground to rest your body. When activated, your flying speed decreases to zero, and you lose your flying type for as long as you remain on the ground. At the beginning of your next turn, if you have not left the ground, recover {dice} hit points.",
+			"description": "You land on the ground to rest your body. When you activate this move, your Fly Speed becomes 0 until the start of your next turn, and you recover {dice} hit points. In addition, you lose your Flying type when you land, and do not regain it for as long as you remain on the ground.",
 			"dice": {
-				"class": "custom",
-				"tiers": [
-					"2d6",
-					"3d6",
-					"5d6",
-					"8d6"
-				],
+				"class": "110",
 				"modifier": "MOVE",
 				"type": "healing"
 			},
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Healing applies immediately, and amount is buffed."
+			}
 		},
 		{
 			"id": "rototiller",
