@@ -1,1 +1,1 @@
-{"id":"prankster","name":"Prankster","description":"Once per short rest, this Pokémon can move to the top of initiative order in a single round, but must use a status-affecting move on its turn."}
+{"id":"prankster","name":"Prankster","description":"Once per short rest, when a round begins during combat, this Pokémon can choose to take its turn this round before any other creatures; when it does, it cannot use any damaging Moves against other creatures during that turn.","updated":{"tag":"Updated","details":"Uses 5.5e terminology more consistently."}}

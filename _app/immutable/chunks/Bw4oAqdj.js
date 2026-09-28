@@ -1,0 +1,1 @@
+var e={abilityScoresHasOptions:e=>Array.isArray(e[0])};export{e as t};
