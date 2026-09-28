@@ -9,6 +9,10 @@
 			"description": "Les alliés de ce Pokémon dans un rayon de 15 pieds ne peuvent être affligés de nouveux statutsé"
 		},
 		{
+			"id": "guts",
+			"description": "Les effets négatifs des statuts brûlure et empoisonnement n'ont pas d'effets sur ce Pokémon. Seul les dégâts à la fin de ses tours l'affecte."
+		},
+		{
 			"id": "prankster",
 			"description": "Une fois par repos court, si ce Pokémon planifie utiliser une capacité affectant ou infligeant un statut, il peut se déplacer à la première position de l'initiative pour ce tour."
 		},

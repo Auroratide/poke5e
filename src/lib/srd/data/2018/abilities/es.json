@@ -9,6 +9,10 @@
 			"description": "Cualquier aliado de tipo Planta a 15 pies o menos de este Pokémon es inmune a nuevos efectos de estado."
 		},
 		{
+			"id": "guts",
+			"description": "Cuando este Pokémon está envenenado o quemado, no se ve afectado por los efectos de desventaja ni reducción de daño de estos estados. Sigue recibiendo daño al final de cada uno de sus turnos."
+		},
+		{
 			"id": "prankster",
 			"description": "Una vez por descanso corto, este Pokémon puede pasar al primer lugar del orden de iniciativa en una sola ronda, pero debe usar un Movimiento de Estado en su turno."
 		},

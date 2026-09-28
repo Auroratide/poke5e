@@ -528,7 +528,7 @@
 		{
 			"id": "guts",
 			"name": "Agallas",
-			"description": "Cuando este Pokémon está envenenado o quemado, no se ve afectado por los efectos de desventaja ni reducción de daño de estos estados. Sigue recibiendo daño al final de cada uno de sus turnos."
+			"description": "Cuando este Pokémon está envenenado o quemado, no se ve afectado por los efectos de desventaja ni reducción de daño de estos estados. Sigue recibiendo daño al final de cada uno de sus turnos. Additionally, while it is burned, poisoned, paralyzed, frozen, or asleep, it gains +2 to all attack and damage rolls it makes for moves with a melee attack roll."
 		},
 		{
 			"id": "hadron-engine",

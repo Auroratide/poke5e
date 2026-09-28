@@ -448,7 +448,7 @@
 		{
 			"id": "guts",
 			"name": "Cran",
-			"description": "Les effets négatifs des statuts brûlure et empoisonnement n'ont pas d'effets sur ce Pokémon. Seul les dégâts à la fin de ses tours l'affecte."
+			"description": "Les effets négatifs des statuts brûlure et empoisonnement n'ont pas d'effets sur ce Pokémon. Seul les dégâts à la fin de ses tours l'affecte. Additionally, while it is burned, poisoned, paralyzed, frozen, or asleep, it gains +2 to all attack and damage rolls it makes for moves with a melee attack roll."
 		},
 		{
 			"id": "hadron-engine",

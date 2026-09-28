@@ -6,6 +6,10 @@
 			"description": "Qualquer aliado a até 15 pés deste Pokémon passa automaticamente em qualquer teste de resistência de SAB que precise realizar."
 		},
 		{
+			"id": "guts",
+			"description": "Quando este Pokémon está queimado ou envenenado, ele não sofre os efeitos de desvantagem ou redução de dano. Ele ainda sofre dano ao final de cada turno."
+		},
+		{
 			"id": "prankster",
 			"description": "Uma vez por descanso curto, este Pokémon pode ir para o topo da ordem de iniciativa em uma rodada, mas deve usar um movimento de status no turno."
 		},

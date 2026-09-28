@@ -11,6 +11,11 @@
 			"updated": null
 		},
 		{
+			"id": "guts",
+			"description": "When this Pokémon is burned or poisoned, they are not affected by the disadvantage or reduced damage effects. They still take damage at the end of each of their turns.",
+			"updated": null
+		},
+		{
 			"id": "prankster",
 			"description": "Once per short rest, this Pokémon can move to the top of initiative order in a single round, but must use a status-affecting move on its turn.",
 			"updated": null

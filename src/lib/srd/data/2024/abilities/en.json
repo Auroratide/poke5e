@@ -611,9 +611,13 @@
 		{
 			"id": "guts",
 			"name": "Guts",
-			"description": "When this Pokémon is burned or poisoned, they are not affected by the disadvantage or reduced damage effects. They still take damage at the end of each of their turns."
+			"description": "When this Pokémon is burned or poisoned, they are not affected by the disadvantage or reduced damage effects. They still take damage at the end of each of their turns. Additionally, while it is burned, poisoned, paralyzed, frozen, or asleep, it gains +2 to all attack and damage rolls it makes for moves with a melee attack roll.",
+			"updated": {
+				"tag": "Updated",
+				"details": "Added a damage bonus."
+			}
 		},
-			{
+		{
 			"id": "hadron-engine",
 			"name": "Hadron Engine",
 			"description": "As a bonus action, this Pokémon may change the terrain to electric terrain for 5 rounds; this bonus action may be used twice per short rest. In electric terrain, this Pokémon has advantage on attack rolls using DEX or WIS as the move power."
