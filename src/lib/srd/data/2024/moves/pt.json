@@ -465,8 +465,7 @@
 		},
 		{
 			"id": "bulk-up",
-			"name": "Fortalecimento",
-			"description": "Você se fortalece, aumentando sua adrenalina. Pelo próximo minuto, escolha adicionar +1 às suas jogadas de ataque OU +1 à CA. Este movimento pode ser acumulado até um máximo de +5 para qualquer uma das opções."
+			"name": "Fortalecimento"
 		},
 		{
 			"id": "bulldoze",

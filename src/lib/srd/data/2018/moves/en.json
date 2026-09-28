@@ -52,6 +52,11 @@
 			"updated": null
 		},
 		{
+			"id": "bulk-up",
+			"description": "You pump yourself up, increasing your adrenaline. For the next minute, choose to add +1 to your attack rolls OR +1 to AC. This move can be stacked to a maximum of +5 of the initial choice.",
+			"updated": null
+		},
+		{
 			"id": "constrict",
 			"dice": {
 				"class": "20",
