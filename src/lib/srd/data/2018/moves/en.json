@@ -149,6 +149,11 @@
 			"updated": null
 		},
 		{
+			"id": "helping-hand",
+			"description": "You can use a bonus action on your turn to choose one ally other than yourself within 60 feet of you who can hear you. That ally can add a d6 to one ability check, attack roll, or saving throw it makes within the next 10 minutes, before the result of the roll is called by the DM. An ally being helped can only have one d6 available at a time.",
+			"updated": null
+		},
+		{
 			"id": "high-jump-kick",
 			"dice": {
 				"class": "90",

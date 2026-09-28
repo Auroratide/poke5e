@@ -1,6 +1,10 @@
 {
 	"values": [
 		{
+			"id": "helping-hand",
+			"description": "Você pode usar uma ação bônus no seu turno para escolher um aliado que não seja você e que esteja a até 60 pés de você e possa te ouvir. Esse aliado pode adicionar um d6 a um teste de habilidade, jogada de ataque ou teste de resistência que fizer nos próximos 10 minutos, antes do resultado ser anunciado pelo Mestre. Um aliado que recebe ajuda só pode ter um d6 disponível por vez."
+		},
+		{
 			"id": "infestation",
 			"name": "Infestação",
 			"description": "Você invoca uma infestação de pequenos insetos para atacar uma criatura por múltiplos turnos. Faça um ataque à distância no alvo. Em caso de acerto, o alvo sofre {dice} de dano de {type} e fica infestado por enxames. Enquanto você mantiver a concentração, o alvo sofre 1d8 de dano de {type} adicional ao final de cada um de seus próximos três turnos."

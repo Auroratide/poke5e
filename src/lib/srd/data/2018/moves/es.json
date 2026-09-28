@@ -5,6 +5,10 @@
 			"description": "Invocas una plaga de diminutos insectos para atacar a una criatura durante varios turnos. Realiza un ataque a distancia contra un objetivo. Si impactas, inflige {dice} de daño de tipo {type} y el objetivo queda infestado por el enjambre. Mientras mantengas la concentración, el objetivo recibe 1d8 de daño de tipo {type} adicional al final de cada uno de sus siguientes tres turnos."
 		},
 		{
+			"id": "helping-hand",
+			"description": "Puedes usar una acción adicional en tu turno para elegir a un aliado que no seas tú mismo, que esté a menos de 60 pies de ti y que pueda oírte. Ese aliado puede añadir 1d6 a una prueba de característica, tirada de ataque o tirada de salvación que realice en los próximos 10 minutos, antes de que el DM anuncie el resultado de la tirada. Un aliado ayudado solo puede tener 1d6 disponible a la vez."
+		},
+		{
 			"id": "infestation",
 			"description": "Invocas una plaga de diminutos insectos para atacar a una criatura durante varios turnos. Realiza un ataque a distancia contra un objetivo. Si impactas, inflige {dice} de daño de tipo {type} y el objetivo queda infestado por el enjambre. Mientras mantengas la concentración, el objetivo recibe 1d8 de daño de tipo {type} adicional al final de cada uno de sus siguientes tres turnos."
 		},
