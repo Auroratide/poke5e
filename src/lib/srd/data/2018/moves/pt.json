@@ -1,6 +1,11 @@
 {
 	"values": [
 		{
+			"id": "double-team",
+			"description": "Você cria uma imagem duplicada de si mesmo, a 5 pés ao seu lado. A imagem imita você e tenta enganar seus oponentes para atacá-la.\n\nQuando sujeito a qualquer movimento (ataque ou teste de resistência / com dano ou sem dano) com área de efeito de 5 pés ou menos, role um d4. Em um resultado de 3 ou 4, a imagem absorve o dano e/ou efeitos do ataque e desaparece. Criaturas com Visão Verdadeira ignoram o efeito deste movimento. Se estiver agarrado ou restringido por uma criatura enquanto Dupla Equipe estiver ativa, o movimento não tem efeito.",
+			"optional": "Quando este movimento é usado novamente antes que a duplicata seja consumida, uma duplicata adicional é criada, até um máximo de três.\n\nCom duas duplicatas, o atacante deve rolar 5 ou 6 em um d6 para acertar o alvo. Com três duplicatas, deve rolar 7 ou 8 em um d8."
+		},
+		{
 			"id": "helping-hand",
 			"description": "Você pode usar uma ação bônus no seu turno para escolher um aliado que não seja você e que esteja a até 60 pés de você e possa te ouvir. Esse aliado pode adicionar um d6 a um teste de habilidade, jogada de ataque ou teste de resistência que fizer nos próximos 10 minutos, antes do resultado ser anunciado pelo Mestre. Um aliado que recebe ajuda só pode ter um d6 disponível por vez."
 		},
