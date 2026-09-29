@@ -1,6 +1,7 @@
 import { Attributes } from "$lib/dnd/attributes"
 import { Level } from "$lib/dnd/level"
 import { SkillRanks } from "$lib/dnd/skills"
+import { LearnedMove } from "$lib/moves/learned"
 import { CuratedEncounter } from "$lib/poke5e/encounters"
 import { SpeciesStore } from "$lib/poke5e/species"
 import { PokemonGender } from "$lib/pokemon/gender"
@@ -72,15 +73,15 @@ export function createEncounters() {
 					hp: { current: 27, max: 27 },
 					hitDice: { current: 2, max: 2 },
 					abilities: [grimer.abilities.normal[0]],
-					moves: [ {
+					moves: [ LearnedMove.create({
 						id: "",
 						moveId: "poison-gas",
-						pp: { current: 10, max: 10 },
-					}, {
+						pp: 10,
+					}), LearnedMove.create({
 						id: "",
 						moveId: "pound",
-						pp: { current: 20, max: 20 },
-					} ],
+						pp: 20,
+					}) ],
 				})
 				.pokemon(zubat, {
 					level: new Level(1),
@@ -88,11 +89,11 @@ export function createEncounters() {
 					hp: { current: 17, max: 17 },
 					hitDice: { current: 1, max: 1 },
 					abilities: [zubat.abilities.normal[0]],
-					moves: [ {
+					moves: [ LearnedMove.create({
 						id: "",
 						moveId: "absorb",
-						pp: { current: 15, max: 15 },
-					} ],
+						pp: 15,
+					}) ],
 				})
 				.trainer({
 					name: "Oak's Parcel: Female Grunt",
@@ -137,15 +138,15 @@ export function createEncounters() {
 					hp: { current: 20, max: 20 },
 					hitDice: { current: 2, max: 2 },
 					abilities: [meowth.abilities.normal[0]],
-					moves: [ {
+					moves: [ LearnedMove.create({
 						id: "",
 						moveId: "growl",
-						pp: { current: 20, max: 20 },
-					}, {
+						pp: 20,
+					}), LearnedMove.create({
 						id: "",
 						moveId: "scratch",
-						pp: { current: 20, max: 20 },
-					} ],
+						pp: 20,
+					}) ],
 				})
 				.pokemon(koffing, {
 					level: new Level(1),
@@ -153,15 +154,15 @@ export function createEncounters() {
 					hp: { current: 18, max: 18 },
 					hitDice: { current: 1, max: 1 },
 					abilities: [zubat.abilities.normal[0]],
-					moves: [ {
+					moves: [ LearnedMove.create({
 						id: "",
 						moveId: "poison-gas",
-						pp: { current: 10, max: 10 },
-					}, {
+						pp: 10,
+					}), LearnedMove.create({
 						id: "",
 						moveId: "tackle",
-						pp: { current: 20, max: 20 },
-					} ],
+						pp: 20,
+					}) ],
 				})
 				.build(),
 
@@ -218,23 +219,23 @@ export function createEncounters() {
 						cha: 10,
 					}),
 					abilities: [nidoqueen.abilities.normal[0]],
-					moves: [ {
+					moves: [ LearnedMove.create({
 						id: "",
 						moveId: "double-kick",
-						pp: { current: 15, max: 15 },
-					}, {
+						pp: 15,
+					}), LearnedMove.create({
 						id: "",
 						moveId: "poison-sting",
-						pp: { current: 15, max: 15 },
-					}, {
+						pp: 15,
+					}), LearnedMove.create({
 						id: "",
 						moveId: "ice-beam",
-						pp: { current: 5, max: 5 },
-					}, {
+						pp: 5,
+					}), LearnedMove.create({
 						id: "",
 						moveId: "tail-whip",
-						pp: { current: 15, max: 15 },
-					} ],
+						pp: 15,
+					}) ],
 				})
 				.build(),
 		}
