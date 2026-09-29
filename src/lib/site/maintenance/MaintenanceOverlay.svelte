@@ -6,7 +6,7 @@
 	import MaintenanceImg from "./gurdurr.png"
 </script>
 
-{#if !FeatureToggles.OverrideMaintenance() && $MaintenanceStore.status === "inprogress"}
+{#if !FeatureToggles.OverrideMaintenance.isActive() && $MaintenanceStore.status === "inprogress"}
 	<StaticPage title="Undergoing maintenance!">
 		<p>This part of the website is temporarily unavailable until scheduled maintenance is complete. Maintenance started at {DateFormatter.format($MaintenanceStore.scheduledStart)} and is expected to last {$MaintenanceStore.duration}.</p>
 		<p><strong>Reason:</strong> {$MaintenanceStore.reason}</p>

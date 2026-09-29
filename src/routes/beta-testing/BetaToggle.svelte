@@ -1,23 +1,27 @@
 <script lang="ts">
 	import { ToggleSwitchField } from "$lib/ui/forms"
-	import { isFeatureActive, setFeatureActive } from "$lib/site/FeatureToggles"
+	import { setFeatureActive, type FeatureToggle } from "$lib/site/FeatureToggles"
+	import { Tag } from "$lib/ui/elements"
 
-	export let feature: string
+	let {
+		feature,
+	}: {
+		feature: FeatureToggle,
+	} = $props()
 
-	$: nameWithSpaces = feature.replace(/([A-Z])/g, " $1").trim()
-
-	let isActive = isFeatureActive(feature)
+	let isActive = $derived(feature.isActive())
 
 	const handleChange = (e: CustomEvent<{ value: boolean }>) => {
-		setFeatureActive(feature, e.detail.value)
+		setFeatureActive(feature.id, e.detail.value)
 		isActive = e.detail.value
 
 		window.location.reload()
 	}
 </script>
 
-<div class="beta-toggle" class:active={isActive}>
-	<ToggleSwitchField label={nameWithSpaces} value={isActive} on:change={handleChange} />
+<div class="beta-toggle" class:active={isActive} class:hidden={feature.status === "Hidden"}>
+	<ToggleSwitchField label={feature.name} value={isActive} on:change={handleChange} />
+	<p><Tag color={feature.status === "Ready" ? "success" : undefined}>{feature.status}</Tag> {feature.description}</p>
 </div>
 
 <style>
@@ -48,5 +52,16 @@
 
 	.beta-toggle.active {
 		border-color: var(--skin-bg);
+	}
+
+	.beta-toggle p {
+		font-size: var(--font-sz-mars);
+		padding: 0 1em;
+		margin-block: 0 1em;
+		line-height: 1.5;
+	}
+
+	.hidden {
+		display: none;
 	}
 </style>

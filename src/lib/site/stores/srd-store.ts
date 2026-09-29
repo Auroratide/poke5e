@@ -42,7 +42,7 @@ export function srdStore<T>(load: (client: SrdClient) => Promise<T>) {
 		if (!browser) return
 
 		// Always defer to the SSR edition until 2024 becomes official
-		const editionToUse = FeatureToggles.PreviewUpdatedMoves() ? edition : DEFAULT_SRD_EDITION
+		const editionToUse = FeatureToggles.PreviewUpdatedMoves.isActive() ? edition : DEFAULT_SRD_EDITION
 		const e = entryFor(editionToUse)
 
 		if (e.settled != null) {

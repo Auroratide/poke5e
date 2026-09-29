@@ -98,7 +98,7 @@
 		<SelectField label="{m.contest()}" bind:value={filteredContest} options={contestOptions} />
 		<RelativeNumberField label="{m.range()}" bind:value={filteredRange} bind:relative={filteredRangeRelative} min={0} placeholder="{m.use0ForMelee()}" />
 		<RelativeNumberField label="{m.pp()}" bind:value={filteredPp} bind:relative={filteredPpRelative} min={0} placeholder="{m.number()}" />
-		{#if FeatureToggles.PreviewUpdatedMoves()}
+		{#if FeatureToggles.PreviewUpdatedMoves.isActive()}
 			<ToggleSwitchField label="{m.updatedRecently()}" bind:value={filteredUpdated} />
 		{/if}
 	</SearchField>

@@ -68,7 +68,7 @@
 </script>
 
 <Fieldset title="{m.moves()}">
-	{#if FeatureToggles.MoveCustomization()}
+	{#if FeatureToggles.MoveCustomization.isActive()}
 		<div>
 			<p><strong>Known Moves</strong></p>
 			{#if values.length === 0}

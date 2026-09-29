@@ -25,7 +25,7 @@ if (browser) {
 		localStorage.setItem(EDITION_STORAGE_KEY, value)
 	})
 
-	if (FeatureToggles.PreviewUpdatedMoves()) {
+	if (FeatureToggles.PreviewUpdatedMoves.isActive()) {
 		currentEdition.subscribe((value) => {
 			document.documentElement.dataset.edition = value
 		})

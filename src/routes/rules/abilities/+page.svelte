@@ -18,7 +18,7 @@
 		data: PageData,
 	} = $props()
 
-	const rulesVersionToUseForAbilities = $derived(FeatureToggles.PreviewUpdatedMoves() ? $currentEdition : "2018")
+	const rulesVersionToUseForAbilities = $derived(FeatureToggles.PreviewUpdatedMoves.isActive() ? $currentEdition : "2018")
 	const abilities = $derived(data.values[rulesVersionToUseForAbilities])
 	const associatedPokemon = $derived(AbilityPool.groupSpeciesByAbility(abilities.map((it) => it.referenceId).filter((it) => it != null), $pokemon ?? []))
 

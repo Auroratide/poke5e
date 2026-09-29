@@ -53,7 +53,7 @@
 </script>
 
 <div class="move-editor">
-	{#if FeatureToggles.MoveCustomization()}
+	{#if FeatureToggles.MoveCustomization.isActive()}
 		{#if theMove}
 			<MoveOption idPrefix="move-editor" value={theMove}>
 				<Button variant="subtle" controls={advancedEditorId} bind:expanded={advancedEditorOpen}>
