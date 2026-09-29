@@ -99,7 +99,7 @@
 		margin-block-end: 1.25em;
 	}
 
-	article :global(section > :is(ul, ol) > li) {
+	article :global(section :is(ul, ol) > li) {
 		margin-block-end: 0.375em;
 		line-height: 1.45;
 	}

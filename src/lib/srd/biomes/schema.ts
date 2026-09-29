@@ -3,6 +3,7 @@ import * as z from "zod"
 export const BiomeJson = z.object({
 	id: z.string(),
 	name: z.string(),
+	description: z.string(),
 }).meta({
 	id: "Biome",
 	title: "Biome",

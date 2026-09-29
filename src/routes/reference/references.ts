@@ -1,6 +1,7 @@
 import { derived } from "svelte/store"
 import { meta as AbilitiesPage } from "./abilities/meta"
 import { meta as AppendixPage } from "./appendix/meta"
+import { meta as BiomesPage } from "./biomes-and-habitats/meta"
 import { meta as BondsPage } from "./bonds/meta"
 import { meta as BreedingPage } from "./breeding/meta"
 import { meta as CatchingPokemonPage } from "./catching-pokemon/meta"
@@ -95,6 +96,7 @@ const Appendix2024 = [
 
 const Supplements2018 = [
 	SupplementsPage,
+	BiomesPage,
 	ChainmailAndCharizards,
 	ContestsPage,
 	OaksParcel,
@@ -104,6 +106,7 @@ const Supplements2018 = [
 
 const Supplements2024 = [
 	SupplementsPage,
+	BiomesPage,
 	BondsPage,
 	BreedingPage,
 	ChainmailAndCharizards,

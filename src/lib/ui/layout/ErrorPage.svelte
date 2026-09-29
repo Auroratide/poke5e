@@ -21,6 +21,8 @@
 		ErrorsDb.report(action, error).then((id) => {
 			referenceId = id
 		})
+
+		console.error(error)
 	})
 </script>
 

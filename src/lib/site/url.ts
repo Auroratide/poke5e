@@ -43,6 +43,7 @@ export const Url = {
 		appendix: () => localizeUrl(resolve("/reference/appendix")).pathname,
 		supplements: () => localizeUrl(resolve("/reference/supplements")).pathname,
 		abilities: () => localizeUrl(resolve("/reference/abilities")).pathname,
+		biomes: () => localizeUrl(resolve("/reference/biomes-and-habitats")).pathname,
 		bonds: () => localizeUrl(resolve("/reference/bonds")).pathname,
 		breeding: () => localizeUrl(resolve("/reference/breeding")).pathname,
 		catchingPokemon: () => localizeUrl(resolve("/reference/catching-pokemon")).pathname,
