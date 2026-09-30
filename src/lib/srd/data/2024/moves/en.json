@@ -130,6 +130,7 @@
 				"attribute": "con"
 			},
 			"description": "You are surrounded by a shield of thick acid for the duration. During this time, your AC increases by 2, and any creature that hits you with a melee attack must succeed on a {save} or take {dice} {type} damage.",
+			"higherLevels": "The damage dice roll for this move changes to 2d6 at level 10.",
 			"categories": []
 		},
 		{
