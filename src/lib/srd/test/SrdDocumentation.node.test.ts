@@ -292,6 +292,7 @@ describe("humanReadableSchema", () => {
 			expect(render(result)).toEqual(`{
 	id: string
 	name: string
+	description: string
 }`)
 		})
 
