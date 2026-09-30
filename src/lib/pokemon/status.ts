@@ -74,6 +74,13 @@ const Flinched: StatusDescription = {
 	effect: "Disadvantage on all attack rolls, ability checks, and saving throws until the end of its next turn. If the creature uses an action that requires a saving throw, the targets have advantage on the roll.",
 }
 
+export const UnknownStatusEffect: StatusDescription = {
+	id: "Unknown",
+	name: "Unknown",
+	abbr: "UKN",
+	effect: "This status effect could no be found. It has no effect.",
+}
+
 export const NonVolatileStatus = {
 	Asleep: Asleep,
 	Burned: Burned,

@@ -110,7 +110,7 @@
 	{#if hasStatusAndExp}
 		<span>
 			<span class="row">
-				{#if status != null}
+				{#if status?.trim()}
 					<StatusTag value={status} />
 				{/if}
 				{#if editable}

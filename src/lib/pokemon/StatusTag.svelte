@@ -1,11 +1,16 @@
 <script lang="ts">
-	import { NonVolatileStatus } from "./status"
+	import { NonVolatileStatus, UnknownStatusEffect } from "./status"
 
-	export let value: NonVolatileStatus
-	export let abbr = false
+	let {
+		value,
+		abbr = false,
+	}: {
+		value: NonVolatileStatus,
+		abbr?: boolean,
+	} = $props()
 
-	$: description = NonVolatileStatus[value]
-	$: name = value === "BadlyPoisoned" ? NonVolatileStatus.Poisoned.name : description.name
+	const description = $derived(NonVolatileStatus[value] ?? UnknownStatusEffect)
+	const name = $derived(value === "BadlyPoisoned" ? NonVolatileStatus.Poisoned.name : description.name)
 </script>
 
 <span
