@@ -1,8 +1,0 @@
-import type { ReferenceInfo } from "$lib/poke5e/reference"
-import { Url } from "$lib/site/url"
-
-export const meta: ReferenceInfo = {
-	name: "Building Encounters",
-	url: Url.reference.encounters(),
-	keywords: ["wild", "trainer", "battle", "gym leader", "badge", "money", "award", "expedition", "sr", "cr", "challenge rating", "species rating", "double battle", "team battle", "balance"],
-}

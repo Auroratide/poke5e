@@ -1,8 +1,8 @@
-import type { ReferenceInfo } from "$lib/poke5e/reference"
+import type { RulesInfo } from "$lib/poke5e/rules"
 import { Url } from "$lib/site/url"
 
-export const meta: ReferenceInfo = {
+export const meta: RulesInfo = {
 	name: "Pokémon Transformations",
-	url: Url.reference.transformations(),
+	url: Url.rules.transformations(),
 	keywords: ["pokemon transformations", "mega evolution", "z-move", "z move", "dynamax", "gigantamax", "terastallization", "terastallize", "stellar", "tera"],
 }

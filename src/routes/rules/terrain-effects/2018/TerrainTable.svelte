@@ -21,7 +21,7 @@
 		</tr>
 		<tr>
 			<td>Misty</td>
-			<td><p>Grounded creatures cannot suffer new <a href="{Url.reference.status()}">status conditions</a>.</p></td>
+			<td><p>Grounded creatures cannot suffer new <a href="{Url.rules.status()}">status conditions</a>.</p></td>
 		</tr>
 		<tr>
 			<td>Psychic</td>

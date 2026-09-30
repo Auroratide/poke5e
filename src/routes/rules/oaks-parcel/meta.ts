@@ -1,8 +1,8 @@
-import type { ReferenceInfo } from "$lib/poke5e/reference"
+import type { RulesInfo } from "$lib/poke5e/rules"
 import { Url } from "$lib/site/url"
 
-export const meta: ReferenceInfo = {
+export const meta: RulesInfo = {
 	name: "Oak's Parcel One-Shot",
-	url: Url.reference.oaksParcel(),
+	url: Url.rules.oaksParcel(),
 	keywords: ["adventure", "one-shot", "one shot", "oak", "parcel", "start", "mission", "beginner", "campaign", "dm"],
 }

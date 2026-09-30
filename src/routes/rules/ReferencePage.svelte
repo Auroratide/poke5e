@@ -8,7 +8,7 @@
 </script>
 
 <Title value="{title}" />
-<Card title="{title}" dismissToHref="{Url.reference.all()}">
+<Card title="{title}" dismissToHref="{Url.rules.all()}">
 	<EditionToggle slot="header-extra" />
 	<slot></slot>
 </Card>

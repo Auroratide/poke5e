@@ -85,7 +85,7 @@ const config = {
 		},
 		paths: { relative: false },
 		alias: {
-			"$reference/*": "src/routes/reference/*",
+			"$rules/*": "src/routes/rules/*",
 		},
 		adapter: adapter({ fallback: "404.html" })
 	},

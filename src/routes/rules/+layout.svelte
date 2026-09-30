@@ -35,8 +35,8 @@
 
 <Page theme="navy">
 	<PencilNotesIcon slot="icon" />
-	<nav id="{MAIN_SEARCH_ID}" slot="side" aria-label="Reference" data-pathname="{pathname}">
-		<ListPageHeading title="Reference" target="/reference" />
+	<nav id="{MAIN_SEARCH_ID}" slot="side" aria-label="Rules" data-pathname="{pathname}">
+		<ListPageHeading title="Rules" target="/rules" />
 		<SearchField id="reference-search" label="Search" bind:value={$filterValue} matched={filteredCount} max={totalCount} />
 		<div class="lists-container" bind:this={listsElem}>
 			{#each [Preamble, filteredCoreRules, filteredAppendix, filteredSupplements] as chapter}

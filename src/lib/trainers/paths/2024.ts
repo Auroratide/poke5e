@@ -1,7 +1,7 @@
 import { Url } from "$lib/site/url"
 import type { TrainerPath } from "./TrainerPath"
-import { meta as BondsPage } from "$reference/bonds/meta"
-import { meta as BreedingPage } from "$reference/breeding/meta"
+import { meta as BondsPage } from "$rules/bonds/meta"
+import { meta as BreedingPage } from "$rules/breeding/meta"
 
 export const TrainerPaths: TrainerPath[] = [ {
 	name: "Ace Trainer",
@@ -36,7 +36,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 	features: {
 		level2: {
-			description: [`You think being a trainer requires being very good at a little bit of everything. Select one additional <a href="${Url.reference.specializations()}">Specialization</a> and two new skill proficiencies for your trainer. The specialization you choose must be different from any specializations you already have.`],
+			description: [`You think being a trainer requires being very good at a little bit of everything. Select one additional <a href="${Url.rules.specializations()}">Specialization</a> and two new skill proficiencies for your trainer. The specialization you choose must be different from any specializations you already have.`],
 		},
 		level5: {
 			name: "Versatile",

@@ -1,11 +1,11 @@
 <script lang="ts">
-	import type { ReferenceInfo } from "$lib/poke5e/reference"
+	import type { RulesInfo } from "$lib/poke5e/rules"
 	import { m } from "$lib/site/i18n"
 
 	let {
 		items,
 	}: {
-		items: ReferenceInfo[],
+		items: RulesInfo[],
 	} = $props()
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars

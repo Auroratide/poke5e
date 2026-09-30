@@ -21,7 +21,7 @@
 		</tr>
 		<tr>
 			<td>Misty</td>
-			<td><p>Grounded creatures in the terrain are resistant to dragon-type damage, or if they were vulnerable to dragon-type damage, they take regular damage instead. In addition, grounded creatures cannot suffer new <a href="{Url.reference.status()}">status conditions</a>.</p></td>
+			<td><p>Grounded creatures in the terrain are resistant to dragon-type damage, or if they were vulnerable to dragon-type damage, they take regular damage instead. In addition, grounded creatures cannot suffer new <a href="{Url.rules.status()}">status conditions</a>.</p></td>
 		</tr>
 		<tr>
 			<td>Psychic</td>

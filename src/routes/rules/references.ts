@@ -32,7 +32,7 @@ import { meta as TrainerOriginsPage } from "./trainer-origins/meta"
 import { meta as TrainerPathsPage } from "./trainer-paths/meta"
 import { meta as WeatherPage } from "./weather/meta"
 import { currentEdition } from "$lib/site/edition"
-import type { ReferenceInfo } from "$lib/poke5e/reference"
+import type { RulesInfo } from "$lib/poke5e/rules"
 
 export const Preamble = [
 	IntroductionPage,
@@ -131,7 +131,7 @@ export const Supplements = derived(currentEdition, (version) =>
 	version === "2018" ? Supplements2018 : Supplements2024,
 )
 
-export function search(list: ReferenceInfo[], value: string): ReferenceInfo[] {
+export function search(list: RulesInfo[], value: string): RulesInfo[] {
 	// always include the first item, it's the title
 	const [first, ...rest] = list
 	const lowerValue = value.trim().toLocaleLowerCase()

@@ -1,8 +1,8 @@
-import type { ReferenceInfo } from "$lib/poke5e/reference"
+import type { RulesInfo } from "$lib/poke5e/rules"
 import { Url } from "$lib/site/url"
 
-export const meta: ReferenceInfo = {
+export const meta: RulesInfo = {
 	name: "Legendary/Boss Battles",
-	url: Url.reference.legendaryBattles(),
+	url: Url.rules.legendaryBattles(),
 	keywords: ["legendary", "boss", "grit", "resilience", "resistance", "attack", "energy", "nimbleness", "speed", "toughness", "reflexes", "knowledge", "armor"],
 }

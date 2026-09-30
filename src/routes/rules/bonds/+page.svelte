@@ -26,7 +26,7 @@
 		<p>Ultimately, the Bond Level of a Pokémon is determined by an agreement between you and the DM. Relationships are highly narrative, so there are no prescribed rules dictating when bond increases or decreases.</p>
 		<p>Examples of raising bond may include spending time with a Pokémon, seeking out snack and foods that the Pokémon enjoys, winning a particularly difficult battle, and so on.</p>
 		<p>Lowering bond may involve catching a Pokémon in an undeserving way, leaving a Pokémon in the PC for too long, allowing a Pokémon to faint from poison instead of healing it with antidote, and more.</p>
-		<p>Keep in mind that every Pokémon has a personality. Discover how your Pokémon's <a href="{Url.reference.natures()}">Nature</a> interacts with your trainer's own personality!</p>
+		<p>Keep in mind that every Pokémon has a personality. Discover how your Pokémon's <a href="{Url.rules.natures()}">Nature</a> interacts with your trainer's own personality!</p>
 	</section>
 	{#if $currentEdition !== "2018"}
 		<section>

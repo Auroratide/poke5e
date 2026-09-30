@@ -308,7 +308,7 @@ export const versionHistory: VersionHistory = {
 	}, {
 		name: "v1.11.2",
 		description: [
-			`<strong>Reference</strong>: Added the original handbook's rules around flying/burrowing speed, reach, and raised/grounded. This can be seen on the <a href="${Url.reference.combat()}">Combat page</a>.`,
+			`<strong>Reference</strong>: Added the original handbook's rules around flying/burrowing speed, reach, and raised/grounded. This can be seen on the <a href="${Url.rules.combat()}">Combat page</a>.`,
 			"<strong>Fakémon</strong>: Can now create Fakémon off of a template pokémon, so making variants is much easier.",
 			"<strong>Abilities</strong>: Restrict Opportunist to enemies, to better align with the games.",
 			"<strong>Moves</strong>: On move pages, list the pokémon that learn the move by level, TM, and breeding.",

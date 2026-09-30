@@ -65,4 +65,4 @@ Yep! [Auroratide](https://auroratide.com) manages and improves the site in their
 
 Understandably, Dungeons and Dragons is typically a team-based game, whereas in the main Pokémon games, gym battles are one-on-one. The site has some suggestions on how you can run Gym Battles here:
 
-- [Running Gym Battles](/reference/encounters#gym-battles)
+- [Running Gym Battles](/rules/encounters#gym-battles)

@@ -18,7 +18,7 @@
 		trainerListFilterValue,
 		trainerListSorter,
 	} from "$lib/trainers/store"
-	import { filterValue as referenceFilter } from "./reference/store"
+	import { filterValue as rulesFilter } from "./rules/store"
 	import { ErrorDialog } from "$lib/site/errors"
 	import { currentHighlight, currentVersion } from "./version-history/versions"
 	import { browser } from "$app/environment"
@@ -82,7 +82,7 @@
 			resetStores(movesFilter, movesSorter)()
 			resetStores(tmsFilter, tmsSorter)()
 			resetStores(trainerListFilterValue, trainerListSorter)()
-			resetStores(referenceFilter, undefined)()
+			resetStores(rulesFilter, undefined)()
 		}
 
 		if (navigation.to) {
@@ -131,8 +131,8 @@
 		color: "green",
 		icon: IdBadgeIcon,
 	}, {
-		id: "reference",
-		href: Url.reference.all(),
+		id: "rules",
+		href: Url.rules.all(),
 		name: m["reference.title"](),
 		color: "navy",
 		icon: PencilNotesIcon,

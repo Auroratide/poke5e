@@ -43,7 +43,7 @@
 	<section class="description">
 		<Markdown value={item.description} />
 		{#if item.type === "pokeball"}
-			<p>{m.see()}: <a href="{Url.reference.catchingPokemon()}">Catching Pokémon</a></p>
+			<p>{m.see()}: <a href="{Url.rules.catchingPokemon()}">Catching Pokémon</a></p>
 		{/if}
 		{#if item.type === "evolution" && pokemonThatEvolve.length > 0}
 			<p>{m.pokemonThatEvolveUsingThisItem()}:</p>

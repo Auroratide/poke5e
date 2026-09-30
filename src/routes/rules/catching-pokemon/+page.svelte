@@ -70,7 +70,7 @@
 				<li>In designated parks or safari zones</li>
 			</ul>
 			<p>Pokémon stat blocks reference biomes in which they are most usually found.</p>
-			<p>If you're a DM, read more about <a href="{Url.reference.encounters()}">Building Encounters</a>.</p>
+			<p>If you're a DM, read more about <a href="{Url.rules.encounters()}">Building Encounters</a>.</p>
 		</section>
 	{/if}
 </ReferencePage>

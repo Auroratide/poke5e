@@ -34,7 +34,7 @@ export const TrainerPaths: TrainerPath[] = [ {
 	},
 	features: {
 		level2: {
-			description: [`You choose to dabble in a variety of skills to take care of your Pokémon. At level 2, select one additional <a href="${Url.reference.specializations()}">Specialization</a> and two new skill proficiencies for your trainer.`],
+			description: [`You choose to dabble in a variety of skills to take care of your Pokémon. At level 2, select one additional <a href="${Url.rules.specializations()}">Specialization</a> and two new skill proficiencies for your trainer.`],
 		},
 		level5: {
 			name: "Versatile",

@@ -15,7 +15,7 @@
 		<p>You want to be the very best like no one ever was? Follow these guidelines to create your Pokémon Trainer! These rules are built to accommodate any 5e race.</p>
 		<p>You can use this app's <a href="{Url.trainers()}">Trainer Tool</a> to create and manage trainers and their pokemon! Use the button below to get started:</p>
 		<p class="text-center"><Button href="{Url.trainers(null, null, PageAction.newTrainer)}">Create a Trainer</Button></p>
-		<p>For more on leveling up a trainer, see the <a href="{Url.reference.trainerLeveling()}">Trainer Leveling</a> page.</p>
+		<p>For more on leveling up a trainer, see the <a href="{Url.rules.trainerLeveling()}">Trainer Leveling</a> page.</p>
 	</section>
 	<section>
 		<Heading level="2" id="core-traits">Core Traits</Heading>
@@ -76,13 +76,13 @@
 	</section>
 	<section>
 		<Heading level="2" id="specializations">Specializations</Heading>
-		<p>At levels 1, 7, and 18, players may choose a <dfn><a href="{Url.reference.specializations()}">specialization</a></dfn>, granting them bonuses depending on the type of Pokemon they train. Specializations can be stacked for an additional +1 bonus to skill checks each time it is chosen.</p>
-		<p><strong><a href="{Url.reference.specializations()}">View the list of specializations.</a></strong></p>
+		<p>At levels 1, 7, and 18, players may choose a <dfn><a href="{Url.rules.specializations()}">specialization</a></dfn>, granting them bonuses depending on the type of Pokemon they train. Specializations can be stacked for an additional +1 bonus to skill checks each time it is chosen.</p>
+		<p><strong><a href="{Url.rules.specializations()}">View the list of specializations.</a></strong></p>
 	</section>
 	<section>
 		<Heading level="2" id="trainer-paths">Trainer Paths</Heading>
-		<p>There are many ways and reasons to train Pokémon. At the 2nd level, depending on your long term goals, choose a <dfn><a href="{Url.reference.trainerPaths()}">trainer path</a></dfn> which grants you class features at levels 2, 5, 9, and 15.</p>
-		<p><strong><a href="{Url.reference.trainerPaths()}">View the list of trainer paths.</a></strong></p>
+		<p>There are many ways and reasons to train Pokémon. At the 2nd level, depending on your long term goals, choose a <dfn><a href="{Url.rules.trainerPaths()}">trainer path</a></dfn> which grants you class features at levels 2, 5, 9, and 15.</p>
+		<p><strong><a href="{Url.rules.trainerPaths()}">View the list of trainer paths.</a></strong></p>
 	</section>
 </ReferencePage>
 

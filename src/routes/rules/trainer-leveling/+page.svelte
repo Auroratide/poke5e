@@ -17,7 +17,7 @@
 			<dt>Pokédex Entries</dt>
 			<dd>Level up when you register Pokémon into your Pokédex</dd>
 		</FlatDl>
-		<p>When a Trainer levels up, they gain benefits outlined in the table on the <a href="{Url.reference.trainerClass()}">Trainer Class</a> page. Additionally, each time a trainer levels up, they gain HP equal to a roll of their hit dice + CON, retroactive with increased CON scores.</p>
+		<p>When a Trainer levels up, they gain benefits outlined in the table on the <a href="{Url.rules.trainerClass()}">Trainer Class</a> page. Additionally, each time a trainer levels up, they gain HP equal to a roll of their hit dice + CON, retroactive with increased CON scores.</p>
 		<p>The rest of this page details the different <strong>options</strong> for leveling up a trainer.</p>
 	</section>
 	<section>

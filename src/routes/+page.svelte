@@ -39,7 +39,7 @@
 			<span class="icon"><IdBadgeIcon /></span>
 		</li>
 		<li class="theme-navy">
-			<a href="{Url.reference.all()}">{m["reference.title"]()}</a>
+			<a href="{Url.rules.all()}">{m["reference.title"]()}</a>
 			<span class="icon"><PencilNotesIcon /></span>
 		</li>
 		<li class="theme-pink">

@@ -1,8 +1,8 @@
-import type { ReferenceInfo } from "$lib/poke5e/reference"
+import type { RulesInfo } from "$lib/poke5e/rules"
 import { Url } from "$lib/site/url"
 
-export const meta: ReferenceInfo = {
+export const meta: RulesInfo = {
 	name: "Feats",
-	url: Url.reference.feats(),
+	url: Url.rules.feats(),
 	keywords: ["ambidextrous", "combo master", "extra ac", "extra move", "gifted", "natural mount", "power sculptor", "terrain adept", "tireless"],
 }

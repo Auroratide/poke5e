@@ -17,7 +17,7 @@
 	<li><strong>2 stages:</strong> 3 points</li>
 	<li><strong>3 stages:</strong> 2 points</li>
 </ul>
-<p>Up to 2 of these points may be used to acquire a <a href="{Url.reference.feats()}">Feat</a> instead.</p>
+<p>Up to 2 of these points may be used to acquire a <a href="{Url.rules.feats()}">Feat</a> instead.</p>
 <p>This happens at levels 4, 8, 12, and 16.</p>
 
 <Heading level="3" id="damage-increase">Damage Increase</Heading>

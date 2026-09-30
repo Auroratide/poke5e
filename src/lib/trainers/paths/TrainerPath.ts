@@ -1,4 +1,4 @@
-import type { ReferenceInfo } from "$lib/poke5e/reference"
+import type { RulesInfo } from "$lib/poke5e/rules"
 import type { TrainerInfo } from "../types"
 import { TrainerPaths } from "./2024"
 
@@ -7,7 +7,7 @@ export type TrainerFeatureLevelLandmark = 2 | 5 | 9 | 15
 
 export type TrainerPath = {
 	name: string,
-	supplement?: ReferenceInfo,
+	supplement?: RulesInfo,
 	resource?: {
 		name: string,
 		acquiredAtLevel: TrainerFeatureLevelLandmark,

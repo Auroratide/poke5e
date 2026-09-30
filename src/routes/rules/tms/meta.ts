@@ -1,8 +1,8 @@
-import type { ReferenceInfo } from "$lib/poke5e/reference"
+import type { RulesInfo } from "$lib/poke5e/rules"
 import { Url } from "$lib/site/url"
 
-export const meta: ReferenceInfo = {
+export const meta: RulesInfo = {
 	name: "TMs",
-	url: Url.reference.tms(),
+	url: Url.rules.tms(),
 	keywords: ["tm", "technical machine", "moves", "teach", "learn"],
 }
