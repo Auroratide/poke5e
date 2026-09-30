@@ -1,3 +1,66 @@
 {
-	"values": []
+	"values": [
+		{
+			"id": "great-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +5 to Capture Rolls."
+		},
+		{
+			"id": "ultra-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +10 to Capture Rolls."
+		},
+		{
+			"id": "level-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +5 to Capture Rolls if active Pokémon is a higher level than the target."
+		},
+		{
+			"id": "heavy-ball",
+			"cost": 1300,
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +15 to Capture Rolls against pokémon of size Medium or larger."
+		},
+		{
+			"id": "love-ball",
+			"cost": 1300,
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +15 to Capture Rolls against targets of the opposite gender from your Active Pokémon."
+		},
+		{
+			"id": "moon-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +10 to Capture Rolls against Pokémon that evolve with the Moon Stone."
+		},
+		{
+			"id": "net-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +10 to Capture Rolls against Bug or Water type Pokémon."
+		},
+		{
+			"id": "dive-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +10 to Capture Rolls when fishing or underwater."
+		},
+		{
+			"id": "nest-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +5 to Capture Rolls against Pokémon level 5 or below."
+		},
+		{
+			"id": "repeat-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +10 to Capture Rolls against species already caught by the user."
+		},
+		{
+			"id": "timer-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +1 to Capture Rolls for each round of combat that has passed before throwing (max +10)."
+		},
+		{
+			"id": "luxury-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +5 to Capture Rolls. Sets Bond Level to +1 after catch."
+		},
+		{
+			"id": "dusk-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +10 to Capture Rolls at night or in dark places like caves."
+		},
+		{
+			"id": "heal-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +5 to Capture Rolls. Restores caught Pokémon's health and cures all status effects."
+		},
+		{
+			"id": "quick-ball",
+			"description": "Lets a trainer attempt a Capture Roll to catch a Pokémon. +15 to Capture Rolls only if used in the first round of combat."
+		}
+	]
 }
