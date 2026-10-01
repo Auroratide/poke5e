@@ -16336,7 +16336,7 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"description": "As a reaction, when a creature is fleeing or is switched out by their trainer, you may make a ranged attack roll against it, doing {dice} {type} damage on a hit.",
+			"description": "As a reaction, when a creature in range is fleeing or being switched out by their trainer, you may make a ranged attack roll against it immediately before it flees or switches out, doing {dice} {type} damage on a hit.",
 			"categories": []
 		},
 		{
