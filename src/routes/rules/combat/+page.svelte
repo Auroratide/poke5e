@@ -81,6 +81,14 @@
 		<p>The "Reach" of a Pokémon is the maximum distance the Pokémon can attack a target in melee range. If a creature leaves the reach of a Pokémon, an attack of opportunity is triggered. In Pokémon 5e, creatures that are "Large" or smaller have a standard 5 feet of reach, while those bigger than "Large" have 10 feet of reach.</p>
 	</section>
 	<section>
+		<Heading level="2" id="fleeing">Fleeing</Heading>
+		{#if $currentEdition === "2018"}
+			<Rules2018.Fleeing />
+		{:else}
+			<Rules2024.Fleeing />
+		{/if}
+	</section>
+	<section>
 		<Heading level="2" id="attacks-of-opportunity">Attacks of Opportunity</Heading>
 		<p>If a Pokémon leaves the melee range of another creature without using the Disengage action, or when not returning to a Pokéball, the opponent may use a melee move that has a move time of 1 action immediately as a reaction targeting the fleeing Pokémon. The move costs the normal amount of PP.</p>
 	</section>
