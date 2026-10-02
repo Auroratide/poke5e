@@ -14,6 +14,16 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.14",
+		description: [
+			"<strong>Rules/Reference</strong>: Renamed \"Reference\" to \"Rules\" for clarity.",
+			"<strong>Rules</strong>: Added rules for <a href=\"/rules/combat#fleeing\">Fleeing</a> to the Combat page.",
+			`<strong>Rules</strong>: Added a supplement detailing <a href="${Url.rules.biomes()}">Biomes and Habitats</a>.`,
+			"<strong>Items</strong>: Timer Ball now works differently, no longer requiring concentration and putting it on par with the other pokeballs.",
+			"<strong>Bugfix</strong>: Fix issue where selecting new moves on pokemon was not updating the PP.",
+			`<strong>Beta</strong>: <a href="${Url.betaTesting()}">Beta testing</a> new definitions for moves Bulk Up, Roost, Helping Hand, Double Team, Snore, and Teleport. Also new definitions for abilities Prankster and Guts.`,
+		],
+	}, {
 		name: "v1.12.13",
 		description: [
 			"<strong>Reference</strong>: Added the Chainmail and Charizards supplement, a set of modifications to the rules for blending pokémon with the D&D world and classes.",
