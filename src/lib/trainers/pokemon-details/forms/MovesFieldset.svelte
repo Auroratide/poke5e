@@ -76,7 +76,7 @@
 			{/if}
 			<div class="move-list">
 				{#each values as move (move.id)}
-					<MoveEditor value={move} {species} {disabled} onremove={removeMove(move.id)} {level} />
+					<MoveEditor bind:value={move} {species} {disabled} onremove={removeMove(move.id)} {level} />
 				{/each}
 			</div>
 		</div>
@@ -121,7 +121,7 @@
 		</div>
 	{:else}
 		{#each values as move (move.id)}
-			<MoveEditor value={move} {species} {disabled} onremove={removeMove(move.id)} {level} />
+			<MoveEditor bind:value={move} {species} {disabled} onremove={removeMove(move.id)} {level} />
 			<hr />
 		{/each}
 		<Button on:click={addMove}>{m.addMove()}</Button>
