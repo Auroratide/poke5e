@@ -1,1 +1,0 @@
-import{St as e,et as t}from"./C_2mRyAx.js";import"./hfhn5YYr.js";import{a as n,o as r}from"./fMg4ETJp.js";var i={isMoveType:e=>r.isTeraType(e)||e===`varies`||e===`typeless`};function a(r,i){{let a=e(()=>[i.value]);n(r,{get type(){return t(a)}})}}export{i as n,a as t};
