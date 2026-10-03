@@ -25,12 +25,14 @@
 		level,
 		disabled = false,
 		onremove = () => {},
+		onchange,
 	}: {
 		value: LearnedMove,
 		species: PokemonSpecies,
 		level: Level,
 		disabled?: boolean,
 		onremove?: () => void,
+		onchange?: (move: LearnedMove) => void,
 	} = $props()
 
 	const advancedEditorId = $derived(`advanced-move-editor-${value.id}`)
@@ -49,6 +51,7 @@
 		const pp = $MovesStore.result?.find((it) => it.id === value.moveId)?.pp ?? 0
 		value.pp.current = pp
 		value.pp.max = pp
+		onchange?.(value)
 	}
 </script>
 

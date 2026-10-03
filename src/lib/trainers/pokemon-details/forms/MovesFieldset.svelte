@@ -65,6 +65,10 @@
 	$: learnableMoves = LearnableMoves.groupMoves(filteredMoves, species, level)
 
 	$: showAllMoves = filteredMoves.length <= SHOW_ALL_THRESHOLD
+
+	const replaceMove = (updated: LearnedMove) => {
+		values = values.map((it) => it.id === updated.id ? { ...updated } : it)
+	}
 </script>
 
 <Fieldset title="{m.moves()}">
@@ -121,7 +125,14 @@
 		</div>
 	{:else}
 		{#each values as move (move.id)}
-			<MoveEditor value={move} {species} {disabled} onremove={removeMove(move.id)} {level} />
+			<MoveEditor
+				value={move}
+				{species}
+				{disabled}
+				onremove={removeMove(move.id)}
+				onchange={replaceMove}
+				{level}
+			/>
 			<hr />
 		{/each}
 		<Button on:click={addMove}>{m.addMove()}</Button>
