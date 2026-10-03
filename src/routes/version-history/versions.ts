@@ -14,6 +14,11 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.15",
+		description: [
+			"<strong>Bugfix</strong>: Fix issue where removing moves from pokemon would crash the app.",
+		],
+	}, {
 		name: "v1.12.14",
 		description: [
 			"<strong>Rules/Reference</strong>: Renamed \"Reference\" to \"Rules\" for clarity.",
