@@ -1,0 +1,1 @@
+import{S as e}from"./7HUIJod5.js";var t={name:`Bonds`,url:e.rules.bonds(),keywords:[`bond`,`bond level`,`loyalty`,`relationship`,`disloyal`,`disobey`,`trust`]},n={name:`Breeding`,url:e.rules.breeding(),keywords:[`breed`,`egg`,`baby`,`babies`,`incubate`,`incubation`,`hatch`,`egg moves`]};export{t as n,n as t};
