@@ -1,76 +1,20 @@
 import { expect } from "@playwright/test"
 import { Ui } from "./Ui"
+import { ListPageBase } from "./ListPageBase"
 
-export class PokemonPage {
-	constructor(private readonly ui: Ui) {}
-
-	async openPokemon(name: string) {
-		await this.ui.link(name).click()
+export class PokemonPage extends ListPageBase {
+	constructor(ui: Ui) {
+		super(ui, "Pokémon")
 	}
 
-	async searchFor(text: string) {
-		await this.ui.textBox("Search").clear()
-		await this.ui.textBox("Search").fill(text)
-	}
-
-	async openFilter() {
-		await this.ui.button("Filter Options").click()
-	}
-
-	async closeFilter() {
-		await this.ui.button("Close").first().click()
-	}
-
-	async selectType(value: string) {
-		await this.ui.dropDown("Type").selectOption(value)
-	}
-
-	async selectSize(value: string) {
-		await this.ui.dropDown("Size").selectOption(value)
-	}
-
-	async selectSr(value: string) {
-		await this.ui.textBox("SR").fill(value)
-	}
-
-	async selectMinLevel(value: string) {
-		await this.ui.textBox("Min Level").fill(value)
-	}
-
-	async selectEggGroup(value: string) {
-		await this.ui.dropDown("Egg Group").selectOption(value)
-	}
-
-	async selectBiome(value: string) {
-		await this.ui.dropDown("Biome").selectOption(value)
-	}
-
-	async selectNativeRegion(value: string) {
-		await this.ui.dropDown("Native Region").selectOption(value)
-	}
-
-	async selectFoundIn(value: string) {
-		await this.ui.dropDown("Found In").selectOption(value)
-	}
-
-	async resetFilters() {
-		await this.ui.button("Reset Filters").click()
-	}
-
-	async expectPokemonInList(expectedNames: string[]) {
-		const names = await this.ui.table("Pokémon List").locator("tbody tr a").allTextContents()
-
-		expect(names).toEqual(
-			expect.arrayContaining(expectedNames)
-		)
-	}
-
-	async expectNumberOfPokemon(expectedNumberOfPokemon: number) {
-		await expect(this.ui.output("Number of results")).toHaveText(new RegExp(`^\\s*${expectedNumberOfPokemon}\\s*/`))
-
-		const table = this.ui.table("Pokémon List")
-		await expect(table.locator("tbody tr")).toHaveCount(expectedNumberOfPokemon)
-	}
+	selectType = this.selectFromDropdown("Type")
+	selectSize = this.selectFromDropdown("Size")
+	selectSr = this.selectFromText("SR")
+	selectMinLevel = this.selectFromText("Min Level")
+	selectEggGroup = this.selectFromDropdown("Egg Group")
+	selectBiome = this.selectFromDropdown("Biome")
+	selectNativeRegion = this.selectFromDropdown("Native Region")
+	selectFoundIn = this.selectFromDropdown("Found In")
 
 	async expectAbility(value: string) {
 		await expect(this.ui.text(value)).toBeVisible()
