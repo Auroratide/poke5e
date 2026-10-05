@@ -17129,7 +17129,7 @@
 			"range": {
 				"type": "melee"
 			},
-			"description": "You bestow a loving blessing on a target feinted Pokémon. Half of the target's HP is restored.",
+			"description": "You bestow a loving blessing on a target fainted Pokémon. Half of the target's HP is restored.",
 			"categories": []
 		},
 		{
