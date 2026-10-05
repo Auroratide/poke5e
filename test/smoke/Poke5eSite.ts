@@ -5,6 +5,7 @@ import { TrainersPage } from "./TrainersPage"
 import { PokemonPage } from "./PokemonPage"
 import { MovesPage } from "./MovesPage"
 import { TmsPage } from "./TmsPage"
+import { ItemsPage } from "./ItemsPage"
 
 export class Poke5eSite {
 	static async startJourney(journeyName: string, page: Page): Promise<Poke5eSite> {
@@ -30,6 +31,11 @@ export class Poke5eSite {
 	async navToTms(): Promise<TmsPage> {
 		await this.ui.nav("TMs").click()
 		return new TmsPage(this.ui)
+	}
+
+	async navToItems(): Promise<ItemsPage> {
+		await this.ui.nav("Items").click()
+		return new ItemsPage(this.ui)
 	}
 
 	async navToFakemon(): Promise<FakemonPage> {

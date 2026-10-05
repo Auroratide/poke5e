@@ -203,6 +203,42 @@ test("tm pages", async ({ page }) => {
 	await moves.expectsLearnsBy("TM", ["Charmander", "Tropius", "Keldeo"])
 })
 
+test("item pages", async ({ page }) => {
+	const site = await Poke5eSite.startJourney("someone looks at the item pages", page)
+
+	const items = await site.navToItems()
+
+	await items.expectNumberOfItems(305)
+
+	// Searching
+	await items.searchFor("candy")
+	await items.expectNumberOfItems(6)
+	await items.expectInList(["Health Candy", "Mighty Candy"])
+
+	// Filtering
+	await items.searchFor("")
+	await items.openFilter()
+	await items.selectType("berry")
+	await items.expectNumberOfItems(28)
+	await items.expectInList(["Cheri Berry", "Chesto Berry"])
+
+	await items.resetFilters()
+	await items.selectCost("800")
+	await items.expectNumberOfItems(14)
+	await items.expectInList(["Safari Ball", "Lure Ball"])
+
+	await items.resetFilters()
+	await items.closeFilter()
+
+	// Verify an item
+	await items.open("Antidote")
+	await items.expectCorrectInfo("medicine", "₽200")
+
+	// Verify an evolution item
+	await items.open("Moon Stone")
+	await items.expectEvolutionPokemon(["Nidorina", "Clefairy"])
+})
+
 test("trainer end to end flow", async ({ page }) => {
 	const site = await Poke5eSite.startJourney("A trainer manages their pokemon", page)
 

@@ -55,7 +55,7 @@
 	key: "type", name: "Type", ratio: 2, sort: byStringField(it => it.type),
 }, {
 	key: "cost", name: "Cost", ratio: 2, sort: byNumericField(it => it.cost ?? -1), largeScreenOnly: true,
-} ]}>
+} ]} caption="Item List">
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type.replace(" ", "-")}-bg)">
 		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.items(item.id)}">{item.name}</a></BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[1]}><span class="cap">{item.type}</span></BubbleRow.Cell>
