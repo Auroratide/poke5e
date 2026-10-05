@@ -105324,7 +105324,7 @@
 			"eggGroup": [
 				"undiscovered"
 			],
-			"gender": "0:0",
+			"gender": "0:1",
 			"description": "The Cyclone Pokémon. Tornadus expels massive energy from its tail, causing severe storms. Its power is great enough to blow houses away.",
 			"ac": 16,
 			"hp": 232,
@@ -105493,7 +105493,7 @@
 			"eggGroup": [
 				"undiscovered"
 			],
-			"gender": "0:0",
+			"gender": "0:1",
 			"description": "The Cyclone Pokémon. Tornadus expels massive energy from its tail, causing severe storms. Its power is great enough to blow houses away.",
 			"ac": 16,
 			"hp": 232,
@@ -105659,7 +105659,7 @@
 			"eggGroup": [
 				"undiscovered"
 			],
-			"gender": "0:0",
+			"gender": "0:1",
 			"description": "The Bolt Strike Pokémon. The spikes on its tail discharge immense bolts of lightning. It flies around the Unova region firing off lightning bolts.",
 			"ac": 16,
 			"hp": 232,
@@ -105834,7 +105834,7 @@
 			"eggGroup": [
 				"undiscovered"
 			],
-			"gender": "0:0",
+			"gender": "0:1",
 			"description": "The Bolt Strike Pokémon. The spikes on its tail discharge immense bolts of lightning. It flies around the Unova region firing off lightning bolts.",
 			"ac": 16,
 			"hp": 232,
@@ -105880,7 +105880,7 @@
 				}
 			],
 			"forms": {
-				"description": "Thunderus's default form is Incarnate Forme. When given a Reveal Glass to hold, it can change to Therian Forme at will. In Incarnate Forme, its abilities are replaced with Prankster and Defiant."
+				"description": "Thundurus's default form is Incarnate Forme. When given a Reveal Glass to hold, it can change to Therian Forme at will. In Incarnate Forme, its abilities are replaced with Prankster and Defiant."
 			},
 			"moves": {
 				"start": [
@@ -106382,7 +106382,7 @@
 			"eggGroup": [
 				"undiscovered"
 			],
-			"gender": "0:0",
+			"gender": "0:1",
 			"description": "The Abundance Pokémon. The energy that comes pouring from its tail increases the nutrition in the soil, making crops grow to great size.",
 			"ac": 16,
 			"hp": 246,
@@ -106550,7 +106550,7 @@
 			"eggGroup": [
 				"undiscovered"
 			],
-			"gender": "0:0",
+			"gender": "0:1",
 			"description": "The Abundance Pokémon. The energy that comes pouring from its tail increases the nutrition in the soil, making crops grow to great size.",
 			"ac": 16,
 			"hp": 246,
