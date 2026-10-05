@@ -93,7 +93,7 @@
 	key: "type", name: m.type(), ratio: 2, sort: byStringField(it => it.type),
 }, {
 	key: "cost", name: m.cost(), ratio: 2, sort: byNumericField(it => it.tm.cost), largeScreenOnly: true,
-} ]}>
+} ]} caption="TM List">
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type}-bg)">
 		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.tms(item.tm.id.toString())}">{item.tmName()}</a></BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{item.type}</BubbleRow.Cell>

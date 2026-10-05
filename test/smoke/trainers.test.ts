@@ -149,6 +149,60 @@ test("move pages", async ({ page }) => {
 	await moves.expectsLearnsBy("TM", ["Charmander", "Tropius", "Keldeo"])
 })
 
+test("tm pages", async ({ page }) => {
+	const site = await Poke5eSite.startJourney("someone looks at the TM pages", page)
+
+	const moves = await site.navToTms()
+
+	await moves.expectNumberOfItems(256)
+
+	// Searching
+	await moves.searchFor("power")
+	await moves.expectNumberOfItems(6)
+	await moves.expectInList(["10 - Hidden Power", "96 - Nature Power"])
+
+	// Filtering
+	await moves.searchFor("")
+	await moves.openFilter()
+	await moves.selectType("ice")
+	await moves.expectNumberOfItems(14)
+	await moves.expectInList(["7 - Hail", "13 - Ice Beam"])
+
+	await moves.resetFilters()
+	await moves.selectMovePower("int")
+	await moves.expectNumberOfItems(14)
+	await moves.expectInList(["3 - Psyshock", "10 - Hidden Power"])
+
+	await moves.resetFilters()
+	await moves.selectMoveTime("bonus action")
+	await moves.expectNumberOfItems(9)
+	await moves.expectInList(["1 - Work Up", "32 - Double Team"])
+
+	await moves.resetFilters()
+	await moves.selectContest("cute")
+	await moves.expectNumberOfItems(27)
+	await moves.expectInList(["17 - Protect", "21 - Frustration"])
+
+	await moves.resetFilters()
+	await moves.selectRange("30")
+	await moves.expectNumberOfItems(44)
+	await moves.expectInList(["3 - Psyshock", "6 - Toxic"])
+
+	await moves.resetFilters()
+	await moves.selectCost("7000")
+	await moves.expectNumberOfItems(1)
+	await moves.expectInList(["32 - Double Team"])
+
+	await moves.resetFilters()
+	await moves.closeFilter()
+
+	// Verify a move
+	await moves.open("40 - Aerial Ace")
+	await moves.expectCorrectInfo("dex", "Action", "5", "Instantaneous", "Melee", "₽5,200")
+	await moves.expectDamage("flying", "1d6", "1d10", "2d8", "5d4")
+	await moves.expectsLearnsBy("TM", ["Charmander", "Tropius", "Keldeo"])
+})
+
 test("trainer end to end flow", async ({ page }) => {
 	const site = await Poke5eSite.startJourney("A trainer manages their pokemon", page)
 
