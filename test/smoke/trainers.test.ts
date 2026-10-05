@@ -141,8 +141,12 @@ test("move pages", async ({ page }) => {
 	await moves.resetFilters()
 	await moves.closeFilter()
 
-	// Verify a pokemon
+	// Verify a move
 	await moves.open("Aerial Ace")
+	await moves.expectCorrectInfo("dex", "Action", "5", "Instantaneous", "Melee")
+	await moves.expectDamage("flying", "1d6", "1d10", "2d8", "5d4")
+	await moves.expectsLearnsBy("Level Up", ["Spearow", "Fearow", "Ducklett"])
+	await moves.expectsLearnsBy("TM", ["Charmander", "Tropius", "Keldeo"])
 })
 
 test("trainer end to end flow", async ({ page }) => {
