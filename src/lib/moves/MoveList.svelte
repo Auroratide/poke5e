@@ -111,7 +111,7 @@
 	key: "power", name: m.power(), ratio: 2, sort: byStringField(it => it.power.toString()), largeScreenOnly: true,
 }, {
 	key: "pp", name: m.pp(), ratio: 1, sort: byNumericField(it => it.pp), largeScreenOnly: true,
-} ]}>
+} ]} caption="Move List">
 	<BubbleRow.Row interactive mainBg="var(--skin-{item.type}-bg)">
 		<BubbleRow.Cell primary cellVisibility={cellVisibility[0]}><a href="{Url.moves(item.id)}">{item.name}</a></BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[1]}>{PokemonType.name(item.type)}</BubbleRow.Cell>

@@ -2,6 +2,8 @@ import type { Page } from "@playwright/test"
 import { Ui } from "./Ui"
 import { FakemonPage } from "./FakemonPage"
 import { TrainersPage } from "./TrainersPage"
+import { PokemonPage } from "./PokemonPage"
+import { MovesPage } from "./MovesPage"
 
 export class Poke5eSite {
 	static async startJourney(journeyName: string, page: Page): Promise<Poke5eSite> {
@@ -13,6 +15,16 @@ export class Poke5eSite {
 	}
 
 	constructor(private readonly ui: Ui) {}
+
+	async navToPokemon(): Promise<PokemonPage> {
+		await this.ui.nav("Pokémon").click()
+		return new PokemonPage(this.ui)
+	}
+
+	async navToMoves(): Promise<MovesPage> {
+		await this.ui.nav("Moves").click()
+		return new MovesPage(this.ui)
+	}
 
 	async navToFakemon(): Promise<FakemonPage> {
 		await this.ui.link("Fakémon").click()

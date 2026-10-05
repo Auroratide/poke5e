@@ -77,7 +77,11 @@
 	// initializeTransitions()
 
 	afterNavigate((navigation) => {
-		if (navigation.from?.url.pathname.split("/")[1] !== navigation.to?.url.pathname.split("/")[1]) {
+		// Skip on initial hydration ("enter"): stores are already fresh, and resetting would wipe
+		// anything the user typed into a search field before hydration finished.
+		const isInitialLoad = navigation.type === "enter"
+		const changedSection = navigation.from?.url.pathname.split("/")[1] !== navigation.to?.url.pathname.split("/")[1]
+		if (!isInitialLoad && changedSection) {
 			resetStores(pokemonFilter, pokemonSorter)()
 			resetStores(movesFilter, movesSorter)()
 			resetStores(tmsFilter, tmsSorter)()

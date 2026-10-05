@@ -11,6 +11,7 @@
 		largeScreenOnly?: boolean
 	}[]
 	export let currentSorter: Sorter = noSort
+	export let caption: string | undefined = ""
 
 	let reversed = false
 	$: sorted = items
@@ -39,6 +40,9 @@
 
 <!-- svelte-ignore a11y-no-redundant-roles -->
 <table role="table" style:--large-table-columns={largeColumns} style:--small-table-columns={smallColumns}>
+	{#if caption}
+		<caption class="visually-hidden">{caption}</caption>
+	{/if}
 	<thead role="rowgroup">
 		<tr role="row">{#each headers as header (header.key)}
 			<th role="columnheader" style="--alignment: var(--{header.key}-alignment);" class:large-screen-only={header.largeScreenOnly}>{#if header.sort !== undefined}

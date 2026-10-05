@@ -108,7 +108,7 @@
 		<SelectField label="{m.foundIn()}" bind:value={filteredFoundIn} options={regionOptions} />
 	</SearchField>
 </div>
-<SortableTable let:item let:cellVisibility items={filtered} bind:currentSorter={$pokemonSorter} headers={[ {
+<SortableTable caption="Pokémon List" let:item let:cellVisibility items={filtered} bind:currentSorter={$pokemonSorter} headers={[ {
 	key: "name", name: m.name(), ratio: 3, sort: byStringField(it => it.name),
 }, {
 	key: "type", name: m.type(), ratio: 3, sort: byStringField(it => it.type.data.join(", ")),

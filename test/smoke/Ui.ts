@@ -11,6 +11,14 @@ export class Ui {
 		return this.page.pause()
 	}
 
+	nav(name: string, navName?: string) {
+		return this.page
+			.getByRole("navigation", { name: navName })
+			.filter({ visible: true })
+			.getByRole("link", { name, exact: true })
+			.filter({ visible: true })
+	}
+
 	text(text: string | RegExp) {
 		return this.page.getByText(text).filter({ visible: true })
 	}
@@ -34,6 +42,10 @@ export class Ui {
 			.filter({ has: this.page.locator("label").filter({ hasText: exactly(label) }) })
 			.locator("textarea-markdown textarea")
 			.filter({ visible: true })
+	}
+
+	output(label: string) {
+		return this.page.getByLabel(label).filter({ visible: true })
 	}
 
 	fieldset(name: string) {
@@ -66,5 +78,9 @@ export class Ui {
 
 	descriptionDefinition(title: string) {
 		return this.page.locator(`dt:has-text("${title}") + dd`).filter({ visible: true })
+	}
+
+	table(caption: string) {
+		return this.page.getByRole("table", { name: caption }).filter({ visible: true })
 	}
 }
