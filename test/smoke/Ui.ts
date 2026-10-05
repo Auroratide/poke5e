@@ -83,4 +83,8 @@ export class Ui {
 	table(caption: string) {
 		return this.page.getByRole("table", { name: caption }).filter({ visible: true })
 	}
+
+	details(label: string) {
+		return this.page.locator("details").getByText(label).filter({ visible: true })
+	}
 }

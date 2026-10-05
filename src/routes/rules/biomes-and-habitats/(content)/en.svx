@@ -35,7 +35,7 @@ This list of biomes and their descriptions come from [The World of Pokémon's ha
   <Heading level="3" id="{biome.id}">{biome.name}</Heading>
   <Markdown value={biome.description ?? ""} />
   {#if pokemon.length > 0}
-    <Details title="Pokémon">
+    <Details title="{biome.name} Pokémon">
       <ColumnedList let:item columns={3} items={pokemon}>
         <a href="{Url.pokemon(item.id.data)}">{item.name}</a>
       </ColumnedList>

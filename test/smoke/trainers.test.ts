@@ -1,5 +1,8 @@
 import { test } from '@playwright/test'
 import { Poke5eSite } from './Poke5eSite'
+import { AbilitiesRulesPage } from './rules/AbilitiesRulesPage'
+import { BiomesRulesPage } from './rules/BiomesRulesPage'
+import { OaksParcelRulesPage } from './rules/OaksParcelRulesPage'
 
 // things to test
 // pokemon pages show all the pokemon, and list the correct info on them
@@ -237,6 +240,41 @@ test("item pages", async ({ page }) => {
 	// Verify an evolution item
 	await items.open("Moon Stone")
 	await items.expectEvolutionPokemon(["Nidorina", "Clefairy"])
+})
+
+test("rules pages", async ({ page }) => {
+	const site = await Poke5eSite.startJourney("thumbing through the rules", page)
+
+	const rules = await site.navToRules()
+
+	await rules.expectNumberOfPages(31)
+
+	// searching
+	await rules.searchFor("experience")
+	await rules.expectNumberOfPages(3)
+	await rules.expectInList(["Core Rules", "Pokémon Leveling", "Trainer Leveling"])
+
+	await rules.searchFor("")
+
+	// abilities
+	const abilities = await rules.open(AbilitiesRulesPage)
+	await abilities.filterFor("power")
+	await abilities.expectAbility("Huge Power")
+	await abilities.expectAbility("Power of Alchemy")
+	await abilities.expectNotAbility("Adaptability")
+
+	// biomes
+	const biomes = await abilities.open(BiomesRulesPage)
+	await biomes.openPokemonFor("Forest")
+	await biomes.expectPokemonForBiome("Forest", ["Bulbasaur", "Vigoroth", "Joltik"])
+	await biomes.openPokemonFor("City")
+	await biomes.expectPokemonForBiome("City", ["Pidgey", "Starly", "Swirlix"])
+
+	// oak's parcel
+	const oak = await biomes.open(OaksParcelRulesPage)
+	await oak.openStatBlock()
+	await oak.expectMove("Poison Gas")
+	await oak.expectMove("Pound")
 })
 
 test("trainer end to end flow", async ({ page }) => {
