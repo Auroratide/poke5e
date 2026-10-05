@@ -4,16 +4,6 @@ import { AbilitiesRulesPage } from './rules/AbilitiesRulesPage'
 import { BiomesRulesPage } from './rules/BiomesRulesPage'
 import { OaksParcelRulesPage } from './rules/OaksParcelRulesPage'
 
-// things to test
-// pokemon pages show all the pokemon, and list the correct info on them
-// (same with moves, tms, items)
-// Rules pages load; abilities filter; literally go through each individual page and make sure it loads
-
-// tRainers
-//   Create a trainer
-//   Edit the trainer, try every single individual field
-//   Add a pokemon
-
 test("pokemon pages", async ({ page }) => {
 	const site = await Poke5eSite.startJourney("someone looks at the pokemon pages", page)
 
