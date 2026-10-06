@@ -27,12 +27,14 @@ export class Ui {
 		return this.page.getByRole("link", { name }).filter({ visible: true })
 	}
 
-	button(name: string | RegExp) {
-		return this.page.getByRole("button", { name }).filter({ visible: true })
+	button(name: string | RegExp, options: { inexact?: boolean } = {
+		inexact: false,
+	}) {
+		return this.page.getByRole("button", { name, exact: !options.inexact }).filter({ visible: true })
 	}
 
 	textBox(label: string | RegExp) {
-		return this.page.getByLabel(label).filter({ visible: true })
+		return this.page.getByLabel(label, { exact: true }).filter({ visible: true })
 	}
 
 	// Temporary, until the textarea-markdown component can be fixed to properly
@@ -57,7 +59,7 @@ export class Ui {
 	}
 
 	dropDown(label: string | RegExp) {
-		return this.page.getByLabel(label).filter({ visible: true })
+		return this.page.getByLabel(label, { exact: true }).filter({ visible: true })
 	}
 
 	radio(label: string | RegExp) {
@@ -65,11 +67,11 @@ export class Ui {
 	}
 
 	range(label: string | RegExp) {
-		return this.page.getByLabel(label).filter({ visible: true })
+		return this.page.getByLabel(label, { exact: true }).filter({ visible: true })
 	}
 
 	checkbox(label: string | RegExp) {
-		return this.page.getByLabel(label).filter({ visible: true })
+		return this.page.getByLabel(label, { exact: true }).filter({ visible: true })
 	}
 
 	heading(name: string | RegExp) {
@@ -86,5 +88,9 @@ export class Ui {
 
 	details(label: string) {
 		return this.page.locator("details").getByText(label).filter({ visible: true })
+	}
+
+	tab(name: string) {
+		return this.page.getByRole("tab", { name, exact: true }).filter({ visible: true })
 	}
 }

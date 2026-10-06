@@ -28,7 +28,7 @@ export class ListPageBase {
 		this.ui.textBox(label).fill(value)
 
 	async resetFilters() {
-		await this.ui.button("Reset Filters").click()
+		await this.ui.button("Reset Filters", { inexact: true }).click()
 	}
 
 	async expectInList(expectedNames: string[]) {

@@ -277,6 +277,8 @@ test("trainer end to end flow", async ({ page }) => {
 	const fakemon = await site.navToFakemon()
 	await fakemon.createFakemon(fakemonName)
 	await fakemon.editFakemon()
+	// TODO: I don't know why, but the addition of this makes the rest of the tests flaky
+	// await fakemon.createFakemonEvolutionFor(fakemonName)
 
 	// Managing Trainer
 	const trainers = await site.navToTrainers()

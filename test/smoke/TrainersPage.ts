@@ -42,7 +42,7 @@ export class TrainersPage {
 		await expect(this.ui.text("Battle Master")).toBeVisible()
 		await expect(this.ui.text("Kindler ×1")).toBeVisible()
 		expect(await this.ui.descriptionDefinition("Home Region").textContent()).toEqual("Kanto")
-		expect(await this.ui.textBox("Money").inputValue()).toEqual("1000")
+		expect(await this.ui.textBox("Money:").inputValue()).toEqual("1000")
 		await expect(this.ui.text("Great Ball")).toBeVisible()
 		await expect(this.ui.text("Lustergem")).toBeVisible()
 	}
