@@ -102,8 +102,10 @@ export const MoveJson = z.object({
 			"cone",
 			"emanation",
 			"cube",
+			"cylinder",
 		]),
 		value: z.int(),
+		otherValues: z.int().array().optional(),
 		unit: z.literal("feet"),
 	}).optional().meta({
 		description: "Defined when the move has an Area of Effect component,\ndescribing its shape.",

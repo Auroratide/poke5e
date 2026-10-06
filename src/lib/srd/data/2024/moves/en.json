@@ -531,8 +531,9 @@
 			"name": "Ancient Power",
 			"type": "rock",
 			"power": [
-				"str",
-				"dex"
+				"dex",
+				"wis",
+				"cha"
 			],
 			"time": {
 				"unit": "action"
@@ -553,7 +554,11 @@
 				"scope": "melee"
 			},
 			"description": "You lash out with unknown inner power. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. On a natural attack roll of 19 or 20, all of your ability scores go up by 1 while you remain in battle. This move can be stacked for a maximum of +5 to all ability scores.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "STR removed from move powers; WIS and CHA added."
+			}
 		},
 		{
 			"id": "apple-acid",
@@ -4391,8 +4396,18 @@
 				"modifier": "0",
 				"type": "damage"
 			},
-			"description": "You stir up a massive storm of sharp diamonds in a 30 foot radius, centered on a point in range. When a creature enters the area for the first time on their turn, or begins their turn inside the area, they take {dice} {type} damage. The Diamond Storm lasts for 3 rounds. When you activate this move, roll a d4. On a result of 3 or 4, your AC is increased by 2 while the Diamond Storm is active.",
-			"categories": []
+			"shape": {
+				"type": "cylinder",
+				"value": 30,
+				"otherValues": [60],
+				"unit": "feet"
+			},
+			"description": "You stir up a massive storm of sharp diamonds in a {shape}, centered on a point in range. When a creature enters the area for the first time on a turn or starts its turn there, it takes {dice} {type} damage.\n\nYou do not take damage from the storm. For as long as you are in the storm's cylinder, your have +2 to AC.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Shape changed to cylinder. User no longer takes damage from the storm. AC bonus always granted."
+			}
 		},
 		{
 			"id": "dig",
@@ -9224,7 +9239,8 @@
 			"name": "Head Smash",
 			"type": "rock",
 			"power": [
-				"str"
+				"str",
+				"con"
 			],
 			"time": {
 				"unit": "action"
@@ -9245,7 +9261,11 @@
 				"scope": "melee"
 			},
 			"description": "You lower your head to deliver a dangerous headbutt. Make a melee attack, dealing {dice} {type} damage on a hit. On a hit, the user takes 1/2 the damage dealt in typeless recoil.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "CON added to move powers."
+			}
 		},
 		{
 			"id": "headbutt",
@@ -12910,7 +12930,8 @@
 			"name": "Meteor Beam",
 			"type": "rock",
 			"power": [
-				"wis"
+				"wis",
+				"cha"
 			],
 			"time": {
 				"unit": "action"
@@ -12999,7 +13020,8 @@
 			"name": "Mighty Cleave",
 			"type": "rock",
 			"power": [
-				"str"
+				"str",
+				"wis"
 			],
 			"time": {
 				"unit": "action"
@@ -13022,7 +13044,11 @@
 			"description": "You wield the light that has accumulated atop your head to cleave the target. Make a melee attack, dealing {dice} {type} damage on a hit. This move hits and deals damage even through moves/abilities that would negate it, such as Protect, Spiky Shield, etc.",
 			"categories": [
 				"slicing"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "WIS added to move powers."
+			}
 		},
 		{
 			"id": "milk-drink",
@@ -15500,6 +15526,7 @@
 			"type": "rock",
 			"power": [
 				"dex",
+				"wis",
 				"cha"
 			],
 			"time": {
@@ -15523,7 +15550,11 @@
 				"scope": "ranged"
 			},
 			"description": "A ray of light bursts out of your gemstone, damaging a creature in range. Make a ranged attack, dealing {dice} {type} damage on a hit.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "WIS added to move powers."
+			}
 		},
 		{
 			"id": "power-shift",
@@ -17233,7 +17264,8 @@
 			"name": "Rock Blast",
 			"type": "rock",
 			"power": [
-				"str"
+				"str",
+				"dex"
 			],
 			"time": {
 				"unit": "action"
@@ -17259,7 +17291,11 @@
 			"categories": [
 				"ballistic",
 				"multistrike"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "DEX added to move powers."
+			}
 		},
 		{
 			"id": "rock-climb",
@@ -17335,8 +17371,17 @@
 			"save": {
 				"attribute": "str"
 			},
-			"description": "Large boulders appear above a target creature in range, crashing down on top of them. The target must make a {save}, taking {dice} {type} damage and falling prone on a failed save, and half as much without falling prone on a success.",
-			"categories": []
+			"shape": {
+				"type": "line",
+				"value": 40,
+				"unit": "feet"
+			},
+			"description": "Large boulders appear in the air and crash down in a cascade. Choose two points within range, up to 40 feet away from each other. Any creatures within the line (5 feet wide) created by connecting the two points must make a {save}, taking {dice} {type} damage and falling prone on a failed save, and half as much without falling prone on a success.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Changed to an AoE line."
+			}
 		},
 		{
 			"id": "rock-smash",
@@ -17432,7 +17477,8 @@
 			"name": "Rock Wrecker",
 			"type": "rock",
 			"power": [
-				"str"
+				"str",
+				"dex"
 			],
 			"time": {
 				"unit": "action"
@@ -17460,7 +17506,7 @@
 			],
 			"updated": {
 				"tag": "Updated",
-				"details": "Damage is updated."
+				"details": "Damage is updated. DEX added to move powers."
 			}
 		},
 		{
@@ -17523,7 +17569,8 @@
 			"name": "Rollout",
 			"type": "rock",
 			"power": [
-				"str"
+				"str",
+				"dex"
 			],
 			"time": {
 				"unit": "action"
@@ -17550,7 +17597,11 @@
 				"scope": "melee"
 			},
 			"description": "You roll into a target, repeatedly making attacks with increasing strength. Make a melee attack on a creature, dealing 1d6 + MOVE {type} damage on a hit. If you use this move on your turn in consecutive rounds, double the dice on each successful attack for a maximum of 5 attacks, in which case the damage would reset. Ex: 1d6 on first hit, 2d6 on second, 4d6, 8d6, 16d6. The damage resets if any of the attacks fail to damage a creature, if your speed is reduced to 0, or if you are incapacitated.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "DEX added to move powers."
+			}
 		},
 		{
 			"id": "roost",
@@ -17757,7 +17808,9 @@
 			"name": "Salt Cure",
 			"type": "rock",
 			"power": [
-				"str"
+				"str",
+				"con",
+				"cha"
 			],
 			"time": {
 				"unit": "action"
@@ -17780,7 +17833,11 @@
 				"attribute": "dex"
 			},
 			"description": "You salt cure the target, dealing damage over time. Choose a target in range. The target must make a {save}. On failure, the target takes {dice} {type} damage, and it takes 1d6 {type} damage at the start of each of its turns until it is returned to a Pokéball or receives healing.\n\nWater- and Steel-type Pokémon are vulnerable to the damage dealt by this move.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "CON and CHA added as move powers."
+			}
 		},
 		{
 			"id": "sand-attack",
@@ -19372,7 +19429,8 @@
 			"name": "Smack Down",
 			"type": "rock",
 			"power": [
-				"str"
+				"str",
+				"dex"
 			],
 			"time": {
 				"unit": "action"
@@ -19383,7 +19441,7 @@
 			},
 			"range": {
 				"type": "distance",
-				"value": 80,
+				"value": 120,
 				"unit": "feet"
 			},
 			"dice": {
@@ -19395,7 +19453,11 @@
 				"scope": "ranged"
 			},
 			"description": "You throw a solid piece of stone at a creature in an attempt to bring them to the ground. Make a ranged attack, dealing {dice} {type} damage on a hit. On a hit, any \"Raised\" creature is knocked prone and loses its flying speed and immunity to ground-type moves until it can move again. This move can target creatures in the invulnerable stage of Fly or Bounce.",
-			"categories": []
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Range increased. DEX added to move powers."
+			}
 		},
 		{
 			"id": "smart-strike",
@@ -20735,7 +20797,8 @@
 			"name": "Stone Axe",
 			"type": "rock",
 			"power": [
-				"str"
+				"str",
+				"dex"
 			],
 			"time": {
 				"unit": "action"
@@ -20761,7 +20824,11 @@
 			"description": "You swing your stone axes at the target. Make a melee attack against a creature, dealing {dice} {type} damage on a hit.\n\nOn a successful hit, spikes cover the ground in a 10-foot square centered on the target, turning it into Difficult Terrain for 1 minute. When the spikes appear, each creature standing in the area except for the creature using this move must succeed on a {save} or suffer 1d10 {type} damage. A creature that enters the area or ends its turn there must also succeed or take the damage.",
 			"categories": [
 				"slicing"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "DEX added to move powers."
+			}
 		},
 		{
 			"id": "stone-edge",
@@ -20790,8 +20857,17 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"description": "The earth moves beneath a target’s feet as sharp stone pierce through the ground underneath them. Creatures in a 10 foot radius centered on a point you choose in range must make a {save}, taking {dice} {type} damage on a fail, or half as much on a save.",
-			"categories": []
+			"shape": {
+				"type": "line",
+				"value": 60,
+				"unit": "feet"
+			},
+			"description": "The earth moves beneath a target's feet as sharp stones pierce through the ground underneath them. Choose a point you can see on the ground within range. Pillars of stone erupt in a wall, 5 feet wide and 30 feet tall, between you and the point. Creatures caught in the line must make a {save}, taking {dice} {type} damage on a fail, or half as much on a save. They are additionally pushed to one side of the wall (you choose which side).\n\nThe wall has AC 10 and 30 Hit Points, and qualifies as Rock-type for resistances and vulnerabilities. Reducing the wall to 0 Hit Points destroys it.\n\nWhen you execute this move, previous walls created by you using this move are destroyed.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Move overhauled into a persistent wall."
+			}
 		},
 		{
 			"id": "stored-power",

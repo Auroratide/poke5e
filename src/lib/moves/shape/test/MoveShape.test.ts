@@ -49,4 +49,17 @@ describe("display", () => {
 
 		expect(result).toEqual("10-foot cube")
 	})
+
+	test("cylinder", () => {
+		const duration: MoveShape = {
+			type: "cylinder",
+			value: 15,
+			otherValues: [40],
+			unit: "feet",
+		}
+
+		const result = MoveShape.display(duration)
+
+		expect(result).toEqual("15-foot-radius, 40-foot-high cylinder")
+	})
 })

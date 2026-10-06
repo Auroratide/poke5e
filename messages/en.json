@@ -310,6 +310,7 @@
 	"emanation": "{value}-foot emanation",
 	"cube": "{value}-foot cube",
 	"line": "{value}-foot line",
+	"cylinder": "{value}-foot-radius, {height}-foot-high cylinder",
 	"rangeWithShape": "{range} ({shape})",
 	"unknownShape": "<?> shape",
 	"updatedRecently": "Updated Recently",

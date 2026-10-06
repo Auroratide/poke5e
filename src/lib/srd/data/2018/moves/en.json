@@ -1,6 +1,14 @@
 {
 	"values": [
 		{
+			"id": "ancient-power",
+			"power": [
+				"str",
+				"dex"
+			],
+			"updated": null
+		},
+		{
 			"id": "aura-sphere",
 			"dice": {
 				"class": "30",
@@ -72,6 +80,17 @@
 				"modifier": "MOVE",
 				"type": "damage"
 			},
+			"updated": null
+		},
+		{
+			"id": "diamond-storm",
+			"duration": {
+				"unit": "round",
+				"value": 3,
+				"concentration": true
+			},
+			"shape": null,
+			"description": "You stir up a massive storm of sharp diamonds in a 30 foot radius, centered on a point in range. When a creature enters the area for the first time on their turn, or begins their turn inside the area, they take {dice} {type} damage. The Diamond Storm lasts for 3 rounds. When you activate this move, roll a d4. On a result of 3 or 4, your AC is increased by 2 while the Diamond Storm is active.",
 			"updated": null
 		},
 		{
@@ -176,6 +195,13 @@
 			"updated": null
 		},
 		{
+			"id": "head-smash",
+			"power": [
+				"str"
+			],
+			"updated": null
+		},
+		{
 			"id": "helping-hand",
 			"description": "You can use a bonus action on your turn to choose one ally other than yourself within 60 feet of you who can hear you. That ally can add a d6 to one ability check, attack roll, or saving throw it makes within the next 10 minutes, before the result of the roll is called by the DM. An ally being helped can only have one d6 available at a time.",
 			"updated": null
@@ -233,6 +259,13 @@
 			"updated": null
 		},
 		{
+			"id": "mighty-cleave",
+			"power": [
+				"str"
+			],
+			"updated": null
+		},
+		{
 			"id": "mind-blown",
 			"dice": {
 				"class": "160",
@@ -275,6 +308,14 @@
 			"updated": null
 		},
 		{
+			"id": "power-gem",
+			"power": [
+				"dex",
+				"cha"
+			],
+			"updated": null
+		},
+		{
 			"id": "psybeam",
 			"dice": {
 				"class": "80",
@@ -293,7 +334,36 @@
 			"updated": null
 		},
 		{
+			"id": "rock-blast",
+			"power": [
+				"str"
+			],
+			"updated": null
+		},
+		{
+			"id": "rock-slide",
+			"range": {
+				"type": "distance",
+				"value": 80,
+				"unit": "feet"
+			},
+			"dice": {
+				"class": "70",
+				"modifier": "MOVE",
+				"type": "damage"
+			},
+			"save": {
+				"attribute": "str"
+			},
+			"shape": null,
+			"description": "Large boulders appear above a target creature in range, crashing down on top of them. The target must make a {save}, taking {dice} {type} damage and falling prone on a failed save, and half as much without falling prone on a success.",
+			"updated": null
+		},
+		{
 			"id": "rock-wrecker",
+			"power": [
+				"str"
+			],
 			"dice": {
 				"class": "180",
 				"modifier": "MOVE",
@@ -303,6 +373,9 @@
 		},
 		{
 			"id": "rollout",
+			"power": [
+				"str"
+			],
 			"dice": {
 				"class": "custom",
 				"tiers": [
@@ -334,6 +407,13 @@
 				"modifier": "MOVE",
 				"type": "healing"
 			},
+			"updated": null
+		},
+		{
+			"id": "salt-cure",
+			"power": [
+				"str"
+			],
 			"updated": null
 		},
 		{
@@ -401,6 +481,18 @@
 				"class": "70",
 				"modifier": "MOVE",
 				"type": "damage"
+			},
+			"updated": null
+		},
+		{
+			"id": "smack-down",
+			"power": [
+				"str"
+			],
+			"range": {
+				"type": "distance",
+				"value": 80,
+				"unit": "feet"
 			},
 			"updated": null
 		},
@@ -474,6 +566,19 @@
 				"modifier": "MOVE",
 				"type": "damage"
 			},
+			"updated": null
+		},
+		{
+			"id": "stone-axe",
+			"power": [
+				"str"
+			],
+			"updated": null
+		},
+		{
+			"id": "stone-edge",
+			"shape": null,
+			"description": "The earth moves beneath a target’s feet as sharp stone pierce through the ground underneath them. Creatures in a 10 foot radius centered on a point you choose in range must make a {save}, taking {dice} {type} damage on a fail, or half as much on a save.",
 			"updated": null
 		},
 		{
