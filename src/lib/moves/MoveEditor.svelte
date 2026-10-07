@@ -23,6 +23,7 @@
 	import { MoveTypeField } from "./type"
 	import { Attributes } from "$lib/dnd/attributes"
 	import { slide } from "svelte/transition"
+	import { MoveTimeField } from "./time"
 
 	let {
 		value = $bindable(),
@@ -96,6 +97,7 @@
 						<CheckboxFields label="Custom Move Powers" name="custom-powers-{value.id}" bind:checked={value.customization.powers} values={attributeNames} {disabled} />
 					</div>
 				{/if}
+				<MoveTimeField label="Custom Move Time" name="custom-time-{value.id}" bind:value={value.customization.time} {disabled} defaultable />
 			</div>
 		{/if}
 	{:else}
