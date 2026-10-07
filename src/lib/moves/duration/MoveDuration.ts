@@ -45,4 +45,14 @@ export const MoveDuration = {
 		const unit = displayUnit(duration)
 		return duration.concentration ? m.concentrationUpTo({ value: unit }) : unit
 	},
+	unitOptions: () => [ {
+		value: "instantaneous",
+		name: m.instantaneous(),
+	}, {
+		value: "round",
+		name: m.roundsGeneral(),
+	}, {
+		value: "minute",
+		name: m.minutesGeneral(),
+	} ],
 }

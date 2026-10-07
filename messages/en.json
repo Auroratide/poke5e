@@ -285,6 +285,7 @@
 			"valuePlural=other": "{value} Minutes"
 		}
 	} ],
+	"minutesGeneral": "Minutes",
 	"rounds": [ {
 		"declarations": ["input value", "local valuePlural = value: plural"],
 		"selectors": ["valuePlural"],
@@ -293,6 +294,7 @@
 			"valuePlural=other": "{value} Rounds"
 		}
 	} ],
+	"roundsGeneral": "Rounds",
 	"concentrationUpTo": "Concentration, up to {value}",
 	"varies": "Varies",
 	"self": "Self",

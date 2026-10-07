@@ -24,6 +24,7 @@
 	import { Attributes } from "$lib/dnd/attributes"
 	import { slide } from "svelte/transition"
 	import { MoveTimeField } from "./time"
+	import { MoveDurationField } from "./duration"
 
 	let {
 		value = $bindable(),
@@ -98,6 +99,7 @@
 					</div>
 				{/if}
 				<MoveTimeField label="Custom Move Time" name="custom-time-{value.id}" bind:value={value.customization.time} {disabled} defaultable />
+				<MoveDurationField label="Custom Duration" name="custom-duration-{value.id}" bind:value={value.customization.duration} {disabled} defaultable />
 			</div>
 		{/if}
 	{:else}
