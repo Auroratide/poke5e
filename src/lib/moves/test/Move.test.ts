@@ -253,6 +253,43 @@ describe("calculateMoveStats", () => {
 			},
 		})
 	})
+
+	test("customized attributes", () => {
+		const move = stubMove({
+			power: ["str", "dex"],
+			type: "normal",
+			dice: stubMoveDice(),
+			attack: stubMoveAttack().data,
+			save: stubMoveSave().data,
+		})
+	
+		// +4 from cha, +2 from level
+		const result = move.calculateMoveStats("2024", {
+			attributes: ATTRIBUTES,
+			level: new Level(1),
+			type: ["psychic"],
+			stab: DEFAULT_STAB,
+			learnedMove: stubLearnedMove({
+				customization: {
+					powers: ["cha"],
+				},
+			}),
+		})
+	
+		expect(result).toEqual({
+			toHit: 6,
+			save: {
+				attribute: ["dex"],
+				dc: 14,
+			},
+			damage: {
+				dice: "1d4",
+				mod: 4,
+				isHealing: false,
+				stabApplied: false,
+			},
+		})
+	})
 	
 	test("any attribute", () => {
 		const move = stubMove({

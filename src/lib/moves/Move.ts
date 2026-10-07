@@ -166,7 +166,9 @@ export class Move extends DataClass<{
 	}): MoveStats {
 		let result: MoveStats = {}
 
-		const bestPower = this.power.bestAttribute(forCharacter.attributes)[0]
+		const powerToUse = forCharacter.learnedMove.customization.powers ? new MovePower(forCharacter.learnedMove.customization.powers) : this.power
+
+		const bestPower = powerToUse.bestAttribute(forCharacter.attributes)[0]
 
 		const attributeMod = bestPower == null ? 0 : forCharacter.attributes[bestPower].modifier
 

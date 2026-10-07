@@ -15,6 +15,7 @@
 	import { MovesStore } from "../store"
 	import { MoveTime } from "../time"
 	import type { LearnedMove } from "./LearnedMove"
+	import { MovePower } from "../MovePower"
 
 	// needed because svelte strips away ending spaces
 	const COMMA_SPACE = ", "
@@ -48,16 +49,17 @@
 	}))
 
 	const customizedType = $derived(value.customization.type ?? move?.type)
+	const customizedPower = $derived(value.customization.powers ? new MovePower(value.customization.powers) : move?.power)
 
-	const attributeList = $derived(move?.power.attributeList())
-	const bestPowers = $derived(move?.power.bestAttribute(attributes))
+	const attributeList = $derived(customizedPower?.attributeList())
+	const bestPowers = $derived(customizedPower?.bestAttribute(attributes))
 
 	const onChangePp = (e: CustomEvent<NumericChangeDetail>) => {
 		onupdatepp(e.detail.value)
 	}
 </script>
 
-{#if move && moveStats && attributeList && bestPowers && customizedType}
+{#if move && moveStats && attributeList && bestPowers && customizedType && customizedPower}
 	<div class="vstack space-after">
 		<div class="vstack bg-by-type rounded space-inner" style:--bg="var(--skin-{customizedType}-bg)">
 			<div class="hrow space-after-tiny">
@@ -93,7 +95,7 @@
 				<dt>Power</dt>
 				<dd class="upper">
 					{#if attributeList.length === 0}
-						{move.power.toString()}
+						{customizedPower.toString()}
 					{:else}
 						{#each attributeList as attribute, i}
 							{@const needComma = i !== attributeList.length - 1}

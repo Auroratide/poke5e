@@ -9,6 +9,8 @@
 		Removable,
 		SelectField,
 		IntField,
+		CheckboxFields,
+		ToggleSwitchField,
 	} from "$lib/ui/forms"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { LearnableMoves } from "./LearnableMoves"
@@ -19,6 +21,8 @@
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import type { LearnedMove } from "./learned"
 	import { MoveTypeField } from "./type"
+	import { Attributes } from "$lib/dnd/attributes"
+	import { slide } from "svelte/transition"
 
 	let {
 		value = $bindable(),
@@ -54,6 +58,12 @@
 		value.pp.max = pp
 		onchange?.(value)
 	}
+
+	let customizeMovePowers = $state(value.customization.powers != null)
+	const attributeNames = Attributes.list.map((it) => ({
+		name: it.name,
+		value: it.abbr,
+	}))
 </script>
 
 <div class="move-editor">
@@ -74,6 +84,18 @@
 				<IntField label="Damage Modifier" name="move-damage-{value.id}" bind:value={value.modifiers.damage} {disabled} />
 				<IntField label="Save DC Modifier" name="move-savedc-{value.id}" bind:value={value.modifiers.saveDc} {disabled} />
 				<MoveTypeField label="Custom Type" name="custom-type-{value.id}" bind:value={value.customization.type} defaultable {disabled} />
+				<ToggleSwitchField label="Customize Move Powers?" bind:value={
+					() => value.customization.powers != null,
+					(on) => {
+						value.customization.powers = on ? (theMove?.power?.attributeList() ?? []) : undefined
+						customizeMovePowers = on
+					}
+				} {disabled} />
+				{#if customizeMovePowers && value.customization.powers}
+					<div class="three-columns" transition:slide={{ duration: 150 }}>
+						<CheckboxFields label="Custom Move Powers" name="custom-powers-{value.id}" bind:checked={value.customization.powers} values={attributeNames} {disabled} />
+					</div>
+				{/if}
 			</div>
 		{/if}
 	{:else}
@@ -105,5 +127,13 @@
 
 	.smaller {
 		font-size: var(--font-sz-venus);
+	}
+
+	.three-columns {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 0.5em;
+		row-gap: 1em;
+		margin-block: 0.75em;
 	}
 </style>
