@@ -25,7 +25,7 @@
 	import { CreatureSizes } from "$lib/dnd/CreatureSize"
 	import { capitalize } from "$lib/utils/string"
 	import { HitDice } from "$lib/dnd/hit-dice"
-	import { SavingThrowsFieldset } from "$lib/dnd/attributes"
+	import { AttributeCheckboxFields } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
 	import { Button } from "$lib/ui/elements"
 	import { GenderRatioFieldset } from "$lib/pokemon/gender"
@@ -153,7 +153,7 @@
 	<SpeedsFieldset bind:values={speeds} {disabled} />
 	<SensesFieldset bind:values={senses} {disabled} />
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} noexpertise />
-	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
+	<AttributeCheckboxFields label={m.savingThrows()} bind:values={savingThrows} {disabled} />
 	<AbilityPoolFieldset bind:value={abilityPool} {disabled} />
 	<MovePoolFieldset bind:value={movePool} {disabled} />
 	<EvolutionsFieldset species={species.id} bind:evolutions={evolutions} {allSpecies} {disabled} />

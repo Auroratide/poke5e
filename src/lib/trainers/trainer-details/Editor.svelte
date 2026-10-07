@@ -18,7 +18,7 @@
 	} from "$lib/ui/forms"
 	import BasicInfoFieldset from "./forms/BasicInfoFieldset.svelte"
 	import BiographyFieldset from "./forms/BiographyFieldset.svelte"
-	import { AttributesFieldset, SavingThrowsFieldset } from "$lib/dnd/attributes"
+	import { AttributesFieldset, AttributeCheckboxFields } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
 	import InventoryFieldset from "./forms/InventoryFieldset.svelte"
 	import { Button } from "$lib/ui/elements"
@@ -100,7 +100,7 @@
 	<BiographyFieldset bind:biography bind:avatar={avatarToUpload} bind:token bind:isValid originalAvatarSrc={originalAvatar?.href} {disabled} />
 	<AttributesFieldset bind:values={attributes} {disabled} />
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} />
-	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
+	<AttributeCheckboxFields label={m.savingThrows()} bind:values={savingThrows} {disabled} />
 	<SpecializationsFieldset bind:values={specializations} {disabled} />
 	<TrainerPathsFieldset bind:value={trainerPath} {disabled} />
 	<FeatsFieldset feats={DndFeats} bind:values={feats} {disabled} />

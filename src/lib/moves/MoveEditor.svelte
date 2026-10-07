@@ -73,7 +73,7 @@
 				<IntField label="To Hit Modifier" name="move-tohit-{value.id}" bind:value={value.modifiers.toHit} {disabled} />
 				<IntField label="Damage Modifier" name="move-damage-{value.id}" bind:value={value.modifiers.damage} {disabled} />
 				<IntField label="Save DC Modifier" name="move-savedc-{value.id}" bind:value={value.modifiers.saveDc} {disabled} />
-				<MoveTypeField label="Custom Type" name="custom-type-{value.id}" bind:value={value.customization.type} defaultable />
+				<MoveTypeField label="Custom Type" name="custom-type-{value.id}" bind:value={value.customization.type} defaultable {disabled} />
 			</div>
 		{/if}
 	{:else}

@@ -8,7 +8,7 @@
 <script lang="ts">
 	import { Button } from "$lib/ui/elements"
 	import { ActionArea, Form, FormDetails, MarkdownField, type ImageInputValue, Fieldset } from "$lib/ui/forms"
-	import { AttributesFieldset, SavingThrowsFieldset } from "$lib/dnd/attributes"
+	import { AttributesFieldset, AttributeCheckboxFields } from "$lib/dnd/attributes"
 	import { ProficienciesFieldset } from "$lib/dnd/skills"
 	import { createEventDispatcher } from "svelte"
 	import { type TrainerPokemon } from "../types"
@@ -121,7 +121,7 @@
 	<KnownAbilitiesFieldset bind:values={abilities} {species} {disabled} />
 	<BondFieldset bind:value={bond} {disabled} />
 	<ProficienciesFieldset bind:values={proficiencies} {disabled} />
-	<SavingThrowsFieldset bind:values={savingThrows} {disabled} />
+	<AttributeCheckboxFields label={m.savingThrows()} bind:values={savingThrows} {disabled} />
 	<MovesFieldset bind:values={moves} {species} level={new Level(level)} {disabled} />
 	<FeatsFieldset feats={$DndAndPokemonFeats} bind:values={feats} {disabled} />
 	<HeldItemsFieldset bind:items {disabled} />
