@@ -18,6 +18,7 @@
 	import { Button, VisuallyHidden } from "$lib/ui/elements"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
 	import type { LearnedMove } from "./learned"
+	import { MoveTypeField } from "./type"
 
 	let {
 		value = $bindable(),
@@ -72,6 +73,7 @@
 				<IntField label="To Hit Modifier" name="move-tohit-{value.id}" bind:value={value.modifiers.toHit} {disabled} />
 				<IntField label="Damage Modifier" name="move-damage-{value.id}" bind:value={value.modifiers.damage} {disabled} />
 				<IntField label="Save DC Modifier" name="move-savedc-{value.id}" bind:value={value.modifiers.saveDc} {disabled} />
+				<MoveTypeField label="Custom Type" name="custom-type-{value.id}" bind:value={value.customization.type} defaultable />
 			</div>
 		{/if}
 	{:else}

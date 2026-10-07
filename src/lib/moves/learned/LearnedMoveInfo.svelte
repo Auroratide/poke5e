@@ -47,6 +47,8 @@
 		learnedMove: value,
 	}))
 
+	const customizedType = $derived(value.customization.type ?? move?.type)
+
 	const attributeList = $derived(move?.power.attributeList())
 	const bestPowers = $derived(move?.power.bestAttribute(attributes))
 
@@ -55,9 +57,9 @@
 	}
 </script>
 
-{#if move && moveStats && attributeList && bestPowers}
+{#if move && moveStats && attributeList && bestPowers && customizedType}
 	<div class="vstack space-after">
-		<div class="vstack bg-by-type rounded space-inner" style:--bg="var(--skin-{move.type}-bg)">
+		<div class="vstack bg-by-type rounded space-inner" style:--bg="var(--skin-{customizedType}-bg)">
 			<div class="hrow space-after-tiny">
 				<span class="flex-span bold"><a href="{Url.moves(value.moveId)}">{move.name}</a></span>
 				<span class="pp">
@@ -73,7 +75,7 @@
 				</span>
 			</div>
 			<div class="hrow tiny-font">
-				<span class="capitalize flex-span">{move.type}</span>
+				<span class="capitalize flex-span">{customizedType}</span>
 				<span class="capitalize">
 					{#if move.contest}
 						{move.contest.contest}
