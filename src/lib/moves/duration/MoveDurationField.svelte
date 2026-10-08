@@ -6,13 +6,13 @@
 
 	let {
 		value = $bindable(),
-		label = m.type(),
+		label,
 		name,
 		disabled = false,
 		defaultable = false,
 	}: {
 		value: MoveDuration | undefined,
-		label?: string,
+		label: string,
 		name?: string,
 		disabled?: boolean,
 		defaultable?: boolean,
@@ -37,8 +37,8 @@
 } {options} {label} {name} {disabled} />
 {#if isCustom && value?.value != null && value?.concentration != null}
 	<div class="space" transition:slide={{ duration: 150 }}>
-		<SingleCheckboxField label="Concentration?" bind:checked={value.concentration} />
-		<IntField label="Duration Length" bind:value={value.value} />
+		<SingleCheckboxField label="Concentration?" name="{name}-concentration" bind:checked={value.concentration} {disabled} />
+		<IntField label="Duration Length" name="{name}-length" bind:value={value.value} {disabled} />
 	</div>
 {/if}
 

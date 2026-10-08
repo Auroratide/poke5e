@@ -5,13 +5,13 @@
 
 	let {
 		value = $bindable(),
-		label = m.type(),
+		label,
 		name,
 		disabled = false,
 		defaultable = false,
 	}: {
 		value: MoveTime | undefined,
-		label?: string,
+		label: string,
 		name?: string,
 		disabled?: boolean,
 		defaultable?: boolean,

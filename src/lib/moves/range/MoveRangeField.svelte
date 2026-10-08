@@ -35,5 +35,5 @@
 	}
 } {options} {label} {name} {disabled} />
 {#if customType === "distance" && value?.type === "distance" && value?.value != null}
-	<IntField label="Feet" name="{name}-feet" bind:value={value.value} />
+	<IntField label="Feet" name="{name}-feet" bind:value={value.value} {disabled} />
 {/if}
