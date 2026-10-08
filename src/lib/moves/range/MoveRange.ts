@@ -2,6 +2,8 @@ import type { MoveJson } from "$lib/srd/moves/schema"
 import { m } from "$lib/site/i18n"
 import { MoveShape } from "../shape"
 
+const MELEE_RANGE = 5
+
 export type MoveRange = {
 	type: "melee"
 	reach?: {
@@ -41,7 +43,7 @@ export const MoveRange = {
 			}
 		}
 
-		if (type === "melee" && value != null) {
+		if (type === "melee" && value != null && value > MELEE_RANGE) {
 			return {
 				type: "melee",
 				reach: {
@@ -82,4 +84,14 @@ export const MoveRange = {
 		default: return ""
 		}
 	},
+	unitOptions: () => [ {
+		value: "melee",
+		name: m.melee(),
+	}, {
+		value: "distance",
+		name: m.distance(),
+	}, {
+		value: "self",
+		name: m.self(),
+	} ],
 }

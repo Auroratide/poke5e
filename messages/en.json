@@ -298,6 +298,7 @@
 	"concentrationUpTo": "Concentration, up to {value}",
 	"varies": "Varies",
 	"self": "Self",
+	"distance": "Distance",
 	"melee": "Melee",
 	"reach": "reach {value}",
 	"feet": [ {

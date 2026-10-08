@@ -52,6 +52,7 @@
 	const customizedPower = $derived(value.customization.powers ? new MovePower(value.customization.powers) : move?.power)
 	const customizedTime = $derived(value.customization.time ?? move?.time)
 	const customDuration = $derived(value.customization.duration ?? move?.duration)
+	const customRange = $derived(value.customization.range ?? move?.range)
 
 	const attributeList = $derived(customizedPower?.attributeList())
 	const bestPowers = $derived(customizedPower?.bestAttribute(attributes))
@@ -61,7 +62,7 @@
 	}
 </script>
 
-{#if move && moveStats && attributeList && bestPowers && customizedType && customizedPower && customizedTime && customDuration}
+{#if move && moveStats && attributeList && bestPowers && customizedType && customizedPower && customizedTime && customDuration && customRange}
 	<div class="vstack space-after">
 		<div class="vstack bg-by-type rounded space-inner" style:--bg="var(--skin-{customizedType}-bg)">
 			<div class="hrow space-after-tiny">
@@ -110,7 +111,7 @@
 					{/if}
 				</dd>
 				<dt>Range</dt>
-				<dd>{MoveRange.display(move.range, move.shape)}</dd>
+				<dd>{MoveRange.display(customRange, move.shape)}</dd>
 				<dt>Time</dt>
 				<dd>{MoveTime.display(customizedTime)}</dd>
 				<dt>Duration</dt>

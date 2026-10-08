@@ -25,6 +25,7 @@
 	import { slide } from "svelte/transition"
 	import { MoveTimeField } from "./time"
 	import { MoveDurationField } from "./duration"
+	import { MoveRangeField } from "./range"
 
 	let {
 		value = $bindable(),
@@ -100,6 +101,7 @@
 				{/if}
 				<MoveTimeField label="Custom Move Time" name="custom-time-{value.id}" bind:value={value.customization.time} {disabled} defaultable />
 				<MoveDurationField label="Custom Duration" name="custom-duration-{value.id}" bind:value={value.customization.duration} {disabled} defaultable />
+				<MoveRangeField label="Custom Range" name="custom-range-{value.id}" bind:value={value.customization.range} {disabled} defaultable />
 			</div>
 		{/if}
 	{:else}

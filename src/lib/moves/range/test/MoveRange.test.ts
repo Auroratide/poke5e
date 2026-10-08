@@ -23,6 +23,22 @@ describe("fromTypeAndValue", () => {
 		})
 	})
 
+	test("melee, reach 0", () => {
+		const result = MoveRange.fromTypeAndValue("melee", 0)
+
+		expect(result).toEqual({
+			type: "melee",
+		})
+	})
+
+	test("melee, reach 5", () => {
+		const result = MoveRange.fromTypeAndValue("melee", 5)
+
+		expect(result).toEqual({
+			type: "melee",
+		})
+	})
+
 	test("distance", () => {
 		const result = MoveRange.fromTypeAndValue("distance", 30)
 
