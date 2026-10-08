@@ -35,3 +35,22 @@ export async function writePokemonSrd(data: PokemonData[], edition: string = "20
 
 	await fs.writeFile(srdPath(edition), raw, { encoding: "utf-8" })
 }
+
+// Older editions only store overrides against the 2024 data; see EditionOverride in src/lib/srd/editions.ts
+export type PokemonOverride = {
+	id: string,
+	moves?: Partial<Record<keyof PokemonData["moves"], string[] | number[] | null>>,
+	[key: string]: unknown,
+}
+
+export async function getPokemonOverrides(edition: string): Promise<PokemonOverride[]> {
+	const raw = await fs.readFile(srdPath(edition), { encoding: "utf-8" })
+
+	return JSON.parse(raw).values
+}
+
+export async function writePokemonOverrides(data: PokemonOverride[], edition: string) {
+	const raw = JSON.stringify({ values: data }, null, "\t")
+
+	await fs.writeFile(srdPath(edition), `${raw}\n`, { encoding: "utf-8" })
+}

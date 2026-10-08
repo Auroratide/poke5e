@@ -1,6 +1,7 @@
 import path from "node:path"
 import fs from "node:fs/promises"
-import { getPokemonSrd, type PokemonData } from "./files.ts"
+import { getPokemonSrd, getPokemonOverrides, type PokemonData } from "./files.ts"
+import { chooseEditionData, type EditionOverride, type HasId } from "../../src/lib/srd/editions.ts"
 import { PokemonApi } from "../pokemon-api/index.ts"
 import { superconsole } from "../superconsole.ts"
 
@@ -20,17 +21,19 @@ import { superconsole } from "../superconsole.ts"
  * currently learn in pokemon 5e vs moves they can theoretically learn in the game.
  *
  * This script should generate two things:
- * - move-matrix.csv, a CSV of the format at the top of this file showing moves pokemon have learned in the games, and whether they also learn them in pokemon 5e
- * - move-stats.csv, a matrix showing the number of each category of move the pokemon learns in the games vs how many they learn in pokemon 5e
+ * - move-matrix.csv, a CSV of the format at the top of this file showing moves pokemon have learned in the games, and whether they also learn them in the original (2018) pokemon 5e
+ * - move-stats.csv, a matrix showing the number of each category of move the pokemon learns in the games vs how many they learn in the original (2018) pokemon 5e
  *
  * Put the files in the cache folder.
  *
  * Notes on how the data is interpreted:
  * - Only the level-up, egg, and machine (TM) learn methods count; tutor and other methods are ignored.
  * - "game first learned" is the earliest version group that teaches the move by that method, and "level learned" is the level in that game.
- * - "most recent game" is the latest version group that teaches the move by that method, and "most recent level learned" is the level in that game.
+ * - "most recent game" is the latest mainline version group that teaches the move by that method, and "most recent level learned" is the level in that game.
+ *   If only spinoffs (see SPINOFFS) teach the move by that method, the latest spinoff is used instead.
+ * - If a version group lists a move at multiple levels, the highest level is used.
  * - For level-up moves, a level of 0 means the move is learned on evolution.
- * - A row is "in p5e" only if pokemon 5e teaches the move by the same method.
+ * - A row is "in p5e" only if the 2018 edition of pokemon 5e teaches the move by the same method.
  * - Moves pokemon 5e teaches that the games do not (by that method) get rows with blank game columns.
  */
 
@@ -39,6 +42,17 @@ const TMS_PATH = (edition: string) => path.join("src", "lib", "srd", "data", edi
 
 type Category = "levelup" | "egg" | "tm"
 const CATEGORIES: Category[] = ["levelup", "egg", "tm"]
+
+// Version groups whose learnsets follow their own rules, so they only count as the most recent game as a last resort
+const SPINOFFS = new Set([
+	"colosseum",
+	"xd",
+	"lets-go-pikachu-lets-go-eevee",
+	"legends-arceus",
+	"legends-za",
+	"mega-dimension",
+	"champions",
+])
 
 const API_METHODS: Record<string, Category> = {
 	"level-up": "levelup",
@@ -68,11 +82,15 @@ type ApiPokemon = {
 
 type GameLearn = {
 	firstGame: string,
-	firstOrder: number,
 	firstLevel: string,
 	latestGame: string,
-	latestOrder: number,
 	latestLevel: string,
+}
+
+type GameDetail = {
+	game: string,
+	order: number,
+	level: string,
 }
 
 type P5eLearn = {
@@ -85,6 +103,14 @@ type Learnset<T> = Map<string, T>
 const key = (category: Category, move: string) => `${category}:${move}`
 const splitKey = (k: string) => k.split(":") as [Category, string]
 
+// The 2018 edition is the original pokemon 5e; it is stored as overrides against the 2024 data
+async function getOriginalPokemon(): Promise<PokemonData[]> {
+	const overrides = await getPokemonOverrides("2018") as (EditionOverride<PokemonData> & HasId)[]
+
+	return chooseEditionData<PokemonData>("2018", await getPokemonSrd("2024"), { "2018": overrides })
+}
+
+// The 2018 edition has no TM overrides, so its TMs are the same as 2024's
 async function getTmMoves(): Promise<Map<number, string>> {
 	const raw = await fs.readFile(TMS_PATH("2024"), { encoding: "utf-8" })
 	const tms: { id: number, move: string }[] = JSON.parse(raw).values
@@ -103,8 +129,11 @@ async function getVersionGroupOrder(name: string): Promise<number> {
 	return versionGroupOrders.get(name)!
 }
 
+// Earlier game wins; within the same game, the higher level wins
+const compareDetails = (a: GameDetail, b: GameDetail) => a.order - b.order || Number(b.level) - Number(a.level)
+
 async function getGameLearnset(apiPokemon: ApiPokemon): Promise<Learnset<GameLearn>> {
-	const learnset: Learnset<GameLearn> = new Map()
+	const details: Learnset<GameDetail[]> = new Map()
 
 	for (const { move, version_group_details } of apiPokemon.moves) {
 		for (const detail of version_group_details) {
@@ -116,31 +145,27 @@ async function getGameLearnset(apiPokemon: ApiPokemon): Promise<Learnset<GameLea
 			const level = category === "levelup" ? detail.level_learned_at.toString() : category
 
 			const k = key(category, move.name)
-			const existing = learnset.get(k)
-			if (existing == null) {
-				learnset.set(k, {
-					firstGame: game,
-					firstOrder: order,
-					firstLevel: level,
-					latestGame: game,
-					latestOrder: order,
-					latestLevel: level,
-				})
-				continue
-			}
-
-			if (order < existing.firstOrder) {
-				existing.firstGame = game
-				existing.firstOrder = order
-				existing.firstLevel = level
-			}
-
-			if (order > existing.latestOrder) {
-				existing.latestGame = game
-				existing.latestOrder = order
-				existing.latestLevel = level
-			}
+			if (!details.has(k)) details.set(k, [])
+			details.get(k)!.push({ game, order, level })
 		}
+	}
+
+	const learnset: Learnset<GameLearn> = new Map()
+	for (const [k, all] of details) {
+		const sorted = all.toSorted(compareDetails)
+		const mainline = sorted.filter((it) => !SPINOFFS.has(it.game))
+		const candidates = mainline.length > 0 ? mainline : sorted
+		const latestOrder = candidates.at(-1)!.order
+
+		const first = sorted[0]
+		const latest = candidates.find((it) => it.order === latestOrder)!
+
+		learnset.set(k, {
+			firstGame: first.game,
+			firstLevel: first.level,
+			latestGame: latest.game,
+			latestLevel: latest.level,
+		})
 	}
 
 	return learnset
@@ -184,7 +209,7 @@ function countByCategory(learnset: Learnset<unknown>): Record<Category, number> 
 }
 
 async function main() {
-	const pokemon = await getPokemonSrd()
+	const pokemon = await getOriginalPokemon()
 	const tmMoves = await getTmMoves()
 
 	const matrix: string[][] = [["pokemon id", "move id", "game first learned", "level learned", "most recent game", "most recent level learned", "in p5e", "p5e level"]]

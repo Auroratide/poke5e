@@ -1,0 +1,292 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Move Level Spread</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+	/* Layout: a sticky control bar over a uniform grid of small multiples, one card per pokemon in dex order */
+	:root {
+		--bg: #f3f4f6;
+		--surface: #fcfcfb;
+		--line: #dfe1e6;
+		--grid: #e8eaee;
+		--fg: #15171c;
+		--fg-2: #4d5260;
+		--fg-3: #7b8090;
+		--p5e: #c3c7d1;       /* wide bar, move existed in 2018 */
+		--p5e-new: #eb6834;   /* wide bar, move added in 2024 */
+		--game: #2a78d6;      /* thin bar, most recent game */
+		--focus: #2a78d6;
+		--font-ui: "Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
+		--font-data: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+	}
+	@media (prefers-color-scheme: dark) {
+		:root:not([data-theme="light"]) {
+			--bg: #121418; --surface: #1a1c21; --line: #2c3038; --grid: #252830;
+			--fg: #f2f3f5; --fg-2: #c0c4cc; --fg-3: #8a8f9c;
+			--p5e: #4a4f5c; --p5e-new: #d95926; --game: #3987e5; --focus: #3987e5;
+			color-scheme: dark;
+		}
+	}
+	:root[data-theme="dark"] {
+		--bg: #121418; --surface: #1a1c21; --line: #2c3038; --grid: #252830;
+		--fg: #f2f3f5; --fg-2: #c0c4cc; --fg-3: #8a8f9c;
+		--p5e: #4a4f5c; --p5e-new: #d95926; --game: #3987e5; --focus: #3987e5;
+		color-scheme: dark;
+	}
+
+	body {
+		margin: 0;
+		background: var(--bg);
+		color: var(--fg);
+		font-family: var(--font-ui);
+		font-size: 15px;
+	}
+	/* Filtering toggles [hidden], which display: flex on .card would otherwise override */
+	[hidden] { display: none !important; }
+	.page { padding: 0 16px 48px; max-width: 1600px; margin: 0 auto; }
+
+	header.bar {
+		position: sticky;
+		top: env(safe-area-inset-top, 0px);
+		z-index: 2;
+		background: var(--bg);
+		border-bottom: 1px solid var(--line);
+		padding-block: 14px 12px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 10px 24px;
+	}
+	h1 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: 0.01em; text-wrap: balance; }
+	.summary { color: var(--fg-2); font-size: 14px; font-variant-numeric: tabular-nums; }
+	.controls { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin-left: auto; }
+	.controls input[type="search"] {
+		font: inherit;
+		padding: 5px 10px;
+		width: 200px;
+		max-width: 100%;
+		border: 1px solid var(--line);
+		border-radius: 4px;
+		background: var(--surface);
+		color: var(--fg);
+	}
+	.controls label { display: inline-flex; align-items: center; gap: 6px; color: var(--fg-2); cursor: pointer; }
+	:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+
+	.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; padding-block: 12px; color: var(--fg-2); font-size: 14px; }
+	.legend span { display: inline-flex; align-items: center; gap: 6px; }
+	.swatch { display: inline-block; width: 10px; height: 14px; border-radius: 2px; }
+	.swatch.thin { width: 4px; }
+	.swatch.rule { width: 0; height: 14px; border-left: 1.5px dashed var(--fg-3); border-radius: 0; }
+
+	.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 12px; }
+	.card {
+		background: var(--surface);
+		border: 1px solid var(--line);
+		border-radius: 6px;
+		padding: 10px 12px 8px;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		min-width: 0;
+	}
+	.card h2 { margin: 0; font-size: 16px; font-weight: 600; display: flex; align-items: baseline; gap: 8px; }
+	.card h2 .num { font-family: var(--font-data); font-size: 12px; font-weight: 400; color: var(--fg-3); }
+	.meta { margin-left: auto; font-family: var(--font-data); font-size: 11px; font-weight: 400; color: var(--fg-3); white-space: nowrap; }
+	.card svg { display: block; width: 100%; height: auto; }
+	.counts { display: flex; flex-wrap: wrap; gap: 2px 10px; font-family: var(--font-data); font-size: 11px; color: var(--fg-3); font-variant-numeric: tabular-nums; }
+	.counts b { color: var(--fg-2); font-weight: 500; }
+	.empty { color: var(--fg-2); padding: 24px 0; }
+
+	svg .gridline { stroke: var(--grid); stroke-width: 1; }
+	svg .baseline { stroke: var(--fg-3); stroke-width: 1; }
+	svg .tick { fill: var(--fg-3); font-family: var(--font-data); font-size: 9px; }
+	svg .divider { stroke: var(--fg-3); stroke-width: 1.2; stroke-dasharray: 3 3; }
+	svg .p5e { fill: var(--p5e); }
+	svg .p5e.new { fill: var(--p5e-new); }
+	svg .game { fill: var(--game); stroke: var(--surface); stroke-width: 1; }
+	svg .hit { fill: transparent; cursor: crosshair; }
+	svg .hit:hover { fill: var(--fg); fill-opacity: 0.06; }
+
+	.tip {
+		position: fixed;
+		z-index: 3;
+		pointer-events: none;
+		background: var(--surface);
+		color: var(--fg);
+		border: 1px solid var(--line);
+		border-radius: 4px;
+		box-shadow: 0 4px 14px rgb(0 0 0 / 0.14);
+		padding: 7px 10px;
+		font-size: 14px;
+		line-height: 1.35;
+		max-width: 260px;
+	}
+	.tip strong { font-weight: 600; }
+	.tip .row { display: flex; gap: 8px; align-items: center; color: var(--fg-2); font-family: var(--font-data); font-size: 12px; }
+	.tip .tag { font-family: var(--font-ui); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--p5e-new); }
+</style>
+<!-- body -->
+<div class="page">
+	<header class="bar">
+		<h1>Move Level Spread</h1>
+		<span class="summary" id="summary"></span>
+		<div class="controls">
+			<input type="search" id="search" placeholder="Filter by Pokémon" aria-label="Filter by Pokémon">
+			<label><input type="checkbox" id="only-new"> Only Pokémon with new moves</label>
+		</div>
+	</header>
+
+	<div class="legend">
+		<span><i class="swatch" style="background: var(--p5e)"></i> P5e level, in 2018</span>
+		<span><i class="swatch" style="background: var(--p5e-new)"></i> P5e level, new in 2024</span>
+		<span><i class="swatch thin" style="background: var(--game)"></i> Most recent game level, scaled so the pokemon's highest game level = 20</span>
+		<span><i class="swatch rule"></i> End of Start moves (drawn at Min Level)</span>
+	</div>
+
+	<div class="grid" id="grid"></div>
+	<p class="empty" id="empty" hidden>No Pokémon match that filter.</p>
+</div>
+
+<div class="tip" id="tip" hidden></div>
+
+<script>
+	const DATA = /*DATA*/null
+
+	const W = 360, H = 150
+	const PAD = { left: 22, right: 4, top: 6, bottom: 6 }
+	const PLOT_W = W - PAD.left - PAD.right
+	const PLOT_H = H - PAD.top - PAD.bottom
+	const MAX = 20
+	const TICKS = [2, 6, 10, 14, 18]
+	const MIN_SLOTS = 12
+
+	const y = (v) => PAD.top + PLOT_H * (1 - Math.min(v, MAX) / MAX)
+	const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", "\"": "&quot;" })[c])
+	const titleCase = (id) => id.split("-").map((w) => w[0].toUpperCase() + w.slice(1)).join(" ")
+	const levelLabel = (level) => level === 0 ? "Start" : `Lv ${level}`
+	const r = (n) => Math.round(n * 100) / 100
+
+	function chart(p, index) {
+		const n = p.moves.length
+		const slot = PLOT_W / Math.max(n, MIN_SLOTS)
+		const wide = slot * 0.8
+		const thin = Math.max(slot * 0.32, 1.5)
+		const parts = []
+
+		for (const t of TICKS) {
+			parts.push(`<line class="gridline" x1="${PAD.left}" x2="${W - PAD.right}" y1="${y(t)}" y2="${y(t)}"/>`)
+			parts.push(`<text class="tick" x="${PAD.left - 4}" y="${y(t) + 3}" text-anchor="end">${t}</text>`)
+		}
+
+		p.moves.forEach(([, level, gameLevel, , isNew], i) => {
+			const cx = PAD.left + slot * i + slot / 2
+			const p5eValue = level === 0 ? p.minLevel : level
+			parts.push(`<rect class="p5e${isNew ? " new" : ""}" x="${r(cx - wide / 2)}" y="${r(y(p5eValue))}" width="${r(wide)}" height="${r(y(0) - y(p5eValue))}" rx="1.5"/>`)
+
+			if (gameLevel != null && p.gameMax) {
+				const gameValue = gameLevel / p.gameMax * MAX
+				if (gameLevel === 0) {
+					parts.push(`<circle class="game" cx="${r(cx)}" cy="${y(0) - 2.5}" r="2.5"/>`)
+				} else {
+					parts.push(`<rect class="game" x="${r(cx - thin / 2)}" y="${r(y(gameValue))}" width="${r(thin)}" height="${r(y(0) - y(gameValue))}" rx="1"/>`)
+				}
+			}
+		})
+
+		const startCount = p.moves.filter(([, level]) => level === 0).length
+		if (startCount > 0 && startCount < n) {
+			const x = r(PAD.left + slot * startCount)
+			parts.push(`<line class="divider" x1="${x}" x2="${x}" y1="${PAD.top}" y2="${H - PAD.bottom}"/>`)
+		}
+
+		parts.push(`<line class="baseline" x1="${PAD.left}" x2="${W - PAD.right}" y1="${y(0)}" y2="${y(0)}"/>`)
+
+		p.moves.forEach((_, i) => {
+			parts.push(`<rect class="hit" data-p="${index}" data-m="${i}" x="${r(PAD.left + slot * i)}" y="${PAD.top}" width="${r(slot)}" height="${PLOT_H}"/>`)
+		})
+
+		return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Level-up moves of ${esc(p.name)}">${parts.join("")}</svg>`
+	}
+
+	// Levels at or below Min Level are skipped since those moves are Start moves, unless something is somehow there anyway
+	function counts(p) {
+		const byLevel = new Map([0, ...TICKS.filter((l) => l > p.minLevel)].map((l) => [l, 0]))
+		for (const [, level] of p.moves) byLevel.set(level, (byLevel.get(level) ?? 0) + 1)
+		const levels = [...byLevel].sort(([a], [b]) => a - b).map(([level, count]) => `<span>${level === 0 ? "S" : `L${level}`}: <b>${count}</b></span>`)
+		return [...levels, `<span>T: <b>${p.moves.length}</b></span>`].join("")
+	}
+
+	function card(p, index) {
+		const meta = `Min Lv ${p.minLevel} · game max ${p.gameMax != null ? `Lv ${p.gameMax}` : "n/a"}`
+		return `<article class="card" data-i="${index}">
+			<h2>${esc(p.name)} <span class="num">#${p.number}</span><span class="meta">${meta}</span></h2>
+			${chart(p, index)}
+			<div class="counts" title="Moves learned at each level">${counts(p)}</div>
+		</article>`
+	}
+
+	const grid = document.getElementById("grid")
+	grid.innerHTML = DATA.map(card).join("")
+	const cards = [...grid.children]
+
+	const totalMoves = DATA.reduce((sum, p) => sum + p.moves.length, 0)
+	const newMoves = DATA.reduce((sum, p) => sum + p.moves.filter((m) => m[4]).length, 0)
+	const summary = document.getElementById("summary")
+	const setSummary = (shown) => {
+		summary.textContent = `${shown} of ${DATA.length} Pokémon · ${totalMoves.toLocaleString()} level-up moves, ${newMoves.toLocaleString()} new in 2024`
+	}
+	setSummary(DATA.length)
+
+	// Filters
+	const search = document.getElementById("search")
+	const onlyNew = document.getElementById("only-new")
+	const empty = document.getElementById("empty")
+	function applyFilters() {
+		const q = search.value.trim().toLowerCase()
+		let shown = 0
+		cards.forEach((el, i) => {
+			const p = DATA[i]
+			const match = (q === "" || p.name.toLowerCase().includes(q) || p.id.includes(q) || String(p.number) === q)
+				&& (!onlyNew.checked || p.moves.some((m) => m[4]))
+			el.hidden = !match
+			if (match) shown++
+		})
+		empty.hidden = shown > 0
+		setSummary(shown)
+	}
+	search.addEventListener("input", applyFilters)
+	onlyNew.addEventListener("change", applyFilters)
+
+	// Tooltip
+	const tip = document.getElementById("tip")
+	grid.addEventListener("pointerover", (e) => {
+		const hit = e.target.closest?.(".hit")
+		if (!hit) return
+		const p = DATA[hit.dataset.p]
+		const [move, level, gameLevel, game, isNew] = p.moves[hit.dataset.m]
+		const p5e = level === 0 ? `Start (Min Lv ${p.minLevel})` : `Lv ${level}`
+		const gameText = gameLevel == null
+			? "Not learned by level-up in the games"
+			: gameLevel === 0
+				? `On evolution in ${titleCase(game)}`
+				: `Lv ${gameLevel} of ${p.gameMax} in ${titleCase(game)} (scaled ${r(gameLevel / p.gameMax * MAX)})`
+		tip.innerHTML = `<strong>${esc(titleCase(move))}</strong>${isNew ? ` <span class="tag">New</span>` : ""}
+			<div class="row"><i class="swatch" style="background: var(${isNew ? "--p5e-new" : "--p5e"})"></i>P5e ${p5e}</div>
+			<div class="row"><i class="swatch thin" style="background: var(--game)"></i>${esc(gameText)}</div>`
+		tip.hidden = false
+	})
+	grid.addEventListener("pointermove", (e) => {
+		if (tip.hidden) return
+		const { innerWidth } = window
+		const rect = tip.getBoundingClientRect()
+		const left = e.clientX + 14 + rect.width > innerWidth ? e.clientX - rect.width - 14 : e.clientX + 14
+		tip.style.left = `${Math.max(4, left)}px`
+		tip.style.top = `${Math.max(4, e.clientY - rect.height - 12)}px`
+	})
+	grid.addEventListener("pointerout", (e) => {
+		if (e.target.closest?.(".hit") && !e.relatedTarget?.closest?.(".hit")) tip.hidden = true
+	})
+</script>
