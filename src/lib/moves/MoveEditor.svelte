@@ -86,11 +86,19 @@
 					<IntField label={m.maxPp()} name="move-pp-{value.id}" bind:value={value.pp.max} {disabled} />
 					<MarkdownField label={m.notes()} name="move-notes-{value.id}" bind:value={value.notes} {disabled} />
 				</FormGroup>
-				<FormGroup>
-					<IntField label="To Hit Modifier" name="move-tohit-{value.id}" bind:value={value.modifiers.toHit} {disabled} />
-					<IntField label="Damage Modifier" name="move-damage-{value.id}" bind:value={value.modifiers.damage} {disabled} />
-					<IntField label="Save DC Modifier" name="move-savedc-{value.id}" bind:value={value.modifiers.saveDc} {disabled} />
-				</FormGroup>
+				{#if theMove?.attack != null || theMove?.dice != null || theMove?.save != null}
+					<FormGroup>
+						{#if theMove?.attack != null}
+							<IntField label="To Hit Modifier" name="move-tohit-{value.id}" bind:value={value.modifiers.toHit} {disabled} />
+						{/if}
+						{#if theMove?.dice != null}
+							<IntField label="Damage Modifier" name="move-damage-{value.id}" bind:value={value.modifiers.damage} {disabled} />
+						{/if}
+						{#if theMove?.save != null}
+							<IntField label="Save DC Modifier" name="move-savedc-{value.id}" bind:value={value.modifiers.saveDc} {disabled} />
+						{/if}
+					</FormGroup>
+				{/if}
 				<FormGroup>
 					<MoveTypeField label="Custom Type" name="custom-type-{value.id}" bind:value={value.customization.type} defaultable {disabled} />
 				</FormGroup>
