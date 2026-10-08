@@ -11,6 +11,9 @@
 
 <style>
 	.form-group {
+		display: flex;
+		flex-direction: column;
+		gap: 0.75em;
 		border-inline-start: 0.25em solid var(--skin-bg);
 		padding-inline-start: 0.75em;
 		margin-block-end: 0.75em;

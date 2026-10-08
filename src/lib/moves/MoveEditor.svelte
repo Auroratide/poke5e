@@ -11,6 +11,7 @@
 		IntField,
 		CheckboxFields,
 		ToggleSwitchField,
+		FormGroup,
 	} from "$lib/ui/forms"
 	import type { PokemonSpecies } from "$lib/poke5e/species"
 	import { LearnableMoves } from "./LearnableMoves"
@@ -81,27 +82,41 @@
 				</Button>
 			</MoveOption>
 			<div id={advancedEditorId} class="advanced-editor" hidden={!advancedEditorOpen}>
-				<IntField label={m.maxPp()} name="move-pp-{value.id}" bind:value={value.pp.max} {disabled} />
-				<MarkdownField label={m.notes()} name="move-notes-{value.id}" bind:value={value.notes} {disabled} />
-				<IntField label="To Hit Modifier" name="move-tohit-{value.id}" bind:value={value.modifiers.toHit} {disabled} />
-				<IntField label="Damage Modifier" name="move-damage-{value.id}" bind:value={value.modifiers.damage} {disabled} />
-				<IntField label="Save DC Modifier" name="move-savedc-{value.id}" bind:value={value.modifiers.saveDc} {disabled} />
-				<MoveTypeField label="Custom Type" name="custom-type-{value.id}" bind:value={value.customization.type} defaultable {disabled} />
-				<ToggleSwitchField label="Customize Move Powers?" bind:value={
-					() => value.customization.powers != null,
-					(on) => {
-						value.customization.powers = on ? (theMove?.power?.attributeList() ?? []) : undefined
-						customizeMovePowers = on
-					}
-				} {disabled} />
-				{#if customizeMovePowers && value.customization.powers}
+				<FormGroup>
+					<IntField label={m.maxPp()} name="move-pp-{value.id}" bind:value={value.pp.max} {disabled} />
+					<MarkdownField label={m.notes()} name="move-notes-{value.id}" bind:value={value.notes} {disabled} />
+				</FormGroup>
+				<FormGroup>
+					<IntField label="To Hit Modifier" name="move-tohit-{value.id}" bind:value={value.modifiers.toHit} {disabled} />
+					<IntField label="Damage Modifier" name="move-damage-{value.id}" bind:value={value.modifiers.damage} {disabled} />
+					<IntField label="Save DC Modifier" name="move-savedc-{value.id}" bind:value={value.modifiers.saveDc} {disabled} />
+				</FormGroup>
+				<FormGroup>
+					<MoveTypeField label="Custom Type" name="custom-type-{value.id}" bind:value={value.customization.type} defaultable {disabled} />
+				</FormGroup>
+				<FormGroup>
+					<ToggleSwitchField label="Customize Move Powers?" bind:value={
+						() => value.customization.powers != null,
+						(on) => {
+							value.customization.powers = on ? (theMove?.power?.attributeList() ?? []) : undefined
+							customizeMovePowers = on
+						}
+					} {disabled} />
+					{#if customizeMovePowers && value.customization.powers}
 					<div class="three-columns" transition:slide={{ duration: 150 }}>
 						<CheckboxFields label="Custom Move Powers" name="custom-powers-{value.id}" bind:checked={value.customization.powers} values={attributeNames} {disabled} />
 					</div>
-				{/if}
-				<MoveTimeField label="Custom Move Time" name="custom-time-{value.id}" bind:value={value.customization.time} {disabled} defaultable />
-				<MoveDurationField label="Custom Duration" name="custom-duration-{value.id}" bind:value={value.customization.duration} {disabled} defaultable />
-				<MoveRangeField label="Custom Range" name="custom-range-{value.id}" bind:value={value.customization.range} {disabled} defaultable />
+					{/if}
+				</FormGroup>
+				<FormGroup>
+					<MoveTimeField label="Custom Move Time" name="custom-time-{value.id}" bind:value={value.customization.time} {disabled} defaultable />
+				</FormGroup>
+				<FormGroup>
+					<MoveDurationField label="Custom Duration" name="custom-duration-{value.id}" bind:value={value.customization.duration} {disabled} defaultable />
+				</FormGroup>
+				<FormGroup>
+					<MoveRangeField label="Custom Range" name="custom-range-{value.id}" bind:value={value.customization.range} {disabled} defaultable />
+				</FormGroup>
 			</div>
 		{/if}
 	{:else}
