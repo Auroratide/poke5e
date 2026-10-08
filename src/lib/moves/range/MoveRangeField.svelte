@@ -17,7 +17,7 @@
 		defaultable?: boolean,
 	} = $props()
 
-	let customType = $state<string | undefined>(undefined)
+	let customType = $state<string | undefined>(value?.type)
 
 	const DEFAULT_OPTION = ""
 
