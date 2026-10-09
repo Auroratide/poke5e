@@ -314,6 +314,7 @@
 	"cube": "{value}-foot cube",
 	"line": "{value}-foot line",
 	"cylinder": "{value}-foot-radius, {height}-foot-high cylinder",
+	"sphere": "{value}-foot-radius sphere",
 	"rangeWithShape": "{range} ({shape})",
 	"unknownShape": "<?> shape",
 	"updatedRecently": "Updated Recently",

@@ -103,6 +103,7 @@ export const MoveJson = z.object({
 			"emanation",
 			"cube",
 			"cylinder",
+			"sphere",
 		]),
 		value: z.int(),
 		otherValues: z.int().array().optional(),
