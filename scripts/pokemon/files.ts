@@ -5,6 +5,17 @@ export type PokemonData = {
 	id: string, // eg. bulbasaur
 	name: string,
 	number: number,
+	hitDice: string,
+	hp: number,
+	minLevel: number,
+	attributes: {
+		str: number,
+		dex: number,
+		con: number,
+		int: number,
+		wis: number,
+		cha: number,
+	}
 	habitat: {
 		biomes: string[],
 		nativeRegion?: string,
@@ -53,4 +64,24 @@ export async function writePokemonOverrides(data: PokemonOverride[], edition: st
 	const raw = JSON.stringify({ values: data }, null, "\t")
 
 	await fs.writeFile(srdPath(edition), `${raw}\n`, { encoding: "utf-8" })
+}
+
+export function overrideInOldEdition(list2018: PokemonData[], override: Pick<PokemonData, "id"> & Partial<PokemonData>): PokemonData[] {
+	const inOriginalList = list2018.findIndex((it) => it.id === override.id)
+	const toReplaceWith = Object.assign({}, list2018[inOriginalList] ?? {}, override)
+	if (inOriginalList >= 0) {
+		list2018.splice(1, 1, toReplaceWith)
+	} else {
+		list2018.push(toReplaceWith)
+	}
+
+	return list2018
+}
+
+export function ensureSortedByNumber(list2018: PokemonData[], list2024: PokemonData[]): PokemonData[] {
+	const numbers = new Map(list2024.map(({ id, number }) => [id, number]));
+
+	return [...list2018].sort(
+		(a, b) => (numbers.get(a.id) ?? Infinity) - (numbers.get(b.id) ?? Infinity)
+	)
 }

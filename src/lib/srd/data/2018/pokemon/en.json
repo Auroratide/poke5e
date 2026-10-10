@@ -86,6 +86,74 @@
 					"petal-blizzard"
 				]
 			}
+		},
+		{
+			"id": "farfetchd",
+			"hp": 25
+		},
+		{
+			"id": "omanyte",
+			"hp": 28
+		},
+		{
+			"id": "kabuto",
+			"hp": 28
+		},
+		{
+			"id": "dratini",
+			"hp": 20
+		},
+		{
+			"id": "aipom",
+			"hp": 25
+		},
+		{
+			"id": "murkrow",
+			"hp": 20
+		},
+		{
+			"id": "unown",
+			"hp": 20
+		},
+		{
+			"id": "pineco",
+			"hp": 25
+		},
+		{
+			"id": "dunsparce",
+			"hp": 20
+		},
+		{
+			"id": "gligar",
+			"hp": 18
+		},
+		{
+			"id": "smoochum",
+			"hp": 24
+		},
+		{
+			"id": "elekid",
+			"hp": 26
+		},
+		{
+			"id": "magby",
+			"hp": 26
+		},
+		{
+			"id": "azurill",
+			"hp": 14
+		},
+		{
+			"id": "feebas",
+			"hp": 16
+		},
+		{
+			"id": "darumaka",
+			"hp": 24
+		},
+		{
+			"id": "trubbish",
+			"hp": 19
 		}
 	]
 }
