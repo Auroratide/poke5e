@@ -21,7 +21,7 @@
 
 <div class="beta-toggle" class:active={isActive} class:hidden={feature.status === "Hidden"}>
 	<ToggleSwitchField label={feature.name} value={isActive} on:change={handleChange} />
-	<p><Tag color={feature.status === "Ready" ? "success" : undefined}>{feature.status}</Tag> {feature.description}</p>
+	<p><Tag color={feature.status === "Ready" ? "success" : feature.status === "Early" ? "danger" : undefined}>{feature.status}</Tag> {feature.description}</p>
 </div>
 
 <style>
