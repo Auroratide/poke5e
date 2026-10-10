@@ -1,1 +1,1 @@
-export { default as MoveEditor } from "./MoveEditor.svelte"
+export { default as CustomMoveEditor } from "./CustomMoveEditor.svelte"
