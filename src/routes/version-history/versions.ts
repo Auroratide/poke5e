@@ -14,6 +14,49 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.16",
+		description: [
+			`<strong>Beta, Moves</strong>: Many rock-type moves updated for 2024 edition:<ul>
+				<li><strong>Ancient Power</strong>: STR removed from move powers; WIS and CHA added.</li>
+				<li><strong>Diamond Storm</strong>: Shape changed, and more consistent AC bonus.</li>
+				<li><strong>Head Smash</strong>: CON added to move powers.</li>
+				<li><strong>Meteor Beam</strong>: Damage is reduced to match Solar Beam.</li>
+				<li><strong>Mighty Cleave</strong>: WIS added to move powers.</li>
+				<li><strong>Power Gem</strong>: WIS added to move powers.</li>
+				<li><strong>Rock Blast</strong>: DEX added to move powers.</li>
+				<li><strong>Rock Slide</strong>: Changed to an AoE line move.</li>
+				<li><strong>Rock Wrecker</strong>: DEX added to move powers.</li>
+				<li><strong>Rollout</strong>: DEX added to move powers.</li>
+				<li><strong>Salt Cure</strong>: CON and CHA added to move powers.</li>
+				<li><strong>Smack Down</strong>: Range increased, and DEX added to move powers.</li>
+				<li><strong>Stone Axe</strong>: DEX added to move powers.</li>
+				<li><strong>Stone Edge</strong>: Overhauled into a persistent wall.</li>
+			</ul>`,
+			"<strong>Beta, Move Customization</strong>: Added the ability to customize pokemon moves (type, move powers, time, duration, and range).",
+			`<strong>Beta, Pokemon</strong>: Standardize the HP of level 1 pokemon in Gens 1-7 to a consistent formula:<ul>
+				<li><strong>Farfetch'd</strong>: 25 → 19
+				<li><strong>Omanyte</strong>: 28 → 20
+				<li><strong>Kabuto</strong>: 28 → 20
+				<li><strong>Dratini</strong>: 20 → 18
+				<li><strong>Aipom</strong>: 25 → 20
+				<li><strong>Murkrow</strong>: 20 → 21
+				<li><strong>Unown</strong>: 20 → 21
+				<li><strong>Pineco</strong>: 25 → 21
+				<li><strong>Dunsparce</strong>: 20 → 22
+				<li><strong>Gligar</strong>: 18 → 19
+				<li><strong>Smoochum</strong>: 24 → 18
+				<li><strong>Elekid</strong>: 26 → 19
+				<li><strong>Magby</strong>: 26 → 19
+				<li><strong>Azurill</strong>: 14 → 13
+				<li><strong>Feebas</strong>: 16 → 15
+				<li><strong>Darumaka</strong>: 24 → 20
+				<li><strong>Trubbish</strong>: 19 → 17
+			</ul>`,
+			"<strong>Moves</strong>: Reword Thousand Arrows to be more clear on its use of 5e terminology.",
+			"<strong>Moves</strong>: Reword the multistrike feature of moves such as Pin Missile to differentiate 'hit' versus 'strike'.",
+			"<strong>Bugfix</strong>: If a pokemon has a 2024 edition feat, but the app is in 2018 edition mode, then the 2024 definition of the feat will now show instead of no description.",
+		],
+	}, {
 		name: "v1.12.15",
 		description: [
 			"<strong>Bugfix</strong>: Fix issue where removing moves from pokemon would crash the app.",
