@@ -765,7 +765,7 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You unleash a flurry of fists on a creature. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "You unleash a flurry of fists on a creature. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"multistrike"
 			]
@@ -2095,7 +2095,7 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You rush forward to deliver a series of hard hits against a target. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "You rush forward to deliver a series of hard hits against a target. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"multistrike"
 			]
@@ -2643,7 +2643,7 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"description": "Your fire a series of high-speed seeds at a creature. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "Your fire a series of high-speed seeds at a creature. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"ballistic",
 				"multistrike"
@@ -3417,7 +3417,7 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You strike out with a lightning fast punch. Make a melee attack roll. The target takes {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "You strike out with a lightning fast punch. Make a melee attack roll. The target takes {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"multistrike",
 				"punch"
@@ -4831,7 +4831,7 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You reach out with quick slaps. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "You reach out with quick slaps. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"multistrike"
 			]
@@ -8109,7 +8109,7 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You reach out and unleash relentless strikes against a creature. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "You reach out and unleash relentless strikes against a creature. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"multistrike"
 			]
@@ -8171,7 +8171,7 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You reach out and unleash relentless claw attacks against a creature. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "You reach out and unleash relentless claw attacks against a creature. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"multistrike"
 			]
@@ -10648,7 +10648,7 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"description": "Your pummel a creature in range with multiple sharp shards of ice. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "Your pummel a creature in range with multiple sharp shards of ice. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"multistrike"
 			]
@@ -14999,7 +14999,7 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"description": "You strike a creature with sharp projectiles in quick succession. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, another projectile hits again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "You strike a creature with sharp projectiles in quick succession. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"multistrike"
 			]
@@ -17287,7 +17287,7 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"description": "You summon a series of rocks that fire their way towards a creature. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "You summon a series of rocks that fire their way towards a creature. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"ballistic",
 				"multistrike"
@@ -20189,7 +20189,7 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"description": "You fire a series of sharp spikes at a creature in range. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "You fire a series of sharp spikes at a creature in range. Make a ranged attack roll, doing {dice} {type} damage on a hit. AAfter successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"multistrike"
 			]
@@ -21857,7 +21857,7 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You strike out against a creature with a quick- hitting, hard tail. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "You strike out against a creature with a quick- hitting, hard tail. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"multistrike"
 			]
@@ -22480,7 +22480,7 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You thrash about wildly, doing several attacks without control. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately hit again for an additional 1d10 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of two additional hits. At the end of this attack, you become confused.",
+			"description": "You thrash about wildly, doing several attacks without control. Make a melee attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you immediately strike again for 1d10 {type} damage, then roll another d4, and on a result of 3 or 4, you immediately strike one last time for 1d10 {type} damage. At the end of this attack, you become confused.",
 			"categories": []
 		},
 		{
@@ -23995,7 +23995,7 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"description": "You fire a barrage of sharp shurikens at a target. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, another shuriken strikes the target for an additional 1d4 {type} damage. Continue this process until you fail to roll a 3 or 4 on the d4 roll, up to a maximum of four additional hits.",
+			"description": "You fire a barrage of sharp shurikens at a target. Make a ranged attack roll, doing {dice} {type} damage on a hit. After successfully hitting a target, roll a d4. On a result of 3 or 4, you may immediately strike again for another 1d4 {type} damage. Repeat this process up to a total of four times, stopping early if you fail to roll a 3 or 4 on the d4 roll.",
 			"categories": [
 				"multistrike"
 			]
