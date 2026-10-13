@@ -19,6 +19,11 @@
 			"description": "Você invoca uma infestação de pequenos insetos para atacar uma criatura por múltiplos turnos. Faça um ataque à distância no alvo. Em caso de acerto, o alvo sofre {dice} de dano de {type} e fica infestado por enxames. Enquanto você mantiver a concentração, o alvo sofre 1d8 de dano de {type} adicional ao final de cada um de seus próximos três turnos."
 		},
 		{
+			"id": "jaw-lock",
+			"name": "Trava da Mandíbula",
+			"description": "Você se agarra a um inimigo, sem nunca mais soltar. Faça um ataque corpo a corpo contra um alvo, causando {dice} de dano {type} em um acerto.\n\nEm caso de acerto, você agarra o alvo. No seu turno, você pode ativar este movimento contra um alvo agarrado desta forma para causar {dice} de dano {type}. Este movimento pode agarrar alvos até duas categorias de tamanho maiores que você."
+		},
+		{
 			"id": "roost",
 			"name": "Roost",
 			"description": "Você pousa no chão para descansar seu corpo. Ao ativar este movimento, sua velocidade de voo se torna zero e você perde o tipo voador enquanto permanecer no solo. No início do seu próximo turno, se não tiver deixado o chão, recupere {dice} de pontos de vida."

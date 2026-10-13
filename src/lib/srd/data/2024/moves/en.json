@@ -1611,7 +1611,7 @@
 			"save": {
 				"attribute": "str"
 			},
-			"description": "You attempt to grapple a target into submission. Make a melee attack roll. On a hit, the target takes {dice} {type} damage and is grappled. At the beginning of each of its turns, it may attempt to escape with a {save}. While a creature is grappled, you may continue this move, as a bonus action, to do an automatic 1d4 {type} damage without having to make an attack roll.",
+			"description": "You attempt to grapple a target into submission. Make a melee attack roll. On a hit, the target takes {dice} {type} damage and is grappled. At the beginning of each of its turns, it may attempt to escape with a {save}. On your subsequent turns, while you are grappling a creature with this move, you can activate it again as a bonus action, with an automatic hit, dealing 1d4 {type} damage.",
 			"categories": []
 		},
 		{
@@ -3195,7 +3195,7 @@
 			"save": {
 				"attribute": "str"
 			},
-			"description": "You clamp down on a target, attempting to deal damage and keep them in place. Make a melee attack roll. On a hit, the target takes {dice} {type} damage and is grappled. At the beginning of each of its turns, it may attempt to pry itself away with a {save}. As long as the target is grappled on your subsequent turns, this move can be activated again as a bonus action with an automatic hit, dealing 1d6 {type} damage.",
+			"description": "You clamp down on a target, attempting to deal damage and keep them in place. Make a melee attack roll. On a hit, the target takes {dice} {type} damage and is grappled. At the beginning of each of its turns, it may attempt to escape with a {save}. On your subsequent turns, while you are grappling a creature with this move, you can activate it again as a bonus action, with an automatic hit, dealing 1d6 {type} damage.",
 			"categories": []
 		},
 		{
@@ -3537,7 +3537,7 @@
 			"save": {
 				"attribute": "str"
 			},
-			"description": "You wrap yourself around a creature, trying to squeeze the life from them. Make a melee attack roll. On a hit, the target takes {dice} {type} damage and is grappled. At the beginning of each of its turns, it may attempt to escape with a {save}. As long as the target is grappled on your subsequent turns, this move can be activated again as a bonus action with an automatic hit, dealing 1d4 {type} damage.",
+			"description": "You wrap yourself around a creature, trying to squeeze the life from them. Make a melee attack roll. On a hit, the target takes {dice} {type} damage and is grappled. At the beginning of each of its turns, it may attempt to escape with a {save}. On your subsequent turns, while you are grappling a creature with this move, you can activate it again as a bonus action, with an automatic hit, dealing 1d4 {type} damage.",
 			"categories": [],
 			"updated": {
 				"tag": "Updated",
@@ -11069,10 +11069,14 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You latch onto a foe, never to let go. Make a melee attack against a target, doing {dice} {type} damage on a hit.\n\nOn a hit, you grapple the target. On your turn, you may activate this move against a target grappled this way to deal {dice} {type} damage. This move can grapple targets up to two sizes larger than you.",
+			"description": "You latch onto a foe, never to let go. Make a melee attack against a target, doing {dice} {type} damage on a hit.\n\nOn a hit, you grapple the target. On your subsequent turns, while you are grappling a creature with this move, you can activate it again as a bonus action, with an automatic hit, dealing 2d6 {type} damage. This move can grapple targets up to two sizes larger than you.",
 			"categories": [
 				"biting"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "Subsequent activations are a bonus action that automatically hit for 2d6 damage."
+			}
 		},
 		{
 			"id": "jet-punch",
@@ -21181,7 +21185,7 @@
 			"save": {
 				"attribute": "str"
 			},
-			"description": "You attempt a forceful grapple on a target. Make a melee attack, doing {dice} {type} damage on a hit, but taking a quarter of the damage dealt in recoil. On a hit, the target is grappled. At the beginning of each of its turns, it may attempt to escape with a {save}. While a creature is grappled, this move can be activated again as a bonus action with an automatic hit, dealing 2d6 {type} damage with a quarter of the damage dealt in typeless recoil.",
+			"description": "You attempt a forceful grapple on a target. Make a melee attack, doing {dice} {type} damage on a hit, but taking a quarter of the damage dealt in recoil. On a hit, you grapple the target. At the beginning of each of its turns, it may attempt to escape with a {save}. On your subsequent turns, while you are grappling a creature with this move, you can activate it again as a bonus action, with an automatic hit, dealing 2d6 {type} damage, taking a quarter of the damage dealt in recoil.",
 			"categories": []
 		},
 		{
@@ -24585,7 +24589,7 @@
 			"save": {
 				"attribute": "str"
 			},
-			"description": "You attempt to grapple a target into submission. Make a melee attack roll. On a hit, the target takes {dice} {type} damage and is grappled. At the beginning of each of its turns, it may attempt to escape with a {save}. As long as the target is grappled on your subsequent turns, this move can be activated again as a bonus action with an automatic hit, dealing 1d4 {type} damage.",
+			"description": "You attempt to grapple a target into submission. Make a melee attack roll. On a hit, the target takes {dice} {type} damage and is grappled. At the beginning of each of its turns, it may attempt to escape with a {save}. On your subsequent turns, while you are grappling a creature with this move, you can activate it again as a bonus action, with an automatic hit, dealing 1d4 {type} damage.",
 			"categories": []
 		},
 		{

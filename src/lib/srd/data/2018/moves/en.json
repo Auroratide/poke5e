@@ -250,6 +250,11 @@
 			"updated": null
 		},
 		{
+			"id": "jaw-lock",
+			"description": "You latch onto a foe, never to let go. Make a melee attack against a target, doing {dice} {type} damage on a hit.\n\nOn a hit, you grapple the target. On your turn, you may activate this move against a target grappled this way to deal {dice} {type} damage. This move can grapple targets up to two sizes larger than you.",
+			"updated": null
+		},
+		{
 			"id": "meteor-beam",
 			"dice": {
 				"class": "150",
