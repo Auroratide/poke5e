@@ -21,6 +21,10 @@
 			"description": "Le degré de difficulté des jets de sauvegarde causés par les capacités de ce Pokémon est augmenté de 1."
 		},
 		{
+			"id": "skill-link",
+			"description": "Les capacités combo de ce Pokémon sont assurés de frapper encore au moins une autre fois (ex., Furie, Dard-Nuée, Double-Baffe...)"
+		},
+		{
 			"id": "sweet-veil",
 			"description": "Les alliés de ce Pokémon à 15 pieds sont immunisés au statut sommeil."
 		},

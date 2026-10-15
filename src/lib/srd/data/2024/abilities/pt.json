@@ -936,8 +936,7 @@
 		},
 		{
 			"id": "skill-link",
-			"name": "Ligação de Habilidade",
-			"description": "Movimentos multiacerto garantem pelo menos dois acertos."
+			"name": "Ligação de Habilidade"
 		},
 		{
 			"id": "slow-start",

@@ -1126,8 +1126,7 @@
 		},
 		{
 			"id": "skill-link",
-			"name": "Multi-Coups",
-			"description": "Les capacités combo de ce Pokémon sont assurés de frapper encore au moins une autre fois (ex., Furie, Dard-Nuée, Double-Baffe...)"
+			"name": "Multi-Coups"
 		},
 		{
 			"id": "slow-start",

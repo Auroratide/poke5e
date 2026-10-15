@@ -26,6 +26,11 @@
 			"updated": null
 		},
 		{
+			"id": "skill-link",
+			"description": "Combo moves that have the ability to hit more than once, after the same attack roll, are guaranteed to hit at least twice. (Fury Swipes, Double Slap, Water Shuriken, etc.)",
+			"updated": null
+		},
+		{
 			"id": "sweet-veil",
 			"description": "Any ally within 15 feet of this Pokémon is immune to the sleep condition.",
 			"updated": null

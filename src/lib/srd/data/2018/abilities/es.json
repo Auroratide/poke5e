@@ -21,6 +21,10 @@
 			"description": "La CD para superar una tirada de salvación contra un movimiento de este Pokémon aumenta en 1."
 		},
 		{
+			"id": "skill-link",
+			"description": "Habilidades de combo que pueden golpear varias veces tras una misma tirada de ataque están garantizados a impactar al menos dos veces (como Golpes Furia, Doble Bofetón, Shuriken de Agua, etc.)."
+		},
+		{
 			"id": "sweet-veil",
 			"description": "Cualquier aliado a 15 pies o menos de este Pokémon es inmune a quedarse dormido."
 		},

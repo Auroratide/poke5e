@@ -1221,8 +1221,7 @@
 		},
 		{
 			"id": "skill-link",
-			"name": "Encadenado",
-			"description": "Habilidades de combo que pueden golpear varias veces tras una misma tirada de ataque están garantizados a impactar al menos dos veces (como Golpes Furia, Doble Bofetón, Shuriken de Agua, etc.)."
+			"name": "Encadenado"
 		},
 		{
 			"id": "slow-start",
