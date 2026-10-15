@@ -6997,7 +6997,7 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"description": "You send a plume of flame towards a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. After you land a hit, any ally that uses another Pledge move in the same round automatically hits.",
+			"description": "You send a plume of flame towards a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. After you land a hit, until the current round ends, any ally that uses another Pledge move automatically hits.",
 			"categories": []
 		},
 		{
@@ -8632,7 +8632,7 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"description": "You send a column of thick grass towards a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. After you land a hit, any ally that uses another Pledge move in the same round automatically hits.",
+			"description": "You send a column of thick grass towards a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. After you land a hit, until the current round ends, any ally that uses another Pledge move automatically hits.",
 			"categories": []
 		},
 		{
@@ -23937,7 +23937,7 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"description": "You send a column of water towards a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. After you land a hit, any ally that uses another Pledge move in the same round automatically hits.",
+			"description": "You send a column of water towards a creature. Make a ranged attack, dealing {dice} {type} damage on a hit. After you land a hit, until the current round ends, any ally that uses another Pledge move automatically hits.",
 			"categories": []
 		},
 		{
