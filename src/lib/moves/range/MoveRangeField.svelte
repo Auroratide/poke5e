@@ -5,13 +5,13 @@
 
 	let {
 		value = $bindable(),
-		label,
+		label = m.range(),
 		name,
 		disabled = false,
 		defaultable = false,
 	}: {
 		value: MoveRange | undefined,
-		label: string,
+		label?: string,
 		name?: string,
 		disabled?: boolean,
 		defaultable?: boolean,

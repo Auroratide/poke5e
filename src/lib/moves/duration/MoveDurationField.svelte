@@ -6,13 +6,13 @@
 
 	let {
 		value = $bindable(),
-		label,
+		label = m.duration(),
 		name,
 		disabled = false,
 		defaultable = false,
 	}: {
 		value: MoveDuration | undefined,
-		label: string,
+		label?: string,
 		name?: string,
 		disabled?: boolean,
 		defaultable?: boolean,
