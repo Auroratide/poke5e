@@ -7,6 +7,7 @@
 		IntField,
 		MarkdownField,
 	} from "$lib/ui/forms"
+	import MovePowerFieldset from "../MovePowerFieldset.svelte"
 	import { MoveDurationField } from "../duration"
 	import { MoveRangeField } from "../range"
 	import { MoveTimeField } from "../time"
@@ -25,7 +26,7 @@
 		// CHECKLIST:
 		// DONE name
 		// DONE type
-		// power
+		// DONE power
 		// DONE time
 		// DONE pp
 		// DONE duration
@@ -55,4 +56,5 @@
 		<MoveRangeField value={{ type: "melee" }} />
 		<MarkdownField label={m.description()} value="describe" />
 	</Fieldset>
+	<MovePowerFieldset value={[ "str", "dex" ]} {disabled} />
 </Form>
