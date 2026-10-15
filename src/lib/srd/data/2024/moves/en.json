@@ -11828,17 +11828,30 @@
 			"type": "psychic",
 			"power": [],
 			"time": {
-				"unit": "reaction"
+				"unit": "action"
 			},
 			"pp": 3,
 			"duration": {
-				"unit": "instantaneous"
+				"unit": "minute",
+				"value": 1,
+				"concentration": true
 			},
 			"range": {
-				"type": "self"
+				"type": "distance",
+				"value": 60,
+				"unit": "feet"
 			},
-			"description": "When you are subject to a ranged attack, use your reaction to take half the damage dealt now and on any ranged attack that targets you until the beginning of your next turn.",
-			"categories": []
+			"shape": {
+				"type": "sphere",
+				"value": 20,
+				"unit": "feet"
+			},
+			"description": "You create a wall of light that protects your allies from Ranged Attacks in a {shape} centered on a point within range. While in the light, all damage dealt to allied creatures by ranged attacks is halved.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Overhauled into a support move."
+			}
 		},
 		{
 			"id": "liquidation",
@@ -16888,17 +16901,28 @@
 			"type": "psychic",
 			"power": [],
 			"time": {
-				"unit": "reaction"
+				"unit": "action"
 			},
 			"pp": 3,
 			"duration": {
-				"unit": "instantaneous"
+				"unit": "minute",
+				"value": 1,
+				"concentration": true
 			},
 			"range": {
 				"type": "self"
 			},
-			"description": "When you are subject to a melee attack, use your reaction to take half the damage dealt now and on any melee attack that targets you until the beginning of your next turn.",
-			"categories": []
+			"shape": {
+				"type": "emanation",
+				"value": 20,
+				"unit": "feet"
+			},
+			"description": "You create a wall of light that protects your allies from Melee Attacks for the duration. While in the light, all damage dealt to you and your allies by melee attacks is halved.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Overhauled into a support move."
+			}
 		},
 		{
 			"id": "reflect-type",

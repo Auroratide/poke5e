@@ -2081,8 +2081,7 @@
 		},
 		{
 			"id": "light-screen",
-			"name": "Tela de Luz",
-			"description": "Quando você for alvo de um ataque à distância, use sua reação para receber metade do dano causado agora e de qualquer ataque à distância que tenha você como alvo até o início do seu próximo turno."
+			"name": "Tela de Luz"
 		},
 		{
 			"id": "liquidation",
@@ -2728,8 +2727,7 @@
 		},
 		{
 			"id": "reflect",
-			"name": "Reflexo",
-			"description": "Quando você é alvo de um ataque corpo a corpo, use sua reação para reduzir pela metade o dano recebido agora e em qualquer ataque corpo a corpo que te atingir até o início do seu próximo turno."
+			"name": "Reflexo"
 		},
 		{
 			"id": "reflect-type",

@@ -255,6 +255,25 @@
 			"updated": null
 		},
 		{
+			"id": "light-screen",
+			"power": [],
+			"time": {
+				"unit": "reaction"
+			},
+			"pp": 3,
+			"duration": {
+				"unit": "instantaneous",
+				"concentration": false
+			},
+			"range": {
+				"type": "self"
+			},
+			"shape": null,
+			"description": "When you are subject to a ranged attack, use your reaction to take half the damage dealt now and on any ranged attack that targets you until the beginning of your next turn.",
+			"categories": [],
+			"updated": null
+		},
+		{
 			"id": "meteor-beam",
 			"dice": {
 				"class": "150",
@@ -336,6 +355,25 @@
 				"modifier": "MOVE",
 				"type": "damage"
 			},
+			"updated": null
+		},
+		{
+			"id": "reflect",
+			"power": [],
+			"time": {
+				"unit": "reaction"
+			},
+			"pp": 3,
+			"duration": {
+				"unit": "instantaneous",
+				"concentration": false
+			},
+			"range": {
+				"type": "self"
+			},
+			"shape": null,
+			"description": "When you are subject to a melee attack, use your reaction to take half the damage dealt now and on any melee attack that targets you until the beginning of your next turn.",
+			"categories": [],
 			"updated": null
 		},
 		{

@@ -2186,8 +2186,7 @@
 		},
 		{
 			"id": "light-screen",
-			"name": "Pantalla de Luz",
-			"description": "Cuando seas el objetivo de un ataque a distancia, usa tu reacción para recibir la mitad del daño infligido ahora y de cualquier ataque a distancia que te elija como objetivo hasta el comienzo de tu siguiente turno."
+			"name": "Pantalla de Luz"
 		},
 		{
 			"id": "liquidation",
@@ -3231,8 +3230,7 @@
 		},
 		{
 			"id": "reflect",
-			"name": "Reflejo",
-			"description": "Cuando eres objetivo de un ataque cuerpo a cuerpo, puedes usar tu reacción para recibir la mitad del daño infligido en ese momento y de cualquier ataque cuerpo a cuerpo que te tenga como objetivo hasta el comienzo de tu próximo turno."
+			"name": "Reflejo"
 		},
 		{
 			"id": "reflect-type",

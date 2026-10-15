@@ -24,6 +24,14 @@
 			"description": "Você se agarra a um inimigo, sem nunca mais soltar. Faça um ataque corpo a corpo contra um alvo, causando {dice} de dano {type} em um acerto.\n\nEm caso de acerto, você agarra o alvo. No seu turno, você pode ativar este movimento contra um alvo agarrado desta forma para causar {dice} de dano {type}. Este movimento pode agarrar alvos até duas categorias de tamanho maiores que você."
 		},
 		{
+			"id": "light-screen",
+			"description": "Quando você for alvo de um ataque à distância, use sua reação para receber metade do dano causado agora e de qualquer ataque à distância que tenha você como alvo até o início do seu próximo turno."
+		},
+		{
+			"id": "reflect",
+			"description": "Quando você é alvo de um ataque corpo a corpo, use sua reação para reduzir pela metade o dano recebido agora e em qualquer ataque corpo a corpo que te atingir até o início do seu próximo turno."
+		},
+		{
 			"id": "roost",
 			"name": "Roost",
 			"description": "Você pousa no chão para descansar seu corpo. Ao ativar este movimento, sua velocidade de voo se torna zero e você perde o tipo voador enquanto permanecer no solo. No início do seu próximo turno, se não tiver deixado o chão, recupere {dice} de pontos de vida."
