@@ -5121,7 +5121,7 @@
 			"range": {
 				"type": "self"
 			},
-			"description": "You perform a mystical dance, pumping yourself up. For the duration, your Speed is increased by 10 feet. and when you hit with a melee attack, you can deal extra damage equal to your Proficiency Bonus. If you move at least 10 feet in a straight line towards a target immediately before attacking it with a melee move, you have Advantage on the attack roll.",
+			"description": "You perform a mystical dance, pumping yourself up. For the duration, your Speed is increased by 10 feet and when you hit with a melee attack, you can deal extra damage equal to your Proficiency Bonus. If you move at least 10 feet in a straight line towards a target immediately before attacking it with a melee move, you have Advantage on the attack roll.",
 			"categories": [
 				"dance"
 			],
