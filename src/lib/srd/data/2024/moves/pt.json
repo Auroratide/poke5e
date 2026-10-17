@@ -927,8 +927,7 @@
 		},
 		{
 			"id": "dragon-dance",
-			"name": "Dança do Dragão",
-			"description": "Você executa uma dança mística, fortalecendo-se. Pela duração, dobre seu bônus de proficiência ao fazer ataques."
+			"name": "Dança do Dragão"
 		},
 		{
 			"id": "dragon-darts",

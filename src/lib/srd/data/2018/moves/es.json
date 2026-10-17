@@ -10,6 +10,10 @@
 			"optional": "Cuando este movimiento se usa de nuevo antes de que el duplicado sea consumido, se crea un duplicado adicional, hasta un máximo de tres duplicados. Con dos duplicados, el atacante debe sacar un 5 o 6 en un d6 para golpear al objetivo. Con tres duplicados, el atacante debe sacar un 7 u 8 en un d8."
 		},
 		{
+			"id": "dragon-dance",
+			"description": "Realizas una danza mística para motivarte. Mientras dure el efecto, duplica tu bonificador por competencia al realizar una tirada de ataque."
+		},
+		{
 			"id": "fire-spin",
 			"description": "Invocas una plaga de diminutos insectos para atacar a una criatura durante varios turnos. Realiza un ataque a distancia contra un objetivo. Si impactas, inflige {dice} de daño de tipo {type} y el objetivo queda infestado por el enjambre. Mientras mantengas la concentración, el objetivo recibe 1d8 de daño de tipo {type} adicional al final de cada uno de sus siguientes tres turnos."
 		},

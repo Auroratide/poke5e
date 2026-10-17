@@ -922,8 +922,7 @@
 		},
 		{
 			"id": "dragon-dance",
-			"name": "Danza Dragón",
-			"description": "Realizas una danza mística para motivarte. Mientras dure el efecto, duplica tu bonificador por competencia al realizar una tirada de ataque."
+			"name": "Danza Dragón"
 		},
 		{
 			"id": "dragon-darts",
