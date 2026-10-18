@@ -133,9 +133,9 @@
 
 			let hasRegion = true
 			if (regionType === "native") {
-				hasRegion = regionName?.trim() === "" || strings.caseInsensitiveEqual(pokemon.data.habitat.nativeRegion, regionName)
+				hasRegion = regionName?.trim() === "" || strings.caseInsensitiveEqual(pokemon.data.habitat.nativeRegion, regionName?.trim())
 			} else if (regionType === "found in") {
-				hasRegion = regionName?.trim() === "" || pokemon.data.habitat.regions.some((region) => strings.caseInsensitiveEqual(region, regionName))
+				hasRegion = regionName?.trim() === "" || pokemon.data.habitat.regions.some((region) => strings.caseInsensitiveEqual(region, regionName?.trim()))
 			}
 
 			if (hasBiome && hasType && hasRegion) {
@@ -229,7 +229,7 @@
 				</div>
 				<div class="simple-type-field">
 					<SelectField label="Region Filter" options={regionTypeOptions} bind:value={regionType}/>
-					<TextField label="Region Name" bind:value={regionName} />
+					<TextField label="Region Name" bind:value={regionName} placeholder="e.g. Kanto" />
 				</div>
 				<div class="simple-type-field">
 					<SelectField label="Difficulty" options={difficultyOptions} bind:value={difficulty}/>
