@@ -8,6 +8,7 @@
 		MarkdownField,
 	} from "$lib/ui/forms"
 	import MovePowerFieldset from "../MovePowerFieldset.svelte"
+	import { MoveDiceTiersField } from "../dice"
 	import { MoveDurationField } from "../duration"
 	import { MoveRangeField } from "../range"
 	import { MoveTimeField } from "../time"
@@ -57,4 +58,7 @@
 		<MarkdownField label={m.description()} value="describe" />
 	</Fieldset>
 	<MovePowerFieldset value={[ "str", "dex" ]} {disabled} />
+	<Fieldset title="Damage / Healing">
+		<MoveDiceTiersField value={{ class: "40", tiers: [ "1d6", "1d12", "2d8", "4d6" ] }} {disabled} />
+	</Fieldset>
 </Form>

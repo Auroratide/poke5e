@@ -27,4 +27,6 @@ export type DiceClass = keyof typeof DiceClasses
 
 export const DiceClass = {
 	getTier: (cl: DiceClass): DiceTiers => DiceClasses[cl],
+	list: (): DiceClass[] => Object.keys(DiceClasses) as DiceClass[],
+	isDiceRoll: (value: string): value is DiceRoll => /^\d+d\d+$/.test(value),
 }
