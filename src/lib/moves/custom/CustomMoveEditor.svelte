@@ -8,7 +8,7 @@
 		MarkdownField,
 	} from "$lib/ui/forms"
 	import MovePowerFieldset from "../MovePowerFieldset.svelte"
-	import { MoveDiceTiersField } from "../dice"
+	import { MoveDiceModifierField, MoveDiceTiersField, MoveDiceTypeField } from "../dice"
 	import { MoveDurationField } from "../duration"
 	import { MoveRangeField } from "../range"
 	import { MoveTimeField } from "../time"
@@ -33,7 +33,7 @@
 		// DONE duration
 		// DONE range
 		// shape
-		// dice
+		// DONE dice
 		// attack
 		// save
 		// DONE description
@@ -59,6 +59,8 @@
 	</Fieldset>
 	<MovePowerFieldset value={[ "str", "dex" ]} {disabled} />
 	<Fieldset title="Damage / Healing">
+		<MoveDiceTypeField value="damage" {disabled} />
 		<MoveDiceTiersField value={{ class: "40", tiers: [ "1d6", "1d12", "2d8", "4d6" ] }} {disabled} />
+		<MoveDiceModifierField value="MOVE" {disabled} />
 	</Fieldset>
 </Form>
