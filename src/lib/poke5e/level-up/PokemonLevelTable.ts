@@ -12,6 +12,7 @@ import { NewMovesEffect } from "./effects/NewMoves"
 import { StabIncreaseEffect } from "./effects/StabIncrease"
 import type { EvolutionForest } from "$lib/pokemon/evolution"
 import { PeakPowerEffect } from "./effects/PeakPower"
+import { DiceTierLevels } from "$lib/moves/dice"
 
 const standardLevelUpEffects = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 	new IncreaseLevelEffect({
@@ -59,10 +60,6 @@ const Level05 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 		currentLevel: pokemon.level,
 		stab: pokemon.stab,
 	}, {}),
-	new DamageIncreaseEffect({
-		currentLevel: pokemon.level,
-		moves: pokemon.moves,
-	}, {}),
 ]
 const Level06 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 	...standardLevelUpEffects(pokemon, species),
@@ -101,10 +98,6 @@ const Level10 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 	new NewMovesEffect({
 		currentLevel: pokemon.level,
 		movePool: species.moves,
-	}, {}),
-	new DamageIncreaseEffect({
-		currentLevel: pokemon.level,
-		moves: pokemon.moves,
 	}, {}),
 ]
 const Level11 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
@@ -159,10 +152,6 @@ const Level16 = (pokemon: TrainerPokemon, species: PokemonSpecies, evolutions: E
 ]
 const Level17 = (pokemon: TrainerPokemon, species: PokemonSpecies) => [
 	...standardLevelUpEffects(pokemon, species),
-	new DamageIncreaseEffect({
-		currentLevel: pokemon.level,
-		moves: pokemon.moves,
-	}, {}),
 	new StabIncreaseEffect({
 		currentLevel: pokemon.level,
 		stab: pokemon.stab,
@@ -220,6 +209,16 @@ const LEVELS = [
 
 export const PokemonLevelTable = {
 	toLevel(level: Level) {
-		return LEVELS[level.data - 1]
+		const effects = LEVELS[level.data - 1]
+
+		if (!DiceTierLevels.isTierUp(level.data)) return effects
+
+		return (pokemon: TrainerPokemon, species: PokemonSpecies, evolutions: EvolutionForest | undefined) => [
+			...effects(pokemon, species, evolutions),
+			new DamageIncreaseEffect({
+				currentLevel: pokemon.level,
+				moves: pokemon.moves,
+			}, {}),
+		]
 	},
 } as const

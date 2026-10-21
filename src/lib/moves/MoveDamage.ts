@@ -4,6 +4,7 @@ import type { Stab } from "$lib/pokemon/stab"
 import { PokemonType, type PokeType, type TeraType } from "$lib/pokemon/types"
 import type { Edition } from "$lib/srd/editions"
 
+// Legacy: the dice keys mirror the levels in DiceTierLevels
 export class MoveDamage extends DataClass<{
 	dice: {
 		"1": string,

@@ -3,6 +3,7 @@
 	import { SelectField, TextField } from "$lib/ui/forms"
 	import { slide } from "svelte/transition"
 	import { DiceClass, type DiceTiers } from "./DiceClass"
+	import { DiceTierLevels } from "./DiceTierLevels"
 	import type { MoveDice } from "./MoveDice"
 
 	type Value = Pick<MoveDice, "class" | "tiers">
@@ -20,7 +21,6 @@
 	} = $props()
 
 	const CUSTOM_OPTION = "custom"
-	const TIER_LEVELS = [1, 5, 10, 17] as const
 
 	const options = [
 		...DiceClass.list().map((it) => ({
@@ -45,7 +45,7 @@
 } {options} {label} {name} {disabled} />
 {#if value.class === CUSTOM_OPTION}
 	<div class="tiers" transition:slide={{ duration: 150 }}>
-		{#each TIER_LEVELS as level, i}
+		{#each DiceTierLevels.list() as level, i}
 			{@const roll = value.tiers[i]}
 			<TextField
 				label="{m.level()} {level}"

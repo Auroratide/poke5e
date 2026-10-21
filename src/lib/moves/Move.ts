@@ -216,6 +216,7 @@ export class Move extends DataClass<{
 			optional: json.optional != null ? [json.optional] : undefined,
 			tm: joins?.tm != null ? { id: joins.tm.id, cost: joins.tm.cost } : undefined,
 			dice: MoveDice.fromJson(json.dice),
+			// legacy shape; tier levels are defined in DiceTierLevels
 			damage: json.dice != null ? {
 				dice: {
 					"1": dice.tiers[0],

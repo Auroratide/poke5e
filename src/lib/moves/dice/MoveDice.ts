@@ -4,6 +4,7 @@ import { PokemonType, type PokeType, type TeraType } from "$lib/pokemon/types"
 import type { Edition } from "$lib/srd/editions"
 import type { MoveJson } from "$lib/srd/moves/schema"
 import { DiceClass, type DiceRoll, type DiceTiers } from "./DiceClass"
+import { DiceTierLevels } from "./DiceTierLevels"
 
 export type MoveDiceType = "damage" | "healing" | "reduction"
 
@@ -15,9 +16,7 @@ export type MoveDice = {
 }
 
 function getDamageDice(dice: MoveDice, level: number): DiceRoll {
-	const index = (level >= 5 ? 1 : 0) + (level >= 10 ? 1 : 0) + (level >= 17 ? 1 : 0)
-
-	return dice.tiers[index]
+	return dice.tiers[DiceTierLevels.tierIndex(level)]
 }
 
 export const MoveDice = {
