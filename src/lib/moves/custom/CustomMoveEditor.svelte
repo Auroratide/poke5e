@@ -59,15 +59,25 @@
 		<MoveTypeField value="bug" {disabled} />
 		<IntField label={m.pp()} value={10} />
 		<MoveTimeField value={{ unit: "action" }} />
-		<MoveDurationField value={{ unit: "instantaneous", concentration: false }} />
-		<MoveRangeField value={{ type: "melee" }} />
-		<MarkdownField label={m.description()} value="describe" />
+		<div class="col-span">
+			<MoveDurationField value={{ unit: "instantaneous", concentration: false }} />
+		</div>
+		<div class="col-span">
+			<MoveRangeField value={{ type: "melee" }} />
+		</div>
 	</Fieldset>
 	<MovePowerFieldset value={[ "str", "dex" ]} {disabled} />
 	<MoveDiceFieldset bind:value={dice} {disabled} />
 	<MoveAttackFieldset value={undefined} {disabled} />
 	<MoveSaveFieldset value={undefined} {disabled} />
-	<Fieldset title={m.atHigherLevels()}>
+	<Fieldset title={m.description()}>
+		<MarkdownField label={m.description()} value="describe" placeholder="Describe what the move does" {disabled} />
 		<MoveHigherLevelsField bind:value={higherLevels} {dice} {disabled} />
 	</Fieldset>
 </Form>
+
+<style>
+	.col-span {
+		grid-column: span 2;
+	}
+</style>

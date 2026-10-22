@@ -21,7 +21,7 @@
 </script>
 
 <div class="higher-levels-field">
-	<TextareaField {label} {name} rows={4} placeholder={generatedText ?? ""} bind:value={
+	<TextareaField {label} {name} rows={4} placeholder={generatedText ?? "If something about the move changes as the pokemon levels up, describe it here. Otherwise, leave blank."} bind:value={
 		() => value ?? "",
 		(v) => value = v.trim() === "" ? undefined : v
 	} {disabled} />
