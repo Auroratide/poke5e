@@ -6,6 +6,7 @@
 		TextField,
 		IntField,
 		MarkdownField,
+		FormGroup,
 	} from "$lib/ui/forms"
 	import MoveAttackFieldset from "../MoveAttackFieldset.svelte"
 	import MoveHigherLevelsField from "../MoveHigherLevelsField.svelte"
@@ -54,17 +55,17 @@
 	<section style:margin-block-end="1em">
 		<p>This feature is under active development. This is just a preview of what is to come!</p>
 	</section>
-	<Fieldset title={m.basicInfo()} columns={2}>
+	<Fieldset title={m.basicInfo()} columns={1} columnsLg={2}>
 		<TextField label={m.name()} value="" {disabled} required />
 		<MoveTypeField value="bug" {disabled} />
 		<IntField label={m.pp()} value={10} />
 		<MoveTimeField value={{ unit: "action" }} />
-		<div class="col-span">
+		<FormGroup>
 			<MoveDurationField value={{ unit: "instantaneous", concentration: false }} />
-		</div>
-		<div class="col-span">
+		</FormGroup>
+		<FormGroup>
 			<MoveRangeField value={{ type: "melee" }} />
-		</div>
+		</FormGroup>
 	</Fieldset>
 	<MovePowerFieldset value={[ "str", "dex" ]} {disabled} />
 	<MoveDiceFieldset bind:value={dice} {disabled} />
@@ -75,9 +76,3 @@
 		<MoveHigherLevelsField bind:value={higherLevels} {dice} {disabled} />
 	</Fieldset>
 </Form>
-
-<style>
-	.col-span {
-		grid-column: span 2;
-	}
-</style>
