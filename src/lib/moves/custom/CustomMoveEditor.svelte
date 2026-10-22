@@ -7,6 +7,7 @@
 		IntField,
 		MarkdownField,
 	} from "$lib/ui/forms"
+	import MoveAttackFieldset from "../MoveAttackFieldset.svelte"
 	import MovePowerFieldset from "../MovePowerFieldset.svelte"
 	import MoveSaveFieldset from "../MoveSaveFieldset.svelte"
 	import { MoveDiceFieldset } from "../dice"
@@ -35,7 +36,7 @@
 		// DONE range
 		// shape
 		// DONE dice
-		// attack
+		// DONE attack
 		// DONE save
 		// DONE description
 		// higher levels
@@ -60,5 +61,6 @@
 	</Fieldset>
 	<MovePowerFieldset value={[ "str", "dex" ]} {disabled} />
 	<MoveDiceFieldset value={undefined} {disabled} />
+	<MoveAttackFieldset value={undefined} {disabled} />
 	<MoveSaveFieldset value={undefined} {disabled} />
 </Form>

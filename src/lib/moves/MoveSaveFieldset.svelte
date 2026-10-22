@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { m } from "$lib/site/i18n"
-	import { Fieldset, SelectField } from "$lib/ui/forms"
+	import { Fieldset, InstructionText, SelectField } from "$lib/ui/forms"
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import type { MoveJson } from "$lib/srd/moves/schema"
 
@@ -30,6 +30,7 @@
 </script>
 
 <Fieldset title={label}>
+	<InstructionText>If this move has causes a saving throw, choose the attribute used for the save.</InstructionText>
 	<SelectField label="Save Attribute" name="{name}-attribute" {options} bind:value={
 		() => value?.attribute ?? NONE_OPTION,
 		(v) => value = v === NONE_OPTION ? undefined : { attribute: v as Attribute }

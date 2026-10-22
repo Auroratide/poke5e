@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset } from "$lib/ui/forms"
+	import { Fieldset, InstructionText } from "$lib/ui/forms"
 	import { slide } from "svelte/transition"
 	import { DiceClass } from "./DiceClass"
 	import type { MoveDice } from "./MoveDice"
@@ -36,6 +36,7 @@
 </script>
 
 <Fieldset title={label}>
+	<InstructionText>If this move causes a roll, you can specify whether it is for damage, healing, or damage reduction. For convenience, common sets of rolls are provided.</InstructionText>
 	<MoveDiceTypeField name="{name}-type" optional bind:value={
 		() => value?.type,
 		(type) => {
