@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { m } from "$lib/site/i18n"
-	import { Fieldset, SelectField, ToggleSwitchField } from "$lib/ui/forms"
-	import { slide } from "svelte/transition"
+	import { Fieldset, SelectField } from "$lib/ui/forms"
 	import { Attributes, type Attribute } from "$lib/dnd/attributes"
 	import type { MoveJson } from "$lib/srd/moves/schema"
 
@@ -19,35 +18,20 @@
 		disabled?: boolean,
 	} = $props()
 
-	const DEFAULT_SAVE: Value = {
-		attribute: "dex",
-	}
+	const NONE_OPTION = ""
 
-	// remembered so that toggling the save off and on again does not lose what was entered
-	let draft = $state<Value>(value ?? DEFAULT_SAVE)
-
-	const update = (changes: Partial<Value>) => {
-		draft = { ...draft, ...changes }
-		value = draft
-	}
-
-	const attributeOptions = Attributes.list.map((it) => ({
+	const options = [ {
+		value: NONE_OPTION,
+		name: "No Save",
+	} ].concat(Attributes.list.map((it) => ({
 		value: it.abbr,
 		name: it.name,
-	}))
+	})))
 </script>
 
 <Fieldset title={label}>
-	<ToggleSwitchField label="Requires a saving throw?" name="{name}-enabled" bind:value={
-		() => value != null,
-		(on) => value = on ? draft : undefined
+	<SelectField label="Save Attribute" name="{name}-attribute" {options} bind:value={
+		() => value?.attribute ?? NONE_OPTION,
+		(v) => value = v === NONE_OPTION ? undefined : { attribute: v as Attribute }
 	} {disabled} />
-	{#if value != null}
-		<div transition:slide={{ duration: 150 }}>
-			<SelectField label="Attribute" name="{name}-attribute" options={attributeOptions} bind:value={
-				() => draft.attribute,
-				(attribute) => update({ attribute: attribute as Attribute })
-			} {disabled} />
-		</div>
-	{/if}
 </Fieldset>

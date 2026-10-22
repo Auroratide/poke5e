@@ -5,24 +5,33 @@
 
 	let {
 		value = $bindable(),
-		label = "Effect",
+		label = "Roll Effect",
 		name = "move-dice-type",
 		disabled = false,
+		optional = false,
 	}: {
-		value: MoveDiceType,
+		value: MoveDiceType | undefined,
 		label?: string,
 		name?: string,
 		disabled?: boolean,
+		optional?: boolean,
 	} = $props()
 
-	const options: { value: MoveDiceType, name: string }[] = [
+	const NONE_OPTION = ""
+
+	const typeOptions: { value: string, name: string }[] = [
 		{ value: "damage", name: m["movesSection.damage"]() },
 		{ value: "healing", name: m["movesSection.healing"]() },
 		{ value: "reduction", name: "Damage Reduction" },
 	]
+
+	const options = $derived(optional ? [ {
+		value: NONE_OPTION,
+		name: "No Dice Roll",
+	} ].concat(typeOptions) : typeOptions)
 </script>
 
 <SelectField bind:value={
-	() => value,
-	(v) => value = v as MoveDiceType
+	() => value ?? NONE_OPTION,
+	(v) => value = v === NONE_OPTION ? undefined : v as MoveDiceType
 } {options} {label} {name} {disabled} />

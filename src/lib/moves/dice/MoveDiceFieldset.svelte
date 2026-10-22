@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Fieldset, ToggleSwitchField } from "$lib/ui/forms"
+	import { Fieldset } from "$lib/ui/forms"
 	import { slide } from "svelte/transition"
 	import { DiceClass } from "./DiceClass"
 	import type { MoveDice } from "./MoveDice"
@@ -26,7 +26,7 @@
 		type: "damage",
 	}
 
-	// remembered so that toggling dice off and on again does not lose what was entered
+	// remembered so that choosing no dice and back again does not lose what was entered
 	let draft = $state<MoveDice>(value ?? DEFAULT_DICE)
 
 	const update = (changes: Partial<MoveDice>) => {
@@ -36,16 +36,15 @@
 </script>
 
 <Fieldset title={label}>
-	<ToggleSwitchField label="Rolls dice?" name="{name}-enabled" bind:value={
-		() => value != null,
-		(on) => value = on ? draft : undefined
+	<MoveDiceTypeField name="{name}-type" optional bind:value={
+		() => value?.type,
+		(type) => {
+			if (type == null) value = undefined
+			else update({ type })
+		}
 	} {disabled} />
 	{#if value != null}
 		<div class="dice-fields" transition:slide={{ duration: 150 }}>
-			<MoveDiceTypeField name="{name}-type" bind:value={
-				() => draft.type,
-				(type) => update({ type })
-			} {disabled} />
 			<MoveDiceTiersField {name} bind:value={
 				() => draft,
 				(it) => update({ class: it.class, tiers: it.tiers })
