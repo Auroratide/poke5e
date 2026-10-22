@@ -1,6 +1,7 @@
 import type { Level } from "$lib/dnd/level"
 import type { Stab } from "$lib/pokemon/stab"
 import { PokemonType, type PokeType, type TeraType } from "$lib/pokemon/types"
+import { m } from "$lib/site/i18n"
 import type { Edition } from "$lib/srd/editions"
 import type { MoveJson } from "$lib/srd/moves/schema"
 import { DiceClass, type DiceRoll, type DiceTiers } from "./DiceClass"
@@ -63,4 +64,17 @@ export const MoveDice = {
 	},
 
 	getDamageDice,
+
+	higherLevelsText: (dice: MoveDice): string | undefined => {
+		if (dice.tiers.every((it) => it === dice.tiers[0])) {
+			return undefined
+		}
+
+		return m.atHigherLevelsDice({
+			type: dice.type,
+			t1: dice.tiers[1],
+			t2: dice.tiers[2],
+			t3: dice.tiers[3],
+		})
+	},
 }

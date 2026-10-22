@@ -8,9 +8,10 @@
 		MarkdownField,
 	} from "$lib/ui/forms"
 	import MoveAttackFieldset from "../MoveAttackFieldset.svelte"
+	import MoveHigherLevelsField from "../MoveHigherLevelsField.svelte"
 	import MovePowerFieldset from "../MovePowerFieldset.svelte"
 	import MoveSaveFieldset from "../MoveSaveFieldset.svelte"
-	import { MoveDiceFieldset } from "../dice"
+	import { MoveDiceFieldset, type MoveDice } from "../dice"
 	import { MoveDurationField } from "../duration"
 	import { MoveRangeField } from "../range"
 	import { MoveTimeField } from "../time"
@@ -26,6 +27,9 @@
 
 	const disabled = $derived(saving)
 
+	let dice = $state<MoveDice | undefined>(undefined)
+	let higherLevels = $state<string | undefined>(undefined)
+
 		// CHECKLIST:
 		// DONE name
 		// DONE type
@@ -39,7 +43,7 @@
 		// DONE attack
 		// DONE save
 		// DONE description
-		// higher levels
+		// DONE higher levels
 	
 		// NOT NOW
 		// table
@@ -60,7 +64,10 @@
 		<MarkdownField label={m.description()} value="describe" />
 	</Fieldset>
 	<MovePowerFieldset value={[ "str", "dex" ]} {disabled} />
-	<MoveDiceFieldset value={undefined} {disabled} />
+	<MoveDiceFieldset bind:value={dice} {disabled} />
 	<MoveAttackFieldset value={undefined} {disabled} />
 	<MoveSaveFieldset value={undefined} {disabled} />
+	<Fieldset title={m.atHigherLevels()}>
+		<MoveHigherLevelsField bind:value={higherLevels} {dice} {disabled} />
+	</Fieldset>
 </Form>
