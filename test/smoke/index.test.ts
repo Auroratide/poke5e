@@ -201,7 +201,7 @@ test("item pages", async ({ page }) => {
 
 	const items = await site.navToItems()
 
-	await items.expectNumberOfItems(305)
+	await items.expectNumberOfItems(306)
 
 	// Searching
 	await items.searchFor("candy")
