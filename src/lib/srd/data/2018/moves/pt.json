@@ -1,6 +1,10 @@
 {
 	"values": [
 		{
+			"id": "bubble",
+			"description": "Você dispara uma série de bolhas em alta velocidade contra um alvo. Faça três ataques à distância, causando {dice} de dano do tipo {type} em cada acerto bem-sucedido."
+		},
+		{
 			"id": "bulk-up",
 			"description": "Você se fortalece, aumentando sua adrenalina. Pelo próximo minuto, escolha adicionar +1 às suas jogadas de ataque OU +1 à CA. Este movimento pode ser acumulado até um máximo de +5 para qualquer uma das opções."
 		},

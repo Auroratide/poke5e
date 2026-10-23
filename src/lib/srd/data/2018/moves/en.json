@@ -60,6 +60,43 @@
 			"updated": null
 		},
 		{
+			"id": "bubble",
+			"power": [
+				"dex"
+			],
+			"time": {
+				"unit": "action"
+			},
+			"pp": 15,
+			"duration": {
+				"unit": "instantaneous"
+			},
+			"range": {
+				"type": "distance",
+				"value": 60,
+				"unit": "feet"
+			},
+			"shape": null,
+			"dice": {
+				"class": "custom",
+				"tiers": [
+					"1d4",
+					"1d8",
+					"2d6",
+					"3d6"
+				],
+				"modifier": "0",
+				"type": "damage"
+			},
+			"attack": {
+				"scope": "ranged"
+			},
+			"save": null,
+			"description": "You shoot a series of quickly moving bubbles at a target. Make three ranged attacks, doing {dice} {type} damage on each successful hit.",
+			"categories": [],
+			"updated": null
+		},
+		{
 			"id": "bulk-up",
 			"description": "You pump yourself up, increasing your adrenaline. For the next minute, choose to add +1 to your attack rolls OR +1 to AC. This move can be stacked to a maximum of +5 of the initial choice.",
 			"updated": null

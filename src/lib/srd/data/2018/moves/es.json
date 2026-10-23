@@ -1,6 +1,10 @@
 {
 	"values": [
 		{
+			"id": "bubble",
+			"description": "Disparas una serie de burbujas que se mueven rápidamente hacia un objetivo. Realiza tres ataques a distancia, infligiendo {dice} de daño de tipo {type} por cada impacto."
+		},
+		{
 			"id": "bulk-up",
 			"description": "Te llenas de adrenalina, aumentando tu energía y combatividad. Durante el próximo minuto, elige añadir +1 a tus tiradas de ataque o añadir +1 a tu CA. Este movimiento puede acumularse hasta un máximo de +5 para cualquiera de las dos opciones."
 		},

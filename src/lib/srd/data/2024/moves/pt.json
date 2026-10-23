@@ -445,8 +445,7 @@
 		},
 		{
 			"id": "bubble",
-			"name": "Bolha",
-			"description": "Você dispara uma série de bolhas em alta velocidade contra um alvo. Faça três ataques à distância, causando {dice} de dano do tipo {type} em cada acerto bem-sucedido."
+			"name": "Bolha"
 		},
 		{
 			"id": "bubble-beam",

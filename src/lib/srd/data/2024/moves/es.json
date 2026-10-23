@@ -445,8 +445,7 @@
 		},
 		{
 			"id": "bubble",
-			"name": "Burbuja",
-			"description": "Disparas una serie de burbujas que se mueven rápidamente hacia un objetivo. Realiza tres ataques a distancia, infligiendo {dice} de daño de tipo {type} por cada impacto."
+			"name": "Burbuja"
 		},
 		{
 			"id": "bubble-beam",
