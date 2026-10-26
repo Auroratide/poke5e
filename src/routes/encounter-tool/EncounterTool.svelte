@@ -203,6 +203,7 @@
 
 			<section>
 				<h2>Players</h2>
+				<p>For each player, provide their level and the number of pokémon they use.</p>
 				{#if partyPlayers.length > 0}
 					<div class="player-list">
 						{#each partyPlayers as player}
