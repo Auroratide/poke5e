@@ -10,6 +10,12 @@ export type ItemId = string
 export const ItemTypes = ["pokeball", "medicine", "berry", "held item", "evolution", "trainer gear", "TM"] as const
 export type ItemType = typeof ItemTypes[number]
 
+/**
+ * Excluded from the Items page, but included as items trainers can carry
+ */
+export const ExcludedItemTypes: readonly ItemType[] = ["TM"]
+export const ListedItemTypes = ItemTypes.filter((it) => !ExcludedItemTypes.includes(it))
+
 type ItemGroup = {
 	name: string,
 	items: Item[],
@@ -37,6 +43,7 @@ export class Item extends DataClass<{
 	get description() { return this.data.description }
 	get media() { return this.data.media }
 	get updated() { return this.data.updated }
+	get isListed() { return !ExcludedItemTypes.includes(this.type) }
 
 	static fromJson(it: ItemJson): Item {
 		return new Item({

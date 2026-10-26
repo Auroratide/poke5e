@@ -140,3 +140,14 @@ test("multiple items in a single group", () => {
 		items: [],
 	} ])
 })
+
+test("tms are not listed with other items", () => {
+	const tm = stubItem({
+		id: "tm-001",
+		name: "TM 001",
+		type: "TM",
+	})
+
+	expect(berry.isListed).toBe(true)
+	expect(tm.isListed).toBe(false)
+})

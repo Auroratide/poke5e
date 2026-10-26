@@ -4,7 +4,7 @@
 	import { ItemFilterStore, ItemSorterStore } from "./store"
 	import { formatMoney } from "$lib/pokemon/money"
 	import { Url } from "$lib/site/url"
-	import { Item, ItemTypes, type ItemType } from "./Item"
+	import { Item, ItemTypes, ListedItemTypes, type ItemType } from "./Item"
 	import { m } from "$lib/site/i18n"
 	import { capitalize } from "$lib/utils/string"
 	import { ItemFilter } from "./ItemFilter"
@@ -17,7 +17,7 @@
 	} ]
 
 	let filteredType: ItemType | "" = ""
-	const typeOptions = AnyOption.concat(Object.values(ItemTypes).map((it) => ({
+	const typeOptions = AnyOption.concat(ListedItemTypes.map((it) => ({
 		value: it,
 		name: capitalize(it),
 	})))

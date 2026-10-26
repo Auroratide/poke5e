@@ -8,7 +8,7 @@
 	import { Item, ItemList, ItemStore } from "$lib/items"
 
 	$: ssrItems = $page.data.itemsList?.map(Item.fromJson)
-	$: itemsToRender = $ItemStore ?? ssrItems
+	$: itemsToRender = ($ItemStore ?? ssrItems)?.filter((it) => it.isListed)
 </script>
 
 <Page theme="yellow">
