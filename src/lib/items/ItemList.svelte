@@ -25,11 +25,11 @@
 	let filteredCost: number | undefined = undefined
 	let filteredCostRelative: RelativeValue = "="
 
-	$: textFilterIsPokemonType = ItemTypes.includes($ItemFilterStore.toLocaleLowerCase() as ItemType)
+	$: textFilterIsPokemonType = ItemTypes.find((it) => it.toLocaleLowerCase() === $ItemFilterStore.toLocaleLowerCase())
 
 	$: filter = new ItemFilter()
-		.name(textFilterIsPokemonType ? "" : $ItemFilterStore)
-		.type(filteredType !== "" ? filteredType : textFilterIsPokemonType ? $ItemFilterStore : "")
+		.name(textFilterIsPokemonType != null ? "" : $ItemFilterStore)
+		.type(filteredType !== "" ? filteredType : textFilterIsPokemonType ?? "")
 		.cost(filteredCostRelative, filteredCost)
 
 	$: filteredItems = items.filter(filter.apply)
@@ -56,7 +56,7 @@
 }, {
 	key: "cost", name: "Cost", ratio: 2, sort: byNumericField(it => it.cost ?? -1), largeScreenOnly: true,
 } ]} caption="Item List">
-	<BubbleRow.Row interactive mainBg="var(--skin-{item.type.replace(" ", "-")}-bg)">
+	<BubbleRow.Row interactive mainBg="var(--skin-{item.type.toLocaleLowerCase().replace(" ", "-")}-bg)">
 		<BubbleRow.Cell cellVisibility={cellVisibility[0]} primary><a href="{Url.items(item.id)}">{item.name}</a></BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[1]}><span class="cap">{item.type}</span></BubbleRow.Cell>
 		<BubbleRow.Cell cellVisibility={cellVisibility[2]}>{item.cost != null ? formatMoney(item.cost) : "-"}</BubbleRow.Cell>

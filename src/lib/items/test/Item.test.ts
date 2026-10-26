@@ -70,6 +70,9 @@ test("default groups", () => {
 	}, {
 		name: "Trainer Gear",
 		items: [trainerGear],
+	} , {
+		name: "TM",
+		items: [],
 	} ])
 })
 
@@ -96,6 +99,9 @@ test("group order given", () => {
 	}, {
 		name: "Trainer Gear",
 		items: [trainerGear],
+	} , {
+		name: "TM",
+		items: [],
 	} ])
 })
 
@@ -129,5 +135,8 @@ test("multiple items in a single group", () => {
 	}, {
 		name: "Trainer Gear",
 		items: [trainerGear],
+	} , {
+		name: "TM",
+		items: [],
 	} ])
 })

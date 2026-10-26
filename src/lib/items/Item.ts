@@ -7,7 +7,7 @@ import { includesSearch } from "$lib/utils/string"
 
 export type ItemId = string
 
-export const ItemTypes = ["pokeball", "medicine", "berry", "held item", "evolution", "trainer gear"] as const
+export const ItemTypes = ["pokeball", "medicine", "berry", "held item", "evolution", "trainer gear", "TM"] as const
 export type ItemType = typeof ItemTypes[number]
 
 type ItemGroup = {
@@ -55,7 +55,7 @@ export class Item extends DataClass<{
 
 	static matchNameOrType = (value: string) => (item: Item) =>
 		includesSearch([item.name, ...item.aliases], value) ||
-			item.type.includes(value.toLocaleLowerCase())
+			item.type.toLocaleLowerCase().includes(value.toLocaleLowerCase())
 	
 	static groupByType(items: Item[], typeOrder: ItemType[]): ItemGroup[] {
 		const fullOrder = typeOrder.concat(ItemTypes.filter((type) => !typeOrder.includes(type)))

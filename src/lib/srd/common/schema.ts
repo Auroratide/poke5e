@@ -126,6 +126,7 @@ export const ItemType = z.literal([
 	"held item",
 	"evolution",
 	"trainer gear",
+	"TM",
 ]).meta({
 	id: "ItemType",
 	title: "Item Type",
