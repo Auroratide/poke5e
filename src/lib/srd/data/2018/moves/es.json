@@ -1,6 +1,14 @@
 {
 	"values": [
 		{
+			"id": "assurance",
+			"description": "Golpeas a una criatura en donde ya le duele. Realiza un ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas. Si el objetivo ha recibido daño desde el final de tu último turno, el daño se duplica."
+		},
+		{
+			"id": "brine",
+			"description": "Envías una ráfaga brutal de {type} salada contra una criatura. Realiza un ataque a distancia contra una criatura, infligiendo {dice} de daño de tipo Agua si impactas. Si el objetivo tiene menos del 50% de su salud máxima, el daño infligido se duplica."
+		},
+		{
 			"id": "bubble",
 			"description": "Disparas una serie de burbujas que se mueven rápidamente hacia un objetivo. Realiza tres ataques a distancia, infligiendo {dice} de daño de tipo {type} por cada impacto."
 		},
@@ -22,6 +30,10 @@
 			"description": "Invocas una plaga de diminutos insectos para atacar a una criatura durante varios turnos. Realiza un ataque a distancia contra un objetivo. Si impactas, inflige {dice} de daño de tipo {type} y el objetivo queda infestado por el enjambre. Mientras mantengas la concentración, el objetivo recibe 1d8 de daño de tipo {type} adicional al final de cada uno de sus siguientes tres turnos."
 		},
 		{
+			"id": "flail",
+			"description": "Te agitas con un golpe salvaje que aumenta su potencia cuanto más herido estés. Realiza una tirada de ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas. Si estás por debajo del 50% de tu salud máxima, duplica el daño. Si estás al 10% o menos de tu salud máxima, triplica el daño. El multiplicador de este ataque se aplica antes de los multiplicadores por resistencias o vulnerabilidades."
+		},
+		{
 			"id": "helping-hand",
 			"description": "Puedes usar una acción adicional en tu turno para elegir a un aliado que no seas tú mismo, que esté a menos de 60 pies de ti y que pueda oírte. Ese aliado puede añadir 1d6 a una prueba de característica, tirada de ataque o tirada de salvación que realice en los próximos 10 minutos, antes de que el DM anuncie el resultado de la tirada. Un aliado ayudado solo puede tener 1d6 disponible a la vez."
 		},
@@ -40,6 +52,10 @@
 		{
 			"id": "reflect",
 			"description": "Cuando eres objetivo de un ataque cuerpo a cuerpo, puedes usar tu reacción para recibir la mitad del daño infligido en ese momento y de cualquier ataque cuerpo a cuerpo que te tenga como objetivo hasta el comienzo de tu próximo turno."
+		},
+		{
+			"id": "reversal",
+			"description": "Lanzas un ataque con todas tus fuerzas que es más potente cuanto menos puntos de golpe tengas. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo {dice} de daño de tipo {type} si impactas. Si estás por debajo del 50% de tus puntos de golpe máximos, duplica el daño. Si estás al 10% o menos de tus puntos de golpe máximos, triplica el daño. El multiplicador de este ataque se aplica antes que los multiplicadores por resistencias o vulnerabilidades."
 		},
 		{
 			"id": "roost",

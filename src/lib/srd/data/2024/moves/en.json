@@ -890,8 +890,12 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You strike a creature where it already hurts. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. If the target has already taken any damage since the end of your last turn, double the damage you deal.",
-			"categories": []
+			"description": "You strike a creature where it already hurts. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. If the target has already taken any damage since the end of your last turn, double the damage dice.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Changed from doubling damage to doubling damage dice."
+			}
 		},
 		{
 			"id": "astonish",
@@ -1170,8 +1174,12 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"description": "You send forth a heap of powerful snow to pummel a creature. Make a ranged attack on a target, dealing {dice} {type} damage on a hit. If the target has dealt any damage to you since the end of your last turn, double the damage you deal.",
-			"categories": []
+			"description": "You send forth a heap of powerful snow to pummel a creature. Make a ranged attack on a target, dealing {dice} {type} damage on a hit. If the target has dealt any damage to you since the end of your last turn, double the damage dice.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Changed from doubling damage to doubling damage dice."
+			}
 		},
 		{
 			"id": "axe-kick",
@@ -2353,8 +2361,12 @@
 			"attack": {
 				"scope": "ranged"
 			},
-			"description": "You send a harsh blast of salt water at a creature. Make a ranged attack against a creature, dealing {dice} {type} damage on a hit. If the target has less that 50% of its max HP, double the damage dealt.",
-			"categories": []
+			"description": "You send a harsh blast of salt water at a creature. Make a ranged attack against a creature, dealing {dice} {type} damage on a hit. If the target has less that 50% of its max HP, double the damage dice.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Changed from doubling damage to doubling damage dice."
+			}
 		},
 		{
 			"id": "brutal-swing",
@@ -7177,8 +7189,12 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You flail about with a wild strike that increases in power the more injured you are. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. If you are below 50% of your maximum health, double the damage. If you are at 10% or below of your maximum health, triple the damage instead. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities.",
-			"categories": []
+			"description": "You flail about with a wild strike that increases in power the more injured you are. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. If you are below 50% of your maximum health, double the damage dice. If you are at 10% or below of your maximum health, triple the damage dice instead. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Changed from doubling damage to doubling damage dice."
+			}
 		},
 		{
 			"id": "flame-burst",
@@ -17175,8 +17191,12 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You unleash an all out attack that is stronger the less HP you have. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. If you are below 50% of your maximum health, double the damage. If you are at 10% or below of your maximum health, triple the damage instead. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities.",
-			"categories": []
+			"description": "You unleash an all out attack that is stronger the less HP you have. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. If you are below 50% of your maximum health, double the damage dice. If you are at 10% or below of your maximum health, triple the damage dice instead. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Changed from doubling damage to doubling damage dice."
+			}
 		},
 		{
 			"id": "revival-blessing",

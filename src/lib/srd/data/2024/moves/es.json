@@ -182,7 +182,7 @@
 		{
 			"id": "assurance",
 			"name": "Buena Baza",
-			"description": "Golpeas a una criatura en donde ya le duele. Realiza un ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas. Si el objetivo ha recibido daño desde el final de tu último turno, el daño se duplica."
+			"description": "Golpeas a una criatura en donde ya le duele. Realiza un ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas. Si el objetivo ha recibido daño desde el final de tu último turno, se duplican los dados de daño."
 		},
 		{
 			"id": "astonish",
@@ -436,7 +436,7 @@
 		{
 			"id": "brine",
 			"name": "Salmuera",
-			"description": "Envías una ráfaga brutal de {type} salada contra una criatura. Realiza un ataque a distancia contra una criatura, infligiendo {dice} de daño de tipo Agua si impactas. Si el objetivo tiene menos del 50% de su salud máxima, el daño infligido se duplica."
+			"description": "Envías una ráfaga brutal de {type} salada contra una criatura. Realiza un ataque a distancia contra una criatura, infligiendo {dice} de daño de tipo Agua si impactas. Si el objetivo tiene menos del 50% de su salud máxima, se duplican los dados de daño."
 		},
 		{
 			"id": "brutal-swing",
@@ -1270,7 +1270,7 @@
 		{
 			"id": "flail",
 			"name": "Azote",
-			"description": "Te agitas con un golpe salvaje que aumenta su potencia cuanto más herido estés. Realiza una tirada de ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas. Si estás por debajo del 50% de tu salud máxima, duplica el daño. Si estás al 10% o menos de tu salud máxima, triplica el daño. El multiplicador de este ataque se aplica antes de los multiplicadores por resistencias o vulnerabilidades."
+			"description": "Te agitas con un golpe salvaje que aumenta su potencia cuanto más herido estés. Realiza una tirada de ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas. Si estás por debajo del 50% de tu salud máxima, duplica los dados de daño. Si estás al 10% o menos de tu salud máxima, triplica los dados de daño. El multiplicador de este ataque se aplica antes de los multiplicadores por resistencias o vulnerabilidades."
 		},
 		{
 			"id": "flame-burst",
@@ -3272,7 +3272,7 @@
 		{
 			"id": "reversal",
 			"name": "Inversión",
-			"description": "Lanzas un ataque con todas tus fuerzas que es más potente cuanto menos puntos de golpe tengas. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo {dice} de daño de tipo {type} si impactas. Si estás por debajo del 50% de tus puntos de golpe máximos, duplica el daño. Si estás al 10% o menos de tus puntos de golpe máximos, triplica el daño. El multiplicador de este ataque se aplica antes que los multiplicadores por resistencias o vulnerabilidades."
+			"description": "Lanzas un ataque con todas tus fuerzas que es más potente cuanto menos puntos de golpe tengas. Realiza un ataque cuerpo a cuerpo contra un objetivo, infligiendo {dice} de daño de tipo {type} si impactas. Si estás por debajo del 50% de tus puntos de golpe máximos, duplica los dados de daño. Si estás al 10% o menos de tus puntos de golpe máximos, triplica los dados de daño. El multiplicador de este ataque se aplica antes que los multiplicadores por resistencias o vulnerabilidades."
 		},
 		{
 			"id": "revival-blessing",

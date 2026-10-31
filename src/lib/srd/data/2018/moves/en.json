@@ -9,12 +9,22 @@
 			"updated": null
 		},
 		{
+			"id": "assurance",
+			"description": "You strike a creature where it already hurts. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. If the target has already taken any damage since the end of your last turn, double the damage you deal.",
+			"updated": null
+		},
+		{
 			"id": "aura-sphere",
 			"dice": {
 				"class": "30",
 				"modifier": "MOVE",
 				"type": "damage"
 			},
+			"updated": null
+		},
+		{
+			"id": "avalanche",
+			"description": "You send forth a heap of powerful snow to pummel a creature. Make a ranged attack on a target, dealing {dice} {type} damage on a hit. If the target has dealt any damage to you since the end of your last turn, double the damage you deal.",
 			"updated": null
 		},
 		{
@@ -57,6 +67,11 @@
 				"modifier": "MOVE",
 				"type": "damage"
 			},
+			"updated": null
+		},
+		{
+			"id": "brine",
+			"description": "You send a harsh blast of salt water at a creature. Make a ranged attack against a creature, dealing {dice} {type} damage on a hit. If the target has less that 50% of its max HP, double the damage dealt.",
 			"updated": null
 		},
 		{
@@ -238,6 +253,11 @@
 				"modifier": "MOVE",
 				"type": "damage"
 			},
+			"updated": null
+		},
+		{
+			"id": "flail",
+			"description": "You flail about with a wild strike that increases in power the more injured you are. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. If you are below 50% of your maximum health, double the damage. If you are at 10% or below of your maximum health, triple the damage instead. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities.",
 			"updated": null
 		},
 		{
@@ -429,6 +449,11 @@
 			"shape": null,
 			"description": "When you are subject to a melee attack, use your reaction to take half the damage dealt now and on any melee attack that targets you until the beginning of your next turn.",
 			"categories": [],
+			"updated": null
+		},
+		{
+			"id": "reversal",
+			"description": "You unleash an all out attack that is stronger the less HP you have. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. If you are below 50% of your maximum health, double the damage. If you are at 10% or below of your maximum health, triple the damage instead. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities.",
 			"updated": null
 		},
 		{
