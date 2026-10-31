@@ -32,6 +32,10 @@ export const PokemonJson = z.object({
 		hidden: z.boolean(),
 	})),
 	specialAbilityText: z.string().optional(),
+	traits: z.object({
+		name: z.string(),
+		description: z.string(),
+	}).array().optional(),
 	forms: z.object({
 		description: z.string(),
 	}).optional(),

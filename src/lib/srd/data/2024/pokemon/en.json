@@ -47479,6 +47479,12 @@
 					"hidden": false
 				}
 			],
+			"traits": [
+				{
+					"name": "Paper Thin",
+					"description": "This Pokémon always has a maximum HP of 1."
+				}
+			],
 			"moves": {
 				"start": [
 					"absorb",
@@ -143204,6 +143210,12 @@
 				{
 					"id": "effect-spore",
 					"hidden": true
+				}
+			],
+			"traits": [
+				{
+					"name": "Drifter",
+					"description": "In windy conditions (DM discretion), this Pokémon's flying (hover) speed is doubled until windy conditions cease."
 				}
 			],
 			"specialAbilityText": "This Pokémon always has the Drifter ability, along with one other.",
