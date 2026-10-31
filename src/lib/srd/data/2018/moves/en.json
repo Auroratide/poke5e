@@ -341,7 +341,9 @@
 				"concentration": false
 			},
 			"range": {
-				"type": "self"
+				"type": "self",
+				"value": null,
+				"unit": null
 			},
 			"shape": null,
 			"description": "When you are subject to a ranged attack, use your reaction to take half the damage dealt now and on any ranged attack that targets you until the beginning of your next turn.",
