@@ -1,0 +1,1 @@
+import{Si as e,di as t,vi as n,xi as r,yi as i}from"./DJOQHw5l.js";var a={list:[`cool`,`beauty`,`cute`,`clever`,`tough`],name(a){return{cool:()=>i(),beauty:()=>e(),cute:()=>n(),clever:()=>r(),tough:()=>t()}[a]()}};export{a as t};
