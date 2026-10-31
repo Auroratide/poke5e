@@ -1502,7 +1502,7 @@
 			{
 			"id": "supersweet-syrup",
 			"name": "Supersweet Syrup",
-			"description": "Attack rolls made against creatures within 30ft of this Pokémon gain 1d4 on the roll. Creatures with no sense of smell are not affected by this ability."
+			"description": "Allied attack rolls made against enemy creatures within 30 feet of this Pokémon gain 1d4 on the roll. Creatures with no sense of smell are not affected by this ability."
 		},
 			{
 			"id": "supreme-overlord",
