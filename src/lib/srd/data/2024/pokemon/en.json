@@ -78820,7 +78820,7 @@
 				]
 			},
 			"forms": {
-				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
+				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. When it takes an alternate form, its AC increases by 2, its STR increases by 1, its DEX decreases by 1, its INT and WIS each increase by 2, and its size becomes Small. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
 			},
 			"media": {
 				"main": "/assets/pokemon/rotom/main.png",
@@ -78968,7 +78968,7 @@
 				]
 			},
 			"forms": {
-				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
+				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. When it takes an alternate form, its AC increases by 2, its STR increases by 1, its DEX decreases by 1, its INT and WIS each increase by 2, and its size becomes Small. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
 			},
 			"media": {
 				"main": "/assets/pokemon/rotom-heat/main.png",
@@ -79115,7 +79115,7 @@
 				]
 			},
 			"forms": {
-				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
+				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. When it takes an alternate form, its AC increases by 2, its STR increases by 1, its DEX decreases by 1, its INT and WIS each increase by 2, and its size becomes Small. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
 			},
 			"media": {
 				"main": "/assets/pokemon/rotom-wash/main.png",
@@ -79262,7 +79262,7 @@
 				]
 			},
 			"forms": {
-				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
+				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. When it takes an alternate form, its AC increases by 2, its STR increases by 1, its DEX decreases by 1, its INT and WIS each increase by 2, and its size becomes Small. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
 			},
 			"media": {
 				"main": "/assets/pokemon/rotom-frost/main.png",
@@ -79409,7 +79409,7 @@
 				]
 			},
 			"forms": {
-				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
+				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. When it takes an alternate form, its AC increases by 2, its STR increases by 1, its DEX decreases by 1, its INT and WIS each increase by 2, and its size becomes Small. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
 			},
 			"media": {
 				"main": "/assets/pokemon/rotom-fan/main.png",
@@ -79556,7 +79556,7 @@
 				]
 			},
 			"forms": {
-				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
+				"description": "Rotom has 5 alternate forms that it can take when it is near a household appliance. As a bonus action, Rotom can take the Heat Form, Wash Form, Frost Form, Fan Form, or Mow Form, changing its typing and stats. When it takes an alternate form, its AC increases by 2, its STR increases by 1, its DEX decreases by 1, its INT and WIS each increase by 2, and its size becomes Small. The form is dependent on the type of appliance it possesses (DM Discretion). separate stat blocks are provided for each form. When in an alternate form, Rotom knows and can use a specific move in addition to its other moves. Rotom Heat knows Overheat, Rotom Wash knows Hydro Pump, Rotom Frost knows Blizzard, Rotom Fan knows Air Slash, and Rotom Mow knows Leaf Storm."
 			},
 			"media": {
 				"main": "/assets/pokemon/rotom-mow/main.png",
@@ -81304,7 +81304,7 @@
 				]
 			},
 			"forms": {
-				"description": "Giratina's default form is Altered Forme. When it is given a Griseous Orb to hold, or any time it is in its home plane, the Distortion World, it takes on the Origin Forme."
+				"description": "Giratina's default form is Altered Forme. When it is given a Griseous Orb to hold, or any time it is in its home plane, the Distortion World, it takes on the Origin Forme. In Origin Forme, its AC decreases by 2, its STR and DEX each increase by 2, and its ability becomes Levitate."
 			},
 			"media": {
 				"main": "/assets/pokemon/giratina-altered-forme/main.png",
@@ -81474,7 +81474,7 @@
 				]
 			},
 			"forms": {
-				"description": "Giratina's default form is Altered Forme. When it is given a Griseous Orb to hold, or any time it is in its home plane, the Distortion World, it takes on the Origin Forme."
+				"description": "Giratina's default form is Altered Forme. When it is given a Griseous Orb to hold, or any time it is in its home plane, the Distortion World, it takes on the Origin Forme. In Origin Forme, its AC decreases by 2, its STR and DEX each increase by 2, and its ability becomes Levitate."
 			},
 			"media": {
 				"main": "/assets/pokemon/giratina-origin-forme/main.png",
@@ -82209,7 +82209,7 @@
 				]
 			},
 			"forms": {
-				"description": "Shaymin's default form is Land. When Given a Gracidea Flower to hold, it can change to Sky Form, taking on new typing, statistics, and moves."
+				"description": "Shaymin's default form is Land. When Given a Gracidea Flower to hold, it can change to Sky Form, taking on new typing, statistics, and moves. In Sky Form, its AC decreases by 2, its STR and WIS each increase by 2, its DEX decreases by 2, it gains a flying speed of 30 ft., its type becomes Grass/Flying, and its ability becomes Serene Grace."
 			},
 			"media": {
 				"main": "/assets/pokemon/shaymin-land/main.png",
@@ -82353,7 +82353,7 @@
 				]
 			},
 			"forms": {
-				"description": "Shaymin's default form is Land. When Given a Gracidea Flower to hold, it can change to Sky Form, taking on new typing, statistics, and moves."
+				"description": "Shaymin's default form is Land. When Given a Gracidea Flower to hold, it can change to Sky Form, taking on new typing, statistics, and moves. In Sky Form, its AC decreases by 2, its STR and WIS each increase by 2, its DEX decreases by 2, it gains a flying speed of 30 ft., its type becomes Grass/Flying, and its ability becomes Serene Grace."
 			},
 			"media": {
 				"main": "/assets/pokemon/shaymin-sky/main.png",
@@ -106874,7 +106874,7 @@
 				]
 			},
 			"forms": {
-				"description": "While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom)."
+				"description": "While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom).\n\nAs White Kyurem, its AC and STR each increase by 1, its WIS increases by 2, its CHA increases by 3, its walking and flying speeds each increase by 10 ft., and its ability becomes Turboblaze.\n\nAs Black Kyurem, its AC increases by 1, its STR increases by 3, its DEX increases by 2, its WIS decreases by 2, its CHA increases by 3, its walking and flying speeds each increase by 10 ft., and its ability becomes Teravolt."
 			},
 			"media": {
 				"main": "/assets/pokemon/kyurem/main.png",
@@ -107062,7 +107062,7 @@
 				]
 			},
 			"forms": {
-				"description": "While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom)."
+				"description": "While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom).\n\nAs White Kyurem, its AC and STR each increase by 1, its WIS increases by 2, its CHA increases by 3, its walking and flying speeds each increase by 10 ft., and its ability becomes Turboblaze.\n\nAs Black Kyurem, its AC increases by 1, its STR increases by 3, its DEX increases by 2, its WIS decreases by 2, its CHA increases by 3, its walking and flying speeds each increase by 10 ft., and its ability becomes Teravolt."
 			},
 			"media": {
 				"main": "/assets/pokemon/white-kyurem/main.png",
@@ -107248,7 +107248,7 @@
 				]
 			},
 			"forms": {
-				"description": "While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom)."
+				"description": "While in the presence of a willing Reshiram or Zekrom, Kyurem can fuse with one of the willing Pokemon, at will, with the help of a DNA Splicer. This process is called Absofusion and will result in a White Kyurem (if fused with Reshiram) or Black Kyurem (if fused with Zekrom).\n\nAs White Kyurem, its AC and STR each increase by 1, its WIS increases by 2, its CHA increases by 3, its walking and flying speeds each increase by 10 ft., and its ability becomes Turboblaze.\n\nAs Black Kyurem, its AC increases by 1, its STR increases by 3, its DEX increases by 2, its WIS decreases by 2, its CHA increases by 3, its walking and flying speeds each increase by 10 ft., and its ability becomes Teravolt."
 			},
 			"media": {
 				"main": "/assets/pokemon/black-kyurem/main.png",
@@ -107582,7 +107582,7 @@
 				]
 			},
 			"forms": {
-				"description": "As long as Meloetta is outside of battle, it assumes Aria Forme. When the move Relic Song is used, Meloetta interchanges between Aria Forme and Pirouette Forme."
+				"description": "As long as Meloetta is outside of battle, it assumes Aria Forme. When the move Relic Song is used, Meloetta interchanges between Aria Forme and Pirouette Forme.\n\nIn Pirouette Forme, its AC decreases by 1, its STR increases by 5, its DEX and INT each increase by 2, its CON and WIS each decrease by 2, its CHA decreases by 8, and its type becomes Normal/Fighting. These changes are reversed when it returns to Aria Forme."
 			},
 			"media": {
 				"main": "/assets/pokemon/meloetta---aria/main.png",
@@ -107760,7 +107760,7 @@
 				]
 			},
 			"forms": {
-				"description": "As long as Meloetta is outside of battle, it assumes Aria Forme. When the move Relic Song is used, Meloetta interchanges between Aria Forme and Pirouette Forme."
+				"description": "As long as Meloetta is outside of battle, it assumes Aria Forme. When the move Relic Song is used, Meloetta interchanges between Aria Forme and Pirouette Forme.\n\nIn Pirouette Forme, its AC decreases by 1, its STR increases by 5, its DEX and INT each increase by 2, its CON and WIS each decrease by 2, its CHA decreases by 8, and its type becomes Normal/Fighting. These changes are reversed when it returns to Aria Forme."
 			},
 			"media": {
 				"main": "/assets/pokemon/meloetta---pirouette/main.png",
@@ -119375,7 +119375,7 @@
 				]
 			},
 			"forms": {
-				"description": "When holding the Prison Bottle, Hoopa Confined changes form to Hoopa Unbound."
+				"description": "When holding the Prison Bottle, Hoopa Confined changes form to Hoopa Unbound. When it does, its STR increases by 5, its DEX and INT each increase by 2, its CON increases by 1, its size becomes Huge, its type becomes Psychic/Dark, and its hover speed is replaced with a walking speed of 35 ft."
 			},
 			"media": {
 				"main": "/assets/pokemon/hoopa-confined/main.png",
@@ -119544,7 +119544,7 @@
 				]
 			},
 			"forms": {
-				"description": "When holding the Prison Bottle, Hoopa Confined changes form to Hoopa Unbound."
+				"description": "When holding the Prison Bottle, Hoopa Confined changes form to Hoopa Unbound. When it does, its STR increases by 5, its DEX and INT each increase by 2, its CON increases by 1, its size becomes Huge, its type becomes Psychic/Dark, and its hover speed is replaced with a walking speed of 35 ft."
 			},
 			"media": {
 				"main": "/assets/pokemon/hoopa-unbound/main.png",
@@ -135867,7 +135867,7 @@
 				]
 			},
 			"forms": {
-				"description": "Necrozma can fuse with a willing Solgaleo, at will, with the help of the N-Solarizer, or Lunala with the help of the N-Lunarizer. The fusion will result in a Dusk Mane Necrozma (if fused with Solgaleo) or Dawn Wings Necrozma (if fused with Lunala) with the same current HP."
+				"description": "Necrozma can fuse with a willing Solgaleo, at will, with the help of the N-Solarizer, or Lunala with the help of the N-Lunarizer. The fusion will result in a Dusk Mane Necrozma (if fused with Solgaleo) or Dawn Wings Necrozma (if fused with Lunala) with the same current HP.\n\nIn either fused form, its AC increases by 1, its INT increases by 2, and its size becomes Huge.\n\nAs Dusk Mane Necrozma, its STR additionally increases by 2, its DEX increases by 4, it loses its flying speed, and its type becomes Psychic/Steel.\n\nAs Dawn Wings Necrozma, its WIS additionally increases by 4, its CHA increases by 2, it loses its walking speed, and its type becomes Psychic/Ghost."
 			},
 			"media": {
 				"main": "/assets/pokemon/necrozma/main.png",
@@ -176219,7 +176219,7 @@
 				]
 			},
 			"forms": {
-				"description": "Terapagos changes into its Stellar Form whenever it terastallizes. In Stellar Form, its type is Stellar regardless of its Tera Type. When its terastallization ends, it reverts back to either its Normal Form or Terastal Form, whichever it was when it terastallized."
+				"description": "When Terapagos shifts from its Normal Form into its Terastal Form, its AC increases by 2, its DEX increases by 2, its STR, CON, WIS, and CHA each increase by 4, and its walking speed is replaced with a hover speed of 30 ft.\n\nTerapagos changes into its Stellar Form whenever it terastallizes. In Stellar Form, it has all the changes of its Terastal Form, and additionally its CON increases by 5 and its CHA increases by 4. In Stellar Form, its type is Stellar regardless of its Tera Type. When its terastallization ends, it reverts back to either its Normal Form or Terastal Form, whichever it was when it terastallized."
 			},
 			"media": {
 				"main": "/assets/pokemon/terapagos/main.png",
@@ -176368,7 +176368,7 @@
 				]
 			},
 			"forms": {
-				"description": "Terapagos changes into its Stellar Form whenever it terastallizes. In Stellar Form, its type is Stellar regardless of its Tera Type. When its terastallization ends, it reverts back to either its Normal Form or Terastal Form, whichever it was when it terastallized."
+				"description": "When Terapagos shifts from its Normal Form into its Terastal Form, its AC increases by 2, its DEX increases by 2, its STR, CON, WIS, and CHA each increase by 4, and its walking speed is replaced with a hover speed of 30 ft.\n\nTerapagos changes into its Stellar Form whenever it terastallizes. In Stellar Form, it has all the changes of its Terastal Form, and additionally its CON increases by 5 and its CHA increases by 4. In Stellar Form, its type is Stellar regardless of its Tera Type. When its terastallization ends, it reverts back to either its Normal Form or Terastal Form, whichever it was when it terastallized."
 			},
 			"media": {
 				"main": "/assets/pokemon/terapagos-terastal-form/main.png",
@@ -176517,7 +176517,7 @@
 				]
 			},
 			"forms": {
-				"description": "Terapagos changes into its Stellar Form whenever it terastallizes. In Stellar Form, its type is Stellar regardless of its Tera Type. When its terastallization ends, it reverts back to either its Normal Form or Terastal Form, whichever it was when it terastallized."
+				"description": "When Terapagos shifts from its Normal Form into its Terastal Form, its AC increases by 2, its DEX increases by 2, its STR, CON, WIS, and CHA each increase by 4, and its walking speed is replaced with a hover speed of 30 ft.\n\nTerapagos changes into its Stellar Form whenever it terastallizes. In Stellar Form, it has all the changes of its Terastal Form, and additionally its CON increases by 5 and its CHA increases by 4. In Stellar Form, its type is Stellar regardless of its Tera Type. When its terastallization ends, it reverts back to either its Normal Form or Terastal Form, whichever it was when it terastallized."
 			},
 			"media": {
 				"main": "/assets/pokemon/terapagos-stellar-form/main.png",
