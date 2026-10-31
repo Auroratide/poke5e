@@ -54,7 +54,10 @@ export const SrdDocumentation = {
 	},
 } as const
 
-function tokensFor(node: OpenAPIV3_1.SchemaObject, indent: number): SchemaToken[] {
+function tokensFor(node: OpenAPIV3_1.SchemaObject | boolean, indent: number): SchemaToken[] {
+	// JSON Schema allows boolean schemas: `true` accepts anything, `false` accepts nothing
+	if (typeof node === "boolean") return [ { kind: "type", text: node ? "unknown" : "never" } ]
+
 	const reference = referencedId(node)
 	if (reference != null) return [ { kind: "reference", text: reference, linkTo: reference } ]
 
@@ -68,6 +71,18 @@ function tokensFor(node: OpenAPIV3_1.SchemaObject, indent: number): SchemaToken[
 		return node.anyOf.flatMap((member, i) => i === 0
 			? tokensFor(member, indent)
 			: [ { kind: "punctuation", text: " | " } as SchemaToken, ...tokensFor(member, indent) ])
+	}
+
+	// Tuples (e.g. z.tuple) emit `prefixItems` alongside `items: false`
+	const prefixItems = (node as { prefixItems?: OpenAPIV3_1.SchemaObject[] }).prefixItems
+	if (node.type === "array" && prefixItems != null) {
+		return [
+			{ kind: "punctuation", text: "[" },
+			...prefixItems.flatMap((member, i) => i === 0
+				? tokensFor(member, indent)
+				: [ { kind: "punctuation", text: ", " } as SchemaToken, ...tokensFor(member, indent) ]),
+			{ kind: "punctuation", text: "]" },
+		]
 	}
 
 	if (node.type === "array" && node.items != null) {
