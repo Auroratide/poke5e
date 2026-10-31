@@ -14,6 +14,31 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.17",
+		description: [
+			`<strong>Beta, Moves</strong>:<ul>
+				<li><strong>Assurance</strong>: Changed double damage to double damage dice.</li>
+				<li><strong>Avalanche</strong>: Changed double damage to double damage dice.</li>
+				<li><strong>Brine</strong>: Changed double damage to double damage dice.</li>
+				<li><strong>Bubble</strong>: Updated into a cone attack.</li>
+				<li><strong>Dragon Dance</strong>: Buffed to include more effects when used.</li>
+				<li><strong>Flail</strong>: Changed double damage to double damage dice.</li>
+				<li><strong>Light Screen, Reflect</strong>: Overhauled to be more support-like and persistent.</li>
+				<li><strong>Reversal</strong>: Changed double damage to double damage dice.</li>
+			</ul>`,
+			"<strong>Pokémon</strong>: Remove flying speed off Druddigon.",
+			"<strong>Pokémon</strong>: Grant Finizen and Palafin the same blindsight that 5e Dolphins have.",
+			"<strong>Pokémon</strong>: Allow Zygarde 100% to have Aura Break as an ability.",
+			"<strong>Pokémon</strong>: Form changes now specify the way in which pokémon stats change.",
+			"<strong>Combo Master, Skill Link</strong>: Changed to work differently than each other, and to be therefore stackable.",
+			"<strong>Items</strong>: Added Loaded Dice.",
+			"<strong>Items</strong>: Added TMs as items that can be added to a trainer's inventory.",
+			"<strong>Abilities</strong>: Supersweet Syrup now only applies attack bonus to allies.",
+			"<strong>Encounter Tool</strong>: Specify Level vs Pokemon in the form.",
+			"<strong>Bugfix</strong>: Leading and trailing spaces now allowed when filtering encounters for region names.",
+			"<strong>Bugfix</strong>: Form change details added back, were erroneously removed in a previous update.",
+		],
+	}, {
 		name: "v1.12.16",
 		description: [
 			`<strong>Beta, Moves</strong>: Many rock-type moves updated for 2024 edition:<ul>
