@@ -102108,10 +102108,6 @@
 			"speed": [
 				{
 					"type": "walking",
-					"value": 25
-				},
-				{
-					"type": "flying",
 					"value": 30
 				}
 			],

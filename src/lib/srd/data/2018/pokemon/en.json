@@ -154,6 +154,19 @@
 		{
 			"id": "trubbish",
 			"hp": 19
+		},
+		{
+			"id": "druddigon",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 25
+				},
+				{
+					"type": "flying",
+					"value": 30
+				}
+			]
 		}
 	]
 }
