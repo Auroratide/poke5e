@@ -121,7 +121,7 @@ export class PokemonSpecies extends DataClass<{
 				egg: it.moves.egg ?? [],
 				tm: it.moves.tm ?? [],
 			},
-			// forms: it.forms,
+			forms: it.forms,
 			media: {
 				values: {
 					normalPortrait: {
