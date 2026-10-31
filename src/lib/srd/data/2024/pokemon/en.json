@@ -167002,7 +167002,12 @@
 			"savingThrows": [
 				"dex"
 			],
-			"senses": [],
+			"senses": [
+				{
+					"type": "blindsight",
+					"value": 60
+				}
+			],
 			"abilities": [
 				{
 					"id": "water-veil",
@@ -167137,7 +167142,12 @@
 			"savingThrows": [
 				"dex"
 			],
-			"senses": [],
+			"senses": [
+				{
+					"type": "blindsight",
+					"value": 60
+				}
+			],
 			"abilities": [
 				{
 					"id": "zero-to-hero",
