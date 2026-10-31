@@ -118986,6 +118986,10 @@
 			],
 			"abilities": [
 				{
+					"id": "aura-break",
+					"hidden": false
+				},
+				{
 					"id": "power-construct-100",
 					"hidden": false
 				}
