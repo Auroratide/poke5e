@@ -131,10 +131,13 @@ export class AsiEffect implements EvolutionEffect {
 	constructor(private readonly asi: AbilityScoreImprovement) {}
 
 	apply(pokemon: TrainerPokemon): TrainerPokemon {
-		const conBefore = pokemon.attributes.con.score
-		pokemon.attributes.improve(this.asi)
-		pokemon.hp = HitPoints.improveViaConIncrease(pokemon.hp, pokemon.level, conBefore, pokemon.attributes.con.score)
-		return pokemon
+		const attributes = pokemon.attributes.improve(this.asi)
+
+		return {
+			...pokemon,
+			attributes,
+			hp: HitPoints.improveViaConIncrease(pokemon.hp, pokemon.level, pokemon.attributes.con.score, attributes.con.score),
+		}
 	}
 
 	toString(): string {

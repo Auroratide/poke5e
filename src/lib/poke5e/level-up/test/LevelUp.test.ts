@@ -186,6 +186,8 @@ describe("trainers", () => {
 
 		// then
 		expect(result.hp.max).toEqual(43)
+		expect(trainer.hp.max).toEqual(35)
+		expect(trainer.attributes.con.score).toEqual(10)
 	})
 
 	test("increasing CON at a breakpoint increases HP retroactively", () => {
@@ -401,6 +403,7 @@ describe("pokemon", () => {
 
 		// then
 		expect(result.ac).toEqualData(17)
+		expect(pokemon.ac).toEqual(15)
 	})
 
 	test("tough feat", () => {
@@ -437,6 +440,10 @@ describe("pokemon", () => {
 		expect(result.hp).toEqual({
 			current: 61,
 			max: 61,
+		})
+		expect(pokemon.hp).toEqual({
+			current: 45,
+			max: 45,
 		})
 	})
 

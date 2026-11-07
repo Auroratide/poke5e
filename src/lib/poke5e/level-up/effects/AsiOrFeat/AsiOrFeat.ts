@@ -43,19 +43,19 @@ export class AsiOrFeatEffect extends LevelUpEffect<AsiOrFeatProps, AsiOrFeatPara
 		// this is necessary because otherwise the feat is a funky svelte proxy object
 		const feat = this.params.feat ? { ...this.params.feat } : undefined
 
-		const originalCon = subject.attributes.con
 		const improvedAttributes = subject.attributes.improve(this.params.pointsSpent)
-		subject.hp = HitPoints.improveViaConIncrease(subject.hp, subject.level, originalCon.score, improvedAttributes.con.score)
 
-		if (feat != null && this.params.featEffects != null) {
-			subject = this.params.featEffects?.onAcquire?.(subject) ?? subject
-		}
-
-		return {
+		let updated: T = {
 			...subject,
 			attributes: improvedAttributes,
+			hp: HitPoints.improveViaConIncrease(subject.hp, subject.level, subject.attributes.con.score, improvedAttributes.con.score),
 			feats: feat != null ? [...subject.feats, feat] : subject.feats,
-			hp: subject.hp,
 		}
+
+		if (feat != null && this.params.featEffects != null) {
+			updated = this.params.featEffects?.onAcquire?.(updated) ?? updated
+		}
+
+		return updated
 	}
 }

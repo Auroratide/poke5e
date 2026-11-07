@@ -49,14 +49,16 @@ export class Attributes extends DataClass<{
 	get cha() { return this.score(this.data.cha) }
 
 	improve(asi: AbilityScoreImprovement): Attributes {
-		this.data.str = Math.min(Attributes.MAX_ABSOLUTE_VALUE, this.data.str + asi.str)
-		this.data.dex = Math.min(Attributes.MAX_ABSOLUTE_VALUE, this.data.dex + asi.dex)
-		this.data.con = Math.min(Attributes.MAX_ABSOLUTE_VALUE, this.data.con + asi.con)
-		this.data.int = Math.min(Attributes.MAX_ABSOLUTE_VALUE, this.data.int + asi.int)
-		this.data.wis = Math.min(Attributes.MAX_ABSOLUTE_VALUE, this.data.wis + asi.wis)
-		this.data.cha = Math.min(Attributes.MAX_ABSOLUTE_VALUE, this.data.cha + asi.cha)
+		const improveScore = (score: number, amount: number) => Math.min(Attributes.MAX_ABSOLUTE_VALUE, score + amount)
 
-		return this
+		return new Attributes({
+			str: improveScore(this.data.str, asi.str),
+			dex: improveScore(this.data.dex, asi.dex),
+			con: improveScore(this.data.con, asi.con),
+			int: improveScore(this.data.int, asi.int),
+			wis: improveScore(this.data.wis, asi.wis),
+			cha: improveScore(this.data.cha, asi.cha),
+		})
 	}
 
 	entries(): [Attribute, number][] {

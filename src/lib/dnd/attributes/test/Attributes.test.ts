@@ -44,3 +44,24 @@ test("ability score improvement", () => {
 	expect(result.wis.score).toEqual(20)
 	expect(result.cha.score).toEqual(30)
 })
+
+test("ability score improvement does not modify the original attributes", () => {
+	const attributes = new Attributes({
+		str: 10,
+		dex: 10,
+		con: 10,
+		int: 10,
+		wis: 10,
+		cha: 10,
+	})
+
+	let asi = AbilityScoreImprovement.zero()
+	asi = AbilityScoreImprovement.increase(asi, "str")
+	asi = AbilityScoreImprovement.increase(asi, "con")
+
+	const result = attributes.improve(asi)
+
+	expect(result).not.toBe(attributes)
+	expect(attributes.str.score).toEqual(10)
+	expect(attributes.con.score).toEqual(10)
+})
