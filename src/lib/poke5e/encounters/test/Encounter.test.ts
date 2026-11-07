@@ -151,6 +151,36 @@ describe("generate", () => {
 			expect(Encounter.totalExp(result)).toBeLessThanOrEqual(targetExp * (1 + TOLERANCE))
 		}
 	})
+
+	test("never generates legendary pokemon", () => {
+		const pool = [
+			stubPokemonSpecies({ id: "regular", sr: 1, minLevel: 1 }),
+			stubPokemonSpecies({ id: "legend", sr: 1, minLevel: 1, legendary: true }),
+		]
+
+		for (let i = 0; i < 50; ++i) {
+			const result = Encounter.generate({
+				pool,
+				targetExp: 5000,
+			})
+
+			expect(result.pokemon.length).toBeGreaterThan(0)
+			expect(result.pokemon.every((it) => it.data.id.data === "regular")).toBe(true)
+		}
+	})
+
+	test("pool of only legendary pokemon generates nothing", () => {
+		const pool = [
+			stubPokemonSpecies({ id: "legend", sr: 1, minLevel: 1, legendary: true }),
+		]
+
+		const result = Encounter.generate({
+			pool,
+			targetExp: 5000,
+		})
+
+		expect(result.pokemon).toEqual([])
+	})
 })
 
 describe("saveToTrainers", () => {

@@ -46,6 +46,7 @@ export class PokemonSpecies extends DataClass<{
 	media: Data<SpeciesMedia<UploadedMedia>>,
 	notes?: MarkdownString,
 	habitat: Habitat,
+	legendary?: boolean,
 }> {
 	static readonly matchNameOrType = (value: string) => (pokemon: PokemonSpecies) =>
 		includesSearch([pokemon.data.name, ...(pokemon.data.aliases ?? [])], value) ||
@@ -74,6 +75,7 @@ export class PokemonSpecies extends DataClass<{
 	get forms(): SpeciesForms | undefined { return this.data.forms != null ? new SpeciesForms(this.data.forms) : undefined }
 	get abilities(): AbilityPool { return new AbilityPool(this.data.abilities) }
 	get habitat(): Habitat { return this.data.habitat }
+	get isLegendary(): boolean { return this.data.legendary ?? false }
 
 	numberAsString(): string {
 		return `#${this.data.number.toString().padStart(4, "0")}`
@@ -179,6 +181,7 @@ export class PokemonSpecies extends DataClass<{
 				nativeRegion: it.habitat?.nativeRegion ?? "",
 				regions: it.habitat?.regions ?? [],
 			},
+			legendary: it.legendary,
 		})
 	}
 }

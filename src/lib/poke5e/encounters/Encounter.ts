@@ -78,6 +78,9 @@ export const Encounter = {
 			pokemon: [],
 		}
 
+		// Legendary pokémon are too special to appear in randomly generated encounters
+		const eligiblePool = pool.filter((pokemon) => !pokemon.isLegendary)
+
 		let currentTotalExp = 0
 		let currentPokemonCount = 0
 		let attempts = 0
@@ -92,7 +95,7 @@ export const Encounter = {
 			const remainingExp = targetExp - currentTotalExp
 			if (remainingExp <= 0) break
 
-			const possibleChoices = pool.map(pokemon => {
+			const possibleChoices = eligiblePool.map(pokemon => {
 				const randomLevel = Math.max(pokemon.data.minLevel, Math.floor(Math.random() * maxLevel) + 1)
 				const exp = experienceAwarded(randomLevel, Number(pokemon.data.sr))
 				return { pokemon, level: randomLevel, exp }
