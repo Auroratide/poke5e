@@ -65,6 +65,9 @@ export const PokemonJson = z.object({
 		nativeRegion: z.string(),
 		regions: z.array(z.string()),
 	}),
+	legendary: z.boolean().optional().meta({
+		description: "True if this pokemon is either legendary or mythical.",
+	}),
 	unofficial: z.boolean().optional(),
 }).meta({
 	id: "Pokemon",

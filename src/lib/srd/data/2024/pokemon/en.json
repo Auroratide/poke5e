@@ -23001,7 +23001,8 @@
 					"Kalos",
 					"Kanto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "zapdos",
@@ -23157,7 +23158,8 @@
 					"Kalos",
 					"Kanto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "moltres",
@@ -23313,7 +23315,8 @@
 					"Kalos",
 					"Kanto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "dratini",
@@ -24054,7 +24057,8 @@
 					"Kalos",
 					"Kanto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "mew",
@@ -24406,7 +24410,8 @@
 					"Johto",
 					"Kanto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "chikorita",
@@ -39774,7 +39779,8 @@
 				"regions": [
 					"Johto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "entei",
@@ -39920,7 +39926,8 @@
 				"regions": [
 					"Johto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "suicune",
@@ -40068,7 +40075,8 @@
 				"regions": [
 					"Johto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "larvitar",
@@ -40784,7 +40792,8 @@
 				"regions": [
 					"Johto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "ho-oh",
@@ -40948,7 +40957,8 @@
 				"regions": [
 					"Johto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "celebi",
@@ -41081,7 +41091,8 @@
 				"regions": [
 					"Johto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "treecko",
@@ -61558,7 +61569,8 @@
 					"Galar",
 					"Hoenn"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "regice",
@@ -61710,7 +61722,8 @@
 					"Galar",
 					"Hoenn"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "registeel",
@@ -61869,7 +61882,8 @@
 					"Galar",
 					"Hoenn"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "latias",
@@ -62050,7 +62064,8 @@
 					"Hoenn",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "latios",
@@ -62227,7 +62242,8 @@
 					"Hoenn",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "kyogre",
@@ -62375,7 +62391,8 @@
 					"Hoenn",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "kyogre-primal",
@@ -62523,7 +62540,8 @@
 					"Hoenn",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "groudon",
@@ -62692,7 +62710,8 @@
 					"Hoenn",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "groudon-primal",
@@ -62862,7 +62881,8 @@
 					"Hoenn",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "rayquaza",
@@ -63042,7 +63062,8 @@
 					"Hoenn",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "jirachi",
@@ -63217,7 +63238,8 @@
 				"regions": [
 					"Hoenn"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "deoxys",
@@ -63394,7 +63416,8 @@
 				"regions": [
 					"Hoenn"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "turtwig",
@@ -79747,7 +79770,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "mesprit",
@@ -79917,7 +79941,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "azelf",
@@ -80090,7 +80115,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "dialga",
@@ -80276,7 +80302,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "dialga-origin",
@@ -80457,7 +80484,8 @@
 				"regions": [
 					"Hisui"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "palkia",
@@ -80648,7 +80676,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "palkia-origin",
@@ -80832,7 +80861,8 @@
 				"regions": [
 					"Hisui"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "heatran",
@@ -80999,7 +81029,8 @@
 					"Kalos",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "regigigas",
@@ -81145,7 +81176,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "giratina-altered-forme",
@@ -81319,7 +81351,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "giratina-origin-forme",
@@ -81488,7 +81521,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "cresselia",
@@ -81638,7 +81672,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "phione",
@@ -81773,7 +81808,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "manaphy",
@@ -81924,7 +81960,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "darkrai",
@@ -82085,7 +82122,8 @@
 					"Kalos",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "shaymin-land",
@@ -82224,7 +82262,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "shaymin-sky",
@@ -82367,7 +82406,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "arceus",
@@ -82619,7 +82659,8 @@
 					"Hisui",
 					"Sinnoh"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "victini",
@@ -82763,7 +82804,8 @@
 				"regions": [
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "snivy",
@@ -105001,7 +105043,8 @@
 					"Kalos",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "terrakion",
@@ -105155,7 +105198,8 @@
 					"Kalos",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "virizion",
@@ -105311,7 +105355,8 @@
 					"Kalos",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "tornadus",
@@ -105480,7 +105525,8 @@
 					"Hisui",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "tornadus-therian",
@@ -105645,7 +105691,8 @@
 					"Hisui",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "thundurus",
@@ -105820,7 +105867,8 @@
 					"Hisui",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "thundurus-therian",
@@ -105991,7 +106039,8 @@
 					"Hisui",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "reshiram",
@@ -106177,7 +106226,8 @@
 				"regions": [
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "zekrom",
@@ -106368,7 +106418,8 @@
 				"regions": [
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "landorus",
@@ -106536,7 +106587,8 @@
 					"Hisui",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "landorus-therian",
@@ -106700,7 +106752,8 @@
 					"Hisui",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "kyurem",
@@ -106888,7 +106941,8 @@
 				"regions": [
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "white-kyurem",
@@ -107075,7 +107129,8 @@
 				"regions": [
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "black-kyurem",
@@ -107261,7 +107316,8 @@
 				"regions": [
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "keldeo",
@@ -107419,7 +107475,8 @@
 					"Kalos",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "meloetta---aria",
@@ -107597,7 +107654,8 @@
 					"Kalos",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "meloetta---pirouette",
@@ -107774,7 +107832,8 @@
 					"Kalos",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "genesect",
@@ -107914,7 +107973,8 @@
 					"Kalos",
 					"Unova"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "chespin",
@@ -118483,7 +118543,8 @@
 				"regions": [
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "yveltal",
@@ -118622,7 +118683,8 @@
 				"regions": [
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "zygarde-10-forme",
@@ -118765,7 +118827,8 @@
 					"Alola",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "zygarde-50-forme",
@@ -118910,7 +118973,8 @@
 					"Alola",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "zygarde-complete-forme",
@@ -119055,7 +119119,8 @@
 					"Alola",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "diancie",
@@ -119219,7 +119284,8 @@
 				"regions": [
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "hoopa-confined",
@@ -119389,7 +119455,8 @@
 				"regions": [
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "hoopa-unbound",
@@ -119558,7 +119625,8 @@
 				"regions": [
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "volcanion",
@@ -119719,7 +119787,8 @@
 				"regions": [
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "alolan-rattata",
@@ -131717,7 +131786,8 @@
 					"Alola",
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "silvally",
@@ -131870,7 +131940,8 @@
 					"Alola",
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "minior-meteor-form",
@@ -133909,7 +133980,8 @@
 				"regions": [
 					"Alola"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "tapu-lele",
@@ -134047,7 +134119,8 @@
 				"regions": [
 					"Alola"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "tapu-bulu",
@@ -134191,7 +134264,8 @@
 				"regions": [
 					"Alola"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "tapu-fini",
@@ -134330,7 +134404,8 @@
 				"regions": [
 					"Alola"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "cosmog",
@@ -134409,7 +134484,8 @@
 				"regions": [
 					"Alola"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "cosmoem",
@@ -134486,7 +134562,8 @@
 				"regions": [
 					"Alola"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "solgaleo",
@@ -134655,7 +134732,8 @@
 				"regions": [
 					"Alola"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "lunala",
@@ -134818,7 +134896,8 @@
 				"regions": [
 					"Alola"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "nihilego",
@@ -135881,7 +135960,8 @@
 				"regions": [
 					"Alola"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "dusk-mane-necrozma",
@@ -136053,7 +136133,8 @@
 				"regions": [
 					"Alola"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "dawn-wings-necrozma",
@@ -136225,7 +136306,8 @@
 				"regions": [
 					"Alola"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "ultra-necrozma",
@@ -136401,7 +136483,8 @@
 				"regions": [
 					"Alola"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "magearna",
@@ -136576,7 +136659,8 @@
 					"Alola",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "marshadow",
@@ -136718,7 +136802,8 @@
 					"Alola",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "poipole",
@@ -137323,7 +137408,8 @@
 					"Alola",
 					"Kalos"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "meltan",
@@ -137416,7 +137502,8 @@
 					"Kalos",
 					"Kanto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "melmetal",
@@ -137522,7 +137609,8 @@
 					"Kalos",
 					"Kanto"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "galarian-meowth",
@@ -139006,7 +139094,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "zapdos-galar",
@@ -139156,7 +139245,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "moltres-galar",
@@ -139310,7 +139400,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "galarian-slowking",
@@ -151750,7 +151841,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "zacian-crowned",
@@ -151885,7 +151977,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "zamazenta",
@@ -152024,7 +152117,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "zamazenta-crowned",
@@ -152163,7 +152257,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "eternatus",
@@ -152307,7 +152402,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "eternatus-eternamax",
@@ -152420,7 +152516,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "kubfu",
@@ -152549,7 +152646,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "urshifu-single",
@@ -152698,7 +152796,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "urshifu-rapid",
@@ -152845,7 +152944,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "zarude",
@@ -153002,7 +153102,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "regieleki",
@@ -153121,7 +153222,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "regidrago",
@@ -153244,7 +153346,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "glastrier",
@@ -153370,7 +153473,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "spectrier",
@@ -153495,7 +153599,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "calyrex",
@@ -153636,7 +153741,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "calyrex-ice",
@@ -153810,7 +153916,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "calyrex-shadow",
@@ -153980,7 +154087,8 @@
 				"regions": [
 					"Galar"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "growlithe-hisui",
@@ -157937,7 +158045,8 @@
 				"regions": [
 					"Hisui"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "enamorus-therian",
@@ -158081,7 +158190,8 @@
 				"regions": [
 					"Hisui"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "tauros-paldea-combat-breed",
@@ -172595,7 +172705,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "chien-pao",
@@ -172727,7 +172838,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "ting-lu",
@@ -172863,7 +172975,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "chi-yu",
@@ -173000,7 +173113,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "roaring-moon",
@@ -173472,7 +173586,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "miraidon",
@@ -173618,7 +173733,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "walking-wake",
@@ -174437,7 +174553,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "munkidori",
@@ -174577,7 +174694,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "fezandipiti",
@@ -174718,7 +174836,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "ogerpon",
@@ -174854,7 +174973,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "ogerpon-wellspring-mask",
@@ -174991,7 +175111,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "ogerpon-heartflame-mask",
@@ -175128,7 +175249,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "ogerpon-cornerstone-mask",
@@ -175265,7 +175387,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "archaludon",
@@ -176233,7 +176356,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "terapagos-terastal-form",
@@ -176382,7 +176506,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "terapagos-stellar-form",
@@ -176531,7 +176656,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "pecharunt",
@@ -176642,7 +176768,8 @@
 				"regions": [
 					"Paldea"
 				]
-			}
+			},
+			"legendary": true
 		},
 		{
 			"id": "rookite",
