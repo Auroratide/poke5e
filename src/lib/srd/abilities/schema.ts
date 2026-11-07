@@ -11,6 +11,9 @@ export const AbilityJson = z.object({
 	description: z.string().meta({
 		description: "Rules text for the ability. Plain text with no markup.",
 	}),
+	untraceable: z.boolean().optional().meta({
+		description: "When true, indicates that this ability cannot be a target of Trace.",
+	}),
 	aliases: z.array(z.string()).optional().meta({
 		description: "Alternative display names for searching.\nUsually the English name for localized output.",
 	}),

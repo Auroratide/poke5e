@@ -1490,8 +1490,7 @@
 		},
 		{
 			"id": "trace",
-			"name": "Calco",
-			"description": "Este Pokémon copia una habilidad aleatoria de un oponente cuando entra en combate. La habilidad no puede ser Don Floral, Predicción, Illusión, Impostor, Multitipo, Calco, Superguarda o Modo Daruma."
+			"name": "Calco"
 		},
 		{
 			"id": "transformer",

@@ -28,6 +28,10 @@
 			"description": "Aliados são imunes a sono."
 		},
 		{
+			"id": "trace",
+			"description": "Este Pokémon copia uma habilidade aleatória de um oponente ao entrar em batalha. A habilidade não pode ser Flower Gift, Forecast, Illusion, Imposter, Multitype, Trace, Wonder Guard ou Zen Mode."
+		},
+		{
 			"id": "wonder-skin",
 			"description": "Este Pokémon tem vantagem em todos os testes de resistência contra queimadura, congelamento, envenenamento ou paralisia."
 		}

@@ -29,6 +29,10 @@
 			"description": "Cualquier aliado a 15 pies o menos de este Pokémon es inmune a quedarse dormido."
 		},
 		{
+			"id": "trace",
+			"description": "Este Pokémon copia una habilidad aleatoria de un oponente cuando entra en combate. La habilidad no puede ser Don Floral, Predicción, Illusión, Impostor, Multitipo, Calco, Superguarda o Modo Daruma."
+		},
+		{
 			"id": "wonder-skin",
 			"description": "Este Pokémon tiene ventaja en todas las tiradas de salvación contra quemaduras, congelamiento, envenenamiento o parálisis."
 		}

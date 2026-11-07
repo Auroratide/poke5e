@@ -72,7 +72,8 @@
 			{
 			"id": "as-one",
 			"name": "As One",
-			"description": "Opponents in combat with this Pokémon cannot eat held berries. Upon causing an opponent to faint, this Pokémon may immediately move up to 20ft take another action. This ability cannot be swapped off this Pokémon."
+			"description": "Opponents in combat with this Pokémon cannot eat held berries. Upon causing an opponent to faint, this Pokémon may immediately move up to 20ft take another action. This ability cannot be swapped off this Pokémon.",
+			"untraceable": true
 		},
 		{
 			"id": "aura-break",
@@ -177,12 +178,14 @@
 		{
 			"id": "comatose",
 			"name": "Comatose",
-			"description": "This Pokémon is in a continuous state of drowsiness. It is immune to the sleep condition, but is considered affected by sleep for all moves that require a Pokémon to be asleep to use or activate additional effects (Snore, Sleep Talk, Wake-Up Slap, Dream Eater, etc.)"
+			"description": "This Pokémon is in a continuous state of drowsiness. It is immune to the sleep condition, but is considered affected by sleep for all moves that require a Pokémon to be asleep to use or activate additional effects (Snore, Sleep Talk, Wake-Up Slap, Dream Eater, etc.)",
+			"untraceable": true
 		},
 			{
 			"id": "commander",
 			"name": "Commander",
-			"description": "Once per long rest, this Pokémon may use its action to leap into the mouth of a nearby Dondozo. While in the mouth, this Pokémon may not take actions that target creatures or objects outside of Dondozo's body; additionally, it cannot itself be targeted. While in the mouth, the Dondozo gains proficiency to WIS saves. This Pokémon may use an action to leave Dondozo's mouth, or it is ejected from the mouth at an adjacent space if Dondozo faints."
+			"description": "Once per long rest, this Pokémon may use its action to leap into the mouth of a nearby Dondozo. While in the mouth, this Pokémon may not take actions that target creatures or objects outside of Dondozo's body; additionally, it cannot itself be targeted. While in the mouth, the Dondozo gains proficiency to WIS saves. This Pokémon may use an action to leave Dondozo's mouth, or it is ejected from the mouth at an adjacent space if Dondozo faints.",
+			"untraceable": true
 		},
 		{
 			"id": "competitive",
@@ -286,7 +289,8 @@
 		{
 			"id": "disguise",
 			"name": "Disguise",
-			"description": "This Pokémon has a disguise which gives it a temporary hp boost equal to twice its level. When the temporary hit points fall to zero, the disguise breaks and requires a short rest to repair."
+			"description": "This Pokémon has a disguise which gives it a temporary hp boost equal to twice its level. When the temporary hit points fall to zero, the disguise breaks and requires a short rest to repair.",
+			"untraceable": true
 		},
 		{
 			"id": "download",
@@ -364,22 +368,26 @@
 			{
 			"id": "embody-aspect-cornerstone",
 			"name": "Embody Aspect (Cornerstone)",
-			"description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's CON score becomes 23, unless it is already higher."
+			"description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's CON score becomes 23, unless it is already higher.",
+			"untraceable": true
 		},
 			{
 			"id": "embody-aspect-heartflame",
 			"name": "Embody Aspect (Heartflame)",
-			"description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's STR score becomes 23, unless it is already higher."
+			"description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's STR score becomes 23, unless it is already higher.",
+			"untraceable": true
 		},
 			{
 			"id": "embody-aspect-teal",
 			"name": "Embody Aspect (Teal)",
-			"description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's DEX score becomes 23, unless it is already higher."
+			"description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's DEX score becomes 23, unless it is already higher.",
+			"untraceable": true
 		},
 			{
 			"id": "embody-aspect-wellspring",
 			"name": "Embody Aspect (Wellspring)",
-			"description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's CHA score becomes 23, unless it is already higher."
+			"description": "This Pokémon automatically gains this ability when Terastallized. This Pokémon's CHA score becomes 23, unless it is already higher.",
+			"untraceable": true
 		},
 		{
 			"id": "emergency-exit",
@@ -423,7 +431,8 @@
 		{
 			"id": "flower-gift",
 			"name": "Flower Gift",
-			"description": "During harsh sunlight, ally Pokémon within 30 feet of this Pokémon add their proficiency bonus to damage rolls."
+			"description": "During harsh sunlight, ally Pokémon within 30 feet of this Pokémon add their proficiency bonus to damage rolls.",
+			"untraceable": true
 		},
 		{
 			"id": "flower-veil",
@@ -442,7 +451,8 @@
 		{
 			"id": "forecast",
 			"name": "Forecast",
-			"description": "This Pokémon changes form with the weather. In rain it becomes water-type, in harsh sunlight it becomes fire-type, in cold and snowy conditions it becomes ice-type. In all other conditions it is normal-type. Its STAB, resistance, immunities, and vulnerabilities change to match the form it takes."
+			"description": "This Pokémon changes form with the weather. In rain it becomes water-type, in harsh sunlight it becomes fire-type, in cold and snowy conditions it becomes ice-type. In all other conditions it is normal-type. Its STAB, resistance, immunities, and vulnerabilities change to match the form it takes.",
+			"untraceable": true
 		},
 		{
 			"id": "forewarn",
@@ -606,7 +616,8 @@
 		{
 			"id": "gulp-missile",
 			"name": "Gulp Missile",
-			"description": "May Grapple as a bonus action after completing either Surf or Dive. As a bonus action, may launch a creature grappled by you up to 15ft, dealing fall damage equivalent to the distance launched."
+			"description": "May Grapple as a bonus action after completing either Surf or Dive. As a bonus action, may launch a creature grappled by you up to 15ft, dealing fall damage equivalent to the distance launched.",
+			"untraceable": true
 		},
 		{
 			"id": "guts",
@@ -660,7 +671,8 @@
 			{
 			"id": "hunger-switch",
 			"name": "Hunger Switch",
-			"description": "At the start of its turn, this Pokemon switches to Hangry Mode if it was in Full Belly Mode, or switches to Full Belly Mode if it was in Hangry Mode."
+			"description": "At the start of its turn, this Pokemon switches to Hangry Mode if it was in Full Belly Mode, or switches to Full Belly Mode if it was in Hangry Mode.",
+			"untraceable": true
 		},
 		{
 			"id": "hustle",
@@ -691,7 +703,8 @@
 			{
 			"id": "ice-face",
 			"name": "Ice Face",
-			"description": "This Pokémon has two forms: Ice Form and No-Ice Form. When in Ice Form, the first time this pokémon takes damage, it takes half that damage but transforms into No-Ice Form. When in No-Ice Form, this pokemon's AC is decreased by 3 and each of its movement speeds are increased by 5 ft. This Pokémon reverts back to Ice Form after a short rest, or on the start of its turn when in the hail."
+			"description": "This Pokémon has two forms: Ice Form and No-Ice Form. When in Ice Form, the first time this pokémon takes damage, it takes half that damage but transforms into No-Ice Form. When in No-Ice Form, this pokemon's AC is decreased by 3 and each of its movement speeds are increased by 5 ft. This Pokémon reverts back to Ice Form after a short rest, or on the start of its turn when in the hail.",
+			"untraceable": true
 		},
 		{
 			"id": "ice-scales",
@@ -706,7 +719,8 @@
 		{
 			"id": "illusion",
 			"name": "Illusion",
-			"description": "This Pokémon can take the visual form of any Pokémon it can see. It can do this a number of times per long rest equal to its level. This illusion lasts for one hour or until the Pokémon is hit by a damaging move."
+			"description": "This Pokémon can take the visual form of any Pokémon it can see. It can do this a number of times per long rest equal to its level. This illusion lasts for one hour or until the Pokémon is hit by a damaging move.",
+			"untraceable": true
 		},
 		{
 			"id": "immunity",
@@ -716,7 +730,8 @@
 		{
 			"id": "imposter",
 			"name": "Imposter",
-			"description": "This Pokémon can use Transform as a bonus action."
+			"description": "This Pokémon can use Transform as a bonus action.",
+			"untraceable": true
 		},
 		{
 			"id": "infiltrator",
@@ -931,7 +946,8 @@
 		{
 			"id": "multitype",
 			"name": "Multitype",
-			"description": "This Pokémon's type and form change to match the type of Elemental Plate this Pokémon holds. The Plate cannot be affected by any item-removing ability or move."
+			"description": "This Pokémon's type and form change to match the type of Elemental Plate this Pokémon holds. The Plate cannot be affected by any item-removing ability or move.",
+			"untraceable": true
 		},
 		{
 			"id": "mummy",
@@ -956,7 +972,8 @@
 		{
 			"id": "neutralizing-gas",
 			"name": "Neutralizing Gas",
-			"description": "The abilities of Pokémon within 30ft of this Pokémon are nullified and cannot trigger. This nullification does not apply to the Neutralizing Gas ability or any form changes."
+			"description": "The abilities of Pokémon within 30ft of this Pokémon are nullified and cannot trigger. This nullification does not apply to the Neutralizing Gas ability or any form changes.",
+			"untraceable": true
 		},
 		{
 			"id": "no-guard",
@@ -1070,7 +1087,8 @@
 			{
 			"id": "poison-puppeteer",
 			"name": "Poison Puppeteer",
-			"description": "When this Pokémon inflicts the Poisoned or Badly Poisoned condition, it also inflicts the Charmed condition. Creatures charmed this way may attempt to break from the charm at the end of each of their turns with a CHA save against this Pokémon's CHA DC."
+			"description": "When this Pokémon inflicts the Poisoned or Badly Poisoned condition, it also inflicts the Charmed condition. Creatures charmed this way may attempt to break from the charm at the end of each of their turns with a CHA save against this Pokémon's CHA DC.",
+			"untraceable": true
 		},
 		{
 			"id": "poison-touch",
@@ -1080,22 +1098,26 @@
 		{
 			"id": "power-construct-10",
 			"name": "Power Construct (10%)",
-			"description": "When Zygarde 10% is reduced to less than half of its maximum HP, it changes to Zygarde 50% Forme and recovers all hit points."
+			"description": "When Zygarde 10% is reduced to less than half of its maximum HP, it changes to Zygarde 50% Forme and recovers all hit points.",
+			"untraceable": true
 		},
 		{
 			"id": "power-construct-50",
 			"name": "Power Construct (50%)",
-			"description": "When Zygarde 50% is reduced to less than half of its maximum HP, it changes to Complete Forme and recovers all hit points."
+			"description": "When Zygarde 50% is reduced to less than half of its maximum HP, it changes to Complete Forme and recovers all hit points.",
+			"untraceable": true
 		},
 		{
 			"id": "power-construct-100",
 			"name": "Power Construct (100%)",
-			"description": "When Zygarde is reduced to less than half of its maximum HP, it changes to Complete Forme and stays in that form, regardless of HP changes."
+			"description": "When Zygarde is reduced to less than half of its maximum HP, it changes to Complete Forme and stays in that form, regardless of HP changes.",
+			"untraceable": true
 		},
 		{
 			"id": "power-of-alchemy",
 			"name": "Power of Alchemy",
-			"description": "When switched in after an ally faints, this Pokémon copies the non-hidden ability of the fainted ally until switched out."
+			"description": "When switched in after an ally faints, this Pokémon copies the non-hidden ability of the fainted ally until switched out.",
+			"untraceable": true
 		},
 			{
 			"id": "power-spot",
@@ -1139,7 +1161,8 @@
 			{
 			"id": "protosynthesis",
 			"name": "Protosynthesis",
-			"description": "This Pokémon may have a STR and CON scores up to 22. In harsh sunlight, this Pokémon has advantage on STR and CON saves."
+			"description": "This Pokémon may have a STR and CON scores up to 22. In harsh sunlight, this Pokémon has advantage on STR and CON saves.",
+			"untraceable": true
 		},
 		{
 			"id": "psychic-surge",
@@ -1164,7 +1187,8 @@
 		{
 			"id": "quark-drive",
 			"name": "Quark Drive",
-			"description": "This Pokémon may have a DEX and WIS scores up to 22. On electric terrain, this Pokémon has advantage on DEX and WIS saves."
+			"description": "This Pokémon may have a DEX and WIS scores up to 22. On electric terrain, this Pokémon has advantage on DEX and WIS saves.",
+			"untraceable": true
 		},
 		{
 			"id": "queenly-majesty",
@@ -1194,7 +1218,8 @@
 		{
 			"id": "receiver",
 			"name": "Receiver",
-			"description": "When switched in after an ally faints, this Pokémon copies the non-hidden ability of the fainted ally until switched out."
+			"description": "When switched in after an ally faints, this Pokémon copies the non-hidden ability of the fainted ally until switched out.",
+			"untraceable": true
 		},
 		{
 			"id": "reckless",
@@ -1224,7 +1249,8 @@
 		{
 			"id": "rks-system",
 			"name": "RKS System",
-			"description": "This Pokémon's type is determined by the memory disc it holds. If not holding a memory disc, this Pokémon's type is normal."
+			"description": "This Pokémon's type is determined by the memory disc it holds. If not holding a memory disc, this Pokémon's type is normal.",
+			"untraceable": true
 		},
 		{
 			"id": "rock-head",
@@ -1279,7 +1305,8 @@
 		{
 			"id": "schooling",
 			"name": "Schooling",
-			"description": "Beginning at level 5, this Pokémon may change to School Form as a free action when it begins its turn above 25% of its maximum health. In School Form, the Pokémon adds 5 to its AC and Strength, Dexterity, and Constitution ability scores (Additional CON does not alter this Pokemon's HP in this form). The Pokémon reverts back to Solo Form when it falls below 25% of maximum health, and must complete a short rest before activating this ability again."
+			"description": "Beginning at level 5, this Pokémon may change to School Form as a free action when it begins its turn above 25% of its maximum health. In School Form, the Pokémon adds 5 to its AC and Strength, Dexterity, and Constitution ability scores (Additional CON does not alter this Pokemon's HP in this form). The Pokémon reverts back to Solo Form when it falls below 25% of maximum health, and must complete a short rest before activating this ability again.",
+			"untraceable": true
 		},
 		{
 			"id": "scrappy",
@@ -1339,7 +1366,8 @@
 		{
 			"id": "shields-down",
 			"name": "Shields Down",
-			"description": "This Pokémon is immune to Non-Volatile status effects while in Meteor Form. When this Pokémon falls below 50% of its maximum hp, its outer shell breaks and it changes to Core Form. In Core Form, it adds 6 points to its DEX, but reduces its AC by 4. The Pokémon must complete a short rest to restore itself to Meteor Form."
+			"description": "This Pokémon is immune to Non-Volatile status effects while in Meteor Form. When this Pokémon falls below 50% of its maximum hp, its outer shell breaks and it changes to Core Form. In Core Form, it adds 6 points to its DEX, but reduces its AC by 4. The Pokémon must complete a short rest to restore itself to Meteor Form.",
+			"untraceable": true
 		},
 		{
 			"id": "simple",
@@ -1437,7 +1465,8 @@
 		{
 			"id": "stance-change",
 			"name": "Stance Change",
-			"description": "Aegislash has two forms. When Aegislash uses King's Shield, even if the reaction is unsucessful, it changes to Shield Forme, swapping its AC and DEX stats. When it uses a damaging move, Aegislash immediately returns to Blade Forme, returning its stats to normal."
+			"description": "Aegislash has two forms. When Aegislash uses King's Shield, even if the reaction is unsucessful, it changes to Shield Forme, swapping its AC and DEX stats. When it uses a damaging move, Aegislash immediately returns to Blade Forme, returning its stats to normal.",
+			"untraceable": true
 		},
 		{
 			"id": "static",
@@ -1576,17 +1605,20 @@
 			{
 			"id": "tera-shell",
 			"name": "Tera Shell",
-			"description": "While Terapagos is at full HP, it is resistant to all damage types."
+			"description": "While Terapagos is at full HP, it is resistant to all damage types.",
+			"untraceable": true
 		},
 			{
 			"id": "tera-shift",
 			"name": "Tera Shift",
-			"description": "Terapagos can shift into its Terastal form a number of times per day equal to its CON modifier as a free action. It reverts to its normal form after 10 minutes or at will."
+			"description": "Terapagos can shift into its Terastal form a number of times per day equal to its CON modifier as a free action. It reverts to its normal form after 10 minutes or at will.",
+			"untraceable": true
 		},
 			{
 			"id": "teraform-zero",
 			"name": "Teraform Zero",
-			"description": "While Terapagos is in its Stellar Form, all terrain and weather effects within 1000ft end, and the terrain and weather cannot be changed."
+			"description": "While Terapagos is in its Stellar Form, all terrain and weather effects within 1000ft end, and the terrain and weather cannot be changed.",
+			"untraceable": true
 		},
 		{
 			"id": "teravolt",
@@ -1636,7 +1668,9 @@
 		{
 			"id": "trace",
 			"name": "Trace",
-			"description": "This Pokémon copies a random ability of an opponent when entering battle. The ability cannot be Flower Gift, Forecast, Illusion, Imposter, Multitype, Trace, Wonder Guard, or Zen Mode."
+			"description": "When you enter combat, choose an enemy you can see. Trace becomes a copy of one of that enemy's abilities until the combat ends. If you can't see an enemy when you enter combat, Trace copies an ability from the first enemy you see during that combat. Some abilities can't be copied by Trace.",
+			"untraceable": true,
+			"updated": "Trace can now activate if it did not activate at the start of combat."
 		},
 		{
 			"id": "transformer",
@@ -1761,7 +1795,8 @@
 		{
 			"id": "wonder-guard",
 			"name": "Wonder Guard",
-			"description": "This Pokémon is immune to damaging moves from types that are not in its vulnerabilities list. (Shedinja only. Cannot be passed or swapped)"
+			"description": "This Pokémon is immune to damaging moves from types that are not in its vulnerabilities list. (Shedinja only. Cannot be passed or swapped)",
+			"untraceable": true
 		},
 		{
 			"id": "wonder-skin",
@@ -1771,17 +1806,20 @@
 		{
 			"id": "zen-mode",
 			"name": "Zen Mode",
-			"description": "When Darmanitan is below 50% of its HP, it enters Zen Mode. In Zen Mode, Darmanitan changes into the form of a solid statue. Its type changes to Fire/Psychic, it gains +4 to its AC, and its STR and WIS ability scores are swapped."
+			"description": "When Darmanitan is below 50% of its HP, it enters Zen Mode. In Zen Mode, Darmanitan changes into the form of a solid statue. Its type changes to Fire/Psychic, it gains +4 to its AC, and its STR and WIS ability scores are swapped.",
+			"untraceable": true
 		},
 		{
 			"id": "zen-mode-galarian",
 			"name": "Zen Mode (Galarian)",
-			"description": "When Galarian Darmanitan is below 50% of its HP, it enters Zen Mode. In Zen Mode, Galarian Darmanitan changes into the form of a flaming snowman. Its type changes to Ice/Fire, and its STR and DEX each increase by +2."
+			"description": "When Galarian Darmanitan is below 50% of its HP, it enters Zen Mode. In Zen Mode, Galarian Darmanitan changes into the form of a flaming snowman. Its type changes to Ice/Fire, and its STR and DEX each increase by +2.",
+			"untraceable": true
 		},
 			{
 			"id": "zero-to-hero",
 			"name": "Zero to Hero",
-			"description": "When a non-Pokémon ally of Palafin takes damage from a source outside that ally's control, Palafin may enter its Hero Form. In Hero Form, Palafin's size changes to Medium, its AC increases by 4, its base walking speed becomes 30ft, and each of its STR and DEX scores increase by 4, up to a maximum of 22. It may do this once per long rest. It reverts to normal form at the end of combat."
+			"description": "When a non-Pokémon ally of Palafin takes damage from a source outside that ally's control, Palafin may enter its Hero Form. In Hero Form, Palafin's size changes to Medium, its AC increases by 4, its base walking speed becomes 30ft, and each of its STR and DEX scores increase by 4, up to a maximum of 22. It may do this once per long rest. It reverts to normal form at the end of combat.",
+			"untraceable": true
 		}
   ]
 }

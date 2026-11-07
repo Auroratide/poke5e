@@ -62,7 +62,7 @@ describe("the schema an endpoint returns", () => {
 		// the item endpoint expands the shape rather than naming it
 		const itemTokens = SrdDocumentation.humanReadableSchema(item.returns!.schema)
 		expect(itemTokens.filter((it) => it.kind === "property").map((it) => it.text))
-			.toEqual(["id", "name", "description", "aliases", "deprecated", "updated"])
+			.toEqual(["id", "name", "description", "untraceable", "aliases", "deprecated", "updated"])
 	})
 
 	test("is declared by every endpoint in the document", () => {
@@ -131,9 +131,9 @@ describe("humanReadableSchema", () => {
 		const result = SrdDocumentation.humanReadableSchema(schemas.Ability)
 
 		expect(result.filter((it) => it.kind === "property").map((it) => it.text))
-			.toEqual(["id", "name", "description", "aliases", "deprecated", "updated"])
+			.toEqual(["id", "name", "description", "untraceable", "aliases", "deprecated", "updated"])
 		expect(result.filter((it) => it.kind === "type").map((it) => it.text))
-			.toEqual(["string", "string", "string", "string", "boolean"])
+			.toEqual(["string", "string", "string", "boolean", "string", "boolean"])
 	})
 
 	test("an array of references keeps the link target", () => {
@@ -192,6 +192,11 @@ describe("humanReadableSchema", () => {
 	description: string
 
 	/**
+	 * When true, indicates that this ability cannot be a target of Trace.
+	 */
+	untraceable?: boolean
+
+	/**
 	 * Alternative display names for searching.
 	 * Usually the English name for localized output.
 	 */
@@ -210,14 +215,15 @@ describe("humanReadableSchema", () => {
 			const doccomments = result.filter((it) => it.kind === "doccomment").map((it) => it.text)
 
 			// one delimiter pair per described property
-			expect(doccomments.filter((it) => it === "/**")).toHaveLength(5)
-			expect(doccomments.filter((it) => it === " */")).toHaveLength(5)
+			expect(doccomments.filter((it) => it === "/**")).toHaveLength(6)
+			expect(doccomments.filter((it) => it === " */")).toHaveLength(6)
 
 			expect(doccomments.filter((it) => it.startsWith(" * ")))
 				.toEqual([
 					" * Unique identifier.",
 					" * Display name, localized.",
 					" * Rules text for the ability. Plain text with no markup.",
+					" * When true, indicates that this ability cannot be a target of Trace.",
 					" * Alternative display names for searching.",
 					" * Usually the English name for localized output.",
 					" * Ability is to no longer be used.",

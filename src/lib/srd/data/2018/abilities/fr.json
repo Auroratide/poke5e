@@ -29,6 +29,10 @@
 			"description": "Les alliés de ce Pokémon à 15 pieds sont immunisés au statut sommeil."
 		},
 		{
+			"id": "trace",
+			"description": "Ce Pokémon copie le talent d'un adversaire aléatoire au début du combat. Ce talent ne peut être Don Floral, Illusion, Calque, Météo, Imposteur, Multi-Type, Garde-Mystik ou Mode Transe."
+		},
+		{
 			"id": "wonder-skin",
 			"name": "Peau Miracle",
 			"description": "Ce Pokémon à avantage sur les jets de sauvegarde contre les conditions brûlure, gelée, empoisonnement ou paralysie."

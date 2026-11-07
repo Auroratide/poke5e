@@ -36,6 +36,11 @@
 			"updated": null
 		},
 		{
+			"id": "trace",
+			"description": "This Pokémon copies a random ability of an opponent when entering battle. The ability cannot be Flower Gift, Forecast, Illusion, Imposter, Multitype, Trace, Wonder Guard, or Zen Mode.",
+			"updated": null
+		},
+		{
 			"id": "wonder-skin",
 			"description": "This Pokémon has advantage on all saving throws against being burned, frozen, poisoned, or paralyzed."
 		}
