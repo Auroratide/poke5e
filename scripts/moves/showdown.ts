@@ -13,7 +13,7 @@ let cache: Record<string, ShowdownMove> | undefined = undefined
 const CACHE_FOLDER = path.join(import.meta.dirname, "cache")
 const CACHE_FILE = path.join(CACHE_FOLDER, "showdown-moves.json")
 
-const getShowdownId = (jsonId: string) => {
+export const getShowdownId = (jsonId: string) => {
 	switch (jsonId) {
 	case "vice-grip": return "visegrip"
 	}
