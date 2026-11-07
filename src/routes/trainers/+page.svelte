@@ -150,7 +150,11 @@
 				{:else if pokemonId && action === PageAction.transferPokemon}
 					<TransferPokemonPage {trainer} id={pokemonId} />
 				{:else if action === PageAction.levelUp && pokemonId}
-					<LevelUpPokemonPage {trainer} id={pokemonId} />
+					{#await allSpecies}
+						<Loader />
+					{:then allSpecies}
+						<LevelUpPokemonPage {trainer} id={pokemonId} {allSpecies} />
+					{/await}
 				{:else if action === PageAction.levelUp}
 					<LevelUpTrainerPage {trainer} />
 				{:else if pokemonId}

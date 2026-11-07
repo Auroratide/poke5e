@@ -21,9 +21,9 @@
 	$: pokemon = $trainer.pokemon.find((it) => it.id === id)
 
 	let saving = false
-	const update = (e: CustomEvent<TrainerPokemon>) => {
+	const update = (evolved: TrainerPokemon) => {
 		saving = true
-		$trainer.update?.pokemon(e.detail).then(() => {
+		$trainer.update?.pokemon(evolved).then(() => {
 			saving = false
 			goto(Url.trainers($trainer.info.readKey, id))
 		}).catch(() => {
@@ -39,7 +39,7 @@
 	<WithSpecies let:species ids={[pokemon?.pokemonId]}>
 		<Card title="Evolve {pokemon.nickname}">
 			{#if canEdit}
-				<EvolveForm {pokemon} {species} {allSpecies} evolutions={evolutions} {saving} on:cancel={cancel} on:submit={update} />
+				<EvolveForm {pokemon} {species} {allSpecies} evolutions={evolutions} {saving} oncancel={cancel} onsubmit={update} />
 			{:else}
 				<section>
 					<p>You do not have permission to evolve this pokemon.</p>

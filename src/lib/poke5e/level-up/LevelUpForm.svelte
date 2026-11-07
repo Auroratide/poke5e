@@ -8,11 +8,14 @@
 	let {
 		saving,
 		backHref,
+		onback,
 		effects,
 		onsubmit,
 	}: {
 		saving: boolean,
-		backHref: string,
+		backHref?: string,
+		/** Takes precedence over backHref */
+		onback?: () => void,
 		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		effects: LevelUpEffect<any, any>[],
 		onsubmit: () => void
@@ -31,7 +34,11 @@
 		<effect.Field value={effect} />
 	{/each}
 	<ActionArea error={hasError ? errors.join(" ") : undefined}>
-		<Button href={backHref} variant="subtle">{m.back()}</Button>
+		{#if onback}
+			<Button on:click={onback} variant="subtle">{m.back()}</Button>
+		{:else}
+			<Button href={backHref} variant="subtle">{m.back()}</Button>
+		{/if}
 		<Button on:click={onsubmit} disabled={hasError}>{m.confirm()}</Button>
 	</ActionArea>
 </Saveable>

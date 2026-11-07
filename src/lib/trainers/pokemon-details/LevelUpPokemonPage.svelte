@@ -1,16 +1,19 @@
 <script lang="ts">
-	import { WithSpecies } from "$lib/poke5e/species"
+	import type { Readable } from "svelte/store"
+	import { WithSpecies, type PokemonSpecies } from "$lib/poke5e/species"
 	import type { TrainerStore } from "../trainers"
 	import type { PokemonId } from "../types"
-	import LevelUpPokemonForm from "./LevelUpPokemonForm.svelte"
+	import LevelUpPokemonSteps from "./LevelUpPokemonSteps.svelte"
 	import RequirePokemon from "./RequirePokemon.svelte"
 
 	let {
 		trainer,
 		id,
+		allSpecies,
 	}: {
 		trainer: TrainerStore
 		id: PokemonId
+		allSpecies: Readable<PokemonSpecies[]>
 	} = $props()
 
 	let pokemon = $trainer.pokemon.find((it) => it.id === id)
@@ -19,7 +22,7 @@
 {#if pokemon}
 	<RequirePokemon trainer={$trainer} {id}>
 		<WithSpecies let:species ids={[pokemon?.pokemonId]}>
-			<LevelUpPokemonForm {pokemon} {species} {trainer} />
+			<LevelUpPokemonSteps {pokemon} {species} {trainer} {allSpecies} />
 		</WithSpecies>
 	</RequirePokemon>
 {/if}

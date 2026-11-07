@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { Button } from "$lib/ui/elements"
 	import { ActionArea } from "$lib/ui/forms"
-	import { createEventDispatcher } from "svelte"
 	import { type PokemonSpecies } from "$lib/poke5e/species"
 	import {
 		Fieldset,
@@ -13,21 +12,26 @@
 	import type { Readable } from "svelte/store"
 	import { EvolutionEffect } from "./EvolutionEffect"
 	import type { EvolutionForest } from "./EvolutionForest"
+	import type { Evolution } from "./Evolution"
 	import { m } from "$lib/site/i18n"
 	import { AbilityScoreImprovement, AsiField } from "$lib/dnd/attributes"
 	import { AsiBenefit } from "./EvolutionBenefit"
 
-	const dispatch = createEventDispatcher()
-
 	export let pokemon: TrainerPokemon
 	export let species: PokemonSpecies
 	export let allSpecies: Readable<PokemonSpecies[]>
-	export let evolutions: Readable<EvolutionForest>
+	export let evolutions: Readable<EvolutionForest | undefined>
 	export let saving: boolean = false
+	/** Restricts which evolutions can be chosen; defaults to every evolution of the species. Used for when leveling up and only some conditions are met. */
+	export let options: Evolution[] | undefined = undefined
+	export let submitLabel: string = m.evolve()
+	export let cancelLabel: string = m.cancel()
+	export let onsubmit: (evolved: TrainerPokemon) => void
+	export let oncancel: () => void
 	$: disabled = saving
 
 	let chosenEvolutionId: string | undefined = undefined
-	$: evolveToOptions = $evolutions?.evolvesTo(species.id)
+	$: evolveToOptions = options ?? $evolutions?.evolvesTo(species.id) ?? []
 	$: evolveToOptionIds = evolveToOptions?.map((it) => it.to.data)
 	$: chosenEvolutionId = evolveToOptionIds?.length === 1 ? evolveToOptionIds[0] : chosenEvolutionId
 	$: chosenEvolution = evolveToOptions?.find((it) => it.to.data === chosenEvolutionId)
@@ -38,13 +42,10 @@
 
 	$: effects = chosenSpecies != null ? EvolutionEffect.compute(pokemon, species, chosenSpecies, asiSpent) : []
 
-	const cancel = () => {
-		dispatch("cancel")
-	}
 	const endEdit = () => {
 		const afterEvolution = effects.reduce((after, effect) => effect.apply(after), pokemon)
 
-		dispatch("submit", afterEvolution)
+		onsubmit(afterEvolution)
 	}
 
 	const getName = (id: string) => $allSpecies?.find((it) => it.id.data === id)?.data.name ?? ""
@@ -76,8 +77,8 @@
 			{/if}
 		</section>
 		<ActionArea>
-			<Button on:click={cancel} variant="subtle" {disabled}>{m.cancel()}</Button>
-			<Button type="submit" {disabled}>{m.evolve()}</Button>
+			<Button on:click={oncancel} variant="subtle" {disabled}>{cancelLabel}</Button>
+			<Button type="submit" {disabled}>{submitLabel}</Button>
 		</ActionArea>
 	{/if}
 </Form>
