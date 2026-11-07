@@ -2,6 +2,7 @@ import { describe, test, expect, beforeEach } from "vitest"
 import { EvolutionForest } from "../EvolutionForest"
 import { stubEvolution } from "./stubs"
 import { SpeciesIdentifier } from "$lib/poke5e/species"
+import { Level } from "$lib/dnd/level"
 
 const eeveeToFlareon = stubEvolution({
 	id: "eevee-to-flareon",
@@ -310,5 +311,84 @@ describe("weird evolutions", () => {
 		expect(weirdForest.currentStage(one)).toEqual(1)
 		expect(weirdForest.currentStage(two)).toEqual(2)
 		expect(weirdForest.currentStage(three)).toEqual(3)
+	})
+})
+
+describe("evolvesAtLevel", () => {
+	const levelForest = () => new EvolutionForest([
+		stubEvolution({
+			from: "pikachu",
+			to: "raichu",
+			conditions: [ { type: "item", value: "Thunder Stone" } ],
+		}),
+		stubEvolution({
+			from: "charmander",
+			to: "charmeleon",
+			conditions: [ { type: "level", value: 5 } ],
+		}),
+		stubEvolution({
+			from: "charmeleon",
+			to: "charizard",
+			conditions: [ { type: "level", value: 10 } ],
+		}),
+		stubEvolution({
+			from: "eevee",
+			to: "espeon",
+			conditions: [ { type: "level", value: 8 }, { type: "time", value: "day" } ],
+		}),
+		stubEvolution({
+			from: "eevee",
+			to: "umbreon",
+			conditions: [ { type: "level", value: 8 }, { type: "time", value: "night" } ],
+		}),
+		stubEvolution({
+			from: "eevee",
+			to: "flareon",
+			conditions: [ { type: "item", value: "Fire Stone" } ],
+		}),
+	])
+
+	const ids = (evolutions: { to: SpeciesIdentifier }[]) => evolutions.map((it) => it.to.data)
+
+	test("below the required level", () => {
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("charmander"), new Level(4))
+
+		expect(result).toEqual([])
+	})
+
+	test("exactly at the required level", () => {
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("charmander"), new Level(5))
+
+		expect(ids(result)).toEqual(["charmeleon"])
+	})
+
+	test("above the required level, because evolution was delayed", () => {
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("charmander"), new Level(7))
+
+		expect(ids(result)).toEqual(["charmeleon"])
+	})
+
+	test("only considers the next stage", () => {
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("charmander"), new Level(12))
+
+		expect(ids(result)).toEqual(["charmeleon"])
+	})
+
+	test("non-level evolutions are excluded", () => {
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("pikachu"), new Level(20))
+
+		expect(result).toEqual([])
+	})
+
+	test("branching level evolutions with additional conditions", () => {
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("eevee"), new Level(8))
+
+		expect(ids(result)).toEqual(["espeon", "umbreon"])
+	})
+
+	test("species with no evolutions", () => {
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("palkia"), new Level(20))
+
+		expect(result).toEqual([])
 	})
 })

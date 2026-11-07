@@ -4,6 +4,7 @@ import { EvolutionCondition, GenderCondition, LevelCondition, type EvolutionCond
 import { EvolutionBenefit, type EvolutionBenefitType } from "./EvolutionBenefit"
 import type { EvolutionJson } from "$lib/srd/evolutions/schema"
 import { EvolutionForest } from "./EvolutionForest"
+import type { Level } from "$lib/dnd/level"
 
 export type EvolutionId = string
 let currentId = 0
@@ -40,6 +41,12 @@ export class Evolution extends DataClass<{
 
 	hasCondition(condition: EvolutionConditionType): boolean {
 		return this.data.conditions.some((it) => it.type === condition.type && it.value === condition.value)
+	}
+
+	canEvolveByLevel(level: Level): boolean {
+		const levelConditions = this.conditions.filter((it) => it instanceof LevelCondition)
+
+		return levelConditions.length > 0 && levelConditions.every((it) => it.meetsCondition({ level }))
 	}
 
 	toString({ link = "to" }: ToStringOptions = {}): string {
