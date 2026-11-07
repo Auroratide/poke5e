@@ -1,27 +1,36 @@
 <script lang="ts">
 	import { onMount } from "svelte"
-	import { computePosition, offset } from "@floating-ui/dom"
+	import { computePosition, offset, shift } from "@floating-ui/dom"
 
 	export let id: string
 	export let block = false
+	export let size: "md" | "lg" = "md"
 
 	$: popoverId = `${id}-popover-content`
 
 	let button: HTMLButtonElement
 	let popover: HTMLElement
 
+	const VIEWPORT_PADDING = 8
+
 	const repositionPopover = () => {
 		computePosition(button, popover, {
 			placement: "bottom",
-			middleware: [offset({
-				mainAxis: 4,
-				crossAxis: 2,
-			})],
-		}).then(({ x, y }) => {
+			middleware: [
+				offset({
+					mainAxis: 4,
+					crossAxis: 2,
+				}),
+				shift({ padding: VIEWPORT_PADDING }),
+			],
+		}).then(({ x, y, middlewareData }) => {
 			Object.assign(popover.style, {
 				top: `${y}px`,
 				left: `${x}px`,
 			})
+
+			// keep the arrow pointing at the activator when the popover is shifted
+			popover.style.setProperty("--arrow-shift", `${middlewareData.shift?.x ?? 0}px`)
 		})
 	}
 
@@ -60,7 +69,7 @@
 	})
 </script>
 
-<div {id} class="popover">
+<div {id} class="popover size-{size}">
 	<button bind:this={button} popovertarget="{popoverId}" popovertargetaction="show" class="activator" class:block>
 		<slot name="activator"></slot>
 	</button>
@@ -96,9 +105,10 @@
 		overflow: visible;
 
 		position: absolute;
-		inline-size: 15em;
 		top: 0;
 		left: 0;
+		/* never exceed the viewport (accounting for padding and edge spacing) */
+		max-inline-size: calc(100vw - 2 * 8px - 1em);
 	} .popover .content :global(*:last-child) {
 		margin-block-end: 0;
 	} .popover .content::before {
@@ -109,8 +119,16 @@
 		background: var(--skin-bg-dark);
 		transform: translateX(-60%) rotate(45deg);
 		top: -0.25em;
-		left: 50%;
+		left: calc(50% - var(--arrow-shift, 0px));
 		z-index: -1;
 		box-shadow: var(--elev-cirrus);
+	}
+
+	.popover.size-md .content {
+		inline-size: 15em;
+	}
+
+	.popover.size-lg .content {
+		inline-size: 30em;
 	}
 </style>

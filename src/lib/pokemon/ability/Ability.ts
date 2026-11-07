@@ -28,6 +28,7 @@ export class Ability extends DataClass<{
 	get untraceable() { return this.data.untraceable ?? false }
 	get deprecated() { return this.data.deprecated ?? false }
 	get custom() { return this.data.referenceId == null }
+	get isTrace() { return this.referenceId === "trace" }
 	get description() {
 		return this.data.description + (this.untraceable ? ` ${m.untraceable()}` : "")
 	}
@@ -64,7 +65,8 @@ export class Ability extends DataClass<{
 		return new Ability({
 			referenceId: referenceId,
 			name: referenceAbility?.name ?? referenceId,
-			description: referenceAbility?.description ?? "",
+			description: referenceAbility?.data.description ?? "",
+			untraceable: referenceAbility?.untraceable,
 		})
 	}
 

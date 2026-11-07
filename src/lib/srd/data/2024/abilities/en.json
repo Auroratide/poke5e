@@ -1670,7 +1670,10 @@
 			"name": "Trace",
 			"description": "When this Pokémon enters combat, Trace becomes a copy of one ability of an enemy it can see. The copy lasts until this Pokémon is switched out or combat ends. If no ability can be copied, Trace tries again whenever this Pokémon sees an enemy. Some abilities can't be Traced.",
 			"untraceable": true,
-			"updated": "Trace can now activate if it did not activate at the start of combat."
+			"updated": {
+				"tag": "Updated",
+				"details": "Trace can now activate if it did not activate at the start of combat."
+			}
 		},
 		{
 			"id": "transformer",

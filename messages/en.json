@@ -323,6 +323,7 @@
 	"rangeWithShape": "{range} ({shape})",
 	"unknownShape": "<?> shape",
 	"untraceable": "This ability cannot be Traced.",
+	"listUntraceableAbilities": "List Untraceable Abilities",
 	"updatedRecently": "Updated Recently",
 	"home": {
 		"title": "Pokémon 5th Edition"

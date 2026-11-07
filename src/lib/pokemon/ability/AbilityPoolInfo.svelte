@@ -4,7 +4,7 @@
 	import { Tag } from "$lib/ui/elements"
 	import { AbilityStore } from "./AbilityStore"
 	import { AbilityPool } from "./AbilityPool"
-	import { Markdown } from "$lib/ui/rendering"
+	import AbilityDescription from "./AbilityDescription.svelte"
 
 	export let value: AbilityPool
 </script>
@@ -16,12 +16,12 @@
 {:else if $AbilityStore.error}
 	<p><ErrorInline>Could not load abilities.</ErrorInline></p>
 {:else}
-	{#each value.data.normal as ability}
-		<div class="ability"><strong>{ability.name}:</strong> <Markdown inline value={ability.description} /></div>
+	{#each value.normal as ability}
+		<div class="ability"><strong>{ability.name}:</strong> <AbilityDescription value={ability} /></div>
 	{/each}
-	{#each value.data.hidden as ability}
+	{#each value.hidden as ability}
 		<p class="no-margin"><Tag>{m.hidden()}</Tag></p>
-		<div class="ability"><strong>{ability.name}:</strong> <Markdown inline value={ability.description} /></div>
+		<div class="ability"><strong>{ability.name}:</strong> <AbilityDescription value={ability} /></div>
 	{/each}
 {/if}
 
