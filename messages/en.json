@@ -317,6 +317,7 @@
 	"sphere": "{value}-foot-radius sphere",
 	"rangeWithShape": "{range} ({shape})",
 	"unknownShape": "<?> shape",
+	"untraceable": "This ability cannot be Traced.",
 	"updatedRecently": "Updated Recently",
 	"home": {
 		"title": "Pokémon 5th Edition"

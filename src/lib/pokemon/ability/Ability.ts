@@ -2,6 +2,7 @@ import { DataClass } from "$lib/DataClass"
 import { getWhenDefined } from "$lib/utils/store"
 import { AbilityStore } from "./AbilityStore"
 import type { AbilityJson } from "$lib/srd/abilities/schema"
+import { m } from "$lib/site/i18n"
 
 export type ReferenceAbilityId = string
 
@@ -18,14 +19,18 @@ export class Ability extends DataClass<{
 	name: string,
 	aliases?: string[],
 	description: string,
+	untraceable?: boolean,
 	deprecated?: boolean,
 }> {
 	get referenceId() { return this.data.referenceId }
 	get name() { return this.data.name }
 	get aliases() { return this.data.aliases ?? [] }
-	get description() { return this.data.description }
+	get untraceable() { return this.data.untraceable ?? false }
 	get deprecated() { return this.data.deprecated ?? false }
 	get custom() { return this.data.referenceId == null }
+	get description() {
+		return this.data.description + (this.untraceable ? ` ${m.untraceable()}` : "")
+	}
 
 	isSameName(other: Ability): boolean {
 		if (this.referenceId != null || other.referenceId != null) {
