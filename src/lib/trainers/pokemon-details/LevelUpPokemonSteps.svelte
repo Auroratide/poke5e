@@ -107,6 +107,7 @@
 			cancelLabel={m.back()}
 			oncancel={goToPrompt}
 			onsubmit={evolve}
+			atNextLevel
 		/>
 	{:else}
 		<LevelUpPokemonForm

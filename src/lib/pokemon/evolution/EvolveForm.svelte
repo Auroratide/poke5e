@@ -26,6 +26,8 @@
 	export let options: Evolution[] | undefined = undefined
 	export let submitLabel: string = m.evolve()
 	export let cancelLabel: string = m.cancel()
+	/** True when evolving during a level up */
+	export let atNextLevel: boolean = false
 	export let onsubmit: (evolved: TrainerPokemon) => void
 	export let oncancel: () => void
 	$: disabled = saving
@@ -40,10 +42,18 @@
 	$: asiToSpend = chosenEvolution?.benefits.find((it) => it instanceof AsiBenefit)?.amount
 	let asiSpent = AbilityScoreImprovement.zero()
 
-	$: effects = chosenSpecies != null ? EvolutionEffect.compute(pokemon, species, chosenSpecies, asiSpent) : []
+	$: pokemonWithAdvancedLevel = { ...pokemon, level: pokemon.level.next() }
+
+	$: effects = chosenSpecies != null ? EvolutionEffect.compute(atNextLevel ? pokemonWithAdvancedLevel : pokemon, species, chosenSpecies, asiSpent) : []
 
 	const endEdit = () => {
-		const afterEvolution = effects.reduce((after, effect) => effect.apply(after), pokemon)
+		const afterEvolution = effects.reduce((after, effect) => effect.apply(after), atNextLevel ? pokemonWithAdvancedLevel : pokemon)
+
+		// slightly annoying, but we have to undo the level so that the
+		// level up tool increases it from what it was
+		if (atNextLevel) {
+			afterEvolution.level = pokemon.level
+		}
 
 		onsubmit(afterEvolution)
 	}
