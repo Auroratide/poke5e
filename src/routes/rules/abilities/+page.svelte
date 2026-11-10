@@ -5,7 +5,7 @@
 	import SimplePokemonList from "$lib/pokemon/SimplePokemonList.svelte"
 	import ReferencePage from "../ReferencePage.svelte"
 	import { SpeciesStore } from "$lib/poke5e/species"
-	import { AbilityPool } from "$lib/pokemon/ability"
+	import { AbilityPool, AbilityDescription } from "$lib/pokemon/ability"
 	import { includesSearch } from "$lib/utils/string"
 	import { currentEdition } from "$lib/site/edition"
 	import { FeatureToggles } from "$lib/site/FeatureToggles"
@@ -42,7 +42,7 @@
 					{:else}
 						<h3>{ability.name}</h3>
 					{/if}
-					<p>{ability.description}</p>
+					<div class="description"><AbilityDescription value={ability} allAbilities={abilities} /></div>
 					<SimplePokemonList pokemon={associatedPokemon[ability.referenceId ?? ""] ?? []} />
 				</div>
 			{/each}
@@ -55,6 +55,10 @@
 <style>
 	.ability {
 		margin-block: 2em;
+	}
+
+	.description {
+		margin-block-end: 1em;
 	}
 
 	.hide { display: none; }

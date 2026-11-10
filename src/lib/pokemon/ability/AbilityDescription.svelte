@@ -8,15 +8,18 @@
 
 	let {
 		value,
+		allAbilities,
 	}: {
 		value: Ability,
+		// optional, for ssr
+		allAbilities?: Ability[],
 	} = $props()
 
 	const uid = $props.id()
 	const popoverId = `untraceable-${uid}`
 
 	let untraceableNames = $derived(
-		($AbilityStore.result ?? [])
+		(allAbilities ?? $AbilityStore.result ?? [])
 			.filter((it) => it.untraceable)
 			.map((it) => it.name)
 			.sort((a, b) => a.localeCompare(b)),
