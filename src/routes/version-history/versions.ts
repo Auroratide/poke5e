@@ -14,6 +14,14 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.18",
+		description: [
+			"<strong>Abilities</strong>: Trace updated to allow it to attempt to copy an ability until it succeeds. Additionally, more abilities have been marked as being untraceable.",
+			"<strong>Encounter Tool</strong>: The Encounter Tool will no longer generate encounters with legendary pokémon.",
+			"<strong>Trainers</strong>: When leveling up a Pokémon that can evolve, the level up helper will now prompt you to evolve the pokémon first.",
+			"<strong>Bugfix</strong>: Reapply changes made to Orbeetle from v1.12.11, which accidentally got lost in a different update.",
+		],
+	}, {
 		name: "v1.12.17",
 		description: [
 			`<strong>Beta, Moves</strong>:<ul>
