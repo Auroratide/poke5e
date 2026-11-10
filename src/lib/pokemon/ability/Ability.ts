@@ -66,7 +66,7 @@ export class Ability extends DataClass<{
 			referenceId: referenceId,
 			name: referenceAbility?.name ?? referenceId,
 			description: referenceAbility?.data.description ?? "",
-			untraceable: referenceAbility?.untraceable,
+			untraceable: referenceAbility?.data.untraceable,
 		})
 	}
 
