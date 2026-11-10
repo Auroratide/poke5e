@@ -1668,7 +1668,7 @@
 		{
 			"id": "trace",
 			"name": "Trace",
-			"description": "When you enter combat, choose an enemy you can see. Trace becomes a copy of one of that enemy's abilities until the combat ends. If you can't see an enemy when you enter combat, Trace copies an ability from the first enemy you see during that combat. Some abilities can't be copied by Trace.",
+			"description": "When this Pokémon enters combat, Trace becomes a copy of one ability of an enemy it can see. The copy lasts until this Pokémon is switched out or combat ends. If no ability can be copied, Trace tries again whenever this Pokémon sees an enemy. Some abilities can't be Traced.",
 			"untraceable": true,
 			"updated": "Trace can now activate if it did not activate at the start of combat."
 		},
