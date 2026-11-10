@@ -14,7 +14,7 @@
 	import type { EvolutionForest } from "./EvolutionForest"
 	import type { Evolution } from "./Evolution"
 	import { m } from "$lib/site/i18n"
-	import { AbilityScoreImprovement, AsiField } from "$lib/dnd/attributes"
+	import { AbilityScoreImprovement, AsiField, Attributes } from "$lib/dnd/attributes"
 	import { AsiBenefit } from "./EvolutionBenefit"
 
 	export let pokemon: TrainerPokemon
@@ -39,14 +39,32 @@
 	$: chosenEvolution = evolveToOptions?.find((it) => it.to.data === chosenEvolutionId)
 	$: chosenSpecies = $allSpecies?.find((it) => it.id.data === chosenEvolution?.to.data)
 
+	const MAX_ASI_PER_SCORE = 4
+
 	$: asiToSpend = chosenEvolution?.benefits.find((it) => it instanceof AsiBenefit)?.amount
 	let asiSpent = AbilityScoreImprovement.zero()
+
+	// different evolutions can grant different amounts, so start over when switching
+	let lastChosenEvolutionId = chosenEvolutionId
+	$: if (chosenEvolutionId !== lastChosenEvolutionId) {
+		lastChosenEvolutionId = chosenEvolutionId
+		asiSpent = AbilityScoreImprovement.zero()
+	}
+
+	// scores near the maximum may make it impossible to spend every point
+	$: maxSpendableAsi = Math.min(asiToSpend ?? 0, Attributes.list.reduce((sum, { abbr }) =>
+		sum + Math.max(0, Math.min(MAX_ASI_PER_SCORE, Attributes.MAX_ABSOLUTE_VALUE - pokemon.attributes[abbr].score)), 0))
+	$: asiError = chosenEvolution != null && AbilityScoreImprovement.totalPoints(asiSpent) < maxSpendableAsi
+		? m.mustAllocateEvolutionAsi()
+		: undefined
 
 	$: pokemonWithAdvancedLevel = { ...pokemon, level: pokemon.level.next() }
 
 	$: effects = chosenSpecies != null ? EvolutionEffect.compute(atNextLevel ? pokemonWithAdvancedLevel : pokemon, species, chosenSpecies, asiSpent) : []
 
 	const endEdit = () => {
+		if (asiError != null) return
+
 		const afterEvolution = effects.reduce((after, effect) => effect.apply(after), atNextLevel ? pokemonWithAdvancedLevel : pokemon)
 
 		// slightly annoying, but we have to undo the level so that the
@@ -82,13 +100,13 @@
 		</section>
 		<section style:min-height="12em">
 			{#if chosenEvolution && asiToSpend != null}
-				<p>Each ability score can be increased by at most 4.</p>
-				<AsiField attributes={pokemon.attributes} pointsToSpend={asiToSpend} bind:pointsSpent={asiSpent} maxPerScore={4} />
+				<p>Each ability score can be increased by at most {MAX_ASI_PER_SCORE}.</p>
+				<AsiField attributes={pokemon.attributes} pointsToSpend={asiToSpend} bind:pointsSpent={asiSpent} maxPerScore={MAX_ASI_PER_SCORE} />
 			{/if}
 		</section>
-		<ActionArea>
+		<ActionArea error={asiError}>
 			<Button on:click={oncancel} variant="subtle" {disabled}>{cancelLabel}</Button>
-			<Button type="submit" {disabled}>{submitLabel}</Button>
+			<Button type="submit" disabled={disabled || asiError != null}>{submitLabel}</Button>
 		</ActionArea>
 	{/if}
 </Form>

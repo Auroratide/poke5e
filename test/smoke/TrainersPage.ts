@@ -87,6 +87,12 @@ export class TrainersPage {
 		await this.ui.link(nickname).click()
 		await this.ui.link("Evolve").click()
 		await this.ui.radio(into).check()
+
+		for (let i = 0; i < 3; ++i) {
+			await this.ui.button("Increase Strength").click()
+			await this.ui.button("Increase Constitution").click()
+		}
+
 		await this.ui.button("Evolve").click()
 
 		await expect(this.ui.heading(nickname)).toBeVisible()
