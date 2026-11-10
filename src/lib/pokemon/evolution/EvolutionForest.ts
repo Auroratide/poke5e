@@ -1,5 +1,6 @@
 import type { SpeciesIdentifier } from "$lib/poke5e/species"
 import type { Level } from "$lib/dnd/level"
+import type { PokemonGender } from "$lib/pokemon/gender"
 import type { Evolution } from "./Evolution"
 import type { EvolutionConditionType } from "./EvolutionCondition"
 
@@ -37,8 +38,8 @@ export class EvolutionForest {
 		return this.evolutions.filter((evolution) => evolution.from.data === species.data)
 	}
 
-	evolvesAtLevel(species: SpeciesIdentifier, level: Level): Evolution[] {
-		return this.evolvesTo(species).filter((it) => it.canEvolveByLevel(level))
+	evolvesAtLevel(species: SpeciesIdentifier, creature: { level: Level, gender: PokemonGender }): Evolution[] {
+		return this.evolvesTo(species).filter((it) => it.canEvolveByLevel(creature))
 	}
 
 	allEvolutions(species: SpeciesIdentifier): Evolution[] {

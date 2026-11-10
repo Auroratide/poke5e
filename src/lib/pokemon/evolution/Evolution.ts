@@ -5,6 +5,7 @@ import { EvolutionBenefit, type EvolutionBenefitType } from "./EvolutionBenefit"
 import type { EvolutionJson } from "$lib/srd/evolutions/schema"
 import { EvolutionForest } from "./EvolutionForest"
 import type { Level } from "$lib/dnd/level"
+import { PokemonGender } from "$lib/pokemon/gender/PokemonGender"
 
 export type EvolutionId = string
 let currentId = 0
@@ -43,10 +44,18 @@ export class Evolution extends DataClass<{
 		return this.data.conditions.some((it) => it.type === condition.type && it.value === condition.value)
 	}
 
-	canEvolveByLevel(level: Level): boolean {
-		const levelConditions = this.conditions.filter((it) => it instanceof LevelCondition)
+	canEvolveByLevel(creature: { level: Level, gender: PokemonGender }): boolean {
+		const conditions = this.conditions
+		const levelConditions = conditions.filter((it) => it instanceof LevelCondition)
+		const genderConditions = conditions.filter((it) => it instanceof GenderCondition)
 
-		return levelConditions.length > 0 && levelConditions.every((it) => it.meetsCondition({ level }))
+		const meetsLevel = levelConditions.length > 0 && levelConditions.every((it) => it.meetsCondition(creature))
+
+		// Pokemon without a binary gender are always given the option, since it is ambiguous
+		const isMaleOrFemale = creature.gender === PokemonGender.Male || creature.gender === PokemonGender.Female
+		const meetsGender = !isMaleOrFemale || genderConditions.every((it) => it.meetsCondition(creature))
+
+		return meetsLevel && meetsGender
 	}
 
 	toString({ link = "to" }: ToStringOptions = {}): string {

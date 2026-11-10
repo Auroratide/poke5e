@@ -38,7 +38,7 @@
 	let canEdit = $derived($trainer.update != null)
 	let evolutions = $derived(EvolutionStore.get(species.id))
 	let nextLevel = $derived(pokemon.level.next())
-	let eligibleEvolutions = $derived($evolutions?.evolvesAtLevel(species.id, nextLevel) ?? [])
+	let eligibleEvolutions = $derived($evolutions?.evolvesAtLevel(species.id, { level: nextLevel, gender: pokemon.gender }) ?? [])
 	let canEvolve = $derived(eligibleEvolutions.length > 0)
 
 	let chosenStep = $state<Step | undefined>(undefined)

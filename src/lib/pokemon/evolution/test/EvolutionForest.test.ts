@@ -3,6 +3,7 @@ import { EvolutionForest } from "../EvolutionForest"
 import { stubEvolution } from "./stubs"
 import { SpeciesIdentifier } from "$lib/poke5e/species"
 import { Level } from "$lib/dnd/level"
+import { PokemonGender } from "$lib/pokemon/gender/PokemonGender"
 
 const eeveeToFlareon = stubEvolution({
 	id: "eevee-to-flareon",
@@ -346,48 +347,102 @@ describe("evolvesAtLevel", () => {
 			to: "flareon",
 			conditions: [ { type: "item", value: "Fire Stone" } ],
 		}),
+		stubEvolution({
+			from: "combee",
+			to: "vespiquen",
+			conditions: [ { type: "level", value: 7 }, { type: "gender", value: "female" } ],
+		}),
+		stubEvolution({
+			from: "espurr",
+			to: "meowstic-m",
+			conditions: [ { type: "level", value: 7 }, { type: "gender", value: "male" } ],
+		}),
+		stubEvolution({
+			from: "espurr",
+			to: "meowstic-f",
+			conditions: [ { type: "level", value: 7 }, { type: "gender", value: "female" } ],
+		}),
 	])
+
+	const atLevel = (level: number, gender: PokemonGender = PokemonGender.None) => ({
+		level: new Level(level),
+		gender,
+	})
 
 	const ids = (evolutions: { to: SpeciesIdentifier }[]) => evolutions.map((it) => it.to.data)
 
 	test("below the required level", () => {
-		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("charmander"), new Level(4))
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("charmander"), atLevel(4))
 
 		expect(result).toEqual([])
 	})
 
 	test("exactly at the required level", () => {
-		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("charmander"), new Level(5))
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("charmander"), atLevel(5))
 
 		expect(ids(result)).toEqual(["charmeleon"])
 	})
 
 	test("above the required level, because evolution was delayed", () => {
-		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("charmander"), new Level(7))
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("charmander"), atLevel(7))
 
 		expect(ids(result)).toEqual(["charmeleon"])
 	})
 
 	test("only considers the next stage", () => {
-		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("charmander"), new Level(12))
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("charmander"), atLevel(12))
 
 		expect(ids(result)).toEqual(["charmeleon"])
 	})
 
 	test("non-level evolutions are excluded", () => {
-		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("pikachu"), new Level(20))
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("pikachu"), atLevel(20))
 
 		expect(result).toEqual([])
 	})
 
 	test("branching level evolutions with additional conditions", () => {
-		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("eevee"), new Level(8))
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("eevee"), atLevel(8))
 
 		expect(ids(result)).toEqual(["espeon", "umbreon"])
 	})
 
 	test("species with no evolutions", () => {
-		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("palkia"), new Level(20))
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("palkia"), atLevel(20))
+
+		expect(result).toEqual([])
+	})
+
+	test("evolution requiring the other gender is excluded", () => {
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("combee"), atLevel(7, PokemonGender.Male))
+
+		expect(result).toEqual([])
+	})
+
+	test("evolution requiring the same gender is included", () => {
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("combee"), atLevel(7, PokemonGender.Female))
+
+		expect(ids(result)).toEqual(["vespiquen"])
+	})
+
+	test("gendered branches only include the matching gender", () => {
+		const male = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("espurr"), atLevel(7, PokemonGender.Male))
+		const female = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("espurr"), atLevel(7, PokemonGender.Female))
+
+		expect(ids(male)).toEqual(["meowstic-m"])
+		expect(ids(female)).toEqual(["meowstic-f"])
+	})
+
+	test.each([PokemonGender.None, PokemonGender.Other])("gender requirements are not enforced for gender %s", (gender) => {
+		const combee = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("combee"), atLevel(7, gender))
+		const espurr = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("espurr"), atLevel(7, gender))
+
+		expect(ids(combee)).toEqual(["vespiquen"])
+		expect(ids(espurr)).toEqual(["meowstic-m", "meowstic-f"])
+	})
+
+	test("gender does not bypass the level requirement", () => {
+		const result = levelForest().evolvesAtLevel(SpeciesIdentifier.fromSpeciesName("combee"), atLevel(6, PokemonGender.Female))
 
 		expect(result).toEqual([])
 	})
