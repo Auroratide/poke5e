@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte"
-	import { computePosition, offset, shift } from "@floating-ui/dom"
+	import { computePosition, offset, flip, shift, type Placement } from "@floating-ui/dom"
 
 	export let id: string
 	export let block = false
@@ -10,6 +10,7 @@
 
 	let button: HTMLButtonElement
 	let popover: HTMLElement
+	let placement: Placement = "bottom"
 
 	const VIEWPORT_PADDING = 8
 
@@ -21,13 +22,17 @@
 					mainAxis: 4,
 					crossAxis: 2,
 				}),
+				flip({ padding: VIEWPORT_PADDING }),
 				shift({ padding: VIEWPORT_PADDING }),
 			],
-		}).then(({ x, y, middlewareData }) => {
+		}).then(({ x, y, placement: finalPlacement, middlewareData }) => {
 			Object.assign(popover.style, {
 				top: `${y}px`,
 				left: `${x}px`,
 			})
+
+			// lets the arrow move to the bottom edge when flipped above the activator
+			placement = finalPlacement
 
 			// keep the arrow pointing at the activator when the popover is shifted
 			popover.style.setProperty("--arrow-shift", `${middlewareData.shift?.x ?? 0}px`)
@@ -73,7 +78,7 @@
 	<button bind:this={button} popovertarget="{popoverId}" popovertargetaction="show" class="activator" class:block>
 		<slot name="activator"></slot>
 	</button>
-	<div bind:this={popover} id="{popoverId}" popover="" class="content">
+	<div bind:this={popover} id="{popoverId}" popover="" class="content" data-placement={placement}>
 		<slot></slot>
 	</div>
 </div>
@@ -122,6 +127,9 @@
 		left: calc(50% - var(--arrow-shift, 0px));
 		z-index: -1;
 		box-shadow: var(--elev-cirrus);
+	} .popover .content[data-placement="top"]::before {
+		top: auto;
+		bottom: -0.25em;
 	}
 
 	.popover.size-md .content {
