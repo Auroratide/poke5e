@@ -58,7 +58,8 @@
 
 		if (newAbility) {
 			value.data.name = newAbility.name
-			value.data.description = newAbility.description
+			value.data.description = newAbility.data.description
+			value.data.untraceable = newAbility.data.untraceable
 			value.data.referenceId = newAbility.referenceId
 		}
 	}
