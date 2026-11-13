@@ -50,7 +50,7 @@ export class TransferCodeDataProvider {
 
 export class TransferCodeDataProviderError extends DetailedError {
 	constructor(message: string, readonly diagnostics?: PostgrestError) {
-		super(message, diagnostics ? `Code: ${diagnostics.code}; ${diagnostics.message}` : "", { cause: diagnostics })
+		super(message, diagnostics ? `Code: ${diagnostics.code}; ${diagnostics.message}` : "", diagnostics)
 	}
 }
 

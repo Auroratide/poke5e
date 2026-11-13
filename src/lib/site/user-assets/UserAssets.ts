@@ -1,20 +1,29 @@
+import { DetailedError } from "$lib/site/errors/DetailedError"
 
 export class UserAssets {
 	constructor(private readonly baseUrl: string) {}
 
 	upload = async (url: string, file: File) => {
-		const uploadResponse = await fetch(url, {
-			method: "PUT",
-			body: file,
-			headers: {
-				"Content-Type": file.type,
-				"Content-Length": file.size.toString(),
-			},
-		})
+		// Only the host is included; the full presigned URL contains a signature.
+		const fileDetails = `Host: ${hostOf(url)}; Type: ${file.type || "unknown"}; Size: ${file.size} bytes`
+
+		let uploadResponse: Response
+		try {
+			uploadResponse = await fetch(url, {
+				method: "PUT",
+				body: file,
+				headers: {
+					"Content-Type": file.type,
+				},
+			})
+		} catch (e) {
+			throw new UserAssetsError("Could not upload file; the upload request did not complete.", fileDetails, e)
+		}
 
 		if (!uploadResponse.ok) {
-			console.error(await uploadResponse.text())
-			throw new UserAssetsError("Could not upload file.")
+			const body = await uploadResponse.text().catch(() => "")
+			console.error(body)
+			throw new UserAssetsError("Could not upload file.", `Status: ${uploadResponse.status}; ${fileDetails}`, body || undefined)
 		}
 	}
 
@@ -23,13 +32,16 @@ export class UserAssets {
 	}
 }
 
-export type ErrorDiagnostics = {
-	code?: string,
-	details?: string,
+function hostOf(url: string): string {
+	try {
+		return new URL(url).host
+	} catch {
+		return "invalid url"
+	}
 }
 
-export class UserAssetsError extends Error {
-	constructor(message: string, readonly diagnostics?: ErrorDiagnostics) {
-		super(message + (diagnostics?.code ? ` Code: ${diagnostics.code}` : ""))
+export class UserAssetsError extends DetailedError {
+	constructor(message: string, details: string, cause?: unknown) {
+		super(message, details, cause)
 	}
 }
