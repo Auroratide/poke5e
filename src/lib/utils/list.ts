@@ -57,3 +57,16 @@ export function replaceOrAddById<T>(arr: T[], replacement: T, id: (it: T) => str
 
 	return newList
 }
+
+export function chunk<T>(list: T[], size: number): T[][] {
+	if (size <= 0) {
+		throw new Error(`Cannot chunk list into sublists of size ${size}`)
+	}
+
+	const chunks: T[][] = []
+	for (let i = 0; i < list.length; i += size) {
+		chunks.push(list.slice(i, i + size))
+	}
+
+	return chunks
+}

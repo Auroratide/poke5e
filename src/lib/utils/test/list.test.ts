@@ -195,3 +195,43 @@ describe("replaceOrAddById", () => {
 		} ])
 	})
 })
+
+describe("chunk", () => {
+	test("empty", () => {
+		const original = []
+
+		const result = list.chunk(original, 5)
+
+		expect(result).toEqual([])
+	})
+
+	test("smaller than chunk size", () => {
+		const original = [1, 2, 3]
+
+		const result = list.chunk(original, 5)
+
+		expect(result).toEqual([[1, 2, 3]])
+	})
+
+	test("larger than chunk size", () => {
+		const original = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+		const result = list.chunk(original, 4)
+
+		expect(result).toEqual([[1, 2, 3, 4], [5, 6, 7, 8], [9]])
+	})
+
+	test("equal to a chunk multiple", () => {
+		const original = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+		const result = list.chunk(original, 3)
+
+		expect(result).toEqual([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+	})
+
+	test("chunk size 0", () => {
+		const original = [1, 2, 3]
+
+		expect(() => list.chunk(original, 0)).toThrow(Error)
+	})
+})

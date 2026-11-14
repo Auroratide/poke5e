@@ -40,8 +40,12 @@ import { MoveTime } from "$lib/moves/time"
 import { MoveType } from "$lib/moves/type"
 import { MoveRange } from "$lib/moves/range"
 import { MoveDuration } from "$lib/moves/duration"
+import * as list from "$lib/utils/list"
 
 const TRAINER_AVATARS_BUCKET = "trainer_avatars"
+
+// Must match what is in the RPC
+const GET_TRAINERS_MAX_KEYS = 200
 
 export class SupabaseTrainerProvider implements TrainerDataProvider {
 	constructor(
@@ -50,10 +54,28 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 	) {}
 
 	allTrainers = async (): Promise<Trainer[]> => {
-		return Promise.all(
-			TrainerLocalStorage.getReadKeys()
-				.map((key) => this.getTrainerSummary(key)),
-		).then((trainers) => trainers.filter((it) => it != null))
+		const readKeys = TrainerLocalStorage.getReadKeys()
+
+		// batch, in order to prevent abuse like attacking with 1,000,000 ids or something
+		const batches = await Promise.all(
+			list.chunk(readKeys, GET_TRAINERS_MAX_KEYS).map(async (keys) => {
+				const { data, error } = await this.supabase.rpc("get_trainers", { _read_keys: keys })
+					.select()
+
+				if (error) {
+					throw new TrainerDataProviderError(`Could not get trainers (${keys.length} of ${readKeys.length}).`, error)
+				}
+
+				return (data ?? []) as TrainerRow[]
+			}),
+		)
+
+		const rowsByReadKey = new Map(batches.flat().map((row) => [row.read_key, row]))
+
+		return readKeys
+			.map((readKey) => rowsByReadKey.get(readKey))
+			.filter((row) => row != null)
+			.map((row) => this.withLocalTags(rowToTrainer(row, this.getStorageResource)))
 	}
     
 	getTrainer = async (readKey: ReadWriteKey): Promise<undefined | TrainerData> => {
@@ -105,9 +127,15 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 		if (trainer == null) return undefined
 
-		const writeKey = TrainerLocalStorage.getWriteKey(readKey)
-		if (!writeKey) {
-			trainer.tags = TrainerLocalStorage.tags.getTrainer(readKey)
+		return this.withLocalTags(trainer)
+	}
+
+	/**
+	 * Trainers the user cannot edit keep their tags locally instead of in the db.
+	 */
+	private withLocalTags = (trainer: Trainer): Trainer => {
+		if (!TrainerLocalStorage.getWriteKey(trainer.readKey)) {
+			trainer.tags = TrainerLocalStorage.tags.getTrainer(trainer.readKey)
 		}
 
 		return trainer

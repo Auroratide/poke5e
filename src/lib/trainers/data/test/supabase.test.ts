@@ -336,6 +336,46 @@ test("reordering trainers", async () => {
 	])
 })
 
+test("getting all trainers fetches in batches and keeps the saved order", async () => {
+	const draft = (name: string) => ({
+		name: name,
+		description: "Likes stuff.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
+	})
+
+	// given
+	const renibel = await provider.newTrainer(draft("Renibel"))
+	const iris = await provider.newTrainer(draft("Iris"))
+	const blis = await provider.newTrainer(draft("Blis"))
+
+	// Saved keys whose trainers do not exist, enough to need more than one batch
+	const missing = Array.from({ length: 250 }, (_, i) => `missing${i.toString().padStart(5, "0")}`)
+
+	// Iris is beyond the first batch of 200, and Blis is before Renibel
+	TrainerLocalStorage.reorder([
+		blis.info.readKey,
+		...missing.slice(0, 100),
+		renibel.info.readKey,
+		...missing.slice(100, 220),
+		iris.info.readKey,
+		...missing.slice(220),
+	])
+
+	// when
+	const trainers = await provider.allTrainers()
+
+	// then
+	expect(trainers.map((it) => it.readKey)).toEqual([
+		blis.info.readKey,
+		renibel.info.readKey,
+		iris.info.readKey,
+	])
+	expect(trainers.map((it) => it.name)).toEqual(["Blis", "Renibel", "Iris"])
+})
+
 test("trainer size mismatch when reordering", async () => {
 	const draft = (name: string) => ({
 		name: name,
