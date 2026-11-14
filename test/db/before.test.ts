@@ -1249,6 +1249,207 @@ test("updating held items", async () => {
 	})
 })
 
+/**
+ * Sets up two trainers. This is used by the batched RPC tests; the second
+ * trainer is just there to assume information does not leak from one
+ * to the other.
+ */
+async function setUpTrainersForBatchedGets() {
+	const {
+		ret_id: trainerId,
+		ret_write_key: writeKey,
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const sunnyYellowId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+		_rank: 1,
+	})
+
+	const rosyRedId = await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+		_nickname: "Rosy Red",
+		_rank: 2,
+	})
+
+	await call<number>("set_pokemon_storage", {
+		_write_key: writeKey,
+		_id: rosyRedId,
+		_storage: "box",
+	})
+
+	await call<number>("add_pokemon", {
+		_write_key: writeKey,
+		...SunnyYellow(),
+		_nickname: "Plain Gray",
+		_rank: 3,
+	})
+
+	const {
+		ret_id: otherTrainerId,
+		ret_write_key: otherWriteKey,
+	} = await call<{
+		ret_id: string,
+		ret_read_key: string,
+		ret_write_key: string,
+	}>("new_trainer", Iris())
+
+	const otherPokemonId = await call<number>("add_pokemon", {
+		_write_key: otherWriteKey,
+		...SunnyYellow(),
+		_nickname: "Not Iris's",
+	})
+
+	return {
+		trainerId,
+		writeKey,
+		otherWriteKey,
+		sunnyYellowId,
+		rosyRedId,
+		otherPokemonId,
+		cleanup: async () => {
+			await call("delete_trainer", {
+				_write_key: writeKey,
+				_id: trainerId,
+			})
+			await call("delete_trainer", {
+				_write_key: otherWriteKey,
+				_id: otherTrainerId,
+			})
+		},
+	}
+}
+
+const UNKNOWN_TRAINER_ID = "00000000-0000-0000-0000-000000000000"
+
+test("getting movesets for all of a trainer's pokemon at once", async () => {
+	const { trainerId, writeKey, otherWriteKey, sunnyYellowId, rosyRedId, otherPokemonId, cleanup } = await setUpTrainersForBatchedGets()
+
+	const addMove = (writeKey: string, pokemonId: number, moveId: string, rank: number) => call<string>("add_move", {
+		_write_key: writeKey,
+		_pokemon_id: pokemonId,
+		_move_id: moveId,
+		_pp_cur: 10,
+		_pp_max: 10,
+		_notes: "",
+		_rank: rank,
+		_to_hit_modifier: 0,
+		_damage_modifier: 0,
+		_save_dc_modifier: 0,
+		_custom_type: null,
+		_custom_powers: null,
+		_custom_time: null,
+		_custom_duration_unit: null,
+		_custom_duration_value: null,
+		_custom_concentration: null,
+		_custom_range_type: null,
+		_custom_range_value: null,
+	})
+
+	await addMove(writeKey, sunnyYellowId, "pounce", 1)
+	await addMove(writeKey, sunnyYellowId, "psybeam", 0)
+	await addMove(writeKey, rosyRedId, "ember", 0)
+	await addMove(otherWriteKey, otherPokemonId, "tackle", 0)
+
+	// Assert
+	const moves = await callAll<any>("get_trainer_movesets", {
+		_trainer_id: trainerId,
+	})
+	const movesFor = (pokemonId: number) => moves.filter((it) => it.pokemon_id === pokemonId).map((it) => it.move_id)
+	expect(moves).toHaveLength(3)
+	expect(movesFor(sunnyYellowId)).toEqual(["psybeam", "pounce"])
+	expect(movesFor(rosyRedId)).toEqual(["ember"])
+
+	// Rows have the same shape as the per-pokemon function
+	const sunnyMoves = await callAll<any>("get_moveset", { _pokemon_id: sunnyYellowId })
+	expect(moves.filter((it) => it.pokemon_id === sunnyYellowId)).toEqual(sunnyMoves)
+
+	// Unknown trainers have nothing
+	expect(await callAll<any>("get_trainer_movesets", { _trainer_id: UNKNOWN_TRAINER_ID })).toHaveLength(0)
+
+	// Cleanup
+	await cleanup()
+})
+
+test("getting held items for all of a trainer's pokemon at once", async () => {
+	const { trainerId, writeKey, otherWriteKey, sunnyYellowId, rosyRedId, otherPokemonId, cleanup } = await setUpTrainersForBatchedGets()
+
+	const addHeldItem = (writeKey: string, pokemonId: number, itemId: string, rank: number) => call<string>("add_held_item", {
+		_write_key: writeKey,
+		_pokemon_id: pokemonId,
+		_item_id: itemId,
+		_custom_name: null,
+		_description: null,
+		_rank: rank,
+	})
+
+	await addHeldItem(writeKey, sunnyYellowId, "lum-berry", 1)
+	await addHeldItem(writeKey, sunnyYellowId, "miracle-seed", 0)
+	await addHeldItem(writeKey, rosyRedId, "charcoal", 0)
+	await addHeldItem(otherWriteKey, otherPokemonId, "leftovers", 0)
+
+	// Assert
+	const heldItems = await callAll<any>("get_trainer_held_items", {
+		_trainer_id: trainerId,
+	})
+	const itemsFor = (pokemonId: number) => heldItems.filter((it) => it.pokemon_id === pokemonId).map((it) => it.item_id)
+	expect(heldItems).toHaveLength(3)
+	expect(itemsFor(sunnyYellowId)).toEqual(["miracle-seed", "lum-berry"])
+	expect(itemsFor(rosyRedId)).toEqual(["charcoal"])
+
+	// Rows have the same shape as the per-pokemon function
+	const sunnyItems = await callAll<any>("get_held_items", { _pokemon_id: sunnyYellowId })
+	expect(heldItems.filter((it) => it.pokemon_id === sunnyYellowId)).toEqual(sunnyItems)
+
+	// Unknown trainers have nothing
+	expect(await callAll<any>("get_trainer_held_items", { _trainer_id: UNKNOWN_TRAINER_ID })).toHaveLength(0)
+
+	// Cleanup
+	await cleanup()
+})
+
+test("getting feats for all of a trainer's pokemon at once", async () => {
+	const { trainerId, writeKey, otherWriteKey, sunnyYellowId, rosyRedId, otherPokemonId, cleanup } = await setUpTrainersForBatchedGets()
+
+	const addFeat = (writeKey: string, pokemonId: number, featName: string, rank: number) => call<string>("add_pokemon_feat", {
+		_write_key: writeKey,
+		_pokemon_id: pokemonId,
+		_feat_name: featName,
+		_description: null,
+		_is_custom: false,
+		_rank: rank,
+	})
+
+	await addFeat(writeKey, sunnyYellowId, "Extra Type", 1)
+	await addFeat(writeKey, sunnyYellowId, "Extra Move", 0)
+	await addFeat(writeKey, rosyRedId, "Hardy", 0)
+	await addFeat(otherWriteKey, otherPokemonId, "Brawny", 0)
+
+	// Assert
+	const feats = await callAll<any>("get_trainer_pokemon_feats", {
+		_trainer_id: trainerId,
+	})
+	const featsFor = (pokemonId: number) => feats.filter((it) => it.pokemon_id === pokemonId).map((it) => it.feat_name)
+	expect(feats).toHaveLength(3)
+	expect(featsFor(sunnyYellowId)).toEqual(["Extra Move", "Extra Type"])
+	expect(featsFor(rosyRedId)).toEqual(["Hardy"])
+
+	// Rows have the same shape as the per-pokemon function
+	const sunnyFeats = await callAll<any>("get_pokemon_feats", { _pokemon_id: sunnyYellowId })
+	expect(feats.filter((it) => it.pokemon_id === sunnyYellowId)).toEqual(sunnyFeats)
+
+	// Unknown trainers have nothing
+	expect(await callAll<any>("get_trainer_pokemon_feats", { _trainer_id: UNKNOWN_TRAINER_ID })).toHaveLength(0)
+
+	// Cleanup
+	await cleanup()
+})
+
 test("updating fakemon", async () => {
 	const {
 		ret_id: fakemonId,
