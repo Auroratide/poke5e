@@ -48,11 +48,9 @@ export async function expectError(expectedCode: string, action: (client: typeof 
 		throw new Error(`Expected error ${expectedCode}, but was successful`)
 	}
 
-	if ("code" in error) {
-		expect(error.code).toEqual(expectedCode)
-	}
-	
 	if ("statusCode" in error) {
 		expect(error.statusCode).toEqual(expectedCode)
+	} else if ("code" in error) {
+		expect(error.code).toEqual(expectedCode)
 	}
 }
