@@ -374,6 +374,73 @@ test("trainer size mismatch when reordering", async () => {
 	])
 })
 
+test("getting a trainer attaches each pokemon's own moves, held items, and feats", async () => {
+	// given
+	const addedTrainer = await provider.newTrainer({
+		name: "Renibel",
+		description: "Likes cryptids.",
+		hp: {
+			current: 6,
+			max: 6,
+		},
+	})
+	const mimikyu = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, stubPokemonSpecies({
+		id: "mimikyu",
+	}), 1)
+	const sableye = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, stubPokemonSpecies({
+		id: "sableye",
+	}), 2)
+	const zubat = await provider.addPokemonToTeam(addedTrainer.writeKey, addedTrainer.info.readKey, addedTrainer.info.id, stubPokemonSpecies({
+		id: "zubat",
+	}), 3)
+
+	await provider.updateMoveset(addedTrainer.writeKey, addedTrainer.info.readKey, mimikyu.id, [
+		stubLearnedMove({ id: "new-1", moveId: "shadow-claw" }),
+		stubLearnedMove({ id: "new-2", moveId: "play-rough" }),
+	])
+	await provider.updateMoveset(addedTrainer.writeKey, addedTrainer.info.readKey, sableye.id, [
+		stubLearnedMove({ id: "new-1", moveId: "night-shade" }),
+	])
+
+	await provider.updateAllHeldItems(addedTrainer.writeKey, mimikyu.id, [
+		{ id: "new-1", type: "standard", itemId: "life-orb" },
+	])
+	await provider.updateAllHeldItems(addedTrainer.writeKey, sableye.id, [
+		{ id: "new-1", type: "standard", itemId: "leftovers" },
+		{ id: "new-2", type: "custom", name: "Shiny Gem", description: "Very shiny." },
+	])
+
+	await provider.updatePokemonFeats(addedTrainer.writeKey, mimikyu.id, [
+		{ id: "new-1", name: "Extra Move", description: "", isCustom: false },
+	])
+	await provider.updatePokemonFeats(addedTrainer.writeKey, sableye.id, [
+		{ id: "new-1", name: "Extra Type", description: "", isCustom: false },
+		{ id: "new-2", name: "Gem Eater", description: "Eats gems.", isCustom: true },
+	])
+
+	// when
+	const trainer = await provider.getTrainer(addedTrainer.info.readKey)
+	const pokemon = (id: PokemonId) => trainer.pokemon.find((it) => it.id === id)
+
+	// then
+	expect(pokemon(mimikyu.id).moves.map((it) => it.moveId)).toEqual(["shadow-claw", "play-rough"])
+	expect(pokemon(sableye.id).moves.map((it) => it.moveId)).toEqual(["night-shade"])
+	expect(pokemon(zubat.id).moves).toEqual([])
+
+	expect(pokemon(mimikyu.id).items).toEqual([
+		expect.objectContaining({ type: "standard", itemId: "life-orb" }),
+	])
+	expect(pokemon(sableye.id).items).toEqual([
+		expect.objectContaining({ type: "standard", itemId: "leftovers" }),
+		expect.objectContaining({ type: "custom", name: "Shiny Gem", description: "Very shiny." }),
+	])
+	expect(pokemon(zubat.id).items).toEqual([])
+
+	expect(pokemon(mimikyu.id).feats.map((it) => it.name)).toEqual(["Extra Move"])
+	expect(pokemon(sableye.id).feats.map((it) => it.name)).toEqual(["Extra Type", "Gem Eater"])
+	expect(pokemon(zubat.id).feats).toEqual([])
+})
+
 test("moves: converting customization fields", async () => {
 	// given
 	const addedTrainer = await provider.newTrainer({

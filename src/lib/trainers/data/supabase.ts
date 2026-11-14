@@ -57,13 +57,21 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 	}
     
 	getTrainer = async (readKey: ReadWriteKey): Promise<undefined | TrainerData> => {
-		const trainer = await this.getOneTrainerInfo(readKey)
+		const trainer = await this.getTrainerSummary(readKey)
 
 		if (!trainer) return undefined
 
+		// Everything else only needs the trainer's id, so it can all load at once
+		const [inventory, feats, pokemon] = await Promise.all([
+			this.getTrainerInventory(trainer.readKey),
+			this.getTrainerFeats(trainer.readKey),
+			this.getTrainersPokemon(trainer.id, readKey),
+		])
+
+		trainer.inventory = inventory
+		trainer.feats = feats
+
 		TrainerLocalStorage.addReadKey(readKey)
-    
-		const pokemon: TrainerPokemon[] = await this.getTrainersPokemon(trainer.id, readKey)
 
 		const writeKey = TrainerLocalStorage.getWriteKey(readKey)
 
@@ -105,50 +113,40 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		return trainer
 	}
 
-	private getOneTrainerInfo = async (readKey: ReadWriteKey): Promise<Trainer | undefined> => {
-		const trainer = await this.getTrainerSummary(readKey)
-
-		if (trainer == null) return undefined
-
-		const [inventory, feats] = await Promise.all([
-			this.getTrainerInventory(trainer.readKey),
-			this.getTrainerFeats(trainer.readKey),
+	// gets all pokemon at once, then assigns moves and such to them based on id
+	private getTrainersPokemon = async (trainerId: string, readKey: ReadWriteKey): Promise<TrainerPokemon[]> => {
+		const [pokemonRows, moveRows, heldItemRows, featRows] = await Promise.all([
+			this.getRowsForTrainer<PokemonRow>("get_pokemon", trainerId, `Could not trainer's pokemon (${readKey}).`),
+			this.getRowsForTrainer<MoveRow & BelongsToPokemon>("get_trainer_movesets", trainerId, `Could not get trainer's movesets (${readKey}).`),
+			this.getRowsForTrainer<HeldItemRow & BelongsToPokemon>("get_trainer_held_items", trainerId, `Could not get trainer's held items (${readKey}).`),
+			this.getRowsForTrainer<PokemonFeatRow & BelongsToPokemon>("get_trainer_pokemon_feats", trainerId, `Could not get trainer's pokemon feats (${readKey}).`),
 		])
 
-		trainer.inventory = inventory
-		trainer.feats = feats
+		const movesByPokemon = groupByPokemon(moveRows)
+		const heldItemsByPokemon = groupByPokemon(heldItemRows)
+		const featsByPokemon = groupByPokemon(featRows)
 
-		return trainer
+		return Promise.all(pokemonRows.map(async (row) => {
+			const thePokemon = await rowToPokemon(row, this.getUserAssetResource)
+
+			return {
+				...thePokemon,
+				moves: (movesByPokemon.get(thePokemon.id) ?? []).map(rowToMove),
+				items: (heldItemsByPokemon.get(thePokemon.id) ?? []).map(rowToHeldItem),
+				feats: (featsByPokemon.get(thePokemon.id) ?? []).map(rowToPokemonFeat),
+			}
+		}))
 	}
 
-	private getTrainersPokemon = async (trainerId: string, readKey: ReadWriteKey): Promise<TrainerPokemon[]> => {
-		return await this.supabase.rpc("get_pokemon", { _trainer_id: trainerId })
+	private getRowsForTrainer = async <T>(fn: string, trainerId: string, errorMessage: string): Promise<T[]> => {
+		const { data, error } = await this.supabase.rpc(fn, { _trainer_id: trainerId })
 			.select()
-			.then(({ data, error }) => {
-				if (error) {
-					throw new TrainerDataProviderError(`Could not trainer's pokemon (${readKey}).`, error)
-				}
 
-				return Promise.all(data.map((it) => rowToPokemon(it, this.getUserAssetResource)))
-			})
-			.then((pokemon) => Promise.all(pokemon.map((thePokemon) => {
-				return this.getMoveset(thePokemon.id).then((moves) => ({
-					...thePokemon,
-					moves,
-				}))
-			})))
-			.then((pokemon) => Promise.all(pokemon.map((thePokemon) => {
-				return this.getHeldItems(thePokemon.id).then((items) => ({
-					...thePokemon,
-					items,
-				}))
-			})))
-			.then((pokemon) => Promise.all(pokemon.map((thePokemon) => {
-				return this.getPokemonFeats(thePokemon.id).then((feats) => ({
-					...thePokemon,
-					feats,
-				}))
-			})))
+		if (error) {
+			throw new TrainerDataProviderError(errorMessage, error)
+		}
+
+		return (data ?? []) as T[]
 	}
 
 	private getOnePokemon = async (trainerId: string, pokemonId: PokemonId, readKey: ReadWriteKey): Promise<TrainerPokemon> => {
@@ -1588,6 +1586,25 @@ const rowToPokemon = async (row: PokemonRow, getStorageResource: (name: string) 
 	avatar: row.avatar_filename ? getStorageResource(row.avatar_filename) : undefined,
 	tags: row.tags,
 })
+
+type BelongsToPokemon = {
+	pokemon_id: number,
+}
+
+function groupByPokemon<T extends BelongsToPokemon>(rows: T[]): Map<PokemonId, T[]> {
+	const groups = new Map<PokemonId, T[]>()
+	for (const row of rows) {
+		const key = row.pokemon_id.toString()
+		const group = groups.get(key)
+		if (group) {
+			group.push(row)
+		} else {
+			groups.set(key, [row])
+		}
+	}
+
+	return groups
+}
 
 type MoveRow = {
 	id: string,
