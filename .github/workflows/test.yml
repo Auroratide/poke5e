@@ -29,13 +29,14 @@ jobs:
         with:
           node-version-file: '.nvmrc'
           cache: 'pnpm'
-      - uses: supabase/setup-cli@v1
-        with:
-          version: latest
+      # Commented because this started using v3, and I'm not there yet
+      # - uses: supabase/setup-cli@v1
+      #   with:
+      #     version: latest
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec playwright install
       - run: cp ./supabase/functions/.env.example ./supabase/functions/.env
       - run: pnpm services:start
-      - run: pnpm supabase db reset
+      - run: pnpm exec supabase db reset
       - name: Unit Test
         run: pnpm test:unit
