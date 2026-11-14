@@ -52,7 +52,7 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 	allTrainers = async (): Promise<Trainer[]> => {
 		return Promise.all(
 			TrainerLocalStorage.getReadKeys()
-				.map((key) => this.getOneTrainerInfo(key)),
+				.map((key) => this.getTrainerSummary(key)),
 		).then((trainers) => trainers.filter((it) => it != null))
 	}
     
@@ -81,7 +81,8 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 		}
 	}
 
-	private getOneTrainerInfo = async (readKey: ReadWriteKey): Promise<Trainer | undefined> => {
+	// only fetches the things needed for the trainer list page
+	private getTrainerSummary = async (readKey: ReadWriteKey): Promise<Trainer | undefined> => {
 		const trainer = await this.supabase.rpc("get_trainer", { _read_key: readKey })
 			.maybeSingle<TrainerRow>()
 			.then(({ data, error }) => {
@@ -93,7 +94,20 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 				return rowToTrainer(data, this.getStorageResource)
 			})
-		
+
+		if (trainer == null) return undefined
+
+		const writeKey = TrainerLocalStorage.getWriteKey(readKey)
+		if (!writeKey) {
+			trainer.tags = TrainerLocalStorage.tags.getTrainer(readKey)
+		}
+
+		return trainer
+	}
+
+	private getOneTrainerInfo = async (readKey: ReadWriteKey): Promise<Trainer | undefined> => {
+		const trainer = await this.getTrainerSummary(readKey)
+
 		if (trainer == null) return undefined
 
 		const [inventory, feats] = await Promise.all([
@@ -103,11 +117,6 @@ export class SupabaseTrainerProvider implements TrainerDataProvider {
 
 		trainer.inventory = inventory
 		trainer.feats = feats
-
-		const writeKey = TrainerLocalStorage.getWriteKey(readKey)
-		if (!writeKey) {
-			trainer.tags = TrainerLocalStorage.tags.getTrainer(readKey)
-		}
 
 		return trainer
 	}
