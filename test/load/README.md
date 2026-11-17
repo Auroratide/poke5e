@@ -1,33 +1,19 @@
 # Load Testing
 
-Seeds the **local** docker database with production-sized data, then times the RPCs the app calls when loading trainers and fakemon. The purpose is to compare changes empirically, such as before and after adding indexes.
-
-It refuses to run against anything other than localhost.
+This seeds the local docker database with a bunch of data, then runs the RPC queries to see how long they take. The goal is to use this to compare before-and-after performance of the database.
 
 ## Running
 
 ```sh
 pnpm services:start
 pnpm supabase db reset   # start from a clean database
-pnpm test:load --label before-indexes
+pnpm test:load
 ```
 
-The first run seeds about 7 million rows (100,000 trainers with pokemon, moves, items, and feats, plus 30,000 fakemon). Seeding takes a few minutes; later runs reuse the seeded data.
+For now, this merely runs requests in sequence. In the future, this could become genuine load tests with an actual SLA.
 
-Requires Node 22.18+ (runs TypeScript directly).
+## Results
 
-## Comparing a change
+Results are put in the `results` folder, and show the min, avg, and max times for each query, along with any errors that may have happened.
 
-1. Run once on the current schema: `pnpm test:load --label before`
-2. Apply the change, e.g. a migration adding indexes, then `pnpm supabase db reset` (this wipes the seed, so the next run reseeds the same shape of data)
-3. Run again: `pnpm test:load --label after`
-4. Compare the two files in `test/load/results/`
-
-## What is measured
-
-- **Sequential**: each RPC called one at a time, through PostgREST with the anon key like the app does. This shows each query's own cost.
-- **Concurrent**: several simulated users loading the trainer list, a trainer page (the trainer, then its inventory, feats, pokemon, and batched pokemon data in parallel), and a fakemon page, all at once. This shows behavior under contention.
-
-Calls go through the anon role, which has the same 3 second `statement_timeout` as production, so timeouts show up as errors (code `57014`).
-
-The data shape is configured in `config.ts`. The number of fakemon evolutions is a guess.
+Seeing a time of 1ms is generally "perfect" time. Anything above 50ms is basically a performance problem that is greatly exascerbated in prod.
