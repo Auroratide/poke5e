@@ -1,5 +1,5 @@
 {
-	"status": "upcoming",
+	"status": "inprogress",
 	"scheduledStart": "2026-11-19T04:00:00.000Z",
 	"duration": "1 hour",
 	"reason": "Database improvements to speed up loading Trainers and Fakémon."
