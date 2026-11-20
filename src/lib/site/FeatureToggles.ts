@@ -43,4 +43,5 @@ export const FeatureToggles = {
 	PreviewUpdatedMoves: toggle("PreviewUpdatedMoves", "In Development", "Some moves, abilities, and pokemon movesets are being modernized. Updated moves can be previewed on the Moves Page, clicking on the Filters button, and setting \"Updated Recently\" to \"On\"."),
 	CustomMoves: toggle("CustomMoves", "Early", "Will allow the creation and sharing of custom moves. There is nothing to test yet, as pages for this are still being built."),
 	MoveCustomization: toggle("MoveCustomization", "In Development", "Will allow moves on trainer's pokemon to be customized, including modifiers, type, etc. You can test this by editing moves on a Trainer's Pokemon. A few options remain to be developed, including AoE shapes and possibly damage."),
+	Accounts: toggle("Accounts", "Hidden", ""),
 }
