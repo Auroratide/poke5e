@@ -20860,7 +20860,7 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "Driven by frustration, you aggressively attack.  Make a melee attack, dealing {dice} {type} damage on a hit.  If you last attack missed, double the dice roll for damage.",
+			"description": "Driven by frustration, you aggressively attack.  Make a melee attack, dealing {dice} {type} damage on a hit.  If your last attack roll missed, double the dice roll for damage.",
 			"categories": []
 		},
 		{
@@ -22295,7 +22295,7 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "Spurred by desperation, you attack the target. Make a melee attack, dealing {dice} {type} damage on a hit. If you missed an attack roll last turn, then add an additional damage die to your damage roll.",
+			"description": "Spurred by desperation, you attack the target. Make a melee attack, dealing {dice} {type} damage on a hit. If your last attack roll missed, then add an additional damage die to your damage roll.",
 			"categories": []
 		},
 		{
