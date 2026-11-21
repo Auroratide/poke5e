@@ -1,1 +1,0 @@
-import"../chunks/CkAsf2_X.js";import"../chunks/DgCPz4Uo.js";import{t as e}from"../chunks/DClbMI5N.js";import"../chunks/C6_z2ZAi.js";function t(t){e(t,{value:`Pokemon Items`})}export{t as component};
