@@ -1,6 +1,6 @@
 {
 	"name": "poke5e",
-	"version": "1.12.18",
+	"version": "1.12.19",
 	"scripts": {
 		"prepare": "husky && svelte-kit sync || echo ''",
 		"start": "vite preview",

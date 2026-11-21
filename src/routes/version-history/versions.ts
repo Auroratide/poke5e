@@ -14,6 +14,25 @@ export type VersionHistory = {
 
 export const versionHistory: VersionHistory = {
 	versions: [ {
+		name: "v1.12.19",
+		description: [
+			"<strong>Performance</strong>: Improve load speed and stability of the trainer pages.",
+			"<strong>Bugfix</strong>: Fix for 'untraceable' text sometimes ending up in the description text of abilities of fakemon.",
+			"<strong>Bugfix</strong>: Fix HP allocation during evolution at level up, where CON increases would add to HP twice.",
+			"<strong>Moves</strong>: Clarify the attack-miss condition on Stomping Tantrum and Temper Flare.",
+			`<strong>Beta, Moves</strong>:<ul>
+				<li><strong>Aqua Cutter</strong>: Made into a reach melee move.</li>
+				<li><strong>Explosion</strong>: Overhauled into a bigger version of Self-Destruct.</li>
+				<li><strong>Headbutt</strong>: Can now flinch.</li>
+				<li><strong>Heart Stamp</strong>: Can now flinch.</li>
+				<li><strong>Leaf Blade</strong>: Add Str to move powers.</li>
+				<li><strong>Psycho Cut</strong>: Made into a reach melee move.</li>
+				<li><strong>Superpower</strong>: Reduce Str/Dex drawback from -10 to -4.</li>
+				<li><strong>Transform</strong>: Overhauled to last longer, work on objects, and no longer need concentration.</li>
+				<li><strong>Upper Hand</strong>: Now flinches.</li>
+			</ul>`,
+		],
+	}, {
 		name: "v1.12.18",
 		description: [
 			"<strong>Abilities</strong>: Trace updated to allow it to attempt to copy an ability until it succeeds. Additionally, more abilities have been marked as being untraceable.",
