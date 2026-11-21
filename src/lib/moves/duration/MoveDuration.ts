@@ -1,7 +1,7 @@
 import type { MoveJson } from "$lib/srd/moves/schema"
 import { m } from "$lib/site/i18n"
 
-export type MoveDurationUnit = "instantaneous" | "round" | "minute" | "varies"
+export type MoveDurationUnit = "instantaneous" | "round" | "minute" | "varies" | "hour"
 
 export type MoveDuration = {
 	unit: MoveDurationUnit,
@@ -15,6 +15,7 @@ const displayUnit = (duration: MoveDuration): string => {
 	case "instantaneous": return m.instantaneous()
 	case "round": return m.rounds({ value })
 	case "minute": return m.minutes({ value })
+	case "hour": return m.hours({ value })
 	case "varies": return m.varies()
 	default: return duration.unit
 	}

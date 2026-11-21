@@ -291,6 +291,15 @@
 		}
 	} ],
 	"minutesGeneral": "Minutes",
+	"hours": [ {
+		"declarations": ["input value", "local valuePlural = value: plural"],
+		"selectors": ["valuePlural"],
+		"match": {
+			"valuePlural=one": "{value} Hour",
+			"valuePlural=other": "{value} Hours"
+		}
+	} ],
+	"hoursGeneral": "Hours",
 	"rounds": [ {
 		"declarations": ["input value", "local valuePlural = value: plural"],
 		"selectors": ["valuePlural"],

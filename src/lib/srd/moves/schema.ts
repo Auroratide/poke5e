@@ -65,6 +65,7 @@ export const MoveJson = z.object({
 	duration: z.object({
 		unit: z.literal([
 			"minute",
+			"hour",
 			"round",
 			"instantaneous",
 			"varies",
