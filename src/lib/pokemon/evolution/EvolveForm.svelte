@@ -58,20 +58,12 @@
 		? m.mustAllocateEvolutionAsi()
 		: undefined
 
-	$: pokemonWithAdvancedLevel = { ...pokemon, level: pokemon.level.next() }
-
-	$: effects = chosenSpecies != null ? EvolutionEffect.compute(atNextLevel ? pokemonWithAdvancedLevel : pokemon, species, chosenSpecies, asiSpent) : []
+	$: effects = chosenSpecies != null ? EvolutionEffect.compute(pokemon, species, chosenSpecies, asiSpent, { atNextLevel }) : []
 
 	const endEdit = () => {
 		if (asiError != null) return
 
-		const afterEvolution = effects.reduce((after, effect) => effect.apply(after), atNextLevel ? pokemonWithAdvancedLevel : pokemon)
-
-		// slightly annoying, but we have to undo the level so that the
-		// level up tool increases it from what it was
-		if (atNextLevel) {
-			afterEvolution.level = pokemon.level
-		}
+		const afterEvolution = effects.reduce((after, effect) => effect.apply(after), pokemon)
 
 		onsubmit(afterEvolution)
 	}

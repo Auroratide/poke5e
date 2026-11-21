@@ -405,6 +405,25 @@ describe("AdditionalHpEffect", () => {
 		})
 		expect(effect.toString()).toEqual("Max HP will increase by 14")
 	})
+
+	test("applicable: at next level", () => {
+		const pokemon = stubTrainerPokemon({
+			level: new Level(5),
+			hp: {
+				current: 42,
+				max: 42,
+			},
+		})
+
+		const effect = AdditionalHpEffect.createIfApplicable(pokemon, undefined, undefined, { atNextLevel: true })
+		const result = effect.apply(pokemon)
+
+		expect(result.hp).toEqual({
+			current: 54,
+			max: 54,
+		})
+		expect(effect.toString()).toEqual("Max HP will increase by 12")
+	})
 })
 
 describe("GainedProficienciesEffect", () => {
@@ -600,6 +619,31 @@ describe("EvolutionEffect", () => {
 		const effects = EvolutionEffect.compute(pokemon, eevee, flareon, asi)
 
 		expect(effects.length).toEqual(7)
+	})
+
+	test("con increase at next level only applies to levels already gained", () => {
+		const pokemon = stubTrainerPokemon({
+			pokemonId: eevee.id,
+			level: new Level(5),
+			hp: {
+				current: 42,
+				max: 42,
+			},
+			attributes: stubAttributes({
+				con: 14,
+			}),
+		})
+
+		const asi = stubAsi({
+			con: 4,
+		})
+
+		const effects = EvolutionEffect.compute(pokemon, eevee, flareon, asi, { atNextLevel: true })
+		const result = effects.reduce((after, effect) => effect.apply(after), pokemon)
+
+		// 42 + 12 (2 * level 6 evolution bonus) + 10 (+2 con mod * 5 levels already gained)
+		expect(result.hp.max).toEqual(64)
+		expect(result.level.data).toEqual(5)
 	})
 })
 

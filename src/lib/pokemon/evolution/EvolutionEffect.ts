@@ -14,10 +14,15 @@ export interface EvolutionEffect {
 	toString: () => string
 }
 
+export type EvolutionEffectOptions = {
+	// used when evolving during a level up
+	atNextLevel?: boolean
+}
+
 export const EvolutionEffect = {
-	compute(pokemon: TrainerPokemon, evolveFrom: PokemonSpecies, evolveTo: PokemonSpecies, asi?: AbilityScoreImprovement): EvolutionEffect[] {
+	compute(pokemon: TrainerPokemon, evolveFrom: PokemonSpecies, evolveTo: PokemonSpecies, asi?: AbilityScoreImprovement, options: EvolutionEffectOptions = {}): EvolutionEffect[] {
 		const effects = POSSIBLE_EFFECTS
-			.map((effect) => effect.createIfApplicable(pokemon, evolveFrom, evolveTo))
+			.map((effect) => effect.createIfApplicable(pokemon, evolveFrom, evolveTo, options))
 			.filter((it) => it != null)
 
 		if (asi) {
@@ -122,8 +127,8 @@ export class AdditionalHpEffect implements EvolutionEffect {
 		return `Max HP will increase by ${this.gainedHp}`
 	}
 
-	static createIfApplicable(pokemon: TrainerPokemon): AdditionalHpEffect | undefined {
-		return new AdditionalHpEffect(pokemon.level)
+	static createIfApplicable(pokemon: TrainerPokemon, _from?: PokemonSpecies, _to?: PokemonSpecies, options: EvolutionEffectOptions = {}): AdditionalHpEffect | undefined {
+		return new AdditionalHpEffect(options.atNextLevel ? pokemon.level.next() : pokemon.level)
 	}
 }
 
@@ -278,7 +283,7 @@ export class TypeCustomizedEffect implements EvolutionEffect {
 }
 
 type EffectFactory = {
-	createIfApplicable: (pokemon: TrainerPokemon, evolveFrom: PokemonSpecies, evolveTo: PokemonSpecies) => EvolutionEffect | undefined
+	createIfApplicable: (pokemon: TrainerPokemon, evolveFrom: PokemonSpecies, evolveTo: PokemonSpecies, options: EvolutionEffectOptions) => EvolutionEffect | undefined
 }
 
 const POSSIBLE_EFFECTS: readonly EffectFactory[] = [
