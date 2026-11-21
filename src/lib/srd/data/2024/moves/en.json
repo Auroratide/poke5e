@@ -9498,8 +9498,15 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You unleash a vicious blow after acting cute. Make a melee attack against a creature, dealing {dice} {type} damage on a hit.",
-			"categories": []
+			"save": {
+				"attribute": "cha"
+			},
+			"description": "You unleash a vicious blow after acting cute. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. On a hit, the target must succeed a {save} or flinch.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Now causes flinch on a failed save."
+			}
 		},
 		{
 			"id": "heart-swap",

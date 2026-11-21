@@ -1618,8 +1618,7 @@
 		},
 		{
 			"id": "heart-stamp",
-			"name": "Carimbo de Coração",
-			"description": "Você desfere um golpe cruel após agir de forma fofa. Faça um ataque corpo a corpo contra uma criatura, causando {dice} de dano {type} em um acerto."
+			"name": "Carimbo de Coração"
 		},
 		{
 			"id": "heart-swap",

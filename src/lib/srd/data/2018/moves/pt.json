@@ -34,6 +34,10 @@
 			"description": "Você se debate com um golpe descontrolado que aumenta de poder quanto mais ferido você está. Faça uma jogada de ataque corpo a corpo contra uma criatura, causando {dice} de dano {type} em um acerto. Se você estiver abaixo de 50% da sua vida máxima, dobre o dano. Se estiver em 10% ou menos da sua vida máxima, triplique o dano. O multiplicador deste ataque ocorre antes do multiplicador de resistências ou fraquezas."
 		},
 		{
+			"id": "heart-stamp",
+			"description": "Você desfere um golpe cruel após agir de forma fofa. Faça um ataque corpo a corpo contra uma criatura, causando {dice} de dano {type} em um acerto."
+		},
+		{
 			"id": "helping-hand",
 			"description": "Você pode usar uma ação bônus no seu turno para escolher um aliado que não seja você e que esteja a até 60 pés de você e possa te ouvir. Esse aliado pode adicionar um d6 a um teste de habilidade, jogada de ataque ou teste de resistência que fizer nos próximos 10 minutos, antes do resultado ser anunciado pelo Mestre. Um aliado que recebe ajuda só pode ter um d6 disponível por vez."
 		},

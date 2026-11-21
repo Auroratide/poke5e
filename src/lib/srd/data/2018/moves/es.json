@@ -34,6 +34,10 @@
 			"description": "Te agitas con un golpe salvaje que aumenta su potencia cuanto más herido estés. Realiza una tirada de ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas. Si estás por debajo del 50% de tu salud máxima, duplica el daño. Si estás al 10% o menos de tu salud máxima, triplica el daño. El multiplicador de este ataque se aplica antes de los multiplicadores por resistencias o vulnerabilidades."
 		},
 		{
+			"id": "heart-stamp",
+			"description": "Lanzas un golpe feroz después de actuar con ternura. Realiza un ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas."
+		},
+		{
 			"id": "helping-hand",
 			"description": "Puedes usar una acción adicional en tu turno para elegir a un aliado que no seas tú mismo, que esté a menos de 60 pies de ti y que pueda oírte. Ese aliado puede añadir 1d6 a una prueba de característica, tirada de ataque o tirada de salvación que realice en los próximos 10 minutos, antes de que el DM anuncie el resultado de la tirada. Un aliado ayudado solo puede tener 1d6 disponible a la vez."
 		},

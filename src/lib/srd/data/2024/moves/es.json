@@ -1703,8 +1703,7 @@
 		},
 		{
 			"id": "heart-stamp",
-			"name": "Arrumaco",
-			"description": "Lanzas un golpe feroz después de actuar con ternura. Realiza un ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas."
+			"name": "Arrumaco"
 		},
 		{
 			"id": "heart-swap",
