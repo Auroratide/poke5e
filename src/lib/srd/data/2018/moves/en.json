@@ -731,6 +731,7 @@
 				"modifier": "MOVE",
 				"type": "damage"
 			},
+			"description": "You strike a target with incredible power - but with great power comes great responsibility. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. This move exhausts you, and your STR and DEX ability scores are both reduced by 10 until after the end of your next turn.",
 			"updated": null
 		},
 		{

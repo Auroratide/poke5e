@@ -3416,7 +3416,7 @@
 		{
 			"id": "superpower",
 			"name": "Superpower",
-			"description": "Você atinge um alvo com poder incrível - mas com grande poder vem grande responsabilidade. Faça um ataque corpo a corpo contra uma criatura, causando {dice} de dano de {type} em um acerto. Este movimento te exaure, e seus atributos FOR e DES são reduzidos em 10 até o final do seu próximo turno."
+			"description": "Você atinge um alvo com poder incrível - mas com grande poder vem grande responsabilidade. Faça um ataque corpo a corpo contra uma criatura, causando {dice} de dano de {type} em um acerto. Este movimento te exaure, e seus atributos FOR e DES são reduzidos em 4 até o final do seu próximo turno."
 		},
 		{
 			"id": "supersonic",

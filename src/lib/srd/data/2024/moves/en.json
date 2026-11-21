@@ -21416,11 +21416,11 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You strike a target with incredible power - but with great power comes great responsibility. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. This move exhausts you, and your STR and DEX ability scores are both reduced by 10 until after the end of your next turn.",
+			"description": "You strike a target with incredible power - but with great power comes great responsibility. Make a melee attack against a creature, dealing {dice} {type} damage on a hit. This move exhausts you, and your STR and DEX ability scores are both reduced by 4 until after the end of your next turn.",
 			"categories": [],
 			"updated": {
 				"tag": "Updated",
-				"details": "Damage is updated."
+				"details": "Damage is updated, and the STR and DEX reduction is lowered from 10 to 4."
 			}
 		},
 		{

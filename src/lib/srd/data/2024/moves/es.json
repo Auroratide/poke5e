@@ -4011,7 +4011,7 @@
 		{
 			"id": "superpower",
 			"name": "Fuerza Bruta",
-			"description": "Golpeas a un objetivo con un poder increíble, pero un gran poder conlleva una gran responsabilidad. Realiza un ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas. Este movimiento te agota, y tus puntuaciones de característica de Fuerza y Destreza se reducen en 10 hasta después del final de tu próximo turno."
+			"description": "Golpeas a un objetivo con un poder increíble, pero un gran poder conlleva una gran responsabilidad. Realiza un ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas. Este movimiento te agota, y tus puntuaciones de característica de Fuerza y Destreza se reducen en 4 hasta después del final de tu próximo turno."
 		},
 		{
 			"id": "supersonic",

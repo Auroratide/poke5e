@@ -69,6 +69,10 @@
 			"description": "Enquanto você estiver dormindo, você pode ativar este movimento para criar um som estrondoso que causa dano a todas as criaturas em alcance de {dice} de dano {type}."
 		},
 		{
+			"id": "superpower",
+			"description": "Você atinge um alvo com poder incrível - mas com grande poder vem grande responsabilidade. Faça um ataque corpo a corpo contra uma criatura, causando {dice} de dano de {type} em um acerto. Este movimento te exaure, e seus atributos FOR e DES são reduzidos em 10 até o final do seu próximo turno."
+		},
+		{
 			"id": "swords-dance",
 			"description": "Quando você ativa este movimento, uma espada aparece e dança ao seu redor, aumentando sua CA em 1. Como ação bônus em um turno futuro, você pode encerrar a concentração para lançar essa espada e fazer um ataque à distância contra um alvo a até 30 pés, causando 2d6 + MOVE de dano normal em um acerto.",
 			"higherLevels": "The damage dice for this move changes to 2d8 at level 5. At level 10, you can now create two swords for +2 to AC and two ranged attacks. At level 17, the damage dice for each sword increases to 3d8."
