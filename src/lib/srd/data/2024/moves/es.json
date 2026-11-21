@@ -1669,7 +1669,7 @@
 		{
 			"id": "headbutt",
 			"name": "Golpe Cabeza",
-			"description": "Sabes perfectamente cómo usar la cabeza. Realiza una tirada de ataque cuerpo a cuerpo, infligiendo {dice} de daño de tipo {type} si impactas. Si el resultado natural de la tirada de ataque es 18 o superior, el objetivo cae derribado."
+			"description": "Sabes perfectamente cómo usar la cabeza. Realiza una tirada de ataque cuerpo a cuerpo, infligiendo {dice} de daño de tipo {type} si impactas. Si el resultado natural de la tirada de ataque es 18 o superior, el objetivo cae derribado y retrocede."
 		},
 		{
 			"id": "headlong-rush",

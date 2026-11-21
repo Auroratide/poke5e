@@ -34,6 +34,10 @@
 			"description": "Te agitas con un golpe salvaje que aumenta su potencia cuanto más herido estés. Realiza una tirada de ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas. Si estás por debajo del 50% de tu salud máxima, duplica el daño. Si estás al 10% o menos de tu salud máxima, triplica el daño. El multiplicador de este ataque se aplica antes de los multiplicadores por resistencias o vulnerabilidades."
 		},
 		{
+			"id": "headbutt",
+			"description": "Sabes perfectamente cómo usar la cabeza. Realiza una tirada de ataque cuerpo a cuerpo, infligiendo {dice} de daño de tipo {type} si impactas. Si el resultado natural de la tirada de ataque es 18 o superior, el objetivo cae derribado."
+		},
+		{
 			"id": "heart-stamp",
 			"description": "Lanzas un golpe feroz después de actuar con ternura. Realiza un ataque cuerpo a cuerpo contra una criatura, infligiendo {dice} de daño de tipo {type} si impactas."
 		},

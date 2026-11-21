@@ -277,6 +277,11 @@
 			"updated": null
 		},
 		{
+			"id": "headbutt",
+			"description": "You really know how to use your head. Make a melee attack roll, doing {dice} {type} damage on a hit. If the natural attack roll is 18 or more, the target falls prone.",
+			"updated": null
+		},
+		{
 			"id": "heart-stamp",
 			"save": null,
 			"description": "You unleash a vicious blow after acting cute. Make a melee attack against a creature, dealing {dice} {type} damage on a hit.",

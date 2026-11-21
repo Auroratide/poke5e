@@ -9315,8 +9315,12 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You really know how to use your head. Make a melee attack roll, doing {dice} {type} damage on a hit. If the natural attack roll is 18 or more, the target falls prone.",
-			"categories": []
+			"description": "You really know how to use your head. Make a melee attack roll, doing {dice} {type} damage on a hit. If the natural attack roll is 18 or more, the target falls prone and flinches.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Now also causes flinch."
+			}
 		},
 		{
 			"id": "headlong-rush",

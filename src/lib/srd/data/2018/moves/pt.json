@@ -34,6 +34,10 @@
 			"description": "Você se debate com um golpe descontrolado que aumenta de poder quanto mais ferido você está. Faça uma jogada de ataque corpo a corpo contra uma criatura, causando {dice} de dano {type} em um acerto. Se você estiver abaixo de 50% da sua vida máxima, dobre o dano. Se estiver em 10% ou menos da sua vida máxima, triplique o dano. O multiplicador deste ataque ocorre antes do multiplicador de resistências ou fraquezas."
 		},
 		{
+			"id": "headbutt",
+			"description": "Você realmente sabe usar a cabeça. Faça uma jogada de ataque corpo a corpo, causando {dice} de dano {type} em um acerto. Se a jogada de ataque natural for 18 ou mais, o alvo fica caído."
+		},
+		{
 			"id": "heart-stamp",
 			"description": "Você desfere um golpe cruel após agir de forma fofa. Faça um ataque corpo a corpo contra uma criatura, causando {dice} de dano {type} em um acerto."
 		},
