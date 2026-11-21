@@ -330,6 +330,13 @@
 			"updated": null
 		},
 		{
+			"id": "leaf-blade",
+			"power": [
+				"dex"
+			],
+			"updated": null
+		},
+		{
 			"id": "light-screen",
 			"power": [],
 			"time": {
