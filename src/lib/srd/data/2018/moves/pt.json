@@ -60,6 +60,10 @@
 			"description": "Quando você for alvo de um ataque à distância, use sua reação para receber metade do dano causado agora e de qualquer ataque à distância que tenha você como alvo até o início do seu próximo turno."
 		},
 		{
+			"id": "psycho-cut",
+			"description": "Você dilacera um alvo com lâminas formadas por poder {type}. Faça um ataque à distância contra uma criatura, causando {dice} de dano psíquico em caso de acerto. Este movimento causa acerto crítico em rolagens naturais de 19 ou 20."
+		},
+		{
 			"id": "reflect",
 			"description": "Quando você é alvo de um ataque corpo a corpo, use sua reação para reduzir pela metade o dano recebido agora e em qualquer ataque corpo a corpo que te atingir até o início do seu próximo turno."
 		},

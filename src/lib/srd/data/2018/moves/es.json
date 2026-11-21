@@ -58,6 +58,10 @@
 			"description": "Cuando seas el objetivo de un ataque a distancia, usa tu reacción para recibir la mitad del daño infligido ahora y de cualquier ataque a distancia que te elija como objetivo hasta el comienzo de tu siguiente turno."
 		},
 		{
+			"id": "psycho-cut",
+			"description": "Desgarras al objetivo con cuchillas formadas por poder {type}. Realiza un ataque a distancia contra un objetivo, infligiendo {dice} de daño de tipo Psíquico si impactas. Este movimiento logra un impacto crítico con tiradas naturales de 19 o 20."
+		},
+		{
 			"id": "reflect",
 			"description": "Cuando eres objetivo de un ataque cuerpo a cuerpo, puedes usar tu reacción para recibir la mitad del daño infligido en ese momento y de cualquier ataque cuerpo a cuerpo que te tenga como objetivo hasta el comienzo de tu próximo turno."
 		},

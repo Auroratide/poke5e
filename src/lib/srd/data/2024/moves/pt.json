@@ -2568,7 +2568,7 @@
 		{
 			"id": "psycho-cut",
 			"name": "Corte Psíquico",
-			"description": "Você dilacera um alvo com lâminas formadas por poder {type}. Faça um ataque à distância contra uma criatura, causando {dice} de dano psíquico em caso de acerto. Este movimento causa acerto crítico em rolagens naturais de 19 ou 20."
+			"description": "Você dilacera um alvo com lâminas formadas por poder {type}. Faça um ataque corpo a corpo contra uma criatura, causando {dice} de dano psíquico em caso de acerto. Este movimento causa acerto crítico em rolagens naturais de 19 ou 20."
 		},
 		{
 			"id": "psycho-shift",

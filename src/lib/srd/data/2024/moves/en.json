@@ -610,7 +610,11 @@
 				"unit": "instantaneous"
 			},
 			"range": {
-				"type": "melee"
+				"type": "melee",
+				"reach": {
+					"value": 10,
+					"unit": "feet"
+				}
 			},
 			"dice": {
 				"class": "70",
@@ -623,7 +627,11 @@
 			"description": "You expel pressurized water to cut the target like a blade. Make a melee attack, dealing {dice} {type} damage on a hit. This attack scores a critical hit on natural attack rolls of 19 or 20.",
 			"categories": [
 				"slicing"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "Melee reach increased to 10 feet."
+			}
 		},
 		{
 			"id": "aqua-jet",
@@ -16175,9 +16183,11 @@
 				"unit": "instantaneous"
 			},
 			"range": {
-				"type": "distance",
-				"value": 30,
-				"unit": "feet"
+				"type": "melee",
+				"reach": {
+					"value": 10,
+					"unit": "feet"
+				}
 			},
 			"dice": {
 				"class": "70",
@@ -16185,12 +16195,16 @@
 				"type": "damage"
 			},
 			"attack": {
-				"scope": "ranged"
+				"scope": "melee"
 			},
-			"description": "You tear at a target with blades formed by psychic power. Make a ranged attack on a creature, dealing {dice} {type} damage on a hit. This move scores a critical hit on natural rolls of 19 or 20.",
+			"description": "You tear at a target with blades formed by psychic power. Make a melee attack on a creature, dealing {dice} {type} damage on a hit. This move scores a critical hit on natural rolls of 19 or 20.",
 			"categories": [
 				"slicing"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "This move has been made melee."
+			}
 		},
 		{
 			"id": "psycho-shift",
