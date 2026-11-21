@@ -30,6 +30,10 @@
 			"description": "Você executa uma dança mística, fortalecendo-se. Pela duração, dobre seu bônus de proficiência ao fazer ataques."
 		},
 		{
+			"id": "explosion",
+			"description": "Você cria uma esfera de energia que concentra uma explosão devastadora. Escolha um alvo dentro do alcance e role um d20. Em um 20, a explosão acontece e todas as criaturas a até 5 pés desse ponto desmaiam. Em qualquer outro resultado, a explosão falha e o movimento não tem efeito. Se o nível do alvo for 10 acima do seu ou o SR dele for 15, este movimento falha automaticamente."
+		},
+		{
 			"id": "flail",
 			"description": "Você se debate com um golpe descontrolado que aumenta de poder quanto mais ferido você está. Faça uma jogada de ataque corpo a corpo contra uma criatura, causando {dice} de dano {type} em um acerto. Se você estiver abaixo de 50% da sua vida máxima, dobre o dano. Se estiver em 10% ou menos da sua vida máxima, triplique o dano. O multiplicador deste ataque ocorre antes do multiplicador de resistências ou fraquezas."
 		},
@@ -58,6 +62,10 @@
 		{
 			"id": "light-screen",
 			"description": "Quando você for alvo de um ataque à distância, use sua reação para receber metade do dano causado agora e de qualquer ataque à distância que tenha você como alvo até o início do seu próximo turno."
+		},
+		{
+			"id": "misty-explosion",
+			"description": "Você libera uma explosão massiva em um {shape}, desmaiando imediatamente antes do dano ser causado. Criaturas na área devem fazer um {save} contra sua CD de Movimento. Se sua criatura tiver pelo menos metade dos pontos de vida restantes ou este movimento for usado em Misty Terrain, todos no alcance sofrem {dice} de dano {type} em uma falha, ou metade em um sucesso. Se sua criatura tiver menos da metade dos pontos de vida restantes e não estiver em Misty Terrain, o dano é reduzido pela metade em uma falha e para um quarto em um sucesso."
 		},
 		{
 			"id": "psycho-cut",

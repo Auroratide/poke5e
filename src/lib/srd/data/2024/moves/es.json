@@ -1129,8 +1129,7 @@
 		},
 		{
 			"id": "explosion",
-			"name": "Explosión",
-			"description": "Creas una esfera de energía que alberga una explosión concentrada y devastadora. Elige a un objetivo a tu alcance y lanza 1d20. Con un 20, la explosión se detona y todas las criaturas a 5 pies de ese punto caen debilitadas automáticamente. Con cualquier otro resultado, la explosión no llega a producirse y este movimiento no tiene efecto. Si el nivel del objetivo es 10 niveles superior al tuyo, o si su RE (Rango de Especie) es 15, este movimiento falla automáticamente."
+			"name": "Explosión"
 		},
 		{
 			"id": "extrasensory",
@@ -2489,7 +2488,7 @@
 		{
 			"id": "misty-explosion",
 			"name": "Bruma Explosiva",
-			"description": "Desatas una explosión masiva en un {shape} y caes debilitado inmediatamente antes de que se inflija el daño. Las criaturas en el área deben realizar una {save}. Si te quedan al menos la mitad de tus puntos de golpe o si este movimiento se utiliza en Campo de Niebla, las criaturas al alcance reciben {dice} de daño de tipo {type} si fallan, o la mitad si la superan. Si te quedan menos de la mitad de tus puntos de golpe y no te encuentras en Campo de Niebla, el daño se reduce a la mitad si fallan la salvación, y a una cuarta parte si la superan."
+			"description": "Desatas una explosión masiva en un {shape} y caes debilitado inmediatamente antes de que se inflija el daño. Las criaturas en el área deben realizar una {save}. Una criatura recibe {dice} de daño de tipo {type} si falla, o la mitad si la supera. Si te quedan menos de la mitad de tus puntos de golpe y no te encuentras en Campo de Niebla, el daño se reduce a la mitad."
 		},
 		{
 			"id": "misty-terrain",
@@ -3504,7 +3503,7 @@
 		{
 			"id": "self-destruct",
 			"name": "Autodestrucción",
-			"description": "Liberas una explosión masiva en un {shape}, cayendo debilitado inmediatamente antes de que se inflija el daño. Las criaturas en el área deben realizar una {save}. Si tu Pokémon tiene al menos la mitad de sus puntos de golpe restantes, cualquier persona a su alcance recibe {dice} de daño de tipo {type} si falla, o la mitad si tiene éxito. Si a tu Pokémon le queda menos de la mitad de sus puntos de golpe, el daño se reduce a la mitad si falla la salvación, y a una cuarta parte si tiene éxito."
+			"description": "Liberas una explosión masiva en un {shape}, cayendo debilitado inmediatamente antes de que se inflija el daño. Las criaturas en el área deben realizar una {save}. Una criatura recibe {dice} de daño de tipo {type} si falla, o la mitad si tiene éxito. Si te queda menos de la mitad de tus puntos de golpe, el daño se reduce a la mitad."
 		},
 		{
 			"id": "shadow-ball",

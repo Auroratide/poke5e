@@ -1134,8 +1134,7 @@
 		},
 		{
 			"id": "explosion",
-			"name": "Explosão",
-			"description": "Você cria uma esfera de energia que concentra uma explosão devastadora. Escolha um alvo dentro do alcance e role um d20. Em um 20, a explosão acontece e todas as criaturas a até 5 pés desse ponto desmaiam. Em qualquer outro resultado, a explosão falha e o movimento não tem efeito. Se o nível do alvo for 10 acima do seu ou o SR dele for 15, este movimento falha automaticamente."
+			"name": "Explosão"
 		},
 		{
 			"id": "extrasensory",
@@ -2184,7 +2183,7 @@
 		{
 			"id": "misty-explosion",
 			"name": "Explosão Nebulosa",
-			"description": "Você libera uma explosão massiva em um {shape}, desmaiando imediatamente antes do dano ser causado. Criaturas na área devem fazer um {save} contra sua CD de Movimento. Se sua criatura tiver pelo menos metade dos pontos de vida restantes ou este movimento for usado em Misty Terrain, todos no alcance sofrem {dice} de dano {type} em uma falha, ou metade em um sucesso. Se sua criatura tiver menos da metade dos pontos de vida restantes e não estiver em Misty Terrain, o dano é reduzido pela metade em uma falha e para um quarto em um sucesso."
+			"description": "Você libera uma explosão massiva em um {shape}, desmaiando imediatamente antes do dano ser causado. Criaturas na área devem fazer um {save} contra sua CD de Movimento. Uma criatura sofre {dice} de dano {type} em uma falha, ou metade em um sucesso. Se sua criatura tiver menos da metade dos pontos de vida restantes e não estiver em Misty Terrain, o dano é reduzido pela metade."
 		},
 		{
 			"id": "misty-terrain",

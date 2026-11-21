@@ -6368,7 +6368,9 @@
 			"id": "explosion",
 			"name": "Explosion",
 			"type": "normal",
-			"power": [],
+			"power": [
+				"con"
+			],
 			"time": {
 				"unit": "action"
 			},
@@ -6376,15 +6378,36 @@
 			"duration": {
 				"unit": "instantaneous"
 			},
+			"dice": {
+				"class": "custom",
+				"modifier": "MOVE",
+				"type": "damage",
+				"tiers": [
+					"5d8",
+					"5d10",
+					"8d10",
+					"10d12"
+				]
+			},
 			"range": {
-				"type": "distance",
-				"value": 80,
+				"type": "self"
+			},
+			"save": {
+				"attribute": "dex"
+			},
+			"shape": {
+				"type": "emanation",
+				"value": 50,
 				"unit": "feet"
 			},
-			"description": "You create a sphere of energy that packs a concentrated and devastating explosion. Choose a target within range and roll a d20. On a 20, the explosion goes off and all creatures within 5 feet of that point faint. On any other roll, the explosion fails to go off and this move has no effect. If the target's level is 10 more than your own, or their SR is 15, this move automatically fails.",
+			"description": "You release an enormous explosion in a {shape}, fainting immediately before the damage is dealt. Creatures in the area must make a {save}. A creature takes {dice} {type} damage on a fail, or half as much on a success. If you have less than half your hit points left, then the damage is halved.",
 			"categories": [
 				"explosive"
-			]
+			],
+			"updated": {
+				"tag": "Updated",
+				"details": "Overhauled into a damaging emanation, similar to Self-Destruct."
+			}
 		},
 		{
 			"id": "extrasensory",
@@ -13444,7 +13467,7 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"description": "You release a massive explosion in a {shape}, fainting immediately before the damage is dealt. Creatures in the area must make a {save}. If your creature has at least half its hit points left or this move was used on Misty Terrain, anyone in range takes {dice} {type} damage on a fail, or half as much on a success. If your creature has less than half of its hit points left and was not on Misty Terrain, the damage is halved for a failed save, and quartered for a success.",
+			"description": "You release an enormous explosion in a {shape}, fainting immediately before the damage is dealt. Creatures in the area must make a {save}. A creature takes {dice} {type} damage on a fail, or half as much on a success. If you have less than half your hit points left and this move was not used on Misty Terrain, then the damage is halved.",
 			"categories": [
 				"explosive"
 			]
@@ -18489,7 +18512,7 @@
 			"save": {
 				"attribute": "dex"
 			},
-			"description": "You release a massive explosion in a {shape}, fainting immediately before the damage is dealt. Creatures in the area must make a {save}. If your creature has at least half its hit points left, anyone in range takes {dice} {type} damage on a fail, or half as much on a success. If your creature has less than half of its hit points left, the damage is halved for a failed save, and quartered for a success.",
+			"description": "You release an enormous explosion in a {shape}, fainting immediately before the damage is dealt. Creatures in the area must make a {save}. A creature takes {dice} {type} damage on a fail, or half as much on a success. If you have less than half your hit points left, then the damage is halved.",
 			"categories": [
 				"explosive"
 			]

@@ -26,6 +26,10 @@
 			"description": "Realizas una danza mística para motivarte. Mientras dure el efecto, duplica tu bonificador por competencia al realizar una tirada de ataque."
 		},
 		{
+			"id": "explosion",
+			"description": "Creas una esfera de energía que alberga una explosión concentrada y devastadora. Elige a un objetivo a tu alcance y lanza 1d20. Con un 20, la explosión se detona y todas las criaturas a 5 pies de ese punto caen debilitadas automáticamente. Con cualquier otro resultado, la explosión no llega a producirse y este movimiento no tiene efecto. Si el nivel del objetivo es 10 niveles superior al tuyo, o si su RE (Rango de Especie) es 15, este movimiento falla automáticamente."
+		},
+		{
 			"id": "fire-spin",
 			"description": "Invocas una plaga de diminutos insectos para atacar a una criatura durante varios turnos. Realiza un ataque a distancia contra un objetivo. Si impactas, inflige {dice} de daño de tipo {type} y el objetivo queda infestado por el enjambre. Mientras mantengas la concentración, el objetivo recibe 1d8 de daño de tipo {type} adicional al final de cada uno de sus siguientes tres turnos."
 		},
@@ -58,6 +62,10 @@
 			"description": "Cuando seas el objetivo de un ataque a distancia, usa tu reacción para recibir la mitad del daño infligido ahora y de cualquier ataque a distancia que te elija como objetivo hasta el comienzo de tu siguiente turno."
 		},
 		{
+			"id": "misty-explosion",
+			"description": "Desatas una explosión masiva en un {shape} y caes debilitado inmediatamente antes de que se inflija el daño. Las criaturas en el área deben realizar una {save}. Si te quedan al menos la mitad de tus puntos de golpe o si este movimiento se utiliza en Campo de Niebla, las criaturas al alcance reciben {dice} de daño de tipo {type} si fallan, o la mitad si la superan. Si te quedan menos de la mitad de tus puntos de golpe y no te encuentras en Campo de Niebla, el daño se reduce a la mitad si fallan la salvación, y a una cuarta parte si la superan."
+		},
+		{
 			"id": "psycho-cut",
 			"description": "Desgarras al objetivo con cuchillas formadas por poder {type}. Realiza un ataque a distancia contra un objetivo, infligiendo {dice} de daño de tipo Psíquico si impactas. Este movimiento logra un impacto crítico con tiradas naturales de 19 o 20."
 		},
@@ -72,6 +80,10 @@
 		{
 			"id": "roost",
 			"description": "Te posas en el suelo para descansar tu cuerpo. Al activarlo, tu velocidad de vuelo se reduce a cero y pierdes tu tipo Volador mientras permanezcas en el suelo. Al comienzo de tu próximo turno, si no has abandonado el suelo, recuperas {dice} puntos de salud."
+		},
+		{
+			"id": "self-destruct",
+			"description": "Liberas una explosión masiva en un {shape}, cayendo debilitado inmediatamente antes de que se inflija el daño. Las criaturas en el área deben realizar una {save}. Si tu Pokémon tiene al menos la mitad de sus puntos de golpe restantes, cualquier persona a su alcance recibe {dice} de daño de tipo {type} si falla, o la mitad si tiene éxito. Si a tu Pokémon le queda menos de la mitad de sus puntos de golpe, el daño se reduce a la mitad si falla la salvación, y a una cuarta parte si tiene éxito."
 		},
 		{
 			"id": "snore",
