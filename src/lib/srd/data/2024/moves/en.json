@@ -4412,7 +4412,9 @@
 			"shape": {
 				"type": "cylinder",
 				"value": 30,
-				"otherValues": [60],
+				"otherValues": [
+					60
+				],
 				"unit": "feet"
 			},
 			"description": "You stir up a massive storm of sharp diamonds in a {shape}, centered on a point in range. When a creature enters the area for the first time on a turn or starts its turn there, it takes {dice} {type} damage.\n\nYou do not take damage from the storm. For as long as you are in the storm's cylinder, your have +2 to AC.",
@@ -21703,7 +21705,12 @@
 			"higherLevels": "Your dance improves, granting you an additional sword mirage at each of levels 5, 10, and 17.",
 			"dice": {
 				"class": "custom",
-				"tiers": ["0", "0", "0", "0"],
+				"tiers": [
+					"0",
+					"0",
+					"0",
+					"0"
+				],
 				"modifier": "MOVE",
 				"type": "damage"
 			},
@@ -23103,17 +23110,20 @@
 			},
 			"pp": 5,
 			"duration": {
-				"unit": "minute",
-				"value": 1,
-				"concentration": true
+				"unit": "hour",
+				"value": 1
 			},
 			"range": {
 				"type": "distance",
-				"value": 50,
+				"value": 60,
 				"unit": "feet"
 			},
-			"description": "You attempt to morph into a near-exact copy of a creature in range. The base SR of the target must be able to be controlled by your trainer or the move fails. For the duration, you copy the target's type, ability scores, AC, skills, speeds, senses, abilities, and current moves. You retain your own feats, level, and HP (Changed CON does not impact your HP).",
-			"categories": []
+			"description": "You attempt to morph into a near-exact copy of a creature or object you can see in range. For the duration, you copy the target's type, ability scores, AC, skills, speeds, senses, abilities, and current moves. You retain your own feats, level, and HP. A change in CON does not impact your HP.\n\nIf you attempt to transform into a pokémon, the base SR of the target must be able to be controlled by your trainer or the move fails. If you attempt to transform into an object, the object must be able to fit within a 10-foot Cube.\n\nWhile transformed, you may use a bonus action to dismiss the transformation. Additionally, transformation automatically ends when you reach 0 HP or return to a pokéball.",
+			"categories": [],
+			"updated": {
+				"tag": "Updated",
+				"details": "Lasts longer without concentration, and can copy objects."
+			}
 		},
 		{
 			"id": "tri-attack",

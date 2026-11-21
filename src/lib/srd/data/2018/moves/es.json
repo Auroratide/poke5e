@@ -77,6 +77,10 @@
 		{
 			"id": "teleport",
 			"description": "Desapareces de la vista y reapareces en un punto desocupado a tu alcance. En batallas contra criaturas salvajes, este movimiento puede activarse para contar automáticamente como un único éxito en una prueba de Destreza grupal para huir."
+		},
+		{
+			"id": "transform",
+			"description": "Intentas transformarte en una copia casi exacta de una criatura a tu alcance. El RE base del objetivo debe poder ser controlado por tu entrenador o, de lo contrario, el movimiento falla. Durante la duración del efecto, copias el tipo, las puntuaciones de característica, las habilidades, las velocidades, los sentidos, las capacidades y los movimientos actuales del objetivo. Conservas tus propias dotes, tu nivel y tus puntos de golpe (el cambio en la Constitución no afecta a tus puntos de golpe actuales)."
 		}
 	]
 }
