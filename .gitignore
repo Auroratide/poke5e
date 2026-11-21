@@ -17,3 +17,8 @@ node_modules
 
 # Other
 /plans
+
+# AI
+# This codebase does not officially support any particular agents at this time
+/.claude
+CLAUDE.md
