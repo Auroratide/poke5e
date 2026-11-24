@@ -7222,7 +7222,7 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You flail about with a wild strike that increases in power the more injured you are. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. If you are below 50% of your maximum health, double the damage dice. If you are at 10% or below of your maximum health, triple the damage dice instead. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities.",
+			"description": "You flail about with a wild strike that increases in power the more injured you are. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. If you are below 50% of your maximum health, double the damage dice. If you are at 10% or below of your maximum health, triple the damage dice instead.",
 			"categories": [],
 			"updated": {
 				"tag": "Updated",
@@ -16153,7 +16153,7 @@
 				"value": 40,
 				"unit": "feet"
 			},
-			"description": "Psychic energy emerges from the ground in a {shape}, centered on you. Begininng at the end of your turn, for three rounds, all grounded creatures in the affected area are unable to use bonus actions. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from psychic-type moves activated inside the area.",
+			"description": "Psychic energy emerges from the ground in a {shape}, centered on you. Beginning at the end of your turn, for three rounds, all grounded creatures in the affected area are unable to use bonus actions. Grounded creatures are those that do not have a flying speed or Levitate, Magnet Rise, or similar ability. In addition, creatures may double their MOVE modifier on damage rolls from psychic-type moves activated inside the area.",
 			"categories": []
 		},
 		{
@@ -17246,7 +17246,7 @@
 			"attack": {
 				"scope": "melee"
 			},
-			"description": "You unleash an all out attack that is stronger the less HP you have. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. If you are below 50% of your maximum health, double the damage dice. If you are at 10% or below of your maximum health, triple the damage dice instead. The multiplier for this attack occurs before the multiplier for resistances or vulnerabilities.",
+			"description": "You unleash an all out attack that is stronger the less HP you have. Make a melee attack roll against a creature, doing {dice} {type} damage on a hit. If you are below 50% of your maximum health, double the damage dice. If you are at 10% or below of your maximum health, triple the damage dice instead.",
 			"categories": [],
 			"updated": {
 				"tag": "Updated",
@@ -23166,7 +23166,7 @@
 				"value": 60,
 				"unit": "feet"
 			},
-			"description": "You attempt to morph into a near-exact copy of a creature or object you can see in range. For the duration, you copy the target's type, ability scores, AC, skills, speeds, senses, abilities, and current moves. You retain your own feats, level, and HP. A change in CON does not impact your HP.\n\nIf you attempt to transform into a pokémon, the base SR of the target must be able to be controlled by your trainer or the move fails. If you attempt to transform into an object, the object must be able to fit within a 10-foot Cube.\n\nWhile transformed, you may use a bonus action to dismiss the transformation. Additionally, transformation automatically ends when you reach 0 HP or return to a pokéball.",
+			"description": "You attempt to morph into a near-exact copy of a creature or object you can see in range. For the duration, you copy the target's type, ability scores, AC, skills, save proficiencies, speeds, senses, size, abilities, and current moves. You retain your own feats, level, and HP. A change in CON does not impact your HP.\n\nIf you attempt to transform into a pokémon, the base SR of the target must be able to be controlled by your trainer or the move fails. If you attempt to transform into an object, the object must be able to fit within a 10-foot Cube.\n\nWhile transformed, you may use a bonus action to dismiss the transformation. Additionally, transformation automatically ends when you reach 0 HP or return to a pokéball.",
 			"categories": [],
 			"updated": {
 				"tag": "Updated",
