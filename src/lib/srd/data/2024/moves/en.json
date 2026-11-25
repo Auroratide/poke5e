@@ -17071,7 +17071,7 @@
 			"save": {
 				"attribute": "con"
 			},
-			"description": "You sing an ancient song that damages creatures in range with the chance to put them asleep. Any creature within 20 feet of you must make a {save}, taking {dice} {type} damage on a failure, or half as much ona success. Any creature that fails the save by 5 or more is put to sleep.",
+			"description": "You sing an ancient song that damages creatures in range with the chance to put them asleep. Any creature within 20 feet of you must make a {save}, taking {dice} {type} damage on a failure, or half as much on a success. Any creature that fails the save by 5 or more is put to sleep.",
 			"categories": [
 				"sound"
 			]
