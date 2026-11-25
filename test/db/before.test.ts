@@ -1450,6 +1450,78 @@ test("getting feats for all of a trainer's pokemon at once", async () => {
 	await cleanup()
 })
 
+const newTrainer = (name: string) => call<{
+	ret_id: string,
+	ret_read_key: string,
+	ret_write_key: string,
+}>("new_trainer", { ...Iris(), _name: name })
+
+const deleteTrainer = (trainer: { ret_id: string, ret_write_key: string }) => call("delete_trainer", {
+	_write_key: trainer.ret_write_key,
+	_id: trainer.ret_id,
+})
+
+const UNKNOWN_READ_KEY = "000000000000"
+
+test("getting several trainers at once by read key", async () => {
+	const iris = await newTrainer("Iris")
+	const renibel = await newTrainer("Renibel")
+	const notRequested = await newTrainer("Not Requested")
+
+	const trainers = await callAll<any>("get_trainers", {
+		_read_keys: [iris.ret_read_key, renibel.ret_read_key, UNKNOWN_READ_KEY],
+	})
+
+	expect(trainers).toHaveLength(2)
+	expect(trainers.map((it) => it.read_key).sort()).toEqual([iris.ret_read_key, renibel.ret_read_key].sort())
+	expect(trainers.find((it) => it.read_key === notRequested.ret_read_key)).toBeUndefined()
+
+	// Rows have the same shape as get_trainer
+	const irisInfo = await call<any>("get_trainer", { _read_key: iris.ret_read_key })
+	const renibelInfo = await call<any>("get_trainer", { _read_key: renibel.ret_read_key })
+	expect(trainers.find((it) => it.read_key === iris.ret_read_key)).toEqual(irisInfo)
+	expect(trainers.find((it) => it.read_key === renibel.ret_read_key)).toEqual(renibelInfo)
+
+	// Cleanup
+	await deleteTrainer(iris)
+	await deleteTrainer(renibel)
+	await deleteTrainer(notRequested)
+})
+
+test("getting trainers with a duplicated read key returns the trainer once", async () => {
+	const iris = await newTrainer("Iris")
+
+	const trainers = await callAll<any>("get_trainers", {
+		_read_keys: [iris.ret_read_key, iris.ret_read_key],
+	})
+
+	expect(trainers).toHaveLength(1)
+	expect(trainers[0].read_key).toEqual(iris.ret_read_key)
+
+	// Cleanup
+	await deleteTrainer(iris)
+})
+
+test("getting trainers is limited to N read keys per call", async () => {
+	const LIMIT = 200
+
+	const iris = await newTrainer("Iris")
+
+	// allowed
+	const atLimit = await callAll<any>("get_trainers", {
+		_read_keys: [iris.ret_read_key, ...Array(LIMIT - 1).fill(UNKNOWN_READ_KEY)],
+	})
+	expect(atLimit.map((it) => it.read_key)).toEqual([iris.ret_read_key])
+
+	// rejected
+	await expect(callAll<any>("get_trainers", {
+		_read_keys: [iris.ret_read_key, ...Array(LIMIT).fill(UNKNOWN_READ_KEY)],
+	})).rejects.toThrow()
+
+	// Cleanup
+	await deleteTrainer(iris)
+})
+
 test("updating fakemon", async () => {
 	const {
 		ret_id: fakemonId,

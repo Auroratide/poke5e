@@ -1,5 +1,5 @@
-import { expect, test } from "vitest"
-import { call, callAll, expectError, supabase } from "./supabase"
+import { describe, expect, test } from "vitest"
+import { call, callAll, deleteUser, expectError, newUser, supabase, type TestUser } from "./supabase"
 
 test("updating trainers", async () => {
 	const {
@@ -2767,6 +2767,284 @@ test("reporting errors", async () => {
 	})
 
 	expect(errorId).toBeDefined()
+})
+
+describe("account resources", () => {
+	// Must match what is in the RPCs
+	const PAGE_SIZE = 200
+	const MAX_ADDS_PER_CALL = 200
+
+	type ResourceKind = "trainer" | "fakemon"
+	type Resource = {
+		kind: ResourceKind,
+		read_key: string,
+		write_key: string | null,
+	}
+	type StoredResource = Omit<Resource, "kind">
+
+	const fakeKey = (length = 12) => crypto.randomUUID().replaceAll("-", "").slice(0, length)
+	const trainer = (writeKey: string | null = fakeKey(16)): Resource =>
+		({ kind: "trainer", read_key: fakeKey(), write_key: writeKey })
+	const fakemon = (writeKey: string | null = fakeKey(16)): Resource =>
+		({ kind: "fakemon", read_key: fakeKey(), write_key: writeKey })
+	const stored = ({ read_key, write_key }: Resource): StoredResource => ({ read_key, write_key })
+
+	const rpc = async <T = unknown>(user: TestUser, name: string, args: object = {}): Promise<T> => {
+		const { data, error } = await user.client.rpc(name, args)
+		if (error) throw new Error(`Calling ${name} resulted in error: ${error.message}`)
+		return data as T
+	}
+
+	const getPage = (user: TestUser, kind: ResourceKind, offset?: number) =>
+		rpc<StoredResource[]>(user, "get_my_resources", offset == null ? { _kind: kind } : { _kind: kind, _offset: offset })
+	const getAll = async (user: TestUser, kind: ResourceKind) => {
+		const all: StoredResource[] = []
+		let page: StoredResource[]
+		do {
+			page = await getPage(user, kind, all.length)
+			all.push(...page)
+		} while (page.length === PAGE_SIZE)
+		return all
+	}
+	const addMine = (user: TestUser, resources: Resource[]) =>
+		rpc(user, "add_my_resources", { _resources: resources })
+	const removeMine = (user: TestUser, resource: Pick<Resource, "kind" | "read_key">) =>
+		rpc(user, "remove_my_resource", { _kind: resource.kind, _read_key: resource.read_key })
+	const reorderMine = (user: TestUser, kind: ResourceKind, readKeys: string[]) =>
+		rpc(user, "reorder_my_resources", { _kind: kind, _read_keys: readKeys })
+
+	test("signed out users cannot use account resources", async () => {
+		const PERMISSION_DENIED = "42501"
+		const resource = trainer()
+
+		await expectError(PERMISSION_DENIED, async (client) => client.rpc("get_my_resources", { _kind: resource.kind }))
+		await expectError(PERMISSION_DENIED, async (client) => client.rpc("add_my_resources", { _resources: [resource] }))
+		await expectError(PERMISSION_DENIED, async (client) => client.rpc("remove_my_resource", { _kind: resource.kind, _read_key: resource.read_key }))
+		await expectError(PERMISSION_DENIED, async (client) => client.rpc("reorder_my_resources", { _kind: resource.kind, _read_keys: [resource.read_key] }))
+	})
+
+	test("no direct access to account resources", async () => {
+		const UNAUTHORIZED_SCHEMA = "PGRST106"
+		const user = await newUser()
+
+		await expectError(UNAUTHORIZED_SCHEMA, async () =>
+			user.client.schema("private").from("user_resources").select(),
+		)
+
+		await deleteUser(user)
+	})
+
+	test("adding and getting account resources", async () => {
+		const user = await newUser()
+
+		expect(await getPage(user, "trainer")).toEqual([])
+		expect(await getPage(user, "fakemon")).toEqual([])
+
+		const iris = trainer()
+		const renibel = trainer()
+		const readOnly = trainer(null)
+		const drakeon = fakemon()
+
+		await addMine(user, [iris, drakeon, renibel])
+		await addMine(user, [readOnly])
+
+		// Each kind is fetched separately, in the order it was added
+		expect(await getPage(user, "trainer")).toEqual([iris, renibel, readOnly].map(stored))
+		expect(await getPage(user, "fakemon")).toEqual([drakeon].map(stored))
+
+		// Adding nothing is harmless
+		await addMine(user, [])
+		expect(await getPage(user, "trainer")).toHaveLength(3)
+
+		await deleteUser(user)
+	})
+
+	test("adding the same resource again merges rather than duplicates", async () => {
+		const user = await newUser()
+
+		const iris = trainer()
+		const renibel = trainer()
+		const readOnly = trainer(null)
+
+		await addMine(user, [iris, renibel, readOnly])
+
+		// A missing write key never erases a known one, and position is kept
+		await addMine(user, [{ ...iris, write_key: null }])
+
+		// A newly learned write key fills in a missing one
+		const learnedWriteKey = fakeKey(16)
+		await addMine(user, [{ ...readOnly, write_key: learnedWriteKey }])
+
+		// Duplicates within a single call are collapsed
+		const drakeon = fakemon()
+		await addMine(user, [drakeon, drakeon])
+
+		expect(await getPage(user, "trainer")).toEqual([
+			stored(iris),
+			stored(renibel),
+			{ read_key: readOnly.read_key, write_key: learnedWriteKey },
+		])
+		expect(await getPage(user, "fakemon")).toEqual([drakeon].map(stored))
+
+		await deleteUser(user)
+	})
+
+	test("invalid resources are rejected", async () => {
+		const user = await newUser()
+
+		await expect(addMine(user, [{ ...trainer(), kind: "pokemon" as ResourceKind }])).rejects.toThrow()
+		await expect(addMine(user, [{ ...trainer(), read_key: null as unknown as string }])).rejects.toThrow()
+
+		// Rejected calls add nothing, even the valid entries
+		await expect(addMine(user, [trainer(), { ...trainer(), kind: "pokemon" as ResourceKind }])).rejects.toThrow()
+		expect(await getPage(user, "trainer")).toEqual([])
+
+		await deleteUser(user)
+	})
+
+	test("removing account resources", async () => {
+		const user = await newUser()
+
+		const iris = trainer()
+		const renibel = trainer()
+
+		// Same read key as a trainer, but a different kind
+		const drakeon: Resource = { ...fakemon(), read_key: iris.read_key }
+
+		await addMine(user, [iris, renibel, drakeon])
+
+		await removeMine(user, iris)
+
+		expect(await getPage(user, "trainer")).toEqual([renibel].map(stored))
+		expect(await getPage(user, "fakemon")).toEqual([drakeon].map(stored))
+
+		// Removing something not in the account is harmless
+		await removeMine(user, trainer())
+		await removeMine(user, iris)
+		expect(await getPage(user, "trainer")).toEqual([renibel].map(stored))
+
+		await deleteUser(user)
+	})
+
+	test("reordering account resources", async () => {
+		const user = await newUser()
+
+		const a = trainer()
+		const b = trainer()
+		const c = trainer()
+		const d = trainer()
+		const drakeon = fakemon()
+		const venustoise = fakemon()
+
+		await addMine(user, [a, b, c, d, drakeon, venustoise])
+
+		// Unlisted resources keep their relative order after the listed ones,
+		// and unknown keys are ignored
+		await reorderMine(user, "trainer", [c, a, trainer()].map((it) => it.read_key))
+		expect(await getPage(user, "trainer")).toEqual([c, a, b, d].map(stored))
+
+		// Other kinds are unaffected
+		expect(await getPage(user, "fakemon")).toEqual([drakeon, venustoise].map(stored))
+
+		await reorderMine(user, "fakemon", [venustoise.read_key, drakeon.read_key])
+		expect(await getPage(user, "fakemon")).toEqual([venustoise, drakeon].map(stored))
+		expect(await getPage(user, "trainer")).toEqual([c, a, b, d].map(stored))
+
+		// Newly added resources go to the end
+		const e = trainer()
+		await addMine(user, [e])
+		expect(await getPage(user, "trainer")).toEqual([c, a, b, d, e].map(stored))
+
+		await deleteUser(user)
+	})
+
+	test("users cannot see or change each other's resources", async () => {
+		const alice = await newUser()
+		const bob = await newUser()
+
+		const iris = trainer()
+		const renibel = trainer()
+		await addMine(alice, [iris, renibel])
+
+		expect(await getPage(bob, "trainer")).toEqual([])
+
+		await removeMine(bob, iris)
+		await reorderMine(bob, "trainer", [renibel.read_key, iris.read_key])
+		expect(await getPage(alice, "trainer")).toEqual([iris, renibel].map(stored))
+
+		// The same trainer can be in more than one account (e.g. shared by read key)
+		await addMine(bob, [{ ...iris, write_key: null }])
+		expect(await getPage(bob, "trainer")).toEqual([{ read_key: iris.read_key, write_key: null }])
+		expect(await getPage(alice, "trainer")).toEqual([iris, renibel].map(stored))
+
+		await removeMine(bob, iris)
+		expect(await getPage(alice, "trainer")).toEqual([iris, renibel].map(stored))
+
+		await deleteUser(alice)
+		await deleteUser(bob)
+	})
+
+	test("adding is limited to N resources per call", async () => {
+		const user = await newUser()
+
+		// allowed
+		await addMine(user, [
+			...Array.from({ length: MAX_ADDS_PER_CALL - 1 }, () => trainer()),
+			fakemon(),
+		])
+		expect(await getAll(user, "trainer")).toHaveLength(MAX_ADDS_PER_CALL - 1)
+
+		// rejected, and nothing is added
+		await expect(addMine(user, Array.from({ length: MAX_ADDS_PER_CALL + 1 }, () => trainer()))).rejects.toThrow()
+		expect(await getAll(user, "trainer")).toHaveLength(MAX_ADDS_PER_CALL - 1)
+
+		// There is no limit on the account as a whole
+		await addMine(user, Array.from({ length: MAX_ADDS_PER_CALL }, () => trainer()))
+		expect(await getAll(user, "trainer")).toHaveLength(2 * MAX_ADDS_PER_CALL - 1)
+
+		await deleteUser(user)
+	})
+
+	test("getting account resources is paginated N at a time", async () => {
+		const user = await newUser()
+
+		const TOTAL = 2 * PAGE_SIZE + 50
+		const trainers = Array.from({ length: TOTAL }, () => trainer())
+		const drakeon = fakemon()
+
+		for (let i = 0; i < TOTAL; i += MAX_ADDS_PER_CALL) {
+			await addMine(user, trainers.slice(i, i + MAX_ADDS_PER_CALL))
+		}
+		await addMine(user, [drakeon])
+
+		// Offset defaults to the start
+		expect(await getPage(user, "trainer")).toEqual(trainers.slice(0, PAGE_SIZE).map(stored))
+
+		expect(await getPage(user, "trainer", 0)).toEqual(trainers.slice(0, PAGE_SIZE).map(stored))
+		expect(await getPage(user, "trainer", PAGE_SIZE)).toEqual(trainers.slice(PAGE_SIZE, 2 * PAGE_SIZE).map(stored))
+		expect(await getPage(user, "trainer", 2 * PAGE_SIZE)).toEqual(trainers.slice(2 * PAGE_SIZE).map(stored))
+		expect(await getPage(user, "trainer", TOTAL)).toEqual([])
+
+		// Other kinds are paginated separately
+		expect(await getPage(user, "fakemon")).toEqual([drakeon].map(stored))
+
+		// Reordering is not limited, so the whole list can be reordered at once
+		const reversed = [...trainers].reverse()
+		await reorderMine(user, "trainer", reversed.map((it) => it.read_key))
+		expect(await getAll(user, "trainer")).toEqual(reversed.map(stored))
+
+		await deleteUser(user)
+	})
+
+	test("deleting a user removes their resources", async () => {
+		const user = await newUser()
+
+		await addMine(user, [trainer(), fakemon()])
+		await deleteUser(user)
+
+		expect(await getPage(user, "trainer")).toEqual([])
+		expect(await getPage(user, "fakemon")).toEqual([])
+	})
 })
 
 export const Iris = () => ({
