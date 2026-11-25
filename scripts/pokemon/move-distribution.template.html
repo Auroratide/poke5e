@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Move Level Spread</title>
+<title>Move Level Spread v2</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -14,9 +14,10 @@
 		--fg: #15171c;
 		--fg-2: #4d5260;
 		--fg-3: #7b8090;
-		--p5e: #c3c7d1;       /* wide bar, move existed in 2018 */
-		--p5e-new: #eb6834;   /* wide bar, move added in 2024 */
-		--game: #2a78d6;      /* thin bar, most recent game */
+		--p5e: #c3c7d1;       /* wide bar, existing move at its v1 level */
+		--p5e-new: #eb6834;   /* wide bar, move new to p5e */
+		--p5e-moved: #2f9e5b; /* wide bar, existing move whose level changed */
+		--game: #2a78d6;      /* thin bar, game level */
 		--focus: #2a78d6;
 		--font-ui: "Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
 		--font-data: "IBM Plex Mono", ui-monospace, Menlo, monospace;
@@ -25,14 +26,14 @@
 		:root:not([data-theme="light"]) {
 			--bg: #121418; --surface: #1a1c21; --line: #2c3038; --grid: #252830;
 			--fg: #f2f3f5; --fg-2: #c0c4cc; --fg-3: #8a8f9c;
-			--p5e: #4a4f5c; --p5e-new: #d95926; --game: #3987e5; --focus: #3987e5;
+			--p5e: #4a4f5c; --p5e-new: #d95926; --p5e-moved: #3cb06c; --game: #3987e5; --focus: #3987e5;
 			color-scheme: dark;
 		}
 	}
 	:root[data-theme="dark"] {
 		--bg: #121418; --surface: #1a1c21; --line: #2c3038; --grid: #252830;
 		--fg: #f2f3f5; --fg-2: #c0c4cc; --fg-3: #8a8f9c;
-		--p5e: #4a4f5c; --p5e-new: #d95926; --game: #3987e5; --focus: #3987e5;
+		--p5e: #4a4f5c; --p5e-new: #d95926; --p5e-moved: #3cb06c; --game: #3987e5; --focus: #3987e5;
 		color-scheme: dark;
 	}
 
@@ -106,6 +107,7 @@
 	svg .divider { stroke: var(--fg-3); stroke-width: 1.2; stroke-dasharray: 3 3; }
 	svg .p5e { fill: var(--p5e); }
 	svg .p5e.new { fill: var(--p5e-new); }
+	svg .p5e.moved { fill: var(--p5e-moved); }
 	svg .game { fill: var(--game); stroke: var(--surface); stroke-width: 1; }
 	svg .hit { fill: transparent; cursor: crosshair; }
 	svg .hit:hover { fill: var(--fg); fill-opacity: 0.06; }
@@ -126,23 +128,27 @@
 	}
 	.tip strong { font-weight: 600; }
 	.tip .row { display: flex; gap: 8px; align-items: center; color: var(--fg-2); font-family: var(--font-data); font-size: 12px; }
+	.tip .reason { margin-top: 3px; color: var(--fg-2); font-size: 13px; font-style: italic; }
+	.tip .tag.moved { color: var(--p5e-moved); }
 	.tip .tag { font-family: var(--font-ui); font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--p5e-new); }
 </style>
 <!-- body -->
 <div class="page">
 	<header class="bar">
-		<h1>Move Level Spread</h1>
+		<h1>Move Level Spread v2</h1>
 		<span class="summary" id="summary"></span>
 		<div class="controls">
 			<input type="search" id="search" placeholder="Filter by Pokémon" aria-label="Filter by Pokémon">
 			<label><input type="checkbox" id="only-new"> Only Pokémon with new moves</label>
+			<label><input type="checkbox" id="only-moved"> Only Pokémon with moved moves</label>
 		</div>
 	</header>
 
 	<div class="legend">
-		<span><i class="swatch" style="background: var(--p5e)"></i> P5e level, in 2018</span>
-		<span><i class="swatch" style="background: var(--p5e-new)"></i> P5e level, new in 2024</span>
-		<span><i class="swatch thin" style="background: var(--game)"></i> Most recent game level, scaled so the pokemon's highest game level = 20</span>
+		<span><i class="swatch" style="background: var(--p5e)"></i> v2 level, unchanged from v1</span>
+		<span><i class="swatch" style="background: var(--p5e-moved)"></i> v2 level, moved from its v1 level</span>
+		<span><i class="swatch" style="background: var(--p5e-new)"></i> v2 level, new move</span>
+		<span><i class="swatch thin" style="background: var(--game)"></i> Game level, scaled so the pokemon's highest game level = 20</span>
 		<span><i class="swatch rule"></i> End of Start moves (drawn at Min Level)</span>
 	</div>
 
@@ -154,6 +160,11 @@
 
 <script>
 	const DATA = /*DATA*/null
+	const REASONS = /*REASONS*/null
+	// Move tuple: [move, v2 level (0 = Start), game level or null, status, v1 level or null, reason index or null]
+	const KEPT = 0, NEW = 1, MOVED = 2
+	const STATUS_CLASS = { [KEPT]: "", [NEW]: " new", [MOVED]: " moved" }
+	const STATUS_VAR = { [KEPT]: "--p5e", [NEW]: "--p5e-new", [MOVED]: "--p5e-moved" }
 
 	const W = 360, H = 150
 	const PAD = { left: 22, right: 4, top: 6, bottom: 6 }
@@ -181,10 +192,10 @@
 			parts.push(`<text class="tick" x="${PAD.left - 4}" y="${y(t) + 3}" text-anchor="end">${t}</text>`)
 		}
 
-		p.moves.forEach(([, level, gameLevel, , isNew], i) => {
+		p.moves.forEach(([, level, gameLevel, status], i) => {
 			const cx = PAD.left + slot * i + slot / 2
 			const p5eValue = level === 0 ? p.minLevel : level
-			parts.push(`<rect class="p5e${isNew ? " new" : ""}" x="${r(cx - wide / 2)}" y="${r(y(p5eValue))}" width="${r(wide)}" height="${r(y(0) - y(p5eValue))}" rx="1.5"/>`)
+			parts.push(`<rect class="p5e${STATUS_CLASS[status]}" x="${r(cx - wide / 2)}" y="${r(y(p5eValue))}" width="${r(wide)}" height="${r(y(0) - y(p5eValue))}" rx="1.5"/>`)
 
 			if (gameLevel != null && p.gameMax) {
 				const gameValue = gameLevel / p.gameMax * MAX
@@ -233,16 +244,18 @@
 	const cards = [...grid.children]
 
 	const totalMoves = DATA.reduce((sum, p) => sum + p.moves.length, 0)
-	const newMoves = DATA.reduce((sum, p) => sum + p.moves.filter((m) => m[4]).length, 0)
+	const newMoves = DATA.reduce((sum, p) => sum + p.moves.filter((m) => m[3] === NEW).length, 0)
+	const movedMoves = DATA.reduce((sum, p) => sum + p.moves.filter((m) => m[3] === MOVED).length, 0)
 	const summary = document.getElementById("summary")
 	const setSummary = (shown) => {
-		summary.textContent = `${shown} of ${DATA.length} Pokémon · ${totalMoves.toLocaleString()} level-up moves, ${newMoves.toLocaleString()} new in 2024`
+		summary.textContent = `${shown} of ${DATA.length} Pokémon · ${totalMoves.toLocaleString()} level-up moves, ${newMoves.toLocaleString()} new, ${movedMoves.toLocaleString()} moved`
 	}
 	setSummary(DATA.length)
 
 	// Filters
 	const search = document.getElementById("search")
 	const onlyNew = document.getElementById("only-new")
+	const onlyMoved = document.getElementById("only-moved")
 	const empty = document.getElementById("empty")
 	function applyFilters() {
 		const q = search.value.trim().toLowerCase()
@@ -250,7 +263,8 @@
 		cards.forEach((el, i) => {
 			const p = DATA[i]
 			const match = (q === "" || p.name.toLowerCase().includes(q) || p.id.includes(q) || String(p.number) === q)
-				&& (!onlyNew.checked || p.moves.some((m) => m[4]))
+				&& (!onlyNew.checked || p.moves.some((m) => m[3] === NEW))
+				&& (!onlyMoved.checked || p.moves.some((m) => m[3] === MOVED))
 			el.hidden = !match
 			if (match) shown++
 		})
@@ -259,6 +273,7 @@
 	}
 	search.addEventListener("input", applyFilters)
 	onlyNew.addEventListener("change", applyFilters)
+	onlyMoved.addEventListener("change", applyFilters)
 
 	// Tooltip
 	const tip = document.getElementById("tip")
@@ -266,16 +281,19 @@
 		const hit = e.target.closest?.(".hit")
 		if (!hit) return
 		const p = DATA[hit.dataset.p]
-		const [move, level, gameLevel, game, isNew] = p.moves[hit.dataset.m]
-		const p5e = level === 0 ? `Start (Min Lv ${p.minLevel})` : `Lv ${level}`
+		const [move, level, gameLevel, status, v1Level, reason] = p.moves[hit.dataset.m]
+		const p5eText = (l) => l === 0 ? `Start (Min Lv ${p.minLevel})` : `Lv ${l}`
 		const gameText = gameLevel == null
 			? "Not learned by level-up in the games"
 			: gameLevel === 0
-				? `On evolution in ${titleCase(game)}`
-				: `Lv ${gameLevel} of ${p.gameMax} in ${titleCase(game)} (scaled ${r(gameLevel / p.gameMax * MAX)})`
-		tip.innerHTML = `<strong>${esc(titleCase(move))}</strong>${isNew ? ` <span class="tag">New</span>` : ""}
-			<div class="row"><i class="swatch" style="background: var(${isNew ? "--p5e-new" : "--p5e"})"></i>P5e ${p5e}</div>
-			<div class="row"><i class="swatch thin" style="background: var(--game)"></i>${esc(gameText)}</div>`
+				? "On evolution in the games"
+				: `Game Lv ${gameLevel} of ${p.gameMax} (scaled ${r(gameLevel / p.gameMax * MAX)})`
+		const tag = status === NEW ? ` <span class="tag">New</span>` : status === MOVED ? ` <span class="tag moved">Moved</span>` : ""
+		tip.innerHTML = `<strong>${esc(titleCase(move))}</strong>${tag}
+			<div class="row"><i class="swatch" style="background: var(${STATUS_VAR[status]})"></i>v2 ${p5eText(level)}</div>
+			${status === MOVED ? `<div class="row"><i class="swatch" style="background: var(--p5e)"></i>v1 ${p5eText(v1Level)}</div>` : ""}
+			<div class="row"><i class="swatch thin" style="background: var(--game)"></i>${esc(gameText)}</div>
+			${reason != null ? `<div class="reason">${esc(REASONS[reason])}</div>` : ""}`
 		tip.hidden = false
 	})
 	grid.addEventListener("pointermove", (e) => {
