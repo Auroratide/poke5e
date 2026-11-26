@@ -1,22 +1,18 @@
+/**
+ * Builds move-distribution.html, which is an analysis of moves as they are distributed.
+ * This shows moves added since gen 7, and compares them with when they were learned
+ * (relatively) in P5e.
+ */
+
 import path from "node:path"
 import fs from "node:fs/promises"
 import { getPokemonSrd } from "./files.ts"
 import { superconsole } from "../superconsole.ts"
 
-/**
- * Builds move-distribution.html, a page with one bar graph per pokemon to visualize how level-up moves are distributed
- * in the audited (v2) movesets from move-matrix-REVISED.csv.
- *
- * Each move in the pokemon's v2 moveset (ordered by v2 level) gets two overlaid bars:
- * - A wide bar for the v2 proposed level. Start moves use the pokemon's Min Level.
- *   Moves new to pokemon 5e (Poke5e Level = -1) are orange; existing moves whose level changed are green.
- * - A thin bar for the Game Level from the CSV, relative to the pokemon's highest game level in the CSV, scaled to 20.
- *
- * Two copies are written: a page fragment in the cache folder (the format claude.ai artifacts expect),
- * and a full HTML document in the static folder so it is served with the site for sharing.
- */
-
 const CACHE_FOLDER = path.join(import.meta.dirname, "cache")
+// contains the original levels, which are based off of the LATEST GAME LEARNED
+const MATRIX_PATH = path.join(CACHE_FOLDER, "move-matrix.csv")
+// NOTE: contains a different set of mainline levels (earliest instead of latest), do not use
 const REVISED_PATH = path.join(CACHE_FOLDER, "move-matrix-REVISED.csv")
 const TEMPLATE_PATH = path.join(import.meta.dirname, "move-distribution.template.html")
 const FRAGMENT_PATH = path.join(CACHE_FOLDER, "move-distribution.html")
@@ -34,9 +30,9 @@ const CSV_TO_SRD_ID: Record<string, string> = {
 const Status = { Kept: 0, New: 1, Moved: 2 } as const
 type Status = typeof Status[keyof typeof Status]
 
-// Compact so the embedded data stays small:
-// [move, v2 level (0 = Start), game level or null, status, v1 level or null (when moved), index into REASONS or null]
-type ChartMove = [string, number, number | null, Status, number | null, number | null]
+type ChartMove = [string, number, number | null, string | null, Status, number | null, number | null]
+
+type GameLearn = { game: string, level: number }
 
 type ChartPokemon = {
 	id: string,
@@ -51,7 +47,6 @@ type RevisedRow = {
 	pokemon: string,
 	move: string,
 	v1: number,
-	game: number | null,
 	v2: number,
 	reason: string,
 }
@@ -87,20 +82,43 @@ async function getRevisedRows(): Promise<RevisedRow[]> {
 		if (i < 0) throw new Error(`Missing column "${name}" in ${REVISED_PATH}`)
 		return i
 	}
-	const [pokemonCol, moveCol, v1Col, gameCol, v2Col, reasonCol] = ["pokémon", "move", "Poke5e Level", "Game Level", "v2 Proposed Level", "v2_Reason"].map(col)
+	const [pokemonCol, moveCol, v1Col, v2Col, reasonCol] = ["pokémon", "move", "Poke5e Level", "v2 Proposed Level", "v2_Reason"].map(col)
 
 	return lines.map((cells) => ({
 		pokemon: CSV_TO_SRD_ID[cells[pokemonCol]] ?? cells[pokemonCol],
 		move: cells[moveCol],
 		v1: Number(cells[v1Col]),
-		game: /^\d+$/.test(cells[gameCol]) ? Number(cells[gameCol]) : null,
 		v2: Number(cells[v2Col]),
 		reason: cells[reasonCol]?.trim() ?? "",
 	}))
 }
 
+// key is `${pokemon}:${move}`; only level-up rows from the games
+async function getGameLevels(): Promise<Map<string, GameLearn>> {
+	const raw = await fs.readFile(MATRIX_PATH, { encoding: "utf-8" })
+	const [header, ...lines] = raw.trim().split("\n")
+	const columns = header.split(",")
+	const [pokemonCol, moveCol, gameCol, levelCol] = ["pokemon id", "move id", "most recent game", "most recent level learned"].map((name) => columns.indexOf(name))
+
+	const result = new Map<string, GameLearn>()
+	for (const line of lines) {
+		const cells = line.split(",")
+		if (!/^\d+$/.test(cells[levelCol])) continue
+		result.set(`${cells[pokemonCol]}:${cells[moveCol]}`, { game: cells[gameCol], level: Number(cells[levelCol]) })
+	}
+
+	return result
+}
+
 async function main() {
-	const [srd, rows] = await Promise.all([getPokemonSrd("2024"), getRevisedRows()])
+	const [srd, rows, gameLevels] = await Promise.all([getPokemonSrd("2024"), getRevisedRows(), getGameLevels()])
+
+	// The highest level the pokemon learns anything at in its games, including moves pokemon 5e does not use
+	const gameMax = new Map<string, number>()
+	for (const [k, { level }] of gameLevels) {
+		const pokemon = k.split(":")[0]
+		gameMax.set(pokemon, Math.max(gameMax.get(pokemon) ?? 0, level))
+	}
 
 	const byPokemon = new Map<string, RevisedRow[]>()
 	for (const row of rows) {
@@ -121,16 +139,16 @@ async function main() {
 	const data: ChartPokemon[] = srd.filter((pokemon) => byPokemon.has(pokemon.id)).map((pokemon) => {
 		// Stable sort keeps the CSV's order within a level
 		const moves = [...byPokemon.get(pokemon.id)!].sort((a, b) => a.v2 - b.v2)
-		const gameLevels = moves.map((it) => it.game).filter((it) => it != null)
 		return {
 			id: pokemon.id,
 			name: pokemon.name,
 			number: pokemon.number,
 			minLevel: pokemon.minLevel,
-			gameMax: gameLevels.length > 0 ? Math.max(...gameLevels) : null,
+			gameMax: gameMax.get(pokemon.id) ?? null,
 			moves: moves.map((it): ChartMove => {
 				const status = it.v1 < 0 ? Status.New : it.v1 !== it.v2 ? Status.Moved : Status.Kept
-				return [it.move, it.v2, it.game, status, status === Status.Moved ? it.v1 : null, reasonIndex(it.reason)]
+				const game = gameLevels.get(`${pokemon.id}:${it.move}`)
+				return [it.move, it.v2, game?.level ?? null, game?.game ?? null, status, status === Status.Moved ? it.v1 : null, reasonIndex(it.reason)]
 			}),
 		}
 	})

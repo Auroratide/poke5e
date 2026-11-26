@@ -17,7 +17,7 @@
 		--p5e: #c3c7d1;       /* wide bar, existing move at its v1 level */
 		--p5e-new: #eb6834;   /* wide bar, move new to p5e */
 		--p5e-moved: #2f9e5b; /* wide bar, existing move whose level changed */
-		--game: #2a78d6;      /* thin bar, game level */
+		--game: #2a78d6;      /* thin bar, most recent game */
 		--focus: #2a78d6;
 		--font-ui: "Barlow Semi Condensed", "Arial Narrow", system-ui, sans-serif;
 		--font-data: "IBM Plex Mono", ui-monospace, Menlo, monospace;
@@ -148,7 +148,7 @@
 		<span><i class="swatch" style="background: var(--p5e)"></i> v2 level, unchanged from v1</span>
 		<span><i class="swatch" style="background: var(--p5e-moved)"></i> v2 level, moved from its v1 level</span>
 		<span><i class="swatch" style="background: var(--p5e-new)"></i> v2 level, new move</span>
-		<span><i class="swatch thin" style="background: var(--game)"></i> Game level, scaled so the pokemon's highest game level = 20</span>
+		<span><i class="swatch thin" style="background: var(--game)"></i> Most recent game level, scaled so the pokemon's highest game level = 20</span>
 		<span><i class="swatch rule"></i> End of Start moves (drawn at Min Level)</span>
 	</div>
 
@@ -161,7 +161,7 @@
 <script>
 	const DATA = /*DATA*/null
 	const REASONS = /*REASONS*/null
-	// Move tuple: [move, v2 level (0 = Start), game level or null, status, v1 level or null, reason index or null]
+	// Move tuple: [move, v2 level (0 = Start), game level or null, game or null, status, v1 level or null, reason index or null]
 	const KEPT = 0, NEW = 1, MOVED = 2
 	const STATUS_CLASS = { [KEPT]: "", [NEW]: " new", [MOVED]: " moved" }
 	const STATUS_VAR = { [KEPT]: "--p5e", [NEW]: "--p5e-new", [MOVED]: "--p5e-moved" }
@@ -192,7 +192,7 @@
 			parts.push(`<text class="tick" x="${PAD.left - 4}" y="${y(t) + 3}" text-anchor="end">${t}</text>`)
 		}
 
-		p.moves.forEach(([, level, gameLevel, status], i) => {
+		p.moves.forEach(([, level, gameLevel, , status], i) => {
 			const cx = PAD.left + slot * i + slot / 2
 			const p5eValue = level === 0 ? p.minLevel : level
 			parts.push(`<rect class="p5e${STATUS_CLASS[status]}" x="${r(cx - wide / 2)}" y="${r(y(p5eValue))}" width="${r(wide)}" height="${r(y(0) - y(p5eValue))}" rx="1.5"/>`)
@@ -244,8 +244,8 @@
 	const cards = [...grid.children]
 
 	const totalMoves = DATA.reduce((sum, p) => sum + p.moves.length, 0)
-	const newMoves = DATA.reduce((sum, p) => sum + p.moves.filter((m) => m[3] === NEW).length, 0)
-	const movedMoves = DATA.reduce((sum, p) => sum + p.moves.filter((m) => m[3] === MOVED).length, 0)
+	const newMoves = DATA.reduce((sum, p) => sum + p.moves.filter((m) => m[4] === NEW).length, 0)
+	const movedMoves = DATA.reduce((sum, p) => sum + p.moves.filter((m) => m[4] === MOVED).length, 0)
 	const summary = document.getElementById("summary")
 	const setSummary = (shown) => {
 		summary.textContent = `${shown} of ${DATA.length} Pokémon · ${totalMoves.toLocaleString()} level-up moves, ${newMoves.toLocaleString()} new, ${movedMoves.toLocaleString()} moved`
@@ -263,8 +263,8 @@
 		cards.forEach((el, i) => {
 			const p = DATA[i]
 			const match = (q === "" || p.name.toLowerCase().includes(q) || p.id.includes(q) || String(p.number) === q)
-				&& (!onlyNew.checked || p.moves.some((m) => m[3] === NEW))
-				&& (!onlyMoved.checked || p.moves.some((m) => m[3] === MOVED))
+				&& (!onlyNew.checked || p.moves.some((m) => m[4] === NEW))
+				&& (!onlyMoved.checked || p.moves.some((m) => m[4] === MOVED))
 			el.hidden = !match
 			if (match) shown++
 		})
@@ -281,13 +281,13 @@
 		const hit = e.target.closest?.(".hit")
 		if (!hit) return
 		const p = DATA[hit.dataset.p]
-		const [move, level, gameLevel, status, v1Level, reason] = p.moves[hit.dataset.m]
+		const [move, level, gameLevel, game, status, v1Level, reason] = p.moves[hit.dataset.m]
 		const p5eText = (l) => l === 0 ? `Start (Min Lv ${p.minLevel})` : `Lv ${l}`
 		const gameText = gameLevel == null
 			? "Not learned by level-up in the games"
 			: gameLevel === 0
-				? "On evolution in the games"
-				: `Game Lv ${gameLevel} of ${p.gameMax} (scaled ${r(gameLevel / p.gameMax * MAX)})`
+				? `On evolution in ${titleCase(game)}`
+				: `Lv ${gameLevel} of ${p.gameMax} in ${titleCase(game)} (scaled ${r(gameLevel / p.gameMax * MAX)})`
 		const tag = status === NEW ? ` <span class="tag">New</span>` : status === MOVED ? ` <span class="tag moved">Moved</span>` : ""
 		tip.innerHTML = `<strong>${esc(titleCase(move))}</strong>${tag}
 			<div class="row"><i class="swatch" style="background: var(${STATUS_VAR[status]})"></i>v2 ${p5eText(level)}</div>
