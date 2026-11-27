@@ -7,11 +7,12 @@ import { Url } from "../url"
 import { BackupError } from "./BackupError"
 import { fakemonStore } from "$lib/fakemon/store"
 import { trainers } from "$lib/trainers/trainers"
+import { FakemonLocalKeychain } from "$lib/account/FakemonLocalKeychain"
 
 export type LiteBackup = {
 	$schema: string,
 	createdAt: string,
-	fakemon: Pick<Data<Fakemon>, "id" | "readKey" | "writeKey">[],
+	fakemon: Pick<Data<Fakemon>, "readKey" | "writeKey">[],
 	trainers: Pick<Trainer & Partial<WithWriteKey>, "readKey" | "writeKey">[],
 }
 
@@ -21,7 +22,7 @@ async function createBackup(): Promise<Blob> {
 		writeKey: TrainerLocalStorage.getWriteKey(it),
 	}))
 
-	const fakemon = FakemonLocalStorage.list()
+	const fakemon = FakemonLocalKeychain.syncList()
 
 	const backup: LiteBackup = {
 		$schema: Url.backups.schemas["202602"](),
@@ -39,8 +40,8 @@ function validate(json: object): json is LiteBackup {
 	if ("fakemon" in json) {
 		if (!Array.isArray(json.fakemon)) {
 			errors.push("fakemon is not an array")
-		} else if (json.fakemon.some((it) => !("id" in it) || !("readKey" in it))) {
-			errors.push("fakemon require id and readKey")
+		} else if (json.fakemon.some((it) => !("readKey" in it))) {
+			errors.push("fakemon require readKey")
 		}
 	} else {
 		errors.push("fakemon is required")

@@ -6,8 +6,8 @@ import { provider } from "./data"
 import type { Data } from "$lib/DataClass"
 import type { EvolutionWriteKeys } from "./data/EvolutionDataProvider"
 import { cachedReadable } from "$lib/utils/store"
-import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 import { srdStore } from "$lib/site/stores"
+import { FakemonKeychain } from "$lib/account"
 
 const fetchedCanonEvolutions = srdStore<EvolutionForest>((client) =>
 	client.evolutions.all()
@@ -93,14 +93,16 @@ function createStore(): EvolutionStore {
 				if (forest == null) return undefined
 
 				if (!hasBeenRetrieved) {
-					Promise.all(FakemonLocalStorage.list().map((info) => {
-						const species = SpeciesIdentifier.fromFakemonReadKey(info.readKey)
+					FakemonKeychain.list().then((list) => {
+						return Promise.all(list.map((info) => {
+							const species = SpeciesIdentifier.fromFakemonReadKey(info.readKey)
 
-						return provider.get(species).then((evolutions) => {
-							forest.addAll(evolutions)
-							didRetrieve(species)
-						})
-					})).then(() => {
+							return provider.get(species).then((evolutions) => {
+								forest.addAll(evolutions)
+								didRetrieve(species)
+							})
+						}))
+					}).then(() => {
 						allRetrieved.set(true)
 					})
 

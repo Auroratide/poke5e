@@ -3,6 +3,7 @@ import { TrainerLocalStorage } from "$lib/trainers/data/TrainerLocalStorage"
 import { test, expect, beforeEach, describe } from "vitest"
 import { LiteBackup } from "../LiteBackup"
 import { BackupError } from "../BackupError"
+import { FakemonLocalKeychain } from "$lib/account/FakemonLocalKeychain"
 
 beforeEach(() => {
 	localStorage.clear()
@@ -11,13 +12,11 @@ beforeEach(() => {
 test("records fakemon and trainers", async () => {
 	// given: data in storage
 	FakemonLocalStorage.add({
-		id: "11111111-1111-1111-1111-111111111111",
 		readKey: "fr1",
 		writeKey: "fw1",
 	})
 
 	FakemonLocalStorage.add({
-		id: "22222222-1111-1111-1111-111111111111",
 		readKey: "fr2",
 	})
 
@@ -38,12 +37,10 @@ test("records fakemon and trainers", async () => {
 
 	// then: data comes back
 	expect(FakemonLocalStorage.get("fr1")).toEqual({
-		id: "11111111-1111-1111-1111-111111111111",
 		readKey: "fr1",
 		writeKey: "fw1",
 	})
 	expect(FakemonLocalStorage.get("fr2")).toEqual({
-		id: "22222222-1111-1111-1111-111111111111",
 		readKey: "fr2",
 	})
 	expect(TrainerLocalStorage.getReadKeys()).toEqual(["tr1", "tr2"])
@@ -55,14 +52,13 @@ test("nothing is in storage", async () => {
 	const backup = await LiteBackup.create()
 	await LiteBackup.restore(backup)
 
-	expect(FakemonLocalStorage.list()).toEqual([])
+	expect(FakemonLocalKeychain.syncList()).toEqual([])
 	expect(TrainerLocalStorage.getReadKeys()).toEqual([])
 })
 
 test("existing records are not overwritten", async () => {
 	// given: a backup
 	FakemonLocalStorage.add({
-		id: "11111111-1111-1111-1111-111111111111",
 		readKey: "fr1",
 		writeKey: "fw1",
 	})
@@ -76,7 +72,6 @@ test("existing records are not overwritten", async () => {
 
 	// and: fakemon/trainers in storage
 	FakemonLocalStorage.add({
-		id: "22222222-1111-1111-1111-111111111111",
 		readKey: "fr2",
 	})
 	TrainerLocalStorage.addReadKey("tr2")
@@ -86,12 +81,10 @@ test("existing records are not overwritten", async () => {
 
 	// then: everything is there
 	expect(FakemonLocalStorage.get("fr1")).toEqual({
-		id: "11111111-1111-1111-1111-111111111111",
 		readKey: "fr1",
 		writeKey: "fw1",
 	})
 	expect(FakemonLocalStorage.get("fr2")).toEqual({
-		id: "22222222-1111-1111-1111-111111111111",
 		readKey: "fr2",
 	})
 	expect(TrainerLocalStorage.getReadKeys()).toEqual(["tr2", "tr1"])

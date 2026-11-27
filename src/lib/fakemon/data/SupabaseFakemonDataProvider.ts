@@ -13,6 +13,7 @@ import { SpeciesMedia, type SpeciesMediaTypeAttribution, type UploadedMedia } fr
 import { SpeciesIdentifier } from "$lib/poke5e/species"
 import { Ability } from "$lib/pokemon/ability"
 import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
+import { FakemonKeychain } from "$lib/account"
 
 export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	constructor(
@@ -21,7 +22,9 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 	) {}
 
 	async getAllKnown(): Promise<Fakemon[]> {
-		return Promise.all(FakemonLocalStorage.list().map((it) =>
+		const keys = await FakemonKeychain.list()
+
+		return Promise.all(keys.map((it) =>
 			this.getByReadKey(it.readKey),
 		)).then((maybeFakemon) => {
 			return maybeFakemon.filter((it) => it != null)
@@ -114,7 +117,6 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 		if (data > 0) {
 			FakemonLocalStorage.add({
-				id: fakemon.data.id,
 				readKey: fakemon.data.readKey,
 				writeKey: writeKey,
 			})

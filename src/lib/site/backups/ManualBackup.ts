@@ -1,4 +1,4 @@
-import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
+import { FakemonLocalKeychain } from "$lib/account/FakemonLocalKeychain"
 import { TrainerLocalStorage } from "$lib/trainers/data/TrainerLocalStorage"
 
 function createBackup(): string {
@@ -7,7 +7,7 @@ function createBackup(): string {
 		writeKey: TrainerLocalStorage.getWriteKey(it),
 	}))
 
-	const fakemon = FakemonLocalStorage.list()
+	const fakemon = FakemonLocalKeychain.syncList()
 
 	const toCopy = `# Trainers\n\nTrainer ID   | Access Key\n-------------|-----------------\n${trainers.map((it) => `${it.readKey} | ${it.writeKey ?? ""}`).join("\n")}\n\n\n# Fakemon\n\nFakemon ID      | Access Key\n----------------|-----------------\n${fakemon.map((it) => `F.${it.readKey} | ${it.writeKey ?? ""}`).join("\n")}`
 
