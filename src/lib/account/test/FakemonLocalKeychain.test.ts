@@ -32,43 +32,41 @@ import { stubFakemon } from "$lib/fakemon/test/stubs"
 // 	expect(resultAfterAddingWriteKey.writeKey).toEqual("wwwww")
 // })
 
-// test("unexpected value stored into local storage", () => {
-// 	const readKey = "rrrrr"
+test("unexpected value stored into local storage", () => {
+	const readKey = "rrrrr"
 
-// 	localStorage.setItem(`fakemon::${readKey}`, "Invalid value")
+	localStorage.setItem(`fakemon::${readKey}`, "Invalid value")
 
-// 	const result = FakemonLocalStorage.get(readKey)
-// 	expect(result).toBeUndefined()
-// })
+	const result = FakemonLocalKeychain.get(readKey)
+	expect(result).toBeUndefined()
+})
 
-// test("does not remove writeKey if already there", () => {
-// 	const fakemon = stubFakemon({
-// 		id: "12345",
-// 		readKey: "rrrrr",
-// 		writeKey: "wwwww",
-// 	})
+test("does not remove writeKey if already there", () => {
+	const fakemon = stubFakemon({
+		id: "12345",
+		readKey: "rrrrr",
+		writeKey: "wwwww",
+	})
 
-// 	FakemonLocalStorage.add(fakemon.data)
+	FakemonLocalStorage.add(fakemon.data)
 
-// 	// when
-// 	const result = FakemonLocalStorage.get(fakemon.data.readKey)
+	// when
+	const result = FakemonLocalKeychain.get(fakemon.data.readKey)
 
-// 	// then
-// 	expect(result.id).toEqual("12345")
-// 	expect(result.readKey).toEqual("rrrrr")
-// 	expect(result.writeKey).toEqual("wwwww")
+	// then
+	expect(result.readKey).toEqual("rrrrr")
+	expect(result.writeKey).toEqual("wwwww")
 
-// 	// when
-// 	delete fakemon.data.writeKey
-// 	FakemonLocalStorage.add(fakemon.data)
+	// when
+	delete fakemon.data.writeKey
+	FakemonLocalStorage.add(fakemon.data)
 
-// 	// then
-// 	const resultAfterSecondAdd = FakemonLocalStorage.get(fakemon.data.readKey)
+	// then
+	const resultAfterSecondAdd = FakemonLocalKeychain.get(fakemon.data.readKey)
 
-// 	expect(resultAfterSecondAdd.id).toEqual("12345")
-// 	expect(resultAfterSecondAdd.readKey).toEqual("rrrrr")
-// 	expect(resultAfterSecondAdd.writeKey).toEqual("wwwww")
-// })
+	expect(resultAfterSecondAdd.readKey).toEqual("rrrrr")
+	expect(resultAfterSecondAdd.writeKey).toEqual("wwwww")
+})
 
 test("lists all", async () => {
 	const drakeon = stubFakemon({

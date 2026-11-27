@@ -74,7 +74,6 @@ test("getAllKnown", async () => {
 
 test("getAllKnown, but one is invalid", async () => {
 	FakemonLocalStorage.add({
-		id: "fake id",
 		readKey: "fake key",
 	})
 

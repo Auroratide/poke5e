@@ -1,6 +1,7 @@
 import { test, expect } from "vitest"
 import { FakemonLocalStorage } from "../FakemonLocalStorage"
 import { stubFakemon } from "$lib/fakemon/test/stubs"
+import { FakemonLocalKeychain } from "$lib/account/FakemonLocalKeychain"
 
 test("adding overwrites by read key", () => {
 	// given
@@ -13,7 +14,7 @@ test("adding overwrites by read key", () => {
 	FakemonLocalStorage.add(fakemon.data)
 
 	// when
-	const result = FakemonLocalStorage.get(fakemon.data.readKey)
+	const result = FakemonLocalKeychain.get(fakemon.data.readKey)
 
 	// then
 	expect(result.readKey).toEqual("rrrrr")
@@ -22,47 +23,11 @@ test("adding overwrites by read key", () => {
 	// when
 	fakemon.data.writeKey = "wwwww"
 	FakemonLocalStorage.add(fakemon.data)
-	const resultAfterAddingWriteKey = FakemonLocalStorage.get(fakemon.data.readKey)
+	const resultAfterAddingWriteKey = FakemonLocalKeychain.get(fakemon.data.readKey)
 
 	// then
 	expect(resultAfterAddingWriteKey.readKey).toEqual("rrrrr")
 	expect(resultAfterAddingWriteKey.writeKey).toEqual("wwwww")
-})
-
-test("unexpected value stored into local storage", () => {
-	const readKey = "rrrrr"
-
-	localStorage.setItem(`fakemon::${readKey}`, "Invalid value")
-
-	const result = FakemonLocalStorage.get(readKey)
-	expect(result).toBeUndefined()
-})
-
-test("does not remove writeKey if already there", () => {
-	const fakemon = stubFakemon({
-		id: "12345",
-		readKey: "rrrrr",
-		writeKey: "wwwww",
-	})
-
-	FakemonLocalStorage.add(fakemon.data)
-
-	// when
-	const result = FakemonLocalStorage.get(fakemon.data.readKey)
-
-	// then
-	expect(result.readKey).toEqual("rrrrr")
-	expect(result.writeKey).toEqual("wwwww")
-
-	// when
-	delete fakemon.data.writeKey
-	FakemonLocalStorage.add(fakemon.data)
-
-	// then
-	const resultAfterSecondAdd = FakemonLocalStorage.get(fakemon.data.readKey)
-
-	expect(resultAfterSecondAdd.readKey).toEqual("rrrrr")
-	expect(resultAfterSecondAdd.writeKey).toEqual("wwwww")
 })
 
 test("removing", () => {
@@ -76,14 +41,14 @@ test("removing", () => {
 	FakemonLocalStorage.add(fakemon.data)
 
 	// when
-	const result = FakemonLocalStorage.get(fakemon.data.readKey)
+	const result = FakemonLocalKeychain.get(fakemon.data.readKey)
 
 	// then
 	expect(result.readKey).toEqual("rrrrr")
 
 	// when
 	FakemonLocalStorage.remove(fakemon.data.readKey)
-	const resultAfterRemoval = FakemonLocalStorage.get(fakemon.data.readKey)
+	const resultAfterRemoval = FakemonLocalKeychain.get(fakemon.data.readKey)
 	
 	// then
 	expect(resultAfterRemoval).toBeUndefined()

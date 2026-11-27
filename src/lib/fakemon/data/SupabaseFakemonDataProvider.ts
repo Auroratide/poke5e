@@ -41,7 +41,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 				const fakemon = await rowToFakemon(data, this.getUserAssetResource)
 
-				const inStorage = FakemonLocalStorage.get(readKey)
+				const inStorage = FakemonKeychain.get(readKey)
 				fakemon.data.writeKey = inStorage?.writeKey
 				FakemonLocalStorage.add(fakemon.data)
 

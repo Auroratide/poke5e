@@ -46,6 +46,7 @@ async function list() {
 export const FakemonLocalKeychain: OwnedResourceKeychain & {
 	syncList: () => OwnedResource[],
 } = {
+	get,
 	list,
 	syncList,
 }

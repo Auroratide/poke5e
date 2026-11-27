@@ -4,6 +4,7 @@ export type OwnedResource = {
 }
 
 export interface OwnedResourceKeychain {
+	get: (readKey: string) => OwnedResource | undefined
 	list: () => Promise<OwnedResource[]>
 }
 

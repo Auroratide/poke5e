@@ -12,6 +12,7 @@ import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 import { stubEvolution } from "$lib/pokemon/evolution/test/stubs"
 import { waitForStore } from "$lib/test/store"
 import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
+import { FakemonKeychain } from "$lib/account"
 
 let fakemonStore: FakemonStore
 
@@ -267,7 +268,7 @@ test("removal", async () => {
 	expect(keys).not.toContain(eeveon.data.readKey)
 
 	// then: it is no longer stored
-	const fromStorage = FakemonLocalStorage.get(eeveon.data.readKey)
+	const fromStorage = FakemonKeychain.get(eeveon.data.readKey)
 	expect(fromStorage).toBeUndefined()
 })
 

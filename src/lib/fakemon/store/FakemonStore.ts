@@ -3,9 +3,9 @@ import type { DraftFakemon, Fakemon, ReadKey, WriteKey } from "../Fakemon"
 import { createSingleFakemonStore, createStoredFakemon, type SingleFakemonStore, type SingleStoredFakemon } from "./SingleFakemonStore"
 import { provider } from "../data"
 import { createFakemonListStore, type FakemonListStore } from "./FakemonListStore"
-import { FakemonLocalStorage } from "../data/FakemonLocalStorage"
 import { provider as evoProvider } from "$lib/pokemon/evolution/data"
 import { TagList } from "$lib/poke5e/tags"
+import { FakemonKeychain } from "$lib/account"
 
 export type StoredFakemon = Record<ReadKey, SingleStoredFakemon>
 
@@ -106,7 +106,7 @@ export function createStore(): FakemonStore {
 		},
 
 		getWriteKey: (key: ReadKey): WriteKey | undefined => {
-			return FakemonLocalStorage.get(key)?.writeKey
+			return FakemonKeychain.get(key)?.writeKey
 		},
 		
 		reset: async () => {

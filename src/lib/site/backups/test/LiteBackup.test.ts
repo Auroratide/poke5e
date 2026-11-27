@@ -29,18 +29,18 @@ test("records fakemon and trainers", async () => {
 
 	localStorage.clear()
 
-	expect(FakemonLocalStorage.get("fr1")).toBeUndefined()
-	expect(FakemonLocalStorage.get("fr2")).toBeUndefined()
+	expect(FakemonLocalKeychain.get("fr1")).toBeUndefined()
+	expect(FakemonLocalKeychain.get("fr2")).toBeUndefined()
 	expect(TrainerLocalStorage.getReadKeys()).toEqual([])
 
 	await LiteBackup.restore(backup)
 
 	// then: data comes back
-	expect(FakemonLocalStorage.get("fr1")).toEqual({
+	expect(FakemonLocalKeychain.get("fr1")).toEqual({
 		readKey: "fr1",
 		writeKey: "fw1",
 	})
-	expect(FakemonLocalStorage.get("fr2")).toEqual({
+	expect(FakemonLocalKeychain.get("fr2")).toEqual({
 		readKey: "fr2",
 	})
 	expect(TrainerLocalStorage.getReadKeys()).toEqual(["tr1", "tr2"])
@@ -80,11 +80,11 @@ test("existing records are not overwritten", async () => {
 	await LiteBackup.restore(backup)
 
 	// then: everything is there
-	expect(FakemonLocalStorage.get("fr1")).toEqual({
+	expect(FakemonLocalKeychain.get("fr1")).toEqual({
 		readKey: "fr1",
 		writeKey: "fw1",
 	})
-	expect(FakemonLocalStorage.get("fr2")).toEqual({
+	expect(FakemonLocalKeychain.get("fr2")).toEqual({
 		readKey: "fr2",
 	})
 	expect(TrainerLocalStorage.getReadKeys()).toEqual(["tr2", "tr1"])
