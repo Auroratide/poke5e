@@ -2655,6 +2655,10 @@
 				{
 					"type": "climbing",
 					"value": 20
+				},
+				{
+					"type": "swimming",
+					"value": 20
 				}
 			],
 			"attributes": {

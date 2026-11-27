@@ -88,6 +88,19 @@
 			}
 		},
 		{
+			"id": "raticate",
+			"speed": [
+				{
+					"type": "walking",
+					"value": 30
+				},
+				{
+					"type": "climbing",
+					"value": 20
+				}
+			]
+		},
+		{
 			"id": "farfetchd",
 			"hp": 25
 		},
