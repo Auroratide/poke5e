@@ -12,7 +12,7 @@ if (browser) {
 	OfficialFakemonRemovedBanner.subscribe((value) => localStorage.setItem(key, value.toString()))
 }
 
-export function readdOfficialFakemon() {
+export function readOfficialFakemon() {
 	FakemonLocalStorage.initializeOriginalOfficialFakemon()
 	OfficialFakemonRemovedBanner.set(true)
 
