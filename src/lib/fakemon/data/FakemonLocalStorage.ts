@@ -18,11 +18,6 @@ function add(value: FakemonIdentifyingInfo) {
 	}))
 }
 
-function remove(readKey: ReadKey) {
-	const key = lsKey(readKey)
-	localStorage.removeItem(key)
-}
-
 /**
  * The site originally had some residue "official" fakemon. Now that
  * Fakemon are officially a feature, we can remove these. But to maintain
@@ -108,7 +103,5 @@ function initializeOriginalOfficialFakemon() {
 }
 
 export const FakemonLocalStorage = {
-	add,
-	remove,
 	initializeOriginalOfficialFakemon,
 } as const

@@ -10,8 +10,8 @@ import { stubFakemon } from "$lib/fakemon/test/stubs"
 import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import { EvolutionForest } from "../EvolutionForest"
 import { tmpEvolutionId } from "../Evolution"
-import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 import { ApiStub } from "$lib/test/ApiStub"
+import { FakemonKeychain } from "$lib/account"
 
 beforeEach(async () => {
 	const eeveeToFlareon = stubEvolutionJson({
@@ -171,7 +171,7 @@ test("getting all locally registered fakemon evolutions", async () => {
 		to: terreon.data.writeKey,
 	})
 
-	FakemonLocalStorage.add(terreon.data)
+	await FakemonKeychain.add(terreon.data)
 
 	// when
 	const storedValue = await waitForAll()

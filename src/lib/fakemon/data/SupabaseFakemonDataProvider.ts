@@ -6,7 +6,6 @@ import type { Attribute } from "$lib/dnd/attributes"
 import { isCreatureSize } from "$lib/dnd/CreatureSize"
 import type { Data } from "$lib/DataClass"
 import { HitDice } from "$lib/dnd/hit-dice"
-import { FakemonLocalStorage } from "./FakemonLocalStorage"
 import type { UserAssets } from "$lib/site/user-assets"
 import type { ImageInputValue } from "$lib/ui/forms"
 import { SpeciesMedia, type SpeciesMediaTypeAttribution, type UploadedMedia } from "$lib/poke5e/species/media"
@@ -43,7 +42,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 				const inStorage = FakemonKeychain.get(readKey)
 				fakemon.data.writeKey = inStorage?.writeKey
-				FakemonLocalStorage.add(fakemon.data)
+				await FakemonKeychain.add(fakemon.data)
 
 				if (!fakemon.data.writeKey) {
 					fakemon.data.tags = TagsLocalStorage.get(fakemon.data.readKey)
@@ -70,7 +69,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			writeKey: data.ret_write_key,
 		}
 
-		FakemonLocalStorage.add(identifyingInfo)
+		await FakemonKeychain.add(identifyingInfo)
 
 		return new Fakemon({
 			species: {
@@ -116,7 +115,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		}
 
 		if (data > 0) {
-			FakemonLocalStorage.add({
+			await FakemonKeychain.add({
 				readKey: fakemon.data.readKey,
 				writeKey: writeKey,
 			})

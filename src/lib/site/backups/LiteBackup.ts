@@ -1,6 +1,5 @@
 import type { Data } from "$lib/DataClass"
 import type { Fakemon } from "$lib/fakemon"
-import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 import { TrainerLocalStorage } from "$lib/trainers/data/TrainerLocalStorage"
 import type { Trainer, WithWriteKey } from "$lib/trainers/types"
 import { Url } from "../url"
@@ -8,6 +7,7 @@ import { BackupError } from "./BackupError"
 import { fakemonStore } from "$lib/fakemon/store"
 import { trainers } from "$lib/trainers/trainers"
 import { FakemonLocalKeychain } from "$lib/account/FakemonLocalKeychain"
+import { FakemonKeychain } from "$lib/account"
 
 export type LiteBackup = {
 	$schema: string,
@@ -78,9 +78,9 @@ async function restoreBackup(blob: Blob): Promise<{
 	}
 
 	if (validate(backup)) {
-		backup.fakemon.map((it) => {
-			FakemonLocalStorage.add(it)
-		})
+		await Promise.all(backup.fakemon.map((it) => {
+			return FakemonKeychain.add(it)
+		}))
 
 		backup.trainers.map((it) => {
 			TrainerLocalStorage.addReadKey(it.readKey)

@@ -23,6 +23,21 @@ function get(readKey: string): OwnedResource | undefined {
 	}
 }
 
+async function add(value: OwnedResource) {
+	const previous = FakemonLocalKeychain.get(value.readKey)
+
+	const key = lsKey(value.readKey)
+
+	localStorage.setItem(key, JSON.stringify({
+		writeKey: value.writeKey ?? previous?.writeKey,
+	}))
+}
+
+async function remove(readKey: string) {
+	const key = lsKey(readKey)
+	localStorage.removeItem(key)
+}
+
 function syncList() {
 	const result: OwnedResource[] = []
 
@@ -47,6 +62,8 @@ export const FakemonLocalKeychain: OwnedResourceKeychain & {
 	syncList: () => OwnedResource[],
 } = {
 	get,
+	add,
+	remove,
 	list,
 	syncList,
 }

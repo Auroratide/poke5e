@@ -1,36 +1,33 @@
-import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 import { test, expect } from "vitest"
 import { FakemonLocalKeychain } from "../FakemonLocalKeychain"
 import { stubFakemon } from "$lib/fakemon/test/stubs"
 
-// test("adding overwrites by read key", () => {
-// 	// given
-// 	const fakemon = stubFakemon({
-// 		id: "12345",
-// 		readKey: "rrrrr",
-// 		writeKey: undefined,
-// 	})
+test("adding overwrites by read key", async () => {
+	// given
+	const fakemon = stubFakemon({
+		id: "12345",
+		readKey: "rrrrr",
+		writeKey: undefined,
+	})
 
-// 	FakemonLocalStorage.add(fakemon.data)
+	await FakemonLocalKeychain.add(fakemon.data)
 
-// 	// when
-// 	const result = FakemonLocalStorage.get(fakemon.data.readKey)
+	// when
+	const result = FakemonLocalKeychain.get(fakemon.data.readKey)
 
-// 	// then
-// 	expect(result.id).toEqual("12345")
-// 	expect(result.readKey).toEqual("rrrrr")
-// 	expect(result.writeKey).toBeUndefined()
+	// then
+	expect(result.readKey).toEqual("rrrrr")
+	expect(result.writeKey).toBeUndefined()
 
-// 	// when
-// 	fakemon.data.writeKey = "wwwww"
-// 	FakemonLocalStorage.add(fakemon.data)
-// 	const resultAfterAddingWriteKey = FakemonLocalStorage.get(fakemon.data.readKey)
+	// when
+	fakemon.data.writeKey = "wwwww"
+	await FakemonLocalKeychain.add(fakemon.data)
+	const resultAfterAddingWriteKey = FakemonLocalKeychain.get(fakemon.data.readKey)
 
-// 	// then
-// 	expect(resultAfterAddingWriteKey.id).toEqual("12345")
-// 	expect(resultAfterAddingWriteKey.readKey).toEqual("rrrrr")
-// 	expect(resultAfterAddingWriteKey.writeKey).toEqual("wwwww")
-// })
+	// then
+	expect(resultAfterAddingWriteKey.readKey).toEqual("rrrrr")
+	expect(resultAfterAddingWriteKey.writeKey).toEqual("wwwww")
+})
 
 test("unexpected value stored into local storage", () => {
 	const readKey = "rrrrr"
@@ -41,14 +38,14 @@ test("unexpected value stored into local storage", () => {
 	expect(result).toBeUndefined()
 })
 
-test("does not remove writeKey if already there", () => {
+test("does not remove writeKey if already there", async () => {
 	const fakemon = stubFakemon({
 		id: "12345",
 		readKey: "rrrrr",
 		writeKey: "wwwww",
 	})
 
-	FakemonLocalStorage.add(fakemon.data)
+	await FakemonLocalKeychain.add(fakemon.data)
 
 	// when
 	const result = FakemonLocalKeychain.get(fakemon.data.readKey)
@@ -59,7 +56,7 @@ test("does not remove writeKey if already there", () => {
 
 	// when
 	delete fakemon.data.writeKey
-	FakemonLocalStorage.add(fakemon.data)
+	await FakemonLocalKeychain.add(fakemon.data)
 
 	// then
 	const resultAfterSecondAdd = FakemonLocalKeychain.get(fakemon.data.readKey)
@@ -81,8 +78,8 @@ test("lists all", async () => {
 		writeKey: undefined,
 	})
 
-	FakemonLocalStorage.add(drakeon.data)
-	FakemonLocalStorage.add(eeveon.data)
+	await FakemonLocalKeychain.add(drakeon.data)
+	await FakemonLocalKeychain.add(eeveon.data)
 
 	localStorage.setItem("ignorethis", "{}")
 	localStorage.setItem("fakemon::", "{}")
@@ -101,26 +98,26 @@ test("lists all", async () => {
 	})
 })
 
-// test("removing", () => {
-// 	// given
-// 	const fakemon = stubFakemon({
-// 		id: "12345",
-// 		readKey: "rrrrr",
-// 		writeKey: undefined,
-// 	})
+test("removing", async () => {
+	// given
+	const fakemon = stubFakemon({
+		id: "12345",
+		readKey: "rrrrr",
+		writeKey: undefined,
+	})
 
-// 	FakemonLocalStorage.add(fakemon.data)
+	await FakemonLocalKeychain.add(fakemon.data)
 
-// 	// when
-// 	const result = FakemonLocalStorage.get(fakemon.data.readKey)
+	// when
+	const result = FakemonLocalKeychain.get(fakemon.data.readKey)
 
-// 	// then
-// 	expect(result.id).toEqual("12345")
+	// then
+	expect(result.readKey).toEqual("rrrrr")
 
-// 	// when
-// 	FakemonLocalStorage.remove(fakemon.data.readKey)
-// 	const resultAfterRemoval = FakemonLocalStorage.get(fakemon.data.readKey)
+	// when
+	await FakemonLocalKeychain.remove(fakemon.data.readKey)
+	const resultAfterRemoval = FakemonLocalKeychain.get(fakemon.data.readKey)
 	
-// 	// then
-// 	expect(resultAfterRemoval).toBeUndefined()
-// })
+	// then
+	expect(resultAfterRemoval).toBeUndefined()
+})

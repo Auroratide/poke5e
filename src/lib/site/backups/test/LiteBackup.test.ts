@@ -1,9 +1,9 @@
-import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 import { TrainerLocalStorage } from "$lib/trainers/data/TrainerLocalStorage"
 import { test, expect, beforeEach, describe } from "vitest"
 import { LiteBackup } from "../LiteBackup"
 import { BackupError } from "../BackupError"
 import { FakemonLocalKeychain } from "$lib/account/FakemonLocalKeychain"
+import { FakemonKeychain } from "$lib/account"
 
 beforeEach(() => {
 	localStorage.clear()
@@ -11,12 +11,12 @@ beforeEach(() => {
 
 test("records fakemon and trainers", async () => {
 	// given: data in storage
-	FakemonLocalStorage.add({
+	await FakemonKeychain.add({
 		readKey: "fr1",
 		writeKey: "fw1",
 	})
 
-	FakemonLocalStorage.add({
+	await FakemonKeychain.add({
 		readKey: "fr2",
 	})
 
@@ -58,7 +58,7 @@ test("nothing is in storage", async () => {
 
 test("existing records are not overwritten", async () => {
 	// given: a backup
-	FakemonLocalStorage.add({
+	await FakemonKeychain.add({
 		readKey: "fr1",
 		writeKey: "fw1",
 	})
@@ -71,7 +71,7 @@ test("existing records are not overwritten", async () => {
 	localStorage.clear()
 
 	// and: fakemon/trainers in storage
-	FakemonLocalStorage.add({
+	await FakemonKeychain.add({
 		readKey: "fr2",
 	})
 	TrainerLocalStorage.addReadKey("tr2")

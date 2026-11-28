@@ -3,8 +3,8 @@ import type { Fakemon, WriteKey } from "../Fakemon"
 import type { StoredFakemon } from "./FakemonStore"
 import { FakemonStoreUpdater } from "./FakemonUpdater"
 import { provider } from "../data"
-import { FakemonLocalStorage } from "../data/FakemonLocalStorage"
 import { FakemonTags } from "./FakemonTags"
+import { FakemonKeychain } from "$lib/account"
 
 export type SingleStoredFakemon = {
 	value: Fakemon,
@@ -60,7 +60,7 @@ export function createSingleFakemonStore(storedFakemon: SingleStoredFakemon, fak
 				return rest
 			})
 
-			FakemonLocalStorage.remove(storedFakemon.value.data.readKey)
+			await FakemonKeychain.remove(storedFakemon.value.data.readKey)
 		},
 	}
 }

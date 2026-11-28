@@ -8,7 +8,6 @@ import type { ImageInputValue } from "$lib/ui/forms"
 import { stubImageFile } from "$lib/test/files"
 import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
 import { SpeciesMedia } from "$lib/poke5e/species/media"
-import { FakemonLocalStorage } from "$lib/fakemon/data/FakemonLocalStorage"
 import { stubEvolution } from "$lib/pokemon/evolution/test/stubs"
 import { waitForStore } from "$lib/test/store"
 import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
@@ -91,8 +90,8 @@ test("fakemon has evolutions", async () => {
 	const stageTwo = await provider.add(stageTwoDraft.data.species)
 
 	// and: we've never fetched these fakemon before
-	FakemonLocalStorage.remove(stageOne.data.readKey)
-	FakemonLocalStorage.remove(stageTwo.data.readKey)
+	await FakemonKeychain.remove(stageOne.data.readKey)
+	await FakemonKeychain.remove(stageTwo.data.readKey)
 
 	// and: they have an evolution between them
 	const evoDraft = stubEvolution({
@@ -231,7 +230,7 @@ test("verifying access", async () => {
 	})
 
 	const eeveon = await provider.add(draft.data.species)
-	FakemonLocalStorage.remove(eeveon.data.readKey) // remove the write key
+	await FakemonKeychain.remove(eeveon.data.readKey) // remove the write key
 
 	// when: access is verified
 	const singleStore = await fakemonStore.get(eeveon.data.readKey)
@@ -345,7 +344,7 @@ test("updating tags on fakemon you do not own", async () => {
 	})
 
 	const addedResult = await fakemonStore.new(draft.data.species)
-	FakemonLocalStorage.remove(addedResult.data.readKey) // REMOVE WRITE KEY
+	await FakemonKeychain.remove(addedResult.data.readKey) // REMOVE WRITE KEY
 
 	const singleStore = await fakemonStore.get(addedResult.data.readKey)
 	const storedValue = get(singleStore)

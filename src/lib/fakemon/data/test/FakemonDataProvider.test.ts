@@ -2,7 +2,6 @@ import { test, expect } from "vitest"
 import { provider } from ".."
 import { FakemonPermissionError } from "../FakemonDataProvider"
 import { stubFakemon } from "$lib/fakemon/test/stubs"
-import { FakemonLocalStorage } from "../FakemonLocalStorage"
 import type { ImageInputValue } from "$lib/ui/forms"
 import { stubImageFile } from "$lib/test/files"
 import { stubPokemonSpecies } from "$lib/poke5e/species/test/stubs"
@@ -12,6 +11,7 @@ import { Fakemon } from "$lib/fakemon"
 import { SpeciesIdentifier, type PokemonSpecies } from "$lib/poke5e/species"
 import { stubAbility, stubAbilityPool } from "$lib/pokemon/ability/test/stubs"
 import { TagList, TagsLocalStorage } from "$lib/poke5e/tags"
+import { FakemonKeychain } from "$lib/account"
 
 test("add, get, and update", async () => {
 	const draft = stubFakemon({
@@ -73,7 +73,7 @@ test("getAllKnown", async () => {
 })
 
 test("getAllKnown, but one is invalid", async () => {
-	FakemonLocalStorage.add({
+	await FakemonKeychain.add({
 		readKey: "fake key",
 	})
 
@@ -221,7 +221,7 @@ test("tags: do not own fakemon", async () => {
 	added.data.tags = TagList.add(added.data.tags, "eeveelution")
 	await provider.update(added)
 
-	FakemonLocalStorage.remove(added.data.readKey)
+	await FakemonKeychain.remove(added.data.readKey)
 	TagsLocalStorage.set(added.data.readKey, TagList.from(["locally stored"]))
 
 	const afterUpdate = await provider.getByReadKey(added.data.readKey)
