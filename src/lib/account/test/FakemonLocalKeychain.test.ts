@@ -10,7 +10,7 @@ test("adding overwrites by read key", async () => {
 		writeKey: undefined,
 	})
 
-	await FakemonLocalKeychain.add(fakemon.data)
+	await FakemonLocalKeychain.add([fakemon.data])
 
 	// when
 	const result = FakemonLocalKeychain.get(fakemon.data.readKey)
@@ -21,7 +21,7 @@ test("adding overwrites by read key", async () => {
 
 	// when
 	fakemon.data.writeKey = "wwwww"
-	await FakemonLocalKeychain.add(fakemon.data)
+	await FakemonLocalKeychain.add([fakemon.data])
 	const resultAfterAddingWriteKey = FakemonLocalKeychain.get(fakemon.data.readKey)
 
 	// then
@@ -45,7 +45,7 @@ test("does not remove writeKey if already there", async () => {
 		writeKey: "wwwww",
 	})
 
-	await FakemonLocalKeychain.add(fakemon.data)
+	await FakemonLocalKeychain.add([fakemon.data])
 
 	// when
 	const result = FakemonLocalKeychain.get(fakemon.data.readKey)
@@ -56,7 +56,7 @@ test("does not remove writeKey if already there", async () => {
 
 	// when
 	delete fakemon.data.writeKey
-	await FakemonLocalKeychain.add(fakemon.data)
+	await FakemonLocalKeychain.add([fakemon.data])
 
 	// then
 	const resultAfterSecondAdd = FakemonLocalKeychain.get(fakemon.data.readKey)
@@ -78,8 +78,8 @@ test("lists all", async () => {
 		writeKey: undefined,
 	})
 
-	await FakemonLocalKeychain.add(drakeon.data)
-	await FakemonLocalKeychain.add(eeveon.data)
+	await FakemonLocalKeychain.add([drakeon.data])
+	await FakemonLocalKeychain.add([eeveon.data])
 
 	localStorage.setItem("ignorethis", "{}")
 	localStorage.setItem("fakemon::", "{}")
@@ -106,7 +106,7 @@ test("removing", async () => {
 		writeKey: undefined,
 	})
 
-	await FakemonLocalKeychain.add(fakemon.data)
+	await FakemonLocalKeychain.add([fakemon.data])
 
 	// when
 	const result = FakemonLocalKeychain.get(fakemon.data.readKey)

@@ -11,14 +11,14 @@ beforeEach(() => {
 
 test("records fakemon and trainers", async () => {
 	// given: data in storage
-	await FakemonKeychain.add({
+	await FakemonKeychain.add([{
 		readKey: "fr1",
 		writeKey: "fw1",
-	})
+	}])
 
-	await FakemonKeychain.add({
+	await FakemonKeychain.add([{
 		readKey: "fr2",
-	})
+	}])
 
 	TrainerLocalStorage.addReadKey("tr1")
 	TrainerLocalStorage.addWriteKey("tr1", "tw1")
@@ -58,10 +58,10 @@ test("nothing is in storage", async () => {
 
 test("existing records are not overwritten", async () => {
 	// given: a backup
-	await FakemonKeychain.add({
+	await FakemonKeychain.add([{
 		readKey: "fr1",
 		writeKey: "fw1",
-	})
+	}])
 
 	TrainerLocalStorage.addReadKey("tr1")
 	TrainerLocalStorage.addWriteKey("tr1", "tw1")
@@ -71,9 +71,9 @@ test("existing records are not overwritten", async () => {
 	localStorage.clear()
 
 	// and: fakemon/trainers in storage
-	await FakemonKeychain.add({
+	await FakemonKeychain.add([{
 		readKey: "fr2",
-	})
+	}])
 	TrainerLocalStorage.addReadKey("tr2")
 
 	// when

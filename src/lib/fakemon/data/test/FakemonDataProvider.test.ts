@@ -73,9 +73,9 @@ test("getAllKnown", async () => {
 })
 
 test("getAllKnown, but one is invalid", async () => {
-	await FakemonKeychain.add({
+	await FakemonKeychain.add([{
 		readKey: "fake key",
-	})
+	}])
 
 	const drakeon = stubFakemon({
 		species: stubPokemonSpecies({

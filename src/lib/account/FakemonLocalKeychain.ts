@@ -23,7 +23,7 @@ function get(readKey: string): OwnedResource | undefined {
 	}
 }
 
-async function add(value: OwnedResource) {
+function addOne(value: OwnedResource) {
 	const previous = FakemonLocalKeychain.get(value.readKey)
 
 	const key = lsKey(value.readKey)
@@ -31,6 +31,10 @@ async function add(value: OwnedResource) {
 	localStorage.setItem(key, JSON.stringify({
 		writeKey: value.writeKey ?? previous?.writeKey,
 	}))
+}
+
+async function add(values: OwnedResource[]) {
+	values.forEach(addOne)
 }
 
 async function remove(readKey: string) {

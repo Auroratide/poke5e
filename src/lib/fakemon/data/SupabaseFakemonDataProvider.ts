@@ -42,7 +42,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 
 				const inStorage = FakemonKeychain.get(readKey)
 				fakemon.data.writeKey = inStorage?.writeKey
-				await FakemonKeychain.add(fakemon.data)
+				await FakemonKeychain.add([fakemon.data])
 
 				if (!fakemon.data.writeKey) {
 					fakemon.data.tags = TagsLocalStorage.get(fakemon.data.readKey)
@@ -69,7 +69,7 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 			writeKey: data.ret_write_key,
 		}
 
-		await FakemonKeychain.add(identifyingInfo)
+		await FakemonKeychain.add([identifyingInfo])
 
 		return new Fakemon({
 			species: {
@@ -115,10 +115,10 @@ export class SupabaseFakemonDataProvider implements FakemonDataProvider {
 		}
 
 		if (data > 0) {
-			await FakemonKeychain.add({
+			await FakemonKeychain.add([{
 				readKey: fakemon.data.readKey,
 				writeKey: writeKey,
-			})
+			}])
 		}
 
 		return data > 0

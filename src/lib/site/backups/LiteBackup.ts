@@ -78,9 +78,7 @@ async function restoreBackup(blob: Blob): Promise<{
 	}
 
 	if (validate(backup)) {
-		await Promise.all(backup.fakemon.map((it) => {
-			return FakemonKeychain.add(it)
-		}))
+		await FakemonKeychain.add(backup.fakemon)
 
 		backup.trainers.map((it) => {
 			TrainerLocalStorage.addReadKey(it.readKey)

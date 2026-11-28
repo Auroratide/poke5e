@@ -171,7 +171,7 @@ test("getting all locally registered fakemon evolutions", async () => {
 		to: terreon.data.writeKey,
 	})
 
-	await FakemonKeychain.add(terreon.data)
+	await FakemonKeychain.add([terreon.data])
 
 	// when
 	const storedValue = await waitForAll()

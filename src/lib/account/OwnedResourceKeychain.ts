@@ -5,7 +5,7 @@ export type OwnedResource = {
 
 export interface OwnedResourceKeychain {
 	get: (readKey: string) => OwnedResource | undefined
-	add: (resource: OwnedResource) => Promise<void>
+	add: (resources: OwnedResource[]) => Promise<void>
 	remove: (readKey: string) => Promise<void>
 	list: () => Promise<OwnedResource[]>
 }
